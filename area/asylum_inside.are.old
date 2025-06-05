@@ -563,7 +563,7 @@ inmate~
 ~
 ~
 36700163 65536 250 S
-56 1
+57 1
 -160 120 100
 ! 0 0 0 7 6158 0 0
 | 0 0 0 0 0 0 0
@@ -574,7 +574,7 @@ chef cook~
 ~
 ~
 36700163 168 -750 S
-74 1
+73 1
 -250 100 100
 ! 3 0 0 7 23054 4128 4
 | 0 0 0 0 0 0 0
@@ -595,7 +595,7 @@ inmate~
 ~
 ~
 36700163 65536 250 S
-59 1
+60 1
 -160 120 100
 ! 0 0 0 7 71726 0 0
 | 0 0 0 0 0 0 0
@@ -606,7 +606,7 @@ inmate~
 ~
 ~
 36700163 65536 250 S
-58 1
+57 1
 -160 120 100
 ! 0 0 0 7 6158 0 0
 | 0 0 0 0 0 0 0
@@ -617,7 +617,7 @@ inmate~
 ~
 ~
 36700163 65536 250 S
-59 1
+58 1
 -160 120 100
 ! 0 0 0 7 6158 0 0
 | 0 0 0 0 0 0 0
@@ -639,7 +639,7 @@ inmate~
 ~
 ~
 36700163 65536 250 S
-62 1
+63 1
 -160 120 100
 ! 0 0 0 7 6158 0 0
 | 0 0 0 0 0 0 0
@@ -672,7 +672,7 @@ surgeon~
 ~
 ~
 36700171 66218 -1000 S
-80 1
+79 1
 -550 350 250
 ! 0 0 0 7 415758 16777216 48
 | 0 0 0 0 0 0 0
@@ -683,7 +683,7 @@ ring turquoise~
 @@NA @@aTurquoise @@yRing@@N~
 @@WA small @@rturquoise @@yring@@N glitters here in the light.@@N
 ~
-8 134217728 8396800 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -703,7 +703,7 @@ cleaver~
 @@WA Viscious cleaver@@N~
 @@WA razor-edged cleaver lies here.@@N
 ~
-5 134217730 8421376 257
+5 2 8421376 257
 0 0 0 3 0 0 0 0 0 0
 10
 A
@@ -717,7 +717,7 @@ rod~
 the rod of discipline~
 A nasty ribbed rod lies here.
 ~
-9 142606416 8421376 257
+9 8388688 8421376 257
 0 0 0 0 0 0 0 0 0 0
 15
 A
@@ -739,7 +739,7 @@ spectacles~
 a pair of @@mspectacles@@N~
 A small pair of @@mspectacles@@N is almost crushed by your foot!@@N
 ~
-9 134217728 8388624 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -768,7 +768,7 @@ jerkin~
 @@WA @@bleather@@W jerkin, studded with @@rturquoise@@W plates lies here in a
 heap.@@N
 ~
-9 134217794 8650752 4113
+9 66 8650752 4113
 0 0 0 0 0 0 0 0 0 0
 14
 A
@@ -792,7 +792,7 @@ enforcer~
 @@WA @@rTurquoise @@REnforcer@@N~
 @@WA spiked mace with @@rturquoise bands@@N has been left here.
 ~
-5 138412052 8421376 257
+5 4194324 8421376 257
 0 0 0 8 0 0 0 0 0 0
 22
 A
@@ -810,7 +810,7 @@ scalpel~
 @@WA @@eSurgeon's @@WScalpel@@N~
 @@WA razor sharp scalpel lies here, begging to draw @@Rblood@@N.
 ~
-5 167772180 8421376 257
+5 33554452 8421376 257
 0 0 0 11 0 0 0 0 0 0
 5
 A
@@ -825,7 +825,7 @@ L
 medallion~
 @@WA @@rturquoise @@Wand @@dObsidian @@yMedallion@@N~
 @@WA @@rturquoise @@Wand @@dObsidian@@y medallion@@W lies here@@N.~
-9 134217728 8388736 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 5
 A
@@ -845,7 +845,7 @@ circle~
 @@WA @@mThaumatergic @@aCircle@@N~
 @@WA pulsing @@acircle@@W floats in mid air.@@N
 ~
-1 134217889 8388608 3593
+1 161 8388608 3593
 0 0 -1 0 0 0 0 0 0 0
 1
 A

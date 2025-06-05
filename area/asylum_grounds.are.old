@@ -1910,7 +1910,7 @@ A stern looking doctor wanders about.
 ~
 ~
 3145801 33416 0 S
-46 1
+47 1
 -300 150 130
 ! 0 0 0 7 7190 0 0
 | 0 0 0 0 0 0 0
@@ -1943,7 +1943,7 @@ female inmate~
 ~
 ~
 65 0 0 S
-42 2
+43 2
 -290 150 105
 ! 0 0 0 7 2326 0 0
 | 0 0 0 0 0 0 0
@@ -1976,7 +1976,7 @@ child inmate~
 ~
 ~
 65 0 0 S
-35 1
+34 1
 -175 65 60
 ! 0 0 0 7 2390 0 0
 | 0 0 0 0 0 0 0
@@ -1986,7 +1986,7 @@ child inmate~
 foot rabbit~
 a @@yrabbit's foot@@N~
 @@NThe poor paw of an unlucky @@ybunny@@N lies here.~
-9 134217729 8421376 16449
+9 1 8421376 16449
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2003,7 +2003,7 @@ L
 medallion turquoise~
 @@NA @@rturquoise @@ymedallion@@N~
 @@NA small @@rturquoise @@Ndisc, with a strange rune etched on it's face lies here.~
-9 134217745 8388736 1
+9 17 8388736 1
 0 0 0 0 0 0 0 0 0 0
 3
 A
@@ -2020,7 +2020,7 @@ L
 baton~
 a @@dblack baton@@N~
 @@NAn evil looking baton of an unknown metal, and rings of @@rturquoise@@N beckons you to wield it.~
-5 134217812 8421376 1
+5 84 8421376 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2037,7 +2037,7 @@ L
 smock staff~
 @@NA @@Wmedical smock@@N~
 @@NA a small smock, with a trace of some @@Rstain@@N lies crumpled in a heap.~
-9 134217728 8454144 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2060,7 +2060,7 @@ L
 knuckles turquoise~
 @@rTurquoise@@N Knuckles~
 @@NA nasty set of @@rturquoise @@Nknuckles glint in your light.~
-9 134217748 8392704 256
+9 20 8392704 256
 0 0 0 0 0 0 0 0 0 0
 3
 A
@@ -2087,7 +2087,7 @@ L
 Sai~
 @@WC@@gr@@duel @@WI@@gr@@don @@WS@@ga@@di@@N~
 @@dA martial arts weapon lies here, @@Wglinting@@d in the darkness@@N~
-5 173015040 8421376 1
+5 37748736 8421376 1
 0 0 0 11 0 0 0 0 0 0
 1
 A
@@ -2146,7 +2146,6 @@ M 0 3902 15 3905 (null)
 
 M 0 3903 15 3945 (null)
 
-O 0 3906 1 3932 (null)
 S
 #OBJFUNS
 O 3906 objfun_dispeller

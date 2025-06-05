@@ -1133,6 +1133,7 @@
 #define ITEM_UNIQUE			16777216
 #define ITEM_LIFESTEALER	   BIT_26
 #define ITEM_SILVER			BIT_27
+#define ITEM_AUTO			BIT_28
 
 /* Class-restricted stuff dropped. */
 

@@ -1489,6 +1489,8 @@ char *extra_bit_name( int extra_flags )
       safe_strcat( MAX_STRING_LENGTH, buf, " lifestealer" );
    if( extra_flags & ITEM_SILVER )
       safe_strcat( MAX_STRING_LENGTH, buf, " silver" );
+   if( extra_flags & ITEM_AUTO )
+      safe_strcat( MAX_STRING_LENGTH, buf, " auto" );
 
    return ( buf[0] != '\0' ) ? buf + 1 : "none";
 }

@@ -1018,7 +1018,7 @@ L
 red armbands~
 some red armbands~
 A red pair of armbands lies here.~
-9 134217744 8390656 1
+9 16 8390656 1
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -1035,7 +1035,7 @@ L
 leggings red~
 red leggings~
 Some red leggings have been left here.~
-9 134217744 9437184 17
+9 16 9437184 17
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -1072,7 +1072,7 @@ L
 hat pin hatpin~
 a small hatpin~
 A small hatpin has been dropped here.~
-5 134217744 8421376 257
+5 16 8421376 257
 0 0 0 11 0 0 0 0 0 0
 3
 A
@@ -1113,7 +1113,7 @@ A
 A
 19 2
 L
-20
+1
 #0
 #RESETS
 M 0 4414 1 4449 doorman

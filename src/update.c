@@ -1262,7 +1262,8 @@ void gain_update( void )
       {
          if( ( ch->hit < ch->max_hit ) && ( !IS_SET( ch->in_room->affected_by, ROOM_BV_NONE ) ) )
             ch->hit += hit_gain( ch );
-         ch->hit = UMAX( 25, ch->hit );
+         if (!IS_NPC(ch))
+             ch->hit = UMAX( 25, ch->hit );
 
          if( ( ch->mana < ch->max_mana ) && ( !IS_SET( ch->in_room->affected_by, ROOM_BV_NONE ) ) )
             ch->mana += mana_gain( ch );
@@ -1271,7 +1272,7 @@ void gain_update( void )
             ch->move += move_gain( ch );
          else if( ch->carry_weight >= can_carry_w( ch ) )
          {
-            send_to_char( "You are carrying so much wieght that you are @@eEXHAUSTED@@N!!\n\r", ch );
+            send_to_char( "You are carrying so much weight that you are @@eEXHAUSTED@@N!!\n\r", ch );
             ch->move = 0;
          }
 

@@ -1,0 +1,15 @@
+Itemization Points: 10 + item level
+Rare item: If true rare, +50% extra points
+Piece item: +5% extra points per common piece, +50% extra points per rare piece, not multiplicative
+
+Default stats:
+
+Weapon: 5 hr/dr + item_level/30. Adept is base of 45 hr/dr.
+Armor: -10 AC - item_level. Adept is base of -130.
+Jewelry: 10 hp/mana + 10 hp/mana/move per 10 levels. Adept is base of 130 hp/mana and 120 move.
+
+Item Stat Costs:
+1 point for hr, dr
+1 point for -5 AC
+1 point for 5 hp, mana, move
+10 points for 1 str, mana, cha, wis, con, max of 1 total unless item is rare, at which point max is 5.

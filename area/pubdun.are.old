@@ -276,7 +276,7 @@ Alice in Chains is a blood thirsty killing machine, and a not very nice
 "sickman, sickman, sickman."
 ~
 3 8 -400 S
-18 2
+17 2
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -318,7 +318,7 @@ Blur is so called because no one has ever seen it stop moving.  It spins
 dizzy.
 ~
 3 8 -800 S
-21 0
+22 0
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -356,7 +356,7 @@ Elastica is so named because she appears to be made out of elastic, with
 ring vibrating~
 the vibrating ring~
 The vibrating ring spins whirls about on the floor in front of you.~
-9 134217730 8396800 1
+9 2 8396800 1
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -377,7 +377,7 @@ L
 buffalo bracer~
 a Buffalo bracer~
 A Buffalo bracer has been left here.~
-9 134217729 8390656 1
+9 1 8390656 1
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -398,7 +398,7 @@ L
 pantera fang~
 pantera's fang~
 Pantera's fang has been left here.~
-5 134217793 8421376 1
+5 65 8421376 1
 0 0 0 11 0 0 0 0 0 0
 10
 A

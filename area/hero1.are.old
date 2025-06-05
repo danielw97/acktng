@@ -158,7 +158,7 @@ Borg.
 The big borgy bastard.
 ~
 23 0 1000 S
-12 0
+11 0
 -50 25 20
 ! 0 0 0 7 20612 0 0
 | 0 0 0 0 0 0 0
@@ -168,9 +168,9 @@ A dirty gladiator~
 A filthy gladiator stands here~
 ~
 3 0 0 S
-11 1
+12 1
 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 0 0 0 0 0
 | 0 0 0 0 0 0 0
 #305
 A harried cook~
@@ -179,9 +179,9 @@ A cook is here, harried
 ~
 ~
 3 0 0 S
-11 1
+12 1
 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 0 0 0 0 0
 | 0 0 0 0 0 0 0
 #306
 A hurried patron~
@@ -192,7 +192,7 @@ A hurried patron is here, trying to get through lunch
 3 0 0 S
 12 1
 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 0 0 0 0 0
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -200,7 +200,7 @@ A hurried patron is here, trying to get through lunch
 shield~
 shield~
 A large flaming shield~
-9 134217728 8421376 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -217,7 +217,7 @@ L
 breast plate~
 breastplate~
 A breast plate~
-9 134217728 8650752 1
+9 0 8650752 1
 500 10 10 10 0 0 0 0 0 0
 1
 A
@@ -240,10 +240,10 @@ E
 L
 10
 #302
-a Borg's Compliance Enhancer~
-a Borg's Compliance Enhancer~
+A Borg's Compliance Enhancer~
+A Borg's Compliance Enhancer~
 A compliance enhancer lies here~
-5 134217728 8421376 1
+5 0 8421376 1
 0 0 0 4 0 0 0 0 0 0
 1
 A
@@ -253,10 +253,10 @@ A
 L
 10
 #303
-a Cook's White Hat~
-a Cook's White Hat~
+A Cook's White Hat~
+A Cook's White Hat~
 A cook's white hat lies here~
-9 134217728 8388616 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -271,9 +271,9 @@ L
 10
 #304
 A patron's Ring~
-a Patron's Ring~
+A Patron's Ring~
 A patron's ring lies here in the dust~
-1 134217728 0 1
+1 0 0 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -297,26 +297,15 @@ G 0 300 0 (null)
 M 0 302 30 301 (null)
 
 E 0 302 0 0 (null)
-
 M 0 304 1 307 (null)
-
 E 0 301 0 0 (null)
-
 M 0 305 5 306 (null)
-
 E 0 303 0 0 (null)
-
 M 0 305 5 306 (null)
-
 M 0 306 10 305 (null)
-
 E 0 304 0 0 (null)
-
 M 0 306 10 305 (null)
-
 M 0 306 10 305 (null)
-
 M 0 301 7 301 (null)
-
 S
 #$

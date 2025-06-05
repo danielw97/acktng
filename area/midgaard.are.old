@@ -3210,7 +3210,7 @@ L
 mace~
 a standard issue mace~
 You see a standard issue mace here.~
-5 134217792 8421376 1
+5 64 8421376 1
 0 4 4 7 0 0 0 0 0 0
 5
 A
@@ -3223,12 +3223,12 @@ You see a mace of great craftsmanship.  Imprinted on the side is:
 Merc Industries
 ~
 L
-25
+1
 #3036
 dagger~
 a standard issue dagger~
 You see a standard issue dagger here.~
-5 134217792 8421376 1
+5 64 8421376 1
 0 4 4 11 0 0 0 0 0 0
 5
 A
@@ -3241,7 +3241,7 @@ You see a dagger of great craftsmanship.  Imprinted on the side is:
 Merc Industries
 ~
 L
-25
+1
 #3037
 sword~
 a standard issue sword~

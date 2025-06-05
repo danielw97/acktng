@@ -2,9 +2,9 @@
 @@lS@@do@@eE @@WMud University@@N~
 Q 16
 K soeuniversity~
-L @@W{@@r 1  5@@W}@@N~
+L { @@G1 10@@N}~
 N 88
-I 1 5
+I 1 10
 V 20100 20149
 X 0
 F 1
@@ -654,8 +654,8 @@ Ghost~
 This little ghost doesn't look too tough to you!
 ~
 3 0 0 S
-1 1
-0 -4 -3
+2 1
+50 -4 -3
 ! 3 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #20103
@@ -665,8 +665,8 @@ troll~
 ~
 ~
 3 0 0 S
-3 1
-0 -10 -6
+2 1
+50 -10 -6
 ! 2 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #20102
@@ -675,20 +675,21 @@ sales man salesman~
 ~
 ~
 67 0 0 S
-3 1
+1 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #20101
 wraith~
 @@NA Small @@gWraith@@N~
-@@NThis little @@gwraith @@N is all that stands between you and graduation!~
+@@NThis little @@gwraith @@N is all that stands between you and graduation!
+~
 This guy looks like he would kill his own mother for a cigarette.  He
 is punk incarnate.  Better not get too close to him, unless you want to
 put him out of his misery.
 ~
 67 0 0 S
-6 1
+5 1
 0 0 0
 ! 2 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -701,8 +702,8 @@ These little, disorganized skeletons don't look too hard. Maybe they will help
 train new players in the art of combat.
 ~
 16777283 0 0 S
-3 1
--25 -5 2
+4 1
+50 -5 -5
 ! 3 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0
@@ -712,7 +713,7 @@ mace~
 a Spiff New Mace~
 A brand new mace lies on the ground, still glossy and polished.
 ~
-5 0 8421376 1
+5 134217728 8421376 1
 0 2 3 7 0 0 0 0 0 0
 1
 A
@@ -726,7 +727,7 @@ knife~
 a Ginsoo Knife~
 A knife that can cut an aluminum can without dulling is dropped here.
 ~
-5 0 8421376 1
+5 134217728 8421376 1
 0 2 4 11 0 0 0 0 0 0
 1
 A
@@ -740,7 +741,7 @@ sword~
 a stainless steel sword~
 A sword made from cheap steel lies here, reflecting light.
 ~
-5 0 8421376 1
+5 134217728 8421376 1
 0 4 6 3 0 0 0 0 0 0
 1
 A
@@ -753,58 +754,74 @@ L
 jacket~
 @@NA shabby @@lskeleton's @@Njacket~
 @@N A shabby @@lskeleton's @@Njacket lies here, waiting for you to take it~
-9 0 8650752 1
+9 134217728 8650752 1
 9 0 0 0 0 0 0 0 0 0
 5
+A
+17 -10
+A
+18 2
+A
+19 2
+A
+13 10
 L
 1
 #20104
 shield~
 @@BA @@RTiny @@BShield@@N~
 @@BYou see a @@RTiny Shield @@B that may help protect you from minimal damage ~
-9 0 8421376 1
+9 134217728 8421376 1
 10 0 0 0 0 0 0 0 0 0
 1
 A
-19 1
+19 5
 A
-18 1
+18 5
 A
 17 -10
 A
-24 -2
+24 0
+A
+20 0
 L
 1
 #20105
 necklace~
 @@NA @@yGolden @@NNecklace~
 @@NThis @@ygolden @@necklace @@ePROVES @@Nyou completed your schooling~
-9 0 8388736 1
+8 134217728 8388736 1
 3 0 0 0 0 0 0 0 0 0
 1
 A
-17 -5
+17 0
 A
-18 1
+18 0
 A
-19 1
+19 0
 A
-12 10
+12 20
+A
+13 20
+A
+14 10
 L
 1
 #20106
 hat~
 @@bA Ghost's Hat@@N~
 A hat from a Ghost might be a good thing to have~
-9 0 8388616 1
+9 134217728 8388616 1
 11 0 0 0 0 0 0 0 0 0
 1
 A
-17 -5
+17 -10
 A
-18 1
+18 2
 A
-19 1
+19 2
+A
+13 10
 L
 1
 #20107
@@ -812,11 +829,17 @@ pants~
 @@mTattered Pants@@N~
 @@NThese skeletons left some @@mtattered pants@@N for you to wear
 ~
-9 0 9437184 1
+9 134217728 9437184 1
 10 0 0 0 0 0 0 0 0 0
 1
 A
 17 -10
+A
+18 2
+A
+19 2
+A
+13 10
 L
 1
 #20108
@@ -833,46 +856,64 @@ L
 gloves~
 @@BSkeleton's @@lGloves@@N~
 @@NWhen you put these @@lskeleton's gloves@@N on, your fingers turn to @@gbone@@N~
-9 0 8392704 1
+9 134217728 8392704 1
 10 0 0 0 0 0 0 0 0 0
 1
 A
-19 1
+19 2
 A
-18 1
+18 2
+A
+17 -10
+A
+13 10
 L
 1
 #20110
 sleeves~
 @@bGhostly Sleeves@@N~
 @@R A pair of Ghostly Sleeves are here... maybe they can protect you~
-9 0 8390656 1
+9 134217728 8390656 1
 11 0 0 0 0 0 0 0 0 0
 1
+A
+17 -10
+A
+18 2
+A
+19 2
+A
+13 10
 L
 1
 #20111
 cape~
 a @@yHaunted@@N Cape~
 @@N Maybe you should tie this @@yHaunted@@N Cape around your neck~
-9 0 8454144 1
+9 134217728 8454144 1
 9 0 0 0 0 0 0 0 0 0
 1
 A
-17 -5
+17 -10
 L
 1
 #20112
 belt~
 @@NA @@bDusty @@eJewelled @@NBelt~
 @@NA dusty little @@rjewelled @@Nbelt for your waist~
-9 0 8519680 1
+9 134217728 8519680 1
 9 0 0 0 0 0 0 0 0 0
 1
 A
-17 -5
+17 -10
 A
 18 2
+A
+10 0
+A
+19 2
+A
+13 10
 L
 1
 #20113
@@ -880,15 +921,17 @@ bracelet~
 @@rA friendship bracelet@@N~
 A bracelet made from colored string sits here in a pile.
 ~
-9 0 8390656 1
+9 134217728 8390656 1
 10 0 0 0 0 0 0 0 0 0
 1
 A
 18 2
 A
-19 3
+19 2
 A
-17 -5
+17 -10
+A
+13 10
 L
 1
 #20114
@@ -910,9 +953,9 @@ A paper proclaiming graduation from SoE School for Higher Mudding is here.
 0 0 -1 0 0 0 0 0 0 0
 1
 A
-19 1
+19 0
 A
-18 1
+18 0
 A
 5 1
 A
@@ -938,24 +981,36 @@ x-ray Xray specs~
 @@dX@@c-Ray@@G Specs@@N~
 @@NA pair of plastic specs with swirling lenses lies here.@@N
 ~
-9 0 8388624 1
+9 134217728 8388624 1
 10 0 0 0 0 0 0 0 0 0
 1
 A
 13 10
 A
-12 10
+12 0
+A
+17 -10
+A
+18 2
+A
+19 2
 L
 1
 #20118
 clip-on clipon earring~
 @@NA @@eGlowing @@rGlittering @@pEarring@@N~
 @@NA small @@pearring @@eGlowss@@N here, maybe you should get it~
-9 0 8388672 1
+8 134217728 8388672 1
 2 0 0 0 0 0 0 0 0 0
 1
 A
-18 2
+18 0
+A
+13 20
+A
+12 20
+A
+14 10
 L
 1
 #20119
@@ -999,8 +1054,6 @@ M 0 20101 1 20125 (null)
 E 0 20118 0 19 (null)
 
 E 0 20105 0 4 (null)
-
-E 0 20105 0 3 (null)
 
 G 0 20115 0 (null)
 
