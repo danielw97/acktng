@@ -1545,7 +1545,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     MORTAL, NORM,
     "know item", {182, 182, 182, 182, 9, 182},
-    spell_know_item, TAR_OBJ_INV, POS_STANDING,
+    spell_identify, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 533 ), 20, 24,
     "", "!Know Item!",
     ""},
@@ -1704,7 +1704,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "sanctuary", {182, 70, 82, 182, 182, 182},
+    "sanctuary", {182, 70, 182, 182, 182, 182},
     spell_sanctuary, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 36 ), 75, 12,
     "", "The white aura around your body fades.",

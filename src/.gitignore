@@ -2,3 +2,4 @@ ack
 *.o
 *.old
 nohup.out
+*.save

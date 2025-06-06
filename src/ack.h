@@ -549,9 +549,9 @@ struct mob_index_data
    int affected_by;
    int aggro_list;
    sh_int alignment;
-   sh_int ac_mod; /* ac modifier */
-   sh_int hr_mod; /* hitroll modifier */
-   sh_int dr_mod; /* damroll modifier */
+   int ac_mod; /* ac modifier */
+   int hr_mod; /* hitroll modifier */
+   int dr_mod; /* damroll modifier */
    char *target;  /* last ch to attack */
    sh_int hitroll;   /* Unused */
    sh_int ac;  /* Unused */
@@ -662,15 +662,15 @@ struct char_data
    time_t last_note;
    sh_int timer;
    sh_int wait;
-   sh_int hit;
-   sh_int max_hit;
-   sh_int mana;
-   sh_int max_mana;
-   sh_int move;
-   sh_int max_move;
+   int hit;
+   int max_hit;
+   int mana;
+   int max_mana;
+   int move;
+   int max_move;
    int gold;
    int balance;   /* Amount of gold (if any) in bank */
-   int exp;
+   long exp;
    int intell_exp;
    int act;
    int config;
@@ -683,15 +683,15 @@ struct char_data
    sh_int carry_number;
    sh_int saving_throw;
    sh_int alignment;
-   sh_int hitroll;
-   sh_int damroll;
-   sh_int armor;
-   sh_int ac_mod; /* ac modifier */
-   sh_int stance_ac_mod;
-   sh_int hr_mod; /* hitroll modifier */
-   sh_int stance_hr_mod;
-   sh_int dr_mod; /* damroll modifier */
-   sh_int stance_dr_mod;
+   int hitroll;
+   int damroll;
+   int armor;
+   int ac_mod; /* ac modifier */
+   int stance_ac_mod;
+   int hr_mod; /* hitroll modifier */
+   int stance_hr_mod;
+   int dr_mod; /* damroll modifier */
+   int stance_dr_mod;
    char *target;  /* last ch to attack */
    sh_int wimpy;
    int deaf;

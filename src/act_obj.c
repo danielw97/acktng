@@ -1798,7 +1798,7 @@ void do_wear( CHAR_DATA * ch, char *argument )
       OBJ_DATA *worn;
       extern char *const where_name[];
       sprintf( outbuf, "%s", "Wear slots for your race:\n\r" );
-      for( location = 1; location < MAX_WEAR; location++ )
+      for( location = 0; location < MAX_WEAR; location++ )
       {
          if( race_table[ch->race].wear_locs[location] == TRUE )
          {
@@ -3521,6 +3521,7 @@ void do_cdonate( CHAR_DATA * ch, char *argument )
 void do_appraise( CHAR_DATA * ch, char *argument )
 {
    OBJ_DATA *obj;
+   void *vo;
    char buf[MAX_STRING_LENGTH];
    int av;
    int gold;
@@ -3552,13 +3553,15 @@ void do_appraise( CHAR_DATA * ch, char *argument )
       return;
    }
 
-
+   vo = (void *) obj;
+   spell_identify( 0, LEVEL_HERO - 1, ch, vo, obj );
+/*
    switch ( obj->item_type )
    {
       case ITEM_WEAPON:
-         /*
+         *
           * Try and make output a little interesting 
-          */
+          *
 
          av = ( obj->value[1] + obj->value[2] ) / 2;
          if( av < 5 )
@@ -3680,9 +3683,9 @@ void do_appraise( CHAR_DATA * ch, char *argument )
    }
 
 
-   /*
+   *
     * Now show rough idea of the cost, etc 
-    */
+    *
 
    if( obj->first_apply != NULL )
       act( "You are able to sense a strange power in $p.", ch, obj, NULL, TO_CHAR );
@@ -3699,7 +3702,7 @@ void do_appraise( CHAR_DATA * ch, char *argument )
       sprintf( buf, "$p looks VERY valuable." );
    else
       sprintf( buf, "$p looks priceless!!" );
-   act( buf, ch, obj, NULL, TO_CHAR );
+   act( buf, ch, obj, NULL, TO_CHAR );*/
    return;
 }
 

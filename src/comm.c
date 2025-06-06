@@ -2505,6 +2505,7 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
    if( d->connected == CON_GET_NEW_CLASS )
    {
       char arg[MAX_STRING_LENGTH];
+      int numclasses = 0;
       int cnt;
       int foo;
       bool ok = TRUE;
@@ -2531,6 +2532,7 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
          {
             if( !str_cmp( arg, class_table[foo].who_name ) && ch->pcdata->index[foo] == -1)
             {
+               numclasses++;
                ch->pcdata->order[cnt] = foo;
                ch->pcdata->index[foo] = cnt;
                ch->lvl[cnt] = 0;
@@ -2539,7 +2541,7 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
          }
       }
 
-      if( !ok )
+      if( !ok || numclasses < MAX_PC_CLASS )
       {
          write_to_buffer( d,
                           "Invalid Order... Please Try Again. You must list each class, by abbreviation, such as CLE WAR MAG THI.\n\r",

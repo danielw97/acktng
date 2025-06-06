@@ -343,7 +343,7 @@ S
 A small cave.~
 Dank, and dark.
 ~
-12 3
+8 3
 D0
 ~
 ~
@@ -409,7 +409,7 @@ S
 #7318
 The path narrows.~
 ~
-0 3
+0 4
 D0
 ~
 ~
@@ -788,7 +788,7 @@ The sacred holy ram lies here, sleeping and unaware.
 ~
 ~
 3 657408 0 S
-9 1
+10 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -810,7 +810,7 @@ A giant spider hangs on his web here.
 ~
 ~
 3 0 0 S
-10 1
+9 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -820,7 +820,7 @@ A shapeshifter~
 A small sniffing shapeshifter cringes in one corner.~
 ~
 1 0 0 S
-9 0
+10 0
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -831,7 +831,7 @@ A grumpy looking hermit shakes a stick at you.
 ~
 ~
 3 0 50 S
-37 1
+38 1
 0 0 2
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -842,7 +842,7 @@ A rotting tree approaches you.
 ~
 ~
 1 0 -100 S
-8 1
+9 1
 -10 1 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -853,7 +853,7 @@ A nasty vicious wolverine is rooting for food here.
 ~
 ~
 3 0 0 S
-35 1
+36 1
 -40 15 25
 ! 0 0 0 7 16644 0 0
 | 0 0 0 0 0 0 0
@@ -875,7 +875,7 @@ A Strange cat lies here doing conjuring tricks.
 ~
 ~
 133651 1081474 0 S
-81 1
+82 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1095,6 +1095,7 @@ M 0 7302 1 7306 (null)
 M 0 7303 1 7312 (null)
 
 E 0 7309 0 0 (null)
+
 E 0 7305 0 16 (null)
 
 M 0 7301 1 7320 (null)

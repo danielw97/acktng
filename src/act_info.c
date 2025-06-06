@@ -48,7 +48,7 @@
 extern bool deathmatch;
 
 char *const where_name[] = {
-   "                      ",  /* light  */
+   "-*light*-             ",  /* light  */
    "-*floating above*-    ",
    "-*enveloped by*-      ",
    "-*worn on horns*-     ",
@@ -1349,13 +1349,13 @@ void do_score( CHAR_DATA * ch, char *argument )
 
       for( cnt = 0; cnt < MAX_CLASS; cnt++ )
       {
-         sprintf( buf, "@@c%s", class_table[cnt].who_name );
-         safe_strcat( MAX_STRING_LENGTH, buf2, buf );
-         if( ch->lvl[cnt] != -1 )
-            sprintf( buf, ":@@W%2d ", ch->lvl[cnt] );
-         else
-            sprintf( buf, "@@c:%s ", " 0" );
-         safe_strcat( MAX_STRING_LENGTH, buf2, buf );
+         if (ch->lvl[cnt] > 0)
+         {
+           sprintf( buf, "@@c%s", class_table[cnt].who_name );
+           safe_strcat( MAX_STRING_LENGTH, buf2, buf );
+           sprintf( buf, ":@@W%2d ", ch->lvl[cnt] );
+           safe_strcat( MAX_STRING_LENGTH, buf2, buf );
+         }
       }
    }
    else
@@ -2577,9 +2577,9 @@ void do_who( CHAR_DATA * ch, char *argument )
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "@@R+-----------------------------------------------------------------------------+\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@mSo An Ki Ne Mo@@R                                                              |\n\r" );
+                "| @@mSo An Ki Ne Mo Uk@@R                                                           |\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@bMa Cl Th Wa Ps @@eRace Clan  ABJPW    Player	Title		      @@R(flags) @@R|\n\r" );
+                "| @@bMa Cl Th Wa Ps Pu @@eRace Clan  ABJPW    Player	Title		      @@R(flags) @@R|\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "|---------------------------------+-------------------------------------------|\n\r" );
 
@@ -2886,13 +2886,18 @@ void do_who( CHAR_DATA * ch, char *argument )
                {
                   if( wch->lvl2[cnt] > 0 )
                   {
-                     sprintf( buf4, "@@m%3d@@N", wch->lvl2[cnt] );
+                     if (wch->lvl2[cnt] == 100)
+		       sprintf( buf4, "@@d *@@N", wch->lvl2[cnt] );
+                     else
+                       sprintf( buf4, "@@m%3d@@N", wch->lvl2[cnt] );
 
                   }
                   else
                   {
+                     if (wch->lvl[cnt] == 100)
+                       sprintf(buf4, "@@d *@@N", wch->lvl[cnt]);
                      if( wch->lvl[cnt] <= 0 )
-                        sprintf( buf4, "@@d%3d@@N", 0 );
+                        sprintf( buf4, "@@g%3d@@N", 0 );
                      else
                         sprintf( buf4, "@@b%3d@@N", wch->lvl[cnt] );
                   }
@@ -5493,7 +5498,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
    }
 
    /*
-    * Ok, so now class should be valid.  Check if enough exp 
+    * Ok, so now class should be valid.  Check if enough exp and valid 
     */
    if( wolf )
       vamp_cost = exp_to_level_wolf( ch->pcdata->vamp_level );
@@ -5509,7 +5514,15 @@ void do_gain( CHAR_DATA * ch, char *argument )
          cost = exp_to_level_adept( ch );
    }
    else
+   {
+     if (ch->pcdata->order[c] == -1)
+     {
+       send_to_char("You cannot level in this class\n\r", ch);
+       return;
+     }
+
       cost = exp_to_level( ch, c, ( ch->pcdata->index[c] ) );
+   }
 
    if( vamp )
    {
@@ -5612,8 +5625,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
          send_to_char( "Cannot level in that class, already have maximum number of classes.\n\r", ch );
          return;
       }
-
-      ch->lvl[c] = 0;
    }
 
    /*
@@ -6072,11 +6083,14 @@ void do_worth( CHAR_DATA * ch, char *argument )
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
       if( ( ch->lvl[cnt] != -1 || numclasses < race_table[ch->race].classes ) && ch->lvl[cnt] < LEVEL_HERO - 1 )
       {
-         any = TRUE;
-         cost = exp_to_level( ch, cnt, ( ch->pcdata )->index[cnt] );
+         if (ch->pcdata->index[cnt] > -1)
+         {
+           any = TRUE;
+           cost = exp_to_level( ch, cnt, ( ch->pcdata )->index[cnt] );
 
-         sprintf( buf, "%-14s  %9d %9d.\n\r", class_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
-         send_to_char( buf, ch );
+           sprintf( buf, "%-14s  %9d %9d.\n\r", class_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
+           send_to_char( buf, ch );
+         }
       }
 
    /*

@@ -1445,16 +1445,7 @@ void char_update( void )
          {
             gain_bloodlust( ch, 0 - number_range( 1, 2 ) );
             check_vamp( ch );
-         }
-
-         gain_condition( ch, COND_THIRST, 0 - number_range( 1, 2 ) );
-         if( ch->pcdata->condition[COND_THIRST] <= 10 )
-            ch->pcdata->condition[COND_THIRST] = 10;
-         gain_condition( ch, COND_DRUNK, 0 - number_range( 1, 2 ) );
-         if( !IS_VAMP( ch ) )
-         {
-            gain_condition( ch, COND_FULL, 0 - number_range( 1, 2 ) );
-
+            gain_condition( ch, COND_THIRST, 0 - number_range( 1, 2 ) );
          }
       }
 

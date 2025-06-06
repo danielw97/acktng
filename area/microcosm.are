@@ -3512,7 +3512,7 @@ the Crooked idea~
 ~
 ~
 131119 8320 0 S
-76 1
+75 1
 0 100 40
 ! 0 0 0 7 2 0 0
 | 0 0 0 0 0 0 0
@@ -3534,7 +3534,7 @@ the armory guy~
 ~
 ~
 8388619 8320 0 S
-93 1
+94 1
 -1000 400 400
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3579,7 +3579,7 @@ anger~
 ~
 ~
 1179659 8320 0 S
-75 1
+85 1
 -1111 180 190
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3601,7 +3601,7 @@ the Golf Pro~
 ~
 ~
 1048579 8192 0 S
-82 1
+83 1
 -700 70 45
 ! 0 0 0 7 12302 0 8
 | 0 0 0 0 0 0 0
@@ -3625,7 +3625,7 @@ This is one secretary that you do NOT want to disturb!@@N
 ~
 ~
 3 598016 0 S
-80 2
+81 2
 -550 110 55
 ! 0 0 0 7 142 0 0
 | 0 0 0 0 0 0 0
@@ -3665,7 +3665,7 @@ This is like on of them birds that spins around dazed cartoon characters heads
 yeah?@@N
 ~
 19 524416 0 S
-79 2
+78 2
 -700 95 35
 ! 0 0 0 7 24582 0 0
 | 0 0 0 0 0 0 0
@@ -3735,7 +3735,7 @@ A caddy is here, looking for the clubs he dropped.
 ~
 ~
 1 0 0 S
-64 1
+63 1
 -100 69 30
 ! 0 0 0 7 8198 0 0
 | 0 0 0 0 0 0 0
@@ -3768,7 +3768,7 @@ A caddy is here, holding his charge's glass of bourbon.
 ~
 ~
 131073 8192 0 S
-83 1
+84 1
 -100 80 70
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3779,7 +3779,7 @@ Duran Duran is here, and they're planning a come-back tour! sTOP THEM!
 ~
 ~
 131073 8320 0 S
-76 1
+77 1
 -900 190 140
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3802,7 +3802,7 @@ plaid~
 ~
 ~
 131073 8320 0 S
-71 1
+70 1
 -1300 199 150
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3835,7 +3835,7 @@ k-rad~
 ~
 ~
 131073 8320 0 S
-72 1
+71 1
 -900 160 210
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3857,7 +3857,7 @@ bobomb~
 ~
 ~
 33 524348 0 S
-35 1
+34 1
 -1000 500 500
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3879,7 +3879,7 @@ A @@yBright@@N idea strolls merrily along here.
 ~
 ~
 9 128 0 S
-90 1
+91 1
 -600 140 130
 ! 0 0 0 7 8198 16 0
 | 0 0 0 0 0 0 0
@@ -3901,7 +3901,7 @@ A @@lRetina@@N is here, soakin up some rays on his lawn chair.
 ~
 ~
 11 524416 0 S
-92 1
+91 1
 -500 59 37
 ! 0 0 0 7 8206 0 0
 | 0 0 0 0 0 0 0
@@ -3935,7 +3935,7 @@ A happy thought is bouncing along here, singing a gay tune.
 ~
 ~
 9 0 0 S
-94 1
+93 1
 -500 83 111
 ! 0 0 0 7 8198 0 0
 | 0 0 0 0 0 0 0
@@ -3947,7 +3947,7 @@ A depressing thought is sulking here while sewing itself into it's death
 ~
 ~
 9 128 0 S
-84 1
+83 1
 -500 110 90
 ! 0 0 0 7 8198 0 0
 | 0 0 0 0 0 0 0
@@ -3958,7 +3958,7 @@ anyone but @@x@@iDeception@@N~
 ~
 ~
 131081 0 0 S
-88 1
+87 1
 -1111 166 180
 ! 0 0 0 7 8198 256 0
 | 0 0 0 0 0 0 0
@@ -3969,7 +3969,7 @@ hate~
 ~
 ~
 131097 524288 0 S
-82 1
+81 1
 -1000 160 160
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -4012,7 +4012,7 @@ passion~
 ~
 ~
 1048605 524332 0 S
-99 1
+100 1
 -1300 260 290
 ! 0 0 0 7 24590 256 0
 | 0 0 0 0 0 0 0
@@ -4122,9 +4122,9 @@ burden of intellect~
 @@yThe Burden of @@bIntellect@@N~
 A Very heavy belt lies here looking very smart.
 ~
-9 134217728 8519680 1
+9 134217728 8388610 1
 0 0 0 0 0 0 0 0 0 0
-35
+5
 A
 3 3
 A
@@ -4226,8 +4226,8 @@ L
 #5608
 Fuzzy Logic~
 @@WF@@d@@fu@@N@@dZ@@Wz@@d@@fy @@WL@@doG@@W@@fI@@N@@dc~
-~
-9 134217728 8388616 1
+description Some fuzzy logic lies here~
+9 134217728 8388609 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -4745,6 +4745,7 @@ E 0 5606 0 7 (null)
 
 M 0 5607 1 5636 (null)
 
+E 0 5608 0 0 (null)
 E 0 5609 0 0 (null)
 
 M 0 5608 1 5639 (null)

@@ -18,10 +18,30 @@ S Title not shown on area list.
 New room~
 No description~
 4 11
+D0
+~
+~
+0 -1 6602
 D1
 ~
 ~
 0 -1 67
+D2
+~
+~
+0 -1 20600
+D3
+~
+~
+0 -1 7323
+D4
+~
+~
+0 -1 5101
+D5
+~
+~
+0 -1 3014
 S
 #67
 Stevie's Living Room~
@@ -52,6 +72,14 @@ D3
 ~
 ~
 0 -1 66
+D4
+~
+~
+0 -1 16800
+D5
+~
+~
+0 -1 1318
 S
 #68
 New room~
@@ -70,8 +98,8 @@ delvar~
 @@lDelvar @@dIron@@bFist@@N, Singer of Dwarven Songs
 ~
 ~
-24117257 544 0 S
-63 1
+19922953 544 0 S
+70 1
 0 0 0
 ! 3 0 2 7 80370 0 16
 | 0 0 0 0 0 16 0
@@ -81,8 +109,8 @@ silverleaf~
 @@gSilver@@GLeaf @@WHalfmoon@@N, of The GoldenStar Elves
 ~
 ~
-24117257 33312 0 S
-58 1
+19922953 33312 0 S
+80 1
 0 0 0
 ! 4 0 3 7 2 6283264 16
 | 1024 0 0 0 0 0 0
@@ -92,10 +120,10 @@ morganth~
 @@mMorganth @@dthe Mysterious@@N, Follower of Magic
 ~
 ~
-24117257 1049148 0 S
-59 1
-0 0 0
-! 0 0 0 7 0 1022 48
+19922953 1049148 0 S
+110 1
+-2000 300 300
+! 0 0 0 7 147470 1022 48
 | 1 32 0 0 0 1 32
 #0
 #OBJECTS
@@ -189,74 +217,74 @@ azurite ring~
 @@lA@@Bz@@lu@@Br@@li@@Bt@@le@@N Ring~
 A ring with an opaque @@lm@@Bo@@lt@@Bt@@ll@@Be@@ld @@Bdeep blue@@N stone.
 ~
-9 1 8396800 3
+9 134217729 8396800 3
 0 0 0 0 0 0 0 0 0 0
 1
 A
 1 5
 L
-55
+100
 #76
 banded agate ring~
 @@bB@@Ba@@Rn@@gd@@be@@Bd@@N Agate Ring~
 A ring with @@bbrown@@N, @@Bblue@@N, @@Rred@@N, and @@gwhite@@N stripes.
 ~
-9 2 8396800 5
+9 134217730 8396800 5
 0 0 0 0 0 0 0 0 0 0
 1
 A
 2 5
 L
-55
+100
 #77
 blue quartz amulet~
 @@aBlue@@N Quartz Amulet~
 An amulet with a transparent pale @@ablue@@N stone.
 ~
-9 4 8388736 9
+9 134217732 8388736 9
 0 0 0 0 0 0 0 0 0 0
 1
 A
 3 5
 L
-55
+100
 #78
 eye agate amulet~
 @@dE@@gy@@be @@BA@@Gg@@da@@gt@@be@@N Amulet~
 An amulet with concentric rings of @@dgray@@N, @@gwhite@@N, @@bbrown@@N,
 @@Bblue@@N, and @@Ggreen@@N
 ~
-9 32 8388736 17
+9 134217760 8388736 17
 0 0 0 0 0 0 0 0 0 0
 1
 A
 4 5
 L
-55
+100
 #79
 halo of sneakiness~
 halo of @@dSneakiness@@N~
 A @@dshadowy @@Nhalo.
 ~
-9 64 8388609 33
+9 134217792 8388609 33
 0 0 0 0 0 0 0 0 0 0
 1
 A
 5 5
 L
-55
+100
 #80
 morganths aura~
 @@mMorganth's @@gAura@@N~
 A @@msticky@@N looking @@gaura@@N.
 ~
-9 128 8388610 65
+9 134217856 8388610 65
 0 0 0 0 0 0 0 0 0 0
 1
 A
 6 1
 L
-55
+100
 #0
 #RESETS
 M 0 66 1 66 (null)
@@ -336,8 +364,6 @@ E 0 6014 0 7 (null)
 E 0 6016 0 8 (null)
 
 E 0 6004 0 0 (null)
-
-E 0 1305 0 16 (null)
 
 E 0 6035 0 17 (null)
 

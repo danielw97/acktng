@@ -294,7 +294,7 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
    for( foo = 0; foo < MAX_CURRENCY; foo++ )
       fprintf( fp, "%d ", ch->bank_money->cash_unit[foo] );
    fprintf( fp, "%s", "\n" );
-   fprintf( fp, "Exp          %d\n", ch->exp );
+   fprintf( fp, "Exp          %li\n", ch->exp );
    fprintf( fp, "Act          %d\n", ch->act );
    fprintf( fp, "Config       %d\n", ch->config );
    fprintf( fp, "AffectedBy   %d\n", ch->affected_by );
