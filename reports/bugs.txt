@@ -58,3 +58,17 @@
 [*****] BUG: load_quest_object : Invalid object vnum 18186.
 [*****] BUG: load_quest_object : Invalid object vnum 18183.
 [*****] BUG: load_quest_object : Invalid object vnum 18192.
+[*****] BUG: Fread_number: looking for a digit, found a R.
+[*****] BUG: Error in fread_number
+[*****] BUG: Fread_number: looking for a digit, found a R.
+[*****] BUG: Error in fread_number
+[*****] BUG: Fread_number: looking for a digit, found a I.
+[*****] BUG: Error in fread_number
+[*****] BUG: Fread_number: looking for a digit, found a I.
+[*****] BUG: Error in fread_number
+[*****] BUG: Fread_number: looking for a digit, found a I.
+[*****] BUG: Error in fread_number
+[*****] BUG: Fread_number: looking for a digit, found a I.
+[*****] BUG: Error in fread_number
+[*****] BUG: Fread_number: looking for a digit, found a I.
+[*****] BUG: Error in fread_number

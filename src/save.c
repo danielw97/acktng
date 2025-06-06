@@ -320,13 +320,13 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
    {
       fprintf( fp, "Generation   %d\n", ch->pcdata->generation );
       fprintf( fp, "Clan         %d\n", ch->pcdata->clan );
-      fprintf( fp, "Order        %d %d %d %d %d\n",
+      fprintf( fp, "Order        %d %d %d %d %d %d\n",
                ch->pcdata->order[0], ch->pcdata->order[1], ch->pcdata->order[2],
-               ch->pcdata->order[3], ch->pcdata->order[4] );
+               ch->pcdata->order[3], ch->pcdata->order[4], ch->pcdata->order[5] );
 
-      fprintf( fp, "Index	   %d %d %d %d %d\n",
+      fprintf( fp, "Index	   %d %d %d %d %d %d\n",
                ch->pcdata->index[0], ch->pcdata->index[1], ch->pcdata->index[2],
-               ch->pcdata->index[3], ch->pcdata->index[4] );
+               ch->pcdata->index[3], ch->pcdata->index[4], ch->pcdata->index[5] );
 
       fprintf( fp, "Mkills	   %d\n", ch->pcdata->mkills );
       fprintf( fp, "Mkilled	   %d\n", ch->pcdata->mkilled );

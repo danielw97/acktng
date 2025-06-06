@@ -30,8 +30,8 @@
  *  Your mud info here :) Zen
  */
 
-#define mudnamecolor  "@@lYour Mud Name@@N"
-#define mudnamenocolor  "Your Mud name"
+#define mudnamecolor  "@@lACK!TNG@@N"
+#define mudnamenocolor  "ACK!TNG"
 #define sacgodname  "Cyberlich"
 #define goodgodname  "Freyja"
 #define neutralgodname  "Zenithar"
@@ -66,11 +66,13 @@
 #define MAX_CLAN                     9 /* number of clans */
 #define EXP_LEVEL                 1000 /* exp per level */
 #define MAX_SKILL                  300
-#define MAX_CLASS                    5
-#define MAX_LEVEL                   85
+#define MAX_CLASS                    6
+#define MAX_PC_CLASS		     4
+#define MAX_LEVEL                   105
 #define MOUNT_COST                  10
 #define LEVEL_HERO                 (MAX_LEVEL - 4)
 #define LEVEL_IMMORTAL             (MAX_LEVEL - 3)
+#define MAX_MORTAL		    (MAX_LEVEL - 5)
 #define MAX_VAMP_LEVEL              20
 #define MAX_WOLF_LEVEL		    20
 #define ADVANCE_VAMP                16

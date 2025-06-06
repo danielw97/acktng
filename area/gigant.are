@@ -673,7 +673,7 @@ The Ogre Chieftain is here, doing his best to rule.
 The Chieftain looks old, but still able to beat most people in a fight.
 ~
 3 8320 200 S
-75 1
+74 1
 -100 100 100
 ! 0 0 0 7 0 32 0
 | 0 0 0 0 0 0 0
@@ -709,7 +709,7 @@ The Shopkeeper stands here, rubbing his hands together.
 The shopkeeper is fairly short, and balding.
 ~
 3 10368 400 S
-71 1
+72 1
 -1400 400 400
 ! 0 0 0 7 24076 32 16
 | 0 0 0 0 0 0 0
@@ -733,7 +733,7 @@ The Weaponsmith stands here.
 The Weaponsmith has sold more weapons than you've you had hot dinners.
 ~
 8195 10376 450 S
-79 2
+80 2
 -1400 400 400
 ! 0 0 0 7 24076 32 16
 | 0 0 0 0 0 0 0
@@ -745,7 +745,7 @@ A wise man stands here, looking wise, and ummm male.
 He looks very intelligent for an ogre.  Pretty big too.
 ~
 1539 8192 375 S
-77 1
+76 1
 -1400 400 400
 ! 0 0 0 7 24076 32 16
 | 0 0 0 0 0 0 0
@@ -757,7 +757,7 @@ A Male Ogre is here.
 He looks like your typical ogre - untidy, and rather large.  Smells too.
 ~
 1 0 50 S
-42 1
+41 1
 -850 130 140
 ! 0 0 0 7 2322 0 0
 | 0 0 0 0 0 0 0
@@ -806,7 +806,7 @@ The guard looks you over, deciding if he should work his own form of justice
 on you.  He shrugs and looks elsewhere for someone to pick on.
 ~
 3 0 200 S
-30 1
+29 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -819,7 +819,7 @@ The guard looks you over, deciding if he should work his own form of justice
 on you.  He shrugs and looks elsewhere for someone to pick on.
 ~
 1 0 200 S
-22 1
+23 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -887,20 +887,20 @@ L
 club large~
 a large club~
 A large club lies forogtton on the floor.~
-5 0 8421376 1
+5 134217728 8421376 1
 0 0 0 7 0 0 0 0 0 0
 4
 L
-1
+20
 #3406
 club small~
 a small club~
 A small club lies forogtton on the floor.~
-5 0 8421376 1
+5 134217728 8421376 1
 0 0 0 7 0 0 0 0 0 0
 4
 L
-1
+15
 #3407
 belt spiked~
 a spiked belt~
@@ -918,34 +918,34 @@ L
 bracer iron~
 an iron bracer~
 A crude-looking iron bracer has been left here.~
-9 0 8390656 1
+9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
 4
 L
-1
+25
 #3409
 gauntlets iron~
 a pair of iron gauntlets~
 Someone has left a pair of iron gauntlets here.~
-9 0 8392704 1
+9 134217728 8392704 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
-21
+20
 #3410
 elf head burning~
 a burning elf head~
 A burning elf head has been left here.  How nice.~
-1 0 8421376 1
+1 134217728 8421376 1
 0 0 20 0 0 0 0 0 0 0
 2
 L
-1
+10
 #3411
 ring black~
 a black ring~
 A black ring has been dropped here.~
-9 0 8396800 1
+9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -957,7 +957,7 @@ A
 A
 2 -1
 L
-1
+20
 #3412
 puddle~
 a dark, muddy puddle~
@@ -967,6 +967,15 @@ A dark muddy puddle lies before you.~
 10000
 L
 1
+#3413
+A chieftain chieftains chieftain's aura~
+A chieftain's aura~
+A chieftain's aura~
+8 134217728 8388610 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
 #0
 #SHOPS
 3403 9 0 0 0 0 150 90 0 23
@@ -983,6 +992,7 @@ E 0 3401 0 16    wi axe
 
 M 0 3402 1 3435  chief
 
+E 0 3413 0 0 (null)
 M 0 3403 1 3438  armorer
 
 M 0 3404 1 3422  food

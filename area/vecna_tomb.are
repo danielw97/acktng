@@ -2410,7 +2410,7 @@ Sex Slave~
 ~
 ~
 1 0 0 S
-3 1
+2 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2432,7 +2432,7 @@ King Saul The Lich~
 ~
 ~
 147515 1059512 0 S
-105 1
+106 1
 -1200 666 700
 ! 8 0 14 7 32526 96 48
 | 0 0 0 0 0 0 0
@@ -2454,7 +2454,7 @@ Manasseh The Lich~
 ~
 ~
 147577 1059578 0 S
-107 1
+106 1
 -999 666 666
 ! 0 0 14 7 14 96 144
 | 0 0 0 0 0 0 0
@@ -2465,7 +2465,7 @@ Rehoboam the Lich~
 ~
 ~
 147577 1073340 0 S
-101 1
+102 1
 -990 466 560
 ! 0 0 14 7 32526 96 48
 | 0 0 0 0 0 0 0
@@ -2476,7 +2476,7 @@ A Presence~
 ~
 ~
 147561 624298 0 S
-86 1
+88 1
 -666 190 190
 ! 0 0 14 7 14 2112 16
 | 0 0 0 0 0 0 0
@@ -2498,7 +2498,7 @@ Shadowen~
 ~
 ~
 147561 1574586 0 S
-91 1
+90 1
 -650 175 175
 ! 0 0 14 7 14 2144 16
 | 0 0 0 0 0 0 0
@@ -2509,7 +2509,7 @@ Walking Corpse~
 ~
 ~
 147561 3768 0 S
-102 1
+103 1
 -901 366 399
 ! 3 0 14 7 14838 0 0
 | 0 0 0 0 0 0 0
@@ -2542,7 +2542,7 @@ Spectre~
 ~
 ~
 16419 698 0 S
-78 1
+79 1
 -600 300 250
 ! 0 0 14 7 19470 96 16
 | 0 0 0 0 0 0 0
@@ -2564,7 +2564,7 @@ zombie~
 ~
 ~
 278625 640 0 S
-99 1
+101 1
 -600 270 332
 ! 3 0 14 7 17526 0 0
 | 0 0 0 0 0 0 0
@@ -2586,7 +2586,7 @@ sentinel~
 ~
 ~
 1065003 760 0 S
-111 1
+112 1
 -700 280 300
 ! 6 0 14 7 24078 2112 144
 | 0 0 0 0 0 0 0
@@ -2597,7 +2597,7 @@ A @@lWraith@@g~
 ~
 ~
 81985 1671864 0 S
-83 1
+81 1
 -500 220 245
 ! 3 0 14 7 7174 0 0
 | 0 0 0 0 0 0 0
@@ -2608,7 +2608,7 @@ Banshee~
 ~
 ~
 213097 673454 0 S
-99 2
+100 2
 -850 380 400
 ! 0 0 14 7 22926 34944 16
 | 0 0 0 0 0 0 0
@@ -2619,7 +2619,7 @@ Ghost~
 ~
 ~
 213097 1574570 0 S
-87 1
+89 1
 -200 131 131
 ! 8 0 14 7 23694 1052672 8
 | 0 0 0 0 0 0 0
@@ -2630,7 +2630,7 @@ Groaning Spirit~
 ~
 ~
 213097 1680122 0 S
-96 1
+94 1
 -770 390 666
 ! 0 0 14 7 30734 4489220 16
 | 0 0 0 0 0 0 0
@@ -2663,7 +2663,7 @@ A God Among the Dead~
 ~
 ~
 131115 1091320 -1000 S
-105 1
+106 1
 -1100 500 560
 ! 8 0 14 7 31790 192 16
 | 0 0 0 0 0 0 0
@@ -2675,7 +2675,7 @@ Floating Death~
 ~
 ~
 213113 1575612 0 S
-106 1
+107 1
 -1150 666 666
 ! 0 0 14 7 23310 64 16
 | 0 0 0 0 0 0 0
@@ -2708,7 +2708,7 @@ keeper earth~
 ~
 ~
 99 16616 0 S
-120 1
+122 1
 -2000 900 700
 ! 0 0 0 7 393230 0 80
 | 0 0 0 0 0 0 0
@@ -2719,7 +2719,7 @@ Speech Ribbon~
 @@lA Ribbon Proclaiming Free Speech@@g~
 @@lA Ribbon Proclaiming Free Speech lies here.@@g
 ~
-9 0 8389632 1
+9 134217728 8389632 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2737,7 +2737,7 @@ skull vecna~
 @@mThe Skull of Vecna@@g~
 @@mThe Skull of Vecna lies here, glowing in dark, evil light.@@G
 ~
-1 262144 8421376 3611
+1 134479872 8421376 3611
 0 0 -1 0 0 0 0 0 0 0
 1
 A
@@ -2757,7 +2757,7 @@ coat vecna~
 @@mThe Invulnerable Coat of Vecna@@g~
 @@mThe Invulnerable Coat of Vecna lies here, waiting for one worthy enough to wear it.@@g
 ~
-9 262150 8650752 1775
+9 134479878 8650752 1775
 0 0 0 0 0 0 0 0 0 0
 15
 A
@@ -2780,7 +2780,7 @@ L
 Darksword Lich~
 the @@WDarksword @@mof the @@WLich@@g~
 The Darksword of the Lich lies here.~
-5 262150 8421376 5523
+5 134479878 8421376 5523
 0 0 0 11 0 0 0 0 0 0
 22
 A
@@ -2802,7 +2802,7 @@ leggings presence~
 @@mLeggings of Presence@@g~
 @@mA set of leggings, intangible by the mere senses is here.@@g
 ~
-9 20 9437184 3
+9 134217748 9437184 3
 0 0 0 0 0 0 0 0 0 0
 15
 A
@@ -2822,7 +2822,7 @@ Fiend Boots~
 @@mBoots of the Fiend@@g~
 @@mThese fiendish boots walk around, waiting for someone to step in them.@@g
 ~
-9 262676 10485760 97
+9 134480404 10485760 97
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -2838,7 +2838,7 @@ Shadowen's Coat~
 @@mShadowen's Coat@@g~
 @@mA Coat of the finest, black chainmail lies here, feathery in weight.@@g
 ~
-9 516 8650752 16513
+9 134218244 8650752 16513
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -2858,7 +2858,7 @@ ring black marble~
 @@mA Ring of Black Marble@@g~
 @@mA Ring of Black Marble lies here, vibrating softly.@@g
 ~
-9 262164 8396800 3
+9 134479892 8396800 3
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2874,7 +2874,7 @@ Wight Claws~
 @@mClaws of the Wight@@g~
 @@mA pair of Wight Claws lies in the dirt here.@@g
 ~
-9 262160 8392704 257
+9 134479888 8404992 257
 0 0 0 0 0 0 0 0 0 0
 15
 A
@@ -2892,7 +2892,7 @@ Spectre Lantern~
 @@lA Spectre's Lantern@@g~
 @@lA Lantern sits on the floor here, glowing with an evil light.@@g
 ~
-1 262161 8421376 133
+1 134479889 8421376 133
 0 0 -1 0 0 0 0 0 0 0
 10
 A
@@ -2908,7 +2908,7 @@ Ghast Trousers~
 @@lGhast's Trousers@@g~
 @@A pair of Ghast's Trousers lie here in a pile.@@g
 ~
-9 16 9437184 1
+9 134217744 9437184 1
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -2928,7 +2928,7 @@ Zombie Earring~
 @@lA Zombie's Earring@@g~
 @@lA Zombie's Earring lies here in the dust.@@g
 ~
-9 262160 8388672 1
+9 134479888 8388672 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2945,7 +2945,7 @@ L
 Bone Bracer~
 @@mBone Bracer@@g~
 @@mA bracer, made of bone, lies here@@g.~
-9 16 8390656 1
+9 134217744 8390656 1
 0 0 0 0 0 0 0 0 0 0
 5
 A
@@ -2962,7 +2962,7 @@ L
 cloak wraith~
 @@mCloak of the Wraith@@g~
 @@mThe Cloak of the Wraith lies here, unused.@@g~
-9 16 8388736 1
+9 134217744 8388736 1
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -2980,7 +2980,7 @@ Banshee Veil~
 @@mA Veil of the Banshee@@g~
 @@mA Veil of the Banshee seemingly floats on the air here.@@g
 ~
-9 262160 8388624 3083
+9 134479888 8388624 3083
 0 0 0 0 0 0 0 0 0 0
 2
 A
@@ -2998,7 +2998,7 @@ Ghost Aura~
 @@lAura of the Ghost@@g~
 @@lAn evilly luminescent Aura floats above the ground here.@@g
 ~
-9 84 8454144 145
+9 134217812 8388610 145
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -3018,7 +3018,7 @@ Spirit Sash~
 @@mA Spirit Sash@@g~
 @@mA Spirit Sash lies here, belonging in the posession of the dead.@@g
 ~
-9 262704 8519680 4097
+9 134480432 8519680 4097
 0 0 0 0 0 0 0 0 0 0
 5
 A
@@ -3034,7 +3034,7 @@ shield skeletal legion~
 @@mA Shield of the Skeletal Legion@@g~
 @@mA Shield of the Skeletal Legion bears the Death Head symbol of the Ancient Ones.@@g
 ~
-9 532 8421376 147
+9 134218260 8421376 147
 0 0 0 0 0 0 0 0 0 0
 22
 A
@@ -3058,7 +3058,7 @@ armplate guardian~
 @@mArmplate of the Guardian@@g~
 @@mA massive armplate, bearing the symbol of the Ancient Ones, lies here.@@g
 ~
-9 532 8389632 273
+9 134218260 8389632 273
 0 0 0 0 0 0 0 0 0 0
 16
 A
@@ -3078,7 +3078,7 @@ crown lich~
 @@gThe @@mCrown @@gof the @@mLich@@g~
 @@gThe @@mCrown @@gof the @@mLich @@g floats in midair, radiating pure evil.@@g
 ~
-9 264724 8388616 401
+9 134482452 8388616 401
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -3098,7 +3098,7 @@ Ebony Death~
 @@mEbony Death@@g~
 @@mAn ebony dagger lies here, ready to visit a black death upon the unwilling.@@g
 ~
-5 532 8421376 257
+5 134218260 8421376 257
 0 0 0 11 0 0 0 0 0 0
 22
 A

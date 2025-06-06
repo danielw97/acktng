@@ -777,7 +777,7 @@ The Guinea-pig guardian of the burrow awaits death here.
 ~
 ~
 131091 535168 0 S
-81 1
+82 1
 0 100 50
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -788,7 +788,7 @@ The sacred holy ram lies here, sleeping and unaware.
 ~
 ~
 3 657408 0 S
-8 1
+9 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -810,7 +810,7 @@ A giant spider hangs on his web here.
 ~
 ~
 3 0 0 S
-9 1
+10 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -820,7 +820,7 @@ A shapeshifter~
 A small sniffing shapeshifter cringes in one corner.~
 ~
 1 0 0 S
-10 0
+9 0
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -842,7 +842,7 @@ A rotting tree approaches you.
 ~
 ~
 1 0 -100 S
-10 1
+8 1
 -10 1 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -853,7 +853,7 @@ A nasty vicious wolverine is rooting for food here.
 ~
 ~
 3 0 0 S
-36 1
+35 1
 -40 15 25
 ! 0 0 0 7 16644 0 0
 | 0 0 0 0 0 0 0
@@ -928,7 +928,7 @@ bracer~
 bracer of Giant Strength~
 A huge bracer has been stupidly discarded here.
 ~
-9 0 8390656 1
+9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -939,7 +939,7 @@ E
 ~
 ~
 L
-25
+50
 #7309
 bloodring~
 the bloodring~
@@ -991,7 +991,7 @@ staff~
 an oak staff~
 A bit of tree is lying here forgotten.
 ~
-5 2 8421376 1
+5 134217730 8421376 1
 0 0 0 7 0 0 0 0 0 0
 10
 A
@@ -1001,13 +1001,13 @@ A
 A
 12 30
 L
-1
+30
 #7304
 claws~
 wolverine claws~
 Some long razor blades on gloves lie on the floor here. 
 ~
-5 0 8421376 1
+5 134217728 8404992 1
 0 0 0 0 0 0 0 0 0 0
 8
 A
@@ -1017,7 +1017,7 @@ A
 A
 18 5
 L
-1
+30
 #7303
 key~
 key to discovery~
@@ -1094,6 +1094,7 @@ M 0 7302 1 7306 (null)
 
 M 0 7303 1 7312 (null)
 
+E 0 7309 0 0 (null)
 E 0 7305 0 16 (null)
 
 M 0 7301 1 7320 (null)

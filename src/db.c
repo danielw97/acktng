@@ -2686,27 +2686,38 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    } /* We have an automatically stat'd item */
    else
    {
+     int ilevel = obj->level;
      int hrdr_val = 0;
      int ac_val = 0;
      int stat_val = 0;
 
+     if (IS_SET(pObjIndex->extra_flags, ITEM_REMORT))
+     {
+       ilevel = MAX_MORTAL + (obj->level / 4);
+     }
+
+     if (ilevel > MAX_MORTAL)
+     {
+       ilevel += (ilevel - MAX_MORTAL);
+     }
+
      if (pObjIndex->item_type == ITEM_WEAPON)
      {
-       hrdr_val = 5 + (obj->level/3);
-       ac_val = 0 - (obj->level/10);
-       stat_val = (obj->level/10);
+       hrdr_val = 5 + (ilevel/6);
+       ac_val = 0 - (ilevel/10);
+       stat_val = (ilevel/10);
      }
      else if (pObjIndex->item_type == ITEM_ARMOR)
      {
-       hrdr_val = 2 + (obj->level / 7);
-       ac_val = -10 - obj->level;
-       stat_val = 5 + (obj->level/2);
+       hrdr_val = 1 + (ilevel/10);
+       ac_val = -10 - ilevel;
+       stat_val = 5 + (ilevel/2);
      }
      else
      {
-       hrdr_val = 1 + (obj->level/10);
-       stat_val = 10 + obj->level;
-       ac_val = 0 - (obj->level/5);
+       hrdr_val = 1 + (ilevel/15);
+       stat_val = 10 + ilevel;
+       ac_val = 0 - (ilevel/5);
      }
 
      GET_FREE( new_af, affect_free );
@@ -2762,7 +2773,6 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
      new_af->bitvector = 0;
      new_af->caster = NULL;
      LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
    }
    for( looper = 0; looper < 10; looper++ )
    {

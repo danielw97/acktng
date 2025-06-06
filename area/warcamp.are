@@ -426,7 +426,7 @@ minotaur lesser guard~
 ~
 ~
 3153923 8892 -200 S
-84 1
+85 1
 -750 230 200
 ! 3 0 12 7 14782 0 2
 | 0 0 0 0 0 0 0
@@ -460,7 +460,7 @@ minotaur ranger~
 ~
 ~
 3153923 631036 -200 S
-90 1
+91 1
 -800 250 225
 ! 9 0 12 7 14478 0 80
 | 0 0 0 0 0 0 0
@@ -472,7 +472,7 @@ minotaur commander~
 ~
 ~
 3153923 90300 -200 S
-95 1
+94 1
 -1000 310 310
 ! 0 0 12 7 6798 0 48
 | 0 0 0 0 0 0 0
@@ -493,7 +493,7 @@ battleaxe~
 @@eMinotaur @@dBattle-Axe@@N~
 @@dA wicked looking @@gbattle-axe@@d lies on the ground.@@N
 ~
-5 0 8421376 1
+5 134217728 8421376 1
 0 0 0 3 0 0 0 0 0 0
 25
 A
@@ -511,7 +511,7 @@ security pass~
 @@dSecurity @@lPass@@N~
 @@dA piece of paper with strange writing on it lies on the ground.@@N
 ~
-9 131072 8421376 1
+9 134348800 8421376 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -531,7 +531,7 @@ boots~
 @@eMinotaur @@dBoots@@N~
 @@dA large pair of @@eMinotaur @@dboots lies on the ground.@@N
 ~
-9 131392 12582912 1
+9 134349120 12582912 1
 0 0 0 0 0 0 0 0 0 0
 15
 A
@@ -553,7 +553,7 @@ battle helmet~
 @@eMinotaur @@dBattle Helmet@@N~
 @@dA very large helmet with two holes on the top lies on the ground.@@N
 ~
-9 131072 8388612 1
+9 134348800 8388612 1
 0 0 0 0 0 0 0 0 0 0
 25
 A

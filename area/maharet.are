@@ -1154,7 +1154,7 @@ The impassive gate guard stands here.
 ~
 ~
 7 32776 -100 S
-54 1
+55 1
 -500 120 110
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1176,7 +1176,7 @@ The impassive Elite guard stands here, looming over you.
 ~
 ~
 87 8872 -1 S
-65 1
+64 1
 -40 40 40
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1209,7 +1209,7 @@ The serenely graceful Elven guards patrol here.
 ~
 ~
 197 8832 -1 S
-36 1
+35 1
 -25 20 20
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1231,7 +1231,7 @@ A short, crabby elf is here giving music lessons.
 ~
 ~
 3 2720 0 S
-62 1
+63 1
 -1400 400 400
 ! 0 0 0 7 24076 0 16
 | 0 0 0 0 0 0 0
@@ -1246,7 +1246,7 @@ This pretty little elf spends most of her time here among her flowers. With her
 to make any money in her chosen profession.
 ~
 16785475 10912 0 S
-141 2
+140 2
 -1400 400 400
 ! 0 0 0 7 390 0 0
 | 0 0 0 0 0 0 0
@@ -1261,7 +1261,7 @@ This quiet, silver-haired elf with his deep set eyes and an expression of
 life.
 ~
 131083 10984 0 S
-111 1
+110 1
 -1000 527 527
 ! 0 0 0 7 6158 0 0
 | 0 0 0 0 0 0 0
@@ -1275,7 +1275,7 @@ The honorable elf before you would rather die than cheat a customer of his
 leads that has him practically chained to the bank.
 ~
 32771 8872 0 S
-81 1
+82 1
 -1300 400 400
 ! 3 0 0 7 398 0 0
 | 0 0 0 0 0 0 0
@@ -1289,7 +1289,7 @@ The huge man towering over you sends a shiver down your spine with a glance.
 likely that he would give you a big hug rather than hurt you.
 ~
 11 8876 0 S
-68 1
+69 1
 -65 65 65
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1304,7 +1304,7 @@ Rushing up to you the moment you walked in the door, it's almost as if he was
 get his delicate designer feelings hurt with the slightest frown.
 ~
 8388611 10912 0 S
-139 1
+140 1
 -1400 400 400
 ! 0 0 0 7 30 0 16
 | 0 0 0 0 0 0 0
@@ -1319,7 +1319,7 @@ Kythaela looks as if she has been in this business for a long time. Her
 and she will design a special one just for you.
 ~
 8195 10920 0 S
-117 2
+118 2
 -1400 400 400
 ! 0 0 0 7 6158 0 16
 | 0 0 0 0 0 0 0
@@ -1343,7 +1343,7 @@ A soft-spoken elven woman is here offering you a glass of wine.
 ~
 ~
 8388611 10912 0 S
-139 2
+138 2
 -1400 400 400
 ! 0 0 0 7 0 0 16
 | 0 0 0 0 0 0 0
@@ -1372,7 +1372,7 @@ A tall, thin elf stands before you. He looks slightly bored, as if it has been
 various food items he has brought in today.
 ~
 3 2720 0 S
-137 1
+138 1
 -1400 400 400
 ! 0 0 0 7 24076 0 0
 | 0 0 0 0 0 0 0
@@ -1387,7 +1387,7 @@ The happy elf before you has made it his life's work to find hard to locate
 ask for something he couldn't possibly have in his backroom.
 ~
 3 2720 0 S
-140 1
+139 1
 -1400 400 400
 ! 0 0 0 7 24206 0 0
 | 0 0 0 0 0 0 0
@@ -1402,7 +1402,7 @@ As you look into Laeroth's eyes, you get the feeling you can't count as high
 can make up for you today.
 ~
 3 2720 0 S
-141 1
+140 1
 -1400 400 400
 ! 0 0 0 7 24076 8394752 0
 | 0 0 0 0 0 0 0
@@ -1436,27 +1436,27 @@ A very happy man is here offering you credit for jewelry.
 elven boots~
 a pair of elven boots~
 A pair of handmade elven boots have been left here.~
-9 0 10485760 1
+9 134217728 10485760 1
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+70
 #9233
 elven tunic~
 a bright blue elven tunic~
 A very fashionable blue tunic has been left here.~
-9 0 8650752 1
+9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
 17 -5
 L
-1
+70
 #9235
 elven cloak~
 an ornately decorated elven cloak~
 A very fancy elven cloak had been left here.~
-9 0 8454144 1
+9 134217728 8454144 1
 0 0 0 0 0 0 0 0 0 0
 2
 A
@@ -1464,7 +1464,7 @@ A
 A
 17 -5
 L
-1
+70
 #9232
 bottle wine~
 a bottle of fine vintage wine~
@@ -1515,11 +1515,11 @@ needle~
 needle~
 You can just make out a needle here.
 ~
-5 65 8421376 1
+5 134217793 8421376 1
 0 0 0 11 0 0 0 0 0 0
 1
 L
-1
+70
 #9223
 cravatte~
 an exceedingly tasteless blue and red cravatte~
@@ -1655,7 +1655,7 @@ elven chain chainmail~
 elven chainmail~
 A superbly crafted set of elven chain is here.
 ~
-9 1 8650752 1
+9 134217729 8650752 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -1663,7 +1663,7 @@ A
 A
 17 -15
 L
-1
+65
 #9285
 snack~
 a Scooby Snack~
@@ -1677,7 +1677,7 @@ L
 sleeves~
 a pair of elven sleeves~
 A finely crafted pair of elven sleeves have been carelessly left behind here.~
-9 0 8389632 1
+9 134217728 8389632 1
 0 0 0 0 0 0 0 0 0 0
 3
 A
@@ -1687,7 +1687,7 @@ A
 A
 12 10
 L
-1
+65
 #9209
 bracer~
 an elven bracer~
@@ -1705,7 +1705,7 @@ L
 leggings~
 a pair of elven leggings ~
 A pair of elven leggings have been left here.~
-9 0 9437184 1
+9 134217728 9437184 1
 0 0 0 0 0 0 0 0 0 0
 2
 A
@@ -1713,21 +1713,21 @@ A
 A
 17 0
 L
-1
+60
 #9202
 elven cloak~
 a finely woven elven cloak~
 A finely woven elven cloak hangs here on a peg.~
-9 0 8388736 1
+9 134217728 8388736 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+50
 #9201
 boots elvenkind~
 boots of elvenkind~
 A pair of boots of elvenkind lie here.~
-9 1 10485760 1
+9 134217729 10485760 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -1757,7 +1757,7 @@ L
 elven belt~
 a finely crafted elven belt~
 Someone has left a belt here. Hope it wasn't needed to hold up their pants.~
-9 0 8519680 1
+9 134217728 8519680 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -1765,12 +1765,12 @@ A
 A
 18 1
 L
-1
+50
 #9204
 elven sword~
 an elven sword ~
 An elven sword lies here, waiting for a good fight.~
-5 65 8421376 1
+5 134217793 8421376 1
 0 0 0 1 0 0 0 0 0 0
 5
 A
@@ -1778,12 +1778,12 @@ A
 A
 19 2
 L
-1
+50
 #9205
 elven bow~
 a finely crafted elven bow~
 A finely crafted elven bow rests here, waiting to be picked up.~
-5 65 8421376 1
+5 134217793 8421376 1
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -1791,12 +1791,12 @@ A
 A
 18 2
 L
-1
+65
 #9206
 moonblade sword~
 a Moonblade~
 A finely crafted sword decorated with runes radiates a glowing light here.~
-5 65 8421376 1
+5 134217793 8421376 1
 0 0 0 1 0 0 0 0 0 0
 5
 A
@@ -1808,12 +1808,12 @@ A
 A
 12 20
 L
-1
+60
 #9207
 elven shield~
 a finely crafted elven shield~
 A finely crafted elven shield is resting here.~
-9 0 8421376 1
+9 134217728 8421376 1
 0 0 0 0 0 0 0 0 0 0
 3
 A
@@ -1825,7 +1825,7 @@ A
 A
 24 2
 L
-1
+60
 #9286
 bk tshirt~
 a BK t-shirt~
@@ -1977,8 +1977,6 @@ E 0 9213 0 17 (null)
 M 0 9219 2 9243 (null)
 
 E 0 9208 0 14 (null)
-
-E 0 9207 0 7 (null)
 
 E 0 9207 0 11 (null)
 

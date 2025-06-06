@@ -318,7 +318,7 @@ Blur is so called because no one has ever seen it stop moving.  It spins
 dizzy.
 ~
 3 8 -800 S
-22 0
+21 0
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -332,7 +332,7 @@ Dinosaur Jr, son of Dinosaur senior, was convited of mass murder many
 hardly have done much to improve his temper.
 ~
 3 0 -100 S
-18 1
+17 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -346,7 +346,7 @@ Elastica is so named because she appears to be made out of elastic, with
 question mark as you look at her.
 ~
 3 0 -200 S
-17 2
+18 2
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -356,7 +356,7 @@ Elastica is so named because she appears to be made out of elastic, with
 ring vibrating~
 the vibrating ring~
 The vibrating ring spins whirls about on the floor in front of you.~
-9 2 8396800 1
+9 134217730 8396800 1
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -377,7 +377,7 @@ L
 buffalo bracer~
 a Buffalo bracer~
 A Buffalo bracer has been left here.~
-9 1 8390656 1
+9 134217729 8390656 1
 0 0 0 0 0 0 0 0 0 0
 10
 A
@@ -398,7 +398,7 @@ L
 pantera fang~
 pantera's fang~
 Pantera's fang has been left here.~
-5 65 8421376 1
+5 134217793 8421376 1
 0 0 0 11 0 0 0 0 0 0
 10
 A
@@ -411,9 +411,37 @@ A
 13 10
 L
 20
+#9550
+Elastic Aura~
+An Elastic Aura~
+An aura of some elasticity lies here~
+28 0 8388610 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+10
+#9554
+A chained soul~
+A chained soul~
+A chained soul lies here~
+28 134217728 8388609 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+10
+#9555
+Dinosaur Shoulders~
+Dinosaur Shoulders~
+Shoulders of a dinosaur lay here~
+1 134217728 8389120 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+10
 #0
 #RESETS
 M 0 9551 1 9566   load mob
+E 0 9554 0 0 (null)
 M 0 9552 1 9564   load mob
 E 0 9553 0 16     load obj
 M 0 9553 1 9563 
@@ -421,6 +449,8 @@ E 0 9552 0 15
 M 0 9554 1 9562 
 E 0 9551 0 1 
 M 0 9555 1 9567 
+E 0 9555 0 0 (null)
 M 0 9556 1 9565 
+E 0 9550 0 0 (null)
 S
 #$

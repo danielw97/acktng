@@ -1925,7 +1925,7 @@ void show_menu_to( DESCRIPTOR_DATA * d )
    {
       int fubar;
       sprintf( buf, "\n\r        " );
-      for( fubar = 0; fubar < MAX_CLASS; fubar++ )
+      for( fubar = 0; fubar < MAX_PC_CLASS; fubar++ )
       {
          strcat( menu, class_table[ch->pcdata->order[fubar]].who_name );
          strcat( menu, ". " );
@@ -2078,10 +2078,10 @@ void show_cmenu_to( DESCRIPTOR_DATA * d )
    strcat( menu, "Being a MultiClass Mud, this order is very important, as it\n\r" );
    strcat( menu, "will determine how easily you progress in each class, and\n\r" );
    strcat( menu, "how well you can use the skills/spells of each class.\n\r" );
-   strcat( menu, "There are five classes.  Please list, in order of best to\n\r" );
-   strcat( menu, "worst, the order your classes will be.\n\r" );
+   strcat( menu, "There are six classes.  Please list, in order of best to\n\r" );
+   strcat( menu, "worst, the order your 4 classes will be.\n\r" );
    strcat( menu, "(The 1st you pick will be your prime class, gaining a +1 bonus.\n\r" );
-   strcat( menu, "For example, psi mag cle thi war.\n\r" );
+   strcat( menu, "For example, psi mag cle thi.\n\r" );
    strcat( menu, "Abr    Prime Atr    Name\n\r" );
    strcat( menu, "---    ---------    ----\n\r" );
 
@@ -2504,21 +2504,22 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
 
    if( d->connected == CON_GET_NEW_CLASS )
    {
-      sh_int classes[MAX_CLASS];
-      sh_int parity[MAX_CLASS];  /* Nowt to do with parity really */
-      sh_int index[MAX_CLASS];
       char arg[MAX_STRING_LENGTH];
       int cnt;
       int foo;
       bool ok = TRUE;
 
       /*
-       * Parity set to 1 for each class found. 
+       * Resetting class list
        */
       for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         parity[cnt] = -1;
+      {
+         ch->lvl[cnt] = -1;
+         ch->pcdata->order[cnt] = -1;
+         ch->pcdata->index[cnt] = -1;
+      }
 
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+      for( cnt = 0; cnt < MAX_PC_CLASS; cnt++ )
       {
          argument = one_argument( argument, arg );
          if( arg[0] == '\0' )
@@ -2527,45 +2528,27 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
             break;
          }
          for( foo = 0; foo < MAX_CLASS; foo++ )
-            if( !str_cmp( arg, class_table[foo].who_name ) )
+         {
+            if( !str_cmp( arg, class_table[foo].who_name ) && ch->pcdata->index[foo] == -1)
             {
-               classes[cnt] = foo;
-               index[foo] = cnt;
-               parity[foo] = 1;
+               ch->pcdata->order[cnt] = foo;
+               ch->pcdata->index[foo] = cnt;
+               ch->lvl[cnt] = 0;
                break;
             }
-         if( foo == MAX_CLASS )
-         {
-            ok = FALSE;
-            break;
          }
       }
-
-      /*
-       * If 5 unique classes given, parity[cnt] == 1 
-       */
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         if( parity[cnt] == -1 ) /* Then a class was missed */
-            ok = FALSE;
 
       if( !ok )
       {
          write_to_buffer( d,
-                          "Invalid Order... Please Try Again. You must list each class, by abbreviation, such as CLE WAR MAG THI PSI.\n\r",
+                          "Invalid Order... Please Try Again. You must list each class, by abbreviation, such as CLE WAR MAG THI.\n\r",
                           0 );
          show_cmenu_to( d );
          return;
       }
 
-      /*
-       * Copy classes across to pcdata 
-       */
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-      {
-         ch->pcdata->order[cnt] = classes[cnt];
-         ch->pcdata->index[cnt] = index[cnt];
-      }
-
+      ch->lvl[ch->pcdata->order[0]] = 1;
       d->connected = CON_MENU;
       if( !IS_SET( d->check, CHECK_CLASS ) )
          SET_BIT( d->check, CHECK_CLASS );
