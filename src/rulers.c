@@ -73,7 +73,11 @@ void save_rulers(  )
    CONTROL_LIST *control;
 
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    sprintf( ruler_file_name, "%s", RULERS_FILE );
 
    if( ( fp = fopen( ruler_file_name, "w" ) ) == NULL )
@@ -108,10 +112,12 @@ void save_rulers(  )
 
 
    fflush( fp );
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 
-
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
 
 }
@@ -188,7 +194,11 @@ void load_rulers( void )
          }
       }
 
-      fclose( rulersfp );
+      if (rulersfp != NULL)
+      {
+         fclose( rulersfp );
+         rulersfp = NULL;
+      }
 
       sprintf( buf, "Done Loading %s\n\r", rulers_file_name );
       monitor_chan( buf, MONITOR_CLAN );

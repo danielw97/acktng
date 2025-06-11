@@ -76,10 +76,6 @@ D4
 ~
 ~
 0 -1 16800
-D5
-~
-~
-0 -1 1318
 S
 #68
 New room~
@@ -99,7 +95,7 @@ delvar~
 ~
 ~
 19922953 544 0 S
-70 1
+72 1
 0 0 0
 ! 3 0 2 7 80370 0 16
 | 0 0 0 0 0 16 0
@@ -110,7 +106,7 @@ silverleaf~
 ~
 ~
 19922953 33312 0 S
-80 1
+79 1
 0 0 0
 ! 4 0 3 7 2 6283264 16
 | 1024 0 0 0 0 0 0
@@ -121,7 +117,7 @@ morganth~
 ~
 ~
 19922953 1049148 0 S
-110 1
+111 1
 -2000 300 300
 ! 0 0 0 7 147470 1022 48
 | 1 32 0 0 0 1 32
@@ -217,7 +213,7 @@ azurite ring~
 @@lA@@Bz@@lu@@Br@@li@@Bt@@le@@N Ring~
 A ring with an opaque @@lm@@Bo@@lt@@Bt@@ll@@Be@@ld @@Bdeep blue@@N stone.
 ~
-9 134217729 8396800 3
+8 134217729 8396800 3
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -229,7 +225,7 @@ banded agate ring~
 @@bB@@Ba@@Rn@@gd@@be@@Bd@@N Agate Ring~
 A ring with @@bbrown@@N, @@Bblue@@N, @@Rred@@N, and @@gwhite@@N stripes.
 ~
-9 134217730 8396800 5
+8 134217730 8396800 5
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -266,7 +262,7 @@ halo of sneakiness~
 halo of @@dSneakiness@@N~
 A @@dshadowy @@Nhalo.
 ~
-9 134217792 8388609 33
+9 134217920 8388609 33
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -278,7 +274,7 @@ morganths aura~
 @@mMorganth's @@gAura@@N~
 A @@msticky@@N looking @@gaura@@N.
 ~
-9 134217856 8388610 65
+9 134217920 8388610 65
 0 0 0 0 0 0 0 0 0 0
 1
 A

@@ -750,7 +750,11 @@ void build_save_end(  )
 
    fprintf( SaveFile, "#$\n" );
    send_to_char( "Finished saving.\n", CurSaveChar );
-   fclose( SaveFile );
+   if (SaveFile != NULL)
+   {
+      fclose( SaveFile );
+      SaveFile = NULL;
+   }
    /*
     * Save backup 
     */

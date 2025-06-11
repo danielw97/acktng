@@ -1654,7 +1654,7 @@ S
 #0
 #MOBILES
 #5001
-trex t-rex~
+trex t-rex rex tyrannosaurus~
 the Tyrannosaurus~
 A large, ravenous Tyrannosaurus Rex stands menacing before you.
 ~
@@ -1665,7 +1665,7 @@ The Tyrannosaurus stands many times taller than you, and looks to weigh at
 lucky at conquering this ravenous creature.
 ~
 33554557 32768 -600 S
-77 2
+78 2
 -65 75 200
 ! 0 0 0 7 540678 0 0
 | 0 0 0 0 0 0 0
@@ -1678,8 +1678,8 @@ The Triceratops is the largest of the horn-faced dinosaurs.  The huge front
 bone plate protects his head against attack from other dinosaurs, whilst the
 two great horns jutting from it provide an ample form of attack.
 ~
-134217929 0 -400 S
-79 1
+134217801 0 -400 S
+80 1
 -120 60 50
 ! 0 0 0 7 16386 0 0
 | 0 0 0 0 0 0 0
@@ -1694,7 +1694,7 @@ The Stegosaurus looks fairly harmless, but also pretty large; eight feet of
 The spiked tail looks unfriendly, too, now you think about it.
 ~
 69 0 100 S
-75 1
+76 1
 -120 50 40
 ! 0 0 0 7 1038 0 0
 | 0 0 0 0 0 0 0
@@ -1722,8 +1722,8 @@ The Lambeosaurus has a flat snout and a large crest on it's head.  It looks
 quite happy to stay where it is right now, although it looks at you like a 
 mouse would look at a cat.
 ~
-193 98432 300 S
-63 1
+65 98432 300 S
+72 1
 -100 5 10
 ! 0 0 0 7 2 0 0
 | 0 0 0 0 0 0 0
@@ -1736,7 +1736,7 @@ The Elasmosaurus looks like a huge snake.  Short fins protrude from it's thick
 body.  It looks menacing, and seems to be sizing you up for a meal.
 ~
 103 0 -400 S
-76 2
+77 2
 -100 150 15
 ! 0 0 0 7 81934 0 0
 | 0 0 0 0 0 0 0
@@ -1748,7 +1748,7 @@ A medium-sized Diplodocus stands here looking for people to stomp on.
 The Diplodocus doesn't look fully grown.  Standing taller than a Tyrannosurus
 Rex, however, she still looks absolutely deadly if annoyed.
 ~
-203 0 200 S
+75 0 200 S
 78 2
 -110 100 200
 ! 0 0 0 7 2 0 0
@@ -1777,7 +1777,7 @@ The Paleocinthus has side spikes, and a smallish head.  It's large, spiked
 vegetation.
 ~
 69 0 250 S
-66 1
+68 1
 -200 40 50
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1792,7 +1792,7 @@ The old Hag looks very old, and very hungry.  She licks her lips as she looks
 make you feel more like chucking than falling into a trance.
 ~
 15 640 -900 S
-93 2
+73 2
 -200 100 80
 ! 0 0 0 7 6 0 80
 | 0 0 0 0 0 0 0
@@ -1805,7 +1805,7 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 It seems to be occupied looking for insects to eat, rather than trying to eat
 you, like most of the other inhabitants of the Isle.
 ~
-141 33280 300 S
+13 33280 300 S
 57 0
 -75 50 35
 ! 0 0 0 7 6 0 0
@@ -1819,7 +1819,7 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 It seems to be occupied looking for insects to eat, rather than trying to eat
 you, like most of the other inhabitants of the Isle.
 ~
-141 33280 300 S
+13 33280 300 S
 49 0
 -10 2 3
 ! 0 0 0 7 0 0 0
@@ -1833,8 +1833,8 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 It seems to be occupied looking for insects to eat, rather than trying to eat
 you, like most of the other inhabitants of the Isle.
 ~
-141 33280 300 S
-56 0
+13 33280 300 S
+55 0
 -5 3 1
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1847,9 +1847,9 @@ The druid is dribbling all over the place, and now and again, barks at himself.
 He mumbles something about lizards before doing his best doggy woof again.
 ~
 79 98432 100 S
-87 1
+88 1
 -160 120 100
-! 0 0 0 7 16390 33558528 48
+! 0 0 0 7 16390 33558528 16
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -1868,17 +1868,17 @@ dagger~
 a small, yellow dagger~
 A small, yellow dagger lies here.
 ~
-5 2 8421376 1
+5 134217730 8421376 1
 0 0 0 11 0 0 0 0 0 0
 3
 L
-1
+60
 #5003
 ribcage cage rib~
 a ribcage~
 An old ribcage has been left on the floor.
 ~
-9 1024 8650752 1
+9 134218752 8650752 1
 0 0 0 0 0 0 0 0 0 0
 5
 A
@@ -1886,14 +1886,14 @@ A
 A
 17 -200
 L
-70
+50
 #5004
 glowing sphere~
 a glowing sphere~
 A small sphere lies before you, softly glowing.
 ~
-10 192 8388608 1
-80 28 36 34 0 0 0 0 0 0
+1 134217792 8421376 1
+0 0 -1 0 0 0 0 0 0 0
 1
 L
 50
@@ -1922,7 +1922,7 @@ wings~
 a pair of wings~
 A large, leather-looking pair of wings has been left here.
 ~
-9 0 8389632 16385
+9 134217728 8389632 16385
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -1936,7 +1936,52 @@ A
 A
 17 -95
 L
-75
+50
+#5008
+a Hag's Hat~
+a Hag's Hat~
+A Hag's Pointy Hat lies here~
+9 134217728 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
+#5009
+a Hag's Robes~
+a Hag's Robes~
+An ugly set of robes of the hag lie here~
+9 134217728 8650752 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
+#5010
+a Hag's Soul~
+a Hag's Soul~
+An abandoned soul of a hag lies here~
+28 134217728 8388609 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
+#5011
+a Druidic Aura~
+a Druidic Aura~
+An aura with a druidic feel lies here~
+28 134217728 8388610 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
+#5012
+stegosaurus Spikes~
+stegosaurus Spikes~
+Some stegosaurus spikes lie here~
+9 134217728 8389120 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+50
 #0
 #RESETS
 M 0 5001 1 5073 - Trex
@@ -1944,6 +1989,8 @@ E 0 5004 0 17   - Make Trex hold spere
 M 0 5002 1 5056 - Triceratops
 G 0 5005 0      - Give triccie staff
 M 0 5003 1 5036 - Steg
+E 0 5012 0 0 (null)
+
 M 0 5004 1 5049 - Pter
 G 0 5007 0      - Give wings
 M 0 5005 2 5032 - Lamb
@@ -1953,11 +2000,19 @@ G 0 5003 0      - Give ribcage to dippy
 M 0 5008 1 5063 - Deinony
 M 0 5009 2 5031 - Paleo
 M 0 5010 1 5080 - SeaHag
+E 0 5010 0 0 (null)
+
+E 0 5009 0 0 (null)
+
+E 0 5008 0 0 (null)
+
 M 0 5011 1 5015 - Grippli(1)
 E 0 5002 0 16   - Grippli wields dagger
 M 0 5012 1 5027 - Grippli(2)
 M 0 5013 1 5020 - Grippli(3)
 M 0 5014 1 5022 - Druid (the mad one ;)
+E 0 5011 0 0 (null)
+
 E 0 5001 0 17   - Druid holds key
 G 0 5006 0      - Give druid beating-heart
 D 0 5026 5 2 

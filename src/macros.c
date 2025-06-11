@@ -48,42 +48,17 @@ void reset_gain_stats( CHAR_DATA * ch )
    ch->pcdata->move_from_gain = 0;
 
 
-   for( index = 0; index < MAX_CLASS; index++ )
+   for( index = 0; index < MAX_REMORT; index++ )
    {
-      if( ch->lvl[index] > 0 )
+      if(index < MAX_CLASS && ch->lvl[index] > 0 )
          for( index2 = 1; index2 <= ch->lvl[index]; index2++ )
          {
-            add_hp = con_app[ch->pcdata->max_con].hitp + number_range( class_table[index].hp_min,
-                                                                       class_table[index].hp_max );
-
-            add_mana = class_table[index2].fMana
-               ? number_range( 2, ( 2 * ch->pcdata->max_int + ch->pcdata->max_wis ) / 16 ) : 0;
-            add_move = number_range( 2, ( ch->pcdata->max_con + ch->pcdata->max_dex ) / 5 );
-            add_hp = UMAX( 1, add_hp );
-            add_mana = UMAX( 0, add_mana );
-            add_move = UMAX( 7, add_move );
-
-            ch->pcdata->mana_from_gain += add_mana;
-            ch->pcdata->hp_from_gain += add_hp;
-            ch->pcdata->move_from_gain += add_move;
-
+            advance_level(ch, index, FALSE, FALSE);
          }
       if( ch->lvl2[index] > 0 )
          for( index2 = 1; index2 <= ch->lvl2[index]; index2++ )
          {
-            add_hp = con_app[ch->pcdata->max_con].hitp + number_range( remort_table[index].hp_min,
-                                                                       remort_table[index].hp_max );
-            add_mana = remort_table[index].fMana
-               ? number_range( 2, ( 2 * ch->pcdata->max_int + ch->pcdata->max_wis ) / 16 ) : 0;
-            add_move = number_range( 2, ( ch->pcdata->max_con + ch->pcdata->max_dex ) / 5 );
-            add_hp = UMAX( 1, add_hp );
-            add_mana = UMAX( 0, add_mana );
-            add_move = UMAX( 7, add_move );
-
-            ch->pcdata->mana_from_gain += add_mana;
-            ch->pcdata->hp_from_gain += add_hp;
-            ch->pcdata->move_from_gain += add_move;
-
+            advance_level(ch, index, FALSE, TRUE);
          }
 
    }
@@ -220,6 +195,7 @@ long_int exp_to_level( CHAR_DATA * ch, int class, int index )
    int totlevels = 0, diff;
    long_int cost;
    int a;
+   bool remort = FALSE;
 
 
    if( ( index == 5 ) && ( ch->lvl2[class] <= 0 ) )
@@ -253,6 +229,7 @@ long_int exp_to_level( CHAR_DATA * ch, int class, int index )
          break;
       default:
          mult = 23;  /* i.e. remort class */
+         remort = TRUE;
          break;
    }
 
@@ -279,7 +256,8 @@ long_int exp_to_level( CHAR_DATA * ch, int class, int index )
    if( next_level_index < 0 )
       next_level_index = 0;
 
-   cost = exp_table[next_level_index].exp_base[class];
+   cost = get_cost_to_level( ch, class, remort );
+
 
    /*
     * Now multiply by a factor dependant on total number of levels 

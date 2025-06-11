@@ -118,7 +118,11 @@ static long dump( void )
    BufEntry *p;
    long count = 0;
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    dumpf = fopen( "../reports/leaks.dmp", "w" );
 
    for( p = ssm_buf_head; p; p = p->next )
@@ -141,8 +145,11 @@ static long dump( void )
       dump_ptr[1] = p;
    }
 
-   fclose( dumpf );
-   fpReserve = fopen( NULL_FILE, "r" );
+   if (dumpf != NULL)
+   {
+      fclose( dumpf );
+      dumpf = NULL;
+   }
 
    return count;
 }

@@ -159,15 +159,6 @@ int main( int argc, char **argv )
    strcpy( str_boot_time, ctime( &current_time ) );
 
    /*
-    * Reserve one channel for our use.
-    */
-   if( ( fpReserve = fopen( NULL_FILE, "r" ) ) == NULL )
-   {
-      perror( NULL_FILE );
-      exit( 1 );
-   }
-
-   /*
     * Get the port number.
     */
    port = 1234;
@@ -526,7 +517,11 @@ void game_loop( int control )
             cur_hour = now_bd_time->tm_hour;
             out_file = fopen( "players.num", "a" );
             fprintf( out_file, "%i %i %i\n", now_bd_time->tm_mday, cur_hour, max_players );
-            fclose( out_file );
+            if (out_file != NULL)
+            {
+               fclose( out_file );
+               out_file = NULL;
+            }
             max_players = cur_players;
          }
 
@@ -1910,17 +1905,7 @@ void show_menu_to( DESCRIPTOR_DATA * d )
             !IS_SET( d->check, CHECK_RACE ) ? "Not Set." : race_table[ch->race].race_title );
    strcat( menu, buf );
 
-   strcat( menu, "        3. Roll Attributes.  Currently:" );
-   if( IS_SET( d->check, CHECK_STATS ) )
-      sprintf( buf, "\n\r        Max_Str:%d.  Max_Int:%d.  Max_Wis:%d.\n\r        Max_Dex:%d.  Max_Con:%d.\n\r",
-               ch->pcdata->max_str, ch->pcdata->max_int, ch->pcdata->max_wis, ch->pcdata->max_dex, ch->pcdata->max_con );
-   else
-      sprintf( buf, "Not Set.\n\r" );
-
-
-   strcat( menu, buf );
-
-   strcat( menu, "        4. Set Class Order.  Currently:" );
+   strcat( menu, "        3. Set Class Order.  Currently:" );
    if( IS_SET( d->check, CHECK_CLASS ) )
    {
       int fubar;
@@ -1935,9 +1920,9 @@ void show_menu_to( DESCRIPTOR_DATA * d )
    else
       strcat( menu, "Not Set.\n\r" );
 
-   strcat( menu, "        5. Exit Creation Process.\n\r" );
+   strcat( menu, "        4. Exit Creation Process.\n\r" );
 
-   strcat( menu, "\n\rPlease Select 1-5: " );
+   strcat( menu, "\n\rPlease Select 1-4: " );
    write_to_buffer( d, menu, 0 );
    return;
 }
@@ -1997,56 +1982,6 @@ void show_rmenu_to( DESCRIPTOR_DATA * d )
    }
 
    strcat( menu, "\n\rPlease Select Your Race (Abr), or type the full race name for race info: " );
-   write_to_buffer( d, menu, 0 );
-   return;
-}
-
-void show_amenu_to( DESCRIPTOR_DATA * d )
-{
-   CHAR_DATA *ch = d->character;
-   char buf[MAX_STRING_LENGTH];
-   char menu[MAX_STRING_LENGTH];
-
-   /*
-    * Make the 'rolls', set ch->max_*, and display 
-    */
-   if( !IS_SET( d->check, CHECK_RACE ) )
-   {
-      sprintf( menu, "\n\rYou must select a race first.\n\r" );
-      write_to_buffer( d, menu, 0 );
-      d->connected = CON_MENU;
-      show_menu_to( d );
-      return;
-   }
-
-   for( ;; )
-   {
-      ch->pcdata->max_str = UMIN( 22, ( race_table[ch->race].race_str + number_range( -3, 3 ) ) );
-      ch->pcdata->max_str = UMIN( 22, ch->pcdata->max_str );
-      ch->pcdata->max_int = UMIN( 22, ( race_table[ch->race].race_int + number_range( -3, 3 ) ) );
-      ch->pcdata->max_int = UMIN( 22, ch->pcdata->max_int );
-      ch->pcdata->max_dex = UMIN( 22, ( race_table[ch->race].race_dex + number_range( -3, 3 ) ) );
-      ch->pcdata->max_dex = UMIN( 22, ch->pcdata->max_dex );
-      ch->pcdata->max_con = UMIN( 22, ( race_table[ch->race].race_con + number_range( -3, 3 ) ) );
-      ch->pcdata->max_con = UMIN( 22, ch->pcdata->max_con );
-      ch->pcdata->max_wis = UMIN( 22, ( race_table[ch->race].race_wis + number_range( -3, 3 ) ) );
-      ch->pcdata->max_wis = UMIN( 22, ch->pcdata->max_wis );
-
-      if( ( ch->pcdata->max_str + ch->pcdata->max_int + ch->pcdata->max_wis
-            + ch->pcdata->max_dex + ch->pcdata->max_con ) < 91 )
-         break;   /* Prevent 'super' characters! */
-   }
-
-   sprintf( menu, "\n\rCharacter Creation: Attributes.\n\r\n\r" );
-   strcat( menu, "This option rolls a new set of MAX attributes.\n\r" );
-   strcat( menu, "There is no way to increase your MAX attributes, so choose wisely!\n\r" );
-   strcat( menu, "Current Attributes:  (Just Rolled)\n\r" );
-
-   sprintf( buf, "Max_Str:%d.  Max_Int:%d.  Max_Wis:%d.  Max_Dex:%d.  Max_Con:%d.\n\r",
-            ch->pcdata->max_str, ch->pcdata->max_int, ch->pcdata->max_wis, ch->pcdata->max_dex, ch->pcdata->max_con );
-   strcat( menu, buf );
-   strcat( menu, "\n\rPlease Select: (A)ccept, return to menu, (H)help stats, or (R)eroll: " );
-
    write_to_buffer( d, menu, 0 );
    return;
 }
@@ -2390,7 +2325,7 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
       number = atoi( argument );
       if( number < 1 && number > 5 )
       {
-         write_to_buffer( d, "\n\rPlease Enter A Number Between 1 And 5.\n\r", 0 );
+         write_to_buffer( d, "\n\rPlease Enter A Number Between 1 And 4.\n\r", 0 );
          show_menu_to( d );
          return;
       }
@@ -2406,16 +2341,12 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
             show_rmenu_to( d );
             break;
          case 3:
-            d->connected = CON_GET_STATS;
-            show_amenu_to( d );
-            break;
-         case 4:
             d->connected = CON_GET_NEW_CLASS;
             show_cmenu_to( d );
             break;
-         case 5:
+         case 4:
             if( !IS_SET( d->check, CHECK_SEX ) || !IS_SET( d->check, CHECK_CLASS )
-                || !IS_SET( d->check, CHECK_STATS ) || !IS_SET( d->check, CHECK_RACE ) )
+                || !IS_SET( d->check, CHECK_RACE ) )
             {
                write_to_buffer( d, "ALL Options Must Be Selected First.\n\r", 0 );
                show_menu_to( d );
@@ -2438,32 +2369,6 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
             /*
              * Display motd, and all other malarky 
              */
-            break;
-      }
-      return;
-   }
-
-   if( d->connected == CON_GET_STATS )
-   {
-      switch ( argument[0] )
-      {
-         case 'A':
-         case 'a':
-            if( !IS_SET( d->check, CHECK_STATS ) )
-               SET_BIT( d->check, CHECK_STATS );
-            d->connected = CON_MENU;
-            show_menu_to( d );
-            break;
-         case 'R':
-         case 'r':
-            show_amenu_to( d );
-            break;
-         case 'H':
-         case 'h':
-            show_ahelp_menu_to( d );
-            break;
-         default:
-            write_to_buffer( d, "Enter A or R, or H for stat help:", 0 );
             break;
       }
       return;
@@ -2580,8 +2485,6 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
          show_rmenu_to( d );
          return;
       }
-      if( IS_SET( d->check, CHECK_STATS ) )
-         REMOVE_BIT( d->check, CHECK_STATS );
 
 
       if( !IS_SET( d->check, CHECK_RACE ) )
@@ -3583,13 +3486,21 @@ void do_hotreboot( CHAR_DATA * ch, char *argument )
    }
 
    fprintf( fp, "-1\n" );
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 
    /*
     * Close reserve and other always-open files and release other resources 
     */
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
 
 #ifdef IMC
    imc_hotboot(  );
@@ -3780,7 +3691,11 @@ void copyover_recover(  )
 
    }
 
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
    disable_timer_abort = FALSE;
 }
 

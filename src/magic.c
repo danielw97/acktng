@@ -390,6 +390,13 @@ void do_cast( CHAR_DATA * ch, char *argument )
     * return;
     */
 
+   if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
+   {
+      send_to_char( "You are too @@rENRAGED @@NTo cast spells!\n\r", ch );
+      return FALSE;
+   }
+
+
    target_name = one_argument( argument, arg1 );
    one_argument( target_name, arg2 );
 
@@ -665,7 +672,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
             good_cast = TRUE;
          }
       }
-      if( !good_cast )
+      if( !good_cast && ch->position == POS_FIGHTING )
       {
          send_to_char( "You lost your concentration.\n\r", ch );
 
@@ -986,7 +993,7 @@ bool spell_bark_skin( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "stone skin" ) ) )
       return FALSE;
    af.type = sn;
-   af.duration = 3 + ( level / 12 );
+   af.duration = -1;
    af.location = APPLY_AC;
    af.modifier = -10;
    af.bitvector = 0;
@@ -1874,11 +1881,15 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
 
       return TRUE;
    }
-   /*
-    * This won't work in conjunction with identify! 
-    */
-   if( ( ob = get_obj_carry( ch, target_name ) ) != NULL )
-   {
+
+   return spell_dispel_object(sn, level, ch, vo, obj);
+}
+
+bool spell_dispel_object( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+
+  if( obj != NULL || ( obj = get_obj_carry( ch, target_name ) ) != NULL )
+  {
       /*
        * NOTE: Must also remove ALL affects, otherwise players
        * * will be able to enchant, dispel, enchant.... -S-
@@ -1886,60 +1897,60 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
        * * -- Alty
        */
 
-      if( IS_SET( ob->extra_flags, ITEM_GLOW ) )
+      if( IS_SET( obj->extra_flags, ITEM_GLOW ) )
       {
-         REMOVE_BIT( ob->extra_flags, ITEM_GLOW );
-         act( "$p stops glowing.", ch, ob, NULL, TO_ROOM );
-         act( "$p stops glowing.", ch, ob, NULL, TO_CHAR );
+         REMOVE_BIT( obj->extra_flags, ITEM_GLOW );
+         act( "$p stops glowing.", ch, obj, NULL, TO_ROOM );
+         act( "$p stops glowing.", ch, obj, NULL, TO_CHAR );
       }
-      if( IS_SET( ob->extra_flags, ITEM_HUM ) )
+      if( IS_SET( obj->extra_flags, ITEM_HUM ) )
       {
-         REMOVE_BIT( ob->extra_flags, ITEM_HUM );
-         act( "The hum surrounding $p fades.", ch, ob, NULL, TO_CHAR );
-         act( "The hum surrounding $p fades.", ch, ob, NULL, TO_ROOM );
+         REMOVE_BIT( obj->extra_flags, ITEM_HUM );
+         act( "The hum surrounding $p fades.", ch, obj, NULL, TO_CHAR );
+         act( "The hum surrounding $p fades.", ch, obj, NULL, TO_ROOM );
       }
-      if( IS_SET( ob->extra_flags, ITEM_DARK ) )
+      if( IS_SET( obj->extra_flags, ITEM_DARK ) )
       {
-         REMOVE_BIT( ob->extra_flags, ITEM_DARK );
-         act( "$p looks brighter.", ch, ob, NULL, TO_CHAR );
-         act( "$p looks brighter.", ch, ob, NULL, TO_ROOM );
+         REMOVE_BIT( obj->extra_flags, ITEM_DARK );
+         act( "$p looks brighter.", ch, obj, NULL, TO_CHAR );
+         act( "$p looks brighter.", ch, obj, NULL, TO_ROOM );
       }
-      if( IS_SET( ob->extra_flags, ITEM_EVIL ) )
+      if( IS_SET( obj->extra_flags, ITEM_EVIL ) )
       {
-         REMOVE_BIT( ob->extra_flags, ITEM_EVIL );
-         act( "$p looks less evil.", ch, ob, NULL, TO_CHAR );
-         act( "$p looks less evil.", ch, ob, NULL, TO_ROOM );
+         REMOVE_BIT( obj->extra_flags, ITEM_EVIL );
+         act( "$p looks less evil.", ch, obj, NULL, TO_CHAR );
+         act( "$p looks less evil.", ch, obj, NULL, TO_ROOM );
       }
-      if( IS_SET( ob->extra_flags, ITEM_NODROP ) )
-         REMOVE_BIT( ob->extra_flags, ITEM_NODROP );
+      if( IS_SET( obj->extra_flags, ITEM_NODROP ) )
+         REMOVE_BIT( obj->extra_flags, ITEM_NODROP );
 
-      if( IS_SET( ob->extra_flags, ITEM_INVIS ) )
+      if( IS_SET( obj->extra_flags, ITEM_INVIS ) )
       {
-         REMOVE_BIT( ob->extra_flags, ITEM_INVIS );
-         act( "$p fades back into view.", ch, ob, NULL, TO_CHAR );
-         act( "$p fades back into view.", ch, ob, NULL, TO_ROOM );
+         REMOVE_BIT( obj->extra_flags, ITEM_INVIS );
+         act( "$p fades back into view.", ch, obj, NULL, TO_CHAR );
+         act( "$p fades back into view.", ch, obj, NULL, TO_ROOM );
       }
-      if( IS_SET( ob->extra_flags, ITEM_MAGIC ) )
+      if( IS_SET( obj->extra_flags, ITEM_MAGIC ) )
       {
-         REMOVE_BIT( ob->extra_flags, ITEM_MAGIC );
-         act( "$p looks less magical.", ch, ob, NULL, TO_CHAR );
-         act( "$p looks less magical.", ch, ob, NULL, TO_ROOM );
+         REMOVE_BIT( obj->extra_flags, ITEM_MAGIC );
+         act( "$p looks less magical.", ch, obj, NULL, TO_CHAR );
+         act( "$p looks less magical.", ch, obj, NULL, TO_ROOM );
       }
-      if( IS_SET( ob->extra_flags, ITEM_BLESS ) )
+      if( IS_SET( obj->extra_flags, ITEM_BLESS ) )
       {
-         REMOVE_BIT( ob->extra_flags, ITEM_BLESS );
-         act( "$p looks less Holy.", ch, ob, NULL, TO_CHAR );
-         act( "$p looks less Holy.", ch, ob, NULL, TO_ROOM );
+         REMOVE_BIT( obj->extra_flags, ITEM_BLESS );
+         act( "$p looks less Holy.", ch, obj, NULL, TO_CHAR );
+         act( "$p looks less Holy.", ch, obj, NULL, TO_ROOM );
       }
-      if( IS_SET( ob->extra_flags, ITEM_NOREMOVE ) )
-         REMOVE_BIT( ob->extra_flags, ITEM_NOREMOVE );
+      if( IS_SET( obj->extra_flags, ITEM_NOREMOVE ) )
+         REMOVE_BIT( obj->extra_flags, ITEM_NOREMOVE );
 
-      ob->first_apply = NULL;
-      ob->last_apply = NULL;
+      obj->first_apply = NULL;
+      obj->last_apply = NULL;
 
       return TRUE;
    }
-   send_to_char( "Dispel who or what??\n\r", ch );
+   send_to_char( "Dispel what??\n\r", ch );
    return FALSE;
 }
 
@@ -2000,7 +2011,7 @@ bool spell_earthquake( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
          {
             act( "$n loses $s footing, and falls to the ground!", vch, NULL, NULL, TO_ROOM );
             send_to_char( "You lose your footing, and fall to the ground!", vch );
-            damage( ch, vch, level + dice( 20, 10 ), -1 );
+            sp_damage( NULL, ch, vch, level + dice( 20, 10 ), REALM_IMPACT, sn, TRUE );
          }
          else
          {
@@ -2352,12 +2363,8 @@ bool spell_harm( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 bool spell_heal( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
-   victim->hit = UMIN( victim->hit + 100 + dice( 30, level / 4 ), victim->max_hit );
-   update_pos( victim );
-   send_to_char( "A warm feeling fills your body.\n\r", victim );
-   if( ch != victim )
-      send_to_char( "Ok.\n\r", ch );
-   spell_cure_poison( sn, level, ch, vo, obj );
+
+   class_heal_character(ch, victim, 50, sn, INDEX_CLE);
 
    return TRUE;
 }

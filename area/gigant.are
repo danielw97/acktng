@@ -4,7 +4,7 @@ Q 16
 K gigantia~
 L @@W{@@r ALL@@W }@@N~
 N 6
-I 1 120
+I 10 35
 V 3400 3449
 X 0
 F 15
@@ -26,6 +26,10 @@ The Path Continues in this Direction.
 ~
 ~
 0 -1 3402
+D3
+~
+~
+0 0 3242
 S
 #3402
 Path into the Town~
@@ -673,7 +677,7 @@ The Ogre Chieftain is here, doing his best to rule.
 The Chieftain looks old, but still able to beat most people in a fight.
 ~
 3 8320 200 S
-74 1
+64 1
 -100 100 100
 ! 0 0 0 7 0 32 0
 | 0 0 0 0 0 0 0
@@ -697,7 +701,7 @@ The Shopkeeper stands here, waiting to sell you stuff.
 She looks quite clean as ogres go.  Shame she doesn't smell clean as well.
 ~
 3 10368 300 S
-80 2
+78 2
 -1400 400 400
 ! 0 0 0 7 24078 96 16
 | 0 0 0 0 0 0 0
@@ -721,7 +725,7 @@ The Healer, Huth, stands here, looking in good health.
 Huth is a retired killer, now employed to use his skills to heal adventurers.
 ~
 4099 10240 800 S
-78 1
+79 1
 -1400 400 400
 ! 0 0 0 7 24076 32 16
 | 0 0 0 0 0 0 0
@@ -781,7 +785,7 @@ The Barkeeper stands here, keeping bar.
 He looks quite friendly, as well as being taller than you.
 ~
 3 10368 -100 S
-79 1
+78 1
 -1400 400 400
 ! 0 0 0 7 24076 32 16
 | 0 0 0 0 0 0 0
@@ -851,11 +855,11 @@ axe~
 gruth's Execution Axe~
 Gruth's Axe lies here, looking lethal.
 ~
-5 1 8421376 1
+5 134217729 8421376 1
 0 0 0 3 0 0 0 0 0 0
 6
 L
-1
+100
 #3402
 worms~
 a squirming mass of worms~
@@ -993,6 +997,7 @@ E 0 3401 0 16    wi axe
 M 0 3402 1 3435  chief
 
 E 0 3413 0 0 (null)
+
 M 0 3403 1 3438  armorer
 
 M 0 3404 1 3422  food

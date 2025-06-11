@@ -367,13 +367,33 @@ int main(  )
             collate_vnums( fcur_area, mobs_file, sarea_buffer, 0 );
          }
       }
-      fclose( fcur_area );
+      if (fcur_area != NULL)
+      {
+         fclose( fcur_area );
+         fcur_area = NULL;
+      }
    }
-   fclose( farea_lst );
 
-   fclose( rooms_file );
-   fclose( objs_file );
-   fclose( mobs_file );
+   if (farea_lst != NULL)
+   {
+      fclose( farea_lst );
+      farea_lst = NULL;
+   }
+   if (rooms_file != NULL)
+   {
+      fclose( rooms_file );
+      rooms_file = NULL;
+   }
+   if (objs_file != NULL)
+   {
+      fclose( objs_file );
+      objs_file = NULL;
+   }
+   if (mobs_file != NULL)
+   {
+      fclose( mobs_file );
+      mobs_file = NULL;
+   }
 
    free( sarea_buffer );
    free( sfile_line );

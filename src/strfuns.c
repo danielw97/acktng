@@ -1302,6 +1302,10 @@ char *affect_loc_name( int location )
          return "save vs breath";
       case APPLY_SAVING_SPELL:
          return "save vs spell";
+      case APPLY_HOT:
+         return "healing over time";
+      case APPLY_DOT:
+         return "damage over time";
    }
 
    sprintf( buf, "affect_location_name: location %d unknown.", location );

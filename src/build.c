@@ -4521,7 +4521,11 @@ void build_strdup( char **dest, char *src, bool freesrc, CHAR_DATA * ch )
          /*
           * Read in a file 
           */
-         fclose( fpReserve );
+         if (fpReserve != NULL)
+         {
+            fclose( fpReserve );
+            fpReserve = NULL;
+         }
          filename[0] = '\0';
          strcat( filename, STRING_FILE_DIR );
          strcat( filename, src );
@@ -4538,7 +4542,6 @@ void build_strdup( char **dest, char *src, bool freesrc, CHAR_DATA * ch )
             filechar = fread_string( infile );
 /*       fBootDb=0; */
          }
-         fpReserve = fopen( NULL_FILE, "r" );
          *dest = filechar;
          return;
       }

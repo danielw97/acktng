@@ -2036,6 +2036,10 @@ void do_stance( CHAR_DATA * ch, char *argument )
                if( ( ch->lvl2[4] > 70 ) && ( ch->lvl2[2] > 70 ) ) /* both knight and monk */
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
+            case STANCE_HEALER:
+               if( ch->lvl[INDEX_CLE] > 60)
+                  sprintf( cat_buf, "%s\n\r", stance_app[i].name );
+               break;
 
          }
 
@@ -2176,7 +2180,12 @@ void do_stance( CHAR_DATA * ch, char *argument )
                legal_stance = TRUE;
                break;
             }
-            break;
+         case STANCE_HEALER:
+            if (ch->lvl[INDEX_CLE] > 60)
+            {
+               legal_stance = TRUE;
+               break;
+            }
 
 
       }

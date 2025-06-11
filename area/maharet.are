@@ -166,6 +166,10 @@ D0
 ~
 ~
 0 -1 9249
+D2
+~
+~
+0 0 3243
 S
 #9249
 Inside the South Gate of Evermeet~
@@ -1154,7 +1158,7 @@ The impassive gate guard stands here.
 ~
 ~
 7 32776 -100 S
-55 1
+54 1
 -500 120 110
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1176,7 +1180,7 @@ The impassive Elite guard stands here, looming over you.
 ~
 ~
 87 8872 -1 S
-64 1
+63 1
 -40 40 40
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1187,7 +1191,7 @@ The beautifully radiant Queen Amlariul sits here lost in thought.
 ~
 ~
 3 680 -1 S
-81 2
+82 2
 -1400 400 400
 ! 0 0 0 7 24078 0 16
 | 0 0 0 0 0 0 0
@@ -1198,7 +1202,7 @@ The wizened old elven priest looks up at you from his reading.
 ~
 ~
 5635 2728 300 S
-80 1
+79 1
 -1400 400 400
 ! 0 0 0 7 24078 0 16
 | 0 0 0 0 0 0 0
@@ -1209,7 +1213,7 @@ The serenely graceful Elven guards patrol here.
 ~
 ~
 197 8832 -1 S
-35 1
+37 1
 -25 20 20
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1220,7 +1224,7 @@ Amylla Goldeneyes bakes her way through the day's order here.
 ~
 ~
 131 35368 -1 S
-72 2
+70 2
 -1400 400 400
 ! 0 0 0 7 24076 0 16
 | 0 0 0 0 0 0 0
@@ -1246,7 +1250,7 @@ This pretty little elf spends most of her time here among her flowers. With her
 to make any money in her chosen profession.
 ~
 16785475 10912 0 S
-140 2
+141 2
 -1400 400 400
 ! 0 0 0 7 390 0 0
 | 0 0 0 0 0 0 0
@@ -1261,7 +1265,7 @@ This quiet, silver-haired elf with his deep set eyes and an expression of
 life.
 ~
 131083 10984 0 S
-110 1
+108 1
 -1000 527 527
 ! 0 0 0 7 6158 0 0
 | 0 0 0 0 0 0 0
@@ -1275,7 +1279,7 @@ The honorable elf before you would rather die than cheat a customer of his
 leads that has him practically chained to the bank.
 ~
 32771 8872 0 S
-82 1
+84 1
 -1300 400 400
 ! 3 0 0 7 398 0 0
 | 0 0 0 0 0 0 0
@@ -1289,7 +1293,7 @@ The huge man towering over you sends a shiver down your spine with a glance.
 likely that he would give you a big hug rather than hurt you.
 ~
 11 8876 0 S
-69 1
+68 1
 -65 65 65
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1304,7 +1308,7 @@ Rushing up to you the moment you walked in the door, it's almost as if he was
 get his delicate designer feelings hurt with the slightest frown.
 ~
 8388611 10912 0 S
-140 1
+141 1
 -1400 400 400
 ! 0 0 0 7 30 0 16
 | 0 0 0 0 0 0 0
@@ -1319,7 +1323,7 @@ Kythaela looks as if she has been in this business for a long time. Her
 and she will design a special one just for you.
 ~
 8195 10920 0 S
-118 2
+120 2
 -1400 400 400
 ! 0 0 0 7 6158 0 16
 | 0 0 0 0 0 0 0
@@ -1332,7 +1336,7 @@ This scruffy little scavenger is better off left unnoticed. Maybe if you ignore 
 could give it a few scraps and send it on its way.
 ~
 197 0 -1 S
-3 0
+4 0
 -3 3 3
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1343,7 +1347,7 @@ A soft-spoken elven woman is here offering you a glass of wine.
 ~
 ~
 8388611 10912 0 S
-138 2
+137 2
 -1400 400 400
 ! 0 0 0 7 0 0 16
 | 0 0 0 0 0 0 0
@@ -1358,7 +1362,7 @@ This handsome elf looks as if he's tired of being cooped up in this tiny shop.
 around. Maybe it is time he got a partner for the store?
 ~
 1048579 10912 0 S
-141 1
+140 1
 -1300 400 500
 ! 3 0 0 7 142 0 0
 | 0 0 0 0 0 0 0
@@ -1387,7 +1391,7 @@ The happy elf before you has made it his life's work to find hard to locate
 ask for something he couldn't possibly have in his backroom.
 ~
 3 2720 0 S
-139 1
+137 1
 -1400 400 400
 ! 0 0 0 7 24206 0 0
 | 0 0 0 0 0 0 0
@@ -1402,7 +1406,7 @@ As you look into Laeroth's eyes, you get the feeling you can't count as high
 can make up for you today.
 ~
 3 2720 0 S
-140 1
+141 1
 -1400 400 400
 ! 0 0 0 7 24076 8394752 0
 | 0 0 0 0 0 0 0
@@ -1415,7 +1419,7 @@ Tall and slender and graceful, this lady has a piercing glare about her, I
 wouldnt mess if I were you.
 ~
 1539 2720 -1 S
-77 2
+76 2
 -1400 400 400
 ! 0 0 0 7 24078 0 16
 | 0 0 0 0 0 0 0
@@ -1525,7 +1529,7 @@ cravatte~
 an exceedingly tasteless blue and red cravatte~
 An awful cravatte lies on the floor here.
 ~
-9 0 8388736 1
+9 134217728 8388736 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -1533,7 +1537,7 @@ A
 A
 19 4
 L
-1
+70
 #9222
 snowdrop~
 a single perfect pale hanging snowdrop~
@@ -1692,7 +1696,7 @@ L
 bracer~
 an elven bracer~
 An elven bracer has been dropped here.~
-9 0 8390656 1
+9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
 2
 A
@@ -1700,7 +1704,7 @@ A
 A
 18 3
 L
-1
+70
 #9208
 leggings~
 a pair of elven leggings ~
@@ -1791,12 +1795,12 @@ A
 A
 18 2
 L
-65
+55
 #9206
 moonblade sword~
 a Moonblade~
 A finely crafted sword decorated with runes radiates a glowing light here.~
-5 134217793 8421376 1
+5 134217729 8421376 1
 0 0 0 1 0 0 0 0 0 0
 5
 A

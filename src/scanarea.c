@@ -348,9 +348,17 @@ int main(  )
             collate_vnums( fcur_area );
          }
       }
-      fclose( fcur_area );
+      if (fcur_area != NULL)
+      {
+         fclose( fcur_area );
+         fcur_area = NULL;
+      }
    }
-   fclose( farea_lst );
+   if (farea_lst != NULL)
+   {
+      fclose( farea_lst );
+      farea_lst = NULL;
+   }
 
    free( sarea_buffer );
    free( sfile_line );

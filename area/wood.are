@@ -810,7 +810,7 @@ A giant spider hangs on his web here.
 ~
 ~
 3 0 0 S
-9 1
+10 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -820,7 +820,7 @@ A shapeshifter~
 A small sniffing shapeshifter cringes in one corner.~
 ~
 1 0 0 S
-10 0
+11 0
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -853,7 +853,7 @@ A nasty vicious wolverine is rooting for food here.
 ~
 ~
 3 0 0 S
-36 1
+37 1
 -40 15 25
 ! 0 0 0 7 16644 0 0
 | 0 0 0 0 0 0 0
@@ -945,7 +945,7 @@ bloodring~
 the bloodring~
 The bloodring lies here, glowing in the dust.
 ~
-9 134217728 8396800 1
+8 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
 1
 A

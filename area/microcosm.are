@@ -4,7 +4,7 @@ Q 16
 K none~
 L {RM}~
 N 60
-I 80 120
+I 65 85
 V 5600 5799
 X 0
 F 15
@@ -12,7 +12,6 @@ U @@NAn @@f@@xALARM @@N sounds off in the @@edistance. @@N~
 O hephaestus~
 R hephaestus  jenn gods~
 W hephaestus  jenn gods~
-B Currently building area.
 #ROOMS
 #5788
 @@lBottom of the stairs@@N~
@@ -1891,7 +1890,7 @@ S
 #5626
 New room~
 No description~
-24584 11
+16392 11
 D2
 ~
 ~
@@ -1964,8 +1963,12 @@ S
 24584 11
 D0
 ~
-~
+m~
 353 -1 5622
+D2
+~
+~
+1 0 5620
 S
 #5620
 @@eFirst Riddle:@@N~
@@ -1983,10 +1986,14 @@ S
  @@N
 ~
 24584 11
+D0
+~
+twelve~
+1 -1 5621
 D2
 ~
-door~
-97 5600 5619
+~
+1 5600 5619
 S
 #5619
 @@yBehind the Council Chamber:@@l The Mysteries of the Mind@@N~
@@ -1998,7 +2005,7 @@ S
 D0
 ~
 door~
-97 5600 5620
+1 5600 5620
 D2
 ~
 ~
@@ -3490,7 +3497,7 @@ Insanity is here, strapped to a chair, kicking his feet and laughing his @$$
 ~
 ~
 131083 128 0 S
-79 1
+87 1
 -790 45 120
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3501,7 +3508,7 @@ the twisted thought~
 ~
 ~
 131115 8320 0 S
-63 1
+80 1
 0 100 20
 ! 0 0 0 7 2 0 0
 | 0 0 0 0 0 0 0
@@ -3512,7 +3519,7 @@ the Crooked idea~
 ~
 ~
 131119 8320 0 S
-75 1
+84 1
 0 100 40
 ! 0 0 0 7 2 0 0
 | 0 0 0 0 0 0 0
@@ -3523,7 +3530,7 @@ the baker~
 ~
 ~
 33554443 8360 0 S
-147 1
+146 1
 -2500 1000 1000
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3534,7 +3541,7 @@ the armory guy~
 ~
 ~
 8388619 8320 0 S
-94 1
+100 1
 -1000 400 400
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3545,7 +3552,7 @@ the weapon shop guy~
 ~
 ~
 8388619 8320 0 S
-101 1
+102 1
 -1000 400 400
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3556,7 +3563,7 @@ DNA alchemist~
 ~
 ~
 41943051 128 0 S
-85 1
+86 1
 -1000 400 400
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3567,8 +3574,8 @@ creativity~
 of metal shavings...
 ~
 ~
-1179659 532608 0 S
-85 1
+1179657 532608 0 S
+94 1
 -1000 200 176
 ! 0 0 0 7 8206 0 0
 | 0 0 0 0 0 0 0
@@ -3578,8 +3585,8 @@ anger~
 @@eAnger@@N is here, totally mellowed out. Hey he IS on a break you know.
 ~
 ~
-1179659 8320 0 S
-85 1
+1179657 8320 0 S
+93 1
 -1111 180 190
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3589,8 +3596,8 @@ intellect~
 @@yIntellect is here having coffee with his friends and debating.@@N
 ~
 ~
-1179659 8192 0 S
-88 1
+1179657 8192 0 S
+94 1
 -1000 190 220
 ! 0 0 0 7 8206 0 0
 | 0 0 0 0 0 0 0
@@ -3614,7 +3621,7 @@ reason~
 The higher brain function known as: @@BReason@@N
 ~
 1048579 532480 0 S
-92 1
+94 1
 -1000 188 222
 ! 0 0 0 7 12302 0 16
 | 0 0 0 0 0 0 0
@@ -3625,7 +3632,7 @@ This is one secretary that you do NOT want to disturb!@@N
 ~
 ~
 3 598016 0 S
-81 2
+79 2
 -550 110 55
 ! 0 0 0 7 142 0 0
 | 0 0 0 0 0 0 0
@@ -3640,7 +3647,7 @@ Standing here, with is an apron full of those silver bands... a @@lCoEnzyme
 
 ~
 1048577 128 0 S
-84 1
+85 1
 -550 85 75
 ! 0 0 0 7 8194 0 0
 | 0 0 0 0 0 0 0
@@ -3651,7 +3658,7 @@ An innocent passerby, perfect for venting frustration...
 ~
 ~
 3 8192 0 S
-76 1
+86 1
 -500 77 45
 ! 0 0 0 7 8198 0 0
 | 0 0 0 0 0 0 0
@@ -3665,7 +3672,7 @@ This is like on of them birds that spins around dazed cartoon characters heads
 yeah?@@N
 ~
 19 524416 0 S
-78 2
+84 2
 -700 95 35
 ! 0 0 0 7 24582 0 0
 | 0 0 0 0 0 0 0
@@ -3679,7 +3686,7 @@ Here stand the largest statue you have ever seen.  But you know there is more
 him. There seems to be a dust-filled flaw in his chest... is THAT they key?
 ~
 1048587 65666 0 S
-86 0
+87 0
 -800 110 132
 ! 0 0 0 7 30982 0 0
 | 0 0 0 0 0 0 0
@@ -3691,7 +3698,7 @@ Wait a sec! this is a fake Hephaestus!!!
 MUAHAHA wrong one!
 ~
 1 0 0 S
-13 1
+16 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3702,7 +3709,7 @@ logic~
 ~
 ~
 1179657 10368 0 S
-99 1
+95 1
 -1000 200 220
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3713,7 +3720,7 @@ instinct~
 ~
 ~
 1179657 0 0 S
-88 1
+86 1
 -100 30 180
 ! 0 0 0 7 8198 0 0
 | 0 0 0 0 0 0 0
@@ -3724,7 +3731,7 @@ The @@bBig Stinky Outhouse monster@@N leaps to life and attacks!
 ~
 ~
 131113 128 0 S
-77 1
+86 1
 -480 60 60
 ! 0 0 0 7 8206 0 0
 | 0 0 0 0 0 0 0
@@ -3735,7 +3742,7 @@ A caddy is here, looking for the clubs he dropped.
 ~
 ~
 1 0 0 S
-63 1
+84 1
 -100 69 30
 ! 0 0 0 7 8198 0 0
 | 0 0 0 0 0 0 0
@@ -3757,7 +3764,7 @@ There is a groundskeeper here keeping the grass in top-notch shape.
 ~
 ~
 1 8320 0 S
-88 1
+87 1
 -600 110 70
 ! 0 0 0 7 24582 0 0
 | 0 0 0 0 0 0 0
@@ -3768,7 +3775,7 @@ A caddy is here, holding his charge's glass of bourbon.
 ~
 ~
 131073 8192 0 S
-84 1
+89 1
 -100 80 70
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3779,7 +3786,7 @@ Duran Duran is here, and they're planning a come-back tour! sTOP THEM!
 ~
 ~
 131073 8320 0 S
-77 1
+89 1
 -900 190 140
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3790,7 +3797,7 @@ the Bell Bottoms~
 ~
 ~
 131073 8320 0 S
-78 1
+88 1
 -1200 175 160
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3802,7 +3809,7 @@ plaid~
 ~
 ~
 131073 8320 0 S
-70 1
+89 1
 -1300 199 150
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3813,7 +3820,7 @@ poofy hair~
 ~
 ~
 131073 8320 0 S
-86 1
+88 1
 -999 145 170
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3824,7 +3831,7 @@ Spandex~
 ~
 ~
 131073 8320 0 S
-72 1
+81 1
 -1001 210 190
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3835,7 +3842,7 @@ k-rad~
 ~
 ~
 131073 8320 0 S
-71 1
+83 1
 -900 160 210
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3846,7 +3853,7 @@ EEEEEK! PINK!!! Tooo.. much.. fluorescant pink!!!
 ~
 ~
 131073 8320 0 S
-89 1
+91 1
 -1300 210 175
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3857,7 +3864,7 @@ bobomb~
 ~
 ~
 33 524348 0 S
-34 1
+84 1
 -1000 500 500
 ! 0 0 0 7 24590 0 0
 | 0 0 0 0 0 0 0
@@ -3879,7 +3886,7 @@ A @@yBright@@N idea strolls merrily along here.
 ~
 ~
 9 128 0 S
-91 1
+94 1
 -600 140 130
 ! 0 0 0 7 8198 16 0
 | 0 0 0 0 0 0 0
@@ -3912,7 +3919,7 @@ A @@lRetina@@N is here, soakin up some rays on his lawn chair.
 ~
 ~
 11 524416 0 S
-80 1
+78 1
 -120 59 37
 ! 0 0 0 7 8206 0 0
 | 0 0 0 0 0 0 0
@@ -3935,7 +3942,7 @@ A happy thought is bouncing along here, singing a gay tune.
 ~
 ~
 9 0 0 S
-93 1
+94 1
 -500 83 111
 ! 0 0 0 7 8198 0 0
 | 0 0 0 0 0 0 0
@@ -3958,8 +3965,8 @@ anyone but @@x@@iDeception@@N~
 ~
 ~
 131081 0 0 S
-87 1
--1111 166 180
+82 1
+-600 166 180
 ! 0 0 0 7 8198 256 0
 | 0 0 0 0 0 0 0
 #5640
@@ -3969,8 +3976,8 @@ hate~
 ~
 ~
 131097 524288 0 S
-81 1
--1000 160 160
+82 1
+-500 160 160
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5641
@@ -3981,8 +3988,8 @@ morality~
 ~
 25 557096 0 S
 96 1
--1300 270 260
-! 0 0 0 7 24590 0 0
+-400 270 260
+! 0 0 0 7 16398 0 0
 | 0 0 0 0 0 0 0
 #5750
 b~
@@ -3990,7 +3997,7 @@ c~
 ~
 ~
 1 2 0 S
-1 1
+2 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -4001,9 +4008,9 @@ caring~
 ~
 ~
 1048601 524332 0 S
-102 1
--1300 320 260
-! 0 0 0 7 24590 786432 0
+89 1
+-400 200 200
+! 0 0 0 7 14 524288 0
 | 0 0 0 0 0 0 0
 #5643
 passion~
@@ -4012,9 +4019,9 @@ passion~
 ~
 ~
 1048605 524332 0 S
-100 1
--1300 260 290
-! 0 0 0 7 24590 256 0
+101 1
+-400 160 190
+! 0 0 0 7 16398 256 0
 | 0 0 0 0 0 0 0
 #5644
 comprehension~
@@ -4023,9 +4030,9 @@ comprehension~
 ~
 ~
 1048601 44 0 S
-97 1
--1200 270 290
-! 0 0 0 7 24590 1572864 8
+98 1
+-300 170 190
+! 0 0 0 7 8206 1572864 8
 | 0 0 0 0 0 0 0
 #5645
 love~
@@ -4034,9 +4041,9 @@ love~
 ~
 ~
 1048601 524332 0 S
-93 1
--1500 700 700
-! 0 0 0 7 30734 16 16
+92 1
+-500 300 300
+! 0 0 0 7 20486 0 16
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -4075,7 +4082,7 @@ L
 creative little earrings~
 @@aCreative@@N little earrings~
 ~
-9 134217728 8388672 3593
+8 134217728 8388672 3593
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -4093,7 +4100,7 @@ L
 #5612
 burning rage~
 @@eBurning Rage@@N~
-~
+Burning rage lies here~
 9 134217745 8392704 1
 0 0 0 0 0 0 0 0 0 0
 4
@@ -4122,7 +4129,7 @@ burden of intellect~
 @@yThe Burden of @@bIntellect@@N~
 A Very heavy belt lies here looking very smart.
 ~
-9 134217728 8388610 1
+28 134217728 8388610 1
 0 0 0 0 0 0 0 0 0 0
 5
 A
@@ -4142,7 +4149,7 @@ A
 L
 80
 #5600
-key to the door of knowlege~
+key of knowledge~
 key of knowlege~
 The key to knowing it all lies here in the dust@@N
 ~
@@ -4222,11 +4229,11 @@ A
 A
 12 -60
 L
-78
+80
 #5608
 Fuzzy Logic~
-@@WF@@d@@fu@@N@@dZ@@Wz@@d@@fy @@WL@@doG@@W@@fI@@N@@dc~
-description Some fuzzy logic lies here~
+f@@duZ@@Nzy L@@dog@@NI@@dc@@N~
+Description Some fuzzy logic lies here~
 9 134217728 8388609 1
 0 0 0 0 0 0 0 0 0 0
 1
@@ -4249,21 +4256,7 @@ L
 #5609
 big bertha~
 @@lBig Bertha@@W@@x(tm)@@N~
-The holiest of all golfclubs lies here...
-@@Rxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-@@gxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-@@Bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-@@N
-~
+The holiest of all golfclubs lies here.~
 1 134217728 8421376 1
 0 0 -1 0 0 0 0 0 0 0
 1
@@ -4292,7 +4285,7 @@ L
 #5616
 straight jacket of might~
 @@eT@@lh@@ee @@lS@@et@@lr@@ea@@li@@eg@@lh@@et @@lJ@@ea@@lc@@ek@@le@@et @@lO@@ef @@lM@@ei@@lg@@eh@@lt@@N~
-~
+An abandoned strait jacket lies here~
 9 134217732 8650752 1
 0 0 0 0 0 0 0 0 0 0
 1
@@ -4342,7 +4335,7 @@ L
 #5618
 the enchanted bowling ball of MURHN~
 @@BThe Enchanted Bowling Ball of @@lMURHN@@N~
-~
+A bowling ball lies here discarded~
 9 134217728 8421376 1
 0 0 0 0 0 0 0 0 0 0
 1
@@ -4361,8 +4354,8 @@ holy avenger~
 @@gHoly Avenger@@N~
 @@gThis ancient avenger was used by the Paladins of yore@@N
 ~
-5 134220800 8421376 1
-0 0 0 0 0 0 0 0 0 0
+5 134217728 8421376 1
+0 0 0 1 0 0 0 0 0 0
 1
 A
 13 80
@@ -4407,7 +4400,7 @@ Protective Warmth~
 @@lProtective Warmth@@N~
 An intangable warmth is present.
 ~
-9 134217761 8421376 144
+8 134217761 8396800 144
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -4689,6 +4682,15 @@ blue kgb gem~
 1
 L
 1
+#5627
+hungry like the Wolf~
+hungry like the Wolf~
+A hunger lies here, lost~
+9 134217728 8388736 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+80
 #0
 #SHOPS
 5626 19 5 0 0 0 100 100 0 23
@@ -4697,12 +4699,6 @@ L
 5634 26 10 0 0 0 700 35 0 23
 0
 #RESETS
-D 0 5620 2 1 (null)
-
-D 0 5620 2 2 (null)
-
-D 0 5619 0 2 (null)
-
 M 0 5600 1 5619 (null)
 
 G 0 5600 0 (null)
@@ -4746,11 +4742,14 @@ E 0 5606 0 7 (null)
 M 0 5607 1 5636 (null)
 
 E 0 5608 0 0 (null)
+
 E 0 5609 0 0 (null)
 
 M 0 5608 1 5639 (null)
 
 M 0 5614 2 5690 (null)
+
+E 0 5627 0 0 (null)
 
 M 0 5615 2 5690 (null)
 
@@ -4858,6 +4857,7 @@ O 0 5626 0 5760 (null)
 
 O 0 16832 0 5641 (null)
 
+D 0 5619 0 2 (null)
 S
 #SPECIALS
 M 5628 spec_breath_fire
@@ -4874,7 +4874,7 @@ M 5636 spec_breath_lightning
 M 5753 spec_breath_lightning
 M 5637 spec_breath_any
 M 5635 spec_breath_gas
-M 5645 spec_breath_frost
+M 5645 spec_cast_cleric
 S
 #OBJFUNS
 O 5612 objfun_cast_fight

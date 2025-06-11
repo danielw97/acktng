@@ -58,7 +58,11 @@ void load_sysdata( void )
          wizlock = TRUE;
       }
    }
-   fclose( sysfp );
+   if (sysfp != NULL)
+   {
+      fclose( sysfp );
+      sysfp = NULL;
+   }
 }
 
 
@@ -69,7 +73,11 @@ void save_sysdata( void )
    char sys_file_name[MAX_STRING_LENGTH];
    extern bool wizlock;
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    sprintf( sys_file_name, "%s", SYSDAT_FILE );
 
    if( ( fp = fopen( sys_file_name, "w" ) ) == NULL )
@@ -86,9 +94,12 @@ void save_sysdata( void )
       fprintf( fp, "%d\n\r", ( wizlock ? 1 : 0 ) );
       fprintf( fp, "%d\n\r", ( sysdata.shownumbers ? 1 : 0 ) );
       fflush( fp );
-      fclose( fp );
+      if (fp != NULL)
+      {
+         fclose( fp );
+         fp = NULL;
+      }
    }
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
 
 }

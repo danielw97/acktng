@@ -145,7 +145,11 @@ void save_char_obj( CHAR_DATA * ch )
       ch = ch->desc->original;
 
    ch->save_time = current_time;
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
 
 
    /*
@@ -206,19 +210,17 @@ void save_char_obj( CHAR_DATA * ch )
       fprintf( fp, "#END\n" );
    }
    fflush( fp );
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 
    /*
     * Now make temp file the actual pfile... 
     */
 
    rename( tempstrsave, strsave );
-   /*
-    * THAT easy?? 
-    */
-
-   fpReserve = fopen( NULL_FILE, "r" );
-   return;
 }
 
 
@@ -268,7 +270,7 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
    fprintf( fp, "\n" );
 
    fprintf( fp, "Remort       " );
-   for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+   for( cnt = 0; cnt < MAX_REMORT; cnt++ )
       fprintf( fp, "%2d ", ch->lvl2[cnt] );
    fprintf( fp, "\n" );
    fprintf( fp, "Adeptlevel   " );
@@ -362,7 +364,7 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
       }
 
       fprintf( fp, "colors\n" );
-      for( foo = 0; foo < MAX_color; foo++ )
+      for( foo = 0; foo < MAX_COLOR; foo++ )
          fprintf( fp, "%d\n", ch->pcdata->color[foo] );
 
       fprintf( fp, "AttrPerm     %d %d %d %d %d\n",
@@ -588,7 +590,11 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
                add_hash_entry( hash_changed_vnums, oldvnum, ( void * )newvnum );
             }
          }
-         fclose( fp );
+         if (fp != NULL)
+         {
+            fclose( fp );
+            fp = NULL;
+         }
       }
    }
 
@@ -649,7 +655,7 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
       ch->pcdata->email_address = str_dup( "not set" );
       ch->pcdata->assist_msg = str_dup( "'@@eBANZAI!!@@N $N must be assisted!!@@N'" );
       ch->quest_points = 0;
-      for( foo = 0; foo < MAX_CLASS; foo++ )
+      for( foo = 0; foo < MAX_REMORT; foo++ )
          ch->lvl2[foo] = -1;
       ch->adept_level = -1;
 #ifdef IMC
@@ -734,7 +740,11 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
    }
 
    found = FALSE;
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
 
    /*
     * parsed player file directories by Yaz of 4th Realm 
@@ -787,6 +797,7 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
    {
       char buf[MAX_STRING_LENGTH];
       fclose( fp );
+      fp = NULL;
       sprintf( buf, "gzip -dfq %s", tempstrsave );
       system( buf );
    }
@@ -833,7 +844,11 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
             break;
          }
       }
-      fclose( fp );
+      if (fp != NULL)
+      {
+         fclose( fp );
+         fp = NULL;
+      }
    }
 
    if( !found && is_npc )
@@ -843,7 +858,6 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
        */
       free_char( ch );
    }
-   fpReserve = fopen( NULL_FILE, "r" );
    return found;
 }
 
@@ -1033,7 +1047,7 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
             if( !str_cmp( word, "colors" ) && !IS_NPC( ch ) )
             {
                int foo;
-               for( foo = 0; foo < MAX_color; foo++ )
+               for( foo = 0; foo < MAX_COLOR; foo++ )
                   ch->pcdata->color[foo] = fread_number( fp );
                fMatch = TRUE;
                break;
@@ -1267,7 +1281,7 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
 
             if( !str_cmp( word, "Remort" ) )
             {
-               for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+               for( cnt = 0; cnt < MAX_REMORT; cnt++ )
                   ch->lvl2[cnt] = fread_number( fp );
                fMatch = TRUE;
                break;
@@ -2209,7 +2223,11 @@ void save_corpses(  )
 
 
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    sprintf( corpse_file_name, "%s", CORPSE_FILE );
 
    if( ( fp = fopen( corpse_file_name, "w" ) ) == NULL )
@@ -2226,9 +2244,12 @@ void save_corpses(  )
       fprintf( fp, "#END\n\n" );
 
       fflush( fp );
-      fclose( fp );
+      if (fp != NULL)
+      {
+         fclose( fp );
+         fp = NULL;
+      }
    }
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
 
 }
@@ -2240,9 +2261,11 @@ void save_marks(  )
    char mark_file_name[MAX_STRING_LENGTH];
    MARK_LIST_MEMBER *mark_list;
 
-
-
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    sprintf( mark_file_name, "%s", MARKS_FILE );
 
    if( ( fp = fopen( mark_file_name, "w" ) ) == NULL )
@@ -2266,10 +2289,12 @@ void save_marks(  )
 
 
    fflush( fp );
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 
-
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
 
 }
@@ -2281,9 +2306,11 @@ void save_bans(  )
    char ban_file_name[MAX_STRING_LENGTH];
    BAN_DATA *pban;
 
-
-
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    sprintf( ban_file_name, "%s", BANS_FILE );
 
    if( ( fp = fopen( ban_file_name, "w" ) ) == NULL )
@@ -2303,12 +2330,12 @@ void save_bans(  )
       fprintf( fp, "#END~\n\n" );
    }
 
-
    fflush( fp );
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 
-
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
-
 }

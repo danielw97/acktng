@@ -241,24 +241,24 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort )
    if( ( class == 32 ) )
    {
 
-      add_hp = con_app[get_curr_con( ch )].hitp + number_range( 10, 50 );
-      add_mana = number_range( 10, ( 3 * get_curr_int( ch ) + get_curr_wis( ch ) ) / 4 );
+      add_hp = con_app[get_curr_con( ch )].hitp * 10;
+      add_mana = get_curr_int( ch ) + get_curr_wis( ch );
    }
 
    else if( remort )
    {
-      add_hp = con_app[get_curr_con( ch )].hitp + number_range( remort_table[class].hp_min, remort_table[class].hp_max );
-      add_mana = remort_table[class].fMana ? number_range( 2, ( 2 * get_curr_int( ch ) + get_curr_wis( ch ) ) / 16 ) : 0;
+      add_hp = con_app[get_curr_con( ch )].hitp + ((remort_table[class].hp_min+remort_table[class].hp_max)/2);
+      add_mana = remort_table[class].fMana ? (get_curr_int( ch ) + get_curr_wis( ch ))/2 : 0;
 
    }
    else
    {
-      add_hp = con_app[get_curr_con( ch )].hitp + number_range( class_table[class].hp_min, class_table[class].hp_max );
+      add_hp = con_app[get_curr_con( ch )].hitp + (( class_table[class].hp_min+class_table[class].hp_max)/2 );
 
-      add_mana = class_table[class].fMana ? number_range( 2, ( 2 * get_curr_int( ch ) + get_curr_wis( ch ) ) / 16 ) : 0;
+      add_mana = class_table[class].fMana ? (get_curr_int( ch ) + get_curr_wis( ch ))/6 : 0;
    }
-   add_move = number_range( 2, ( get_curr_con( ch ) + get_curr_dex( ch ) ) / 5 );
-   add_prac = ( wis_app[get_curr_wis( ch )].practice / 2 ) + number_range( 1, 3 );
+   add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
+   add_prac = ( wis_app[get_curr_wis( ch )].practice / 2 ) + 1;
 
 
 

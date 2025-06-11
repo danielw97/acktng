@@ -243,6 +243,10 @@ End of Roc Road.
 ~
 ~
 0 -1 3243
+D1
+~
+~
+0 -1 3401
 D2
 Roc Road.
 ~
@@ -251,11 +255,15 @@ Roc Road.
 S
 #3243
 Roc Road~
-You are standing at one end of Roc Road, which links Kiess to Midgaard.  You
-may enter Kiess by travelling North, or head back towards Midgaard by leaving
-South.
+You are standing at one end of Roc Road, which links Evermeet to Midgaard.
+You may enter Evermeet by travelling North, or head back towards Midgaard by
+leaving South.
 ~
 0 3
+D0
+~
+~
+0 -1 9250
 D2
 Roc Road.
 ~

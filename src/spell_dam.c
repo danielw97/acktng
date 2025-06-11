@@ -71,6 +71,52 @@ struct sp_dam_str_type sp_dam_str[] = {
                  "holy", "HOLY", "holies", "HOLIES"}
 };
 
+void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index )
+{
+   int heal = base_heal*2;
+
+   int wis = (get_curr_wis(ch) - 13) * 5;
+
+   heal *= 100 + wis;
+   heal /= 100;
+
+   if (stance_app[ch->stance].heal_mod > 0)
+      heal += heal * stance_app[ch->stance].heal_mod / 10;
+
+   heal += heal * ch->lvl[class_index] / 50;
+
+   if (IS_NPC(ch))
+   {
+      heal *= ch->level+100;
+      heal /= 100;
+   }
+
+   heal_character(ch, victim, heal, sn);
+}
+
+void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn )
+{
+   char buf1[MAX_STRING_LENGTH];
+   char buf2[MAX_STRING_LENGTH];
+   char buf3[MAX_STRING_LENGTH];
+   int wis, heal;
+
+   heal = base_heal;
+
+   heal = heal * number_range(75,125) / 100;
+
+   victim->hit = UMIN( victim->hit + heal, victim->max_hit );
+   update_pos( victim );
+
+   sprintf(buf1, "$n's %s heals $N! (%d)", skill_table[sn].name, heal);
+   sprintf(buf2, "Your %s heals $N! (%d)", skill_table[sn].name, heal);
+   sprintf(buf3, "$n's %s heals you! (%d)", skill_table[sn].name, heal);
+
+   act( buf1, ch, NULL, victim, TO_NOTVICT );
+   act( buf2, ch, NULL, victim, TO_CHAR );
+   act( buf3, ch, NULL, victim, TO_VICT );
+}
+
 void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
 {
    /*
@@ -432,7 +478,7 @@ void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
 
 
 
-void sp_dam_message( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int realm, int dt )
+void sp_dam_message( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int realm, int dt, bool critical )
 {
 
    char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
@@ -448,12 +494,11 @@ void sp_dam_message( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam
 
    if( dam >= victim->hit )
       dead = TRUE;
-   if( sysdata.shownumbers == TRUE )
-   {
-      sprintf( testerbuf, " @@l(@@W%i@@l)@@N", dam );
-   }
+
+   if (critical)
+      sprintf( testerbuf, " @@l(@@W%i@@l)@@N (@@rCRITICAL@@N) ", dam );
    else
-      sprintf( testerbuf, "%s", "" );
+      sprintf( testerbuf, " @@l(@@W%i@@l)@@N", dam );
 
    for( rtype = 0; rtype < MAX_REALM; rtype++ )
    {
@@ -629,6 +674,7 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
    float dam_modifier = 1.0;
    bool can_reflect = TRUE;
    bool can_absorb = TRUE;
+   bool critical = FALSE;
 
 /*   char buf[MAX_STRING_LENGTH];   this is unused now -- uni */
 
@@ -709,6 +755,15 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
                   ( ( ( ch->race > 0 )
                       && ( ch->race < MAX_RACE ) ) ?
                     race_table[ch->race].race_flags : ch->race_mods ) : race_table[ch->race].race_flags );
+
+      int crit_chance = 5;
+      if (!IS_NPC(ch))
+         crit_chance += ch->pcdata->learned[gsn_spell_critical]/10;
+      if (!IS_NPC(ch) && number_range(0,100) < crit_chance)
+      {
+         critical = TRUE;
+         dam_modifier += 1.0 + (ch->pcdata->learned[gsn_spell_critical_damage]/100);
+      }
 
       if( IS_SET( ch_strong, type ) )
       {
@@ -833,7 +888,10 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       sprintf( buf, "Spell: %d damage by %s, spell %s", dam,
                ( obj == NULL ) ? ( IS_NPC( ch ) ? ch->short_descr : ch->name ) : obj->short_descr, skill_table[sn].name );
       log_f( buf );
-/*    dam = 3000; */
+      if (!critical)
+         dam = 3000;
+      else if (dam > 6000)
+         dam = 6000;
    }
 
    if( victim != ch )
@@ -900,7 +958,7 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
          dam = 0;
 
       if( ( show_msg ) && ( dam >= 0 ) )
-         sp_dam_message( obj, ch, victim, dam, type, sn );
+         sp_dam_message( obj, ch, victim, dam, type, sn, critical );
 
    }
 
@@ -1029,6 +1087,8 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
 
       if( !IS_NPC( ch ) && IS_NPC( victim ) )
       {
+         if( IS_SET(ch->config, CONFIG_AUTOMONEY) )
+            do_get( ch, "money corpse");
          if( IS_SET( ch->config, CONFIG_AUTOLOOT ) )
             do_get( ch, "all corpse" );
          else

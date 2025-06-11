@@ -377,3 +377,58 @@ bool spell_mystical_focus( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA
 
    return TRUE;
 }
+
+bool spell_purify( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   if( is_affected( ch, gsn_poison ) )
+   {
+      affect_strip( ch, gsn_poison );
+      act( "$N looks better.", ch, NULL, ch, TO_NOTVICT );
+      send_to_char( "Your body feels purified of poison!\n\r", ch );
+   }
+   else
+      send_to_char( "You aren't poisoned.\r\n", ch);
+   return TRUE;
+}
+
+bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   CHAR_DATA *victim = ( CHAR_DATA * ) vo;
+   AFFECT_DATA af;
+
+   int heal = 8;
+
+   heal += heal * ch->lvl[INDEX_MAG] / 25;
+
+   if (IS_NPC(ch))
+   {
+      heal *= ch->level+100;
+      heal /= 100;
+   }
+
+   int intel = (get_curr_int(ch) - 13) * 10;
+
+   heal *= 100 + intel;
+   heal /= 100;
+
+   if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "regen" ) ) )
+      return FALSE;
+   af.type = sn;
+   af.duration = 1;
+   af.location = APPLY_HOT;
+   af.modifier = heal;
+   af.bitvector = 0;
+   affect_to_char( victim, &af );
+   act( "$N begins to quickly regenerate from $n's spell.", victim, NULL, NULL, TO_ROOM );
+   send_to_char( "You begin to quickly regenerate.\n\r", victim );
+   return TRUE;
+}
+
+bool spell_psionic_recovery( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   CHAR_DATA *victim = ( CHAR_DATA * ) vo;
+
+   class_heal_character(ch, victim, 60, sn, INDEX_PSI);
+
+   return TRUE;
+}

@@ -1631,7 +1631,7 @@ zombie lord~
 ~
 ~
 3424283 680 1000 S
-74 0
+73 0
 -70 55 65
 ! 0 0 14 7 24470 64 0
 | 0 0 0 0 0 0 0
@@ -1653,7 +1653,7 @@ zombie~
 ~
 ~
 278613 2600 -450 S
-54 0
+53 0
 -2000 45 30
 ! 3 0 14 7 530 0 0
 | 0 0 0 0 0 0 0
@@ -1678,7 +1678,7 @@ a vicious ghoul~
 stench growls at you!@@g
 ~
 3424319 552 -500 S
-58 0
+57 0
 -50 45 50
 ! 0 0 14 7 18434 0 0
 | 0 0 0 0 0 0 0
@@ -1691,7 +1691,7 @@ a vicious ghoul~
 stench stares back at you!@@g
 ~
 3424311 40 -500 S
-54 0
+55 0
 -50 45 50
 ! 0 0 14 7 18434 0 0
 | 0 0 0 0 0 0 0
@@ -1714,7 +1714,7 @@ A fear crazed adventurer named @@cManiac@@g attacks you!!
 ~
 ~
 19922961 32936 1000 S
-63 1
+62 1
 -200 80 70
 ! 0 0 0 7 23470 2103360 8
 | 0 0 0 0 0 0 0
@@ -1736,7 +1736,7 @@ An @@eangered@@N entity floats here, adding its troubled cries to the @@cair.@@N
 ~
 ~
 16419 2066 0 S
-64 0
+65 0
 -130 90 100
 ! 0 0 14 7 20622 274432 0
 | 0 0 0 0 0 0 0
@@ -1817,7 +1817,7 @@ L
 mace archon~
 @@gMace of the @@RArchon@@g~
 A shimmering, irridescent mace studded with diamonds lies here.~
-5 134219075 8421376 257
+5 134219011 8421376 257
 35 0 0 7 0 0 0 0 0 0
 1
 A
@@ -1910,7 +1910,7 @@ guard faceguard archon~
 @@gFaceguard of the @@RArchon@@g~
 A glimmering, irridescent faceguard is waiting to be worn.
 ~
-9 134218049 8388624 3594
+9 134217985 8388624 3594
 25 0 0 0 0 0 0 0 0 0
 3
 A
@@ -2045,15 +2045,15 @@ A beautiful glittering gem lies here, looking perfect for a moagical staff.
 L
 50
 #11019
-staff cure heal~
+pure white staff~
 a pure white staff~
 A beautiful white staff, topped with a shimmering gem lies here.
 ~
-4 134218049 8421376 1
-70 8 8 635 0 0 0 0 0 0
+5 134218049 8421376 1
+0 0 0 7 0 0 0 0 0 0
 1
 L
-55
+60
 #0
 #RESETS
 O 0 11000 0 11099 

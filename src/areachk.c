@@ -305,7 +305,11 @@ void do_check_areas( CHAR_DATA * ch, char *argument )
       }
    }
 
-   fclose( out_file );
+   if (out_file != NULL)
+   {
+      fclose( out_file );
+      out_file = NULL;
+   }
 
    /*
     * Now go through all things referencing the changes 

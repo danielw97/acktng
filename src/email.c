@@ -271,11 +271,14 @@ void send_email( const char *m_address, const char *m_subject, const char *mfile
    sprintf( mailfpbuf, "%s%s", MAIL_DIR, mfilename );
    if( ( mailfp = fopen( mailfpbuf, "r" ) ) == NULL )
    {
-      fpReserve = fopen( NULL_FILE, "r" );
       kill( getpid(  ), SIGKILL );  /* didn't have a valid file to mail */
    }
 
-   fclose( mailfp );
+   if (mailfp != NULL)
+   {
+      fclose( mailfp );
+      mailfp = NULL;
+   }
    system( mailbuf );
    sprintf( delbuf, "rm %s%s", MAIL_DIR, mfilename );
    system( delbuf );
@@ -287,17 +290,34 @@ bool save_mail_file( const char *mfilename, char *mtext )
 {
    FILE *mailfp;
    char mailfpfilename[MSL];
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    sprintf( mailfpfilename, "%s%s", MAIL_DIR, mfilename );
    if( ( mailfp = fopen( mailfpfilename, "w" ) ) == NULL )
    {
-      fpReserve = fopen( NULL_FILE, "r" );
+      if (fpReserve != NULL);
+      {
+         fclose(fpReserve);
+         fpReserve = NULL;
+      }
       return FALSE;
    }
    fprintf( mailfp, "%s\n", strip_color( mtext, "@@" ) );
    fflush( mailfp );
-   fclose( mailfp );
-   fpReserve = fopen( NULL_FILE, "r" );
+   if (mailfp != NULL)
+   {
+      fclose( mailfp );
+      mailfp = NULL;
+   }
+
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    return TRUE;
 }
 

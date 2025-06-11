@@ -120,7 +120,11 @@ void note_remove( CHAR_DATA * ch, NOTE_DATA * pnote )
    /*
     * Rewrite entire list.
     */
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    if( !( fp = fopen( NOTE_FILE, "w" ) ) )
    {
       perror( NOTE_FILE );
@@ -136,9 +140,12 @@ void note_remove( CHAR_DATA * ch, NOTE_DATA * pnote )
          fprintf( fp, "Subject %s~\n", pnote->subject );
          fprintf( fp, "Text\n%s~\n\n", pnote->text );
       }
-      fclose( fp );
+      if (fp != NULL)
+      {
+         fclose( fp );
+         fp = NULL;
+      }
    }
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
 }
 
@@ -405,7 +412,11 @@ void do_note( CHAR_DATA * ch, char *argument )
       pnote = ch->pnote;
       ch->pnote = NULL;
 
-      fclose( fpReserve );
+      if (fpReserve != NULL)
+      {
+         fclose( fpReserve );
+         fpReserve = NULL;
+      }
       if( !( fp = fopen( NOTE_FILE, "a" ) ) )
       {
          perror( NOTE_FILE );
@@ -418,9 +429,12 @@ void do_note( CHAR_DATA * ch, char *argument )
          fprintf( fp, "To      %s~\n", pnote->to_list );
          fprintf( fp, "Subject %s~\n", pnote->subject );
          fprintf( fp, "Text\n%s~\n\n", pnote->text );
-         fclose( fp );
+         if (fp != NULL)
+         {
+            fclose( fp );
+            fp = NULL;
+         }
       }
-      fpReserve = fopen( NULL_FILE, "r" );
 
       send_to_char( "Ok.\n\r", ch );
       return;
@@ -641,7 +655,7 @@ void talk_channel( CHAR_DATA * ch, char *argument, int channel, const char *verb
          ch->position = position;
          break;
       case CHANNEL_OOC:
-         sprintf( buf, "%s $n: $t.", verb );
+         sprintf( buf, "%s%s $n: $t.%s", color_string( ch, "OOC" ), verb, color_string( ch, "normal" ) );
          position = ch->position;
          ch->position = POS_STANDING;
          act( buf, ch, argument, NULL, TO_CHAR );

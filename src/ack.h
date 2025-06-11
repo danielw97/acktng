@@ -296,6 +296,7 @@ struct stance_app_type
    sh_int ac_mod;
    sh_int dr_mod;
    sh_int hr_mod;
+   sh_int heal_mod;
    sh_int speed_mod;
 };
 
@@ -649,7 +650,7 @@ struct char_data
    sh_int race;
    sh_int level;  /* For m/c this = max of levels */
    int lvl[MAX_CLASS];  /* Holds details for m/c levels */
-   int lvl2[MAX_CLASS]; /* for remort (if any) */
+   int lvl2[MAX_REMORT]; /* for remort (if any) */
    int adept_level;
    int sentence;  /* For new legal system */
    sh_int invis;  /* For wizinvis imms - lvl invis to */
@@ -739,7 +740,7 @@ struct pc_data
    bool is_free;  /* Ramias:for run-time checks of LINK/UNLINK */
    PC_DATA *next;
    PC_DATA *prev;
-   int color[MAX_color];
+   int color[MAX_COLOR];
    char *pwd;
    char *bamfin;
    char *room_enter;
@@ -1258,7 +1259,7 @@ struct skill_type
    sh_int flag1;  /* mort or remort?      */
    sh_int flag2;  /* normal and/or vamp?     */
    char *name; /* Name of skill                */
-   sh_int skill_level[MAX_CLASS];   /* Level needed by class        */
+   sh_int skill_level[MAX_REMORT];   /* Level needed by class        */
    SPELL_FUN *spell_fun;   /* Spell pointer (for spells)   */
    sh_int target; /* Legal targets                */
    sh_int minimum_position;   /* Position for caster / user   */
@@ -1369,7 +1370,6 @@ void load_messages args( ( void ) );
 /* comm.c */
 void close_socket args( ( DESCRIPTOR_DATA * dclose ) );
 void show_menu_to args( ( DESCRIPTOR_DATA * d ) ); /* Main */
-void show_amenu_to args( ( DESCRIPTOR_DATA * d ) );   /* Attributes */
 void show_rmenu_to args( ( DESCRIPTOR_DATA * d ) );   /* Race */
 void show_smenu_to args( ( DESCRIPTOR_DATA * d ) );   /* Sex */
 void show_cmenu_to args( ( DESCRIPTOR_DATA * d ) );   /* Class */
@@ -1435,7 +1435,7 @@ void log_f( char *fmt, ... ) __attribute__ ( ( format( printf, 1, 2 ) ) );
 /* fight.c */
 void violence_update args( ( void ) );
 void multi_hit args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dt ) );
-void damage args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt ) );
+int damage args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt ) );
 void update_pos args( ( CHAR_DATA * victim ) );
 void stop_fighting args( ( CHAR_DATA * ch, bool fBoth ) );
 void death_cry args( ( CHAR_DATA * ch ) );
@@ -1449,11 +1449,17 @@ int get_trust args( ( CHAR_DATA * ch ) );
 void my_get_age args( ( CHAR_DATA * ch, char *buf ) );
 int my_get_hours args( ( CHAR_DATA * ch ) );
 int get_age args( ( CHAR_DATA * ch ) );
+int get_cost_to_level args( ( CHAR_DATA *ch, int class, bool remort ) );
 int get_curr_str args( ( CHAR_DATA * ch ) );
+int get_max_str args ( ( CHAR_DATA * ch ) );
 int get_curr_int args( ( CHAR_DATA * ch ) );
+int get_max_int args ( ( CHAR_DATA * ch ) );
 int get_curr_wis args( ( CHAR_DATA * ch ) );
+int get_max_wis args ( ( CHAR_DATA * ch ) );
 int get_curr_dex args( ( CHAR_DATA * ch ) );
+int get_max_dex args ( ( CHAR_DATA * ch ) );
 int get_curr_con args( ( CHAR_DATA * ch ) );
+int get_max_con args ( ( CHAR_DATA * ch ) );
 int can_carry_n args( ( CHAR_DATA * ch ) );
 int can_carry_w args( ( CHAR_DATA * ch ) );
 

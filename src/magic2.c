@@ -479,7 +479,7 @@ bool spell_stone_skin( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
    if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "stone skin" ) ) )
       return FALSE;
    af.type = sn;
-   af.duration = 5 + ( level / 12 );
+   af.duration = -1;
    af.location = APPLY_AC;
    af.modifier = -40 - get_psuedo_level( ch ) / 10;
    af.bitvector = 0;

@@ -163,6 +163,8 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"help", do_help, POS_DEAD, 0, LOG_NORMAL,
     C_TYPE_INFO, C_SHOW_ALWAYS},
+   {"rhelp", do_rhelp, POS_DEAD, 0, LOG_NORMAL,
+    C_TYPE_INFO, C_SHOW_ALWAYS},
    {"shelp", do_shelp, POS_DEAD, 0, LOG_NORMAL,
     C_TYPE_INFO, C_SHOW_ALWAYS},
    {"heal", do_heal, POS_STANDING, 0, LOG_NORMAL,
@@ -280,8 +282,10 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_COMM, C_SHOW_ALWAYS},
    {")", do_creator, POS_DEAD, L_GOD, LOG_NORMAL,
     C_TYPE_COMM, C_SHOW_ALWAYS},
-/*    { ".",              do_gossip,      POS_RESTING,     0,  LOG_NORMAL,
-      C_TYPE_COMM, C_SHOW_ALWAYS }, */
+   { ".",              do_gossip,      POS_RESTING,     0,  LOG_NORMAL,
+      C_TYPE_COMM, C_SHOW_ALWAYS },
+   { "gossip",              do_gossip,      POS_RESTING,     0,  LOG_NORMAL,
+      C_TYPE_COMM, C_SHOW_ALWAYS },
    {"pemote", do_pemote, POS_RESTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"emote", do_emote, POS_RESTING, 0, LOG_NORMAL,
@@ -371,6 +375,8 @@ const struct cmd_type cmd_table[] = {
    {"kick", do_kick, POS_FIGHTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_SKILL},
    {"knee", do_knee, POS_FIGHTING, 0, LOG_NORMAL,
+    C_TYPE_ACTION, C_SHOW_SKILL},
+   {"detox", do_detox, POS_STANDING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_SKILL},
    {"murde", do_murde, POS_FIGHTING, 5, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_NEVER},
@@ -848,8 +854,11 @@ void comlog( CHAR_DATA * ch, int cmd, char *args )
 
    if( !fplog || ltime + ( 5 * 60 ) <= current_time )
    {
-      if( fplog )
+      if(fplog || fplog != NULL)
+      {
          fclose( fplog );
+         fplog = NULL;
+      }
       if( !( fplog = fopen( "../log/comlog.txt", "w" ) ) )
          return;
       ltime = current_time;

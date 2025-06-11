@@ -93,7 +93,11 @@ void load_social_table(  )
 
    social_table[maxSocial].name = str_dup( "" );   /* empty! */
 
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 
 }
 
@@ -139,7 +143,11 @@ void save_social_table(  )
    for( i = 0; i < maxSocial; i++ )
       save_social( &social_table[i], fp );
 
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 }
 
 

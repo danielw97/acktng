@@ -128,7 +128,11 @@ void build_save_area_list( void )
 
    fprintf( fpArea, "$\n\r" );
 
-   fclose( fpArea );
+   if (fpArea != NULL)
+   {
+      fclose( fpArea );
+      fpArea = NULL;
+   }
 
    /*
     * Save backup 
@@ -157,7 +161,11 @@ void build_save_area_gold( void )
 
    fprintf( fpArea, "-1\n\r" );
 
-   fclose( fpArea );
+   if (fpArea != NULL)
+   {
+      fclose( fpArea );
+      fpArea = NULL;
+   }
 
    /*
     * Save backup 
@@ -255,6 +263,7 @@ void build_makearea( CHAR_DATA * ch, char *argument )
    {
       send_to_char( "There is already a file with that name.\n\r", ch );
       fclose( fpArea );
+      fpArea = NULL;
       return;
    }
 
@@ -264,7 +273,11 @@ void build_makearea( CHAR_DATA * ch, char *argument )
       send_to_char( "Invalid filename, would not be able to save.\n\r", ch );
       return;
    }
-   fclose( fpArea );
+   if (fpArea != NULL)
+   {
+      fclose( fpArea );
+      fpArea = NULL;
+   }
 
    /*
     * Find a unique area number 
@@ -421,6 +434,7 @@ void build_addarea( CHAR_DATA * ch, char *argument )
    {
       send_to_char( "There is already a file with that name.\n\r", ch );
       fclose( fpArea );
+      fpArea = NULL;
       return;
    }
 
@@ -431,6 +445,7 @@ void build_addarea( CHAR_DATA * ch, char *argument )
       return;
    }
    fclose( fpArea );
+   fpArea = NULL;
 
    /*
     * Find a unique area number 

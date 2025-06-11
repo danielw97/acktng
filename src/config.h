@@ -58,7 +58,7 @@
  */
 
 #define MAX_CLAN_EQ		     6   /* Number of clan eq items */
-#define MAX_color		    15   /* eg look, prompt, shout */
+#define MAX_COLOR		    16   /* eg look, prompt, shout */
 #define MAX_ANSI		    28   /* eg red, black, etc (was 11) */
 #define MAX_ALIASES		     6
 #define MAX_IGNORES		     3
@@ -67,6 +67,13 @@
 #define EXP_LEVEL                 1000 /* exp per level */
 #define MAX_SKILL                  300
 #define MAX_CLASS                    6
+#define MAX_REMORT		    (MAX_CLASS*2)
+#define INDEX_WAR		     3
+#define INDEX_MAG		     0
+#define INDEX_CLE		     1
+#define INDEX_PSI		     4
+#define INDEX_PUG		     5
+#define INDEX_THI		     2
 #define MAX_PC_CLASS		     4
 #define MAX_LEVEL                   105
 #define MOUNT_COST                  10
@@ -81,7 +88,25 @@
 #define MAX_FAMILY                   5
 #define MAX_TRIBE		     5
 #define MAX_SUPER                    4
-#define MAX_STANCE		13
+
+#define CLASS_MAG		     0
+#define CLASS_CLE		     1
+#define CLASS_THI                    2
+#define CLASS_WAR		     3
+#define CLASS_PSI		     4
+#define CLASS_PUG		     5
+#define CLASS_SOR		     0
+#define CLASS_PAL		     1
+#define CLASS_ASS		     2
+#define CLASS_KNI		     3
+#define CLASS_NEC		     4
+#define CLASS_MON		     5
+#define CLASS_WIZ		     6
+#define CLASS_PRI		     7
+#define CLASS_ROG		     8
+#define CLASS_SWO		     9
+#define CLASS_EGO		     10
+#define CLASS_BRA		     11
 
 #define MAX_NUM_IMMS    5
 
@@ -298,8 +323,8 @@
 #define STANCE_SUPER_SPEED	10
 #define STANCE_WIZARD         11
 #define STANCE_MAGI          12
-
-
+#define STANCE_HEALER		13
+#define MAX_STANCE		14
 
 
 #define C_SHOW_NEVER    -1
@@ -627,6 +652,7 @@
 #define CONFIG_FULL_ANSI        BIT_11
 #define CONFIG_MAPPER           BIT_12
 #define CONFIG_JUSTIFY          BIT_13
+#define CONFIG_AUTOMONEY	BIT_14
 
 
 /*
@@ -1232,7 +1258,8 @@
 #define APPLY_SAVING_PETRI           22
 #define APPLY_SAVING_BREATH          23
 #define APPLY_SAVING_SPELL           24
-
+#define APPLY_HOT		     25
+#define APPLY_DOT		     26
 
 
 /*

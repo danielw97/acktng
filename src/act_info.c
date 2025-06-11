@@ -129,7 +129,274 @@ char *format_obj_to_char( OBJ_DATA * obj, CHAR_DATA * ch, bool fShort )
    return buf;
 }
 
+/*   char race_name[4];   /* Three letter name for race 
+   char *race_title; /* Full race name 
+   sh_int recall; /* Race's recall location 
+   sh_int race_room; /* vnum of race-only room 
+   sh_int race_str;  /* max_str to use for race 
+   sh_int race_int;
+   sh_int race_wis;
+   sh_int race_dex;
+   sh_int race_con;
+   int race_flags;   /* flags for the various racial stuff    
+   bool wear_locs[MAX_WEAR];  /* on/off for each wear loc 
+   int classes;   /* Number of classes for race   *
+   sh_int limit[MAX_CLASS];   /* Max for each class *
+   char *comment; /* comments shown for new players *
+   char *skill1;
+   int strong_realms;
+   int weak_realms;
+   int resist_realms;
+   int suscept_realms;
+   bool player_allowed;*/
 
+void do_rhelp( CHAR_DATA * ch, char *argument )
+{
+   char arg[MAX_INPUT_LENGTH];
+   char buf[MAX_STRING_LENGTH], sendBuf[MAX_STRING_LENGTH];
+   bool found = FALSE;
+   int i;
+
+   one_argument( argument, arg );
+
+   if( argument[0] == '\0' )
+   {
+      send_to_char("Please specify a race (rlist for a list of races).\r\n", ch);
+      return;
+   }
+
+   for(i = 0; i < MAX_RACE; i++)
+   {
+      if (!str_cmp(race_table[i].race_name, arg) || !str_cmp(race_table[i].race_title, arg))
+      {
+         found = TRUE;
+         break;
+      }
+   }
+
+   if (!found)
+   {
+      for(i = 0; i < MAX_RACE; i++)
+      {
+         if (!str_prefix(race_table[i].race_name, arg) || !str_prefix(race_table[i].race_title, arg))
+         {
+            found = TRUE;
+            break;
+         }
+      }
+   }
+
+   if (!found)
+   {
+      send_to_char("No such race found.\r\n", ch);
+      return;
+   }
+
+   sprintf(buf, "RHELP for race %s\r\n", race_table[i].race_title);
+   strcpy(sendBuf, buf);
+
+   sprintf(buf, "Class Order: %s %s %s %s %s %s\r\n", class_table[race_table[i].limit[0]].class_name,
+      class_table[race_table[i].limit[1]].class_name, class_table[race_table[i].limit[2]].class_name,
+      class_table[race_table[i].limit[3]].class_name, class_table[race_table[i].limit[4]].class_name,
+      class_table[race_table[i].limit[5]].class_name);
+   strcat(sendBuf, buf);
+
+   sprintf(buf, "Base Attributes: Str %d Int %d Wis %d Dex %d Con %d\r\n", race_table[i].race_str, race_table[i].race_int,
+      race_table[i].race_wis, race_table[i].race_dex, race_table[i].race_con);
+   strcat(sendBuf, buf);
+
+   sprintf(buf, "Racial Skills: %s\r\n", race_table[i].skill1);
+   strcat(sendBuf, buf);
+
+   strcat(sendBuf, "Race Specials:");
+
+   if (race_table[i].race_flags == RACE_MOD_NONE)
+      strcat(sendBuf, " None");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_FAST_HEAL))
+      strcat(sendBuf, " Fast Heal");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_SLOW_HEAL))
+      strcat(sendBuf, " Slow Heal");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_STRONG_MAGIC))
+      strcat(sendBuf, " Strong Magic");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_WEAK_MAGIC))
+      strcat(sendBuf, " Weak Magic");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_NO_MAGIC))
+      strcat(sendBuf, " No Magic");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_IMMUNE_POISON))
+      strcat(sendBuf, " Immune Poison");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_RESIST_SPELL))
+      strcat(sendBuf, " Resist Spells");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_WOODLAND))
+      strcat(sendBuf, " Woodland");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_DARKNESS))
+      strcat(sendBuf, " Darkness");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_HUGE))
+      strcat(sendBuf, " Huge");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_LARGE))
+      strcat(sendBuf, " Large");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_TINY))
+      strcat(sendBuf, " Tiny");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_SMALL))
+      strcat(sendBuf, " Small");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_TAIL))
+      strcat(sendBuf, " Tail");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_TOUGH_SKIN))
+      strcat(sendBuf, " Tough Skin");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_STONE_SKIN))
+      strcat(sendBuf, " Stone Skin");
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_IRON_SKIN))
+      strcat(sendBuf, " Iron Skin");
+
+   strcat(sendBuf, "\r\n");
+
+   strcat(sendBuf, "Strong Realms:");
+
+   if (race_table[i].strong_realms == REALM_NONE)
+      strcat(sendBuf, " None");
+   if (IS_SET(race_table[i].strong_realms, REALM_FIRE))
+      strcat(sendBuf, " Fire");
+   if (IS_SET(race_table[i].strong_realms, REALM_SHOCK))
+      strcat(sendBuf, " Shock");
+   if (IS_SET(race_table[i].strong_realms, REALM_LIGHT))
+      strcat(sendBuf, " Light");
+   if (IS_SET(race_table[i].strong_realms, REALM_GAS))
+      strcat(sendBuf, " Gas");
+   if (IS_SET(race_table[i].strong_realms, REALM_POISON))
+      strcat(sendBuf, " Poison");
+   if (IS_SET(race_table[i].strong_realms, REALM_COLD))
+      strcat(sendBuf, " Cold");
+   if (IS_SET(race_table[i].strong_realms, REALM_SOUND))
+      strcat(sendBuf, " Sound");
+   if (IS_SET(race_table[i].strong_realms, REALM_ACID))
+      strcat(sendBuf, " Acid");
+   if (IS_SET(race_table[i].strong_realms, REALM_DRAIN))
+      strcat(sendBuf, " Drain");
+   if (IS_SET(race_table[i].strong_realms, REALM_IMPACT))
+      strcat(sendBuf, " Impact");
+   if (IS_SET(race_table[i].strong_realms, REALM_MIND))
+      strcat(sendBuf, " Mind");
+   if (IS_SET(race_table[i].strong_realms, REALM_HOLY))
+      strcat(sendBuf, " Holy");
+
+   strcat(sendBuf, "\r\n");
+
+   strcat(sendBuf, "Weak Realms:");
+
+   if (race_table[i].weak_realms == REALM_NONE)
+      strcat(sendBuf, " None");
+   if (IS_SET(race_table[i].weak_realms, REALM_FIRE))
+      strcat(sendBuf, " Fire");
+   if (IS_SET(race_table[i].weak_realms, REALM_SHOCK))
+      strcat(sendBuf, " Shock");
+   if (IS_SET(race_table[i].weak_realms, REALM_LIGHT))
+      strcat(sendBuf, " Light");
+   if (IS_SET(race_table[i].weak_realms, REALM_GAS))
+      strcat(sendBuf, " Gas");
+   if (IS_SET(race_table[i].weak_realms, REALM_POISON))
+      strcat(sendBuf, " Poison");
+   if (IS_SET(race_table[i].weak_realms, REALM_COLD))
+      strcat(sendBuf, " Cold");
+   if (IS_SET(race_table[i].weak_realms, REALM_SOUND))
+      strcat(sendBuf, " Sound");
+   if (IS_SET(race_table[i].weak_realms, REALM_ACID))
+      strcat(sendBuf, " Acid");
+   if (IS_SET(race_table[i].weak_realms, REALM_DRAIN))
+      strcat(sendBuf, " Drain");
+   if (IS_SET(race_table[i].weak_realms, REALM_IMPACT))
+      strcat(sendBuf, " Impact");
+   if (IS_SET(race_table[i].weak_realms, REALM_MIND))
+      strcat(sendBuf, " Mind");
+   if (IS_SET(race_table[i].weak_realms, REALM_HOLY))
+      strcat(sendBuf, " Holy");
+
+   strcat(sendBuf, "\r\n");
+
+   strcat(sendBuf, "Resist Realms:");
+
+   if (race_table[i].resist_realms == REALM_NONE)
+      strcat(sendBuf, " None");
+   if (IS_SET(race_table[i].resist_realms, REALM_FIRE))
+      strcat(sendBuf, " Fire");
+   if (IS_SET(race_table[i].resist_realms, REALM_SHOCK))
+      strcat(sendBuf, " Shock");
+   if (IS_SET(race_table[i].resist_realms, REALM_LIGHT))
+      strcat(sendBuf, " Light");
+   if (IS_SET(race_table[i].resist_realms, REALM_GAS))
+      strcat(sendBuf, " Gas");
+   if (IS_SET(race_table[i].resist_realms, REALM_POISON))
+      strcat(sendBuf, " Poison");
+   if (IS_SET(race_table[i].resist_realms, REALM_COLD))
+      strcat(sendBuf, " Cold");
+   if (IS_SET(race_table[i].resist_realms, REALM_SOUND))
+      strcat(sendBuf, " Sound");
+   if (IS_SET(race_table[i].resist_realms, REALM_ACID))
+      strcat(sendBuf, " Acid");
+   if (IS_SET(race_table[i].resist_realms, REALM_DRAIN))
+      strcat(sendBuf, " Drain");
+   if (IS_SET(race_table[i].resist_realms, REALM_IMPACT))
+      strcat(sendBuf, " Impact");
+   if (IS_SET(race_table[i].resist_realms, REALM_MIND))
+      strcat(sendBuf, " Mind");
+   if (IS_SET(race_table[i].resist_realms, REALM_HOLY))
+      strcat(sendBuf, " Holy");
+
+   strcat(sendBuf, "\r\n");
+
+   strcat(sendBuf, "Suscept Realms:");
+
+   if (race_table[i].suscept_realms == REALM_NONE)
+      strcat(sendBuf, " None");
+   if (IS_SET(race_table[i].suscept_realms, REALM_FIRE))
+      strcat(sendBuf, " Fire");
+   if (IS_SET(race_table[i].suscept_realms, REALM_SHOCK))
+      strcat(sendBuf, " Shock");
+   if (IS_SET(race_table[i].suscept_realms, REALM_LIGHT))
+      strcat(sendBuf, " Light");
+   if (IS_SET(race_table[i].suscept_realms, REALM_GAS))
+      strcat(sendBuf, " Gas");
+   if (IS_SET(race_table[i].suscept_realms, REALM_POISON))
+      strcat(sendBuf, " Poison");
+   if (IS_SET(race_table[i].suscept_realms, REALM_COLD))
+      strcat(sendBuf, " Cold");
+   if (IS_SET(race_table[i].suscept_realms, REALM_SOUND))
+      strcat(sendBuf, " Sound");
+   if (IS_SET(race_table[i].suscept_realms, REALM_ACID))
+      strcat(sendBuf, " Acid");
+   if (IS_SET(race_table[i].suscept_realms, REALM_DRAIN))
+      strcat(sendBuf, " Drain");
+   if (IS_SET(race_table[i].suscept_realms, REALM_IMPACT))
+      strcat(sendBuf, " Impact");
+   if (IS_SET(race_table[i].suscept_realms, REALM_MIND))
+      strcat(sendBuf, " Mind");
+   if (IS_SET(race_table[i].suscept_realms, REALM_HOLY))
+      strcat(sendBuf, " Holy");
+
+   strcat(sendBuf, "\r\n");
+
+// if( race_table[ch->race].wear_locs[location] == TRUE )
+
+
+   strcat(sendBuf, "Non-standard wear slots: ");
+
+   bool found_slot = FALSE;
+
+   for(int j = 0; j < MAX_WEAR; j++)
+   {
+      if (race_table[0].wear_locs[j] == TRUE && race_table[i].wear_locs[j] == FALSE)
+      {
+         found_slot = TRUE;
+         sprintf(buf, "%s ", bit_table_lookup( tab_wear_flags, 1>>j ));
+         strcat(sendBuf, buf);
+      }
+   }
+
+   if (!found_slot)
+      strcat(sendBuf, " None\r\n");
+   else
+      strcat(sendBuf, "\r\n");
+
+   send_to_char(sendBuf,ch);
+}
 
 /*
  * Show a list to a character.
@@ -1335,10 +1602,11 @@ void do_score( CHAR_DATA * ch, char *argument )
    {
       sprintf( buf,
                "|   @@R[ @@WStr:@@y%2d/%2d  @@WInt:@@y%2d/%2d  @@WWis:@@y%2d/%2d  @@WDex:@@y%2d/%2d  @@WCon:@@y%2d/%2d @@R]   @@c|\n\r",
-               get_curr_str( ch ), ch->pcdata->max_str,
-               get_curr_int( ch ), ch->pcdata->max_int,
-               get_curr_wis( ch ), ch->pcdata->max_wis,
-               get_curr_dex( ch ), ch->pcdata->max_dex, get_curr_con( ch ), ch->pcdata->max_con );
+               get_curr_str( ch ), get_max_str( ch ),
+               get_curr_int( ch ), get_max_int( ch ),
+               get_curr_wis( ch ), get_max_wis( ch ),
+               get_curr_dex( ch ), get_max_dex( ch ),
+               get_curr_con( ch ), get_max_con( ch ) );
       send_to_char( buf, ch );
    }
 
@@ -1412,10 +1680,11 @@ void do_score( CHAR_DATA * ch, char *argument )
 
 
    sprintf( buf,
-            "|       @@WAutoexit: @@y%s   @@WAutoloot: @@y%s  @@WAutosac: @@y%s       @@c|\n\r",
+            "| @@WAutoexit: @@y%s   @@WAutoloot: @@y%s  @@WAutosac: @@y%s @@WAutomoney: @@y%s @@c|\n\r",
             ( !IS_NPC( ch ) && IS_SET( ch->config, CONFIG_AUTOEXIT ) ) ? "*ON* " : "*OFF*",
             ( !IS_NPC( ch ) && IS_SET( ch->config, CONFIG_AUTOLOOT ) ) ? "*ON* " : "*OFF*",
-            ( !IS_NPC( ch ) && IS_SET( ch->config, CONFIG_AUTOSAC ) ) ? "*ON* " : "*OFF*" );
+            ( !IS_NPC( ch ) && IS_SET( ch->config, CONFIG_AUTOSAC ) ) ? "*ON* " : "*OFF*",
+            ( !IS_NPC( ch ) && IS_SET( ch->config, CONFIG_AUTOMONEY ) ) ? "*ON* " : "*OFF*" );
    send_to_char( buf, ch );
 
 
@@ -1821,630 +2090,6 @@ void do_help( CHAR_DATA * ch, char *argument )
 #define SHOW_MORTAL     3
 #define SHOW_FINISH     4
 
-
-
-#ifdef AA
-void do_who( CHAR_DATA * ch, char *argument )
-{
-   DESCRIPTOR_DATA *d;
-
-   char buf[MAX_STRING_LENGTH * 10];
-   char buf2[MAX_STRING_LENGTH * 4];
-   char buf3[MAX_STRING_LENGTH * 4];
-   char buf4[MAX_STRING_LENGTH * 4];
-   char fgs[MAX_STRING_LENGTH * 4];
-   char clan_job[MAX_STRING_LENGTH];
-   int iClass;
-   int iLevelLower;
-   int iLevelUpper;
-   int nNumber;
-   int nMatch;
-   bool rgfClass[MAX_CLASS];
-   bool fClassRestrict;
-   bool fImmortalOnly;
-   bool fadeptonly = FALSE;
-   bool fremortonly = FALSE;
-   int cnt, slength, excess, nlength;
-   int true_cnt = 0;
-   static int max_players;
-   int list;
-   int number[3];
-   bool idle = FALSE, invis = FALSE, wanted = FALSE;
-   bool cangroup = FALSE;
-   int stop_counter = 0;
-
-   /*
-    * Set default arguments.
-    */
-   buf[0] = '\0';
-   buf2[0] = '\0';
-   buf3[0] = '\0';
-   buf4[0] = '\0';
-
-   iLevelLower = 0;
-   iLevelUpper = MAX_LEVEL;
-   fClassRestrict = FALSE;
-   fImmortalOnly = FALSE;
-   for( iClass = 0; iClass < MAX_CLASS; iClass++ )
-      rgfClass[iClass] = FALSE;
-   /*
-    * Parse arguments.
-    */
-   nNumber = 0;
-   for( ;; )
-   {
-      char arg[MAX_STRING_LENGTH];
-
-      argument = one_argument( argument, arg );
-      if( arg[0] == '\0' )
-         break;
-
-      if( is_number( arg ) )
-      {
-         switch ( ++nNumber )
-         {
-            case 1:
-               iLevelLower = atoi( arg );
-               break;
-            case 2:
-               iLevelUpper = atoi( arg );
-               break;
-            default:
-               send_to_char( "Only two level numbers allowed.\n\r", ch );
-               return;
-         }
-      }
-      else
-      {
-         int iClass;
-
-         if( strlen( arg ) < 3 )
-         {
-            send_to_char( "Classes must be longer than that.\n\r", ch );
-            return;
-         }
-         /*
-          * Look for classes to turn on.
-          */
-         if( !str_prefix( arg, "group" ) )
-         {
-            cangroup = TRUE;
-            break;
-         }
-         if( !str_prefix( arg, "adept" ) )
-         {
-            fadeptonly = TRUE;
-            break;
-         }
-         if( !str_prefix( arg, "remort" ) )
-         {
-            fremortonly = TRUE;
-            break;
-         }
-
-
-         arg[3] = '\0';
-         if( !str_cmp( arg, "imm" ) )
-         {
-            fImmortalOnly = TRUE;
-         }
-
-         else
-         {
-            fClassRestrict = TRUE;
-            for( iClass = 0; iClass < MAX_CLASS; iClass++ )
-            {
-               if( !str_cmp( arg, class_table[iClass].who_name ) )
-               {
-                  rgfClass[iClass] = TRUE;
-                  break;
-               }
-            }
-
-            if( ( iClass == MAX_CLASS ) && ( !( cangroup ) ) )
-            {
-               send_to_char( "That's not a class.\n\r", ch );
-               return;
-            }
-         }
-      }
-   }
-
-   buf[0] = '\0';
-
-   sprintf( buf, "The Mighty Adventurers of " mudnamecolor "\n\r" );
-   safe_strcat( MAX_STRING_LENGTH, buf,
-                "@@b|-----------------------------------------------------------------------------+\n\r" );
-   safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@mSo An Ki Ne Mo@@b                                                              |\n\r" );
-   safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@cMa Cl Th Wa Ps @@yRace Clan  @@dA@@bB@@rJ@@eP@@WW    @@aAdventurer	   @@mTitle 	    @@r (flags)  @@b|\n\r" );
-   safe_strcat( MAX_STRING_LENGTH, buf,
-                "|---------------------------------|-------------------------------------------|\n\r" );
-
-
-   for( list = SHOW_IMMORT; list < SHOW_FINISH; list++ )
-   {
-      number[list] = 0;
-
-      for( d = first_desc; d != NULL; d = d->next )
-      {
-         CHAR_DATA *wch;
-
-         if( d->connected != CON_PLAYING || !can_see( ch, d->character ) )
-            continue;
-
-         wch = ( d->original != NULL ) ? d->original : d->character;
-         if( ( list == SHOW_IMMORT && wch->level < LEVEL_HERO )
-             || ( list == SHOW_REMORT && ( !is_remort( wch ) || wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_MORTAL && ( is_remort( wch ) || wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_ADEPT && ( wch->adept_level < 1 ) )
-             || ( list == SHOW_ADEPT && ( wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_REMORT && ( wch->adept_level > 0 ) ) )
-            continue;
-
-         if( wch->level < iLevelLower
-             || wch->level > iLevelUpper
-             || ( fImmortalOnly && wch->level < LEVEL_HERO )
-             || ( fadeptonly && ( ( wch->adept_level < 1 ) || wch->level >= LEVEL_HERO ) )
-             || ( fClassRestrict && !rgfClass[wch->class] )
-             || ( fremortonly && ( !is_remort( wch ) || ( wch->level >= LEVEL_HERO ) || ( wch->adept_level > 0 ) ) ) )
-            continue;
-
-/* Multiple grouping restriction checks  Zen */
-
-         {
-            bool ch_adept = FALSE, ch_dremort = FALSE, ch_sremort = FALSE, victim_adept = FALSE,
-               victim_dremort = FALSE, victim_sremort = FALSE, legal_group = FALSE;
-
-            if( ch->adept_level > 0 )
-               ch_adept = TRUE;
-            if( wch->adept_level > 0 )
-               victim_adept = TRUE;
-
-            if( get_psuedo_level( ch ) > 97 )
-               ch_dremort = TRUE;
-            if( get_psuedo_level( wch ) > 97 )
-               victim_dremort = TRUE;
-
-            if( get_psuedo_level( ch ) > 80 )
-               ch_sremort = TRUE;
-            if( get_psuedo_level( wch ) > 80 )
-               victim_sremort = TRUE;
-
-
-            if( ch_adept && victim_adept )
-            {
-               legal_group = TRUE;
-            }
-            else if( ( ch_adept && victim_dremort ) || ( victim_adept && ch_dremort ) )
-            {
-               if( abs( get_psuedo_level( ch ) - get_psuedo_level( wch ) ) < 9 )
-                  legal_group = TRUE;
-               else
-                  legal_group = FALSE;
-
-            }
-            else if( ch_dremort || victim_dremort || ch_sremort || victim_sremort )
-            {
-               if( abs( get_psuedo_level( ch ) - get_psuedo_level( wch ) < 8 ) )
-                  legal_group = TRUE;
-
-            }
-
-            else
-            {
-               if( abs( get_psuedo_level( ch ) - get_psuedo_level( wch ) ) < 21 )
-                  legal_group = TRUE;
-               /*
-                * send_to_char( "No Remorts\n\r", ch );  
-                */
-
-            }
-
-            if( IS_IMMORTAL( wch ) )
-               legal_group = FALSE;
-
-            if( !legal_group && cangroup )
-               continue;
-
-         }
-
-
-         number[list]++;
-      }
-   }
-
-   /*
-    * Now show matching chars.
-    */
-   nMatch = 0;
-   buf3[0] = '\0';
-   buf4[0] = '\0';
-
-
-
-   for( list = SHOW_IMMORT; list < SHOW_FINISH; list++ )
-   {
-      stop_counter = 0;
-      if( number[list] == 0 )
-         continue;
-
-
-      switch ( list )
-      {
-         case SHOW_IMMORT:
-            safe_strcat( MAX_STRING_LENGTH, buf,
-                         "@@b                                                @@WGods@@b                           @@g\n\r" );
-            break;
-
-         case SHOW_ADEPT:
-            safe_strcat( MAX_STRING_LENGTH, buf,
-                         "@@b                                               @@cAdepts@@b                          @@g\n\r" );
-            break;
-
-         case SHOW_REMORT:
-            safe_strcat( MAX_STRING_LENGTH, buf,
-                         "@@b                                             @@mRemortals@@b                         @@g\n\r" );
-            break;
-         case SHOW_MORTAL:
-            safe_strcat( MAX_STRING_LENGTH, buf,
-                         "@@b                                              @@cMortals@@b                          @@g\n\r" );
-
-            break;
-      }
-
-      true_cnt = 0;
-
-
-      for( d = first_desc; d != NULL; d = d->next )
-      {
-         CHAR_DATA *wch;
-         char const *class;
-         /*
-          * Check for match against restrictions.
-          * Don't use trust as that exposes trusted mortals.
-          */
-         true_cnt++;
-
-         if( d->connected != CON_PLAYING || !can_see( ch, d->character ) )
-            continue;
-
-         wch = ( d->original != NULL ) ? d->original : d->character;
-         /*
-          * Check to see if we're showing the correct character for
-          * * each segment of the loop... 
-          */
-         if( ( list == SHOW_IMMORT && wch->level < LEVEL_HERO )
-             || ( list == SHOW_REMORT && ( !is_remort( wch ) || wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_MORTAL && ( is_remort( wch ) || wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_ADEPT && ( wch->adept_level < 1 ) )
-             || ( list == SHOW_ADEPT && ( wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_REMORT && ( wch->adept_level > 0 ) ) )
-            continue;
-
-         if( wch->level < iLevelLower
-             || wch->level > iLevelUpper
-             || ( fImmortalOnly && wch->level < LEVEL_HERO )
-             || ( fadeptonly && ( ( wch->adept_level < 1 ) || wch->level >= LEVEL_HERO ) )
-             || ( fClassRestrict && !rgfClass[wch->class] )
-             || ( fremortonly && ( !is_remort( wch ) || ( wch->level >= LEVEL_HERO ) || ( wch->adept_level > 0 ) ) ) )
-
-            continue;
-
-/* Multiple grouping restriction checks  Zen */
-
-         {
-            bool ch_adept = FALSE, ch_dremort = FALSE, ch_sremort = FALSE, victim_adept = FALSE,
-               victim_dremort = FALSE, victim_sremort = FALSE, legal_group = FALSE;
-
-            if( ch->adept_level > 0 )
-               ch_adept = TRUE;
-            if( wch->adept_level > 0 )
-               victim_adept = TRUE;
-
-            if( get_psuedo_level( ch ) > 97 )
-               ch_dremort = TRUE;
-            if( get_psuedo_level( wch ) > 97 )
-               victim_dremort = TRUE;
-
-            if( get_psuedo_level( ch ) > 80 )
-               ch_sremort = TRUE;
-            if( get_psuedo_level( wch ) > 80 )
-               victim_sremort = TRUE;
-
-
-            if( ch_adept && victim_adept )
-            {
-               legal_group = TRUE;
-            }
-            else if( ( ch_adept && victim_dremort ) || ( victim_adept && ch_dremort ) )
-            {
-               if( abs( get_psuedo_level( ch ) - get_psuedo_level( wch ) ) < 9 )
-                  legal_group = TRUE;
-
-            }
-            else if( ch_dremort || victim_dremort || ch_sremort || victim_sremort )
-            {
-               if( abs( get_psuedo_level( ch ) - get_psuedo_level( wch ) ) < 8 )
-                  legal_group = TRUE;
-               else
-                  legal_group = FALSE;
-
-            }
-
-            else
-            {
-               if( abs( get_psuedo_level( ch ) - get_psuedo_level( wch ) ) < 21 )
-                  legal_group = TRUE;
-               /*
-                * send_to_char( "No Remorts\n\r", ch );  
-                */
-
-            }
-            if( IS_IMMORTAL( wch ) )
-               legal_group = FALSE;
-            if( !legal_group && cangroup )
-               continue;
-
-         }
-
-
-
-         if( stop_counter > 45 )
-            continue;
-         stop_counter++;
-
-         nMatch++;
-         /*
-          * Figure out what to print for class.
-          */
-         class = class_table[wch->class].who_name;
-
-         if( str_cmp( wch->pcdata->who_name, "off" ) )
-            class = wch->pcdata->who_name;
-         else
-         {
-            switch ( wch->level )
-            {
-               default:
-                  break;
-               case MAX_LEVEL - 0:
-                  class = "@@l-* CREATOR *-@@g ";
-                  break;
-               case MAX_LEVEL - 1:
-                  class = "@@B-= SUPREME =-@@g ";
-                  break;
-               case MAX_LEVEL - 2:
-                  class = "@@a--  DEITY  --@@g ";
-                  break;
-               case MAX_LEVEL - 3:
-                  class = "@@c - IMMORTAL- @@g ";
-                  break;
-               case MAX_LEVEL - 4:
-                  class = "@@W    ADEPT  @@N   ";
-                  break;
-            }
-
-         }
-
-
-         if( IS_SET( wch->pcdata->pflags, PFLAG_AMBAS ) )
-         {
-            sprintf( buf3, "   AMBASSADOR  " );
-         }
-         else
-         {
-            if( wch->level >= ( MAX_LEVEL - 4 ) || str_cmp( wch->pcdata->who_name, "off" ) )
-            {
-               switch ( wch->level )
-               {
-                  case MAX_LEVEL - 0:
-                     sprintf( buf3, "@@l %s@@g", class );
-                     break;
-                  case MAX_LEVEL - 1:
-                     sprintf( buf3, "@@B %s@@g", class );
-                     break;
-                  case MAX_LEVEL - 2:
-                     sprintf( buf3, "@@a %s@@g", class );
-                     break;
-                  case MAX_LEVEL - 3:
-                     sprintf( buf3, "@@c %s@@g", class );
-                     break;
-                  default:
-                     sprintf( buf3, "@@W %s@@g", class );
-                     break;
-               }
-            }
-            else
-            {
-               buf4[0] = '\0';
-               buf3[0] = '\0';
-
-               for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-               {
-                  if( wch->lvl2[cnt] > 0 )
-                  {
-                     sprintf( buf4, "@@m%3d@@N", wch->lvl2[cnt] );
-
-                  }
-                  else
-                  {
-                     if( wch->lvl[cnt] <= 0 )
-                        sprintf( buf4, "@@d%3d@@N", 0 );
-                     else
-                        sprintf( buf4, "@@b%3d@@N", wch->lvl[cnt] );
-                  }
-
-                  safe_strcat( MAX_STRING_LENGTH, buf3, buf4 );
-
-               }
-            }
-         }
-         /*
-          * Work out what to show for 'flags' column.
-          * PKOK, AFK, LEADER, WRITING, BUILDING 
-          * ADDED: race and clan (Stephen)
-          */
-         clan_job[0] = '\0';
-         if( IS_SET( wch->pcdata->pflags, PFLAG_CLAN_BOSS ) )
-            safe_strcat( MAX_STRING_LENGTH, clan_job, "*" );
-         else if( IS_SET( wch->pcdata->pflags, PFLAG_CLAN_LEADER ) )
-            safe_strcat( MAX_STRING_LENGTH, clan_job, "L" );
-         else if( IS_SET( wch->pcdata->pflags, PFLAG_CLAN_ARMOURER ) )
-            safe_strcat( MAX_STRING_LENGTH, clan_job, "!" );
-         else
-            safe_strcat( MAX_STRING_LENGTH, clan_job, " " );
-
-         sprintf( fgs, "%3s %5s %s%s%s%s%s",
-                  race_table[wch->race].race_name,
-                  clan_table[wch->pcdata->clan].clan_abbr,
-                  IS_SET( wch->pcdata->pflags, PFLAG_AFK ) ? "A" : " ",
-                  wch->position == POS_BUILDING ? "B" : " ",
-                  clan_job,
-                  IS_SET( wch->pcdata->pflags, PFLAG_PKOK ) ? "P" : " ", wch->position == POS_WRITING ? "W" : " " );
-         /*
-          * Oh look... another hack needed due to change in who format! 
-          */
-         /*
-          * Make sure that the title (and wanted/idle flag) will fit ok 
-          */
-         /*
-          * excess holds number of chars we have to lose ): 
-          */
-         nlength = strlen( wch->name );
-         slength = 1 + my_strlen( wch->pcdata->title ) + nlength;
-
-         excess = 0;
-
-         idle = FALSE;
-         wanted = FALSE;
-         invis = FALSE;
-         if( IS_SET( wch->act, PLR_WIZINVIS ) )
-         {
-            excess += 6;
-            invis = TRUE;
-         }
-         else
-         {
-            if( IS_SET( wch->act, PLR_KILLER ) || IS_SET( wch->act, PLR_THIEF ) )
-            {
-               excess += 8;
-               wanted = TRUE;
-            }
-
-            if( wch->timer > 5 )
-            {
-               excess += 10;
-               idle = TRUE;
-            }
-         }
-         sprintf( buf4, "%s", wch->pcdata->title );
-
-         if( slength + excess > 43 )
-         {
-            if( invis )
-               sprintf( buf4, "%1.26s", wch->pcdata->title );
-            else if( idle && !wanted )
-               sprintf( buf4, "%1.24s", wch->pcdata->title );
-            else if( !idle && wanted )
-               sprintf( buf4, "%1.28s", wch->pcdata->title );
-            else if( idle && wanted )
-               sprintf( buf4, "%1.18s", wch->pcdata->title );
-            else
-               sprintf( buf4, "%1.31s", wch->pcdata->title );
-
-
-         }
-         else
-         {
-            for( cnt = slength + excess; cnt < 43; cnt++ )
-            {
-               strcat( buf4, " " );
-            }
-         }
-         if( invis )
-         {
-            if( slength + excess <= 43 )
-            {
-               sprintf( buf + strlen( buf ), "@@b|%s%s%s  %s @@b| %s%s%s%s",
-                        color_string( ch, "stats" ),
-                        buf3,
-                        color_string( ch, "stats" ),
-                        fgs,
-                        color_string( ch, "stats" ),
-                        wch->name, buf4, IS_SET( wch->act, PLR_WIZINVIS ) ? "@@y(WIZI)@@b" : "" );
-               sprintf( buf + strlen( buf ), "@@b|@@g\n\r" );
-            }
-            else
-            {
-               sprintf( buf + strlen( buf ), "@@b|%s%s%s  %s @@b| %s%s%s%s",
-                        color_string( ch, "stats" ),
-                        buf3,
-                        color_string( ch, "stats" ),
-                        fgs,
-                        color_string( ch, "stats" ),
-                        wch->name, buf4, IS_SET( wch->act, PLR_WIZINVIS ) ? " @@y(WIZI)@@b " : "" );
-               sprintf( buf + strlen( buf ), "@@b|@@g\n\r" );
-            }
-         }
-         else
-         {
-            sprintf( buf + strlen( buf ), "@@b|%s%s%s  %s @@b| %s%s%s%s",
-                     color_string( ch, "stats" ),
-                     buf3,
-                     color_string( ch, "stats" ),
-                     fgs,
-                     color_string( ch, "stats" ),
-                     wch->name,
-                     buf4, ( IS_SET( wch->act, PLR_KILLER ) || IS_SET( wch->act, PLR_THIEF ) ) ? "(WANTED)" : "" );
-
-
-
-            if( wch->timer > 5 )
-               sprintf( buf + strlen( buf ), "[IDLE:%2d] @@b|@@g\n\r", wch->timer );
-            else
-               sprintf( buf + strlen( buf ), "@@b|@@g\n\r" );
-         }
-      }
-
-      safe_strcat( MAX_STRING_LENGTH, buf,
-                   "@@b_______________________________________________________________________________\n\r" );
-      send_to_char( buf, ch );
-      buf[0] = '\0';
-   }
-
-   if( true_cnt > max_players )
-      max_players = true_cnt + 15;
-   sprintf( buf4, "@@y(%d @@gAdventurer%s@@y)  @@gKEY:  (@@dA@@g)fk  (@@bB@@g)uilding  (@@eP@@g)kok  (@@WW@@g)riting",
-            nMatch, nMatch == 1 ? "" : "s" );
-   sprintf( buf2, "@@b|@@G %s @@b|\n\r", center_text( buf4, 75 ) );
-   safe_strcat( MAX_STRING_LENGTH, buf, buf2 );
-   sprintf( buf4, " @@g(@@y*@@g) Clan Boss  (@@yL@@g) Clan Leader  (@@rJ@@g) Clan Job  (@@y!@@g) Clan Armourer@@N " );
-   sprintf( buf2, "@@b|@@G %s @@b|\n\r", center_text( buf4, 75 ) );
-   safe_strcat( MAX_STRING_LENGTH, buf, buf2 );
-   sprintf( buf4, "@@GThere has been a maximum of @@W%d @@eadventurer%s @@Glogged on this session@@N",
-            max_players, max_players == 1 ? "" : "s" );
-   sprintf( buf2, "@@b|@@G %s @@b|\n\r", center_text( buf4, 75 ) );
-   safe_strcat( MAX_STRING_LENGTH, buf, buf2 );
-   safe_strcat( MAX_STRING_LENGTH, buf,
-                "@@b_______________________________________________________________________________\n\r" );
-
-/* Removed this... out is used once, to add a single color code... D'Oh! to me --Stimpy
-    sprintf( out, "%s%s", buf, color_string( ch, "normal" ) );
-*/
-
-   send_to_char( buf, ch );
-   send_to_char( color_string( ch, "normal" ), ch );
-
-/* #endif  */
-
-   return;
-}
-
-#else
-
-
 void do_who( CHAR_DATA * ch, char *argument )
 {
    DESCRIPTOR_DATA *d;
@@ -2577,7 +2222,9 @@ void do_who( CHAR_DATA * ch, char *argument )
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "@@R+-----------------------------------------------------------------------------+\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@mSo An Ki Ne Mo Uk@@R                                                           |\n\r" );
+                "| @@dWi Pr Ro Sw Eg Br@@R                                                           |\n\r" );
+   safe_strcat( MAX_STRING_LENGTH, buf,
+                "| @@mSo Pa An Kn Ne Mo@@R                                                           |\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "| @@bMa Cl Th Wa Ps Pu @@eRace Clan  ABJPW    Player	Title		      @@R(flags) @@R|\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
@@ -2623,15 +2270,27 @@ void do_who( CHAR_DATA * ch, char *argument )
             if( wch->adept_level > 0 )
                victim_adept = TRUE;
 
-            if( get_psuedo_level( ch ) > 97 )
+            if( get_psuedo_level( ch ) > MAX_LEVEL + MAX_LEVEL/4 )
                ch_dremort = TRUE;
-            if( get_psuedo_level( wch ) > 97 )
-               victim_dremort = TRUE;
 
-            if( get_psuedo_level( ch ) > 80 )
-               ch_sremort = TRUE;
-            if( get_psuedo_level( wch ) > 80 )
-               victim_sremort = TRUE;
+            for(int i = 0; i < MAX_REMORT; i++)
+            {
+               if (ch->lvl2[i] > 0)
+               {
+                 if (ch_sremort)
+                   ch_dremort = TRUE;
+                 else
+                   ch_sremort = TRUE;
+               }
+
+              if (wch->lvl2[i] > 0)
+              {
+                if (victim_sremort)
+                  victim_dremort = TRUE;
+                else
+                  victim_sremort = TRUE;
+              }
+            }
 
 
             if( ch_adept && victim_adept )
@@ -2764,15 +2423,24 @@ void do_who( CHAR_DATA * ch, char *argument )
             if( wch->adept_level > 0 )
                victim_adept = TRUE;
 
-            if( get_psuedo_level( ch ) > 97 )
-               ch_dremort = TRUE;
-            if( get_psuedo_level( wch ) > 97 )
-               victim_dremort = TRUE;
+            for(int i = 0; i < MAX_REMORT; i++)
+            {
+               if (ch->lvl2[i] > 0)
+               {
+                 if (ch_sremort)
+                   ch_dremort = TRUE;
+                 else
+                   ch_sremort = TRUE;
+               }
 
-            if( get_psuedo_level( ch ) > 80 )
-               ch_sremort = TRUE;
-            if( get_psuedo_level( wch ) > 80 )
-               victim_sremort = TRUE;
+              if (i < MAX_CLASS && wch->lvl[i] > 0)
+              {
+                if (victim_sremort)
+                  victim_dremort = TRUE;
+                else
+                  victim_sremort = TRUE;
+              }
+            }
 
 
             if( ch_adept && victim_adept )
@@ -2884,22 +2552,30 @@ void do_who( CHAR_DATA * ch, char *argument )
 
                for( cnt = 0; cnt < MAX_CLASS; cnt++ )
                {
-                  if( wch->lvl2[cnt] > 0 )
+                  if( wch->lvl2[cnt + MAX_CLASS] > 0)
                   {
                      if (wch->lvl2[cnt] == 100)
-		       sprintf( buf4, "@@d *@@N", wch->lvl2[cnt] );
+                       sprintf( buf4, " @@d *@@N", wch->lvl2[cnt] );
                      else
-                       sprintf( buf4, "@@m%3d@@N", wch->lvl2[cnt] );
+                       sprintf( buf4, " @@d%2d@@N", wch->lvl2[cnt] );
+
+                  }
+                  else if( wch->lvl2[cnt] > 0 )
+                  {
+                     if (wch->lvl2[cnt] == 100)
+		       sprintf( buf4, " @@m *@@N", wch->lvl2[cnt] );
+                     else
+                       sprintf( buf4, " @@m%2d@@N", wch->lvl2[cnt] );
 
                   }
                   else
                   {
                      if (wch->lvl[cnt] == 100)
-                       sprintf(buf4, "@@d *@@N", wch->lvl[cnt]);
-                     if( wch->lvl[cnt] <= 0 )
-                        sprintf( buf4, "@@g%3d@@N", 0 );
+                       sprintf(buf4, " @@b *@@N", wch->lvl[cnt]);
+                     else if( wch->lvl[cnt] <= 0 )
+                        sprintf( buf4, " @@g%2d@@N", 0 );
                      else
-                        sprintf( buf4, "@@b%3d@@N", wch->lvl[cnt] );
+                        sprintf( buf4, " @@b%2d@@N", wch->lvl[cnt] );
                   }
 
                   safe_strcat( MAX_STRING_LENGTH, buf3, buf4 );
@@ -3054,18 +2730,11 @@ void do_who( CHAR_DATA * ch, char *argument )
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "@@R+-----------------------------------------------------------------------------+\n\r" );
 
-/* Removed this... out is used once, to add a single color code... D'Oh! to me --Stimpy
-    sprintf( out, "%s%s", buf, color_string( ch, "normal" ) );
-*/
-
    send_to_char( buf, ch );
    send_to_char( color_string( ch, "normal" ), ch );
 
-/* #endif  */
-
    return;
 }
-#endif
 
 
 
@@ -4415,6 +4084,10 @@ void do_config( CHAR_DATA * ch, char *argument )
                     ? "[+AUTOLOOT ] You automatically loot corpses.\n\r"
                     : "[-autoloot ] You don't automatically loot corpses.\n\r", ch );
 
+      send_to_char( IS_SET( ch->config, CONFIG_AUTOMONEY )
+                    ? "[+AUTOLOOT ] You automatically loot money from corpses.\n\r"
+                    : "[-autoloot ] You don't automatically money from corpses.\n\r", ch );
+
       send_to_char( IS_SET( ch->config, CONFIG_AUTOSAC )
                     ? "[+AUTOSAC  ] You automatically sacrifice corpses.\n\r"
                     : "[-autosac  ] You don't automatically sacrifice corpses.\n\r", ch );
@@ -4474,6 +4147,8 @@ void do_config( CHAR_DATA * ch, char *argument )
          bit = CONFIG_AUTOEXIT;
       else if( !str_cmp( arg + 1, "autoloot" ) )
          bit = CONFIG_AUTOLOOT;
+      else if( !str_cmp( arg + 1, "automoney" ) )
+         bit = CONFIG_AUTOMONEY;
       else if( !str_cmp( arg + 1, "autosac" ) )
          bit = CONFIG_AUTOSAC;
       else if( !str_cmp( arg + 1, "blank" ) )
@@ -4735,17 +4410,12 @@ void do_slist( CHAR_DATA * ch, char *argument )
    remort_class = FALSE;
    adept_class = FALSE;
    for( foo = 0; foo < MAX_CLASS; foo++ )
+   {
       if( !str_cmp( class_table[foo].who_name, argument ) )
       {
          any = TRUE;
          class = foo;
 
-      }
-      else if( !str_cmp( remort_table[foo].who_name, argument ) )
-      {
-         any = TRUE;
-         class = foo;
-         remort_class = TRUE;
       }
       else if( !str_prefix( "ADEPT", argument ) )
       {
@@ -4753,6 +4423,20 @@ void do_slist( CHAR_DATA * ch, char *argument )
          adept_class = TRUE;
          class = 0;
       }
+   }
+
+   if ( !any )
+   {
+      for( foo = 0; foo < MAX_REMORT; foo++ )
+      {
+         if ( !str_cmp( remort_table[foo].who_name, argument ) )
+         {
+            any = TRUE;
+            class = foo;
+            remort_class = TRUE;
+         }
+      }
+   }
 
    if( !any )
    {
@@ -5318,10 +5002,8 @@ void do_gain( CHAR_DATA * ch, char *argument )
    bool adept = FALSE;
    bool wolf = FALSE;
    int vamp_cost = 0;
-   sh_int morts_at_seventy = 0;
-   sh_int remorts_at_seventy = 0;
-   sh_int morts_at_eighty = 0;
-   sh_int remorts_at_eighty = 0;
+   sh_int morts_at_max = 0;
+   sh_int remorts_at_max = 0;
    sh_int num_remorts = 0;
    bool allow_remort = FALSE;
    bool allow_adept = FALSE;
@@ -5353,28 +5035,24 @@ void do_gain( CHAR_DATA * ch, char *argument )
    }
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
-      if( ch->lvl[cnt] >= 70 )
-         morts_at_seventy++;
-      if( ch->lvl[cnt] == 80 )
-         morts_at_eighty++;
-      if( ch->lvl2[cnt] >= 70 )
-         remorts_at_seventy++;
-      if( ch->lvl2[cnt] == 80 )
-         remorts_at_eighty++;
+      if( ch->lvl[cnt] == MAX_MORTAL )
+         morts_at_max++;
+      if( ch->lvl2[cnt] == MAX_MORTAL )
+         remorts_at_max++;
       if( ch->lvl2[cnt] > -1 )
          num_remorts++;
    }
 /* first case.. remort  */
-   if( ( ( morts_at_seventy >= 2 )
+   if( ( ( morts_at_max > 0 )
          && ( is_remort( ch ) == FALSE ) )
-       || ( ( morts_at_eighty == 5 ) && ( remorts_at_seventy == 1 ) && ( num_remorts == 1 ) ) )
+       || ( ( morts_at_max == MAX_PC_CLASS ) && ( remorts_at_max == 1 ) && ( num_remorts == 1 ) ) )
    {
       allow_remort = TRUE;
    }
 
 /* second case..can adept */
 
-   if( ( morts_at_eighty == 5 ) && ( remorts_at_eighty == 2 ) && ( ch->adept_level < 1 ) )
+   if( ( morts_at_max == 4 ) && ( remorts_at_max == 2 ) && ( ch->adept_level < 1 ) )
    {
       allow_adept = TRUE;
    }
@@ -5392,8 +5070,8 @@ void do_gain( CHAR_DATA * ch, char *argument )
          if( ch->lvl[a] >= 0 )
             numclasses++;
 
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         if( ( ch->lvl[cnt] != -1 || numclasses < race_table[ch->race].classes ) && ch->lvl[cnt] < ( LEVEL_HERO - 1 ) )
+      for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
+         if ( ch->lvl[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
          {
             any = TRUE;
             cost = exp_to_level( ch, cnt, ( ch->pcdata )->index[cnt] );
@@ -5403,7 +5081,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
          }
 
       for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         if( ch->lvl2[cnt] != -1 && ch->lvl2[cnt] < ( LEVEL_HERO - 1 ) )
+         if( ch->lvl2[cnt] != -1 && ch->lvl2[cnt] < MAX_MORTAL )
          {
             any = TRUE;
             cost = exp_to_level( ch, cnt, 5 );  /* 5 means remort */
@@ -5457,7 +5135,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       }
 
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-      if( ( !str_cmp( remort_table[cnt].who_name, argument ) ) && ( ( ch->lvl2[cnt] > 0 ) || ( allow_remort ) ) )
+      if( ( !str_cmp( remort_table[cnt].who_name, argument ) ) && ( ( ch->lvl2[cnt] > 0 ) || ( allow_remort ) ) && ch->lvl[cnt] == MAX_MORTAL)
       {
          any = TRUE;
          remort = TRUE;
@@ -5515,7 +5193,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
    }
    else
    {
-     if (ch->pcdata->order[c] == -1)
+     if (!IS_NPC(ch) && ch->pcdata->order[0] != c && ch->pcdata->order[1] != c && ch->pcdata->order[2] != c && ch->pcdata->order[3] != c)
      {
        send_to_char("You cannot level in this class\n\r", ch);
        return;
@@ -5660,9 +5338,10 @@ void do_gain( CHAR_DATA * ch, char *argument )
    advance_level( ch, c, TRUE, remort );
    if( remort )
       ch->lvl2[c] = UMAX( 1, ch->lvl2[c] + 1 );
+   else if (ch->lvl[c] < 1)
+      ch->lvl[c] = 1;
    else
       ch->lvl[c] += 1;  /* Incr. the right class */
-
 
    /*
     * Maintain ch->level as max level of the lot 
@@ -5896,7 +5575,7 @@ void do_color( CHAR_DATA * ch, char *argument )
    {
       send_to_char( "@@yPresent color Configuration:@@g\n\r\n\r", ch );
 
-      for( cnt = 0; cnt < MAX_color; cnt++ )
+      for( cnt = 0; cnt < MAX_COLOR; cnt++ )
       {
          sprintf( buf, "@@W%8s: %s%-12s@@N   ",
                   color_table[cnt].name, ansi_table[ch->pcdata->color[cnt]].value, ansi_table[ch->pcdata->color[cnt]].name );
@@ -5948,7 +5627,7 @@ void do_color( CHAR_DATA * ch, char *argument )
        * Check to see if the name is valid 
        */
       color_number = -1;
-      for( cnt = 0; cnt < MAX_color; cnt++ )
+      for( cnt = 0; cnt < MAX_COLOR; cnt++ )
          if( !str_cmp( arg1, color_table[cnt].name ) )
             color_number = color_table[cnt].index;
    }
@@ -6033,7 +5712,7 @@ char *color_string( CHAR_DATA * ch, char *argument )
     * By here, ch is a PC and wants color 
     */
    num = -1;
-   for( cnt = 0; cnt < MAX_color; cnt++ )
+   for( cnt = 0; cnt < MAX_COLOR; cnt++ )
       if( !str_cmp( argument, color_table[cnt].name ) )
          num = cnt;
 

@@ -1600,7 +1600,7 @@ void do_train( CHAR_DATA * ch, char *argument )
    }
 
    cost = 4;
-
+/*
    if( !str_cmp( argument, "str" ) )
    {
       if( class_table[ch->class].attr_prime == APPLY_STR )
@@ -1644,9 +1644,9 @@ void do_train( CHAR_DATA * ch, char *argument )
       pAbility = &ch->pcdata->perm_con;
       pMax = ch->pcdata->max_con;
       pOutput = "constitution";
-   }
+   }*/
 
-   else if( !str_cmp( argument, "hp" ) )
+   if( !str_cmp( argument, "hp" ) )
    {
       pAbility = &ch->max_hit;
       pOutput = "number of hit points";
@@ -1664,9 +1664,9 @@ void do_train( CHAR_DATA * ch, char *argument )
 
    else
    {
-      /*
+/*      /*
        * Work out the costs... 
-       */
+       *
       cost1 = 4;
       cost2 = 4;
       cost3 = 4;
@@ -1681,13 +1681,13 @@ void do_train( CHAR_DATA * ch, char *argument )
       if( class_table[ch->class].attr_prime == APPLY_DEX )
          cost4 = 3;
       if( class_table[ch->class].attr_prime == APPLY_CON )
-         cost5 = 3;
+         cost5 = 3;*/
 
 
 
       strcpy( buf, "You can train: hp (4)  mana (5)" );
 
-      if( ch->pcdata->perm_str < ch->pcdata->max_str )
+   /*   if( ch->pcdata->perm_str < ch->pcdata->max_str )
       {
          strcat( buf, "  str" );
          sprintf( buf2, " (%d)", cost1 );
@@ -1716,7 +1716,7 @@ void do_train( CHAR_DATA * ch, char *argument )
          strcat( buf, "  con" );
          sprintf( buf2, " (%d)", cost5 );
          strcat( buf, buf2 );
-      }
+      }*/
       if( buf[strlen( buf ) - 1] != ':' )
       {
          strcat( buf, ".\n\r" );
@@ -1761,11 +1761,13 @@ void do_train( CHAR_DATA * ch, char *argument )
       act( "$n's $T increases!", ch, NULL, pOutput, TO_ROOM );
       return;
    }
-   if( *pAbility >= pMax )
+
+   return;
+/*   if( *pAbility >= pMax )
    {
       act( "Your $T is already at maximum.", ch, NULL, pOutput, TO_CHAR );
       return;
-   }
+   }*/
 
    if( cost > ch->practice )
    {
@@ -1773,10 +1775,10 @@ void do_train( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   ch->practice -= cost;
+/*   ch->practice -= cost;
    *pAbility += 1;
    act( "Your $T increases!", ch, NULL, pOutput, TO_CHAR );
-   act( "$n's $T increases!", ch, NULL, pOutput, TO_ROOM );
+   act( "$n's $T increases!", ch, NULL, pOutput, TO_ROOM );*/
    return;
 }
 

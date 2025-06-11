@@ -88,6 +88,11 @@ sh_int gsn_fourth_attack;
 sh_int gsn_shield_block;
 sh_int gsn_beserk;
 
+sh_int gsn_counter;
+sh_int gsn_enhanced_critical;
+sh_int gsn_spell_critical;
+sh_int gsn_spell_critical_damage;
+sh_int gsn_detox;
 sh_int gsn_circle;
 sh_int gsn_backstab;
 sh_int gsn_dodge;
@@ -471,7 +476,11 @@ void boot_db( void )
          }
 
 
-         fclose( clanfp );
+         if (clanfp != NULL)
+         {
+            fclose( clanfp );
+            clanfp = NULL;
+         }
       }
       fpArea = NULL;
       sprintf( buf, "Done Loading %s", clan_file_name );
@@ -577,7 +586,11 @@ void boot_db( void )
             fclose( fpArea );
          fpArea = NULL;
       }
-      fclose( fpList );
+      if (fpList != NULL)
+      {
+         fclose( fpList );
+         fpList = NULL;
+      }
    }
 
    /*
@@ -869,7 +882,11 @@ void load_corpses( void )
          }
       }
    }
-   fclose( corpsefp );
+   if (corpsefp != NULL)
+   {
+      fclose( corpsefp );
+      corpsefp = NULL;
+   }
    fpArea = NULL;
    sprintf( buf, "Done Loading %s", corpse_file_name );
    monitor_chan( buf, MONITOR_CLAN );
@@ -939,7 +956,12 @@ void load_marks( void )
          }
       }
 
-      fclose( marksfp );
+      if (marksfp != NULL)
+      {
+         fclose( marksfp );
+         marksfp = NULL;
+      }
+      // Since fpArea is just a pointer to the above marksfp, setting it to NULL should be enough -V
       fpArea = NULL;
       sprintf( buf, "Done Loading %s", marks_file_name );
       monitor_chan( buf, MONITOR_CLAN );
@@ -1004,7 +1026,11 @@ void load_bans( void )
          }
       }
 
-      fclose( bansfp );
+      if (bansfp != NULL)
+      {
+         fclose( bansfp );
+         bansfp = NULL;
+      }
       fpArea = NULL;
       sprintf( buf, "Done Loading %s", bans_file_name );
       log_f( buf );
@@ -1789,7 +1815,11 @@ void load_notes( void )
          letter = getc( fp );
          if( feof( fp ) )
          {
-            fclose( fp );
+            if (fp != NULL)
+            {
+               fclose( fp );
+               fp = NULL;
+            }
             return;
          }
       }
@@ -1912,8 +1942,11 @@ void load_gold( void )
          pArea->gold = gold;
    }
 
-   fclose( fpArea );
-
+   if (fpArea != NULL)
+   {
+      fclose( fpArea );
+      fpArea = NULL;
+   }
 }
 
 /* Spec: see the comments on load_resets about what check_resets does */
@@ -2687,6 +2720,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    else
    {
      int ilevel = obj->level;
+
      int hrdr_val = 0;
      int ac_val = 0;
      int stat_val = 0;
@@ -2694,6 +2728,16 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
      if (IS_SET(pObjIndex->extra_flags, ITEM_REMORT))
      {
        ilevel = MAX_MORTAL + (obj->level / 4);
+     }
+
+     if (IS_SET(pObjIndex->extra_flags, ITEM_MAGIC))
+     {
+       ilevel = (ilevel * 6) / 5;
+     }
+
+     if (IS_SET(pObjIndex->extra_flags, ITEM_RARE))
+     {
+       ilevel = (ilevel * 3) / 2;
      }
 
      if (ilevel > MAX_MORTAL)
@@ -3464,12 +3508,12 @@ void do_areas( CHAR_DATA * ch, char *argument )
    if( !str_cmp( arg1, "all" ) )
       fall = TRUE;
    sprintf( buf, "@@W" mudnamecolor " AREA LISTING\n\r" );
-   safe_strcat( MAX_STRING_LENGTH, buf, "+-------+------------+------------------------------------------------+\n\r" );
+   safe_strcat( MAX_STRING_LENGTH, buf, "+---------+------------+------------------------------------------------+\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@yLevel@@W |            |                                                |\n\r" );
+                "|  @@yLevel@@W  |            |                                                |\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@yrange@@W |   @@yAuthor@@W   |      @@yName of Area@@W                              |\n\r" );
-   safe_strcat( MAX_STRING_LENGTH, buf, "+-------+------------+------------------------------------------------+\n\r" );
+                "|  @@yrange@@W  |   @@yAuthor@@W   |      @@yName of Area@@W                              |\n\r" );
+   safe_strcat( MAX_STRING_LENGTH, buf, "+---------+------------+------------------------------------------------+\n\r" );
 
    foo = 0;
    for( pArea = first_area; pArea != NULL; pArea = pArea->next )
@@ -3481,7 +3525,7 @@ void do_areas( CHAR_DATA * ch, char *argument )
          continue;
 
       foo++;
-      sprintf( msg, " %s %12s          %s\n\r", pArea->level_label, capitalize( pArea->owner ), pArea->name );
+      sprintf( msg, "@@N{@@r%3d %3d@@N} %12s         %s\n\r", pArea->min_level, pArea->max_level, capitalize( pArea->owner ), pArea->name );
       safe_strcat( MAX_STRING_LENGTH, buf, msg );
    }
    sprintf( msg, "@@R%d Areas listed.\n\r@@N Type areas all to list the entire " mudnamecolor " realm.\n\r@@N", foo );
@@ -3504,7 +3548,11 @@ void perm_update(  )
    strtime[strlen( strtime ) - 1] = '\0';
 
    fprintf( po, "%s :: Perms   %5d blocks  of %7d bytes.\n\r", strtime, nAllocPerm, sAllocPerm );
-   fclose( po );
+   if (po != NULL)
+   {
+      fclose( po );
+      po = NULL;
+   }
    return;
 }
 
@@ -3797,7 +3845,11 @@ void append_file( CHAR_DATA * ch, char *file, char *str )
    if( IS_NPC( ch ) || str[0] == '\0' )
       return;
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    if( ( fp = fopen( file, "a" ) ) == NULL )
    {
       perror( file );
@@ -3806,10 +3858,12 @@ void append_file( CHAR_DATA * ch, char *file, char *str )
    else
    {
       fprintf( fp, "[%5d] %s: %s\n", ch->in_room ? ch->in_room->vnum : 0, ch->name, str );
-      fclose( fp );
+      if (fp != NULL)
+      {
+         fclose( fp );
+         fp = NULL;
+      }
    }
-
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
 }
 
@@ -3876,7 +3930,11 @@ void bug( const char *str, int param )
       if( ( fp = fopen( SHUTDOWN_FILE, "a" ) ) != NULL )
       {
          fprintf( fp, "[*****] %s\n", buf );
-         fclose( fp );
+         if (fp != NULL)
+         {
+            fclose( fp );
+            fp = NULL;
+         }
       }
    }
 
@@ -3884,13 +3942,17 @@ void bug( const char *str, int param )
    sprintf( buf + strlen( buf ), str, param );
    log_string( buf );
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    if( ( fp = fopen( BUG_FILE, "a" ) ) != NULL )
    {
       fprintf( fp, "%s\n", buf );
       fclose( fp );
+      fp = NULL;
    }
-   fpReserve = fopen( NULL_FILE, "r" );
 
    return;
 }
@@ -3928,6 +3990,7 @@ void bug_string( const char *str, const char *str2 )
       {
          fprintf( fp, "[*****] %s\n", buf );
          fclose( fp );
+         fp = NULL;
       }
    }
 
@@ -3935,13 +3998,16 @@ void bug_string( const char *str, const char *str2 )
    sprintf( buf + strlen( buf ), str, str2 );
    log_string( buf );
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    if( ( fp = fopen( BUG_FILE, "a" ) ) != NULL )
    {
       fprintf( fp, "%s\n", buf );
       fclose( fp );
    }
-   fpReserve = fopen( NULL_FILE, "r" );
 
    return;
 }
@@ -4067,7 +4133,11 @@ void mprog_file_read( char *f, MOB_INDEX_DATA * pMobIndex )
             break;
       }
    }
-   fclose( fp );
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
    return;
 }
 

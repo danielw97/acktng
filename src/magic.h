@@ -35,6 +35,7 @@
 #include "money.h"
 #endif
 
+void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index );
 bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int type, int sn, bool show_msg );
 void group_gain args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 bool is_safe args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
@@ -133,6 +134,7 @@ DECLARE_SPELL_FUN( spell_cure_blindness );
 DECLARE_SPELL_FUN( spell_cure_critical );
 DECLARE_SPELL_FUN( spell_cure_light );
 DECLARE_SPELL_FUN( spell_cure_poison );
+DECLARE_SPELL_FUN( spell_purify );
 DECLARE_SPELL_FUN( spell_cure_serious );
 DECLARE_SPELL_FUN( spell_curse );
 DECLARE_SPELL_FUN( spell_detect_evil );
@@ -145,6 +147,7 @@ DECLARE_SPELL_FUN( spell_detection );
 DECLARE_SPELL_FUN( spell_dimension_blade );
 DECLARE_SPELL_FUN( spell_dispel_evil );
 DECLARE_SPELL_FUN( spell_dispel_magic );
+DECLARE_SPELL_FUN( spell_dispel_object );
 DECLARE_SPELL_FUN( spell_earthquake );
 DECLARE_SPELL_FUN( spell_enchant_weapon );
 DECLARE_SPELL_FUN( spell_encumber );
@@ -184,7 +187,9 @@ DECLARE_SPELL_FUN( spell_phase );
 DECLARE_SPELL_FUN( spell_poison );
 DECLARE_SPELL_FUN( spell_produce_food );
 DECLARE_SPELL_FUN( spell_protection );
+DECLARE_SPELL_FUN( spell_psionic_recovery );
 DECLARE_SPELL_FUN( spell_refresh );
+DECLARE_SPELL_FUN( spell_regen );
 DECLARE_SPELL_FUN( spell_remove_curse );
 DECLARE_SPELL_FUN( spell_sanctuary );
 DECLARE_SPELL_FUN( spell_see_magic );

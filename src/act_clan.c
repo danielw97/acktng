@@ -1,4 +1,4 @@
-/***************************************************************************
+	/***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,        *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
  *                                                                         *
@@ -43,7 +43,12 @@ void save_clan_table(  )
    char clan_file_name[MAX_STRING_LENGTH];
    sh_int x, y;
 
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
+
    sprintf( clan_file_name, "%s", CLAN_FILE );
 
    if( ( fp = fopen( clan_file_name, "w" ) ) == NULL )
@@ -82,9 +87,12 @@ void save_clan_table(  )
 
 
       fflush( fp );
-      fclose( fp );
+      if (fp != NULL)
+      {
+         fclose( fp );
+         fp = NULL;
+      }
    }
-   fpReserve = fopen( NULL_FILE, "r" );
    return;
 
 }

@@ -2955,9 +2955,9 @@ void do_mset( CHAR_DATA * ch, char *argument )
 
    if( !str_cmp( arg2, "practice" ) )
    {
-      if( value < 0 || value > 100 )
+      if( value < 0 || value > 1000 )
       {
-         send_to_char( "Practice range is 0 to 100 sessions.\n\r", ch );
+         send_to_char( "Practice range is 0 to 1000 sessions.\n\r", ch );
          return;
       }
       victim->practice = value;
@@ -4315,6 +4315,8 @@ void do_setclass( CHAR_DATA * ch, char *argument )
          else
             victim->lvl2[class] = -1;
       }
+      else if (value == -1)
+         victim->lvl[class] = -1;
       else
          victim->lvl[class] = 1;
       victim->exp = 0;

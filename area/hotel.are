@@ -821,7 +821,7 @@ A Doorman stands here, watching the entrance.
 He looks old, and bored.  Be nice and leave him alone.
 ~
 31 8 200 S
-23 1
+24 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -833,7 +833,7 @@ The bellboy stands here, looking to make a quick tip.
 He is young, and ugly.  What else do you need to know?
 ~
 7 0 400 S
-27 1
+28 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -845,7 +845,7 @@ A member of staff stands here, trying to ignore you.
 She is old, and looks unhelpful, to say the least.
 ~
 15 60 -200 S
-22 2
+23 2
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -869,7 +869,7 @@ A newlywed bride stands here, trying to fake a headache.
 She is very pretty, and looks annoyed at having to honeymoon here.
 ~
 7 0 500 S
-22 2
+27 2
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -881,7 +881,7 @@ A guest is here, thinking of more things to complain about.
 He is big, horrible and ugly.  The perfect guest for this hotel!
 ~
 39 0 -200 S
-22 1
+23 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -894,7 +894,7 @@ The manager is a short fellow, the kind of person you take an instant dislike
 to.  You notice his trousers are undone.
 ~
 7 0 -250 S
-41 1
+40 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -906,7 +906,7 @@ The Barmaid is here, looking slightly naked.
 She is indeed naked.  Where could her clothes have gone?? 
 ~
 35 0 -400 S
-32 2
+33 2
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -918,7 +918,7 @@ A clockwork fish swims about here.
 It is made from various pieces of dolls and puppets.  Uh-oh...
 ~
 5 4 -600 S
-36 0
+35 0
 0 2 2
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -930,7 +930,7 @@ The cook stands here, pretending to be in a coma, through all the excitement.
 He looks bored, to say the least.
 ~
 3 0 -100 S
-37 1
+36 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -966,7 +966,7 @@ A giant puppet is waiting here......  for you maybe??
 The puppet is giant by puppet dimensions, but still smaller than you.
 ~
 3145761 0 -400 S
-45 0
+44 0
 0 0 0
 ! 0 0 0 7 2054 0 0
 | 0 0 0 0 0 0 0
@@ -978,7 +978,7 @@ A puppet is here, wandering around.
 The puppet looks like a normal puppet, except it is walking around!!!!!!
 ~
 3145761 0 -200 S
-43 0
+44 0
 0 75 10
 ! 0 0 0 7 2054 0 0
 | 0 0 0 0 0 0 0
@@ -990,7 +990,7 @@ A puppet is here, as if on guard.
 It is a plain looking puppet, except is looks very evil.
 ~
 3145763 0 -700 S
-48 0
+49 0
 -100 100 0
 ! 0 0 0 7 6158 0 4
 | 0 0 0 0 0 0 0
@@ -1103,7 +1103,7 @@ L
 gold band~
 a gold band~
 A gold band has been dropped here.~
-9 0 8396800 1
+9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
 3
 A
@@ -1113,7 +1113,7 @@ A
 A
 19 2
 L
-20
+25
 #0
 #RESETS
 M 0 4414 1 4449 doorman

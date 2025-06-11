@@ -212,6 +212,39 @@ int get_age( CHAR_DATA * ch )
 }
 
 
+int get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
+{
+    char buf[MAX_STRING_LENGTH];
+    int base,i,multi;
+
+    if (remort)
+      base = ch->lvl2[class] * ch->lvl2[class];
+    else
+      base = ch->lvl[class] * ch->lvl[class];
+
+    if (!remort)
+      base *= 600;
+    else
+      base *= 3500; 
+
+
+    if (ch->lvl[class] > 0)
+      base += 350;
+
+
+    for(int i = 0; i < MAX_CLASS; i++)
+    {
+      if (race_table[ch->race].limit[i] == class)
+      {
+        base *= ((i-1)*20)+100;
+        base /= 100;
+        break;
+      }
+    }
+
+    return base;
+}
+
 /*
  * Retrieve character's current strength.
  */
@@ -224,12 +257,20 @@ int get_curr_str( CHAR_DATA * ch )
       return ( 13 + ( ch->level / 16 ) );
    }
 
-   max = ch->pcdata->max_str;
+   max = get_max_str( ch );
 
-   return URANGE( 3, ch->pcdata->perm_str + ch->pcdata->mod_str, max );
+   return URANGE( 3, max + ch->pcdata->mod_str, max + 3);
 }
 
+int get_max_str( CHAR_DATA *ch )
+{
+  int max = race_table[ch->race].race_str;
 
+  if (class_table[ch->class].attr_prime == APPLY_STR)
+    max++;
+
+  return max;
+}
 
 /*
  * Retrieve character's current intelligence.
@@ -243,11 +284,20 @@ int get_curr_int( CHAR_DATA * ch )
       return ( 15 + number_fuzzy( ( ch->level / 20 ) ) );
    }
 
-   max = ch->pcdata->max_int;
+   max = get_max_int( ch );
 
-   return URANGE( 3, ch->pcdata->perm_int + ch->pcdata->mod_int, max );
+   return URANGE( 3, max  + ch->pcdata->mod_int, max +3 );
 }
 
+int get_max_int( CHAR_DATA *ch )
+{
+  int max = race_table[ch->race].race_int;
+
+  if (class_table[ch->class].attr_prime == APPLY_INT)
+    max++;
+
+  return max;
+}
 
 
 /*
@@ -262,12 +312,21 @@ int get_curr_wis( CHAR_DATA * ch )
       return ( 15 + number_fuzzy( ( ch->level / 20 ) ) );
    }
 
-   max = ch->pcdata->max_wis;
+   max = get_max_wis( ch );
 
-   return URANGE( 3, ch->pcdata->perm_wis + ch->pcdata->mod_wis, max );
+   return URANGE( 3, max + ch->pcdata->mod_wis, max+3 );
 }
 
+int get_max_wis( CHAR_DATA *ch )
+{
+  int max = race_table[ch->race].race_wis;
 
+  if (class_table[ch->class].attr_prime == APPLY_WIS)
+    max++;
+
+  return max;
+
+}
 
 /*
  * Retrieve character's current dexterity.
@@ -281,11 +340,20 @@ int get_curr_dex( CHAR_DATA * ch )
       return ( 16 + number_fuzzy( ( ch->level / 25 ) ) );
    }
 
-   max = ch->pcdata->max_dex;
+   max = get_max_dex(ch);
 
-   return URANGE( 3, ch->pcdata->perm_dex + ch->pcdata->mod_dex, max );
+   return URANGE( 3, max + ch->pcdata->mod_dex, max+3 );
 }
 
+int get_max_dex( CHAR_DATA *ch )
+{
+  int max = race_table[ch->race].race_dex;
+
+  if (class_table[ch->class].attr_prime == APPLY_DEX)
+    max++;
+
+  return max;
+}
 
 
 /*
@@ -300,11 +368,20 @@ int get_curr_con( CHAR_DATA * ch )
       return ( 15 + number_fuzzy( ( ch->level / 12 ) ) );
    }
 
-   max = ch->pcdata->max_con;
+   max = get_max_con( ch );
 
-   return URANGE( 3, ch->pcdata->perm_con + ch->pcdata->mod_con, max );
+   return URANGE( 3, race_table[ch->race].race_con + ch->pcdata->mod_con, max + 3);
 }
 
+int get_max_con( CHAR_DATA *ch )
+{
+  int max = race_table[ch->race].race_con;
+
+  if (class_table[ch->class].attr_prime == APPLY_CON)
+    max++;
+
+  return max;
+}
 
 
 /*
@@ -481,6 +558,10 @@ void affect_modify( CHAR_DATA * ch, AFFECT_DATA * paf, bool fAdd )
          break;
       case APPLY_SAVING_SPELL:
          ch->saving_throw += mod;
+         break;
+      case APPLY_HOT:
+         break;
+      case APPLY_DOT:
          break;
    }
 
@@ -2571,12 +2652,12 @@ bool authorized( CHAR_DATA * ch, char *skllnm )
 
    char buf[MAX_STRING_LENGTH];
 
-   if( ( !IS_NPC( ch ) && str_infix( skllnm, ch->pcdata->immskll ) ) || IS_NPC( ch ) )
-   {
-      sprintf( buf, "Sorry, you are not authorized to use %s.\n\r", skllnm );
-      send_to_char( buf, ch );
-      return FALSE;
-   }
+//   if( ( !IS_NPC( ch ) && str_infix( skllnm, ch->pcdata->immskll ) ) || IS_NPC( ch ) )
+  // {
+    //  sprintf( buf, "Sorry, you are not authorized to use %s.\n\r", skllnm );
+//      send_to_char( buf, ch );
+  //    return FALSE;
+   //}
 
    return TRUE;
 

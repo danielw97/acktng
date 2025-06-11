@@ -46,8 +46,11 @@ void save_brands(  )
    DL_LIST *brand;
    BRAND_DATA *this_brand;
 
-
-   fclose( fpReserve );
+   if (fpReserve != NULL)
+   {
+      fclose( fpReserve );
+      fpReserve = NULL;
+   }
    sprintf( brand_file_name, "%s", BRANDS_FILE );
 
    if( ( fp = fopen( brand_file_name, "w" ) ) == NULL )
@@ -73,12 +76,11 @@ void save_brands(  )
 
 
    fflush( fp );
-   fclose( fp );
-
-
-   fpReserve = fopen( NULL_FILE, "r" );
-   return;
-
+   if (fp != NULL)
+   {
+      fclose( fp );
+      fp = NULL;
+   }
 }
 
 void load_brands( void )
@@ -142,7 +144,11 @@ void load_brands( void )
          }
       }
 
-      fclose( brandsfp );
+      if (brandsfp != NULL)
+      {
+         fclose( brandsfp );
+         brandsfp = NULL;
+      }
 
       sprintf( buf, "Done Loading %s\n\r", brands_file_name );
       monitor_chan( buf, MONITOR_CLAN );
