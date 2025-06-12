@@ -129,27 +129,6 @@ char *format_obj_to_char( OBJ_DATA * obj, CHAR_DATA * ch, bool fShort )
    return buf;
 }
 
-/*   char race_name[4];   /* Three letter name for race 
-   char *race_title; /* Full race name 
-   sh_int recall; /* Race's recall location 
-   sh_int race_room; /* vnum of race-only room 
-   sh_int race_str;  /* max_str to use for race 
-   sh_int race_int;
-   sh_int race_wis;
-   sh_int race_dex;
-   sh_int race_con;
-   int race_flags;   /* flags for the various racial stuff    
-   bool wear_locs[MAX_WEAR];  /* on/off for each wear loc 
-   int classes;   /* Number of classes for race   *
-   sh_int limit[MAX_CLASS];   /* Max for each class *
-   char *comment; /* comments shown for new players *
-   char *skill1;
-   int strong_realms;
-   int weak_realms;
-   int resist_realms;
-   int suscept_realms;
-   bool player_allowed;*/
-
 void do_rhelp( CHAR_DATA * ch, char *argument )
 {
    char arg[MAX_INPUT_LENGTH];
@@ -373,19 +352,16 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
 
    strcat(sendBuf, "\r\n");
 
-// if( race_table[ch->race].wear_locs[location] == TRUE )
-
-
    strcat(sendBuf, "Non-standard wear slots: ");
 
    bool found_slot = FALSE;
 
    for(int j = 0; j < MAX_WEAR; j++)
    {
-      if (race_table[0].wear_locs[j] == TRUE && race_table[i].wear_locs[j] == FALSE)
+      if (race_table[0].wear_locs[j] == TRUE != race_table[i].wear_locs[j] == FALSE)
       {
          found_slot = TRUE;
-         sprintf(buf, "%s ", bit_table_lookup( tab_wear_flags, 1>>j ));
+         sprintf(buf, "%s ", tab_wear_flags[j].text);
          strcat(sendBuf, buf);
       }
    }
