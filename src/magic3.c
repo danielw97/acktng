@@ -187,7 +187,7 @@ bool spell_morale( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
       act( "$n seems much more willing to fight.", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You are inspired to fight better!\n\r", gch );
       af.type = sn;
-      if (ch == victim)
+      if (ch == gch)
          af.duration = -1;
       else
          af.duration = 4 + ( level / 5 );
@@ -214,7 +214,7 @@ bool spell_leadership( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
       act( "$n looks more courageous!", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You fell courage wash over you!\n\r", gch );
       af.type = sn;
-      if (ch == victim)
+      if (ch == gch)
          af.duration = -1;
       else
          af.duration = 4 + ( level / 5 );

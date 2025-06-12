@@ -1307,3 +1307,19 @@
 [*****] BUG: bad ch, string=$n starts following you.
 [*****] BUG: bad ch, string=You start following $N.
 [*****] BUG: TOPLINK: link already in list?
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.

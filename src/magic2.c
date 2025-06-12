@@ -245,7 +245,7 @@ bool spell_mass_invis( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
       act( "$n slowly fades out of existence.", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You slowly fade out of existence.\n\r", gch );
       af.type = sn;
-      if (ch == victim)
+      if (ch == gch)
          af.duration = -1;
       else
          af.duration = 4 + ( level / 5 );
@@ -1780,10 +1780,7 @@ bool spell_know_weakness( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
       return FALSE;
 
    af.type = sn;
-   if (ch == victim)
-      af.duration = -1;
-   else
-      af.duration = 2 + ( level >= 20 ) + ( level >= 40 ) + ( level >= 60 ) + ( level >= 80 );
+   af.duration = -1;
    af.location = APPLY_HITROLL;
    af.modifier = 3;
    af.bitvector = 0;
@@ -1800,10 +1797,7 @@ bool spell_know_critical( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
       return FALSE;
 
    af.type = sn;
-   if (ch == victim)
-      af.duration = -1;
-   else
-      af.duration = 2 + ( level >= 20 ) + ( level >= 40 ) + ( level >= 60 ) + ( level >= 80 );
+   af.duration = -1;
    af.location = APPLY_DAMROLL;
    af.modifier = 3;
    af.bitvector = 0;
