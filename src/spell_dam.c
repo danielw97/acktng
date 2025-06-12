@@ -81,56 +81,56 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    {
       strcpy(name, "Water Elemental");
       strcpy(short_desc, "@@lW@@Bater @@lE@@Blemental@@N");
-      strcpy(long_desc, "A @@lW@@Bater @@lE@@Blemental@@N surfs here.");
+      strcpy(long_desc, "A @@lW@@Bater @@lE@@Blemental@@N surfs here.\n\r");
       base_penalty = 40;
    }
    else if (element == REALM_FIRE)
    {
       strcpy(name, "Fire Elemental");
       strcpy(short_desc, "@@eF@@Rire @@eE@@Rleemntal@@N");
-      strcpy(long_desc, "A @@eF@@Rire @@eE@@Rlemental@@N burns here.");
+      strcpy(long_desc, "A @@eF@@Rire @@eE@@Rlemental@@N burns here.\n\r");
       base_penalty = 40;
    }
    else if (element == REALM_EARTH)
    {
       strcpy(name, "Earth Elemental");
       strcpy(short_desc, "@@yE@@barth @@yE@@blemental@@N");
-      strcpy(long_desc, "A @@yE@@barth @@yE@@blemental@@N rumbles here.");
+      strcpy(long_desc, "A @@yE@@barth @@yE@@blemental@@N rumbles here.\n\r");
       base_penalty = 35;
    }
    else if (element == REALM_NEGATIVE)
    {
       strcpy(name, "Skeleton");
       strcpy(short_desc, "A @@dSkeleton@@N");
-      strcpy(long_desc, "A @@dSkeleton@@N goes 'Myaah!' here.");
+      strcpy(long_desc, "A @@dSkeleton@@N goes 'Myaah!' here.\n\r");
       base_penalty = 50;
    }
    else if (element == REALM_HOLY)
    {
       strcpy(name, "Holy Avenger");
       strcpy(short_desc, "@@cHoly @@WAvenger@@N");
-      strcpy(long_desc, "A majestic @@cHoly @@WAvenger@@N stands before you.");
+      strcpy(long_desc, "A majestic @@cHoly @@WAvenger@@N stands before you.\n\r");
       base_penalty = 40;
    }
    else if (element == REALM_DRAIN)
    {
       strcpy(name, "Soul Thief");
       strcpy(short_desc, "@@dSoul @@BThief@@N");
-      strcpy(long_desc, "A @@dSoul @@BThief@@N skulks about here.");
+      strcpy(long_desc, "A @@dSoul @@BThief@@N skulks about here.\n\r");
       base_penalty = 35;
    }
    else if (element == REALM_IMPACT)
    {
       strcpy(name, "Iron Golem");
       strcpy(short_desc, "@@dIron @@WGolem@@N");
-      strcpy(long_desc, "@@NA towering mass of @@dmetal@@N peers into your soul.");
+      strcpy(long_desc, "@@NA towering mass of @@dmetal@@N peers into your soul.\n\r");
       base_penalty = 25;
    }
    else if (element == REALM_LIGHT)
    {
       strcpy(name, "Diamond Golem");
       strcpy(short_desc, "@@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@WGolem@@N");
-      strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.");
+      strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.\n\r");
       base_penalty = 15;
    }
 
