@@ -2742,7 +2742,8 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
 
      if (ilevel > MAX_MORTAL)
      {
-       ilevel += (ilevel - MAX_MORTAL);
+       ilevel += (ilevel - MAX_MORTAL)*3;
+       ilevel += 10;
      }
 
      if (pObjIndex->item_type == ITEM_WEAPON)

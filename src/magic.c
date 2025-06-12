@@ -2321,7 +2321,7 @@ bool spell_giant_strength( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA
    if( is_affected( victim, sn ) )
       return FALSE;
    af.type = sn;
-   af.duration = 2 + ( level / 4 );
+   af.duration = -1;
    af.location = APPLY_STR;
    af.modifier = 2 + ( level >= 50 ) + ( level >= 65 );
    af.bitvector = 0;
