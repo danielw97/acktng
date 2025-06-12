@@ -682,7 +682,7 @@ bool spell_ethereal( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
 
 bool spell_fireelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, get_psuedo_level(ch), REALM_FIRE);
+   CHAR_DATA *summoned = player_summon( ch, 100+ ch->lvl2[CLASS_SOR]/4, REALM_FIRE);
 
    act( "$n calls upon the elemental forces of @@efire@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the elemental forces of @@efire@@N.", ch, obj, NULL, TO_CHAR );
