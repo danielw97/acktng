@@ -241,7 +241,6 @@ bool spell_waterelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    act( "A waterfall appears, and an elemental steps from the pool!!", ch, obj, NULL, TO_ROOM );
    act( "A waterfall appears, and an elemental steps from the pool!!", ch, obj, NULL, TO_CHAR );
 
-   char_to_room( summoned, ch->in_room );
    act( "$n floods from the pool, drawing all the water into it's body.", summoned, NULL, NULL, TO_ROOM );
 
    return TRUE;
