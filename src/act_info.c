@@ -358,15 +358,10 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
 
    for(int j = 0; j < MAX_WEAR; j++)
    {
-      if (race_table[0].wear_locs[j] != race_table[i].wear_locs[j])
-      {
-         found_slot = TRUE;
-         if (race_table[i].wear_locs[j] == TRUE)
-            sprintf(buf, "@@W%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
-         else
-            sprintf(buf, "@@d%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
-         strcat(sendBuf, buf);
-      }
+      found_slot = TRUE;
+      if (race_table[i].wear_locs[j] == TRUE)
+         sprintf(buf, "@@W%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
+      strcat(sendBuf, buf);
    }
 
    if (!found_slot)
