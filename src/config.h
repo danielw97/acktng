@@ -1230,6 +1230,7 @@
 #define ITEM_WEAR_FEET          BIT_22
 #define ITEM_WEAR_HOOVES        BIT_23
 #define ITEM_TAKE               BIT_24
+#define MAX_ITEM_BIT            24
 /*
  * Apply types (for affects).
  * Used in #OBJECTS.

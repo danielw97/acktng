@@ -157,7 +157,7 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
    {
       for(i = 0; i < MAX_RACE; i++)
       {
-         if (!str_prefix(race_table[i].race_name, arg) || !str_prefix(race_table[i].race_title, arg))
+         if (!str_prefix(arg, race_table[i].race_name) || !str_prefix(arg, race_table[i].race_title))
          {
             found = TRUE;
             break;
@@ -352,22 +352,14 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
 
    strcat(sendBuf, "\r\n");
 
-   strcat(sendBuf, "Non-standard wear slots: ");
+   strcat(sendBuf, "Wear slots: ");
 
-   bool found_slot = FALSE;
-
-   for(int j = 0; j < MAX_WEAR; j++)
+   for(int j = 0; j < MAX_ITEM_BIT; j++)
    {
-      found_slot = TRUE;
       if (race_table[i].wear_locs[j] == TRUE)
          sprintf(buf, "@@W%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
       strcat(sendBuf, buf);
    }
-
-   if (!found_slot)
-      strcat(sendBuf, " None\r\n");
-   else
-      strcat(sendBuf, "\r\n");
 
    send_to_char(sendBuf,ch);
 }
