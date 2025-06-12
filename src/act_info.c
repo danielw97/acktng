@@ -366,7 +366,7 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
          if (race_table[0].wear_locs[j] == TRUE)
             sprintf(buf, "@@W%s @@N", bit_table_lookup( tab_wear_flags, 1<<j));
          else
-            sprintf(buf, "@@d%s @@N", bit_tablE_lookup( tab_wear_flags, 1<<j));
+            sprintf(buf, "@@d%s @@N", bit_table_lookup( tab_wear_flags, 1<<j));
          strcat(sendBuf, buf);
       }
    }
