@@ -364,9 +364,9 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
          sprintf(buf,"Found %d at bit %d\r\n", j, 1<<j);
          send_to_char(buf);
          if (race_table[0].wear_locs[j] == TRUE)
-            sprintf(buf, "@@W%s @@N", tab_wear_flags[j].text);
+            sprintf(buf, "@@W%s @@N", bit_table_lookup( tab_wear_flags, 1<<j));
          else
-            sprintf(buf, "@@d%s @@N", tab_wear_flags[j].text);
+            sprintf(buf, "@@d%s @@N", bit_tablE_lookup( tab_wear_flags, 1<<j));
          strcat(sendBuf, buf);
       }
    }
