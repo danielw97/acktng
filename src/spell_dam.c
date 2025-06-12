@@ -71,6 +71,93 @@ struct sp_dam_str_type sp_dam_str[] = {
                  "holy", "HOLY", "holies", "HOLIES"}
 };
 
+CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
+   CHAR_DATA *summoned;
+   char name[MAX_STRING_LENGTH], short_desc[MAX_STRING_LENGTH], long_desc[MAX_STRING_LENGTH];
+   int base_penalty;
+
+   if (element == REALM_WATER)
+   {
+      strcpy(name, "Water Elemental");
+      strcpy(short_desc, "@@bWater Elemental@@N");
+      strcpy(long_desc, "A @@bWater Elemental@@N surfs here.");
+      base_penalty = 40;
+   }
+   else if (element == REALM_FIRE)
+   {
+      strcpy(name, "Fire Elemental");
+      strcpy(short_desc, "@@rFire Eleemntal@@N");
+      strcpy(long_desc, "A @@rFire Elemental@@N burns here.");
+      base_penalty = 40;
+   }
+   else if (element == REALM_EARTH)
+   {
+      strcpy(name, "Earth Elemental");
+      strcpy(short_desc, "@@bEarth Elemental@@N");
+      strcpy(long_desc, "A @@bEarth Elemental@@N rumbles here.");
+      base_penalty = 35;
+   }
+   else if (element == REALM_NEGATIVE)
+   {
+      strcpy(name, "Skeleton");
+      strcpy(short_desc, "A @@dSkeleton@@N");
+      strcpy(long_desc, "A @@dSkeleton@@N goes 'Myaah!' here.");
+      base_penalty = 50;
+   }
+   else if (element == REALM_HOLY)
+   {
+      strcpy(name, "Holy Avenger");
+      strcpy(short_desc, "@@cHoly @@WAvenger@@N");
+      strcpy(long_desc, "A majestic @@cHoly @@WAvenger@@N stands before you.");
+      base_penalty = 40;
+   }
+   else if (element == REALM_DRAIN)
+   {
+      strcpy(name, "Soul Thief");
+      strcpy(short_desc, "@@dSoul @@BThief@@N");
+      strcpy(long_desc, "A @@dSoul @@BThief@@N skulks about here.");
+      base_penalty = 35;
+   }
+   else if (element == REALM_IMPACT)
+   {
+      strcpy(name, "Iron Golem");
+      strcpy(short_desc, "@@dIron @@WGolem@@N");
+      strcpy(long_desc, "@@NA towering mass of @@dmetal@@N peers into your soul.");
+      base_penalty = 25;
+   }
+   else if (element == REALM_LIGHT)
+   {
+      strcpy(name, "Diamond Golem");
+      strcpy(short_desc, "@@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@WGolem@@N");
+      strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.");
+      base_penalty = 15;
+   }
+
+   summoned = create_mobile( get_mob_index( MOB_VNUM_WATERELEM ) );
+
+   summoned->level = level-base_penalty;  
+   summoned->max_hit = summoned->level * 15 + number_range( summoned->level * summoned->level / 2, summoned->level * summoned->level / 1 );
+   summoned->hit = summoned->max_hit;
+
+   summoned->exp = 0;
+   summoned->intell_exp = 0;
+
+   summoned->max_mana = summoned->level * 25;
+   summoned->mana = summoned->max_mana;
+
+   summoned->name = str_dup(name);
+   summoned->short_descr = str_dup(short_desc);
+   summoned->long_descr = str_dup(long_desc);
+
+   SET_BIT( summoned->act, ACT_PET );
+   SET_BIT( summoned->affected_by, AFF_CHARM );
+   summoned->extract_timer = get_psuedo_level( ch ) / 4;
+   add_follower( summoned, ch );
+   char_to_room( summoned, ch->in_room );
+
+   return summoned;
+)
+
 void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index )
 {
    int heal = base_heal*2;

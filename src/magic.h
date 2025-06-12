@@ -35,6 +35,7 @@
 #include "money.h"
 #endif
 
+CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element);
 void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index );
 bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int type, int sn, bool show_msg );
 void group_gain args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
@@ -59,6 +60,10 @@ int mana_cost( CHAR_DATA * ch, int sn );
 #define REALM_IMPACT      BIT_10
 #define REALM_MIND        BIT_11
 #define REALM_HOLY        BIT_12
+#define REALM_EARTH       BIT_13
+#define REALM_WATER       BIT_14
+#define REALM_NEGATIVE       BIT_15
+#define REALM_POSITIVE       BIT_16
 #define NO_REFLECT        BIT_30
 #define NO_ABSORB          BIT_31
 

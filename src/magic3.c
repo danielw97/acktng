@@ -233,7 +233,7 @@ bool spell_ice_bolt( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
 
 bool spell_waterelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_WATER);
 
    act( "$n calls upon the elemental forces of @@lwater@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the elemental forces of @@lwater@@N.", ch, obj, NULL, TO_CHAR );
@@ -241,23 +241,9 @@ bool spell_waterelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    act( "A waterfall appears, and an elemental steps from the pool!!", ch, obj, NULL, TO_ROOM );
    act( "A waterfall appears, and an elemental steps from the pool!!", ch, obj, NULL, TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_WATERELEM ) );
    char_to_room( summoned, ch->in_room );
    act( "$n floods from the pool, drawing all the water into it's body.", summoned, NULL, NULL, TO_ROOM );
 
-   /*
-    * don't think we need these  
-    * summoned->level    = 40;  
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    * 
-    */
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
    return TRUE;
 }
 
@@ -265,7 +251,7 @@ bool spell_waterelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
 
 bool spell_skeleton( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_NEC]/4, REALM_NEGATIVE);
 
    act( "$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR );
@@ -273,22 +259,7 @@ bool spell_skeleton( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
    act( "The ground opens beneath you, and a skeleton crawls out of the graveyard filth!!", ch, obj, NULL, TO_ROOM );
    act( "The ground opens beneath you, and a skeleton crawls out of the graveyard filth!!", ch, obj, NULL, TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_SKELETON ) );
-   char_to_room( summoned, ch->in_room );
    act( "$n Stands erect, and bow's towards it's master.", summoned, NULL, NULL, TO_ROOM );
-
-   /*
-    * summoned->level    = 40;
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    */
-
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
    return TRUE;
 }
 
@@ -653,7 +624,6 @@ bool spell_thoughtshield( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
 
 bool spell_ethereal( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-
    /*
     * Ethereal travel :)
     * * 
@@ -713,7 +683,7 @@ bool spell_ethereal( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
 
 bool spell_fireelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
+   CHAR_DATA *summoned = player_summon( ch, get_psuedo_level(ch), REALM_FIRE);
 
    act( "$n calls upon the elemental forces of @@efire@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the elemental forces of @@efire@@N.", ch, obj, NULL, TO_CHAR );
@@ -721,23 +691,8 @@ bool spell_fireelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
    act( "@@NA @@ebonfire@@N appears, and an elemental steps from the flames!!", ch, obj, NULL, TO_ROOM );
    act( "@@NA @@ebonfire@@N appears, and an elemental steps from the flames!!", ch, obj, NULL, TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_FIREELEM ) );
-   char_to_room( summoned, ch->in_room );
    act( "$n leaps from the bonfire, drawing all the @@eflames@@N into it's body.", summoned, NULL, NULL, TO_ROOM );
 
-   /*
-    * don't think we need these  
-    * summoned->level    = 40;  
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    * 
-    */
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
    return TRUE;
 }
 
@@ -1443,7 +1398,7 @@ bool spell_divine_intervention( int sn, int level, CHAR_DATA * ch, void *vo, OBJ
 
 bool spell_earthelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_EARTH);
 
    act( "$n calls upon the elemental forces of @@bearth@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the elemental forces of @@bearth@@N.", ch, obj, NULL, TO_CHAR );
@@ -1451,29 +1406,14 @@ bool spell_earthelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    act( "@@NA huge mound of @@bearth@@N appears, and an elemental steps from the boulders!!", ch, obj, NULL, TO_ROOM );
    act( "@@NA huge mound of @@bearth@@N appears, and an elemental steps from the boulders!!", ch, obj, NULL, TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_EARTHELEM ) );
-   char_to_room( summoned, ch->in_room );
    act( "@@N$n emerges from the mound, assuming the @@bearth@@N into it's body.", summoned, NULL, NULL, TO_ROOM );
 
-   /*
-    * don't think we need these  
-    * summoned->level    = 40;  
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    * 
-    */
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
    return TRUE;
 }
 
 bool spell_iron_golem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_IMPACT);
 
    act( "@@N$n calls upon the @@aalchemical@@N forces of @@dmetal@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the @@aalchemical@@N forces of @@dmetal@@N.", ch, obj, NULL, TO_CHAR );
@@ -1481,30 +1421,14 @@ bool spell_iron_golem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
    act( "@@NA large slab of @@diron@@N appears, and a golem steps from the mass!!", ch, obj, NULL, TO_ROOM );
    act( "@@NA large slab of @@diron@@N appears, and a golem steps from the mass!!", ch, obj, NULL, TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_IRON_GOLEM ) );
-   char_to_room( summoned, ch->in_room );
    act( "@@N$n mutates from the @@dslab of iron@@N, drawing all the metal into it's body.", summoned, NULL, NULL, TO_ROOM );
 
-   /*
-    * don't think we need these  
-    * summoned->level    = 40;  
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    * 
-    */
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
    return TRUE;
 }
 
 bool spell_soul_thief( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
-
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_NEC]/4, REALM_DRAIN);
 
    act( "$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR );
@@ -1514,28 +1438,14 @@ bool spell_soul_thief( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
    act( "@@NThe ground opens beneath you, and a @@lSoul @@eThief@@N crawls out of the graveyard filth!!", ch, obj, NULL,
         TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_SOUL_THIEF ) );
-   char_to_room( summoned, ch->in_room );
    act( "$n Stands erect, and bow's towards it's master.", summoned, NULL, NULL, TO_ROOM );
-   /*
-    * don't think we need these  
-    * summoned->level    = 40;  
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    * 
-    */
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
+
    return TRUE;
 }
 
 bool spell_holy_avenger( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_KNI]/4, REALM_HOLY);
 
    act( "$n calls upon the holy forces of @@Wlight@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the holy forces of @@Wlight@@N.", ch, obj, NULL, TO_CHAR );
@@ -1543,29 +1453,14 @@ bool spell_holy_avenger( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
    act( "@@NA shimmering halo appears, and a @@yHoly @@WAvenger@@N steps from the light!!", ch, obj, NULL, TO_ROOM );
    act( "@@NA shimmering halo appears, and a @@yHoly @@WAvenger@@N steps from the light!!", ch, obj, NULL, TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_HOLY_AVENGER ) );
-   char_to_room( summoned, ch->in_room );
    act( "$n steps from the light, drawing all the power into it's body.", summoned, NULL, NULL, TO_ROOM );
 
-   /*
-    * don't think we need these  
-    * summoned->level    = 40;  
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    * 
-    */
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
    return TRUE;
 }
 
 bool spell_diamond_golem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned;
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_LIGHT);
 
    act( "@@N$n calls upon the @@aalchemical@@N forces of @@ylight@@N!", ch, obj, NULL, TO_ROOM );
    act( "@@NYou call upon the @@aalchemical@@N forces of @@ylight@@N.", ch, obj, NULL, TO_CHAR );
@@ -1573,23 +1468,8 @@ bool spell_diamond_golem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
    act( "A huge gemstone appears, and a golem steps from the diamond!!", ch, obj, NULL, TO_ROOM );
    act( "A huge gemstone appears, and a golem steps from the diamond!!", ch, obj, NULL, TO_CHAR );
 
-   summoned = create_mobile( get_mob_index( MOB_VNUM_DIAMOND_GOLEM ) );
-   char_to_room( summoned, ch->in_room );
    act( "$n floods from the pool, drawing all the water into it's body.", summoned, NULL, NULL, TO_ROOM );
 
-   /*
-    * don't think we need these  
-    * summoned->level    = 40;  
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
-    * summoned->max_move = dice( 10, 40 );
-    * summoned->move     = summoned->max_move;  
-    * 
-    */
-   SET_BIT( summoned->act, ACT_PET );
-   SET_BIT( summoned->affected_by, AFF_CHARM );
-   summoned->extract_timer = get_psuedo_level( ch ) / 3;
-   add_follower( summoned, ch );
    return TRUE;
 }
 
