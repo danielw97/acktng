@@ -363,7 +363,7 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
          found_slot = TRUE;
          sprintf(buf,"Found %d at bit %d\r\n", j, 1<<j);
          send_to_char(buf, ch);
-         if (race_table[0].wear_locs[j] == TRUE)
+         if (race_table[i].wear_locs[j] == TRUE)
             sprintf(buf, "@@W%s @@N", bit_table_lookup( tab_wear_flags, 1<<j));
          else
             sprintf(buf, "@@d%s @@N", bit_table_lookup( tab_wear_flags, 1<<j));
