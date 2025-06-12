@@ -406,7 +406,6 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
                strcat(sendBuf, " face");
                break;
             case WEAR_EAR_L:
-            case WEAR_EAR_R:
                strcat(sendBuf, " ear");
                break;
             case WEAR_HOOVES:
