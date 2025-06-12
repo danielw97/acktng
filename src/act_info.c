@@ -361,6 +361,11 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
          sprintf(buf, "@@W%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
          strcat(sendBuf, buf);
       }
+      else
+      {
+         sprintf(buf, "@@d%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
+         strcat(sendBuf, buf);
+      }
    }
 
    send_to_char(sendBuf,ch);
