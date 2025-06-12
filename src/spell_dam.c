@@ -130,7 +130,7 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    {
       strcpy(name, "Diamond Golem");
       strcpy(short_desc, "@@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@WGolem@@N");
-      strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.\n\rearth");
+      strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.\n\r");
       base_penalty = 15;
    }
 
