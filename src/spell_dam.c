@@ -72,6 +72,7 @@ struct sp_dam_str_type sp_dam_str[] = {
 };
 
 CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
+{
    CHAR_DATA *summoned;
    char name[MAX_STRING_LENGTH], short_desc[MAX_STRING_LENGTH], long_desc[MAX_STRING_LENGTH];
    int base_penalty;
@@ -156,7 +157,7 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    char_to_room( summoned, ch->in_room );
 
    return summoned;
-)
+}
 
 void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index )
 {

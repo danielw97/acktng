@@ -1292,3 +1292,18 @@
 [*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1068@@l)@@N
 [*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W765@@l)@@N
 [*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W849@@l)@@N
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: bad ch, string=$n starts following you.
+[*****] BUG: bad ch, string=You start following $N.
+[*****] BUG: TOPLINK: link already in list?
