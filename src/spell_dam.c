@@ -87,7 +87,7 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    else if (element == REALM_FIRE)
    {
       strcpy(name, "Fire Elemental");
-      strcpy(short_desc, "@@eF@@Rire @@eE@@Rleemntal@@N");
+      strcpy(short_desc, "@@eF@@Rire @@eE@@Rlemental@@N");
       strcpy(long_desc, "A @@eF@@Rire @@eE@@Rlemental@@N burns here.\n\r");
       base_penalty = 40;
    }
@@ -130,11 +130,12 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    {
       strcpy(name, "Diamond Golem");
       strcpy(short_desc, "@@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@WGolem@@N");
-      strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.\n\r");
+      strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.\n\rearth");
       base_penalty = 15;
    }
 
    summoned = create_mobile( get_mob_index( MOB_VNUM_WATERELEM ) );
+   char_to_room( summoned, ch->in_room );
 
    summoned->level = level-base_penalty;  
    summoned->max_hit = summoned->level * 15 + number_range( summoned->level * summoned->level / 2, summoned->level * summoned->level / 1 );
@@ -154,7 +155,6 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    SET_BIT( summoned->affected_by, AFF_CHARM );
    summoned->extract_timer = get_psuedo_level( ch ) / 4;
    add_follower( summoned, ch );
-   char_to_room( summoned, ch->in_room );
 
    return summoned;
 }
