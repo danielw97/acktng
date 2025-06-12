@@ -949,7 +949,10 @@ bool spell_armor( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    if( is_affected( victim, sn ) )
       return FALSE;
    af.type = sn;
-   af.duration = 24;
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 24;
    af.modifier = -20 - get_psuedo_level( ch ) / 10;
    af.location = APPLY_AC;
    af.bitvector = 0;
@@ -1011,7 +1014,10 @@ bool spell_bless( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    if( victim->position == POS_FIGHTING || is_affected( victim, sn ) )
       return ( ch == victim ? FALSE : TRUE );
    af.type = sn;
-   af.duration = 6 + ( level / 6 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 6 + ( level / 6 );
    af.location = APPLY_HITROLL;
    af.modifier = level / 8;
    af.bitvector = 0;
@@ -1511,7 +1517,10 @@ bool spell_detect_evil( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    if( IS_AFFECTED( victim, AFF_DETECT_EVIL ) )
       return FALSE;
    af.type = sn;
-   af.duration = 5 + ( level / 10 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 5 + ( level / 10 );
    af.modifier = 0;
    af.location = APPLY_NONE;
    af.bitvector = AFF_DETECT_EVIL;
@@ -1532,7 +1541,10 @@ bool spell_detect_hidden( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
    if( IS_AFFECTED( victim, AFF_DETECT_HIDDEN ) )
       return FALSE;
    af.type = sn;
-   af.duration = 4 + ( level / 8 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 8 );
    af.location = APPLY_NONE;
    af.modifier = 0;
    af.bitvector = AFF_DETECT_HIDDEN;
@@ -1553,7 +1565,10 @@ bool spell_detect_invis( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
    if( IS_AFFECTED( victim, AFF_DETECT_INVIS ) )
       return FALSE;
    af.type = sn;
-   af.duration = 6 + ( level / 8 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 6 + ( level / 8 );
    af.modifier = 0;
    af.location = APPLY_NONE;
    af.bitvector = AFF_DETECT_INVIS;
@@ -1574,7 +1589,10 @@ bool spell_detect_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
    if( IS_AFFECTED( victim, AFF_DETECT_MAGIC ) || item_has_apply( victim, ITEM_APPLY_DET_MAG ) )
       return FALSE;
    af.type = sn;
-   af.duration = 6 + ( level / 4 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 6 + ( level / 4 );
    af.modifier = 0;
    af.location = APPLY_NONE;
    af.bitvector = AFF_DETECT_MAGIC;
@@ -1596,7 +1614,10 @@ bool spell_detect_undead( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
       return FALSE;
 
    af.type = sn;
-   af.duration = 5 + ( level / 6 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 5 + ( level / 6 );
    af.modifier = 0;
    af.location = APPLY_NONE;
    af.bitvector = 0;
@@ -2108,7 +2129,10 @@ bool spell_encumber( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
       return TRUE;
    }
    af.type = sn;
-   af.duration = 5 + ( level / 16 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 5 + ( level / 16 );
    af.modifier = +40 + get_psuedo_level( ch ) / 5;
    af.location = APPLY_AC;
    af.bitvector = 0;
@@ -2207,7 +2231,10 @@ bool spell_faerie_fire( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    if( IS_AFFECTED( victim, AFF_FAERIE_FIRE ) )
       return ( ch == victim ? FALSE : TRUE );
    af.type = sn;
-   af.duration = 5 + ( level / 5 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 5 + ( level / 5 );
    af.location = APPLY_AC;
    af.modifier = 2 * level;
    af.bitvector = AFF_FAERIE_FIRE;
@@ -2264,7 +2291,10 @@ bool spell_fly( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    if( IS_AFFECTED( victim, AFF_FLYING ) )
       return ( ch == victim ? FALSE : TRUE );
    af.type = sn;
-   af.duration = 3 + ( level / 6 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 3 );
    af.location = 0;
    af.modifier = 0;
    af.bitvector = AFF_FLYING;
@@ -2321,7 +2351,10 @@ bool spell_giant_strength( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA
    if( is_affected( victim, sn ) )
       return FALSE;
    af.type = sn;
-   af.duration = -1;
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 3 );
    af.location = APPLY_STR;
    af.modifier = 2 + ( level >= 50 ) + ( level >= 65 );
    af.bitvector = 0;
@@ -2556,7 +2589,10 @@ bool spell_infravision( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    if( IS_AFFECTED( victim, AFF_INFRARED ) || item_has_apply( victim, ITEM_APPLY_INFRA ) )
       return ( ch == victim ? FALSE : TRUE );
    af.type = sn;
-   af.duration = 4 + ( level / 3 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 3 );
    af.location = APPLY_NONE;
    af.modifier = 0;
    af.bitvector = AFF_INFRARED;

@@ -61,7 +61,10 @@ bool spell_invis( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 
       act( "$n fades out of existence.", victim, NULL, NULL, TO_ROOM );
       af.type = sn;
-      af.duration = 4 + ( level / 5 );
+      if (ch == victim)
+         af.duration = -1;
+      else
+         af.duration = 4 + ( level / 5 );
       af.location = APPLY_NONE;
       af.modifier = 0;
       af.bitvector = AFF_INVISIBLE;
@@ -242,7 +245,10 @@ bool spell_mass_invis( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
       act( "$n slowly fades out of existence.", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You slowly fade out of existence.\n\r", gch );
       af.type = sn;
-      af.duration = 4 + ( level / 5 );
+      if (ch == victim)
+         af.duration = -1;
+      else
+         af.duration = 4 + ( level / 5 );
       af.location = APPLY_NONE;
       af.modifier = 0;
       af.bitvector = AFF_INVISIBLE;
@@ -271,7 +277,10 @@ bool spell_pass_door( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    if( IS_AFFECTED( victim, AFF_PASS_DOOR ) || item_has_apply( victim, ITEM_APPLY_PASS_DOOR ) )
       return FALSE;
    af.type = sn;
-   af.duration = 2 + ( level / 20 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 2 + ( level / 20 );
    af.location = APPLY_NONE;
    af.modifier = 0;
    af.bitvector = AFF_PASS_DOOR;
@@ -311,7 +320,10 @@ bool spell_protection( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
    if( IS_AFFECTED( victim, AFF_PROTECT ) || item_has_apply( victim, ITEM_APPLY_PROT ) )
       return ( ch == victim ? FALSE : TRUE );
    af.type = sn;
-   af.duration = 8 + ( level / 5 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 8 + ( level / 5 );
    af.location = APPLY_NONE;
    af.modifier = 0;
    af.bitvector = AFF_PROTECT;
@@ -362,7 +374,10 @@ bool spell_sanctuary( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    if( IS_AFFECTED( victim, AFF_SANCTUARY ) || item_has_apply( victim, ITEM_APPLY_SANC ) )
       return ( ch == victim ? FALSE : TRUE );
    af.type = sn;
-   af.duration = 5 + ( level / 20 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 5 + ( level / 20 );
    af.location = APPLY_NONE;
    af.modifier = 0;
    af.bitvector = AFF_SANCTUARY;
@@ -382,7 +397,10 @@ bool spell_sense_evil( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
    if( IS_AFFECTED( victim, AFF_DETECT_EVIL ) )
       return FALSE;
    af.type = sn;
-   af.duration = 5 + ( level / 10 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 5 + ( level / 10 );
    af.modifier = 0;
    af.location = APPLY_NONE;
    af.bitvector = AFF_DETECT_EVIL;
@@ -402,7 +420,10 @@ bool spell_shield( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    if( is_affected( victim, sn ) )
       return FALSE;
    af.type = sn;
-   af.duration = 4 + ( level / 5 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 5 );
    af.location = APPLY_AC;
    af.modifier = -20 - get_psuedo_level( ch ) / 5;
    af.bitvector = 0;
@@ -602,7 +623,10 @@ bool spell_warcry( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    if( victim->position == POS_FIGHTING || is_affected( victim, sn ) )
       return FALSE;
    af.type = sn;
-   af.duration = 4 + level;
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + level;
    af.location = APPLY_HITROLL;
    af.modifier = level / 16;
    af.bitvector = 0;
@@ -1113,7 +1137,10 @@ bool spell_barrier( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj 
       return FALSE;
 
    af.type = sn;
-   af.duration = 4 + ( level / 20 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 20 );
    af.location = APPLY_AC;
    af.modifier = -20 - get_psuedo_level( ch ) / 10;
    af.bitvector = 0;
@@ -1467,7 +1494,10 @@ bool spell_fighting_trance( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DAT
       return FALSE;
 
    af.type = sn;
-   af.duration = 6 + ( level / 20 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 6 + ( level / 20 );
    af.location = APPLY_HITROLL;
    af.modifier = get_psuedo_level( ch ) / 10;
    af.bitvector = 0;
@@ -1500,7 +1530,10 @@ bool spell_phase( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
       return FALSE;
 
    af.type = sn;
-   af.duration = 3 + ( level / 20 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 3 + ( level / 20 );
    af.location = APPLY_AC;
    af.modifier = -10 - get_psuedo_level( ch ) / 10;
    af.bitvector = AFF_PASS_DOOR;
@@ -1651,7 +1684,10 @@ bool spell_see_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    if( IS_AFFECTED( victim, AFF_DETECT_MAGIC ) || item_has_apply( victim, ITEM_APPLY_HIDE ) )
       return FALSE;
    af.type = sn;
-   af.duration = 6 + ( level / 4 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 6 + ( level / 4 );
    af.modifier = 0;
    af.location = APPLY_NONE;
    af.bitvector = AFF_DETECT_MAGIC;
@@ -1744,7 +1780,10 @@ bool spell_know_weakness( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
       return FALSE;
 
    af.type = sn;
-   af.duration = 2 + ( level >= 20 ) + ( level >= 40 ) + ( level >= 60 ) + ( level >= 80 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 2 + ( level >= 20 ) + ( level >= 40 ) + ( level >= 60 ) + ( level >= 80 );
    af.location = APPLY_HITROLL;
    af.modifier = 3;
    af.bitvector = 0;
@@ -1761,7 +1800,10 @@ bool spell_know_critical( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
       return FALSE;
 
    af.type = sn;
-   af.duration = 2 + ( level >= 20 ) + ( level >= 40 ) + ( level >= 60 ) + ( level >= 80 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 2 + ( level >= 20 ) + ( level >= 40 ) + ( level >= 60 ) + ( level >= 80 );
    af.location = APPLY_DAMROLL;
    af.modifier = 3;
    af.bitvector = 0;
@@ -1827,7 +1869,10 @@ bool spell_hypnosis( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
       stop_follower( victim );
    add_follower( victim, ch );
    af.type = sn;
-   af.duration = 3 + ( level / 8 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 3 + ( level / 8 );
    af.location = 0;
    af.modifier = 0;
    af.bitvector = AFF_CHARM;
@@ -2019,7 +2064,10 @@ bool spell_night_vision( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
       return ( ch == victim ? FALSE : TRUE );
    act( "$n's eyes glow red.\n\r", ch, NULL, NULL, TO_ROOM );
    af.type = sn;
-   af.duration = 4 + ( level / 3 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 3 );
    af.location = APPLY_NONE;
    af.modifier = 0;
    af.bitvector = AFF_INFRARED;
@@ -2108,7 +2156,10 @@ bool spell_mystic_armor( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
       return TRUE;
 
    af.type = sn;
-   af.duration = 4 + ( level / 3 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 4 + ( level / 3 );
    af.location = APPLY_AC;
    af.modifier = -10 - get_psuedo_level( ch ) / 8;
    af.bitvector = 0;
@@ -2135,7 +2186,10 @@ bool spell_flare( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    af.type = sn;
    af.location = APPLY_HITROLL;
    af.modifier = level / 4;
-   af.duration = 1 + ( level / 4 );
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 1 + ( level / 4 );
    af.bitvector = AFF_BLIND;
    affect_to_char( victim, &af );
    act( "$n invokes the power of Ra to produce a solar flare which blinds $N!", ch, NULL, victim, TO_NOTVICT );

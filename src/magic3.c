@@ -96,7 +96,10 @@ bool spell_deflect_weapon( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA
    if( is_affected( victim, sn ) )
       return FALSE;
    af.type = sn;
-   af.duration = 16;
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 16;
    af.modifier = -40 - get_psuedo_level( ch ) / 5;
    af.location = APPLY_AC;
    af.bitvector = 0;
@@ -184,7 +187,10 @@ bool spell_morale( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
       act( "$n seems much more willing to fight.", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You are inspired to fight better!\n\r", gch );
       af.type = sn;
-      af.duration = 4 + ( level / 5 );
+      if (ch == victim)
+         af.duration = -1;
+      else
+         af.duration = 4 + ( level / 5 );
       af.location = APPLY_DAMROLL;
       af.modifier = get_psuedo_level( ch ) / 10;
       af.bitvector = 0;
@@ -208,7 +214,10 @@ bool spell_leadership( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
       act( "$n looks more courageous!", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You fell courage wash over you!\n\r", gch );
       af.type = sn;
-      af.duration = 4 + ( level / 5 );
+      if (ch == victim)
+         af.duration = -1;
+      else
+         af.duration = 4 + ( level / 5 );
       af.location = APPLY_HITROLL;
       af.modifier = get_psuedo_level( ch ) / 10;
       af.bitvector = 0;
@@ -1370,7 +1379,10 @@ bool spell_holy_armor( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
    if( is_affected( victim, sn ) )
       return FALSE;
    af.type = sn;
-   af.duration = 12;
+   if (ch == victim)
+      af.duration = -1;
+   else
+      af.duration = 12;
    af.modifier = -80 - get_psuedo_level( ch ) / 5;
    af.location = APPLY_AC;
    af.bitvector = 0;
