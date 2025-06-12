@@ -494,6 +494,7 @@ const struct lookup_type tab_mob_flags[] = {
    {"werewolf", BIT_27, NO_USE},
    {"mount", BIT_28, 1000},
    {"no_blood", BIT_29, 4000},
+   {"noassist", BIT_31, 5000}, /*  mob is designed to not assist no matter what*/
    {NULL, 0}
 };
 

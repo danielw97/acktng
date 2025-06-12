@@ -953,6 +953,7 @@
 #define ACT_WEREWOLF           67108864         /* Werewolf mob         */ /* doesn't do anything in ack4.0 ZENFIX */
 #define ACT_MOUNT             134217728   /* Mountable MOB */
 #define ACT_NOBLOOD		BIT_29
+#define ACT_NOASSIST             BIT_30
 
 /* build bits for OLC -S- */
 #define ACT_BUILD_NOWT                0   /* not doing anything   */
