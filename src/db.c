@@ -2737,7 +2737,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
 
      if (IS_SET(pObjIndex->extra_flags, ITEM_RARE))
      {
-       ilevel = (ilevel * 4) / 3;
+       ilevel = (ilevel * 5) / 4;
      }
 
      if (ilevel > MAX_MORTAL)
