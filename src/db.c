@@ -2725,11 +2725,6 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
      int ac_val = 0;
      int stat_val = 0;
 
-     if (IS_SET(pObjIndex->extra_flags, ITEM_REMORT))
-     {
-       ilevel = MAX_MORTAL + (obj->level / 4);
-     }
-
      if (IS_SET(pObjIndex->extra_flags, ITEM_MAGIC))
      {
        ilevel = (ilevel * 6) / 5;
