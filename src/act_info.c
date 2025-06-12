@@ -427,7 +427,6 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
                strcat(sendBuf, " claws");
                break;
             case WEAR_HOLD_HAND_L:
-            case WEAR_HOLD_HAND_R:
                strcat(sendBuf, " hold");
                break;
             default:
