@@ -80,8 +80,8 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    if (element == REALM_WATER)
    {
       strcpy(name, "Water Elemental");
-      strcpy(short_desc, "@@bW@@Bater @@bE@@Blemental@@N");
-      strcpy(long_desc, "A @@bW@@Bater @@bE@@Blemental@@N surfs here.");
+      strcpy(short_desc, "@@lW@@Bater @@lE@@Blemental@@N");
+      strcpy(long_desc, "A @@lW@@Bater @@lE@@Blemental@@N surfs here.");
       base_penalty = 40;
    }
    else if (element == REALM_FIRE)
@@ -94,8 +94,8 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    else if (element == REALM_EARTH)
    {
       strcpy(name, "Earth Elemental");
-      strcpy(short_desc, "@@bE@@Barth @@bE@@Blemental@@N");
-      strcpy(long_desc, "A @@bE@@Barth @@bE@@Blemental@@N rumbles here.");
+      strcpy(short_desc, "@@yE@@barth @@yE@@blemental@@N");
+      strcpy(long_desc, "A @@yE@@barth @@yE@@blemental@@N rumbles here.");
       base_penalty = 35;
    }
    else if (element == REALM_NEGATIVE)
