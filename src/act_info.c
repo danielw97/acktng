@@ -358,13 +358,82 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
    {
       if (race_table[i].wear_locs[j] == TRUE)
       {
-         sprintf(buf, "@@W%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
-         strcat(sendBuf, buf);
-      }
-      else
-      {
-         sprintf(buf, "@@d%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
-         strcat(sendBuf, buf);
+         switch ( j )
+         {
+            case WEAR_FINGER_L:
+               strcat(sendBuf, " finger");
+               break;
+            case WEAR_NECK_1:
+               strcat(sendBuf, " neck");
+               break;
+            case WEAR_BODY:
+               strcat(sendBuf, " body");
+               break;
+            case WEAR_HEAD:
+               strcat(sendBuf, " head");
+               break;
+            case WEAR_LEGS:
+               strcat(sendBuf, " legs");
+               break;
+            case WEAR_FEET:
+               strcat(sendBuf, " feet");
+               break;
+            case WEAR_HANDS:
+               strcat(sendBuf, " hands");
+               break;
+            case WEAR_ARMS:
+               strcat(sendBuf, " arms");
+               break;
+            case WEAR_TAIL:
+               strcat(sendBuf, " tail");
+               break;
+            case WEAR_ABOUT:
+               strcat(sendBuf, " about");
+               break;
+            case WEAR_WAIST:
+               strcat(sendBuf, " waist");
+               break;
+            case WEAR_WRIST_L:
+               strcat(sendBuf, " wrist");
+               break;
+            case WEAR_HORNS:
+               strcat(sendBuf, " horns");
+               break;
+            case WEAR_BEAK:
+               strcat(sendBuf, " beak");
+               break;
+            case WEAR_FACE:
+               strcat(sendBuf, " face");
+               break;
+            case WEAR_EAR_L:
+            case WEAR_EAR_R:
+               strcat(sendBuf, " ear");
+               break;
+            case WEAR_HOOVES:
+               strcat(sendBuf, " hooves");
+               break;
+            case WEAR_AURA:
+               strcat(sendBuf, " aura");
+               break;
+            case WEAR_HALO:
+               strcat(sendBuf, " halo");
+               break;
+            case WEAR_WINGS:
+               strcat(sendBuf, " wings");
+               break;
+            case WEAR_SHOULDERS:
+               strcat(sendBuf, " shoulders");
+               break;
+            case WEAR_CLAWS:
+               strcat(sendBuf, " claws");
+               break;
+            case WEAR_HOLD_HAND_L:
+            case WEAR_HOLD_HAND_R:
+               strcat(sendBuf, " hold");
+               break;
+            default:
+               break;
+         }
       }
    }
 
