@@ -1372,7 +1372,7 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
 void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, int dam )
 {
    char buf[MAX_STRING_LENGTH];
-   int chance = 10, potency = 10;
+   int chance = 10, potency = 15;
 
    chance += ch->lvl[CLASS_MAG]/20;
 
@@ -1381,7 +1381,7 @@ void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, int dam )
    else if (ch->lvl2[CLASS_WIZ] > 0)
       chance += ch->lvl2[CLASS_WIZ]/10;
 
-   potency += ch->lvl[CLASS_PSI]/20;
+   potency += ch->lvl[CLASS_PSI]/10;
 
    if (ch->lvl2[CLASS_NEC] > 0)
       potency += ch->lvl2[CLASS_NEC]/10;
