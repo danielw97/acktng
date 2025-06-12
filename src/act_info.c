@@ -357,8 +357,10 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
    for(int j = 0; j < MAX_ITEM_BIT; j++)
    {
       if (race_table[i].wear_locs[j] == TRUE)
+      {
          sprintf(buf, "@@W%s@@N ", bit_table_lookup( tab_wear_flags, 1<<j));
-      strcat(sendBuf, buf);
+         strcat(sendBuf, buf);
+      }
    }
 
    send_to_char(sendBuf,ch);
