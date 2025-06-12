@@ -361,7 +361,12 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
       if (race_table[0].wear_locs[j] == TRUE != race_table[i].wear_locs[j] == FALSE)
       {
          found_slot = TRUE;
-         sprintf(buf, "%s ", tab_wear_flags[j].text);
+         sprintf(buf,"Found %d at bit %d\r\n", j, 1<<j);
+         send_to_char(buf);
+         if (race_table[0].wear_locs[j] == TRUE)
+            sprintf(buf, "@@W%s @@N", tab_wear_flags[j].text);
+         else
+            sprintf(buf, "@@d%s @@N", tab_wear_flags[j].text);
          strcat(sendBuf, buf);
       }
    }
