@@ -1392,7 +1392,7 @@ void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, int dam )
    {
       int ls = dam * potency / 100;
 
-      ls = number_range(ls * 75 / 100, ls * 125 / 100);
+      ls = number_range(ls * 95 / 100, ls * 130 / 100);
 
       sprintf(buf, "@@W$n screams in @@Ragony@@W as an evil @@da@@eur@@da@@W flows from $p!@@N (@@r%d@@N)", ls);
       act( buf, victim, wield, ch, TO_NOTVICT );
