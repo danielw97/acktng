@@ -792,7 +792,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       if( ( wield )
           && ( dam > 0 ) && ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) )
       {
-	 do_lifesteal(ch, victim, wield, dam);
+	      do_lifesteal(ch, victim, wield, dam);
       }
    }
 
@@ -1372,30 +1372,39 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
 void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, int dam )
 {
    char buf[MAX_STRING_LENGTH];
-      if ( number_range( 0, 99 ) < ( wield->level / 4 ) )
-      {
-         int ls;
+   int chance = 10, potency = 10;
 
-         if( ( ch->lvl2[CLASS_SOR] > 0 ) || ( ch->lvl2[CLASS_NEC] > 0 ) )
-         {
-            ls = number_range( dam * .075, dam * 1.72 );
-         }
-         else
-         {
-            ls = number_range( dam * .03, dam * .13 );
-         }
+   chance += ch->lvl[CLASS_MAG]/20;
 
-         sprintf(buf, "@@W$n screams in @@Ragony@@W as an evil @@da@@eur@@da@@W flows from $p!@@N (@@r%d@@N)", ls);
-         act( buf, victim, wield, ch, TO_NOTVICT );
-         sprintf(buf, "@@WYou feel a surge of health as $p sucks the life of $N@@N!! (@@r%d@@N)", ls);
-         act( buf, ch, wield, victim, TO_CHAR );
-         sprintf(buf, "@@WYou scream in @@Ragony@@W as $p shrieks, and shrouds you in an evil @@da@@eur@@da@@N!! (@@r%d@@N)", ls);
-         act( buf, victim, wield, ch, TO_CHAR );
+   if (ch->lvl2[CLASS_SOR] > 0)
+      chance += ch->lvl2[CLASS_SOR]/10;
+   else if (ch->lvl2[CLASS_WIZ] > 0)
+      chance += ch->lvl2[CLASS_WIZ]/10;
 
-         ch->hit = UMIN( ch->max_hit, ch->hit + ls );
+   potency += ch->lvl[CLASS_PSI]/20;
 
-         ch->alignment = UMAX( -1000, ch->alignment - 50 );
-      }
+   if (ch->lvl2[CLASS_NEC] > 0)
+      potency += ch->lvl2[CLASS_NEC]/10;
+   else if (ch->lvl2[CLASS_EGO] > 0)
+      potency += ch->lvl2[CLASS_EGO]/10;
+
+   if ( number_range( 0, 99 ) < chance )
+   {
+      int ls = dam * potency / 100;
+
+      ls = number_range(ls * 75 / 100, ls * 125 / 100);
+
+      sprintf(buf, "@@W$n screams in @@Ragony@@W as an evil @@da@@eur@@da@@W flows from $p!@@N (@@r%d@@N)", ls);
+      act( buf, victim, wield, ch, TO_NOTVICT );
+      sprintf(buf, "@@WYou feel a surge of health as $p sucks the life of $N@@N!! (@@r%d@@N)", ls);
+      act( buf, ch, wield, victim, TO_CHAR );
+      sprintf(buf, "@@WYou scream in @@Ragony@@W as $p shrieks, and shrouds you in an evil @@da@@eur@@da@@N!! (@@r%d@@N)", ls);
+      act( buf, victim, wield, ch, TO_CHAR );
+
+      ch->hit = UMIN( ch->max_hit, ch->hit + ls );
+
+      ch->alignment = UMAX( -1000, ch->alignment - 50 );
+   }
 
 }
 
