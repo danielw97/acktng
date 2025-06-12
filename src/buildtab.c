@@ -521,6 +521,7 @@ const struct lookup_type tab_mob_skill[] = {
    {"5_attack", 131072, 500},
    {"6_attack", 262144, 600},
    {"charge", 524288, 700},
+   {"counter", BIT_21, 500}
    {NULL, 0, 0}
 };
 const struct lookup_type tab_mob_powerskill[] = {
