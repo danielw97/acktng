@@ -358,7 +358,7 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
 
    for(int j = 0; j < MAX_WEAR; j++)
    {
-      if (race_table[0].wear_locs[j] == TRUE != race_table[i].wear_locs[j] == FALSE)
+      if (race_table[0].wear_locs[j] != race_table[i].wear_locs[j])
       {
          found_slot = TRUE;
          sprintf(buf,"Found %d at bit %d\r\n", j, 1<<j);
