@@ -418,6 +418,8 @@ long_int exp_for_mobile( int level, CHAR_DATA * mob )
       value += .150 * base_value;
    if( IS_SET( mob->skills, MOB_DODGE ) )
       value += .150 * base_value;
+   if( IS_SET( mob->skills, MOB_COUNTER ) )
+      value += .200 * base_value;
    if( IS_SET( mob->skills, MOB_PARRY ) )
       value += .05 * base_value;
    if( IS_SET( mob->skills, MOB_MARTIAL ) )

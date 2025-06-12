@@ -994,6 +994,7 @@
 #define MOB_FIFTH			131072
 #define MOB_SIXTH			262144
 #define MOB_CHARGE			524288
+#define MOB_COUNTER			BIT_21
 
 /*
  * New bits to determine what spells a mob will cast in combat -S-

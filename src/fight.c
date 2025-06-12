@@ -1793,7 +1793,7 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
    if( !IS_AWAKE( victim ) )
       return FALSE;
 
-   if( IS_NPC( victim ) && !IS_SET( victim->skills, MOB_DODGE ) )
+   if( IS_NPC( victim ) && !IS_SET( victim->skills, MOB_COUNTER ) )
       return FALSE;
 
    if (!IS_NPC(victim) && victim->pcdata->learned[gsn_counter] < 1)
