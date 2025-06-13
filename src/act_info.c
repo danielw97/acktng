@@ -5114,7 +5114,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
          if ( ch->lvl[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
          {
             any = TRUE;
-            cost = exp_to_level( ch, cnt, ( ch->pcdata )->index[cnt] );
+            cost = exp_to_level( ch, cnt, FALSE );
 
             sprintf( buf, "%s : %d Exp.\n\r", class_table[cnt].who_name, cost );
             send_to_char( buf, ch );
@@ -5124,7 +5124,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
          if( ch->lvl2[cnt] != -1 && ch->lvl2[cnt] < MAX_MORTAL )
          {
             any = TRUE;
-            cost = exp_to_level( ch, cnt, 5 );  /* 5 means remort */
+            cost = exp_to_level( ch, cnt, TRUE );  /* 5 means remort */
             sprintf( buf, "%s : %d Exp.\n\r", remort_table[cnt].who_name, cost );
             send_to_char( buf, ch );
          }
@@ -5223,7 +5223,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
    else if( vamp )
       vamp_cost = exp_to_level_vamp( ch->pcdata->vamp_level );
    else if( remort )
-      cost = exp_to_level( ch, c, 5 );
+      cost = exp_to_level( ch, c, TRUE );
    else if( adept )
    {
       if( ch->adept_level < 1 )
@@ -5239,7 +5239,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
        return;
      }
 
-      cost = exp_to_level( ch, c, ( ch->pcdata->index[c] ) );
+      cost = exp_to_level( ch, c, FALSE );
    }
 
    if( vamp )
@@ -5805,7 +5805,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
          if (ch->pcdata->index[cnt] > -1)
          {
            any = TRUE;
-           cost = exp_to_level( ch, cnt, ( ch->pcdata )->index[cnt] );
+           cost = exp_to_level( ch, cnt, FALSE );
 
            sprintf( buf, "%-14s  %9d %9d.\n\r", class_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
            send_to_char( buf, ch );
@@ -5819,7 +5819,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
       if( ch->lvl2[cnt] != -1 && ch->lvl2[cnt] < LEVEL_HERO - 1 )
       {
          any = TRUE;
-         cost = exp_to_level( ch, cnt, 5 );  /* Pass 5 for remort */
+         cost = exp_to_level( ch, cnt, TRUE );
          sprintf( buf, "%-14s  %9d %9d.\n\r", remort_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
          send_to_char( buf, ch );
       }

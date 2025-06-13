@@ -1519,10 +1519,10 @@ mino minotaur captain~
 @@dThe @@eCaptain@@d of the Keep's guard stands here, growling at you.
 ~
 ~
-36700243 19112 -500 S
+36700243 2728 -500 S
 130 1
--700 400 400
-! 0 0 12 7 155150 50331648 48
+-100 400 400
+! 0 0 12 7 134670 50331648 32
 | 0 0 0 0 0 0 0
 #1301
 minotaur guard~
@@ -1531,9 +1531,9 @@ minotaur guard~
 ~
 ~
 3145795 1048808 250 S
-124 1
--500 320 300
-! 0 0 12 7 155150 0 0
+122 1
+-200 320 300
+! 0 0 12 7 138766 0 0
 | 0 0 0 0 0 0 0
 #1302
 minotaur patrol~
@@ -1542,9 +1542,9 @@ minotaur patrol~
 ~
 ~
 3145793 1048744 0 S
-126 1
--800 300 300
-! 0 0 12 7 24078 0 0
+124 1
+-400 300 300
+! 0 0 12 7 7694 0 0
 | 0 0 0 0 0 0 0
 #1303
 Gate Guard Minotaur~
@@ -1553,7 +1553,7 @@ Gate Guard Minotaur~
 ~
 ~
 67 2216 -1000 S
-129 1
+128 1
 -100 100 100
 ! 0 0 12 7 7694 0 32
 | 0 0 0 0 0 0 0
@@ -1565,8 +1565,8 @@ minotaur cook~
 ~
 7 168 0 S
 108 1
--750 600 650
-! 0 0 12 7 24078 1064960 8
+-350 300 300
+! 0 0 12 7 7694 1064960 8
 | 0 0 0 0 0 0 0
 #1305
 minotaur swordsman swordsmaster trainer~
@@ -1574,10 +1574,10 @@ minotaur swordsman swordsmaster trainer~
 @@dA @@eMinotaur@@d Swordsmaster shouts commands to his pupils.@@N
 ~
 ~
-36700227 18664 0 S
-130 1
--600 500 500
-! 0 0 12 7 417294 50331648 48
+36700227 2216 0 S
+131 1
+0 300 300
+! 0 0 12 7 1550 50331648 32
 | 0 0 0 0 0 0 0
 #1306
 minotaur swordsman student~
@@ -1586,8 +1586,8 @@ minotaur swordsman student~
 ~
 ~
 67 168 0 S
-116 1
--600 220 250
+118 1
+0 220 250
 ! 0 0 12 7 24078 0 0
 | 0 0 0 0 0 0 0
 #1307
@@ -1598,8 +1598,8 @@ mino minotaur soldier~
 ~
 67 131240 -250 S
 121 1
--740 400 350
-! 0 0 12 7 155150 0 0
+0 300 250
+! 0 0 12 7 138766 0 0
 | 0 0 0 0 0 0 0
 #1308
 prison mob~
@@ -1610,7 +1610,7 @@ prison mob~
 ~
 131089 12348 100 S
 118 1
--670 245 255
+0 245 255
 ! 3 0 12 7 526350 0 2
 | 0 0 0 0 0 0 0
 #1309
@@ -1621,7 +1621,7 @@ A Prison Guard stands here, guarding the prisoners.
 ~
 3 141500 0 S
 136 1
--700 400 400
+0 200 200
 ! 0 0 12 7 399406 4096 0
 | 0 0 0 0 0 0 0
 #0
@@ -1653,7 +1653,7 @@ cloak~
 ~
 9 146800640 8454144 1
 0 0 0 0 0 0 0 0 0 0
-20
+10
 A
 17 -220
 A
@@ -1672,7 +1672,7 @@ flaming blade~
 @@WA @@ygolden @@Wblade with @@erubies @@Wencrusted in the hilt lies forgotten.@@N~
 5 134217735 8421376 257
 0 0 0 1 0 0 0 0 0 0
-35
+8
 A
 19 27
 A
@@ -1708,7 +1708,7 @@ buckler~
 @@WA small @@bbuckler@@N, with one central @@eruby@@N and a @@ysun@@W emblazoned around it lies here.@@N~
 9 146800672 8421376 1
 0 0 0 0 0 0 0 0 0 0
-40
+10
 A
 17 -240
 A
@@ -1747,8 +1747,6 @@ E 0 4978 0 14 (null)
 M 0 1304 1 1320 (null)
 
 M 0 1305 1 1324 (null)
-
-G 0 4808 0 (null)
 
 E 0 1304 0 11 (null)
 
@@ -1823,6 +1821,5 @@ S
 #OBJFUNS
 O 1302 objfun_healing
 O 1305 objfun_flaming
-O 1303 objfun_dispeller
 S
 #$

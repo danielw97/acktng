@@ -230,7 +230,7 @@ int get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
       {
          if (i != class && ch->lvl2[i] > 0)
          {
-            double_remort = true;
+            double_remort = TRUE;
          }
       }
    }

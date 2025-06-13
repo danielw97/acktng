@@ -1546,7 +1546,7 @@ sh_int get_remort_level args( ( CHAR_DATA * ch ) );
 sh_int get_psuedo_level args( ( CHAR_DATA * ch ) );
 bool ok_to_use args( ( CHAR_DATA * ch, int value ) );
 bool check_level_use args( ( CHAR_DATA * ch, int level ) );
-int exp_to_level args( ( CHAR_DATA * ch, int class, int index ) );
+int exp_to_level args( ( CHAR_DATA * ch, int index, bool remort ) );
 int exp_for_mobile args( ( int level, CHAR_DATA * mob ) );
 int skill_table_lookup args( ( CHAR_DATA * ch, int sn, int return_type ) );
 bool is_remort args( ( CHAR_DATA * ch ) );
