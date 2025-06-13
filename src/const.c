@@ -1783,7 +1783,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "regen", {23, 182, 182, 182, 182, 182},
+    "regen", {5, 182, 182, 182, 182, 182},
     spell_regen, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18,
     "", "You are no longer regenerating quickly.",
