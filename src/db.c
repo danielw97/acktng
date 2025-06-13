@@ -138,6 +138,7 @@ sh_int gsn_scout;
 sh_int gsn_decapitate;
 sh_int gsn_potency;
 sh_int gsn_thaumatergy;
+sh_int gsn_warcry;
 
 
 #ifdef TFS

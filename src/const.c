@@ -2211,10 +2211,10 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "beserk", {182, 182, 182, 34, 182, 182},
+    "berserk", {182, 182, 182, 34, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_beserk, SLOT( 0 ), 0, 24,
-    "", "You calm down!",
+    "berserk", "You calm down!",
     "$n looks calmer!"},
 
 
@@ -2273,7 +2273,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "circle", {182, 182, 19, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_circle, SLOT( 0 ), 0, 24,
-    "backstab", "!circle!",
+    "circle", "!circle!",
     ""},
 
    {
@@ -2574,6 +2574,13 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "!INSTRUCT!",
     ""},
 
+   {
+    MORTAL, NORM,
+    "warcry", {182, 182, 10, 182, 182, 182},
+    spell_null, TAR_IGNORE, POS_STANDING,
+    &gsn_warcry, SLOT( 0 ), 0, 24,
+    "warcry", "!Warcry!",
+    ""},
 
    {
     MORTAL, NORM,

@@ -113,6 +113,7 @@ extern sh_int gsn_scout;
 extern sh_int gsn_decapitate;
 extern sh_int gsn_potency;
 extern sh_int gsn_thaumatergy;
+extern sh_int gsn_warcry;
 
 #ifdef TFS
 extern sh_int gsn_mana_sense;
