@@ -302,6 +302,7 @@ DECLARE_DO_FUN( do_togcouncil );
 DECLARE_DO_FUN( do_council );
 DECLARE_DO_FUN( do_rename );
 DECLARE_DO_FUN( do_sdelete );
+DECLARE_DO_FUN( do_warcry );
 
 
 
