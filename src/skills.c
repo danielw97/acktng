@@ -1172,7 +1172,7 @@ void do_kick( CHAR_DATA * ch, char *argument )
    return;
 }
 
-bool do_warcry( CHAR_DATA * ch, char *argument )
+void do_warcry( CHAR_DATA * ch, char *argument )
 /* --Stephen 
  * FIXME: make this a warrior skill, check for bless.
  */
