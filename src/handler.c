@@ -384,7 +384,7 @@ int get_curr_con( CHAR_DATA * ch )
 
    max = get_max_con( ch );
 
-   return URANGE( 3, race_table[ch->race].race_con + ch->pcdata->mod_con, max + 3);
+   return URANGE( 3, max + ch->pcdata->mod_con, max + 3);
 }
 
 int get_max_con( CHAR_DATA *ch )
