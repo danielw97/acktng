@@ -196,6 +196,8 @@ long_int exp_to_level( CHAR_DATA * ch, int index, bool remort )
    long_int cost;
    int a;
 
+   if (IS_NPC(ch))
+      return 69;
 
    if( remort && ( ch->lvl2[index] <= 0 ) )
       return 0;
@@ -209,27 +211,16 @@ long_int exp_to_level( CHAR_DATA * ch, int index, bool remort )
       the proper values later.  */
 
 
-   switch ( index )
-   {
-      case 0:
+   if (index == ch->pcdata->index[0])
          mult = 3;
-         break;
-      case 1:
+   else if (index == ch->pcdata->index[1])
          mult = 4;
-         break;
-      case 2:
+   else if (index == ch->pcdata->index[2])
          mult = 5;
-         break;
-      case 3:
+   else if (index == ch->pcdata->index[3])
          mult = 6;
-         break;
-      case 4:
+   else if (index == ch->pcdata->index[4])
          mult = 7;
-         break;
-      case 5:
-         mult = 8;
-         break;
-   }
 
    if( remort )
    {
