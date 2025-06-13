@@ -1687,9 +1687,9 @@ void build_setmob( CHAR_DATA * ch, char *argument )
 
    if( !str_cmp( arg2, "level" ) )
    {
-      if( value < 1 || value > 140 )
+      if( value < 1 || value > 170 )
       {
-         send_to_char( "Level range is 1 to 140.\n\r", ch );
+         send_to_char( "Level range is 1 to 170.\n\r", ch );
          return;
       }
       pMob->level = value;
@@ -2597,7 +2597,7 @@ void build_setobject( CHAR_DATA * ch, char *argument )
    }
    if( !str_cmp( arg2, "level" ) )
    {
-      if( value < 1 || value > 120 )
+      if( value < 1 || value > 150 )
       {
          send_to_char( "item level is 1 to 120.\n\r", ch );
          return;
