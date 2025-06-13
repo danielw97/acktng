@@ -1940,14 +1940,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "warcry", {182, 182, 182, 5, 182, 182},
-    spell_warcry, TAR_CHAR_SELF, POS_STANDING,
-    NULL, SLOT( 501 ), 5, 12,
-    "", "You feel less protected.",
-    ""},
-
-   {
-    MORTAL, NORM,
     "weaken", {182, 20, 182, 182, 182, 182},
     spell_weaken, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 68 ), 20, 12,
