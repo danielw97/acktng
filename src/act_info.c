@@ -5079,6 +5079,9 @@ void do_gain( CHAR_DATA * ch, char *argument )
          morts_at_max++;
       if( ch->lvl2[cnt] == MAX_MORTAL )
          remorts_at_max++;
+   }
+   for( cnt = 0; cnt < MAX_REMORT; cnt++ )
+   {
       if( ch->lvl2[cnt] > -1 )
          num_remorts++;
    }
@@ -5120,7 +5123,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
             send_to_char( buf, ch );
          }
 
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+      for( cnt = 0; cnt < MAX_REMORT; cnt++ )
          if( ch->lvl2[cnt] != -1 && ch->lvl2[cnt] < MAX_MORTAL )
          {
             any = TRUE;

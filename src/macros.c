@@ -226,14 +226,16 @@ long_int exp_to_level( CHAR_DATA * ch, int index, bool remort )
       case 4:
          mult = 7;
          break;
-      default:
-         mult = 23;  /* i.e. remort class */
-         remort = TRUE;
+      case 5:
+         mult = 8;
          break;
    }
 
    if( remort )
+   {
+      mult = 23;  /* i.e. remort class */
       level = UMAX( 0, ch->lvl2[index] );
+   }
    else
       level = UMAX( 0, ch->lvl[index] );
 
