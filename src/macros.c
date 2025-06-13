@@ -182,7 +182,7 @@ long_int exp_to_level_adept( CHAR_DATA * ch )
 
 
 
-long_int exp_to_level( CHAR_DATA * ch, int class, int index )
+long_int exp_to_level( CHAR_DATA * ch, int index, bool remort )
 {
 
    /*
@@ -195,10 +195,9 @@ long_int exp_to_level( CHAR_DATA * ch, int class, int index )
    int totlevels = 0, diff;
    long_int cost;
    int a;
-   bool remort = FALSE;
 
 
-   if( ( index == 5 ) && ( ch->lvl2[class] <= 0 ) )
+   if( remort && ( ch->lvl2[index] <= 0 ) )
       return 0;
 
 
@@ -233,10 +232,10 @@ long_int exp_to_level( CHAR_DATA * ch, int class, int index )
          break;
    }
 
-   if( index == 5 )
-      level = UMAX( 0, ch->lvl2[class] );
+   if( remort )
+      level = UMAX( 0, ch->lvl2[index] );
    else
-      level = UMAX( 0, ch->lvl[class] );
+      level = UMAX( 0, ch->lvl[index] );
 
    /*
     * Adjust level to make costs higher 
@@ -248,15 +247,15 @@ long_int exp_to_level( CHAR_DATA * ch, int class, int index )
       if( ch->lvl2[a] > 0 )
          totlevels += ch->lvl2[a];
    }
-   if( index != 5 )
-      next_level_index = ch->lvl[class];
+   if( !remort )
+      next_level_index = ch->lvl[index];
    else
-      next_level_index = UMIN( ch->lvl2[class] + 20, 79 );
+      next_level_index = UMIN( ch->lvl2[index] + 20, 79 );
 
    if( next_level_index < 0 )
       next_level_index = 0;
 
-   cost = get_cost_to_level( ch, class, remort );
+   cost = get_cost_to_level( ch, index, remort );
 
 
    /*
@@ -277,7 +276,7 @@ long_int exp_to_level( CHAR_DATA * ch, int class, int index )
    /*
     * REALLY discourage uneven levelling :P  
     */
-   if( ( index != 5 ) && ( ( ch->level - ch->lvl[class] ) > 25 ) )
+   if( !remort && ( ( ch->level - ch->lvl[index] ) > 25 ) )
       cost *= ( diff / 7 );
 
 

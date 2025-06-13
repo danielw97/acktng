@@ -215,24 +215,40 @@ int get_age( CHAR_DATA * ch )
 int get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
 {
     char buf[MAX_STRING_LENGTH];
-    int base,i,multi;
+    int base, i;
+    bool double_remort = FALSE;
 
     if (remort)
       base = ch->lvl2[class] * ch->lvl2[class];
     else
       base = ch->lvl[class] * ch->lvl[class];
 
-    if (!remort)
+   if (remort)
+   {
+      // Gotta check if double remort
+      for(i = 0; i < MAX_REMORT; i++)
+      {
+         if (i != class && ch->lvl2[i] > 0)
+         {
+            double_remort = true;
+         }
+      }
+   }
+
+   if (!remort)
       base *= 600;
-    else
-      base *= 3500; 
+   else if (double_remort && remort)
+      base *= 4000; 
+   else
+      base *= 3000;
 
 
-    if (ch->lvl[class] > 0)
+
+    if (!remort && ch->lvl[class] > 0)
       base += 350;
 
 
-    for(int i = 0; i < MAX_CLASS; i++)
+    for(i = 0; i < MAX_CLASS; i++)
     {
       if (race_table[ch->race].limit[i] == class)
       {

@@ -2658,7 +2658,7 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
        */
       if( funky < 0 )
          funky = 823421;
-      funky = UMIN( funky, 3000000 );
+      funky = UMIN( funky, 5000000 );
 
       funky *= number_range(150,250);
       funky /= 100;
