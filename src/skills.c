@@ -1224,7 +1224,7 @@ bool spell_warcry( CHAR_DATA * ch, char *argument )
    af.modifier = 0 - level / 16;
    affect_to_char( ch, &af );
 
-   send_to_char( "You scream a great warcry!\n\r", victim );
+   send_to_char( "You scream a great warcry!\n\r", ch );
    act( "$n screams a great warcry!", ch, NULL, NULL, TO_ROOM );
    return TRUE;
 }
