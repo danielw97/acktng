@@ -242,10 +242,8 @@ int get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
    else
       base *= 3000;
 
-
-
-    if (!remort && ch->lvl[class] > 0)
-      base += 350;
+   // Edge-case fix
+   base += 350;
 
 
     for(i = 0; i < MAX_CLASS; i++)
