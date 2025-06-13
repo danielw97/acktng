@@ -1767,7 +1767,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "psionic recovery", {182, 182, 182, 182, 18, 182},
+    "psionic recovery", {182, 182, 182, 182, 5, 182},
     spell_psionic_recovery, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 78 ), 5, 12,
     "", "You feel less protected.",
