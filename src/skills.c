@@ -1210,11 +1210,6 @@ void do_warcry( CHAR_DATA * ch, char *argument )
 
    af.type = gsn_warcry;
    af.duration = -1;
-   af.location = APPLY_AC;
-   af.modifier = ( best == 2 ) ? level : ( level * 2 );
-   af.bitvector = 0;
-   affect_to_char( ch, &af );
-
    af.location = APPLY_HITROLL;
    af.modifier = level / 16;
    af.bitvector = 0;
