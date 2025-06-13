@@ -1218,16 +1218,14 @@ bool spell_warcry( CHAR_DATA * ch, char *argument )
    af.location = APPLY_HITROLL;
    af.modifier = level / 16;
    af.bitvector = 0;
-   affect_to_char( victim, &af );
+   affect_to_char( ch, &af );
 
    af.location = APPLY_SAVING_SPELL;
    af.modifier = 0 - level / 16;
-   affect_to_char( victim, &af );
+   affect_to_char( ch, &af );
 
    send_to_char( "You scream a great warcry!\n\r", victim );
-   act "$n screams a great warcry!", ch, NULL, NULL, TO_ROOM
-   if( ch != victim )
-      send_to_char( "Ok.\n\r", ch );
+   act( "$n screams a great warcry!", ch, NULL, NULL, TO_ROOM );
    return TRUE;
 }
 
