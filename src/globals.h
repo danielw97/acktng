@@ -64,6 +64,10 @@ extern sh_int gsn_enhanced_critical;
 extern sh_int gsn_spell_critical;
 extern sh_int gsn_spell_critical_damage;
 extern sh_int gsn_detox;
+extern sh_int gsn_enhanced_sword;
+extern sh_int gsn_enhanced_sword_critical;
+extern sh_int gsn_two_handed;
+extern sh_int gsn_bare_hand;
 
 extern sh_int gsn_circle;
 extern sh_int gsn_backstab;

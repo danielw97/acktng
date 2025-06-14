@@ -2294,8 +2294,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "dualwield", {182, 8, 5, 7, 182, 182,
-                  182, 8, 5, 7, 182, 182},
+    "dualwield", {182, 182, 5, 182, 182, 182,
+                  182, 182, 5, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_dualwield, SLOT( 0 ), 0, 0,
     "", "!DualWield!",
@@ -2639,7 +2639,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "Morale", "!Morale!",
     ""},
 
-
    {
     REMORT, NORM,
     "leadership", {182, 24, 182, 12, 182, 182,
@@ -2648,6 +2647,44 @@ const struct skill_type skill_table[MAX_SKILL] = {
     NULL, SLOT( 604 ), 75, 24,
     "Leadership", "!Leadership!",
     ""},
+
+   {
+    REMORT, NORM,
+    "two handed", {182, 8, 182, 6, 182, 182,
+                   182, 182, 182, 6, 182, 182},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_two_handed, SLOT( 0 ), 0, 0,
+    "", "!Two Handed!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "bare hand", {182, 182, 182, 182, 182, 6,
+                   182, 182, 182, 182, 182, 6},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_bare_hand, SLOT( 0 ), 0, 0,
+    "", "!Enhanced Sword!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "enhanced sword damage", {182, 182, 182, 182, 182, 182,
+                   182, 182, 182, 20, 182, 182},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_enhanced_sword, SLOT( 0 ), 0, 0,
+    "", "!Enhanced Sword!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "enhanced sword critical", {182, 182, 182, 182, 182, 182,
+                   182, 182, 182, 40, 182, 182},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_enhanced_sword_critical, SLOT( 0 ), 0, 0,
+    "", "!Enhanced Sword Critical!",
+    ""},
+
+
    {
     REMORT, NORM,
     "Ice Bolt", {3, 182, 182, 182, 182, 182,

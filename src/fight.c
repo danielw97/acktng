@@ -592,7 +592,6 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
        if (number_percent() < chance)
           dt = TYPE_MARTIAL;
      }
- 
 
    /*
     * Calculate to-hit-armor-class-0 versus armor.
@@ -703,6 +702,11 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
             dam * ch->pcdata->learned[gsn_enhanced_damage] / 150 : dam * .4;
    }
 
+   if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword] > 0 )
+   {
+      dam += dam * number_range(20,40)/100;
+   }
+
    if( !IS_AWAKE( victim ) )
       dam *= 1.5;
    /*
@@ -711,11 +715,28 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if( dt == TYPE_MARTIAL )
       dam = ( dam * 4 ) / 3;
 
+   if (wield == NULL && get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL && !IS_NPC(ch) && ch->pcdata->learned[gsn_bare_hand] > 0)
+   {
+      if (ch->lvl2[CLASS_MON] > 0)
+        dam += dam * ch->lvl2[CLASS_MON] / 5 / 100;
+
+      else if (ch->lvl2[CLASS_BRA] > 0)
+        dam += dam * ch->lvl2[CLASS_BRA] / 10 / 100;
+
+      else
+        dam += dam * 5 / 100;
+   }
+
    int critical_chance = 5;
 
    if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
    {
       critical_chance += ch->pcdata->learned[gsn_enhanced_critical]/20;
+   }
+
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
+   {
+      critical_chance += ch->lvl2[CLASS_SWO]/20;
    }
 
    bool critical = FALSE;
@@ -726,6 +747,11 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
       {
         crit_mult += number_range(ch->pcdata->learned[gsn_enhanced_critical]/2, ch->pcdata->learned[gsn_enhanced_critical]);
+      }
+
+      if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
+      {
+         crit_mult += number_range(ch->lvl2[CLASS_SWO]/20, ch->lvl2[CLASS_SWO]/10);
       }
 
       dam = dam * crit_mult / 100;

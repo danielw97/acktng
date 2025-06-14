@@ -4204,12 +4204,21 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       {
          class = iClass;
          cok = TRUE;
+         break;
       }
       if( !str_cmp( arg2, remort_table[iClass].who_name ) )
       {
          class = iClass;
          cok = TRUE;
          remort = TRUE;
+         break;
+      }
+      if( !str_cmp( arg2, remort_table[iClass+MAX_CLASS].who_name ) )
+      {
+         class = iClass+MAX_CLASS;
+         cok = TRUE;
+         remort = TRUE;
+         break;
       }
 
    }
