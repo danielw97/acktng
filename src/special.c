@@ -967,6 +967,7 @@ bool spec_poison( CHAR_DATA * ch )
    act( "$n bites $N!", ch, NULL, victim, TO_NOTVICT );
    act( "$n bites you!", ch, NULL, victim, TO_VICT );
    spell_poison( gsn_poison, ch->level, ch, victim, NULL );
+   one_hit( ch, victim, TYPE_HIT + 8 );
    return TRUE;
 }
 

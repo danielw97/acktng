@@ -297,8 +297,12 @@ bool spell_poison( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
    AFFECT_DATA af;
 
-   if( saves_spell( level, victim ) )
+   if ( saves_spell( level, victim ) )
       return TRUE;
+   
+   if ( IS_AFFECTED( victim, AFF_POISON ) )
+      return TRUE;
+      
    af.type = sn;
    af.duration = 12 + ( level / 10 );
    af.location = APPLY_STR;

@@ -1292,7 +1292,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     MORTAL, NORM,
     "cure poison", {182, 32, 182, 182, 182, 182},
-    spell_cure_poison, TAR_CHAR_DEFENSIVE, POS_STANDING,
+    spell_cure_poison, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 43 ), 5, 12,
     "", "!Cure Poison!",
     ""},
