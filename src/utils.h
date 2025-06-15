@@ -103,6 +103,9 @@ int get_spell_crit_mult( ch );
 int get_crit( ch );
 int get_crit_mult( ch );
 
+/* objs */
+set_af_to_obj(OBJ_DATA *obj, int location, int modifier);
+
 /*
  * Updated pointer referencing, curtesy of Spectrum, from Beyond the Veil
  *
