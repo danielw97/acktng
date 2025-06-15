@@ -36,6 +36,7 @@
 #include "globals.h"
 #include "hash.h"
 #include "ssm.h"
+#include "utils.h"
 #include <unistd.h>  /* for execl */
 #include <sys/wait.h>
 #include <errno.h>
