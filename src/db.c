@@ -2872,11 +2872,11 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
        IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
    {
-      hr_div = 15;
+      hr_div = 20;
+      dr_div = 20;
       ac_div = 10;
       hp_div = 2;
       mana_div = 2;
-      dr_div = 15;
       move_div = 2;
       stat_bonus = 10;
 
