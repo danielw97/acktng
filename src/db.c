@@ -2873,7 +2873,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
        IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
    {
       hr_div = 15;
-      ac_div = 5;
+      ac_div = 10;
       hp_div = 2;
       mana_div = 2;
       dr_div = 15;
@@ -2903,8 +2903,8 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    else if (obj->item_type == ITEM_WEAPON)
    {
       hrdr_bonus = 5;
-      hr_div = 6;
-      dr_div = 6;
+      hr_div = 8;
+      dr_div = 8;
       ac_div = 10;
       hp_div = 10;
       move_div = 10;
@@ -2933,12 +2933,12 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    else if (obj->item_type == ITEM_ARMOR)
    {
       ac_bonus = -10;
-      hr_div = 10;
-      dr_div = 10;
+      hr_div = 15;
+      dr_div = 15;
       ac_div = 2;
-      hp_div = 2;
-      mana_div = 2;
-      move_div = 2;
+      hp_div = 5;
+      mana_div = 5;
+      move_div = 5;
       
       if (obj->weight > 19)
       {
@@ -2963,8 +2963,8 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    else
    {
       /* Well, shit stats since it doesn't follow the standards */
-      hr_div = 10;
-      dr_div = 10;
+      hr_div = 15;
+      dr_div = 15;
       ac_div = 10;
       hp_div = 10;
       mana_div = 10;
@@ -2992,11 +2992,11 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    }
 
    int ac_val = ac_bonus - (ilevel / ac_div);
-   int hr_val = (ilevel / hr_div) + hrdr_bonus;
-   int dr_val  = (ilevel / dr_div) + hrdr_bonus;
-   int hp_val = (ilevel / hp_div) + stat_bonus;
-   int mana_val = (ilevel / mana_div) + stat_bonus;
-   int move_val = (ilevel / move_div) + stat_bonus;
+   int hr_val = 1 +(ilevel / hr_div) + hrdr_bonus;
+   int dr_val  = 1 +(ilevel / dr_div) + hrdr_bonus;
+   int hp_val = 10 +(ilevel / hp_div) + stat_bonus;
+   int mana_val = 10 + (ilevel / mana_div) + stat_bonus;
+   int move_val = 10 + (ilevel / move_div) + stat_bonus;
    int spellpower_val = 0;
    if (spellpower_div > 0)
       spellpower_val = (ilevel / spellpower_div);
