@@ -97,14 +97,11 @@ char *_fread_string_eol args( ( FILE * fp, const char *caller ) );
 void _free_string args( ( char *pstr, const char *caller ) );
 
 /* Getstats */
-int get_spellpower( ch );
-int get_spell_crit( ch );
-int get_spell_crit_mult( ch );
-int get_crit( ch );
-int get_crit_mult( ch );
-
-/* objs */
-set_af_to_obj(OBJ_DATA *obj, int location, int modifier);
+int get_spellpower( CHAR_DATA * ch );
+int get_spell_crit( CHAR_DATA * ch );
+int get_spell_crit_mult( CHAR_DATA * ch );
+int get_crit( CHAR_DATA * ch );
+int get_crit_mult( CHAR_DATA * ch );
 
 /*
  * Updated pointer referencing, curtesy of Spectrum, from Beyond the Veil
