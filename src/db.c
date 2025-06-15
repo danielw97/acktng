@@ -2710,21 +2710,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    {
      for( af = pObjIndex->first_apply; af != NULL; af = af->next )
      {
-       /*
-        * Create new_af, or use a free_affect 
-        */
-        GET_FREE( new_af, affect_free );
-
-        /*
-         * Now initialize the contents of new_af 
-         */
-        new_af->type = -1;
-        new_af->duration = -1;
-        new_af->location = af->location;
-        new_af->modifier = af->modifier;
-        new_af->bitvector = 0;
-        new_af->caster = NULL;
-        LINK( new_af, obj->first_apply, obj->last_apply, next, prev );
+         set_afF_to_obj( obj, af->location, af_modifier );
      }
    } /* We have an automatically stat'd item */
    else
@@ -2816,6 +2802,12 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
 
    if( pObjIndex->value[7] > 0 )
       obj->timer = pObjIndex->value[7];
+
+   for(int i = 0; i < 7; i++)
+   {
+      if (pObjIndex->value[i] > 1000 || pObjIndex->value[i] < -1000)
+         pObjIndex->value[i] = 0;
+   }
 
 
    LINK( obj, first_obj, last_obj, next, prev );
@@ -3001,72 +2993,30 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    if (spellpower_div > 0)
       spellpower_val = (ilevel / spellpower_div);
 
-   GET_FREE( new_af, affect_free );
-   new_af->type = -1;
-   new_af->duration = -1;
-   new_af->location = APPLY_AC;
-   new_af->modifier = ac_val;
-   new_af->bitvector = 0;
-   new_af->caster = NULL;
-   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-   GET_FREE( new_af, affect_free );
-   new_af->type = -1;
-   new_af->duration = -1;
-   new_af->location = APPLY_HITROLL;
-   new_af->modifier = hr_val;
-   new_af->bitvector = 0;
-   new_af->caster = NULL;
-   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-   GET_FREE( new_af, affect_free );
-   new_af->type = -1;
-   new_af->duration = -1;
-   new_af->location = APPLY_DAMROLL;
-   new_af->modifier = dr_val;
-   new_af->bitvector = 0;
-   new_af->caster = NULL;
-   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-   GET_FREE( new_af, affect_free );
-   new_af->type = -1;
-   new_af->duration = -1;
-   new_af->location = APPLY_HIT;
-   new_af->modifier = hp_val;
-   new_af->bitvector = 0;
-   new_af->caster = NULL;
-   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-   GET_FREE( new_af, affect_free );
-   new_af->type = -1;
-   new_af->duration = -1;
-   new_af->location = APPLY_MANA;
-   new_af->modifier = mana_val;
-   new_af->bitvector = 0;
-   new_af->caster = NULL;
-   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-   GET_FREE( new_af, affect_free );
-   new_af->type = -1;
-   new_af->duration = -1;
-   new_af->location = APPLY_MOVE;
-   new_af->modifier = move_val;
-   new_af->bitvector = 0;
-   new_af->caster = NULL;
-   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
+   set_af_to_obj( obj, APPLY_AC, ac_val );
+   set_af_to_obj( obj, APPLY_HITROLL, hr_val );
+   set_af_to_obj( obj, APPLY_DAMROLL, dr_val );
+   set_af_to_obj( obj, APPLY_HIT, hp_val );
+   set_af_to_obj( obj, APPLY_MANA, mana_val );
+   set_af_to_obj( obj, APPLY_MOVE, move_val );
    if (spellpower_val > 0)
-   { 
-      GET_FREE( new_af, affect_free );
-      new_af->type = -1;
-      new_af->duration = -1;
-      new_af->location = APPLY_SPELLPOWER;
-      new_af->modifier = spellpower_val;
-      new_af->bitvector = 0;
-      new_af->caster = NULL;
-      LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-   }
+      set_af_to_obj( obj, APPLY_SPELLPOWER, spellpower_val);
 }
+
+set_af_to_obj(OBJ_DATA *obj, int location, int modifier)
+{
+   AFFECT_DATA *new_af;
+
+   GET_FREE( new_af, affect_free );
+   new_af->type = -1;
+   new_af->duration = -1;
+   new_af->location = location;
+   new_af->modifier = modifier;
+   new_af->bitvector = 0;
+   new_af->caster = NULL;
+   LINK( new_af, obj->first_apply, obj->last_apply, next, prev );
+}
+
 /*
  * Clear a new character.
  */
