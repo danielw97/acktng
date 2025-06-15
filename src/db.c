@@ -2849,17 +2849,17 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       ilevel = (ilevel * 3) / 2;
    }
 
-   if (ilevel > MAX_MORTAL)
+   if (obj->level > MAX_MORTAL)
    {
       ilevel += (obj->level - MAX_MORTAL)*3;
    }
 
-   if (ilevel > 124)
+   if (obj->level > 124)
    {
       ilevel += (obj->level - 124)*4;
    }
 
-   if (level == 150)
+   if (obj->level == 150)
    {
       ilevel += 50;
    }
