@@ -2864,9 +2864,6 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       ilevel += 50;
    }
 
-   /* Small bonus for higher weights within itemization class */
-   ilevel += ilevel * (obj->weight%10) * 2 / 100;
-
    /* Jewelry */
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
        IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
