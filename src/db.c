@@ -2870,7 +2870,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    {
       hr_div = 15;
       ac_div = 5;
-      hp_div = 2
+      hp_div = 2;
       mana_div = 2;
       dr_div = 15;
       move_div = 2;
@@ -2902,7 +2902,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       hr_div = 6;
       dr_div = 6;
       ac_div = 10;
-      hp_div = 10
+      hp_div = 10;
       move_div = 10;
       mana_div = 10;
 
