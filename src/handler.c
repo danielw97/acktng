@@ -432,7 +432,7 @@ int get_stat( CHAR_DATA *ch, int stat )
    /* First we check gear */
    for(int i = 0; i < MAX_WEAR; i++)
    {
-      if( ( obj = get_eq_char( ch, location ) ) != NULL )
+      if( ( obj = get_eq_char( ch, i ) ) != NULL )
       {
          for( paf = obj->first_apply; paf != NULL; paf = paf->next )
          {
