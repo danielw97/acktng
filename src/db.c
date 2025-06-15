@@ -53,6 +53,9 @@
 extern int _filbuf args( ( FILE * ) );
 #endif
 
+
+void set_obj_stat_auto( OBJ_DATA *obj );
+
 /*
  * Globals.
  */
@@ -2725,7 +2728,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
      }
    } /* We have an automatically stat'd item */
    else
-      set_obj_stat_auto(pObjIndex, obj);
+      set_obj_stat_auto(obj);
    for( looper = 0; looper < 10; looper++ )
    {
       obj->value[looper] = pObjIndex->value[looper];
@@ -2838,12 +2841,12 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
    if (IS_SET(obj->extra_flags, ITEM_MAGIC))
    {
-      ilevel = (ilevel * 6) / 5;
+      ilevel = (ilevel * 5) / 4;
    }
 
    if (IS_SET(obj->extra_flags, ITEM_RARE))
    {
-      ilevel = (ilevel * 5) / 4;
+      ilevel = (ilevel * 3) / 2;
    }
 
    if (ilevel > MAX_MORTAL)
