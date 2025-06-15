@@ -420,7 +420,7 @@ int get_spell_crit_mult( ch )
    // base of 50%
    int crit = 50;
 
-   if (!IS_NPC(ch) &&ch->pcdata->learned[gsn_spell_critical_damge] > 0)
+   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_spell_critical_damage] > 0)
       crit += 50;
 
    crit += get_stat(ch, APPLY_SPELL_CRIT_MULT);
