@@ -2906,14 +2906,14 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       move_div = 10;
       mana_div = 10;
 
-      if (obj_weight > 19)
+      if (obj->weight > 19)
       {
          ac_div -= 2;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj_weight > 9)
+      else if (obj->weight > 9)
       {
          /* Do nothing for now */
       }
