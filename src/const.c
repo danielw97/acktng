@@ -750,32 +750,32 @@ const struct exp_type exp_table[141] = {
  * Attribute bonus tables.
  */
 const struct str_app_type str_app[26] = {
-   {-5, -4, 0, 0},   /* 0  */
-   {-5, -4, 3, 1},   /* 1  */
-   {-3, -2, 3, 2},
-   {-3, -1, 10, 3},  /* 3  */
-   {-2, -1, 25, 4},
-   {-2, -1, 55, 5},  /* 5  */
-   {-1, 0, 80, 6},
-   {-1, 0, 90, 7},
-   {0, 0, 100, 8},
-   {0, 0, 100, 9},
-   {0, 0, 115, 10},  /* 10  */
-   {0, 0, 115, 11},
-   {0, 0, 140, 12},
-   {0, 0, 140, 13},  /* 13  */
-   {0, 1, 170, 14},
-   {1, 1, 170, 15},  /* 15  */
-   {1, 2, 195, 16},
-   {2, 3, 220, 22},
-   {2, 4, 250, 25},  /* 18  */
-   {3, 5, 300, 30},
-   {3, 6, 350, 35},  /* 20  */
-   {4, 7, 400, 40},
-   {5, 7, 450, 45},
-   {6, 8, 500, 50},
-   {8, 10, 550, 55},
-   {10, 12, 600, 60} /* 25   */
+   {-5, -4, 400, 0},   /* 0  */
+   {-5, -4, 400, 1},   /* 1  */
+   {-3, -2, 400, 2},
+   {-3, -1, 400, 3},  /* 3  */
+   {-2, -1, 400, 4},
+   {-2, -1, 400, 5},  /* 5  */
+   {-1, 0, 400, 6},
+   {-1, 0, 400, 7},
+   {0, 0, 400, 8},
+   {0, 0, 400, 9},
+   {0, 0, 400, 10},  /* 10  */
+   {0, 0, 400, 11},
+   {0, 0, 400, 12},
+   {0, 0, 400, 13},  /* 13  */
+   {0, 1, 400, 14},
+   {1, 1, 400, 15},  /* 15  */
+   {1, 2, 400, 16},
+   {2, 3, 400, 17},
+   {2, 4, 400, 18},  /* 18  */
+   {3, 5, 400, 19},
+   {3, 6, 500, 20},  /* 20  */
+   {4, 7, 500, 21},
+   {5, 7, 500, 22},
+   {6, 8, 500, 23},
+   {8, 10, 500, 24},
+   {10, 12, 600, 25} /* 25   */
 };
 
 
@@ -2294,8 +2294,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "dualwield", {182, 8, 5, 7, 182, 182,
-                  182, 8, 5, 7, 182, 182},
+    "dualwield", {182, 182, 5, 182, 182, 182,
+                  182, 182, 5, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_dualwield, SLOT( 0 ), 0, 0,
     "", "!DualWield!",
@@ -2639,7 +2639,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "Morale", "!Morale!",
     ""},
 
-
    {
     REMORT, NORM,
     "leadership", {182, 24, 182, 12, 182, 182,
@@ -2648,6 +2647,44 @@ const struct skill_type skill_table[MAX_SKILL] = {
     NULL, SLOT( 604 ), 75, 24,
     "Leadership", "!Leadership!",
     ""},
+
+   {
+    REMORT, NORM,
+    "two handed", {182, 8, 182, 6, 182, 182,
+                   182, 182, 182, 6, 182, 182},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_two_handed, SLOT( 0 ), 0, 0,
+    "", "!Two Handed!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "bare hand", {182, 182, 182, 182, 182, 6,
+                   182, 182, 182, 182, 182, 6},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_bare_hand, SLOT( 0 ), 0, 0,
+    "", "!Enhanced Sword!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "enhanced sword damage", {182, 182, 182, 182, 182, 182,
+                   182, 182, 182, 20, 182, 182},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_enhanced_sword, SLOT( 0 ), 0, 0,
+    "", "!Enhanced Sword!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "enhanced sword critical", {182, 182, 182, 182, 182, 182,
+                   182, 182, 182, 40, 182, 182},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_enhanced_sword_critical, SLOT( 0 ), 0, 0,
+    "", "!Enhanced Sword Critical!",
+    ""},
+
+
    {
     REMORT, NORM,
     "Ice Bolt", {3, 182, 182, 182, 182, 182,

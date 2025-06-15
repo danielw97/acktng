@@ -2599,7 +2599,7 @@ void build_setobject( CHAR_DATA * ch, char *argument )
    {
       if( value < 1 || value > 150 )
       {
-         send_to_char( "item level is 1 to 120.\n\r", ch );
+         send_to_char( "item level is 1 to 150.\n\r", ch );
          return;
       }
       pObj->level = value;

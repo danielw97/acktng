@@ -65,6 +65,7 @@ WEATHER_DATA weather_info;
 SYS_DATA_TYPE sysdata;
 
 bool booting_up;
+bool happy_hour;
 bool area_resetting_global;
 bool mem_log;
 sh_int gsn_martial_arts;
@@ -92,6 +93,10 @@ sh_int gsn_counter;
 sh_int gsn_enhanced_critical;
 sh_int gsn_spell_critical;
 sh_int gsn_spell_critical_damage;
+sh_int gsn_enhanced_sword;
+sh_int gsn_enhanced_sword_critical;
+sh_int gsn_bare_hand;
+sh_int gsn_two_handed;
 sh_int gsn_detox;
 sh_int gsn_circle;
 sh_int gsn_backstab;
@@ -341,6 +346,7 @@ void boot_db( void )
       weather_info.moon_loc = MOON_DOWN;
       weather_info.moon_phase = number_range( MOON_NEW, MOON_FULL );
 
+      happy_hour = FALSE;
 
       if( time_info.hour < 5 )
          weather_info.sunlight = SUN_DARK;
@@ -2843,6 +2849,16 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    {
       ilevel += (ilevel - MAX_MORTAL)*3;
       ilevel += 10;
+   }
+
+   if (ilevel > 124)
+   {
+      ilevel += (ilevel - 124) * 4;
+   }
+
+   if (ilevel == 150)
+   {
+      ilevel += 50;
    }
 
    /* Small bonus for higher weights within itemization class */

@@ -135,7 +135,7 @@ This guy really is a huge killing machine perhaps you should walk away.
 
 ~
 19 0 0 S
-10 1
+9 1
 100 -10 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -158,7 +158,7 @@ Borg.
 The big borgy bastard.
 ~
 23 0 1000 S
-13 0
+14 0
 -50 25 20
 ! 0 0 0 7 20612 0 0
 | 0 0 0 0 0 0 0
@@ -190,7 +190,7 @@ A hurried patron is here, trying to get through lunch
 ~
 ~
 3 0 0 S
-12 1
+11 1
 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -273,7 +273,7 @@ L
 A patron's Ring~
 a Patron's Ring~
 A patron's ring lies here in the dust~
-1 134217728 8396800 1
+8 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
 1
 A

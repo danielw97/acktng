@@ -80,6 +80,14 @@ void do_transdm( CHAR_DATA * ch, char *argument )
    send_to_char( "Everyone has been transferred to the DM arena.\n\r", ch );
 }
 
+void trigger_happy_hour()
+{
+   happy_hour = TRUE;
+
+   info("HAPPY HOUR HAS BEGUN!", 1);
+   info("Double XP for everyone!", 1);
+}
+
 void do_wizhelp( CHAR_DATA * ch, char *argument )
 {
    char buf[MAX_STRING_LENGTH];
@@ -4204,12 +4212,21 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       {
          class = iClass;
          cok = TRUE;
+         break;
       }
       if( !str_cmp( arg2, remort_table[iClass].who_name ) )
       {
          class = iClass;
          cok = TRUE;
          remort = TRUE;
+         break;
+      }
+      if( !str_cmp( arg2, remort_table[iClass+MAX_CLASS].who_name ) )
+      {
+         class = iClass+MAX_CLASS;
+         cok = TRUE;
+         remort = TRUE;
+         break;
       }
 
    }

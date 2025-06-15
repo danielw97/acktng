@@ -4,7 +4,7 @@ Q 16
 K icarusmaze~
 L @@W{@@rADEPT@@W}@@N~
 N 108
-I 119 120
+I 150 150
 V 4950 4999
 X 0
 F 15
@@ -211,7 +211,7 @@ Minotaur Servant~
 ~
 ~
 1 8320 0 S
-103 1
+104 1
 -1000 500 450
 ! 0 0 0 7 7694 4128 0
 | 0 0 0 0 0 0 0
@@ -222,7 +222,7 @@ minotaur guard~
 ~
 ~
 41 17064 0 S
-117 1
+116 1
 -1100 550 600
 ! 7 0 0 7 679438 0 0
 | 0 0 0 0 0 0 0
@@ -266,7 +266,7 @@ Minotaur king~
 ~
 ~
 19922987 92394 0 S
-144 1
+143 1
 -1400 1000 1000
 ! 0 0 0 7 925326 4096 16
 | 0 0 0 0 0 0 0
@@ -288,7 +288,7 @@ captain minotaur~
 ~
 ~
 3145737 10368 0 S
-137 1
+138 1
 -1800 1000 1000
 ! 0 0 0 7 417038 0 0
 | 0 0 0 0 0 0 0
@@ -309,7 +309,7 @@ assassin minotaur~
 ~
 ~
 19922947 125122 0 S
-141 1
+140 1
 -1900 1000 1000
 ! 0 0 0 7 401038 0 0
 | 0 0 0 0 0 0 0
@@ -711,7 +711,7 @@ wings icarus~
 @@WThe Wings of @@lIcarus@@N~
 @@WA beautiful set of hand crafted wings lies here.@@N
 ~
-9 1048577 8389632 20608
+9 135266305 8389632 20608
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -725,15 +725,15 @@ A
 A
 17 -300
 L
-120
+150
 #4987
 rod minotaur~
 @@WThe @@dRod @@Wof the @@eMinotaur King@@N~
 @@WA huge @@dobsidian rod@@W, encrusted with @@erubies@@W floats before you.@@N
 ~
-5 19 8421376 16641
+5 134217747 8421376 16641
 0 0 0 8 0 0 0 0 0 0
-45
+20
 A
 18 40
 A
@@ -745,7 +745,7 @@ A
 A
 24 -20
 L
-120
+150
 #4988
 frame~
 @@WA @@bwooden frame@@N~

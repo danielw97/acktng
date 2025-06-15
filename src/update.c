@@ -1037,6 +1037,12 @@ void weather_update( void )
             for( y = 1; y < MAX_CLAN; y++ )
                politics_data.daily_negotiate_table[x][y] = FALSE;
          clean_donate_rooms(  );
+
+         if (happy_hour)
+         {
+            info("Happy hour has ended!",1);
+            info("Xp has returned to normal!",1);
+         }
          break;
    }
    switch ( time_info.moon++ )

@@ -1888,7 +1888,7 @@ A small friendly storekeeper stands here.
 ~
 ~
 67 18624 0 S
-141 1
+143 1
 -500 350 350
 ! 0 0 0 7 22542 0 0
 | 0 0 0 0 0 0 0
@@ -1899,7 +1899,7 @@ The dark guard stands here, ready to slice your head from your shoulders.
 ~
 ~
 1179723 17064 0 S
-140 1
+139 1
 -300 340 240
 ! 0 0 0 7 14862 0 0
 | 0 0 0 0 0 0 0
@@ -1910,7 +1910,7 @@ A swirling lost soul tries to drag you into back into the pit.
 ~
 ~
 99 0 -1000 S
-134 0
+135 0
 100 -50 -50
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1932,7 +1932,7 @@ A shapely acolyte smiles enticingly at you through blood red lips.
 ~
 ~
 75 25212 -1000 S
-139 2
+140 2
 0 0 0
 ! 0 0 0 7 13326 0 0
 | 0 0 0 0 0 0 0
@@ -1947,7 +1947,7 @@ Armageddon stands at nearly 20 feet, and is undoubtedly the most fearsome
 attention...
 ~
 123 25321 0 S
-140 0
+141 0
 -500 200 200
 ! 0 0 0 7 14350 0 16
 | 0 0 0 0 0 0 0
@@ -1974,7 +1974,7 @@ This is the queen of the giant bees.  She is about 6 feet long, and her
 stinger looks poised to strike.  Maybe now would be a good time to retreat?
 ~
 107 524840 0 S
-141 2
+142 2
 -120 300 0
 ! 0 0 0 7 10254 0 16
 | 0 0 0 0 0 0 0
@@ -2003,7 +2003,7 @@ You find it very difficult to make out any details about @@dThe @@GLord @@dof
 you are better of NOT seeing the foul creature.
 ~
 75 21032 -300 S
-139 1
+140 1
 0 380 220
 ! 0 0 0 7 10270 0 0
 | 0 0 0 0 0 0 0
@@ -2017,7 +2017,7 @@ The harpy looks back at you, her beady eyes burning with hatred and malice.
 flesh from your body.
 ~
 134217851 524800 -500 S
-141 2
+140 2
 -300 400 200
 ! 0 0 0 7 8206 65536 0
 | 0 0 0 0 0 0 0
@@ -2031,7 +2031,7 @@ The form of the god of warriors stands at nearly 8 feet tall.  A shroud of
 depths of his cowled hood reveal his supernatural origin.
 ~
 83 524840 0 S
-140 0
+141 0
 -500 300 200
 ! 0 0 0 7 8350 0 0
 | 0 0 0 0 0 0 0
@@ -2048,7 +2048,7 @@ Standing at nearly 7 feet tall, and clad in glowing red armor, The
 death magic, and NOBODY can stand against me and live!'
 ~
 67 640 -1 S
-108 1
+138 1
 -250 300 300
 ! 0 0 0 7 8206 256 0
 | 0 0 0 0 0 0 0
@@ -2062,7 +2062,7 @@ This wizen old man hobbles along the road, seemingly on the verge of collaps.
 appraising look of a weapons expert...Maybe he is more than he seems?
 ~
 193 0 0 S
-140 1
+141 1
 0 0 0
 ! 0 0 0 7 128 0 0
 | 0 0 0 0 0 0 0
@@ -2088,7 +2088,7 @@ The pit fiend stands here, waiting to take your soul.
 ~
 ~
 123 16968 -1000 S
-140 1
+137 1
 0 0 0
 ! 0 0 0 7 14366 0 0
 | 0 0 0 0 0 0 0
@@ -2132,7 +2132,7 @@ A kind healer stands here, tending to your wounds.
 ~
 ~
 67 18624 1000 S
-140 1
+139 1
 -500 400 400
 ! 0 0 0 7 22542 0 0
 | 0 0 0 0 0 0 0
@@ -2155,7 +2155,7 @@ dark heart of the wood~
 its @@Gperversion@@d.@@N
 ~
 11 56 0 S
-140 1
+139 1
 0 450 0
 ! 0 0 0 7 24582 524288 0
 | 0 0 0 0 0 0 0
@@ -2178,7 +2178,7 @@ the KrakKen~
 ~
 ~
 131113 107134 0 S
-140 1
+139 1
 -300 200 200
 ! 0 0 0 7 30734 0 16
 | 0 0 0 0 0 0 0
@@ -2189,7 +2189,7 @@ paladia mors~
 ~
 ~
 131083 533052 0 S
-105 1
+106 1
 -300 400 200
 ! 0 0 0 7 12302 0 0
 | 0 0 0 0 0 0 0
@@ -2200,7 +2200,7 @@ The statue of the @@aChromium@@N Elder Dragon, is here.
 ~
 ~
 11 8764 0 S
-107 1
+106 1
 -400 400 200
 ! 0 0 0 7 13326 0 0
 | 0 0 0 0 0 0 0
@@ -2264,7 +2264,7 @@ black steel breastplate plate~
 a black steel breastplate~
 A black steel breastplate lies here.
 ~
-9 262148 8650752 3738
+9 134217732 8650752 3738
 10 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2278,13 +2278,13 @@ A
 A
 18 17
 L
-10
+120
 #16867
 double-headed black war axe~
 a double-headed black war axe~
 A huge double-headed black war axe sticks out of the ground.
 ~
-5 262147 8421376 1
+5 134217731 8421376 1
 0 10 20 3 0 0 0 0 0 0
 8
 A
@@ -2300,13 +2300,13 @@ A
 A
 12 90
 L
-15
+120
 #16868
 6 shrunken human head belt~
 6 Shrunken-human-head belt.~
 A waist garment with 6 human heads dangling from it is here.
 ~
-9 134479876 8519680 1
+9 134217732 8519680 1
 0 0 0 0 0 0 0 0 0 0
 3
 A
@@ -2322,7 +2322,7 @@ A
 A
 4 -2
 L
-20
+120
 #16805
 darkblade pendant~
 @@dA DarkBlade pendant@@N~
@@ -2336,7 +2336,7 @@ A
 L
 120
 #16803
-black band might~
+mask darkblade~
 @@dMask of the DarkBlade@@N~
 A mask lies here, discarded~
 9 134217731 8388624 1
@@ -2345,13 +2345,13 @@ A mask lies here, discarded~
 A
 19 5
 L
-1
+120
 #16802
 skull earring~
 a skull-shaped earring~
 A small skull-shaped earring lies on the floor.
 ~
-8 134217728 8388672 1
+9 134217728 8388672 1
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2437,7 +2437,7 @@ the staff of age~
 @@dThe staff of Age@@N~
 A long withered staff is lying here.
 ~
-4 18 8421376 16
+4 134217746 8421376 16
 80 5 5 617 0 0 0 0 0 0
 5
 A
@@ -2487,7 +2487,7 @@ the armour of darkness~
 ~
 9 134217731 8454144 16786
 10 0 0 0 0 0 0 0 0 0
-40
+12
 A
 17 -220
 A
@@ -2515,7 +2515,7 @@ harpy wings~
 @@dA Pair of Bird-Like Wings@@N~
 @@dA large pair of bird-like wings are lying on the ground here. @@N
 ~
-9 134479872 8388864 16384
+9 134217728 8388864 16384
 15 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2543,7 +2543,7 @@ The Aegis Halberd~
 ~
 5 134217731 8421376 1
 0 15 30 3 0 0 0 0 0 0
-22
+12
 A
 18 25
 A
@@ -2574,7 +2574,7 @@ the robes of the necromancer~
 ~
 9 134217729 8650752 17
 15 0 0 0 0 0 0 0 0 0
-20
+5
 A
 17 -250
 A
@@ -2594,7 +2594,7 @@ A
 A
 5 -2
 L
-1
+120
 #16812
 the helm of necromantic device~
 @@dThe Helm of @@eNecromantic Device@@N~
@@ -2658,11 +2658,11 @@ strange white facemask~
 @@W@@xA Strange White Facemask@@N~
 A strange white facemask is lying on the floor here.
 ~
-26 1 8421392 1
-80 28 28 614 0 0 0 0 0 0
+9 134217729 8421392 1
+0 0 0 0 0 0 0 0 0 0
 1
 L
-80
+120
 #16800
 Pauldrons of the DarkBlade~
 @@dPauldrons of the Darkblade@@N~
@@ -2723,7 +2723,7 @@ A huge brass helmet with a large spike on top is lying here.
 ~
 9 134217728 8388616 1
 6 0 0 0 0 0 0 0 0 0
-15
+5
 A
 19 13
 A
@@ -2828,7 +2828,7 @@ rainbow dragon scale shield~
 ~
 9 134217728 8421376 20378
 0 0 0 0 0 0 0 0 0 0
-35
+15
 A
 19 19
 A
@@ -3143,7 +3143,6 @@ S
 M 16843 spec_cast_undead
 M 16819 spec_breath_any
 M 16816 spec_poison
-M 16815 spec_breath_gas
 M 16813 spec_cast_undead
 M 16809 spec_breath_any
 M 16811 spec_cast_bigtime

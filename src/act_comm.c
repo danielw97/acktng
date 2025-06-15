@@ -655,11 +655,10 @@ void talk_channel( CHAR_DATA * ch, char *argument, int channel, const char *verb
          ch->position = position;
          break;
       case CHANNEL_OOC:
-         sprintf( buf, "%s%s $n: $t.%s", color_string( ch, "OOC" ), verb, color_string( ch, "normal" ) );
-         position = ch->position;
-         ch->position = POS_STANDING;
-         act( buf, ch, argument, NULL, TO_CHAR );
-         ch->position = position;
+         sprintf( buf, "%s%s %s: '%s'.%s\n\r",
+                  color_string( ch, "OOC" ), verb, ch->name, argument, color_string( ch, "normal" ) );
+         send_to_char( buf, ch );
+         sprintf( buf, "%s $n: '$t'.\n\r", verb );
          break;
       case CHANNEL_GAME:
          sprintf( buf, "%s $n: $t.", verb );
@@ -762,7 +761,7 @@ void talk_channel( CHAR_DATA * ch, char *argument, int channel, const char *verb
                   sprintf( ansi, "%s%s%s", color_string( vch, "gossip" ), buf, color_string( vch, "normal" ) );
                   break;
                case CHANNEL_OOC:
-                  sprintf( ansi, "%s%s%s", color_string( vch, "gossip" ), buf, color_string( vch, "normal" ) );
+                  sprintf( ansi, "%s%s%s", color_string( vch, "OOC" ), buf, color_string( vch, "normal" ) );
                   break;
 
                case CHANNEL_CRUSADE:

@@ -701,54 +701,6 @@ bool spell_acid_breath( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    int dam;
    int hpch;
 
-   if( number_percent(  ) < 2 * level && !saves_spell( level, victim ) )
-   {
-      OREF( obj_next, OBJ_NEXTCONTENT );
-      for( obj_lose = victim->first_carry; obj_lose != NULL; obj_lose = obj_next )
-      {
-         int iWear;
-
-         obj_next = obj_lose->next_in_carry_list;
-
-         if( number_bits( 2 ) != 0 )
-            continue;
-
-         switch ( obj_lose->item_type )
-         {
-            case ITEM_ARMOR:
-               if( obj_lose->value[0] > 0 )
-               {
-                  act( "$p is pitted and etched!", victim, obj_lose, NULL, TO_CHAR );
-                  if( ( iWear = obj_lose->wear_loc ) != WEAR_NONE )
-                     victim->armor -= apply_ac( obj_lose, iWear );
-                  obj_lose->value[0] -= 1;
-                  obj_lose->cost = 0;
-                  if( iWear != WEAR_NONE )
-                     victim->armor += apply_ac( obj_lose, iWear );
-               }
-               break;
-
-            case ITEM_CONTAINER:
-
-            {
-               OBJ_DATA *content;
-               OBJ_DATA *content_next;
-               act( "$p fumes and dissolves!", victim, obj_lose, NULL, TO_CHAR );
-               for( content = obj_lose->first_in_carry_list; content; content = content_next )
-               {
-                  content_next = content->next_in_carry_list;
-                  obj_from_obj( content );
-                  obj_to_room( content, victim->in_room != NULL ? victim->in_room : get_room_index( ROOM_VNUM_LIMBO ) );
-               }
-               extract_obj( obj_lose );
-               break;
-            }
-         }
-      }
-      OUREF( obj_next );
-
-   }
-
    hpch = UMAX( 10, ch->hit );
    dam = number_range( hpch / 16 + 1, hpch / 8 );
    if( saves_spell( level, victim ) )
