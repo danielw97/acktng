@@ -844,7 +844,7 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
                       && ( ch->race < MAX_RACE ) ) ?
                     race_table[ch->race].race_flags : ch->race_mods ) : race_table[ch->race].race_flags );
 
-      int crit_chance = get_spell_critical(ch);
+      int crit_chance = get_spell_crit(ch);
 
       if (!IS_NPC(ch) && number_range(0,100) < crit_chance)
       {
