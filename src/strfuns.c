@@ -1306,6 +1306,16 @@ char *affect_loc_name( int location )
          return "healing over time";
       case APPLY_DOT:
          return "damage over time";
+      case APPLY_SPELLPOWER:
+         return "spellpower";
+      case APPLY_SPELL_CRIT:
+         return "spell critical strike";
+      case APPLY_SPELL_CRIT_MULT:
+         return "spell critical strike multiplier";
+      case APPLY_CRIT:
+         return "critical strike";
+      case APPLY_CRIT_MULT:
+         return "critical multiplier";
    }
 
    sprintf( buf, "affect_location_name: location %d unknown.", location );

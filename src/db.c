@@ -2647,7 +2647,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    if( pObjIndex == NULL )
    {
       bug( "Create_object: NULL pObjIndex.", 0 );
-      hang( "Creating Objext in db.c" );
+      hang( "Creating Object in db.c" );
    }
 
    GET_FREE( obj, obj_free );
@@ -2719,102 +2719,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
      }
    } /* We have an automatically stat'd item */
    else
-   {
-     int ilevel = obj->level;
-
-     int hrdr_val = 0;
-     int ac_val = 0;
-     int stat_val = 0;
-
-     if (IS_SET(pObjIndex->extra_flags, ITEM_MAGIC))
-     {
-       ilevel = (ilevel * 6) / 5;
-     }
-
-     if (IS_SET(pObjIndex->extra_flags, ITEM_RARE))
-     {
-       ilevel = (ilevel * 5) / 4;
-     }
-
-     if (ilevel > MAX_MORTAL)
-     {
-       ilevel += (ilevel - MAX_MORTAL)*3;
-       ilevel += 10;
-     }
-
-     if (pObjIndex->item_type == ITEM_WEAPON)
-     {
-       hrdr_val = 5 + (ilevel/6);
-       ac_val = 0 - (ilevel/10);
-       stat_val = (ilevel/10);
-     }
-     else if (pObjIndex->item_type == ITEM_ARMOR)
-     {
-       hrdr_val = 1 + (ilevel/10);
-       ac_val = -10 - ilevel;
-       stat_val = 5 + (ilevel/2);
-     }
-     else
-     {
-       hrdr_val = 1 + (ilevel/15);
-       stat_val = 10 + ilevel;
-       ac_val = 0 - (ilevel/5);
-     }
-
-     GET_FREE( new_af, affect_free );
-     new_af->type = -1;
-     new_af->duration = -1;
-     new_af->location = APPLY_AC;
-     new_af->modifier = ac_val;
-     new_af->bitvector = 0;
-     new_af->caster = NULL;
-     LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-     GET_FREE( new_af, affect_free );
-     new_af->type = -1;
-     new_af->duration = -1;
-     new_af->location = APPLY_HITROLL;
-     new_af->modifier = hrdr_val;
-     new_af->bitvector = 0;
-     new_af->caster = NULL;
-     LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-     GET_FREE( new_af, affect_free );
-     new_af->type = -1;
-     new_af->duration = -1;
-     new_af->location = APPLY_DAMROLL;
-     new_af->modifier = hrdr_val;
-     new_af->bitvector = 0;
-     new_af->caster = NULL;
-     LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-     GET_FREE( new_af, affect_free );
-     new_af->type = -1;
-     new_af->duration = -1;
-     new_af->location = APPLY_HIT;
-     new_af->modifier = stat_val;
-     new_af->bitvector = 0;
-     new_af->caster = NULL;
-     LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-     GET_FREE( new_af, affect_free );
-     new_af->type = -1;
-     new_af->duration = -1;
-     new_af->location = APPLY_MANA;
-     new_af->modifier = stat_val;
-     new_af->bitvector = 0;
-     new_af->caster = NULL;
-     LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-
-     GET_FREE( new_af, affect_free );
-     new_af->type = -1;
-     new_af->duration = -1;
-     new_af->location = APPLY_MOVE;
-     new_af->modifier = stat_val;
-     new_af->bitvector = 0;
-     new_af->caster = NULL;
-     LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
-   }
+      set_obj_stat_auto(pObjIndex, obj);
    for( looper = 0; looper < 10; looper++ )
    {
       obj->value[looper] = pObjIndex->value[looper];
@@ -2910,8 +2815,239 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    return obj;
 }
 
+void set_obj_stat_auto( OBJ_DATA *obj )
+{
+   int ilevel = obj->level;
+   int hr_div = 0;
+   int dr_div = 0;
+   int ac_div = 0;
+   int hp_div = 0;
+   int move_div = 0;
+   int mana_div = 0;
+   int spellpower_div = 0;
+   int hrdr_bonus = 0;
+   int ac_bonus = 0;
+   int stat_bonus = 0;
 
+   if (IS_SET(obj->extra_flags, ITEM_MAGIC))
+   {
+      ilevel = (ilevel * 6) / 5;
+   }
 
+   if (IS_SET(obj->extra_flags, ITEM_RARE))
+   {
+      ilevel = (ilevel * 5) / 4;
+   }
+
+   if (ilevel > MAX_MORTAL)
+   {
+      ilevel += (ilevel - MAX_MORTAL)*3;
+      ilevel += 10;
+   }
+
+   /* Small bonus for higher weights within itemization class */
+   ilevel += ilvl * (obj->weight%10) * 2 / 100;
+
+   /* Jewelry */
+   if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
+       IS_SET(obj->wear_flags, ITEM_WEAR_HEAR) || IS_SET(obj->wear_flags, ITEM_WEAR_NECK) ||
+       IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
+   {
+      hr_div = 15;
+      ac_div = 5;
+      hp_div = 2
+      mana_div = 2;
+      dr_div = 15;
+      move_div = 2;
+      stat_bonus = 10;
+
+      if (obj_weight > 19)
+      {
+         ac_div -= 2;
+         hp_div /= 2;
+         mana_div *= 2;
+         move_div *= 2;
+      }
+      else if (obj_weight > 9)
+      {
+         /* Do nothing for now */
+      }
+      else
+      {
+         /* Caster */
+         dr_div *= 2;
+         move_div *= 2;
+
+         spellpower_div = 8;
+      }
+   }
+   else if (obj->item_type == ITEM_WEAPON)
+   {
+      hrdr_bonus = 5;
+      hr_div = 6;
+      dr_div = 6;
+      ac_div = 10;
+      hp_div = 10
+      move_div = 10;
+      mana_div = 10;
+
+      if (obj_weight > 19)
+      {
+         ac_div -= 2;
+         hp_div /= 2;
+         mana_div *= 2;
+         move_div *= 2;
+      }
+      else if (obj_weight > 9)
+      {
+         /* Do nothing for now */
+      }
+      else
+      {
+         /* Caster */
+         dr_div *= 2;
+         move_div *= 2;
+
+         spellpower_div = 5;
+      }
+   }
+   else if (obj->item_type == ITEM_ARMOR)
+   {
+      ac_bonus = -10;
+      hr_div = 10;
+      dr_div = 10;
+      ac_div = 2;
+      hp_div = 2;
+      mana_div = 2;
+      move_div = 2;
+      
+      if (obj_weight > 19)
+      {
+         ac_div -= 1;
+         hp_div /= 2;
+         mana_div *= 2;
+         move_div *= 2;
+      }
+      else if (obj_weight > 9)
+      {
+         /* Do nothing for now */
+      }
+      else
+      {
+         /* Caster */
+         dr_div *= 2;
+         move_div *= 2;
+
+         spellpower_div = 10;
+      }
+   }
+   else
+   {
+      /* Well, shit stats since it doesn't follow the standards */
+      hr_div = 10;
+      dr_div = 10;
+      ac_div = 10;
+      hp_div = 10;
+      mana_div = 10;
+      move_div = 10;
+
+      if (obj_weight > 19)
+      {
+         ac_div -= 2;
+         hp_div /= 2;
+         mana_div *= 2;
+         move_div *= 2;
+      }
+      else if (obj_weight > 9)
+      {
+         /* Do nothing for now */
+      }
+      else
+      {
+         /* Caster */
+         dr_div *= 2;
+         move_div *= 2;
+
+         spellpower_div = 10;
+      }
+   }
+
+   int ac_val = (ilevel / ac_div) + ac_bonus;
+   int hr_val = (ilevel / hr_div) + hrdr_bonus;
+   int dr_val  = (ilevel / dr_div) + hrdr_bonus;
+   int hp_val = (ilevel / hp_div) + stat_bonus;
+   int mana_val = (ilevel / mana_div) + stat_bonus;
+   int move_val = (ilevel / move_div) + stat_bonus;
+   int spellpower_val = 0;
+   if (spellpower_div > 0)
+      spellpower_val = (ilevel / spellpower_div);
+
+   GET_FREE( new_af, affect_free );
+   new_af->type = -1;
+   new_af->duration = -1;
+   new_af->location = APPLY_AC;
+   new_af->modifier = ac_val;
+   new_af->bitvector = 0;
+   new_af->caster = NULL;
+   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
+
+   GET_FREE( new_af, affect_free );
+   new_af->type = -1;
+   new_af->duration = -1;
+   new_af->location = APPLY_HITROLL;
+   new_af->modifier = hr_val;
+   new_af->bitvector = 0;
+   new_af->caster = NULL;
+   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
+
+   GET_FREE( new_af, affect_free );
+   new_af->type = -1;
+   new_af->duration = -1;
+   new_af->location = APPLY_DAMROLL;
+   new_af->modifier = dr_val;
+   new_af->bitvector = 0;
+   new_af->caster = NULL;
+   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
+
+   GET_FREE( new_af, affect_free );
+   new_af->type = -1;
+   new_af->duration = -1;
+   new_af->location = APPLY_HIT;
+   new_af->modifier = hp_val;
+   new_af->bitvector = 0;
+   new_af->caster = NULL;
+   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
+
+   GET_FREE( new_af, affect_free );
+   new_af->type = -1;
+   new_af->duration = -1;
+   new_af->location = APPLY_MANA;
+   new_af->modifier = mana_val;
+   new_af->bitvector = 0;
+   new_af->caster = NULL;
+   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
+
+   GET_FREE( new_af, affect_free );
+   new_af->type = -1;
+   new_af->duration = -1;
+   new_af->location = APPLY_MOVE;
+   new_af->modifier = move_val;
+   new_af->bitvector = 0;
+   new_af->caster = NULL;
+   LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
+
+   if (spellpower_val > 0)
+   { 
+      GET_FREE( new_af, affect_free );
+      new_af->type = -1;
+      new_af->duration = -1;
+      new_af->location = APPLY_SPELLPOWER;
+      new_af->modifier = spellpower_val;
+      new_af->bitvector = 0;
+      new_af->caster = NULL;
+      LINK(new_af, obj->first_apply, obj->last_apply, next, prev);
+   }
+}
 /*
  * Clear a new character.
  */

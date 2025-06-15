@@ -1261,8 +1261,13 @@
 #define APPLY_SAVING_PETRI           22
 #define APPLY_SAVING_BREATH          23
 #define APPLY_SAVING_SPELL           24
-#define APPLY_HOT		     25
-#define APPLY_DOT		     26
+#define APPLY_HOT		                25
+#define APPLY_DOT		                26
+#define APPLY_SPELLPOWER             27
+#define APPLY_SPELL_CRIT             28
+#define APPLY_SPELL_CRIT_MULT        29
+#define APPLY_CRIT                   30
+#define APPLY_CRIT_MULT              31
 
 
 /*

@@ -430,6 +430,13 @@ int can_carry_w( CHAR_DATA * ch )
    return str_app[get_curr_str( ch )].carry;
 }
 
+int get_curr_spellpower( CHAR_DATA * ch )
+{
+   int spellpower = 0;
+
+   
+}
+
 
 /*
  * Apply or remove an affect to a character.
