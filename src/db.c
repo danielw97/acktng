@@ -2863,7 +2863,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    {
       hr_div = 10;
       dr_div = 10;
-      ac_div = 10;
+      ac_div = 20;
       hp_div = 2;
       mana_div = 2;
       move_div = 2;
@@ -2871,7 +2871,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
       if (obj->weight > 19)
       {
-         ac_div -= 2;
+         ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
@@ -2894,14 +2894,14 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       hrdr_bonus = 5;
       hr_div = 6;
       dr_div = 6;
-      ac_div = 10;
+      ac_div = 20;
       hp_div = 10;
       move_div = 10;
       mana_div = 10;
 
       if (obj->weight > 19)
       {
-         ac_div -= 2;
+         ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
@@ -2954,14 +2954,14 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       /* Well, shit stats since it doesn't follow the standards */
       hr_div = 15;
       dr_div = 15;
-      ac_div = 10;
+      ac_div = 20;
       hp_div = 10;
       mana_div = 10;
       move_div = 10;
 
       if (obj->weight > 19)
       {
-         ac_div -= 2;
+         ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
@@ -2980,7 +2980,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       }
    }
 
-   int ac_val = ac_bonus - (ilevel / ac_div);
+   int ac_val = ac_bonus - (ilevel*2 / ac_div);
    int hr_val = 1 +(ilevel / hr_div) + hrdr_bonus;
    int dr_val  = 1 +(ilevel / dr_div) + hrdr_bonus;
    int hp_val = 10 +(ilevel / hp_div) + stat_bonus;
