@@ -719,7 +719,11 @@ void new_descriptor( int control )
 
    cur_players++;
    if( cur_players > max_players )
+   {
+      trigger_happy_hour();
       max_players = cur_players;
+      info("New max players reached for this boot! Happy hour triggered!",1);
+   }
 
    return;
 }

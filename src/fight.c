@@ -2658,6 +2658,13 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
       OBJ_DATA *obj;
       OBJ_DATA *obj_next;
       int align;
+      int max_xp = 5000000;
+
+      if (happy_hour)
+      {
+         send_to_char("Happy hour is active! Xp doubled!\n\r", gch);
+         max_xp *= 2;
+      }
 
       if( !is_same_group( gch, ch ) )
          continue;
@@ -2684,10 +2691,13 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
        */
       if( funky < 0 )
          funky = 823421;
-      funky = UMIN( funky, 5000000 );
+      funky = UMIN( funky, max_xp );
 
       funky *= number_range(150,250);
       funky /= 100;
+
+      if (happy_hour)
+         funky *= 2;
 
       if( ( abs( ( get_psuedo_level( gch ) - get_psuedo_level( victim ) ) ) > 23 )
           || ( get_psuedo_level( gch ) > ( get_psuedo_level( victim ) + 17 ) ) )

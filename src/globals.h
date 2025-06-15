@@ -129,6 +129,8 @@ extern bool deathmatch;
 extern char *const dir_name[];
 extern char *const rev_name[];
 
+extern bool happy_hour;
+
 /*
  * Global constants.
  */

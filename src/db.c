@@ -65,6 +65,7 @@ WEATHER_DATA weather_info;
 SYS_DATA_TYPE sysdata;
 
 bool booting_up;
+bool happy_hour;
 bool area_resetting_global;
 bool mem_log;
 sh_int gsn_martial_arts;
@@ -345,6 +346,7 @@ void boot_db( void )
       weather_info.moon_loc = MOON_DOWN;
       weather_info.moon_phase = number_range( MOON_NEW, MOON_FULL );
 
+      happy_hour = FALSE;
 
       if( time_info.hour < 5 )
          weather_info.sunlight = SUN_DARK;
@@ -2732,18 +2734,28 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
 
      if (IS_SET(pObjIndex->extra_flags, ITEM_MAGIC))
      {
-       ilevel = (ilevel * 6) / 5;
+       ilevel = (ilevel * 5) / 4;
      }
 
      if (IS_SET(pObjIndex->extra_flags, ITEM_RARE))
      {
-       ilevel = (ilevel * 5) / 4;
+       ilevel = (ilevel * 3) / 2;
      }
 
      if (ilevel > MAX_MORTAL)
      {
-       ilevel += (ilevel - MAX_MORTAL)*3;
+       ilevel += (obj->level - MAX_MORTAL)*3;
        ilevel += 10;
+     }
+
+     if (ilevel > 125)
+     {
+       ilevel += (obj->level-125)*4;
+     }
+
+     if (ilevel > 149)
+     {
+       ilevel += 50;
      }
 
      if (pObjIndex->item_type == ITEM_WEAPON)

@@ -2766,6 +2766,11 @@ void do_who( CHAR_DATA * ch, char *argument )
    sprintf( buf4, "There have been a maximum of %d player%s logged on this session",
             max_players, max_players == 1 ? "" : "s" );
    sprintf( buf2, "@@R|@@G %s @@R|\n\r", center_text( buf4, 75 ) );
+   if (happy_hour)
+   {
+      sprintf( buf4, "@@yHappy Hour is active!@@N" );
+      sprintf( buf2, "@@R|@@G %s @@R|\r\n", center_text(buf4, 75) );
+   }
    safe_strcat( MAX_STRING_LENGTH, buf, buf2 );
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "@@R+-----------------------------------------------------------------------------+\n\r" );

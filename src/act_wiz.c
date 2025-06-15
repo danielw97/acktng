@@ -80,6 +80,14 @@ void do_transdm( CHAR_DATA * ch, char *argument )
    send_to_char( "Everyone has been transferred to the DM arena.\n\r", ch );
 }
 
+void trigger_happy_hour()
+{
+   happy_hour = TRUE;
+
+   info("HAPPY HOUR HAS BEGUN!", 1);
+   info("Double XP for everyone!", 1);
+}
+
 void do_wizhelp( CHAR_DATA * ch, char *argument )
 {
    char buf[MAX_STRING_LENGTH];

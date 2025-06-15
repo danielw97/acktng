@@ -500,7 +500,7 @@ void build_save_objects(  )
       pEd = pEd->next;
    }
 
-   if( ( pObject->level > 1 ) && ( pObject->level < 130 ) )
+   if( ( pObject->level > 1 ) && ( pObject->level <= 150 ) )
    {
       fprintf( SaveFile, "L\n" );
       fprintf( SaveFile, "%d\n", pObject->level );

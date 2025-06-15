@@ -399,8 +399,8 @@ CHAR_DATA *get_quest_target( int min_level, int max_level )
 /*   char *dirs = NULL; unused */
 
 
-   if( max_level > 140 )
-      max_level = 140;
+   if( max_level > 170 )
+      max_level = 170;
    min_index = number_range( 1, 1000 );
 
    for( target = first_char; target != NULL; target = target->next )
@@ -652,7 +652,7 @@ void generate_auto_quest(  )
    char new_long_desc[MAX_STRING_LENGTH];
    sh_int loop_counter = 0;
 
-   int a = 140;
+   int a = 170;
    int b = 0;
    sh_int player_count = 0, average_level = 0, total_levels = 0;
 
@@ -700,7 +700,7 @@ void generate_auto_quest(  )
       else
       {
          a = number_range( 100, 110 );
-         b = number_range( 115, 140 );
+         b = number_range( 115, 170 );
          hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR;
          quest_personality = 3;
       }

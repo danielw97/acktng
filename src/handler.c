@@ -238,9 +238,9 @@ int get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
    if (!remort)
       base *= 600;
    else if (double_remort && remort)
-      base *= 4000; 
+      base *= 3400; 
    else
-      base *= 3000;
+      base *= 2300;
 
    // Edge-case fix
    base += 350;
