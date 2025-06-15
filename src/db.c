@@ -2991,7 +2991,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       }
    }
 
-   int ac_val = (ilevel / ac_div) + ac_bonus;
+   int ac_val = ac_bonus - (ilevel / ac_div);
    int hr_val = (ilevel / hr_div) + hrdr_bonus;
    int dr_val  = (ilevel / dr_div) + hrdr_bonus;
    int hp_val = (ilevel / hp_div) + stat_bonus;
