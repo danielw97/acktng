@@ -2851,11 +2851,16 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
    if (ilevel > MAX_MORTAL)
    {
-      ilevel += (ilevel - MAX_MORTAL)*3;
+      ilevel += (obj->level - MAX_MORTAL)*3;
+   }
+
+   if (ilevel > 124)
+   {
+      ilevel += (obj->level - 124)*4;
    }
 
    /* Small bonus for higher weights within itemization class */
-   ilevel += ilevel * (obj->weight%10) * 2 / 100;
+   ilevel += obj->level * (obj->weight%10) * 2 / 100;
 
    /* Jewelry */
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
