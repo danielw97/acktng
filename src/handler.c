@@ -397,12 +397,12 @@ int get_max_con( CHAR_DATA *ch )
   return max;
 }
 
-int get_spellpower( ch )
+int get_spellpower( CHAR_DATA *ch )
 {
    return get_stat(ch, APPLY_SPELLPOWER);
 }
 
-int get_spell_crit( ch )
+int get_spell_crit( CHAR_DATA *ch )
 {
    // Base of 5.
    int crit = 5;
@@ -415,7 +415,7 @@ int get_spell_crit( ch )
    return crit;
 }
 
-int get_spell_crit_mult( ch )
+int get_spell_crit_mult( CHAR_DATA *ch )
 {
    // base of 50%
    int crit = 50;
@@ -427,7 +427,7 @@ int get_spell_crit_mult( ch )
    return crit;
 }
 
-int get_crit( ch )
+int get_crit( CHAR_DATA *ch )
 {
    OBJ_DATA *wield;
    // Base of 5%
@@ -453,7 +453,7 @@ int get_crit( ch )
    return crit;
 }
 
-int get_crit_mult( ch )
+int get_crit_mult( CHAR_DATA *ch )
 {
    OBJ_DATA *wield;
    // Base of 50%
