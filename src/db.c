@@ -55,7 +55,7 @@ extern int _filbuf args( ( FILE * ) );
 
 
 void set_obj_stat_auto( OBJ_DATA *obj );
-void set_af_to_obj(OBJ_DATA *obj, int location, int modifier);
+void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
 
 /* Getstats */
 int get_spellpower( CHAR_DATA * ch );
@@ -3001,17 +3001,17 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    if (spellpower_div > 0)
       spellpower_val = (ilevel / spellpower_div);
 
-   set_af_to_obj( obj, APPLY_AC, ac_val );
-   set_af_to_obj( obj, APPLY_HITROLL, hr_val );
-   set_af_to_obj( obj, APPLY_DAMROLL, dr_val );
-   set_af_to_obj( obj, APPLY_HIT, hp_val );
-   set_af_to_obj( obj, APPLY_MANA, mana_val );
-   set_af_to_obj( obj, APPLY_MOVE, move_val );
+   set_aff_to_obj( obj, APPLY_AC, ac_val );
+   set_aff_to_obj( obj, APPLY_HITROLL, hr_val );
+   set_aff_to_obj( obj, APPLY_DAMROLL, dr_val );
+   set_aff_to_obj( obj, APPLY_HIT, hp_val );
+   set_aff_to_obj( obj, APPLY_MANA, mana_val );
+   set_aff_to_obj( obj, APPLY_MOVE, move_val );
    if (spellpower_val > 0)
-      set_af_to_obj( obj, APPLY_SPELLPOWER, spellpower_val);
+      set_aff_to_obj( obj, APPLY_SPELLPOWER, spellpower_val);
 }
 
-set_af_to_obj(OBJ_DATA *obj, int location, int modifier)
+set_aff_to_obj(OBJ_DATA *obj, int location, int modifier)
 {
    AFFECT_DATA *new_af;
 
