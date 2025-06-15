@@ -2859,6 +2859,11 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       ilevel += (obj->level - 124)*4;
    }
 
+   if (level == 150)
+   {
+      ilevel += 50;
+   }
+
    /* Small bonus for higher weights within itemization class */
    ilevel += obj->level * (obj->weight%10) * 2 / 100;
 
