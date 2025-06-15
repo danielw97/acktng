@@ -652,6 +652,12 @@ int get_item_value( OBJ_DATA * obj )
          case APPLY_SAVING_SPELL:
             save_mod += this_aff->modifier;
             break;
+         case APPLY_SPELLPOWER:
+         case APPLY_SPELL_CRIT:
+         case APPLY_SPELL_CRIT_MULT:
+         case APPLY_CRIT:
+         case APPLY_CRIT_MULT:
+         break;
       }
    }
 
