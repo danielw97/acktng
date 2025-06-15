@@ -58,6 +58,13 @@ extern int _filbuf args( ( FILE * ) );
 void set_obj_stat_auto( OBJ_DATA *obj );
 void set_af_to_obj(OBJ_DATA *obj, int location, int modifier);
 
+/* Getstats */
+int get_spellpower( CHAR_DATA * ch );
+int get_spell_crit( CHAR_DATA * ch );
+int get_spell_crit_mult( CHAR_DATA * ch );
+int get_crit( CHAR_DATA * ch );
+int get_crit_mult( CHAR_DATA * ch );
+
 /*
  * Globals.
  */
