@@ -2852,7 +2852,6 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    if (ilevel > MAX_MORTAL)
    {
       ilevel += (ilevel - MAX_MORTAL)*3;
-      ilevel += 10;
    }
 
    if (ilevel > 124)
@@ -2897,7 +2896,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
          dr_div *= 2;
          move_div *= 2;
 
-         spellpower_div = 8;
+         spellpower_div = 15;
       }
    }
    else if (obj->item_type == ITEM_WEAPON)
@@ -2927,7 +2926,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
          dr_div *= 2;
          move_div *= 2;
 
-         spellpower_div = 5;
+         spellpower_div = 8;
       }
    }
    else if (obj->item_type == ITEM_ARMOR)
@@ -2957,7 +2956,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
          dr_div *= 2;
          move_div *= 2;
 
-         spellpower_div = 10;
+         spellpower_div = 15;
       }
    }
    else
@@ -2987,7 +2986,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
          dr_div *= 2;
          move_div *= 2;
 
-         spellpower_div = 10;
+         spellpower_div = 15;
       }
    }
 
