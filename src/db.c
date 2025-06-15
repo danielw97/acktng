@@ -2861,8 +2861,8 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
        IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
    {
-      hr_div = 20;
-      dr_div = 20;
+      hr_div = 10;
+      dr_div = 10;
       ac_div = 10;
       hp_div = 2;
       mana_div = 2;
@@ -2892,8 +2892,8 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    else if (obj->item_type == ITEM_WEAPON)
    {
       hrdr_bonus = 5;
-      hr_div = 8;
-      dr_div = 8;
+      hr_div = 6;
+      dr_div = 6;
       ac_div = 10;
       hp_div = 10;
       move_div = 10;
@@ -2922,8 +2922,8 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    else if (obj->item_type == ITEM_ARMOR)
    {
       ac_bonus = -10;
-      hr_div = 15;
-      dr_div = 15;
+      hr_div = 8;
+      dr_div = 8;
       ac_div = 2;
       hp_div = 5;
       mana_div = 5;
