@@ -727,34 +727,15 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
         dam += dam * 5 / 100;
    }
 
-   int critical_chance = 5;
-
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
-   {
-      critical_chance += ch->pcdata->learned[gsn_enhanced_critical]/20;
-   }
-
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
-   {
-      critical_chance += ch->lvl2[CLASS_SWO]/20;
-   }
+   int critical_chance = get_crit( ch );
 
    bool critical = FALSE;
 
    if (number_range(0,100) < critical_chance)
    {
-      int crit_mult = 150;
-      if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
-      {
-        crit_mult += number_range(ch->pcdata->learned[gsn_enhanced_critical]/2, ch->pcdata->learned[gsn_enhanced_critical]);
-      }
+      int crit_mult = get_crit_mult(ch);
 
-      if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
-      {
-         crit_mult += number_range(ch->lvl2[CLASS_SWO]/20, ch->lvl2[CLASS_SWO]/10);
-      }
-
-      dam = dam * crit_mult / 100;
+      dam += dam * crit_mult / 100;
       critical = TRUE;
    }
 

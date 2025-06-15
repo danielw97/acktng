@@ -844,13 +844,12 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
                       && ( ch->race < MAX_RACE ) ) ?
                     race_table[ch->race].race_flags : ch->race_mods ) : race_table[ch->race].race_flags );
 
-      int crit_chance = 5;
-      if (!IS_NPC(ch))
-         crit_chance += ch->pcdata->learned[gsn_spell_critical]/10;
+      int crit_chance = get_spell_critical(ch);
+
       if (!IS_NPC(ch) && number_range(0,100) < crit_chance)
       {
          critical = TRUE;
-         dam_modifier += 1.0 + (ch->pcdata->learned[gsn_spell_critical_damage]/100);
+         dam_modifier += 1.0 + (get_spell_crit_mult( ch )/100);
       }
 
       if( IS_SET( ch_strong, type ) )

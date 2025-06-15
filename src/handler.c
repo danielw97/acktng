@@ -404,22 +404,80 @@ int get_spellpower( ch )
 
 int get_spell_crit( ch )
 {
-   return get_stat(ch, APPLY_SPELL_CRIT);
+   // Base of 5.
+   int crit = 5;
+
+   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_spell_critical] > 0)
+      crit += 10;
+
+   crit += get_stat(ch, APPLY_SPELL_CRIT);
+
+   return crit;
 }
 
 int get_spell_crit_mult( ch )
 {
-   return get_stat(ch, APPLY_SPELL_CRIT_MULT);
+   // base of 50%
+   int crit = 50;
+
+   if (!IS_NPC(ch) &&ch->pcdata->learned[gsn_spell_critical_damge] > 0)
+      crit += 50;
+
+   crit += get_stat(ch, APPLY_SPELL_CRIT_MULT);
+   return crit;
 }
 
 int get_crit( ch )
 {
-   return get_stat(ch, APPLY_CRIT);
+   OBJ_DATA *wield;
+   // Base of 5%
+   int crit = 5;
+ 
+   wield = get_eq_char( ch, WEAR_HOLD_HAND_L );
+   if( !IS_WEAPON( wield ) )
+      wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
+   if( !IS_WEAPON( wield ) )
+      wield = NULL;   
+      
+   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
+   {
+      crit += 5;
+   }
+
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
+   {
+      crit += ch->lvl2[CLASS_SWO]/20;
+   }
+
+   crit += get_stat(ch, APPLY_CRIT);
+   return crit;
 }
 
 int get_crit_mult( ch )
 {
-   return get_stat(ch, APPLY_CRIT_MULT);
+   OBJ_DATA *wield;
+   // Base of 50%
+   int crit = 50;
+ 
+   wield = get_eq_char( ch, WEAR_HOLD_HAND_L );
+   if( !IS_WEAPON( wield ) )
+      wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
+   if( !IS_WEAPON( wield ) )
+      wield = NULL;
+
+   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
+   {
+      crit += 50;
+   }
+
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
+   {
+      crit += ch->lvl2[CLASS_SWO]/5;
+   }
+   
+   crit += get_stat(ch, APPLY_CRIT_MULT);
+
+   return crit;
 }
 
 int get_stat( CHAR_DATA *ch, int stat )
