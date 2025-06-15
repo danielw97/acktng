@@ -96,6 +96,13 @@ char *_fread_string_eol args( ( FILE * fp, const char *caller ) );
 #define free_string(x) _free_string((x), _caller)
 void _free_string args( ( char *pstr, const char *caller ) );
 
+/* Getstats */
+int get_spellpower( ch );
+int get_spell_crit( ch );
+int get_spell_crit_mult( ch );
+int get_crit( ch );
+int get_crit_mult( ch );
+
 /*
  * Updated pointer referencing, curtesy of Spectrum, from Beyond the Veil
  *

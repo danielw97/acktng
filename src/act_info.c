@@ -1849,11 +1849,13 @@ void do_score( CHAR_DATA * ch, char *argument )
    sprintf( buf, "@@c|%s @@c|\n\r", center_text( buf2, 62 ) );
    send_to_char( buf, ch );
 
-   sprintf( buf, " @@WHitroll: @@y%-5d   @@WDamroll: @@y%-5d", GET_HITROLL( ch ), GET_DAMROLL( ch ) );
+   sprintf( buf, " @@WHitroll: @@y%-5d @@WDamroll: @@y%-5d @@WCrit: @@y%-5d @@WMult: @@y%-5d", GET_HITROLL( ch ), GET_DAMROLL( ch ), get_crit(ch), get_crit_mult(ch) );
    sprintf( buf2, "@@c|%s @@c|\n\r", center_text( buf, 62 ) );
    send_to_char( buf2, ch );
 
-
+   sprintf( buf, " @@WSpellpower: @@y%-5d @@WSpell Crit: @@y%-5d @@WSpell Crit Mult: @@y%-5d", get_spellpower( ch ), get_spell_crit(ch), get_spell_crit_mult(ch) );
+   sprintf( buf2, "@@c|%s @@c|\n\r", center_text( buf, 62 ) );
+   send_to_char( buf2, ch );
    sprintf( buf, " @@WYou are " );
 
    if( ch->alignment > 900 )

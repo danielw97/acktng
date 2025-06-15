@@ -965,6 +965,7 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
    if( ( IS_SET( type, REALM_DRAIN ) ) && ( IS_UNDEAD( victim ) ) )
       dam_modifier = 0.0;
 
+   dam += get_spellpower(ch);
    dam *= dam_modifier;
 
    /*

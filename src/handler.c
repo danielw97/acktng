@@ -397,6 +397,64 @@ int get_max_con( CHAR_DATA *ch )
   return max;
 }
 
+int get_spellpower( ch )
+{
+   return get_stat(ch, APPLY_SPELLPOWER);
+}
+
+int get_spell_crit( ch )
+{
+   return get_stat(ch, APPLY_SPELL_CRIT);
+}
+
+int get_spell_crit_mult( ch )
+{
+   return get_stat(ch, APPLY_SPELL_CRIT_MULT);
+}
+
+int get_crit( ch )
+{
+   return get_stat(ch, APPLY_CRIT);
+}
+
+int get_crit_mult( ch )
+{
+   return get_stat(ch, APPLY_CRIT_MULT);
+}
+
+int get_stat( CHAR_DATA *ch, int stat )
+{
+   int i;
+   int stat_val = 0;
+   OBJ_DATA *obj;
+   AFFECT_DATA *paf;
+
+   /* First we check gear */
+   for(int i = 0; i < MAX_WEAR; i++)
+   {
+      if( ( obj = get_eq_char( ch, location ) ) != NULL )
+      {
+         for( paf = obj->first_apply; paf != NULL; paf = paf->next )
+         {
+            if( paf->location == stat && paf->modifier != 0 )
+            {
+               stat_val += paf->modifier;
+            }
+         }
+      }
+   }
+   
+   /* Then we check affects */
+   for( paf = ch->first_affect; paf != NULL; paf = paf->next )
+   {
+      if( paf->location == stat && paf->modifier != 0 )
+      {
+         stat_val += paf->modifier;
+      }
+   }
+
+   return stat_val;
+}
 
 /*
  * Retrieve a character's carry capacity.
@@ -434,7 +492,7 @@ int get_curr_spellpower( CHAR_DATA * ch )
 {
    int spellpower = 0;
 
-   
+
 }
 
 
