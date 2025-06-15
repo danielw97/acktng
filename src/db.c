@@ -2823,6 +2823,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
 
 void set_obj_stat_auto( OBJ_DATA *obj )
 {
+   AFFECT_DATA *new_af;
    int ilevel = obj->level;
    int hr_div = 0;
    int dr_div = 0;
