@@ -2710,7 +2710,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    {
      for( af = pObjIndex->first_apply; af != NULL; af = af->next )
      {
-         set_afF_to_obj( obj, af->location, af_modifier );
+         set_aff_to_obj( obj, af->location, af_modifier );
      }
    } /* We have an automatically stat'd item */
    else
