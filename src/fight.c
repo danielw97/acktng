@@ -56,6 +56,7 @@ void death_message args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dt, int max_d
 void death_cry args( ( CHAR_DATA * ch ) );
 void group_gain args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void do_knee args( ( CHAR_DATA *ch, char *argument ) );
+void do_lifesteal args( ( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam ) );
 
 bool is_safe args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void make_corpse args( ( CHAR_DATA * ch, char *argument ) );
