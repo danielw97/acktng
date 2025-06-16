@@ -1164,6 +1164,8 @@
 #define ITEM_LIFESTEALER	   BIT_26
 #define ITEM_SILVER			BIT_27
 #define ITEM_AUTO			BIT_28
+#define ITEM_BUCKLER       BIT_29
+#define ITEM_WAND          BIT_30
 
 /* Class-restricted stuff dropped. */
 

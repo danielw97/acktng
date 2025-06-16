@@ -1503,6 +1503,12 @@ char *extra_bit_name( int extra_flags )
       safe_strcat( MAX_STRING_LENGTH, buf, " lifestealer" );
    if( extra_flags & ITEM_SILVER )
       safe_strcat( MAX_STRING_LENGTH, buf, " silver" );
+   if( extra_flags & ITEM_BUCKLER )
+      safe_strcat( MAX_STRING_LENGTH, buf, " buckler" );
+   if( extra_flags & ITEM_WAND )
+      safe_strcat( MAX_STRING_LENGTH, buf, " wand" );
+   if( extra_flags & ITEM_FIST )
+      safe_strcat( MAX_STRING_LENGTH, buf, " fist" );
    if( extra_flags & ITEM_AUTO )
       safe_strcat( MAX_STRING_LENGTH, buf, " auto" );
 

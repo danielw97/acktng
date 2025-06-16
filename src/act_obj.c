@@ -1363,6 +1363,24 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
       return;
    }
 
+   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_BUCKLER) && ch->pcdata->learned[gsn_equip_buckler] < 1)
+   {
+      send_to_char( "You cannot wear bucklers.\n\r", ch );
+      return;
+   }
+
+   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_WAND) && ch->pcdata->learned[gsn_equip_wand] < 1)
+   {
+      send_to_char( "You cannot equip wands.\n\r", ch );
+      return;
+   }
+
+   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_FIST) && ch->pcdata->learned[gsn_equip_fist] < 1)
+   {
+      send_to_char( "You cannot equip fist weapons.\n\r", ch );
+      return;
+   }
+   
    if( get_psuedo_level( ch ) < obj->level )
    {
       sprintf( buf, "You must be level %d to use this object.\n\r", obj->level );
@@ -1778,6 +1796,7 @@ void do_wear( CHAR_DATA * ch, char *argument )
       send_to_char( "Your claws are too clumsy!!!@@N\n\r", ch );
       return;
    }
+
    {
       OBJ_DATA *obj_next;
       for( obj = ch->first_carry; obj != NULL; obj = obj_next )
@@ -1848,13 +1867,12 @@ void do_wear( CHAR_DATA * ch, char *argument )
       }
       if( ( num_unique > 4 ) && ( IS_SET( obj->extra_flags, ITEM_UNIQUE ) ) )
       {
-         send_to_char( " You may only wear 5 unique items at one time.\n\r", ch );
+         send_to_char( "You may only wear 5 unique items at one time.\n\r", ch );
+         return;
       }
-      else
-         wear_obj( ch, obj, TRUE );
-   }
 
-   return;
+      wear_obj( ch, obj, TRUE );
+   }
 }
 
 
