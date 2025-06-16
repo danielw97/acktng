@@ -2677,11 +2677,12 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
        */
       if( funky < 0 )
          funky = 823421;
-      funky = UMIN( funky, max_xp );
 
       funky *= number_range(150,250);
       funky /= 100;
 
+      funky = UMIN( funky, max_xp );
+      
       if (happy_hour)
          funky *= 2;
 
