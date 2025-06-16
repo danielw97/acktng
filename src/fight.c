@@ -572,14 +572,14 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if( dt == TYPE_UNDEFINED )
    {
       dt = TYPE_HIT;
-      if( wield != NULL && wield->item_type == ITEM_WEAPON && !IS_SET(wield->extra, ITEM_FIST))
+      if( wield != NULL && wield->item_type == ITEM_WEAPON && !IS_SET(wield->extra_flags, ITEM_FIST))
          dt += wield->value[3];
    }
    /*
     * check for martial arts  Taken out for wierd act crash bug with type_martial ZEN
     */
 
-     if ( dt == TYPE_HIT && (wield == NULL || IS_SET(wield->extra, ITEM_FIST) ) )
+     if ( dt == TYPE_HIT && (wield == NULL || IS_SET(wield->extra_flags, ITEM_FIST) ) )
      {
        int chance = 0;
 

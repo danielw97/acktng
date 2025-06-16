@@ -9901,3 +9901,12 @@
 [*****] BUG: create_object: vnum 9213 bad type 3.
 [*****] BUG: Affect_modify: unknown location 27.
 [*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: create_object: vnum 9213 bad type 3.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Act: missing arg2 for code $N, string=$N begins to quickly regenerate from $n's spell.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.

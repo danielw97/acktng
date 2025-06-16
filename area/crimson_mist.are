@@ -2956,7 +2956,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-145 0
+146 0
 0 400 350
 ! 3 0 0 7 6174 0 4
 | 0 0 0 0 0 0 0
@@ -3008,7 +3008,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-147 0
+148 0
 0 400 350
 ! 0 0 0 7 6174 0 4
 | 0 0 0 0 0 0 0
@@ -3022,9 +3022,9 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 @@ppierce@@N into the very depths of your soul..@@N
 ~
 36765723 18664 0 S
-145 1
+144 1
 0 400 300
-! 7 0 0 7 30870 1052736 80
+! 7 0 0 7 28822 1052736 0
 | 0 0 0 0 0 0 0
 #8356
 Rock Hydra~
@@ -3069,7 +3069,7 @@ Vampyre Bats bat~
 ~
 ~
 16387 524988 0 S
-146 0
+145 0
 0 250 250
 ! 0 0 0 7 524302 0 8
 | 0 0 0 0 0 0 0
@@ -3080,7 +3080,7 @@ Vampyre Bats bat~
 ~
 ~
 16387 524988 0 S
-147 0
+148 0
 0 250 250
 ! 0 0 0 7 524302 0 8
 | 0 0 0 0 0 0 0
@@ -3091,7 +3091,7 @@ Vampyre Bats bat~
 ~
 ~
 16387 524988 0 S
-145 0
+146 0
 0 250 250
 ! 0 0 0 7 524302 0 8
 | 0 0 0 0 0 0 0
@@ -3102,7 +3102,7 @@ Vampyre Bats bat~
 ~
 ~
 16387 524988 0 S
-146 0
+147 0
 0 250 250
 ! 0 0 0 7 524302 0 8
 | 0 0 0 0 0 0 0
@@ -3115,7 +3115,7 @@ Patrol fog mist~
 attacks you where you stand.@@N
 ~
 36700161 16616 0 S
-151 0
+152 0
 -400 330 280
 ! 0 0 0 7 548878 0 8
 | 0 0 0 0 0 0 0
@@ -3176,7 +3176,7 @@ Taurus~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-142 0
+143 0
 -550 375 200
 ! 0 0 0 7 679950 0 16
 | 0 0 0 0 0 0 0
@@ -3200,7 +3200,7 @@ Cancer~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-154 0
+153 0
 -550 375 200
 ! 0 0 0 7 679950 0 16
 | 0 0 0 0 0 0 0
@@ -3260,7 +3260,7 @@ Sagittarius~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-138 0
+139 0
 0 375 200
 ! 0 0 0 7 679950 0 16
 | 0 0 0 0 0 0 0
@@ -3310,7 +3310,7 @@ Prophet~
 full-figured woman..@@N
 ~
 4115 18536 1000 S
-140 1
+141 1
 -2500 1000 1000
 ! 1 0 0 7 14 0 0
 | 0 0 0 0 0 0 0
@@ -3321,7 +3321,7 @@ suggestion hypnotic crimson~
 ~
 ~
 45105153 26876 -1000 S
-152 2
+153 2
 -750 400 400
 ! 6 0 0 7 942094 1509120 48
 | 0 0 0 0 0 0 0
@@ -3332,7 +3332,7 @@ Crimson Crusader~
 ~
 ~
 50530333 1698558 1000 S
-149 1
+148 1
 -600 300 250
 ! 6 0 0 7 942094 34816 16
 | 0 0 0 0 0 0 0
@@ -3342,7 +3342,7 @@ sentient~
 ~
 ~
 53608477 649982 0 S
-150 0
+151 0
 -1000 500 500
 ! 7 0 0 7 933902 0 48
 | 0 0 0 0 0 0 0
@@ -3353,7 +3353,7 @@ Crimson Shadow~
 ~
 ~
 33554433 548992 0 S
-150 0
+149 0
 -650 400 400
 ! 0 0 0 7 14 64 72
 | 0 0 0 0 0 0 0
@@ -3419,7 +3419,7 @@ nightmare~
 ~
 ~
 167903257 576234 -1000 S
-155 1
+156 1
 -600 350 350
 ! 0 0 0 7 679950 0 0
 | 0 0 0 0 0 0 0
@@ -3455,7 +3455,7 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 @@ppierce@@N into the very depths of your soul..@@N
 ~
 36765723 18664 0 S
-147 1
+148 1
 -400 400 400
 ! 7 0 0 7 30870 1052736 80
 | 0 0 0 0 0 0 0
@@ -3491,7 +3491,7 @@ necromancer mage crimson~
 ~
 ~
 33554449 16576 0 S
-152 1
+151 1
 -500 250 500
 ! 0 0 0 7 553102 0 16
 | 0 0 0 0 0 0 0
@@ -3513,7 +3513,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-150 1
+151 1
 -500 275 350
 ! 0 0 0 7 14 0 0
 | 0 0 0 0 0 0 0
@@ -3524,7 +3524,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-153 1
+154 1
 -500 275 350
 ! 0 0 0 7 14 0 0
 | 0 0 0 0 0 0 0
@@ -3535,7 +3535,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-149 1
+150 1
 -500 275 350
 ! 0 0 0 7 14 0 0
 | 0 0 0 0 0 0 0
@@ -3557,7 +3557,7 @@ head~
 ~
 ~
 65539 16616 0 S
-149 1
+150 1
 -400 380 280
 ! 0 0 0 7 30734 0 8
 | 0 0 0 0 0 0 0
@@ -3601,7 +3601,7 @@ head~
 ~
 ~
 33619971 16616 0 S
-141 1
+142 1
 -400 380 280
 ! 0 0 0 7 30734 0 8
 | 0 0 0 0 0 0 0
@@ -3781,7 +3781,7 @@ statue figurine~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
 14 66561 0 1
-9 3 8366 0 0 0 0 0 0 0
+9 3 0 0 0 0 0 0 0 0
 1
 L
 2
@@ -3791,7 +3791,7 @@ statue figurine~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
 14 65537 0 1
-9 3 8366 0 0 0 0 0 0 0
+9 3 0 0 0 0 0 0 0 0
 1
 L
 2
@@ -3801,7 +3801,7 @@ statue figurine~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
 14 65537 0 1
-9 3 8366 0 0 0 0 0 0 0
+9 3 0 0 0 0 0 0 0 0
 1
 L
 2
@@ -3811,7 +3811,7 @@ statue figurine~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
 14 65537 0 1
-9 0 8377 0 0 0 0 0 0 0
+9 0 0 0 0 0 0 0 0 0
 1
 L
 2
@@ -3820,7 +3820,7 @@ petal~
 @@mA P@@pe@@gt@@pa@@ml of @@aD@@gi@@ca@@gm@@ao@@cn@@gd@@N~
 @@mA carnation petal of pure @@gdiamond@@m lies here..@@N~
 29 1048768 8519680 1
-0 8361 8362 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 2
 L
 120
@@ -3829,7 +3829,7 @@ thorn~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@GT@@rh@@go@@rr@@Gn@@N~
 @@mA @@dc@@mr@@pi@@Wm@@gs@@po@@mn @@rthorn@@m lies here in the dirt..@@N~
 29 1048768 8519680 1
-8360 0 8362 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 0
 L
 120
@@ -3847,7 +3847,7 @@ leaf~
 @@gA @@rLeaf @@gof @@GJ@@ra@@Wd@@ge@@N~
 @@mA tiny flower @@rleaf@@m lies here gently glowing..@@N~
 29 1048768 8519680 1
-0 8364 8365 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 1
 L
 120
@@ -3856,7 +3856,7 @@ twig~
 @@cA @@gC@@cr@@ay@@gs@@at@@ga@@cl @@bT@@Ww@@gi@@bg@@N~
 @@mA thin @@btwig@@m is here waiting to be held..@@N~
 29 1048768 8519680 1
-8363 0 8365 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 3
 L
 120
@@ -4174,7 +4174,7 @@ window~
 @@yThe Golden Window@@N~
 ~
 14 1 0 1
-9 0 8370 0 0 0 0 0 0 0
+9 0 0 0 0 0 0 0 0 0
 1
 L
 2
@@ -4183,7 +4183,7 @@ red~
 @@dT@@mh@@pe @@RRed @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@Rred@@m pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 8380 8385 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 1
 A
 17 100
@@ -4200,7 +4200,7 @@ blue~
 @@dT@@mh@@pe @@BBlue @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@Bblue@@m pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-8379 0 8385 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 1
 A
 17 -100
@@ -4217,7 +4217,7 @@ purple~
 @@dT@@mh@@pe @@pPurple @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@ppurple@@M pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 8382 8386 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 1
 A
 17 500
@@ -4232,7 +4232,7 @@ yellow~
 @@dT@@mh@@pe @@yYellow @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@yyellow@@M pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-8381 0 8386 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 1
 A
 12 -200
@@ -4245,7 +4245,7 @@ green~
 @@dT@@mh@@pe @@GGreen @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@Ggreen@@m pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 8384 8387 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 1
 A
 17 1000
@@ -4260,7 +4260,7 @@ grey~
 @@dT@@mh@@pe @@dGrey @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@dgrey@@m pebble of the mist floats here...@@N~
 29 1048704 8421376 1
-8383 0 8387 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
 1
 A
 24 -100

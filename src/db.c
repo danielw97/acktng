@@ -2932,7 +2932,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
          spellpower_div = 8;
       }
-      if (IS_SET(obj->extra, ITEM_WAND))
+      if (IS_SET(obj->extra_flags, ITEM_WAND))
       {
          // This is all in for caster stats
          spellpower_div = 2;
@@ -2973,7 +2973,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       }
 
       // Bucklers get poor stats
-      if (IS_SET(obj->extra, ITEM_BUCKLER))
+      if (IS_SET(obj->extra_flags, ITEM_BUCKLER))
       {
          ac_bonus = 0;
          hr_div *= 2;
