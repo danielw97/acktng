@@ -567,7 +567,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if( !IS_WEAPON( wield ) )
       wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
    if( IS_WEAPON(wield) )
-      dual_wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
+      dualwield = get_eq_char( ch, WEAR_HOLD_HAND_R );
    if( !IS_WEAPON( wield ) )
       wield = NULL;
    if( dt == TYPE_UNDEFINED )
