@@ -1421,8 +1421,11 @@ bool do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual,
       ch->hit = UMIN( ch->max_hit, ch->hit + ls );
 
       ch->alignment = UMAX( -1000, ch->alignment - 50 );
+
+      return TRUE;
    }
 
+   return FALSE;
 }
 
 bool is_safe( CHAR_DATA * ch, CHAR_DATA * victim )
