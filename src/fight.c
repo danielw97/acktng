@@ -803,7 +803,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       {
 	      do_lifesteal(ch, victim, wield, FALSE, dam);
       }
-      if ( dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
+      else if ( dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
       {
          do_lifesteal(ch, victim, dualwield, TRUE, dam);
       }
