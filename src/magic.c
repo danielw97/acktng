@@ -1725,7 +1725,7 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
 
 
       if( ( IS_AFFECTED( victim, AFF_CLOAK_REFLECTION ) )
-          && ( ch != victim ) && ( number_percent(  ) < ( victim->level - 50 ) ) )
+          && ( ch != victim ) && ( number_percent(  ) > chance ) )
       {
 
          act( "@@N$n's @@lc@@el@@ro@@ya@@ak@@N glows brightly as $N's spell hits it@@N!!", victim, NULL, ch, TO_ROOM );
@@ -1748,7 +1748,7 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
 
 
       if( ( IS_AFFECTED( victim, AFF_CLOAK_ABSORPTION ) )
-          && ( ch != victim ) && ( number_percent(  ) < ( victim->level - 40 ) ) )
+          && ( ch != victim ) && ( number_percent(  ) > chance ) )
       {
 
          act( "@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim, NULL, ch, TO_ROOM );
