@@ -3009,22 +3009,40 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       }
    }
 
-   int ac_val = ac_bonus - (ilevel*2 / ac_div);
-   int hr_val = 1 +(ilevel / hr_div) + hrdr_bonus;
-   int dr_val  = 1 +(ilevel / dr_div) + hrdr_bonus;
-   int hp_val = 10 +(ilevel / hp_div) + stat_bonus;
-   int mana_val = 10 + (ilevel / mana_div) + stat_bonus;
-   int move_val = 10 + (ilevel / move_div) + stat_bonus;
+   int ac_val = ac_bonus;
+   if (ac_div != 0)
+      ac_val -= (ilevel*2 / ac_div);
+   int hr_val = hrdr_bonus;
+   if (hr_div != 0)
+      hr_val += (ilevel / hr_div);
+   int dr_val  = hrdr_bonus;
+   if (dr_div != 0)
+      dr_val += (ilevel / dr_div);
+   int hp_val = stat_bonus;
+   if (hp_div != 0)
+      hp_val += (ilevel / hp_div) + stat_bonus;
+   int mana_val = stat_bonus;
+   if (mana_div != 0)
+      mana_val += (ilevel / mana_div);
+   int move_val = stat_bonus;
+   if (move_div != 0)
+      move_val += (ilevel / move_div);
    int spellpower_val = 0;
    if (spellpower_div > 0)
       spellpower_val = (ilevel / spellpower_div);
 
-   set_aff_to_obj( obj, APPLY_AC, ac_val );
-   set_aff_to_obj( obj, APPLY_HITROLL, hr_val );
-   set_aff_to_obj( obj, APPLY_DAMROLL, dr_val );
-   set_aff_to_obj( obj, APPLY_HIT, hp_val );
-   set_aff_to_obj( obj, APPLY_MANA, mana_val );
-   set_aff_to_obj( obj, APPLY_MOVE, move_val );
+   if (ac_val != 0)
+      set_aff_to_obj( obj, APPLY_AC, ac_val );
+   if (hr_val != 0)
+      set_aff_to_obj( obj, APPLY_HITROLL, hr_val );
+   if (dr_val != 0)
+      set_aff_to_obj( obj, APPLY_DAMROLL, dr_val );
+   if (hp_val != 0)
+      set_aff_to_obj( obj, APPLY_HIT, hp_val );
+   if (mana_val != 0)
+      set_aff_to_obj( obj, APPLY_MANA, mana_val );
+   if (move_val != 0)
+      set_aff_to_obj( obj, APPLY_MOVE, move_val );
    if (spellpower_val > 0)
       set_aff_to_obj( obj, APPLY_SPELLPOWER, spellpower_val);
 }
