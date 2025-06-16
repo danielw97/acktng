@@ -56,7 +56,7 @@ void death_message args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dt, int max_d
 void death_cry args( ( CHAR_DATA * ch ) );
 void group_gain args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void do_knee args( ( CHAR_DATA *ch, char *argument ) );
-void do_lifesteal args( ( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam ) );
+bool do_lifesteal args( ( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam ) );
 
 bool is_safe args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void make_corpse args( ( CHAR_DATA * ch, char *argument ) );
@@ -798,12 +798,13 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    else
    {
       dam *= dam_mod;
+      bool stole_life = FALSE;
       if( ( wield )
           && ( dam > 0 ) && ( ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) ) )
       {
-	      do_lifesteal(ch, victim, wield, FALSE, dam);
+	      stole_life = do_lifesteal(ch, victim, wield, FALSE, dam);
       }
-      else if ( dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
+      if ( !stole_life && dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
       {
          do_lifesteal(ch, victim, dualwield, TRUE, dam);
       }
@@ -1382,7 +1383,7 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
    return dam;
 }
 
-void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam )
+bool do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam )
 {
    char buf[MAX_STRING_LENGTH];
    int chance = 10, potency = 20;
