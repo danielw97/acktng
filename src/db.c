@@ -2837,12 +2837,12 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
    if (IS_SET(obj->extra_flags, ITEM_MAGIC))
    {
-      ilevel = (ilevel * 5) / 4;
+      ilevel *= 1.2;
    }
 
    if (IS_SET(obj->extra_flags, ITEM_RARE))
    {
-      ilevel = (ilevel * 3) / 2;
+      ilevel *= 1.5;
    }
 
    if (obj->level > MAX_MORTAL)
