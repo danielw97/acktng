@@ -544,6 +544,7 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
 void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
 {
    OBJ_DATA *wield;
+   OBJ_DATA *dualwield = NULL;
    OBJ_DATA *shield;
    int victim_ac;
    int remort_bonus;
@@ -565,6 +566,8 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    wield = get_eq_char( ch, WEAR_HOLD_HAND_L );
    if( !IS_WEAPON( wield ) )
       wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
+   if( IS_WEAPON(wield) )
+      dual_wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
    if( !IS_WEAPON( wield ) )
       wield = NULL;
    if( dt == TYPE_UNDEFINED )
@@ -795,9 +798,13 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    {
       dam *= dam_mod;
       if( ( wield )
-          && ( dam > 0 ) && ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) )
+          && ( dam > 0 ) && ( ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) ) )
       {
-	      do_lifesteal(ch, victim, wield, dam);
+	      do_lifesteal(ch, victim, wield, FALSE, dam);
+      }
+      if ( dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
+      {
+         do_lifesteal(ch, victim, dualwield, TRUE, dam);
       }
    }
 
@@ -1374,7 +1381,7 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
    return dam;
 }
 
-void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, int dam )
+void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam )
 {
    char buf[MAX_STRING_LENGTH];
    int chance = 10, potency = 20;
@@ -1392,6 +1399,9 @@ void do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, int dam )
       potency += ch->lvl2[CLASS_NEC]/10;
    else if (ch->lvl2[CLASS_EGO] > 0)
       potency += ch->lvl2[CLASS_EGO]/10;
+
+   if (dual)
+      chance /= 2;
 
    if ( number_range( 0, 99 ) < chance )
    {
