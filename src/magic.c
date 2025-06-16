@@ -1690,6 +1690,8 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
       if( ch == victim )
          chance = 100;
 
+      chance += (ch->lvl[CLASS_MAG] / 25);
+
       chance += ( ( get_psuedo_level( ch ) - get_psuedo_level( victim ) ) );
       /*
        * Bonus/penalty for difference in levels. 
