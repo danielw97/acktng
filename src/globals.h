@@ -69,6 +69,10 @@ extern sh_int gsn_enhanced_sword_critical;
 extern sh_int gsn_two_handed;
 extern sh_int gsn_bare_hand;
 
+extern sh_int gsn_equip_buckler;
+extern sh_int gsn_equip_fist;
+extern sh_int gsn_equip_wand;
+
 extern sh_int gsn_circle;
 extern sh_int gsn_backstab;
 extern sh_int gsn_dodge;

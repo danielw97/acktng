@@ -9877,3 +9877,27 @@
 [*****] BUG: Affect_modify: unknown location 27.
 [*****] BUG: Affect_modify: unknown location 27.
 [*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1314@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W999@@l)@@N
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Trig_transfer: Obj has invalid v2.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1365@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: create_object: vnum 9213 bad type 3.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.

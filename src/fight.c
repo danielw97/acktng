@@ -369,7 +369,7 @@ void violence_update( void )
                /*
                 * NPC's assist NPC's of same type or 45% chance regardless.
                 */
-               if( !IS_AFFECTED( rch, AFF_CHARM ) && !IS_SET( ch->act, ACT_NOASSIST ) )
+               if( !IS_AFFECTED( rch, AFF_CHARM ) && !IS_SET( rch->act, ACT_NOASSIST ) )
                {
                   if( ( rch->pIndexData == victim->pIndexData )   /* is it the same as a target here?  */
                       || ( ( number_percent(  ) < 20 )
