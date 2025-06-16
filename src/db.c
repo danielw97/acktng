@@ -2928,7 +2928,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       if (IS_SET(obj->extra_flags, ITEM_WAND))
       {
          // This is all in for caster stats
-         spellpower_div = 2;
+         spellpower_div = 1;
          hrdr_bonus = 0;
          hr_div = 0;
          dr_div = 0;
