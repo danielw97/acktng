@@ -1726,6 +1726,9 @@ bool check_parry( CHAR_DATA * ch, CHAR_DATA * victim )
    if( IS_AFFECTED( victim, AFF_CLOAK_ADEPT ) )
       chance += 5;
 
+   if (chance > 50)
+      chance = 50;
+
    if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
    {
       check_counter(ch, victim);
@@ -1775,6 +1778,8 @@ bool check_dodge( CHAR_DATA * ch, CHAR_DATA * victim )
    if( !IS_NPC( victim ) && IS_WOLF( victim ) && ( IS_SHIFTED( victim ) || IS_RAGED( victim ) ) )
       chance += 20;
 
+   if (chance > 50)
+      chance = 50;
 
    if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
    {
