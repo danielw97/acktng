@@ -1676,7 +1676,7 @@ void do_score( CHAR_DATA * ch, char *argument )
    if( is_remort( ch ) )
    {
 
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+      for( cnt = 0; cnt < MAX_REMORT; cnt++ )
       {
          if( ch->lvl2[cnt] != -1 )
          {
@@ -2264,7 +2264,7 @@ void do_who( CHAR_DATA * ch, char *argument )
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "@@R+-----------------------------------------------------------------------------+\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
-                "| @@dWi Pr Ro Sw Eg Br@@R                                                           |\n\r" );
+                "| @@dWi Pr Wl Sw Eg Br@@R                                                           |\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,
                 "| @@mSo Pa An Kn Ne Mo@@R                                                           |\n\r" );
    safe_strcat( MAX_STRING_LENGTH, buf,

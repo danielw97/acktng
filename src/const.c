@@ -193,7 +193,7 @@ const struct class_type remort_table[MAX_REMORT] = {
     ""},
 
    {
-    "Rog", "Rogue", APPLY_DEX, "Dex", 0,
+    "Wlk", "Warlock", APPLY_DEX, "Dex", 0,
     /*
      * guild room ->
      */ 0, 0, 0, 0, 4, 4, FALSE,
