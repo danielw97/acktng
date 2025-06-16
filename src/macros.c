@@ -372,10 +372,10 @@ int exp_to_level_wolf( int level )
 
 
 
-long_int exp_for_mobile( int level, CHAR_DATA * mob )
+int exp_for_mobile( int level, CHAR_DATA * mob )
 {
 
-   long_int value, base_value;
+   int value, base_value;
 
 
    base_value = exp_table[level].mob_base;
