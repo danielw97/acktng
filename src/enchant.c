@@ -241,8 +241,7 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       }
       return;
    }
-   if( ( ( get_remort_level( ch ) < unique->level )
-         && ( IS_OBJ_STAT( unique, ITEM_REMORT ) ) ) || ( get_psuedo_level( ch ) < unique->level ) )
+   if ( get_psuedo_level( ch ) < unique->level )
    {
       send_to_char( "You can't use this item in the first place..enchanting it is NOT going to help!\n\r", ch );
       return;
@@ -835,11 +834,6 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       }
       if( !IS_SET( unique->extra_flags, ITEM_UNIQUE ) )
          SET_BIT( unique->extra_flags, ITEM_UNIQUE );
-      if( IS_OBJ_STAT( unique, ITEM_REMORT ) )
-      {
-         min_level = UMAX( 80 + ( unique->level / 4 ), min_level );
-         REMOVE_BIT( unique->extra_flags, ITEM_REMORT );
-      }
       if( mod_item_weight + unique->weight > 0 )
          unique->weight = mod_item_weight + unique->weight;
       new_extras = new_extras | unique->extra_flags;

@@ -1143,18 +1143,9 @@ void do_ofindlev( CHAR_DATA * ch, char *argument )
             found = TRUE;
             objlev = pObjIndex->level;
 
-            if( IS_SET( pObjIndex->extra_flags, ITEM_REMORT ) )
-            {
-               sprintf( buf, "\n\r(@@mREMORT@@N) [%3d] [%5d] %s", pObjIndex->level,
-                        pObjIndex->vnum, capitalize( pObjIndex->short_descr ) );
-               safe_strcat( MAX_STRING_LENGTH, buf1, buf );
-            }
-            else
-            {
                sprintf( buf, "\n\r(@@aMORTAL@@N) [%3d] [%5d] %s", pObjIndex->level,
                         pObjIndex->vnum, capitalize( pObjIndex->short_descr ) );
                safe_strcat( MAX_STRING_LENGTH, buf1, buf );
-            }
          }
       }
    }
@@ -1347,8 +1338,7 @@ void do_ofind( CHAR_DATA * ch, char *argument )
             found = TRUE;
             sprintf( buf, "[%5d] [%3d] %s %s\n\r",
                      pObjIndex->vnum, pObjIndex->level,
-                     ( IS_SET( pObjIndex->extra_flags, ITEM_REMORT ) ?
-                       "@@mRemort@@N" : "@@aMortal@@N" ), capitalize( pObjIndex->short_descr ) );
+                     "@@aMortal@@N", capitalize( pObjIndex->short_descr ) );
             safe_strcat( MAX_STRING_LENGTH, buf1, buf );
          }
       }
@@ -5829,8 +5819,7 @@ void do_otype( CHAR_DATA * ch, char *argument )
          {
             found = TRUE;
             sprintf( buf, "<%d> %s [%5d] %s\n\r", pObjIndex->level,
-                     ( IS_SET( pObjIndex->extra_flags, ITEM_REMORT ) ?
-                       "@@mRemort@@N" : "@@aMortal@@N" ), pObjIndex->vnum, pObjIndex->short_descr );
+                     "@@aMortal@@N", pObjIndex->vnum, pObjIndex->short_descr );
             safe_strcat( MAX_STRING_LENGTH, buf1, buf );
          }
       }
@@ -5892,8 +5881,7 @@ void do_owear( CHAR_DATA * ch, char *argument )
                      bit_table_lookup( tab_wear_flags, pObjIndex->wear_flags ),
                      pObjIndex->vnum,
                      pObjIndex->level,
-                     ( IS_SET( pObjIndex->extra_flags, ITEM_REMORT ) ?
-                       "@@mRemort@@N" : "@@aMortal@@N" ), pObjIndex->short_descr );
+                     "@@aMortal@@N", pObjIndex->short_descr );
             safe_strcat( MAX_STRING_LENGTH, buf1, buf );
          }
       }

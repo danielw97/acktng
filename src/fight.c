@@ -170,8 +170,6 @@ void violence_update( void )
             if( IS_SET( heated_item->item_apply, ITEM_APPLY_HEATED ) && heated_item->wear_loc != WEAR_NONE )
             {
                heat_damage = heated_item->level;
-               if( IS_SET( heated_item->extra_flags, ITEM_REMORT ) )
-                  heat_damage *= 2;
                obj_damage( heated_item, ch, heat_damage );
                act( "@@W   $p@@N you are wearing are @@eBURNING@@N you!!!", ch, heated_item, NULL, TO_CHAR );
                act( "@@W   $p worn by $n is @@eBURNING@@N!!!", ch, heated_item, NULL, TO_ROOM );
@@ -2682,7 +2680,7 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
       funky /= 100;
 
       funky = UMIN( funky, max_xp );
-      
+
       if (happy_hour)
          funky *= 2;
 

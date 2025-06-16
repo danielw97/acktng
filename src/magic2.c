@@ -163,6 +163,9 @@ bool spell_locate_object( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
       if( !can_see_obj( ch, ob ) || !is_name( target_name, ob->name )
           || IS_SET( ob->extra_flags, ITEM_RARE )
           || ( ob->item_type == ITEM_PIECE )
+          || IS_SET( obj->extra_flags, ITEM_MAGIC )
+          || IS_SET( obj->extra_flags, ITEM_MYTHIC )
+          || IS_SET( obj->extra_flags, ITEM_LEGENDARY )
           || ( IS_SET( ob->extra_flags, ITEM_UNIQUE ) ) || ( !str_prefix( target_name, "unique" ) ) )
          continue;
 

@@ -2731,10 +2731,6 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
       obj->value[looper] = pObjIndex->value[looper];
    }
    new_cost = get_item_value( obj );
-   if( IS_SET( obj->extra_flags, ITEM_REMORT ) )
-      new_cost *= 2;
-   if( IS_SET( obj->extra_flags, ITEM_ADEPT ) )
-      new_cost *= 3;
    if( IS_SET( obj->extra_flags, ITEM_RARE ) )
       new_cost *= 10;
    obj->cost = new_cost;
@@ -2839,10 +2835,17 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    {
       ilevel *= 1.2;
    }
-
-   if (IS_SET(obj->extra_flags, ITEM_RARE))
+   else if (IS_SET(obj->extra_flags, ITEM_RARE))
    {
       ilevel *= 1.5;
+   }
+   else if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
+   {
+      ilevel *= 1.75;
+   }
+   else if (IS_SET(obj->extra_flags, ITEM_LEGENDARY))
+   {
+      ilevel *= 2;
    }
 
    if (obj->level > MAX_MORTAL)

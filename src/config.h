@@ -1138,32 +1138,32 @@
 #define ITEM_GLOW				1
 #define ITEM_HUM				2
 #define ITEM_DARK				4
-#define ITEM_NODISARM				4
+#define ITEM_NODISARM		4
 #define ITEM_LOCK				8
 #define ITEM_EVIL				16
 #define ITEM_INVIS			32
 #define ITEM_MAGIC			64
 #define ITEM_NODROP			128
 #define ITEM_BLESS			256
-#define ITEM_ANTI_GOOD			512
-#define ITEM_ANTI_EVIL			1024
-#define ITEM_ANTI_NEUTRAL		2048
-#define ITEM_NOREMOVE			4096
-#define ITEM_INVENTORY			8192
+#define ITEM_ANTI_GOOD		512
+#define ITEM_ANTI_EVIL		1024
+#define ITEM_ANTI_NEUTRAL	2048
+#define ITEM_NOREMOVE		4096
+#define ITEM_INVENTORY		8192
 #define ITEM_NOSAVE			16384 /* For "quest" items :) */
 #define ITEM_CLAN_EQ		 	32768 /* only leaders and creators may load */
-#define ITEM_TRIG_DESTROY	 	65536 /* Trigger object that destroy after use */
-#define ITEM_NO_AUCTION			131072   /* Can't be auctioned */
-#define ITEM_REMORT			262144   /* player must have a remort class of higher level than item level */
-#define ITEM_ADEPT			524288
-#define ITEM_RARE			1048576
-#define ITEM_VAMP                       2097152 /* player must be a vampyre */
+#define ITEM_TRIG_DESTROY	 65536 /* Trigger object that destroy after use */
+#define ITEM_NO_AUCTION		131072   /* Can't be auctioned */
+#define ITEM_MYTHIC        BIT_19
+#define ITEM_LEGENDARY		BIT_20
+#define ITEM_RARE			   1048576
+#define ITEM_VAMP          2097152 /* player must be a vampyre */
 #define ITEM_NOLOOT			4194304
 #define ITEM_NOSAC			8388608
 #define ITEM_UNIQUE			16777216
-#define ITEM_LIFESTEALER	   BIT_26
+#define ITEM_LIFESTEALER	BIT_26
 #define ITEM_SILVER			BIT_27
-#define ITEM_AUTO			BIT_28
+#define ITEM_AUTO			   BIT_28
 #define ITEM_BUCKLER       BIT_29
 #define ITEM_WAND          BIT_30
 #define ITEM_FIST          BIT_31

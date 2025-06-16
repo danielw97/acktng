@@ -1406,14 +1406,6 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
       return;
    }
 
-   if( ( get_remort_level( ch ) < obj->level ) && ( IS_OBJ_STAT( obj, ITEM_REMORT ) ) && ( !IS_NPC( ch ) ) )
-   {
-      sprintf( buf, "You must be level %d in a remort class to use this object.\n\r", obj->level );
-      send_to_char( buf, ch );
-      act( "$n tries to use $p, but is too inexperienced.", ch, obj, NULL, TO_ROOM );
-      return;
-   }
-
    if( obj->item_type == ITEM_TRIGGER && obj->value[0] == 6 )
    {
       /*
@@ -2072,8 +2064,6 @@ void do_sacrifice( CHAR_DATA * ch, char *argument )
    {
 
       align_change = obj->level;
-      if( IS_SET( obj->extra_flags, ITEM_REMORT ) )
-         align_change *= 1.5;
       if( align_direction == 1 )
       {
          if( IS_SET( obj->extra_flags, ITEM_ANTI_GOOD ) )
@@ -2975,7 +2965,7 @@ void do_list( CHAR_DATA * ch, char *argument )
             stopcounter++;
             rounded_cost = round_money_off( cost, 1 );
             sprintf( costbuf, "%s", money_string( rounded_cost ) );
-            sprintf( buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*s@@N \n\r", ( IS_OBJ_STAT( obj, ITEM_REMORT ) ? "@@m" : "@@a" ),
+            sprintf( buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*s@@N \n\r", "@@a",
                      obj->level, ccode_len( obj->short_descr, 30 ), capitalize( obj->short_descr ), ccode_len( costbuf, 30 ),
                      costbuf );
             PUT_FREE( rounded_cost, money_type_free );

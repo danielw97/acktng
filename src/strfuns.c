@@ -1483,8 +1483,10 @@ char *extra_bit_name( int extra_flags )
       safe_strcat( MAX_STRING_LENGTH, buf, " noloot" );
    if( extra_flags & ITEM_NOSAC )
       safe_strcat( MAX_STRING_LENGTH, buf, " nosac" );
-   if( extra_flags & ITEM_REMORT )
-      safe_strcat( MAX_STRING_LENGTH, buf, " remort" );
+   if( extra_flags & ITEM_MYTHIC )
+      safe_strcat( MAX_STRING_LENGTH, buf, " mythic" );
+   if( extra_flags & ITEM_LEGENDARY )
+      safe_strcat( MAX_STRING_LENGTH, buf, " legendary" );
    if( extra_flags & ITEM_CLAN_EQ )
       safe_strcat( MAX_STRING_LENGTH, buf, " claneq" );
    if( extra_flags & ITEM_NOSAVE )
