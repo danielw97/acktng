@@ -2814,13 +2814,6 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    if( pObjIndex->value[7] > 0 )
       obj->timer = pObjIndex->value[7];
 
-   for(int i = 0; i < 7; i++)
-   {
-      if (pObjIndex->value[i] > 1000 || pObjIndex->value[i] < -1000)
-         pObjIndex->value[i] = 0;
-   }
-
-
    LINK( obj, first_obj, last_obj, next, prev );
    pObjIndex->count++;
 
