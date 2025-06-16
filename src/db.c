@@ -2932,6 +2932,15 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
          spellpower_div = 8;
       }
+      if (IS_SET(obj->extra, ITEM_WAND))
+      {
+         // This is all in for caster stats
+         spellpower_div = 2;
+         hrdr_bonus = 0;
+         hr_div = 0;
+         dr_div = 0;
+         move_div = 0;
+      }
    }
    else if (obj->item_type == ITEM_ARMOR)
    {
@@ -2961,6 +2970,19 @@ void set_obj_stat_auto( OBJ_DATA *obj )
          move_div *= 2;
 
          spellpower_div = 15;
+      }
+
+      // Bucklers get poor stats
+      if (IS_SET(obj->extra, ITEM_BUCKLER))
+      {
+         ac_bonus = 0;
+         hr_div *= 2;
+         dr_div *= 2;
+         ac_div *= 2;
+         hp_div *= 2;
+         mana_div *= 2;
+         move_div *= 2;
+         spellpower_div *= 2;
       }
    }
    else
