@@ -160,16 +160,17 @@ bool spell_locate_object( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
    found = FALSE;
    for( ob = first_obj; ob != NULL; ob = ob->next )
    {
-      if( !can_see_obj( ch, ob ) || !is_name( target_name, ob->name )
-          || IS_SET( ob->extra_flags, ITEM_RARE )
-          || ( ob->item_type == ITEM_PIECE )
-          || IS_SET( obj->extra_flags, ITEM_MAGIC )
-          || IS_SET( obj->extra_flags, ITEM_MYTHIC )
-          || IS_SET( obj->extra_flags, ITEM_LEGENDARY )
-          || ( IS_SET( ob->extra_flags, ITEM_UNIQUE ) ) || ( !str_prefix( target_name, "unique" ) ) )
+      if( !can_see_obj( ch, ob ) )
          continue;
-
-
+      if (!is_name( target_name, ob->name ) )
+         continue;
+      if ( IS_SET( ob->extra_flags, ITEM_RARE )
+          || ( ob->item_type == ITEM_PIECE )
+          || IS_SET( ob->extra_flags, ITEM_MAGIC )
+          || IS_SET( ob->extra_flags, ITEM_MYTHIC )
+          || IS_SET( ob->extra_flags, ITEM_LEGENDARY )
+          || IS_SET( ob->extra_flags, ITEM_UNIQUE ) )
+         continue;
 
       for( in_obj = ob; in_obj->in_obj != NULL; in_obj = in_obj->in_obj )
          ;
