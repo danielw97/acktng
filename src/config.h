@@ -1166,6 +1166,7 @@
 #define ITEM_AUTO			BIT_28
 #define ITEM_BUCKLER       BIT_29
 #define ITEM_WAND          BIT_30
+#define ITEM_FIST          BIT_31
 
 /* Class-restricted stuff dropped. */
 
