@@ -562,7 +562,7 @@ const struct clan_type clan_table[MAX_CLAN] = {
 
 
 
-const struct exp_type exp_table[141] = {
+const struct exp_type exp_table[MAX_MOB_LEVEL] = {
    {0, {1000, 1000, 1000, 1000, 1000}},   /*  0 */
    {100, {3050, 3023, 3022, 3021, 3020}}, /*  1 */
    {200, {8081, 8080, 8084, 8083, 8082}}, /*  2 */
