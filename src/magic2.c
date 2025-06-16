@@ -179,7 +179,7 @@ bool spell_locate_object( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
                || ( !IS_NPC( in_obj->carried_by )
                     && IS_WOLF( in_obj->carried_by )
                     && ( IS_SHIFTED( in_obj->carried_by ) || ( IS_RAGED( in_obj->carried_by ) ) ) ) ) )
-         break;
+         continue;
 
       if( in_obj->carried_by != NULL )
       {
