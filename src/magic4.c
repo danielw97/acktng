@@ -415,7 +415,7 @@ bool spell_psionic_recovery( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DA
 {
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
 
-   heal_character(ch, victim, class_heal_character(ch, victim, 60, sn, INDEX_MAG), sn, INDEX_PSI);
+   heal_character(ch, victim, class_heal_character(ch, victim, 60, sn, INDEX_PSI), sn);
 
    return TRUE;
 }
