@@ -136,7 +136,7 @@ void violence_update( void )
       {
          if (paf->location == APPLY_HOT && ch->hit < ch->max_hit)
          {
-            heal_character(ch, ch, paf->modifier, paf->type);
+            class_heal_character(ch, ch, paf->modifier, paf->type, CLASS_MAG);
          }
       }
 
@@ -703,6 +703,10 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
          dam += ( ch->pcdata->learned[gsn_enhanced_damage] > 0 ) ?
             dam * ch->pcdata->learned[gsn_enhanced_damage] / 150 : dam * .4;
    }
+
+   dam += dam * ch->lvl2[CLASS_KNI]/100;
+   dam += dam * ch->lvl2[CLASS_SWO]/100;
+   dam += dam * ch->lvl2[CLASS_PAL]/100 * .75;
 
    if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword] > 0 )
    {

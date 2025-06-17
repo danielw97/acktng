@@ -398,19 +398,6 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 
    int heal = 8;
 
-   heal += heal * ch->lvl[INDEX_MAG] / 25;
-
-   if (IS_NPC(ch))
-   {
-      heal *= ch->level+100;
-      heal /= 100;
-   }
-
-   int intel = (get_curr_int(ch) - 13) * 10;
-
-   heal *= 100 + intel;
-   heal /= 100;
-
    if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "regen" ) ) )
       return FALSE;
    af.type = sn;
