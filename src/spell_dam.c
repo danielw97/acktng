@@ -171,7 +171,7 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal *= 100 + intel;
       heal /= 100;
-      heal += heal * ch->lvl[CLASS_MAG] / 100;
+      heal += heal * ch->lvl[CLASS_MAG] / 50;
       heal += heal * ch->lvl2[CLASS_SOR] / 100;
       heal += heal * ch->lvl2[CLASS_WIZ] / 100;
    }
