@@ -104,7 +104,7 @@
 #define CLASS_MON		     5
 #define CLASS_WIZ		     6
 #define CLASS_PRI		     7
-#define CLASS_ROG		     8
+#define CLASS_WLK		     8
 #define CLASS_SWO		     9
 #define CLASS_EGO		     10
 #define CLASS_BRA		     11

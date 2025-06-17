@@ -163,15 +163,32 @@ void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int 
 {
    int heal = base_heal*2;
 
-   int wis = (get_curr_wis(ch) - 13) * 5;
+   heal += get_spellpower(ch);
 
-   heal *= 100 + wis;
-   heal /= 100;
+   if (class_table[class_index].attr_prime == APPLY_INT)
+   {
+      int intel = (get_curr_int(ch) - 13) * 5;
+
+      heal *= 100 + intel;
+      heal /= 100;
+      heal += heal * ch->lvl[CLASS_MAG] / 50;
+      heal += heal * ch->lvl2[CLASS_SOR] / 50;
+      heal += heal * ch->lvl2[CLASS_WIZ] / 50;
+   }
+   else if (class_table[class_index].attr_prime == APPLY_WIS)
+   {
+      int wis = (get_curr_wis(ch) - 13) * 5;
+
+      heal *= 100 + wis;
+      heal /= 100;
+
+      heal += heal * ch->lvl[CLASS_CLE] / 50;
+      heal += heal * ch->lvl2[CLASS_PRI] / 50;
+      heal += heal * ch->lvl2[CLASS_PAL] / 50 * .75;
+   }
 
    if (stance_app[ch->stance].heal_mod > 0)
       heal += heal * stance_app[ch->stance].heal_mod / 10;
-
-   heal += heal * ch->lvl[class_index] / 50;
 
    if (IS_NPC(ch))
    {
@@ -765,8 +782,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
    bool critical = FALSE;
 
 /*   char buf[MAX_STRING_LENGTH];   this is unused now -- uni */
-
-
    if( ( victim->is_free == TRUE ) )
       return FALSE;
 
@@ -804,7 +819,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
 
       }
 
-
       else if( ( can_reflect )
                && ( skill_table[sn].target == TAR_CHAR_OFFENSIVE )
                && ( IS_AFFECTED( victim, AFF_CLOAK_ABSORPTION ) )
@@ -819,9 +833,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
          act( "@@NYour @@lcloak@@N glows brightly, and absorbs $N's spell@@N!!!", victim, NULL, ch, TO_CHAR );
          return FALSE;
       }
-
-
-
 
       ch_strong = ( IS_NPC( ch ) ?
                     ( ( ( ch->race > 0 )
@@ -846,11 +857,8 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
 
       int crit_chance = get_spell_crit(ch);
 
-      if (!IS_NPC(ch) && number_range(0,100) < crit_chance)
-      {
+      if (number_range(0,100) < crit_chance)
          critical = TRUE;
-         dam_modifier += 1.0 + (get_spell_crit_mult( ch )/100);
-      }
 
       if( IS_SET( ch_strong, type ) )
       {
@@ -873,6 +881,10 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       {
          dam_modifier -= .50;
       }
+
+      dam_modifier += ch->lvl2[CLASS_SOR]/100;
+      dam_modifier += ch->lvl2[CLASS_WIZ]/100;
+      dam_modifier += ch->lvl2[CLASS_WLK]/100 * .75;
 
       if( ch->stance == STANCE_CASTER )
          dam_modifier += .10;
@@ -965,7 +977,10 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       dam_modifier = 0.0;
 
    dam += get_spellpower(ch);
-   dam *= dam_modifier;
+   dam = (dam * get_spell_crit_mult(ch) )/100;
+
+   if (critical)
+      dam *= crit_multiplier;
 
    /*
     * Stop up any residual loopholes.

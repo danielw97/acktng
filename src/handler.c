@@ -401,6 +401,10 @@ int get_spell_crit( CHAR_DATA *ch )
 
    crit += get_stat(ch, APPLY_SPELL_CRIT);
 
+   crit += ch->lvl2[CLASS_SOR] / 10;
+   crit += ch->lvl2[CLASS_WIZ] / 10;
+   crit += ch->lvl2[CLASS_WLK] / 10 * .75;
+
    return crit;
 }
 
@@ -409,10 +413,14 @@ int get_spell_crit_mult( CHAR_DATA *ch )
    // base of 50%
    int crit = 50;
 
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_spell_critical_damage] > 0)
-      crit += 50;
-
    crit += get_stat(ch, APPLY_SPELL_CRIT_MULT);
+
+   crit += ch->lvl[CLASS_CLE]/2;
+
+   crit += ch->lvl[CLASS_PRI];
+
+   crit += ch->lvl[CLASS_PAL]*.75;
+
    return crit;
 }
 
@@ -432,6 +440,9 @@ int get_crit( CHAR_DATA *ch )
    {
       crit += 5;
    }
+
+   crit += ch->lvl2[CLASS_ASS] / 20;
+   crit += ch->lvl2[CLASS_WLK] / 20 * .75;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
    {
@@ -458,6 +469,9 @@ int get_crit_mult( CHAR_DATA *ch )
    {
       crit += 50;
    }
+
+   crit += ch->lvl2[CLASS_ASS] / 5;
+   crit += ch->lvl2[CLASS_WLK] / 5 * .75;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
    {
