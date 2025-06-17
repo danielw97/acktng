@@ -163,8 +163,6 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 {
    int heal = base_heal*2;
 
-   heal += get_spellpower(ch);
-
    if (class_table[class_index].attr_prime == APPLY_INT)
    {
       int intel = (get_curr_int(ch) - 13) * 5;
@@ -196,6 +194,7 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
       heal /= 100;
    }
 
+   heal += get_spellpower(ch);
    return heal;
 }
 
