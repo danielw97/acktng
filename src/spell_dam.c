@@ -159,7 +159,7 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    return summoned;
 }
 
-void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index )
+int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index )
 {
    int heal = base_heal*2;
 
@@ -171,9 +171,9 @@ void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int 
 
       heal *= 100 + intel;
       heal /= 100;
-      heal += heal * ch->lvl[CLASS_MAG] / 50;
-      heal += heal * ch->lvl2[CLASS_SOR] / 50;
-      heal += heal * ch->lvl2[CLASS_WIZ] / 50;
+      heal += heal * ch->lvl[CLASS_MAG] / 100;
+      heal += heal * ch->lvl2[CLASS_SOR] / 100;
+      heal += heal * ch->lvl2[CLASS_WIZ] / 100;
    }
    else if (class_table[class_index].attr_prime == APPLY_WIS)
    {
@@ -196,7 +196,7 @@ void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int 
       heal /= 100;
    }
 
-   heal_character(ch, victim, heal, sn);
+   return heal;
 }
 
 void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn )

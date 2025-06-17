@@ -2399,7 +2399,7 @@ bool spell_heal( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
 
-   class_heal_character(ch, victim, 50, sn, INDEX_CLE);
+   heal_character(ch, victim, class_heal_character(ch, victim, 50, sn, INDEX_CLE), sn);
 
    return TRUE;
 }

@@ -396,7 +396,7 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
    AFFECT_DATA af;
 
-   int heal = 8;
+   int heal = class_heal_character(ch, victim, 8, sn, INDEX_MAG);
 
    if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "regen" ) ) )
       return FALSE;
@@ -415,7 +415,7 @@ bool spell_psionic_recovery( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DA
 {
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
 
-   class_heal_character(ch, victim, 60, sn, INDEX_PSI);
+   heal_character(ch, victim, class_heal_character(ch, victim, 60, sn, INDEX_MAG), sn, INDEX_PSI);
 
    return TRUE;
 }
