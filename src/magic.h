@@ -36,7 +36,7 @@
 #endif
 
 CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element);
-void class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index );
+int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index );
 bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int type, int sn, bool show_msg );
 void group_gain args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 bool is_safe args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
