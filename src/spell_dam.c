@@ -882,10 +882,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
          dam_modifier -= .50;
       }
 
-      dam_modifier += ch->lvl2[CLASS_SOR]/100;
-      dam_modifier += ch->lvl2[CLASS_WIZ]/100;
-      dam_modifier += ch->lvl2[CLASS_WLK]/100 * .75;
-
       if( ch->stance == STANCE_CASTER )
          dam_modifier += .10;
       else if( ch->stance == STANCE_WIZARD )
@@ -978,8 +974,10 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
 
    dam += get_spellpower(ch);
 
+   dam = dam * dam_modifier;
+
    if (critical)
-      dam += (dam * get_spell_crit_mult(ch) )/100;;
+      dam += (dam * get_spell_crit_mult(ch) )/100;
 
    /*
     * Stop up any residual loopholes.
