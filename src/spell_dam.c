@@ -977,10 +977,9 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       dam_modifier = 0.0;
 
    dam += get_spellpower(ch);
-   dam = (dam * get_spell_crit_mult(ch) )/100;
 
    if (critical)
-      dam *= crit_multiplier;
+      dam *= (dam * get_spell_crit_mult(ch) )/100;;
 
    /*
     * Stop up any residual loopholes.
