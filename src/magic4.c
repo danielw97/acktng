@@ -398,7 +398,7 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 
    int heal = 8 + ch->lvl[CLASS_MAG]/10 + ch->lvl2[CLASS_WIZ]/10 + ch->lvl2[CLASS_SOR]/10;
 
-   int heal = class_heal_character(ch, victim, heal, sn, INDEX_MAG);
+   heal = class_heal_character(ch, victim, heal, sn, INDEX_MAG);
 
    if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "regen" ) ) )
       return FALSE;
