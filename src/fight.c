@@ -1132,7 +1132,7 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
          if( ( IS_NPC( victim ) ) && ( IS_SET( victim->act, ACT_SOLO ) ) )
             flame_damage = flame_damage * 1.5;
 
-         ch->hit = UMAX( -5, ch->hit - flame_damage );
+         ch->hit = UMAX( 10, ch->hit - flame_damage );
       }
 
    }
