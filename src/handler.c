@@ -212,7 +212,7 @@ int get_age( CHAR_DATA * ch )
 }
 
 
-int get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
+long get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
 {
     char buf[MAX_STRING_LENGTH];
     int base, i;
@@ -238,25 +238,14 @@ int get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
    if (!remort)
       base *= 600;
    else if (double_remort && remort)
-      base *= 3400; 
+      base *= 4200; 
    else
-      base *= 2300;
+      base *= 2400;
 
    // Edge-case fix
    base += 350;
 
-
-    for(i = 0; i < MAX_CLASS; i++)
-    {
-      if (race_table[ch->race].limit[i] == class)
-      {
-        base *= ((i-1)*20)+100;
-        base /= 100;
-        break;
-      }
-    }
-
-    return base;
+   return base;
 }
 
 /*

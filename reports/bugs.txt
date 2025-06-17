@@ -10081,3 +10081,191 @@
 [*****] BUG: Affect_modify: unknown location 27.
 [*****] BUG: Affect_modify: unknown location 27.
 [*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1062@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: create_object: vnum 9213 bad type 3.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1470@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1173@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1416@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1161@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1350@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1338@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1458@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1083@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1410@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1089@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1443@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1278@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1131@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1071@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W2112@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1143@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1332@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1224@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1365@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1098@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1401@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1272@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1200@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1299@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1467@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1341@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1149@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1473@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1512@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1113@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1233@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1386@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1308@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1494@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1233@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1068@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1056@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1263@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1326@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1179@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1158@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1191@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W707@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1059@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1476@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1440@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1479@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1440@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1485@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1098@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1386@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1395@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1386@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1296@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1509@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1224@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1320@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1284@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1230@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1326@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1185@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1281@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1515@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1524@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1218@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1269@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: create_object: vnum 9213 bad type 3.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1464@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1239@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1167@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1200@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W569@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1506@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1056@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1275@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1017@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1338@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1224@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1161@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1233@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1356@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1383@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1023@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1086@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1362@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1419@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1287@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1359@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1305@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1359@@l)@@N
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1245@@l)@@N
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: create_object: vnum 9213 bad type 3.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: Affect_modify: unknown location 27.
+[*****] BUG: bad ch, string=$N places $p into your back!! @@l(@@W1509@@l)@@N

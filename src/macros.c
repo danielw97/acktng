@@ -171,9 +171,9 @@ bool check_level_use( CHAR_DATA * ch, int level )
 
 
 
-long_int exp_to_level_adept( CHAR_DATA * ch )
+long exp_to_level_adept( CHAR_DATA * ch )
 {
-   long_int exp;
+   long exp;
 
    exp = ( 30000 + ( ch->adept_level * 5000 ) );
    exp = UMAX( exp, exp * ch->adept_level / 2 );
@@ -182,7 +182,7 @@ long_int exp_to_level_adept( CHAR_DATA * ch )
 
 
 
-long_int exp_to_level( CHAR_DATA * ch, int index, bool remort )
+long exp_to_level( CHAR_DATA * ch, int index, bool remort )
 {
 
    /*
@@ -193,7 +193,7 @@ long_int exp_to_level( CHAR_DATA * ch, int index, bool remort )
    int mult;
    int level, next_level_index;
    int totlevels = 0, diff;
-   long_int cost;
+   long cost;
    int a;
 
    if (IS_NPC(ch))

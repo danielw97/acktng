@@ -4221,6 +4221,10 @@ The 'imc' command is used to configure your IMC setup:
 ~
 -1 ack~
 NEW HELP.  DELETE THIS LINE FIRST!~
+0 lifesteal lifestealer~
+Lifesteal is a weapon extra flag. It can be id'd.
+ 
+~
 0 $~
 #ROOMS
 #32766
