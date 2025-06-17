@@ -415,7 +415,7 @@ int get_spell_crit_mult( CHAR_DATA *ch )
 
    crit += get_stat(ch, APPLY_SPELL_CRIT_MULT);
 
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_spell_critical_mult] > 0)
+   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_spell_critical_damage] > 0)
       crit += 50;
 
    crit += ch->lvl[CLASS_PRI];
