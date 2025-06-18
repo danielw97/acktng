@@ -112,6 +112,8 @@ sh_int gsn_equip_wand;
 sh_int gsn_bare_hand;
 sh_int gsn_two_handed;
 sh_int gsn_detox;
+sh_int gsn_morale;
+sh_int gsn_leadership;
 sh_int gsn_circle;
 sh_int gsn_backstab;
 sh_int gsn_dodge;

@@ -351,6 +351,8 @@ DECLARE_DO_FUN( do_autosac );
 DECLARE_DO_FUN( do_autosplit );
 DECLARE_DO_FUN( do_autoassist );
 DECLARE_DO_FUN( do_backstab );
+DECLARE_DO_FUN( do_morale );
+DECLARE_DO_FUN( do_leadership );
 DECLARE_DO_FUN( do_ban );
 DECLARE_DO_FUN( do_blank );
 DECLARE_DO_FUN( do_brandish );

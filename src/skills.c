@@ -1305,22 +1305,15 @@ void do_knee( CHAR_DATA * ch, char *argument )
 
 void do_detox(CHAR_DATA * ch, char *argument )
 {
-
    CHAR_DATA *victim;
    int dam;
-   bool prime;
    int chance;
-
-   prime = FALSE;
-
 
    if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_detox] == 0 )
    {
       send_to_char( "You are not trained in this skill!\n\r", ch );
       return;
    }
-
-
 
    if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
    {
@@ -1346,3 +1339,68 @@ void do_detox(CHAR_DATA * ch, char *argument )
    return TRUE;
 }
 
+void do_morale( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   AFFECT_DATA af;
+   CHAR_DATA *gch;
+
+   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_morale] == 0 )
+   {
+      send_to_char( "You are not trained in this skill!\n\r", ch );
+      return;
+   }
+
+   for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
+   {
+      if( is_affected( gch, sn ) || !is_same_group( ch, gch ) )
+
+         continue;
+      act( "$n seems much more willing to fight.", gch, NULL, NULL, TO_ROOM );
+      send_to_char( "You are inspired to fight better!\n\r", gch );
+      af.type = sn;
+      if (ch == gch)
+         af.duration = -1;
+      else
+         af.duration = 4 + ( level / 5 );
+      af.location = APPLY_DAMROLL;
+      af.modifier = get_psuedo_level( ch ) / 10;
+      af.bitvector = 0;
+      affect_to_char( gch, &af );
+   }
+   send_to_char( "You inspire the troops!\n\r", ch );
+
+   return TRUE;
+}
+
+void do_leadership( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   AFFECT_DATA af;
+   CHAR_DATA *gch;
+
+   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_leadership] == 0 )
+   {
+      send_to_char( "You are not trained in this skill!\n\r", ch );
+      return;
+   }
+
+   for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
+   {
+      if( is_affected( gch, sn ) || !is_same_group( ch, gch ) )
+
+         continue;
+      act( "$n looks more courageous!", gch, NULL, NULL, TO_ROOM );
+      send_to_char( "You feel courage wash over you!\n\r", gch );
+      af.type = sn;
+      if (ch == gch)
+         af.duration = -1;
+      else
+         af.duration = 4 + ( level / 5 );
+      af.location = APPLY_HITROLL;
+      af.modifier = get_psuedo_level( ch ) / 10;
+      af.bitvector = 0;
+      affect_to_char( gch, &af );
+   }
+   send_to_char( "You inspire the troops!\n\r", ch );
+
+   return TRUE;
+}

@@ -2669,8 +2669,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
     REMORT, NORM,
     "morale", {182, 21, 182, 10, 182, 182,
                182, 21, 182, 10, 182, 182},
-    spell_morale, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 603 ), 75, 24,
+    spell_null, TAR_IGNORE, POS_STANDING,
+    &gsn_morale, SLOT( 0 ), 75, 24,
     "Morale", "!Morale!",
     ""},
 
@@ -2678,8 +2678,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
     REMORT, NORM,
     "leadership", {182, 24, 182, 12, 182, 182,
                    182, 24, 182, 12, 182, 182},
-    spell_leadership, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 604 ), 75, 24,
+    spell_null, TAR_IGNORE, POS_STANDING,
+    &gsn_leadership, SLOT( 0 ), 75, 24,
     "Leadership", "!Leadership!",
     ""},
 

@@ -168,64 +168,6 @@ bool spell_throw_needle( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
    }
 
    return TRUE;
-
-
-
-
-}
-
-bool spell_morale( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
-{
-   AFFECT_DATA af;
-   CHAR_DATA *gch;
-
-   for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
-   {
-      if( is_affected( gch, sn ) || !is_same_group( ch, gch ) )
-
-         continue;
-      act( "$n seems much more willing to fight.", gch, NULL, NULL, TO_ROOM );
-      send_to_char( "You are inspired to fight better!\n\r", gch );
-      af.type = sn;
-      if (ch == gch)
-         af.duration = -1;
-      else
-         af.duration = 4 + ( level / 5 );
-      af.location = APPLY_DAMROLL;
-      af.modifier = get_psuedo_level( ch ) / 10;
-      af.bitvector = 0;
-      affect_to_char( gch, &af );
-   }
-   send_to_char( "You inspire the troops!\n\r", ch );
-
-   return TRUE;
-}
-
-bool spell_leadership( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
-{
-   AFFECT_DATA af;
-   CHAR_DATA *gch;
-
-   for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
-   {
-      if( is_affected( gch, sn ) || !is_same_group( ch, gch ) )
-
-         continue;
-      act( "$n looks more courageous!", gch, NULL, NULL, TO_ROOM );
-      send_to_char( "You fell courage wash over you!\n\r", gch );
-      af.type = sn;
-      if (ch == gch)
-         af.duration = -1;
-      else
-         af.duration = 4 + ( level / 5 );
-      af.location = APPLY_HITROLL;
-      af.modifier = get_psuedo_level( ch ) / 10;
-      af.bitvector = 0;
-      affect_to_char( gch, &af );
-   }
-   send_to_char( "You inspire the troops!\n\r", ch );
-
-   return TRUE;
 }
 
 bool spell_ice_bolt( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
