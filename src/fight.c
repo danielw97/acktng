@@ -1818,7 +1818,7 @@ int get_shield_block( CHAR_DATA * ch )
    else
    {
       OBJ_DATA *shield;
-      shield = get_eq_char( ch, WEAR_HOLD_HAND_R)
+      shield = get_eq_char( ch, WEAR_HOLD_HAND_R);
       if (shield == NULL || shield->item_type != ITEM_ARMOR)
          shield = get_eq_char( ch, WEAR_HOLD_HAND_L);
       if (shield == NULL || shield->item_type != ITEM_ARMOR)
