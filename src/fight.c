@@ -1759,16 +1759,6 @@ int get_parry( CHAR_DATA * ch )
    if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
       chance += 5;
 
-   /*if( number_percent(  ) < ( chance + ( get_psuedo_level( ch ) - get_psuedo_level( ch ) ) / 2 ) )
-   {
-      check_counter(ch, victim);
-
-      act( "You parry $n's attack.",  ch, NULL, victim, TO_VICT    );
-      act( "$N parries your attack.", ch, NULL, victim, TO_CHAR    );
-      act( "$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT );
-
-      return TRUE;
-   }*/
    return chance;
 }
 
@@ -1796,7 +1786,7 @@ int get_dodge( CHAR_DATA * ch )
    }
    else
    {
-      chance = ( victim->pcdata->learned[gsn_dodge] / 3.5 ) + get_curr_dex( victim ) * 3 / 5;
+      chance = ( ch->pcdata->learned[gsn_dodge] / 3.5 ) + get_curr_dex( ch ) * 3 / 5;
       if( ch->lvl2[4] > 0 )   /* Monk  */
          chance += ch->lvl2[4] / 8;
    }
@@ -1806,16 +1796,6 @@ int get_dodge( CHAR_DATA * ch )
    if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
       chance += 20;
 
-/*   if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
-   {
-      check_counter(ch, victim);
-
-      act( "You dodge $n's attack.", ch, NULL, victim, TO_VICT    );
-      act( "$N dodges your attack.", ch, NULL, victim, TO_CHAR    );
-      act( "$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT );
-
-      return TRUE;
-   }*/
    return chance;
 }
 
@@ -1831,9 +1811,6 @@ int get_shield_block( CHAR_DATA * ch )
 
    if( IS_NPC( ch ) )
    {
-      /*
-       * Tuan was here.  :) 
-       */
       chance = get_psuedo_level( ch ) / 3.2 + get_curr_str( ch ) * 2 / 5;
       if( IS_SET( ch->act, ACT_SOLO ) )
          chance += 15;
@@ -1855,17 +1832,6 @@ int get_shield_block( CHAR_DATA * ch )
    if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
       chance += 5;
 
-/*
-   if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
-   {
-      check_counter(ch, victim);
-
-      act( "You block $n's attack.",  ch, NULL, victim, TO_VICT    );
-      act( "$N blocks your attack.", ch, NULL, victim, TO_CHAR    );
-      act( "$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT );
-
-      return TRUE;
-   }*/
    return chance;
 }
 
@@ -1885,9 +1851,6 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
 
    if( IS_NPC( victim ) )
    {
-      /*
-       * Tuan was here.  :)
-       */
       chance = get_psuedo_level( victim ) / 3.1 + get_curr_dex( victim ) * 2 / 5;
       if( IS_SET( victim->act, ACT_SOLO ) )
          chance += 15;
@@ -1896,7 +1859,7 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
    {
       chance = ( victim->pcdata->learned[gsn_counter] / 3.5 ) + get_curr_dex( victim ) * 3 / 5;
       if( ch->lvl2[4] > 0 )   /* Monk  */
-         chance += ch->lvl2[4] / 8;
+         chance += victim->lvl2[4] / 8;
    }
    if( IS_AFFECTED( victim, AFF_CLOAK_ADEPT ) )
       chance += 5;
