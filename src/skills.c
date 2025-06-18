@@ -1357,7 +1357,7 @@ void do_morale( CHAR_DATA * ch, char *argument )
          continue;
       act( "$n seems much more willing to fight.", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You are inspired to fight better!\n\r", gch );
-      af.type = sn;
+      af.type = gsn_morale;
       if (ch == gch)
          af.duration = -1;
       else
@@ -1390,7 +1390,7 @@ void do_leadership( CHAR_DATA * ch, char *argument )
          continue;
       act( "$n looks more courageous!", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You feel courage wash over you!\n\r", gch );
-      af.type = sn;
+      af.type = gsn_leadership;
       if (ch == gch)
          af.duration = -1;
       else
