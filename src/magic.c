@@ -443,15 +443,20 @@ void do_cast( CHAR_DATA * ch, char *argument )
 
    }
    else
+   {
       for( cnt = 0; cnt < MAX_CLASS; cnt++ )
       {
          if( ( ( ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == MORTAL ) )
              && best < ch->lvl[cnt] )
             best = ch->lvl[cnt];
+      }
+      for( cnt = 0; cnt < MAX_REMORT; cnt++ )
+      {
          if( ( ( ch->lvl2[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == REMORT ) )
              && best < ch->lvl2[cnt] )
-            best = ch->lvl[cnt];
+            best = ch->lvl2[cnt];
       }
+   }
    if( !IS_NPC( ch ) )
       if( ( IS_VAMP( ch ) ) && ( skill_table[sn].flag2 == VAMP ) )
          best = ch->pcdata->vamp_level * 4;
@@ -2399,9 +2404,17 @@ bool spell_heal( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
 
-   heal_character(ch, victim, class_heal_character(ch, victim, 50, sn, INDEX_CLE), sn);
+   do_spell_heal( ch, victim, sn );
 
    return TRUE;
+}
+
+
+void do_spell_heal( CHAR_DATA *ch, CHAR_DATA *victim, int sn )
+{
+   int heal = class_heal_character(ch, victim, 50, sn, INDEX_CLE, FALSE);
+
+   heal_character(ch, victim, heal, sn, FALSE);
 }
 
 

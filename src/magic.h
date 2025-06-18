@@ -36,13 +36,14 @@
 #endif
 
 CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element);
-int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index );
-void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn );
+int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index, bool hot );
+void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bool hot );
 bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int type, int sn, bool show_msg );
 void group_gain args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 bool is_safe args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void set_fighting args( ( CHAR_DATA * ch, CHAR_DATA * victim, bool check ) );
 void check_adrenaline args( ( CHAR_DATA * ch, sh_int damage ) );
+void do_spell_heal args( ( CHAR_DATA *ch, CHAR_DATA *victim, int sn ) );
 
 /* magic.c */
 int mana_cost( CHAR_DATA * ch, int sn );
@@ -171,6 +172,7 @@ DECLARE_SPELL_FUN( spell_general_purpose );
 DECLARE_SPELL_FUN( spell_giant_strength );
 DECLARE_SPELL_FUN( spell_harm );
 DECLARE_SPELL_FUN( spell_heal );
+DECLARE_SPELL_FUN( spell_group_heal );
 DECLARE_SPELL_FUN( spell_high_explosive );
 DECLARE_SPELL_FUN( spell_hypnosis );
 DECLARE_SPELL_FUN( spell_identify );

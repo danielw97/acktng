@@ -159,17 +159,16 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
    return summoned;
 }
 
-int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index )
+int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index, bool hot )
 {
-   int heal = base_heal*2;
+   int heal = base_heal * 2;
 
-   if (class_table[class_index].attr_prime == APPLY_INT)
+   if (class_table[class_index].attr_prime == APPLY_INT && sn != spell_psionic_recovery)
    {
       int intel = (get_curr_int(ch) - 13) * 5;
 
-      heal *= 100 + intel;
-      heal /= 100;
-      heal += heal * ch->lvl[CLASS_MAG] / 50;
+      heal += heal * intel / 100;
+      heal += heal * ch->lvl[CLASS_MAG] / 100;
       heal += heal * ch->lvl2[CLASS_SOR] / 100;
       heal += heal * ch->lvl2[CLASS_WIZ] / 100;
    }
@@ -177,12 +176,18 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
    {
       int wis = (get_curr_wis(ch) - 13) * 5;
 
-      heal *= 100 + wis;
-      heal /= 100;
-
+      heal += heal * wis / 100;
       heal += heal * ch->lvl[CLASS_CLE] / 50;
       heal += heal * ch->lvl2[CLASS_PRI] / 50;
       heal += heal * ch->lvl2[CLASS_PAL] / 50 * .75;
+   }
+   else // psionic recovery
+   {
+      int intel = (get_curr_int(ch) - 13) * 5;
+
+      heal += heal * intel / 100;
+      heal += heal * ch->lvl[CLASS_PSI]/50;
+      heal += heal * ch->lvl2[CLASS_EGO]/50;
    }
 
    if (stance_app[ch->stance].heal_mod > 0)
@@ -194,11 +199,15 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
       heal /= 100;
    }
 
-   heal += get_spellpower(ch);
+   if (hot)
+      heal += get_spellpower(ch)/4;
+   else
+      heal += get_spellpower(ch);
+
    return heal;
 }
 
-void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn )
+void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bool hot )
 {
    char buf1[MAX_STRING_LENGTH];
    char buf2[MAX_STRING_LENGTH];
@@ -207,7 +216,8 @@ void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn )
 
    heal = base_heal;
 
-   heal = heal * number_range(75,125) / 100;
+   if (!hot)
+      heal = heal * number_range(75,125) / 100;
 
    victim->hit = UMIN( victim->hit + heal, victim->max_hit );
    update_pos( victim );
