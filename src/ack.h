@@ -1462,6 +1462,9 @@ int get_curr_con args( ( CHAR_DATA * ch ) );
 int get_max_con args ( ( CHAR_DATA * ch ) );
 int can_carry_n args( ( CHAR_DATA * ch ) );
 int can_carry_w args( ( CHAR_DATA * ch ) );
+int get_parry args( ( CHAR_DATA *ch ) );
+int get_dodge args( ( CHAR_DATA *ch ) );
+int get_block args( ( CHAR_DATA *ch ) );
 
 void affect_to_room args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );
 void r_affect_remove args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );
