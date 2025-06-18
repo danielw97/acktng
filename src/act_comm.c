@@ -1900,9 +1900,11 @@ void add_follower( CHAR_DATA * ch, CHAR_DATA * master )
 
    if( IS_NPC( ch ) && !IS_NPC( master ) )
    {
-      sh_int max_orders;
+      sh_int max_orders = get_curr_int(master) / 5;
 
-      max_orders = ( get_curr_int( master ) / 5 );
+      if (get_curr_wis(master) / 5 > max_orders)
+      	max_orders = ( get_curr_wis( master ) / 5 );
+
       if( ( !IS_NPC( master ) ) && ( master->pcdata->learned[gsn_unit_tactics] > 10 ) )
          max_orders += master->pcdata->learned[gsn_unit_tactics] / 28;
       if( max_orders <= master->num_followers )
