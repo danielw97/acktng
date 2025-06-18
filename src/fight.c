@@ -46,10 +46,9 @@ extern CHAR_DATA *quest_mob;
 /*
  * Local functions.
  */
-bool check_dodge args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
+bool check_avoidance args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 bool check_counter args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 void check_killer args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
-bool check_parry args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 bool check_skills args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void dam_message args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, bool critical ) );
 void death_message args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dt, int max_dt ) );
@@ -753,69 +752,27 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       dam *= 1.2;
    if( dam <= 0 )
       dam = 1;
-   shield = NULL;
-   if( IS_SHIELD( shield = get_eq_char( victim, WEAR_HOLD_HAND_R ) ) )
-   {
-   }
-   else if( IS_SHIELD( shield = get_eq_char( victim, WEAR_HOLD_HAND_L ) ) )
-   {
-   }
+
+   int skin_mods;
+   if( !IS_NPC( victim ) )
+      skin_mods = race_table[victim->race].race_flags;
    else
-      shield = NULL;
-   {
-      int skin_mods;
-      if( !IS_NPC( victim ) )
-      {
-         skin_mods = race_table[victim->race].race_flags;
-      }
-      else
-      {
-         skin_mods = ( victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags );
-      }
-      if( IS_SET( skin_mods, RACE_MOD_TOUGH_SKIN ) )
-         dam_mod -= .1;
-      else if( IS_SET( skin_mods, RACE_MOD_STONE_SKIN ) )
-         dam_mod -= .2;
-      else if( IS_SET( skin_mods, RACE_MOD_IRON_SKIN ) )
-         dam_mod -= .3;
-   }
-   if( ( ( IS_NPC( victim ) )
-         || ( victim->pcdata->learned[gsn_shield_block] > 0 ) )
-       && ( shield )
-       && ( number_range( 1, 4 ) != 3 )
-       && ( number_percent(  ) <
-            ( IS_NPC( victim ) ?
-              get_psuedo_level( victim ) / 7 :
-              victim->pcdata->learned[gsn_shield_block] / 5 )
-            + ( IS_NPC( victim ) ? 10 : ( 1 * ( victim->lvl[3] - ch->level ) + victim->lvl2[2] / 8 ) ) ) )
-      /*
-       * Shield Block! 
-       */
-   {
-      act( "$n blocks $N's attack with $p", victim, shield, ch, TO_NOTVICT );
-      act( "$N blocks your attack with $p", ch, shield, victim, TO_CHAR );
-      act( "You block $N's attack with $p", victim, shield, ch, TO_CHAR );
-      damage( ch, victim, 0, -1 );
-      check_counter(ch, victim);
-      return;
-   }
-   else
-   {
-      dam *= dam_mod;
-      bool stole_life = FALSE;
-      if( ( wield )
-          && ( dam > 0 ) && ( ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) ) )
-      {
-	      stole_life = do_lifesteal(ch, victim, wield, FALSE, dam);
-      }
-      if ( !stole_life && dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
-      {
-         do_lifesteal(ch, victim, dualwield, TRUE, dam);
-      }
-   }
+      skin_mods = ( victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags );
+   if( IS_SET( skin_mods, RACE_MOD_TOUGH_SKIN ) )
+      dam_mod -= .1;
+   else if( IS_SET( skin_mods, RACE_MOD_STONE_SKIN ) )
+      dam_mod -= .2;
+   else if( IS_SET( skin_mods, RACE_MOD_IRON_SKIN ) )
+      dam_mod -= .3;
+
+   dam *= dam_mod;
+   bool stole_life = FALSE;
+   if( ( wield ) && ( dam > 0 ) && ( ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) ) )
+      stole_life = do_lifesteal(ch, victim, wield, FALSE, dam);
+   if ( !stole_life && dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
+      do_lifesteal(ch, victim, dualwield, TRUE, dam);
 
    do_damage( ch, victim, dam, dt, critical );
-
 
    tail_chain(  );
    return;
@@ -950,11 +907,7 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
          if( IS_NPC( ch ) && ( number_percent(  ) < ch->level / 6 ) && IS_SET( ch->skills, MOB_TRIP ) )
             trip( ch, victim );
 
-         if( check_parry( ch, victim ) )
-            return -1;
-         if( check_dodge( ch, victim ) )
-            return -1;
-         if( check_skills( ch, victim ) )
+         if( check_avoidance( ch, victim ) )
             return -1;
       }
       if( dt != -1 )
@@ -1702,51 +1655,111 @@ void check_killer( CHAR_DATA * ch, CHAR_DATA * victim )
    return;
 }
 
+bool check_avoidance( CHAR_DATA *ch, CHAR_DATA *victim,  )
+{
+   int max_avoidance = 75;
+   int chance = number_percent();
 
+   int parry = get_parry(victim);
+   if (parry > max_avoidance)
+   {
+      parry = max_avoidance;
+      max_avoidance = 0;
+   }
+   else
+      max_avoidance -= parry;
+
+   if (chance < parry + ( (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2 ))
+   {
+      act( "You parry $n's attack.",  ch, NULL, victim, TO_VICT    );
+      act( "$N parries your attack.", ch, NULL, victim, TO_CHAR    );
+      act( "$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT );
+
+      check_counter(ch, victim);
+
+      return TRUE;
+   }
+
+   int block = get_shield_block(victim);
+   if (block > max_avoidance)
+   {
+      block = max_avoidance;
+      max_avoidance = 0;
+   }
+   else
+      max_avoidance -= block;
+
+   if (chance < parry+block + ( (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2 ))
+   {
+      act( "You block $n's attack.",  ch, NULL, victim, TO_VICT    );
+      act( "$N blocks your attack.", ch, NULL, victim, TO_CHAR    );
+      act( "$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT );
+
+      check_counter(ch, victim);
+
+      return TRUE;
+   }
+
+   int dodge = get_dodge(victim);
+   if (dodge > max_avoidance)
+   {
+      dodge = max_avoidance;
+      max_avoidance = 0;
+   }
+   else
+      max_avoidance -= dodge;
+      
+   if (chance < parry+block+dodge + ( (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2 ))
+   {
+      act( "You dodge $n's attack.", ch, NULL, victim, TO_VICT    );
+      act( "$N dodges your attack.", ch, NULL, victim, TO_CHAR    );
+      act( "$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT );
+
+      check_counter(ch, victim);
+
+      return TRUE;
+   }
+
+   return FALSE;
+}
 
 /*
  * Check for parry.
  */
-bool check_parry( CHAR_DATA * ch, CHAR_DATA * victim )
+int get_parry( CHAR_DATA * ch )
 {
    int chance = 0;
 
-   if( !IS_AWAKE( victim ) )
-      return FALSE;
+   if( !IS_AWAKE( ch ) )
+      return chance;
 
-   if( IS_NPC( victim ) && !IS_SET( victim->skills, MOB_PARRY ) )
-      return FALSE;
+   if( IS_NPC( ch ) && !IS_SET( ch->skills, MOB_PARRY ) )
+      return chance;
 
-   if( IS_NPC( victim ) )
+   if( IS_NPC( ch ) )
    {
-      /*
-       * Tuan was here.  :) 
-       */
-      chance = get_psuedo_level( victim ) / 3.2 + get_curr_str( victim ) * 2 / 5;
-      if( IS_SET( victim->act, ACT_SOLO ) )
+      chance = get_psuedo_level( ch ) / 3.2 + get_curr_str( ch ) * 2 / 5;
+      if( IS_SET( ch->act, ACT_SOLO ) )
          chance += 15;
    }
    else
    {
       OBJ_DATA *weapon;
-      if( ( weapon = get_eq_char( victim, WEAR_HOLD_HAND_L ) ) == NULL )
-         weapon = get_eq_char( victim, WEAR_HOLD_HAND_R );
+      if( ( weapon = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) == NULL || !IS_WEAPON(weapon))
+         weapon = get_eq_char( ch, WEAR_HOLD_HAND_L );
       if( ( weapon == NULL ) || ( !IS_WEAPON( weapon ) ) )
       {
          return FALSE;
       }
-      if( !IS_NPC( victim ) && IS_WOLF( victim ) && ( IS_SHIFTED( victim ) || IS_RAGED( victim ) ) )
+      if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
          return FALSE;
 
-      chance = ( victim->pcdata->learned[gsn_parry] / 3.5 ) + get_curr_str( victim ) * 3 / 5;
+      chance = ( ch->pcdata->learned[gsn_parry] / 3.5 ) + get_curr_str( ch ) * 3 / 5;
    }
-   if( IS_AFFECTED( victim, AFF_CLOAK_ADEPT ) )
+   if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
       chance += 5;
 
-   if (chance > 50)
-      chance = 50;
-
-   if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
+   /*if( number_percent(  ) < ( chance + ( get_psuedo_level( ch ) - get_psuedo_level( ch ) ) / 2 ) )
    {
       check_counter(ch, victim);
 
@@ -1755,32 +1768,30 @@ bool check_parry( CHAR_DATA * ch, CHAR_DATA * victim )
       act( "$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT );
 
       return TRUE;
-   }
-   return FALSE;
+   }*/
+   return chance;
 }
-
-
 
 /*
  * Check for dodge.
  */
-bool check_dodge( CHAR_DATA * ch, CHAR_DATA * victim )
+int get_dodge( CHAR_DATA * ch )
 {
    int chance = 0;
 
-   if( !IS_AWAKE( victim ) )
-      return FALSE;
+   if( !IS_AWAKE( ch ) )
+      return chance;
 
-   if( IS_NPC( victim ) && !IS_SET( victim->skills, MOB_DODGE ) )
-      return FALSE;
+   if( IS_NPC( ch ) && !IS_SET( ch->skills, MOB_DODGE ) )
+      return chance;
 
-   if( IS_NPC( victim ) )
+   if( IS_NPC( ch ) )
    {
       /*
        * Tuan was here.  :) 
        */
-      chance = get_psuedo_level( victim ) / 3.1 + get_curr_dex( victim ) * 2 / 5;
-      if( IS_SET( victim->act, ACT_SOLO ) )
+      chance = get_psuedo_level( ch ) / 3.1 + get_curr_dex( ch ) * 2 / 5;
+      if( IS_SET( ch->act, ACT_SOLO ) )
          chance += 15;
    }
    else
@@ -1789,16 +1800,13 @@ bool check_dodge( CHAR_DATA * ch, CHAR_DATA * victim )
       if( ch->lvl2[4] > 0 )   /* Monk  */
          chance += ch->lvl2[4] / 8;
    }
-   if( IS_AFFECTED( victim, AFF_CLOAK_ADEPT ) )
+   if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
       chance += 5;
 
-   if( !IS_NPC( victim ) && IS_WOLF( victim ) && ( IS_SHIFTED( victim ) || IS_RAGED( victim ) ) )
+   if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
       chance += 20;
 
-   if (chance > 50)
-      chance = 50;
-
-   if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
+/*   if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
    {
       check_counter(ch, victim);
 
@@ -1807,14 +1815,61 @@ bool check_dodge( CHAR_DATA * ch, CHAR_DATA * victim )
       act( "$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT );
 
       return TRUE;
+   }*/
+   return chance;
+}
+
+int get_shield_block( CHAR_DATA * ch )
+{
+   int chance = 0;
+
+   if( !IS_AWAKE( ch ) )
+      return chance;
+
+   if( IS_NPC( ch ) && !IS_SET( ch->skills, MOB_PARRY ) )
+      return chance;
+
+   if( IS_NPC( ch ) )
+   {
+      /*
+       * Tuan was here.  :) 
+       */
+      chance = get_psuedo_level( ch ) / 3.2 + get_curr_str( ch ) * 2 / 5;
+      if( IS_SET( ch->act, ACT_SOLO ) )
+         chance += 15;
    }
-   return FALSE;
+   else
+   {
+      OBJ_DATA *shield;
+      shield = get_eq_char( ch, WEAR_HOLD_HAND_R)
+      if (shield == NULL || shield->item_type != ITEM_ARMOR)
+         shield = get_eq_char( ch, WEAR_HOLD_HAND_L);
+      if (shield == NULL || shield->item_type != ITEM_ARMOR)
+         return 0;
+      if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
+         return 0;
+
+      chance = ( ch->pcdata->learned[gsn_shield_block] / 3.5 ) + get_curr_str( ch ) * 3 / 5;
+   }
+
+   if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
+      chance += 5;
+
+/*
+   if( number_percent(  ) < ( chance + ( get_psuedo_level( victim ) - get_psuedo_level( ch ) ) / 2 ) )
+   {
+      check_counter(ch, victim);
+
+      act( "You block $n's attack.",  ch, NULL, victim, TO_VICT    );
+      act( "$N blocks your attack.", ch, NULL, victim, TO_CHAR    );
+      act( "$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT );
+
+      return TRUE;
+   }*/
+   return chance;
 }
 
 /* Check for counter */
-/*
- * Check for dodge.
- */
 bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
 {
    int chance = 0;
