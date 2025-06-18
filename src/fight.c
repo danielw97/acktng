@@ -1655,7 +1655,7 @@ void check_killer( CHAR_DATA * ch, CHAR_DATA * victim )
    return;
 }
 
-bool check_avoidance( CHAR_DATA *ch, CHAR_DATA *victim,  )
+bool check_avoidance( CHAR_DATA *ch, CHAR_DATA *victim )
 {
    int max_avoidance = 75;
    int chance = number_percent();
