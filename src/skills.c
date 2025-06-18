@@ -1303,7 +1303,7 @@ void do_knee( CHAR_DATA * ch, char *argument )
 }
 
 
-void do_detox(CHAR_DATA * ch, char *argument )
+void do_detox( CHAR_DATA * ch, char *argument )
 {
    CHAR_DATA *victim;
    int dam;
@@ -1339,7 +1339,7 @@ void do_detox(CHAR_DATA * ch, char *argument )
    return TRUE;
 }
 
-void do_morale( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+void do_morale( CHAR_DATA * ch, char *argument )
 {
    AFFECT_DATA af;
    CHAR_DATA *gch;
@@ -1372,7 +1372,7 @@ void do_morale( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    return TRUE;
 }
 
-void do_leadership( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+void do_leadership( CHAR_DATA * ch, char *argument )
 {
    AFFECT_DATA af;
    CHAR_DATA *gch;
