@@ -136,7 +136,7 @@ void violence_update( void )
       {
          if (paf->location == APPLY_HOT && ch->hit < ch->max_hit)
          {
-            heal_character(ch, ch, paf->modifier, paf->type);
+            heal_character(ch, ch, paf->modifier, paf->type, TRUE);
          }
       }
 

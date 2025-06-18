@@ -396,9 +396,9 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
    AFFECT_DATA af;
 
-   int base_heal = 8 + ch->lvl[CLASS_MAG]/10 + ch->lvl2[CLASS_WIZ]/10 + ch->lvl2[CLASS_SOR]/10;
+   int base_heal = 40;
 
-   int heal = class_heal_character(ch, victim, base_heal, sn, INDEX_MAG);
+   int heal = class_heal_character(ch, victim, base_heal, sn, INDEX_MAG, TRUE);
 
    if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "regen" ) ) )
       return FALSE;
@@ -408,7 +408,7 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    af.modifier = heal;
    af.bitvector = 0;
    affect_to_char( victim, &af );
-   act( "$N begins to quickly regenerate from $n's spell.", victim, NULL, NULL, TO_ROOM );
+   act( "$N begins to quickly regenerate from $n's spell.", ch, NULL, victim, TO_ROOM );
    send_to_char( "You begin to quickly regenerate.\n\r", victim );
    return TRUE;
 }
@@ -417,7 +417,26 @@ bool spell_psionic_recovery( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DA
 {
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
 
-   heal_character(ch, victim, class_heal_character(ch, victim, 60, sn, INDEX_PSI), sn);
+   int heal = class_heal_character(ch, victim, 60, sn, INDEX_PSI, FALSE);
+
+   heal_character(ch, victim, heal, sn, FALSE);
 
    return TRUE;
+}
+
+bool spell_group_heal( int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj )
+{
+   CHAR_DATA *vch;
+
+   act( "$n casts group heal!", ch, NULL, NULL, TO_ROOM );
+   send_to_char( "You cast group heal.\n\r", ch );
+
+   for( vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room )
+   {
+      if( is_same_group(ch, vch) )
+      {
+         do_spell_heal( ch, vch, sn );
+      }
+   }
+
 }

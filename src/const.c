@@ -1552,6 +1552,14 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "!Heal!",
     ""},
 
+   {
+    REMORT, NORM,
+    "group heal", {182, 182, 182, 182, 182, 182,
+                   182, 5, 182, 182, 182, 182},
+    spell_group_heal, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 169 ), 50, 12,
+    "", "!Group Heal!",
+    ""},
 
    {
     MORTAL, NORM,
