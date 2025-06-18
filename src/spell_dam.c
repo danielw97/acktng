@@ -203,7 +203,7 @@ void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn )
    char buf1[MAX_STRING_LENGTH];
    char buf2[MAX_STRING_LENGTH];
    char buf3[MAX_STRING_LENGTH];
-   int wis, heal;
+   int heal;
 
    heal = base_heal;
 
