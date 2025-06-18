@@ -83,6 +83,9 @@ extern sh_int gsn_pick_lock;
 extern sh_int gsn_sneak;
 extern sh_int gsn_steal;
 
+extern sh_int gsn_morale;
+extern sh_int gsn_leadership;
+
 extern sh_int gsn_punch;
 extern sh_int gsn_headbutt;
 extern sh_int gsn_knee;
