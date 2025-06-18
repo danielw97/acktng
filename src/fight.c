@@ -1680,7 +1680,7 @@ bool check_avoidance( CHAR_DATA *ch, CHAR_DATA *victim )
       return TRUE;
    }
 
-   int block = get_shield_block(victim);
+   int block = get_block(victim);
    if (block > max_avoidance)
    {
       block = max_avoidance;
@@ -1799,7 +1799,7 @@ int get_dodge( CHAR_DATA * ch )
    return chance;
 }
 
-int get_shield_block( CHAR_DATA * ch )
+int get_block( CHAR_DATA * ch )
 {
    int chance = 0;
 
