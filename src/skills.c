@@ -1352,16 +1352,16 @@ void do_morale( CHAR_DATA * ch, char *argument )
 
    for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
    {
-      if( is_affected( gch, sn ) || !is_same_group( ch, gch ) )
-
+      if( is_affected( gch, gsn_morale ) || !is_same_group( ch, gch ) )
          continue;
+
       act( "$n seems much more willing to fight.", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You are inspired to fight better!\n\r", gch );
       af.type = gsn_morale;
       if (ch == gch)
          af.duration = -1;
       else
-         af.duration = 4 + ( ch->level / 5 );
+         af.duration = 4 + ( get_psuedo_level(ch) / 5 );
       af.location = APPLY_DAMROLL;
       af.modifier = get_psuedo_level( ch ) / 10;
       af.bitvector = 0;
@@ -1385,16 +1385,16 @@ void do_leadership( CHAR_DATA * ch, char *argument )
 
    for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
    {
-      if( is_affected( gch, sn ) || !is_same_group( ch, gch ) )
-
+      if( is_affected( gch, gsn_leadership ) || !is_same_group( ch, gch ) )
          continue;
+
       act( "$n looks more courageous!", gch, NULL, NULL, TO_ROOM );
       send_to_char( "You feel courage wash over you!\n\r", gch );
       af.type = gsn_leadership;
       if (ch == gch)
          af.duration = -1;
       else
-         af.duration = 4 + ( ch->level / 5 );
+         af.duration = 4 + ( get_psuedo_level(ch) / 5 );
       af.location = APPLY_HITROLL;
       af.modifier = get_psuedo_level( ch ) / 10;
       af.bitvector = 0;
