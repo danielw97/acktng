@@ -1361,7 +1361,7 @@ void do_morale( CHAR_DATA * ch, char *argument )
       if (ch == gch)
          af.duration = -1;
       else
-         af.duration = 4 + ( level / 5 );
+         af.duration = 4 + ( ch->level / 5 );
       af.location = APPLY_DAMROLL;
       af.modifier = get_psuedo_level( ch ) / 10;
       af.bitvector = 0;
@@ -1394,7 +1394,7 @@ void do_leadership( CHAR_DATA * ch, char *argument )
       if (ch == gch)
          af.duration = -1;
       else
-         af.duration = 4 + ( level / 5 );
+         af.duration = 4 + ( ch->level / 5 );
       af.location = APPLY_HITROLL;
       af.modifier = get_psuedo_level( ch ) / 10;
       af.bitvector = 0;
