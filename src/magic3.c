@@ -1784,6 +1784,98 @@ void do_stance( CHAR_DATA * ch, char *argument )
    char arg[MAX_STRING_LENGTH];
    bool legal_stance = FALSE;
    sh_int i;
+   int remort_caster = 0, remort_physical = 0, index1 = -1, index2 = -1;
+
+   if (ch->lvl2[CLASS_SOR] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_SOR;
+      else if (index2 == -1)
+         index2 = CLASS_SOR;
+      remort_caster++;
+   }
+   if (ch->lvl2[CLASS_NEC] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_NEC;
+      else if (index2 == -1)
+         index2 = CLASS_NEC;
+      remort_caster++;
+   }
+   if (ch->lvl2[CLASS_WLK] > 0)
+   {
+      if(index1 == -1)
+         index1 = CLASS_WLK;
+      else if (index2 == -1)
+         index2 = CLASS_WLK;
+      remort_caster++;
+      remort_physical++;
+   }
+   if (ch->lvl2[CLASS_PAL] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_PAL;
+      else if (index2 == -1)
+         index2 = CLASS_PAL;
+      remort_caster++;
+      remort_physical++;
+   }
+   if (ch->lvl2[CLASS_WIZ] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_WIZ;
+      else if (index2 == -1)
+         index2 = CLASS_WIZ;
+      remort_caster++;
+   }
+   if (ch->lvl2[CLASS_EGO] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_EGO;
+      else if (index2 == -1)
+         index2 = CLASS_EGO;
+      remort_caster++;
+   }
+   if (ch->lvl2[CLASS_PRI] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_PRI;
+      else if (index2 == -1)
+         index2 = CLASS_PRI;
+      remort_caster++;
+   }
+   if (ch->lvl2[CLASS_KNI] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_KNI;
+      else if (index2 == -1)
+         index2 = CLASS_KNI;
+      remort_physical++;
+   }
+   if (ch->lvl2[CLASS_MON] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_MON;
+      else if (index2 == -1)
+         index2 = CLASS_MON;
+      remort_physical++;
+   }
+   if (ch->lvl2[CLASS_SWO] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_SWO;
+      else if (index2 == -1)
+         index2 = CLASS_SWO;
+      remort_physical++;
+   }
+   if (ch->lvl2[CLASS_BRA] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_BRA;
+      else if (index2 == -1)
+         index2 = CLASS_BRA;
+      remort_physical++;
+   }
 
    if( IS_NPC( ch ) )
    {
@@ -1821,9 +1913,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_WIZARD:
-               if( ( ch->lvl2[0] > 20 )   /* sorc */
-                   || ( ch->lvl2[3] > 40 )   /* necro */
-                   || ( ch->lvl2[4] > 60 ) ) /* monk */
+               if(remort_caster > 0 && ch->lvl2[index1] > 60)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_MAGI:
@@ -1831,42 +1921,39 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AMBUSH:
-               if( ch->lvl2[1] > 30 )  /* assassin */
+               if( ch->lvl2[CLASS_ASS] > 30 )  /* assassin */
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AC_BEST:
-               if( ( ch->lvl2[2] > 65 )   /* knight */
-                   || ( ch->lvl2[4] > 30 ) ) /* monk */
+               if(remort_physical > 1)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HR_BEST:
-               if( ( ch->lvl2[2] > 45 )   /* knight */
-                   || ( ch->lvl2[4] > 20 ) ) /* monk */
+               if(remort_physical > 1)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_DR_BEST:
-               if( ( ch->lvl2[2] > 35 )   /* knight */
-                   || ( ch->lvl2[4] > 10 ) ) /* monk */
+               if(remort_physical > 1)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AC_WORST:
-               if( ch->lvl2[4] > 45 )  /* monk */
+               if(remort_physical > 0)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HR_WORST:
-               if( ch->lvl2[4] > 60 )  /* monk */
+               if(remort_physical > 0)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_DR_WORST:
-               if( ch->lvl2[4] > 70 )  /* monk */
+               if(remort_physical > 0)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_SUPER_FIGHTER:
-               if( ( ch->lvl2[4] > 79 ) && ( ch->lvl2[2] > 79 ) ) /* both knight and monk */
+               if( ( ch->lvl2[CLASS_ASS] > 79 ) && ( ch->lvl2[CLASS_KNI] > 79 ) )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_SUPER_SPEED:
-               if( ( ch->lvl2[4] > 70 ) && ( ch->lvl2[2] > 70 ) ) /* both knight and monk */
+               if( ( ch->lvl2[CLASS_MON] > 70 ) && ( ch->lvl2[CLASS_KNI] > 70 ) )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HEALER:
@@ -1924,23 +2011,21 @@ void do_stance( CHAR_DATA * ch, char *argument )
             }
             break;
          case STANCE_WIZARD:
-            if( ( ch->lvl2[0] > 20 )   /* sorc */
-                || ( ch->lvl2[3] > 40 )   /* necro */
-                || ( ch->lvl2[4] > 60 ) ) /* monk */
+            if(remort_caster > 0 && ch->lvl2[index1] > 60)
             {
                legal_stance = TRUE;
                break;
             }
             break;
          case STANCE_MAGI:
-            if( ( ch->adept_level > 10 ) )   /*adept */
+            if( ( ch->adept_level > 10 ) )
             {
                legal_stance = TRUE;
                break;
             }
             break;
          case STANCE_AMBUSH:
-            if( ch->lvl2[1] > 30 )  /* assassin */
+            if( ch->lvl2[CLASS_ASS] > 30 ) 
             {
                CHAR_DATA *other;
                for( other = ch->in_room->first_person; other != NULL; other = other->next_in_room )
@@ -1958,8 +2043,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             }
             break;
          case STANCE_AC_BEST:
-            if( ( ch->lvl2[2] > 65 )   /* knight */
-                || ( ch->lvl2[4] > 30 ) ) /* monk */
+            if (remort_physical > 1)
             {
                legal_stance = TRUE;
                break;
@@ -1967,8 +2051,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_HR_BEST:
-            if( ( ch->lvl2[2] > 45 )   /* knight */
-                || ( ch->lvl2[4] > 20 ) ) /* monk */
+            if (remort_physical > 1)
             {
                legal_stance = TRUE;
                break;
@@ -1976,8 +2059,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_DR_BEST:
-            if( ( ch->lvl2[2] > 35 )   /* knight */
-                || ( ch->lvl2[4] > 10 ) ) /* monk */
+            if (remort_physical > 1)
             {
                legal_stance = TRUE;
                break;
@@ -1985,7 +2067,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_AC_WORST:
-            if( ch->lvl2[4] > 45 )  /* monk */
+            if (remort_physical > 0)
             {
                legal_stance = TRUE;
                break;
@@ -1993,7 +2075,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_HR_WORST:
-            if( ch->lvl2[4] > 60 )  /* monk */
+            if (remort_physical > 0)
             {
                legal_stance = TRUE;
                break;
@@ -2001,7 +2083,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_DR_WORST:
-            if( ch->lvl2[4] > 70 )  /* monk */
+            if (remort_physical > 0)
             {
                legal_stance = TRUE;
                break;
@@ -2009,7 +2091,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_SUPER_FIGHTER:
-            if( ( ch->lvl2[4] > 79 ) && ( ch->lvl2[2] > 79 ) ) /* both knight and monk */
+            if( ( ch->lvl2[CLASS_ASS] > 79 ) && ( ch->lvl2[CLASS_KNI] > 79 ) )
             {
                legal_stance = TRUE;
                break;
@@ -2017,7 +2099,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_SUPER_SPEED:
-            if( ( ch->lvl2[4] > 70 ) && ( ch->lvl2[2] > 70 ) ) /* both knight and monk */
+            if( ( ch->lvl2[CLASS_MON] > 70 ) && ( ch->lvl2[CLASS_KNI] > 70 ) )
             {
                legal_stance = TRUE;
                break;
