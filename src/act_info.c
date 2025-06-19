@@ -1861,25 +1861,25 @@ void do_score( CHAR_DATA * ch, char *argument )
    send_to_char(buf2, ch);
 
    if( ch->alignment > 900 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@yangelic." );
+      strcpy(buf, "@@yangelic.");
    else if( ch->alignment > 700 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@ysaintly." );
-   else if( ch->alignment > 300 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@ygood." );
-   else if( ch->alignment > 100 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@ykind." );
-   else if( ch->alignment > -100 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@yneutral." );
-   else if( ch->alignment > -350 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@ymean." );
-   else if( ch->alignment > -700 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@yevil." );
-   else if( ch->alignment > -900 )
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@ydemonic." );
+      strcpy(buf, "@@ysaintly.");
+   else if( ch->alignment > 300)
+      strcpy(buf, "@@ygood.");
+   else if( ch->alignment > 10 )
+      strcpy(buf, "@@ykind.");
+   else if( ch->alignment > -100)
+      strcpy(buf, "@@yneutral.");
+   else if( ch->alignment > -350)
+      strcpy(buf, "@@ymean.");
+   else if( ch->alignment > -700)
+      strcpy(buf, "@@yevil.");
+   else if( ch->alignment > -900)
+      strcpy(buf, "@@ydemonic.");
    else
-      safe_strcat( MAX_STRING_LENGTH, buf, "@@ysatanic!" );
+      strcpy(buf, "@@ysatanic!");
 
-   sprintf( buf2, " @@WAlignment: @@y%5d.   %s", ch->alignment, buf );
+   sprintf( buf2, "@@WAlignment: @@y%5d.   %s", ch->alignment, buf);
    sprintf( buf, "@@c|%s @@c|\n\r", center_text( buf2, 62 ) );
    send_to_char( buf, ch );
 
