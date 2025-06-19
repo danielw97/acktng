@@ -227,11 +227,9 @@ bool do_poison(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    if( !can_use_skill(ch, skill_table[gsn].name) )
       return FALSE;
 
-   one_argument( argument, arg );
-
-   if( arg[0] == '\0' )
+   if( victim == NULL )
    {
-      send_to_char( "Backstab whom?\n\r", ch );
+      send_to_char( "Poison whom?\n\r", ch );
       return FALSE;
    }
 
@@ -251,7 +249,7 @@ bool do_poison(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    af.type = gsn;
    af.duration = 2;
    af.location = APPLY_DOT;
-   af.modifier = get_psuedo_level(ch);
+   af.modifier = get_psuedo_level(ch)/2;
    af.bitvector = 0;
    affect_to_char( victim, &af );
    return TRUE;
