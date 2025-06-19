@@ -448,7 +448,7 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
        && ( ( ( wield2 = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) != NULL ) && ( wield2->item_type == ITEM_WEAPON ) ) )
       dual_chance = 15;
 
-   int hits = 1;
+   int hits = 0;
 
    if (IS_NPC(ch))
    {
@@ -499,18 +499,29 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    sprintf(buf, "Hits: %d\r\n", hits);
    send_to_char(buf, ch);
 
+   // First hit
+   one_hit( ch, victim, dt );
+
+   if (ch->fighting != victim)
+      return;
+
    for(int i = 0; i < hits; i++)
    {
       chance = 80 - (i*10);
       chance += stance_app[ch->stance].speed_mod;
       chance += dual_chance;
 
-      if (number_percent < chance)
+      int calc_chance = number_percent();
+
+      sprintf(buf, "Hits: %d, Hit: %d, Chance: %d, Percent: %d\n\r", hits, i, chance, calc_chance);
+      send_to_char(buf,ch);
+
+      if (number_percent < calc_chance)
       {
          one_hit( ch, victim, dt );
 
          if (ch->fighting != victim)
-            return;
+            break;
       }
    }
 
