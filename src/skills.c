@@ -29,17 +29,92 @@ void do_backstab( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( ( victim = get_char_room( ch, arg ) ) == NULL )
+   backstab(ch, get_char_room( ch, arg ), TRUE);
+}
+
+void do_circle( CHAR_DATA * ch, char *argument )
+{
+   char arg[MAX_INPUT_LENGTH];
+   CHAR_DATA *victim;
+   OBJ_DATA *obj;
+   int cnt;
+   int mult;
+   int chance;
+   int dam;
+
+   if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
+   {
+      send_to_char( "You cannot do that while in this form.\n\r", ch );
+      return;
+   }
+
+   if( !can_use_skill(ch, "circle") )
+   {
+      send_to_char( "You better leave the assassin trade to thieves.\n\r", ch );
+      return;
+   }
+
+   one_argument( argument, arg );
+
+   if( arg[0] == '\0' )
+   {
+      send_to_char( "Circle whom?\n\r", ch );
+      return;
+   }
+
+   backstab(ch, get_char_room( ch, arg, FALSE ));
+}
+
+void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
+{
+   if( victim == NULL )
    {
       send_to_char( "They aren't here.\n\r", ch );
       return;
    }
+
    if( ( victim == NULL ) || ( victim->is_free != FALSE ) )
       return;
+
    if( IS_NPC( victim ) && IS_SET( victim->act, ACT_NO_BODY ) )
    {
       act( "$N has no body to backstab!", ch, NULL, victim, TO_CHAR );
       return;
+   }
+
+   if (!backstab)
+   {
+      if( !IS_AWAKE( victim ) )
+         chance += 75;
+
+      if( IS_AFFECTED( victim, AFF_SNEAK ) || item_has_apply( victim, ITEM_APPLY_SNEAK ) )
+         chance -= 10;
+
+      if( IS_AFFECTED( ch, AFF_SNEAK ) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
+         chance += 10;
+
+      if( IS_AFFECTED( ch, AFF_INVISIBLE ) || item_has_apply( ch, ITEM_APPLY_INV ) )
+         if (!IS_AFFECTED( victim, AFF_DETECT_INVIS ) )
+            chance += 20;
+
+      if( IS_AFFECTED( victim, AFF_INVISIBLE ) || item_has_apply( victim, ITEM_APPLY_INV ) )
+         chance -= 10;
+
+      if( get_psuedo_level( ch ) >= get_psuedo_level( victim ) )
+         chance += 10;
+      else
+         chance -= 10;
+
+      if( chance < number_percent(  ) )
+      {
+         /*
+         * Miss 
+         */
+         act( "$n tries to circle $N, but misses!", ch, NULL, victim, TO_NOTVICT );
+         act( "You try to circle $N, but miss!", ch, NULL, victim, TO_CHAR );
+         act( "$N tries to circle you, but misses!", victim, NULL, ch, TO_CHAR );
+         return;
+      }
    }
 
    if( victim == ch )
@@ -76,182 +151,37 @@ void do_backstab( CHAR_DATA * ch, char *argument )
    dam += number_range( get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2 ) + GET_DAMROLL( ch ) / 2;
    dam *= mult;
    check_killer( ch, victim );
+
+   if(backstab && IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
    {
-      if( IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
-      {
-         act( "The white aura around $n fades.", victim, NULL, NULL, TO_ROOM );
-         send_to_char( "The white aura around you fades.\n\r", victim );
-         REMOVE_BIT( victim->affected_by, AFF_SANCTUARY );
-      }
-
-
-      char actbuf[MSL];
-      sprintf( actbuf, "$n places $p into the back of $N!!");
-      act( actbuf, ch, obj, victim, TO_NOTVICT );
-      sprintf( actbuf, "You place $p into the back of $N!!");
-      act( actbuf, ch, obj, victim, TO_CHAR );
-      sprintf( actbuf, "$N places $p into your back!!");
-      act( actbuf, victim, obj, ch, TO_CHAR );
-
-
-      if( !IS_NPC( ch ) && ch->lvl[CLASS_THI] > 0 && number_percent(  ) == 1 )
-      {
-         send_to_room( "You hear a large CRACK!\n\r", ch->in_room );
-         dam *= 2;
-      }
-
-      dam = swing (ch, victim, dam, gsn_backstab );
-
+      send_to_char("Critical Success! Your advanced training has succeeded!\n\r", ch);
+      act( "The white aura around $n fades.", victim, NULL, NULL, TO_ROOM );
+      send_to_char( "The white aura around you fades.\n\r", victim );
+      REMOVE_BIT( victim->affected_by, AFF_SANCTUARY );
    }
 
-   WAIT_STATE( ch, skill_table[gsn_backstab].beats );
-   return;
-}
 
-void do_circle( CHAR_DATA * ch, char *argument )
-{
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *victim;
-   OBJ_DATA *obj;
-   int cnt;
-   int mult;
-   int chance;
-   int dam;
+   char actbuf[MSL];
+   sprintf( actbuf, "$n places $p into the back of $N!!");
+   act( actbuf, ch, obj, victim, TO_NOTVICT );
+   sprintf( actbuf, "You place $p into the back of $N!!");
+   act( actbuf, ch, obj, victim, TO_CHAR );
+   sprintf( actbuf, "$N places $p into your back!!");
+   act( actbuf, victim, obj, ch, TO_CHAR );
 
-   if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
+
+   if(!IS_NPC(ch) && ch->lvl[CLASS_THI] > 0 && number_percent(  ) == 1)
    {
-      send_to_char( "You cannot do that while in this form.\n\r", ch );
-      return;
+      send_to_room("You hear a large CRACK!\n\r", ch->in_room);
+      dam *= 2;
    }
 
-   if( !can_use_skill(ch, "backstab") )
-   {
-      send_to_char( "You better leave the assassin trade to thieves.\n\r", ch );
-      return;
-   }
-
-   one_argument( argument, arg );
-
-   if( arg[0] == '\0' )
-   {
-      send_to_char( "Backstab whom?\n\r", ch );
-      return;
-   }
-
-   if( ( victim = get_char_room( ch, arg ) ) == NULL )
-   {
-      send_to_char( "They aren't here.\n\r", ch );
-      return;
-   }
-   if( ( victim == NULL ) || ( victim->is_free != FALSE ) )
-      return;
-
-   if( IS_NPC( victim ) && IS_SET( victim->act, ACT_NO_BODY ) )
-   {
-      act( "$N has no body to backstab!", ch, NULL, victim, TO_CHAR );
-      return;
-   }
-
-   if( victim == ch )
-   {
-      send_to_char( "How can you sneak up on yourself?\n\r", ch );
-      return;
-   }
-
-   if( is_safe( ch, victim ) )
-      return;
-
-   if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) == NULL || obj->value[3] != 11 )
-      if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) == NULL || obj->value[3] != 11 )
-      {
-         send_to_char( "You need to wield a piercing weapon.\n\r", ch );
-         return;
-      }
-
-   if( victim->fighting == NULL )
-   {
-      send_to_char( "You're victim must be fighting!\n\r", ch );
-      return;
-   }
-
-   chance = ( IS_NPC( ch ) ? 50 : ch->pcdata->learned[gsn_circle] / 4.5 );
-
-   /*
-    * Handle Modifiers -- chance will affect thac, etc
-    */
-
-   if( !IS_AWAKE( victim ) )
-      chance += 75;
-
-   if( IS_AFFECTED( victim, AFF_SNEAK ) || item_has_apply( victim, ITEM_APPLY_SNEAK ) )
-      chance -= 10;
-
-   if( IS_AFFECTED( ch, AFF_SNEAK ) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
-      chance += 10;
-
-   if( IS_AFFECTED( ch, AFF_INVISIBLE ) || item_has_apply( ch, ITEM_APPLY_INV ) )
-      chance += ( IS_AFFECTED( victim, AFF_DETECT_INVIS ) ? 0 : 20 );
-
-   if( IS_AFFECTED( victim, AFF_INVISIBLE ) || item_has_apply( victim, ITEM_APPLY_INV ) )
-      chance -= 10;
-
-   if( get_psuedo_level( ch ) >= get_psuedo_level( victim ) )
-      chance += 10;
+   if (backstab)
+      dam = swing(ch, victim, dam, gsn_backstab);
    else
-      chance -= 10;
+      dam = swing(ch, victim, dam, gsn_circle);
 
-   /*
-    * Work out multiplier 
-    */
-   mult = 1 + ( get_psuedo_level(ch) >= 20 ) + ( get_psuedo_level(ch) >= 50 ) + ( get_psuedo_level(ch) >= 90 ) + ( get_psuedo_level(ch) >= 120 );
-
-   /*
-    * Work out damage 
-    */
-   dam = number_range( obj->value[1], obj->value[2] );
-   dam += number_range( get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2 ) + GET_DAMROLL( ch ) / 2;
-   dam *= mult;
-   if( victim != ch->fighting )
-      check_killer( ch, victim );
-   if( chance < number_percent(  ) )
-   {
-      /*
-       * Miss 
-       */
-      act( "$n tries to backstab $N, but misses!", ch, NULL, victim, TO_NOTVICT );
-      act( "You try to backstab $N, but miss!", ch, NULL, victim, TO_CHAR );
-      act( "$N tries to backstab you, but misses!", victim, NULL, ch, TO_CHAR );
-   }
-   else
-   {
-      bool critical = FALSE;
-
-      if( !IS_NPC( ch ) && ch->lvl[CLASS_THI] > 0 && number_percent(  ) == chance )
-      {
-         critical = TRUE;
-         dam *= 2;
-      }
-
-      /*
-       * HIT! 
-       */
-         char actbuf[MSL];
-         sprintf( actbuf, "$n places $p into the back of $N!!");
-         act( actbuf, ch, obj, victim, TO_NOTVICT );
-         sprintf( actbuf, "You place $p into the back of $N!!");
-         act( actbuf, ch, obj, victim, TO_CHAR );
-         sprintf( actbuf, "$N places $p into your back!!");
-         act( actbuf, victim, obj, ch, TO_CHAR );
-
-      if( critical )
-      {
-         send_to_room( "You hear a large CRACK!\n\r", ch->in_room );
-      }
-
-      dam = swing(ch, victim, dam, gsn_backstab );
-   }
-
-   WAIT_STATE( ch, skill_table[gsn_circle].beats );
+   WAIT_STATE(ch, skill_table[gsn_backstab].beats);
    return;
 }
 
