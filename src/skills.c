@@ -62,7 +62,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   backstab(ch, get_char_room( ch, arg, FALSE ));
+   backstab(ch, get_char_room(ch, arg), FALSE);
 }
 
 void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
