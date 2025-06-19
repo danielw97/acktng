@@ -492,10 +492,6 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       }
    }
 
-   char buf[MAX_STRING_LENGTH];
-   sprintf(buf, "Hits: %d\r\n", hits);
-   send_to_char(buf, ch);
-
    // First hit
    one_hit( ch, victim, dt );
 
@@ -509,9 +505,6 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       chance += dual_chance;
 
       int calc_chance = number_percent();
-
-      sprintf(buf, "Hits: %d, Hit: %d, Chance: %d, Percent: %d\n\r", hits, i, chance, calc_chance);
-      send_to_char(buf,ch);
 
       if (chance > calc_chance)
       {
