@@ -138,7 +138,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
          return;
       }
 
-   if( victim->fighting != NULL )
+   if(backstab && victim->fighting != NULL)
    {
       send_to_char( "You can't backstab a fighting person.\n\r", ch );
       return;
