@@ -1879,7 +1879,7 @@ void do_score( CHAR_DATA * ch, char *argument )
    else
       strcpy(buf, "@@ysatanic!");
 
-   sprintf( buf2, "@@WAlignment: @@y%5d.   %s", ch->alignment, buf);
+   sprintf( buf2, "@@WAlignment: @@y%5d@@W.  You are %s", ch->alignment, buf);
    sprintf( buf, "@@c|%s @@c|\n\r", center_text( buf2, 62 ) );
    send_to_char( buf, ch );
 
