@@ -484,6 +484,13 @@ int get_crit_mult( CHAR_DATA *ch )
    return crit;
 }
 
+int get_damcap( CHAR_DATA *ch )
+{
+   int damcap = BASE_DAMCAP;
+
+   return damcap;
+}
+
 int get_stat( CHAR_DATA *ch, int stat )
 {
    int i;

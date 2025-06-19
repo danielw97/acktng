@@ -77,31 +77,24 @@ void do_backstab( CHAR_DATA * ch, char *argument )
    dam *= mult;
    check_killer( ch, victim );
    {
-         bool critical = FALSE;
-
-         if( !IS_NPC( ch ) && ch->lvl[CLASS_THI] > 0 && number_percent(  ) == 1 )
-         {
-            critical = TRUE;
-	        dam *= 2;
-         }
-
-         if( IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
-         {
-            act( "The white aura around $n fades.", victim, NULL, NULL, TO_ROOM );
-            send_to_char( "The white aura around you fades.\n\r", victim );
-            REMOVE_BIT( victim->affected_by, AFF_SANCTUARY );
-         }
+      if( IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
+      {
+         act( "The white aura around $n fades.", victim, NULL, NULL, TO_ROOM );
+         send_to_char( "The white aura around you fades.\n\r", victim );
+         REMOVE_BIT( victim->affected_by, AFF_SANCTUARY );
+      }
 
 
-         char actbuf[MSL];
-         sprintf( actbuf, "$n places $p into the back of $N!!");
-         act( actbuf, ch, obj, victim, TO_NOTVICT );
-         sprintf( actbuf, "You place $p into the back of $N!!");
-         act( actbuf, ch, obj, victim, TO_CHAR );
-         sprintf( actbuf, "$N places $p into your back!!");
-         act( actbuf, victim, obj, ch, TO_CHAR );
+      char actbuf[MSL];
+      sprintf( actbuf, "$n places $p into the back of $N!!");
+      act( actbuf, ch, obj, victim, TO_NOTVICT );
+      sprintf( actbuf, "You place $p into the back of $N!!");
+      act( actbuf, ch, obj, victim, TO_CHAR );
+      sprintf( actbuf, "$N places $p into your back!!");
+      act( actbuf, victim, obj, ch, TO_CHAR );
 
-      if( critical )
+
+      if( !IS_NPC( ch ) && ch->lvl[CLASS_THI] > 0 && number_percent(  ) == 1 )
       {
          send_to_room( "You hear a large CRACK!\n\r", ch->in_room );
          dam *= 2;

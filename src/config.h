@@ -57,9 +57,10 @@
  * Adjust the pulse numbers to suit yourself.
  */
 
-#define MAX_CHARMIE		     3
+#define MAX_CHARMIE		        3
 #define CHARMIE_STAT_BONUS	     1
 #define CHARMIE_TACT_BONUS	     1
+#define BASE_DAMCAP             2500
 
 #define MAX_CLAN_EQ		     6   /* Number of clan eq items */
 #define MAX_COLOR		    16   /* eg look, prompt, shout */

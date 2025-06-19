@@ -576,28 +576,20 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       if( wield != NULL && wield->item_type == ITEM_WEAPON && !IS_SET(wield->extra_flags, ITEM_FIST))
          dt += wield->value[3];
    }
-   /*
-    * check for martial arts  Taken out for wierd act crash bug with type_martial ZEN
-    */
 
-     if ( dt == TYPE_HIT && (wield == NULL || IS_SET(wield->extra_flags, ITEM_FIST) ) )
-     {
-       int chance = 0;
+   if ( dt == TYPE_HIT && (wield == NULL || IS_SET(wield->extra_flags, ITEM_FIST) ) )
+   {
+      int chance = 0;
 
-       if ( IS_NPC(ch) && IS_SET(ch->skills, MOB_MARTIAL) )
-           chance = 75;
+      if ( IS_NPC(ch) && IS_SET(ch->skills, MOB_MARTIAL) )
+         chance = 75;
 
-       if ( !IS_NPC(ch) && ch->pcdata->learned[gsn_martial_arts] > 0)
-           chance = 50;
+      if ( !IS_NPC(ch) && ch->pcdata->learned[gsn_martial_arts] > 0)
+         chance = 50;
 
-       if (number_percent() < chance)
-          dt = TYPE_MARTIAL;
-     }
-
-   /*
-    * Calculate to-hit-armor-class-0 versus armor.
-    */
-
+      if (number_percent() < chance)
+         dt = TYPE_MARTIAL;
+   }
 
    victim_ac = GET_AC( victim );
    if( !can_see( ch, victim ) )
@@ -606,12 +598,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if( dt == gsn_backstab || dt == gsn_circle )
       victim_ac += 300;
 
-   /*
-    * The moment of excitement!
-    */
    diceroll = number_range( ( get_psuedo_level( ch ) * 5 ), ( get_psuedo_level( ch ) * 21 ) ) + GET_HITROLL( ch );
-
-/* players get a tohit bonus for now  */
 
    if( !IS_NPC( ch ) )
       diceroll += number_range( get_psuedo_level( ch ), ( get_psuedo_level( ch ) * 1 ) );
@@ -725,13 +712,9 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if (wield == NULL && get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL && !IS_NPC(ch) && ch->pcdata->learned[gsn_bare_hand] > 0)
    {
       if (ch->lvl2[CLASS_MON] > 0)
-        dam += dam * ch->lvl2[CLASS_MON] / 5 / 100;
-
+        dam += dam * ch->lvl2[CLASS_MON] / 100;
       else if (ch->lvl2[CLASS_BRA] > 0)
-        dam += dam * ch->lvl2[CLASS_BRA] / 10 / 100;
-
-      else
-        dam += dam * 5 / 100;
+        dam += dam * ch->lvl2[CLASS_BRA] / 100;
    }
 
    dam = swing(ch, victim, dam, dt);
@@ -747,6 +730,13 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
 int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
 {
    bool critical = FALSE;
+
+   if (dam > 200 && (dt >= TYPE_HIT || dt < 0))
+   {
+      dam -= 200;
+      dam /= 2;
+      dam += 200;
+   }
 
    if (number_range(0,100) < get_crit( ch ))
    {
@@ -780,9 +770,15 @@ int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
    if( IS_SET( skin_mods, RACE_MOD_IRON_SKIN ) )
       dam = dam * 0.7;
 
+   if( IS_AFFECTED( victim, AFF_SANCTUARY ) || item_has_apply( victim, ITEM_APPLY_SANC ) )
+      dam /= 2;
+
+   if( ( IS_AFFECTED( victim, AFF_PROTECT ) || item_has_apply( ch, ITEM_APPLY_PROT ) ) && IS_EVIL( ch ) )
+      dam -= dam / 4;
+
    int return_val = do_damage( ch, victim, dam, dt, critical );
 
-   tail_chain(  );
+   tail_chain( );
 
    return return_val;
 }
@@ -801,39 +797,23 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
 {
    OBJ_DATA *sil_weapon;
    int sn;
-
-
-/*   char buf[MAX_STRING_LENGTH];   this is unused now -- uni */
+   int damcap = get_damcap(ch);
 
    if( victim->is_free == TRUE )
    {
       bug( "Freed victim in one_hit", 0 );
       return -1;
    }
-   /*
-    * Stop up any residual loopholes.
-    */
-   if( dam > 3000 && !critical )
-   {
-      char buf[MAX_STRING_LENGTH];
-      sprintf( buf, "Combat: %d damage by %s, attacking %s, dt %d", dam,
-               IS_NPC( ch ) ? ch->short_descr : ch->name, victim->name, dt );
-      if( ch->level < 82 ) /* stop imms generating warnings!! */
-         monitor_chan( buf, MONITOR_COMBAT );
-      log_f( buf );
-      dam = 3000;
-   }
+   
+   if (critical)
+      damcap *= 2;
 
-   if (dam > 6000 && critical)
-   {
-      char buf[MAX_STRING_LENGTH];
-      sprintf( buf, "Combat: %d critical damage by %s, attacking %s, dt %d", dam,
-               IS_NPC( ch ) ? ch->short_descr : ch->name, victim->name, dt );
-      if( ch->level < 82 ) /* stop imms generating warnings!! */
-         monitor_chan( buf, MONITOR_COMBAT );
-      log_f( buf );
-      dam = 6000;
-   }
+   if (dt < TYPE_HIT && dt >= 0)
+      damcap *= 2;
+
+   if (dam > damcap)
+      dam = damcap;
+
    if( victim != ch )
    {
       /*
@@ -892,15 +872,6 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
          REMOVE_BIT( ch->affected_by, AFF_INVISIBLE );
          act( "$n shimmers into existence.", ch, NULL, NULL, TO_ROOM );
       }
-
-      /*
-       * Damage modifiers.
-       */
-      if( IS_AFFECTED( victim, AFF_SANCTUARY ) || item_has_apply( victim, ITEM_APPLY_SANC ) )
-         dam /= 2;
-
-      if( ( IS_AFFECTED( victim, AFF_PROTECT ) || item_has_apply( ch, ITEM_APPLY_PROT ) ) && IS_EVIL( ch ) )
-         dam -= dam / 4;
 
       if( dam < 0 )
          dam = 0;
