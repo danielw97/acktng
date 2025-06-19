@@ -1,6 +1,7 @@
 #include "globals.h"
 
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
+bool do_poison(CHAR_DATA *ch, char *argument, int gsn);
 
 void do_backstab( CHAR_DATA * ch, char *argument )
 {
