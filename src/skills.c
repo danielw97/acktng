@@ -1307,7 +1307,7 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
    int chance = 50;
 
-   if (skill == gsn_poison_quinine || skill == gsn_poison_arsenic)
+   if (gsn == gsn_poison_quinine || gsn == gsn_poison_arsenic)
    {
       // Can never hit immune poison with poison
       if (IS_SET(race_table[victim->race].race_flags, RACE_MOD_IMMUNE_POISON))
