@@ -212,10 +212,11 @@ void do_poison:arsenic(CHAR_DATA *ch, char *argument)
    do_poison(ch, argument, gsn_poison_arsenic);
 }
 
-bool do_poison(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
+bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
 {
    char arg[MAX_INPUT_LENGTH];
    char buf[MAX_STRING_LENGTH];
+   CHAR_DATA *victim;
    AFFECT_DATA af;
 
    if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
@@ -227,10 +228,20 @@ bool do_poison(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    if( !can_use_skill(ch, skill_table[gsn].name) )
       return FALSE;
 
-   if( victim == NULL )
+   one_argument( argument, arg );
+
+   if( arg[0] == '\0' )
    {
       send_to_char( "Poison whom?\n\r", ch );
-      return FALSE;
+      return;
+   }
+
+   victim = get_char_room(ch, arg);
+
+   if (victim == NULL)
+   {
+      send_to_char("Poison whom?\n\r", ch);
+      return;
    }
 
    WAIT_STATE(ch, skill_table[gsn].beats);
@@ -246,6 +257,12 @@ bool do_poison(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
       return FALSE;
    }
 
+   sprintf(buf, "You inflict $N with %s!", skill_table[gsn].name);
+   act(buf, ch, NULL, victim, TO_CHAR);
+   sprintf(buf, "$n inflictS you with %s!", skill_table[gsn].name);
+   act(buf, ch, NULL, victim, TO_VICT);
+   sprintf(buf, "$n inflictS $N with %s!", skill_table[gsn].name);
+   act(buf, ch, NULL, victim, TO_ROOM);
    af.type = gsn;
    af.duration = 2;
    af.location = APPLY_DOT;
