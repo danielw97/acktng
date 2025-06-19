@@ -116,6 +116,8 @@ sh_int gsn_morale;
 sh_int gsn_leadership;
 sh_int gsn_circle;
 sh_int gsn_backstab;
+sh_int gsn_poison_quinine;
+sh_int gsn_poison_arsenic;
 sh_int gsn_dodge;
 sh_int gsn_hide;
 sh_int gsn_hunt;

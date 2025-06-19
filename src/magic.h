@@ -211,7 +211,6 @@ DECLARE_SPELL_FUN( spell_suffocate );
 DECLARE_SPELL_FUN( spell_summon );
 DECLARE_SPELL_FUN( spell_teleport );
 DECLARE_SPELL_FUN( spell_ventriloquate );
-DECLARE_SPELL_FUN( spell_warcry );  /* --Stephen */
 DECLARE_SPELL_FUN( spell_weaken );
 DECLARE_SPELL_FUN( spell_window );
 DECLARE_SPELL_FUN( spell_portal );
@@ -287,7 +286,6 @@ DECLARE_SPELL_FUN( spell_iceshield );  /* slot 646 */
 DECLARE_SPELL_FUN( spell_shockshield );   /* slot 647 */
 DECLARE_SPELL_FUN( spell_shadowshield );  /* slot 648 */
 DECLARE_SPELL_FUN( spell_thoughtshield ); /* slot 649 */
-/* enraged holds slot 651-654   */
 DECLARE_SPELL_FUN( spell_tribe_claw ); /* slot 655 */
 DECLARE_SPELL_FUN( spell_wolf_mark );  /* slot 656 */
 DECLARE_SPELL_FUN( spell_blood_sign ); /* 657 */
@@ -307,8 +305,5 @@ DECLARE_SPELL_FUN( spell_wraith_touch );
 DECLARE_SPELL_FUN( spell_thought_vise );  /* 670 */
 DECLARE_SPELL_FUN( spell_black_curse );
 DECLARE_SPELL_FUN( spell_cloak_misery );
-
-DECLARE_SPELL_FUN( spell_poison_quinine );
-DECLARE_SPELL_FUN( spell_poison_arsenic );
 DECLARE_SPELL_FUN( spell_sonic_blast );
 DECLARE_SPELL_FUN( spell_mystical_focus );   /* 676 */

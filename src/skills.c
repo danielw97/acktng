@@ -16,10 +16,7 @@ void do_backstab( CHAR_DATA * ch, char *argument )
    }
 
    if( !can_use_skill(ch, "backstab") )
-   {
-      send_to_char( "You better leave the assassin trade to thieves.\n\r", ch );
       return;
-   }
 
    one_argument( argument, arg );
 
@@ -49,10 +46,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
    }
 
    if( !can_use_skill(ch, "circle") )
-   {
-      send_to_char( "You better leave the assassin trade to thieves.\n\r", ch );
       return;
-   }
 
    one_argument( argument, arg );
 
@@ -100,10 +94,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       if (!can_see(victim,ch))
          chance += 20;
 
-      if( get_psuedo_level( ch ) >= get_psuedo_level( victim ) )
-         chance += 10;
-      else
-         chance -= 10;
+      chance += get_psuedo_level( ch ) - get_psuedo_level( victim );
 
       if( chance < number_percent(  ) )
       {
@@ -183,7 +174,85 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       WAIT_STATE(ch, skill_table[gsn_backstab].beats);
    else
       WAIT_STATE(ch, skill_table[gsn_circle].beats);
-   return;
+
+   if (is_affected( ch, skill_lookup( "poison:quinine" )))
+   {
+      sprintf( actbuf, "$N screams as the quinine in their veins is consumed!");
+      act( actbuf, ch, obj, victim, TO_NOTVICT );
+      sprintf( actbuf, "$n screams as the quinine in their veins is consumed!");
+      act( actbuf, ch, obj, victim, TO_CHAR );
+      sprintf( actbuf, "You scream as the quinine in your veins is consumed!");
+      act( actbuf, victim, obj, ch, TO_CHAR );
+      dam = swing(ch, victim, dam, gsn_poison_quinine);
+      affect_strip( victim, skill_lookup( "poison:quinine" ) );
+   }
+
+   if (is_affected( ch, skill_lookup( "poison:arsenic" )))
+   {
+      sprintf( actbuf, "$N screams as the arsenic in their veins is consumed!");
+      act( actbuf, ch, obj, victim, TO_NOTVICT );
+      sprintf( actbuf, "$n screams as the arsenic in their veins is consumed!");
+      act( actbuf, ch, obj, victim, TO_CHAR );
+      sprintf( actbuf, "You scream as the arsenic in your veins is consumed!");
+      act( actbuf, victim, obj, ch, TO_CHAR );
+      dam = swing(ch, victim, dam, gsn_poison_arsenic);
+      affect_strip( victim, skill_lookup( "poison:arsenic" ) );
+   }
+}
+
+void do_poison:quinine(CHAR_DATA *ch, char *argument)
+{
+   do_poison(ch, argument, gsn_poison_quinine);
+}
+
+void do_poison:arsenic(CHAR_DATA *ch, char *argument)
+{
+   do_poison(ch, argument, gsn_poison_arsenic);
+}
+
+bool do_poison(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
+{
+   char arg[MAX_INPUT_LENGTH];
+   char buf[MAX_STRING_LENGTH];
+   AFFECT_DATA af;
+
+   if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
+   {
+      send_to_char( "You cannot do that while in this form.\n\r", ch );
+      return FALSE;
+   }
+
+   if( !can_use_skill(ch, skill_table[gsn].name) )
+      return FALSE;
+
+   one_argument( argument, arg );
+
+   if( arg[0] == '\0' )
+   {
+      send_to_char( "Backstab whom?\n\r", ch );
+      return FALSE;
+   }
+
+   WAIT_STATE(ch, skill_table[gsn].beats);
+
+   if (!can_hit_skill(ch, victim, gsn))
+   {
+      sprintf(buf, "You attempt to inflict $N with %s, but fail.", skill_table[gsn].name);
+      act(buf, ch, NULL, victim, TO_CHAR);
+      sprintf(buf, "$n attempts to inflict you with %s, but fails.", skill_table[gsn].name);
+      act(buf, ch, NULL, victim, TO_VICT);
+      sprintf(buf, "$n attempts to inflict $N with %s, but fails.", skill_table[gsn].name);
+      act(buf, ch, NULL, victim, TO_ROOM);
+      return FALSE;
+   }
+
+   af.type = gsn;
+   af.duration = 2;
+   af.location = APPLY_DOT;
+   af.modifier = get_psuedo_level(ch);
+   af.bitvector = 0;
+   affect_to_char( victim, &af );
+   return TRUE;
 }
 
 void do_rescue( CHAR_DATA * ch, char *argument )
@@ -501,7 +570,6 @@ void do_dirt( CHAR_DATA * ch, char *argument )
 
 void do_bash( CHAR_DATA * ch, char *argument )
 {
-
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
    int best;
@@ -681,7 +749,6 @@ void do_beserk( CHAR_DATA * ch, char *argument )
 
 void do_punch( CHAR_DATA * ch, char *argument )
 {
-
    CHAR_DATA *victim;
    int dam;
    bool prime;
@@ -754,7 +821,6 @@ void do_punch( CHAR_DATA * ch, char *argument )
 
 void do_headbutt( CHAR_DATA * ch, char *argument )
 {
-
    CHAR_DATA *victim;
    int dam;
    bool prime;
@@ -1231,6 +1297,34 @@ void do_leadership( CHAR_DATA * ch, char *argument )
       affect_to_char( gch, &af );
    }
    send_to_char( "You inspire the troops!\n\r", ch );
+
+   return TRUE;
+}
+
+bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, gsn skill)
+{
+   int chance = 50;
+
+   if (skill == gsn_poison_quinine || skill == gsn_poison_arsenic)
+   {
+      // Can never hit immune poison with poison
+      if (IS_SET(race_table[victim->race].race_flags, RACE_MOD_IMMUNE_POISON))
+         return FALSE;
+   }
+
+   if( !IS_AWAKE(victim) )
+      chance += 75;
+
+   if( IS_AFFECTED(ch, AFF_SNEAK) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
+      chance += 10;
+      
+   if (!can_see(victim,ch))
+      chance += 20;
+
+   chance += get_psuedo_level( ch ) - get_psuedo_level( victim );
+
+   if (chance < number_percent())
+      return FALSE;
 
    return TRUE;
 }

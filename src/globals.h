@@ -75,6 +75,8 @@ extern sh_int gsn_equip_wand;
 
 extern sh_int gsn_circle;
 extern sh_int gsn_backstab;
+extern sh_int gsn_poison_quinine;
+extern sh_int gsn_poison_arsenic;
 extern sh_int gsn_dodge;
 extern sh_int gsn_hide;
 extern sh_int gsn_hunt;
@@ -354,6 +356,8 @@ DECLARE_DO_FUN( do_autosac );
 DECLARE_DO_FUN( do_autosplit );
 DECLARE_DO_FUN( do_autoassist );
 DECLARE_DO_FUN( do_backstab );
+DECLARE_DO_FUN( do_poison_quinine );
+DECLARE_DO_FUN( do_poison_arsenic );
 DECLARE_DO_FUN( do_morale );
 DECLARE_DO_FUN( do_leadership );
 DECLARE_DO_FUN( do_ban );

@@ -552,6 +552,8 @@ bool can_use_skill( CHAR_DATA *ch, char *skill)
              && best < ch->lvl2[cnt] )
             best = ch->lvl2[cnt];
       }*/
+
+   send_to_char("You don't know how to do that\n\r", ch);
    return FALSE;
 }
 
