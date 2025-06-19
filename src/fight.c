@@ -513,7 +513,7 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       sprintf(buf, "Hits: %d, Hit: %d, Chance: %d, Percent: %d\n\r", hits, i, chance, calc_chance);
       send_to_char(buf,ch);
 
-      if (number_percent < calc_chance)
+      if (chance > calc_chance)
       {
          one_hit( ch, victim, dt );
 
