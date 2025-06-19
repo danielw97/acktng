@@ -89,7 +89,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (!backstab)
    {
-      int chance = 80;
+      int chance = 65;
 
       if( !IS_AWAKE(victim) )
          chance += 75;
@@ -110,7 +110,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       else
          chance -= 10;
 
-      if( chance > number_percent(  ) )
+      if( chance < number_percent(  ) )
       {
          /*
          * Miss 
