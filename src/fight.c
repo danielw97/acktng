@@ -140,7 +140,7 @@ void violence_update( void )
          }
          if (paf->location == APPLY_DOT && ch->hit > 0)
          {
-            do_damage(ch, paf->caster, paf->modifier, paf->type, FALSE);
+            do_damage(paf->caster, ch, paf->modifier, paf->type, FALSE);
          }
       }
 
