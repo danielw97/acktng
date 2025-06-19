@@ -1925,7 +1925,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AC_BEST:
-               if(remort_physical > 0)
+               if(remort_physical > 1)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HR_BEST:
@@ -2043,7 +2043,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             }
             break;
          case STANCE_AC_BEST:
-            if (remort_physical > 0)
+            if (remort_physical > 1)
             {
                legal_stance = TRUE;
                break;
