@@ -178,7 +178,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    else
       WAIT_STATE(ch, skill_table[gsn_circle].beats);
 
-   if (is_affected( ch, skill_lookup( "poison:quinine" )))
+   if (is_affected( victim, skill_lookup( "poison:quinine" )))
    {
       sprintf( actbuf, "$N screams as the quinine in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
@@ -190,7 +190,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       affect_strip( victim, skill_lookup( "poison:quinine" ) );
    }
 
-   if (is_affected( ch, skill_lookup( "poison:arsenic" )))
+   if (is_affected( victim, skill_lookup( "poison:arsenic" )))
    {
       sprintf( actbuf, "$N screams as the arsenic in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
@@ -247,6 +247,9 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
 
    WAIT_STATE(ch, skill_table[gsn].beats);
 
+   check_killer(ch, victim);
+   set_fighting(victim, ch);
+
    if (!can_hit_skill(ch, victim, gsn))
    {
       sprintf(buf, "You attempt to inflict $N with %s, but fail.", skill_table[gsn].name);
@@ -269,6 +272,7 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    af.location = APPLY_DOT;
    af.modifier = get_psuedo_level(ch)/2;
    af.bitvector = 0;
+   af.caster = ch;
    affect_to_char( victim, &af );
    return TRUE;
 }
