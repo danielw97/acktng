@@ -169,9 +169,9 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    }
 
    if (backstab)
-      dam = swing(ch, victim, dam, gsn_backstab);
+      swing(ch, victim, dam, gsn_backstab);
    else
-      dam = swing(ch, victim, dam, gsn_circle);
+      swing(ch, victim, dam, gsn_circle);
 
    if (backstab)
       WAIT_STATE(ch, skill_table[gsn_backstab].beats);
@@ -180,25 +180,25 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (is_affected( victim, skill_lookup( "poison:quinine" )))
    {
-      sprintf( actbuf, "$N screams as the quinine in their veins is consumed!");
+      sprintf( actbuf, "$n screams as the quinine in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
       sprintf( actbuf, "$n screams as the quinine in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the quinine in your veins is consumed!");
       act( actbuf, victim, obj, ch, TO_CHAR );
-      dam = swing(ch, victim, dam, gsn_poison_quinine);
+      swing(ch, victim, dam, gsn_poison_quinine);
       affect_strip( victim, skill_lookup( "poison:quinine" ) );
    }
 
    if (is_affected( victim, skill_lookup( "poison:arsenic" )))
    {
-      sprintf( actbuf, "$N screams as the arsenic in their veins is consumed!");
+      sprintf( actbuf, "$n screams as the arsenic in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
       sprintf( actbuf, "$n screams as the arsenic in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the arsenic in your veins is consumed!");
       act( actbuf, victim, obj, ch, TO_CHAR );
-      dam = swing(ch, victim, dam, gsn_poison_arsenic);
+      swing(ch, victim, dam, gsn_poison_arsenic);
       affect_strip( victim, skill_lookup( "poison:arsenic" ) );
    }
 }
