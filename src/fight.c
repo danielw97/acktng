@@ -1632,6 +1632,9 @@ bool check_avoidance( CHAR_DATA *ch, CHAR_DATA *victim )
    int max_avoidance = 75;
    int chance = number_percent();
 
+   if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
+      max_avoidance += 10;
+
    int parry = get_parry(victim);
    if (parry > max_avoidance)
    {
