@@ -448,79 +448,66 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
        && ( ( ( wield2 = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) != NULL ) && ( wield2->item_type == ITEM_WEAPON ) ) )
       dual_chance = 15;
 
+   int hits = 1;
 
-   chance = IS_NPC( ch )
-      ? ( IS_SET( ch->skills, MOB_SECOND ) ? 80 : 0 )
-      : ( ( ch->pcdata->learned[gsn_second_attack] / 2 ) - ( dex_app[get_curr_dex( ch )].defensive / 3 )
-          + ( stance_app[ch->stance].speed_mod * get_psuedo_level( ch ) / 10 ) + ( dual_chance ) );
-   multi_hit = ( IS_NPC( ch ) ? FALSE : ( ch->pcdata->learned[gsn_second_attack] > 0 ) );
-
-   if( ( number_percent(  ) < chance ) && ( IS_NPC( ch ) || multi_hit ) )
+   if (IS_NPC(ch))
    {
-      one_hit( ch, victim, dt );
-      if( ch->fighting != victim )
-         return;
+      if (IS_SET( ch->skills, MOB_SECOND ))
+         hits++;
+      if (IS_SET( ch->skills, MOB_THIRD ))
+         hits++;
+      if (IS_SET( ch->skills, MOB_FOURTH ))
+         hits++;
+      if (IS_SET( ch->skills, MOB_FIFTH ))
+         hits++;
+      if (IS_SET( ch->skills, MOB_SIXTH ))
+         hits++;
+   }
+   else
+   {
+      // Remort hits
+      if (ch->lvl2[CLASS_PAL] > 0)
+         hits++;
+      if (ch->lvl2[CLASS_ASS] > 0)
+         hits++;
+      if (ch->lvl2[CLASS_WLK] > 0)
+         hits++;
+      if (ch->lvl2[CLASS_KNI] > 0)
+         hits++;
+      if (ch->lvl2[CLASS_SWO] > 0)
+         hits++;
+
+      // Mort hits
+      for(int i = 0; i < MAX_CLASS; i++)
+      {
+         if (class_table[ch->pcdata->order[i]].attr_prime == APPLY_INT ||
+             class_table[ch->pcdata->order[i]].attr_prime == APPLY_WIS)
+             continue;
+
+         if (i == 0 && ch->lvl[ch->pcdata->order[i]] > 10)
+            hits++;
+         if (i == 1 && ch->lvl[ch->pcdata->order[i]] > 20)
+            hits++;
+         if (i == 2 && ch->lvl[ch->pcdata->order[i]] > 40)
+            hits++;
+         if (i == 3 && ch->lvl[ch->pcdata->order[i]] > 80)
+            hits++;
+      }
    }
 
-   chance = IS_NPC( ch )
-      ? ( IS_SET( ch->skills, MOB_THIRD ) ? 70 : 0 )
-      : ( ( ch->pcdata->learned[gsn_third_attack] / 4 ) - ( dex_app[get_curr_dex( ch )].defensive / 3 )
-          + ( stance_app[ch->stance].speed_mod * get_psuedo_level( ch ) / 10 ) + ( dual_chance ) );
-   multi_hit = ( IS_NPC( ch ) ? FALSE : ( ch->pcdata->learned[gsn_third_attack] > 0 ) );
-
-   if( ( number_percent(  ) < chance ) && ( IS_NPC( ch ) || multi_hit ) )
+   for(int i = 0; i < hits; i++)
    {
-      one_hit( ch, victim, dt );
-      if( ch->fighting != victim )
-         return;
-   }
+      chance = 80 - (i*10);
+      chance += stance_app[ch->stance].speed_mod;
+      chance += dual_chance;
 
+      if (number_percent < chance)
+      {
+         one_hit( ch, victim, dt );
 
-   chance = IS_NPC( ch )
-      ? ( IS_SET( ch->skills, MOB_FOURTH ) ? 60 : 0 )
-      : ( ( ch->pcdata->learned[gsn_fourth_attack] / 7 ) - ( dex_app[get_curr_dex( ch )].defensive / 3 )
-          + ( stance_app[ch->stance].speed_mod * get_psuedo_level( ch ) / 10 ) + ( dual_chance ) );
-   multi_hit = ( IS_NPC( ch ) ? FALSE : ( ch->pcdata->learned[gsn_fourth_attack] > 0 ) );
-
-   if( ( number_percent(  ) < chance ) && ( IS_NPC( ch ) || multi_hit ) )
-   {
-      one_hit( ch, victim, dt );
-      if( ch->fighting != victim )
-         return;
-   }
-
-
-
-   chance = IS_NPC( ch )
-      ? ( IS_SET( ch->skills, MOB_FIFTH ) ? 50 : 0 )
-      : ( ( ch->pcdata->learned[gsn_fifth_attack] / 6 ) - ( dex_app[get_curr_dex( ch )].defensive / 3 )
-          + ( stance_app[ch->stance].speed_mod * get_psuedo_level( ch ) / 10 ) + ( dual_chance ) );
-   multi_hit = ( IS_NPC( ch ) ? FALSE : ( ch->pcdata->learned[gsn_fifth_attack] > 0 ) );
-
-   if( ( number_percent(  ) < chance ) && ( IS_NPC( ch ) || multi_hit ) )
-   {
-      one_hit( ch, victim, dt );
-      if( ch->fighting != victim )
-         return;
-   }
-
-
-   chance = IS_NPC( ch )
-      ? ( IS_SET( ch->skills, MOB_SIXTH ) ? 30 : 0 )
-      : ( ( ch->pcdata->learned[gsn_sixth_attack] / 7 ) - ( dex_app[get_curr_dex( ch )].defensive / 3 )
-          + ( stance_app[ch->stance].speed_mod * get_psuedo_level( ch ) / 10 ) + ( dual_chance ) );
-   multi_hit = ( IS_NPC( ch ) ? FALSE : ( ch->pcdata->learned[gsn_sixth_attack] > 0 ) );
-
-   if( ( number_percent(  ) < chance ) && ( IS_NPC( ch ) || multi_hit ) )
-   {
-      one_hit( ch, victim, dt );
-      if( ch->fighting != victim )
-         return;
-   }
-   if( !IS_NPC( ch ) && IS_SET( race_table[ch->race].race_flags, RACE_MOD_TAIL ) )
-   {
-      if( number_percent(  ) < 25 )
-         one_hit( ch, victim, TYPE_HIT + 13 );
+         if (ch->fighting != victim)
+            return;
+      }
    }
 
    if( !IS_NPC( ch ) && ( ( ch->stance == STANCE_AMBUSH ) || ( ch->stance == STANCE_AC_BEST ) ) )
