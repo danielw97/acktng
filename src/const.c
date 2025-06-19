@@ -3381,7 +3381,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
                        182, 182, 21, 182, 182, 182},
     NULL, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_poison_quinine, SLOT( 673 ), 80, 4,
-    "Poison Dart", "@@N$n feels much better!",
+    "Poison Quinine", "@@N$n feels much better!",
     ""},
 
    {
@@ -3390,7 +3390,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
                        182, 182, 28, 182, 182, 182},
     NULL, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_poison_arsenic, SLOT( 674 ), 80, 4,
-    "Poison Dart", "@@N$nFeels much better!",
+    "Poison Arsenic", "@@N$nFeels much better!",
     ""},
 
    {
