@@ -1301,7 +1301,7 @@ void do_leadership( CHAR_DATA * ch, char *argument )
    return TRUE;
 }
 
-bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, gsn skill)
+bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
    int chance = 50;
 
