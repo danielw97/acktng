@@ -2359,15 +2359,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     &gsn_find_doors, SLOT( 0 ), 0, 0,
     "", "!Find Doors!",
     ""},
-
-   {
-    MORTAL, NORM,
-    "fourth attack", {182, 182, 182, 50, 182, 75},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_fourth_attack, SLOT( 0 ), 0, 0,
-    "", "!Fourth Attack!",
-    ""},
-
    {
     MORTAL, NORM,
     "counter", {182, 182, 182, 182, 182, 22},
@@ -2502,15 +2493,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "second attack", {182, 182, 15, 10, 182, 12},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_second_attack, SLOT( 0 ), 0, 0,
-    "", "!Second Attack!",
-    ""},
-
-
-   {
-    MORTAL, NORM,
     "shadowform", {182, 182, 182, 182, 9, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_shadow, SLOT( 0 ), 0, 0,
@@ -2557,14 +2539,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_stun, SLOT( 0 ), 0, 24,
     "", "",
-    ""},
-
-   {
-    MORTAL, NORM,
-    "third attack", {182, 182, 60, 25, 182, 40},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_third_attack, SLOT( 0 ), 0, 0,
-    "", "!Third Attack!",
     ""},
 
    {
@@ -2940,8 +2914,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "!blood walk!!",
     ""},
 
-
-
    {
     REMORT, NORM,
     "restoration", {182, 182, 182, 182, 182, 182},
@@ -2950,32 +2922,13 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "!restoration!",
     ""},
 
-
    {
     REMORT, NORM,
     "infuse", {182, 182, 182, 182, 71, 182,
                182, 182, 182, 182, 71, 182},
     spell_infuse, TAR_OBJ_INV, POS_STANDING,
     NULL, SLOT( 633 ), 1000, 24,
-    "", "!Infuse SOul!",
-    ""},
-
-   {
-    REMORT, NORM,
-    "fifth attack", {182, 38, 29, 18, 182, 12,
-                     182, 38, 29, 18, 182, 12},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_fifth_attack, SLOT( 0 ), 0, 0,
-    "", "!Fifth Attack!",
-    ""},
-
-   {
-    REMORT, NORM,
-    "sixth attack", {182, 89, 66, 42, 182, 61,
-                     182, 89, 66, 42, 182, 61},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_sixth_attack, SLOT( 0 ), 0, 0,
-    "", "!Sixth Attack!",
+    "", "!Infuse Soul!",
     ""},
 
    {
