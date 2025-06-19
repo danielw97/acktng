@@ -202,12 +202,12 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    }
 }
 
-void do_poison:quinine(CHAR_DATA *ch, char *argument)
+void do_poison_quinine(CHAR_DATA *ch, char *argument)
 {
    do_poison(ch, argument, gsn_poison_quinine);
 }
 
-void do_poison:arsenic(CHAR_DATA *ch, char *argument)
+void do_poison_arsenic(CHAR_DATA *ch, char *argument)
 {
    do_poison(ch, argument, gsn_poison_arsenic);
 }
