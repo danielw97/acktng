@@ -1857,7 +1857,7 @@ void do_score( CHAR_DATA * ch, char *argument )
    sprintf( buf2, "@@c|%s @@c|\n\r", center_text( buf, 62 ) );
    send_to_char( buf2, ch );
    sprintf( buf, "@@WParry: @@y%-3d @@WDodge: @@y%-3d@@W Block: @@y%-3d@@N", get_parry(ch), get_dodge(ch), get_block(ch) );
-   sprintf(buf2, "@@c%s @@c|\n\r", center_text(buf, 62) );
+   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62) );
    send_to_char(buf2, ch);
    sprintf( buf, " @@WYou are " );
 
