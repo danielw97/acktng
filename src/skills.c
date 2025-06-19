@@ -6,21 +6,8 @@ void do_backstab( CHAR_DATA * ch, char *argument )
    CHAR_DATA *victim;
    OBJ_DATA *obj;
    int cnt;
-   int best;
-   int level;
    int mult;
-   int chance;
    int dam;
-
-    /******************************************************************
-     * Modified:  'damage' may now be called with sn = -1, in order to *
-     * stop damage message being displayed.  Handle ALL the related    *
-     * calculations here, including how many hits.  Check for critical *
-     * hits too, as well as things like invis and sneak.               * 
-      ******************************************************************/
-
-   best = -1;
-   level = 0;
 
    if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
    {
@@ -28,24 +15,7 @@ void do_backstab( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( !IS_NPC( ch ) )
-   {
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         if( ch->lvl[cnt] >= skill_table[gsn_backstab].skill_level[cnt] && ch->lvl[cnt] > level )
-         {
-            best = cnt;
-            level = ch->lvl[cnt];
-         }
-      if( ch->lvl2[1] > 0 )
-         level = level + ch->lvl2[1] / 2;
-   }
-   else
-   {
-      best = ch->class;
-      level = ch->level;
-   }
-
-   if( best == -1 )
+   if( !can_use_skill(ch, "backstab") )
    {
       send_to_char( "You better leave the assassin trade to thieves.\n\r", ch );
       return;
@@ -94,80 +64,50 @@ void do_backstab( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   chance = ( IS_NPC( ch ) ? 50 : ch->pcdata->learned[gsn_backstab] / 2 );
-
-   /*
-    * Handle Modifiers -- chance will affect thac, etc
-    */
-
-   if( !IS_AWAKE( victim ) )
-      chance += 75;
-
-   if( IS_AFFECTED( victim, AFF_SNEAK ) || item_has_apply( victim, ITEM_APPLY_SNEAK ) )
-      chance -= 10;
-
-   if( IS_AFFECTED( ch, AFF_SNEAK ) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
-      chance += 20;
-
-   if( IS_AFFECTED( ch, AFF_INVISIBLE ) || item_has_apply( ch, ITEM_APPLY_INV ) )
-      chance += ( IS_AFFECTED( victim, AFF_DETECT_INVIS ) ? -20 : 20 );
-
-   if( IS_AFFECTED( victim, AFF_INVISIBLE ) || item_has_apply( victim, ITEM_APPLY_INV ) )
-      chance -= 10;
-
-   if( get_psuedo_level( ch ) >= get_psuedo_level( victim ) )
-      chance += 10;
-   else
-      chance -= 10;
-
    /*
     * Work out multiplier 
     */
-   mult = 1 + ( level >= 20 ) + ( level >= 50 ) + ( level >= 90 ) + ( level >= 120 );
+   mult = 1 + ( get_psuedo_level(ch) >= 20 ) + ( get_psuedo_level(ch) >= 50 ) + ( get_psuedo_level(ch) >= 90 ) + ( get_psuedo_level(ch) >= 120 );
 
    /*
     * Work out damage 
     */
    dam = number_range( obj->value[1], obj->value[2] );
-   dam += number_range( level / 2, level * 2 ) + GET_DAMROLL( ch ) / 2;
+   dam += number_range( get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2 ) + GET_DAMROLL( ch ) / 2;
    dam *= mult;
    check_killer( ch, victim );
-   if( chance < number_percent(  ) )
-   {
-      /*
-       * Miss 
-       */
-      act( "$n tries to backstab $N, but misses!", ch, NULL, victim, TO_NOTVICT );
-      act( "You try to backstab $N, but miss!", ch, NULL, victim, TO_CHAR );
-      act( "$N tries to backstab you, but misses!", victim, NULL, ch, TO_CHAR );
-      damage( ch, victim, 0, -1 );
-   }
-   else
    {
          bool critical = FALSE;
 
-         if( !IS_NPC( ch ) && ch->lvl[CLASS_THI] > 0 && number_percent(  ) == chance )
+         if( !IS_NPC( ch ) && ch->lvl[CLASS_THI] > 0 && number_percent(  ) == 1 )
          {
             critical = TRUE;
 	        dam *= 2;
          }
 
-         /*
-          * HIT! 
-          */
-         dam = damage( ch, victim, dam, -1 );
+         if( IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
+         {
+            act( "The white aura around $n fades.", victim, NULL, NULL, TO_ROOM );
+            send_to_char( "The white aura around you fades.\n\r", victim );
+            REMOVE_BIT( victim->affected_by, AFF_SANCTUARY );
+         }
+
+
          char actbuf[MSL];
-         sprintf( actbuf, "$n places $p into the back of $N!! @@l(@@W%d@@l)@@N", dam );
+         sprintf( actbuf, "$n places $p into the back of $N!!");
          act( actbuf, ch, obj, victim, TO_NOTVICT );
-         sprintf( actbuf, "You place $p into the back of $N!! @@l(@@W%d@@l)@@N", dam );
+         sprintf( actbuf, "You place $p into the back of $N!!");
          act( actbuf, ch, obj, victim, TO_CHAR );
-         sprintf( actbuf, "$N places $p into your back!! @@l(@@W%d@@l)@@N", dam );
+         sprintf( actbuf, "$N places $p into your back!!");
          act( actbuf, victim, obj, ch, TO_CHAR );
 
       if( critical )
       {
          send_to_room( "You hear a large CRACK!\n\r", ch->in_room );
+         dam *= 2;
       }
+
+      dam = swing (ch, victim, dam, gsn_backstab );
 
    }
 
@@ -181,8 +121,6 @@ void do_circle( CHAR_DATA * ch, char *argument )
    CHAR_DATA *victim;
    OBJ_DATA *obj;
    int cnt;
-   int best;
-   int level;
    int mult;
    int chance;
    int dam;
@@ -193,36 +131,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
       return;
    }
 
-
-    /******************************************************************
-     * Modified:  'damage' may now be called with sn = -1, in order to *
-     * stop damage message being displayed.  Handle ALL the related    *
-     * calculations here, including how many hits.  Check for critical *
-     * hits too, as well as things like invis and sneak.               * 
-      ******************************************************************/
-
-   best = -1;
-   level = 0;
-
-
-   if( !IS_NPC( ch ) )
-   {
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         if( ch->lvl[cnt] >= skill_table[gsn_circle].skill_level[cnt] && ch->lvl[cnt] > level )
-         {
-            best = cnt;
-            level = ch->lvl[cnt];
-         }
-      if( ch->lvl2[1] > 0 )
-         level += ch->lvl2[1] / 2;
-   }
-   else
-   {
-      best = ch->class;
-      level = ch->level;
-   }
-
-   if( best == -1 )
+   if( !can_use_skill(ch, "backstab") )
    {
       send_to_char( "You better leave the assassin trade to thieves.\n\r", ch );
       return;
@@ -288,7 +197,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
       chance += 10;
 
    if( IS_AFFECTED( ch, AFF_INVISIBLE ) || item_has_apply( ch, ITEM_APPLY_INV ) )
-      chance += ( IS_AFFECTED( victim, AFF_DETECT_INVIS ) ? -20 : 20 );
+      chance += ( IS_AFFECTED( victim, AFF_DETECT_INVIS ) ? 0 : 20 );
 
    if( IS_AFFECTED( victim, AFF_INVISIBLE ) || item_has_apply( victim, ITEM_APPLY_INV ) )
       chance -= 10;
@@ -301,13 +210,13 @@ void do_circle( CHAR_DATA * ch, char *argument )
    /*
     * Work out multiplier 
     */
-   mult = 1 + ( level >= 20 ) + ( level >= 50 ) + ( level >= 90 ) + ( level >= 120 );
+   mult = 1 + ( get_psuedo_level(ch) >= 20 ) + ( get_psuedo_level(ch) >= 50 ) + ( get_psuedo_level(ch) >= 90 ) + ( get_psuedo_level(ch) >= 120 );
 
    /*
     * Work out damage 
     */
    dam = number_range( obj->value[1], obj->value[2] );
-   dam += number_range( level / 2, level * 2 ) + GET_DAMROLL( ch ) / 2;
+   dam += number_range( get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2 ) + GET_DAMROLL( ch ) / 2;
    dam *= mult;
    if( victim != ch->fighting )
       check_killer( ch, victim );
@@ -319,7 +228,6 @@ void do_circle( CHAR_DATA * ch, char *argument )
       act( "$n tries to backstab $N, but misses!", ch, NULL, victim, TO_NOTVICT );
       act( "You try to backstab $N, but miss!", ch, NULL, victim, TO_CHAR );
       act( "$N tries to backstab you, but misses!", victim, NULL, ch, TO_CHAR );
-      damage( ch, victim, 0, -1 );
    }
    else
    {
@@ -334,22 +242,20 @@ void do_circle( CHAR_DATA * ch, char *argument )
       /*
        * HIT! 
        */
-         /*
-          * HIT! 
-          */
-         dam = damage( ch, victim, dam, -1 );
          char actbuf[MSL];
-         sprintf( actbuf, "$n places $p into the back of $N!! @@l(@@W%d@@l)@@N", dam );
+         sprintf( actbuf, "$n places $p into the back of $N!!");
          act( actbuf, ch, obj, victim, TO_NOTVICT );
-         sprintf( actbuf, "You place $p into the back of $N!! @@l(@@W%d@@l)@@N", dam );
+         sprintf( actbuf, "You place $p into the back of $N!!");
          act( actbuf, ch, obj, victim, TO_CHAR );
-         sprintf( actbuf, "$N places $p into your back!! @@l(@@W%d@@l)@@N", dam );
+         sprintf( actbuf, "$N places $p into your back!!");
          act( actbuf, victim, obj, ch, TO_CHAR );
 
       if( critical )
       {
          send_to_room( "You hear a large CRACK!\n\r", ch->in_room );
       }
+
+      dam = swing(ch, victim, dam, gsn_backstab );
    }
 
    WAIT_STATE( ch, skill_table[gsn_circle].beats );

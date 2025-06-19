@@ -2109,7 +2109,7 @@ bool spell_flare( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 
    af.type = sn;
    af.location = APPLY_HITROLL;
-   af.modifier = level / 4;
+   af.modifier = -10 - (level / 4);
    if (ch == victim)
       af.duration = -1;
    else

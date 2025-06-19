@@ -1891,7 +1891,6 @@ void do_follow( CHAR_DATA * ch, char *argument )
 
 void add_follower( CHAR_DATA * ch, CHAR_DATA * master )
 {
-
    if( ch->master != NULL )
    {
       bug( "Add_follower: non-null master.", 0 );
@@ -1900,13 +1899,14 @@ void add_follower( CHAR_DATA * ch, CHAR_DATA * master )
 
    if( IS_NPC( ch ) && !IS_NPC( master ) )
    {
-      sh_int max_orders = get_curr_int(master) / 5;
+      sh_int max_orders = MAX_CHARMIE;
 
-      if (get_curr_wis(master) / 5 > max_orders)
-      	max_orders = ( get_curr_wis( master ) / 5 );
+      if (get_curr_wis(master) > 21 || get_curr_int(master) > 21)
+      	max_orders += CHARMIE_STAT_BONUS;
 
-      if( ( !IS_NPC( master ) ) && ( master->pcdata->learned[gsn_unit_tactics] > 10 ) )
-         max_orders += master->pcdata->learned[gsn_unit_tactics] / 28;
+      if( ( !IS_NPC( master ) ) && ( master->pcdata->learned[gsn_unit_tactics] > 0 ) )
+         max_orders += CHARMIE_TACT_BONUS;
+
       if( max_orders <= master->num_followers )
       {
          send_to_char( "You cannot control anymore followers.\n\r", master );
@@ -2126,7 +2126,10 @@ void do_order( CHAR_DATA * ch, char *argument )
    CUREF( och_next );
 
    if( found )
+   {
       send_to_char( "Ok.\n\r", ch );
+      WAIT_STATE(ch, 8);
+   }
    else
       send_to_char( "You have no followers here.\n\r", ch );
    return;
