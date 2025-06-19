@@ -67,6 +67,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
 
 void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 {
+   OBJ_DATA *obj;
    int dam;
    int chance;
    int mult;
@@ -130,8 +131,8 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    if( is_safe( ch, victim ) )
       return;
 
-   if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) == NULL || obj->value[3] != 11 )
-      if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) == NULL || obj->value[3] != 11 )
+   if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) == NULL || obj->value[3] != 11 )
+      if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) == NULL || obj->value[3] != 11 )
       {
          send_to_char( "You need to wield a piercing weapon.\n\r", ch );
          return;
@@ -150,7 +151,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    mult += (ch->lvl[CLASS_THI]/33);
    mult += (ch->lvl2[CLASS_ASS]/33);
    mult += (ch->lvl2[CLASS_WLK]/33);
-   
+
    /*
     * Work out damage 
     */
