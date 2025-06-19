@@ -1436,6 +1436,8 @@ void log_f( char *fmt, ... ) __attribute__ ( ( format( printf, 1, 2 ) ) );
 void violence_update args( ( void ) );
 void multi_hit args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dt ) );
 int damage args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt ) );
+int swing args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt ) );
+bool can_use_skill args( ( CHAR_DATA *ch, char *skill) );
 void update_pos args( ( CHAR_DATA * victim ) );
 void stop_fighting args( ( CHAR_DATA * ch, bool fBoth ) );
 void death_cry args( ( CHAR_DATA * ch ) );

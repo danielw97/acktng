@@ -434,13 +434,10 @@ void do_cast( CHAR_DATA * ch, char *argument )
           && ( ( ( IS_SET( ch->act, ACT_PET ) ) || ( IS_AFFECTED( ch, AFF_CHARM ) ) ) && ( ch->rider == NULL ) ) )
          best = -1;
 
-
-
       if( skill_table[sn].flag1 == ADEPT )
          best = -1;
       if( ( skill_table[sn].flag2 == VAMP ) || ( skill_table[sn].flag2 == WOLF ) )
          best = -1;
-
    }
    else
    {
@@ -1695,9 +1692,7 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
       if( ch == victim )
          chance = 100;
 
-      chance += (ch->lvl[CLASS_MAG] / 25);
-
-      chance += ( ( get_psuedo_level( ch ) - get_psuedo_level( victim ) ) );
+      chance += get_psuedo_level( ch ) - get_psuedo_level( victim );
       /*
        * Bonus/penalty for difference in levels. 
        */
@@ -1720,17 +1715,13 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
          act( "$p glows brightly at $n.", victim, obj, NULL, TO_ROOM );
          act( "$p glows brightly towards you.", victim, obj, NULL, TO_CHAR );
       }
-      /*
-       * So now, player should have 'rolled' less than chance, so check
-       * * and remove affects, with some messages too.
-       */
 
+      int cloak_chance = 40;
 
-
-
+      cloak_chance += (get_psuedo_level(victim) - get_psuedo_level(ch));
 
       if( ( IS_AFFECTED( victim, AFF_CLOAK_REFLECTION ) )
-          && ( ch != victim ) && ( number_percent(  ) > chance ) )
+          && ( ch != victim ) && ( number_percent(  ) < cloak_chance ) )
       {
 
          act( "@@N$n's @@lc@@el@@ro@@ya@@ak@@N glows brightly as $N's spell hits it@@N!!", victim, NULL, ch, TO_ROOM );
@@ -1753,7 +1744,7 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
 
 
       if( ( IS_AFFECTED( victim, AFF_CLOAK_ABSORPTION ) )
-          && ( ch != victim ) && ( number_percent(  ) > chance ) )
+          && ( ch != victim ) && ( number_percent(  ) < cloak_chance ) )
       {
 
          act( "@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim, NULL, ch, TO_ROOM );

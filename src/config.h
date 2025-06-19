@@ -57,6 +57,10 @@
  * Adjust the pulse numbers to suit yourself.
  */
 
+#define MAX_CHARMIE		     3
+#define CHARMIE_STAT_BONUS	     1
+#define CHARMIE_TACT_BONUS	     1
+
 #define MAX_CLAN_EQ		     6   /* Number of clan eq items */
 #define MAX_COLOR		    16   /* eg look, prompt, shout */
 #define MAX_ANSI		    28   /* eg red, black, etc (was 11) */
@@ -1156,17 +1160,17 @@
 #define ITEM_TRIG_DESTROY	 65536 /* Trigger object that destroy after use */
 #define ITEM_NO_AUCTION		131072   /* Can't be auctioned */
 #define ITEM_MYTHIC        BIT_19
-#define ITEM_LEGENDARY		BIT_20
-#define ITEM_RARE			   1048576
-#define ITEM_VAMP          2097152 /* player must be a vampyre */
-#define ITEM_NOLOOT			4194304
-#define ITEM_NOSAC			8388608
-#define ITEM_UNIQUE			16777216
-#define ITEM_LIFESTEALER	BIT_26
-#define ITEM_SILVER			BIT_27
-#define ITEM_AUTO			   BIT_28
+#define ITEM_LEGENDARY	   BIT_20
+#define ITEM_RARE	   BIT_21
+#define ITEM_VAMP          BIT_22 /* player must be a vampyre */
+#define ITEM_NOLOOT	   BIT_23
+#define ITEM_NOSAC	   BIT_24
+#define ITEM_UNIQUE	   BIT_25
+#define ITEM_LIFESTEALER   BIT_26
+#define ITEM_SILVER	   BIT_27
+#define ITEM_AUTO          BIT_28
 #define ITEM_BUCKLER       BIT_29
-#define ITEM_WAND          BIT_30
+#define ITEM_EXTRA_WAND    BIT_30
 #define ITEM_FIST          BIT_31
 
 /* Class-restricted stuff dropped. */
@@ -1272,7 +1276,10 @@
 #define APPLY_SPELL_CRIT_MULT        29
 #define APPLY_CRIT                   30
 #define APPLY_CRIT_MULT              31
-
+#define APPLY_PARRY		     32
+#define APPLY_DODGE		     33
+#define APPLY_BLOCK		     34
+#define APPLY_PIERCE_AVOIDANCE	     35
 
 /*
  * Values for containers (value[1]).

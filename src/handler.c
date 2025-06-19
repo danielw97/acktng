@@ -518,6 +518,36 @@ int get_stat( CHAR_DATA *ch, int stat )
    return stat_val;
 }
 
+bool can_use_skill( CHAR_DATA *ch, char *skill)
+{
+   int sn = skill_lookup(skill), cnt;
+
+   if ( sn == -1 )
+   {
+      return FALSE;
+   }
+
+   for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+   {
+      if ( ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == MORTAL )
+         return TRUE;
+   }
+   for( cnt = 0; cnt < MAX_REMORT; cnt++ )
+   {
+      if ( ch->lvl2[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == REMORT )
+         return TRUE;
+   }
+
+/*
+      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+      {
+         if( ( ( ch->lvl2[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == REMORT ) )
+             && best < ch->lvl2[cnt] )
+            best = ch->lvl2[cnt];
+      }*/
+   return FALSE;
+}
+
 /*
  * Retrieve a character's carry capacity.
  */

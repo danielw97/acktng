@@ -94,8 +94,9 @@ We now have our own FTP site :) It allows public read, but no write as yet.
 time, including a new user help file there now!
 ~
 1 order charmies charmed~
-The number of charmed creatures you can control is based on your intelligence,
-and is supplemented (increased) if you have the battle tactics skill.
+The number of charmed creatures you can control is set by default to 3. Those
+with intelligence or wisdom over 21 receive a 1 bonus towards it, and is given
+an additional 1 bonus if you have the unit tactics skill.
 ~
 1 pkok~
 PKOK -player killing
@@ -1831,7 +1832,7 @@ Slave~
 ~
 ~
 3145869 0 0 S
-107 1
+108 1
 0 250 250
 ! 5 0 0 7 24078 0 2
 | 0 0 0 0 0 0 0
@@ -1842,7 +1843,7 @@ a slave~
 ~
 ~
 1 0 0 S
-108 1
+107 1
 0 250 250
 ! 5 0 0 7 24078 0 2
 | 0 0 0 0 0 0 0
@@ -1853,7 +1854,7 @@ girl daughter woman~
 ~
 ~
 3 8192 0 S
-110 2
+111 2
 0 300 300
 ! 5 0 0 7 24078 0 0
 | 0 0 0 0 0 0 0
@@ -1865,7 +1866,7 @@ boy man son~
 ~
 ~
 3145729 8320 0 S
-109 1
+110 1
 0 275 275
 ! 5 0 0 7 24286 0 8
 | 0 0 0 0 0 0 0
@@ -1898,7 +1899,7 @@ chicken~
 ~
 ~
 1 0 0 S
-104 1
+105 1
 0 100 100
 ! 5 0 0 7 18694 0 0
 | 0 0 0 0 0 0 0

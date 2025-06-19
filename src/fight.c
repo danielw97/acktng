@@ -588,7 +588,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
            chance = 75;
 
        if ( !IS_NPC(ch) && ch->pcdata->learned[gsn_martial_arts] > 0)
-           chance = ch->pcdata->learned[gsn_martial_arts]/2;
+           chance = 50;
 
        if (number_percent() < chance)
           dt = TYPE_MARTIAL;
@@ -666,6 +666,8 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       dam_mod = hr_damTable[ix];
    else
       dam_mod = MAX_DAM_MOD;
+
+   dam = dam * dam_mod;
    /*
     * Hit.
     * Calc damage.
@@ -732,11 +734,21 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
         dam += dam * 5 / 100;
    }
 
-   int critical_chance = get_crit( ch );
+   dam = swing(ch, victim, dam, dt);
 
+   bool stole_life = FALSE;
+   if( ( wield ) && ( dam > 0 ) && ( ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) ) )
+      stole_life = do_lifesteal(ch, victim, wield, FALSE, dam);
+   if ( !stole_life && dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
+      do_lifesteal(ch, victim, dualwield, TRUE, dam);
+
+}
+
+int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
+{
    bool critical = FALSE;
 
-   if (number_range(0,100) < critical_chance)
+   if (number_range(0,100) < get_crit( ch ))
    {
       int crit_mult = get_crit_mult(ch);
 
@@ -758,24 +770,21 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       skin_mods = race_table[victim->race].race_flags;
    else
       skin_mods = ( victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags );
+
    if( IS_SET( skin_mods, RACE_MOD_TOUGH_SKIN ) )
-      dam_mod -= .1;
-   else if( IS_SET( skin_mods, RACE_MOD_STONE_SKIN ) )
-      dam_mod -= .2;
-   else if( IS_SET( skin_mods, RACE_MOD_IRON_SKIN ) )
-      dam_mod -= .3;
+      dam = dam * 0.9;
 
-   dam *= dam_mod;
-   bool stole_life = FALSE;
-   if( ( wield ) && ( dam > 0 ) && ( ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) ) )
-      stole_life = do_lifesteal(ch, victim, wield, FALSE, dam);
-   if ( !stole_life && dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
-      do_lifesteal(ch, victim, dualwield, TRUE, dam);
+   if( IS_SET( skin_mods, RACE_MOD_STONE_SKIN ) )
+      dam = dam * 0.8;
 
-   do_damage( ch, victim, dam, dt, critical );
+   if( IS_SET( skin_mods, RACE_MOD_IRON_SKIN ) )
+      dam = dam * 0.7;
+
+   int return_val = do_damage( ch, victim, dam, dt, critical );
 
    tail_chain(  );
-   return;
+
+   return return_val;
 }
 
 
@@ -2918,6 +2927,9 @@ void dam_message( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, bool crit
       int foo;
 
       foo = sizeof( attack_table ) / sizeof( attack_table[0] );
+      if (dt < TYPE_HIT)
+         dt = TYPE_HIT;
+
       death_message( ch, victim, ( dt - TYPE_HIT ), foo );
    }
    return;

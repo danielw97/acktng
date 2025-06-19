@@ -1369,7 +1369,7 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
       return;
    }
 
-   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_WAND) && ch->pcdata->learned[gsn_equip_wand] < 1)
+   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_EXTRA_WAND) && ch->pcdata->learned[gsn_equip_wand] < 1)
    {
       send_to_char( "You cannot equip wands.\n\r", ch );
       return;
