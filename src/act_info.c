@@ -1845,18 +1845,18 @@ void do_score( CHAR_DATA * ch, char *argument )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@yalmost invincible!" );
 
 
-   sprintf( buf2, " @@WArmor Class: @@y%5d.   %s", GET_AC( ch ), buf );
-   sprintf( buf, "@@c|%s @@c|\n\r", center_text( buf2, 62 ) );
-   send_to_char( buf, ch );
+   sprintf(buf2, " @@WArmor Class: @@y%5d.   %s", GET_AC(ch), buf);
+   sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62) );
+   send_to_char(buf, ch);
 
-   sprintf( buf, " @@WHitroll: @@y%-5d @@WDamroll: @@y%-5d @@WCrit: @@y%-5d @@WMult: @@y%-5d", GET_HITROLL( ch ), GET_DAMROLL( ch ), get_crit(ch), get_crit_mult(ch) );
-   sprintf( buf2, "@@c|%s @@c|\n\r", center_text( buf, 62 ) );
-   send_to_char( buf2, ch );
+   sprintf(buf, " @@WHitroll: @@y%-5d @@WDamroll: @@y%-5d @@WCrit: @@y%-5d @@WMult: @@y%-5d", GET_HITROLL(ch), GET_DAMROLL(ch), get_crit(ch), get_crit_mult(ch) );
+   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62) );
+   send_to_char(buf2, ch );
 
-   sprintf( buf, " @@WSpellpower: @@y%-5d @@WSpell Crit: @@y%-5d @@WSpell Crit Mult: @@y%-5d", get_spellpower( ch ), get_spell_crit(ch), get_spell_crit_mult(ch) );
-   sprintf( buf2, "@@c|%s @@c|\n\r", center_text( buf, 62 ) );
+   sprintf(buf, " @@WSpellpower: @@y%-5d @@WSpell Crit: @@y%-5d @@WSpell Crit Mult: @@y%-5d", get_spellpower(ch), get_spell_crit(ch), get_spell_crit_mult(ch) );
+   sprintf(buf2, "@@c|%s @@c|\n\r", center_text( buf, 62 ) );
    send_to_char( buf2, ch );
-   sprintf( buf, "@@WParry: @@y%-3d @@WDodge: @@y%-3d@@W Block: @@y%-3d@@W Damcap: @@y%-5d", get_parry(ch), get_dodge(ch), get_block(ch), get_damcap(ch) );
+   sprintf(buf, "@@WParry: @@y%-3d @@WDodge: @@y%-3d@@W Block: @@y%-3d@@W Damcap: @@y%-5d", get_parry(ch), get_dodge(ch), get_block(ch), get_damcap(ch) );
    sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62) );
    send_to_char(buf2, ch);
 

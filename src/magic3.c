@@ -1811,7 +1811,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
 
          switch ( i )
          {
-            case STANCE_WARRIOR:
+            case STANCE_ADVENTURER:
                sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_CASTER:
@@ -1872,6 +1872,15 @@ void do_stance( CHAR_DATA * ch, char *argument )
             case STANCE_HEALER:
                if( ch->lvl[INDEX_CLE] > 60)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
+            case STANCE_WARRIOR:
+               if( ch->lvl[INDEX_WAR] > 60)
+                  sprintf( cat_buf, "%s\n\r", stance_app[i].name );
+            case STANCE_THIEF:
+               if( ch->lvl[INDEX_THI] > 60)
+                  sprintf( cat_buf, "%s\n\r", stance_app[i].name );
+            case STANCE_PUGILIST:
+               if( ch->lvl[INDEX_PUG] > 60)
+                  sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
 
          }
@@ -1900,7 +1909,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
    {
       switch ( i )
       {
-         case STANCE_WARRIOR:
+         case STANCE_ADVENTURER:
          {
             legal_stance = TRUE;
             break;
@@ -2019,8 +2028,24 @@ void do_stance( CHAR_DATA * ch, char *argument )
                legal_stance = TRUE;
                break;
             }
-
-
+         case STANCE_WARRIOR:
+            if (ch->lvl[INDEX_WAR] > 60)
+            {
+               legal_stance = TRUE;
+               break;
+            }
+         case STANCE_THIEF:
+            if (ch->lvl[INDEX_THI] > 60)
+            {
+               legal_stance = TRUE;
+               break;
+            }
+         case STANCE_PUGILIST:
+            if (ch->lvl[INDEX_PUG] > 60)
+            {
+               legal_stance = TRUE;
+               break;
+            }
       }
 
       if( legal_stance )

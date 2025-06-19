@@ -498,7 +498,10 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
    {"Snake", 7, -3, -2, 0, 4},
    {"Wizard", 30, -5, -5, 0, 0},
    {"Magi", 40, -10, -10, 0, 0},
-   {"Healer", 0, 0, 0, 1, 0}
+   {"Healer", 0, 0, 0, 1, 0},
+   {"Warrior", 0, 1, 0, 0, 0},
+   {"Thief", -1, 0, 1, 0, 0},
+   {"Pugilist", 0, 0, 0, 0, 1}
 };
 
 

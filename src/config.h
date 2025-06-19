@@ -316,7 +316,7 @@
 
 
 
-#define STANCE_WARRIOR		0
+#define STANCE_ADVENTURER	0
 #define STANCE_CASTER		1
 #define STANCE_AMBUSH		2
 #define STANCE_AC_BEST		3
@@ -330,7 +330,10 @@
 #define STANCE_WIZARD         11
 #define STANCE_MAGI          12
 #define STANCE_HEALER		13
-#define MAX_STANCE		14
+#define STANCE_WARRIOR     14
+#define STANCE_THIEF       15
+#define STANCE_PUGILIST    16
+#define MAX_STANCE		   17
 
 
 #define C_SHOW_NEVER    -1
