@@ -140,7 +140,6 @@ void violence_update( void )
          }
          if (paf->location == APPLY_DOT && ch->hit > 0)
          {
-            // int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
             do_damage(ch, ch, paf->modifier, paf->type, FALSE);
          }
       }
@@ -895,8 +894,6 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
          if( check_avoidance( ch, victim ) )
             return -1;
       }
-      if( dt != -1 )
-         dam_message( ch, victim, dam, dt, critical );
    }
 
 /* for now, can only have one shield up, or alternatively, only the first
@@ -920,7 +917,6 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
       dam = dam - dam * ( victim->first_shield->percent / 100 );
       if( victim->first_shield->harmfull == TRUE )
       {
-
          ch->hit = UMAX( 10, ( ch->hit - victim->first_shield->attack_dam ) );
       }
       act( buf1, victim, NULL, ch, TO_NOTVICT );
@@ -942,6 +938,8 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
     * Hurt the victim.
     * Inform the victim of his new state.
     */
+   if( dt != -1 )
+      dam_message( ch, victim, dam, dt, critical );
    victim->hit -= dam;
    if( !IS_NPC( victim ) )
       check_adrenaline( victim, dam );
@@ -950,10 +948,7 @@ int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
       do_rage( victim, "FORCE" );
 
 
-   if( ( IS_AFFECTED( victim, AFF_CLOAK_FLAMING ) ) && ( ch != victim )
-       /*
-        * && ( dt == TYPE_HIT ) 
-        */  )
+   if( ( IS_AFFECTED( victim, AFF_CLOAK_FLAMING ) ) && ( ch != victim ) )
    {
 
 
