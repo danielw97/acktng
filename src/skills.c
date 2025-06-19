@@ -89,28 +89,28 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (!backstab)
    {
-      if( !IS_AWAKE( victim ) )
+      int chance = 60;
+
+      if( !IS_AWAKE(victim) )
          chance += 75;
 
-      if( IS_AFFECTED( victim, AFF_SNEAK ) || item_has_apply( victim, ITEM_APPLY_SNEAK ) )
-         chance -= 10;
-
-      if( IS_AFFECTED( ch, AFF_SNEAK ) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
+      if( IS_AFFECTED(ch, AFF_SNEAK) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
          chance += 10;
+         
+      if(IS_AFFECTED(ch, AFF_HIDE) || item_has_apply( ch, ITEM_APPLY_HIDE ) )
+         if (!IS_AFFECTED(victim, AFF_DETECT_HIDDEN))
+            chance += 10;
 
       if( IS_AFFECTED( ch, AFF_INVISIBLE ) || item_has_apply( ch, ITEM_APPLY_INV ) )
          if (!IS_AFFECTED( victim, AFF_DETECT_INVIS ) )
             chance += 20;
-
-      if( IS_AFFECTED( victim, AFF_INVISIBLE ) || item_has_apply( victim, ITEM_APPLY_INV ) )
-         chance -= 10;
 
       if( get_psuedo_level( ch ) >= get_psuedo_level( victim ) )
          chance += 10;
       else
          chance -= 10;
 
-      if( chance < number_percent(  ) )
+      if( chance > number_percent(  ) )
       {
          /*
          * Miss 
