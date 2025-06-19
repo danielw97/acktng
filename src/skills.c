@@ -89,7 +89,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (!backstab)
    {
-      int chance = 60;
+      int chance = 80;
 
       if( !IS_AWAKE(victim) )
          chance += 75;
@@ -118,6 +118,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
          act( "$n tries to circle $N, but misses!", ch, NULL, victim, TO_NOTVICT );
          act( "You try to circle $N, but miss!", ch, NULL, victim, TO_CHAR );
          act( "$N tries to circle you, but misses!", victim, NULL, ch, TO_CHAR );
+         WAIT_STATE(ch, skill_table[gsn_circle].beats);
          return;
       }
    }
@@ -183,7 +184,10 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    else
       dam = swing(ch, victim, dam, gsn_circle);
 
-   WAIT_STATE(ch, skill_table[gsn_backstab].beats);
+   if (backstab)
+      WAIT_STATE(ch, skill_table[gsn_backstab].beats);
+   else
+      WAIT_STATE(ch, skill_table[gsn_circle].beats);
    return;
 }
 
