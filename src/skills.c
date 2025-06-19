@@ -67,6 +67,10 @@ void do_circle( CHAR_DATA * ch, char *argument )
 
 void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 {
+   int dam;
+   int chance;
+   int mult;
+
    if( victim == NULL )
    {
       send_to_char( "They aren't here.\n\r", ch );
@@ -142,8 +146,11 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    /*
     * Work out multiplier 
     */
-   mult = 1 + ( get_psuedo_level(ch) >= 20 ) + ( get_psuedo_level(ch) >= 50 ) + ( get_psuedo_level(ch) >= 90 ) + ( get_psuedo_level(ch) >= 120 );
-
+   mult = 1;
+   mult += (ch->lvl[CLASS_THI]/33);
+   mult += (ch->lvl2[CLASS_ASS]/33);
+   mult += (ch->lvl2[CLASS_WLK]/33);
+   
    /*
     * Work out damage 
     */
