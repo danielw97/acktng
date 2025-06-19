@@ -131,11 +131,17 @@ void violence_update( void )
 
       }
 
+      // Hots and dots
       for( paf = ch->first_affect; paf != NULL; paf = paf->next )
       {
          if (paf->location == APPLY_HOT && ch->hit < ch->max_hit)
          {
             heal_character(ch, ch, paf->modifier, paf->type, TRUE);
+         }
+         if (paf->location == APPLY_DOT && ch->hit > 0)
+         {
+            // int do_damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
+            do_damage(ch, ch, paf->modifier, paf->type, FALSE);
          }
       }
 
@@ -146,7 +152,6 @@ void violence_update( void )
          ch->hit =
             UMAX( 10, ch->hit - number_range( get_psuedo_level( ch ) * 5 / 1000, get_psuedo_level( ch ) * 10 / 1000 ) );
       }
-
 /*
  *  for when wolves can't cast normal spells, 
  *  increase regen rate mucho to compensate.  
