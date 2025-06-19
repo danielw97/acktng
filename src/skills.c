@@ -149,9 +149,9 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
     */
    dam = number_range( obj->value[1], obj->value[2] );
    dam += number_range( get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2 ) + GET_DAMROLL( ch ) / 2;
-   dam += dam * ch->lvl[CLASS_THI] / 100;
-   dam += dam * ch->lvl2[CLASS_ASS] / 75;
-   dam += dam * ch->lvl2[CLASS_WLK] / 100;
+   dam += dam * ch->lvl[CLASS_THI] / 50;
+   dam += dam * ch->lvl2[CLASS_ASS] / 50;
+   dam += dam * ch->lvl2[CLASS_WLK] / 50 * .75;
    check_killer( ch, victim );
 
    if(backstab && IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
