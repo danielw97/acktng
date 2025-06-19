@@ -1852,6 +1852,14 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_KNI;
       remort_physical++;
    }
+   if (ch->lvl2[CLASS_ASS] > 0)
+   {
+      if (index1 == -1)
+         index1 = CLASS_ASS;
+      else if (index2 == -1)
+         index2 = CLASS_ASS;
+      remort_physical++;
+   }
    if (ch->lvl2[CLASS_MON] > 0)
    {
       if (index1 == -1)
