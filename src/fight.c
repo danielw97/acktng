@@ -495,6 +495,10 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       }
    }
 
+   char buf[MAX_STRING_LENGTH];
+   sprintf(buf, "Hits: %d\r\n", hits);
+   send_to_char(buf, ch);
+
    for(int i = 0; i < hits; i++)
    {
       chance = 80 - (i*10);
