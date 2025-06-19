@@ -1925,27 +1925,27 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AC_BEST:
-               if(remort_physical > 1)
+               if(remort_physical > 0)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HR_BEST:
-               if(remort_physical > 1)
+               if(remort_physical > 0)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_DR_BEST:
-               if(remort_physical > 1)
+               if(remort_physical > 0)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AC_WORST:
-               if(remort_physical > 0)
+               if(remort_physical > 1)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HR_WORST:
-               if(remort_physical > 0)
+               if(remort_physical > 1)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_DR_WORST:
-               if(remort_physical > 0)
+               if(remort_physical > 1)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_SUPER_FIGHTER:
@@ -2043,7 +2043,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             }
             break;
          case STANCE_AC_BEST:
-            if (remort_physical > 1)
+            if (remort_physical > 0)
             {
                legal_stance = TRUE;
                break;
@@ -2051,7 +2051,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_HR_BEST:
-            if (remort_physical > 1)
+            if (remort_physical > 0)
             {
                legal_stance = TRUE;
                break;
@@ -2059,7 +2059,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_DR_BEST:
-            if (remort_physical > 1)
+            if (remort_physical > 0)
             {
                legal_stance = TRUE;
                break;
@@ -2067,7 +2067,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_AC_WORST:
-            if (remort_physical > 0)
+            if (remort_physical > 1)
             {
                legal_stance = TRUE;
                break;
@@ -2075,7 +2075,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_HR_WORST:
-            if (remort_physical > 0)
+            if (remort_physical > 1)
             {
                legal_stance = TRUE;
                break;
@@ -2083,7 +2083,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_DR_WORST:
-            if (remort_physical > 0)
+            if (remort_physical > 1)
             {
                legal_stance = TRUE;
                break;
