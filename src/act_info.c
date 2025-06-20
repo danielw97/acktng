@@ -44,6 +44,9 @@
 #ifndef DEC_MONEY_H
 #include "money.h"
 #endif
+#ifndef CONFIG_H
+#include "config.h"
+#endif
 
 extern bool deathmatch;
 
