@@ -545,13 +545,11 @@ bool can_use_skill( CHAR_DATA *ch, char *skill)
          return TRUE;
    }
 
-/*
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-      {
-         if( ( ( ch->lvl2[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == REMORT ) )
-             && best < ch->lvl2[cnt] )
-            best = ch->lvl2[cnt];
-      }*/
+   for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+   {
+      if( ( ( ch->lvl3[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == ADEPT ) ) )
+         return TRUE;
+   }
 
    send_to_char("You don't know how to do that\n\r", ch);
    return FALSE;

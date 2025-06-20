@@ -2148,7 +2148,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     ADEPT, NORM,
-    "cloak:adept", {1, 182, 182, 182, 182, 182},
+    "cloak:adept", {1, 1, 1, 1, 1, 1},
     spell_cloak_adept, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 226 ), 500, 12,
     "", "@@NThe @@Wcloak@@N around your body fades.",
