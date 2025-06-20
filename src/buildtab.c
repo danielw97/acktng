@@ -840,7 +840,6 @@ const struct lookup_type tab_wear_loc[] = {
    {"legs", 26, 20},
    {"feet", 27, 40},
    {"hooves", 28, 80},
-
    {"max_wear", 29, 0},
    {NULL, 0}
 };

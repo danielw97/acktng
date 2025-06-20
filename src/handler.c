@@ -567,29 +567,37 @@ int get_stat( CHAR_DATA *ch, int stat )
 
 bool can_use_skill( CHAR_DATA *ch, char *skill, bool message)
 {
-   int sn = skill_lookup(skill), cnt;
+   int gsn = skill_lookup(skill), cnt;
 
-   if ( sn == -1 )
+   if ( gsn == -1 )
    {
       return FALSE;
    }
 
+   if (IS_NPC(ch))
+   {
+      return TRUE;
+   }
+
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
-      if ( ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == MORTAL )
+      if ( ch->lvl[cnt] >= skill_table[gsn].skill_level[cnt] && skill_table[gsn].flag1 == MORTAL )
          return TRUE;
    }
    for( cnt = 0; cnt < MAX_REMORT; cnt++ )
    {
-      if ( ch->remort[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == REMORT )
+      if ( ch->remort[cnt] >= skill_table[gsn].skill_level[cnt] && skill_table[gsn].flag1 == REMORT )
          return TRUE;
    }
 
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
-      if( ch->adept[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == ADEPT )
+      if( ch->adept[cnt] >= skill_table[gsn].skill_level[cnt] && skill_table[gsn].flag1 == ADEPT )
          return TRUE;
    }
+
+   if (ch->pcdata->learned[gsn] > 0)
+      return TRUE;
 
    if (message)
       send_to_char("You don't know how to do that\n\r", ch);

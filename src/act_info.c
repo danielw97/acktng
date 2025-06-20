@@ -355,86 +355,24 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
 
    strcat(sendBuf, "\r\n");
 
-   strcat(sendBuf, "Wear slots: ");
+   strcat(sendBuf, "Nonstandard wear slots: ");
 
-   for(int j = 0; j < MAX_ITEM_BIT; j++)
+   for(int j = 0; j < MAX_WEAR; j++)
    {
-      if (race_table[i].wear_locs[j] == TRUE)
+      if (race_table[i].wear_locs[j] == TRUE && race_table[0].wear_locs[j] == FALSE)
       {
-         switch ( j )
-         {
-            case WEAR_FINGER_L:
-               strcat(sendBuf, " finger");
-               break;
-            case WEAR_NECK_1:
-               strcat(sendBuf, " neck");
-               break;
-            case WEAR_BODY:
-               strcat(sendBuf, " body");
-               break;
-            case WEAR_HEAD:
-               strcat(sendBuf, " head");
-               break;
-            case WEAR_LEGS:
-               strcat(sendBuf, " legs");
-               break;
-            case WEAR_FEET:
-               strcat(sendBuf, " feet");
-               break;
-            case WEAR_HANDS:
-               strcat(sendBuf, " hands");
-               break;
-            case WEAR_ARMS:
-               strcat(sendBuf, " arms");
-               break;
-            case WEAR_TAIL:
-               strcat(sendBuf, " tail");
-               break;
-            case WEAR_ABOUT:
-               strcat(sendBuf, " about");
-               break;
-            case WEAR_WAIST:
-               strcat(sendBuf, " waist");
-               break;
-            case WEAR_WRIST_L:
-               strcat(sendBuf, " wrist");
-               break;
-            case WEAR_HORNS:
-               strcat(sendBuf, " horns");
-               break;
-            case WEAR_BEAK:
-               strcat(sendBuf, " beak");
-               break;
-            case WEAR_FACE:
-               strcat(sendBuf, " face");
-               break;
-            case WEAR_EAR_L:
-               strcat(sendBuf, " ear");
-               break;
-            case WEAR_HOOVES:
-               strcat(sendBuf, " hooves");
-               break;
-            case WEAR_AURA:
-               strcat(sendBuf, " aura");
-               break;
-            case WEAR_HALO:
-               strcat(sendBuf, " halo");
-               break;
-            case WEAR_WINGS:
-               strcat(sendBuf, " wings");
-               break;
-            case WEAR_SHOULDERS:
-               strcat(sendBuf, " shoulders");
-               break;
-            case WEAR_CLAWS:
-               strcat(sendBuf, " claws");
-               break;
-            case WEAR_HOLD_HAND_L:
-               strcat(sendBuf, " hold");
-               break;
-            default:
-               break;
-         }
+         if (j == 3)
+            strcat(sendBuf, "horns ");
+         if (j == 6)
+            strcat(sendBuf, "beak ");
+         if (j == 11)
+            strcat(sendBuf, "wings ");
+         if (j == 19)
+            strcat(sendBuf, "claws ");
+         if (j == 25)
+            strcat(sendBuf, "tail ");
+         if (j == 28)
+            strcat(sendBuf, "hooves ");
       }
    }
 
@@ -5242,15 +5180,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
       }
    }
 
-   if( !str_prefix( "ADEPT", argument ) )
-   {
-      if( ( ch->adept_level < 0 ) && !allow_adept )
-         return;
-
-      any = TRUE;
-      adept = TRUE;
-   }
-
    if( !str_prefix( "VAMPYRE", argument ) )
    {
       if( IS_VAMP( ch ) )
@@ -5384,7 +5313,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       send_to_char( "@@NYou have reached the epitome of Rank in the ways of the @@eKindred@@N.\n\r", ch );
       return;
    }
-   if( ( adept ) && ( ch->adept[c] < 20 ) )
+   if( ( adept ) && ( ch->adept[c] < MAX_ADEPT ) )
    {
       c = ADVANCE_ADEPT;
       send_to_char( "@@WYou have reached another step on the stairway to Wisdom!!!@@N\n\r", ch );
