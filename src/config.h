@@ -88,6 +88,7 @@
 #define LEVEL_IMMORTAL             (MAX_LEVEL - 3)
 #define MAX_MORTAL		    (MAX_LEVEL - 5)
 #define MAX_MOB_LEVEL		    171
+#define MAX_ADEPT         20
 #define MAX_VAMP_LEVEL              20
 #define MAX_WOLF_LEVEL		    20
 #define ADVANCE_VAMP                16
