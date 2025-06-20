@@ -1334,6 +1334,9 @@ bool do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual,
    if (dual)
       chance /= 2;
 
+   /* Due to melee damage nerf */
+   potency *= 4;
+
    if ( number_range( 0, 99 ) < chance )
    {
       int ls = dam * potency / 100;

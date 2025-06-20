@@ -4234,6 +4234,14 @@ Avoidance, in total, is capped to 75%. This is a value that is a combined
  Note that for every 2 levels above the victim, each avoidance is reduced by
 1%.
 ~
+0 extra extra_attacks extraattacks autoattack~
+In TNG, attacks are no longer gained from stats. Rather, attacks are gained
+from class levels.
+ If you have levels in a physical-based remort class, that will give you one
+extra attack. If your primary class is 10 and a physical class, you will
+receive an additional extra attack. Secondary class at 20. Tertiary class at
+40. 4th class at 80.
+~
 0 $~
 #ROOMS
 #32766

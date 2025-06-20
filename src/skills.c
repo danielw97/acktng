@@ -2,6 +2,7 @@
 
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 bool do_poison(CHAR_DATA *ch, char *argument, int gsn);
+bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 
 void do_backstab( CHAR_DATA * ch, char *argument )
 {
@@ -55,8 +56,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
 
    if( arg[0] == '\0' )
    {
-      send_to_char( "Circle whom?\n\r", ch );
-      return;
+      strcpy(arg, "enemy");
    }
 
    backstab(ch, get_char_room(ch, arg), FALSE);
@@ -84,32 +84,13 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       return;
    }
 
-   if (!backstab)
+   if (!backstab && !can_hit_skill(victim, ch, gsn_circle))
    {
-      int chance = 60;
-
-      if( !IS_AWAKE(victim) )
-         chance += 75;
-
-      if( IS_AFFECTED(ch, AFF_SNEAK) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
-         chance += 10;
-         
-      if (!can_see(victim,ch))
-         chance += 20;
-
-      chance += get_psuedo_level( ch ) - get_psuedo_level( victim );
-
-      if( chance < number_percent(  ) )
-      {
-         /*
-         * Miss 
-         */
-         act( "$n tries to circle $N, but misses!", ch, NULL, victim, TO_NOTVICT );
-         act( "You try to circle $N, but miss!", ch, NULL, victim, TO_CHAR );
-         act( "$N tries to circle you, but misses!", victim, NULL, ch, TO_CHAR );
-         WAIT_STATE(ch, skill_table[gsn_circle].beats);
-         return;
-      }
+      act( "$n tries to circle $N, but misses!", ch, NULL, victim, TO_NOTVICT );
+      act( "You try to circle $N, but miss!", ch, NULL, victim, TO_CHAR );
+      act( "$N tries to circle you, but misses!", victim, NULL, ch, TO_CHAR );
+      WAIT_STATE(ch, skill_table[gsn_circle].beats);
+      return;
    }
 
    if( victim == ch )
@@ -139,9 +120,9 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
     */
    dam = number_range( obj->value[1], obj->value[2] );
    dam += number_range( get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2 ) + GET_DAMROLL( ch ) / 2;
-   dam += dam * ch->lvl[CLASS_THI] / 50;
-   dam += dam * ch->lvl2[CLASS_ASS] / 50;
-   dam += dam * ch->lvl2[CLASS_WLK] / 50 * .75;
+   dam += dam * ch->lvl[CLASS_THI] / 100;
+   dam += dam * ch->lvl2[CLASS_ASS] / 100;
+   dam += dam * ch->lvl2[CLASS_WLK] / 100 * .75;
    check_killer( ch, victim );
 
    if(backstab && IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
@@ -171,7 +152,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    if (backstab)
       swing(ch, victim, dam, gsn_backstab);
    else
-      swing(ch, victim, dam, gsn_circle);
+      swing(ch, victim, dam*0.8, gsn_circle);
 
    if (backstab)
       WAIT_STATE(ch, skill_table[gsn_backstab].beats);
@@ -180,25 +161,25 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (is_affected( victim, skill_lookup( "poison:quinine" )))
    {
-      sprintf( actbuf, "$n screams as the quinine in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the quinine in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
-      sprintf( actbuf, "$n screams as the quinine in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the quinine in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the quinine in your veins is consumed!");
-      act( actbuf, victim, obj, ch, TO_CHAR );
-      swing(ch, victim, dam, gsn_poison_quinine);
+      act( actbuf, ch, obj, victim, TO_VICT );
+      swing(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_quinine);
       affect_strip( victim, skill_lookup( "poison:quinine" ) );
    }
 
    if (is_affected( victim, skill_lookup( "poison:arsenic" )))
    {
-      sprintf( actbuf, "$n screams as the arsenic in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the arsenic in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
-      sprintf( actbuf, "$n screams as the arsenic in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the arsenic in their veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the arsenic in your veins is consumed!");
-      act( actbuf, victim, obj, ch, TO_CHAR );
-      swing(ch, victim, dam, gsn_poison_arsenic);
+      act( actbuf, ch, obj, victim, TO_VICT );
+      swing(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_arsenic);
       affect_strip( victim, skill_lookup( "poison:arsenic" ) );
    }
 }
@@ -242,6 +223,12 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    if (victim == NULL)
    {
       send_to_char("Poison whom?\n\r", ch);
+      return;
+   }
+
+   if (is_affected(ch, skill_table[gsn].name) )
+   {
+      send_to_char("Your victim is already inflicted with that.\n\r", ch);
       return;
    }
 
@@ -771,21 +758,26 @@ void do_beserk( CHAR_DATA * ch, char *argument )
 
 void do_punch( CHAR_DATA * ch, char *argument )
 {
+   war_attack(ch, argument, gsn_punch);
+}
+
+void war_attack( CHAR_DATA * ch, char *argument, int gsn )
+{
    CHAR_DATA *victim;
+   char arg[MAX_INPUT_LENGTH];
+   char actbuf[MAX_STRING_LENGTH];
    int dam;
-   bool prime;
    int chance;
 
-   prime = FALSE;
+   one_argument( argument, arg );
 
-
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_punch] == 0 )
+   if( arg[0] == '\0' )
    {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
-      return;
+      strcpy(arg, "enemy");
    }
 
-
+   if( !can_use_skill(ch, skill_table[gsn].name) )
+      return;
 
    if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
    {
@@ -793,135 +785,55 @@ void do_punch( CHAR_DATA * ch, char *argument )
       return;
    }
 
-
    if( victim == NULL )
       victim = ch->fighting;
 
-   if( !IS_NPC( ch ) && ch->pcdata->order[0] == 3 )
-      prime = TRUE;
-
    if( IS_NPC( ch ) )
-      dam = number_range( ch->level / 3, ch->level / 2 );
+      dam = number_range( ch->level / 3, ch->level * 2 );
    else
-      dam = number_range( ch->lvl[3] / 2, ch->lvl[3] * ( prime ? 2 : 1 ) );
+      dam = number_range( ch->lvl[CLASS_WAR], ch->lvl[CLASS_WAR] * 2 );
 
-   chance = ( IS_NPC( ch ) ? 50 : ch->pcdata->learned[gsn_punch] / 2 );
+   dam += get_damroll(ch)/2;
 
-   chance += ( ch->lvl[3] - victim->level );
+   dam += dam * ch->lvl[CLASS_WAR] / 100;
 
+   if (ch->lvl2[CLASS_KNI] > 0)
+      dam += dam * ch->lvl2[CLASS_KNI] / 100;
+   else if (ch->lvl2[CLASS_SWO] > 0)
+      dam += dam * ch->lvl2[CLASS_SWO] / 100;
+   else if (ch->lvl2[CLASS_MON] > 0)
+      dam += dam * ch->lvl2[CLASS_MON] / 100;
 
-   WAIT_STATE( ch, skill_table[gsn_punch].beats );
+   WAIT_STATE( ch, skill_table[gsn].beats );
 
    check_killer( ch, victim );
-   if( number_percent(  ) < chance )
+   if( can_hit_skill(ch, victim, gsn ) )
    {
-         /*
-          * HIT! 
-          */
-         char actbuf[MSL];
-         sprintf( actbuf, "$n punches $N!! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_NOTVICT );
-         sprintf( actbuf, "$N punches you really hard!! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, victim, NULL, ch, TO_CHAR );
-         sprintf( actbuf, "You punch $N!! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_CHAR );
+      char actbuf[MSL];
+      sprintf( actbuf, "$n %ss $N!!", skill_table[gsn].name, dam );
+      act( actbuf, ch, NULL, victim, TO_NOTVICT );
+      sprintf( actbuf, "$N %ss you really hard!!", skill_table[gsn].name, dam );
+      act( actbuf, ch, NULL, victim, TO_VICT );
+      sprintf( actbuf, "You %s $N!!", skill_table[gsn].name, dam );
+      act( actbuf, ch, NULL, victim, TO_CHAR );
 
-      damage( ch, victim, dam, -1 );
+      swing(ch, victim, dam, gsn);
+      combo(ch, victim, gsn);
    }
    else
    {
-      /*
-       * MISS 
-       */
-      act( "$n tries to punch $N, but misses!", ch, NULL, victim, TO_NOTVICT );
-      act( "$N tries to punch you, but misses!", victim, NULL, ch, TO_CHAR );
-      act( "You try to punch $N, but miss!", ch, NULL, victim, TO_CHAR );
-      damage( ch, victim, 0, -1 );
+      sprintf( actbuf, "$n tries to %s $N, but misses!", skill_table[gsn].name );
+      act( actbuf, ch, NULL, victim, TO_NOTVICT );
+      sprintf( actbuf, "$N tries to %s you, but misses!", skill_table[gsn].name );
+      act( actbuf, ch, victim, NULL, TO_VICT );
+      sprintf( actbuf, "You try to %s $N, but miss!", skill_table[gsn].name );
+      act( actbuf, ch, NULL, victim, TO_CHAR );
    }
-   return;
 }
 
 void do_headbutt( CHAR_DATA * ch, char *argument )
 {
-   CHAR_DATA *victim;
-   int dam;
-   bool prime;
-   int chance;
-
-   prime = FALSE;
-
-
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_headbutt] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
-      return;
-   }
-
-
-
-   if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
-   {
-      send_to_char( "No such victim!\n\r", ch );
-      return;
-   }
-
-
-   if( victim == NULL )
-      victim = ch->fighting;
-
-   if( victim == ch )
-   {
-      send_to_char( "You can't reach!\n\r", ch );
-      return;
-   }
-
-   if( !IS_NPC( ch ) && ch->pcdata->order[0] == 3 )
-      prime = TRUE;
-
-   if( IS_NPC( ch ) )
-      dam = number_range( ch->level / 3, ch->level / 2 );
-   else
-      dam = number_range( ch->lvl[3] / 2, ch->lvl[3] * ( prime ? 2 : 1 ) );
-
-   chance = ( IS_NPC( ch ) ? 50 : ch->pcdata->learned[gsn_headbutt] / 2 );
-
-   chance += ( ch->lvl[3] - victim->level );
-
-
-   WAIT_STATE( ch, skill_table[gsn_headbutt].beats );
-
-
-   if( number_percent(  ) < chance )
-   {
-      /*
-       * HIT 
-       */
-      check_killer( ch, victim );
-         /*
-          * HIT! 
-          */
-         char actbuf[MSL];
-         sprintf( actbuf, "$n headbutts $N in the face! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_NOTVICT );
-         sprintf( actbuf, "$N headbutts you in the face! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, victim, NULL, ch, TO_CHAR );
-         sprintf( actbuf, "You headbutt $N in the face! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_CHAR );
-
-      damage( ch, victim, ( dam * 4 ) / 5, -1 );
-   }
-   else
-   {
-      /*
-       * MISS 
-       */
-      check_killer( ch, victim );
-      act( "$n tries to headbutt $N, but misses!", ch, NULL, victim, TO_NOTVICT );
-      act( "$N tries to headbutt you, but misses!", victim, NULL, ch, TO_CHAR );
-      act( "You try to headbutt $N, but miss!", ch, NULL, victim, TO_CHAR );
-      damage( ch, victim, 0, -1 );
-   }
-   return;
+   war_attack(ch, argument, gsn_headbutt);
 }
 
 void do_charge( CHAR_DATA * ch, char *argument )
@@ -1012,82 +924,7 @@ void do_charge( CHAR_DATA * ch, char *argument )
 
 void do_kick( CHAR_DATA * ch, char *argument )
 {
-
-   CHAR_DATA *victim;
-   int dam;
-   bool prime;
-   int chance;
-
-   prime = FALSE;
-
-
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_kick] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
-      return;
-   }
-
-   if( ch->in_room->vnum == ROOM_VNUM_JAIL )
-   {
-      send_to_char( "Isn't jail punishment enough for you?", ch );
-      return;
-   }
-
-   if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
-   {
-      send_to_char( "No such victim!\n\r", ch );
-      return;
-   }
-
-
-   if( victim == NULL )
-      victim = ch->fighting;
-
-   if( !IS_NPC( ch ) && ch->pcdata->order[0] == 3 )
-      prime = TRUE;
-
-   if( IS_NPC( ch ) )
-      dam = number_range( ch->level / 3, ch->level / 2 );
-   else
-      dam = number_range( ch->lvl[3] / 2, ch->lvl[3] * ( prime ? 2 : 1 ) );
-
-   chance = ( IS_NPC( ch ) ? 50 : ch->pcdata->learned[gsn_kick] / 2 );
-
-   chance += ( ch->lvl[3] - ( victim->level + 5 ) );
-
-
-   WAIT_STATE( ch, skill_table[gsn_kick].beats );
-
-   check_killer( ch, victim );
-   if( number_percent(  ) < chance )
-   {
-      /*
-       * HIT 
-       */
-         /*
-          * HIT! 
-          */
-         char actbuf[MSL];
-         sprintf( actbuf, "$n kicks $N really hard! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_NOTVICT );
-         sprintf( actbuf, "$N kicks you really hard! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, victim, NULL, ch, TO_CHAR );
-         sprintf( actbuf, "You kick $N really hard! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_CHAR );
-
-      damage( ch, victim, dam, -1 );
-   }
-   else
-   {
-      /*
-       * MISS 
-       */
-      act( "$n tries to kick $N, but misses!", ch, NULL, victim, TO_NOTVICT );
-      act( "$N tries to kick you, but misses!", victim, NULL, ch, TO_CHAR );
-      act( "You try to kick $N, but miss!", ch, NULL, victim, TO_CHAR );
-      damage( ch, victim, 0, -1 );
-   }
-   return;
+   war_attack(ch, argument, gsn_kick);
 }
 
 void do_warcry( CHAR_DATA * ch, char *argument )
@@ -1144,80 +981,7 @@ void do_warcry( CHAR_DATA * ch, char *argument )
 
 void do_knee( CHAR_DATA * ch, char *argument )
 {
-   CHAR_DATA *victim;
-   int dam;
-   bool prime;
-   int chance;
-
-   prime = FALSE;
-
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_knee] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
-      return;
-   }
-
-   if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
-   {
-      send_to_char( "No such victim!\n\r", ch );
-      return;
-   }
-
-   if( victim == NULL )
-      victim = ch->fighting;
-
-   if( IS_NPC( victim ) && IS_SET( victim->act, ACT_NO_BODY ) )
-   {
-      act( "$N doesn't have a definable body to knee!", ch, NULL, victim, TO_CHAR );
-      return;
-   }
-
-   if( !IS_NPC( ch ) && ch->pcdata->order[0] == 3 )
-      prime = TRUE;
-
-   if( IS_NPC( ch ) )
-      dam = number_range( ch->level / 3, ch->level / 2 );
-   else
-      dam = number_range( ch->lvl[3] / 2, ch->lvl[3] * ( prime ? 2 : 1 ) );
-
-   chance = ( IS_NPC( ch ) ? 50 : ch->pcdata->learned[gsn_knee] / 2 );
-
-   chance += ( ch->lvl[3] - victim->level );
-
-
-   WAIT_STATE( ch, skill_table[gsn_knee].beats );
-
-   check_killer( ch, victim );
-
-   if( number_percent(  ) < chance )
-   {
-      /*
-       * HIT
-       */
-         /*
-          * HIT!
-          */
-
-         dam = damage(ch, victim, (dam * 3) / 5, -1 );
-         char actbuf[MSL];
-         sprintf( actbuf, "$n grabs $N and knees $M in the groin! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_NOTVICT );
-         sprintf( actbuf, "$N grabs you, and knees you in the groin! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, victim, NULL, ch, TO_CHAR );
-         sprintf( actbuf, "You grab $M and knee $M in the groin! @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_CHAR );
-   }
-   else
-   {
-      /*
-       * MISS
-       */
-      act( "$n tries to grab $N, but $E twists free!", ch, NULL, victim, TO_NOTVICT );
-      act( "$N tries to grab you, but you twist free!", victim, NULL, ch, TO_CHAR );
-      act( "You try to grab $N, but $E twists free!", ch, NULL, victim, TO_CHAR );
-      damage( ch, victim, 0, -1 );
-   }
-   return;
+   war_attack(ch, argument, gsn_knee);
 }
 
 
@@ -1325,7 +1089,7 @@ void do_leadership( CHAR_DATA * ch, char *argument )
 
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
-   int chance = 50;
+   int chance = 70;
 
    if (gsn == gsn_poison_quinine || gsn == gsn_poison_arsenic)
    {
@@ -1349,4 +1113,30 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
       return FALSE;
 
    return TRUE;
+}
+
+bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
+{
+   char buf[MAX_STRING_LENGTH];
+   int i;
+
+   for(i = 1; i < MAX_COMBO; i++)
+   {
+      /* Reverse index */
+      ch->combo[MAX_COMBO-i] = ch->combo[MAX_COMBO-i-1];
+   }
+
+   ch->combo[0] = gsn;
+
+   if (ch->combo[0] == gsn_knee && ch->combo[1] == gsn_headbutt && ch->combo[2] == gsn_punch && ch->combo[3] == gsn_kick)
+   {
+     send_to_char("@@yCombo triggered!@@N\n\r",ch);
+     act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
+     act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
+     do_knee(ch, victim->name);
+     do_kick(ch, victim->name);
+
+     for(int i = 0; i < MAX_COMBO; i++)
+        ch->combo[i] = -1;
+   }
 }

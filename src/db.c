@@ -1332,7 +1332,6 @@ void load_objects( FILE * fp )
             break;
 
          case ITEM_STAFF:
-         case ITEM_WAND:
             pObjIndex->value[3] = slot_lookup( pObjIndex->value[3] );
             break;
       }
@@ -2382,9 +2381,6 @@ void reset_area( AREA_DATA * pArea )
                   case ITEM_SCROLL:
                      olevel = number_range( 5, 15 );
                      break;
-                  case ITEM_WAND:
-                     olevel = number_range( 10, 20 );
-                     break;
                   case ITEM_STAFF:
                      olevel = number_range( 15, 25 );
                      break;
@@ -2785,7 +2781,6 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
          obj->value[0] = number_fuzzy( obj->value[0] );
          break;
 
-      case ITEM_WAND:
       case ITEM_STAFF:
          obj->value[0] = number_fuzzy( obj->value[0] );
          obj->value[1] = number_fuzzy( obj->value[1] );
@@ -2932,7 +2927,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
          spellpower_div = 8;
       }
-      if (IS_SET(obj->extra_flags, ITEM_WAND))
+      if (IS_SET(obj->extra_flags, ITEM_EXTRA_WAND))
       {
          // This is all in for caster stats
          spellpower_div = 1;

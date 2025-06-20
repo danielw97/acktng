@@ -473,7 +473,6 @@ void build_save_objects(  )
          break;
 
       case ITEM_STAFF:
-      case ITEM_WAND:
          val3 = val3 < 0 ? -1 : skill_table[val3].slot;
          break;
    }

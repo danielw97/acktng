@@ -478,8 +478,8 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"wear", do_wear, POS_RESTING, 0, LOG_NORMAL,
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
-   {"zap", do_zap, POS_RESTING, 0, LOG_NORMAL,
-    C_TYPE_OBJECT, C_SHOW_ALWAYS},
+/*   {"zap", do_zap, POS_RESTING, 0, LOG_NORMAL,
+    C_TYPE_OBJECT, C_SHOW_ALWAYS},*/
    {"enchant", do_enchant, POS_STANDING, 0, LOG_NORMAL,
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"assemble", do_connect, POS_RESTING, 0, LOG_NORMAL,

@@ -688,7 +688,7 @@ const struct lookup_type tab_item_types[] = {
 /* { "placeholder",		0, 0 },   */
    {"light", 1, 20},
    {"scroll", 2, 1000},
-   {"wand", 3, 2000},
+   {"null", 3, NO_USE},
    {"staff", 4, 5000},
    {"weapon", 5, 500},
    {"beacon", 6, 5000},

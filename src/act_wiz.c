@@ -2473,7 +2473,7 @@ void do_sset( CHAR_DATA * ch, char *argument )
 
    fAll = !str_cmp( arg2, "all" );
 
-   if( fAll && ch->level != 85 )
+   if( fAll && ch->level != MAX_LEVEL )
    {
       send_to_char( "Only Creators may SSET all.\n\r", ch );
       return;

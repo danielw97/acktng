@@ -61,6 +61,8 @@
 #define CHARMIE_STAT_BONUS	     1
 #define CHARMIE_TACT_BONUS	     1
 #define BASE_DAMCAP             2500
+#define MAX_COMBO		     6
+#define MAX_MORT_COMBO		     4
 
 #define MAX_CLAN_EQ		     6   /* Number of clan eq items */
 #define MAX_COLOR		    16   /* eg look, prompt, shout */
@@ -85,7 +87,7 @@
 #define LEVEL_HERO                 (MAX_LEVEL - 4)
 #define LEVEL_IMMORTAL             (MAX_LEVEL - 3)
 #define MAX_MORTAL		    (MAX_LEVEL - 5)
-#define MAX_MOB_LEVEL		    170
+#define MAX_MOB_LEVEL		    171
 #define MAX_VAMP_LEVEL              20
 #define MAX_WOLF_LEVEL		    20
 #define ADVANCE_VAMP                16
@@ -1110,7 +1112,6 @@
  */
 #define ITEM_LIGHT                    1
 #define ITEM_SCROLL                   2
-#define ITEM_WAND                     3
 #define ITEM_STAFF                    4
 #define ITEM_WEAPON                   5
 #define ITEM_BEACON                   6   /* for portals, etc */

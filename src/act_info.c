@@ -1585,7 +1585,6 @@ void do_exits( CHAR_DATA * ch, char *argument )
 
 void do_score( CHAR_DATA * ch, char *argument )
 {
-
    /*
     * Score text has been re-formatted to look a little nicer ;)
     * * Affected by now dealt with by command 'affected'
@@ -1814,6 +1813,12 @@ void do_score( CHAR_DATA * ch, char *argument )
       case POS_FIGHTING:
          sprintf( buf, " You are @@yfighting." );
          break;
+      case POS_RIDING:
+         sprintf( buf, " You are @@yriding." );
+         break;
+      default:
+         sprintf( buf, " You are @@ynone." );
+         break;
    }
    sprintf( buf2, "|@@W%s @@c|\n\r", center_text( buf, 62 ) );
    send_to_char( buf2, ch );
@@ -1849,7 +1854,7 @@ void do_score( CHAR_DATA * ch, char *argument )
    sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62) );
    send_to_char(buf, ch);
 
-   sprintf(buf, " @@WHitroll: @@y%-5d @@WDamroll: @@y%-5d @@WCrit: @@y%-5d @@WMult: @@y%-5d", GET_HITROLL(ch), GET_DAMROLL(ch), get_crit(ch), get_crit_mult(ch) );
+   sprintf(buf, " @@WHitroll: @@y%-5d @@WDamroll: @@y%-5d @@WCrit: @@y%-5d @@WMult: @@y%-5d", get_hitroll(ch), get_damroll(ch), get_crit(ch), get_crit_mult(ch) );
    sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62) );
    send_to_char(buf2, ch );
 
