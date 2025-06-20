@@ -5406,35 +5406,10 @@ void do_gain( CHAR_DATA * ch, char *argument )
            ch );
       return;
    }
-   /*
-    * Don't bother adapting for remort... dropped num classes yrs ago! 
-    */
-   if( ch->lvl[c] < 0 )
-   {
-      /*
-       * Check to see if max. num of classes has been reached. 
-       */
-      numclasses = 0;
 
-      for( a = 0; a < MAX_CLASS; a++ )
-         if( ch->lvl[a] >= 0 )
-            numclasses++;
 
-      if( numclasses >= race_table[ch->race].classes )
-      {
-         /*
-          * Already got max. number of classes 
-          */
-         send_to_char( "Cannot level in that class, already have maximum number of classes.\n\r", ch );
-         return;
-      }
-   }
-
-   /*
-    * Ok,ok now we know ch has enough exps.  Do the advancement stuff 
-    */
-
-   if( ( remort ? ch->remort[c] : remort[c] ) + 1 >= LEVEL_HERO )
+   if ( (remort && ch->remort[c] + 1 >= LEVEL_HERO) ||
+        (!remort && ch->lvl[c] + 1 >= LEVEL_HERO) )
    {
       send_to_char( "If you wish to advance this class, please ask an Immortal.\n\r", ch );
       return;
