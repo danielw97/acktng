@@ -565,7 +565,7 @@ int get_stat( CHAR_DATA *ch, int stat )
    return stat_val;
 }
 
-bool can_use_skill( CHAR_DATA *ch, char *skill)
+bool can_use_skill( CHAR_DATA *ch, char *skill, bool message)
 {
    int sn = skill_lookup(skill), cnt;
 
@@ -591,7 +591,9 @@ bool can_use_skill( CHAR_DATA *ch, char *skill)
          return TRUE;
    }
 
-   send_to_char("You don't know how to do that\n\r", ch);
+   if (message)
+      send_to_char("You don't know how to do that\n\r", ch);
+
    return FALSE;
 }
 
