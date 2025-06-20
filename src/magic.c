@@ -2546,7 +2546,6 @@ bool spell_identify( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
          send_to_char( ".\n\r", ch );
          break;
 
-      case ITEM_WAND:
       case ITEM_STAFF:
          sprintf( buf, "Has %d(%d) charges of level %d", ob->value[1], ob->value[2], ob->value[0] );
          send_to_char( buf, ch );

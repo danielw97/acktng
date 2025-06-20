@@ -150,7 +150,7 @@ void do_mount( CHAR_DATA * ch, char *argument )
 
       ch->riding = mount;
       mount->rider = ch;
-      ch->position = POS_RIDING;
+      ch->position = POS_STANDING;
       if( !IS_SET( mount->act, ACT_SENTINEL ) )
          SET_BIT( mount->act, ACT_SENTINEL );
       act( "You climb on and ride $N.", ch, 0, mount, TO_CHAR );
@@ -362,6 +362,9 @@ void stop_riding( CHAR_DATA * ch )
 bool check_valid_ride( CHAR_DATA * ch )
 {
    if( !ch || IS_NPC( ch ) )
+      return FALSE;
+
+   if (ch->riding == NULL)
       return FALSE;
 
    if( valid_ride( ch->in_room->vnum, ch->riding ) )

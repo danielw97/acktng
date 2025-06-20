@@ -743,7 +743,7 @@ bool spell_fire_breath( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
          obj_next = obj_lose->next_in_carry_list;
          if( number_bits( 2 ) != 0 )
             continue;
-
+/*
          switch ( obj_lose->item_type )
          {
             default:
@@ -759,9 +759,6 @@ bool spell_fire_breath( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
                break;
             case ITEM_STAFF:
                msg = "$p smokes and chars!";
-               break;
-            case ITEM_WAND:
-               msg = "$p sparks and sputters!";
                break;
             case ITEM_FOOD:
                msg = "$p blackens and crisps!";
@@ -785,7 +782,7 @@ bool spell_fire_breath( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
             }
             OUREF( content_next );
             extract_obj( obj_lose );
-         }
+         }*/
       }
       OUREF( obj_next );
    }
@@ -1873,7 +1870,6 @@ bool spell_know_item( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
          send_to_char( ".\n\r", ch );
          break;
 
-      case ITEM_WAND:
       case ITEM_STAFF:
          sprintf( buf, "Has %d(%d) charges of level %d", ob->value[1], ob->value[2], ob->value[0] );
          send_to_char( buf, ch );

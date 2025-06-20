@@ -651,7 +651,9 @@ struct char_data
    sh_int level;  /* For m/c this = max of levels */
    int lvl[MAX_CLASS];  /* Holds details for m/c levels */
    int lvl2[MAX_REMORT]; /* for remort (if any) */
+   int adept[MAX_CLASS];
    int adept_level;
+   int combo[MAX_COMBO];
    int sentence;  /* For new legal system */
    sh_int invis;  /* For wizinvis imms - lvl invis to */
    sh_int incog;  /* Same as above except for incognito --Flar */
@@ -1467,6 +1469,8 @@ int can_carry_w args( ( CHAR_DATA * ch ) );
 int get_parry args( ( CHAR_DATA *ch ) );
 int get_dodge args( ( CHAR_DATA *ch ) );
 int get_block args( ( CHAR_DATA *ch ) );
+int get_hitroll args( (CHAR_DATA *ch) );
+int get_damroll args( (CHAR_DATA *ch) );
 
 void affect_to_room args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );
 void r_affect_remove args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );

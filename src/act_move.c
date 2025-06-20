@@ -425,7 +425,7 @@ void move_char( CHAR_DATA * ch, int door )
       ch->move -= move;
    }
 /* Mount code - Celestian */
-   if( ch->position == POS_RIDING )
+/*   if( ch->position == POS_RIDING )*/
    {
       if( check_valid_ride( ch ) )
       {

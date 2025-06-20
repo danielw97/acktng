@@ -491,6 +491,46 @@ int get_damcap( CHAR_DATA *ch )
    return damcap;
 }
 
+int get_damroll( CHAR_DATA *ch )
+{
+   int dam = get_stat(ch, APPLY_DAMROLL);
+
+   if (IS_NPC(ch))
+   {
+      dam += ch->dr_mod;
+      dam += ch->level / 3;
+   }
+   else
+   {
+      dam += str_app[get_curr_str(ch)].todam;
+      dam += get_psuedo_level(ch)/10;
+   }
+
+   dam += stance_app[ch->stance].dr_mod  * get_psuedo_level(ch) / 10;
+
+   return dam;
+}
+
+int get_hitroll( CHAR_DATA *ch)
+{
+   int hit = get_stat(ch, APPLY_HITROLL);
+
+   if (IS_NPC(ch))
+   {
+      hit += ch->hr_mod;
+      hit += ch->level / 3;
+   }
+   else
+   {
+      hit += str_app[get_curr_str(ch)].tohit;
+      hit += get_psuedo_level(ch)/10;
+   }
+
+   hit += stance_app[ch->stance].hr_mod  * get_psuedo_level(ch) / 10;
+
+   return hit;
+}
+
 int get_stat( CHAR_DATA *ch, int stat )
 {
    int i;

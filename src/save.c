@@ -507,7 +507,6 @@ void fwrite_obj( CHAR_DATA * ch, OBJ_DATA * obj, FILE * fp, int iNest )
 
       case ITEM_PILL:
       case ITEM_STAFF:
-      case ITEM_WAND:
          if( obj->value[3] > 0 )
          {
             fprintf( fp, "Spell 3      '%s'\n", skill_table[obj->value[3]].name );
@@ -2182,7 +2181,6 @@ void fwrite_corpse( OBJ_DATA * obj, FILE * fp, int iNest )
 
       case ITEM_PILL:
       case ITEM_STAFF:
-      case ITEM_WAND:
          if( obj->value[3] > 0 )
          {
             fprintf( fp, "Spell 3      '%s'\n", skill_table[obj->value[3]].name );

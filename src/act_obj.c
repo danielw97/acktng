@@ -2290,9 +2290,7 @@ void do_brandish( CHAR_DATA * ch, char *argument )
    return;
 }
 
-
-
-void do_zap( CHAR_DATA * ch, char *argument )
+/*void do_zap( CHAR_DATA * ch, char *argument )
 {
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
@@ -2367,9 +2365,7 @@ void do_zap( CHAR_DATA * ch, char *argument )
    }
 
    return;
-}
-
-
+}*/
 
 void do_steal( CHAR_DATA * ch, char *argument )
 {
@@ -2679,8 +2675,8 @@ int get_cost( CHAR_DATA * keeper, OBJ_DATA * obj, bool fBuy )
       }
    }
 
-   if( obj->item_type == ITEM_STAFF || obj->item_type == ITEM_WAND )
-      cost = cost * obj->value[2] / obj->value[1];
+//   if( obj->item_type == ITEM_STAFF || obj->item_type == ITEM_WAND )
+  //    cost = cost * obj->value[2] / obj->value[1];
    return cost;
 }
 

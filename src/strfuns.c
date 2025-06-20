@@ -1168,8 +1168,6 @@ char *item_type_name( OBJ_DATA * obj )
          return "light";
       case ITEM_SCROLL:
          return "scroll";
-      case ITEM_WAND:
-         return "wand";
       case ITEM_STAFF:
          return "staff";
       case ITEM_BEACON:
@@ -1507,7 +1505,7 @@ char *extra_bit_name( int extra_flags )
       safe_strcat( MAX_STRING_LENGTH, buf, " silver" );
    if( extra_flags & ITEM_BUCKLER )
       safe_strcat( MAX_STRING_LENGTH, buf, " buckler" );
-   if( extra_flags & ITEM_WAND )
+   if( extra_flags & ITEM_EXTRA_WAND )
       safe_strcat( MAX_STRING_LENGTH, buf, " wand" );
    if( extra_flags & ITEM_FIST )
       safe_strcat( MAX_STRING_LENGTH, buf, " fist" );
