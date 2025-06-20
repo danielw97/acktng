@@ -207,7 +207,7 @@ const struct class_type remort_table[MAX_REMORT] = {
     ""},
 
    {
-    "Ego", "Egoist", APPLY_INT, "Int", 0,
+    "Ego", "Egomancer", APPLY_INT, "Int", 0,
     /*
      * guild_room ->
      */ 0, 0, 0, 0, 2, 3, TRUE,
@@ -220,7 +220,39 @@ const struct class_type remort_table[MAX_REMORT] = {
 
 };
 
+const struct class_type adept_table[MAX_CLASS] = {
+   {
+    "gma", "Grand Magi", APPLY_INT, "Int", OBJ_VNUM_SCHOOL_DAGGER,
+    1107, 90, 18, 10, 1, 2, TRUE,
+    "faerie fire",
+    },
 
+   {
+    "Tem", "Templar", APPLY_WIS, "Wis", OBJ_VNUM_SCHOOL_MACE,
+    1105, 90, 18, 12, 2, 2, TRUE,
+    "bless"},
+
+   {
+    "Nig", "Nightblade", APPLY_DEX, "Dex", OBJ_VNUM_SCHOOL_DAGGER,
+    1106, 90, 18, 8, 1, 3, FALSE,
+    "steal"},
+
+   {
+    "Cru", "Crusader", APPLY_STR, "Str", OBJ_VNUM_SCHOOL_SWORD,
+    1108, 90, 18, 6, 3, 4, FALSE,
+    "punch"},
+
+   {
+    "Kin", "Kinetimancer", APPLY_INT, "Int", OBJ_VNUM_SCHOOL_SWORD,
+    1125, 90, 18, 10, 2, 3, TRUE,
+    "mind flail"},
+
+   {
+    "Mar", "Martial Artist", APPLY_CON, "Cont", OBJ_VNUM_SCHOOL_DAGGER,
+    1108, 90, 18, 6, 3, 4, FALSE,
+    "punch"}
+
+};
 
 const struct race_type race_table[MAX_RACE] = {
    {
