@@ -650,7 +650,7 @@ struct char_data
    sh_int race;
    sh_int level;  /* For m/c this = max of levels */
    int lvl[MAX_CLASS];  /* Holds details for m/c levels */
-   int lvl2[MAX_REMORT]; /* for remort (if any) */
+   int remort[MAX_REMORT]; /* for remort (if any) */
    int adept[MAX_CLASS];
    int adept_level;
    int combo[MAX_COMBO];

@@ -219,7 +219,7 @@ long get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
     bool double_remort = FALSE;
 
     if (remort)
-      base = ch->lvl2[class] * ch->lvl2[class];
+      base = ch->remort[class] * ch->remort[class];
     else
       base = ch->lvl[class] * ch->lvl[class];
 
@@ -228,7 +228,7 @@ long get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
       // Gotta check if double remort
       for(i = 0; i < MAX_REMORT; i++)
       {
-         if (i != class && ch->lvl2[i] > 0)
+         if (i != class && ch->remort[i] > 0)
          {
             double_remort = TRUE;
          }
@@ -401,9 +401,9 @@ int get_spell_crit( CHAR_DATA *ch )
 
    crit += get_stat(ch, APPLY_SPELL_CRIT);
 
-   crit += ch->lvl2[CLASS_SOR] / 10;
-   crit += ch->lvl2[CLASS_WIZ] / 10;
-   crit += ch->lvl2[CLASS_WLK] / 10 * .75;
+   crit += ch->remort[CLASS_SOR] / 10;
+   crit += ch->remort[CLASS_WIZ] / 10;
+   crit += ch->remort[CLASS_WLK] / 10 * .75;
 
    return crit;
 }
@@ -442,12 +442,12 @@ int get_crit( CHAR_DATA *ch )
       crit += 5;
    }
 
-   crit += ch->lvl2[CLASS_ASS] / 20;
-   crit += ch->lvl2[CLASS_WLK] / 20 * .75;
+   crit += ch->remort[CLASS_ASS] / 20;
+   crit += ch->remort[CLASS_WLK] / 20 * .75;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
    {
-      crit += ch->lvl2[CLASS_SWO]/20;
+      crit += ch->remort[CLASS_SWO]/20;
    }
 
    crit += get_stat(ch, APPLY_CRIT);
@@ -471,12 +471,12 @@ int get_crit_mult( CHAR_DATA *ch )
       crit += 50;
    }
 
-   crit += ch->lvl2[CLASS_ASS] / 5;
-   crit += ch->lvl2[CLASS_WLK] / 5 * .75;
+   crit += ch->remort[CLASS_ASS] / 5;
+   crit += ch->remort[CLASS_WLK] / 5 * .75;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
    {
-      crit += ch->lvl2[CLASS_SWO]/5;
+      crit += ch->remort[CLASS_SWO]/5;
    }
    
    crit += get_stat(ch, APPLY_CRIT_MULT);
@@ -581,13 +581,13 @@ bool can_use_skill( CHAR_DATA *ch, char *skill)
    }
    for( cnt = 0; cnt < MAX_REMORT; cnt++ )
    {
-      if ( ch->lvl2[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == REMORT )
+      if ( ch->remort[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == REMORT )
          return TRUE;
    }
 
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
-      if( ( ( ch->lvl3[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == ADEPT ) ) )
+      if( ch->adept[cnt] >= skill_table[sn].skill_level[cnt] && skill_table[sn].flag1 == ADEPT )
          return TRUE;
    }
 

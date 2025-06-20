@@ -169,8 +169,8 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal += heal * intel / 100;
       heal += heal * ch->lvl[CLASS_MAG] / 100;
-      heal += heal * ch->lvl2[CLASS_SOR] / 100;
-      heal += heal * ch->lvl2[CLASS_WIZ] / 100;
+      heal += heal * ch->remort[CLASS_SOR] / 100;
+      heal += heal * ch->remort[CLASS_WIZ] / 100;
    }
    else if (class_table[class_index].attr_prime == APPLY_WIS)
    {
@@ -178,8 +178,8 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal += heal * wis / 100;
       heal += heal * ch->lvl[CLASS_CLE] / 50;
-      heal += heal * ch->lvl2[CLASS_PRI] / 50;
-      heal += heal * ch->lvl2[CLASS_PAL] / 50 * .75;
+      heal += heal * ch->remort[CLASS_PRI] / 50;
+      heal += heal * ch->remort[CLASS_PAL] / 50 * .75;
    }
    else // psionic recovery
    {
@@ -187,7 +187,7 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal += heal * intel / 100;
       heal += heal * ch->lvl[CLASS_PSI]/50;
-      heal += heal * ch->lvl2[CLASS_EGO]/50;
+      heal += heal * ch->remort[CLASS_EGO]/50;
    }
 
    if (stance_app[ch->stance].heal_mod > 0)

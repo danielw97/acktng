@@ -121,11 +121,11 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    dam = number_range( obj->value[1], obj->value[2] );
    dam += number_range( get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2 ) + GET_DAMROLL( ch ) / 2;
    dam += dam * ch->lvl[CLASS_THI] / 100;
-   dam += dam * ch->lvl2[CLASS_ASS] / 100;
-   dam += dam * ch->lvl2[CLASS_WLK] / 100 * .75;
+   dam += dam * ch->remort[CLASS_ASS] / 100;
+   dam += dam * ch->remort[CLASS_WLK] / 100 * .75;
    check_killer( ch, victim );
 
-   if(backstab && IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->lvl2[CLASS_ASS] > 0 || ch->lvl2[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
+   if(backstab && IS_NPC(victim) && IS_AFFECTED( victim, AFF_SANCTUARY ) && (ch->remort[CLASS_ASS] > 0 || ch->remort[CLASS_WLK] > 0) && ( number_percent(  ) > 50 ) )
    {
       send_to_char("Critical Success! Your advanced training has succeeded!\n\r", ch);
       act( "The white aura around $n fades.", victim, NULL, NULL, TO_ROOM );
@@ -797,12 +797,12 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
 
    dam += dam * ch->lvl[CLASS_WAR] / 100;
 
-   if (ch->lvl2[CLASS_KNI] > 0)
-      dam += dam * ch->lvl2[CLASS_KNI] / 100;
-   else if (ch->lvl2[CLASS_SWO] > 0)
-      dam += dam * ch->lvl2[CLASS_SWO] / 100;
-   else if (ch->lvl2[CLASS_MON] > 0)
-      dam += dam * ch->lvl2[CLASS_MON] / 100;
+   if (ch->remort[CLASS_KNI] > 0)
+      dam += dam * ch->remort[CLASS_KNI] / 100;
+   else if (ch->remort[CLASS_SWO] > 0)
+      dam += dam * ch->remort[CLASS_SWO] / 100;
+   else if (ch->remort[CLASS_MON] > 0)
+      dam += dam * ch->remort[CLASS_MON] / 100;
 
    WAIT_STATE( ch, skill_table[gsn].beats );
 

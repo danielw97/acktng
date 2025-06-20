@@ -4290,18 +4290,18 @@ void do_setclass( CHAR_DATA * ch, char *argument )
     *   -- Swiftest
     */
 
-   if( value == ( remort ? victim->lvl2[class] : victim->lvl[class] ) )
+   if( value == ( remort ? victim->remort[class] : victim->lvl[class] ) )
    {
       send_to_char( "That wouldn't accomplish much!\n\r", ch );
       return;
    }
-   if( ( value < ( remort ? victim->lvl2[class] : victim->lvl[class] ) )
+   if( ( value < ( remort ? victim->remort[class] : victim->lvl[class] ) )
        || ( ( vamp ) && ( value <= victim->pcdata->vamp_level ) ) )
 
    {
       int sn;
 
-      lose = ( remort ? victim->lvl2[class] - 1 : victim->lvl[class] - 1 );
+      lose = ( remort ? victim->remort[class] - 1 : victim->lvl[class] - 1 );
 
       send_to_char( "Lowering a player's level!\n\r", ch );
       send_to_char( "**** OOOOHHHHHHHHHH  NNNNOOOO ****\n\r", victim );
@@ -4318,9 +4318,9 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       else if( remort )
       {
          if( value != -1 )
-            victim->lvl2[class] = 1;
+            victim->remort[class] = 1;
          else
-            victim->lvl2[class] = -1;
+            victim->remort[class] = -1;
       }
       else if (value == -1)
          victim->lvl[class] = -1;
@@ -4382,9 +4382,9 @@ void do_setclass( CHAR_DATA * ch, char *argument )
    {
       sprintf( buf, "You are now level %d in your %s class.\n\r", value, remort_table[class].class_name );
       send_to_char( buf, victim );
-      for( iClass = victim->lvl2[class]; iClass < value; iClass++ )
+      for( iClass = victim->remort[class]; iClass < value; iClass++ )
       {
-         victim->lvl2[class] += 1;
+         victim->remort[class] += 1;
          advance_level( victim, class, FALSE, remort );
       }
    }
@@ -4415,8 +4415,8 @@ void do_setclass( CHAR_DATA * ch, char *argument )
     * check for remort levels too... 
     */
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-      if( victim->lvl2[cnt] > victim->level )
-         victim->level = victim->lvl2[cnt];
+      if( victim->remort[cnt] > victim->level )
+         victim->level = victim->remort[cnt];
 
 
    send_to_char( "Ok.\n\r", ch );

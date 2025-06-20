@@ -55,28 +55,24 @@ void reset_gain_stats( CHAR_DATA * ch )
          {
             advance_level(ch, index, FALSE, FALSE);
          }
-      if( ch->lvl2[index] > 0 )
-         for( index2 = 1; index2 <= ch->lvl2[index]; index2++ )
+      if( ch->remort[index] > 0 )
+         for( index2 = 1; index2 <= ch->remort[index]; index2++ )
          {
             advance_level(ch, index, FALSE, TRUE);
          }
 
+      if(index < MAX_CLASS && ch->adept[index] > 0 )
+         for( index2 = 1; index2 <= ch->adept[index]; index2++ )
+         {
+            add_hp = con_app[ch->pcdata->max_con].hitp + number_range( 10, 50 );
+            add_mana = number_range( 10, ( 3 * ch->pcdata->max_int + ch->pcdata->max_wis ) / 4 );
+            add_hp = UMAX( 1, add_hp );
+            add_mana = UMAX( 0, add_mana );
+
+            ch->pcdata->mana_from_gain += add_mana;
+            ch->pcdata->hp_from_gain += add_hp;
+         }
    }
-
-
-   if( ch->adept_level > 0 )
-      for( index2 = 1; index2 <= ch->adept_level; index2++ )
-      {
-
-         add_hp = con_app[ch->pcdata->max_con].hitp + number_range( 10, 50 );
-         add_mana = number_range( 10, ( 3 * ch->pcdata->max_int + ch->pcdata->max_wis ) / 4 );
-         add_hp = UMAX( 1, add_hp );
-         add_mana = UMAX( 0, add_mana );
-
-         ch->pcdata->mana_from_gain += add_mana;
-         ch->pcdata->hp_from_gain += add_hp;
-
-      }
 }
 
 
@@ -90,8 +86,8 @@ sh_int get_remort_level( CHAR_DATA * ch )
       return 0;
 
    for( index = 0; index < MAX_CLASS; index++ )
-      if( ch->lvl2[index] > max_remort_level )
-         max_remort_level = ch->lvl2[index];
+      if( ch->remort[index] > max_remort_level )
+         max_remort_level = ch->remort[index];
    return max_remort_level;
 }
 
@@ -109,11 +105,11 @@ sh_int get_psuedo_level( CHAR_DATA * ch )
    else
    {
 
-      for( index = 0; index < MAX_CLASS; index++ )
+      for( index = 0; index < MAX_REMORT; index++ )
 
-         if( ch->lvl2[index] > 0 )
+         if( ch->remort[index] > 0 )
 
-            total_remort_level += ch->lvl2[index];
+            total_remort_level += ch->remort[index];
 
 
 
@@ -199,7 +195,7 @@ long exp_to_level( CHAR_DATA * ch, int index, bool remort )
    if (IS_NPC(ch))
       return 69;
 
-   if( remort && ( ch->lvl2[index] <= 0 ) )
+   if( remort && ( ch->remort[index] <= 0 ) )
       return 0;
 
 
@@ -225,7 +221,7 @@ long exp_to_level( CHAR_DATA * ch, int index, bool remort )
    if( remort )
    {
       mult = 23;  /* i.e. remort class */
-      level = UMAX( 0, ch->lvl2[index] );
+      level = UMAX( 0, ch->remort[index] );
    }
    else
       level = UMAX( 0, ch->lvl[index] );
@@ -234,16 +230,18 @@ long exp_to_level( CHAR_DATA * ch, int index, bool remort )
     * Adjust level to make costs higher 
     */
 
-   for( a = 0; a < MAX_CLASS; a++ )
+   for( a = 0; a < MAX_REMORT; a++ )
    {
-      totlevels += ch->lvl[a];
-      if( ch->lvl2[a] > 0 )
-         totlevels += ch->lvl2[a];
+      if (MAX_REMORT < MAX_CLASS)
+         totlevels += ch->lvl[a];
+
+      if( ch->remort[a] > 0 )
+         totlevels += ch->remort[a];
    }
    if( !remort )
       next_level_index = ch->lvl[index];
    else
-      next_level_index = UMIN( ch->lvl2[index] + 20, 79 );
+      next_level_index = UMIN( ch->remort[index] + 20, 79 );
 
    if( next_level_index < 0 )
       next_level_index = 0;
@@ -514,11 +512,11 @@ int skill_table_lookup( CHAR_DATA * ch, int sn, int return_type )
             }
             break;
          case REMORT:
-            for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+            for( cnt = 0; cnt < MAX_REMORT; cnt++ )
             {
-               if( ch->lvl2[cnt] >= skill_table[sn].skill_level[cnt] && ch->lvl2[cnt] > best_level )
+               if( ch->remort[cnt] >= skill_table[sn].skill_level[cnt] && ch->remort[cnt] > best_level )
                {
-                  best_level = ch->lvl2[cnt];
+                  best_level = ch->remort[cnt];
                   best_class = cnt;
                }
             }
@@ -548,8 +546,8 @@ bool is_remort( CHAR_DATA * ch )
    if( IS_NPC( ch ) )
       return FALSE;
 
-   for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-      if( ch->lvl2[cnt] != -1 )
+   for( cnt = 0; cnt < MAX_REMORT; cnt++ )
+      if( ch->remort[cnt] != -1 )
          return TRUE;
 
    return FALSE;

@@ -449,9 +449,9 @@ void do_cast( CHAR_DATA * ch, char *argument )
       }
       for( cnt = 0; cnt < MAX_REMORT; cnt++ )
       {
-         if( ( ( ch->lvl2[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == REMORT ) )
-             && best < ch->lvl2[cnt] )
-            best = ch->lvl2[cnt];
+         if( ( ( ch->remort[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == REMORT ) )
+             && best < ch->remort[cnt] )
+            best = ch->remort[cnt];
       }
    }
    if( !IS_NPC( ch ) )

@@ -1546,7 +1546,7 @@ bool spell_animate( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj 
       return FALSE;
    }
 
-   if( ch->lvl2[3] < 70 )
+   if( ch->remort[CLASS_NEC] < 70 )
    {
       send_to_char( " @@eDUE TO A ROLEPLAYING CHANGE, THIS SPELL IS NO LONGER AVAILABLE TO ANY CLASS\n\r", ch );
       send_to_char( " BUT a high level @@dNECRMOANCER@@N.  THE SKILL HAS BEEN REMOVED FROM YOU CHARACTER, \n\r", ch );

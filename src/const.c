@@ -266,7 +266,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE},
     MAX_CLASS, {3, 4, 5, 2, 0, 1},
-    "War, Thi, Pug, Psi,  Mag, Cle",
+    "War, Thi, Pug, Psi, Mag, Cle",
     "",
     REALM_NONE,   /* strong magic realms for race */
     REALM_NONE,   /* weak */
@@ -363,7 +363,7 @@ const struct race_type race_table[MAX_RACE] = {
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
      TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE},
     MAX_CLASS, {0, 4, 3, 2, 1, 5},
-    "Psi, Mag, War, Thi, Cle Pug",
+    "Psi, Mag, War, Thi, Cle, Pug",
     "\'find doors\' \'mind bolt\'",
     REALM_DRAIN | REALM_SHOCK | REALM_MIND | REALM_FIRE,
     REALM_HOLY | REALM_LIGHT,

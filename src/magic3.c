@@ -184,7 +184,7 @@ bool spell_ice_bolt( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
 
 bool spell_waterelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_WATER);
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->remort[CLASS_SOR]/4, REALM_WATER);
 
    act( "$n calls upon the elemental forces of @@lwater@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the elemental forces of @@lwater@@N.", ch, obj, NULL, TO_CHAR );
@@ -201,7 +201,7 @@ bool spell_waterelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
 
 bool spell_skeleton( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_NEC]/4, REALM_NEGATIVE);
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->remort[CLASS_NEC]/4, REALM_NEGATIVE);
 
    act( "$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR );
@@ -633,7 +633,7 @@ bool spell_ethereal( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj
 
 bool spell_fireelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100+ ch->lvl2[CLASS_SOR]/4, REALM_FIRE);
+   CHAR_DATA *summoned = player_summon( ch, 100+ ch->remort[CLASS_SOR]/4, REALM_FIRE);
 
    act( "$n calls upon the elemental forces of @@efire@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the elemental forces of @@efire@@N.", ch, obj, NULL, TO_CHAR );
@@ -1351,7 +1351,7 @@ bool spell_divine_intervention( int sn, int level, CHAR_DATA * ch, void *vo, OBJ
 
 bool spell_earthelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_EARTH);
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->remort[CLASS_SOR]/4, REALM_EARTH);
 
    act( "$n calls upon the elemental forces of @@bearth@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the elemental forces of @@bearth@@N.", ch, obj, NULL, TO_CHAR );
@@ -1366,7 +1366,7 @@ bool spell_earthelem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
 
 bool spell_iron_golem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_IMPACT);
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->remort[CLASS_SOR]/4, REALM_IMPACT);
 
    act( "@@N$n calls upon the @@aalchemical@@N forces of @@dmetal@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the @@aalchemical@@N forces of @@dmetal@@N.", ch, obj, NULL, TO_CHAR );
@@ -1381,7 +1381,7 @@ bool spell_iron_golem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
 
 bool spell_soul_thief( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_NEC]/4, REALM_DRAIN);
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->remort[CLASS_NEC]/4, REALM_DRAIN);
 
    act( "$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR );
@@ -1398,7 +1398,7 @@ bool spell_soul_thief( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
 
 bool spell_holy_avenger( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_KNI]/4, REALM_HOLY);
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->remort[CLASS_KNI]/4, REALM_HOLY);
 
    act( "$n calls upon the holy forces of @@Wlight@@N!", ch, obj, NULL, TO_ROOM );
    act( "You call upon the holy forces of @@Wlight@@N.", ch, obj, NULL, TO_CHAR );
@@ -1413,7 +1413,7 @@ bool spell_holy_avenger( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
 
 bool spell_diamond_golem( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-   CHAR_DATA *summoned = player_summon( ch, 100 + ch->lvl2[CLASS_SOR]/4, REALM_LIGHT);
+   CHAR_DATA *summoned = player_summon( ch, 100 + ch->remort[CLASS_SOR]/4, REALM_LIGHT);
 
    act( "@@N$n calls upon the @@aalchemical@@N forces of @@ylight@@N!", ch, obj, NULL, TO_ROOM );
    act( "@@NYou call upon the @@aalchemical@@N forces of @@ylight@@N.", ch, obj, NULL, TO_CHAR );
@@ -1786,7 +1786,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
    sh_int i;
    int remort_caster = 0, remort_physical = 0, index1 = -1, index2 = -1;
 
-   if (ch->lvl2[CLASS_SOR] > 0)
+   if (ch->remort[CLASS_SOR] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_SOR;
@@ -1794,7 +1794,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_SOR;
       remort_caster++;
    }
-   if (ch->lvl2[CLASS_NEC] > 0)
+   if (ch->remort[CLASS_NEC] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_NEC;
@@ -1802,7 +1802,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_NEC;
       remort_caster++;
    }
-   if (ch->lvl2[CLASS_WLK] > 0)
+   if (ch->remort[CLASS_WLK] > 0)
    {
       if(index1 == -1)
          index1 = CLASS_WLK;
@@ -1811,7 +1811,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
       remort_caster++;
       remort_physical++;
    }
-   if (ch->lvl2[CLASS_PAL] > 0)
+   if (ch->remort[CLASS_PAL] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_PAL;
@@ -1820,7 +1820,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
       remort_caster++;
       remort_physical++;
    }
-   if (ch->lvl2[CLASS_WIZ] > 0)
+   if (ch->remort[CLASS_WIZ] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_WIZ;
@@ -1828,7 +1828,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_WIZ;
       remort_caster++;
    }
-   if (ch->lvl2[CLASS_EGO] > 0)
+   if (ch->remort[CLASS_EGO] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_EGO;
@@ -1836,7 +1836,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_EGO;
       remort_caster++;
    }
-   if (ch->lvl2[CLASS_PRI] > 0)
+   if (ch->remort[CLASS_PRI] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_PRI;
@@ -1844,7 +1844,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_PRI;
       remort_caster++;
    }
-   if (ch->lvl2[CLASS_KNI] > 0)
+   if (ch->remort[CLASS_KNI] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_KNI;
@@ -1852,7 +1852,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_KNI;
       remort_physical++;
    }
-   if (ch->lvl2[CLASS_ASS] > 0)
+   if (ch->remort[CLASS_ASS] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_ASS;
@@ -1860,7 +1860,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_ASS;
       remort_physical++;
    }
-   if (ch->lvl2[CLASS_MON] > 0)
+   if (ch->remort[CLASS_MON] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_MON;
@@ -1868,7 +1868,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_MON;
       remort_physical++;
    }
-   if (ch->lvl2[CLASS_SWO] > 0)
+   if (ch->remort[CLASS_SWO] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_SWO;
@@ -1876,7 +1876,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
          index2 = CLASS_SWO;
       remort_physical++;
    }
-   if (ch->lvl2[CLASS_BRA] > 0)
+   if (ch->remort[CLASS_BRA] > 0)
    {
       if (index1 == -1)
          index1 = CLASS_BRA;
@@ -1921,7 +1921,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_WIZARD:
-               if(remort_caster > 0 && ch->lvl2[index1] > 60)
+               if(remort_caster > 0 && ch->remort[index1] > 60)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_MAGI:
@@ -1929,7 +1929,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AMBUSH:
-               if( ch->lvl2[CLASS_ASS] > 30 )  /* assassin */
+               if( ch->remort[CLASS_ASS] > 30 )  /* assassin */
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_AC_BEST:
@@ -1957,11 +1957,11 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_SUPER_FIGHTER:
-               if( ( ch->lvl2[CLASS_ASS] > 79 ) && ( ch->lvl2[CLASS_KNI] > 79 ) )
+               if( ( ch->remort[CLASS_ASS] > 79 ) && ( ch->remort[CLASS_KNI] > 79 ) )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_SUPER_SPEED:
-               if( ( ch->lvl2[CLASS_MON] > 70 ) && ( ch->lvl2[CLASS_KNI] > 70 ) )
+               if( ( ch->remort[CLASS_MON] > 70 ) && ( ch->remort[CLASS_KNI] > 70 ) )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HEALER:
@@ -2019,7 +2019,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             }
             break;
          case STANCE_WIZARD:
-            if(remort_caster > 0 && ch->lvl2[index1] > 60)
+            if(remort_caster > 0 && ch->remort[index1] > 60)
             {
                legal_stance = TRUE;
                break;
@@ -2033,7 +2033,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             }
             break;
          case STANCE_AMBUSH:
-            if( ch->lvl2[CLASS_ASS] > 30 ) 
+            if( ch->remort[CLASS_ASS] > 30 ) 
             {
                CHAR_DATA *other;
                for( other = ch->in_room->first_person; other != NULL; other = other->next_in_room )
@@ -2099,7 +2099,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_SUPER_FIGHTER:
-            if( ( ch->lvl2[CLASS_ASS] > 79 ) && ( ch->lvl2[CLASS_KNI] > 79 ) )
+            if( ( ch->remort[CLASS_ASS] > 79 ) && ( ch->remort[CLASS_KNI] > 79 ) )
             {
                legal_stance = TRUE;
                break;
@@ -2107,7 +2107,7 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
 
          case STANCE_SUPER_SPEED:
-            if( ( ch->lvl2[CLASS_MON] > 70 ) && ( ch->lvl2[CLASS_KNI] > 70 ) )
+            if( ( ch->remort[CLASS_MON] > 70 ) && ( ch->remort[CLASS_KNI] > 70 ) )
             {
                legal_stance = TRUE;
                break;

@@ -463,15 +463,15 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    else
    {
       // Remort hits
-      if (ch->lvl2[CLASS_PAL] > 0)
+      if (ch->remort[CLASS_PAL] > 0)
          hits++;
-      if (ch->lvl2[CLASS_ASS] > 0)
+      if (ch->remort[CLASS_ASS] > 0)
          hits++;
-      if (ch->lvl2[CLASS_WLK] > 0)
+      if (ch->remort[CLASS_WLK] > 0)
          hits++;
-      if (ch->lvl2[CLASS_KNI] > 0)
+      if (ch->remort[CLASS_KNI] > 0)
          hits++;
-      if (ch->lvl2[CLASS_SWO] > 0)
+      if (ch->remort[CLASS_SWO] > 0)
          hits++;
 
       // Mort hits
@@ -688,9 +688,9 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
             dam * ch->pcdata->learned[gsn_enhanced_damage] / 150 : dam * .4;
    }
 
-   dam += dam * ch->lvl2[CLASS_KNI]/100;
-   dam += dam * ch->lvl2[CLASS_SWO]/100;
-   dam += dam * ch->lvl2[CLASS_PAL]/100 * .75;
+   dam += dam * ch->remort[CLASS_KNI]/100;
+   dam += dam * ch->remort[CLASS_SWO]/100;
+   dam += dam * ch->remort[CLASS_PAL]/100 * .75;
 
    if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword] > 0 )
    {
@@ -707,10 +707,10 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
 
    if (wield == NULL && get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL && !IS_NPC(ch) && ch->pcdata->learned[gsn_bare_hand] > 0)
    {
-      if (ch->lvl2[CLASS_MON] > 0)
-        dam += dam * ch->lvl2[CLASS_MON] / 100;
-      else if (ch->lvl2[CLASS_BRA] > 0)
-        dam += dam * ch->lvl2[CLASS_BRA] / 100;
+      if (ch->remort[CLASS_MON] > 0)
+        dam += dam * ch->remort[CLASS_MON] / 100;
+      else if (ch->remort[CLASS_BRA] > 0)
+        dam += dam * ch->remort[CLASS_BRA] / 100;
    }
 
    dam = swing(ch, victim, dam, dt);
@@ -1319,17 +1319,17 @@ bool do_lifesteal( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual,
 
    chance += ch->lvl[CLASS_MAG]/20;
 
-   if (ch->lvl2[CLASS_SOR] > 0)
-      chance += ch->lvl2[CLASS_SOR]/10;
-   else if (ch->lvl2[CLASS_WIZ] > 0)
-      chance += ch->lvl2[CLASS_WIZ]/10;
+   if (ch->remort[CLASS_SOR] > 0)
+      chance += ch->remort[CLASS_SOR]/10;
+   else if (ch->remort[CLASS_WIZ] > 0)
+      chance += ch->remort[CLASS_WIZ]/10;
 
    potency += ch->lvl[CLASS_PSI]/10;
 
-   if (ch->lvl2[CLASS_NEC] > 0)
-      potency += ch->lvl2[CLASS_NEC]/10;
-   else if (ch->lvl2[CLASS_EGO] > 0)
-      potency += ch->lvl2[CLASS_EGO]/10;
+   if (ch->remort[CLASS_NEC] > 0)
+      potency += ch->remort[CLASS_NEC]/10;
+   else if (ch->remort[CLASS_EGO] > 0)
+      potency += ch->remort[CLASS_EGO]/10;
 
    if (dual)
       chance /= 2;
@@ -1765,8 +1765,8 @@ int get_dodge( CHAR_DATA * ch )
    else
    {
       chance = ( ch->pcdata->learned[gsn_dodge] / 3.5 ) + get_curr_dex( ch ) * 3 / 5;
-      if( ch->lvl2[4] > 0 )   /* Monk  */
-         chance += ch->lvl2[4] / 8;
+      if( ch->remort[CLASS_MON] > 0 )   /* Monk  */
+         chance += ch->remort[CLASS_MON] / 8;
    }
    if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
       chance += 5;
@@ -1836,8 +1836,8 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
    else
    {
       chance = ( victim->pcdata->learned[gsn_counter] / 3.5 ) + get_curr_dex( victim ) * 3 / 5;
-      if( ch->lvl2[4] > 0 )   /* Monk  */
-         chance += victim->lvl2[4] / 8;
+      if( victim->remort[CLASS_MON] > 0 )   /* Monk  */
+         chance += victim->remort[CLASS_MON] / 8;
    }
    if( IS_AFFECTED( victim, AFF_CLOAK_ADEPT ) )
       chance += 5;
@@ -4037,22 +4037,9 @@ void do_stun( CHAR_DATA * ch, char *argument )
       act( "$n slams into $N, leaving $M stunned.", ch, NULL, victim, TO_NOTVICT );
 
       victim->stunTimer += number_range( 1, get_psuedo_level( ch ) / 30 );
-      if( ch->lvl2[4] > 40 )
+      if( ch->remort[CLASS_MON] > 40 )
          victim->stunTimer += number_range( 1, 2 );
 
-/*      if ( !IS_NPC( ch ) )
-      {
-        if( ch->lvl2[3] > ch->lvl2[5] )
-        {
-  	  victim->stunTimer += ch->lvl2[3] / 15;
-	  return;
-        }      
-        else 
-        {
-          set_stun( victim, ch->lvl2[5] / 15 );
-          return;
-        }
-      }   */
    }
    else
    {

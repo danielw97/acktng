@@ -271,7 +271,10 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
 
    fprintf( fp, "Remort       " );
    for( cnt = 0; cnt < MAX_REMORT; cnt++ )
-      fprintf( fp, "%2d ", ch->lvl2[cnt] );
+      fprintf( fp, "%2d ", ch->remort[cnt] );
+   fprintf( fp, "Adept       " );
+   for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+      fprintf( fp, "%2d ", ch->adept[cnt] );
    fprintf( fp, "\n" );
    fprintf( fp, "Adeptlevel   " );
    fprintf( fp, "%2d\n ", ch->adept_level );
@@ -655,7 +658,9 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
       ch->pcdata->assist_msg = str_dup( "'@@eBANZAI!!@@N $N must be assisted!!@@N'" );
       ch->quest_points = 0;
       for( foo = 0; foo < MAX_REMORT; foo++ )
-         ch->lvl2[foo] = -1;
+         ch->remort[foo] = -1;
+      for( foo = 0; foo < MAX_CLASS; foo++ )
+         ch->adept[foo] = -1;
       ch->adept_level = -1;
 #ifdef IMC
       imc_initchar( ch );
@@ -910,6 +915,13 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
 
          case 'A':
             KEY( "Act", ch->act, fread_number( fp ) );
+            if( !str_cmp( word, "Adept" ) )
+            {
+               for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+                  ch->adept[cnt] = fread_number( fp );
+               fMatch = TRUE;
+               break;
+            }
             KEY( "AffectedBy", ch->affected_by, fread_number( fp ) );
             KEY( "Alignment", ch->alignment, fread_number( fp ) );
             KEY( "Armor", ch->armor, fread_number( fp ) );
@@ -1281,7 +1293,7 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
             if( !str_cmp( word, "Remort" ) )
             {
                for( cnt = 0; cnt < MAX_REMORT; cnt++ )
-                  ch->lvl2[cnt] = fread_number( fp );
+                  ch->remort[cnt] = fread_number( fp );
                fMatch = TRUE;
                break;
             }
