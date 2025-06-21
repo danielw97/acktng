@@ -1121,14 +1121,47 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
    char buf[MAX_STRING_LENGTH];
    int i;
+   int max = 4;
+   int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0;
 
-   for(i = 1; i < MAX_COMBO; i++)
+   for(i = 1; i < max; i++)
    {
       /* Reverse index */
-      ch->combo[MAX_COMBO-i] = ch->combo[MAX_COMBO-i-1];
+      ch->combo[max-i] = ch->combo[max-i-1];
    }
 
    ch->combo[0] = gsn;
+
+   // Calc our chances
+   for(int i = 0; i < max; i++)
+   {
+      if (ch->combo[i] == -1)
+         return;
+
+      if (ch->combo[i] == ch->combo[i+1])
+         return;
+
+      if (ch->combo[i] == gsn_punch)
+         punch_cnt += 22;
+
+      if (ch->combo[i] == gsn_knee)
+         knee_cnt += 22;
+
+      if (ch->combo[i] == gsn_headbutt)
+         headbutt_cnt += 22;
+
+      if (ch->combo[i] == gsn_kick)
+         kick_cnt += 22;
+
+      if (ch->combo[i] == gsn_disarm)
+         disarm_cnt += 22;
+
+      if (ch->combo[i] == gsn_dirt)
+         dirt_cnt += 22;
+
+      if (ch->combo[i] == gsn_bash)
+         bash_cnt += 22;
+   }
 
    if (ch->combo[0] != ch->combo[1] && ch->combo[1] != ch->combo[2] && ch->combo[2] != ch->combo[3] && ch->combo[3] != -1)
    {
@@ -1139,31 +1172,27 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
      act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
      act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
 
-     int max = 2;
+     int max_attacks = 2;
 
-     if (number_percent < 11)
-     {
-        max = 3;
-        if (number_percent < 50)
-           max = 4;
-     }
-     for(int i = 0; i < max; i++)
+     for(int i = 0; i < max_attacks; i++)
      {
         int roll = number_percent();
-        if(roll < 20)
+        if(roll < punch_cnt)
            do_punch(ch, "enemy");
-        else if(roll < 40)
+        else if(roll < punch_cnt+kick_cnt)
            do_kick(ch, "enemy");
-        else if(roll < 60)
+        else if(roll < punch_cnt+kick_cnt+knee_cnt)
            do_knee(ch, "enemy");
-        else if (roll < 80)
+        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt)
            do_headbutt(ch, "enemy");
-        else if (roll < 90)
-           do_bash(ch, "enemy");
-        else if (roll < 96)
+        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt)
+           do_disarm(ch, "enemy");
+        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt)
            do_dirt(ch, "enemy");
+        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt+bash_cnt)
+           do_bash(ch, "enemy");
         else
-           do_stun(ch, "enemy");
+           max_attacks += 2;
      }
 
      for(int i = 0; i < MAX_COMBO; i++)
