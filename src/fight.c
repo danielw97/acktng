@@ -3668,7 +3668,7 @@ void check_adrenaline( CHAR_DATA * ch, sh_int damage )
 {
    AFFECT_DATA af;
 
-   if( damage > 200 && can_use_skill_by_gsn(ch, gsn_adrenaline) )
+   if( damage > 200 && can_use_skill_by_gsn(ch, gsn_adrenaline, FALSE) )
    {
 
       af.type = skill_lookup( "adrenaline bonus" );
