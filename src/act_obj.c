@@ -2642,8 +2642,6 @@ void check_guards( CHAR_DATA * ch )
    return;
 }
 
-
-
 int get_cost( CHAR_DATA * keeper, OBJ_DATA * obj, bool fBuy )
 {
    SHOP_DATA *pShop;

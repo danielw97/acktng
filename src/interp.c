@@ -159,7 +159,7 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"equipment", do_equipment, POS_DEAD, 0, LOG_NORMAL,
     C_TYPE_INFO, C_SHOW_ALWAYS},
-   {"examine", do_examine, POS_RESTING, 0, LOG_NORMAL,
+   {"examine", do_examine, POS_STANDING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"help", do_help, POS_DEAD, 0, LOG_NORMAL,
     C_TYPE_INFO, C_SHOW_ALWAYS},
