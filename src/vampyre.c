@@ -593,3 +593,234 @@ bool spell_blood_sense( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    }
    return TRUE;
 }
+
+void do_stake( CHAR_DATA * ch, char *argument )
+{
+   /*
+    * If player has an object of TYPE_STAKE (s)he can try and stake
+    * * a fallen ( hit<0 ) vampire.  Note that there is still a check
+    * * for pkilling here... PKOK players can be vamp hunters with
+    * * no worries! (:  Player must also have learnt the stake skill.
+    * * A sleeping vamp is also considered vulnerable.
+    */
+
+   CHAR_DATA *victim;
+   OBJ_DATA *stake;
+   int chance;
+   char arg[MAX_INPUT_LENGTH];
+   int sn;
+
+   one_argument( argument, arg );
+
+   if( arg[0] == '\0' )
+   {
+      send_to_char( "Stake who?\n\r", ch );
+      return;
+   }
+
+   victim = get_char_room( ch, arg );
+
+   if( victim == NULL )
+   {
+      send_to_char( "Couldn't find the target.\n\r", ch );
+      return;
+   }
+   if( victim == ch )
+   {
+      send_to_char( "Oh yeah, that would be a really good idea!\n\r", ch );
+      return;
+   }
+
+   if( ( stake = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) == NULL )
+      stake = get_eq_char( ch, WEAR_HOLD_HAND_R );
+   if( stake == NULL || stake->item_type != ITEM_STAKE )
+   {
+      send_to_char( "You have to be holding some sort of stake to do that\n\r", ch );
+      return;
+   }
+   if( IS_NPC( victim ) )
+   {
+      send_to_char( "This is only used against PLAYER @@dVampyres@@N!!\n\r", ch );
+      return;
+   }
+
+   chance = IS_NPC( ch ) ? ch->level * 2 : ch->pcdata->learned[gsn_stake];
+   if( !IS_AWAKE( victim ) )
+      chance += 25;
+
+   /*
+    * Make it harder to stake higher level targets 
+    */
+   if( ( victim->pcdata->vamp_level * 5 ) > ch->level )
+      chance -= ( victim->pcdata->vamp_level * 5 ) - ch->level;
+
+   if( victim->hit > 0 && IS_AWAKE( victim ) )  /* i.e. not vulnerable! */
+      chance = 0;
+
+   if( !IS_VAMP( victim ) )
+      chance = 0;
+
+   WAIT_STATE( ch, skill_table[gsn_stake].beats );
+   check_killer( ch, victim );
+
+   if( number_percent(  ) < chance )
+   {
+      /*
+       * Success 
+       */
+      act( "$n raises $p above $s head and plunges it into $N's heart!", ch, stake, victim, TO_NOTVICT );
+      act( "You raise $p above your head and plunge it into $N's heart!", ch, stake, victim, TO_CHAR );
+      act( "$n raises $p above his head and plunges it into your heart!", ch, stake, victim, TO_VICT );
+      act( "$n screams in agony and withers to black dust!", victim, NULL, NULL, TO_ROOM );
+      send_to_char( "You scream in agony and withers to black dust!\n\r", victim );
+      send_to_char( "@@NYou find yourself back in Moribund....\n\r", victim );
+      send_to_char( "@@NSuddenly, you realize that your @@eKindred@@Nknowledge\n\r", victim );
+      send_to_char( "@@Nis gone! So, THAT's what the sun looks like to mortals!\n\r", victim );
+      send_to_char( "@@NYou had almost forgotten.....\n\r", victim );
+
+
+
+      REMOVE_BIT( victim->pcdata->pflags, PFLAG_VAMP );
+      victim->pcdata->vamp_level = 0;
+      victim->pcdata->vamp_exp = 0;
+      victim->pcdata->bloodlust = 0;
+      victim->pcdata->bloodlust_max = 0;
+      victim->pcdata->generation = -1;
+      victim->pcdata->vamp_bloodline = 0;
+      victim->pcdata->recall_vnum = 3001;
+
+/* remove vamp skills from dead vamp  */
+
+      for( sn = 0; sn <= MAX_SKILL; sn++ )
+         if( ( skill_table[sn].flag2 == VAMP ) && ( victim->pcdata->learned[sn] > 0 ) )
+            victim->pcdata->learned[sn] = 0;
+
+      if( !IS_NPC( victim ) )
+         gain_exp( victim, 0 - ( 3 * victim->exp / 4 ) );
+
+      raw_kill( victim, "" );
+      return;
+   }
+   else
+   {
+      act( "$n tries to plunge $p into $N's chest, but misses!", ch, stake, victim, TO_NOTVICT );
+      act( "You try to plunge $p into $N's chest, but miss!", ch, stake, victim, TO_CHAR );
+      act( "$n tries to plunge $p into your chest, but misses!", ch, stake, victim, TO_VICT );
+      set_fighting( ch, victim, TRUE );
+   }
+   return;
+}
+
+void do_feed( CHAR_DATA * ch, char *argument )
+{
+   CHAR_DATA *victim;
+   char arg[MAX_INPUT_LENGTH];
+   int chance;
+   int bloodgain = 0;
+   one_argument( argument, arg );
+
+   if( !IS_VAMP( ch ) )
+   {
+      send_to_char( "Huh?\n\r", ch );
+      return;
+   }
+   if( ( victim = ch->fighting ) == NULL )
+   {
+      send_to_char( "You must be fighting someone first!\n\r", ch );
+      return;
+
+   }
+
+   if( victim == ch )
+   {
+      send_to_char( "What are you?  A blood donor?\n\r", ch );
+      return;
+   }
+
+   if( IS_SET( victim->in_room->room_flags, ROOM_SAFE ) )
+   {
+      send_to_char( "The Gods prevent your foul deed.  This is a safe room!\n\r", ch );
+      return;
+   }
+
+   if( victim->hit > 0 && victim->position > POS_FIGHTING )
+   {
+      /*
+       * failure 
+       */
+      act( "$N is far too alert to let you do that!", ch, NULL, victim, TO_CHAR );
+      return;
+   }
+
+   chance = IS_NPC( ch ) ? ch->level : ch->pcdata->learned[gsn_feed];
+   WAIT_STATE( ch, skill_table[gsn_feed].beats );
+   check_killer( ch, victim );
+   if( number_percent(  ) < chance )
+   {
+      /*
+       * Success! 
+       */
+      act( "You plunge your fangs into $N's neck, and taste sweet blood!", ch, NULL, victim, TO_CHAR );
+      act( "$n plunges $s fangs into your neck, and sucks your blood!", ch, NULL, victim, TO_VICT );
+      act( "$n plunges $s fangs into $N's neck and sucks $S blood!", ch, NULL, victim, TO_NOTVICT );
+      if( ch->pcdata->bloodlust <= -5 )
+      {
+         ch->pcdata->bloodlust = ch->pcdata->bloodlust_max;
+         send_to_char( " You have now entered the ranks of the @@dKINDRED@@N!!!!\n\r", ch );
+      }
+      else
+      {
+
+         bloodgain = ( ( 20 - ch->pcdata->generation ) + ch->pcdata->vamp_level );
+         if( bloodgain > victim->level )
+            bloodgain = victim->level;
+      }
+
+      if( ( ch->pcdata->bloodlust + bloodgain ) > ch->pcdata->bloodlust_max )
+         ch->pcdata->bloodlust = ch->pcdata->bloodlust_max;
+      else
+         ch->pcdata->bloodlust += bloodgain;
+
+      if( victim->hit > 0 )
+      {
+         act( "$N screams in horror at you at jumps to $s feet!", ch, NULL, victim, TO_CHAR );
+         act( "You scream in horror at $n and jump to your feet!", ch, NULL, victim, TO_VICT );
+         act( "$N screams in horror at $n and jumps to $S feet!", ch, NULL, victim, TO_NOTVICT );
+         do_say( victim, "You'll pay for that!" );
+         victim->position = POS_STANDING;
+         multi_hit( victim, ch, TYPE_UNDEFINED );
+      }
+
+      if( IS_VAMP( victim ) )
+      {
+         return;  /* for now :P SRZ 
+                   * if ( !IS_NPC(ch) && !IS_NPC(victim) )
+                   * {
+                   * ch->pcdata->bloodlust = victim->pcdata->bloodlust;
+                   * victim->pcdata->bloodlust = 0;
+                   * }
+                   * if ( !IS_NPC(ch) && IS_NPC(victim) )
+                   * gain_bloodlust( ch, victim->level*2 );
+                   * if ( IS_NPC(ch) && !IS_NPC(victim) )
+                   * victim->pcdata->bloodlust = 0;     */
+      }
+
+
+
+      return;
+   }
+   else
+   {
+      /*
+       * D'oh! 
+       */
+      act( "You try to find a spot on $N's neck to suck blood, but fail!", ch, NULL, victim, TO_CHAR );
+      act( "$n tries to find a spot on your neck to suck blood, but fails!", ch, NULL, victim, TO_VICT );
+      act( "$n tries to find a spot on $N's neck to suck blood, but fails!", ch, NULL, victim, TO_NOTVICT );
+      /*
+       * Any penalty? 
+       */
+      return;
+   }
+   return;
+}

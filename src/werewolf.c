@@ -547,3 +547,132 @@ void do_scent( CHAR_DATA * ch, char *argument )
    }
    check_social( ch, "sniff", "" );
 }
+
+void do_rage( CHAR_DATA * ch, char *argument )
+{
+   char arg[MAX_INPUT_LENGTH];
+   int chance = 0;
+
+   one_argument( argument, arg );
+
+   if( IS_NPC( ch ) || !IS_WOLF( ch ) )
+   {
+      send_to_char( "Huh?\n\r", ch );
+      return;
+   }
+   if( IS_RAGED( ch ) )
+   {
+      send_to_char( "You are already @@rRAGING@@N!!!\n\r", ch );
+      return;
+   }
+
+   chance = 60 - ( ch->hit / ch->max_hit * 100 );
+   if( weather_info.moon_loc == MOON_PEAK )
+      chance += 15;
+   if( IS_SHIFTED( ch ) )
+      chance += 20;
+   if( weather_info.moon_phase == MOON_FULL )
+      chance += 30;
+   if( weather_info.moon_phase == MOON_NEW )
+      chance -= 30;
+   if( weather_info.moon_loc == MOON_DOWN )
+      chance -= 20;
+   if( weather_info.moon_loc == MOON_PEAK )
+      chance += 20;
+
+   if( str_cmp( arg, "FORCE" ) )
+   {
+      chance += ( ( 5 - ch->pcdata->generation ) * 10 );
+      chance += ch->pcdata->vamp_level;
+      if( ( ch->pcdata->generation < 4 ) || ( ch->pcdata->vamp_level > 14 ) )
+         chance += 50;
+   }
+   else
+   {
+      chance -= ( ( 5 - ch->pcdata->generation ) * 10 );
+      chance -= ch->pcdata->vamp_level;
+      if( ( ch->pcdata->generation < 4 ) || ( ch->pcdata->vamp_level > 14 ) )
+         chance -= 50;
+   }
+
+   if( number_range( 0, 100 ) < chance )
+   {
+      AFFECT_DATA af1;
+      AFFECT_DATA af2;
+      AFFECT_DATA af3;
+      AFFECT_DATA af4;
+
+      int duration;
+
+      af1.type = skill_lookup( "Rage:sharpened claws" );
+      af2.type = skill_lookup( "Rage:wolven strength" );
+      af3.type = skill_lookup( "Rage:disregard for pain" );
+      af4.type = skill_lookup( "Enraged" );
+
+      if( !str_cmp( arg, "FORCE" ) )
+      {
+         duration = number_range( ch->pcdata->generation / 4, 4 );
+
+         af4.duration = duration;
+         af4.location = APPLY_NONE;
+         af4.modifier = 0;
+         af4.bitvector = 0;
+         affect_join( ch, &af4 );
+
+         af1.duration = duration;
+         af1.location = APPLY_DAMROLL;
+         af1.modifier = ( 10 - ch->pcdata->generation ) * 4;
+         af1.bitvector = 0;
+         affect_join( ch, &af1 );
+
+         af2.duration = duration;
+         af2.location = APPLY_HITROLL;
+         af2.modifier = ( 10 - ch->pcdata->generation ) * 4;
+         af2.bitvector = 0;
+         affect_join( ch, &af2 );
+
+         af3.duration = duration;
+         af3.location = APPLY_AC;
+         af3.modifier = ( 5 + ch->pcdata->generation ) * 10;
+         af3.bitvector = 0;
+         affect_join( ch, &af3 );
+      }
+      else
+      {
+         duration = number_range( ch->pcdata->generation / 3, 5 );
+         af4.duration = duration;
+         af4.location = 0;
+         af4.modifier = 0;
+         af4.bitvector = 0;
+         affect_join( ch, &af4 );
+
+         af1.duration = duration;
+         af1.location = APPLY_DAMROLL;
+         af1.modifier = ( 10 - ch->pcdata->generation ) * 4;
+         af1.bitvector = 0;
+         affect_join( ch, &af1 );
+
+         af2.duration = duration;
+         af2.location = APPLY_HITROLL;
+         af2.modifier = ( 10 - ch->pcdata->generation ) * 4;
+         af2.bitvector = 0;
+         affect_join( ch, &af2 );
+
+         af3.duration = duration;
+         af3.location = APPLY_AC;
+         af3.modifier = ( 5 + ch->pcdata->generation ) * 15;
+         af3.bitvector = 0;
+         affect_join( ch, &af3 );
+      }
+      send_to_char( "You are @@eENRAGED!!!!!!\n\r", ch );
+      SET_BIT( ch->pcdata->pflags, PFLAG_RAGED );
+      ch->pcdata->bloodlust = ( ch->pcdata->bloodlust_max - number_range( 0, ch->pcdata->generation * 3 ) );
+      ch->stance = STANCE_WARRIOR;
+      ch->stance_ac_mod = 0;
+      ch->stance_dr_mod = 0;
+      ch->stance_hr_mod = 0;
+   }
+   else
+      send_to_char( "You fail to become @@eENRAGED@@N.\n\r", ch );
+   return;
+}
