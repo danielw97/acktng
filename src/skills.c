@@ -1160,8 +1160,10 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
            do_headbutt(ch, "enemy");
         else if (roll < 90)
            do_bash(ch, "enemy");
-        else
+        else if (roll < 96)
            do_dirt(ch, "enemy");
+        else
+           do_stun(ch, "enemy");
      }
 
      for(int i = 0; i < MAX_COMBO; i++)
