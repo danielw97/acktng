@@ -788,11 +788,14 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
    if( victim == NULL )
       victim = ch->fighting;
 
-   dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 10, get_psuedo_level(ch) * get_curr_str(ch) / 5)
+   dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 10, get_psuedo_level(ch) * get_curr_str(ch) / 5);
 
    dam += get_damroll(ch)/2;
 
-   dam += dam * ch->lvl[CLASS_WAR] / 100;
+   if (ch->lvl[CLASS_WAR] > ch->lvl[CLASS_PUG])
+      dam += dam * ch->lvl[CLASS_WAR] / 100;
+   else
+      dam += dam * ch->lvl[CLASS_PUG] / 100;
 
    if (ch->remort[CLASS_KNI] > 0)
       dam += dam * ch->remort[CLASS_KNI] / 50;
