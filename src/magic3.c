@@ -1915,9 +1915,12 @@ void do_stance( CHAR_DATA * ch, char *argument )
                sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_CASTER:
-               if( ( ch->lvl[0] > 50 ) /* mage */
-                   || ( ch->lvl[1] > 70 ) /* cleric */
-                   || ( ch->lvl[4] > 60 ) )  /* psi */
+               if( ( ch->lvl[CLASS_MAG] > 50 ) /* mage */
+                   || ( ch->lvl[CLASS_CLE] > 70 ) /* cleric */
+                   || ( ch->lvl[CLASS_PSI] > 60 )
+                   || ch->pcdata->order[0] == CLASS_CLE
+                   || ch->pcdata->order[0] == CLASS_MAG
+                   || ch->pcdata->order[0] == CLASS_PSI )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_WIZARD:
@@ -1965,16 +1968,19 @@ void do_stance( CHAR_DATA * ch, char *argument )
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
             case STANCE_HEALER:
-               if( ch->lvl[INDEX_CLE] > 60)
+               if( ch->lvl[INDEX_CLE] > 60 || ch->pcdata->order[0] == CLASS_CLE)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
+               break;
             case STANCE_WARRIOR:
-               if( ch->lvl[INDEX_WAR] > 60)
+               if( ch->lvl[INDEX_WAR] > 60 || ch->pcdata->order[0] == CLASS_WAR)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
+               break;
             case STANCE_THIEF:
-               if( ch->lvl[INDEX_THI] > 60)
+               if( ch->lvl[INDEX_THI] > 60 || ch->pcdata->order[0] == CLASS_THI)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
+               break;
             case STANCE_PUGILIST:
-               if( ch->lvl[INDEX_PUG] > 60)
+               if( ch->lvl[INDEX_PUG] > 60 || ch->pcdata->order[0] == CLASS_PUG)
                   sprintf( cat_buf, "%s\n\r", stance_app[i].name );
                break;
 
@@ -2010,9 +2016,12 @@ void do_stance( CHAR_DATA * ch, char *argument )
             break;
          }
          case STANCE_CASTER:
-            if( ( ch->lvl[0] > 50 ) /* mage */
-                || ( ch->lvl[1] > 70 ) /* cleric */
-                || ( ch->lvl[4] > 60 ) )  /* psi */
+            if( ( ch->lvl[CLASS_MAG] > 50 )
+                || ( ch->lvl[CLASS_CLE] > 70 )
+                || ( ch->lvl[CLASS_PSI] > 60 )
+                || ch->pcdata->order[0] == CLASS_CLE
+                || ch->pcdata->order[0] == CLASS_MAG
+                || ch->pcdata->order[0] == CLASS_PSI )
             {
                legal_stance = TRUE;
                break;
@@ -2113,25 +2122,25 @@ void do_stance( CHAR_DATA * ch, char *argument )
                break;
             }
          case STANCE_HEALER:
-            if (ch->lvl[INDEX_CLE] > 60)
+            if (ch->lvl[INDEX_CLE] > 60 || ch->pcdata->order[0] == CLASS_CLE)
             {
                legal_stance = TRUE;
                break;
             }
          case STANCE_WARRIOR:
-            if (ch->lvl[INDEX_WAR] > 60)
+            if (ch->lvl[INDEX_WAR] > 60 || ch->pcdata->order[0] == CLASS_WAR)
             {
                legal_stance = TRUE;
                break;
             }
          case STANCE_THIEF:
-            if (ch->lvl[INDEX_THI] > 60)
+            if (ch->lvl[INDEX_THI] > 60 || ch->pcdata->order[0] == CLASS_THI)
             {
                legal_stance = TRUE;
                break;
             }
          case STANCE_PUGILIST:
-            if (ch->lvl[INDEX_PUG] > 60)
+            if (ch->lvl[INDEX_PUG] > 60 || ch->pcdata->order[0] == CLASS_PUG)
             {
                legal_stance = TRUE;
                break;

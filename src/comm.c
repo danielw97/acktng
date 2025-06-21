@@ -1131,24 +1131,24 @@ void bust_a_prompt( DESCRIPTOR_DATA * d )
       if( ch->hit < ch->max_hit )
       {
          check = 1;
-         sprintf( buf, "<%dhp", ch->hit );
+         sprintf( buf, "<%ldhp", ch->hit );
          strcat( buf2, buf );
       }
       if( ch->mana < ch->max_mana )
       {
          if( check == 1 )
-            sprintf( buf, " %dmn", ch->mana );
+            sprintf( buf, " %ldmn", ch->mana );
          else
-            sprintf( buf, "<%dmn", ch->mana );
+            sprintf( buf, "<%ldmn", ch->mana );
          check = 1;
          strcat( buf2, buf );
       }
       if( ch->move < ch->max_move )
       {
          if( check == 1 )
-            sprintf( buf, " %dmv", ch->move );
+            sprintf( buf, " %ldmv", ch->move );
          else
-            sprintf( buf, "<%dmv", ch->move );
+            sprintf( buf, "<%ldmv", ch->move );
          strcat( buf2, buf );
          check = 1;
       }
@@ -1403,7 +1403,7 @@ void bust_a_prompt( DESCRIPTOR_DATA * d )
             break;
          }
          case 'h':
-            sprintf( buf2, "%d", ch->hit );
+            sprintf( buf2, "%ld", ch->hit );
             i = buf2;
             break;
          case '!':
@@ -1419,27 +1419,27 @@ void bust_a_prompt( DESCRIPTOR_DATA * d )
             i = buf2;
             break;
          case 'H':
-            sprintf( buf2, "%d", ch->max_hit );
+            sprintf( buf2, "%ld", ch->max_hit );
             i = buf2;
             break;
          case 'm':
-            sprintf( buf2, "%d", ch->mana );
+            sprintf( buf2, "%ld", ch->mana );
             i = buf2;
             break;
          case 'M':
-            sprintf( buf2, "%d", ch->max_mana );
+            sprintf( buf2, "%ld", ch->max_mana );
             i = buf2;
             break;
          case 'v':
-            sprintf( buf2, "%d", ch->move );
+            sprintf( buf2, "%ld", ch->move );
             i = buf2;
             break;
          case 'V':
-            sprintf( buf2, "%d", ch->max_move );
+            sprintf( buf2, "%ld", ch->max_move );
             i = buf2;
             break;
          case 'x':
-            sprintf( buf2, "%d", ch->exp );
+            sprintf( buf2, "%ld", ch->exp );
             i = buf2;
             break;
          case 'g':
@@ -2576,9 +2576,12 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
             for( ;; )
             {
                race_skill_list = one_argument( race_skill_list, race_skill );
-               if( skill_lookup( race_skill ) < 0 )
+               int gsn = skill_lookup( race_skill );
+               if (strlen(race_skill) < 1)
                   break;
-               ch->pcdata->learned[skill_lookup( race_skill )] = 101;
+               if( gsn <= 0 )
+                  break;
+               ch->pcdata->learned[gsn] = 101;
             }
          }
          ch->deaf = 0;

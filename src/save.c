@@ -288,7 +288,7 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
             ( ch->in_room == get_room_index( ROOM_VNUM_LIMBO )
               && ch->was_in_room != NULL ) ? ch->was_in_room->vnum : ch->in_room->vnum );
 
-   fprintf( fp, "HpManaMove   %d %d %d %d %d %d\n", ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move );
+   fprintf( fp, "HpManaMove   %ld %ld %ld %ld %ld %ld\n", ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move );
 
 
    fprintf( fp, "Money %d ", MAX_CURRENCY );
@@ -299,7 +299,7 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
    for( foo = 0; foo < MAX_CURRENCY; foo++ )
       fprintf( fp, "%d ", ch->bank_money->cash_unit[foo] );
    fprintf( fp, "%s", "\n" );
-   fprintf( fp, "Exp          %li\n", ch->exp );
+   fprintf( fp, "Exp          %ld\n", ch->exp );
    fprintf( fp, "Act          %d\n", ch->act );
    fprintf( fp, "Config       %d\n", ch->config );
    fprintf( fp, "AffectedBy   %d\n", ch->affected_by );
