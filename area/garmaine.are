@@ -1939,7 +1939,7 @@ martin~
 @@gMartin is truly a master of the sword, and the mind.@@N
 ~
 3146859 27372 1000 S
-138 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 425662 0 80
 | 0 0 0 0 0 0 0
@@ -1951,7 +1951,7 @@ elis~
 Her face seems to glow brighter than the lights inside.
 ~
 3145835 27368 1000 S
-139 2
+165 2
 -2500 1000 1000
 ! 0 0 0 7 425726 37751848 48
 | 0 0 0 0 0 0 0
@@ -1963,7 +1963,7 @@ butch~
 @@gButch is known as the greatest thief that ever lived, or treasurer hunter as he would put it.  Better watch your pocket.@@N
 ~
 3145839 125674 1000 S
-128 1
+165 1
 -2500 1000 1000
 ! 2 0 0 7 425726 262144 80
 | 0 0 0 0 0 0 0
@@ -1974,7 +1974,7 @@ Darkshade~
 @@gIt is hard to make out a true image of him, since he blends in with almost everything.@@N
 ~
 3145835 125694 1000 S
-132 1
+165 1
 -2500 1000 1000
 ! 2 0 0 7 425726 0 144
 | 0 0 0 0 0 0 0
@@ -1985,7 +1985,7 @@ Xania~
 @@gCeles appears to be tired, and yawns at the sight of you.@@N
 ~
 3145835 27368 1000 S
-140 2
+165 2
 -2500 1000 1000
 ! 0 0 0 7 425726 8392832 48
 | 0 0 0 0 0 0 0
@@ -1997,7 +1997,7 @@ garmaine gate guard~
 @@gThe guard stands motionless, but you probably couldn't sneak past him.@@N
 ~
 3145803 27368 1000 S
-141 1
+165 1
 -2500 1000 1000
 ! 7 0 0 7 490126 38010880 48
 | 0 0 0 0 0 0 0
@@ -2009,7 +2009,7 @@ relm~
 @@gRelm looks like a sweet, innocent little girl.@@N
 ~
 3145835 92906 1000 S
-135 2
+165 2
 -2500 1000 1000
 ! 5 0 0 7 686222 4195328 144
 | 0 0 0 0 0 0 0
@@ -2021,7 +2021,7 @@ james~
 @@gJames has traveled the world over, and is adept at many things.@@N
 ~
 3145835 27368 1000 S
-139 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 948878 33280 48
 | 0 0 0 0 0 0 0
@@ -2033,7 +2033,7 @@ jack~
 @@gJack looks just like a bodybuilder.@@N
 ~
 3145835 92906 1000 S
-139 1
+165 1
 -2500 1000 1000
 ! 7 0 0 7 457358 295424 80
 | 0 0 0 0 0 0 0
@@ -2045,7 +2045,7 @@ guardian~
 @@gThe Guardian is fearless, and extremely strong.@@N
 ~
 3145835 117482 1000 S
-145 0
+165 0
 -2500 1000 1000
 ! 0 0 0 7 424590 33554944 144
 | 0 0 0 0 0 0 0
@@ -2057,7 +2057,7 @@ Shawn~
 @@gHe is a master of the darkness, king of the shadows.@@N
 ~
 3145835 125674 1000 S
-136 1
+165 1
 -2500 1000 1000
 ! 6 0 0 7 424846 50364416 80
 | 0 0 0 0 0 0 0
@@ -2069,7 +2069,7 @@ flaming hydra~
 @@gThe Hydra seems to draw his power from the flames.@@N
 ~
 3145835 19176 -1000 S
-139 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 490126 50332672 48
 | 0 0 0 0 0 0 0
@@ -2081,7 +2081,7 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-136 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 948878 1048576 80
 | 0 0 0 0 0 0 0
@@ -2093,7 +2093,7 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-135 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 948878 1048576 80
 | 0 0 0 0 0 0 0
@@ -2105,7 +2105,7 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-141 1
+165 1
 -2500 1000 1000
 ! 7 0 0 7 948878 1048576 48
 | 0 0 0 0 0 0 0
@@ -2117,7 +2117,7 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-135 1
+165 1
 -2500 1000 1000
 ! 7 0 0 7 948878 1048576 48
 | 0 0 0 0 0 0 0
@@ -2129,7 +2129,7 @@ frost dragon~
 @@gHe would much rather be in a freezing room than where he is now.@@N
 ~
 3145835 543464 0 S
-141 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 948878 0 80
 | 0 0 0 0 0 0 0
@@ -2141,7 +2141,7 @@ ice lion~
 @@gHe is very strong and agile.@@N
 ~
 3145825 1100520 0 S
-141 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 950158 16777728 144
 | 0 0 0 0 0 0 0
@@ -2153,7 +2153,7 @@ frozen necromancer~
 @@gThe Necromancer looks older than time itself.@@N
 ~
 3145825 1690314 -1000 S
-133 2
+165 2
 -2500 1000 1000
 ! 8 0 0 7 424590 50331648 80
 | 0 0 0 0 0 0 0
@@ -2165,7 +2165,7 @@ ice golem~
 @@gThe Golem has transfixed eyes.  He doesn't seem to care about much.@@N
 ~
 3145825 1067752 0 S
-136 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 948910 8 48
 | 0 0 0 0 0 0 0
@@ -2177,7 +2177,7 @@ poppy~
 @@gHe is an old man, but looks strong.@@N
 ~
 3145825 1600248 1000 S
-136 1
+165 1
 -2500 1000 1000
 ! 5 0 0 7 424590 33554944 80
 | 0 0 0 0 0 0 0
@@ -2189,7 +2189,7 @@ guyue~
 @@gHe looks like an animal, heck, he acts like one too.@@N
 ~
 3145833 1633000 0 S
-136 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 948990 33554432 144
 | 0 0 0 0 0 0 0
@@ -2201,7 +2201,7 @@ frost behemoth~
 @@gHe is larger than most anything else in the world.@@N
 ~
 3145825 117482 -1000 S
-144 1
+165 1
 -2500 1000 1000
 ! 7 0 0 7 424622 4 48
 | 0 0 0 0 0 0 0
@@ -2213,7 +2213,7 @@ chimera~
 @@gHer three heads give her a wide range of view.@@N
 ~
 3145833 1100520 -1000 S
-143 2
+165 2
 -2500 1000 1000
 ! 3 0 0 7 424846 55578152 48
 | 0 0 0 0 0 0 0
@@ -2225,7 +2225,7 @@ yeti~
 @@gThe Yeti is larger than people depicted him as being.@@N
 ~
 3145825 125674 0 S
-134 1
+165 1
 -2500 1000 1000
 ! 3 0 0 7 424590 262144 80
 | 0 0 0 0 0 0 0
@@ -2235,8 +2235,8 @@ yeti~
 sword diamonds~
 @@lS@@gw@@lo@@gr@@ld @@lo@@lf @@lD@@gi@@ga@@lm@@lo@@gn@@gd@@ls@@N~
 @@gThe @@lS@@gw@@lo@@gr@@ld @@lo@@lf @@lD@@gi@@ga@@lm@@lo@@gn@@gd@@ls@@g, a weapon of legend.@@N~
-5 134217793 8421376 75777
-0 0 0 11 0 0 0 0 0 0
+5 134217921 8421376 75777
+0 0 0 3 0 0 0 0 0 0
 15
 A
 19 50
@@ -2273,7 +2273,7 @@ L
 diamond leggings~
 @@aD@@gi@@ga@@am@@go@@gn@@ad @@aL@@ge@@gg@@ag@@ai@@gn@@gg@@as@@N~
 @@gThe @@aD@@gi@@ga@@am@@go@@gn@@ad @@aL@@ge@@gg@@ag@@ai@@gn@@gg@@as@@g sparkle in the light.@@N~
-9 134217824 9437184 32869
+9 134217952 9437184 32869
 0 0 0 0 0 0 0 0 0 0
 15
 A
