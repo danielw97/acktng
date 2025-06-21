@@ -1,0 +1,24 @@
+#AREA
+stop~
+Q 16
+K  none ~
+L {?? ??}~
+N 2
+I 150 150
+V 166 265
+X 0
+F 15
+U @@WThe @@ysun@@W seems trying to make itself visible through the fog.@@N~
+O Virant~
+R Virant~
+W Virant~
+B Currently building area.
+S Title not shown on area list.
+#ROOMS
+#166
+New room~
+No description~
+0 11
+S
+#0
+#$
