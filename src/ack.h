@@ -1397,7 +1397,7 @@ MID *get_mob_index args( ( int vnum ) );
 OID *get_obj_index args( ( int vnum ) );
 RID *get_room_index args( ( int vnum ) );
 char fread_letter args( ( FILE * fp ) );
-int fread_number args( ( FILE * fp ) );
+long fread_number args( ( FILE * fp ) );
 char *fread_string args( ( FILE * fp ) );
 void fread_to_eol args( ( FILE * fp ) );
 char *fsave_to_eol args( ( FILE * fp ) );
@@ -1439,7 +1439,6 @@ void violence_update args( ( void ) );
 void multi_hit args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dt ) );
 int damage args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt ) );
 int swing args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt ) );
-bool can_use_skill args( ( CHAR_DATA *ch, char *skill, bool message) );
 void update_pos args( ( CHAR_DATA * victim ) );
 void stop_fighting args( ( CHAR_DATA * ch, bool fBoth ) );
 void death_cry args( ( CHAR_DATA * ch ) );
@@ -1471,7 +1470,8 @@ int get_dodge args( ( CHAR_DATA *ch ) );
 int get_block args( ( CHAR_DATA *ch ) );
 int get_hitroll args( (CHAR_DATA *ch) );
 int get_damroll args( (CHAR_DATA *ch) );
-
+bool can_use_skill args( ( CHAR_DATA *ch, char *skill, bool message) );
+bool can_use_skill_by_gsn args( ( CHAR_DATA *ch, int gsn, bool message) );
 void affect_to_room args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );
 void r_affect_remove args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );
 

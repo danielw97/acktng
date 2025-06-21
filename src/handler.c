@@ -567,7 +567,14 @@ int get_stat( CHAR_DATA *ch, int stat )
 
 bool can_use_skill( CHAR_DATA *ch, char *skill, bool message)
 {
-   int gsn = skill_lookup(skill), cnt;
+   int gsn = skill_lookup(skill);
+
+   return can_use_skill_by_gsn( ch, gsn, message );
+}
+
+bool can_use_skill_by_gsn( CHAR_DATA *ch, int gsn, bool message)
+{
+   int cnt;
 
    if ( gsn == -1 )
    {
@@ -603,6 +610,7 @@ bool can_use_skill( CHAR_DATA *ch, char *skill, bool message)
       send_to_char("You don't know how to do that\n\r", ch);
 
    return FALSE;
+
 }
 
 /*

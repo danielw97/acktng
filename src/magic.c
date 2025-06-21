@@ -154,17 +154,25 @@ int mana_cost( CHAR_DATA * ch, int sn )
  */
 int skill_lookup( const char *name )
 {
-   int sn;
    char buf[MAX_STRING_LENGTH];
+   int sn;
+
+   sprintf(buf,"Entering skill_lookup looking for %s", name);
+   bug(buf,0);
+
+   if (strlen(name) < 1)
+      return -1;
 
    for( sn = 0; sn < MAX_SKILL; sn++ )
    {
-      sprintf(buf, "%s", name);
-      sprintf(buf, "%s", skill_table[sn].name);
       if( skill_table[sn].name == NULL )
-         break;
+         continue;
       if( !str_prefix( name, skill_table[sn].name ) )
+      {
+         sprintf(buf, "Skill_lookup: Found %s with %d", skill_table[sn].name, sn);
+         bug(buf, 0);
          return sn;
+      }
    }
 
    return -1;

@@ -580,7 +580,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       if ( IS_NPC(ch) && IS_SET(ch->skills, MOB_MARTIAL) )
          chance = 75;
 
-      if ( !IS_NPC(ch) && ch->pcdata->learned[gsn_martial_arts] > 0)
+      if ( !IS_NPC(ch) && can_use_skill_by_gsn(ch, gsn_martial_arts, FALSE) )
          chance = 50;
 
       if (number_percent() < chance)
@@ -678,21 +678,19 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
     * Bonuses.
     */
    dam += number_range( GET_DAMROLL( ch ) * 13 / 20, GET_DAMROLL( ch ) * 15 / 20 );
-   if( ( !IS_NPC( ch ) && ch->pcdata->learned[gsn_enhanced_damage] > 0 )
-       || item_has_apply( ch, ITEM_APPLY_ENHANCED ) || ( IS_NPC( ch ) && IS_SET( ch->skills, MOB_ENHANCED ) ) )
-   {
-      if( IS_NPC( ch ) )
-         dam += dam * 1 / 20;
-      else
-         dam += ( ch->pcdata->learned[gsn_enhanced_damage] > 0 ) ?
-            dam * ch->pcdata->learned[gsn_enhanced_damage] / 150 : dam * .4;
-   }
+
+   if (can_use_skill_by_gsn(ch, gsn_enhanced_damage, FALSE) )
+      dam += dam * 0.6;
+   else if( IS_NPC( ch ) && IS_SET(ch->skills, MOB_ENHANCED) )
+      dam += dam * 0.2;
+   else if (item_has_apply(ch, ITEM_APPLY_ENHANCED) )
+      dam += dam * 0.4;
 
    dam += dam * ch->remort[CLASS_KNI]/100;
    dam += dam * ch->remort[CLASS_SWO]/100;
    dam += dam * ch->remort[CLASS_PAL]/100 * .75;
 
-   if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword] > 0 )
+   if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, gsn_enhanced_sword, FALSE) )
    {
       dam += dam * number_range(20,40)/100;
    }
@@ -705,12 +703,16 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if( dt == TYPE_MARTIAL )
       dam = ( dam * 4 ) / 3;
 
-   if (wield == NULL && get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL && !IS_NPC(ch) && ch->pcdata->learned[gsn_bare_hand] > 0)
+   if (!IS_NPC(ch) && can_use_skill_by_gsn(ch, gsn_bare_hand, FALSE) )
    {
-      if (ch->remort[CLASS_MON] > 0)
-        dam += dam * ch->remort[CLASS_MON] / 100;
-      else if (ch->remort[CLASS_BRA] > 0)
-        dam += dam * ch->remort[CLASS_BRA] / 100;
+      if ( (wield == NULL && get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL) ||
+           (wield->value[3] == 0 && can_use_skill_by_gsn(ch, gsn_equip_fist, FALSE) && IS_SET(wield->extra_flags, ITEM_FIST) ) )
+      {
+         if (ch->remort[CLASS_MON] > 0)
+            dam += dam * ch->remort[CLASS_MON] / 100;
+         else if (ch->remort[CLASS_BRA] > 0)
+            dam += dam * ch->remort[CLASS_BRA] / 100;
+      }
    }
 
    dam = swing(ch, victim, dam, dt);

@@ -2876,7 +2876,9 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       hp_div = 2;
       mana_div = 2;
       move_div = 2;
-      stat_bonus = 10;
+      ac_bonus = -5;
+      hrdr_bonus = 1;
+      stat_bonus = 5;
 
       if (obj->weight > 19)
       {
@@ -2901,6 +2903,8 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    else if (obj->item_type == ITEM_WEAPON)
    {
       hrdr_bonus = 5;
+      ac_bonus = -5;
+      stat_bonus = 5;
       hr_div = 6;
       dr_div = 6;
       ac_div = 20;
@@ -2940,6 +2944,8 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    else if (obj->item_type == ITEM_ARMOR)
    {
       ac_bonus = -10;
+      hrdr_bonus = 1;
+      stat_bonus = 5;
       hr_div = 8;
       dr_div = 8;
       ac_div = 2;
@@ -2989,6 +2995,9 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       hp_div = 10;
       mana_div = 10;
       move_div = 10;
+      ac_bonus = -5;
+      stat_bonus = 5;
+      hrdr_bonus = 1;
 
       if (obj->weight > 19)
       {
@@ -3319,9 +3328,9 @@ char fread_letter( FILE * fp )
 /*
  * Read a number from a file.
  */
-int fread_number( FILE * fp )
+long fread_number( FILE * fp )
 {
-   int number;
+   long number;
    bool sign;
    char c;
 

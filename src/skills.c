@@ -19,7 +19,7 @@ void do_backstab( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( !can_use_skill(ch, "backstab") )
+   if( !can_use_skill(ch, "backstab", TRUE) )
       return;
 
    one_argument( argument, arg );
@@ -49,7 +49,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( !can_use_skill(ch, "circle") )
+   if( !can_use_skill(ch, "circle", TRUE) )
       return;
 
    one_argument( argument, arg );
@@ -207,7 +207,7 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
       return FALSE;
    }
 
-   if( !can_use_skill(ch, skill_table[gsn].name) )
+   if( !can_use_skill_by_gsn(ch, gsn, TRUE) )
       return FALSE;
 
    one_argument( argument, arg );
@@ -776,7 +776,7 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       strcpy(arg, "enemy");
    }
 
-   if( !can_use_skill(ch, skill_table[gsn].name) )
+   if( !can_use_skill_by_gsn(ch, gsn, TRUE) )
       return;
 
    if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
@@ -1127,13 +1127,39 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
    ch->combo[0] = gsn;
 
-   if (ch->combo[0] == gsn_knee && ch->combo[1] == gsn_headbutt && ch->combo[2] == gsn_punch && ch->combo[3] == gsn_kick)
+   if (ch->combo[0] != ch->combo[1] && ch->combo[1] != ch->combo[2] && ch->combo[2] != ch->combo[3] && ch->combo[3] != -1)
    {
+     for(int i = 0; i < MAX_COMBO; i++)
+        ch->combo[i] = -1;
+
      send_to_char("@@yCombo triggered!@@N\n\r",ch);
      act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
      act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
-     do_knee(ch, victim->name);
-     do_kick(ch, victim->name);
+
+     int max = 2;
+
+     if (number_percent < 11)
+     {
+        max = 3;
+        if (number_percent < 50)
+           max = 4;
+     }
+     for(int i = 0; i < max; i++)
+     {
+        int roll = number_percent();
+        if(roll < 20)
+           do_punch(ch, "enemy");
+        else if(roll < 40)
+           do_kick(ch, "enemy");
+        else if(roll < 60)
+           do_knee(ch, "enemy");
+        else if (roll < 80)
+           do_headbutt(ch, "enemy");
+        else if (roll < 90)
+           do_bash(ch, "enemy");
+        else
+           do_dirt(ch, "enemy");
+     }
 
      for(int i = 0; i < MAX_COMBO; i++)
         ch->combo[i] = -1;

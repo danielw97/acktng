@@ -72,7 +72,7 @@
 #define MAX_RACE                     16
 #define MAX_CLAN                     9 /* number of clans */
 #define EXP_LEVEL                 1000 /* exp per level */
-#define MAX_SKILL                  300
+#define MAX_SKILL                  999
 #define MAX_CLASS                    6
 #define MAX_REMORT		    (MAX_CLASS*2)
 #define INDEX_WAR		     3
@@ -100,7 +100,7 @@
 
 #define CLASS_MAG		     0
 #define CLASS_CLE		     1
-#define CLASS_THI         2
+#define CLASS_THI                    2
 #define CLASS_WAR		     3
 #define CLASS_PSI		     4
 #define CLASS_PUG		     5
