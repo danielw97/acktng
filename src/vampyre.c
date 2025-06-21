@@ -225,17 +225,11 @@ bool spell_embrace( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj 
 
       victim->pcdata->learned[skill_lookup( "feed" )] = 90;
    }
-
-
-
    return TRUE;
 }
 
-
 void do_family( CHAR_DATA * ch, char *argument )
 {
-
-
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *victim;
    DESCRIPTOR_DATA *d;
@@ -417,7 +411,6 @@ void do_instruct( CHAR_DATA * ch, char *argument )
    sprintf( buf, "You are now learned in the way of @@e%s@@N!!!\n\r", skill_table[sn].name );
    send_to_char( buf, victim );
 
-
    return;
 }
 
@@ -433,15 +426,12 @@ bool spell_mesmerise( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
       return FALSE;
    }
 
-
-
    act( "You stare into $S eyes!", ch, NULL, victim, TO_CHAR );
    act( "$n stares into $S eyes!", ch, NULL, victim, TO_NOTVICT );
    act( "$n stares into your eyes!", ch, NULL, victim, TO_VICT );
 
    if( saves_spell( level, victim ) || IS_VAMP( victim ) || is_affected( victim, sn ) )
    {
-
       return TRUE;
    }
    send_to_char( " Spell removed for now.\n\r", ch );
@@ -455,7 +445,6 @@ bool spell_mesmerise( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
 
 bool spell_cloak_darkness( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-
    AFFECT_DATA af;
    if( IS_NPC( ch ) )
    {
@@ -479,8 +468,6 @@ bool spell_cloak_darkness( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA
 
 bool spell_blood_walk( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
-
-
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
 
    if( deathmatch )

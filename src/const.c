@@ -2568,7 +2568,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "stun", {182, 182, 182, 182, 182, 182},
+    "stun", {182, 182, 182, 182, 182, 182,
+             182, 182, 182, 182, 182, 182,},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_stun, SLOT( 0 ), 0, 24,
     "", "",

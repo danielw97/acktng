@@ -41,8 +41,6 @@ extern POL_DATA politics_data;
 extern CHAR_DATA *quest_target;
 extern CHAR_DATA *quest_mob;
 
-
-
 /*
  * Local functions.
  */
@@ -70,7 +68,6 @@ void obj_damage args( ( OBJ_DATA * obj, CHAR_DATA * victim, int dam ) );
 int do_damage args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical) );
 int damage args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt ) );
 
-
 /*
  * Control the fights going on.
  * Called periodically by update_handler.
@@ -91,14 +88,10 @@ void violence_update( void )
     CHAR_DATA	*marker;  */
    bool has_cast = FALSE;
 
-
-
    CREF( ch_next, CHAR_NEXT );
    for( ch = first_char; ch; ch = ch_next )
    {
-
       ch_next = ch->next;
-
 
       /*
        * For stunning during combat
@@ -151,17 +144,6 @@ void violence_update( void )
          ch->hit =
             UMAX( 10, ch->hit - number_range( get_psuedo_level( ch ) * 5 / 1000, get_psuedo_level( ch ) * 10 / 1000 ) );
       }
-/*
- *  for when wolves can't cast normal spells, 
- *  increase regen rate mucho to compensate.  
- *  let's make it a skill instead..hehehe
- *
-   if ( ch->fighting != NULL )
-     ch->hit = ( UMIN( ch->max_hit, ( ch->hit + ( number_range( (20 * ch->max_hit /100) , 
-
- */
-
-/* Heated armor damage :) ZEN  */
 
       if( ch->hit > 0
           && ch->in_room != NULL && get_room_index( ch->in_room->vnum ) != NULL && item_has_apply( ch, ITEM_APPLY_HEATED ) )
@@ -188,10 +170,6 @@ void violence_update( void )
          ch->stunTimer--;
          continue;
       }
-      /*
-       * heal check for  solos ( mob )..   Zen  
-       */
-
 
       if( ( ch->is_free == FALSE ) && ( IS_NPC( ch ) ) && IS_SET( ch->act, ACT_SOLO ) && ch->hit > 0 )
       {
@@ -323,7 +301,6 @@ void violence_update( void )
                }
             }
          }
-
       }
       /*
        * Hunting mobs.
@@ -338,7 +315,6 @@ void violence_update( void )
       {
          continue;
       }
-
 
       if( ( IS_AWAKE( ch ) )
           && ( ch->is_free == FALSE )
@@ -412,8 +388,6 @@ void violence_update( void )
    return;
 }
 
-
-
 /*
  * Do one group of attacks.
  */
@@ -424,7 +398,6 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    OBJ_DATA *wield2 = NULL;
    int dual_chance = 0;
    bool multi_hit = FALSE;
-
 
    if( ( ch->stance == STANCE_CASTER ) || ( ch->stance == STANCE_WIZARD ) )
       return;
@@ -532,8 +505,6 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
 #define MAX_IX 120
 #define MAX_DAM_MOD 1.4
 
-
-
 /*
  * Hit one guy once.
  */
@@ -634,8 +605,6 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       ix = -( ONE_STEPS * ( long int )( diceroll + victim_ac ) ) / ( long int )victim_ac;
       ix += ZERO_RATIO;
    }
-
-
 
    if( ix < 0 )
    {
@@ -787,8 +756,6 @@ int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
 
    return return_val;
 }
-
-
 
 /*
  * Inflict damage from a hit.
@@ -1413,8 +1380,6 @@ bool is_safe( CHAR_DATA * ch, CHAR_DATA * victim )
    return FALSE;
 }
 
-
-
 struct hunt_mobs_tp
 {
    int mob_vnum;
@@ -1644,6 +1609,10 @@ bool check_avoidance( CHAR_DATA *ch, CHAR_DATA *victim )
    int max_avoidance = 75;
    int chance = number_percent();
 
+   // Can't avoid when stunned!
+   if (ch->position <= POS_STUNNED)
+      return FALSE;
+
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
       max_avoidance += 10;
 
@@ -1863,8 +1832,6 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
    return FALSE;
 }
 
-
-
 /*
  * Check_skills : if IS_NPC(ch) then check ch->skills to see if there are
  * any extra attack skills available for use --Stephen
@@ -1930,8 +1897,6 @@ bool check_skills( CHAR_DATA * ch, CHAR_DATA * victim )
 
    return FALSE;
 }
-
-
 
 /*
  * Set position of a victim.
@@ -2153,8 +2118,6 @@ void update_pos( CHAR_DATA * victim )
    return;
 }
 
-
-
 /*
  * Start fights.
  */
@@ -2205,8 +2168,6 @@ void set_fighting( CHAR_DATA * ch, CHAR_DATA * victim, bool check )
    return;
 }
 
-
-
 /*
  * Stop fights.
  */
@@ -2218,7 +2179,6 @@ void stop_fighting( CHAR_DATA * ch, bool fBoth )
    ch->fighting = NULL;
    ch->position = POS_STANDING;
    update_pos( ch );
-
 
    if( !fBoth )
       return;
@@ -2237,8 +2197,6 @@ void stop_fighting( CHAR_DATA * ch, bool fBoth )
    CUREF( fch_next );
    return;
 }
-
-
 
 /*
  * Make a corpse out of a character.
@@ -2377,7 +2335,6 @@ void make_corpse( CHAR_DATA * ch, char *argument )
       }
    }  /* end of player only */
 
-
    if( ( IS_SET( ch->act, PLR_KILLER ) || IS_SET( ch->act, PLR_THIEF ) )
        && ( ( target != NULL )
             && ( ( !IS_NPC( target ) ) || ( !str_cmp( rev_spec_lookup( target->spec_fun ), "spec_executioner" ) ) ) ) )
@@ -2447,8 +2404,6 @@ void make_corpse( CHAR_DATA * ch, char *argument )
 
 }
 
-
-
 /*
  * Improved Death_cry contributed by Diavolo.
  */
@@ -2463,8 +2418,6 @@ void death_cry( CHAR_DATA * ch )
    ROOM_INDEX_DATA *was_in_room;
    char *msg;
    int door;
-
-
 
    if( IS_NPC( ch ) )
       msg = "You hear something's death cry.";
@@ -2490,8 +2443,6 @@ void death_cry( CHAR_DATA * ch )
    return;
 }
 
-
-
 void raw_kill( CHAR_DATA * victim, char *argument )
 {
    CHAR_DATA *check;
@@ -2512,8 +2463,6 @@ void raw_kill( CHAR_DATA * victim, char *argument )
       quest_mob = NULL;
    }
 
-
-
    if( ( IS_NPC( victim ) || !IS_VAMP( victim ) ) && ( victim->is_free == FALSE ) && ( victim->in_room != NULL ) )
       make_corpse( victim, arg );
 
@@ -2523,7 +2472,6 @@ void raw_kill( CHAR_DATA * victim, char *argument )
          end_hunt( check );
 /*        unhunt(check);*/
    }
-
 
    if( IS_NPC( victim ) && !IS_SET( victim->act, ACT_INTELLIGENT ) )
    {
@@ -2583,8 +2531,6 @@ void raw_kill( CHAR_DATA * victim, char *argument )
    }
    return;
 }
-
-
 
 void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
 {
@@ -2785,6 +2731,7 @@ struct dam_table_str
    const char *vp;
    const char *str;
 };
+
 struct dam_table_str dam_table[] = {
    {2900, "@@l", "!!!!VIVESECT!!!!", "!!!!VIVESECTS!!!!", " into a living corpse with"},
    {2400, "@@m", "!!!!OBLITERATE!!!!", "!!!!OBLITERATES!!!!", " into disappearing particles with"},
@@ -2913,105 +2860,6 @@ void dam_message( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, bool crit
    return;
 }
 
-
-
-/*
- * Disarm a creature.
- * Caller must check for successful attack.
- */
-void disarm( CHAR_DATA * ch, CHAR_DATA * victim, OBJ_DATA * obj )
-{
-   int chance;
-
-   set_fighting( ch, victim, TRUE );
-   if( obj == NULL )
-   {
-      if( ( ( obj = get_eq_char( victim, WEAR_HOLD_HAND_L ) ) == NULL ) || ( obj->item_type != ITEM_WEAPON ) )
-         if( ( ( obj = get_eq_char( victim, WEAR_HOLD_HAND_R ) ) == NULL ) || ( obj->item_type != ITEM_WEAPON ) )
-         {
-            send_to_char( "Your opponent is not wielding a weapon.\n\r", ch );
-            return;
-         }
-   }
-   if( IS_SET( obj->extra_flags, ITEM_NODISARM ) )
-      return;
-
-   if( !IS_NPC( victim ) && IS_WOLF( victim ) && ( IS_SHIFTED( victim ) || IS_RAGED( victim ) ) )
-      return;
-
-
-   /*
-    * Check to see if victim is warrior, and if they deflect the disarm
-    * In part, this idea comes from HiddenWorlds,
-    * but it's also pretty common sense really ;)
-    * Stephen
-    */
-
-   chance = IS_NPC( victim ) ? IS_SET( victim->skills, MOB_NODISARM ) ? 90 : 0 : victim->pcdata->learned[gsn_nodisarm];
-
-   if( number_percent(  ) < chance )
-   {
-      act( "You dodge $n's disarm attempt!", ch, NULL, victim, TO_VICT );
-      act( "You fail to disarm $N!", ch, NULL, victim, TO_CHAR );
-      act( "$N dodges $n's disarm attempt!", ch, NULL, victim, TO_NOTVICT );
-      return;
-   }
-
-   act( "$n DISARMS you!", ch, NULL, victim, TO_VICT );
-   act( "You disarm $N!", ch, NULL, victim, TO_CHAR );
-   act( "$n DISARMS $N!", ch, NULL, victim, TO_NOTVICT );
-
-   obj_from_char( obj );
-   /*
-    * if ( IS_NPC(victim) )
-    * obj_to_char( obj, victim );
-    * else 
-    */
-
-   obj_to_room( obj, victim->in_room );
-
-   return;
-}
-
-
-
-/*
- * Trip a creature.
- * Caller must check for successful attack.
- */
-void trip( CHAR_DATA * ch, CHAR_DATA * victim )
-{
-   if( victim->wait == 0 )
-   {
-      int chance;
-
-      chance = IS_NPC( victim ) ? IS_SET( victim->skills, MOB_NOTRIP ) ? 75 : 0 : victim->pcdata->learned[gsn_notrip];
-
-      /*
-       * Check for no-trip 
-       */
-      if( number_percent(  ) < chance )
-      {
-         act( "You sidestep $n's attempt to trip you!", ch, NULL, victim, TO_VICT );
-         act( "$N sidesteps your attempt to trip $M!", ch, NULL, victim, TO_CHAR );
-         act( "$N sidesteps $n's attempt to trip $m!", ch, NULL, victim, TO_NOTVICT );
-         return;
-      }
-
-      act( "$n trips you and you go down!", ch, NULL, victim, TO_VICT );
-      act( "You trip $N and $N goes down!", ch, NULL, victim, TO_CHAR );
-      act( "$n trips $N and $N goes down!", ch, NULL, victim, TO_NOTVICT );
-
-      WAIT_STATE( ch, 2 * PULSE_VIOLENCE );
-      WAIT_STATE( victim, 2 * PULSE_VIOLENCE );
-      victim->position = POS_RESTING;
-   }
-
-   return;
-}
-
-
-
 void do_kill( CHAR_DATA * ch, char *argument )
 {
    char arg[MAX_INPUT_LENGTH];
@@ -3076,83 +2924,11 @@ void do_kill( CHAR_DATA * ch, char *argument )
    return;
 }
 
-void do_target( CHAR_DATA * ch, char *argument )
-{
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *victim;
-   if( ( !IS_NPC( ch ) ) && ( ch->pcdata->learned[gsn_target] < 65 ) )
-   {
-      send_to_char( "You are not trained enough in this skill!!\n\r", ch );
-      return;
-   }
-   one_argument( argument, arg );
-
-   if( arg[0] == '\0' )
-   {
-      send_to_char( "Target whom?\n\r", ch );
-      return;
-   }
-
-   if( ( victim = get_char_room( ch, arg ) ) == NULL )
-   {
-      send_to_char( "They aren't here.\n\r", ch );
-      return;
-   }
-
-   if( !IS_NPC( victim ) && !( deathmatch ) )
-   {
-      if( !IS_SET( victim->act, PLR_KILLER ) && !IS_SET( victim->act, PLR_THIEF ) )
-      {
-         send_to_char( "You must MURDER a player.\n\r", ch );
-         return;
-      }
-   }
-   else
-   {
-      if( IS_AFFECTED( victim, AFF_CHARM ) && victim->master != NULL )
-      {
-         send_to_char( "You must MURDER a charmed creature.\n\r", ch );
-         return;
-      }
-   }
-
-   if( victim == ch )
-   {
-      send_to_char( "You hit yourself.  Ouch!\n\r", ch );
-      one_hit( ch, ch, TYPE_UNDEFINED );
-      return;
-   }
-
-   if( is_safe( ch, victim ) )
-      return;
-
-   if( IS_AFFECTED( ch, AFF_CHARM ) && ch->master == victim )
-   {
-      act( "$N is your beloved master.", ch, NULL, victim, TO_CHAR );
-      return;
-   }
-
-   if( ch->position == POS_FIGHTING )
-   {
-      send_to_char( "@@rTracking, tracking, tracking...@@eGOT HIM!!!@@N\n\r", ch );
-      stop_fighting( ch, FALSE );
-   }
-
-   WAIT_STATE( ch, 1 * PULSE_VIOLENCE );
-   check_killer( ch, victim );
-   one_hit( ch, victim, TYPE_UNDEFINED );
-   return;
-}
-
-
-
 void do_murde( CHAR_DATA * ch, char *argument )
 {
    send_to_char( "If you want to MURDER, spell it out.\n\r", ch );
    return;
 }
-
-
 
 void do_murder( CHAR_DATA * ch, char *argument )
 {
@@ -3466,7 +3242,6 @@ void obj_damage( OBJ_DATA * obj, CHAR_DATA * victim, int dam )
    tail_chain(  );
    return;
 }
-
 
 void death_message( CHAR_DATA * ch, CHAR_DATA * victim, int dt, int max_dt )
 {
@@ -3889,306 +3664,11 @@ void do_assist( CHAR_DATA * ch, char *argument )
    return;
 }
 
-void do_stake( CHAR_DATA * ch, char *argument )
-{
-   /*
-    * If player has an object of TYPE_STAKE (s)he can try and stake
-    * * a fallen ( hit<0 ) vampire.  Note that there is still a check
-    * * for pkilling here... PKOK players can be vamp hunters with
-    * * no worries! (:  Player must also have learnt the stake skill.
-    * * A sleeping vamp is also considered vulnerable.
-    */
-
-   CHAR_DATA *victim;
-   OBJ_DATA *stake;
-   int chance;
-   char arg[MAX_INPUT_LENGTH];
-   int sn;
-
-   one_argument( argument, arg );
-
-   if( arg[0] == '\0' )
-   {
-      send_to_char( "Stake who?\n\r", ch );
-      return;
-   }
-
-   victim = get_char_room( ch, arg );
-
-   if( victim == NULL )
-   {
-      send_to_char( "Couldn't find the target.\n\r", ch );
-      return;
-   }
-   if( victim == ch )
-   {
-      send_to_char( "Oh yeah, that would be a really good idea!\n\r", ch );
-      return;
-   }
-
-   if( ( stake = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) == NULL )
-      stake = get_eq_char( ch, WEAR_HOLD_HAND_R );
-   if( stake == NULL || stake->item_type != ITEM_STAKE )
-   {
-      send_to_char( "You have to be holding some sort of stake to do that\n\r", ch );
-      return;
-   }
-   if( IS_NPC( victim ) )
-   {
-      send_to_char( "This is only used against PLAYER @@dVampyres@@N!!\n\r", ch );
-      return;
-   }
-
-   chance = IS_NPC( ch ) ? ch->level * 2 : ch->pcdata->learned[gsn_stake];
-   if( !IS_AWAKE( victim ) )
-      chance += 25;
-
-   /*
-    * Make it harder to stake higher level targets 
-    */
-   if( ( victim->pcdata->vamp_level * 5 ) > ch->level )
-      chance -= ( victim->pcdata->vamp_level * 5 ) - ch->level;
-
-   if( victim->hit > 0 && IS_AWAKE( victim ) )  /* i.e. not vulnerable! */
-      chance = 0;
-
-   if( !IS_VAMP( victim ) )
-      chance = 0;
-
-   WAIT_STATE( ch, skill_table[gsn_stake].beats );
-   check_killer( ch, victim );
-
-   if( number_percent(  ) < chance )
-   {
-      /*
-       * Success 
-       */
-      act( "$n raises $p above $s head and plunges it into $N's heart!", ch, stake, victim, TO_NOTVICT );
-      act( "You raise $p above your head and plunge it into $N's heart!", ch, stake, victim, TO_CHAR );
-      act( "$n raises $p above his head and plunges it into your heart!", ch, stake, victim, TO_VICT );
-      act( "$n screams in agony and withers to black dust!", victim, NULL, NULL, TO_ROOM );
-      send_to_char( "You scream in agony and withers to black dust!\n\r", victim );
-      send_to_char( "@@NYou find yourself back in Moribund....\n\r", victim );
-      send_to_char( "@@NSuddenly, you realize that your @@eKindred@@Nknowledge\n\r", victim );
-      send_to_char( "@@Nis gone! So, THAT's what the sun looks like to mortals!\n\r", victim );
-      send_to_char( "@@NYou had almost forgotten.....\n\r", victim );
-
-
-
-      REMOVE_BIT( victim->pcdata->pflags, PFLAG_VAMP );
-      victim->pcdata->vamp_level = 0;
-      victim->pcdata->vamp_exp = 0;
-      victim->pcdata->bloodlust = 0;
-      victim->pcdata->bloodlust_max = 0;
-      victim->pcdata->generation = -1;
-      victim->pcdata->vamp_bloodline = 0;
-      victim->pcdata->recall_vnum = 3001;
-
-/* remove vamp skills from dead vamp  */
-
-      for( sn = 0; sn <= MAX_SKILL; sn++ )
-         if( ( skill_table[sn].flag2 == VAMP ) && ( victim->pcdata->learned[sn] > 0 ) )
-            victim->pcdata->learned[sn] = 0;
-
-      if( !IS_NPC( victim ) )
-         gain_exp( victim, 0 - ( 3 * victim->exp / 4 ) );
-
-      raw_kill( victim, "" );
-      return;
-   }
-   else
-   {
-      act( "$n tries to plunge $p into $N's chest, but misses!", ch, stake, victim, TO_NOTVICT );
-      act( "You try to plunge $p into $N's chest, but miss!", ch, stake, victim, TO_CHAR );
-      act( "$n tries to plunge $p into your chest, but misses!", ch, stake, victim, TO_VICT );
-      set_fighting( ch, victim, TRUE );
-   }
-   return;
-}
-
-void do_stun( CHAR_DATA * ch, char *argument )
-{
-   CHAR_DATA *victim;
-   int chance;
-   int chance2;
-
-   if( IS_NPC( ch ) )   /* for now */
-      return;
-
-
-   if( ( ( victim = ch->fighting ) == NULL ) || ( victim->in_room == NULL ) )
-   {
-      send_to_char( "You must be fighting someone first!\n\r", ch );
-      return;
-   }
-   if( !IS_NPC( ch ) && ( ch->pcdata->learned[gsn_stun] == 0 ) )
-   {
-      send_to_char( "Huh?", ch );
-      return;
-   }
-
-   chance = 45 - ( 100 * victim->hit / victim->max_hit );
-   /*
-    * The lower the victim's hp, the greater the chance 
-    */
-
-   chance2 = IS_NPC( ch ) ? ch->level * 2 : ch->pcdata->learned[gsn_stun];
-
-   WAIT_STATE( ch, skill_table[gsn_stun].beats );
-
-   if( ( number_percent(  ) + number_percent(  ) ) < ( chance + chance2 ) )
-   {
-      /*
-       * Success 
-       */
-      act( "You slam into $N, leaving $M stunned.", ch, NULL, victim, TO_CHAR );
-      act( "$n slams into you, leaving you stunned.", ch, NULL, victim, TO_VICT );
-      act( "$n slams into $N, leaving $M stunned.", ch, NULL, victim, TO_NOTVICT );
-
-      victim->stunTimer += number_range( 1, get_psuedo_level( ch ) / 30 );
-      if( ch->remort[CLASS_MON] > 40 )
-         victim->stunTimer += number_range( 1, 2 );
-
-   }
-   else
-   {
-      /*
-       * Ooops! 
-       */
-      act( "You try to slam into $N, but miss and fall onto your face!", ch, NULL, victim, TO_CHAR );
-      act( "$n tries to slam into you, but misses and falls onto $s face!", ch, NULL, victim, TO_VICT );
-      act( "$n tries to slam into $N, but misses and falls onto $s face!", ch, NULL, victim, TO_NOTVICT );
-      damage( ch, ch, number_range( 5, 20 ), TYPE_UNDEFINED );
-      return;
-   }
-   return;
-}
-
-void do_feed( CHAR_DATA * ch, char *argument )
-{
-   CHAR_DATA *victim;
-   char arg[MAX_INPUT_LENGTH];
-   int chance;
-   int bloodgain = 0;
-   one_argument( argument, arg );
-
-   if( !IS_VAMP( ch ) )
-   {
-      send_to_char( "Huh?\n\r", ch );
-      return;
-   }
-   if( ( victim = ch->fighting ) == NULL )
-   {
-      send_to_char( "You must be fighting someone first!\n\r", ch );
-      return;
-
-   }
-
-   if( victim == ch )
-   {
-      send_to_char( "What are you?  A blood donor?\n\r", ch );
-      return;
-   }
-
-   if( IS_SET( victim->in_room->room_flags, ROOM_SAFE ) )
-   {
-      send_to_char( "The Gods prevent your foul deed.  This is a safe room!\n\r", ch );
-      return;
-   }
-
-   if( victim->hit > 0 && victim->position > POS_FIGHTING )
-   {
-      /*
-       * failure 
-       */
-      act( "$N is far too alert to let you do that!", ch, NULL, victim, TO_CHAR );
-      return;
-   }
-
-   chance = IS_NPC( ch ) ? ch->level : ch->pcdata->learned[gsn_feed];
-   WAIT_STATE( ch, skill_table[gsn_feed].beats );
-   check_killer( ch, victim );
-   if( number_percent(  ) < chance )
-   {
-      /*
-       * Success! 
-       */
-      act( "You plunge your fangs into $N's neck, and taste sweet blood!", ch, NULL, victim, TO_CHAR );
-      act( "$n plunges $s fangs into your neck, and sucks your blood!", ch, NULL, victim, TO_VICT );
-      act( "$n plunges $s fangs into $N's neck and sucks $S blood!", ch, NULL, victim, TO_NOTVICT );
-      if( ch->pcdata->bloodlust <= -5 )
-      {
-         ch->pcdata->bloodlust = ch->pcdata->bloodlust_max;
-         send_to_char( " You have now entered the ranks of the @@dKINDRED@@N!!!!\n\r", ch );
-      }
-      else
-      {
-
-         bloodgain = ( ( 20 - ch->pcdata->generation ) + ch->pcdata->vamp_level );
-         if( bloodgain > victim->level )
-            bloodgain = victim->level;
-      }
-
-      if( ( ch->pcdata->bloodlust + bloodgain ) > ch->pcdata->bloodlust_max )
-         ch->pcdata->bloodlust = ch->pcdata->bloodlust_max;
-      else
-         ch->pcdata->bloodlust += bloodgain;
-
-      if( victim->hit > 0 )
-      {
-         act( "$N screams in horror at you at jumps to $s feet!", ch, NULL, victim, TO_CHAR );
-         act( "You scream in horror at $n and jump to your feet!", ch, NULL, victim, TO_VICT );
-         act( "$N screams in horror at $n and jumps to $S feet!", ch, NULL, victim, TO_NOTVICT );
-         do_say( victim, "You'll pay for that!" );
-         victim->position = POS_STANDING;
-         multi_hit( victim, ch, TYPE_UNDEFINED );
-      }
-
-
-
-      if( IS_VAMP( victim ) )
-      {
-         return;  /* for now :P SRZ 
-                   * if ( !IS_NPC(ch) && !IS_NPC(victim) )
-                   * {
-                   * ch->pcdata->bloodlust = victim->pcdata->bloodlust;
-                   * victim->pcdata->bloodlust = 0;
-                   * }
-                   * if ( !IS_NPC(ch) && IS_NPC(victim) )
-                   * gain_bloodlust( ch, victim->level*2 );
-                   * if ( IS_NPC(ch) && !IS_NPC(victim) )
-                   * victim->pcdata->bloodlust = 0;     */
-      }
-
-
-
-      return;
-   }
-   else
-   {
-      /*
-       * D'oh! 
-       */
-      act( "You try to find a spot on $N's neck to suck blood, but fail!", ch, NULL, victim, TO_CHAR );
-      act( "$n tries to find a spot on your neck to suck blood, but fails!", ch, NULL, victim, TO_VICT );
-      act( "$n tries to find a spot on $N's neck to suck blood, but fails!", ch, NULL, victim, TO_NOTVICT );
-      /*
-       * Any penalty? 
-       */
-      return;
-   }
-   return;
-}
-
-
 void check_adrenaline( CHAR_DATA * ch, sh_int damage )
 {
-
    AFFECT_DATA af;
 
-
-
-   if( damage > 200 && ch->pcdata->learned[gsn_adrenaline] > 70 )
+   if( damage > 200 && can_use_skill_by_gsn(ch, gsn_adrenaline) )
    {
 
       af.type = skill_lookup( "adrenaline bonus" );
@@ -4200,217 +3680,4 @@ void check_adrenaline( CHAR_DATA * ch, sh_int damage )
       send_to_char( "You feel a surge of @@eadrenaline@@N!!!\n\r", ch );
    }
    return;
-
 }
-
-void do_frenzy( CHAR_DATA * ch, char *argument )
-{
-   CHAR_DATA *vch;
-   CHAR_DATA *vch_next;
-   int moves = 0;
-   int damage = 0;
-
-   if( IS_NPC( ch ) )
-      return;
-
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_frenzy] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
-      return;
-   }
-
-
-   if( !IS_NPC( ch ) && ch->move < 100 && ch->position == POS_FIGHTING )
-   {
-      send_to_char( "You're too tired to go into a frenzy!\n\r", ch );
-      return;
-   }
-
-   if( !IS_NPC( ch ) && number_percent(  ) > ch->pcdata->learned[gsn_frenzy] )
-   {
-      send_to_char( "You try to go into a frenzy, but nearly cut your leg off!\n\r", ch );
-      return;
-   }
-
-   if( ( ( ch->move / 10 ) < 75 ) && ch->move >= 75 )
-      moves = 75;
-   else
-      moves = ch->move / 10;
-
-   if( ch->hit > 200 )
-      damage = 20;
-
-   WAIT_STATE( ch, skill_table[gsn_frenzy].beats );
-
-   if( !IS_NPC( ch ) && ch->position == POS_FIGHTING )
-      ch->move -= moves;
-   ch->hit -= damage;
-   CREF( vch_next, CHAR_NEXTROOM );
-   for( vch = ch->in_room->first_person; vch != NULL; vch = vch_next )
-   {
-      vch_next = vch->next_in_room;
-      if( vch->in_room == NULL )
-         continue;
-
-      if( vch->in_room == ch->in_room )
-      {
-         if( vch != ch && ( vch->in_room == ch->in_room )
-             && ( IS_NPC( ch ) ? !IS_NPC( vch ) : IS_NPC( vch ) ) && ( vch->master != ch ) && ( !is_same_group( ch, vch ) ) )
-         {
-            act( "$N is @@Wgored@@N by your FRENZY!!!\n\r", ch, NULL, vch, TO_CHAR );
-            act( "$n goes into a FRENZY, @@Wgoring@@N $N!!!", ch, NULL, vch, TO_ROOM );
-            check_killer( ch, vch );
-            one_hit( ch, vch, -1 );
-            continue;
-         }
-      }
-   }
-   CUREF( vch_next );
-
-   return;
-}
-
-
-
-
-void do_rage( CHAR_DATA * ch, char *argument )
-{
-   char arg[MAX_INPUT_LENGTH];
-   int chance = 0;
-
-
-   one_argument( argument, arg );
-
-
-
-   if( IS_NPC( ch ) || !IS_WOLF( ch ) )
-   {
-      send_to_char( "Huh?\n\r", ch );
-      return;
-   }
-   if( IS_RAGED( ch ) )
-   {
-      send_to_char( "You are already @@rRAGING@@N!!!\n\r", ch );
-      return;
-   }
-
-   chance = 60 - ( ch->hit / ch->max_hit * 100 );
-   if( weather_info.moon_loc == MOON_PEAK )
-      chance += 15;
-   if( IS_SHIFTED( ch ) )
-      chance += 20;
-   if( weather_info.moon_phase == MOON_FULL )
-      chance += 30;
-   if( weather_info.moon_phase == MOON_NEW )
-      chance -= 30;
-   if( weather_info.moon_loc == MOON_DOWN )
-      chance -= 20;
-   if( weather_info.moon_loc == MOON_PEAK )
-      chance += 20;
-
-   if( str_cmp( arg, "FORCE" ) )
-   {
-      chance += ( ( 5 - ch->pcdata->generation ) * 10 );
-      chance += ch->pcdata->vamp_level;
-      if( ( ch->pcdata->generation < 4 ) || ( ch->pcdata->vamp_level > 14 ) )
-         chance += 50;
-   }
-   else
-   {
-      chance -= ( ( 5 - ch->pcdata->generation ) * 10 );
-      chance -= ch->pcdata->vamp_level;
-      if( ( ch->pcdata->generation < 4 ) || ( ch->pcdata->vamp_level > 14 ) )
-         chance -= 50;
-   }
-
-
-   if( number_range( 0, 100 ) < chance )
-   {
-      AFFECT_DATA af1;
-      AFFECT_DATA af2;
-      AFFECT_DATA af3;
-      AFFECT_DATA af4;
-
-      int duration;
-
-      af1.type = skill_lookup( "Rage:sharpened claws" );
-      af2.type = skill_lookup( "Rage:wolven strength" );
-      af3.type = skill_lookup( "Rage:disregard for pain" );
-      af4.type = skill_lookup( "Enraged" );
-
-      if( !str_cmp( arg, "FORCE" ) )
-      {
-         duration = number_range( ch->pcdata->generation / 4, 4 );
-
-         af4.duration = duration;
-         af4.location = APPLY_NONE;
-         af4.modifier = 0;
-         af4.bitvector = 0;
-         affect_join( ch, &af4 );
-
-
-         af1.duration = duration;
-         af1.location = APPLY_DAMROLL;
-         af1.modifier = ( 10 - ch->pcdata->generation ) * 4;
-         af1.bitvector = 0;
-         affect_join( ch, &af1 );
-
-         af2.duration = duration;
-         af2.location = APPLY_HITROLL;
-         af2.modifier = ( 10 - ch->pcdata->generation ) * 4;
-         af2.bitvector = 0;
-         affect_join( ch, &af2 );
-
-         af3.duration = duration;
-         af3.location = APPLY_AC;
-         af3.modifier = ( 5 + ch->pcdata->generation ) * 10;
-         af3.bitvector = 0;
-         affect_join( ch, &af3 );
-
-
-
-      }
-      else
-      {
-         duration = number_range( ch->pcdata->generation / 3, 5 );
-         af4.duration = duration;
-         af4.location = 0;
-         af4.modifier = 0;
-         af4.bitvector = 0;
-         affect_join( ch, &af4 );
-
-
-         af1.duration = duration;
-         af1.location = APPLY_DAMROLL;
-         af1.modifier = ( 10 - ch->pcdata->generation ) * 4;
-         af1.bitvector = 0;
-         affect_join( ch, &af1 );
-
-         af2.duration = duration;
-         af2.location = APPLY_HITROLL;
-         af2.modifier = ( 10 - ch->pcdata->generation ) * 4;
-         af2.bitvector = 0;
-         affect_join( ch, &af2 );
-
-         af3.duration = duration;
-         af3.location = APPLY_AC;
-         af3.modifier = ( 5 + ch->pcdata->generation ) * 15;
-         af3.bitvector = 0;
-         affect_join( ch, &af3 );
-
-
-      }
-      send_to_char( "You are @@eENRAGED!!!!!!\n\r", ch );
-      SET_BIT( ch->pcdata->pflags, PFLAG_RAGED );
-      ch->pcdata->bloodlust = ( ch->pcdata->bloodlust_max - number_range( 0, ch->pcdata->generation * 3 ) );
-      ch->stance = STANCE_WARRIOR;
-      ch->stance_ac_mod = 0;
-      ch->stance_dr_mod = 0;
-      ch->stance_hr_mod = 0;
-   }
-   else
-      send_to_char( "You fail to become @@eENRAGED@@N.\n\r", ch );
-   return;
-
-
-};

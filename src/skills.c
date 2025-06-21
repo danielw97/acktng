@@ -404,6 +404,7 @@ void do_disarm( CHAR_DATA * ch, char *argument )
    if( IS_SET( obj->extra_flags, ITEM_NODISARM ) )
       return;
 
+   combo(ch, victim, gsn_disarm);
 
    WAIT_STATE( ch, skill_table[gsn_disarm].beats );
    percent = number_percent(  ) + victim->level - ch->level;
@@ -479,7 +480,6 @@ void do_trip( CHAR_DATA * ch, char *argument )
       check_killer( ch, victim );
       trip( ch, victim );
       WAIT_STATE( ch, skill_table[gsn_trip].beats );
-
    }
 
    return;
@@ -574,6 +574,8 @@ void do_dirt( CHAR_DATA * ch, char *argument )
       af.bitvector = AFF_BLIND;
       affect_to_char( victim, &af );
    }
+
+   combo(ch, victim, gsn_dirt);
    return;
 }
 
@@ -1089,6 +1091,277 @@ void do_leadership( CHAR_DATA * ch, char *argument )
    return TRUE;
 }
 
+void disarm( CHAR_DATA * ch, CHAR_DATA * victim, OBJ_DATA * obj )
+{
+   int chance;
+
+   set_fighting( ch, victim, TRUE );
+   if( obj == NULL )
+   {
+      if( ( ( obj = get_eq_char( victim, WEAR_HOLD_HAND_L ) ) == NULL ) || ( obj->item_type != ITEM_WEAPON ) )
+         if( ( ( obj = get_eq_char( victim, WEAR_HOLD_HAND_R ) ) == NULL ) || ( obj->item_type != ITEM_WEAPON ) )
+         {
+            send_to_char( "Your opponent is not wielding a weapon.\n\r", ch );
+            return;
+         }
+   }
+   if( IS_SET( obj->extra_flags, ITEM_NODISARM ) )
+      return;
+
+   if( !IS_NPC( victim ) && IS_WOLF( victim ) && ( IS_SHIFTED( victim ) || IS_RAGED( victim ) ) )
+      return;
+
+
+   /*
+    * Check to see if victim is warrior, and if they deflect the disarm
+    * In part, this idea comes from HiddenWorlds,
+    * but it's also pretty common sense really ;)
+    * Stephen
+    */
+
+   chance = IS_NPC( victim ) ? IS_SET( victim->skills, MOB_NODISARM ) ? 90 : 0 : victim->pcdata->learned[gsn_nodisarm];
+
+   if( number_percent(  ) < chance )
+   {
+      act( "You dodge $n's disarm attempt!", ch, NULL, victim, TO_VICT );
+      act( "You fail to disarm $N!", ch, NULL, victim, TO_CHAR );
+      act( "$N dodges $n's disarm attempt!", ch, NULL, victim, TO_NOTVICT );
+      return;
+   }
+
+   act( "$n DISARMS you!", ch, NULL, victim, TO_VICT );
+   act( "You disarm $N!", ch, NULL, victim, TO_CHAR );
+   act( "$n DISARMS $N!", ch, NULL, victim, TO_NOTVICT );
+
+   obj_from_char( obj );
+   /*
+    * if ( IS_NPC(victim) )
+    * obj_to_char( obj, victim );
+    * else 
+    */
+
+   obj_to_room( obj, victim->in_room );
+
+   return;
+}
+
+void trip( CHAR_DATA * ch, CHAR_DATA * victim )
+{
+   if( victim->wait == 0 )
+   {
+      int chance;
+
+      chance = IS_NPC( victim ) ? IS_SET( victim->skills, MOB_NOTRIP ) ? 75 : 0 : victim->pcdata->learned[gsn_notrip];
+
+      /*
+       * Check for no-trip 
+       */
+      if( number_percent(  ) < chance )
+      {
+         act( "You sidestep $n's attempt to trip you!", ch, NULL, victim, TO_VICT );
+         act( "$N sidesteps your attempt to trip $M!", ch, NULL, victim, TO_CHAR );
+         act( "$N sidesteps $n's attempt to trip $m!", ch, NULL, victim, TO_NOTVICT );
+         return;
+      }
+
+      act( "$n trips you and you go down!", ch, NULL, victim, TO_VICT );
+      act( "You trip $N and $N goes down!", ch, NULL, victim, TO_CHAR );
+      act( "$n trips $N and $N goes down!", ch, NULL, victim, TO_NOTVICT );
+
+      WAIT_STATE( ch, 2 * PULSE_VIOLENCE );
+      WAIT_STATE( victim, 2 * PULSE_VIOLENCE );
+      victim->position = POS_RESTING;
+   }
+
+   return;
+}
+
+void do_frenzy( CHAR_DATA * ch, char *argument )
+{
+   CHAR_DATA *vch;
+   CHAR_DATA *vch_next;
+   int moves = 0;
+   int damage = 0;
+
+   if( IS_NPC( ch ) )
+      return;
+
+   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_frenzy] == 0 )
+   {
+      send_to_char( "You are not trained in this skill!\n\r", ch );
+      return;
+   }
+
+
+   if( !IS_NPC( ch ) && ch->move < 100 && ch->position == POS_FIGHTING )
+   {
+      send_to_char( "You're too tired to go into a frenzy!\n\r", ch );
+      return;
+   }
+
+   if( !IS_NPC( ch ) && number_percent(  ) > ch->pcdata->learned[gsn_frenzy] )
+   {
+      send_to_char( "You try to go into a frenzy, but nearly cut your leg off!\n\r", ch );
+      return;
+   }
+
+   if( ( ( ch->move / 10 ) < 75 ) && ch->move >= 75 )
+      moves = 75;
+   else
+      moves = ch->move / 10;
+
+   if( ch->hit > 200 )
+      damage = 20;
+
+   WAIT_STATE( ch, skill_table[gsn_frenzy].beats );
+
+   if( !IS_NPC( ch ) && ch->position == POS_FIGHTING )
+      ch->move -= moves;
+   ch->hit -= damage;
+   CREF( vch_next, CHAR_NEXTROOM );
+   for( vch = ch->in_room->first_person; vch != NULL; vch = vch_next )
+   {
+      vch_next = vch->next_in_room;
+      if( vch->in_room == NULL )
+         continue;
+
+      if( vch->in_room == ch->in_room )
+      {
+         if( vch != ch && ( vch->in_room == ch->in_room )
+             && ( IS_NPC( ch ) ? !IS_NPC( vch ) : IS_NPC( vch ) ) && ( vch->master != ch ) && ( !is_same_group( ch, vch ) ) )
+         {
+            act( "$N is @@Wgored@@N by your FRENZY!!!\n\r", ch, NULL, vch, TO_CHAR );
+            act( "$n goes into a FRENZY, @@Wgoring@@N $N!!!", ch, NULL, vch, TO_ROOM );
+            check_killer( ch, vch );
+            one_hit( ch, vch, -1 );
+            continue;
+         }
+      }
+   }
+   CUREF( vch_next );
+
+   return;
+}
+
+void do_target( CHAR_DATA * ch, char *argument )
+{
+   char arg[MAX_INPUT_LENGTH];
+   CHAR_DATA *victim;
+   if( ( !IS_NPC( ch ) ) && ( ch->pcdata->learned[gsn_target] < 65 ) )
+   {
+      send_to_char( "You are not trained enough in this skill!!\n\r", ch );
+      return;
+   }
+   one_argument( argument, arg );
+
+   if( arg[0] == '\0' )
+   {
+      send_to_char( "Target whom?\n\r", ch );
+      return;
+   }
+
+   if( ( victim = get_char_room( ch, arg ) ) == NULL )
+   {
+      send_to_char( "They aren't here.\n\r", ch );
+      return;
+   }
+
+   if( !IS_NPC( victim ) && !( deathmatch ) )
+   {
+      if( !IS_SET( victim->act, PLR_KILLER ) && !IS_SET( victim->act, PLR_THIEF ) )
+      {
+         send_to_char( "You must MURDER a player.\n\r", ch );
+         return;
+      }
+   }
+   else
+   {
+      if( IS_AFFECTED( victim, AFF_CHARM ) && victim->master != NULL )
+      {
+         send_to_char( "You must MURDER a charmed creature.\n\r", ch );
+         return;
+      }
+   }
+
+   if( victim == ch )
+   {
+      send_to_char( "You hit yourself.  Ouch!\n\r", ch );
+      one_hit( ch, ch, TYPE_UNDEFINED );
+      return;
+   }
+
+   if( is_safe( ch, victim ) )
+      return;
+
+   if( IS_AFFECTED( ch, AFF_CHARM ) && ch->master == victim )
+   {
+      act( "$N is your beloved master.", ch, NULL, victim, TO_CHAR );
+      return;
+   }
+
+   if( ch->position == POS_FIGHTING )
+   {
+      send_to_char( "@@rTracking, tracking, tracking...@@eGOT HIM!!!@@N\n\r", ch );
+      stop_fighting( ch, FALSE );
+   }
+
+   WAIT_STATE( ch, 1 * PULSE_VIOLENCE );
+   check_killer( ch, victim );
+   one_hit( ch, victim, TYPE_UNDEFINED );
+   return;
+}
+
+void do_stun( CHAR_DATA * ch, char *argument )
+{
+   CHAR_DATA *victim;
+   int chance;
+   int chance2;
+
+   if( IS_NPC( ch ) )   /* for now */
+      return;
+
+   if( can_use_skill_by_gsn(ch, gsn_stun, TRUE) )
+   {
+      return;
+   }
+
+   if( ( ( victim = ch->fighting ) == NULL ) || ( victim->in_room == NULL ) )
+   {
+      send_to_char( "You must be fighting someone first!\n\r", ch );
+      return;
+   }
+   stun(ch, victim);
+}
+
+stun( CHAR_DATA *ch, CHAR_DATA *victim )
+{
+   /*if( ( number_percent(  ) + number_percent(  ) ) < ( chance + chance2 ) )
+   {*/
+      /*
+       * Success 
+       */
+      act( "You slam into $N, leaving $M stunned.", ch, NULL, victim, TO_CHAR );
+      act( "$n slams into you, leaving you stunned.", ch, NULL, victim, TO_VICT );
+      act( "$n slams into $N, leaving $M stunned.", ch, NULL, victim, TO_NOTVICT );
+
+      victim->stunTimer += number_range( 1, get_psuedo_level( ch ) / 30 );
+      if( ch->remort[CLASS_MON] > 40 )
+         victim->stunTimer += number_range( 1, 2 );
+
+   /*}
+   else
+   {
+      /*
+       * Ooops! 
+       *
+      act( "You try to slam into $N, but miss and fall onto your face!", ch, NULL, victim, TO_CHAR );
+      act( "$n tries to slam into you, but misses and falls onto $s face!", ch, NULL, victim, TO_VICT );
+      act( "$n tries to slam into $N, but misses and falls onto $s face!", ch, NULL, victim, TO_NOTVICT );
+      return;
+   }*/
+   return;
+}
+
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
    int chance = 70;
@@ -1172,27 +1445,29 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
      act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
      act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
 
-     int max_attacks = 2;
+     int max_attacks = max-3;
 
      for(int i = 0; i < max_attacks; i++)
      {
-        int roll = number_percent();
-        if(roll < punch_cnt)
-           do_punch(ch, "enemy");
-        else if(roll < punch_cnt+kick_cnt)
-           do_kick(ch, "enemy");
-        else if(roll < punch_cnt+kick_cnt+knee_cnt)
-           do_knee(ch, "enemy");
-        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt)
-           do_headbutt(ch, "enemy");
-        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt)
-           do_disarm(ch, "enemy");
-        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt)
-           do_dirt(ch, "enemy");
-        else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt+bash_cnt)
-           do_bash(ch, "enemy");
-        else
-           max_attacks += 2;
+         int roll = number_percent();
+         if(roll < punch_cnt)
+            do_punch(ch, "enemy");
+         else if(roll < punch_cnt+kick_cnt)
+            do_kick(ch, "enemy");
+         else if(roll < punch_cnt+kick_cnt+knee_cnt)
+            do_knee(ch, "enemy");
+         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt)
+            do_headbutt(ch, "enemy");
+         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt)
+            do_disarm(ch, "enemy");
+         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt)
+            do_dirt(ch, "enemy");
+         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt+bash_cnt)
+            do_bash(ch, "enemy");
+         else if (roll < 97)
+            stun(ch, ch->fighting);
+         else
+            max_attacks += 2;
      }
 
      for(int i = 0; i < MAX_COMBO; i++)
