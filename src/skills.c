@@ -788,21 +788,20 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
    if( victim == NULL )
       victim = ch->fighting;
 
-   if( IS_NPC( ch ) )
-      dam = number_range( ch->level / 3, ch->level * 2 );
-   else
-      dam = number_range( ch->lvl[CLASS_WAR], ch->lvl[CLASS_WAR] * 2 );
+   dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 10, get_psuedo_level(ch) * get_curr_str(ch) / 5)
 
    dam += get_damroll(ch)/2;
 
    dam += dam * ch->lvl[CLASS_WAR] / 100;
 
    if (ch->remort[CLASS_KNI] > 0)
-      dam += dam * ch->remort[CLASS_KNI] / 100;
+      dam += dam * ch->remort[CLASS_KNI] / 50;
    else if (ch->remort[CLASS_SWO] > 0)
-      dam += dam * ch->remort[CLASS_SWO] / 100;
+      dam += dam * ch->remort[CLASS_SWO] / 50;
    else if (ch->remort[CLASS_MON] > 0)
-      dam += dam * ch->remort[CLASS_MON] / 100;
+      dam += dam * ch->remort[CLASS_MON] / 50;
+   else if (ch->remort[CLASS_PAL] > 0)
+      dam += dam * ch->remort[CLASS_PAL] / 50 * .75;
 
    WAIT_STATE( ch, skill_table[gsn].beats );
 
