@@ -137,7 +137,7 @@ void do_mpstat( CHAR_DATA * ch, char *argument )
 
    sprintf( buf,
             "Lv: %d.  Class: %d.  Align: %d.  AC: %d.  Gold: %d.  Exp: %d.\n\r",
-            victim->level, victim->class, victim->alignment, GET_AC( victim ), victim->gold, victim->exp );
+            victim->level, victim->class, victim->alignment, get_ac( victim ), victim->gold, victim->exp );
    send_to_char( buf, ch );
 
    for( mprg = victim->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next )

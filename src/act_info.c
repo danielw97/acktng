@@ -1765,27 +1765,27 @@ void do_score( CHAR_DATA * ch, char *argument )
    send_to_char( buf2, ch );
 
    sprintf( buf, "@@WYou are " );
-   if( GET_AC( ch ) >= 101 )
+   if( get_ac( ch ) >= 101 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@yall skin and bones." );
-   else if( GET_AC( ch ) >= 80 )
+   else if( get_ac( ch ) >= 80 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@ynaked." );
-   else if( GET_AC( ch ) >= 0 )
+   else if( get_ac( ch ) >= 0 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@ybadly armored." );
-   else if( GET_AC( ch ) >= -100 )
+   else if( get_ac( ch ) >= -100 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@yslightly armored." );
-   else if( GET_AC( ch ) >= -300 )
+   else if( get_ac( ch ) >= -300 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@ysomewhat armored." );
-   else if( GET_AC( ch ) >= -500 )
+   else if( get_ac( ch ) >= -500 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@yarmored." );
-   else if( GET_AC( ch ) >= -800 )
+   else if( get_ac( ch ) >= -800 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@ywell armored." );
-   else if( GET_AC( ch ) >= -1400 )
+   else if( get_ac( ch ) >= -1400 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@ystrongly armored." );
-   else if( GET_AC( ch ) >= -2000 )
+   else if( get_ac( ch ) >= -2000 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@yheavily armored." );
-   else if( GET_AC( ch ) >= -3000 )
+   else if( get_ac( ch ) >= -3000 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@ysuperbly armored." );
-   else if( GET_AC( ch ) >= -4500 )
+   else if( get_ac( ch ) >= -4500 )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@ydivinely armored." );
    else
       safe_strcat( MAX_STRING_LENGTH, buf, "@@yalmost invincible!" );
@@ -3082,7 +3082,7 @@ void do_consider( CHAR_DATA * ch, char *argument )
 /* LLolth added the following code to make consider show more information */
 /* root@vampyre.net */
 
-   drdiff = ( GET_DAMROLL( ch ) - GET_DAMROLL( victim ) );
+   drdiff = ( get_damroll( ch ) - get_damroll( victim ) );
    if( drdiff >= 20 )
       buf2 = "You hit alot harder than $E.";
    if( drdiff <= 10 )
@@ -3098,7 +3098,7 @@ void do_consider( CHAR_DATA * ch, char *argument )
    act( buf2, ch, NULL, victim, TO_CHAR );
    buf = "";
 
-   hrdiff = ( GET_HITROLL( ch ) - GET_HITROLL( victim ) );
+   hrdiff = ( get_hitroll( ch ) - get_hitroll( victim ) );
    if( hrdiff >= 20 )
       buf3 = "You hit alot more often than $E.";
    if( hrdiff <= 10 )
@@ -3112,7 +3112,7 @@ void do_consider( CHAR_DATA * ch, char *argument )
    act( buf3, ch, NULL, victim, TO_CHAR );
    buf3 = "";
 
-   acdiff = ( GET_AC( victim ) - GET_AC( ch ) );
+   acdiff = ( get_ac( victim ) - get_ac( ch ) );
    if( acdiff >= 100 )
       buf4 = "You are Armored like a tank compared to $E.";
    if( acdiff <= 75 )

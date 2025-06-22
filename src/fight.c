@@ -566,14 +566,14 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
          dt = TYPE_MARTIAL;
    }
 
-   victim_ac = GET_AC( victim );
+   victim_ac = get_ac( victim );
    if( !can_see( ch, victim ) )
       victim_ac -= 200;
 
    if( dt == gsn_backstab || dt == gsn_circle )
       victim_ac += 300;
 
-   diceroll = number_range( ( get_psuedo_level( ch ) * 5 ), ( get_psuedo_level( ch ) * 21 ) ) + GET_HITROLL( ch );
+   diceroll = number_range( ( get_psuedo_level( ch ) * 5 ), ( get_psuedo_level( ch ) * 21 ) ) + get_hitroll( ch );
 
    if( !IS_NPC( ch ) )
       diceroll += number_range( get_psuedo_level( ch ), ( get_psuedo_level( ch ) * 1 ) );
@@ -654,7 +654,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    /*
     * Bonuses.
     */
-   dam += number_range( GET_DAMROLL( ch ) * 13 / 20, GET_DAMROLL( ch ) * 15 / 20 );
+   dam += number_range( get_damroll( ch ) * 13 / 20, get_damroll( ch ) * 15 / 20 );
 
    if (can_use_skill_by_gsn(ch, gsn_enhanced_damage, FALSE) )
       dam += dam * 0.6;

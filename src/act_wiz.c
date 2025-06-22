@@ -923,7 +923,7 @@ void do_mstat( CHAR_DATA * ch, char *argument )
 
    sprintf( buf,
             "Lv: %d.  Class: %d.  Align: %d.  AC: %d.  Gold: %d.  Exp: %d.\n\r",
-            victim->level, victim->class, victim->alignment, GET_AC( victim ), victim->gold, victim->exp );
+            victim->level, victim->class, victim->alignment, get_ac( victim ), victim->gold, victim->exp );
    strcat( buf1, buf );
 
    if( !IS_NPC( victim ) )
@@ -938,7 +938,7 @@ void do_mstat( CHAR_DATA * ch, char *argument )
 
 
    sprintf( buf, "Hitroll: %d.  Damroll: %d.  Position: %d.  Wimpy: %d.\n\r",
-            GET_HITROLL( victim ), GET_DAMROLL( victim ), victim->position, victim->wimpy );
+            get_hitroll( victim ), get_damroll( victim ), victim->position, victim->wimpy );
    strcat( buf1, buf );
 
    if( IS_NPC( victim ) )

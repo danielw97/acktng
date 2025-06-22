@@ -437,7 +437,7 @@ int get_crit( CHAR_DATA *ch )
    if( !IS_WEAPON( wield ) )
       wield = NULL;   
       
-   if (!IS_NPC(ch) && can_use_skill_by_gsn(ch, enhanced_critical, FALSE) > 0)
+   if (!IS_NPC(ch) && can_use_skill_by_gsn(ch, gsn_enhanced_critical, FALSE) > 0)
    {
       crit += 5;
    }
@@ -447,7 +447,7 @@ int get_crit( CHAR_DATA *ch )
    crit += ch->remort[CLASS_ASS] / 20;
    crit += ch->remort[CLASS_WLK] / 20 * .75;
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, enhanced_sword_critical))
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, gsn_enhanced_sword_critical, FALSE))
    {
       crit += ch->remort[CLASS_SWO]/20;
    }
@@ -476,7 +476,7 @@ int get_crit_mult( CHAR_DATA *ch )
    crit += ch->remort[CLASS_ASS] / 5;
    crit += ch->remort[CLASS_WLK] / 5 * .75;
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, gsn_enhanced_sword_critical, FALSE) )
    {
       crit += ch->remort[CLASS_SWO]/5;
    }
@@ -541,7 +541,7 @@ int get_hitroll( CHAR_DATA *ch)
 
 int get_ac(CHAR_DATA *ch)
 {
-   int ac = get_stat(ch, APPLY_AC)
+   int ac = get_stat(ch, APPLY_AC);
 
    if (IS_NPC(ch))
    {
@@ -557,7 +557,7 @@ int get_ac(CHAR_DATA *ch)
 
    ac -= get_psuedo_level(ch) * 2;
 
-   return hit;
+   return ac;
 
 }
 

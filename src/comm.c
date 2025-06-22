@@ -1407,15 +1407,15 @@ void bust_a_prompt( DESCRIPTOR_DATA * d )
             i = buf2;
             break;
          case '!':
-            sprintf( buf2, "%d", GET_HITROLL( ch ) );
+            sprintf( buf2, "%d", get_hitroll( ch ) );
             i = buf2;
             break;
          case '+':
-            sprintf( buf2, "%d", GET_DAMROLL( ch ) );
+            sprintf( buf2, "%d", get_damroll( ch ) );
             i = buf2;
             break;
          case '*':
-            sprintf( buf2, "%d", GET_AC( ch ) );
+            sprintf( buf2, "%d", get_ac( ch ) );
             i = buf2;
             break;
          case 'H':
