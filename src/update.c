@@ -514,8 +514,6 @@ int mana_gain( CHAR_DATA * ch )
    if( gain > 0 )
    {
       gain = gain * int_app[get_curr_int( ch )].mana_regen / 10;
-      if( MAGIC_STANCE( ch ) )
-         gain = gain * int_app[get_curr_int( ch )].mana_regen / 10;
    }
    return UMIN( gain, ch->max_mana - ch->mana );
 }

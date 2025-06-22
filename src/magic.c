@@ -76,8 +76,6 @@ int mana_cost( CHAR_DATA * ch, int sn )
    }
    if( IS_NPC( ch ) )
       mincost /= 2;
-   if( !IS_NPC( ch ) && ( MAGIC_STANCE( ch ) ) )
-      mincost = mincost - ( mincost * .3 );
    if( ( !IS_NPC( ch ) ) && ( is_name( skill_table[sn].name, race_table[ch->race].skill1 ) ) )
       mincost = 10;
    if( !IS_NPC( ch ) && ( skill_table[sn].flag2 == NORM ) )
