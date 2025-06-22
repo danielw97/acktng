@@ -129,6 +129,9 @@ bool spell_black_hand( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
       af.bitvector = 0;
       af.caster = ch;
       affect_to_char( victim, &af );
+      af.location = APPLY_HIT;
+      af.modifier = -level;
+      affect_to_char( victim, &af );
    }
 
    if( obj == NULL )
