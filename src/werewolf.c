@@ -667,10 +667,7 @@ void do_rage( CHAR_DATA * ch, char *argument )
       send_to_char( "You are @@eENRAGED!!!!!!\n\r", ch );
       SET_BIT( ch->pcdata->pflags, PFLAG_RAGED );
       ch->pcdata->bloodlust = ( ch->pcdata->bloodlust_max - number_range( 0, ch->pcdata->generation * 3 ) );
-      ch->stance = STANCE_WARRIOR;
-      ch->stance_ac_mod = 0;
-      ch->stance_dr_mod = 0;
-      ch->stance_hr_mod = 0;
+      ch->stance = 0;
    }
    else
       send_to_char( "You fail to become @@eENRAGED@@N.\n\r", ch );
