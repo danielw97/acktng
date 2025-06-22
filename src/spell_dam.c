@@ -892,13 +892,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
          dam_modifier -= .50;
       }
 
-      if( ch->stance == STANCE_CASTER )
-         dam_modifier += .10;
-      else if( ch->stance == STANCE_WIZARD )
-         dam_modifier += .25;
-      else if( ch->stance == STANCE_MAGI )
-         dam_modifier += .30;
-
       dam_modifier += get_curr_wis(victim) / 100;
 
       if( ( !IS_NPC( ch ) ) && ( !IS_SET( type, REALM_MIND ) ) )
