@@ -12,7 +12,7 @@ Money 8 0 0 0 0 0 0 0 0 ClassFlags   1
 ItemType     24
 Weight       100
 Level        1
-Timer        24
+Timer        18
 Cost         10
 Values       0 0 0 1
 End
