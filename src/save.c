@@ -706,9 +706,6 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
    ch->login_sex = -1;
    ch->current_brand = NULL;
    ch->stance = 0;
-   ch->stance_ac_mod = 0;
-   ch->stance_dr_mod = 0;
-   ch->stance_hr_mod = 0;
    ch->carry_weight = 0.0;
    ch->carry_number = 0;
    ch->ngroup = NULL;
