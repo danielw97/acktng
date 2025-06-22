@@ -407,7 +407,7 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    int dual_chance = 0;
    bool multi_hit = FALSE;
 
-   if( ( ch->stance == STANCE_CASTER ) || ( ch->stance == STANCE_WIZARD ) )
+   if( IS_SET(stance_app[ch->stance].specials, STANCE_NO_HIT ) )
       return;
 
    if( ch->position == POS_RIDING )
@@ -496,13 +496,10 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       }
    }
 
-   if( !IS_NPC( ch ) && ( ( ch->stance == STANCE_AMBUSH ) || ( ch->stance == STANCE_AC_BEST ) ) )
+   if( !IS_NPC( ch ) && ( ( IS_SET(stance_app[victim->stance].specials, STANCE_NINJA ) ) ) )
    {
       send_to_char( "You step out of the shadows.\n\r", ch );
-      ch->stance = STANCE_WARRIOR;
-      ch->stance_ac_mod = 0;
-      ch->stance_dr_mod = 0;
-      ch->stance_hr_mod = 0;
+      ch->stance = 0;
       act( "$n steps out of the Shadows!", ch, NULL, NULL, TO_ROOM );
    }
    return;
