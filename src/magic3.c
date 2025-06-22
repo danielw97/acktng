@@ -113,18 +113,14 @@ bool spell_deflect_weapon( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA
 bool spell_black_hand( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
-
-
    AFFECT_DATA af;
-
-
-
+   int dam;
 
    act( "You summon a hand of death, and it chokes $N!", ch, NULL, victim, TO_CHAR );
    act( "A Black Hand grows from the shadows, and begins to choke $N!", ch, NULL, victim, TO_NOTVICT );
    act( "$n summons a Black Hand from the shadows, which begins to choke you!", ch, NULL, victim, TO_VICT );
 
-   if( saves_spell( level, victim ) || IS_VAMP( victim ) || is_affected( victim, sn ) )
+   if( saves_spell( level, victim ) || IS_VAMP( victim ) )
    {
       send_to_char( "The Black Hand dissolves back into the shadows!\n\r", victim );
       send_to_char( "The Black Hand dissolves back into the shadows!\n\r", ch );
@@ -132,15 +128,33 @@ bool spell_black_hand( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
       return TRUE;
    }
 
-   af.type = sn;
-   af.duration = 3;
-   af.location = APPLY_HIT;
-   af.modifier = level;
-   af.bitvector = 0;
-   af.caster = ch;
+   if (!is_affected( victim, sn ))
+   {
+      af.type = sn;
+      af.duration = 3;
+      af.location = APPLY_DOT;
+      af.modifier = level;
+      af.bitvector = 0;
+      af.caster = ch;
+      affect_to_char( victim, &af );
+   }
 
-   affect_to_char( victim, &af );
+   if( obj == NULL )
+   {
+      dam = ( get_psuedo_level( ch ) / 3 )
+         + dice( ( get_psuedo_level( ch ) / 6 + ADEPT_LEVEL( ch ) ), 8 )
+         + dice( ( get_psuedo_level( ch ) / 6 + ADEPT_LEVEL( ch ) ), 8 );
+      act( "@@RA @@dwraithlike hand @@Rleaps forth from $n!@@N", ch, NULL, NULL, TO_ROOM );
+      send_to_char( "@@RA @@dwraithlike hand @@Rleaps forth from your hands!@@N\n\r", ch );
+   }
+   else
+   {
+      dam = dice( level / 5, 20 );
+      act( "@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_ROOM );
+      act( "@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_CHAR );
+   }
 
+   sp_damage( obj, ch, victim, dam, REALM_DRAIN | NO_REFLECT | NO_ABSORB, sn, TRUE );
    act( "The Black Hand surrounds $N and begins to choke!", ch, NULL, victim, TO_ROOM );
 
    return TRUE;
