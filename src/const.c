@@ -2636,7 +2636,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     REMORT, NORM,
     "black hand", {182, 182, 182, 182, 7, 182,
                    182, 182, 182, 182, 7, 182},
-    spell_black_hand, TAR_CHAR_OFFENSIVE, POS_STANDING,
+    spell_black_hand, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 601 ), 50, 12,
     "", "The hand dissolves from around your throat into nothingness.",
     ""},
