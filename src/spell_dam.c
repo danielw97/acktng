@@ -899,6 +899,8 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       else if( ch->stance == STANCE_MAGI )
          dam_modifier += .30;
 
+      dam_modifier += get_curr_wis(victim) / 100;
+
       if( ( !IS_NPC( ch ) ) && ( !IS_SET( type, REALM_MIND ) ) )
       {
          if( ch->pcdata->learned[gsn_potency] > 0 )

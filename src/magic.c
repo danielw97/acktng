@@ -612,6 +612,8 @@ void do_cast( CHAR_DATA * ch, char *argument )
       mana *= 2.5;
    }
 
+   mana -= mana * (get_curr_wis(ch) + get_curr_int(ch)) / 100;
+
    if( !IS_VAMP( ch ) && ( skill_table[sn].flag2 == VAMP ) )
    {
       send_to_char( "Huh?\n\r", ch );

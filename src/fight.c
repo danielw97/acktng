@@ -737,6 +737,8 @@ int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
    if( dam <= 0 )
       dam = 1;
 
+   dam -= dam * get_curr_con(ch) / 100;
+
    int skin_mods;
    if( !IS_NPC( victim ) )
       skin_mods = race_table[victim->race].race_flags;
