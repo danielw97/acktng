@@ -629,7 +629,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
    }
 
 
-   if( IS_SET(stance_app[victim->stance].specials, STANCE_MULTI_CAST )
+   if(IS_SET(stance_app[ch->stance].specials, STANCE_MULTI_CAST )
        && ( skill_table[sn].target == TAR_CHAR_OFFENSIVE ) && ( number_range( 0, 99 ) < get_psuedo_level( ch ) - 50 ) )
    {
       mana = mana * 2 / 3;
@@ -701,7 +701,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
          }
       }
    }
-   if ( IS_SET(stance_app[victim->stance].specials, STANCE_DUAL_CAST )
+   if (IS_SET(stance_app[ch->stance].specials, STANCE_DUAL_CAST )
        && ( skill_table[sn].target == TAR_CHAR_OFFENSIVE ) && ( number_range( 0, 99 ) < get_psuedo_level( ch ) - 80 ) )
    {
       bool still_here = TRUE;
