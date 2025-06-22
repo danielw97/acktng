@@ -2719,7 +2719,7 @@ bool can_see( CHAR_DATA * ch, CHAR_DATA * victim )
    if( ( room_is_dark( ch->in_room ) && !IS_AFFECTED( ch, AFF_INFRARED ) ) && ch->in_room == victim->in_room )
       return FALSE;
 
-   if( !IS_NPC( victim ) && ( victim->stance == STANCE_AMBUSH ) )
+   if( !IS_NPC( victim ) && IS_SET(stance_app[victim->stance].specials, STANCE_NINJA ) )
       return FALSE;
 
    if( ( IS_AFFECTED( victim, AFF_INVISIBLE ) || item_has_apply( victim, ITEM_APPLY_INV ) )
