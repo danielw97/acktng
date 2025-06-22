@@ -424,7 +424,7 @@ int get_spell_crit_mult( CHAR_DATA *ch )
 
    crit += ch->lvl[CLASS_PAL]*.75;
 
-   crit += get_curr_wis(ch) / 3;
+   crit += get_curr_wis(ch) / 2;
 
    return crit;
 }
