@@ -962,9 +962,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       dam_modifier -= .25;
    }
 
-   if( MAGIC_STANCE( ch ) )
-      dam_modifier += .15;
-
    if( ( IS_SET( type, REALM_MIND ) ) && ( !HAS_MIND( victim ) ) )
       dam_modifier = 0.0;
    else if( ( ( IS_SET( type, REALM_IMPACT ) )
