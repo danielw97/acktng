@@ -3519,7 +3519,7 @@ the Crooked idea~
 ~
 ~
 131119 8320 0 S
-85 1
+84 1
 0 0 0 0
 ! 0 0 0 7 0 0 2
 | 0 0 0 0 0 0 0
@@ -3552,7 +3552,7 @@ the weapon shop guy~
 ~
 ~
 8388619 8320 0 S
-101 1
+100 1
 0 0 0 0
 ! 0 0 0 7 0 0 24590
 | 0 0 0 0 0 0 0
@@ -3586,7 +3586,7 @@ anger~
 ~
 ~
 1179657 8320 0 S
-92 1
+93 1
 0 0 0 0
 ! 0 0 0 7 0 0 24590
 | 0 0 0 0 0 0 0
@@ -3608,7 +3608,7 @@ the Golf Pro~
 ~
 ~
 1048579 8192 0 S
-82 1
+81 1
 0 0 0 0
 ! 0 0 0 7 0 0 12302
 | 0 0 0 0 0 0 8
@@ -3632,7 +3632,7 @@ This is one secretary that you do NOT want to disturb!@@N
 ~
 ~
 3 598016 0 S
-80 2
+81 2
 0 0 0 0
 ! 0 0 0 7 0 0 142
 | 0 0 0 0 0 0 0
@@ -3658,7 +3658,7 @@ An innocent passerby, perfect for venting frustration...
 ~
 ~
 3 8192 0 S
-88 1
+87 1
 0 0 0 0
 ! 0 0 0 7 0 0 8198
 | 0 0 0 0 0 0 0
@@ -3672,7 +3672,7 @@ This is like on of them birds that spins around dazed cartoon characters heads
 yeah?@@N
 ~
 19 524416 0 S
-82 2
+83 2
 0 0 0 0
 ! 0 0 0 7 0 0 24582
 | 0 0 0 0 0 0 0
@@ -3686,7 +3686,7 @@ Here stand the largest statue you have ever seen.  But you know there is more
 him. There seems to be a dust-filled flaw in his chest... is THAT they key?
 ~
 1048587 65666 0 S
-85 0
+86 0
 0 0 0 0
 ! 0 0 0 7 0 0 30982
 | 0 0 0 0 0 0 0
@@ -3720,7 +3720,7 @@ instinct~
 ~
 ~
 1179657 0 0 S
-86 1
+85 1
 0 0 0 0
 ! 0 0 0 7 0 0 8198
 | 0 0 0 0 0 0 0
@@ -3742,7 +3742,7 @@ A caddy is here, looking for the clubs he dropped.
 ~
 ~
 1 0 0 S
-84 1
+85 1
 0 0 0 0
 ! 0 0 0 7 0 0 8198
 | 0 0 0 0 0 0 0
@@ -3775,7 +3775,7 @@ A caddy is here, holding his charge's glass of bourbon.
 ~
 ~
 131073 8192 0 S
-88 1
+89 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3809,7 +3809,7 @@ plaid~
 ~
 ~
 131073 8320 0 S
-89 1
+88 1
 0 0 0 0
 ! 0 0 0 7 0 0 24590
 | 0 0 0 0 0 0 0
@@ -3820,7 +3820,7 @@ poofy hair~
 ~
 ~
 131073 8320 0 S
-90 1
+89 1
 0 0 0 0
 ! 0 0 0 7 0 0 24590
 | 0 0 0 0 0 0 0
@@ -3831,7 +3831,7 @@ Spandex~
 ~
 ~
 131073 8320 0 S
-83 1
+82 1
 0 0 0 0
 ! 0 0 0 7 0 0 24590
 | 0 0 0 0 0 0 0
@@ -3866,7 +3866,7 @@ bobomb~
 33 524348 0 S
 85 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 24584
 | 0 0 0 0 0 0 0
 #5631
 the useless~
@@ -3875,7 +3875,7 @@ A useless idea mopes along here.
 ~
 ~
 9 524416 0 S
-82 1
+83 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3886,7 +3886,7 @@ A @@yBright@@N idea strolls merrily along here.
 ~
 ~
 9 128 0 S
-95 1
+94 1
 0 0 0 0
 ! 0 0 0 7 0 0 8198
 | 0 16 0 0 0 0 0
@@ -3897,7 +3897,7 @@ A @@dForgotten idea shuffles from place to place.@@N
 ~
 ~
 9 8320 0 S
-87 1
+88 1
 0 0 0 0
 ! 0 0 0 7 0 0 8198
 | 0 16384 0 0 0 0 0
@@ -3942,7 +3942,7 @@ A happy thought is bouncing along here, singing a gay tune.
 ~
 ~
 9 0 0 S
-94 1
+95 1
 0 0 0 0
 ! 0 0 0 7 0 0 8198
 | 0 0 0 0 0 0 0
@@ -3976,7 +3976,7 @@ hate~
 ~
 ~
 131097 524288 0 S
-82 1
+83 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -4030,7 +4030,7 @@ comprehension~
 ~
 ~
 1048601 44 0 S
-99 1
+100 1
 0 0 0 0
 ! 0 0 0 7 0 0 8206
 | 0 1572864 0 0 0 0 8

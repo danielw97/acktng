@@ -46,89 +46,32 @@ void say_spell args( ( CHAR_DATA * ch, int sn ) );
 /* Calculate mana cost */
 int mana_cost( CHAR_DATA * ch, int sn )
 {
-   int best;
+   bool can_cast = can_use_skill_by_gsn(ch, sn, FALSE);
    int foo;
-   int skill_lev;
    int cost, mincost;
    int class = 0;
 
-
-
-   if( IS_NPC( ch ) )
+   if( ( !can_cast ) && ( IS_NPC( ch ) ) )
    {
-      best = get_psuedo_level( ch );
-      for( foo = 0; foo < MAX_CLASS; foo++ )
-         if( best >= skill_table[sn].skill_level[foo] )
-         {
-            class = foo;
-         }
-
-      if( ( skill_table[sn].flag1 == REMORT )
-          && ( ( ( IS_SET( ch->act, ACT_PET ) ) || ( IS_AFFECTED( ch, AFF_CHARM ) ) ) && ( ch->rider == NULL ) ) )
-         best = -1;
-
-      if( skill_table[sn].flag1 == ADEPT )
-         best = -1;
-
+      return 1000;
    }
-   else
-   {
-      best = -1;
-      for( foo = 0; foo < MAX_CLASS; foo++ )
-         if( ch->lvl[foo] >= skill_table[sn].skill_level[foo] && ch->lvl[foo] > best )
-         {
-            best = ch->lvl[foo];
-            class = foo;
-         }
-   }
-   if( skill_table[sn].flag1 == ADEPT )
-   {
-      best = -1;
-      if( ch->adept_level >= skill_table[sn].skill_level[0] )
-         best = ch->adept_level * 4;
-   }
-
-   if( ( best == -1 ) && ( IS_NPC( ch ) ) )
-   {
-      if( ( IS_SET( ch->act, ACT_INTELLIGENT ) ) && ( sn == skill_lookup( "ethereal" ) ) )
-      {
-         return 150;
-      }
-      else
-      {
-         return 1000;
-      }
-   }
-   else if( ( best == -1 ) && ( ( !IS_NPC( ch ) ) && ( !is_name( skill_table[sn].name, race_table[ch->race].skill1 ) ) ) )
-      return ( 1000 );
-
-
+   else if( ( !can_cast ) && ( ( !IS_NPC( ch ) ) && ( !is_name( skill_table[sn].name, race_table[ch->race].skill1 ) ) ) )
+      return 1000;
 
    mincost = 1000;
 
-   skill_lev = skill_table[sn].skill_level[class];
-
-   if( skill_lev > best )
-      cost = 1000;
-   else
-      cost = UMAX( skill_table[sn].min_mana, 100 / ( 2 + best - skill_lev ) );
-
-   if( cost < mincost )
-      mincost = cost;
+   if( can_cast )
+      mincost = skill_table[sn].min_mana;
 
    if( IS_VAMP( ch ) && ( skill_table[sn].flag2 == VAMP ) )
       mincost = skill_table[sn].min_mana;
-   if( IS_NPC( ch ) && IS_SET( ch->act, ACT_INTELLIGENT ) )
-      mincost = skill_table[sn].min_mana + ( 200 - ch->level );
    if( skill_table[sn].flag2 == WOLF )
    {
       if( IS_NPC( ch ) )
          return 5000;
       if( IS_WOLF( ch ) )
       {
-         cost = UMAX( skill_table[sn].min_mana,
-                      ( ( skill_table[sn].min_mana * skill_lev ) /
-                        ( ( ch->pcdata->vamp_level == 0 ) ? 1 : ch->pcdata->vamp_level ) ) );
+         cost = skill_table[sn].min_mana;
       }
    }
    if( IS_NPC( ch ) )
@@ -146,6 +89,14 @@ int mana_cost( CHAR_DATA * ch, int sn )
       else if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_STRONG_MAGIC ) )
          mincost *= .60;
    }
+
+   if( ( skill_table[sn].flag2 == NORM ) && ( is_affected( ch, skill_lookup( "mystical focus" ) ) ) )
+   {
+      mincost *= 2.5;
+   }
+
+   mincost -= mincost * (get_curr_wis(ch) + get_curr_int(ch)) / 100;
+
    return mincost;
 }
 
@@ -607,12 +558,6 @@ void do_cast( CHAR_DATA * ch, char *argument )
          vo = ( void * )obj;
          break;
    }
-   if( ( skill_table[sn].flag2 == NORM ) && ( is_affected( ch, skill_lookup( "mystical focus" ) ) ) )
-   {
-      mana *= 2.5;
-   }
-
-   mana -= mana * (get_curr_wis(ch) + get_curr_int(ch)) / 100;
 
    if( !IS_VAMP( ch ) && ( skill_table[sn].flag2 == VAMP ) )
    {
