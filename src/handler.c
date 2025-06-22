@@ -401,6 +401,8 @@ int get_spell_crit( CHAR_DATA *ch )
 
    crit += get_stat(ch, APPLY_SPELL_CRIT);
 
+   crit += get_curr_int(ch) / 8;
+
    crit += ch->remort[CLASS_SOR] / 10;
    crit += ch->remort[CLASS_WIZ] / 10;
    crit += ch->remort[CLASS_WLK] / 10 * .75;
@@ -421,6 +423,8 @@ int get_spell_crit_mult( CHAR_DATA *ch )
    crit += ch->lvl[CLASS_PRI];
 
    crit += ch->lvl[CLASS_PAL]*.75;
+
+   crit += get_curr_wis(ch) / 3;
 
    return crit;
 }
@@ -548,6 +552,7 @@ int get_ac(CHAR_DATA *ch)
       ac += ch->ac_mod;
       ac -= ch->level * 4;
    }
+   ac -= get_psuedo_level(ch) * 2;
 
    if (stance_app[ch->stance].ac_mod != 0)
    {
@@ -555,10 +560,7 @@ int get_ac(CHAR_DATA *ch)
       ac -= stance_app[ch->stance].ac_mod * 10;
    }
 
-   ac -= get_psuedo_level(ch) * 2;
-
    return ac;
-
 }
 
 int get_stat( CHAR_DATA *ch, int stat )
