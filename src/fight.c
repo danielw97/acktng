@@ -496,7 +496,7 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       }
    }
 
-   if( !IS_NPC( ch ) && ( ( IS_SET(stance_app[victim->stance].specials, STANCE_NINJA ) ) ) )
+   if( !IS_NPC( ch ) && ch->stance > 0 && ( ( IS_SET(stance_app[victim->stance].specials, STANCE_NINJA ) ) ) )
    {
       send_to_char( "You step out of the shadows.\n\r", ch );
       ch->stance = 0;

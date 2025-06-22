@@ -1131,6 +1131,7 @@ void interpret( CHAR_DATA * ch, char *argument )
     * Dispatch the command.
     */
    if( !IS_NPC( ch )
+       && ch->stance > 0
        && IS_SET(stance_app[ch->stance].specials, STANCE_NINJA )
        && ( ( str_prefix( command, "kill" ) )
             && ( str_prefix( command, "murder" ) )

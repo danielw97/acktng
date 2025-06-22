@@ -102,7 +102,7 @@ void move_char( CHAR_DATA * ch, int door )
       ch->using_named_door = FALSE;
       return;
    }
-   if( !IS_NPC( ch ) && ( IS_SET(stance_app[ch->stance].specials, STANCE_NINJA ) ) )
+   if( !IS_NPC( ch ) && ch->stance > 0 && ( IS_SET(stance_app[ch->stance].specials, STANCE_NINJA ) ) )
    {
       send_to_char( "You step out of the shadows.\n\r", ch );
       ch->stance = 0;
