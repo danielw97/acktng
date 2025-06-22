@@ -1365,7 +1365,7 @@ bool spell_mind_bolt( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    {
       if( number_range( 0, 99 ) < 30 )
          continue;
-      dam = number_range( level / 4, level * 2 / 3 );
+      dam = number_range( 12, 30 );
       if( saves_spell( level, victim ) )
          dam /= 2;
 
