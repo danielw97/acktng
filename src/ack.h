@@ -700,11 +700,8 @@ struct char_data
    int armor;
    long hp_mod;
    int ac_mod; /* ac modifier */
-   int stance_ac_mod;
    int hr_mod; /* hitroll modifier */
-   int stance_hr_mod;
    int dr_mod; /* damroll modifier */
-   int stance_dr_mod;
    char *target;  /* last ch to attack */
    sh_int wimpy;
    int deaf;
