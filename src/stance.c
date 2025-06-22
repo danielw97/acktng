@@ -1,5 +1,7 @@
 #include "globals.h"
 
+bool is_legal_stance(CHAR_DATA *ch, int stance);
+
 const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Adventurer", 0, 0, 0, 0, 0, 0, -1, -1, 0, -1, 0, -1},
     /* Mortal stances */
