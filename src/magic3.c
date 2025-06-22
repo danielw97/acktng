@@ -120,14 +120,6 @@ bool spell_black_hand( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
    act( "A Black Hand grows from the shadows, and begins to choke $N!", ch, NULL, victim, TO_NOTVICT );
    act( "$n summons a Black Hand from the shadows, which begins to choke you!", ch, NULL, victim, TO_VICT );
 
-   if( saves_spell( level, victim ) )
-   {
-      send_to_char( "The Black Hand dissolves back into the shadows!\n\r", victim );
-      send_to_char( "The Black Hand dissolves back into the shadows!\n\r", ch );
-      act( "The Black Hand dissolves back into the shadows!", ch, NULL, victim, TO_NOTVICT );
-      return TRUE;
-   }
-
    if (!is_affected( victim, sn ))
    {
       af.type = sn;
