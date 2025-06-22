@@ -126,7 +126,7 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
 
     if (stance_app[stance].tier == ADEPT)
     {
-        if (IS_SET(stance_app[stance].specials, STANCE_EITHER))
+        if (IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS))
         {
             if (stance_app[stance].class_index > -1 && ch->adept[stance_app[stance].class_index] < stance_app[stance].class_level &&
                 stance_app[stance].class_index2 > -1 && ch->adept[stance_app[stance].class_index2] < stance_app[stance].class_level2)
@@ -143,7 +143,7 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
     }
     else if (stance_app[stance].tier == REMORT)
     {
-        if (IS_SET(stance_app[stance].specials, STANCE_EITHER))
+        if (IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS))
         {
             if (stance_app[stance].class_index > -1 && ch->remort[stance_app[i].class_index] < stance_app[stance].class_level &&
                 stance_app[stance].class_index2 > -1 && ch->remort[stance_app[i].class_index2] < stance_app[stance].class_level2)
@@ -160,7 +160,7 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
     }
     else if (stance_app[stance].tier == MORTAL)
     {
-        if (IS_SET(stance_app[stance].specials, STANCE_EITHER))
+        if (IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS))
         {
             if (stance_app[stance].class_index > -1 && ch->remort[stance_app[stance].class_index] < stance_app[stance].class_level &&
                 stance_app[stance].class_index2 > -1 && ch->remort[stance_app[stance].class_index2] < stance_app[stance].class_level2)
