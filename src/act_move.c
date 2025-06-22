@@ -102,13 +102,10 @@ void move_char( CHAR_DATA * ch, int door )
       ch->using_named_door = FALSE;
       return;
    }
-   if( !IS_NPC( ch ) && ( ( ch->stance == STANCE_AMBUSH ) || ( ch->stance == STANCE_AC_BEST ) ) )
+   if( !IS_NPC( ch ) && ( IS_SET(stance_app[victim->stance].specials, STANCE_NINJA ) ) )
    {
       send_to_char( "You step out of the shadows.\n\r", ch );
-      ch->stance = STANCE_ADVENTURER;
-      ch->stance_ac_mod = 0;
-      ch->stance_dr_mod = 0;
-      ch->stance_hr_mod = 0;
+      ch->stance = 0;
       act( "$n steps out of the Shadows!", ch, NULL, NULL, TO_ROOM );
    }
    if( IS_NPC( ch ) )
