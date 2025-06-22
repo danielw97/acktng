@@ -184,11 +184,6 @@ char_reference(&s); } while(0)
 
 #define ADEPT_LEVEL(ch)         (IS_NPC(ch) ? (ch)->level/7 : (ch)->adept_level )
 
-#define MAGIC_STANCE(ch)        ( IS_NPC(ch) ? FALSE : \
-                                   ( (ch)->stance == STANCE_CASTER ) \
-                                || ( (ch)->stance == STANCE_WIZARD ) \
-                                || ( (ch)->stance == STANCE_MAGI ) )
-
 #define PLAYTESTER(ch)          ( !IS_NPC(ch) && IS_SET((ch)->pcdata->pflags, PFLAG_TESTER )  )
 #define HAS_BODY(ch)            ( !IS_NPC(ch) || !IS_SET((ch)->act, ACT_NO_BODY ) )
 #define HAS_MIND(ch)            ( !IS_NPC(ch) || !IS_SET((ch)->act, ACT_NOMIND ) )

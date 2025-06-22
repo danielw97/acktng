@@ -610,28 +610,12 @@ void do_cast( CHAR_DATA * ch, char *argument )
    if( !char_login && !IS_NPC( ch ) && number_percent(  ) > cast_chance )
    {
       bool good_cast = FALSE;
-      if( MAGIC_STANCE( ch ) )
-      {
-         if( number_percent(  ) > cast_chance )
-         {
-            good_cast = FALSE;
-         }
-         else
-         {
-            good_cast = TRUE;
-         }
-      }
-      if( ( !good_cast ) && ( !IS_NPC( ch ) ) && ( ch->stance == STANCE_MAGI ) )
-      {
-         if( number_percent(  ) > cast_chance )
-         {
-            good_cast = FALSE;
-         }
-         else
-         {
-            good_cast = TRUE;
-         }
-      }
+
+      if( number_percent(  ) > cast_chance )
+         good_cast = FALSE;
+      else
+         good_cast = TRUE;
+
       if( !good_cast && ch->position == POS_FIGHTING )
       {
          send_to_char( "You lost your concentration.\n\r", ch );
@@ -647,7 +631,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
    }
 
 
-   if( ( MAGIC_STANCE( ch ) )
+   if( IS_SET(stance_app[victim->stance].specials, STANCE_MULTI_CAST )
        && ( skill_table[sn].target == TAR_CHAR_OFFENSIVE ) && ( number_range( 0, 99 ) < get_psuedo_level( ch ) - 50 ) )
    {
       mana = mana * 2 / 3;
@@ -719,7 +703,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
          }
       }
    }
-   if( ( ch->stance == STANCE_MAGI )
+   if ( IS_SET(stance_app[victim->stance].specials, STANCE_DUAL_CAST )
        && ( skill_table[sn].target == TAR_CHAR_OFFENSIVE ) && ( number_range( 0, 99 ) < get_psuedo_level( ch ) - 80 ) )
    {
       bool still_here = TRUE;
