@@ -136,8 +136,8 @@ bool spell_black_hand( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * o
       dam = ( get_psuedo_level( ch ) / 3 )
          + dice( ( get_psuedo_level( ch ) / 6 + ADEPT_LEVEL( ch ) ), 8 )
          + dice( ( get_psuedo_level( ch ) / 6 + ADEPT_LEVEL( ch ) ), 8 );
-      act( "@@RA @@dwraithlike hand @@Rleaps forth from $n!@@N", ch, NULL, NULL, TO_ROOM );
-      send_to_char( "@@RA @@dwraithlike hand @@Rleaps forth from your hands!@@N\n\r", ch );
+      act( "@@dA black hand @@Rleaps forth from $n!@@N", ch, NULL, NULL, TO_ROOM );
+      send_to_char( "@@dA @@dblack hand @@Rleaps forth from your hands!@@N\n\r", ch );
    }
    else
    {
