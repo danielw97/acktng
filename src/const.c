@@ -517,7 +517,7 @@ const struct race_type race_table[MAX_RACE] = {
 };
 
 const struct stance_app_type stance_app[MAX_STANCE] = {
-   {"Adventurer", 0, 0, 0, 0, 0},
+   {"Adventurer", 0, 0, 0, 0, 0, -1, -1, 0, -1, 0, -1},
    {"Mage", 20, -3, -3, 0, 0},
    {"Ninja", -30, 0, 5, 0, 3},
    {"Shadows", -20, -1, -2, 0, 4},
@@ -529,11 +529,16 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
    {"Dragon", -10, 2, 2, 0, -1},
    {"Snake", 7, -3, -2, 0, 4},
    {"Wizard", 30, -5, -5, 0, 0},
-   {"Magi", 40, -10, -10, 0, 0},
-   {"Healer", 0, 0, 0, 1, 0},
-   {"Warrior", 0, 1, 0, 0, 0},
-   {"Thief", -1, 0, 1, 0, 0},
-   {"Pugilist", 0, 0, 0, 0, 1}
+   {"Magi", 40, -10, -10, 0, 0, STANCE_EITHER_CLASS, ADEPT
+    CLASS_GMA, 1, CLASS_KIN, 1, -1},
+   {"Healer", 0, 0, 0, 1, 0, 0, MORTAL,
+    CLASS_CLE, 60, CLASS_CLE, 60, CLASS_CLE},
+   {"Warrior", 0, 1, 0, 0, 0, 0, MORTAL,
+    CLASS_WAR, 60, CLASS_WAR, 60, CLASS_WAR},
+   {"Thief", -1, 0, 1, 0, 0, 0, MORTAL, 
+    CLASS_THI, 60, CLASS_THI, 60, CLASS_THI},
+   {"Pugilist", 0, 0, 0, 0, 1, 0, MORTAL,
+    CLASS_PUG, 60, CLASS_PUG, 60, CLASS_PUG}
 };
 
 

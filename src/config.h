@@ -129,6 +129,12 @@
 
 #define MAX_TRADE        5
 
+
+/* Stance specials */
+#define STANCE_DUAL_CAST     BIT_1
+#define STANCE_MULTI_CAST    BIT_2
+#define STANCE_EITHER_CLASS  BIT_3
+
 /*
  * Liquids.
  */
@@ -317,27 +323,7 @@
 #define ROOM_VNUM_WEAPON_DONATE   3019
 #define ROOM_VNUM_MISC_DONATE     3017
 
-
-
-#define STANCE_ADVENTURER	0
-#define STANCE_CASTER		1
-#define STANCE_AMBUSH		2
-#define STANCE_AC_BEST		3
-#define STANCE_HR_BEST		4
-#define STANCE_DR_BEST		5
-#define STANCE_AC_WORST		6
-#define STANCE_HR_WORST		7
-#define STANCE_DR_WORST		8
-#define STANCE_SUPER_FIGHTER	9
-#define STANCE_SUPER_SPEED	10
-#define STANCE_WIZARD         11
-#define STANCE_MAGI          12
-#define STANCE_HEALER		13
-#define STANCE_WARRIOR     14
-#define STANCE_THIEF       15
-#define STANCE_PUGILIST    16
-#define MAX_STANCE		   17
-
+#define MAX_STANCE                     17
 
 #define C_SHOW_NEVER    -1
 #define C_SHOW_ALWAYS     0

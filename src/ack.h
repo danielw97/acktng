@@ -293,11 +293,18 @@ struct politics_data_type
 struct stance_app_type
 {
    char *name;
-   sh_int ac_mod;
-   sh_int dr_mod;
-   sh_int hr_mod;
-   sh_int heal_mod;
-   sh_int speed_mod;
+   int ac_mod;
+   int dr_mod;
+   int hr_mod;
+   int heal_mod;
+   int speed_mod;
+   int specials;
+   int tier;
+   int class_index;
+   int class_level;
+   int class_index2;
+   int class_level2;
+   int class_override;
 };
 
 /*
