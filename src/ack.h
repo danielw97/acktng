@@ -296,8 +296,9 @@ struct stance_app_type
    int ac_mod;
    int dr_mod;
    int hr_mod;
-   int heal_mod;
    int speed_mod;
+   int heal_mod;
+   int spell_mod;
    int specials;
    int tier;
    int class_index;

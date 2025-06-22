@@ -134,6 +134,8 @@
 #define STANCE_DUAL_CAST     BIT_1
 #define STANCE_MULTI_CAST    BIT_2
 #define STANCE_EITHER_CLASS  BIT_3
+#define STANCE_NINJA         BIT_4
+#define STANCE_NO_HIT        BIT_5
 
 /*
  * Liquids.

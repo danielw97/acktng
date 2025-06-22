@@ -191,7 +191,7 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
       heal += heal * ch->remort[CLASS_PAL] / 25 * .75;
    }
 
-   if (stance_app[ch->stance].heal_mod > 0)
+   if (stance_app[ch->stance].heal_mod != 0)
       heal += heal * stance_app[ch->stance].heal_mod / 10;
 
    if (IS_NPC(ch))
@@ -985,6 +985,9 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       dam_modifier = 0.0;
 
    dam += get_spellpower(ch);
+
+   if (stance_app[ch->stance].spell_mod != 0)
+      dam += dam * stance_app[ch->stance].spell_mod / 10;
 
    dam = dam * dam_modifier;
 
