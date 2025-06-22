@@ -145,8 +145,8 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
     {
         if (IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS))
         {
-            if (stance_app[stance].class_index > -1 && ch->remort[stance_app[i].class_index] < stance_app[stance].class_level &&
-                stance_app[stance].class_index2 > -1 && ch->remort[stance_app[i].class_index2] < stance_app[stance].class_level2)
+            if (stance_app[stance].class_index > -1 && ch->remort[stance_app[stance].class_index] < stance_app[stance].class_level &&
+                stance_app[stance].class_index2 > -1 && ch->remort[stance_app[stance].class_index2] < stance_app[stance].class_level2)
                 legal_stance = FALSE;
         }
         else
