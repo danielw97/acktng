@@ -98,12 +98,14 @@
 #define MAX_TRIBE		     5
 #define MAX_SUPER                    4
 
+/* Mortal */
 #define CLASS_MAG		     0
 #define CLASS_CLE		     1
-#define CLASS_THI                    2
+#define CLASS_THI         2
 #define CLASS_WAR		     3
 #define CLASS_PSI		     4
 #define CLASS_PUG		     5
+/* Remort */
 #define CLASS_SOR		     0
 #define CLASS_PAL		     1
 #define CLASS_ASS		     2
@@ -116,6 +118,13 @@
 #define CLASS_SWO		     9
 #define CLASS_EGO		     10
 #define CLASS_BRA		     11
+/* Adept */
+#define CLASS_GMA         0
+#define CLASS_TEM         1
+#define CLASS_NIG         2
+#define CLASS_CRU         3
+#define CLASS_KIN         4
+#define CLASS_MAR         5
 
 #define MAX_NUM_IMMS    5
 
@@ -128,7 +137,6 @@
                       */
 
 #define MAX_TRADE        5
-
 
 /* Stance specials */
 #define STANCE_DUAL_CAST     BIT_1
@@ -158,8 +166,6 @@
 #define TYPE_MARTIAL		     -3  /* for martial arts */
 #define TYPE_UNDEFINED               -2
 #define TYPE_HIT                     1000
-
-
 
 /*
  *  Target types.
