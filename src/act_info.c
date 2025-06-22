@@ -1791,7 +1791,7 @@ void do_score( CHAR_DATA * ch, char *argument )
       safe_strcat( MAX_STRING_LENGTH, buf, "@@yalmost invincible!" );
 
 
-   sprintf(buf2, " @@WArmor Class: @@y%5d.   %s", GET_AC(ch), buf);
+   sprintf(buf2, " @@WArmor Class: @@y%5d.   %s", get_ac(ch), buf);
    sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62) );
    send_to_char(buf, ch);
 

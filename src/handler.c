@@ -437,15 +437,17 @@ int get_crit( CHAR_DATA *ch )
    if( !IS_WEAPON( wield ) )
       wield = NULL;   
       
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
+   if (!IS_NPC(ch) && can_use_skill_by_gsn(ch, enhanced_critical, FALSE) > 0)
    {
       crit += 5;
    }
 
+   crit += get_curr_dex(ch)/8;
+
    crit += ch->remort[CLASS_ASS] / 20;
    crit += ch->remort[CLASS_WLK] / 20 * .75;
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && ch->pcdata->learned[gsn_enhanced_sword_critical] > 0)
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, enhanced_sword_critical))
    {
       crit += ch->remort[CLASS_SWO]/20;
    }
@@ -498,10 +500,12 @@ int get_damroll( CHAR_DATA *ch )
    if (IS_NPC(ch))
    {
       dam += ch->dr_mod;
-      dam += ch->level / 3;
+      dam += ch->level;
    }
 
    dam += str_app[get_curr_str(ch)].todam;
+
+   dam += get_psuedo_level(ch) / 3;
 
    if (stance_app[ch->stance].dr_mod != 0)
    {
@@ -519,10 +523,12 @@ int get_hitroll( CHAR_DATA *ch)
    if (IS_NPC(ch))
    {
       hit += ch->hr_mod;
-      hit += ch->level / 3;
+      hit += ch->level;
    }
 
    hit += str_app[get_curr_str(ch)].tohit;
+
+   hit += get_psuedo_level(ch)/3;
 
    if (stance_app[ch->stance].hr_mod != 0)
    {
@@ -540,14 +546,16 @@ int get_ac(CHAR_DATA *ch)
    if (IS_NPC(ch))
    {
       ac += ch->ac_mod;
-      ac -= ch->level * 2;
+      ac -= ch->level * 4;
    }
 
    if (stance_app[ch->stance].ac_mod != 0)
    {
-      ac += ac * stance_app[ch->stance].ac_mod / 10;
-      ac += stance_app[ch->stance].ac_mod * -10;
+      ac -= ac * stance_app[ch->stance].ac_mod / 10;
+      ac -= stance_app[ch->stance].ac_mod * 10;
    }
+
+   ac -= get_psuedo_level(ch) * 2;
 
    return hit;
 
