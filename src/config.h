@@ -138,6 +138,8 @@
 
 #define MAX_TRADE        5
 
+#define MAX_STANCE                     25
+
 /* Stance specials */
 #define STANCE_DUAL_CAST     BIT_1
 #define STANCE_MULTI_CAST    BIT_2
@@ -330,8 +332,6 @@
 #define ROOM_VNUM_ARMOR_DONATE    3018
 #define ROOM_VNUM_WEAPON_DONATE   3019
 #define ROOM_VNUM_MISC_DONATE     3017
-
-#define MAX_STANCE                     17
 
 #define C_SHOW_NEVER    -1
 #define C_SHOW_ALWAYS     0
