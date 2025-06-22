@@ -528,7 +528,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
    {"Thief", -1, 0, 1, 0, 0, 0, 0, MORTAL, 
     CLASS_THI, 60, CLASS_THI, 60, CLASS_THI},
    {"Pugilist", 0, 0, 0, 1, 0, 0, 0, MORTAL,
-    CLASS_PUG, 60, CLASS_PUG, 60, CLASS_PUG}
+    CLASS_PUG, 60, CLASS_PUG, 60, CLASS_PUG},
     /* Remort stances */
    {"Assassin", -3, 0, 3, 1, 0, 0, 0, 0, REMORT,
     CLASS_ASS, 1, -1, -1, -1},
