@@ -3166,8 +3166,8 @@ This catrat is a young male.  Catrats are a cross between a cat and a rat,
 as their name suggests.  Needless to say, they are most ugly.
 ~
 143 0 -300 S
-14 1
-0 0 0
+15 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9602
@@ -3179,9 +3179,9 @@ This catrat is an adult female.  Catrats are a cross between a cat and a rat,
 as their name suggests.  Needless to say, they are most ugly.
 ~
 143 0 -300 S
-11 1
-0 0 0
-! 0 0 0 7 2 0 0
+13 1
+0 0 0 0
+! 0 0 0 7 0 0 2
 | 0 0 0 0 0 0 0
 #9603
 catrat male~
@@ -3192,8 +3192,8 @@ This catrat is an adult male.  Catrats are a cross between a cat and a rat,
 as their name suggests.  Needless to say, they are most ugly.
 ~
 143 0 -300 S
-8 1
-0 0 0
+10 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9604
@@ -3205,9 +3205,9 @@ The Hippocampus is a cross between a horse and a fish.  It's front hooves are
 replaced by webbed feet, and the rear half is a silver, scaled tail.
 ~
 3 524288 300 S
-27 2
--20 10 10
-! 0 0 0 7 2050 0 0
+29 2
+0 0 0 0
+! 0 0 0 7 0 0 2050
 | 0 0 0 0 0 0 0
 #9605
 neogi slave~
@@ -3219,9 +3219,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 managed to reach the level of master, and has therefore been mastered itself.
 ~
 19 0 -200 S
-22 0
-0 0 0
-! 0 0 0 7 2 0 0
+23 0
+0 0 0 0
+! 0 0 0 7 0 0 2
 | 0 0 0 0 0 0 0
 #9606
 neogi slave~
@@ -3234,8 +3234,8 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 ~
 19 0 -200 S
 14 0
-0 0 0
-! 0 0 0 7 2 0 0
+0 0 0 0
+! 0 0 0 7 0 0 2
 | 0 0 0 0 0 0 0
 #9607
 neogi master~
@@ -3247,9 +3247,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 of master, and is in charge of making sure the slaves do their work.
 ~
 19 0 -300 S
-17 0
--10 10 10
-! 0 0 0 7 2 0 0
+16 0
+0 0 0 0
+! 0 0 0 7 0 0 2
 | 0 0 0 0 0 0 0
 #9608
 neogi ruler~
@@ -3262,10 +3262,10 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 operations.
 ~
 19 0 -400 S
-31 0
--20 20 15
-! 0 0 0 7 4 0 2
-| 0 0 0 0 0 0 0
+30 0
+0 0 0 0
+! 0 0 0 7 0 0 4
+| 0 0 0 0 0 0 2
 #9609
 neogi~
 a Neogi~
@@ -3276,9 +3276,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 rank in the mine, answering only to the Ruler itself.
 ~
 19 0 -200 S
-19 0
--10 10 10
-! 0 0 0 7 2 0 0
+21 0
+0 0 0 0
+! 0 0 0 7 0 0 2
 | 0 0 0 0 0 0 0
 #9610
 male cock cockatrice~
@@ -3290,8 +3290,8 @@ The cocaktrice is a strange mix of lizard, cock and bat.  It seems to ignore
 ~
 65 524800 -50 S
 25 1
--10 0 15
-! 0 0 0 7 2306 0 0
+0 0 0 0
+! 0 0 0 7 0 0 2306
 | 0 0 0 0 0 0 0
 #9611
 female cock cockatrice~
@@ -3303,8 +3303,8 @@ The cocaktrice is a strange mix of lizard, cock and bat.  It seems to ignore
 ~
 65 524800 -25 S
 24 2
--15 10 10
-! 0 0 0 7 258 0 0
+0 0 0 0
+! 0 0 0 7 0 0 258
 | 0 0 0 0 0 0 0
 #9612
 broken one~
@@ -3315,9 +3315,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 combine a lizard man with a hawk.  Boy, he's ugly.
 ~
 11 0 -300 S
-29 1
--20 20 15
-! 0 0 0 7 18 0 0
+28 1
+0 0 0 0
+! 0 0 0 7 0 0 18
 | 0 0 0 0 0 0 0
 #9613
 broken one~
@@ -3328,9 +3328,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 combine a lizard man with a hawk.  Boy, he's ugly.
 ~
 11 0 -300 S
-27 1
--20 15 20
-! 0 0 0 7 18 0 0
+28 1
+0 0 0 0
+! 0 0 0 7 0 0 18
 | 0 0 0 0 0 0 0
 #9614
 greater broken one~
@@ -3342,9 +3342,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 the other broken ones in this clearing.
 ~
 11 0 -300 S
-40 1
--25 20 25
-! 0 0 0 7 6402 0 0
+39 1
+0 0 0 0
+! 0 0 0 7 0 0 6402
 | 0 0 0 0 0 0 0
 #9615
 hippo baby hippogriff~
@@ -3355,9 +3355,9 @@ The baby hippogriff, although no where near full size, shows the distinct
 features of its race: the head and wings of an eagle, and the body of a horse.
 ~
 3 524288 200 S
-28 2
--10 15 10
-! 0 0 0 7 2304 0 0
+26 2
+0 0 0 0
+! 0 0 0 7 0 0 2304
 | 0 0 0 0 0 0 0
 #9616
 hippo hippogriff~
@@ -3369,8 +3369,8 @@ The hippogriff is an eerie mix of eagle (head and wings) and horse (body).
 ~
 11 524288 300 S
 32 0
--25 20 20
-! 0 0 0 7 3330 0 0
+0 0 0 0
+! 0 0 0 7 0 0 3330
 | 0 0 0 0 0 0 0
 #9617
 treant tree~
@@ -3381,9 +3381,9 @@ The tree is old, withered, and stunted.  It appears to almost have a sort
 of face on its bark.
 ~
 3 0 -200 S
-26 0
--20 10 10
-! 0 0 0 7 5152 0 0
+27 0
+0 0 0 0
+! 0 0 0 7 0 0 5152
 | 0 0 0 0 0 0 0
 #9618
 treant tree~
@@ -3395,8 +3395,8 @@ The tree is old, withered, and stunted.  It appears to almost have a sort
 ~
 3 0 -200 S
 33 0
--30 25 40
-! 0 0 0 7 5156 0 0
+0 0 0 0
+! 0 0 0 7 0 0 5156
 | 0 0 0 0 0 0 0
 #9619
 wemic male~
@@ -3407,10 +3407,10 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 7 feet tall.  It's dusky golden fur is topped by fine, black mane.
 ~
 65 0 250 S
-48 1
--20 37 40
-! 0 0 0 7 6658 48 0
-| 0 0 0 0 0 0 0
+49 1
+0 0 0 0
+! 0 0 0 7 0 0 6658
+| 0 48 0 0 0 0 0
 #9620
 wemic female~
 a female wemic~
@@ -3421,9 +3421,9 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 ~
 3145795 0 250 S
 46 1
--50 40 50
-! 0 0 0 7 7940 20 4
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 7940
+| 0 20 0 0 0 0 4
 #9621
 wemic cub~
 a wemic cub~
@@ -3435,8 +3435,8 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 ~
 67 0 250 S
 32 1
--20 50 15
-! 0 0 0 7 6786 0 0
+0 0 0 0
+! 0 0 0 7 0 0 6786
 | 0 0 0 0 0 0 0
 #9622
 yugoloth guardian~
@@ -3448,15 +3448,9 @@ The Yugloth is basically an enormous bear, with huge wings and ram's horns.
 ~
 3145759 2176 -500 S
 71 0
--75 75 60
-! 0 0 0 7 24552 1605632 8
-| 0 0 0 0 0 0 0
->act_prog p opens the door.~
-shake
-  say No entrance.  Piss off!
-  close door
-~
-|
+0 0 0 0
+! 0 0 0 7 22100 22100 24552
+| 0 1605632 0 -2082249680 1 0 8
 #9623
 ymmas~
 the evil Ymmas~
@@ -3468,21 +3462,10 @@ Ymass is truely an evil priest.  Banished to this cabin many years ago, he set
 to his own body, in an attempt to boost his powers.
 ~
 3145751 2176 -900 S
-84 1
--100 90 100
-! 0 0 0 7 24568 1081344 16
-| 0 0 0 0 0 0 0
->act_prog p opens the trapdoor.~
-growl
-  close trapdoor
-~
->death_prog 100~
-MPECHO Ymmas crashes to the ground, and errupts into a mass of spiders!
-    MPMLOAD 9624
-    MPMLOAD 9624
-    MPMLOAD 9624
-~
-|
+85 1
+0 0 0 0
+! 0 0 0 7 22100 22100 24568
+| 0 1081344 0 -2082249040 17 0 16
 #9624
 spider~
 a spider~
@@ -3491,9 +3474,9 @@ A small spider is crawling around here.
 The spider has many legs, and looks like Ymmas!
 ~
 39 98336 -300 S
-58 0
--40 55 50
-! 0 0 0 7 2696 0 0
+57 0
+0 0 0 0
+! 0 0 0 7 0 0 2696
 | 0 0 0 0 0 0 0
 #9625
 male centaur~
@@ -3505,9 +3488,9 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 ~
 3145797 32768 300 S
 47 1
--40 45 40
-! 0 0 0 7 6324 0 4
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 6324
+| 0 0 0 0 0 0 4
 #9626
 female centaur~
 a female centaur~
@@ -3518,9 +3501,9 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 ~
 3145799 32768 300 S
 39 2
--45 40 45
-! 0 0 0 7 6322 0 4
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 6322
+| 0 0 0 0 0 0 4
 #9627
 baby centaur~
 a baby centaur~
@@ -3530,9 +3513,9 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 small, and loos to be about one year old.
 ~
 71 32768 300 S
-21 1
--15 15 10
-! 0 0 0 7 2096 0 0
+23 1
+0 0 0 0
+! 0 0 0 7 0 0 2096
 | 0 0 0 0 0 0 0
 #9628
 leader centaur~
@@ -3544,10 +3527,10 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 simple magic, too.
 ~
 69 40960 300 S
-49 1
--55 50 40
-! 0 0 0 7 8100 0 8
-| 0 0 0 0 0 0 0
+47 1
+0 0 0 0
+! 0 0 0 7 0 0 8100
+| 0 0 0 0 0 0 8
 #9629
 man scorpian manscorpian~
 a manscorpian~
@@ -3558,8 +3541,8 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 ~
 3145829 512 -230 S
 44 1
--50 55 50
-! 0 0 0 7 1940 0 0
+0 0 0 0
+! 0 0 0 7 0 0 1940
 | 0 0 0 0 0 0 0
 #9630
 man scorpian manscorpian~
@@ -3571,9 +3554,9 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 ~
 3145829 512 -230 S
 50 1
--55 50 50
-! 0 0 0 7 7044 0 8
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 7044
+| 0 0 0 0 0 0 8
 #9631
 king man scorpian manscorpian~
 the manscorpian king~
@@ -3586,15 +3569,9 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 ~
 3145799 2560 -380 S
 54 1
-0 0 0
-! 0 0 0 7 23476 4160 16
-| 0 0 0 0 0 0 0
->hitprcnt_prog 90~
-say AID! HELP ME!
-  slap aid
-  MPFORCE aid MPKILL $r
-~
-|
+0 0 0 0
+! 0 0 0 7 22100 22100 23476
+| 0 4160 0 -2082245776 32 0 16
 #9632
 man scorpian manscorpian~
 a manscorpian~
@@ -3604,15 +3581,10 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 of man (upper body).  It looks pretty big, and pretty angry to see you!
 ~
 3145797 512 -330 S
-51 1
--40 50 55
-! 0 0 0 7 8020 0 0
-| 0 0 0 0 0 0 0
->act_prog p opens the door.~
-growl
-  close door
-~
-|
+52 1
+0 0 0 0
+! 0 0 0 7 22100 22100 8020
+| 0 0 0 -2082245328 1 0 0
 #9633
 aid~
 the King's aid~
@@ -3621,10 +3593,10 @@ The King's aid stands here, looking powerful.
 The aid is an old, corrupt cleric, employed to protect the King if attacked.
 ~
 3145731 512 -400 S
-44 1
--60 60 55
-! 0 0 0 7 6998 0 8
-| 0 0 0 0 0 0 0
+45 1
+0 0 0 0
+! 0 0 0 7 0 0 6998
+| 0 0 0 0 0 0 8
 #0
 #OBJECTS
 #9799

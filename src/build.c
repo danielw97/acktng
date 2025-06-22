@@ -502,8 +502,8 @@ void build_showmob( CHAR_DATA * ch, char *argument )
    sprintf( buf, " @@WLv: @@y%d.    @@WAlign: @@y%d.\n\r", pMob->level, pMob->alignment );
    strcat( buf1, buf );
 
-   sprintf( buf, "@@WModifiers: AC: @@y%d.  @@WHitroll: @@y%d.  @@WDamroll: @@y%d.\n\r",
-            pMob->ac_mod, pMob->hr_mod, pMob->dr_mod );
+   sprintf( buf, "@@WModifiers: HP: @@y%d.   @@WAC: @@y%d.  @@WHitroll: @@y%d.  @@WDamroll: @@y%d.\n\r",
+            pMob->hp_mod, pMob->ac_mod, pMob->hr_mod, pMob->dr_mod );
    strcat( buf1, buf );
 
    sprintf( buf, "@@WMob Flags:@@y\n\r%s", show_values( tab_mob_flags, pMob->act, TRUE ) );
@@ -514,11 +514,7 @@ void build_showmob( CHAR_DATA * ch, char *argument )
 
    sprintf( buf, "@@WSkill Flags:@@y %s\n\r", bit_table_lookup( tab_mob_skill, pMob->skills ) );
    strcat( buf1, buf );
-   sprintf( buf, "@@WPSkill Flags:@@y %s\n\r", bit_table_lookup( tab_mob_powerskill, pMob->power_skills ) );
-   strcat( buf1, buf );
    sprintf( buf, "@@WCast Flags:@@y %s\n\r", bit_table_lookup( tab_mob_cast, pMob->cast ) );
-   strcat( buf1, buf );
-   sprintf( buf, "@@WPCast Flags:@@y %s\n\r", bit_table_lookup( tab_mob_powercast, pMob->power_cast ) );
    strcat( buf1, buf );
    sprintf( buf, "@@WDef Flags:@@y %s\n\r", bit_table_lookup( tab_mob_def, pMob->def ) );
    strcat( buf1, buf );
@@ -1304,7 +1300,7 @@ void build_setmob( CHAR_DATA * ch, char *argument )
       send_to_char( "  sex level align  aff act\n\r", ch );
       send_to_char( "  class clan position race\n\r", ch );
       send_to_char( "  skill cast def pskill pcast rmod\n\r", ch );
-      send_to_char( "  hr_mod dr_mod ac_mod\n\r", ch );
+      send_to_char( "  hp_mod hr_mod dr_mod ac_mod\n\r", ch );
       send_to_char( "String being one of:\n\r", ch );
       send_to_char( "  name short long desc spec\n\r", ch );
       send_to_char( "Use [set] spec - to clear spec_fun\n\r", ch );
@@ -1434,48 +1430,6 @@ void build_setmob( CHAR_DATA * ch, char *argument )
          REMOVE_BIT( pMob->def, lvalue );
       else
          SET_BIT( pMob->def, lvalue );
-      send_to_char( "Ok.\n\r", ch );
-      area_modified( pArea );
-      return;
-   }
-   if( !str_cmp( arg2, "pcast" ) )
-   {
-      lvalue = table_lookup( tab_mob_powercast, arg3 );
-      if( lvalue == 0 )
-      {
-         sprintf( buf, "You can toggle the following flags:\n\r" );
-         table_printout( tab_mob_powercast, buf + strlen( buf ) );
-         send_to_char( buf, ch );
-         return;
-      }
-      /*
-       * Toggle flag 
-       */
-      if( IS_SET( pMob->power_cast, lvalue ) )
-         REMOVE_BIT( pMob->power_cast, lvalue );
-      else
-         SET_BIT( pMob->power_cast, lvalue );
-      send_to_char( "Ok.\n\r", ch );
-      area_modified( pArea );
-      return;
-   }
-   if( !str_cmp( arg2, "pskill" ) )
-   {
-      lvalue = table_lookup( tab_mob_powerskill, arg3 );
-      if( lvalue == 0 )
-      {
-         sprintf( buf, "You can toggle the following flags:\n\r" );
-         table_printout( tab_mob_powerskill, buf + strlen( buf ) );
-         send_to_char( buf, ch );
-         return;
-      }
-      /*
-       * Toggle flag 
-       */
-      if( IS_SET( pMob->power_skills, lvalue ) )
-         REMOVE_BIT( pMob->power_skills, lvalue );
-      else
-         SET_BIT( pMob->power_skills, lvalue );
       send_to_char( "Ok.\n\r", ch );
       area_modified( pArea );
       return;
@@ -1709,11 +1663,23 @@ void build_setmob( CHAR_DATA * ch, char *argument )
       return;
    }
 
+   if( !str_cmp( arg2, "hp_mod" ) )
+   {
+      if( value < 1 || value > 99999999 )
+      {
+         send_to_char( "hp_mod range is 0 to 99999999.\n\r", ch );
+         return;
+      }
+      pMob->hp_mod = value;
+      area_modified( pArea );
+      return;
+   }
+
    if( !str_cmp( arg2, "ac_mod" ) )
    {
-      if( value < -2500 || value > 500 )
+      if( value < -50000 || value > 500 )
       {
-         send_to_char( "ac_mod range is -2500 to 500.\n\r", ch );
+         send_to_char( "ac_mod range is -50000 to 500.\n\r", ch );
          return;
       }
       pMob->ac_mod = value;
@@ -1723,7 +1689,7 @@ void build_setmob( CHAR_DATA * ch, char *argument )
 
    if( !str_cmp( arg2, "hr_mod" ) )
    {
-      if( value < -10 || value > 1000 )
+      if( value < -10 || value > 30000 )
       {
          send_to_char( "hr_mod range is -10 to 1000.\n\r", ch );
          return;
@@ -1735,7 +1701,7 @@ void build_setmob( CHAR_DATA * ch, char *argument )
 
    if( !str_cmp( arg2, "dr_mod" ) )
    {
-      if( value < -10 || value > 1000 )
+      if( value < -10 || value > 30000 )
       {
          send_to_char( "dr_mod range is -10 to 1000.\n\r", ch );
          return;

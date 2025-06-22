@@ -1,7 +1,7 @@
 #AREA
-stop~
+@@WThe @@BWizard's @@WKeep@@N~
 Q 16
-K  none ~
+K none ~
 L {?? ??}~
 N 2
 I 150 150
@@ -12,13 +12,1286 @@ U @@WThe @@ysun@@W seems trying to make itself visible through the fog.@@N~
 O Virant~
 R Virant~
 W Virant~
-B Currently building area.
-S Title not shown on area list.
 #ROOMS
 #166
+Path to the Wizard's Keep~
+No description~
+0 11
+D0
+~
+~
+0 -1 167
+S
+#167
+Path to Keep~
+No description~
+0 11
+D0
+~
+~
+0 -1 168
+D2
+~
+~
+0 -1 166
+S
+#168
+Path to Keep~
+No description~
+4 11
+D0
+~
+~
+0 -1 169
+D1
+~
+~
+481 166 202
+D2
+~
+~
+0 -1 167
+S
+#169
+Road to Keep~
+No description~
+0 11
+D0
+~
+~
+0 -1 203
+D1
+~
+~
+0 -1 170
+D2
+~
+~
+0 -1 168
+D3
+~
+~
+0 -1 171
+S
+#170
+Path Around Keep~
+No description~
+0 11
+D1
+~
+~
+0 -1 181
+D3
+~
+~
+0 -1 169
+S
+#171
+Path Around Keep~
+No description~
+0 11
+D1
+~
+~
+0 -1 169
+D3
+~
+~
+0 -1 172
+S
+#172
 New room~
 No description~
 0 11
+D1
+~
+~
+0 -1 171
+D3
+~
+~
+0 -1 173
+S
+#173
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 172
+D3
+~
+~
+0 -1 174
+S
+#174
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 173
+D3
+~
+~
+0 -1 175
+S
+#175
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 176
+D1
+~
+~
+0 -1 174
+S
+#176
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 177
+D2
+~
+~
+0 -1 175
+S
+#177
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 178
+D2
+~
+~
+0 -1 176
+S
+#178
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 179
+D2
+~
+~
+0 -1 177
+S
+#179
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 180
+D2
+~
+~
+0 -1 178
+S
+#180
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 191
+D2
+~
+~
+0 -1 179
+S
+#181
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 182
+D3
+~
+~
+0 -1 170
+S
+#182
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 183
+D3
+~
+~
+0 -1 181
+S
+#183
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 184
+D3
+~
+~
+0 -1 182
+S
+#184
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 185
+D3
+~
+~
+0 -1 183
+S
+#185
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 186
+D3
+~
+~
+0 -1 184
+S
+#186
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 187
+D2
+~
+~
+0 -1 185
+S
+#187
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 188
+D2
+~
+~
+0 -1 186
+S
+#188
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 189
+D2
+~
+~
+0 -1 187
+S
+#189
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 190
+D2
+~
+~
+0 -1 188
+S
+#190
+New room~
+No description~
+0 11
+D2
+~
+~
+0 -1 189
+D3
+~
+~
+0 0 201
+S
+#191
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 192
+D3
+~
+~
+0 -1 180
+S
+#192
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 193
+D3
+~
+~
+0 -1 191
+S
+#193
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 194
+D3
+~
+~
+0 -1 192
+S
+#194
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 195
+D3
+~
+~
+0 -1 193
+S
+#195
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 196
+D3
+~
+~
+0 -1 194
+S
+#196
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 197
+D3
+~
+~
+0 -1 195
+S
+#197
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 198
+D3
+~
+~
+0 -1 196
+S
+#198
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 199
+D3
+~
+~
+0 -1 197
+S
+#199
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 200
+D3
+~
+~
+0 -1 198
+S
+#200
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 201
+D3
+~
+~
+0 -1 199
+S
+#201
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 190
+D3
+~
+~
+0 -1 200
+S
+#202
+New room~
+No description~
+0 11
+D3
+~
+~
+481 166 168
+S
+#203
+Gate~
+No description~
+4 11
+D0
+~
+~
+481 166 204
+D2
+~
+~
+0 0 169
+S
+#204
+Courtyard~
+No description~
+0 11
+D0
+~
+~
+0 -1 207
+D1
+~
+~
+0 -1 206
+D2
+~
+~
+481 166 203
+D3
+~
+~
+0 -1 205
+S
+#205
+Courtyard~
+No description~
+0 11
+D0
+~
+~
+0 0 208
+D1
+~
+~
+0 -1 204
+D3
+~
+~
+0 -1 213
+S
+#206
+Courtyard~
+No description~
+0 11
+D0
+~
+~
+0 0 209
+D1
+~
+~
+0 -1 215
+D3
+~
+~
+0 -1 204
+S
+#207
+Courtyard~
+No description~
+0 11
+D0
+~
+~
+0 -1 210
+D1
+~
+~
+0 -1 209
+D2
+~
+~
+0 -1 204
+D3
+~
+~
+0 -1 208
+S
+#208
+Courtyard~
+No description~
+0 11
+D0
+~
+~
+0 0 211
+D1
+~
+~
+0 -1 207
+D2
+~
+~
+0 -1 205
+S
+#209
+Courtyard~
+No description~
+0 11
+D0
+~
+~
+0 0 212
+D2
+~
+~
+0 -1 206
+D3
+~
+~
+0 -1 207
+S
+#210
+Courtyard~
+No description~
+0 11
+D0
+~
+~
+0 -1 217
+D1
+~
+~
+0 -1 212
+D2
+~
+~
+0 -1 207
+D3
+~
+~
+0 -1 211
+S
+#211
+Courtyard~
+No description~
+0 11
+D1
+~
+~
+0 -1 210
+D2
+~
+~
+0 -1 208
+S
+#212
+Courtyard~
+No description~
+0 11
+D2
+~
+~
+0 -1 209
+D3
+~
+~
+0 -1 210
+S
+#213
+A Guard's Tower~
+No description~
+0 11
+D1
+~
+~
+0 -1 205
+D4
+~
+~
+0 -1 214
+S
+#214
+New room~
+No description~
+0 11
+D5
+~
+~
+0 -1 213
+S
+#215
+Guard's Tower~
+No description~
+0 11
+D3
+~
+~
+0 -1 206
+D4
+~
+~
+0 -1 216
+S
+#216
+New room~
+No description~
+0 11
+D5
+~
+~
+0 -1 215
+S
+#217
+Entrance to the Wizard's Keep~
+No description~
+0 11
+D0
+~
+~
+481 168 218
+D2
+~
+~
+0 -1 210
+S
+#218
+New room~
+No description~
+0 11
+D2
+~
+~
+481 168 217
+D4
+~
+~
+0 -1 219
+D5
+~
+~
+225 -1 225
+S
+#219
+Entrance to the Rotunda~
+No description~
+0 11
+D0
+~
+~
+0 -1 231
+D1
+~
+~
+0 -1 222
+D2
+~
+~
+0 -1 221
+D3
+~
+~
+0 -1 220
+D5
+~
+~
+0 -1 218
+S
+#220
+Rotunda~
+No description~
+0 11
+D1
+~
+~
+0 -1 219
+D2
+~
+~
+0 -1 224
+S
+#221
+Rotunda~
+No description~
+0 11
+D0
+~
+~
+0 -1 219
+D1
+~
+~
+0 0 223
+D3
+~
+~
+0 -1 224
+S
+#222
+Rotunda~
+No description~
+0 11
+D2
+~
+~
+0 -1 223
+D3
+~
+~
+0 -1 219
+S
+#223
+Rotunda~
+No description~
+0 11
+D0
+~
+~
+0 -1 222
+D3
+~
+~
+0 -1 221
+S
+#224
+Rotunda~
+No description~
+0 11
+D0
+~
+~
+0 0 220
+D1
+~
+~
+0 -1 221
+S
+#225
+Basement~
+No description~
+0 11
+D2
+~
+~
+0 -1 226
+D4
+~
+~
+225 -1 218
+S
+#226
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 225
+D1
+~
+~
+0 -1 230
+D2
+~
+~
+0 -1 227
+S
+#227
+New room~
+No description~
+0 11
+D0
+~
+~
+0 -1 226
+D1
+~
+~
+0 -1 228
+S
+#228
+Entrance to Prison~
+No description~
+0 11
+D1
+~
+~
+0 -1 229
+D3
+~
+~
+0 -1 227
+S
+#229
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 228
+S
+#230
+Wine Cellar~
+No description~
+0 11
+D3
+~
+~
+0 -1 226
+S
+#231
+Entrance to the Foyer~
+No description~
+0 11
+D0
+~
+~
+225 169 232
+D2
+~
+~
+0 -1 219
+S
+#232
+Foyer~
+No description~
+4 11
+D0
+~
+~
+0 -1 233
+D1
+~
+~
+0 -1 243
+D2
+~
+~
+225 225 231
+D3
+~
+~
+0 -1 242
+S
+#233
+Foyer~
+No description~
+4 11
+D0
+~
+~
+0 -1 234
+D1
+~
+~
+0 -1 241
+D2
+~
+~
+0 -1 232
+D3
+~
+~
+0 -1 240
+S
+#234
+Foyer~
+No description~
+4 11
+D0
+~
+~
+0 -1 235
+D1
+~
+~
+0 -1 239
+D2
+~
+~
+0 -1 233
+D3
+~
+~
+0 -1 238
+S
+#235
+Foyer - NORTH SECRET CODE FOR DOOR~
+No description~
+4 11
+D0
+~
+~
+0 -1 244
+D1
+~
+~
+0 -1 237
+D2
+~
+~
+0 -1 234
+D3
+~
+~
+0 -1 236
+S
+#236
+Foyer Lobby~
+No description~
+0 11
+D1
+~
+~
+0 -1 235
+D2
+~
+~
+0 0 238
+S
+#237
+Foyer Lobby~
+No description~
+0 11
+D2
+~
+~
+0 -1 239
+D3
+~
+~
+0 -1 235
+S
+#238
+Foyer Lobby~
+No description~
+0 11
+D0
+~
+~
+0 -1 236
+D1
+~
+~
+0 -1 234
+D2
+~
+~
+0 0 240
+S
+#239
+Foyer Lobby~
+No description~
+0 11
+D0
+~
+~
+0 0 237
+D2
+~
+~
+0 -1 241
+D3
+~
+~
+0 -1 234
+S
+#240
+Foyer Lobby~
+No description~
+0 11
+D0
+~
+~
+0 -1 238
+D1
+~
+~
+0 -1 233
+D2
+~
+~
+0 0 242
+S
+#241
+Foyer Lobby~
+No description~
+0 11
+D0
+~
+~
+0 0 239
+D2
+~
+~
+0 0 243
+D3
+~
+~
+0 -1 233
+S
+#242
+Foyer Lobby~
+No description~
+0 11
+D0
+~
+~
+0 -1 240
+D1
+~
+~
+0 -1 232
+D3
+~
+~
+481 -1 245
+S
+#243
+Foyer Lobby~
+No description~
+0 11
+D0
+~
+~
+0 -1 241
+D3
+~
+~
+0 -1 232
+S
+#244
+North - SECRET KEYWORD FOR DOOR~
+No description~
+0 11
+D0
+~
+~
+0 -1 259
+D2
+~
+~
+0 -1 235
+S
+#245
+Secret Passageway~
+No description~
+4 11
+D1
+~
+~
+481 -1 242
+D3
+~
+~
+0 -1 255
+S
+#255
+Secret Passageway~
+No description~
+0 11
+D1
+~
+~
+0 -1 245
+D3
+~
+~
+0 -1 256
+S
+#256
+Secret Passageway~
+No description~
+0 11
+D1
+~
+~
+0 -1 255
+D3
+~
+~
+0 -1 257
+S
+#257
+Secret Passageway~
+No description~
+0 11
+D1
+~
+~
+0 -1 256
+D5
+~
+~
+0 -1 258
+S
+#258
+Secret Room~
+No description~
+0 11
+D4
+~
+~
+0 -1 257
+S
+#259
+End of the Road...for now.~
+No description~
+0 11
+D2
+~
+~
+0 -1 244
 S
 #0
+#MOBILES
+#166
+A Patrolman of the Keep~
+A Patrolman of the Keep~
+A Patrolman patrols the keep
+~
+~
+97 27372 0 S
+165 1
+10000 -500 1000 300
+! 0 0 0 0 1079422 0 16
+| 0 0 0 30766 0 0 0
+#0
+#OBJECTS
+#166
+A Key~
+~
+~
+18 0 0 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+#167
+A Ground's Key~
+~
+~
+18 0 0 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+#168
+Wizard's Keep Key~
+~
+~
+18 0 0 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+#169
+Key to Foyer~
+~
+~
+18 0 0 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+#0
+#RESETS
+D 0 168 1 1 (null)
+
+D 0 168 1 2 (null)
+
+D 0 203 0 2 (null)
+
+D 0 217 0 2 (null)
+
+D 0 218 5 2 (null)
+D 0 231 0 2 (null)
+D 0 242 3 1 (null)
+M 0 166 25 173 (null)
+M 0 166 25 175 (null)
+M 0 166 25 177 (null)
+M 0 166 25 179 (null)
+M 0 166 25 191 (null)
+M 0 166 25 193 (null)
+M 0 166 25 195 (null)
+M 0 166 25 197 (null)
+M 0 166 25 199 (null)
+M 0 166 25 201 (null)
+M 0 166 25 189 (null)
+M 0 166 25 187 (null)
+M 0 166 25 185 (null)
+M 0 166 25 183 (null)
+M 0 166 25 181 (null)
+S
 #$

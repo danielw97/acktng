@@ -176,7 +176,6 @@ void violence_update( void )
          if( ( ch->hit < ch->max_hit * 3 / 4 ) && ( ch->mana > mana_cost( ch, skill_lookup( "heal" ) ) ) )
          {
             do_cast( ch, "heal self" );
-            has_cast = TRUE;
          }
       }
       else if( IS_NPC( ch ) && ch->hit < 0 )
@@ -203,7 +202,7 @@ void violence_update( void )
                   has_cast = TRUE;
                }
             }
-            else if( IS_SET( ch->def, DEF_CURE_SERIOUS ) )
+            if( IS_SET( ch->def, DEF_CURE_SERIOUS ) )
             {
                if( ch->mana > mana_cost( ch, skill_lookup( "cure serious" ) ) )
                {
@@ -211,7 +210,7 @@ void violence_update( void )
                   has_cast = TRUE;
                }
             }
-            else if( IS_SET( ch->def, DEF_CURE_CRITIC ) )
+            if( IS_SET( ch->def, DEF_CURE_CRITIC ) )
             {
                if( ch->mana > mana_cost( ch, skill_lookup( "cure critical" ) ) )
                {
@@ -219,7 +218,7 @@ void violence_update( void )
                   has_cast = TRUE;
                }
             }
-            else if( IS_SET( ch->def, DEF_CURE_HEAL ) )
+            if( IS_SET( ch->def, DEF_CURE_HEAL ) )
             {
                if( ch->mana > mana_cost( ch, skill_lookup( "heal" ) ) )
                {
@@ -301,6 +300,15 @@ void violence_update( void )
                }
             }
          }
+      }
+      if( ( IS_NPC( ch ) )
+          && ( ch->is_free == FALSE )
+          && ( ch->position > POS_RESTING )
+          && ( ch->fighting != NULL )
+          && ( ch->fighting->is_free == FALSE )
+          && ( ch->in_room != NULL ) && ( ch->hit > 1 ) && ( ch->position == POS_FIGHTING ) )
+      {
+         check_skills(ch, ch->fighting);
       }
       /*
        * Hunting mobs.
@@ -1844,9 +1852,6 @@ bool check_skills( CHAR_DATA * ch, CHAR_DATA * victim )
    if( !IS_NPC( ch ) )
       return FALSE;
 
-   if( number_percent(  ) < 30 + ( ch->level - victim->level ) )
-      return FALSE;
-
    /*
     * Count how many of the attack skills are available 
     */
@@ -1857,6 +1862,8 @@ bool check_skills( CHAR_DATA * ch, CHAR_DATA * victim )
    if( IS_SET( ch->skills, MOB_HEADBUTT ) )
       cnt++;
    if( IS_SET( ch->skills, MOB_KNEE ) )
+      cnt++;
+   if( IS_SET( ch->skills, MOB_KICK ) )
       cnt++;
    if( IS_SET( ch->skills, MOB_DIRT ) )
       cnt++;
@@ -1869,6 +1876,11 @@ bool check_skills( CHAR_DATA * ch, CHAR_DATA * victim )
    check = number_range( 1, cnt );
 
    cnt = 0;
+   if( IS_SET( ch->skills, MOB_KICK ) && ( ++cnt == check ) )
+   {
+      do_kick( ch, "" );
+      return TRUE;
+   }
    if( IS_SET( ch->skills, MOB_PUNCH ) && ( ++cnt == check ) )
    {
       do_punch( ch, "" );

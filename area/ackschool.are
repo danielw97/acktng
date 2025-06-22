@@ -655,8 +655,8 @@ This little ghost doesn't look too tough to you!
 ~
 3 0 0 S
 3 1
-50 -4 -3
-! 3 0 0 7 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #20103
 troll~
@@ -665,9 +665,9 @@ troll~
 ~
 ~
 3 0 0 S
-3 1
-50 -10 -6
-! 2 0 0 7 0 0 0
+4 1
+0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #20102
 sales man salesman~
@@ -676,7 +676,7 @@ sales man salesman~
 ~
 67 0 0 S
 1 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #20101
@@ -689,9 +689,9 @@ This guy looks like he would kill his own mother for a cigarette.  He
 put him out of his misery.
 ~
 67 0 0 S
-5 1
-0 0 0
-! 2 0 0 7 0 0 0
+4 1
+0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #20100
 Skeleton~
@@ -703,8 +703,8 @@ These little, disorganized skeletons don't look too hard. Maybe they will help
 ~
 16777283 0 0 S
 5 1
-50 -5 -5
-! 3 0 0 7 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -1052,6 +1052,7 @@ O 0 20119 0 20114 (null)
 M 0 20101 1 20125 (null)
 
 E 0 20115 0 0 (null)
+
 E 0 20118 0 19 (null)
 
 E 0 20105 0 4 (null)

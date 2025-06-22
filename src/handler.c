@@ -500,13 +500,14 @@ int get_damroll( CHAR_DATA *ch )
       dam += ch->dr_mod;
       dam += ch->level / 3;
    }
-   else
-   {
-      dam += str_app[get_curr_str(ch)].todam;
-      dam += get_psuedo_level(ch)/10;
-   }
 
-   dam += stance_app[ch->stance].dr_mod  * get_psuedo_level(ch) / 10;
+   dam += str_app[get_curr_str(ch)].todam;
+
+   if (stance_app[ch->stance].dr_mod != 0)
+   {
+      dam += dam * stance_app[ch->stance].dr_mod / 10;
+      dam += stance_app[ch->stance].dr_mod;
+   }
 
    return dam;
 }
@@ -520,15 +521,36 @@ int get_hitroll( CHAR_DATA *ch)
       hit += ch->hr_mod;
       hit += ch->level / 3;
    }
-   else
+
+   hit += str_app[get_curr_str(ch)].tohit;
+
+   if (stance_app[ch->stance].hr_mod != 0)
    {
-      hit += str_app[get_curr_str(ch)].tohit;
-      hit += get_psuedo_level(ch)/10;
+      hit += hit * stance_app[ch->stance].hr_mod / 10;
+      hit += stance_app[ch->stance].hr_mod;
    }
 
-   hit += stance_app[ch->stance].hr_mod  * get_psuedo_level(ch) / 10;
+   return hit;
+}
+
+int get_ac(CHAR_DATA *ch)
+{
+   int ac = get_stat(ch, APPLY_AC)
+
+   if (IS_NPC(ch))
+   {
+      ac += ch->ac_mod;
+      ac -= ch->level * 2;
+   }
+
+   if (stance_app[ch->stance].ac_mod != 0)
+   {
+      ac += ac * stance_app[ch->stance].ac_mod / 10;
+      ac += stance_app[ch->stance].ac_mod * -10;
+   }
 
    return hit;
+
 }
 
 int get_stat( CHAR_DATA *ch, int stat )

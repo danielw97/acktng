@@ -223,7 +223,7 @@ Bkla;dkhglkhjg
 ~
 3 0 0 S
 57 1
--356 39 47
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #27
@@ -234,8 +234,8 @@ Blah blah blah blah *burp* blah blah blah
 
 ~
 131081 0 0 S
-68 1
-0 45 43
+66 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #26
@@ -246,8 +246,8 @@ Blah blah blah
 
 ~
 33 0 0 S
-67 1
--450 12 69
+66 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #25
@@ -260,7 +260,7 @@ Descriptive-type stuff...
 ~
 1 0 0 S
 21 1
--267 120 23
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #24
@@ -271,8 +271,8 @@ This cute littlwe bird couldnt hurt a flea...
 
 ~
 3 524416 0 S
-95 1
--247 120 150
+96 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #23
@@ -283,8 +283,8 @@ Man.. does this guy reek. he looks even worse than he smells. You really didnt
 think ear-wax was supposed to run.
 ~
 2051 0 0 S
-74 1
--350 45 38
+75 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #21
@@ -298,8 +298,8 @@ This little brat must belon gto the ppl who own this house.. this kid makes
 ~
 1 0 -700 S
 53 1
--210 22 23
-! 6 0 0 7 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #22
 the fast housewife~
@@ -310,7 +310,7 @@ Cuper blah
 Oh blah~
 1 0 0 S
 5 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0

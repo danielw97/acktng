@@ -1116,6 +1116,7 @@ void load_mobiles( FILE * fp )
 
       pMobIndex->sex = fread_number( fp );
 
+      pMobIndex->hp_mod = fread_number( fp );
       pMobIndex->ac_mod = fread_number( fp );   /* read      */
       pMobIndex->hr_mod = fread_number( fp );   /* in the    */
       pMobIndex->dr_mod = fread_number( fp );   /* modifiers */
@@ -1158,8 +1159,8 @@ void load_mobiles( FILE * fp )
          pMobIndex->strong_magic = fread_number( fp );
          pMobIndex->weak_magic = fread_number( fp );
          pMobIndex->race_mods = fread_number( fp );
-         pMobIndex->power_skills = fread_number( fp );
-         pMobIndex->power_cast = fread_number( fp );
+         fread_number( fp ); /* power_skills */
+         fread_number( fp ); /* power_cast */
          pMobIndex->resist = fread_number( fp );
          pMobIndex->suscept = fread_number( fp );
       }

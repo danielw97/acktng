@@ -886,10 +886,11 @@ void do_mstat( CHAR_DATA * ch, char *argument )
    else
    {
       sprintf( buf, "Str:%d/%d  Int:%d/%d  Wis:%d/%d  Dex:%d/%d Con:%d/%d.\n\r",
-               get_curr_str( victim ), victim->pcdata->max_str,
-               get_curr_int( victim ), victim->pcdata->max_int,
-               get_curr_wis( victim ), victim->pcdata->max_wis,
-               get_curr_dex( victim ), victim->pcdata->max_dex, get_curr_con( victim ), victim->pcdata->max_con );
+               get_curr_str( victim ), get_max_str(victim),
+               get_curr_int( victim ), get_max_str(victim),
+               get_curr_wis( victim ), get_max_wis(victim),
+               get_curr_dex( victim ), get_max_dex(victim), 
+               get_curr_con( victim ), get_max_con(victim) );
       strcat( buf1, buf );
    }
 
@@ -942,7 +943,7 @@ void do_mstat( CHAR_DATA * ch, char *argument )
 
    if( IS_NPC( victim ) )
    {
-      sprintf( buf, "MODIFIERS: AC: %d.  Hitroll: %d.  Damroll: %d.\n\r", victim->ac_mod, victim->hr_mod, victim->dr_mod );
+      sprintf( buf, "MODIFIERS: HP: %ld  AC: %d.  Hitroll: %d.  Damroll: %d.\n\r", victim->hp_mod, victim->ac_mod, victim->hr_mod, victim->dr_mod );
       strcat( buf1, buf );
       sprintf( buf, "TARGET: %s\n\r", victim->target );
       strcat( buf1, buf );
@@ -5897,6 +5898,7 @@ void do_owear( CHAR_DATA * ch, char *argument )
    send_rep_out( ch, buf1, mailme, buf );
    return;
 }
+
 void do_areasave( CHAR_DATA * ch, char *argument )
 {
    /*
@@ -5911,8 +5913,6 @@ void do_areasave( CHAR_DATA * ch, char *argument )
 
    return;
 }
-
-
 
 void do_findreset( CHAR_DATA * ch, char *argument )
 {

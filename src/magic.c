@@ -1729,7 +1729,10 @@ bool spell_dispel_magic( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
 
       int cloak_chance = 40;
 
-      cloak_chance += (get_psuedo_level(victim) - get_psuedo_level(ch));
+      cloak_chance += (get_psuedo_level(ch) - get_psuedo_level(victim));
+
+      if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
+         cloak_chance += 15;
 
       if( ( IS_AFFECTED( victim, AFF_CLOAK_REFLECTION ) )
           && ( ch != victim ) && ( number_percent(  ) < cloak_chance ) )

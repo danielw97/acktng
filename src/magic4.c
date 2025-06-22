@@ -396,7 +396,7 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
    AFFECT_DATA af;
 
-   int base_heal = 40;
+   int base_heal = 10;
 
    int heal = class_heal_character(ch, victim, base_heal, sn, INDEX_MAG, TRUE);
 

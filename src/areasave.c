@@ -351,8 +351,7 @@ void build_save_mobs(  )
    fprintf( SaveFile, "%s~\n", pMobIndex->description );
    fprintf( SaveFile, "%i %i %i S\n", pMobIndex->act, pMobIndex->affected_by, pMobIndex->alignment );
    fprintf( SaveFile, "%i %i\n", pMobIndex->level, pMobIndex->sex );
-   fprintf( SaveFile, "%i %i %i\n", pMobIndex->ac_mod, pMobIndex->hr_mod, pMobIndex->dr_mod );
-
+   fprintf( SaveFile, "%li %i %i %i\n", pMobIndex->hp_mod, pMobIndex->ac_mod, pMobIndex->hr_mod, pMobIndex->dr_mod );
 
    /*
     * Write out new details - clan, class, race and skills

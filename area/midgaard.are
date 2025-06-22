@@ -2275,8 +2275,8 @@ The Postmaster stands here, watching over you...
 ~
 ~
 524299 8320 1000 S
-74 1
-0 50 50
+75 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3020
@@ -2286,10 +2286,10 @@ Cyberlich's Black Avenger is here, staring at you with @@Rred eyes.@@g
 ~
 ~
 3153927 1157800 1000 S
-140 0
--2500 1000 1000
-! 0 0 0 7 425390 64 0
-| 0 0 0 0 0 0 0
+139 0
+0 0 0 0
+! 0 0 0 7 0 0 425390
+| 0 64 0 0 0 0 0
 #3144
 crier~
 the town crier~
@@ -2298,8 +2298,8 @@ The town crier is here, weeping quietly.
 He is very good at his job - completely dissolved in tears.
 ~
 1 0 900 S
-27 1
-0 0 0
+26 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3143
@@ -2310,10 +2310,10 @@ The mayor is here.  He shakes your hand.
 He is a well-built, middle-aged man with thin, grey hair.
 ~
 1 8192 900 S
-18 1
-0 0 0
-! 0 0 0 7 0 0 32
-| 0 0 0 0 0 0 0
+19 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 32
 #3142
 secretary~
 the secretary~
@@ -2325,7 +2325,7 @@ She looks very busy.
 ~
 1 0 900 S
 17 2
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3141
@@ -2337,7 +2337,7 @@ A big, strong, angry guard.
 ~
 1 0 1000 S
 8 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3140
@@ -2349,7 +2349,7 @@ A big, strong, angry captain.
 ~
 1 8 1000 S
 16 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3124
@@ -2360,8 +2360,8 @@ A duck is here, quacking happily.
 The duck is quite fat.  It looks like it is enjoying life.
 ~
 1 0 1000 S
-12 0
-0 0 0
+10 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3123
@@ -2372,8 +2372,8 @@ A sparrow is flapping around on the ground.
 The sparrow looks like it is enjoying life.
 ~
 1 0 1000 S
-10 0
-0 0 0
+8 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3122
@@ -2385,7 +2385,7 @@ The duckling is adorable, it looks most of all like a tiny furball.
 ~
 1 0 1000 S
 1 0
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3121
@@ -2396,8 +2396,8 @@ A swan is swimming around in the pond.
 The white swan is very elegant.
 ~
 1 0 1000 S
-3 0
-0 0 0
+2 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3120
@@ -2408,8 +2408,8 @@ A sexton is sitting here, drinking hot tea.
 The sexton looks like he is relaxing after another grave-digging job.
 ~
 1 0 800 S
-11 1
-0 0 0
+10 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3100
@@ -2422,7 +2422,7 @@ She is very beautiful with golden hair, and deep blue eyes. A good reason
 ~
 1 0 1000 S
 31 2
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3094
@@ -2433,8 +2433,8 @@ A large, trained wolf is here.
 The wolf looks like a strong, fearless fighter.
 ~
 1 0 0 S
-7 0
-0 0 0
+6 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3093
@@ -2445,8 +2445,8 @@ A large, loyal rottweiler is here.
 The rottweiler looks like a strong, fierce fighter.
 ~
 1 0 400 S
-26 0
-0 0 0
+27 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3092
@@ -2458,7 +2458,7 @@ The beagle looks like a fierce fighter.
 ~
 1 0 400 S
 13 0
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3091
@@ -2469,8 +2469,8 @@ A small loyal puppy is here.
 The puppy looks like a cute, little, fierce fighter.
 ~
 1 0 400 S
-1 0
-0 0 0
+3 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3090
@@ -2482,7 +2482,7 @@ The kitten looks like a cute, little, fierce fighter.
 ~
 1 0 400 S
 4 0
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3069
@@ -2493,8 +2493,8 @@ A cityguard is here, guarding the mayor.
 A big, strong, helpful, trustworthy guard.
 ~
 65 65538 1000 S
-5 1
-0 0 0
+4 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3068
@@ -2506,7 +2506,7 @@ A big, strong, helpful, trustworthy guard.
 ~
 65 0 1000 S
 28 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3067
@@ -2517,8 +2517,8 @@ A cityguard is here, guarding the gate.
 A big, strong, helpful, trustworthy guard.
 ~
 65 0 1000 S
-10 1
-0 0 0
+11 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3066
@@ -2529,9 +2529,9 @@ An alley cat hisses at you.
 The alley cat is half starved and more than a little feral.
 ~
 1 0 -200 S
-39 1
--350 85 94
-! 0 0 0 7 2322 0 0
+38 1
+0 0 0 0
+! 0 0 0 7 0 0 2322
 | 0 0 0 0 0 0 0
 #3065
 beggar~
@@ -2541,8 +2541,8 @@ A beggar is here, asking for a few coins.
 The beggar looks like she is fed up with life.
 ~
 1 0 400 S
-3 2
-0 0 0
+2 2
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3064
@@ -2554,7 +2554,7 @@ A drunk who seems to be too happy, and to carry too much money.
 ~
 1 0 400 S
 12 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3063
@@ -2566,7 +2566,7 @@ He looks pretty mean.
 ~
 1 0 -200 S
 4 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3062
@@ -2577,8 +2577,8 @@ A furry little system bug is here.
 A system bug is something from a computer programer's worst nightmare.
 ~
 131201 40 -200 S
-8 0
-10 -3 -3
+9 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3061
@@ -2588,8 +2588,8 @@ A janitor is walking around, cleaning up.
 ~
 ~
 1 0 900 S
-9 1
-0 0 0
+8 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3060
@@ -2601,8 +2601,8 @@ A big, strong, helpful, trustworthy guard.
 ~
 65 0 1000 S
 35 1
--100 70 80
-! 0 0 0 7 6150 0 0
+0 0 0 0
+! 0 0 0 7 0 0 6150
 | 0 0 0 0 0 0 0
 #3050
 dealer~
@@ -2616,7 +2616,7 @@ Aod looks just like the dealer hoodlum you see on T.V.  He's wearing a
 ~
 8388611 552 0 S
 10 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3046
@@ -2629,7 +2629,7 @@ Filthy looks real, ehm, dirty. He likes to keep his costumers happy,
 ~
 3 0 600 S
 13 1
--500 500 500
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3040
@@ -2640,8 +2640,8 @@ A bartender watches you calmly, while he skillfully mixes a drink.
 A tired looking Bartender who hates trouble in his bar.
 ~
 8388611 0 900 S
-46 1
-0 0 0
+47 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3012
@@ -2652,8 +2652,8 @@ A healer is here.
 Although retired from adventuring, the healer still lends a hand.
 ~
 4099 8328 1000 S
-114 1
--500 500 500
+116 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3011
@@ -2666,9 +2666,9 @@ A masked woman with muscles bulging all over her body.  You can tell by
 ~
 131103 1633020 1000 S
 138 2
--2500 1000 1000
-! 0 0 0 7 944270 7637056 48
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 944270
+| 0 7637056 0 0 0 0 48
 #3010
 leather worker~
 the leather worker~
@@ -2679,8 +2679,8 @@ He looks as an honest, hard-working artisan who only just earns enough to
 ~
 3 128 900 S
 107 1
--500 500 500
-! 0 0 0 7 2054 0 0
+0 0 0 0
+! 0 0 0 7 0 0 2054
 | 0 0 0 0 0 0 0
 #3009
 jeweller~
@@ -2690,10 +2690,10 @@ The jeweller is standing behind the desk.
 He is fat and has a content although watchful look on his face.
 ~
 8388611 8320 900 S
-83 1
--500 500 500
-! 0 0 0 7 32 64 0
-| 0 0 0 0 0 0 0
+85 1
+0 0 0 0
+! 0 0 0 7 0 0 32
+| 0 64 0 0 0 0 0
 #3008
 boy~
 the pet shop boy~
@@ -2703,7 +2703,7 @@ He is young and close-cropped and looks quite happy.
 ~
 3 0 900 S
 68 1
--500 500 500
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3007
@@ -2714,8 +2714,8 @@ A sailor stands here, waiting to train you.
 He looks like a strong, fit sailor.
 ~
 515 0 900 S
-71 1
-0 0 0
+72 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3006
@@ -2726,8 +2726,8 @@ A retired captain stands here, selling boats.
 This captain has killed more sharks than you have eaten peas.
 ~
 3 40 900 S
-20 1
-0 0 0
+21 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3005
@@ -2739,7 +2739,7 @@ Well COUNT your money!
 ~
 3 98304 100 S
 35 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3004
@@ -2752,8 +2752,8 @@ An old but very strong armourer, he has made more armours in his
 ~
 9438211 8328 900 S
 103 1
--500 500 500
-! 0 0 0 7 416 0 0
+0 0 0 0
+! 0 0 0 7 0 0 416
 | 0 0 0 0 0 0 0
 #3003
 weaponsmith~
@@ -2763,8 +2763,8 @@ A weaponsmith.
 A young weaponsmith, who still has lots to learn.
 ~
 8396807 8328 900 S
-85 1
--500 500 500
+83 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3002
@@ -2775,10 +2775,10 @@ A grocer stands at the counter, with a slightly impatient look on his face.
 A tall grocer, who moves two 200 pounds bag of flour around on his shoulders.
 ~
 8388611 8320 900 S
-112 1
--500 500 500
-! 0 0 0 7 32 16384 0
-| 0 0 0 0 0 0 0
+110 1
+0 0 0 0
+! 0 0 0 7 0 0 32
+| 0 16384 0 0 0 0 0
 #3001
 baker~
 the baker~
@@ -2788,10 +2788,10 @@ A fat, nice looking baker. But you can see that he has many scars on his
 body.
 ~
 9437187 8320 900 S
-97 1
--500 500 500
-! 0 0 0 7 6600 16384 0
-| 0 0 0 0 0 0 0
+96 1
+0 0 0 0
+! 0 0 0 7 0 0 6600
+| 0 16384 0 0 0 0 0
 #3014
 wizard~
 the wizard~
@@ -2802,8 +2802,8 @@ The wizard looks old and senile, and yet he looks like a very powerful
 rings and bracelets.
 ~
 3 0 900 S
-76 1
--500 500 500
+75 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3013
@@ -2815,7 +2815,7 @@ This is a test
 ~
 1 0 0 S
 15 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3099
@@ -2827,9 +2827,9 @@ Max the bank teller stands here, ready to take your money.
 He looks greasy, and not very trustworthy.  Go figure.
 ~
 9469963 128 0 S
-95 1
--500 500 500
-! 0 0 0 7 8328 0 0
+94 1
+0 0 0 0
+! 0 0 0 7 0 0 8328
 | 0 0 0 0 0 0 0
 #3016
 collector~
@@ -2840,9 +2840,9 @@ collector~
 ~
 1093992449 1591528 0 S
 132 1
--2500 1000 1000
-! 0 0 0 7 401294 128 16
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 401294
+| 0 128 0 0 0 0 16
 #3095
 warhorse horse~
 @@WA Warhorse@@N~
@@ -2850,9 +2850,9 @@ warhorse horse~
 ~
 ~
 134217985 0 0 S
-33 1
--100 30 25
-! 0 0 0 7 2054 0 0
+34 1
+0 0 0 0
+! 0 0 0 7 0 0 2054
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -4513,6 +4513,5 @@ M 3012 spec_cast_adept
 M 3005 spec_thief
 M 3014 spec_cast_bigtime
 M 3011 spec_executioner
-M 3016 (null)
 S
 #$

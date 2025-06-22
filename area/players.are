@@ -688,7 +688,7 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 ~
 1027 128 1000 S
 74 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1105
@@ -702,33 +702,10 @@ Al the Bartender is a short, fat, round kind of guy, always cleaning glasses,
 think about it.  He flashes a quick smile at you.
 ~
 515 533180 900 S
-75 1
--1000 500 500
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
->greet_prog 100~
-if ispc($n)
-        say Greetings, $n
-        bow $n
-endif
-~
->act_prog p smiles at you.~
-say A smile a day keeps the Doctor away!
-   emote gets back to cleaning his glasses.
-~
->act_prog p opens the trapdoor.~
-say Just the cellar down there... and that's empty.
-   sigh
-   emote spits into the glass he is cleaning.
-~
->rand_prog 2~
-emote leans towards you.
-   say They say it gets hot this year.  Very hot.
-~
->rand_prog 10~
-emote starts on a new glass, and spits twice for good measure.
-~
-|
+74 1
+0 0 0 0
+! 0 0 0 7 22100 22100 0
+| 0 0 0 -2083608464 133 0 0
 #1104
 guildmaster master~
 the guildmaster~
@@ -739,8 +716,8 @@ This is your master.  Big and strong with bulging muscles.  Several scars
 has a calm look on his face.
 ~
 1027 0 1000 S
-80 1
-0 0 0
+82 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1103
@@ -754,7 +731,7 @@ You realize that whenever your guildmaster moves, you fail to notice it:
 ~
 1027 0 1000 S
 78 2
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1102
@@ -766,8 +743,8 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 a peaceful, loving look. You notice that he is surrounded by a white aura.
 ~
 1027 128 1000 S
-75 1
-0 0 0
+74 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1101
@@ -781,7 +758,7 @@ Even though your guildmaster looks old and tired, you can clearly see the
 ~
 1027 0 1000 S
 73 2
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0

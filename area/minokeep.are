@@ -1520,10 +1520,10 @@ mino minotaur captain~
 ~
 ~
 36700243 2728 -500 S
-132 1
--100 400 400
-! 0 0 12 7 134670 50331648 32
-| 0 0 0 0 0 0 0
+133 1
+0 0 0 0
+! 0 0 0 7 0 0 134670
+| 0 50331648 0 0 0 0 32
 #1301
 minotaur guard~
 @@eMinotaur @@dGuard@@M~
@@ -1532,8 +1532,8 @@ minotaur guard~
 ~
 3145795 1048808 250 S
 120 1
--200 320 300
-! 0 0 12 7 138766 0 0
+0 0 0 0
+! 0 0 0 7 0 0 138766
 | 0 0 0 0 0 0 0
 #1302
 minotaur patrol~
@@ -1542,9 +1542,9 @@ minotaur patrol~
 ~
 ~
 3145793 1048744 0 S
-124 1
--400 300 300
-! 0 0 12 7 7694 0 0
+123 1
+0 0 0 0
+! 0 0 0 7 0 0 7694
 | 0 0 0 0 0 0 0
 #1303
 Gate Guard Minotaur~
@@ -1553,10 +1553,10 @@ Gate Guard Minotaur~
 ~
 ~
 67 2216 -1000 S
-126 1
--100 100 100
-! 0 0 12 7 7694 0 32
-| 0 0 0 0 0 0 0
+125 1
+0 0 0 0
+! 0 0 0 7 0 0 7694
+| 0 0 0 0 0 0 32
 #1304
 minotaur cook~
 @@eMinotaur@@d Cook@@N~
@@ -1565,9 +1565,9 @@ minotaur cook~
 ~
 7 168 0 S
 107 1
--350 300 300
-! 0 0 12 7 7694 1064960 8
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 7694
+| 0 1064960 0 0 0 0 8
 #1305
 minotaur swordsman swordsmaster trainer~
 @@WA @@eMinotaur @@dSwordmaster@@N~
@@ -1576,9 +1576,9 @@ minotaur swordsman swordsmaster trainer~
 ~
 36700227 2216 0 S
 130 1
-0 300 300
-! 0 0 12 7 1550 50331648 32
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 1550
+| 0 50331648 0 0 0 0 32
 #1306
 minotaur swordsman student~
 @@WA @@eMinotaur @@dSword Student@@N~
@@ -1587,8 +1587,8 @@ minotaur swordsman student~
 ~
 67 168 0 S
 116 1
-0 220 250
-! 0 0 12 7 24078 0 0
+0 0 0 0
+! 0 0 0 7 0 0 24078
 | 0 0 0 0 0 0 0
 #1307
 mino minotaur soldier~
@@ -1598,8 +1598,8 @@ mino minotaur soldier~
 ~
 67 131240 -250 S
 121 1
-0 300 250
-! 0 0 12 7 138766 0 0
+0 0 0 0
+! 0 0 0 7 0 0 138766
 | 0 0 0 0 0 0 0
 #1308
 prison mob~
@@ -1610,9 +1610,9 @@ prison mob~
 ~
 131089 12348 100 S
 119 1
-0 245 255
-! 3 0 12 7 526350 0 2
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 526350
+| 0 0 0 0 0 0 2
 #1309
 prison guard minotaur~
 @@dThe @@eMinotaur @@dprison guard @@N~
@@ -1621,9 +1621,9 @@ A Prison Guard stands here, guarding the prisoners.
 ~
 3 141500 0 S
 134 1
-0 200 200
-! 0 0 12 7 399406 4096 0
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 399406
+| 0 4096 0 0 0 0 0
 #0
 #OBJECTS
 #1300

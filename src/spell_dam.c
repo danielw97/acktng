@@ -161,16 +161,25 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
 
 int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index, bool hot )
 {
-   int heal = base_heal * 2;
+   int heal = base_heal;
 
-   if (class_table[class_index].attr_prime == APPLY_INT && sn != spell_psionic_recovery)
+   if (class_table[class_index].attr_prime == APPLY_INT)
    {
       int intel = (get_curr_int(ch) - 13) * 5;
 
       heal += heal * intel / 100;
-      heal += heal * ch->lvl[CLASS_MAG] / 100;
-      heal += heal * ch->remort[CLASS_SOR] / 100;
-      heal += heal * ch->remort[CLASS_WIZ] / 100;
+
+      if (sn != spell_psionic_recovery)
+      {
+         heal += heal * ch->lvl[CLASS_MAG] / 50;
+         heal += heal * ch->remort[CLASS_SOR] / 25;
+         heal += heal * ch->remort[CLASS_WIZ] / 25;
+      }
+      else
+      {
+         heal += heal * ch->lvl[CLASS_PSI]/50;
+         heal += heal * ch->remort[CLASS_EGO]/25;
+      }
    }
    else if (class_table[class_index].attr_prime == APPLY_WIS)
    {
@@ -178,16 +187,8 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal += heal * wis / 100;
       heal += heal * ch->lvl[CLASS_CLE] / 50;
-      heal += heal * ch->remort[CLASS_PRI] / 50;
-      heal += heal * ch->remort[CLASS_PAL] / 50 * .75;
-   }
-   else // psionic recovery
-   {
-      int intel = (get_curr_int(ch) - 13) * 5;
-
-      heal += heal * intel / 100;
-      heal += heal * ch->lvl[CLASS_PSI]/50;
-      heal += heal * ch->remort[CLASS_EGO]/50;
+      heal += heal * ch->remort[CLASS_PRI] / 25;
+      heal += heal * ch->remort[CLASS_PAL] / 25 * .75;
    }
 
    if (stance_app[ch->stance].heal_mod > 0)
@@ -196,7 +197,7 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
    if (IS_NPC(ch))
    {
       heal *= ch->level+100;
-      heal /= 100;
+      heal /= 25;
    }
 
    if (hot)

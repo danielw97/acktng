@@ -2113,7 +2113,7 @@ Taert, bulging muscles and all, is here.
 ~
 1 1572864 500 S
 61 1
--50 0 20
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #32
@@ -2127,7 +2127,7 @@ The Dark Stalker is a product of the Dark Powers.  It's only purpose in life
 ~
 65553 1049090 -900 S
 50 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #30
@@ -2139,8 +2139,8 @@ The Zombie looks like it has just been animated.  This doesn't stop it
 also looking like a bad road accident.
 ~
 3 0 -400 S
-6 0
-0 0 0
+7 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #31
@@ -2151,8 +2151,8 @@ A hideous zombie stands before you.
 The Zombie looks freshly animated.  Looking closer you almost recognise it.
 ~
 16385 0 -400 S
-1 1
-0 0 0
+2 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #33
@@ -2165,7 +2165,7 @@ You see a long beared wacky mage standing here. His head seems swollen with
 ~
 11 1573032 0 S
 65 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #34
@@ -2175,8 +2175,8 @@ The sweet-looking Tate is here.
 ~
 ~
 1 1572864 300 S
-51 1
--50 22 22
+52 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #35
@@ -2187,7 +2187,7 @@ Lyle, the second most bravest adventurer in the world, cowers here.
 ~
 1 1572864 300 S
 63 1
--20 40 12
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0

@@ -995,11 +995,8 @@ void do_detox( CHAR_DATA * ch, char *argument )
    int dam;
    int chance;
 
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_detox] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
+   if( !can_use_skill_by_gsn(ch, gsn_detox, TRUE) )
       return;
-   }
 
    if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
    {
@@ -1030,11 +1027,8 @@ void do_morale( CHAR_DATA * ch, char *argument )
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_morale] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
+   if( !can_use_skill_by_gsn(ch, gsn_morale, TRUE) )
       return;
-   }
 
    for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
    {
@@ -1063,11 +1057,8 @@ void do_leadership( CHAR_DATA * ch, char *argument )
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_leadership] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
+   if( !can_use_skill(ch, gsn_leadership, TRUE) )
       return;
-   }
 
    for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
    {
@@ -1094,6 +1085,9 @@ void do_leadership( CHAR_DATA * ch, char *argument )
 void disarm( CHAR_DATA * ch, CHAR_DATA * victim, OBJ_DATA * obj )
 {
    int chance;
+
+   if (!can_use_skill_by_gsn(ch, gsn_disarm, TRUE) )
+      return;
 
    set_fighting( ch, victim, TRUE );
    if( obj == NULL )

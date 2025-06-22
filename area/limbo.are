@@ -1396,7 +1396,7 @@ He looks big, mean, and scared of PulpDog members holding him up.
 ~
 32779 128 900 S
 76 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1
@@ -1408,8 +1408,8 @@ Puff the Fractal Dragon is here, contemplating a higher reality.
 ~
 ~
 1 0 1000 S
-32 2
-0 0 0
+31 2
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #2
@@ -1424,8 +1424,8 @@ Such people as you do not look at kings.
 
 ~
 3145731 0 1000 S
-80 1
--100 50 50
+81 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #6
@@ -1440,8 +1440,8 @@ Looks kinda like a person.  Better put it out of it's misery!!
 
 ~
 3 0 1000 S
-13 0
-200 -5 -5
+11 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3
@@ -1450,8 +1450,8 @@ A cute li'l goldfish.~
 A cute li'l goldfish sinks its fangs into you!~
 ~
 1 8320 -1000 S
-57 2
-0 6 60
+58 2
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5
@@ -1461,7 +1461,7 @@ The old healer~
 ~
 12291 0 0 S
 10 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #7
@@ -1473,9 +1473,9 @@ jailrat~
 ~
 ~
 262149 32808 0 S
-14 1
--100 10 10
-! 2 0 0 7 870400 0 0
+13 1
+0 0 0 0
+! 0 0 0 7 0 0 870400
 | 0 0 0 0 0 0 0
 #8
 @@gBones@@N~
@@ -1486,9 +1486,9 @@ jailrat~
 ~
 ~
 278609 131072 0 S
-15 1
-0 0 0
-! 7 0 0 7 0 0 0
+14 1
+0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS

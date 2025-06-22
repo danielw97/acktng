@@ -550,6 +550,7 @@ struct mob_index_data
    int affected_by;
    int aggro_list;
    sh_int alignment;
+   long hp_mod;
    int ac_mod; /* ac modifier */
    int hr_mod; /* hitroll modifier */
    int dr_mod; /* damroll modifier */
@@ -689,6 +690,7 @@ struct char_data
    int hitroll;
    int damroll;
    int armor;
+   long hp_mod;
    int ac_mod; /* ac modifier */
    int stance_ac_mod;
    int hr_mod; /* hitroll modifier */

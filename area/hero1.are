@@ -135,8 +135,8 @@ This guy really is a huge killing machine perhaps you should walk away.
 
 ~
 19 0 0 S
-9 1
-100 -10 0
+10 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #301
@@ -146,8 +146,8 @@ A large rat is scurring about here.
 ~
 ~
 1 0 -10 S
-7 0
-100 -100 -100
+6 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #302
@@ -158,9 +158,9 @@ Borg.
 The big borgy bastard.
 ~
 23 0 1000 S
-14 0
--50 25 20
-! 0 0 0 7 20612 0 0
+13 0
+0 0 0 0
+! 0 0 0 7 0 0 20612
 | 0 0 0 0 0 0 0
 #304
 A dirty gladiator~
@@ -168,8 +168,8 @@ A dirty gladiator~
 A filthy gladiator stands here~
 ~
 3 0 0 S
-11 1
-0 0 0
+9 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #305
@@ -180,7 +180,7 @@ A cook is here, harried
 ~
 3 0 0 S
 10 1
-0 0 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #306
@@ -190,8 +190,8 @@ A hurried patron is here, trying to get through lunch
 ~
 ~
 3 0 0 S
-11 1
-0 0 0
+12 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0

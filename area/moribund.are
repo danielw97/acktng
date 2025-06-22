@@ -87,7 +87,7 @@ D0
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D1
 Moribund.
 ~
@@ -97,7 +97,7 @@ D2
 Moribund.
 ~
 ~
-0 -1 3306
+0 -1 3303
 D3
 Moribund.
 ~
@@ -107,7 +107,7 @@ D4
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3306
 D5
 Moribund.
 ~
@@ -121,30 +121,30 @@ You are in the inner lands of Moribund.  Whisps of grey smoke float by.
 ~
 9228 11
 D0
-Moribund.
-~
-~
-0 -1 3304
-D1
-Moribund.
-~
-~
-0 -1 3304
-D2
-Moribund.
-~
-~
-0 -1 3303
-D3
 The Morgue!
 ~
 ~
 0 -1 3300
-D4
+D1
 Moribund.
 ~
 ~
 0 -1 3305
+D2
+Moribund.
+~
+~
+0 -1 3304
+D3
+Moribund.
+~
+~
+0 -1 3303
+D4
+Moribund.
+~
+~
+0 -1 3304
 D5
 Moribund.
 ~
@@ -170,7 +170,7 @@ D2
 Moribund.
 ~
 ~
-0 -1 3304
+0 -1 3303
 D3
 Moribund.
 ~
@@ -180,7 +180,7 @@ D4
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3304
 D5
 Moribund.
 ~
@@ -196,17 +196,17 @@ D0
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D1
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D2
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D3
 Moribund.
 ~
@@ -216,7 +216,7 @@ D4
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D5
 Moribund.
 ~
@@ -237,22 +237,22 @@ D1
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D2
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D3
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D4
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D5
 Moribund.
 ~
@@ -284,9 +284,9 @@ A Pesky Gremlin stands here, looking for someone to hurt.~
 ~
 2069 1605632 -900 S
 1 1
-200 0 0
-! 0 0 0 7 8226 2 0
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 8226
+| 0 2 0 0 0 0 0
 #3301
 will willo wisp~
 Will-o the Wisp~
@@ -296,8 +296,8 @@ As you look closer, you realise it is swamp gas.  You sense an evil force at
 work, as it whips round your body, as if a hungry snake.
 ~
 3 524416 -900 S
-26 0
-40 16 19
+27 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3300
@@ -311,7 +311,7 @@ Cadaver is a long dead adventurer, forever doomed to summon forth other
 ~
 3 524288 -200 S
 79 1
-100 50 50
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0

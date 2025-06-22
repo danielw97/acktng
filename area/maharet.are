@@ -1158,8 +1158,8 @@ The impassive gate guard stands here.
 ~
 ~
 7 32776 -100 S
-54 1
--500 120 110
+53 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9220
@@ -1169,9 +1169,9 @@ The guard captain of the elite squadron polishes his boots nonchalantly here.
 ~
 ~
 21102721 533120 100 S
-66 1
--690 199 223
-! 0 0 0 7 7684 0 0
+65 1
+0 0 0 0
+! 0 0 0 7 0 0 7684
 | 0 0 0 0 0 0 0
 #9219
 elite~
@@ -1181,7 +1181,7 @@ The impassive Elite guard stands here, looming over you.
 ~
 87 8872 -1 S
 63 1
--40 40 40
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9218
@@ -1192,9 +1192,9 @@ The beautifully radiant Queen Amlariul sits here lost in thought.
 ~
 3 680 -1 S
 82 2
--1400 400 400
-! 0 0 0 7 24078 0 16
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 24078
+| 0 0 0 0 0 0 16
 #9217
 healer~
 the wizened priest~
@@ -1202,10 +1202,10 @@ The wizened old elven priest looks up at you from his reading.
 ~
 ~
 5635 2728 300 S
-79 1
--1400 400 400
-! 0 0 0 7 24078 0 16
-| 0 0 0 0 0 0 0
+78 1
+0 0 0 0
+! 0 0 0 7 0 0 24078
+| 0 0 0 0 0 0 16
 #9216
 guard elven~
 the elegant elven guard~
@@ -1213,8 +1213,8 @@ The serenely graceful Elven guards patrol here.
 ~
 ~
 197 8832 -1 S
-37 1
--25 20 20
+36 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9215
@@ -1224,10 +1224,10 @@ Amylla Goldeneyes bakes her way through the day's order here.
 ~
 ~
 131 35368 -1 S
-70 2
--1400 400 400
-! 0 0 0 7 24076 0 16
-| 0 0 0 0 0 0 0
+71 2
+0 0 0 0
+! 0 0 0 7 0 0 24076
+| 0 0 0 0 0 0 16
 #9213
 sebastian shopkeeper~
 Sebastian the shopkeeper~
@@ -1235,10 +1235,10 @@ A short, crabby elf is here giving music lessons.
 ~
 ~
 3 2720 0 S
-63 1
--1400 400 400
-! 0 0 0 7 24076 0 16
-| 0 0 0 0 0 0 0
+62 1
+0 0 0 0
+! 0 0 0 7 0 0 24076
+| 0 0 0 0 0 0 16
 #9208
 ilyrana shopkeeper~
 Ilyrana the Shopkeeper~
@@ -1251,8 +1251,8 @@ This pretty little elf spends most of her time here among her flowers. With her
 ~
 16785475 10912 0 S
 141 2
--1400 400 400
-! 0 0 0 7 390 0 0
+0 0 0 0
+! 0 0 0 7 0 0 390
 | 0 0 0 0 0 0 0
 #9207
 marikoth executioner~
@@ -1266,8 +1266,8 @@ This quiet, silver-haired elf with his deep set eyes and an expression of
 ~
 131083 10984 0 S
 108 1
--1000 527 527
-! 0 0 0 7 6158 0 0
+0 0 0 0
+! 0 0 0 7 0 0 6158
 | 0 0 0 0 0 0 0
 #9206
 alinar banker~
@@ -1279,9 +1279,9 @@ The honorable elf before you would rather die than cheat a customer of his
 leads that has him practically chained to the bank.
 ~
 32771 8872 0 S
-84 1
--1300 400 400
-! 3 0 0 7 398 0 0
+83 1
+0 0 0 0
+! 0 0 0 7 0 0 398
 | 0 0 0 0 0 0 0
 #9205
 dandy innkeeper~
@@ -1293,8 +1293,8 @@ The huge man towering over you sends a shiver down your spine with a glance.
 likely that he would give you a big hug rather than hurt you.
 ~
 11 8876 0 S
-68 1
--65 65 65
+69 1
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9203
@@ -1309,9 +1309,9 @@ Rushing up to you the moment you walked in the door, it's almost as if he was
 ~
 8388611 10912 0 S
 141 1
--1400 400 400
-! 0 0 0 7 30 0 16
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 30
+| 0 0 0 0 0 0 16
 #9202
 kythaela weaponsmith~
 Kythaela the weaponsmith~
@@ -1323,10 +1323,10 @@ Kythaela looks as if she has been in this business for a long time. Her
 and she will design a special one just for you.
 ~
 8195 10920 0 S
-120 2
--1400 400 400
-! 0 0 0 7 6158 0 16
-| 0 0 0 0 0 0 0
+118 2
+0 0 0 0
+! 0 0 0 7 0 0 6158
+| 0 0 0 0 0 0 16
 #9201
 scruffy dwarf~
 a scruffy little dwarf~
@@ -1337,7 +1337,7 @@ This scruffy little scavenger is better off left unnoticed. Maybe if you ignore 
 ~
 197 0 -1 S
 4 0
--3 3 3
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9204
@@ -1348,9 +1348,9 @@ A soft-spoken elven woman is here offering you a glass of wine.
 ~
 8388611 10912 0 S
 137 2
--1400 400 400
-! 0 0 0 7 0 0 16
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 16
 #9209
 amasal armorer~
 Amasal the Armorer~
@@ -1362,9 +1362,9 @@ This handsome elf looks as if he's tired of being cooped up in this tiny shop.
 around. Maybe it is time he got a partner for the store?
 ~
 1048579 10912 0 S
-140 1
--1300 400 500
-! 3 0 0 7 142 0 0
+141 1
+0 0 0 0
+! 0 0 0 7 0 0 142
 | 0 0 0 0 0 0 0
 #9210
 rennyn shopkeeper~
@@ -1376,9 +1376,9 @@ A tall, thin elf stands before you. He looks slightly bored, as if it has been
 various food items he has brought in today.
 ~
 3 2720 0 S
-138 1
--1400 400 400
-! 0 0 0 7 24076 0 0
+140 1
+0 0 0 0
+! 0 0 0 7 0 0 24076
 | 0 0 0 0 0 0 0
 #9211
 evanard grocer~
@@ -1391,9 +1391,9 @@ The happy elf before you has made it his life's work to find hard to locate
 ask for something he couldn't possibly have in his backroom.
 ~
 3 2720 0 S
-137 1
--1400 400 400
-! 0 0 0 7 24206 0 0
+135 1
+0 0 0 0
+! 0 0 0 7 0 0 24206
 | 0 0 0 0 0 0 0
 #9212
 laeroth wizard~
@@ -1406,10 +1406,10 @@ As you look into Laeroth's eyes, you get the feeling you can't count as high
 can make up for you today.
 ~
 3 2720 0 S
-141 1
--1400 400 400
-! 0 0 0 7 24076 8394752 0
-| 0 0 0 0 0 0 0
+142 1
+0 0 0 0
+! 0 0 0 7 0 0 24076
+| 0 8394752 0 0 0 0 0
 #9214
 lorianne bartender~
 Lorianne the bartender~
@@ -1419,10 +1419,10 @@ Tall and slender and graceful, this lady has a piercing glare about her, I
 wouldnt mess if I were you.
 ~
 1539 2720 -1 S
-76 2
--1400 400 400
-! 0 0 0 7 24078 0 16
-| 0 0 0 0 0 0 0
+75 2
+0 0 0 0
+! 0 0 0 7 0 0 24078
+| 0 0 0 0 0 0 16
 #9222
 paul creditman jeweller~
 Paul the Creditman~
@@ -1431,9 +1431,9 @@ A very happy man is here offering you credit for jewelry.
 ~
 8388611 2720 0 S
 60 1
--1400 400 400
-! 0 0 0 7 20236 0 16
-| 0 0 0 0 0 0 0
+0 0 0 0
+! 0 0 0 7 0 0 20236
+| 0 0 0 0 0 0 16
 #0
 #OBJECTS
 #9234
