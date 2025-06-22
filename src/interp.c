@@ -1131,8 +1131,7 @@ void interpret( CHAR_DATA * ch, char *argument )
     * Dispatch the command.
     */
    if( !IS_NPC( ch )
-       && ( ( ch->stance == STANCE_AMBUSH )
-            || ( ch->stance == STANCE_AC_BEST ) )
+       && IS_SET(stance_app[ch->stance].specials, STANCE_NINJA )
        && ( ( str_prefix( command, "kill" ) )
             && ( str_prefix( command, "murder" ) )
             && ( str_prefix( command, "backstab" ) )
@@ -1143,10 +1142,7 @@ void interpret( CHAR_DATA * ch, char *argument )
 
    {
       send_to_char( "You step out of the shadows.\n\r", ch );
-      ch->stance = STANCE_WARRIOR;
-      ch->stance_ac_mod = 0;
-      ch->stance_dr_mod = 0;
-      ch->stance_hr_mod = 0;
+      ch->stance = 0;
       act( "$n steps out of the Shadows!", ch, NULL, NULL, TO_ROOM );
    }
    comlog( ch, cmd, argument );
