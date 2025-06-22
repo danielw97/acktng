@@ -70,7 +70,7 @@ void do_stance(CHAR_DATA *ch, char *argument)
     char arg[MAX_STRING_LENGTH];
     char cat_buf[MSL];
     char msg_buf[MSL];
-    sh_int i;
+    int i;
 
     if (IS_NPC(ch))
     {
