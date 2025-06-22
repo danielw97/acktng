@@ -89,12 +89,15 @@ void do_stance(CHAR_DATA *ch, char *argument)
     {
         sprintf(msg_buf, "\n\r%s\n\r", "Fighting Stances available to you:\n\r");
 
-        if (is_legal_stance(ch, i))
+        for(int i = 0; i < MAX_STANCE; i++)
         {
-            sprintf(cat_buf, "%s\n\r", stance_app[i].name);
+            if (is_legal_stance(ch, i))
+            {
+                sprintf(cat_buf, "%s\n\r", stance_app[i].name);
 
-            safe_strcat(MSL, msg_buf, cat_buf);
-            sprintf(cat_buf, "%s", "");
+                safe_strcat(MSL, msg_buf, cat_buf);
+                sprintf(cat_buf, "%s", "");
+            }
         }
         sprintf(cat_buf, "%s",
                 "Type stance <stance name> to change your current fighting stance.\n\r You may place your current Stance in your prompt with a \%s\n\r");
