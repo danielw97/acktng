@@ -1473,7 +1473,7 @@ The sly little Abu is here, looking for something to kill
 ~
 ~
 4194305 1048576 400 S
-3 1
+1 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1485,7 +1485,7 @@ An fraction of Aliaser's power floats here.
 He is big and bad.  Don't mess with him.
 ~
 65 136 1000 S
-74 1
+73 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1512,7 +1512,7 @@ He looks mean, but you feel comfortable that you can kill him, especially since
 he is leashed up, and you are not.
 ~
 3 0 0 S
-7 0
+8 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1525,7 +1525,7 @@ He looks wimpy.  You feel comfortable that you can kill him, especially since
 he is leashed up, and you are not.
 ~
 131 0 0 S
-4 0
+6 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1538,7 +1538,7 @@ He looks mean, but you feel comfortable that you can kill him, especially since
 he is leashed up, and you are not.
 ~
 35 0 0 S
-12 0
+13 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1551,7 +1551,7 @@ He looks mean, but you feel comfortable that you can kill him, especially since
 he is leashed up, and you are not.
 ~
 163 0 0 S
-9 0
+11 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1578,7 +1578,7 @@ He is big and bad.  Don't mess with him.
 67 136 1000 S
 79 1
 0 0 0 0
-! 0 0 0 7 0 0 17416
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3709
 gekko~
@@ -1600,7 +1600,7 @@ The newt tries to find water here.
 It smiles at you, and tries to eat your leg.
 ~
 65 0 -100 S
-1 0
+2 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1612,7 +1612,7 @@ The badger roots around for food here.
 It grunts at you.
 ~
 65 0 0 S
-7 0
+8 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1636,7 +1636,7 @@ A slug squeltches around here, waiting to be trod on.
 You don't see much but slime about it.
 ~
 65 0 0 S
-5 0
+4 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1660,7 +1660,7 @@ Pooh Bear digs in his honey pot for a little treat.
 The bear must be bigger than you!  It wants to rip your head off.
 ~
 65 0 0 S
-5 0
+6 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1683,7 +1683,7 @@ An adept of Frag is here, grinning and selling you things.
 He is big and bad.  Don't mess with him.
 ~
 67 136 1000 S
-76 1
+74 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1695,7 +1695,7 @@ The Adept of Furey is here, waiting to help you.
 He is big and bad.  Don't mess with him.
 ~
 1603 136 1000 S
-79 1
+81 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1709,7 +1709,7 @@ He is big and bad.  Don't mess with him.
 1049667 136 1000 S
 113 1
 0 0 0 0
-! 0 0 0 7 0 0 26504
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #3720
 sage~
@@ -1720,7 +1720,7 @@ This horrible creature is your final test for mud school.  Kill him, and the
 diploma is yours.
 ~
 3 512 0 S
-11 0
+8 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1732,7 +1732,7 @@ A newbie Squire stands here, dropping equipment all over the place.
 ~
 ~
 3 553 0 S
-3 1
+4 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0

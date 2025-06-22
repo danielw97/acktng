@@ -406,7 +406,7 @@ minotaur patrol~
 3145729 8380 -200 S
 103 1
 0 0 0 0
-! 0 0 0 7 0 0 12302
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 #6605
 cut cutthroat throat minotaur~
@@ -417,7 +417,7 @@ cut cutthroat throat minotaur~
 3145731 106686 -200 S
 103 1
 0 0 0 0
-! 0 0 0 7 0 0 6286
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 128
 #6621
 minotaur lesser guard~
@@ -426,9 +426,9 @@ minotaur lesser guard~
 ~
 ~
 3153923 8892 -200 S
-101 1
+100 1
 0 0 0 0
-! 0 0 0 7 0 0 14782
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 #6622
 minotaur trainee~
@@ -439,7 +439,7 @@ minotaur trainee~
 3153923 8328 -200 S
 99 1
 0 0 0 0
-! 0 0 0 7 0 0 14
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #6620
 minotaur worker~
@@ -449,9 +449,9 @@ minotaur worker~
 ~
 ~
 1 8320 -100 S
-84 1
+83 1
 0 0 0 0
-! 0 0 0 7 0 0 6
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #6614
 minotaur ranger~
@@ -460,9 +460,9 @@ minotaur ranger~
 ~
 ~
 3153923 631036 -200 S
-111 1
+113 1
 0 0 0 0
-! 0 0 0 7 0 0 14478
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 #6623
 minotaur commander~
@@ -474,7 +474,7 @@ minotaur commander~
 3153923 90300 -200 S
 109 1
 0 0 0 0
-! 0 0 0 7 0 0 6798
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
 #0
 #OBJECTS

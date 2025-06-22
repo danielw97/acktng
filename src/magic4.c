@@ -407,6 +407,7 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    af.location = APPLY_HOT;
    af.modifier = heal;
    af.bitvector = 0;
+   af.caster = ch;
    affect_to_char( victim, &af );
    act( "$N begins to quickly regenerate from $n's spell.", ch, NULL, victim, TO_ROOM );
    send_to_char( "You begin to quickly regenerate.\n\r", victim );

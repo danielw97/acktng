@@ -1888,9 +1888,9 @@ A small friendly storekeeper stands here.
 ~
 ~
 67 18624 0 S
-142 1
+141 1
 0 0 0 0
-! 0 0 0 7 0 0 22542
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16868
 dark guard warrior~
@@ -1899,9 +1899,9 @@ The dark guard stands here, ready to slice your head from your shoulders.
 ~
 ~
 1179723 17064 0 S
-139 1
+138 1
 0 0 0 0
-! 0 0 0 7 0 0 14862
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16856
 soul~
@@ -1910,7 +1910,7 @@ A swirling lost soul tries to drag you into back into the pit.
 ~
 ~
 99 0 -1000 S
-136 0
+137 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1921,7 +1921,7 @@ The night gaunt stands here, offering refreshments.
 ~
 ~
 131153 280641 -1000 S
-9 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1932,9 +1932,9 @@ A shapely acolyte smiles enticingly at you through blood red lips.
 ~
 ~
 75 25212 -1000 S
-140 2
+142 2
 0 0 0 0
-! 0 0 0 7 0 0 13326
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16819
 armageddon~
@@ -1949,7 +1949,7 @@ Armageddon stands at nearly 20 feet, and is undoubtedly the most fearsome
 123 25321 0 S
 140 0
 0 0 0 0
-! 0 0 0 7 0 0 14350
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #16817
 giant bee~
@@ -1961,9 +1961,9 @@ This giant bee is about 4 feet long, with a wicked-looking barbed stinger that
 looks like it could turn you into a kabab!  Better be careful...
 ~
 131177 524840 0 S
-134 1
+135 1
 0 0 0 0
-! 0 0 0 7 0 0 24578
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #16816
 queen giant bee~
@@ -1976,7 +1976,7 @@ This is the queen of the giant bees.  She is about 6 feet long, and her
 107 524840 0 S
 142 2
 0 0 0 0
-! 0 0 0 7 0 0 10254
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #16815
 age~
@@ -1990,7 +1990,7 @@ This skeletal figure stands at about 7 feet in height, and is dressed in
 67 552 0 S
 140 0
 0 0 0 0
-! 0 0 0 7 0 0 10254
+! 0 0 0 7 0 0 0
 | 0 524288 0 0 0 0 0
 #16813
 The Lord of Tresserhorn~
@@ -2003,9 +2003,9 @@ You find it very difficult to make out any details about @@dThe @@GLord @@dof
 you are better of NOT seeing the foul creature.
 ~
 75 21032 -300 S
-139 1
+138 1
 0 0 0 0
-! 0 0 0 7 0 0 10270
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16804
 the vicious radib harpy~
@@ -2017,9 +2017,9 @@ The harpy looks back at you, her beady eyes burning with hatred and malice.
 flesh from your body.
 ~
 134217851 524800 -500 S
-140 2
+142 2
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 65536 0 0 0 0 0
 #16809
 the legionaire god~
@@ -2031,9 +2031,9 @@ The form of the god of warriors stands at nearly 8 feet tall.  A shroud of
 depths of his cowled hood reveal his supernatural origin.
 ~
 83 524840 0 S
-140 0
+139 0
 0 0 0 0
-! 0 0 0 7 0 0 8350
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16811
 the crazed necromancer~
@@ -2048,9 +2048,9 @@ Standing at nearly 7 feet tall, and clad in glowing red armor, The
 death magic, and NOBODY can stand against me and live!'
 ~
 67 640 -1 S
-135 1
+134 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 256 0 0 0 0 0
 #16821
 wizen old man traveller~
@@ -2062,9 +2062,9 @@ This wizen old man hobbles along the road, seemingly on the verge of collaps.
 appraising look of a weapons expert...Maybe he is more than he seems?
 ~
 193 0 0 S
-141 1
+143 1
 0 0 0 0
-! 0 0 0 7 0 0 128
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16825
 the smelly under bridge troll~
@@ -2077,9 +2077,9 @@ The huge form of the troll hulks over you, howling with rage.  "How DARE you
 snarl at you he grabs a spiked club and swings it down towards your head!
 ~
 111 512 -500 S
-141 1
+143 1
 0 0 0 0
-! 0 0 0 7 0 0 10254
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #16851
 pit fiend~
@@ -2090,7 +2090,7 @@ The pit fiend stands here, waiting to take your soul.
 123 16968 -1000 S
 138 1
 0 0 0 0
-! 0 0 0 7 0 0 14366
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16852
 imp~
@@ -2101,7 +2101,7 @@ A small green imp stands here, preserving combat trophies.
 73 286780 -666 S
 100 1
 0 0 0 0
-! 0 0 0 7 0 0 13326
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #16857
 doorman~
@@ -2121,7 +2121,7 @@ A guardian of clan DarkBlade is standing here, glaring at you.
 ~
 ~
 1 0 0 S
-27 1
+29 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2134,7 +2134,7 @@ A kind healer stands here, tending to your wounds.
 67 18624 1000 S
 140 1
 0 0 0 0
-! 0 0 0 7 0 0 22542
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16800
 dark heart of the wood~
@@ -2157,7 +2157,7 @@ dark heart of the wood~
 11 56 0 S
 139 1
 0 0 0 0
-! 0 0 0 7 0 0 24582
+! 0 0 0 7 0 0 0
 | 0 524288 0 0 0 0 0
 #16801
 rainbow dragon~
@@ -2169,7 +2169,7 @@ rainbow dragon~
 132619 540732 500 S
 140 1
 0 0 0 0
-! 0 0 0 7 0 0 30734
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #16803
 the krakken~
@@ -2178,9 +2178,9 @@ the KrakKen~
 ~
 ~
 131113 107134 0 S
-141 1
+140 1
 0 0 0 0
-! 0 0 0 7 0 0 30734
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #16805
 paladia mors~
@@ -2189,9 +2189,9 @@ paladia mors~
 ~
 ~
 131083 533052 0 S
-106 1
+105 1
 0 0 0 0
-! 0 0 0 7 0 0 12302
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16806
 chromium elder dragon~
@@ -2200,9 +2200,9 @@ The statue of the @@aChromium@@N Elder Dragon, is here.
 ~
 ~
 11 8764 0 S
-104 1
+102 1
 0 0 0 0
-! 0 0 0 7 0 0 13326
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #16807
 arcades sabbath edler dragon statue~
@@ -2214,7 +2214,7 @@ The statue of the Elder Dragon known as @@dAr@@Wcad@@des
 131083 8828 0 S
 97 1
 0 0 0 0
-! 0 0 0 7 0 0 13326
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #16808
 Vaevictus Asmadi~
@@ -2223,9 +2223,9 @@ The statue of @@dVae@@Gvic@@Rtus As@@Gma@@ddi@@N, the Elder Dragon, looms powerf
 ~
 ~
 131083 25148 0 S
-139 1
+140 1
 0 0 0 0
-! 0 0 0 7 0 0 13326
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #16810
 nicol bolas~
@@ -2234,9 +2234,9 @@ A statue of the most feared Elder Dragon, @@dNic@@aol @@dBo@@clas@@N
 ~
 ~
 131083 8764 0 S
-139 1
+141 1
 0 0 0 0
-! 0 0 0 7 0 0 15374
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS

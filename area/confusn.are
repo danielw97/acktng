@@ -3179,9 +3179,9 @@ This catrat is an adult female.  Catrats are a cross between a cat and a rat,
 as their name suggests.  Needless to say, they are most ugly.
 ~
 143 0 -300 S
-13 1
+11 1
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9603
 catrat male~
@@ -3207,7 +3207,7 @@ The Hippocampus is a cross between a horse and a fish.  It's front hooves are
 3 524288 300 S
 29 2
 0 0 0 0
-! 0 0 0 7 0 0 2050
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9605
 neogi slave~
@@ -3219,9 +3219,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 managed to reach the level of master, and has therefore been mastered itself.
 ~
 19 0 -200 S
-23 0
+26 0
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9606
 neogi slave~
@@ -3233,9 +3233,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 managed to reach the level of master, and has therefore been mastered itself.
 ~
 19 0 -200 S
-14 0
+12 0
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9607
 neogi master~
@@ -3247,9 +3247,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 of master, and is in charge of making sure the slaves do their work.
 ~
 19 0 -300 S
-16 0
+17 0
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9608
 neogi ruler~
@@ -3262,9 +3262,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 operations.
 ~
 19 0 -400 S
-30 0
+32 0
 0 0 0 0
-! 0 0 0 7 0 0 4
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 #9609
 neogi~
@@ -3278,7 +3278,7 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 19 0 -200 S
 21 0
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9610
 male cock cockatrice~
@@ -3289,9 +3289,9 @@ The cocaktrice is a strange mix of lizard, cock and bat.  It seems to ignore
 you as it goes about its task of looking for small insects.
 ~
 65 524800 -50 S
-25 1
+24 1
 0 0 0 0
-! 0 0 0 7 0 0 2306
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9611
 female cock cockatrice~
@@ -3304,7 +3304,7 @@ The cocaktrice is a strange mix of lizard, cock and bat.  It seems to ignore
 65 524800 -25 S
 24 2
 0 0 0 0
-! 0 0 0 7 0 0 258
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9612
 broken one~
@@ -3315,9 +3315,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 combine a lizard man with a hawk.  Boy, he's ugly.
 ~
 11 0 -300 S
-28 1
+27 1
 0 0 0 0
-! 0 0 0 7 0 0 18
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9613
 broken one~
@@ -3328,9 +3328,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 combine a lizard man with a hawk.  Boy, he's ugly.
 ~
 11 0 -300 S
-28 1
+30 1
 0 0 0 0
-! 0 0 0 7 0 0 18
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9614
 greater broken one~
@@ -3342,9 +3342,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 the other broken ones in this clearing.
 ~
 11 0 -300 S
-39 1
+38 1
 0 0 0 0
-! 0 0 0 7 0 0 6402
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9615
 hippo baby hippogriff~
@@ -3357,7 +3357,7 @@ The baby hippogriff, although no where near full size, shows the distinct
 3 524288 200 S
 26 2
 0 0 0 0
-! 0 0 0 7 0 0 2304
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9616
 hippo hippogriff~
@@ -3368,9 +3368,9 @@ The hippogriff is an eerie mix of eagle (head and wings) and horse (body).
 It doesn't look too pleased to see you!
 ~
 11 524288 300 S
-32 0
+31 0
 0 0 0 0
-! 0 0 0 7 0 0 3330
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9617
 treant tree~
@@ -3381,9 +3381,9 @@ The tree is old, withered, and stunted.  It appears to almost have a sort
 of face on its bark.
 ~
 3 0 -200 S
-27 0
+28 0
 0 0 0 0
-! 0 0 0 7 0 0 5152
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9618
 treant tree~
@@ -3394,9 +3394,9 @@ The tree is old, withered, and stunted.  It appears to almost have a sort
 of face on its bark.
 ~
 3 0 -200 S
-33 0
+31 0
 0 0 0 0
-! 0 0 0 7 0 0 5156
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9619
 wemic male~
@@ -3407,9 +3407,9 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 7 feet tall.  It's dusky golden fur is topped by fine, black mane.
 ~
 65 0 250 S
-49 1
+50 1
 0 0 0 0
-! 0 0 0 7 0 0 6658
+! 0 0 0 7 0 0 0
 | 0 48 0 0 0 0 0
 #9620
 wemic female~
@@ -3420,9 +3420,9 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 6 feet tall.  It's dusky golden fur is topped by fine, black mane.
 ~
 3145795 0 250 S
-46 1
+47 1
 0 0 0 0
-! 0 0 0 7 0 0 7940
+! 0 0 0 7 0 0 0
 | 0 20 0 0 0 0 4
 #9621
 wemic cub~
@@ -3434,9 +3434,9 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 black mane.
 ~
 67 0 250 S
-32 1
+34 1
 0 0 0 0
-! 0 0 0 7 0 0 6786
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9622
 yugoloth guardian~
@@ -3449,8 +3449,8 @@ The Yugloth is basically an enormous bear, with huge wings and ram's horns.
 3145759 2176 -500 S
 71 0
 0 0 0 0
-! 0 0 0 7 22100 22100 24552
-| 0 1605632 0 -2082249680 1 0 8
+! 0 0 0 7 22100 0 0
+| 0 1605632 0 0 0 0 8
 #9623
 ymmas~
 the evil Ymmas~
@@ -3464,8 +3464,8 @@ Ymass is truely an evil priest.  Banished to this cabin many years ago, he set
 3145751 2176 -900 S
 85 1
 0 0 0 0
-! 0 0 0 7 22100 22100 24568
-| 0 1081344 0 -2082249040 17 0 16
+! 0 0 0 7 22100 0 0
+| 0 1081344 0 0 0 0 16
 #9624
 spider~
 a spider~
@@ -3476,7 +3476,7 @@ The spider has many legs, and looks like Ymmas!
 39 98336 -300 S
 57 0
 0 0 0 0
-! 0 0 0 7 0 0 2696
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9625
 male centaur~
@@ -3489,7 +3489,7 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 3145797 32768 300 S
 47 1
 0 0 0 0
-! 0 0 0 7 0 0 6324
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 #9626
 female centaur~
@@ -3500,9 +3500,9 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 medium sized, and generally looks after its young.
 ~
 3145799 32768 300 S
-39 2
+41 2
 0 0 0 0
-! 0 0 0 7 0 0 6322
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 #9627
 baby centaur~
@@ -3513,9 +3513,9 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 small, and loos to be about one year old.
 ~
 71 32768 300 S
-23 1
+22 1
 0 0 0 0
-! 0 0 0 7 0 0 2096
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9628
 leader centaur~
@@ -3529,7 +3529,7 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 69 40960 300 S
 47 1
 0 0 0 0
-! 0 0 0 7 0 0 8100
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #9629
 man scorpian manscorpian~
@@ -3542,7 +3542,7 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 3145829 512 -230 S
 44 1
 0 0 0 0
-! 0 0 0 7 0 0 1940
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9630
 man scorpian manscorpian~
@@ -3555,7 +3555,7 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 3145829 512 -230 S
 50 1
 0 0 0 0
-! 0 0 0 7 0 0 7044
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #9631
 king man scorpian manscorpian~
@@ -3568,10 +3568,10 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 intruders!
 ~
 3145799 2560 -380 S
-54 1
+53 1
 0 0 0 0
-! 0 0 0 7 22100 22100 23476
-| 0 4160 0 -2082245776 32 0 16
+! 0 0 0 7 22100 0 0
+| 0 4160 0 0 0 0 16
 #9632
 man scorpian manscorpian~
 a manscorpian~
@@ -3581,10 +3581,10 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 of man (upper body).  It looks pretty big, and pretty angry to see you!
 ~
 3145797 512 -330 S
-52 1
+51 1
 0 0 0 0
-! 0 0 0 7 22100 22100 8020
-| 0 0 0 -2082245328 1 0 0
+! 0 0 0 7 22100 0 0
+| 0 0 0 0 0 0 0
 #9633
 aid~
 the King's aid~
@@ -3593,9 +3593,9 @@ The King's aid stands here, looking powerful.
 The aid is an old, corrupt cleric, employed to protect the King if attacked.
 ~
 3145731 512 -400 S
-45 1
+47 1
 0 0 0 0
-! 0 0 0 7 0 0 6998
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #0
 #OBJECTS

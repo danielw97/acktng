@@ -138,7 +138,7 @@
 
 #define MAX_TRADE        5
 
-#define MAX_STANCE                     25
+#define MAX_STANCE                     24
 
 /* Stance specials */
 #define STANCE_DUAL_CAST     BIT_1

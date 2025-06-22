@@ -1939,9 +1939,9 @@ martin~
 @@gMartin is truly a master of the sword, and the mind.@@N
 ~
 3146859 27372 1000 S
-166 1
+169 1
 500 -2500 1000 1000
-! 0 0 0 7 0 0 425662
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 #30001
 elis~
@@ -1951,9 +1951,9 @@ elis~
 Her face seems to glow brighter than the lights inside.
 ~
 3145835 27368 1000 S
-165 2
+164 2
 0 0 0 0
-! 0 0 0 7 0 0 425726
+! 0 0 0 7 0 0 0
 | 0 37751848 0 0 0 0 48
 #30002
 butch~
@@ -1963,9 +1963,9 @@ butch~
 @@gButch is known as the greatest thief that ever lived, or treasurer hunter as he would put it.  Better watch your pocket.@@N
 ~
 3145839 125674 1000 S
-165 1
+163 1
 0 0 0 0
-! 0 0 0 7 0 0 425726
+! 0 0 0 7 0 0 0
 | 0 262144 0 0 0 0 80
 #30003
 Darkshade~
@@ -1974,9 +1974,9 @@ Darkshade~
 @@gIt is hard to make out a true image of him, since he blends in with almost everything.@@N
 ~
 3145835 125694 1000 S
-166 1
+168 1
 0 0 0 0
-! 0 0 0 7 0 0 425726
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 144
 #30004
 Xania~
@@ -1987,7 +1987,7 @@ Xania~
 3145835 27368 1000 S
 164 2
 0 0 0 0
-! 0 0 0 7 0 0 425726
+! 0 0 0 7 0 0 0
 | 0 8392832 0 0 0 0 48
 #30005
 garmaine gate guard~
@@ -1997,9 +1997,9 @@ garmaine gate guard~
 @@gThe guard stands motionless, but you probably couldn't sneak past him.@@N
 ~
 3145803 27368 1000 S
-164 1
+165 1
 0 0 0 0
-! 0 0 0 7 0 0 490126
+! 0 0 0 7 0 0 0
 | 0 38010880 0 0 0 0 48
 #30006
 relm~
@@ -2009,9 +2009,9 @@ relm~
 @@gRelm looks like a sweet, innocent little girl.@@N
 ~
 3145835 92906 1000 S
-165 2
+164 2
 0 0 0 0
-! 0 0 0 7 0 0 686222
+! 0 0 0 7 0 0 0
 | 0 4195328 0 0 0 0 144
 #30007
 james~
@@ -2023,7 +2023,7 @@ james~
 3145835 27368 1000 S
 165 1
 0 0 0 0
-! 0 0 0 7 0 0 948878
+! 0 0 0 7 0 0 0
 | 0 33280 0 0 0 0 48
 #30008
 jack~
@@ -2033,9 +2033,9 @@ jack~
 @@gJack looks just like a bodybuilder.@@N
 ~
 3145835 92906 1000 S
-166 1
+169 1
 0 0 0 0
-! 0 0 0 7 0 0 457358
+! 0 0 0 7 0 0 0
 | 0 295424 0 0 0 0 80
 #30009
 guardian~
@@ -2045,9 +2045,9 @@ guardian~
 @@gThe Guardian is fearless, and extremely strong.@@N
 ~
 3145835 117482 1000 S
-165 0
+167 0
 0 0 0 0
-! 0 0 0 7 0 0 424590
+! 0 0 0 7 0 0 0
 | 0 33554944 0 0 0 0 144
 #30010
 shawn~
@@ -2057,9 +2057,9 @@ Shawn~
 @@gHe is a master of the darkness, king of the shadows.@@N
 ~
 3145835 125674 1000 S
-165 1
+163 1
 0 0 0 0
-! 0 0 0 7 0 0 424846
+! 0 0 0 7 0 0 0
 | 0 50364416 0 0 0 0 80
 #30011
 flaming hydra~
@@ -2069,9 +2069,9 @@ flaming hydra~
 @@gThe Hydra seems to draw his power from the flames.@@N
 ~
 3145835 19176 -1000 S
-165 1
+163 1
 0 0 0 0
-! 0 0 0 7 0 0 490126
+! 0 0 0 7 0 0 0
 | 0 50332672 0 0 0 0 48
 #30012
 guard garmaine~
@@ -2083,7 +2083,7 @@ guard garmaine~
 3145835 27368 1000 S
 166 1
 0 0 0 0
-! 0 0 0 7 0 0 948878
+! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 80
 #30013
 guard garmaine~
@@ -2093,9 +2093,9 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-163 1
+162 1
 0 0 0 0
-! 0 0 0 7 0 0 948878
+! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 80
 #30014
 guard garmaine~
@@ -2105,9 +2105,9 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-166 1
+167 1
 0 0 0 0
-! 0 0 0 7 0 0 948878
+! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 48
 #30015
 guard garmaine~
@@ -2117,9 +2117,9 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-163 1
+162 1
 0 0 0 0
-! 0 0 0 7 0 0 948878
+! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 48
 #30016
 frost dragon~
@@ -2129,9 +2129,9 @@ frost dragon~
 @@gHe would much rather be in a freezing room than where he is now.@@N
 ~
 3145835 543464 0 S
-165 1
+166 1
 0 0 0 0
-! 0 0 0 7 0 0 948878
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 #30017
 ice lion~
@@ -2141,9 +2141,9 @@ ice lion~
 @@gHe is very strong and agile.@@N
 ~
 3145825 1100520 0 S
-166 1
+167 1
 0 0 0 0
-! 0 0 0 7 0 0 950158
+! 0 0 0 7 0 0 0
 | 0 16777728 0 0 0 0 144
 #30018
 frozen necromancer~
@@ -2153,9 +2153,9 @@ frozen necromancer~
 @@gThe Necromancer looks older than time itself.@@N
 ~
 3145825 1690314 -1000 S
-163 2
+162 2
 0 0 0 0
-! 0 0 0 7 0 0 424590
+! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 80
 #30019
 ice golem~
@@ -2165,9 +2165,9 @@ ice golem~
 @@gThe Golem has transfixed eyes.  He doesn't seem to care about much.@@N
 ~
 3145825 1067752 0 S
-164 1
+166 1
 0 0 0 0
-! 0 0 0 7 0 0 948910
+! 0 0 0 7 0 0 0
 | 0 8 0 0 0 0 48
 #30020
 poppy~
@@ -2179,7 +2179,7 @@ poppy~
 3145825 1600248 1000 S
 166 1
 0 0 0 0
-! 0 0 0 7 0 0 424590
+! 0 0 0 7 0 0 0
 | 0 33554944 0 0 0 0 80
 #30021
 guyue~
@@ -2191,7 +2191,7 @@ guyue~
 3145833 1633000 0 S
 166 1
 0 0 0 0
-! 0 0 0 7 0 0 948990
+! 0 0 0 7 0 0 0
 | 0 33554432 0 0 0 0 144
 #30022
 frost behemoth~
@@ -2203,7 +2203,7 @@ frost behemoth~
 3145825 117482 -1000 S
 165 1
 0 0 0 0
-! 0 0 0 7 0 0 424622
+! 0 0 0 7 0 0 0
 | 0 4 0 0 0 0 48
 #30023
 chimera~
@@ -2213,9 +2213,9 @@ chimera~
 @@gHer three heads give her a wide range of view.@@N
 ~
 3145833 1100520 -1000 S
-164 2
+163 2
 0 0 0 0
-! 0 0 0 7 0 0 424846
+! 0 0 0 7 0 0 0
 | 0 55578152 0 0 0 0 48
 #30024
 yeti~
@@ -2227,7 +2227,7 @@ yeti~
 3145825 125674 0 S
 164 1
 0 0 0 0
-! 0 0 0 7 0 0 424590
+! 0 0 0 7 0 0 0
 | 0 262144 0 0 0 0 80
 #0
 #OBJECTS
