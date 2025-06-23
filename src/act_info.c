@@ -4501,7 +4501,7 @@ void do_slist( CHAR_DATA * ch, char *argument )
             if( ++col % 5 == 0 )
                safe_strcat( MAX_STRING_LENGTH, buf1, "   " );
 
-            if( can_use_skill(ch, skill_table[sn].name, FALSE) )
+            if( can_use_skill(ch, sn) )
             {
                sprintf( buf, "@@m%18s@@N", skill_table[sn].name );
                safe_strcat( MAX_STRING_LENGTH, buf1, buf );
@@ -4533,7 +4533,7 @@ void do_slist( CHAR_DATA * ch, char *argument )
             if( ++col % 5 == 0 )
                safe_strcat( MAX_STRING_LENGTH, buf1, "   " );
 
-            if(can_use_skill(ch, skill_table[sn].name, FALSE) )
+            if(can_use_skill(ch, sn) )
             {
                sprintf( buf, "@@x@@m%18s@@N", skill_table[sn].name );
                safe_strcat( MAX_STRING_LENGTH, buf1, buf );
@@ -4563,7 +4563,7 @@ void do_slist( CHAR_DATA * ch, char *argument )
             if( ++col % 5 == 0 )
                safe_strcat( MAX_STRING_LENGTH, buf1, "   " );
 
-            if(can_use_skill(ch, skill_table[sn].name, FALSE) )
+            if(can_use_skill(ch, sn) )
             {
                sprintf( buf, "@@x@@m%18s@@N", skill_table[sn].name );
                safe_strcat( MAX_STRING_LENGTH, buf1, buf );
