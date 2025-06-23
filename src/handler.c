@@ -633,7 +633,7 @@ bool can_use_skill_by_name( CHAR_DATA *ch, char *skill)
 {
    int gsn = skill_lookup(skill);
 
-   return can_use_skill( ch, gsn, message );
+   return can_use_skill( ch, gsn );
 }
 
 bool can_use_skill( CHAR_DATA *ch, int gsn)
