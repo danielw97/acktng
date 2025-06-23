@@ -1479,8 +1479,8 @@ int get_hitroll args( (CHAR_DATA *ch) );
 int get_damroll args( (CHAR_DATA *ch) );
 bool can_use_skill args( ( CHAR_DATA *ch, int gsn ) );
 bool can_use_skill_message args( ( CHAR_DATA *ch, int gsn ) );
-bool can_use_skill_by_gsn args( ( CHAR_DATA *ch, char *skill ) );
-bool can_use_skill_by_gsn_message args( ( CHAR_DATA *ch, char *skill ) );
+bool can_use_skill_by_name args( ( CHAR_DATA *ch, char *skill ) );
+bool can_use_skill_by_name_message args( ( CHAR_DATA *ch, char *skill ) );
 void affect_to_room args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );
 void r_affect_remove args( ( ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA * raf ) );
 
