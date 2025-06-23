@@ -607,6 +607,20 @@ int get_stat( CHAR_DATA *ch, int stat )
    return stat_val;
 }
 
+bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+   if (ch == NULL || victim || NULL)
+      return FALSE;
+
+   if (ch->in_room == NULL || victim->in_room == NULL)
+      return FALSE;
+
+   if (ch->in_room->vnum != victim->in_room->vnum)
+      return FALSE;
+
+   return TRUE;
+}
+
 bool can_use_skill_message(CHAR_DATA *ch, int gsn)
 {
    if (!can_use_skill(ch, gsn))

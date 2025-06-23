@@ -66,6 +66,7 @@ int mana_cost( CHAR_DATA * ch, int sn );
 #define REALM_WATER       BIT_14
 #define REALM_NEGATIVE       BIT_15
 #define REALM_POSITIVE       BIT_16
+#define REALM_PHYSICAL       BIT_17
 #define NO_REFLECT        BIT_30
 #define NO_ABSORB          BIT_31
 
