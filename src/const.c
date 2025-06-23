@@ -3375,15 +3375,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    REMORT, NORM,
-    "thaumatergy", {26, 182, 182, 182, 182, 182,
-                    26, 182, 182, 182, 182, 182},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_thaumatergy, SLOT( 0 ), 0, 0,
-    "", "!Enhanced Damage!",
-    ""},
-
-   {
     MORTAL, NORM,
     "mystical focus", {55, 182, 182, 182, 182, 182},
     spell_mystical_focus, TAR_CHAR_SELF, POS_STANDING,

@@ -368,8 +368,13 @@ int hit_gain( CHAR_DATA * ch )
    if( IS_AFFECTED( ch, AFF_POISON ) )
       gain /= 4;
 
-   if( IS_SET( ch->in_room->room_flags, ROOM_COLD ) || ( IS_SET( ch->in_room->room_flags, ROOM_HOT ) ) )
-      gain *= -2;
+   if(IS_SET( ch->in_room->room_flags, ROOM_COLD ) || ( IS_SET( ch->in_room->room_flags, ROOM_HOT ) ) )
+   {
+      if (IS_UNDEAD(ch) && IS_SET(ch->in_room->room_flags, ROOM_COLD) )
+         gain *= 2;
+      else if (!IS_NPC(ch))
+         gain *= -2;
+   }
 
    if( IS_SET( ch->in_room->affected_by, ROOM_BV_HEAL_REGEN ) )
    {

@@ -161,7 +161,7 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
 
 int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index, bool hot )
 {
-   int heal = base_heal;
+   int heal = base_heal * 2;
 
    if (class_table[class_index].attr_prime == APPLY_INT)
    {
@@ -172,17 +172,13 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
       if (sn != spell_psionic_recovery)
       {
          heal += heal * ch->lvl[CLASS_MAG] / 50;
-         if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
-         {
-            heal += heal * ch->remort[CLASS_SOR] / 25;
-            heal += heal * ch->remort[CLASS_WIZ] / 25;
-         }
+         heal += heal * ch->remort[CLASS_SOR] / 50;
+         heal += heal * ch->remort[CLASS_WIZ] / 50;
       }
       else
       {
-         heal += heal * ch->lvl[CLASS_PSI]/50;
-         if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
-            heal += heal * ch->remort[CLASS_EGO]/25;
+         heal += heal * ch->lvl[CLASS_PSI]/100;
+         heal += heal * ch->remort[CLASS_EGO]/50;
       }
    }
    else if (class_table[class_index].attr_prime == APPLY_WIS)
@@ -191,11 +187,8 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal += heal * wis / 100;
       heal += heal * ch->lvl[CLASS_CLE] / 50;
-      if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
-      {
-         heal += heal * ch->remort[CLASS_PRI] / 25;
-         heal += heal * ch->remort[CLASS_PAL] / 25 * .75;
-      }
+      heal += heal * ch->remort[CLASS_PRI] / 50;
+      heal += heal * ch->remort[CLASS_PAL] / 50 * .75;
    }
 
    if (stance_app[ch->stance].heal_mod != 0)
@@ -203,8 +196,11 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
    if (IS_NPC(ch))
    {
-      heal *= ch->level+100;
-      heal /= 25;
+      heal += heal * ch->level / 100;
+      if (ch->level > 100)
+         heal += heal * (ch->level-100) / 50;
+      if (ch->level > 150)
+         heal += heal * (ch->level-150) / 50;
    }
 
    if (hot)
@@ -234,9 +230,9 @@ void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bo
    sprintf(buf2, "@@NYour %s heals %s! (@@r%d@@N)\n\r", skill_table[sn].name, victim->name, heal);
    sprintf(buf3, "@@N%s's %s heals you! (@@r%d@@N)\n\r", ch->name, skill_table[sn].name, heal);
 
-   if (ch != victim)
+   if (ch != victim && victim != NULL)
       send_to_char(buf3, victim);
-   if(ch->in_room->vnum == victim->in_room->vnum)
+   if(ch != NULL && victim != NULL && ch->in_room->vnum == victim->in_room->vnum)
       send_to_char(buf2, ch);
    act( buf1, victim, NULL, NULL, TO_ROOM );
 }
@@ -910,10 +906,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
             dam_modifier += ( get_curr_int( ch ) * ch->pcdata->learned[gsn_potency] / 5000 );
          }
 
-         if( ch->pcdata->learned[gsn_thaumatergy] > 0 )
-         {
-            dam_modifier += ( get_curr_int( ch ) * ch->pcdata->learned[gsn_thaumatergy] / 2500 );
-         }
       }
       if( is_affected( ch, skill_lookup( "mystical focus" ) ) )
       {

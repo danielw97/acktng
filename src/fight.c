@@ -131,9 +131,9 @@ void violence_update( void )
          {
             heal_character(ch, ch, paf->modifier, paf->type, TRUE);
          }
-         if (paf->location == APPLY_DOT && ch->hit > 0 && ch->in_room->vnum == paf->caster->in_room->vnum)
+         if (paf->location == APPLY_DOT && ch->hit > 0)
          {
-            do_damage(paf->caster, ch, paf->modifier, paf->type, FALSE);
+            do_damage(ch, ch, paf->modifier, paf->type, FALSE);
          }
       }
 

@@ -209,7 +209,7 @@ bool spell_thought_vise( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
       dam /= 2;
    act( "@@rA crushing weight brushes your mind, then is gone.@@N", victim, NULL, NULL, TO_ROOM );
    send_to_char( "@@rA crushing weight fills your mind.@@N", victim );
-   sp_damage( obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, FALSE );
+   sp_damage( obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE );
    return TRUE;
 }
 
@@ -230,12 +230,16 @@ bool spell_black_curse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    af.type = sn;
    af.duration = 2 * ( level / 8 );
    af.location = APPLY_HITROLL;
-   af.modifier = -1 * get_psuedo_level( ch ) / 12 * get_psuedo_level( victim ) / 10;
+   af.modifier = -1 * get_psuedo_level( ch );
    af.bitvector = AFF_CURSE;
    affect_to_char( victim, &af );
 
    af.location = APPLY_AC;
-   af.modifier = 7 * get_psuedo_level( ch ) / 12 * get_psuedo_level( victim ) / 10;
+   af.modifier = 7 * get_psuedo_level( ch );
+   affect_to_char( victim, &af );
+
+   af.location = APPLY_DOT;
+   af.modifier = get_psuedo_level( ch );
    affect_to_char( victim, &af );
 
    send_to_char( "@@RA Cloud of @@dDespair@@R washes over you.@@N\n\r", victim );
