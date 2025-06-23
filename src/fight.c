@@ -556,7 +556,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       if ( IS_NPC(ch) && IS_SET(ch->skills, MOB_MARTIAL) )
          chance = 75;
 
-      if ( !IS_NPC(ch) && can_use_skill_by_gsn(ch, gsn_martial_arts, FALSE) )
+      if ( !IS_NPC(ch) && can_use_skill(ch, gsn_martial_arts) )
          chance = 50;
 
       if (number_percent() < chance)
@@ -653,7 +653,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
     */
    dam += number_range( get_damroll( ch ) * 13 / 20, get_damroll( ch ) * 15 / 20 );
 
-   if (can_use_skill_by_gsn(ch, gsn_enhanced_damage, FALSE) )
+   if (can_use_skill(ch, gsn_enhanced_damage) )
       dam += dam * 0.6;
    else if( IS_NPC( ch ) && IS_SET(ch->skills, MOB_ENHANCED) )
       dam += dam * 0.2;
@@ -664,7 +664,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    dam += dam * ch->remort[CLASS_SWO]/100;
    dam += dam * ch->remort[CLASS_PAL]/100 * .75;
 
-   if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, gsn_enhanced_sword, FALSE) )
+   if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword) )
    {
       dam += dam * number_range(20,40)/100;
    }
@@ -677,16 +677,16 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if( dt == TYPE_MARTIAL )
       dam = ( dam * 4 ) / 3;
 
-   if (!IS_NPC(ch) && can_use_skill_by_gsn(ch, gsn_bare_hand, FALSE) )
+   if (!IS_NPC(ch) && can_use_skill(ch, gsn_bare_hand) )
    {
       wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
       if ( wield == NULL ||
-           (wield->value[3] == 0 && can_use_skill_by_gsn(ch, gsn_equip_fist, FALSE) && IS_SET(wield->extra_flags, ITEM_FIST) ) )
+           (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST) ) )
       {
          wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
 
          if (wield == NULL ||
-            (wield->value[3] == 0 && can_use_skill_by_gsn(ch, gsn_equip_fist, FALSE) && IS_SET(wield->extra_flags, ITEM_FIST) ) )
+            (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST) ) )
          {
             if (ch->remort[CLASS_MON] > 0)
                dam += dam * ch->remort[CLASS_MON] / 100;
@@ -3679,7 +3679,7 @@ void check_adrenaline( CHAR_DATA * ch, sh_int damage )
 {
    AFFECT_DATA af;
 
-   if( damage > 200 && can_use_skill_by_gsn(ch, gsn_adrenaline, FALSE) )
+   if( damage > 200 && can_use_skill(ch, gsn_adrenaline) )
    {
 
       af.type = skill_lookup( "adrenaline bonus" );
