@@ -19,7 +19,7 @@ void do_backstab( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( !can_use_skill(ch, "backstab", TRUE) )
+   if( !can_use_skill_message(ch, gsn_backstab) )
       return;
 
    one_argument( argument, arg );
@@ -49,7 +49,7 @@ void do_circle( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( !can_use_skill(ch, "circle", TRUE) )
+   if( !can_use_skill_message(ch, gsn_backstab) )
       return;
 
    one_argument( argument, arg );
@@ -207,7 +207,7 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
       return FALSE;
    }
 
-   if( !can_use_skill_by_gsn(ch, gsn, TRUE) )
+   if( !can_use_skill_message(ch, gsn) )
       return FALSE;
 
    one_argument( argument, arg );
@@ -778,7 +778,7 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       strcpy(arg, "enemy");
    }
 
-   if( !can_use_skill_by_gsn(ch, gsn, TRUE) )
+   if( can_use_skill_message(ch, gsn) )
       return;
 
    if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
@@ -995,7 +995,7 @@ void do_detox( CHAR_DATA * ch, char *argument )
    int dam;
    int chance;
 
-   if( !can_use_skill_by_gsn(ch, gsn_detox, TRUE) )
+   if( !can_use_skill_message(ch, gsn_detox) )
       return;
 
    if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
@@ -1027,7 +1027,7 @@ void do_morale( CHAR_DATA * ch, char *argument )
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
-   if( !can_use_skill_by_gsn(ch, gsn_morale, TRUE) )
+   if( !can_use_skill_message(ch, gsn_morale) )
       return;
 
    for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
@@ -1057,7 +1057,7 @@ void do_leadership( CHAR_DATA * ch, char *argument )
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
-   if( !can_use_skill(ch, gsn_leadership, TRUE) )
+   if( !can_use_skill_message(ch, gsn_leadership) )
       return;
 
    for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
@@ -1086,7 +1086,7 @@ void disarm( CHAR_DATA * ch, CHAR_DATA * victim, OBJ_DATA * obj )
 {
    int chance;
 
-   if (!can_use_skill_by_gsn(ch, gsn_disarm, TRUE) )
+   if (!can_use_skill_message(ch, gsn_disarm) )
       return;
 
    set_fighting( ch, victim, TRUE );
@@ -1314,7 +1314,7 @@ void do_stun( CHAR_DATA * ch, char *argument )
    if( IS_NPC( ch ) )   /* for now */
       return;
 
-   if( can_use_skill_by_gsn(ch, gsn_stun, TRUE) )
+   if( can_use_skill_message(ch, gsn_stun) )
    {
       return;
    }

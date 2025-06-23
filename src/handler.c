@@ -417,7 +417,7 @@ int get_spell_crit_mult( CHAR_DATA *ch )
 
    crit += get_stat(ch, APPLY_SPELL_CRIT_MULT);
 
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_spell_critical_damage] > 0)
+   if (can_use_skill(ch, gsn_spell_critical_damage))
       crit += 50;
 
    crit += ch->lvl[CLASS_PRI];
@@ -441,7 +441,7 @@ int get_crit( CHAR_DATA *ch )
    if( !IS_WEAPON( wield ) )
       wield = NULL;   
       
-   if (!IS_NPC(ch) && can_use_skill_by_gsn(ch, gsn_enhanced_critical, FALSE) > 0)
+   if (!IS_NPC(ch) && can_use_skill(ch, gsn_enhanced_critical))
    {
       crit += 5;
    }
@@ -451,7 +451,7 @@ int get_crit( CHAR_DATA *ch )
    crit += ch->remort[CLASS_ASS] / 20;
    crit += ch->remort[CLASS_WLK] / 20 * .75;
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, gsn_enhanced_sword_critical, FALSE))
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
    {
       crit += ch->remort[CLASS_SWO]/20;
    }
@@ -480,7 +480,7 @@ int get_crit_mult( CHAR_DATA *ch )
    crit += ch->remort[CLASS_ASS] / 5;
    crit += ch->remort[CLASS_WLK] / 5 * .75;
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill_by_gsn(ch, gsn_enhanced_sword_critical, FALSE) )
+   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical) )
    {
       crit += ch->remort[CLASS_SWO]/5;
    }
@@ -597,14 +597,36 @@ int get_stat( CHAR_DATA *ch, int stat )
    return stat_val;
 }
 
-bool can_use_skill( CHAR_DATA *ch, char *skill, bool message)
+bool can_use_skill_message(CHAR_DATA *ch, int gsn)
+{
+   if (!can_use_skill(ch, gsn))
+   {
+      send_to_char("You don't know how to do that\n\r", ch);
+      return FALSE;
+   }
+
+   return TRUE;
+}
+
+bool can_use_skill_by_name_message(CHAR_DATA *ch, char * skill)
+{
+   if (!can_use_skill_by_name(ch, skill))
+   {
+      send_to_char("You don't know how to do that\n\r", ch);
+      return FALSE;
+   }
+
+   return TRUE;
+}
+
+bool can_use_skill_by_name( CHAR_DATA *ch, char *skill)
 {
    int gsn = skill_lookup(skill);
 
-   return can_use_skill_by_gsn( ch, gsn, message );
+   return can_use_skill( ch, gsn, message );
 }
 
-bool can_use_skill_by_gsn( CHAR_DATA *ch, int gsn, bool message)
+bool can_use_skill( CHAR_DATA *ch, int gsn)
 {
    int cnt;
 
@@ -637,9 +659,6 @@ bool can_use_skill_by_gsn( CHAR_DATA *ch, int gsn, bool message)
 
    if (ch->pcdata->learned[gsn] > 0)
       return TRUE;
-
-   if (message)
-      send_to_char("You don't know how to do that\n\r", ch);
 
    return FALSE;
 
@@ -1196,8 +1215,6 @@ void char_from_room( CHAR_DATA * ch )
    return;
 }
 
-
-
 /*
  * Move a char into a room.
  */
@@ -1318,8 +1335,6 @@ void char_to_room( CHAR_DATA * ch, ROOM_INDEX_DATA * pRoomIndex )
    return;
 }
 
-
-
 /*
  * Give an obj to a char.
  */
@@ -1419,8 +1434,6 @@ void obj_to_char( OBJ_DATA * obj, CHAR_DATA * ch )
 
 }  // end if ai_mob
 
-
-
 /*
  * Take an obj from its character.
  */
@@ -1455,8 +1468,6 @@ void obj_from_char( OBJ_DATA * obj )
    ch->carry_weight -= get_obj_weight( obj );
    return;
 }
-
-
 
 /*
  * Find the ac value of an obj, including position effect.
@@ -1505,8 +1516,6 @@ int apply_ac( OBJ_DATA * obj, int iWear )
    return 0;
 }
 
-
-
 /*
  * Find a piece of eq on a character.
  */
@@ -1522,8 +1531,6 @@ OBJ_DATA *get_eq_char( CHAR_DATA * ch, int iWear )
 
    return NULL;
 }
-
-
 
 /*
  * Equip a char with an obj.
@@ -1639,8 +1646,6 @@ void equip_char( CHAR_DATA * ch, OBJ_DATA * obj, int iWear )
    return;
 }
 
-
-
 /*
  * Unequip a char with an obj.
  */
@@ -1670,9 +1675,6 @@ void unequip_char( CHAR_DATA * ch, OBJ_DATA * obj )
 
    if( obj->item_type == ITEM_LIGHT && obj->value[2] != 0 && ch->in_room != NULL && ch->in_room->light > 0 )
       --ch->in_room->light;
-
-
-
 
    /*
     * Check to see if object has magical affects... 
@@ -1736,8 +1738,6 @@ void unequip_char( CHAR_DATA * ch, OBJ_DATA * obj )
    return;
 }
 
-
-
 /*
  * Count occurrences of an obj in a list.
  */
@@ -1773,8 +1773,6 @@ int count_obj_room( OBJ_INDEX_DATA * pObjIndex, OBJ_DATA * list )
 
    return nMatch;
 }
-
-
 
 /*
  * Move an obj out of a room.
@@ -1821,8 +1819,6 @@ void obj_from_room( OBJ_DATA * obj )
    return;
 }
 
-
-
 /*
  * Move an obj into a room.
  */
@@ -1839,8 +1835,6 @@ void obj_to_room( OBJ_DATA * obj, ROOM_INDEX_DATA * pRoomIndex )
    obj->prev_in_carry_list = NULL;
    return;
 }
-
-
 
 /*
  * Move an object into an object.
@@ -1866,8 +1860,6 @@ void obj_to_obj( OBJ_DATA * obj, OBJ_DATA * obj_to )
       }
    return;
 }
-
-
 
 /*
  * Move an object out of an object.
@@ -1907,8 +1899,6 @@ void obj_from_obj( OBJ_DATA * obj )
 
    return;
 }
-
-
 
 /*
  * Extract an obj from the world.
@@ -2032,7 +2022,6 @@ void extract_obj( OBJ_DATA * obj )
    PUT_FREE( obj, obj_free );
    return;
 }
-
 
 /*
  * Extract a char from the world.
@@ -2232,8 +2221,6 @@ void extract_char( CHAR_DATA * ch, bool fPull )
    return;
 }
 
-
-
 /*
  * Find a char in the room.
  */
@@ -2304,9 +2291,6 @@ CHAR_DATA *get_char_room( CHAR_DATA * ch, char *argument )
    return NULL;
 }
 
-
-
-
 /*
  * Find a char in the world.
  */
@@ -2365,7 +2349,6 @@ CHAR_DATA *get_char( CHAR_DATA * ch )
       return ch;
 }
 
-
 /*
  * Find some object with a given index data.
  * Used by area-reset 'P' command.
@@ -2382,7 +2365,6 @@ OBJ_DATA *get_obj_type( OBJ_INDEX_DATA * pObjIndex )
 
    return NULL;
 }
-
 
 /*
  * Find an obj in a room.
@@ -2432,9 +2414,6 @@ OBJ_DATA *get_obj_list( CHAR_DATA * ch, char *argument, OBJ_DATA * list )
    return NULL;
 }
 
-
-
-
 /*
  * Find an obj in player's inventory.
  */
@@ -2458,8 +2437,6 @@ OBJ_DATA *get_obj_carry( CHAR_DATA * ch, char *argument )
 
    return NULL;
 }
-
-
 
 /*
  * Find an obj in player's equipment.
@@ -2485,8 +2462,6 @@ OBJ_DATA *get_obj_wear( CHAR_DATA * ch, char *argument )
    return NULL;
 }
 
-
-
 /*
  * Find an obj in the room or in inventory.
  */
@@ -2506,8 +2481,6 @@ OBJ_DATA *get_obj_here( CHAR_DATA * ch, char *argument )
 
    return NULL;
 }
-
-
 
 /*
  * Find an obj in the world.
@@ -2535,8 +2508,6 @@ OBJ_DATA *get_obj_world( CHAR_DATA * ch, char *argument )
 
    return NULL;
 }
-
-
 
 /*
  * Create a 'money' obj.
@@ -2572,8 +2543,6 @@ OBJ_DATA *create_money( int amount )
    return obj;
 }
 
-
-
 /*
  * Return # of objects which an object counts as.
  * Thanks to Tony Chamberlain for the correct recursive code here.
@@ -2605,8 +2574,6 @@ Zen */
    return number;
 }
 
-
-
 /*
  * Return weight of an object, including weight of contents.
  */
@@ -2625,8 +2592,6 @@ int get_obj_weight( OBJ_DATA * obj )
 
    return weight;
 }
-
-
 
 /*
  * True if room is dark.
@@ -2654,8 +2619,6 @@ bool room_is_dark( ROOM_INDEX_DATA * pRoomIndex )
    return FALSE;
 }
 
-
-
 /*
  * True if room is private.
  */
@@ -2676,8 +2639,6 @@ bool room_is_private( ROOM_INDEX_DATA * pRoomIndex )
 
    return FALSE;
 }
-
-
 
 /*
  * True if char can see victim.
