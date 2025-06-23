@@ -46,7 +46,7 @@ void say_spell args( ( CHAR_DATA * ch, int sn ) );
 /* Calculate mana cost */
 int mana_cost( CHAR_DATA * ch, int sn )
 {
-   bool can_cast = can_use_skill_by_gsn(ch, sn, FALSE);
+   bool can_cast = can_use_skill(ch, sn);
    int foo;
    int cost, mincost;
    int class = 0;
