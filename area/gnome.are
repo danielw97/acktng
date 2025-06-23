@@ -698,7 +698,7 @@ Erin is a relatively large gnome, with a stature that would scare even
 8195 8360 0 S
 122 2
 0 0 0 0
-! 0 0 0 7 0 0 6202
+! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
 #6002
 healer ammira~
@@ -713,7 +713,7 @@ Although only a small gnome in stature, Ammira has the spells to protect her
 4099 8360 0 S
 77 2
 0 0 0 0
-! 0 0 0 7 0 0 8212
+! 0 0 0 7 0 0 0
 | 0 32848 0 0 0 0 0
 #6003
 gnome ciaran weaponsmith~
@@ -726,9 +726,9 @@ The Gnomish Weaponsmith has dark tan skin, a neatly trimmed grey beard, and
 you do intend to purchase one of his fine weapons.
 ~
 11608071 8360 0 S
-76 1
+78 1
 0 0 0 0
-! 0 0 0 7 0 0 25092
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #6004
 elchern storekeeper owner shopkeeper keeper~
@@ -742,7 +742,7 @@ Elchern has, over the years, found a wide variety of food that the gnomish
 which often is whispered to give her the advantage in the food industry.
 ~
 8388675 40 0 S
-81 2
+79 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -759,7 +759,7 @@ Garneth has the skills only taught in the olden days, the skills he learnt
 his skills can live on.
 ~
 3 552 0 S
-76 1
+75 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -776,7 +776,7 @@ Seth is a seemingly average gnome.  He is of average height, he has the
 power is unmatched throughout the world.
 ~
 3 1192 0 S
-77 1
+75 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -790,9 +790,9 @@ James is a dark brown skinned gnome, with a less than average gnome sized
 of his shop incase anything should go missing while you are here.
 ~
 8388611 8232 0 S
-79 1
+78 1
 0 0 0 0
-! 0 0 0 7 0 0 786
+! 0 0 0 7 0 0 0
 | 0 1064960 0 0 0 0 0
 #6008
 armourer caedric~
@@ -805,9 +805,9 @@ Caedric is a stocky gnome, of average height, with a woody brown skin and
 from when he wipes his hands clean to serve a customer.
 ~
 8388615 8360 0 S
-79 1
+82 1
 0 0 0 0
-! 0 0 0 7 0 0 8242
+! 0 0 0 7 0 0 0
 | 0 16448 0 0 0 0 0
 #6009
 jeweller nayelle~
@@ -821,9 +821,9 @@ Nayelle buys and sells only the finest gnome gems, stones and jewellery
 nugget. 
 ~
 8388611 8360 0 S
-81 2
+80 2
 0 0 0 0
-! 0 0 0 7 0 0 56
+! 0 0 0 7 0 0 0
 | 0 40960 0 0 0 0 0
 #6010
 gnome citizen~
@@ -835,7 +835,7 @@ Gnomes are similar to small, slightly thinner dwarves, excepting that they
 grey.  
 ~
 69 32768 0 S
-12 2
+13 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -863,7 +863,7 @@ The gnome guard is scarred from battles with kobolds and goblins.  His armour
 encounters.
 ~
 69 32776 0 S
-36 1
+38 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -879,9 +879,9 @@ His enormous nose and neatly trimmed grey beard, decorated with stones,
 day.
 ~
 19 8360 0 S
-72 1
+73 1
 0 0 0 0
-! 0 0 0 7 0 0 24
+! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
 #6014
 gnome child boy~
@@ -907,7 +907,7 @@ The gnome child is very small, even by the gnomish standards, and has a head
 and are a piercing blue colour that shine with the joy in her heart.
 ~
 69 0 0 S
-9 2
+10 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0

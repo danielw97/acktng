@@ -262,7 +262,9 @@ int get_curr_str( CHAR_DATA * ch )
 
    max = get_max_str( ch );
 
-   return URANGE( 3, max + ch->pcdata->mod_str, max + 3);
+   int cur = max + get_stat(ch, APPLY_STR);
+
+   return URANGE( 3, cur, max + 3);
 }
 
 int get_max_str( CHAR_DATA *ch )
@@ -289,7 +291,9 @@ int get_curr_int( CHAR_DATA * ch )
 
    max = get_max_int( ch );
 
-   return URANGE( 3, max  + ch->pcdata->mod_int, max +3 );
+   int cur = max + get_stat(ch, APPLY_INT);
+
+   return URANGE( 3, cur, max +3 );
 }
 
 int get_max_int( CHAR_DATA *ch )
@@ -317,7 +321,9 @@ int get_curr_wis( CHAR_DATA * ch )
 
    max = get_max_wis( ch );
 
-   return URANGE( 3, max + ch->pcdata->mod_wis, max+3 );
+   int cur = max + get_stat(ch, APPLY_WIS);
+
+   return URANGE( 3, cur, max+3 );
 }
 
 int get_max_wis( CHAR_DATA *ch )
@@ -345,7 +351,9 @@ int get_curr_dex( CHAR_DATA * ch )
 
    max = get_max_dex(ch);
 
-   return URANGE( 3, max + ch->pcdata->mod_dex, max+3 );
+   int cur = max + get_stat(ch, APPLY_DEX);
+
+   return URANGE( 3, cur, max+3 );
 }
 
 int get_max_dex( CHAR_DATA *ch )
@@ -372,6 +380,8 @@ int get_curr_con( CHAR_DATA * ch )
    }
 
    max = get_max_con( ch );
+
+   int cur = max + get_stat(ch, APPLY_CON);
 
    return URANGE( 3, max + ch->pcdata->mod_con, max + 3);
 }
@@ -740,15 +750,6 @@ void affect_modify( CHAR_DATA * ch, AFFECT_DATA * paf, bool fAdd )
          case APPLY_MOVE:
             ch->max_move += mod;
             break;
-         case APPLY_AC:
-            ch->armor += mod;
-            break;
-         case APPLY_HITROLL:
-            ch->hitroll += mod;
-            break;
-         case APPLY_DAMROLL:
-            ch->damroll += mod;
-            break;
          case APPLY_SAVING_PARA:
             ch->saving_throw += mod;
             break;
@@ -782,19 +783,14 @@ void affect_modify( CHAR_DATA * ch, AFFECT_DATA * paf, bool fAdd )
       case APPLY_NONE:
          break;
       case APPLY_STR:
-         ch->pcdata->mod_str += mod;
          break;
       case APPLY_DEX:
-         ch->pcdata->mod_dex += mod;
          break;
       case APPLY_INT:
-         ch->pcdata->mod_int += mod;
          break;
       case APPLY_WIS:
-         ch->pcdata->mod_wis += mod;
          break;
       case APPLY_CON:
-         ch->pcdata->mod_con += mod;
          break;
       case APPLY_SEX:
          ch->sex += mod;
@@ -823,13 +819,10 @@ void affect_modify( CHAR_DATA * ch, AFFECT_DATA * paf, bool fAdd )
       case APPLY_EXP:
          break;
       case APPLY_AC:
-         ch->armor += mod;
          break;
       case APPLY_HITROLL:
-         ch->hitroll += mod;
          break;
       case APPLY_DAMROLL:
-         ch->damroll += mod;
          break;
       case APPLY_SAVING_PARA:
          ch->saving_throw += mod;
@@ -1023,7 +1016,10 @@ void affect_to_char( CHAR_DATA * ch, AFFECT_DATA * paf )
    paf_new->location = paf->location;
    paf_new->modifier = paf->modifier;
    paf_new->bitvector = paf->bitvector;
-   paf_new->caster = paf->caster;
+   if (paf->caster == NULL)
+      paf_new->caster = ch;
+   else
+      paf_new->caster = paf->caster;
    paf_new->level = paf->level;
    LINK( paf_new, ch->first_affect, ch->last_affect, next, prev );
 

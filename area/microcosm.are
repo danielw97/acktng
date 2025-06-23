@@ -3508,9 +3508,9 @@ the twisted thought~
 ~
 ~
 131115 8320 0 S
-79 1
+81 1
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5627
 crooked idea~
@@ -3519,9 +3519,9 @@ the Crooked idea~
 ~
 ~
 131119 8320 0 S
-84 1
+82 1
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5626
 baker~
@@ -3530,9 +3530,9 @@ the baker~
 ~
 ~
 33554443 8360 0 S
-147 1
+146 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5625
 the armory guy~
@@ -3543,7 +3543,7 @@ the armory guy~
 8388619 8320 0 S
 99 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5624
 weapon shop guy~
@@ -3552,9 +3552,9 @@ the weapon shop guy~
 ~
 ~
 8388619 8320 0 S
-100 1
+101 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5634
 DNA alchemist~
@@ -3563,9 +3563,9 @@ DNA alchemist~
 ~
 ~
 41943051 128 0 S
-85 1
+83 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5623
 creativity~
@@ -3575,9 +3575,9 @@ creativity~
 ~
 ~
 1179657 532608 0 S
-96 1
+97 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5622
 anger~
@@ -3586,9 +3586,9 @@ anger~
 ~
 ~
 1179657 8320 0 S
-93 1
+94 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5621
 intellect~
@@ -3597,9 +3597,9 @@ intellect~
 ~
 ~
 1179657 8192 0 S
-94 1
+95 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5606
 Golf Pro~
@@ -3608,9 +3608,9 @@ the Golf Pro~
 ~
 ~
 1048579 8192 0 S
-81 1
+80 1
 0 0 0 0
-! 0 0 0 7 0 0 12302
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #5605
 reason~
@@ -3621,9 +3621,9 @@ reason~
 The higher brain function known as: @@BReason@@N
 ~
 1048579 532480 0 S
-93 1
+94 1
 0 0 0 0
-! 0 0 0 7 0 0 12302
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #5604
 secretary~
@@ -3634,7 +3634,7 @@ This is one secretary that you do NOT want to disturb!@@N
 3 598016 0 S
 81 2
 0 0 0 0
-! 0 0 0 7 0 0 142
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5603
 coenzyme~
@@ -3647,9 +3647,9 @@ Standing here, with is an apron full of those silver bands... a @@lCoEnzyme
 
 ~
 1048577 128 0 S
-83 1
+82 1
 0 0 0 0
-! 0 0 0 7 0 0 8194
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5602
 passerby~
@@ -3658,9 +3658,9 @@ An innocent passerby, perfect for venting frustration...
 ~
 ~
 3 8192 0 S
-87 1
+89 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5601
 little birdie~
@@ -3674,7 +3674,7 @@ This is like on of them birds that spins around dazed cartoon characters heads
 19 524416 0 S
 83 2
 0 0 0 0
-! 0 0 0 7 0 0 24582
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5600
 guardian golem of knowlege~
@@ -3686,9 +3686,9 @@ Here stand the largest statue you have ever seen.  But you know there is more
 him. There seems to be a dust-filled flaw in his chest... is THAT they key?
 ~
 1048587 65666 0 S
-86 0
+83 0
 0 0 0 0
-! 0 0 0 7 0 0 30982
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5700
 fake heph~
@@ -3711,7 +3711,7 @@ logic~
 1179657 10368 0 S
 96 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5608
 instinct~
@@ -3720,9 +3720,9 @@ instinct~
 ~
 ~
 1179657 0 0 S
-85 1
+86 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5609
 out house monster~
@@ -3731,9 +3731,9 @@ The @@bBig Stinky Outhouse monster@@N leaps to life and attacks!
 ~
 ~
 131113 128 0 S
-85 1
+86 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5610
 lost caddy~
@@ -3742,9 +3742,9 @@ A caddy is here, looking for the clubs he dropped.
 ~
 ~
 1 0 0 S
-85 1
+87 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5611
 nut on cart~
@@ -3753,9 +3753,9 @@ Some nut is here driving a golf-cart, he almost hit you!
 ~
 ~
 131077 8192 0 S
-79 1
+82 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5612
 groundskeeper keeper~
@@ -3764,9 +3764,9 @@ There is a groundskeeper here keeping the grass in top-notch shape.
 ~
 ~
 1 8320 0 S
-87 1
+86 1
 0 0 0 0
-! 0 0 0 7 0 0 24582
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5613
 stuck up caddy~
@@ -3775,7 +3775,7 @@ A caddy is here, holding his charge's glass of bourbon.
 ~
 ~
 131073 8192 0 S
-89 1
+88 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3786,9 +3786,9 @@ Duran Duran is here, and they're planning a come-back tour! sTOP THEM!
 ~
 ~
 131073 8320 0 S
-89 1
+88 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5615
 Bell Bottoms~
@@ -3797,9 +3797,9 @@ the Bell Bottoms~
 ~
 ~
 131073 8320 0 S
-90 1
+91 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5616
 plaid~
@@ -3811,7 +3811,7 @@ plaid~
 131073 8320 0 S
 88 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5617
 poofy hair~
@@ -3822,7 +3822,7 @@ poofy hair~
 131073 8320 0 S
 89 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5618
 Spandex~
@@ -3831,9 +3831,9 @@ Spandex~
 ~
 ~
 131073 8320 0 S
-82 1
+81 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5619
 k-rad~
@@ -3842,9 +3842,9 @@ k-rad~
 ~
 ~
 131073 8320 0 S
-82 1
+83 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5620
 Fluorescant Pink~
@@ -3855,7 +3855,7 @@ EEEEEK! PINK!!! Tooo.. much.. fluorescant pink!!!
 131073 8320 0 S
 91 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5630
 bobomb~
@@ -3864,9 +3864,9 @@ bobomb~
 ~
 ~
 33 524348 0 S
-85 1
+87 1
 0 0 0 0
-! 0 0 0 7 0 0 24584
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5631
 the useless~
@@ -3875,7 +3875,7 @@ A useless idea mopes along here.
 ~
 ~
 9 524416 0 S
-83 1
+85 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3888,7 +3888,7 @@ A @@yBright@@N idea strolls merrily along here.
 9 128 0 S
 94 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 16 0 0 0 0 0
 #5633
 a forgotten idea~
@@ -3897,9 +3897,9 @@ A @@dForgotten idea shuffles from place to place.@@N
 ~
 ~
 9 8320 0 S
-88 1
+90 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 0
 #5636
 retina~
@@ -3908,9 +3908,9 @@ A @@lRetina@@N is here, soakin up some rays on his lawn chair.
 ~
 ~
 11 524416 0 S
-91 1
+93 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5753
 retina~
@@ -3919,9 +3919,9 @@ A @@lRetina@@N is here, soakin up some rays on his lawn chair.
 ~
 ~
 11 524416 0 S
-78 1
+76 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5637
 trainer old guy~
@@ -3931,9 +3931,9 @@ retired trainer~
 ~
 ~
 5643 0 0 S
-101 1
+100 1
 0 0 0 0
-! 0 0 0 7 0 0 24590
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5638
 happy thought~
@@ -3942,9 +3942,9 @@ A happy thought is bouncing along here, singing a gay tune.
 ~
 ~
 9 0 0 S
-95 1
+98 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5635
 the depressing thought~
@@ -3954,9 +3954,9 @@ A depressing thought is sulking here while sewing itself into it's death
 ~
 ~
 9 128 0 S
-83 1
+84 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5639
 deception~
@@ -3965,9 +3965,9 @@ anyone but @@x@@iDeception@@N~
 ~
 ~
 131081 0 0 S
-80 1
+79 1
 0 0 0 0
-! 0 0 0 7 0 0 8198
+! 0 0 0 7 0 0 0
 | 0 256 0 0 0 0 0
 #5640
 hate~
@@ -3976,7 +3976,7 @@ hate~
 ~
 ~
 131097 524288 0 S
-83 1
+82 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3989,7 +3989,7 @@ morality~
 25 557096 0 S
 96 1
 0 0 0 0
-! 0 0 0 7 0 0 16398
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #5750
 b~
@@ -4008,9 +4008,9 @@ caring~
 ~
 ~
 1048601 524332 0 S
-89 1
+90 1
 0 0 0 0
-! 0 0 0 7 0 0 14
+! 0 0 0 7 0 0 0
 | 0 524288 0 0 0 0 0
 #5643
 passion~
@@ -4021,7 +4021,7 @@ passion~
 1048605 524332 0 S
 101 1
 0 0 0 0
-! 0 0 0 7 0 0 16398
+! 0 0 0 7 0 0 0
 | 0 256 0 0 0 0 0
 #5644
 comprehension~
@@ -4030,9 +4030,9 @@ comprehension~
 ~
 ~
 1048601 44 0 S
-100 1
+98 1
 0 0 0 0
-! 0 0 0 7 0 0 8206
+! 0 0 0 7 0 0 0
 | 0 1572864 0 0 0 0 8
 #5645
 love~
@@ -4043,7 +4043,7 @@ love~
 1048601 524332 0 S
 94 1
 0 0 0 0
-! 0 0 0 7 0 0 20486
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 #0
 #OBJECTS

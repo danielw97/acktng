@@ -687,7 +687,7 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 You sense that he could destroy your mind with the slightest thought.
 ~
 1027 128 1000 S
-74 1
+73 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -702,10 +702,10 @@ Al the Bartender is a short, fat, round kind of guy, always cleaning glasses,
 think about it.  He flashes a quick smile at you.
 ~
 515 533180 900 S
-74 1
+76 1
 0 0 0 0
-! 0 0 0 7 22100 22100 0
-| 0 0 0 -2083608464 133 0 0
+! 0 0 0 7 22100 0 0
+| 0 0 0 0 0 0 0
 #1104
 guildmaster master~
 the guildmaster~
@@ -730,7 +730,7 @@ You realize that whenever your guildmaster moves, you fail to notice it:
 the appearance of a beggar.
 ~
 1027 0 1000 S
-78 2
+77 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -743,7 +743,7 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 a peaceful, loving look. You notice that he is surrounded by a white aura.
 ~
 1027 128 1000 S
-74 1
+75 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0

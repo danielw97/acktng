@@ -161,7 +161,7 @@ CHAR_DATA *player_summon( CHAR_DATA *ch, int level, int element)
 
 int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, int class_index, bool hot )
 {
-   int heal = base_heal;
+   int heal = base_heal * 2;
 
    if (class_table[class_index].attr_prime == APPLY_INT)
    {
@@ -172,13 +172,13 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
       if (sn != spell_psionic_recovery)
       {
          heal += heal * ch->lvl[CLASS_MAG] / 50;
-         heal += heal * ch->remort[CLASS_SOR] / 25;
-         heal += heal * ch->remort[CLASS_WIZ] / 25;
+         heal += heal * ch->remort[CLASS_SOR] / 50;
+         heal += heal * ch->remort[CLASS_WIZ] / 50;
       }
       else
       {
-         heal += heal * ch->lvl[CLASS_PSI]/50;
-         heal += heal * ch->remort[CLASS_EGO]/25;
+         heal += heal * ch->lvl[CLASS_PSI]/100;
+         heal += heal * ch->remort[CLASS_EGO]/50;
       }
    }
    else if (class_table[class_index].attr_prime == APPLY_WIS)
@@ -187,8 +187,8 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal += heal * wis / 100;
       heal += heal * ch->lvl[CLASS_CLE] / 50;
-      heal += heal * ch->remort[CLASS_PRI] / 25;
-      heal += heal * ch->remort[CLASS_PAL] / 25 * .75;
+      heal += heal * ch->remort[CLASS_PRI] / 50;
+      heal += heal * ch->remort[CLASS_PAL] / 50 * .75;
    }
 
    if (stance_app[ch->stance].heal_mod != 0)
@@ -196,8 +196,11 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
    if (IS_NPC(ch))
    {
-      heal *= ch->level+100;
-      heal /= 25;
+      heal += heal * ch->level / 100;
+      if (ch->level > 100)
+         heal += heal * (ch->level-100) / 50;
+      if (ch->level > 150)
+         heal += heal * (ch->level-150) / 50;
    }
 
    if (hot)
@@ -223,13 +226,15 @@ void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bo
    victim->hit = UMIN( victim->hit + heal, victim->max_hit );
    update_pos( victim );
 
-   sprintf(buf1, "$n's %s heals $N! (%d)", skill_table[sn].name, heal);
-   sprintf(buf2, "Your %s heals $N! (%d)", skill_table[sn].name, heal);
-   sprintf(buf3, "$n's %s heals you! (%d)", skill_table[sn].name, heal);
+   sprintf(buf1, "@@N%s's %s heals %s! (@@r%d@@N)", ch->name, skill_table[sn].name, victim->name, heal);
+   sprintf(buf2, "@@NYour %s heals %s! (@@r%d@@N)\n\r", skill_table[sn].name, victim->name, heal);
+   sprintf(buf3, "@@N%s's %s heals you! (@@r%d@@N)\n\r", ch->name, skill_table[sn].name, heal);
 
-   act( buf1, ch, NULL, victim, TO_NOTVICT );
-   act( buf2, ch, NULL, victim, TO_CHAR );
-   act( buf3, ch, NULL, victim, TO_VICT );
+   if (ch != victim && victim != NULL)
+      send_to_char(buf3, victim);
+   if(ch != NULL && victim != NULL && ch->in_room->vnum == victim->in_room->vnum)
+      send_to_char(buf2, ch);
+   act( buf1, victim, NULL, NULL, TO_ROOM );
 }
 
 void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
@@ -611,9 +616,9 @@ void sp_dam_message( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam
       dead = TRUE;
 
    if (critical)
-      sprintf( testerbuf, " @@l(@@W%i@@l)@@N (@@rCRITICAL@@N) ", dam );
+      sprintf( testerbuf, " @@l(@@e%i@@l)@@N (@@rCRITICAL@@N) ", dam );
    else
-      sprintf( testerbuf, " @@l(@@W%i@@l)@@N", dam );
+      sprintf( testerbuf, " @@l(@@e%i@@l)@@N", dam );
 
    for( rtype = 0; rtype < MAX_REALM; rtype++ )
    {
@@ -901,10 +906,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
             dam_modifier += ( get_curr_int( ch ) * ch->pcdata->learned[gsn_potency] / 5000 );
          }
 
-         if( ch->pcdata->learned[gsn_thaumatergy] > 0 )
-         {
-            dam_modifier += ( get_curr_int( ch ) * ch->pcdata->learned[gsn_thaumatergy] / 2500 );
-         }
       }
       if( is_affected( ch, skill_lookup( "mystical focus" ) ) )
       {
@@ -983,6 +984,18 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
 
    if (critical)
       dam += (dam * get_spell_crit_mult(ch) )/100;
+
+   dam += (get_curr_int(ch)-13) * 5 / 100;
+
+   if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
+   {
+      dam += dam * ch->remort[CLASS_SOR] / 100;
+      dam += dam * ch->remort[CLASS_WIZ] / 100;
+      dam += dam * ch->remort[CLASS_NEC] / 100;
+      dam += dam * ch->remort[CLASS_EGO] / 100;
+      dam += dam * ch->remort[CLASS_WLK] / 100 * .75;
+   }
+
 
    /*
     * Stop up any residual loopholes.

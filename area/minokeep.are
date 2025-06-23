@@ -1520,9 +1520,9 @@ mino minotaur captain~
 ~
 ~
 36700243 2728 -500 S
-133 1
+131 1
 0 0 0 0
-! 0 0 0 7 0 0 134670
+! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 32
 #1301
 minotaur guard~
@@ -1533,7 +1533,7 @@ minotaur guard~
 3145795 1048808 250 S
 120 1
 0 0 0 0
-! 0 0 0 7 0 0 138766
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1302
 minotaur patrol~
@@ -1544,7 +1544,7 @@ minotaur patrol~
 3145793 1048744 0 S
 123 1
 0 0 0 0
-! 0 0 0 7 0 0 7694
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1303
 Gate Guard Minotaur~
@@ -1553,9 +1553,9 @@ Gate Guard Minotaur~
 ~
 ~
 67 2216 -1000 S
-125 1
+122 1
 0 0 0 0
-! 0 0 0 7 0 0 7694
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 32
 #1304
 minotaur cook~
@@ -1564,9 +1564,9 @@ minotaur cook~
 ~
 ~
 7 168 0 S
-107 1
+109 1
 0 0 0 0
-! 0 0 0 7 0 0 7694
+! 0 0 0 7 0 0 0
 | 0 1064960 0 0 0 0 8
 #1305
 minotaur swordsman swordsmaster trainer~
@@ -1577,7 +1577,7 @@ minotaur swordsman swordsmaster trainer~
 36700227 2216 0 S
 130 1
 0 0 0 0
-! 0 0 0 7 0 0 1550
+! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 32
 #1306
 minotaur swordsman student~
@@ -1586,9 +1586,9 @@ minotaur swordsman student~
 ~
 ~
 67 168 0 S
-116 1
+117 1
 0 0 0 0
-! 0 0 0 7 0 0 24078
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1307
 mino minotaur soldier~
@@ -1599,7 +1599,7 @@ mino minotaur soldier~
 67 131240 -250 S
 121 1
 0 0 0 0
-! 0 0 0 7 0 0 138766
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #1308
 prison mob~
@@ -1609,9 +1609,9 @@ prison mob~
 ~
 ~
 131089 12348 100 S
-119 1
+121 1
 0 0 0 0
-! 0 0 0 7 0 0 526350
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 #1309
 prison guard minotaur~
@@ -1620,9 +1620,9 @@ A Prison Guard stands here, guarding the prisoners.
 ~
 ~
 3 141500 0 S
-134 1
+136 1
 0 0 0 0
-! 0 0 0 7 0 0 399406
+! 0 0 0 7 0 0 0
 | 0 4096 0 0 0 0 0
 #0
 #OBJECTS

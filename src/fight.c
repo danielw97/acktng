@@ -129,11 +129,11 @@ void violence_update( void )
       {
          if (paf->location == APPLY_HOT && ch->hit < ch->max_hit)
          {
-            heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
+            heal_character(ch, ch, paf->modifier, paf->type, TRUE);
          }
-         if (paf->location == APPLY_DOT && ch->hit > 0 && ch->in_room->vnum == paf->caster->in_room->vnum)
+         if (paf->location == APPLY_DOT && ch->hit > 0)
          {
-            do_damage(paf->caster, ch, paf->modifier, paf->type, FALSE);
+            do_damage(ch, ch, paf->modifier, paf->type, FALSE);
          }
       }
 
@@ -2847,12 +2847,12 @@ void dam_message( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, bool crit
          attack = attack_table[0];
     }
 
-   sprintf( buf1, "%s$n %s%s $N%s%s $s %s%c@@g @@l(@@d%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message );
-   sprintf( buf2, "%sYou %s%s $N%s%s your %s%c@@g @@l(@@d%d@@l)@@N %s", col, col, vs, col, str, attack, punct, dam, critical_message );
+   sprintf( buf1, "%s$n %s%s $N%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message );
+   sprintf( buf2, "%sYou %s%s $N%s%s your %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vs, col, str, attack, punct, dam, critical_message );
    if( *str == '\'' )
-      sprintf( buf3, "%s$n %s%s your%s%s $s %s%c@@g @@l(@@d%d@@l)@@N %s", col, col, vp, col, str + 2, attack, punct, dam, critical_message );
+      sprintf( buf3, "%s$n %s%s your%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str + 2, attack, punct, dam, critical_message );
    else
-      sprintf( buf3, "%s$n %s%s you%s%s $s %s%c@@g @@l(@@d%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message );
+      sprintf( buf3, "%s$n %s%s you%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message );
 
    act( buf1, ch, NULL, victim, TO_NOTVICT );
    act( buf2, ch, NULL, victim, TO_CHAR );

@@ -821,7 +821,7 @@ A Doorman stands here, watching the entrance.
 He looks old, and bored.  Be nice and leave him alone.
 ~
 31 8 200 S
-23 1
+26 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -845,7 +845,7 @@ A member of staff stands here, trying to ignore you.
 She is old, and looks unhelpful, to say the least.
 ~
 15 60 -200 S
-24 2
+26 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -857,7 +857,7 @@ A newlywed groom stands here, waiting for night time.
 He has just got married, and is spending his honeymoon here.  Fool.
 ~
 7 8 0 S
-29 1
+27 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -869,7 +869,7 @@ A newlywed bride stands here, trying to fake a headache.
 She is very pretty, and looks annoyed at having to honeymoon here.
 ~
 7 0 500 S
-28 2
+29 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -881,7 +881,7 @@ A guest is here, thinking of more things to complain about.
 He is big, horrible and ugly.  The perfect guest for this hotel!
 ~
 39 0 -200 S
-25 1
+26 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -906,7 +906,7 @@ The Barmaid is here, looking slightly naked.
 She is indeed naked.  Where could her clothes have gone?? 
 ~
 35 0 -400 S
-34 2
+33 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -918,7 +918,7 @@ A clockwork fish swims about here.
 It is made from various pieces of dolls and puppets.  Uh-oh...
 ~
 5 4 -600 S
-36 0
+35 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -930,7 +930,7 @@ The cook stands here, pretending to be in a coma, through all the excitement.
 He looks bored, to say the least.
 ~
 3 0 -100 S
-37 1
+36 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -942,9 +942,9 @@ Driller Killer, the mean puppet stands here, waiting to kill you.  Run!?!?
 Driller Killer is a small doll, but has a large, sharp head.
 ~
 3145783 32778 -900 S
-50 0
+47 0
 0 0 0 0
-! 0 0 0 7 0 0 6286
+! 0 0 0 7 0 0 0
 | 0 1052672 0 0 0 0 0
 #4403
 puppet master puppetmaster~
@@ -956,7 +956,7 @@ He is scared, and old.  However, he's still bigger than you!
 3145767 136 -900 S
 54 0
 0 0 0 0
-! 0 0 0 7 0 0 14
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 68
 #4402
 giant puppet~
@@ -966,9 +966,9 @@ A giant puppet is waiting here......  for you maybe??
 The puppet is giant by puppet dimensions, but still smaller than you.
 ~
 3145761 0 -400 S
-44 0
+42 0
 0 0 0 0
-! 0 0 0 7 0 0 2054
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #4401
 puppet~
@@ -978,9 +978,9 @@ A puppet is here, wandering around.
 The puppet looks like a normal puppet, except it is walking around!!!!!!
 ~
 3145761 0 -200 S
-44 0
+45 0
 0 0 0 0
-! 0 0 0 7 0 0 2054
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #4400
 guard puppet~
@@ -992,7 +992,7 @@ It is a plain looking puppet, except is looks very evil.
 3145763 0 -700 S
 48 0
 0 0 0 0
-! 0 0 0 7 0 0 6158
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 #0
 #OBJECTS

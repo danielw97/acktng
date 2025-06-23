@@ -777,7 +777,7 @@ The Guinea-pig guardian of the burrow awaits death here.
 ~
 ~
 131091 535168 0 S
-81 1
+82 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -799,7 +799,7 @@ The Shadow is levitating here, ready to help the clan.
 ~
 ~
 4099 0 0 S
-1 1
+2 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -810,7 +810,7 @@ A giant spider hangs on his web here.
 ~
 ~
 3 0 0 S
-11 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -820,7 +820,7 @@ A shapeshifter~
 A small sniffing shapeshifter cringes in one corner.~
 ~
 1 0 0 S
-11 0
+12 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -831,7 +831,7 @@ A grumpy looking hermit shakes a stick at you.
 ~
 ~
 3 0 50 S
-37 1
+38 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -842,7 +842,7 @@ A rotting tree approaches you.
 ~
 ~
 1 0 -100 S
-8 1
+9 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -853,9 +853,9 @@ A nasty vicious wolverine is rooting for food here.
 ~
 ~
 3 0 0 S
-38 1
+40 1
 0 0 0 0
-! 0 0 0 7 0 0 16644
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #7300
 ghost~
@@ -864,9 +864,9 @@ The ghost of the dead adventurer rises from the ground and attacks!
 ~
 ~
 35 0 -50 S
-28 1
+27 1
 0 0 0 0
-! 0 0 0 7 0 0 2
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #7309
 mister mystoffeles~

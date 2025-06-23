@@ -816,7 +816,7 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       char actbuf[MSL];
       sprintf( actbuf, "$n %ss $N!!", skill_table[gsn].name, dam );
       act( actbuf, ch, NULL, victim, TO_NOTVICT );
-      sprintf( actbuf, "$N %ss you really hard!!", skill_table[gsn].name, dam );
+      sprintf( actbuf, "$n %ss you really hard!!", skill_table[gsn].name, dam );
       act( actbuf, ch, NULL, victim, TO_VICT );
       sprintf( actbuf, "You %s $N!!", skill_table[gsn].name, dam );
       act( actbuf, ch, NULL, victim, TO_CHAR );

@@ -56,17 +56,17 @@ D1
 Moribund.
 ~
 ~
-0 -1 3304
+0 -1 3302
 D2
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D3
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3304
 D4
 Moribund.
 ~
@@ -87,12 +87,12 @@ D0
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D1
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3306
 D2
 Moribund.
 ~
@@ -102,12 +102,12 @@ D3
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D4
 Moribund.
 ~
 ~
-0 -1 3306
+0 -1 3303
 D5
 Moribund.
 ~
@@ -121,25 +121,25 @@ You are in the inner lands of Moribund.  Whisps of grey smoke float by.
 ~
 9228 11
 D0
-The Morgue!
-~
-~
-0 -1 3300
-D1
-Moribund.
-~
-~
-0 -1 3305
-D2
 Moribund.
 ~
 ~
 0 -1 3304
-D3
+D1
+The Morgue!
+~
+~
+0 -1 3300
+D2
 Moribund.
 ~
 ~
 0 -1 3303
+D3
+Moribund.
+~
+~
+0 -1 3305
 D4
 Moribund.
 ~
@@ -196,12 +196,12 @@ D0
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D1
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D2
 Moribund.
 ~
@@ -232,22 +232,22 @@ D0
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D1
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D2
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D3
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D4
 Moribund.
 ~
@@ -283,9 +283,9 @@ a Pesky Gremlin~
 A Pesky Gremlin stands here, looking for someone to hurt.~
 ~
 2069 1605632 -900 S
-1 1
+2 1
 0 0 0 0
-! 0 0 0 7 0 0 8226
+! 0 0 0 7 0 0 0
 | 0 2 0 0 0 0 0
 #3301
 will willo wisp~
