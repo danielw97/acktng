@@ -31,10 +31,6 @@
 #include <time.h>
 #include "globals.h"
 
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
-
 /*
  * Local functions.
  */
@@ -221,7 +217,6 @@ void do_get( CHAR_DATA * ch, char *argument )
                   get_obj( ch, obj, container );
                }
             }
-         found_money = get_money_obj( ch, "all", container );
          if( !found && !found_money )
          {
             act( "There is nothing at all in the $T.", ch, NULL, container_name, TO_CHAR );
@@ -278,7 +273,6 @@ void do_get( CHAR_DATA * ch, char *argument )
       if( !str_prefix( "1 all", object_list ) )
       {  /* 'get all' or 'get all.obj' */
          found = FALSE;
-         get_ok = get_money_room( ch, "all" );
          if( get_ok )
             found = TRUE;
          for( obj = ch->in_room->first_content; obj != NULL; obj = obj_next )
@@ -328,26 +322,6 @@ void do_get( CHAR_DATA * ch, char *argument )
                      sprintf( actbuf, "There isn't another %s here.", one_object );
                      act( actbuf, ch, NULL, NULL, TO_CHAR );
                      break;
-                  }
-                  else if( is_name( one_object, CURRENCY_NAMES ) )
-                  {
-                     char moneybuf[MSL];
-                     sprintf( moneybuf, "%s %s", object_number, one_object );
-                     get_ok = get_money_room( ch, moneybuf );
-                     if( get_ok )
-                     {
-                        sprintf( actbuf, "$n gets %s %s.", object_number, one_object );
-                        act( actbuf, ch, NULL, NULL, TO_ROOM );
-                        sprintf( actbuf, "You get %s %s.", object_number, one_object );
-                        act( actbuf, ch, NULL, NULL, TO_CHAR );
-                        break;
-                     }
-                     else
-                     {
-                        sprintf( actbuf, "There aren't %s %s here!", object_number, one_object );
-                        act( actbuf, ch, NULL, NULL, TO_CHAR );
-                        break;
-                     }
                   }
 #ifdef LOTS
                   else if( ch->in_room->first_portal != NULL )
@@ -474,11 +448,6 @@ void do_put( CHAR_DATA * ch, char *argument )
             obj = get_obj_carry( ch, one_object );
             if( obj == NULL )
             {
-               if( is_name( one_object, CURRENCY_NAMES ) )
-               {
-                  send_to_char( "You cannot put money into containers, yet!\n\r", ch );
-                  return;
-               }
                break;
             }
             if( !can_drop_obj( ch, obj ) )
@@ -600,16 +569,6 @@ void do_drop( CHAR_DATA * ch, char *argument )
             obj = get_obj_carry( ch, one_object );
             if( obj == NULL )
             {
-               if( is_name( one_object, CURRENCY_NAMES ) )
-               {
-                  char moneybuf[MSL];
-                  sprintf( moneybuf, "%s %s", object_number, one_object );
-                  sprintf( actbuf, "$n drops %s %s.", object_number, one_object );
-                  act( actbuf, ch, NULL, NULL, TO_ROOM );
-                  sprintf( actbuf, "You drop %s %s.", object_number, one_object );
-                  act( actbuf, ch, NULL, NULL, TO_CHAR );
-                  drop_money( ch, moneybuf );
-               }
                break;
             }
             if( !can_drop_obj( ch, obj ) )
@@ -728,22 +687,6 @@ void do_give( CHAR_DATA * ch, char *argument )
             obj = get_obj_carry( ch, one_object );
             if( obj == NULL )
             {
-               if( is_name( one_object, CURRENCY_NAMES ) )
-               {
-                  char moneybuf[MSL];
-                  bool give_ok = FALSE;
-                  sprintf( moneybuf, "%s %s", object_number, one_object );
-                  give_ok = give_money( ch, victim, moneybuf );
-                  if( give_ok )
-                  {
-                     sprintf( actbuf, "$n gives %s %s to $N.", object_number, one_object );
-                     act( actbuf, ch, NULL, victim, TO_ROOM );
-                     sprintf( actbuf, "$N gives you %s %s.", object_number, one_object );
-                     act( actbuf, victim, NULL, ch, TO_CHAR );
-                     sprintf( actbuf, "You give %s %s to $N.", object_number, one_object );
-                     act( actbuf, ch, NULL, victim, TO_CHAR );
-                  }
-               }
                break;
             }
             if( obj->wear_loc != WEAR_NONE )
@@ -849,9 +792,9 @@ void do_give( CHAR_DATA * ch, char *argument )
 
                   if( obj->value[2] > 0 )
                   {
-                     sprintf( buf, "You receive %s!\n\r", cost_to_money( obj->value[2] ) );
+                     sprintf( buf, "You receive %d!\n\r", obj->value[2] );
                      send_to_char( buf, ch );
-                     join_money( round_money( obj->value[2], TRUE ), ch->money );
+                     ch->gold += obj->value[2];
                   }
 
                }
@@ -2072,7 +2015,7 @@ void do_sacrifice( CHAR_DATA * ch, char *argument )
             align_change *= -.3;
          if( IS_SET( obj->extra_flags, ITEM_ANTI_NEUTRAL ) )
             align_change *= 1.1;
-         sprintf( buf, "@@a" goodgodname "@@N gives you %s for your sacrifice.\n\r", cost_to_money( gp ) );
+         sprintf( buf, "@@a" goodgodname "@@N gives you %d for your sacrifice.\n\r", gp );
          send_to_char( buf, ch );
          act( "@@N$n sacrifices $p to @@a" goodgodname "@@N.", ch, obj, NULL, TO_ROOM );
       }
@@ -2085,7 +2028,7 @@ void do_sacrifice( CHAR_DATA * ch, char *argument )
             align_change *= 1.5;
          if( IS_SET( obj->extra_flags, ITEM_ANTI_NEUTRAL ) )
             align_change *= 1.25;
-         sprintf( buf, "@@e" evilgodname "@@N gives you %s for your sacrifice.\n\r", cost_to_money( gp ) );
+         sprintf( buf, "@@e" evilgodname "@@N gives you %d for your sacrifice.\n\r", gp );
          send_to_char( buf, ch );
          act( "@@N$n sacrifices $p to @@e" evilgodname "@@N.", ch, obj, NULL, TO_ROOM );
       }
@@ -2101,7 +2044,7 @@ void do_sacrifice( CHAR_DATA * ch, char *argument )
             align_change *= 1.5;
          if( IS_SET( obj->extra_flags, ITEM_ANTI_NEUTRAL ) )
             align_change *= -.3;
-         sprintf( buf, "@@l" neutralgodname "@@N gives you %s for your sacrifice.\n\r", cost_to_money( gp ) );
+         sprintf( buf, "@@l" neutralgodname "@@N gives you %d for your sacrifice.\n\r", gp );
          send_to_char( buf, ch );
          act( "@@N$n sacrifices $p to @@l" neutralgodname "@@N.", ch, obj, NULL, TO_ROOM );
       }
@@ -2113,13 +2056,12 @@ void do_sacrifice( CHAR_DATA * ch, char *argument )
 
    if( !change_align )
    {
-      sprintf( buf, "@@N" sacgodname "@@N gives you %s for your sacrifice.\n\r", cost_to_money( gp ) );
+      sprintf( buf, "@@N" sacgodname "@@N gives you %d for your sacrifice.\n\r", gp );
       send_to_char( buf, ch );
       act( "@@N$n sacrifices $p to @@N" sacgodname "@@N.", ch, obj, NULL, TO_ROOM );
    }
 
-   join_money( round_money( gp, TRUE ), ch->money );
-   extract_obj( obj );
+   ch->gold += gp;
    return;
 }
 
@@ -2739,7 +2681,7 @@ void do_buy( CHAR_DATA * ch, char *argument )
          return;
       }
 
-      if( money_value( ch->money ) < 10 * pet->level * pet->level )
+      if( ch->gold < 10 * pet->level * pet->level )
       {
          send_to_char( "You can't afford it.\n\r", ch );
          return;
@@ -2750,23 +2692,8 @@ void do_buy( CHAR_DATA * ch, char *argument )
          send_to_char( "You're not ready for this pet.\n\r", ch );
          return;
       }
-      cost_string = take_best_coins( ch->money, 10 * pet->level * pet->level );
-      cost_string = one_argument( cost_string, changebuf );
-      change = is_number( changebuf ) ? atoi( changebuf ) : 0;
-      sprintf( givebuf, "%s to %s", cost_string, keeper->name );
-      do_give( ch, givebuf );
-      if( change > 0 )
-      {
-         MONEY_TYPE *transaction;
-         do_say( keeper, "And here is your change!" );
-         transaction = round_money( change, TRUE );
-         sprintf( givebuf, "$N gives you %s.", money_string( transaction ) );
-         act( givebuf, ch, NULL, keeper, TO_CHAR );
-         sprintf( givebuf, "$N gives $n %s.", money_string( transaction ) );
-         act( givebuf, ch, NULL, keeper, TO_ROOM );
-         join_money( transaction, ch->money );
-      }
-      else
+
+      ch->gold -= 10 * pet->level * pet->level;
       {
          do_say( keeper, "Thank you very much for your business!" );
       }
@@ -2809,7 +2736,7 @@ void do_buy( CHAR_DATA * ch, char *argument )
          return;
       }
 
-      if( money_value( ch->money ) < cost )
+      if( ch->gold < cost )
       {
          act( "$n tells you 'You can't afford to buy $p'.", keeper, obj, ch, TO_VICT );
          ch->reply = keeper;
@@ -2835,25 +2762,10 @@ void do_buy( CHAR_DATA * ch, char *argument )
          return;
       }
 
-      cost_string = take_best_coins( ch->money, cost );
-      cost_string = one_argument( cost_string, changebuf );
-      change = is_number( changebuf ) ? atoi( changebuf ) : 0;
-      sprintf( givebuf, "%s to %s", cost_string, keeper->name );
-      do_give( ch, givebuf );
+      ch->gold -= cost;
+      keeper->gold += cost;
       act( "$n buys $p.", ch, obj, NULL, TO_ROOM );
       act( "You buy $p.", ch, obj, NULL, TO_CHAR );
-      if( change > 0 )
-      {
-         MONEY_TYPE *transaction;
-         do_say( keeper, "And here is your change!" );
-         transaction = round_money( change, TRUE );
-         sprintf( givebuf, "$N gives you %s.", money_string( transaction ) );
-         act( givebuf, ch, NULL, keeper, TO_CHAR );
-         sprintf( givebuf, "$N gives $n %s.", money_string( transaction ) );
-         act( givebuf, ch, NULL, keeper, TO_ROOM );
-         join_money( transaction, ch->money );
-      }
-      else
       {
          do_say( keeper, "Thank you very much for your business!" );
       }
@@ -2875,7 +2787,7 @@ void do_list( CHAR_DATA * ch, char *argument )
    char buf1[MAX_STRING_LENGTH];
    int stopcounter = 0;
    bool found;
-   MONEY_TYPE *rounded_cost;
+   int rounded_cost;
    char costbuf[MSL];
    CHAR_DATA *keeper;
    int cost;
@@ -2920,11 +2832,10 @@ void do_list( CHAR_DATA * ch, char *argument )
                             "\n\r@@g[@@yLevel@@g]       @@yPet@@g                           @@yPrice  ( Approximate )@@N \n\r" );
             }
             stopcounter++;
-            rounded_cost = round_money_off( 10 * pet->level * pet->level, 1 );
-            sprintf( costbuf, "%s", money_string( rounded_cost ) );
-            sprintf( buf, "[ @@W%3d@@g]  @@c%-*s@@g  @@W%-*s@@N \n\r", pet->level, ccode_len( pet->short_descr, 30 ),
-                     capitalize( pet->short_descr ), ccode_len( costbuf, 35 ), costbuf );
-            PUT_FREE( rounded_cost, money_type_free );
+            rounded_cost = 10 * pet->level * pet->level;
+            sprintf( costbuf, "%d", rounded_cost );
+            sprintf( buf, "[ @@W%3d@@g]  @@c%-*s@@g  @@W%d@@N \n\r", pet->level, ccode_len( pet->short_descr, 30 ),
+                     capitalize( pet->short_descr ), costbuf );
             safe_strcat( MAX_STRING_LENGTH, buf1, buf );
             if( stopcounter > 45 )
             {
@@ -2957,12 +2868,9 @@ void do_list( CHAR_DATA * ch, char *argument )
                             "\n\r@@g[@@yLvl@@g]       @@yItem@@g                           @@yPrice  ( Approximate )@@N \n\r" );
             }
             stopcounter++;
-            rounded_cost = round_money_off( cost, 1 );
-            sprintf( costbuf, "%s", money_string( rounded_cost ) );
-            sprintf( buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*s@@N \n\r", "@@a",
-                     obj->level, ccode_len( obj->short_descr, 30 ), capitalize( obj->short_descr ), ccode_len( costbuf, 30 ),
-                     costbuf );
-            PUT_FREE( rounded_cost, money_type_free );
+            sprintf( buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*d@@N \n\r", "@@a",
+                     obj->level, ccode_len( obj->short_descr, 30 ), capitalize( obj->short_descr ),
+                     cost );
             safe_strcat( MAX_STRING_LENGTH, buf1, buf );
             if( stopcounter > 45 )
             {
@@ -3054,33 +2962,16 @@ void do_sell( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   cur_money = money_value( keeper->money );
-   if( cur_money < cost )
+   if( keeper->gold < cost )
    {
       sprintf( buf, "Sorry, but I can't afford that!" );
       do_say( keeper, buf );
       return;
    }
-   cur_money -= cost;
-   PUT_FREE( keeper->money, money_type_free );
-   keeper->money = round_money( cur_money, TRUE );
-   transfer = round_money( cost, TRUE );
-   sprintf( buf, "You sell $p for %s.", money_string( transfer ) );
-   if( ( ch->carry_weight + money_weight( transfer ) ) > can_carry_w( ch ) )
-   {
-      sprintf( buf, "%s cannot carry that much weight!\n\r", PERS( keeper, ch ) );
-      send_to_char( buf, keeper );
-      send_to_char( "You cannot carry that much money with your current load!\n\r", ch );
-      join_money( transfer, keeper->money );
-      return;
-   }
-   keeper->carry_weight -= money_weight( transfer );
-   ch->carry_weight += money_weight( transfer );
-   join_money( transfer, ch->money );
-   sprintf( moneybuf, "%s", unit_string( transfer ) );
+   keeper->gold -= cost;
+   ch->gold += cost;
+   sprintf( buf, "You sell $p for %d.", cost );
    good_trade = TRUE;
-   sprintf( log_buf, "Selling for %s, Trade %s", moneybuf, good_trade ? "@@aAccepted@@N" : "@@eRejected@@N" );
-   monitor_chan( log_buf, MONITOR_DEBUG );
    if( good_trade )
    {
       act( "$n sells $p.", ch, obj, NULL, TO_ROOM );
@@ -3108,7 +2999,6 @@ void do_value( CHAR_DATA * ch, char *argument )
    CHAR_DATA *keeper;
    OBJ_DATA *obj;
    int cost;
-   MONEY_TYPE *moneycost;
    one_argument( argument, arg );
    if( arg[0] == '\0' )
    {
@@ -3148,11 +3038,9 @@ void do_value( CHAR_DATA * ch, char *argument )
       act( "$n looks uninterested in $p.", keeper, obj, ch, TO_VICT );
       return;
    }
-   moneycost = round_money( cost, TRUE );
-   sprintf( buf, "$n tells you 'I'll give you %s for $p'.", money_string( moneycost ) );
+   sprintf( buf, "$n tells you 'I'll give you %d gold coins for $p'.", cost );
    act( buf, keeper, obj, ch, TO_VICT );
    ch->reply = keeper;
-   PUT_FREE( moneycost, money_type_free );
    return;
 }
 
@@ -3735,20 +3623,13 @@ void do_bid( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( ( amount = money_to_cost( argument ) ) < 0 )
-   {
-      send_to_char( "You must bid with real money!\n\r", ch );
-      return;
-   }
-
-
    if( amount <= auction_bid )
    {
       send_to_char( "That doesn't beat the latest bid.\n\r", ch );
       return;
    }
 
-   if( ( amount > money_value( ch->money ) ) || ( money_to_value( ch, argument ) == -1 ) )
+   if (amount > ch->gold)
 // This fix provided by Coldmyst
    {
       send_to_char( "You don't have that much money.\n\r", ch );
@@ -3774,8 +3655,6 @@ void do_bid( CHAR_DATA * ch, char *argument )
     * refund gold to last bidder, take gold from new one 
     */
 
-   if( auction_bidder != NULL )
-      join_money( round_money( auction_bid, TRUE ), auction_bidder->money );
    auction_bidder = ch;
    auction_bid = amount;
    auction_stage = 0;
@@ -3851,7 +3730,7 @@ void do_auction( CHAR_DATA * ch, char *argument )
          if( good_buyer )
          {
             send_to_char( "Your bid has been returned.\n\r", auction_bidder );
-            join_money( round_money( auction_bid, TRUE ), auction_bidder->money );
+//            join_money( round_money( auction_bid, TRUE ), auction_bidder->money );
          }
 
 
@@ -3873,11 +3752,10 @@ void do_auction( CHAR_DATA * ch, char *argument )
       send_to_char( buf, ch );
       sprintf( buf, "Item was offered for sale by %s.\n\r", auction_owner->name );
       send_to_char( buf, ch );
-      sprintf( lastbidbuf, "%s", cost_to_money( auction_bid ) );
-      sprintf( buf, "The estimated value is %s, and last bid was for %s.\n\r",
-               cost_to_money( ( int )auction_item->cost ), lastbidbuf );
+      sprintf( buf, "The estimated value is %d, and last bid was for %d.\n\r",
+               auction_item->cost , auction_bid );
       send_to_char( buf, ch );
-      sprintf( buf, "The reserve price is @@W%s @@N.\n\r", cost_to_money( auction_reserve ) );
+      sprintf( buf, "The reserve price is @@W%d @@N.\n\r", auction_reserve );
       send_to_char( buf, ch );
       vo = ( void * )auction_item;
       spell_identify( 0, LEVEL_HERO - 1, ch, vo, auction_item );
@@ -3894,10 +3772,10 @@ void do_auction( CHAR_DATA * ch, char *argument )
 
 
    if( argument[0] != '\0' )
-      reserve = money_to_cost( argument );
+      reserve = atoi( argument );
    else
       reserve = 0;
-   if( reserve * .1 > money_value( ch->money ) )
+   if( reserve * .1 > ch->gold )
    {
       send_to_char( "You don't have enough gold to cover the auction fee at that reserve price!\n\r", ch );
       return;
@@ -3948,8 +3826,8 @@ void do_auction( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   sprintf( buf, "You have placed %s up for auction.  %s @@Whas been charged for these services.\n\r",
-            auction_item->name, cost_to_money( reserve * .1 ) );
+   sprintf( buf, "You have placed %s up for auction.  %d @@Whas been charged for these services.\n\r",
+            auction_item->name, reserve * .1 );
    send_to_char( buf, ch );
    auction_owner = ch;
    auction_bidder = NULL;

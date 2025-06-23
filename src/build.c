@@ -31,9 +31,6 @@
 #include <string.h>
 #include "globals.h"
 #include "tables.h"
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
 
 
 /* This program provides the interpreting of building commands */
@@ -312,18 +309,6 @@ ROOM_INDEX_DATA *new_room( AREA_DATA * pArea, sh_int vnum, sh_int sector )
       pRoomIndex->exit[door] = NULL;
    pRoomIndex->first_room_reset = NULL;
    pRoomIndex->last_room_reset = NULL;
-   GET_FREE( room_treasure, money_type_free );
-#ifdef DEBUG_MONEY
-   {
-      char testbuf[MSL];
-      sprintf( testbuf, "loading rooms, vnum %d", pRoomIndex->vnum );
-      room_treasure->money_key = str_dup( testbuf );
-   }
-#endif
-   for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-      room_treasure->cash_unit[cnt] = 0;
-   pRoomIndex->treasure = room_treasure;
-
 
    return pRoomIndex;
 }
@@ -3980,7 +3965,6 @@ void build_delroom( CHAR_DATA * ch, char *argument )
          PUT_FREE( pEd, exdesc_free );
       }
    }
-   PUT_FREE( pRoomIndex->treasure, money_type_free );
    PUT_FREE( pRoomIndex, rid_free );
 
    top_room--;

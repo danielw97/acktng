@@ -25,8 +25,6 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-
-
 #include <sys/time.h>
 #include <sys/resource.h>
 #include <stdio.h>
@@ -34,9 +32,6 @@
 #include <time.h>
 #include "globals.h"
 #include <signal.h>
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
 
 extern POL_DATA politics_data;
 extern OBJ_DATA *quest_object;
@@ -2441,21 +2436,21 @@ void auction_update( void )
          if( auction_bidder == NULL )
          {
             sprintf( buf,
-                     "@@N%s (level:%d, valued at %s) has been offered for auction.  A @@e10%% fee@@N will be charged, the higher of the reserve price or highest bid.",
-                     auction_item->short_descr, auction_item->level, cost_to_money( auction_item->cost ) );
+                     "@@N%s (level:%d, valued at %d) has been offered for auction.  A @@e10%% fee@@N will be charged, the higher of the reserve price or highest bid.",
+                     auction_item->short_descr, auction_item->level, auction_item->cost );
          }
          else
          {
-            sprintf( buf, "%s has bid %s for %s.", auction_bidder->name,
-                     cost_to_money( auction_bid ), auction_item->short_descr );
+            sprintf( buf, "%s has bid %d for %s.", auction_bidder->name,
+                     auction_bid, auction_item->short_descr );
          }
          break;
       case 1:
          if( auction_bidder == NULL )
             sprintf( buf, "Last chance to bid for %s.", auction_item->short_descr );
          else
-            sprintf( buf, "Last bid for %s was %s.  Any more offers?",
-                     auction_item->short_descr, cost_to_money( auction_bid ) );
+            sprintf( buf, "Last bid for %s was %d.  Any more offers?",
+                     auction_item->short_descr, auction_bid );
          break;
       case 2:
          if( auction_bidder == NULL )
@@ -2475,11 +2470,6 @@ void auction_update( void )
                int bid;
                char changebuf[MSL];
                char *change;
-               bid = UMIN( money_value( auction_owner->money ), auction_reserve * .1 );
-               change = take_best_coins( auction_owner->money, bid );
-               change = one_argument( change, changebuf );
-               money_to_value( auction_owner, change );
-               join_money( round_money( atoi( change ), TRUE ), auction_owner->money );
                obj_to_char( auction_item, auction_owner );
             }
             else
@@ -2512,17 +2502,12 @@ void auction_update( void )
                int bid;
                char changebuf[MSL];
                char *change;
-               bid = UMIN( money_value( auction_owner->money ), auction_reserve * .1 );
-               change = take_best_coins( auction_owner->money, bid );
-               change = one_argument( change, changebuf );
-               money_to_value( auction_owner, change );
-               join_money( round_money( atoi( change ), TRUE ), auction_owner->money );
                obj_to_char( auction_item, auction_owner );
             }
             else
                extract_obj( auction_item );
-            if( good_buyer )
-               join_money( round_money( auction_bid, TRUE ), auction_bidder->money );
+            //if( good_buyer )
+               
 
          }
          else
@@ -2547,8 +2532,8 @@ void auction_update( void )
                sprintf( buf, "%s - SOLD!, but the buyer has left us.  Oh Well!!!", auction_item->short_descr );
                extract_obj( auction_item );
             }
-            if( good_seller )
-               join_money( round_money( auction_bid - ( auction_bid * .1 ), TRUE ), auction_owner->money );
+            //if( good_seller )
+               
 
          }
 

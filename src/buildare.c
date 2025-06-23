@@ -33,9 +33,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "globals.h"
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
 
 /* Variables declared in db.c, which we need */
 

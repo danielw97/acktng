@@ -31,11 +31,9 @@
 #include <string.h>
 #include <time.h>
 #include "globals.h"
+#include "magic.h"
 #include "tables.h"
 #include <math.h>
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
 
 extern POL_DATA politics_data;
 extern CHAR_DATA *quest_target;
@@ -65,7 +63,7 @@ void trip args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void check_adrenaline args( ( CHAR_DATA * ch, sh_int damage ) );
 void obj_damage args( ( OBJ_DATA * obj, CHAR_DATA * victim, int dam ) );
 
-int do_damage args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical) );
+int do_damage args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical, int element) );
 int damage args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt ) );
 
 /*
@@ -133,7 +131,7 @@ void violence_update( void )
          }
          if (paf->location == APPLY_DOT && ch->hit > 0 && is_same_room(ch, paf->caster))
          {
-            do_damage(paf->caster, ch, paf->modifier, paf->type, FALSE);
+            do_damage(paf->caster, ch, paf->modifier, paf->type, FALSE, REALM_IMPACT);
          }
       }
 
@@ -757,7 +755,7 @@ int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
    if( ( IS_AFFECTED( victim, AFF_PROTECT ) || item_has_apply( ch, ITEM_APPLY_PROT ) ) && IS_EVIL( ch ) )
       dam -= dam / 4;
 
-   int return_val = do_damage( ch, victim, dam, dt, critical );
+   int return_val = do_damage( ch, victim, dam, dt, critical, REALM_PHYSICAL );
 
    tail_chain( );
 
@@ -769,7 +767,7 @@ int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
  */
 int damage( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt )
 {
-   return do_damage(ch, victim, dam, dt, FALSE);
+   return do_damage(ch, victim, dam, dt, FALSE, REALM_PHYSICAL);
 }
 
 bool is_safe( CHAR_DATA * ch, CHAR_DATA * victim )

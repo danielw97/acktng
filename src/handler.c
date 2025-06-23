@@ -32,10 +32,6 @@
 #include <time.h>
 #include "globals.h"
 
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
-
 #ifndef DEC_ACT_MOB_H
 #include "act_mob.h"
 #endif
@@ -2025,10 +2021,6 @@ void extract_obj( OBJ_DATA * obj )
       save_corpses(  );
    }
    --obj->pIndexData->count;
-   if( obj->money != NULL )
-   {
-      PUT_FREE( obj->money, money_type_free );
-   }
    PUT_FREE( obj, obj_free );
    return;
 }
@@ -2170,8 +2162,7 @@ void extract_char( CHAR_DATA * ch, bool fPull )
          PUT_FREE( this_shield, shield_free );
       }
    }
-   PUT_FREE( ch->money, money_type_free );
-   PUT_FREE( ch->bank_money, money_type_free );
+
    if( !IS_NPC( ch ) && IS_SET( ch->pcdata->pflags, PFLAG_SUPER_COUNCIL ) )
    {
       sh_int this_council;

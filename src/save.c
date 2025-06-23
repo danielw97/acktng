@@ -33,11 +33,6 @@
 #include "globals.h"
 #include "hash.h"
 
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
-
-
 #if !defined(macintosh)
 extern int _filbuf args( ( FILE * ) );
 #endif
@@ -290,15 +285,6 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
 
    fprintf( fp, "HpManaMove   %ld %ld %ld %ld %ld %ld\n", ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move );
 
-
-   fprintf( fp, "Money %d ", MAX_CURRENCY );
-   for( foo = 0; foo < MAX_CURRENCY; foo++ )
-      fprintf( fp, "%d ", ch->money->cash_unit[foo] );
-   fprintf( fp, "%s", "\n" );
-   fprintf( fp, "BankMoney %d ", MAX_CURRENCY );
-   for( foo = 0; foo < MAX_CURRENCY; foo++ )
-      fprintf( fp, "%d ", ch->bank_money->cash_unit[foo] );
-   fprintf( fp, "%s", "\n" );
    fprintf( fp, "Exp          %ld\n", ch->exp );
    fprintf( fp, "Act          %d\n", ch->act );
    fprintf( fp, "Config       %d\n", ch->config );
@@ -417,12 +403,6 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
    {
       fprintf( fp, "Affect %3d %3d %3d %3d %10d\n", paf->type, paf->duration, paf->modifier, paf->location, paf->bitvector );
    }
-#ifdef IMC
-   imc_savechar( ch, fp );
-#endif
-#ifdef I3
-   i3save_char( ch, fp );
-#endif
    fprintf( fp, "End\n\n" );
    return;
 }
@@ -468,9 +448,6 @@ void fwrite_obj( CHAR_DATA * ch, OBJ_DATA * obj, FILE * fp, int iNest )
    fprintf( fp, "ExtraFlags   %d\n", obj->extra_flags );
    fprintf( fp, "WearFlags    %d\n", obj->wear_flags );
    fprintf( fp, "WearLoc      %d\n", obj->wear_loc );
-   fprintf( fp, "Money %d ", MAX_CURRENCY );
-   for( foo = 0; foo < MAX_CURRENCY; foo++ )
-      fprintf( fp, "%d ", obj->money->cash_unit[foo] );
    if( obj->obj_fun != NULL )
       fprintf( fp, "Objfun       %s~\n", rev_obj_fun_lookup( obj->obj_fun ) );
 
@@ -662,12 +639,6 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
       for( foo = 0; foo < MAX_CLASS; foo++ )
          ch->adept[foo] = -1;
       ch->adept_level = -1;
-#ifdef IMC
-      imc_initchar( ch );
-#endif
-#ifdef I3
-      i3init_char( ch );
-#endif
       for( cnt = 0; cnt < MAX_ALIASES; cnt++ )
       {
          ch->pcdata->alias_name[cnt] = str_dup( "<none>" );
@@ -709,36 +680,6 @@ bool load_char_obj( DESCRIPTOR_DATA * d, char *name, bool system_call )
    ch->carry_weight = 0.0;
    ch->carry_number = 0;
    ch->ngroup = NULL;
-
-   {
-      MONEY_TYPE *money;
-      GET_FREE( money, money_type_free );
-#ifdef DEBUG_MONEY
-      {
-         char testbuf[MSL];
-         sprintf( testbuf, "loading player money, %s", ch->name );
-         if( money->money_key != NULL )
-            free_string( money->money_key );
-         money->money_key = str_dup( testbuf );
-      }
-#endif
-      for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-         money->cash_unit[cnt] = 0;
-      ch->money = money;
-      GET_FREE( money, money_type_free );
-#ifdef DEBUG_MONEY
-      {
-         char testbuf[MSL];
-         sprintf( testbuf, "loading player bank, %s", ch->name );
-         if( money->money_key != NULL )
-            free_string( money->money_key );
-         money->money_key = str_dup( testbuf );
-      }
-#endif
-      for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-         money->cash_unit[cnt] = 0;
-      ch->bank_money = money;
-   }
 
    found = FALSE;
    if (fpReserve != NULL)
@@ -1010,13 +951,7 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
             break;
 
          case 'B':
-/*	    KEY( "Balance",     ch->balance,            fread_number( fp ) );  */
-            if( !str_cmp( word, "Balance" ) )
-            {
-               join_money( round_money( fread_number( fp ), TRUE ), ch->bank_money );
-               fMatch = TRUE;
-               break;
-            }
+	    KEY( "Balance",     ch->balance,            fread_number( fp ) );
             KEY( "Bloodlust", ch->pcdata->bloodlust, fread_number( fp ) );
             KEY( "Bloodlustmax", ch->pcdata->bloodlust_max, fread_number( fp ) );
             if( !IS_NPC( ch ) )
@@ -1026,20 +961,6 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
             }
             if( !str_cmp( word, "BankMoney" ) )
             {
-               MONEY_TYPE *transfer;
-               int num_coins;
-               GET_FREE( transfer, money_type_free );
-#ifdef DEBUG_MONEY
-               {
-                  char testbuf[MSL];
-                  sprintf( testbuf, "reading player money, %s", ch->name );
-                  transfer->money_key = str_dup( testbuf );
-               }
-#endif
-               num_coins = fread_number( fp );
-               for( cnt = 0; cnt < num_coins; cnt++ )
-                  transfer->cash_unit[( cnt < MAX_CURRENCY ? cnt : MAX_CURRENCY - 1 )] = fread_number( fp );
-               join_money( transfer, ch->bank_money );
                fMatch = TRUE;
                break;
             }
@@ -1113,14 +1034,7 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
             KEY( "GainMana", ch->pcdata->mana_from_gain, fread_number( fp ) );
             KEY( "GainHp", ch->pcdata->hp_from_gain, fread_number( fp ) );
             KEY( "GainMove", ch->pcdata->move_from_gain, fread_number( fp ) );
-/*	    KEY( "Gold",        ch->gold,               fread_number( fp ) );  */
-
-            if( !str_cmp( word, "Gold" ) )
-            {
-               join_money( round_money( fread_number( fp ), TRUE ), ch->money );
-               fMatch = TRUE;
-               break;
-            }
+	    KEY( "Gold",        ch->gold,               fread_number( fp ) );
             KEY( "Generation", ch->pcdata->generation, fread_number( fp ) );
             break;
 
@@ -1172,14 +1086,6 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
                   break;
                }
             }
-#ifdef IMC
-            if( ( fMatch = imc_loadchar( ch, fp, word ) ) )
-               break;
-#endif
-#ifdef I3
-            if( ( fMatch = i3load_char( ch, fp, word ) ) )
-               break;
-#endif
             break;
 
 
@@ -1205,21 +1111,6 @@ void fread_char( CHAR_DATA * ch, FILE * fp )
             }
             if( !str_cmp( word, "Money" ) )
             {
-               MONEY_TYPE *transfer;
-               int num_coins;
-               GET_FREE( transfer, money_type_free );
-#ifdef DEBUG_MONEY
-               {
-                  char testbuf[MSL];
-                  sprintf( testbuf, "reading player money, %s", ch->name );
-                  transfer->money_key = str_dup( testbuf );
-               }
-#endif
-               num_coins = fread_number( fp );
-               for( cnt = 0; cnt < num_coins; cnt++ )
-                  transfer->cash_unit[( cnt < MAX_CURRENCY ? cnt : MAX_CURRENCY - 1 )] = fread_number( fp );
-               join_money( transfer, ch->money );
-               ch->carry_weight += money_weight( transfer );
                fMatch = TRUE;
                break;
             }
@@ -1445,21 +1336,6 @@ void fread_obj( CHAR_DATA * ch, FILE * fp )
    obj->name = str_dup( "" );
    obj->short_descr = str_dup( "" );
    obj->description = str_dup( "" );
-   {
-      MONEY_TYPE *money;
-      sh_int cnt;
-      GET_FREE( money, money_type_free );
-#ifdef DEBUG_MONEY
-      {
-         char testbuf[MSL];
-         sprintf( testbuf, "loading obj money, %s", obj->name );
-         money->money_key = str_dup( testbuf );
-      }
-#endif
-      for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-         money->cash_unit[cnt] = 0;
-      obj->money = money;
-   }
    fNest = FALSE;
    fVnum = TRUE;
    iNest = 0;
@@ -1616,20 +1492,6 @@ void fread_obj( CHAR_DATA * ch, FILE * fp )
          case 'M':
             if( !str_cmp( word, "Money" ) )
             {
-               MONEY_TYPE *transfer;
-               int num_coins, cnt;
-               GET_FREE( transfer, money_type_free );
-#ifdef DEBUG_MONEY
-               {
-                  char testbuf[MSL];
-                  sprintf( testbuf, "loading obj money, %s", obj->name );
-                  transfer->money_key = str_dup( testbuf );
-               }
-#endif
-               num_coins = fread_number( fp );
-               for( cnt = 0; cnt < num_coins; cnt++ )
-                  transfer->cash_unit[( cnt < MAX_CURRENCY ? cnt : MAX_CURRENCY - 1 )] = fread_number( fp );
-               join_money( transfer, obj->money );
                fMatch = TRUE;
                break;
             }
@@ -1812,21 +1674,6 @@ void fread_corpse( FILE * fp )
    obj->name = str_dup( "" );
    obj->short_descr = str_dup( "" );
    obj->description = str_dup( "" );
-   {
-      MONEY_TYPE *money;
-      sh_int cnt;
-      GET_FREE( money, money_type_free );
-#ifdef DEBUG_MONEY
-      {
-         char testbuf[MSL];
-         sprintf( testbuf, "loading obj money, %s", obj->name );
-         money->money_key = str_dup( testbuf );
-      }
-#endif
-      for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-         money->cash_unit[cnt] = 0;
-      obj->money = money;
-   }
    fNest = FALSE;
    fVnum = TRUE;
    iNest = 0;
@@ -1981,20 +1828,6 @@ void fread_corpse( FILE * fp )
          case 'M':
             if( !str_cmp( word, "Money" ) )
             {
-               MONEY_TYPE *transfer;
-               int num_coins, cnt;
-               GET_FREE( transfer, money_type_free );
-#ifdef DEBUG_MONEY
-               {
-                  char testbuf[MSL];
-                  sprintf( testbuf, "loading obj money, %s", obj->name );
-                  transfer->money_key = str_dup( testbuf );
-               }
-#endif
-               num_coins = fread_number( fp );
-               for( cnt = 0; cnt < num_coins; cnt++ )
-                  transfer->cash_unit[( cnt < MAX_CURRENCY ? cnt : MAX_CURRENCY - 1 )] = fread_number( fp );
-               join_money( transfer, obj->money );
                fMatch = TRUE;
                break;
             }
@@ -2150,9 +1983,6 @@ void fwrite_corpse( OBJ_DATA * obj, FILE * fp, int iNest )
    fprintf( fp, "ExtraFlags   %d\n", obj->extra_flags );
    fprintf( fp, "WearFlags    %d\n", obj->wear_flags );
    fprintf( fp, "WearLoc      %d\n", obj->wear_loc );
-   fprintf( fp, "Money %d ", MAX_CURRENCY );
-   for( foo = 0; foo < MAX_CURRENCY; foo++ )
-      fprintf( fp, "%d ", obj->money->cash_unit[foo] );
    if( obj->obj_fun != NULL )
       fprintf( fp, "Objfun       %s~\n", rev_obj_fun_lookup( obj->obj_fun ) );
 

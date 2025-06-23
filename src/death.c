@@ -1,5 +1,8 @@
-#include "ack.h"
+#include "globals.h"
 
+extern POL_DATA politics_data;
+extern CHAR_DATA *quest_target;
+extern CHAR_DATA *quest_mob;
 
 /*
  * Make a corpse out of a character.
@@ -88,7 +91,7 @@ void make_corpse( CHAR_DATA * ch, char *argument )
 
          if( gold > 0 )
          {
-            join_money( round_money( gold, TRUE ), corpse->money );
+            //corpse money goes here
          }
          ch->gold = 0;
       }

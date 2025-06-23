@@ -32,10 +32,6 @@
 #include <time.h>
 #include "globals.h"
 
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
-
 /*
  * Local functions.
  */
@@ -2404,11 +2400,6 @@ void do_split( CHAR_DATA * ch, char *argument )
    bool valid = TRUE;
 
    givebuf[0] = '\0';
-   if( money_to_cost( argument ) < 0 )
-   {
-      send_to_char( "Your group wouldn't like that.\n\r", ch );
-      return;
-   }
    members = 0;
    for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
    {
@@ -2430,7 +2421,7 @@ void do_split( CHAR_DATA * ch, char *argument )
       argument = one_argument( argument, coinbuf );
       if( coinbuf[0] == '\0' )
          break;
-      if( ( !is_number( numbuf ) ) || ( money_lookup( coinbuf ) < 0 ) )
+      if(!is_number( numbuf ) )
       {
          valid = FALSE;
          break;
@@ -2452,8 +2443,9 @@ void do_split( CHAR_DATA * ch, char *argument )
       {
          if( gch != ch && is_same_group( gch, ch ) )
          {
-            give_money( ch, gch, givebuf );
-            sprintf( outbuf, "%s gives you %s.\n\r", PERS( ch, gch ), cost_to_money( money_to_cost( givebuf ) ) );
+            ch->gold -= share;
+            gch->gold += share;
+            sprintf( outbuf, "%s gives you %s.\n\r", PERS( ch, gch ), share );
             send_to_char( outbuf, gch );
          }
       }

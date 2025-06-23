@@ -43,7 +43,6 @@
 #include "globals.h"
 #endif
 
-
 /* Various linked lists head/tail pointer declarations. -- Altrag */
 #ifndef DEC_LISTS_H
 #include "lists.h"
@@ -55,10 +54,6 @@
 
 #ifndef DEC_ACT_MOB_H
 #include "act_mob.h"
-#endif
-
-#ifdef IMC
-#include "imc.h"
 #endif
 
 struct str_array
@@ -821,9 +816,6 @@ struct pc_data
    char *email_address;
    bool valid_email;
    char *assist_msg;
-#ifdef IMC
-   IMC_CHARDATA *imcchardata;
-#endif
 };
 
 /*

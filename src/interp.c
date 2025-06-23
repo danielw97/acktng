@@ -417,8 +417,6 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"auction", do_auction, POS_STANDING, 0, LOG_NORMAL,
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
-   {"bank", do_bank, POS_STANDING, 0, LOG_NORMAL,
-    C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"bid", do_bid, POS_STANDING, 0, LOG_NORMAL,
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"brandish", do_brandish, POS_RESTING, 0, LOG_NORMAL,
@@ -495,8 +493,8 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_MISC, C_SHOW_ALWAYS},
    {"follow", do_follow, POS_RESTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
-   {"gold", do_gold, POS_DEAD, 0, LOG_NORMAL,
-    C_TYPE_INFO, C_SHOW_ALWAYS},
+   /*{"gold", do_gold, POS_DEAD, 0, LOG_NORMAL,
+    C_TYPE_INFO, C_SHOW_ALWAYS},*/
    {"group", do_group, POS_FIGHTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"guild", do_guild, POS_FIGHTING, 0, LOG_NORMAL,
@@ -688,8 +686,8 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_IMM, C_SHOW_ALWAYS},
    {"mset", do_mset, POS_DEAD, L_DEI, LOG_ALWAYS,
     C_TYPE_IMM, C_SHOW_ALWAYS},
-   {"mgive", do_mgive, POS_DEAD, L_DEI, LOG_ALWAYS,
-    C_TYPE_IMM, C_SHOW_ALWAYS},
+   /*{"mgive", do_mgive, POS_DEAD, L_DEI, LOG_ALWAYS,
+    C_TYPE_IMM, C_SHOW_ALWAYS},*/
    {"noemote", do_noemote, POS_DEAD, L_DEI, LOG_ALWAYS,
     C_TYPE_IMM, C_SHOW_ALWAYS},
    {"nopray", do_nopray, POS_DEAD, L_DEI, LOG_ALWAYS,
@@ -1079,14 +1077,7 @@ void interpret( CHAR_DATA * ch, char *argument )
       /*
        * Look for command in socials table.
        */
-      if( !check_social( ch, command, argument )
-#ifdef IMC
-          && !imc_command_hook( ch, command, argument )
-#endif
-#ifdef I3
-          && !I3_command_hook( ch, command, argument )
-#endif
-          )
+      if( !check_social( ch, command, argument ) )
          send_to_char( "Huh?\n\r", ch );
       return;
    }

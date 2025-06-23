@@ -41,10 +41,6 @@
 #include <errno.h>
 #include <signal.h>
 
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
-
 #ifndef DEC_ACT_MOB_H
 #include "act_mob.h"
 #endif
@@ -1574,19 +1570,6 @@ void load_rooms( FILE * fp )
       pRoomIndex->first_room_reset = NULL;   /* MAG Mod */
       pRoomIndex->last_room_reset = NULL;
 
-      GET_FREE( room_treasure, money_type_free );
-#ifdef DEBUG_MONEY
-      {
-         char testbuf[MSL];
-         sprintf( testbuf, "loading rooms, vnum is %d", pRoomIndex->vnum );
-         room_treasure->money_key = str_dup( testbuf );
-      }
-#endif
-      for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-         room_treasure->cash_unit[cnt] = 0;
-      pRoomIndex->treasure = room_treasure;
-
-
       for( ;; )
       {
          letter = fread_letter( fp );
@@ -2591,29 +2574,7 @@ CHAR_DATA *create_mobile( MOB_INDEX_DATA * pMobIndex )
     */
    mob->ngroup = NULL;
 
-   GET_FREE( money, money_type_free );
-#ifdef DEBUG_MONEY
-   {
-      char testbuf[MSL];
-      sprintf( testbuf, "create_mobile, %s", mob->name );
-      money->money_key = str_dup( testbuf );
-   }
-#endif
-   for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-      money->cash_unit[cnt] = pMobIndex->pShop ? 10 : 0;
-   mob->money = money;
-
-   GET_FREE( money, money_type_free );
-#ifdef DEBUG_MONEY
-   {
-      char testbuf[MSL];
-      sprintf( testbuf, "create_mobile, %s", mob->name );
-      money->money_key = str_dup( testbuf );
-   }
-#endif
-   for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-      money->cash_unit[cnt] = 0;
-   mob->bank_money = money;
+   mob->gold = pMobIndex->pShop ? 10 : 0;
 
    /*
     * Insert in list.
@@ -2700,17 +2661,6 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA * pObjIndex, int level )
    obj->last_content = NULL;
    obj->prev_content = NULL;
    obj->weight = pObjIndex->weight;
-   GET_FREE( money, money_type_free );
-#ifdef DEBUG_MONEY
-   {
-      char testbuf[MSL];
-      sprintf( testbuf, "create_object, %s", obj->name );
-      money->money_key = str_dup( testbuf );
-   }
-#endif
-   for( cnt = 0; cnt < MAX_CURRENCY; cnt++ )
-      money->cash_unit[cnt] = 0;
-   obj->money = money;
 
 
    obj->in_obj = NULL;
@@ -3203,12 +3153,6 @@ void free_char( CHAR_DATA * ch )
 
    if( ch->pcdata != NULL )
    {
-#ifdef IMC
-      imc_freechardata( ch );
-#endif
-#ifdef I3
-      free_i3chardata( ch );
-#endif
       PUT_FREE( ch->pcdata, pcd_free );
    }
 

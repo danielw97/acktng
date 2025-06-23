@@ -41,9 +41,6 @@
 #ifndef DEC_MAGIC_H
 #include "magic.h"
 #endif
-#ifndef DEC_MONEY_H
-#include "money.h"
-#endif
 #ifndef CONFIG_H
 #include "config.h"
 #endif
@@ -1119,8 +1116,8 @@ void do_look( CHAR_DATA * ch, char *argument )
       show_char_to_char( ch->in_room->first_person, ch );
       {
          char money_show[MSL];
-         sprintf( money_show, "%s lie in a pile.\n\r", money_string( ch->in_room->treasure ) );
-         if( str_prefix( " lie", money_show ) )
+         sprintf( money_show, "%d gold lies in a pile.\n\r", ch->in_room->treasure );
+         if( ch->in_room->treasure > 0 )
             send_to_char( money_show, ch );
       }
 
@@ -1231,10 +1228,6 @@ void do_look( CHAR_DATA * ch, char *argument )
             act( "$p contains:", ch, obj, NULL, TO_CHAR );
             show_list_to_char( obj->first_in_carry_list, ch, TRUE, TRUE );
             {
-               char money_show[MSL];
-               sprintf( money_show, "%s lie within.\n\r", money_string( obj->money ) );
-               if( str_prefix( " lie", money_show ) )
-                  send_to_char( money_show, ch );
             }
             break;
       }
@@ -4809,30 +4802,22 @@ void do_heal( CHAR_DATA * ch, char *argument )
       /*
        * Work out costs of different spells. 
        */
-      send_to_char( "Costs for spells ( approximate ):\n\r", ch );
-      sprintf( costbuf, "%s", cost_to_money( ( mult * 100 ) ) );
-      sprintf( buf, "Sanctuary:          %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      send_to_char( "Costs for spells:\n\r", ch );
+      sprintf( buf, "Sanctuary:          %d.\n\r", mult * 100 );
       send_to_char( buf, ch );
-      sprintf( costbuf, "%s", cost_to_money( ( mult * 50 ) ) );
-      sprintf( buf, "Heal:               %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      sprintf( buf, "Heal:               %d.\n\r", mult * 50 );
       send_to_char( buf, ch );
-      sprintf( costbuf, "%s", cost_to_money( ( mult * 20 ) ) );
-      sprintf( buf, "Invisibilty:        %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      sprintf( buf, "Invisibilty:        %d.\n\r", mult * 20 );
       send_to_char( buf, ch );
-      sprintf( costbuf, "%s", cost_to_money( ( mult * 10 ) ) );
-      sprintf( buf, "Detect Invisibilty: %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      sprintf( buf, "Detect Invisibilty: %d.\n\r", mult * 10 );
       send_to_char( buf, ch );
-      sprintf( costbuf, "%s", cost_to_money( ( mult * 10 ) ) );
-      sprintf( buf, "Refresh:            %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      sprintf( buf, "Refresh:            %d.\n\r", mult * 10 );
       send_to_char( buf, ch );
-      sprintf( costbuf, "%s", cost_to_money( ( mult * 20 ) ) );
-      sprintf( buf, "Night Vision:       %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      sprintf( buf, "Night Vision:       %d.\n\r", mult * 20 );
       send_to_char( buf, ch );
-      sprintf( costbuf, "%s", cost_to_money( ( mult * 200 ) ) );
-      sprintf( buf, "Magical Dispel:     %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      sprintf( buf, "Magical Dispel:     %d.\n\r", mult * 200 );
       send_to_char( buf, ch );
-      sprintf( costbuf, "%s", cost_to_money( ( 2000 ) ) );
-      sprintf( buf, "Mana:     %-*s.\n\r", ccode_len( costbuf, 40 ), costbuf );
+      sprintf( buf, "Mana:     %d.\n\r", 1000 );
       send_to_char( buf, ch );
 
 
@@ -4845,7 +4830,7 @@ void do_heal( CHAR_DATA * ch, char *argument )
    switch ( UPPER( argument[0] ) )
    {
       case 'S':  /* Sanc */
-         if( money_value( ch->money ) < ( mult * 100 ) )
+         if( ch->gold < ( mult * 100 ) )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
@@ -4853,32 +4838,22 @@ void do_heal( CHAR_DATA * ch, char *argument )
          act( "$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT );
          act( "$N gestures towards you.", ch, NULL, mob, TO_CHAR );
          spell_sanctuary( skill_lookup( "sanc" ), mult, ch, ch, NULL );
-         give = take_best_coins( ch->money, ( mult * 100 ) );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
+         ch->gold -= mult * 100;
          break;
       case 'P':  /* mana */
-         if( money_value( ch->money ) < 1000 )
+         if( ch->gold < 1000 )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
          }
          act( "$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT );
          act( "$N gestures towards you.", ch, NULL, mob, TO_CHAR );
-         give = take_best_coins( ch->money, 1000 );
+         ch->gold -= 1000;
          ch->mana = UMIN( ch->max_mana, ch->mana + 50 );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
          break;
 
       case 'H':  /* Heal */
-         if( money_value( ch->money ) < ( mult * 50 ) )
+         if( ch->gold < ( mult * 50 ) )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
@@ -4886,15 +4861,10 @@ void do_heal( CHAR_DATA * ch, char *argument )
          act( "$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT );
          act( "$N gestures towards you.", ch, NULL, mob, TO_CHAR );
          spell_heal( skill_lookup( "heal" ), mult, mob, ch, NULL );
-         give = take_best_coins( ch->money, ( mult * 50 ) );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
+         ch->gold -= mult * 50;
          break;
       case 'I':  /* invis */
-         if( money_value( ch->money ) < ( mult * 20 ) )
+         if( ch->gold < ( mult * 20 ) )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
@@ -4902,15 +4872,10 @@ void do_heal( CHAR_DATA * ch, char *argument )
          act( "$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT );
          act( "$N gestures towards you.", ch, NULL, mob, TO_CHAR );
          spell_invis( skill_lookup( "invis" ), mult, mob, ch, NULL );
-         give = take_best_coins( ch->money, ( mult * 20 ) );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
+         ch->gold -= mult * 20;
          break;
       case 'D':  /* detect invis */
-         if( money_value( ch->money ) < ( mult * 10 ) )
+         if( ch->gold < ( mult * 10 ) )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
@@ -4918,15 +4883,10 @@ void do_heal( CHAR_DATA * ch, char *argument )
          act( "$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT );
          act( "$N gestures towards you.", ch, NULL, mob, TO_CHAR );
          spell_detect_invis( skill_lookup( "detect invis" ), mult, mob, ch, NULL );
-         give = take_best_coins( ch->money, ( mult * 10 ) );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
+         ch->gold -= mult * 10;
          break;
       case 'R':  /* refresh */
-         if( money_value( ch->money ) < ( mult * 10 ) )
+         if( ch->gold < ( mult * 10 ) )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
@@ -4934,15 +4894,10 @@ void do_heal( CHAR_DATA * ch, char *argument )
          act( "$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT );
          act( "$N gestures towards you.", ch, NULL, mob, TO_CHAR );
          spell_refresh( skill_lookup( "refresh" ), mult, mob, ch, NULL );
-         give = take_best_coins( ch->money, ( mult * 10 ) );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
+         ch->gold -= mult * 10;
          break;
       case 'N':  /* Infra */
-         if( money_value( ch->money ) < ( mult * 20 ) )
+         if( ch->gold < ( mult * 20 ) )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
@@ -4950,15 +4905,10 @@ void do_heal( CHAR_DATA * ch, char *argument )
          act( "$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT );
          act( "$N gestures towards you.", ch, NULL, mob, TO_CHAR );
          spell_infravision( skill_lookup( "infra" ), mult, ch, ch, NULL );
-         give = take_best_coins( ch->money, ( mult * 20 ) );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
+         ch->gold -= mult * 20;
          break;
       case 'M':  /* dispel */
-         if( money_value( ch->money ) < ( mult * 200 ) )
+         if( ch->gold < ( mult * 200 ) )
          {
             send_to_char( "You don't have enough money...\n\r", ch );
             return;
@@ -4967,12 +4917,7 @@ void do_heal( CHAR_DATA * ch, char *argument )
           * No acts, as they are in spell_dispel_magic.  Doh. 
           */
          spell_dispel_magic( skill_lookup( "dispel magic" ), mult * 5, mob, ch, NULL );
-         give = take_best_coins( ch->money, ( mult * 200 ) );
-         give = one_argument( give, changebuf );
-         sprintf( givebuf, "%s to %s", give, mob->name );
-         do_give( ch, givebuf );
-         join_money( round_money( atoi( changebuf ), TRUE ), ch->money );
-         send_to_char( "The healer hands you some change.\n\r", ch );
+         ch->gold -= mult * 200;
          break;
       default:
          send_to_char( "Are you sure you're reading the instructions right??\n\r", ch );

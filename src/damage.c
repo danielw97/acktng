@@ -1,4 +1,11 @@
-#include "ack.h"
+#ifndef DEC_ACK_H
+#include "globals.h"
+#endif
+#include "magic.h"
+
+extern POL_DATA politics_data;
+extern CHAR_DATA *quest_target;
+extern CHAR_DATA *quest_mob;
 
 int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical)
 {
