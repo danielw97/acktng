@@ -271,45 +271,8 @@ void move_char( CHAR_DATA * ch, int door )
 
 
    {
-      int iClass;
-      int iRace;
       int iClan;
       int move;
-
-      /*
-       * Check if room is a guild-only one... 
-       */
-
-      for( iClass = 0; iClass < MAX_CLASS; iClass++ )
-      {
-         if( to_room->vnum == class_table[iClass].guild )
-         {
-            if( ( IS_NPC( ch ) ) || ( ( !IS_IMMORTAL( ch ) ) && ( ch->lvl[iClass] == -1 ) ) )
-            {
-               send_to_char( "You aren't allowed in there.\n\r", ch );
-               ch->using_named_door = FALSE;
-               return;
-            }
-         }
-      }
-
-      /*
-       * Check if room is a race-only one... 
-       */
-
-      for( iRace = 0; iRace < MAX_RACE; iRace++ )
-      {
-         if( ( to_room->vnum == race_table[iRace].race_room ) && ( iRace != ch->race ) && ( !IS_IMMORTAL( ch ) ) )
-         {
-            send_to_char( "You aren't allowed in there.\n\r", ch );
-            ch->using_named_door = FALSE;
-            return;
-         }
-      }
-
-      /*
-       * Check if room is a clan-only one... 
-       */
 
       for( iClan = 0; iClan < MAX_CLAN; iClan++ )
       {

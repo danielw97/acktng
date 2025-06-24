@@ -4237,7 +4237,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       else
       {
          class = ADVANCE_ADEPT;
-         advance_level( victim, class, TRUE, FALSE );
+         advance_level( victim, class, TRUE, FALSE, TRUE );
          victim->adept_level = 1;
          sprintf( buf, " %s %s", victim->name, get_adept_name( victim ) );
          do_whoname( ch, buf );
@@ -4343,9 +4343,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       }
 
       if( remort )
-         victim->max_hit -= UMIN( victim->max_hit, lose * remort_table[class].hp_min );
-      else
-         victim->max_hit -= UMIN( victim->max_hit, lose * class_table[class].hp_min );
+         reset_gain_stats(victim);
 
       victim->max_mana = 100;
       victim->max_move = 100;
@@ -4358,10 +4356,10 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       if( vamp )
       {
          class = ADVANCE_VAMP;
-         advance_level( victim, class, FALSE, remort );
+         advance_level( victim, class, FALSE, remort, FALSE );
       }
       else
-         advance_level( victim, class, FALSE, remort );
+         advance_level( victim, class, FALSE, remort, FALSE );
    }
    else
    {
@@ -4376,7 +4374,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       for( iClass = victim->lvl[class]; iClass < value; iClass++ )
       {
          victim->lvl[class] += 1;
-         advance_level( victim, class, FALSE, remort );
+         advance_level( victim, class, FALSE, remort, FALSE );
       }
    }
    if( remort )
@@ -4386,7 +4384,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       for( iClass = victim->remort[class]; iClass < value; iClass++ )
       {
          victim->remort[class] += 1;
-         advance_level( victim, class, FALSE, remort );
+         advance_level( victim, class, FALSE, remort, FALSE );
       }
    }
    if( vamp )
@@ -4396,7 +4394,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       {
          class = ADVANCE_VAMP;
          victim->pcdata->vamp_level += 1;
-         advance_level( victim, class, FALSE, remort );
+         advance_level( victim, class, FALSE, remort, FALSE );
       }
    }
 

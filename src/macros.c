@@ -39,9 +39,6 @@ void reset_gain_stats( CHAR_DATA * ch )
 {
    sh_int index = 0;
    sh_int index2 = 0;
-   sh_int add_move = 0;
-   sh_int add_mana = 0;
-   sh_int add_hp = 0;
 
    ch->pcdata->mana_from_gain = 100;
    ch->pcdata->hp_from_gain = 25;
@@ -53,24 +50,18 @@ void reset_gain_stats( CHAR_DATA * ch )
       if(index < MAX_CLASS && ch->lvl[index] > 0 )
          for( index2 = 1; index2 <= ch->lvl[index]; index2++ )
          {
-            advance_level(ch, index, FALSE, FALSE);
+            advance_level(ch, index, FALSE, FALSE, FALSE);
          }
       if( ch->remort[index] > 0 )
          for( index2 = 1; index2 <= ch->remort[index]; index2++ )
          {
-            advance_level(ch, index, FALSE, TRUE);
+            advance_level(ch, index, FALSE, TRUE, FALSE);
          }
 
       if(index < MAX_CLASS && ch->adept[index] > 0 )
          for( index2 = 1; index2 <= ch->adept[index]; index2++ )
          {
-            add_hp = con_app[ch->pcdata->max_con].hitp + number_range( 10, 50 );
-            add_mana = number_range( 10, ( 3 * ch->pcdata->max_int + ch->pcdata->max_wis ) / 4 );
-            add_hp = UMAX( 1, add_hp );
-            add_mana = UMAX( 0, add_mana );
-
-            ch->pcdata->mana_from_gain += add_mana;
-            ch->pcdata->hp_from_gain += add_hp;
+            advance_level(ch, index, FALSE, TRUE, TRUE);
          }
    }
 }
@@ -170,10 +161,18 @@ bool check_level_use( CHAR_DATA * ch, int level )
 long exp_to_level_adept( CHAR_DATA * ch )
 {
    long exp;
+   int i;
+   bool found = FALSE;
 
-   exp = ( 30000 + ( ch->adept_level * 5000 ) );
-   exp = UMAX( exp, exp * ch->adept_level / 2 );
-   return exp;
+   for( i = 0; i < MAX_CLASS && !found; i++)
+   {
+      if (ch->adept[i] > 0)
+         found = TRUE;
+   }
+
+   exp = ( 30000 + ( ch->adept[i] * 5000 ) );
+   exp *= ch->adept[i] / 2;
+   return exp * 10;
 }
 
 
@@ -186,7 +185,7 @@ long exp_to_level( CHAR_DATA * ch, int index, bool remort )
     */
 
    int max_level = 0;
-   int mult;
+   int mult = 0;
    int level, next_level_index;
    int totlevels = 0, diff;
    long cost;

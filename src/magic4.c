@@ -218,20 +218,17 @@ bool spell_black_curse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    CHAR_DATA *victim = ( CHAR_DATA * ) vo;
    AFFECT_DATA af;
 
-   if( IS_AFFECTED( victim, AFF_CURSE ) )
+   if( IS_AFFECTED( victim, AFF_REMORT_CURSE ) )
    {
       send_to_char( "They are already weakened!\n\r", ch );
       return FALSE;
    }
-   if( saves_spell( level, victim ) )
-      return TRUE;
-   if( saves_spell( level, victim ) )
-      return TRUE;
    af.type = sn;
    af.duration = 2 * ( level / 8 );
    af.location = APPLY_HITROLL;
    af.modifier = -1 * get_psuedo_level( ch );
-   af.bitvector = AFF_CURSE;
+   af.bitvector = AFF_REMORT_CURSE;
+   af.caster = ch;
    affect_to_char( victim, &af );
 
    af.location = APPLY_AC;

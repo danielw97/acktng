@@ -63,7 +63,7 @@ void trip args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void check_adrenaline args( ( CHAR_DATA * ch, sh_int damage ) );
 void obj_damage args( ( OBJ_DATA * obj, CHAR_DATA * victim, int dam ) );
 
-int do_damage args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical, int element) );
+int do_damage args( ( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical) );
 int damage args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt ) );
 
 /*
@@ -131,7 +131,7 @@ void violence_update( void )
          }
          if (paf->location == APPLY_DOT && ch->hit > 0 && is_same_room(ch, paf->caster))
          {
-            do_damage(paf->caster, ch, paf->modifier, paf->type, FALSE, REALM_IMPACT);
+            do_damage(paf->caster, ch, paf->modifier, paf->type, REALM_IMPACT, FALSE);
          }
       }
 
@@ -438,6 +438,20 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
          hits++;
       if (IS_SET( ch->skills, MOB_SIXTH ))
          hits++;
+
+      if (IS_SET( ch->act, ACT_SOLO ) )
+         hits++;
+
+      if (ch->level > 30)
+         hits++;
+      if (ch->level > 60)
+         hits++;
+      if (ch->level > 90)
+         hits++;
+      if (ch->level > 120)
+         hits++;
+      if (ch->level > 150)
+         hits++;
    }
    else
    {
@@ -451,6 +465,15 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       if (ch->remort[CLASS_KNI] > 0)
          hits++;
       if (ch->remort[CLASS_SWO] > 0)
+         hits++;
+
+      if (ch->adept[CLASS_NIG] > 0)
+         hits++;
+      if (ch->adept[CLASS_TEM] > 0)
+         hits++;
+      if (ch->adept[CLASS_MAR] > 0)
+         hits++;
+      if (ch->adept[CLASS_CRU] > 0)
          hits++;
 
       // Mort hits
@@ -755,7 +778,7 @@ int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
    if( ( IS_AFFECTED( victim, AFF_PROTECT ) || item_has_apply( ch, ITEM_APPLY_PROT ) ) && IS_EVIL( ch ) )
       dam -= dam / 4;
 
-   int return_val = do_damage( ch, victim, dam, dt, critical, REALM_PHYSICAL );
+   int return_val = do_damage( ch, victim, dam, dt, REALM_PHYSICAL, critical );
 
    tail_chain( );
 
@@ -767,7 +790,7 @@ int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
  */
 int damage( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt )
 {
-   return do_damage(ch, victim, dam, dt, FALSE, REALM_PHYSICAL);
+   return do_damage(ch, victim, dam, dt, REALM_PHYSICAL, FALSE);
 }
 
 bool is_safe( CHAR_DATA * ch, CHAR_DATA * victim )

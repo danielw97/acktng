@@ -511,9 +511,6 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_ACTION, C_SHOW_NEVER},
    {"leave", do_leave, POS_RESTING, CLAN_ONLY, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
-
-   {"practice", do_practice, POS_SLEEPING, 0, LOG_NORMAL,
-    C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"qui", do_qui, POS_DEAD, 0, LOG_NORMAL,
     C_TYPE_MISC, C_SHOW_NEVER},
    {"quit", do_quit, POS_DEAD, 0, LOG_NORMAL,

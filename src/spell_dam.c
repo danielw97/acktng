@@ -226,15 +226,15 @@ void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bo
    victim->hit = UMIN( victim->hit + heal, victim->max_hit );
    update_pos( victim );
 
-   sprintf(buf1, "@@N%s's %s heals %s! (@@r%d@@N)", ch->name, skill_table[sn].name, victim->name, heal);
-   sprintf(buf2, "@@NYour %s heals %s! (@@r%d@@N)\n\r", skill_table[sn].name, victim->name, heal);
-   sprintf(buf3, "@@N%s's %s heals you! (@@r%d@@N)\n\r", ch->name, skill_table[sn].name, heal);
+   sprintf(buf1, "@@N$n's %s heals $N! (@@r%d@@N)", skill_table[sn].name, heal);
+   sprintf(buf2, "@@NYour %s heals $N! (@@r%d@@N)\n\r", skill_table[sn].name, heal);
+   sprintf(buf3, "@@N$n's %s heals you! (@@r%d@@N)\n\r", skill_table[sn].name, heal);
 
    if (ch != victim && victim != NULL)
-      send_to_char(buf3, victim);
-   if(ch != NULL && victim != NULL && ch->in_room->vnum == victim->in_room->vnum)
-      send_to_char(buf2, ch);
-   act( buf1, victim, NULL, NULL, TO_ROOM );
+      act(buf3, ch, NULL, victim, TO_VICT);
+   if (ch != NULL && victim != NULL && ch->in_room->vnum == victim->in_room->vnum)
+      act(buf2, ch, NULL, victim, TO_CHAR);
+   act( buf1, ch, NULL, victim, TO_ROOM );
 }
 
 void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
@@ -796,7 +796,9 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
    bool can_absorb = TRUE;
    bool critical = FALSE;
 
-/*   char buf[MAX_STRING_LENGTH];   this is unused now -- uni */
+   if (!is_same_room(ch, victim) )
+      return FALSE;
+
    if( ( victim->is_free == TRUE ) )
       return FALSE;
 
@@ -829,7 +831,7 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
               TO_CHAR );
          act( "@@NYour @@lc@@el@@ro@@ya@@ak@@N glows brightly, and reflects the spell back on $N@@N!!!", victim, NULL, ch,
               TO_CHAR );
-         ( *skill_table[sn].spell_fun ) ( sn, 60, ch, ( void * )ch, NULL );
+         sp_damage(obj, victim, ch, dam, type, sn, show_msg);
          return FALSE;
 
       }
@@ -896,8 +898,6 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
       {
          dam_modifier -= .50;
       }
-
-      dam_modifier += get_curr_wis(victim) / 100;
 
       if( ( !IS_NPC( ch ) ) && ( !IS_SET( type, REALM_MIND ) ) )
       {
@@ -975,7 +975,32 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
    if( ( IS_SET( type, REALM_DRAIN ) ) && ( IS_UNDEAD( victim ) ) )
       dam_modifier = 0.0;
 
-   dam += get_spellpower(ch);
+   if ( IS_SET( type, SIXTH_DIVISOR ) )
+   {
+      dam += get_spellpower(ch) / 6;
+      REMOVE_BIT(type, SIXTH_DIVISOR);
+   }
+   else if ( IS_SET( type, FIFTH_DIVISOR ) )
+   {
+      dam += get_spellpower(ch) / 5;
+      REMOVE_BIT(type, FIFTH_DIVISOR);
+   }
+   else if ( IS_SET( type, FOURTH_DIVISOR ) )
+   {
+      dam += get_spellpower(ch) / 4;
+      REMOVE_BIT(type, FOURTH_DIVISOR);
+   }
+   else if ( IS_SET( type, THIRD_DIVISOR ) )
+   {
+      dam += get_spellpower(ch) / 3;
+      REMOVE_BIT(type, THIRD_DIVISOR);
+   }
+   else if ( IS_SET( type, SECOND_DIVISOR ) )
+   {
+      dam += get_spellpower(ch) / 2;
+      REMOVE_BIT(type, SECOND_DIVISOR);
+   }
+   else dam += get_spellpower(ch);
 
    if (stance_app[ch->stance].spell_mod != 0)
       dam += dam * stance_app[ch->stance].spell_mod / 10;
@@ -985,7 +1010,7 @@ bool sp_damage( OBJ_DATA * obj, CHAR_DATA * ch, CHAR_DATA * victim, int dam, int
    if (critical)
       dam += (dam * get_spell_crit_mult(ch) )/100;
 
-   dam += (get_curr_int(ch)-13) * 5 / 100;
+   dam += dam * (get_curr_int(ch)-get_curr_wis(victim)) * 5 / 100;
 
    if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
    {

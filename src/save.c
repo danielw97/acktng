@@ -267,6 +267,7 @@ void fwrite_char( CHAR_DATA * ch, FILE * fp )
    fprintf( fp, "Remort       " );
    for( cnt = 0; cnt < MAX_REMORT; cnt++ )
       fprintf( fp, "%2d ", ch->remort[cnt] );
+   fprintf( fp, "\n" );
    fprintf( fp, "Adept       " );
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
       fprintf( fp, "%2d ", ch->adept[cnt] );

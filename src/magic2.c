@@ -1359,18 +1359,30 @@ bool spell_mind_bolt( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * ob
    int foo;
    int dam;
 
-
    cnt = ( level >= 12 ) + ( level >= 30 ) + ( level >= 60 ) + ( ch->level >= 75 );
    for( foo = 0; foo < cnt; foo++ )
    {
-      if( number_range( 0, 99 ) < 30 )
+      if (number_percent() < 30)
          continue;
-      dam = number_range( 12, 30 );
+
+      int element;
+
+      if (cnt > 5)
+         element = SIXTH_DIVISOR | REALM_MIND;
+      else if (cnt > 4)
+         element = FIFTH_DIVISOR | REALM_MIND;
+      else if (cnt > 3)
+         element = FOURTH_DIVISOR | REALM_MIND;
+      else if (cnt > 2)
+         element = THIRD_DIVISOR | REALM_MIND;
+      else if (cnt > 1)
+         element = SECOND_DIVISOR | REALM_MIND;
+
+      dam = number_range( 12, 30 )  + (ch->lvl[CLASS_PSI]*5/4);
       if( saves_spell( level, victim ) )
          dam /= 2;
 
-      sp_damage( obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE );   /* -1 = no dam message */
-
+      sp_damage( obj, ch, victim, dam, element, sn, TRUE );
    }
    return TRUE;
 }

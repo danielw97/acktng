@@ -45,26 +45,31 @@ void do_spell_heal args( ( CHAR_DATA *ch, CHAR_DATA *victim, int sn ) );
 int mana_cost( CHAR_DATA * ch, int sn );
 
 
-#define REALM_NONE    	  BIT_0
-#define REALM_FIRE		    BIT_1
-#define REALM_SHOCK		    BIT_2
-#define REALM_LIGHT		    BIT_3
-#define REALM_GAS		      BIT_4
-#define REALM_POISON	    BIT_5
-#define REALM_COLD		    BIT_6
-#define REALM_SOUND		    BIT_7
-#define REALM_ACID		    BIT_8
-#define REALM_DRAIN       BIT_9
-#define REALM_IMPACT      BIT_10
-#define REALM_MIND        BIT_11
-#define REALM_HOLY        BIT_12
-#define REALM_EARTH       BIT_13
-#define REALM_WATER       BIT_14
+#define REALM_NONE    	     BIT_0
+#define REALM_FIRE           BIT_1
+#define REALM_SHOCK          BIT_2
+#define REALM_LIGHT          BIT_3
+#define REALM_GAS            BIT_4
+#define REALM_POISON	     BIT_5
+#define REALM_COLD           BIT_6
+#define REALM_SOUND          BIT_7
+#define REALM_ACID           BIT_8
+#define REALM_DRAIN          BIT_9
+#define REALM_IMPACT         BIT_10
+#define REALM_MIND           BIT_11
+#define REALM_HOLY           BIT_12
+#define REALM_EARTH          BIT_13
+#define REALM_WATER          BIT_14
 #define REALM_NEGATIVE       BIT_15
 #define REALM_POSITIVE       BIT_16
 #define REALM_PHYSICAL       BIT_17
-#define NO_REFLECT        BIT_30
-#define NO_ABSORB          BIT_31
+#define SECOND_DIVISOR       BIT_25
+#define THIRD_DIVISOR        BIT_26
+#define FOURTH_DIVISOR       BIT_27
+#define FIFTH_DIVISOR        BIT_28
+#define SIXTH_DIVISOR        BIT_29
+#define NO_REFLECT           BIT_30
+#define NO_ABSORB            BIT_31
 
 
 #define RE_NONE    	  0

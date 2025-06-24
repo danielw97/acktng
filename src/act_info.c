@@ -174,17 +174,14 @@ void do_rhelp( CHAR_DATA * ch, char *argument )
    sprintf(buf, "RHELP for race %s\r\n", race_table[i].race_title);
    strcpy(sendBuf, buf);
 
-   sprintf(buf, "Class Order: %s %s %s %s %s %s\r\n", class_table[race_table[i].limit[0]].class_name,
-      class_table[race_table[i].limit[1]].class_name, class_table[race_table[i].limit[2]].class_name,
-      class_table[race_table[i].limit[3]].class_name, class_table[race_table[i].limit[4]].class_name,
-      class_table[race_table[i].limit[5]].class_name);
+   sprintf(buf, "Class Order: %s\r\n", class_order(i));
    strcat(sendBuf, buf);
 
    sprintf(buf, "Base Attributes: Str %d Int %d Wis %d Dex %d Con %d\r\n", race_table[i].race_str, race_table[i].race_int,
       race_table[i].race_wis, race_table[i].race_dex, race_table[i].race_con);
    strcat(sendBuf, buf);
 
-   sprintf(buf, "Racial Skills: %s\r\n", race_table[i].skill1);
+   sprintf(buf, "Racial Skills: %s\r\n", race_table[i].skill);
    strcat(sendBuf, buf);
 
    strcat(sendBuf, "Race Specials:");
@@ -786,9 +783,9 @@ void show_char_to_char_0( CHAR_DATA * victim, CHAR_DATA * ch )
 
    if( ( IS_AFFECTED( victim, AFF_CLOAK_FLAMING ) )
        || ( IS_AFFECTED( victim, AFF_CLOAK_ADEPT ) )
-       || ( IS_AFFECTED( victim, AFF_CLOAK_REGEN ) )
        || ( IS_AFFECTED( victim, AFF_CLOAK_ABSORPTION ) )
-       || ( IS_AFFECTED( victim, AFF_CLOAK_REFLECTION ) ) || ( is_affected( victim, skill_lookup( "cloak:misery" ) ) ) )
+       || ( IS_AFFECTED( victim, AFF_CLOAK_REFLECTION ) ) 
+       || ( is_affected( victim, skill_lookup( "cloak:misery" ) ) ) )
    {
       safe_strcat( MAX_STRING_LENGTH, buf, "  @@NCLOAK:" );
       if( IS_AFFECTED( victim, AFF_CLOAK_FLAMING ) )
@@ -800,8 +797,6 @@ void show_char_to_char_0( CHAR_DATA * victim, CHAR_DATA * ch )
 
       if( IS_AFFECTED( victim, AFF_CLOAK_ADEPT ) )
          safe_strcat( MAX_STRING_LENGTH, buf, " @@WADEPT@@N" );
-      if( IS_AFFECTED( victim, AFF_CLOAK_REGEN ) )
-         safe_strcat( MAX_STRING_LENGTH, buf, " @@rREGEN@@N" );
       if( is_affected( victim, skill_lookup( "cloak:misery" ) ) )
          safe_strcat( MSL, buf, " @@RMISERY@@N" );
       safe_strcat( MAX_STRING_LENGTH, buf, "\n\r" );
@@ -2538,15 +2533,15 @@ void do_who( CHAR_DATA * ch, char *argument )
                   if( wch->remort[cnt + MAX_CLASS] > 0)
                   {
                      if (wch->remort[cnt] == 100)
-                       sprintf( buf4, " @@d *@@N", wch->remort[cnt] );
+                       sprintf( buf4, " @@d *@@N" );
                      else
-                       sprintf( buf4, " @@d%2d@@N", wch->remort[cnt] );
+                       sprintf( buf4, " @@d%2d@@N", wch->remort[cnt+MAX_CLASS] );
 
                   }
                   else if( wch->remort[cnt] > 0 )
                   {
                      if (wch->remort[cnt] == 100)
-		       sprintf( buf4, " @@m *@@N", wch->remort[cnt] );
+		       sprintf( buf4, " @@m *@@N" );
                      else
                        sprintf( buf4, " @@m%2d@@N", wch->remort[cnt] );
 
@@ -3265,216 +3260,6 @@ void do_report( CHAR_DATA * ch, char *argument )
    return;
 }
 
-
-
-void do_practice( CHAR_DATA * ch, char *argument )
-{
-   char buf[MAX_STRING_LENGTH];
-   char buf1[MAX_STRING_LENGTH];
-   CHAR_DATA *mob;
-   int cnt;
-   int sn;
-   int ack;
-   int class;
-
-   /*
-    * Now need to check through ch->lvl[] to see if player's level in
-    * * the required class is enough for him/her to be able to prac the
-    * * skill/spell.  Eg if char is cle:10 and war:50, we don't want the
-    * * player to be getting level 50 cleric spells, which would happen
-    * * if ch->class was used here! -S-
-    */
-   buf[0] = '\0';
-   buf1[0] = '\0';
-
-   if( IS_NPC( ch ) )
-      return;
-
-   buf1[0] = '\0';
-
-   if( ch->level < 3 )
-   {
-      send_to_char( "You must be third level to practice.  Go train instead!\n\r", ch );
-      return;
-   }
-   /*
-    * moved check for mob here. -S- 
-    */
-
-   for( mob = ch->in_room->first_person; mob != NULL; mob = mob->next_in_room )
-   {
-      if( IS_NPC( mob ) && IS_SET( mob->act, ACT_PRACTICE ) )
-         break;
-   }
-
-
-   if( argument[0] == '\0' )
-   {
-      int col;
-      bool ok;
-      col = 0;
-
-      for( sn = 0; sn < MAX_SKILL; sn++ )
-      {
-         ok = FALSE;
-
-         if( skill_table[sn].name == NULL )
-            break;
-
-
-         /*
-          * Check ch->lvl[] 
-          */
-         for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-            if( ( ( ( ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == MORTAL ) )
-                  || ( ( ch->remort[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == REMORT ) ) )
-                && ( skill_table[sn].flag2 != VAMP ) && ( skill_table[sn].flag2 != WOLF ) )
-               ok = TRUE;
-
-         if( ok || ch->pcdata->learned[sn] != 0 )
-         {
-            if( ch->pcdata->learned[sn] == 0 && mob == NULL )
-            {
-               /*
-                * Not in prac room.  Only show what has been learnt 
-                */
-               continue;
-            }
-            if( ch->pcdata->learned[sn] > 0 )
-            {
-               sprintf( buf, "@@W%16s-@@y%-7s@@g  ", skill_table[sn].name, learnt_name( ch->pcdata->learned[sn] ) );
-
-               safe_strcat( MAX_STRING_LENGTH, buf1, buf );
-               if( ++col % 3 == 0 )
-                  safe_strcat( MAX_STRING_LENGTH, buf1, "\n\r" );
-            }
-         }
-      }
-
-      if( col % 3 != 0 )
-         safe_strcat( MAX_STRING_LENGTH, buf1, "\n\r" );
-
-      sprintf( buf, "You have %d practice sessions left.\n\r", ch->practice );
-      safe_strcat( MAX_STRING_LENGTH, buf1, buf );
-      send_to_char( buf1, ch );
-   }
-   else
-   {
-      int adept;
-      bool ok;
-
-      if( !IS_AWAKE( ch ) )
-      {
-         send_to_char( "In your dreams, or what?\n\r", ch );
-         return;
-      }
-      for( mob = ch->in_room->first_person; mob != NULL; mob = mob->next_in_room )
-      {
-         if( IS_NPC( mob ) && IS_SET( mob->act, ACT_PRACTICE ) )
-            break;
-      }
-
-      if( mob == NULL )
-      {
-         send_to_char( "You can't do that here.\n\r", ch );
-         return;
-      }
-
-      if( ch->practice <= 0 )
-      {
-         send_to_char( "You have no practice sessions left.\n\r", ch );
-         return;
-      }
-
-
-
-      if( ( sn = skill_lookup( argument ) ) < 0 )
-      {
-         send_to_char( "You can't practice that.\n\r", ch );
-         return;
-      }
-      class = 0;
-      ack = -1;
-      ok = FALSE;
-
-
-
-      if( ( skill_table[sn].flag2 == VAMP ) || ( skill_table[sn].flag2 == WOLF ) )
-      {
-         send_to_char( "You can't practice that.\n\r", ch );
-         return;
-      }
-      if( ( skill_table[sn].flag1 == ADEPT ) && ( ch->adept_level >= skill_table[sn].skill_level[0] ) )
-      {
-         class = 0;
-         ok = TRUE;
-      }
-      else
-      {
-         for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         {
-            if( ( ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == MORTAL ) )
-            {
-               if( ch->lvl[cnt] > ack )
-               {
-                  ack = ch->lvl[cnt];
-                  class = cnt;
-               }
-
-               ok = TRUE;
-            }
-
-            else if( ( ch->remort[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].flag1 == REMORT ) )
-            {
-               if( ch->remort[cnt] > ack )
-               {
-                  ack = ch->remort[cnt];
-                  class = cnt;
-               }
-               ok = TRUE;
-            }
-         }
-      }
-      if( !ok )
-      {
-         send_to_char( "You can't practice that.\n\r", ch );
-         return;
-      }
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         if( ch->pcdata->order[cnt] == class )
-            break;
-
-      adept = IS_NPC( ch ) ? 100 : ( 90 - ( cnt * 4 ) );
-      if( skill_table[sn].flag1 == ADEPT )
-         adept = 95;
-
-      if( ch->pcdata->learned[sn] >= adept )
-      {
-         sprintf( buf, "You are already know %s as well as is currently possible.\n\r", skill_table[sn].name );
-         send_to_char( buf, ch );
-      }
-      else
-      {
-         ch->practice--;
-         ch->pcdata->learned[sn] += int_app[get_curr_int( ch )].learn;
-         if( ch->pcdata->learned[sn] < adept )
-         {
-            act( "You practice $T.", ch, NULL, skill_table[sn].name, TO_CHAR );
-            act( "$n practices $T.", ch, NULL, skill_table[sn].name, TO_ROOM );
-         }
-         else
-         {
-            ch->pcdata->learned[sn] = adept;
-            act( "You are now a master of $T.", ch, NULL, skill_table[sn].name, TO_CHAR );
-            act( "$n is now a master of $T.", ch, NULL, skill_table[sn].name, TO_ROOM );
-         }
-      }
-   }
-   return;
-}
-
-
-
 /*
  * 'Wimpy' originally by Dionysos.
  */
@@ -3514,8 +3299,6 @@ void do_wimpy( CHAR_DATA * ch, char *argument )
    send_to_char( buf, ch );
    return;
 }
-
-
 
 void do_password( CHAR_DATA * ch, char *argument )
 {
@@ -4254,7 +4037,7 @@ void do_race_list( CHAR_DATA * ch, char *argument )
          sprintf( buf, "   %3d   %5d    %5s     %8s %2d %s %s\n\r",
                   iRace, race_table[iRace].recall,
                   race_table[iRace].race_name, race_table[iRace].race_title,
-                  race_table[iRace].classes, race_table[iRace].comment,
+                  race_table[iRace].classes, class_order(iRace),
                   ( race_table[iRace].player_allowed == TRUE ? "@@aPlayer@@N" : "@@eNPC ONLY@@N" ) );
          send_to_char( buf, ch );
       }
@@ -4942,6 +4725,8 @@ void do_gain( CHAR_DATA * ch, char *argument )
    int cnt;
    int subpop;
    bool any;
+   bool found = FALSE;
+   bool is_adept = FALSE;
    int c;   /* The class to gain in */
    int numclasses;   /* Current number of classes person has */
    int a;   /* Looping var */
@@ -4957,9 +4742,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
    bool allow_adept = FALSE;
 
    buf[0] = '\0';
-
-
-
 
    if( IS_NPC( ch ) )
    {
@@ -4981,37 +4763,38 @@ void do_gain( CHAR_DATA * ch, char *argument )
       send_to_char( "You can't do that here.\n\r", ch );
       return;
    }
+
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
       if( ch->lvl[cnt] == MAX_MORTAL )
          morts_at_max++;
-      if( ch->remort[cnt] == MAX_MORTAL )
-         remorts_at_max++;
    }
    for( cnt = 0; cnt < MAX_REMORT; cnt++ )
    {
       if( ch->remort[cnt] > -1 )
          num_remorts++;
+      if( ch->remort[cnt] == MAX_MORTAL)
+         remorts_at_max++;
    }
-/* first case.. remort  */
-   if( ( ( morts_at_max > 0 )
-         && ( is_remort( ch ) == FALSE ) )
-       || ( ( morts_at_max == MAX_PC_CLASS ) && ( remorts_at_max == 1 ) && ( num_remorts == 1 ) ) )
+   for (cnt = 0; cnt < MAX_CLASS; cnt++)
    {
-      allow_remort = TRUE;
+      if (ch->adept[cnt] > 0)
+         is_adept = TRUE;
    }
 
-/* second case..can adept */
+/* first case.. remort  */
+   if (morts_at_max > 0 && num_remorts == 0)
+      allow_remort = TRUE;
 
-   if( ( morts_at_max == 4 ) && ( remorts_at_max == 2 ) )
+/* Second case.. double remort */
+   if (morts_at_max == MAX_PC_CLASS && remorts_at_max == 1 && num_remorts == 1)
+      allow_remort = TRUE;
+
+/* third case..can adept */
+   if (remorts_at_max == 2 && !is_adept)
    {
       allow_adept == TRUE;
-
-      for(int i = 0; i < MAX_CLASS; i++)
-      {
-         if (ch->adept[i] > 0)
-            allow_adept = FALSE;
-      }
+      send_to_char("Adept allowed!\n\r",ch);
    }
 
    if( argument[0] == '\0' )
@@ -5043,7 +4826,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
          if( ch->remort[cnt] != -1 && ch->remort[cnt] < MAX_MORTAL )
          {
             any = TRUE;
-            cost = exp_to_level( ch, cnt, TRUE );  /* 5 means remort */
+            cost = exp_to_level( ch, cnt, TRUE );
             sprintf( buf, "%s : %d Exp.\n\r", remort_table[cnt].who_name, cost );
             send_to_char( buf, ch );
          }
@@ -5090,38 +4873,59 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
    any = FALSE;
    c = -1;
+
+   if (allow_adept)
+      send_to_char("Allowed to adept!\n\r", ch);
+   else
+      send_to_char("Adept denied!\n\r",ch);
+
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
       if( !str_cmp( class_table[cnt].who_name, argument ) )
       {
          any = TRUE;
          c = cnt;
+         found = TRUE;
       }
    }
 
    for( cnt = 0; cnt < MAX_REMORT; cnt++ )
    {
-      if( ( !str_cmp( remort_table[cnt].who_name, argument ) ) && ( ( ch->remort[cnt] > 0 ) || ( allow_remort ) ) && ch->lvl[cnt] == MAX_MORTAL)
+      if( !str_cmp( remort_table[cnt].who_name, argument ) )
       {
-         any = TRUE;
-         remort = TRUE;
-         c = cnt;
+         if ( ch->remort[cnt] > 0 ||allow_remort )
+         {
+            if (ch->lvl[cnt%MAX_CLASS] < MAX_MORTAL)
+            {
+               send_to_char("You require level 100 in the mortal class before you can remort in this class!\n\r",ch);
+               continue;
+            }
+
+            any = TRUE;
+            remort = TRUE;
+            c = cnt;
+         }
+         found = TRUE;
       }
    }
 
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
-      if( ( !str_cmp( adept_table[cnt].who_name, argument ) ) && ( ( ch->adept[cnt] > 0 ) || ( allow_adept ) ) )
+      if( ( !str_cmp( adept_table[cnt].who_name, argument ) ) )
       {
-         if (ch->remort[cnt] < 100 && ch->remort[cnt+MAX_CLASS] < 100)
+         if (ch->adept[cnt] > 0 || allow_adept )
          {
-            send_to_char("You need to be level 100 in the remortal class before you can adept in this class.\n\r", ch);
-            return;
-         }
+            if (ch->remort[cnt] < 100 && ch->remort[cnt+MAX_CLASS] < MAX_MORTAL)
+            {
+               send_to_char("You need to be level 100 in the remortal class before you can adept in this class!\n\r", ch);
+               return;
+            }
 
-         any = TRUE;
-         adept = TRUE;
-         c = cnt;
+            any = TRUE;
+            adept = TRUE;
+            c = cnt;
+         }
+         found = TRUE;
       }
    }
 
@@ -5144,9 +4948,15 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
    }
 
-   if( !any )
+   if ( !found )
    {
       send_to_char( "That's not a class!\n\r", ch );
+      return;
+   }
+
+   if ( !any )
+   {
+      send_to_char( "You are ineligible to level in this class.\n\r", ch);
       return;
    }
 
@@ -5159,7 +4969,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       vamp_cost = exp_to_level_vamp( ch->pcdata->vamp_level );
    else if( remort )
    {
-      if (ch->lvl[c] < 100)
+      if (ch->lvl[c%MAX_CLASS] < MAX_MORTAL)
       {
          send_to_char("You are not ready to remort in this class yet, it requires level 100 in the mortal.\n\r", ch);
          return;
@@ -5231,7 +5041,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       c = ADVANCE_WOLF;
       send_to_char( "@@NYour @@rTribe@@N increases your standing@@N!!!\n\r", ch );
       ch->pcdata->vamp_exp -= vamp_cost;
-      advance_level( ch, c, TRUE, remort );
+      advance_level( ch, c, TRUE, remort, FALSE );
       ch->pcdata->vamp_level += 1;
       do_save( ch, "" );
       return;
@@ -5248,7 +5058,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       c = ADVANCE_VAMP;
       send_to_char( "@@NYou gain more power in the ways of the @@dKindred@@N!!!\n\r", ch );
       ch->pcdata->vamp_exp -= vamp_cost;
-      advance_level( ch, c, TRUE, remort );
+      advance_level( ch, c, TRUE, remort, FALSE );
       ch->pcdata->vamp_level += 1;
       do_save( ch, "" );
       return;
@@ -5260,17 +5070,15 @@ void do_gain( CHAR_DATA * ch, char *argument )
    }
    if( ( adept ) && ( ch->adept[c] < MAX_ADEPT ) )
    {
-      c = ADVANCE_ADEPT;
       send_to_char( "@@WYou have reached another step on the stairway to Wisdom!!!@@N\n\r", ch );
       ch->exp -= cost;
-      advance_level( ch, c, TRUE, FALSE );
-      ch->adept[c] = UMAX( 1, ch->adept_level + 1 );
+      advance_level( ch, c, TRUE, FALSE, TRUE );
       sprintf( buf, "%s @@W advances in the way of the Adept!!\n\r", ch->name );
       info( buf, 1 );
       free_string( ch->pcdata->who_name );
       ch->pcdata->who_name = str_dup( get_adept_name( ch ) );
       do_save( ch, "" );
-      if( ch->adept_level == 1 )
+      if( ch->adept[c] == 1 )
          ch->exp /= 1000;
       return;
    }
@@ -5310,7 +5118,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
    ch->exp -= cost;
 
-   advance_level( ch, c, TRUE, remort );
+   advance_level( ch, c, TRUE, remort, FALSE );
    if( remort )
       ch->remort[c] = UMAX( 1, ch->remort[c] + 1 );
    else if (ch->lvl[c] < 1)

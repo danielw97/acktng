@@ -52,9 +52,6 @@ void affect_modify args( ( CHAR_DATA * ch, AFFECT_DATA * paf, bool fAdd ) );
  * Updated pointer referencing, curtesy of Spectrum, from Beyond the Veil
  *
  */
-
-
-
 struct obj_ref_type *obj_ref_list;
 
 void obj_reference( struct obj_ref_type *ref )
@@ -210,7 +207,6 @@ int get_age( CHAR_DATA * ch )
 
 long get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
 {
-    char buf[MAX_STRING_LENGTH];
     int base, i;
     bool double_remort = FALSE;
 
@@ -379,7 +375,7 @@ int get_curr_con( CHAR_DATA * ch )
 
    int cur = max + get_stat(ch, APPLY_CON);
 
-   return URANGE( 3, max + ch->pcdata->mod_con, max + 3);
+   return URANGE( 3, cur, max + 3);
 }
 
 int get_max_con( CHAR_DATA *ch )
@@ -571,7 +567,6 @@ int get_ac(CHAR_DATA *ch)
 
 int get_stat( CHAR_DATA *ch, int stat )
 {
-   int i;
    int stat_val = 0;
    OBJ_DATA *obj;
    AFFECT_DATA *paf;
@@ -603,18 +598,55 @@ int get_stat( CHAR_DATA *ch, int stat )
    return stat_val;
 }
 
+char *stat_to_string(int stat)
+{
+   if (stat == APPLY_CON)
+      return "Con";
+
+   if (stat == APPLY_STR)
+      return "Str";
+
+   if (stat == APPLY_WIS)
+      return "Wis";
+
+   if (stat == APPLY_INT)
+      return "Int";
+
+   if (stat == APPLY_DEX)
+      return "Dex";
+
+   return "null";
+}
+
+char *class_order(int race)
+{
+   static char buf[MSL];
+
+   sprintf(buf, "%s %s %s %s %s %s", class_table[race_table[race].limit[0]].who_name,
+      class_table[race_table[race].limit[1]].who_name, class_table[race_table[race].limit[2]].who_name,
+      class_table[race_table[race].limit[3]].who_name, class_table[race_table[race].limit[4]].who_name,
+      class_table[race_table[race].limit[5]].who_name);
+
+   return buf;
+}
+
 bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-   if (ch == NULL || victim || NULL)
+   CHAR_DATA *rch;
+
+   if (ch == NULL)
       return FALSE;
 
-   if (ch->in_room == NULL || victim->in_room == NULL)
+   if (victim == NULL)
       return FALSE;
 
-   if (ch->in_room->vnum != victim->in_room->vnum)
-      return FALSE;
+   for( rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room )
+   {
+      if( rch == victim )
+         return TRUE;
+   }
 
-   return TRUE;
+   return FALSE;
 }
 
 bool can_use_skill_message(CHAR_DATA *ch, int gsn)
@@ -700,8 +732,6 @@ int can_carry_n( CHAR_DATA * ch )
    return MAX_WEAR + 2 * get_curr_dex( ch ) / 2;
 }
 
-
-
 /*
  * Retrieve a character's carry capacity.
  */
@@ -715,14 +745,6 @@ int can_carry_w( CHAR_DATA * ch )
 
    return str_app[get_curr_str( ch )].carry;
 }
-
-int get_curr_spellpower( CHAR_DATA * ch )
-{
-   int spellpower = 0;
-
-
-}
-
 
 /*
  * Apply or remove an affect to a character.
@@ -1148,9 +1170,7 @@ bool is_affected( CHAR_DATA * ch, int sn )
 void affect_join( CHAR_DATA * ch, AFFECT_DATA * paf )
 {
    AFFECT_DATA *paf_old;
-   bool found;
 
-   found = FALSE;
    for( paf_old = ch->first_affect; paf_old != NULL; paf_old = paf_old->next )
    {
       if( ( paf_old->type == paf->type )
@@ -2879,18 +2899,7 @@ bool item_has_apply( CHAR_DATA * ch, int bit )
 */
 bool authorized( CHAR_DATA * ch, char *skllnm )
 {
-
-   char buf[MAX_STRING_LENGTH];
-
-//   if( ( !IS_NPC( ch ) && str_infix( skllnm, ch->pcdata->immskll ) ) || IS_NPC( ch ) )
-  // {
-    //  sprintf( buf, "Sorry, you are not authorized to use %s.\n\r", skllnm );
-//      send_to_char( buf, ch );
-  //    return FALSE;
-   //}
-
    return TRUE;
-
 }
 
 

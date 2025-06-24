@@ -97,38 +97,19 @@ const struct ansi_type ansi_table[MAX_ANSI] = {
 /*
  * Class table.
  */
-const struct class_type class_table[MAX_CLASS] = {
-   {
-    "Mag", "Mage", APPLY_INT, "Int", OBJ_VNUM_SCHOOL_DAGGER,
-    1107, 90, 18, 10, 1, 2, TRUE,
-    "faerie fire",
-    },
+const struct class_type class_table[MAX_CLASS] = 
+{
+   { "Mag", "Mage", APPLY_INT, 2, 5 },
 
-   {
-    "Cle", "Cleric", APPLY_WIS, "Wis", OBJ_VNUM_SCHOOL_MACE,
-    1105, 90, 18, 12, 2, 2, TRUE,
-    "bless"},
+   { "Cle", "Cleric", APPLY_WIS, 3, 4},
 
-   {
-    "Thi", "Thief", APPLY_DEX, "Dex", OBJ_VNUM_SCHOOL_DAGGER,
-    1106, 90, 18, 8, 1, 3, FALSE,
-    "steal"},
+   { "Thi", "Thief", APPLY_DEX, 6, 0},
 
-   {
-    "War", "Warrior", APPLY_STR, "Str", OBJ_VNUM_SCHOOL_SWORD,
-    1108, 90, 18, 6, 3, 4, FALSE,
-    "punch"},
+   { "War", "Warrior", APPLY_STR, 7, 0},
 
-   {
-    "Psi", "Psionicist", APPLY_INT, "Int", OBJ_VNUM_SCHOOL_SWORD,
-    1125, 90, 18, 10, 2, 3, TRUE,
-    "mind flail"},
+   { "Psi", "Psionicist", APPLY_INT, 3, 4},
 
-   {
-    "Pug", "Pugilist", APPLY_CON, "Cont", OBJ_VNUM_SCHOOL_DAGGER,
-    1108, 90, 18, 6, 3, 4, FALSE,
-    "punch"}
-
+   { "Pug", "Pugilist", APPLY_CON, 7, 0}
 };
 
 
@@ -137,121 +118,46 @@ const struct class_type class_table[MAX_CLASS] = {
 /* Table for remort classes.... same format as class_table 
  * Note that alot of stuff is not needed... 
  */
-const struct class_type remort_table[MAX_REMORT] = {
-   {
-    "Sor", "Sorcerer", APPLY_INT, "Int", 0,
-    /*
-     * guild room -> 
-     */ 0, 0, 0, 0, 2, 3, TRUE,
-    ""},
+const struct class_type remort_table[MAX_REMORT] = 
+{
+   {"Sor", "Sorcerer", APPLY_INT, 4, 10},
 
-   {
-    "Pal", "Paladin", APPLY_INT, "Int", 0,
-    /*
-     * guild room -> 
-     */ 0, 0, 0, 0, 2, 3, FALSE,
-    ""},
+   {"Pal", "Paladin", APPLY_STR, 8, 6},
 
-   {
-    "Ass", "Assassin", APPLY_DEX, "Dex", 0,
-    /*
-     * guild room -> 
-     */ 0, 0, 0, 0, 4, 4, FALSE,
-    ""},
+   {"Ass", "Assassin", APPLY_DEX, 12, 0},
 
-   {
-    "Kni", "Knight", APPLY_STR, "Str", 0,
-    /*
-     * guild room -> 
-     */ 0, 0, 0, 0, 2, 3, TRUE,
-    ""},
+   {"Kni", "Knight", APPLY_STR, 14, 0},
 
-   {
-    "Nec", "Necromancer", APPLY_INT, "Int", 0,
-    /*
-     * guild_room -> 
-     */ 0, 0, 0, 0, 2, 3, TRUE,
-    ""},
+   {"Nec", "Necromancer", APPLY_INT, 6, 8},
 
-   {
-    "Mon", "Monk", APPLY_CON, "Con", 0,
-    0, 0, 0, 0, 2, 3, TRUE,
-    ""},
+   {"Mon", "Monk", APPLY_CON, 14, 0},
 
-   {
-    "Wiz", "Wizard", APPLY_INT, "Int", 0,
-    /*
-     * guild room ->
-     */ 0, 0, 0, 0, 2, 3, TRUE,
-    ""},
+   {"Wiz", "Wizard", APPLY_INT, 4, 10},
 
-   {
-    "Pri", "Priest", APPLY_INT, "Int", 0,
-    /*
-     * guild room ->
-     */ 0, 0, 0, 0, 2, 3, FALSE,
-    ""},
+   {"Pri", "Priest", APPLY_INT, 6, 8},
 
-   {
-    "Wlk", "Warlock", APPLY_DEX, "Dex", 0,
-    /*
-     * guild room ->
-     */ 0, 0, 0, 0, 4, 4, FALSE,
-    ""},
+   {"Wlk", "Warlock", APPLY_DEX, 8, 6},
 
-   {
-    "Swo", "Swordsman", APPLY_STR, "Str", 0,
-    /*
-     * guild room ->
-     */ 0, 0, 0, 0, 2, 3, TRUE,
-    ""},
+   {"Swo", "Swordsman", APPLY_STR, 14, 0},
 
-   {
-    "Ego", "Egomancer", APPLY_INT, "Int", 0,
-    /*
-     * guild_room ->
-     */ 0, 0, 0, 0, 2, 3, TRUE,
-    ""},
+   {"Ego", "Egomancer", APPLY_INT, 6, 8},
 
-   {
-    "Bra", "Brawler", APPLY_CON, "Con", 0,
-    0, 0, 0, 0, 2, 3, TRUE,
-    ""}
-
+   {"Bra", "Brawler", APPLY_CON, 14, 0}
 };
 
-const struct class_type adept_table[MAX_CLASS] = {
-   {
-    "gma", "Grand Magi", APPLY_INT, "Int", OBJ_VNUM_SCHOOL_DAGGER,
-    1107, 90, 18, 10, 1, 2, TRUE,
-    "faerie fire",
-    },
+const struct class_type adept_table[MAX_CLASS] = 
+{
+   {"Gma", "Grand Magi", APPLY_INT, 8, 20,},
 
-   {
-    "Tem", "Templar", APPLY_WIS, "Wis", OBJ_VNUM_SCHOOL_MACE,
-    1105, 90, 18, 12, 2, 2, TRUE,
-    "bless"},
+   {"Tem", "Templar", APPLY_WIS, 16, 12},
 
-   {
-    "Nig", "Nightblade", APPLY_DEX, "Dex", OBJ_VNUM_SCHOOL_DAGGER,
-    1106, 90, 18, 8, 1, 3, FALSE,
-    "steal"},
+   {"Nig", "Nightblade", APPLY_DEX, 20, 8},
 
-   {
-    "Cru", "Crusader", APPLY_STR, "Str", OBJ_VNUM_SCHOOL_SWORD,
-    1108, 90, 18, 6, 3, 4, FALSE,
-    "punch"},
+   {"Cru", "Crusader", APPLY_STR, 28, 0},
 
-   {
-    "Kin", "Kinetimancer", APPLY_INT, "Int", OBJ_VNUM_SCHOOL_SWORD,
-    1125, 90, 18, 10, 2, 3, TRUE,
-    "mind flail"},
+   {"Kin", "Kinetimancer", APPLY_INT, 12, 16},
 
-   {
-    "Mar", "Martial Artist", APPLY_CON, "Cont", OBJ_VNUM_SCHOOL_DAGGER,
-    1108, 90, 18, 6, 3, 4, FALSE,
-    "punch"}
-
+   {"Mar", "Martial Artist", APPLY_CON, 28, 0}
 };
 
 const struct race_type race_table[MAX_RACE] = {
@@ -2131,21 +2037,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "@@NThe @@Wcloak@@N around your body fades.",
     "@@NThe @@Wcloak@@N around $n's body fades."},
 
-
-
-   {
-    REMORT, NORM,
-    "cloak:regeneration", {52, 40, 182, 182, 182, 62,
-                           52, 40, 182, 182, 182, 62},
-    spell_cloak_regen, TAR_CHAR_DEFENSIVE, POS_STANDING,
-    NULL, SLOT( 227 ), 500, 12,
-    "", "@@NThe @@rcloak@@N around your body fades.",
-    "@@NThe @@rcloak@@N around $n's body fades."},
-
-
-
-
-
 /*
  * Dragon breath                                
  */
@@ -2588,7 +2479,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "warcry", {182, 182, 10, 182, 182, 182},
+    "warcry", {182, 182, 182, 10, 182, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_warcry, SLOT( 0 ), 0, 24,
     "warcry", "!Warcry!",
@@ -2638,7 +2529,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
                    182, 182, 182, 182, 7, 182},
     spell_black_hand, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 601 ), 50, 12,
-    "black hand", "The hand dissolves from around your throat into nothingness.",
+    "Black Hand", "The hand dissolves from around your throat into nothingness.",
     ""},
    {
     REMORT, NORM,

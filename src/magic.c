@@ -47,24 +47,23 @@ void say_spell args( ( CHAR_DATA * ch, int sn ) );
 int mana_cost( CHAR_DATA * ch, int sn )
 {
    bool can_cast = can_use_skill(ch, sn);
-   int foo;
-   int cost, mincost;
+   int cost;
    int class = 0;
 
    if( ( !can_cast ) && ( IS_NPC( ch ) ) )
    {
       return 1000;
    }
-   else if( ( !can_cast ) && ( ( !IS_NPC( ch ) ) && ( !is_name( skill_table[sn].name, race_table[ch->race].skill1 ) ) ) )
+   else if( ( !can_cast ) && ( ( !IS_NPC( ch ) ) && ( !is_name( skill_table[sn].name, race_table[ch->race].skill ) ) ) )
       return 1000;
 
-   mincost = 1000;
+   cost = 1000;
 
    if( can_cast )
-      mincost = skill_table[sn].min_mana;
+      cost = skill_table[sn].min_mana;
 
    if( IS_VAMP( ch ) && ( skill_table[sn].flag2 == VAMP ) )
-      mincost = skill_table[sn].min_mana;
+      cost = skill_table[sn].min_mana;
    if( skill_table[sn].flag2 == WOLF )
    {
       if( IS_NPC( ch ) )
@@ -75,27 +74,28 @@ int mana_cost( CHAR_DATA * ch, int sn )
       }
    }
    if( IS_NPC( ch ) )
-      mincost /= 2;
-   if( ( !IS_NPC( ch ) ) && ( is_name( skill_table[sn].name, race_table[ch->race].skill1 ) ) )
-      mincost = 10;
+      cost /= 2;
    if( !IS_NPC( ch ) && ( skill_table[sn].flag2 == NORM ) )
    {
       if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_NO_MAGIC ) )
-         mincost *= 1.75;
+         cost *= 1.75;
       else if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_WEAK_MAGIC ) )
-         mincost *= 1.25;
+         cost *= 1.25;
       else if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_STRONG_MAGIC ) )
-         mincost *= .60;
+         cost *= .60;
    }
 
    if( ( skill_table[sn].flag2 == NORM ) && ( is_affected( ch, skill_lookup( "mystical focus" ) ) ) )
    {
-      mincost *= 2.5;
+      cost *= 2.5;
    }
 
-   mincost -= mincost * (get_curr_wis(ch) + get_curr_int(ch)) / 100;
+   cost -= cost * (get_curr_wis(ch) + get_curr_int(ch)) / 100;
 
-   return mincost;
+   if( ( !IS_NPC( ch ) ) && ( is_name( skill_table[sn].name, race_table[ch->race].skill ) ) )
+      cost = 10;
+
+   return cost;
 }
 
 /*
@@ -150,7 +150,6 @@ int slot_lookup( int slot )
    if( fBootDb )
    {
       bug( "Slot_lookup: bad slot %d.", slot );
-      abort(  );
    }
 
    return -1;
@@ -428,7 +427,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
 
    if( best == 80 )
       best = 79;
-   if( ( !IS_NPC( ch ) ) && ( is_name( skill_table[sn].name, race_table[ch->race].skill1 ) ) )
+   if( ( !IS_NPC( ch ) ) && ( is_name( skill_table[sn].name, race_table[ch->race].skill ) ) )
       best = 60;
 
    if( ( best == -1 )

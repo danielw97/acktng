@@ -1026,28 +1026,6 @@ bool spell_cloak_adept( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    return TRUE;
 }
 
-bool spell_cloak_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
-{
-
-   AFFECT_DATA af;
-
-
-   if( is_affected( ch, sn ) )
-      return FALSE;
-
-
-
-   af.type = sn;
-   af.duration = get_psuedo_level( ch ) / 10;
-   af.location = 0;
-   af.modifier = 0;
-   af.bitvector = AFF_CLOAK_REGEN;
-   affect_to_char( ch, &af );
-
-   return TRUE;
-}
-
-
 bool spell_room_dispel( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {
    ROOM_INDEX_DATA *room;

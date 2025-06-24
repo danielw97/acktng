@@ -1078,15 +1078,12 @@
 #define AFF_PASS_DOOR           1048576
 #define AFF_ANTI_MAGIC          2097152   /* -S- no magic hurts ch */
 #define AFF_BLASTED              BIT_23
-/* available 
-#define AFF_                     BIT_24
-*/
-#define AFF_CONFUSED           BIT_25
-#define AFF_VAMP_HEALING       BIT_26  /* DO NOT USE IN OLC! */
-#define AFF_HOLD			         BIT_27
-#define AFF_PARALYSIS	         BIT_28
-#define AFF_CLOAK_ADEPT		     BIT_29
-#define AFF_CLOAK_REGEN		     BIT_30
+#define AFF_REMORT_CURSE         BIT_24
+#define AFF_CONFUSED             BIT_25
+#define AFF_VAMP_HEALING         BIT_26  /* DO NOT USE IN OLC! */
+#define AFF_HOLD                 BIT_27
+#define AFF_PARALYSIS            BIT_28
+#define AFF_CLOAK_ADEPT          BIT_29
 
 /* VAMP_HEALING is used to show that a vamp is currently healing after death*/
 

@@ -1418,19 +1418,14 @@ char *affect_bit_name( int vector )
       safe_strcat( MAX_STRING_LENGTH, buf, " flying" );
    if( vector & AFF_PASS_DOOR )
       safe_strcat( MAX_STRING_LENGTH, buf, " pass_door" );
-
    if( vector & AFF_CLOAK_REFLECTION )
       safe_strcat( MAX_STRING_LENGTH, buf, " cloak:reflection" );
    if( vector & AFF_CLOAK_ABSORPTION )
       safe_strcat( MAX_STRING_LENGTH, buf, " cloak:absorption" );
-
-
+   if( vector & AFF_REMORT_CURSE )
+      safe_strcat( MAX_STRING_LENGTH, buf, " soul curse" );
    if( vector & AFF_CLOAK_ADEPT )
       safe_strcat( MAX_STRING_LENGTH, buf, " cloak:adept" );
-   if( vector & AFF_CLOAK_REGEN )
-      safe_strcat( MAX_STRING_LENGTH, buf, " cloak:regeneration" );
-
-
 
    return ( buf[0] != '\0' ) ? buf + 1 : "none";
 }

@@ -385,16 +385,8 @@ struct class_type
    char who_name[4]; /* Three-letter name for 'who'  */
    char *class_name; /* Full name                    */
    sh_int attr_prime;   /* Prime attribute              */
-   char *attr; /* Prime          */
-   sh_int weapon; /* First weapon                 */
-   sh_int guild;  /* Vnum of guild room           */
-   sh_int skill_adept;  /* Maximum skill level          */
-   sh_int thac0_00;  /* Thac0 for level  0           */
-   sh_int thac0_32;  /* Thac0 for level 32           */
-   sh_int hp_min; /* Min hp gained on leveling    */
-   sh_int hp_max; /* Max hp gained on leveling    */
-   bool fMana; /* Class gains mana on level    */
-   char *skill1;  /* Auto-learnt skill if any     */
+   sh_int hp_gain;
+   sh_int mana_gain; /* Class gains mana on level    */
 };
 
 
@@ -414,7 +406,7 @@ struct race_type
    int classes;   /* Number of classes for race   */
    sh_int limit[MAX_CLASS];   /* Max for each class */
    char *comment; /* comments shown for new players */
-   char *skill1;
+   char *skill;
    int strong_realms;
    int weak_realms;
    int resist_realms;
@@ -1469,6 +1461,9 @@ int get_dodge args( ( CHAR_DATA *ch ) );
 int get_block args( ( CHAR_DATA *ch ) );
 int get_hitroll args( (CHAR_DATA *ch) );
 int get_damroll args( (CHAR_DATA *ch) );
+int get_stat args( ( CHAR_DATA *ch, int stat ) );
+char *stat_to_string args( (int stat) );
+char *class_order args( (int race) );
 bool can_use_skill args( ( CHAR_DATA *ch, int gsn ) );
 bool can_use_skill_message args( ( CHAR_DATA *ch, int gsn ) );
 bool can_use_skill_by_name args( ( CHAR_DATA *ch, char *skill ) );
@@ -1646,7 +1641,7 @@ void trigger_handler args( ( CHAR_DATA * ch, OBJ_DATA * obj, int trigger ) );
           /*--------*\
 			 ) update.c# (
 			 \*--------*/
-void advance_level args( ( CHAR_DATA * ch, int class, bool show, bool remort ) );
+void advance_level args( ( CHAR_DATA * ch, int class, bool show, bool remort, bool adept ) );
 void gain_exp args( ( CHAR_DATA * ch, int gain ) );
 void gain_bloodlust args( ( CHAR_DATA * ch, int value ) );
 void gain_condition args( ( CHAR_DATA * ch, int iCond, int value ) );

@@ -1947,21 +1947,23 @@ void show_rmenu_to( DESCRIPTOR_DATA * d )
    strcat( menu, "Notes: a) Race determines abilities in different classes.\n\r" );
    strcat( menu, "       b) Each Race will soon have seperate hometowns.\n\r" );
    strcat( menu, "       c) Race determines your attributes.\n\r\n\r" );
-   strcat( menu, "Abr   Name             Class Abilities       Str Int Wis Dex Con\n\r" );
+   strcat( menu, "Abr   Name             Class Order           Str Int Wis Dex Con\n\r" );
    strcat( menu, "---   ----             ---------------       --- --- --- --- ---\n\r" );
 
    for( iRace = 0; iRace < MAX_RACE; iRace++ )
    {
       if( race_table[iRace].player_allowed == FALSE )
          continue;
-      sprintf( buf, "%3s   %-10s     %s", race_table[iRace].race_name,
-               race_table[iRace].race_title, race_table[iRace].comment );
+      sprintf( buf, "%3s   %-10s    %s", race_table[iRace].race_name,
+               race_table[iRace].race_title, class_order(iRace));
       strcat( menu, buf );
 
       sprintf( buf, "  %-2d  %-2d  %-2d  %-2d  %-2d\n\r",
                race_table[iRace].race_str,
                race_table[iRace].race_int,
-               race_table[iRace].race_wis, race_table[iRace].race_dex, race_table[iRace].race_con );
+               race_table[iRace].race_wis,
+               race_table[iRace].race_dex,
+               race_table[iRace].race_con );
       strcat( menu, buf );
    }
 
@@ -2006,7 +2008,9 @@ void show_cmenu_to( DESCRIPTOR_DATA * d )
 
    for( iClass = 0; iClass < MAX_CLASS; iClass++ )
    {
-      sprintf( buf, "%3s    %3s    %-10s\n\r", class_table[iClass].who_name, class_table[iClass].attr,
+      char stat[MSL];
+      strcpy(stat, stat_to_string( class_table[iClass].attr_prime) );
+      sprintf( buf, "%3s    %3s    %-10s\n\r", class_table[iClass].who_name, stat,
                class_table[iClass].class_name );
       strcat( menu, buf );
    }
@@ -2556,7 +2560,7 @@ void nanny( DESCRIPTOR_DATA * d, char *argument )
          {
             char race_skill[MSL];
             char *race_skill_list;
-            race_skill_list = race_table[ch->race].skill1;
+            race_skill_list = race_table[ch->race].skill;
             for( ;; )
             {
                race_skill_list = one_argument( race_skill_list, race_skill );
@@ -3422,7 +3426,7 @@ void do_hotreboot( CHAR_DATA * ch, char *argument )
 {
    FILE *fp;
    DESCRIPTOR_DATA *d, *d_next;
-   char buf[100], buf2[100], buf3[100];
+   char buf[MSL], buf2[MSL], buf3[MSL];
 
    fp = fopen( COPYOVER_FILE, "w" );
 

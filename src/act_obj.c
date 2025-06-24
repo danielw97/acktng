@@ -1684,7 +1684,7 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
       {
          if( ( IS_WEAPON( obj ) )
              && ( IS_WEAPON( get_eq_char( ch, WEAR_HOLD_HAND_R ) ) )
-             && ( ( IS_NPC( ch ) ) || ( ch->pcdata->learned[gsn_dualwield] < 10 ) ) )
+             && ( !can_use(ch, gsn_dualwield)  ) )
          {
             act( "You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR );
             return;
@@ -1699,7 +1699,7 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
       {
          if( ( IS_WEAPON( obj ) )
              && ( IS_WEAPON( get_eq_char( ch, WEAR_HOLD_HAND_L ) ) )
-             && ( ( IS_NPC( ch ) ) || ( ch->pcdata->learned[gsn_dualwield] < 10 ) ) )
+             && ( !can_use(ch, gsn_dualwield) ) )
          {
             act( "You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR );
             return;

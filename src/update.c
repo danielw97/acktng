@@ -173,9 +173,8 @@ void init_alarm_handler(  )
 /*
  * Advancement stuff.
  */
-void advance_level( CHAR_DATA * ch, int class, bool show, bool remort )
+void advance_level( CHAR_DATA * ch, int class, bool show, bool remort, bool adept )
 {
-
    /*
     * class used instead of ch->class.  -S- 
     */
@@ -233,32 +232,35 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort )
       return;
    }
 
-   if( ( class == 32 ) )
+   if ( adept )
    {
-
-      add_hp = con_app[get_curr_con( ch )].hitp * 10;
-      add_mana = get_curr_int( ch ) + get_curr_wis( ch );
+      add_hp = adept_table[class].hp_gain;
+      add_hp += get_curr_con(ch)/ 2;
+      add_mana = adept_table[class].mana_gain;
+      if (add_mana > 0)
+         add_mana += (get_curr_int(ch)+get_curr_wis(ch))/2;
    }
 
-   else if( remort )
+   else if ( remort )
    {
-      add_hp = con_app[get_curr_con( ch )].hitp + ((remort_table[class].hp_min+remort_table[class].hp_max)/2);
-      add_mana = remort_table[class].fMana ? (get_curr_int( ch ) + get_curr_wis( ch ))/2 : 0;
+      add_hp = remort_table[class].hp_gain;
+      add_hp += get_curr_con(ch)/4;
+      add_mana = remort_table[class].mana_gain;;
+      if (add_mana > 0)
+         add_mana += (get_curr_int(ch)+get_curr_wis(ch))/4;
 
    }
    else
    {
-      add_hp = con_app[get_curr_con( ch )].hitp + (( class_table[class].hp_min+class_table[class].hp_max)/2 );
-
-      add_mana = class_table[class].fMana ? (get_curr_int( ch ) + get_curr_wis( ch ))/6 : 0;
+      add_hp = class_table[class].hp_gain;
+      add_hp += get_curr_con(ch)/8;
+      add_mana = class_table[class].mana_gain;
+      if (add_mana > 0)
+         add_mana = (get_curr_int(ch)+get_curr_wis(ch))/8;
    }
    add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
-   add_prac = ( wis_app[get_curr_wis( ch )].practice / 2 ) + 1;
-
-
 
    add_hp = UMAX( 1, add_hp );
-
 
    add_mana = UMAX( 0, add_mana );
    add_move = UMAX( 7, add_move );
@@ -270,12 +272,11 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort )
    ch->max_hit += add_hp;
    ch->max_mana += add_mana;
    ch->max_move += add_move;
-   ch->practice += add_prac;
 
    if( !IS_NPC( ch ) )
       REMOVE_BIT( ch->act, PLR_BOUGHT_PET );
 
-   sprintf( buf, "You gain: %d Hit Points, %d Mana, %d Movement and %d pracs.\n\r", add_hp, add_mana, add_move, add_prac );
+   sprintf( buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana, add_move );
 
    if( show )
       send_to_char( buf, ch );
@@ -372,14 +373,6 @@ int hit_gain( CHAR_DATA * ch )
    }
 
    if( IS_SET( ch->in_room->affected_by, ROOM_BV_HEAL_REGEN ) )
-   {
-      if( gain < 0 )
-         gain *= -2;
-      else
-         gain *= 2;
-   }
-
-   if( IS_AFFECTED( ch, AFF_CLOAK_REGEN ) )
    {
       if( gain < 0 )
          gain *= -2;

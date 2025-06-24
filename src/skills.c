@@ -937,10 +937,7 @@ void do_warcry( CHAR_DATA * ch, char *argument )
  */
 {
    AFFECT_DATA af;
-   int best;
    int level;
-
-   best = -1;
 
    if( IS_NPC( ch ) )
       return;
@@ -959,7 +956,7 @@ void do_warcry( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( ch->pcdata->learned[gsn_warcry] == 0 )
+   if( can_use_skill(ch, gsn_warcry) )
    {
       send_to_char( "You don't know how to use this skill!\n\r", ch );
       return;
