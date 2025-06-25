@@ -2082,26 +2082,13 @@ void do_scout( CHAR_DATA * ch, char *argument )
    buf[0] = '\0';
    pre[0] = '\0';
 
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_scout] == 0 )
+   if( !can_use_skill(ch, gsn_scout) )
    {
       send_to_char( "You are not trained in this skill!\n\r", ch );
       return;
    }
 
-   if( !IS_NPC( ch ) )
-   {
-      /*
-       * depth is the number of rooms AWAY from your present location 
-       */
-      if( ch->pcdata->learned[gsn_scout] > 78 )
-         depth = 4;
-      else if( ch->pcdata->learned[gsn_scout] > 64 )
-         depth = 3;
-      else if( ch->pcdata->learned[gsn_scout] > 40 )
-         depth = 2;
-      else
-         depth = 1;
-   }
+   depth = 4;
 
    act( "$n looks all around for anyone else.", ch, NULL, NULL, TO_ROOM );
    send_to_char( "You look around.\n\r", ch );

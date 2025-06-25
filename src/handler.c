@@ -496,6 +496,9 @@ int get_damcap( CHAR_DATA *ch )
 {
    int damcap = BASE_DAMCAP;
 
+   if (is_adept(ch))
+      damcap += 500;
+
    return damcap;
 }
 
@@ -640,11 +643,14 @@ bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
    if (victim == NULL)
       return FALSE;
 
-   for( rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room )
-   {
-      if( rch == victim )
-         return TRUE;
-   }
+   if (ch->in_room == NULL)
+      return FALSE;
+
+   if (victim->in_room == NULL)
+      return FALSE;
+
+   if (ch->in_room->vnum == victim->in_room->vnum)
+      return TRUE;
 
    return FALSE;
 }

@@ -156,8 +156,6 @@ bool check_level_use( CHAR_DATA * ch, int level )
    return FALSE;
 }
 
-
-
 long exp_to_level_adept( CHAR_DATA * ch )
 {
    long exp;
@@ -170,8 +168,14 @@ long exp_to_level_adept( CHAR_DATA * ch )
          found = TRUE;
    }
 
+   if (!found)
+     return 6969;
+
    exp = ( 30000 + ( ch->adept[i] * 5000 ) );
-   exp *= ch->adept[i] / 2;
+
+   if (ch->adept[i] > 1)
+      exp *= ch->adept[i] / 2;
+
    return exp * 10;
 }
 
@@ -540,18 +544,31 @@ int skill_table_lookup( CHAR_DATA * ch, int sn, int return_type )
 
 bool is_remort( CHAR_DATA * ch )
 {
-   int cnt;
-
    if( IS_NPC( ch ) )
       return FALSE;
 
-   for( cnt = 0; cnt < MAX_REMORT; cnt++ )
-      if( ch->remort[cnt] != -1 )
+   for (int i = 0; i < MAX_REMORT; i++)
+   {
+      if( ch->remort[i] > 0 )
          return TRUE;
+   }
 
    return FALSE;
 }
 
+bool is_adept( CHAR_DATA *ch )
+{
+   if (IS_NPC(ch))
+      return FALSE;
+
+   for (int i = 0; i < MAX_CLASS; i++)
+   {
+      if (ch->adept[i] > 0)
+         return TRUE;
+   }
+
+   return FALSE;
+}
 
 int get_item_value( OBJ_DATA * obj )
 {

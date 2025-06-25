@@ -1603,7 +1603,6 @@ void do_score( CHAR_DATA * ch, char *argument )
 
    if( is_remort( ch ) )
    {
-
       for( cnt = 0; cnt < MAX_REMORT; cnt++ )
       {
          if( ch->remort[cnt] != -1 )
@@ -1617,15 +1616,22 @@ void do_score( CHAR_DATA * ch, char *argument )
       send_to_char( buf, ch );
    }
 
-   if( ch->adept_level > 0 )
+   buf2[0] = '\0';
+
+   if( is_adept( ch ) )
    {
-      sprintf( buf, "@@WADEPT@@N: %s ", get_adept_name( ch ) );
-      buf2[0] = '\0';
-      safe_strcat( MAX_STRING_LENGTH, buf2, buf );
+      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+      {
+         if( ch->adept[cnt] > 0 )
+         {
+            sprintf( buf, "@@d%s:@@W%2d ", adept_table[cnt].who_name, ch->adept[cnt] );
+            safe_strcat( MAX_STRING_LENGTH, buf2, buf );
+
+         }
+      }
       sprintf( buf, "@@c|%s @@c|\n\r", center_text( buf2, 62 ) );
       send_to_char( buf, ch );
    }
-
 
    sprintf( buf,
             "X========= @@WExps: @@y%9d @@c========= @@aQuest Points: @@y%4d @@c========X\n\r", ch->exp, ch->quest_points );
@@ -2076,7 +2082,7 @@ void do_who( CHAR_DATA * ch, char *argument )
    char buf2[MAX_STRING_LENGTH * 4];
    char buf3[MAX_STRING_LENGTH * 4];
    char buf4[MAX_STRING_LENGTH * 4];
-   char fgs[MAX_STRING_LENGTH * 4];
+   char fgs[MAX_STRING_LENGTH*4];
    char clan_job[MAX_STRING_LENGTH];
    int iClass;
    int iLevelLower;
@@ -2224,7 +2230,7 @@ void do_who( CHAR_DATA * ch, char *argument )
          if( ( list == SHOW_IMMORT && wch->level < LEVEL_HERO )
              || ( list == SHOW_REMORT && ( !is_remort( wch ) || wch->level >= LEVEL_HERO ) )
              || ( list == SHOW_MORTAL && ( is_remort( wch ) || wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_ADEPT && ( wch->adept_level < 1 ) )
+             || ( list == SHOW_ADEPT && ( is_adept( wch ) ) )
              || ( list == SHOW_ADEPT && ( wch->level >= LEVEL_HERO ) )
              || ( list == SHOW_REMORT && ( wch->adept_level > 0 ) ) )
             continue;
@@ -2232,7 +2238,7 @@ void do_who( CHAR_DATA * ch, char *argument )
          if( wch->level < iLevelLower
              || wch->level > iLevelUpper
              || ( fImmortalOnly && wch->level < LEVEL_HERO )
-             || ( fadeptonly && ( ( wch->adept_level < 1 ) || wch->level >= LEVEL_HERO ) )
+             || ( fadeptonly && ( ( is_adept(wch) ) || wch->level >= LEVEL_HERO ) )
              || ( fClassRestrict && !rgfClass[wch->class] )
              || ( fremortonly && ( !is_remort( wch ) || ( wch->level >= LEVEL_HERO ) || ( wch->adept_level > 0 ) ) ) )
             continue;
@@ -2243,9 +2249,9 @@ void do_who( CHAR_DATA * ch, char *argument )
             bool ch_adept = FALSE, ch_dremort = FALSE, ch_sremort = FALSE, victim_adept = FALSE,
                victim_dremort = FALSE, victim_sremort = FALSE, legal_group = FALSE;
 
-            if( ch->adept_level > 0 )
+            if( is_adept(ch) )
                ch_adept = TRUE;
-            if( wch->adept_level > 0 )
+            if( is_adept(wch) )
                victim_adept = TRUE;
 
             if( get_psuedo_level( ch ) > MAX_LEVEL + MAX_LEVEL/4 )
@@ -2376,7 +2382,7 @@ void do_who( CHAR_DATA * ch, char *argument )
          if( ( list == SHOW_IMMORT && wch->level < LEVEL_HERO )
              || ( list == SHOW_REMORT && ( !is_remort( wch ) || wch->level >= LEVEL_HERO ) )
              || ( list == SHOW_MORTAL && ( is_remort( wch ) || wch->level >= LEVEL_HERO ) )
-             || ( list == SHOW_ADEPT && ( wch->adept_level < 1 ) )
+             || ( list == SHOW_ADEPT && ( !is_adept(wch) ) )
              || ( list == SHOW_ADEPT && ( wch->level >= LEVEL_HERO ) )
              || ( list == SHOW_REMORT && ( wch->adept_level > 0 ) ) )
             continue;
@@ -2384,10 +2390,9 @@ void do_who( CHAR_DATA * ch, char *argument )
          if( wch->level < iLevelLower
              || wch->level > iLevelUpper
              || ( fImmortalOnly && wch->level < LEVEL_HERO )
-             || ( fadeptonly && ( ( wch->adept_level < 1 ) || wch->level >= LEVEL_HERO ) )
+             || ( fadeptonly && ( is_adept(wch) || wch->level >= LEVEL_HERO )
              || ( fClassRestrict && !rgfClass[wch->class] )
-             || ( fremortonly && ( !is_remort( wch ) || ( wch->level >= LEVEL_HERO ) || ( wch->adept_level > 0 ) ) ) )
-
+             || ( fremortonly && ( !is_remort( wch ) || ( wch->level >= LEVEL_HERO ) || ( wch->adept_level > 0 ) ) ) ) )
             continue;
 
 /* Multiple grouping restriction checks  Zen */
@@ -2396,9 +2401,9 @@ void do_who( CHAR_DATA * ch, char *argument )
             bool ch_adept = FALSE, ch_dremort = FALSE, ch_sremort = FALSE, victim_adept = FALSE,
                victim_dremort = FALSE, victim_sremort = FALSE, legal_group = FALSE;
 
-            if( ch->adept_level > 0 )
+            if( is_adept(ch) )
                ch_adept = TRUE;
-            if( wch->adept_level > 0 )
+            if( is_adept(wch) )
                victim_adept = TRUE;
 
             for(int i = 0; i < MAX_REMORT; i++)
@@ -4097,7 +4102,6 @@ void do_spells( CHAR_DATA * ch, char *argument )
    int sn;
    int col;
    int cnt;
-   bool ok;
    buf[0] = '\0';
 
    /*
@@ -4116,19 +4120,11 @@ void do_spells( CHAR_DATA * ch, char *argument )
    col = 0;
    for( sn = 0; sn < MAX_SKILL; sn++ )
    {
-      ok = FALSE;
-
       if( skill_table[sn].name == NULL )
          break;
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-         if( ( ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] ) && ( skill_table[sn].skill_level[cnt] < LEVEL_HERO ) )
-            ok = TRUE;
 
-      if( ch->pcdata->learned[sn] == 0 )
-         continue;
-
-      if( skill_table[sn].slot == 0 )
-         continue;
+      if (!can_use_skill(ch, sn))
+         return;
 
       /*
        * if ( skill_table[sn].skill_level[ch->class] > LEVEL_HERO ) 
@@ -4557,10 +4553,6 @@ void do_heal( CHAR_DATA * ch, char *argument )
    CHAR_DATA *mob;
    char buf[MAX_STRING_LENGTH];
    int mult;   /* Multiplier used to calculate costs. */
-   char costbuf[MSL];
-   char changebuf[MSL];
-   char *give;
-   char givebuf[MSL];
    buf[0] = '\0';
 
    /*
@@ -4793,16 +4785,16 @@ void do_gain( CHAR_DATA * ch, char *argument )
 /* third case..can adept */
    if (remorts_at_max == 2 && !is_adept)
    {
-      allow_adept == TRUE;
+      allow_adept = TRUE;
       send_to_char("Adept allowed!\n\r",ch);
    }
 
    if( argument[0] == '\0' )
    {
-
       /*
        * Display details... 
        */
+
       send_to_char( "You can gain levels in:\n\r", ch );
       any = FALSE;
       numclasses = 0;
@@ -4833,11 +4825,11 @@ void do_gain( CHAR_DATA * ch, char *argument )
       }
       for( cnt = 0; cnt < MAX_CLASS; cnt++)
       {
-         if( ch->adept[cnt] != -1 && ch->adept[cnt] < MAX_ADEPT )
+         if( ch->adept[cnt] > 0 && ch->adept[cnt] < MAX_ADEPT )
          {
             any = TRUE;
             cost = exp_to_level_adept( ch );
-            sprintf( buf, "@@W%s@@N: %d Exp.\n\r", class_table[cnt].who_name, cost );
+            sprintf( buf, "@@W%s@@N: %d Exp.\n\r", adept_table[cnt].who_name, cost );
             send_to_char( buf, ch );
          }
       }
@@ -4873,11 +4865,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
    any = FALSE;
    c = -1;
-
-   if (allow_adept)
-      send_to_char("Allowed to adept!\n\r", ch);
-   else
-      send_to_char("Adept denied!\n\r",ch);
 
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
@@ -5072,15 +5059,12 @@ void do_gain( CHAR_DATA * ch, char *argument )
    {
       send_to_char( "@@WYou have reached another step on the stairway to Wisdom!!!@@N\n\r", ch );
       ch->exp -= cost;
-      advance_level( ch, c, TRUE, FALSE, TRUE );
-      sprintf( buf, "%s @@W advances in the way of the Adept!!\n\r", ch->name );
+      sprintf( buf, "%s @@W advances in the way of the Adept, %s!!\n\r", ch->name, adept_table[c].class_name );
       info( buf, 1 );
       free_string( ch->pcdata->who_name );
       ch->pcdata->who_name = str_dup( get_adept_name( ch ) );
-      do_save( ch, "" );
       if( ch->adept[c] == 1 )
          ch->exp /= 1000;
-      return;
    }
    else if( adept )
    {
@@ -5091,8 +5075,8 @@ void do_gain( CHAR_DATA * ch, char *argument )
    }
 
 
-   if ( (remort && ch->remort[c] + 1 >= LEVEL_HERO) ||
-        (!remort && ch->lvl[c] + 1 >= LEVEL_HERO) )
+   if ( (!adept && remort && ch->remort[c] + 1 >= LEVEL_HERO) ||
+        (!adept && !remort && ch->lvl[c] + 1 >= LEVEL_HERO) )
    {
       send_to_char( "If you wish to advance this class, please ask an Immortal.\n\r", ch );
       return;
@@ -5102,7 +5086,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
     */
    if( remort )
       sprintf( buf, "You gain a %s level!\n\r", remort_table[c].class_name );
-   else
+   else if (!adept)
       sprintf( buf, "You gain a %s level!\n\r", class_table[c].class_name );
    send_to_char( buf, ch );
 
@@ -5112,19 +5096,13 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
    if( remort )
       sprintf( buf, "%s advances in the way of the %s.", ch->name, remort_table[c].class_name );
-   else
+   else if (!adept)
       sprintf( buf, "%s advances in the way of the %s.", ch->name, class_table[c].class_name );
    info( buf, 1 );
 
    ch->exp -= cost;
 
-   advance_level( ch, c, TRUE, remort, FALSE );
-   if( remort )
-      ch->remort[c] = UMAX( 1, ch->remort[c] + 1 );
-   else if (ch->lvl[c] < 1)
-      ch->lvl[c] = 1;
-   else
-      ch->lvl[c] += 1;  /* Incr. the right class */
+   advance_level( ch, c, TRUE, remort, adept );
 
    /*
     * Maintain ch->level as max level of the lot 
@@ -5507,7 +5485,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
    /*
     * Show details regarding cost to level each class, etc 
     */
-   bool any;
+   bool any = FALSE;
    char buf[MAX_STRING_LENGTH];
    int numclasses;
    int a;
@@ -5524,26 +5502,18 @@ void do_worth( CHAR_DATA * ch, char *argument )
    send_to_char( "Cost is shown first, followed by how much more exp you need.\n\r\n\r", ch );
    send_to_char( "CLASS NAME:        COST:    DIFFERENCE:\n\r\n\r", ch );
 
-   if( ch->adept_level > 0 )
-   {   
-      cost = exp_to_level_adept( ch );
-      for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+   for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+   {
+      if( ch->adept[cnt] > 0  && ch->adept[cnt] < MAX_ADEPT )
       {
-         if( ch->adept[cnt] != -1  && ch->adept[cnt] < 20 )
-         {
-            if (ch->pcdata->index[cnt] > -1)
-            {
-            any = TRUE;
-            cost = exp_to_level( ch, cnt, FALSE );
+         cost = exp_to_level_adept(ch);
+         any = TRUE;
 
-            sprintf( buf, "%-14s  %9d %9d.\n\r", adept_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
-            send_to_char( buf, ch );
-            }
-         }
+         sprintf( buf, "%-14s  %9d %9d.\n\r", adept_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
+         send_to_char( buf, ch );
       }
    }
 
-   any = FALSE;
    numclasses = 0;
    for( a = 0; a < MAX_CLASS; a++ )
       if( ch->lvl[a] >= 0 )

@@ -125,11 +125,11 @@ void violence_update( void )
       // Hots and dots
       for( paf = ch->first_affect; paf != NULL; paf = paf->next )
       {
-         if (paf->location == APPLY_HOT && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
+         if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
          {
             heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
          }
-         if (paf->location == APPLY_DOT && ch->hit > 0 && is_same_room(ch, paf->caster))
+         if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 && is_same_room(ch, paf->caster))
          {
             do_damage(paf->caster, ch, paf->modifier, paf->type, REALM_IMPACT, FALSE);
          }
@@ -516,6 +516,9 @@ void multi_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
             break;
       }
    }
+
+   if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_TAIL) && number_percent() < 25)
+      one_hit(ch, victim, TYPE_HIT+13);
 
    if( !IS_NPC( ch ) && ch->stance > 0 && ( ( IS_SET(stance_app[victim->stance].specials, STANCE_NINJA ) ) ) )
    {
