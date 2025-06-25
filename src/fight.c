@@ -684,14 +684,6 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    else if (item_has_apply(ch, ITEM_APPLY_ENHANCED) )
       dam += dam * 0.4;
 
-   dam += dam * ch->remort[CLASS_KNI]/100;
-   dam += dam * ch->remort[CLASS_SWO]/100;
-   dam += dam * ch->remort[CLASS_ASS]/100;
-   dam += dam * ch->remort[CLASS_MON]/100;
-   dam += dam * ch->remort[CLASS_BRA]/100;
-   dam += dam * ch->remort[CLASS_PAL]/100 * .75;
-   dam += dam * ch->remort[CLASS_WLK]/100 * .75;
-
    if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword) )
    {
       dam += dam * number_range(20,40)/100;
@@ -724,7 +716,7 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
       }
    }
 
-   dam = swing(ch, victim, dam, dt);
+   dam = calculate_damage(ch, victim, dam, dt, REALM_PHYSICAL, TRUE);
 
    bool stole_life = FALSE;
    if( ( wield ) && ( dam > 0 ) && ( ( IS_OBJ_STAT( wield, ITEM_LIFESTEALER ) ) ) )

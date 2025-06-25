@@ -445,7 +445,6 @@ struct affect_data
    sh_int duration;
    sh_int location;
    sh_int modifier;
-   int element;
    int bitvector;
    int element;
    CHAR_DATA *caster;
@@ -1352,7 +1351,9 @@ void act args( ( const char *format, CHAR_DATA * ch, const void *arg1, const voi
 void hang args( ( const char *str ) );
 
 /* Damage.c */
-void calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible);
+int calculate_damage args( (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible) );
+int do_damage args( (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical) );
+
 
  /*
   * db.c 

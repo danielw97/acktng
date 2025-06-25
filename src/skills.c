@@ -1,4 +1,5 @@
 #include "globals.h"
+#include "magic.h"
 
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 bool do_poison(CHAR_DATA *ch, char *argument, int gsn);
@@ -150,9 +151,9 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    }
 
    if (backstab)
-      swing(ch, victim, dam, gsn_backstab);
+      calculate_damage(ch, victim, dam, gsn_backstab, REALM_PHYSICAL, TRUE);
    else
-      swing(ch, victim, dam*0.8, gsn_circle);
+      calculate_damage(ch, victim, dam*0.8, gsn_circle, REALM_PHYSICAL, TRUE);
 
    if (backstab)
       WAIT_STATE(ch, skill_table[gsn_backstab].beats);
@@ -161,25 +162,25 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (is_affected( victim, skill_lookup( "poison:quinine" )))
    {
-      sprintf( actbuf, "$N screams as the quinine in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the quinine in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
-      sprintf( actbuf, "$N screams as the quinine in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the quinine in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the quinine in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      swing(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_quinine);
+      calculate_damage(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_quinine, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:quinine" ) );
    }
 
    if (is_affected( victim, skill_lookup( "poison:arsenic" )))
    {
-      sprintf( actbuf, "$N screams as the arsenic in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the arsenic in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
-      sprintf( actbuf, "$N screams as the arsenic in their veins is consumed!");
+      sprintf( actbuf, "$N screams as the arsenic in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the arsenic in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      swing(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_arsenic);
+      calculate_damage(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_arsenic, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:arsenic" ) );
    }
 }
@@ -235,7 +236,7 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    WAIT_STATE(ch, skill_table[gsn].beats);
 
    check_killer(ch, victim);
-   set_fighting(victim, ch);
+   set_fighting(victim, ch, TRUE);
 
    if (!can_hit_skill(ch, victim, gsn))
    {
@@ -821,7 +822,7 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       sprintf( actbuf, "You %s $N!!", skill_table[gsn].name, dam );
       act( actbuf, ch, NULL, victim, TO_CHAR );
 
-      swing(ch, victim, dam, gsn);
+      calculate_damage(ch, victim, dam, gsn, REALM_PHYSICAL, TRUE);
       combo(ch, victim, gsn);
    }
    else
