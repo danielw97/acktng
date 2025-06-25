@@ -239,6 +239,10 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort, bool adep
       add_mana = adept_table[class].mana_gain;
       if (add_mana > 0)
          add_mana += (get_curr_int(ch)+get_curr_wis(ch))/2;
+      if (ch->adept[class] < 1)
+         ch->adept[class] = 1;
+      else
+         ch->adept[class] += 1;
    }
 
    else if ( remort )
@@ -248,7 +252,10 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort, bool adep
       add_mana = remort_table[class].mana_gain;;
       if (add_mana > 0)
          add_mana += (get_curr_int(ch)+get_curr_wis(ch))/4;
-
+      if (ch->remort[class] < 0)
+         ch->remort[class] = 1;
+      else
+         ch->remort[class] += 1;
    }
    else
    {
@@ -257,6 +264,10 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort, bool adep
       add_mana = class_table[class].mana_gain;
       if (add_mana > 0)
          add_mana = (get_curr_int(ch)+get_curr_wis(ch))/8;
+      if (ch->lvl[class] < 0)
+         ch->lvl[class] = 1;
+      else
+         ch->lvl[class] += 1;
    }
    add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
 
@@ -592,13 +603,8 @@ void gain_bloodlust( CHAR_DATA * ch, int value )
    /*
     * Kinda like gain_condition, but handles vampires -S- 
     */
-
-   int condition;
-
    if( value == 0 )
       return;
-
-   condition = ch->pcdata->bloodlust;
 
    /*
     * in case vamp bites off more than he can chew ;)
@@ -2215,19 +2221,12 @@ bool check_re_equip( CHAR_DATA * ch )
    OBJ_DATA *obj2;
    OBJ_DATA *armor = NULL;
    OBJ_DATA *light = NULL;
-   int ac;
    int chance;
    bool pickup;
    bool ident;
-   int best;
    char buf[MAX_STRING_LENGTH];
    int objnum;
-
-
-
-   best = -1;
    pickup = TRUE;
-   ac = 0;
 
    chance = ( ch->fighting == NULL ? 35 : 60 );
    if( number_percent(  ) < chance )
@@ -2460,9 +2459,6 @@ void auction_update( void )
 
             if( good_seller )
             {
-               int bid;
-               char changebuf[MSL];
-               char *change;
                obj_to_char( auction_item, auction_owner );
             }
             else
@@ -2492,9 +2488,6 @@ void auction_update( void )
             sprintf( buf, "%s - CANCELLED.  Reserve price not matched.", auction_item->short_descr );
             if( good_seller )
             {
-               int bid;
-               char changebuf[MSL];
-               char *change;
                obj_to_char( auction_item, auction_owner );
             }
             else

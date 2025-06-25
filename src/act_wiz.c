@@ -4371,9 +4371,8 @@ void do_setclass( CHAR_DATA * ch, char *argument )
    {
       sprintf( buf, "You are now level %d in your %s class.\n\r", value, class_table[class].class_name );
       send_to_char( buf, victim );
-      for( iClass = victim->lvl[class]; iClass < value; iClass++ )
+      for( ; victim->lvl[class] < value; )
       {
-         victim->lvl[class] += 1;
          advance_level( victim, class, FALSE, remort, FALSE );
       }
    }
@@ -4381,9 +4380,8 @@ void do_setclass( CHAR_DATA * ch, char *argument )
    {
       sprintf( buf, "You are now level %d in your %s class.\n\r", value, remort_table[class].class_name );
       send_to_char( buf, victim );
-      for( iClass = victim->remort[class]; iClass < value; iClass++ )
+      for( ; victim->remort[class] < value; )
       {
-         victim->remort[class] += 1;
          advance_level( victim, class, FALSE, remort, FALSE );
       }
    }
@@ -4397,7 +4395,6 @@ void do_setclass( CHAR_DATA * ch, char *argument )
          advance_level( victim, class, FALSE, remort, FALSE );
       }
    }
-
 
    victim->exp = 0;
    victim->trust = 0;
