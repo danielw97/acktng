@@ -7,6 +7,242 @@ extern POL_DATA politics_data;
 extern CHAR_DATA *quest_target;
 extern CHAR_DATA *quest_mob;
 
+void calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible)
+{
+    bool critical = FALSE;
+    int crit_chance;
+
+    if (dam > 200 && (dt >= TYPE_HIT || dt < 0))
+    {
+        dam -= 200;
+        dam /= 2;
+        dam += 200;
+    }
+
+    if (dt == gsn_backstab)
+        dam *= 1.4;
+    if (dt == gsn_circle)
+        dam *= 1.1;
+    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
+        dam *= 1.2;
+    if (dam <= 0)
+        dam = 1;
+
+    int skin_mods;
+    if (!IS_NPC(victim))
+        skin_mods = race_table[victim->race].race_flags;
+    else
+        skin_mods = (victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags);
+
+    if (element == REALM_PHYSICAL && IS_SET(skin_mods, RACE_MOD_TOUGH_SKIN))
+        dam = dam * 0.9;
+
+    if (element == REALM_PHYSICAL && IS_SET(skin_mods, RACE_MOD_STONE_SKIN))
+        dam = dam * 0.8;
+
+    if (element == REALM_PHYSICAL && IS_SET(skin_mods, RACE_MOD_IRON_SKIN))
+        dam = dam * 0.7;
+
+    if (element == REALM_PHYSICAL && (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC)))
+        dam /= 2;
+
+    if (element == REALM_PHYSICAL && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(ch, ITEM_APPLY_PROT)) && IS_EVIL(ch))
+        dam -= dam / 4;
+
+    if (IS_SET(element, NO_REFLECT))
+    {
+        REMOVE_BIT(element, NO_REFLECT);
+        can_reflect = TRUE;
+    }
+    if (IS_SET(element, NO_ABSORB))
+    {
+        REMOVE_BIT(element, NO_ABSORB);
+        can_absorb = TRUE;
+    }
+    if (obj == NULL)
+    {
+        if ((can_reflect && element != ELEMENT_PHYSICAL) && (skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 70)))
+        {
+
+            act("@@N$n's @@lc@@el@@ro@@ya@@ak@@N glows brightly as $Nn's spell hits it, and the spell is reflected@@N!!", ch,
+                victim, NULL, TO_ROOM);
+            act("@@N$N's @@lc@@el@@ro@@ya@@ak@@N glows brightly, and reflects your spell back on you@@N!!", ch, NULL, victim,
+                TO_CHAR);
+            act("@@NYour @@lc@@el@@ro@@ya@@ak@@N glows brightly, and reflects the spell back on $N@@N!!!", victim, NULL, ch,
+                TO_CHAR);
+            sp_damage(obj, victim, ch, dam, type, sn, show_msg);
+            return FALSE;
+        }
+
+        else if ((can_reflect && element != ELEMENT_PHYSICAL) && (skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 55)))
+        {
+            int mana;
+            mana = mana_cost(ch, sn);
+            victim->mana = UMIN(victim->max_mana, victim->mana + mana);
+
+            act("@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim, NULL, ch, TO_ROOM);
+            act("@@N$N's @@lcloak@@N glows brightly, and absorbs your spell@@N!!", ch, NULL, victim, TO_CHAR);
+            act("@@NYour @@lcloak@@N glows brightly, and absorbs $N's spell@@N!!!", victim, NULL, ch, TO_CHAR);
+            return FALSE;
+        }
+
+        ch_strong = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].strong_realms : ch->strong_magic) : race_table[ch->race].strong_realms);
+        ch_resist = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].resist_realms : ch->resist) : race_table[ch->race].resist_realms);
+        ch_weak = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].weak_realms : ch->weak_magic) : race_table[ch->race].weak_realms);
+        ch_suscept = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].suscept_realms : ch->suscept) : race_table[ch->race].suscept_realms);
+        ch_race = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].race_flags : ch->race_mods) : race_table[ch->race].race_flags);
+
+
+        if (IS_SET(ch_strong, type))
+        {
+            dam_modifier += .35;
+        }
+        else if (IS_SET(ch_weak, type))
+        {
+            dam_modifier -= .35;
+        }
+
+        if (element != REALM_PHYSICAL && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
+        {
+            dam_modifier += .25;
+        }
+        else if (element != REALM_PHYSICAL && IS_SET(ch_race, RACE_MOD_WEAK_MAGIC))
+        {
+            dam_modifier -= .25;
+        }
+        else if (element != REALM_PHYSICAL && IS_SET(ch_race, RACE_MOD_NO_MAGIC))
+        {
+            dam_modifier -= .50;
+        }
+
+        if ((!IS_NPC(ch)) && (!IS_SET(element, REALM_MIND)) && element != REALM_PHYSICAL && )
+        {
+            if (ch->pcdata->learned[gsn_potency] > 0)
+            {
+                dam_modifier += (get_curr_int(ch) * ch->pcdata->learned[gsn_potency] / 5000);
+            }
+        }
+        if (element != REALM_PHYSICAL && is_affected(ch, skill_lookup("mystical focus")))
+        {
+            dam_modifier += .5;
+        }
+    } /* obj == NULL */
+    else if (obj->carried_by != NULL)
+    {
+        ch = obj->carried_by;
+    }
+    else
+    {
+        sprintf(log_buf, "Error, object %s casting spell, but not carried by anyone.", obj->short_descr);
+        monitor_chan(log_buf, MONITOR_DEBUG);
+        return FALSE;
+    }
+
+    /*
+     *  Next, the victim
+     *
+     */
+    vi_strong = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].strong_realms : victim->strong_magic) : race_table[victim->race].strong_realms);
+    vi_resist = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].resist_realms : victim->resist) : race_table[victim->race].resist_realms);
+    vi_weak = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].weak_realms : victim->weak_magic) : race_table[victim->race].weak_realms);
+    vi_suscept = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].suscept_realms : victim->suscept) : race_table[victim->race].suscept_realms);
+    vi_race = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].race_flags : victim->race_mods) : race_table[victim->race].race_flags);
+
+    if (IS_SET(vi_suscept, type))
+    {
+        dam_modifier += .45;
+    }
+    else if (IS_SET(vi_resist, type))
+    {
+        dam_modifier -= .45;
+    }
+
+    else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != REALM_PHYSICAL)
+    {
+        dam_modifier -= .25;
+    }
+
+    if ((IS_SET(type, REALM_MIND)) && (!HAS_MIND(victim)))
+        dam_modifier = 0.0;
+    
+    if (((IS_SET(type, REALM_IMPACT)) || (IS_SET(type, REALM_ACID)) || (IS_SET(type, REALM_GAS))) && (!HAS_BODY(victim)))
+        dam_modifier = 0.0;
+
+    if ((IS_SET(type, REALM_POISON)) && (IS_SET(vi_race, RACE_MOD_IMMUNE_POISON)))
+        dam_modifier = 0.0;
+
+    if ((IS_SET(type, REALM_DRAIN)) && (IS_UNDEAD(victim)))
+        dam_modifier = 0.0;
+
+    if (element != ELEMENT_PHYSICAL)
+    {
+        if (IS_SET(type, SIXTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 6;
+            REMOVE_BIT(type, SIXTH_DIVISOR);
+        }
+        else if (IS_SET(type, FIFTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 5;
+            REMOVE_BIT(type, FIFTH_DIVISOR);
+        }
+        else if (IS_SET(type, FOURTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 4;
+            REMOVE_BIT(type, FOURTH_DIVISOR);
+        }
+        else if (IS_SET(type, THIRD_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 3;
+            REMOVE_BIT(type, THIRD_DIVISOR);
+        }
+        else if (IS_SET(type, SECOND_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 2;
+            REMOVE_BIT(type, SECOND_DIVISOR);
+        }
+        else
+            dam += get_spellpower(ch);
+
+        if (stance_app[ch->stance].spell_mod != 0)
+            dam += dam * stance_app[ch->stance].spell_mod / 10;
+    }
+
+    if (element != REALM_PHYSICAL)
+       crit_chance = get_spell_crit(ch);
+    else
+       crit_chance = get_crit(ch);
+
+    if (crit_possible && number_range(0, 100) < crit_chance)
+        critical = TRUE;
+
+    if (critical)
+    {
+        if (element != REALM_PHYSICAL)
+            dam += dam * get_spell_crit_mult(ch) / 100;
+        else
+            dam += dam * get_crit_mult(ch) / 100;
+    }
+
+    dam = dam * dam_modifier;
+
+    if (element != REALM_PHYSICAL)
+        dam += dam * (get_curr_int(ch) - get_curr_wis(victim)) * 5 / 100;
+    else
+        dam -= dam * get_curr_con(victim) / 100;
+
+    if (element != REALM_PHYSICAL && (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT))
+    {
+        dam += dam * ch->remort[CLASS_SOR] / 100;
+        dam += dam * ch->remort[CLASS_WIZ] / 100;
+        dam += dam * ch->remort[CLASS_NEC] / 100;
+        dam += dam * ch->remort[CLASS_EGO] / 100;
+        dam += dam * ch->remort[CLASS_WLK] / 100 * .75;
+    }
+
+    do_damage(ch, victim, dam, dt, element, critical);
+}
+
 int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical)
 {
     OBJ_DATA *sil_weapon;
@@ -107,8 +343,10 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
      * Hurt the victim.
      * Inform the victim of his new state.
      */
-    if (dt != -1)
+    if (dt != -1 && element == REALM_PHYSICAL)
         dam_message(ch, victim, dam, dt, critical);
+    else if (dt != -1)
+        sp_dam_message( NULL, ch, victim, dam, element, dt, critical );
     victim->hit -= dam;
     if (!IS_NPC(victim))
         check_adrenaline(victim, dam);
@@ -188,7 +426,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
                 send_to_char("You sure are BLEEDING!\n\r", victim);
             break;
         }
-    } 
+    }
 
     if (!IS_AWAKE(victim))
         stop_fighting(victim, FALSE);
@@ -671,8 +909,8 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
         foo = sizeof(attack_table) / sizeof(attack_table[0]);
         if (dt < TYPE_HIT)
             dt = TYPE_HIT;
-
-        death_message(ch, victim, (dt - TYPE_HIT), foo);
+        if (element == REALM_PHYSICAL)
+            death_message(ch, victim, (dt - TYPE_HIT), foo);
     }
     return;
 }
@@ -1255,8 +1493,8 @@ void cloak_action(CHAR_DATA *ch, CHAR_DATA *victim, int dam)
         }
     }
 
-        /* for now, can only have one shield up, or alternatively, only the first
-       shield does anything		 */
+    /* for now, can only have one shield up, or alternatively, only the first
+   shield does anything		 */
 
     if ((victim->first_shield != NULL) && (ch != victim) && (dam > 0))
     {

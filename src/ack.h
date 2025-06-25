@@ -160,9 +160,6 @@ struct brand_data
    char *priority;
 };
 
-
-
-
 struct time_info_data
 {
    int hour;
@@ -219,7 +216,6 @@ struct mark_list_member
    MARK_DATA *mark;
 };
 
-
 struct council_data
 {
    char *council_name;
@@ -228,8 +224,6 @@ struct council_data
    bool quorum;
    sh_int council_time;
 };
-
-
 
 /*
  * Descriptor (channel) structure.
@@ -338,8 +332,6 @@ struct con_app_type
    sh_int shock;
 };
 
-
-
 /*
  * Help table types.
  */
@@ -353,12 +345,9 @@ struct help_data
    char *text;
 };
 
-
-
 /*
  * Shop types.
  */
-
 struct shop_data
 {
    bool is_free;  /* Ramias:for run-time checks of LINK/UNLINK */
@@ -372,11 +361,6 @@ struct shop_data
    sh_int close_hour;   /* First closing hour           */
 };
 
-
-
-
-
-
 /*
  * Per-class stuff.
  */
@@ -388,7 +372,6 @@ struct class_type
    sh_int hp_gain;
    sh_int mana_gain; /* Class gains mana on level    */
 };
-
 
 struct race_type
 {
@@ -427,14 +410,11 @@ struct clan_type
 
 };
 
-
 struct exp_type
 {
    long_int mob_base;   /* Base exp for mob of level x  */
    long_int exp_base[MAX_CLASS]; /* Cost for each class of level */
 };
-
-
 
 /*
  * Data structure for notes.
@@ -452,8 +432,6 @@ struct note_data
    time_t date_stamp;
 };
 
-
-
 /*
  * An affect.
  */
@@ -463,10 +441,12 @@ struct affect_data
    AFFECT_DATA *next;
    AFFECT_DATA *prev;
    sh_int type;
+   sh_int duration_type;
    sh_int duration;
    sh_int location;
    sh_int modifier;
    int bitvector;
+   int element;
    CHAR_DATA *caster;
    int level;
 };
@@ -486,8 +466,6 @@ struct room_affect_data
    CHAR_DATA *caster;
 
 };
-
-
 
 /*
  * A kill structure (indexed by level).
@@ -1371,6 +1349,9 @@ void send_to_char args( ( const char *txt, CHAR_DATA * ch ) );
 void show_string args( ( DESCRIPTOR_DATA * d, char *input ) );
 void act args( ( const char *format, CHAR_DATA * ch, const void *arg1, const void *arg2, int type ) );
 void hang args( ( const char *str ) );
+
+/* Damage.c */
+void calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible);
 
  /*
   * db.c 

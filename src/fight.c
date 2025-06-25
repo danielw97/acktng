@@ -683,7 +683,11 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
 
    dam += dam * ch->remort[CLASS_KNI]/100;
    dam += dam * ch->remort[CLASS_SWO]/100;
+   dam += dam * ch->remort[CLASS_ASS]/100;
+   dam += dam * ch->remort[CLASS_MON]/100;
+   dam += dam * ch->remort[CLASS_BRA]/100;
    dam += dam * ch->remort[CLASS_PAL]/100 * .75;
+   dam += dam * ch->remort[CLASS_WLK]/100 * .75;
 
    if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword) )
    {
@@ -725,64 +729,6 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
    if ( !stole_life && dualwield && dam > 0 && IS_OBJ_STAT(dualwield, ITEM_LIFESTEALER))
       do_lifesteal(ch, victim, dualwield, TRUE, dam);
 
-}
-
-int swing(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
-{
-   bool critical = FALSE;
-
-   if (dam > 200 && (dt >= TYPE_HIT || dt < 0))
-   {
-      dam -= 200;
-      dam /= 2;
-      dam += 200;
-   }
-
-   if (number_range(0,100) < get_crit( ch ))
-   {
-      int crit_mult = get_crit_mult(ch);
-
-      dam += dam * crit_mult / 100;
-      critical = TRUE;
-   }
-
-   if( dt == gsn_backstab )
-      dam *= 1.4;
-   if( dt == gsn_circle )
-      dam *= 1.1;
-   if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
-      dam *= 1.2;
-   if( dam <= 0 )
-      dam = 1;
-
-   dam -= dam * get_curr_con(ch) / 100;
-
-   int skin_mods;
-   if( !IS_NPC( victim ) )
-      skin_mods = race_table[victim->race].race_flags;
-   else
-      skin_mods = ( victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags );
-
-   if( IS_SET( skin_mods, RACE_MOD_TOUGH_SKIN ) )
-      dam = dam * 0.9;
-
-   if( IS_SET( skin_mods, RACE_MOD_STONE_SKIN ) )
-      dam = dam * 0.8;
-
-   if( IS_SET( skin_mods, RACE_MOD_IRON_SKIN ) )
-      dam = dam * 0.7;
-
-   if( IS_AFFECTED( victim, AFF_SANCTUARY ) || item_has_apply( victim, ITEM_APPLY_SANC ) )
-      dam /= 2;
-
-   if( ( IS_AFFECTED( victim, AFF_PROTECT ) || item_has_apply( ch, ITEM_APPLY_PROT ) ) && IS_EVIL( ch ) )
-      dam -= dam / 4;
-
-   int return_val = do_damage( ch, victim, dam, dt, REALM_PHYSICAL, critical );
-
-   tail_chain( );
-
-   return return_val;
 }
 
 /*
