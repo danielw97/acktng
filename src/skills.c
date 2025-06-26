@@ -183,6 +183,18 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       calculate_damage(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_arsenic, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:arsenic" ) );
    }
+
+   if (is_affected( victim, skill_lookup( "poison:nightshade" )))
+   {
+      sprintf( actbuf, "$N screams as the nightshade in $M veins is consumed!");
+      act( actbuf, ch, obj, victim, TO_NOTVICT );
+      sprintf( actbuf, "$N screams as the nightshade in $M veins is consumed!");
+      act( actbuf, ch, obj, victim, TO_CHAR );
+      sprintf( actbuf, "You scream as the nightshade in your veins is consumed!");
+      act( actbuf, ch, obj, victim, TO_VICT );
+      calculate_damage(ch, victim, number_range(dam * 1.25, dam*1.4), gsn_poison_nightshade, REALM_PHYSICAL, TRUE);
+      affect_strip( victim, skill_lookup( "poison:nightshade" ) );
+   }
 }
 
 void do_poison_quinine(CHAR_DATA *ch, char *argument)
@@ -194,6 +206,12 @@ void do_poison_arsenic(CHAR_DATA *ch, char *argument)
 {
    do_poison(ch, argument, gsn_poison_arsenic);
 }
+
+void do_poison_nightshade(CHAR_DATA *ch, char *argument)
+{
+   do_poison(ch, argument, gsn_poison_nightshade);
+}
+
 
 bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
 {

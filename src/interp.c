@@ -390,6 +390,8 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_ACTION, C_SHOW_SKILL},
    {"poison:quinine", do_poison_quinine, POS_FIGHTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_SKILL},
+   {"poison:nightshade", do_poison_nightshade, POS_FIGHTING, 0, LOG_NORMAL,
+    C_TYPE_ACTION, C_SHOW_SKILL},
    {"punch", do_punch, POS_FIGHTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_SKILL},
    {"rescue", do_rescue, POS_FIGHTING, 0, LOG_NORMAL,

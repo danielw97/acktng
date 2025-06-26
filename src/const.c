@@ -3240,6 +3240,15 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
+    "poison:nightshade", {182, 182, 66, 182, 182, 182,
+                       182, 182, 28, 182, 182, 182},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_poison_shade, SLOT( 0 ), 80, 4,
+    "Poison Arsenic", "@@N$nFeels much better!",
+    ""},
+
+   {
+    REMORT, NORM,
     "sonic blast", {182, 182, 182, 182, 182, 80,
                     182, 182, 182, 182, 182, 80},
     spell_sonic_blast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
