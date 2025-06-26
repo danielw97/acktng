@@ -234,6 +234,12 @@ long exp_to_level( CHAR_DATA * ch, int index )
    if (diff > 10)
       cost += cost * diff / 10;
 
+   if (diff > 20)
+      cost += cost * diff / 10;
+
+   if (diff > 30)
+      cost += cost * diff / 10;
+
    cost = cost * mult / 4.3;
 
    return ( cost );
