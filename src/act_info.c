@@ -5459,7 +5459,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
             break;
          }
       }
-      if(show && ch->lvl[cnt] < MAX_LEVEL )
+      if(show && ch->lvl[cnt] < MAX_MORTAL )
       {
          any = TRUE;
          cost = exp_to_level( ch, cnt );
@@ -5474,7 +5474,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
     */
    for( cnt = 0; cnt < MAX_REMORT; cnt++ )
    {
-      if( ch->remort[cnt] != -1 && ch->remort[cnt] < MAX_LEVEL )
+      if( ch->remort[cnt] != -1 && ch->remort[cnt] < MAX_MORTAL )
       {
          any = TRUE;
          cost = exp_to_level_remort( ch, cnt );
