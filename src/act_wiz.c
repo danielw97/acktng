@@ -4327,8 +4327,6 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       else
          victim->lvl[class] = 1;
       victim->exp = 0;
-
-      reset_gain_stats(victim);
    }
    else
    {
@@ -4340,19 +4338,13 @@ void do_setclass( CHAR_DATA * ch, char *argument )
    {
       sprintf( buf, "You are now level %d in your %s class.\n\r", value, class_table[class].class_name );
       send_to_char( buf, victim );
-      for( ; victim->lvl[class] < value; )
-      {
-         advance_level( victim, class, FALSE );
-      }
+      victim->lvl[class] = value;
    }
    if( remort )
    {
       sprintf( buf, "You are now level %d in your %s class.\n\r", value, remort_table[class].class_name );
       send_to_char( buf, victim );
-      for( ; victim->remort[class] < value; )
-      {
-         advance_level_remort( victim, class, FALSE);
-      }
+      victim->remort[class] = value;
    }
    if( vamp )
    {
@@ -4383,6 +4375,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       if( victim->remort[cnt] > victim->level )
          victim->level = victim->remort[cnt];
 
+   reset_gain_stats(victim);
 
    send_to_char( "Ok.\n\r", ch );
    return;
