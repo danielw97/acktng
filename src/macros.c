@@ -37,32 +37,32 @@
 
 void reset_gain_stats( CHAR_DATA * ch )
 {
-   sh_int index = 0;
-   sh_int index2 = 0;
-
    ch->pcdata->mana_from_gain = 100;
    ch->pcdata->hp_from_gain = 25;
    ch->pcdata->move_from_gain = 0;
 
-
-   for( index = 0; index < MAX_REMORT; index++ )
+   for(int i = 0; i < MAX_CLASS; i++)
    {
-      if(index < MAX_CLASS && ch->lvl[index] > 0 )
-         for( index2 = 1; index2 <= ch->lvl[index]; index2++ )
-         {
-            advance_level(ch, index, FALSE);
-         }
-      if( ch->remort[index] > 0 )
-         for( index2 = 1; index2 <= ch->remort[index]; index2++ )
-         {
-            advance_level_remort(ch, index, FALSE);
-         }
+      for(int j = 0; j < ch->lvl[i]; j++)
+      {
+         advance_level(ch, i, FALSE);
+      }
+   }
 
-      if(index < MAX_CLASS && ch->adept[index] > 0 )
-         for( index2 = 1; index2 <= ch->adept[index]; index2++ )
-         {
-            advance_level_adept(ch, index, FALSE);
-         }
+   for(int i = 0; i < MAX_REMORT; i++)
+   {
+      for(int j = 0; j < ch->remort[i]; j++)
+      {
+         advance_level_remort(ch, i, FALSE);
+      }
+   }
+
+   for(int i = 0; i < MAX_CLASS; i++)
+   {
+      for(int j = 0; j < ch->adept[i]; j++)
+      {
+         advance_level_adept(ch, i, FALSE);
+      }
    }
 }
 

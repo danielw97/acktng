@@ -4308,8 +4308,8 @@ void do_setclass( CHAR_DATA * ch, char *argument )
 
       if( vamp )
       {
-         if( value != -1 )
-            victim->pcdata->vamp_level = 1;
+         if( value < 1 )
+            victim->pcdata->vamp_level = value;
          else
             victim->pcdata->vamp_level = -1;
          victim->pcdata->vamp_exp = 0;
@@ -4318,14 +4318,14 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       else if( remort )
       {
          if( value != -1 )
-            victim->remort[class] = 1;
+            victim->remort[class] = value;
          else
             victim->remort[class] = -1;
       }
-      else if (value == -1)
+      else if (value < 1)
          victim->lvl[class] = -1;
       else
-         victim->lvl[class] = 1;
+         victim->lvl[class] = value;
       victim->exp = 0;
    }
    else
@@ -4367,13 +4367,6 @@ void do_setclass( CHAR_DATA * ch, char *argument )
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
       if( victim->lvl[cnt] > victim->level )
          victim->level = victim->lvl[cnt];
-
-   /*
-    * check for remort levels too... 
-    */
-   for( cnt = 0; cnt < MAX_CLASS; cnt++ )
-      if( victim->remort[cnt] > victim->level )
-         victim->level = victim->remort[cnt];
 
    reset_gain_stats(victim);
 
