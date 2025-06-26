@@ -4236,8 +4236,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       }
       else
       {
-         class = ADVANCE_ADEPT;
-         advance_level( victim, class, TRUE, FALSE, TRUE );
+         advance_level_adept( ch, class, TRUE );
          victim->adept_level = 1;
          sprintf( buf, " %s %s", victim->name, get_adept_name( victim ) );
          do_whoname( ch, buf );
@@ -4328,38 +4327,8 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       else
          victim->lvl[class] = 1;
       victim->exp = 0;
-      if( vamp )
-      {
-         victim->pcdata->bloodlust_max = 10;
-         victim->pcdata->vamp_pracs = 2;
-         victim->pcdata->vamp_skill_max = 2;
-         victim->pcdata->vamp_skill_num = 1;
-         victim->pcdata->bloodlust = 10;
-         for( sn = 0; sn < MAX_SKILL; sn++ )
-         {
-            victim->pcdata->learned[sn] = 0;
-         }
-         victim->pcdata->learned[skill_lookup( "feed" )] = 90;
-      }
 
-      if( remort )
-         reset_gain_stats(victim);
-
-      victim->max_mana = 100;
-      victim->max_move = 100;
-      for( sn = 0; sn < MAX_SKILL; sn++ )
-         victim->pcdata->learned[sn] = 0;
-      victim->practice = 0;
-      victim->hit = victim->max_hit;
-      victim->mana = victim->max_mana;
-      victim->move = victim->max_move;
-      if( vamp )
-      {
-         class = ADVANCE_VAMP;
-         advance_level( victim, class, FALSE, remort, FALSE );
-      }
-      else
-         advance_level( victim, class, FALSE, remort, FALSE );
+      reset_gain_stats(victim);
    }
    else
    {
@@ -4367,13 +4336,13 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       send_to_char( "**** OOOOHHHHHHHHHH  YYYYEEEESSS ****\n\r", victim );
    }
 
-   if( value != -1 && !remort && !( vamp ) )
+   if( value != -1 && !remort && !vamp )
    {
       sprintf( buf, "You are now level %d in your %s class.\n\r", value, class_table[class].class_name );
       send_to_char( buf, victim );
       for( ; victim->lvl[class] < value; )
       {
-         advance_level( victim, class, FALSE, remort, FALSE );
+         advance_level( victim, class, FALSE );
       }
    }
    if( remort )
@@ -4382,7 +4351,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       send_to_char( buf, victim );
       for( ; victim->remort[class] < value; )
       {
-         advance_level( victim, class, FALSE, remort, FALSE );
+         advance_level_remort( victim, class, FALSE);
       }
    }
    if( vamp )
@@ -4392,7 +4361,7 @@ void do_setclass( CHAR_DATA * ch, char *argument )
       {
          class = ADVANCE_VAMP;
          victim->pcdata->vamp_level += 1;
-         advance_level( victim, class, FALSE, remort, FALSE );
+         advance_level_vamp( victim );
       }
    }
 

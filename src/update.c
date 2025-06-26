@@ -339,7 +339,7 @@ void advance_level_vamp( CHAR_DATA * ch)
 }
 
 
-void advance_level_wolf( CHAR_DATA * ch, int class )
+void advance_level_wolf( CHAR_DATA * ch )
 {
    char buf[MAX_STRING_LENGTH];
    int add_prac;

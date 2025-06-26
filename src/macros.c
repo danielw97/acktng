@@ -50,18 +50,18 @@ void reset_gain_stats( CHAR_DATA * ch )
       if(index < MAX_CLASS && ch->lvl[index] > 0 )
          for( index2 = 1; index2 <= ch->lvl[index]; index2++ )
          {
-            advance_level(ch, index, FALSE, FALSE, FALSE);
+            advance_level(ch, index, FALSE);
          }
       if( ch->remort[index] > 0 )
          for( index2 = 1; index2 <= ch->remort[index]; index2++ )
          {
-            advance_level(ch, index, FALSE, TRUE, FALSE);
+            advance_level_remort(ch, index, FALSE);
          }
 
       if(index < MAX_CLASS && ch->adept[index] > 0 )
          for( index2 = 1; index2 <= ch->adept[index]; index2++ )
          {
-            advance_level(ch, index, FALSE, TRUE, TRUE);
+            advance_level_adept(ch, index, FALSE);
          }
    }
 }

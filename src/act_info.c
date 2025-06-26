@@ -5031,7 +5031,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       c = ADVANCE_WOLF;
       send_to_char( "@@NYour @@rTribe@@N increases your standing@@N!!!\n\r", ch );
       ch->pcdata->vamp_exp -= vamp_cost;
-      advance_level( ch, c, TRUE, remort, FALSE );
+      advance_level_wolf( ch );
       ch->pcdata->vamp_level += 1;
       do_save( ch, "" );
       return;
@@ -5048,7 +5048,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       c = ADVANCE_VAMP;
       send_to_char( "@@NYou gain more power in the ways of the @@dKindred@@N!!!\n\r", ch );
       ch->pcdata->vamp_exp -= vamp_cost;
-      advance_level( ch, c, TRUE, remort, FALSE );
+      advance_level_vamp( ch );
       ch->pcdata->vamp_level += 1;
       do_save( ch, "" );
       return;
@@ -5068,6 +5068,8 @@ void do_gain( CHAR_DATA * ch, char *argument )
       ch->pcdata->who_name = str_dup( get_adept_name( ch ) );
       if( ch->adept[c] == 1 )
          ch->exp /= 1000;
+      advance_level_adept(ch, c, TRUE);
+      return;
    }
    else if( adept )
    {
@@ -5103,9 +5105,12 @@ void do_gain( CHAR_DATA * ch, char *argument )
       sprintf( buf, "%s advances in the way of the %s.", ch->name, class_table[c].class_name );
    info( buf, 1 );
 
-   ch->exp -= cost;
+   if (remort)
+      advance_level_remort(ch, c, TRUE);
+   else
+      advance_level(ch, c, TRUE);
 
-   advance_level( ch, c, TRUE, remort, adept );
+   ch->exp -= cost;
 
    /*
     * Maintain ch->level as max level of the lot 

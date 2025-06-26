@@ -1628,7 +1628,11 @@ void trigger_handler args( ( CHAR_DATA * ch, OBJ_DATA * obj, int trigger ) );
           /*--------*\
 			 ) update.c# (
 			 \*--------*/
-void advance_level args( ( CHAR_DATA * ch, int class, bool show, bool remort, bool adept ) );
+void advance_level args( ( CHAR_DATA * ch, int class, bool show ) );
+void advance_level_remort args( ( CHAR_DATA * ch, int class, bool show ) );
+void advance_level_adept args( ( CHAR_DATA * ch, int class, bool show ) );
+void advance_level_wolf args( ( CHAR_DATA * ch ) );
+void advance_level_vamp args( ( CHAR_DATA * ch ) );
 void gain_exp args( ( CHAR_DATA * ch, int gain ) );
 void gain_bloodlust args( ( CHAR_DATA * ch, int value ) );
 void gain_condition args( ( CHAR_DATA * ch, int iCond, int value ) );
