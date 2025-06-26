@@ -173,7 +173,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the quinine in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      calculate_damage(ch, victim, number_range(dam), gsn_poison_quinine, REALM_PHYSICAL, TRUE);
+      calculate_damage(ch, victim, dam, gsn_poison_quinine, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:quinine" ) );
    }
 
@@ -186,7 +186,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the arsenic in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      calculate_damage(ch, victim, number_range(dam), gsn_poison_arsenic, REALM_PHYSICAL, TRUE);
+      calculate_damage(ch, victim, dam, gsn_poison_arsenic, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:arsenic" ) );
    }
 
@@ -199,7 +199,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the nightshade in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      calculate_damage(ch, victim, number_range(dam), gsn_poison_nightshade, REALM_PHYSICAL, TRUE);
+      calculate_damage(ch, victim, dam, gsn_poison_nightshade, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:nightshade" ) );
    }
 }
