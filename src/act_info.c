@@ -5522,23 +5522,22 @@ void do_worth( CHAR_DATA * ch, char *argument )
       }
    }
 
-   numclasses = 0;
-   for( a = 0; a < MAX_CLASS; a++ )
-      if( ch->lvl[a] >= 0 )
-         numclasses++;
-
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
-      if( ( ch->lvl[cnt] != -1 || numclasses < race_table[ch->race].classes ) && ch->lvl[cnt] < LEVEL_HERO - 1 )
-      {
-         if (ch->pcdata->index[cnt] > -1)
-         {
-           any = TRUE;
-           cost = exp_to_level( ch, cnt );
+      bool show = FALSE;
 
-           sprintf( buf, "%-14s  %9d %9d.\n\r", class_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
-           send_to_char( buf, ch );
-         }
+      for(int i = 0; i < MAX_PC_CLASS; i++)
+      {
+         if (ch->pcdata->order[i] == cnt)
+            show = TRUE;
+      }
+      if(show && ch->lvl[cnt] < LEVEL_HERO - 1 )
+      {
+         any = TRUE;
+         cost = exp_to_level( ch, cnt );
+
+         sprintf( buf, "%-14s  %9d %9d.\n\r", class_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
+         send_to_char( buf, ch );
       }
    }
 
@@ -5601,7 +5600,7 @@ void do_whois( CHAR_DATA * ch, char *argument )
    {
       sprintf( buf + strlen( buf ), " [ %3s ]\n\r", victim->pcdata->who_name );
    }
-   else if( victim->adept_level > 0 )
+   else if( is_adept(victim) )
    {
       sprintf( buf + strlen( buf ), " %s \n\r", get_adept_name( victim ) );
    }

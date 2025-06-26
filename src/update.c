@@ -175,16 +175,6 @@ void init_alarm_handler(  )
  */
 void advance_level( CHAR_DATA * ch, int class, bool show )
 {
-   /*
-    * class used instead of ch->class.  -S- 
-    */
-   /*
-    * show added to allow no display of gain ( when using setclass ) 
-    */
-   /*
-    * remort indicates remortal class or normal mortal class 
-    */
-
    char buf[MAX_STRING_LENGTH];
    int add_hp;
    int add_mana;
@@ -278,7 +268,6 @@ void advance_level_adept( CHAR_DATA * ch, int class, bool show )
    int add_mana;
    int add_move;
 
-
    add_hp = adept_table[class].hp_gain;
    add_hp += get_curr_con(ch)/ 2;
    add_mana = adept_table[class].mana_gain;
@@ -288,7 +277,6 @@ void advance_level_adept( CHAR_DATA * ch, int class, bool show )
       ch->adept[class] = 1;
    else
       ch->adept[class] += 1;
-
 
    add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
 
@@ -330,9 +318,7 @@ void advance_level_vamp( CHAR_DATA * ch)
    ch->pcdata->vamp_pracs += add_prac;
    ch->pcdata->vamp_skill_max += add_max_skills;
 
-
    sprintf( buf, "You gain: %d @@eBloodlust@@N, and %d Vampyre Practices. .\n\r", add_bloodlust, add_prac );
-
 
    send_to_char( buf, ch );
    return;
@@ -355,38 +341,22 @@ void advance_level_wolf( CHAR_DATA * ch )
    ch->pcdata->vamp_skill_max += add_max_skills;
    sprintf( buf, "@@NYou gain: %d @@rRage Ability@@N, and %d @@bWerewolf Practices. .@@N\n\r", add_bloodlust, add_prac );
 
-
    send_to_char( buf, ch );
    return;
 }
 
 void gain_exp( CHAR_DATA * ch, long_int gain )
 {
-   /*
-    * Not much happens here, as no-longer auto-level... -S- 
-    */
-
-   /*
-    * -S- Mod:  mobs CAN gain exp as well as players 
-    */
-
    if( ( IS_NPC( ch ) ) && !( IS_SET( ch->act, ACT_INTELLIGENT ) ) )
       return;
 
    if( IS_IMMORTAL( ch ) )
       return;
 
-
-   /*
-    * Changed exp system AGAIN old 'cap' was screwy!! -S- 
-    */
-
    ch->exp += gain;
 
    return;
 }
-
-
 
 /*
  * Regeneration stuff.
@@ -417,23 +387,13 @@ int hit_gain( CHAR_DATA * ch )
    }
    if( !IS_NPC( ch ) )
    {
-      if( ch->pcdata->condition[COND_FULL] == 0 )
-         gain /= 2;
-
-      if( ch->pcdata->condition[COND_THIRST] == 0 )
-         gain /= 2;
-
       if( IS_VAMP( ch ) && ch->pcdata->bloodlust < 3 )
          gain = 0;
       else if( IS_VAMP( ch ) && ch->pcdata->bloodlust < 8 )
          gain /= 2;
       if( IS_VAMP( ch ) && ch->pcdata->bloodlust == -10 )
          gain = ( 5 + ch->level / 25 );
-
-
    }
-
-
 
    if( IS_AFFECTED( ch, AFF_POISON ) )
       gain /= 4;
@@ -482,13 +442,10 @@ int hit_gain( CHAR_DATA * ch )
          else if( ( ch->in_room->sector_type == SECT_CITY ) || ( ch->in_room->sector_type == SECT_INSIDE ) )
             gain = gain * 1.3;
       }
-
    }
 
    return UMIN( gain, ch->max_hit - ch->hit );
 }
-
-
 
 int mana_gain( CHAR_DATA * ch )
 {
@@ -517,11 +474,6 @@ int mana_gain( CHAR_DATA * ch )
       }
       if( !IS_NPC( ch ) )
       {
-         if( ch->pcdata->condition[COND_FULL] == 0 )
-            gain /= 2;
-
-         if( ch->pcdata->condition[COND_THIRST] == 0 )
-            gain /= 2;
          if( IS_VAMP( ch ) && ch->pcdata->bloodlust < 3 )
             gain = 0;
          else if( IS_VAMP( ch ) && ch->pcdata->bloodlust < 8 )
@@ -585,8 +537,6 @@ int mana_gain( CHAR_DATA * ch )
    return UMIN( gain, ch->max_mana - ch->mana );
 }
 
-
-
 int move_gain( CHAR_DATA * ch )
 {
    int gain;
@@ -612,38 +562,27 @@ int move_gain( CHAR_DATA * ch )
             break;
       }
 
-      if( ch->pcdata->condition[COND_FULL] == 0 )
-         gain /= 2;
-
-      if( ch->pcdata->condition[COND_THIRST] == 0 )
-         gain /= 2;
-
       if( IS_VAMP( ch ) && ch->pcdata->bloodlust < 3 )
          gain = 0;
       else if( IS_VAMP( ch ) && ch->pcdata->bloodlust < 8 )
          gain /= 2;
       if( IS_VAMP( ch ) && ch->pcdata->bloodlust == -10 )
          gain = ( 5 + ch->level / 25 );
-
-
    }
 
    if( IS_AFFECTED( ch, AFF_POISON ) )
       gain /= 4;
-
 
    return UMIN( gain, ch->max_move - ch->move );
 }
 
 void gain_rage( CHAR_DATA * ch )
 {
-
    sh_int rage_gain = 0;
    sh_int current_rage = 0;
 
    if( IS_NPC( ch ) || !IS_WOLF( ch ) )
       return;
-
 
    if( IS_RAGED( ch ) )
       current_rage = ch->pcdata->bloodlust_max;
@@ -658,7 +597,6 @@ void gain_rage( CHAR_DATA * ch )
       ch->pcdata->bloodlust = UMIN( ( ch->pcdata->bloodlust + rage_gain ), current_rage );
    else
       ch->pcdata->bloodlust = UMIN( current_rage, ( ch->pcdata->bloodlust + rage_gain ) );
-
 }
 
 void gain_bloodlust( CHAR_DATA * ch, int value )
@@ -701,10 +639,6 @@ void gain_condition( CHAR_DATA * ch, int iCond, int value )
 
    if( value == 0 || IS_NPC( ch ) || ch->level >= LEVEL_HERO )
       return;
-
-   condition = ch->pcdata->condition[iCond];
-   ch->pcdata->condition[iCond] = URANGE( 0, condition + value, 48 );
-
 
    if( ch->position == POS_BUILDING || ch->position == POS_WRITING )
       return;
@@ -929,14 +863,6 @@ void mobile_update( void )
    CUREF( ch_next );
    return;
 }
-
-
-
-/*
- * Update the weather.
- */
-
-
 
 void clean_donate_rooms( void )
 {
