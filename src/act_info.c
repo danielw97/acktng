@@ -4795,10 +4795,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
       send_to_char( "You can gain levels in:\n\r", ch );
       any = FALSE;
-      numclasses = 0;
-      for( a = 0; a < MAX_CLASS; a++ )
-         if( ch->lvl[a] >= 0 )
-            numclasses++;
 
       for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
       {
