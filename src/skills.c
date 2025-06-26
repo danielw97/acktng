@@ -160,39 +160,46 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    else
       WAIT_STATE(ch, skill_table[gsn_circle].beats);
 
+      int explode_count = 0;
+
+   dam = dam * 0.8;
+
    if (is_affected( victim, skill_lookup( "poison:quinine" )))
    {
+      dam = number_range(dam*1.1, dam*1.25);
       sprintf( actbuf, "$N screams as the quinine in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
       sprintf( actbuf, "$N screams as the quinine in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the quinine in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      calculate_damage(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_quinine, REALM_PHYSICAL, TRUE);
+      calculate_damage(ch, victim, number_range(dam), gsn_poison_quinine, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:quinine" ) );
    }
 
    if (is_affected( victim, skill_lookup( "poison:arsenic" )))
    {
+      dam = number_range(dam*1.1, dam*1.25);
       sprintf( actbuf, "$N screams as the arsenic in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
       sprintf( actbuf, "$N screams as the arsenic in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the arsenic in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      calculate_damage(ch, victim, number_range(dam * 1.1, dam*1.25), gsn_poison_arsenic, REALM_PHYSICAL, TRUE);
+      calculate_damage(ch, victim, number_range(dam), gsn_poison_arsenic, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:arsenic" ) );
    }
 
    if (is_affected( victim, skill_lookup( "poison:nightshade" )))
    {
+      dam = number_range(dam*1.25, dam*1.4);
       sprintf( actbuf, "$N screams as the nightshade in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_NOTVICT );
       sprintf( actbuf, "$N screams as the nightshade in $M veins is consumed!");
       act( actbuf, ch, obj, victim, TO_CHAR );
       sprintf( actbuf, "You scream as the nightshade in your veins is consumed!");
       act( actbuf, ch, obj, victim, TO_VICT );
-      calculate_damage(ch, victim, number_range(dam * 1.25, dam*1.4), gsn_poison_nightshade, REALM_PHYSICAL, TRUE);
+      calculate_damage(ch, victim, number_range(dam), gsn_poison_nightshade, REALM_PHYSICAL, TRUE);
       affect_strip( victim, skill_lookup( "poison:nightshade" ) );
    }
 }
