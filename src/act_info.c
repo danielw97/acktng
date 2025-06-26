@@ -4716,7 +4716,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
    int subpop;
    bool any;
    bool found = FALSE;
-   bool is_adept = FALSE;
    int c;   /* The class to gain in */
    int numclasses;   /* Current number of classes person has */
    int a;   /* Looping var */
@@ -4772,11 +4771,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
       if( ch->remort[cnt] == MAX_MORTAL)
          remorts_at_max++;
    }
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
-   {
-      if (ch->adept[cnt] > 0)
-         is_adept = TRUE;
-   }
 
 /* first case.. remort  */
    if (morts_at_max > 0 && num_remorts == 0)
@@ -4787,7 +4781,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       allow_remort = TRUE;
 
 /* third case..can adept */
-   if (remorts_at_max == 2 && !is_adept)
+   if (remorts_at_max == 2 && !is_adept(ch))
    {
       allow_adept = TRUE;
       send_to_char("Adept allowed!\n\r",ch);
@@ -4814,7 +4808,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
    {
       if( !str_cmp( remort_table[cnt].who_name, argument ) )
       {
-         if ( ch->remort[cnt] > 0 ||allow_remort )
+         if ( ch->remort[cnt] > 0 || allow_remort )
          {
             if (ch->lvl[cnt%MAX_CLASS] < MAX_MORTAL)
             {
@@ -4834,9 +4828,9 @@ void do_gain( CHAR_DATA * ch, char *argument )
    {
       if( ( !str_cmp( adept_table[cnt].who_name, argument ) ) )
       {
-         if (ch->adept[cnt] > 0 || allow_adept )
+         if (ch->adept[cnt] > 0 || allow_adept)
          {
-            if (ch->remort[cnt] < 100 && ch->remort[cnt+MAX_CLASS] < MAX_MORTAL)
+            if (ch->remort[cnt] < MAX_MORTAL && ch->remort[cnt+MAX_CLASS] < MAX_MORTAL)
             {
                send_to_char("You need to be level 100 in the remortal class before you can adept in this class!\n\r", ch);
                return;

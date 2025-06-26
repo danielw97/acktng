@@ -610,10 +610,16 @@ char *get_adept_name( CHAR_DATA * ch )
     * this is weak for now..will eventually have like 200 total names, based on the remort 
     * classes the adept has   
     */
+   int i;
 
-   switch ( ch->adept_level )
+   for(int i = 0; i < MAX_CLASS; i++)
    {
+      if (ch->adept[i] > 0)
+         break;
+   }
 
+   switch ( ch->adept[i] )
+   {
       case 1:
          return "@@W    Mystic    @@N";
          break;
@@ -649,13 +655,11 @@ char *get_adept_name( CHAR_DATA * ch )
          break;
       case 12:
          return "@@b  Conjurer    @@N";
-
       case 13:
          return "@@l Elementalist @@N";
          break;
       case 14:
          return "@@m  Runemaster  @@N";
-
       case 15:
          return "@@d Shadowmaster @@N";
          break;
@@ -673,9 +677,6 @@ char *get_adept_name( CHAR_DATA * ch )
          break;
       case 20:
          return "@@m  Realm Lord  @@N";
-
-
-
    }
    return "@@W    Adept     @@N";
 }
