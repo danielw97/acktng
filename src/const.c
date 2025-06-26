@@ -1849,15 +1849,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "vampire bite", {186, 186, 186, 186, 186},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 0 ), 5, 12,
-    "", "Your blood feels cooler.",
-    ""},
-
-
-   {
-    MORTAL, NORM,
     "ventriloquate", {3, 182, 182, 182, 182, 182},
     spell_ventriloquate, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 41 ), 5, 12,
