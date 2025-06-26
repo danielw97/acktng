@@ -233,6 +233,7 @@ long get_cost_to_level_remort( CHAR_DATA *ch, int class)
 
 long get_cost_to_level( CHAR_DATA *ch, int class )
 {
+   char buf[MSL];
    int base;
 
    if (class > MAX_CLASS)
@@ -240,12 +241,26 @@ long get_cost_to_level( CHAR_DATA *ch, int class )
 
    base = ch->lvl[class] * ch->lvl[class];
 
+   sprintf(buf, "Class is %d, base is %d\r\n", class, base);
+   send_to_char(buf, ch);
+
    base *= 600;
+
+   sprintf(buf, "Class is %d, base is %d\r\n", class, base);
+   send_to_char(buf, ch);
 
    // Edge-case fix
    base += 350;
 
-   return get_racial_penalty_to_level(base, ch->race, class);
+   sprintf(buf, "Class is %d, base is %d\r\n", class, base);
+   send_to_char(buf, ch);
+   
+   base = get_racial_penalty_to_level(base, ch->race, class);
+
+   sprintf(buf, "Class is %d, base is %d\r\n", class, base);
+   send_to_char(buf, ch);
+
+   return base;
 }
 
 int get_racial_penalty_to_level( int base, int race, int class )
