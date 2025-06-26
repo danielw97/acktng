@@ -206,6 +206,9 @@ long get_cost_to_level_remort( CHAR_DATA *ch, int class)
     int base, i;
     bool double_remort = FALSE;
 
+    if (class > MAX_REMORT)
+       return -69;
+
    base = ch->remort[class] * ch->remort[class];
 
    // Gotta check if double remort
@@ -225,12 +228,15 @@ long get_cost_to_level_remort( CHAR_DATA *ch, int class)
    // Edge-case fix
    base += 350;
 
-   return base;
+   return get_racial_penalty_to_level( cost, ch->race, class);;
 }
 
 long get_cost_to_level( CHAR_DATA *ch, int class )
 {
    int base;
+
+   if (class > MAX_CLASS)
+       return -69;
 
    base = ch->lvl[class] * ch->lvl[class];
 
@@ -239,7 +245,20 @@ long get_cost_to_level( CHAR_DATA *ch, int class )
    // Edge-case fix
    base += 350;
 
-   return base;
+   return get_racial_penalty_to_level( cost, ch->race, class);
+}
+
+int cost get_racial_penalty_to_level( int cost, int race, int class )
+{
+   for(int i = 0; i < MAX_CLASS, i++)
+   {
+      if (race_table[race].limit[i] == class)
+         break;
+   }
+
+   cost += (-1 + i) * cost / 10;
+
+   return cost;
 }
 
 /*
