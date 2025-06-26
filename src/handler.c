@@ -250,7 +250,9 @@ long get_cost_to_level( CHAR_DATA *ch, int class )
 
 int get_racial_penalty_to_level( int cost, int race, int class )
 {
-   for(int i = 0; i < MAX_CLASS, i++)
+   int i;
+
+   for(i = 0; i < MAX_CLASS, i++)
    {
       if (race_table[race].limit[i] == class)
          break;
