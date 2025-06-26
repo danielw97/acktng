@@ -2185,6 +2185,7 @@ void do_who(CHAR_DATA *ch, char *argument)
                class = "@@W    ADEPT  @@N   ";
                break;
             }
+            sprintf(buf3, " %s", class);
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
