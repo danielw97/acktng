@@ -180,15 +180,20 @@ void advance_level( CHAR_DATA * ch, int class, bool show )
    int add_mana;
    int add_move;
 
+   if (ch->lvl[class] < 0)
+      ch->lvl[class] = 1;
+   else if (ch->lvl[class] < MAX_MORTAL)
+      ch->lvl[class] += 1;
+   else
+   {
+      send_to_char("Trying to advance level past MAX_MORTAL, error!\n\r",ch);
+      return;
+   }
    add_hp = class_table[class].hp_gain;
    add_hp += get_curr_con(ch)/8;
    add_mana = class_table[class].mana_gain;
    if (add_mana > 0)
       add_mana = (get_curr_int(ch)+get_curr_wis(ch))/8;
-   if (ch->lvl[class] < 0)
-      ch->lvl[class] = 1;
-   else
-      ch->lvl[class] += 1;
 
    add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
 
