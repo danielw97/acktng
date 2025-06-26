@@ -186,7 +186,7 @@ void advance_level( CHAR_DATA * ch, int class, bool show )
       ch->lvl[class] += 1;
    else
    {
-      send_to_char("Trying to advance level past MAX_MORTAL, error!\n\r",ch);
+      send_to_char("Trying to advance_level past MAX_MORTAL, error!\n\r",ch);
       return;
    }
    add_hp = class_table[class].hp_gain;
@@ -229,15 +229,20 @@ void advance_level_remort( CHAR_DATA * ch, int class, bool show )
    int add_mana;
    int add_move;
 
+   if (ch->remort[class] < 0)
+      ch->remort[class] = 1;
+   else if (ch->remort[class] < MAX_MORTAL)
+      ch->remort[class] += 1;
+   else
+   {
+      send_to_char("Trying to advance_level_remort past MAX_MORTAL, error!\n\r",ch);
+      return;
+   }
    add_hp = remort_table[class].hp_gain;
    add_hp += get_curr_con(ch)/4;
    add_mana = remort_table[class].mana_gain;;
    if (add_mana > 0)
       add_mana += (get_curr_int(ch)+get_curr_wis(ch))/4;
-   if (ch->remort[class] < 0)
-      ch->remort[class] = 1;
-   else
-      ch->remort[class] += 1;
 
    add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
 
@@ -273,15 +278,20 @@ void advance_level_adept( CHAR_DATA * ch, int class, bool show )
    int add_mana;
    int add_move;
 
+   if (ch->adept[class] < 0)
+      ch->adept[class] = 1;
+   else if (ch->adept[class] < MAX_ADEPT)
+      ch->adept[class] += 1;
+   else
+   {
+      send_to_char("Trying to advance_level_adept past MAX_ADEPT, error!\n\r",ch);
+      return;
+   }
    add_hp = adept_table[class].hp_gain;
    add_hp += get_curr_con(ch)/ 2;
    add_mana = adept_table[class].mana_gain;
    if (add_mana > 0)
       add_mana += (get_curr_int(ch)+get_curr_wis(ch))/2;
-   if (ch->adept[class] < 1)
-      ch->adept[class] = 1;
-   else
-      ch->adept[class] += 1;
 
    add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
 
