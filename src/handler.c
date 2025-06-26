@@ -226,7 +226,7 @@ long get_cost_to_level_remort( CHAR_DATA *ch, int class)
       base *= 2400;
 
    // Edge-case fix
-   base += 350;
+   base += 6900;
 
    return get_racial_penalty_to_level( cost, ch->race, class);;
 }
@@ -248,7 +248,7 @@ long get_cost_to_level( CHAR_DATA *ch, int class )
    return get_racial_penalty_to_level( cost, ch->race, class);
 }
 
-int cost get_racial_penalty_to_level( int cost, int race, int class )
+int get_racial_penalty_to_level( int cost, int race, int class )
 {
    for(int i = 0; i < MAX_CLASS, i++)
    {

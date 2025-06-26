@@ -201,10 +201,6 @@ long exp_to_level_remort( CHAR_DATA * ch, int index )
 
 long exp_to_level( CHAR_DATA * ch, int index )
 {
-   /*
-    * To get remort costs, call with index==5 
-    */
-
    int mult = 0;
    int diff = 0;
    long cost;
