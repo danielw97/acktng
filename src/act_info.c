@@ -2150,6 +2150,9 @@ void do_who(CHAR_DATA *ch, char *argument)
       }
       for (d = first_desc; d != NULL; d = d->next)
       {
+         CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
+         char const *class;
+
          if (i == 0 && wch->level <= MAX_MORTAL)
             continue;
          if (i == 1 && (!is_adept(wch) || wch->level > MAX_MORTAL))
@@ -2158,9 +2161,6 @@ void do_who(CHAR_DATA *ch, char *argument)
             continue;
          if (i == 3 && (is_remort(wch) || is_adept(wch) || wch->level > MAX_MORTAL))
             continue;
-         CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
-         char const *class;
-
          class = class_table[wch->class].who_name;
 
          if(wch->level > MAX_MORTAL)
