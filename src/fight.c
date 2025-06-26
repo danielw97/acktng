@@ -677,20 +677,6 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
     */
    dam += number_range( get_damroll( ch ) * 13 / 20, get_damroll( ch ) * 15 / 20 );
 
-   if (can_use_skill(ch, gsn_enhanced_damage) )
-      dam += dam * 0.6;
-   else if( IS_NPC( ch ) && IS_SET(ch->skills, MOB_ENHANCED) )
-      dam += dam * 0.2;
-   else if (item_has_apply(ch, ITEM_APPLY_ENHANCED) )
-      dam += dam * 0.4;
-
-   if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword) )
-   {
-      dam += dam * number_range(20,40)/100;
-   }
-
-   if( !IS_AWAKE( victim ) )
-      dam *= 1.5;
    /*
     * extra damage from martial arts 
     */
@@ -1037,6 +1023,9 @@ int get_parry( CHAR_DATA * ch )
    if( IS_NPC( ch ) && !IS_SET( ch->skills, MOB_PARRY ) )
       return chance;
 
+   if (!can_use_skill(ch, gsn_parry))
+      return chance;
+
    if( IS_NPC( ch ) )
    {
       chance = get_psuedo_level( ch ) / 3.2 + get_curr_str( ch ) * 2 / 5;
@@ -1050,12 +1039,12 @@ int get_parry( CHAR_DATA * ch )
          weapon = get_eq_char( ch, WEAR_HOLD_HAND_L );
       if( ( weapon == NULL ) || ( !IS_WEAPON( weapon ) ) )
       {
-         return FALSE;
+         return 0;
       }
       if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
-         return FALSE;
+         return 0;
 
-      chance = ( ch->pcdata->learned[gsn_parry] / 3.5 ) + get_curr_str( ch ) * 3 / 5;
+      chance = 20 + get_curr_str( ch ) * 3 / 5;
    }
    if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
       chance += 5;
@@ -1076,6 +1065,9 @@ int get_dodge( CHAR_DATA * ch )
    if( IS_NPC( ch ) && !IS_SET( ch->skills, MOB_DODGE ) )
       return chance;
 
+   if (!can_use_skill(ch, gsn_dodge))
+      return chance;
+
    if( IS_NPC( ch ) )
    {
       /*
@@ -1087,7 +1079,7 @@ int get_dodge( CHAR_DATA * ch )
    }
    else
    {
-      chance = ( ch->pcdata->learned[gsn_dodge] / 3.5 ) + get_curr_dex( ch ) * 3 / 5;
+      chance = 20 + get_curr_dex( ch ) * 3 / 5;
       if( ch->remort[CLASS_MON] > 0 )   /* Monk  */
          chance += ch->remort[CLASS_MON] / 8;
    }
@@ -1110,6 +1102,9 @@ int get_block( CHAR_DATA * ch )
    if( IS_NPC( ch ) && !IS_SET( ch->skills, MOB_PARRY ) )
       return chance;
 
+   if (!can_use_skill(ch, gsn_shield_block))
+      return chance;
+
    if( IS_NPC( ch ) )
    {
       chance = get_psuedo_level( ch ) / 3.2 + get_curr_str( ch ) * 2 / 5;
@@ -1127,7 +1122,7 @@ int get_block( CHAR_DATA * ch )
       if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
          return 0;
 
-      chance = ( ch->pcdata->learned[gsn_shield_block] / 3.5 ) + get_curr_str( ch ) * 3 / 5;
+      chance = 20 + get_curr_str( ch ) * 3 / 5;
    }
 
    if( IS_AFFECTED( ch, AFF_CLOAK_ADEPT ) )
@@ -1147,7 +1142,7 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
    if( IS_NPC( victim ) && !IS_SET( victim->skills, MOB_COUNTER ) )
       return FALSE;
 
-   if (!IS_NPC(victim) && victim->pcdata->learned[gsn_counter] < 1)
+   if (!IS_NPC(victim) && !can_use_skill(victim, gsn_counter))
       return FALSE;
 
    if( IS_NPC( victim ) )
@@ -1158,7 +1153,7 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
    }
    else
    {
-      chance = ( victim->pcdata->learned[gsn_counter] / 3.5 ) + get_curr_dex( victim ) * 3 / 5;
+      chance = 10 + get_curr_dex( victim ) * 3 / 5;
       if( victim->remort[CLASS_MON] > 0 )   /* Monk  */
          chance += victim->remort[CLASS_MON] / 8;
    }

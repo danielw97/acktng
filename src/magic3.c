@@ -1267,7 +1267,6 @@ bool spell_infuse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    SET_BIT( ob->extra_flags, ITEM_NO_AUCTION );
    SET_BIT( ob->extra_flags, ITEM_NOSAC );
    SET_BIT( ob->extra_flags, ITEM_NOLOOT );
-   SET_BIT( ob->extra_flags, ITEM_ANTI_GOOD );
    SET_BIT( ob->extra_flags, ITEM_NOLOOT );
 
    ob->obj_fun = obj_fun_lookup( "objfun_infused_soul" );
@@ -1275,8 +1274,6 @@ bool spell_infuse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 
    act( "@@N$n gestures diabolically, and his captured @@esoul@@N is infused into his $P.", ch, NULL, ob, TO_ROOM );
    send_to_char( "@@NYou condense the soul and some of your life force into your weapon.\n\r", ch );
-   ch->max_hit -= 100;
-   ch->pcdata->hp_from_gain -= 100;
    do_save( ch, "" );
    return TRUE;
 }

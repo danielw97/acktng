@@ -126,7 +126,7 @@ void do_mount( CHAR_DATA * ch, char *argument )
          return;
       }
 
-      if( IS_NPC( ch ) || ch->pcdata->learned[gsn_mount] == 0 || ( get_psuedo_level( ch ) < get_psuedo_level( mount ) ) )
+      if( IS_NPC( ch ) || !can_use_skill(ch, gsn_mount) || ( get_psuedo_level( ch ) < get_psuedo_level( mount ) ) )
       {
          act( "You are not skillful enough to ride $N.", ch, NULL, mount, TO_CHAR );
          return;

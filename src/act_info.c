@@ -4124,7 +4124,10 @@ void do_spells( CHAR_DATA * ch, char *argument )
          break;
 
       if (!can_use_skill(ch, sn))
-         return;
+         continue;
+
+      if (mana_cost(ch, sn) < 1)
+         continue;
 
       /*
        * if ( skill_table[sn].skill_level[ch->class] > LEVEL_HERO ) 

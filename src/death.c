@@ -467,7 +467,7 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
       else
          vamp_exp = 1;
 
-      if( gch->adept_level > 0 )
+      if( is_adept(ch) )
          funky /= 1000;
 
       sprintf( buf, "You Receive %d Experience Points.\n\r", funky );

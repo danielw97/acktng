@@ -230,11 +230,11 @@ void heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bo
    sprintf(buf2, "@@NYour %s heals $N! (@@r%d@@N)\n\r", skill_table[sn].name, heal);
    sprintf(buf3, "@@N$n's %s heals you! (@@r%d@@N)\n\r", skill_table[sn].name, heal);
 
-   if (ch != victim && victim != NULL)
+   if (ch != victim)
       act(buf3, ch, NULL, victim, TO_VICT);
-   if (ch != NULL && victim != NULL && ch->in_room->vnum == victim->in_room->vnum)
+   if (ch != NULL)
       act(buf2, ch, NULL, victim, TO_CHAR);
-   act( buf1, ch, NULL, victim, TO_ROOM );
+   act( buf1, ch, NULL, victim, TO_NOTVICT );
 }
 
 void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )

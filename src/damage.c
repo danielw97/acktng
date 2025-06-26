@@ -58,18 +58,18 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (element == REALM_PHYSICAL && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(ch, ITEM_APPLY_PROT)) && IS_EVIL(ch))
         dam -= dam / 4;
 
-    bool can_reflect = FALSE;
-    bool can_absorb = FALSE;
+    bool can_reflect = TRUE;
+    bool can_absorb = TRUE;
 
     if (IS_SET(element, NO_REFLECT))
     {
         REMOVE_BIT(element, NO_REFLECT);
-        can_reflect = TRUE;
+        can_reflect = FALSE;
     }
     if (IS_SET(element, NO_ABSORB))
     {
         REMOVE_BIT(element, NO_ABSORB);
-        can_absorb = TRUE;
+        can_absorb = FALSE;
     }
 //    if (obj == NULL)
     {
@@ -107,11 +107,11 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
         if (IS_SET(ch_strong, element))
         {
-            dam_modifier += .35;
+            dam_modifier += .20;
         }
         else if (IS_SET(ch_weak, element))
         {
-            dam_modifier -= .35;
+            dam_modifier -= .20;
         }
 
         if (element != REALM_PHYSICAL && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
@@ -162,11 +162,11 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     if (IS_SET(vi_suscept, element))
     {
-        dam_modifier += .45;
+        dam_modifier += .25;
     }
     else if (IS_SET(vi_resist, element))
     {
-        dam_modifier -= .45;
+        dam_modifier -= .25;
     }
 
     else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != REALM_PHYSICAL)
@@ -219,6 +219,31 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         if (stance_app[ch->stance].spell_mod != 0)
             dam += dam * stance_app[ch->stance].spell_mod / 10;
     }
+    else
+    {
+       if (can_use_skill(ch, gsn_enhanced_damage) )
+          dam += dam * 0.6;
+       else if( IS_NPC( ch ) && IS_SET(ch->skills, MOB_ENHANCED) )
+          dam += dam * 0.2;
+       else if (item_has_apply(ch, ITEM_APPLY_ENHANCED) )
+          dam += dam * 0.4;
+
+/*       if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword) )
+       {
+          dam += dam * number_range(20,40)/100;
+       }*/
+
+       if( !IS_AWAKE( victim ) )
+          dam *= 1.5;
+
+       dam += dam * ch->remort[CLASS_KNI] / 100 * 0.5;
+       dam += dam * ch->remort[CLASS_MON] / 100 * 0.5;
+       dam += dam * ch->remort[CLASS_ASS] / 100 * 0.5;
+       dam += dam * ch->remort[CLASS_BRA] / 100 * 0.5;
+       dam += dam * ch->remort[CLASS_SWO] / 100 * 0.5;
+       dam += dam * ch->remort[CLASS_WLK] / 100 * 0.5 * 0.75;
+       dam += dam * ch->remort[CLASS_PAL] / 100 * 0.5 * 0.75;
+    }
 
     if (element != REALM_PHYSICAL)
        crit_chance = get_spell_crit(ch);
@@ -245,11 +270,11 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     if (element != REALM_PHYSICAL && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {
-        dam += dam * ch->remort[CLASS_SOR] / 100;
-        dam += dam * ch->remort[CLASS_WIZ] / 100;
-        dam += dam * ch->remort[CLASS_NEC] / 100;
-        dam += dam * ch->remort[CLASS_EGO] / 100;
-        dam += dam * ch->remort[CLASS_WLK] / 100 * .75;
+        dam += dam * ch->remort[CLASS_SOR] / 100 * 0.5;
+        dam += dam * ch->remort[CLASS_WIZ] / 100 * 0.5;
+        dam += dam * ch->remort[CLASS_NEC] / 100 * 0.5;
+        dam += dam * ch->remort[CLASS_EGO] / 100 * 0.5;
+        dam += dam * ch->remort[CLASS_WLK] / 100 * 0.5 * .75;
     }
 
     do_damage(ch, victim, dam, dt, element, critical);

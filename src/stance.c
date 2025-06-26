@@ -15,16 +15,18 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Adventurer", 0, 0, 0, 0, 0, 0, 0,
      MORTAL, -1, -1, -1, -1},
     /* Mortal stances */
-    {"Mage", 5, -3, -3, 0, 0, 2, STANCE_EITHER_CLASS | STANCE_MULTI_CAST | STANCE_NO_HIT, 
-     MORTAL, CLASS_MAG, 60, CLASS_PSI, 60, CLASS_MAG},
+    {"Mage", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, 
+     MORTAL, CLASS_MAG, 60, -1, -1, CLASS_MAG},
+    {"Psionicist", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT,
+     MORTAL, CLASS_PSI, 60, -1, -1, CLASS_PSI},
     {"Healer", 0, 0, 0, 0, 1, 0, 0,
-     MORTAL, CLASS_CLE, 60, CLASS_CLE, 60, CLASS_CLE},
+     MORTAL, CLASS_CLE, 60, -1, -1, CLASS_CLE},
     {"Warrior", 0, 1, 0, 0, 0, 0, 0,
-     MORTAL, CLASS_WAR, 60, CLASS_WAR, 60, CLASS_WAR},
+     MORTAL, CLASS_WAR, 60, -1, -1, CLASS_WAR},
     {"Thief", -1, 0, 1, 0, 0, 0, 0,
-     MORTAL, CLASS_THI, 60, CLASS_THI, 60, CLASS_THI},
+     MORTAL, CLASS_THI, 60, -1, -1, CLASS_THI},
     {"Pugilist", 0, 0, 0, 1, 0, 0, 0,
-     MORTAL, CLASS_PUG, 60, CLASS_PUG, 60, CLASS_PUG},
+     MORTAL, CLASS_PUG, 60, -1, -1, CLASS_PUG},
     /* Remort stances */
     {"Assassin", -3, 0, 3, 1, 0, 0, 0,
      REMORT, CLASS_ASS, 1, -1, -1, -1},
@@ -57,7 +59,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
      ADEPT, CLASS_GMA, 1, CLASS_KIN, 1, -1},
     {"Templar", -2, 3, 3, 3, 5, 0, 0,
      ADEPT, CLASS_TEM, 1, -1, -1, -1},
-    {"Nightblade", 1, 5, 5, 3, 0, 5, 0,
+    {"Nightblade", -3, 5, 5, 3, 0, 3, 0,
      ADEPT, CLASS_NIG, 1, -1, -1, -1},
     {"Crusader", -3, 3, 3, 3, 0, 0, 0,
      ADEPT, CLASS_CRU, 1, -1, -1, -1},
@@ -139,13 +141,6 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
 
     if (stance_app[stance].tier == ADEPT)
     {
-        if (IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS))
-        {
-            if (stance_app[stance].class_index > -1 && ch->adept[stance_app[stance].class_index] < stance_app[stance].class_level &&
-                stance_app[stance].class_index2 > -1 && ch->adept[stance_app[stance].class_index2] < stance_app[stance].class_level2)
-                legal_stance = FALSE;
-        }
-        else
         {
             if (stance_app[stance].class_index > -1 && ch->adept[stance_app[stance].class_index] < stance_app[stance].class_level)
                 legal_stance = FALSE;
@@ -156,15 +151,6 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
     }
     else if (stance_app[stance].tier == REMORT)
     {
-        if (IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS))
-        {
-            if (stance_app[stance].class_index > -1 && ch->remort[stance_app[stance].class_index] >= stance_app[stance].class_level)
-               legal_stance = FALSE;
-
-            if (!legal_stance && stance_app[stance].class_index2 > -1 && ch->remort[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
-                legal_stance = TRUE;
-        }
-        else
         {
             if (stance_app[stance].class_index > -1 && ch->remort[stance_app[stance].class_index] < stance_app[stance].class_level)
                 legal_stance = FALSE;
@@ -175,15 +161,6 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
     }
     else if (stance_app[stance].tier == MORTAL)
     {
-        if (IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS))
-        {
-            if (stance_app[stance].class_index > -1 && ch->lvl[stance_app[stance].class_index] >= stance_app[stance].class_level)
-               legal_stance = FALSE;
-
-            if (!legal_stance && stance_app[stance].class_index2 > -1 && ch->lvl[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
-                legal_stance = TRUE;
-        }
-        else
         {
             if (stance_app[stance].class_index > -1 && ch->lvl[stance_app[stance].class_index] < stance_app[stance].class_level)
                 legal_stance = FALSE;
@@ -194,7 +171,7 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
 
         if (stance_app[stance].class_override > -1)
         {
-            if (ch->lvl[stance_app[stance].class_override] == ch->pcdata->index[0])
+            if (stance_app[stance].class_override == ch->pcdata->order[0])
                 legal_stance = TRUE;
         }
     }

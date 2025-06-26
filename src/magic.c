@@ -590,7 +590,13 @@ void do_cast( CHAR_DATA * ch, char *argument )
       say_spell( ch, sn );
 
    WAIT_STATE( ch, skill_table[sn].beats );
-   cast_chance = ( ( IS_NPC( ch ) ? ch->level : ch->pcdata->learned[sn] ) + ( int_app[get_curr_int( ch )].spell_mod ) );
+   cast_chance = 0;
+   if (IS_NPC(ch) )
+      cast_chance += ch->level;
+   else
+      cast_chance += 75;
+
+   cast_chance += int_app[get_curr_int(ch)].spell_mod;
 
    if( !IS_NPC( ch ) && ( skill_table[sn].flag2 == NORM ) )
    {

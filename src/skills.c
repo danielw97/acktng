@@ -779,7 +779,7 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       strcpy(arg, "enemy");
    }
 
-   if( can_use_skill_message(ch, gsn) )
+   if( !can_use_skill_message(ch, gsn) )
       return;
 
    if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
@@ -792,6 +792,9 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       victim = ch->fighting;
 
    dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 10, get_psuedo_level(ch) * get_curr_str(ch) / 5);
+
+   if (dam < 1)
+      dam = 1;
 
    dam += get_damroll(ch)/2;
 

@@ -625,7 +625,11 @@ void do_hunt( CHAR_DATA * ch, char *argument )
    /*
     * Chance of picking up wrong trail.. (25% for NPC, PC @ normal) 
     */
-   chance = ( IS_NPC( ch ) ? 75 : ch->pcdata->learned[gsn_hunt] );
+   chance = 0;
+
+   if (can_use_skill(ch, gsn_hunt) )
+      chance += 75;
+
    if( !IS_NPC( ch ) && IS_WOLF( ch ) && ( IS_SHIFTED( ch ) || IS_RAGED( ch ) ) )
       chance = ( ( MAX_WOLF_LEVEL - ch->pcdata->generation ) * 4 ) + ch->pcdata->vamp_level;
 

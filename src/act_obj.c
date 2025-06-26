@@ -3437,7 +3437,7 @@ void do_appraise( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_appraise] == 0 )
+   if( !IS_NPC( ch ) && !can_use_skill(ch, gsn_appraise) )
    {
       send_to_char( "You don't know how to appraise items!\n\r", ch );
       return;
