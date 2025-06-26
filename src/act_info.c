@@ -4789,65 +4789,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
    if( argument[0] == '\0' )
    {
-      /*
-       * Display details... 
-       */
-
-      send_to_char( "You can gain levels in:\n\r", ch );
-      any = FALSE;
-
-      for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
-      {
-         if ( !IS_NPC(ch) && ch->pcdata->index[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
-         {
-            any = TRUE;
-            cost = exp_to_level( ch, cnt );
-
-            sprintf( buf, "%s : %d Exp.\n\r", class_table[cnt].who_name, cost );
-            send_to_char( buf, ch );
-         }
-      }
-      for( cnt = 0; cnt < MAX_REMORT; cnt++ )
-      {
-         if( ch->remort[cnt] != -1 && ch->remort[cnt] < MAX_MORTAL )
-         {
-            any = TRUE;
-            cost = exp_to_level_remort( ch, cnt );
-            sprintf( buf, "%s : %d Exp.\n\r", remort_table[cnt].who_name, cost );
-            send_to_char( buf, ch );
-         }
-      }
-      for( cnt = 0; cnt < MAX_CLASS; cnt++)
-      {
-         if( ch->adept[cnt] > 0 && ch->adept[cnt] < MAX_ADEPT )
-         {
-            any = TRUE;
-            cost = exp_to_level_adept( ch );
-            sprintf( buf, "@@W%s@@N: %d Exp.\n\r", adept_table[cnt].who_name, cost );
-            send_to_char( buf, ch );
-         }
-      }
-      if( allow_remort )
-      {
-         any = TRUE;
-         send_to_char( "You can @@mREMORT@@N!!! Type gain <first three letters of the class> you want.\n\r", ch );
-      }
-      if( allow_adept )
-      {
-         any = TRUE;
-         send_to_char( "You can @@WADEPT@@N!!! Type gain <adept abbreviation>!!\n\r", ch );
-      }
-      else
-         send_to_char( "None.\n\r", ch );
-      if( ( IS_VAMP( ch ) ) && ( ch->pcdata->vamp_level < ( MAX_VAMP_LEVEL - ( ch->pcdata->generation / 2 ) ) ) )
-         if( IS_VAMP( ch ) )
-            if( ch->pcdata->vamp_exp >= exp_to_level_vamp( ch->pcdata->vamp_level ) )
-               send_to_char( "@@NYou may gain a @@dVAMPYRE@@N level!!!\n\r", ch );
-      if( ( IS_WOLF( ch ) ) && ( ch->pcdata->vamp_level < ( ( MAX_WOLF_LEVEL + 2 ) - ( ch->pcdata->generation * 2 ) ) ) )
-         if( IS_WOLF( ch ) )
-            if( ch->pcdata->vamp_exp >= exp_to_level_wolf( ch->pcdata->vamp_level ) )
-               send_to_char( "@@NYou may gain a @@bWerewolf@@N level!!!\n\r", ch );
-
+      do_worth(ch, argument);
       return;
    }
 
