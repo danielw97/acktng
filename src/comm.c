@@ -1272,7 +1272,7 @@ void bust_a_prompt( DESCRIPTOR_DATA * d )
             if( adept == TRUE )
                cost = exp_to_level_adept( ch );
 	    else
-	       cost = exp_to_level( ch, cl_index, remort );
+	       cost = exp_to_level( ch, cl_index );
             sprintf( buf2, "%d", UMAX( 0, cost - ch->exp ) );
             i = buf2;
             break;
@@ -1381,7 +1381,7 @@ void bust_a_prompt( DESCRIPTOR_DATA * d )
             if( adept == TRUE )
                cost = exp_to_level_adept( ch );
             else
-               cost = exp_to_level( ch, cl_index, remort );
+               cost = exp_to_level( ch, cl_index );
             sprintf( buf2, "%d", UMAX( 0, cost ) );
             i = buf2;
             break;
