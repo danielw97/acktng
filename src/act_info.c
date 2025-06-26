@@ -4739,6 +4739,12 @@ void do_gain( CHAR_DATA * ch, char *argument )
       return;
    }
 
+   if( argument[0] == '\0' )
+   {
+      do_worth(ch, argument);
+      return;
+   }
+   
    /*
     * Check for mob with act->pac/train 
     */
@@ -4785,12 +4791,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
    {
       allow_adept = TRUE;
       send_to_char("Adept allowed!\n\r",ch);
-   }
-
-   if( argument[0] == '\0' )
-   {
-      do_worth(ch, argument);
-      return;
    }
 
    /*
