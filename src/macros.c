@@ -194,7 +194,7 @@ long exp_to_level_remort( CHAR_DATA * ch, int index )
    if(ch->remort[index] <= 0)
       return 0;
 
-   cost = get_cost_to_level( ch, index, TRUE );
+   cost = get_cost_to_level_remort( ch, index );
 
    return ( cost );
 }
@@ -205,12 +205,8 @@ long exp_to_level( CHAR_DATA * ch, int index )
     * To get remort costs, call with index==5 
     */
 
-   int max_level = 0;
    int mult = 0;
-   int level, next_level_index;
-   int totlevels = 0, diff;
    long cost;
-   int a;
 
    if (IS_NPC(ch))
       return 69;
@@ -225,13 +221,8 @@ long exp_to_level( CHAR_DATA * ch, int index )
          mult = 6;
    else if (index == ch->pcdata->index[4])
          mult = 7;
-   /*
-    * Adjust level to make costs higher 
-    */
 
-   next_level_index = ch->lvl[index];
-
-   cost = get_cost_to_level( ch, index, FALSE );
+   cost = get_cost_to_level( ch, index );
 
    cost *= mult;
 

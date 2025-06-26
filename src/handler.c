@@ -204,35 +204,40 @@ int get_age( CHAR_DATA * ch )
     */
 }
 
-
-long get_cost_to_level( CHAR_DATA *ch, int class, bool remort )
+long get_cost_to_level_remort( CHAR_DATA *ch, int class)
 {
     int base, i;
     bool double_remort = FALSE;
 
-    if (remort)
-      base = ch->remort[class] * ch->remort[class];
-    else
-      base = ch->lvl[class] * ch->lvl[class];
+   base = ch->remort[class] * ch->remort[class];
 
-   if (remort)
+   // Gotta check if double remort
+   for(i = 0; i < MAX_REMORT; i++)
    {
-      // Gotta check if double remort
-      for(i = 0; i < MAX_REMORT; i++)
+      if (i != class && ch->remort[i] > 0)
       {
-         if (i != class && ch->remort[i] > 0)
-         {
-            double_remort = TRUE;
-         }
+         double_remort = TRUE;
       }
    }
 
-   if (!remort)
-      base *= 600;
-   else if (double_remort && remort)
+   if (double_remort)
       base *= 4200; 
    else
       base *= 2400;
+
+   // Edge-case fix
+   base += 350;
+
+   return base;
+}
+
+long get_cost_to_level( CHAR_DATA *ch, int class )
+{
+   int base;
+
+   base = ch->lvl[class] * ch->lvl[class];
+
+   base *= 600;
 
    // Edge-case fix
    base += 350;
