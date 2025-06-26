@@ -185,12 +185,7 @@ long exp_to_level_adept( CHAR_DATA * ch )
 
 long exp_to_level_remort( CHAR_DATA * ch, int index )
 {
-   int max_level = 0;
-   int mult = 0;
-   int level, next_level_index;
-   int totlevels = 0, diff;
    long cost;
-   int a;
 
    if (IS_NPC(ch))
       return 69;
