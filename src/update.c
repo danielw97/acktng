@@ -173,7 +173,7 @@ void init_alarm_handler(  )
 /*
  * Advancement stuff.
  */
-void advance_level( CHAR_DATA * ch, int class, bool show, bool remort, bool adept )
+void advance_level( CHAR_DATA * ch, int class, bool show )
 {
    /*
     * class used instead of ch->class.  -S- 
@@ -189,86 +189,17 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort, bool adep
    int add_hp;
    int add_mana;
    int add_move;
-   int add_prac;
-   int add_bloodlust, add_max_skills;
 
-   /*
-    * title no longer changed..... 
-    */
-   if( class == ADVANCE_WOLF )
-   {
-      add_bloodlust = ( number_range( 1, ( ( MAX_WOLF_LEVEL / 2 ) - ch->pcdata->generation ) ) ) +
-         ( ( ( MAX_WOLF_LEVEL / 2 ) - ch->pcdata->generation ) / 2 );
-      add_prac = number_range( 1, UMAX( 2, ( ( MAX_WOLF_LEVEL / 2 ) - ch->pcdata->generation ) ) );
-      add_max_skills = add_prac;
-
-      ch->pcdata->bloodlust_max += add_bloodlust;
-      ch->pcdata->vamp_pracs += add_prac;
-      ch->pcdata->vamp_skill_max += add_max_skills;
-      sprintf( buf, "@@NYou gain: %d @@rRage Ability@@N, and %d @@bWerewolf Practices. .@@N\n\r", add_bloodlust, add_prac );
-
-
-      send_to_char( buf, ch );
-      return;
-   }
-
-
-   if( ( class == 16 ) )
-   {
-
-      add_bloodlust = UMAX( ( ( MAX_VAMP_LEVEL / 2 ) - ( ch->pcdata->generation / 2 ) ), 1 );
-      add_prac = number_range( 1, UMAX( 2, ( ( MAX_VAMP_LEVEL / 2 ) - ( ch->pcdata->generation ) ) ) );
-      add_max_skills = number_range( 1, UMAX( 2, ( ( MAX_VAMP_LEVEL / 2 ) - ( ch->pcdata->generation ) ) ) );
-
-      ch->pcdata->bloodlust_max += add_bloodlust;
-      ch->pcdata->vamp_pracs += add_prac;
-      ch->pcdata->vamp_skill_max += add_max_skills;
-
-
-      sprintf( buf, "You gain: %d @@eBloodlust@@N, and %d Vampyre Practices. .\n\r", add_bloodlust, add_prac );
-
-
-      send_to_char( buf, ch );
-      return;
-   }
-
-   if ( adept )
-   {
-      add_hp = adept_table[class].hp_gain;
-      add_hp += get_curr_con(ch)/ 2;
-      add_mana = adept_table[class].mana_gain;
-      if (add_mana > 0)
-         add_mana += (get_curr_int(ch)+get_curr_wis(ch))/2;
-      if (ch->adept[class] < 1)
-         ch->adept[class] = 1;
-      else
-         ch->adept[class] += 1;
-   }
-
-   else if ( remort )
-   {
-      add_hp = remort_table[class].hp_gain;
-      add_hp += get_curr_con(ch)/4;
-      add_mana = remort_table[class].mana_gain;;
-      if (add_mana > 0)
-         add_mana += (get_curr_int(ch)+get_curr_wis(ch))/4;
-      if (ch->remort[class] < 0)
-         ch->remort[class] = 1;
-      else
-         ch->remort[class] += 1;
-   }
+   add_hp = class_table[class].hp_gain;
+   add_hp += get_curr_con(ch)/8;
+   add_mana = class_table[class].mana_gain;
+   if (add_mana > 0)
+      add_mana = (get_curr_int(ch)+get_curr_wis(ch))/8;
+   if (ch->lvl[class] < 0)
+      ch->lvl[class] = 1;
    else
-   {
-      add_hp = class_table[class].hp_gain;
-      add_hp += get_curr_con(ch)/8;
-      add_mana = class_table[class].mana_gain;
-      if (add_mana > 0)
-         add_mana = (get_curr_int(ch)+get_curr_wis(ch))/8;
-      if (ch->lvl[class] < 0)
-         ch->lvl[class] = 1;
-      else
-         ch->lvl[class] += 1;
-   }
+      ch->lvl[class] += 1;
+
    add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
 
    add_hp = UMAX( 1, add_hp );
@@ -296,6 +227,138 @@ void advance_level( CHAR_DATA * ch, int class, bool show, bool remort, bool adep
 }
 
 
+void advance_level_remort( CHAR_DATA * ch, int class, bool show )
+{
+   char buf[MAX_STRING_LENGTH];
+   int add_hp;
+   int add_mana;
+   int add_move;
+
+   add_hp = remort_table[class].hp_gain;
+   add_hp += get_curr_con(ch)/4;
+   add_mana = remort_table[class].mana_gain;;
+   if (add_mana > 0)
+      add_mana += (get_curr_int(ch)+get_curr_wis(ch))/4;
+   if (ch->remort[class] < 0)
+      ch->remort[class] = 1;
+   else
+      ch->remort[class] += 1;
+
+   add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
+
+   add_hp = UMAX( 1, add_hp );
+
+   add_mana = UMAX( 0, add_mana );
+   add_move = UMAX( 7, add_move );
+
+   ch->pcdata->mana_from_gain += add_mana;
+   ch->pcdata->hp_from_gain += add_hp;
+   ch->pcdata->move_from_gain += add_move;
+
+   ch->max_hit += add_hp;
+   ch->max_mana += add_mana;
+   ch->max_move += add_move;
+
+   if( !IS_NPC( ch ) )
+      REMOVE_BIT( ch->act, PLR_BOUGHT_PET );
+
+   sprintf( buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana, add_move );
+
+   if( show )
+      send_to_char( buf, ch );
+
+   return;
+}
+
+
+void advance_level_adept( CHAR_DATA * ch, int class, bool show )
+{
+   char buf[MAX_STRING_LENGTH];
+   int add_hp;
+   int add_mana;
+   int add_move;
+
+
+   add_hp = adept_table[class].hp_gain;
+   add_hp += get_curr_con(ch)/ 2;
+   add_mana = adept_table[class].mana_gain;
+   if (add_mana > 0)
+      add_mana += (get_curr_int(ch)+get_curr_wis(ch))/2;
+   if (ch->adept[class] < 1)
+      ch->adept[class] = 1;
+   else
+      ch->adept[class] += 1;
+
+
+   add_move = (get_curr_con( ch ) + get_curr_dex( ch ))/5;
+
+   add_hp = UMAX( 1, add_hp );
+
+   add_mana = UMAX( 0, add_mana );
+   add_move = UMAX( 7, add_move );
+
+   ch->pcdata->mana_from_gain += add_mana;
+   ch->pcdata->hp_from_gain += add_hp;
+   ch->pcdata->move_from_gain += add_move;
+
+   ch->max_hit += add_hp;
+   ch->max_mana += add_mana;
+   ch->max_move += add_move;
+
+   if( !IS_NPC( ch ) )
+      REMOVE_BIT( ch->act, PLR_BOUGHT_PET );
+
+   sprintf( buf, "You gain: %d Hit Points, %d Mana, and %d Movement.\n\r", add_hp, add_mana, add_move );
+
+   if( show )
+      send_to_char( buf, ch );
+
+   return;
+}
+
+void advance_level_vamp( CHAR_DATA * ch)
+{
+   char buf[MAX_STRING_LENGTH];
+   int add_prac;
+   int add_bloodlust, add_max_skills;
+
+   add_bloodlust = UMAX( ( ( MAX_VAMP_LEVEL / 2 ) - ( ch->pcdata->generation / 2 ) ), 1 );
+   add_prac = number_range( 1, UMAX( 2, ( ( MAX_VAMP_LEVEL / 2 ) - ( ch->pcdata->generation ) ) ) );
+   add_max_skills = number_range( 1, UMAX( 2, ( ( MAX_VAMP_LEVEL / 2 ) - ( ch->pcdata->generation ) ) ) );
+
+   ch->pcdata->bloodlust_max += add_bloodlust;
+   ch->pcdata->vamp_pracs += add_prac;
+   ch->pcdata->vamp_skill_max += add_max_skills;
+
+
+   sprintf( buf, "You gain: %d @@eBloodlust@@N, and %d Vampyre Practices. .\n\r", add_bloodlust, add_prac );
+
+
+   send_to_char( buf, ch );
+   return;
+}
+
+
+void advance_level_wolf( CHAR_DATA * ch, int class )
+{
+   char buf[MAX_STRING_LENGTH];
+   int add_prac;
+   int add_bloodlust, add_max_skills;
+
+   add_bloodlust = ( number_range( 1, ( ( MAX_WOLF_LEVEL / 2 ) - ch->pcdata->generation ) ) ) +
+      ( ( ( MAX_WOLF_LEVEL / 2 ) - ch->pcdata->generation ) / 2 );
+   add_prac = number_range( 1, UMAX( 2, ( ( MAX_WOLF_LEVEL / 2 ) - ch->pcdata->generation ) ) );
+   add_max_skills = add_prac;
+
+   ch->pcdata->bloodlust_max += add_bloodlust;
+   ch->pcdata->vamp_pracs += add_prac;
+   ch->pcdata->vamp_skill_max += add_max_skills;
+   sprintf( buf, "@@NYou gain: %d @@rRage Ability@@N, and %d @@bWerewolf Practices. .@@N\n\r", add_bloodlust, add_prac );
+
+
+   send_to_char( buf, ch );
+   return;
+}
 
 void gain_exp( CHAR_DATA * ch, long_int gain )
 {

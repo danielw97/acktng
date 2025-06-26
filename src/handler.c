@@ -189,9 +189,6 @@ int my_get_hours( CHAR_DATA * ch )
    return hrs;
 }
 
-
-
-
 /*
  * Retrieve a character's age.
  */
