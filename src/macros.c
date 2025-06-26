@@ -179,11 +179,28 @@ long exp_to_level_adept( CHAR_DATA * ch )
    return exp * 10;
 }
 
-
-
-long exp_to_level( CHAR_DATA * ch, int index, bool remort )
+long exp_to_level_remort( CHAR_DATA * ch, int index )
 {
+   int max_level = 0;
+   int mult = 0;
+   int level, next_level_index;
+   int totlevels = 0, diff;
+   long cost;
+   int a;
 
+   if (IS_NPC(ch))
+      return 69;
+
+   if(ch->remort[index] <= 0)
+      return 0;
+
+   cost = get_cost_to_level( ch, index, remort );
+
+   return ( cost );
+}
+
+long exp_to_level( CHAR_DATA * ch, int index )
+{
    /*
     * To get remort costs, call with index==5 
     */
@@ -197,10 +214,6 @@ long exp_to_level( CHAR_DATA * ch, int index, bool remort )
 
    if (IS_NPC(ch))
       return 69;
-
-   if( remort && ( ch->remort[index] <= 0 ) )
-      return 0;
-
 
    for( a = 0; a < MAX_CLASS; a++ )
       if( ch->lvl[a] > max_level )
@@ -221,36 +234,23 @@ long exp_to_level( CHAR_DATA * ch, int index, bool remort )
    else if (index == ch->pcdata->index[4])
          mult = 7;
 
-   if( remort )
-   {
-      mult = 23;  /* i.e. remort class */
-      level = UMAX( 0, ch->remort[index] );
-   }
-   else
-      level = UMAX( 0, ch->lvl[index] );
+   level = UMAX( 0, ch->lvl[index] );
 
    /*
     * Adjust level to make costs higher 
     */
 
-   for( a = 0; a < MAX_REMORT; a++ )
+   for( a = 0; a < MAX_CLASS; a++ )
    {
-      if (MAX_REMORT < MAX_CLASS)
-         totlevels += ch->lvl[a];
-
-      if( ch->remort[a] > 0 )
-         totlevels += ch->remort[a];
+      totlevels += ch->lvl[a];
    }
-   if( !remort )
-      next_level_index = ch->lvl[index];
-   else
-      next_level_index = UMIN( ch->remort[index] + 20, 79 );
+
+   next_level_index = ch->lvl[index];
 
    if( next_level_index < 0 )
       next_level_index = 0;
 
    cost = get_cost_to_level( ch, index, remort );
-
 
    /*
     * Now multiply by a factor dependant on total number of levels 
@@ -265,13 +265,12 @@ long exp_to_level( CHAR_DATA * ch, int index, bool remort )
     * Discourage uneven levelling 
     */
 
-
-   cost *= ( diff / 10 );
+   cost = cost * diff / 10;
    /*
     * REALLY discourage uneven levelling :P  
     */
-   if( !remort && ( ( ch->level - ch->lvl[index] ) > 25 ) )
-      cost *= ( diff / 7 );
+   if( ch->level - ch->lvl[index] > 25 )
+      cost = cost * diff / 7;
 
 
    /*

@@ -4810,7 +4810,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
          if ( ch->lvl[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
          {
             any = TRUE;
-            cost = exp_to_level( ch, cnt, FALSE );
+            cost = exp_to_level( ch, cnt );
 
             sprintf( buf, "%s : %d Exp.\n\r", class_table[cnt].who_name, cost );
             send_to_char( buf, ch );
@@ -4821,7 +4821,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
          if( ch->remort[cnt] != -1 && ch->remort[cnt] < MAX_MORTAL )
          {
             any = TRUE;
-            cost = exp_to_level( ch, cnt, TRUE );
+            cost = exp_to_level_remort( ch, cnt );
             sprintf( buf, "%s : %d Exp.\n\r", remort_table[cnt].who_name, cost );
             send_to_char( buf, ch );
          }
@@ -4983,7 +4983,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
             return;
          }
       }
-      cost = exp_to_level( ch, c, TRUE );
+      cost = exp_to_level_remort( ch, c );
    }
    else if( adept )
    {
@@ -4999,7 +4999,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
        send_to_char("You cannot level in this class\n\r", ch);
        return;
      }
-      cost = exp_to_level( ch, c, FALSE );
+      cost = exp_to_level( ch, c );
    }
 
    if( vamp )
@@ -5529,7 +5529,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
          if (ch->pcdata->index[cnt] > -1)
          {
            any = TRUE;
-           cost = exp_to_level( ch, cnt, FALSE );
+           cost = exp_to_level( ch, cnt );
 
            sprintf( buf, "%-14s  %9d %9d.\n\r", class_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
            send_to_char( buf, ch );
@@ -5545,7 +5545,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
       if( ch->remort[cnt] != -1 && ch->remort[cnt] < LEVEL_HERO - 1 )
       {
          any = TRUE;
-         cost = exp_to_level( ch, cnt, TRUE );
+         cost = exp_to_level_remort( ch, cnt );
          sprintf( buf, "%-14s  %9d %9d.\n\r", remort_table[cnt].who_name, cost, UMAX( 0, cost - ch->exp ) );
          send_to_char( buf, ch );
       }
