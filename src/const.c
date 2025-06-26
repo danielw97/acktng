@@ -3242,7 +3242,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ADEPT, NORM,
     "poison:nightshade", {182, 182, 2, 182, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_poison_shade, SLOT( 0 ), 80, 4,
+    &gsn_poison_nightshade, SLOT( 0 ), 80, 4,
     "Poison Arsenic", "@@N$nFeels much better!",
     ""},
 
