@@ -2151,6 +2151,7 @@ void do_who(CHAR_DATA *ch, char *argument)
       for (d = first_desc; d != NULL; d = d->next)
       {
          CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character class = class_table[wch->class].who_name;
+         char const *class;
 
          if (str_cmp(wch->pcdata->who_name, "off"))
             class = wch->pcdata->who_name;
