@@ -194,7 +194,7 @@ long exp_to_level_remort( CHAR_DATA * ch, int index )
    if(ch->remort[index] <= 0)
       return 0;
 
-   cost = get_cost_to_level( ch, index, remort );
+   cost = get_cost_to_level( ch, index, TRUE );
 
    return ( cost );
 }
@@ -250,7 +250,7 @@ long exp_to_level( CHAR_DATA * ch, int index )
    if( next_level_index < 0 )
       next_level_index = 0;
 
-   cost = get_cost_to_level( ch, index, remort );
+   cost = get_cost_to_level( ch, index, FALSE );
 
    /*
     * Now multiply by a factor dependant on total number of levels 
