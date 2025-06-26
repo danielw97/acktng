@@ -4123,12 +4123,6 @@ void do_spells( CHAR_DATA * ch, char *argument )
       if( skill_table[sn].name == NULL )
          break;
 
-      if (!IS_VAMP(ch) && skill_table[sn].flag2 == VAMP )
-         continue;
-         
-      if (!IS_WOLF(ch) && skill_table[sn].flag2 == WOLF )
-         continue;
-
       if (!can_use_skill(ch, sn))
          continue;
 

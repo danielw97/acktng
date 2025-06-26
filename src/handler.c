@@ -699,6 +699,12 @@ bool can_use_skill( CHAR_DATA *ch, int gsn)
    {
       return TRUE;
    }
+   
+   if (!IS_VAMP(ch) && skill_table[gsn].flag2 == VAMP )
+      return FALSE;
+      
+   if (!IS_WOLF(ch) && skill_table[gsn].flag2 == WOLF )
+      return FALSE;
 
    for( cnt = 0; cnt < MAX_CLASS; cnt++ )
    {
