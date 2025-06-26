@@ -255,9 +255,7 @@ long exp_to_level( CHAR_DATA * ch, int index )
    /*
     * Now multiply by a factor dependant on total number of levels 
     */
-   diff = ( totlevels / MAX_CLASS ) - ( level + 20 );
-   if( index == 5 )
-      diff -= 30;
+   diff = ( totlevels / MAX_PC_CLASS ) - ( level + 20 );
    if( diff < 10 )
       diff = 10;
 
@@ -271,7 +269,6 @@ long exp_to_level( CHAR_DATA * ch, int index )
     */
    if( ch->level - ch->lvl[index] > 25 )
       cost = cost * diff / 7;
-
 
    /*
     * Now multiply by order index/remort index...other factors will come here later, like race mod, etc. 
