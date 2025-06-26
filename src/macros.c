@@ -206,6 +206,7 @@ long exp_to_level( CHAR_DATA * ch, int index )
     */
 
    int mult = 0;
+   int diff = 0;
    long cost;
 
    if (IS_NPC(ch))
@@ -224,7 +225,13 @@ long exp_to_level( CHAR_DATA * ch, int index )
 
    cost = get_cost_to_level( ch, index );
 
-   int diff = (ch->level - ch->lvl[index]);
+   for(int i = 0; i < MAX_CLASS; i++)
+   {
+      if (ch->lvl[i] > diff)
+         diff = ch->lvl[i];
+   }
+
+   int diff = (diff - ch->lvl[index]);
 
    cost += cost * (diff / 10);
 
