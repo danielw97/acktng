@@ -234,6 +234,10 @@ long exp_to_level( CHAR_DATA * ch, int index )
 
    cost = cost * mult / 2;
 
+   char buf[MSL]
+   sprintf(buf, "Calculated xp is %d, mult is %d, diff is %d, index is %d\n\r", cost, mult, diff, index);
+   send_to_char(buf,ch);
+
    return ( cost );
 }
 
