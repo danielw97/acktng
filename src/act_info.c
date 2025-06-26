@@ -2126,7 +2126,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 
    for (int i = 0; i < 4; i++)
    {
-      switch (list)
+      switch (i)
       {
       case 0:
          safe_strcat(MAX_STRING_LENGTH, buf,
