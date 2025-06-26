@@ -50,10 +50,11 @@ int mana_cost( CHAR_DATA * ch, int sn )
    int cost;
    int class = 0;
 
+   if (skill_table[sn].min_mana < 1)
+      return 0;
+
    if( ( !can_cast ) && ( IS_NPC( ch ) ) )
-   {
       return 1000;
-   }
    else if( ( !can_cast ) && ( ( !IS_NPC( ch ) ) && ( !is_name( skill_table[sn].name, race_table[ch->race].skill ) ) ) )
       return 1000;
 
