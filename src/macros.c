@@ -208,15 +208,15 @@ long exp_to_level( CHAR_DATA * ch, int index )
    if (IS_NPC(ch))
       return 69;
 
-   if (index == ch->pcdata->index[0])
+   if (index == ch->pcdata->order[0])
          mult = 3;
-   else if (index == ch->pcdata->index[1])
+   else if (index == ch->pcdata->order[1])
          mult = 4;
-   else if (index == ch->pcdata->index[2])
+   else if (index == ch->pcdata->order[2])
          mult = 5;
-   else if (index == ch->pcdata->index[3])
+   else if (index == ch->pcdata->order[3])
          mult = 6;
-   else if (index == ch->pcdata->index[4])
+   else if (index == ch->pcdata->order[4])
          mult = 7;
 
    cost = get_cost_to_level( ch, index );
