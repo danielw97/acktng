@@ -861,6 +861,7 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       act( actbuf, ch, victim, NULL, TO_VICT );
       sprintf( actbuf, "You try to %s $N, but miss!", skill_table[gsn].name );
       act( actbuf, ch, NULL, victim, TO_CHAR );
+      set_fighting(victim, ch, TRUE);
    }
 }
 
