@@ -4781,7 +4781,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
       allow_remort = TRUE;
 
 /* third case..can adept */
-   if (remorts_at_max == 2 && !is_adept(ch))
+   if (remorts_at_max >= 2 && !is_adept(ch))
    {
       allow_adept = TRUE;
       send_to_char("Adept allowed!\n\r",ch);
