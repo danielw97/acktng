@@ -2150,6 +2150,14 @@ void do_who(CHAR_DATA *ch, char *argument)
       }
       for (d = first_desc; d != NULL; d = d->next)
       {
+         if (i == 0 && ch->level <= MAX_MORTAL)
+            continue;
+         if (i == 1 && !is_adept(ch))
+            continue;
+         if (i == 2 && (!is_remort(ch) || is_adept(ch)))
+            continue;
+         if (i == 3 && (is_remort(ch) || is_adept(ch)))
+            continue;
          CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
          char const *class;
 
