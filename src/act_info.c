@@ -4798,7 +4798,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
       for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
       {
-         if ( ch->index[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
+         if ( !IS_NPC(ch) && ch->pcdata->index[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
          {
             any = TRUE;
             cost = exp_to_level( ch, cnt );
