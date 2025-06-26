@@ -3225,7 +3225,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "poison:quinine", {182, 182, 56, 182, 182, 182,
                        182, 182, 21, 182, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_poison_quinine, SLOT( 673 ), 80, 4,
+    &gsn_poison_quinine, SLOT( 673 ), 80, 12,
     "Poison Quinine", "@@N$n feels much better!",
     ""},
 
@@ -3234,7 +3234,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "poison:arsenic", {182, 182, 66, 182, 182, 182,
                        182, 182, 28, 182, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_poison_arsenic, SLOT( 674 ), 80, 4,
+    &gsn_poison_arsenic, SLOT( 674 ), 80, 12,
     "Poison Arsenic", "@@N$nFeels much better!",
     ""},
 
@@ -3242,7 +3242,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ADEPT, NORM,
     "poison:nightshade", {182, 182, 2, 182, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_poison_nightshade, SLOT( 0 ), 80, 4,
+    &gsn_poison_nightshade, SLOT( 0 ), 80, 12,
     "Poison Nightshade", "@@N$nFeels much better!",
     ""},
 
