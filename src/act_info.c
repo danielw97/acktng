@@ -4123,16 +4123,17 @@ void do_spells( CHAR_DATA * ch, char *argument )
       if( skill_table[sn].name == NULL )
          break;
 
+      if (!IS_VAMP(ch) && skill_table[sn].flag2 == VAMP )
+         continue;
+         
+      if (!IS_WOLF(ch) && skill_table[sn].flag2 == WOLF )
+         continue;
+
       if (!can_use_skill(ch, sn))
          continue;
 
       if (mana_cost(ch, sn) < 1)
          continue;
-
-      /*
-       * if ( skill_table[sn].skill_level[ch->class] > LEVEL_HERO ) 
-       * continue; 
-       */
 
       sprintf( buf, "%18s %3dpts ", skill_table[sn].name, mana_cost( ch, sn ) );
       safe_strcat( MAX_STRING_LENGTH, buf1, buf );
