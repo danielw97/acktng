@@ -218,6 +218,8 @@ long exp_to_level( CHAR_DATA * ch, int index )
          mult = 6;
    else if (index == ch->pcdata->order[4])
          mult = 7;
+   else
+         mult = 69;
 
    cost = get_cost_to_level( ch, index );
 
