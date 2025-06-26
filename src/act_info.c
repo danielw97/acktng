@@ -4802,7 +4802,7 @@ void do_gain( CHAR_DATA * ch, char *argument )
 
       for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
       {
-         if ( ch->lvl[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
+         if ( ch->index[cnt] != -1 && ch->lvl[cnt] < MAX_MORTAL )
          {
             any = TRUE;
             cost = exp_to_level( ch, cnt );
@@ -4841,8 +4841,6 @@ void do_gain( CHAR_DATA * ch, char *argument )
          any = TRUE;
          send_to_char( "You can @@WADEPT@@N!!! Type gain <adept abbreviation>!!\n\r", ch );
       }
-      if( any )
-         send_to_char( ".\n\r", ch );
       else
          send_to_char( "None.\n\r", ch );
       if( ( IS_VAMP( ch ) ) && ( ch->pcdata->vamp_level < ( MAX_VAMP_LEVEL - ( ch->pcdata->generation / 2 ) ) ) )
@@ -5524,7 +5522,10 @@ void do_worth( CHAR_DATA * ch, char *argument )
       for(int i = 0; i < MAX_PC_CLASS; i++)
       {
          if (ch->pcdata->order[i] == cnt)
+         {
             show = TRUE;
+            break;
+         }
       }
       if(show && ch->lvl[cnt] < MAX_LEVEL )
       {
@@ -5550,9 +5551,7 @@ void do_worth( CHAR_DATA * ch, char *argument )
       }
    }
 
-   if( any )
-      send_to_char( "\n\r", ch );
-   else
+   if( !any )
       send_to_char( "None to show!!\n\r", ch );
 
    return;
