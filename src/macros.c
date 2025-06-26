@@ -45,7 +45,7 @@ void reset_gain_stats( CHAR_DATA * ch )
    for(int i = 0; i < MAX_CLASS; i++)
    {
       curr = ch->lvl[i];
-      ch->lvl[i] = 0;
+      ch->lvl[i] = -1;
       for(int j = 0; j < curr; j++)
       {
          advance_level(ch, i, FALSE);
@@ -55,7 +55,7 @@ void reset_gain_stats( CHAR_DATA * ch )
    for(int i = 0; i < MAX_REMORT; i++)
    {
       curr = ch->remort[i];
-      ch->remort[i] = 0;
+      ch->remort[i] = -1;
       for(int j = 0; j < curr; j++)
       {
          advance_level_remort(ch, i, FALSE);
@@ -65,7 +65,7 @@ void reset_gain_stats( CHAR_DATA * ch )
    for(int i = 0; i < MAX_CLASS; i++)
    {
       curr = ch->adept[i];
-      ch->adept[i] = 0;
+      ch->adept[i] = -1;
       for(int j = 0; j < curr; j++)
       {
          advance_level_adept(ch, i, FALSE);
