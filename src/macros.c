@@ -215,14 +215,6 @@ long exp_to_level( CHAR_DATA * ch, int index )
    if (IS_NPC(ch))
       return 69;
 
-   for( a = 0; a < MAX_CLASS; a++ )
-      if( ch->lvl[a] > max_level )
-         max_level = ch->lvl[a];
-
-/*  Okay, here, we are setting up a cheat to have float mulitpliers..we will devide the total exp by 4 to get
-      the proper values later.  */
-
-
    if (index == ch->pcdata->index[0])
          mult = 3;
    else if (index == ch->pcdata->index[1])
@@ -233,50 +225,15 @@ long exp_to_level( CHAR_DATA * ch, int index )
          mult = 6;
    else if (index == ch->pcdata->index[4])
          mult = 7;
-
-   level = UMAX( 0, ch->lvl[index] );
-
    /*
     * Adjust level to make costs higher 
     */
 
-   for( a = 0; a < MAX_CLASS; a++ )
-   {
-      totlevels += ch->lvl[a];
-   }
-
    next_level_index = ch->lvl[index];
 
-   if( next_level_index < 0 )
-      next_level_index = 0;
+   cost = get_cost_to_level( ch, index, FALSE );
 
-   cost = get_cost_to_level( ch, index, remort );
-
-   /*
-    * Now multiply by a factor dependant on total number of levels 
-    */
-   diff = ( totlevels / MAX_PC_CLASS ) - ( level + 20 );
-   if( diff < 10 )
-      diff = 10;
-
-   /*
-    * Discourage uneven levelling 
-    */
-
-   cost = cost * diff / 10;
-   /*
-    * REALLY discourage uneven levelling :P  
-    */
-   if( ch->level - ch->lvl[index] > 25 )
-      cost = cost * diff / 7;
-
-   /*
-    * Now multiply by order index/remort index...other factors will come here later, like race mod, etc. 
-    */
    cost *= mult;
-/* now refudge the order multiplier... divide by some factor..6 works right now..  */
-
-   cost /= 5.4;
 
    return ( cost );
 }
