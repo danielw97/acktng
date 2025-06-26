@@ -248,8 +248,9 @@ long get_cost_to_level( CHAR_DATA *ch, int class )
    return get_racial_penalty_to_level( cost, ch->race, class);
 }
 
-int get_racial_penalty_to_level( int cost, int race, int class )
+int get_racial_penalty_to_level( int base, int race, int class )
 {
+   int cost = base;
    int i;
 
    for(i = 0; i < MAX_CLASS, i++)
