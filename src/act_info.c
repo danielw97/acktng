@@ -2163,9 +2163,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 
          class = class_table[wch->class].who_name;
 
-         if (str_cmp(wch->pcdata->who_name, "off"))
-            class = wch->pcdata->who_name;
-         else
+         if(ch->level > MAX_MORTAL)
          {
             switch (wch->level)
             {
@@ -2188,8 +2186,7 @@ void do_who(CHAR_DATA *ch, char *argument)
                break;
             }
          }
-
-         if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
+         else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
             sprintf(buf3, "   AMBASSADOR  ");
          }
