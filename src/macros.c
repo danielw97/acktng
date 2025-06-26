@@ -224,6 +224,10 @@ long exp_to_level( CHAR_DATA * ch, int index )
 
    cost = get_cost_to_level( ch, index );
 
+   int diff = (ch->level - ch->lvl[index]);
+
+   cost = cost * diff / 10;
+
    cost *= mult;
 
    return ( cost );

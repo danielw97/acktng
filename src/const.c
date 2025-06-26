@@ -1085,7 +1085,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "!Calm!",
     ""},
 
-
    {
     MORTAL, NORM,
     "cause critical", {182, 58, 182, 182, 182, 182},
