@@ -3207,8 +3207,34 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "black curse", {182, 182, 182, 182, 65, 182,
                     182, 182, 182, 182, 65, 182},
     spell_black_curse, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    NULL, SLOT( 671 ), 120, 12,
+    NULL, SLOT( 0 ), 120, 12,
     "Black Curse", "!Black Curse!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "spirit curse", {182, 182, 182, 182, 77, 182,
+                     182, 182, 182, 182, 77, 182},
+    spell_spirit_curse, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 0 ), 120, 12,
+    "Spirit Curse", "!Spirit Curse!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "rictus curse", {182, 182, 182, 182, 100, 182,
+                     182, 182, 182, 182, 100, 182},
+    spell_rictus_curse, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 0 ), 120, 12,
+    "Rictus Curse", "!Rictus Curse!",
+    ""},
+
+   {
+    ADEPT, NORM,
+    "Kinetic Reversion", {182, 182, 182, 182, 2, 182},
+    spell_kinetic_reversion, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 0 ), 120, 12,
+    "Kinetic Reversion", "!Kinetic Reversion!",
     ""},
 
    {

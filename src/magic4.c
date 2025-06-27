@@ -245,6 +245,81 @@ bool spell_black_curse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * 
    return TRUE;
 }
 
+bool spell_spirit_curse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   CHAR_DATA *victim = ( CHAR_DATA * ) vo;
+   AFFECT_DATA af;
+
+   if( IS_AFFECTED( victim, AFF_REMORT_CURSE ) )
+   {
+      send_to_char( "They are already weakened!\n\r", ch );
+      return FALSE;
+   }
+   af.type = sn;
+   af.duration = 2 * ( level / 8 );
+   af.location = APPLY_SPELLPOWER;
+   af.modifier = -1 * get_psuedo_level( ch );
+   af.bitvector = AFF_REMORT_CURSE;
+   af.caster = ch;
+   affect_to_char( victim, &af );
+
+   af.location = APPLY_DOT;
+   af.modifier = get_psuedo_level( ch );
+   affect_to_char( victim, &af );
+
+   send_to_char( "@@RA Cloud of @@dDespair@@R washes over you.@@N\n\r", victim );
+   if( ch != victim )
+      send_to_char( "Ok.\n\r", ch );
+   return TRUE;
+}
+
+bool spell_rictus_curse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   CHAR_DATA *victim = ( CHAR_DATA * ) vo;
+   AFFECT_DATA af;
+
+   if( IS_AFFECTED( victim, AFF_REMORT_CURSE ) )
+   {
+      send_to_char( "They are already weakened!\n\r", ch );
+      return FALSE;
+   }
+   af.type = sn;
+   af.modifier = -1 * get_psuedo_level( ch );
+   af.bitvector = AFF_REMORT_CURSE;
+   af.caster = ch;
+   af.location = APPLY_DOT;
+   af.modifier = get_spellpower(ch)*2 + get_psuedo_level( ch )*3;
+   affect_to_char( victim, &af );
+
+   send_to_char( "@@RA Cloud of @@dDespair@@R washes over you.@@N\n\r", victim );
+   if( ch != victim )
+      send_to_char( "Ok.\n\r", ch );
+   return TRUE;
+}
+
+bool spell_kinetic_reversion( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
+{
+   CHAR_DATA *victim = ( CHAR_DATA * ) vo;
+   AFFECT_DATA af;
+
+   if( IS_AFFECTED( victim, AFF_REMORT_CURSE ) )
+   {
+      send_to_char( "They are already weakened!\n\r", ch );
+      return FALSE;
+   }
+   af.type = sn;
+   af.modifier = -1 * get_psuedo_level( ch );
+   af.bitvector = AFF_REMORT_CURSE;
+   af.caster = ch;
+   af.location = APPLY_DOT;
+   af.modifier = get_spellpower(ch)*3 + get_psuedo_level( ch )*5;
+   affect_to_char( victim, &af );
+
+   send_to_char( "@@RA Cloud of @@dDespair@@R washes over you.@@N\n\r", victim );
+   if( ch != victim )
+      send_to_char( "Ok.\n\r", ch );
+   return TRUE;
+}
 
 bool spell_cloak_misery( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
 {

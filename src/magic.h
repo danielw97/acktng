@@ -306,6 +306,9 @@ DECLARE_SPELL_FUN( spell_holy_wrath );
 DECLARE_SPELL_FUN( spell_wraith_touch );
 DECLARE_SPELL_FUN( spell_thought_vise );  /* 670 */
 DECLARE_SPELL_FUN( spell_black_curse );
+DECLARE_SPELL_FUN( spell_spirit_curse );
+DECLARE_SPELL_FUN( spell_rictus_curse );
+DECLARE_SPELL_FUN( spell_kinetic_reversion );
 DECLARE_SPELL_FUN( spell_cloak_misery );
 DECLARE_SPELL_FUN( spell_sonic_blast );
 DECLARE_SPELL_FUN( spell_mystical_focus );   /* 676 */

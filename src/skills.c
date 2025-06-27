@@ -986,7 +986,7 @@ void do_warcry( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( can_use_skill(ch, gsn_warcry) )
+   if( !can_use_skill(ch, gsn_warcry) )
    {
       send_to_char( "You don't know how to use this skill!\n\r", ch );
       return;
@@ -1356,6 +1356,9 @@ void do_stun( CHAR_DATA * ch, char *argument )
 
 stun( CHAR_DATA *ch, CHAR_DATA *victim )
 {
+   if (ch == NULL || victim == NULL)
+      return;
+
    /*if( ( number_percent(  ) + number_percent(  ) ) < ( chance + chance2 ) )
    {*/
       /*
@@ -1365,9 +1368,7 @@ stun( CHAR_DATA *ch, CHAR_DATA *victim )
       act( "$n slams into you, leaving you stunned.", ch, NULL, victim, TO_VICT );
       act( "$n slams into $N, leaving $M stunned.", ch, NULL, victim, TO_NOTVICT );
 
-      victim->stunTimer += number_range( 1, get_psuedo_level( ch ) / 30 );
-      if( ch->remort[CLASS_MON] > 40 )
-         victim->stunTimer += number_range( 1, 2 );
+      victim->stunTimer += number_range( 2,4 );
 
    /*}
    else
@@ -1385,7 +1386,7 @@ stun( CHAR_DATA *ch, CHAR_DATA *victim )
 
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
-   int chance = 70;
+   int chance = 80;
 
    if (gsn == gsn_poison_quinine || gsn == gsn_poison_arsenic)
    {
@@ -1436,25 +1437,25 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
          return;
 
       if (ch->combo[i] == gsn_punch)
-         punch_cnt += 22;
+         punch_cnt += 20;
 
       if (ch->combo[i] == gsn_knee)
-         knee_cnt += 22;
+         knee_cnt += 20;
 
       if (ch->combo[i] == gsn_headbutt)
-         headbutt_cnt += 22;
+         headbutt_cnt += 20;
 
       if (ch->combo[i] == gsn_kick)
-         kick_cnt += 22;
+         kick_cnt += 20;
 
       if (ch->combo[i] == gsn_disarm)
-         disarm_cnt += 22;
+         disarm_cnt += 20;
 
       if (ch->combo[i] == gsn_dirt)
-         dirt_cnt += 22;
+         dirt_cnt += 20;
 
       if (ch->combo[i] == gsn_bash)
-         bash_cnt += 22;
+         bash_cnt += 20;
    }
 
    if (ch->combo[0] != ch->combo[1] && ch->combo[1] != ch->combo[2] && ch->combo[2] != ch->combo[3] && ch->combo[3] != -1)
@@ -1470,6 +1471,11 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
      for(int i = 0; i < max_attacks; i++)
      {
+         if (i == 0 && number_percent() < 30)
+            max_attacks++;
+         if (number_percent() < 25)
+            max_attacks++;
+
          int roll = number_percent();
          if(roll < punch_cnt)
             do_punch(ch, "enemy");
@@ -1485,7 +1491,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
             do_dirt(ch, "enemy");
          else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt+bash_cnt)
             do_bash(ch, "enemy");
-         else if (roll < 97)
+         else if (roll < 95)
             stun(ch, ch->fighting);
          else
             max_attacks += 2;
