@@ -161,12 +161,6 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    free_string( corpse->description );
    corpse->description = str_dup( buf );
    OREF( obj_next, OBJ_NEXTCONTENT );
-   if(number_percent < 101)
-   {
-      autogen = generate_item(ch->level-10);
-      obj_to_room( create_object( get_obj_index( OBJ_VNUM_MUSHROOM ), 0 ), ch->in_room );
-      obj_to_obj( autogen, corpse );
-   }
    for( obj = ch->first_carry; obj != NULL; obj = obj_next )
    {
       obj_next = obj->next_in_carry_list;
@@ -184,6 +178,9 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    }
    OUREF( obj_next );
 
+      autogen = generate_item(ch->level-10);
+      obj_to_room( create_object( get_obj_index( OBJ_VNUM_MUSHROOM ), 0 ), ch->in_room );
+      obj_to_obj( autogen, corpse );
    if( !IS_NPC( ch ) )
    {
       if( ( IS_SET( ch->pcdata->pflags, PFLAG_PKOK ) )
