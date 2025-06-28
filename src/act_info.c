@@ -2019,6 +2019,7 @@ void do_who(CHAR_DATA *ch, char *argument)
    bool idle = FALSE, invis = FALSE, wanted = FALSE;
    bool cangroup = FALSE;
    int stop_counter = 0;
+   int player_cnt = 0;
    bool print = FALSE;
 
    /*
@@ -2149,6 +2150,8 @@ void do_who(CHAR_DATA *ch, char *argument)
          if (i == 3 && (is_remort(wch) || is_adept(wch) || wch->level > MAX_MORTAL))
             continue;
          class = class_table[wch->class].who_name;
+
+         player_cnt++;
 
          if (!print)
          {
@@ -2396,7 +2399,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 
    if (true_cnt > max_players)
       max_players = true_cnt;
-   sprintf(buf4, "(%d Player%s)  KEY: (A)fk  (B)uilding  (*)Clan Boss  (P)kok  (W)riting", nMatch, nMatch == 1 ? "" : "s");
+   sprintf(buf4, "(%d Player%s)  KEY: (A)fk  (B)uilding  (*)Clan Boss  (P)kok  (W)riting", player_cnt, player_cnt == 1 ? "" : "s");
    sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 78));
    safe_strcat(MAX_STRING_LENGTH, buf, buf2);
    sprintf(buf4, " (L) Clan Leader  (!) Clan Armourer ");
@@ -2411,7 +2414,7 @@ void do_who(CHAR_DATA *ch, char *argument)
    }
 
    sprintf(buf4, "There have been a maximum of %d player%s logged on this session",
-           max_players, max_players == 1 ? "" : "s");
+           player_cnt, player_cnt == 1 ? "" : "s");
    sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 78));
    safe_strcat(MAX_STRING_LENGTH, buf, buf2);
    safe_strcat(MAX_STRING_LENGTH, buf,
