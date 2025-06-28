@@ -103,12 +103,6 @@ char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort)
    if ((IS_AFFECTED(ch, AFF_DETECT_MAGIC) || item_has_apply(ch, ITEM_APPLY_DET_MAG)) && IS_OBJ_STAT(obj, ITEM_MAGIC))
       safe_strcat(MAX_STRING_LENGTH, buf, "(Magical) ");
 
-   if (IS_OBJ_STAT(obj, ITEM_GLOW))
-      safe_strcat(MAX_STRING_LENGTH, buf, "(Glowing) ");
-
-   if (IS_OBJ_STAT(obj, ITEM_HUM))
-      safe_strcat(MAX_STRING_LENGTH, buf, "(Humming) ");
-
    if (fShort)
    {
       if (obj->short_descr != NULL)
@@ -2139,6 +2133,9 @@ void do_who(CHAR_DATA *ch, char *argument)
       {
          CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
          char const *class;
+
+         if (wch == NULL)
+            continue;
 
          if (i == 0 && wch->level <= MAX_MORTAL)
             continue;
