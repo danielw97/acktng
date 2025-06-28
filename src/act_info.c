@@ -1999,6 +1999,7 @@ void do_who(CHAR_DATA *ch, char *argument)
    char buf3[MAX_STRING_LENGTH * 4];
    char buf4[MAX_STRING_LENGTH * 4];
    char fgs[MAX_STRING_LENGTH * 4];
+   char tierheader[MSL];
    char clan_job[MAX_STRING_LENGTH];
    int iClass;
    int iLevelLower;
@@ -2018,6 +2019,7 @@ void do_who(CHAR_DATA *ch, char *argument)
    bool idle = FALSE, invis = FALSE, wanted = FALSE;
    bool cangroup = FALSE;
    int stop_counter = 0;
+   bool print = false;
 
    /*
     * Set default arguments.
@@ -2119,40 +2121,20 @@ void do_who(CHAR_DATA *ch, char *argument)
 
    sprintf(buf, "WHO Listing: " mudnamecolor "\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "@@R+-----------------------------------------------------------------------------+\n\r");
+               "@@R+--------------------------------------------------------------------------------+\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@dWi Pr Wl Sw Eg Br@@R                                                           |\n\r");
+               "| @@dWi Pr Wl Sw Eg Br@@R                                                              |\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@mSo Pa An Kn Ne Mo@@R                                                           |\n\r");
+               "| @@mSo Pa An Kn Ne Mo@@R                                                              |\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "| @@bMa Cl Th Wa Ps Pu @@eRace Clan  ABJPW    Player	Title		      @@R(flags) @@R|\n\r");
+               "| @@bMa Cl Th Wa Ps Pu @@eRace Clan  ABJPW    Player	Title	              @@R(flags) @@R|\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "|---------------------------------+-------------------------------------------|\n\r");
+               "|------------------------------------+-------------------------------------------|\n\r");
 
    for (int i = 0; i < 4; i++)
    {
-      switch (i)
-      {
-      case 0:
-         safe_strcat(MAX_STRING_LENGTH, buf,
-                     "@@R|---------------------------------|----------@@lImmortals@@R------------------------|@@g\n\r");
-         break;
+      print = FALSE;
 
-      case 1:
-         safe_strcat(MAX_STRING_LENGTH, buf,
-                     "@@R|---------------------------------|------------@@WAdepts@@R-------------------------|@@g\n\r");
-         break;
-
-      case 2:
-         safe_strcat(MAX_STRING_LENGTH, buf,
-                     "@@R|---------------------------------|----------@@mRemortals@@R------------------------|@@g\n\r");
-         break;
-      case 3:
-         safe_strcat(MAX_STRING_LENGTH, buf,
-                     "@@R|---------------------------------|-----------@@cMortals@@R-------------------------|@@g\n\r");
-
-         break;
-      }
       for (d = first_desc; d != NULL; d = d->next)
       {
          CHAR_DATA *wch = (d->original != NULL) ? d->original : d->character;
@@ -2168,6 +2150,32 @@ void do_who(CHAR_DATA *ch, char *argument)
             continue;
          class = class_table[wch->class].who_name;
 
+         if (!print)
+         {
+            print = TRUE;
+            switch(i)
+            {
+            case 0:
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|------------------------------------|----------@@lImmortals@@R------------------------|@@g\n\r");
+               break;
+
+            case 1:
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|------------------------------------|------------@@WAdepts@@R-------------------------|@@g\n\r");
+               break;
+
+            case 2:
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|------------------------------------|----------@@mRemortals@@R------------------------|@@g\n\r");
+               break;
+            case 3:
+               safe_strcat(MAX_STRING_LENGTH, buf,
+                           "@@R|------------------------------------|-----------@@cMortals@@R-------------------------|@@g\n\r");
+
+               break;
+            }
+         }
          if(wch->level > MAX_MORTAL)
          {
             switch (wch->level)
@@ -2175,26 +2183,26 @@ void do_who(CHAR_DATA *ch, char *argument)
             default:
                break;
             case MAX_LEVEL - 0:
-               class = "@@l-* CREATOR *-@@g ";
+               class = "@@l-* CREATOR *-@@g    ";
                break;
             case MAX_LEVEL - 1:
-               class = "@@B-= SUPREME =-@@g ";
+               class = "@@B-= SUPREME =-@@g    ";
                break;
             case MAX_LEVEL - 2:
-               class = "@@a--  DEITY  --@@g ";
+               class = "@@a--  DEITY  --@@g    ";
                break;
             case MAX_LEVEL - 3:
-               class = "@@c - IMMORTAL- @@g ";
+               class = "@@c - IMMORTAL- @@g    ";
                break;
             case MAX_LEVEL - 4:
-               class = "@@W    ADEPT  @@N   ";
+               class = "@@W    ADEPT  @@N      ";
                break;
             }
             sprintf(buf3, " %s", class);
          }
          else if (IS_SET(wch->pcdata->pflags, PFLAG_AMBAS))
          {
-            sprintf(buf3, "   AMBASSADOR  ");
+            sprintf(buf3, "   AMBASSADOR     ");
          }
          else if (is_adept(wch))
             sprintf(buf3, "% %s", wch->pcdata->who_name);
@@ -2382,7 +2390,7 @@ void do_who(CHAR_DATA *ch, char *argument)
    }
 
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "@@R|---------------------------------+-------------------------------------------|\n\r");
+               "@@R|------------------------------------+-------------------------------------------|\n\r");
    send_to_char(buf, ch);
    buf[0] = '\0';
 

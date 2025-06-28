@@ -883,92 +883,6 @@ void do_headbutt( CHAR_DATA * ch, char *argument )
    war_attack(ch, argument, gsn_headbutt);
 }
 
-/*void do_charge( CHAR_DATA * ch, char *argument )
-{
-
-   CHAR_DATA *victim;
-   int dam;
-   bool prime;
-   int chance;
-
-   prime = FALSE;
-
-
-   if( !IS_NPC( ch ) && ch->pcdata->learned[gsn_charge] == 0 )
-   {
-      send_to_char( "You are not trained in this skill!\n\r", ch );
-      return;
-   }
-
-   if( ( IS_NPC( ch ) ) && ( get_psuedo_level( ch ) < 80 ) )
-      return;
-
-   if( ( ( victim = get_char_room( ch, argument ) ) == NULL ) && ch->fighting == NULL )
-   {
-      send_to_char( "No such victim!\n\r", ch );
-      return;
-   }
-
-
-   if( victim == NULL )
-      victim = ch->fighting;
-
-   if( victim == ch )
-   {
-      send_to_char( "You can't reach!\n\r", ch );
-      return;
-   }
-
-   if( !IS_NPC( ch ) && ch->pcdata->order[0] == 3 )
-      prime = TRUE;
-
-
-   dam = number_range( get_psuedo_level( ch ), get_psuedo_level( ch ) * 3 );
-
-   if( !IS_NPC( ch ) )
-      chance = ch->pcdata->learned[gsn_charge] / 2;
-   else
-      chance = 50;
-
-   chance += ( ( get_psuedo_level( ch ) - ( get_psuedo_level( victim ) - 30 ) ) / 2 );
-
-
-   WAIT_STATE( ch, skill_table[gsn_charge].beats );
-
-   check_killer( ch, victim );
-
-   if( number_percent(  ) < chance )
-   {
-      /*
-       * HIT 
-       *
-
-         /*
-          * HIT! 
-          *
-         char actbuf[MSL];
-         sprintf( actbuf, "@@a$n @@acharges $N@@a, and knocks them over!@@N @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_NOTVICT );
-         sprintf( actbuf, "@@a$N @@acharges right into you!@@N @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, victim, NULL, ch, TO_CHAR );
-         sprintf( actbuf, "@@aYou charge right into $N@@a, and knock him over!@@N @@l(@@W%d@@l)@@N", dam );
-         act( actbuf, ch, NULL, victim, TO_CHAR );
-
-      damage( ch, victim, dam, -1 );
-   }
-   else
-   {
-      /*
-       * MISS 
-       *
-      act( "$n@@b charges $N@@b, but runs right past!@@b", ch, NULL, victim, TO_NOTVICT );
-      act( "$N @@bcharges you, but runs right past!@@N", victim, NULL, ch, TO_CHAR );
-      act( "@@bYou try to charge $N@@b, but run past him. DOH!!@@N", ch, NULL, victim, TO_CHAR );
-      damage( ch, victim, 0, -1 );
-   }
-   return;
-}*/
-
 void do_charge( CHAR_DATA *ch, char *argument )
 {
    war_attack(ch, argument, gsn_charge);
@@ -1568,7 +1482,18 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    int max = max_combo(ch);
    int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
    int mult = 23;
-   bool finisher = is_valid_finisher(ch);
+   bool finisher = is_ready_finisher(ch);
+
+   for(i = 1; i < max; i++)
+   {
+      /* Reverse index */
+      ch->combo[i] = ch->combo[i-1];
+   }
+
+   ch->combo[0] = gsn;
+
+   if (!finisher)
+      return;
 
    if (max == 5)
    {
@@ -1579,17 +1504,6 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    {
       mult = 15;
    }
-
-   for(i = 1; i < max; i++)
-   {
-      /* Reverse index */
-      ch->combo[max-i] = ch->combo[max-i-1];
-   }
-
-   ch->combo[0] = gsn;
-
-   if (!finisher)
-      return;
 
    // Calc our chances
    for(int i = 0; i < max; i++)
@@ -1753,6 +1667,22 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 bool is_valid_finisher(CHAR_DATA *ch)
 {
    int max = max_combo(ch)-1;
+
+   for(int i = 0; i < max; i++)
+   {
+      if (ch->combo[i] == -1)
+         return FALSE;
+
+      if (i > 0 && ch->combo[i-1] == ch->combo[i])
+         return FALSE;
+   }
+
+   return TRUE;
+}
+
+bool is_ready_finisher(CHAR_DATA *ch)
+{
+   int max = max_combo(ch);
 
    for(int i = 0; i < max; i++)
    {
