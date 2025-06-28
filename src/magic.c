@@ -1871,18 +1871,6 @@ bool spell_dispel_object( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
        * * -- Alty
        */
 
-      if( IS_SET( obj->extra_flags, ITEM_GLOW ) )
-      {
-         REMOVE_BIT( obj->extra_flags, ITEM_GLOW );
-         act( "$p stops glowing.", ch, obj, NULL, TO_ROOM );
-         act( "$p stops glowing.", ch, obj, NULL, TO_CHAR );
-      }
-      if( IS_SET( obj->extra_flags, ITEM_HUM ) )
-      {
-         REMOVE_BIT( obj->extra_flags, ITEM_HUM );
-         act( "The hum surrounding $p fades.", ch, obj, NULL, TO_CHAR );
-         act( "The hum surrounding $p fades.", ch, obj, NULL, TO_ROOM );
-      }
       if( IS_SET( obj->extra_flags, ITEM_DARK ) )
       {
          REMOVE_BIT( obj->extra_flags, ITEM_DARK );
