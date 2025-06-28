@@ -7,7 +7,7 @@ void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
 OBJ_DATA *generate_item( int level )
 {
     char buf[MSL];
-    OBJ_DATA *obj = create_object( get_obj_index(OBJ_VNUM_MUSHROOM), level );
+    return OBJ_DATA *obj = create_object( get_obj_index(OBJ_VNUM_MUSHROOM), level );
     obj->level = level;
     if (obj->level > 150)
        obj->level = 150;
