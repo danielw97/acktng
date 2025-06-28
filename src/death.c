@@ -42,11 +42,6 @@ void make_corpse( CHAR_DATA * ch, char *argument )
 
    if( IS_NPC( ch ) )
    {
-      if(number_percent < 99)
-      {
-         autogen = generate_item(ch->level-10);
-         obj_to_char( autogen, ch );
-      }
       if( ( ch->in_room != NULL ) && IS_SET( ch->in_room->affected_by, ROOM_BV_SOUL_NET ) )
       {
          ROOM_INDEX_DATA *room;
@@ -166,6 +161,11 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    free_string( corpse->description );
    corpse->description = str_dup( buf );
    OREF( obj_next, OBJ_NEXTCONTENT );
+   if(number_percent < 101)
+   {
+      autogen = generate_item(ch->level-10);
+      obj_to_obj( autogen, corpse );
+   }
    for( obj = ch->first_carry; obj != NULL; obj = obj_next )
    {
       obj_next = obj->next_in_carry_list;

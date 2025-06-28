@@ -476,7 +476,6 @@ struct kill_data
    sh_int killed;
 };
 
-
 struct magic_shield
 {
    bool is_free;  /* Ramias:for run-time checks of LINK/UNLINK */
@@ -496,8 +495,6 @@ struct magic_shield
    char *wearoff_self;
 
 };
-
-
 
 /*
  * Prototype for a mob.
@@ -556,8 +553,6 @@ struct mob_index_data
    sh_int position;
    int hunt_flags;
 };
-
-
 
 /*
  * One character (PC or NPC).
@@ -704,12 +699,9 @@ struct char_data
 
 };
 
-
-
 /*
  * Data which only PC's have.
  */
-
 struct pc_data
 {
    bool is_free;  /* Ramias:for run-time checks of LINK/UNLINK */
@@ -817,18 +809,12 @@ struct mob_prog_data
 
 extern bool MOBtrigger;
 
-
-
-
-
 struct liq_type
 {
    char *liq_name;
    char *liq_color;
    sh_int liq_affect[3];
 };
-
-
 
 /*
  * Extra description data for a room or object.
@@ -858,7 +844,6 @@ struct trigger_data
    bool force_message;  /* Always does an act message, in addition to trigger */
    char *spell_name;
 };
-
 
 struct obj_index_data
 {
@@ -893,8 +878,6 @@ struct obj_index_data
    TRIGGER_DATA *first_trigger;
    TRIGGER_DATA *last_trigger;
 };
-
-
 
 /*
  * One object.
@@ -943,8 +926,6 @@ struct obj_data
    MONEY_TYPE *money;
 
 };
-
-
 
 /*
  * Exit data.
