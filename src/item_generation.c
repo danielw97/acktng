@@ -8,7 +8,6 @@ OBJ_DATA *generate_item( int level )
 {
     char buf[MSL];
     OBJ_DATA *obj = create_object( get_obj_index( OBJ_VNUM_MUSHROOM ), 0 );
-    return obj;
     obj->level = level;
     if (obj->level > 150)
        obj->level = 150;
@@ -142,6 +141,7 @@ OBJ_DATA *generate_item( int level )
 
     set_obj_stat_auto(obj);
 
+    info("Item generated!",1);
     return obj;
 }
 
