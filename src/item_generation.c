@@ -5,6 +5,10 @@ OBJ_DATA *generate_item( int level )
     char buf[MSL];
     OBJ_DATA *obj = create_object( OBJ_VNUM_MUSHROOM, level );
     obj->level = level;
+    if (obj->level > 150)
+       obj->level = 150;
+    if (obj->level < 1)
+       obj->level = 1;
     obj->weight = number_range(1,25);
     SET_BIT(obj->extra_flags, ITEM_GENERATED);
     SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);

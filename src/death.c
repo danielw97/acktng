@@ -5,7 +5,7 @@ extern CHAR_DATA *quest_target;
 extern CHAR_DATA *quest_mob;
 
 /* Autogen */
-OBJ_DATA *generate_item( int level )
+OBJ_DATA *generate_item( int level );
 
 /*
  * Make a corpse out of a character.
@@ -44,8 +44,8 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    {
       if(number_percent == 99)
       {
-         autogen = generate_item(ch->level);
-         obj_to_char( autogen, ch )
+         autogen = generate_item(ch->level-10);
+         obj_to_char( autogen, ch );
       }
       if( ( ch->in_room != NULL ) && IS_SET( ch->in_room->affected_by, ROOM_BV_SOUL_NET ) )
       {
