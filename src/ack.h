@@ -670,6 +670,7 @@ struct char_data
    char *target;  /* last ch to attack */
    sh_int wimpy;
    int deaf;
+   sh_int cooldown[MAX_SKILL];
    MPROG_ACT_LIST *first_mpact;  /* Used by MOBprogram */
    MPROG_ACT_LIST *last_mpact;
    int mpactnum;  /* Used by MOBprogram */

@@ -462,13 +462,13 @@ int get_crit( CHAR_DATA *ch )
    OBJ_DATA *wield;
    // Base of 5%
    int crit = 5;
- 
+
    wield = get_eq_char( ch, WEAR_HOLD_HAND_L );
    if( !IS_WEAPON( wield ) )
       wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
    if( !IS_WEAPON( wield ) )
-      wield = NULL;   
-      
+      wield = NULL;
+
    if (!IS_NPC(ch) && can_use_skill(ch, gsn_enhanced_critical))
    {
       crit += 5;
@@ -478,6 +478,8 @@ int get_crit( CHAR_DATA *ch )
 
    crit += ch->remort[CLASS_ASS] / 20;
    crit += ch->remort[CLASS_WLK] / 20 * .75;
+
+   crit += ch->adept[CLASS_NIG]/4;
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical))
    {
@@ -493,7 +495,7 @@ int get_crit_mult( CHAR_DATA *ch )
    OBJ_DATA *wield;
    // Base of 50%
    int crit = 50;
- 
+
    wield = get_eq_char( ch, WEAR_HOLD_HAND_L );
    if( !IS_WEAPON( wield ) )
       wield = get_eq_char( ch, WEAR_HOLD_HAND_R );
@@ -508,11 +510,13 @@ int get_crit_mult( CHAR_DATA *ch )
    crit += ch->remort[CLASS_ASS] / 5;
    crit += ch->remort[CLASS_WLK] / 5 * .75;
 
+   crit += ch->adept[CLASS_NIG]/2;
+
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword_critical) )
    {
       crit += ch->remort[CLASS_SWO]/5;
    }
-   
+
    crit += get_stat(ch, APPLY_CRIT_MULT);
 
    return crit;
@@ -1082,6 +1086,8 @@ void affect_to_char( CHAR_DATA * ch, AFFECT_DATA * paf )
     *paf_new = *paf;
 */
    paf_new->type = paf->type;
+   paf_new->duration_type = paf->duration_type;
+   paf_new->element = paf->element;
    paf_new->duration = paf->duration;
    paf_new->location = paf->location;
    paf_new->modifier = paf->modifier;

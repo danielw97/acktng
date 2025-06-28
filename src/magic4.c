@@ -479,8 +479,9 @@ bool spell_regen( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj )
    if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "regen" ) ) )
       return FALSE;
    af.type = sn;
-   af.duration = 1;
+   af.duration = 15 + ch->lvl[CLASS_MAG]/4;
    af.location = APPLY_HOT;
+   af.duration_type = DURATION_ROUND;
    af.modifier = heal;
    af.bitvector = 0;
    af.caster = ch;

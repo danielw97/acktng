@@ -407,22 +407,26 @@ bool spec_cast_adept( CHAR_DATA * ch )
 
       case 5:
       {
-         time_t cur_time, xmas_time;
-         struct tm tm_xmas;
+         char buffer[MSL];
+         double seconds;
          int days;
-         char buffer[255];
+         time_t currentDate;
+         struct tm *xmas, today;
 
-         tm_xmas.tm_sec = 0;
-         tm_xmas.tm_min = 0;
-         tm_xmas.tm_hour = 0;
-         tm_xmas.tm_mday = 25;
-         tm_xmas.tm_mon = 11;
-         tm_xmas.tm_year = 98;
+         time (&currentDate);
 
-         xmas_time = mktime( &tm_xmas );
-         days = difftime( xmas_time, time( &cur_time ) ) / ( 3600 * 24 );
+         today = *localtime(&currentDate);
 
-         sprintf( buffer, "$n utters the words '%i days to Christmas!'.", days );
+         xmas = localtime(&currentDate);
+         xmas->tm_mon = 11;
+         xmas->tm_mday = 25;
+         if (today.tm_mday > 25 && today.tm_mon == 11)
+            xmas->tm_year = today.tm_year + 1;
+
+         seconds = difftime(mktime(xmas),currentDate);
+         days = seconds/86400;
+
+         sprintf( buffer, "$n utters the words '%d days to Christmas!'.", days );
 
          act( buffer, ch, NULL, NULL, TO_ROOM );
          spell_refresh( skill_lookup( "refresh" ), ch->level, ch, victim, NULL );

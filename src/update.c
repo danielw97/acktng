@@ -386,10 +386,7 @@ int hit_gain( CHAR_DATA * ch )
 
       gain = ( 5 + ch->level / 30 );
 
-   gain = ( 5 + ch->level / 20 );
-
-   if( IS_SET( ch->in_room->room_flags, ROOM_REGEN ) )
-      gain *= 2;
+   gain = ( 5 + (get_psuedo_level(ch) / 20) );
 
    switch ( ch->position )
    {
@@ -409,6 +406,14 @@ int hit_gain( CHAR_DATA * ch )
       if( IS_VAMP( ch ) && ch->pcdata->bloodlust == -10 )
          gain = ( 5 + ch->level / 25 );
    }
+
+   if (ch->fighting == NULL)
+       gain *= 5;
+   else
+       gain /= 2;
+
+   if( IS_SET( ch->in_room->room_flags, ROOM_REGEN ) )
+      gain *= 2;
 
    if( IS_AFFECTED( ch, AFF_POISON ) )
       gain /= 4;
@@ -435,7 +440,7 @@ int hit_gain( CHAR_DATA * ch )
    if( !IS_NPC( ch ) && ( gain > 0 ) )
    {
       if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_FAST_HEAL ) )
-         gain = gain * 1.5;
+         gain = gain * 2;
       else if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_SLOW_HEAL ) )
          gain = gain * .75;
    }
@@ -473,10 +478,7 @@ int mana_gain( CHAR_DATA * ch )
    }
    else
    {
-      gain = ( 5 + ch->level / 20 );
-
-      if( IS_SET( ch->in_room->room_flags, ROOM_REGEN ) )
-         gain *= 2;
+      gain = ( 5 + (get_psuedo_level(ch) / 20) );
 
       switch ( ch->position )
       {
@@ -498,6 +500,21 @@ int mana_gain( CHAR_DATA * ch )
 
          if( IS_WOLF( ch ) && IS_RAGED( ch ) )
             gain = 0;
+      }
+      if (ch->fighting == NULL)
+         gain *= 5;
+      else
+         gain /= 2;
+
+      if( IS_SET( ch->in_room->room_flags, ROOM_REGEN ) )
+         gain *= 2;
+
+      if( !IS_NPC( ch ) && ( gain > 0 ) )
+      {
+         if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_FAST_HEAL ) )
+            gain = gain * 2;
+         else if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_SLOW_HEAL ) )
+            gain = gain * .75;
       }
 
       if( IS_SET( ch->in_room->affected_by, ROOM_BV_MANA_REGEN ) )
@@ -562,10 +579,7 @@ int move_gain( CHAR_DATA * ch )
    }
    else
    {
-      gain = ( 10 + ch->level / 4 );
-
-      if( IS_SET( ch->in_room->room_flags, ROOM_REGEN ) )
-         gain *= 2;
+      gain = ( 10 + (get_psuedo_level(ch) / 4) );
 
       switch ( ch->position )
       {
@@ -576,6 +590,13 @@ int move_gain( CHAR_DATA * ch )
             gain += get_curr_dex( ch ) / 4;
             break;
       }
+      if (ch->fighting == NULL)
+         gain *= 5;
+      else
+         gain /= 2;
+
+      if( IS_SET( ch->in_room->room_flags, ROOM_REGEN ) )
+         gain *= 2;
 
       if( IS_VAMP( ch ) && ch->pcdata->bloodlust < 3 )
          gain = 0;
@@ -587,6 +608,14 @@ int move_gain( CHAR_DATA * ch )
 
    if( IS_AFFECTED( ch, AFF_POISON ) )
       gain /= 4;
+
+   if( !IS_NPC( ch ) && ( gain > 0 ) )
+   {
+      if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_FAST_HEAL ) )
+         gain = gain * 2;
+      else if( IS_SET( race_table[ch->race].race_flags, RACE_MOD_SLOW_HEAL ) )
+         gain = gain * .75;
+   }
 
    return UMIN( gain, ch->max_move - ch->move );
 }
@@ -1459,7 +1488,7 @@ void char_update( void )
       for( paf = ch->first_affect; paf != NULL; paf = paf_next )
       {
          paf_next = paf->next;
-         if( paf->duration > 0 )
+         if( paf->duration > 0 && paf->duration_type == DURATION_HOUR )
          {
             paf->duration--;
 

@@ -79,6 +79,10 @@ extern sh_int gsn_poison_quinine;
 extern sh_int gsn_poison_arsenic;
 extern sh_int gsn_poison_nightshade;
 extern sh_int gsn_dodge;
+extern sh_int gsn_riposte;
+extern sh_int gsn_holystrike;
+extern sh_int gsn_anti_magic_shell;
+extern sh_int gsn_fleche;
 extern sh_int gsn_hide;
 extern sh_int gsn_hunt;
 extern sh_int gsn_peek;
@@ -320,8 +324,10 @@ DECLARE_DO_FUN( do_council );
 DECLARE_DO_FUN( do_rename );
 DECLARE_DO_FUN( do_sdelete );
 DECLARE_DO_FUN( do_warcry );
-
-
+DECLARE_DO_FUN( do_riposte );
+DECLARE_DO_FUN( do_anti_magic_shell );
+DECLARE_DO_FUN( do_holystrike );
+DECLARE_DO_FUN( do_fleche );
 
 /* And by MAG  
  *    

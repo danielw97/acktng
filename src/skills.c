@@ -4,6 +4,9 @@
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 bool do_poison(CHAR_DATA *ch, char *argument, int gsn);
 bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
+bool is_valid_finisher(CHAR_DATA *ch);
+void reset_combo(CHAR_DATA *ch);
+int max_combo(CHAR_DATA *ch);
 
 void do_backstab( CHAR_DATA * ch, char *argument )
 {
@@ -151,9 +154,11 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    }
 
    if (backstab)
-      calculate_damage(ch, victim, dam, gsn_backstab, REALM_PHYSICAL, TRUE);
+      if (!calculate_damage(ch, victim, dam, gsn_backstab, REALM_PHYSICAL, TRUE))
+         return;
    else
-      calculate_damage(ch, victim, dam*0.8, gsn_circle, REALM_PHYSICAL, TRUE);
+      if (!calculate_damage(ch, victim, dam*0.8, gsn_circle, REALM_PHYSICAL, TRUE))
+         return;
 
    if (backstab)
       WAIT_STATE(ch, skill_table[gsn_backstab].beats);
@@ -281,7 +286,8 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    sprintf(buf, "$n inflictS $N with %s!", skill_table[gsn].name);
    act(buf, ch, NULL, victim, TO_ROOM);
    af.type = gsn;
-   af.duration = 2;
+   af.duration = 10;
+   af.duration_type = DURATION_ROUND;
    af.location = APPLY_DOT;
    af.modifier = get_psuedo_level(ch)/2;
    af.bitvector = 0;
@@ -784,11 +790,6 @@ void do_beserk( CHAR_DATA * ch, char *argument )
    return;
 }
 
-void do_punch( CHAR_DATA * ch, char *argument )
-{
-   war_attack(ch, argument, gsn_punch);
-}
-
 void war_attack( CHAR_DATA * ch, char *argument, int gsn )
 {
    CHAR_DATA *victim;
@@ -828,16 +829,28 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
    else
       dam += dam * ch->lvl[CLASS_PUG] / 100;
 
-   if (ch->remort[CLASS_KNI] > 0)
-      dam += dam * ch->remort[CLASS_KNI] / 50;
-   else if (ch->remort[CLASS_SWO] > 0)
-      dam += dam * ch->remort[CLASS_SWO] / 50;
-   else if (ch->remort[CLASS_MON] > 0)
-      dam += dam * ch->remort[CLASS_MON] / 50;
-   else if (ch->remort[CLASS_PAL] > 0)
-      dam += dam * ch->remort[CLASS_PAL] / 50 * .75;
+   if (skill_table[gsn].flag1 == REMORT || skill_table[gsn].flag1 == ADEPT)
+   {
+      if (ch->remort[CLASS_KNI] > 0)
+         dam += dam * ch->remort[CLASS_KNI] / 100;
+      else if (ch->remort[CLASS_SWO] > 0)
+         dam += dam * ch->remort[CLASS_SWO] / 100;
+      else if (ch->remort[CLASS_MON] > 0)
+         dam += dam * ch->remort[CLASS_MON] / 100;
+      else if (ch->remort[CLASS_PAL] > 0)
+         dam += dam * ch->remort[CLASS_PAL] / 100 * .75;
+      dam += dam * ch->adept[CLASS_CRU] / 50;
+   }
 
    WAIT_STATE( ch, skill_table[gsn].beats );
+
+   int element = REALM_PHYSICAL;
+
+   if (gsn == gsn_holystrike)
+      element = element | REALM_HOLY;
+
+   if (gsn == gsn_fleche)
+      dam *= 1.5;
 
    check_killer( ch, victim );
    if( can_hit_skill(ch, victim, gsn ) )
@@ -850,7 +863,7 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
       sprintf( actbuf, "You %s $N!!", skill_table[gsn].name, dam );
       act( actbuf, ch, NULL, victim, TO_CHAR );
 
-      calculate_damage(ch, victim, dam, gsn, REALM_PHYSICAL, TRUE);
+      calculate_damage(ch, victim, dam, gsn, element, TRUE);
       combo(ch, victim, gsn);
    }
    else
@@ -870,7 +883,7 @@ void do_headbutt( CHAR_DATA * ch, char *argument )
    war_attack(ch, argument, gsn_headbutt);
 }
 
-void do_charge( CHAR_DATA * ch, char *argument )
+/*void do_charge( CHAR_DATA * ch, char *argument )
 {
 
    CHAR_DATA *victim;
@@ -928,11 +941,11 @@ void do_charge( CHAR_DATA * ch, char *argument )
    {
       /*
        * HIT 
-       */
+       *
 
          /*
           * HIT! 
-          */
+          *
          char actbuf[MSL];
          sprintf( actbuf, "@@a$n @@acharges $N@@a, and knocks them over!@@N @@l(@@W%d@@l)@@N", dam );
          act( actbuf, ch, NULL, victim, TO_NOTVICT );
@@ -947,18 +960,154 @@ void do_charge( CHAR_DATA * ch, char *argument )
    {
       /*
        * MISS 
-       */
+       *
       act( "$n@@b charges $N@@b, but runs right past!@@b", ch, NULL, victim, TO_NOTVICT );
       act( "$N @@bcharges you, but runs right past!@@N", victim, NULL, ch, TO_CHAR );
       act( "@@bYou try to charge $N@@b, but run past him. DOH!!@@N", ch, NULL, victim, TO_CHAR );
       damage( ch, victim, 0, -1 );
    }
    return;
+}*/
+
+void do_charge( CHAR_DATA *ch, char *argument )
+{
+   war_attack(ch, argument, gsn_charge);
 }
 
 void do_kick( CHAR_DATA * ch, char *argument )
 {
    war_attack(ch, argument, gsn_kick);
+}
+
+
+void do_punch( CHAR_DATA * ch, char *argument )
+{
+   war_attack(ch, argument, gsn_punch);
+}
+
+void do_holystrike( CHAR_DATA *ch, char *argument )
+{
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!n\r", ch);
+      return;
+   }
+
+   war_attack(ch, argument, gsn_holystrike);
+}
+
+void do_fleche( CHAR_DATA *ch, char *argument )
+{
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!n\r", ch);
+      return;
+   }
+
+   war_attack(ch, argument, gsn_fleche);
+}
+
+
+void do_riposte( CHAR_DATA * ch, char *argument )
+{
+   AFFECT_DATA af;
+   int level;
+
+   if( IS_NPC( ch ) )
+      return;
+
+   level = ch->lvl[CLASS_WAR];
+
+   if( ch->fighting == NULL )
+   {
+      send_to_char( "You can only prepare for a riposte when fighting!\n\r", ch );
+      return;
+   }
+
+   if( is_affected( ch, gsn_riposte ) )
+   {
+      send_to_char( "You already are prepared to perform a riposte!!\n\r", ch );
+      return;
+   }
+
+   if( !can_use_skill(ch, gsn_riposte) )
+   {
+      send_to_char( "You don't know how to use this skill!\n\r", ch );
+      return;
+   }
+
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!n\r", ch);
+      return;
+   }
+
+   reset_combo(ch);
+
+   WAIT_STATE( ch, skill_table[gsn_riposte].beats );
+
+   af.type = gsn_riposte;
+   af.duration = 2;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_HITROLL;
+   af.modifier = 1;
+   af.bitvector = 0;
+   affect_to_char( ch, &af );
+
+   send_to_char( "You prepare for a riposte!\n\r", ch );
+   act( "$n prepares for a riposte!", ch, NULL, NULL, TO_ROOM );
+   return TRUE;
+}
+
+void do_anti_magic_shell( CHAR_DATA * ch, char *argument )
+{
+   AFFECT_DATA af;
+   int level;
+
+   if( IS_NPC( ch ) )
+      return;
+
+   level = ch->lvl[CLASS_WAR];
+
+   if( ch->fighting == NULL )
+   {
+      send_to_char( "You can only create an anti-magic shell when fighting!\n\r", ch );
+      return;
+   }
+
+   if( is_affected( ch, gsn_anti_magic_shell ) )
+   {
+      send_to_char( "You already have an anti-magic shell!!\n\r", ch );
+      return;
+   }
+
+   if( !can_use_skill(ch, gsn_anti_magic_shell) )
+   {
+      send_to_char( "You don't know how to use this skill!\n\r", ch );
+      return;
+   }
+
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!n\r", ch);
+      return;
+   }
+
+   reset_combo(ch);
+
+   WAIT_STATE( ch, skill_table[gsn_anti_magic_shell].beats );
+
+   af.type = gsn_anti_magic_shell;
+   af.duration = 2;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_HITROLL;
+   af.modifier = 1;
+   af.bitvector = 0;
+   affect_to_char( ch, &af );
+
+   send_to_char( "You surround yourself with an anti-magic shell!\n\r", ch );
+   act( "$n creates an anti-magic shell!", ch, NULL, NULL, TO_ROOM );
+   return TRUE;
 }
 
 void do_warcry( CHAR_DATA * ch, char *argument )
@@ -1354,7 +1503,7 @@ void do_stun( CHAR_DATA * ch, char *argument )
    stun(ch, victim);
 }
 
-stun( CHAR_DATA *ch, CHAR_DATA *victim )
+void stun( CHAR_DATA *ch, CHAR_DATA *victim )
 {
    if (ch == NULL || victim == NULL)
       return;
@@ -1400,7 +1549,7 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
    if( IS_AFFECTED(ch, AFF_SNEAK) || item_has_apply( ch, ITEM_APPLY_SNEAK ) )
       chance += 10;
-      
+
    if (!can_see(victim,ch))
       chance += 20;
 
@@ -1416,8 +1565,20 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
    char buf[MAX_STRING_LENGTH];
    int i;
-   int max = 4;
-   int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0;
+   int max = max_combo(ch);
+   int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
+   int mult = 23;
+   bool finisher = is_valid_finisher(ch);
+
+   if (max == 5)
+   {
+      mult = 18;
+   }
+
+   if (max == 6)
+   {
+      mult = 15;
+   }
 
    for(i = 1; i < max; i++)
    {
@@ -1426,6 +1587,9 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    }
 
    ch->combo[0] = gsn;
+
+   if (!finisher)
+      return;
 
    // Calc our chances
    for(int i = 0; i < max; i++)
@@ -1437,67 +1601,186 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
          return;
 
       if (ch->combo[i] == gsn_punch)
-         punch_cnt += 20;
+         punch_cnt += mult;
 
       if (ch->combo[i] == gsn_knee)
-         knee_cnt += 20;
+         knee_cnt += mult;
 
       if (ch->combo[i] == gsn_headbutt)
-         headbutt_cnt += 20;
+         headbutt_cnt += mult;
 
       if (ch->combo[i] == gsn_kick)
-         kick_cnt += 20;
+         kick_cnt += mult;
 
       if (ch->combo[i] == gsn_disarm)
-         disarm_cnt += 20;
+         disarm_cnt += mult;
 
       if (ch->combo[i] == gsn_dirt)
-         dirt_cnt += 20;
+         dirt_cnt += mult;
 
       if (ch->combo[i] == gsn_bash)
-         bash_cnt += 20;
+         bash_cnt += mult;
+
+      if (ch->combo[i] == gsn_charge)
+         charge_cnt += mult;
+
+      if (ch->combo[i] == gsn_fleche)
+         fleche_cnt += mult;
+
+      if (ch->combo[i] == gsn_holystrike)
+         holystrike_cnt += mult;
    }
 
-   if (ch->combo[0] != ch->combo[1] && ch->combo[1] != ch->combo[2] && ch->combo[2] != ch->combo[3] && ch->combo[3] != -1)
+   if (finisher)
    {
-     for(int i = 0; i < MAX_COMBO; i++)
-        ch->combo[i] = -1;
-
+     reset_combo(ch);
      send_to_char("@@yCombo triggered!@@N\n\r",ch);
      act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
      act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
 
      int max_attacks = max-3;
 
+     if (ch->combo[0] == gsn_fleche)
+        max_attacks++;
+
      for(int i = 0; i < max_attacks; i++)
      {
+         reset_combo(ch);
+
+         if (ch->fighting == NULL)
+            break;
+
+         if (i > 6)
+            break;
+
          if (i == 0 && number_percent() < 30)
             max_attacks++;
          if (number_percent() < 25)
             max_attacks++;
 
          int roll = number_percent();
-         if(roll < punch_cnt)
-            do_punch(ch, "enemy");
-         else if(roll < punch_cnt+kick_cnt)
-            do_kick(ch, "enemy");
-         else if(roll < punch_cnt+kick_cnt+knee_cnt)
-            do_knee(ch, "enemy");
-         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt)
-            do_headbutt(ch, "enemy");
-         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt)
-            do_disarm(ch, "enemy");
-         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt)
-            do_dirt(ch, "enemy");
-         else if (roll < punch_cnt+kick_cnt+knee_cnt+headbutt_cnt+disarm_cnt+dirt_cnt+bash_cnt)
-            do_bash(ch, "enemy");
-         else if (roll < 95)
-            stun(ch, ch->fighting);
-         else
-            max_attacks += 2;
-     }
+         int chance = 0;
 
-     for(int i = 0; i < MAX_COMBO; i++)
-        ch->combo[i] = -1;
+         if(roll < chance+punch_cnt)
+            do_punch(ch, "enemy");
+
+         chance += punch_cnt;
+
+         if(roll < chance+kick_cnt)
+         {
+            do_kick(ch, "enemy");
+            continue;
+         }
+
+         chance += kick_cnt;
+
+         if(roll < chance+knee_cnt)
+         {
+            do_knee(ch, "enemy");
+            continue;
+         }
+
+         chance += knee_cnt;
+
+         if (roll < chance+headbutt_cnt)
+         {
+            do_headbutt(ch, "enemy");
+            continue;
+         }
+
+         chance += headbutt_cnt;
+
+         if (roll < chance+disarm_cnt)
+         {
+            do_disarm(ch, "enemy");
+            continue;
+         }
+
+         chance += disarm_cnt;
+
+         if (roll < chance+dirt_cnt)
+         {
+            do_dirt(ch, "enemy");
+            continue;
+         }
+
+         chance += dirt_cnt;
+
+         if (roll < chance+bash_cnt)
+         {
+            do_bash(ch, "enemy");
+            continue;
+         }
+
+         chance += bash_cnt;
+
+         if (roll < chance+charge_cnt)
+         {
+            do_charge(ch, "enemy");
+            continue;
+         }
+
+         chance += charge_cnt;
+
+         if (roll < chance+fleche_cnt)
+         {
+            war_attack(ch, victim, gsn_fleche);
+            continue;
+         }
+
+         chance += fleche_cnt;
+
+         if (roll < chance+holystrike_cnt)
+         {
+            war_attack(ch, victim, gsn_holystrike);
+            continue;
+         }
+
+         if (roll < 95)
+         {
+            stun(ch, ch->fighting);
+            continue;
+         }
+
+         //95+
+         max_attacks += 2;
+     }
    }
+
+   reset_combo(ch);
+}
+
+bool is_valid_finisher(CHAR_DATA *ch)
+{
+   int max = max_combo(ch)-1;
+
+   for(int i = 0; i < max; i++)
+   {
+      if (ch->combo[i] == -1)
+         return FALSE;
+
+      if (i > 0 && ch->combo[i-1] == ch->combo[i])
+         return FALSE;
+   }
+
+   return TRUE;
+}
+
+void reset_combo(CHAR_DATA *ch)
+{
+   for(int i = 0; i < 6; i++)
+      ch->combo[i] = -1;
+}
+
+int max_combo(CHAR_DATA *ch)
+{
+   int max = 4;
+
+   if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
+      max++;
+
+   if (ch->adept[CLASS_CRU] > 0)
+      max++;
+
+   return max;
 }

@@ -128,6 +128,9 @@
 
 #define MAX_NUM_IMMS    5
 
+#define DURATION_HOUR     0
+#define DURATION_ROUND    1
+
                      /*
                       * total number of supernatural types in the game  
                       */

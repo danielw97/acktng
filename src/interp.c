@@ -408,7 +408,12 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_ACTION, C_SHOW_SKILL},
    {"warcry", do_warcry, POS_FIGHTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_SKILL},
-
+   {"riposte", do_riposte, POS_FIGHTING, 0, LOG_NORMAL,
+    C_TYPE_ACTION, C_SHOW_SKILL},
+   {"anti magic shell", do_anti_magic_shell, POS_FIGHTING, 0, LOG_NORMAL,
+    C_TYPE_ACTION, C_SHOW_SKILL},
+   {"holystrike", do_holystrike, POS_FIGHTING, 0, LOG_NORMAL,
+    C_TYPE_ACTION, C_SHOW_SKILL},
 
    /*
     * Object manipulation commands.

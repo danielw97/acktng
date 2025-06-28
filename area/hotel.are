@@ -845,7 +845,7 @@ A member of staff stands here, trying to ignore you.
 She is old, and looks unhelpful, to say the least.
 ~
 15 60 -200 S
-26 2
+25 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -894,7 +894,7 @@ The manager is a short fellow, the kind of person you take an instant dislike
 to.  You notice his trousers are undone.
 ~
 7 0 -250 S
-39 1
+38 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -930,7 +930,7 @@ The cook stands here, pretending to be in a coma, through all the excitement.
 He looks bored, to say the least.
 ~
 3 0 -100 S
-36 1
+31 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -942,7 +942,7 @@ Driller Killer, the mean puppet stands here, waiting to kill you.  Run!?!?
 Driller Killer is a small doll, but has a large, sharp head.
 ~
 3145783 32778 -900 S
-47 0
+48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052672 0 0 0 0 0
@@ -966,7 +966,7 @@ A giant puppet is waiting here......  for you maybe??
 The puppet is giant by puppet dimensions, but still smaller than you.
 ~
 3145761 0 -400 S
-42 0
+41 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1162,8 +1162,7 @@ M 0 4406 1 4429 fish
 
 M 0 4405 1 4442 cook
 
-E 0 4404 0 16   knife
-
+G 0 4404 0 (null)
 M 0 4404 1 4423 driller
 
 G 0 4401 0      fluid

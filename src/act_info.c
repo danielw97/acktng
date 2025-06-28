@@ -1777,13 +1777,18 @@ void do_affected(CHAR_DATA *ch, char *argument)
 
          if (ch->level >= 16)
          {
+            char duration[MSL];
+            if (paf->duration_type == DURATION_HOUR)
+               sprintf(duration,"hours");
+            else
+               sprintf(duration,"rounds");
             if (paf->location > APPLY_NONE)
             {
                sprintf(buf,
-                       " modifies %s by %d for %d hours", affect_loc_name(paf->location), paf->modifier, paf->duration);
+                       " modifies %s by %d for %d %s", affect_loc_name(paf->location), paf->modifier, paf->duration, duration);
             }
             else
-               sprintf(buf, " lasts for %d hours", paf->duration);
+               sprintf(buf, " lasts for %d %s", paf->duration, duration);
             send_to_char(buf, ch);
          }
 
@@ -2191,7 +2196,8 @@ void do_who(CHAR_DATA *ch, char *argument)
          {
             sprintf(buf3, "   AMBASSADOR  ");
          }
-         else
+         else if (is_adept(wch))
+            sprintf(buf3, "% %s", wch->pcdata->who_name);
          {
             if (wch->level >= (MAX_LEVEL - 4) || str_cmp(wch->pcdata->who_name, "off"))
             {
@@ -2223,21 +2229,21 @@ void do_who(CHAR_DATA *ch, char *argument)
                {
                   if (wch->remort[cnt + MAX_CLASS] > 0)
                   {
-                     if (wch->remort[cnt] == 100)
+                     if (wch->remort[cnt + MAX_CLASS] == MAX_MORTAL)
                         sprintf(buf4, " @@d *@@N");
                      else
                         sprintf(buf4, " @@d%2d@@N", wch->remort[cnt + MAX_CLASS]);
                   }
                   else if (wch->remort[cnt] > 0)
                   {
-                     if (wch->remort[cnt] == 100)
+                     if (wch->remort[cnt] == MAX_MORTAL)
                         sprintf(buf4, " @@m *@@N");
                      else
                         sprintf(buf4, " @@m%2d@@N", wch->remort[cnt]);
                   }
                   else
                   {
-                     if (wch->lvl[cnt] == 100)
+                     if (wch->lvl[cnt] == MAX_MORTAL)
                         sprintf(buf4, " @@b *@@N", wch->lvl[cnt]);
                      else if (wch->lvl[cnt] <= 0)
                         sprintf(buf4, " @@g%2d@@N", 0);
@@ -3892,6 +3898,9 @@ void do_slist(CHAR_DATA *ch, char *argument)
             continue;
          if ((adept_class) && (skill_table[sn].flag1 == ADEPT))
          {
+
+            if (skill_table[sn].skill_level[class] > MAX_ADEPT)
+               continue;
 
             if (pSpell)
             {

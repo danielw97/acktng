@@ -383,6 +383,12 @@ void do_cast( CHAR_DATA * ch, char *argument )
       return;
    }
 
+   if (ch->cooldown[sn] > 0)
+   {
+      send_to_char( "That spell is still on cooldown.\n\r", ch);
+      return;
+   }
+
 
    /*
     * Compute best level to use for spell, IF it meets requiements 

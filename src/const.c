@@ -2021,7 +2021,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     ADEPT, NORM,
-    "cloak:adept", {1, 1, 1, 1, 1, 1},
+    "cloak:adept", {21, 21, 21, 21, 21, 21},
     spell_cloak_adept, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 226 ), 500, 12,
     "", "@@NThe @@Wcloak@@N around your body fades.",
@@ -3271,6 +3271,42 @@ const struct skill_type skill_table[MAX_SKILL] = {
     &gsn_poison_nightshade, SLOT( 0 ), 80, 12,
     "Poison Nightshade", "@@N$nFeels much better!",
     ""},
+
+   {
+    REMORT, NORM,
+    "riposte",        {182, 182, 182, 182, 182, 182,
+                       182, 182, 182, 30, 182, 182},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_riposte, SLOT( 0 ), 80, 12,
+    "Riposte", "You are no longer in a position to riposte!",
+    "$n is no longer in a position to riposte."},
+
+   {
+    REMORT, NORM,
+    "fleche",        {182, 182, 182, 182, 182, 182,
+                       182, 182, 182, 45, 182, 182},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_fleche, SLOT( 0 ), 80, 12,
+    "Fleche", "!Fleche!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "holystrike",        {182, 182, 182, 29, 182, 182,
+                       182, 182, 182, 182, 182, 182},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_holystrike, SLOT( 0 ), 80, 12,
+    "Holystrike", "!Holystrike!",
+    ""},
+
+   {
+    ADEPT, NORM,
+    "anti magic shell",{182, 182, 182, 2, 182, 182,},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_anti_magic_shell, SLOT( 0 ), 80, 12,
+    "Anti Magic Shell", "You are no longer surrounded by an anti-magic shell!",
+    "$n is no longer surrounded by an anti-magic shell."},
+
 
    {
     REMORT, NORM,

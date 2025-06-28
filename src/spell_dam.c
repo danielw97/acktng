@@ -187,9 +187,11 @@ int class_heal_character( CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int s
 
       heal += heal * wis / 100;
       heal += heal * ch->lvl[CLASS_CLE] / 50;
-      heal += heal * ch->remort[CLASS_PRI] / 50;
-      heal += heal * ch->remort[CLASS_PAL] / 50 * .75;
    }
+
+   heal += heal * ch->remort[CLASS_PRI] / 50;
+   heal += heal * ch->remort[CLASS_PAL] / 50 * 0.75;
+   heal += heal * ch->adept[CLASS_TEM] / 25;
 
    if (stance_app[ch->stance].heal_mod != 0)
       heal += heal * stance_app[ch->stance].heal_mod / 10;

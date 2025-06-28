@@ -133,6 +133,30 @@ void violence_update( void )
          {
             do_damage(paf->caster, ch, paf->modifier, paf->type, REALM_IMPACT, FALSE);
          }
+         if (paf->duration > 0 && paf->duration_type == DURATION_ROUND)
+         {
+            if( paf->duration == 0 )
+            {
+               if( paf->type > 0 && skill_table[paf->type].msg_off )
+               {
+                  send_to_char( skill_table[paf->type].msg_off, ch );
+                  send_to_char( "\n\r", ch );
+               }
+               if( paf->type > 0 && skill_table[paf->type].room_off )
+                  act( skill_table[paf->type].room_off, ch, NULL, NULL, TO_ROOM );
+
+               AFFECT_DATA *paf_prev = paf->prev;
+
+               affect_remove( ch, paf );
+
+               if (paf_prev != NULL)
+                  paf = paf_prev;
+               else
+                  paf = ch->first_affect;
+           }
+           else
+              paf->duration--;
+        }
       }
 
 /* slight damage for players in a speeded stance, simulates fatigue */
@@ -676,6 +700,11 @@ void one_hit( CHAR_DATA * ch, CHAR_DATA * victim, int dt )
     * Bonuses.
     */
    dam += number_range( get_damroll( ch ) * 13 / 20, get_damroll( ch ) * 15 / 20 );
+
+   if ( !IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword) )
+   {
+      dam += dam * number_range(20,40)/100;
+   }
 
    /*
     * extra damage from martial arts 
