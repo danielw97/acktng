@@ -17,96 +17,96 @@ OBJ_DATA *generate_item( int level )
     {
         case 1:
            SET_BIT(obj->wear_flags, ITEM_WEAR_HALO);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 2:
            SET_BIT(obj->wear_flags, ITEM_WEAR_AURA);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 3:
            SET_BIT(obj->wear_flags, ITEM_WEAR_HORNS);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 4:
            SET_BIT(obj->wear_flags, ITEM_WEAR_HEAD);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 5:
            SET_BIT(obj->wear_flags, ITEM_WEAR_FACE);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 6:
            SET_BIT(obj->wear_flags, ITEM_WEAR_BEAK);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 7:
            SET_BIT(obj->wear_flags, ITEM_WEAR_EAR);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 8:
            SET_BIT(obj->wear_flags, ITEM_WEAR_NECK);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 9:
            SET_BIT(obj->wear_flags, ITEM_WEAR_WINGS);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 10:
            SET_BIT(obj->wear_flags, ITEM_WEAR_SHOULDERS);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 11:
            SET_BIT(obj->wear_flags, ITEM_WEAR_ARMS);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 12:
            SET_BIT(obj->wear_flags, ITEM_WEAR_WRIST);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 13:
            SET_BIT(obj->wear_flags, ITEM_WEAR_HANDS);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 14:
            SET_BIT(obj->wear_flags, ITEM_WEAR_FINGER);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 15:
            SET_BIT(obj->wear_flags, ITEM_WEAR_CLAWS);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 17:
            SET_BIT(obj->wear_flags, ITEM_WEAR_ABOUT);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 18:
            SET_BIT(obj->wear_flags, ITEM_WEAR_WAIST);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 19:
            SET_BIT(obj->wear_flags, ITEM_WEAR_BODY);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 20:
            SET_BIT(obj->wear_flags, ITEM_WEAR_TAIL);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 21:
            SET_BIT(obj->wear_flags, ITEM_WEAR_LEGS);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 22:
            SET_BIT(obj->wear_flags, ITEM_WEAR_FEET);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 23:
            SET_BIT(obj->wear_flags, ITEM_WEAR_HOOVES);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
         case 16:
         default:
            SET_BIT(obj->wear_flags, ITEM_WEAR_HOLD_HAND);
-           obj->type = ITEM_ARMOR;
+           obj->item_type = ITEM_ARMOR;
         break;
     }
 
