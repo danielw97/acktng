@@ -2415,7 +2415,7 @@ void do_who(CHAR_DATA *ch, char *argument)
    sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 78));
    safe_strcat(MAX_STRING_LENGTH, buf, buf2);
    safe_strcat(MAX_STRING_LENGTH, buf,
-               "@@R+--------------------------------------------------------------------------------+\n\r");
+               "@@R|--------------------------------------------------------------------------------|\n\r");
 
    send_to_char(buf, ch);
    send_to_char(color_string(ch, "normal"), ch);
