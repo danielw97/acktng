@@ -2013,7 +2013,6 @@ void do_who(CHAR_DATA *ch, char *argument)
    bool fremortonly = FALSE;
    int cnt, slength, excess, nlength;
    int true_cnt = 0;
-   static int max_players;
    int list;
    int number[3];
    bool idle = FALSE, invis = FALSE, wanted = FALSE;
@@ -2208,7 +2207,7 @@ void do_who(CHAR_DATA *ch, char *argument)
             sprintf(buf3, "   AMBASSADOR     ");
          }
          else if (is_adept(wch))
-            sprintf(buf3, "% %s", wch->pcdata->who_name);
+            sprintf(buf3, " %s", wch->pcdata->who_name);
          {
             if (wch->level >= (MAX_LEVEL - 4) || str_cmp(wch->pcdata->who_name, "off"))
             {
@@ -2397,8 +2396,6 @@ void do_who(CHAR_DATA *ch, char *argument)
    send_to_char(buf, ch);
    buf[0] = '\0';
 
-   if (true_cnt > max_players)
-      max_players = true_cnt;
    sprintf(buf4, "(%d Player%s)  KEY: (A)fk  (B)uilding  (*)Clan Boss  (P)kok  (W)riting", player_cnt, player_cnt == 1 ? "" : "s");
    sprintf(buf2, "@@R|@@G %s @@R|\n\r", center_text(buf4, 78));
    safe_strcat(MAX_STRING_LENGTH, buf, buf2);

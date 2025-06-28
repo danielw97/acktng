@@ -409,13 +409,13 @@ int exp_for_mobile( int level, CHAR_DATA * mob )
       value += .200 * base_value;
    if( IS_SET( mob->def, DEF_CURE_CRITIC ) )
       value += .350 * base_value;
-   if( IS_SET( mob->def, DEF_CURE_HEAL ) )
+   if( IS_SET( mob->def, DEF_HEAL ) )
       value += .400 * base_value;
-   if( IS_SET( mob->def, DEF_SHIELD_FIRE ) )
+   if( IS_SET( mob->def, DEF_FIRESHIELD ) )
       value += .300 * base_value;
-   if( IS_SET( mob->def, DEF_SHIELD_SHOCK ) )
+   if( IS_SET( mob->def, DEF_SHOCKSHIELD ) )
       value += .200 * base_value;
-   if( IS_SET( mob->def, DEF_SHIELD_ICE ) )
+   if( IS_SET( mob->def, DEF_ICESHIELD ) )
       value += .100 * base_value;
 
    if( IS_SET( mob->act, ACT_SOLO ) )

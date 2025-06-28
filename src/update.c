@@ -2120,6 +2120,11 @@ void update_handler( void )
    }
 
 
+   if (pulse_violence == PULSE_VIOLENCE/2)
+   {
+      ai_update();
+   }
+
    if( --pulse_violence <= 0 )
    {
       alarm_update(  );

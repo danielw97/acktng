@@ -45,7 +45,6 @@ extern CHAR_DATA *quest_mob;
 bool check_avoidance args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 bool check_counter args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 void check_killer args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
-bool check_skills args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 void dam_message args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dam, int dt, bool critical ) );
 void death_message args( ( CHAR_DATA * ch, CHAR_DATA * victim, int dt, int max_dt ) );
 void death_cry args( ( CHAR_DATA * ch ) );
@@ -240,7 +239,7 @@ void violence_update( void )
                   has_cast = TRUE;
                }
             }
-            if( IS_SET( ch->def, DEF_CURE_HEAL ) )
+            if( IS_SET( ch->def, DEF_HEAL ) )
             {
                if( ch->mana > mana_cost( ch, skill_lookup( "heal" ) ) )
                {
@@ -265,7 +264,7 @@ void violence_update( void )
           && ( !IS_SET( ch->def, DEF_NONE ) )
           && ( ch->hit > 0 ) && ( ch->first_shield == NULL ) && ( !has_cast ) && ( ch->fighting == NULL ) )
       {
-         if( ( IS_SET( ch->def, DEF_SHIELD_FIRE ) )
+         if( ( IS_SET( ch->def, DEF_FIRESHIELD ) )
              && ( !is_affected( ch, skill_lookup( "fireshield" ) ) )
              && ( ch->mana > mana_cost( ch, skill_lookup( "fireshield" ) ) ) )
          {
@@ -273,7 +272,7 @@ void violence_update( void )
             has_cast = TRUE;
          }
          else
-            if( ( IS_SET( ch->def, DEF_SHIELD_ICE ) )
+            if( ( IS_SET( ch->def, DEF_ICESHIELD ) )
                 && ( !is_affected( ch, skill_lookup( "iceshield" ) ) )
                 && ( ch->mana > mana_cost( ch, skill_lookup( "iceshield" ) ) ) )
          {
@@ -281,7 +280,7 @@ void violence_update( void )
             has_cast = TRUE;
          }
          else
-            if( ( IS_SET( ch->def, DEF_SHIELD_SHOCK ) )
+            if( ( IS_SET( ch->def, DEF_SHOCKSHIELD ) )
                 && ( !is_affected( ch, skill_lookup( "shockshield" ) ) )
                 && ( ch->mana > mana_cost( ch, skill_lookup( "shockshield" ) ) ) )
          {
@@ -322,15 +321,6 @@ void violence_update( void )
                }
             }
          }
-      }
-      if( ( IS_NPC( ch ) )
-          && ( ch->is_free == FALSE )
-          && ( ch->position > POS_RESTING )
-          && ( ch->fighting != NULL )
-          && ( ch->fighting->is_free == FALSE )
-          && ( ch->in_room != NULL ) && ( ch->hit > 1 ) && ( ch->position == POS_FIGHTING ) )
-      {
-         check_skills(ch, ch->fighting);
       }
       /*
        * Hunting mobs.
@@ -1198,76 +1188,6 @@ bool check_counter( CHAR_DATA * ch, CHAR_DATA * victim )
       one_hit(victim, ch, gsn_counter);
       return TRUE;
    }
-   return FALSE;
-}
-
-/*
- * Check_skills : if IS_NPC(ch) then check ch->skills to see if there are
- * any extra attack skills available for use --Stephen
- */
-
-bool check_skills( CHAR_DATA * ch, CHAR_DATA * victim )
-{
-   int cnt, check;
-
-   if( !IS_NPC( ch ) )
-      return FALSE;
-
-   /*
-    * Count how many of the attack skills are available 
-    */
-
-   cnt = 0;
-   if( IS_SET( ch->skills, MOB_PUNCH ) )
-      cnt++;
-   if( IS_SET( ch->skills, MOB_HEADBUTT ) )
-      cnt++;
-   if( IS_SET( ch->skills, MOB_KNEE ) )
-      cnt++;
-   if( IS_SET( ch->skills, MOB_KICK ) )
-      cnt++;
-   if( IS_SET( ch->skills, MOB_DIRT ) )
-      cnt++;
-   if( IS_SET( ch->skills, MOB_CHARGE ) )
-      cnt++;
-
-   if( cnt == 0 )
-      return FALSE;  /* There were no attack skills set */
-
-   check = number_range( 1, cnt );
-
-   cnt = 0;
-   if( IS_SET( ch->skills, MOB_KICK ) && ( ++cnt == check ) )
-   {
-      do_kick( ch, "" );
-      return TRUE;
-   }
-   if( IS_SET( ch->skills, MOB_PUNCH ) && ( ++cnt == check ) )
-   {
-      do_punch( ch, "" );
-      return TRUE;
-   }
-   if( IS_SET( ch->skills, MOB_HEADBUTT ) && ( ++cnt == check ) )
-   {
-      do_headbutt( ch, "" );
-      return TRUE;
-   }
-   if( IS_SET( ch->skills, MOB_KNEE ) && ( ++cnt == check ) )
-   {
-      do_knee( ch, "" );
-      return TRUE;
-   }
-   if( IS_SET( ch->skills, MOB_DIRT ) && ( ++cnt == check ) )
-   {
-      do_dirt( ch, "" );
-      return TRUE;
-   }
-   if( IS_SET( ch->skills, MOB_CHARGE ) && ( ++cnt == check ) )
-   {
-      do_charge( ch, "" );
-      return TRUE;
-   }
-
    return FALSE;
 }
 

@@ -87,6 +87,8 @@ time_t current_time; /* Time of this pulse           */
 int port;
 int control;
 
+int max_players = 0;
+
 /* -S- Mod: Some Globals for auctioning an item */
 OBJ_DATA *auction_item; /* Item being sold      */
 CHAR_DATA *auction_owner;  /* Item's owner         */
@@ -111,10 +113,6 @@ sh_int quest_personality;  /* mob's crusade personality :) */
 POL_DATA politics_data;
 
 COUNCIL_DATA super_councils[MAX_SUPER];   /* for supernatural council meetings  */
-
-/* Llolth added for consider */
-char hr[MAX_STRING_LENGTH];
-char dr[MAX_STRING_LENGTH];
 
 /*
  * OS-dependent local functions.
@@ -276,7 +274,6 @@ int init_socket( int port )
 }
 
 int cur_hour = 0;
-int max_players = 0;
 int cur_players = 0;
 
 /* + */
@@ -506,7 +503,12 @@ void game_loop( int control )
                fclose( out_file );
                out_file = NULL;
             }
-            max_players = cur_players;
+
+            if (cur_players > max_players)
+            {
+               trigger_happy_hour();
+               max_players = cur_players;
+            }
          }
 
          usecDelta = ( ( int )last_time.tv_usec ) - ( ( int )now_time.tv_usec ) + 1000000 / PULSE_PER_SECOND;

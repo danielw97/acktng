@@ -501,28 +501,28 @@ const struct lookup_type tab_mob_flags[] = {
 /* New bits to handle how mobs act */
 
 const struct lookup_type tab_mob_skill[] = {
-   {"nada", 1, 0},
-   {"2_attack", 2, 100},
-   {"3_attack", 4, 200},
-   {"4_attack", 8, 400},
-   {"punch", 16, 200},
-   {"headbutt", 32, 200},
-   {"knee", 64, 200},
-   {"disarm", 128, 400},
-   {"trip", 256, 300},
-   {"nodisarm", 512, 500},
-   {"notrip", 1024, 500},
-   {"dodge", 2048, 200},
-   {"parry", 4096, 200},
-   {"martial", 8192, 300},
-   {"enhanced", 16384, 400},
-   {"dualwield", 32768, 350},
-   {"dirt", 65536, 300},
-   {"5_attack", 131072, 500},
-   {"6_attack", 262144, 600},
-   {"charge", 524288, 700},
-   {"counter", BIT_21, 500},
-   {"kick", BIT_22, 0},
+   {"nada", MOB_NONE, 0},
+   {"2_attack", MOB_SECOND, 100},
+   {"3_attack", MOB_THIRD, 200},
+   {"4_attack", MOB_FOURTH, 400},
+   {"punch", MOB_PUNCH, 200},
+   {"headbutt", MOB_HEADBUTT, 200},
+   {"knee", MOB_KNEE, 200},
+   {"disarm", MOB_DISARM, 400},
+   {"trip", MOB_TRIP, 300},
+   {"nodisarm", MOB_NODISARM, 500},
+   {"notrip", MOB_NOTRIP, 500},
+   {"dodge", MOB_DODGE, 200},
+   {"parry", MOB_PARRY, 200},
+   {"martial", MOB_MARTIAL, 300},
+   {"enhanced", MOB_ENHANCED, 400},
+   {"dualwield", MOB_DUALWIELD, 350},
+   {"dirt", MOB_DIRT, 300},
+   {"5_attack", MOB_FIFTH, 500},
+   {"6_attack", MOB_SIXTH, 600},
+   {"charge", MOB_CHARGE, 700},
+   {"counter", MOB_COUNTER, 500},
+   {"kick", MOB_KICK, 0},
    {NULL, 0, 0}
 };
 const struct lookup_type tab_mob_cast[] = {
@@ -588,14 +588,14 @@ const struct lookup_type tab_cast_name[] = {
 };
 
 const struct lookup_type tab_mob_def[] = {
-   {"nada", 1, 0},
-   {"cure_light", 2, 100},
-   {"cure_serious", 4, 200},
-   {"cure_critic", 8, 400},
-   {"heal", 16, 800},
-   {"fireshield", 32, 1000},
-   {"iceshield", 64, 1500},
-   {"shockshield", 128, 1200},
+   {"nada", DEF_NONE, 0},
+   {"cure_light", DEF_CURE_LIGHT, 100},
+   {"cure_serious", DEF_CURE_SERIOUS, 200},
+   {"cure_critic", DEF_CURE_CRITIC, 400},
+   {"heal", DEF_HEAL, 800},
+   {"fireshield", DEF_FIRESHIELD, 1000},
+   {"iceshield", DEF_ICESHIELD, 1500},
+   {"shockshield", DEF_SHOCKSHIELD, 1200},
    {NULL, 0, 0}
 };
 

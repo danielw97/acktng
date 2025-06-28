@@ -471,7 +471,8 @@ int get_crit( CHAR_DATA *ch )
 
    if (!IS_NPC(ch) && can_use_skill(ch, gsn_enhanced_critical))
    {
-      crit += 5;
+      crit += get_curr_dex(ch)/5;
+      crit += 1;
    }
 
    crit += get_curr_dex(ch)/8;
@@ -502,9 +503,9 @@ int get_crit_mult( CHAR_DATA *ch )
    if( !IS_WEAPON( wield ) )
       wield = NULL;
 
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_enhanced_critical] > 0)
+   if (!IS_NPC(ch) && can_use_skill(ch, gsn_enhanced_critical))
    {
-      crit += 50;
+      crit += get_curr_dex(ch)*2;
    }
 
    crit += ch->remort[CLASS_ASS] / 5;

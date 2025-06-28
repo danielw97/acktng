@@ -284,7 +284,6 @@ bool spell_rictus_curse( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA *
       return FALSE;
    }
    af.type = sn;
-   af.modifier = -1 * get_psuedo_level( ch );
    af.bitvector = AFF_REMORT_CURSE;
    af.caster = ch;
    af.location = APPLY_DOT;
@@ -308,7 +307,6 @@ bool spell_kinetic_reversion( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_D
       return FALSE;
    }
    af.type = sn;
-   af.modifier = -1 * get_psuedo_level( ch );
    af.bitvector = AFF_REMORT_CURSE;
    af.caster = ch;
    af.location = APPLY_DOT;

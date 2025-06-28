@@ -24,7 +24,7 @@ PROF    =
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG)
 L_FLAGS = -O -g2 -lcrypt $(PROF) $(SOLARIS_LINK)
 
-O_FILES = act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
+O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o clutch.o comm.o \
 	  const.o damage.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  interp.o lists.o macros.o magic.o magic2.o magic3.o magic4.o mapper.o \

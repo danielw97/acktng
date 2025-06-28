@@ -143,6 +143,8 @@ extern bool deathmatch;
 extern char *const dir_name[];
 extern char *const rev_name[];
 
+extern int max_players;
+
 extern bool happy_hour;
 
 /*

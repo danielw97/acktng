@@ -983,26 +983,26 @@
  * New bits to determine what skills a mob can do in combat -S-
  */
 
-#define MOB_NONE		      	     1
-#define MOB_SECOND			     2
-#define MOB_THIRD			     4
-#define MOB_FOURTH			     8
-#define MOB_PUNCH			    16
-#define MOB_HEADBUTT			    32
-#define MOB_KNEE			    64
-#define MOB_DISARM			   128
-#define MOB_TRIP			   256
-#define MOB_NODISARM			   512
-#define MOB_NOTRIP			  1024
-#define MOB_DODGE			  2048
-#define MOB_PARRY			  4096
-#define MOB_MARTIAL			  8192
-#define MOB_ENHANCED			 16384
-#define MOB_DUALWIELD			 32768
-#define MOB_DIRT			 65536
-#define MOB_FIFTH			131072
-#define MOB_SIXTH			262144
-#define MOB_CHARGE			524288
+#define MOB_NONE		      	BIT_1
+#define MOB_SECOND			BIT_2
+#define MOB_THIRD			BIT_3
+#define MOB_FOURTH			BIT_4
+#define MOB_FIFTH                       BIT_5
+#define MOB_SIXTH                       BIT_6
+#define MOB_NODISARM                    BIT_7
+#define MOB_NOTRIP                      BIT_8
+#define MOB_PUNCH			BIT_9
+#define MOB_HEADBUTT			BIT_10
+#define MOB_KNEE			BIT_11
+#define MOB_DISARM			BIT_12
+#define MOB_TRIP			BIT_13
+#define MOB_DODGE			BIT_14
+#define MOB_PARRY			BIT_15
+#define MOB_MARTIAL			BIT_16
+#define MOB_ENHANCED			BIT_17
+#define MOB_DUALWIELD			BIT_18
+#define MOB_DIRT			BIT_19
+#define MOB_CHARGE			BIT_20
 #define MOB_COUNTER			BIT_21
 #define MOB_KICK			BIT_22
 
@@ -1013,46 +1013,41 @@
  *  this way WILL reduce the mob's mana <g>
  */
 
-#define CAST_NONE			     1
-#define CAST_MAGIC_MISSILE		     2
-#define CAST_SHOCKING_GRASP		     4
-#define CAST_BURNING_HANDS		     8
-#define CAST_color_SPRAY		    16
-#define CAST_FIREBALL			    32
-#define CAST_HELLSPAWN			    64
-#define CAST_ACID_BLAST			   128
-#define CAST_CHAIN_LIGHTNING		   256
-#define CAST_FLARE			  1024
-#define CAST_FLAMESTRIKE		  2048
-#define CAST_EARTHQUAKE			  4096
-#define CAST_MIND_FLAIL			  8192
-#define CAST_PLANERGY			 16384
-#define CAST_PHOBIA			 32768
-#define CAST_MIND_BOLT			 65536
-#define CAST_STATIC			131072
-#define CAST_EGO_WHIP			262144
-#define CAST_BLOODY_TEARS		524288
-#define CAST_MINDFLAME		       1048576
-#define CAST_SUFFOCATE		       2097152
-#define CAST_NERVE_FIRE		       4194304
-#define CAST_LIGHTNING_BOLT	       8388608
-#define CAST_HEAT_ARMOR			16777216
-#define CAST_LAVA_BURST			33554432
+#define CAST_NONE			BIT_1
+#define CAST_MAGIC_MISSILE		BIT_2
+#define CAST_SHOCKING_GRASP		BIT_3
+#define CAST_BURNING_HANDS		BIT_4
+#define CAST_COLOR_SPRAY		BIT_5
+#define CAST_FIREBALL			BIT_6
+#define CAST_HELLSPAWN			BIT_7
+#define CAST_ACID_BLAST			BIT_8
+#define CAST_CHAIN_LIGHTNING		BIT_9
+#define CAST_FLARE			BIT_10
+#define CAST_FLAMESTRIKE		BIT_11
+#define CAST_EARTHQUAKE			BIT_12
+#define CAST_MIND_FLAIL			BIT_13
+#define CAST_PLANERGY			BIT_14
+#define CAST_PHOBIA			BIT_15
+#define CAST_MIND_BOLT			BIT_16
+#define CAST_STATIC			BIT_17
+#define CAST_EGO_WHIP			BIT_18
+#define CAST_BLOODY_TEARS		BIT_19
+#define CAST_MINDFLAME		        BIT_20
+#define CAST_SUFFOCATE		        BIT_21
+#define CAST_NERVE_FIRE		        BIT_22
+#define CAST_LIGHTNING_BOLT	        BIT_23
+#define CAST_HEAT_ARMOR			BIT_24
+#define CAST_LAVA_BURST			BIT_25
 
-/*
- * New bits to determine the defensive spells available to
- * mobs.  May be used in fights (cure light, heal, etc)
- *  will deduct mana from the mob when cast.
- */
-
-#define DEF_NONE		1
-#define DEF_CURE_LIGHT		2
-#define DEF_CURE_SERIOUS	4
-#define DEF_CURE_CRITIC		8
-#define DEF_CURE_HEAL		16
-#define DEF_SHIELD_FIRE		32
-#define DEF_SHIELD_ICE		64
-#define DEF_SHIELD_SHOCK	128
+/* Mob def */
+#define DEF_NONE                        BIT_1
+#define DEF_CURE_LIGHT                  BIT_2
+#define DEF_CURE_SERIOUS                BIT_3
+#define DEF_CURE_CRITIC                 BIT_4
+#define DEF_HEAL                        BIT_5
+#define DEF_FIRESHIELD                  BIT_6
+#define DEF_ICESHIELD                   BIT_7
+#define DEF_SHOCKSHIELD                 BIT_8
 
 /*
  * Bits for 'affected_by'.

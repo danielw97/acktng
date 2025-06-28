@@ -1420,6 +1420,8 @@ void death_cry args( ( CHAR_DATA * ch ) );
 void raw_kill args( ( CHAR_DATA * victim, char *argument ) );
 void check_killer args( ( CHAR_DATA * ch, CHAR_DATA * victim ) );
 
+/* ai.c */
+void ai_update args ( ( void ) );
 
 /* handler.c */
 bool remove_obj args( ( CHAR_DATA * ch, int iWear, bool fReplace ) );

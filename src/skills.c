@@ -611,13 +611,13 @@ void do_dirt( CHAR_DATA * ch, char *argument )
    combo(ch, victim, gsn_dirt);
    return;
 }
-
+/*
 void do_bash( CHAR_DATA * ch, char *argument )
 {
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
    int best;
-/*    int cnt;  */
+/*    int cnt;  *
 
    best = -1;
 
@@ -628,7 +628,7 @@ void do_bash( CHAR_DATA * ch, char *argument )
        * if ( ch->lvl[cnt] >= skill_table[gsn_dirt].skill_level[cnt] 
        * && ch->lvl[cnt] >= best )
        * best = cnt;  
-       */
+       *
       if( ch->pcdata->learned[gsn_bash] > 75 )
          best = UMAX( 79, get_psuedo_level( ch ) );
    }
@@ -688,13 +688,13 @@ void do_bash( CHAR_DATA * ch, char *argument )
 
       /*
        * If victim very weak, set pos to stunned, stop fighting 
-       */
+       *
       if( victim->hit < ( victim->max_hit / 50 ) + 1 )
       {
          act( "$N stays on the floor.", ch, NULL, victim, TO_CHAR );
          act( "You are unable to get up.", ch, NULL, victim, TO_VICT );
          act( "$N stays on the floor.", ch, NULL, victim, TO_NOTVICT );
-         stop_fighting( victim, TRUE );   /* MAG: might del this? -S- */
+         stop_fighting( victim, TRUE );   /* MAG: might del this? -S- *
          victim->position = POS_RESTING;
          update_pos( victim );
       }
@@ -702,14 +702,14 @@ void do_bash( CHAR_DATA * ch, char *argument )
       {
          /*
           * Do some damage instead... 
-          */
+          *
          damage( ch, victim, ( best + 12 ) * 2, -1 );
       }
 
    }
 
    return;
-}
+}*/
 
 void do_beserk( CHAR_DATA * ch, char *argument )
 {
@@ -725,9 +725,6 @@ void do_beserk( CHAR_DATA * ch, char *argument )
    if( IS_NPC( ch ) )
       return;
 
-   if( ch->pcdata->order[0] == 2 )
-      prime = TRUE;
-
    level = ch->lvl[2];
 
    if( ch->fighting == NULL )
@@ -742,7 +739,7 @@ void do_beserk( CHAR_DATA * ch, char *argument )
       return;
    }
 
-   if( ch->pcdata->learned[gsn_beserk] == 0 )
+   if( !can_use_skill(ch, gsn_beserk) )
    {
       send_to_char( "You don't know how to use this skill!\n\r", ch );
       return;
@@ -750,7 +747,7 @@ void do_beserk( CHAR_DATA * ch, char *argument )
 
    WAIT_STATE( ch, skill_table[gsn_beserk].beats );
 
-   if( number_percent(  ) < ( ch->pcdata->learned[gsn_beserk] / 2 ) )
+   if( number_percent(  ) < 25 )
    {
       /*
        * Failure 
@@ -852,6 +849,9 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
 
    if (gsn == gsn_fleche)
       dam *= 1.5;
+
+   if (IS_NPC(ch))
+      dam /= 2;
 
    check_killer( ch, victim );
    if( can_hit_skill(ch, victim, gsn ) )
@@ -1079,6 +1079,10 @@ void do_knee( CHAR_DATA * ch, char *argument )
    war_attack(ch, argument, gsn_knee);
 }
 
+void do_bash( CHAR_DATA *ch, char *argument )
+{
+   war_attack(ch, argument, gsn_bash);
+}
 
 void do_detox( CHAR_DATA * ch, char *argument )
 {
@@ -1470,6 +1474,9 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
    chance += get_psuedo_level( ch ) - get_psuedo_level( victim );
 
+   if (IS_NPC(ch))
+      chance /= 2;
+
    if (chance < number_percent())
       return FALSE;
 
@@ -1483,17 +1490,18 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    int max = max_combo(ch);
    int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
    int mult = 23;
-   bool finisher = is_ready_finisher(ch);
+   int prev;
 
-   for(i = 1; i < max; i++)
+   for(i = 0; i < max; i++)
    {
+      prev = ch->combo[i];
       /* Reverse index */
-      ch->combo[i] = ch->combo[i-1];
+      ch->combo[max-i] = ch->combo[max-i-1];
    }
 
    ch->combo[0] = gsn;
 
-   if (!finisher)
+   if (!is_ready_finisher(ch))
       return;
 
    if (max == 5)
@@ -1546,9 +1554,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
          holystrike_cnt += mult;
    }
 
-   if (finisher)
    {
-     reset_combo(ch);
      send_to_char("@@yCombo triggered!@@N\n\r",ch);
      act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
      act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
@@ -1667,9 +1673,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
 bool is_valid_finisher(CHAR_DATA *ch)
 {
-   int max = max_combo(ch)-1;
-
-   for(int i = 0; i < max; i++)
+   for(int i = 0; i < max_combo(ch)-1; i++)
    {
       if (ch->combo[i] == -1)
          return FALSE;
@@ -1683,9 +1687,7 @@ bool is_valid_finisher(CHAR_DATA *ch)
 
 bool is_ready_finisher(CHAR_DATA *ch)
 {
-   int max = max_combo(ch);
-
-   for(int i = 0; i < max; i++)
+   for(int i = 0; i < max_combo(ch); i++)
    {
       if (ch->combo[i] == -1)
          return FALSE;
@@ -1699,7 +1701,7 @@ bool is_ready_finisher(CHAR_DATA *ch)
 
 void reset_combo(CHAR_DATA *ch)
 {
-   for(int i = 0; i < 6; i++)
+   for(int i = 0; i < max_combo(ch); i++)
       ch->combo[i] = -1;
 }
 
@@ -1708,10 +1710,10 @@ int max_combo(CHAR_DATA *ch)
    int max = 4;
 
    if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
-      max++;
+      max = 5;
 
    if (ch->adept[CLASS_CRU] > 0)
-      max++;
+      max = 6;
 
    return max;
 }
