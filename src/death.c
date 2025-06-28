@@ -164,6 +164,7 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    if(number_percent < 101)
    {
       autogen = generate_item(ch->level-10);
+      obj_to_room( autogen, ch->in_room );
       obj_to_obj( autogen, corpse );
    }
    for( obj = ch->first_carry; obj != NULL; obj = obj_next )
