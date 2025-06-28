@@ -178,10 +178,12 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    }
    OUREF( obj_next );
 
+   if (number_percent < 99)
+   {
       autogen = generate_item(ch->level-10);
-      obj_to_room( create_object( get_obj_index( OBJ_VNUM_MUSHROOM ), 0 ), ch->in_room );
       obj_to_obj( autogen, corpse );
-      
+   }
+
    if( !IS_NPC( ch ) )
    {
       if( ( IS_SET( ch->pcdata->pflags, PFLAG_PKOK ) )
