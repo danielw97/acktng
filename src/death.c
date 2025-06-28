@@ -42,7 +42,7 @@ void make_corpse( CHAR_DATA * ch, char *argument )
 
    if( IS_NPC( ch ) )
    {
-      if(number_percent == 99)
+      if(number_percent < 99)
       {
          autogen = generate_item(ch->level-10);
          obj_to_char( autogen, ch );

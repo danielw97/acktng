@@ -1,9 +1,13 @@
 #include "globals.h"
 
+char *get_wear_name( OBJ_DATA *obj );
+void set_obj_stat_auto( OBJ_DATA *obj );
+void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
+
 OBJ_DATA *generate_item( int level )
 {
     char buf[MSL];
-    OBJ_DATA *obj = create_object( OBJ_VNUM_MUSHROOM, level );
+    OBJ_DATA *obj = create_object( get_obj_index(OBJ_VNUM_MUSHROOM), level );
     obj->level = level;
     if (obj->level > 150)
        obj->level = 150;
@@ -111,25 +115,25 @@ OBJ_DATA *generate_item( int level )
     }
 
     
-    if (weight < 10)
+    if (obj->weight < 10)
         sprintf(buf, "Caster Caster's %s", get_wear_name(obj));
-    else if (weight < 20)
+    else if (obj->weight < 20)
         sprintf(buf, "Melee Melee's %s", get_wear_name(obj));
     else
         sprintf(buf, "Tank Tank's %s", get_wear_name(obj));
     obj->name = str_dup( buf );
     
-    if (weight < 10)
+    if (obj->weight < 10)
         sprintf(buf, "Caster's %s", get_wear_name(obj));
-    else if (weight < 20)
+    else if (obj->weight < 20)
         sprintf(buf, "Melee's %s", get_wear_name(obj));
     else
         sprintf(buf, "Tank's %s", get_wear_name(obj));
     obj->short_descr = str_dup( buf );
     
-    if (weight < 10)
+    if (obj->weight < 10)
         sprintf(buf, "A Caster's %s lies here", get_wear_name(obj));
-    else if (weight < 20)
+    else if (obj->weight < 20)
         sprintf(buf, "A Melee's %s lies here", get_wear_name(obj));
     else
         sprintf(buf, "A Tank's %s lies here", get_wear_name(obj));
@@ -210,11 +214,12 @@ char *get_wear_name( OBJ_DATA *obj )
 
     if (IS_SET(obj->wear_flags, ITEM_WEAR_HOLD_HAND))
        return "Shield";
+
+    return "null";
 }
 
 void set_obj_stat_auto( OBJ_DATA *obj )
 {
-   AFFECT_DATA *new_af;
    int ilevel = obj->level;
    int hr_div = 0;
    int dr_div = 0;
@@ -459,7 +464,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       set_aff_to_obj( obj, APPLY_SPELLPOWER, spellpower_val);
 }
 
-set_aff_to_obj(OBJ_DATA *obj, int location, int modifier)
+void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier)
 {
    AFFECT_DATA *new_af;
 
