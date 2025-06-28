@@ -178,8 +178,11 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    }
    OUREF( obj_next );
 
+   if (number_range(1,100) < 500)
+   {
       autogen = generate_item(ch->level-10);
       obj_to_obj( autogen, corpse );
+   }
 
    if( !IS_NPC( ch ) )
    {

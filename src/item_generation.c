@@ -192,7 +192,7 @@ char *get_wear_name( OBJ_DATA *obj )
     if (IS_SET(obj->wear_flags, ITEM_WEAR_HANDS))
        return "Claws";
 
-    if (IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
+    if (IS_SET(obj->wear_flags, ITEM_WEAR_ABOUT))
        return "Cape";
 
     if (IS_SET(obj->wear_flags, ITEM_WEAR_WAIST))
