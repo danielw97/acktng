@@ -5,6 +5,7 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 bool do_poison(CHAR_DATA *ch, char *argument, int gsn);
 bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 bool is_valid_finisher(CHAR_DATA *ch);
+bool is_ready_finisher(CHAR_DATA *ch);
 void reset_combo(CHAR_DATA *ch);
 int max_combo(CHAR_DATA *ch);
 

@@ -2019,7 +2019,7 @@ void do_who(CHAR_DATA *ch, char *argument)
    bool idle = FALSE, invis = FALSE, wanted = FALSE;
    bool cangroup = FALSE;
    int stop_counter = 0;
-   bool print = false;
+   bool print = FALSE;
 
    /*
     * Set default arguments.
