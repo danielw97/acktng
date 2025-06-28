@@ -2897,8 +2897,6 @@ void do_list( CHAR_DATA * ch, char *argument )
    }
 }
 
-
-
 void do_sell( CHAR_DATA * ch, char *argument )
 {
    char buf[MAX_STRING_LENGTH];

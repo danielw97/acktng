@@ -1651,6 +1651,7 @@ void equip_char( CHAR_DATA * ch, OBJ_DATA * obj, int iWear )
    {
       act( "You feel $p bind to you.\n\r", ch, obj, NULL, TO_CHAR);
       SET_BIT(obj->extra_flags, ITEM_NODROP);
+      REMOVE_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    }
 
 
