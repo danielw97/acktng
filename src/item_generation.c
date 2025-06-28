@@ -141,6 +141,7 @@ OBJ_DATA *generate_item( int level )
 
     set_obj_stat_auto(obj);
 
+    info("Item generated!",1);
     return obj;
 }
 
