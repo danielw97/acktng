@@ -1647,6 +1647,12 @@ void equip_char( CHAR_DATA * ch, OBJ_DATA * obj, int iWear )
    ch->armor -= apply_ac( obj, iWear );
    obj->wear_loc = iWear;
 
+   if (IS_SET( obj->extra_flags, BIND_EQUIP))
+   {
+      act( "You feel $p bind to you.\n\r", ch, obj, NULL, TO_CHAR);
+      SET_BIT(obj->extra_flags, ITEM_NODROP);
+   }
+
 
    for( paf = obj->first_apply; paf != NULL; paf = paf->next )
       affect_modify( ch, paf, TRUE );

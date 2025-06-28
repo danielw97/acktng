@@ -4,6 +4,9 @@ extern POL_DATA politics_data;
 extern CHAR_DATA *quest_target;
 extern CHAR_DATA *quest_mob;
 
+/* Autogen */
+OBJ_DATA *generate_item( int level )
+
 /*
  * Make a corpse out of a character.
  */
@@ -14,6 +17,7 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    OBJ_DATA *corpse;
    OBJ_DATA *obj;
    OBJ_DATA *obj_next;
+   OBJ_DATA *autogen;
    CHAR_DATA *target = NULL;
    CHAR_DATA *wch;
    char *name;
@@ -38,6 +42,11 @@ void make_corpse( CHAR_DATA * ch, char *argument )
 
    if( IS_NPC( ch ) )
    {
+      if(number_percent == 99)
+      {
+         autogen = generate_item(ch->level);
+         obj_to_char( autogen, ch )
+      }
       if( ( ch->in_room != NULL ) && IS_SET( ch->in_room->affected_by, ROOM_BV_SOUL_NET ) )
       {
          ROOM_INDEX_DATA *room;

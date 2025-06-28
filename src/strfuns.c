@@ -1446,9 +1446,9 @@ char *extra_bit_name( int extra_flags )
 
    buf[0] = '\0';
    if( extra_flags & ITEM_GLOW )
-      safe_strcat( MAX_STRING_LENGTH, buf, " glow" );
+      safe_strcat( MAX_STRING_LENGTH, buf, " autogen" );
    if( extra_flags & ITEM_HUM )
-      safe_strcat( MAX_STRING_LENGTH, buf, " hum" );
+      safe_strcat( MAX_STRING_LENGTH, buf, " bind-on-equip" );
    if( extra_flags & ITEM_DARK )
       safe_strcat( MAX_STRING_LENGTH, buf, " nodisarm" );
    if( extra_flags & ITEM_LOCK )

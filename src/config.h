@@ -1136,8 +1136,8 @@
  * Extra flags.
  * Used in #OBJECTS.
  */
-#define ITEM_GLOW				1
-#define ITEM_HUM				2
+#define ITEM_GENERATED		1
+#define ITEM_BIND_EQUIP		2
 #define ITEM_DARK				4
 #define ITEM_NODISARM		4
 #define ITEM_LOCK				8
@@ -1153,17 +1153,17 @@
 #define ITEM_INVENTORY		8192
 #define ITEM_NOSAVE			16384 /* For "quest" items :) */
 #define ITEM_CLAN_EQ		 	32768 /* only leaders and creators may load */
-#define ITEM_TRIG_DESTROY	 65536 /* Trigger object that destroy after use */
+#define ITEM_TRIG_DESTROY	65536 /* Trigger object that destroy after use */
 #define ITEM_NO_AUCTION		131072   /* Can't be auctioned */
 #define ITEM_MYTHIC        BIT_19
 #define ITEM_LEGENDARY	   BIT_20
-#define ITEM_RARE	   BIT_21
+#define ITEM_RARE	         BIT_21
 #define ITEM_VAMP          BIT_22 /* player must be a vampyre */
-#define ITEM_NOLOOT	   BIT_23
-#define ITEM_NOSAC	   BIT_24
-#define ITEM_UNIQUE	   BIT_25
+#define ITEM_NOLOOT	      BIT_23
+#define ITEM_NOSAC	      BIT_24
+#define ITEM_UNIQUE	      BIT_25
 #define ITEM_LIFESTEALER   BIT_26
-#define ITEM_SILVER	   BIT_27
+#define ITEM_SILVER	      BIT_27
 #define ITEM_AUTO          BIT_28
 #define ITEM_BUCKLER       BIT_29
 #define ITEM_EXTRA_WAND    BIT_30
