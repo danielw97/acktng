@@ -206,9 +206,9 @@ char *get_wear_name(OBJ_DATA *obj)
    if (IS_SET(obj->wear_flags, ITEM_WEAR_ARMS))
    {
       if (obj->weight >= 20)
-         return "Plate Arm Protectors";
+         return "Plate Vambraces";
       else if (obj->weight >= 10)
-         return "Leather Armguards";
+         return "Leather Vambraces";
       else
          return "Sleeves";
    }
@@ -218,7 +218,7 @@ char *get_wear_name(OBJ_DATA *obj)
       if (obj->weight >= 20)
          return "Plate Bracers";
       else if (obj->weight >= 10)
-         return "Leather Vambraces";
+         return "Leather Bracers";
       else
          return "Bracers";
    }
@@ -261,9 +261,9 @@ char *get_wear_name(OBJ_DATA *obj)
    if (IS_SET(obj->wear_flags, ITEM_WEAR_LEGS))
    {
       if (obj->weight >= 20)
-         return "Plate Legguards";
+         return "Plate Greaves";
       else if (obj->weight >= 10)
-         return "Legguards";
+         return "Leather Greaves";
       else
          return "Leggings";
    }
@@ -271,9 +271,9 @@ char *get_wear_name(OBJ_DATA *obj)
    if (IS_SET(obj->wear_flags, ITEM_WEAR_FEET))
    {
       if (obj->weight >= 20)
-         return "Plate Greaves";
+         return "Plate Boots";
       else if (obj->weight >= 10)
-         return "Leather Greaves";
+         return "Leather Boots";
       else
          return "Boots";
    }
