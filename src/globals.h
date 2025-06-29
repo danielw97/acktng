@@ -71,6 +71,7 @@ extern sh_int gsn_bare_hand;
 
 extern sh_int gsn_equip_buckler;
 extern sh_int gsn_equip_fist;
+extern sh_int gsn_dual_fist;
 extern sh_int gsn_equip_wand;
 
 extern sh_int gsn_circle;

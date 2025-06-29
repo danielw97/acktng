@@ -262,6 +262,28 @@ int get_racial_penalty_to_level(int base, int race, int class)
    return cost;
 }
 
+bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
+{
+   OBJ_DATA *wield2;
+   if (loc == WEAR_HOLD_HAND_R)
+      wield2 = get_eq_char(ch,WEAR_HOLD_HAND_L);
+   else
+      wield2 = get_eq_char(ch,WEAR_HOLD_HAND_R);
+
+   if (IS_WEAPON(obj) && !IS_WEAPON(wield2))
+      return TRUE;
+
+   if (IS_WEAPON(obj) && IS_SET(obj->extra_flags, ITEM_FIST) &&
+         IS_WEAPON( wield2 ) && IS_SET(wield2->extra_flags, ITEM_FIST) &&
+         can_use( ch, gsn_dual_fist))
+      return TRUE;
+
+   if (IS_WEAPON(obj) && IS_WEAPON(wield2) && can_use(ch, gsn_dualwield))
+      return TRUE;
+
+   return FALSE;
+}
+
 /*
  * Retrieve character's current strength.
  */

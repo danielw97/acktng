@@ -2212,8 +2212,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "equip buckler", {182, 182, 182, 1, 182, 182,
-                      182, 1, 182, 1, 182, 182},
+    "equip buckler", {182, 1, 182, 1, 182, 182,
+                      182, 182, 182, 1, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_equip_buckler, SLOT( 0 ), 0, 0,
     "", "!Equip Buckler!",
@@ -2230,8 +2230,17 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "equip wand", {1, 1, 182, 182, 1, 182,
-                   1, 182, 182, 182, 1, 182},
+    "dual fist", {182, 182, 182, 182, 182, 35,
+                   182, 182, 182, 182, 182, 35},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_dual_fist, SLOT( 0 ), 0, 0,
+    "", "!Dual Fist!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "equip wand", {1, 182, 182, 182, 1, 182,
+                   1, 1, 182, 182, 1, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_equip_wand, SLOT( 0 ), 0, 0,
     "", "!Equip Wand!",

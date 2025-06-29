@@ -76,6 +76,7 @@ bool happy_hour;
 bool area_resetting_global;
 bool mem_log;
 sh_int gsn_martial_arts;
+sh_int gsn_dual_fist;
 sh_int gsn_stake;
 sh_int gsn_dualwield;
 sh_int gsn_stun;

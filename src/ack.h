@@ -1412,6 +1412,7 @@ int my_get_hours args( ( CHAR_DATA * ch ) );
 int get_age args( ( CHAR_DATA * ch ) );
 long get_cost_to_level args( ( CHAR_DATA *ch, int class ) );
 long get_cost_to_level_remort args( ( CHAR_DATA *ch, int class ) );
+bool can_wield args( (CHAR_DATA *ch, OBJ_DATA *obj, int loc) );
 int get_curr_str args( ( CHAR_DATA * ch ) );
 int get_max_str args ( ( CHAR_DATA * ch ) );
 int get_curr_int args( ( CHAR_DATA * ch ) );

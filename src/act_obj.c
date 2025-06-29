@@ -1682,9 +1682,7 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
 
       if( get_eq_char( ch, WEAR_HOLD_HAND_L ) == NULL )
       {
-         if( ( IS_WEAPON( obj ) )
-             && ( IS_WEAPON( get_eq_char( ch, WEAR_HOLD_HAND_R ) ) )
-             && ( !can_use(ch, gsn_dualwield)  ) )
+         if (!can_wield(ch, obj, WEAR_HOLD_HAND_L))
          {
             act( "You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR );
             return;
@@ -1697,9 +1695,7 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
 
       if( get_eq_char( ch, WEAR_HOLD_HAND_R ) == NULL )
       {
-         if( ( IS_WEAPON( obj ) )
-             && ( IS_WEAPON( get_eq_char( ch, WEAR_HOLD_HAND_L ) ) )
-             && ( !can_use(ch, gsn_dualwield) ) )
+         if (!can_wield(ch, obj, WEAR_HOLD_HAND_R))
          {
             act( "You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR );
             return;
