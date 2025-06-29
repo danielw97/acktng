@@ -1783,7 +1783,7 @@ bool subtract_energy_cost(CHAR_DATA *ch, int gsn)
    if (gsn < 1 || gsn >= TYPE_HIT)
       return FALSE;
 
-   if (cost < ch->move)
+   if (cost > ch->move)
    {
       send_to_char("You don't have enough move to do this.\n\r",ch);
       return FALSE;
