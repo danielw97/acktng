@@ -117,11 +117,8 @@ OBJ_DATA *generate_item(int level)
 
    sprintf(buf, "%s %s", get_wear_name(obj), get_suffix(obj));
    obj->name = str_dup(buf);
-
-   sprintf(buf, "%s %s", get_wear_name(obj), get_suffix(obj));
    obj->short_descr = str_dup(buf);
-
-   sprintf(buf, "%s %s lies here", get_wear_name(obj), get_suffix(obj));
+   sprintf(buf, "%s lies here", buf);
    obj->description = str_dup(buf);
 
    set_obj_stat_auto(obj);
