@@ -92,7 +92,7 @@ sh_int gsn_notrip;
 sh_int gsn_nodisarm;
 sh_int gsn_trip;
 sh_int gsn_dirt;
-sh_int gsn_flee_timer
+sh_int gsn_flee_timer;
 sh_int gsn_fourth_attack;
 sh_int gsn_shield_block;
 sh_int gsn_beserk;

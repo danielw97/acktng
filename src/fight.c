@@ -1446,7 +1446,7 @@ void do_flee( CHAR_DATA * ch, char *argument )
       }
    }
 
-   if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "flee timer" ) ) )
+   if( is_affected( ch, skill_lookup( "flee timer" ) ) )
    {
       send_to_char("You can't flee again so soon, your flee timer has not expired!\n\r", ch);
       return;
