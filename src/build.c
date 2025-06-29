@@ -2516,7 +2516,7 @@ void build_setobject( CHAR_DATA * ch, char *argument )
    /*
     * Check for extra flag: clan_eq 
     */
-   if( IS_SET( pObj->extra_flags, ITEM_CLAN_EQ ) && get_trust( ch ) != 85 )
+   if( IS_SET( pObj->extra_flags, ITEM_CLAN_EQ ) && get_trust( ch ) < MAX_LEVEL )
    {
       send_to_char( "Only a Creator can set Clan-Eq.\n\r", ch );
       return;
