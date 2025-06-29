@@ -872,7 +872,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
          }
       }
 
-      if (victim != ch && !IS_NPC(ch) && number_percent() < ch->pcdata->learned[gsn_peek])
+      if (victim != ch && !IS_NPC(ch) && can_use_skill(ch, gsn_peek))
       {
          send_to_char("\n\rYou peek at the inventory:\n\r", ch);
          show_list_to_char(victim->first_carry, ch, TRUE, TRUE);
