@@ -1269,7 +1269,7 @@ void disarm( CHAR_DATA * ch, CHAR_DATA * victim, OBJ_DATA * obj )
     * else 
     */
 
-   obj_to_room( obj, victim->in_room );
+   obj_to_char( ch, obj );
 
    return;
 }
