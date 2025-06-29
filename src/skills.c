@@ -169,8 +169,16 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (backstab)
    {
-      if (ch->adept[CLASS_NIG] > 0)
-         calculate_damage(ch, victim, number_range(dam*0.95,dam*1.05), gsn_backstab, REALM_PHYSICAL, TRUE);
+      if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_R ) ) != NULL && obj->value[3] != 11 )
+      {
+         if( ( obj = get_eq_char( ch, WEAR_HOLD_HAND_L ) ) != NULL && obj->value[3] != 11 )
+         {
+            if (IS_SET(stance_app[ch->stance].specials, STANCE_DUAL_BACKSTAB))
+            {
+               calculate_damage(ch, victim, number_range(dam*0.95,dam*1.05), gsn_backstab, REALM_PHYSICAL, TRUE);
+            }
+         }
+      }
       if (!calculate_damage(ch, victim, dam, gsn_backstab, REALM_PHYSICAL, TRUE))
          return;
    }

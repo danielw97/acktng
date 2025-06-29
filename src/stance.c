@@ -59,7 +59,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
      ADEPT, CLASS_GMA, 1, CLASS_KIN, 1, -1},
     {"Templar", -2, 3, 3, 3, 5, 0, 0,
      ADEPT, CLASS_TEM, 1, -1, -1, -1},
-    {"Nightblade", -3, 5, 5, 3, 0, 3, 0,
+    {"Nightblade", -3, 5, 5, 3, 0, 3, STANCE_DUAL_BACKSTAB,
      ADEPT, CLASS_NIG, 1, -1, -1, -1},
     {"Crusader", -3, 3, 3, 3, 0, 0, 0,
      ADEPT, CLASS_CRU, 1, -1, -1, -1},

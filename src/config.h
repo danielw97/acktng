@@ -149,6 +149,7 @@
 #define STANCE_EITHER_CLASS  BIT_3
 #define STANCE_NINJA         BIT_4
 #define STANCE_NO_HIT        BIT_5
+#define STANCE_DUAL_BACKSTAB BIT_6
 
 /*
  * Liquids.
