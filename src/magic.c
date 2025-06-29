@@ -1871,12 +1871,6 @@ bool spell_dispel_object( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
        * * -- Alty
        */
 
-      if( IS_SET( obj->extra_flags, ITEM_DARK ) )
-      {
-         REMOVE_BIT( obj->extra_flags, ITEM_DARK );
-         act( "$p looks brighter.", ch, obj, NULL, TO_CHAR );
-         act( "$p looks brighter.", ch, obj, NULL, TO_ROOM );
-      }
       if( IS_SET( obj->extra_flags, ITEM_EVIL ) )
       {
          REMOVE_BIT( obj->extra_flags, ITEM_EVIL );

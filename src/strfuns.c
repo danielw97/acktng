@@ -1449,7 +1449,7 @@ char *extra_bit_name( int extra_flags )
       safe_strcat( MAX_STRING_LENGTH, buf, " generated" );
    if( extra_flags & ITEM_BIND_EQUIP )
       safe_strcat( MAX_STRING_LENGTH, buf, " bind-on-equip" );
-   if( extra_flags & ITEM_DARK )
+   if( extra_flags & ITEM_NODISARM )
       safe_strcat( MAX_STRING_LENGTH, buf, " nodisarm" );
    if( extra_flags & ITEM_LOCK )
       safe_strcat( MAX_STRING_LENGTH, buf, " lock" );
