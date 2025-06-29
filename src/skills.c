@@ -1830,7 +1830,7 @@ void do_smash(CHAR_DATA *ch, char *argument)
          send_to_char("It's already open.\n\r", ch);
          return;
       }
-
+      
       if (IS_SET(pexit->exit_info, EX_LOCKED))
          REMOVE_BIT(pexit->exit_info, EX_LOCKED);
       else
