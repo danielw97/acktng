@@ -276,6 +276,9 @@ bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
    if (wield2 == NULL)
       return TRUE;
 
+   if (!can_use(ch, obj))
+      return FALSE;
+
    if (!IS_WEAPON(obj))
       return TRUE;
 
@@ -284,10 +287,10 @@ bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
 
    if (IS_WEAPON(obj) && IS_SET(obj->extra_flags, ITEM_FIST) &&
          IS_WEAPON(wield2) && IS_SET(wield2->extra_flags, ITEM_FIST) &&
-         can_use(ch, gsn_dual_fist))
+         can_use_skill(ch, gsn_dual_fist))
       return TRUE;
 
-   if (IS_WEAPON(obj) && IS_WEAPON(wield2) && can_use(ch, gsn_dualwield))
+   if (IS_WEAPON(obj) && IS_WEAPON(wield2) && can_use_skill(ch, gsn_dualwield))
       return TRUE;
 
    return FALSE;
