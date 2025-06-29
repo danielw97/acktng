@@ -148,7 +148,7 @@ char *get_wear_name(OBJ_DATA *obj)
    if (obj->item_type == ITEM_LIGHT)
    {
       if (obj->level > 100)
-         return "Lantern"
+         return "Lantern";
 
       return "Torch";
    }
@@ -157,7 +157,7 @@ char *get_wear_name(OBJ_DATA *obj)
    {
       if (obj->level > 100)
          return "Soulstone";
-      
+
       return "Halo";
    }
 
@@ -166,7 +166,7 @@ char *get_wear_name(OBJ_DATA *obj)
       if (obj->level > 100)
          return "Soul";
 
-         return "Aura";
+      return "Aura";
    }
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HORNS))
