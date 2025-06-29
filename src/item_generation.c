@@ -146,22 +146,27 @@ char *get_wear_name(OBJ_DATA *obj)
       return "Weapon";
 
    if (obj->item_type == ITEM_LIGHT)
+   {
+      if (obj->level > 100)
+         return "Lantern"
+
       return "Torch";
+   }
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO))
    {
-      if (number_percent() < 50)
-         return "Halo";
-      else
+      if (obj->level > 100)
          return "Soulstone";
+      
+      return "Halo";
    }
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_AURA))
    {
-      if (number_percent() < 50)
-         return "Aura";
-      else
+      if (obj->level > 100)
          return "Soul";
+
+         return "Aura";
    }
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HORNS))
@@ -169,10 +174,12 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HEAD))
    {
-      if (number_percent() < 50)
-         return "Helm";
-      else
+      if (obj->weight >= 20)
          return "Helmet";
+      else if (obj->weight >= 10)
+         return "Helm";
+
+      return "Hat";
    }
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_BEAK))
