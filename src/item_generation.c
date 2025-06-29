@@ -97,7 +97,7 @@ OBJ_DATA *generate_item(int level)
       }
       else if (obj->level > 100 && chance <= 20)
       {
-         SET_BIT(obj->extra_flags, ITEM_WAND);
+         SET_BIT(obj->extra_flags, ITEM_EXTRA_WAND);
          obj->item_type = ITEM_WEAPON;
       }
       else if (obj->level > 100 && chance <= 30)
@@ -135,7 +135,7 @@ char *get_suffix(OBJ_DATA *obj)
       return "of the Defender";
    else if (obj->weight >= 10)
       return "of the Fighter";
-   else 
+   else
       return "of the Arcanist";
 }
 
@@ -143,12 +143,12 @@ char *get_wear_name(OBJ_DATA *obj)
 {
    if (obj->item_type == ITEM_WEAPON)
       return "Weapon";
-   
+
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO))
    {
       if (number_percent() < 50)
          return "Halo";
-      else 
+      else
          return "Soulstone";
    }
 
