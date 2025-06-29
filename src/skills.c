@@ -1794,6 +1794,8 @@ bool subtract_energy_cost(CHAR_DATA *ch, int gsn)
 
 void do_smash(CHAR_DATA *ch, char *argument)
 {
+   const sh_int rev_dir[] = {
+    2, 3, 0, 1, 5, 4};
    char arg[MAX_INPUT_LENGTH];
    int door;
    int best;
@@ -1830,7 +1832,7 @@ void do_smash(CHAR_DATA *ch, char *argument)
          send_to_char("It's already open.\n\r", ch);
          return;
       }
-      
+
       if (IS_SET(pexit->exit_info, EX_LOCKED))
          REMOVE_BIT(pexit->exit_info, EX_LOCKED);
       else
@@ -1877,6 +1879,8 @@ void do_smash(CHAR_DATA *ch, char *argument)
 
 void do_pick(CHAR_DATA *ch, char *argument)
 {
+   const sh_int rev_dir[] = {
+    2, 3, 0, 1, 5, 4};
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *gch;
    OBJ_DATA *obj;
