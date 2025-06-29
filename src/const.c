@@ -2256,6 +2256,14 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
+    "flee timer", {182, 182, 182, 182, 182, 182},
+    spell_null, TAR_IGNORE, POS_STANDING,
+    &gsn_flee_timer, SLOT( 0 ), 0, 24,
+    "", "Your anti-flee timer has expired!",
+    ""},
+
+   {
+    MORTAL, NORM,
     "find doors", {182, 182, 16, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_find_doors, SLOT( 0 ), 0, 0,

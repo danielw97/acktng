@@ -74,6 +74,8 @@ extern sh_int gsn_equip_fist;
 extern sh_int gsn_dual_fist;
 extern sh_int gsn_equip_wand;
 
+extern sh_int gsn_flee_timer;
+
 extern sh_int gsn_circle;
 extern sh_int gsn_backstab;
 extern sh_int gsn_poison_quinine;

@@ -1405,6 +1405,7 @@ void do_murder( CHAR_DATA * ch, char *argument )
 
 void do_flee( CHAR_DATA * ch, char *argument )
 {
+   AFFECT_DATA af;
    ROOM_INDEX_DATA *was_in;
    ROOM_INDEX_DATA *now_in;
    CHAR_DATA *victim;
@@ -1445,6 +1446,12 @@ void do_flee( CHAR_DATA * ch, char *argument )
       }
    }
 
+   if( is_affected( ch, sn ) || is_affected( ch, skill_lookup( "flee timer" ) ) )
+   {
+      send_to_char("You can't flee again so soon, your flee timer has not expired!\n\r", ch);
+      return;
+   }
+
    was_in = ch->in_room;
    for( attempt = 0; attempt < 6; attempt++ )
    {
@@ -1467,6 +1474,15 @@ void do_flee( CHAR_DATA * ch, char *argument )
       ch->in_room = was_in;
       act( "$n has fled!", ch, NULL, NULL, TO_ROOM );
       ch->in_room = now_in;
+
+      af.type = gsn_flee_timer;
+      af.duration = number_range(2,4);
+      af.location = APPLY_NONE;
+      af.duration_type = DURATION_ROUND;
+      af.modifier = 0;
+      af.bitvector = 0;
+      af.caster = ch;
+      affect_to_char( ch, &af );
 
       if( !IS_NPC( ch ) )
       {

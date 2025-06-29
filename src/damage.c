@@ -570,7 +570,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
             return dam;
         }
     }
-
+    
     /*
      * Wimp out?
      */
@@ -581,7 +581,9 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     }
 
     if (!IS_NPC(victim) && victim->hit > 0 && victim->hit <= victim->wimpy && victim->wait == 0)
+    {
         do_flee(victim, "");
+    }
 
     tail_chain();
     return dam;
