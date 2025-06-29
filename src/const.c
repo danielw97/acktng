@@ -122,7 +122,7 @@ const struct class_type remort_table[MAX_REMORT] =
 {
    {"Sor", "Sorcerer", APPLY_INT, 4, 10},
 
-   {"Pal", "Paladin", APPLY_STR, 8, 6},
+   {"Pal", "Paladin", APPLY_WIS, 8, 6},
 
    {"Ass", "Assassin", APPLY_DEX, 12, 0},
 
@@ -134,7 +134,7 @@ const struct class_type remort_table[MAX_REMORT] =
 
    {"Wiz", "Wizard", APPLY_INT, 4, 10},
 
-   {"Pri", "Priest", APPLY_INT, 6, 8},
+   {"Pri", "Priest", APPLY_WIS, 6, 8},
 
    {"Wlk", "Warlock", APPLY_DEX, 8, 6},
 
