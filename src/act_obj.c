@@ -1306,19 +1306,19 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
       return;
    }
 
-   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_BUCKLER) && ch->pcdata->learned[gsn_equip_buckler] < 1)
+   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_BUCKLER) && !can_use_skill(ch, gsn_equip_buckler))
    {
       send_to_char( "You cannot wear bucklers.\n\r", ch );
       return;
    }
 
-   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_EXTRA_WAND) && ch->pcdata->learned[gsn_equip_wand] < 1)
+   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_EXTRA_WAND) && !can_use_skill(ch, gsn_equip_wand))
    {
       send_to_char( "You cannot equip wands.\n\r", ch );
       return;
    }
 
-   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_FIST) && ch->pcdata->learned[gsn_equip_fist] < 1)
+   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_FIST) && !can_use_skill(ch, gsn_equip_fist))
    {
       send_to_char( "You cannot equip fist weapons.\n\r", ch );
       return;
