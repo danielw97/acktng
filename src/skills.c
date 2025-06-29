@@ -8,6 +8,8 @@ bool is_valid_finisher(CHAR_DATA *ch);
 bool is_ready_finisher(CHAR_DATA *ch);
 void reset_combo(CHAR_DATA *ch);
 int max_combo(CHAR_DATA *ch);
+bool subtract_energy_cost(CHAR_DATA *ch, int gsn);
+int get_energy_cost(CHAR_DATA *ch, int gsn);
 
 void do_backstab( CHAR_DATA * ch, char *argument )
 {
@@ -120,6 +122,17 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
       return;
    }
 
+   if (backstab)
+   {
+      if (!subtract_energy_cost(ch, gsn_backstab))
+         return;
+   }
+   else
+   {
+      if (!subtract_energy_cost(ch, gsn_circle))
+         return;
+   }
+
    /*
     * Work out damage 
     */
@@ -155,11 +168,17 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    }
 
    if (backstab)
+   {
+      if (ch->adept[CLASS_NIG] > 0)
+         calculate_damage(ch, victim, number_range(dam*0.95,dam*1.05), gsn_backstab, REALM_PHYSICAL, TRUE);
       if (!calculate_damage(ch, victim, dam, gsn_backstab, REALM_PHYSICAL, TRUE))
          return;
+   }
    else
+   {
       if (!calculate_damage(ch, victim, dam*0.8, gsn_circle, REALM_PHYSICAL, TRUE))
          return;
+   }
 
    if (backstab)
       WAIT_STATE(ch, skill_table[gsn_backstab].beats);
@@ -257,6 +276,9 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
       send_to_char("Poison whom?\n\r", ch);
       return;
    }
+
+   if (!subtract_energy_cost(ch, gsn))
+      return;
 
    if (is_affected(ch, skill_table[gsn].name) )
    {
@@ -437,6 +459,9 @@ void do_disarm( CHAR_DATA * ch, char *argument )
    if( IS_SET( obj->extra_flags, ITEM_NODISARM ) )
       return;
 
+   if (!subtract_energy_cost(ch, gsn_disarm))
+      return;
+
    combo(ch, victim, gsn_disarm);
 
    WAIT_STATE( ch, skill_table[gsn_disarm].beats );
@@ -496,6 +521,9 @@ void do_trip( CHAR_DATA * ch, char *argument )
       send_to_char( "That wouldn't even be funny.\n\r", ch );
       return;
    }
+
+   if (!subtract_energy_cost(ch, gsn_dirt))
+      return;
 
    if( is_safe( ch, victim ) )
       return;
@@ -563,6 +591,9 @@ void do_dirt( CHAR_DATA * ch, char *argument )
       send_to_char( "They aren't here.\n\r", ch );
       return;
    }
+
+   if (!subtract_energy_cost(ch, gsn_dirt))
+      return;
 
    if( victim == NULL )
       victim = ch->fighting;
@@ -747,6 +778,9 @@ void do_beserk( CHAR_DATA * ch, char *argument )
 
    WAIT_STATE( ch, skill_table[gsn_beserk].beats );
 
+   if (!subtract_energy_cost(ch, gsn_beserk))
+      return;
+
    if( number_percent(  ) < 25 )
    {
       /*
@@ -815,6 +849,9 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
    if( victim == NULL )
       victim = ch->fighting;
 
+   if (!subtract_energy_cost(ch, gsn))
+      return;
+
    dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 10, get_psuedo_level(ch) * get_curr_str(ch) / 5);
 
    if (dam < 1)
@@ -845,7 +882,10 @@ void war_attack( CHAR_DATA * ch, char *argument, int gsn )
    int element = REALM_PHYSICAL;
 
    if (gsn == gsn_holystrike)
+   {
       element = element | REALM_HOLY;
+      dam *= 1.25;
+   }
 
    if (gsn == gsn_fleche)
       dam *= 1.5;
@@ -1716,4 +1756,40 @@ int max_combo(CHAR_DATA *ch)
       max = 6;
 
    return max;
+}
+
+int get_energy_cost(CHAR_DATA *ch, int gsn)
+{
+   int base_cost = 50;
+
+   if (skill_table[gsn].min_mana == 0)
+      return 0;
+
+   if (skill_table[gsn].min_mana > base_cost)
+      base_cost = skill_table[gsn].min_mana;
+
+   base_cost -= base_cost * (get_curr_str(ch)+get_curr_dex(ch)) / 100;
+
+   return base_cost;
+}
+
+bool subtract_energy_cost(CHAR_DATA *ch, int gsn)
+{
+   int cost = get_energy_cost(ch, gsn);
+
+   if (ch == NULL)
+      return FALSE;
+
+   if (gsn < 1 || gsn >= TYPE_HIT)
+      return FALSE;
+
+   if (cost < ch->move)
+   {
+      send_to_char("You don't have enough move to do this.\n\r",ch);
+      return FALSE;
+   }
+
+   ch->move -= cost;
+
+   return TRUE;
 }

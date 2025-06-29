@@ -44,25 +44,46 @@ void do_spell_heal args( ( CHAR_DATA *ch, CHAR_DATA *victim, int sn ) );
 /* magic.c */
 int mana_cost( CHAR_DATA * ch, int sn );
 
+#define ELE_NONE             BIT_0
+#define ELE_PHYSICAL         BIT_1
+#define ELE_MENTAL           BIT_2
+#define ELE_HOLY             BIT_3
+#define ELE_AIR              BIT_4
+#define ELE_EARTH            BIT_5
+#define ELE_WATER            BIT_6
+#define ELE_FIRE             BIT_7
+#define ELE_SHADOW           BIT_8
+#define ELE_POISON           BIT_9
 
-#define REALM_NONE    	     BIT_0
-#define REALM_FIRE           BIT_1
-#define REALM_SHOCK          BIT_2
-#define REALM_LIGHT          BIT_3
-#define REALM_GAS            BIT_4
-#define REALM_POISON	     BIT_5
-#define REALM_COLD           BIT_6
-#define REALM_SOUND          BIT_7
-#define REALM_ACID           BIT_8
-#define REALM_DRAIN          BIT_9
-#define REALM_IMPACT         BIT_10
-#define REALM_MIND           BIT_11
-#define REALM_HOLY           BIT_12
-#define REALM_EARTH          BIT_13
-#define REALM_WATER          BIT_14
-#define REALM_NEGATIVE       BIT_15
-#define REALM_POSITIVE       BIT_16
-#define REALM_PHYSICAL       BIT_17
+#define ELEMENT_NONE         ELE_NONE
+#define ELEMENT_PHYSICAL     ELE_PHYSICAL
+#define ELEMENT_MENTAL       ELE_MENTAL
+#define ELEMENT_HOLY         ELE_HOLY
+#define ELEMENT_AIR          ELE_AIR
+#define ELEMENT_EARTH        ELE_EARTH
+#define ELEMENT_WATER        ELE_WATER
+#define ELEMENT_FIRE         ELE_FIRE
+#define ELEMENT_SHADOW       ELE_SHADOW
+#define ELEMENT_POISON       ELE_POISON
+
+#define REALM_NONE    	     ELE_NONE
+#define REALM_FIRE           ELE_FIRE
+#define REALM_SHOCK          ELE_AIR
+#define REALM_LIGHT          ELE_HOLY
+#define REALM_GAS            ELE_AIR
+#define REALM_POISON	     ELE_POISON
+#define REALM_COLD           ELE_WATER
+#define REALM_SOUND          ELE_AIR
+#define REALM_ACID           ELE_WATER
+#define REALM_DRAIN          ELE_SHADOW
+#define REALM_IMPACT         ELE_PHYSICAL
+#define REALM_MIND           ELE_MENTAL
+#define REALM_HOLY           ELE_HOLY
+#define REALM_EARTH          ELE_EARTH
+#define REALM_WATER          ELE_WATER
+#define REALM_NEGATIVE       ELE_SHADOW
+#define REALM_POSITIVE       ELE_HOLY
+#define REALM_PHYSICAL       ELE_PHYSICAL
 #define SECOND_DIVISOR       BIT_25
 #define THIRD_DIVISOR        BIT_26
 #define FOURTH_DIVISOR       BIT_27
@@ -71,20 +92,19 @@ int mana_cost( CHAR_DATA * ch, int sn );
 #define NO_REFLECT           BIT_30
 #define NO_ABSORB            BIT_31
 
-
-#define RE_NONE    	  0
-#define RE_FIRE		    1
-#define RE_SHOCK		    2
-#define RE_LIGHT		    3
-#define RE_GAS		      4
-#define RE_POISON	    5
-#define RE_COLD		    6
-#define RE_SOUND		    7
-#define RE_ACID		    8
-#define RE_DRAIN       9
-#define RE_IMPACT      10
-#define RE_MIND        11
-#define RE_HOLY        12
+#define RE_NONE              ELE_NONE
+#define RE_FIRE	             ELE_FIRE
+#define RE_SHOCK             ELE_AIR
+#define RE_LIGHT             ELE_HOLY
+#define RE_GAS               ELE_AIR
+#define RE_POISON            ELE_POISON
+#define RE_COLD              ELE_WATER
+#define RE_SOUND             ELE_AIR
+#define RE_ACID	             ELE_WATER
+#define RE_DRAIN             ELE_SHADOW
+#define RE_IMPACT            ELE_PHYSICAL
+#define RE_MIND              ELE_MENTAL
+#define RE_HOLY              ELE_HOLY
 
 
 

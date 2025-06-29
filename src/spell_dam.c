@@ -348,7 +348,7 @@ void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
          }
          break;
       }
-      case RE_LIGHT:
+/*      case RE_LIGHT:
       {
          if( HAS_BODY( victim ) )
          {
@@ -365,25 +365,7 @@ void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
             break;
          }
          break;
-      }
-      case RE_GAS:
-      {
-         if( HAS_BODY( victim ) )
-         {
-            sprintf( buf1, "$n gasses $N and watches $M choke." );
-            sprintf( buf2, "You gas $N and watch $M die." );
-            sprintf( buf3, "$n gasses you and watches you die." );
-            break;
-         }
-         else
-         {
-            sprintf( buf1, "$n gasses $N and watches $M choke." );
-            sprintf( buf2, "You gas $N and watch $M die." );
-            sprintf( buf3, "$n gasses you and watches you die." );
-            break;
-         }
-         break;
-      }
+      }*/
       case RE_POISON:
       {
          if( HAS_BODY( victim ) )
@@ -435,7 +417,7 @@ void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
          }
          break;
       }
-      case RE_SOUND:
+/*      case RE_SOUND:
       {
          if( HAS_BODY( victim ) )
          {
@@ -452,8 +434,8 @@ void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
             break;
          }
          break;
-      }
-      case RE_ACID:
+      }*/
+/*      case RE_ACID:
       {
          if( HAS_BODY( victim ) )
          {
@@ -479,7 +461,7 @@ void sp_death_message( CHAR_DATA * ch, CHAR_DATA * victim, int realm )
             break;
          }
          break;
-      }
+      }*/
       case RE_DRAIN:
       {
          if( HAS_BODY( victim ) )

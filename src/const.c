@@ -2123,7 +2123,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "dirt", {182, 182, 182, 35, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_dirt, SLOT( 0 ), 0, 24,
+    &gsn_dirt, SLOT( 0 ), 1, 24,
     "", "!dirt!",
     ""},
 
@@ -2165,7 +2165,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "circle", {182, 182, 19, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_circle, SLOT( 0 ), 0, 18,
+    &gsn_circle, SLOT( 0 ), 1, 18,
     "circle", "!circle!",
     ""},
 
@@ -2173,7 +2173,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "backstab", {182, 182, 10, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_backstab, SLOT( 0 ), 0, 18,
+    &gsn_backstab, SLOT( 0 ), 1, 18,
     "backstab", "!Backstab!",
     ""},
 
@@ -2181,7 +2181,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "disarm", {182, 182, 182, 12, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_disarm, SLOT( 0 ), 0, 18,
+    &gsn_disarm, SLOT( 0 ), 1, 18,
     "", "!Disarm!",
     ""},
 
@@ -2288,7 +2288,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "headbutt", {182, 182, 182, 6, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_headbutt, SLOT( 0 ), 0, 18,
+    &gsn_headbutt, SLOT( 0 ), 1, 18,
     "headbutt", "!HeadButt!",
     ""},
 
@@ -2313,7 +2313,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "kick", {182, 182, 182, 14, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_kick, SLOT( 0 ), 0, 18,
+    &gsn_kick, SLOT( 0 ), 1, 18,
     "kick", "!Kick!",
     ""},
 
@@ -2321,7 +2321,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "knee", {182, 182, 182, 8, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_knee, SLOT( 0 ), 0, 18,
+    &gsn_knee, SLOT( 0 ), 1, 18,
     "knee", "!Knee",
     ""},
 
@@ -2370,7 +2370,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "punch", {182, 182, 182, 5, 182, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_punch, SLOT( 0 ), 0, 18,
+    &gsn_punch, SLOT( 0 ), 1, 18,
     "punch", "!Punch!",
     ""},
 
@@ -2854,7 +2854,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "charge", {182, 89, 182, 65, 182, 182,
                182, 89, 182, 65, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_charge, SLOT( 0 ), 0, 24,
+    &gsn_charge, SLOT( 0 ), 1, 24,
     "Charge", "!Charge",
     ""},
 

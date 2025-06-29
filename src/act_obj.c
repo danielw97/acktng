@@ -2065,7 +2065,31 @@ void do_sacrifice( CHAR_DATA * ch, char *argument )
    return;
 }
 
+void do_junk( CHAR_DATA *ch, char *argument )
+{
+   OBJ_DATA *obj;
+   char *buf[MSL];
+   char *arg[MAX_INPUT_LENGTH];
 
+   argument = one_argument(argument, arg);
+
+   if (arg[0] == '\0')
+   {
+      send_to_char("What do you want to junk?\n\r", ch);
+      return;
+   }
+
+   obj = get_obj_carry(ch,arg);
+
+   if(obj != NULL )
+   {
+      act("You junk $p", ch, obj, NULL, TO_CHAR);
+      act("$n junks $p", ch, obj, NULL, TO_ROOM);
+      extract_obj( obj );
+   }
+   else
+      send_to_char("You can't find that in your inventory.\n\r",ch);
+}
 
 void do_quaff( CHAR_DATA * ch, char *argument )
 {

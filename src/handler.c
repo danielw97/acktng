@@ -424,12 +424,12 @@ int get_spell_crit( CHAR_DATA *ch )
    // Base of 5.
    int crit = 5;
 
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_spell_critical] > 0)
-      crit += 10;
+   if (!IS_NPC(ch) && can_use_skill(ch, gsn_spell_critical))
+   {
+      crit += 5;
+   }
 
    crit += get_stat(ch, APPLY_SPELL_CRIT);
-
-   crit += get_curr_int(ch) / 8;
 
    crit += ch->remort[CLASS_SOR] / 10;
    crit += ch->remort[CLASS_WIZ] / 10;
@@ -446,13 +446,15 @@ int get_spell_crit_mult( CHAR_DATA *ch )
    crit += get_stat(ch, APPLY_SPELL_CRIT_MULT);
 
    if (can_use_skill(ch, gsn_spell_critical_damage))
-      crit += 50;
+   {
+      crit += get_curr_wis(ch)*2;
+   }
 
-   crit += ch->lvl[CLASS_PRI];
+   crit += ch->lvl[CLASS_PRI] * get_curr_wis(ch) / 50;
 
-   crit += ch->lvl[CLASS_PAL]*.75;
+   crit += ch->lvl[CLASS_PAL]*.75 * get_curr_wis(ch) / 50;
 
-   crit += get_curr_wis(ch) / 2;
+   crit += ch->adept[CLASS_TEM] * get_curr_wis(ch) / 25;
 
    return crit;
 }
@@ -461,7 +463,7 @@ int get_crit( CHAR_DATA *ch )
 {
    OBJ_DATA *wield;
    // Base of 5%
-   int crit = 5;
+   int crit = get_curr_dex(ch)/5;
 
    wield = get_eq_char( ch, WEAR_HOLD_HAND_L );
    if( !IS_WEAPON( wield ) )
@@ -474,8 +476,6 @@ int get_crit( CHAR_DATA *ch )
       crit += get_curr_dex(ch)/5;
       crit += 1;
    }
-
-   crit += get_curr_dex(ch)/8;
 
    crit += ch->remort[CLASS_ASS] / 20;
    crit += ch->remort[CLASS_WLK] / 20 * .75;
@@ -494,7 +494,6 @@ int get_crit( CHAR_DATA *ch )
 int get_crit_mult( CHAR_DATA *ch )
 {
    OBJ_DATA *wield;
-   // Base of 50%
    int crit = 50;
 
    wield = get_eq_char( ch, WEAR_HOLD_HAND_L );
@@ -666,8 +665,6 @@ char *class_order(int race)
 
 bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-   CHAR_DATA *rch;
-
    if (ch == NULL)
       return FALSE;
 

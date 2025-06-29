@@ -491,6 +491,7 @@ DECLARE_DO_FUN( do_return );
 DECLARE_DO_FUN( do_rset );
 DECLARE_DO_FUN( do_rstat );
 DECLARE_DO_FUN( do_sacrifice );
+DECLARE_DO_FUN( do_junk );
 DECLARE_DO_FUN( do_save );
 DECLARE_DO_FUN( do_say );
 DECLARE_DO_FUN( do_score );

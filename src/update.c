@@ -182,11 +182,11 @@ void advance_level( CHAR_DATA * ch, int class, bool show )
 
    if (ch->lvl[class] < 0)
       ch->lvl[class] = 1;
-   else if (ch->lvl[class] < MAX_MORTAL)
+   else if (ch->lvl[class] < MAX_LEVEL)
       ch->lvl[class] += 1;
    else
    {
-      send_to_char("Trying to advance_level past MAX_MORTAL, error!\n\r",ch);
+      send_to_char("Trying to advance_level past MAX_LEVEL, error!\n\r",ch);
       return;
    }
    add_hp = class_table[class].hp_gain;
@@ -231,11 +231,11 @@ void advance_level_remort( CHAR_DATA * ch, int class, bool show )
 
    if (ch->remort[class] < 0)
       ch->remort[class] = 1;
-   else if (ch->remort[class] < MAX_MORTAL)
+   else if (ch->remort[class] < MAX_LEVEL)
       ch->remort[class] += 1;
    else
    {
-      send_to_char("Trying to advance_level_remort past MAX_MORTAL, error!\n\r",ch);
+      send_to_char("Trying to advance_level_remort past MAX_LEVEL, error!\n\r",ch);
       return;
    }
    add_hp = remort_table[class].hp_gain;

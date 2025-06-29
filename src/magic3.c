@@ -1139,7 +1139,7 @@ bool spell_condense_soul( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA 
       return FALSE;
    }
 
-   if( ob->level < 80 )
+   if( ob->level <= MAX_LEVEL )
    {
       send_to_char( "Bah!! That soul is to weak to use!!\n\r", ch );
       return FALSE;

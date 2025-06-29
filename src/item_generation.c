@@ -114,7 +114,6 @@ OBJ_DATA *generate_item( int level )
         break;
     }
 
-    
     if (obj->weight < 10)
         sprintf(buf, "Caster Caster's %s", get_wear_name(obj));
     else if (obj->weight < 20)
@@ -122,7 +121,7 @@ OBJ_DATA *generate_item( int level )
     else
         sprintf(buf, "Tank Tank's %s", get_wear_name(obj));
     obj->name = str_dup( buf );
-    
+
     if (obj->weight < 10)
         sprintf(buf, "Caster's %s", get_wear_name(obj));
     else if (obj->weight < 20)
@@ -130,7 +129,7 @@ OBJ_DATA *generate_item( int level )
     else
         sprintf(buf, "Tank's %s", get_wear_name(obj));
     obj->short_descr = str_dup( buf );
-    
+
     if (obj->weight < 10)
         sprintf(buf, "A Caster's %s lies here", get_wear_name(obj));
     else if (obj->weight < 20)
@@ -148,7 +147,7 @@ char *get_wear_name( OBJ_DATA *obj )
 {
     if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO))
        return "Halo";
-    
+
     if (IS_SET(obj->wear_flags, ITEM_WEAR_AURA))
        return "Aura";
 
@@ -232,27 +231,6 @@ void set_obj_stat_auto( OBJ_DATA *obj )
    int ac_bonus = 0;
    int stat_bonus = 0;
 
-   if (IS_SET(obj->extra_flags, ITEM_GENERATED))
-   {
-    ilevel *= 0.8;
-   }
-   if (IS_SET(obj->extra_flags, ITEM_MAGIC))
-   {
-      ilevel *= 1.2;
-   }
-   else if (IS_SET(obj->extra_flags, ITEM_RARE))
-   {
-      ilevel *= 1.5;
-   }
-   else if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
-   {
-      ilevel *= 1.75;
-   }
-   else if (IS_SET(obj->extra_flags, ITEM_LEGENDARY))
-   {
-      ilevel *= 2;
-   }
-
    if (obj->level > MAX_MORTAL)
    {
       ilevel += (obj->level - MAX_MORTAL)*3;
@@ -270,6 +248,26 @@ void set_obj_stat_auto( OBJ_DATA *obj )
 
    /* Small bonus for higher weights within itemization class */
    ilevel += obj->level * (obj->weight%10) * 2 / 100;
+
+   if (IS_SET(obj->extra_flags, ITEM_GENERATED) )
+      ilevel *= 0.8;
+
+   if (IS_SET(obj->extra_flags, ITEM_MAGIC))
+   {
+      ilevel *= 1.2;
+   }
+   else if (IS_SET(obj->extra_flags, ITEM_RARE))
+   {
+      ilevel *= 1.5;
+   }
+   else if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
+   {
+      ilevel *= 1.75;
+   }
+   else if (IS_SET(obj->extra_flags, ITEM_LEGENDARY))
+   {
+      ilevel *= 2;
+   }
 
    /* Jewelry */
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
@@ -341,7 +339,9 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       {
          // This is all in for caster stats
          spellpower_div = 2;
+         ac_bonus = 0;
          hrdr_bonus = 0;
+         ac_div = 0;
          hr_div = 0;
          dr_div = 0;
          move_div = 0;
@@ -358,7 +358,7 @@ void set_obj_stat_auto( OBJ_DATA *obj )
       hp_div = 5;
       mana_div = 5;
       move_div = 5;
-      
+
       if (obj->weight > 19)
       {
          ac_div -= 1;

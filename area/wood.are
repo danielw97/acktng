@@ -508,8 +508,13 @@ D3
 S
 #7310
 A dead-end in the forest.~
-~
+To the north, a town might be vaguely visible on the horizon.
+~
 0 3
+D0
+~
+town~
+257 -1 30000
 D3
 ~
 ~
@@ -777,7 +782,7 @@ The Guinea-pig guardian of the burrow awaits death here.
 ~
 ~
 131091 535168 0 S
-82 1
+83 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -788,7 +793,7 @@ The sacred holy ram lies here, sleeping and unaware.
 ~
 ~
 3 657408 0 S
-12 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -810,7 +815,7 @@ A giant spider hangs on his web here.
 ~
 ~
 3 0 0 S
-10 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -820,7 +825,7 @@ A shapeshifter~
 A small sniffing shapeshifter cringes in one corner.~
 ~
 1 0 0 S
-12 0
+13 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -842,7 +847,7 @@ A rotting tree approaches you.
 ~
 ~
 1 0 -100 S
-9 1
+8 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -875,7 +880,7 @@ A Strange cat lies here doing conjuring tricks.
 ~
 ~
 133651 1081474 0 S
-82 1
+81 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0

@@ -256,11 +256,9 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     else
     {
        if (can_use_skill(ch, gsn_enhanced_damage) )
-          dam += dam * 0.6;
-       else if( IS_NPC( ch ) && IS_SET(ch->skills, MOB_ENHANCED) )
+          dam += dam * get_curr_str(ch) * 2 / 100;
+       else if( IS_NPC( ch ) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED) ) )
           dam += dam * 0.2;
-       else if (item_has_apply(ch, ITEM_APPLY_ENHANCED) )
-          dam += dam * 0.4;
 
        if( !IS_AWAKE( victim ) )
           dam *= 1.5;
@@ -299,7 +297,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         dam -= dam * get_curr_con(victim) / 100;
 
     if (IS_SET(element, REALM_HOLY) )
-        dam += ch->adept[CLASS_TEM] / 50;
+        dam += dam * ch->adept[CLASS_TEM] / 50;
 
     if (element != REALM_PHYSICAL && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {

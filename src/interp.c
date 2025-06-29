@@ -477,6 +477,8 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"sacrifice", do_sacrifice, POS_RESTING, 0, LOG_NORMAL,
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
+   {"junk", do_junk, POS_RESTING, 0, LOG_NORMAL,
+    C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"unlock", do_unlock, POS_RESTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"value", do_value, POS_RESTING, 0, LOG_NORMAL,
