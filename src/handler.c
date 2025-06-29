@@ -270,12 +270,21 @@ bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
    else
       wield2 = get_eq_char(ch,WEAR_HOLD_HAND_R);
 
+   if (obj == NULL)
+      return FALSE;
+
+   if (wield2 == NULL)
+      return TRUE;
+
+   if (!IS_WEAPON(obj))
+      return TRUE;
+
    if (IS_WEAPON(obj) && !IS_WEAPON(wield2))
       return TRUE;
 
    if (IS_WEAPON(obj) && IS_SET(obj->extra_flags, ITEM_FIST) &&
-         IS_WEAPON( wield2 ) && IS_SET(wield2->extra_flags, ITEM_FIST) &&
-         can_use( ch, gsn_dual_fist))
+         IS_WEAPON(wield2) && IS_SET(wield2->extra_flags, ITEM_FIST) &&
+         can_use(ch, gsn_dual_fist))
       return TRUE;
 
    if (IS_WEAPON(obj) && IS_WEAPON(wield2) && can_use(ch, gsn_dualwield))
