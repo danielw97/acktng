@@ -272,10 +272,10 @@ int get_curr_str(CHAR_DATA *ch)
       return (13 + (ch->level / 16));
    }
 
-   int cur = race_table[ch->race].race_str;
+   int cur = get_max_str(ch);
    cur += get_stat(ch, APPLY_STR);
 
-   return URANGE(3, cur, get_max_str(ch));
+   return URANGE(3, cur, get_max_str(ch)+3);
 }
 
 int get_max_str(CHAR_DATA *ch)
@@ -297,7 +297,7 @@ int get_max_str(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max+3,25);
+   return UMIN(max,25);
 }
 
 /*
@@ -310,10 +310,10 @@ int get_curr_int(CHAR_DATA *ch)
       return (13 + (ch->level / 16));
    }
 
-   int cur = race_table[ch->race].race_int;
+   int cur = get_max_int(ch);
    cur += get_stat(ch, APPLY_INT);
 
-   return URANGE(3, cur, get_max_int(ch));
+   return URANGE(3, cur, get_max_int(ch)+3);
 }
 
 int get_max_int(CHAR_DATA *ch)
@@ -335,7 +335,7 @@ int get_max_int(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max+3,25);
+   return UMIN(max,25);
 }
 
 /*
@@ -348,10 +348,10 @@ int get_curr_wis(CHAR_DATA *ch)
       return (13 + (ch->level / 16));
    }
 
-   int cur = race_table[ch->race].race_wis;
+   int cur = get_max_wis(ch);
    cur += get_stat(ch, APPLY_WIS);
 
-   return URANGE(3, cur, get_max_wis(ch));
+   return URANGE(3, cur, get_max_wis(ch)+3);
 }
 
 int get_max_wis(CHAR_DATA *ch)
@@ -373,7 +373,7 @@ int get_max_wis(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max+3,25);
+   return UMIN(max,25);
 }
 
 /*
@@ -387,10 +387,10 @@ int get_curr_dex(CHAR_DATA *ch)
       return (13 + (ch->level / 16));
    }
 
-   int cur = race_table[ch->race].race_dex;
+   int cur = get_max_dex(ch);
    cur += get_stat(ch, APPLY_DEX);
 
-   return URANGE(3, cur, get_max_dex(ch));
+   return URANGE(3, cur, get_max_dex(ch)+3);
 }
 
 int get_max_dex(CHAR_DATA *ch)
@@ -412,7 +412,7 @@ int get_max_dex(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max+3,25);
+   return UMIN(max,25);
 }
 
 /*
@@ -425,10 +425,10 @@ int get_curr_con(CHAR_DATA *ch)
       return (13 + (ch->level / 16));
    }
 
-   int cur = race_table[ch->race].race_con;
+   int cur = get_max_con(ch);
    cur += get_stat(ch, APPLY_CON);
 
-   return URANGE(3, cur, get_max_con(ch));
+   return URANGE(3, cur, get_max_con(ch)+3);
 }
 
 int get_max_con(CHAR_DATA *ch)
@@ -450,7 +450,7 @@ int get_max_con(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max+3,25);
+   return UMIN(max,25);
 }
 
 int get_spellpower(CHAR_DATA *ch)
