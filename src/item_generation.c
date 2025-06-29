@@ -197,7 +197,7 @@ char *get_wear_name(OBJ_DATA *obj)
       if (obj->weight >= 20)
          return "Pauldrons";
       else if (obj->weight >= 10)
-         return "Spaulders"
+         return "Spaulders";
       else
          return "Epaulets";
    }
@@ -209,7 +209,7 @@ char *get_wear_name(OBJ_DATA *obj)
       else if (obj->weight >= 10)
          return "Leather Armguards";
       else
-         return "Sleeves"
+         return "Sleeves";
    }
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_WRIST))
@@ -227,7 +227,7 @@ char *get_wear_name(OBJ_DATA *obj)
       if (obj->weight >= 20)
          return "Plate Gauntlets";
       else if (obj->weight >= 10)
-         return "Leather Rondel"
+         return "Leather Rondel";
       else
          return "Gloves";
    }
