@@ -264,16 +264,16 @@ int get_racial_penalty_to_level(int base, int race, int class)
 
 bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
 {
-   OBJ_DATA *wield2;
+   OBJ_DATA *dual;
    if (loc == WEAR_HOLD_HAND_R)
-      wield2 = get_eq_char(ch,WEAR_HOLD_HAND_L);
+      dual = get_eq_char(ch, WEAR_HOLD_HAND_L);
    else
-      wield2 = get_eq_char(ch,WEAR_HOLD_HAND_R);
+      dual = get_eq_char(ch, WEAR_HOLD_HAND_R);
 
    if (obj == NULL)
       return FALSE;
 
-   if (wield2 == NULL)
+   if (dual == NULL)
       return TRUE;
 
    if (!can_use(ch, obj))
@@ -282,15 +282,15 @@ bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
    if (!IS_WEAPON(obj))
       return TRUE;
 
-   if (IS_WEAPON(obj) && !IS_WEAPON(wield2))
+   if (IS_WEAPON(obj) && !IS_WEAPON(dual))
+      return TRUE;
+
+   if (IS_WEAPON(obj) && IS_WEAPON(dual) && can_use_skill(ch, gsn_dualwield))
       return TRUE;
 
    if (IS_WEAPON(obj) && IS_SET(obj->extra_flags, ITEM_FIST) &&
-         IS_WEAPON(wield2) && IS_SET(wield2->extra_flags, ITEM_FIST) &&
+         IS_WEAPON(dual) && IS_SET(dual->extra_flags, ITEM_FIST) &&
          can_use_skill(ch, gsn_dual_fist))
-      return TRUE;
-
-   if (IS_WEAPON(obj) && IS_WEAPON(wield2) && can_use_skill(ch, gsn_dualwield))
       return TRUE;
 
    return FALSE;

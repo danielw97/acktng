@@ -608,8 +608,10 @@
 #define WEAR_LEGS               26
 #define WEAR_FEET               27
 #define WEAR_HOOVES             28
+#define WEAR_TWO_HANDED         29
+#define WEAR_BUCKLER            30
 
-#define MAX_WEAR                     29
+#define MAX_WEAR                     31
 
 
 /***************************************************************************
@@ -1138,7 +1140,6 @@
  */
 #define ITEM_GENERATED		1
 #define ITEM_BIND_EQUIP		2
-#define ITEM_DARK				4
 #define ITEM_NODISARM		4
 #define ITEM_LOCK				8
 #define ITEM_EVIL				16
