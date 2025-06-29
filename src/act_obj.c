@@ -1324,12 +1324,6 @@ void wear_obj( CHAR_DATA * ch, OBJ_DATA * obj, bool fReplace )
       return;
    }
 
-   if (!IS_NPC(ch) && IS_SET( obj->extra_flags, ITEM_) && !can_use_skill(ch, gsn_two_handed))
-   {
-      send_to_char( "You cannot equip fist weapons.\n\r", ch );
-      return;
-   }
-   
    if( get_psuedo_level( ch ) < obj->level )
    {
       sprintf( buf, "You must be level %d to use this object.\n\r", obj->level );
