@@ -19,7 +19,7 @@ OBJ_DATA *generate_item(int level)
    SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    obj->item_type = ITEM_ARMOR;
 
-   switch (number_range(1, 23))
+   switch (number_range(1, 24))
    {
    case 1:
       SET_BIT(obj->wear_flags, ITEM_WEAR_HALO);
@@ -91,21 +91,25 @@ OBJ_DATA *generate_item(int level)
    default:
       SET_BIT(obj->wear_flags, ITEM_WEAR_HOLD_HAND);
       int chance = number_percent();
-      if (obj->level > 100 && chance <= 10)
+      if (chance <= 20)
+      {
+         obj->item_type = ITEM_LIGHT;
+      }
+      else if (obj->level > 100 && chance <= 30)
       {
          SET_BIT(obj->extra_flags, ITEM_BUCKLER);
       }
-      else if (obj->level > 100 && chance <= 20)
+      else if (obj->level > 100 && chance <= 40)
       {
          SET_BIT(obj->extra_flags, ITEM_EXTRA_WAND);
          obj->item_type = ITEM_WEAPON;
       }
-      else if (obj->level > 100 && chance <= 30)
+      else if (obj->level > 100 && chance <= 50)
       {
          SET_BIT(obj->extra_flags, ITEM_FIST);
          obj->item_type = ITEM_WEAPON;
       }
-      else if (obj->level > 100 && chance <= 50)
+      else if (obj->level > 100 && chance <= 70)
       {
          obj->item_type = ITEM_WEAPON;
          obj->value[1] = obj->level/10+1;
@@ -140,6 +144,9 @@ char *get_wear_name(OBJ_DATA *obj)
 {
    if (obj->item_type == ITEM_WEAPON)
       return "Weapon";
+
+   if (obj->item_type == ITEM_LIGHT)
+      return "Torch";
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO))
    {
