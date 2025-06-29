@@ -288,13 +288,13 @@ int get_max_str(CHAR_DATA *ch)
    for(int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_STR)
-         max++
+         max++;
    }
 
    for(int i = 0; i < MAX_ADEPT; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_STR)
-         max++
+         max++;
    }
 
    return UMIN(max+3,25);
@@ -326,13 +326,13 @@ int get_max_int(CHAR_DATA *ch)
    for(int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_INT)
-         max++
+         max++;
    }
 
    for(int i = 0; i < MAX_ADEPT; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_INT)
-         max++
+         max++;
    }
 
    return UMIN(max+3,25);
@@ -364,13 +364,13 @@ int get_max_wis(CHAR_DATA *ch)
    for(int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_WIS)
-         max++
+         max++;
    }
 
    for(int i = 0; i < MAX_ADEPT; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_WIS)
-         max++
+         max++;
    }
 
    return UMIN(max+3,25);
@@ -403,13 +403,13 @@ int get_max_dex(CHAR_DATA *ch)
    for(int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_DEX)
-         max++
+         max++;
    }
 
    for(int i = 0; i < MAX_ADEPT; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_DEX)
-         max++
+         max++;
    }
 
    return UMIN(max+3,25);
@@ -441,13 +441,13 @@ int get_max_con(CHAR_DATA *ch)
    for(int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_CON)
-         max++
+         max++;
    }
 
    for(int i = 0; i < MAX_ADEPT; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_CON)
-         max++
+         max++;
    }
 
    return UMIN(max+3,25);
