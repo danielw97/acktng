@@ -1152,6 +1152,7 @@ struct skill_type
    sh_int slot;                    /* Slot for #OBJECT loading     */
    sh_int min_mana;                /* Minimum mana used            */
    sh_int beats;                   /* Waiting time after use       */
+   bool can_learn;
    char *noun_damage;              /* Damage message               */
    char *msg_off;                  /* Wear off message             */
    char *room_off;                 /* Wear off msg TO_ROOM    */

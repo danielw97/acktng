@@ -727,6 +727,19 @@ int get_generation_chance()
    return chance;
 }
 
+bool learn_skill(CHAR_DATA *ch, int gsn)
+{
+   if (IS_NPC(ch))
+      return FALSE;
+
+   if (ch->pcdata->learned[gsn] > 2000000000)
+      return FALSE;
+
+   ch->pcdata->learned[gsn]++;
+
+   return TRUE;
+}
+
 char *stat_to_string(int stat)
 {
    if (stat == APPLY_CON)

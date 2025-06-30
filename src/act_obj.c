@@ -1883,7 +1883,6 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
     */
    if (paying_fine)
    {
-
       sh_int plevel = get_psuedo_level(ch);
       if (ch->sentence <= 0)
       {
@@ -2008,6 +2007,8 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
       act("@@N$n sacrifices $p to @@N" sacgodname "@@N.", ch, obj, NULL, TO_ROOM);
    }
 
+   extract_obj(obj);
+   
    ch->gold += gp;
    return;
 }
