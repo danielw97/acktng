@@ -572,7 +572,7 @@ Grand Master of Thieves~
 ~
 ~
 1 0 0 S
-8 1
+7 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -592,7 +592,7 @@ Bashinator~
 ~
 ~
 1 0 0 S
-3 1
+4 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -612,7 +612,7 @@ Emperor Hirohito~
 ~
 ~
 1 0 0 S
-11 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -632,7 +632,7 @@ Godzilla~
 ~
 ~
 1 0 0 S
-17 1
+18 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -712,7 +712,7 @@ Lizard~
 ~
 ~
 1 0 0 S
-3 1
+4 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -732,7 +732,7 @@ Pet Tiger~
 ~
 ~
 1 0 0 S
-4 1
+3 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -742,7 +742,7 @@ Shogun~
 ~
 ~
 1 0 0 S
-7 1
+6 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -782,7 +782,7 @@ Bupu the Gully-Dwarf~
 A little bundle of refuse is busy lapping from a puddle here.~
 ~
 1 0 0 S
-79 1
+78 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -795,7 +795,7 @@ Zeus looks disgruntled to say the least at his demotion to bartender!  Maybe
 it'll teach him not to load Tiamat into recall, eh?
 ~
 1 8380 900 S
-85 1
+86 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -806,7 +806,7 @@ The incredible living massage table of Maharet stands here.
 ~
 ~
 3 640 0 S
-82 1
+81 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -816,7 +816,7 @@ dealer~
 ~
 ~
 1 0 0 S
-5 1
+4 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -826,7 +826,7 @@ Eagle Knight~
 ~
 ~
 1 0 0 S
-6 1
+5 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -837,7 +837,7 @@ earth elemental~
 ~
 ~
 262145 552 0 S
-53 0
+52 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -877,7 +877,7 @@ Diamond Golem~
 @@yA shimmering tower of @@adiamond @@yglitters before you.@@N~
 ~
 3145729 535208 0 S
-76 1
+75 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -929,7 +929,7 @@ pegasus~
 ~
 ~
 134217729 1573544 0 S
-60 1
+59 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
@@ -951,7 +951,7 @@ beast~
 ~
 ~
 134217729 1573544 0 S
-52 1
+53 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 144

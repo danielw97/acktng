@@ -369,7 +369,7 @@ void do_gold(CHAR_DATA *ch, char *argument)
 {
    char buf[MSL];
 
-   sprintf(buf, "You have %s gold.\n\r", ch->gold)
+   sprintf(buf, "You have %d gold.\n\r", ch->gold);
 
    send_to_char(buf,ch);
 

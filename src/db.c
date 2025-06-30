@@ -1517,7 +1517,6 @@ void load_rooms( FILE * fp )
 {
    ROOM_INDEX_DATA *pRoomIndex;
    BUILD_DATA_LIST *pList;
-   MONEY_TYPE *room_treasure;
    sh_int cnt;
 
    if( area_load == NULL )
@@ -2483,7 +2482,6 @@ CHAR_DATA *create_mobile( MOB_INDEX_DATA * pMobIndex )
    CHAR_DATA *mob;
    int level;
    char buf[255];
-   MONEY_TYPE *money;
    sh_int cnt;
 
    if( pMobIndex == NULL )
