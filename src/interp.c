@@ -471,8 +471,6 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"sedit", do_sedit, POS_DEAD, L_DEI, LOG_ALWAYS,
     C_TYPE_CONFIG, C_SHOW_NEVER},
-   {"sell", do_sell, POS_RESTING, 0, LOG_NORMAL,
-    C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"take", do_get, POS_RESTING, 0, LOG_NORMAL,
     C_TYPE_OBJECT, C_SHOW_ALWAYS},
    {"sacrifice", do_sacrifice, POS_RESTING, 0, LOG_NORMAL,

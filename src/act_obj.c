@@ -2833,7 +2833,7 @@ void do_list(CHAR_DATA *ch, char *argument)
             stopcounter++;
             sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*d@@N \n\r", "@@a",
                     obj->level, ccode_len(obj->short_descr, 30), capitalize(obj->short_descr),
-                    cost);
+                    obj->cost);
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
             {
@@ -2857,96 +2857,6 @@ void do_list(CHAR_DATA *ch, char *argument)
       send_to_char("@@mMagenta@@N Level numbers indicate remort items.\n\rYou may also type list <keyword>.\n\r", ch);
       return;
    }
-}
-
-void do_sell(CHAR_DATA *ch, char *argument)
-{
-   char buf[MAX_STRING_LENGTH];
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *keeper;
-   OBJ_DATA *obj;
-   int cost;
-   int cur_money;
-   char moneybuf[MSL];
-   bool good_trade = FALSE;
-   MONEY_TYPE *transfer;
-   one_argument(argument, arg);
-   if (arg[0] == '\0')
-   {
-      send_to_char("Sell what?\n\r", ch);
-      return;
-   }
-
-   if ((keeper = find_keeper(ch)) == NULL)
-      return;
-   if (IS_VAMP(ch) && !IS_VAMP(keeper))
-   {
-      do_say(keeper, "I don't serve VAMPIRES!! Be gone evil one!");
-      return;
-   }
-   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
-   {
-      do_say(keeper, "I don't deal with @@bBeasts@@N Be gone!!!@@N\n\r");
-      return;
-   }
-
-   if ((obj = get_obj_carry(ch, arg)) == NULL)
-   {
-      act("$n tells you 'You don't have that item'.", keeper, NULL, ch, TO_VICT);
-      ch->reply = keeper;
-      return;
-   }
-
-   if (!can_drop_obj(ch, obj))
-   {
-      send_to_char("You can't let go of it.\n\r", ch);
-      return;
-   }
-
-   if ((cost = get_cost(keeper, obj, FALSE)) <= 0)
-   {
-      act("$n looks uninterested in $p.", keeper, obj, ch, TO_VICT);
-      return;
-   }
-
-   if (IS_SET(obj->extra_flags, ITEM_CLAN_EQ))
-   {
-      act("$n looks uncertain about buying clan equipment.", keeper, NULL, NULL, TO_VICT);
-      return;
-   }
-
-   if (count_obj_list(obj->pIndexData, keeper->first_carry) > 4)
-   {
-      send_to_char("Sorry, I don't need any more of those.\n\r", ch);
-      return;
-   }
-
-   if (keeper->gold < cost)
-   {
-      sprintf(buf, "Sorry, but I can't afford that!");
-      do_say(keeper, buf);
-      return;
-   }
-   keeper->gold -= cost;
-   ch->gold += cost;
-   sprintf(buf, "You sell $p for %d.", cost);
-   good_trade = TRUE;
-   if (good_trade)
-   {
-      act("$n sells $p.", ch, obj, NULL, TO_ROOM);
-      act(buf, ch, obj, NULL, TO_CHAR);
-      if (obj->item_type == ITEM_TRASH)
-      {
-         extract_obj(obj);
-      }
-      else
-      {
-         obj_from_char(obj);
-         obj_to_char(obj, keeper);
-      }
-   }
-
-   return;
 }
 
 void do_value(CHAR_DATA *ch, char *argument)
