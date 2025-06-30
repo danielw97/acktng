@@ -265,7 +265,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
        dam += dam * ch->remort[CLASS_PAL] / 100 * 0.75;
        dam += dam * ch->adept[CLASS_TEM] / 50;
-       if (dt >= TYPE_HIT || dt < 0)
+       if ((dt >= TYPE_HIT || dt < 0) && can_use_skill(ch, gsn_bare_hand))
        {
           dam += ch->remort[CLASS_BRA] / 100 * 0.75;
           dam += ch->remort[CLASS_MON] / 100;
