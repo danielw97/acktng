@@ -551,7 +551,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    if (is_jewelry(obj) && (IS_SET(obj->extra_flags, ITEM_RARE) || IS_SET(obj->extra_flags, ITEM_MYTHIC)))
    {
       int rare_mod = 1;
-      IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA)
+      if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA))
       {
          set_aff_to_obj(obj, APPLY_CON, rare_mod);
       }
@@ -574,7 +574,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    if (is_jewelry(obj) && IS_SET(obj->extra_flags, ITEM_LEGENDARY))
    {
       int legendary_mod = 2;
-      IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA)
+      if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA))
       {
          set_aff_to_obj(obj, APPLY_CON, legendary_mod);
       }
