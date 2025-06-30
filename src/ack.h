@@ -1385,6 +1385,7 @@ int get_block args((CHAR_DATA * ch));
 int get_hitroll args((CHAR_DATA * ch));
 int get_damroll args((CHAR_DATA * ch));
 int get_stat args((CHAR_DATA * ch, int stat));
+int get_generation_chance args(( ));
 char *stat_to_string args((int stat));
 char *class_order args((int race));
 bool is_same_room args((CHAR_DATA * ch, CHAR_DATA *victim));
