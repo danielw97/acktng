@@ -502,8 +502,8 @@ const struct cmd_type cmd_table[] = {
     C_TYPE_MISC, C_SHOW_ALWAYS},
    {"follow", do_follow, POS_RESTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
-   /*{"gold", do_gold, POS_DEAD, 0, LOG_NORMAL,
-    C_TYPE_INFO, C_SHOW_ALWAYS},*/
+   {"gold", do_gold, POS_DEAD, 0, LOG_NORMAL,
+    C_TYPE_INFO, C_SHOW_ALWAYS},
    {"group", do_group, POS_FIGHTING, 0, LOG_NORMAL,
     C_TYPE_ACTION, C_SHOW_ALWAYS},
    {"guild", do_guild, POS_FIGHTING, 0, LOG_NORMAL,

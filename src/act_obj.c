@@ -365,6 +365,17 @@ void do_get(CHAR_DATA *ch, char *argument)
    return;
 }
 
+void do_gold(CHAR_DATA *ch, char *argument)
+{
+   char buf[MSL];
+
+   sprintf(buf, "You have %s gold.\n\r", ch->gold)
+
+   send_to_char(buf,ch);
+
+   return;
+}
+
 void do_put(CHAR_DATA *ch, char *argument)
 {
    char object_list[MAX_INPUT_LENGTH];
@@ -1991,7 +2002,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
             align_change *= 1.5;
          if (IS_SET(obj->extra_flags, ITEM_ANTI_NEUTRAL))
             align_change *= -.3;
-         sprintf(buf, "@@l" neutralgodname "@@N gives you %d for your sacrifice.\n\r", gp);
+         sprintf(buf, "@@l" neutralgodname "@@N gives you %d gold coins for your sacrifice.\n\r", gp);
          send_to_char(buf, ch);
          act("@@N$n sacrifices $p to @@l" neutralgodname "@@N.", ch, obj, NULL, TO_ROOM);
       }
@@ -2008,7 +2019,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
    }
 
    extract_obj(obj);
-   
+
    ch->gold += gp;
    return;
 }
