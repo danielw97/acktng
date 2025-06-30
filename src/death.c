@@ -508,19 +508,9 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 
          if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)))
          {
-            if (!IS_OBJ_STAT(obj, ITEM_NODROP))
-            {
-               act("You are zapped by $p and drop it.", ch, obj, NULL, TO_CHAR);
-               act("$n is zapped by $p and drops it.", ch, obj, NULL, TO_ROOM);
-               obj_from_char(obj);
-               obj_to_room(obj, ch->in_room);
-            }
-            else
-            {
-               act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
-               act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);
-               unequip_char(ch, obj);
-            }
+            act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
+            act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);
+            unequip_char(ch, obj);
             return;
          }
       }
