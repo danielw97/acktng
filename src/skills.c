@@ -470,7 +470,7 @@ void do_disarm(CHAR_DATA *ch, char *argument)
 
    WAIT_STATE(ch, skill_table[gsn_disarm].beats);
    percent = number_percent() + victim->level - ch->level;
-   if (IS_NPC(ch) || percent < ch->pcdata->learned[gsn_disarm] * 2 / 3)
+   if (IS_NPC(ch) || percent < 75)
       disarm(ch, victim, obj);
    else
       send_to_char("You failed.\n\r", ch);
