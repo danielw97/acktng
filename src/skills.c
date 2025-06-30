@@ -1263,14 +1263,7 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
    act("You disarm $N!", ch, NULL, victim, TO_CHAR);
    act("$n DISARMS $N!", ch, NULL, victim, TO_NOTVICT);
 
-   obj_from_char(obj);
-   /*
-    * if ( IS_NPC(victim) )
-    * obj_to_char( obj, victim );
-    * else
-    */
-
-   obj_to_char(ch, obj);
+   remove_obj(ch, obj);
 
    af.type = skill_lookup("disarm");
    af.location = APPLY_NONE;
