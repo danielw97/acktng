@@ -1504,13 +1504,13 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
          int chance = 0;
 
          if (roll < chance + punch_cnt)
-            do_punch(ch, "enemy");
+            do_punch(ch, victim->name);
 
          chance += punch_cnt;
 
          if (roll < chance + kick_cnt)
          {
-            do_kick(ch, "enemy");
+            do_kick(ch, victim->name);
             continue;
          }
 
@@ -1518,7 +1518,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + knee_cnt)
          {
-            do_knee(ch, "enemy");
+            do_knee(ch, victim->name);
             continue;
          }
 
@@ -1526,7 +1526,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + headbutt_cnt)
          {
-            do_headbutt(ch, "enemy");
+            do_headbutt(ch, victim->name);
             continue;
          }
 
@@ -1534,7 +1534,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + disarm_cnt)
          {
-            do_disarm(ch, "enemy");
+            do_disarm(ch, victim->name);
             continue;
          }
 
@@ -1542,7 +1542,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + dirt_cnt)
          {
-            do_dirt(ch, "enemy");
+            do_dirt(ch, victim->name);
             continue;
          }
 
@@ -1550,7 +1550,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + bash_cnt)
          {
-            do_bash(ch, "enemy");
+            do_bash(ch, victim->name);
             continue;
          }
 
@@ -1558,7 +1558,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + charge_cnt)
          {
-            do_charge(ch, "enemy");
+            do_charge(ch, victim->name);
             continue;
          }
 
@@ -1566,7 +1566,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + fleche_cnt)
          {
-            war_attack(ch, victim, gsn_fleche);
+            war_attack(ch, victim->name, gsn_fleche);
             continue;
          }
 
@@ -1574,7 +1574,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + holystrike_cnt)
          {
-            war_attack(ch, victim, gsn_holystrike);
+            war_attack(ch, victim->name, gsn_holystrike);
             continue;
          }
 
