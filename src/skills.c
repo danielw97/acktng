@@ -556,32 +556,9 @@ void do_dirt(CHAR_DATA *ch, char *argument)
    AFFECT_DATA af;
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
-   int best;
-   /*
-    * int cnt;
-    */
 
-   best = -1;
-
-   if (!IS_NPC(ch))
-   {
-      /*
-       * for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
-       * if ( ch->lvl[cnt] >= skill_table[gsn_dirt].skill_level[cnt]
-       * && ch->lvl[cnt] >= best )
-       * best = cnt;
-       */
-      if (ch->pcdata->learned[gsn_dirt] > 75)
-         best = UMAX(79, get_psuedo_level(ch));
-   }
-   else
-      best = ch->level;
-
-   if (best == -1)
-   {
-      send_to_char("You don't know of such a skill.\n\r", ch);
+   if (!can_use_skill_message(ch, gsn_dirt))
       return;
-   }
 
    one_argument(argument, arg);
 
