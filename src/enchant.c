@@ -334,6 +334,8 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       }
    }
 
+   int cur_stats = cur_str + cur_int + cur_dex + cur_wis + cur_con;
+
    if( !str_cmp( arg1, "show" ) )
    {
       sprintf( msg_buf, "Your enchantment will add the following to %s\n\r", unique->short_descr );
@@ -353,7 +355,7 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       {
          sprintf( cat_buf, "Str: %d  Total: %d  ", mod_str, mod_str + cur_str );
          safe_strcat( MSL, msg_buf, cat_buf );
-         if( mod_str + cur_str > 10 )
+         if( mod_str + cur_stats > 1 )
          {
             legal_enchant = FALSE;
             sprintf( cat_buf, "%s", "@@RILLEGAL@@N\n\r" );
@@ -370,7 +372,7 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       {
          sprintf( cat_buf, "Int: %d  Total: %d  ", mod_int, mod_int + cur_int );
          safe_strcat( MSL, msg_buf, cat_buf );
-         if( mod_int + cur_int > 10 )
+         if( mod_int + cur_stats > 1 )
          {
             legal_enchant = FALSE;
             sprintf( cat_buf, "%s", "@@RILLEGAL@@N\n\r" );
@@ -386,7 +388,7 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       {
          sprintf( cat_buf, "Wis: %d  Total: %d  ", mod_wis, mod_wis + cur_wis );
          safe_strcat( MSL, msg_buf, cat_buf );
-         if( mod_wis + cur_wis > 10 )
+         if( mod_wis + cur_stats > 1 )
          {
             legal_enchant = FALSE;
             sprintf( cat_buf, "%s", "@@RILLEGAL@@N\n\r" );
@@ -403,7 +405,7 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       {
          sprintf( cat_buf, "Dex: %d  Total: %d\n\r  ", mod_dex, mod_dex + cur_dex );
          safe_strcat( MSL, msg_buf, cat_buf );
-         if( mod_dex + cur_dex > 10 )
+         if( mod_dex + cur_stats > 1 )
          {
             legal_enchant = FALSE;
             sprintf( cat_buf, "%s", "@@RILLEGAL@@N\n\r" );
@@ -419,7 +421,7 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       {
          sprintf( cat_buf, "Con: %d  Total: %d  ", mod_con, mod_con + cur_con );
          safe_strcat( MSL, msg_buf, cat_buf );
-         if( mod_con + cur_con > 10 )
+         if( mod_con + cur_stats > 1 )
          {
             legal_enchant = FALSE;
             sprintf( cat_buf, "%s", "@@RILLEGAL@@N\n\r" );
@@ -619,23 +621,23 @@ void do_enchant( CHAR_DATA * ch, char *argument )
          send_to_char( "Now that would be worthwhile. Let's reconsider, and try adding some enchantments!\n\r", ch );
          return;
       }
-      if( ( mod_str != 0 ) && ( mod_str + cur_str > 10 ) )
+      if( ( mod_str != 0 ) && ( mod_str + cur_stats > 1 ) )
       {
          legal_enchant = FALSE;
       }
-      if( ( mod_int != 0 ) && ( mod_int + cur_int > 10 ) )
+      if( ( mod_int != 0 ) && ( mod_int + cur_stats > 1 ) )
       {
          legal_enchant = FALSE;
       }
-      if( ( mod_wis != 0 ) && ( mod_wis + cur_wis > 10 ) )
+      if( ( mod_wis != 0 ) && ( mod_wis + cur_stats > 1 ) )
       {
          legal_enchant = FALSE;
       }
-      if( ( mod_dex != 0 ) && ( mod_dex + cur_dex > 10 ) )
+      if( ( mod_dex != 0 ) && ( mod_dex + cur_stats > 1 ) )
       {
          legal_enchant = FALSE;
       }
-      if( ( mod_con != 0 ) && ( mod_con + cur_con > 10 ) )
+      if( ( mod_con != 0 ) && ( mod_con + cur_stats > 1 ) )
       {
          legal_enchant = FALSE;
       }
