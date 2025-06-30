@@ -602,6 +602,8 @@ int get_damcap(CHAR_DATA *ch)
    if (is_adept(ch))
       damcap += 500;
 
+   damcap += get_stat(ch, APPLY_DAMCAP);
+
    return damcap;
 }
 

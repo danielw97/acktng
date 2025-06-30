@@ -624,6 +624,7 @@ int get_item_value( OBJ_DATA * obj )
          case APPLY_SPELL_CRIT_MULT:
          case APPLY_CRIT:
          case APPLY_CRIT_MULT:
+         case APPLY_DAMCAP:
          break;
       }
    }

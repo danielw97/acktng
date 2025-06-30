@@ -1229,6 +1229,7 @@
 #define APPLY_DODGE 33
 #define APPLY_BLOCK 34
 #define APPLY_PIERCE_AVOIDANCE 35
+#define APPLY_DAMCAP 36
 
 /*
  * Values for containers (value[1]).
