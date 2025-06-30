@@ -13,12 +13,7 @@ int get_energy_cost(CHAR_DATA *ch, int gsn);
 
 void do_backstab(CHAR_DATA *ch, char *argument)
 {
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *victim;
-   OBJ_DATA *obj;
-   int cnt;
-   int mult;
-   int dam;
+   char arg[MSL];
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
    {
@@ -42,14 +37,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 
 void do_circle(CHAR_DATA *ch, char *argument)
 {
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *victim;
-   OBJ_DATA *obj;
-   int cnt;
-   int mult;
-   int chance;
-   int dam;
-
+   char arg[MSL];
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
    {
       send_to_char("You cannot do that while in this form.\n\r", ch);
@@ -73,8 +61,6 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 {
    OBJ_DATA *obj;
    int dam;
-   int chance;
-   int mult;
 
    if (victim == NULL)
    {
@@ -196,8 +182,6 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    else
       WAIT_STATE(ch, skill_table[gsn_circle].beats);
 
-   int explode_count = 0;
-
    dam = dam * 0.8;
 
    if (is_affected(victim, skill_lookup("poison:quinine")))
@@ -276,7 +260,7 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    if (arg[0] == '\0')
    {
       send_to_char("Poison whom?\n\r", ch);
-      return;
+      return FALSE;
    }
 
    victim = get_char_room(ch, arg);
@@ -284,16 +268,16 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    if (victim == NULL)
    {
       send_to_char("Poison whom?\n\r", ch);
-      return;
+      return FALSE;
    }
 
    if (!subtract_energy_cost(ch, gsn))
-      return;
+      return FALSE;
 
    if (is_affected(ch, skill_table[gsn].name))
    {
       send_to_char("Your victim is already inflicted with that.\n\r", ch);
-      return;
+      return FALSE;
    }
 
    WAIT_STATE(ch, skill_table[gsn].beats);
@@ -418,7 +402,6 @@ void do_disarm(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
    OBJ_DATA *obj;
    int percent;
-   int cnt;
    int defense_chance = 0;
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
@@ -673,20 +656,20 @@ void do_beserk(CHAR_DATA *ch, char *argument)
    af.type = gsn_beserk;
    af.duration = -1;
    af.location = APPLY_AC;
-   af.modifier = (best == 2) ? level : (level * 2);
+   af.modifier = ch->lvl[CLASS_WAR]/2;
    af.bitvector = 0;
    affect_to_char(ch, &af);
 
    af.location = APPLY_HITROLL;
-   af.modifier = ch->lvl[CLASS_WARRIOR]/5;
+   af.modifier = ch->lvl[CLASS_WAR]/5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_DAMROLL;
-   af.modifier = ch->lvl[CLASS_WARRIOR]/5;
+   af.modifier = ch->lvl[CLASS_WAR]/5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_SAVING_SPELL;
-   af.modifier = ch->lvl[CLASS_WARRIOR]/-10;
+   af.modifier = ch->lvl[CLASS_WAR]/-10;
    affect_to_char(ch, &af);
 
    act("$n calls on the Dark Powers, who answer!!!", ch, NULL, NULL, TO_ROOM);
@@ -700,7 +683,6 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
    char arg[MAX_INPUT_LENGTH];
    char actbuf[MAX_STRING_LENGTH];
    int dam;
-   int chance;
 
    one_argument(argument, arg);
 
@@ -771,11 +753,11 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
    if (can_hit_skill(ch, victim, gsn))
    {
       char actbuf[MSL];
-      sprintf(actbuf, "$n %ss $N!!", skill_table[gsn].name, dam);
+      sprintf(actbuf, "$n %ss $N!!", skill_table[gsn].name);
       act(actbuf, ch, NULL, victim, TO_NOTVICT);
-      sprintf(actbuf, "$n %ss you really hard!!", skill_table[gsn].name, dam);
+      sprintf(actbuf, "$n %ss you really hard!!", skill_table[gsn].name);
       act(actbuf, ch, NULL, victim, TO_VICT);
-      sprintf(actbuf, "You %s $N!!", skill_table[gsn].name, dam);
+      sprintf(actbuf, "You %s $N!!", skill_table[gsn].name);
       act(actbuf, ch, NULL, victim, TO_CHAR);
 
       calculate_damage(ch, victim, dam, gsn, element, TRUE);
@@ -838,12 +820,9 @@ void do_fleche(CHAR_DATA *ch, char *argument)
 void do_riposte(CHAR_DATA *ch, char *argument)
 {
    AFFECT_DATA af;
-   int level;
 
    if (IS_NPC(ch))
       return;
-
-   level = ch->lvl[CLASS_WAR];
 
    if (ch->fighting == NULL)
    {
@@ -870,7 +849,7 @@ void do_riposte(CHAR_DATA *ch, char *argument)
    }
 
    reset_combo(ch);
-   
+
    raise_skill(ch, gsn_riposte);
 
    WAIT_STATE(ch, skill_table[gsn_riposte].beats);
@@ -885,18 +864,14 @@ void do_riposte(CHAR_DATA *ch, char *argument)
 
    send_to_char("You prepare for a riposte!\n\r", ch);
    act("$n prepares for a riposte!", ch, NULL, NULL, TO_ROOM);
-   return TRUE;
 }
 
 void do_anti_magic_shell(CHAR_DATA *ch, char *argument)
 {
    AFFECT_DATA af;
-   int level;
 
    if (IS_NPC(ch))
       return;
-
-   level = ch->lvl[CLASS_WAR];
 
    if (ch->fighting == NULL)
    {
@@ -938,7 +913,6 @@ void do_anti_magic_shell(CHAR_DATA *ch, char *argument)
 
    send_to_char("You surround yourself with an anti-magic shell!\n\r", ch);
    act("$n creates an anti-magic shell!", ch, NULL, NULL, TO_ROOM);
-   return TRUE;
 }
 
 void do_warcry(CHAR_DATA *ch, char *argument)
@@ -989,7 +963,6 @@ void do_warcry(CHAR_DATA *ch, char *argument)
 
    send_to_char("You scream a great warcry!\n\r", ch);
    act("$n screams a great warcry!", ch, NULL, NULL, TO_ROOM);
-   return TRUE;
 }
 
 void do_knee(CHAR_DATA *ch, char *argument)
@@ -1005,8 +978,6 @@ void do_bash(CHAR_DATA *ch, char *argument)
 void do_detox(CHAR_DATA *ch, char *argument)
 {
    CHAR_DATA *victim;
-   int dam;
-   int chance;
 
    if (!can_use_skill_message(ch, gsn_detox))
       return;
@@ -1032,7 +1003,6 @@ void do_detox(CHAR_DATA *ch, char *argument)
    }
    else
       act("$N is not poisoned!", ch, NULL, victim, TO_CHAR);
-   return TRUE;
 }
 
 void do_morale(CHAR_DATA *ch, char *argument)
@@ -1063,8 +1033,6 @@ void do_morale(CHAR_DATA *ch, char *argument)
       affect_to_char(gch, &af);
    }
    send_to_char("You inspire the troops!\n\r", ch);
-
-   return TRUE;
 }
 
 void do_leadership(CHAR_DATA *ch, char *argument)
@@ -1095,8 +1063,6 @@ void do_leadership(CHAR_DATA *ch, char *argument)
       affect_to_char(gch, &af);
    }
    send_to_char("You inspire the troops!\n\r", ch);
-
-   return TRUE;
 }
 
 void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
@@ -1155,8 +1121,6 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
    af.duration = 2;
    af.bitvector = 0;
    affect_to_char(victim, &af);
-
-   return;
 }
 
 void trip(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -1326,8 +1290,6 @@ void do_target(CHAR_DATA *ch, char *argument)
 void do_stun(CHAR_DATA *ch, char *argument)
 {
    CHAR_DATA *victim;
-   int chance;
-   int chance2;
 
    if (IS_NPC(ch)) /* for now */
       return;
@@ -1364,7 +1326,7 @@ void stun(CHAR_DATA *ch, CHAR_DATA *victim)
    /*}
    else
    {
-      /*
+      *
        * Ooops!
        *
       act( "You try to slam into $N, but miss and fall onto your face!", ch, NULL, victim, TO_CHAR );
@@ -1406,16 +1368,13 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
 bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
-   char buf[MAX_STRING_LENGTH];
    int i;
    int max = max_combo(ch);
    int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
    int mult = 23;
-   int prev;
 
    for (i = 0; i < max; i++)
    {
-      prev = ch->combo[i];
       /* Reverse index */
       ch->combo[max - i] = ch->combo[max - i - 1];
    }
@@ -1584,6 +1543,8 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    }
 
    reset_combo(ch);
+
+  return TRUE;
 }
 
 bool is_valid_finisher(CHAR_DATA *ch)
@@ -1675,8 +1636,6 @@ void do_smash(CHAR_DATA *ch, char *argument)
     2, 3, 0, 1, 5, 4};
    char arg[MAX_INPUT_LENGTH];
    int door;
-   int best;
-   int cnt;
    bool joke; /* Was it unlocked to start with? */
 
    joke = FALSE;
