@@ -779,7 +779,7 @@ void do_give(CHAR_DATA *ch, char *argument)
 
                   if (obj->value[2] > 0)
                   {
-                     sprintf(buf, "You receive %d!\n\r", obj->value[2]);
+                     sprintf(buf, "You receive %d gold coins!\n\r", obj->value[2]);
                      send_to_char(buf, ch);
                      ch->gold += obj->value[2];
                   }
