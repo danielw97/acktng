@@ -2841,7 +2841,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "@@NThe @@rshield@@N protecting $n shatters!!"},
 
    {
-    REMORT, NORM,
+    REMORT, WOLF,
     "Rage:wolven strength", {182, 182, 182, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 650 ), 0, 0, FALSE,
@@ -2849,7 +2849,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    REMORT, NORM,
+    REMORT, WOLF,
     "Rage:sharpened claws", {182, 182, 182, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 651 ), 0, 0, FALSE,
@@ -2857,7 +2857,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    REMORT, NORM,
+    REMORT, WOLF,
     "Rage:disregard for pain", {182, 182, 182, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 652 ), 0, 0, FALSE,
@@ -2865,7 +2865,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    REMORT, NORM,
+    REMORT, WOLF,
     "Enraged", {182, 182, 182, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 653 ), 0, 0, FALSE,
