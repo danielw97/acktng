@@ -5,12 +5,12 @@ extern CHAR_DATA *quest_target;
 extern CHAR_DATA *quest_mob;
 
 /* Autogen */
-OBJ_DATA *generate_item( int level );
+OBJ_DATA *generate_item(int level);
 
 /*
  * Make a corpse out of a character.
  */
-void make_corpse( CHAR_DATA * ch, char *argument )
+void make_corpse(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];
    char arg[MAX_INPUT_LENGTH];
@@ -23,235 +23,228 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    char *name;
    bool leave_corpse = FALSE;
    /*
-    * int counter, num;   
+    * int counter, num;
     */
    extern OBJ_DATA *quest_object;
    extern int quest_timer;
    extern CHAR_DATA *quest_target;
 
-   one_argument( argument, arg );
+   one_argument(argument, arg);
 
-   if( deathmatch )
+   if (deathmatch)
       return;
 
    /*
-    * Vampire bodies crumble to dust when really killed 
+    * Vampire bodies crumble to dust when really killed
     */
-   if( IS_VAMP( ch ) && !IS_NPC( ch ) )
+   if (IS_VAMP(ch) && !IS_NPC(ch))
       return;
 
-   if( IS_NPC( ch ) )
+   if (IS_NPC(ch))
    {
-      if( ( ch->in_room != NULL ) && IS_SET( ch->in_room->affected_by, ROOM_BV_SOUL_NET ) )
+      if ((ch->in_room != NULL) && IS_SET(ch->in_room->affected_by, ROOM_BV_SOUL_NET))
       {
          ROOM_INDEX_DATA *room;
          ROOM_AFFECT_DATA *raf;
          ROOM_AFFECT_DATA *raf_next;
-         corpse = create_object( get_obj_index( OBJ_VNUM_CAPTURED_SOUL ), ch->level );
+         corpse = create_object(get_obj_index(OBJ_VNUM_CAPTURED_SOUL), ch->level);
          corpse->level = ch->level;
-         obj_to_room( corpse, ch->in_room );
-         OREF( obj_next, OBJ_NEXTCONTENT );
-         for( obj = ch->first_carry; obj != NULL; obj = obj_next )
+         obj_to_room(corpse, ch->in_room);
+         OREF(obj_next, OBJ_NEXTCONTENT);
+         for (obj = ch->first_carry; obj != NULL; obj = obj_next)
          {
             obj_next = obj->next_in_carry_list;
-            obj_from_char( obj );
-            extract_obj( obj );
+            obj_from_char(obj);
+            extract_obj(obj);
          }
-         OUREF( obj_next );
-         act( "@@eAs $n's soul attempts to fade from the room, the @@dSoul Net@@e quickly collapses, entombing the soul into a small figurine!!", ch, NULL, NULL, TO_ROOM );
+         OUREF(obj_next);
+         act("@@eAs $n's soul attempts to fade from the room, the @@dSoul Net@@e quickly collapses, entombing the soul into a small figurine!!", ch, NULL, NULL, TO_ROOM);
          room = ch->in_room;
-         for( raf = room->first_room_affect; raf != NULL; raf = raf_next )
+         for (raf = room->first_room_affect; raf != NULL; raf = raf_next)
          {
             raf_next = raf->next;
-            if( raf->bitvector == ROOM_BV_SOUL_NET )
+            if (raf->bitvector == ROOM_BV_SOUL_NET)
             {
-               r_affect_remove( room, raf );
+               r_affect_remove(room, raf);
             }
          }
          return;
       }
-      else  /* still NPC, no soul net */
+      else /* still NPC, no soul net */
       {
          int gold;
          time_t lifetime;
 
          name = ch->short_descr;
-         corpse = create_object( get_obj_index( OBJ_VNUM_CORPSE_NPC ), 0 );
-         corpse->timer = number_range( 3, 6 );
+         corpse = create_object(get_obj_index(OBJ_VNUM_CORPSE_NPC), 0);
+         corpse->timer = number_range(3, 6);
          corpse->level = ch->level; /* for animate spell */
          /*
-          * Takes a mob 2 rl hours to gain full gold. 
+          * Takes a mob 2 rl hours to gain full gold.
           */
-         lifetime = current_time - ( ch->logon );
-         gold = 5 * ( ch->level ) * ( UMIN( 100, lifetime * 100 / ( 2 * 3600 ) ) ) / 100;
+         lifetime = current_time - (ch->logon);
+         gold = 5 * (ch->level) * (UMIN(100, lifetime * 100 / (2 * 3600))) / 100;
          /*
-          * Then take from 1/5 of maximum (i.e. level) to maximum gold. 
+          * Then take from 1/5 of maximum (i.e. level) to maximum gold.
           */
-         gold = number_range( gold / 5, gold );
+         gold = number_range(gold / 5, gold);
          /*
-          * Add special gold. 
+          * Add special gold.
           */
          gold += ch->gold;
 
-         if( gold > 0 )
+         if (gold > 0)
          {
-            //corpse money goes here
+            // corpse money goes here
          }
          ch->gold = 0;
       }
    }
-   else  /* player */
+   else /* player */
    {
       name = ch->name;
-      corpse = create_object( get_obj_index( OBJ_VNUM_CORPSE_PC ), 0 );
-      corpse->timer = number_range( 20, 30 );
+      corpse = create_object(get_obj_index(OBJ_VNUM_CORPSE_PC), 0);
+      corpse->timer = number_range(20, 30);
 
-      sprintf( buf, "%s", ch->name );
-      free_string( corpse->owner );
-      corpse->owner = str_dup( buf );
+      sprintf(buf, "%s", ch->name);
+      free_string(corpse->owner);
+      corpse->owner = str_dup(buf);
 
-      if( ( arg[0] != '\0' ) && ( !IS_NPC( ch ) ) )
+      if ((arg[0] != '\0') && (!IS_NPC(ch)))
       {
          target = NULL;
-         for( wch = first_char; wch != NULL; wch = wch->next )
+         for (wch = first_char; wch != NULL; wch = wch->next)
          {
-            if( !IS_NPC( wch ) && is_name( arg, wch->name ) )
+            if (!IS_NPC(wch) && is_name(arg, wch->name))
             {
                target = wch;
                break;
             }
          }
-         if( ( target != NULL ) && !IS_NPC( target ) )
+         if ((target != NULL) && !IS_NPC(target))
          {
-            if( ( IS_WOLF( ch ) ) && ( IS_VAMP( target ) || IS_WOLF( target ) ) )
+            if ((IS_WOLF(ch)) && (IS_VAMP(target) || IS_WOLF(target)))
             {
                leave_corpse = TRUE;
                corpse->value[0] = 1;
             }
-            if( IS_SET( ch->pcdata->pflags, PFLAG_PKOK ) )
+            if (IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
                corpse->value[0] = 1;
-            if( ch->pcdata->clan > 0 )
+            if (ch->pcdata->clan > 0)
             {
-               if( target->pcdata->clan != ch->pcdata->clan &&
-                   ( politics_data.diplomacy[ch->pcdata->clan][target->pcdata->clan] < -450 ) )
+               if (target->pcdata->clan != ch->pcdata->clan &&
+                   (politics_data.diplomacy[ch->pcdata->clan][target->pcdata->clan] < -450))
                {
                   corpse->value[2] = target->pcdata->clan;
                }
             }
             else
                corpse->value[2] = -1;
-            corpse->value[3] = number_range( 2, 5 );
+            corpse->value[3] = number_range(2, 5);
          }
       }
-   }  /* end of player only */
+   } /* end of player only */
 
-   if( ( IS_SET( ch->act, PLR_KILLER ) || IS_SET( ch->act, PLR_THIEF ) )
-       && ( ( target != NULL )
-            && ( ( !IS_NPC( target ) ) || ( !str_cmp( rev_spec_lookup( target->spec_fun ), "spec_executioner" ) ) ) ) )
+   if ((IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF)) && ((target != NULL) && ((!IS_NPC(target)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_executioner")))))
 
    {
       corpse->value[0] = 1;
-      corpse->value[3] = number_range( 3, 6 );
+      corpse->value[3] = number_range(3, 6);
    }
-   sprintf( buf, corpse->short_descr, name );
-   free_string( corpse->short_descr );
-   corpse->short_descr = str_dup( buf );
+   sprintf(buf, corpse->short_descr, name);
+   free_string(corpse->short_descr);
+   corpse->short_descr = str_dup(buf);
 
-   sprintf( buf, corpse->description, name );
-   free_string( corpse->description );
-   corpse->description = str_dup( buf );
-   OREF( obj_next, OBJ_NEXTCONTENT );
-   for( obj = ch->first_carry; obj != NULL; obj = obj_next )
+   sprintf(buf, corpse->description, name);
+   free_string(corpse->description);
+   corpse->description = str_dup(buf);
+   OREF(obj_next, OBJ_NEXTCONTENT);
+   for (obj = ch->first_carry; obj != NULL; obj = obj_next)
    {
       obj_next = obj->next_in_carry_list;
-      obj_from_char( obj );
-      if( ( obj == quest_object ) && ( ch == quest_target ) )
+      obj_from_char(obj);
+      if ((obj == quest_object) && (ch == quest_target))
       {
-         obj->value[0] = UMAX( 1, obj->value[0] * quest_timer / 10 );
-         obj->value[1] = UMAX( 1, obj->value[1] * quest_timer / 10 );
-         obj->value[2] = UMAX( 1, obj->value[2] * quest_timer / 10 );
+         obj->value[0] = UMAX(1, obj->value[0] * quest_timer / 10);
+         obj->value[1] = UMAX(1, obj->value[1] * quest_timer / 10);
+         obj->value[2] = UMAX(1, obj->value[2] * quest_timer / 10);
       }
-      if( IS_SET( obj->extra_flags, ITEM_INVENTORY ) )
-         extract_obj( obj );
+      if (IS_SET(obj->extra_flags, ITEM_INVENTORY))
+         extract_obj(obj);
       else
-         obj_to_obj( obj, corpse );
+         obj_to_obj(obj, corpse);
    }
-   OUREF( obj_next );
+   OUREF(obj_next);
 
-   if (number_range(1,100) < get_generation_chance)
+   if (number_range(1, 100) < get_generation_chance)
    {
-      autogen = generate_item(ch->level-10);
-      obj_to_obj( autogen, corpse );
+      autogen = generate_item(ch->level - 10);
+      obj_to_obj(autogen, corpse);
    }
 
-   if( !IS_NPC( ch ) )
+   if (!IS_NPC(ch))
    {
-      if( ( IS_SET( ch->pcdata->pflags, PFLAG_PKOK ) )
-          || ( target != NULL && ( target->pcdata->clan != ch->pcdata->clan )
-               && ( politics_data.diplomacy[ch->pcdata->clan][target->pcdata->clan] < -450 ) )
-          || ( ( ch->level > 30 )
-               && ( IS_SET( ch->act, PLR_KILLER ) || IS_SET( ch->act, PLR_THIEF ) ) ) || ( leave_corpse ) )
-         obj_to_room( corpse, ch->in_room );
+      if ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) || (target != NULL && (target->pcdata->clan != ch->pcdata->clan) && (politics_data.diplomacy[ch->pcdata->clan][target->pcdata->clan] < -450)) || ((ch->level > 30) && (IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF))) || (leave_corpse))
+         obj_to_room(corpse, ch->in_room);
       else
-         obj_to_room( corpse, get_room_index( ROOM_VNUM_MORGUE ) );
+         obj_to_room(corpse, get_room_index(ROOM_VNUM_MORGUE));
       {
          CORPSE_DATA *this_corpse;
-         GET_FREE( this_corpse, corpse_free );
+         GET_FREE(this_corpse, corpse_free);
          this_corpse->next = NULL;
          this_corpse->prev = NULL;
          this_corpse->this_corpse = corpse;
-         LINK( this_corpse, first_corpse, last_corpse, next, prev );
+         LINK(this_corpse, first_corpse, last_corpse, next, prev);
       }
-      save_corpses(  );
+      save_corpses();
       return;
    }
    else
    {
-      if( IS_SET( ch->act, ACT_INTELLIGENT ) )
+      if (IS_SET(ch->act, ACT_INTELLIGENT))
       {
-         obj_to_room( corpse, get_room_index( ROOM_VNUM_INT_HEAL ) );
+         obj_to_room(corpse, get_room_index(ROOM_VNUM_INT_HEAL));
       }
       else
       {
-         obj_to_room( corpse, ch->in_room );
+         obj_to_room(corpse, ch->in_room);
       }
       return;
    }
-
 }
 
 /*
  * Improved Death_cry contributed by Diavolo.
  */
-void death_cry( CHAR_DATA * ch )
+void death_cry(CHAR_DATA *ch)
 {
    /*
-    * FIXME:  *ONLY* PKOK victims get a head loaded. 
+    * FIXME:  *ONLY* PKOK victims get a head loaded.
     */
    /*
-    * Make this give 'cry' message, don't load anything 
+    * Make this give 'cry' message, don't load anything
     */
    ROOM_INDEX_DATA *was_in_room;
    char *msg;
    int door;
 
-   if( IS_NPC( ch ) )
+   if (IS_NPC(ch))
       msg = "You hear something's death cry.";
    else
       msg = "You hear someone's death cry.";
 
    was_in_room = ch->in_room;
-   if( ( was_in_room == NULL ) || ( was_in_room->vnum == 0 ) )
+   if ((was_in_room == NULL) || (was_in_room->vnum == 0))
       return;
 
-   for( door = 0; door <= 5; door++ )
+   for (door = 0; door <= 5; door++)
    {
       EXIT_DATA *pexit;
 
-      if( ( pexit = was_in_room->exit[door] ) != NULL && pexit->to_room != NULL && pexit->to_room != was_in_room )
+      if ((pexit = was_in_room->exit[door]) != NULL && pexit->to_room != NULL && pexit->to_room != was_in_room)
       {
          ch->in_room = pexit->to_room;
-         act( msg, ch, NULL, NULL, TO_ROOM );
+         act(msg, ch, NULL, NULL, TO_ROOM);
       }
    }
    ch->in_room = was_in_room;
@@ -259,102 +252,102 @@ void death_cry( CHAR_DATA * ch )
    return;
 }
 
-void raw_kill( CHAR_DATA * victim, char *argument )
+void raw_kill(CHAR_DATA *victim, char *argument)
 {
    CHAR_DATA *check;
    char arg[MAX_STRING_LENGTH];
    char buf[MAX_STRING_LENGTH];
 
-   one_argument( argument, arg );
+   one_argument(argument, arg);
 
-   stop_fighting( victim, TRUE );
-   mprog_death_trigger( victim );
-   if( victim == quest_target )
+   stop_fighting(victim, TRUE);
+   mprog_death_trigger(victim);
+   if (victim == quest_target)
       quest_target = NULL;
-   if( victim == quest_mob )
+   if (victim == quest_mob)
    {
-      sprintf( buf, "Oh well, I guess the quest is over, since I am about to @@eDIE!!!!!@@N" );
-      do_crusade( victim, buf );
+      sprintf(buf, "Oh well, I guess the quest is over, since I am about to @@eDIE!!!!!@@N");
+      do_crusade(victim, buf);
 
       quest_mob = NULL;
    }
 
-   if( ( IS_NPC( victim ) || !IS_VAMP( victim ) ) && ( victim->is_free == FALSE ) && ( victim->in_room != NULL ) )
-      make_corpse( victim, arg );
+   if ((IS_NPC(victim) || !IS_VAMP(victim)) && (victim->is_free == FALSE) && (victim->in_room != NULL))
+      make_corpse(victim, arg);
 
-   for( check = first_char; check != NULL; check = check->next )
+   for (check = first_char; check != NULL; check = check->next)
    {
-      if( check->hunting == victim )
-         end_hunt( check );
-/*        unhunt(check);*/
+      if (check->hunting == victim)
+         end_hunt(check);
+      /*        unhunt(check);*/
    }
 
-   if( IS_NPC( victim ) && !IS_SET( victim->act, ACT_INTELLIGENT ) )
+   if (IS_NPC(victim) && !IS_SET(victim->act, ACT_INTELLIGENT))
    {
       victim->pIndexData->killed++;
-      kill_table[URANGE( 0, victim->level, MAX_LEVEL - 1 )].killed++;
-      extract_char( victim, TRUE );
+      kill_table[URANGE(0, victim->level, MAX_LEVEL - 1)].killed++;
+      extract_char(victim, TRUE);
       return;
-
    }
 
-   extract_char( victim, FALSE );
-   while( victim->first_affect )
-      affect_remove( victim, victim->first_affect );
+   extract_char(victim, FALSE);
+   while (victim->first_affect)
+      affect_remove(victim, victim->first_affect);
    victim->affected_by = 0;
    victim->armor = 100;
    victim->position = POS_RESTING;
-   victim->hit = UMAX( 1, victim->hit );
-   victim->mana = UMAX( 1, victim->mana );
-   victim->move = UMAX( 1, victim->move );
-   save_char_obj( victim );
-   if( IS_NPC( victim ) && IS_SET( victim->act, ACT_INTELLIGENT ) )
+   victim->hit = UMAX(1, victim->hit);
+   victim->mana = UMAX(1, victim->mana);
+   victim->move = UMAX(1, victim->move);
+   save_char_obj(victim);
+   if (IS_NPC(victim) && IS_SET(victim->act, ACT_INTELLIGENT))
    {
 
       OBJ_DATA *my_corpse = NULL;
 
-      for( my_corpse = victim->in_room->first_content; my_corpse; my_corpse = my_corpse->next_in_room )
+      for (my_corpse = victim->in_room->first_content; my_corpse; my_corpse = my_corpse->next_in_room)
       {
-         if( ( my_corpse->item_type == ITEM_CORPSE_NPC )
+         if ((my_corpse->item_type == ITEM_CORPSE_NPC)
              /*
-              * && ( strstr( victim->short_descr, my_corpse->description ) != NULL ) 
-              */  )
+              * && ( strstr( victim->short_descr, my_corpse->description ) != NULL )
+              */
+         )
          {
             break;
          }
       }
-      if( my_corpse == NULL )
+      if (my_corpse == NULL)
       {
          char monbuf[MSL];
-         sprintf( monbuf, "%s is looking for their corpse in room %d, but it's not there",
-                  victim->name, victim->in_room->vnum );
-         monitor_chan( monbuf, MONITOR_MOB );
+         sprintf(monbuf, "%s is looking for their corpse in room %d, but it's not there",
+                 victim->name, victim->in_room->vnum);
+         monitor_chan(monbuf, MONITOR_MOB);
       }
       else
       {
          OBJ_DATA *obj;
          victim->is_quitting = FALSE;
-         do_stand( victim, "" );
-         for( obj = my_corpse->first_content; obj; obj = obj->next_content )
+         do_stand(victim, "");
+         for (obj = my_corpse->first_content; obj; obj = obj->next_content)
          {
-            obj_from_obj( obj );
-            obj_to_char( obj, victim );
+            obj_from_obj(obj);
+            obj_to_char(obj, victim);
          }
-         do_get( victim, "all from corpse" );
-         do_sacrifice( victim, "corpse" );
-         do_wear( victim, "all" );
+         do_get(victim, "all from corpse");
+         do_sacrifice(victim, "corpse");
+         do_wear(victim, "all");
       }
    }
 }
 
-void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
+void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *gch;
    CHAR_DATA *lch;
    int members;
-   int huggy;  /* To work out exp gained */
-   int funky;  /* Hope you LOVE these var names, Mag */
+   int huggy; /* To work out exp gained */
+   int funky; /* Hope you LOVE these var names, Mag */
    int base;
    int vamp_exp;
 
@@ -365,63 +358,60 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
     * -S- Mod: INTELLIGENT mobs *can* gain exp.  So there!
     */
 
-   if( ( ( IS_NPC( ch ) )
-         && ( ( !IS_SET( ch->act, ACT_INTELLIGENT ) )
-              && ( ch->rider == NULL ) ) ) || ( !IS_NPC( victim ) ) || ( victim == ch ) )
+   if (((IS_NPC(ch)) && ((!IS_SET(ch->act, ACT_INTELLIGENT)) && (ch->rider == NULL))) || (!IS_NPC(victim)) || (victim == ch))
       return;
 
    members = 0;
    huggy = 0;
 
-   base = victim->exp;  /* Now share this out... */
-   if( IS_SET( victim->act, ACT_INTELLIGENT ) )
-      base = exp_for_mobile( victim->level, victim );
+   base = victim->exp; /* Now share this out... */
+   if (IS_SET(victim->act, ACT_INTELLIGENT))
+      base = exp_for_mobile(victim->level, victim);
 
-   for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
+   for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {
-      if( is_same_group( gch, ch ) )
+      if (is_same_group(gch, ch))
       {
          members++;
-         huggy += UMAX( get_psuedo_level( gch ), ( get_psuedo_level( ch ) - 25 ) );
+         huggy += UMAX(get_psuedo_level(gch), (get_psuedo_level(ch) - 25));
       }
    }
 
-   if( members == 0 )
+   if (members == 0)
    {
-      bug( "Group_gain: members.", members );
+      bug("Group_gain: members.", members);
       members = 1;
-      huggy = get_psuedo_level( ch );
+      huggy = get_psuedo_level(ch);
    }
 
-
    /*
-    * Bonus for grouping 
+    * Bonus for grouping
     */
 
-   if( members < 2 );   /* Changed from funky */
-   else if( members < 3 )
-      base *= ( 5 / 2 );   /* funky wasn't initialised */
-   else if( members < 4 )
-      base *= 3;  /* anyways.. hmm MAG */
-   else if( members < 5 )
-      base *= ( 7 / 2 );
-   else if( members < 6 )
+   if (members < 2)
+      ; /* Changed from funky */
+   else if (members < 3)
+      base *= (5 / 2); /* funky wasn't initialised */
+   else if (members < 4)
+      base *= 3; /* anyways.. hmm MAG */
+   else if (members < 5)
+      base *= (7 / 2);
+   else if (members < 6)
       base *= 4;
    else
-      base *= ( 9 / 2 );
-
+      base *= (9 / 2);
 
    /*
     * Question is, if someone's exp is capped, do you dole out the rest
     * to the other people? or just reduce the total amount given to the
     * group (by not doling it out).
     * As it is, the total exp is reduced. I'll leave it that way.
-    * 
+    *
     */
 
-   lch = ( ch->leader != NULL ) ? ch->leader : ch;
+   lch = (ch->leader != NULL) ? ch->leader : ch;
 
-   for( gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room )
+   for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {
       OBJ_DATA *obj;
       OBJ_DATA *obj_next;
@@ -434,99 +424,102 @@ void group_gain( CHAR_DATA * ch, CHAR_DATA * victim )
          max_xp *= 2;
       }
 
-      if( !is_same_group( gch, ch ) )
+      if (!is_same_group(gch, ch))
          continue;
 
       /*
-       * Calc each char's xp seperately, but mult by ch->lev/tot_group_lev. 
+       * Calc each char's xp seperately, but mult by ch->lev/tot_group_lev.
        */
 
-      funky = ( base * get_psuedo_level( gch ) ) / huggy;   /* gch's % of exp gained */
+      funky = (base * get_psuedo_level(gch)) / huggy; /* gch's % of exp gained */
 
       /*
-       * Capping changed.  -S- 
+       * Capping changed.  -S-
        */
       /*
-       * Changed YET again -S- 
+       * Changed YET again -S-
        */
       /*
-       * funky = UMIN( funky, ( 1.5 * exp_table[gch->level].mob_base ) );        
-       * funky = UMAX( 0, funky );        
+       * funky = UMIN( funky, ( 1.5 * exp_table[gch->level].mob_base ) );
+       * funky = UMAX( 0, funky );
        */
 
       /*
-       * Now the max is just 250K 
+       * Now the max is just 250K
        */
-      if( funky < 0 )
+      if (funky < 0)
          funky = 823421;
 
-      funky *= number_range(150,250);
+      funky *= number_range(150, 250);
       funky /= 100;
 
-      funky = UMIN( funky, max_xp );
+      funky = UMIN(funky, max_xp);
 
       if (happy_hour)
          funky *= 2;
 
-      if( ( abs( ( get_psuedo_level( gch ) - get_psuedo_level( victim ) ) ) > 23 )
-          || ( get_psuedo_level( gch ) > ( get_psuedo_level( victim ) + 17 ) ) )
+      if ((abs((get_psuedo_level(gch) - get_psuedo_level(victim))) > 21) || (get_psuedo_level(gch) > (get_psuedo_level(victim) + 15)))
       {
-         funky = ( funky / 5000 );
+         funky = 0;
          vamp_exp = 0;
       }
       else
          vamp_exp = 1;
 
-      if( is_adept(ch) )
+      if ((abs((get_psuedo_level(ch) - get_psuedo_level(victim))) > 21) || (get_psuedo_level(ch) > (get_psuedo_level(victim) + 15)))
+      {
+         funky = 0;
+         vamp_exp = 0;
+      }
+
+      if (is_adept(wch))
          funky /= 1000;
 
-      sprintf( buf, "You Receive %d Experience Points.\n\r", funky );
-      send_to_char( buf, gch );
-      if( IS_NPC( gch ) && IS_SET( gch->act, ACT_INTELLIGENT ) )
+      sprintf(buf, "You Receive %d Experience Points.\n\r", funky);
+      send_to_char(buf, gch);
+      if (IS_NPC(gch) && IS_SET(gch->act, ACT_INTELLIGENT))
          gch->intell_exp += funky;
-      gain_exp( gch, funky );
+      gain_exp(gch, funky);
 
-      if( IS_VAMP( gch ) && !IS_NPC( gch ) )
-
-         gch->pcdata->vamp_exp += vamp_exp;
-
-      if( !IS_NPC( gch ) && IS_WOLF( gch ) )
+      if (IS_VAMP(gch) && !IS_NPC(gch))
 
          gch->pcdata->vamp_exp += vamp_exp;
 
-      if( !IS_NPC( gch ) && ( gch->pcdata->learned[gsn_emotion_control] < 73 ) )
+      if (!IS_NPC(gch) && IS_WOLF(gch))
+
+         gch->pcdata->vamp_exp += vamp_exp;
+
+      if (!IS_NPC(gch) && (gch->pcdata->learned[gsn_emotion_control] < 73))
       {
-         align = gch->alignment - ( victim->alignment * ( 80 - gch->pcdata->learned[gsn_emotion_control] ) / 100 );
+         align = gch->alignment - (victim->alignment * (80 - gch->pcdata->learned[gsn_emotion_control]) / 100);
 
-         if( align > 500 )
-            gch->alignment = UMIN( gch->alignment + ( align - 500 ) / 4, 1000 );
-         else if( align < -500 )
-            gch->alignment = UMAX( gch->alignment + ( align + 500 ) / 4, -1000 );
+         if (align > 500)
+            gch->alignment = UMIN(gch->alignment + (align - 500) / 4, 1000);
+         else if (align < -500)
+            gch->alignment = UMAX(gch->alignment + (align + 500) / 4, -1000);
          else
             gch->alignment -= gch->alignment / 4;
       }
-      for( obj = ch->first_carry; obj != NULL; obj = obj_next )
+      for (obj = ch->first_carry; obj != NULL; obj = obj_next)
       {
          obj_next = obj->next_in_carry_list;
-         if( obj->wear_loc == WEAR_NONE )
+         if (obj->wear_loc == WEAR_NONE)
             continue;
 
-         if( ( IS_OBJ_STAT( obj, ITEM_ANTI_EVIL ) && IS_EVIL( ch ) )
-             || ( IS_OBJ_STAT( obj, ITEM_ANTI_GOOD ) && IS_GOOD( ch ) )
-             || ( IS_OBJ_STAT( obj, ITEM_ANTI_NEUTRAL ) && IS_NEUTRAL( ch ) ) )
+         if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)))
          {
-            if( !IS_OBJ_STAT( obj, ITEM_NODROP ) )
+            if (!IS_OBJ_STAT(obj, ITEM_NODROP))
             {
-               act( "You are zapped by $p and drop it.", ch, obj, NULL, TO_CHAR );
-               act( "$n is zapped by $p and drops it.", ch, obj, NULL, TO_ROOM );
-               obj_from_char( obj );
-               obj_to_room( obj, ch->in_room );
+               act("You are zapped by $p and drop it.", ch, obj, NULL, TO_CHAR);
+               act("$n is zapped by $p and drops it.", ch, obj, NULL, TO_ROOM);
+               obj_from_char(obj);
+               obj_to_room(obj, ch->in_room);
             }
             else
             {
-               act( "You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR );
-               act( "$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM );
-               unequip_char( ch, obj );
+               act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
+               act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);
+               unequip_char(ch, obj);
             }
             return;
          }
