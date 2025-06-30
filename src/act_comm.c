@@ -2095,7 +2095,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 
    if (IS_NPC(victim) && !IS_NPC(ch) && ch->riding != victim)
    {
-      send_to_char("You can't group non-mounted NPCs.\n\r");
+      send_to_char("You can't group non-mounted NPCs.\n\r", ch);
       return;
    }
 
