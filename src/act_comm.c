@@ -2037,8 +2037,6 @@ void do_group(CHAR_DATA *ch, char *argument)
    char buf[MAX_STRING_LENGTH];
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *victim;
-   bool ch_adept = FALSE, victim_adept = FALSE, ch_dremort = FALSE, victim_dremort = FALSE, ch_sremort = FALSE, victim_sremort = FALSE;
-   bool legal_group = FALSE;
    one_argument(argument, arg);
 
    if (arg[0] == '\0')
@@ -2077,14 +2075,6 @@ void do_group(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   /*
-    * if (  !str_cmp ( arg, "all" )  )
-    * {
-    * group_all ( ch );
-    * return;
-    * }
-    */
-
    if ((victim = get_char_room(ch, arg)) == NULL)
    {
       send_to_char("They aren't here.\n\r", ch);
@@ -2100,6 +2090,12 @@ void do_group(CHAR_DATA *ch, char *argument)
    if (victim->master != ch && ch != victim)
    {
       act("$N isn't following you.", ch, NULL, victim, TO_CHAR);
+      return;
+   }
+
+   if (IS_NPC(victim) && !IS_NPC(ch) && ch->riding != victim)
+   {
+      send_to_char("You can't group non-mounted NPCs.\n\r");
       return;
    }
 
