@@ -631,18 +631,9 @@ void do_dirt(CHAR_DATA *ch, char *argument)
 void do_beserk(CHAR_DATA *ch, char *argument)
 {
    AFFECT_DATA af;
-   int best;
-   int level;
-
-   bool prime;
-
-   prime = FALSE;
-   best = -1;
 
    if (IS_NPC(ch))
       return;
-
-   level = ch->lvl[2];
 
    if (ch->fighting == NULL)
    {
@@ -687,21 +678,15 @@ void do_beserk(CHAR_DATA *ch, char *argument)
    affect_to_char(ch, &af);
 
    af.location = APPLY_HITROLL;
-   af.modifier = (prime)
-                     ? (10 + (level >= 20) + (level >= 40) + (level >= 60) + (level >= 80))
-                     : (5 + (level >= 25) + (level >= 50));
+   af.modifier = ch->lvl[CLASS_WARRIOR]/5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_DAMROLL;
-   af.modifier = (prime)
-                     ? (12 + (level >= 20) + (level >= 40) + (level >= 60) + (level >= 80))
-                     : (2 + (level >= 25) + (level >= 50));
+   af.modifier = ch->lvl[CLASS_WARRIOR]/5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_SAVING_SPELL;
-   af.modifier = (prime)
-                     ? (10 - (level >= 20) - (level >= 40) - (level >= 60) - (level >= 80))
-                     : (20 - (level >= 25) - (level >= 50));
+   af.modifier = ch->lvl[CLASS_WARRIOR]/-10;
    affect_to_char(ch, &af);
 
    act("$n calls on the Dark Powers, who answer!!!", ch, NULL, NULL, TO_ROOM);
