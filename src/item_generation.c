@@ -359,8 +359,8 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    /* Jewelry */
    if (is_jewelry(obj))
    {
-      hr_div = 10;
-      dr_div = 10;
+      hr_div = 15;
+      dr_div = 15;
       ac_div = 20;
       hp_div = 2;
       mana_div = 2;
@@ -437,8 +437,8 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ac_bonus = -10;
       hrdr_bonus = 1;
       stat_bonus = 5;
-      hr_div = 8;
-      dr_div = 8;
+      hr_div = 10;
+      dr_div = 10;
       ac_div = 2;
       hp_div = 5;
       mana_div = 5;
