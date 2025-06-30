@@ -618,7 +618,8 @@ void do_dirt(CHAR_DATA *ch, char *argument)
       af.type = skill_lookup("blindness");
       af.location = APPLY_HITROLL;
       af.modifier = -2;
-      af.duration = 1;
+      af.duration = 3;
+      af.duration_type = DURATION_ROUND;
       af.bitvector = AFF_BLIND;
       affect_to_char(victim, &af);
    }
