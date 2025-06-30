@@ -715,7 +715,7 @@ int get_max_carry(CHAR_DATA *ch)
    return 15 + MAX_WEAR;
 }
 
-int item_generation_chance()
+int get_generation_chance()
 {
    bool chance = 10;
 
