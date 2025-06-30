@@ -602,7 +602,7 @@ void do_dirt(CHAR_DATA *ch, char *argument)
 
    raise_skill(ch, gsn_dirt);
 
-   if (can_hit_skill(ch, victim, gsn_dirt))
+   if (!can_hit_skill(ch, victim, gsn_dirt))
    {
       act("You kick dirt at $M but miss!", ch, NULL, victim, TO_CHAR);
       act("$n kicks dirt at you but misses!", ch, NULL, victim, TO_VICT);
