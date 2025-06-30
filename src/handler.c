@@ -863,6 +863,28 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    return FALSE;
 }
 
+bool raise_skill(CHAR_DATA *ch, int gsn)
+{
+   if (gsn == -1 || gsn >= MAX_SKILL)
+      return FALSE;
+
+   if (IS_NPC(ch))
+      return TRUE;
+
+   if (!IS_VAMP(ch) && skill_table[gsn].flag2 == VAMP)
+      return FALSE;
+
+   if (!IS_WOLF(ch) && skill_table[gsn].flag2 == WOLF)
+      return FALSE;
+
+   if (!can_use_skill(ch, gsn))
+      return FALSE;
+
+   ch->pcdata->learned[gsn]++;
+
+   return TRUE;
+}
+
 /*
  * Retrieve a character's carry capacity.
  */

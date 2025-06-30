@@ -455,6 +455,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
       return;
 
    mana = mana_cost( ch, sn );
+   raise_skill(ch, sn);
 
    if( char_login )
       mana = 0;

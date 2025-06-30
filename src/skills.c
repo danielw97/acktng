@@ -159,6 +159,11 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    sprintf(actbuf, "$N places $p into your back!!");
    act(actbuf, victim, obj, ch, TO_CHAR);
 
+   if (backstab)
+      raise_skill(ch, gsn_backstab);
+   else
+      raise_skill(ch, gsn_circle);
+
    if (!IS_NPC(ch) && ch->lvl[CLASS_THI] > 0 && number_percent() == 1)
    {
       send_to_room("You hear a large CRACK!\n\r", ch->in_room);
@@ -295,6 +300,8 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
 
    check_killer(ch, victim);
    set_fighting(victim, ch, TRUE);
+
+   raise_skill(ch, gsn);
 
    if (!can_hit_skill(ch, victim, gsn))
    {
@@ -460,6 +467,8 @@ void do_disarm(CHAR_DATA *ch, char *argument)
 
    combo(ch, victim, gsn_disarm);
 
+   raise_skill(ch, gsn_disarm);
+
    WAIT_STATE(ch, skill_table[gsn_disarm].beats);
    percent = number_percent() + victim->level - ch->level;
    if (percent < defense_chance)
@@ -614,6 +623,8 @@ void do_dirt(CHAR_DATA *ch, char *argument)
 
    WAIT_STATE(ch, skill_table[gsn_dirt].beats);
 
+   raise_skill(ch, gsn_dirt);
+
    if (number_percent() > (IS_NPC(ch) ? 50 : ch->pcdata->learned[gsn_dirt]))
    {
       act("You kick dirt at $M but miss!", ch, NULL, victim, TO_CHAR);
@@ -638,105 +649,6 @@ void do_dirt(CHAR_DATA *ch, char *argument)
    combo(ch, victim, gsn_dirt);
    return;
 }
-/*
-void do_bash( CHAR_DATA * ch, char *argument )
-{
-   char arg[MAX_INPUT_LENGTH];
-   CHAR_DATA *victim;
-   int best;
-/*    int cnt;  *
-
-   best = -1;
-
-   if( !IS_NPC( ch ) )
-   {
-      /*
-       * for ( cnt = 0; cnt < MAX_CLASS; cnt++ )
-       * if ( ch->lvl[cnt] >= skill_table[gsn_dirt].skill_level[cnt]
-       * && ch->lvl[cnt] >= best )
-       * best = cnt;
-       *
-      if( ch->pcdata->learned[gsn_bash] > 75 )
-         best = UMAX( 79, get_psuedo_level( ch ) );
-   }
-   else
-      best = ch->level;
-
-   if( best == -1 )
-   {
-      send_to_char( "You don't know of such a skill.\n\r", ch );
-      return;
-   }
-
-   one_argument( argument, arg );
-
-   if( arg[0] == '\0' )
-   {
-      send_to_char( "Bash whom?\n\r", ch );
-      return;
-   }
-
-   if( ( victim = get_char_room( ch, arg ) ) == NULL )
-   {
-      send_to_char( "They aren't here.\n\r", ch );
-      return;
-   }
-
-   if( victim == ch )
-   {
-      send_to_char( "Forget it!\n\r", ch );
-      return;
-   }
-
-   if( is_safe( ch, victim ) )
-      return;
-
-   if( victim->fighting == NULL )
-   {
-      send_to_char( "It might help if you were fighting.....\n\r", ch );
-      return;
-   }
-
-   WAIT_STATE( ch, skill_table[gsn_bash].beats );
-
-   if( ( IS_NPC( ch ) && ( number_percent(  ) > 75 + ( ch->level ) / 2 ) )
-       || ( !IS_NPC( ch ) && ( 2 * number_percent(  ) > ch->pcdata->learned[gsn_bash] ) ) )
-   {
-      act( "Your bash misses $M, and you fall!", ch, NULL, victim, TO_CHAR );
-      act( "$n trys to bash you, misses, and falls!", ch, NULL, victim, TO_VICT );
-      act( "$n trys to bash $N but misses, and falls!", ch, NULL, victim, TO_NOTVICT );
-      return;
-   }
-   else
-   {
-      act( "Your bash sends $M flying!", ch, NULL, victim, TO_CHAR );
-      act( "$n bashes you, sending you flying!", ch, NULL, victim, TO_VICT );
-      act( "$n's bash sends $N's flying!", ch, NULL, victim, TO_NOTVICT );
-
-      /*
-       * If victim very weak, set pos to stunned, stop fighting
-       *
-      if( victim->hit < ( victim->max_hit / 50 ) + 1 )
-      {
-         act( "$N stays on the floor.", ch, NULL, victim, TO_CHAR );
-         act( "You are unable to get up.", ch, NULL, victim, TO_VICT );
-         act( "$N stays on the floor.", ch, NULL, victim, TO_NOTVICT );
-         stop_fighting( victim, TRUE );   /* MAG: might del this? -S- *
-         victim->position = POS_RESTING;
-         update_pos( victim );
-      }
-      else
-      {
-         /*
-          * Do some damage instead...
-          *
-         damage( ch, victim, ( best + 12 ) * 2, -1 );
-      }
-
-   }
-
-   return;
-}*/
 
 void do_beserk(CHAR_DATA *ch, char *argument)
 {
@@ -776,6 +688,8 @@ void do_beserk(CHAR_DATA *ch, char *argument)
 
    if (!subtract_energy_cost(ch, gsn_beserk))
       return;
+
+   raise_skill(ch, gsn_beserk);
 
    if (number_percent() < 25)
    {
@@ -873,6 +787,8 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
    }
 
    WAIT_STATE(ch, skill_table[gsn].beats);
+
+   raise_skill(ch, gsn);
 
    int element = REALM_PHYSICAL;
 
@@ -991,6 +907,8 @@ void do_riposte(CHAR_DATA *ch, char *argument)
    }
 
    reset_combo(ch);
+   
+   raise_skill(ch, gsn_riposte);
 
    WAIT_STATE(ch, skill_table[gsn_riposte].beats);
 
@@ -1043,6 +961,8 @@ void do_anti_magic_shell(CHAR_DATA *ch, char *argument)
 
    reset_combo(ch);
 
+   raise_skill(ch, gsn_anti_magic_shell);
+
    WAIT_STATE(ch, skill_table[gsn_anti_magic_shell].beats);
 
    af.type = gsn_anti_magic_shell;
@@ -1090,6 +1010,8 @@ void do_warcry(CHAR_DATA *ch, char *argument)
    }
 
    WAIT_STATE(ch, skill_table[gsn_warcry].beats);
+
+   raise_skill(ch, gsn_warcry);
 
    af.type = gsn_warcry;
    af.duration = -1;
@@ -1158,6 +1080,8 @@ void do_morale(CHAR_DATA *ch, char *argument)
    if (!can_use_skill_message(ch, gsn_morale))
       return;
 
+   raise_skill(ch, gsn_morale);
+
    for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {
       if (is_affected(gch, gsn_morale) || !is_same_group(ch, gch))
@@ -1187,6 +1111,8 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 
    if (!can_use_skill_message(ch, gsn_leadership))
       return;
+
+   raise_skill(ch, gsn_leadership);
 
    for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {
@@ -1242,6 +1168,8 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
     */
 
    chance = IS_NPC(victim) ? IS_SET(victim->skills, MOB_NODISARM) ? 90 : 0 : victim->pcdata->learned[gsn_nodisarm];
+
+   raise_skill(ch, gsn_disarm);
 
    if (number_percent() < chance)
    {
