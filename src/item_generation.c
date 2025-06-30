@@ -391,7 +391,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    }
    else if (obj->item_type == ITEM_WEAPON)
    {
-      hrdr_bonus = 5;
+      hrdr_bonus = 10;
       ac_bonus = -5;
       stat_bonus = 5;
       hr_div = 5;
