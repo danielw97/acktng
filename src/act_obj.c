@@ -2810,8 +2810,6 @@ void do_list(CHAR_DATA *ch, char *argument)
       {
          if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj) && (cost = get_cost(keeper, obj)) > 0 && (arg[0] == '\0' || is_name(arg, obj->name)))
          {
-            sprintf(buf1,"Item cost is %d, with cost of %d\n\r", obj->cost, cost);
-            send_to_char(buf1,ch);
             if (!found)
             {
                found = TRUE;
