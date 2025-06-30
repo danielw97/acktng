@@ -1960,7 +1960,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "dirt", {182, 182, 182, 35, 182, 182},
+    "dirt", {182, 182, 36, 35, 182, 47},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_dirt, SLOT( 0 ), 1, 24,
     "", "!dirt!",

@@ -411,10 +411,8 @@ void do_disarm(CHAR_DATA *ch, char *argument)
    CHAR_DATA *victim;
    OBJ_DATA *obj;
    int percent;
-   int best;
    int cnt;
-
-   best = -1;
+   int defense_chance = 0;
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
    {
@@ -422,16 +420,7 @@ void do_disarm(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!IS_NPC(ch))
-   {
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-         if (ch->lvl[cnt] >= skill_table[gsn_disarm].skill_level[cnt] && ch->lvl[cnt] >= best)
-            best = cnt;
-   }
-   else
-      best = ch->level;
-
-   if (best == -1)
+   if (!can_use_skill(ch, gsn_disarm))
    {
       send_to_char("You don't know how to disarm!\n\r", ch);
       return;
@@ -461,7 +450,10 @@ void do_disarm(CHAR_DATA *ch, char *argument)
          return;
       }
    if (IS_SET(obj->extra_flags, ITEM_NODISARM))
-      return;
+      defense_chance += 80;
+
+   if (!IS_NPC(victim) && can_use_skill(victim, gsn_nodisarm))
+      defense_chance += 50;
 
    if (!subtract_energy_cost(ch, gsn_disarm))
       return;
@@ -470,7 +462,7 @@ void do_disarm(CHAR_DATA *ch, char *argument)
 
    WAIT_STATE(ch, skill_table[gsn_disarm].beats);
    percent = number_percent() + victim->level - ch->level;
-   if (IS_NPC(ch) || percent < 75)
+   if (percent < defense_chance)
       disarm(ch, victim, obj);
    else
       send_to_char("You failed.\n\r", ch);
