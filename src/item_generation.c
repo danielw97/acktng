@@ -394,8 +394,8 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       hrdr_bonus = 5;
       ac_bonus = -5;
       stat_bonus = 5;
-      hr_div = 6;
-      dr_div = 6;
+      hr_div = 5;
+      dr_div = 5;
       ac_div = 20;
       hp_div = 10;
       move_div = 10;
