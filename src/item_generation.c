@@ -522,7 +522,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       dr_val += (ilevel / dr_div);
    int hp_val = stat_bonus;
    if (hp_div != 0)
-      hp_val += (ilevel / hp_div) + stat_bonus;
+      hp_val += (ilevel / hp_div);
    int mana_val = stat_bonus;
    if (mana_div != 0)
       mana_val += (ilevel / mana_div);
