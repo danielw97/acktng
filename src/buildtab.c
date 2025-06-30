@@ -671,8 +671,8 @@ const struct lookup_type tab_item_types[] = {
 
 const struct lookup_type tab_obj_flags[] = {
    {"nada", 0, 0},
-   {"glow", 1, 10},
-   {"hum", 2, 10},
+   {"generated", 1, 10},
+   {"bind-on-equip", 2, 10},
    {"nodisarm", 4, 20},
    {"lock", 8, 20},
    {"evil", 16, 50},
