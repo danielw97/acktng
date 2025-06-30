@@ -1973,7 +1973,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
             align_change *= -.3;
          if (IS_SET(obj->extra_flags, ITEM_ANTI_NEUTRAL))
             align_change *= 1.1;
-         sprintf(buf, "@@a" goodgodname "@@N gives you %d for your sacrifice.\n\r", gp);
+         sprintf(buf, "@@a" goodgodname "@@N gives you %d gold coins for your sacrifice.\n\r", gp);
          send_to_char(buf, ch);
          act("@@N$n sacrifices $p to @@a" goodgodname "@@N.", ch, obj, NULL, TO_ROOM);
       }
@@ -1986,7 +1986,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
             align_change *= 1.5;
          if (IS_SET(obj->extra_flags, ITEM_ANTI_NEUTRAL))
             align_change *= 1.25;
-         sprintf(buf, "@@e" evilgodname "@@N gives you %d for your sacrifice.\n\r", gp);
+         sprintf(buf, "@@e" evilgodname "@@N gives you %d gold coins for your sacrifice.\n\r", gp);
          send_to_char(buf, ch);
          act("@@N$n sacrifices $p to @@e" evilgodname "@@N.", ch, obj, NULL, TO_ROOM);
       }
@@ -2013,7 +2013,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
 
    if (!change_align)
    {
-      sprintf(buf, "@@N" sacgodname "@@N gives you %d for your sacrifice.\n\r", gp);
+      sprintf(buf, "@@N" sacgodname "@@N gives you %d gold coins for your sacrifice.\n\r", gp);
       send_to_char(buf, ch);
       act("@@N$n sacrifices $p to @@N" sacgodname "@@N.", ch, obj, NULL, TO_ROOM);
    }
