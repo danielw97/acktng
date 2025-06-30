@@ -289,8 +289,8 @@ bool can_wield(CHAR_DATA *ch, OBJ_DATA *obj, int loc)
       return TRUE;
 
    if (IS_WEAPON(obj) && IS_SET(obj->extra_flags, ITEM_FIST) &&
-         IS_WEAPON(dual) && IS_SET(dual->extra_flags, ITEM_FIST) &&
-         can_use_skill(ch, gsn_dual_fist))
+       IS_WEAPON(dual) && IS_SET(dual->extra_flags, ITEM_FIST) &&
+       can_use_skill(ch, gsn_dual_fist))
       return TRUE;
 
    return FALSE;
@@ -309,7 +309,7 @@ int get_curr_str(CHAR_DATA *ch)
    int cur = get_max_str(ch);
    cur += get_stat(ch, APPLY_STR);
 
-   return URANGE(3, cur, get_max_str(ch)+3);
+   return URANGE(3, cur, get_max_str(ch) + 3);
 }
 
 int get_max_str(CHAR_DATA *ch)
@@ -319,13 +319,13 @@ int get_max_str(CHAR_DATA *ch)
    if (class_table[ch->class].attr_prime == APPLY_STR)
       max++;
 
-   for(int i = 0; i < MAX_REMORT; i++)
+   for (int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_STR)
          max++;
    }
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_STR)
          max++;
@@ -347,7 +347,7 @@ int get_curr_int(CHAR_DATA *ch)
    int cur = get_max_int(ch);
    cur += get_stat(ch, APPLY_INT);
 
-   return URANGE(3, cur, get_max_int(ch)+3);
+   return URANGE(3, cur, get_max_int(ch) + 3);
 }
 
 int get_max_int(CHAR_DATA *ch)
@@ -357,13 +357,13 @@ int get_max_int(CHAR_DATA *ch)
    if (class_table[ch->class].attr_prime == APPLY_INT)
       max++;
 
-   for(int i = 0; i < MAX_REMORT; i++)
+   for (int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_INT)
          max++;
    }
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_INT)
          max++;
@@ -385,7 +385,7 @@ int get_curr_wis(CHAR_DATA *ch)
    int cur = get_max_wis(ch);
    cur += get_stat(ch, APPLY_WIS);
 
-   return URANGE(3, cur, get_max_wis(ch)+3);
+   return URANGE(3, cur, get_max_wis(ch) + 3);
 }
 
 int get_max_wis(CHAR_DATA *ch)
@@ -395,13 +395,13 @@ int get_max_wis(CHAR_DATA *ch)
    if (class_table[ch->class].attr_prime == APPLY_WIS)
       max++;
 
-   for(int i = 0; i < MAX_REMORT; i++)
+   for (int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_WIS)
          max++;
    }
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_WIS)
          max++;
@@ -424,7 +424,7 @@ int get_curr_dex(CHAR_DATA *ch)
    int cur = get_max_dex(ch);
    cur += get_stat(ch, APPLY_DEX);
 
-   return URANGE(3, cur, get_max_dex(ch)+3);
+   return URANGE(3, cur, get_max_dex(ch) + 3);
 }
 
 int get_max_dex(CHAR_DATA *ch)
@@ -434,13 +434,13 @@ int get_max_dex(CHAR_DATA *ch)
    if (class_table[ch->class].attr_prime == APPLY_DEX)
       max++;
 
-   for(int i = 0; i < MAX_REMORT; i++)
+   for (int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_DEX)
          max++;
    }
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_DEX)
          max++;
@@ -462,7 +462,7 @@ int get_curr_con(CHAR_DATA *ch)
    int cur = get_max_con(ch);
    cur += get_stat(ch, APPLY_CON);
 
-   return URANGE(3, cur, get_max_con(ch)+3);
+   return URANGE(3, cur, get_max_con(ch) + 3);
 }
 
 int get_max_con(CHAR_DATA *ch)
@@ -472,13 +472,13 @@ int get_max_con(CHAR_DATA *ch)
    if (class_table[ch->class].attr_prime == APPLY_CON)
       max++;
 
-   for(int i = 0; i < MAX_REMORT; i++)
+   for (int i = 0; i < MAX_REMORT; i++)
    {
       if (ch->remort[i] > 0 && remort_table[i].attr_prime == APPLY_CON)
          max++;
    }
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_CON)
          max++;
@@ -723,7 +723,7 @@ int get_generation_chance()
 
    if (happy_hour)
       chance *= 2;
-   
+
    return chance;
 }
 
@@ -841,25 +841,30 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    if (!IS_WOLF(ch) && skill_table[gsn].flag2 == WOLF)
       return FALSE;
 
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   if (skill_table[gsn].flag1 == MORTAL)
    {
-      if (ch->lvl[cnt] >= skill_table[gsn].skill_level[cnt] && skill_table[gsn].flag1 == MORTAL)
-         return TRUE;
+      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      {
+         if (ch->lvl[cnt] >= skill_table[gsn].skill_level[cnt])
+            return TRUE;
+      }
    }
-   for (cnt = 0; cnt < MAX_REMORT; cnt++)
+   else if (skill_table[gsn].flag1 == REMORT)
    {
-      if (ch->remort[cnt] >= skill_table[gsn].skill_level[cnt] && skill_table[gsn].flag1 == REMORT)
-         return TRUE;
+      for (cnt = 0; cnt < MAX_REMORT; cnt++)
+      {
+         if (ch->remort[cnt] >= skill_table[gsn].skill_level[cnt])
+            return TRUE;
+      }
    }
-
-   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   else if (skill_table[gsn].flag1 == ADEPT)
    {
-      if (ch->adept[cnt] >= skill_table[gsn].skill_level[cnt] && skill_table[gsn].flag1 == ADEPT)
-         return TRUE;
+      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      {
+         if (ch->adept[cnt] >= skill_table[gsn].skill_level[cnt])
+            return TRUE;
+      }
    }
-
-   if (ch->pcdata->learned[gsn] > 0)
-      return TRUE;
 
    return FALSE;
 }
@@ -1700,8 +1705,8 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear)
 
    if ((!IS_NPC(ch) && ch->desc->connected != CON_SETTING_STATS) && ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)) || (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch))))
    {
-         act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
-         act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);
+      act("You feel $p slither out of your grasp, and back into your inventory!", ch, obj, NULL, TO_CHAR);
+      act("$p slithers out of $n's hands and back into $s inventory!", ch, obj, NULL, TO_ROOM);
       return;
    }
 
