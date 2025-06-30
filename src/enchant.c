@@ -61,7 +61,7 @@ void do_enchant( CHAR_DATA * ch, char *argument )
    int cur_mana = 0, cur_hitroll = 0, cur_move = 0, cur_armor = 0, cur_save = 0, cur_hit = 0, cur_damroll = 0;
    int mod_mana = 0, mod_hitroll = 0, mod_move = 0, mod_armor = 0, mod_save = 0, mod_hit = 0, mod_damroll = 0;
    sh_int mod_item_weight = 0;
-   bool good_item = FALSE, legal_enchant = TRUE, bad_enchant_mix = FALSE;
+   bool legal_enchant = TRUE;
    sh_int qp_cost = 20;
    int mod = 0;
    sh_int min_level = 10;
@@ -115,13 +115,11 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       if( ( this_obj->item_type == ITEM_WEAPON )
           || ( this_obj->item_type == ITEM_ARMOR ) || ( this_obj->item_type == ITEM_LIGHT ) )
       {
-         good_item = TRUE;
          unique = this_obj;
          continue;
       }
       if( this_obj->item_type != ITEM_ENCHANTMENT )
       {
-         bad_enchant_mix = TRUE;
          if( !str_cmp( arg2, "debug" ) )
          {
             sprintf( debug, "Non-enchantment item in matrix..%s\n\r", this_obj->name );
@@ -131,7 +129,6 @@ void do_enchant( CHAR_DATA * ch, char *argument )
       }
       if( this_obj->value[0] == ENCHANT_OBJFUNS )
       {
-         bad_enchant_mix = TRUE;
       }
       else if( this_obj->value[0] == ENCHANT_APPLY_FLAGS )
       {
