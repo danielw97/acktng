@@ -472,7 +472,7 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
          vamp_exp = 0;
       }
 
-      if (is_adept(wch))
+      if (is_adept(gch))
          funky /= 1000;
 
       sprintf(buf, "You Receive %d Experience Points.\n\r", funky);
