@@ -902,7 +902,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "burning hands", {6, 182, 182, 182, 182},
+    "burning hands", {6, 182, 182, 182, 182, 182},
     spell_burning_hands, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 5 ), 15, 12, TRUE,
     "burning hands", "!Burning Hands!",
@@ -2324,7 +2324,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "high explosive", {182, 182, 182, 182, 182},
+    "high explosive", {182, 182, 182, 182, 182, 182},
     spell_high_explosive, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 206 ), 0, 12, FALSE,
     "high explosive ammo", "!High Explosive Ammo!",
@@ -2422,8 +2422,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
    {
     REMORT, NORM,
-    "water elemental", {6, 182, 182, 182, 182,
-                        6, 182, 182, 182, 182},
+    "water elemental", {6, 182, 182, 182, 182, 182,
+                        6, 182, 182, 182, 182, 182},
     spell_waterelem, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 606 ), 80, 24, FALSE,
     "", "!Stalker!",
@@ -2560,8 +2560,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "withering shadow", {182, 182, 182, 17, 182,
-                         182, 182, 182, 17, 182},
+    "withering shadow", {182, 182, 182, 17, 182, 182
+                         182, 182, 182, 17, 182, 182},
     spell_wither_shadow, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 617 ), 150, 12, FALSE,
     "", "@@NThe @@dWithering Shadow@@N dissipates.",
@@ -2739,8 +2739,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "iron golem", {63, 182, 182, 182, 182,
-                   63, 182, 182, 182, 182},
+    "iron golem", {63, 182, 182, 182, 182, 182,
+                   63, 182, 182, 182, 182, 182},
     spell_iron_golem, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 638 ), 800, 24, FALSE,
     "", "!IRON GOLEM!",
