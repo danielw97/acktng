@@ -1976,29 +1976,11 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "notrip", {182, 182, 30, 40, 182, 182},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_notrip, SLOT( 0 ), 0, 0,
-    "", "!notrip!",
-    ""},
-
-
-   {
-    MORTAL, NORM,
     "smash", {182, 182, 182, 30, 182, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_smash, SLOT( 0 ), 0, 0,
     "", "!smash!",
     ""},
-
-   {
-    MORTAL, NORM,
-    "trip", {182, 182, 18, 25, 182, 182},
-    spell_null, TAR_IGNORE, POS_FIGHTING,
-    &gsn_trip, SLOT( 0 ), 0, 0,
-    "", "!trip!",
-    ""},
-
 
    {
     MORTAL, NORM,
@@ -2018,7 +2000,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "disarm", {182, 182, 182, 12, 182, 182},
+    "disarm", {182, 182, 53, 12, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_disarm, SLOT( 0 ), 1, 18,
     "", "!Disarm!",
