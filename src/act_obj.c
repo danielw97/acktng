@@ -36,7 +36,7 @@
  */
 void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace);
 CHAR_DATA *find_keeper(CHAR_DATA *ch);
-int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy);
+int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj);
 void check_guards(CHAR_DATA *ch);
 
 char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort);
@@ -2554,17 +2554,12 @@ void check_guards(CHAR_DATA *ch)
    return;
 }
 
-int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy)
+int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj)
 {
    SHOP_DATA *pShop;
    int cost;
    if (obj == NULL || (pShop = keeper->pIndexData->pShop) == NULL)
       return 0;
-   if (fBuy)
-   {
-      cost = obj->cost * pShop->profit_buy / 100;
-   }
-   else
    {
       OBJ_DATA *obj2;
       int itype;
@@ -2584,9 +2579,6 @@ int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy)
             cost /= 2;
       }
    }
-
-   //   if( obj->item_type == ITEM_STAFF || obj->item_type == ITEM_WAND )
-   //    cost = cost * obj->value[2] / obj->value[1];
    return cost;
 }
 
@@ -2696,7 +2688,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
       char givebuf[MSL], changebuf[MSL];
       char *cost_string;
       obj = get_obj_carry(keeper, arg);
-      cost = get_cost(keeper, obj, TRUE);
+      cost = get_cost(keeper, obj);
       if (cost <= 0 || !can_see_obj(ch, obj))
       {
          act("$n tells you 'I don't sell that -- try 'list''.", keeper, NULL, ch, TO_VICT);
@@ -2822,18 +2814,18 @@ void do_list(CHAR_DATA *ch, char *argument)
       one_argument(argument, arg);
       for (obj = keeper->first_carry; obj; obj = obj->next_in_carry_list)
       {
-         if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj) && (cost = get_cost(keeper, obj, TRUE)) > 0 && (arg[0] == '\0' || is_name(arg, obj->name)))
+         if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj) && (cost = get_cost(keeper, obj)) > 0 && (arg[0] == '\0' || is_name(arg, obj->name)))
          {
             if (!found)
             {
                found = TRUE;
                safe_strcat(MAX_STRING_LENGTH, buf1,
-                           "\n\r@@g[@@yLvl@@g]       @@yItem@@g                           @@yPrice  ( Approximate )@@N \n\r");
+                           "\n\r@@g[@@yLvl@@g]       @@yItem@@g                           @@yPrice@@N \n\r");
             }
             stopcounter++;
             sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*d@@N \n\r", "@@a",
                     obj->level, ccode_len(obj->short_descr, 30), capitalize(obj->short_descr),
-                    get_cost(keeper, obj, TRUE));
+                    get_cost(keeper, obj));
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
             {
@@ -2899,7 +2891,7 @@ void do_value(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if ((cost = get_cost(keeper, obj, FALSE)) <= 0)
+   if ((cost = get_cost(keeper, obj)) <= 0)
    {
       act("$n looks uninterested in $p.", keeper, obj, ch, TO_VICT);
       return;
