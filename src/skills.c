@@ -1423,7 +1423,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    ch->combo[0] = gsn;
 
    if (!is_ready_finisher(ch))
-      return;
+      return FALSE;
 
    if (max == 5)
    {
@@ -1438,12 +1438,6 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    // Calc our chances
    for (int i = 0; i < max; i++)
    {
-      if (ch->combo[i] == -1)
-         return;
-
-      if (ch->combo[i] == ch->combo[i + 1])
-         return;
-
       if (ch->combo[i] == gsn_punch)
          punch_cnt += mult;
 
