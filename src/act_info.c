@@ -3784,9 +3784,6 @@ void do_spells(CHAR_DATA *ch, char *argument)
          safe_strcat(MAX_STRING_LENGTH, buf1, "\n\r");
    }
 
-   if (col % 3 != 0)
-      safe_strcat(MAX_STRING_LENGTH, buf1, "\n\r");
-
    send_to_char(buf1, ch);
    return;
 }
