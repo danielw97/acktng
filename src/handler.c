@@ -823,17 +823,11 @@ bool can_use_skill_by_name(CHAR_DATA *ch, char *skill)
 
 bool can_use_skill(CHAR_DATA *ch, int gsn)
 {
-   int cnt;
-
-   if (gsn == -1)
-   {
+   if (gsn == -1 || gsn >= MAX_SKILL)
       return FALSE;
-   }
 
    if (IS_NPC(ch))
-   {
       return TRUE;
-   }
 
    if (!IS_VAMP(ch) && skill_table[gsn].flag2 == VAMP)
       return FALSE;
@@ -843,25 +837,25 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
 
    if (skill_table[gsn].flag1 == MORTAL)
    {
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      for (int i = 0; i < MAX_CLASS; i++)
       {
-         if (ch->lvl[cnt] >= skill_table[gsn].skill_level[cnt])
+         if (ch->lvl[i] >= skill_table[gsn].skill_level[i])
             return TRUE;
       }
    }
    else if (skill_table[gsn].flag1 == REMORT)
    {
-      for (cnt = 0; cnt < MAX_REMORT; cnt++)
+      for (int i = 0; i < MAX_REMORT; i++)
       {
-         if (ch->remort[cnt] >= skill_table[gsn].skill_level[cnt])
+         if (ch->remort[i] >= skill_table[gsn].skill_level[i])
             return TRUE;
       }
    }
    else if (skill_table[gsn].flag1 == ADEPT)
    {
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      for (int i = 0; i < MAX_CLASS; i++)
       {
-         if (ch->adept[cnt] >= skill_table[gsn].skill_level[cnt])
+         if (ch->adept[i] >= skill_table[gsn].skill_level[i])
             return TRUE;
       }
    }
