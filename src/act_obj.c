@@ -2817,7 +2817,7 @@ void do_list(CHAR_DATA *ch, char *argument)
                            "\n\r@@g[@@yLvl@@g]       @@yItem@@g                           @@yPrice@@N \n\r");
             }
             stopcounter++;
-            sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%d@@N\n\r", "@@a",
+            sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g      @@W%d@@N\n\r", "@@a",
                     obj->level, ccode_len(obj->short_descr, 30), capitalize(obj->short_descr),
                     cost);
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
