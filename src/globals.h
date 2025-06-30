@@ -153,12 +153,6 @@ extern bool happy_hour;
 /*
  * Global constants.
  */
-extern const struct str_app_type str_app[26];
-extern const struct int_app_type int_app[26];
-extern const struct wis_app_type wis_app[26];
-extern const struct dex_app_type dex_app[26];
-extern const struct con_app_type con_app[26];
-
 extern const struct color_type color_table[MAX_COLOR];
 extern const struct ansi_type ansi_table[MAX_ANSI];
 extern const struct class_type class_table[MAX_CLASS];
