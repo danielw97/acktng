@@ -571,7 +571,7 @@ char *learnt_name(int sn, int learnt)
       return "Four";
    else if (learnt < LEVEL_MASTER)
       return "Five";
-   else if (learnt < LEVEL_GRANDMASTER)
+   else if (learnt < LEVEL_GM)
       return "Master";
    else
       return "Gmaster";
@@ -585,7 +585,7 @@ char *get_adept_name(CHAR_DATA *ch)
     * this is weak for now..will eventually have like 200 total names, based on the remort
     * classes the adept has
     */
-   int i;
+   int i = 0;
 
    for (int i = 0; i < MAX_CLASS; i++)
    {

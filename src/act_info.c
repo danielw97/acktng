@@ -4075,14 +4075,21 @@ void do_pagelen(CHAR_DATA *ch, char *argument)
 
 void do_learned(CHAR_DATA *ch, char *argument)
 {
+   char buf[MSL], buf1[MSL];
    int col = 0;
-   
+
+   if (IS_NPC(ch))
+   {
+      send_to_char("Nuh uh naughty naughty!\n\r",ch);
+      return;
+   }
+
    send_to_char("Skills learned:\n\r",ch);
    for(int i = 0; i < MAX_SKILL; i++)
    {
       if (can_use_skill(ch, i))
       {
-         sprintf( buf, "@@W%16s-@@y%-7s@@g  ", skill_table[sn].name, learnt_name( ch->pcdata->learned[sn] ) );
+         sprintf( buf, "@@W%16s-@@y%-7s@@g  ", skill_table[i].name, learnt_name( i, ch->pcdata->learned[i] ) );
 
          safe_strcat( MAX_STRING_LENGTH, buf1, buf );
          if( ++col % 3 == 0 )
