@@ -3775,7 +3775,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
       if (!can_use_skill(ch, sn))
          continue;
 
-      if (mana_cost(ch, sn) < 1)
+      if (mana_cost(ch, sn) < 2)
          continue;
 
       sprintf(buf, "%18s %3dpts ", skill_table[sn].name, mana_cost(ch, sn));
