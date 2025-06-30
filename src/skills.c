@@ -1414,7 +1414,7 @@ void stun(CHAR_DATA *ch, CHAR_DATA *victim)
 
 bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
-   int chance = 80;
+   int chance = 0;
 
    if (gsn == gsn_poison_quinine || gsn == gsn_poison_arsenic)
    {
@@ -1432,12 +1432,10 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    if (!can_see(victim, ch))
       chance += 20;
 
-   chance += get_psuedo_level(ch) - get_psuedo_level(victim);
-
    if (IS_NPC(ch))
-      chance /= 2;
+      chance -= 20;
 
-   if (chance < number_percent())
+   if (!skill_success(ch, victim, sn, chance))
       return FALSE;
 
    return TRUE;

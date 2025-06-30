@@ -1353,6 +1353,7 @@ int get_hitroll args((CHAR_DATA * ch));
 int get_damroll args((CHAR_DATA * ch));
 int get_stat args((CHAR_DATA * ch, int stat));
 bool raise_skill args( (CHAR_DATA *ch, int gsn) );
+bool skill_success args( (CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus) );
 int get_generation_chance args(( ));
 char *stat_to_string args((int stat));
 char *class_order args((int race));

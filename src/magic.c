@@ -598,10 +598,6 @@ void do_cast( CHAR_DATA * ch, char *argument )
 
    WAIT_STATE( ch, skill_table[sn].beats );
    cast_chance = 0;
-   if (IS_NPC(ch) )
-      cast_chance += ch->level;
-   else
-      cast_chance += 75;
 
    if( !IS_NPC( ch ) && ( skill_table[sn].flag2 == NORM ) )
    {
@@ -619,7 +615,7 @@ void do_cast( CHAR_DATA * ch, char *argument )
    {
       bool good_cast = FALSE;
 
-      if( number_percent(  ) > cast_chance )
+      if( !skill_success(ch, victim, sn, cast_chance) )
          good_cast = FALSE;
       else
          good_cast = TRUE;

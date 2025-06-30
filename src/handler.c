@@ -865,6 +865,7 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
 
 bool raise_skill(CHAR_DATA *ch, int gsn)
 {
+   char buf[MSL];
    if (gsn == -1 || gsn >= MAX_SKILL)
       return FALSE;
 
@@ -882,7 +883,76 @@ bool raise_skill(CHAR_DATA *ch, int gsn)
 
    ch->pcdata->learned[gsn]++;
 
+   if (ch->pcdata->learned[gsn] == LEVEL_ONE)
+   {
+      sprintf(buf, "Congratulations! You have raised %s to level one!\n\r", skill_table[gsn].name);
+      send_to_char(buf,ch);
+   }
+   if (ch->pcdata->learned[gsn] == LEVEL_TWO)
+   {
+      sprintf(buf, "Congratulations! You have raised %s to level two!\n\r", skill_table[gsn].name);
+      send_to_char(buf,ch);
+   }
+   if (ch->pcdata->learned[gsn] == LEVEL_THREE)
+   {
+      sprintf(buf, "Congratulations! You have raised %s to level three!\n\r", skill_table[gsn].name);
+      send_to_char(buf,ch);
+   }
+   if (ch->pcdata->learned[gsn] == LEVEL_FOUR)
+   {
+      sprintf(buf, "Congratulations! You have raised %s to level four!\n\r", skill_table[gsn].name);
+      send_to_char(buf,ch);
+   }
+   if (ch->pcdata->learned[gsn] == LEVEL_FIVE)
+   {
+      sprintf(buf, "Congratulations! You have raised %s to level five!\n\r", skill_table[gsn].name);
+      send_to_char(buf,ch);
+   }
+   if (ch->pcdata->learned[gsn] == LEVEL_MASTER)
+   {
+      sprintf(buf, "Congratulations! You have mastered %s!\n\r", skill_table[gsn].name);
+      send_to_char(buf,ch);
+   }
+   if (ch->pcdata->learned[gsn] == LEVEL_GM)
+   {
+      sprintf(buf, "Congratulations! You have became a grandmaster of %s!\n\r", skill_table[gsn].name);
+      send_to_char(buf,ch);
+   }
+
    return TRUE;
+}
+
+bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
+{
+   int chance = 70;
+
+   if (!IS_NPC(ch))
+   {
+      if (ch->pcdata->learned > LEVEL_ONE)
+         chance += 5;
+      if (ch->pcdata->learned > LEVEL_TWO)
+         chance += 5;
+      if (ch->pcdata->learned > LEVEL_THREE)
+         chance += 5;
+      if (ch->pcdata->learned > LEVEL_FOUR)
+         chance += 5;
+      if (ch->pcdata->learned > LEVEL_FIVE)
+         chance += 5;
+      if (ch->pcdata->learned > LEVEL_MASTER)
+         chance += 1;
+      if (ch->pcdata->learned > LEVEL_GM)
+         chance += 1;
+   }
+
+   if (victim != NULL)
+   {
+      chance += (get_psuedo_level(ch) - get_psuedo_level(victim))/2;
+   }
+
+   if (number_percent() < chance)
+      return TRUE;
+
+   return FALSE;
 }
 
 /*
