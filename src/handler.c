@@ -704,7 +704,7 @@ int get_stat(CHAR_DATA *ch, int stat)
 
 int get_max_carry_weight(CHAR_DATA *ch)
 {
-   if (get_curr_str(ch) > 25)
+   if (get_curr_str(ch) > 24)
       return 800;
    if (get_curr_str(ch) > 19)
       return 700;
