@@ -593,6 +593,12 @@ void set_obj_stat_auto(OBJ_DATA *obj)
             set_aff_to_obj(obj, APPLY_STR, legendary_mod);
       }
    }
+
+   if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
+      set_aff_to_obj(obj, APPLY_DAMCAP, 20);
+
+   if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
+      set_aff_to_obj(obj, APPLY_DAMCAP, 40);
 }
 
 void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier)
