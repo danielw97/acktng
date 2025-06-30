@@ -293,41 +293,6 @@ struct stance_app_type
 };
 
 /*
- * Attribute bonus structures.
- */
-struct str_app_type
-{
-   sh_int tohit;
-   sh_int todam;
-   sh_int carry;
-   sh_int wield;
-};
-
-struct int_app_type
-{
-   sh_int learn;
-   sh_int spell_mod;
-   sh_int mana_regen;
-};
-
-struct wis_app_type
-{
-   sh_int practice;
-   sh_int spell_save;
-};
-
-struct dex_app_type
-{
-   sh_int defensive;
-};
-
-struct con_app_type
-{
-   sh_int hitp;
-   sh_int shock;
-};
-
-/*
  * Help table types.
  */
 struct help_data
@@ -641,7 +606,7 @@ struct char_data
    int build_vnum; /* the current vnum for w-y-e  */
    int affected_by;
    sh_int position;
-   sh_int practice;
+   int practice;
    float carry_weight;
    sh_int carry_number;
    sh_int saving_throw;
@@ -728,7 +693,7 @@ struct pc_data
    int bloodlust; /* rage points for wolves */
    int bloodlust_max;
    sh_int pagelen;
-   sh_int learned[MAX_SKILL];
+   unsigned int learned[MAX_SKILL];
    char *header;  /* header used for message */
    char *message; /* message for board in progress */
    char *alias_name[MAX_ALIASES];
