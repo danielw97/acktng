@@ -4084,7 +4084,7 @@ void do_learned(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   send_to_char("Skills learned:\n\r",ch);
+   sprintf(buf, "Skills learned:\n\r");
    for(int i = 0; i < MAX_SKILL; i++)
    {
       if (can_use_skill(ch, i))
