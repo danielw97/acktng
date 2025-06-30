@@ -2634,7 +2634,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "restoration", {182, 182, 182, 182, 182, 182},
+    "restoration", {182, 182, 182, 182, 182, 182,
+                    182, 182, 182, 182, 182, 182},
     spell_restoration, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 632 ), 50, 12, FALSE,
     "", "!restoration!",
@@ -2827,14 +2828,16 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "shadowshield", {182, 182, 182, 182, 182, 182},
+    "shadowshield", {182, 182, 182, 182, 182, 182,
+                     182, 182, 182, 182, 182, 182},
     spell_shadowshield, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 648 ), 400, 12, FALSE,
     "", "@@NThe @@rshield@@N shatters!!",
     "@@NThe @@rshield@@N protecting $n shatters!!"},
    {
     REMORT, NORM,
-    "thoughtshield", {182, 182, 182, 182, 182, 182},
+    "thoughtshield", {182, 182, 182, 182, 182, 182,
+                      182, 182, 182, 182, 182, 182},
     spell_thoughtshield, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 649 ), 400, 12, FALSE,
     "", "@@NThe @@rshield@@N shatters!!",
@@ -2924,7 +2927,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "summon beast", {60, 182, 182, 182, 182, 182, 60},
+    "summon beast", {60, 182, 182, 182, 182, 182, 60,
+                     60, 182, 182, 182, 182, 182, 60},
     spell_summon_beast, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 661 ), 1200, 24, FALSE,
     "", "",
