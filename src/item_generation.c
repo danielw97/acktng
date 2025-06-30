@@ -596,8 +596,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
 
    if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
       set_aff_to_obj(obj, APPLY_DAMCAP, 20);
-
-   if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
+   else if (IS_SET(obj->extra_flags, ITEM_LEGENDARY))
       set_aff_to_obj(obj, APPLY_DAMCAP, 40);
 }
 
