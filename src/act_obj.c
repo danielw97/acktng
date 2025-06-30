@@ -2833,7 +2833,7 @@ void do_list(CHAR_DATA *ch, char *argument)
             stopcounter++;
             sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*d@@N \n\r", "@@a",
                     obj->level, ccode_len(obj->short_descr, 30), capitalize(obj->short_descr),
-                    obj->cost);
+                    get_cost(keeper, obj, TRUE));
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
             {
