@@ -331,7 +331,7 @@ int get_max_str(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max,25);
+   return UMIN(max, STAT_MAX);
 }
 
 /*
@@ -369,7 +369,7 @@ int get_max_int(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max,25);
+   return UMIN(max, STAT_MAX);
 }
 
 /*
@@ -407,7 +407,7 @@ int get_max_wis(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max,25);
+   return UMIN(max, STAT_MAX);
 }
 
 /*
@@ -446,7 +446,7 @@ int get_max_dex(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max,25);
+   return UMIN(max, STAT_MAX);
 }
 
 /*
@@ -484,7 +484,7 @@ int get_max_con(CHAR_DATA *ch)
          max++;
    }
 
-   return UMIN(max,25);
+   return UMIN(max, STAT_MAX);
 }
 
 int get_spellpower(CHAR_DATA *ch)
