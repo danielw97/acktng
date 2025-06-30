@@ -2560,7 +2560,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "withering shadow", {182, 182, 182, 17, 182, 182
+    "withering shadow", {182, 182, 182, 17, 182, 182,
                          182, 182, 182, 17, 182, 182},
     spell_wither_shadow, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 617 ), 150, 12, FALSE,
@@ -2927,8 +2927,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "summon beast", {60, 182, 182, 182, 182, 182, 60,
-                     60, 182, 182, 182, 182, 182, 60},
+    "summon beast", {60, 182, 182, 182, 182, 182,
+                     60, 182, 182, 182, 182, 182},
     spell_summon_beast, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 661 ), 1200, 24, FALSE,
     "", "",
