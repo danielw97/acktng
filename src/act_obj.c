@@ -2572,12 +2572,6 @@ int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj)
             break;
          }
       }
-
-      for (obj2 = keeper->first_carry; obj2; obj2 = obj2->next_in_carry_list)
-      {
-         if (obj->pIndexData == obj2->pIndexData)
-            cost /= 2;
-      }
    }
    return cost;
 }
@@ -2816,6 +2810,8 @@ void do_list(CHAR_DATA *ch, char *argument)
       {
          if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj) && (cost = get_cost(keeper, obj)) > 0 && (arg[0] == '\0' || is_name(arg, obj->name)))
          {
+            sprintf(buf1,"Item cost is %d, with cost of %d", obj->cost, cost);
+            send_to_char(buf1,ch);
             if (!found)
             {
                found = TRUE;
@@ -2825,7 +2821,7 @@ void do_list(CHAR_DATA *ch, char *argument)
             stopcounter++;
             sprintf(buf, "@@g[%s%3d@@g]  @@c%-*s@@g  @@W%-*d@@N \n\r", "@@a",
                     obj->level, ccode_len(obj->short_descr, 30), capitalize(obj->short_descr),
-                    get_cost(keeper, obj));
+                    cost);
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
             {
