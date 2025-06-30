@@ -526,7 +526,7 @@ void do_trip(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!subtract_energy_cost(ch, gsn_dirt))
+   if (!subtract_energy_cost(ch, gsn_trip))
       return;
 
    if (is_safe(ch, victim))
@@ -1220,6 +1220,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 
 void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 {
+   AFFECT_DATA *af;
    int chance;
 
    if (!can_use_skill_message(ch, gsn_disarm))
@@ -1270,6 +1271,14 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
     */
 
    obj_to_char(ch, obj);
+
+   af.type = skill_lookup("disarm");
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.duration_type = DURATION_ROUND;
+   af.duration = 2;
+   af.bitvector = 0;
+   affect_to_char(victim, &af);
 
    return;
 }
