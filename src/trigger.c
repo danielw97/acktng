@@ -25,17 +25,15 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include "globals.h"
 
+#define DEC_TRIGGER(fun) TRIGGER_FUN fun
 
-#define DEC_TRIGGER( fun )		TRIGGER_FUN  fun
-
-typedef void TRIGGER_FUN args( ( CHAR_DATA * ch, OBJ_DATA * obj ) );
+typedef void TRIGGER_FUN args((CHAR_DATA * ch, OBJ_DATA *obj));
 
 struct trigger_type
 {
@@ -44,129 +42,131 @@ struct trigger_type
    TRIGGER_FUN *func;
 };
 
-DEC_TRIGGER( trig_transfer );
-DEC_TRIGGER( trig_restore );
-DEC_TRIGGER( trig_slay );
-DEC_TRIGGER( trig_transform );
+DEC_TRIGGER(trig_transfer);
+DEC_TRIGGER(trig_restore);
+DEC_TRIGGER(trig_slay);
+DEC_TRIGGER(trig_transform);
 
 const struct trigger_type trigger_table[] = {
-   {"Transfer", FALSE, trig_transfer},
-   {"Restore", TRUE, trig_restore},
-   {"Slay", FALSE, trig_slay},
-   {"Transform", TRUE, trig_transform},
-   {NULL, FALSE, NULL,}
-};
+    {"Transfer", FALSE, trig_transfer},
+    {"Restore", TRUE, trig_restore},
+    {"Slay", FALSE, trig_slay},
+    {"Transform", TRUE, trig_transform},
+    {
+        NULL,
+        FALSE,
+        NULL,
+    }};
 
-void trigger_show( CHAR_DATA * ch )
+void trigger_show(CHAR_DATA *ch)
 {
    char buf[MAX_STRING_LENGTH];
 
-   sprintf( buf, "Trigger objects information:\n\r" );
+   sprintf(buf, "Trigger objects information:\n\r");
 
-   strcat( buf, "v1  Name           v2		    v3\n\r" );
-   strcat( buf, "--  ----        ---------       ---------\n\r" );
-   strcat( buf, " 1  Transport   Room vnum          N/A\n\r" );
-   strcat( buf, " 2  Restore	    N/A		    N/A\n\r" );
-   strcat( buf, " 3  Slay	    N/A	            N/A\n\r" );
-   strcat( buf, " 4  Transform   Mob Vnum	    N/A\n\r" );
-   strcat( buf, "v0 determines what action causes the trigger:\n\r" );
-   strcat( buf, "blah blah blah" );
-   send_to_char( buf, ch );
+   strcat(buf, "v1  Name           v2		    v3\n\r");
+   strcat(buf, "--  ----        ---------       ---------\n\r");
+   strcat(buf, " 1  Transport   Room vnum          N/A\n\r");
+   strcat(buf, " 2  Restore	    N/A		    N/A\n\r");
+   strcat(buf, " 3  Slay	    N/A	            N/A\n\r");
+   strcat(buf, " 4  Transform   Mob Vnum	    N/A\n\r");
+   strcat(buf, "v0 determines what action causes the trigger:\n\r");
+   strcat(buf, "blah blah blah");
+   send_to_char(buf, ch);
    return;
 }
 
-
-void trigger_handler( CHAR_DATA * ch, OBJ_DATA * obj, int trigger )
+void trigger_handler(CHAR_DATA *ch, OBJ_DATA *obj, int trigger)
 {
    int a;
 
-   if( ( obj->item_type != ITEM_TRIGGER ) || ( obj->value[0] != trigger ) )
+   if ((obj->item_type != ITEM_TRIGGER) || (obj->value[0] != trigger))
       return;
 
    /*
-    * Find trigger in table and call function 
+    * Find trigger in table and call function
     */
-   for( a = 0; trigger_table[a].name != NULL; a++ )
-      if( a == obj->value[1] )
+   for (a = 0; trigger_table[a].name != NULL; a++)
+      if (a == obj->value[1])
       {
-         ( *trigger_table[a].func ) ( ch, obj );
-         if( IS_SET( obj->extra_flags, ITEM_TRIG_DESTROY ) || trigger_table[a].always_extract )
+         (*trigger_table[a].func)(ch, obj);
+         if (IS_SET(obj->extra_flags, ITEM_TRIG_DESTROY) || trigger_table[a].always_extract)
          {
-            extract_obj( obj );
+            extract_obj(obj);
          }
          return;
       }
 
-   bug( "Trigger_handler: trigger number %d not found.", trigger );
+   bug("Trigger_handler: trigger number %d not found.", trigger);
    return;
 }
 
-void trig_transfer( CHAR_DATA * ch, OBJ_DATA * obj )
+void trig_transfer(CHAR_DATA *ch, OBJ_DATA *obj)
 {
    ROOM_INDEX_DATA *location;
 
-   if( ( location = get_room_index( obj->value[2] ) ) == NULL )
+   if ((location = get_room_index(obj->value[2])) == NULL)
    {
-      bug( "Trig_transfer: Obj has invalid v2.", 0 );
+      bug("Trig_transfer: Obj has invalid v2.", 0);
       return;
    }
 
-   act( "$p glows brightly!", ch, obj, NULL, TO_CHAR );
-   act( "$p glows brightly!", ch, obj, NULL, TO_ROOM );
-   if( ch->position == POS_FIGHTING )
-      stop_fighting( ch, TRUE );
+   act("$p glows brightly!", ch, obj, NULL, TO_CHAR);
+   act("$p glows brightly!", ch, obj, NULL, TO_ROOM);
+   if (ch->position == POS_FIGHTING)
+      stop_fighting(ch, TRUE);
 
-   act( "$n vanishes suddenly!", ch, NULL, NULL, TO_ROOM );
-   send_to_char( "You vanish suddenly!\n\r", ch );
-   char_from_room( ch );
-   char_to_room( ch, location );
-   do_look( ch, "auto" );
-   act( "$n suddenly appears before you!", ch, NULL, NULL, TO_ROOM );
+   act("$n vanishes suddenly!", ch, NULL, NULL, TO_ROOM);
+   send_to_char("You vanish suddenly!\n\r", ch);
+   char_from_room(ch);
+   char_to_room(ch, location);
+   do_look(ch, "auto");
+   act("$n suddenly appears before you!", ch, NULL, NULL, TO_ROOM);
    return;
 }
 
-void trig_restore( CHAR_DATA * ch, OBJ_DATA * obj )
+void trig_restore(CHAR_DATA *ch, OBJ_DATA *obj)
 {
-   act( "A beam of white light from $p sweeps over $n!", ch, obj, NULL, TO_ROOM );
-   act( "A beam of white light from $p sweeps over you!", ch, obj, NULL, TO_ROOM );
+   act("A beam of white light from $p sweeps over $n!", ch, obj, NULL, TO_ROOM);
+   act("A beam of white light from $p sweeps over you!", ch, obj, NULL, TO_ROOM);
    ch->hit = ch->max_hit;
    ch->mana = ch->max_mana;
    ch->move = ch->max_move;
-   send_to_char( "You feel very healthy!\n\r", ch );
+   send_to_char("You feel very healthy!\n\r", ch);
    return;
 }
 
-void trig_slay( CHAR_DATA * ch, OBJ_DATA * obj )
+void trig_slay(CHAR_DATA *ch, OBJ_DATA *obj)
 {
-   act( "A beam of black light from $p obliterates $n!!", ch, obj, NULL, TO_ROOM );
-   act( "A beam of black light from $p obliterates you!", ch, obj, NULL, TO_CHAR );
-   raw_kill( ch, "" );
+   act("A beam of black light from $p obliterates $n!!", ch, obj, NULL, TO_ROOM);
+   act("A beam of black light from $p obliterates you!", ch, obj, NULL, TO_CHAR);
+   raw_kill(ch, "");
    return;
 }
 
-void trig_transform( CHAR_DATA * ch, OBJ_DATA * obj )
+void trig_transform(CHAR_DATA *ch, OBJ_DATA *obj)
 {
    MOB_INDEX_DATA *mob;
    CHAR_DATA *new;
 
-   if( ( mob = get_mob_index( obj->value[2] ) ) == NULL )
+   if ((mob = get_mob_index(obj->value[2])) == NULL)
    {
-      bugf( "Trig_transform: invalid value[2] (%d) for object vnum %d", obj->value[2], obj->pIndexData->vnum );
+      bugf("Trig_transform: invalid value[2] (%d) for object vnum %d", obj->value[2], obj->pIndexData->vnum);
       return;
    }
 
-   act( "$p starts glowing brightly!", ch, obj, NULL, TO_ROOM );
-   act( "$p starts glowing brightly!", ch, obj, NULL, TO_CHAR );
+   act("$p starts glowing brightly!", ch, obj, NULL, TO_ROOM);
+   act("$p starts glowing brightly!", ch, obj, NULL, TO_CHAR);
 
-   if( obj->carried_by != NULL )
+   if (obj->carried_by != NULL)
    {
-      act( "$n drops $p in shock and steps back.", ch, obj, NULL, TO_ROOM );
-      act( "You drop $p in shock and step back.", ch, obj, NULL, TO_CHAR );
+      act("$n drops $p in shock and steps back.", ch, obj, NULL, TO_ROOM);
+      act("You drop $p in shock and step back.", ch, obj, NULL, TO_CHAR);
    }
 
-   new = create_mobile( mob );
-   char_to_room( new, ch->in_room );
+   new = create_mobile(mob);
+   char_to_room(new, ch->in_room);
 
-   act( "$p slowly turns into $n!!!", new, obj, NULL, TO_ROOM );
+   act("$p slowly turns into $n!!!", new, obj, NULL, TO_ROOM);
    return;
 }

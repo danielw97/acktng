@@ -656,20 +656,20 @@ void do_beserk(CHAR_DATA *ch, char *argument)
    af.type = gsn_beserk;
    af.duration = -1;
    af.location = APPLY_AC;
-   af.modifier = ch->lvl[CLASS_WAR]/2;
+   af.modifier = ch->lvl[CLASS_WAR] / 2;
    af.bitvector = 0;
    affect_to_char(ch, &af);
 
    af.location = APPLY_HITROLL;
-   af.modifier = ch->lvl[CLASS_WAR]/5;
+   af.modifier = ch->lvl[CLASS_WAR] / 5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_DAMROLL;
-   af.modifier = ch->lvl[CLASS_WAR]/5;
+   af.modifier = ch->lvl[CLASS_WAR] / 5;
    affect_to_char(ch, &af);
 
    af.location = APPLY_SAVING_SPELL;
-   af.modifier = ch->lvl[CLASS_WAR]/-10;
+   af.modifier = ch->lvl[CLASS_WAR] / -10;
    affect_to_char(ch, &af);
 
    act("$n calls on the Dark Powers, who answer!!!", ch, NULL, NULL, TO_ROOM);
@@ -1544,7 +1544,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
    reset_combo(ch);
 
-  return TRUE;
+   return TRUE;
 }
 
 bool is_valid_finisher(CHAR_DATA *ch)
@@ -1633,7 +1633,7 @@ bool subtract_energy_cost(CHAR_DATA *ch, int gsn)
 void do_smash(CHAR_DATA *ch, char *argument)
 {
    const sh_int rev_dir[] = {
-    2, 3, 0, 1, 5, 4};
+       2, 3, 0, 1, 5, 4};
    char arg[MAX_INPUT_LENGTH];
    int door;
    bool joke; /* Was it unlocked to start with? */
@@ -1716,7 +1716,7 @@ void do_smash(CHAR_DATA *ch, char *argument)
 void do_pick(CHAR_DATA *ch, char *argument)
 {
    const sh_int rev_dir[] = {
-    2, 3, 0, 1, 5, 4};
+       2, 3, 0, 1, 5, 4};
    char arg[MAX_INPUT_LENGTH];
    CHAR_DATA *gch;
    OBJ_DATA *obj;

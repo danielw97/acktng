@@ -25,7 +25,6 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -67,176 +66,177 @@ the /pub/pip1773 directory.
   A rename command which renames a player. Search for do_rename to see
   more info on it.
 
-  A FOR command which executes a command at/on every player/mob/location.  
+  A FOR command which executes a command at/on every player/mob/location.
 
   Fixes since last release: None.
-  
-  
+
+
 */
 
 /* To have VLIST show more than vnum 0 - 9900, change the number below: */
 
-#define MAX_SHOW_VNUM   326   /* show only 1 - 100*100 */
+#define MAX_SHOW_VNUM 326 /* show only 1 - 100*100 */
 
 #define NUL '\0'
 
-
-extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];   /* db.c */
+extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH]; /* db.c */
 
 /* opposite directions */
-const sh_int opposite_dir[6] = { DIR_SOUTH, DIR_WEST, DIR_NORTH, DIR_EAST, DIR_DOWN, DIR_UP };
-
+const sh_int opposite_dir[6] = {DIR_SOUTH, DIR_WEST, DIR_NORTH, DIR_EAST, DIR_DOWN, DIR_UP};
 
 /* get the 'short' name of an area (e.g. MIDGAARD, MIRROR etc. */
 /* assumes that the filename saved in the AREA_DATA struct is something like midgaard.are */
-char *area_name( AREA_DATA * pArea )
+char *area_name(AREA_DATA *pArea)
 {
    static char buffer[64]; /* short filename */
    char *period;
 
-   assert( pArea != NULL );
+   assert(pArea != NULL);
 
-   strncpy( buffer, pArea->filename, 64 );   /* copy the filename */
-   period = strchr( buffer, '.' );  /* find the period (midgaard.are) */
-   if( period )   /* if there was one */
-      *period = '\0';   /* terminate the string there (midgaard) */
+   strncpy(buffer, pArea->filename, 64); /* copy the filename */
+   period = strchr(buffer, '.');         /* find the period (midgaard.are) */
+   if (period)                           /* if there was one */
+      *period = '\0';                    /* terminate the string there (midgaard) */
 
    return buffer;
 }
 
 typedef enum
-{ exit_from, exit_to, exit_both } exit_status;
+{
+   exit_from,
+   exit_to,
+   exit_both
+} exit_status;
 
 /* depending on status print > or < or <> between the 2 rooms */
-void room_pair( ROOM_INDEX_DATA * left, ROOM_INDEX_DATA * right, exit_status ex, char *buffer )
+void room_pair(ROOM_INDEX_DATA *left, ROOM_INDEX_DATA *right, exit_status ex, char *buffer)
 {
    char *sExit;
 
-   switch ( ex )
+   switch (ex)
    {
-      default:
-         sExit = "??";
-         break;   /* invalid usage */
-      case exit_from:
-         sExit = "< ";
-         break;
-      case exit_to:
-         sExit = " >";
-         break;
-      case exit_both:
-         sExit = "<>";
-         break;
+   default:
+      sExit = "??";
+      break; /* invalid usage */
+   case exit_from:
+      sExit = "< ";
+      break;
+   case exit_to:
+      sExit = " >";
+      break;
+   case exit_both:
+      sExit = "<>";
+      break;
    }
 
-   sprintf( buffer, "%5d %-26.26s %s%5d %-26.26s(%-8.8s)\n\r",
-            left->vnum, left->name, sExit, right->vnum, right->name, area_name( right->area ) );
+   sprintf(buffer, "%5d %-26.26s %s%5d %-26.26s(%-8.8s)\n\r",
+           left->vnum, left->name, sExit, right->vnum, right->name, area_name(right->area));
 }
 
 /* for every exit in 'room' which leads to or from pArea but NOT both, print it */
-void checkexits( ROOM_INDEX_DATA * room, AREA_DATA * pArea, char *buffer )
+void checkexits(ROOM_INDEX_DATA *room, AREA_DATA *pArea, char *buffer)
 {
    char buf[MAX_STRING_LENGTH];
    int i;
    EXIT_DATA *exit;
    ROOM_INDEX_DATA *to_room;
 
-   strcpy( buffer, "" );
-   for( i = 0; i < 6; i++ )
+   strcpy(buffer, "");
+   for (i = 0; i < 6; i++)
    {
       exit = room->exit[i];
-      if( !exit )
+      if (!exit)
          continue;
       else
          to_room = exit->to_room;
 
-      if( to_room )  /* there is something on the other side */
+      if (to_room) /* there is something on the other side */
       {
-         if( ( room->area == pArea ) && ( to_room->area != pArea ) )
-         {  /* an exit from our area to another area */
+         if ((room->area == pArea) && (to_room->area != pArea))
+         { /* an exit from our area to another area */
             /*
-             * check first if it is a two-way exit 
+             * check first if it is a two-way exit
              */
 
-            if( to_room->exit[opposite_dir[i]] && to_room->exit[opposite_dir[i]]->to_room == room )
-               room_pair( room, to_room, exit_both, buf );  /* <> */
+            if (to_room->exit[opposite_dir[i]] && to_room->exit[opposite_dir[i]]->to_room == room)
+               room_pair(room, to_room, exit_both, buf); /* <> */
             else
-               room_pair( room, to_room, exit_to, buf ); /* > */
+               room_pair(room, to_room, exit_to, buf); /* > */
 
-            strcat( buffer, buf );
+            strcat(buffer, buf);
          }
-         else if( ( room->area != pArea ) && ( exit->to_room->area == pArea ) )
-         {  /* an exit from another area to our area */
+         else if ((room->area != pArea) && (exit->to_room->area == pArea))
+         { /* an exit from another area to our area */
 
-            if( !( to_room->exit[opposite_dir[i]] && to_room->exit[opposite_dir[i]]->to_room == room ) )
-               /*
-                * two-way exits are handled in the other if 
-                */
+            if (!(to_room->exit[opposite_dir[i]] && to_room->exit[opposite_dir[i]]->to_room == room))
+            /*
+             * two-way exits are handled in the other if
+             */
             {
-               room_pair( to_room, room, exit_from, buf );
-               strcat( buffer, buf );
+               room_pair(to_room, room, exit_from, buf);
+               strcat(buffer, buf);
             }
 
-         }  /* if room->area */
+         } /* if room->area */
       }
 
-   }  /* for */
-
+   } /* for */
 }
 
 /* for now, no arguments, just list the current area */
-void do_exlist( CHAR_DATA * ch, char *argument )
+void do_exlist(CHAR_DATA *ch, char *argument)
 {
    AREA_DATA *pArea;
    ROOM_INDEX_DATA *room;
    int i;
    char buffer[MAX_STRING_LENGTH];
 
-   pArea = ch->in_room->area; /* this is the area we want info on */
-   for( i = 0; i < MAX_KEY_HASH; i++ ) /* room index hash table */
-      for( room = room_index_hash[i]; room != NULL; room = room->next )
-         /*
-          * run through all the rooms on the MUD 
-          */
+   pArea = ch->in_room->area;         /* this is the area we want info on */
+   for (i = 0; i < MAX_KEY_HASH; i++) /* room index hash table */
+      for (room = room_index_hash[i]; room != NULL; room = room->next)
+      /*
+       * run through all the rooms on the MUD
+       */
 
       {
-         checkexits( room, pArea, buffer );
-         send_to_char( buffer, ch );
+         checkexits(room, pArea, buffer);
+         send_to_char(buffer, ch);
       }
 }
 
 /* show a list of all used VNUMS */
 
-#define COLUMNS 		5  /* number of columns */
-#define MAX_ROW 		((MAX_SHOW_VNUM / COLUMNS)+1) /* rows */
+#define COLUMNS 5                               /* number of columns */
+#define MAX_ROW ((MAX_SHOW_VNUM / COLUMNS) + 1) /* rows */
 
-void do_vlist( CHAR_DATA * ch, char *argument )
+void do_vlist(CHAR_DATA *ch, char *argument)
 {
    int i, j, vnum;
    ROOM_INDEX_DATA *room;
-   char buffer[MAX_ROW * 100];   /* should be plenty */
+   char buffer[MAX_ROW * 100]; /* should be plenty */
    char buf2[100];
 
-   for( i = 0; i < MAX_ROW; i++ )
+   for (i = 0; i < MAX_ROW; i++)
    {
-      strcpy( buffer, "" );   /* clear the buffer for this row */
+      strcpy(buffer, ""); /* clear the buffer for this row */
 
-      for( j = 0; j < COLUMNS; j++ )   /* for each column */
+      for (j = 0; j < COLUMNS; j++) /* for each column */
       {
-         vnum = ( ( j * MAX_ROW ) + i );  /* find a vnum whih should be there */
-         if( vnum < MAX_SHOW_VNUM )
+         vnum = ((j * MAX_ROW) + i); /* find a vnum whih should be there */
+         if (vnum < MAX_SHOW_VNUM)
          {
-            room = get_room_index( vnum * 100 + 1 );  /* each zone has to have a XXX01 room */
-            sprintf( buf2, "%3d %-8.8s  ", vnum, room ? area_name( room->area ) : "-" );
+            room = get_room_index(vnum * 100 + 1); /* each zone has to have a XXX01 room */
+            sprintf(buf2, "%3d %-8.8s  ", vnum, room ? area_name(room->area) : "-");
             /*
-             * something there or unused ? 
+             * something there or unused ?
              */
-            strcat( buffer, buf2 );
+            strcat(buffer, buf2);
          }
-      }  /* for columns */
+      } /* for columns */
 
-      send_to_char( buffer, ch );
-      send_to_char( "\n\r", ch );
-   }  /* for rows */
+      send_to_char(buffer, ch);
+      send_to_char("\n\r", ch);
+   } /* for rows */
 }
 
 /*
@@ -244,72 +244,72 @@ void do_vlist( CHAR_DATA * ch, char *argument )
  * PCs only. Previous file is deleted, if it exists.
  * Char is then saved to new file.
  * New name is checked against std. checks, existing offline players and
- * online players. 
+ * online players.
  * .gz files are checked for too, just in case.
  */
 
-bool check_parse_name( char *name );   /* comm.c */
-char *initial( const char *str );   /* comm.c */
+bool check_parse_name(char *name); /* comm.c */
+char *initial(const char *str);    /* comm.c */
 
-void do_rename( CHAR_DATA * ch, char *argument )
+void do_rename(CHAR_DATA *ch, char *argument)
 {
    char old_name[MAX_INPUT_LENGTH], new_name[MAX_INPUT_LENGTH], strsave[MAX_INPUT_LENGTH];
 
    CHAR_DATA *victim;
    FILE *file;
 
-   argument = one_argument( argument, old_name );  /* find new/old name */
-   one_argument( argument, new_name );
+   argument = one_argument(argument, old_name); /* find new/old name */
+   one_argument(argument, new_name);
 
    /*
-    * Trivial checks 
+    * Trivial checks
     */
-   if( !old_name[0] )
+   if (!old_name[0])
    {
-      send_to_char( "Rename who?\n\r", ch );
+      send_to_char("Rename who?\n\r", ch);
       return;
    }
 
-   victim = get_char_world( ch, old_name );
+   victim = get_char_world(ch, old_name);
 
-   if( !victim )
+   if (!victim)
    {
-      send_to_char( "There is no such a person online.\n\r", ch );
+      send_to_char("There is no such a person online.\n\r", ch);
       return;
    }
 
-   if( IS_NPC( victim ) )
+   if (IS_NPC(victim))
    {
-      send_to_char( "You cannot use Rename on NPCs.\n\r", ch );
+      send_to_char("You cannot use Rename on NPCs.\n\r", ch);
       return;
    }
 
    /*
-    * allow rename self new_name,but otherwise only lower level 
+    * allow rename self new_name,but otherwise only lower level
     */
-   if( ( victim != ch ) && ( get_trust( victim ) >= get_trust( ch ) ) )
+   if ((victim != ch) && (get_trust(victim) >= get_trust(ch)))
    {
-      send_to_char( "You failed.\n\r", ch );
+      send_to_char("You failed.\n\r", ch);
       return;
    }
 
-   if( !victim->desc || ( victim->desc->connected != CON_PLAYING ) )
+   if (!victim->desc || (victim->desc->connected != CON_PLAYING))
    {
-      send_to_char( "This player has lost his link or is inside a pager or the like.\n\r", ch );
+      send_to_char("This player has lost his link or is inside a pager or the like.\n\r", ch);
       return;
    }
 
-   if( !new_name[0] )
+   if (!new_name[0])
    {
-      send_to_char( "Rename to what new name?\n\r", ch );
+      send_to_char("Rename to what new name?\n\r", ch);
       return;
    }
 
    /*
-    * Insert check for clan here!! 
+    * Insert check for clan here!!
     */
    /*
-    * 
+    *
     * if (victim->clan)
     * {
     * send_to_char ("This player is member of a clan, remove him from there first.\n\r",ch);
@@ -317,101 +317,99 @@ void do_rename( CHAR_DATA * ch, char *argument )
     * }
     */
 
-   if( !check_parse_name( new_name ) )
+   if (!check_parse_name(new_name))
    {
-      send_to_char( "The new name is illegal.\n\r", ch );
+      send_to_char("The new name is illegal.\n\r", ch);
       return;
    }
 
    /*
-    * First, check if there is a player named that off-line 
+    * First, check if there is a player named that off-line
     */
 #if !defined(machintosh) && !defined(MSDOS)
-   sprintf( strsave, "%s%s%s%s", PLAYER_DIR, initial( new_name ), "/", capitalize( new_name ) );
+   sprintf(strsave, "%s%s%s%s", PLAYER_DIR, initial(new_name), "/", capitalize(new_name));
 #else
-   sprintf( strsave, "%s%s", PLAYER_DIR, capitalize( new_name ) );
+   sprintf(strsave, "%s%s", PLAYER_DIR, capitalize(new_name));
 #endif
 
    if (fpReserve != NULL)
    {
-      fclose( fpReserve ); /* close the reserve file */
+      fclose(fpReserve); /* close the reserve file */
       fpReserve = NULL;
    }
-   file = fopen( strsave, "r" ); /* attempt to to open pfile */
-   if( file )
+   file = fopen(strsave, "r"); /* attempt to to open pfile */
+   if (file)
    {
-      send_to_char( "A player with that name already exists!\n\r", ch );
-      fclose( file );
+      send_to_char("A player with that name already exists!\n\r", ch);
+      fclose(file);
       return;
    }
 
    /*
-    * Check .gz file ! 
+    * Check .gz file !
     */
 #if !defined(machintosh) && !defined(MSDOS)
-   sprintf( strsave, "%s%s%s%s.gz", PLAYER_DIR, initial( new_name ), "/", capitalize( new_name ) );
+   sprintf(strsave, "%s%s%s%s.gz", PLAYER_DIR, initial(new_name), "/", capitalize(new_name));
 #else
-   sprintf( strsave, "%s%s.gz", PLAYER_DIR, capitalize( new_name ) );
+   sprintf(strsave, "%s%s.gz", PLAYER_DIR, capitalize(new_name));
 #endif
 
    if (fpReserve != NULL)
    {
-      fclose( fpReserve ); /* close the reserve file */
+      fclose(fpReserve); /* close the reserve file */
       fpReserve = NULL;
    }
-   file = fopen( strsave, "r" ); /* attempt to to open pfile */
-   if( file )
+   file = fopen(strsave, "r"); /* attempt to to open pfile */
+   if (file)
    {
-      send_to_char( "A player with that name already exists in a compressed file!\n\r", ch );
-      fclose( file );
+      send_to_char("A player with that name already exists in a compressed file!\n\r", ch);
+      fclose(file);
       return;
    }
 
-   if( get_char_world( ch, new_name ) )   /* check for playing level-1 non-saved */
+   if (get_char_world(ch, new_name)) /* check for playing level-1 non-saved */
    {
-      send_to_char( "A player with the name you specified already exists!\n\r", ch );
+      send_to_char("A player with the name you specified already exists!\n\r", ch);
       return;
    }
 
    /*
-    * Save the filename of the old name 
+    * Save the filename of the old name
     */
 
 #if !defined(machintosh) && !defined(MSDOS)
-   sprintf( strsave, "%s%s%s%s", PLAYER_DIR, initial( victim->name ), "/", capitalize( victim->name ) );
+   sprintf(strsave, "%s%s%s%s", PLAYER_DIR, initial(victim->name), "/", capitalize(victim->name));
 #else
-   sprintf( strsave, "%s%s", PLAYER_DIR, capitalize( victim->name ) );
+   sprintf(strsave, "%s%s", PLAYER_DIR, capitalize(victim->name));
 #endif
 
-
    /*
-    * Rename the character and save him to a new file 
+    * Rename the character and save him to a new file
     */
    /*
-    * NOTE: Players who are level 1 do NOT get saved under a new name 
+    * NOTE: Players who are level 1 do NOT get saved under a new name
     */
 
-   free_string( victim->name );
-   victim->name = str_dup( capitalize( new_name ) );
+   free_string(victim->name);
+   victim->name = str_dup(capitalize(new_name));
 
-   save_char_obj( victim );
+   save_char_obj(victim);
 
    /*
-    * unlink the old file 
+    * unlink the old file
     */
-   unlink( strsave );   /* unlink does return a value.. but we do not care */
+   unlink(strsave); /* unlink does return a value.. but we do not care */
 
    /*
-    * That's it! 
+    * That's it!
     */
 
-   send_to_char( "Character renamed.\n\r", ch );
+   send_to_char("Character renamed.\n\r", ch);
 
    victim->position = POS_STANDING; /* I am laaazy */
-   act( "$n has renamed you to $N!", ch, NULL, victim, TO_VICT );
+   act("$n has renamed you to $N!", ch, NULL, victim, TO_VICT);
 
-}  /* do_rename */
-
+} /* do_rename */
 
 /* Super-AT command:
 
@@ -433,7 +431,7 @@ in game. If there is no #, the action will be executed for every room containg
 at least one target, but only once per room. # cannot be used with FOR EVERY-
 WHERE. # can be anywhere in the action.
 
-Example: 
+Example:
 
 FOR ALL SMILE -> you will only smile once in a room with 2 players.
 FOR ALL TWIDDLE # -> In a room with A and B, you will twiddle A then B.
@@ -444,7 +442,7 @@ avoid something like FOR MOBS PURGE (although it actually works at my MUD).
 FOR MOBS TRANS 3054 (transfer ALL the mobs to Midgaard temple) does NOT work
 though :)
 
-The command works by transporting the character to each of the rooms with 
+The command works by transporting the character to each of the rooms with
 target in them. Private rooms are not violated.
 
 */

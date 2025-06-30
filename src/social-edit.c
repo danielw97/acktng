@@ -25,11 +25,10 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-/* Online Social Editting Module, 
+/* Online Social Editting Module,
  * (c) 1996 Erwin S. Andreasen <erwin@pip.dknet.dk>
  * See the file "License" for important licensing information
  */
-
 
 #include <ctype.h>
 #include <stdio.h>
@@ -38,126 +37,122 @@
 #include <time.h>
 #include "globals.h"
 
-#define SOCIAL_FILE DATA_DIR "socials.txt"   /* or whatever fits you */
-                           /*
-                            * #define CONST_SOCIAL  
-                                                         *//*
-                                                         * remove this in Step 2 
-                                                         */
+#define SOCIAL_FILE DATA_DIR "socials.txt" /* or whatever fits you */
+                                           /*
+                                            * #define CONST_SOCIAL
+                                            */
+                                           /*
+                                            * remove this in Step 2
+                                            */
 
 int maxSocial; /* max number of socials */
 
 #ifndef CONST_SOCIAL
-struct social_type *social_table;   /* and social table */
+struct social_type *social_table; /* and social table */
 
-void load_social( FILE * fp, struct social_type *social )
+void load_social(FILE *fp, struct social_type *social)
 {
-   social->name = fread_string( fp );
-   social->char_no_arg = fread_string( fp );
-   social->others_no_arg = fread_string( fp );
-   social->char_found = fread_string( fp );
-   social->others_found = fread_string( fp );
-   social->vict_found = fread_string( fp );
-   social->char_auto = fread_string( fp );
-   social->others_auto = fread_string( fp );
+   social->name = fread_string(fp);
+   social->char_no_arg = fread_string(fp);
+   social->others_no_arg = fread_string(fp);
+   social->char_found = fread_string(fp);
+   social->others_found = fread_string(fp);
+   social->vict_found = fread_string(fp);
+   social->char_auto = fread_string(fp);
+   social->others_auto = fread_string(fp);
 }
 
-void load_social_table(  )
+void load_social_table()
 {
    FILE *fp;
    int i;
 
+   fp = fopen(SOCIAL_FILE, "r");
 
-   fp = fopen( SOCIAL_FILE, "r" );
-
-   if( !fp )
+   if (!fp)
    {
-      bug( "Could not open " SOCIAL_FILE " for reading.", 0 );
-      exit( 1 );
+      bug("Could not open " SOCIAL_FILE " for reading.", 0);
+      exit(1);
    }
 
-   fscanf( fp, "%d\n", &maxSocial );
+   fscanf(fp, "%d\n", &maxSocial);
 
    /*
-    * IMPORTANT to use malloc so we can realloc later on 
+    * IMPORTANT to use malloc so we can realloc later on
     */
 
-   social_table = malloc( sizeof( struct social_type ) * ( maxSocial + 1 ) );
+   social_table = malloc(sizeof(struct social_type) * (maxSocial + 1));
 
-   for( i = 0; i < maxSocial; i++ )
-      load_social( fp, &social_table[i] );
+   for (i = 0; i < maxSocial; i++)
+      load_social(fp, &social_table[i]);
 
    /*
-    * For backwards compatibility 
+    * For backwards compatibility
     */
 
-   social_table[maxSocial].name = str_dup( "" );   /* empty! */
+   social_table[maxSocial].name = str_dup(""); /* empty! */
 
    if (fp != NULL)
    {
-      fclose( fp );
+      fclose(fp);
       fp = NULL;
    }
-
 }
 
 #endif /* CONST_SOCIAL */
 
-void save_social( const struct social_type *s, FILE * fp )
+void save_social(const struct social_type *s, FILE *fp)
 {
    /*
-    * get rid of (null) 
+    * get rid of (null)
     */
-   fprintf( fp, "%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n\n",
-            s->name ? s->name : "",
-            s->char_no_arg ? s->char_no_arg : "",
-            s->others_no_arg ? s->others_no_arg : "",
-            s->char_found ? s->char_found : "",
-            s->others_found ? s->others_found : "",
-            s->vict_found ? s->vict_found : "", s->char_auto ? s->char_auto : "", s->others_auto ? s->others_auto : "" );
+   fprintf(fp, "%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n%s~\n\n",
+           s->name ? s->name : "",
+           s->char_no_arg ? s->char_no_arg : "",
+           s->others_no_arg ? s->others_no_arg : "",
+           s->char_found ? s->char_found : "",
+           s->others_found ? s->others_found : "",
+           s->vict_found ? s->vict_found : "", s->char_auto ? s->char_auto : "", s->others_auto ? s->others_auto : "");
 }
 
-
-void save_social_table(  )
+void save_social_table()
 {
    FILE *fp;
    int i;
 
-   fp = fopen( SOCIAL_FILE, "w" );
+   fp = fopen(SOCIAL_FILE, "w");
 
-   if( !fp )
+   if (!fp)
    {
-      bug( "Could not open " SOCIAL_FILE " for writing.", 0 );
+      bug("Could not open " SOCIAL_FILE " for writing.", 0);
       return;
    }
 
-#ifdef CONST_SOCIAL  /* If old table still in use, count socials first */
+#ifdef CONST_SOCIAL /* If old table still in use, count socials first */
 
-   for( maxSocial = 0; social_table[maxSocial].name[0]; maxSocial++ )
-      ;  /* empty */
+   for (maxSocial = 0; social_table[maxSocial].name[0]; maxSocial++)
+      ; /* empty */
 #endif
 
+   fprintf(fp, "%d\n", maxSocial);
 
-   fprintf( fp, "%d\n", maxSocial );
-
-   for( i = 0; i < maxSocial; i++ )
-      save_social( &social_table[i], fp );
+   for (i = 0; i < maxSocial; i++)
+      save_social(&social_table[i], fp);
 
    if (fp != NULL)
    {
-      fclose( fp );
+      fclose(fp);
       fp = NULL;
    }
 }
 
-
 /* Find a social based on name */
-int social_lookup( const char *name )
+int social_lookup(const char *name)
 {
    int i;
 
-   for( i = 0; i < maxSocial; i++ )
-      if( !str_cmp( name, social_table[i].name ) )
+   for (i = 0; i < maxSocial; i++)
+      if (!str_cmp(name, social_table[i].name))
          return i;
 
    return -1;
@@ -168,227 +163,221 @@ int social_lookup( const char *name )
  */
 
 #ifndef CONST_SOCIAL
-void do_sedit( CHAR_DATA * ch, char *argument )
+void do_sedit(CHAR_DATA *ch, char *argument)
 {
    char cmd[MAX_INPUT_LENGTH], social[MAX_INPUT_LENGTH];
    char buf[MAX_STRING_LENGTH];
    int iSocial;
-   smash_tilde( argument );
-   argument = one_argument( argument, cmd );
-   argument = one_argument( argument, social );
+   smash_tilde(argument);
+   argument = one_argument(argument, cmd);
+   argument = one_argument(argument, social);
 
-   if( !cmd[0] )
+   if (!cmd[0])
    {
-      send_to_char( "Huh? Type HELP SEDIT to see syntax.\n\r", ch );
+      send_to_char("Huh? Type HELP SEDIT to see syntax.\n\r", ch);
       return;
    }
 
-   if( !social[0] )
+   if (!social[0])
    {
-      send_to_char( "What social do you want to operate on?\n\r", ch );
+      send_to_char("What social do you want to operate on?\n\r", ch);
       return;
    }
 
-   iSocial = social_lookup( social );
+   iSocial = social_lookup(social);
 
-   if( str_cmp( cmd, "new" ) && ( iSocial == -1 ) )
+   if (str_cmp(cmd, "new") && (iSocial == -1))
    {
-      send_to_char( "No such social exists.\n\r", ch );
+      send_to_char("No such social exists.\n\r", ch);
       return;
    }
 
-   if( !str_cmp( cmd, "delete" ) )  /* Remove a social */
+   if (!str_cmp(cmd, "delete")) /* Remove a social */
    {
       int i, j;
-      struct social_type *new_table = malloc( sizeof( struct social_type ) * maxSocial );
+      struct social_type *new_table = malloc(sizeof(struct social_type) * maxSocial);
 
-      if( !new_table )
+      if (!new_table)
       {
-         send_to_char( "Memory allocation failed. Brace for impact...\n\r", ch );
+         send_to_char("Memory allocation failed. Brace for impact...\n\r", ch);
          return;
       }
 
       /*
-       * Copy all elements of old table into new table, except the deleted social 
+       * Copy all elements of old table into new table, except the deleted social
        */
-      for( i = 0, j = 0; i < maxSocial + 1; i++ )
-         if( i != iSocial )   /* copy, increase only if copied */
+      for (i = 0, j = 0; i < maxSocial + 1; i++)
+         if (i != iSocial) /* copy, increase only if copied */
          {
             new_table[j] = social_table[i];
             j++;
          }
 
-      free( social_table );
+      free(social_table);
       social_table = new_table;
 
-      maxSocial--;   /* Important :() */
+      maxSocial--; /* Important :() */
 
-      send_to_char( "That social is history now.\n\r", ch );
-
+      send_to_char("That social is history now.\n\r", ch);
    }
 
-   else if( !str_cmp( cmd, "new" ) )   /* Create a new social */
+   else if (!str_cmp(cmd, "new")) /* Create a new social */
    {
       struct social_type *new_table;
 
-      if( iSocial != -1 )
+      if (iSocial != -1)
       {
-         send_to_char( "A social with that name already exists\n\r", ch );
+         send_to_char("A social with that name already exists\n\r", ch);
          return;
       }
 
       /*
-       * reallocate the table 
+       * reallocate the table
        */
       /*
-       * Note that the table contains maxSocial socials PLUS one empty spot! 
+       * Note that the table contains maxSocial socials PLUS one empty spot!
        */
 
       maxSocial++;
-      new_table = realloc( social_table, sizeof( struct social_type ) * maxSocial + 1 );
+      new_table = realloc(social_table, sizeof(struct social_type) * maxSocial + 1);
 
-      if( !new_table )  /* realloc failed */
+      if (!new_table) /* realloc failed */
       {
-         send_to_char( "Memory allocation failed. Brace for impact.\n\r", ch );
+         send_to_char("Memory allocation failed. Brace for impact.\n\r", ch);
          return;
       }
 
       social_table = new_table;
 
-      social_table[maxSocial - 1].name = str_dup( social );
-      social_table[maxSocial - 1].char_no_arg = str_dup( "" );
-      social_table[maxSocial - 1].others_no_arg = str_dup( "" );
-      social_table[maxSocial - 1].char_found = str_dup( "" );
-      social_table[maxSocial - 1].others_found = str_dup( "" );
-      social_table[maxSocial - 1].vict_found = str_dup( "" );
-      social_table[maxSocial - 1].char_auto = str_dup( "" );
-      social_table[maxSocial - 1].others_auto = str_dup( "" );
+      social_table[maxSocial - 1].name = str_dup(social);
+      social_table[maxSocial - 1].char_no_arg = str_dup("");
+      social_table[maxSocial - 1].others_no_arg = str_dup("");
+      social_table[maxSocial - 1].char_found = str_dup("");
+      social_table[maxSocial - 1].others_found = str_dup("");
+      social_table[maxSocial - 1].vict_found = str_dup("");
+      social_table[maxSocial - 1].char_auto = str_dup("");
+      social_table[maxSocial - 1].others_auto = str_dup("");
 
-      social_table[maxSocial].name = str_dup( "" );   /* 'terminating' empty string */
+      social_table[maxSocial].name = str_dup(""); /* 'terminating' empty string */
 
-      send_to_char( "New social added.\n\r", ch );
-
+      send_to_char("New social added.\n\r", ch);
    }
 
-   else if( !str_cmp( cmd, "show" ) )  /* Show a certain social */
+   else if (!str_cmp(cmd, "show")) /* Show a certain social */
    {
-      sprintf( buf, "Social: %s\n\r"
-               "(cnoarg) No argument given, character sees:\n\r"
-               "%s\n\r\n\r"
-               "(onoarg) No argument given, others see:\n\r"
-               "%s\n\r\n\r"
-               "(cfound) Target found, character sees:\n\r"
-               "%s\n\r\n\r"
-               "(ofound) Target found, others see:\n\r"
-               "%s\n\r\n\r"
-               "(vfound) Target found, victim sees:\n\r"
-               "%s\n\r\n\r"
-               "(cself) Target is character himself:\n\r"
-               "%s\n\r\n\r"
-               "(oself) Target is character himself, others see:\n\r"
-               "%s\n\r",
-               social_table[iSocial].name,
-               social_table[iSocial].char_no_arg,
-               social_table[iSocial].others_no_arg,
-               social_table[iSocial].char_found,
-               social_table[iSocial].others_found,
-               social_table[iSocial].vict_found, social_table[iSocial].char_auto, social_table[iSocial].others_auto );
+      sprintf(buf, "Social: %s\n\r"
+                   "(cnoarg) No argument given, character sees:\n\r"
+                   "%s\n\r\n\r"
+                   "(onoarg) No argument given, others see:\n\r"
+                   "%s\n\r\n\r"
+                   "(cfound) Target found, character sees:\n\r"
+                   "%s\n\r\n\r"
+                   "(ofound) Target found, others see:\n\r"
+                   "%s\n\r\n\r"
+                   "(vfound) Target found, victim sees:\n\r"
+                   "%s\n\r\n\r"
+                   "(cself) Target is character himself:\n\r"
+                   "%s\n\r\n\r"
+                   "(oself) Target is character himself, others see:\n\r"
+                   "%s\n\r",
+              social_table[iSocial].name,
+              social_table[iSocial].char_no_arg,
+              social_table[iSocial].others_no_arg,
+              social_table[iSocial].char_found,
+              social_table[iSocial].others_found,
+              social_table[iSocial].vict_found, social_table[iSocial].char_auto, social_table[iSocial].others_auto);
 
-      send_to_char( buf, ch );
-      return;  /* return right away, do not save the table */
+      send_to_char(buf, ch);
+      return; /* return right away, do not save the table */
    }
 
-   else if( !str_cmp( cmd, "cnoarg" ) )   /* Set that argument */
+   else if (!str_cmp(cmd, "cnoarg")) /* Set that argument */
    {
-      free_string( social_table[iSocial].char_no_arg );
-      social_table[iSocial].char_no_arg = str_dup( argument );
+      free_string(social_table[iSocial].char_no_arg);
+      social_table[iSocial].char_no_arg = str_dup(argument);
 
-      if( !argument[0] )
-         send_to_char( "Character will now see nothing when this social is used without arguments.\n\r", ch );
+      if (!argument[0])
+         send_to_char("Character will now see nothing when this social is used without arguments.\n\r", ch);
       else
-         act( "New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR );
+         act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
 
-   else if( !str_cmp( cmd, "onoarg" ) )
+   else if (!str_cmp(cmd, "onoarg"))
    {
-      free_string( social_table[iSocial].others_no_arg );
-      social_table[iSocial].others_no_arg = str_dup( argument );
+      free_string(social_table[iSocial].others_no_arg);
+      social_table[iSocial].others_no_arg = str_dup(argument);
 
-      if( !argument[0] )
-         send_to_char( "Others will now see nothing when this social is used without arguments.\n\r", ch );
+      if (!argument[0])
+         send_to_char("Others will now see nothing when this social is used without arguments.\n\r", ch);
       else
-         act( "New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR );
-
+         act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
 
-   else if( !str_cmp( cmd, "cfound" ) )
+   else if (!str_cmp(cmd, "cfound"))
    {
-      free_string( social_table[iSocial].char_found );
-      social_table[iSocial].char_found = str_dup( argument );
+      free_string(social_table[iSocial].char_found);
+      social_table[iSocial].char_found = str_dup(argument);
 
-      if( !argument[0] )
-         send_to_char( "The character will now see nothing when a target is found.\n\r", ch );
+      if (!argument[0])
+         send_to_char("The character will now see nothing when a target is found.\n\r", ch);
       else
-         act( "New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR );
-
+         act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
 
-   else if( !str_cmp( cmd, "ofound" ) )
+   else if (!str_cmp(cmd, "ofound"))
    {
-      free_string( social_table[iSocial].others_found );
-      social_table[iSocial].others_found = str_dup( argument );
+      free_string(social_table[iSocial].others_found);
+      social_table[iSocial].others_found = str_dup(argument);
 
-      if( !argument[0] )
-         send_to_char( "Others will now see nothing when a target is found.\n\r", ch );
+      if (!argument[0])
+         send_to_char("Others will now see nothing when a target is found.\n\r", ch);
       else
-         act( "New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR );
-
+         act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
 
-   else if( !str_cmp( cmd, "vfound" ) )
+   else if (!str_cmp(cmd, "vfound"))
    {
-      free_string( social_table[iSocial].vict_found );
-      social_table[iSocial].vict_found = str_dup( argument );
+      free_string(social_table[iSocial].vict_found);
+      social_table[iSocial].vict_found = str_dup(argument);
 
-      if( !argument[0] )
-         send_to_char( "Victim will now see nothing when a target is found.\n\r", ch );
+      if (!argument[0])
+         send_to_char("Victim will now see nothing when a target is found.\n\r", ch);
       else
-         act( "New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR );
+         act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
 
-   else if( !str_cmp( cmd, "cself" ) )
+   else if (!str_cmp(cmd, "cself"))
    {
-      free_string( social_table[iSocial].char_auto );
-      social_table[iSocial].char_auto = str_dup( argument );
+      free_string(social_table[iSocial].char_auto);
+      social_table[iSocial].char_auto = str_dup(argument);
 
-      if( !argument[0] )
-         send_to_char( "Character will now see nothing when targetting self.\n\r", ch );
+      if (!argument[0])
+         send_to_char("Character will now see nothing when targetting self.\n\r", ch);
       else
-         act( "New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR );
-
+         act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
 
-   else if( !str_cmp( cmd, "oself" ) )
+   else if (!str_cmp(cmd, "oself"))
    {
-      free_string( social_table[iSocial].others_auto );
-      social_table[iSocial].others_auto = str_dup( argument );
+      free_string(social_table[iSocial].others_auto);
+      social_table[iSocial].others_auto = str_dup(argument);
 
-      if( !argument[0] )
-         send_to_char( "Others will now see nothing when character targets self.\n\r", ch );
+      if (!argument[0])
+         send_to_char("Others will now see nothing when character targets self.\n\r", ch);
       else
-         act( "New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR );
+         act("New message is now:\n\r$T\n\r", ch, NULL, argument, TO_CHAR);
    }
 
    else
    {
-      send_to_char( "Huh? Try HELP SEDIT.\n\r", ch );
+      send_to_char("Huh? Try HELP SEDIT.\n\r", ch);
       return;
    }
 
    /*
-    * We have done something. update social table 
+    * We have done something. update social table
     */
 
-   save_social_table(  );
+   save_social_table();
 }
 #endif /* CONST_SOCIAL */

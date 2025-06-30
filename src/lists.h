@@ -119,81 +119,88 @@ extern BUF_DATA_STRUCT *buf_free;
 extern HASH_ENTRY *hash_free;
 extern NPC_GROUP_DATA *npc_group_free;
 
-extern void ( *portal_free_destructor ) ( PORTAL_DATA * pdat );
-extern void ( *affect_free_destructor ) ( AFFECT_DATA * adat );
-extern void ( *raffect_free_destructor ) ( ROOM_AFFECT_DATA * radat );
-extern void ( *area_free_destructor ) ( AREA_DATA * adat );
-extern void ( *desc_free_destructor ) ( DESCRIPTOR_DATA * ddat );
-extern void ( *help_free_destructor ) ( HELP_DATA * hdat );
-extern void ( *shop_free_destructor ) ( SHOP_DATA * sdat );
-extern void ( *build_free_destructor ) ( BUILD_DATA_LIST * bddat );
-extern void ( *member_free_destructor ) ( MEMBER_DATA * mdat );
-extern void ( *corpse_free_destructor ) ( CORPSE_DATA * cdat );
-extern void ( *mark_list_free_destructor ) ( MARK_LIST_MEMBER * mldat );
-extern void ( *interact_free_destructor ) ( INTERACT_DATA * idat );
-extern void ( *influence_free_destructor ) ( INFLUENCE_DATA * idat );
-extern void ( *control_data_free_destructor ) ( CONTROL_DATA * cdat );
-extern void ( *control_list_free_destructor ) ( CONTROL_LIST * cldat );
-extern void ( *queued_interact_free_destructor ) ( QUEUED_INTERACT_LIST * qildat );
-extern void ( *influence_list_free_destructor ) ( INFLUENCE_LIST * ildat );
-extern void ( *ruler_list_free_destructor ) ( RULER_LIST * rldat );
-extern void ( *dl_list_free_destructor ) ( DL_LIST * dldat );
+extern void (*portal_free_destructor)(PORTAL_DATA *pdat);
+extern void (*affect_free_destructor)(AFFECT_DATA *adat);
+extern void (*raffect_free_destructor)(ROOM_AFFECT_DATA *radat);
+extern void (*area_free_destructor)(AREA_DATA *adat);
+extern void (*desc_free_destructor)(DESCRIPTOR_DATA *ddat);
+extern void (*help_free_destructor)(HELP_DATA *hdat);
+extern void (*shop_free_destructor)(SHOP_DATA *sdat);
+extern void (*build_free_destructor)(BUILD_DATA_LIST *bddat);
+extern void (*member_free_destructor)(MEMBER_DATA *mdat);
+extern void (*corpse_free_destructor)(CORPSE_DATA *cdat);
+extern void (*mark_list_free_destructor)(MARK_LIST_MEMBER *mldat);
+extern void (*interact_free_destructor)(INTERACT_DATA *idat);
+extern void (*influence_free_destructor)(INFLUENCE_DATA *idat);
+extern void (*control_data_free_destructor)(CONTROL_DATA *cdat);
+extern void (*control_list_free_destructor)(CONTROL_LIST *cldat);
+extern void (*queued_interact_free_destructor)(QUEUED_INTERACT_LIST *qildat);
+extern void (*influence_list_free_destructor)(INFLUENCE_LIST *ildat);
+extern void (*ruler_list_free_destructor)(RULER_LIST *rldat);
+extern void (*dl_list_free_destructor)(DL_LIST *dldat);
 
 #ifndef DEBUG_MONEY
-extern void ( *money_type_free_destructor ) ( MONEY_TYPE * mtdat );
+extern void (*money_type_free_destructor)(MONEY_TYPE *mtdat);
 #endif
-extern void ( *board_free_destructor ) ( BOARD_DATA * bdat );
-extern void ( *buf_free_destructor ) ( BUF_DATA_STRUCT * bdat );
-extern void ( *hash_free_destructor ) ( HASH_ENTRY * hdat );
+extern void (*board_free_destructor)(BOARD_DATA *bdat);
+extern void (*buf_free_destructor)(BUF_DATA_STRUCT *bdat);
+extern void (*hash_free_destructor)(HASH_ENTRY *hdat);
 
 /* actual destructors */
-void note_free_destructor( NOTE_DATA * ndat );
+void note_free_destructor(NOTE_DATA *ndat);
 #ifdef DEBUG_MONEY
-void money_type_free_destructor( MONEY_TYPE * mtdat );
+void money_type_free_destructor(MONEY_TYPE *mtdat);
 #endif
 
-void message_free_destructor( MESSAGE_DATA * mdat );
-void ban_free_destructor( BAN_DATA * bdat );
-void reset_free_destructor( RESET_DATA * rdat );
-void exdesc_free_destructor( EXTRA_DESCR_DATA * eddat );
-void oid_free_destructor( OBJ_INDEX_DATA * oidat );
-void mprog_free_destructor( MPROG_DATA * mpdat );
-void mid_free_destructor( MOB_INDEX_DATA * midat );
-void exit_free_destructor( EXIT_DATA * edat );
-void rid_free_destructor( ROOM_INDEX_DATA * ridat );
-void mpact_free_destructor( MPROG_ACT_LIST * mpadat );
-void brand_data_free_destructor( BRAND_DATA * bdat );
-void pcd_free_destructor( PC_DATA * pcdat );
-void char_free_destructor( CHAR_DATA * cdat );
-void mark_free_destructor( MARK_DATA * mdat );
-void shield_free_destructor( MAGIC_SHIELD * msdat );
-void obj_free_destructor( OBJ_DATA * odat );
-void ruler_data_free_destructor( RULER_DATA * rdat );
-void npc_group_free_destructor( NPC_GROUP_DATA * ngrp );
+void message_free_destructor(MESSAGE_DATA *mdat);
+void ban_free_destructor(BAN_DATA *bdat);
+void reset_free_destructor(RESET_DATA *rdat);
+void exdesc_free_destructor(EXTRA_DESCR_DATA *eddat);
+void oid_free_destructor(OBJ_INDEX_DATA *oidat);
+void mprog_free_destructor(MPROG_DATA *mpdat);
+void mid_free_destructor(MOB_INDEX_DATA *midat);
+void exit_free_destructor(EXIT_DATA *edat);
+void rid_free_destructor(ROOM_INDEX_DATA *ridat);
+void mpact_free_destructor(MPROG_ACT_LIST *mpadat);
+void brand_data_free_destructor(BRAND_DATA *bdat);
+void pcd_free_destructor(PC_DATA *pcdat);
+void char_free_destructor(CHAR_DATA *cdat);
+void mark_free_destructor(MARK_DATA *mdat);
+void shield_free_destructor(MAGIC_SHIELD *msdat);
+void obj_free_destructor(OBJ_DATA *odat);
+void ruler_data_free_destructor(RULER_DATA *rdat);
+void npc_group_free_destructor(NPC_GROUP_DATA *ngrp);
 
-#define GET_FREE(item, freelist) \
-do { \
-  if ( !(freelist) ) \
-    (item) = getmem(sizeof(*(item))); \
-  else { \
-    if ( !(freelist)->is_free ) { \
-      bug("GET_FREE: freelist head is NOT FREE!  Hanging...", 0); \
-      for (;;); \
-    } \
-    (item) = (freelist); \
-    (freelist) = (item)->next; \
-    memset((item), 0, sizeof(*(item))); /* This clears is_free flag */ \
-  } \
-} while(0)
+#define GET_FREE(item, freelist)                                         \
+  do                                                                     \
+  {                                                                      \
+    if (!(freelist))                                                     \
+      (item) = getmem(sizeof(*(item)));                                  \
+    else                                                                 \
+    {                                                                    \
+      if (!(freelist)->is_free)                                          \
+      {                                                                  \
+        bug("GET_FREE: freelist head is NOT FREE!  Hanging...", 0);      \
+        for (;;)                                                         \
+          ;                                                              \
+      }                                                                  \
+      (item) = (freelist);                                               \
+      (freelist) = (item)->next;                                         \
+      memset((item), 0, sizeof(*(item))); /* This clears is_free flag */ \
+    }                                                                    \
+  } while (0)
 
-#define PUT_FREE(item, freelist) \
-do { \
-  if ( (item)->is_free ) { \
-    bug("PUT_FREE: item is ALREADY FREE!  Aborting...", 0); \
-    abort(); \
-  } \
-  (item)->next = (freelist); \
-  (item)->is_free = TRUE; /* This sets is_free flag */ \
-  (freelist) = (item); \
-  if (freelist##_destructor) freelist##_destructor(item); \
-} while(0)
+#define PUT_FREE(item, freelist)                              \
+  do                                                          \
+  {                                                           \
+    if ((item)->is_free)                                      \
+    {                                                         \
+      bug("PUT_FREE: item is ALREADY FREE!  Aborting...", 0); \
+      abort();                                                \
+    }                                                         \
+    (item)->next = (freelist);                                \
+    (item)->is_free = TRUE; /* This sets is_free flag */      \
+    (freelist) = (item);                                      \
+    if (freelist##_destructor)                                \
+      freelist##_destructor(item);                            \
+  } while (0)

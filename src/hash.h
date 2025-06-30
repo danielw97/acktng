@@ -5,11 +5,9 @@
 #include "lists.h"
 #endif
 
-
-
 struct hash_entry_tp
 {
-   bool is_free;  /* Ramias:for run-time checks of LINK/UNLINK */
+   bool is_free; /* Ramias:for run-time checks of LINK/UNLINK */
    HASH_ENTRY *next;
    void *reference;
    int key;
@@ -23,11 +21,9 @@ struct hash_table_tp
    HASH_ENTRY **table;
 };
 
-
-
-hash_table *create_hash_table( int max_hash );
-void del_hash_entry( hash_table * hash_head, int key );
-void add_hash_entry( hash_table * hash_head, int key, void *entry );
-void *get_hash_entry( hash_table * hash_head, int key );
-void clear_hash_table( hash_table * hash_head );
-void delete_hash_table( hash_table * hash_head );
+hash_table *create_hash_table(int max_hash);
+void del_hash_entry(hash_table *hash_head, int key);
+void add_hash_entry(hash_table *hash_head, int key, void *entry);
+void *get_hash_entry(hash_table *hash_head, int key);
+void clear_hash_table(hash_table *hash_head);
+void delete_hash_table(hash_table *hash_head);

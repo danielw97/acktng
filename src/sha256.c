@@ -61,11 +61,11 @@ be32enc(void *pp, int u)
 #if BYTE_ORDER == BIG_ENDIAN
 
 /* Copy a vector of big-endian int into a vector of bytes */
-#define be32enc_vect(dst, src, len)	\
+#define be32enc_vect(dst, src, len) \
 	memcpy((void *)dst, (const void *)src, (size_t)len)
 
 /* Copy a vector of bytes into a vector of big-endian int */
-#define be32dec_vect(dst, src, len)	\
+#define be32dec_vect(dst, src, len) \
 	memcpy((void *)dst, (const void *)src, (size_t)len)
 
 #else /* BYTE_ORDER != BIG_ENDIAN */
@@ -99,36 +99,36 @@ be32dec_vect(int *dst, const unsigned char *src, size_t len)
 #endif /* BYTE_ORDER != BIG_ENDIAN */
 
 /* Elementary functions used by SHA256 */
-#define Ch(x, y, z)	((x & (y ^ z)) ^ z)
-#define Maj(x, y, z)	((x & (y | z)) | (y & z))
-#define SHR(x, n)	(x >> n)
-#define ROTR(x, n)	((x >> n) | (x << (32 - n)))
-#define S0(x)		(ROTR(x, 2) ^ ROTR(x, 13) ^ ROTR(x, 22))
-#define S1(x)		(ROTR(x, 6) ^ ROTR(x, 11) ^ ROTR(x, 25))
-#define s0(x)		(ROTR(x, 7) ^ ROTR(x, 18) ^ SHR(x, 3))
-#define s1(x)		(ROTR(x, 17) ^ ROTR(x, 19) ^ SHR(x, 10))
+#define Ch(x, y, z) ((x & (y ^ z)) ^ z)
+#define Maj(x, y, z) ((x & (y | z)) | (y & z))
+#define SHR(x, n) (x >> n)
+#define ROTR(x, n) ((x >> n) | (x << (32 - n)))
+#define S0(x) (ROTR(x, 2) ^ ROTR(x, 13) ^ ROTR(x, 22))
+#define S1(x) (ROTR(x, 6) ^ ROTR(x, 11) ^ ROTR(x, 25))
+#define s0(x) (ROTR(x, 7) ^ ROTR(x, 18) ^ SHR(x, 3))
+#define s1(x) (ROTR(x, 17) ^ ROTR(x, 19) ^ SHR(x, 10))
 
 /* SHA256 round function */
-#define RND(a, b, c, d, e, f, g, h, k)			\
-	t0 = h + S1(e) + Ch(e, f, g) + k;		\
-	t1 = S0(a) + Maj(a, b, c);			\
-	d += t0;					\
-	h  = t0 + t1;
+#define RND(a, b, c, d, e, f, g, h, k) \
+	t0 = h + S1(e) + Ch(e, f, g) + k;  \
+	t1 = S0(a) + Maj(a, b, c);         \
+	d += t0;                           \
+	h = t0 + t1;
 
 /* Adjusted round function for rotating state */
-#define RNDr(S, W, i, k)			\
-	RND(S[(64 - i) % 8], S[(65 - i) % 8],	\
-	    S[(66 - i) % 8], S[(67 - i) % 8],	\
-	    S[(68 - i) % 8], S[(69 - i) % 8],	\
-	    S[(70 - i) % 8], S[(71 - i) % 8],	\
-	    W[i] + k)
+#define RNDr(S, W, i, k)                  \
+	RND(S[(64 - i) % 8], S[(65 - i) % 8], \
+		S[(66 - i) % 8], S[(67 - i) % 8], \
+		S[(68 - i) % 8], S[(69 - i) % 8], \
+		S[(70 - i) % 8], S[(71 - i) % 8], \
+		W[i] + k)
 
 /*
  * SHA256 block compression function.  The 256-bit state is transformed via
  * the 512-bit input block to produce a new state.
  */
 static void
-SHA256_Transform(int * state, const unsigned char block[64])
+SHA256_Transform(int *state, const unsigned char block[64])
 {
 	int W[64];
 	int S[8];
@@ -218,12 +218,11 @@ static unsigned char PAD[64] = {
 	0x80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 /* Add padding and terminating bit-count. */
 static void
-SHA256_Pad(SHA256_CTX * ctx)
+SHA256_Pad(SHA256_CTX *ctx)
 {
 	unsigned char len[8];
 	int r, plen;
@@ -244,7 +243,7 @@ SHA256_Pad(SHA256_CTX * ctx)
 }
 
 /* SHA-256 initialization.  Begins a SHA-256 operation. */
-void SHA256_Init(SHA256_CTX * ctx)
+void SHA256_Init(SHA256_CTX *ctx)
 {
 	/* Zero bits processed so far */
 	ctx->count[0] = ctx->count[1] = 0;
@@ -261,7 +260,7 @@ void SHA256_Init(SHA256_CTX * ctx)
 }
 
 /* Add bytes into the hash */
-void SHA256_Update(SHA256_CTX * ctx, const unsigned char *src, size_t len)
+void SHA256_Update(SHA256_CTX *ctx, const unsigned char *src, size_t len)
 {
 	int bitlen[2];
 	size_t r;
@@ -279,7 +278,8 @@ void SHA256_Update(SHA256_CTX * ctx, const unsigned char *src, size_t len)
 	ctx->count[0] += bitlen[0];
 
 	/* Handle the case where we don't need to perform any transforms */
-	if (len < 64 - r) {
+	if (len < 64 - r)
+	{
 		memcpy(&ctx->buf[r], src, len);
 		return;
 	}
@@ -291,7 +291,8 @@ void SHA256_Update(SHA256_CTX * ctx, const unsigned char *src, size_t len)
 	len -= 64 - r;
 
 	/* Perform complete blocks */
-	while (len >= 64) {
+	while (len >= 64)
+	{
 		SHA256_Transform(ctx->state, src);
 		src += 64;
 		len -= 64;
@@ -305,7 +306,7 @@ void SHA256_Update(SHA256_CTX * ctx, const unsigned char *src, size_t len)
  * SHA-256 finalization.  Pads the input data, exports the hash value,
  * and clears the context state.
  */
-void SHA256_Final(unsigned char digest[32], SHA256_CTX * ctx)
+void SHA256_Final(unsigned char digest[32], SHA256_CTX *ctx)
 {
 	/* Add padding */
 	SHA256_Pad(ctx);
@@ -317,20 +318,20 @@ void SHA256_Final(unsigned char digest[32], SHA256_CTX * ctx)
 	memset((void *)ctx, 0, sizeof(*ctx));
 }
 
-char *sha256_crypt( const char *pwd )
+char *sha256_crypt(const char *pwd)
 {
-   SHA256_CTX context;
-   static char output[65];
-   unsigned char sha256sum[32];
-   unsigned int j;
+	SHA256_CTX context;
+	static char output[65];
+	unsigned char sha256sum[32];
+	unsigned int j;
 
-   SHA256_Init( &context );
-   SHA256_Update( &context, (const unsigned char *) pwd, strlen(pwd) );
-   SHA256_Final( sha256sum, &context );
+	SHA256_Init(&context);
+	SHA256_Update(&context, (const unsigned char *)pwd, strlen(pwd));
+	SHA256_Final(sha256sum, &context);
 
-   for( j = 0; j < 32; ++j )
-   {
-      snprintf( output + j * 2, 65, "%02x", sha256sum[j] );
-   }
-   return output;
+	for (j = 0; j < 32; ++j)
+	{
+		snprintf(output + j * 2, 65, "%02x", sha256sum[j]);
+	}
+	return output;
 }

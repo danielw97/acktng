@@ -47,17 +47,17 @@
  * Local function prototypes
  */
 
-char *mprog_next_command args( ( char *clist ) );
-bool mprog_seval args( ( char *lhs, char *opr, char *rhs ) );
-bool mprog_veval args( ( int lhs, char *opr, int rhs ) );
-int mprog_do_ifchck args( ( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm ) );
-char *mprog_process_if args( ( char *ifchck, char *com_list,
-                               CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm ) );
-void mprog_translate args( ( char ch, char *t, CHAR_DATA * mob,
-                             CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm ) );
-void mprog_process_cmnd args( ( char *cmnd, CHAR_DATA * mob,
-                                CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm ) );
-void mprog_driver args( ( char *com_list, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo ) );
+char *mprog_next_command args((char *clist));
+bool mprog_seval args((char *lhs, char *opr, char *rhs));
+bool mprog_veval args((int lhs, char *opr, int rhs));
+int mprog_do_ifchck args((char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm));
+char *mprog_process_if args((char *ifchck, char *com_list,
+                             CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm));
+void mprog_translate args((char ch, char *t, CHAR_DATA *mob,
+                           CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm));
+void mprog_process_cmnd args((char *cmnd, CHAR_DATA *mob,
+                              CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm));
+void mprog_driver args((char *com_list, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo));
 
 bool MOBtrigger;
 
@@ -68,16 +68,17 @@ bool MOBtrigger;
 /* if you dont have these functions, you damn well should... */
 
 #ifdef DUNNO_STRSTR
-char *strstr( s1, s2 )
-     const char *s1;
-     const char *s2;
+char *strstr(s1, s2)
+    const char *s1;
+const char *s2;
 {
    char *cp;
-   int i, j = strlen( s1 ) - strlen( s2 ), k = strlen( s2 );
-   if( j < 0 )
+   int i, j = strlen(s1) - strlen(s2), k = strlen(s2);
+   if (j < 0)
       return NULL;
-   for( i = 0; i <= j && strncmp( s1++, s2, k ) != 0; i++ );
-   return ( i > j ) ? NULL : ( s1 - 1 );
+   for (i = 0; i <= j && strncmp(s1++, s2, k) != 0; i++)
+      ;
+   return (i > j) ? NULL : (s1 - 1);
 }
 #endif
 
@@ -85,20 +86,19 @@ char *strstr( s1, s2 )
  * Thus its like one_argument(), but a trifle different. It is destructive
  * to the multi line string argument, and thus clist must not be shared.
  */
-char *mprog_next_command( char *clist )
+char *mprog_next_command(char *clist)
 {
 
    char *pointer = clist;
 
-   while( *pointer != '\n' && *pointer != '\0' )
+   while (*pointer != '\n' && *pointer != '\0')
       pointer++;
-   if( *pointer == '\n' )
+   if (*pointer == '\n')
       *pointer++ = '\0';
-   if( *pointer == '\r' )
+   if (*pointer == '\r')
       *pointer++ = '\0';
 
-   return ( pointer );
-
+   return (pointer);
 }
 
 /* These two functions do the basic evaluation of ifcheck operators.
@@ -108,46 +108,44 @@ char *mprog_next_command( char *clist )
  *  still have trailing spaces so be careful when editing since:
  *  "guard" and "guard " are not equal.
  */
-bool mprog_seval( char *lhs, char *opr, char *rhs )
+bool mprog_seval(char *lhs, char *opr, char *rhs)
 {
 
-   if( !str_cmp( opr, "==" ) )
-      return ( bool ) ( !str_cmp( lhs, rhs ) );
-   if( !str_cmp( opr, "!=" ) )
-      return ( bool ) ( str_cmp( lhs, rhs ) );
-   if( !str_cmp( opr, "/" ) )
-      return ( bool ) ( !str_infix( rhs, lhs ) );
-   if( !str_cmp( opr, "!/" ) )
-      return ( bool ) ( str_infix( rhs, lhs ) );
+   if (!str_cmp(opr, "=="))
+      return (bool)(!str_cmp(lhs, rhs));
+   if (!str_cmp(opr, "!="))
+      return (bool)(str_cmp(lhs, rhs));
+   if (!str_cmp(opr, "/"))
+      return (bool)(!str_infix(rhs, lhs));
+   if (!str_cmp(opr, "!/"))
+      return (bool)(str_infix(rhs, lhs));
 
-   bug( "Improper MOBprog operator\n\r", 0 );
+   bug("Improper MOBprog operator\n\r", 0);
    return 0;
-
 }
 
-bool mprog_veval( int lhs, char *opr, int rhs )
+bool mprog_veval(int lhs, char *opr, int rhs)
 {
 
-   if( !str_cmp( opr, "==" ) )
-      return ( lhs == rhs );
-   if( !str_cmp( opr, "!=" ) )
-      return ( lhs != rhs );
-   if( !str_cmp( opr, ">" ) )
-      return ( lhs > rhs );
-   if( !str_cmp( opr, "<" ) )
-      return ( lhs < rhs );
-   if( !str_cmp( opr, ">=" ) )
-      return ( lhs <= rhs );
-   if( !str_cmp( opr, ">=" ) )
-      return ( lhs >= rhs );
-   if( !str_cmp( opr, "&" ) )
-      return ( lhs & rhs );
-   if( !str_cmp( opr, "|" ) )
-      return ( lhs | rhs );
+   if (!str_cmp(opr, "=="))
+      return (lhs == rhs);
+   if (!str_cmp(opr, "!="))
+      return (lhs != rhs);
+   if (!str_cmp(opr, ">"))
+      return (lhs > rhs);
+   if (!str_cmp(opr, "<"))
+      return (lhs < rhs);
+   if (!str_cmp(opr, ">="))
+      return (lhs <= rhs);
+   if (!str_cmp(opr, ">="))
+      return (lhs >= rhs);
+   if (!str_cmp(opr, "&"))
+      return (lhs & rhs);
+   if (!str_cmp(opr, "|"))
+      return (lhs | rhs);
 
-   bug( "Improper MOBprog operator\n\r", 0 );
+   bug("Improper MOBprog operator\n\r", 0);
    return 0;
-
 }
 
 /* This function performs the evaluation of the if checks.  It is
@@ -160,15 +158,15 @@ bool mprog_veval( int lhs, char *opr, int rhs )
  * to reduce the redundancy of the mammoth if statement list.
  * If there are errors, then return -1 otherwise return boolean 1,0
  */
-int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm )
+int mprog_do_ifchck(char *ifchck, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm)
 {
 
    char buf[MAX_INPUT_LENGTH];
    char arg[MAX_INPUT_LENGTH];
    char opr[MAX_INPUT_LENGTH];
    char val[MAX_INPUT_LENGTH];
-   CHAR_DATA *vict = ( CHAR_DATA * ) vo;
-   OBJ_DATA *v_obj = ( OBJ_DATA * ) vo;
+   CHAR_DATA *vict = (CHAR_DATA *)vo;
+   OBJ_DATA *v_obj = (OBJ_DATA *)vo;
    char *bufpt = buf;
    char *argpt = arg;
    char *oprpt = opr;
@@ -177,27 +175,27 @@ int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
    int lhsvl;
    int rhsvl;
 
-   if( *point == '\0' )
+   if (*point == '\0')
    {
-      bug( "Mob: %d null ifchck", mob->pIndexData->vnum );
+      bug("Mob: %d null ifchck", mob->pIndexData->vnum);
       return -1;
    }
    /*
-    * skip leading spaces 
+    * skip leading spaces
     */
-   while( *point == ' ' )
+   while (*point == ' ')
       point++;
 
    /*
-    * get whatever comes before the left paren.. ignore spaces 
+    * get whatever comes before the left paren.. ignore spaces
     */
-   while( *point != '(' )
-      if( *point == '\0' )
+   while (*point != '(')
+      if (*point == '\0')
       {
-         bug( "Mob: %d ifchck syntax error", mob->pIndexData->vnum );
+         bug("Mob: %d ifchck syntax error", mob->pIndexData->vnum);
          return -1;
       }
-      else if( *point == ' ' )
+      else if (*point == ' ')
          point++;
       else
          *bufpt++ = *point++;
@@ -206,15 +204,15 @@ int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
    point++;
 
    /*
-    * get whatever is in between the parens.. ignore spaces 
+    * get whatever is in between the parens.. ignore spaces
     */
-   while( *point != ')' )
-      if( *point == '\0' )
+   while (*point != ')')
+      if (*point == '\0')
       {
-         bug( "Mob: %d ifchck syntax error", mob->pIndexData->vnum );
+         bug("Mob: %d ifchck syntax error", mob->pIndexData->vnum);
          return -1;
       }
-      else if( *point == ' ' )
+      else if (*point == ' ')
          point++;
       else
          *argpt++ = *point++;
@@ -223,21 +221,21 @@ int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
    point++;
 
    /*
-    * check to see if there is an operator 
+    * check to see if there is an operator
     */
-   while( *point == ' ' )
+   while (*point == ' ')
       point++;
-   if( *point == '\0' )
+   if (*point == '\0')
    {
       *opr = '\0';
       *val = '\0';
    }
-   else  /* there should be an operator and value, so get them */
+   else /* there should be an operator and value, so get them */
    {
-      while( ( *point != ' ' ) && ( !isalnum( *point ) ) )
-         if( *point == '\0' )
+      while ((*point != ' ') && (!isalnum(*point)))
+         if (*point == '\0')
          {
-            bug( "Mob: %d ifchck operator without value", mob->pIndexData->vnum );
+            bug("Mob: %d ifchck operator without value", mob->pIndexData->vnum);
             return -1;
          }
          else
@@ -246,13 +244,13 @@ int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
       *oprpt = '\0';
 
       /*
-       * finished with operator, skip spaces and then get the value 
+       * finished with operator, skip spaces and then get the value
        */
-      while( *point == ' ' )
+      while (*point == ' ')
          point++;
-      for( ;; )
+      for (;;)
       {
-         if( ( *point != ' ' ) && ( *point == '\0' ) )
+         if ((*point != ' ') && (*point == '\0'))
             break;
          else
             *valpt++ = *point++;
@@ -274,756 +272,756 @@ int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
     * *  send the lhs,opr,rhs off to be evaluated.
     */
 
-   if( !str_cmp( buf, "rand" ) )
+   if (!str_cmp(buf, "rand"))
    {
-      return ( number_percent(  ) <= atoi( arg ) );
+      return (number_percent() <= atoi(arg));
    }
 
-   if( !str_cmp( buf, "ispc" ) )
+   if (!str_cmp(buf, "ispc"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return 0;
-         case 'n':
-            if( actor != NULL )
-               return ( !IS_NPC( actor ) );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return ( !IS_NPC( vict ) );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return ( !IS_NPC( rndm ) );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'ispc'", mob->pIndexData->vnum );
+      case 'i':
+         return 0;
+      case 'n':
+         if (actor != NULL)
+            return (!IS_NPC(actor));
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return (!IS_NPC(vict));
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return (!IS_NPC(rndm));
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'ispc'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "isnpc" ) )
+   if (!str_cmp(buf, "isnpc"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return 1;
-         case 'n':
-            if( actor != NULL )
-               return IS_NPC( actor );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return IS_NPC( vict );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return IS_NPC( rndm );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'isnpc'", mob->pIndexData->vnum );
+      case 'i':
+         return 1;
+      case 'n':
+         if (actor != NULL)
+            return IS_NPC(actor);
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return IS_NPC(vict);
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return IS_NPC(rndm);
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'isnpc'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "isgood" ) )
+   if (!str_cmp(buf, "isgood"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return IS_GOOD( mob );
-         case 'n':
-            if( actor != NULL )
-               return IS_GOOD( actor );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return IS_GOOD( vict );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return IS_GOOD( rndm );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'isgood'", mob->pIndexData->vnum );
+      case 'i':
+         return IS_GOOD(mob);
+      case 'n':
+         if (actor != NULL)
+            return IS_GOOD(actor);
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return IS_GOOD(vict);
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return IS_GOOD(rndm);
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'isgood'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "isfight" ) )
+   if (!str_cmp(buf, "isfight"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return ( mob->fighting ) ? 1 : 0;
-         case 'n':
-            if( actor != NULL )
-               return ( actor->fighting ) ? 1 : 0;
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return ( vict->fighting ) ? 1 : 0;
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return ( rndm->fighting ) ? 1 : 0;
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'isfight'", mob->pIndexData->vnum );
+      case 'i':
+         return (mob->fighting) ? 1 : 0;
+      case 'n':
+         if (actor != NULL)
+            return (actor->fighting) ? 1 : 0;
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return (vict->fighting) ? 1 : 0;
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return (rndm->fighting) ? 1 : 0;
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'isfight'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "isimmort" ) )
+   if (!str_cmp(buf, "isimmort"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return ( get_trust( mob ) > LEVEL_IMMORTAL );
-         case 'n':
-            if( actor != NULL )
-               return ( get_trust( actor ) > LEVEL_IMMORTAL );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return ( get_trust( vict ) > LEVEL_IMMORTAL );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return ( get_trust( rndm ) > LEVEL_IMMORTAL );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'isimmort'", mob->pIndexData->vnum );
+      case 'i':
+         return (get_trust(mob) > LEVEL_IMMORTAL);
+      case 'n':
+         if (actor != NULL)
+            return (get_trust(actor) > LEVEL_IMMORTAL);
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return (get_trust(vict) > LEVEL_IMMORTAL);
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return (get_trust(rndm) > LEVEL_IMMORTAL);
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'isimmort'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "ischarmed" ) )
+   if (!str_cmp(buf, "ischarmed"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return IS_AFFECTED( mob, AFF_CHARM );
-         case 'n':
-            if( actor != NULL )
-               return IS_AFFECTED( actor, AFF_CHARM );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return IS_AFFECTED( vict, AFF_CHARM );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return IS_AFFECTED( rndm, AFF_CHARM );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'ischarmed'", mob->pIndexData->vnum );
+      case 'i':
+         return IS_AFFECTED(mob, AFF_CHARM);
+      case 'n':
+         if (actor != NULL)
+            return IS_AFFECTED(actor, AFF_CHARM);
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return IS_AFFECTED(vict, AFF_CHARM);
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return IS_AFFECTED(rndm, AFF_CHARM);
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'ischarmed'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "isfollow" ) )
+   if (!str_cmp(buf, "isfollow"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return ( mob->master != NULL && mob->master->in_room == mob->in_room );
-         case 'n':
-            if( actor != NULL )
-               return ( actor->master != NULL && actor->master->in_room == actor->in_room );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return ( vict->master != NULL && vict->master->in_room == vict->in_room );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return ( rndm->master != NULL && rndm->master->in_room == rndm->in_room );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'isfollow'", mob->pIndexData->vnum );
+      case 'i':
+         return (mob->master != NULL && mob->master->in_room == mob->in_room);
+      case 'n':
+         if (actor != NULL)
+            return (actor->master != NULL && actor->master->in_room == actor->in_room);
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return (vict->master != NULL && vict->master->in_room == vict->in_room);
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return (rndm->master != NULL && rndm->master->in_room == rndm->in_room);
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'isfollow'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "isaffected" ) )
+   if (!str_cmp(buf, "isaffected"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return ( mob->affected_by & atoi( arg ) );
-         case 'n':
-            if( actor != NULL )
-               return ( actor->affected_by & atoi( arg ) );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return ( vict->affected_by & atoi( arg ) );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return ( rndm->affected_by & atoi( arg ) );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'isaffected'", mob->pIndexData->vnum );
+      case 'i':
+         return (mob->affected_by & atoi(arg));
+      case 'n':
+         if (actor != NULL)
+            return (actor->affected_by & atoi(arg));
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return (vict->affected_by & atoi(arg));
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return (rndm->affected_by & atoi(arg));
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'isaffected'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "hitprcnt" ) )
+   if (!str_cmp(buf, "hitprcnt"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = mob->hit / mob->max_hit;
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
-            {
-               lhsvl = actor->hit / actor->max_hit;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               lhsvl = vict->hit / vict->max_hit;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               lhsvl = rndm->hit / rndm->max_hit;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'hitprcnt'", mob->pIndexData->vnum );
+      case 'i':
+         lhsvl = mob->hit / mob->max_hit;
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            lhsvl = actor->hit / actor->max_hit;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            lhsvl = vict->hit / vict->max_hit;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            lhsvl = rndm->hit / rndm->max_hit;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'hitprcnt'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "inroom" ) )
+   if (!str_cmp(buf, "inroom"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = mob->in_room->vnum;
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
-            {
-               lhsvl = actor->in_room->vnum;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               lhsvl = vict->in_room->vnum;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               lhsvl = rndm->in_room->vnum;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'inroom'", mob->pIndexData->vnum );
+      case 'i':
+         lhsvl = mob->in_room->vnum;
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            lhsvl = actor->in_room->vnum;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            lhsvl = vict->in_room->vnum;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            lhsvl = rndm->in_room->vnum;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'inroom'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "sex" ) )
+   if (!str_cmp(buf, "sex"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = mob->sex;
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
-            {
-               lhsvl = actor->sex;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               lhsvl = vict->sex;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               lhsvl = rndm->sex;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'sex'", mob->pIndexData->vnum );
+      case 'i':
+         lhsvl = mob->sex;
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            lhsvl = actor->sex;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            lhsvl = vict->sex;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            lhsvl = rndm->sex;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'sex'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "position" ) )
+   if (!str_cmp(buf, "position"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = mob->position;
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
-            {
-               lhsvl = actor->position;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               lhsvl = vict->position;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               lhsvl = rndm->position;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'position'", mob->pIndexData->vnum );
+      case 'i':
+         lhsvl = mob->position;
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            lhsvl = actor->position;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            lhsvl = vict->position;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            lhsvl = rndm->position;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'position'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "level" ) )
+   if (!str_cmp(buf, "level"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = get_trust( mob );
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
-            {
-               lhsvl = get_trust( actor );
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               lhsvl = get_trust( vict );
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               lhsvl = get_trust( rndm );
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'level'", mob->pIndexData->vnum );
+      case 'i':
+         lhsvl = get_trust(mob);
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            lhsvl = get_trust(actor);
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            lhsvl = get_trust(vict);
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            lhsvl = get_trust(rndm);
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'level'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "class" ) )
+   if (!str_cmp(buf, "class"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = mob->class;
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
-            {
-               lhsvl = actor->class;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               lhsvl = vict->class;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               lhsvl = rndm->class;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'class'", mob->pIndexData->vnum );
+      case 'i':
+         lhsvl = mob->class;
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            lhsvl = actor->class;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            lhsvl = vict->class;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            lhsvl = rndm->class;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'class'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "goldamt" ) )
+   if (!str_cmp(buf, "goldamt"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = mob->gold;
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
-            {
-               lhsvl = actor->gold;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               lhsvl = vict->gold;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               lhsvl = rndm->gold;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'goldamt'", mob->pIndexData->vnum );
+      case 'i':
+         lhsvl = mob->gold;
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            lhsvl = actor->gold;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            lhsvl = vict->gold;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            lhsvl = rndm->gold;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'goldamt'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "objtype" ) )
+   if (!str_cmp(buf, "objtype"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'o':
-            if( obj )
-            {
-               lhsvl = obj->item_type;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'p':
-            if( v_obj )
-            {
-               lhsvl = v_obj->item_type;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'objtype'", mob->pIndexData->vnum );
+      case 'o':
+         if (obj)
+         {
+            lhsvl = obj->item_type;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 'p':
+         if (v_obj)
+         {
+            lhsvl = v_obj->item_type;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'objtype'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "objval0" ) )
+   if (!str_cmp(buf, "objval0"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'o':
-            if( obj )
-            {
-               lhsvl = obj->value[0];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'p':
-            if( v_obj )
-            {
-               lhsvl = v_obj->value[0];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'objval0'", mob->pIndexData->vnum );
+      case 'o':
+         if (obj)
+         {
+            lhsvl = obj->value[0];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 'p':
+         if (v_obj)
+         {
+            lhsvl = v_obj->value[0];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'objval0'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "objval1" ) )
+   if (!str_cmp(buf, "objval1"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'o':
-            if( obj )
-            {
-               lhsvl = obj->value[1];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'p':
-            if( v_obj )
-            {
-               lhsvl = v_obj->value[1];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'objval1'", mob->pIndexData->vnum );
+      case 'o':
+         if (obj)
+         {
+            lhsvl = obj->value[1];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 'p':
+         if (v_obj)
+         {
+            lhsvl = v_obj->value[1];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'objval1'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "objval2" ) )
+   if (!str_cmp(buf, "objval2"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'o':
-            if( obj )
-            {
-               lhsvl = obj->value[2];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'p':
-            if( v_obj )
-            {
-               lhsvl = v_obj->value[2];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'objval2'", mob->pIndexData->vnum );
+      case 'o':
+         if (obj)
+         {
+            lhsvl = obj->value[2];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 'p':
+         if (v_obj)
+         {
+            lhsvl = v_obj->value[2];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'objval2'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "objval3" ) )
+   if (!str_cmp(buf, "objval3"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'o':
-            if( obj )
-            {
-               lhsvl = obj->value[3];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'p':
-            if( v_obj )
-            {
-               lhsvl = v_obj->value[3];
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'objval3'", mob->pIndexData->vnum );
+      case 'o':
+         if (obj)
+         {
+            lhsvl = obj->value[3];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
             return -1;
+      case 'p':
+         if (v_obj)
+         {
+            lhsvl = v_obj->value[3];
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'objval3'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "number" ) )
+   if (!str_cmp(buf, "number"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            lhsvl = mob->gold;
-            rhsvl = atoi( val );
-            return mprog_veval( lhsvl, opr, rhsvl );
-         case 'n':
-            if( actor != NULL )
+      case 'i':
+         lhsvl = mob->gold;
+         rhsvl = atoi(val);
+         return mprog_veval(lhsvl, opr, rhsvl);
+      case 'n':
+         if (actor != NULL)
+         {
+            if (IS_NPC(actor))
             {
-               if( IS_NPC( actor ) )
-               {
-                  lhsvl = actor->pIndexData->vnum;
-                  rhsvl = atoi( val );
-                  return mprog_veval( lhsvl, opr, rhsvl );
-               }
+               lhsvl = actor->pIndexData->vnum;
+               rhsvl = atoi(val);
+               return mprog_veval(lhsvl, opr, rhsvl);
             }
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-            {
-               if( IS_NPC( actor ) )
-               {
-                  lhsvl = vict->pIndexData->vnum;
-                  rhsvl = atoi( val );
-                  return mprog_veval( lhsvl, opr, rhsvl );
-               }
-            }
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-            {
-               if( IS_NPC( actor ) )
-               {
-                  lhsvl = rndm->pIndexData->vnum;
-                  rhsvl = atoi( val );
-                  return mprog_veval( lhsvl, opr, rhsvl );
-               }
-            }
-            else
-               return -1;
-         case 'o':
-            if( obj )
-            {
-               lhsvl = obj->pIndexData->vnum;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         case 'p':
-            if( v_obj )
-            {
-               lhsvl = v_obj->pIndexData->vnum;
-               rhsvl = atoi( val );
-               return mprog_veval( lhsvl, opr, rhsvl );
-            }
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'number'", mob->pIndexData->vnum );
+         }
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+         {
+            if (IS_NPC(actor))
+            {
+               lhsvl = vict->pIndexData->vnum;
+               rhsvl = atoi(val);
+               return mprog_veval(lhsvl, opr, rhsvl);
+            }
+         }
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+         {
+            if (IS_NPC(actor))
+            {
+               lhsvl = rndm->pIndexData->vnum;
+               rhsvl = atoi(val);
+               return mprog_veval(lhsvl, opr, rhsvl);
+            }
+         }
+         else
+            return -1;
+      case 'o':
+         if (obj)
+         {
+            lhsvl = obj->pIndexData->vnum;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      case 'p':
+         if (v_obj)
+         {
+            lhsvl = v_obj->pIndexData->vnum;
+            rhsvl = atoi(val);
+            return mprog_veval(lhsvl, opr, rhsvl);
+         }
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'number'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
-   if( !str_cmp( buf, "name" ) )
+   if (!str_cmp(buf, "name"))
    {
-      switch ( arg[1] ) /* arg should be "$*" so just get the letter */
+      switch (arg[1]) /* arg should be "$*" so just get the letter */
       {
-         case 'i':
-            return mprog_seval( mob->name, opr, val );
-         case 'n':
-            if( actor != NULL )
-               return mprog_seval( actor->name, opr, val );
-            else
-               return -1;
-         case 't':
-            if( vict != NULL )
-               return mprog_seval( vict->name, opr, val );
-            else
-               return -1;
-         case 'r':
-            if( rndm != NULL )
-               return mprog_seval( rndm->name, opr, val );
-            else
-               return -1;
-         case 'o':
-            if( obj )
-               return mprog_seval( obj->name, opr, val );
-            else
-               return -1;
-         case 'p':
-            if( v_obj )
-               return mprog_seval( v_obj->name, opr, val );
-            else
-               return -1;
-         default:
-            bug( "Mob: %d bad argument to 'name'", mob->pIndexData->vnum );
+      case 'i':
+         return mprog_seval(mob->name, opr, val);
+      case 'n':
+         if (actor != NULL)
+            return mprog_seval(actor->name, opr, val);
+         else
             return -1;
+      case 't':
+         if (vict != NULL)
+            return mprog_seval(vict->name, opr, val);
+         else
+            return -1;
+      case 'r':
+         if (rndm != NULL)
+            return mprog_seval(rndm->name, opr, val);
+         else
+            return -1;
+      case 'o':
+         if (obj)
+            return mprog_seval(obj->name, opr, val);
+         else
+            return -1;
+      case 'p':
+         if (v_obj)
+            return mprog_seval(v_obj->name, opr, val);
+         else
+            return -1;
+      default:
+         bug("Mob: %d bad argument to 'name'", mob->pIndexData->vnum);
+         return -1;
       }
    }
 
@@ -1031,9 +1029,8 @@ int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
     * Ok... all the ifchcks are done, so if we didnt find ours then something
     * * odd happened.  So report the bug and abort the MOBprogram (return error)
     */
-   bug( "Mob: %d unknown ifchck", mob->pIndexData->vnum );
+   bug("Mob: %d unknown ifchck", mob->pIndexData->vnum);
    return -1;
-
 }
 
 /* Quite a long and arduous function, this guy handles the control
@@ -1048,8 +1045,8 @@ int mprog_do_ifchck( char *ifchck, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
  * in theory, but it is 'guaranteed' to work on syntactically correct
  * MOBprograms, so if the mud crashes here, check the mob carefully!
  */
-char *mprog_process_if( char *ifchck, char *com_list, CHAR_DATA * mob,
-                        CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm )
+char *mprog_process_if(char *ifchck, char *com_list, CHAR_DATA *mob,
+                       CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm)
 {
 
    static char null[1];
@@ -1063,33 +1060,33 @@ char *mprog_process_if( char *ifchck, char *com_list, CHAR_DATA * mob,
    *null = '\0';
 
    /*
-    * check for trueness of the ifcheck 
+    * check for trueness of the ifcheck
     */
-   if( ( legal = mprog_do_ifchck( ifchck, mob, actor, obj, vo, rndm ) ) )
+   if ((legal = mprog_do_ifchck(ifchck, mob, actor, obj, vo, rndm)))
    {
-      if( legal == 1 )
+      if (legal == 1)
          flag = TRUE;
       else
          return null;
    }
 
-   while( loopdone == FALSE ) /*scan over any existing or statements */
+   while (loopdone == FALSE) /*scan over any existing or statements */
    {
       cmnd = com_list;
-      com_list = mprog_next_command( com_list );
-      while( *cmnd == ' ' )
+      com_list = mprog_next_command(com_list);
+      while (*cmnd == ' ')
          cmnd++;
-      if( *cmnd == '\0' )
+      if (*cmnd == '\0')
       {
-         bug( "Mob: %d no commands after IF/OR", mob->pIndexData->vnum );
+         bug("Mob: %d no commands after IF/OR", mob->pIndexData->vnum);
          return null;
       }
-      morebuf = one_argument( cmnd, buf );
-      if( !str_cmp( buf, "or" ) )
+      morebuf = one_argument(cmnd, buf);
+      if (!str_cmp(buf, "or"))
       {
-         if( ( legal = mprog_do_ifchck( morebuf, mob, actor, obj, vo, rndm ) ) )
+         if ((legal = mprog_do_ifchck(morebuf, mob, actor, obj, vo, rndm)))
          {
-            if( legal == 1 )
+            if (legal == 1)
                flag = TRUE;
             else
                return null;
@@ -1099,120 +1096,120 @@ char *mprog_process_if( char *ifchck, char *com_list, CHAR_DATA * mob,
          loopdone = TRUE;
    }
 
-   if( flag )
-      for( ;; )   /*ifcheck was true, do commands but ignore else to endif */
+   if (flag)
+      for (;;) /*ifcheck was true, do commands but ignore else to endif */
       {
-         if( !str_cmp( buf, "if" ) )
+         if (!str_cmp(buf, "if"))
          {
-            com_list = mprog_process_if( morebuf, com_list, mob, actor, obj, vo, rndm );
-            while( *cmnd == ' ' )
+            com_list = mprog_process_if(morebuf, com_list, mob, actor, obj, vo, rndm);
+            while (*cmnd == ' ')
                cmnd++;
-            if( *com_list == '\0' )
+            if (*com_list == '\0')
                return null;
             cmnd = com_list;
-            com_list = mprog_next_command( com_list );
-            morebuf = one_argument( cmnd, buf );
+            com_list = mprog_next_command(com_list);
+            morebuf = one_argument(cmnd, buf);
             continue;
          }
-         if( !str_cmp( buf, "break" ) )
+         if (!str_cmp(buf, "break"))
             return null;
-         if( !str_cmp( buf, "endif" ) )
+         if (!str_cmp(buf, "endif"))
             return com_list;
-         if( !str_cmp( buf, "else" ) )
+         if (!str_cmp(buf, "else"))
          {
-            while( str_cmp( buf, "endif" ) )
+            while (str_cmp(buf, "endif"))
             {
                cmnd = com_list;
-               com_list = mprog_next_command( com_list );
-               while( *cmnd == ' ' )
+               com_list = mprog_next_command(com_list);
+               while (*cmnd == ' ')
                   cmnd++;
-               if( *cmnd == '\0' )
+               if (*cmnd == '\0')
                {
-                  bug( "Mob: %d missing endif after else", mob->pIndexData->vnum );
+                  bug("Mob: %d missing endif after else", mob->pIndexData->vnum);
                   return null;
                }
-               morebuf = one_argument( cmnd, buf );
+               morebuf = one_argument(cmnd, buf);
             }
             return com_list;
          }
-         mprog_process_cmnd( cmnd, mob, actor, obj, vo, rndm );
+         mprog_process_cmnd(cmnd, mob, actor, obj, vo, rndm);
          cmnd = com_list;
-         com_list = mprog_next_command( com_list );
-         while( *cmnd == ' ' )
+         com_list = mprog_next_command(com_list);
+         while (*cmnd == ' ')
             cmnd++;
-         if( *cmnd == '\0' )
+         if (*cmnd == '\0')
          {
-            bug( "Mob: %d missing else or endif", mob->pIndexData->vnum );
+            bug("Mob: %d missing else or endif", mob->pIndexData->vnum);
             return null;
          }
-         morebuf = one_argument( cmnd, buf );
+         morebuf = one_argument(cmnd, buf);
       }
-   else  /*false ifcheck, find else and do existing commands or quit at endif */
+   else /*false ifcheck, find else and do existing commands or quit at endif */
    {
-      while( ( str_cmp( buf, "else" ) ) && ( str_cmp( buf, "endif" ) ) )
+      while ((str_cmp(buf, "else")) && (str_cmp(buf, "endif")))
       {
          cmnd = com_list;
-         com_list = mprog_next_command( com_list );
-         while( *cmnd == ' ' )
+         com_list = mprog_next_command(com_list);
+         while (*cmnd == ' ')
             cmnd++;
-         if( *cmnd == '\0' )
+         if (*cmnd == '\0')
          {
-            bug( "Mob: %d missing an else or endif", mob->pIndexData->vnum );
+            bug("Mob: %d missing an else or endif", mob->pIndexData->vnum);
             return null;
          }
-         morebuf = one_argument( cmnd, buf );
+         morebuf = one_argument(cmnd, buf);
       }
 
       /*
-       * found either an else or an endif.. act accordingly 
+       * found either an else or an endif.. act accordingly
        */
-      if( !str_cmp( buf, "endif" ) )
+      if (!str_cmp(buf, "endif"))
          return com_list;
       cmnd = com_list;
-      com_list = mprog_next_command( com_list );
-      while( *cmnd == ' ' )
+      com_list = mprog_next_command(com_list);
+      while (*cmnd == ' ')
          cmnd++;
-      if( *cmnd == '\0' )
+      if (*cmnd == '\0')
       {
-         bug( "Mob: %d missing endif", mob->pIndexData->vnum );
+         bug("Mob: %d missing endif", mob->pIndexData->vnum);
          return null;
       }
-      morebuf = one_argument( cmnd, buf );
+      morebuf = one_argument(cmnd, buf);
 
-      for( ;; )   /*process the post-else commands until an endif is found. */
+      for (;;) /*process the post-else commands until an endif is found. */
       {
-         if( !str_cmp( buf, "if" ) )
+         if (!str_cmp(buf, "if"))
          {
-            com_list = mprog_process_if( morebuf, com_list, mob, actor, obj, vo, rndm );
-            while( *cmnd == ' ' )
+            com_list = mprog_process_if(morebuf, com_list, mob, actor, obj, vo, rndm);
+            while (*cmnd == ' ')
                cmnd++;
-            if( *com_list == '\0' )
+            if (*com_list == '\0')
                return null;
             cmnd = com_list;
-            com_list = mprog_next_command( com_list );
-            morebuf = one_argument( cmnd, buf );
+            com_list = mprog_next_command(com_list);
+            morebuf = one_argument(cmnd, buf);
             continue;
          }
-         if( !str_cmp( buf, "else" ) )
+         if (!str_cmp(buf, "else"))
          {
-            bug( "Mob: %d found else in an else section", mob->pIndexData->vnum );
+            bug("Mob: %d found else in an else section", mob->pIndexData->vnum);
             return null;
          }
-         if( !str_cmp( buf, "break" ) )
+         if (!str_cmp(buf, "break"))
             return null;
-         if( !str_cmp( buf, "endif" ) )
+         if (!str_cmp(buf, "endif"))
             return com_list;
-         mprog_process_cmnd( cmnd, mob, actor, obj, vo, rndm );
+         mprog_process_cmnd(cmnd, mob, actor, obj, vo, rndm);
          cmnd = com_list;
-         com_list = mprog_next_command( com_list );
-         while( *cmnd == ' ' )
+         com_list = mprog_next_command(com_list);
+         while (*cmnd == ' ')
             cmnd++;
-         if( *cmnd == '\0' )
+         if (*cmnd == '\0')
          {
-            bug( "Mob:%d missing endif in else section", mob->pIndexData->vnum );
+            bug("Mob:%d missing endif in else section", mob->pIndexData->vnum);
             return null;
          }
-         morebuf = one_argument( cmnd, buf );
+         morebuf = one_argument(cmnd, buf);
       }
    }
 }
@@ -1222,239 +1219,238 @@ char *mprog_process_if( char *ifchck, char *com_list, CHAR_DATA * mob,
  * clear how it is done and they are quite easy to do, so you
  * can be as creative as you want. The only catch is to check
  * that your variables exist before you use them. At the moment,
- * using $t when the secondary target refers to an object 
+ * using $t when the secondary target refers to an object
  * i.e. >prog_act drops~<nl>if ispc($t)<nl>sigh<nl>endif<nl>~<nl>
  * probably makes the mud crash (vice versa as well) The cure
  * would be to change act() so that vo becomes vict & v_obj.
  * but this would require a lot of small changes all over the code.
  */
-void mprog_translate( char ch, char *t, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm )
+void mprog_translate(char ch, char *t, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm)
 {
-   static char *he_she[] = { "it", "he", "she" };
-   static char *him_her[] = { "it", "him", "her" };
-   static char *his_her[] = { "its", "his", "her" };
-   CHAR_DATA *vict = ( CHAR_DATA * ) vo;
-   OBJ_DATA *v_obj = ( OBJ_DATA * ) vo;
+   static char *he_she[] = {"it", "he", "she"};
+   static char *him_her[] = {"it", "him", "her"};
+   static char *his_her[] = {"its", "his", "her"};
+   CHAR_DATA *vict = (CHAR_DATA *)vo;
+   OBJ_DATA *v_obj = (OBJ_DATA *)vo;
 
    *t = '\0';
-   switch ( ch )
+   switch (ch)
    {
-      case 'i':
-         one_argument( mob->name, t );
-         break;
+   case 'i':
+      one_argument(mob->name, t);
+      break;
 
-      case 'I':
-         strcpy( t, mob->short_descr );
-         break;
+   case 'I':
+      strcpy(t, mob->short_descr);
+      break;
 
-      case 'n':
-         if( actor != NULL )
-            if( can_see( mob, actor ) )
-               one_argument( actor->name, t );
-         if( !IS_NPC( actor ) )
-            *t = UPPER( *t );
-         break;
+   case 'n':
+      if (actor != NULL)
+         if (can_see(mob, actor))
+            one_argument(actor->name, t);
+      if (!IS_NPC(actor))
+         *t = UPPER(*t);
+      break;
 
-      case 'N':
-         if( actor != NULL )
+   case 'N':
+      if (actor != NULL)
+      {
+         if (can_see(mob, actor))
          {
-            if( can_see( mob, actor ) )
-            {
-               if( IS_NPC( actor ) )
-                  strcpy( t, actor->short_descr );
-               else
-               {
-                  strcpy( t, actor->name );
-                  strcat( t, " " );
-                  strcat( t, actor->pcdata->title );
-               }
-            }
+            if (IS_NPC(actor))
+               strcpy(t, actor->short_descr);
             else
-               strcpy( t, "someone" );
+            {
+               strcpy(t, actor->name);
+               strcat(t, " ");
+               strcat(t, actor->pcdata->title);
+            }
          }
-         break;
+         else
+            strcpy(t, "someone");
+      }
+      break;
 
-      case 't':
-         if( vict != NULL )
-            if( can_see( mob, vict ) )
-               one_argument( vict->name, t );
-         if( !IS_NPC( vict ) )
-            *t = UPPER( *t );
-         break;
+   case 't':
+      if (vict != NULL)
+         if (can_see(mob, vict))
+            one_argument(vict->name, t);
+      if (!IS_NPC(vict))
+         *t = UPPER(*t);
+      break;
 
-      case 'T':
-         if( vict != NULL )
+   case 'T':
+      if (vict != NULL)
+      {
+         if (can_see(mob, vict))
          {
-            if( can_see( mob, vict ) )
-            {
-               if( IS_NPC( vict ) )
-                  strcpy( t, vict->short_descr );
-               else
-               {
-                  strcpy( t, vict->name );
-                  strcat( t, " " );
-                  strcat( t, vict->pcdata->title );
-               }
-            }
+            if (IS_NPC(vict))
+               strcpy(t, vict->short_descr);
             else
-               strcpy( t, "someone" );
+            {
+               strcpy(t, vict->name);
+               strcat(t, " ");
+               strcat(t, vict->pcdata->title);
+            }
          }
-         break;
+         else
+            strcpy(t, "someone");
+      }
+      break;
 
-      case 'r':
-         if( rndm != NULL )
-            if( can_see( mob, rndm ) )
-               one_argument( rndm->name, t );
-         if( !IS_NPC( rndm ) )
-            *t = UPPER( *t );
-         break;
+   case 'r':
+      if (rndm != NULL)
+         if (can_see(mob, rndm))
+            one_argument(rndm->name, t);
+      if (!IS_NPC(rndm))
+         *t = UPPER(*t);
+      break;
 
-      case 'R':
-         if( rndm != NULL )
+   case 'R':
+      if (rndm != NULL)
+      {
+         if (can_see(mob, rndm))
          {
-            if( can_see( mob, rndm ) )
-            {
-               if( IS_NPC( rndm ) )
-                  strcpy( t, rndm->short_descr );
-               else
-               {
-                  strcpy( t, rndm->name );
-                  strcat( t, " " );
-                  strcat( t, rndm->pcdata->title );
-               }
-            }
+            if (IS_NPC(rndm))
+               strcpy(t, rndm->short_descr);
             else
-               strcpy( t, "someone" );
+            {
+               strcpy(t, rndm->name);
+               strcat(t, " ");
+               strcat(t, rndm->pcdata->title);
+            }
          }
-         break;
+         else
+            strcpy(t, "someone");
+      }
+      break;
 
-      case 'e':
-         if( actor != NULL )
-            can_see( mob, actor ) ? strcpy( t, he_she[actor->sex] ) : strcpy( t, "someone" );
-         break;
+   case 'e':
+      if (actor != NULL)
+         can_see(mob, actor) ? strcpy(t, he_she[actor->sex]) : strcpy(t, "someone");
+      break;
 
-      case 'm':
-         if( actor != NULL )
-            can_see( mob, actor ) ? strcpy( t, him_her[actor->sex] ) : strcpy( t, "someone" );
-         break;
+   case 'm':
+      if (actor != NULL)
+         can_see(mob, actor) ? strcpy(t, him_her[actor->sex]) : strcpy(t, "someone");
+      break;
 
-      case 's':
-         if( actor != NULL )
-            can_see( mob, actor ) ? strcpy( t, his_her[actor->sex] ) : strcpy( t, "someone's" );
-         break;
+   case 's':
+      if (actor != NULL)
+         can_see(mob, actor) ? strcpy(t, his_her[actor->sex]) : strcpy(t, "someone's");
+      break;
 
-      case 'E':
-         if( vict != NULL )
-            can_see( mob, vict ) ? strcpy( t, he_she[vict->sex] ) : strcpy( t, "someone" );
-         break;
+   case 'E':
+      if (vict != NULL)
+         can_see(mob, vict) ? strcpy(t, he_she[vict->sex]) : strcpy(t, "someone");
+      break;
 
-      case 'M':
-         if( vict != NULL )
-            can_see( mob, vict ) ? strcpy( t, him_her[vict->sex] ) : strcpy( t, "someone" );
-         break;
+   case 'M':
+      if (vict != NULL)
+         can_see(mob, vict) ? strcpy(t, him_her[vict->sex]) : strcpy(t, "someone");
+      break;
 
-      case 'S':
-         if( vict != NULL )
-            can_see( mob, vict ) ? strcpy( t, his_her[vict->sex] ) : strcpy( t, "someone's" );
-         break;
+   case 'S':
+      if (vict != NULL)
+         can_see(mob, vict) ? strcpy(t, his_her[vict->sex]) : strcpy(t, "someone's");
+      break;
 
-      case 'j':
-         strcpy( t, he_she[mob->sex] );
-         break;
+   case 'j':
+      strcpy(t, he_she[mob->sex]);
+      break;
 
-      case 'k':
-         strcpy( t, him_her[mob->sex] );
-         break;
+   case 'k':
+      strcpy(t, him_her[mob->sex]);
+      break;
 
-      case 'l':
-         strcpy( t, his_her[mob->sex] );
-         break;
+   case 'l':
+      strcpy(t, his_her[mob->sex]);
+      break;
 
-      case 'J':
-         if( rndm != NULL )
-            can_see( mob, rndm ) ? strcpy( t, he_she[rndm->sex] ) : strcpy( t, "someone" );
-         break;
+   case 'J':
+      if (rndm != NULL)
+         can_see(mob, rndm) ? strcpy(t, he_she[rndm->sex]) : strcpy(t, "someone");
+      break;
 
-      case 'K':
-         if( rndm != NULL )
-            can_see( mob, rndm ) ? strcpy( t, him_her[rndm->sex] ) : strcpy( t, "someone" );
-         break;
+   case 'K':
+      if (rndm != NULL)
+         can_see(mob, rndm) ? strcpy(t, him_her[rndm->sex]) : strcpy(t, "someone");
+      break;
 
-      case 'L':
-         if( rndm != NULL )
-            can_see( mob, rndm ) ? strcpy( t, his_her[rndm->sex] ) : strcpy( t, "someone's" );
-         break;
+   case 'L':
+      if (rndm != NULL)
+         can_see(mob, rndm) ? strcpy(t, his_her[rndm->sex]) : strcpy(t, "someone's");
+      break;
 
-      case 'o':
-         if( obj )
-            can_see_obj( mob, obj ) ? one_argument( obj->name, t ) : strcpy( t, "something" );
-         break;
+   case 'o':
+      if (obj)
+         can_see_obj(mob, obj) ? one_argument(obj->name, t) : strcpy(t, "something");
+      break;
 
-      case 'O':
-         if( obj )
-            can_see_obj( mob, obj ) ? strcpy( t, obj->short_descr ) : strcpy( t, "something" );
-         break;
+   case 'O':
+      if (obj)
+         can_see_obj(mob, obj) ? strcpy(t, obj->short_descr) : strcpy(t, "something");
+      break;
 
-      case 'p':
-         if( v_obj )
-            can_see_obj( mob, v_obj ) ? one_argument( v_obj->name, t ) : strcpy( t, "something" );
-         break;
+   case 'p':
+      if (v_obj)
+         can_see_obj(mob, v_obj) ? one_argument(v_obj->name, t) : strcpy(t, "something");
+      break;
 
-      case 'P':
-         if( v_obj )
-            can_see_obj( mob, v_obj ) ? strcpy( t, v_obj->short_descr ) : strcpy( t, "something" );
-         break;
+   case 'P':
+      if (v_obj)
+         can_see_obj(mob, v_obj) ? strcpy(t, v_obj->short_descr) : strcpy(t, "something");
+      break;
 
-      case 'a':
-         if( obj )
-            switch ( *( obj->name ) )
-            {
-               case 'a':
-               case 'e':
-               case 'i':
-               case 'o':
-               case 'u':
-                  strcpy( t, "an" );
-                  break;
-               default:
-                  strcpy( t, "a" );
-            }
-         break;
+   case 'a':
+      if (obj)
+         switch (*(obj->name))
+         {
+         case 'a':
+         case 'e':
+         case 'i':
+         case 'o':
+         case 'u':
+            strcpy(t, "an");
+            break;
+         default:
+            strcpy(t, "a");
+         }
+      break;
 
-      case 'A':
-         if( v_obj )
-            switch ( *( v_obj->name ) )
-            {
-               case 'a':
-               case 'e':
-               case 'i':
-               case 'o':
-               case 'u':
-                  strcpy( t, "an" );
-                  break;
-               default:
-                  strcpy( t, "a" );
-            }
-         break;
+   case 'A':
+      if (v_obj)
+         switch (*(v_obj->name))
+         {
+         case 'a':
+         case 'e':
+         case 'i':
+         case 'o':
+         case 'u':
+            strcpy(t, "an");
+            break;
+         default:
+            strcpy(t, "a");
+         }
+      break;
 
-      case '$':
-         strcpy( t, "$" );
-         break;
+   case '$':
+      strcpy(t, "$");
+      break;
 
-      default:
-         bug( "Mob: %d bad $var", mob->pIndexData->vnum );
-         break;
+   default:
+      bug("Mob: %d bad $var", mob->pIndexData->vnum);
+      break;
    }
 
    return;
-
 }
 
 /* This procedure simply copies the cmnd to a buffer while expanding
  * any variables by calling the translate procedure.  The observant
  * code scrutinizer will notice that this is taken from act()
  */
-void mprog_process_cmnd( char *cmnd, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo, CHAR_DATA * rndm )
+void mprog_process_cmnd(char *cmnd, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo, CHAR_DATA *rndm)
 {
    char buf[MAX_INPUT_LENGTH];
    char tmp[MAX_INPUT_LENGTH];
@@ -1465,33 +1461,32 @@ void mprog_process_cmnd( char *cmnd, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DAT
    point = buf;
    str = cmnd;
 
-   while( *str != '\0' )
+   while (*str != '\0')
    {
-      if( *str != '$' )
+      if (*str != '$')
       {
          *point++ = *str++;
          continue;
       }
       str++;
-      mprog_translate( *str, tmp, mob, actor, obj, vo, rndm );
+      mprog_translate(*str, tmp, mob, actor, obj, vo, rndm);
       i = tmp;
       ++str;
-      while( ( *point = *i ) != '\0' )
+      while ((*point = *i) != '\0')
          ++point, ++i;
    }
    *point = '\0';
-   interpret( mob, buf );
+   interpret(mob, buf);
 
    return;
-
 }
 
-/* The main focus of the MOBprograms.  This routine is called 
+/* The main focus of the MOBprograms.  This routine is called
  *  whenever a trigger is successful.  It is responsible for parsing
  *  the command list and figuring out what to do. However, like all
  *  complex procedures, everything is farmed out to the other guys.
  */
-void mprog_driver( char *com_list, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo )
+void mprog_driver(char *com_list, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo)
 {
    char tmpcmndlst[MAX_STRING_LENGTH];
    char buf[MAX_INPUT_LENGTH];
@@ -1502,37 +1497,36 @@ void mprog_driver( char *com_list, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
    CHAR_DATA *vch = NULL;
    int count = 0;
 
-   if( IS_AFFECTED( mob, AFF_CHARM ) )
+   if (IS_AFFECTED(mob, AFF_CHARM))
       return;
 
    /*
-    * get a random visable mortal player who is in the room with the mob 
+    * get a random visable mortal player who is in the room with the mob
     */
-   for( vch = mob->in_room->first_person; vch; vch = vch->next_in_room )
-      if( ( !IS_NPC( vch ) || IS_SET( vch->act, ACT_INTELLIGENT ) ) && vch->level < LEVEL_IMMORTAL && can_see( mob, vch ) )
+   for (vch = mob->in_room->first_person; vch; vch = vch->next_in_room)
+      if ((!IS_NPC(vch) || IS_SET(vch->act, ACT_INTELLIGENT)) && vch->level < LEVEL_IMMORTAL && can_see(mob, vch))
       {
-         if( number_range( 0, count ) == 0 )
+         if (number_range(0, count) == 0)
             rndm = vch;
          count++;
       }
 
-   strcpy( tmpcmndlst, com_list );
+   strcpy(tmpcmndlst, com_list);
    command_list = tmpcmndlst;
    cmnd = command_list;
-   command_list = mprog_next_command( command_list );
-   while( *cmnd != '\0' )
+   command_list = mprog_next_command(command_list);
+   while (*cmnd != '\0')
    {
-      morebuf = one_argument( cmnd, buf );
-      if( !str_cmp( buf, "if" ) )
-         command_list = mprog_process_if( morebuf, command_list, mob, actor, obj, vo, rndm );
+      morebuf = one_argument(cmnd, buf);
+      if (!str_cmp(buf, "if"))
+         command_list = mprog_process_if(morebuf, command_list, mob, actor, obj, vo, rndm);
       else
-         mprog_process_cmnd( cmnd, mob, actor, obj, vo, rndm );
+         mprog_process_cmnd(cmnd, mob, actor, obj, vo, rndm);
       cmnd = command_list;
-      command_list = mprog_next_command( command_list );
+      command_list = mprog_next_command(command_list);
    }
 
    return;
-
 }
 
 /***************************************************************************
@@ -1543,7 +1537,7 @@ void mprog_driver( char *com_list, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA 
  *  on a certain percent, or trigger on a keyword or word phrase.
  *  To see how this works, look at the various trigger routines..
  */
-void mprog_wordlist_check( char *arg, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo, int type )
+void mprog_wordlist_check(char *arg, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo, int type)
 {
 
    char temp1[MAX_STRING_LENGTH];
@@ -1556,25 +1550,24 @@ void mprog_wordlist_check( char *arg, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DA
    char *end;
    int i;
 
-   for( mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next )
-      if( mprg->type & type )
+   for (mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next)
+      if (mprg->type & type)
       {
-         strcpy( temp1, mprg->arglist );
+         strcpy(temp1, mprg->arglist);
          list = temp1;
-         for( i = 0; i < strlen( list ); i++ )
-            list[i] = LOWER( list[i] );
-         strcpy( temp2, arg );
+         for (i = 0; i < strlen(list); i++)
+            list[i] = LOWER(list[i]);
+         strcpy(temp2, arg);
          dupl = temp2;
-         for( i = 0; i < strlen( dupl ); i++ )
-            dupl[i] = LOWER( dupl[i] );
-         if( ( list[0] == 'p' ) && ( list[1] == ' ' ) )
+         for (i = 0; i < strlen(dupl); i++)
+            dupl[i] = LOWER(dupl[i]);
+         if ((list[0] == 'p') && (list[1] == ' '))
          {
             list += 2;
-            while( ( start = strstr( dupl, list ) ) )
-               if( ( start == dupl || *( start - 1 ) == ' ' )
-                   && ( *( end = start + strlen( list ) ) == ' ' || *end == '\n' || *end == '\r' || *end == '\0' ) )
+            while ((start = strstr(dupl, list)))
+               if ((start == dupl || *(start - 1) == ' ') && (*(end = start + strlen(list)) == ' ' || *end == '\n' || *end == '\r' || *end == '\0'))
                {
-                  mprog_driver( mprg->comlist, mob, actor, obj, vo );
+                  mprog_driver(mprg->comlist, mob, actor, obj, vo);
                   break;
                }
                else
@@ -1582,13 +1575,12 @@ void mprog_wordlist_check( char *arg, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DA
          }
          else
          {
-            list = one_argument( list, word );
-            for( ; word[0] != '\0'; list = one_argument( list, word ) )
-               while( ( start = strstr( dupl, word ) ) )
-                  if( ( start == dupl || *( start - 1 ) == ' ' )
-                      && ( *( end = start + strlen( word ) ) == ' ' || *end == '\n' || *end == '\r' || *end == '\0' ) )
+            list = one_argument(list, word);
+            for (; word[0] != '\0'; list = one_argument(list, word))
+               while ((start = strstr(dupl, word)))
+                  if ((start == dupl || *(start - 1) == ' ') && (*(end = start + strlen(word)) == ' ' || *end == '\n' || *end == '\r' || *end == '\0'))
                   {
-                     mprog_driver( mprg->comlist, mob, actor, obj, vo );
+                     mprog_driver(mprg->comlist, mob, actor, obj, vo);
                      break;
                   }
                   else
@@ -1597,23 +1589,21 @@ void mprog_wordlist_check( char *arg, CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DA
       }
 
    return;
-
 }
 
-void mprog_percent_check( CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, void *vo, int type )
+void mprog_percent_check(CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *obj, void *vo, int type)
 {
    MPROG_DATA *mprg;
 
-   for( mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next )
-      if( ( mprg->type & type ) && ( number_percent(  ) < atoi( mprg->arglist ) ) )
+   for (mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next)
+      if ((mprg->type & type) && (number_percent() < atoi(mprg->arglist)))
       {
-         mprog_driver( mprg->comlist, mob, actor, obj, vo );
-         if( type != GREET_PROG && type != ALL_GREET_PROG )
+         mprog_driver(mprg->comlist, mob, actor, obj, vo);
+         if (type != GREET_PROG && type != ALL_GREET_PROG)
             break;
       }
 
    return;
-
 }
 
 /* The triggers.. These are really basic, and since most appear only
@@ -1624,164 +1614,149 @@ void mprog_percent_check( CHAR_DATA * mob, CHAR_DATA * actor, OBJ_DATA * obj, vo
  * make sure you remember to modify the variable names to the ones in the
  * trigger calls.
  */
-void mprog_act_trigger( char *buf, CHAR_DATA * mob, CHAR_DATA * ch, OBJ_DATA * obj, void *vo )
+void mprog_act_trigger(char *buf, CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj, void *vo)
 {
 
    MPROG_ACT_LIST *tmp_act;
 
-   if( IS_NPC( mob ) && ( mob->pIndexData->progtypes & ACT_PROG ) )
+   if (IS_NPC(mob) && (mob->pIndexData->progtypes & ACT_PROG))
    {
-      GET_FREE( tmp_act, mpact_free );
-      tmp_act->buf = str_dup( buf );
+      GET_FREE(tmp_act, mpact_free);
+      tmp_act->buf = str_dup(buf);
       tmp_act->ch = ch;
       tmp_act->obj = obj;
       tmp_act->vo = vo;
-      LINK( tmp_act, mob->first_mpact, mob->last_mpact, next, prev );
+      LINK(tmp_act, mob->first_mpact, mob->last_mpact, next, prev);
       mob->mpactnum++;
    }
    return;
-
 }
 
-void mprog_bribe_trigger( CHAR_DATA * mob, CHAR_DATA * ch, int amount )
+void mprog_bribe_trigger(CHAR_DATA *mob, CHAR_DATA *ch, int amount)
 {
 
    char buf[MAX_STRING_LENGTH];
    MPROG_DATA *mprg;
    OBJ_DATA *obj;
 
-   if( IS_NPC( mob ) && ( mob->pIndexData->progtypes & BRIBE_PROG ) )
+   if (IS_NPC(mob) && (mob->pIndexData->progtypes & BRIBE_PROG))
    {
-      obj = create_object( get_obj_index( OBJ_VNUM_MONEY_SOME ), 0 );
-      sprintf( buf, obj->short_descr, amount );
-      free_string( obj->short_descr );
-      obj->short_descr = str_dup( buf );
+      obj = create_object(get_obj_index(OBJ_VNUM_MONEY_SOME), 0);
+      sprintf(buf, obj->short_descr, amount);
+      free_string(obj->short_descr);
+      obj->short_descr = str_dup(buf);
       obj->value[0] = amount;
-      obj_to_char( obj, mob );
+      obj_to_char(obj, mob);
       mob->gold -= amount;
 
-      for( mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next )
-         if( ( mprg->type & BRIBE_PROG ) && ( amount >= atoi( mprg->arglist ) ) )
+      for (mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next)
+         if ((mprg->type & BRIBE_PROG) && (amount >= atoi(mprg->arglist)))
          {
-            mprog_driver( mprg->comlist, mob, ch, obj, NULL );
+            mprog_driver(mprg->comlist, mob, ch, obj, NULL);
             break;
          }
    }
 
    return;
-
 }
 
-void mprog_death_trigger( CHAR_DATA * mob )
+void mprog_death_trigger(CHAR_DATA *mob)
 {
 
-   if( IS_NPC( mob ) && ( mob->pIndexData->progtypes & DEATH_PROG ) )
+   if (IS_NPC(mob) && (mob->pIndexData->progtypes & DEATH_PROG))
    {
-      mprog_percent_check( mob, NULL, NULL, NULL, DEATH_PROG );
+      mprog_percent_check(mob, NULL, NULL, NULL, DEATH_PROG);
    }
 
-   death_cry( mob );
+   death_cry(mob);
    return;
-
 }
 
-void mprog_entry_trigger( CHAR_DATA * mob )
+void mprog_entry_trigger(CHAR_DATA *mob)
 {
 
-   if( IS_NPC( mob ) && ( mob->pIndexData->progtypes & ENTRY_PROG ) )
-      mprog_percent_check( mob, NULL, NULL, NULL, ENTRY_PROG );
+   if (IS_NPC(mob) && (mob->pIndexData->progtypes & ENTRY_PROG))
+      mprog_percent_check(mob, NULL, NULL, NULL, ENTRY_PROG);
 
    return;
-
 }
 
-void mprog_fight_trigger( CHAR_DATA * mob, CHAR_DATA * ch )
+void mprog_fight_trigger(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 
-   if( IS_NPC( mob ) && ( mob->pIndexData->progtypes & FIGHT_PROG ) )
-      mprog_percent_check( mob, ch, NULL, NULL, FIGHT_PROG );
+   if (IS_NPC(mob) && (mob->pIndexData->progtypes & FIGHT_PROG))
+      mprog_percent_check(mob, ch, NULL, NULL, FIGHT_PROG);
 
    return;
-
 }
 
-void mprog_give_trigger( CHAR_DATA * mob, CHAR_DATA * ch, OBJ_DATA * obj )
+void mprog_give_trigger(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 {
 
    char buf[MAX_INPUT_LENGTH];
    MPROG_DATA *mprg;
 
-   if( IS_NPC( mob ) && ( mob->pIndexData->progtypes & GIVE_PROG ) )
-      for( mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next )
+   if (IS_NPC(mob) && (mob->pIndexData->progtypes & GIVE_PROG))
+      for (mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next)
       {
-         one_argument( mprg->arglist, buf );
-         if( ( mprg->type & GIVE_PROG ) && ( ( !str_cmp( obj->name, mprg->arglist ) ) || ( !str_cmp( "all", buf ) ) ) )
+         one_argument(mprg->arglist, buf);
+         if ((mprg->type & GIVE_PROG) && ((!str_cmp(obj->name, mprg->arglist)) || (!str_cmp("all", buf))))
          {
-            mprog_driver( mprg->comlist, mob, ch, obj, NULL );
+            mprog_driver(mprg->comlist, mob, ch, obj, NULL);
             break;
          }
       }
 
    return;
-
 }
 
-void mprog_greet_trigger( CHAR_DATA * mob )
+void mprog_greet_trigger(CHAR_DATA *mob)
 {
 
    CHAR_DATA *vmob;
 
-   for( vmob = mob->in_room->first_person; vmob != NULL; vmob = vmob->next_in_room )
-      if( IS_NPC( vmob )
-          && mob != vmob
-          && can_see( vmob, mob )
-          && ( vmob->fighting == NULL ) && IS_AWAKE( vmob ) && ( vmob->pIndexData->progtypes & GREET_PROG ) )
-         mprog_percent_check( vmob, mob, NULL, NULL, GREET_PROG );
-      else
-         if( IS_NPC( vmob )
-             && ( vmob->fighting == NULL ) && IS_AWAKE( vmob ) && ( vmob->pIndexData->progtypes & ALL_GREET_PROG ) )
-         mprog_percent_check( vmob, mob, NULL, NULL, ALL_GREET_PROG );
+   for (vmob = mob->in_room->first_person; vmob != NULL; vmob = vmob->next_in_room)
+      if (IS_NPC(vmob) && mob != vmob && can_see(vmob, mob) && (vmob->fighting == NULL) && IS_AWAKE(vmob) && (vmob->pIndexData->progtypes & GREET_PROG))
+         mprog_percent_check(vmob, mob, NULL, NULL, GREET_PROG);
+      else if (IS_NPC(vmob) && (vmob->fighting == NULL) && IS_AWAKE(vmob) && (vmob->pIndexData->progtypes & ALL_GREET_PROG))
+         mprog_percent_check(vmob, mob, NULL, NULL, ALL_GREET_PROG);
 
    return;
-
 }
 
-void mprog_hitprcnt_trigger( CHAR_DATA * mob, CHAR_DATA * ch )
+void mprog_hitprcnt_trigger(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 
    MPROG_DATA *mprg;
 
-   if( IS_NPC( mob ) && ( mob->pIndexData->progtypes & HITPRCNT_PROG ) )
-      for( mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next )
-         if( ( mprg->type & HITPRCNT_PROG ) && ( ( 100 * mob->hit / mob->max_hit ) < atoi( mprg->arglist ) ) )
+   if (IS_NPC(mob) && (mob->pIndexData->progtypes & HITPRCNT_PROG))
+      for (mprg = mob->pIndexData->first_mprog; mprg != NULL; mprg = mprg->next)
+         if ((mprg->type & HITPRCNT_PROG) && ((100 * mob->hit / mob->max_hit) < atoi(mprg->arglist)))
          {
-            mprog_driver( mprg->comlist, mob, ch, NULL, NULL );
+            mprog_driver(mprg->comlist, mob, ch, NULL, NULL);
             break;
          }
 
    return;
-
 }
 
-void mprog_random_trigger( CHAR_DATA * mob )
+void mprog_random_trigger(CHAR_DATA *mob)
 {
 
-   if( mob->pIndexData->progtypes & RAND_PROG )
-      mprog_percent_check( mob, NULL, NULL, NULL, RAND_PROG );
+   if (mob->pIndexData->progtypes & RAND_PROG)
+      mprog_percent_check(mob, NULL, NULL, NULL, RAND_PROG);
 
    return;
-
 }
 
-void mprog_speech_trigger( char *txt, CHAR_DATA * mob )
+void mprog_speech_trigger(char *txt, CHAR_DATA *mob)
 {
 
    CHAR_DATA *vmob;
 
-   for( vmob = mob->in_room->first_person; vmob != NULL; vmob = vmob->next_in_room )
-      if( IS_NPC( vmob ) && ( vmob->pIndexData->progtypes & SPEECH_PROG ) )
-         mprog_wordlist_check( txt, vmob, mob, NULL, NULL, SPEECH_PROG );
+   for (vmob = mob->in_room->first_person; vmob != NULL; vmob = vmob->next_in_room)
+      if (IS_NPC(vmob) && (vmob->pIndexData->progtypes & SPEECH_PROG))
+         mprog_wordlist_check(txt, vmob, mob, NULL, NULL, SPEECH_PROG);
 
    return;
-
 }

@@ -25,7 +25,6 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,12 +33,11 @@
 
 /* This file deals with multi-line editing, and writing. */
 
-typedef void RET_FUN( void *, char **, CHAR_DATA *, bool );
-
+typedef void RET_FUN(void *, char **, CHAR_DATA *, bool);
 
 struct buf_data_struct
 {
-   bool is_free;  /* Ramias:for run-time checks of LINK/UNLINK */
+   bool is_free; /* Ramias:for run-time checks of LINK/UNLINK */
    BUF_DATA_STRUCT *next;
    BUF_DATA_STRUCT *prev;
    CHAR_DATA *ch;
@@ -51,41 +49,37 @@ struct buf_data_struct
    int old_char_pos;
 };
 
-
-
 extern char str_empty[1];
 
 /* A str function in build.c, used to duplicate strings into perm. mem. */
-char *build_simpstrdup( char * );
+char *build_simpstrdup(char *);
 
-
-void write_start( char **dest, void *retfunc, void *retparm, CHAR_DATA * ch )
+void write_start(char **dest, void *retfunc, void *retparm, CHAR_DATA *ch)
 {
    BUF_DATA_STRUCT *buf_data;
    char *buf;
 
    /*
-    * Check that *dest != &str_empty[0]  when calling this func. 
+    * Check that *dest != &str_empty[0]  when calling this func.
     */
    /*
-    * If it is, it's because we've run out of memory. 
+    * If it is, it's because we've run out of memory.
     */
 
-
-   buf = getmem( MAX_STRING_LENGTH );
-   if( buf == NULL )
+   buf = getmem(MAX_STRING_LENGTH);
+   if (buf == NULL)
    {
-      bug( "Not enough memory for string editing.", 0 );
+      bug("Not enough memory for string editing.", 0);
       *dest = &str_empty[0];
-      send_to_char( "WARNING: No memory left. Things will start to go wrong.\n\r", ch );
+      send_to_char("WARNING: No memory left. Things will start to go wrong.\n\r", ch);
       return;
    }
 
    /*
-    * Alloc mem. for a new buffer. 
+    * Alloc mem. for a new buffer.
     */
-   GET_FREE( buf_data, buf_free );
-   LINK( buf_data, first_buf, last_buf, next, prev );
+   GET_FREE(buf_data, buf_free);
+   LINK(buf_data, first_buf, last_buf, next, prev);
 
    buf_data->ch = ch;
    buf_data->dest = dest;
@@ -93,7 +87,6 @@ void write_start( char **dest, void *retfunc, void *retparm, CHAR_DATA * ch )
    buf_data->pos = 0;
    buf_data->returnfunc = retfunc;
    buf_data->returnparm = retparm;
-
 
    *buf = '\0';
 
@@ -105,64 +98,61 @@ void write_start( char **dest, void *retfunc, void *retparm, CHAR_DATA * ch )
    return;
 }
 
-
-void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
+void write_interpret args((CHAR_DATA * ch, char *argument))
 {
 
    BUF_DATA_STRUCT *buf_data;
    char *buf;
    int curlen;
 
-
-   for( buf_data = first_buf; buf_data != NULL; buf_data = buf_data->next )
+   for (buf_data = first_buf; buf_data != NULL; buf_data = buf_data->next)
    {
-      if( buf_data->ch == ch )
+      if (buf_data->ch == ch)
          break;
    }
 
-   if( buf_data == NULL )
+   if (buf_data == NULL)
    {
-      bugf( "Call to write_interpret when not writing (char=%s)\n\r", ch->name );
+      bugf("Call to write_interpret when not writing (char=%s)\n\r", ch->name);
       ch->position = POS_STANDING;
       return;
    }
 
    buf = buf_data->buf;
 
-
    /*
-    * Check to see if text was a command or simply addition 
+    * Check to see if text was a command or simply addition
     */
-   if( argument[0] != '.' )
+   if (argument[0] != '.')
    {
-      curlen = strlen( buf );
-      if( curlen > MAX_STRING_LENGTH - 240 )
+      curlen = strlen(buf);
+      if (curlen > MAX_STRING_LENGTH - 240)
       {
-         send_to_char( "String to long, cannot add new line.\n\r", ch );
+         send_to_char("String to long, cannot add new line.\n\r", ch);
          return;
       }
-      for( buf = buf + curlen; *argument != '\0'; )
-         *( buf++ ) = *( argument++ );
-      *( buf++ ) = '\n';
-      *( buf++ ) = '\r';
+      for (buf = buf + curlen; *argument != '\0';)
+         *(buf++) = *(argument++);
+      *(buf++) = '\n';
+      *(buf++) = '\r';
       *buf = '\0';
       return;
    }
 
    /*
-    * We have a command. 
+    * We have a command.
     */
    /*
-    * Commands are .help .save .preview .- .clear .lines 
+    * Commands are .help .save .preview .- .clear .lines
     */
    argument++;
-   if( argument[0] == '\0' || UPPER( argument[0] == 'S' || UPPER( argument[0] ) == 'Q' ) )
+   if (argument[0] == '\0' || UPPER(argument[0] == 'S' || UPPER(argument[0]) == 'Q'))
    {
       bool save;
       char **dest;
       CHAR_DATA *ch;
 
-      if( UPPER( argument[0] ) == 'Q' )
+      if (UPPER(argument[0]) == 'Q')
          save = 0;
       else
          save = 1;
@@ -171,76 +161,75 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
       ch = buf_data->ch;
 
       /*
-       * Save routine. 
+       * Save routine.
        */
 
-      if( save )
+      if (save)
       {
          /*
-          * Check that dest still points to buf (to check for corruption) 
+          * Check that dest still points to buf (to check for corruption)
           */
-         if( *dest != buf )
+         if (*dest != buf)
          {
-            bug( "write_interpret: Original destination has been overwritten.", 0 );
-            send_to_char( "Cannot save, string pointer been modified.\n\r", ch );
+            bug("write_interpret: Original destination has been overwritten.", 0);
+            send_to_char("Cannot save, string pointer been modified.\n\r", ch);
          }
          else
          {
-            *dest = str_dup( buf );
-            if( ( buf_data->returnfunc ) != NULL )
-               ( *buf_data->returnfunc ) ( buf_data->returnparm, dest, ch, TRUE );
+            *dest = str_dup(buf);
+            if ((buf_data->returnfunc) != NULL)
+               (*buf_data->returnfunc)(buf_data->returnparm, dest, ch, TRUE);
          }
       }
       else
       {
          *dest = &str_empty[0];
-         if( ( buf_data->returnfunc ) != NULL )
-            ( *buf_data->returnfunc ) ( buf_data->returnparm, dest, ch, FALSE );
+         if ((buf_data->returnfunc) != NULL)
+            (*buf_data->returnfunc)(buf_data->returnparm, dest, ch, FALSE);
       }
 
       /*
        * Re-use memory.
        */
-      dispose( buf_data->buf, MAX_STRING_LENGTH );
+      dispose(buf_data->buf, MAX_STRING_LENGTH);
 
-      UNLINK( buf_data, first_buf, last_buf, next, prev );
+      UNLINK(buf_data, first_buf, last_buf, next, prev);
 
       /*
-       * Re-set char 
+       * Re-set char
        */
       ch->position = buf_data->old_char_pos;
 
-      PUT_FREE( buf_data, buf_free );
+      PUT_FREE(buf_data, buf_free);
 
       return;
    }
 
-
-   if( UPPER( argument[0] ) == 'H' )
+   if (UPPER(argument[0]) == 'H')
    {
       /*
-       * Help 
+       * Help
        */
       CHAR_DATA *ch;
       ch = buf_data->ch;
 
-      send_to_char( "Normal type will be appended to the string, line by line.\n\r", ch );
-      send_to_char( ".help     or .h :  displays this help.\n\r", ch );
-      send_to_char( ".save     or .  :  saves and exits the editor.\n\r", ch );
-      send_to_char( ".preview  or .p :  display a preview of the text.\n\r", ch );
-      send_to_char( ".-[num]   or .- :  deletes [num] lines from the end, or just one line\n\r", ch );
-      send_to_char( ".clear          :  deletes whole text.\n\r", ch );
-      send_to_char( ".quit     or .q :  quits without saving.\n\r", ch );
-      send_to_char( ".format   or .f :  formats text for 80 chars.\n\r", ch );
-      send_to_char( ".replace  or .r :  replaces word with string.\n\r", ch );
-      send_to_char( "	       (usage) :  .r <word> <string>.  If no string, arg1 deleted.\n\r", ch );
+      send_to_char("Normal type will be appended to the string, line by line.\n\r", ch);
+      send_to_char(".help     or .h :  displays this help.\n\r", ch);
+      send_to_char(".save     or .  :  saves and exits the editor.\n\r", ch);
+      send_to_char(".preview  or .p :  display a preview of the text.\n\r", ch);
+      send_to_char(".-[num]   or .- :  deletes [num] lines from the end, or just one line\n\r", ch);
+      send_to_char(".clear          :  deletes whole text.\n\r", ch);
+      send_to_char(".quit     or .q :  quits without saving.\n\r", ch);
+      send_to_char(".format   or .f :  formats text for 80 chars.\n\r", ch);
+      send_to_char(".replace  or .r :  replaces word with string.\n\r", ch);
+      send_to_char("	       (usage) :  .r <word> <string>.  If no string, arg1 deleted.\n\r", ch);
       return;
    }
 
-   if( UPPER( argument[0] ) == 'R' )
+   if (UPPER(argument[0]) == 'R')
    {
       /*
-       * Mag:  I bet you take one look at this, and change it :) -S- 
+       * Mag:  I bet you take one look at this, and change it :) -S-
        */
 
       char arg1[MAX_STRING_LENGTH];
@@ -256,30 +245,30 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
       int i;
       char *src;
 
-      argument = one_argument( argument + 1, arg1 );  /* Skip the R */
-      strcpy( arg2, argument );
+      argument = one_argument(argument + 1, arg1); /* Skip the R */
+      strcpy(arg2, argument);
 
-      if( arg1[0] == '\0' )
+      if (arg1[0] == '\0')
       {
-         send_to_char( "No arg1 supplied for replace command.\n\r", ch );
+         send_to_char("No arg1 supplied for replace command.\n\r", ch);
          return;
       }
 
       new_buf[0] = '\0';
-      buf_length = strlen( buf );
+      buf_length = strlen(buf);
       pos = 0;
       npos = 0;
       wpos = 0;
       word[0] = '\0';
 
-      for( ;; )
+      for (;;)
       {
          pBuf = buf[pos];
 
-         if( pBuf == '\0' || pos > buf_length )
+         if (pBuf == '\0' || pos > buf_length)
             break;
 
-         if( pBuf == ' ' )
+         if (pBuf == ' ')
          {
             new_buf[npos] = ' ';
             pos++;
@@ -287,7 +276,7 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
             continue;
          }
 
-         if( !isgraph( pBuf ) )
+         if (!isgraph(pBuf))
          {
             new_buf[npos] = pBuf;
             pos++;
@@ -296,9 +285,9 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
          }
 
          wpos = 0;
-         for( ;; )
+         for (;;)
          {
-            if( !isgraph( pBuf ) )
+            if (!isgraph(pBuf))
                break;
 
             word[wpos] = pBuf;
@@ -308,10 +297,10 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
          }
          word[wpos] = '\0';
 
-         if( !str_cmp( word, arg1 ) )
+         if (!str_cmp(word, arg1))
          {
-            if( arg2[0] != '\0' )
-               for( foo = 0; arg2[foo] != '\0'; foo++ )
+            if (arg2[0] != '\0')
+               for (foo = 0; arg2[foo] != '\0'; foo++)
                {
                   new_buf[npos] = arg2[foo];
                   npos++;
@@ -319,16 +308,16 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
             else
             {
                /*
-                * Do nothing (much). 
+                * Do nothing (much).
                 */
-               if( npos > 0 )
+               if (npos > 0)
                   npos--;
-               send_to_char( "Arg1 deleted.\n\r", ch );
+               send_to_char("Arg1 deleted.\n\r", ch);
             }
          }
          else
          {
-            for( foo = 0; word[foo] != '\0'; foo++ )
+            for (foo = 0; word[foo] != '\0'; foo++)
             {
                new_buf[npos] = word[foo];
                npos++;
@@ -337,67 +326,64 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
       }
 
       /*
-       * -gulp-  Copy new_buf into message structure... 
+       * -gulp-  Copy new_buf into message structure...
        */
 
       src = buf;
-      for( i = 0; i < npos; i++ )
-         *( src++ ) = new_buf[i];
-      *( src ) = '\0';
-
+      for (i = 0; i < npos; i++)
+         *(src++) = new_buf[i];
+      *(src) = '\0';
 
       return;
    }
 
-
-
-   if( UPPER( argument[0] ) == 'P' )
+   if (UPPER(argument[0]) == 'P')
    {
-      send_to_char( buf, ch );
+      send_to_char(buf, ch);
       return;
    }
 
-   if( argument[0] == '-' )
+   if (argument[0] == '-')
    {
       int num;
       int a;
 
       argument++;
-      if( argument[0] == '\0' )
+      if (argument[0] == '\0')
          num = 2;
       else
-         num = atoi( argument ) + 1;
+         num = atoi(argument) + 1;
 
-      if( num <= 0 )
+      if (num <= 0)
          return;
 
-      for( a = strlen( buf ); a >= 0; a-- )
+      for (a = strlen(buf); a >= 0; a--)
       {
-         if( buf[a] == '\n' )
+         if (buf[a] == '\n')
          {
             num--;
-            if( num == 0 )
+            if (num == 0)
                break;
          }
       }
 
-      if( a == 0 )
+      if (a == 0)
       {
-         send_to_char( "Tried to delete too many lines.\n\r", buf_data->ch );
+         send_to_char("Tried to delete too many lines.\n\r", buf_data->ch);
          return;
       }
 
       a++;
-      if( buf[a] == '\r' )
+      if (buf[a] == '\r')
          a++;
-      send_to_char( "Deleted:\n\r", buf_data->ch );
-      send_to_char( buf + a, buf_data->ch );
+      send_to_char("Deleted:\n\r", buf_data->ch);
+      send_to_char(buf + a, buf_data->ch);
 
       buf[a] = '\0';
       return;
    }
 
-   if( argument[0] == 'f' )
+   if (argument[0] == 'f')
    {
       char *src;
       char dest[MAX_STRING_LENGTH];
@@ -409,10 +395,10 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
       int lastcol;
 
       /*
-       * Format text 
+       * Format text
        */
       /*
-       * Go through line by line, doing word wrapping 
+       * Go through line by line, doing word wrapping
        */
 
       lastcol = 79;
@@ -422,114 +408,114 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
       srcspc = NULL;
       destspc = 0;
 
-      for( src = buf; *src != '\0'; )
+      for (src = buf; *src != '\0';)
       {
-         c = *( src++ );
-         switch ( c )
+         c = *(src++);
+         switch (c)
          {
-            case '\n': /* Convert /n/r into one space */
-               if( ( *src == '\r' ) && ( *( src + 1 ) == '\n' ) && ( *( src + 2 ) == '\r' ) )
-               {
-                  /*
-                   * Do not convert paragraph endings. 
-                   */
-                  dest[n++] = c; /* \n */
-                  dest[n++] = *( src++ ); /* \r */
-                  dest[n++] = *( src++ ); /* \n */
-                  dest[n++] = *( src++ ); /* \r */
-                  col = 0;
-                  srcspc = NULL;
-                  destspc = 0;
-                  break;
-               }
-
-               /*
-                * Also if there is a space on the next line, don't merge. 
-                */
-               if( ( *src == '\r' ) && ( *( src + 1 ) == ' ' ) )
-               {
-                  dest[n++] = c; /* \n */
-                  dest[n++] = *( src++ ); /* \r */
-                  col = 0;
-                  srcspc = NULL;
-                  destspc = 0;
-                  break;
-               }
-
-
-               /*
-                * Otherwise convert to a space 
-                */
-               /*
-                * Get rid of spaces at end of a line. 
-                */
-               if( n > 0 )
-               {
-                  while( dest[--n] == ' ' );
-                  n++;
-               }
-               dest[n++] = ' ';
-               col++;
-
-               srcspc = src - 1;
-               destspc = n - 1;
-               break;
-            case '\r':
-               break;
-
-            case '\t': /* Tab */
-               col += 7;
-            case '.':  /* Punctuation */
-            case ' ':
-            case ',':
-            case ';':
-            case '?':
-            case '!':
-            case ')':
-               srcspc = src - 1;
-               destspc = n - 1;
-            case '-':
-               if( srcspc == NULL )
-               {
-                  srcspc = src - 1; /* Only use a dash if necessary */
-                  destspc = n - 1;
-               }
-            default:
-               dest[n++] = c;
-               col++;
-               break;
-         }
-
-         if( col >= lastcol )
-         {
-            /*
-             * Need to do a line break 
-             */
-            if( srcspc == NULL )
+         case '\n': /* Convert /n/r into one space */
+            if ((*src == '\r') && (*(src + 1) == '\n') && (*(src + 2) == '\r'))
             {
                /*
-                * there were no breakable characters on the line. 
+                * Do not convert paragraph endings.
+                */
+               dest[n++] = c;        /* \n */
+               dest[n++] = *(src++); /* \r */
+               dest[n++] = *(src++); /* \n */
+               dest[n++] = *(src++); /* \r */
+               col = 0;
+               srcspc = NULL;
+               destspc = 0;
+               break;
+            }
+
+            /*
+             * Also if there is a space on the next line, don't merge.
+             */
+            if ((*src == '\r') && (*(src + 1) == ' '))
+            {
+               dest[n++] = c;        /* \n */
+               dest[n++] = *(src++); /* \r */
+               col = 0;
+               srcspc = NULL;
+               destspc = 0;
+               break;
+            }
+
+            /*
+             * Otherwise convert to a space
+             */
+            /*
+             * Get rid of spaces at end of a line.
+             */
+            if (n > 0)
+            {
+               while (dest[--n] == ' ')
+                  ;
+               n++;
+            }
+            dest[n++] = ' ';
+            col++;
+
+            srcspc = src - 1;
+            destspc = n - 1;
+            break;
+         case '\r':
+            break;
+
+         case '\t': /* Tab */
+            col += 7;
+         case '.': /* Punctuation */
+         case ' ':
+         case ',':
+         case ';':
+         case '?':
+         case '!':
+         case ')':
+            srcspc = src - 1;
+            destspc = n - 1;
+         case '-':
+            if (srcspc == NULL)
+            {
+               srcspc = src - 1; /* Only use a dash if necessary */
+               destspc = n - 1;
+            }
+         default:
+            dest[n++] = c;
+            col++;
+            break;
+         }
+
+         if (col >= lastcol)
+         {
+            /*
+             * Need to do a line break
+             */
+            if (srcspc == NULL)
+            {
+               /*
+                * there were no breakable characters on the line.
                 */
                dest[n++] = '\n';
                dest[n++] = '\r';
             }
             else
             {
-               n = destspc;   /* n now points to a breakable char. */
+               n = destspc; /* n now points to a breakable char. */
                src = srcspc;
-               while( dest[n] == ' ' || dest[n] == '\n' )
+               while (dest[n] == ' ' || dest[n] == '\n')
                {
                   n--;
                }
 
                src++;
                n++;
-               if( *src == '\r' )
+               if (*src == '\r')
                   src++;
-               while( *src == ' ' )
+               while (*src == ' ')
                   src++;
                /*
-                * src now points to the new line to be put in dest. 
+                * src now points to the new line to be put in dest.
                 */
                dest[n++] = '\n';
                dest[n++] = '\r';
@@ -541,33 +527,34 @@ void write_interpret args( ( CHAR_DATA * ch, char *argument ) )
       }
 
       /*
-       * Get rid of spaces at end, and add a newline. 
+       * Get rid of spaces at end, and add a newline.
        */
 
-      while( dest[--n] == ' ' );
+      while (dest[--n] == ' ')
+         ;
       n++;
       dest[n++] = '\n';
       dest[n++] = '\r';
 
       /*
-       * Copy from dest back into buffer 
+       * Copy from dest back into buffer
        */
 
       src = buf;
-      for( i = 0; i < n; i++ )
-         *( src++ ) = dest[i];
-      *( src ) = '\0';
+      for (i = 0; i < n; i++)
+         *(src++) = dest[i];
+      *(src) = '\0';
 
       return;
    }
 
-   if( !str_cmp( argument, "clear" ) )
+   if (!str_cmp(argument, "clear"))
    {
       buf[0] = '\0';
-      send_to_char( "Done.\n\r", buf_data->ch );
+      send_to_char("Done.\n\r", buf_data->ch);
       return;
    }
 
-   send_to_char( "Command not known, type .help for help.\n\r", buf_data->ch );
+   send_to_char("Command not known, type .help for help.\n\r", buf_data->ch);
    return;
 }

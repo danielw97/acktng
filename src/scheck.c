@@ -41,7 +41,6 @@
 #endif
 #endif
 
-
 #include "ssm.h"
 
 /*  String checker, Spectrum 11/96
@@ -67,12 +66,9 @@
  *
  */
 
-
-
 /* From ban.c: */
 
 extern BAN_DATA *first_ban;
-
 
 extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
 extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
@@ -80,38 +76,38 @@ extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 
 /* Main code */
 
-static void touch( char *str )
+static void touch(char *str)
 {
    BufEntry *p;
 
-   if( !str )
+   if (!str)
       return;
 
-   if( str < string_space || str > top_string )
-      return;  /* not in string space */
+   if (str < string_space || str > top_string)
+      return; /* not in string space */
 
-   p = ( BufEntry * ) ( str - HEADER_SIZE );
+   p = (BufEntry *)(str - HEADER_SIZE);
    p->ref++;
 }
 
-static void clear( void )
+static void clear(void)
 {
    /*
-    * Set all reference counts to 0 
+    * Set all reference counts to 0
     */
 
    BufEntry *p;
 
-   for( p = ssm_buf_head; p; p = p->next )
+   for (p = ssm_buf_head; p; p = p->next)
       p->ref = 0;
 }
 
 static BufEntry *dump_ptr[2];
 
-static long dump( void )
+static long dump(void)
 {
    /*
-    * Dump strings that have ref!=usage 
+    * Dump strings that have ref!=usage
     */
 
    FILE *dumpf;
@@ -120,14 +116,14 @@ static long dump( void )
 
    if (fpReserve != NULL)
    {
-      fclose( fpReserve );
+      fclose(fpReserve);
       fpReserve = NULL;
    }
-   dumpf = fopen( "../reports/leaks.dmp", "w" );
+   dumpf = fopen("../reports/leaks.dmp", "w");
 
-   for( p = ssm_buf_head; p; p = p->next )
+   for (p = ssm_buf_head; p; p = p->next)
    {
-      if( p->usage > 0 && p->usage != p->ref )
+      if (p->usage > 0 && p->usage != p->ref)
       {
          /*
           * things to ignore:
@@ -135,11 +131,11 @@ static long dump( void )
           * * a '$' (from socials)
           */
 
-         if( !str_cmp( p->buf, "<%hhp %mm %vmv> " ) || !str_cmp( p->buf, "$" ) )
+         if (!str_cmp(p->buf, "<%hhp %mm %vmv> ") || !str_cmp(p->buf, "$"))
             continue;
 
-         fprintf( dumpf, "usage %2d/%2d, caller %s, string %s\n", p->ref, p->usage, p->caller, p->buf );
-         count += abs( p->usage - p->ref );
+         fprintf(dumpf, "usage %2d/%2d, caller %s, string %s\n", p->ref, p->usage, p->caller, p->buf);
+         count += abs(p->usage - p->ref);
       }
       dump_ptr[0] = dump_ptr[1];
       dump_ptr[1] = p;
@@ -147,551 +143,529 @@ static long dump( void )
 
    if (dumpf != NULL)
    {
-      fclose( dumpf );
+      fclose(dumpf);
       dumpf = NULL;
    }
 
    return count;
 }
 
-static void walk_mprog_data( MPROG_DATA * prog )
+static void walk_mprog_data(MPROG_DATA *prog)
 {
-   if( !prog )
+   if (!prog)
       return;
 
-   touch( prog->arglist );
-   touch( prog->comlist );
-   touch( prog->filename );
-
+   touch(prog->arglist);
+   touch(prog->comlist);
+   touch(prog->filename);
 }
-static void walk_mprog_act_data( MPROG_ACT_LIST * act )
+static void walk_mprog_act_data(MPROG_ACT_LIST *act)
 {
-   if( !act )
+   if (!act)
       return;
 
-   touch( act->buf );
-
+   touch(act->buf);
 }
 
-
-static void walk_mob_index_data( MOB_INDEX_DATA * m )
+static void walk_mob_index_data(MOB_INDEX_DATA *m)
 {
    MPROG_DATA *mobprog;
-   if( !m )
+   if (!m)
       return;
 
-   touch( m->player_name );
-   touch( m->short_descr );
-   touch( m->long_descr );
-   touch( m->description );
-   touch( m->target );
-   for( mobprog = m->first_mprog; mobprog; mobprog = mobprog->next )
-      walk_mprog_data( mobprog );
-
+   touch(m->player_name);
+   touch(m->short_descr);
+   touch(m->long_descr);
+   touch(m->description);
+   touch(m->target);
+   for (mobprog = m->first_mprog; mobprog; mobprog = mobprog->next)
+      walk_mprog_data(mobprog);
 }
 
-static void walk_ngroup_data( NPC_GROUP_DATA * ngrp )
+static void walk_ngroup_data(NPC_GROUP_DATA *ngrp)
 {
-   if( !ngrp )
+   if (!ngrp)
       return;
 
-   touch( ngrp->enemies );
-   touch( ngrp->last_fighting );
-   touch( ngrp->wants );
-   touch( ngrp->needs );
+   touch(ngrp->enemies);
+   touch(ngrp->last_fighting);
+   touch(ngrp->wants);
+   touch(ngrp->needs);
 }
 
-static void walk_ngroups( void )
+static void walk_ngroups(void)
 {
    NPC_GROUP_DATA *ngroup;
 
-   for( ngroup = first_npc_group; ngroup; ngroup = ngroup->next )
+   for (ngroup = first_npc_group; ngroup; ngroup = ngroup->next)
    {
-      walk_ngroup_data( ngroup );
+      walk_ngroup_data(ngroup);
    }
 }
 
-static void walk_pcdata( PC_DATA * p )
+static void walk_pcdata(PC_DATA *p)
 {
    int i;
 
-   if( !p )
+   if (!p)
       return;
 
-   touch( p->pwd );
-   touch( p->bamfin );
-   touch( p->bamfout );
-   touch( p->title );
-   touch( p->room_enter );
-   touch( p->room_exit );
-   touch( p->immskll );
-   touch( p->host );
-   touch( p->who_name );
-   touch( p->header );
-   touch( p->message );
-   touch( p->lastlogin );
-   touch( p->load_msg );
+   touch(p->pwd);
+   touch(p->bamfin);
+   touch(p->bamfout);
+   touch(p->title);
+   touch(p->room_enter);
+   touch(p->room_exit);
+   touch(p->immskll);
+   touch(p->host);
+   touch(p->who_name);
+   touch(p->header);
+   touch(p->message);
+   touch(p->lastlogin);
+   touch(p->load_msg);
 
-   for( i = 0; i < MAX_IGNORES; i++ )
-      touch( p->ignore_list[i] );
+   for (i = 0; i < MAX_IGNORES; i++)
+      touch(p->ignore_list[i]);
 
-   for( i = 0; i < MAX_ALIASES; i++ )
+   for (i = 0; i < MAX_ALIASES; i++)
    {
-      touch( p->alias[i] );
-      touch( p->alias_name[i] );
+      touch(p->alias[i]);
+      touch(p->alias_name[i]);
    }
-   for( i = 0; i < 5; i++ )
+   for (i = 0; i < 5; i++)
    {
-      touch( p->pedit_string[i] );
+      touch(p->pedit_string[i]);
    }
-   touch( p->pedit_state );
-   touch( p->email_address );
-   touch( p->assist_msg );
+   touch(p->pedit_state);
+   touch(p->email_address);
+   touch(p->assist_msg);
 }
-static void walk_shield_data( MAGIC_SHIELD * shield )
+static void walk_shield_data(MAGIC_SHIELD *shield)
 {
-   if( !shield )
+   if (!shield)
       return;
 
-   touch( shield->name );
-   touch( shield->absorb_message_room );
-   touch( shield->absorb_message_victim );
-   touch( shield->absorb_message_self );
-   touch( shield->wearoff_room );
-   touch( shield->wearoff_self );
-
+   touch(shield->name);
+   touch(shield->absorb_message_room);
+   touch(shield->absorb_message_victim);
+   touch(shield->absorb_message_self);
+   touch(shield->wearoff_room);
+   touch(shield->wearoff_self);
 }
 
-static void walk_note_data( NOTE_DATA * note )
+static void walk_note_data(NOTE_DATA *note)
 {
-   if( !note )
+   if (!note)
       return;
 
-   touch( note->sender );
-   touch( note->date );
-   touch( note->to_list );
-   touch( note->subject );
-   touch( note->text );
+   touch(note->sender);
+   touch(note->date);
+   touch(note->to_list);
+   touch(note->subject);
+   touch(note->text);
 }
-static void walk_brand_data( BRAND_DATA * brand )
+static void walk_brand_data(BRAND_DATA *brand)
 {
-   if( !brand )
+   if (!brand)
       return;
 
-   touch( brand->branded );
-   touch( brand->branded_by );
-   touch( brand->dt_stamp );
-   touch( brand->message );
-   touch( brand->priority );
+   touch(brand->branded);
+   touch(brand->branded_by);
+   touch(brand->dt_stamp);
+   touch(brand->message);
+   touch(brand->priority);
 }
-static void walk_brands( void )
+static void walk_brands(void)
 {
    BRAND_DATA *this_brand;
    DL_LIST *brands;
-   for( brands = first_brand; brands; brands = brands->next )
+   for (brands = first_brand; brands; brands = brands->next)
    {
       this_brand = brands->this_one;
-      walk_brand_data( this_brand );
+      walk_brand_data(this_brand);
    }
 }
 
-static void walk_shieldlist( MAGIC_SHIELD * shield )
+static void walk_shieldlist(MAGIC_SHIELD *shield)
 {
-   for( ; shield; shield = shield->next )
-      walk_shield_data( shield );
+   for (; shield; shield = shield->next)
+      walk_shield_data(shield);
 }
 
-static void walk_mprog_act( MPROG_ACT_LIST * act )
+static void walk_mprog_act(MPROG_ACT_LIST *act)
 {
-   for( ; act; act = act->next )
-      walk_mprog_act_data( act );
+   for (; act; act = act->next)
+      walk_mprog_act_data(act);
 }
 
-void walk_notelist( NOTE_DATA * pnote )
+void walk_notelist(NOTE_DATA *pnote)
 {
-   for( ; pnote; pnote = pnote->next )
-      walk_note_data( pnote );
+   for (; pnote; pnote = pnote->next)
+      walk_note_data(pnote);
 }
 
-static void walk_char_data( CHAR_DATA * ch )
+static void walk_char_data(CHAR_DATA *ch)
 {
-   if( !ch )
+   if (!ch)
       return;
 
-   walk_notelist( ch->pnote );
-   walk_pcdata( ch->pcdata );
-   walk_shieldlist( ch->first_shield );
-   walk_mprog_act( ch->first_mpact );
+   walk_notelist(ch->pnote);
+   walk_pcdata(ch->pcdata);
+   walk_shieldlist(ch->first_shield);
+   walk_mprog_act(ch->first_mpact);
 
-   touch( ch->name );
-   touch( ch->short_descr );
-   touch( ch->long_descr );
-   touch( ch->long_descr_orig );
-   touch( ch->description );
-   touch( ch->prompt );
-   touch( ch->old_prompt );
-   touch( ch->searching );
-   touch( ch->target );
+   touch(ch->name);
+   touch(ch->short_descr);
+   touch(ch->long_descr);
+   touch(ch->long_descr_orig);
+   touch(ch->description);
+   touch(ch->prompt);
+   touch(ch->old_prompt);
+   touch(ch->searching);
+   touch(ch->target);
 #ifdef DEBUG_MONEY
-   if( ch->money )
-      touch( ch->money->money_key );
-   if( ch->bank_money )
-      touch( ch->bank_money->money_key );
+   if (ch->money)
+      touch(ch->money->money_key);
+   if (ch->bank_money)
+      touch(ch->bank_money->money_key);
 #endif
-
-
 }
 
-static void walk_extra_descr_data( EXTRA_DESCR_DATA * ed )
+static void walk_extra_descr_data(EXTRA_DESCR_DATA *ed)
 {
-   if( !ed )
+   if (!ed)
       return;
 
-   touch( ed->keyword );
-   touch( ed->description );
+   touch(ed->keyword);
+   touch(ed->description);
 }
 
-static void walk_obj_index_data( OBJ_INDEX_DATA * o )
+static void walk_obj_index_data(OBJ_INDEX_DATA *o)
 {
    EXTRA_DESCR_DATA *ed;
 
-   if( !o )
+   if (!o)
       return;
 
-   for( ed = o->first_exdesc; ed; ed = ed->next )
-      walk_extra_descr_data( ed );
+   for (ed = o->first_exdesc; ed; ed = ed->next)
+      walk_extra_descr_data(ed);
 
-   touch( o->name );
-   touch( o->short_descr );
-   touch( o->description );
-   touch( o->owner );
+   touch(o->name);
+   touch(o->short_descr);
+   touch(o->description);
+   touch(o->owner);
 }
 
-
-static void walk_obj_data( OBJ_DATA * o )
+static void walk_obj_data(OBJ_DATA *o)
 {
    EXTRA_DESCR_DATA *ed;
 
-   if( !o )
+   if (!o)
       return;
 
-   for( ed = o->first_exdesc; ed; ed = ed->next )
-      walk_extra_descr_data( ed );
+   for (ed = o->first_exdesc; ed; ed = ed->next)
+      walk_extra_descr_data(ed);
 
-   touch( o->owner );
-   touch( o->name );
-   touch( o->short_descr );
-   touch( o->description );
+   touch(o->owner);
+   touch(o->name);
+   touch(o->short_descr);
+   touch(o->description);
 #ifdef DEBUG_MONEY
-   if( o->money )
-      touch( o->money->money_key );
+   if (o->money)
+      touch(o->money->money_key);
 #endif
-
-
 }
 
-static void walk_exit_data( EXIT_DATA * e )
+static void walk_exit_data(EXIT_DATA *e)
 {
-   if( !e )
+   if (!e)
       return;
 
-   touch( e->keyword );
-   touch( e->description );
+   touch(e->keyword);
+   touch(e->description);
 }
 
-static void walk_reset_data( RESET_DATA * r )
+static void walk_reset_data(RESET_DATA *r)
 {
-   if( !r )
+   if (!r)
       return;
 
-   touch( r->notes );
-   touch( r->auto_message );
+   touch(r->notes);
+   touch(r->auto_message);
 }
 
-static void walk_area_data( AREA_DATA * ad )
+static void walk_area_data(AREA_DATA *ad)
 {
 
    RESET_DATA *reset;
-   if( !ad )
+   if (!ad)
       return;
 
-   touch( ad->filename );
-   touch( ad->name );
-   touch( ad->owner );
-   touch( ad->can_read );
-   touch( ad->can_write );
-   touch( ad->keyword );   /* spec- missed strings */
-   touch( ad->level_label );  /* spec - missed strings */
-   touch( ad->reset_msg );
-   for( reset = ad->first_reset; reset; reset = reset->next )
-      walk_reset_data( reset );
-
+   touch(ad->filename);
+   touch(ad->name);
+   touch(ad->owner);
+   touch(ad->can_read);
+   touch(ad->can_write);
+   touch(ad->keyword);     /* spec- missed strings */
+   touch(ad->level_label); /* spec - missed strings */
+   touch(ad->reset_msg);
+   for (reset = ad->first_reset; reset; reset = reset->next)
+      walk_reset_data(reset);
 }
 
 /* spec - for the new rulers stuff */
-static void walk_ruler_data( RULER_DATA * ruler )
+static void walk_ruler_data(RULER_DATA *ruler)
 {
-   if( !ruler )
+   if (!ruler)
       return;
-   touch( ruler->name );
-   touch( ruler->affiliation_name );
-   touch( ruler->keywords );
+   touch(ruler->name);
+   touch(ruler->affiliation_name);
+   touch(ruler->keywords);
 }
 
-static void walk_room_index_data( ROOM_INDEX_DATA * r )
+static void walk_room_index_data(ROOM_INDEX_DATA *r)
 {
    int i;
    EXTRA_DESCR_DATA *ed;
-/*  BUILD_DATA_LIST *reset;  */
-   if( !r )
+   /*  BUILD_DATA_LIST *reset;  */
+   if (!r)
       return;
 
-   for( i = 0; i < 6; i++ )
-      walk_exit_data( r->exit[i] );
+   for (i = 0; i < 6; i++)
+      walk_exit_data(r->exit[i]);
 
-
-   for( ed = r->first_exdesc; ed; ed = ed->next )
-      walk_extra_descr_data( ed );
-   touch( r->name );
-   touch( r->description );
-   touch( r->auto_message );
+   for (ed = r->first_exdesc; ed; ed = ed->next)
+      walk_extra_descr_data(ed);
+   touch(r->name);
+   touch(r->description);
+   touch(r->auto_message);
 #ifdef DEBUG_MONEY
-   touch( r->treasure->money_key );
+   touch(r->treasure->money_key);
 #endif
 }
 
-
-static void walk_social_type( struct social_type *s )
+static void walk_social_type(struct social_type *s)
 {
 
-
-   if( !s )
+   if (!s)
       return;
-   touch( s->name );
-   touch( s->char_no_arg );
-   touch( s->others_no_arg );
-   touch( s->char_found );
-   touch( s->others_found );
-   touch( s->vict_found );
-   touch( s->char_auto );
-   touch( s->others_auto );
+   touch(s->name);
+   touch(s->char_no_arg);
+   touch(s->others_no_arg);
+   touch(s->char_found);
+   touch(s->others_found);
+   touch(s->vict_found);
+   touch(s->char_auto);
+   touch(s->others_auto);
 }
 
-static void walk_help_data( HELP_DATA * h )
+static void walk_help_data(HELP_DATA *h)
 {
-   if( !h )
+   if (!h)
       return;
 
-   touch( h->keyword );
-   touch( h->text );
+   touch(h->keyword);
+   touch(h->text);
 }
 
-static void walk_descriptor_data( DESCRIPTOR_DATA * d )
+static void walk_descriptor_data(DESCRIPTOR_DATA *d)
 {
-   if( !d )
+   if (!d)
       return;
 
-   touch( d->host );
+   touch(d->host);
 }
 
-
-
-static void walk_ban_data( BAN_DATA * b )
+static void walk_ban_data(BAN_DATA *b)
 {
-   touch( b->name );
-   touch( b->banned_by );
+   touch(b->name);
+   touch(b->banned_by);
 }
 
-
-
-static void walk_socials( void )
+static void walk_socials(void)
 {
    extern int maxSocial;
    int i;
 
-   for( i = 0; i < maxSocial; i++ )
-      walk_social_type( &social_table[i] );
+   for (i = 0; i < maxSocial; i++)
+      walk_social_type(&social_table[i]);
 }
 
-static void walk_helps( void )
+static void walk_helps(void)
 {
    HELP_DATA *h;
 
-   for( h = first_help; h; h = h->next )
-      walk_help_data( h );
+   for (h = first_help; h; h = h->next)
+      walk_help_data(h);
 }
 
-static void walk_chars( void )
+static void walk_chars(void)
 {
    CHAR_DATA *ch;
 
-   for( ch = first_char; ch; ch = ch->next )
-      walk_char_data( ch );
+   for (ch = first_char; ch; ch = ch->next)
+      walk_char_data(ch);
 }
 
-static void walk_descriptors( void )
+static void walk_descriptors(void)
 {
    DESCRIPTOR_DATA *d;
 
-   for( d = first_desc; d; d = d->next )
-      walk_descriptor_data( d );
+   for (d = first_desc; d; d = d->next)
+      walk_descriptor_data(d);
 }
 
-static void walk_objects( void )
+static void walk_objects(void)
 {
    OBJ_DATA *o;
 
-   for( o = first_obj; o; o = o->next )
-      walk_obj_data( o );
+   for (o = first_obj; o; o = o->next)
+      walk_obj_data(o);
 }
 
-static void walk_areas( void )
+static void walk_areas(void)
 {
    AREA_DATA *ad;
 
-   for( ad = first_area; ad; ad = ad->next )
-      walk_area_data( ad );
+   for (ad = first_area; ad; ad = ad->next)
+      walk_area_data(ad);
 }
 
 /* spec- more rulers stuff */
-static void walk_rulers( void )
+static void walk_rulers(void)
 {
    RULER_LIST *r;
 
-   for( r = first_ruler_list; r; r = r->next )
-      walk_ruler_data( r->this_one );
+   for (r = first_ruler_list; r; r = r->next)
+      walk_ruler_data(r->this_one);
 }
 
-static void walk_mob_indexes( void )
+static void walk_mob_indexes(void)
 {
    MOB_INDEX_DATA *m;
    int i;
 
-   for( i = 0; i < MAX_KEY_HASH; i++ )
-      for( m = mob_index_hash[i]; m; m = m->next )
-         walk_mob_index_data( m );
+   for (i = 0; i < MAX_KEY_HASH; i++)
+      for (m = mob_index_hash[i]; m; m = m->next)
+         walk_mob_index_data(m);
 }
 
-static void walk_obj_indexes( void )
+static void walk_obj_indexes(void)
 {
    OBJ_INDEX_DATA *o;
    int i;
 
-   for( i = 0; i < MAX_KEY_HASH; i++ )
-      for( o = obj_index_hash[i]; o; o = o->next )
-         walk_obj_index_data( o );
+   for (i = 0; i < MAX_KEY_HASH; i++)
+      for (o = obj_index_hash[i]; o; o = o->next)
+         walk_obj_index_data(o);
 }
 
-static void walk_room_indexes( void )
+static void walk_room_indexes(void)
 {
    ROOM_INDEX_DATA *r;
    int i;
 
-   for( i = 0; i < MAX_KEY_HASH; i++ )
-      for( r = room_index_hash[i]; r; r = r->next )
-         walk_room_index_data( r );
+   for (i = 0; i < MAX_KEY_HASH; i++)
+      for (r = room_index_hash[i]; r; r = r->next)
+         walk_room_index_data(r);
 }
 
-
-static void walk_notes( void )
+static void walk_notes(void)
 {
-   walk_notelist( first_note );
+   walk_notelist(first_note);
 }
 
-static void walk_bans( void )
+static void walk_bans(void)
 {
    BAN_DATA *b;
 
-   for( b = first_ban; b; b = b->next )
-      walk_ban_data( b );
+   for (b = first_ban; b; b = b->next)
+      walk_ban_data(b);
 }
 
-static void walk_mark_data( MARK_DATA * m )
+static void walk_mark_data(MARK_DATA *m)
 {
-   if( !m )
+   if (!m)
       return;
 
-   touch( m->message );
-   touch( m->author );
+   touch(m->message);
+   touch(m->author);
 }
 
-void walk_marklist( void )
+void walk_marklist(void)
 {
    MARK_LIST_MEMBER *tmark;
-   for( tmark = first_mark_list; tmark; tmark = tmark->next )
-      walk_mark_data( tmark->mark );
+   for (tmark = first_mark_list; tmark; tmark = tmark->next)
+      walk_mark_data(tmark->mark);
 }
 
-static void walk_message_data( MESSAGE_DATA * m )
+static void walk_message_data(MESSAGE_DATA *m)
 {
-   if( !m )
+   if (!m)
       return;
 
-   touch( m->message );
-   touch( m->author );
-   touch( m->title );
+   touch(m->message);
+   touch(m->author);
+   touch(m->title);
 }
 
-void walk_messages( MESSAGE_DATA * m )
+void walk_messages(MESSAGE_DATA *m)
 {
-   for( ; m; m = m->next )
-      walk_message_data( m );
+   for (; m; m = m->next)
+      walk_message_data(m);
 }
-void walk_boards( void )
+void walk_boards(void)
 {
    BOARD_DATA *board;
    extern BOARD_DATA *first_board;
-   for( board = first_board; board; board = board->next )
-      walk_messages( board->first_message );
+   for (board = first_board; board; board = board->next)
+      walk_messages(board->first_message);
 }
 
-
-void walk_councils( void )
+void walk_councils(void)
 {
    sh_int index;
    extern COUNCIL_DATA super_councils[MAX_SUPER];
 
-   for( index = 0; index < MAX_SUPER; index++ )
-      touch( super_councils[index].council_name );
+   for (index = 0; index < MAX_SUPER; index++)
+      touch(super_councils[index].council_name);
 }
-void walk_sysdata( void )
+void walk_sysdata(void)
 {
    sh_int looper;
-   touch( sysdata.playtesters );
-   for( looper = 0; looper < MAX_NUM_IMMS; looper++ )
-      touch( sysdata.imms[looper].this_string );
+   touch(sysdata.playtesters);
+   for (looper = 0; looper < MAX_NUM_IMMS; looper++)
+      touch(sysdata.imms[looper].this_string);
 }
 
-
-void do_scheck( CHAR_DATA * ch, char *argument )
+void do_scheck(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];
    extern bool disable_timer_abort;
    disable_timer_abort = TRUE;
-   clear(  );
+   clear();
 
-   walk_socials(  );
-   walk_helps(  );
-   walk_chars(  );
-   walk_descriptors(  );
-   walk_objects(  );
-   walk_areas(  );
-   walk_bans(  );
+   walk_socials();
+   walk_helps();
+   walk_chars();
+   walk_descriptors();
+   walk_objects();
+   walk_areas();
+   walk_bans();
 
+   walk_mob_indexes();
+   walk_obj_indexes();
+   walk_room_indexes();
+   walk_notes();
+   walk_marklist();
+   walk_councils();
+   walk_boards();
+   walk_rulers();
+   walk_brands();
+   walk_sysdata();
+   walk_ngroups();
 
-   walk_mob_indexes(  );
-   walk_obj_indexes(  );
-   walk_room_indexes(  );
-   walk_notes(  );
-   walk_marklist(  );
-   walk_councils(  );
-   walk_boards(  );
-   walk_rulers(  );
-   walk_brands(  );
-   walk_sysdata(  );
-   walk_ngroups(  );
-
-   sprintf( buf, "%ld leaks dumped to leaks.dmp\n\r", dump(  ) );
-   send_to_char( buf, ch );
+   sprintf(buf, "%ld leaks dumped to leaks.dmp\n\r", dump());
+   send_to_char(buf, ch);
    disable_timer_abort = FALSE;
 }

@@ -1773,9 +1773,9 @@ void do_affected(CHAR_DATA *ch, char *argument)
          {
             char duration[MSL];
             if (paf->duration_type == DURATION_HOUR)
-               sprintf(duration,"hours");
+               sprintf(duration, "hours");
             else
-               sprintf(duration,"rounds");
+               sprintf(duration, "rounds");
             if (paf->location > APPLY_NONE)
             {
                sprintf(buf,
@@ -2152,7 +2152,7 @@ void do_who(CHAR_DATA *ch, char *argument)
          if (!print)
          {
             print = TRUE;
-            switch(i)
+            switch (i)
             {
             case 0:
                safe_strcat(MAX_STRING_LENGTH, buf,
@@ -2175,7 +2175,7 @@ void do_who(CHAR_DATA *ch, char *argument)
                break;
             }
          }
-         if(wch->level > MAX_MORTAL)
+         if (wch->level > MAX_MORTAL)
          {
             switch (wch->level)
             {
@@ -4077,25 +4077,25 @@ void do_learned(CHAR_DATA *ch, char *argument)
 
    if (IS_NPC(ch))
    {
-      send_to_char("Nuh uh naughty naughty!\n\r",ch);
+      send_to_char("Nuh uh naughty naughty!\n\r", ch);
       return;
    }
 
    sprintf(buf1, "Skills learned:\n\r");
-   for(int i = 0; i < MAX_SKILL; i++)
+   for (int i = 0; i < MAX_SKILL; i++)
    {
       if (can_use_skill(ch, i))
       {
-         sprintf( buf, "@@W%16s-@@y%-7s@@g  ", skill_table[i].name, learnt_name( i, ch->pcdata->learned[i] ) );
+         sprintf(buf, "@@W%16s-@@y%-7s@@g  ", skill_table[i].name, learnt_name(i, ch->pcdata->learned[i]));
 
-         safe_strcat( MAX_STRING_LENGTH, buf1, buf );
-         if( ++col % 3 == 0 )
-            safe_strcat( MAX_STRING_LENGTH, buf1, "\n\r" );
+         safe_strcat(MAX_STRING_LENGTH, buf1, buf);
+         if (++col % 3 == 0)
+            safe_strcat(MAX_STRING_LENGTH, buf1, "\n\r");
       }
    }
 
-   safe_strcat( MAX_STRING_LENGTH, buf1, buf );
-   send_to_char( buf1, ch );
+   safe_strcat(MAX_STRING_LENGTH, buf1, buf);
+   send_to_char(buf1, ch);
 }
 
 /* Do_prompt from Morgenes from Aldara Mud */

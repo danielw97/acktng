@@ -27,7 +27,7 @@
 
 #include "signal.h"
 
-#define DEC_EMAIL_H   1
+#define DEC_EMAIL_H 1
 #ifndef DEC_TYPEDEFS_H
 #include "typedefs.h"
 #endif
@@ -36,4 +36,4 @@
 #include "utils.h"
 #endif
 
-void send_rep_out( CHAR_DATA * ch, char *outbuf, bool mailme, char *msub );
+void send_rep_out(CHAR_DATA *ch, char *outbuf, bool mailme, char *msub);

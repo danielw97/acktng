@@ -1,7 +1,7 @@
 #include "globals.h"
 
 bool is_legal_stance(CHAR_DATA *ch, int stance);
-/* 
+/*
    char *name;
    int ac_mod;
    int dr_mod;
@@ -15,7 +15,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Adventurer", 0, 0, 0, 0, 0, 0, 0,
      MORTAL, -1, -1, -1, -1},
     /* Mortal stances */
-    {"Mage", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT, 
+    {"Mage", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT,
      MORTAL, CLASS_MAG, 60, -1, -1, CLASS_MAG},
     {"Psionicist", 5, -3, -3, 0, 0, 2, STANCE_MULTI_CAST | STANCE_NO_HIT,
      MORTAL, CLASS_PSI, 60, -1, -1, CLASS_PSI},
@@ -91,7 +91,7 @@ void do_stance(CHAR_DATA *ch, char *argument)
     {
         sprintf(msg_buf, "\n\r%s\n\r", "Fighting Stances available to you:\n\r");
 
-        for(int i = 0; i < MAX_STANCE; i++)
+        for (int i = 0; i < MAX_STANCE; i++)
         {
             if (is_legal_stance(ch, i))
             {

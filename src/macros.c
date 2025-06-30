@@ -25,7 +25,6 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,150 +34,141 @@
 #include "tables.h"
 #include <math.h>
 
-void reset_gain_stats( CHAR_DATA * ch )
+void reset_gain_stats(CHAR_DATA *ch)
 {
    int curr;
    ch->pcdata->mana_from_gain = 100;
    ch->pcdata->hp_from_gain = 25;
    ch->pcdata->move_from_gain = 0;
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       curr = ch->lvl[i];
       ch->lvl[i] = -1;
-      for(int j = 0; j < curr; j++)
+      for (int j = 0; j < curr; j++)
       {
          advance_level(ch, i, FALSE);
       }
    }
 
-   for(int i = 0; i < MAX_REMORT; i++)
+   for (int i = 0; i < MAX_REMORT; i++)
    {
       curr = ch->remort[i];
       ch->remort[i] = -1;
-      for(int j = 0; j < curr; j++)
+      for (int j = 0; j < curr; j++)
       {
          advance_level_remort(ch, i, FALSE);
       }
    }
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       curr = ch->adept[i];
       ch->adept[i] = -1;
-      for(int j = 0; j < curr; j++)
+      for (int j = 0; j < curr; j++)
       {
          advance_level_adept(ch, i, FALSE);
       }
    }
 }
 
-
-
-sh_int get_remort_level( CHAR_DATA * ch )
+sh_int get_remort_level(CHAR_DATA *ch)
 {
    sh_int index;
    sh_int max_remort_level = 0;
 
-   if( !is_remort( ch ) )
+   if (!is_remort(ch))
       return 0;
 
-   for( index = 0; index < MAX_CLASS; index++ )
-      if( ch->remort[index] > max_remort_level )
+   for (index = 0; index < MAX_CLASS; index++)
+      if (ch->remort[index] > max_remort_level)
          max_remort_level = ch->remort[index];
    return max_remort_level;
 }
 
-
-
-sh_int get_psuedo_level( CHAR_DATA * ch )
+sh_int get_psuedo_level(CHAR_DATA *ch)
 {
 
    sh_int psuedo_level = 0;
    sh_int index, total_remort_level = 0;
 
-
-   if( !is_remort( ch ) || IS_NPC( ch ) )
+   if (!is_remort(ch) || IS_NPC(ch))
       return ch->level;
    else
    {
 
-      for( index = 0; index < MAX_REMORT; index++ )
+      for (index = 0; index < MAX_REMORT; index++)
 
-         if( ch->remort[index] > 0 )
+         if (ch->remort[index] > 0)
 
             total_remort_level += ch->remort[index];
 
-
-
-      psuedo_level = ( ch->level + ( total_remort_level / 4 ) );
+      psuedo_level = (ch->level + (total_remort_level / 4));
    }
    return psuedo_level;
-
 }
 
-
-bool ok_to_use( CHAR_DATA * ch, int value )
+bool ok_to_use(CHAR_DATA *ch, int value)
 {
-   if( value == NO_USE && get_trust( ch ) < 85 )
+   if (value == NO_USE && get_trust(ch) < 85)
    {
-      send_to_char( "Only Creators may use this value.\n\r", ch );
+      send_to_char("Only Creators may use this value.\n\r", ch);
       return FALSE;
    }
    return TRUE;
 }
 
-bool check_level_use( CHAR_DATA * ch, int level )
+bool check_level_use(CHAR_DATA *ch, int level)
 {
    char buf[MAX_STRING_LENGTH];
    char out[MAX_STRING_LENGTH];
 
-   if( get_trust( ch ) >= level )
+   if (get_trust(ch) >= level)
       return TRUE;
 
-   sprintf( out, "This option limited to " );
+   sprintf(out, "This option limited to ");
 
-   switch ( level )
+   switch (level)
    {
-      case 85:
-         strcat( out, "Creators only.\n\r" );
-         break;
-      case 84:
-         strcat( out, "Supremes or higher.\n\r" );
-         break;
-      case 83:
-         strcat( out, "Dieties or higher.\n\r" );
-         break;
-      case 82:
-         strcat( out, "Immortals or higher.\n\r" );
-         break;
-      case 81:
-         strcat( out, "Adepts or higher.\n\r" );
-         break;
-      default:
-         sprintf( buf, "level %d players and higher.\n\r", level );
-         strcat( out, buf );
+   case 85:
+      strcat(out, "Creators only.\n\r");
+      break;
+   case 84:
+      strcat(out, "Supremes or higher.\n\r");
+      break;
+   case 83:
+      strcat(out, "Dieties or higher.\n\r");
+      break;
+   case 82:
+      strcat(out, "Immortals or higher.\n\r");
+      break;
+   case 81:
+      strcat(out, "Adepts or higher.\n\r");
+      break;
+   default:
+      sprintf(buf, "level %d players and higher.\n\r", level);
+      strcat(out, buf);
    }
-   send_to_char( out, ch );
+   send_to_char(out, ch);
    return FALSE;
 }
 
-long exp_to_level_adept( CHAR_DATA * ch )
+long exp_to_level_adept(CHAR_DATA *ch)
 {
    long exp;
    int i;
    bool found = FALSE;
 
-   for( i = 0; i < MAX_CLASS && !found; i++)
+   for (i = 0; i < MAX_CLASS && !found; i++)
    {
       if (ch->adept[i] > 0)
          found = TRUE;
    }
 
    if (!found)
-     return 6969;
+      return 6969;
 
-   exp = ( 30000 + ( ch->adept[i] * 5000 ) );
+   exp = (30000 + (ch->adept[i] * 5000));
 
    if (ch->adept[i] > 1)
       exp *= ch->adept[i] / 2;
@@ -186,22 +176,22 @@ long exp_to_level_adept( CHAR_DATA * ch )
    return exp * 10;
 }
 
-long exp_to_level_remort( CHAR_DATA * ch, int index )
+long exp_to_level_remort(CHAR_DATA *ch, int index)
 {
    long cost;
 
    if (IS_NPC(ch))
       return 69;
 
-   if(ch->remort[index] <= 0)
+   if (ch->remort[index] <= 0)
       return 0;
 
-   cost = get_cost_to_level_remort( ch, index );
+   cost = get_cost_to_level_remort(ch, index);
 
-   return ( cost );
+   return (cost);
 }
 
-long exp_to_level( CHAR_DATA * ch, int index )
+long exp_to_level(CHAR_DATA *ch, int index)
 {
    int mult = 0;
    int diff = 0;
@@ -211,19 +201,19 @@ long exp_to_level( CHAR_DATA * ch, int index )
       return 69;
 
    if (index == ch->pcdata->order[0])
-         mult = 3;
+      mult = 3;
    else if (index == ch->pcdata->order[1])
-         mult = 4;
+      mult = 4;
    else if (index == ch->pcdata->order[2])
-         mult = 5;
+      mult = 5;
    else if (index == ch->pcdata->order[3])
-         mult = 6;
+      mult = 6;
    else
-         mult = 69;
+      mult = 69;
 
-   cost = get_cost_to_level( ch, index );
+   cost = get_cost_to_level(ch, index);
 
-   for(int i = 0; i < MAX_CLASS; i++)
+   for (int i = 0; i < MAX_CLASS; i++)
    {
       if (ch->lvl[i] > diff)
          diff = ch->lvl[i];
@@ -242,193 +232,182 @@ long exp_to_level( CHAR_DATA * ch, int index )
 
    cost = cost * mult / 4.3;
 
-   return ( cost );
+   return (cost);
 }
 
-int exp_to_level_vamp( int level )
+int exp_to_level_vamp(int level)
 {
    int exp = 0;
 
-   switch ( level )
+   switch (level)
    {
-      case 0:
-      case 1:
-      case 3:
-      case 4:
-      case 5:
-         exp = ( 250 + level * 5 );
-         break;
-      case 6:
-      case 7:
-      case 8:
-      case 9:
-         exp = ( 300 + level * 6 );
-         break;
-      case 10:
-      case 11:
-      case 12:
-         exp = ( 350 + level * 5 );
-         break;
-      case 13:
-      case 14:
-      case 15:
-      case 16:
-         exp = ( 450 + level * 6 );
-         break;
-      case 17:
-      case 18:
-      case 19:
-      case 20:
-         exp = ( 500 + level * 5 );
-         break;
-
+   case 0:
+   case 1:
+   case 3:
+   case 4:
+   case 5:
+      exp = (250 + level * 5);
+      break;
+   case 6:
+   case 7:
+   case 8:
+   case 9:
+      exp = (300 + level * 6);
+      break;
+   case 10:
+   case 11:
+   case 12:
+      exp = (350 + level * 5);
+      break;
+   case 13:
+   case 14:
+   case 15:
+   case 16:
+      exp = (450 + level * 6);
+      break;
+   case 17:
+   case 18:
+   case 19:
+   case 20:
+      exp = (500 + level * 5);
+      break;
    }
-   return ( exp );
-
+   return (exp);
 }
 
-int exp_to_level_wolf( int level )
+int exp_to_level_wolf(int level)
 {
    int exp = 0;
 
-   switch ( level )
+   switch (level)
    {
-      case 0:
-      case 1:
-      case 3:
-      case 4:
-      case 5:
-         exp = ( 250 + level * 5 );
-         break;
-      case 6:
-      case 7:
-      case 8:
-      case 9:
-         exp = ( 300 + level * 6 );
-         break;
-      case 10:
-      case 11:
-      case 12:
-         exp = ( 400 + level * 6 );
-         break;
-      case 13:
-      case 14:
-      case 15:
-      case 16:
-         exp = ( 550 + level * 6.5 );
-         break;
-      case 17:
-      case 18:
-      case 19:
-      case 20:
-         exp = ( 500 + level * 7 );
-         break;
-
+   case 0:
+   case 1:
+   case 3:
+   case 4:
+   case 5:
+      exp = (250 + level * 5);
+      break;
+   case 6:
+   case 7:
+   case 8:
+   case 9:
+      exp = (300 + level * 6);
+      break;
+   case 10:
+   case 11:
+   case 12:
+      exp = (400 + level * 6);
+      break;
+   case 13:
+   case 14:
+   case 15:
+   case 16:
+      exp = (550 + level * 6.5);
+      break;
+   case 17:
+   case 18:
+   case 19:
+   case 20:
+      exp = (500 + level * 7);
+      break;
    }
-   return ( exp );
-
+   return (exp);
 }
 
-int exp_for_mobile( int level, CHAR_DATA * mob )
+int exp_for_mobile(int level, CHAR_DATA *mob)
 {
    int value, base_value;
    base_value = exp_table[level].mob_base;
    value = base_value;
 
-/* now we have the base for the mobs level..let's add multipliers based on the skills it has 
-   thse multpliers should add up to no more than 150% of the base, for a total of 2.5 times base
-   max exp for the mob--that's with EVERY skill in the book :)   */
+   /* now we have the base for the mobs level..let's add multipliers based on the skills it has
+      thse multpliers should add up to no more than 150% of the base, for a total of 2.5 times base
+      max exp for the mob--that's with EVERY skill in the book :)   */
 
-
-   if( IS_SET( mob->skills, MOB_SECOND ) )
+   if (IS_SET(mob->skills, MOB_SECOND))
       value += .05 * base_value;
-   if( IS_SET( mob->skills, MOB_THIRD ) )
+   if (IS_SET(mob->skills, MOB_THIRD))
       value += .200 * base_value;
-   if( IS_SET( mob->skills, MOB_FOURTH ) )
+   if (IS_SET(mob->skills, MOB_FOURTH))
       value += .1 * base_value;
-   if( IS_SET( mob->skills, MOB_FIFTH ) )
+   if (IS_SET(mob->skills, MOB_FIFTH))
       value += .200 * base_value;
-   if( IS_SET( mob->skills, MOB_SIXTH ) )
+   if (IS_SET(mob->skills, MOB_SIXTH))
       value += .1 * base_value;
-   if( IS_SET( mob->skills, MOB_PUNCH ) )
+   if (IS_SET(mob->skills, MOB_PUNCH))
       value += .050 * base_value;
-   if( IS_SET( mob->skills, MOB_HEADBUTT ) )
+   if (IS_SET(mob->skills, MOB_HEADBUTT))
       value += .100 * base_value;
-   if( IS_SET( mob->skills, MOB_KNEE ) )
+   if (IS_SET(mob->skills, MOB_KNEE))
       value += .050 * base_value;
-   if( IS_SET( mob->skills, MOB_DISARM ) )
+   if (IS_SET(mob->skills, MOB_DISARM))
       value += .050 * base_value;
-   if( IS_SET( mob->skills, MOB_TRIP ) )
+   if (IS_SET(mob->skills, MOB_TRIP))
       value += .050 * base_value;
-   if( IS_SET( mob->skills, MOB_NODISARM ) )
+   if (IS_SET(mob->skills, MOB_NODISARM))
       value += .150 * base_value;
-   if( IS_SET( mob->skills, MOB_DODGE ) )
+   if (IS_SET(mob->skills, MOB_DODGE))
       value += .150 * base_value;
-   if( IS_SET( mob->skills, MOB_COUNTER ) )
+   if (IS_SET(mob->skills, MOB_COUNTER))
       value += .200 * base_value;
-   if( IS_SET( mob->skills, MOB_PARRY ) )
+   if (IS_SET(mob->skills, MOB_PARRY))
       value += .05 * base_value;
-   if( IS_SET( mob->skills, MOB_MARTIAL ) )
+   if (IS_SET(mob->skills, MOB_MARTIAL))
       value += .200 * base_value;
-   if( IS_SET( mob->skills, MOB_ENHANCED ) )
+   if (IS_SET(mob->skills, MOB_ENHANCED))
       value += .300 * base_value;
-   if( IS_SET( mob->skills, MOB_NOTRIP ) )
+   if (IS_SET(mob->skills, MOB_NOTRIP))
       value += .100 * base_value;
-   if( IS_SET( mob->skills, MOB_DUALWIELD ) )
+   if (IS_SET(mob->skills, MOB_DUALWIELD))
       value += .050 * base_value;
-   if( IS_SET( mob->skills, MOB_DIRT ) )
+   if (IS_SET(mob->skills, MOB_DIRT))
       value += .150 * base_value;
-   if( IS_SET( mob->skills, MOB_CHARGE ) )
+   if (IS_SET(mob->skills, MOB_CHARGE))
       value += .050 * base_value;
 
-
-   if( IS_AFFECTED( mob, AFF_SANCTUARY ) )
+   if (IS_AFFECTED(mob, AFF_SANCTUARY))
       value += .400 * base_value;
-   if( IS_AFFECTED( mob, AFF_INVISIBLE ) )
+   if (IS_AFFECTED(mob, AFF_INVISIBLE))
       value += .050 * base_value;
-   if( IS_AFFECTED( mob, AFF_DETECT_INVIS ) )
+   if (IS_AFFECTED(mob, AFF_DETECT_INVIS))
       value += .100 * base_value;
-   if( IS_AFFECTED( mob, AFF_ANTI_MAGIC ) )
+   if (IS_AFFECTED(mob, AFF_ANTI_MAGIC))
       value += .350 * base_value;
 
-   if( IS_AFFECTED( mob, AFF_CLOAK_FLAMING ) )
+   if (IS_AFFECTED(mob, AFF_CLOAK_FLAMING))
       value += .600 * base_value;
-   if( IS_AFFECTED( mob, AFF_CLOAK_ABSORPTION ) )
+   if (IS_AFFECTED(mob, AFF_CLOAK_ABSORPTION))
       value += .150 * base_value;
-   if( IS_AFFECTED( mob, AFF_CLOAK_REFLECTION ) )
+   if (IS_AFFECTED(mob, AFF_CLOAK_REFLECTION))
       value += .350 * base_value;
 
-   if( ( IS_AFFECTED( mob, AFF_CLOAK_REFLECTION ) )
-       && ( IS_AFFECTED( mob, AFF_CLOAK_ABSORPTION ) ) && ( IS_AFFECTED( mob, AFF_CLOAK_FLAMING ) ) )
+   if ((IS_AFFECTED(mob, AFF_CLOAK_REFLECTION)) && (IS_AFFECTED(mob, AFF_CLOAK_ABSORPTION)) && (IS_AFFECTED(mob, AFF_CLOAK_FLAMING)))
       value += .200 * base_value;
 
-
-   if( IS_SET( mob->def, DEF_CURE_LIGHT ) )
+   if (IS_SET(mob->def, DEF_CURE_LIGHT))
       value += .100 * base_value;
-   if( IS_SET( mob->def, DEF_CURE_SERIOUS ) )
+   if (IS_SET(mob->def, DEF_CURE_SERIOUS))
       value += .200 * base_value;
-   if( IS_SET( mob->def, DEF_CURE_CRITIC ) )
+   if (IS_SET(mob->def, DEF_CURE_CRITIC))
       value += .350 * base_value;
-   if( IS_SET( mob->def, DEF_HEAL ) )
+   if (IS_SET(mob->def, DEF_HEAL))
       value += .400 * base_value;
-   if( IS_SET( mob->def, DEF_FIRESHIELD ) )
+   if (IS_SET(mob->def, DEF_FIRESHIELD))
       value += .300 * base_value;
-   if( IS_SET( mob->def, DEF_SHOCKSHIELD ) )
+   if (IS_SET(mob->def, DEF_SHOCKSHIELD))
       value += .200 * base_value;
-   if( IS_SET( mob->def, DEF_ICESHIELD ) )
+   if (IS_SET(mob->def, DEF_ICESHIELD))
       value += .100 * base_value;
 
-   if( IS_SET( mob->act, ACT_SOLO ) )
+   if (IS_SET(mob->act, ACT_SOLO))
       value += .500 * base_value;
 
-
-
-   return ( value );
+   return (value);
 }
 
-
 /*
- * Functions to return details regarding a PC and skill_table 
+ * Functions to return details regarding a PC and skill_table
  * Uses 2 #defined values in merc.h to determine what to return
  * These also make adapting to remort classes a lot easier - all
  * the code goes here instead of in all the skills and do_cast()
@@ -437,14 +416,14 @@ int exp_for_mobile( int level, CHAR_DATA * mob )
  * or remortals, so use that here, and use correct array.
  */
 
-int skill_table_lookup( CHAR_DATA * ch, int sn, int return_type )
+int skill_table_lookup(CHAR_DATA *ch, int sn, int return_type)
 {
    int best_class = -1;
    int best_level = -1;
    int return_value;
    int cnt;
 
-   if( IS_NPC( ch ) )
+   if (IS_NPC(ch))
    {
       best_class = ch->class;
       best_level = ch->level;
@@ -452,64 +431,64 @@ int skill_table_lookup( CHAR_DATA * ch, int sn, int return_type )
    else
    {
       /*
-       * Check normal classes first 
+       * Check normal classes first
        */
 
-      switch ( skill_table[sn].flag1 )
+      switch (skill_table[sn].flag1)
       {
-         case MORTAL:
-            for( cnt = 0; cnt < MAX_CLASS; cnt++ )
+      case MORTAL:
+         for (cnt = 0; cnt < MAX_CLASS; cnt++)
+         {
+            if (ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] && ch->lvl[cnt] > best_level)
             {
-               if( ch->lvl[cnt] >= skill_table[sn].skill_level[cnt] && ch->lvl[cnt] > best_level )
-               {
-                  best_level = ch->lvl[cnt];
-                  best_class = cnt;
-               }
+               best_level = ch->lvl[cnt];
+               best_class = cnt;
             }
-            break;
-         case REMORT:
-            for( cnt = 0; cnt < MAX_REMORT; cnt++ )
+         }
+         break;
+      case REMORT:
+         for (cnt = 0; cnt < MAX_REMORT; cnt++)
+         {
+            if (ch->remort[cnt] >= skill_table[sn].skill_level[cnt] && ch->remort[cnt] > best_level)
             {
-               if( ch->remort[cnt] >= skill_table[sn].skill_level[cnt] && ch->remort[cnt] > best_level )
-               {
-                  best_level = ch->remort[cnt];
-                  best_class = cnt;
-               }
+               best_level = ch->remort[cnt];
+               best_class = cnt;
             }
-            break;
+         }
+         break;
       }
    }
-   switch ( return_type )
+   switch (return_type)
    {
-      case RETURN_BEST_CLASS:
-         return_value = best_class;
-         break;
-      case RETURN_BEST_LEVEL:
-         return_value = best_level;
-         break;
-      default:
-         bug( "skill_table_lookup: invalid return_type:%d", return_type );
-         return_value = -1;
-         break;
+   case RETURN_BEST_CLASS:
+      return_value = best_class;
+      break;
+   case RETURN_BEST_LEVEL:
+      return_value = best_level;
+      break;
+   default:
+      bug("skill_table_lookup: invalid return_type:%d", return_type);
+      return_value = -1;
+      break;
    }
-   return ( return_value );
+   return (return_value);
 }
 
-bool is_remort( CHAR_DATA * ch )
+bool is_remort(CHAR_DATA *ch)
 {
-   if( IS_NPC( ch ) )
+   if (IS_NPC(ch))
       return FALSE;
 
    for (int i = 0; i < MAX_REMORT; i++)
    {
-      if( ch->remort[i] > 0 )
+      if (ch->remort[i] > 0)
          return TRUE;
    }
 
    return FALSE;
 }
 
-bool is_adept( CHAR_DATA *ch )
+bool is_adept(CHAR_DATA *ch)
 {
    if (IS_NPC(ch))
       return FALSE;
@@ -523,7 +502,7 @@ bool is_adept( CHAR_DATA *ch )
    return FALSE;
 }
 
-int get_item_value( OBJ_DATA * obj )
+int get_item_value(OBJ_DATA *obj)
 {
    AFFECT_DATA *this_aff;
    int ac_mod = 0;
@@ -532,117 +511,115 @@ int get_item_value( OBJ_DATA * obj )
    int hr_mod = 0;
    int mana_mod = 0;
    /*
-    * int     move_mod = 0;  
+    * int     move_mod = 0;
     */
    int save_mod = 0;
    int cost = 0;
    sh_int wear_loc = WEAR_NONE;
    char buf[MSL];
 
-
-
-/* fix this up to use apply_ac by getting the wear loc */
-   for( wear_loc = 1; wear_loc < MAX_WEAR; wear_loc++ )
+   /* fix this up to use apply_ac by getting the wear loc */
+   for (wear_loc = 1; wear_loc < MAX_WEAR; wear_loc++)
    {
-      if( CAN_WEAR( obj, ( 1 << wear_loc ) ) )
+      if (CAN_WEAR(obj, (1 << wear_loc)))
          break;
    }
-   if( wear_loc == MAX_WEAR )
+   if (wear_loc == MAX_WEAR)
    {
       /*
        * sprintf( buf, "Object has no wear loc" );
-       * monitor_chan( buf, MONITOR_OBJ );  
+       * monitor_chan( buf, MONITOR_OBJ );
        */
       ac_mod = 0;
    }
    else
-      ac_mod = apply_ac( obj, 1 << wear_loc );
+      ac_mod = apply_ac(obj, 1 << wear_loc);
 
-   for( this_aff = obj->first_apply; this_aff != NULL; this_aff = this_aff->next )
+   for (this_aff = obj->first_apply; this_aff != NULL; this_aff = this_aff->next)
    {
-      switch ( this_aff->location )
+      switch (this_aff->location)
       {
-         default:
-            bug( "Get_item_value: unknown location %d.", this_aff->location );
-            sprintf( buf, "Get_item_value called for unknown location %d.", this_aff->location );
-            monitor_chan( buf, MONITOR_OBJ );
-            break;
-         case APPLY_NONE:
-            break;
-         case APPLY_STR:
-            break;
-         case APPLY_DEX:
-            break;
-         case APPLY_INT:
-            break;
-         case APPLY_WIS:
-            break;
-         case APPLY_CON:
-            break;
-         case APPLY_SEX:
-            break;
-         case APPLY_CLASS:
-            break;
-         case APPLY_LEVEL:
-            break;
-         case APPLY_AGE:
-            break;
-         case APPLY_HEIGHT:
-            break;
-         case APPLY_WEIGHT:
-            break;
-         case APPLY_MANA:
-            mana_mod += this_aff->modifier;
-            break;
-         case APPLY_HIT:
-            hp_mod += this_aff->modifier;
-            break;
-         case APPLY_MOVE:
-            break;
-         case APPLY_GOLD:
-            break;
-         case APPLY_EXP:
-            break;
-         case APPLY_AC:
-            ac_mod += this_aff->modifier;
-            break;
-         case APPLY_HITROLL:
-            hr_mod += this_aff->modifier;
-            break;
-         case APPLY_DAMROLL:
-            dr_mod += this_aff->modifier;
-            break;
-         case APPLY_SAVING_PARA:
-         case APPLY_SAVING_ROD:
-         case APPLY_SAVING_PETRI:
-         case APPLY_SAVING_BREATH:
-         case APPLY_SAVING_SPELL:
-            save_mod += this_aff->modifier;
-            break;
-         case APPLY_SPELLPOWER:
-         case APPLY_SPELL_CRIT:
-         case APPLY_SPELL_CRIT_MULT:
-         case APPLY_CRIT:
-         case APPLY_CRIT_MULT:
-         case APPLY_DAMCAP:
+      default:
+         bug("Get_item_value: unknown location %d.", this_aff->location);
+         sprintf(buf, "Get_item_value called for unknown location %d.", this_aff->location);
+         monitor_chan(buf, MONITOR_OBJ);
+         break;
+      case APPLY_NONE:
+         break;
+      case APPLY_STR:
+         break;
+      case APPLY_DEX:
+         break;
+      case APPLY_INT:
+         break;
+      case APPLY_WIS:
+         break;
+      case APPLY_CON:
+         break;
+      case APPLY_SEX:
+         break;
+      case APPLY_CLASS:
+         break;
+      case APPLY_LEVEL:
+         break;
+      case APPLY_AGE:
+         break;
+      case APPLY_HEIGHT:
+         break;
+      case APPLY_WEIGHT:
+         break;
+      case APPLY_MANA:
+         mana_mod += this_aff->modifier;
+         break;
+      case APPLY_HIT:
+         hp_mod += this_aff->modifier;
+         break;
+      case APPLY_MOVE:
+         break;
+      case APPLY_GOLD:
+         break;
+      case APPLY_EXP:
+         break;
+      case APPLY_AC:
+         ac_mod += this_aff->modifier;
+         break;
+      case APPLY_HITROLL:
+         hr_mod += this_aff->modifier;
+         break;
+      case APPLY_DAMROLL:
+         dr_mod += this_aff->modifier;
+         break;
+      case APPLY_SAVING_PARA:
+      case APPLY_SAVING_ROD:
+      case APPLY_SAVING_PETRI:
+      case APPLY_SAVING_BREATH:
+      case APPLY_SAVING_SPELL:
+         save_mod += this_aff->modifier;
+         break;
+      case APPLY_SPELLPOWER:
+      case APPLY_SPELL_CRIT:
+      case APPLY_SPELL_CRIT_MULT:
+      case APPLY_CRIT:
+      case APPLY_CRIT_MULT:
+      case APPLY_DAMCAP:
          break;
       }
    }
 
    cost = obj->level * 1 + ac_mod * -8 + dr_mod * 5 + hr_mod * 5 + save_mod * 2 + hp_mod * 4 + mana_mod * 3;
 
-   if( IS_SET( obj->item_apply, ITEM_APPLY_ENHANCED ) )
+   if (IS_SET(obj->item_apply, ITEM_APPLY_ENHANCED))
       cost = cost * 1.3;
 
-   if( IS_SET( obj->item_apply, ITEM_APPLY_SANC ) )
+   if (IS_SET(obj->item_apply, ITEM_APPLY_SANC))
       cost = cost * 1.3;
 
-   sprintf( buf, "Cost computed for item %d.", cost );
-/*  monitor_chan( buf, MONITOR_OBJ );  */
+   sprintf(buf, "Cost computed for item %d.", cost);
+   /*  monitor_chan( buf, MONITOR_OBJ );  */
 
-   if( obj->item_type == ITEM_ENCHANTMENT )
-      cost = abs( obj->value[1] * 100 );
-   return UMAX( 10, cost );
+   if (obj->item_type == ITEM_ENCHANTMENT)
+      cost = abs(obj->value[1] * 100);
+   return UMAX(10, cost);
 
    return -1;
 }

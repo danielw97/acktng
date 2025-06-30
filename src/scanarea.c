@@ -46,22 +46,21 @@ struct range_entry
 
 hash_entry *hash_table[MAX_HASH];
 
-
-hash_entry *get_hash_entry( int vnum )
+hash_entry *get_hash_entry(int vnum)
 {
    int a;
    hash_entry *rvalue;
 
    a = vnum % MAX_HASH;
 
-   for( rvalue = hash_table[a]; rvalue != NULL; rvalue = rvalue->next )
-      if( rvalue->vnum == vnum )
+   for (rvalue = hash_table[a]; rvalue != NULL; rvalue = rvalue->next)
+      if (rvalue->vnum == vnum)
          break;
 
    return rvalue;
 }
 
-void add_hash_entry( hash_entry * entry )
+void add_hash_entry(hash_entry *entry)
 {
    int a;
 
@@ -71,7 +70,7 @@ void add_hash_entry( hash_entry * entry )
    hash_table[a] = entry;
 }
 
-void del_hash_entry( hash_entry * entry )
+void del_hash_entry(hash_entry *entry)
 {
    int a;
    hash_entry *prev_entry;
@@ -80,44 +79,43 @@ void del_hash_entry( hash_entry * entry )
    a = entry->vnum % MAX_HASH;
 
    prev_entry = NULL;
-   for( search_entry = hash_table[a]; search_entry != NULL; search_entry = search_entry->next )
+   for (search_entry = hash_table[a]; search_entry != NULL; search_entry = search_entry->next)
    {
-      if( search_entry == entry )
+      if (search_entry == entry)
          break;
       prev_entry = search_entry;
    }
 
-   if( search_entry != NULL )
-      if( prev_entry == NULL )
+   if (search_entry != NULL)
+      if (prev_entry == NULL)
          hash_table[a] = NULL;
       else
          prev_entry->next = entry->next;
 
-   free( entry );
+   free(entry);
 }
 
-void setup_hash_table( void )
+void setup_hash_table(void)
 {
    int a;
 
-   for( a = 0; a < MAX_HASH; a++ )
+   for (a = 0; a < MAX_HASH; a++)
       hash_table[a] = NULL;
-
 }
 
-void clear_hash_table( void )
+void clear_hash_table(void)
 {
    int a;
    hash_entry *entry, *next_entry;
 
-   for( a = 0; a < MAX_HASH; a++ )
+   for (a = 0; a < MAX_HASH; a++)
    {
-      if( hash_table[a] != NULL )
+      if (hash_table[a] != NULL)
       {
-         for( entry = hash_table[a]; entry != NULL; entry = next_entry )
+         for (entry = hash_table[a]; entry != NULL; entry = next_entry)
          {
             next_entry = entry->next;
-            free( entry );
+            free(entry);
          }
          hash_table[a] = NULL;
       }
@@ -126,7 +124,7 @@ void clear_hash_table( void )
 
 #define ADD_BLOCK_SIZE 50
 
-int getline( char **buffer, int *size, FILE * file )
+int getline(char **buffer, int *size, FILE *file)
 {
    char c;
    char *buf;
@@ -138,21 +136,21 @@ int getline( char **buffer, int *size, FILE * file )
    buf = *buffer;
    curpos = buf;
 
-   for( ;; )
+   for (;;)
    {
-      c = getc( file );
+      c = getc(file);
 
-      if( c == '\n' )
+      if (c == '\n')
          break;
 
-      if( c == '\r' )
+      if (c == '\r')
          continue;
 
       a++;
-      if( a == cursize )
+      if (a == cursize)
       {
          cursize += ADD_BLOCK_SIZE;
-         buf = realloc( buf, cursize );
+         buf = realloc(buf, cursize);
          curpos = buf + a;
       }
 
@@ -166,7 +164,7 @@ int getline( char **buffer, int *size, FILE * file )
    return a;
 }
 
-void add_vnum( int vnum )
+void add_vnum(int vnum)
 {
    hash_entry *entry;
    hash_entry *range, *temp;
@@ -175,77 +173,75 @@ void add_vnum( int vnum )
    int cnt;
 
    /*
-    * Adds a vnum, adding to beggining or ends 
+    * Adds a vnum, adding to beggining or ends
     */
 
    start_vnum = vnum;
    end_vnum = vnum;
 
-   for( ;; )
+   for (;;)
    {
       cnt = 0;
 
-      if( ( range = get_hash_entry( start_vnum - 1 ) ) != NULL )
+      if ((range = get_hash_entry(start_vnum - 1)) != NULL)
       {
-         if( range->offset > 0 )
-            printf( "ERROR in ranges vnum: %i range start: %i range end: %i",
-                    start_vnum, range->vnum, range->vnum + range->offset );
+         if (range->offset > 0)
+            printf("ERROR in ranges vnum: %i range start: %i range end: %i",
+                   start_vnum, range->vnum, range->vnum + range->offset);
          else
          {
             start_vnum = range->vnum + range->offset;
-            if( range->offset != 0 && ( temp = get_hash_entry( start_vnum ) ) != NULL )
-               del_hash_entry( temp );
-            del_hash_entry( range );
+            if (range->offset != 0 && (temp = get_hash_entry(start_vnum)) != NULL)
+               del_hash_entry(temp);
+            del_hash_entry(range);
             cnt = 1;
          }
       }
 
-      if( ( range = get_hash_entry( end_vnum + 1 ) ) != NULL )
+      if ((range = get_hash_entry(end_vnum + 1)) != NULL)
       {
-         if( range->offset < 0 )
-            printf( "ERROR in ranges vnum: %i range start: %i range end: %i",
-                    end_vnum, range->vnum + range->offset, range->vnum );
+         if (range->offset < 0)
+            printf("ERROR in ranges vnum: %i range start: %i range end: %i",
+                   end_vnum, range->vnum + range->offset, range->vnum);
          else
          {
             end_vnum = range->vnum + range->offset;
-            if( range->offset != 0 && ( temp = get_hash_entry( start_vnum ) ) != NULL )
-               del_hash_entry( temp );
-            del_hash_entry( range );
+            if (range->offset != 0 && (temp = get_hash_entry(start_vnum)) != NULL)
+               del_hash_entry(temp);
+            del_hash_entry(range);
             cnt = 1;
          }
       }
 
-      if( !cnt )
+      if (!cnt)
          break;
    }
 
-   if( start_vnum == end_vnum )
+   if (start_vnum == end_vnum)
    {
-      entry = malloc( sizeof( hash_entry ) );
+      entry = malloc(sizeof(hash_entry));
       entry->vnum = start_vnum;
       entry->offset = 0;
-      add_hash_entry( entry );
+      add_hash_entry(entry);
    }
    else
    {
-      entry = malloc( sizeof( hash_entry ) );
+      entry = malloc(sizeof(hash_entry));
       entry->vnum = start_vnum;
       entry->offset = end_vnum - start_vnum;
-      add_hash_entry( entry );
+      add_hash_entry(entry);
 
-      entry = malloc( sizeof( hash_entry ) );
+      entry = malloc(sizeof(hash_entry));
       entry->vnum = end_vnum;
       entry->offset = start_vnum - end_vnum;
-      add_hash_entry( entry );
+      add_hash_entry(entry);
    }
 }
 
-
 #define BUF_SIZE 255
-#define str_cmp(a,b) strcasecmp(a,b)
+#define str_cmp(a, b) strcasecmp(a, b)
 
-
-void collate_vnums( FILE * in_file )
+void collate_vnums(FILE *in_file)
 {
    int vnum;
    char *line;
@@ -254,49 +250,49 @@ void collate_vnums( FILE * in_file )
    int max_vnum = 0;
    hash_entry *entry;
 
-   line = malloc( BUF_SIZE );
+   line = malloc(BUF_SIZE);
    line_size = BUF_SIZE;
 
-   for( ;; )
+   for (;;)
    {
-      getline( &line, &line_size, in_file );
+      getline(&line, &line_size, in_file);
 
-      if( line[0] != '#' )
+      if (line[0] != '#')
          continue;
 
-      vnum = atoi( line + 1 );
+      vnum = atoi(line + 1);
 
-      if( vnum == 0 )
+      if (vnum == 0)
          break;
 
-      if( vnum > max_vnum )
+      if (vnum > max_vnum)
          max_vnum = vnum;
 
-      if( vnum < min_vnum )
+      if (vnum < min_vnum)
          min_vnum = vnum;
 
-      add_vnum( vnum );
+      add_vnum(vnum);
    }
 
-   if( max_vnum != 0 )
+   if (max_vnum != 0)
    {
-      for( vnum = min_vnum; vnum <= max_vnum; vnum++ )
+      for (vnum = min_vnum; vnum <= max_vnum; vnum++)
       {
-         if( ( entry = get_hash_entry( vnum ) ) != NULL && entry->offset >= 0 )
+         if ((entry = get_hash_entry(vnum)) != NULL && entry->offset >= 0)
          {
-            if( entry->offset == 0 )
-               printf( "     %i\n", entry->vnum );
+            if (entry->offset == 0)
+               printf("     %i\n", entry->vnum);
             else
-               printf( "     %i-%i\n", entry->vnum, entry->vnum + entry->offset );
+               printf("     %i-%i\n", entry->vnum, entry->vnum + entry->offset);
          }
       }
    }
 
-   clear_hash_table(  );
-   free( line );
+   clear_hash_table();
+   free(line);
 }
 
-int main(  )
+int main()
 {
    FILE *farea_lst;
    FILE *fcur_area;
@@ -305,63 +301,63 @@ int main(  )
    int sarea_buffer_size;
    int sfile_line_size;
 
-   sarea_buffer = malloc( BUF_SIZE );
-   sfile_line = malloc( BUF_SIZE );
+   sarea_buffer = malloc(BUF_SIZE);
+   sfile_line = malloc(BUF_SIZE);
    sarea_buffer_size = BUF_SIZE;
    sfile_line_size = BUF_SIZE;
 
-   setup_hash_table(  );
-   farea_lst = fopen( "area.lst", "r" );
+   setup_hash_table();
+   farea_lst = fopen("area.lst", "r");
 
-   for( getline( &sarea_buffer, &sarea_buffer_size, farea_lst );
-        sarea_buffer[0] != '$' && !feof( farea_lst ); getline( &sarea_buffer, &sarea_buffer_size, farea_lst ) )
+   for (getline(&sarea_buffer, &sarea_buffer_size, farea_lst);
+        sarea_buffer[0] != '$' && !feof(farea_lst); getline(&sarea_buffer, &sarea_buffer_size, farea_lst))
    {
       /*
-       * sarea_buffer contains next filename 
+       * sarea_buffer contains next filename
        */
-      printf( "\nFile: %s\n", sarea_buffer );
-      fcur_area = fopen( sarea_buffer, "r" );
-      for( ;; )
+      printf("\nFile: %s\n", sarea_buffer);
+      fcur_area = fopen(sarea_buffer, "r");
+      for (;;)
       {
-         getline( &sfile_line, &sfile_line_size, fcur_area );
-         if( !str_cmp( sfile_line, "#$" ) )
+         getline(&sfile_line, &sfile_line_size, fcur_area);
+         if (!str_cmp(sfile_line, "#$"))
             break;
 
-         if( sfile_line[0] != '#' )
+         if (sfile_line[0] != '#')
             continue;
 
-         if( !str_cmp( sfile_line, "#ROOMS" ) )
+         if (!str_cmp(sfile_line, "#ROOMS"))
          {
-            printf( "Rooms:\n" );
-            collate_vnums( fcur_area );
+            printf("Rooms:\n");
+            collate_vnums(fcur_area);
          }
 
-         if( !str_cmp( sfile_line, "#OBJECTS" ) )
+         if (!str_cmp(sfile_line, "#OBJECTS"))
          {
-            printf( "Objects:\n" );
-            collate_vnums( fcur_area );
+            printf("Objects:\n");
+            collate_vnums(fcur_area);
          }
 
-         if( !str_cmp( sfile_line, "#MOBILES" ) )
+         if (!str_cmp(sfile_line, "#MOBILES"))
          {
-            printf( "Mobiles:\n" );
-            collate_vnums( fcur_area );
+            printf("Mobiles:\n");
+            collate_vnums(fcur_area);
          }
       }
       if (fcur_area != NULL)
       {
-         fclose( fcur_area );
+         fclose(fcur_area);
          fcur_area = NULL;
       }
    }
    if (farea_lst != NULL)
    {
-      fclose( farea_lst );
+      fclose(farea_lst);
       farea_lst = NULL;
    }
 
-   free( sarea_buffer );
-   free( sfile_line );
+   free(sarea_buffer);
+   free(sfile_line);
 
    return 1;
 }

@@ -886,37 +886,37 @@ bool raise_skill(CHAR_DATA *ch, int gsn)
    if (ch->pcdata->learned[gsn] == LEVEL_ONE)
    {
       sprintf(buf, "Congratulations! You have raised %s to level one!\n\r", skill_table[gsn].name);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
    }
    if (ch->pcdata->learned[gsn] == LEVEL_TWO)
    {
       sprintf(buf, "Congratulations! You have raised %s to level two!\n\r", skill_table[gsn].name);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
    }
    if (ch->pcdata->learned[gsn] == LEVEL_THREE)
    {
       sprintf(buf, "Congratulations! You have raised %s to level three!\n\r", skill_table[gsn].name);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
    }
    if (ch->pcdata->learned[gsn] == LEVEL_FOUR)
    {
       sprintf(buf, "Congratulations! You have raised %s to level four!\n\r", skill_table[gsn].name);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
    }
    if (ch->pcdata->learned[gsn] == LEVEL_FIVE)
    {
       sprintf(buf, "Congratulations! You have raised %s to level five!\n\r", skill_table[gsn].name);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
    }
    if (ch->pcdata->learned[gsn] == LEVEL_MASTER)
    {
       sprintf(buf, "Congratulations! You have mastered %s!\n\r", skill_table[gsn].name);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
    }
    if (ch->pcdata->learned[gsn] == LEVEL_GM)
    {
       sprintf(buf, "Congratulations! You have became a grandmaster of %s!\n\r", skill_table[gsn].name);
-      send_to_char(buf,ch);
+      send_to_char(buf, ch);
    }
 
    return TRUE;
@@ -946,7 +946,7 @@ bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
 
    if (victim != NULL)
    {
-      chance += (get_psuedo_level(ch) - get_psuedo_level(victim))/2;
+      chance += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
    }
 
    if (number_percent() < chance)

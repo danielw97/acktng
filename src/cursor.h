@@ -25,18 +25,18 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-#define MAP_TOP           "0"
-#define MAP_BOTTOM        "10"
-#define MAIN_TOP          "11"
-#define MAIN_BOTTOM       "30"
+#define MAP_TOP "0"
+#define MAP_BOTTOM "10"
+#define MAIN_TOP "11"
+#define MAIN_BOTTOM "30"
 
-#define CRS_CMD          "\033["
-#define CRS_RESET         CRS_CMD "c" CRS_CMD "r"
-#define CRS_CLS           CRS_CMD "2J"
-#define CRS_HOME          CRS_CMD "0;0H"
-#define CRS_SAVE_ALL      CRS_CMD "s"
-#define CRS_REST_ALL      CRS_CMD "u"
-#define CRS_MOVE( top, bottom )   ( CRS_CMD top ";" bottom "H" )
-#define CRS_SCRL_MAP      CRS_CMD "1;10r"
-#define CRS_SCRL_MAIN     CRS_CMD "11;30r"
-#define CRS_SET_ALL       CRS_RESET CRS_CLS CRS_SCRL_MAIN CRS_CMD MAIN_TOP ";0H"
+#define CRS_CMD "\033["
+#define CRS_RESET CRS_CMD "c" CRS_CMD "r"
+#define CRS_CLS CRS_CMD "2J"
+#define CRS_HOME CRS_CMD "0;0H"
+#define CRS_SAVE_ALL CRS_CMD "s"
+#define CRS_REST_ALL CRS_CMD "u"
+#define CRS_MOVE(top, bottom) (CRS_CMD top ";" bottom "H")
+#define CRS_SCRL_MAP CRS_CMD "1;10r"
+#define CRS_SCRL_MAIN CRS_CMD "11;30r"
+#define CRS_SET_ALL CRS_RESET CRS_CLS CRS_SCRL_MAIN CRS_CMD MAIN_TOP ";0H"

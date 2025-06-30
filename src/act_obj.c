@@ -371,7 +371,7 @@ void do_gold(CHAR_DATA *ch, char *argument)
 
    sprintf(buf, "You have %d gold.\n\r", ch->gold);
 
-   send_to_char(buf,ch);
+   send_to_char(buf, ch);
 
    return;
 }

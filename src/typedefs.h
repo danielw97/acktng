@@ -41,7 +41,7 @@
 #include <errno.h>
 #include <signal.h>
 
-#define DEC_TYPEDEFS_H		1
+#define DEC_TYPEDEFS_H 1
 
 #if 0
 #ifndef DEC_ACK_H
@@ -54,38 +54,37 @@
  */
 #if defined(TRADITIONAL)
 #define const
-#define args( list )                    ( )
-#define DECLARE_DO_FUN( fun )           void fun( )
-#define DECLARE_SPEC_FUN( fun )         bool fun( )
-#define DECLARE_SPELL_FUN( fun )        bool fun( )
-#define DECLARE_OBJ_FUN( fun )		void fun( )
+#define args(list) ()
+#define DECLARE_DO_FUN(fun) void fun()
+#define DECLARE_SPEC_FUN(fun) bool fun()
+#define DECLARE_SPELL_FUN(fun) bool fun()
+#define DECLARE_OBJ_FUN(fun) void fun()
 #else
-#define args( list )                    list
-#define DECLARE_DO_FUN( fun )           DO_FUN    fun
-#define DECLARE_SPEC_FUN( fun )         SPEC_FUN  fun
-#define DECLARE_SPELL_FUN( fun )        SPELL_FUN fun
-#define DECLARE_OBJ_FUN( fun )          OBJ_FUN   fun
+#define args(list) list
+#define DECLARE_DO_FUN(fun) DO_FUN fun
+#define DECLARE_SPEC_FUN(fun) SPEC_FUN fun
+#define DECLARE_SPELL_FUN(fun) SPELL_FUN fun
+#define DECLARE_OBJ_FUN(fun) OBJ_FUN fun
 #endif
-
 
 /*
  * Short scalar types.
  * Diavolo reports AIX compiler has bugs with short types.
  */
-#if     !defined(NOWHERE)
+#if !defined(NOWHERE)
 #define NOWHERE -1
 #endif
 
-#if     !defined(FALSE)
-#define FALSE    0
+#if !defined(FALSE)
+#define FALSE 0
 #endif
 
-#if     !defined(TRUE)
-#define TRUE     1
+#if !defined(TRUE)
+#define TRUE 1
 #endif
 
-#if     defined(_AIX)
-#if     !defined(const)
+#if defined(_AIX)
+#if !defined(const)
 #define const
 #endif
 typedef int sh_int;
@@ -106,75 +105,73 @@ typedef int long_int;
  * These are all very standard library functions,
  *   but some systems have incomplete or non-ansi header files.
  */
-#if     defined(_AIX)
-char *crypt args( ( const char *key, const char *salt ) );
+#if defined(_AIX)
+char *crypt args((const char *key, const char *salt));
 #endif
 
-#if     defined(apollo)
-int atoi args( ( const char *string ) );
-void *calloc args( ( unsigned nelem, size_t size ) );
-char *crypt args( ( const char *key, const char *salt ) );
+#if defined(apollo)
+int atoi args((const char *string));
+void *calloc args((unsigned nelem, size_t size));
+char *crypt args((const char *key, const char *salt));
 #endif
 
-#if     defined(hpux)
-char *crypt args( ( const char *key, const char *salt ) );
+#if defined(hpux)
+char *crypt args((const char *key, const char *salt));
 #endif
 
-#if     defined(linux)
-char *crypt args( ( const char *key, const char *salt ) );
+#if defined(linux)
+char *crypt args((const char *key, const char *salt));
 #endif
 
-#if     defined(macintosh)
+#if defined(macintosh)
 #define NOCRYPT
-#if     defined(unix)
-#undef  unix
+#if defined(unix)
+#undef unix
 #endif
 #endif
 
-#if     defined(MIPS_OS)
-char *crypt args( ( const char *key, const char *salt ) );
+#if defined(MIPS_OS)
+char *crypt args((const char *key, const char *salt));
 #endif
 
-#if     defined(MSDOS)
+#if defined(MSDOS)
 #define NOCRYPT
-#if     defined(unix)
-#undef  unix
+#if defined(unix)
+#undef unix
 #endif
 #endif
 
-#if     defined(NeXT)
-char *crypt args( ( const char *key, const char *salt ) );
+#if defined(NeXT)
+char *crypt args((const char *key, const char *salt));
 #endif
 
-#if     defined(sequent)
-char *crypt args( ( const char *key, const char *salt ) );
-int fclose args( ( FILE * stream ) );
-int fprintf args( ( FILE * stream, const char *format, ... ) );
-int fread args( ( void *ptr, int size, int n, FILE * stream ) );
-int fseek args( ( FILE * stream, long offset, int ptrname ) );
-void perror args( ( const char *s ) );
-int ungetc args( ( int c, FILE * stream ) );
+#if defined(sequent)
+char *crypt args((const char *key, const char *salt));
+int fclose args((FILE * stream));
+int fprintf args((FILE * stream, const char *format, ...));
+int fread args((void *ptr, int size, int n, FILE *stream));
+int fseek args((FILE * stream, long offset, int ptrname));
+void perror args((const char *s));
+int ungetc args((int c, FILE *stream));
 #endif
 
-#if     defined(sun)
-char *crypt args( ( const char *key, const char *salt ) );
-int fclose args( ( FILE * stream ) );
-int fprintf args( ( FILE * stream, const char *format, ... ) );
-#if	defined(SYSV)
-size_t fread args( ( void *ptr, size_t size, size_t n, FILE * stream ) );
+#if defined(sun)
+char *crypt args((const char *key, const char *salt));
+int fclose args((FILE * stream));
+int fprintf args((FILE * stream, const char *format, ...));
+#if defined(SYSV)
+size_t fread args((void *ptr, size_t size, size_t n, FILE *stream));
 #else
-int fread args( ( void *ptr, int size, int n, FILE * stream ) );
+int fread args((void *ptr, int size, int n, FILE *stream));
 #endif
-int fseek args( ( FILE * stream, long offset, int ptrname ) );
-void perror args( ( const char *s ) );
-int ungetc args( ( int c, FILE * stream ) );
-#endif
-
-#if     defined(ultrix)
-char *crypt args( ( const char *key, const char *salt ) );
+int fseek args((FILE * stream, long offset, int ptrname));
+void perror args((const char *s));
+int ungetc args((int c, FILE *stream));
 #endif
 
-
+#if defined(ultrix)
+char *crypt args((const char *key, const char *salt));
+#endif
 
 /*
  * The crypt(3) function is not available on some operating systems.
@@ -182,8 +179,8 @@ char *crypt args( ( const char *key, const char *salt ) );
  *   United States to foreign countries.
  * Turn on NOCRYPT to keep passwords in plain text.
  */
-#if     defined(NOCRYPT)
-#define crypt(s1, s2)   (s1)
+#if defined(NOCRYPT)
+#define crypt(s1, s2) (s1)
 #endif
 
 /*
@@ -210,11 +207,11 @@ typedef struct room_index_data ROOM_INDEX_DATA;
 typedef struct shop_data SHOP_DATA;
 typedef struct time_info_data TIME_INFO_DATA;
 typedef struct weather_data WEATHER_DATA;
-typedef struct mob_prog_data MPROG_DATA;  /* MOBprogram */
-typedef struct mob_prog_act_list MPROG_ACT_LIST;   /* MOBprogram */
+typedef struct mob_prog_data MPROG_DATA;         /* MOBprogram */
+typedef struct mob_prog_act_list MPROG_ACT_LIST; /* MOBprogram */
 /* MAG Mod */
 typedef struct build_data_list BUILD_DATA_LIST; /* Online Building */
-typedef struct mobprog_item MOBPROG_ITEM; /* Mobprogs */
+typedef struct mobprog_item MOBPROG_ITEM;       /* Mobprogs */
 
 /* Zen Mod */
 typedef struct vamp_exp_table VAMP_EXP_TABLE;
@@ -248,7 +245,7 @@ typedef struct hash_entry_tp HASH_ENTRY;
 /*
  * Function types.
  */
-typedef void DO_FUN args( ( CHAR_DATA * ch, char *argument ) );
-typedef bool SPEC_FUN args( ( CHAR_DATA * ch ) );
-typedef bool SPELL_FUN args( ( int sn, int level, CHAR_DATA * ch, void *vo, OBJ_DATA * obj ) );
-typedef void OBJ_FUN args( ( OBJ_DATA * obj, CHAR_DATA * keeper ) );
+typedef void DO_FUN args((CHAR_DATA * ch, char *argument));
+typedef bool SPEC_FUN args((CHAR_DATA * ch));
+typedef bool SPELL_FUN args((int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj));
+typedef void OBJ_FUN args((OBJ_DATA * obj, CHAR_DATA *keeper));
