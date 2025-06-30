@@ -172,22 +172,8 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         {
             dam_modifier += .5;
         }
-    } /* obj == NULL */
-   /* else if (obj->carried_by != NULL)
-    {
-        ch = obj->carried_by;
-    }
-    else
-    {
-        sprintf(log_buf, "Error, object %s casting spell, but not carried by anyone.", obj->short_descr);
-        monitor_chan(log_buf, MONITOR_DEBUG);
-        return FALSE;
-    }*/
-
-    /*
-     *  Next, the victim
-     *
-     */
+    } 
+    
     int vi_strong = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].strong_realms : victim->strong_magic) : race_table[victim->race].strong_realms);
     int vi_resist = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].resist_realms : victim->resist) : race_table[victim->race].resist_realms);
     int vi_weak = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].weak_realms : victim->weak_magic) : race_table[victim->race].weak_realms);

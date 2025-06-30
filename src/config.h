@@ -100,6 +100,14 @@
 
 #define STAT_MAX 30
 
+#define LEVEL_ONE 20
+#define LEVEL_TWO 200
+#define LEVEL_THREE 2000
+#define LEVEL_FOUR 10000
+#define LEVEL_FIVE 40000
+#define LEVEL_MASTER 100000
+#define LEVEL_GM 200000
+
 /* Mortal */
 #define CLASS_MAG 0
 #define CLASS_CLE 1

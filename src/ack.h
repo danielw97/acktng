@@ -1215,6 +1215,7 @@ void set_title args((CHAR_DATA * ch, char *title));
 char *color_string args((CHAR_DATA * CH, char *argument));
 char *get_family_name args((CHAR_DATA * ch));
 char *get_tribe_name args((CHAR_DATA * ch));
+void do_learned args( (CHAR_DATA *ch, char *argument) );
 
 /* act_mob.c */
 void int_combat_handler args((CHAR_DATA * ch, CHAR_DATA *victim));

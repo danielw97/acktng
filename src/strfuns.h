@@ -51,7 +51,7 @@
 
 
 
-char *learnt_name args( ( int learnt ) );
+char *learnt_name args( ( int sn, int learnt ) );
 int my_strlen args( ( const char *text ) );
 char *get_moon_phase_name args( ( void ) );
 char *get_tribe_standing_name args( ( int standing ) );

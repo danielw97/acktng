@@ -4073,6 +4073,27 @@ void do_pagelen(CHAR_DATA *ch, char *argument)
    return;
 }
 
+void do_learned(CHAR_DATA *ch, char *argument)
+{
+   int col = 0;
+   
+   send_to_char("Skills learned:\n\r",ch);
+   for(int i = 0; i < MAX_SKILL; i++)
+   {
+      if (can_use_skill(ch, i))
+      {
+         sprintf( buf, "@@W%16s-@@y%-7s@@g  ", skill_table[sn].name, learnt_name( ch->pcdata->learned[sn] ) );
+
+         safe_strcat( MAX_STRING_LENGTH, buf1, buf );
+         if( ++col % 3 == 0 )
+            safe_strcat( MAX_STRING_LENGTH, buf1, "\n\r" );
+      }
+   }
+
+   safe_strcat( MAX_STRING_LENGTH, buf1, buf );
+   send_to_char( buf1, ch );
+}
+
 /* Do_prompt from Morgenes from Aldara Mud */
 void do_prompt(CHAR_DATA *ch, char *argument)
 {
