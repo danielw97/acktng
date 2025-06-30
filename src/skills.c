@@ -1220,7 +1220,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 
 void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 {
-   AFFECT_DATA *af;
+   AFFECT_DATA af;
    int chance;
 
    if (!can_use_skill_message(ch, gsn_disarm))

@@ -1627,12 +1627,12 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
    if ((CAN_WEAR(obj, ITEM_WEAR_HOLD_HAND)) && (can_wear_at(ch, obj, WEAR_HOLD_HAND_L)))
    {
-      if (IS_WEAPON(obj) && is_affected(victim, skill_lookup("disarm")))
+      if (IS_WEAPON(obj) && is_affected(ch, skill_lookup("disarm")))
       {
          send_to_char("You have recently been disarmed and can't equip a weapon yet!\n\r", ch);
          return;
       }
-      
+
       if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace) && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace))
          return;
 
