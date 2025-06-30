@@ -1665,7 +1665,7 @@ The Tyrannosaurus stands many times taller than you, and looks to weigh at
 lucky at conquering this ravenous creature.
 ~
 33554557 32768 -600 S
-76 2
+75 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1709,7 +1709,7 @@ The Pterandon, big brother of the Pteradactyl, has a four-foot long beak, which
 quite the opposite.
 ~
 134217821 524288 -300 S
-64 2
+65 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1736,7 +1736,7 @@ The Elasmosaurus looks like a huge snake.  Short fins protrude from it's thick
 body.  It looks menacing, and seems to be sizing you up for a meal.
 ~
 103 0 -400 S
-77 2
+78 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1777,7 +1777,7 @@ The Paleocinthus has side spikes, and a smallish head.  It's large, spiked
 vegetation.
 ~
 69 0 250 S
-68 1
+67 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1820,7 +1820,7 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 you, like most of the other inhabitants of the Isle.
 ~
 13 33280 300 S
-50 0
+49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1880,7 +1880,7 @@ An old ribcage has been left on the floor.
 ~
 9 134218752 8650752 1
 0 0 0 0 0 0 0 0 0 0
-5
+15
 A
 13 -30
 A
@@ -1952,7 +1952,7 @@ a Hag's Robes~
 An ugly set of robes of the hag lie here~
 9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
-1
+3
 L
 50
 #5010
