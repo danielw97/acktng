@@ -178,7 +178,7 @@ void make_corpse( CHAR_DATA * ch, char *argument )
    }
    OUREF( obj_next );
 
-   if (number_range(1,100) < 10)
+   if (number_range(1,100) < item_generation_chance)
    {
       autogen = generate_item(ch->level-10);
       obj_to_obj( autogen, corpse );

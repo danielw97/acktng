@@ -715,6 +715,16 @@ int get_max_carry(CHAR_DATA *ch)
    return 15 + MAX_WEAR;
 }
 
+int item_generation_chance()
+{
+   bool chance = 10;
+
+   if (happy_hour)
+      chance *= 2;
+   
+   return chance;
+}
+
 char *stat_to_string(int stat)
 {
    if (stat == APPLY_CON)
