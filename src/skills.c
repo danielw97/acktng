@@ -1435,7 +1435,7 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
    if (IS_NPC(ch))
       chance -= 20;
 
-   if (!skill_success(ch, victim, sn, chance))
+   if (!skill_success(ch, victim, gsn, chance))
       return FALSE;
 
    return TRUE;
