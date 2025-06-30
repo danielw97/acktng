@@ -1317,7 +1317,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
-   if ((get_obj_weight(obj)) > str_app[get_curr_str(ch)].wield)
+   if (obj->weight > get_curr_str(ch))
    {
       send_to_char("You are not of sufficient strength to use it effectively.\n\r", ch);
       act("$L$n nearly drops a $p.", ch, obj, NULL, TO_ROOM);

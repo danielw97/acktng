@@ -564,7 +564,7 @@ int mana_gain( CHAR_DATA * ch )
    }
    if( gain > 0 )
    {
-      gain = gain * int_app[get_curr_int( ch )].mana_regen / 10;
+      gain = gain * (get_curr_int(ch)+get_curr_wis(ch)) / 20;
    }
    return UMIN( gain, ch->max_mana - ch->mana );
 }

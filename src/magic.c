@@ -280,7 +280,6 @@ bool saves_spell( int level, CHAR_DATA * victim )
       ( ( get_psuedo_level( victim ) > 60 ?
           get_psuedo_level( victim ) * 2 / 3 :
           get_psuedo_level( victim ) ) - level - URANGE( -40, victim->saving_throw, 40 ) );
-   save -= wis_app[get_curr_wis( victim )].spell_save;
    if( ( IS_NPC( victim ) ) && ( IS_SET( victim->act, ACT_SOLO ) ) )
       save += 20;
    if( !IS_NPC( victim ) && ( IS_SET( race_table[victim->race].race_flags, RACE_MOD_RESIST_SPELL ) ) )
@@ -602,8 +601,6 @@ void do_cast( CHAR_DATA * ch, char *argument )
       cast_chance += ch->level;
    else
       cast_chance += 75;
-
-   cast_chance += int_app[get_curr_int(ch)].spell_mod;
 
    if( !IS_NPC( ch ) && ( skill_table[sn].flag2 == NORM ) )
    {

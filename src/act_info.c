@@ -1579,7 +1579,7 @@ void do_score(CHAR_DATA *ch, char *argument)
 
    sprintf(buf,
            "| @@WYou are carrying @@y%4d/%4d @@Witems, weight @@y%4.2f/%7d @@Wkg.  @@c|\n\r",
-           ch->carry_number, can_carry_n(ch), ch->carry_weight, can_carry_w(ch));
+           ch->carry_number, get_max_carry(ch), ch->carry_weight, get_max_carry_weight(ch));
    send_to_char(buf, ch);
 
    sprintf(buf,

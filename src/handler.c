@@ -615,8 +615,6 @@ int get_damroll(CHAR_DATA *ch)
       dam += ch->level;
    }
 
-   dam += str_app[get_curr_str(ch)].todam;
-
    dam += get_psuedo_level(ch) / 3;
 
    if (stance_app[ch->stance].dr_mod != 0)
@@ -637,8 +635,6 @@ int get_hitroll(CHAR_DATA *ch)
       hit += ch->hr_mod;
       hit += ch->level;
    }
-
-   hit += str_app[get_curr_str(ch)].tohit;
 
    hit += get_psuedo_level(ch) / 3;
 
@@ -716,7 +712,7 @@ int get_max_carry_weight(CHAR_DATA *ch)
 
 int get_max_carry(CHAR_DATA *ch)
 {
-   return 30;
+   return 15 + MAX_WEAR;
 }
 
 char *stat_to_string(int stat)
@@ -856,7 +852,7 @@ int can_carry_n(CHAR_DATA *ch)
     * return 0;
     */
 
-   return MAX_WEAR + 2 * get_curr_dex(ch) / 2;
+   return get_max_carry(ch);
 }
 
 /*
@@ -870,7 +866,7 @@ int can_carry_w(CHAR_DATA *ch)
    /*    if ( IS_NPC(ch) && IS_SET(ch->act, ACT_PET) )
       return 0;   */
 
-   return str_app[get_curr_str(ch)].carry;
+   return get_max_carry_weight(ch);
 }
 
 /*
@@ -1013,7 +1009,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
       sh_int i;
       for (i = 0; i < MAX_WEAR; i++)
       {
-         if (((wield = get_eq_char(ch, i)) != NULL) && (get_obj_weight(wield) > str_app[get_curr_str(ch)].wield))
+         if (((wield = get_eq_char(ch, i)) != NULL) && (get_obj_weight(wield) > get_curr_str(ch)))
          {
             static int depth;
 
