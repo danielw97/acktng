@@ -3519,7 +3519,7 @@ the Crooked idea~
 ~
 ~
 131119 8320 0 S
-83 1
+84 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3541,7 +3541,7 @@ the armory guy~
 ~
 ~
 8388619 8320 0 S
-98 1
+99 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3552,7 +3552,7 @@ the weapon shop guy~
 ~
 ~
 8388619 8320 0 S
-101 1
+100 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3563,7 +3563,7 @@ DNA alchemist~
 ~
 ~
 41943051 128 0 S
-83 1
+82 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3575,7 +3575,7 @@ creativity~
 ~
 ~
 1179657 532608 0 S
-98 1
+97 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3621,7 +3621,7 @@ reason~
 The higher brain function known as: @@BReason@@N
 ~
 1048579 532480 0 S
-95 1
+96 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3698,7 +3698,7 @@ Wait a sec! this is a fake Hephaestus!!!
 MUAHAHA wrong one!
 ~
 1 0 0 S
-17 1
+16 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3709,7 +3709,7 @@ logic~
 ~
 ~
 1179657 10368 0 S
-94 1
+95 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3720,7 +3720,7 @@ instinct~
 ~
 ~
 1179657 0 0 S
-87 1
+88 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3731,7 +3731,7 @@ The @@bBig Stinky Outhouse monster@@N leaps to life and attacks!
 ~
 ~
 131113 128 0 S
-85 1
+86 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3742,7 +3742,7 @@ A caddy is here, looking for the clubs he dropped.
 ~
 ~
 1 0 0 S
-89 1
+90 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3753,7 +3753,7 @@ Some nut is here driving a golf-cart, he almost hit you!
 ~
 ~
 131077 8192 0 S
-83 1
+82 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3764,7 +3764,7 @@ There is a groundskeeper here keeping the grass in top-notch shape.
 ~
 ~
 1 8320 0 S
-86 1
+87 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3786,7 +3786,7 @@ Duran Duran is here, and they're planning a come-back tour! sTOP THEM!
 ~
 ~
 131073 8320 0 S
-88 1
+87 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3831,7 +3831,7 @@ Spandex~
 ~
 ~
 131073 8320 0 S
-82 1
+83 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3864,7 +3864,7 @@ bobomb~
 ~
 ~
 33 524348 0 S
-87 1
+88 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3897,7 +3897,7 @@ A @@dForgotten idea shuffles from place to place.@@N
 ~
 ~
 9 8320 0 S
-91 1
+92 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 0
@@ -3908,7 +3908,7 @@ A @@lRetina@@N is here, soakin up some rays on his lawn chair.
 ~
 ~
 11 524416 0 S
-93 1
+92 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3919,7 +3919,7 @@ A @@lRetina@@N is here, soakin up some rays on his lawn chair.
 ~
 ~
 11 524416 0 S
-76 1
+75 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3931,7 +3931,7 @@ retired trainer~
 ~
 ~
 5643 0 0 S
-100 1
+101 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3942,7 +3942,7 @@ A happy thought is bouncing along here, singing a gay tune.
 ~
 ~
 9 0 0 S
-98 1
+97 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3954,7 +3954,7 @@ A depressing thought is sulking here while sewing itself into it's death
 ~
 ~
 9 128 0 S
-84 1
+85 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3965,7 +3965,7 @@ anyone but @@x@@iDeception@@N~
 ~
 ~
 131081 0 0 S
-81 1
+80 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 256 0 0 0 0 0
@@ -3976,7 +3976,7 @@ hate~
 ~
 ~
 131097 524288 0 S
-82 1
+83 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3987,7 +3987,7 @@ morality~
 ~
 ~
 25 557096 0 S
-96 1
+95 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3997,7 +3997,7 @@ c~
 ~
 ~
 1 2 0 S
-6 1
+5 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -4030,7 +4030,7 @@ comprehension~
 ~
 ~
 1048601 44 0 S
-98 1
+99 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1572864 0 0 0 0 8
@@ -4101,7 +4101,7 @@ L
 burning rage~
 @@eBurning Rage@@N~
 Burning rage lies here~
-9 134217745 8392704 1
+9 134217744 8392704 1
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -4400,7 +4400,7 @@ Protective Warmth~
 @@lProtective Warmth@@N~
 An intangable warmth is present.
 ~
-8 134217761 8396800 144
+8 134217760 8396800 144
 0 0 0 0 0 0 0 0 0 0
 2
 A
@@ -4450,7 +4450,7 @@ goggles of perception~
 @@bThe Adjustable Goggles of Perception@@N~
 Some very special welder's goggles lie here.
 ~
-9 134217729 8388624 3592
+9 134217728 8388624 3592
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -4476,7 +4476,7 @@ Loving Embrace~
 @@cLoving Embrace@@N~
 The blissful wrap of love is waiting to be fallen into.
 ~
-9 134217729 8454144 272
+9 134217728 8454144 272
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -4506,7 +4506,7 @@ tri force of power~
 the Tri Force of @@ePower@@N~
 The Triforce of @@ePower@@N in it's entirety, floats here.
 ~
-29 262145 8421376 384
+29 0 8421376 384
 0 16830 5607 0 0 0 0 0 0 0
 1
 A
@@ -4535,7 +4535,7 @@ L
 tri force whole complete~
 the @@fTriforce@@N, whole and complete, once again.~
 ~
-4 1310723 8421376 24474
+4 1048578 8421376 24474
 80 13 13 -1 0 0 0 0 0 0
 1
 A

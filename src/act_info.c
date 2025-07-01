@@ -1411,7 +1411,7 @@ void do_exits(CHAR_DATA *ch, char *argument)
        * Check for thieves with find_doors...
        */
       if (!IS_NPC(ch))
-         if ((pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL && IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->exit_info, EX_NODETECT) && (ch->pcdata->learned[gsn_find_doors] > number_percent()) && (!str_cmp(pexit->keyword, "")))
+         if ((pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL && IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->exit_info, EX_NODETECT) && can_use_skill(ch, gsn_find_doors) && (!str_cmp(pexit->keyword, "")))
          {
             found = TRUE;
             if (fAuto)

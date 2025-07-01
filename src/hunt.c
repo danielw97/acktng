@@ -660,7 +660,15 @@ void do_hunt(CHAR_DATA *ch, char *argument)
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
       ch->hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR;
    else if (!IS_NPC(ch))
-      ch->hunt_flags = (get_trust(ch) >= MAX_LEVEL ? HUNT_WORLD : 0) | (ch->pcdata->learned[gsn_hunt] >= 70 ? HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR : 0);
+   {
+      ch->hunt_flags = 0;
+
+      if (get_trust(ch) > MAX_MORTAL)
+         SET_BIT(ch->hunt_flags, HUNT_WORLD);
+
+      if (can_use_skill(ch, gsn_hunt) )
+         SET_BIT(ch->hunt_flags, HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR);
+   }
    if (!victim || !set_hunt(ch, NULL, victim, NULL, 0, HUNT_CR | HUNT_MERC))
    {
       send_to_char("You couldn't find a trail.\n\r", ch);

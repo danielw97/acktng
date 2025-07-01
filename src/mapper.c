@@ -467,7 +467,7 @@ char *exit_string(CHAR_DATA *ch, ROOM_INDEX_DATA *r)
             {
                continue;
             }
-            else if ((IS_NPC(ch) ? 50 : ch->pcdata->learned[gsn_find_doors]) > number_percent())
+            else if (can_use_skill(ch,gsn_find_doors))
             {
                sprintf(buf + strlen(buf), " (%s)", compass_name[e]);
             }
@@ -597,7 +597,7 @@ void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int ma
          }
          else
             door_type = DOOR_OPEN;
-         if ((!IS_NPC(ch)) && (!str_cmp(pexit->keyword, "")) && ((door_type <= DOOR_OPEN) || (!IS_SET(pexit->exit_info, EX_ISDOOR)) || ((IS_SET(pexit->exit_info, EX_CLOSED)) && (!IS_SET(pexit->exit_info, EX_NODETECT)) && (ch->pcdata->learned[gsn_find_doors] > number_percent()) && (!str_cmp(pexit->keyword, "")))))
+         if ((!IS_NPC(ch)) && (!str_cmp(pexit->keyword, "")) && ((door_type <= DOOR_OPEN) || (!IS_SET(pexit->exit_info, EX_ISDOOR)) || ((IS_SET(pexit->exit_info, EX_CLOSED)) && (!IS_SET(pexit->exit_info, EX_NODETECT)) && can_use_skill(ch, gsn_find_doors) && (!str_cmp(pexit->keyword, "")))))
          {
             map[x + door_marks[door][0]][y + door_marks[door][1]] = door_type;
             if ((door_type < DOOR_CLOSED) && ((line_of_sight == LOS_INITIAL) || (door == line_of_sight)) && (map[x + offsets[door][0]][y + offsets[door][1]] == SECT_UNSEEN))
