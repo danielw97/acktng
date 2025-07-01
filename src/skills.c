@@ -158,9 +158,9 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (backstab)
    {
-      if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL && obj->value[3] != 11)
+      if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL && obj->value[3] == 11)
       {
-         if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL && obj->value[3] != 11)
+         if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL && obj->value[3] == 11)
          {
             if (IS_SET(stance_app[ch->stance].specials, STANCE_DUAL_BACKSTAB))
             {
