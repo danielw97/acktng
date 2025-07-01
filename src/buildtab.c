@@ -479,7 +479,7 @@ const struct lookup_type tab_mob_flags[] = {
     {"reequip", 2097152, 1000}, /* looks for better armor */
     {"intelligent", BIT_23, NO_USE},
     {"vampire", BIT_24, 1000000},
-    {"breeder", BIT_25, NO_USE},
+    {"no_hunt", BIT_25, NO_USE},
     {"solo", BIT_26, 5000}, /*  mob is designed to fight solo */
     {"werewolf", BIT_27, NO_USE},
     {"mount", BIT_28, 1000},
