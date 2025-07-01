@@ -753,7 +753,7 @@ Blur is so called because no one has ever seen it stop moving.  It spins
 dizzy.
 ~
 3 8 -800 S
-22 0
+21 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -767,7 +767,7 @@ Dinosaur Jr, son of Dinosaur senior, was convited of mass murder many
 hardly have done much to improve his temper.
 ~
 3 0 -100 S
-14 1
+15 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -814,7 +814,7 @@ A second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-11 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -825,7 +825,7 @@ A second level prisoner stands here, clearly bored.
 ~
 ~
 1 0 0 S
-12 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -880,7 +880,7 @@ A Final Level Prisoner stands here, scowling angrily.
 ~
 ~
 1 0 0 S
-25 1
+26 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -891,7 +891,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1 0 0 S
-2 1
+3 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -913,7 +913,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1 0 0 S
-26 1
+25 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -935,7 +935,7 @@ A Final Level Prisoner stands here, scowling angrily.
 ~
 ~
 1 0 0 S
-1 1
+2 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1120,7 +1120,7 @@ A
 A
 5 1
 A
-4 1
+4 0
 L
 30
 #9559
