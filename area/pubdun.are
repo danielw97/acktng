@@ -4,7 +4,7 @@ Q 16
 K publicdungeons~
 L {@@G10 20@@N}~
 N 28
-I 10 20
+I 5 35
 V 9550 9599
 X 35950
 F 15
@@ -32,6 +32,10 @@ D4
 ~
 ~
 1 -1 3014
+D5
+~
+~
+0 -1 9568
 S
 #9552
 Within the Public Dungeon of Midgaard.~
@@ -264,6 +268,353 @@ D3
 ~
 0 -1 9552
 S
+#9568
+Cells, Second Level~
+No description~
+4 11
+D2
+~
+~
+0 -1 9571
+D4
+~
+~
+0 -1 9551
+D5
+~
+~
+0 -1 9569
+S
+#9569
+Cells, Third Level~
+No description~
+4 11
+D2
+~
+~
+0 -1 9577
+D4
+~
+~
+0 -1 9568
+D5
+~
+~
+0 -1 9570
+S
+#9570
+Cells, Final Level~
+No description~
+4 11
+D1
+~
+~
+0 -1 9585
+D2
+~
+~
+0 -1 9583
+D3
+~
+~
+0 -1 9586
+D4
+~
+~
+0 -1 9569
+S
+#9571
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9568
+D1
+~
+~
+0 -1 9573
+D2
+~
+~
+0 -1 9572
+D3
+~
+~
+0 -1 9574
+S
+#9572
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9571
+D1
+~
+~
+0 -1 9575
+D3
+~
+~
+0 -1 9576
+S
+#9573
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 9571
+S
+#9574
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 9571
+S
+#9575
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 9572
+S
+#9576
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 9572
+S
+#9577
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9569
+D1
+~
+~
+0 -1 9581
+D2
+~
+~
+0 -1 9578
+D3
+~
+~
+0 -1 9582
+S
+#9578
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9577
+D1
+~
+~
+0 -1 9580
+D3
+~
+~
+0 -1 9579
+S
+#9579
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 9578
+S
+#9580
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 9578
+S
+#9581
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 9577
+S
+#9582
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 9577
+S
+#9583
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9570
+D1
+~
+~
+0 -1 9587
+D2
+~
+~
+0 -1 9584
+D3
+~
+~
+0 -1 9588
+S
+#9584
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9583
+D1
+~
+~
+0 -1 9589
+D2
+~
+~
+0 -1 9591
+D3
+~
+~
+0 -1 9590
+S
+#9585
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 9570
+S
+#9586
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 9570
+S
+#9587
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 9583
+S
+#9588
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 9583
+S
+#9589
+New room~
+No description~
+0 11
+D3
+~
+~
+0 -1 9584
+S
+#9590
+New room~
+No description~
+0 11
+D1
+~
+~
+0 -1 9584
+S
+#9591
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9584
+D2
+~
+~
+0 -1 9592
+S
+#9592
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9591
+D2
+~
+~
+0 -1 9593
+S
+#9593
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9592
+D2
+~
+~
+0 -1 9594
+S
+#9594
+New room~
+No description~
+4 11
+D0
+~
+~
+0 -1 9593
+S
 #0
 #MOBILES
 #9551
@@ -276,7 +627,7 @@ Alice in Chains is a blood thirsty killing machine, and a not very nice
 "sickman, sickman, sickman."
 ~
 3 8 -400 S
-17 2
+16 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -349,6 +700,202 @@ Elastica is so named because she appears to be made out of elastic, with
 18 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
+#9557
+A Second Level Prisoner~
+A Second Level Prisoner~
+A Second level prisoner stands here, clearly bored
+~
+~
+1 0 0 S
+10 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9558
+A Second Level Prisoner~
+A Second Level Prisoner~
+A second level prisoner stands here, clearly bored
+~
+~
+1 0 0 S
+10 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9559
+A Second Level Prisoner~
+A Second Level Prisoner~
+A second level prisoner stands here, clearly bored
+~
+~
+1 0 0 S
+10 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9560
+A Second Level Prisoner~
+A Second Level Prisoner~
+A second level prisoner stands here, clearly bored.
+~
+~
+1 0 0 S
+10 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9561
+A Third Level Prisoner~
+A Third Level Prisoner~
+A third level prisoner stands here, looking for trouble.
+~
+~
+1 0 0 S
+17 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9562
+A Third Level Prisoner~
+A Third Level Prisoner~
+A third level prisoner stands here, looking for trouble.
+~
+~
+1 0 0 S
+17 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9563
+A Third Level Prisoner~
+A Third Level Prisoner~
+A third level prisoner stands here, looking for trouble.
+~
+~
+1 0 0 S
+17 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9564
+A Third Level Prisoner~
+A Third Level Prisoner~
+A third level prisoner stands here, looking for trouble.
+~
+~
+1 0 0 S
+17 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9565
+A Final Level Prisoner~
+A Final Level Prisoner~
+A Final Level Prisoner stands here, scowling angrily.
+~
+~
+1 0 0 S
+25 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9566
+A Final Level Prisoner~
+A Final Level Prisoner~
+A Final Level Prisoner stands here, scowling angrily
+~
+~
+1 0 0 S
+1 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9567
+A Final Level Prisoner~
+A Final Level Prisoner~
+A Final Level Prisoner stands here, scowling angrily
+~
+~
+1 0 0 S
+25 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9568
+A Final Level Prisoner~
+A Final Level Prisoner~
+A Final Level Prisoner stands here, scowling angrily
+~
+~
+1 0 0 S
+25 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9569
+A Final Level Prisoner~
+A Final Level Prisoner~
+A Final Level Prisoner stands here, scowling angrily
+~
+~
+1 0 0 S
+25 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9570
+A Final Level Prisoner~
+A Final Level Prisoner~
+A Final Level Prisoner stands here, scowling angrily.
+~
+~
+1 0 0 S
+1 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9571
+A Warden's Guard~
+A Warden's Guard~
+A Warden's Guard stands here, at attention
+~
+~
+1 0 0 S
+30 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9572
+A Vice Warden~
+A Vice Warden~
+A Vice Warden stands here, looking at documents
+~
+~
+1 0 0 S
+33 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9573
+A Warden's Secretary~
+A Warden's Secretary~
+~
+~
+1 0 0 S
+34 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
+#9574
+The Prison Warden~
+The Prison Warden~
+The Prison Warden stands here, observing~
+~
+1 0 0 S
+35 1
+0 0 0 0
+! 0 0 0 0 0 0 0
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -438,6 +985,24 @@ Shoulders of a dinosaur lay here~
 1
 L
 10
+#9556
+^painting~
+A Secret Painting~
+~
+15 8 0 1
+0 15 9556 0 0 0 0 0 0 0
+1
+L
+1
+#9557
+The Secret Key~
+The Secret Key~
+A key with some kind of secret lies here~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
 #0
 #RESETS
 M 0 9551 1 9566   load mob
@@ -455,5 +1020,54 @@ E 0 9555 0 0 (null)
 M 0 9556 1 9565 
 E 0 9550 0 0 (null)
 
+M 0 9557 3 9574 (null)
+M 0 9557 3 9574 (null)
+M 0 9557 3 9574 (null)
+M 0 9558 3 9573 (null)
+M 0 9558 3 9573 (null)
+M 0 9558 3 9573 (null)
+M 0 9559 3 9576 (null)
+M 0 9559 3 9576 (null)
+M 0 9559 3 9576 (null)
+M 0 9560 3 9575 (null)
+M 0 9560 3 9575 (null)
+M 0 9560 3 9575 (null)
+M 0 9561 3 9582 (null)
+M 0 9561 3 9582 (null)
+M 0 9561 3 9582 (null)
+M 0 9562 3 9581 (null)
+M 0 9562 3 9581 (null)
+M 0 9562 3 9581 (null)
+M 0 9563 3 9579 (null)
+M 0 9563 3 9579 (null)
+M 0 9563 3 9579 (null)
+M 0 9564 3 9580 (null)
+M 0 9564 3 9580 (null)
+M 0 9564 3 9580 (null)
+M 0 9565 3 9586 (null)
+M 0 9565 3 9586 (null)
+M 0 9565 3 9586 (null)
+M 0 9566 3 9585 (null)
+M 0 9566 3 9585 (null)
+M 0 9566 3 9585 (null)
+M 0 9567 3 9588 (null)
+M 0 9567 3 9588 (null)
+M 0 9567 3 9588 (null)
+M 0 9568 3 9587 (null)
+M 0 9568 3 9587 (null)
+M 0 9568 3 9587 (null)
+M 0 9569 3 9590 (null)
+M 0 9569 3 9590 (null)
+M 0 9569 3 9590 (null)
+M 0 9570 3 9589 (null)
+M 0 9570 3 9589 (null)
+M 0 9570 3 9589 (null)
+M 0 9571 4 9591 (null)
+M 0 9571 4 9591 (null)
+M 0 9572 1 9592 (null)
+M 0 9573 1 9593 (null)
+M 0 9574 1 9594 (null)
+G 0 9557 0 (null)
+O 0 9556 1 9594 (null)
 S
 #$

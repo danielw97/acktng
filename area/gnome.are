@@ -696,7 +696,7 @@ Erin is a relatively large gnome, with a stature that would scare even
 defend her home and the home of the gnome race.
 ~
 8195 8360 0 S
-122 2
+121 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
@@ -711,7 +711,7 @@ Although only a small gnome in stature, Ammira has the spells to protect her
 thinning grey hair and eyes of an almost white grey. 
 ~
 4099 8360 0 S
-77 2
+78 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32848 0 0 0 0 0
@@ -726,7 +726,7 @@ The Gnomish Weaponsmith has dark tan skin, a neatly trimmed grey beard, and
 you do intend to purchase one of his fine weapons.
 ~
 11608071 8360 0 S
-78 1
+79 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -805,7 +805,7 @@ Caedric is a stocky gnome, of average height, with a woody brown skin and
 from when he wipes his hands clean to serve a customer.
 ~
 8388615 8360 0 S
-82 1
+81 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16448 0 0 0 0 0
@@ -835,7 +835,7 @@ Gnomes are similar to small, slightly thinner dwarves, excepting that they
 grey.  
 ~
 69 32768 0 S
-13 2
+14 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -849,7 +849,7 @@ The miner is well muscled from extracting the gems and stones from the hard
 His beard is grey and trimmed and his hair is bundled up beneath his cap. 
 ~
 69 32768 0 S
-16 1
+15 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -863,7 +863,7 @@ The gnome guard is scarred from battles with kobolds and goblins.  His armour
 encounters.
 ~
 69 32776 0 S
-38 1
+39 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -879,7 +879,7 @@ His enormous nose and neatly trimmed grey beard, decorated with stones,
 day.
 ~
 19 8360 0 S
-73 1
+72 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
@@ -907,7 +907,7 @@ The gnome child is very small, even by the gnomish standards, and has a head
 and are a piercing blue colour that shine with the joy in her heart.
 ~
 69 0 0 S
-10 2
+11 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1224,7 +1224,7 @@ an amber ring~
 A ring of orange brown has been dropped here.~
 9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-2
+1
 L
 60
 #6025

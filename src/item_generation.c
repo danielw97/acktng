@@ -16,6 +16,12 @@ OBJ_DATA *generate_item(int level)
    if (obj->level < 1)
       obj->level = 1;
    obj->weight = number_range(1, 25);
+   if (obj->weight > 20)
+      obj->weight = 20;
+   else if (obj->weight > 10)
+      obj->weight = 10;
+   else if (obj->weight > 1)
+      obj->weight = 1;
    SET_BIT(obj->extra_flags, ITEM_GENERATED);
    SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    obj->item_type = ITEM_ARMOR;
