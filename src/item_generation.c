@@ -592,7 +592,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       }
       else
       {
-         set_aff_to_obj(obj, APPLY_CON, legendary_mod);
+         set_aff_to_obj(obj, APPLY_CON, rare_mod);
       }
    }
 
