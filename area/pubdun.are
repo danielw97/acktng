@@ -270,7 +270,10 @@ D3
 S
 #9568
 Cells, Second Level~
-No description~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground.
+~
 4 11
 D2
 ~
@@ -287,7 +290,10 @@ D5
 S
 #9569
 Cells, Third Level~
-No description~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground.
+~
 4 11
 D2
 ~
@@ -304,7 +310,11 @@ D5
 S
 #9570
 Cells, Final Level~
-No description~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground. You can see a
+bright light to the South, highlighting some vague figures.
+~
 4 11
 D1
 ~
@@ -324,8 +334,11 @@ D4
 0 -1 9569
 S
 #9571
-New room~
-No description~
+Second Level Halls~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground.
+~
 4 11
 D0
 ~
@@ -345,8 +358,11 @@ D3
 0 -1 9574
 S
 #9572
-New room~
-No description~
+Second Level Halls~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground.
+~
 4 11
 D0
 ~
@@ -362,8 +378,11 @@ D3
 0 -1 9576
 S
 #9573
-New room~
-No description~
+The Second Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D3
 ~
@@ -371,8 +390,11 @@ D3
 0 -1 9571
 S
 #9574
-New room~
-No description~
+The Second Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D1
 ~
@@ -380,8 +402,11 @@ D1
 0 -1 9571
 S
 #9575
-New room~
-No description~
+The Second Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D3
 ~
@@ -389,8 +414,11 @@ D3
 0 -1 9572
 S
 #9576
-New room~
-No description~
+The Second Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D1
 ~
@@ -398,8 +426,11 @@ D1
 0 -1 9572
 S
 #9577
-New room~
-No description~
+Third Level Halls~
+No descriptionYou can hear echoes all around you of the public dungeon. The
+public dungeon has a clearly rank odor, a slight foul breeze making it more
+present. There is little light, thankfully hiding what may be on the ground.
+~
 4 11
 D0
 ~
@@ -419,8 +450,11 @@ D3
 0 -1 9582
 S
 #9578
-New room~
-No description~
+Third Level Halls~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground.
+~
 4 11
 D0
 ~
@@ -436,8 +470,11 @@ D3
 0 -1 9579
 S
 #9579
-New room~
-No description~
+The Third Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D1
 ~
@@ -445,8 +482,11 @@ D1
 0 -1 9578
 S
 #9580
-New room~
-No description~
+The Third Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D3
 ~
@@ -454,8 +494,11 @@ D3
 0 -1 9578
 S
 #9581
-New room~
-No description~
+The Third Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D3
 ~
@@ -463,8 +506,11 @@ D3
 0 -1 9577
 S
 #9582
-New room~
-No description~
+The Third Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D1
 ~
@@ -472,8 +518,12 @@ D1
 0 -1 9577
 S
 #9583
-New room~
-No description~
+Final Level Halls~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground. You can see a
+bright light to the South, highlighting some vague figures.
+~
 4 11
 D0
 ~
@@ -493,8 +543,12 @@ D3
 0 -1 9588
 S
 #9584
-New room~
-No description~
+Final Level Halls~
+You can hear echoes all around you of the public dungeon. The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present. There is
+little light, thankfully hiding what may be on the ground. You can see a
+bright light to the South, highlighting some vague figures.
+~
 4 11
 D0
 ~
@@ -514,8 +568,11 @@ D3
 0 -1 9590
 S
 #9585
-New room~
-No description~
+The Final Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D3
 ~
@@ -523,8 +580,11 @@ D3
 0 -1 9570
 S
 #9586
-New room~
-No description~
+The Final Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D1
 ~
@@ -532,8 +592,11 @@ D1
 0 -1 9570
 S
 #9587
-New room~
-No description~
+The Final Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D3
 ~
@@ -541,8 +604,11 @@ D3
 0 -1 9583
 S
 #9588
-New room~
-No description~
+The Final Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D1
 ~
@@ -550,8 +616,11 @@ D1
 0 -1 9583
 S
 #9589
-New room~
-No description~
+The Final Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D3
 ~
@@ -559,16 +628,23 @@ D3
 0 -1 9584
 S
 #9590
-New room~
-No description~
+The Final Level Cells~
+Within the cells of the public dungeon, very little can be seen. The cracks on
+the walls seem endless, and the omnipresent smell seems even more vivid within
+the cells themselves. The loudness of the prison seems inescapable.
+~
 0 11
 D1
 ~
 ~
-0 -1 9584
+0 0 9584
+D3
+~
+^crack~
+353 9557 9595
 S
 #9591
-New room~
+A Guardroom~
 No description~
 4 11
 D0
@@ -581,7 +657,7 @@ D2
 0 -1 9592
 S
 #9592
-New room~
+Vice Warden's Office~
 No description~
 4 11
 D0
@@ -594,7 +670,7 @@ D2
 0 -1 9593
 S
 #9593
-New room~
+Desk of the Warden~
 No description~
 4 11
 D0
@@ -607,13 +683,21 @@ D2
 0 -1 9594
 S
 #9594
-New room~
+The Warden's Office~
 No description~
 4 11
 D0
 ~
 ~
 0 -1 9593
+S
+#9595
+Fallen down the Crack~
+Unfortunately, you have fallen down the crack and are not able to get up. Only
+the barest flicker of light can be seen from above, and little can be made out
+
+~
+4 11
 S
 #0
 #MOBILES
@@ -641,7 +725,7 @@ Pantera is a shaven-headed beast, half man, half who-knows-what?  He has
 he smiles, you know why.
 ~
 3 0 -300 S
-24 1
+25 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -669,7 +753,7 @@ Blur is so called because no one has ever seen it stop moving.  It spins
 dizzy.
 ~
 3 8 -800 S
-20 0
+21 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -697,7 +781,7 @@ Elastica is so named because she appears to be made out of elastic, with
 question mark as you look at her.
 ~
 3 0 -200 S
-18 2
+19 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -708,9 +792,9 @@ A Second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-10 1
+9 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9558
 A Second Level Prisoner~
@@ -719,9 +803,9 @@ A second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-10 1
+11 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9559
 A Second Level Prisoner~
@@ -732,7 +816,7 @@ A second level prisoner stands here, clearly bored
 1 0 0 S
 10 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9560
 A Second Level Prisoner~
@@ -741,9 +825,9 @@ A second level prisoner stands here, clearly bored.
 ~
 ~
 1 0 0 S
-10 1
+11 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9561
 A Third Level Prisoner~
@@ -754,7 +838,7 @@ A third level prisoner stands here, looking for trouble.
 1 0 0 S
 17 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9562
 A Third Level Prisoner~
@@ -763,9 +847,9 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1 0 0 S
-17 1
+16 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9563
 A Third Level Prisoner~
@@ -774,9 +858,9 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1 0 0 S
-17 1
+16 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9564
 A Third Level Prisoner~
@@ -787,7 +871,7 @@ A third level prisoner stands here, looking for trouble.
 1 0 0 S
 17 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9565
 A Final Level Prisoner~
@@ -798,7 +882,7 @@ A Final Level Prisoner stands here, scowling angrily.
 1 0 0 S
 25 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9566
 A Final Level Prisoner~
@@ -809,7 +893,7 @@ A Final Level Prisoner stands here, scowling angrily
 1 0 0 S
 1 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9567
 A Final Level Prisoner~
@@ -820,7 +904,7 @@ A Final Level Prisoner stands here, scowling angrily
 1 0 0 S
 25 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9568
 A Final Level Prisoner~
@@ -831,7 +915,7 @@ A Final Level Prisoner stands here, scowling angrily
 1 0 0 S
 25 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9569
 A Final Level Prisoner~
@@ -840,9 +924,9 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1 0 0 S
-25 1
+24 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9570
 A Final Level Prisoner~
@@ -853,7 +937,7 @@ A Final Level Prisoner stands here, scowling angrily.
 1 0 0 S
 1 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9571
 A Warden's Guard~
@@ -864,7 +948,7 @@ A Warden's Guard stands here, at attention
 1 0 0 S
 30 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9572
 A Vice Warden~
@@ -875,7 +959,7 @@ A Vice Warden stands here, looking at documents
 1 0 0 S
 33 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9573
 A Warden's Secretary~
@@ -885,7 +969,7 @@ A Warden's Secretary~
 1 0 0 S
 34 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 #9574
 The Prison Warden~
@@ -893,9 +977,20 @@ The Prison Warden~
 The Prison Warden stands here, observing~
 ~
 1 0 0 S
-35 1
+36 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
+#9575
+A Skeleton~
+A Skeleton~
+A skeleton stands here, grinning with a rictus grin.
+~
+~
+33554433 0 0 S
+40 1
+200 -200 50 50
+! 0 0 0 0 256 0 0
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -987,7 +1082,7 @@ L
 10
 #9556
 ^painting~
-A Secret Painting~
+a Secret Painting~
 ~
 15 8 0 1
 0 15 9556 0 0 0 0 0 0 0
@@ -995,14 +1090,32 @@ A Secret Painting~
 L
 1
 #9557
-The Secret Key~
-The Secret Key~
+the Secret Key~
+the Secret Key~
 A key with some kind of secret lies here~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 1
 L
 1
+#9558
+A Skeleton's Skull Skeleton~
+A Skeleton's Skull~
+A skull lies here, abandoned~
+9 134217920 8388672 17
+0 0 0 0 0 0 0 0 0 0
+15
+L
+30
+#9559
+An Obsidian Stiletto~
+An @@dObsidian @@NStiletto~
+A stiletto lies here, lost.~
+5 134217920 8421376 257
+0 0 0 11 0 0 0 0 0 0
+15
+L
+30
 #0
 #RESETS
 M 0 9551 1 9566   load mob
@@ -1021,53 +1134,108 @@ M 0 9556 1 9565
 E 0 9550 0 0 (null)
 
 M 0 9557 3 9574 (null)
+
 M 0 9557 3 9574 (null)
+
 M 0 9557 3 9574 (null)
+
 M 0 9558 3 9573 (null)
+
 M 0 9558 3 9573 (null)
+
 M 0 9558 3 9573 (null)
+
 M 0 9559 3 9576 (null)
+
 M 0 9559 3 9576 (null)
+
 M 0 9559 3 9576 (null)
+
 M 0 9560 3 9575 (null)
+
 M 0 9560 3 9575 (null)
+
 M 0 9560 3 9575 (null)
+
 M 0 9561 3 9582 (null)
+
 M 0 9561 3 9582 (null)
+
 M 0 9561 3 9582 (null)
+
 M 0 9562 3 9581 (null)
+
 M 0 9562 3 9581 (null)
+
 M 0 9562 3 9581 (null)
+
 M 0 9563 3 9579 (null)
+
 M 0 9563 3 9579 (null)
+
 M 0 9563 3 9579 (null)
+
 M 0 9564 3 9580 (null)
+
 M 0 9564 3 9580 (null)
+
 M 0 9564 3 9580 (null)
+
 M 0 9565 3 9586 (null)
+
 M 0 9565 3 9586 (null)
+
 M 0 9565 3 9586 (null)
+
 M 0 9566 3 9585 (null)
+
 M 0 9566 3 9585 (null)
+
 M 0 9566 3 9585 (null)
+
 M 0 9567 3 9588 (null)
+
 M 0 9567 3 9588 (null)
+
 M 0 9567 3 9588 (null)
+
 M 0 9568 3 9587 (null)
+
 M 0 9568 3 9587 (null)
+
 M 0 9568 3 9587 (null)
+
 M 0 9569 3 9590 (null)
+
 M 0 9569 3 9590 (null)
+
 M 0 9569 3 9590 (null)
+
 M 0 9570 3 9589 (null)
+
 M 0 9570 3 9589 (null)
+
 M 0 9570 3 9589 (null)
+
 M 0 9571 4 9591 (null)
+
 M 0 9571 4 9591 (null)
+
 M 0 9572 1 9592 (null)
+
 M 0 9573 1 9593 (null)
+
 M 0 9574 1 9594 (null)
+
 G 0 9557 0 (null)
+
 O 0 9556 1 9594 (null)
+
+D 0 9590 3 2 (null)
+M 0 9575 1 9595 (null)
+E 0 9558 0 0 (null)
+S
+#OBJFUNS
+O 9559 objfun_cast_fight
 S
 #$
