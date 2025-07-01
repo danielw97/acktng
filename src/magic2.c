@@ -634,6 +634,7 @@ bool spell_acid_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
 
    hpch = UMAX(10, ch->hit);
    dam = number_range(hpch / 16 + 1, hpch / 8);
+   dam /= 4;
    if (saves_spell(level, victim))
       dam /= 2;
    sp_damage(obj, ch, victim, dam, REALM_ACID | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -727,7 +728,7 @@ bool spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    int dam;
    int hpch;
 
-   if (number_percent() < 2 * level && !saves_spell(level, victim))
+/*   if (number_percent() < 2 * level && !saves_spell(level, victim))
    {
       OREF(obj_next, OBJ_NEXTCONTENT);
       for (obj_lose = victim->first_carry; obj_lose != NULL; obj_lose = obj_next)
@@ -765,10 +766,11 @@ bool spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
          }
       }
       OUREF(obj_next);
-   }
+   }*/
 
    hpch = UMAX(10, ch->hit);
    dam = number_range(hpch / 16 + 1, hpch / 8);
+   dam /= 4;
    if (saves_spell(level, victim))
       dam /= 2;
    sp_damage(obj, ch, victim, dam, REALM_COLD | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -790,6 +792,7 @@ bool spell_gas_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       {
          hpch = UMAX(10, ch->hit);
          dam = number_range(hpch / 16 + 1, hpch / 8);
+         dam /= 4;
          if (saves_spell(level, vch))
             dam /= 2;
          sp_damage(obj, ch, vch, dam, REALM_GAS | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -807,6 +810,7 @@ bool spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
 
    hpch = UMAX(10, ch->hit);
    dam = number_range(hpch / 16 + 1, hpch / 8);
+   dam /= 4;
    if (saves_spell(level, victim))
       dam /= 2;
    sp_damage(obj, ch, victim, dam, REALM_SHOCK | NO_REFLECT | NO_ABSORB, sn, TRUE);
