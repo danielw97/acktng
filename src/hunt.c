@@ -669,7 +669,7 @@ void do_hunt(CHAR_DATA *ch, char *argument)
       if (can_use_skill(ch, gsn_hunt) )
          SET_BIT(ch->hunt_flags, HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR);
    }
-   if (!victim || !set_hunt(ch, NULL, victim, NULL, 0, HUNT_CR | HUNT_MERC))
+   if (!victim || IS_SET(victim->act, ACT_BREEDER) || !set_hunt(ch, NULL, victim, NULL, 0, HUNT_CR | HUNT_MERC))
    {
       send_to_char("You couldn't find a trail.\n\r", ch);
       return;
