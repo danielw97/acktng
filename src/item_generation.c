@@ -324,6 +324,10 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    int ac_bonus = 0;
    int stat_bonus = 0;
 
+   //Fuck this number.
+   if (obj->level == 88)
+      obj->level = 87;
+
    if (obj->level > MAX_MORTAL)
    {
       ilevel += (obj->level - MAX_MORTAL) * 3;
@@ -520,24 +524,38 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    int ac_val = ac_bonus;
    if (ac_div != 0)
       ac_val -= (ilevel * 2 / ac_div);
+   if (ac_val == -88)
+      ac_val = -87;
    int hr_val = hrdr_bonus;
    if (hr_div != 0)
       hr_val += (ilevel / hr_div);
+   if (hr_val == 88)
+      hr_val = 87;
    int dr_val = hrdr_bonus;
    if (dr_div != 0)
       dr_val += (ilevel / dr_div);
+   if (dr_val == 88)
+      dr_val = 87;
    int hp_val = stat_bonus;
    if (hp_div != 0)
       hp_val += (ilevel / hp_div);
+   if (hp_val == 88)
+      hp_val = 87;
    int mana_val = stat_bonus;
    if (mana_div != 0)
       mana_val += (ilevel / mana_div);
+   if (mana_val == 88)
+      mana_val = 87;
    int move_val = stat_bonus;
    if (move_div != 0)
       move_val += (ilevel / move_div);
+   if (move_val == 88)
+      move_val = 87;
    int spellpower_val = 0;
    if (spellpower_div > 0)
       spellpower_val = (ilevel / spellpower_div);
+   if (spellpower_val == 88)
+      spellpower_val = 87;
 
    if (ac_val != 0)
       set_aff_to_obj(obj, APPLY_AC, ac_val);
@@ -557,11 +575,8 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    if (is_jewelry(obj) && (IS_SET(obj->extra_flags, ITEM_RARE) || IS_SET(obj->extra_flags, ITEM_MYTHIC)))
    {
       int rare_mod = 1;
-      if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA))
-      {
-         set_aff_to_obj(obj, APPLY_CON, rare_mod);
-      }
-      else if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK))
+
+      if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK))
       {
          if (obj->weight < 10)
             set_aff_to_obj(obj, APPLY_WIS, rare_mod);
@@ -575,16 +590,17 @@ void set_obj_stat_auto(OBJ_DATA *obj)
          else
             set_aff_to_obj(obj, APPLY_STR, rare_mod);
       }
+      else
+      {
+         set_aff_to_obj(obj, APPLY_CON, legendary_mod);
+      }
    }
 
    if (is_jewelry(obj) && IS_SET(obj->extra_flags, ITEM_LEGENDARY))
    {
       int legendary_mod = 2;
-      if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA))
-      {
-         set_aff_to_obj(obj, APPLY_CON, legendary_mod);
-      }
-      else if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK))
+
+      if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK))
       {
          if (obj->weight < 10)
             set_aff_to_obj(obj, APPLY_WIS, legendary_mod);
@@ -597,6 +613,10 @@ void set_obj_stat_auto(OBJ_DATA *obj)
             set_aff_to_obj(obj, APPLY_INT, legendary_mod);
          else
             set_aff_to_obj(obj, APPLY_STR, legendary_mod);
+      }
+      else
+      {
+         set_aff_to_obj(obj, APPLY_CON, legendary_mod);
       }
    }
 
@@ -623,7 +643,8 @@ void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier)
 bool is_jewelry(OBJ_DATA *obj)
 {
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
-       IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
+       IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER) ||
+       IS_SET(obj->wear_flags, ITEM_WEAR_EAR))
       return TRUE;
 
    return FALSE;
