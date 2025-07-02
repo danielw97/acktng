@@ -914,6 +914,10 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    int max_avoidance = 75;
    int chance = number_percent();
 
+   max_avoidance += get_speed(victim)*5;
+
+   max_avoidance -= get_speed(ch)*5;
+
    // Can't avoid when stunned!
    if (ch->position <= POS_STUNNED)
       return FALSE;
@@ -1131,6 +1135,10 @@ bool check_counter(CHAR_DATA *ch, CHAR_DATA *victim)
       if (victim->remort[CLASS_MON] > 0) /* Monk  */
          chance += victim->remort[CLASS_MON] / 8;
    }
+
+   chance += get_speed(victim)*5;
+   chance -= get_speed(ch)*5;
+
    if (IS_AFFECTED(victim, AFF_CLOAK_ADEPT))
       chance += 5;
 
