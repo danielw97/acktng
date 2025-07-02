@@ -794,6 +794,7 @@ const struct lookup_type tab_obj_aff[] = {
     {"saving_petri", 22, 400},
     {"saving_breath", 23, 400},
     {"saving_spell", 24, 400},
+    {"spellpower", 27, 400},
     {NULL, 0}};
 
 const struct lookup_type tab_room_flags[] = {

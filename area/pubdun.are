@@ -711,7 +711,7 @@ Alice in Chains is a blood thirsty killing machine, and a not very nice
 "sickman, sickman, sickman."
 ~
 3 8 -400 S
-15 2
+14 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -725,7 +725,7 @@ Pantera is a shaven-headed beast, half man, half who-knows-what?  He has
 he smiles, you know why.
 ~
 3 0 -300 S
-26 1
+27 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -753,7 +753,7 @@ Blur is so called because no one has ever seen it stop moving.  It spins
 dizzy.
 ~
 3 8 -800 S
-20 0
+19 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -767,7 +767,7 @@ Dinosaur Jr, son of Dinosaur senior, was convited of mass murder many
 hardly have done much to improve his temper.
 ~
 3 0 -100 S
-15 1
+14 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -792,7 +792,7 @@ A Second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-10 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -825,7 +825,7 @@ A second level prisoner stands here, clearly bored.
 ~
 ~
 1 0 0 S
-12 1
+13 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -836,7 +836,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1 0 0 S
-17 1
+15 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -869,7 +869,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1 0 0 S
-16 1
+15 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -913,7 +913,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1 0 0 S
-25 1
+23 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -924,7 +924,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1 0 0 S
-25 1
+24 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -935,7 +935,7 @@ A Final Level Prisoner stands here, scowling angrily.
 ~
 ~
 1 0 0 S
-2 1
+1 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -946,7 +946,7 @@ A Warden's Guard stands here, at attention
 ~
 ~
 1 0 0 S
-28 1
+29 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -957,7 +957,7 @@ A Vice Warden stands here, looking at documents
 ~
 ~
 1 0 0 S
-32 1
+33 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -967,7 +967,7 @@ A Warden's Secretary~
 ~
 ~
 1 0 0 S
-33 1
+31 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -978,7 +978,7 @@ The Prison Warden stands here, observing
 ~
 ~
 1 0 0 S
-36 1
+34 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1101,27 +1101,29 @@ L
 1
 #9558
 A Skeleton's Skull Skeleton~
-a Skeleton's Skull~
-A skull lies here, abandoned~
+A cute little skeleton's skull~
+Cute little skeleton skull~
 9 192 8388672 17
 0 0 0 0 0 0 0 0 0 0
-15
+5
 A
-17 -8
+17 -20
 A
-18 3
+18 5
 A
-19 3
+19 5
 A
-13 24
+13 40
 A
-12 24
+12 40
 A
-14 24
+14 40
 A
 5 1
 A
 4 0
+A
+27 10
 L
 30
 #9559
@@ -1134,8 +1136,8 @@ A stiletto lies here, lost.~
 L
 30
 #9560
-A Guard's Key~
-A Guard's Key~
+a Guard's Key~
+a Guard's Key~
 A key lies here, discarded~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -1143,8 +1145,8 @@ A key lies here, discarded~
 L
 30
 #9561
-A Vice Warden's Key~
-A Vice Warden's Key~
+a Vice Warden's Key~
+a Vice Warden's Key~
 A key lies here, discarded~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -1152,8 +1154,8 @@ A key lies here, discarded~
 L
 30
 #9562
-A Secretary's Key~
-A Secretary's Key~
+a Secretary's Key~
+a Secretary's Key~
 A key lies here, discarded~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -1264,14 +1266,17 @@ M 0 9570 3 9589 (null)
 M 0 9571 4 9591 (null)
 
 G 0 9560 0 (null)
+
 M 0 9571 4 9591 (null)
 
 M 0 9572 1 9592 (null)
 
 G 0 9561 0 (null)
+
 M 0 9573 1 9593 (null)
 
 G 0 9562 0 (null)
+
 M 0 9574 1 9594 (null)
 
 G 0 9557 0 (null)
@@ -1285,8 +1290,11 @@ M 0 9575 1 9595 (null)
 E 0 9558 0 0 (null)
 
 D 0 9591 2 2 (null)
+
 D 0 9592 2 2 (null)
+
 D 0 9593 2 2 (null)
+
 S
 #OBJFUNS
 O 9559 objfun_cast_fight
