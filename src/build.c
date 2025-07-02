@@ -3429,6 +3429,48 @@ void build_addreset(CHAR_DATA *ch, char *argument)
       command = 'G';
    }
 
+   if (!str_cmp(arg1, "put"))
+   {
+      num = number_argument(arg2, buf);
+      vnum = is_number(arg2) ? atoi(arg2) : -1;
+
+      found = num;
+      for (pMobList = pRoomIndex->first_room_reset; pMobList != NULL; pMobList = pMobList->next)
+      {
+         pMobReset = pMobList->data;
+         if (pMobReset->command == 'M' && pMobReset->arg1 == vnum)
+         {
+            found--;
+            if (found <= 0)
+               break;
+         }
+      }
+
+      vnum = is_number(arg3) ? atoi(arg3) : -1;
+      if (!(pObj = get_obj_index(vnum)))
+      {
+         send_to_char("Object not found.\n\r", ch);
+         return;
+      }
+
+      if (IS_SET(pObj->extra_flags, ITEM_CLAN_EQ) && !IS_IMMORTAL(ch))
+      {
+         send_to_char("You can't use that object for a reset.\n\r", ch);
+         return;
+      }
+
+      if (!build_canread(pObj->area, ch, 0))
+      {
+         send_to_char("You cannot use that object.\n\r", ch);
+         return;
+      }
+
+      rarg1 = vnum;
+      rarg2 = 0;
+      rarg3 = 0;
+      command = 'P';
+   }
+
    if (!str_cmp(arg1, "door"))
    {
       temp = index(cDirs, UPPER(arg2[0]));

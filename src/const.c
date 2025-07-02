@@ -3151,7 +3151,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "mystical potency", {40, 182, 182, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_potency, SLOT( 0 ), 0, 0, TRUE,
+    &gsn_potency, SLOT( 0 ), 0, 0, FALSE,
     "", "!Enhanced Damage!",
     ""},
 
@@ -3159,7 +3159,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "mystical focus", {55, 182, 182, 182, 182, 182},
     spell_mystical_focus, TAR_CHAR_SELF, POS_STANDING,
-    NULL, SLOT( 676 ), 200, 10, FALSE,
+    NULL, SLOT( 676 ), 200, 10, TRUE,
     "", "Your lose your mystical focus.",
     "$N shakes his head, and seems less focused."},
 };

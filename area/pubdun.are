@@ -654,7 +654,7 @@ D0
 D2
 ~
 ~
-0 -1 9592
+97 9560 9592
 S
 #9592
 Vice Warden's Office~
@@ -663,11 +663,11 @@ No description~
 D0
 ~
 ~
-0 -1 9591
+97 9560 9591
 D2
 ~
 ~
-0 -1 9593
+97 9561 9593
 S
 #9593
 Desk of the Warden~
@@ -676,11 +676,11 @@ No description~
 D0
 ~
 ~
-0 -1 9592
+97 9561 9592
 D2
 ~
 ~
-0 -1 9594
+97 9562 9594
 S
 #9594
 The Warden's Office~
@@ -689,7 +689,7 @@ No description~
 D0
 ~
 ~
-0 -1 9593
+97 9562 9593
 S
 #9595
 Fallen down the Crack~
@@ -711,7 +711,7 @@ Alice in Chains is a blood thirsty killing machine, and a not very nice
 "sickman, sickman, sickman."
 ~
 3 8 -400 S
-16 2
+15 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -739,7 +739,7 @@ Buffalo Tom was Midgaard's most notorious serial killer, with over three
 boo to a spider.  My! How looks can be misleading.
 ~
 3 8 -600 S
-22 1
+23 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -753,7 +753,7 @@ Blur is so called because no one has ever seen it stop moving.  It spins
 dizzy.
 ~
 3 8 -800 S
-21 0
+20 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -792,7 +792,7 @@ A Second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-9 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -825,7 +825,7 @@ A second level prisoner stands here, clearly bored.
 ~
 ~
 1 0 0 S
-11 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -858,7 +858,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1 0 0 S
-16 1
+15 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -880,7 +880,7 @@ A Final Level Prisoner stands here, scowling angrily.
 ~
 ~
 1 0 0 S
-26 1
+27 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -946,7 +946,7 @@ A Warden's Guard stands here, at attention
 ~
 ~
 1 0 0 S
-29 1
+28 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -957,7 +957,7 @@ A Vice Warden stands here, looking at documents
 ~
 ~
 1 0 0 S
-33 1
+32 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -974,7 +974,8 @@ A Warden's Secretary~
 #9574
 The Prison Warden~
 The Prison Warden~
-The Prison Warden stands here, observing~
+The Prison Warden stands here, observing
+~
 ~
 1 0 0 S
 36 1
@@ -1132,6 +1133,33 @@ A stiletto lies here, lost.~
 15
 L
 30
+#9560
+A Guard's Key~
+A Guard's Key~
+A key lies here, discarded~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+30
+#9561
+A Vice Warden's Key~
+A Vice Warden's Key~
+A key lies here, discarded~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+30
+#9562
+A Secretary's Key~
+A Secretary's Key~
+A key lies here, discarded~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+30
 #0
 #RESETS
 M 0 9551 1 9566   load mob
@@ -1235,12 +1263,15 @@ M 0 9570 3 9589 (null)
 
 M 0 9571 4 9591 (null)
 
+G 0 9560 0 (null)
 M 0 9571 4 9591 (null)
 
 M 0 9572 1 9592 (null)
 
+G 0 9561 0 (null)
 M 0 9573 1 9593 (null)
 
+G 0 9562 0 (null)
 M 0 9574 1 9594 (null)
 
 G 0 9557 0 (null)
@@ -1253,6 +1284,9 @@ M 0 9575 1 9595 (null)
 
 E 0 9558 0 0 (null)
 
+D 0 9591 2 2 (null)
+D 0 9592 2 2 (null)
+D 0 9593 2 2 (null)
 S
 #OBJFUNS
 O 9559 objfun_cast_fight

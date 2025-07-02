@@ -313,7 +313,7 @@
 #define OBJ_VNUM_SOUL_POTION 37
 #define OBJ_VNUM_CAPTURED_SOUL 38
 #define OBJ_VNUM_CONFLAGRATION 1036 /* need a staff here  ZENFIX */
-#define OBJ_VNUM_MINO_PASS 10021
+#define OBJ_VNUM_MINO_PASS 6621
 /*
  * Well known room virtual numbers.
  * Defined in #ROOMS.
