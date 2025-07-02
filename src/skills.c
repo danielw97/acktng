@@ -570,7 +570,10 @@ void do_dirt(CHAR_DATA *ch, char *argument)
    }
 
    if (is_safe(ch, victim))
+   {
+      send_to_char("They are safe!\n\r",ch);
       return;
+   }
 
    if (victim->fighting == NULL)
    {
@@ -579,7 +582,10 @@ void do_dirt(CHAR_DATA *ch, char *argument)
    }
 
    if (IS_AFFECTED(victim, AFF_BLIND))
+   {
+      send_to_char("Your target is already blinded!\n\r",ch);
       return;
+   }
 
    WAIT_STATE(ch, skill_table[gsn_dirt].beats);
 
