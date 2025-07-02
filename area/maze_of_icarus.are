@@ -211,7 +211,7 @@ Minotaur Servant~
 ~
 ~
 1 8320 0 S
-146 1
+147 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4128 0 0 0 0 0
@@ -255,7 +255,7 @@ minotaur prince~
 ~
 ~
 3145769 10408 0 S
-157 1
+158 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -288,7 +288,7 @@ captain minotaur~
 ~
 ~
 3145737 10368 0 S
-160 1
+159 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -299,7 +299,7 @@ diplomat~
 ~
 ~
 19922953 27328 0 S
-160 1
+161 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -610,7 +610,7 @@ bracers minotaur~
 @@dBracers @@Wof the @@eMinotaur@@N~
 @@WA spiked pair of @@dobsidian bracers@@W, etched with @@estrange symbols@@N
 ~
-9 134217731 8390656 1
+9 134217730 8390656 1
 0 0 0 0 0 0 0 0 0 0
 16
 A
@@ -628,7 +628,7 @@ hooves minotaur~
 @@dHooves @@Wof the @@eMinotaur@@N~
 @@WA pair of @@eblood @@Wencrusted @@dhooves@@W lie here.@@N
 ~
-9 134217731 12582912 1
+9 134217730 12582912 1
 0 0 0 0 0 0 0 0 0 0
 5
 A

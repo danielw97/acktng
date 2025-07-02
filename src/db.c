@@ -2448,7 +2448,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 
    mob->armor = interpolate(mob->level / 2, 100, -100);
 
-   mob->max_hit = mob->level * 15 + number_range(mob->level * mob->level / 2, mob->level * mob->level / 1);
+   mob->max_hit = mob->level * 15 + number_range(mob->level * mob->level * 2, mob->level * mob->level * 4);
    mob->hit = mob->max_hit;
 
    mob->exp = exp_for_mobile(mob->level, mob);
