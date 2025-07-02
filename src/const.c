@@ -1553,6 +1553,24 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "$n is no longer regenerating quickly."},
 
    {
+    REMORT, NORM,
+    "haste", {182, 182, 182, 182, 182, 182,
+              84, 182, 182, 182, 182, 182},
+    spell_haste, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 271 ), 12, 18, TRUE,
+    "", "You are no longer moving quickly.",
+    "$n is no longer moving quickly."},
+
+   {
+    REMORT, NORM,
+    "slow", {182, 182, 182, 182, 182, 182,
+              92, 182, 182, 182, 182, 182},
+    spell_slow, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 271 ), 12, 18, TRUE,
+    "", "You are now moving quickly.",
+    "$n is now moving quickly."},
+
+   {
     MORTAL, NORM,
     "remove curse", {36, 27, 182, 182, 182, 182},
     spell_remove_curse, TAR_CHAR_DEFENSIVE, POS_STANDING,

@@ -488,3 +488,47 @@ bool spell_group_heal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       }
    }
 }
+
+bool spell_haste(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+
+   int base_heal = 10;
+
+   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("haste")))
+      return FALSE;
+   af.type = sn;
+   af.duration = 10;
+   af.location = APPLY_SPEED;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = 1;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(victim, &af);
+   act("$N begins to quickly move from $n's spell.", ch, NULL, victim, TO_ROOM);
+   send_to_char("You begin to quickly move.\n\r", victim);
+   return TRUE;
+}
+
+bool spell_slow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+
+   int base_heal = 10;
+
+   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("slow")))
+      return FALSE;
+   af.type = sn;
+   af.duration = 10;
+   af.location = APPLY_SPEED;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = -1;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(victim, &af);
+   act("$N begins to slowly move from $n's spell.", ch, NULL, victim, TO_ROOM);
+   send_to_char("You begin to slowly move.\n\r", victim);
+   return TRUE;
+}

@@ -1267,6 +1267,8 @@ char *affect_loc_name(int location)
       return "critical multiplier";
    case APPLY_DAMCAP:
       return "damcap";
+   case APPLY_SPEED:
+      return "speed";
    }
 
    sprintf(buf, "affect_location_name: location %d unknown.", location);
