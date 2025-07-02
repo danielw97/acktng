@@ -26,7 +26,7 @@ OBJ_DATA *generate_item(int level)
    SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    obj->item_type = ITEM_ARMOR;
 
-   switch (number_range(1, 24))
+   switch (number_range(1, 26))
    {
    case 1:
       SET_BIT(obj->wear_flags, ITEM_WEAR_HALO);
