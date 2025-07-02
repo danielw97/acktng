@@ -1132,9 +1132,21 @@ bool check_counter(CHAR_DATA *ch, CHAR_DATA *victim)
    else
    {
       chance = 10 + get_curr_dex(victim) * 3 / 5;
-      if (victim->remort[CLASS_MON] > 0) /* Monk  */
-         chance += victim->remort[CLASS_MON] / 8;
    }
+
+   int fists = 0;
+
+   if (IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_L)->extra_flags, ITEM_FIST))
+      fists++;
+
+   if (IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_R)->extra_flags, ITEM_FIST))
+      fists++;
+
+   if (ch->remort[CLASS_MON] > 0 || ch->remort[CLASS_BRA] > 0)
+      chance += fists*3;
+   
+   if (ch->adept[CLASS_MAR] > 0)
+      chance += fists *3;
 
    chance += get_speed(victim)*5;
    chance -= get_speed(ch)*5;
