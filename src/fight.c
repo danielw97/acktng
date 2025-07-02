@@ -684,9 +684,9 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
              (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
          {
             if (ch->remort[CLASS_MON] > 0)
-               dam += dam * ch->remort[CLASS_MON] / 100;
+               dam += dam * ch->remort[CLASS_MON] / 50;
             else if (ch->remort[CLASS_BRA] > 0)
-               dam += dam * ch->remort[CLASS_BRA] / 100 * .75;
+               dam += dam * ch->remort[CLASS_BRA] / 50 * .75;
          }
       }
    }
