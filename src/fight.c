@@ -1136,10 +1136,10 @@ bool check_counter(CHAR_DATA *ch, CHAR_DATA *victim)
 
    int fists = 0;
 
-   if (IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_L)->extra_flags, ITEM_FIST))
+   if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_L)->extra_flags, ITEM_FIST))
       fists++;
 
-   if (IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_R)->extra_flags, ITEM_FIST))
+   if (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && IS_SET(get_eq_char(ch, WEAR_HOLD_HAND_R)->extra_flags, ITEM_FIST))
       fists++;
 
    if (ch->remort[CLASS_MON] > 0 || ch->remort[CLASS_BRA] > 0)
