@@ -195,13 +195,13 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if ((IS_SET(element, REALM_MIND)) && (!HAS_MIND(victim)))
         dam_modifier = 0.0;
 
-    if (((IS_SET(element, REALM_IMPACT)) || (IS_SET(element, REALM_ACID)) || (IS_SET(element, REALM_GAS))) && (!HAS_BODY(victim)))
+    if (((IS_SET(element, ELEMENT_EARTH)) || (IS_SET(element, ELEMENT_AIR))) && (!HAS_BODY(victim)))
         dam_modifier = 0.0;
 
     if ((IS_SET(element, REALM_POISON)) && (IS_SET(vi_race, RACE_MOD_IMMUNE_POISON)))
         dam_modifier = 0.0;
 
-    if ((IS_SET(element, REALM_DRAIN)) && (IS_UNDEAD(victim)))
+    if ((IS_SET(element, ELEMENT_SHADOW)) && (IS_UNDEAD(victim)))
         dam_modifier = 0.0;
 
     if (!IS_SET(element, REALM_PHYSICAL))

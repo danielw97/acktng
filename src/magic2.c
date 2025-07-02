@@ -137,7 +137,7 @@ bool spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_SHOCK, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE);
    return TRUE;
 }
 
@@ -207,7 +207,7 @@ bool spell_magic_missile(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    cnt = 1 + (level >= 30) + (level >= 60) + (level >= 80);
    for (hits = 0; hits < cnt; hits++)
    {
-      sp_damage(obj, ch, victim, dam, REALM_IMPACT, sn, TRUE);
+      sp_damage(obj, ch, victim, dam, ELEMENT_PHYSICAL, sn, TRUE);
    }
 
    return TRUE;
@@ -416,7 +416,7 @@ bool spell_shocking_grasp(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
    dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
    if (saves_spell(level, victim))
       dam /= 2;
-   sp_damage(obj, ch, victim, dam, REALM_SHOCK, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE);
    return TRUE;
 }
 
@@ -637,7 +637,7 @@ bool spell_acid_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    dam /= 4;
    if (saves_spell(level, victim))
       dam /= 2;
-   sp_damage(obj, ch, victim, dam, REALM_ACID | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 
@@ -716,7 +716,7 @@ bool spell_fire_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    dam = number_range(hpch / 16 + 1, hpch / 8);
    if (saves_spell(level, victim))
       dam /= 2;
-   sp_damage(obj, ch, victim, dam, REALM_FIRE | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_FIRE | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 
@@ -773,7 +773,7 @@ bool spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    dam /= 4;
    if (saves_spell(level, victim))
       dam /= 2;
-   sp_damage(obj, ch, victim, dam, REALM_COLD | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 
@@ -795,7 +795,7 @@ bool spell_gas_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
          dam /= 4;
          if (saves_spell(level, vch))
             dam /= 2;
-         sp_damage(obj, ch, vch, dam, REALM_GAS | NO_REFLECT | NO_ABSORB, sn, TRUE);
+         sp_damage(obj, ch, vch, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
       }
    }
    CUREF(vch_next);
@@ -813,7 +813,7 @@ bool spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
    dam /= 4;
    if (saves_spell(level, victim))
       dam /= 2;
-   sp_damage(obj, ch, victim, dam, REALM_SHOCK | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 
@@ -829,7 +829,7 @@ bool spell_hellspawn(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_DRAIN, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW, sn, TRUE);
    return TRUE;
 }
 
@@ -851,47 +851,47 @@ bool spell_planergy(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (level <= 8)
    {
       lvl = 4;
-      plane = REALM_IMPACT;
+      plane = ELEMENT_PHYSICAL;
    }
    else if (level <= 17)
    {
       lvl = 13;
-      plane = REALM_GAS;
+      plane = ELEMENT_AIR;
    }
    else if (level <= 26)
    {
       lvl = 22;
-      plane = REALM_FIRE;
+      plane = ELEMENT_FIRE;
    }
    else if (level <= 35)
    {
       lvl = 31;
-      plane = REALM_LIGHT;
+      plane = ELEMENT_WATER;
    }
    else if (level <= 44)
    {
       lvl = 40;
-      plane = REALM_SHOCK;
+      plane = ELEMENT_EARTH;
    }
    else if (level <= 53)
    {
       lvl = 49;
-      plane = REALM_SOUND;
+      plane = ELEMENT_MENTAL;
    }
    else if (level <= 62)
    {
       lvl = 58;
-      plane = REALM_MIND;
+      plane = ELEMENT_POISON;
    }
    else if (level <= 71)
    {
       lvl = 67;
-      plane = REALM_ACID;
+      plane = ELEMENT_HOLY;
    }
    else
    {
       lvl = 80;
-      plane = REALM_POISON;
+      plane = ELEMENT_SHADOW;
    }
 
    dam = dice(6, lvl / 2);
@@ -1018,7 +1018,7 @@ bool spell_static(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       dam /= 2;
 
    act("$n transfers kinetic to static energy.", ch, NULL, NULL, TO_ROOM);
-   sp_damage(obj, ch, victim, dam, REALM_SHOCK | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
 
    return TRUE;
 }
@@ -1060,7 +1060,7 @@ bool spell_phobia(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    send_to_char("Your worst phobia springs to life in your mind. Arrrggghhh!\n\r", victim);
    act("$N suffers a mental phobia attack!", ch, NULL, victim, TO_NOTVICT);
 
-   if (sp_damage(obj, ch, victim, dam, REALM_MIND, sn, TRUE))
+   if (sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE))
    {
       if (!IS_NPC(victim) && (IS_WOLF(victim) || IS_VAMP(victim)))
          return TRUE;
@@ -1109,7 +1109,7 @@ bool spell_mindflame(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
             act("$n rolls on the floor, clutching $s head in pain!", vch, NULL, NULL, TO_ROOM);
             send_to_char("You roll on the floor, clutching your head in pain!\n\r", vch);
             sp_damage(obj, ch, vch, (get_psuedo_level(ch) / 2) + dice(6, 12),
-                      REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE);
+                      ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
          }
          continue;
       }
@@ -1156,7 +1156,7 @@ bool spell_chain_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
       {
          send_to_char("The lightning bolt strikes you!\n\r", vch);
          act("The lightning bolt strikes $n!", vch, NULL, NULL, TO_ROOM);
-         sp_damage(obj, ch, vch, dam, REALM_SHOCK | NO_REFLECT, sn, TRUE);
+         sp_damage(obj, ch, vch, dam, ELEMENT_AIR | NO_REFLECT, sn, TRUE);
          dam = (4 * dam / 5);
       }
    }
@@ -1176,7 +1176,7 @@ bool spell_chain_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
       act("The lightning bolt strikes $n and vanishes!", ch, NULL, NULL, TO_ROOM);
       send_to_char("Your lightning returns, and hits you!\n\r", ch);
       dam = UMIN(level / 2, dam);
-      sp_damage(obj, ch, ch, dam, REALM_SHOCK | NO_REFLECT | NO_ABSORB, sn, TRUE);
+      sp_damage(obj, ch, ch, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
    }
    return TRUE;
 }
@@ -1196,7 +1196,7 @@ bool spell_suffocate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("$n chokes and gags!", victim, NULL, NULL, TO_ROOM);
    send_to_char("You feel your throat squeezed by an invisible force!\n\r", victim);
 
-   sp_damage(obj, ch, victim, dam, REALM_IMPACT, sn, TRUE); /* -1 = no dam message */
+   sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE); /* -1 = no dam message */
    return TRUE;
 }
 
@@ -1250,7 +1250,7 @@ bool spell_bloody_tears(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    send_to_char("Your eyes start bleeding!\n\r", victim);
    spell_blindness(skill_lookup("blindness"), level, ch, vo, obj);
 
-   sp_damage(obj, ch, victim, (level / 2), REALM_MIND | NO_REFLECT | NO_ABSORB, sn, FALSE); /* -1 = no dam message */
+   sp_damage(obj, ch, victim, (level / 2), ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, FALSE); /* -1 = no dam message */
 
    return TRUE;
 }
@@ -1271,15 +1271,15 @@ bool spell_mind_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       int element;
 
       if (cnt > 5)
-         element = SIXTH_DIVISOR | REALM_MIND;
+         element = SIXTH_DIVISOR | ELEMENT_MENTAL;
       else if (cnt > 4)
-         element = FIFTH_DIVISOR | REALM_MIND;
+         element = FIFTH_DIVISOR | ELEMENT_MENTAL;
       else if (cnt > 3)
-         element = FOURTH_DIVISOR | REALM_MIND;
+         element = FOURTH_DIVISOR | ELEMENT_MENTAL;
       else if (cnt > 2)
-         element = THIRD_DIVISOR | REALM_MIND;
+         element = THIRD_DIVISOR | ELEMENT_MENTAL;
       else if (cnt > 1)
-         element = SECOND_DIVISOR | REALM_MIND;
+         element = SECOND_DIVISOR | ELEMENT_MENTAL;
 
       dam = number_range(12, 30) + (ch->lvl[CLASS_PSI] * 5 / 4);
       if (saves_spell(level, victim))
@@ -1315,7 +1315,7 @@ bool spell_nerve_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       {
          if (vch != ch && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)))
          {
-            sp_damage(obj, ch, vch, (level) + dice(5, 20), REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE);
+            sp_damage(obj, ch, vch, (level) + dice(5, 20), ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
          }
          continue;
       }
@@ -1717,7 +1717,7 @@ bool spell_mind_flail(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 
@@ -1816,7 +1816,7 @@ bool spell_physic_thrust(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 
@@ -1836,7 +1836,7 @@ bool spell_physic_crush(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 
@@ -1856,7 +1856,7 @@ bool spell_ego_whip(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 

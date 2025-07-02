@@ -145,7 +145,7 @@ bool spell_black_hand(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
 
-   sp_damage(obj, ch, victim, dam, REALM_DRAIN | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW | NO_REFLECT | NO_ABSORB, sn, TRUE);
    act("The Black Hand surrounds $N and begins to choke!", ch, NULL, victim, TO_ROOM);
 
    return TRUE;
@@ -157,7 +157,7 @@ bool spell_throw_needle(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    AFFECT_DATA af;
 
-   if (!sp_damage(obj, ch, (CHAR_DATA *)vo, dice(2, level), REALM_POISON, sn, TRUE))
+   if (!sp_damage(obj, ch, (CHAR_DATA *)vo, dice(2, level), ELEMENT_POISON, sn, TRUE))
       return TRUE;
 
    if (!saves_spell(level, victim))
@@ -183,13 +183,13 @@ bool spell_ice_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    dam = 150 + dice(level / 4, 12);
    if (saves_spell(level, victim))
       dam /= 1.2;
-   sp_damage(obj, ch, victim, dam, REALM_COLD, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE);
    return TRUE;
 }
 
 bool spell_waterelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, REALM_WATER);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_WATER);
 
    act("$n calls upon the elemental forces of @@lwater@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@lwater@@N.", ch, obj, NULL, TO_CHAR);
@@ -204,7 +204,7 @@ bool spell_waterelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_skeleton(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, REALM_NEGATIVE);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, ELEMENT_SHADOW);
 
    act("$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR);
@@ -620,7 +620,7 @@ bool spell_ethereal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_fireelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, REALM_FIRE);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_FIRE);
 
    act("$n calls upon the elemental forces of @@efire@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@efire@@N.", ch, obj, NULL, TO_CHAR);
@@ -1018,7 +1018,7 @@ bool spell_throw_star(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    AFFECT_DATA af;
 
    if (!sp_damage(obj, ch, (CHAR_DATA *)vo,
-                  dice(5, level / 2) + dice(5, level / 2) + level, REALM_POISON, sn, TRUE))
+                  dice(5, level / 2) + dice(5, level / 2) + level, ELEMENT_POISON, sn, TRUE))
       return TRUE;
 
    if (!saves_spell(level, victim))
@@ -1274,7 +1274,7 @@ bool spell_divine_intervention(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_D
 
 bool spell_earthelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, REALM_EARTH);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_EARTH);
 
    act("$n calls upon the elemental forces of @@bearth@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@bearth@@N.", ch, obj, NULL, TO_CHAR);
@@ -1289,7 +1289,7 @@ bool spell_earthelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_iron_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, REALM_IMPACT);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_PHYSICAL);
 
    act("@@N$n calls upon the @@aalchemical@@N forces of @@dmetal@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@aalchemical@@N forces of @@dmetal@@N.", ch, obj, NULL, TO_CHAR);
@@ -1304,7 +1304,7 @@ bool spell_iron_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_soul_thief(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, REALM_DRAIN);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, ELEMENT_SHADOW);
 
    act("$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR);
@@ -1321,7 +1321,7 @@ bool spell_soul_thief(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_holy_avenger(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_KNI] / 4, REALM_HOLY);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_KNI] / 4, ELEMENT_HOLY);
 
    act("$n calls upon the holy forces of @@Wlight@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the holy forces of @@Wlight@@N.", ch, obj, NULL, TO_CHAR);
@@ -1336,7 +1336,7 @@ bool spell_holy_avenger(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
 bool spell_diamond_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, REALM_LIGHT);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_HOLY);
 
    act("@@N$n calls upon the @@aalchemical@@N forces of @@ylight@@N!", ch, obj, NULL, TO_ROOM);
    act("@@NYou call upon the @@aalchemical@@N forces of @@ylight@@N.", ch, obj, NULL, TO_CHAR);
@@ -1542,7 +1542,7 @@ bool spell_lava_burst(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
 
    sp_damage(obj, ch, (CHAR_DATA *)vo,
-             number_range(get_psuedo_level(ch) * 2, get_psuedo_level(ch) * 4) * save_mod, REALM_FIRE, sn, TRUE);
+             number_range(get_psuedo_level(ch) * 2, get_psuedo_level(ch) * 4) * save_mod, ELEMENT_FIRE, sn, TRUE);
 
    return TRUE;
 }
@@ -1640,7 +1640,7 @@ bool spell_retri_strike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
                 NULL, TO_ROOM);
             act("@@WYou are @@eimmolated@@N by the fury released from the $p@@W, and fall to the ground!", vch, staff_obj,
                 NULL, TO_CHAR);
-            if (!sp_damage(obj, ch, vch, number_range(staff_obj->level * 6, staff_obj->level * 10), REALM_LIGHT, sn, FALSE))
+            if (!sp_damage(obj, ch, vch, number_range(staff_obj->level * 6, staff_obj->level * 10), ELEMENT_HOLY, sn, FALSE))
                continue;
             for (heated_item = vch->first_carry; heated_item != NULL; heated_item = heated_item->next_in_carry_list)
             {

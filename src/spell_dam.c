@@ -40,21 +40,17 @@
  */
 
 struct sp_dam_str_type sp_dam_str[] = {
-    /* NONE      */ {REALM_NONE, "@@g", "@@g", "@@W", "", "%s%s%s",
+    /* NONE      */ {ELEMENT_NONE, "@@g", "@@g", "@@W", "", "%s%s%s",
                      "blast", "BLAST", "blasts", "BLASTS"},
 
-    /* Fire      */ {REALM_FIRE, "@@R", "@@W", "@@y", "@@2", "%s<%s^%s>", "burn", "INCINERATE", "burns", "INCINERATES"},
-    /* Shock     */ {REALM_SHOCK, "@@l", "@@W", "@@y", "@@1", "%s~%s-%s~", "shock", "FRY", "shocks", "FRIES"},
-    /* light     */ {REALM_LIGHT, "@@W", "@@y", "@@c", "@@7", "%s*%s*%s*", "zap", "ZAP", "zaps", "ZAPS"},
-    /* gas       */ {REALM_GAS, "@@W", "@@y", "@@c", "@@7", "%s(%sO%s)", "choke", "ENVELOP", "chokes", "ENVELOPS"},
-    /* poison    */ {REALM_POISON, "@@e", "@@r", "@@e", "@@4", "%s{%s^%s}", "weaken", "POISON", "weakens", "POISONS"},
-    /* cold      */ {REALM_COLD, "@@l", "@@W", "@@y", "@@1", "%s[%s~%s]", "chill", "FREEZE", "chills", "FREEZES"},
-    /* sound     */ {REALM_SOUND, "@@l", "@@W", "@@y", "@@1", "%s~%s\\/%s~", "blast", "BLAST", "blasts", "BLASTS"},
-    /* acid      */ {REALM_ACID, "@@G", "@@W", "@@r", "@@3", "%s-%sX%s-", "etch", "DISSOLVE", "etches", "DISSOLVES"},
-    /* drain     */ {REALM_DRAIN, "@@d", "@@R@@i", "@@2@@e", "@@R@@i", "%s>%s-%s<", "taint", "DRAIN", "taints", "DRAINS"},
-    /* impact    */ {REALM_IMPACT, "@@b", "@@W", "@@y", "@@4", "%s.%s^%s.", "strike", "SLAM", "strikes", "SLAMS"},
-    /* mind      */ {REALM_MIND, "@@m", "@@W", "@@p", "@@5", "%s/%sV%s\\", "zap", "BLAST", "zaps", "BLASTS"},
-    /* holy      */ {REALM_HOLY, "@@l", "@@W", "@@y", "@@1", "%s~%s\\/%s~", "holy", "HOLY", "holies", "HOLIES"}};
+    /* Fire      */ {ELEMENT_FIRE, "@@R", "@@W", "@@y", "@@2", "%s<%s^%s>", "burn", "INCINERATE", "burns", "INCINERATES"},
+    /* gas       */ {ELEMENT_AIR, "@@W", "@@y", "@@c", "@@7", "%s(%sO%s)", "choke", "ENVELOP", "chokes", "ENVELOPS"},
+    /* poison    */ {ELEMENT_POISON, "@@e", "@@r", "@@e", "@@4", "%s{%s^%s}", "weaken", "POISON", "weakens", "POISONS"},
+    /* cold      */ {ELEMENT_WATER, "@@l", "@@W", "@@y", "@@1", "%s[%s~%s]", "chill", "FREEZE", "chills", "FREEZES"},
+    /* drain     */ {ELEMENT_SHADOW, "@@d", "@@R@@i", "@@2@@e", "@@R@@i", "%s>%s-%s<", "taint", "DRAIN", "taints", "DRAINS"},
+    /* impact    */ {ELEMENT_EARTH, "@@b", "@@W", "@@y", "@@4", "%s.%s^%s.", "strike", "SLAM", "strikes", "SLAMS"},
+    /* mind      */ {ELEMENT_MENTAL, "@@m", "@@W", "@@p", "@@5", "%s/%sV%s\\", "zap", "BLAST", "zaps", "BLASTS"},
+    /* holy      */ {ELEMENT_HOLY, "@@l", "@@W", "@@y", "@@1", "%s~%s\\/%s~", "holy", "HOLY", "holies", "HOLIES"}};
 
 CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int element)
 {
@@ -83,7 +79,7 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int element)
       strcpy(long_desc, "A @@yE@@barth @@yE@@blemental@@N rumbles here.\n\r");
       base_penalty = 35;
    }
-   else if (element == REALM_NEGATIVE)
+   else if (element == ELEMENT_SHADOW)
    {
       strcpy(name, "Skeleton");
       strcpy(short_desc, "A @@dSkeleton@@N");
@@ -97,21 +93,21 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int element)
       strcpy(long_desc, "A majestic @@cHoly @@WAvenger@@N stands before you.\n\r");
       base_penalty = 40;
    }
-   else if (element == REALM_DRAIN)
+   else if (element == ELEMENT_AIR)
    {
       strcpy(name, "Soul Thief");
       strcpy(short_desc, "@@dSoul @@BThief@@N");
       strcpy(long_desc, "A @@dSoul @@BThief@@N skulks about here.\n\r");
       base_penalty = 35;
    }
-   else if (element == REALM_IMPACT)
+   else if (element == ELEMENT_PHYSICAL)
    {
       strcpy(name, "Iron Golem");
       strcpy(short_desc, "@@dIron @@WGolem@@N");
       strcpy(long_desc, "@@NA towering mass of @@dmetal@@N peers into your soul.\n\r");
       base_penalty = 25;
    }
-   else if (element == REALM_LIGHT)
+   else if (element == ELEMENT_MENTAL)
    {
       strcpy(name, "Diamond Golem");
       strcpy(short_desc, "@@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@WGolem@@N");
@@ -258,7 +254,7 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
       sprintf(buf2, "You destroy $N!");
       sprintf(buf3, "$n destroys you.");
       break;
-   case RE_FIRE:
+   case ELEMENT_FIRE:
    {
       if (HAS_BODY(victim))
       {
@@ -300,57 +296,7 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
       }
       break;
    }
-   case RE_SHOCK:
-   {
-      if (HAS_BODY(victim))
-      {
-         switch (number_range(0, 2))
-         {
-         case 0:
-            sprintf(buf1, "$n electrifies $N's to a crisp.");
-            sprintf(buf2, "You electrify $N's body to a crisp!");
-            sprintf(buf3, "$n electrifies your remains");
-            break;
-         case 1:
-            sprintf(buf1, "$n fries $N. Smoke envelops $S corpse!");
-            sprintf(buf2, "You fry $N. Smoke bites your eyes!");
-            sprintf(buf3, "$n sends electricity through your body. You feel your skin burn.");
-            break;
-         case 2:
-            sprintf(buf1, "$n lightning shocks $N's body and $S eye balls fall out!");
-            sprintf(buf2, "You send lightning through $N's body and $S eye balls fall out!");
-            sprintf(buf3, "$n sends lightning though your body. Your eye sockets pop and your eye balls fall out!");
-            break;
-         }
-      }
-      else
-      {
-         sprintf(buf1, "$n electricutes $N.");
-         sprintf(buf2, "You electricute $N.");
-         sprintf(buf3, "$n electricutes you.");
-         break;
-      }
-      break;
-   }
-      /*      case RE_LIGHT:
-            {
-               if( HAS_BODY( victim ) )
-               {
-                  sprintf( buf1, "$n makes $N's corpse glow with unholy light!" );
-                  sprintf( buf2, "You penetrate $N's body with light!" );
-                  sprintf( buf3, "$n penetrates your remains with light!" );
-                  break;
-               }
-               else
-               {
-                  sprintf( buf1, "$n makes $N glow with unholy light!" );
-                  sprintf( buf2, "You penetrate $N with light!" );
-                  sprintf( buf3, "$n penetrates you with light!" );
-                  break;
-               }
-               break;
-            }*/
-   case RE_POISON:
+   case ELEMENT_POISON:
    {
       if (HAS_BODY(victim))
       {
@@ -378,7 +324,7 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
       }
       break;
    }
-   case RE_COLD:
+   case ELEMENT_WATER:
    {
       if (HAS_BODY(victim))
       {
@@ -400,52 +346,7 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
       }
       break;
    }
-      /*      case RE_SOUND:
-            {
-               if( HAS_BODY( victim ) )
-               {
-                  sprintf( buf1, "$n explodes $N's remains with deafening sound!" );
-                  sprintf( buf2, "You explode $N's remains with deafening sound!" );
-                  sprintf( buf3, "$n explodes your remains with deafening sound!" );
-                  break;
-               }
-               else
-               {
-                  sprintf( buf1, "$n shatters $N with deafening sound!" );
-                  sprintf( buf2, "You shatter $N with deafening sound!" );
-                  sprintf( buf3, "$n shatters you with deafening sound!" );
-                  break;
-               }
-               break;
-            }*/
-      /*      case RE_ACID:
-            {
-               if( HAS_BODY( victim ) )
-               {
-                  switch ( number_range( 0, 1 ) )
-                  {
-                     case 0:
-                        sprintf( buf1, "$n sprays acid on $N; $S flesh falls apart!" );
-                        sprintf( buf2, "You spray acid on $N; $S flesh falls apart!" );
-                        sprintf( buf3, "$n sprays acid on you. Your flesh falls apart!" );
-                        break;
-                     case 1:
-                        sprintf( buf1, "$n dissolves $N's corpse into mushy paste." );
-                        sprintf( buf2, "You dissolve $N's corpse into mushy paste." );
-                        sprintf( buf3, "$n dissolves you into mushy paste!" );
-                        break;
-                  }
-               }
-               else
-               {
-                  sprintf( buf1, "$n etches $N to death!" );
-                  sprintf( buf2, "You etch $N to death!" );
-                  sprintf( buf3, "$n etches you to death!" );
-                  break;
-               }
-               break;
-            }*/
-   case RE_DRAIN:
+   case ELEMENT_SHADOW:
    {
       if (HAS_BODY(victim))
       {
@@ -463,7 +364,7 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
       }
       break;
    }
-   case RE_IMPACT:
+   case ELEMENT_PHYSICAL:
    {
       if (HAS_BODY(victim))
       {
@@ -481,7 +382,7 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
       }
       break;
    }
-   case RE_MIND:
+   case ELEMENT_MENTAL:
    {
       if (HAS_MIND(victim))
       {
@@ -499,7 +400,7 @@ void sp_death_message(CHAR_DATA *ch, CHAR_DATA *victim, int realm)
       }
       break;
    }
-   case RE_HOLY:
+   case ELEMENT_HOLY:
    {
       if (HAS_MIND(victim))
       {

@@ -215,125 +215,93 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
 
    strcat(sendBuf, "Strong Realms:");
 
-   if (race_table[i].strong_realms == REALM_NONE)
+   if (race_table[i].strong_realms == ELEMENT_NONE)
       strcat(sendBuf, " None");
-   if (IS_SET(race_table[i].strong_realms, REALM_FIRE))
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_FIRE))
       strcat(sendBuf, " Fire");
-   if (IS_SET(race_table[i].strong_realms, REALM_SHOCK))
-      strcat(sendBuf, " Shock");
-   if (IS_SET(race_table[i].strong_realms, REALM_LIGHT))
-      strcat(sendBuf, " Light");
-   if (IS_SET(race_table[i].strong_realms, REALM_GAS))
-      strcat(sendBuf, " Gas");
-   if (IS_SET(race_table[i].strong_realms, REALM_POISON))
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_AIR))
+      strcat(sendBuf, " Air");
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_WATER))
+      strcat(sendBuf, " Water");
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_EARTH))
+      strcat(sendBuf, " Earth");
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_POISON))
       strcat(sendBuf, " Poison");
-   if (IS_SET(race_table[i].strong_realms, REALM_COLD))
-      strcat(sendBuf, " Cold");
-   if (IS_SET(race_table[i].strong_realms, REALM_SOUND))
-      strcat(sendBuf, " Sound");
-   if (IS_SET(race_table[i].strong_realms, REALM_ACID))
-      strcat(sendBuf, " Acid");
-   if (IS_SET(race_table[i].strong_realms, REALM_DRAIN))
-      strcat(sendBuf, " Drain");
-   if (IS_SET(race_table[i].strong_realms, REALM_IMPACT))
-      strcat(sendBuf, " Impact");
-   if (IS_SET(race_table[i].strong_realms, REALM_MIND))
-      strcat(sendBuf, " Mind");
-   if (IS_SET(race_table[i].strong_realms, REALM_HOLY))
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_MENTAL))
+      strcat(sendBuf, " Mental");
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_HOLY))
       strcat(sendBuf, " Holy");
+   if (IS_SET(race_table[i].strong_realms, ELEMENT_PHYSICAL))
+      strcat(sendBuf, " Physical");
 
    strcat(sendBuf, "\r\n");
 
    strcat(sendBuf, "Weak Realms:");
 
-   if (race_table[i].weak_realms == REALM_NONE)
+   if (race_table[i].weak_realms == ELEMENT_NONE)
       strcat(sendBuf, " None");
-   if (IS_SET(race_table[i].weak_realms, REALM_FIRE))
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_FIRE))
       strcat(sendBuf, " Fire");
-   if (IS_SET(race_table[i].weak_realms, REALM_SHOCK))
-      strcat(sendBuf, " Shock");
-   if (IS_SET(race_table[i].weak_realms, REALM_LIGHT))
-      strcat(sendBuf, " Light");
-   if (IS_SET(race_table[i].weak_realms, REALM_GAS))
-      strcat(sendBuf, " Gas");
-   if (IS_SET(race_table[i].weak_realms, REALM_POISON))
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_AIR))
+      strcat(sendBuf, " Air");
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_WATER))
+      strcat(sendBuf, " Water");
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_EARTH))
+      strcat(sendBuf, " Earth");
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_POISON))
       strcat(sendBuf, " Poison");
-   if (IS_SET(race_table[i].weak_realms, REALM_COLD))
-      strcat(sendBuf, " Cold");
-   if (IS_SET(race_table[i].weak_realms, REALM_SOUND))
-      strcat(sendBuf, " Sound");
-   if (IS_SET(race_table[i].weak_realms, REALM_ACID))
-      strcat(sendBuf, " Acid");
-   if (IS_SET(race_table[i].weak_realms, REALM_DRAIN))
-      strcat(sendBuf, " Drain");
-   if (IS_SET(race_table[i].weak_realms, REALM_IMPACT))
-      strcat(sendBuf, " Impact");
-   if (IS_SET(race_table[i].weak_realms, REALM_MIND))
-      strcat(sendBuf, " Mind");
-   if (IS_SET(race_table[i].weak_realms, REALM_HOLY))
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_MENTAL))
+      strcat(sendBuf, " Mental");
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_HOLY))
       strcat(sendBuf, " Holy");
+   if (IS_SET(race_table[i].weak_realms, ELEMENT_PHYSICAL))
+      strcat(sendBuf, " Physical");
 
    strcat(sendBuf, "\r\n");
 
    strcat(sendBuf, "Resist Realms:");
 
-   if (race_table[i].resist_realms == REALM_NONE)
+   if (race_table[i].resist_realms == ELEMENT_NONE)
       strcat(sendBuf, " None");
-   if (IS_SET(race_table[i].resist_realms, REALM_FIRE))
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_FIRE))
       strcat(sendBuf, " Fire");
-   if (IS_SET(race_table[i].resist_realms, REALM_SHOCK))
-      strcat(sendBuf, " Shock");
-   if (IS_SET(race_table[i].resist_realms, REALM_LIGHT))
-      strcat(sendBuf, " Light");
-   if (IS_SET(race_table[i].resist_realms, REALM_GAS))
-      strcat(sendBuf, " Gas");
-   if (IS_SET(race_table[i].resist_realms, REALM_POISON))
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_AIR))
+      strcat(sendBuf, " Air");
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_WATER))
+      strcat(sendBuf, " Water");
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_EARTH))
+      strcat(sendBuf, " Earth");
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_POISON))
       strcat(sendBuf, " Poison");
-   if (IS_SET(race_table[i].resist_realms, REALM_COLD))
-      strcat(sendBuf, " Cold");
-   if (IS_SET(race_table[i].resist_realms, REALM_SOUND))
-      strcat(sendBuf, " Sound");
-   if (IS_SET(race_table[i].resist_realms, REALM_ACID))
-      strcat(sendBuf, " Acid");
-   if (IS_SET(race_table[i].resist_realms, REALM_DRAIN))
-      strcat(sendBuf, " Drain");
-   if (IS_SET(race_table[i].resist_realms, REALM_IMPACT))
-      strcat(sendBuf, " Impact");
-   if (IS_SET(race_table[i].resist_realms, REALM_MIND))
-      strcat(sendBuf, " Mind");
-   if (IS_SET(race_table[i].resist_realms, REALM_HOLY))
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_MENTAL))
+      strcat(sendBuf, " Mental");
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_HOLY))
       strcat(sendBuf, " Holy");
+   if (IS_SET(race_table[i].resist_realms, ELEMENT_PHYSICAL))
+      strcat(sendBuf, " Physical");
 
    strcat(sendBuf, "\r\n");
 
    strcat(sendBuf, "Suscept Realms:");
 
-   if (race_table[i].suscept_realms == REALM_NONE)
+   if (race_table[i].suscept_realms == ELEMENT_NONE)
       strcat(sendBuf, " None");
-   if (IS_SET(race_table[i].suscept_realms, REALM_FIRE))
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_FIRE))
       strcat(sendBuf, " Fire");
-   if (IS_SET(race_table[i].suscept_realms, REALM_SHOCK))
-      strcat(sendBuf, " Shock");
-   if (IS_SET(race_table[i].suscept_realms, REALM_LIGHT))
-      strcat(sendBuf, " Light");
-   if (IS_SET(race_table[i].suscept_realms, REALM_GAS))
-      strcat(sendBuf, " Gas");
-   if (IS_SET(race_table[i].suscept_realms, REALM_POISON))
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_AIR))
+      strcat(sendBuf, " Air");
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_WATER))
+      strcat(sendBuf, " Water");
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_EARTH))
+      strcat(sendBuf, " Earth");
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_POISON))
       strcat(sendBuf, " Poison");
-   if (IS_SET(race_table[i].suscept_realms, REALM_COLD))
-      strcat(sendBuf, " Cold");
-   if (IS_SET(race_table[i].suscept_realms, REALM_SOUND))
-      strcat(sendBuf, " Sound");
-   if (IS_SET(race_table[i].suscept_realms, REALM_ACID))
-      strcat(sendBuf, " Acid");
-   if (IS_SET(race_table[i].suscept_realms, REALM_DRAIN))
-      strcat(sendBuf, " Drain");
-   if (IS_SET(race_table[i].suscept_realms, REALM_IMPACT))
-      strcat(sendBuf, " Impact");
-   if (IS_SET(race_table[i].suscept_realms, REALM_MIND))
-      strcat(sendBuf, " Mind");
-   if (IS_SET(race_table[i].suscept_realms, REALM_HOLY))
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_MENTAL))
+      strcat(sendBuf, " Mental");
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_HOLY))
       strcat(sendBuf, " Holy");
+   if (IS_SET(race_table[i].suscept_realms, ELEMENT_PHYSICAL))
+      strcat(sendBuf, " Physical");
 
    strcat(sendBuf, "\r\n");
 
@@ -1993,25 +1961,9 @@ void do_who(CHAR_DATA *ch, char *argument)
    char buf3[MAX_STRING_LENGTH * 4];
    char buf4[MAX_STRING_LENGTH * 4];
    char fgs[MAX_STRING_LENGTH * 4];
-   char tierheader[MSL];
    char clan_job[MAX_STRING_LENGTH];
-   int iClass;
-   int iLevelLower;
-   int iLevelUpper;
-   int nNumber;
-   int nMatch;
-   bool rgfClass[MAX_CLASS];
-   bool fClassRestrict;
-   bool fImmortalOnly;
-   bool fadeptonly = FALSE;
-   bool fremortonly = FALSE;
    int cnt, slength, excess, nlength;
-   int true_cnt = 0;
-   int list;
-   int number[3];
    bool idle = FALSE, invis = FALSE, wanted = FALSE;
-   bool cangroup = FALSE;
-   int stop_counter = 0;
    int player_cnt = 0;
    bool print = FALSE;
 
@@ -2022,96 +1974,6 @@ void do_who(CHAR_DATA *ch, char *argument)
    buf2[0] = '\0';
    buf3[0] = '\0';
    buf4[0] = '\0';
-
-   iLevelLower = 0;
-   iLevelUpper = MAX_LEVEL;
-   fClassRestrict = FALSE;
-   fImmortalOnly = FALSE;
-   for (iClass = 0; iClass < MAX_CLASS; iClass++)
-      rgfClass[iClass] = FALSE;
-   /*
-    * Parse arguments.
-    */
-   nNumber = 0;
-   for (;;)
-   {
-      char arg[MAX_STRING_LENGTH];
-
-      argument = one_argument(argument, arg);
-      if (arg[0] == '\0')
-         break;
-
-      if (is_number(arg))
-      {
-         switch (++nNumber)
-         {
-         case 1:
-            iLevelLower = atoi(arg);
-            break;
-         case 2:
-            iLevelUpper = atoi(arg);
-            break;
-         default:
-            send_to_char("Only two level numbers allowed.\n\r", ch);
-            return;
-         }
-      }
-      else
-      {
-         int iClass;
-
-         if (strlen(arg) < 3)
-         {
-            send_to_char("Classes must be longer than that.\n\r", ch);
-            return;
-         }
-         /*
-          * Look for classes to turn on.
-          */
-         if (!str_prefix(arg, "group"))
-         {
-            cangroup = TRUE;
-            break;
-         }
-         if (!str_prefix(arg, "adept"))
-         {
-            fadeptonly = TRUE;
-            break;
-         }
-         if (!str_prefix(arg, "remort"))
-         {
-            fremortonly = TRUE;
-            break;
-         }
-
-         arg[3] = '\0';
-         if (!str_cmp(arg, "imm"))
-         {
-            fImmortalOnly = TRUE;
-         }
-
-         else
-         {
-            fClassRestrict = TRUE;
-            for (iClass = 0; iClass < MAX_CLASS; iClass++)
-            {
-               if (!str_cmp(arg, class_table[iClass].who_name))
-               {
-                  rgfClass[iClass] = TRUE;
-                  break;
-               }
-            }
-
-            if ((iClass == MAX_CLASS) && (!(cangroup)))
-            {
-               send_to_char("That's not a class.\n\r", ch);
-               return;
-            }
-         }
-      }
-   }
-
-   buf[0] = '\0';
 
    sprintf(buf, "WHO Listing: " mudnamecolor "\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf,
@@ -2251,7 +2113,7 @@ void do_who(CHAR_DATA *ch, char *argument)
                   else
                   {
                      if (wch->lvl[cnt] == MAX_MORTAL)
-                        sprintf(buf4, " @@b *@@N", wch->lvl[cnt]);
+                        sprintf(buf4, " @@b *@@N");
                      else if (wch->lvl[cnt] <= 0)
                         sprintf(buf4, " @@g%2d@@N", 0);
                      else
@@ -2382,7 +2244,6 @@ void do_who(CHAR_DATA *ch, char *argument)
                sprintf(buf + strlen(buf), "@@R|@@g\n\r");
          }
       }
-      CHAR_DATA *wch;
 
       if (d->connected != CON_PLAYING)
          continue;
@@ -2913,12 +2774,12 @@ void do_report(CHAR_DATA *ch, char *argument)
    char buf[MAX_INPUT_LENGTH];
 
    sprintf(buf,
-           "You report: %d/%d hp %d/%d mana %d/%d mv %d xp.\n\r",
+           "You report: %d/%d hp %d/%d mana %d/%d mv %ld xp.\n\r",
            ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->exp);
 
    send_to_char(buf, ch);
 
-   sprintf(buf, "$n reports: %d/%d hp %d/%d mana %d/%d mv %d xp.",
+   sprintf(buf, "$n reports: %d/%d hp %d/%d mana %d/%d mv %ld xp.",
            ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->exp);
 
    act(buf, ch, NULL, NULL, TO_ROOM);
@@ -3750,7 +3611,6 @@ void do_spells(CHAR_DATA *ch, char *argument)
    char buf1[MAX_STRING_LENGTH];
    int sn;
    int col;
-   int cnt;
    buf[0] = '\0';
 
    /*
@@ -4370,8 +4230,6 @@ void do_gain(CHAR_DATA *ch, char *argument)
    bool any;
    bool found = FALSE;
    int c;          /* The class to gain in */
-   int numclasses; /* Current number of classes person has */
-   int a;          /* Looping var */
    bool remort = FALSE;
    bool vamp = FALSE;
    bool adept = FALSE;
@@ -5059,8 +4917,6 @@ void do_worth(CHAR_DATA *ch, char *argument)
     */
    bool any = FALSE;
    char buf[MAX_STRING_LENGTH];
-   int numclasses;
-   int a;
    long_int cost;
    int cnt;
 

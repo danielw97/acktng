@@ -88,7 +88,7 @@ bool spell_shockstorm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       dam /= 2;
    act("@@g$n is struck by the storm of @@lsparks@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the storm of @@lsparks@@g!!@@N\n\r", victim);
-   sp_damage(obj, ch, victim, dam, REALM_SHOCK, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE);
    return TRUE;
 }
 
@@ -113,7 +113,7 @@ bool spell_cone_cold(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       dam /= 2;
    act("@@g$n is struck by the cone of @@acold@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the cone of @@acold@@g!!@@N\n\r", victim);
-   sp_damage(obj, ch, victim, dam, REALM_COLD, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE);
    return TRUE;
 }
 
@@ -165,7 +165,7 @@ bool spell_wraith_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    act("@@R$n is struck by the @@dwraithlike hand @@R!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@RYou are struck by a @@dwraithlike hand @@R!!@@N\n\r", victim);
    drain_mod = get_psuedo_level(ch) * dam / 130;
-   if (sp_damage(obj, ch, victim, dam, REALM_DRAIN | NO_REFLECT | NO_ABSORB, sn, TRUE))
+   if (sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW | NO_REFLECT | NO_ABSORB, sn, TRUE))
       ch->hit = UMIN(ch->max_hit, (ch->hit + drain_mod));
    return TRUE;
 }
@@ -386,7 +386,7 @@ bool spell_sonic_blast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    dam = dice(get_psuedo_level(ch) / 2, 3) + dice(get_psuedo_level(ch) / 2, 3);
    if (saves_spell(level, victim))
       dam = dam * 2 / 3;
-   if (sp_damage(obj, ch, victim, dam, REALM_SOUND | NO_REFLECT | NO_ABSORB, sn, TRUE))
+   if (sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE))
    {
       if (is_affected(ch, sn))
          return TRUE;
@@ -494,8 +494,6 @@ bool spell_haste(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   int base_heal = 10;
-
    if (is_affected(ch, sn) || is_affected(ch, skill_lookup("haste")))
       return FALSE;
    af.type = sn;
@@ -515,8 +513,6 @@ bool spell_slow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
-
-   int base_heal = 10;
 
    if (is_affected(ch, sn) || is_affected(ch, skill_lookup("slow")))
       return FALSE;

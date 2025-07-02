@@ -865,7 +865,7 @@ bool spell_acid_blast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    dam = dice(level, 6);
    if (saves_spell(level, victim))
       dam /= 2;
-   sp_damage(obj, ch, victim, dam, REALM_ACID, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE);
    return TRUE;
 }
 
@@ -911,7 +911,7 @@ bool spell_badbreath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    {
       dam /= 2;
    }
-   sp_damage(obj, ch, victim, dam, REALM_GAS, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, REALM_AIR, sn, TRUE);
    return TRUE;
 }
 
@@ -964,7 +964,7 @@ bool spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   if (!sp_damage(obj, ch, victim, 0, REALM_LIGHT, sn, FALSE))
+   if (!sp_damage(obj, ch, victim, 0, REALM_HOLY, sn, FALSE))
       return TRUE;
 
    if (IS_AFFECTED(victim, AFF_BLIND) || saves_spell(level, victim))
@@ -1045,7 +1045,7 @@ bool spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
          if (vch != ch && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)))
          {
             sp_damage(obj, ch, vch, (saves_spell(level, vch) ? dam / 2 : dam),
-                      REALM_SHOCK | NO_REFLECT | NO_ABSORB, sn, TRUE);
+                      ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
          }
          continue;
       }
@@ -1059,19 +1059,19 @@ bool spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
 
 bool spell_cause_light(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   sp_damage(obj, ch, (CHAR_DATA *)vo, dice(2, 10) + level / 3, REALM_DRAIN, sn, TRUE);
+   sp_damage(obj, ch, (CHAR_DATA *)vo, dice(2, 10) + level / 3, ELEMENT_SHADOW, sn, TRUE);
    return TRUE;
 }
 
 bool spell_cause_critical(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   sp_damage(obj, ch, (CHAR_DATA *)vo, dice(10, 30) + level - 6, REALM_DRAIN, sn, TRUE);
+   sp_damage(obj, ch, (CHAR_DATA *)vo, dice(10, 30) + level - 6, ELEMENT_SHADOW, sn, TRUE);
    return TRUE;
 }
 
 bool spell_cause_serious(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   sp_damage(obj, ch, (CHAR_DATA *)vo, dice(8, 20) + level / 2, REALM_DRAIN, sn, TRUE);
+   sp_damage(obj, ch, (CHAR_DATA *)vo, dice(8, 20) + level / 2, ELEMENT_SHADOW, sn, TRUE);
    return TRUE;
 }
 
@@ -1157,7 +1157,7 @@ bool spell_chill_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
    if (!saves_spell(level, victim))
    {
-      if (sp_damage(obj, ch, victim, dam, REALM_COLD, sn, TRUE))
+      if (sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE))
       {
          af.type = sn;
          af.duration = 3;
@@ -1169,7 +1169,7 @@ bool spell_chill_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    }
    else
    {
-      sp_damage(obj, ch, victim, dam / 2, REALM_COLD, sn, TRUE);
+      sp_damage(obj, ch, victim, dam / 2, ELEMENT_WATER, sn, TRUE);
    }
 
    return TRUE;
@@ -1865,7 +1865,7 @@ bool spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
          {
             act("$n loses $s footing, and falls to the ground!", vch, NULL, NULL, TO_ROOM);
             send_to_char("You lose your footing, and fall to the ground!", vch);
-            sp_damage(NULL, ch, vch, level + dice(20, 10), REALM_IMPACT, sn, TRUE);
+            sp_damage(NULL, ch, vch, level + dice(20, 10), REALM_EARTH, sn, TRUE);
          }
          else
          {
@@ -2005,7 +2005,7 @@ bool spell_energy_drain(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       ch->hit = UMIN(ch->max_hit, ch->hit + dam);
    }
 
-   sp_damage(obj, ch, victim, dam, REALM_DRAIN, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, REALM_SHADOW, sn, TRUE);
 
    return TRUE;
 }
@@ -2185,7 +2185,7 @@ bool spell_harm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    dam = UMIN(180, victim->hit - dice(1, 4));
    if (saves_spell(level, victim) || (saves_spell(level, victim)))
       dam = UMIN(100, dam / 4);
-   if (sp_damage(obj, ch, victim, dam, REALM_DRAIN, sn, TRUE))
+   if (sp_damage(obj, ch, victim, dam, REALM_SHADOW, sn, TRUE))
    {
       af.type = skill_lookup("poison");
       af.duration = 12 + (level / 10);
@@ -2300,7 +2300,7 @@ bool spell_laserbolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_LIGHT, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, REALM_HOLY, sn, TRUE);
    return TRUE;
 }
 

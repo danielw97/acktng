@@ -487,6 +487,11 @@ int get_max_con(CHAR_DATA *ch)
    return UMIN(max, STAT_MAX);
 }
 
+int get_speed(CHAR_DATA *ch)
+{
+   return get_stat(ch, APPLY_SPEED);
+}
+
 int get_spellpower(CHAR_DATA *ch)
 {
    return get_stat(ch, APPLY_SPELLPOWER);

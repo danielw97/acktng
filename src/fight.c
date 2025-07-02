@@ -128,7 +128,7 @@ void violence_update(void)
          }
          if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 && is_same_room(ch, paf->caster))
          {
-            do_damage(paf->caster, ch, paf->modifier, paf->type, REALM_IMPACT, FALSE);
+            do_damage(paf->caster, ch, paf->modifier, paf->type, paf->element, FALSE);
          }
          if (paf->duration > 0 && paf->duration_type == DURATION_ROUND)
          {
@@ -390,7 +390,6 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    OBJ_DATA *wield1 = NULL;
    OBJ_DATA *wield2 = NULL;
    int dual_chance = 0;
-   bool multi_hit = FALSE;
 
    if (IS_SET(stance_app[ch->stance].specials, STANCE_NO_HIT))
       return;
@@ -491,6 +490,8 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       chance += stance_app[ch->stance].speed_mod;
       chance += dual_chance;
 
+      chance += get_speed(ch);
+
       int calc_chance = number_percent();
 
       if (chance > calc_chance)
@@ -526,7 +527,6 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 {
    OBJ_DATA *wield;
    OBJ_DATA *dualwield = NULL;
-   OBJ_DATA *shield;
    int victim_ac;
    int remort_bonus;
    int dam;
