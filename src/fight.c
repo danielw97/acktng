@@ -1015,6 +1015,8 @@ int get_parry(CHAR_DATA *ch)
       OBJ_DATA *weapon;
       if ((weapon = get_eq_char(ch, WEAR_HOLD_HAND_R)) == NULL || !IS_WEAPON(weapon))
          weapon = get_eq_char(ch, WEAR_HOLD_HAND_L);
+      if (weapon == NULL)
+         weapon = get_eq_char(ch, WEAR_TWO_HANDED);
       if ((weapon == NULL) || (!IS_WEAPON(weapon)))
       {
          return 0;
