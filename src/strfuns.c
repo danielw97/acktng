@@ -1489,6 +1489,8 @@ char *extra_bit_name(int extra_flags)
       safe_strcat(MAX_STRING_LENGTH, buf, " fist");
    if (extra_flags & ITEM_AUTO)
       safe_strcat(MAX_STRING_LENGTH, buf, " auto");
+   if (extra_flags & ITEM_TWO_HANDED)
+      safe_strcat(MAX_STRING_LENGTH, buf, " 2-handed");
 
    return (buf[0] != '\0') ? buf + 1 : "none";
 }

@@ -603,8 +603,9 @@
 #define WEAR_HOOVES 28
 #define WEAR_TWO_HANDED 29
 #define WEAR_BUCKLER 30
+#define WEAR_CLAN_COLORS 31
 
-#define MAX_WEAR 31
+#define MAX_WEAR 32
 
 /***************************************************************************
  *                                                                         *
@@ -1146,6 +1147,7 @@
 #define ITEM_BUCKLER BIT_29
 #define ITEM_EXTRA_WAND BIT_30
 #define ITEM_FIST BIT_31
+#define ITEM_TWO_HAND BIT_32
 
 /* Class-restricted stuff dropped. */
 
