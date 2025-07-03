@@ -1636,6 +1636,17 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
+   if ((CAN_WEAR(obj, ITEM_WEAR_CLAN_COLORS)) && (can_wear_at(ch, obj, WEAR_CLAN_COLORS)))
+   {
+      if (!remove_obj(ch, WEAR_CLAN_COLORS, fReplace))
+         return;
+
+      act("$n begins using $p as $s clan colors.", ch, obj, NULL, TO_ROOM);
+      act("You begin using $p as your clan colors.", ch, obj, NULL, TO_CHAR);
+      equip_char(ch, obj, WEAR_CLAN_COLORS);
+      return;
+   }
+
    if ((CAN_WEAR(obj, ITEM_WEAR_HOLD_HAND)) && (can_wear_at(ch, obj, WEAR_HOLD_HAND_L)))
    {
       if (IS_WEAPON(obj) && is_affected(ch, skill_lookup("disarm")))
