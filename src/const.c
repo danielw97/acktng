@@ -1140,8 +1140,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "!Dimension Blade!",
     ""},
 
-/*    Doesn't work well with intelligent mobs. Therefore get rid of it... :P */
-
    {
     MORTAL, NORM,
     "dispel evil", {182, 182, 182, 182, 182, 182},  /* was 82, 63, ... */
@@ -1165,14 +1163,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     NULL, SLOT( 59 ), 15, 12, FALSE,
     "", "!Dispel Magic!",
     ""},
-
-/*   {
-    MORTAL, NORM,
-    "purge", {185, 185, 185, 185, 55, 185},
-    spell_purge, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    NULL, SLOT( 0 ), 15, 12, FALSE,
-    "", "!Purge!",
-    ""},*/
 
    {
     MORTAL, NORM,

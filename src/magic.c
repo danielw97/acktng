@@ -558,6 +558,12 @@ void do_cast(CHAR_DATA *ch, char *argument)
          return;
       }
 
+      if (victim == ch)
+      {
+         send_to_char("You cannot cast this spell on yourself.\n\r", ch);
+         return;
+      }
+
       vo = (void *)victim;
       break;
    case TAR_OBJ_INV:
