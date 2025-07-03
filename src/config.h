@@ -594,15 +594,15 @@
 #define WEAR_CLAWS 19
 #define WEAR_HOLD_HAND_L 20
 #define WEAR_HOLD_HAND_R 21
-#define WEAR_ABOUT 22
-#define WEAR_WAIST 23
-#define WEAR_BODY 24
-#define WEAR_TAIL 25
-#define WEAR_LEGS 26
-#define WEAR_FEET 27
-#define WEAR_HOOVES 28
-#define WEAR_TWO_HANDED 29
-#define WEAR_BUCKLER 30
+#define WEAR_TWO_HANDED 22
+#define WEAR_BUCKLER 33
+#define WEAR_ABOUT 24
+#define WEAR_WAIST 25
+#define WEAR_BODY 26
+#define WEAR_TAIL 27
+#define WEAR_LEGS 28
+#define WEAR_FEET 29
+#define WEAR_HOOVES 30
 #define WEAR_CLAN_COLORS 31
 
 #define MAX_WEAR 32
