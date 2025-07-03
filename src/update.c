@@ -1702,7 +1702,7 @@ void obj_update(void)
 
       if (obj == auction_item)
          continue;
-      if (IS_SET(obj->item_apply, ITEM_APPLY_HEATED) && number_range(0, 100) < 25)
+      if (IS_SET(obj->item_apply, ITEM_APPLY_HEATED) && number_range(0, 100) < 33)
       {
          REMOVE_BIT(obj->item_apply, ITEM_APPLY_HEATED);
          if (obj->carried_by != NULL)

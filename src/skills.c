@@ -1444,6 +1444,14 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
       if (ch->combo[0] == gsn_fleche)
          max_attacks++;
 
+      int max_combo = 6;
+
+      if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
+         max_combo += 2;
+
+      if (ch->remort[CLASS_CRU] > 0)
+         max_combo += 2;
+
       for (int i = 0; i < max_attacks; i++)
       {
          reset_combo(ch);
@@ -1451,7 +1459,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
          if (ch->fighting == NULL)
             break;
 
-         if (i > 6)
+         if (i > max_combo)
             break;
 
          if (i == 0 && number_percent() < 30)
@@ -1463,7 +1471,10 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
          int chance = 0;
 
          if (roll < chance + punch_cnt)
+         {
             do_punch(ch, victim->name);
+            continue;
+         }
 
          chance += punch_cnt;
 

@@ -1899,7 +1899,7 @@ The dark guard stands here, ready to slice your head from your shoulders.
 ~
 ~
 1179723 17064 0 S
-139 1
+140 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1910,7 +1910,7 @@ A swirling lost soul tries to drag you into back into the pit.
 ~
 ~
 99 0 -1000 S
-138 0
+139 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1961,7 +1961,7 @@ This giant bee is about 4 feet long, with a wicked-looking barbed stinger that
 looks like it could turn you into a kabab!  Better be careful...
 ~
 131177 524840 0 S
-135 1
+134 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -2003,7 +2003,7 @@ You find it very difficult to make out any details about @@dThe @@GLord @@dof
 you are better of NOT seeing the foul creature.
 ~
 75 21032 -300 S
-138 1
+137 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2031,7 +2031,7 @@ The form of the god of warriors stands at nearly 8 feet tall.  A shroud of
 depths of his cowled hood reveal his supernatural origin.
 ~
 83 524840 0 S
-139 0
+138 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2062,7 +2062,7 @@ This wizen old man hobbles along the road, seemingly on the verge of collaps.
 appraising look of a weapons expert...Maybe he is more than he seems?
 ~
 193 0 0 S
-143 1
+144 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2110,7 +2110,7 @@ The doorman is standing here, welcoming visitors.
 ~
 ~
 67 0 0 S
-9 1
+8 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2132,7 +2132,7 @@ A kind healer stands here, tending to your wounds.
 ~
 ~
 67 18624 1000 S
-140 1
+139 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2155,7 +2155,7 @@ dark heart of the wood~
 its @@Gperversion@@d.@@N
 ~
 11 56 0 S
-138 1
+139 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 524288 0 0 0 0 0
@@ -2178,7 +2178,7 @@ the KrakKen~
 ~
 ~
 131113 107134 0 S
-140 1
+139 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -2189,7 +2189,7 @@ paladia mors~
 ~
 ~
 131083 533052 0 S
-105 1
+106 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2200,7 +2200,7 @@ The statue of the @@aChromium@@N Elder Dragon, is here.
 ~
 ~
 11 8764 0 S
-103 1
+104 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2212,7 +2212,7 @@ The statue of the Elder Dragon known as @@dAr@@Wcad@@des
 ~
 ~
 131083 8828 0 S
-96 1
+97 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -2223,7 +2223,7 @@ The statue of @@dVae@@Gvic@@Rtus As@@Gma@@ddi@@N, the Elder Dragon, looms powerf
 ~
 ~
 131083 25148 0 S
-141 1
+140 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -2234,7 +2234,7 @@ A statue of the most feared Elder Dragon, @@dNic@@aol @@dBo@@clas@@N
 ~
 ~
 131083 8764 0 S
-141 1
+140 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2284,7 +2284,7 @@ double-headed black war axe~
 a double-headed black war axe~
 A huge double-headed black war axe sticks out of the ground.
 ~
-5 134217731 8421376 1
+5 134217730 8421376 1
 0 10 20 3 0 0 0 0 0 0
 8
 A
@@ -2339,7 +2339,7 @@ L
 mask darkblade~
 @@dMask of the DarkBlade@@N~
 A mask lies here, discarded~
-9 134217731 8388624 1
+9 134217730 8388624 1
 10 0 0 0 0 0 0 0 0 0
 1
 A
@@ -2399,7 +2399,7 @@ the armageddon clock~
 @@dThe armageddon clock@@N~
 @@dThis is the clock that counts down to universal extinction.@@N
 ~
-4 134217859 8421376 17
+4 134217858 8421376 17
 80 10 10 617 0 0 0 0 0 0
 1
 L
@@ -2409,7 +2409,7 @@ golden harp~
 @@yA Golden Harp@@N~
 A beautiful golden harp is resting here.
 ~
-9 134217731 8421376 1
+9 134217730 8421376 1
 0 0 -1 0 0 0 0 0 0 0
 8
 A
@@ -2485,7 +2485,7 @@ the armour of darkness~
 @@dThe @@lArmour@@d of @@lDarkness@@N~
 @@dThe @@lLegionaire@@d'@@ls@@d own armour has been carefully placed here.@@N
 ~
-9 134217731 8454144 16786
+9 134217730 8454144 16786
 10 0 0 0 0 0 0 0 0 0
 20
 A
@@ -2658,9 +2658,9 @@ strange white facemask~
 @@W@@xA Strange White Facemask@@N~
 A strange white facemask is lying on the floor here.
 ~
-9 134217729 8421392 1
+9 134217728 8421392 1
 0 0 0 0 0 0 0 0 0 0
-1
+6
 L
 120
 #16800
@@ -3096,6 +3096,7 @@ E 0 16801 0 0 (null)
 M 0 16881 1 16883 (null)
 
 E 0 16833 0 0 (null)
+
 E 0 16805 0 0 (null)
 
 E 0 16803 0 0 (null)

@@ -50,9 +50,9 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
      REMORT, CLASS_NEC, 1, -1, -1, -1},
     {"Egomancer", 2, -3, -3, 0, 0, 5, STANCE_DUAL_CAST | STANCE_NO_HIT,
      REMORT, CLASS_EGO, 1, -1, -1, -1},
-    {"Monk", 1, 3, 3, 1, 0, 0, 0,
+    {"Monk", 0, 3, 3, 2, 0, 0, 0,
      REMORT, CLASS_MON, 1, -1, -1, -1},
-    {"Brawler", 1, 3, 3, 1, 0, 0, 0,
+    {"Brawler", 0, 3, 3, 2, 0, 0, 0,
      REMORT, CLASS_BRA, 1, -1, -1, -1},
     /* Adept Stances */
     {"Magi", 2, -1, -1, 0, 0, 0, STANCE_EITHER_CLASS | STANCE_MULTI_CAST | STANCE_DUAL_CAST,
@@ -63,7 +63,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
      ADEPT, CLASS_NIG, 1, -1, -1, -1},
     {"Crusader", -3, 3, 3, 3, 0, 0, 0,
      ADEPT, CLASS_CRU, 1, -1, -1, -1},
-    {"Martial", 2, 5, 5, 5, 0, 0, 0,
+    {"Martial", -1, 5, 5, 5, 0, 0, 0,
      ADEPT, CLASS_MAR, 1, -1, -1, -1},
 };
 

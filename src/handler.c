@@ -216,9 +216,9 @@ long get_cost_to_level_remort(CHAR_DATA *ch, int class)
    }
 
    if (double_remort)
-      base *= 4600;
+      base *= 10600;
    else
-      base *= 2900;
+      base *= 5900;
 
    // Edge-case fix
    base += 6900;
