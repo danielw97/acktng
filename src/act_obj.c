@@ -1280,6 +1280,12 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
+   if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_BUCKLER) && !can_use_skill(ch, gsn_two_handed))
+   {
+      send_to_char("You cannot wear two-handed weapons.\n\r", ch);
+      return;
+   }
+
    if (!IS_NPC(ch) && IS_SET(obj->extra_flags, ITEM_BUCKLER) && !can_use_skill(ch, gsn_equip_buckler))
    {
       send_to_char("You cannot wear bucklers.\n\r", ch);
@@ -1658,37 +1664,84 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
          return;
       }
 
-      if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace) && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace))
-         return;
-
-      if (get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL)
+      if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED) || IS_SET(obj->extra_flags, ITEM_BUCKLER))
       {
-         if (!can_wield(ch, obj, WEAR_HOLD_HAND_L))
+         if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED) && !can_use_skill(ch, gsn_two_handed))
          {
-            act("You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR);
+            act("You cannot use two-handed weapons!", ch, obj, NULL, TO_CHAR);
             return;
          }
-         act("$n holds $p in $s left hand.", ch, obj, NULL, TO_ROOM);
-         act("You hold $p in your left hand.", ch, obj, NULL, TO_CHAR);
-         equip_char(ch, obj, WEAR_HOLD_HAND_L);
-         return;
-      }
 
-      if (get_eq_char(ch, WEAR_HOLD_HAND_R) == NULL)
-      {
-         if (!can_wield(ch, obj, WEAR_HOLD_HAND_R))
+         if (IS_SET(obj->extra_flags, ITEM_BUCKLER) && !can_use_skill(ch, gsn_equip_buckler))
          {
-            act("You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR);
+            act("You cannot use bucklers!", ch, obj, NULL, TO_CHAR);
             return;
          }
-         act("$n holds $p in $s right hand.", ch, obj, NULL, TO_ROOM);
-         act("You hold $p in your right hand.", ch, obj, NULL, TO_CHAR);
-         equip_char(ch, obj, WEAR_HOLD_HAND_R);
+         
+         if ((get_eq_char(ch, WEAR_HOLD_HAND_L) && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace)) != NULL || (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL  && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace)))
+         {
+            act("You cannot remove what is in your hands!", ch, obj, NULL, TO_CHAR);
+            return;
+         }
+
+         if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED))
+         {
+            equip_char(ch, obj, WEAR_TWO_HANDED);
+            return;
+         }
+
+         if (IS_SET(obj->extra_flags, ITEM_BUCKLER))
+         {
+            equip_char(ch, obj, WEAR_BUCKLER);
+            return;
+         }
+      }
+      else
+      {
+         if (get_eq_char(ch, WEAR_TWO_HANDED) && !remove_obj(ch, WEAR_TWO_HANDED, fReplace) != NULL)
+         {
+            act("You cannot remove your 2-handed weapon!", ch, obj, NULL, TO_CHAR);
+            return;
+         }
+
+         if (get_eq_char(ch, WEAR_BUCKLER) && !remove_obj(ch, WEAR_BUCKLER, fReplace) != NULL)
+         {
+            act("You cannot remove your buckler!", ch, obj, NULL, TO_CHAR);
+            return;
+         }
+
+         if (get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace) && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace))
+            return;
+
+         if (get_eq_char(ch, WEAR_HOLD_HAND_L) == NULL)
+         {
+            if (!can_wield(ch, obj, WEAR_HOLD_HAND_L))
+            {
+               act("You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR);
+               return;
+            }
+            act("$n holds $p in $s left hand.", ch, obj, NULL, TO_ROOM);
+            act("You hold $p in your left hand.", ch, obj, NULL, TO_CHAR);
+            equip_char(ch, obj, WEAR_HOLD_HAND_L);
+            return;
+         }
+
+         if (get_eq_char(ch, WEAR_HOLD_HAND_R) == NULL)
+         {
+            if (!can_wield(ch, obj, WEAR_HOLD_HAND_R))
+            {
+               act("You are not capable of wielding two weapons!", ch, obj, NULL, TO_CHAR);
+               return;
+            }
+            act("$n holds $p in $s right hand.", ch, obj, NULL, TO_ROOM);
+            act("You hold $p in your right hand.", ch, obj, NULL, TO_CHAR);
+            equip_char(ch, obj, WEAR_HOLD_HAND_R);
+            return;
+         }
+         bug("Wear_obj: no free hand.", 0);
+         send_to_char("You already hold two items.\n\r", ch);
          return;
       }
-      bug("Wear_obj: no free hand.", 0);
-      send_to_char("You already hold two items.\n\r", ch);
-      return;
    }
 
    if (fReplace)

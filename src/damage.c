@@ -239,6 +239,8 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     }
     else
     {
+        if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
+            dam += dam * 0.2;
         if (can_use_skill(ch, gsn_enhanced_damage))
             dam += dam * get_curr_str(ch) * 2 / 100;
         else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))

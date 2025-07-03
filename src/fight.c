@@ -914,9 +914,9 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    int max_avoidance = 75;
    int chance = number_percent();
 
-   max_avoidance += get_speed(victim)*5;
+   max_avoidance += get_speed(victim) * 5;
 
-   max_avoidance -= get_speed(ch)*5;
+   max_avoidance -= get_speed(ch) * 5;
 
    // Can't avoid when stunned!
    if (ch->position <= POS_STUNNED)
@@ -1077,11 +1077,17 @@ int get_block(CHAR_DATA *ch)
    if (!IS_AWAKE(ch))
       return chance;
 
-   if (IS_NPC(ch) && !IS_SET(ch->skills, MOB_PARRY))
-      return chance;
-
    if (!can_use_skill(ch, gsn_shield_block))
       return chance;
+
+   OBJ_DATA *shield;
+   shield = get_eq_char(ch, WEAR_HOLD_HAND_R);
+   if (shield == NULL || shield->item_type != ITEM_ARMOR)
+      shield = get_eq_char(ch, WEAR_HOLD_HAND_L);
+   if (shield == NULL || shield->item_type != ITEM_ARMOR)
+      shield = get_eq_char(ch, WEAR_BUCKLER);
+   if (shield == NULL)
+      return 0;
 
    if (IS_NPC(ch))
    {
@@ -1091,12 +1097,7 @@ int get_block(CHAR_DATA *ch)
    }
    else
    {
-      OBJ_DATA *shield;
-      shield = get_eq_char(ch, WEAR_HOLD_HAND_R);
-      if (shield == NULL || shield->item_type != ITEM_ARMOR)
-         shield = get_eq_char(ch, WEAR_HOLD_HAND_L);
-      if (shield == NULL || shield->item_type != ITEM_ARMOR)
-         return 0;
+
       if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
          return 0;
 
@@ -1143,13 +1144,13 @@ bool check_counter(CHAR_DATA *ch, CHAR_DATA *victim)
       fists++;
 
    if (ch->remort[CLASS_MON] > 0 || ch->remort[CLASS_BRA] > 0)
-      chance += fists*3;
-   
-   if (ch->adept[CLASS_MAR] > 0)
-      chance += fists *3;
+      chance += fists * 3;
 
-   chance += get_speed(victim)*5;
-   chance -= get_speed(ch)*5;
+   if (ch->adept[CLASS_MAR] > 0)
+      chance += fists * 3;
+
+   chance += get_speed(victim) * 5;
+   chance -= get_speed(ch) * 5;
 
    if (IS_AFFECTED(victim, AFF_CLOAK_ADEPT))
       chance += 5;
