@@ -595,7 +595,7 @@
 #define WEAR_HOLD_HAND_L 20
 #define WEAR_HOLD_HAND_R 21
 #define WEAR_TWO_HANDED 22
-#define WEAR_BUCKLER 33
+#define WEAR_BUCKLER 23
 #define WEAR_ABOUT 24
 #define WEAR_WAIST 25
 #define WEAR_BODY 26
