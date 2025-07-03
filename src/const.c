@@ -1248,15 +1248,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "fire blade", {182, 182, 182, 182, 50, 182},
-    spell_fire_blade, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 528 ), 50, 24, FALSE,
-    "", "!FireBlade!",
-    ""},
-
-
-   {
-    MORTAL, NORM,
     "flamestrike", {182, 54, 182, 182, 182, 182},
     spell_flamestrike, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 65 ), 20, 12, TRUE,
