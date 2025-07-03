@@ -38,6 +38,7 @@
 #endif
 
 extern bool deathmatch;
+void breath_damage( CHAR_DATA *ch, int sn, int element, int level );
 
 bool spell_invis(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
@@ -623,201 +624,60 @@ bool spell_word_of_recall(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
  */
 bool spell_acid_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   /*
-    * Fixed the nice bug that referenced the _caster's_ equipment,
-    * * so that it checks the victim's instead *laugh* -S-
-    */
-
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
-   OBJ_DATA *obj_lose;
-   OBJ_DATA *obj_next;
-   int dam;
-   int hpch;
-
-   hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 32 + 1, hpch / 28);
-   dam /= 20;
-   if (saves_spell(level, victim))
-      dam /= 2;
-   sp_damage(obj, ch, victim, dam, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   breath_damage(ch, sn, ELEMENT_POISON | NO_REFLECT | NO_ABSORB, level);
    return TRUE;
 }
 
 bool spell_fire_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
-   OBJ_DATA *obj_lose;
-   OBJ_DATA *obj_next;
-   int dam;
-   int hpch;
-
-   if (!IS_NPC(ch))
-   {
-      dam = number_range(get_psuedo_level(ch) * 1.2, get_psuedo_level(ch) * 1.6);
-      if (saves_spell(level, victim))
-         dam /= 2;
-      damage(ch, victim, dam, sn);
-      return TRUE;
-   }
-
-   if (number_percent() < 2 * level && !saves_spell(level, victim))
-   {
-      OREF(obj_next, OBJ_NEXTCONTENT);
-      for (obj_lose = victim->first_carry; obj_lose != NULL; obj_lose = obj_next)
-      {
-         char *msg;
-
-         obj_next = obj_lose->next_in_carry_list;
-         if (number_bits(2) != 0)
-            continue;
-         /*
-                  switch ( obj_lose->item_type )
-                  {
-                     default:
-                        continue;
-                     case ITEM_CONTAINER:
-                        msg = "$p ignites and burns!";
-                        break;
-                     case ITEM_POTION:
-                        msg = "$p bubbles and boils!";
-                        break;
-                     case ITEM_SCROLL:
-                        msg = "$p crackles and burns!";
-                        break;
-                     case ITEM_STAFF:
-                        msg = "$p smokes and chars!";
-                        break;
-                     case ITEM_FOOD:
-                        msg = "$p blackens and crisps!";
-                        break;
-                     case ITEM_PILL:
-                        msg = "$p melts and drips!";
-                        break;
-                  }
-
-                  act( msg, victim, obj_lose, NULL, TO_CHAR );
-                  if( obj_lose->item_type == ITEM_CONTAINER )
-                  {
-                     OBJ_DATA *content;
-                     OBJ_DATA *content_next;
-                     OREF( content_next, OBJ_NEXTCONTENT );
-                     for( content = obj_lose->first_in_carry_list; content; content = content_next )
-                     {
-                        content_next = content->next_in_carry_list;
-                        obj_from_obj( content );
-                        obj_to_room( content, victim->in_room != NULL ? victim->in_room : get_room_index( ROOM_VNUM_LIMBO ) );
-                     }
-                     OUREF( content_next );
-                     extract_obj( obj_lose );
-                  }*/
-      }
-      OUREF(obj_next);
-   }
-
-   hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 32 + 1, hpch / 28);
-   dam /= 6;
-   if (saves_spell(level, victim))
-      dam /= 2;
-   sp_damage(obj, ch, victim, dam, ELEMENT_FIRE | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   breath_damage(ch, sn, ELEMENT_FIRE | NO_REFLECT | NO_ABSORB, level);
    return TRUE;
 }
 
 bool spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
-   OBJ_DATA *obj_lose;
-   OBJ_DATA *obj_next;
-   int dam;
-   int hpch;
-
-/*   if (number_percent() < 2 * level && !saves_spell(level, victim))
-   {
-      OREF(obj_next, OBJ_NEXTCONTENT);
-      for (obj_lose = victim->first_carry; obj_lose != NULL; obj_lose = obj_next)
-      {
-         char *msg;
-
-         obj_next = obj_lose->next_in_carry_list;
-         if (number_bits(2) != 0)
-            continue;
-
-         switch (obj_lose->item_type)
-         {
-         default:
-            continue;
-         case ITEM_CONTAINER:
-         case ITEM_DRINK_CON:
-         case ITEM_POTION:
-            msg = "$p freezes and shatters!";
-            break;
-         }
-
-         act(msg, victim, obj_lose, NULL, TO_CHAR);
-         if (obj_lose->item_type == ITEM_CONTAINER)
-         {
-            OBJ_DATA *content;
-            OBJ_DATA *content_next;
-            OREF(content_next, OBJ_NEXTCONTENT);
-            for (content = obj_lose->first_in_carry_list; content; content = content_next)
-            {
-               content_next = content->next_in_carry_list;
-               obj_from_obj(content);
-               obj_to_room(content, victim->in_room != NULL ? victim->in_room : get_room_index(ROOM_VNUM_LIMBO));
-            }
-            OUREF(content_next);
-         }
-      }
-      OUREF(obj_next);
-   }*/
-
-   hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 32 + 1, hpch / 28);
-   dam /= 6;
-   if (saves_spell(level, victim))
-      dam /= 2;
-   sp_damage(obj, ch, victim, dam, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   breath_damage(ch, sn, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, level);
    return TRUE;
 }
 
 bool spell_gas_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *vch;
-   CHAR_DATA *vch_next;
-   int dam;
-   int hpch;
-   CREF(vch_next, CHAR_NEXTROOM);
-
-   for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
-   {
-      vch_next = vch->next_in_room;
-      if (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch))
-      {
-         hpch = UMAX(10, ch->hit);
-         dam = number_range(hpch / 32 + 1, hpch / 28);
-         dam /= 6;
-         if (saves_spell(level, vch))
-            dam /= 2;
-         sp_damage(obj, ch, vch, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
-      }
-   }
-   CUREF(vch_next);
+   breath_damage(ch, sn, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, level);
    return TRUE;
 }
 
 bool spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *victim = (CHAR_DATA *)vo;
-   int dam;
-   int hpch;
-
-   hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 32 + 1, hpch / 28);
-   dam /= 6;
-   if (saves_spell(level, victim))
-      dam /= 2;
-   sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   breath_damage(ch, sn, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, level);
    return TRUE;
+}
+
+void breath_damage( CHAR_DATA *ch, int sn, int element, int level )
+{
+   CHAR_DATA *vch;
+   CHAR_DATA *vch_next = NULL;
+
+   if (ch == NULL)
+      return;
+
+   for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
+   {
+      if (vch == NULL || ch == vch)
+         continue;
+
+      vch_next = vch->next_in_room;
+      if (IS_NPC(ch) && !IS_NPC(vch))
+      {
+         int dam = number_range(ch->max_hit/32+1, ch->max_hit/28);
+         int dam_mod = ((ch->hit * 50) / ch->max_hit) + 50;
+         dam = dam * dam_mod / 100;
+         dam /= 6;
+         if (saves_spell(level, vch))
+            dam /= 2;
+         sp_damage(NULL, ch, vch, dam, element, sn, TRUE);
+      }
+   }
+
 }
 
 bool spell_hellspawn(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
@@ -1271,7 +1131,7 @@ bool spell_mind_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (number_percent() < 30)
          continue;
 
-      int element;
+      int element = ELEMENT_MENTAL;
 
       if (cnt > 5)
          element = SIXTH_DIVISOR | ELEMENT_MENTAL;
@@ -1579,25 +1439,6 @@ bool spell_detection(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (!found)
       send_to_char("You fail to detect any such object.\n\r", ch);
 
-   return TRUE;
-}
-
-bool spell_fire_blade(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
-{
-   OBJ_DATA *blade;
-
-   if (get_obj_wear(ch, "fireblade") != NULL)
-      return FALSE; /* Only have one at a time.. */
-
-   if (remove_obj(ch, WEAR_HOLD_HAND_L, TRUE))
-   {
-      blade = create_object(get_obj_index(OBJ_VNUM_FIREBLADE), level);
-      obj_to_char(blade, ch);
-      equip_char(ch, blade, WEAR_HOLD_HAND_L);
-      blade->timer = 2 + (level / 20);
-      act("A blazing FireBlade appears in $n's hand!", ch, NULL, NULL, TO_ROOM);
-      send_to_char("A blazing FireBlade appears in your hand!", ch);
-   }
    return TRUE;
 }
 
