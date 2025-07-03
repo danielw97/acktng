@@ -343,7 +343,7 @@ void stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char("A list of valid stances:\r\n", ch);
       for(i = 0; i < MAX_STANCE; i++)
       {
-         sprintf(buf, "Stance %s", stance_table[i].name);
+         sprintf(buf, "Stance %s", stance_app[i].name);
          send_to_char(buf,ch);
       }
       return;
@@ -351,7 +351,7 @@ void stancehelp(CHAR_DATA *ch, char *argument)
 
    for (i = 0; i < MAX_MAX; i++)
    {
-      if (!str_cmp(stance_table[i].name, arg))
+      if (!str_cmp(stance_app[i].name, arg))
       {
          found = TRUE;
          break;
@@ -362,7 +362,7 @@ void stancehelp(CHAR_DATA *ch, char *argument)
    {
       for (i = 0; i < MAX_STANCE; i++)
       {
-         if (!str_prefix(arg, stance_table[i].name))
+         if (!str_prefix(arg, stance_app[i].name))
          {
             found = TRUE;
             break;
@@ -376,61 +376,61 @@ void stancehelp(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   sprintf(buf, "STANCE HELP for stance %s\r\n", stance_table[i].name);
+   sprintf(buf, "STANCE HELP for stance %s\r\n", stance_app[i].name);
    send_to_char(buf,ch);
-   int tier = stance_table[i].tier;
+   int tier = stance_app[i].tier;
    if (tier == MORTAL)
    {
-      send_to_char("Stance %s is a mortal tier stance\n\r", stance_table[i].name);
-      if (stance_table[i].class_override != -1)
+      send_to_char("Stance %s is a mortal tier stance\n\r", stance_app[i].name);
+      if (stance_app[i].class_override != -1)
       {
-         sprintf(buf, "There is a class override on %s for the first/primary class of %s. It gets the stance at any level if it's your primary class.\n\r", class_table[stance_table[i].class_override].class_name);
+         sprintf(buf, "There is a class override on %s for the first/primary class of %s. It gets the stance at any level if it's your primary class.\n\r", class_table[stance_app[i].class_override].class_name);
          send_to_char(buf, ch);
       }
-      if (stance_table[i].class_level > 0)
+      if (stance_app[i].class_level > 0)
       {
-         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_table[i].name, class_table[stance_table[i].class_index].class_name, stance_table[i].class_level);
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, class_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
          send_to_char(buf,ch);
       }
-      if (stance_table[i].class_level2 > 0)
+      if (stance_app[i].class_level2 > 0)
       {
-         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_table[i].name, class_table[stance_table[i].class_index2].class_name, stance_table[i].class_level2);
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, class_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
          send_to_char(buf,ch);
       }
    }
    else if (tier == REMORT)
    {
-      send_to_char("Stance %s is a remort tier stance\n\r", stance_table[i].name);
-      if (stance_table[i].class_level > 0)
+      send_to_char("Stance %s is a remort tier stance\n\r", stance_app[i].name);
+      if (stance_app[i].class_level > 0)
       {
-         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_table[i].name, remort_table[stance_table[i].class_index].class_name, stance_table[i].class_level);
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, remort_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
          send_to_char(buf,ch);
       }
-      if (stance_table[i].class_level2 > 0)
+      if (stance_app[i].class_level2 > 0)
       {
-         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_table[i].name, remort_table[stance_table[i].class_index2].class_name, stance_table[i].class_level2);
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, remort_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
          send_to_char(buf,ch);
       }
    }
    else if (tier == ADEPT)
    {
-      send_to_char("Stance %s is an adept tier stance\n\r", stance_table[i].name); 
-      if (stance_table[i].class_level > 0)
+      send_to_char("Stance %s is an adept tier stance\n\r", stance_app[i].name); 
+      if (stance_app[i].class_level > 0)
       {
-         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_table[i].name, adept_table[stance_table[i].class_index].class_name, stance_table[i].class_level);
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, adept_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
          send_to_char(buf,ch);
       }
-      if (stance_table[i].class_level2 > 0)
+      if (stance_app[i].class_level2 > 0)
       {
-         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_table[i].name, adept_table[stance_table[i].class_index2].class_name, stance_table[i].class_level2);
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_app[i].name, adept_table[stance_app[i].class_index2].class_name, stance_app[i].class_level2);
          send_to_char(buf,ch);
       }
    }
-   
-   int specials = stance_table[i].specials;
+
+   int specials = stance_app[i].specials;
    if (specials != 0)
    {
-      sprintf(buf, "%s has the additional special properties of ", stance_table[i].name);
+      sprintf(buf, "%s has the additional special properties of ", stance_app[i].name);
       send_to_char(buf, ch);
       if (IS_SET(specials, DUAL_CAST))
          send_to_char("dual-casting ", ch);
@@ -445,7 +445,7 @@ void stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char("\n\r", ch);
    }
 
-   sprintf(buf, "AC mod: %d  HR mod: %d  DR mod: %d  SPEED mod: %d  HEAL mod: %d  SPELL mod: %d\n\r", stance_table[i].ac_mod, stance_table[i].hr_mod, stance_table[i].dr_mod, stance_table[i].speed_mod, stance_table[i].heal_mod, stance_table[i].spell_mod);
+   sprintf(buf, "AC mod: %d  HR mod: %d  DR mod: %d  SPEED mod: %d  HEAL mod: %d  SPELL mod: %d\n\r", stance_app[i].ac_mod, stance_app[i].hr_mod, stance_app[i].dr_mod, stance_app[i].speed_mod, stance_app[i].heal_mod, stance_app[i].spell_mod);
    send_to_char(buf,ch);  
 }
 
