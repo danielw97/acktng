@@ -130,7 +130,7 @@ bool is_name_relaxed(const char *str, char *namelist)
    char origlist[MSL];
    char name[MAX_INPUT_LENGTH];
 
-   strcpy(origlist, namelist);
+   sprintf(origlist, "%s", namelist);
 
    for (;;)
    {
