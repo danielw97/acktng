@@ -2494,7 +2494,7 @@ CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
 
    for (rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
    {
-      if (!can_see(ch, rch) || !is_name(arg, rch->name))
+      if (!can_see(ch, rch) || !is_name_relaxed(arg, rch->name))
          continue;
       if (++count == number)
          return rch;
@@ -2592,7 +2592,7 @@ OBJ_DATA *get_obj_room(CHAR_DATA *ch, char *argument, OBJ_DATA *list)
    count = 0;
    for (obj = list; obj != NULL; obj = obj->next_in_room)
    {
-      if (can_see_obj(ch, obj) && is_name(arg, obj->name))
+      if (can_see_obj(ch, obj) && is_name_relaxed(arg, obj->name))
       {
          if (++count == number)
             return obj;
