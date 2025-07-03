@@ -712,6 +712,7 @@ const struct lookup_type tab_wear_flags[] = {
     {"feet", BIT_22, 900},
     {"hooves", BIT_23, 100},
     {"take", BIT_24, 900},
+    {"clan_colors", BIT_25, 900},
     {NULL, 0}};
 
 /* This not used at present.  Thought i'd bung details in though :) */
