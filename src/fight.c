@@ -42,7 +42,7 @@ extern CHAR_DATA *quest_mob;
  * Local functions.
  */
 bool check_avoidance args((CHAR_DATA * ch, CHAR_DATA *victim));
-bool check_counter args((CHAR_DATA * ch, CHAR_DATA *victim));
+bool get_counter args((CHAR_DATA * ch, CHAR_DATA *victim));
 void check_killer args((CHAR_DATA * ch, CHAR_DATA *victim));
 void dam_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, bool critical));
 void death_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dt, int max_dt));
@@ -940,7 +940,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
       act("$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      check_counter(ch, victim);
+      if (number_percent < get_counter(ch, victim) ) 
+         one_hit(victim, ch, gsn_counter);
 
       return TRUE;
    }
@@ -960,7 +961,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
       act("$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      check_counter(ch, victim);
+      if (number_percent < get_counter(ch, victim) ) 
+         one_hit(victim, ch, gsn_counter);
 
       return TRUE;
    }
@@ -980,7 +982,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
       act("$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      check_counter(ch, victim);
+      if (number_percent < get_counter(ch, victim) ) 
+         one_hit(victim, ch, gsn_counter);
 
       return TRUE;
    }
@@ -1120,18 +1123,18 @@ int get_block(CHAR_DATA *ch)
 }
 
 /* Check for counter */
-bool check_counter(CHAR_DATA *ch, CHAR_DATA *victim)
+int get_counter(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    int chance = 0;
 
    if (!IS_AWAKE(victim))
-      return FALSE;
+      return chance;
 
    if (IS_NPC(victim) && !IS_SET(victim->skills, MOB_COUNTER))
-      return FALSE;
+      return chance;
 
    if (!IS_NPC(victim) && !can_use_skill(victim, gsn_counter))
-      return FALSE;
+      return chance;
 
    if (IS_NPC(victim))
    {
@@ -1167,12 +1170,7 @@ bool check_counter(CHAR_DATA *ch, CHAR_DATA *victim)
    if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
       chance += 20;
 
-   if (number_percent() < (chance + (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2))
-   {
-      one_hit(victim, ch, gsn_counter);
-      return TRUE;
-   }
-   return FALSE;
+   return chance;
 }
 
 /*
