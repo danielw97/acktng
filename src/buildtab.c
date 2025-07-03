@@ -760,14 +760,15 @@ const struct lookup_type tab_wear_loc[] = {
     {"claws", 19, 100},
     {"hold_l", 20, 100},
     {"hold_r", 21, 40},
-    {"cape", 22, 20},
-    {"waist", 23, 20},
-    {"body", 24, 40},
-    {"tail", 25, 80},
-    {"legs", 26, 20},
-    {"feet", 27, 40},
-    {"hooves", 28, 80},
-    {"max_wear", 29, 0},
+    {"cape", 24, 20},
+    {"waist", 25, 20},
+    {"body", 26, 40},
+    {"tail", 27, 80},
+    {"legs", 28, 20},
+    {"feet", 29, 40},
+    {"hooves", 30, 80},
+    {"clan_colors", 31, 80},
+    {"max_wear", MAX_WEAR, 0},
     {NULL, 0}};
 
 const struct lookup_type tab_obj_aff[] = {
