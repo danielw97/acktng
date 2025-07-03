@@ -45,7 +45,6 @@ int mana_cost(CHAR_DATA *ch, int sn)
 {
    bool can_cast = can_use_skill(ch, sn);
    int cost;
-   int class = 0;
 
    if (skill_table[sn].min_mana < 1)
       return 0;
@@ -259,8 +258,8 @@ void say_spell(CHAR_DATA *ch, int sn)
       sprintf(msg2, "You motion towards yourself.\n\r");
       break;
    case TAR_CHAR_NOTSELF:
-      sprintf(msg, "$n motions toward $N.");
-      sprintf(msg2, "You motion towards $N.\n\r");
+      sprintf(msg, "$n makes hand motions.");
+      sprintf(msg2, "You make hand motions.\n\r");
       break;
    case TAR_OBJ_INV:
       sprintf(msg, "$n's hands briefly glow magically!");
@@ -358,7 +357,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
    {
       send_to_char("You are too @@rENRAGED @@NTo cast spells!\n\r", ch);
-      return FALSE;
+      return;
    }
 
    target_name = one_argument(argument, arg1);
@@ -1555,7 +1554,6 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    CHAR_DATA *victim;
    AFFECT_DATA *paf;
    AFFECT_DATA *paf_next;
-   OBJ_DATA *ob;
    int chance;
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
