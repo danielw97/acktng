@@ -1770,7 +1770,7 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       return TRUE;
    }
 
-   return spell_dispel_object(sn, level, ch, vo, obj);
+   return TRUE;
 }
 
 bool spell_dispel_object(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
