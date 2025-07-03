@@ -42,7 +42,7 @@ extern CHAR_DATA *quest_mob;
  * Local functions.
  */
 bool check_avoidance args((CHAR_DATA * ch, CHAR_DATA *victim));
-bool get_counter args((CHAR_DATA * ch, CHAR_DATA *victim));
+int get_counter args((CHAR_DATA * ch));
 void check_killer args((CHAR_DATA * ch, CHAR_DATA *victim));
 void dam_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, bool critical));
 void death_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dt, int max_dt));
@@ -940,7 +940,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
       act("$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < get_counter(ch, victim) ) 
+      if (number_percent < get_counter(ch) ) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
@@ -961,7 +961,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
       act("$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < get_counter(ch, victim) ) 
+      if (number_percent < get_counter(ch) ) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
@@ -982,7 +982,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
       act("$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < get_counter(ch, victim) ) 
+      if (number_percent < get_counter(ch) ) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
