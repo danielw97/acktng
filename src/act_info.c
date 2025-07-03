@@ -329,6 +329,126 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
    send_to_char(sendBuf, ch);
 }
 
+void stancehelp(CHAR_DATA *ch, char *argument)
+{
+   char arg[MAX_INPUT_LENGTH];
+   char buf[MAX_STRING_LENGTH];
+   bool found = FALSE;
+   int i;
+
+   one_argument(argument, arg);
+
+   if (argument[0] == '\0')
+   {
+      send_to_char("A list of valid stances:\r\n", ch);
+      for(i = 0; i < MAX_STANCE; i++)
+      {
+         sprintf(buf, "Stance %s", stance_table[i].name);
+         send_to_char(buf,ch);
+      }
+      return;
+   }
+
+   for (i = 0; i < MAX_MAX; i++)
+   {
+      if (!str_cmp(stance_table[i].name, arg))
+      {
+         found = TRUE;
+         break;
+      }
+   }
+
+   if (!found)
+   {
+      for (i = 0; i < MAX_STANCE; i++)
+      {
+         if (!str_prefix(arg, stance_table[i].name))
+         {
+            found = TRUE;
+            break;
+         }
+      }
+   }
+
+   if (!found)
+   {
+      send_to_char("No such stance found.\r\n", ch);
+      return;
+   }
+
+   sprintf(buf, "STANCE HELP for stance %s\r\n", stance_table[i].name);
+   send_to_char(buf,ch);
+   int tier = stance_table[i].tier;
+   if (tier == MORTAL)
+   {
+      send_to_char("Stance %s is a mortal tier stance\n\r", stance_table[i].name);
+      if (stance_table[i].class_override != -1)
+      {
+         sprintf(buf, "There is a class override on %s for the first/primary class of %s. It gets the stance at any level if it's your primary class.\n\r", class_table[stance_table[i].class_override].class_name);
+         send_to_char(buf, ch);
+      }
+      if (stance_table[i].class_level > 0)
+      {
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_table[i].name, class_table[stance_table[i].class_index].class_name, stance_table[i].class_level);
+         send_to_char(buf,ch);
+      }
+      if (stance_table[i].class_level2 > 0)
+      {
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_table[i].name, class_table[stance_table[i].class_index2].class_name, stance_table[i].class_level2);
+         send_to_char(buf,ch);
+      }
+   }
+   else if (tier == REMORT)
+   {
+      send_to_char("Stance %s is a remort tier stance\n\r", stance_table[i].name);
+      if (stance_table[i].class_level > 0)
+      {
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_table[i].name, remort_table[stance_table[i].class_index].class_name, stance_table[i].class_level);
+         send_to_char(buf,ch);
+      }
+      if (stance_table[i].class_level2 > 0)
+      {
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_table[i].name, remort_table[stance_table[i].class_index2].class_name, stance_table[i].class_level2);
+         send_to_char(buf,ch);
+      }
+   }
+   else if (tier == ADEPT)
+   {
+      send_to_char("Stance %s is an adept tier stance\n\r", stance_table[i].name); 
+      if (stance_table[i].class_level > 0)
+      {
+         sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_table[i].name, adept_table[stance_table[i].class_index].class_name, stance_table[i].class_level);
+         send_to_char(buf,ch);
+      }
+      if (stance_table[i].class_level2 > 0)
+      {
+         sprintf(buf,"There is an additional class requirement on %s of %s at %d\n\r", stance_table[i].name, adept_table[stance_table[i].class_index2].class_name, stance_table[i].class_level2);
+         send_to_char(buf,ch);
+      }
+   }
+   
+   int specials = stance_table[i].specials;
+   if (specials != 0)
+   {
+      sprintf(buf, "%s has the additional special properties of ", stance_table[i].name);
+      send_to_char(buf, ch);
+      if (IS_SET(specials, DUAL_CAST))
+         send_to_char("dual-casting ", ch);
+      if (IS_SET(specials, MULTI_CAST))
+         send_to_char("multi-casting ", ch);
+      if (IS_SET(specials, STANCE_NINJA))
+         send_to_char("being undetectable ", ch);
+      if (IS_SET(specials, STANCE_NO_HIT))
+         send_to_char("no autoattacks ", ch);
+      if (IS_SET(specials, STANCE_DUAL_BACKSTAB))
+         send_to_char("double backstabs ", ch);
+      send_to_char("\n\r", ch);
+   }
+
+   sprintf(buf, "AC mod: %d  HR mod: %d  DR mod: %d  SPEED mod: %d  HEAL mod: %d  SPELL mod: %d\n\r", stance_table[i].ac_mod, stance_table[i].hr_mod, stance_table[i].dr_mod, stance_table[i].speed_mod, stance_table[i].heal_mod, stance_table[i].spell_mod);
+   send_to_char(buf,ch);  
+}
+
 /*
  * Show a list to a character.
  * Can coalesce duplicated items.
