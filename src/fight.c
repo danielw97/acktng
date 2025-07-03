@@ -1123,28 +1123,28 @@ int get_block(CHAR_DATA *ch)
 }
 
 /* Check for counter */
-int get_counter(CHAR_DATA *ch, CHAR_DATA *victim)
+int get_counter(CHAR_DATA *ch)
 {
    int chance = 0;
 
-   if (!IS_AWAKE(victim))
+   if (!IS_AWAKE(ch))
       return chance;
 
-   if (IS_NPC(victim) && !IS_SET(victim->skills, MOB_COUNTER))
+   if (IS_NPC(ch) && !IS_SET(ch->skills, MOB_COUNTER))
       return chance;
 
-   if (!IS_NPC(victim) && !can_use_skill(victim, gsn_counter))
+   if (!IS_NPC(ch) && !can_use_skill(ch, gsn_counter))
       return chance;
 
-   if (IS_NPC(victim))
+   if (IS_NPC(ch))
    {
-      chance = get_psuedo_level(victim) / 3.1 + get_curr_dex(victim) * 2 / 5;
-      if (IS_SET(victim->act, ACT_SOLO))
+      chance = get_psuedo_level(ch) / 3.1 + get_curr_dex(ch) * 2 / 5;
+      if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
    }
    else
    {
-      chance = 10 + get_curr_dex(victim) * 3 / 5;
+      chance = 10 + get_curr_dex(ch) * 3 / 5;
    }
 
    int fists = 0;
@@ -1161,13 +1161,12 @@ int get_counter(CHAR_DATA *ch, CHAR_DATA *victim)
    if (ch->adept[CLASS_MAR] > 0)
       chance += fists * 3;
 
-   chance += get_speed(victim) * 5;
-   chance -= get_speed(ch) * 5;
+   chance += get_speed(ch) * 5;
 
-   if (IS_AFFECTED(victim, AFF_CLOAK_ADEPT))
+   if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
       chance += 5;
 
-   if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
+   if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
       chance += 20;
 
    return chance;
