@@ -140,10 +140,10 @@ bool is_name_relaxed(const char *str, char *namelist)
       if (!str_cmp(str, name))
          return TRUE;
    }
-   
+
    for (;;)
    {
-      namelist = one_argument(namelist, name);
+      namelist = one_argument(origlist, name);
       if (name[0] == '\0')
          break;
       if (strlen(name) > 1 && !str_prefix(str, name) && name[0] != '^')
