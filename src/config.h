@@ -1147,7 +1147,7 @@
 #define ITEM_BUCKLER BIT_29
 #define ITEM_EXTRA_WAND BIT_30
 #define ITEM_FIST BIT_31
-#define ITEM_TWO_HAND BIT_32
+#define ITEM_TWO_HANDED BIT_32
 
 /* Class-restricted stuff dropped. */
 
