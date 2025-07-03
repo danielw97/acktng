@@ -343,7 +343,7 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char("A list of valid stances:\r\n", ch);
       for(i = 0; i < MAX_STANCE; i++)
       {
-         sprintf(buf, "Stance %s", stance_app[i].name);
+         sprintf(buf, "Stance %s\n\r", stance_app[i].name);
          send_to_char(buf,ch);
       }
       return;
