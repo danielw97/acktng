@@ -170,7 +170,7 @@ const struct race_type race_table[MAX_RACE] = {
      */
     {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE},
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE},
     MAX_CLASS, {3, 4, 5, 2, 0, 1},
     "War, Thi, Pug, Psi, Mag, Cle",
     "",
@@ -204,7 +204,7 @@ const struct race_type race_table[MAX_RACE] = {
 
     {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE},
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE},
     MAX_CLASS, {4, 1, 5, 3, 0, 2},
     "War, Cle, Pug, Psi, Thi, Mag",
     "smash",
@@ -220,7 +220,7 @@ const struct race_type race_table[MAX_RACE] = {
     RACE_MOD_SMALL | RACE_MOD_WOODLAND | RACE_MOD_STRONG_MAGIC,
     {TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
      TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE,
-     TRUE, TRUE, TRUE, TRUE TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE},
+     TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, TRUE, FALSE, TRUE},
     MAX_CLASS, {0, 4, 1, 2, 3, 5},
     "Mag, Thi, War, Psi, Cle, Pug",
     "\'find doors\'",

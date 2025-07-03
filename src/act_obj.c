@@ -1728,6 +1728,7 @@ void do_wear(CHAR_DATA *ch, char *argument)
                sprintf(colbuf, "%s", "@@!");
                sprintf(eqbuf, "%s", format_obj_to_char(worn, ch, TRUE));
             }
+            else
             {
                sprintf(colbuf, "%s", "@@.");
                sprintf(eqbuf, "%s", "@@dNothing@@N");
