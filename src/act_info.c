@@ -73,12 +73,12 @@ char *const where_name[] = {
     "-*two-handed*-        ",
     "-*buckler*-           ",
     "-*worn as a cape*-    ",
-    "-*worn about waist*-  ",
+    "-*worn about waist*-  ", /* 25 */
     "-*worn on body*-      ",
     "-*worn on tail*-      ",
     "-*worn on legs*-      ",
     "-*worn on feet*-      ",
-    "-*worn on hooves*-    ",
+    "-*worn on hooves*-    ", /* 30 */
     "-*clan colors*-       "
 };
 
