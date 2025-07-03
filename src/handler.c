@@ -2459,7 +2459,7 @@ CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
       }
       else if (ch->fighting->fighting == NULL)
       {
-         send_to_char("Hmm, that's wierd..where did he go?\n\r", ch);
+         send_to_char("Hmm, that's weird..where did he go?\n\r", ch);
          return NULL;
       }
       else
@@ -2477,12 +2477,12 @@ CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
       }
       else if (ch->fighting->fighting == NULL)
       {
-         send_to_char("Hmm, that's wierd..where did he go?\n\r", ch);
+         send_to_char("Hmm, that's weird..where did he go?\n\r", ch);
          return NULL;
       }
       if (ch->fighting->fighting->fighting == NULL)
       {
-         send_to_char("Hmm, that's wierd..where did he go?\n\r", ch);
+         send_to_char("Hmm, that's weird..where did he go?\n\r", ch);
          return NULL;
       }
 
