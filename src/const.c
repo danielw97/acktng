@@ -1152,12 +1152,11 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "dispel object", {182, 70, 185, 185, 80, 185},
+    "dispel object", {60, 70, 185, 185, 80, 185},
     spell_dispel_object, TAR_IGNORE, POS_FIGHTING,
-    NULL, SLOT( 59 ), 15, 12, FALSE,
+    NULL, SLOT( 0 ), 15, 12, FALSE,
     "", "!Dispel Object!",
     ""},
-
 
    {
     MORTAL, NORM,
@@ -1165,6 +1164,14 @@ const struct skill_type skill_table[MAX_SKILL] = {
     spell_dispel_magic, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 59 ), 15, 12, FALSE,
     "", "!Dispel Magic!",
+    ""},
+
+   {
+    MORTAL, NORM,
+    "purge", {185, 185, 185, 185, 50, 185},
+    spell_dispel_magic, TAR_CHAR_NOTSELF, POS_FIGHTING,
+    NULL, SLOT( 0 ), 15, 12, FALSE,
+    "", "!Purge!",
     ""},
 
    {

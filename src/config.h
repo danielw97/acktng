@@ -190,6 +190,7 @@
 #define TAR_CHAR_DEFENSIVE 2
 #define TAR_CHAR_SELF 3
 #define TAR_OBJ_INV 4
+#define TAR_CHAR_NOTSELF 5
 
 /* Used as flags in skill_table */
 

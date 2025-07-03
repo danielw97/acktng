@@ -3868,40 +3868,33 @@ void do_slist(CHAR_DATA *ch, char *argument)
 }
 
 /* by passing the conf command - Kahn */
-
 void do_autoexit(CHAR_DATA *ch, char *argument)
 {
-
    (IS_SET(ch->config, CONFIG_AUTOEXIT) ? do_config(ch, "-autoexit") : do_config(ch, "+autoexit"));
 }
 
 void do_autoloot(CHAR_DATA *ch, char *argument)
 {
-
    (IS_SET(ch->config, CONFIG_AUTOLOOT) ? do_config(ch, "-autoloot") : do_config(ch, "+autoloot"));
 }
 
 void do_autosac(CHAR_DATA *ch, char *argument)
 {
-
    (IS_SET(ch->config, CONFIG_AUTOSAC) ? do_config(ch, "-autosac") : do_config(ch, "+autosac"));
 }
 
 void do_blank(CHAR_DATA *ch, char *argument)
 {
-
    (IS_SET(ch->config, CONFIG_BLANK) ? do_config(ch, "-blank") : do_config(ch, "+blank"));
 }
 
 void do_brief(CHAR_DATA *ch, char *argument)
 {
-
    (IS_SET(ch->config, CONFIG_BRIEF) ? do_config(ch, "-brief") : do_config(ch, "+brief"));
 }
 
 void do_combine(CHAR_DATA *ch, char *argument)
 {
-
    (IS_SET(ch->config, CONFIG_COMBINE) ? do_config(ch, "-combine") : do_config(ch, "+combine"));
 }
 
@@ -4229,7 +4222,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
    int subpop;
    bool any;
    bool found = FALSE;
-   int c;          /* The class to gain in */
+   int c; /* The class to gain in */
    bool remort = FALSE;
    bool vamp = FALSE;
    bool adept = FALSE;

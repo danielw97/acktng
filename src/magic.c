@@ -258,6 +258,10 @@ void say_spell(CHAR_DATA *ch, int sn)
       sprintf(msg, "$n motions toward $mself.");
       sprintf(msg2, "You motion towards yourself.\n\r");
       break;
+   case TAR_CHAR_NOTSELF:
+      sprintf(msg, "$n motions toward $N.");
+      sprintf(msg2, "You motion towards $N.\n\r");
+      break;
    case TAR_OBJ_INV:
       sprintf(msg, "$n's hands briefly glow magically!");
       sprintf(msg2, "Your hands briefly glow magically!\n\r");
@@ -539,7 +543,21 @@ void do_cast(CHAR_DATA *ch, char *argument)
 
       vo = (void *)ch;
       break;
+   case TAR_CHAR_NOTSELF:
+      if (arg2[0] != '\0' && is_name(arg2, ch->name))
+      {
+         send_to_char("You cannot cast this spell on yourself.\n\r", ch);
+         return;
+      }
 
+      if ((victim = get_char_room(ch, arg2)) == NULL)
+      {
+         send_to_char("They aren't here.\n\r", ch);
+         return;
+      }
+
+      vo = (void *)victim;
+      break;
    case TAR_OBJ_INV:
       if (arg2[0] == '\0')
       {
@@ -1516,7 +1534,6 @@ bool spell_detect_poison(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
 
 bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-
    /*
     * Remove certain affects from victim.  Chance will be 100% if
     * * ch == victim.  Otherwise, variable chance of success, depending
@@ -1532,6 +1549,7 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    AFFECT_DATA *paf_next;
    OBJ_DATA *ob;
    int chance;
+
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
    {
       send_to_char("You are too @@rENRAGED @@NTo cast spells!\n\r", ch);
@@ -1718,19 +1736,6 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
          if (IS_AFFECTED(victim, AFF_DETECT_HIDDEN) && (number_percent() < chance))
             REMOVE_BIT(victim->affected_by, AFF_DETECT_HIDDEN);
 
-         /*	 if ( IS_AFFECTED( victim, AFF_INFRARED ) )
-             {
-                act( "The red glow in $n's eyes fades quickly.", victim, NULL, NULL, TO_ROOM );
-                send_to_char( "The red glow in your eyes fade.\n\r", victim );
-                REMOVE_BIT( victim->affected_by, AFF_INFRARED );
-             }
-
-             if ( IS_AFFECTED( victim, AFF_SNEAK ) )
-                REMOVE_BIT( victim->affected_by, AFF_SNEAK );
-
-             if ( IS_AFFECTED( victim, AFF_HIDE ) )
-                REMOVE_BIT( victim->affected_by, AFF_HIDE );    */
-
          if (IS_AFFECTED(victim, AFF_CLOAK_FLAMING) && (number_percent() < chance))
          {
             chance = (chance) / 3;
@@ -1762,7 +1767,6 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
 bool spell_dispel_object(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-
    if (obj != NULL || (obj = get_obj_carry(ch, target_name)) != NULL)
    {
       /*
