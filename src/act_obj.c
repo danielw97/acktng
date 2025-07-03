@@ -1686,12 +1686,16 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
          if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED))
          {
+            act("$n holds $p in both hands.", ch, obj, NULL, TO_ROOM);
+            act("You hold $p in both of your hands.", ch, obj, NULL, TO_CHAR);
             equip_char(ch, obj, WEAR_TWO_HANDED);
             return;
          }
 
          if (IS_SET(obj->extra_flags, ITEM_BUCKLER))
          {
+            act("$n uses $p as $s buckler", ch, obj, NULL, TO_ROOM);
+            act("You use $p as your buckler.", ch, obj, NULL, TO_CHAR);
             equip_char(ch, obj, WEAR_BUCKLER);
             return;
          }
