@@ -381,10 +381,11 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
    int tier = stance_app[i].tier;
    if (tier == MORTAL)
    {
-      send_to_char("Stance %s is a mortal tier stance\n\r", stance_app[i].name);
+      sprintf(buf, "Stance %s is a mortal tier stance\n\r", stance_app[i].name);
+      send_to_char(buf, ch);
       if (stance_app[i].class_override != -1)
       {
-         sprintf(buf, "There is a class override on %s for the first/primary class of %s. It gets the stance at any level if it's your primary class.\n\r", class_table[stance_app[i].class_override].class_name);
+         sprintf(buf, "There is a class override on %s for the first/primary class of %s. It gets the stance at any level if it's your primary class.\n\r", stance_app[i].name, class_table[stance_app[i].class_override].class_name);
          send_to_char(buf, ch);
       }
       if (stance_app[i].class_level > 0)
@@ -400,7 +401,8 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
    }
    else if (tier == REMORT)
    {
-      send_to_char("Stance %s is a remort tier stance\n\r", stance_app[i].name);
+      sprintf(buf, "Stance %s is a remort tier stance\n\r", stance_app[i].name);
+      send_to_char(buf,ch);
       if (stance_app[i].class_level > 0)
       {
          sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, remort_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
@@ -414,7 +416,8 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
    }
    else if (tier == ADEPT)
    {
-      send_to_char("Stance %s is an adept tier stance\n\r", stance_app[i].name); 
+      sprintf(buf, "Stance %s is an adept tier stance\n\r", stance_app[i].name);
+      send_to_char(buf,ch);
       if (stance_app[i].class_level > 0)
       {
          sprintf(buf,"There is a class requirement on %s of %s at %d\n\r", stance_app[i].name, adept_table[stance_app[i].class_index].class_name, stance_app[i].class_level);
