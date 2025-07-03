@@ -279,8 +279,10 @@ bool spell_poison(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    af.type = sn;
    af.duration = 12 + (level / 10);
-   af.location = APPLY_STR;
-   af.modifier = -2;
+   af.location = APPLY_DOT;
+   af.modifier = level;
+   af.caster = ch;
+   af.element = ELEMENT_POISON;
    af.bitvector = AFF_POISON;
    affect_join(victim, &af);
    send_to_char("You feel very sick.\n\r", victim);
@@ -633,8 +635,8 @@ bool spell_acid_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    int hpch;
 
    hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 16 + 1, hpch / 8);
-   dam /= 4;
+   dam = number_range(hpch / 32 + 1, hpch / 28);
+   dam /= 20;
    if (saves_spell(level, victim))
       dam /= 2;
    sp_damage(obj, ch, victim, dam, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -713,7 +715,8 @@ bool spell_fire_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    }
 
    hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 16 + 1, hpch / 8);
+   dam = number_range(hpch / 32 + 1, hpch / 28);
+   dam /= 6;
    if (saves_spell(level, victim))
       dam /= 2;
    sp_damage(obj, ch, victim, dam, ELEMENT_FIRE | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -769,8 +772,8 @@ bool spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    }*/
 
    hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 16 + 1, hpch / 8);
-   dam /= 4;
+   dam = number_range(hpch / 32 + 1, hpch / 28);
+   dam /= 6;
    if (saves_spell(level, victim))
       dam /= 2;
    sp_damage(obj, ch, victim, dam, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -791,8 +794,8 @@ bool spell_gas_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch))
       {
          hpch = UMAX(10, ch->hit);
-         dam = number_range(hpch / 16 + 1, hpch / 8);
-         dam /= 4;
+         dam = number_range(hpch / 32 + 1, hpch / 28);
+         dam /= 6;
          if (saves_spell(level, vch))
             dam /= 2;
          sp_damage(obj, ch, vch, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -809,8 +812,8 @@ bool spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
    int hpch;
 
    hpch = UMAX(10, ch->hit);
-   dam = number_range(hpch / 16 + 1, hpch / 8);
-   dam /= 4;
+   dam = number_range(hpch / 32 + 1, hpch / 28);
+   dam /= 6;
    if (saves_spell(level, victim))
       dam /= 2;
    sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE);

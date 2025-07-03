@@ -1160,11 +1160,19 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "dispel magic", {68, 185, 185, 185, 185, 185},
+    "dispel magic", {68, 89, 185, 185, 185, 185},
     spell_dispel_magic, TAR_IGNORE, POS_FIGHTING,
     NULL, SLOT( 59 ), 15, 12, FALSE,
     "", "!Dispel Magic!",
     ""},
+
+/*   {
+    MORTAL, NORM,
+    "purge", {185, 185, 185, 185, 55, 185},
+    spell_purge, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 0 ), 15, 12, FALSE,
+    "", "!Purge!",
+    ""},*/
 
    {
     MORTAL, NORM,
@@ -1291,8 +1299,9 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    MORTAL, NORM,
-    "giant strength", {18, 182, 182, 182, 182, 182},
+    REMORT, NORM,
+    "giant strength", {18, 182, 182, 182, 182, 182,
+                       18, 182, 182, 182, 182, 182},
     spell_giant_strength, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 39 ), 20, 12, FALSE,
     "", "You feel weaker.",
@@ -1567,6 +1576,24 @@ const struct skill_type skill_table[MAX_SKILL] = {
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are no longer moving quickly.",
     "$n is no longer moving quickly."},
+
+   {
+    REMORT, NORM,
+    "overdrive", {182, 182, 182, 182, 182, 182,
+                 182, 182, 182, 182, 57, 182},
+    spell_overdrive, TAR_CHAR_SELF, POS_FIGHTING,
+    NULL, SLOT( 271 ), 12, 18, TRUE,
+    "", "You are no longer moving quickly.",
+    "$n is no longer moving quickly."},   {
+
+    REMORT, NORM,
+    "magical supremacy", {182, 182, 182, 182, 182, 182,
+                 42, 182, 182, 182, 13, 182},
+    spell_magical_supremacy, TAR_CHAR_SELF, POS_FIGHTING,
+    NULL, SLOT( 271 ), 12, 18, TRUE,
+    "", "You no longer have magical supremacy.",
+    "$n no longer has magical supremacy."},
+
 
    {
     REMORT, NORM,
@@ -3181,8 +3208,9 @@ const struct skill_type skill_table[MAX_SKILL] = {
     ""},
 
    {
-    MORTAL, NORM,
-    "mystical focus", {55, 182, 182, 182, 182, 182},
+    REMORT, NORM,
+    "mystical focus", {55, 182, 182, 182, 48, 182,
+                       45, 182, 182, 182, 47, 182},
     spell_mystical_focus, TAR_CHAR_SELF, POS_STANDING,
     NULL, SLOT( 676 ), 200, 10, TRUE,
     "", "Your lose your mystical focus.",

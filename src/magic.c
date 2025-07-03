@@ -399,11 +399,13 @@ void do_cast(CHAR_DATA *ch, char *argument)
    if (IS_NPC(ch))
    {
       best = UMIN(90, get_psuedo_level(ch));
-      if ((skill_table[sn].flag1 == REMORT) && (((IS_SET(ch->act, ACT_PET)) || (IS_AFFECTED(ch, AFF_CHARM))) && (ch->rider == NULL)))
-         best = -1;
+      if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
+      {
+         if (IS_SET(ch->act, ACT_PET) || IS_AFFECTED(ch, AFF_CHARM) || ch->rider != NULL)
+            return;
 
-      if (skill_table[sn].flag1 == ADEPT)
          best = -1;
+      }
       if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
          best = -1;
    }

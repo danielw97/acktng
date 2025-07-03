@@ -309,4 +309,7 @@ DECLARE_SPELL_FUN(spell_cloak_misery);
 DECLARE_SPELL_FUN(spell_sonic_blast);
 DECLARE_SPELL_FUN(spell_haste);
 DECLARE_SPELL_FUN(spell_slow);
+DECLARE_SPELL_FUN(spell_overdrive);
 DECLARE_SPELL_FUN(spell_mystical_focus); /* 676 */
+DECLARE_SPELL_FUN(spell_magical_supremacy);
+//DECLARE_SPELL_FUN(spell_purge);

@@ -281,7 +281,10 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         dam -= dam * get_curr_con(victim) / 100;
 
     if (IS_SET(element, REALM_HOLY))
+    {
         dam += dam * ch->adept[CLASS_TEM] / 50;
+        dam += dam * ch->remort[CLASS_PRI] / 100;
+    }
 
     if (element != REALM_PHYSICAL && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {

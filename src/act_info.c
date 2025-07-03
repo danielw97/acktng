@@ -3082,7 +3082,7 @@ void do_commands(CHAR_DATA *ch, char *argument)
          */
          if (cmd_table[cmd].show == C_SHOW_NEVER)
             continue;
-         if ((cmd_table[cmd].show == C_SHOW_SKILL) && (ch->pcdata->learned[skill_lookup(cmd_table[cmd].name)] < 10))
+         if ((cmd_table[cmd].show == C_SHOW_SKILL) && (!can_use_skill(ch, skill_lookup(cmd_table[cmd].name) ) ) )
             continue;
 
          sprintf(buf, "%-12s", cmd_table[cmd].name);
@@ -3947,7 +3947,6 @@ void do_learned(CHAR_DATA *ch, char *argument)
       }
    }
 
-   safe_strcat(MAX_STRING_LENGTH, buf1, buf);
    send_to_char(buf1, ch);
 }
 

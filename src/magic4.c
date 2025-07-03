@@ -494,7 +494,7 @@ bool spell_haste(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("haste")))
+   if (is_affected(ch, skill_lookup("overdrive")) || is_affected(ch, skill_lookup("haste")))
       return FALSE;
    af.type = sn;
    af.duration = 10;
@@ -526,5 +526,66 @@ bool spell_slow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    affect_to_char(victim, &af);
    act("$N begins to slowly move from $n's spell.", ch, NULL, victim, TO_ROOM);
    send_to_char("You begin to slowly move.\n\r", victim);
+   return TRUE;
+}
+
+bool spell_overdrive(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+
+   if (ch != victim)
+   {
+      send_to_char("You can't target someone else with overdrive!\n\r",ch);
+      return FALSE;
+   }
+
+   if (is_affected(ch, skill_lookup("haste")) || is_affected(ch, skill_lookup("overdrive")))
+      return FALSE;
+   af.type = sn;
+   af.duration = 15;
+   af.location = APPLY_SPEED;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = 1;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(ch, &af);
+   act("$N begins to quickly move from $n's spell.", ch, NULL, victim, TO_ROOM);
+   send_to_char("You begin to quickly move.\n\r", victim);
+   return TRUE;
+}
+
+bool spell_magical_supremacy(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+   int buff;
+
+   if (ch != victim)
+   {
+      send_to_char("You can't target someone else for supremacy!\n\r",ch);
+      return FALSE;
+   }
+
+   if (is_affected(ch, skill_lookup("magical supremacy")))
+      return FALSE;
+
+   if (ch->remort[CLASS_EGO] > 0)
+      buff = ch->remort[CLASS_EGO] * 1.5;
+   else if (ch->remort[CLASS_WIZ] > 0)
+      buff = ch->remort[CLASS_WIZ] * 1.5;
+   else
+      buff = 20;
+
+   af.type = sn;
+   af.duration = 15;
+   af.location = APPLY_SPELLPOWER;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = buff;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(ch, &af);
+   act("$N gains supremacy from $n's spell.", ch, NULL, victim, TO_ROOM);
+   send_to_char("You gain supremacy.\n\r", victim);
    return TRUE;
 }
