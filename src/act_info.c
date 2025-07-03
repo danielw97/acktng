@@ -329,7 +329,7 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
    send_to_char(sendBuf, ch);
 }
 
-void stancehelp(CHAR_DATA *ch, char *argument)
+void do_stancehelp(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
    char buf[MAX_STRING_LENGTH];
