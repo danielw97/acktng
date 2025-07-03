@@ -732,7 +732,7 @@ void do_mapper(CHAR_DATA *ch, char *argument)
    char catbuf[MSL];
    char outbuf[MSL];
    one_argument(argument, arg1);
-   if (is_name(arg1, "legend key help"))
+   if (!str_cmp(arg1, "legend") || !str_cmp(arg1, "key") || !str_cmp(arg1, "help"))
    {
       sprintf(outbuf, "@@WMap Legend:@@N\n\r");
       for (looper = 0; looper < SECT_TOP - 1; looper++)

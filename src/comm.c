@@ -2792,7 +2792,7 @@ bool check_parse_name(char *name)
    /*
     * Reserved words.
     */
-   if (is_name(name, "all auto everymob localmobs immortal zen self someone"))
+   if (is_name(name, "all auto everymob localmobs immortal zen self someone tank enemy"))
       return FALSE;
 
    /*
