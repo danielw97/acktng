@@ -1306,8 +1306,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "group heal", {182, 182, 182, 182, 182, 182,
-                   182, 5, 182, 182, 182, 182},
+    "group heal", {182, 5, 182, 182, 182, 182,
+                   182, 25, 182, 182, 182, 182},
     spell_group_heal, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 169 ), 50, 12, TRUE,
     "", "!Group Heal!",
@@ -2419,6 +2419,16 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
+    "palmstrike", {182, 182, 182, 182, 182, 182,
+                   182, 182, 182, 182, 182, 19},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_palmstrike, SLOT( 0 ), 0, 0, TRUE,
+    "", "!Palm Strike!",
+    ""},
+
+
+   {
+    REMORT, NORM,
     "bare hand", {182, 182, 182, 182, 182, 6,
                    182, 182, 182, 182, 182, 6},
     spell_null, TAR_IGNORE, POS_FIGHTING,
@@ -2711,8 +2721,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "charge", {182, 89, 182, 65, 182, 182,
-               182, 89, 182, 65, 182, 182},
+    "charge", {182, 89, 182, 30, 182, 182,
+               182, 89, 182, 30, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_charge, SLOT( 0 ), 1, 24, TRUE,
     "Charge", "!Charge",
@@ -3155,7 +3165,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "holystrike",        {182, 182, 182, 29, 182, 182,
+    "holystrike",        {182, 44, 182, 29, 182, 182,
                        182, 182, 182, 182, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_holystrike, SLOT( 0 ), 80, 12, TRUE,

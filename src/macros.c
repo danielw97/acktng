@@ -170,8 +170,7 @@ long exp_to_level_adept(CHAR_DATA *ch)
 
    exp = (30000 + (ch->adept[i] * 5000));
 
-   if (ch->adept[i] > 1)
-      exp *= ch->adept[i] / 2;
+   exp += exp * ch->adept[i] / 2;
 
    return exp * 10;
 }

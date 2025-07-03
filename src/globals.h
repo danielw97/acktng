@@ -68,6 +68,7 @@ extern sh_int gsn_enhanced_sword;
 extern sh_int gsn_enhanced_sword_critical;
 extern sh_int gsn_two_handed;
 extern sh_int gsn_bare_hand;
+extern sh_int gsn_palmstrike;
 
 extern sh_int gsn_equip_buckler;
 extern sh_int gsn_equip_fist;
@@ -274,6 +275,7 @@ DECLARE_DO_FUN(do_knee);
 DECLARE_DO_FUN(do_detox);
 DECLARE_DO_FUN(do_heal);
 DECLARE_DO_FUN(do_hunt);
+DECLARE_DO_FUN(do_palmstrike);
 DECLARE_DO_FUN(do_resetpassword);
 DECLARE_DO_FUN(do_iscore);
 DECLARE_DO_FUN(do_isnoop);

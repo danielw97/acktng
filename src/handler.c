@@ -216,12 +216,12 @@ long get_cost_to_level_remort(CHAR_DATA *ch, int class)
    }
 
    if (double_remort)
-      base *= 10600;
+      base *= 20600;
    else
-      base *= 5900;
+      base *= 6900;
 
    // Edge-case fix
-   base += 6900;
+   base += 690000;
 
    return get_racial_penalty_to_level(base, ch->race, class);
    ;

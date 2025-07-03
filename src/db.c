@@ -94,7 +94,7 @@ sh_int gsn_flee_timer;
 sh_int gsn_fourth_attack;
 sh_int gsn_shield_block;
 sh_int gsn_beserk;
-
+sh_int gsn_palmstrike;
 sh_int gsn_counter;
 sh_int gsn_enhanced_critical;
 sh_int gsn_spell_critical;

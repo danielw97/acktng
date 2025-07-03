@@ -451,7 +451,7 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char("\n\r", ch);
    }
 
-   sprintf(buf, "AC mod: %d  HR mod: %d  DR mod: %d  SPEED mod: %d  HEAL mod: %d  SPELL mod: %d\n\r", stance_app[i].ac_mod, stance_app[i].hr_mod, stance_app[i].dr_mod, stance_app[i].speed_mod, stance_app[i].heal_mod, stance_app[i].spell_mod);
+   sprintf(buf, "AC mod: %d%%  HR mod: %d%%  DR mod: %d%%  SPEED mod: %d  HEAL mod: %d%%  SPELL mod: %d%%\n\r", stance_app[i].ac_mod*10, stance_app[i].hr_mod*10, stance_app[i].dr_mod*10, stance_app[i].speed_mod, stance_app[i].heal_mod*10, stance_app[i].spell_mod*10);
    send_to_char(buf,ch);  
 }
 

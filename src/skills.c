@@ -575,11 +575,6 @@ void do_dirt(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (victim->fighting == NULL)
-   {
-      send_to_char("Try doing this to them, when fighting...\n\r", ch);
-      return;
-   }
 
    if (IS_AFFECTED(victim, AFF_BLIND))
    {
@@ -612,6 +607,8 @@ void do_dirt(CHAR_DATA *ch, char *argument)
       af.bitvector = AFF_BLIND;
       affect_to_char(victim, &af);
    }
+
+   set_fighting(victim,ch,TRUE);
 
    combo(ch, victim, gsn_dirt);
    return;
@@ -779,6 +776,11 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
       act(actbuf, ch, NULL, victim, TO_CHAR);
       set_fighting(victim, ch, TRUE);
    }
+}
+
+void do_palmstrike(CHAR_DATA *ch, char *argument)
+{
+   war_attack(ch, argument, gsn_headbutt);
 }
 
 void do_headbutt(CHAR_DATA *ch, char *argument)
@@ -1849,4 +1851,16 @@ void do_pick(CHAR_DATA *ch, char *argument)
    }
 
    return;
+}
+
+int get_combo_count(CHAR_DATA *ch)
+{
+   int cnt = 0;
+   for(int i = 0; i < 6; i++)
+   {
+      if (ch->combo[i] > 0)
+         cnt++;
+   }
+
+   return cnt;
 }

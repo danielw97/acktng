@@ -52,6 +52,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     {
         if (is_affected(victim, gsn_anti_magic_shell))
         {
+            dam = dam * 0.1;
             sprintf(buf, "$N's anti-magic shell negates %s.", skill_table[gsn_anti_magic_shell].name);
             act(buf, ch, NULL, victim, TO_ROOM);
             sprintf(buf, "Your anti-magic shell negates %s.", skill_table[gsn_anti_magic_shell].name);

@@ -2956,7 +2956,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-145 0
+143 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -2969,7 +2969,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-143 0
+141 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -2982,7 +2982,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-150 0
+148 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -2995,7 +2995,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-142 0
+141 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -3008,7 +3008,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-149 0
+148 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -3022,7 +3022,7 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 @@ppierce@@N into the very depths of your soul..@@N
 ~
 36765723 18664 0 S
-146 1
+145 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 0
@@ -3036,12 +3036,12 @@ Rock Hydra~
 @@m...@@N
 ~
 33554435 16618 0 S
-151 0
+150 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 40 0 0 0 0 176
 #8357
-Vampyre Bats bat~
+VaMpyre Bats bat~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
@@ -3052,29 +3052,29 @@ Vampyre Bats bat~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8358
-Vampyre Bats bat~
+VaMpyre Bats bat~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 ~
 16387 524988 0 S
-133 0
+134 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8359
-Vampyre Bats bat~
+VaMpyre Bats bat~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 ~
 16387 524988 0 S
-137 0
+136 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8360
-Vampyre Bats bat~
+VaMpyre Bats bat~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
@@ -3085,18 +3085,18 @@ Vampyre Bats bat~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8361
-Vampyre Bats bat~
+VaMpyre Bats bat~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 ~
 16387 524988 0 S
-131 0
+132 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8362
-Vampyre Bats bat~
+VaMpyre Bats bat~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
@@ -3120,7 +3120,7 @@ Patrol fog mist~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8364
-Patrol fog mist~
+patrol fog mist~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
 ~
@@ -3133,7 +3133,7 @@ Patrol fog mist~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8365
-Patrol fog mist~
+Patrol mist fog~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
 ~
@@ -3152,7 +3152,7 @@ crimson demon~
 ~
 ~
 43 526570 0 S
-120 1
+119 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
@@ -3164,7 +3164,7 @@ aries~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-148 0
+147 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3176,7 +3176,7 @@ Taurus~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-144 0
+145 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3188,7 +3188,7 @@ Gemini~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-139 0
+140 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3212,7 +3212,7 @@ leo~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-143 0
+144 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3224,7 +3224,7 @@ Virgo~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-153 2
+151 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3236,7 +3236,7 @@ Libra~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-155 0
+156 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3248,7 +3248,7 @@ Scorpio~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-154 0
+155 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3260,7 +3260,7 @@ Sagittarius~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-140 0
+139 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3272,7 +3272,7 @@ Capricorn~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-144 0
+145 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3321,7 +3321,7 @@ suggestion hypnotic crimson~
 ~
 ~
 45105153 26876 -1000 S
-159 2
+161 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1509120 0 0 0 0 48
@@ -3332,7 +3332,7 @@ Crimson Crusader~
 ~
 ~
 50530333 1698558 1000 S
-147 1
+146 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 34816 0 0 0 0 16
@@ -3342,7 +3342,7 @@ sentient~
 ~
 ~
 53608477 649982 0 S
-149 0
+150 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
@@ -3353,7 +3353,7 @@ Crimson Shadow~
 ~
 ~
 33554433 548992 0 S
-143 0
+144 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
@@ -3364,7 +3364,7 @@ Crimson Shadow~
 ~
 ~
 33554433 548992 0 S
-151 0
+150 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
@@ -3375,7 +3375,7 @@ Crimson Shadow~
 ~
 ~
 33554433 548992 0 S
-150 0
+148 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
@@ -3397,7 +3397,7 @@ evil~
 ~
 ~
 50462729 24808 -1000 S
-149 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
@@ -3408,7 +3408,7 @@ evil~
 ~
 ~
 50462729 24808 -1000 S
-157 1
+156 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
@@ -3430,7 +3430,7 @@ paladin~
 ~
 ~
 33685513 1075964 1000 S
-149 2
+148 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 6488064 0 0 0 0 144
@@ -3441,7 +3441,7 @@ Lord Dark~
 ~
 ~
 36700179 551144 -1000 S
-152 1
+153 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 51380480 0 0 0 0 48
@@ -3455,7 +3455,7 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 @@ppierce@@N into the very depths of your soul..@@N
 ~
 36765723 18664 0 S
-146 1
+148 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 80
@@ -3469,7 +3469,7 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 @@ppierce@@N into the very depths of your soul..@@N
 ~
 3211291 18664 0 S
-149 1
+148 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 80
@@ -3480,7 +3480,7 @@ necromancer mage crimson~
 ~
 ~
 33554449 16576 0 S
-152 1
+153 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3502,7 +3502,7 @@ necromancer mage crimson~
 ~
 ~
 33554449 16576 0 S
-147 1
+148 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3513,7 +3513,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-156 1
+154 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3535,7 +3535,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-150 1
+149 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3546,7 +3546,7 @@ thief~
 ~
 ~
 196633 26856 0 S
-152 1
+153 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3557,7 +3557,7 @@ head~
 ~
 ~
 65539 16616 0 S
-146 1
+144 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3568,7 +3568,7 @@ head~
 ~
 ~
 65539 16616 0 S
-150 1
+149 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3579,7 +3579,7 @@ head~
 ~
 ~
 33619971 16616 0 S
-151 1
+152 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3590,7 +3590,7 @@ head~
 ~
 ~
 33619971 16616 0 S
-152 1
+153 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3601,7 +3601,7 @@ head~
 ~
 ~
 33619971 16616 0 S
-137 1
+136 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3612,7 +3612,7 @@ head~
 ~
 ~
 33619971 16616 0 S
-155 1
+157 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3623,7 +3623,7 @@ head~
 ~
 ~
 65539 16616 0 S
-148 1
+149 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
