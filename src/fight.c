@@ -42,7 +42,6 @@ extern CHAR_DATA *quest_mob;
  * Local functions.
  */
 bool check_avoidance args((CHAR_DATA * ch, CHAR_DATA *victim));
-int get_counter args((CHAR_DATA * ch));
 void check_killer args((CHAR_DATA * ch, CHAR_DATA *victim));
 void dam_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, bool critical));
 void death_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dt, int max_dt));
@@ -63,6 +62,8 @@ void obj_damage args((OBJ_DATA * obj, CHAR_DATA *victim, int dam));
 
 int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical));
 int damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt));
+int get_counter args((CHAR_DATA * ch));
+int get_evasion_piercing args((CHAR_DATA * ch));
 
 /*
  * Control the fights going on.
@@ -925,7 +926,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
       max_avoidance += 10;
 
-   int parry = get_parry(victim);
+   int parry = get_parry(victim) - get_evasion_piercing(ch);
    if (parry > max_avoidance)
    {
       parry = max_avoidance;
@@ -934,19 +935,19 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    else
       max_avoidance -= parry;
 
-   if (chance < parry + ((get_psuedo_level(victim) - get_psuedo_level(ch)) / 2))
+   if (chance < parry + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2))
    {
       act("You parry $n's attack.", ch, NULL, victim, TO_VICT);
       act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
       act("$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < get_counter(ch) ) 
+      if (number_percent < get_counter(ch) - get_evasion_piercing(ch)) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
    }
 
-   int block = get_block(victim);
+   int block = get_block(victim)- get_evasion_piercing(ch);
    if (block > max_avoidance)
    {
       block = max_avoidance;
@@ -955,19 +956,19 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    else
       max_avoidance -= block;
 
-   if (chance < parry + block + ((get_psuedo_level(victim) - get_psuedo_level(ch)) / 2))
+   if (chance < parry + block + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2))
    {
       act("You block $n's attack.", ch, NULL, victim, TO_VICT);
       act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
       act("$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < get_counter(ch) ) 
+      if (number_percent < get_counter(ch) - get_evasion_piercing(ch)) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
    }
 
-   int dodge = get_dodge(victim);
+   int dodge = get_dodge(victim)- get_evasion_piercing(ch);
    if (dodge > max_avoidance)
    {
       dodge = max_avoidance;
@@ -976,13 +977,13 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    else
       max_avoidance -= dodge;
 
-   if (chance < parry + block + dodge + ((get_psuedo_level(victim) - get_psuedo_level(ch)) / 2))
+   if (chance < parry + block + dodge + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2))
    {
       act("You dodge $n's attack.", ch, NULL, victim, TO_VICT);
       act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
       act("$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < get_counter(ch) ) 
+      if (number_percent < get_counter(ch) - get_evasion_piercing(ch)) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
@@ -1122,7 +1123,7 @@ int get_block(CHAR_DATA *ch)
    return chance;
 }
 
-/* Check for counter */
+/* Calculate counter */
 int get_counter(CHAR_DATA *ch)
 {
    int chance = 0;
@@ -1168,6 +1169,33 @@ int get_counter(CHAR_DATA *ch)
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
       chance += 20;
+
+   return chance;
+}
+
+/* Calculate evasion piercing */
+int get_evasion_piercing(CHAR_DATA *ch)
+{
+   int chance = 0;
+
+   if (!IS_AWAKE(ch))
+      return chance;
+
+   if (IS_NPC(ch) && !IS_SET(ch->skills, MOB_COUNTER))
+      return chance;
+
+   if (!IS_NPC(ch) && !can_use_skill(ch, gsn_counter))
+      return chance;
+
+   if (IS_NPC(ch))
+   {
+      if (IS_SET(ch->act, ACT_SOLO))
+         chance += 5;
+   }
+
+   chance += get_speed(ch) * 5;
+
+   chance += stance_app[ch->stance].speed_mod;
 
    return chance;
 }

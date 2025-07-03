@@ -1817,6 +1817,9 @@ void do_score(CHAR_DATA *ch, char *argument)
    sprintf(buf, "@@WParry: @@y%-3d @@WDodge: @@y%-3d@@W Block: @@y%-3d@@W Counter: @@y%-3d@@W Damcap: @@y%-5d", get_parry(ch), get_dodge(ch), get_block(ch), get_counter(ch), get_damcap(ch));
    sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
    send_to_char(buf2, ch);
+   sprintf(buf, "@@W Eva Pierc: @@y%-5d", get_evasion_piercing(ch));
+   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+   send_to_char(buf2, ch);
 
    if (ch->alignment > 900)
       strcpy(buf, "@@yangelic.");
