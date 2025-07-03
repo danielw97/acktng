@@ -349,7 +349,7 @@ void stancehelp(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   for (i = 0; i < MAX_MAX; i++)
+   for (i = 0; i < MAX_STANCE; i++)
    {
       if (!str_cmp(stance_app[i].name, arg))
       {
