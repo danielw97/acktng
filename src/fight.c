@@ -926,7 +926,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
       max_avoidance += 10;
 
-   int parry = get_parry(victim) - get_evasion_piercing(ch);
+   int parry = get_parry(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
    if (parry > max_avoidance)
    {
       parry = max_avoidance;
@@ -935,7 +935,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    else
       max_avoidance -= parry;
 
-   if (chance < parry + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2))
+   if (chance < parry)
    {
       act("You parry $n's attack.", ch, NULL, victim, TO_VICT);
       act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
@@ -947,7 +947,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int block = get_block(victim)- get_evasion_piercing(ch);
+   int block = get_block(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
    if (block > max_avoidance)
    {
       block = max_avoidance;
@@ -956,7 +956,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    else
       max_avoidance -= block;
 
-   if (chance < parry + block + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2))
+   if (chance < parry + block)
    {
       act("You block $n's attack.", ch, NULL, victim, TO_VICT);
       act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
@@ -968,7 +968,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int dodge = get_dodge(victim)- get_evasion_piercing(ch);
+   int dodge = get_dodge(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
    if (dodge > max_avoidance)
    {
       dodge = max_avoidance;
@@ -977,7 +977,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    else
       max_avoidance -= dodge;
 
-   if (chance < parry + block + dodge + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2))
+   if (chance < parry + block + dodge)
    {
       act("You dodge $n's attack.", ch, NULL, victim, TO_VICT);
       act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
