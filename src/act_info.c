@@ -432,9 +432,9 @@ void stancehelp(CHAR_DATA *ch, char *argument)
    {
       sprintf(buf, "%s has the additional special properties of ", stance_app[i].name);
       send_to_char(buf, ch);
-      if (IS_SET(specials, DUAL_CAST))
+      if (IS_SET(specials, STANCE_DUAL_CAST))
          send_to_char("dual-casting ", ch);
-      if (IS_SET(specials, MULTI_CAST))
+      if (IS_SET(specials, STANCE_MULTI_CAST))
          send_to_char("multi-casting ", ch);
       if (IS_SET(specials, STANCE_NINJA))
          send_to_char("being undetectable ", ch);
