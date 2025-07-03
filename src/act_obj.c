@@ -1719,14 +1719,14 @@ void do_wear(CHAR_DATA *ch, char *argument)
       {
          if (race_table[ch->race].wear_locs[location] == TRUE)
          {
-            if ((worn = get_eq_char(ch, location)) != NULL)
+            if (location == WEAR_TWO_HANDED && get_eq_char(ch, location) == NULL)
+               continue;
+            if (location == WEAR_BUCKLER && get_eq_char(ch, location) == NULL)
+               continue;
+            else if ((worn = get_eq_char(ch, location)) != NULL)
             {
                sprintf(colbuf, "%s", "@@!");
                sprintf(eqbuf, "%s", format_obj_to_char(worn, ch, TRUE));
-            }
-            else if (location == WEAR_TWO_HANDED || location == WEAR_BUCKLER || location = WEAR_HOLD_HAND_L || location = WEAR_HOLD_HAND_R)
-            {
-
             }
             {
                sprintf(colbuf, "%s", "@@.");
