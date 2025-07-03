@@ -1090,7 +1090,7 @@ int get_block(CHAR_DATA *ch)
    if (shield == NULL || shield->item_type != ITEM_ARMOR)
    {
       shield = get_eq_char(ch, WEAR_BUCKLER);
-      buckler = true;
+      buckler = TRUE;
    }
    if (shield == NULL)
       return 0;
