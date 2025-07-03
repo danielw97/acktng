@@ -124,6 +124,24 @@ bool is_name(const char *str, char *namelist)
          return TRUE;
    }
 }
+
+bool is_name_relaxed(const char *str, char *namelist)
+{
+   char name[MAX_INPUT_LENGTH];
+
+   for (;;)
+   {
+      namelist = one_argument(namelist, name);
+      if (name[0] == '\0')
+         return FALSE;
+      if (!str_cmp(str, name))
+         return TRUE;
+      if (strlen(name) > 1 && !str_prefix(str, name) && name[0] != '^')
+         return TRUE;
+   }
+}
+
+
 void safe_strcat(int max_len, char *dest, char *source)
 {
    int a;
