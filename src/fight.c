@@ -42,7 +42,7 @@ extern CHAR_DATA *quest_mob;
  * Local functions.
  */
 bool check_avoidance args((CHAR_DATA * ch, CHAR_DATA *victim));
-bool get_counter args((CHAR_DATA * ch, CHAR_DATA *victim));
+int get_counter args((CHAR_DATA * ch, CHAR_DATA *victim));
 void check_killer args((CHAR_DATA * ch, CHAR_DATA *victim));
 void dam_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, bool critical));
 void death_message args((CHAR_DATA * ch, CHAR_DATA *victim, int dt, int max_dt));
