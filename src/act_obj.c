@@ -1737,6 +1737,8 @@ void do_wear(CHAR_DATA *ch, char *argument)
                continue;
             if (location == WEAR_BUCKLER && get_eq_char(ch, location) == NULL)
                continue;
+            if ((location == WEAR_HOLD_HAND_R || location == WEAR_HOLD_HAND_L) && get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
+               continue;
             else if ((worn = get_eq_char(ch, location)) != NULL)
             {
                sprintf(colbuf, "%s", "@@!");
