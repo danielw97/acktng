@@ -1073,6 +1073,7 @@ int get_dodge(CHAR_DATA *ch)
 int get_block(CHAR_DATA *ch)
 {
    int chance = 0;
+   bool buckler = FALSE;
 
    if (!IS_AWAKE(ch))
       return chance;
@@ -1085,7 +1086,10 @@ int get_block(CHAR_DATA *ch)
    if (shield == NULL || shield->item_type != ITEM_ARMOR)
       shield = get_eq_char(ch, WEAR_HOLD_HAND_L);
    if (shield == NULL || shield->item_type != ITEM_ARMOR)
+   {
       shield = get_eq_char(ch, WEAR_BUCKLER);
+      buckler = true;
+   }
    if (shield == NULL)
       return 0;
 
@@ -1106,6 +1110,9 @@ int get_block(CHAR_DATA *ch)
 
    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
       chance += 5;
+
+   if (buckler)
+      chance /= 2;
 
    return chance;
 }
