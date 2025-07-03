@@ -941,7 +941,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
       act("$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < (get_counter(victim) - get_evasion_piercing(ch))) 
+      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch))) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
@@ -962,7 +962,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
       act("$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < (get_counter(victim) - get_evasion_piercing(ch))) 
+      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch))) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
@@ -983,7 +983,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
       act("$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent < (get_counter(victim) - get_evasion_piercing(ch))) 
+      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch))) 
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
