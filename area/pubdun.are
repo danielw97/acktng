@@ -711,7 +711,7 @@ Alice in Chains is a blood thirsty killing machine, and a not very nice
 "sickman, sickman, sickman."
 ~
 3 8 -400 S
-14 2
+13 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -739,7 +739,7 @@ Buffalo Tom was Midgaard's most notorious serial killer, with over three
 boo to a spider.  My! How looks can be misleading.
 ~
 3 8 -600 S
-22 1
+23 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -767,7 +767,7 @@ Dinosaur Jr, son of Dinosaur senior, was convited of mass murder many
 hardly have done much to improve his temper.
 ~
 3 0 -100 S
-14 1
+13 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -781,7 +781,7 @@ Elastica is so named because she appears to be made out of elastic, with
 question mark as you look at her.
 ~
 3 0 -200 S
-18 2
+17 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -792,7 +792,7 @@ A Second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-12 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -803,7 +803,7 @@ A second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-11 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -825,7 +825,7 @@ A second level prisoner stands here, clearly bored.
 ~
 ~
 1 0 0 S
-13 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -869,7 +869,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1 0 0 S
-16 1
+15 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -902,7 +902,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1 0 0 S
-24 1
+25 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -957,7 +957,7 @@ A Vice Warden stands here, looking at documents
 ~
 ~
 1 0 0 S
-33 1
+34 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -989,7 +989,7 @@ A skeleton stands here, grinning with a rictus grin.
 ~
 ~
 50331683 0 0 S
-40 1
+41 1
 200 -200 50 50
 ! 0 0 0 7 256 0 0
 | 0 0 0 0 0 0 0
