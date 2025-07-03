@@ -127,18 +127,30 @@ bool is_name(const char *str, char *namelist)
 
 bool is_name_relaxed(const char *str, char *namelist)
 {
+   char origlist[MSL];
    char name[MAX_INPUT_LENGTH];
+
+   strcpy(origlist, namelist);
 
    for (;;)
    {
       namelist = one_argument(namelist, name);
       if (name[0] == '\0')
-         return FALSE;
+         break;
       if (!str_cmp(str, name))
          return TRUE;
+   }
+   
+   for (;;)
+   {
+      namelist = one_argument(namelist, name);
+      if (name[0] == '\0')
+         break;
       if (strlen(name) > 1 && !str_prefix(str, name) && name[0] != '^')
          return TRUE;
    }
+
+   return FALSE;
 }
 
 
