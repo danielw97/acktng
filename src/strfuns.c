@@ -119,8 +119,10 @@ bool is_name(const char *str, char *namelist)
    {
       namelist = one_argument(namelist, name);
       if (name[0] == '\0')
-         return FALSE;
+         break;
       if (!str_cmp(str, name))
+         return TRUE;
+      if (!str_prefix(str, name) && name[0] != '^')
          return TRUE;
    }
 }
