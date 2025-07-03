@@ -1236,6 +1236,9 @@ bool can_wear_at(CHAR_DATA *ch, OBJ_DATA *obj, int location)
    case WEAR_CLAWS:
       loc_flag = ITEM_WEAR_CLAWS;
       break;
+   case WEAR_CLAN_COLORS:
+      loc_flag = ITEM_WEAR_CLAN_COLORS;
+      break;
    case WEAR_HOLD_HAND_L:
    case WEAR_HOLD_HAND_R:
       loc_flag = ITEM_WEAR_HOLD_HAND;
