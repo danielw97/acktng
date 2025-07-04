@@ -38,7 +38,7 @@
 #endif
 
 extern bool deathmatch;
-void breath_damage( CHAR_DATA *ch, int sn, int element, int level );
+void breath_damage(CHAR_DATA *ch, int sn, int element, int level);
 
 bool spell_invis(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
@@ -652,7 +652,7 @@ bool spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
    return TRUE;
 }
 
-void breath_damage( CHAR_DATA *ch, int sn, int element, int level )
+void breath_damage(CHAR_DATA *ch, int sn, int element, int level)
 {
    CHAR_DATA *vch;
    CHAR_DATA *vch_next = NULL;
@@ -660,24 +660,34 @@ void breath_damage( CHAR_DATA *ch, int sn, int element, int level )
    if (ch == NULL)
       return;
 
+   int min_dam = ch->max_hit / 32;
+   int max_dam = ch->max_hit / 16;
+
+   int dam_mod = ((ch->hit * 50) / ch->max_hit) + 50;
+   min_dam = min_dam * dam_mod / 100;
+   max_dam = max_dam * dam_mod / 100;
+
+   aoe_damage(ch, element, sn, min_dam, max_dam);
+}
+
+void aoe_damage(CHAR_DATA *ch, int element, int sn, int min_damage, int max_damage)
+{
+   CHAR_DATA *vch;
+   CHAR_DATA *vch_next = NULL;
+
    for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
    {
       if (vch == NULL || ch == vch)
          continue;
 
-      vch_next = vch->next_in_room;
-      if (IS_NPC(ch) && !IS_NPC(vch))
-      {
-         int dam = number_range(ch->max_hit/32+1, ch->max_hit/28);
-         int dam_mod = ((ch->hit * 50) / ch->max_hit) + 50;
-         dam = dam * dam_mod / 100;
-         dam /= 6;
-         if (saves_spell(level, vch))
-            dam /= 2;
-         sp_damage(NULL, ch, vch, dam, element, sn, TRUE);
-      }
-   }
+      if (IS_NPC(ch) && IS_NPC(vch))
+         continue;
 
+      if (is_same_group(ch, vch))
+         continue;
+
+      sp_damage(NULL, ch, vch, number_range(min_damage, max_damage), element, sn, TRUE)
+   }
 }
 
 bool spell_hellspawn(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
