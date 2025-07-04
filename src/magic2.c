@@ -686,7 +686,7 @@ void aoe_damage(CHAR_DATA *ch, int element, int sn, int min_damage, int max_dama
       if (is_same_group(ch, vch))
          continue;
 
-      sp_damage(NULL, ch, vch, number_range(min_damage, max_damage), element, sn, TRUE)
+      sp_damage(NULL, ch, vch, number_range(min_damage, max_damage), element, sn, TRUE);
    }
 }
 
