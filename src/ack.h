@@ -1365,7 +1365,7 @@ bool can_use_skill_by_name args((CHAR_DATA * ch, char *skill));
 bool can_use_skill_by_name_message args((CHAR_DATA * ch, char *skill));
 void affect_to_room args((ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA *raf));
 void r_affect_remove args((ROOM_INDEX_DATA * room, ROOM_AFFECT_DATA *raf));
-
+char *get_item_class args( (OBJ_DATA *obj) );
 void affect_to_char args((CHAR_DATA * ch, AFFECT_DATA *paf));
 void affect_remove args((CHAR_DATA * ch, AFFECT_DATA *paf));
 void affect_strip args((CHAR_DATA * ch, int sn));

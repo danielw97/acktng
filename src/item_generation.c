@@ -15,13 +15,7 @@ OBJ_DATA *generate_item(int level)
       obj->level = 150;
    if (obj->level < 1)
       obj->level = 1;
-   obj->weight = number_range(1, 25);
-   if (obj->weight > 20)
-      obj->weight = 20;
-   else if (obj->weight > 10)
-      obj->weight = 10;
-   else if (obj->weight > 1)
-      obj->weight = 1;
+   obj->weight = number_range(1, 3);
    SET_BIT(obj->extra_flags, ITEM_GENERATED);
    SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    obj->item_type = ITEM_ARMOR;
@@ -139,9 +133,9 @@ OBJ_DATA *generate_item(int level)
 
 char *get_suffix(OBJ_DATA *obj)
 {
-   if (obj->weight >= 20)
+   if (obj->weight == 3)
       return "of the Defender";
-   else if (obj->weight >= 10)
+   else if (obj->weight == 2)
       return "of the Fighter";
    else
       return "of the Arcanist";
@@ -181,9 +175,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HEAD))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Helmet";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Helm";
 
       return "Hat";
@@ -194,9 +188,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_FACE))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Visor";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Faceguard";
       else
          return "Visage";
@@ -213,9 +207,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_SHOULDERS))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Pauldrons";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Spaulders";
       else
          return "Epaulets";
@@ -223,9 +217,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_ARMS))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Plate Vambraces";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Leather Vambraces";
       else
          return "Sleeves";
@@ -233,9 +227,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_WRIST))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Plate Bracers";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Leather Bracers";
       else
          return "Bracers";
@@ -243,9 +237,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HANDS))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Plate Gauntlets";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Leather Rondel";
       else
          return "Gloves";
@@ -265,9 +259,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_BODY))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Platemail Armor";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Hauberk";
       else
          return "Robes";
@@ -278,9 +272,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_LEGS))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Plate Greaves";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Leather Greaves";
       else
          return "Leggings";
@@ -288,9 +282,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_FEET))
    {
-      if (obj->weight >= 20)
+      if (obj->weight == 3)
          return "Plate Boots";
-      else if (obj->weight >= 10)
+      else if (obj->weight == 2)
          return "Leather Boots";
       else
          return "Boots";
@@ -379,14 +373,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       hrdr_bonus = 1;
       stat_bonus = 5;
 
-      if (obj->weight > 19)
+      if (obj->weight == 3)
       {
          ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight > 9)
+      else if (obj->weight == 2)
       {
          /* Do nothing for now */
       }
@@ -411,14 +405,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       move_div = 10;
       mana_div = 10;
 
-      if (obj->weight > 19)
+      if (obj->weight == 3)
       {
          ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight > 9)
+      else if (obj->weight == 2)
       {
          /* Do nothing for now */
       }
@@ -454,14 +448,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       mana_div = 5;
       move_div = 5;
 
-      if (obj->weight > 19)
+      if (obj->weight == 3)
       {
          ac_div -= 1;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight > 9)
+      else if (obj->weight == 2)
       {
          /* Do nothing for now */
       }
@@ -500,14 +494,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       stat_bonus = 5;
       hrdr_bonus = 1;
 
-      if (obj->weight > 19)
+      if (obj->weight == 3)
       {
          ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight > 9)
+      else if (obj->weight == 2)
       {
          /* Do nothing for now */
       }
@@ -578,14 +572,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
 
       if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK))
       {
-         if (obj->weight < 10)
+         if (obj->weight == 1)
             set_aff_to_obj(obj, APPLY_WIS, rare_mod);
          else
             set_aff_to_obj(obj, APPLY_DEX, rare_mod);
       }
       else if (IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
       {
-         if (obj->weight < 10)
+         if (obj->weight == 1)
             set_aff_to_obj(obj, APPLY_INT, rare_mod);
          else
             set_aff_to_obj(obj, APPLY_STR, rare_mod);
@@ -602,14 +596,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
 
       if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK))
       {
-         if (obj->weight < 10)
+         if (obj->weight == 1)
             set_aff_to_obj(obj, APPLY_WIS, legendary_mod);
          else
             set_aff_to_obj(obj, APPLY_DEX, legendary_mod);
       }
       else if (IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
       {
-         if (obj->weight < 10)
+         if (obj->weight == 1)
             set_aff_to_obj(obj, APPLY_INT, legendary_mod);
          else
             set_aff_to_obj(obj, APPLY_STR, legendary_mod);

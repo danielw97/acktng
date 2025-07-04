@@ -31,7 +31,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (dt == gsn_backstab)
         dam *= 1.4;
     if (dt == gsn_circle)
-        dam *= 1.1;
+       dam *= 1.1;
     if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
         dam *= 1.2;
     if (dam <= 0)
@@ -48,7 +48,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         }
     }
 
-    if (dt > 0 && dt < TYPE_HIT && element != REALM_PHYSICAL)
+    if (dt > 0 && dt < TYPE_HIT && !IS_SET(element, ELEMENT_PHYSICAL))
     {
         if (is_affected(victim, gsn_anti_magic_shell))
         {
@@ -89,7 +89,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (IS_SET(element, REALM_PHYSICAL) && (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC)))
         dam /= 2;
 
-    if (IS_SET(element, REALM_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(ch, ITEM_APPLY_PROT)) && IS_EVIL(ch))
+    if (IS_SET(element, REALM_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)) && IS_EVIL(ch))
         dam -= dam / 4;
 
     bool can_reflect = TRUE;
@@ -289,7 +289,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         dam += dam * ch->remort[CLASS_PRI] / 100;
     }
 
-    if (element != REALM_PHYSICAL && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
+    if (!IS_SET(element, REALM_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {
         dam += dam * ch->remort[CLASS_SOR] / 100 * 0.5;
         dam += dam * ch->remort[CLASS_WIZ] / 100 * 0.5;

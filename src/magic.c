@@ -2177,7 +2177,7 @@ bool spell_giant_strength(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
    else
       af.duration = 4 + (level / 3);
    af.location = APPLY_STR;
-   af.modifier = 2 + (level >= 50) + (level >= 65);
+   af.modifier = 1;
    af.bitvector = 0;
    affect_to_char(victim, &af);
    send_to_char("You feel stronger.\n\r", victim);
@@ -2321,11 +2321,14 @@ bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    AFFECT_DATA *paf;
 
    sprintf(buf,
-           "@@NObject '%s' is @@etype@@N %s, @@aextra flags@@N %s.\n\r@@mWorn@@N: %s, @@cWeight@@N: %d, @@yvalue@@N: %d @@N, @@rlevel@@N: %d.\n\r",
+           "@@NObject '%s' is @@etype@@N %s, @@aextra flags@@N %s.\n\r@@mWorn@@N: %s, @@cItem Class@@N: %s, @@yvalue@@N: %d @@N, @@rlevel@@N: %d.\n\r",
            ob->short_descr,
            item_type_name(ob),
            extra_bit_name(ob->extra_flags),
-           bit_table_lookup(tab_wear_flags, ob->wear_flags), ob->weight, ob->cost, ob->level);
+           bit_table_lookup(tab_wear_flags, ob->wear_flags),
+           get_item_class(ob),
+           ob->cost,
+           ob->level);
    send_to_char(buf, ch);
 
    switch (ob->item_type)

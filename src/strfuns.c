@@ -127,10 +127,8 @@ bool is_name(const char *str, char *namelist)
 
 bool is_name_relaxed(const char *str, char *namelist)
 {
-   char *origlist;
+   bool found = FALSE;
    char name[MAX_INPUT_LENGTH];
-
-   origlist = str_dup(namelist);
 
    for (;;)
    {
@@ -139,25 +137,15 @@ bool is_name_relaxed(const char *str, char *namelist)
          break;
       if (!str_cmp(str, name))
       {
-         free_string(origlist);
          return TRUE;
       }
-   }
-
-   for (;;)
-   {
-      origlist = one_argument(origlist, name);
-      if (name[0] == '\0')
-         break;
       if (strlen(name) > 1 && !str_prefix(str, name) && name[0] != '^')
       {
-         free_string(origlist);
-         return TRUE;
+         found = TRUE;
       }
    }
 
-   free_string(origlist);
-   return FALSE;
+   return found;
 }
 
 

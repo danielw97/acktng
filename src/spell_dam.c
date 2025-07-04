@@ -480,7 +480,7 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
 
    for (rtype = 0; rtype < MAX_REALM; rtype++)
    {
-      if (sp_dam_str[rtype].realm == realm)
+      if (IS_SET(sp_dam_str[rtype].realm, realm))
          break;
    }
    if (rtype == MAX_REALM)

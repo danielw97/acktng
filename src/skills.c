@@ -310,6 +310,7 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    af.location = APPLY_DOT;
    af.modifier = get_psuedo_level(ch) / 2;
    af.bitvector = 0;
+   af.element = ELEMENT_PHYSICAL | ELEMENT_POISON;
    af.caster = ch;
    affect_to_char(victim, &af);
    return TRUE;
@@ -807,7 +808,7 @@ void do_holystrike(CHAR_DATA *ch, char *argument)
 {
    if (!is_valid_finisher(ch))
    {
-      send_to_char("You are not prepared for a finisher!n\r", ch);
+      send_to_char("You are not prepared for a finisher!\n\r", ch);
       return;
    }
 
@@ -1454,6 +1455,10 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
       if (ch->remort[CLASS_CRU] > 0)
          max_combo += 2;
 
+      int combo_chance = 25;
+      if (gsn == gsn_holystrike || gsn == gsn_fleche)
+         combo_chance += 10;
+
       for (int i = 0; i < max_attacks; i++)
       {
          reset_combo(ch);
@@ -1464,9 +1469,9 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
          if (i > max_combo)
             break;
 
-         if (i == 0 && number_percent() < 30)
+         if (i == 0 && number_percent() < combo_chance)
             max_attacks++;
-         if (number_percent() < 25)
+         if (number_percent() < combo_chance)
             max_attacks++;
 
          int roll = number_percent();
@@ -1591,7 +1596,10 @@ bool is_ready_finisher(CHAR_DATA *ch)
          return FALSE;
    }
 
-   return TRUE;
+   if (get_combo_count(ch) >= max_combo(ch)-1)
+      return TRUE;
+
+   return FALSE;
 }
 
 void reset_combo(CHAR_DATA *ch)
@@ -1858,6 +1866,8 @@ int get_combo_count(CHAR_DATA *ch)
    int cnt = 0;
    for(int i = 0; i < 6; i++)
    {
+      if (i > 0 && ch->combo[i] == ch->combo[i-1])
+         return cnt;
       if (ch->combo[i] > 0)
          cnt++;
    }

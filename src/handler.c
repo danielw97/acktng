@@ -777,6 +777,30 @@ char *class_order(int race)
    return buf;
 }
 
+int get_wear_weight(CHAR_DATA *ch)
+{
+   if (get_curr_str(ch) > 19)
+      return 3;
+
+   if (get_curr_str(ch) > 9)
+      return 2;
+
+   return 1;
+}
+
+char *get_item_class(OBJ_DATA *obj)
+{
+   if (obj->weight == 3)
+      return "tank";
+   if (obj->weight == 2)
+      return "melee";
+   if (obj->weight == 1)
+      return "caster";
+
+   return "bugged, contact staff.";
+}
+
+
 bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    if (ch == NULL)
@@ -933,19 +957,19 @@ bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
 
    if (!IS_NPC(ch))
    {
-      if (ch->pcdata->learned > LEVEL_ONE)
+      if (ch->pcdata->learned[gsn] > LEVEL_ONE)
          chance += 5;
-      if (ch->pcdata->learned > LEVEL_TWO)
+      if (ch->pcdata->learned[gsn] > LEVEL_TWO)
          chance += 5;
-      if (ch->pcdata->learned > LEVEL_THREE)
+      if (ch->pcdata->learned[gsn] > LEVEL_THREE)
          chance += 5;
-      if (ch->pcdata->learned > LEVEL_FOUR)
+      if (ch->pcdata->learned[gsn] > LEVEL_FOUR)
          chance += 5;
-      if (ch->pcdata->learned > LEVEL_FIVE)
+      if (ch->pcdata->learned[gsn] > LEVEL_FIVE)
          chance += 5;
-      if (ch->pcdata->learned > LEVEL_MASTER)
+      if (ch->pcdata->learned[gsn] > LEVEL_MASTER)
          chance += 1;
-      if (ch->pcdata->learned > LEVEL_GM)
+      if (ch->pcdata->learned[gsn] > LEVEL_GM)
          chance += 1;
    }
 
@@ -1130,7 +1154,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
       sh_int i;
       for (i = 0; i < MAX_WEAR; i++)
       {
-         if (((wield = get_eq_char(ch, i)) != NULL) && (get_obj_weight(wield) > get_curr_str(ch)))
+         if (((wield = get_eq_char(ch, i)) != NULL) && (get_obj_weight(wield) > get_wear_weight(ch)*20))
          {
             static int depth;
 

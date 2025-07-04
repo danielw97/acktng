@@ -1202,8 +1202,8 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          }
 
          case 'c':
-            sprintf(buf, "%d", get_combo_count(ch));
-            i = buf2;
+            ++str;
+            cl_index = 1;
             break;
          case 'C':
             ++str;
@@ -1313,8 +1313,8 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          }
 
          case 'c':
-            sprintf(buf, "%d", get_combo_count(ch));
-            i = buf2;
+            ++str;
+            cl_index = 1;
             break;
          case 'C':
             ++str;
@@ -1488,10 +1488,16 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          i = buf2;
          break;
       case 'c':
+         if (!IS_NPC(ch))
+            sprintf(buf2, "\n\r", get_combo_count(ch));
+         else
+            sprintf(buf2, " ");
+         i = buf2;
+         break;
+      case 'C':
          sprintf(buf2, " %d", get_combo_count(ch));
          i = buf2;
          break;
-
       case 'i':
          if (IS_NPC(ch))
             break;

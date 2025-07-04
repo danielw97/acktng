@@ -2956,7 +2956,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-143 0
+141 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -2969,7 +2969,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-141 0
+138 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -2982,7 +2982,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-148 0
+149 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -2995,7 +2995,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-141 0
+140 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -3008,7 +3008,7 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-148 0
+146 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
@@ -3022,7 +3022,7 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 @@ppierce@@N into the very depths of your soul..@@N
 ~
 36765723 18664 0 S
-145 1
+147 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 0
@@ -3036,34 +3036,34 @@ Rock Hydra~
 @@m...@@N
 ~
 33554435 16618 0 S
-150 0
+147 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 40 0 0 0 0 176
 #8357
-VaMpyre Bats bat~
+vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 @@N @@N~
 33570819 524988 0 S
-137 0
+138 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8358
-VaMpyre Bats bat~
+vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 ~
 16387 524988 0 S
-134 0
+135 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8359
-VaMpyre Bats bat~
+vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
@@ -3074,7 +3074,7 @@ VaMpyre Bats bat~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8360
-VaMpyre Bats bat~
+vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
@@ -3085,7 +3085,7 @@ VaMpyre Bats bat~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8361
-VaMpyre Bats bat~
+vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
@@ -3096,18 +3096,18 @@ VaMpyre Bats bat~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8362
-VaMpyre Bats bat~
+vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 ~
 16387 524988 0 S
-131 0
+128 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8363
-Patrol fog mist~
+crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
 ~
@@ -3115,12 +3115,12 @@ Patrol fog mist~
 attacks you where you stand.@@N
 ~
 36700161 16616 0 S
-135 0
+133 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8364
-patrol fog mist~
+crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
 ~
@@ -3128,12 +3128,12 @@ patrol fog mist~
 attacks you where you stand.@@N
 ~
 36700161 16616 0 S
-145 0
+148 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 #8365
-Patrol mist fog~
+crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
 ~
@@ -3141,7 +3141,7 @@ Patrol mist fog~
 attacks you where you stand.@@N
 ~
 36700161 16616 0 S
-146 0
+143 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3152,7 +3152,7 @@ crimson demon~
 ~
 ~
 43 526570 0 S
-119 1
+122 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
@@ -3164,7 +3164,7 @@ aries~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-147 0
+146 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3176,7 +3176,7 @@ Taurus~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-145 0
+146 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3188,7 +3188,7 @@ Gemini~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-140 0
+142 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3200,7 +3200,7 @@ Cancer~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-146 0
+145 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3212,7 +3212,7 @@ leo~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-144 0
+148 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3224,7 +3224,7 @@ Virgo~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-151 2
+153 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3236,7 +3236,7 @@ Libra~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-156 0
+159 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3260,7 +3260,7 @@ Sagittarius~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-139 0
+141 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3272,7 +3272,7 @@ Capricorn~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-145 0
+146 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3284,7 +3284,7 @@ Aquarius~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-136 0
+138 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3321,7 +3321,7 @@ suggestion hypnotic crimson~
 ~
 ~
 45105153 26876 -1000 S
-161 2
+158 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1509120 0 0 0 0 48
@@ -3332,7 +3332,7 @@ Crimson Crusader~
 ~
 ~
 50530333 1698558 1000 S
-146 1
+145 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 34816 0 0 0 0 16
@@ -3342,12 +3342,12 @@ sentient~
 ~
 ~
 53608477 649982 0 S
-150 0
+149 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
 #8383
-Crimson Shadow~
+crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
 ~
@@ -3358,18 +3358,18 @@ Crimson Shadow~
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
 #8384
-Crimson Shadow~
+crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
 ~
 ~
 33554433 548992 0 S
-150 0
+152 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
 #8385
-Crimson Shadow~
+crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
 ~
@@ -3380,13 +3380,13 @@ Crimson Shadow~
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
 #8386
-evil~
+pure crimson evil~
 @@dPure @@mCrimson @@REvil@@N~
 @@dThe @@Revil@@d of the tower wanders these halls...@@N
 ~
 ~
 16908297 24808 -1000 S
-153 1
+154 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
@@ -3397,7 +3397,7 @@ evil~
 ~
 ~
 50462729 24808 -1000 S
-150 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
@@ -3408,7 +3408,7 @@ evil~
 ~
 ~
 50462729 24808 -1000 S
-156 1
+155 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
@@ -3419,7 +3419,7 @@ nightmare~
 ~
 ~
 167903257 576234 -1000 S
-151 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3430,7 +3430,7 @@ paladin~
 ~
 ~
 33685513 1075964 1000 S
-148 2
+150 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 6488064 0 0 0 0 144
@@ -3455,7 +3455,7 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 @@ppierce@@N into the very depths of your soul..@@N
 ~
 36765723 18664 0 S
-148 1
+146 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 80
@@ -3480,7 +3480,7 @@ necromancer mage crimson~
 ~
 ~
 33554449 16576 0 S
-153 1
+157 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3502,7 +3502,7 @@ necromancer mage crimson~
 ~
 ~
 33554449 16576 0 S
-148 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3513,7 +3513,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-154 1
+155 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3524,7 +3524,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-154 1
+152 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3535,7 +3535,7 @@ crimson slave~
 ~
 ~
 1 542912 0 S
-149 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3546,7 +3546,7 @@ thief~
 ~
 ~
 196633 26856 0 S
-153 1
+154 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
@@ -3557,7 +3557,7 @@ head~
 ~
 ~
 65539 16616 0 S
-144 1
+147 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3568,7 +3568,7 @@ head~
 ~
 ~
 65539 16616 0 S
-149 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3590,7 +3590,7 @@ head~
 ~
 ~
 33619971 16616 0 S
-153 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3601,7 +3601,7 @@ head~
 ~
 ~
 33619971 16616 0 S
-136 1
+137 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3623,7 +3623,7 @@ head~
 ~
 ~
 65539 16616 0 S
-149 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
@@ -3635,7 +3635,7 @@ Sphere~
 @@pA small sphere floats here @@mshining@@p in the mist...@@N~
 18 8406992 8388608 1
 0 0 0 0 0 0 0 0 0 0
-10
+2
 L
 60
 #8351
@@ -3644,7 +3644,7 @@ leggings leg~
 @@NA @@mpure dark fog@@N covers the ground here with an eerie @@pglow@@N~
 9 134217920 9437184 19473
 0 0 0 0 0 0 0 0 0 0
-0
+1
 A
 17 -177
 A
@@ -3715,7 +3715,7 @@ hydra charm~
 @@mA small hide from the hydra itself..@@N~
 9 142737538 8388736 16409
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 17 -225
 A
@@ -3776,7 +3776,7 @@ A
 L
 150
 #8356
-statue figurine~
+s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
@@ -3786,7 +3786,7 @@ statue figurine~
 L
 2
 #8357
-statue figurine~
+s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
@@ -3796,7 +3796,7 @@ statue figurine~
 L
 2
 #8358
-statue figurine~
+s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
@@ -3806,7 +3806,7 @@ statue figurine~
 L
 2
 #8359
-statue figurine~
+s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
 ~
@@ -3906,7 +3906,7 @@ Cloak~
 @@mThis evil cloth begs you to take it with you...@@N~
 9 134217920 8388736 98321
 0 0 0 0 0 0 0 0 0 0
-0
+1
 A
 17 100
 A
@@ -4022,7 +4022,7 @@ blessing~
 @@gThe blessing of a pure warrior...@@N~
 1 134218114 8421376 20497
 0 0 -1 0 0 0 0 0 0 0
-10
+2
 A
 17 -200
 A
@@ -4118,7 +4118,7 @@ leggings demon~
 @@dSome leggings of the dark demon lord..@@N~
 9 134217856 9437184 33041
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 17 -133
 A
@@ -4137,7 +4137,7 @@ shield chaos~
 @@dThe shield of @@Rchaos@@d..@@N~
 9 134349186 8421376 1
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 17 -240
 A
@@ -4364,7 +4364,7 @@ ring hydra~
 @@mA ring of the hydra lies here waiting to be worn..@@N~
 9 134217856 8396800 433
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 17 -210
 A
@@ -4631,7 +4631,7 @@ S
 #OBJFUNS
 O 8350 objfun_soul_moan
 O 8355 objfun_healing
-O 8367 objfun_healing
+O 8367 (null)
 O 8368 objfun_cast_fight
 S
 #$
