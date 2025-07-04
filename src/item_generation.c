@@ -337,9 +337,6 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ilevel += 50;
    }
 
-   /* Small bonus for higher weights within itemization class */
-   ilevel += obj->level * (obj->weight % 10) * 2 / 100;
-
    if (IS_SET(obj->extra_flags, ITEM_GENERATED))
       ilevel *= 0.8;
 
@@ -390,7 +387,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
          dr_div *= 2;
          move_div *= 2;
 
-         spellpower_div = 15;
+         spellpower_div = 12;
       }
    }
    else if (obj->item_type == ITEM_WEAPON)

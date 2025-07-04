@@ -675,6 +675,9 @@ void aoe_damage(CHAR_DATA *ch, int element, int sn, int min_damage, int max_dama
    CHAR_DATA *vch;
    CHAR_DATA *vch_next = NULL;
 
+   if (ch == NULL)
+      return;
+
    for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
    {
       if (vch == NULL || ch == vch)
