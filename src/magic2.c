@@ -38,7 +38,7 @@
 #endif
 
 extern bool deathmatch;
-void breath_damage(CHAR_DATA *ch, int sn, int element, int level);
+void breath_damage(CHAR_DATA *ch, int sn, int element);
 
 bool spell_invis(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
@@ -624,35 +624,35 @@ bool spell_word_of_recall(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
  */
 bool spell_acid_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   breath_damage(ch, sn, ELEMENT_POISON | NO_REFLECT | NO_ABSORB, level);
+   breath_damage(ch, sn, ELEMENT_POISON | NO_REFLECT | NO_ABSORB);
    return TRUE;
 }
 
 bool spell_fire_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   breath_damage(ch, sn, ELEMENT_FIRE | NO_REFLECT | NO_ABSORB, level);
+   breath_damage(ch, sn, ELEMENT_FIRE | NO_REFLECT | NO_ABSORB);
    return TRUE;
 }
 
 bool spell_frost_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   breath_damage(ch, sn, ELEMENT_WATER | NO_REFLECT | NO_ABSORB, level);
+   breath_damage(ch, sn, ELEMENT_WATER | NO_REFLECT | NO_ABSORB);
    return TRUE;
 }
 
 bool spell_gas_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   breath_damage(ch, sn, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, level);
+   breath_damage(ch, sn, ELEMENT_AIR | NO_REFLECT | NO_ABSORB);
    return TRUE;
 }
 
 bool spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   breath_damage(ch, sn, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, level);
+   breath_damage(ch, sn, ELEMENT_AIR | NO_REFLECT | NO_ABSORB);
    return TRUE;
 }
 
-void breath_damage(CHAR_DATA *ch, int sn, int element, int level)
+void breath_damage(CHAR_DATA *ch, int sn, int element)
 {
    if (ch == NULL)
       return;

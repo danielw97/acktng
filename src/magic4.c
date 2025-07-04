@@ -266,6 +266,7 @@ bool spell_rictus_curse(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    }
    af.type = sn;
    af.bitvector = AFF_REMORT_CURSE;
+   af.duration = 2;
    af.caster = ch;
    af.location = APPLY_DOT;
    af.modifier = get_spellpower(ch) * 2 + get_psuedo_level(ch) * 3;
