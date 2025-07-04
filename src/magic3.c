@@ -189,7 +189,7 @@ bool spell_ice_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_waterelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_WATER);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, WATER_ELEMENTAL);
 
    act("$n calls upon the elemental forces of @@lwater@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@lwater@@N.", ch, obj, NULL, TO_CHAR);
@@ -204,7 +204,7 @@ bool spell_waterelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_skeleton(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, ELEMENT_SHADOW);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, SKELETON);
 
    act("$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR);
@@ -620,7 +620,7 @@ bool spell_ethereal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_fireelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_FIRE);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, FIRE_ELEMENTAL);
 
    act("$n calls upon the elemental forces of @@efire@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@efire@@N.", ch, obj, NULL, TO_CHAR);
@@ -1274,7 +1274,7 @@ bool spell_divine_intervention(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_D
 
 bool spell_earthelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_EARTH);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, EARTH_ELEMENTAL);
 
    act("$n calls upon the elemental forces of @@bearth@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the elemental forces of @@bearth@@N.", ch, obj, NULL, TO_CHAR);
@@ -1289,7 +1289,7 @@ bool spell_earthelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_iron_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_PHYSICAL);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, IRON_GOLEM);
 
    act("@@N$n calls upon the @@aalchemical@@N forces of @@dmetal@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@aalchemical@@N forces of @@dmetal@@N.", ch, obj, NULL, TO_CHAR);
@@ -1304,7 +1304,7 @@ bool spell_iron_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_soul_thief(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, ELEMENT_SHADOW);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_NEC] / 4, SOUL_THIEF);
 
    act("$n calls upon the @@dNegative Plane@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the @@dNegative Plane@@N.", ch, obj, NULL, TO_CHAR);
@@ -1321,7 +1321,7 @@ bool spell_soul_thief(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
 bool spell_holy_avenger(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_KNI] / 4, ELEMENT_HOLY);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_KNI] / 4, HOLY_AVENGER);
 
    act("$n calls upon the holy forces of @@Wlight@@N!", ch, obj, NULL, TO_ROOM);
    act("You call upon the holy forces of @@Wlight@@N.", ch, obj, NULL, TO_CHAR);
@@ -1336,7 +1336,7 @@ bool spell_holy_avenger(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
 bool spell_diamond_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
-   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, ELEMENT_HOLY);
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, DIAMOND_GOLEM);
 
    act("@@N$n calls upon the @@aalchemical@@N forces of @@ylight@@N!", ch, obj, NULL, TO_ROOM);
    act("@@NYou call upon the @@aalchemical@@N forces of @@ylight@@N.", ch, obj, NULL, TO_CHAR);

@@ -87,6 +87,15 @@ int mana_cost(CHAR_DATA *ch, int sn);
 #define NO_REFLECT BIT_30
 #define NO_ABSORB BIT_31
 
+#define WATER_ELEMENTAL 1
+#define FIRE_ELEMENTAL 2
+#define EARTH_ELEMENTAL 3
+#define IRON_GOLEM 4
+#define DIAMOND_GOLEM 5
+#define SKELETON 6
+#define SOUL_THIEF 7
+#define HOLY_AVENGER 8
+
 struct sp_dam_str_type
 {
    int realm;
