@@ -174,10 +174,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {3, 4, 5, 2, 0, 1},
     "War, Thi, Pug, Psi, Mag, Cle",
     "",
-    REALM_NONE,   /* strong magic realms for race */
-    REALM_NONE,   /* weak */
-    REALM_NONE,   /* resist */
-    REALM_NONE,   /* suscept */
+    ELE_NONE,   /* strong magic realms for race */
+    ELE_NONE,   /* weak */
+    ELE_NONE,   /* resist */
+    ELE_NONE,   /* suscept */
     TRUE /* player race */
     },
 
@@ -191,10 +191,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {1, 2, 0, 3, 4, 5},
     "Thi, Mag, Cle, War, Psi, Pug",
     "steal \'pick lock\'",
-    REALM_NONE,
-    REALM_NONE,
-    REALM_MIND | REALM_FIRE | REALM_HOLY,
-    REALM_NONE,
+    ELE_NONE,
+    ELE_NONE,
+    ELE_MENTAL | ELE_FIRE | ELE_HOLY,
+    ELE_NONE,
     TRUE},
 
    {
@@ -208,10 +208,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {4, 1, 5, 3, 0, 2},
     "War, Cle, Pug, Psi, Thi, Mag",
     "smash",
-    REALM_NONE,
-    REALM_NONE,
-    REALM_FIRE | REALM_HOLY | REALM_POISON,
-    REALM_NONE,
+    ELE_NONE,
+    ELE_NONE,
+    ELE_FIRE | ELE_HOLY | ELE_POISON,
+    ELE_NONE,
     TRUE},
 
    {
@@ -224,10 +224,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {0, 4, 1, 2, 3, 5},
     "Mag, Thi, War, Psi, Cle, Pug",
     "\'find doors\'",
-    REALM_MIND,
-    REALM_NONE,
-    REALM_MIND,
-    REALM_NONE,
+    ELE_MENTAL,
+    ELE_NONE,
+    ELE_MENTAL,
+    ELE_NONE,
     TRUE},
 
    {
@@ -240,10 +240,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {2, 0, 3, 4, 1, 5},
     "Cle, Psi, Mag, Thi, War, Pug",
     "\'faerie fire\' sneak",
-    REALM_POISON | REALM_MIND | REALM_FIRE,
-    REALM_NONE,
-    REALM_MIND,
-    REALM_NONE,
+    ELE_POISON | ELE_MENTAL | ELE_FIRE,
+    ELE_NONE,
+    ELE_MENTAL,
+    ELE_NONE,
     TRUE},
 
    {
@@ -256,10 +256,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {5, 1, 3, 2, 0, 4},
     "Pug, War, Mag, Thi, Cle, Psi",
     "\'shield block\'",
-    REALM_POISON,
-    REALM_MIND,
-    REALM_NONE,
-    REALM_MIND,
+    ELE_POISON,
+    ELE_MENTAL,
+    ELE_POISON,
+    ELE_MENTAL,
     TRUE},
    {
     "Drw", "Drow", 9201, 0,
@@ -271,10 +271,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {0, 4, 3, 2, 1, 5},
     "Psi, Mag, War, Thi, Cle, Pug",
     "\'find doors\' \'mind bolt\'",
-    REALM_MIND | REALM_FIRE,
-    REALM_HOLY,
+    ELE_MENTAL | ELE_FIRE,
+    ELE_HOLY,
     ELEMENT_SHADOW,
-    REALM_HOLY,
+    ELE_HOLY,
     TRUE},
 
    {
@@ -287,10 +287,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {3, 5, 4, 0, 1, 2},
     "Thi, Pug, War, Psi, Mag, Cle",
     "dodge",
-    REALM_POISON,
-    REALM_MIND | REALM_FIRE,
-    REALM_POISON,
-    REALM_MIND | REALM_FIRE,
+    ELE_POISON,
+    ELE_MENTAL | ELE_FIRE,
+    ELE_POISON,
+    ELE_MENTAL | ELE_FIRE,
     TRUE},
 
    {
@@ -304,10 +304,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {0, 1, 4, 2, 5, 3},
     "Mag, Cle, War, Psi, Pug, Thi",
     "fly \'fire breath\'",
-    REALM_FIRE | REALM_POISON,
-    REALM_MIND,
-    REALM_FIRE,
-    REALM_MIND,
+    ELE_FIRE | ELE_POISON,
+    ELE_MENTAL,
+    ELE_FIRE,
+    ELE_MENTAL,
     TRUE},
 
    {
@@ -320,10 +320,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {1, 5, 3, 2, 0, 4},
     "War, Pug, Cle, Thi, Mag, Psi",
     "hunt",
-    REALM_FIRE,
-    REALM_FIRE,
-    REALM_MIND,
-    REALM_FIRE,
+    ELE_MENTAL,
+    ELE_FIRE,
+    ELE_MENTAL,
+    ELE_FIRE,
     TRUE},
 
    {
@@ -336,10 +336,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {5, 2, 3, 4, 0, 1},
     "Pug, War, Psi, Mag, Cle, Thi",
     "\'enhanced damage\'",
-    REALM_MIND,
-    REALM_NONE,
-    REALM_MIND,
-    REALM_NONE,
+    ELE_MENTAL,
+    ELE_NONE,
+    ELE_MENTAL,
+    ELE_NONE,
     TRUE},
 
    {
@@ -352,10 +352,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {2, 3, 1, 4, 5, 0},
     "Psi, Thi, Mag, Cle, Pug, War",
     "fly",
-    REALM_MIND | REALM_FIRE,
-    REALM_FIRE,
-    REALM_MIND,
-    REALM_FIRE,
+    ELE_MENTAL | ELE_SHADOW,
+    ELE_FIRE,
+    ELE_MENTAL,
+    ELE_FIRE,
     TRUE},
 
    {
@@ -368,10 +368,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {1, 5, 2, 4, 0, 3},
     "War, Pug, Mag, Cle, Psi, Thi",
     "\'enhanced damage\'",
-    REALM_POISON,
-    REALM_NONE,
-    REALM_NONE,
-    REALM_NONE,
+    ELE_POISON,
+    ELE_NONE,
+    ELE_NONE,
+    ELE_NONE,
     TRUE},
    {
     "Trl", "Troll", 3001, 0,
@@ -383,10 +383,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {5, 1, 2, 4, 0, 3},
     "Pug, War, Cle, Thi, Psi, Mag",
     "\'stone skin\'",
-    REALM_NONE,
-    REALM_FIRE | REALM_HOLY,
-    REALM_NONE,
-    REALM_FIRE,
+    ELE_NONE,
+    ELE_FIRE | ELE_HOLY,
+    ELE_NONE,
+    ELE_FIRE,
     TRUE},
    {
     "Und", "Undead", 3001, 0,
@@ -398,10 +398,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {5, 1, 2, 4, 0, 3},
     "Pug, War, Cle, Thi, Psi, Mag",
     "",
-    REALM_POISON,
-    REALM_HOLY,
-    REALM_POISON,
-    REALM_HOLY | REALM_FIRE,
+    ELE_POISON,
+    ELE_HOLY,
+    ELE_POISON | ELE_PHYSICAL,
+    ELE_HOLY | ELE_FIRE,
     FALSE},
 
    {
@@ -414,10 +414,10 @@ const struct race_type race_table[MAX_RACE] = {
     MAX_CLASS, {0, 1, 4, 5, 2, 3},
     "Mag, War, Psi, Pug, Cle, Thi",
     "fly \'stone skin\'",
-    REALM_FIRE | REALM_POISON,
-    REALM_MIND,
-    REALM_FIRE | REALM_MIND,
-    REALM_MIND,
+    ELE_FIRE | ELE_POISON,
+    ELE_MENTAL,
+    ELE_FIRE | ELE_POISON,
+    ELE_MENTAL,
     TRUE},
 
 };

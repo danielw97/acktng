@@ -692,7 +692,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       }
    }
 
-   dam = calculate_damage(ch, victim, dam, dt, REALM_PHYSICAL, TRUE);
+   dam = calculate_damage(ch, victim, dam, dt, ELE_PHYSICAL, TRUE);
 
    bool stole_life = FALSE;
    if ((wield) && (dam > 0) && ((IS_OBJ_STAT(wield, ITEM_LIFESTEALER))))
@@ -706,7 +706,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
  */
 int damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt)
 {
-   return do_damage(ch, victim, dam, dt, REALM_PHYSICAL, FALSE);
+   return do_damage(ch, victim, dam, dt, ELE_PHYSICAL, FALSE);
 }
 
 bool is_safe(CHAR_DATA *ch, CHAR_DATA *victim)

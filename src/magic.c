@@ -936,7 +936,7 @@ bool spell_badbreath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    {
       dam /= 2;
    }
-   sp_damage(obj, ch, victim, dam, REALM_AIR, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_AIR, sn, TRUE);
    return TRUE;
 }
 
@@ -989,8 +989,8 @@ bool spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   if (!sp_damage(obj, ch, victim, 0, REALM_HOLY, sn, FALSE))
-      return TRUE;
+//   if (!sp_damage(obj, ch, victim, 0, REALM_HOLY, sn, FALSE))
+  //    return TRUE;
 
    if (IS_AFFECTED(victim, AFF_BLIND) || saves_spell(level, victim))
       return TRUE;
@@ -998,7 +998,7 @@ bool spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    af.type = sn;
    af.location = APPLY_HITROLL;
    af.modifier = -4;
-   af.duration = 1 + (level / 4);
+   af.duration = 1;
    af.bitvector = AFF_BLIND;
    affect_to_char(victim, &af);
    send_to_char("You are blinded!\n\r", victim);
@@ -1025,7 +1025,7 @@ bool spell_burning_hands(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_FIRE, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_FIRE, sn, TRUE);
    return TRUE;
 }
 
@@ -1218,7 +1218,7 @@ bool spell_color_spray(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_MIND, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_MENTAL, sn, TRUE);
    return TRUE;
 }
 
@@ -1875,7 +1875,7 @@ bool spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
          {
             act("$n loses $s footing, and falls to the ground!", vch, NULL, NULL, TO_ROOM);
             send_to_char("You lose your footing, and fall to the ground!", vch);
-            sp_damage(NULL, ch, vch, level + dice(20, 10), REALM_EARTH, sn, TRUE);
+            sp_damage(NULL, ch, vch, level + dice(20, 10), ELE_EARTH, sn, TRUE);
          }
          else
          {
@@ -2015,7 +2015,7 @@ bool spell_energy_drain(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       ch->hit = UMIN(ch->max_hit, ch->hit + dam);
    }
 
-   sp_damage(obj, ch, victim, dam, REALM_SHADOW, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_SHADOW, sn, TRUE);
 
    return TRUE;
 }
@@ -2037,7 +2037,7 @@ bool spell_fireball(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    dam = number_range(dam_each[level] / 2, dam_each[level] * 2);
    if (saves_spell(level, victim))
       dam /= 2;
-   sp_damage(obj, ch, victim, dam, REALM_FIRE, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_FIRE, sn, TRUE);
    return TRUE;
 }
 
@@ -2050,7 +2050,7 @@ bool spell_flamestrike(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_FIRE, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_FIRE, sn, TRUE);
    return TRUE;
 }
 
@@ -2195,7 +2195,7 @@ bool spell_harm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    dam = UMIN(180, victim->hit - dice(1, 4));
    if (saves_spell(level, victim) || (saves_spell(level, victim)))
       dam = UMIN(100, dam / 4);
-   if (sp_damage(obj, ch, victim, dam, REALM_SHADOW, sn, TRUE))
+   if (sp_damage(obj, ch, victim, dam, ELE_SHADOW, sn, TRUE))
    {
       af.type = skill_lookup("poison");
       af.duration = 12 + (level / 10);
@@ -2310,7 +2310,7 @@ bool spell_laserbolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, REALM_HOLY, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_HOLY, sn, TRUE);
    return TRUE;
 }
 

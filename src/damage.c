@@ -37,12 +37,12 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (dam <= 0)
         dam = 1;
 
-    if (dt > 0 && dt < TYPE_HIT && element == REALM_PHYSICAL)
+    if (dt > 0 && dt < TYPE_HIT && element == ELE_PHYSICAL)
     {
         if (is_affected(victim, gsn_riposte))
         {
             affect_strip(victim, gsn_riposte);
-            calculate_damage(victim, ch, dam, gsn_riposte, REALM_PHYSICAL, TRUE);
+            calculate_damage(victim, ch, dam, gsn_riposte, ELE_PHYSICAL, TRUE);
             ch->stunTimer = 1;
             return 0;
         }
@@ -77,30 +77,30 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     else
         skin_mods = (victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags);
 
-    if (IS_SET(element, REALM_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_TOUGH_SKIN))
+    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_TOUGH_SKIN))
         dam = dam * 0.9;
 
-    if (IS_SET(element, REALM_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_STONE_SKIN))
+    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_STONE_SKIN))
         dam = dam * 0.8;
 
-    if (IS_SET(element, REALM_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_IRON_SKIN))
+    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_IRON_SKIN))
         dam = dam * 0.7;
 
-    if (IS_SET(element, REALM_PHYSICAL) && (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC)))
+    if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC)))
         dam /= 2;
 
-    if (IS_SET(element, REALM_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)) && IS_EVIL(ch))
+    if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)) && IS_EVIL(ch))
         dam -= dam / 4;
 
     bool can_reflect = TRUE;
     bool can_absorb = TRUE;
 
-    if (IS_SET(element, NO_REFLECT) || IS_SET(element, REALM_PHYSICAL))
+    if (IS_SET(element, NO_REFLECT) || IS_SET(element, ELE_PHYSICAL))
     {
         REMOVE_BIT(element, NO_REFLECT);
         can_reflect = FALSE;
     }
-    if (IS_SET(element, NO_ABSORB) || IS_SET(element, REALM_PHYSICAL))
+    if (IS_SET(element, NO_ABSORB) || IS_SET(element, ELE_PHYSICAL))
     {
         REMOVE_BIT(element, NO_ABSORB);
         can_absorb = FALSE;
@@ -147,27 +147,27 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
             dam_modifier -= .20;
         }
 
-        if (!IS_SET(element, REALM_PHYSICAL) && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
+        if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
         {
             dam_modifier += .25;
         }
-        else if (!IS_SET(element, REALM_PHYSICAL) && IS_SET(ch_race, RACE_MOD_WEAK_MAGIC))
+        else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_WEAK_MAGIC))
         {
             dam_modifier -= .25;
         }
-        else if (!IS_SET(element, REALM_PHYSICAL) && IS_SET(ch_race, RACE_MOD_NO_MAGIC))
+        else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_NO_MAGIC))
         {
             dam_modifier -= .50;
         }
 
-        if ((!IS_NPC(ch)) && (!IS_SET(element, REALM_MIND)) && !IS_SET(element, REALM_PHYSICAL))
+        if ((!IS_NPC(ch)) && (!IS_SET(element, ELE_MENTAL)) && !IS_SET(element, ELE_PHYSICAL))
         {
             if (can_use(ch, gsn_potency))
             {
                 dam_modifier += .25;
             }
         }
-        if (!IS_SET(element, REALM_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
+        if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
         {
             dam_modifier += .5;
         }
@@ -188,24 +188,24 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         dam_modifier -= .25;
     }
 
-    else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != REALM_PHYSICAL)
+    else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != ELE_PHYSICAL)
     {
         dam_modifier -= .25;
     }
 
-    if ((IS_SET(element, REALM_MIND)) && (!HAS_MIND(victim)))
+    if ((IS_SET(element, ELE_MENTAL)) && (!HAS_MIND(victim)))
         dam_modifier = 0.0;
 
     if (((IS_SET(element, ELEMENT_EARTH)) || (IS_SET(element, ELEMENT_AIR))) && (!HAS_BODY(victim)))
         dam_modifier = 0.0;
 
-    if ((IS_SET(element, REALM_POISON)) && (IS_SET(vi_race, RACE_MOD_IMMUNE_POISON)))
+    if ((IS_SET(element, ELE_POISON)) && (IS_SET(vi_race, RACE_MOD_IMMUNE_POISON)))
         dam_modifier = 0.0;
 
     if ((IS_SET(element, ELEMENT_SHADOW)) && (IS_UNDEAD(victim)))
         dam_modifier = 0.0;
 
-    if (!IS_SET(element, REALM_PHYSICAL))
+    if (!IS_SET(element, ELE_PHYSICAL))
     {
         if (IS_SET(element, SIXTH_DIVISOR))
         {
@@ -260,7 +260,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         }
     }
 
-    if (!IS_SET(element, REALM_PHYSICAL))
+    if (!IS_SET(element, ELE_PHYSICAL))
         crit_chance = get_spell_crit(ch);
     else
         crit_chance = get_crit(ch);
@@ -270,7 +270,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     if (critical)
     {
-        if (!IS_SET(element, REALM_PHYSICAL))
+        if (!IS_SET(element, ELE_PHYSICAL))
             dam += dam * get_spell_crit_mult(ch) / 100;
         else
             dam += dam * get_crit_mult(ch) / 100;
@@ -278,18 +278,18 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     dam = dam * dam_modifier;
 
-    if (!IS_SET(element, REALM_PHYSICAL))
+    if (!IS_SET(element, ELE_PHYSICAL))
         dam += dam * (get_curr_int(ch) - get_curr_wis(victim)) * 5 / 100;
     else
         dam -= dam * get_curr_con(victim) / 100;
 
-    if (IS_SET(element, REALM_HOLY))
+    if (IS_SET(element, ELE_HOLY))
     {
         dam += dam * ch->adept[CLASS_TEM] / 50;
         dam += dam * ch->remort[CLASS_PRI] / 100;
     }
 
-    if (!IS_SET(element, REALM_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
+    if (!IS_SET(element, ELE_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {
         dam += dam * ch->remort[CLASS_SOR] / 100 * 0.5;
         dam += dam * ch->remort[CLASS_WIZ] / 100 * 0.5;
@@ -403,7 +403,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
      * Hurt the victim.
      * Inform the victim of his new state.
      */
-    if (dt != -1 && IS_SET(element, REALM_PHYSICAL))
+    if (dt != -1 && IS_SET(element, ELE_PHYSICAL))
         dam_message(ch, victim, dam, dt, critical);
     else if (dt != -1)
         sp_dam_message(NULL, ch, victim, dam, element, dt, critical);
@@ -414,7 +414,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     if (!IS_NPC(victim) && IS_WOLF(victim) && (dam > 350))
         do_rage(victim, "FORCE");
 
-    if (IS_SET(element, REALM_PHYSICAL))
+    if (IS_SET(element, ELE_PHYSICAL))
         cloak_action(ch, victim, dam);
 
     update_pos(victim);

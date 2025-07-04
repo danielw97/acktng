@@ -63,7 +63,7 @@ bool spell_fireblast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       dam /= 2;
    act("@@g$n is struck by the blast of @@efire@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the @@efire @@gblast!!@@N\n\r", victim);
-   sp_damage(obj, ch, victim, dam, REALM_FIRE, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_FIRE, sn, TRUE);
    return TRUE;
 }
 
@@ -138,7 +138,7 @@ bool spell_holy_wrath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       dam /= 2;
    act("@@g$n is struck by the coruscating sphere of @@ylight@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the coruscating sphere of @@ylight@@g!!@@N\n\r", victim);
-   sp_damage(obj, ch, victim, dam, REALM_HOLY, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELE_HOLY, sn, TRUE);
    return TRUE;
 }
 
@@ -190,7 +190,7 @@ bool spell_thought_vise(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       dam /= 2;
    act("@@rA crushing weight brushes your mind, then is gone.@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@rA crushing weight fills your mind.@@N", victim);
-   sp_damage(obj, ch, victim, dam, REALM_MIND | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
    return TRUE;
 }
 

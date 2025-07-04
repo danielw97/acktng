@@ -1,21 +1,2 @@
-#OBJECT
-WhereVnum    3300
-Nest         0
-Name         Corpse~
-ShortDescr   corpse of Akrites~
-Description  The corpse of Akrites is lying here.~
-Vnum         11
-ExtraFlags   0
-WearFlags    0
-WearLoc      -1
-ClassFlags   1
-ItemType     24
-Weight       3
-Level        1
-Timer        29
-Cost         10
-Values       0 0 0 1
-End
-
 #END
 
