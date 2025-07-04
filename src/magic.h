@@ -55,6 +55,9 @@ int mana_cost(CHAR_DATA *ch, int sn);
 #define ELE_SHADOW BIT_8
 #define ELE_POISON BIT_9
 
+#define MAX_ELEMENT 9
+#define MAX_REALM MAX_ELEMENT
+
 #define ELEMENT_NONE ELE_NONE
 #define ELEMENT_PHYSICAL ELE_PHYSICAL
 #define ELEMENT_MENTAL ELE_MENTAL
@@ -99,7 +102,6 @@ struct sp_dam_str_type
 };
 
 extern struct sp_dam_str_type sp_dam_str[];
-#define MAX_REALM 13
 
 /*
  * Spell functions.
