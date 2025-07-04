@@ -654,9 +654,6 @@ bool spell_lightning_breath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
 
 void breath_damage(CHAR_DATA *ch, int sn, int element, int level)
 {
-   CHAR_DATA *vch;
-   CHAR_DATA *vch_next = NULL;
-
    if (ch == NULL)
       return;
 
