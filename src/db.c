@@ -2523,6 +2523,8 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
       mob->ngroup = ngroup;
       LINK(ngroup, first_npc_group, last_npc_group, next, prev);
    }
+
+   generate_ai_spawn(mob);
    return mob;
 }
 
