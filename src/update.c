@@ -369,6 +369,78 @@ void gain_exp(CHAR_DATA *ch, long_int gain)
    return;
 }
 
+void round_update(CHAR_DATA *ch)
+{
+   AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
+
+   /* Heated items */
+   if (ch->hit > 0 && ch->in_room != NULL && get_room_index(ch->in_room->vnum) != NULL && item_has_apply(ch, ITEM_APPLY_HEATED))
+   {
+      OBJ_DATA *heated_item;
+      int heat_damage = 0;
+
+      for (heated_item = ch->first_carry; heated_item != NULL; heated_item = heated_item->next_in_carry_list)
+      {
+         if (IS_SET(heated_item->item_apply, ITEM_APPLY_HEATED) && heated_item->wear_loc != WEAR_NONE)
+         {
+            heat_damage = heated_item->level;
+            obj_damage(heated_item, ch, heat_damage);
+            act("@@W   $p@@N you are wearing are @@eBURNING@@N you!!!", ch, heated_item, NULL, TO_CHAR);
+            act("@@W   $p worn by $n is @@eBURNING@@N!!!", ch, heated_item, NULL, TO_ROOM);
+            if (IS_NPC(ch))
+               do_remove(ch, heated_item->name);
+         }
+      }
+   }
+   // Hots and dots
+   for (paf = ch->first_affect; paf != NULL; paf = paf_next)
+   {
+      if (paf == NULL)
+         break;
+
+      paf_next = paf->next;
+      if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
+      {
+         heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
+      }
+      if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 && is_same_room(ch, paf->caster))
+      {
+         do_damage(paf->caster, ch, paf->modifier, paf->type, paf->element, FALSE);
+      }
+      if (paf->duration_type == DURATION_ROUND)
+      {
+         if (paf->duration < 0)
+         {
+            if (paf->type > 0 && skill_table[paf->type].msg_off)
+            {
+               send_to_char(skill_table[paf->type].msg_off, ch);
+               send_to_char("\n\r", ch);
+            }
+            if (paf->type > 0 && skill_table[paf->type].room_off)
+               act(skill_table[paf->type].room_off, ch, NULL, NULL, TO_ROOM);
+
+            AFFECT_DATA *paf_prev = paf->prev;
+
+            affect_remove(ch, paf);
+
+            if (paf_prev != NULL)
+               paf = paf_prev;
+            else
+               paf = ch->first_affect;
+         }
+         else
+            paf->duration--;
+      }
+   }
+
+   for (int i = 0; i < MAX_SKILL; i++)
+   {
+      if (ch->cooldown[i] > 0)
+         ch->cooldown[i]--;
+   }
+}
+
 /*
  * Regeneration stuff.
  */

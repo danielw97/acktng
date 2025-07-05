@@ -76,25 +76,11 @@ void violence_update(void)
    CHAR_DATA *victim;
    CHAR_DATA *rch;
    CHAR_DATA *rch_next;
-   AFFECT_DATA *paf;
-   AFFECT_DATA *paf_next;
-
-   /*
-    * CHAR_DATA *check_char;
-    */
-   /*    extern CHAR_DATA *violence_marker;
-       CHAR_DATA	*marker;  */
-   bool has_cast = FALSE;
 
    CREF(ch_next, CHAR_NEXT);
    for (ch = first_char; ch; ch = ch_next)
    {
       ch_next = ch->next;
-
-      /*
-       * For stunning during combat
-       * -Damane-    4/26/96
-       */
 
       if (ch->position == POS_STUNNED)
       {
@@ -110,7 +96,6 @@ void violence_update(void)
             continue;
          }
       }
-      has_cast = FALSE;
 
       /* Healing rapidly for raged wolves  */
 
@@ -121,53 +106,7 @@ void violence_update(void)
          ch->hit = (UMIN(ch->max_hit, (ch->hit + ch->max_hit / 150)));
       }
 
-      for(int i = 0; i < MAX_SKILL; i++)
-      {
-         if (ch->cooldown[i] > 0)
-            ch->cooldown[i]--;
-      }
-
-      // Hots and dots
-      for (paf = ch->first_affect; paf != NULL; paf = paf_next)
-      {
-         if (paf == NULL)
-            break;
-
-         paf_next = paf->next;
-         if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
-         {
-            heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
-         }
-         if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 && is_same_room(ch, paf->caster))
-         {
-            do_damage(paf->caster, ch, paf->modifier, paf->type, paf->element, FALSE);
-         }
-         if (paf->duration_type == DURATION_ROUND)
-         {
-            if (paf->duration < 0)
-            {
-               if (paf->type > 0 && skill_table[paf->type].msg_off)
-               {
-                  send_to_char(skill_table[paf->type].msg_off, ch);
-                  send_to_char("\n\r", ch);
-               }
-               if (paf->type > 0 && skill_table[paf->type].room_off)
-                  act(skill_table[paf->type].room_off, ch, NULL, NULL, TO_ROOM);
-
-               AFFECT_DATA *paf_prev = paf->prev;
-
-               affect_remove(ch, paf);
-
-               if (paf_prev != NULL)
-                  paf = paf_prev;
-               else
-                  paf = ch->first_affect;
-            }
-            else
-               paf->duration--;
-         }
-      }
-
+      round_update(ch);
       /* slight damage for players in a speeded stance, simulates fatigue */
 
       if (!IS_NPC(ch) && (stance_app[ch->stance].speed_mod > 1))
@@ -176,89 +115,15 @@ void violence_update(void)
              UMAX(10, ch->hit - number_range(get_psuedo_level(ch) * 5 / 1000, get_psuedo_level(ch) * 10 / 1000));
       }
 
-      if (ch->hit > 0 && ch->in_room != NULL && get_room_index(ch->in_room->vnum) != NULL && item_has_apply(ch, ITEM_APPLY_HEATED))
-      {
-         OBJ_DATA *heated_item;
-         int heat_damage = 0;
-
-         for (heated_item = ch->first_carry; heated_item != NULL; heated_item = heated_item->next_in_carry_list)
-         {
-            if (IS_SET(heated_item->item_apply, ITEM_APPLY_HEATED) && heated_item->wear_loc != WEAR_NONE)
-            {
-               heat_damage = heated_item->level;
-               obj_damage(heated_item, ch, heat_damage);
-               act("@@W   $p@@N you are wearing are @@eBURNING@@N you!!!", ch, heated_item, NULL, TO_CHAR);
-               act("@@W   $p worn by $n is @@eBURNING@@N!!!", ch, heated_item, NULL, TO_ROOM);
-               if (IS_NPC(ch))
-                  do_remove(ch, heated_item->name);
-            }
-         }
-      }
-
       if (ch->stunTimer > 0)
       {
          ch->stunTimer--;
          continue;
       }
 
-      if ((ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
-      {
-         if ((ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
-         {
-            do_cast(ch, "heal self");
-         }
-      }
-      else if (IS_NPC(ch) && ch->hit < 0)
-      {
-         ch->position = POS_DEAD;
-         if (ch->fighting == NULL)
-            if (ch->in_room != NULL)
-               act("Suddenly, $n is enveloped in a @@mBeam of light@@N, and is gone!", ch, NULL, NULL, TO_ROOM);
-         stop_fighting(ch, TRUE);
-         extract_char(ch, TRUE);
-         continue;
-      }
-
       area_resetting_global = TRUE;
-      if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && ch->hit > 0)
-      {
-         if (ch->hit < ch->max_hit * 2 / 3)
-         {
-            if (IS_SET(ch->def, DEF_CURE_LIGHT))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("cure light")))
-               {
-                  do_cast(ch, "\'cure light\' self");
-                  has_cast = TRUE;
-               }
-            }
-            if (IS_SET(ch->def, DEF_CURE_SERIOUS))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("cure serious")))
-               {
-                  do_cast(ch, "\'cure serious\' self");
-                  has_cast = TRUE;
-               }
-            }
-            if (IS_SET(ch->def, DEF_CURE_CRITIC))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("cure critical")))
-               {
-                  do_cast(ch, "\'cure critical\' self");
-                  has_cast = TRUE;
-               }
-            }
-            if (IS_SET(ch->def, DEF_HEAL))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("heal")))
-               {
-                  do_cast(ch, "heal self");
-                  has_cast = TRUE;
-               }
-            }
-         }
-      }
-      else if (IS_NPC(ch) && ch->hit < 0)
+
+      if (IS_NPC(ch) && ch->hit < 0)
       {
          ch->position = POS_DEAD;
          if (ch->fighting == NULL)
@@ -266,51 +131,9 @@ void violence_update(void)
                act("Suddenly, $n is enveloped in a @@mBeam of light@@N, and is gone!", ch, NULL, NULL, TO_ROOM);
          extract_char(ch, TRUE);
          continue;
-      }
-
-      if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && (ch->hit > 0) && (ch->first_shield == NULL) && (!has_cast) && (ch->fighting == NULL))
-      {
-         if ((IS_SET(ch->def, DEF_FIRESHIELD)) && (!is_affected(ch, skill_lookup("fireshield"))) && (ch->mana > mana_cost(ch, skill_lookup("fireshield"))))
-         {
-            do_cast(ch, "fireshield");
-            has_cast = TRUE;
-         }
-         else if ((IS_SET(ch->def, DEF_ICESHIELD)) && (!is_affected(ch, skill_lookup("iceshield"))) && (ch->mana > mana_cost(ch, skill_lookup("iceshield"))))
-         {
-            do_cast(ch, "iceshield");
-            has_cast = TRUE;
-         }
-         else if ((IS_SET(ch->def, DEF_SHOCKSHIELD)) && (!is_affected(ch, skill_lookup("shockshield"))) && (ch->mana > mana_cost(ch, skill_lookup("shockshield"))))
-         {
-            do_cast(ch, "shockshield");
-            has_cast = TRUE;
-         }
       }
       area_resetting_global = FALSE;
-      /* Offensive spell handler, only use when actually fighting.. */
 
-      if ((IS_NPC(ch)) && (ch->is_free == FALSE) && (ch->cast > 1) && (!has_cast) && (ch->position > POS_RESTING) && (ch->fighting != NULL) && (ch->fighting->is_free != TRUE) && (ch->in_room != NULL) && (ch->hit > 1) && (ch->position == POS_FIGHTING))
-
-      {
-         sh_int cast_frequency;
-         sh_int index;
-
-         cast_frequency = get_psuedo_level(ch) / 2; /* maybe set in olc later? */
-         if ((number_range(0, 99) < cast_frequency) && (ch->mana >= (40 * ch->max_mana / 100)))
-         {
-            for (index = 1; index < 32; index++)
-            {
-               if ((IS_SET(ch->cast, (1 << index))) && (number_range(0, 99) < (index * 3 + number_range(0, 25))) && (ch->mana > mana_cost(ch, skill_lookup(rev_table_lookup(tab_cast_name, (1 << index))))))
-               {
-                  char cast_name[MSL];
-                  sprintf(cast_name, "%s %s", rev_table_lookup(tab_cast_name, (1 << index)), ch->fighting->name);
-                  do_cast(ch, cast_name);
-                  has_cast = TRUE;
-                  break;
-               }
-            }
-         }
-      }
       /*
        * Hunting mobs.
        * -S- Mod: use flags to work out what to do....
