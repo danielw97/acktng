@@ -526,6 +526,12 @@ void do_disarm(CHAR_DATA *ch, char *argument)
       return;
    }
 
+   if (ch->cooldown[gsn_disarm] > 0)
+   {
+      send_to_char("You still have disarm on cooldown.\n\r",ch);
+      return;
+   }
+
    if ((victim = ch->fighting) == NULL)
    {
       send_to_char("You aren't fighting anyone.\n\r", ch);
@@ -555,6 +561,8 @@ void do_disarm(CHAR_DATA *ch, char *argument)
    combo(ch, victim, gsn_disarm);
 
    raise_skill(ch, gsn_disarm);
+
+   ch->cooldown[gsn_disarm] = 4;
 
    WAIT_STATE(ch, skill_table[gsn_disarm].beats);
    percent = number_percent() + victim->level - ch->level;

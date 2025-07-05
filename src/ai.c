@@ -221,30 +221,19 @@ bool generate_ai_spawn(CHAR_DATA *ch)
       generate_offensive_cast(ch);
       generate_defensive_cast(ch);
       break;
+   case 6:
+      generate_defensive_cast(ch);
+      break;
+   case 7:
+      generate_phys(ch);
+      generate_offensive_cast(ch);
+      generate_defensive_cast(ch);
    default:
       // Nothing
       break;
    }
 }
-/*
-#define MOB_SECOND BIT_2
-#define MOB_THIRD BIT_3
-#define MOB_FOURTH BIT_4
-#define MOB_FIFTH BIT_5
-#define MOB_SIXTH BIT_6
-#define MOB_PUNCH BIT_9
-#define MOB_HEADBUTT BIT_10
-#define MOB_KNEE BIT_11
-#define MOB_DISARM BIT_12
-#define MOB_DODGE BIT_14
-#define MOB_PARRY BIT_15
-#define MOB_MARTIAL BIT_16
-#define MOB_ENHANCED BIT_17
-#define MOB_DIRT BIT_19
-#define MOB_CHARGE BIT_20
-#define MOB_COUNTER BIT_21
-#define MOB_KICK BIT_22
-*/
+
 bool generate_phys(CHAR_DATA *ch)
 {
    int total_skills = get_psuedo_level(ch) / 30;
@@ -319,45 +308,158 @@ bool generate_phys(CHAR_DATA *ch)
 
    return TRUE;
 }
-/*
-#define CAST_NONE                       BIT_1
-#define CAST_MAGIC_MISSILE              BIT_2
-#define CAST_SHOCKING_GRASP             BIT_3
-#define CAST_BURNING_HANDS              BIT_4
-#define CAST_COLOR_SPRAY                BIT_5
-#define CAST_FIREBALL                   BIT_6
-#define CAST_HELLSPAWN                  BIT_7
-#define CAST_ACID_BLAST                 BIT_8
-#define CAST_CHAIN_LIGHTNING            BIT_9
-#define CAST_FLARE                      BIT_10
-#define CAST_FLAMESTRIKE                BIT_11
-#define CAST_EARTHQUAKE                 BIT_12
-#define CAST_MIND_FLAIL                 BIT_13
-#define CAST_PLANERGY                   BIT_14
-#define CAST_PHOBIA                     BIT_15
-#define CAST_MIND_BOLT                  BIT_16
-#define CAST_STATIC                     BIT_17
-#define CAST_EGO_WHIP                   BIT_18
-#define CAST_BLOODY_TEARS               BIT_19
-#define CAST_MINDFLAME                  BIT_20
-#define CAST_SUFFOCATE                  BIT_21
-#define CAST_NERVE_FIRE                 BIT_22
-#define CAST_LIGHTNING_BOLT             BIT_23
-#define CAST_HEAT_ARMOR                 BIT_24
-#define CAST_LAVA_BURST                 BIT_25
-*/
+
 bool generate_offensive_cast(CHAR_DATA *ch)
 {
+   int skill_pool = 0;
+   int total_skills = get_psuedo_level(ch)/30;
+
+   if (get_psuedo_level(ch) > 150)
+       total_skills += (0,3);
+
+   for(int i = 0; i < total_skills; i++)
+   {
+      if (get_psuedo_level(ch) > 150)
+         skill_pool = number_range(1,24);
+      else if (get_psuedo_level(ch) > 120)
+         skill_pool = number_range(1,22);
+      else if (get_psuedo_level(ch) > 80)
+         skill_pool = number_range(1,20);
+      else if (get_psuedo_level(ch) > 50)
+         skill_pool = number_range(1,16);
+      else
+         skill_pool = number_range(1,9);
+
+      switch(skill_pool)
+      {
+         case 1:
+            SET_BIT(ch->cast, CAST_MAGIC_MISSILE);
+            break;
+         case 2:
+            SET_BIT(ch->cast, CAST_SHOCKING_GRASP);
+            break;
+         case 3:
+            SET_BIT(ch->cast, CAST_BURNING_HANDS);
+            break;
+         case 4:
+            SET_BIT(ch->cast, CAST_COLOR_SPRAY);
+            break;
+         case 5:
+            SET_BIT(ch->cast, CAST_FIREBALL);
+            break;
+         case 6:
+            SET_BIT(ch->cast, CAST_MIND_BOLT);
+            break;
+         case 7:
+            SET_BIT(ch->cast, CAST_MIND_FLAIL);
+            break;
+         case 8:
+            SET_BIT(ch->cast, CAST_PLANERGY);
+            break;
+         case 9:
+            SET_BIT(ch->cast, CAST_LIGHTNING_BOLT);
+            break;
+         case 10:
+            SET_BIT(ch->cast, CAST_ACID_BLAST);
+            break;
+         case 11:
+            SET_BIT(ch->cast, CAST_HELLSPAWN);
+            break;
+         case 12:
+            SET_BIT(ch->cast, CAST_BLOODY_TEARS);
+            break;
+         case 13:
+            SET_BIT(ch->cast, CAST_PHOBIA);
+            break;
+         case 14:
+            SET_BIT(ch->cast, CAST_EGO_WHIP);
+            break;
+         case 15:
+            SET_BIT(ch->cast, CAST_STATIC);
+            break;
+         case 16:
+            SET_BIT(ch->cast, CAST_SUFFOCATE);
+            break;
+         case 17:
+            SET_BIT(ch->cast, CAST_FLARE);
+            break;
+         case 18:
+            SET_BIT(ch->cast, CAST_FLAMESTRIKE);
+            break;
+         case 19:
+            SET_BIT(ch->cast, CAST_CHAIN_LIGHTNING);
+            break;
+         case 20:
+            SET_BIT(ch->cast, CAST_EARTHQUAKE);
+            break;
+         case 21:
+            SET_BIT(ch->cast, CAST_MINDFLAME);
+            break;
+         case 22:
+            SET_BIT(ch->cast, CAST_NERVE_FIRE);
+            break;
+         case 23:
+            SET_BIT(ch->cast, CAST_HEAT_ARMOR);
+            break;
+         case 24:
+            SET_BIT(ch->cast, CAST_LAVA_BURST);
+            break;
+      }
+   }
 }
 
-/*#define DEF_NONE BIT_1
-#define DEF_CURE_LIGHT BIT_2
-#define DEF_CURE_SERIOUS BIT_3
-#define DEF_CURE_CRITIC BIT_4
-#define DEF_HEAL BIT_5
-#define DEF_FIRESHIELD BIT_6
-#define DEF_ICESHIELD BIT_7
-#define DEF_SHOCKSHIELD BIT_8*/
 bool generate_defensive_cast(CHAR_DATA *ch)
 {
+   int skill_pool = 0;
+   int total_skills = 0;
+
+   if (get_psuedo_level(ch) > 20)
+      total_skills++;
+
+   if (get_psuedo_level(ch) > 120)
+      total_skills++;
+
+   if (get_psuedo_level(ch) > 150)
+      total_skills += (0, 2);
+
+   for (int i = 0; i < total_skills; i++)
+   {
+      int skill_pool;
+
+      if (get_psuedo_level(ch) > 120)
+         skill_pool = number_range(1, 7);
+      else if (get_psuedo_level(ch) > 80)
+         skill_pool = number_range(1, 4);
+      else if (get_psuedo_level(ch) > 60)
+         skill_pool = number_range(1, 3);
+      else if (get_psuedo_level(ch) > 40)
+         skill_pool = number_range(1, 2);
+      else
+         skill_pool = 1;
+
+      switch (skill_pool)
+      {
+      case 1:
+         SET_BIT(mob->def, DEF_CURE_LIGHT);
+         break;
+      case 2:
+         SET_BIT(mob->def, DEF_CURE_SERIOUS);
+         break;
+      case 3:
+         SET_BIT(mob->def, DEF_CURE_CRITICAL);
+         break;
+      case 4:
+         SET_BIT(mob->def, DEF_HEAL);
+         break;
+      case 5:
+         SET_BIT(mob->def, DEF_ICESHIELD);
+         break;
+      case 6:
+         SET_BIT(mob->def, DEF_FIRESHIELD);
+         break;
+      case 7:
+         SET_BIT(mob->def, DEF_SHOCKSHIELD);
+         break;
+      }
+   }
 }
