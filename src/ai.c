@@ -66,42 +66,42 @@ bool check_skills(CHAR_DATA *ch)
    check = number_range(1, cnt);
 
    cnt = 0;
-   if (IS_SET(ch->skills, MOB_KICK) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_KICK) && (++cnt <= check))
    {
       do_kick(ch, "");
       return TRUE;
    }
-   if (IS_SET(ch->skills, MOB_PUNCH) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_PUNCH) && (++cnt <= check))
    {
       do_punch(ch, "");
       return TRUE;
    }
-   if (IS_SET(ch->skills, MOB_HEADBUTT) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_HEADBUTT) && (++cnt <= check))
    {
       do_headbutt(ch, "");
       return TRUE;
    }
-   if (IS_SET(ch->skills, MOB_KNEE) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_KNEE) && (++cnt <= check))
    {
       do_knee(ch, "");
       return TRUE;
    }
-   if (IS_SET(ch->skills, MOB_DIRT) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_DIRT) && (++cnt <= check))
    {
       do_dirt(ch, "");
       return TRUE;
    }
-   if (IS_SET(ch->skills, MOB_CHARGE) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_CHARGE) && (++cnt <= check))
    {
       do_charge(ch, "");
       return TRUE;
    }
-   if (IS_SET(ch->skills, MOB_DISARM) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_DISARM) && (++cnt <= check))
    {
       do_dirt(ch, "");
       return TRUE;
    }
-   if (IS_SET(ch->skills, MOB_TRIP) && (++cnt == check))
+   if (IS_SET(ch->skills, MOB_TRIP) && (++cnt <= check))
    {
       do_charge(ch, "");
       return TRUE;
