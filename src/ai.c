@@ -18,6 +18,8 @@ void ai_update()
          check_cast(ch);
       }
    }
+
+   round_ai_update(ch);
 }
 
 bool check_skills(CHAR_DATA *ch)
@@ -85,7 +87,7 @@ bool check_skills(CHAR_DATA *ch)
    return FALSE;
 }
 
-bool check_cast(CHAR_DATA *ch)
+bool round_ai_update(CHAR_DATA *ch)
 {
    if (!IS_NPC(ch))
       return FALSE;
@@ -105,6 +107,20 @@ bool check_cast(CHAR_DATA *ch)
          do_cast(ch, "shockshield");
       }
    }
+   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
+   {
+      if ((ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
+      {
+         do_cast(ch, "heal self");
+      }
+   }
+}
+
+bool check_cast(CHAR_DATA *ch)
+{
+   if (!IS_NPC(ch))
+      return FALSE;
+
    if ((ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
    {
       if ((ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
