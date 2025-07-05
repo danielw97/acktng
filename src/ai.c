@@ -90,7 +90,7 @@ bool check_skills(CHAR_DATA *ch)
 
 bool round_ai_update(CHAR_DATA *ch)
 {
-   if (!IS_NPC(ch))
+   if (ch == NULL || !IS_NPC(ch))
       return FALSE;
 
    if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && (ch->hit > 0) && (ch->first_shield == NULL) && (ch->fighting == NULL))
