@@ -18,9 +18,9 @@ void ai_update()
          check_skills(ch);
          check_cast(ch);
       }
-   }
 
-   round_ai_update(ch);
+      round_ai_update(ch);
+   }
 }
 
 bool check_skills(CHAR_DATA *ch)
