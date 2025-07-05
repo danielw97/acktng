@@ -1223,9 +1223,20 @@ A Patrolman patrols the keep
 ~
 ~
 97 27372 0 S
-163 1
+162 1
 10000 -500 1000 300
 ! 0 0 0 7 1079422 0 48
+| 0 0 0 0 0 0 0
+#167
+A Guardsman of the Keep~
+A Guardsman of the Keep~
+A guardsman stands here
+~
+~
+1 0 0 S
+166 1
+0 0 0 0
+! 0 0 0 0 0 0 0
 | 0 0 0 0 0 0 0
 #0
 #OBJECTS
@@ -1311,5 +1322,6 @@ M 0 166 25 183 (null)
 
 M 0 166 25 181 (null)
 
+M 0 167 1 203 (null)
 S
 #$
