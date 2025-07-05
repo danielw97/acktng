@@ -4,6 +4,9 @@
 bool check_skills(CHAR_DATA *ch);
 bool check_cast(CHAR_DATA *ch);
 bool round_ai_update(CHAR_DATA *ch);
+bool generate_phys(CHAR_DATA *ch);
+bool generate_offensive_cast(CHAR_DATA *ch);
+bool generate_defensive_cast(CHAR_DATA *ch);
 
 void ai_update()
 {
@@ -313,6 +316,8 @@ bool generate_phys(CHAR_DATA *ch)
          break;
       }
    }
+
+   return TRUE;
 }
 /*
 #define CAST_NONE                       BIT_1
