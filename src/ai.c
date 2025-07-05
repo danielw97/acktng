@@ -361,13 +361,13 @@ bool generate_offensive_cast(CHAR_DATA *ch)
    for(int i = 0; i < total_skills; i++)
    {
       if (get_psuedo_level(ch) > 150)
-         skill_pool = number_range(1,24);
+         skill_pool = number_range(1,23);
       else if (get_psuedo_level(ch) > 120)
-         skill_pool = number_range(1,22);
+         skill_pool = number_range(1,21);
       else if (get_psuedo_level(ch) > 80)
-         skill_pool = number_range(1,20);
+         skill_pool = number_range(1,19);
       else if (get_psuedo_level(ch) > 50)
-         skill_pool = number_range(1,16);
+         skill_pool = number_range(1,15);
       else
          skill_pool = number_range(1,9);
 
@@ -410,39 +410,36 @@ bool generate_offensive_cast(CHAR_DATA *ch)
             SET_BIT(ch->cast, CAST_BLOODY_TEARS);
             break;
          case 13:
-            SET_BIT(ch->cast, CAST_PHOBIA);
-            break;
-         case 14:
             SET_BIT(ch->cast, CAST_EGO_WHIP);
             break;
-         case 15:
+         case 14:
             SET_BIT(ch->cast, CAST_STATIC);
             break;
-         case 16:
+         case 15:
             SET_BIT(ch->cast, CAST_SUFFOCATE);
             break;
-         case 17:
+         case 16:
             SET_BIT(ch->cast, CAST_FLARE);
             break;
-         case 18:
+         case 17:
             SET_BIT(ch->cast, CAST_FLAMESTRIKE);
             break;
-         case 19:
+         case 18:
             SET_BIT(ch->cast, CAST_CHAIN_LIGHTNING);
             break;
-         case 20:
+         case 19:
             SET_BIT(ch->cast, CAST_EARTHQUAKE);
             break;
-         case 21:
+         case 20:
             SET_BIT(ch->cast, CAST_MINDFLAME);
             break;
-         case 22:
+         case 21:
             SET_BIT(ch->cast, CAST_NERVE_FIRE);
             break;
-         case 23:
+         case 22:
             SET_BIT(ch->cast, CAST_HEAT_ARMOR);
             break;
-         case 24:
+         case 23:
             SET_BIT(ch->cast, CAST_LAVA_BURST);
             break;
       }
