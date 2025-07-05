@@ -108,63 +108,9 @@ bool round_ai_update(CHAR_DATA *ch)
          do_cast(ch, "shockshield");
       }
    }
-   if (!is_fighting(ch) && (ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
+   if ((ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
    {
-      if ((ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
-      {
-         do_cast(ch, "heal self");
-      }
-
-      if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && ch->hit > 0)
-      {
-         if (ch->hit < ch->max_hit * 2 / 3)
-         {
-            if (IS_SET(ch->def, DEF_CURE_LIGHT))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("cure light")))
-               {
-                  do_cast(ch, "\'cure light\' self");
-               }
-            }
-            if (IS_SET(ch->def, DEF_CURE_SERIOUS))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("cure serious")))
-               {
-                  do_cast(ch, "\'cure serious\' self");
-               }
-            }
-            if (IS_SET(ch->def, DEF_CURE_CRITIC))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("cure critical")))
-               {
-                  do_cast(ch, "\'cure critical\' self");
-               }
-            }
-            if (IS_SET(ch->def, DEF_HEAL))
-            {
-               if (ch->mana > mana_cost(ch, skill_lookup("heal")))
-               {
-                  do_cast(ch, "heal self");
-               }
-            }
-         }
-      }
-   }
-
-   return TRUE;
-}
-
-bool check_cast(CHAR_DATA *ch)
-{
-   if (!IS_NPC(ch))
-      return FALSE;
-
-   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
-   {
-      if ((ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
-      {
-         do_cast(ch, "heal self");
-      }
+      do_cast(ch, "heal self");
    }
 
    if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && ch->hit > 0)
@@ -201,10 +147,17 @@ bool check_cast(CHAR_DATA *ch)
          }
       }
    }
+
+   return TRUE;
+}
+
+bool check_cast(CHAR_DATA *ch)
+{
+   if (!IS_NPC(ch))
+      return FALSE;
+
    /* Offensive spell handler, only use when actually fighting.. */
-
    if ((IS_NPC(ch)) && (ch->is_free == FALSE) && (ch->cast > 1) && (ch->position > POS_RESTING) && (ch->fighting != NULL) && (ch->fighting->is_free != TRUE) && (ch->in_room != NULL) && (ch->hit > 1) && (ch->position == POS_FIGHTING))
-
    {
       sh_int cast_frequency;
       sh_int index;
