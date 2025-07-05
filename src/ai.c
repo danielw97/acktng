@@ -197,6 +197,8 @@ bool generate_ai_spawn(CHAR_DATA *ch)
    int min_chance = 1;
    int max_chance = 10;
 
+   ch->spellpower_mod = 0;
+
    if (get_psuedo_level(ch) > 30)
       min_chance++;
 
@@ -211,7 +213,7 @@ bool generate_ai_spawn(CHAR_DATA *ch)
 
    if (number_range(min_change,max_chance)==10)
       SET_BIT(ch->act, ACT_SOLO);
-      
+
    int ai = number_range(1, 10);
 
    switch (ai)
@@ -255,6 +257,11 @@ bool generate_ai_spawn(CHAR_DATA *ch)
 bool generate_phys(CHAR_DATA *ch)
 {
    int total_skills = get_psuedo_level(ch) / 30;
+
+   ch->hr_mod += number_range(0, get_psuedo_level(ch)*2);
+   ch->dr_mod += number_range(0, get_psuedo_level(ch)*2);
+   ch->ac_mod -= number_range(0, get_psuedo_level(ch)*2);
+   ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
 
    if (get_psuedo_level(ch) > 150)
       total_skills += number_range(0, 5);
@@ -332,8 +339,13 @@ bool generate_offensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int total_skills = get_psuedo_level(ch)/30;
 
+   ch->spellpower_mod -= number_range(0, get_psuedo_level(ch));
+   ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
+
    if (get_psuedo_level(ch) > 150)
        total_skills += (0,3);
+
+   ch->spellpower_mod
 
    for(int i = 0; i < total_skills; i++)
    {
@@ -431,6 +443,9 @@ bool generate_defensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int total_skills = 0;
 
+   ch->spellpower_mod -= number_range(0, get_psuedo_level(ch));
+   ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
+   
    if (get_psuedo_level(ch) > 20)
       total_skills++;
 

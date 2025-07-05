@@ -494,7 +494,12 @@ int get_speed(CHAR_DATA *ch)
 
 int get_spellpower(CHAR_DATA *ch)
 {
-   return get_stat(ch, APPLY_SPELLPOWER);
+   int spellpower = get_stat(ch, APPLY_SPELLPOWER)
+
+   if (IS_NPC(ch))
+      spellpower += ch->spellpower_mod;
+
+   return spellpower;
 }
 
 int get_spell_crit(CHAR_DATA *ch)
