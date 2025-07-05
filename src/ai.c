@@ -458,25 +458,25 @@ bool generate_defensive_cast(CHAR_DATA *ch)
       switch (skill_pool)
       {
       case 1:
-         SET_BIT(mob->def, DEF_CURE_LIGHT);
+         SET_BIT(ch->def, DEF_CURE_LIGHT);
          break;
       case 2:
-         SET_BIT(mob->def, DEF_CURE_SERIOUS);
+         SET_BIT(ch->def, DEF_CURE_SERIOUS);
          break;
       case 3:
-         SET_BIT(mob->def, DEF_CURE_CRITICAL);
+         SET_BIT(ch->def, DEF_CURE_CRITIC);
          break;
       case 4:
-         SET_BIT(mob->def, DEF_HEAL);
+         SET_BIT(ch->def, DEF_HEAL);
          break;
       case 5:
-         SET_BIT(mob->def, DEF_ICESHIELD);
+         SET_BIT(ch->def, DEF_ICESHIELD);
          break;
       case 6:
-         SET_BIT(mob->def, DEF_FIRESHIELD);
+         SET_BIT(ch->def, DEF_FIRESHIELD);
          break;
       case 7:
-         SET_BIT(mob->def, DEF_SHOCKSHIELD);
+         SET_BIT(ch->def, DEF_SHOCKSHIELD);
          break;
       }
    }
