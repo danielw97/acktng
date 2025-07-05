@@ -194,6 +194,24 @@ bool reset_skills(CHAR_DATA *ch)
 
 bool generate_ai_spawn(CHAR_DATA *ch)
 {
+   int min_chance = 1;
+   int max_chance = 10;
+
+   if (get_psuedo_level(ch) > 30)
+      min_chance++;
+
+   if (get_psuedo_level(ch) > 70)
+      min_chance++;
+
+   if (get_psuedo_level(ch) > 110)
+      min_chance++;
+
+   if (get_psuedo_level(ch) > 150)
+      min_chance++;
+
+   if (number_range(min_change,max_chance)==10)
+      SET_BIT(ch->act, ACT_SOLO);
+      
    int ai = number_range(1, 10);
 
    switch (ai)
