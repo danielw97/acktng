@@ -230,7 +230,7 @@ bool generate_ai_spawn(CHAR_DATA *ch)
    if (get_psuedo_level(ch) > 150)
       min_chance++;
 
-   if (number_range(min_change,max_chance)==10)
+   if (number_range(min_chance,max_chance)==10)
       SET_BIT(ch->act, ACT_SOLO);
 
    int ai = number_range(1, 10);
