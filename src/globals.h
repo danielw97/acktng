@@ -84,6 +84,10 @@ extern sh_int gsn_poison_arsenic;
 extern sh_int gsn_poison_nightshade;
 extern sh_int gsn_dodge;
 extern sh_int gsn_riposte;
+extern sh_int gsn_chakra;
+extern sh_int gsn_cripple;
+extern sh_int gsn_shieldblock;
+extern sh_int gsn_chiblock;
 extern sh_int gsn_holystrike;
 extern sh_int gsn_anti_magic_shell;
 extern sh_int gsn_fleche;
@@ -323,9 +327,12 @@ DECLARE_DO_FUN(do_rename);
 DECLARE_DO_FUN(do_sdelete);
 DECLARE_DO_FUN(do_warcry);
 DECLARE_DO_FUN(do_riposte);
+DECLARE_DO_FUN(do_chakra);
 DECLARE_DO_FUN(do_anti_magic_shell);
 DECLARE_DO_FUN(do_holystrike);
 DECLARE_DO_FUN(do_fleche);
+DECLARE_DO_FUN(do_shieldblock);
+DECLARE_DO_FUN(do_chiblock);
 
 /* And by MAG
  *

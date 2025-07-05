@@ -403,6 +403,14 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"holystrike", do_holystrike, POS_FIGHTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
+    {"shieldblock", do_shieldblock, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+    {"chiblock", do_chiblock, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+    {"chakra", do_chakra, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+
+
 
     /*
      * Object manipulation commands.

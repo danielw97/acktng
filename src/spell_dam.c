@@ -169,6 +169,13 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
       heal += heal * wis / 100;
       heal += heal * ch->lvl[CLASS_CLE] / 50;
    }
+   else if (class_table[class_index].attr_prime == APPLY_CON)
+   {
+      int wis = (get_curr_wis(ch) - 13) * 5;
+
+      heal += heal * wis / 100;
+      heal += heal * ch->adept[CLASS_MAR] / 25;
+   }
 
    heal += heal * ch->remort[CLASS_PRI] / 50;
    heal += heal * ch->remort[CLASS_PAL] / 50 * 0.75;

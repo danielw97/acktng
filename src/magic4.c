@@ -590,3 +590,26 @@ bool spell_magical_supremacy(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DAT
    send_to_char("You gain supremacy.\n\r", victim);
    return TRUE;
 }
+
+bool spell_refuge(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+
+   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("refuge")))
+      return FALSE;
+   af.type = sn;
+   af.duration = 3;
+   af.location = APPLY_SPEED;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = 1;
+   if (ch->adept[CLASS_TEM] > 0)
+      af.modifier = 2;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(victim, &af);
+   act("$N is surrounded by a rainbow shell from $n's spell.", ch, NULL, victim, TO_ROOM);
+   send_to_char("You are surrounded by a rainbow shell.\n\r", victim);
+   ch->cooldown[sn] = 10;
+   return TRUE;
+}

@@ -316,6 +316,109 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    return TRUE;
 }
 
+void do_cripple(CHAR_DATA *ch, char *argument)
+{
+   char actbuf[MSL];
+   char arg[MAX_INPUT_LENGTH];
+   AFFECT_DATA af;
+   CHAR_DATA *victim;
+   int cnt = 0;
+
+   if (IS_NPC(ch))
+      return;
+
+   if (ch->fighting == NULL)
+   {
+      send_to_char("You can only prepare to cripple when fighting!\n\r", ch);
+      return;
+   }
+
+   if (!can_use_skill(ch, gsn_cripple))
+   {
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
+   }
+
+   if (ch->cooldown[gsn_cripple] > 0)
+   {
+      send_to_char("Cripple is still on cooldown\n\r",ch);
+      return;
+   }
+
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!\n\r", ch);
+      return;
+   }
+
+   one_argument(argument, arg);
+
+   if (arg[0] == '\0')
+   {
+      send_to_char("Cripple whom?\n\r", ch);
+      return;
+   }
+
+   victim = get_char_room(ch, arg);
+
+   if (victim == NULL)
+   {
+      send_to_char("Cripple whom?\n\r", ch);
+      return;
+   }
+
+   reset_combo(ch);
+
+   raise_skill(ch, gsn_cripple);
+   ch->cooldown[gsn_cripple] = 10;
+
+   WAIT_STATE(ch, skill_table[gsn_cripple].beats);
+
+   if (is_affected(victim, skill_lookup("poison:quinine")))
+   {
+      cnt++;
+      sprintf(actbuf, "$N screams as the quinine in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$N screams as the quinine in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_CHAR);
+      sprintf(actbuf, "You scream as the quinine in your veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      affect_strip(victim, skill_lookup("poison:quinine"));
+   }
+
+   if (is_affected(victim, skill_lookup("poison:arsenic")))
+   {
+      cnt++;
+      sprintf(actbuf, "$N screams as the arsenic in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$N screams as the arsenic in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_CHAR);
+      sprintf(actbuf, "You scream as the arsenic in your veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      affect_strip(victim, skill_lookup("poison:arsenic"));
+   }
+
+   if (is_affected(victim, skill_lookup("poison:nightshade")))
+   {
+      cnt++;
+      sprintf(actbuf, "$N screams as the nightshade in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(actbuf, "$N screams as the nightshade in $M veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_CHAR);
+      sprintf(actbuf, "You scream as the nightshade in your veins is consumed!");
+      act(actbuf, ch, NULL, victim, TO_VICT);
+      affect_strip(victim, skill_lookup("poison:nightshade"));
+   }
+
+   af.type = gsn_cripple;
+   af.duration = 1;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_SAVING_PARA;
+   af.modifier = 30*cnt;
+   af.bitvector = 0;
+   affect_to_char(victim, &af);
+}
+
 void do_rescue(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
@@ -826,6 +929,59 @@ void do_fleche(CHAR_DATA *ch, char *argument)
    war_attack(ch, argument, gsn_fleche);
 }
 
+void do_chakra(CHAR_DATA *ch, char *argument)
+{
+   if (ch->fighting == NULL)
+   {
+      send_to_char("You can only prepare for a chakra when fighting!\n\r", ch);
+      return;
+   }
+
+   if (!can_use_skill(ch, gsn_chakra))
+   {
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
+   }
+
+   if (ch->cooldown[gsn_chakra] > 0)
+   {
+      send_to_char("Chakra is on cooldown!\n\r",ch);
+      return;
+   }
+
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!\n\r", ch);
+      return;
+   }
+
+   reset_combo(ch);
+
+   raise_skill(ch, gsn_chakra);
+
+   WAIT_STATE(ch, skill_table[gsn_chakra].beats);
+
+   act("$n focuses their chakra, and $n looks better.", ch, NULL, NULL, TO_ROOM);
+   act("You focus your chakra, and you feel noticably better.", ch, NULL, NULL, TO_CHAR);
+
+   ch->cooldown[gsn_chakra] = 10;
+
+   int heal = class_heal_character(ch, ch, ch->remort[CLASS_MON]*5, gsn_chakra, CLASS_MON, FALSE);
+
+   heal_character(ch, ch, heal, gsn_chakra, FALSE);
+
+   AFFECT_DATA af;
+
+   af.type = gsn_chakra;
+   af.duration = 0;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_DAMROLL;
+   af.modifier = ch->remort[CLASS_MON]*5 + ch->adept[CLASS_MAR]*5;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
+}
+
+
 void do_riposte(CHAR_DATA *ch, char *argument)
 {
    AFFECT_DATA af;
@@ -853,7 +1009,7 @@ void do_riposte(CHAR_DATA *ch, char *argument)
 
    if (!is_valid_finisher(ch))
    {
-      send_to_char("You are not prepared for a finisher!n\r", ch);
+      send_to_char("You are not prepared for a finisher!\n\r", ch);
       return;
    }
 
@@ -873,6 +1029,104 @@ void do_riposte(CHAR_DATA *ch, char *argument)
 
    send_to_char("You prepare for a riposte!\n\r", ch);
    act("$n prepares for a riposte!", ch, NULL, NULL, TO_ROOM);
+}
+
+void do_shieldblock(CHAR_DATA *ch, char *argument)
+{
+   AFFECT_DATA af;
+
+   if (IS_NPC(ch))
+      return;
+
+   if (ch->fighting == NULL)
+   {
+      send_to_char("You can only prepare for a shield block when fightingg!\n\r", ch);
+      return;
+   }
+
+   if (is_affected(ch, gsn_shieldblock))
+   {
+      send_to_char("You already are prepared to perform a shield block!!\n\r", ch);
+      return;
+   }
+
+   if (!can_use_skill(ch, gsn_shieldblock))
+   {
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
+   }
+
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!\n\r", ch);
+      return;
+   }
+
+   reset_combo(ch);
+
+   raise_skill(ch, gsn_shieldblock);
+
+   WAIT_STATE(ch, skill_table[gsn_shieldblock].beats);
+
+   af.type = gsn_shieldblock;
+   af.duration = 3;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_AC;
+   af.modifier = -1;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
+
+   send_to_char("You prepare to block with your shield!\n\r", ch);
+   act("$n prepares to block with their shield!", ch, NULL, NULL, TO_ROOM);
+}
+
+void do_chiblock(CHAR_DATA *ch, char *argument)
+{
+   AFFECT_DATA af;
+
+   if (IS_NPC(ch))
+      return;
+
+   if (ch->fighting == NULL)
+   {
+      send_to_char("You can only prepare for a chi block when fightingg!\n\r", ch);
+      return;
+   }
+
+   if (is_affected(ch, gsn_chiblock))
+   {
+      send_to_char("You already are prepared to perform a chi block!!\n\r", ch);
+      return;
+   }
+
+   if (!can_use_skill(ch, gsn_chiblock))
+   {
+      send_to_char("You don't know how to use this skill!\n\r", ch);
+      return;
+   }
+
+   if (!is_valid_finisher(ch))
+   {
+      send_to_char("You are not prepared for a finisher!\n\r", ch);
+      return;
+   }
+
+   reset_combo(ch);
+
+   raise_skill(ch, gsn_chiblock);
+
+   WAIT_STATE(ch, skill_table[gsn_chiblock].beats);
+
+   af.type = gsn_chiblock;
+   af.duration = 3;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_AC;
+   af.modifier = -1;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
+
+   send_to_char("You prepare to block with your chi!\n\r", ch);
+   act("$n prepares to block with their chi!", ch, NULL, NULL, TO_ROOM);
 }
 
 void do_anti_magic_shell(CHAR_DATA *ch, char *argument)
@@ -1350,7 +1604,7 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
    int chance = 0;
 
-   if (gsn == gsn_poison_quinine || gsn == gsn_poison_arsenic)
+   if (gsn == gsn_poison_quinine || gsn == gsn_poison_arsenic || gsn == gsn_poison_nightshade)
    {
       // Can never hit immune poison with poison
       if (IS_SET(race_table[victim->race].race_flags, RACE_MOD_IMMUNE_POISON))
@@ -1365,6 +1619,9 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
    if (!can_see(victim, ch))
       chance += 20;
+
+   if (!can_see(ch, victim))
+      chance -= 30;
 
    if (IS_NPC(ch))
       chance -= 20;
@@ -1519,7 +1776,10 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + dirt_cnt)
          {
-            do_dirt(ch, victim->name);
+            if (can_see(victim,ch) )
+               do_dirt(ch, victim->name);
+            else
+               i--;
             continue;
          }
 

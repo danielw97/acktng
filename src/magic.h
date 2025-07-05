@@ -313,4 +313,4 @@ DECLARE_SPELL_FUN(spell_slow);
 DECLARE_SPELL_FUN(spell_overdrive);
 DECLARE_SPELL_FUN(spell_mystical_focus); /* 676 */
 DECLARE_SPELL_FUN(spell_magical_supremacy);
-//DECLARE_SPELL_FUN(spell_purge);
+DECLARE_SPELL_FUN(spell_refuge);

@@ -458,6 +458,9 @@ int hit_gain(CHAR_DATA *ch)
       }
    }
 
+   if (is_fighting(ch) && gain > 0)
+      gain = 0;
+
    return UMIN(gain, ch->max_hit - ch->hit);
 }
 
@@ -552,7 +555,7 @@ int mana_gain(CHAR_DATA *ch)
             gain = gain * 1.3;
       }
    }
-   if (gain > 0)
+   if (gain > 0 && !is_fighting(ch))
    {
       gain = gain * (get_curr_int(ch) + get_curr_wis(ch)) / 20;
    }
@@ -606,6 +609,9 @@ int move_gain(CHAR_DATA *ch)
       else if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_SLOW_HEAL))
          gain = gain * .75;
    }
+
+   if (is_fighting(ch) && gain > 0)
+      gain = 0;
 
    return UMIN(gain, ch->max_move - ch->move);
 }

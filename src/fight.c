@@ -77,6 +77,7 @@ void violence_update(void)
    CHAR_DATA *rch;
    CHAR_DATA *rch_next;
    AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
 
    /*
     * CHAR_DATA *check_char;
@@ -120,9 +121,19 @@ void violence_update(void)
          ch->hit = (UMIN(ch->max_hit, (ch->hit + ch->max_hit / 150)));
       }
 
-      // Hots and dots
-      for (paf = ch->first_affect; paf != NULL; paf = paf->next)
+      for(int i = 0; i < MAX_SKILL; i++)
       {
+         if (ch->cooldown[i] > 0)
+            ch->cooldown[i]--;
+      }
+
+      // Hots and dots
+      for (paf = ch->first_affect; paf != NULL; paf = paf_next)
+      {
+         if (paf == NULL)
+            break;
+
+         paf_next = paf->next;
          if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
          {
             heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
@@ -131,9 +142,9 @@ void violence_update(void)
          {
             do_damage(paf->caster, ch, paf->modifier, paf->type, paf->element, FALSE);
          }
-         if (paf->duration > 0 && paf->duration_type == DURATION_ROUND)
+         if (paf->duration_type == DURATION_ROUND)
          {
-            if (paf->duration == 0)
+            if (paf->duration < 0)
             {
                if (paf->type > 0 && skill_table[paf->type].msg_off)
                {

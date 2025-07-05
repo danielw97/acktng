@@ -216,9 +216,9 @@ long get_cost_to_level_remort(CHAR_DATA *ch, int class)
    }
 
    if (double_remort)
-      base *= 20600;
+      base *= 13000;
    else
-      base *= 6900;
+      base *= 6400;
 
    // Edge-case fix
    base += 690000;
@@ -743,6 +743,14 @@ bool learn_skill(CHAR_DATA *ch, int gsn)
    ch->pcdata->learned[gsn]++;
 
    return TRUE;
+}
+
+bool is_fighting(CHAR_DATA *ch)
+{
+   if (ch->fighting != NULL || ch->position == POS_FIGHTING)
+      return TRUE;
+
+   return FALSE;
 }
 
 char *stat_to_string(int stat)
@@ -1305,6 +1313,8 @@ void affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
     */
    paf_new->type = paf->type;
    paf_new->duration_type = paf->duration_type;
+   if (paf_new->duration_type != DURATION_HOUR && paf_new->duration_type != DURATION_ROUND)
+      paf_new->duration_type = DURATION_HOUR;
    paf_new->element = paf->element;
    paf_new->duration = paf->duration;
    paf_new->location = paf->location;

@@ -1160,7 +1160,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "dispel magic", {68, 89, 185, 185, 185, 185},
     spell_dispel_magic, TAR_IGNORE, POS_FIGHTING,
-    NULL, SLOT( 59 ), 15, 12, FALSE,
+    NULL, SLOT( 59 ), 15, 12, TRUE,
     "", "!Dispel Magic!",
     ""},
 
@@ -1168,7 +1168,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "purge", {185, 185, 185, 185, 50, 185},
     spell_dispel_magic, TAR_CHAR_NOTSELF, POS_FIGHTING,
-    NULL, SLOT( 0 ), 15, 12, FALSE,
+    NULL, SLOT( 0 ), 15, 12, TRUE,
     "", "!Purge!",
     ""},
 
@@ -1600,6 +1600,16 @@ const struct skill_type skill_table[MAX_SKILL] = {
     NULL, SLOT( 36 ), 75, 12, FALSE,
     "", "The white aura around your body fades.",
     "The white aura around $n's body fades."},
+
+   {
+    REMORT, NORM,
+    "refuge", {182, 32, 182, 182, 182, 182,
+               182, 32, 182, 182, 182, 182},
+    spell_refuge, TAR_CHAR_DEFENSIVE, POS_STANDING,
+    NULL, SLOT( 0 ), 75, 12, TRUE,
+    "", "The rainbow aura around your body fades.",
+    "The rainbow aura around $n's body fades."},
+
 
    {
     MORTAL, NORM,
@@ -3153,6 +3163,42 @@ const struct skill_type skill_table[MAX_SKILL] = {
     &gsn_riposte, SLOT( 0 ), 80, 12, TRUE,
     "Riposte", "You are no longer in a position to riposte!",
     "$n is no longer in a position to riposte."},
+
+   {
+    REMORT, NORM,
+    "cripple",        {182, 182, 89, 182, 182, 182,
+                       182, 182, 92, 182, 182, 182},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_cripple, SLOT( 0 ), 80, 12, TRUE,
+    "Criple", "You are no longer crippled!",
+    "$n is no longer crippled."},
+
+   {
+    REMORT, NORM,
+    "chiblock",        {182, 182, 182, 182, 182, 86,
+                        182, 182, 182, 182, 182, 84},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_chiblock, SLOT( 0 ), 80, 12, TRUE,
+    "Chiblock", "You are no longer able to block with your chi!",
+    "$n is no longer able to block with their chi."},
+
+   {
+    REMORT, NORM,
+    "chakra",          {182, 182, 182, 182, 182, 55,
+                        182, 182, 182, 182, 182, 182},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_chakra, SLOT( 0 ), 80, 24, TRUE,
+    "Chakra", "",
+    ""},
+
+   {
+    REMORT, NORM,
+    "shieldblock",        {182, 83, 182, 57, 182, 182,
+                           182, 182, 182, 182, 182, 182},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_riposte, SLOT( 0 ), 80, 12, TRUE,
+    "Shieldblock", "You are no longer ready to shield block!",
+    "$n is no longer ready to shield block."},
 
    {
     REMORT, NORM,
