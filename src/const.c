@@ -888,7 +888,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "blindness", {16, 182, 182, 182, 182, 182},
     spell_blindness, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    &gsn_blindness, SLOT( 4 ), 5, 12, FALSE,
+    &gsn_blindness, SLOT( 4 ), 5, 12, TRUE,
     "", "You can see again.",
     "$n's vision returns."},
 
@@ -896,7 +896,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "bloody tears", {182, 182, 182, 182, 26, 182},
     spell_bloody_tears, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    NULL, SLOT( 518 ), 12, 12, FALSE,
+    NULL, SLOT( 518 ), 12, 12, TRUE,
     "Bloody Tears", "!Bloody Tears!",
     ""},
 
@@ -1258,7 +1258,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "flare", {182, 20, 182, 182, 182, 182},
     spell_flare, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-    NULL, SLOT( 591 ), 18, 12, FALSE,
+    NULL, SLOT( 591 ), 18, 12, TRUE,
     "flare", "Your vision returns.",
     "$n blinks, and starts to see again."},
 
