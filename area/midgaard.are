@@ -2286,7 +2286,7 @@ Cyberlich's Black Avenger is here, staring at you with @@Rred eyes.@@g
 ~
 ~
 3153927 1157800 1000 S
-139 0
+140 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
@@ -2310,7 +2310,7 @@ The mayor is here.  He shakes your hand.
 He is a well-built, middle-aged man with thin, grey hair.
 ~
 1 8192 900 S
-20 1
+19 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 32
@@ -2336,7 +2336,7 @@ A cityguard stands here, looking very upset.
 A big, strong, angry guard.
 ~
 1 0 1000 S
-7 1
+8 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2360,7 +2360,7 @@ A duck is here, quacking happily.
 The duck is quite fat.  It looks like it is enjoying life.
 ~
 1 0 1000 S
-8 0
+7 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2372,7 +2372,7 @@ A sparrow is flapping around on the ground.
 The sparrow looks like it is enjoying life.
 ~
 1 0 1000 S
-9 0
+8 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2396,7 +2396,7 @@ A swan is swimming around in the pond.
 The white swan is very elegant.
 ~
 1 0 1000 S
-1 0
+2 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2445,7 +2445,7 @@ A large, loyal rottweiler is here.
 The rottweiler looks like a strong, fierce fighter.
 ~
 1 0 400 S
-25 0
+26 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2481,7 +2481,7 @@ A small loyal kitten is here.
 The kitten looks like a cute, little, fierce fighter.
 ~
 1 0 400 S
-4 0
+3 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2517,7 +2517,7 @@ A cityguard is here, guarding the gate.
 A big, strong, helpful, trustworthy guard.
 ~
 65 0 1000 S
-12 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2541,7 +2541,7 @@ A beggar is here, asking for a few coins.
 The beggar looks like she is fed up with life.
 ~
 1 0 400 S
-2 2
+3 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2588,7 +2588,7 @@ A janitor is walking around, cleaning up.
 ~
 ~
 1 0 900 S
-8 1
+9 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2615,7 +2615,7 @@ Aod looks just like the dealer hoodlum you see on T.V.  He's wearing a
 with him from Generic Mud.
 ~
 8388611 552 0 S
-12 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2652,7 +2652,7 @@ A healer is here.
 Although retired from adventuring, the healer still lends a hand.
 ~
 4099 8328 1000 S
-113 1
+114 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2667,7 +2667,7 @@ A masked woman with muscles bulging all over her body.  You can tell by
 131103 1633020 1000 S
 139 2
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 0 7 0 0 32
 | 0 7637056 0 0 0 0 48
 #3010
 leather worker~
@@ -2702,7 +2702,7 @@ A pet shop boy is here, humming gently.
 He is young and close-cropped and looks quite happy.
 ~
 3 0 900 S
-70 1
+69 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2726,7 +2726,7 @@ A retired captain stands here, selling boats.
 This captain has killed more sharks than you have eaten peas.
 ~
 3 40 900 S
-21 1
+22 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2751,7 +2751,7 @@ An old but very strong armourer, he has made more armours in his
 lifetime than you have ever seen.
 ~
 9438211 8328 900 S
-103 1
+102 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2763,7 +2763,7 @@ A weaponsmith.
 A young weaponsmith, who still has lots to learn.
 ~
 8396807 8328 900 S
-84 1
+85 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2775,7 +2775,7 @@ A grocer stands at the counter, with a slightly impatient look on his face.
 A tall grocer, who moves two 200 pounds bag of flour around on his shoulders.
 ~
 8388611 8320 900 S
-112 1
+111 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 0
@@ -2788,7 +2788,7 @@ A fat, nice looking baker. But you can see that he has many scars on his
 body.
 ~
 9437187 8320 900 S
-95 1
+94 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 0
@@ -2802,7 +2802,7 @@ The wizard looks old and senile, and yet he looks like a very powerful
 rings and bracelets.
 ~
 3 0 900 S
-75 1
+74 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2814,7 +2814,7 @@ This is a test
 .~
 ~
 1 0 0 S
-15 1
+14 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2827,7 +2827,7 @@ Max the bank teller stands here, ready to take your money.
 He looks greasy, and not very trustworthy.  Go figure.
 ~
 9469963 128 0 S
-93 1
+92 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2872,7 +2872,7 @@ A blade of @@GDarkness@@g lies here.
 ~
 5 134220288 8421376 33
 0 0 0 9 0 0 0 0 0 0
-10
+2
 A
 18 35
 A
@@ -3007,7 +3007,7 @@ the notice board.~
 There is a large notice board fixed to the wall.~
 27 0 0 1
 10 1 1 2 0 0 0 0 0 0
-16960
+3
 L
 1
 #3012
@@ -3016,7 +3016,7 @@ the test board.~
 There is a Test Bulletin Board here.~
 27 0 0 1
 10 1 1 1 0 0 0 0 0 0
-16960
+3
 L
 1
 #3013
@@ -3064,7 +3064,7 @@ a standard issue bracer~
 You see a standard issue bracer here.~
 9 134217728 8390656 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 bracer~
 You see a bracer of great craftsmanship.  Imprinted on the side is:
@@ -3078,7 +3078,7 @@ a standard issue belt~
 You see a standard issue belt here.~
 9 134217728 8519680 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 belt~
 You see a belt of great craftsmanship.  Imprinted on the side is:
@@ -3092,7 +3092,7 @@ a standard issue cape~
 You see a standard issue cape here.~
 9 134217728 8454144 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 cape~
 You see a cape of great craftsmanship.  Imprinted on the side is:
@@ -3106,7 +3106,7 @@ a pair of standard issue sleeves~
 You see a pair of standard issue sleeves here.~
 9 134217728 8389632 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 sleeves~
 You see sleeves of great craftsmanship.  Imprinted on the side is:
@@ -3120,7 +3120,7 @@ a pair of standard issue gloves~
 You see a pair of standard issue gloves here.~
 9 134217728 8392704 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 gloves~
 You see gloves of great craftsmanship.  Imprinted on the side is:
@@ -3134,7 +3134,7 @@ a pair of standard issue boots~
 You see a pair of standard issue boots here.~
 9 134217728 10485760 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 boots~
 You see boots of great craftsmanship.  Imprinted on the side is:
@@ -3148,7 +3148,7 @@ a pair of standard issue leggings~
 You see a pair of standard issue leggings here.~
 9 134217728 9437184 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 leggings~
 You see leggings of great craftsmanship.  Imprinted on the side is:
@@ -3162,7 +3162,7 @@ a standard issue helmet~
 You see a standard issue helmet here.~
 9 134217728 8388616 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 helmet~
 You see a helmet of great craftsmanship.  Imprinted on the side is:
@@ -3176,7 +3176,7 @@ a standard issue cloak~
 You see a standard issue cloak here.~
 9 134217728 8454144 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 cloak~
 You see a cloak of great craftsmanship.  Imprinted on the side is:
@@ -3190,7 +3190,7 @@ a standard issue shield~
 You see a standard issue shield here.~
 9 134217728 8421376 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 shield~
 You see a shield of great craftsmanship.  Imprinted on the side is:
@@ -3204,7 +3204,7 @@ a standard issue vest~
 You see a standard issue vest here.~
 9 134217728 8650752 1
 5 0 0 0 0 0 0 0 0 0
-5
+1
 E
 vest~
 You see a vest of great craftsmanship.  Stamped on the side is:
@@ -3218,7 +3218,7 @@ a standard issue mace~
 You see a standard issue mace here.~
 5 134217792 8421376 1
 0 4 4 7 0 0 0 0 0 0
-5
+1
 A
 19 2
 A
@@ -3236,7 +3236,7 @@ a standard issue dagger~
 You see a standard issue dagger here.~
 5 134217792 8421376 1
 0 4 4 11 0 0 0 0 0 0
-5
+1
 A
 19 1
 A
@@ -3254,7 +3254,7 @@ a standard issue sword~
 You see a standard issue sword here.~
 5 134217792 8421376 1
 0 3 4 3 0 0 0 0 0 0
-5
+1
 A
 19 2
 A
@@ -3272,7 +3272,7 @@ the bank's notice of liquidation~
 The bank's notice of liquidation is taped to the wall.~
 12 0 0 1
 0 0 0 0 0 0 0 0 0 0
-999
+3
 E
 notice liquidation bank~
 The letter is written in a reserved and dignified Spencer hand.
@@ -3294,7 +3294,7 @@ the receptionist's letter of resignation~
 The receptionist's letter of resignation is taped to the wall.~
 12 0 0 1
 0 0 0 0 0 0 0 0 0 0
-999
+3
 E
 letter resignation~
 The letter is written in a bold and feminine Carolinian hand.
@@ -3316,7 +3316,7 @@ a buffalo water skin~
 A bloated dead buffalo is on the floor.~
 17 0 8388608 1
 100 100 0 0 0 0 0 0 0 0
-5
+1
 L
 1
 #3137
@@ -3347,7 +3347,7 @@ a fountain~
 A small white fountain gushes forth here.~
 25 0 0 1
 15 0 0 0 0 0 0 0 0 0
-500
+3
 E
 fountain~
 It is very nice.  Made from fine white marble.
@@ -3360,7 +3360,7 @@ the Bench~
 A white-painted wooden bench is standing here.~
 12 0 0 1
 0 0 0 0 0 0 0 0 0 0
-100
+3
 E
 bench~
 It is a quite heavy but very comfortable bench.  It is placed with its front
@@ -3375,7 +3375,7 @@ the City Key~
 The very big City Key is lying here.~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-10
+2
 L
 1
 #3132
@@ -3393,7 +3393,7 @@ the safe~
 A safe is placed in a dark corner of the room.~
 15 0 0 1
 34 15 3123 0 0 0 0 0 0 0
-100
+3
 E
 safe~
 The safe is very heavy.
@@ -3406,7 +3406,7 @@ the desk~
 A desk is set against the western wall.~
 15 0 0 1
 34 15 3122 0 0 0 0 0 0 0
-100
+3
 E
 drawer~
 You notice a keyhole in the drawer.
@@ -3419,7 +3419,7 @@ a pair of hand cuffs~
 A pair of hand cuffs has been left here.~
 13 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 L
 1
 #3124
@@ -3428,7 +3428,7 @@ a long sword~
 A long sword has been left here.~
 5 0 8421376 1
 0 3 8 3 0 0 0 0 0 0
-8
+1
 E
 sword long~
 This is the ceremonial sword of the Mayor of Midgaard.
@@ -3493,7 +3493,7 @@ an iron bracer~
 An iron bracer is lying on the ground.~
 9 0 8390656 1
 7 0 0 0 0 0 0 0 0 0
-8
+1
 L
 1
 #3105
@@ -3502,7 +3502,7 @@ a bronze bracer~
 A bronze bracer is lying on the ground.~
 9 0 8390656 1
 6 0 0 0 0 0 0 0 0 0
-8
+1
 L
 1
 #3102
@@ -3559,7 +3559,7 @@ a pair of scale mail sleeves~
 A pair of scale mail sleeves is lying on the ground.~
 9 134217728 8389632 1
 4 0 0 0 0 0 0 0 0 0
-8
+1
 L
 15
 #3076
@@ -3577,7 +3577,7 @@ a pair of reinforced boots~
 A pair of reinforced boots lies here.~
 9 134217728 10485760 1
 4 0 0 0 0 0 0 0 0 0
-6
+1
 L
 15
 #3074
@@ -3586,7 +3586,7 @@ a long scale mail skirt~
 A long scale mail skirt is lying on the ground.~
 9 134217728 9437184 1
 4 0 0 0 0 0 0 0 0 0
-10
+2
 L
 15
 #3073
@@ -3595,7 +3595,7 @@ a scale mail coif~
 A scale mail coif is lying on the ground.~
 9 134217728 8388616 1
 4 0 0 0 0 0 0 0 0 0
-4
+1
 L
 15
 #3072
@@ -3604,7 +3604,7 @@ a scale mail jerkin~
 A scale mail jerkin is lying on the ground.~
 9 134217728 8650752 1
 4 0 0 0 0 0 0 0 0 0
-10
+2
 L
 15
 #3071
@@ -3613,7 +3613,7 @@ a pair of studded leather sleeves~
 A pair of studded leather sleeves is lying on the ground.~
 9 134217728 8389632 1
 3 0 0 0 0 0 0 0 0 0
-4
+1
 L
 40
 #3070
@@ -3631,7 +3631,7 @@ a pair of hard leather boots~
 A pair of hard leather boots lies here.~
 9 134217728 10485760 1
 3 0 0 0 0 0 0 0 0 0
-4
+1
 L
 40
 #3068
@@ -3640,7 +3640,7 @@ a pair of studded leather pants~
 A pair of studded leather pants is lying on the ground.~
 9 134217728 9437184 1
 3 0 0 0 0 0 0 0 0 0
-8
+1
 L
 40
 #3067
@@ -3658,7 +3658,7 @@ a studded leather jerkin~
 A studded leather jerkin is lying on the ground.~
 9 134217728 8650752 1
 3 0 0 0 0 0 0 0 0 0
-10
+2
 L
 40
 #3065
@@ -3694,7 +3694,7 @@ a pair of leather pants~
 A pair of leather pants is lying on the ground.~
 9 0 9437184 1
 2 0 0 0 0 0 0 0 0 0
-5
+1
 L
 1
 #3061
@@ -3712,7 +3712,7 @@ a leather jerkin~
 A leather jerkin is lying on the ground.~
 9 0 8650752 1
 2 0 0 0 0 0 0 0 0 0
-5
+1
 L
 1
 #3051
@@ -3721,7 +3721,7 @@ a canoe~
 A canoe has been left here.~
 22 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-32
+3
 E
 canoe~
 The canoe is fairly light.
@@ -3734,7 +3734,7 @@ a raft~
 A raft has been left here.~
 22 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-75
+3
 E
 raft~
 The raft looks very primitive.
@@ -3747,7 +3747,7 @@ a bronze breast plate~
 A bronze breast plate is lying on the ground.~
 9 0 8650752 1
 6 0 0 0 0 0 0 0 0 0
-80
+3
 L
 1
 #3045
@@ -3756,7 +3756,7 @@ a scale mail jacket~
 A scale mail jacket is lying on the ground.~
 9 0 8650752 1
 4 0 0 0 0 0 0 0 0 0
-40
+3
 L
 1
 #3042
@@ -3765,7 +3765,7 @@ a scroll of recall~
 A scroll has carelessly been left here.~
 2 64 8388608 1
 12 42 -1 -1 0 0 0 0 0 0
-4
+1
 E
 scroll~
 The scroll has written a formulae of 'Word of Recall' upon it.
@@ -3810,7 +3810,7 @@ a box~
 A small box.~
 15 0 8388608 1
 10 0 0 0 0 0 0 0 0 0
-5
+1
 L
 1
 #3032
@@ -3828,7 +3828,7 @@ a hooded brass lantern~
 A hooded brass lantern has been left here.~
 1 134225920 8421376 1
 0 0 100 0 0 0 0 0 0 0
-4
+1
 E
 letters~
 They say, "Use 'hold lantern' to activate."
@@ -3856,7 +3856,7 @@ a long sword~
 A long sword has been left here.~
 5 134217728 8421376 1
 0 2 6 3 0 0 0 0 0 0
-8
+1
 L
 40
 #3021
@@ -3883,7 +3883,7 @@ a big pot pie~
 A big pot pie has been left here.~
 19 8192 8388608 1
 40 0 0 0 0 0 0 0 0 0
-5
+1
 L
 2
 #3005
@@ -3892,7 +3892,7 @@ an executioner's axe~
 An executioner's axe is here waiting to possess its next user.~
 5 134220800 8421376 1
 0 5 6 1 0 0 0 0 0 0
-30
+3
 A
 18 35
 A
@@ -3919,7 +3919,7 @@ a bottle of local specialty~
 A dark bottle has been left here.~
 17 0 8388608 1
 8 8 8 0 0 0 0 0 0 0
-10
+2
 L
 1
 #3003
@@ -3928,7 +3928,7 @@ a bottle of firebreather~
 A firebreather has been left here.~
 17 0 8388608 1
 8 8 7 0 0 0 0 0 0 0
-10
+2
 L
 1
 #3002
@@ -3937,7 +3937,7 @@ a bottle of ale~
 A dark bottle of ale has been left here.~
 17 0 8388608 1
 8 8 3 0 0 0 0 0 0 0
-10
+2
 L
 1
 #3001
@@ -3946,7 +3946,7 @@ a bottle of beer~
 A beer bottle has been left here.~
 17 0 8388608 1
 8 8 1 0 0 0 0 0 0 0
-10
+2
 L
 1
 #3044
@@ -3955,7 +3955,7 @@ a barrel of beer~
 A beer barrel has been left here.~
 17 0 8388608 1
 50 50 1 0 0 0 0 0 0 0
-65
+3
 L
 1
 #3047
@@ -4017,7 +4017,7 @@ board~
 @@WThe @@bTales @@Wof @@yHonor@@W Board @@Wfloats here quietly.@@N~
 27 0 0 1
 10 0 0 3052 0 0 0 0 0 0
-10000
+3
 L
 1
 #3014
@@ -4026,7 +4026,7 @@ duel Challenge Board (aka Mortal Combat)~
 A board on which to issue challenges to those deserving them~
 27 1 0 1
 30 1 10 3014 0 0 0 0 0 0
-1000
+3
 L
 1
 #0

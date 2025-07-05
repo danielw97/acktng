@@ -1,6 +1,8 @@
 #include "globals.h"
+#include "tables.h"
 
-bool check_skills(CHAR_DATA *ch, CHAR_DATA *victim);
+bool check_skills(CHAR_DATA *ch);
+bool check_cast(CHAR_DATA *ch);
 
 void ai_update()
 {
@@ -12,13 +14,13 @@ void ai_update()
 
       if (IS_NPC(ch) && ch->fighting != NULL)
       {
-         check_skills(ch, ch->fighting);
-         check_cast(ch, ch->fighting);
+         check_skills(ch);
+         check_cast(ch);
       }
    }
 }
 
-bool check_skills(CHAR_DATA *ch, CHAR_DATA *victim)
+bool check_skills(CHAR_DATA *ch)
 {
    int cnt, check;
 
@@ -85,22 +87,22 @@ bool check_skills(CHAR_DATA *ch, CHAR_DATA *victim)
 
 bool check_cast(CHAR_DATA *ch)
 {
-   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && (ch->hit > 0) && (ch->first_shield == NULL) && (!has_cast) && (ch->fighting == NULL))
+   if (!IS_NPC(ch))
+      return FALSE;
+
+   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && (ch->hit > 0) && (ch->first_shield == NULL) && (ch->fighting == NULL))
    {
       if ((IS_SET(ch->def, DEF_FIRESHIELD)) && (!is_affected(ch, skill_lookup("fireshield"))) && (ch->mana > mana_cost(ch, skill_lookup("fireshield"))))
       {
          do_cast(ch, "fireshield");
-         has_cast = TRUE;
       }
       else if ((IS_SET(ch->def, DEF_ICESHIELD)) && (!is_affected(ch, skill_lookup("iceshield"))) && (ch->mana > mana_cost(ch, skill_lookup("iceshield"))))
       {
          do_cast(ch, "iceshield");
-         has_cast = TRUE;
       }
       else if ((IS_SET(ch->def, DEF_SHOCKSHIELD)) && (!is_affected(ch, skill_lookup("shockshield"))) && (ch->mana > mana_cost(ch, skill_lookup("shockshield"))))
       {
          do_cast(ch, "shockshield");
-         has_cast = TRUE;
       }
    }
    if ((ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
@@ -120,7 +122,6 @@ bool check_cast(CHAR_DATA *ch)
             if (ch->mana > mana_cost(ch, skill_lookup("cure light")))
             {
                do_cast(ch, "\'cure light\' self");
-               has_cast = TRUE;
             }
          }
          if (IS_SET(ch->def, DEF_CURE_SERIOUS))
@@ -128,7 +129,6 @@ bool check_cast(CHAR_DATA *ch)
             if (ch->mana > mana_cost(ch, skill_lookup("cure serious")))
             {
                do_cast(ch, "\'cure serious\' self");
-               has_cast = TRUE;
             }
          }
          if (IS_SET(ch->def, DEF_CURE_CRITIC))
@@ -136,7 +136,6 @@ bool check_cast(CHAR_DATA *ch)
             if (ch->mana > mana_cost(ch, skill_lookup("cure critical")))
             {
                do_cast(ch, "\'cure critical\' self");
-               has_cast = TRUE;
             }
          }
          if (IS_SET(ch->def, DEF_HEAL))
@@ -144,14 +143,13 @@ bool check_cast(CHAR_DATA *ch)
             if (ch->mana > mana_cost(ch, skill_lookup("heal")))
             {
                do_cast(ch, "heal self");
-               has_cast = TRUE;
             }
          }
       }
    }
    /* Offensive spell handler, only use when actually fighting.. */
 
-   if ((IS_NPC(ch)) && (ch->is_free == FALSE) && (ch->cast > 1) && (!has_cast) && (ch->position > POS_RESTING) && (ch->fighting != NULL) && (ch->fighting->is_free != TRUE) && (ch->in_room != NULL) && (ch->hit > 1) && (ch->position == POS_FIGHTING))
+   if ((IS_NPC(ch)) && (ch->is_free == FALSE) && (ch->cast > 1) && (ch->position > POS_RESTING) && (ch->fighting != NULL) && (ch->fighting->is_free != TRUE) && (ch->in_room != NULL) && (ch->hit > 1) && (ch->position == POS_FIGHTING))
 
    {
       sh_int cast_frequency;
@@ -167,12 +165,13 @@ bool check_cast(CHAR_DATA *ch)
                char cast_name[MSL];
                sprintf(cast_name, "%s %s", rev_table_lookup(tab_cast_name, (1 << index)), ch->fighting->name);
                do_cast(ch, cast_name);
-               has_cast = TRUE;
                break;
             }
          }
       }
    }
+
+   return TRUE;
 }
 
 bool reset_skills(CHAR_DATA *ch)
