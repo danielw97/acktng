@@ -325,7 +325,6 @@ void do_cast(CHAR_DATA *ch, char *argument)
    int mana;
    int sn;
    int best; /* The best class to use for the job :P */
-   int cnt;
    bool char_login = FALSE;
    int cast_chance = 0;
    bool multi_cast = FALSE;
