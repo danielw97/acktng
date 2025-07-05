@@ -3,6 +3,7 @@
 
 bool check_skills(CHAR_DATA *ch);
 bool check_cast(CHAR_DATA *ch);
+bool round_ai_update(CHAR_DATA *ch);
 
 void ai_update()
 {
@@ -114,6 +115,8 @@ bool round_ai_update(CHAR_DATA *ch)
          do_cast(ch, "heal self");
       }
    }
+
+   return TRUE;
 }
 
 bool check_cast(CHAR_DATA *ch)
