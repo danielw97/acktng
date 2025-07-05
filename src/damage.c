@@ -452,12 +452,6 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
          */
         if (dt >= TYPE_HIT)
         {
-            if (IS_NPC(ch) && (number_percent() < ch->level / 6) && IS_SET(ch->skills, MOB_DISARM))
-                disarm(ch, victim, NULL);
-
-            if (IS_NPC(ch) && (number_percent() < ch->level / 6) && IS_SET(ch->skills, MOB_TRIP))
-                trip(ch, victim);
-
             if (check_avoidance(ch, victim))
                 return -1;
         }

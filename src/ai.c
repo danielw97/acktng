@@ -36,6 +36,11 @@ bool check_skills(CHAR_DATA *ch)
    /*
     * Count how many of the attack skills are available
     */
+   if (IS_NPC(ch) && (number_percent() < ch->level / 6) && IS_SET(ch->skills, MOB_DISARM))
+         disarm(ch, victim, NULL);
+
+   if (IS_NPC(ch) && (number_percent() < ch->level / 6) && IS_SET(ch->skills, MOB_TRIP))
+         trip(ch, victim);
 
    cnt = 0;
    if (IS_SET(ch->skills, MOB_PUNCH))
@@ -49,6 +54,10 @@ bool check_skills(CHAR_DATA *ch)
    if (IS_SET(ch->skills, MOB_DIRT))
       cnt++;
    if (IS_SET(ch->skills, MOB_CHARGE))
+      cnt++;
+   if (IS_SET(ch->skills, MOB_DISARM))
+      cnt++;
+   if (IS_SET(ch->skills, MOB_TRIP))
       cnt++;
 
    if (cnt == 0)
@@ -83,6 +92,16 @@ bool check_skills(CHAR_DATA *ch)
       return TRUE;
    }
    if (IS_SET(ch->skills, MOB_CHARGE) && (++cnt == check))
+   {
+      do_charge(ch, "");
+      return TRUE;
+   }
+   if (IS_SET(ch->skills, MOB_DISARM) && (++cnt == check))
+   {
+      do_dirt(ch, "");
+      return TRUE;
+   }
+   if (IS_SET(ch->skills, MOB_TRIP) && (++cnt == check))
    {
       do_charge(ch, "");
       return TRUE;
@@ -445,7 +464,7 @@ bool generate_defensive_cast(CHAR_DATA *ch)
 
    ch->spellpower_mod -= number_range(0, get_psuedo_level(ch));
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
-   
+
    if (get_psuedo_level(ch) > 20)
       total_skills++;
 
