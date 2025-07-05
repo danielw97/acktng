@@ -558,8 +558,6 @@ void do_disarm(CHAR_DATA *ch, char *argument)
    if (!subtract_energy_cost(ch, gsn_disarm))
       return;
 
-   combo(ch, victim, gsn_disarm);
-
    raise_skill(ch, gsn_disarm);
 
    ch->cooldown[gsn_disarm] = 4;
