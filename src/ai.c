@@ -189,35 +189,131 @@ bool reset_skills(CHAR_DATA *ch)
    return TRUE;
 }
 
-/*
-#define MOB_NONE                        BIT_1
-#define MOB_SECOND                      BIT_2
-#define MOB_THIRD                       BIT_3
-#define MOB_FOURTH                      BIT_4
-#define MOB_FIFTH                       BIT_5
-#define MOB_SIXTH                       BIT_6
-#define MOB_NODISARM                    BIT_7
-#define MOB_NOTRIP                      BIT_8
-#define MOB_PUNCH                       BIT_9
-#define MOB_HEADBUTT                    BIT_10
-#define MOB_KNEE                        BIT_11
-#define MOB_DISARM                      BIT_12
-#define MOB_TRIP                        BIT_13
-#define MOB_NODISARM                    BIT_14
-#define MOB_NOTRIP                      BIT_15
-#define MOB_DODGE                       BIT_16
-#define MOB_PARRY                       BIT_17
-#define MOB_MARTIAL                     BIT_18
-#define MOB_ENHANCED                    BIT_19
-#define MOB_DUALWIELD                   BIT_20
-#define MOB_DIRT                        BIT_21
-#define MOB_FIFTH                       BIT_22
-#define MOB_SIXTH                       BIT_23
-#define MOB_CHARGE                      BIT_24
-#define MOB_COUNTER                     BIT_25
-#define MOB_KICK                        BIT_26
-*/
+bool generate_ai_spawn(CHAR_DATA *ch)
+{
+   int ai = number_range(1, 10);
 
+   switch (ai)
+   {
+   case 1:
+      // Pure phys
+      generate_phys(ch);
+      break;
+   case 2:
+      // Mixed phys and defensive spells
+      generate_phys(ch);
+      generate_defensive_cast(ch);
+      break;
+   case 3:
+      // Pure offensive spells
+      generate_offensive_cast(ch);
+      break;
+   case 4:
+      // Mixed phys and offensive spells
+      generate_phys(ch);
+      generate_offensive_cast(ch);
+      break;
+   case 5:
+      // Mixed offensive and defensive spells
+      generate_offensive_cast(ch);
+      generate_defensive_cast(ch);
+      break;
+   default:
+      // Nothing
+      break;
+   }
+}
+/*
+#define MOB_SECOND BIT_2
+#define MOB_THIRD BIT_3
+#define MOB_FOURTH BIT_4
+#define MOB_FIFTH BIT_5
+#define MOB_SIXTH BIT_6
+#define MOB_PUNCH BIT_9
+#define MOB_HEADBUTT BIT_10
+#define MOB_KNEE BIT_11
+#define MOB_DISARM BIT_12
+#define MOB_DODGE BIT_14
+#define MOB_PARRY BIT_15
+#define MOB_MARTIAL BIT_16
+#define MOB_ENHANCED BIT_17
+#define MOB_DIRT BIT_19
+#define MOB_CHARGE BIT_20
+#define MOB_COUNTER BIT_21
+#define MOB_KICK BIT_22
+*/
+bool generate_phys(CHAR_DATA *ch)
+{
+   int total_skills = get_psuedo_level(ch) / 30;
+
+   if (get_psuedo_level(ch) > 150)
+      total_skills += number_range(0, 5);
+
+   for (int i = 0; i < total_skills; i++)
+   {
+      int skill_pool;
+
+      if (get_psuedo_level(ch) > 120)
+         skill_pool = number_range(1, 17);
+      else
+         skill_pool = number_range(1, 14);
+
+      switch (skill_pool)
+      {
+      case 1:
+         SET_BIT(ch->skills, MOB_SECOND);
+         break;
+      case 2:
+         SET_BIT(ch->skills, MOB_THIRD);
+         break;
+      case 3:
+         SET_BIT(ch->skills, MOB_FOURTH);
+         break;
+      case 4:
+         SET_BIT(ch->skills, MOB_PUNCH);
+         break;
+      case 5:
+         SET_BIT(ch->skills, MOB_HEADBUTT);
+         break;
+      case 6:
+         SET_BIT(ch->skills, MOB_KNEE);
+         break;
+      case 7:
+         SET_BIT(ch->skills, MOB_DISARM);
+         break;
+      case 8:
+         SET_BIT(ch->skills, MOB_DODGE);
+         break;
+      case 9:
+         SET_BIT(ch->skills, MOB_PARRY);
+         break;
+      case 10:
+         SET_BIT(ch->skills, MOB_MARTIAL);
+         break;
+      case 11:
+         SET_BIT(ch->skills, MOB_ENHANCED);
+         break;
+      case 12:
+         SET_BIT(ch->skills, MOB_DIRT);
+         break;
+      case 13:
+         SET_BIT(ch->skills, MOB_COUNTER);
+         break;
+      case 14:
+         SET_BIT(ch->skills, MOB_KICK);
+         break;
+      case 15:
+         SET_BIT(ch->skills, MOB_FIFTH);
+         break;
+      case 16:
+         SET_BIT(ch->skills, MOB_SIXTH);
+         break;
+      case 17:
+         SET_BIT(ch->skills, MOB_CHARGE);
+         break;
+      }
+   }
+}
 /*
 #define CAST_NONE                       BIT_1
 #define CAST_MAGIC_MISSILE              BIT_2
@@ -245,3 +341,18 @@ bool reset_skills(CHAR_DATA *ch)
 #define CAST_HEAT_ARMOR                 BIT_24
 #define CAST_LAVA_BURST                 BIT_25
 */
+bool generate_offensive_cast(CHAR_DATA *ch)
+{
+}
+
+/*#define DEF_NONE BIT_1
+#define DEF_CURE_LIGHT BIT_2
+#define DEF_CURE_SERIOUS BIT_3
+#define DEF_CURE_CRITIC BIT_4
+#define DEF_HEAL BIT_5
+#define DEF_FIRESHIELD BIT_6
+#define DEF_ICESHIELD BIT_7
+#define DEF_SHOCKSHIELD BIT_8*/
+bool generate_defensive_cast(CHAR_DATA *ch)
+{
+}
