@@ -113,6 +113,41 @@ bool round_ai_update(CHAR_DATA *ch)
       {
          do_cast(ch, "heal self");
       }
+
+      if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && ch->hit > 0)
+      {
+         if (ch->hit < ch->max_hit * 2 / 3)
+         {
+            if (IS_SET(ch->def, DEF_CURE_LIGHT))
+            {
+               if (ch->mana > mana_cost(ch, skill_lookup("cure light")))
+               {
+                  do_cast(ch, "\'cure light\' self");
+               }
+            }
+            if (IS_SET(ch->def, DEF_CURE_SERIOUS))
+            {
+               if (ch->mana > mana_cost(ch, skill_lookup("cure serious")))
+               {
+                  do_cast(ch, "\'cure serious\' self");
+               }
+            }
+            if (IS_SET(ch->def, DEF_CURE_CRITIC))
+            {
+               if (ch->mana > mana_cost(ch, skill_lookup("cure critical")))
+               {
+                  do_cast(ch, "\'cure critical\' self");
+               }
+            }
+            if (IS_SET(ch->def, DEF_HEAL))
+            {
+               if (ch->mana > mana_cost(ch, skill_lookup("heal")))
+               {
+                  do_cast(ch, "heal self");
+               }
+            }
+         }
+      }
    }
 }
 
