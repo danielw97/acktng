@@ -107,7 +107,7 @@ bool round_ai_update(CHAR_DATA *ch)
          do_cast(ch, "shockshield");
       }
    }
-   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
+   if (!is_fighting(ch) && (ch->is_free == FALSE) && (IS_NPC(ch)) && IS_SET(ch->act, ACT_SOLO) && ch->hit > 0)
    {
       if ((ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
       {
