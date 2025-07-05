@@ -392,52 +392,16 @@ void do_cast(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   /*
-    * Compute best level to use for spell, IF it meets requiements
-    */
    if (IS_NPC(ch))
    {
-      best = UMIN(90, get_psuedo_level(ch));
       if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
       {
          if (IS_SET(ch->act, ACT_PET) || IS_AFFECTED(ch, AFF_CHARM) || ch->rider != NULL)
             return;
-
-         best = -1;
-      }
-      if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
-         best = -1;
-   }
-   else
-   {
-      for (cnt = 0; cnt < MAX_CLASS; cnt++)
-      {
-         if (((ch->lvl[cnt] >= skill_table[sn].skill_level[cnt]) && (skill_table[sn].flag1 == MORTAL)) && best < ch->lvl[cnt])
-            best = ch->lvl[cnt];
-      }
-      for (cnt = 0; cnt < MAX_REMORT; cnt++)
-      {
-         if (((ch->remort[cnt] >= skill_table[sn].skill_level[cnt]) && (skill_table[sn].flag1 == REMORT)) && best < ch->remort[cnt])
-            best = ch->remort[cnt];
       }
    }
-   if (!IS_NPC(ch))
-      if ((IS_VAMP(ch)) && (skill_table[sn].flag2 == VAMP))
-         best = ch->pcdata->vamp_level * 4;
-   if ((ch->adept_level > 0) && (skill_table[sn].flag1 == ADEPT))
-      best = ch->adept_level * 4;
-   if (IS_NPC(ch) && (skill_table[sn].flag1 == ADEPT))
-      best = -1;
-   if (!IS_NPC(ch))
-      if (skill_table[sn].flag2 == WOLF && IS_WOLF(ch))
-         best = ch->pcdata->vamp_level * 4;
 
-   if (best == 80)
-      best = 79;
-   if ((!IS_NPC(ch)) && (is_name(skill_table[sn].name, race_table[ch->race].skill)))
-      best = 60;
-
-   if ((best == -1) || ((skill_table[sn].flag2 == VAMP) && (!IS_VAMP(ch))) || ((skill_table[sn].flag2 == WOLF) && (!IS_WOLF(ch))))
+   if (!can_use_skill(ch, sn) || ((skill_table[sn].flag2 == VAMP) && (!IS_VAMP(ch))) || ((skill_table[sn].flag2 == WOLF) && (!IS_WOLF(ch))))
    {
       send_to_char("You can't do that.\n\r", ch);
       return;
@@ -499,22 +463,6 @@ void do_cast(CHAR_DATA *ch, char *argument)
       }
       check_killer(ch, victim);
 
-      /*      if ( !IS_NPC(ch) )
-         {
-             if ( !IS_NPC(victim) && ch != victim )
-             {
-            send_to_char( "You can't do that on a player.\n\r", ch );
-            return;
-             }
-
-             if ( IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim )
-             {
-            send_to_char( "You can't do that on your own follower.\n\r",
-                ch );
-            return;
-             }
-         }
-      */
       vo = (void *)victim;
       break;
 
