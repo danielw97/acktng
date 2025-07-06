@@ -359,7 +359,7 @@ bool generate_offensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int total_skills = get_psuedo_level(ch)/30;
 
-//   ch->spellpower_mod += number_range(get_psuedo_level(ch)/2, get_psuedo_level(ch));
+   ch->spellpower_mod += number_range(get_psuedo_level(ch)/2, get_psuedo_level(ch));
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
 
    if (get_psuedo_level(ch) > 150)
@@ -446,7 +446,7 @@ bool generate_defensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int total_skills = 0;
 
-//   ch->healing_mod += number_range(0, get_psuedo_level(ch));
+   ch->healing_mod += number_range(0, get_psuedo_level(ch));
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
 
    if (get_psuedo_level(ch) > 20)

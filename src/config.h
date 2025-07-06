@@ -967,28 +967,28 @@
  * New bits to determine what skills a mob can do in combat -S-
  */
 
-#define MOB_NONE BIT_1
-#define MOB_SECOND BIT_2
-#define MOB_THIRD BIT_3
-#define MOB_FOURTH BIT_4
-#define MOB_FIFTH BIT_5
-#define MOB_SIXTH BIT_6
-#define MOB_NODISARM BIT_7
-#define MOB_NOTRIP BIT_8
-#define MOB_PUNCH BIT_9
-#define MOB_HEADBUTT BIT_10
-#define MOB_KNEE BIT_11
-#define MOB_DISARM BIT_12
-#define MOB_TRIP BIT_13
-#define MOB_DODGE BIT_14
-#define MOB_PARRY BIT_15
-#define MOB_MARTIAL BIT_16
-#define MOB_ENHANCED BIT_17
-#define MOB_DUALWIELD BIT_18
-#define MOB_DIRT BIT_19
-#define MOB_CHARGE BIT_20
-#define MOB_COUNTER BIT_21
-#define MOB_KICK BIT_22
+#define MOB_NONE 0
+#define MOB_SECOND BIT_1
+#define MOB_THIRD BIT_2
+#define MOB_FOURTH BIT_3
+#define MOB_FIFTH BIT_4
+#define MOB_SIXTH BIT_5
+#define MOB_NODISARM BIT_6
+#define MOB_NOTRIP BIT_7
+#define MOB_PUNCH BIT_8
+#define MOB_HEADBUTT BIT_9
+#define MOB_KNEE BIT_10
+#define MOB_DISARM BIT_11
+#define MOB_TRIP BIT_12
+#define MOB_DODGE BIT_13
+#define MOB_PARRY BIT_14
+#define MOB_MARTIAL BIT_15
+#define MOB_ENHANCED BIT_16
+#define MOB_DUALWIELD BIT_17
+#define MOB_DIRT BIT_18
+#define MOB_CHARGE BIT_19
+#define MOB_COUNTER BIT_20
+#define MOB_KICK BIT_21
 
 /*
  * New bits to determine what spells a mob will cast in combat -S-

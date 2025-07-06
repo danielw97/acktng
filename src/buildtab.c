@@ -490,7 +490,7 @@ const struct lookup_type tab_mob_flags[] = {
 /* New bits to handle how mobs act */
 
 const struct lookup_type tab_mob_skill[] = {
-    {"nada", MOB_NONE, 0},
+    {"none", MOB_NONE, 0},
     {"2_attack", MOB_SECOND, 100},
     {"3_attack", MOB_THIRD, 200},
     {"4_attack", MOB_FOURTH, 400},
