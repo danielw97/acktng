@@ -1476,7 +1476,7 @@ void do_frenzy(CHAR_DATA *ch, char *argument)
       {
          if (vch != ch && (vch->in_room == ch->in_room) && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)) && (vch->master != ch) && (!is_same_group(ch, vch)))
          {
-            if (can_hit_skill(ch, victim, gsn_frenzy))
+            if (can_hit_skill(ch, vch, gsn_frenzy))
                war_attack(ch, vch->name, gsn_frenzy);
          }
       }
