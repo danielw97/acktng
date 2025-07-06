@@ -834,13 +834,13 @@ int get_parry(CHAR_DATA *ch)
    int chance = 0;
 
    if (!IS_AWAKE(ch))
-      return chance;
+      return 0;
 
    if (IS_NPC(ch) && !IS_SET(ch->skills, MOB_PARRY))
-      return chance;
+      return 0;
 
    if (!can_use_skill(ch, gsn_parry))
-      return chance;
+      return 0;
 
    if (IS_NPC(ch))
    {
@@ -867,6 +867,9 @@ int get_parry(CHAR_DATA *ch)
    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
       chance += 5;
 
+   if (chance > 50)
+      chance = 50;
+
    return chance;
 }
 
@@ -878,13 +881,13 @@ int get_dodge(CHAR_DATA *ch)
    int chance = 0;
 
    if (!IS_AWAKE(ch))
-      return chance;
+      return 0;
 
    if (IS_NPC(ch) && !IS_SET(ch->skills, MOB_DODGE))
-      return chance;
+      return 0;
 
    if (!can_use_skill(ch, gsn_dodge))
-      return chance;
+      return 0;
 
    if (IS_NPC(ch))
    {
@@ -907,6 +910,9 @@ int get_dodge(CHAR_DATA *ch)
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
       chance += 20;
 
+   if (chance > 50)
+      chance = 50;
+
    return chance;
 }
 
@@ -916,10 +922,10 @@ int get_block(CHAR_DATA *ch)
    bool buckler = FALSE;
 
    if (!IS_AWAKE(ch))
-      return chance;
+      return 0;
 
    if (!can_use_skill(ch, gsn_shield_block))
-      return chance;
+      return 0;
 
    OBJ_DATA *shield;
    shield = get_eq_char(ch, WEAR_HOLD_HAND_R);
@@ -953,6 +959,9 @@ int get_block(CHAR_DATA *ch)
 
    if (buckler)
       chance /= 2;
+
+   if (chance > 50)
+      chance = 50;
 
    return chance;
 }
