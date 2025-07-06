@@ -1375,7 +1375,7 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 
    raise_skill(ch, gsn_disarm);
 
-   if (skill_success(ch, victim, gsn_disarm, chance))
+   if (!skill_success(ch, victim, gsn_disarm, chance))
    {
       act("You dodge $n's disarm attempt!", ch, NULL, victim, TO_VICT);
       act("You fail to disarm $N!", ch, NULL, victim, TO_CHAR);
