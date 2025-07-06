@@ -341,7 +341,7 @@ void do_cripple(CHAR_DATA *ch, char *argument)
 
    if (ch->cooldown[gsn_cripple] > 0)
    {
-      send_to_char("Cripple is still on cooldown\n\r",ch);
+      send_to_char("Cripple is still on cooldown\n\r", ch);
       return;
    }
 
@@ -414,7 +414,7 @@ void do_cripple(CHAR_DATA *ch, char *argument)
    af.duration = 1;
    af.duration_type = DURATION_ROUND;
    af.location = APPLY_SAVING_PARA;
-   af.modifier = 30*cnt;
+   af.modifier = 30 * cnt;
    af.bitvector = 0;
    affect_to_char(victim, &af);
 }
@@ -528,7 +528,7 @@ void do_disarm(CHAR_DATA *ch, char *argument)
 
    if (ch->cooldown[gsn_disarm] > 0)
    {
-      send_to_char("You still have disarm on cooldown.\n\r",ch);
+      send_to_char("You still have disarm on cooldown.\n\r", ch);
       return;
    }
 
@@ -681,14 +681,13 @@ void do_dirt(CHAR_DATA *ch, char *argument)
 
    if (is_safe(ch, victim))
    {
-      send_to_char("They are safe!\n\r",ch);
+      send_to_char("They are safe!\n\r", ch);
       return;
    }
 
-
    if (IS_AFFECTED(victim, AFF_BLIND))
    {
-      send_to_char("Your target is already blinded!\n\r",ch);
+      send_to_char("Your target is already blinded!\n\r", ch);
       return;
    }
 
@@ -718,7 +717,7 @@ void do_dirt(CHAR_DATA *ch, char *argument)
       affect_to_char(victim, &af);
    }
 
-   set_fighting(victim,ch,TRUE);
+   set_fighting(victim, ch, TRUE);
 
    combo(ch, victim, gsn_dirt);
    return;
@@ -951,7 +950,7 @@ void do_chakra(CHAR_DATA *ch, char *argument)
 
    if (ch->cooldown[gsn_chakra] > 0)
    {
-      send_to_char("Chakra is on cooldown!\n\r",ch);
+      send_to_char("Chakra is on cooldown!\n\r", ch);
       return;
    }
 
@@ -972,7 +971,7 @@ void do_chakra(CHAR_DATA *ch, char *argument)
 
    ch->cooldown[gsn_chakra] = 10;
 
-   int heal = class_heal_character(ch, ch, ch->remort[CLASS_MON]*5, gsn_chakra, CLASS_MON, FALSE);
+   int heal = class_heal_character(ch, ch, ch->remort[CLASS_MON] * 5, gsn_chakra, CLASS_MON, FALSE);
 
    heal_character(ch, ch, heal, gsn_chakra, FALSE);
 
@@ -982,11 +981,10 @@ void do_chakra(CHAR_DATA *ch, char *argument)
    af.duration = 0;
    af.duration_type = DURATION_ROUND;
    af.location = APPLY_DAMROLL;
-   af.modifier = ch->remort[CLASS_MON]*5 + ch->adept[CLASS_MAR]*5;
+   af.modifier = ch->remort[CLASS_MON] * 5 + ch->adept[CLASS_MAR] * 5;
    af.bitvector = 0;
    affect_to_char(ch, &af);
 }
-
 
 void do_riposte(CHAR_DATA *ch, char *argument)
 {
@@ -1375,7 +1373,7 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
    if (can_use_skill(victim, gsn_nodisarm))
       chance -= 50;
 
-   chance += (get_psuedo_level(ch) - get_psuedo_level(victim))/2;
+   chance += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
 
    raise_skill(ch, gsn_disarm);
 
@@ -1440,41 +1438,34 @@ void do_frenzy(CHAR_DATA *ch, char *argument)
    int moves = 0;
    int damage = 0;
 
+   if (!can_use_skill_message(ch, gsn_frenzy))
+      return;
+
    if (IS_NPC(ch))
       return;
 
-   if (!IS_NPC(ch) && ch->pcdata->learned[gsn_frenzy] == 0)
+   if (ch->fighting == NULL)
    {
-      send_to_char("You are not trained in this skill!\n\r", ch);
+      send_to_char("You can only frenzy when fighting!\n\r", ch);
       return;
    }
 
-   if (!IS_NPC(ch) && ch->move < 100 && ch->position == POS_FIGHTING)
+   if (!is_valid_finisher(ch))
    {
-      send_to_char("You're too tired to go into a frenzy!\n\r", ch);
+      send_to_char("You are not prepared for a finisher!\n\r", ch);
       return;
    }
 
-   if (!IS_NPC(ch) && number_percent() > ch->pcdata->learned[gsn_frenzy])
-   {
-      send_to_char("You try to go into a frenzy, but nearly cut your leg off!\n\r", ch);
-      return;
-   }
+   reset_combo(ch);
 
-   if (((ch->move / 10) < 75) && ch->move >= 75)
-      moves = 75;
-   else
-      moves = ch->move / 10;
-
-   if (ch->hit > 200)
-      damage = 20;
+   raise_skill(ch, gsn_chiblock);
 
    WAIT_STATE(ch, skill_table[gsn_frenzy].beats);
 
-   if (!IS_NPC(ch) && ch->position == POS_FIGHTING)
-      ch->move -= moves;
-   ch->hit -= damage;
    CREF(vch_next, CHAR_NEXTROOM);
+
+   act("You go into a FRENZY!!!\n\r", ch, NULL, vch, TO_CHAR);
+   act("$n goes into a FRENZY!!!", ch, NULL, vch, TO_ROOM);
    for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
    {
       vch_next = vch->next_in_room;
@@ -1485,11 +1476,8 @@ void do_frenzy(CHAR_DATA *ch, char *argument)
       {
          if (vch != ch && (vch->in_room == ch->in_room) && (IS_NPC(ch) ? !IS_NPC(vch) : IS_NPC(vch)) && (vch->master != ch) && (!is_same_group(ch, vch)))
          {
-            act("$N is @@Wgored@@N by your FRENZY!!!\n\r", ch, NULL, vch, TO_CHAR);
-            act("$n goes into a FRENZY, @@Wgoring@@N $N!!!", ch, NULL, vch, TO_ROOM);
-            check_killer(ch, vch);
-            one_hit(ch, vch, -1);
-            continue;
+            if (can_hit_skill(ch, victim, gsn_frenzy))
+               war_attack(ch, vch->name, gsn_frenzy);
          }
       }
    }
@@ -1792,7 +1780,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
          if (roll < chance + dirt_cnt)
          {
-            if (can_see(victim,ch) )
+            if (can_see(victim, ch))
                do_dirt(ch, victim->name);
             else
                i--;
@@ -1872,7 +1860,7 @@ bool is_ready_finisher(CHAR_DATA *ch)
          return FALSE;
    }
 
-   if (get_combo_count(ch) >= max_combo(ch)-1)
+   if (get_combo_count(ch) >= max_combo(ch) - 1)
       return TRUE;
 
    return FALSE;
@@ -2140,9 +2128,9 @@ void do_pick(CHAR_DATA *ch, char *argument)
 int get_combo_count(CHAR_DATA *ch)
 {
    int cnt = 0;
-   for(int i = 0; i < 6; i++)
+   for (int i = 0; i < 6; i++)
    {
-      if (i > 0 && ch->combo[i] == ch->combo[i-1])
+      if (i > 0 && ch->combo[i] == ch->combo[i - 1])
          return cnt;
       if (ch->combo[i] > 0)
          cnt++;
