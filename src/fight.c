@@ -760,7 +760,9 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
       max_avoidance += 10;
 
-   int parry = get_parry(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
+   int parry = get_parry(victim) - get_evasion_piercing(ch);
+   if (parry > 0)
+      parry += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
    if (!can_see(ch, victim) && parry > 0)
       parry += 20;
    if (!can_see(victim, ch) && parry > 0)
@@ -781,13 +783,15 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
       act("$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch))) 
+      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
    }
 
-   int block = get_block(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
+   int block = get_block(victim) - get_evasion_piercing(ch);
+   if (block > 0)
+      block += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
    if (!can_see(ch, victim) && block > 0)
       block += 20;
    if (!can_see(victim, ch) && block > 0)
@@ -808,13 +812,15 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
       act("$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch))) 
+      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
    }
 
-   int dodge = get_dodge(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
+   int dodge = get_dodge(victim) - get_evasion_piercing(ch);
+   if (dodge > 0)
+      dodge += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
    if (!can_see(ch, victim) && dodge > 0)
       dodge += 20;
    if (!can_see(victim, ch) && dodge > 0)
@@ -835,7 +841,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
       act("$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT);
 
-      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch))) 
+      if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
 
       return TRUE;
