@@ -352,6 +352,8 @@ bool generate_offensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int total_skills = get_psuedo_level(ch)/30;
 
+   ch->spellpower_mod += get_psuedo_level(ch);
+
    ch->spellpower_mod += number_range(0, get_psuedo_level(ch));
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
 
@@ -361,11 +363,11 @@ bool generate_offensive_cast(CHAR_DATA *ch)
    for(int i = 0; i < total_skills; i++)
    {
       if (get_psuedo_level(ch) > 150)
-         skill_pool = number_range(1,23);
-      else if (get_psuedo_level(ch) > 120)
-         skill_pool = number_range(1,21);
-      else if (get_psuedo_level(ch) > 80)
          skill_pool = number_range(1,19);
+      else if (get_psuedo_level(ch) > 120)
+         skill_pool = number_range(1,17);
+      else if (get_psuedo_level(ch) > 80)
+         skill_pool = number_range(1,16);
       else if (get_psuedo_level(ch) > 50)
          skill_pool = number_range(1,15);
       else
@@ -425,21 +427,9 @@ bool generate_offensive_cast(CHAR_DATA *ch)
             SET_BIT(ch->cast, CAST_FLAMESTRIKE);
             break;
          case 18:
-            SET_BIT(ch->cast, CAST_CHAIN_LIGHTNING);
-            break;
-         case 19:
-            SET_BIT(ch->cast, CAST_EARTHQUAKE);
-            break;
-         case 20:
-            SET_BIT(ch->cast, CAST_MINDFLAME);
-            break;
-         case 21:
-            SET_BIT(ch->cast, CAST_NERVE_FIRE);
-            break;
-         case 22:
             SET_BIT(ch->cast, CAST_HEAT_ARMOR);
             break;
-         case 23:
+         case 19:
             SET_BIT(ch->cast, CAST_LAVA_BURST);
             break;
       }

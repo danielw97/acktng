@@ -208,7 +208,7 @@ bool spell_magic_missile(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    cnt = 1 + (level >= 30) + (level >= 60) + (level >= 80);
    for (hits = 0; hits < cnt; hits++)
    {
-      sp_damage(obj, ch, victim, dam, ELEMENT_PHYSICAL, sn, TRUE);
+      sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE);
    }
 
    return TRUE;
@@ -1571,7 +1571,7 @@ bool spell_mind_flail(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (saves_spell(level, victim))
       dam /= 2;
 
-   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE);
    return TRUE;
 }
 
