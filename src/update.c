@@ -1582,14 +1582,12 @@ void char_update(void)
             free_string(ch->target);
             ch->target = NULL;
          }
-         if (ch->extract_timer > 0)
+         if (ch->extract_timer > 1)
          {
             ch->extract_timer--;
          }
-         else if (ch->extract_timer == 0)
+         else if (ch->extract_timer == 1)
          {
-            /*            if ( IS_SET( ch->affected_by, AFF_CHARM ) )
-                        {  */
             if ((ch->master == NULL) || (ch->master->in_room == NULL) || (ch->in_room != ch->master->in_room))
             {
                if (ch->in_room != NULL)
@@ -1615,9 +1613,6 @@ void char_update(void)
                   continue;
                }
             }
-            /*
-             * }
-             */
          }
       }
 

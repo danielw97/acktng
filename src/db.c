@@ -2454,7 +2454,9 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
    mob->ac_mod = pMobIndex->ac_mod;
    mob->hr_mod = pMobIndex->hr_mod;
    mob->dr_mod = pMobIndex->dr_mod;
-   /*  mob->move_to	= NO_VNUM; */
+   mob->hp_mod = pMobIndex->hp_mod;
+//   mob->spellpower_mod = 0;
+//   mob->healing_mod = 0;
 
    mob->armor = interpolate(mob->level / 2, 100, -100);
 

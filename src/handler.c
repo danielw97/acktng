@@ -496,8 +496,8 @@ int get_spellpower(CHAR_DATA *ch)
 {
    int spellpower = get_stat(ch, APPLY_SPELLPOWER);
 
-   if (IS_NPC(ch))
-      spellpower += ch->spellpower_mod;
+//   if (IS_NPC(ch))
+  //    spellpower += ch->spellpower_mod;
 
    return spellpower;
 }
@@ -506,8 +506,8 @@ int get_healing(CHAR_DATA *ch)
 {
    int healing = 0;
 
-   if (IS_NPC(ch))
-      healing += ch->healing_mod;
+   //if (IS_NPC(ch))
+    //  healing += ch->healing_mod;
 
    return healing;
 }
