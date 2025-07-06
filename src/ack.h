@@ -619,6 +619,7 @@ struct char_data
    int hr_mod;   /* hitroll modifier */
    int dr_mod;   /* damroll modifier */
    int spellpower_mod;
+   int healing_mod;
    char *target; /* last ch to attack */
    sh_int wimpy;
    int deaf;

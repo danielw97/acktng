@@ -194,9 +194,9 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
    }
 
    if (hot)
-      heal += get_spellpower(ch) / 4;
+      heal += (get_spellpower(ch)+get_healing(ch)) / 4;
    else
-      heal += get_spellpower(ch);
+      heal += get_spellpower(ch) + get_healing(ch);
 
    return heal;
 }

@@ -18,8 +18,8 @@ void ai_update()
 
       if (IS_NPC(ch) && ch->fighting != NULL)
       {
-         check_skills(ch);
-         check_cast(ch);
+         if (!check_skills(ch))
+            check_cast(ch);
       }
 
       round_ai_update(ch);
@@ -124,41 +124,41 @@ bool round_ai_update(CHAR_DATA *ch)
          do_cast(ch, "shockshield");
       }
    }
-   if (IS_SET(ch->act, ACT_SOLO) && (ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))))
+
+   if (IS_SET(ch->act, ACT_SOLO) && (ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))) && ch->level > 30)
    {
       do_cast(ch, "heal self");
    }
-
-   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && ch->hit > 0)
+   else if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && ch->hit > 0)
    {
       if (ch->hit < ch->max_hit * 2 / 3)
       {
-         if (IS_SET(ch->def, DEF_CURE_LIGHT))
+         if (IS_SET(ch->def, DEF_HEAL))
          {
-            if (ch->mana > mana_cost(ch, skill_lookup("cure light")))
+            if (ch->mana > mana_cost(ch, skill_lookup("heal")))
             {
-               do_cast(ch, "\'cure light\' self");
+               do_cast(ch, "heal self");
             }
          }
-         if (IS_SET(ch->def, DEF_CURE_SERIOUS))
+         else if (IS_SET(ch->def, DEF_CURE_SERIOUS))
          {
             if (ch->mana > mana_cost(ch, skill_lookup("cure serious")))
             {
                do_cast(ch, "\'cure serious\' self");
             }
          }
-         if (IS_SET(ch->def, DEF_CURE_CRITIC))
+         else if (IS_SET(ch->def, DEF_CURE_CRITIC))
          {
             if (ch->mana > mana_cost(ch, skill_lookup("cure critical")))
             {
                do_cast(ch, "\'cure critical\' self");
             }
          }
-         if (IS_SET(ch->def, DEF_HEAL))
+         else if (IS_SET(ch->def, DEF_CURE_LIGHT))
          {
-            if (ch->mana > mana_cost(ch, skill_lookup("heal")))
+            if (ch->mana > mana_cost(ch, skill_lookup("cure light")))
             {
-               do_cast(ch, "heal self");
+               do_cast(ch, "\'cure light\' self");
             }
          }
       }
@@ -188,13 +188,13 @@ bool check_cast(CHAR_DATA *ch)
                char cast_name[MSL];
                sprintf(cast_name, "%s %s", rev_table_lookup(tab_cast_name, (1 << index)), ch->fighting->name);
                do_cast(ch, cast_name);
-               break;
+               return TRUE;
             }
          }
       }
    }
 
-   return TRUE;
+   return FALSE;
 }
 
 bool reset_skills(CHAR_DATA *ch)
@@ -207,6 +207,12 @@ bool reset_skills(CHAR_DATA *ch)
 
 bool generate_ai_spawn(CHAR_DATA *ch)
 {
+   if (ch->level < 25)
+      return;
+
+   if (ch->skills || ch->act || ch->def)
+      return;
+
    int min_chance = 1;
    int max_chance = 10;
 
@@ -309,7 +315,8 @@ bool generate_phys(CHAR_DATA *ch)
          SET_BIT(ch->skills, MOB_KNEE);
          break;
       case 7:
-         SET_BIT(ch->skills, MOB_DISARM);
+         if (number_percent() < 25)
+            SET_BIT(ch->skills, MOB_DISARM);
          break;
       case 8:
          SET_BIT(ch->skills, MOB_DODGE);
@@ -352,9 +359,7 @@ bool generate_offensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int total_skills = get_psuedo_level(ch)/30;
 
-   ch->spellpower_mod += get_psuedo_level(ch);
-
-   ch->spellpower_mod += number_range(0, get_psuedo_level(ch));
+   ch->spellpower_mod += number_range(get_psuedo_level(ch)/2, get_psuedo_level(ch));
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
 
    if (get_psuedo_level(ch) > 150)
@@ -441,7 +446,7 @@ bool generate_defensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int total_skills = 0;
 
-   ch->spellpower_mod += number_range(0, get_psuedo_level(ch));
+   ch->healing_mod += number_range(0, get_psuedo_level(ch));
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
 
    if (get_psuedo_level(ch) > 20)
