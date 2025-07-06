@@ -1343,6 +1343,10 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
       return;
 
    if (IS_SET(victim->skills, MOB_DISARM))
+   {
+      act("$N cannot be disarmed!", ch, NULL, victim, TO_CHAR);
+      return;
+   }
 
    set_fighting(ch, victim, TRUE);
    if (obj == NULL)
