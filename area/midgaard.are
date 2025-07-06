@@ -2286,7 +2286,7 @@ Cyberlich's Black Avenger is here, staring at you with @@Rred eyes.@@g
 ~
 ~
 3153927 1157800 1000 S
-140 0
+141 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
@@ -2336,7 +2336,7 @@ A cityguard stands here, looking very upset.
 A big, strong, angry guard.
 ~
 1 0 1000 S
-8 1
+9 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2372,7 +2372,7 @@ A sparrow is flapping around on the ground.
 The sparrow looks like it is enjoying life.
 ~
 1 0 1000 S
-8 0
+9 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2421,7 +2421,7 @@ She is very beautiful with golden hair, and deep blue eyes. A good reason
 for coming here more often.
 ~
 1 0 1000 S
-31 2
+30 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2445,7 +2445,7 @@ A large, loyal rottweiler is here.
 The rottweiler looks like a strong, fierce fighter.
 ~
 1 0 400 S
-26 0
+25 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2493,7 +2493,7 @@ A cityguard is here, guarding the mayor.
 A big, strong, helpful, trustworthy guard.
 ~
 65 65538 1000 S
-4 1
+3 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2541,7 +2541,7 @@ A beggar is here, asking for a few coins.
 The beggar looks like she is fed up with life.
 ~
 1 0 400 S
-3 2
+2 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2565,7 +2565,7 @@ A vagabond is here, looking for victims.
 He looks pretty mean.
 ~
 1 0 -200 S
-3 1
+2 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2600,7 +2600,7 @@ A cityguard stands here.
 A big, strong, helpful, trustworthy guard.
 ~
 65 0 1000 S
-37 1
+36 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2615,7 +2615,7 @@ Aod looks just like the dealer hoodlum you see on T.V.  He's wearing a
 with him from Generic Mud.
 ~
 8388611 552 0 S
-11 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2628,7 +2628,7 @@ Filthy looks real, ehm, dirty. He likes to keep his costumers happy,
 but do not mess with him or else he'll get upset.
 ~
 3 0 600 S
-14 1
+15 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2652,7 +2652,7 @@ A healer is here.
 Although retired from adventuring, the healer still lends a hand.
 ~
 4099 8328 1000 S
-114 1
+115 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2702,7 +2702,7 @@ A pet shop boy is here, humming gently.
 He is young and close-cropped and looks quite happy.
 ~
 3 0 900 S
-69 1
+70 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2751,7 +2751,7 @@ An old but very strong armourer, he has made more armours in his
 lifetime than you have ever seen.
 ~
 9438211 8328 900 S
-102 1
+103 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2775,7 +2775,7 @@ A grocer stands at the counter, with a slightly impatient look on his face.
 A tall grocer, who moves two 200 pounds bag of flour around on his shoulders.
 ~
 8388611 8320 900 S
-111 1
+110 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 0
@@ -2814,7 +2814,7 @@ This is a test
 .~
 ~
 1 0 0 S
-14 1
+13 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2827,7 +2827,7 @@ Max the bank teller stands here, ready to take your money.
 He looks greasy, and not very trustworthy.  Go figure.
 ~
 9469963 128 0 S
-92 1
+93 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -2839,7 +2839,7 @@ collector~
 ~
 ~
 1093992449 1591528 0 S
-133 1
+134 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 128 0 0 0 0 16
