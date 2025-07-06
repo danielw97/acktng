@@ -1874,15 +1874,13 @@ void reset_combo(CHAR_DATA *ch)
 
 int max_combo(CHAR_DATA *ch)
 {
-   int max = 4;
+   if (is_adept(ch))
+      return 6;
 
-   if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
-      max = 5;
+   if (is_remort(ch))
+      return 5;
 
-   if (ch->adept[CLASS_CRU] > 0)
-      max = 6;
-
-   return max;
+   return 4;
 }
 
 int get_energy_cost(CHAR_DATA *ch, int gsn)
