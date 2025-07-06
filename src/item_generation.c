@@ -148,6 +148,7 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (obj->item_type == ITEM_LIGHT)
    {
+      obj->value[2] = -1;
       if (obj->level > 100)
          return "Lantern";
 
