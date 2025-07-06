@@ -761,6 +761,10 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       max_avoidance += 10;
 
    int parry = get_parry(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
+   if (!can_see(ch, victim))
+      parry += 20;
+   if (!can_see(victim,ch))
+      parry -= 30;
    if (parry > max_avoidance)
    {
       parry = max_avoidance;
@@ -782,6 +786,10 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    }
 
    int block = get_block(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
+   if (!can_see(ch, victim))
+      block += 20;
+   if (!can_see(victim,ch))
+      block -= 30;
    if (block > max_avoidance)
    {
       block = max_avoidance;
@@ -803,6 +811,10 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    }
 
    int dodge = get_dodge(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
+   if (!can_see(ch, victim))
+      dodge += 20;
+   if (!can_see(victim,ch))
+      dodge -= 30;
    if (dodge > max_avoidance)
    {
       dodge = max_avoidance;
