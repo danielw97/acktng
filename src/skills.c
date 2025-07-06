@@ -1365,11 +1365,17 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
     * Stephen
     */
 
-   chance = IS_NPC(victim) ? IS_SET(victim->skills, MOB_NODISARM) ? 90 : 0 : victim->pcdata->learned[gsn_nodisarm];
+   chance = 0;
+
+   if (IS_SET(obj->extra_flags, ITEM_NODISARM))
+      chance -= 80;
+
+   if (can_use_skill(victim, gsn_nodisarm))
+      chance -= 50;
 
    raise_skill(ch, gsn_disarm);
 
-   if (number_percent() < chance)
+   if (skill_success(ch, victim, gsn_disarm, chance))
    {
       act("You dodge $n's disarm attempt!", ch, NULL, victim, TO_VICT);
       act("You fail to disarm $N!", ch, NULL, victim, TO_CHAR);
