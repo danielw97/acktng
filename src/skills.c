@@ -1348,6 +1348,7 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
    if (obj == NULL)
    {
       if (((obj = get_eq_char(victim, WEAR_HOLD_HAND_L)) == NULL) || (obj->item_type != ITEM_WEAPON))
+      {
          if (((obj = get_eq_char(victim, WEAR_HOLD_HAND_R)) == NULL) || (obj->item_type != ITEM_WEAPON))
          {
             if (!IS_SET(obj->extra_flags, ITEM_FIST))
@@ -1356,10 +1357,11 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
                return;
             }
          }
+      }
    }
+
    if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
       return;
-
 
    chance = 0;
 
@@ -1368,6 +1370,8 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 
    if (can_use_skill(victim, gsn_nodisarm))
       chance -= 50;
+
+   chance += (get_psuedo_level(ch) - get_psuedo_level(victim))/2;
 
    raise_skill(ch, gsn_disarm);
 
