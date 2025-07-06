@@ -1651,7 +1651,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
    ch->combo[0] = gsn;
 
-   if (is_valid_finisher(ch))
+   if (is_valid_finisher(ch) && !is_ready_finisher(ch))
       send_to_char("@@yYou are ready to perform a finisher!@@N\n\r", ch);
 
    if (!is_ready_finisher(ch))
