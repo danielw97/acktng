@@ -1489,13 +1489,16 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          break;
       case 'c':
          if (!IS_NPC(ch))
-            sprintf(buf2, "\n\r", get_combo_count(ch));
+            sprintf(buf2, "\n\r" );
          else
             sprintf(buf2, " ");
          i = buf2;
          break;
       case 'C':
-         sprintf(buf2, " %d", get_combo_count(ch));
+         if (is_valid_finisher(ch) )
+            sprintf(buf2, " @@rR@@N");
+         else
+            sprintf(buf2, " %d", get_combo_count(ch));
          i = buf2;
          break;
       case 'i':
