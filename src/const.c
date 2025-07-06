@@ -2321,8 +2321,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "frenzy", {182, 182, 182, 182, 182, 182,
-               182, 182, 182, 182, 182, 182},
+    "frenzy", {182, 182, 182, 27, 182, 52,
+               182, 41, 182, 28, 182, 34},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_frenzy, SLOT( 0 ), 0, 24, FALSE,
     "frenzy", "!FRENZY!",
