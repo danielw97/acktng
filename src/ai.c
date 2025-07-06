@@ -14,6 +14,8 @@ void ai_update()
    CHAR_DATA *ch_next;
    for (ch = first_char; ch; ch = ch_next)
    {
+      if (ch->stunTimer > 0)
+         continue;
       ch_next = ch->next;
 
       if (IS_NPC(ch) && ch->fighting != NULL)
