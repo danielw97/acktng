@@ -1464,8 +1464,8 @@ void do_frenzy(CHAR_DATA *ch, char *argument)
 
    CREF(vch_next, CHAR_NEXTROOM);
 
-   act("You go into a FRENZY!!!\n\r", ch, NULL, vch, TO_CHAR);
-   act("$n goes into a FRENZY!!!", ch, NULL, vch, TO_ROOM);
+   act("You go into a FRENZY!!!\n\r", ch, NULL, NULL, TO_CHAR);
+   act("$n goes into a FRENZY!!!", ch, NULL, NULL, TO_ROOM);
    for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
    {
       vch_next = vch->next_in_room;
