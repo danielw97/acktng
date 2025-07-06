@@ -178,7 +178,7 @@ bool check_cast(CHAR_DATA *ch)
       sh_int cast_frequency;
       sh_int index;
 
-      cast_frequency = get_psuedo_level(ch) / 4; /* maybe set in olc later? */
+      cast_frequency = get_psuedo_level(ch) / 3; /* maybe set in olc later? */
       if ((number_range(0, 99) < cast_frequency) && (ch->mana >= (40 * ch->max_mana / 100)))
       {
          for (index = 1; index < 32; index++)
