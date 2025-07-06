@@ -113,12 +113,16 @@ int skill_lookup(const char *name)
    {
       if (skill_table[sn].name == NULL)
          continue;
-      if (!str_prefix(name, skill_table[sn].name))
-      {
-         sprintf(buf, "Skill_lookup: Found %s with %d", skill_table[sn].name, sn);
-         bug(buf, 0);
+      if (!str_cmp(name, skill_table[sn].name))
          return sn;
-      }
+   }
+
+   for (sn = 0; sn < MAX_SKILL; sn++)
+   {
+      if (skill_table[sn].name == NULL)
+         continue;
+      if (!str_prefix(name, skill_table[sn].name))
+         return sn;
    }
 
    return -1;
