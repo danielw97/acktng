@@ -1843,7 +1843,8 @@ bool spell_flare(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    af.type = sn;
    af.location = APPLY_HITROLL;
    af.modifier = -10 - (level / 4);
-   af.duration = 1;
+   af.duration = 20;
+   af.duration_type = DURATION_ROUND;
    af.bitvector = AFF_BLIND;
    affect_to_char(victim, &af);
    act("$n invokes the power of Ra to produce a solar flare which blinds $N!", ch, NULL, victim, TO_NOTVICT);

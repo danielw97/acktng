@@ -945,7 +945,8 @@ bool spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    af.type = sn;
    af.location = APPLY_HITROLL;
    af.modifier = -4;
-   af.duration = 1;
+   af.duration = 20;
+   af.duration_type = DURATION_ROUND;
    af.bitvector = AFF_BLIND;
    affect_to_char(victim, &af);
    send_to_char("You are blinded!\n\r", victim);
