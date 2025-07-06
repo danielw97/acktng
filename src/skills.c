@@ -1342,28 +1342,24 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
    if (!can_use_skill_message(ch, gsn_disarm))
       return;
 
+   if (IS_SET(victim->skills, MOB_DISARM))
+
    set_fighting(ch, victim, TRUE);
    if (obj == NULL)
    {
       if (((obj = get_eq_char(victim, WEAR_HOLD_HAND_L)) == NULL) || (obj->item_type != ITEM_WEAPON))
          if (((obj = get_eq_char(victim, WEAR_HOLD_HAND_R)) == NULL) || (obj->item_type != ITEM_WEAPON))
          {
-            send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
-            return;
+            if (!IS_SET(obj->extra_flags, ITEM_FIST))
+            {
+               send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
+               return;
+            }
          }
    }
-   if (IS_SET(obj->extra_flags, ITEM_NODISARM))
-      return;
-
    if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
       return;
 
-   /*
-    * Check to see if victim is warrior, and if they deflect the disarm
-    * In part, this idea comes from HiddenWorlds,
-    * but it's also pretty common sense really ;)
-    * Stephen
-    */
 
    chance = 0;
 
