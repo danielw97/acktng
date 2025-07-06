@@ -449,7 +449,7 @@ bool generate_defensive_cast(CHAR_DATA *ch)
    int skill_pool = 0;
    int max_skills = 0;
 
-   ch->healing_mod += number_range(0, get_psuedo_level(ch));
+   ch->healing_mod += number_range(get_psuedo_level(ch)/2, get_psuedo_level(ch)*2);
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
 
    if (get_psuedo_level(ch) > 20)
