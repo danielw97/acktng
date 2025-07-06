@@ -817,7 +817,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    int dodge = get_dodge(victim) - get_evasion_piercing(ch) + ((get_psuedo_level(ch) - get_psuedo_level(victim)) / 2);
    if (!can_see(ch, victim) && dodge > 0)
       dodge += 20;
-   if (!can_see(victim, ch))
+   if (!can_see(victim, ch) && dodge > 0)
       dodge -= 30;
    if (dodge > max_avoidance && dodge > 0)
    {
@@ -1040,13 +1040,7 @@ int get_evasion_piercing(CHAR_DATA *ch)
    int chance = 0;
 
    if (!IS_AWAKE(ch))
-      return chance;
-
-   if (IS_NPC(ch) && !IS_SET(ch->skills, MOB_COUNTER))
-      return chance;
-
-   if (!IS_NPC(ch) && !can_use_skill(ch, gsn_counter))
-      return chance;
+      return 0;
 
    if (IS_NPC(ch))
    {
