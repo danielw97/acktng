@@ -210,7 +210,7 @@ bool generate_ai_spawn(CHAR_DATA *ch)
    if (ch->level < 25)
       return;
 
-   if (ch->skills || ch->act || ch->def)
+   if (ch->skills || ch->cast || ch->def)
       return;
 
    int min_chance = 1;
