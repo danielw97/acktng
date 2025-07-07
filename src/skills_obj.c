@@ -205,7 +205,12 @@ void do_smash(CHAR_DATA *ch, char *argument)
    return;
 }
 
-void do_disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
+void do_disarm(CHAR_DATA *ch, char *argument)
+{
+
+}
+
+void disarm(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 {
    AFFECT_DATA af;
    int chance;
