@@ -173,6 +173,8 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     dam = dam * dam_modifier;
 
+    dam_modifier = 0.0;
+
     if (!IS_SET(element, ELE_PHYSICAL))
     {
         if (IS_SET(element, SIXTH_DIVISOR))
@@ -204,30 +206,32 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
             dam += get_spellpower(ch);
 
         if (stance_app[ch->stance].spell_mod != 0)
-            dam += dam * stance_app[ch->stance].spell_mod / 10;
+            dam_modifier += stance_app[ch->stance].spell_mod / 10;
     }
     else
     {
         if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
-            dam += dam * 0.2;
+            dam_modifier += 0.2;
 
         if (can_use_skill(ch, gsn_enhanced_damage))
-            dam += dam * get_curr_str(ch) * 2 / 100;
+            dam_modifier += get_curr_str(ch) * 2 / 100;
         else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))
-            dam += dam * 0.2;
+            dam_modifier += 0.2;
 
         if (!IS_AWAKE(victim))
-            dam *= 1.5;
+            dam_modifier += 0.5;
 
-        dam += dam * ch->remort[CLASS_PAL] / 100 * 0.75;
-        dam += dam * ch->adept[CLASS_TEM] / 50;
+        dam_modifier += ch->remort[CLASS_PAL] / 100 * 0.75 * 0.5;
+        dam_modifier += ch->adept[CLASS_TEM] / 50 * 0.5;
         if ((dt >= TYPE_HIT || dt < 0) && can_use_skill(ch, gsn_bare_hand))
         {
-            dam += ch->remort[CLASS_BRA] / 100 * 0.75;
-            dam += ch->remort[CLASS_MON] / 100;
-            dam += ch->adept[CLASS_MAR] / 50;
+            dam_modifier += ch->remort[CLASS_BRA] / 100 * 0.75 * 0.5;
+            dam_modifier += ch->remort[CLASS_MON] / 100 * 0.5;
+            dam_modifier += ch->adept[CLASS_MAR] / 50 * 0.5;
         }
     }
+
+    dam += dam * dam_modifier;
 
     if (!IS_SET(element, ELE_PHYSICAL))
         crit_chance = get_spell_crit(ch);

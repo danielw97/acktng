@@ -507,7 +507,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (dt == TYPE_MARTIAL)
       dam = (dam * 4) / 3;
 
-   if (!IS_NPC(ch) && can_use_skill(ch, gsn_bare_hand))
+   if (!IS_NPC(ch) && can_use_skill(ch, gsn_bare_hand) && (dt == TYPE_MARTIAL || dt == TYPE_HIT || dt == gsn_counter))
    {
       wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
       if (wield == NULL ||
@@ -518,10 +518,14 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
          if (wield == NULL ||
              (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
          {
-            if (ch->remort[CLASS_MON] > 0)
-               dam += dam * ch->remort[CLASS_MON] / 50;
-            else if (ch->remort[CLASS_BRA] > 0)
-               dam += dam * ch->remort[CLASS_BRA] / 50 * .75;
+            wield = get_eq_char(ch, WEAR_TWO_HANDED);
+            if (wield == NULL)
+            {
+             if (ch->remort[CLASS_MON] > 0)
+               dam += dam * ch->remort[CLASS_MON] / 75;
+             else if (ch->remort[CLASS_BRA] > 0)
+               dam += dam * ch->remort[CLASS_BRA] / 75 * .75;
+            }
          }
       }
    }

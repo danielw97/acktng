@@ -825,23 +825,22 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
 
    dam += get_damroll(ch) / 2;
 
+   float dam_mod = 0.0;
+
    if (ch->lvl[CLASS_WAR] > ch->lvl[CLASS_PUG])
-      dam += dam * ch->lvl[CLASS_WAR] / 100;
+      dam_mod += ch->lvl[CLASS_WAR] / 100;
    else
-      dam += dam * ch->lvl[CLASS_PUG] / 100;
+      dam_mod += ch->lvl[CLASS_PUG] / 100;
 
    if (skill_table[gsn].flag1 == REMORT || skill_table[gsn].flag1 == ADEPT)
    {
-      if (ch->remort[CLASS_KNI] > 0)
-         dam += dam * ch->remort[CLASS_KNI] / 100;
-      else if (ch->remort[CLASS_SWO] > 0)
-         dam += dam * ch->remort[CLASS_SWO] / 100;
-      else if (ch->remort[CLASS_MON] > 0)
-         dam += dam * ch->remort[CLASS_MON] / 100;
-      else if (ch->remort[CLASS_PAL] > 0)
-         dam += dam * ch->remort[CLASS_PAL] / 100 * .75;
-      dam += dam * ch->adept[CLASS_CRU] / 50;
+      dam_mod += ch->remort[CLASS_KNI] / 50;
+      dam_mod += ch->remort[CLASS_SWO] / 50;
+      dam_mod += ch->remort[CLASS_BRA] / 50 * 0.75;
+      dam_mod += ch->adept[CLASS_CRU] / 20;
    }
+
+   dam += dam * dam_mod;
 
    WAIT_STATE(ch, skill_table[gsn].beats);
 
@@ -1589,6 +1588,7 @@ void stun(CHAR_DATA *ch, CHAR_DATA *victim)
    act("$n slams into $N, leaving $M stunned.", ch, NULL, victim, TO_NOTVICT);
 
    victim->stunTimer += number_range(2, 4);
+   victim->position = POS_STUNNED;
 
    /*}
    else

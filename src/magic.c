@@ -103,9 +103,6 @@ int skill_lookup(const char *name)
    char buf[MAX_STRING_LENGTH];
    int sn;
 
-   sprintf(buf, "Entering skill_lookup looking for %s", name);
-   bug(buf, 0);
-
    if (strlen(name) < 1)
       return -1;
 
@@ -2017,9 +2014,9 @@ bool spell_faerie_fire(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    if (ch == victim)
       af.duration = -1;
    else
-      af.duration = 5 + (level / 5);
+      af.duration = 5;
    af.location = APPLY_AC;
-   af.modifier = 2 * level;
+   af.modifier = 2 * get_psuedo_level(ch);
    af.bitvector = AFF_FAERIE_FIRE;
    affect_to_char(victim, &af);
    send_to_char("You are surrounded by a pink outline.\n\r", victim);
