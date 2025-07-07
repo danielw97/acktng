@@ -280,7 +280,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     {
        paf_next = paf->next;
 
-       if (paf->type == gsn_cripple && dt > 0 && dt < TYPE_HIT)
+       if (paf->type == gsn_cripple && IS_SET(element, ELE_PHYSICAL))
        {
           dam -= dam * paf->modifier / 100;
        }
