@@ -595,8 +595,6 @@ void do_frenzy(CHAR_DATA *ch, char *argument)
 {
     CHAR_DATA *vch;
     CHAR_DATA *vch_next;
-    int moves = 0;
-    int damage = 0;
 
     if (!can_use_skill_message(ch, gsn_frenzy))
         return;
