@@ -4248,7 +4248,8 @@ Prompt all gives you a default prompt.
  %m for current mana. %M for maximum mana.
  #v for current move. #V for maximum move.
 
- %c for current combo count.
+%C for current combo count.
+ #I for current chi.
 ~
 0 $~
 #ROOMS
