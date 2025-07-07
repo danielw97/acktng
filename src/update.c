@@ -430,6 +430,12 @@ void round_update(CHAR_DATA *ch)
       if (ch->cooldown[i] > 0)
          ch->cooldown[i]--;
    }
+
+   if (ch->fighting == NULL && ch->chi > 0)
+   {
+      send_to_char("Your chi has dissipated as you are not fighting.\n\r",ch);
+      ch->chi = 0;
+   }
 }
 
 /*
