@@ -396,10 +396,8 @@ void round_update(CHAR_DATA *ch)
    // Hots and dots
    for (paf = ch->first_affect; paf != NULL; paf = paf_next)
    {
-      if (paf == NULL)
-         break;
-
       paf_next = paf->next;
+
       if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
       {
          heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
@@ -420,14 +418,7 @@ void round_update(CHAR_DATA *ch)
             if (paf->type > 0 && skill_table[paf->type].room_off)
                act(skill_table[paf->type].room_off, ch, NULL, NULL, TO_ROOM);
 
-            AFFECT_DATA *paf_prev = paf->prev;
-
             affect_remove(ch, paf);
-
-            if (paf_prev != NULL)
-               paf = paf_prev;
-            else
-               paf = ch->first_affect;
          }
          else
             paf->duration--;
@@ -1516,57 +1507,60 @@ void char_update(void)
       for (paf = ch->first_affect; paf != NULL; paf = paf_next)
       {
          paf_next = paf->next;
-         if (paf->duration > 0 && paf->duration_type == DURATION_HOUR)
+         if (paf->duration_type == DURATION_HOUR)
          {
-            paf->duration--;
+            if (paf->duration > 0)
+            {
+               paf->duration--;
 
-            /*
-             * We need a check here for spells that keep working...
-             */
-            if (paf->type == skill_lookup("blood leach"))
-            {
-               if (paf->caster != NULL && !IS_NPC(paf->caster))
+               /*
+                * We need a check here for spells that keep working...
+                */
+               if (paf->type == skill_lookup("blood leach"))
                {
-                  send_to_char("You feel the blood leach sapping your strength.\n\r", ch);
-                  act("You feel a surge of blood, coming from your blood leach on $N.", paf->caster, NULL, ch, TO_CHAR);
-                  paf->caster->pcdata->bloodlust += (10 - paf->caster->pcdata->generation);
-                  if (paf->caster->pcdata->bloodlust > paf->caster->pcdata->bloodlust_max)
-                     paf->caster->pcdata->bloodlust = paf->caster->pcdata->bloodlust_max;
-                  damage(ch, ch, paf->caster->pcdata->vamp_level * 20, TYPE_UNDEFINED);
+                  if (paf->caster != NULL && !IS_NPC(paf->caster))
+                  {
+                     send_to_char("You feel the blood leach sapping your strength.\n\r", ch);
+                     act("You feel a surge of blood, coming from your blood leach on $N.", paf->caster, NULL, ch, TO_CHAR);
+                     paf->caster->pcdata->bloodlust += (10 - paf->caster->pcdata->generation);
+                     if (paf->caster->pcdata->bloodlust > paf->caster->pcdata->bloodlust_max)
+                        paf->caster->pcdata->bloodlust = paf->caster->pcdata->bloodlust_max;
+                     damage(ch, ch, paf->caster->pcdata->vamp_level * 20, TYPE_UNDEFINED);
+                  }
+               }
+               if (paf->type == skill_lookup("black hand"))
+               {
+                  if (paf->caster != NULL && !IS_NPC(paf->caster))
+                  {
+                     send_to_char("You feel the Black Hand choking you.\n\r", ch);
+                     ch->hit -= paf->modifier;
+                  }
+               }
+               if ((paf->type == skill_lookup("adrenaline bonus")) && (ch->fighting == NULL) && (ch->hit > 10))
+               {
+                  ch->hit = UMAX(10, (ch->hit + (paf->duration * 30)));
+                  ch->move = UMAX(10, (ch->move + (paf->duration * 80)));
+                  send_to_char("@@NYou feel the affects of your @@eadrenaline rush@@N wear off, leaving you looking forward to more combat.\n\r", ch);
+                  affect_remove(ch, paf);
                }
             }
-            if (paf->type == skill_lookup("black hand"))
+            else if (paf->duration < 0)
+               ;
+            else
             {
-               if (paf->caster != NULL && !IS_NPC(paf->caster))
+               if (paf_next == NULL || paf_next->type != paf->type || paf_next->duration > 0)
                {
-                  send_to_char("You feel the Black Hand choking you.\n\r", ch);
-                  ch->hit -= paf->modifier;
+                  if (paf->type > 0 && skill_table[paf->type].msg_off)
+                  {
+                     send_to_char(skill_table[paf->type].msg_off, ch);
+                     send_to_char("\n\r", ch);
+                  }
+                  if (paf->type > 0 && skill_table[paf->type].room_off)
+                     act(skill_table[paf->type].room_off, ch, NULL, NULL, TO_ROOM);
                }
-            }
-            if ((paf->type == skill_lookup("adrenaline bonus")) && (ch->fighting == NULL) && (ch->hit > 10))
-            {
-               ch->hit = UMAX(10, (ch->hit + (paf->duration * 30)));
-               ch->move = UMAX(10, (ch->move + (paf->duration * 80)));
-               send_to_char("@@NYou feel the affects of your @@eadrenaline rush@@N wear off, leaving you looking forward to more combat.\n\r", ch);
+
                affect_remove(ch, paf);
             }
-         }
-         else if (paf->duration < 0)
-            ;
-         else
-         {
-            if (paf_next == NULL || paf_next->type != paf->type || paf_next->duration > 0)
-            {
-               if (paf->type > 0 && skill_table[paf->type].msg_off)
-               {
-                  send_to_char(skill_table[paf->type].msg_off, ch);
-                  send_to_char("\n\r", ch);
-               }
-               if (paf->type > 0 && skill_table[paf->type].room_off)
-                  act(skill_table[paf->type].room_off, ch, NULL, NULL, TO_ROOM);
-            }
-
-            affect_remove(ch, paf);
          }
       }
 
