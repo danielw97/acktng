@@ -12,10 +12,19 @@ void ai_update()
 {
    CHAR_DATA *ch;
    CHAR_DATA *ch_next;
-   for (ch = first_char; ch; ch = ch_next)
+
+   for (ch = first_char; ch != NULL; ch = ch_next)
    {
-      if (ch->stunTimer > 0)
+      if (ch == NULL && ch_next == NULL)
+         break;
+      ch_next = ch->next;
+
+      if (!IS_NPC(ch))
          continue;
+
+      if (ch->stunTimer > 0 || ch->position != POS_FIGHTING)
+         continue;
+
       ch_next = ch->next;
 
       if (IS_NPC(ch) && ch->fighting != NULL)
