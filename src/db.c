@@ -116,6 +116,7 @@ sh_int gsn_poison_arsenic;
 sh_int gsn_poison_nightshade;
 sh_int gsn_dodge;
 sh_int gsn_riposte;
+sh_int gsn_spinfist;
 sh_int gsn_chakra;
 sh_int gsn_cripple;
 sh_int gsn_fleche;

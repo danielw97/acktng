@@ -131,6 +131,7 @@ extern sh_int gsn_sixth_attack;
 extern sh_int gsn_target;
 extern sh_int gsn_charge;
 extern sh_int gsn_unit_tactics;
+extern sh_int gsn_spinfist;
 
 extern sh_int gsn_mount; /* for mount skill */
 extern sh_int gsn_imprint;

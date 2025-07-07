@@ -409,6 +409,8 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"chakra", do_chakra, POS_FIGHTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
+    {"spinfist", do_spinfist, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
 
 
 

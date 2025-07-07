@@ -3170,7 +3170,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
                        182, 182, 92, 182, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_cripple, SLOT( 0 ), 80, 12, TRUE,
-    "Criple", "You are no longer crippled!",
+    "Cripple", "You are no longer crippled!",
     "$n is no longer crippled."},
 
    {
@@ -3181,6 +3181,15 @@ const struct skill_type skill_table[MAX_SKILL] = {
     &gsn_chiblock, SLOT( 0 ), 80, 12, TRUE,
     "Chiblock", "You are no longer able to block with your chi!",
     "$n is no longer able to block with their chi."},
+
+   {
+    REMORT, NORM,
+    "spinfist",        {182, 182, 182, 182, 182, 182,
+                        182, 182, 182, 182, 182, 66},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_spinfist, SLOT( 0 ), 80, 12, TRUE,
+    "Spinfist", "!!SPINFIST!!",
+    "!!$n SPINFIST!!"},
 
    {
     REMORT, NORM,

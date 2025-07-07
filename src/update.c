@@ -428,7 +428,15 @@ void round_update(CHAR_DATA *ch)
    for (int i = 0; i < MAX_SKILL; i++)
    {
       if (ch->cooldown[i] > 0)
+      {
          ch->cooldown[i]--;
+
+         if (ch->cooldown[i] == 0)
+         {
+            sprintf(buf, "@@y%s's@@N cooldown has elapsed!\n\r",ch);
+            send_to_char(buf,ch);
+         }
+      }
    }
 
    if (ch->fighting == NULL && ch->chi > 0)
