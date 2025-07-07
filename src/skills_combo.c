@@ -102,7 +102,7 @@ void do_cripple(CHAR_DATA *ch, char *argument)
     }
 
     af.type = gsn_cripple;
-    af.duration = get_max_combo(ch)-3;
+    af.duration = get_max_combo(ch) - 3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_SAVING_PARA;
     af.modifier = 30 * cnt;
@@ -370,14 +370,19 @@ void do_chakra(CHAR_DATA *ch, char *argument)
 
     ch->cooldown[gsn_chakra] = 10;
 
-    int heal = class_heal_character(ch, ch, ch->remort[CLASS_MON] * get_max_combo(ch), gsn_chakra, CLASS_MON, FALSE);
+    int base_heal = 5;
+
+    if (ch->adept[CLASS_MAR] > 0)
+       base_heal = 7;
+
+    int heal = class_heal_character(ch, ch, ch->remort[CLASS_MON] * base_heal, gsn_chakra, CLASS_MON, FALSE);
 
     heal_character(ch, ch, heal, gsn_chakra, FALSE);
 
     AFFECT_DATA af;
 
     af.type = gsn_chakra;
-    af.duration = get_max_combo(ch)-3;
+    af.duration = get_max_combo(ch) - 3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_DAMROLL;
     af.modifier = ch->remort[CLASS_MON] * 5 + ch->adept[CLASS_MAR] * 5;
@@ -423,7 +428,7 @@ void do_riposte(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_riposte].beats);
 
     af.type = gsn_riposte;
-    af.duration = get_max_combo(ch)-3;
+    af.duration = get_max_combo(ch) - 3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_HITROLL;
     af.modifier = 1;
@@ -472,7 +477,7 @@ void do_shieldblock(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_shieldblock].beats);
 
     af.type = gsn_shieldblock;
-    af.duration = get_max_combo(ch)-3;
+    af.duration = get_max_combo(ch) - 3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_AC;
     af.modifier = -1;
@@ -521,7 +526,7 @@ void do_chiblock(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_chiblock].beats);
 
     af.type = gsn_chiblock;
-    af.duration = get_max_combo(ch)-3;
+    af.duration = get_max_combo(ch) - 3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_AC;
     af.modifier = -1;
@@ -570,7 +575,7 @@ void do_anti_magic_shell(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_anti_magic_shell].beats);
 
     af.type = gsn_anti_magic_shell;
-    af.duration = get_max_combo(ch)-3;
+    af.duration = get_max_combo(ch) - 3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_HITROLL;
     af.modifier = 1;
@@ -764,141 +769,139 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
             holystrike_cnt += mult;
     }
 
+    send_to_char("@@yCombo triggered!@@N\n\r", ch);
+    act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
+    act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
+
+    int max_attacks = max - 3;
+
+    if (ch->combo[0] == gsn_fleche)
+        max_attacks++;
+
+    int max_combo = 6;
+
+    if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
+        max_combo += 2;
+
+    if (ch->remort[CLASS_CRU] > 0)
+        max_combo += 2;
+
+    int combo_chance = 25;
+    if (gsn == gsn_holystrike || gsn == gsn_fleche)
+        combo_chance += 10;
+
+    for (int i = 0; i < max_combo && i < max_attacks; i++)
     {
-        send_to_char("@@yCombo triggered!@@N\n\r", ch);
-        act("You begin a combo attack!", ch, NULL, victim, TO_CHAR);
-        act("$n begins a combo attack!", ch, NULL, victim, TO_ROOM);
+        reset_combo(ch);
 
-        int max_attacks = max - 3;
+        if (ch->fighting == NULL)
+            break;
 
-        if (ch->combo[0] == gsn_fleche)
+        if (i == 0 && number_percent() < combo_chance)
+            max_attacks++;
+        if (number_percent() < combo_chance)
             max_attacks++;
 
-        int max_combo = 6;
+        int roll = number_percent();
+        int chance = 0;
 
-        if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
-            max_combo += 2;
-
-        if (ch->remort[CLASS_CRU] > 0)
-            max_combo += 2;
-
-        int combo_chance = 25;
-        if (gsn == gsn_holystrike || gsn == gsn_fleche)
-            combo_chance += 10;
-
-        for (int i = 0; i < max_combo && i < max_attacks; i++)
+        if (roll < chance + punch_cnt)
         {
-            reset_combo(ch);
-
-            if (ch->fighting == NULL)
-                break;
-
-            if (i == 0 && number_percent() < combo_chance)
-                max_attacks++;
-            if (number_percent() < combo_chance)
-                max_attacks++;
-
-            int roll = number_percent();
-            int chance = 0;
-
-            if (roll < chance + punch_cnt)
-            {
-                war_attack(ch, victim->name, gsn_punch);
-                continue;
-            }
-
-            chance += punch_cnt;
-
-            if (roll < chance + kick_cnt)
-            {
-                war_attack(ch, victim->name, gsn_kick);
-                continue;
-            }
-
-            chance += kick_cnt;
-
-            if (roll < chance + knee_cnt)
-            {
-                war_attack(ch, victim->name, gsn_knee);
-                continue;
-            }
-
-            chance += knee_cnt;
-
-            if (roll < chance + headbutt_cnt)
-            {
-                war_attack(ch, victim->name, gsn_headbutt);
-                continue;
-            }
-
-            chance += headbutt_cnt;
-
-            if (roll < chance + disarm_cnt)
-            {
-                disarm(ch, victim);
-                continue;
-            }
-
-            chance += disarm_cnt;
-
-            if (roll < chance + dirt_cnt)
-            {
-                if (can_see(victim, ch))
-                    do_dirt(ch, victim->name);
-                else
-                    i--;
-                continue;
-            }
-
-            chance += dirt_cnt;
-
-            if (roll < chance + bash_cnt)
-            {
-                war_attack(ch, victim->name, gsn_bash);
-                continue;
-            }
-
-            chance += bash_cnt;
-
-            if (roll < chance + charge_cnt)
-            {
-                war_attack(ch, victim->name, gsn_charge);
-                continue;
-            }
-
-            chance += charge_cnt;
-
-            if (roll < chance + palmstrike_cnt)
-            {
-                war_attack(ch, victim->name, gsn_palmstrike);
-                continue;
-            }
-
-            chance += palmstrike_cnt;
-
-            if (roll < chance + fleche_cnt)
-            {
-                war_attack(ch, victim->name, gsn_fleche);
-                continue;
-            }
-
-            chance += fleche_cnt;
-
-            if (roll < chance + holystrike_cnt)
-            {
-                war_attack(ch, victim->name, gsn_holystrike);
-                continue;
-            }
-
-            if (roll < 95)
-            {
-                stun(ch, ch->fighting);
-                continue;
-            }
-
-            // 95+
-            max_attacks += 2;
+            war_attack(ch, victim->name, gsn_punch);
+            continue;
         }
+
+        chance += punch_cnt;
+
+        if (roll < chance + kick_cnt)
+        {
+            war_attack(ch, victim->name, gsn_kick);
+            continue;
+        }
+
+        chance += kick_cnt;
+
+        if (roll < chance + knee_cnt)
+        {
+            war_attack(ch, victim->name, gsn_knee);
+            continue;
+        }
+
+        chance += knee_cnt;
+
+        if (roll < chance + headbutt_cnt)
+        {
+            war_attack(ch, victim->name, gsn_headbutt);
+            continue;
+        }
+
+        chance += headbutt_cnt;
+
+        if (roll < chance + disarm_cnt)
+        {
+            disarm(ch, victim);
+            continue;
+        }
+
+        chance += disarm_cnt;
+
+        if (roll < chance + dirt_cnt)
+        {
+            if (can_see(victim, ch))
+                do_dirt(ch, victim->name);
+            else
+                i--;
+            continue;
+        }
+
+        chance += dirt_cnt;
+
+        if (roll < chance + bash_cnt)
+        {
+            war_attack(ch, victim->name, gsn_bash);
+            continue;
+        }
+
+        chance += bash_cnt;
+
+        if (roll < chance + charge_cnt)
+        {
+            war_attack(ch, victim->name, gsn_charge);
+            continue;
+        }
+
+        chance += charge_cnt;
+
+        if (roll < chance + palmstrike_cnt)
+        {
+            war_attack(ch, victim->name, gsn_palmstrike);
+            continue;
+        }
+
+        chance += palmstrike_cnt;
+
+        if (roll < chance + fleche_cnt)
+        {
+            war_attack(ch, victim->name, gsn_fleche);
+            continue;
+        }
+
+        chance += fleche_cnt;
+
+        if (roll < chance + holystrike_cnt)
+        {
+            war_attack(ch, victim->name, gsn_holystrike);
+            continue;
+        }
+
+        if (roll < 95)
+        {
+            stun(ch, ch->fighting);
+            continue;
+        }
+
+        // 95+
+        max_attacks += 2;
     }
 
     reset_combo(ch);
