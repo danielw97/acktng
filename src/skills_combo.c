@@ -786,7 +786,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
         if (gsn == gsn_holystrike || gsn == gsn_fleche)
             combo_chance += 10;
 
-        for (int i = 0; i < max_attacks; i++)
+        for (int i = 0; i < max_combo && i < max_attacks; i++)
         {
             reset_combo(ch);
 
