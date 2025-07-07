@@ -704,8 +704,11 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
     for (i = 0; i < max; i++)
     {
-        /* Reverse index */
-        ch->combo[max - i] = ch->combo[max - i - 1];
+        if (ch->combo[i] == -1)
+        {
+            ch->combo[i] = gsn;
+            break;
+        }
     }
 
     ch->combo[0] = gsn;
