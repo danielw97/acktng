@@ -5,7 +5,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 bool is_valid_finisher(CHAR_DATA *ch);
 bool is_ready_finisher(CHAR_DATA *ch);
 void reset_combo(CHAR_DATA *ch);
-int max_combo(CHAR_DATA *ch);
+int get_max_combo(CHAR_DATA *ch);
 
 void do_cripple(CHAR_DATA *ch, char *argument)
 {
@@ -700,7 +700,7 @@ void stun(CHAR_DATA *ch, CHAR_DATA *victim)
 bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
     int i;
-    int max = max_combo(ch);
+    int max = get_max_combo(ch);
     int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
     int mult = 23;
 
@@ -903,9 +903,9 @@ int get_combo_count(CHAR_DATA *ch)
 {
     int cnt;
 
-    for (cnt = 0; cnt < max_combo(ch); cnt++)
+    for (cnt = 0; cnt < get_max_combo(ch); cnt++)
     {
-        for (int j = 0; j < max_combo(ch); j++)
+        for (int j = 0; j < get_max_combo(ch); j++)
         {
             if (cnt == j)
                 continue;
@@ -919,7 +919,7 @@ int get_combo_count(CHAR_DATA *ch)
 
 bool is_valid_finisher(CHAR_DATA *ch)
 {
-    if (get_combo_count(ch) == max_combo(ch) - 1)
+    if (get_combo_count(ch) == get_max_combo(ch) - 1)
         return TRUE;
 
     return FALSE;
@@ -927,7 +927,7 @@ bool is_valid_finisher(CHAR_DATA *ch)
 
 bool is_ready_finisher(CHAR_DATA *ch)
 {
-    if (get_combo_count(ch) >= max_combo(ch))
+    if (get_combo_count(ch) >= get_max_combo(ch))
         return TRUE;
 
     return FALSE;
@@ -939,7 +939,7 @@ void reset_combo(CHAR_DATA *ch)
         ch->combo[i] = -1;
 }
 
-int max_combo(CHAR_DATA *ch)
+int get_max_combo(CHAR_DATA *ch)
 {
     if (ch->adept[CLASS_CRU] > 0)
         return 6;
