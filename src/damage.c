@@ -297,10 +297,9 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
              sprintf(buf, "$N's anti-magic shell negates %s.", skill_table[dt].name);
              act(buf, ch, NULL, victim, TO_ROOM);
              sprintf(buf, "Your anti-magic shell negates %s.", skill_table[dt].name);
-             send_to_char(buf, victim);
+             act(buf, ch, NULL, victim, TO_VICT);
              sprintf(buf, "$N's anti-magic shell absorbs your %s", skill_table[dt].name);
              act(buf, ch, NULL, victim, TO_CHAR);
-             paf->duration = 0;
           }
 
           if (paf->type == skill_lookup("refuge"))
@@ -328,7 +327,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
              sprintf(buf, "$N's perfect riposte interrupts $n's %s.", skill_table[dt].name);
              act(buf, ch, NULL, victim, TO_ROOM);
              sprintf(buf, "Your perfect riposte interrupts $n's %s.", skill_table[dt].name);
-             send_to_char(buf, victim);
+             act(buf, ch, NULL, victim, TO_VICT);
              sprintf(buf, "$N's perfect riposte interrupts your %s", skill_table[dt].name);
              act(buf, ch, NULL, victim, TO_CHAR);
              calculate_damage(victim, ch, dam, gsn_riposte, ELEMENT_PHYSICAL, TRUE);
@@ -338,13 +337,12 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
           if (paf->type == gsn_shieldblock && shield != NULL && shield->item_type == ITEM_ARMOR)
           {
-             sprintf(buf, "$N shieldblocks $n's %s.", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_ROOM);
-             sprintf(buf, "You shieldblock $n's %s.", skill_table[dt].name);
-             send_to_char(buf, victim);
-             sprintf(buf, "$N shieldblocks your %s", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_CHAR);
-             paf->duration = 0;
+             sprintf(buf, "$N blocks $n's %s with $p.", skill_table[dt].name);
+             act(buf, ch, shield, victim, TO_ROOM);
+             sprintf(buf, "You block $n's %s with $p.", skill_table[dt].name);
+             act(buf, ch, shield, victim, TO_VICT);
+             sprintf(buf, "$N blocks your %s with $p", skill_table[dt].name);
+             act(buf, ch, shield, victim, TO_CHAR);
              if (IS_SET(shield->extra_flags, ITEM_BUCKLER) )
                 dam = dam * 0.15;
              else
@@ -359,7 +357,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
              send_to_char(buf, victim);
              sprintf(buf, "$N blocks your %s with their chi", skill_table[dt].name);
              act(buf, ch, NULL, victim, TO_CHAR);
-             paf->duration = 0;
              dam = dam * 0.15;
           }
          }

@@ -102,7 +102,7 @@ void do_cripple(CHAR_DATA *ch, char *argument)
     }
 
     af.type = gsn_cripple;
-    af.duration = 1;
+    af.duration = get_max_combo(ch)-3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_SAVING_PARA;
     af.modifier = 30 * cnt;
@@ -370,14 +370,14 @@ void do_chakra(CHAR_DATA *ch, char *argument)
 
     ch->cooldown[gsn_chakra] = 10;
 
-    int heal = class_heal_character(ch, ch, ch->remort[CLASS_MON] * 5, gsn_chakra, CLASS_MON, FALSE);
+    int heal = class_heal_character(ch, ch, ch->remort[CLASS_MON] * get_max_combo(ch), gsn_chakra, CLASS_MON, FALSE);
 
     heal_character(ch, ch, heal, gsn_chakra, FALSE);
 
     AFFECT_DATA af;
 
     af.type = gsn_chakra;
-    af.duration = 0;
+    af.duration = get_max_combo(ch)-3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_DAMROLL;
     af.modifier = ch->remort[CLASS_MON] * 5 + ch->adept[CLASS_MAR] * 5;
@@ -423,7 +423,7 @@ void do_riposte(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_riposte].beats);
 
     af.type = gsn_riposte;
-    af.duration = 2;
+    af.duration = get_max_combo(ch)-3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_HITROLL;
     af.modifier = 1;
@@ -472,7 +472,7 @@ void do_shieldblock(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_shieldblock].beats);
 
     af.type = gsn_shieldblock;
-    af.duration = 3;
+    af.duration = get_max_combo(ch)-3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_AC;
     af.modifier = -1;
@@ -521,7 +521,7 @@ void do_chiblock(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_chiblock].beats);
 
     af.type = gsn_chiblock;
-    af.duration = 3;
+    af.duration = get_max_combo(ch)-3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_AC;
     af.modifier = -1;
@@ -570,7 +570,7 @@ void do_anti_magic_shell(CHAR_DATA *ch, char *argument)
     WAIT_STATE(ch, skill_table[gsn_anti_magic_shell].beats);
 
     af.type = gsn_anti_magic_shell;
-    af.duration = 2;
+    af.duration = get_max_combo(ch)-3;
     af.duration_type = DURATION_ROUND;
     af.location = APPLY_HITROLL;
     af.modifier = 1;
