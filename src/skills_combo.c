@@ -793,9 +793,6 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
             if (ch->fighting == NULL)
                 break;
 
-            if (i > max_combo)
-                break;
-
             if (i == 0 && number_percent() < combo_chance)
                 max_attacks++;
             if (number_percent() < combo_chance)
@@ -806,7 +803,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
             if (roll < chance + punch_cnt)
             {
-                do_punch(ch, victim->name);
+                war_attack(ch, victim->name, gsn_punch);
                 continue;
             }
 
@@ -814,7 +811,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
             if (roll < chance + kick_cnt)
             {
-                do_kick(ch, victim->name);
+                war_attack(ch, victim->name, gsn_kick);
                 continue;
             }
 
@@ -822,7 +819,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
             if (roll < chance + knee_cnt)
             {
-                do_knee(ch, victim->name);
+                war_attack(ch, victim->name, gsn_knee);
                 continue;
             }
 
@@ -830,7 +827,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
             if (roll < chance + headbutt_cnt)
             {
-                do_headbutt(ch, victim->name);
+                war_attack(ch, victim->name, gsn_headbutt);
                 continue;
             }
 
@@ -857,7 +854,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
             if (roll < chance + bash_cnt)
             {
-                do_bash(ch, victim->name);
+                war_attack(ch, victim->name, gsn_bash);
                 continue;
             }
 
@@ -865,7 +862,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
             if (roll < chance + charge_cnt)
             {
-                do_charge(ch, victim->name);
+                war_attack(ch, victim->name, gsn_charge);
                 continue;
             }
 
