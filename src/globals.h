@@ -334,6 +334,7 @@ DECLARE_DO_FUN(do_holystrike);
 DECLARE_DO_FUN(do_fleche);
 DECLARE_DO_FUN(do_shieldblock);
 DECLARE_DO_FUN(do_chiblock);
+DECLARE_DO_FUN(do_spinfist);
 
 /* And by MAG
  *

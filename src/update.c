@@ -371,6 +371,7 @@ void gain_exp(CHAR_DATA *ch, long_int gain)
 
 void round_update(CHAR_DATA *ch)
 {
+   char buf[MSL];
    AFFECT_DATA *paf;
    AFFECT_DATA *paf_next;
 
