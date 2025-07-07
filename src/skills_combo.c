@@ -699,7 +699,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
     int i;
     int max = get_max_combo(ch);
-    int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
+    int punch_cnt = 0, knee_cnt = 0, palmstrike_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
     int mult = 23;
 
     for (i = 0; i < max; i++)
@@ -750,6 +750,9 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
         if (ch->combo[i] == gsn_bash)
             bash_cnt += mult;
+
+        if (ch->combo[i] == gsn_palmstrike)
+            palmstrike_cnt += mult;
 
         if (ch->combo[i] == gsn_charge)
             charge_cnt += mult;
@@ -867,6 +870,14 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
             }
 
             chance += charge_cnt;
+
+            if (roll < chance + palmstrike_cnt)
+            {
+                war_attack(ch, victim->name, gsn_palmstrike);
+                continue;
+            }
+
+            chance += palmstrike_cnt;
 
             if (roll < chance + fleche_cnt)
             {
