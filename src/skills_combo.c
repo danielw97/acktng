@@ -836,7 +836,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
             if (roll < chance + disarm_cnt)
             {
-                do_disarm(ch, victim->name);
+                disarm(ch, victim);
                 continue;
             }
 
