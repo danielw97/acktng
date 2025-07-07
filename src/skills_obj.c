@@ -1,6 +1,8 @@
 #include "globals.h"
 #include "magic.h"
 
+void disarm(CHAR_DATA *ch, CHAR_DATA *victim);
+
 void do_pick(CHAR_DATA *ch, char *argument)
 {
     const sh_int rev_dir[] = {
@@ -207,8 +209,8 @@ void do_smash(CHAR_DATA *ch, char *argument)
 
 void do_disarm(CHAR_DATA *ch, char *argument)
 {
+    char arg[MAX_INPUT_LENGTH];
     CHAR_DATA *victim;
-    OBJ_DATA *wield;
 
     one_argument(argument, arg);
 
@@ -228,7 +230,7 @@ void do_disarm(CHAR_DATA *ch, char *argument)
 
 void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-    OBJ_DATA *obj;
+    OBJ_DATA *obj = NULL;
     AFFECT_DATA af;
     int chance;
 
