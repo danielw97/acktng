@@ -182,8 +182,6 @@ void do_spinfist(CHAR_DATA *ch, char *argument)
         return;
     }
 
-    ch->cooldown[gsn_spinfist] = 10;
-
     act("You go into a FRENZY!!!\n\r", ch, NULL, NULL, TO_CHAR);
     act("$n goes into a FRENZY!!!", ch, NULL, NULL, TO_ROOM);
     for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
@@ -202,6 +200,8 @@ void do_spinfist(CHAR_DATA *ch, char *argument)
         }
     }
 
+    ch->cooldown[gsn_spinfist] = 10;
+
     return;
 }
 
@@ -218,6 +218,8 @@ void do_aurabolt(CHAR_DATA *ch, char *argument)
 void do_palmstrike(CHAR_DATA *ch, char *argument)
 {
     pug_attack(ch, argument, gsn_palmstrike);
+
+    ch->cooldown[gsn_palmstrike] = 5;
 }
 
 void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
@@ -272,8 +274,7 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
 
     if (gsn == gsn_palmstrike)
     {
-       dam *= 2;
-       ch->cooldown[gsn_palmstrike] = 5;
+       dam *= 4;
     }
 
     WAIT_STATE(ch, skill_table[gsn].beats);
@@ -281,6 +282,9 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
     raise_skill(ch, gsn);
 
     int element = ELE_PHYSICAL;
+
+    if (gsn == gsn_aurabolt)
+       element = ELE_PHYISCAL | ELE_HOLY;
 
     if (IS_NPC(ch))
         dam /= 2;
