@@ -475,7 +475,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
     * Calc damage.
     * Tried to make it easy for players to hit mobs... --Stephen
     */
-   int dam_bonus = get_curr_str(ch) * get_psuedo_level(ch) / 100;
+   int dam_bonus = get_curr_str(ch) * get_psuedo_level(ch) / 50;
 
    if (IS_NPC(ch))
    {
