@@ -282,7 +282,7 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
     int element = ELE_PHYSICAL;
 
     if (gsn == gsn_aurabolt)
-        element = ELE_PHYISCAL | ELE_HOLY;
+        element = ELE_PHYSICAL | ELE_HOLY;
 
     if (IS_NPC(ch))
         dam /= 2;
