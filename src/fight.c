@@ -383,15 +383,15 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
     * Figure out the type of damage message.
     */
    wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
-   if (!IS_WEAPON(wield))
-      wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
    if (IS_WEAPON(wield))
       dualwield = get_eq_char(ch, WEAR_HOLD_HAND_R);
    if (!IS_WEAPON(wield))
-      wield = NULL;
+      wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
    if (!IS_WEAPON(wield))
       wield = get_eq_char(ch, WEAR_TWO_HANDED);
-      
+   if (!IS_WEAPON(wield))
+      wield = NULL;
+
    if (dt == TYPE_UNDEFINED)
    {
       dt = TYPE_HIT;
