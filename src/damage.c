@@ -249,7 +249,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         crit_chance = get_spell_crit(ch);
     else
     {
-        dam += get_damroll(ch) * 3 / 4;
+        dam += get_damroll(ch)/2;
         crit_chance = get_crit(ch);
     }
 
