@@ -1852,7 +1852,6 @@ void do_score(CHAR_DATA *ch, char *argument)
 
 void do_affected(CHAR_DATA *ch, char *argument)
 {
-
    char buf[MAX_STRING_LENGTH];
    AFFECT_DATA *paf;
    buf[0] = '\0';
@@ -1869,17 +1868,19 @@ void do_affected(CHAR_DATA *ch, char *argument)
          if (ch->level >= 16)
          {
             char duration[MSL];
-            if (paf->duration_type == DURATION_HOUR)
-               sprintf(duration, "hours");
+            if (paf->duration < 0 && paf->duration_type == DURATION_HOUR)
+               sprintf(duration, "permanent duration");
+            else if (paf->duration_type == DURATION_HOUR)
+               sprintf(duration, "%d hours", paf->duration);
             else
-               sprintf(duration, "rounds");
+               sprintf(duration, "%d rounds", paf->duration);
             if (paf->location > APPLY_NONE)
             {
                sprintf(buf,
-                       " modifies %s by %d for %d %s", affect_loc_name(paf->location), paf->modifier, paf->duration, duration);
+                       " modifies %s by %d for %s", affect_loc_name(paf->location), paf->modifier, duration);
             }
             else
-               sprintf(buf, " lasts for %d %s", paf->duration, duration);
+               sprintf(buf, " lasts for %s", duration);
             send_to_char(buf, ch);
          }
 
@@ -2195,7 +2196,10 @@ void do_who(CHAR_DATA *ch, char *argument)
             sprintf(buf3, "   AMBASSADOR     ");
          }
          else if (is_adept(wch))
-            sprintf(buf3, " %s", wch->pcdata->who_name);
+         {
+           class = get_adept_name(wch);
+           sprintf(buf3, "  %14s ", class);
+         }
          {
             if (wch->level >= (MAX_LEVEL - 4) || str_cmp(wch->pcdata->who_name, "off"))
             {
@@ -4621,8 +4625,6 @@ void do_gain(CHAR_DATA *ch, char *argument)
       info(buf, 1);
       free_string(ch->pcdata->who_name);
       ch->pcdata->who_name = str_dup(get_adept_name(ch));
-      if (ch->adept[c] == 1)
-         ch->exp /= 1000;
       advance_level_adept(ch, c, TRUE);
       return;
    }

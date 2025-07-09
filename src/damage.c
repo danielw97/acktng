@@ -37,27 +37,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (dam <= 0)
         dam = 1;
 
-    int skin_mods;
-    if (!IS_NPC(victim))
-        skin_mods = race_table[victim->race].race_flags;
-    else
-        skin_mods = (victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags);
-
-    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_TOUGH_SKIN))
-        dam = dam * 0.9;
-
-    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_STONE_SKIN))
-        dam = dam * 0.8;
-
-    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_IRON_SKIN))
-        dam = dam * 0.7;
-
-    if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC)))
-        dam /= 2;
-
-    if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)) && IS_EVIL(ch))
-        dam -= dam / 4;
-
     bool can_reflect = TRUE;
     bool can_absorb = TRUE;
 
@@ -208,7 +187,8 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         if (stance_app[ch->stance].spell_mod != 0)
             dam_modifier += stance_app[ch->stance].spell_mod / 10;
     }
-    else
+
+    if (IS_SET(element, ELE_PHYSICAL) )
     {
         if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
             dam_modifier += 0.2;
@@ -236,7 +216,10 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (!IS_SET(element, ELE_PHYSICAL))
         crit_chance = get_spell_crit(ch);
     else
+    {
+        dam += get_damroll(ch) * 3 / 4;
         crit_chance = get_crit(ch);
+    }
 
     if (crit_possible && number_range(0, 100) < crit_chance)
         critical = TRUE;
@@ -273,6 +256,27 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
         dam += dam * dam_mod / 100;
     }
+
+    int skin_mods;
+    if (!IS_NPC(victim))
+        skin_mods = race_table[victim->race].race_flags;
+    else
+        skin_mods = (victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags);
+
+    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_TOUGH_SKIN))
+        dam = dam * 0.9;
+
+    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_STONE_SKIN))
+        dam = dam * 0.8;
+
+    if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_IRON_SKIN))
+        dam = dam * 0.7;
+
+    if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC)))
+        dam /= 2;
+
+    if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)) && IS_EVIL(ch))
+        dam -= dam / 4;
 
     AFFECT_DATA *paf, *paf_next;
 
@@ -313,7 +317,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
        }
        else
        {
-         if (dt > 0 && dt < TYPE_HIT)
+         if (IS_SET(element, ELE_PHYSICAL))
          {
           OBJ_DATA *shield = get_eq_char(victim, WEAR_HOLD_HAND_L);
           if (shield == NULL || shield->item_type != ITEM_ARMOR)
@@ -321,7 +325,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
           if (shield == NULL || shield->item_type != ITEM_ARMOR)
              shield = get_eq_char(victim, WEAR_BUCKLER);
 
-          if (paf->type == gsn_riposte)
+          if (paf->type == gsn_riposte && dt > 0 && dt < TYPE_HIT)
           {
              ch->stunTimer = 1;
              sprintf(buf, "$N's perfect riposte interrupts $n's %s.", skill_table[dt].name);
@@ -357,7 +361,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
              send_to_char(buf, victim);
              sprintf(buf, "$N blocks your %s with their chi", skill_table[dt].name);
              act(buf, ch, NULL, victim, TO_CHAR);
-             dam = dam * 0.15;
+             dam = dam * 0.1;
           }
          }
        }
@@ -947,17 +951,6 @@ struct dam_table_str dam_table[] = {
 
 void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical)
 {
-    static char *const attack_table[] = {
-        "hit",
-        "slice", "stab", "slash", "whip", "claw",
-        "blast", "pound", "crush", "grip", "bite",
-        "pierce", "suction", "tail whip"};
-
-    static char *const martial_table[] = {
-        "head punch", "high kick", "vital kick", "head bash", "side kick", "spinning elbow",
-        "body punch", "low kick", "foot stomp", "knee smash", "kidney punch", "arm twist",
-        "uppercut", "rabbit punch", "foot sweep"};
-
     char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH], critical_message[MAX_STRING_LENGTH];
     const char *vs;  /* Singular */
     const char *vp;  /* Plural   */
@@ -996,21 +989,9 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
      */
 
     if (dt == TYPE_MARTIAL)
-        attack = martial_table[number_range(0, 14)];
-    else if (dt >= 0 && dt < MAX_SKILL)
-        attack = skill_table[dt].noun_damage;
-    else if (dt >= TYPE_HIT && dt < TYPE_HIT + sizeof(attack_table) / sizeof(attack_table[0]))
-    {
-        check_dt = UMAX(0, (dt - TYPE_HIT));
-        check_dt = UMIN(check_dt, 13);
-        attack = attack_table[check_dt];
-    }
-    else
-    {
-        bug("Dam_message: bad dt %d.", dt);
-        dt = TYPE_HIT;
-        attack = attack_table[0];
-    }
+        dt = TYPE_HIT + 13 + number_range(0,14);
+
+    attack = get_dt_name(dt);
 
     sprintf(buf1, "%s$n %s%s $N%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message);
     sprintf(buf2, "%sYou %s%s $N%s%s your %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vs, col, str, attack, punct, dam, critical_message);
@@ -1025,13 +1006,7 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
 
     if (dead)
     {
-        int foo;
-
-        foo = sizeof(attack_table) / sizeof(attack_table[0]);
-        if (dt < TYPE_HIT)
-            dt = TYPE_HIT;
-
-        death_message(ch, victim, (dt - TYPE_HIT), foo);
+        death_message(ch, victim, dt);
     }
     return;
 }
@@ -1132,7 +1107,7 @@ void obj_damage(OBJ_DATA *obj, CHAR_DATA *victim, int dam)
     return;
 }
 
-void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt, int max_dt)
+void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 {
     /*
      * Used to display assorted death messages, based on dt
@@ -1218,8 +1193,8 @@ void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt, int max_dt)
         }
     }
 
-    if ((dt <= max_dt && dt > 0) || dt == TYPE_MARTIAL || dt == gsn_counter)
-        switch (dt)
+    if (dt >= TYPE_HIT || dt == TYPE_MARTIAL || dt == gsn_counter)
+        switch (dt-TYPE_HIT)
         {
         case 1: /* slice */
         case 3: /* slash */

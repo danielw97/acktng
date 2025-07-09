@@ -311,8 +311,19 @@ void do_morale(CHAR_DATA *ch, char *argument)
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
+   int stat = ch->remort[CLASS_KNI];
+
+   if (ch->remort[CLASS_PAL] > stat)
+      stat = ch->remort[CLASS_PAL];
+
    if (!can_use_skill_message(ch, gsn_morale))
       return;
+
+   if (ch->fighting == NULL)
+   {
+      send_to_char("You must be fighting to do this!\n\r",ch);
+      return;
+   }
 
    raise_skill(ch, gsn_morale);
 
@@ -324,12 +335,10 @@ void do_morale(CHAR_DATA *ch, char *argument)
       act("$n seems much more willing to fight.", gch, NULL, NULL, TO_ROOM);
       send_to_char("You are inspired to fight better!\n\r", gch);
       af.type = gsn_morale;
-      if (ch == gch)
-         af.duration = -1;
-      else
-         af.duration = 4 + (get_psuedo_level(ch) / 5);
+      af.duration_type = DURATION_ROUND;
+      af.duration = 50;
       af.location = APPLY_DAMROLL;
-      af.modifier = get_psuedo_level(ch) / 10;
+      af.modifier = stat/2;
       af.bitvector = 0;
       affect_to_char(gch, &af);
    }
@@ -341,8 +350,19 @@ void do_leadership(CHAR_DATA *ch, char *argument)
    AFFECT_DATA af;
    CHAR_DATA *gch;
 
+   int stat = ch->remort[CLASS_KNI];
+
+   if (ch->remort[CLASS_PAL] > stat)
+      stat = ch->remort[CLASS_PAL];
+
    if (!can_use_skill_message(ch, gsn_leadership))
       return;
+
+   if (ch->fighting == NULL)
+   {
+      send_to_char("You must be fighting to do this!\n\r",ch);
+      return;
+   }
 
    raise_skill(ch, gsn_leadership);
 
@@ -354,12 +374,10 @@ void do_leadership(CHAR_DATA *ch, char *argument)
       act("$n looks more courageous!", gch, NULL, NULL, TO_ROOM);
       send_to_char("You feel courage wash over you!\n\r", gch);
       af.type = gsn_leadership;
-      if (ch == gch)
-         af.duration = -1;
-      else
-         af.duration = 4 + (get_psuedo_level(ch) / 5);
+      af.duration_type = DURATION_ROUND;
+      af.duration = 50;
       af.location = APPLY_HITROLL;
-      af.modifier = get_psuedo_level(ch) / 10;
+      af.modifier = stat/2;
       af.bitvector = 0;
       affect_to_char(gch, &af);
    }

@@ -610,15 +610,15 @@ char *get_adept_name(CHAR_DATA *ch)
     * this is weak for now..will eventually have like 200 total names, based on the remort
     * classes the adept has
     */
-   int i = 0;
+   int max = 0;
 
    for (int i = 0; i < MAX_CLASS; i++)
    {
-      if (ch->adept[i] > 0)
-         break;
+      if (ch->adept[i] > max)
+         max = ch->adept[i];
    }
 
-   switch (ch->adept[i])
+   switch (max)
    {
    case 1:
       return "@@W    Mystic    @@N";

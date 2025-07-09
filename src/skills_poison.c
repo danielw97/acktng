@@ -115,7 +115,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
     * Work out damage
     */
    dam = number_range(obj->value[1], obj->value[2]);
-   dam += number_range(get_psuedo_level(ch) / 2, get_psuedo_level(ch) * 2) + get_damroll(ch) / 2;
+   dam += number_range(get_curr_dex(ch) * get_psuedo_level(ch) / 5, get_curr_dex(ch) * get_psuedo_level(ch) / 2);
    dam += dam * ch->lvl[CLASS_THI] / 100;
    dam += dam * ch->remort[CLASS_ASS] / 100;
    dam += dam * ch->remort[CLASS_WLK] / 100 * .75;

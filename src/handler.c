@@ -655,7 +655,7 @@ int get_hitroll(CHAR_DATA *ch)
    if (IS_NPC(ch))
    {
       hit += ch->hr_mod;
-      hit += ch->level;
+      hit += ch->level*2;
    }
 
    hit += get_psuedo_level(ch) / 3;
@@ -846,6 +846,14 @@ bool is_same_room(CHAR_DATA *ch, CHAR_DATA *victim)
 
 bool can_use_skill_message(CHAR_DATA *ch, int gsn)
 {
+   char buf[MSL];
+   if (ch->cooldown[gsn] > 0)
+   {
+      sprintf(buf, "That skill is still on cooldown for %d.\n\r", ch->cooldown[gsn]);
+      send_to_char(buf,ch);
+      return FALSE;
+   }
+
    if (!can_use_skill(ch, gsn))
    {
       send_to_char("You don't know how to do that\n\r", ch);
@@ -857,6 +865,14 @@ bool can_use_skill_message(CHAR_DATA *ch, int gsn)
 
 bool can_use_skill_by_name_message(CHAR_DATA *ch, char *skill)
 {
+   char buf[MSL];
+   if (ch->cooldown[skill_lookup(skill)] > 0)
+   {
+      sprintf(buf, "That skill is still on cooldown for %d.\n\r", ch->cooldown[skill_lookup(skill)]);
+      send_to_char(buf,ch);
+      return FALSE;
+   }
+
    if (!can_use_skill_by_name(ch, skill))
    {
       send_to_char("You don't know how to do that\n\r", ch);
@@ -876,6 +892,9 @@ bool can_use_skill_by_name(CHAR_DATA *ch, char *skill)
 bool can_use_skill(CHAR_DATA *ch, int gsn)
 {
    if (gsn == -1 || gsn >= MAX_SKILL)
+      return FALSE;
+
+   if (ch->cooldown[gsn] > 0)
       return FALSE;
 
    if (IS_NPC(ch))
@@ -1001,10 +1020,35 @@ bool skill_success(CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus)
       chance += (get_psuedo_level(ch) - get_psuedo_level(victim)) / 2;
    }
 
+   chance += bonus;
+
    if (number_percent() < chance)
       return TRUE;
 
    return FALSE;
+}
+
+char *get_dt_name(int sn)
+{
+    static char *const attack_table[] = {
+        "hit",
+        "slice", "stab", "slash", "whip", "claw",
+        "blast", "pound", "crush", "grip", "bite",
+        "pierce", "suction", "tail whip",
+        "head punch", "high kick", "vital kick", "head bash", "side kick", "spinning elbow",
+        "body punch", "low kick", "foot stomp", "knee smash", "kidney punch", "arm twist",
+        "uppercut", "rabbit punch", "foot sweep"};
+
+   if (sn < MAX_SKILL && sn > 0)
+      return skill_table[sn].name;
+
+   if (sn >= TYPE_HIT)
+   {
+      return attack_table[sn-TYPE_HIT];
+   }
+
+   if (sn < 0)
+   return "bugged damage type";
 }
 
 /*

@@ -2321,8 +2321,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "frenzy", {182, 182, 182, 27, 182, 52,
-               182, 41, 182, 28, 182, 34},
+    "frenzy", {182, 182, 182, 27, 182, 182,
+               182, 41, 182, 28, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_frenzy, SLOT( 0 ), 0, 24, FALSE,
     "frenzy", "!FRENZY!",
@@ -2403,7 +2403,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "morale", {182, 21, 182, 10, 182, 182,
-               182, 21, 182, 10, 182, 182},
+               182, 182, 182, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_morale, SLOT( 0 ), 75, 24, TRUE,
     "Morale", "!Morale!",
@@ -2412,7 +2412,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "leadership", {182, 24, 182, 12, 182, 182,
-                   182, 24, 182, 12, 182, 182},
+                   182, 182, 182, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_STANDING,
     &gsn_leadership, SLOT( 0 ), 75, 24, TRUE,
     "Leadership", "!Leadership!",
@@ -2433,7 +2433,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
                    182, 182, 182, 182, 182, 19},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     &gsn_palmstrike, SLOT( 0 ), 0, 0, TRUE,
-    "", "!Palm Strike!",
+    "Palmstrike", "!Palm Strike!",
     ""},
 
 
@@ -3173,6 +3173,24 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "Cripple", "You are no longer crippled!",
     "$n is no longer crippled."},
 
+
+   {
+    MORTAL, NORM,
+    "pummel",        {182, 182, 182, 182, 182, 66},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_pummel, SLOT( 0 ), 80, 12, TRUE,
+    "Pummel", "!!Pummel!!",
+    "!!$n Pummel!!"},
+
+   {
+    REMORT, NORM,
+    "aurabolt",        {182, 182, 182, 182, 182, 34,
+                        182, 182, 182, 182, 182, 41},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_aurabolt, SLOT( 0 ), 80, 12, TRUE,
+    "Aurabolt", "!!Aurabolt!!",
+    "!!$n Aurabolt!!"},
+
    {
     REMORT, NORM,
     "chiblock",        {182, 182, 182, 182, 182, 86,
@@ -3190,6 +3208,31 @@ const struct skill_type skill_table[MAX_SKILL] = {
     &gsn_spinfist, SLOT( 0 ), 80, 12, TRUE,
     "Spinfist", "!!SPINFIST!!",
     "!!$n SPINFIST!!"},
+
+   {
+    REMORT, NORM,
+    "phantomfist",     {182, 182, 182, 182, 182, 51,
+                        182, 182, 182, 182, 182, 34},
+    spell_null, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
+    &gsn_phantomfist, SLOT( 0 ), 80, 12, TRUE,
+    "Phantomfist (bugged)", "You no longer move like a phantom",
+    "$n no longer moves like a phantom."},
+
+   {
+    MORTAL, NORM,
+    "Mind Over Body",  {182, 182, 182, 182, 182, 21},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_mindoverbody, SLOT( 0 ), 80, 24, TRUE,
+    "Mind Over Body", "You lose your focus on your mind over your body",
+    "$n loses focus on mind over body."},
+
+   {
+    MORTAL, NORM,
+    "Flurry",  {182, 182, 182, 182, 182, 45},
+    spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    &gsn_flurry, SLOT( 0 ), 80, 24, TRUE,
+    "Flurry", "",
+    ""},
 
    {
     REMORT, NORM,
@@ -3238,8 +3281,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "sonic blast", {182, 182, 182, 182, 182, 80,
-                    182, 182, 182, 182, 182, 80},
+    "sonic blast", {182, 182, 182, 182, 182, 182,
+                    182, 182, 182, 182, 182, 182},
     spell_sonic_blast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 675 ), 140, 12, TRUE,
     "Sonic Blast", "@@N$nFeels much better!",

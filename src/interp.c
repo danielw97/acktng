@@ -411,7 +411,18 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"spinfist", do_spinfist, POS_FIGHTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
-
+    {"pummel", do_pummel, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+    {"aurabolt", do_aurabolt, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+    {"phantomfist", do_phantomfist, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+    {"mindoverbody", do_mindoverbody, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+    {"flurry", do_flurry, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
+    {"fleche", do_fleche, POS_FIGHTING, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_SKILL},
 
 
     /*

@@ -579,6 +579,9 @@ struct char_data
    int adept[MAX_CLASS];
    int adept_level;
    int combo[MAX_COMBO];
+   int holy_power;
+   int arcane_power;
+   int psionic_power;
    int sentence; /* For new legal system */
    sh_int invis; /* For wizinvis imms - lvl invis to */
    sh_int incog; /* Same as above except for incognito --Flar */
@@ -1358,6 +1361,7 @@ int get_damroll args((CHAR_DATA * ch));
 int get_stat args((CHAR_DATA * ch, int stat));
 bool raise_skill args( (CHAR_DATA *ch, int gsn) );
 bool skill_success args( (CHAR_DATA *ch, CHAR_DATA *victim, int gsn, int bonus) );
+char *get_dt_name args( (int sn) );
 int get_generation_chance args(( ));
 char *stat_to_string args((int stat));
 char *class_order args((int race));

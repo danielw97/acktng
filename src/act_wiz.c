@@ -1040,9 +1040,9 @@ void do_mstat(CHAR_DATA *ch, char *argument)
    for (paf = victim->first_affect; paf != NULL; paf = paf->next)
    {
       sprintf(buf,
-              "Spell: '%s' modifies %s by %d for %d hours with bits %s.\n\r",
+              "Spell: '%s' modifies %s by %d for %d %s with bits %s.\n\r",
               skill_table[(int)paf->type].name,
-              affect_loc_name(paf->location), paf->modifier, paf->duration, affect_bit_name(paf->bitvector));
+              affect_loc_name(paf->location), paf->modifier, paf->duration, paf->duration_type ? "rounds" : "hours", affect_bit_name(paf->bitvector));
       strcat(buf1, buf);
    }
 

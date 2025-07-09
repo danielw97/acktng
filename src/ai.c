@@ -290,7 +290,7 @@ bool generate_phys(CHAR_DATA *ch)
    if (get_psuedo_level(ch) > 150)
       max_skills += number_range(0, 5);
 
-   ch->hr_mod += number_range(0, get_psuedo_level(ch)*2);
+   ch->hr_mod += number_range(get_psuedo_level(ch), get_psuedo_level(ch)*2);
    ch->dr_mod += number_range(0, get_psuedo_level(ch)*2);
    ch->ac_mod -= number_range(0, get_psuedo_level(ch)*2);
    ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);

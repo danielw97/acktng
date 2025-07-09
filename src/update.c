@@ -275,8 +275,11 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
    int add_mana;
    int add_move;
 
-   if (ch->adept[class] < 0)
+   if (ch->adept[class] < 1)
+   {
+      ch->exp /= 1000;
       ch->adept[class] = 1;
+   }
    else if (ch->adept[class] < MAX_ADEPT)
       ch->adept[class] += 1;
    else
@@ -369,12 +372,61 @@ void gain_exp(CHAR_DATA *ch, long_int gain)
    return;
 }
 
-void round_update(CHAR_DATA *ch)
+void round_update()
+{
+   CHAR_DATA *ch;
+   CHAR_DATA *ch_next;
+   for (ch = first_char; ch; ch = ch_next)
+   {
+      ch_next = ch->next;
+
+      round_char_update(ch);
+   }
+
+}
+
+void round_char_update(CHAR_DATA *ch)
 {
    char buf[MSL];
-   AFFECT_DATA *paf;
-   AFFECT_DATA *paf_next;
 
+   if (ch == NULL)
+      return;
+
+   update_heat_armor(ch);
+   update_cooldown(ch);
+   round_update_hot(ch);
+   round_update_dot(ch);
+   update_buff_duration(ch, DURATION_ROUND);
+
+   if (ch->fighting == NULL && ch->chi > 0)
+   {
+      send_to_char("Your chi has dissipated as you are not fighting.\n\r",ch);
+      ch->chi = 0;
+   }
+}
+
+void update_cooldown(CHAR_DATA *ch)
+{
+   char buf[MSL];
+
+   for (int i = 0; i < MAX_SKILL; i++)
+   {
+      if (ch->cooldown[i] > 0)
+      {
+         ch->cooldown[i]--;
+
+         if (ch->cooldown[i] == 0)
+         {
+            sprintf(buf, "@@y%s's@@N cooldown has elapsed!\n\r", skill_table[i].name);
+            send_to_char(buf,ch);
+         }
+      }
+   }
+
+}
+
+void update_heat_armor(CHAR_DATA *ch)
+{
    /* Heated items */
    if (ch->hit > 0 && ch->in_room != NULL && get_room_index(ch->in_room->vnum) != NULL && item_has_apply(ch, ITEM_APPLY_HEATED))
    {
@@ -394,23 +446,27 @@ void round_update(CHAR_DATA *ch)
          }
       }
    }
-   // Hots and dots
+}
+
+void update_buff_duration(CHAR_DATA *ch, int duration_type)
+{
+   AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
+
    for (paf = ch->first_affect; paf != NULL; paf = paf_next)
    {
       paf_next = paf->next;
 
-      if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
+      if (paf->duration_type == duration_type)
       {
-         heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
-      }
-      if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 && is_same_room(ch, paf->caster))
-      {
-         do_damage(paf->caster, ch, paf->modifier, paf->type, paf->element, FALSE);
-      }
-      if (paf->duration_type == DURATION_ROUND)
-      {
-         if (paf->duration < 0)
+         if (--paf->duration < 1)
          {
+            if (paf->duration < 0 && paf->duration_type == DURATION_HOUR)
+            {
+               paf->duration = -1;
+               continue;
+            }
+
             if (paf->type > 0 && skill_table[paf->type].msg_off)
             {
                send_to_char(skill_table[paf->type].msg_off, ch);
@@ -421,29 +477,34 @@ void round_update(CHAR_DATA *ch)
 
             affect_remove(ch, paf);
          }
-         else
-            paf->duration--;
       }
    }
 
-   for (int i = 0; i < MAX_SKILL; i++)
+}
+
+void round_update_hot(CHAR_DATA *ch)
+{
+   AFFECT_DATA *paf;
+
+   for (paf = ch->first_affect; paf != NULL; paf = paf->next)
    {
-      if (ch->cooldown[i] > 0)
+      if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
       {
-         ch->cooldown[i]--;
-
-         if (ch->cooldown[i] == 0)
-         {
-            sprintf(buf, "@@y%s's@@N cooldown has elapsed!\n\r",ch);
-            send_to_char(buf,ch);
-         }
+         heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
       }
    }
+}
 
-   if (ch->fighting == NULL && ch->chi > 0)
+void round_update_dot(CHAR_DATA *ch)
+{
+   AFFECT_DATA *paf;
+
+   for (paf = ch->first_affect; paf != NULL; paf = paf->next)
    {
-      send_to_char("Your chi has dissipated as you are not fighting.\n\r",ch);
-      ch->chi = 0;
+      if (paf->location == APPLY_DOT && paf->caster != NULL && ch->hit > 0 && is_same_room(ch, paf->caster))
+      {
+         do_damage(paf->caster, ch, paf->modifier, paf->type, paf->element, FALSE);
+      }
    }
 }
 
@@ -1519,65 +1580,7 @@ void char_update(void)
          }
       }
 
-      for (paf = ch->first_affect; paf != NULL; paf = paf_next)
-      {
-         paf_next = paf->next;
-         if (paf->duration_type == DURATION_HOUR)
-         {
-            if (paf->duration > 0)
-            {
-               paf->duration--;
-
-               /*
-                * We need a check here for spells that keep working...
-                */
-               if (paf->type == skill_lookup("blood leach"))
-               {
-                  if (paf->caster != NULL && !IS_NPC(paf->caster))
-                  {
-                     send_to_char("You feel the blood leach sapping your strength.\n\r", ch);
-                     act("You feel a surge of blood, coming from your blood leach on $N.", paf->caster, NULL, ch, TO_CHAR);
-                     paf->caster->pcdata->bloodlust += (10 - paf->caster->pcdata->generation);
-                     if (paf->caster->pcdata->bloodlust > paf->caster->pcdata->bloodlust_max)
-                        paf->caster->pcdata->bloodlust = paf->caster->pcdata->bloodlust_max;
-                     damage(ch, ch, paf->caster->pcdata->vamp_level * 20, TYPE_UNDEFINED);
-                  }
-               }
-               if (paf->type == skill_lookup("black hand"))
-               {
-                  if (paf->caster != NULL && !IS_NPC(paf->caster))
-                  {
-                     send_to_char("You feel the Black Hand choking you.\n\r", ch);
-                     ch->hit -= paf->modifier;
-                  }
-               }
-               if ((paf->type == skill_lookup("adrenaline bonus")) && (ch->fighting == NULL) && (ch->hit > 10))
-               {
-                  ch->hit = UMAX(10, (ch->hit + (paf->duration * 30)));
-                  ch->move = UMAX(10, (ch->move + (paf->duration * 80)));
-                  send_to_char("@@NYou feel the affects of your @@eadrenaline rush@@N wear off, leaving you looking forward to more combat.\n\r", ch);
-                  affect_remove(ch, paf);
-               }
-            }
-            else if (paf->duration < 0)
-               ;
-            else
-            {
-               if (paf_next == NULL || paf_next->type != paf->type || paf_next->duration > 0)
-               {
-                  if (paf->type > 0 && skill_table[paf->type].msg_off)
-                  {
-                     send_to_char(skill_table[paf->type].msg_off, ch);
-                     send_to_char("\n\r", ch);
-                  }
-                  if (paf->type > 0 && skill_table[paf->type].room_off)
-                     act(skill_table[paf->type].room_off, ch, NULL, NULL, TO_ROOM);
-               }
-
-               affect_remove(ch, paf);
-            }
-         }
-      }
+      update_buff_duration(ch, DURATION_HOUR);
 
       /*
        * Careful with the damages here,
@@ -2134,6 +2137,7 @@ void update_handler(void)
       alarm_update();
       pulse_violence = PULSE_VIOLENCE;
       violence_update();
+      round_update();
    }
 
    if (--pulse_mobile <= 0)

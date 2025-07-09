@@ -115,19 +115,14 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
     if (!subtract_energy_cost(ch, gsn))
         return;
 
-    dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 10, get_psuedo_level(ch) * get_curr_str(ch) / 5);
+    dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 5, get_psuedo_level(ch) * get_curr_str(ch) / 2);
 
     if (dam < 1)
         dam = 1;
 
-    dam += get_damroll(ch) / 2;
-
     float dam_mod = 0.0;
 
-    if (ch->lvl[CLASS_WAR] > ch->lvl[CLASS_PUG])
-        dam_mod += ch->lvl[CLASS_WAR] / 100;
-    else
-        dam_mod += ch->lvl[CLASS_PUG] / 100;
+    dam_mod += ch->lvl[CLASS_WAR] / 100;
 
     if (skill_table[gsn].flag1 == REMORT || skill_table[gsn].flag1 == ADEPT)
     {
@@ -183,11 +178,6 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
     }
 }
 
-void do_palmstrike(CHAR_DATA *ch, char *argument)
-{
-    war_attack(ch, argument, gsn_headbutt);
-}
-
 void do_headbutt(CHAR_DATA *ch, char *argument)
 {
     war_attack(ch, argument, gsn_headbutt);
@@ -223,7 +213,7 @@ void do_fleche(CHAR_DATA *ch, char *argument)
 {
     if (!is_valid_finisher(ch))
     {
-        send_to_char("You are not prepared for a finisher!n\r", ch);
+        send_to_char("You are not prepared for a finisher!\n\r", ch);
         return;
     }
 
@@ -495,19 +485,25 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 {
     int i;
     int max = get_max_combo(ch);
-    int punch_cnt = 0, knee_cnt = 0, palmstrike_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
+    int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
     int mult = 23;
 
     for (i = 0; i < max; i++)
     {
-        if (ch->combo[i] == -1)
+        if (ch->combo[i] == gsn)
+        {
+           send_to_char("Bad combo.\n\r",ch);
+           reset_combo(ch);
+           i = 0;
+        }
+        if (ch->combo[i] == -1 || ch->combo[i] == 0)
         {
             ch->combo[i] = gsn;
             break;
         }
     }
 
-    if (is_valid_finisher(ch) && !is_ready_finisher(ch))
+    if (is_valid_finisher(ch))
         send_to_char("@@yYou are ready to perform a finisher!@@N\n\r", ch);
 
     if (!is_ready_finisher(ch))
@@ -546,9 +542,6 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
         if (ch->combo[i] == gsn_bash)
             bash_cnt += mult;
-
-        if (ch->combo[i] == gsn_palmstrike)
-            palmstrike_cnt += mult;
 
         if (ch->combo[i] == gsn_charge)
             charge_cnt += mult;
@@ -663,18 +656,10 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
 
         chance += charge_cnt;
 
-        if (roll < chance + palmstrike_cnt)
-        {
-            war_attack(ch, victim->name, gsn_palmstrike);
-            continue;
-        }
-
-        chance += palmstrike_cnt;
-
         if (roll < chance + fleche_cnt)
         {
-            war_attack(ch, victim->name, gsn_fleche);
-            continue;
+           war_attack(ch, victim->name, gsn_fleche);
+           continue;
         }
 
         chance += fleche_cnt;
@@ -706,12 +691,9 @@ int get_combo_count(CHAR_DATA *ch)
 
     for (cnt = 0; cnt < get_max_combo(ch); cnt++)
     {
-        for (int j = 0; j < get_max_combo(ch); j++)
+        if (ch->combo[cnt] < 1 || ch->combo[cnt] > MAX_SKILL)
         {
-            if (cnt == j)
-                continue;
-            if (ch->combo[cnt] == ch->combo[j])
-                return cnt;
+           return cnt;
         }
     }
 
@@ -720,7 +702,7 @@ int get_combo_count(CHAR_DATA *ch)
 
 bool is_valid_finisher(CHAR_DATA *ch)
 {
-    if (get_combo_count(ch) == get_max_combo(ch) - 1)
+    if (get_combo_count(ch) == (get_max_combo(ch) - 1))
         return TRUE;
 
     return FALSE;
@@ -736,7 +718,7 @@ bool is_ready_finisher(CHAR_DATA *ch)
 
 void reset_combo(CHAR_DATA *ch)
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < MAX_COMBO; i++)
         ch->combo[i] = -1;
 }
 

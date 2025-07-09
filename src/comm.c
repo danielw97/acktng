@@ -1498,7 +1498,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          if (is_valid_finisher(ch) )
             sprintf(buf2, " @@rR@@N");
          else
-            sprintf(buf2, " %d", get_combo_count(ch));
+            sprintf(buf2, " %d/%d", get_combo_count(ch), get_max_combo(ch));
          i = buf2;
          break;
       case 'i':

@@ -388,7 +388,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
    for (paf = ch->first_affect; paf != NULL; paf = paf->next)
    {
-      fprintf(fp, "Affect %3d %3d %3d %3d %10d\n", paf->type, paf->duration, paf->modifier, paf->location, paf->bitvector);
+      fprintf(fp, "Affect %3d %3d %3d %3d %3d %10d\n", paf->type, paf->duration, paf->duration_type, paf->modifier, paf->location, paf->bitvector);
    }
    fprintf(fp, "End\n\n");
    return;
@@ -888,6 +888,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             GET_FREE(paf, affect_free);
             paf->type = fread_number(fp);
             paf->duration = fread_number(fp);
+            paf->duration_type = fread_number(fp);
             paf->modifier = fread_number(fp);
             paf->location = fread_number(fp);
             paf->bitvector = fread_number(fp);

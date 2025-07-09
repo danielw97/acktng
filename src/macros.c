@@ -157,22 +157,22 @@ long exp_to_level_adept(CHAR_DATA *ch)
 {
    long exp;
    int i;
-   bool found = FALSE;
+   int max = 0;
 
-   for (i = 0; i < MAX_CLASS && !found; i++)
+   for (i = 0; i < MAX_CLASS; i++)
    {
-      if (ch->adept[i] > 0)
-         found = TRUE;
+      if (ch->adept[i] > max)
+         max = ch->adept[i];
    }
 
-   if (!found)
+   if (!max)
       return 6969;
 
-   exp = (30000 + (ch->adept[i] * 5000));
+   exp = (30000 + (max * 5000));
 
-   exp += exp * ch->adept[i] / 2;
+   exp += exp * max / 2;
 
-   return exp * 10;
+   return exp * 3;
 }
 
 long exp_to_level_remort(CHAR_DATA *ch, int index)
@@ -499,6 +499,19 @@ bool is_adept(CHAR_DATA *ch)
    }
 
    return FALSE;
+}
+
+int get_adept_level(CHAR_DATA *ch)
+{
+   int max = 0;
+
+   for(int i = 0; i < MAX_CLASS; i++)
+   {
+      if (ch->adept[i] > max)
+         max = ch->adept[i];
+   }
+
+   return max;
 }
 
 int get_item_value(OBJ_DATA *obj)

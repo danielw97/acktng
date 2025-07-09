@@ -106,7 +106,6 @@ void violence_update(void)
          ch->hit = (UMIN(ch->max_hit, (ch->hit + ch->max_hit / 150)));
       }
 
-      round_update(ch);
       /* slight damage for players in a speeded stance, simulates fatigue */
 
       if (!IS_NPC(ch) && (stance_app[ch->stance].speed_mod > 1))
@@ -373,6 +372,10 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
     * Can't beat a dead char!
     * Guard against weird room-leavings.
     */
+
+   if (ch == NULL || victim == NULL)
+      return;
+
    if (victim->position == POS_DEAD || ch->in_room != victim->in_room)
       return;
 
@@ -490,11 +493,6 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       else
          dam = UMAX(number_range(2, 4), ch->level / 4);
    }
-
-   /*
-    * Bonuses.
-    */
-   dam += number_range(get_damroll(ch) * 13 / 20, get_damroll(ch) * 15 / 20);
 
    if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword))
    {
@@ -872,7 +870,7 @@ int get_parry(CHAR_DATA *ch)
 
    if (IS_NPC(ch))
    {
-      chance = get_psuedo_level(ch) / 3.2 + get_curr_str(ch) * 2 / 5;
+      chance = get_curr_str(ch);
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
    }
@@ -890,10 +888,13 @@ int get_parry(CHAR_DATA *ch)
       if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
          return 0;
 
-      chance = 20 + get_curr_str(ch) * 3 / 5;
+      chance = get_curr_str(ch);
    }
    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
       chance += 5;
+
+   chance += stance_app[ch->stance].speed_mod;
+   chance += get_speed(ch)*5;
 
    if (chance > 50)
       chance = 50;
@@ -922,21 +923,22 @@ int get_dodge(CHAR_DATA *ch)
       /*
        * Tuan was here.  :)
        */
-      chance = get_psuedo_level(ch) / 3.1 + get_curr_dex(ch) * 2 / 5;
+      chance = get_curr_dex(ch);
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
    }
    else
    {
-      chance = 20 + get_curr_dex(ch) * 3 / 5;
-      if (ch->remort[CLASS_MON] > 0) /* Monk  */
-         chance += ch->remort[CLASS_MON] / 8;
+      chance = get_curr_dex(ch);
    }
    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
       chance += 5;
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
       chance += 20;
+
+   chance += stance_app[ch->stance].speed_mod;
+   chance += get_speed(ch)*5;
 
    if (chance > 50)
       chance = 50;
@@ -969,7 +971,7 @@ int get_block(CHAR_DATA *ch)
 
    if (IS_NPC(ch))
    {
-      chance = get_psuedo_level(ch) / 3.2 + get_curr_str(ch) * 2 / 5;
+      chance = get_curr_con(ch);
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
    }
@@ -979,7 +981,7 @@ int get_block(CHAR_DATA *ch)
       if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
          return 0;
 
-      chance = 20 + get_curr_str(ch) * 3 / 5;
+      chance = get_curr_con(ch);
    }
 
    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
@@ -987,6 +989,9 @@ int get_block(CHAR_DATA *ch)
 
    if (buckler)
       chance /= 2;
+
+   chance += stance_app[ch->stance].speed_mod;
+   chance += get_speed(ch)*5;
 
    if (chance > 50)
       chance = 50;
