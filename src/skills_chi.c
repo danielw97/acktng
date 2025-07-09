@@ -106,13 +106,13 @@ void do_chakra(CHAR_DATA *ch, char *argument)
     if (ch->adept[CLASS_MAR] > 0)
         base_heal = 7;
 
-    int heal = class_heal_character(ch, ch, (ch->remort[CLASS_MON]+ch->adept[CLASS_MAR]) * base_heal, gsn_chakra, CLASS_MON, FALSE);
+    int heal = class_heal_character(ch, ch, (ch->remort[CLASS_MON] + ch->adept[CLASS_MAR]) * base_heal, gsn_chakra, CLASS_MON, FALSE);
 
     heal_character(ch, ch, heal, gsn_chakra, FALSE);
 
     int dur = 1;
     if (ch->adept[CLASS_MAR] > 0)
-       dur = 2;
+        dur = 2;
 
     AFFECT_DATA af;
 
@@ -152,7 +152,7 @@ void do_phantomfist(CHAR_DATA *ch, char *argument)
     int dur = 2;
 
     if (ch->adept[CLASS_MAR] > 0)
-       dur = 3;
+        dur = 3;
 
     af.type = gsn_phantomfist;
     af.duration = 2;
@@ -161,7 +161,6 @@ void do_phantomfist(CHAR_DATA *ch, char *argument)
     af.modifier = 3;
     af.bitvector = 0;
     affect_to_char(ch, &af);
-
 }
 
 void do_spinfist(CHAR_DATA *ch, char *argument)
@@ -218,8 +217,6 @@ void do_aurabolt(CHAR_DATA *ch, char *argument)
 void do_palmstrike(CHAR_DATA *ch, char *argument)
 {
     pug_attack(ch, argument, gsn_palmstrike);
-
-    ch->cooldown[gsn_palmstrike] = 5;
 }
 
 void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
@@ -257,7 +254,7 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
         dam = 1;
 
     if (gsn != gsn_spinfist)
-       ch->chi++;
+        ch->chi++;
 
     float dam_mod = 0.0;
 
@@ -274,7 +271,8 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
 
     if (gsn == gsn_palmstrike)
     {
-       dam *= 4;
+        dam *= 4;
+        ch->cooldown[gsn_palmstrike] = 5;
     }
 
     WAIT_STATE(ch, skill_table[gsn].beats);
@@ -284,7 +282,7 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
     int element = ELE_PHYSICAL;
 
     if (gsn == gsn_aurabolt)
-       element = ELE_PHYISCAL | ELE_HOLY;
+        element = ELE_PHYISCAL | ELE_HOLY;
 
     if (IS_NPC(ch))
         dam /= 2;
@@ -316,7 +314,7 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
 
 void do_mindoverbody(CHAR_DATA *ch, char *argument)
 {
-   AFFECT_DATA af;
+    AFFECT_DATA af;
 
     if (ch->fighting == NULL)
     {
@@ -330,29 +328,29 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
     if (!subtract_energy_cost(ch, gsn_mindoverbody))
         return;
 
-   ch->chi++;
+    ch->chi++;
 
-   ch->cooldown[gsn_mindoverbody] = 15;
+    ch->cooldown[gsn_mindoverbody] = 15;
 
-   int base_heal = ch->lvl[CLASS_PUG];
+    int base_heal = ch->lvl[CLASS_PUG];
 
-   base_heal += ch->remort[CLASS_MON] * 2;
-   base_heal += ch->remort[CLASS_BRA] * 2;
-   base_heal += ch->adept[CLASS_MAR] * 5;
+    base_heal += ch->remort[CLASS_MON] * 2;
+    base_heal += ch->remort[CLASS_BRA] * 2;
+    base_heal += ch->adept[CLASS_MAR] * 5;
 
-   if (is_affected(ch, gsn_mindoverbody) || is_affected(ch, skill_lookup("mindoverbody")))
-      return FALSE;
-   af.type = gsn_mindoverbody;
-   af.duration = 3;
-   af.location = APPLY_HOT;
-   af.duration_type = DURATION_ROUND;
-   af.modifier = base_heal;
-   af.bitvector = 0;
-   af.caster = ch;
-   affect_to_char(ch, &af);
-   act("$N begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
-   send_to_char("You begin to focus on mind over body.\n\r", ch);
-   return TRUE;
+    if (is_affected(ch, gsn_mindoverbody) || is_affected(ch, skill_lookup("mindoverbody")))
+        return FALSE;
+    af.type = gsn_mindoverbody;
+    af.duration = 3;
+    af.location = APPLY_HOT;
+    af.duration_type = DURATION_ROUND;
+    af.modifier = base_heal;
+    af.bitvector = 0;
+    af.caster = ch;
+    affect_to_char(ch, &af);
+    act("$N begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
+    send_to_char("You begin to focus on mind over body.\n\r", ch);
+    return TRUE;
 }
 
 void do_flurry(CHAR_DATA *ch, char *argument)
@@ -367,11 +365,11 @@ void do_flurry(CHAR_DATA *ch, char *argument)
     if (!can_use_skill_message(ch, gsn_flurry))
         return;
 
-    if(ch->chi < 5)
+    if (ch->chi < 5)
     {
-       sprintf(buf, "You must have at least 5 chi to initiate a flurry, you only have %s!\n\r", ch->chi);
-       send_to_char(buf,ch);
-       return;
+        sprintf(buf, "You must have at least 5 chi to initiate a flurry, you only have %s!\n\r", ch->chi);
+        send_to_char(buf, ch);
+        return;
     }
 
     raise_skill(ch, gsn_flurry);
@@ -383,8 +381,8 @@ void do_flurry(CHAR_DATA *ch, char *argument)
 
     ch->cooldown[gsn_flurry] = 30;
 
-    for(int i = 0; ch->chi > 0; ch->chi--)
+    for (int i = 0; ch->chi > 0; ch->chi--)
     {
-       one_hit(ch, ch->fighting, TYPE_HIT);
+        one_hit(ch, ch->fighting, TYPE_HIT);
     }
 }
