@@ -16,6 +16,7 @@ extern CHAR_DATA *quest_mob;
 
 int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible)
 {
+    OBJ_DATA *wield;
     char buf[MSL];
     bool critical = FALSE;
     int crit_chance;
@@ -31,7 +32,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (dt == gsn_backstab)
         dam *= 1.4;
     if (dt == gsn_circle)
-       dam *= 1.1;
+        dam *= 1.1;
     if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
         dam *= 1.2;
     if (dam <= 0)
@@ -50,72 +51,69 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         REMOVE_BIT(element, NO_ABSORB);
         can_absorb = FALSE;
     }
-    //    if (obj == NULL)
+    if (can_reflect && (skill_table[dt].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 70)))
     {
-        if (can_reflect && (skill_table[dt].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 70)))
-        {
 
-            act("@@N$n's @@lc@@el@@ro@@ya@@ak@@N glows brightly as $Nn's spell hits it, and the spell is reflected@@N!!", ch,
-                victim, NULL, TO_ROOM);
-            act("@@N$N's @@lc@@el@@ro@@ya@@ak@@N glows brightly, and reflects your spell back on you@@N!!", ch, NULL, victim,
-                TO_CHAR);
-            act("@@NYour @@lc@@el@@ro@@ya@@ak@@N glows brightly, and reflects the spell back on $N@@N!!!", victim, NULL, ch,
-                TO_CHAR);
-            sp_damage(NULL, victim, ch, dam, element, dt, TRUE);
-            return FALSE;
-        }
+        act("@@N$n's @@lc@@el@@ro@@ya@@ak@@N glows brightly as $Nn's spell hits it, and the spell is reflected@@N!!", ch,
+            victim, NULL, TO_ROOM);
+        act("@@N$N's @@lc@@el@@ro@@ya@@ak@@N glows brightly, and reflects your spell back on you@@N!!", ch, NULL, victim,
+            TO_CHAR);
+        act("@@NYour @@lc@@el@@ro@@ya@@ak@@N glows brightly, and reflects the spell back on $N@@N!!!", victim, NULL, ch,
+            TO_CHAR);
+        sp_damage(NULL, victim, ch, dam, element, dt, TRUE);
+        return FALSE;
+    }
 
-        else if (can_reflect && (skill_table[dt].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 55)))
-        {
-            int mana;
-            mana = mana_cost(ch, dt);
-            victim->mana = UMIN(victim->max_mana, victim->mana + mana);
+    else if (can_reflect && (skill_table[dt].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 55)))
+    {
+        int mana;
+        mana = mana_cost(ch, dt);
+        victim->mana = UMIN(victim->max_mana, victim->mana + mana);
 
-            act("@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim, NULL, ch, TO_ROOM);
-            act("@@N$N's @@lcloak@@N glows brightly, and absorbs your spell@@N!!", ch, NULL, victim, TO_CHAR);
-            act("@@NYour @@lcloak@@N glows brightly, and absorbs $N's spell@@N!!!", victim, NULL, ch, TO_CHAR);
-            return FALSE;
-        }
+        act("@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim, NULL, ch, TO_ROOM);
+        act("@@N$N's @@lcloak@@N glows brightly, and absorbs your spell@@N!!", ch, NULL, victim, TO_CHAR);
+        act("@@NYour @@lcloak@@N glows brightly, and absorbs $N's spell@@N!!!", victim, NULL, ch, TO_CHAR);
+        return FALSE;
+    }
 
-        int ch_strong = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].strong_realms : ch->strong_magic) : race_table[ch->race].strong_realms);
-        int ch_resist = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].resist_realms : ch->resist) : race_table[ch->race].resist_realms);
-        int ch_weak = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].weak_realms : ch->weak_magic) : race_table[ch->race].weak_realms);
-        int ch_suscept = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].suscept_realms : ch->suscept) : race_table[ch->race].suscept_realms);
-        int ch_race = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].race_flags : ch->race_mods) : race_table[ch->race].race_flags);
+    int ch_strong = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].strong_realms : ch->strong_magic) : race_table[ch->race].strong_realms);
+    int ch_resist = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].resist_realms : ch->resist) : race_table[ch->race].resist_realms);
+    int ch_weak = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].weak_realms : ch->weak_magic) : race_table[ch->race].weak_realms);
+    int ch_suscept = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].suscept_realms : ch->suscept) : race_table[ch->race].suscept_realms);
+    int ch_race = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].race_flags : ch->race_mods) : race_table[ch->race].race_flags);
 
-        if (IS_SET(ch_strong, element))
+    if (IS_SET(ch_strong, element))
+    {
+        dam_modifier += .25;
+    }
+    else if (IS_SET(ch_weak, element))
+    {
+        dam_modifier -= .25;
+    }
+
+    if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
+    {
+        dam_modifier += .25;
+    }
+    else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_WEAK_MAGIC))
+    {
+        dam_modifier -= .25;
+    }
+    else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_NO_MAGIC))
+    {
+        dam_modifier -= .50;
+    }
+
+    if (!IS_NPC(ch) && !IS_SET(element, ELE_MENTAL) && !IS_SET(element, ELE_PHYSICAL))
+    {
+        if (can_use(ch, gsn_potency))
         {
             dam_modifier += .25;
         }
-        else if (IS_SET(ch_weak, element))
-        {
-            dam_modifier -= .25;
-        }
-
-        if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
-        {
-            dam_modifier += .25;
-        }
-        else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_WEAK_MAGIC))
-        {
-            dam_modifier -= .25;
-        }
-        else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_NO_MAGIC))
-        {
-            dam_modifier -= .50;
-        }
-
-        if (!IS_NPC(ch) && !IS_SET(element, ELE_MENTAL) && !IS_SET(element, ELE_PHYSICAL))
-        {
-            if (can_use(ch, gsn_potency))
-            {
-                dam_modifier += .25;
-            }
-        }
-        if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
-        {
-            dam_modifier += .5;
-        }
+    }
+    if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
+    {
+        dam_modifier += .5;
     }
 
     int vi_strong = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].strong_realms : victim->strong_magic) : race_table[victim->race].strong_realms);
@@ -188,7 +186,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
             dam_modifier += stance_app[ch->stance].spell_mod / 10;
     }
 
-    if (IS_SET(element, ELE_PHYSICAL) )
+    if (IS_SET(element, ELE_PHYSICAL))
     {
         if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
             dam_modifier += 0.2;
@@ -208,6 +206,40 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
             dam_modifier += ch->remort[CLASS_BRA] / 100 * 0.75 * 0.5;
             dam_modifier += ch->remort[CLASS_MON] / 100 * 0.5;
             dam_modifier += ch->adept[CLASS_MAR] / 50 * 0.5;
+        }
+
+        if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword))
+        {
+            dam += dam * number_range(20, 40) / 100;
+        }
+
+        /*
+         * extra damage from martial arts
+         */
+        if (dt == TYPE_MARTIAL)
+            dam_modifier += 4 / 3;
+
+        if (!IS_NPC(ch) && can_use_skill(ch, gsn_bare_hand) && (dt == TYPE_MARTIAL || dt == TYPE_HIT || dt == gsn_counter))
+        {
+            wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
+            if (wield == NULL ||
+                (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
+            {
+                wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
+
+                if (wield == NULL ||
+                    (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
+                {
+                    wield = get_eq_char(ch, WEAR_TWO_HANDED);
+                    if (wield == NULL)
+                    {
+                        if (ch->remort[CLASS_MON] > 0)
+                            dam_modifier += ch->remort[CLASS_MON] / 75;
+                        else if (ch->remort[CLASS_BRA] > 0)
+                            dam_modifier += ch->remort[CLASS_BRA] / 75 * .75;
+                    }
+                }
+            }
         }
     }
 
@@ -280,91 +312,91 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     AFFECT_DATA *paf, *paf_next;
 
-    for(paf = ch->first_affect; paf != NULL; paf = paf_next)
+    for (paf = ch->first_affect; paf != NULL; paf = paf_next)
     {
-       paf_next = paf->next;
+        paf_next = paf->next;
 
-       if (paf->type == gsn_cripple && IS_SET(element, ELE_PHYSICAL))
-       {
-          dam -= dam * paf->modifier / 100;
-       }
+        if (paf->type == gsn_cripple && IS_SET(element, ELE_PHYSICAL))
+        {
+            dam -= dam * paf->modifier / 100;
+        }
     }
 
-    for(paf = victim->first_affect; paf != NULL; paf = paf_next)
+    for (paf = victim->first_affect; paf != NULL; paf = paf_next)
     {
-       paf_next = paf->next;
-       if (!IS_SET(element, ELE_PHYSICAL))
-       {
-          if (paf->type == gsn_anti_magic_shell)
-          {
-             dam = dam * 0.1;
-             sprintf(buf, "$N's anti-magic shell negates %s.", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_ROOM);
-             sprintf(buf, "Your anti-magic shell negates %s.", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_VICT);
-             sprintf(buf, "$N's anti-magic shell absorbs your %s", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_CHAR);
-          }
+        paf_next = paf->next;
+        if (!IS_SET(element, ELE_PHYSICAL))
+        {
+            if (paf->type == gsn_anti_magic_shell)
+            {
+                dam = dam * 0.1;
+                sprintf(buf, "$N's anti-magic shell negates %s.", skill_table[dt].name);
+                act(buf, ch, NULL, victim, TO_ROOM);
+                sprintf(buf, "Your anti-magic shell negates %s.", skill_table[dt].name);
+                act(buf, ch, NULL, victim, TO_VICT);
+                sprintf(buf, "$N's anti-magic shell absorbs your %s", skill_table[dt].name);
+                act(buf, ch, NULL, victim, TO_CHAR);
+            }
 
-          if (paf->type == skill_lookup("refuge"))
-          {
-             // Templar
-             if (paf->modifier == 2)
-                dam = dam * 0.75;
-             else
-                dam = dam * 0.5;
-          }
-       }
-       else
-       {
-         if (IS_SET(element, ELE_PHYSICAL))
-         {
-          OBJ_DATA *shield = get_eq_char(victim, WEAR_HOLD_HAND_L);
-          if (shield == NULL || shield->item_type != ITEM_ARMOR)
-             shield = get_eq_char(victim, WEAR_HOLD_HAND_R);
-          if (shield == NULL || shield->item_type != ITEM_ARMOR)
-             shield = get_eq_char(victim, WEAR_BUCKLER);
+            if (paf->type == skill_lookup("refuge"))
+            {
+                // Templar
+                if (paf->modifier == 2)
+                    dam = dam * 0.75;
+                else
+                    dam = dam * 0.5;
+            }
+        }
+        else
+        {
+            if (IS_SET(element, ELE_PHYSICAL))
+            {
+                OBJ_DATA *shield = get_eq_char(victim, WEAR_HOLD_HAND_L);
+                if (shield == NULL || shield->item_type != ITEM_ARMOR)
+                    shield = get_eq_char(victim, WEAR_HOLD_HAND_R);
+                if (shield == NULL || shield->item_type != ITEM_ARMOR)
+                    shield = get_eq_char(victim, WEAR_BUCKLER);
 
-          if (paf->type == gsn_riposte && dt > 0 && dt < TYPE_HIT)
-          {
-             ch->stunTimer = 1;
-             sprintf(buf, "$N's perfect riposte interrupts $n's %s.", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_ROOM);
-             sprintf(buf, "Your perfect riposte interrupts $n's %s.", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_VICT);
-             sprintf(buf, "$N's perfect riposte interrupts your %s", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_CHAR);
-             calculate_damage(victim, ch, dam, gsn_riposte, ELEMENT_PHYSICAL, TRUE);
-             affect_strip(victim, gsn_riposte);
-             return;
-          }
+                if (paf->type == gsn_riposte && dt > 0 && dt < TYPE_HIT)
+                {
+                    ch->stunTimer = 1;
+                    sprintf(buf, "$N's perfect riposte interrupts $n's %s.", skill_table[dt].name);
+                    act(buf, ch, NULL, victim, TO_ROOM);
+                    sprintf(buf, "Your perfect riposte interrupts $n's %s.", skill_table[dt].name);
+                    act(buf, ch, NULL, victim, TO_VICT);
+                    sprintf(buf, "$N's perfect riposte interrupts your %s", skill_table[dt].name);
+                    act(buf, ch, NULL, victim, TO_CHAR);
+                    calculate_damage(victim, ch, dam, gsn_riposte, ELEMENT_PHYSICAL, TRUE);
+                    affect_strip(victim, gsn_riposte);
+                    return;
+                }
 
-          if (paf->type == gsn_shieldblock && shield != NULL && shield->item_type == ITEM_ARMOR)
-          {
-             sprintf(buf, "$N blocks $n's %s with $p.", skill_table[dt].name);
-             act(buf, ch, shield, victim, TO_ROOM);
-             sprintf(buf, "You block $n's %s with $p.", skill_table[dt].name);
-             act(buf, ch, shield, victim, TO_VICT);
-             sprintf(buf, "$N blocks your %s with $p", skill_table[dt].name);
-             act(buf, ch, shield, victim, TO_CHAR);
-             if (IS_SET(shield->extra_flags, ITEM_BUCKLER) )
-                dam = dam * 0.15;
-             else
-                dam = dam * 0;
-          }
+                if (paf->type == gsn_shieldblock && shield != NULL && shield->item_type == ITEM_ARMOR)
+                {
+                    sprintf(buf, "$N blocks $n's %s with $p.", skill_table[dt].name);
+                    act(buf, ch, shield, victim, TO_ROOM);
+                    sprintf(buf, "You block $n's %s with $p.", skill_table[dt].name);
+                    act(buf, ch, shield, victim, TO_VICT);
+                    sprintf(buf, "$N blocks your %s with $p", skill_table[dt].name);
+                    act(buf, ch, shield, victim, TO_CHAR);
+                    if (IS_SET(shield->extra_flags, ITEM_BUCKLER))
+                        dam = dam * 0.15;
+                    else
+                        dam = dam * 0;
+                }
 
-          if (paf->type == gsn_chiblock)
-          {
-             sprintf(buf, "$N blocks $n's %s with their chi.", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_ROOM);
-             sprintf(buf, "You block $n's %s with your chi.", skill_table[dt].name);
-             send_to_char(buf, victim);
-             sprintf(buf, "$N blocks your %s with their chi", skill_table[dt].name);
-             act(buf, ch, NULL, victim, TO_CHAR);
-             dam = dam * 0.1;
-          }
-         }
-       }
+                if (paf->type == gsn_chiblock)
+                {
+                    sprintf(buf, "$N blocks $n's %s with their chi.", skill_table[dt].name);
+                    act(buf, ch, NULL, victim, TO_ROOM);
+                    sprintf(buf, "You block $n's %s with your chi.", skill_table[dt].name);
+                    send_to_char(buf, victim);
+                    sprintf(buf, "$N blocks your %s with their chi", skill_table[dt].name);
+                    act(buf, ch, NULL, victim, TO_CHAR);
+                    dam = dam * 0.1;
+                }
+            }
+        }
     }
 
     do_damage(ch, victim, dam, dt, element, critical);
@@ -989,7 +1021,7 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
      */
 
     if (dt == TYPE_MARTIAL)
-        dt = TYPE_HIT + 13 + number_range(0,14);
+        dt = TYPE_HIT + 13 + number_range(0, 14);
 
     attack = get_dt_name(dt);
 
@@ -1194,7 +1226,7 @@ void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
     }
 
     if (dt >= TYPE_HIT || dt == TYPE_MARTIAL || dt == gsn_counter)
-        switch (dt-TYPE_HIT)
+        switch (dt - TYPE_HIT)
         {
         case 1: /* slice */
         case 3: /* slash */

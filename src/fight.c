@@ -470,63 +470,36 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       dam_mod = hr_damTable[ix];
    else
       dam_mod = MAX_DAM_MOD;
-
-   dam = dam * dam_mod;
    /*
     * Hit.
     * Calc damage.
     * Tried to make it easy for players to hit mobs... --Stephen
     */
+   int dam_bonus = get_curr_str(ch) * get_psuedo_level(ch) / 100;
+
    if (IS_NPC(ch))
    {
       if (wield)
-         dam = number_range(wield->value[1], wield->value[2]);
+         dam = number_range(wield->value[1], wield->value[2]) + dam_bonus;
+      else if (dt == TYPE_MARTIAL)
+         dam = number_range(ch->level / 3, ch->level / 2) + dam_bonus;
       else
          dam = number_range(ch->level / 3, ch->level / 2);
+
       if (IS_SET(ch->act, ACT_SOLO))
          dam *= 1.5;
    }
    else
    {
       if (wield != NULL)
-         dam = number_range(wield->value[1], wield->value[2]);
-      else
-         dam = UMAX(number_range(2, 4), ch->level / 4);
+         dam = number_range(wield->value[1] + dam_bonus, wield->value[2] + dam_bonus);
+      else if (dt == TYPE_MARTIAL)
+         dam = number_range(2, ch->level/4) + dam_bonus;
+      else 
+         UMAX(number_range(2, 4), ch->level / 4);
    }
 
-   if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword))
-   {
-      dam += dam * number_range(20, 40) / 100;
-   }
-
-   /*
-    * extra damage from martial arts
-    */
-   if (dt == TYPE_MARTIAL)
-      dam = (dam * 4) / 3;
-
-   if (!IS_NPC(ch) && can_use_skill(ch, gsn_bare_hand) && (dt == TYPE_MARTIAL || dt == TYPE_HIT || dt == gsn_counter))
-   {
-      wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
-      if (wield == NULL ||
-          (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
-      {
-         wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
-
-         if (wield == NULL ||
-             (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
-         {
-            wield = get_eq_char(ch, WEAR_TWO_HANDED);
-            if (wield == NULL)
-            {
-             if (ch->remort[CLASS_MON] > 0)
-               dam += dam * ch->remort[CLASS_MON] / 75;
-             else if (ch->remort[CLASS_BRA] > 0)
-               dam += dam * ch->remort[CLASS_BRA] / 75 * .75;
-            }
-         }
-      }
-   }
+   dam = dam * dam_mod;
 
    dam = calculate_damage(ch, victim, dam, dt, ELE_PHYSICAL, TRUE);
 
