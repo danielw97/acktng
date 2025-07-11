@@ -361,6 +361,9 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED) && obj->item_type == ITEM_WEAPON)
       ilevel *= 1.25;
 
+   if (IS_SET(obj->extra_flags, ITEM_LOOT))
+      ilevel *= 1.2;
+
    /* Jewelry */
    if (is_jewelry(obj))
    {
@@ -643,4 +646,54 @@ bool is_jewelry(OBJ_DATA *obj)
       return TRUE;
 
    return FALSE;
+}
+
+bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
+{
+   char buf[MSL];
+   int total = ch->loot_amount / 100;
+   int created = 0;
+
+   if (ch->loot_amount % 100 > 0)
+   {
+      if (number_percent() < ch->loot_amount)
+         total++;
+   }
+
+   sprintf(buf, "create_loot loot total is %d", total);
+   bug(buf,0);
+   if (total == 0)
+      return FALSE;
+
+   while (created < total)
+   {
+      int chance = 0;
+      bool viable = FALSE;
+
+      for(int i = 0; i < MAX_LOOT; i++)
+      {
+         sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i], ch->loot_chance[i], chance);
+         if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && number_percent < ch->loot_chance[i] + chance)
+         {
+            viable = TRUE;
+            OBJ_DATA *obj = create_object(get_obj_index(ch->loot[i]), 0);
+
+            if (obj != NULL)
+            {
+               obj_to_obj(obj, corpse);
+            }
+            created++;
+            break;
+         }
+         chance += ch->loot_chance[i];
+      }
+      if (!viable)
+      {
+         sprintf(buf, "%s did not create a viable loot table", ch->short_descr);
+         bug(buf,0);
+         return FALSE;
+      }
+   }
+
+   return TRUE;
 }
