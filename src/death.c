@@ -221,7 +221,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
 
 bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
 {
-   char buf[MSL]
+   char buf[MSL];
    int total = ch->loot_amount / 100;
    int created = 0;
 
