@@ -645,7 +645,7 @@ D3
 S
 #9591
 A Guardroom~
-No description~
+~
 4 11
 D0
 ~
@@ -658,7 +658,7 @@ D2
 S
 #9592
 Vice Warden's Office~
-No description~
+~
 4 11
 D0
 ~
@@ -671,7 +671,7 @@ D2
 S
 #9593
 Desk of the Warden~
-No description~
+~
 4 11
 D0
 ~
@@ -684,7 +684,7 @@ D2
 S
 #9594
 The Warden's Office~
-No description~
+~
 4 11
 D0
 ~
@@ -927,8 +927,8 @@ A Final Level Prisoner stands here, scowling angrily.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 0 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #9566
 A Final Level Prisoner~
 A Final Level Prisoner~
@@ -941,8 +941,8 @@ A Final Level Prisoner stands here, scowling angrily
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 9568 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #9567
 A Final Level Prisoner~
 A Final Level Prisoner~
@@ -955,8 +955,8 @@ A Final Level Prisoner stands here, scowling angrily
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 9568 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #9568
 A Final Level Prisoner~
 A Final Level Prisoner~
@@ -969,8 +969,8 @@ A Final Level Prisoner stands here, scowling angrily
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 0 9568 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #9569
 A Final Level Prisoner~
 A Final Level Prisoner~
@@ -983,8 +983,8 @@ A Final Level Prisoner stands here, scowling angrily
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 9568 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #9570
 A Final Level Prisoner~
 A Final Level Prisoner~
@@ -997,8 +997,8 @@ A Final Level Prisoner stands here, scowling angrily.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 9568 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #9571
 A Warden's Guard~
 A Warden's Guard~
@@ -1011,8 +1011,8 @@ A Warden's Guard stands here, at attention
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 10 9566 9567 0 0 0 0 0 0 0 
+L 50 50 0 0 0 0 0 0 0 
 #9572
 A Vice Warden~
 A Vice Warden~
@@ -1250,7 +1250,7 @@ L
 pen of the Secretary~
 pen of the Secretary~
 A pen lies here, abandoned~
-5 201326592 8421376 1
+5 201326720 8421376 1
 0 0 0 11 0 0 0 0 0 0
 2
 L
@@ -1260,6 +1260,33 @@ Insignia of the Vice Warden~
 Insignia of the Vice Warden~
 An insignia lies here, abandoned~
 9 201326784 8389632 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+30
+#9566
+A Guard's Breastplate~
+A Guard's Breastplate~
+A breastplate lies here, abandoned~
+9 201326720 8650752 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+30
+#9567
+A Guard's Legplates~
+A Guard's Legplates~
+A pair of legplates lie here, abandoned~
+9 201326720 9437184 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+30
+#9568
+A Prisoner's Shackles~
+@@WA @@dP@@Wr@@di@@Ws@@do@@Wn@@de@@Wr@@d'@@Ws Shackles~
+A pair of shackles lie here, discarded~
+9 201326784 8390656 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
