@@ -660,8 +660,8 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
          total++;
    }
 
-   sprintf(buf, "create_loot loot total is %d", total);
-   bug(buf,0);
+//   sprintf(buf, "create_loot loot total is %d", total);
+  // bug(buf,0);
    if (total == 0)
       return FALSE;
 
@@ -672,8 +672,9 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
 
       for(int i = 0; i < MAX_LOOT; i++)
       {
-         sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i], ch->loot_chance[i], chance);
-         if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && number_percent < ch->loot_chance[i] + chance)
+  //       sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i], ch->loot_chance[i], chance);
+//         bug(buf,0);
+         if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && number_percent() < ch->loot_chance[i] + chance)
          {
             viable = TRUE;
             OBJ_DATA *obj = create_object(get_obj_index(ch->loot[i]), 0);
