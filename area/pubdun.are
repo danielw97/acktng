@@ -728,7 +728,7 @@ Pantera is a shaven-headed beast, half man, half who-knows-what?  He has
 he smiles, you know why.
 ~
 3 0 -300 S
-28 1
+27 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -762,7 +762,7 @@ Blur is so called because no one has ever seen it stop moving.  It spins
 dizzy.
 ~
 3 8 -800 S
-19 0
+20 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -779,7 +779,7 @@ Dinosaur Jr, son of Dinosaur senior, was convited of mass murder many
 hardly have done much to improve his temper.
 ~
 3 0 -100 S
-11 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -824,7 +824,7 @@ A second level prisoner stands here, clearly bored
 ~
 ~
 1 0 0 S
-9 1
+8 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -880,7 +880,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1 0 0 S
-14 1
+13 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -922,7 +922,7 @@ A Final Level Prisoner stands here, scowling angrily.
 ~
 ~
 1 0 0 S
-28 1
+29 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -978,7 +978,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1 0 0 S
-26 1
+27 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1006,7 +1006,7 @@ A Warden's Guard stands here, at attention
 ~
 ~
 1 0 0 S
-30 1
+31 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1020,7 +1020,7 @@ A Vice Warden stands here, looking at documents
 ~
 ~
 1 0 0 S
-33 1
+32 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1033,7 +1033,7 @@ A Warden's Secretary~
 ~
 ~
 1 0 0 S
-32 1
+33 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1047,7 +1047,7 @@ The Prison Warden stands here, observing
 ~
 ~
 1 0 0 S
-33 1
+36 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1061,7 +1061,7 @@ A skeleton stands here, grinning with a rictus grin.
 ~
 ~
 50331683 0 0 S
-40 1
+41 1
 200 -200 50 50
 ! 0 0 0 7 256 0 0
 | 0 0 0 0 0 0 0
