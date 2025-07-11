@@ -6,6 +6,7 @@ extern CHAR_DATA *quest_mob;
 
 /* Autogen */
 OBJ_DATA *generate_item(int level);
+bool create_loot(CHAR_DATA *ch, OBJ_DATA *obj);
 
 /*
  * Make a corpse out of a character.
@@ -218,7 +219,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
    }
 }
 
-bool create_loot(CHAR_DATA *ch, OBJ_DATA *obj)
+bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
 {
    int total = ch->loot_amount / 100;
    int created = 0;
