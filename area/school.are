@@ -1477,7 +1477,8 @@ The sly little Abu is here, looking for something to kill
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3700
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3700
 acolyte cleric~
 Aliaser's power~
 An fraction of Aliaser's power floats here.
@@ -1485,11 +1486,12 @@ An fraction of Aliaser's power floats here.
 He is big and bad.  Don't mess with him.
 ~
 65 136 1000 S
-73 1
-0 0 0 0
+72 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3701
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3701
 pool goo~
 a pool of goo~
 A pool of goo is sitting here.
@@ -1503,7 +1505,8 @@ He is big, he is bad.  You don't want to fight him when he isn't chained up.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3702
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3702
 blackbird~
 a blackbird~
 A blackbird chirps merrily here.
@@ -1512,11 +1515,12 @@ He looks mean, but you feel comfortable that you can kill him, especially since
 he is leashed up, and you are not.
 ~
 3 0 0 S
-8 0
+9 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3703
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3703
 sparrow~
 a sparrow~
 A sparrow grubs down on a worm here.
@@ -1525,11 +1529,12 @@ He looks wimpy.  You feel comfortable that you can kill him, especially since
 he is leashed up, and you are not.
 ~
 131 0 0 S
-6 0
+7 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3704
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3704
 magpie~
 a magpie~
 A magpie flutters around here aimlessly.
@@ -1542,7 +1547,8 @@ He looks mean, but you feel comfortable that you can kill him, especially since
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3705
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3705
 jay~
 the jay~
 A jay stands here looking weak but majestic.
@@ -1551,11 +1557,12 @@ He looks mean, but you feel comfortable that you can kill him, especially since
 he is leashed up, and you are not.
 ~
 163 0 0 S
-11 0
+12 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3706
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3706
 eagle~
 the eagle~
 The eagle perches here, chewing on a bit of flesh.
@@ -1568,7 +1575,8 @@ He looks mean, and you just might have a small problem killing him, but he
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3707
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3707
 adept cleric~
 the adept of Kahn~
 An adept of Overlord Kahn is here, contemplating your progress.
@@ -1576,11 +1584,12 @@ An adept of Overlord Kahn is here, contemplating your progress.
 He is big and bad.  Don't mess with him.
 ~
 67 136 1000 S
-79 1
+78 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3709
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3709
 gekko~
 the gekko~
 A gekko is slithering around here.
@@ -1592,7 +1601,8 @@ The gekko smiles at you, completely harmless!
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3710
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3710
 newt~
 the newt~
 The newt tries to find water here.
@@ -1604,7 +1614,8 @@ It smiles at you, and tries to eat your leg.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3711
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3711
 badger~
 the badger~
 The badger roots around for food here.
@@ -1612,11 +1623,12 @@ The badger roots around for food here.
 It grunts at you.
 ~
 65 0 0 S
-8 0
+9 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3712
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3712
 squirrel~
 the squirrel~
 The squirrel looks for a tree to climb here.
@@ -1628,7 +1640,8 @@ His fur might be worth money.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3713
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3713
 slug~
 the squidgy slug~
 A slug squeltches around here, waiting to be trod on.
@@ -1640,7 +1653,8 @@ You don't see much but slime about it.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3714
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3714
 eeyore~
 Eeyore the donkey~
 Eeyore the donkey is in a _seriously_ bad mood.
@@ -1652,7 +1666,8 @@ It looks mean.  You'd better run.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3715
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3715
 pooh bear~
 Pooh Bear~
 Pooh Bear digs in his honey pot for a little treat.
@@ -1660,11 +1675,12 @@ Pooh Bear digs in his honey pot for a little treat.
 The bear must be bigger than you!  It wants to rip your head off.
 ~
 65 0 0 S
-6 0
+7 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3716
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3716
 Piglet~
 Piglet~
 Piglet tries to remain on the ground, whilst holding onto a balloon here.
@@ -1675,7 +1691,8 @@ Piglet tries to remain on the ground, whilst holding onto a balloon here.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3717
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3717
 adept cleric~
 the adept of Frag~
 An adept of Frag is here, grinning and selling you things.
@@ -1683,11 +1700,12 @@ An adept of Frag is here, grinning and selling you things.
 He is big and bad.  Don't mess with him.
 ~
 67 136 1000 S
-74 1
+73 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3718
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3718
 adept cleric~
 the adept of Furey~
 The Adept of Furey is here, waiting to help you. 
@@ -1699,7 +1717,8 @@ He is big and bad.  Don't mess with him.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3719
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3719
 priest cleric~
 the priest of Hatchet~
 The priest of Hatchet is ready to help you practice.
@@ -1711,7 +1730,8 @@ He is big and bad.  Don't mess with him.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3720
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3720
 sage~
 a wise old fool~
 A wise old sage sits here, looking weak and feeble.
@@ -1720,11 +1740,12 @@ This horrible creature is your final test for mud school.  Kill him, and the
 diploma is yours.
 ~
 3 512 0 S
-8 0
+7 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3721
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3721
 The Newbie Squire~
 A Newbie Squire~
 A newbie Squire stands here, dropping equipment all over the place.
@@ -1736,7 +1757,8 @@ A newbie Squire stands here, dropping equipment all over the place.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #3717
 ddagger~

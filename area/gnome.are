@@ -697,10 +697,11 @@ Erin is a relatively large gnome, with a stature that would scare even
 ~
 8195 8360 0 S
 121 2
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
-#6002
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6002
 healer ammira~
 Ammira the Healer~
 Ammira stands here, asking what ails she may cure you of.
@@ -715,7 +716,8 @@ Although only a small gnome in stature, Ammira has the spells to protect her
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32848 0 0 0 0 0
-#6003
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6003
 gnome ciaran weaponsmith~
 Ciaran the Gnomish Weaponsmith~
 Ciaran the Gnomish Weaponsmith stands here waiting for you to make a purchase.
@@ -730,7 +732,8 @@ The Gnomish Weaponsmith has dark tan skin, a neatly trimmed grey beard, and
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6004
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6004
 elchern storekeeper owner shopkeeper keeper~
 Elchern~
 Elchern, the store owner, stands waiting to serve you a delicious meal.
@@ -746,7 +749,8 @@ Elchern has, over the years, found a wide variety of food that the gnomish
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6005
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6005
 garneth trainer~
 Garneth the Gnomish Trainer~
 Garneth stands here, waiting to train your attributes.
@@ -759,11 +763,12 @@ Garneth has the skills only taught in the olden days, the skills he learnt
 his skills can live on.
 ~
 3 552 0 S
-75 1
+76 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6006
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6006
 seth trainer~
 Seth the Enhancer~
 Seth stand here, waiting to assist your practicing techniques.
@@ -780,7 +785,8 @@ Seth is a seemingly average gnome.  He is of average height, he has the
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6007
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6007
 james grocer shopkeeper~
 James the Grocer~
 James the Grocer stands at his counter.
@@ -794,7 +800,8 @@ James is a dark brown skinned gnome, with a less than average gnome sized
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1064960 0 0 0 0 0
-#6008
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6008
 armourer caedric~
 Caedric the Armourer~
 Caedric stands here, polishing his newly aquired armour.
@@ -805,11 +812,12 @@ Caedric is a stocky gnome, of average height, with a woody brown skin and
 from when he wipes his hands clean to serve a customer.
 ~
 8388615 8360 0 S
-81 1
+82 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16448 0 0 0 0 0
-#6009
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6009
 jeweller nayelle~
 Nayelle the Jeweller~
 The jeweller, Nayelle, sits behind the counter filing her nails.
@@ -825,7 +833,8 @@ Nayelle buys and sells only the finest gnome gems, stones and jewellery
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 40960 0 0 0 0 0
-#6010
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6010
 gnome citizen~
 the gnome citizen~
 The gnome citizen wanders areound Erin's-Burrow.
@@ -839,7 +848,8 @@ Gnomes are similar to small, slightly thinner dwarves, excepting that they
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6011
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6011
 gnome miner~
 the gnome miner~
 The gnome miner wanders the tunnels looking for minerals to mine.
@@ -849,11 +859,12 @@ The miner is well muscled from extracting the gems and stones from the hard
 His beard is grey and trimmed and his hair is bundled up beneath his cap. 
 ~
 69 32768 0 S
-15 1
+14 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6012
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6012
 gnome guard~
 the gnome guard~
 The gnome guard wanders around the tunnels ensuring that no trouble is about.
@@ -863,11 +874,12 @@ The gnome guard is scarred from battles with kobolds and goblins.  His armour
 encounters.
 ~
 69 32776 0 S
-39 1
+40 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6013
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6013
 alnart gnome chieftain~
 Alnart the Gnome Chieftain~
 Alnart, the Gnome Chieftain is here ensuring the township runs smoothly.
@@ -879,11 +891,12 @@ His enormous nose and neatly trimmed grey beard, decorated with stones,
 day.
 ~
 19 8360 0 S
-72 1
+73 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
-#6014
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6014
 gnome child boy~
 the gnome child~
 The gnome child is here playing in the tunnels.
@@ -897,7 +910,8 @@ The gnome child is very small, even by the gnomish standards, and has a head
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6015
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6015
 gnome child girl~
 the gnome child~
 The gnome child is here playing in the tunnels.
@@ -911,7 +925,8 @@ The gnome child is very small, even by the gnomish standards, and has a head
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #6001
 short spear~
@@ -919,7 +934,7 @@ a short spear~
 A short spear has been left here to deteriorate.~
 5 134217728 8421376 1
 0 0 0 2 0 0 0 0 0 0
-5
+1
 E
 spear short~
 This spear has been made with a wood shaft and a small but very sharp metal
@@ -933,7 +948,7 @@ a short sword~
 A short sword has been left to rust here.~
 5 134217728 8421376 1
 0 0 0 3 0 0 0 0 0 0
-4
+1
 E
 short sword~
 This small sword is forged of strengthened steel.  It is both strong and 
@@ -985,7 +1000,7 @@ a small mining pick~
 A small mining pick has been left here.~
 5 134217728 8421376 1
 0 0 0 8 0 0 0 0 0 0
-5
+1
 E
 pick small mining~
 This small but strong mining pick is made by the gnomish weaponsmith to serve
@@ -1002,7 +1017,7 @@ a suit of jewelled plate mail~
 A suit of plate armour glitters in the light.~
 9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
-7
+1
 E
 jewelled armour plate~
 This armour is forged with skill and strength by the gnomish weaponsmith, 
@@ -1021,7 +1036,7 @@ a pair of jewelled leg plates~
 A pair of leg plates glitter in the light.~
 9 134217728 9437184 1
 0 0 0 0 0 0 0 0 0 0
-7
+1
 E
 jewelled leg plate~
 This pair of leg plates have been decorated with different gems and stones to
@@ -1056,7 +1071,7 @@ a smiths hammer~
 A large smiths hammer, often used to bash metal into shape, lays here.~
 5 0 8421376 1
 0 0 0 7 0 0 0 0 0 0
-5
+1
 E
 smiths hammer~
 This hammer is fairly large and extreemly heavy, as gnome items go.  The 
@@ -1099,7 +1114,7 @@ a set of jewlled arm plates~
 A set of arm plates glitter in the light.~
 9 134217728 8389632 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 L
 60
 #6013
@@ -1171,7 +1186,7 @@ a dark green velvet cloak~
 A dark green piece of velvet has been discarded here.~
 9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 L
 1
 #6020
@@ -1189,7 +1204,7 @@ a thick purple velvet cloak with silver trim~
 A thick mass of purple velvet cloth lays here.~
 9 134217728 8454144 1
 0 0 0 0 0 0 0 0 0 0
-5
+1
 L
 100
 #6022
@@ -1242,7 +1257,7 @@ a jewelled helmet~
 A steel helmet glitters in the light here.~
 9 134217728 8388616 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 L
 60
 #6027
@@ -1260,7 +1275,7 @@ a pair of shiny steel boots~
 A pair of shiny steel boots begin to tarnish in the air.~
 9 134217728 10485760 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 L
 60
 #6029
@@ -1269,7 +1284,7 @@ a jewelled steel shield~
 A shield of steel glitters in the light.~
 9 134217728 8421376 1
 0 0 0 0 0 0 0 0 0 0
-6
+1
 L
 60
 #6030
@@ -1392,7 +1407,7 @@ a bubbling spring~
 A spring bubbles up through a hole in the ground.~
 25 0 0 1
 50 50 0 0 0 0 0 0 0 0
-500
+3
 L
 1
 #0

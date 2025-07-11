@@ -115,7 +115,7 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
     if (!subtract_energy_cost(ch, gsn))
         return;
 
-    dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 5, get_psuedo_level(ch) * get_curr_str(ch) / 2);
+    dam = number_range(get_psuedo_level(ch) * get_curr_str(ch) / 5, get_psuedo_level(ch) * get_curr_str(ch) / 4);
 
     if (dam < 1)
         dam = 1;

@@ -404,13 +404,16 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       int chance = 0;
 
       if (IS_NPC(ch) && IS_SET(ch->skills, MOB_MARTIAL))
-         chance = 75;
+      {
+         if (number_percent() < 75)
+            dt = TYPE_MARTIAL;
+      }
 
       if (!IS_NPC(ch) && can_use_skill(ch, gsn_martial_arts))
-         chance = 50;
-
-      if (number_percent() < chance)
-         dt = TYPE_MARTIAL;
+      {
+         if (number_percent() < (ch->lvl[CLASS_PUG]/2) + 40)
+            dt = TYPE_MARTIAL;
+      }
    }
 
    victim_ac = get_ac(victim);
@@ -478,28 +481,41 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
     * Calc damage.
     * Tried to make it easy for players to hit mobs... --Stephen
     */
-   int dam_bonus = get_curr_str(ch) * get_psuedo_level(ch) / 50;
+   int dam_bonus = get_curr_str(ch) * get_psuedo_level(ch) / 100;
 
-   if (IS_NPC(ch))
+   if (wield != NULL && IS_SET(wield->extra_flags, ITEM_TWO_HANDED))
+      dam = number_range(wield->value[1]*3, wield->value[2]*3) + dam_bonus;
+   else if (wield != NULL && !IS_SET(wield->extra_flags, ITEM_FIST))
+      dam = number_range(wield->value[1], wield->value[2]) + dam_bonus;
+   else if (IS_NPC(ch))
    {
-      if (wield)
-         dam = number_range(wield->value[1], wield->value[2]) + dam_bonus;
-      else if (dt == TYPE_MARTIAL)
+      if (dt == TYPE_MARTIAL || dt == gsn_counter)
          dam = number_range(ch->level / 3, ch->level / 2) + dam_bonus;
       else
-         dam = number_range(ch->level / 3, ch->level / 2);
+         dam = number_range(ch->level / 3, ch->level / 2) + dam_bonus;
 
       if (IS_SET(ch->act, ACT_SOLO))
          dam *= 1.5;
    }
    else
    {
-      if (wield != NULL)
-         dam = number_range(wield->value[1] + dam_bonus, wield->value[2] + dam_bonus);
-      else if (dt == TYPE_MARTIAL)
-         dam = number_range(2, ch->level/4) + dam_bonus;
-      else 
-         UMAX(number_range(2, 4), ch->level / 4);
+      if (dt == TYPE_MARTIAL)
+      {
+         if (can_use_skill(ch, gsn_bare_hand))
+         {
+            if (wield != NULL)
+               dam_bonus += number_range(wield->value[1], wield->value[2]);
+            dam_bonus += dam_bonus * ch->remort[CLASS_MON] / 75;
+            dam_bonus += dam_bonus * ch->remort[CLASS_BRA] / 75 * 0.75;
+            dam_bonus += dam_bonus * ch->adept[CLASS_MAR] / 50;
+
+            dam += number_range( get_psuedo_level(ch)/3, get_psuedo_level(ch)/2 ) + dam_bonus;
+         }
+         else
+            dam = number_range(2, get_psuedo_level(ch)/4) + dam_bonus;
+      }
+      else
+         UMAX(number_range(2, 4), get_psuedo_level(ch) / 4);
    }
 
    dam = dam * dam_mod;

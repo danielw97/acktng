@@ -2757,11 +2757,12 @@ guard guardian tower~
 ~
 ~
 36700195 16488 0 S
-150 1
-0 0 0 0
+151 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
-#11301
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11301
 Ixtochel~
 @@dI@@mx@@pt@@Wo@@gc@@ph@@me@@dl@@N~
 @@dThe castle guardian clutches the castle key tightly in his hands..@@N
@@ -2772,7 +2773,8 @@ Ixtochel~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8683520 0 0 0 0 16
-#11302
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11302
 tower demon~
 @@dA T@@mo@@pw@@we@@gr @@dDemon@@N~
 @@dA crimson demon of the tower sneaks up on you..@@N
@@ -2783,7 +2785,8 @@ tower demon~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11303
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11303
 Grastrou Beast~
 @@dG@@Wr@@ga@@Ws@@dt@@Wr@@go@@Wu @@gBeast@@N~
 @@dA dark grastrou beast lies in the shadows..@@N
@@ -2794,7 +2797,8 @@ Grastrou Beast~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11304
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11304
 Grastrou Beast~
 @@dG@@Wr@@ga@@Ws@@dt@@Wr@@go@@Wu @@gBeast@@N~
 @@dA dark grastrou beast lies in the shadows..@@N
@@ -2805,73 +2809,80 @@ Grastrou Beast~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11449
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11449
 Lord Dark~
 @@dJ@@mu@@pz@@Wa@@gm@@m, @@gHigh @@mKing @@pof @@dC@@mr@@pi@@Wm@@gs@@po@@mn@@N~
 @@dEvil reigns and the lord of the tower retakes his throne..@@N
 ~
 ~
 36765715 551656 -1000 S
-160 0
+161 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 51380480 0 0 0 0 48
-#11305
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11305
 healer seduction~
 @@dS@@me@@pd@@gu@@Wc@@gt@@pi@@mo@@dn@@N~
 @@dSeduction herself cleanses your soul with her silky hands..@@N
 ~
 ~
 268703235 1065152 0 S
-117 2
+116 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#11306
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11306
 lim dul limdul lim-dul~
 @@dL@@mi@@pm@@W-@@dD@@mu@@pl@@N~
 @@dLim-Dul, prince of the crimson realm, prepares armageddon..@@N
 ~
 ~
 65571 26856 0 S
-158 0
+159 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 144
-#11307
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11307
 paladin~
 @@BThe @@aP@@ga@@ll@@ca@@gd@@ai@@ln @@gof @@yLucrezia@@N~
 @@dThe Paladin of Lucrezia has been corrupted by the dark side..@@N
 ~
 ~
 36896793 27388 -1000 S
-153 2
+152 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 6488064 0 0 0 0 144
-#11308
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11308
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
 ~
 ~
 65571 84202 0 S
-151 0
+152 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
-#11309
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11309
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
 ~
 ~
 65571 84202 0 S
-153 0
+152 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
-#11310
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11310
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
@@ -2882,7 +2893,8 @@ displacer beast~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
-#11311
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11311
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
@@ -2893,18 +2905,20 @@ displacer beast~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
-#11312
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11312
 Evil~
 @@dE@@mv@@pi@@gl@@N~
 @@dE@@mv@@pi@@gl@@N
 ~
 ~
 305594411 1698558 -1000 S
-149 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 67108862 0 0 0 0 48
-#11313
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11313
 Evil~
 @@dE@@mv@@pi@@gl@@N~
 @@dE@@mv@@pi@@gl@@N
@@ -2915,7 +2929,8 @@ Evil~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 67108862 0 0 0 0 48
-#11314
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11314
 Evil~
 @@dE@@mv@@pi@@gl@@N~
 @@dE@@mv@@pi@@gl@@N
@@ -2926,7 +2941,8 @@ Evil~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 67108862 0 0 0 0 48
-#11315
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11315
 mirage~
 @@dJ@@mu@@pz@@Wa@@gm@@N~
 @@dJuzam is here, although he doesnt seem the same to you..@@N
@@ -2937,18 +2953,20 @@ mirage~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 56
-#11316
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11316
 nether shadow~
 @@dA @@mN@@ge@@pt@@Wh@@me@@gr @@dShadow@@N~
 @@dA nether shadow is here with a part of the darkness..@@N
 ~
 ~
 33554435 18624 -1000 S
-148 1
+147 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11317
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11317
 nether shadow~
 @@dA @@mN@@ge@@pt@@Wh@@me@@gr @@dShadow@@N~
 @@dA nether shadow is here with a part of the darkness..@@N
@@ -2959,18 +2977,20 @@ nether shadow~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11318
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11318
 stargazer~
 @@dS@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr@@N~
 @@dA S@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr is here awaiting his fate..@@N
 ~
 ~
 35 18664 0 S
-151 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11319
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11319
 stargazer~
 @@dS@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr@@N~
 @@dA S@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr is here awaiting his fate..@@N
@@ -2981,95 +3001,104 @@ stargazer~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11320
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11320
 whirlwind~
 @@dW@@mh@@pi@@gr@@pl@@mw@@pi@@gn@@pd@@N~
 @@dA deadly whirlwind spins and spins..@@N
 ~
 ~
 33 1073388 0 S
-148 2
+147 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11321
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11321
 whirlwind~
 @@dW@@mh@@pi@@gr@@pl@@mw@@pi@@gn@@pd@@N~
 @@dA deadly whirlwind spins and spins..@@N
 ~
 ~
 33 1073388 0 S
-148 2
+147 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11322
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11322
 Omega~
 @@dThe @@BW@@li@@cn@@ad @@RO@@em@@ge@@eg@@Ra@@N~
 @@dThe @@BW@@li@@cn@@ad @@ROmega @@dfollows the biddings of its master..@@N
 ~
 ~
 448765723 1632488 0 S
-154 1
+155 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11323
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11323
 sentinel~
 @@RO@@Wm@@Rega @@dS@@Wh@@dadow S@@We@@dntinel@@N~
 @@dA Shadow Sentinel scampers around waiting to ambush you..@@N
 ~
 ~
 3145781 92908 0 S
-155 1
+156 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11324
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11324
 sentinel~
 @@RO@@Wm@@Rega @@dS@@Wh@@dadow S@@We@@dntinel@@N~
 @@dA Shadow Sentinel scampers around waiting to ambush you..@@N
 ~
 ~
 3145781 92908 0 S
-150 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11325
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11325
 jester~
 @@dA @@mC@@pa@@Ws@@gt@@pl@@me @@dJ@@me@@ps@@Wt@@ge@@pr@@N~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps@@d jester dances around in a fool's way..@@N
 ~
 ~
 268435457 581824 0 S
-155 1
+154 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 2097152 0 0 0 0 16
-#11326
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11326
 jester~
 @@dA @@mC@@pa@@Ws@@gt@@pl@@me @@dJ@@me@@ps@@Wt@@ge@@pr@@N~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps@@d jester dances around in a fool's way..@@N
 ~
 ~
 268435457 581824 0 S
-150 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 2097152 0 0 0 0 16
-#11327
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11327
 servant~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps @@dSe@@Wr@@gv@@Wa@@dnt@@N~
 (Darkness) @@dA servant of the lord keeps his watch..@@N
 ~
 ~
 17 1099840 0 S
-145 1
+146 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11328
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11328
 servant~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps @@dSe@@Wr@@gv@@Wa@@dnt@@N~
 (Darkness) @@dA servant of the lord keeps his watch..@@N
@@ -3080,7 +3109,8 @@ servant~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11329
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11329
 dancer exotic~
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@RE@@ex@@yo@@Wt@@gic@@N~
 (Sexy) @@dAn exotic dancer for the lord taunts you with her curves..@@N
@@ -3099,62 +3129,68 @@ dancer exotic~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 80
-#11330
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11330
 Celestial~
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@yCeles@@gtial@@N~
 (Power) @@dThe celestial of the castle wanders the halls..@@N
 ~
 ~
 33619985 1108200 1000 S
-145 2
+146 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 525312 0 0 0 0 16
-#11331
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11331
 omega crimson captain guard stormguard~
 @@RThe @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@RO@@em@@ye@@Wg@@ga@@N~
 @@dThe Captain of the Castle Stormguards patrols the area..@@N
 ~
 ~
 310509593 1108200 0 S
-149 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 144
-#11332
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11332
 captain storm guard stormguard~
 @@dS@@mt@@po@@wr@@gm@@Wg@@pu@@ma@@dr@@md @@dC@@ma@@pp@@Wt@@ga@@pi@@mn@@N~
 @@dA stormguard captain wanders the halls guarding the castle.@@N
 ~
 ~
 33685521 18664 0 S
-149 1
+148 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11333
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11333
 captain storm guard stormguard~
 @@dS@@mt@@po@@wr@@gm@@Wg@@pu@@ma@@dr@@md @@dC@@ma@@pp@@Wt@@ga@@pi@@mn@@N~
 @@dA stormguard captain wanders the halls guarding the castle.@@N
 ~
 ~
 33685521 26856 0 S
-152 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11334
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11334
 crimson guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
 ~
 ~
 3276809 1622252 0 S
-151 1
+152 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11335
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11335
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3165,29 +3201,8 @@ guard storm stormguard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11336
-guard storm stormguard~
-@@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
-@@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
-~
-~
-3276809 1622252 0 S
-151 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 80
-#11337
-guard storm stormguard~
-@@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
-@@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
-~
-~
-3276809 1622252 0 S
-151 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 80
-#11338
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11336
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3198,29 +3213,56 @@ guard storm stormguard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11339
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11337
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
 ~
 ~
 3276809 1622252 0 S
-150 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11341
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11338
+guard storm stormguard~
+@@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
+@@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
+~
+~
+3276809 1622252 0 S
+151 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 80
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11339
+guard storm stormguard~
+@@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
+@@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
+~
+~
+3276809 1622252 0 S
+151 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 80
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11341
 delphi~
 @@dD@@me@@pl@@dphi@@N~
 @@dDelphi wanders the halls looking to pick a fight..@@N
 ~
 ~
 33554451 116930 0 S
-152 1
+153 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4194304 0 0 0 0 80
-#11340
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11340
 clurven~
 @@BC@@gl@@Bu@@Brven@@N~
 @@BC@@gl@@Burven @@dwanders the halls of the castle..@@N
@@ -3231,7 +3273,8 @@ clurven~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11342
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11342
 secret~
 @@dA Dark Secret@@N~
 @@dOne of the dark secrets of your soul..@@N
@@ -3242,7 +3285,8 @@ secret~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11343
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11343
 name Beta~
 @@dB@@ye@@dta@@N~
 @@dThe second coming, B@@ye@@dta is here scouting the castle..@@N
@@ -3253,7 +3297,8 @@ name Beta~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 128
-#11344
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11344
 impoyx~
 @@pI@@mm@@gpoyx@@N~
 @@dThe castle spirit, Impoyx, haunts the halls..@@N
@@ -3264,18 +3309,20 @@ impoyx~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11345
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11345
 Hartryx~
 @@dH@@Ra@@ertryx@@N~
 @@dImpoyx's living brother, Hartryx, searches to recieve eternal rest..@@N
 ~
 ~
 33554435 90178 0 S
-147 1
+148 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11346
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11346
 Ztur~
 @@cZtur@@N~
 @@dThe dead founder of the Stormguards, Ztur..@@N
@@ -3286,7 +3333,8 @@ Ztur~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1183744 0 0 0 0 0
-#11347
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11347
 Bogardan~
 @@RB@@eo@@Rg@@ea@@Rrdan@@N~
 @@dBogardan the ancient executioner dawns a black hood..@@N
@@ -3297,18 +3345,20 @@ Bogardan~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 144
-#11349
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11349
 auroch~
 @@yA@@dur@@go@@dch@@N~
 @@dThe king of the crypts of crimson, @@yA@@dur@@go@@dch...@@N
 ~
 ~
 33619987 84162 0 S
-152 2
+151 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11348
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11348
 Soldelvi~
 @@dS@@mo@@pl@@gd@@delvi@@N~
 @@dCrimson's dark queen, @@dS@@mo@@pl@@gd@@delvi@@d stands alert..@@N
@@ -3319,29 +3369,32 @@ Soldelvi~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#11350
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11350
 dancer~
 @@gBallroom @@dD@@ma@@pn@@Wc@@ge@@pr@@N~
 @@dA ballroom dancer is here doing an intricate dance on the floor..@@N
 ~
 ~
 33685513 24768 0 S
-152 1
+153 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11351
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11351
 dancer~
 @@gBallroom @@dD@@ma@@pn@@Wc@@ge@@pr@@N~
 @@dA ballroom dancer is here doing an intricate dance on the floor..@@N
 ~
 ~
 33685513 24768 0 S
-152 1
+153 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11352
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11352
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3352,7 +3405,8 @@ guard storm stormguard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11353
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11353
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3363,18 +3417,20 @@ guard storm stormguard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#11354
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11354
 skeleton~
 @@gS@@Wh@@ga@@Wm@@gb@@Wl@@gi@@Wn@@gg @@dS@@mk@@pe@@Wl@@ge@@pt@@mo@@dn@@N~
 @@dA skeleton replaces bones that break away..@@N
 ~
 ~
 280117301 1624298 0 S
-149 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #11300
 cloak~

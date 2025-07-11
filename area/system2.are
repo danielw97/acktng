@@ -226,7 +226,8 @@ Bkla;dkhglkhjg
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#27
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #27
 Mr. Bumpy~
 Mr. Bumpy~
 Mr. Bumpy is here looking for left socks to eat.~
@@ -234,11 +235,12 @@ Blah blah blah blah *burp* blah blah blah
 
 ~
 131081 0 0 S
-67 1
+68 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#26
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #26
 Closet Monster~
 Closet Monster~
 The ugly closet monster is here! and hes gonna eat you!~
@@ -250,7 +252,8 @@ Blah blah blah
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#25
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #25
 kitty cat~
 cute little kitty cat~
 A cute little kitty cat sits here licking itself.~
@@ -263,7 +266,8 @@ Descriptive-type stuff...
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#24
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #24
 a bird~
 a little bird~
 A little bird sits here on the railing.. how cute.~
@@ -275,7 +279,8 @@ This cute littlwe bird couldnt hurt a flea...
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#23
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #23
 Fat guy~
 the fat guy~
 A big slimy fat man is here.~
@@ -283,11 +288,12 @@ Man.. does this guy reek. he looks even worse than he smells. You really didnt
 think ear-wax was supposed to run.
 ~
 2051 0 0 S
-76 1
+75 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#21
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #21
 REally Annoying kid ~
 the little brat~
 An annoying little kid
@@ -297,11 +303,12 @@ This little brat must belon gto the ppl who own this house.. this kid makes
 
 ~
 1 0 -700 S
-55 1
-0 0 0 0
+56 1
+0 -20 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#22
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #22
 the fast housewife~
 blah~
 Cuper blah 
@@ -309,11 +316,12 @@ Cuper blah
 ~
 Oh blah~
 1 0 0 S
-5 1
+6 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #26
 Level 100 tester sword~
@@ -336,7 +344,7 @@ small laser connon white~
 A little white laser conna rests here.~
 5 0 8421376 1
 0 0 0 11 0 0 0 0 0 0
-22
+3
 A
 14 -200
 A
@@ -371,7 +379,7 @@ a small wooden desk~
 A small, fashionable oak desk sits here.~
 12 64 8421376 1
 2 0 0 0 0 0 0 0 0 0
-50
+3
 A
 14 -200
 A

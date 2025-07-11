@@ -641,7 +641,7 @@ int get_damroll(CHAR_DATA *ch)
 
    if (stance_app[ch->stance].dr_mod != 0)
    {
-      dam += dam * stance_app[ch->stance].dr_mod / 10;
+      dam += dam * stance_app[ch->stance].dr_mod / 20;
       dam += stance_app[ch->stance].dr_mod;
    }
 
@@ -662,7 +662,7 @@ int get_hitroll(CHAR_DATA *ch)
 
    if (stance_app[ch->stance].hr_mod != 0)
    {
-      hit += hit * stance_app[ch->stance].hr_mod / 10;
+      hit += hit * stance_app[ch->stance].hr_mod / 20;
       hit += stance_app[ch->stance].hr_mod;
    }
 
@@ -929,6 +929,20 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
          if (ch->adept[i] >= skill_table[gsn].skill_level[i])
             return TRUE;
       }
+   }
+
+   char race_skill[MSL];
+   char *race_skill_list;
+   race_skill_list = race_table[ch->race].skill;
+   for (;;)
+   {
+      race_skill_list = one_argument(race_skill_list, race_skill);
+
+      if (skill_lookup(race_skill) == gsn)
+         return TRUE;
+
+      if (strlen(race_skill) < 1)
+         break;
    }
 
    return FALSE;

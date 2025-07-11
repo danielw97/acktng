@@ -474,6 +474,28 @@ void build_showmob(CHAR_DATA *ch, char *argument)
    sprintf(buf, "@@WModifiers: HP: @@y%d.   @@WAC: @@y%d.  @@WHitroll: @@y%d.  @@WDamroll: @@y%d.\n\r",
            pMob->hp_mod, pMob->ac_mod, pMob->hr_mod, pMob->dr_mod);
    strcat(buf1, buf);
+   sprintf(buf, "@@WSpellpower: @@y%d@@W   Crit: @@y%d@@W   Crit Mult: @@y%d  @@WSpell Crit: @@y%d @@W Spell Crit Mult: @@y%d\n\r",
+           pMob->spellpower_mod, pMob->crit_mod, pMob->crit_mult_mod, pMob->spell_crit_mod, pMob->spell_mult_mod );
+   strcat(buf1, buf);
+
+   sprintf(buf, "@@WDodge: @@y%d   @@WParry: @@y%d   @@WBlock: @@y%d   @@WPiercing:@@y %d\n\r",
+           pMob->dodge_mod, pMob->parry_mod, pMob->block_mod, pMob->pierce_mod);
+   strcat(buf1, buf);
+
+   sprintf(buf, "LA: %d", pMob->loot_amount);
+   strcat(buf1, buf);
+   for(int i = 0; i < MAX_LOOT; i++)
+   {
+      sprintf(buf, " L%d: %d", i, pMob->loot[i]);
+      strcat(buf1,buf);
+   }
+   strcat(buf1, "\n\r");
+   for(int i = 0; i < MAX_LOOT; i++)
+   {
+      sprintf(buf, "LC%d: %d ", i, pMob->loot_chance[i]);
+      strcat(buf1,buf);
+   }
+   strcat(buf1, "\n\r");
 
    sprintf(buf, "@@WMob Flags:@@y\n\r%s", show_values(tab_mob_flags, pMob->act, TRUE));
    strcat(buf1, buf);

@@ -2165,6 +2165,13 @@ bool spell_heal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    do_spell_heal(ch, victim, sn);
 
+   if (ch->adept[CLASS_TEM] > 0)
+   {
+      spell_cure_blindness(sn, level, ch, vo, obj);
+      spell_remove_curse(sn, level, ch, vo, obj);
+      spell_cure_poison(sn, level, ch, vo, obj);
+   }
+
    return TRUE;
 }
 

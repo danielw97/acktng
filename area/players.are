@@ -691,7 +691,8 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1105
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1105
 al bartender~
 Al the Bartender~
 Al the Bartender stands behind the bar, waiting for your order.
@@ -702,11 +703,12 @@ Al the Bartender is a short, fat, round kind of guy, always cleaning glasses,
 think about it.  He flashes a quick smile at you.
 ~
 515 533180 900 S
-76 1
+77 1
 0 0 0 0
 ! 0 0 0 7 22100 0 0
 | 0 0 0 0 0 0 0
-#1104
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1104
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -720,7 +722,8 @@ This is your master.  Big and strong with bulging muscles.  Several scars
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1103
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1103
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -730,11 +733,12 @@ You realize that whenever your guildmaster moves, you fail to notice it:
 the appearance of a beggar.
 ~
 1027 0 1000 S
-77 2
+76 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1102
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1102
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -747,7 +751,8 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1101
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1101
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -758,10 +763,11 @@ Even though your guildmaster looks old and tired, you can clearly see the
 ~
 1027 0 1000 S
 73 2
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #1147
 seat~
@@ -779,7 +785,7 @@ A small china fountain gurgles away sweetly to itself.
 ~
 25 64 0 1
 0 0 0 0 0 0 0 0 0 0
-1000
+3
 L
 1
 #1145
@@ -797,7 +803,7 @@ a small, circular seat~
 A small, circular seat is in the middle of the room.~
 12 64 0 1
 2 0 0 0 0 0 0 0 0 0
-200
+3
 L
 1
 #1141
@@ -806,7 +812,7 @@ the Lovers' Board~
 The Lovers's Board is here, stuck to the wall with four arrows.~
 27 0 0 1
 14 1 1 1141 0 0 0 0 0 0
-10000
+3
 L
 1
 #1117
@@ -826,7 +832,7 @@ A can of Pepsi lies forgotten on the floor.
 ~
 17 0 8388608 1
 4 4 15 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1104
@@ -836,7 +842,7 @@ A glass of Jack Daniel's lies on the floor.
 ~
 17 0 8388608 1
 4 4 5 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1103
@@ -846,7 +852,7 @@ A bottle of quality red wine has been left here.
 ~
 17 0 8388608 1
 4 4 2 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1102
@@ -856,7 +862,7 @@ A bottle of warm beer has been left here.
 ~
 17 0 8388608 1
 4 4 1 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1101
@@ -866,7 +872,7 @@ A small bottle of local spring water has been left here.
 ~
 17 0 8388608 1
 4 4 0 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1100
@@ -894,7 +900,7 @@ wed board~
 ~
 27 1 0 1
 60 1 1 1107 0 0 0 0 0 0
-1000
+3
 L
 1
 #0

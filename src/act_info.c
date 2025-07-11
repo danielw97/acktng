@@ -322,9 +322,9 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
             strcat(sendBuf, "wings ");
          if (j == 19)
             strcat(sendBuf, "claws ");
-         if (j == 25)
+         if (j == 27)
             strcat(sendBuf, "tail ");
-         if (j == 28)
+         if (j == 30)
             strcat(sendBuf, "hooves ");
       }
    }
@@ -451,7 +451,7 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
       send_to_char("\n\r", ch);
    }
 
-   sprintf(buf, "AC mod: %d%%  HR mod: %d%%  DR mod: %d%%  SPEED mod: %d  HEAL mod: %d%%  SPELL mod: %d%%\n\r", stance_app[i].ac_mod*10, stance_app[i].hr_mod*10, stance_app[i].dr_mod*10, stance_app[i].speed_mod, stance_app[i].heal_mod*10, stance_app[i].spell_mod*10);
+   sprintf(buf, "AC mod: %d%%  HR mod: %d%%  DR mod: %d%%  SPEED mod: %d  HEAL mod: %d%%  SPELL mod: %d%%\n\r", stance_app[i].ac_mod*10, stance_app[i].hr_mod*5, stance_app[i].dr_mod*5, stance_app[i].speed_mod, stance_app[i].heal_mod*10, stance_app[i].spell_mod*10);
    send_to_char(buf,ch);  
 }
 

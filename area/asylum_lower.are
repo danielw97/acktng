@@ -209,18 +209,18 @@ S
 about.@@N
 ~
 9 11
-D1
-~
-~
-0 -1 5110
-D3
-~
-~
-0 -1 5116
-D4
+D0
 ~
 ~
 0 -1 5108
+D3
+~
+~
+0 -1 5110
+D4
+~
+~
+0 -1 5116
 S
 #5110
 @@dThe Vast Darkness@@N~
@@ -275,11 +275,11 @@ S
 about.@@N
 ~
 9 11
-D1
+D0
 ~
 ~
 0 -1 5113
-D3
+D1
 ~
 ~
 0 -1 5111
@@ -344,11 +344,11 @@ D0
 D2
 ~
 ~
-0 -1 5114
-D3
-~
-~
 0 0 5114
+D4
+~
+~
+0 -1 5114
 S
 #5116
 @@dThe Vast Darkness@@N~
@@ -439,14 +439,14 @@ S
 about.@@N
 ~
 9 11
-D1
-~
-~
-0 -1 5121
-D3
+D0
 ~
 ~
 0 -1 5119
+D2
+~
+~
+0 -1 5121
 S
 #5121
 @@dA Small Alcove@@N~
@@ -739,11 +739,12 @@ guardian~
 ~
 ~
 3145849 680 0 S
-131 1
-0 0 0 0
+130 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 589824 0 0 0 0 72
-#5101
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5101
 thing~
 @@dA @@Rhideous @@Gamphibious@@d @@dthing@@N~
 @@dA corrupted thing formed from an @@Gamphibian @@dmelded with a human hops
@@ -751,11 +752,12 @@ thing~
 ~
 ~
 3145753 680 0 S
-134 1
+135 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 589824 0 0 0 0 72
-#5102
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5102
 thing~
 @@dAn oversized @@Gfrog-like @@dthing@@N~
 @@dAn oversized @@Gfrog@@d, strangely appearing humanoid, hops towards you.@@N
@@ -763,11 +765,12 @@ thing~
 ~
 ~
 3407929 680 0 S
-133 1
+132 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 589824 0 0 0 0 8
-#5103
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5103
 frog~
 @@dA huge @@Rdemonic @@GFrog@@N~
 @@dThe @@Rdemonic @@dform of a human melded with a @@GFrog@@d glares at you
@@ -775,11 +778,12 @@ frog~
 ~
 ~
 3162137 68266 0 S
-136 1
+137 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 17367040 0 0 0 0 48
-#5104
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5104
 administrator~
 @@DThe @@mAsylum @@RAdministrator@@N~
 @@dA tiny man, looking rather harmless wanders about, observing the @@mAsylum
@@ -787,11 +791,12 @@ administrator~
 ~
 ~
 36716561 68266 0 S
-137 1
+138 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50921472 0 0 0 0 48
-#5105
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5105
 monstrosity~
 @@dA @@RDemonic @@dMonstrosity@@N~
 @@dA monstrosity from the depths of @@Rcorruption @@dstands before you!!!@@N
@@ -802,7 +807,8 @@ monstrosity~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50921472 0 0 0 0 48
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #5100
 key~
@@ -820,7 +826,7 @@ L
 ~
 14 65536 0 1
 9 3 5105 0 0 0 0 0 0 0
-1000
+3
 E
 altar~
 ~
@@ -853,7 +859,7 @@ gauntlets~
 @@dA pair of @@mAsylum @@dGauntlets@@d lies here.@@N~
 9 134217858 8392704 261
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 19 34
 A
@@ -895,7 +901,7 @@ rod~
 @@dA blackened rod, covered in @@Rstains@@d lies here.@@N~
 5 167772304 8421376 257
 0 0 0 8 0 0 0 0 0 0
-15
+2
 A
 18 23
 A

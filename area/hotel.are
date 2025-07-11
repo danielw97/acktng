@@ -821,11 +821,12 @@ A Doorman stands here, watching the entrance.
 He looks old, and bored.  Be nice and leave him alone.
 ~
 31 8 200 S
-26 1
+27 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4413
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4413
 bell boy bellboy~
 the bellboy~
 The bellboy stands here, looking to make a quick tip.
@@ -833,11 +834,12 @@ The bellboy stands here, looking to make a quick tip.
 He is young, and ugly.  What else do you need to know?
 ~
 7 0 400 S
-28 1
+29 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4412
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4412
 member staff~
 A member of Staff~
 A member of staff stands here, trying to ignore you.
@@ -845,11 +847,12 @@ A member of staff stands here, trying to ignore you.
 She is old, and looks unhelpful, to say the least.
 ~
 15 60 -200 S
-25 2
+26 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4411
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4411
 newlywed~
 A Newlywed Groom~
 A newlywed groom stands here, waiting for night time.
@@ -861,7 +864,8 @@ He has just got married, and is spending his honeymoon here.  Fool.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4410
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4410
 newlywed~
 A Newlywed Bride~
 A newlywed bride stands here, trying to fake a headache.
@@ -873,7 +877,8 @@ She is very pretty, and looks annoyed at having to honeymoon here.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4409
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4409
 guest~
 A guest~
 A guest is here, thinking of more things to complain about.
@@ -881,11 +886,12 @@ A guest is here, thinking of more things to complain about.
 He is big, horrible and ugly.  The perfect guest for this hotel!
 ~
 39 0 -200 S
-26 1
+27 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4408
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4408
 manager~
 The manager~
 The manager is here, suddenly looking VERY innocent.
@@ -898,7 +904,8 @@ The manager is a short fellow, the kind of person you take an instant dislike
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4407
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4407
 barmaid~
 The barmaid~
 The Barmaid is here, looking slightly naked.
@@ -910,7 +917,8 @@ She is indeed naked.  Where could her clothes have gone??
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4406
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4406
 clockwork fish~
 A clockwork fish~
 A clockwork fish swims about here.
@@ -918,11 +926,12 @@ A clockwork fish swims about here.
 It is made from various pieces of dolls and puppets.  Uh-oh...
 ~
 5 4 -600 S
-35 0
+34 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4405
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4405
 cook~
 The cook~
 The cook stands here, pretending to be in a coma, through all the excitement.
@@ -930,11 +939,12 @@ The cook stands here, pretending to be in a coma, through all the excitement.
 He looks bored, to say the least.
 ~
 3 0 -100 S
-31 1
+32 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4404
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4404
 driller killer~
 driller killer~
 Driller Killer, the mean puppet stands here, waiting to kill you.  Run!?!?
@@ -942,11 +952,12 @@ Driller Killer, the mean puppet stands here, waiting to kill you.  Run!?!?
 Driller Killer is a small doll, but has a large, sharp head.
 ~
 3145783 32778 -900 S
-48 0
+47 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052672 0 0 0 0 0
-#4403
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4403
 puppet master puppetmaster~
 The Puppetmaster~
 The Puppetmaster stands here, looking damn evil.
@@ -954,11 +965,12 @@ The Puppetmaster stands here, looking damn evil.
 He is scared, and old.  However, he's still bigger than you!
 ~
 3145767 136 -900 S
-54 0
+55 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 68
-#4402
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4402
 giant puppet~
 A giant puppet~
 A giant puppet is waiting here......  for you maybe??
@@ -966,11 +978,12 @@ A giant puppet is waiting here......  for you maybe??
 The puppet is giant by puppet dimensions, but still smaller than you.
 ~
 3145761 0 -400 S
-41 0
+40 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4401
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4401
 puppet~
 A puppet~
 A puppet is here, wandering around.
@@ -978,11 +991,12 @@ A puppet is here, wandering around.
 The puppet looks like a normal puppet, except it is walking around!!!!!!
 ~
 3145761 0 -200 S
-45 0
+46 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4400
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4400
 guard puppet~
 A guard puppet~
 A puppet is here, as if on guard.
@@ -990,11 +1004,12 @@ A puppet is here, as if on guard.
 It is a plain looking puppet, except is looks very evil.
 ~
 3145763 0 -700 S
-48 0
-0 0 0 0
+47 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #4409
 red staff~
@@ -1011,7 +1026,7 @@ a gnarled staff~
 A gnarled staff lies here.~
 5 134220304 8421376 1
 0 0 0 7 0 0 0 0 0 0
-4
+1
 L
 50
 #4407
@@ -1020,7 +1035,7 @@ some red armbands~
 A red pair of armbands lies here.~
 9 134217744 8390656 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 A
 17 -75
 A
@@ -1037,7 +1052,7 @@ red leggings~
 Some red leggings have been left here.~
 9 134217744 9437184 17
 0 0 0 0 0 0 0 0 0 0
-4
+1
 A
 13 10
 A
@@ -1096,7 +1111,7 @@ some brain fluid~
 Some brain fluid has been left here.~
 10 128 8388608 1
 50 56 67 1 0 0 0 0 0 0
-4
+1
 L
 1
 #4400
@@ -1163,6 +1178,7 @@ M 0 4406 1 4429 fish
 M 0 4405 1 4442 cook
 
 G 0 4404 0 (null)
+
 M 0 4404 1 4423 driller
 
 G 0 4401 0      fluid

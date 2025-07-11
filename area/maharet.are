@@ -1158,44 +1158,48 @@ The impassive gate guard stands here.
 ~
 ~
 7 32776 -100 S
-55 1
+56 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9220
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9220
 captain~
 The Elite Guard captain~
 The guard captain of the elite squadron polishes his boots nonchalantly here.
 ~
 ~
 21102721 533120 100 S
-63 1
+62 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9219
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9219
 elite~
 The Elite Elven guard~
 The impassive Elite guard stands here, looming over you.
 ~
 ~
 87 8872 -1 S
-62 1
+61 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9218
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9218
 queen~
 Queen Amlariul~
 The beautifully radiant Queen Amlariul sits here lost in thought.
 ~
 ~
 3 680 -1 S
-83 2
+84 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9217
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9217
 healer~
 the wizened priest~
 The wizened old elven priest looks up at you from his reading.
@@ -1206,18 +1210,20 @@ The wizened old elven priest looks up at you from his reading.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9216
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9216
 guard elven~
 the elegant elven guard~
 The serenely graceful Elven guards patrol here.
 ~
 ~
 197 8832 -1 S
-36 1
+35 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9215
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9215
 amylla shopkeeper~
 Amylla Goldeneyes~
 Amylla Goldeneyes bakes her way through the day's order here.
@@ -1228,18 +1234,20 @@ Amylla Goldeneyes bakes her way through the day's order here.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9213
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9213
 sebastian shopkeeper~
 Sebastian the shopkeeper~
 A short, crabby elf is here giving music lessons.
 ~
 ~
 3 2720 0 S
-64 1
+65 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9208
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9208
 ilyrana shopkeeper~
 Ilyrana the Shopkeeper~
 Ilyrana is here making up a bouquet.
@@ -1250,11 +1258,12 @@ This pretty little elf spends most of her time here among her flowers. With her
 to make any money in her chosen profession.
 ~
 16785475 10912 0 S
-140 2
+139 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9207
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9207
 marikoth executioner~
 Marikoth the Executioner~
 Marikoth the Executioner stands here keeping the peace.
@@ -1265,11 +1274,12 @@ This quiet, silver-haired elf with his deep set eyes and an expression of
 life.
 ~
 131083 10984 0 S
-108 1
+109 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9206
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9206
 alinar banker~
 Alinar the Banker~
 A distinguished elf is here to help you with your banking needs.
@@ -1279,11 +1289,12 @@ The honorable elf before you would rather die than cheat a customer of his
 leads that has him practically chained to the bank.
 ~
 32771 8872 0 S
-82 1
+81 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9205
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9205
 dandy innkeeper~
 Dandy the Innkeeper~
 A big, intimidating man stands here offering you a room.
@@ -1293,11 +1304,12 @@ The huge man towering over you sends a shiver down your spine with a glance.
 likely that he would give you a big hug rather than hurt you.
 ~
 11 8876 0 S
-70 1
+71 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9203
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9203
 pierre consultant~
 Pierre the Fashion Consultant~
 A prissy man stands here fussing about his latest designs.
@@ -1308,11 +1320,12 @@ Rushing up to you the moment you walked in the door, it's almost as if he was
 get his delicate designer feelings hurt with the slightest frown.
 ~
 8388611 10912 0 S
-140 1
+141 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9202
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9202
 kythaela weaponsmith~
 Kythaela the weaponsmith~
 Kythaela the weaponsmith is here sharpening a blade.
@@ -1327,7 +1340,8 @@ Kythaela looks as if she has been in this business for a long time. Her
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9201
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9201
 scruffy dwarf~
 a scruffy little dwarf~
 A scruffy little dwarf is here, trying to blend into the shadows.
@@ -1337,10 +1351,11 @@ This scruffy little scavenger is better off left unnoticed. Maybe if you ignore 
 ~
 197 0 -1 S
 3 0
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9204
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9204
 thaola shopkeeper~
 Thaola the shopkeeper~
 A soft-spoken elven woman is here offering you a glass of wine.
@@ -1351,7 +1366,8 @@ A soft-spoken elven woman is here offering you a glass of wine.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9209
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9209
 amasal armorer~
 Amasal the Armorer~
 Amasal is here putting the finishing touches on a piece of armor.
@@ -1362,11 +1378,12 @@ This handsome elf looks as if he's tired of being cooped up in this tiny shop.
 around. Maybe it is time he got a partner for the store?
 ~
 1048579 10912 0 S
-140 1
+139 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9210
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9210
 rennyn shopkeeper~
 Rennyn the shopkeeper~
 Rennyn the shopkeeper is here trying to sell you his wares.
@@ -1380,7 +1397,8 @@ A tall, thin elf stands before you. He looks slightly bored, as if it has been
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9211
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9211
 evanard grocer~
 Evanard the Grocer~
 A happy looking elf is here waiting to get you whatever you need.
@@ -1395,7 +1413,8 @@ The happy elf before you has made it his life's work to find hard to locate
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9212
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9212
 laeroth wizard~
 Laeroth the Wizard~
 Laeroth the Wizard is patiently waiting to help you.
@@ -1406,11 +1425,12 @@ As you look into Laeroth's eyes, you get the feeling you can't count as high
 can make up for you today.
 ~
 3 2720 0 S
-143 1
+144 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8394752 0 0 0 0 0
-#9214
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9214
 lorianne bartender~
 Lorianne the bartender~
 Lorianne the bartender kicks her heels here.
@@ -1419,11 +1439,12 @@ Tall and slender and graceful, this lady has a piercing glare about her, I
 wouldnt mess if I were you.
 ~
 1539 2720 -1 S
-75 2
+74 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9222
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9222
 paul creditman jeweller~
 Paul the Creditman~
 A very happy man is here offering you credit for jewelry.
@@ -1434,7 +1455,8 @@ A very happy man is here offering you credit for jewelry.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #9234
 elven boots~
@@ -1475,7 +1497,7 @@ a bottle of fine vintage wine~
 A bottle of fine vintage wine has been left here.~
 17 0 8388608 1
 10 10 2 0 0 0 0 0 0 0
-4
+1
 L
 1
 #9226
@@ -1484,7 +1506,7 @@ a kayak~
 A hand-crafted kayak has been left here.~
 22 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-50
+3
 L
 1
 #9230
@@ -1576,7 +1598,7 @@ a PEW39 Explosive Space Modulator~
 A PEW39 Explosive Space Modulator lies here ready to blow up the world.~
 5 16705 8421376 1
 0 0 0 11 0 0 0 0 0 0
-4
+1
 A
 2 2
 A
@@ -1776,7 +1798,7 @@ an elven sword ~
 An elven sword lies here, waiting for a good fight.~
 5 134217793 8421376 1
 0 0 0 1 0 0 0 0 0 0
-5
+1
 A
 18 1
 A
@@ -1789,7 +1811,7 @@ a finely crafted elven bow~
 A finely crafted elven bow rests here, waiting to be picked up.~
 5 134217793 8421376 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 A
 19 2
 A
@@ -1802,7 +1824,7 @@ a Moonblade~
 A finely crafted sword decorated with runes radiates a glowing light here.~
 5 134217729 8421376 1
 0 0 0 1 0 0 0 0 0 0
-5
+1
 A
 17 -10
 A
@@ -1845,7 +1867,7 @@ the Fountain of Stars~
 An ornately decorated fountain flows here.~
 25 0 0 1
 0 0 0 0 0 0 0 0 0 0
-10000
+3
 L
 1
 #0

@@ -782,11 +782,12 @@ The Guinea-pig guardian of the burrow awaits death here.
 ~
 ~
 131091 535168 0 S
-83 1
+84 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7307
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7307
 ram~
 a bleating starry-eyed ram~
 The sacred holy ram lies here, sleeping and unaware.
@@ -797,72 +798,79 @@ The sacred holy ram lies here, sleeping and unaware.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7306
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7306
 Lordly Healer~
 The Shadow~
 The Shadow is levitating here, ready to help the clan.
 ~
 ~
 4099 0 0 S
-2 1
+1 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7305
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7305
 spider~
 a giant spider~
 A giant spider hangs on his web here.
 ~
 ~
 3 0 0 S
-11 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7304
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7304
 shapeshifter~
 A shapeshifter~
 A small sniffing shapeshifter cringes in one corner.~
 ~
 1 0 0 S
-13 0
+14 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7303
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7303
 hermit~
 A grumpy hermit~
 A grumpy looking hermit shakes a stick at you.
 ~
 ~
 3 0 50 S
-38 1
+39 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7302
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7302
 tree~
 A rotting tree.~
 A rotting tree approaches you.
 ~
 ~
 1 0 -100 S
-8 1
+9 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7301
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7301
 wolverine~
 A nasty vicious wolverine~
 A nasty vicious wolverine is rooting for food here.
 ~
 ~
 3 0 0 S
-40 1
+41 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7300
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7300
 ghost~
 ghost of the adventurer~
 The ghost of the dead adventurer rises from the ground and attacks!
@@ -870,10 +878,11 @@ The ghost of the dead adventurer rises from the ground and attacks!
 ~
 35 0 -50 S
 27 1
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#7309
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7309
 mister mystoffeles~
 MaGiCaL MiStEr @@RM@@yy@@cs@@Gt@@Wo@@bf@@Rf@@ce@@yl@@Ge@@Ws@@g~
 A Strange cat lies here doing conjuring tricks.
@@ -884,7 +893,8 @@ A Strange cat lies here doing conjuring tricks.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #7316
 blood~
@@ -988,7 +998,7 @@ A small vial lies on the floor here, full of an azure liquid.
 ~
 10 128 8388608 1
 0 28 -1 -1 0 0 0 0 0 0
-10
+2
 L
 1
 #7305
@@ -998,7 +1008,7 @@ A bit of tree is lying here forgotten.
 ~
 5 134217730 8421376 1
 0 0 0 7 0 0 0 0 0 0
-10
+2
 A
 19 3
 A
@@ -1014,7 +1024,7 @@ Some long razor blades on gloves lie on the floor here.
 ~
 5 134217728 8404992 1
 0 0 0 0 0 0 0 0 0 0
-8
+1
 A
 2 -1
 A

@@ -96,6 +96,8 @@ sh_int gsn_shield_block;
 sh_int gsn_beserk;
 sh_int gsn_palmstrike;
 sh_int gsn_counter;
+sh_int gsn_enhanced_heal;
+sh_int gsn_enhanced_purify;
 sh_int gsn_enhanced_critical;
 sh_int gsn_spell_critical;
 sh_int gsn_spell_critical_damage;
@@ -1027,6 +1029,7 @@ void load_bans(void)
  */
 void load_mobiles(FILE *fp)
 {
+   char buf[MSL];
    MOB_INDEX_DATA *pMobIndex;
    BUILD_DATA_LIST *pList;
 
@@ -1039,7 +1042,8 @@ void load_mobiles(FILE *fp)
       letter = fread_letter(fp);
       if (letter != '#')
       {
-         bug("Load_mobiles: # not found.", 0);
+         sprintf(buf, "Load_mobiles: # not found, %c found instead.", letter);
+         bug(buf, 0);
          hang("Loading Mobiles in db.c");
       }
 
@@ -1102,17 +1106,12 @@ void load_mobiles(FILE *fp)
          pMobIndex->def = fread_number(fp);
          if ((area_revision < 16) || (pMobIndex->race < 0))
          {
-#ifdef AA
-            pMobIndex->race = 14;
-#else
             pMobIndex->race = 0;
-#endif
          }
-         else
-            ;
       }
       else
          ungetc(letter, fp);
+
       letter = fread_letter(fp);
       if (letter == '|')
       {
@@ -1123,6 +1122,45 @@ void load_mobiles(FILE *fp)
          fread_number(fp); /* power_cast */
          pMobIndex->resist = fread_number(fp);
          pMobIndex->suscept = fread_number(fp);
+      }
+      else
+         ungetc(letter, fp);
+
+      letter = fread_letter(fp);
+      if (letter == '+')
+      {
+         pMobIndex->spellpower_mod = fread_number(fp);
+         pMobIndex->crit_mod = fread_number(fp);
+         pMobIndex->crit_mult_mod = fread_number(fp);
+         pMobIndex->spell_crit_mod = fread_number(fp);
+         pMobIndex->spell_mult_mod = fread_number(fp);
+         pMobIndex->parry_mod = fread_number(fp);
+         pMobIndex->dodge_mod = fread_number(fp);
+         pMobIndex->block_mod = fread_number(fp);
+         pMobIndex->pierce_mod = fread_number(fp);
+      }
+      else
+         ungetc(letter, fp);
+
+      letter = fread_letter(fp);
+      if (letter == 'l')
+      {
+         pMobIndex->loot_amount = fread_number(fp);
+         for(int i = 0; i < MAX_LOOT; i++)
+         {
+            pMobIndex->loot[i] = fread_number(fp);
+         }
+      }
+      else
+         ungetc(letter, fp);
+
+      letter = fread_letter(fp);
+      if (letter == 'L')
+      {
+         for(int i = 0; i < MAX_LOOT; i++)
+         {
+            pMobIndex->loot_chance[i] = fread_number(fp);
+         }
       }
       else
          ungetc(letter, fp);

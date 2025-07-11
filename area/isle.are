@@ -1665,11 +1665,12 @@ The Tyrannosaurus stands many times taller than you, and looks to weigh at
 lucky at conquering this ravenous creature.
 ~
 33554557 32768 -600 S
-75 2
-0 0 0 0
+76 2
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5002
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5002
 triceratops triccie dino~
 the Triceratops~
 A hungry looking Triceratops struts around here.
@@ -1679,11 +1680,12 @@ The Triceratops is the largest of the horn-faced dinosaurs.  The huge front
 two great horns jutting from it provide an ample form of attack.
 ~
 134217801 0 -400 S
-80 1
+81 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5003
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5003
 stegosaurus stego dino~
 the Stegosaurus~
 A dumb looking Stegosaurus is here looking for a bush to eat.
@@ -1698,7 +1700,8 @@ The Stegosaurus looks fairly harmless, but also pretty large; eight feet of
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5004
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5004
 pterandon peri dino~
 the Pterandon~
 A large, flying Pterandon swoops around, looking mean.
@@ -1713,7 +1716,8 @@ The Pterandon, big brother of the Pteradactyl, has a four-foot long beak, which
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5005
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5005
 lambeosaurus lamb dino~
 the Lambeosaurus~
 A small, duck-billed Lambeosaurus is here, looking peaceful.
@@ -1723,11 +1727,12 @@ The Lambeosaurus has a flat snout and a large crest on it's head.  It looks
 mouse would look at a cat.
 ~
 65 98432 300 S
-73 1
+72 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5006
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5006
 elasmosaurus lassie dino~
 the Elasmosaurus~
 A Elasmosaurus is here, looking downright mean.
@@ -1740,7 +1745,8 @@ The Elasmosaurus looks like a huge snake.  Short fins protrude from it's thick
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5007
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5007
 diplodicos dippy dino~
 the Diplodocus~
 A medium-sized Diplodocus stands here looking for people to stomp on.
@@ -1753,7 +1759,8 @@ The Diplodocus doesn't look fully grown.  Standing taller than a Tyrannosurus
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5008
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5008
 deinonychus dino~
 the Deinonychus~
 A small, man-sized Deinonychus darts about, getting ready to attack.
@@ -1763,11 +1770,12 @@ The Deiononychus, due to it's small size, is an excellent fighter.  It looks
 around you.
 ~
 77 0 -300 S
-69 1
+68 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5009
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5009
 paleocinthus dino~
 the Paleocinthus~
 A small Paleocinthus is here looking for a bush to eat.
@@ -1781,7 +1789,8 @@ The Paleocinthus has side spikes, and a smallish head.  It's large, spiked
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5010
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5010
 sea seahag hag~
 the Sea Hag~
 A *very* ugly old hag stands here, waiting to eat you.
@@ -1796,35 +1805,8 @@ The old Hag looks very old, and very hungry.  She licks her lips as she looks
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#5011
-grippli frog~
-the Grippli~
-A small, frog like humanoid hops around, looking for insects to munch on.
-~
-The Grappli hopping about you is a small, intelligent forg-like humanoid.
-It seems to be occupied looking for insects to eat, rather than trying to eat
-you, like most of the other inhabitants of the Isle.
-~
-13 33280 300 S
-55 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-#5012
-grippli frog~
-the Grippli~
-A small, frog like humanoid hops around, looking for insects to munch on.
-~
-The Grappli hopping about you is a small, intelligent forg-like humanoid.
-It seems to be occupied looking for insects to eat, rather than trying to eat
-you, like most of the other inhabitants of the Isle.
-~
-13 33280 300 S
-49 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-#5013
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5011
 grippli frog~
 the Grippli~
 A small, frog like humanoid hops around, looking for insects to munch on.
@@ -1838,7 +1820,38 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#5014
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5012
+grippli frog~
+the Grippli~
+A small, frog like humanoid hops around, looking for insects to munch on.
+~
+The Grappli hopping about you is a small, intelligent forg-like humanoid.
+It seems to be occupied looking for insects to eat, rather than trying to eat
+you, like most of the other inhabitants of the Isle.
+~
+13 33280 300 S
+49 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5013
+grippli frog~
+the Grippli~
+A small, frog like humanoid hops around, looking for insects to munch on.
+~
+The Grappli hopping about you is a small, intelligent forg-like humanoid.
+It seems to be occupied looking for insects to eat, rather than trying to eat
+you, like most of the other inhabitants of the Isle.
+~
+13 33280 300 S
+56 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5014
 druid getafix~
 the Druid~
 A small druid is here, looking just slightly mad.
@@ -1851,7 +1864,8 @@ The druid is dribbling all over the place, and now and again, barks at himself.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 33558528 0 0 0 0 16
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #5001
 key white~
@@ -1880,7 +1894,7 @@ An old ribcage has been left on the floor.
 ~
 9 134218752 8650752 1
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 13 -30
 A
@@ -1904,7 +1918,7 @@ A small, gold staff has been dropped here.
 ~
 5 134217729 8421376 1
 0 0 0 7 0 0 0 0 0 0
-9
+1
 L
 50
 #5006

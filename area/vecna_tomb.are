@@ -2414,62 +2414,68 @@ Sex Slave~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20624
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20624
 Vecna The Lich~
 @@lVecna The Lich@@g~
 @@lVecna The Lich purveys the area, resplendant in all his grand glory.@@g
 ~
 ~
 16990265 1075944 0 S
-118 1
+117 1
 0 0 0 0
 ! 0 0 0 7 0 0 16
 | 0 33554624 0 0 0 0 80
-#20622
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20622
 King Saul The Lich~
 @@lKing Saul The Lich@@g~
 @@lKing Saul The Lich stands sentinel here, detestable unto the Lord.@@g
 ~
 ~
 147515 1059512 0 S
-121 1
+122 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 96 0 0 0 0 48
-#20621
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20621
 Hoshea The Lich~
 @@lHoshea The Lich@@g~
 @@lHoshea The Lich stands here, detestable unto the Lord.@@g
 ~
 ~
 147577 25274 0 S
-118 1
+119 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 96 0 0 0 0 144
-#20620
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20620
 Manasseh The Lich~
 @@lManasseh The Lich@@g~
 @@lManasseh The Lich stands here, detestable unto the Lord.@@g
 ~
 ~
 147577 1059578 0 S
-114 1
+113 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 96 0 0 0 0 144
-#20619
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20619
 Rehoboam the Lich~
 @@lRehoboam The Lich@@g~
 @@lRehoboam The Lich stands here, detestable unto the Lord.@@g
 ~
 ~
 147577 1073340 0 S
-121 1
+120 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 96 0 0 0 0 48
-#20615
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20615
 A Presence~
 @@lA Presence@@g~
 @@lA Presence is felt stirring the balance.@@g
@@ -2480,62 +2486,68 @@ A Presence~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 2112 0 0 0 0 16
-#20614
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20614
 Fiend~
 @@lA Fiend@@g~
 @@lA Fiend rests casually, waiting for you to bring your life-force to it.@@g
 ~
 ~
 147561 117432 0 S
-107 1
+106 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20613
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20613
 Shadowen~
 @@lA Shadowen@@g~
 @@lA Shadowen floats here, fire brimming between it's fingertips.@@g
 ~
 ~
 147561 1574586 0 S
-98 1
+97 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 2144 0 0 0 0 16
-#20612
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20612
 Walking Corpse~
 @@lA Walking Corpse@@g~
 @@lA Walking Corpse sniffs the air for living tissue.@@g
 ~
 ~
 147561 3768 0 S
-115 1
+116 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20611
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20611
 Skeletal Legion~
 @@lA Skeletal Legion@@g~
 @@lA Skeletal Legion stares coldly into the blackness.@@g
 ~
 ~
 409705 16440 0 S
-127 1
+126 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#20608
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20608
 Wight~
 @@lA Wight@@g~
 @@lA Wight glances about, looking for something to tear the arms from.@@g
 ~
 ~
 278625 17080 0 S
-109 1
+108 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20605
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20605
 Spectre~
 @@lA Spectre@@g~
 @@lA Spectre stands here, lantern in hand, guarding an open grave.@@g
@@ -2546,7 +2558,8 @@ Spectre~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 96 0 0 0 0 16
-#20604
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20604
 Ghast~
 @@lA Ghast@@g~
 @@lA Ghast lurks here, waiting for his next prey@@g.
@@ -2557,7 +2570,8 @@ Ghast~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20603
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20603
 zombie~
 @@lA Zombie@@g~
 @@lA Zombie stands here, looking about for something bloody to munch on.@@g
@@ -2568,18 +2582,20 @@ zombie~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20602
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20602
 Ghoul~
 @@lA Ghoul@@g~
 @@lA Ghoul walks here on lurching legs.@@g
 ~
 ~
 278625 656 0 S
-105 1
+104 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20600
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20600
 sentinel~
 @@lSentinel@@N~
 @@lThe Sentinel stands here resolutely@@N
@@ -2587,54 +2603,59 @@ sentinel~
 ~
 1065003 760 0 S
 103 1
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 2112 0 0 0 0 144
-#20601
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20601
 Wraith~
 A @@lWraith@@g~
 @@lA Wraith floats here, hissing his blackness at you.@@g
 ~
 ~
 81985 1671864 0 S
-103 1
+104 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20606
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20606
 Banshee~
 @@lA Banshee@@g~
 @@lA Banshee floats in the blackness, wailing hideously@@g.
 ~
 ~
 213097 673454 0 S
-116 2
+117 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 2176 0 0 0 0 16
-#20607
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20607
 Ghost~
 @@lA Ghost@@g~
 @@lA ghost floats here, contemplating what evil he can do.@@g
 ~
 ~
 213097 1574570 0 S
-106 1
+105 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052672 0 0 0 0 8
-#20609
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20609
 Groaning Spirit~
 @@lA Groaning Spirit@@g~
 @@lA Groaning Spirit wails with pure hatred of the living.@@g
 ~
 ~
 213097 1680122 0 S
-110 1
+109 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4489220 0 0 0 0 16
-#20610
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20610
 Nosferatu~
 @@lA Nosferatu@@g~
 @@lA Nosferatu callously assesses the situation. @@N
@@ -2645,29 +2666,32 @@ Nosferatu~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 3145792 0 0 0 0 16
-#20616
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20616
 Guardian of the Crypt~
 @@lThe Guardian of the Crypt@@g~
 @@lThe Guardian of the Crypt stands here resolutly.@@g
 ~
 ~
 147515 1173246 0 S
-119 1
+118 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388704 0 0 0 0 80
-#20617
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20617
 A God Among the Dead~
 @@lA God Among the Dead@@g~
 @@lA God Among the Dead simply stands here, waiting.@@g
 ~
 ~
 131115 1091320 -1000 S
-114 1
+113 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 192 0 0 0 0 16
-#20618
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20618
 Floating Death~
 @@lFloating Death@@g~
 @@lFloating Death hangs in the air here, gaunt, glaring at you with death's
@@ -2675,11 +2699,12 @@ Floating Death~
 ~
 ~
 213113 1575612 0 S
-115 1
+114 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 16
-#20623
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20623
 Whispering Spirit~
 @@lA Whispering Spirit@@g~
 @@lA Whispering Spirit floats here.@@g
@@ -2690,29 +2715,32 @@ Whispering Spirit~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#20626
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20626
 silent one~
 @@dThe shadowy guardian@@N~
 A large silent form stands here, watching your actions closely.
 ~
 ~
 20201539 109290 0 S
-121 1
+122 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#20627
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #20627
 keeper earth~
 @@NThe @@dKeeper @@Nof @@GEarth@@N~
 @@bThe keeper of divine elements guards his post.@@N 
 ~
 ~
 99 16616 0 S
-118 1
+117 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #20620
 Speech Ribbon~
@@ -2721,7 +2749,7 @@ Speech Ribbon~
 ~
 5 1207959552 8421376 1
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 13 50
 A
@@ -2759,7 +2787,7 @@ coat vecna~
 ~
 9 134217798 8650752 1775
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 17 -175
 A
@@ -2782,7 +2810,7 @@ the @@WDarksword @@mof the @@WLich@@g~
 The Darksword of the Lich lies here.~
 5 134217798 8421376 5523
 0 0 0 11 0 0 0 0 0 0
-22
+3
 A
 17 -166
 A
@@ -2804,7 +2832,7 @@ leggings presence~
 ~
 9 134217748 9437184 3
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 12 70
 A
@@ -2824,7 +2852,7 @@ Fiend Boots~
 ~
 9 134217748 10485760 97
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 19 23
 A
@@ -2840,7 +2868,7 @@ Shadowen's Coat~
 ~
 9 134217732 8650752 16513
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 19 13
 A
@@ -2876,7 +2904,7 @@ Wight Claws~
 ~
 9 134217744 8404992 257
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 20 -10
 A
@@ -2894,7 +2922,7 @@ Spectre Lantern~
 ~
 1 134217744 8421376 133
 0 0 -1 0 0 0 0 0 0 0
-10
+2
 A
 19 14
 A
@@ -2910,7 +2938,7 @@ Ghast Trousers~
 ~
 9 134217744 9437184 1
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 20 -10
 A
@@ -2947,7 +2975,7 @@ Bone Bracer~
 @@mA bracer, made of bone, lies here@@g.~
 9 134217744 8390656 1
 0 0 0 0 0 0 0 0 0 0
-5
+1
 A
 22 -10
 A
@@ -2964,7 +2992,7 @@ cloak wraith~
 @@mThe Cloak of the Wraith lies here, unused.@@g~
 9 134217744 8388736 1
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 19 11
 A
@@ -3020,7 +3048,7 @@ Spirit Sash~
 ~
 9 134217776 8519680 4097
 0 0 0 0 0 0 0 0 0 0
-5
+1
 A
 12 150
 A
@@ -3036,7 +3064,7 @@ shield skeletal legion~
 ~
 9 134217748 8421376 147
 0 0 0 0 0 0 0 0 0 0
-8
+1
 A
 5 4
 A
@@ -3060,7 +3088,7 @@ armplate guardian~
 ~
 9 134217748 8389632 273
 0 0 0 0 0 0 0 0 0 0
-16
+2
 A
 18 15
 A
@@ -3100,7 +3128,7 @@ Ebony Death~
 ~
 5 134217748 8421376 257
 0 0 0 11 0 0 0 0 0 0
-14
+2
 A
 12 100
 A
@@ -3197,7 +3225,7 @@ ancient sword ancients~
 ~
 5 135266384 8421376 257
 0 0 0 11 0 0 0 0 0 0
-15
+2
 A
 18 31
 A
@@ -3310,6 +3338,7 @@ G 0 20628 0   (null)
 M 0 20617 1 20662   (null)
 
 E 0 20620 0 0 (null)
+
 E 0 20615 0 6   (null)
 
 M 0 20601 3 20607   (null)

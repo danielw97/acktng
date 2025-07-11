@@ -61,12 +61,12 @@ D2
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3304
 D3
 Moribund.
 ~
 ~
-0 -1 3304
+0 -1 3303
 D4
 Moribund.
 ~
@@ -87,12 +87,12 @@ D0
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3306
 D1
 Moribund.
 ~
 ~
-0 -1 3306
+0 -1 3303
 D2
 Moribund.
 ~
@@ -121,15 +121,15 @@ You are in the inner lands of Moribund.  Whisps of grey smoke float by.
 ~
 9228 11
 D0
-Moribund.
-~
-~
-0 -1 3304
-D1
 The Morgue!
 ~
 ~
 0 -1 3300
+D1
+Moribund.
+~
+~
+0 -1 3304
 D2
 Moribund.
 ~
@@ -206,7 +206,7 @@ D2
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D3
 Moribund.
 ~
@@ -216,7 +216,7 @@ D4
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D5
 Moribund.
 ~
@@ -232,12 +232,12 @@ D0
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D1
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D2
 Moribund.
 ~
@@ -287,7 +287,8 @@ A Pesky Gremlin stands here, looking for someone to hurt.~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 2 0 0 0 0 0
-#3301
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3301
 will willo wisp~
 Will-o the Wisp~
 A strange, flickering light whirls around you.
@@ -300,7 +301,8 @@ As you look closer, you realise it is swamp gas.  You sense an evil force at
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3300
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3300
 cadaver~
 Cadaver~
 Cadaver stands before you, looking downright evil.
@@ -310,11 +312,12 @@ Cadaver is a long dead adventurer, forever doomed to summon forth other
 newly dead players into his home, Moribund.
 ~
 3 524288 -200 S
-79 1
-0 0 0 0
+78 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #3301
 potion~

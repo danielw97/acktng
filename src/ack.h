@@ -480,6 +480,19 @@ struct mob_index_data
    int ac_mod;              /* ac modifier */
    int hr_mod;              /* hitroll modifier */
    int dr_mod;              /* damroll modifier */
+   int spellpower_mod;
+   int healing_mod;
+   int crit_mod;
+   int crit_mult_mod;
+   int spell_crit_mod;
+   int spell_mult_mod;
+   int parry_mod;
+   int dodge_mod;
+   int block_mod;
+   int pierce_mod;
+   int loot_amount;
+   int loot_chance[MAX_LOOT];
+   int loot[MAX_LOOT];
    char *target;            /* last ch to attack */
    sh_int hitroll;          /* Unused */
    sh_int ac;               /* Unused */
@@ -623,6 +636,17 @@ struct char_data
    int dr_mod;   /* damroll modifier */
    int spellpower_mod;
    int healing_mod;
+   int crit_mod;
+   int crit_mult_mod;
+   int spell_crit_mod;
+   int spell_mult_mod;
+   int parry_mod;
+   int dodge_mod;
+   int block_mod;
+   int pierce_mod;
+   int loot_amount;
+   int loot_chance[MAX_LOOT];
+   int loot[MAX_LOOT];
    int chi;
    char *target; /* last ch to attack */
    sh_int wimpy;

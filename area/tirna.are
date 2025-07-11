@@ -1633,7 +1633,8 @@ Hurv sells you potions and scrolls!
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9026
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9026
 Smith~
 Smith the armorsmith~
 Smith the armorsmith is selling his armor!
@@ -1645,7 +1646,8 @@ Smith the armorsmith is selling his armor!
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9025
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9025
 Smith~
 Smith the weaponsmith~
 Smith the weaponsmith is standing here!
@@ -1653,11 +1655,12 @@ Smith the weaponsmith is standing here!
 ~
 ~
 8388611 8360 0 S
-105 1
+106 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9023
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9023
 Gabe~
 Gabe the Grocer~
 Gabe is standing here waiting to sell you something! 
@@ -1668,18 +1671,20 @@ Gabe is standing here waiting to sell you something!
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9022
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9022
 Scrub~
 Scrub~
 Scrub is selling drinks.
 ~
 ~
 8388611 40 0 S
-95 1
+96 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9021
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9021
 Reltih~
 Reltih~
 Reltih is standing here!
@@ -1690,11 +1695,12 @@ He is a very insane man who believes that brown hair and brown eyes are
  
 ~
 35 552 -1000 S
-38 1
+39 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9020
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9020
 Ortsac~
 Ortsac~
 Ortsac is standing here!
@@ -1708,7 +1714,8 @@ This man really likes his cigars.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9019
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9019
 Notnilc~
 Notnilc~
 Notnilc is standing here!
@@ -1722,7 +1729,8 @@ He is the leader of the SU.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9018
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9018
 Nilats~
 Nilats~
 Nilats is standing here! 
@@ -1731,11 +1739,12 @@ He used to be some political dude for some extreme cult.
  
 ~
 35 8 -400 S
-39 1
+38 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9016
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9016
 izan soldier~
 The Izan soldier~
 The Izan soldier patrols the streets!
@@ -1746,11 +1755,12 @@ He is a soldier in the cult called Izan.  He stands strong with brown hair and
  
 ~
 65 0 0 S
-21 1
+22 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9015
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9015
 deathguard guard~
 The deathguard~
 The deathguard is here guarding the gate!
@@ -1761,11 +1771,12 @@ This guard is one of the elite of the black watchman.  His sole purpose is go
  
 ~
 67 0 0 S
-20 1
+21 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9014
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9014
 rodent~
 The rodent~
 The rodent is picking through the garbage!
@@ -1776,11 +1787,12 @@ The rodent is a large brown looking mouse.  It is said that the city was
  
 ~
 65 0 0 S
-3 1
+4 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9002
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9002
 Slipper~
 Slipper the Guildmaster~
 Slipper the Guildmaster is ready to teach you the trade.~
@@ -1790,11 +1802,12 @@ She is very petit with long blond hair.  Her eyes burn you like fire and seem
 of Mouse's lovers.
 ~
 8390147 168 0 S
-75 2
+76 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9001
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9001
 Ramgul~
 Ramgul~
 Ramgul is hiding out!~
@@ -1802,21 +1815,23 @@ Ramgul is the lord of these alley's.  He may not be too tough, but his
 intelligence brings death to his foes.
 ~
 8195 65538 -280 S
-10 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9017
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9017
 pkiller hunter~
 @@BA Pkiller Hunter@@g~
 ~
 ~
 20054045 1633020 0 S
-122 1
+121 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 16
-#9003
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9003
 Fromp~
 Fromp the Guildmaster~
 Fromp will teach you how to battle!~
@@ -1829,7 +1844,8 @@ Fromp is a huge bald man with bulging muscles. He is totally decked out in
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9004
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9004
 Kazmar~
 Kazmar the Guildmaster~
 Kazmar trains you in the way of spellcasting.~
@@ -1840,18 +1856,20 @@ All you see is someone in a dark black robe!
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9005
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9005
 Mindwave~
 Mindwave the Guildmaster~
 Mindwave teaches you how to really use your mind.~
 He looks totally normal, except he has a really big head!
 ~
 8390147 168 0 S
-101 1
+102 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8675328 0 0 0 0 0
-#9006
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9006
 Juzical~
 Juzical the Guildmaster~
 Juzical will help you with you worship.~
@@ -1864,7 +1882,8 @@ Juzical is a very tanned lady with jet-black hair.  She wears a many colored
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#9007
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9007
 Jim~
 Jim the Banker~
 Jim the Banker wants your money.~
@@ -1875,18 +1894,20 @@ Jim will keep your money safe in his bank.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9008
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9008
 Brad~
 Brad the Postdude~
 Brad will send and give you mail.~
 He is just the guy who handles the post.
 ~
 8912899 0 0 S
-88 1
+89 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9009
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9009
 Donut~
 Donut the Healer~
 Donut will heal you right up!~
@@ -1898,7 +1919,8 @@ This guy is a non-stop healing machine.  He never tires, he just keeps casting
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 24
-#9010
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9010
 cut cutthroat~
 The cutthroat~
 The cutthroat stands here ready to kill 
@@ -1913,7 +1935,8 @@ He seems like a normal man, but he has a very evil grin on his face.  Better
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9011
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9011
 black watchman~
 The Black Watchman~
 The Black Watchman stands here alert!
@@ -1923,11 +1946,12 @@ This man is one of the policing members of the city.  His job is to patrol and
  
 ~
 65 0 0 S
-15 1
+14 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9012
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9012
 mercenary~
 The mercenary~
 The mercenary is here looking for a job.
@@ -1937,11 +1961,12 @@ He is a large man with a gruff appearance.  He is in much need of a job though
 
 ~
 65 0 0 S
-20 1
+21 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9013
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9013
 bum~
 bum~
 The bum is hanging around looking for food and money!
@@ -1952,33 +1977,36 @@ She is dressed in thin rags, barely covering here frail body.  It looks like
  
 ~
 65 0 0 S
-11 2
+10 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9024
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9024
 Joe~
 Joe the Baker~
 Joe the baker sells his goods! 
 ~
 ~
 8388611 8360 0 S
-98 1
+99 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#9000
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9000
 guardian~
 @@dThe @@BGuardian@@N of the @@RCrypt@@N~
 @@dThe @@BGuardian@@N of the @@RCrypt.
 ~
 ~
 2250879 59640 -1000 S
-139 1
-0 0 0 0
+138 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 17334468 0 0 0 0 32
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #9070
 hook~

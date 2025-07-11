@@ -355,6 +355,23 @@ void build_save_mobs()
            pMobIndex->strong_magic,
            pMobIndex->weak_magic,
            pMobIndex->race_mods, pMobIndex->power_skills, pMobIndex->power_cast, pMobIndex->resist, pMobIndex->suscept);
+   fprintf(SaveFile, "+ %i %i %i %i %i %i %i %i %i\n",
+           pMobIndex->spellpower_mod,
+           pMobIndex->crit_mod,
+           pMobIndex->crit_mult_mod,
+           pMobIndex->spell_crit_mod,
+           pMobIndex->spell_mult_mod,
+           pMobIndex->parry_mod,
+           pMobIndex->dodge_mod,
+           pMobIndex->block_mod,
+           pMobIndex->pierce_mod);
+   fprintf(SaveFile, "l %i ", pMobIndex->loot_amount);
+   for(int i = 0; i < MAX_LOOT; i++)
+      fprintf(SaveFile, "%i ", pMobIndex->loot[i]);
+   fprintf(SaveFile, "\nL ");
+   for(int i = 0; i < MAX_LOOT; i++)
+      fprintf(SaveFile, "%i ", pMobIndex->loot_chance[i]);
+   fprintf(SaveFile, "\n" );
 
    mprg = pMobIndex->first_mprog;
    finish_progs = 0;

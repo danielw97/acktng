@@ -424,7 +424,7 @@ The Entry Point serves as a gateway between the mortal and immortal realms.
 exact centre of this room - looks like this is where an Immortal will appear!
 The magical force preventing recall within the Halls feels weaker here.
 ~
-16396 11
+147468 11
 D3
 The Junction.
 ~
@@ -552,31 +552,34 @@ The Fairy Godmother, sent by Stephen to spread joy and happiness throughout
 just here to say hello, and maybe help you along your way.
 ~
 3 1581704 1000 S
-68 2
+67 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1000
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1000
 Quartermaster~
 ~
 ~
 ~
 1 0 0 S
-3 1
-0 0 0 0
+4 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1004
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1004
 Grand Master of Thieves~
 ~
 ~
 ~
 1 0 0 S
-8 1
+9 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1005
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1005
 Bok-Choi~
 ~
 ~
@@ -586,7 +589,8 @@ Bok-Choi~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1006
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1006
 Bashinator~
 ~
 ~
@@ -596,7 +600,8 @@ Bashinator~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1007
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1007
 Emperor's Guard~
 ~
 ~
@@ -606,47 +611,52 @@ Emperor's Guard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1008
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1008
 Emperor Hirohito~
 ~
 ~
 ~
 1 0 0 S
-10 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1009
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1009
 Wazir~
 ~
 ~
 ~
 1 0 0 S
-30 1
+29 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1010
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1010
 Godzilla~
 ~
 ~
 ~
 1 0 0 S
-18 1
+19 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1011
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1011
 Dim-Mak~
 ~
 ~
 ~
 1 0 0 S
-5 1
+4 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1012
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1012
 Concubine~
 ~
 ~
@@ -656,17 +666,19 @@ Concubine~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1013
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1013
 Ginsu Chef~
 ~
 ~
 ~
 1 0 0 S
-8 1
+7 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1014
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1014
 Sony VCR~
 ~
 ~
@@ -676,7 +688,8 @@ Sony VCR~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1015
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1015
 vermin~
 ~
 ~
@@ -686,7 +699,8 @@ vermin~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1016
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1016
 T'ian-Lung~
 ~
 ~
@@ -696,17 +710,19 @@ T'ian-Lung~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1017
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1017
 Tsaburi Matsumoto~
 ~
 ~
 ~
 1 0 0 S
-9 1
+8 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1018
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1018
 Lizard~
 ~
 ~
@@ -716,27 +732,30 @@ Lizard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1019
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1019
 Manticore~
 ~
 ~
 ~
 1 0 0 S
-13 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1020
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1020
 Pet Tiger~
 ~
 ~
 ~
 1 0 0 S
-3 1
+2 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1021
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1021
 Shogun~
 ~
 ~
@@ -746,7 +765,8 @@ Shogun~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1022
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1022
 Ninja~
 ~
 ~
@@ -756,7 +776,8 @@ Ninja~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1023
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1023
 Buddha~
 ~
 ~
@@ -766,27 +787,30 @@ Buddha~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1024
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1024
 Musashi~
 ~
 ~
 ~
 1 0 0 S
-13 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1025
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1025
 Bupu~
 Bupu the Gully-Dwarf~
 A little bundle of refuse is busy lapping from a puddle here.~
 ~
 1 0 0 S
-77 1
+78 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1001
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1001
 zeus bartender~
 Zeus the bartender~
 The Great Lord Zeus stands here, waiting to take your order.
@@ -795,11 +819,12 @@ Zeus looks disgruntled to say the least at his demotion to bartender!  Maybe
 it'll teach him not to load Tiamat into recall, eh?
 ~
 1 8380 900 S
-87 1
+88 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1002
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1002
 slave~
 The peculiar living massage table~
 The incredible living massage table of Maharet stands here.
@@ -810,7 +835,8 @@ The incredible living massage table of Maharet stands here.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1003
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1003
 dealer~
 ~
 ~
@@ -820,17 +846,19 @@ dealer~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1027
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1027
 Eagle Knight~
 ~
 ~
 ~
 1 0 0 S
-4 1
+3 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1028
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1028
 earth elemental~
 @@bEarth Elemental@@N~
 @@Na huge man-like form made of @@bEarth@@N towers over you.
@@ -841,7 +869,8 @@ earth elemental~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1029
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1029
 iron golem~
 @@dIron @@gGolem@@N~
 @@Na towering mass of @@dmetal@@N peers into your soul.@@N~
@@ -851,47 +880,52 @@ iron golem~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1030
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1030
 soul thief~
 @@dSoul @@lThief@@N~
 ~
 ~
 327681 98986 0 S
-69 1
+68 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1031
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1031
 holy avenger~
 @@aHoly @@WAvenger@@N~
 @@WA majestic Avenger stands before you.@@N~
 ~
 3145729 8936 0 S
-58 1
+59 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#1032
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1032
 Diamond Golem~
 @@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@g Golem@@N~
 @@yA shimmering tower of @@adiamond @@yglitters before you.@@N~
 ~
 3145729 535208 0 S
-76 1
+75 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#1033
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1033
 Algeroth~
 @@dAlgeroth@@N~
 @@dAlgeroth@@N The Lord of Darkness@@N~
 ~
 12811 1599656 -1000 S
-121 1
+122 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1034
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1034
 familiar~
 A familiar~
 ~
@@ -901,7 +935,8 @@ A familiar~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1035
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1035
 Clan~
 @@dClan Enforcer@@N~
 @@dClan Enforcer@@N
@@ -912,39 +947,43 @@ Clan~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#1036
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1036
 elemental~
 ~
 ~
 ~
 3 2176 0 S
-118 1
+117 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#1037
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1037
 pegasus~
 @@WA @@mMagestic @@WPegasus@@N~
 @@WA @@mMagestic @@WPegasus@@W stands here, wings folded.@@N
 ~
 ~
 134217729 1573544 0 S
-58 1
+59 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#1038
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1038
 nightmare~
 @@WA @@eDemonic @@dNightmare@@N~
 @@WA @@eDemonic @@dNightmare @@Wglowers at you evilly.@@N
 ~
 ~
 134217729 1573544 0 S
-59 1
+60 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
-#1039
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1039
 beast~
 @@WAn @@lElemental @@aBeast@@N~
 @@WAn @@lElemental @@aBeast@@N gazes into your eyes.@@N
@@ -955,7 +994,8 @@ beast~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 144
-#1040
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1040
 devourer~
 @@WAn @@rIntellect @@bDevourer@@N~
 @@WAn @@rIntellect @@bDevourer@@W peers into your thoughts.@@N
@@ -966,18 +1006,20 @@ devourer~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 144
-#1041
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1041
 shadow~
 @@WA @@dShadow @@RHound@@N~
 @@WA @@dShadow @@RHound @@Wgrowls at you fiercely!@@N
 ~
 ~
 134283265 1573544 0 S
-55 1
+54 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #1012
 board~
@@ -1088,7 +1130,7 @@ A tankard of Abbot's Ale has been dropped here.
 ~
 17 0 8388608 1
 4 4 3 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1002
@@ -1098,7 +1140,7 @@ A tall, sleek glass of golden beer has been left here.
 ~
 17 0 8388608 1
 4 4 1 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1003
@@ -1108,7 +1150,7 @@ A glass of fairly high quality red wine has been left on the floor.
 ~
 17 0 8388608 1
 4 4 2 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1004
@@ -1118,7 +1160,7 @@ A small measure of Scotch has been dropped here.
 ~
 17 0 8388608 1
 4 4 5 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1005
@@ -1128,7 +1170,7 @@ Someone has left a glass containing the local mixture here.  It is smoking.
 ~
 17 0 8388608 1
 4 4 8 0 0 0 0 0 0 0
-5
+1
 L
 1
 #1006
@@ -1177,7 +1219,7 @@ A tempting looking bed is here, almost filling the room.
 ~
 12 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-10000
+3
 L
 1
 #1019
@@ -1264,7 +1306,7 @@ reimb Board~
 The Bulletin Board for posting Reimbursements hangs here.~
 27 0 0 1
 15 81 81 1011 0 0 0 0 0 0
-5000
+3
 L
 1
 #1014

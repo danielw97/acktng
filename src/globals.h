@@ -60,6 +60,8 @@ extern sh_int gsn_fourth_attack;
 extern sh_int gsn_shield_block;
 extern sh_int gsn_beserk;
 extern sh_int gsn_counter;
+extern sh_int gsn_enhanced_heal;
+extern sh_int gsn_enhanced_purify;
 extern sh_int gsn_enhanced_critical;
 extern sh_int gsn_spell_critical;
 extern sh_int gsn_spell_critical_damage;

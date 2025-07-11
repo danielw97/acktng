@@ -200,11 +200,12 @@ minotuar slave~
 ~
 ~
 1 0 0 S
-143 1
-500 0 0 0
+142 1
+500 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4951
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4951
 Minotaur Servant~
 @@WA @@RMinotuar Servant@@N~
 @@WA @@RServant of @@eKahl'Dann @@Wgoes about his business.@@N
@@ -215,7 +216,8 @@ Minotaur Servant~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4128 0 0 0 0 0
-#4952
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4952
 minotaur guard~
 @@WA @@RMinoatur Guard@@N~
 @@WA @@RMinotaur Guard@@N searches for intruders!@@N
@@ -226,18 +228,20 @@ minotaur guard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4953
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4953
 minotaur master~
 @@WA @@RMinotaur Master@@N~
 @@WA Majestic @@RMinotaur Master@@N watches you closely!
 ~
 ~
 3145761 170 0 S
-163 1
+164 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4954
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4954
 minotaur lord~
 @@WA Mighty @@RMinotuar Lord@@N~
 @@WOne of the @@eLords @@Wof the @@RMaze@@N ponders your fate.
@@ -248,18 +252,20 @@ minotaur lord~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#4955
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4955
 minotaur prince~
 @@WOne of the @@RPrinces of the Maze@@W~
 @@WA @@RPrince of @@eKhal'Dann@@N laughs at you evilly!@@N 
 ~
 ~
 3145769 10408 0 S
-158 1
+157 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#4956
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4956
 Minotaur king~
 @@eTekk'Moran@@W, @@RKing of the Minotaurs@@N~
 @@eTekk'Moran@@W, @@RKing of the Minotaurs surveys his Realm@@N.
@@ -270,18 +276,20 @@ Minotaur king~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4096 0 0 0 0 16
-#4957
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4957
 scout minotaur~
 @@WA @@RMinotuar@@d Scout@@N~
 @@WA @@RMinotaur @@dScout @@Wsearches for strategic information.@@N
 ~
 ~
 129 1680042 0 S
-156 1
+155 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4958
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4958
 captain minotaur~
 @@WA @@RMinotaur @@eCaptain @@Wof @@dWar@@N~
 @@WA @@RMinotaur @@eCaptain @@Wof @@dWar@@N commands a war party!
@@ -292,28 +300,31 @@ captain minotaur~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4959
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4959
 diplomat~
 @@WA @@RMinotaur @@ydiplomat@@N~
 @@WA @@RMinotaur @@yDiplomat@@N tries to end this useless, unwanted war.@@N
 ~
 ~
 19922953 27328 0 S
-161 1
+160 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#4960
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4960
 assassin minotaur~
 @@WA @@RMinotaur @@dAssassin@@N~
 ~
 ~
 19922947 125122 0 S
-164 1
+165 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #4950
 gate~
@@ -592,7 +603,7 @@ ring ruby obsidian~
 M~
 9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 18 27
 A
@@ -612,7 +623,7 @@ bracers minotaur~
 ~
 9 134217730 8390656 1
 0 0 0 0 0 0 0 0 0 0
-16
+2
 A
 17 -190
 A
@@ -630,7 +641,7 @@ hooves minotaur~
 ~
 9 134217730 12582912 1
 0 0 0 0 0 0 0 0 0 0
-5
+1
 A
 18 35
 A
@@ -713,7 +724,7 @@ wings icarus~
 ~
 9 134217921 8389632 20608
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 12 200
 A
@@ -733,7 +744,7 @@ rod minotaur~
 ~
 5 134217747 8421376 16641
 0 0 0 8 0 0 0 0 0 0
-20
+3
 A
 18 40
 A

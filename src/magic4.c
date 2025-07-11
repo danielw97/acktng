@@ -436,6 +436,11 @@ bool spell_purify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
    else
       send_to_char("You aren't poisoned.\r\n", ch);
+   if (can_use_skill(ch, gsn_enhanced_purify) )
+   {
+      spell_cure_blindness(sn, level, ch, vo, obj);
+      spell_remove_curse(sn, level, ch, vo, obj);
+   }
    return TRUE;
 }
 

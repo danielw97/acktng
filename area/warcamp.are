@@ -405,10 +405,11 @@ minotaur patrol~
 ~
 3145729 8380 -200 S
 103 1
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#6605
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6605
 cut cutthroat throat minotaur~
 @@eMinotaur @@dCutthroat@@N~
 @@dA @@eMinotaur @@dCutthroat jumps out from behind the @@grocks.@@N
@@ -419,18 +420,20 @@ cut cutthroat throat minotaur~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 128
-#6621
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6621
 minotaur lesser guard~
 @@eMinotaur @@dLesser Guard@@N~
 @@dThis @@eMinotaur@@d @@dGuard seems to be guarding a door.@@N
 ~
 ~
 3153923 8892 -200 S
-100 1
+101 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
-#6622
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6622
 minotaur trainee~
 @@eMinotaur @@dTrainee@@N~
 @@dA @@eMinotaur @@dTrainee @@dis hard at work slashing a target.@@N
@@ -441,7 +444,8 @@ minotaur trainee~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6620
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6620
 minotaur worker~
 @@eMinotaur @@dWorker@@N~
 @@dA @@eMinotaur @@dWorker is busy carrying large bags of supplies down the
@@ -453,18 +457,20 @@ minotaur worker~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#6614
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6614
 minotaur ranger~
 @@eMinotaur @@GRanger@@N~
 @@dA @@eMinotaur @@GRanger @@dscouts out the rear area of the camp.@@N
 ~
 ~
 3153923 631036 -200 S
-113 1
+114 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#6623
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6623
 minotaur commander~
 @@eMinotaur @@cCommander@@N~
 @@dThe @@eMinotaur @@cCommander@@d looks pissed that his plans have been
@@ -472,11 +478,12 @@ minotaur commander~
 ~
 ~
 3153923 90300 -200 S
-109 1
+108 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #6623
 key~
@@ -495,7 +502,7 @@ battleaxe~
 ~
 5 134217728 8421376 1
 0 0 0 3 0 0 0 0 0 0
-25
+3
 A
 13 200
 A
@@ -533,7 +540,7 @@ boots~
 ~
 9 134349120 12582912 1
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 17 -150
 A
@@ -555,7 +562,7 @@ battle helmet~
 ~
 9 134348800 8388612 1
 0 0 0 0 0 0 0 0 0 0
-25
+3
 A
 19 18
 A

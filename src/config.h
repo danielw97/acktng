@@ -100,6 +100,8 @@
 
 #define STAT_MAX 30
 
+#define MAX_LOOT 9
+
 #define LEVEL_ONE 20
 #define LEVEL_TWO 200
 #define LEVEL_THREE 2000

@@ -666,10 +666,11 @@ Gruth is a large Ogre, who smells awful.  Maybe you should tell him?  On
 ~
 3 10240 800 S
 108 1
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
-#3402
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3402
 chieftain ogre~
 the Ogre Chieftain~
 The Ogre Chieftain is here, doing his best to rule.
@@ -677,11 +678,12 @@ The Ogre Chieftain is here, doing his best to rule.
 The Chieftain looks old, but still able to beat most people in a fight.
 ~
 3 8320 200 S
-64 1
+65 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 0
-#3403
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3403
 armorer armourer~
 the Armourer~
 The Armourer stands here, waiting to rip you off.
@@ -693,7 +695,8 @@ The Armourer buys and sells armour.  What an exciting life!
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 0
-#3404
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3404
 shopkeeper~
 the Shopkeeper~
 The Shopkeeper stands here, waiting to sell you stuff.
@@ -705,7 +708,8 @@ She looks quite clean as ogres go.  Shame she doesn't smell clean as well.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 96 0 0 0 0 16
-#3405
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3405
 shopkeeper~
 the Shopkeeper~
 The Shopkeeper stands here, rubbing his hands together.
@@ -713,11 +717,12 @@ The Shopkeeper stands here, rubbing his hands together.
 The shopkeeper is fairly short, and balding.
 ~
 3 10368 400 S
-71 1
+70 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
-#3406
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3406
 healer huth~
 Huth~
 The Healer, Huth, stands here, looking in good health.
@@ -729,7 +734,8 @@ Huth is a retired killer, now employed to use his skills to heal adventurers.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
-#3407
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3407
 weaponsmith~
 the Weaponsmith~
 The Weaponsmith stands here.
@@ -737,11 +743,12 @@ The Weaponsmith stands here.
 The Weaponsmith has sold more weapons than you've you had hot dinners.
 ~
 8195 10376 450 S
-83 2
+84 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
-#3408
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3408
 wise man~
 A wise man~
 A wise man stands here, looking wise, and ummm male.
@@ -753,7 +760,8 @@ He looks very intelligent for an ogre.  Pretty big too.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
-#3409
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3409
 male ogre~
 A Male Ogre~
 A Male Ogre is here.
@@ -765,7 +773,8 @@ He looks like your typical ogre - untidy, and rather large.  Smells too.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3410
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3410
 female ogre~
 A female Ogre~
 A Female Ogre is here.
@@ -773,11 +782,12 @@ A Female Ogre is here.
 She looks like your typical ogre - untidy, and rather large.  Smells too.
 ~
 1 0 50 S
-35 2
+36 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3411
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3411
 barkeeper~
 the Barkeeper~
 The Barkeeper stands here, keeping bar.
@@ -789,7 +799,8 @@ He looks quite friendly, as well as being taller than you.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
-#3412
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3412
 elite guard~
 the elite guard~
 An elite guard stands here, ready to help the Chieftain.
@@ -797,11 +808,12 @@ An elite guard stands here, ready to help the Chieftain.
 He is   B  I  G  !
 ~
 3 0 200 S
-26 1
+25 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3413
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3413
 guard~
 the guard~
 A guard stands here, looking out for criminals.
@@ -810,11 +822,12 @@ The guard looks you over, deciding if he should work his own form of justice
 on you.  He shrugs and looks elsewhere for someone to pick on.
 ~
 3 0 200 S
-24 1
+23 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3414
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3414
 guard~
 the guard~
 A guard stands here, looking out for criminals.
@@ -823,11 +836,12 @@ The guard looks you over, deciding if he should work his own form of justice
 on you.  He shrugs and looks elsewhere for someone to pick on.
 ~
 1 0 200 S
-20 1
+19 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3415
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3415
 shopkeeper~
 the shopkeeper~
 The shopkeeper stands here, waiting for you to buy stuff.
@@ -835,11 +849,12 @@ The shopkeeper stands here, waiting for you to buy stuff.
 The shopkeeper is a big ogre.  Play nice.
 ~
 3 10368 300 S
-73 1
+72 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #3432
 board~
@@ -857,7 +872,7 @@ Gruth's Axe lies here, looking lethal.
 ~
 5 134217729 8421376 1
 0 0 0 3 0 0 0 0 0 0
-6
+1
 L
 100
 #3402
@@ -893,7 +908,7 @@ a large club~
 A large club lies forogtton on the floor.~
 5 134217728 8421376 1
 0 0 0 7 0 0 0 0 0 0
-4
+1
 L
 20
 #3406
@@ -902,7 +917,7 @@ a small club~
 A small club lies forogtton on the floor.~
 5 134217728 8421376 1
 0 0 0 7 0 0 0 0 0 0
-4
+1
 L
 15
 #3407
@@ -924,7 +939,7 @@ an iron bracer~
 A crude-looking iron bracer has been left here.~
 9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
-4
+1
 L
 25
 #3409
@@ -968,7 +983,7 @@ a dark, muddy puddle~
 A dark muddy puddle lies before you.~
 25 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-10000
+3
 L
 1
 #3413

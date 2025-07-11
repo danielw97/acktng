@@ -1939,11 +1939,12 @@ martin~
 @@gMartin is truly a master of the sword, and the mind.@@N
 ~
 3146859 27372 1000 S
-168 1
-500 -2500 1000 1000
+169 1
+500 -10 1000 1000
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#30001
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30001
 elis~
 @@lElis@@N~
 @@lElis urges you to try on some armour.@@N
@@ -1951,11 +1952,12 @@ elis~
 Her face seems to glow brighter than the lights inside.
 ~
 3145835 27368 1000 S
-167 2
+168 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 37751848 0 0 0 0 48
-#30002
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30002
 butch~
 @@lButch@@N~
 @@lButch eyes you energetically.@@N
@@ -1963,11 +1965,12 @@ butch~
 @@gButch is known as the greatest thief that ever lived, or treasurer hunter as he would put it.  Better watch your pocket.@@N
 ~
 3145839 125674 1000 S
-164 1
+165 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 262144 0 0 0 0 80
-#30003
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30003
 Darkshade~
 @@lDarkshade@@N~
 @@lSomething dark blends in with the shadows and disappears...@@N~
@@ -1978,7 +1981,8 @@ Darkshade~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 144
-#30004
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30004
 Xania~
 @@lXania@@N~
 @@lXania walks around you displaying various relics and artifacts@@N~
@@ -1989,7 +1993,8 @@ Xania~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8392832 0 0 0 0 48
-#30005
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30005
 garmaine gate guard~
 @@lGarmaine Gate Guard@@N~
 @@lThe Garmaine Gate Guard stands here eyeing you carefully.@@N
@@ -2001,7 +2006,8 @@ garmaine gate guard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 38010880 0 0 0 0 48
-#30006
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30006
 relm~
 @@lRelm@@N~
 @@lRelm relaxes on one of the many comfortable chairs.@@N
@@ -2009,11 +2015,12 @@ relm~
 @@gRelm looks like a sweet, innocent little girl.@@N
 ~
 3145835 92906 1000 S
-166 2
+167 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4195328 0 0 0 0 144
-#30007
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30007
 james~
 @@lJames@@N~
 @@lJames rests in a chair, smiling as he thinks of his fortunes.@@N
@@ -2021,11 +2028,12 @@ james~
 @@gJames has traveled the world over, and is adept at many things.@@N
 ~
 3145835 27368 1000 S
-167 1
+166 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 33280 0 0 0 0 48
-#30008
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30008
 jack~
 @@lJack@@N~
 @@lJack is seeking refuge here.@@N
@@ -2033,11 +2041,12 @@ jack~
 @@gJack looks just like a bodybuilder.@@N
 ~
 3145835 92906 1000 S
-170 1
+169 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 295424 0 0 0 0 80
-#30009
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30009
 guardian~
 @@lGuardian@@N~
 @@lThe Guardian stands ready for anyone.@@N
@@ -2049,7 +2058,8 @@ guardian~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 33554944 0 0 0 0 144
-#30010
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30010
 shawn~
 Shawn~
 @@lSean stands here, ready to stop your passage further into the mines.@@N
@@ -2061,7 +2071,8 @@ Shawn~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50364416 0 0 0 0 80
-#30011
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30011
 flaming hydra~
 @@lA Flaming Hydra@@N~
 @@lThe Hydra is on fire, but he likes it.@@N
@@ -2069,11 +2080,12 @@ flaming hydra~
 @@gThe Hydra seems to draw his power from the flames.@@N
 ~
 3145835 19176 -1000 S
-163 1
+162 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50332672 0 0 0 0 48
-#30012
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30012
 guard garmaine~
 @@lA Guard of Garmaine@@N~
 @@lA Guard of Garmaine is protecting his hometown.@@N
@@ -2081,11 +2093,12 @@ guard garmaine~
 @@gThe guard looks very determined to stop all intruders.@@N
 ~
 3145835 27368 1000 S
-166 1
+167 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 80
-#30013
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30013
 guard garmaine~
 @@lA Guard of Garmaine@@N~
 @@lA Guard of Garmaine is protecting his hometown.@@N
@@ -2097,7 +2110,8 @@ guard garmaine~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 80
-#30014
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30014
 guard garmaine~
 @@lA Guard of Garmaine@@N~
 @@lA Guard of Garmaine is protecting his hometown.@@N
@@ -2109,7 +2123,8 @@ guard garmaine~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 48
-#30015
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30015
 guard garmaine~
 @@lA Guard of Garmaine@@N~
 @@lA Guard of Garmaine is protecting his hometown.@@N
@@ -2121,7 +2136,8 @@ guard garmaine~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1048576 0 0 0 0 48
-#30016
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30016
 frost dragon~
 @@lThe Frost Dragon@@N~
 @@lThe Frost Dragon is moaning about the heat in here.@@N
@@ -2129,11 +2145,12 @@ frost dragon~
 @@gHe would much rather be in a freezing room than where he is now.@@N
 ~
 3145835 543464 0 S
-165 1
+166 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
-#30017
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30017
 ice lion~
 @@lThe Ice Lion@@N~
 @@lThe Ice Lion is on the prowl here.@@N
@@ -2145,7 +2162,8 @@ ice lion~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16777728 0 0 0 0 144
-#30018
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30018
 frozen necromancer~
 @@lThe Frozen Necromancer@@N~
 @@lA huge block of ice is here, but someone steps out of it!@@N
@@ -2153,11 +2171,12 @@ frozen necromancer~
 @@gThe Necromancer looks older than time itself.@@N
 ~
 3145825 1690314 -1000 S
-164 2
+165 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 80
-#30019
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30019
 ice golem~
 @@lThe Ice Golem@@N~
 @@lA lumbering Golem made from Ice stands here, awaiting his next victim.@@N
@@ -2169,7 +2188,8 @@ ice golem~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8 0 0 0 0 48
-#30020
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30020
 poppy~
 @@lPoppy@@N~
 @@lPoppy floats here, mumbling something irrelevant.@@N
@@ -2181,7 +2201,8 @@ poppy~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 33554944 0 0 0 0 80
-#30021
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30021
 guyue~
 @@lGuyue@@N~
 @@lGuyue is looking for something shiny in the mines.@@N
@@ -2189,11 +2210,12 @@ guyue~
 @@gHe looks like an animal, heck, he acts like one too.@@N
 ~
 3145833 1633000 0 S
-167 1
+166 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 33554432 0 0 0 0 144
-#30022
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30022
 frost behemoth~
 @@lThe Frost Behemoth@@N~
 @@lSomething large and mean stands here.@@N
@@ -2201,11 +2223,12 @@ frost behemoth~
 @@gHe is larger than most anything else in the world.@@N
 ~
 3145825 117482 -1000 S
-166 1
+165 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4 0 0 0 0 48
-#30023
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30023
 chimera~
 @@lChimera@@N~
 @@lChimera spews fire from her three heads!@@N
@@ -2217,7 +2240,8 @@ chimera~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 55578152 0 0 0 0 48
-#30024
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30024
 yeti~
 @@lThe Yeti@@N~
 @@lThe fabled Yeti stands here.@@N
@@ -2225,11 +2249,12 @@ yeti~
 @@gThe Yeti is larger than people depicted him as being.@@N
 ~
 3145825 125674 0 S
-165 1
+164 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 262144 0 0 0 0 80
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #30000
 sword diamonds~

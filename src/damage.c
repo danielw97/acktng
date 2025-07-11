@@ -22,11 +22,20 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     int crit_chance;
     float dam_modifier = 1.0;
 
-    if (dam > 200 && (dt >= TYPE_HIT || dt < 0))
+    if (dt >= TYPE_HIT || dt < 0)
     {
-        dam -= 200;
-        dam /= 2;
-        dam += 200;
+        if ((dt > TYPE_HIT || (ch->remort[CLASS_MON] < 1 && ch->remort[CLASS_BRA] < 1)) && dam > 400)
+        {
+           dam -= 400;
+           dam /= 3;
+           dam += 300;
+        }
+        else if (dam > 200)
+        {
+           dam -= 200;
+           dam /= 2;
+           dam += 200;
+        }
     }
 
     if (dt == gsn_backstab)
@@ -64,7 +73,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         return FALSE;
     }
 
-    else if (can_reflect && (skill_table[dt].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 55)))
+    if (can_reflect && (skill_table[dt].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 55)))
     {
         int mana;
         mana = mana_cost(ch, dt);
@@ -104,13 +113,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         dam_modifier -= .50;
     }
 
-    if (!IS_NPC(ch) && !IS_SET(element, ELE_MENTAL) && !IS_SET(element, ELE_PHYSICAL))
-    {
-        if (can_use(ch, gsn_potency))
-        {
-            dam_modifier += .25;
-        }
-    }
     if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
     {
         dam_modifier += .5;
@@ -124,16 +126,16 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     if (IS_SET(vi_suscept, element))
     {
-        dam_modifier += .25;
+        dam_modifier += .35;
     }
     else if (IS_SET(vi_resist, element))
     {
-        dam_modifier -= .25;
+        dam_modifier -= .35;
     }
 
     else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != ELE_PHYSICAL)
     {
-        dam_modifier -= .25;
+        dam_modifier -= .35;
     }
 
     if ((IS_SET(element, ELE_MENTAL)) && (!HAS_MIND(victim)))
@@ -182,31 +184,41 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         else
             dam += get_spellpower(ch);
 
-        if (stance_app[ch->stance].spell_mod != 0)
-            dam_modifier += stance_app[ch->stance].spell_mod / 10;
-    }
+        if (can_use_skill(ch, gsn_potency))
+        {
+            dam += dam * get_curr_int(ch) * 2 / 100;
+        }
 
-    if (IS_SET(element, ELE_PHYSICAL))
+        if (stance_app[ch->stance].spell_mod != 0)
+            dam += dam * stance_app[ch->stance].spell_mod / 10;
+    }
+    else if (IS_SET(element, ELE_PHYSICAL))
     {
         if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
-            dam_modifier += 0.2;
+            dam += dam * 0.2;
 
         if (can_use_skill(ch, gsn_enhanced_damage))
-            dam_modifier += get_curr_str(ch) * 2 / 100;
+            dam += dam * get_curr_str(ch) * 2 / 100;
         else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))
-            dam_modifier += 0.2;
+            dam += dam * 0.2;
 
         if (!IS_AWAKE(victim))
-            dam_modifier += 0.5;
+            dam += dam * 0.5;
 
-        dam_modifier += ch->remort[CLASS_PAL] / 100 * 0.75 * 0.5;
-        dam_modifier += ch->adept[CLASS_TEM] / 50 * 0.5;
-        if ((dt >= TYPE_HIT || dt < 0) && can_use_skill(ch, gsn_bare_hand))
+        dam += dam * ch->remort[CLASS_PAL] / 100 * 0.75 * 0.5;
+        dam += dam * ch->adept[CLASS_TEM] / 50 * 0.5;
+        if ((dt == TYPE_HIT || dt == TYPE_MARTIAL || dt == gsn_counter) && can_use_skill(ch, gsn_bare_hand))
         {
-            dam_modifier += ch->remort[CLASS_BRA] / 100 * 0.75 * 0.5;
-            dam_modifier += ch->remort[CLASS_MON] / 100 * 0.5;
-            dam_modifier += ch->adept[CLASS_MAR] / 50 * 0.5;
+            dam += dam * ch->remort[CLASS_BRA] / 100 * 0.75;
+            dam += dam * ch->remort[CLASS_MON] / 100;
+            dam += dam * ch->adept[CLASS_MAR] / 50;
         }
+
+        wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
+        if (wield == NULL || wield->item_type != ITEM_WEAPON)
+           wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
+        if (wield == NULL || wield->item_type != ITEM_WEAPON)
+           wield = get_eq_char(ch, WEAR_TWO_HANDED);
 
         if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword))
         {
@@ -217,33 +229,8 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
          * extra damage from martial arts
          */
         if (dt == TYPE_MARTIAL)
-            dam_modifier += 4 / 3;
-
-        if (!IS_NPC(ch) && can_use_skill(ch, gsn_bare_hand) && (dt == TYPE_MARTIAL || dt == TYPE_HIT || dt == gsn_counter))
-        {
-            wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
-            if (wield == NULL ||
-                (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
-            {
-                wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
-
-                if (wield == NULL ||
-                    (wield->value[3] == 0 && can_use_skill(ch, gsn_equip_fist) && IS_SET(wield->extra_flags, ITEM_FIST)))
-                {
-                    wield = get_eq_char(ch, WEAR_TWO_HANDED);
-                    if (wield == NULL)
-                    {
-                        if (ch->remort[CLASS_MON] > 0)
-                            dam_modifier += ch->remort[CLASS_MON] / 75;
-                        else if (ch->remort[CLASS_BRA] > 0)
-                            dam_modifier += ch->remort[CLASS_BRA] / 75 * .75;
-                    }
-                }
-            }
-        }
+            dam += dam / 3;
     }
-
-    dam += dam * dam_modifier;
 
     if (!IS_SET(element, ELE_PHYSICAL))
         crit_chance = get_spell_crit(ch);
@@ -278,13 +265,13 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (!IS_SET(element, ELE_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {
         float dam_mod = 0;
-        dam_mod += ch->remort[CLASS_SOR] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_WIZ] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_NEC] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_EGO] / 100 * 0.5;
-        dam_mod += ch->remort[CLASS_WLK] / 100 * 0.5 * .75;
-        dam_mod += ch->adept[CLASS_GMA] * 2;
-        dam_mod += ch->adept[CLASS_KIN] * 2;
+        dam_mod += ch->remort[CLASS_SOR] / 100;
+        dam_mod += ch->remort[CLASS_WIZ] / 100;
+        dam_mod += ch->remort[CLASS_NEC] / 100;
+        dam_mod += ch->remort[CLASS_EGO] / 100;
+        dam_mod += ch->remort[CLASS_WLK] / 100 * .75;
+        dam_mod += ch->adept[CLASS_GMA] * .1;
+        dam_mod += ch->adept[CLASS_KIN] * .1;
 
         dam += dam * dam_mod / 100;
     }

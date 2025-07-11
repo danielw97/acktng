@@ -1910,11 +1910,12 @@ A stern looking doctor wanders about.
 ~
 ~
 3145801 33416 0 S
-55 1
-0 0 0 0
+56 1
+0 -10 0 0
 ! 0 0 0 7 2097168 0 0
 | 0 0 0 0 0 0 0
-#3901
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3901
 asylum guard~
 @@NAn @@dAsylum@@N guard~
 @@NA mean looking guard wanders about, looking for escaped @@einmates@@N!
@@ -1925,7 +1926,8 @@ asylum guard~
 0 0 0 0
 ! 0 0 0 7 2097168 0 0
 | 0 0 0 0 0 0 0
-#3902
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3902
 inmate~
 @@NA befuddled @@einmate@@N~
 @@NA confused @@einmate@@N wanders about, looking for his next meal.
@@ -1936,18 +1938,20 @@ inmate~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3903
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3903
 female inmate~
 @@NA female @@einmate@@N~
 @@NA pretty female @@einmate@@N wanders about, looking for her guard.
 ~
 ~
 65 0 0 S
-43 2
+44 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3904
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3904
 bunny~
 @@NA cute little @@abunny@@N~
 @@NA small @@abunny@@N searches for some @@ycarrots@@N.
@@ -1958,18 +1962,20 @@ bunny~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3905
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3905
 ugly frog~
 @@NAn @@eugly @@Gfrog@@N~
 @@NAn extremely @@eugly @@Gfrog@@N looks at you rudely.
 ~
 ~
 262145 0 0 S
-18 1
+17 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#3906
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3906
 child inmate~
 @@NA young @@einmate@@N~
 @@NA forlorn child @@einmate@@N, his eyes crossed, weeps for mercy.
@@ -1980,7 +1986,8 @@ child inmate~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #3900
 foot rabbit~

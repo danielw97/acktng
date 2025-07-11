@@ -358,6 +358,9 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ilevel *= 2;
    }
 
+   if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED) && obj->item_type == ITEM_WEAPON)
+      ilevel *= 1.25;
+
    /* Jewelry */
    if (is_jewelry(obj))
    {

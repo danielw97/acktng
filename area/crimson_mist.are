@@ -2956,11 +2956,12 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-141 0
-0 0 0 0
+142 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#8351
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8351
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
@@ -2969,11 +2970,12 @@ Dweller~
 be formed from the @@pf@@mog itself..@@N
 ~
 105 16552 0 S
-138 0
+139 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#8352
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8352
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
@@ -2986,7 +2988,8 @@ Dweller~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#8353
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8353
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
@@ -2999,7 +3002,8 @@ Dweller~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#8354
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8354
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
@@ -3012,7 +3016,8 @@ Dweller~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
-#8355
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8355
 Guard guardian mist crimson~
 @@dGuard of the Crimson Mist@@N~
 @@dA G@@mu@@pard @@do@@mf @@dT@@mh@@pe @@dC@@mr@@pimson @@dM@@mi@@pst@@N
@@ -3026,7 +3031,8 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 0
-#8356
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8356
 Rock Hydra~
 @@dThe @@mRock Hydra@@N~
 @@mA large hydra of the @@pcrimson caverns@@m charges you when you enter@@N
@@ -3036,22 +3042,24 @@ Rock Hydra~
 @@m...@@N
 ~
 33554435 16618 0 S
-147 0
+146 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 40 0 0 0 0 176
-#8357
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8357
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 @@N @@N~
 33570819 524988 0 S
-138 0
+139 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8358
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8358
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
@@ -3062,7 +3070,8 @@ vampyre bats~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8359
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8359
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
@@ -3073,29 +3082,32 @@ vampyre bats~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8360
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8360
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 ~
 16387 524988 0 S
-137 0
+138 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8361
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8361
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
 ~
 ~
 16387 524988 0 S
-132 0
+133 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8362
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8362
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
@@ -3106,7 +3118,8 @@ vampyre bats~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8363
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8363
 crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
@@ -3119,7 +3132,8 @@ crimson mist patrol~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8364
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8364
 crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
@@ -3128,11 +3142,12 @@ crimson mist patrol~
 attacks you where you stand.@@N
 ~
 36700161 16616 0 S
-148 0
+149 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8365
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8365
 crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
@@ -3145,7 +3160,8 @@ crimson mist patrol~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8366
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8366
 crimson demon~
 @@mCrimson @@dDemon@@N~
 @@mA patch of @@pcrimson mist@@m gently starts to surround you..@@N
@@ -3156,7 +3172,8 @@ crimson demon~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
-#8367
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8367
 aries~
 @@RAries@@e, @@dThe Ram@@N~
 @@dThe Ram of the stars parades here majesticaly..@@N
@@ -3168,7 +3185,8 @@ aries~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8368
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8368
 Taurus~
 @@bTaurus@@y, @@dThe Bull@@N~
 @@dA large bull is boldly perched here on his alter..@@N
@@ -3176,11 +3194,12 @@ Taurus~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-146 0
+145 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8369
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8369
 Gemini~
 @@BGemini@@l, @@dThe Twins@@N~
 @@dTwo men stand here, staring into your soul..@@N
@@ -3192,7 +3211,8 @@ Gemini~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8370
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8370
 Cancer~
 @@W@@xCancer@@N,@@d The Crab@@N~
 @@dA large crab here claws at you from it's perch..@@N
@@ -3200,11 +3220,12 @@ Cancer~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-145 0
+146 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8371
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8371
 leo~
 @@yLeo@@W@@x, @@dThe Lion@@N~
 @@dThe proud lion majesticly parades here..@@N
@@ -3212,11 +3233,12 @@ leo~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-148 0
+147 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8372
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8372
 Virgo~
 @@cVirgo@@a, @@dThe Virgin@@N~
 @@dA beautiful lady in tight, see-through clothing..@@N
@@ -3224,11 +3246,12 @@ Virgo~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-153 2
+154 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8373
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8373
 Libra~
 @@mLibra@@p, @@dThe Scales@@N~
 @@dThe scales of the universe are perched here..@@N
@@ -3236,11 +3259,12 @@ Libra~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-159 0
+158 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8374
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8374
 Scorpio~
 @@RScorpio@@e, @@dThe Scorpion@@N~
 @@dA scorpion of starlight is crawling around here..@@N
@@ -3252,7 +3276,8 @@ Scorpio~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8375
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8375
 Sagittarius~
 @@GSagittarius@@r, @@dThe Archer@@N~
 @@dA small man stands at attention, bow and arrow at ready..@@N
@@ -3264,7 +3289,8 @@ Sagittarius~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8376
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8376
 Capricorn~
 @@cCapricorn@@a,@@d The Goat@@N~
 @@dA small goat is here, and starts to charge you..@@N
@@ -3272,11 +3298,12 @@ Capricorn~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
 ~
 33751067 18624 0 S
-146 0
+147 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8377
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8377
 Aquarius~
 @@BAquarius@@l, @@dThe Water Bearer@@N~
 @@dA man with a bowl of water stares right through you..@@N
@@ -3288,7 +3315,8 @@ Aquarius~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8378
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8378
 Pisces~
 @@mPisces@@p, @@dThe Fish@@N~
 @@dTwo fish are here seeming to share one body..@@N
@@ -3300,7 +3328,8 @@ Pisces~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8379
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8379
 Prophet~
 @@mPrayer @@pSpeaker@@N~
 @@dA beautiful nude goddess is here, chanting words of the mist..@@N
@@ -3310,11 +3339,12 @@ Prophet~
 full-figured woman..@@N
 ~
 4115 18536 1000 S
-141 1
+140 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#8380
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8380
 suggestion hypnotic crimson~
 @@dA @@mCrimson @@pSuggestion@@N~
 @@dSome beautiful creature @@fentices@@N@@d you with her song...@@N
@@ -3325,18 +3355,20 @@ suggestion hypnotic crimson~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1509120 0 0 0 0 48
-#8381
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8381
 Crimson Crusader~
 @@dThe @@mCrimson @@lCrusader@@N~
 @@mThe crusader of the @@dm@@mi@@ps@@gt@@m patrols for the undead..@@N
 ~
 ~
 50530333 1698558 1000 S
-145 1
+144 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 34816 0 0 0 0 16
-#8382
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8382
 sentient~
 @@mSentient@@d, @@dThe @@pCrimson Executioner@@N~
 ~
@@ -3346,7 +3378,8 @@ sentient~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
-#8383
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8383
 crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
@@ -3357,29 +3390,32 @@ crimson dark shadow~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
-#8384
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8384
 crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
 ~
 ~
 33554433 548992 0 S
-152 0
+151 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
-#8385
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8385
 crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
 ~
 ~
 33554433 548992 0 S
-148 0
+147 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 72
-#8386
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8386
 pure crimson evil~
 @@dPure @@mCrimson @@REvil@@N~
 @@dThe @@Revil@@d of the tower wanders these halls...@@N
@@ -3390,7 +3426,8 @@ pure crimson evil~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
-#8387
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8387
 evil~
 @@dPure @@mCrimson @@REvil@@N~
 @@dThe @@Revil@@d of the tower wanders these halls...@@N
@@ -3401,51 +3438,56 @@ evil~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
-#8388
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8388
 evil~
 @@dPure @@mCrimson @@REvil@@N~
 @@dThe @@Revil@@d of the tower wanders these halls...@@N
 ~
 ~
 50462729 24808 -1000 S
-155 1
+156 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 8388640 0 0 0 0 16
-#8389
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8389
 nightmare~
 @@dNig@@mhtm@@pare@@N~
 @@dA large stallion with hooves of purple flame...@@N
 ~
 ~
 167903257 576234 -1000 S
-150 1
+149 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#8390
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8390
 paladin~
 @@BPaladin @@lof @@aLucrezia@@N~
 @@dThe wandering paladin travels through here..@@N
 ~
 ~
 33685513 1075964 1000 S
-150 2
+149 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 6488064 0 0 0 0 144
-#8391
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8391
 Lord Dark~
 @@mJuzam@@p, @@dLord of the Tower@@N~
 @@dThe dark lord of the tower rests in his throne..@@N
 ~
 ~
 36700179 551144 -1000 S
-153 1
+154 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 51380480 0 0 0 0 48
-#8392
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8392
 Guard guardian mist crimson~
 @@dCrimson @@mMist @@pGuard@@N~
 @@dA G@@mu@@pard @@do@@mf @@dT@@mh@@pe @@dC@@mr@@pimson @@dM@@mi@@pst@@N
@@ -3459,7 +3501,8 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 80
-#8393
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8393
 Guard guardian mist crimson~
 @@dCrimson @@mMist @@pGuard@@N~
 @@dA G@@mu@@pard @@do@@mf @@dT@@mh@@pe @@dC@@mr@@pimson @@dM@@mi@@pst@@N
@@ -3473,7 +3516,8 @@ A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1052736 0 0 0 0 80
-#8394
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8394
 necromancer mage crimson~
 @@mCrimson @@dNecromancer@@N~
 @@dA necromancer of the m@@my@@ps@@gt@@d wanders here, chanting spells..@@N
@@ -3484,18 +3528,20 @@ necromancer mage crimson~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8395
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8395
 necromancer mage crimson~
 @@mCrimson @@dNecromancer@@N~
 @@dA necromancer of the m@@my@@ps@@gt@@d wanders here, chanting spells..@@N
 ~
 ~
 33554449 16576 0 S
-152 1
+151 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8396
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8396
 necromancer mage crimson~
 @@mCrimson @@dNecromancer@@N~
 @@dA necromancer of the m@@my@@ps@@gt@@d wanders here, chanting spells..@@N
@@ -3506,7 +3552,8 @@ necromancer mage crimson~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8397
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8397
 crimson slave~
 @@dA @@mCrimson @@dSlave@@N~
 @@dA small human banished to serve the m@@mi@@ps@@gt@@d...@@N
@@ -3517,7 +3564,8 @@ crimson slave~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#8398
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8398
 crimson slave~
 @@dA @@mCrimson @@dSlave@@N~
 @@dA small human banished to serve the m@@mi@@ps@@gt@@d...@@N
@@ -3528,40 +3576,44 @@ crimson slave~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#8399
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8399
 crimson slave~
 @@dA @@mCrimson @@dSlave@@N~
 @@dA small human banished to serve the m@@mi@@ps@@gt@@d...@@N
 ~
 ~
 1 542912 0 S
-150 1
+149 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#8400
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8400
 thief~
 @@dA @@mCrimson @@dThief@@N~
 @@dThe thief trapped inside the tower tries to steal your gold..@@N
 ~
 ~
 196633 26856 0 S
-154 1
+155 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
-#8401
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8401
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
 ~
 ~
 65539 16616 0 S
-147 1
+146 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8402
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8402
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
@@ -3572,7 +3624,8 @@ head~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8403
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8403
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
@@ -3583,51 +3636,56 @@ head~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8404
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8404
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
 ~
 ~
 33619971 16616 0 S
-151 1
+152 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8405
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8405
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
 ~
 ~
 33619971 16616 0 S
-137 1
+136 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8406
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8406
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
 ~
 ~
 33619971 16616 0 S
-157 1
+156 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#8407
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #8407
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
 ~
 ~
 65539 16616 0 S
-151 1
+150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #8350
 Sphere~
@@ -4631,7 +4689,6 @@ S
 #OBJFUNS
 O 8350 objfun_soul_moan
 O 8355 objfun_healing
-O 8367 (null)
 O 8368 objfun_cast_fight
 S
 #$

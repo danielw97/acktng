@@ -563,11 +563,12 @@ inmate~
 ~
 ~
 36700163 65536 250 S
-95 1
+96 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#16000
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16000
 chef cook~
 @@WThe @@mAsylum @@NChef~
 @@WA Chef is busily preparing mush for the @@einmates@@N.
@@ -575,10 +576,11 @@ chef cook~
 ~
 36700163 168 -750 S
 94 1
-0 0 0 0
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 4128 0 0 0 0 4
-#16001
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16001
 instructor~
 @@WAn @@mAsylum @@WInstructor@@N~
 ~
@@ -588,29 +590,8 @@ instructor~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1081472 0 0 0 0 8
-#16002
-inmate~
-@@WAn @@eimprisoned Inmate@@N~
-@@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
-~
-~
-36700163 65536 250 S
-95 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-#16004
-inmate~
-@@WAn @@eimprisoned Inmate@@N~
-@@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
-~
-~
-36700163 65536 250 S
-95 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-#16005
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16002
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -621,7 +602,20 @@ inmate~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#16006
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16004
+inmate~
+@@WAn @@eimprisoned Inmate@@N~
+@@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
+~
+~
+36700163 65536 250 S
+94 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16005
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -632,7 +626,20 @@ inmate~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#16007
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16006
+inmate~
+@@WAn @@eimprisoned Inmate@@N~
+@@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
+~
+~
+36700163 65536 250 S
+98 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16007
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -643,7 +650,8 @@ inmate~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#16008
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16008
 monitor~
 @@WAn @@mAsylum @@RMonitor@@N~
 @@WAn @@mAsylum@@R Monitor @@W ensures obedience within the Institution.@@N
@@ -654,7 +662,8 @@ monitor~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 2 0 0 0 0 0
-#16010
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16010
 therapist~
 @@WAn @@mAsylum @@aTherapist@@N~
 @@WA pretty @@atherapist @@Wsmiles at you.@@N
@@ -665,18 +674,20 @@ therapist~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 16
-#16009
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16009
 surgeon~
 @@WThe @@mAsylum @@eSurgeon@@N~
 @@WA tall and evil looking man stares at you with interest.@@N
 ~
 ~
 36700171 66218 -1000 S
-98 1
+99 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 16777216 0 0 0 0 48
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #16000
 ring turquoise~
@@ -705,7 +716,7 @@ cleaver~
 ~
 5 134217730 8421376 257
 0 0 0 3 0 0 0 0 0 0
-10
+2
 A
 18 12
 A
@@ -719,7 +730,7 @@ A nasty ribbed rod lies here.
 ~
 9 142606352 8421376 257
 0 0 0 0 0 0 0 0 0 0
-15
+2
 A
 19 14
 A
@@ -770,7 +781,7 @@ jerkin~
 ~
 9 134217730 8650752 4113
 0 0 0 0 0 0 0 0 0 0
-14
+2
 A
 17 -110
 A
@@ -794,7 +805,7 @@ enforcer~
 ~
 5 138412052 8421376 257
 0 0 0 8 0 0 0 0 0 0
-22
+3
 A
 19 14
 A
@@ -812,7 +823,7 @@ scalpel~
 ~
 5 167772180 8421376 257
 0 0 0 11 0 0 0 0 0 0
-5
+1
 A
 19 17
 A
@@ -827,7 +838,7 @@ medallion~
 @@WA @@rturquoise @@Wand @@dObsidian@@y medallion@@W lies here@@N.~
 9 134217728 8388736 1
 0 0 0 0 0 0 0 0 0 0
-5
+1
 A
 17 -100
 A
@@ -866,7 +877,7 @@ L
 ~
 14 0 0 1
 9 0 16030 0 0 0 0 0 0 0
-10000
+3
 E
 bookshelf~
 Noting something unusual, you may want to examine the bookshelf a little

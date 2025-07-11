@@ -95,11 +95,12 @@ delvar~
 ~
 ~
 19922953 544 0 S
-71 1
-0 0 0 0
+72 1
+0 -20 0 0
 ! 0 0 16 7 0 0 0
 | 0 0 0 0 0 0 16
-#67
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #67
 silverleaf~
 @@gSilver@@GLeaf @@WHalfmoon@@N~
 @@gSilver@@GLeaf @@WHalfmoon@@N, of The GoldenStar Elves
@@ -110,7 +111,8 @@ silverleaf~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 6283264 1024 0 0 0 16
-#69
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #69
 morganth~
 @@mMorganth @@dthe Mysterious@@N~
 @@mMorganth @@dthe Mysterious@@N, Follower of Magic
@@ -121,7 +123,8 @@ morganth~
 0 0 0 0
 ! 32 0 1 7 0 0 0
 | 0 1022 1 0 0 0 48
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #66
 zenithars yinyang~

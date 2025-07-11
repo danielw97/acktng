@@ -135,22 +135,24 @@ This guy really is a huge killing machine perhaps you should walk away.
 
 ~
 19 0 0 S
-11 1
-0 0 0 0
+12 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#301
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #301
 rat~
 rat~
 A large rat is scurring about here.
 ~
 ~
 1 0 -10 S
-6 0
+5 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#302
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #302
 borg~
 Borg~
 Borg.
@@ -158,11 +160,12 @@ Borg.
 The big borgy bastard.
 ~
 23 0 1000 S
-12 0
+11 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#304
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #304
 A dirty gladiator~
 A dirty gladiator~
 A filthy gladiator stands here~
@@ -172,7 +175,8 @@ A filthy gladiator stands here~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#305
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #305
 A harried cook~
 A harried cook~
 A cook is here, harried
@@ -183,7 +187,8 @@ A cook is here, harried
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#306
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #306
 A hurried patron~
 A hurried patron~
 A hurried patron is here, trying to get through lunch
@@ -194,7 +199,8 @@ A hurried patron is here, trying to get through lunch
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #301
 shield~
@@ -202,7 +208,7 @@ shield~
 A large flaming shield~
 9 134217728 8421376 1
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 17 -20
 A

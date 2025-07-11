@@ -1520,11 +1520,12 @@ mino minotaur captain~
 ~
 ~
 36700243 2728 -500 S
-130 1
-0 0 0 0
+129 1
+0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 32
-#1301
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1301
 minotaur guard~
 @@eMinotaur @@dGuard@@M~
 @@dA @@eMinotaur@@d sworn to protect the Keep lunges at you.
@@ -1535,7 +1536,8 @@ minotaur guard~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1302
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1302
 minotaur patrol~
 @@WA @@eMinotaur @@dPatrolman@@N~
 @@dA lone @@eMinotaur@@d patrols the Keep.
@@ -1546,62 +1548,68 @@ minotaur patrol~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1303
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1303
 Gate Guard Minotaur~
 @@dGate Guard@@N~
 @@dA @@eMinotaur@@d guarding the gates prowls around.@@N
 ~
 ~
 67 2216 -1000 S
-124 1
+123 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 32
-#1304
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1304
 minotaur cook~
 @@eMinotaur@@d Cook@@N~
 @@dA cook stands here, waving a pot at you.@@N
 ~
 ~
 7 168 0 S
-109 1
+110 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 1064960 0 0 0 0 8
-#1305
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1305
 minotaur swordsman swordsmaster trainer~
 @@WA @@eMinotaur @@dSwordmaster@@N~
 @@dA @@eMinotaur@@d Swordsmaster shouts commands to his pupils.@@N
 ~
 ~
 36700227 2216 0 S
-130 1
+129 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 32
-#1306
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1306
 minotaur swordsman student~
 @@WA @@eMinotaur @@dSword Student@@N~
 @@dA @@eMinotaur@@d student practices at the sword.@@N
 ~
 ~
 67 168 0 S
-117 1
+118 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1307
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1307
 mino minotaur soldier~
 @@WA @@eMinotaur @@dSoldier@@N~
 @@dA @@eMinotaur@@d lays here in his bunk, sleeping quite soundly.
 ~
 ~
 67 131240 -250 S
-122 1
+123 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#1308
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1308
 prison mob~
 @@WThe @@eMinotaur @@dPrisoner@@N~
 @@dA beleaguered group of @@eMinotaur @@dprisoners mistakes you for food and
@@ -1609,22 +1617,24 @@ prison mob~
 ~
 ~
 131089 12348 100 S
-121 1
+122 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
-#1309
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1309
 prison guard minotaur~
 @@dThe @@eMinotaur @@dprison guard @@N~
 A Prison Guard stands here, guarding the prisoners.
 ~
 ~
 3 141500 0 S
-137 1
+138 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 4096 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #1300
 mino minotaur earring~
@@ -1653,7 +1663,7 @@ cloak~
 ~
 9 146800640 8454144 1
 0 0 0 0 0 0 0 0 0 0
-10
+2
 A
 17 -220
 A
@@ -1672,7 +1682,7 @@ flaming blade~
 @@WA @@ygolden @@Wblade with @@erubies @@Wencrusted in the hilt lies forgotten.@@N~
 5 134218758 8421376 257
 0 0 0 1 0 0 0 0 0 0
-8
+1
 A
 19 27
 A
@@ -1691,7 +1701,7 @@ longsword~
 @@WA nasty @@ylongsword@@N glitters in the light.@@N~
 5 134217728 8421376 1
 0 0 0 3 0 0 0 0 0 0
-15
+2
 A
 17 -150
 A

@@ -2116,7 +2116,8 @@ Taert, bulging muscles and all, is here.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#32
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #32
 A Dark Stalker~
 the Dark Stalker~
 A Dark Stalker stands here, searching for it's prey.
@@ -2130,7 +2131,8 @@ The Dark Stalker is a product of the Dark Powers.  It's only purpose in life
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#30
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #30
 zombie~
 the Zombie~
 A rotting Zombie stands before you, smelling slightly.
@@ -2139,11 +2141,12 @@ The Zombie looks like it has just been animated.  This doesn't stop it
 also looking like a bad road accident.
 ~
 3 0 -400 S
-8 0
-0 0 0 0
+7 0
+0 -20 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#31
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #31
 zombie~
 the zombie~
 A hideous zombie stands before you.
@@ -2155,7 +2158,8 @@ The Zombie looks freshly animated.  Looking closer you almost recognise it.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#33
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #33
 wizard oz~
 the wizard of oz~
 The Wizard of Oz is waiting here. 
@@ -2168,29 +2172,32 @@ You see a long beared wacky mage standing here. His head seems swollen with
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#34
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #34
 tate sugar intel~
 Tate~
 The sweet-looking Tate is here.
 ~
 ~
 1 1572864 300 S
-50 1
+49 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#35
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #35
 lyle intel~
 Lyle~
 Lyle, the second most bravest adventurer in the world, cowers here.
 ~
 ~
 1 1572864 300 S
-62 1
+61 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
-#0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
 #OBJECTS
 #33
 window magic~
@@ -2199,7 +2206,7 @@ A magical window floats before you.  Where does it look?
 ~
 7 64 0 1
 0 0 0 0 0 0 0 0 0 0
-200
+3
 L
 1
 #32
@@ -2250,7 +2257,7 @@ A magical beacon floats gently before you.
 ~
 6 64 8388608 1
 0 0 0 0 0 0 0 0 0 0
-5
+1
 L
 1
 #34
@@ -2260,7 +2267,7 @@ A large portal silently spins before you.
 ~
 7 0 0 1
 0 0 0 0 0 0 0 0 0 0
-200
+3
 L
 1
 #36
