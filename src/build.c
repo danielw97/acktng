@@ -1675,7 +1675,7 @@ void build_setmob(CHAR_DATA *ch, char *argument)
    {
       if (value < -10 || value > 30000)
       {
-         send_to_char("hr_mod range is -10 to 1000.\n\r", ch);
+         send_to_char("hr_mod range is -10 to 30000.\n\r", ch);
          return;
       }
       pMob->hr_mod = value;
@@ -1687,10 +1687,358 @@ void build_setmob(CHAR_DATA *ch, char *argument)
    {
       if (value < -10 || value > 30000)
       {
-         send_to_char("dr_mod range is -10 to 1000.\n\r", ch);
+         send_to_char("dr_mod range is -10 to 30000.\n\r", ch);
          return;
       }
       pMob->dr_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc8") || !str_cmp(arg2,"lootchance8"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance8 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[8] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc7") || !str_cmp(arg2,"lootchance7"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance7 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[7] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc6") || !str_cmp(arg2,"lootchance6"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance6 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[6] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc5") || !str_cmp(arg2,"lootchance5"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance5 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[5] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc4") || !str_cmp(arg2,"lootchance4"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance4 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[4] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc3") || !str_cmp(arg2,"lootchance3"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance3 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[3] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc2") || !str_cmp(arg2,"lootchance2"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance2 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[2] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc1") || !str_cmp(arg2,"lootchance1"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance1 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[1] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "lc0") || !str_cmp(arg2,"lootchance0"))
+   {
+      if (value < 1 || value > 100)
+      {
+         send_to_char("lootchance0 range is 1 to 100.\n\r", ch);
+         return;
+      }
+      pMob->loot_chance[0] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l8") || !str_cmp(arg2,"loot8"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot8 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[8] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l7") || !str_cmp(arg2,"loot7"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot7 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[7] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l6") || !str_cmp(arg2,"loot6"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot6 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[6] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l5") || !str_cmp(arg2,"loot5"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot5 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[5] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l4") || !str_cmp(arg2,"loot4"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot4 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[4] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l3") || !str_cmp(arg2,"loot3"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot3 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[3] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l2") || !str_cmp(arg2,"loot2"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot2 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[2] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l1") || !str_cmp(arg2,"loot1"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot1 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[1] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "l0") || !str_cmp(arg2,"loot0"))
+   {
+      if (value < 1 || value > 32766)
+      {
+         send_to_char("loot0 range is 1 to 32766.\n\r", ch);
+         return;
+      }
+      pMob->loot[0] = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "la") || !str_cmp(arg2,"loot_amount"))
+   {
+      if (value < 1 || value > 1000)
+      {
+         send_to_char("loot_amount range is 1 to 1000.\n\r", ch);
+         return;
+      }
+      pMob->loot_amount = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "pierce_mod"))
+   {
+      if (value < -50 || value > 100)
+      {
+         send_to_char("pierce_mod range is -50 to 100.\n\r", ch);
+         return;
+      }
+      pMob->pierce_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "parry_mod"))
+   {
+      if (value < -50 || value > 100)
+      {
+         send_to_char("parry_mod range is -50 to 100.\n\r", ch);
+         return;
+      }
+      pMob->parry_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "dodge_mod"))
+   {
+      if (value < -50 || value > 100)
+      {
+         send_to_char("dodge_mod range is -50 to 100.\n\r", ch);
+         return;
+      }
+      pMob->dodge_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "block_mod"))
+   {
+      if (value < -50 || value > 100)
+      {
+         send_to_char("block_mod range is -50 to 100.\n\r", ch);
+         return;
+      }
+      pMob->block_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "crit_mult_mod"))
+   {
+      if (value < -500 || value > 50000)
+      {
+         send_to_char("crit_mult_mod range is -500 to 50000.\n\r", ch);
+         return;
+      }
+      pMob->crit_mult_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "spell_crit_mod"))
+   {
+      if (value < -10 || value > 30000)
+      {
+         send_to_char("spell_crit_mod range is -10 to 30000.\n\r", ch);
+         return;
+      }
+      pMob->spell_crit_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "spell_mult_mod"))
+   {
+      if (value < -500 || value > 50000)
+      {
+         send_to_char("spell_mult_mod range is -500 to 50000.\n\r", ch);
+         return;
+      }
+      pMob->spell_mult_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "spellpower_mod"))
+   {
+      if (value < -500 || value > 50000)
+      {
+         send_to_char("spellpower_mod range is -500 to 50000.\n\r", ch);
+         return;
+      }
+      pMob->spellpower_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "healing_mod"))
+   {
+      if (value < -10 || value > 30000)
+      {
+         send_to_char("healing_mod range is -10 to 30000.\n\r", ch);
+         return;
+      }
+      pMob->healing_mod = value;
+      area_modified(pArea);
+      return;
+   }
+
+   if (!str_cmp(arg2, "crit_mod"))
+   {
+      if (value < -10 || value > 30000)
+      {
+         send_to_char("crit_mod range is -10 to 30000.\n\r", ch);
+         return;
+      }
+      pMob->crit_mod = value;
       area_modified(pArea);
       return;
    }

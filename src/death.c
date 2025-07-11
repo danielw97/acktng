@@ -182,6 +182,11 @@ void make_corpse(CHAR_DATA *ch, char *argument)
       obj_to_obj(autogen, corpse);
    }
 
+   if (ch->loot_amount > 0)
+   {
+      create_loot(ch, corpse);
+   }
+
    if (!IS_NPC(ch))
    {
       if ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) || (target != NULL && (target->pcdata->clan != ch->pcdata->clan) && (politics_data.diplomacy[ch->pcdata->clan][target->pcdata->clan] < -450)) || ((ch->level > 30) && (IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF))) || (leave_corpse))
@@ -211,6 +216,48 @@ void make_corpse(CHAR_DATA *ch, char *argument)
       }
       return;
    }
+}
+
+bool create_loot(CHAR_DATA *ch, OBJ_DATA *obj)
+{
+   int total = ch->loot_amount / 100;
+   int created = 0;
+
+   if (ch->loot_amount % 100 > 0)
+   {
+      if (number_percent() < ch->loot_amount)
+         total++;
+   }
+
+   if (total == 0)
+      return FALSE;
+
+   while (created < total)
+   {
+      int chance = 0;
+      bool viable = FALSE;
+
+      for(int i = 0; i < MAX_LOOT; i++)
+      {
+         if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && number_percent < ch->loot_chance[i] + chance)
+         {
+            viable = TRUE;
+            OBJ_DATA *obj = create_object(get_obj_index(ch->loot[i]), 0);
+
+            if (obj != NULL)
+            {
+               obj_to_obj(obj, corpse);
+            }
+            created++;
+            break;
+         }
+         chance += ch->loot_chance[i];
+      }
+      if (!viable)
+         return FALSE;
+   }
+
+   return TRUE;
 }
 
 /*

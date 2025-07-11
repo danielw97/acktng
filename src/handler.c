@@ -528,6 +528,8 @@ int get_spell_crit(CHAR_DATA *ch)
    crit += ch->remort[CLASS_WIZ] / 10;
    crit += ch->remort[CLASS_WLK] / 10 * .75;
 
+   crit += ch->spell_crit_mod;
+
    return crit;
 }
 
@@ -548,6 +550,8 @@ int get_spell_crit_mult(CHAR_DATA *ch)
    crit += ch->lvl[CLASS_PAL] * .75 * get_curr_wis(ch) / 50;
 
    crit += ch->adept[CLASS_TEM] * get_curr_wis(ch) / 25;
+
+   crit += ch->spell_mult_mod;
 
    return crit;
 }
@@ -581,6 +585,9 @@ int get_crit(CHAR_DATA *ch)
    }
 
    crit += get_stat(ch, APPLY_CRIT);
+
+   crit += ch->crit_mod;
+
    return crit;
 }
 
@@ -611,6 +618,8 @@ int get_crit_mult(CHAR_DATA *ch)
    }
 
    crit += get_stat(ch, APPLY_CRIT_MULT);
+
+   crit += ch->crit_mult_mod;
 
    return crit;
 }

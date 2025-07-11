@@ -888,6 +888,8 @@ int get_parry(CHAR_DATA *ch)
    chance += stance_app[ch->stance].speed_mod;
    chance += get_speed(ch)*5;
 
+   chance += ch->parry_mod;
+
    if (chance > 50)
       chance = 50;
 
@@ -931,6 +933,8 @@ int get_dodge(CHAR_DATA *ch)
 
    chance += stance_app[ch->stance].speed_mod;
    chance += get_speed(ch)*5;
+
+   chance += ch->dodge_mod;
 
    if (chance > 50)
       chance = 50;
@@ -984,6 +988,8 @@ int get_block(CHAR_DATA *ch)
 
    chance += stance_app[ch->stance].speed_mod;
    chance += get_speed(ch)*5;
+
+   chance += ch->block_mod;
 
    if (chance > 50)
       chance = 50;
@@ -1058,6 +1064,8 @@ int get_evasion_piercing(CHAR_DATA *ch)
    chance += get_speed(ch) * 5;
 
    chance += stance_app[ch->stance].speed_mod;
+
+   chance += ch->pierce_mod;
 
    return chance;
 }
