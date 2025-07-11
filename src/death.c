@@ -221,6 +221,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
 
 bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
 {
+   char buf[MSL]
    int total = ch->loot_amount / 100;
    int created = 0;
 
@@ -230,6 +231,8 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
          total++;
    }
 
+   sprintf(buf, "create_loot loot total is %d", total);
+   bug(buf,0);
    if (total == 0)
       return FALSE;
 
@@ -255,7 +258,11 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
          chance += ch->loot_chance[i];
       }
       if (!viable)
+      {
+         sprintf(buf, "%s did not create a viable loot table", ch->short_descr);
+         bug(buf,0);
          return FALSE;
+      }
    }
 
    return TRUE;
