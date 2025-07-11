@@ -2499,8 +2499,21 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
    mob->hr_mod = pMobIndex->hr_mod;
    mob->dr_mod = pMobIndex->dr_mod;
    mob->hp_mod = pMobIndex->hp_mod;
-//   mob->spellpower_mod = 0;
-//   mob->healing_mod = 0;
+   mob->spellpower_mod = pMobIndex->spellpower_mod;
+   mob->crit_mod = pMobIndex->crit_mod;
+   mob->crit_mult_mod = pMobIndex->crit_mult_mod;
+   mob->spell_crit_mod = pMobIndex->spell_crit_mod;
+   mob->parry_mod = pMobIndex->parry_mod;
+   mob->dodge_mod = pMobIndex->dodge_mod;
+   mob->block_mod = pMobIndex->block_mod;
+   mob->pierce_mod = pMobIndex->pierce_mod;
+   mob->loot_amount = pMobIndex->loot_amount;
+
+   for(int i = 0; i < MAX_LOOT; i++)
+   {
+      mob->loot[i] = pMobIndex->loot[i];
+      mob->loot_chance[i] = pMobIndex->loot_chance[i];
+   }
 
    mob->armor = interpolate(mob->level / 2, 100, -100);
 
