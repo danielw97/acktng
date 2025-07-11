@@ -670,11 +670,12 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
       int chance = 0;
       bool viable = FALSE;
 
+      int roll = number_percent();
       for(int i = 0; i < MAX_LOOT; i++)
       {
   //       sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i], ch->loot_chance[i], chance);
 //         bug(buf,0);
-         if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && number_percent() < ch->loot_chance[i] + chance)
+         if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && roll <= ch->loot_chance[i] + chance)
          {
             viable = TRUE;
             OBJ_DATA *obj = create_object(get_obj_index(ch->loot[i]), 0);
