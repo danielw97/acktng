@@ -1075,7 +1075,7 @@ void load_mobiles(FILE *fp)
       pMobIndex->pShop = NULL;
       pMobIndex->alignment = fread_number(fp);
       letter = fread_letter(fp);
-      pMobIndex->level = number_fuzzy(fread_number(fp));
+      pMobIndex->level = fread_number(fp);
 
       pMobIndex->sex = fread_number(fp);
 

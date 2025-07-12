@@ -205,10 +205,11 @@ void violence_update(void)
                         {
                            if ((victim->fighting != NULL) && (rch->fighting == NULL))
                            {
+                              char actbuf[MSL];
                               sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
-                              act(actbuf, rch, NULL, assist, TO_ROOM);
+                              act(actbuf, rch, NULL, victim, TO_ROOM);
                               sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
-                              act(actbuf, rch, NULL, assist, TO_CHAR);
+                              act(actbuf, rch, NULL, victim, TO_CHAR);
                               set_fighting(rch, victim->fighting, TRUE);
                            }
                         }
