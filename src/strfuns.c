@@ -63,10 +63,8 @@ void pre_parse(char *list, char *victimname, char *containername, char *things)
       if (arg1[0] == '\0')
          break;
 
-      if (container_name != '\0')
-         argument = one_argument(argument, container_name);
-      else
-         argument = one_argument(argument, victim_name);
+      argument = one_argument(argument, container_name);
+      strcpy(victim_name, container_name);
 
       if (is_number(arg1))
       {
