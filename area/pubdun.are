@@ -796,7 +796,7 @@ Elastica is so named because she appears to be made out of elastic, with
 question mark as you look at her.
 ~
 3 0 -200 S
-14 2
+15 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -810,7 +810,7 @@ A Second level prisoner stands here, clearly bored
 ~
 ~
 1073741825 0 0 S
-10 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -824,7 +824,7 @@ A second level prisoner stands here, clearly bored
 ~
 ~
 1073741825 0 0 S
-8 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -838,7 +838,7 @@ A second level prisoner stands here, clearly bored
 ~
 ~
 1073741825 0 0 S
-10 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -852,7 +852,7 @@ A second level prisoner stands here, clearly bored.
 ~
 ~
 1073741825 0 0 S
-10 1
+12 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -866,7 +866,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1073741825 0 0 S
-15 1
+20 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -880,7 +880,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1073741825 0 0 S
-13 1
+20 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -894,7 +894,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1073741825 0 0 S
-14 1
+20 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -908,7 +908,7 @@ A third level prisoner stands here, looking for trouble.
 ~
 ~
 1073741825 0 0 S
-17 1
+20 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -922,7 +922,7 @@ A Final Level Prisoner stands here, scowling angrily.
 ~
 ~
 1073741825 0 0 S
-29 1
+30 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0

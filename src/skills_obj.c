@@ -250,7 +250,7 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
         {
             if (((obj = get_eq_char(victim, WEAR_HOLD_HAND_R)) == NULL) || (obj->item_type != ITEM_WEAPON))
             {
-                if (!IS_SET(obj->extra_flags, ITEM_FIST))
+                if (obj == NULL || IS_SET(obj->extra_flags, ITEM_FIST))
                 {
                     send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
                     return;
