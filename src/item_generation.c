@@ -377,14 +377,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       hrdr_bonus = 1;
       stat_bonus = 5;
 
-      if (obj->weight == 3)
+      if (obj->weight > 10)
       {
          ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
       {
          /* Do nothing for now */
       }
@@ -409,14 +409,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       move_div = 10;
       mana_div = 10;
 
-      if (obj->weight == 3)
+      if (obj->weight > 10)
       {
          ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
       {
          /* Do nothing for now */
       }
@@ -452,14 +452,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       mana_div = 5;
       move_div = 5;
 
-      if (obj->weight == 3)
+      if (obj->weight > 10)
       {
          ac_div -= 1;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
       {
          /* Do nothing for now */
       }
@@ -498,14 +498,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       stat_bonus = 5;
       hrdr_bonus = 1;
 
-      if (obj->weight == 3)
+      if (obj->weight > 10)
       {
          ac_div -= 5;
          hp_div /= 2;
          mana_div *= 2;
          move_div *= 2;
       }
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
       {
          /* Do nothing for now */
       }
