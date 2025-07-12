@@ -15,7 +15,7 @@ OBJ_DATA *generate_item(int level)
       obj->level = 150;
    if (obj->level < 1)
       obj->level = 1;
-   obj->weight = (number_range(0,2) * 5) + 3;
+   obj->weight = number_range(1, 15);
    SET_BIT(obj->extra_flags, ITEM_GENERATED);
    SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    obj->item_type = ITEM_ARMOR;
@@ -120,13 +120,24 @@ OBJ_DATA *generate_item(int level)
       break;
    }
 
-   sprintf(buf, "%s %s", get_wear_name(obj), get_suffix(obj));
+   sprintf(buf, "%s %s %s", get_prefix(obj), get_wear_name(obj), get_suffix(obj));
    obj->name = str_dup(buf);
    obj->short_descr = str_dup(buf);
    sprintf(buf, "%s lies here", obj->short_descr);
    obj->description = str_dup(buf);
 
    set_obj_stat_auto(obj);
+
+   if (obj->weight > 14)
+      obj->weight = 14;
+   else if (obj->weight == 11)
+      obj->weight = 12;
+   else if (obj->weight == 9)
+      obj->weight = 8;
+   else if (obj->weight == 5)
+      obj->weight = 6;
+   else if (obj->weight < 2)
+      obj->weight = 2;
 
    return obj;
 }
@@ -143,7 +154,23 @@ char *get_suffix(OBJ_DATA *obj)
 
 char *get_prefix(OBJ_DATA *obj)
 {
-   
+   switch (obj->weight)
+   {
+   case 2:
+      return "Magus";
+   case 4:
+      return "Tricksters";
+   case 6:
+      return "Guardians";
+   case 8:
+      return "Berserkers";
+   case 12:
+      return "Protectors";
+   case 14:
+      return "Conquerors";
+   case default:
+      return "";
+   }
 }
 
 char *get_wear_name(OBJ_DATA *obj)
@@ -396,13 +423,11 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       else
       {
          /* Caster */
-         if (weight == 3)
-         {
-            dr_div *= 2;
-            move_div *= 2;
 
-            spellpower_div = 12;
-         }
+         dr_div *= 2;
+         move_div *= 2;
+
+         spellpower_div = 12;
       }
    }
    else if (obj->item_type == ITEM_WEAPON)
