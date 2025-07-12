@@ -120,7 +120,7 @@ OBJ_DATA *generate_item(int level)
       break;
    }
 
-   sprintf(buf, "%s %s %s", get_prefix(obj), get_wear_name(obj), get_suffix(obj));
+   sprintf(buf, "%s%s %s", get_prefix(obj), get_wear_name(obj), get_suffix(obj));
    obj->name = str_dup(buf);
    obj->short_descr = str_dup(buf);
    sprintf(buf, "%s lies here", obj->short_descr);
@@ -157,17 +157,17 @@ char *get_prefix(OBJ_DATA *obj)
    switch (obj->weight)
    {
    case 2:
-      return "Magus";
+      return "Magus ";
    case 4:
-      return "Tricksters";
+      return "Tricksters ";
    case 6:
-      return "Guardians";
+      return "Guardians ";
    case 8:
-      return "Berserkers";
+      return "Berserkers ";
    case 12:
-      return "Protectors";
+      return "Protectors ";
    case 14:
-      return "Conquerors";
+      return "Conquerors ";
    case default:
       return "";
    }
