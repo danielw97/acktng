@@ -1463,7 +1463,7 @@ void do_assist(CHAR_DATA *ch, char *argument)
          send_to_char("You sure need help!\n\r", ch);
          return;
       }
-      if (!is_same_group(ch, assist))
+      if (!IS_NPC(ch) && !is_same_group(ch, assist))
       {
          act("Sorry, $N isn't in your group...", ch, NULL, assist, TO_CHAR);
          return;
