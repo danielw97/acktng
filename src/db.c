@@ -2487,7 +2487,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
     * Changed exp value for mobs
     */
 
-   level = (pMobIndex->level);
+   level = number_fuzzy(pMobIndex->level);
 
    mob->level = level;
 
