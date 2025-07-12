@@ -15,7 +15,7 @@ OBJ_DATA *generate_item(int level)
       obj->level = 150;
    if (obj->level < 1)
       obj->level = 1;
-   obj->weight = number_range(1, 3);
+   obj->weight = (number_range(0,2) * 5) + 3;
    SET_BIT(obj->extra_flags, ITEM_GENERATED);
    SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    obj->item_type = ITEM_ARMOR;
@@ -133,12 +133,17 @@ OBJ_DATA *generate_item(int level)
 
 char *get_suffix(OBJ_DATA *obj)
 {
-   if (obj->weight == 3)
+   if (obj->weight > 10)
       return "of the Defender";
-   else if (obj->weight == 2)
+   else if (obj->weight > 5)
       return "of the Fighter";
    else
       return "of the Arcanist";
+}
+
+char *get_prefix(OBJ_DATA *obj)
+{
+   
 }
 
 char *get_wear_name(OBJ_DATA *obj)
@@ -319,7 +324,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    int ac_bonus = 0;
    int stat_bonus = 0;
 
-   //Fuck this number.
+   // Fuck this number.
    if (obj->level == 88)
       obj->level = 87;
 
@@ -391,10 +396,13 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       else
       {
          /* Caster */
-         dr_div *= 2;
-         move_div *= 2;
+         if (weight == 3)
+         {
+            dr_div *= 2;
+            move_div *= 2;
 
-         spellpower_div = 12;
+            spellpower_div = 12;
+         }
       }
    }
    else if (obj->item_type == ITEM_WEAPON)
@@ -660,8 +668,8 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
          total++;
    }
 
-//   sprintf(buf, "create_loot loot total is %d", total);
-  // bug(buf,0);
+   //   sprintf(buf, "create_loot loot total is %d", total);
+   // bug(buf,0);
    if (total == 0)
       return FALSE;
 
@@ -671,10 +679,10 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
       bool viable = FALSE;
 
       int roll = number_percent();
-      for(int i = 0; i < MAX_LOOT; i++)
+      for (int i = 0; i < MAX_LOOT; i++)
       {
-  //       sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i], ch->loot_chance[i], chance);
-//         bug(buf,0);
+         //       sprintf(buf, "Chloot %d Chlootchance %d chance %d", ch->loot[i], ch->loot_chance[i], chance);
+         //         bug(buf,0);
          if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && roll <= ch->loot_chance[i] + chance)
          {
             viable = TRUE;
@@ -692,7 +700,7 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
       if (!viable)
       {
          sprintf(buf, "%s did not create a viable loot table", ch->short_descr);
-         bug(buf,0);
+         bug(buf, 0);
          return FALSE;
       }
    }
