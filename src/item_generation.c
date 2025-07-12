@@ -423,7 +423,6 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       else
       {
          /* Caster */
-
          dr_div *= 2;
          move_div *= 2;
 
