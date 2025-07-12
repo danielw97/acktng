@@ -5,6 +5,7 @@ void set_obj_stat_auto(OBJ_DATA *obj);
 void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
 char *get_suffix(OBJ_DATA *obj);
 bool is_jewelry(OBJ_DATA *obj);
+char *get_prefix(OBJ_DATA *obj);
 
 OBJ_DATA *generate_item(int level)
 {
@@ -168,7 +169,7 @@ char *get_prefix(OBJ_DATA *obj)
       return "Protectors";
    case 14:
       return "Conquerors";
-   case default:
+   default:
       return "";
    }
 }
