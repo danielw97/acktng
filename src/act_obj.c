@@ -52,7 +52,7 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 
    if (!CAN_WEAR(obj, ITEM_TAKE) || obj->item_type == ITEM_CORPSE_PC)
    {
-      send_to_char( "You can't take that.\n\r", ch );
+      send_to_char("You can't take that.\n\r", ch);
       return;
    }
 
@@ -123,26 +123,14 @@ void do_get(CHAR_DATA *ch, char *argument)
    bool found_money = FALSE;
    victim_name[0] = '\0';
 
-   /* hack to take care of players used to old system */
-   if ((!is_name("from", argument)) && (is_name("corpse", argument)))
-   {
-      sprintf(container_name, "%s", "corpse");
-      if (is_name("all", argument))
-         sprintf(object_list, "1 %s", "all");
-      else if ((is_name("coins", argument)) || (is_name("coin", argument)) || (is_name("money", argument)))
-         sprintf(object_list, "%s", "coinsonly");
-   }
-   else
-   {
-      pre_parse(argument, victim_name, container_name, object_list);
-   }
+   pre_parse(argument, victim_name, container_name, object_list);
 
    /*
     * Get type.
     */
    if (object_list[0] == '\0')
    {
-      send_to_char("Get what _from_ what?\n\r", ch);
+      send_to_char("Get what?\n\r", ch);
       return;
    }
    if ((container_name[0] != '\0') && (container = get_obj_here(ch, container_name)) == NULL)
@@ -1337,7 +1325,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
-   if ((obj->weight+4)/5 > get_curr_str(ch)/10)
+   if ((obj->weight + 4) / 5 > get_curr_str(ch) / 10)
    {
       send_to_char("You are not of sufficient strength to use it effectively.\n\r", ch);
       act("$L$n nearly drops a $p.", ch, obj, NULL, TO_ROOM);
@@ -1677,8 +1665,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
             act("You cannot use bucklers!", ch, obj, NULL, TO_CHAR);
             return;
          }
-         
-         if ((get_eq_char(ch, WEAR_HOLD_HAND_L) && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace)) != NULL || (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL  && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace)))
+
+         if ((get_eq_char(ch, WEAR_HOLD_HAND_L) && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace)) != NULL || (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace)))
          {
             act("You cannot remove what is in your hands!", ch, obj, NULL, TO_CHAR);
             return;
@@ -2415,7 +2403,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(ch) && !IS_NPC(victim))
    {
-      send_to_char("PCs can't do that to PCs\n\r",ch);
+      send_to_char("PCs can't do that to PCs\n\r", ch);
       return;
    }
 
@@ -2488,7 +2476,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!can_drop_obj(ch, obj) || IS_SET(obj->extra_flags, ITEM_INVENTORY) || obj->level > ch->level+10 || (obj->wear_loc > -1))
+   if (!can_drop_obj(ch, obj) || IS_SET(obj->extra_flags, ITEM_INVENTORY) || obj->level > ch->level + 10 || (obj->wear_loc > -1))
    {
       send_to_char("You can't pry it away.\n\r", ch);
       return;

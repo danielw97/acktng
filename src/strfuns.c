@@ -57,12 +57,17 @@ void pre_parse(char *list, char *victimname, char *containername, char *things)
    container_name[0] = '\0';
    victim_name[0] = '\0';
    object_list[0] = '\0';
-   
    for (;;)
    {
       argument = one_argument(argument, arg1);
       if (arg1[0] == '\0')
          break;
+
+      if (container_name != '\0')
+         argument = one_argument(argument, container_name);
+      else
+         argument = one_argument(argument, victim_name);
+
       if (is_number(arg1))
       {
          argument = one_argument(argument, one_object);
@@ -75,7 +80,6 @@ void pre_parse(char *list, char *victimname, char *containername, char *things)
          safe_strcat(MSL, object_list, holdbuf);
       }
    }
-
    strcpy(victimname, victim_name);
    strcpy(things, object_list);
    strcpy(containername, container_name);
