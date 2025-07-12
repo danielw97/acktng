@@ -192,7 +192,7 @@ void violence_update(void)
                       */
                      for (vch = ch->in_room->first_person; vch; vch = vch->next)
                      {
-                        if ((can_see(rch, vch)) && (!IS_NPC(vch)) && !IS_SET(vch->act, ACT_NOASSIST))
+                        if ((can_see(rch, vch)) && (!IS_NPC(vch)))
                         {
                            target = vch;
                            number++;
@@ -202,7 +202,7 @@ void violence_update(void)
                      if (target != NULL)
                      {
                         if (abs(target->level - rch->level) < 40)
-                           multi_hit(rch, target, TYPE_UNDEFINED);
+                           do_assist(vch, victim->name);
                      }
                   }
                }
@@ -411,7 +411,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
       if (!IS_NPC(ch) && can_use_skill(ch, gsn_martial_arts))
       {
-         if (number_percent() < (ch->lvl[CLASS_PUG]/2) + 40)
+         if (number_percent() < (ch->lvl[CLASS_PUG] / 2) + 40)
             dt = TYPE_MARTIAL;
       }
    }
@@ -484,7 +484,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    int dam_bonus = get_curr_str(ch) * get_psuedo_level(ch) / 100;
 
    if (wield != NULL && IS_SET(wield->extra_flags, ITEM_TWO_HANDED))
-      dam = number_range(wield->value[1]*3, wield->value[2]*3) + dam_bonus;
+      dam = number_range(wield->value[1] * 3, wield->value[2] * 3) + dam_bonus;
    else if (wield != NULL && !IS_SET(wield->extra_flags, ITEM_FIST))
       dam = number_range(wield->value[1], wield->value[2]) + dam_bonus;
    else if (IS_NPC(ch))
@@ -509,10 +509,10 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
             dam_bonus += dam_bonus * ch->remort[CLASS_BRA] / 75 * 0.75;
             dam_bonus += dam_bonus * ch->adept[CLASS_MAR] / 50;
 
-            dam += number_range( get_psuedo_level(ch)/3, get_psuedo_level(ch)/2 ) + dam_bonus;
+            dam += number_range(get_psuedo_level(ch) / 3, get_psuedo_level(ch) / 2) + dam_bonus;
          }
          else
-            dam = number_range(2, get_psuedo_level(ch)/4) + dam_bonus;
+            dam = number_range(2, get_psuedo_level(ch) / 4) + dam_bonus;
       }
       else
          UMAX(number_range(2, 4), get_psuedo_level(ch) / 4);
@@ -886,7 +886,7 @@ int get_parry(CHAR_DATA *ch)
       chance += 5;
 
    chance += stance_app[ch->stance].speed_mod;
-   chance += get_speed(ch)*5;
+   chance += get_speed(ch) * 5;
 
    chance += ch->parry_mod;
 
@@ -932,7 +932,7 @@ int get_dodge(CHAR_DATA *ch)
       chance += 20;
 
    chance += stance_app[ch->stance].speed_mod;
-   chance += get_speed(ch)*5;
+   chance += get_speed(ch) * 5;
 
    chance += ch->dodge_mod;
 
@@ -987,7 +987,7 @@ int get_block(CHAR_DATA *ch)
       chance /= 2;
 
    chance += stance_app[ch->stance].speed_mod;
-   chance += get_speed(ch)*5;
+   chance += get_speed(ch) * 5;
 
    chance += ch->block_mod;
 
