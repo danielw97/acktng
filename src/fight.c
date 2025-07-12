@@ -202,7 +202,16 @@ void violence_update(void)
                      if (target != NULL)
                      {
                         if (abs(target->level - rch->level) < 40)
-                           do_assist(vch, victim->name);
+                        {
+                           if ((victim->fighting != NULL) && (rch->fighting == NULL))
+                           {
+                              sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
+                              act(actbuf, rch, NULL, assist, TO_ROOM);
+                              sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
+                              act(actbuf, rch, NULL, assist, TO_CHAR);
+                              set_fighting(rch, victim->fighting, TRUE);
+                           }
+                        }
                      }
                   }
                }
