@@ -951,7 +951,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1073741825 0 0 S
-25 1
+30 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -965,7 +965,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1073741825 0 0 S
-25 1
+30 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -979,7 +979,7 @@ A Final Level Prisoner stands here, scowling angrily
 ~
 ~
 1073741825 0 0 S
-27 1
+30 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -993,7 +993,7 @@ A Final Level Prisoner stands here, scowling angrily.
 ~
 ~
 1073741825 0 0 S
-2 1
+30 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -1077,7 +1077,7 @@ the vibrating ring~
 The vibrating ring spins whirls about on the floor in front of you.~
 9 134217730 8396800 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 0
 A
@@ -1098,7 +1098,7 @@ a Buffalo bracer~
 A Buffalo bracer has been left here.~
 9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 19 5
 A
@@ -1119,7 +1119,7 @@ pantera's fang~
 Pantera's fang has been left here.~
 5 134217793 8421376 1
 0 0 0 11 0 0 0 0 0 0
-2
+8
 A
 18 15
 A
@@ -1136,7 +1136,7 @@ an Elastic Aura~
 An aura of some elasticity lies here~
 28 134217728 8388610 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 10
 #9554
@@ -1145,7 +1145,7 @@ a chained soul~
 A chained soul lies here~
 28 134217728 8388609 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 10
 #9555
@@ -1154,7 +1154,7 @@ dinosaur Shoulders~
 Shoulders of a dinosaur lay here~
 9 134217728 8389120 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 10
 #9556
@@ -1163,7 +1163,7 @@ a Secret Painting~
 ~
 15 8 0 1
 0 15 9556 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9557
@@ -1172,7 +1172,7 @@ the Secret Key~
 A key with some kind of secret lies here~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9558
@@ -1181,7 +1181,7 @@ a cute little skeleton's skull~
 Cute little skeleton skull~
 9 192 8388672 17
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -20
 A
@@ -1208,7 +1208,7 @@ an @@dObsidian @@NStiletto~
 A stiletto lies here, lost.~
 5 202375296 8421376 257
 0 0 0 11 0 0 0 0 0 0
-2
+8
 L
 30
 #9560
@@ -1217,7 +1217,7 @@ a Guard's Key~
 A key lies here, discarded~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9561
@@ -1226,7 +1226,7 @@ a Vice Warden's Key~
 A key lies here, discarded~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 30
 #9562
@@ -1235,7 +1235,7 @@ a Secretary's Key~
 A key lies here, discarded~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 30
 #9563
@@ -1244,7 +1244,7 @@ The Warden's Epaulets~
 The Warden's Epaulets~
 9 201326784 8389120 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 35
 #9564
@@ -1253,7 +1253,7 @@ pen of the Secretary~
 A pen lies here, abandoned~
 5 201326720 8421376 1
 0 0 0 11 0 0 0 0 0 0
-1
+4
 L
 30
 #9565
@@ -1262,7 +1262,7 @@ insignia of the Vice Warden~
 An insignia lies here, abandoned~
 9 201326784 8389632 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 30
 #9566
@@ -1271,7 +1271,7 @@ a Guard's Breastplate~
 A breastplate lies here, abandoned~
 9 201326720 8650752 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 30
 #9567
@@ -1280,7 +1280,7 @@ a Guard's Legplates~
 A pair of legplates lie here, abandoned~
 9 201326720 9437184 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 30
 #9568
@@ -1289,7 +1289,7 @@ A Prisoner's Shackles~
 A pair of shackles lie here, discarded~
 9 202375296 8390656 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 30
 #0
