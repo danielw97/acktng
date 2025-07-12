@@ -523,7 +523,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
         case POS_DEAD:
             if ((sil_weapon = get_eq_char(ch, WEAR_HOLD_HAND_L)) == NULL)
                 sil_weapon = get_eq_char(ch, WEAR_HOLD_HAND_R);
-            if (IS_WOLF(victim) && (!IS_NPC(ch)) && (ch->pcdata->learned[gsn_decapitate] != 0) && (sil_weapon != NULL) && (IS_SET(sil_weapon->extra_flags, ITEM_SILVER)))
+/*            if (IS_WOLF(victim) && (!IS_NPC(ch)) && (ch->pcdata->learned[gsn_decapitate] != 0) && (sil_weapon != NULL) && (IS_SET(sil_weapon->extra_flags, ITEM_SILVER)))
             {
                 int chance;
 
@@ -555,7 +555,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
                 for (sn = 0; sn <= MAX_SKILL; sn++)
                     if ((skill_table[sn].flag2 == WOLF) && (victim->pcdata->learned[sn] > 0))
                         victim->pcdata->learned[sn] = 0;
-            }
+            }*/
 
             act("$n is DEAD!!", victim, 0, 0, TO_ROOM);
             send_to_char("You have been KILLED!!\n\r\n\r", victim);

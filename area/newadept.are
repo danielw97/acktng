@@ -1257,7 +1257,7 @@ A hermit stands here, grumpy from all of the new activity nearby.
 33554435 0 0 S
 166 1
 0 0 0 0
-! 0 0 0 0 569344 860160 0
+! 0 0 0 7 569344 860160 0
 | 0 0 0 0 0 0 0
 + 200 0 0 0 0 0 0 0 0
 l 25 178 179 180 0 0 0 0 0 0 
@@ -1266,7 +1266,7 @@ L 33 33 33 0 0 0 0 0 0
 #OBJECTS
 #166
 A Key to the hermit~
-Key to the Hermit~
+key to the Hermit~
 A key lies here, discarded~
 18 16384 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -1274,8 +1274,8 @@ A key lies here, discarded~
 L
 1
 #167
-A Ground's Key~
-A Ground's Key~
+a Ground's Key~
+a Ground's Key~
 A key lies here, discarded~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -1301,12 +1301,12 @@ Key to Foyer~
 L
 1
 #170
-Epaulets of the Keep's Guard~
-@@WEpaulets of the @@BKeep's@@W Guard@@N~
+Spaulders of the Keep Keep's guard~
+@@WSpaulders of the @@BKeep's@@W Guard@@N~
 A pair of epaulets lies here, discarded~
 9 201326592 8389120 77323
 0 0 0 0 0 0 0 0 0 0
-1
+2
 L
 150
 #171
@@ -1421,6 +1421,7 @@ M 0 166 25 175 (null)
 
 M 0 166 25 177 (null)
 
+G 0 166 0 (null)
 M 0 166 25 179 (null)
 
 M 0 166 25 191 (null)
@@ -1448,7 +1449,8 @@ M 0 166 25 181 (null)
 M 0 167 1 203 (null)
 
 M 0 168 1 202 (null)
+
 G 0 167 0 (null)
-O 0 166 1 177 (null)
+
 S
 #$

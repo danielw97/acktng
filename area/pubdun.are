@@ -427,9 +427,10 @@ D1
 S
 #9577
 Third Level Halls~
-No descriptionYou can hear echoes all around you of the public dungeon. The
-public dungeon has a clearly rank odor, a slight foul breeze making it more
-present. There is little light, thankfully hiding what may be on the ground.
+You can hear echoes all around you of the public dungeon.  The public dungeon
+has a clearly rank odor, a slight foul breeze making it more present.  There
+is little light, thankfully hiding what may be on the ground.
+
 ~
 4 11
 D0
@@ -640,7 +641,7 @@ D1
 0 0 9584
 D3
 ~
-^crack~
+^crack ^cracks~
 353 9557 9595
 S
 #9591
@@ -1218,7 +1219,7 @@ A key lies here, discarded~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-30
+1
 #9561
 a Vice Warden's Key~
 a Vice Warden's Key~

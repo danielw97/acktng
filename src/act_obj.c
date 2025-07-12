@@ -2377,6 +2377,10 @@ void do_steal(CHAR_DATA *ch, char *argument)
    /*
     * do not allow steal in LIMBO
     */
+
+   if (!can_use_skill_message(ch, gsn_steal))
+      return;
+
    if (ch->in_room == get_room_index(ROOM_VNUM_LIMBO))
    {
       send_to_char("You failed.\n\r", ch);
@@ -2409,9 +2413,15 @@ void do_steal(CHAR_DATA *ch, char *argument)
       return;
    }
 
+   if (!IS_NPC(ch) && !IS_NPC(victim))
+   {
+      send_to_char("PCs can't do that to PCs\n\r",ch);
+      return;
+   }
+
    WAIT_STATE(ch, skill_table[gsn_steal].beats);
    chance = IS_NPC(ch) ? (get_psuedo_level(ch) / 4)
-                       : (ch->pcdata->learned[gsn_steal] / 3 + (get_curr_dex(ch) / 2));
+                       : ((get_curr_dex(ch) * 3));
    chance = chance - ((get_psuedo_level(victim) - get_psuedo_level(ch)) / 2);
    if ((!IS_NPC(ch) && !IS_NPC(victim)) && (victim->adept_level > 0) && (ch->adept_level <= 0))
       chance = chance - 25;
@@ -2478,7 +2488,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!can_drop_obj(ch, obj) || IS_SET(obj->extra_flags, ITEM_INVENTORY) || obj->level > ch->level || (obj->wear_loc > -1))
+   if (!can_drop_obj(ch, obj) || IS_SET(obj->extra_flags, ITEM_INVENTORY) || obj->level > ch->level+10 || (obj->wear_loc > -1))
    {
       send_to_char("You can't pry it away.\n\r", ch);
       return;

@@ -2021,6 +2021,15 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
+    "steal", {182, 182, 20, 182, 182, 182},
+    spell_null, TAR_IGNORE, POS_FIGHTING,
+    &gsn_steal, SLOT( 0 ), 1, 18, TRUE,
+    "steal", "!steal!",
+    ""},
+
+
+   {
+    MORTAL, NORM,
     "circle", {182, 182, 19, 182, 182, 182},
     spell_null, TAR_IGNORE, POS_FIGHTING,
     &gsn_circle, SLOT( 0 ), 1, 18, TRUE,
