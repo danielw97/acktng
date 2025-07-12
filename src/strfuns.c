@@ -57,34 +57,25 @@ void pre_parse(char *list, char *victimname, char *containername, char *things)
    container_name[0] = '\0';
    victim_name[0] = '\0';
    object_list[0] = '\0';
+   
    for (;;)
    {
       argument = one_argument(argument, arg1);
       if (arg1[0] == '\0')
          break;
-      if ((!str_cmp("from", arg1)) || (!str_cmp("in", arg1)))
+      if (is_number(arg1))
       {
-         argument = one_argument(argument, container_name);
-      }
-      else if (!str_cmp("to", arg1))
-      {
-         argument = one_argument(argument, victim_name);
+         argument = one_argument(argument, one_object);
+         sprintf(holdbuf, "%s %s ", arg1, one_object);
+         safe_strcat(MSL, object_list, holdbuf);
       }
       else
       {
-         if (is_number(arg1))
-         {
-            argument = one_argument(argument, one_object);
-            sprintf(holdbuf, "%s %s ", arg1, one_object);
-            safe_strcat(MSL, object_list, holdbuf);
-         }
-         else
-         {
-            sprintf(holdbuf, "1 %s ", arg1);
-            safe_strcat(MSL, object_list, holdbuf);
-         }
+         sprintf(holdbuf, "1 %s ", arg1);
+         safe_strcat(MSL, object_list, holdbuf);
       }
    }
+
    strcpy(victimname, victim_name);
    strcpy(things, object_list);
    strcpy(containername, container_name);
@@ -147,7 +138,6 @@ bool is_name_relaxed(const char *str, char *namelist)
 
    return found;
 }
-
 
 void safe_strcat(int max_len, char *dest, char *source)
 {
