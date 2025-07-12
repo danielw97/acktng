@@ -1634,7 +1634,9 @@ Hurv sells you potions and scrolls!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9026
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9026
 Smith~
 Smith the armorsmith~
 Smith the armorsmith is selling his armor!
@@ -1647,7 +1649,9 @@ Smith the armorsmith is selling his armor!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9025
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9025
 Smith~
 Smith the weaponsmith~
 Smith the weaponsmith is standing here!
@@ -1660,7 +1664,9 @@ Smith the weaponsmith is standing here!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9023
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9023
 Gabe~
 Gabe the Grocer~
 Gabe is standing here waiting to sell you something! 
@@ -1672,7 +1678,9 @@ Gabe is standing here waiting to sell you something!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9022
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9022
 Scrub~
 Scrub~
 Scrub is selling drinks.
@@ -1684,7 +1692,9 @@ Scrub is selling drinks.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9021
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9021
 Reltih~
 Reltih~
 Reltih is standing here!
@@ -1700,7 +1710,9 @@ He is a very insane man who believes that brown hair and brown eyes are
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9020
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9020
 Ortsac~
 Ortsac~
 Ortsac is standing here!
@@ -1715,7 +1727,9 @@ This man really likes his cigars.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9019
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9019
 Notnilc~
 Notnilc~
 Notnilc is standing here!
@@ -1730,7 +1744,9 @@ He is the leader of the SU.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9018
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9018
 Nilats~
 Nilats~
 Nilats is standing here! 
@@ -1744,7 +1760,9 @@ He used to be some political dude for some extreme cult.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9016
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9016
 izan soldier~
 The Izan soldier~
 The Izan soldier patrols the streets!
@@ -1760,7 +1778,9 @@ He is a soldier in the cult called Izan.  He stands strong with brown hair and
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9015
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9015
 deathguard guard~
 The deathguard~
 The deathguard is here guarding the gate!
@@ -1776,7 +1796,9 @@ This guard is one of the elite of the black watchman.  His sole purpose is go
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9014
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9014
 rodent~
 The rodent~
 The rodent is picking through the garbage!
@@ -1792,7 +1814,9 @@ The rodent is a large brown looking mouse.  It is said that the city was
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9002
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9002
 Slipper~
 Slipper the Guildmaster~
 Slipper the Guildmaster is ready to teach you the trade.~
@@ -1807,7 +1831,9 @@ She is very petit with long blond hair.  Her eyes burn you like fire and seem
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9001
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9001
 Ramgul~
 Ramgul~
 Ramgul is hiding out!~
@@ -1820,7 +1846,9 @@ Ramgul is the lord of these alley's.  He may not be too tough, but his
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9017
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9017
 pkiller hunter~
 @@BA Pkiller Hunter@@g~
 ~
@@ -1831,7 +1859,9 @@ pkiller hunter~
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9003
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9003
 Fromp~
 Fromp the Guildmaster~
 Fromp will teach you how to battle!~
@@ -1845,7 +1875,9 @@ Fromp is a huge bald man with bulging muscles. He is totally decked out in
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9004
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9004
 Kazmar~
 Kazmar the Guildmaster~
 Kazmar trains you in the way of spellcasting.~
@@ -1857,7 +1889,9 @@ All you see is someone in a dark black robe!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9005
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9005
 Mindwave~
 Mindwave the Guildmaster~
 Mindwave teaches you how to really use your mind.~
@@ -1869,7 +1903,9 @@ He looks totally normal, except he has a really big head!
 ! 0 0 0 7 0 0 0
 | 0 8675328 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9006
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9006
 Juzical~
 Juzical the Guildmaster~
 Juzical will help you with you worship.~
@@ -1883,7 +1919,9 @@ Juzical is a very tanned lady with jet-black hair.  She wears a many colored
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9007
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9007
 Jim~
 Jim the Banker~
 Jim the Banker wants your money.~
@@ -1895,7 +1933,9 @@ Jim will keep your money safe in his bank.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9008
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9008
 Brad~
 Brad the Postdude~
 Brad will send and give you mail.~
@@ -1907,7 +1947,9 @@ He is just the guy who handles the post.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9009
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9009
 Donut~
 Donut the Healer~
 Donut will heal you right up!~
@@ -1920,7 +1962,9 @@ This guy is a non-stop healing machine.  He never tires, he just keeps casting
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 24
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9010
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9010
 cut cutthroat~
 The cutthroat~
 The cutthroat stands here ready to kill 
@@ -1936,7 +1980,9 @@ He seems like a normal man, but he has a very evil grin on his face.  Better
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9011
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9011
 black watchman~
 The Black Watchman~
 The Black Watchman stands here alert!
@@ -1951,7 +1997,9 @@ This man is one of the policing members of the city.  His job is to patrol and
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9012
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9012
 mercenary~
 The mercenary~
 The mercenary is here looking for a job.
@@ -1966,7 +2014,9 @@ He is a large man with a gruff appearance.  He is in much need of a job though
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9013
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9013
 bum~
 bum~
 The bum is hanging around looking for food and money!
@@ -1982,7 +2032,9 @@ She is dressed in thin rags, barely covering here frail body.  It looks like
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9024
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9024
 Joe~
 Joe the Baker~
 Joe the baker sells his goods! 
@@ -1994,7 +2046,9 @@ Joe the baker sells his goods!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9000
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9000
 guardian~
 @@dThe @@BGuardian@@N of the @@RCrypt@@N~
 @@dThe @@BGuardian@@N of the @@RCrypt.
@@ -2006,7 +2060,9 @@ guardian~
 ! 0 0 0 7 0 0 0
 | 0 17334468 0 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #9070
 hook~
@@ -2014,7 +2070,7 @@ hook~
 ~
 9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 81
 #9014
@@ -2023,7 +2079,7 @@ the Vampire board of wisdom~
 The Vampire Board of Wisdom~
 27 0 0 1
 150 0 0 9014 0 0 0 0 0 0
-1
+4
 L
 1
 #9017
@@ -2032,7 +2088,7 @@ Stake~
 Stake~
 21 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9000
@@ -2041,7 +2097,7 @@ Drink~
 ~
 25 1 0 1
 13 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9016
@@ -2052,7 +2108,7 @@ A fountain of living bone is constructed here with a deep crimson fluid flowing 
 ~
 25 0 0 1
 13 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9015
@@ -2061,7 +2117,7 @@ the door portal~
 The portal~
 7 0 0 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9007
@@ -2070,7 +2126,7 @@ the fountain of death.~
 The fountain nourishes you so that you will be healthy when you are dead!~
 25 0 0 1
 11 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9001
@@ -2081,7 +2137,7 @@ The helm is totally black with a bright red flame on the top!
 ~
 9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 19 1
 L
@@ -2092,7 +2148,7 @@ the Deathguard's Boots~
 The boots are jet black with spiked toes.~
 9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 18 2
 L
@@ -2103,7 +2159,7 @@ the Deathguard's Sword~
 The sword is a shiny black.~
 5 0 8421376 1
 0 0 0 3 0 0 0 0 0 0
-1
+4
 A
 19 1
 A
@@ -2116,7 +2172,7 @@ watchman's Sleeves~
 The sleeves are black with a painted eye on them.~
 9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9005
@@ -2126,7 +2182,7 @@ The leggings are a crimson red with a skeleton painted down the front.
 ~
 9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 19 1
 L
@@ -2137,7 +2193,7 @@ watchman's ring~
 The ring is made of a rought twine.~
 9 0 8396800 1
 0 0 0 1 0 0 0 0 0 0
-1
+4
 A
 18 1
 L
@@ -2148,7 +2204,7 @@ popper~
 The slim Popper dagger is lying here!~
 5 0 8421376 1
 0 0 0 11 0 0 0 0 0 0
-1
+4
 A
 19 3
 A
@@ -2161,7 +2217,7 @@ cross-like Symboled Banner~
 A banner lays here with a red cross like symbol on it!~
 1 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 19 1
 L
@@ -2172,7 +2228,7 @@ gauntlets of SU~
 A pair of multicolored gauntlets are waiting to be worn.~
 9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 19 1
 A
@@ -2185,7 +2241,7 @@ brAcEr~
 A bRaCeR is on the ground.~
 9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 19 1
 L
@@ -2194,9 +2250,9 @@ L
 ring~
 ring of Ruling~
 A charming looking ring is here.~
-9 0 8396800 1
+9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 18 1
 A
@@ -2204,14 +2260,14 @@ A
 A
 17 -3
 L
-1
+25
 #9013
 board~
 a Large Board~
 The Vampire Board of wisdom~
 27 4 0 1
 150 0 0 9013 0 0 0 0 0 0
-1
+4
 L
 1
 #9025
@@ -2220,7 +2276,7 @@ a Golden Spatula~
 This shining Golden Spatula is a wedding gift from Jaguar!~
 13 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #9018
@@ -2230,7 +2286,7 @@ A piece of parchment, with words that you do not understand.
 ~
 11 -65344 8421376 1
 3 9013 0 0 0 0 0 0 0 0
-1
+4
 L
 60
 #9019
@@ -2240,7 +2296,7 @@ The darkened board, red glow casting enough to barely see the words of the writt
 ~
 27 0 0 1
 12 80 80 9019 0 0 0 0 0 0
-1
+4
 L
 1
 #0

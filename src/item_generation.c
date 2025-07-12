@@ -168,7 +168,7 @@ char *get_prefix(OBJ_DATA *obj)
    case 12:
       return "Protectors ";
    case 14:
-      return "Conquerors";
+      return "Conquerors ";
    default:
       return "";
    }

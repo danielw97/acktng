@@ -2277,12 +2277,13 @@ bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    AFFECT_DATA *paf;
 
    sprintf(buf,
-           "@@NObject '%s' is @@etype@@N %s, @@aextra flags@@N %s.\n\r@@mWorn@@N: %s, @@cItem Class@@N: %s, @@yvalue@@N: %d @@N, @@rlevel@@N: %d.\n\r",
+           "@@NObject '%s' is @@etype@@N %s, @@aextra flags@@N %s.\n\r@@mWorn@@N: %s, @@cItem Class@@N: %s, @@cItem Weight@@N: %d @@yvalue@@N: %d @@N, @@rlevel@@N: %d.\n\r",
            ob->short_descr,
            item_type_name(ob),
            extra_bit_name(ob->extra_flags),
            bit_table_lookup(tab_wear_flags, ob->wear_flags),
            get_item_class(ob),
+           ob->weight,
            ob->cost,
            ob->level);
    send_to_char(buf, ch);

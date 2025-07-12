@@ -52,7 +52,7 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 
    if (!CAN_WEAR(obj, ITEM_TAKE) || obj->item_type == ITEM_CORPSE_PC)
    {
-      /*	send_to_char( "You can't take that.\n\r", ch );  */
+      send_to_char( "You can't take that.\n\r", ch );
       return;
    }
 
