@@ -822,11 +822,11 @@ int get_wear_weight(CHAR_DATA *ch)
 
 char *get_item_class(OBJ_DATA *obj)
 {
-   if (obj->weight == 3)
+   if (obj->weight > 10 && obj->weight < 16)
       return "tank";
-   if (obj->weight == 2)
+   else if (obj->weight > 5)
       return "melee";
-   if (obj->weight == 1)
+   else if (obj->weight > 0)
       return "caster";
 
    return "bugged, contact staff.";
