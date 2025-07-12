@@ -1325,8 +1325,13 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
-   if (((obj->weight + 4) / 5) > (get_curr_str(ch) / 10))
+   int weight_class = (obj->weight+4)/5;
+   int max_weight = get_curr_str(ch)/10;
+
+   if (weight_class > max_weight)
    {
+      sprintf(buf, "Weight class: %d, max_weight: %d\n\r", weight_class, item_weight);
+      send_to_char(buf,ch);
       send_to_char("You are not of sufficient strength to use it effectively.\n\r", ch);
       act("$L$n nearly drops a $p.", ch, obj, NULL, TO_ROOM);
       return;
