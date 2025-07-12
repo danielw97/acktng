@@ -410,8 +410,6 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
    if (dt == TYPE_HIT && (wield == NULL || IS_SET(wield->extra_flags, ITEM_FIST)))
    {
-      int chance = 0;
-
       if (IS_NPC(ch) && IS_SET(ch->skills, MOB_MARTIAL))
       {
          if (number_percent() < 75)
