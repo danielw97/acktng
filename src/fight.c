@@ -170,48 +170,45 @@ void violence_update(void)
             if (!IS_NPC(rch))
                continue;
 
-            if (IS_AWAKE(rch) && rch->fighting == NULL)
+            if (IS_AWAKE(rch) && rch->fighting == NULL && !IS_SET(rch->act, ACT_NOASSIST) && !IS_AFFECTED(rch, AFF_CHARM))
             {
                /*
                 * NPC's assist NPC's of same type or 45% chance regardless.
                 */
-               if (!IS_AFFECTED(victim, AFF_CHARM) && !IS_SET(victim->act, ACT_NOASSIST) && !IS_SET(rch->act, ACT_NOASSIST))
+               if ((rch->pIndexData == victim->pIndexData) /* is it the same as a target here?  */
+                   || ((number_percent() < 20) && (abs(get_psuedo_level(rch) - get_psuedo_level(victim)) < 35)))
                {
-                  if ((rch->pIndexData == victim->pIndexData) /* is it the same as a target here?  */
-                      || ((number_percent() < 20) && (abs(get_psuedo_level(rch) - get_psuedo_level(victim)) < 35)))
+                  CHAR_DATA *vch;
+                  CHAR_DATA *target;
+                  int number;
+
+                  target = NULL;
+                  number = 0;
+
+                  /*
+                   * vch is the target of the lazy mob...a player
+                   */
+                  for (vch = ch->in_room->first_person; vch; vch = vch->next)
                   {
-                     CHAR_DATA *vch;
-                     CHAR_DATA *target;
-                     int number;
-
-                     target = NULL;
-                     number = 0;
-
-                     /*
-                      * vch is the target of the lazy mob...a player
-                      */
-                     for (vch = ch->in_room->first_person; vch; vch = vch->next)
+                     if ((can_see(rch, vch)) && (!IS_NPC(vch)))
                      {
-                        if ((can_see(rch, vch)) && (!IS_NPC(vch)))
-                        {
-                           target = vch;
-                           number++;
-                        }
+                        target = vch;
+                        number++;
                      }
+                  }
 
-                     if (target != NULL)
+                  if (target != NULL)
+                  {
+                     if (abs(target->level - rch->level) < 40)
                      {
-                        if (abs(target->level - rch->level) < 40)
+                        if ((victim->fighting != NULL) && (rch->fighting == NULL))
                         {
-                           if ((victim->fighting != NULL) && (rch->fighting == NULL))
-                           {
-                              char actbuf[MSL];
-                              sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
-                              act(actbuf, rch, NULL, victim, TO_ROOM);
-                              sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
-                              act(actbuf, rch, NULL, victim, TO_CHAR);
-                              set_fighting(rch, victim->fighting, TRUE);
-                           }
+                           char actbuf[MSL];
+                           sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
+                           act(actbuf, rch, NULL, victim, TO_ROOM);
+                           sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
+                           act(actbuf, rch, NULL, victim, TO_CHAR);
+                           set_fighting(rch, victim->fighting, TRUE);
                         }
                      }
                   }
