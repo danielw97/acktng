@@ -36,7 +36,7 @@ void do_circle(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (!can_use_skill_message(ch, gsn_backstab))
+   if (!can_use_skill_message(ch, gsn_circle))
       return;
 
    one_argument(argument, arg);

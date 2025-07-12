@@ -2352,7 +2352,7 @@ You are deep within this strange, monstrous forest.  The undergrowth here,
 and weeds seem to be everywhere, hampering your movement.  To the West you can
 see the door to a small cabin.
 ~
-0 3
+4 3
 D1
 The Undergrowth.
 ~
@@ -2363,6 +2363,10 @@ A small door to the cabin.
 ~
 door~
 1 -1 9726
+D4
+~
+~
+0 -1 166
 S
 #9726
 Inside the Cabin~
@@ -3166,12 +3170,14 @@ This catrat is a young male.  Catrats are a cross between a cat and a rat,
 as their name suggests.  Needless to say, they are most ugly.
 ~
 143 0 -300 S
-16 1
+17 1
 0 -10 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9602
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9602
 catrat female~
 a female catrat~
 A female catrat is here.
@@ -3180,12 +3186,14 @@ This catrat is an adult female.  Catrats are a cross between a cat and a rat,
 as their name suggests.  Needless to say, they are most ugly.
 ~
 143 0 -300 S
-11 1
+10 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9603
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9603
 catrat male~
 a male catrat~
 A male catrat is here.
@@ -3194,12 +3202,14 @@ This catrat is an adult male.  Catrats are a cross between a cat and a rat,
 as their name suggests.  Needless to say, they are most ugly.
 ~
 143 0 -300 S
-10 1
+11 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9604
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9604
 hippocampus hippo hippy~
 the hippocampus~
 The Hippocampus is here.
@@ -3213,7 +3223,9 @@ The Hippocampus is a cross between a horse and a fish.  It's front hooves are
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9605
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9605
 neogi slave~
 a Neogi slave~
 A tired-looking Neogi slave stands here.
@@ -3228,7 +3240,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9606
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9606
 neogi slave~
 a Neogi slave~
 A tired-looking Neogi slave stands here.
@@ -3243,7 +3257,9 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9607
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9607
 neogi master~
 a Neogi master~
 An aggressive-looking Neogi stands here.
@@ -3253,12 +3269,14 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 of master, and is in charge of making sure the slaves do their work.
 ~
 19 0 -300 S
-18 0
+17 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9608
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9608
 neogi ruler~
 the Neogi ruler~
 An important-looking Neogi stands here.
@@ -3269,12 +3287,14 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 operations.
 ~
 19 0 -400 S
-32 0
+31 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9609
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9609
 neogi~
 a Neogi~
 A bored-looking Neogi stands here.
@@ -3284,12 +3304,14 @@ Neogi are a cross between a moray eel and a spider.  They have short, furry,
 rank in the mine, answering only to the Ruler itself.
 ~
 19 0 -200 S
-21 0
+20 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9610
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9610
 male cock cockatrice~
 a male cockatrice~
 A male cockatrice pecks around for insects.
@@ -3303,7 +3325,9 @@ The cocaktrice is a strange mix of lizard, cock and bat.  It seems to ignore
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9611
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9611
 female cock cockatrice~
 a female cockatrice~
 A female cockatrice is here, looking hungry.
@@ -3312,12 +3336,14 @@ The cocaktrice is a strange mix of lizard, cock and bat.  It seems to ignore
 you as it goes about its task of looking for small insects.
 ~
 65 524800 -25 S
-24 2
+25 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9612
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9612
 broken one~
 a broken one~
 A disfigured broken one stands here, moaning.
@@ -3331,7 +3357,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9613
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9613
 broken one~
 a broken one~
 A disfigured broken one stands here, moaning.
@@ -3345,7 +3373,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9614
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9614
 greater broken one~
 a greater broken one~
 A disfigured greater broken one stands here, moaning.
@@ -3360,7 +3390,9 @@ The broken one is a tragic survivor of a magical experiment to try and
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9615
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9615
 hippo baby hippogriff~
 a hippogriff~
 A baby hippogriff is here, yelling for food.
@@ -3374,7 +3406,9 @@ The baby hippogriff, although no where near full size, shows the distinct
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9616
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9616
 hippo hippogriff~
 a hippogriff~
 A large hippogriff is perched here.
@@ -3383,12 +3417,14 @@ The hippogriff is an eerie mix of eagle (head and wings) and horse (body).
 It doesn't look too pleased to see you!
 ~
 11 524288 300 S
-30 0
+31 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9617
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9617
 treant tree~
 a treant~
 A small tree stands here.
@@ -3397,12 +3433,14 @@ The tree is old, withered, and stunted.  It appears to almost have a sort
 of face on its bark.
 ~
 3 0 -200 S
-28 0
+29 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9618
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9618
 treant tree~
 a treant~
 A large tree stands here.
@@ -3411,12 +3449,14 @@ The tree is old, withered, and stunted.  It appears to almost have a sort
 of face on its bark.
 ~
 3 0 -200 S
-32 0
+33 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9619
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9619
 wemic male~
 a male wemic~
 A large male wemic stands here.
@@ -3430,7 +3470,9 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 ! 0 0 0 7 0 0 0
 | 0 48 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9620
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9620
 wemic female~
 a female wemic~
 A large female wemic stands here.
@@ -3444,7 +3486,9 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 ! 0 0 0 7 0 0 0
 | 0 20 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9621
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9621
 wemic cub~
 a wemic cub~
 A wemic cub stands here.
@@ -3459,7 +3503,9 @@ A mix of lion (body) and human (torso and head) the Wemic stands at around
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9622
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9622
 yugoloth guardian~
 a Guardian Yugoloth~
 A massive, menacing Guardian Yugloth stands here.
@@ -3473,7 +3519,9 @@ The Yugloth is basically an enormous bear, with huge wings and ram's horns.
 ! 0 0 0 7 22100 0 0
 | 0 1605632 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9623
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9623
 ymmas~
 the evil Ymmas~
 The Evil priest Ymmas stands here, looking pissed off.
@@ -3484,12 +3532,14 @@ Ymass is truely an evil priest.  Banished to this cabin many years ago, he set
 to his own body, in an attempt to boost his powers.
 ~
 3145751 2176 -900 S
-85 1
+86 1
 0 0 0 0
 ! 0 0 0 7 22100 0 0
 | 0 1081344 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9624
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9624
 spider~
 a spider~
 A small spider is crawling around here.
@@ -3502,7 +3552,9 @@ The spider has many legs, and looks like Ymmas!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9625
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9625
 male centaur~
 a male centaur~
 A male centaur is here.
@@ -3511,12 +3563,14 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 large, and responsible for the supply of food to the tribe, via hunting.
 ~
 3145797 32768 300 S
-48 1
+49 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9626
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9626
 female centaur~
 a female centaur~
 A female centaur is here.
@@ -3530,7 +3584,9 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9627
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9627
 baby centaur~
 a baby centaur~
 A baby centaur is here.
@@ -3544,7 +3600,9 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9628
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9628
 leader centaur~
 the centaur leader~
 The centaur leader is here, looking important.
@@ -3554,12 +3612,14 @@ The centaur, a mix of horse (back legs) and human (head; arms; torso) is
 simple magic, too.
 ~
 69 40960 300 S
-46 1
+45 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9629
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9629
 man scorpian manscorpian~
 a manscorpian~
 A Manscorpian is here, out on patrol.
@@ -3568,12 +3628,14 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 of man (upper body).  It looks pretty big, and pretty angry to see you!
 ~
 3145829 512 -230 S
-44 1
+43 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9630
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9630
 man scorpian manscorpian~
 a manscorpian~
 A Manscorpian is here, out on patrol.
@@ -3587,7 +3649,9 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9631
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9631
 king man scorpian manscorpian~
 the manscorpian king~
 The Manscorpian King is here, looking regal.
@@ -3598,12 +3662,14 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 intruders!
 ~
 3145799 2560 -380 S
-53 1
+52 1
 0 0 0 0
 ! 0 0 0 7 22100 0 0
 | 0 4160 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9632
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9632
 man scorpian manscorpian~
 a manscorpian~
 A Manscorpian is here, on guard.
@@ -3612,12 +3678,14 @@ The manscorpian, as its name suggests, is a mix of scorpian (lower body) and
 of man (upper body).  It looks pretty big, and pretty angry to see you!
 ~
 3145797 512 -330 S
-50 1
+51 1
 0 0 0 0
 ! 0 0 0 7 22100 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #9633
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9633
 aid~
 the King's aid~
 The King's aid stands here, looking powerful.
@@ -3625,12 +3693,14 @@ The King's aid stands here, looking powerful.
 The aid is an old, corrupt cleric, employed to protect the King if attacked.
 ~
 3145731 512 -400 S
-47 1
+46 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #9799
 staff of Summoning~

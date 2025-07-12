@@ -175,7 +175,7 @@ void violence_update(void)
                /*
                 * NPC's assist NPC's of same type or 45% chance regardless.
                 */
-               if (!IS_AFFECTED(rch, AFF_CHARM) && !IS_SET(rch->act, ACT_NOASSIST))
+               if (!IS_AFFECTED(victim, AFF_CHARM) && !IS_SET(victim->act, ACT_NOASSIST) && !IS_SET(rch->act, ACT_NOASSIST))
                {
                   if ((rch->pIndexData == victim->pIndexData) /* is it the same as a target here?  */
                       || ((number_percent() < 20) && (abs(get_psuedo_level(rch) - get_psuedo_level(victim)) < 35)))
@@ -192,7 +192,7 @@ void violence_update(void)
                       */
                      for (vch = ch->in_room->first_person; vch; vch = vch->next)
                      {
-                        if ((can_see(rch, vch)) && (!IS_NPC(vch)))
+                        if ((can_see(rch, vch)) && (!IS_NPC(vch)) && !IS_SET(vch->act, ACT_NOASSIST))
                         {
                            target = vch;
                            number++;

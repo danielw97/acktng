@@ -21,6 +21,10 @@ D0
 ~
 ~
 0 -1 167
+D5
+~
+~
+0 0 9725
 S
 #167
 Path to Keep~
@@ -505,7 +509,7 @@ No description~
 D0
 ~
 ~
-481 166 204
+481 167 204
 D2
 ~
 ~
@@ -526,7 +530,7 @@ D1
 D2
 ~
 ~
-481 166 203
+481 167 203
 D3
 ~
 ~
@@ -1222,38 +1226,58 @@ A Patrolman of the Keep~
 A Patrolman patrols the keep
 ~
 ~
-97 27372 0 S
-162 1
+101 27372 0 S
+161 1
 10000 -500 1000 300
 ! 0 0 0 7 1079422 0 48
 | 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 10 170 171 172 173 0 0 0 0 0 
+L 25 25 25 25 0 0 0 0 0 
 #167
 A Guardsman of the Keep~
 A Guardsman of the Keep~
 A guardsman stands here
 ~
 ~
-1 0 0 S
+33554435 0 0 S
+167 1
+0 0 0 0
+! 0 0 0 7 536607 0 16
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 15 174 175 176 177 0 0 0 0 0 
+L 25 25 25 25 0 0 0 0 0 
+#168
+A Grumpy Hermit~
+@@WA Grumpy @@BHermit@@N~
+A hermit stands here, grumpy from all of the new activity nearby.
+~
+~
+33554435 0 0 S
 166 1
 0 0 0 0
-! 0 0 0 0 0 0 0
+! 0 0 0 0 569344 860160 0
 | 0 0 0 0 0 0 0
++ 200 0 0 0 0 0 0 0 0
+l 25 178 179 180 0 0 0 0 0 0 
+L 33 33 33 0 0 0 0 0 0 
 #0
 #OBJECTS
 #166
-A Key~
-~
-~
-18 0 0 1
+A Key to the hermit~
+Key to the Hermit~
+A key lies here, discarded~
+18 16384 8388608 1
 0 0 0 0 0 0 0 0 0 0
 1
 L
 1
 #167
 A Ground's Key~
-~
-~
-18 0 0 1
+A Ground's Key~
+A key lies here, discarded~
+18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 1
 L
@@ -1276,6 +1300,105 @@ Key to Foyer~
 1
 L
 1
+#170
+Epaulets of the Keep's Guard~
+@@WEpaulets of the @@BKeep's@@W Guard@@N~
+A pair of epaulets lies here, discarded~
+9 201326592 8389120 77323
+0 0 0 0 0 0 0 0 0 0
+1
+L
+150
+#171
+Signet Ring of the Keep's Guard~
+@@WSignet Ring of the @@BKeep's@@N Guard@@N~
+A signet ring lies here, discarded~
+9 201326592 8396800 20929
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#172
+Bracers of the Keep's Guard~
+@@WBracers of the @@BKeep's@@W Guard@@N~
+A pair of bracers lies here, discarded~
+9 201326592 8390656 37157
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#173
+Earrings of the Keep's Guard~
+@@WEarrings of the @@BKeep's@@W Guard@@N~
+Some earrings lie here, forgotten~
+9 201326592 8388672 145
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#174
+Gauntlets of the Keep's Guard~
+@@WGauntlets of the @@BKeep's@@W Guard@@N~
+A pair of gauntlets lies here, discarded~
+9 201326592 8392704 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+150
+#175
+Breastplate of the Keep's Guard~
+@@WBreastplate of the @@BKeep's@@W Guard@@N~
+A breastplate lies here, discarded~
+9 201326592 8650752 17673
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#176
+Chainmail Sleeves of the Keep's Guard~
+@@WChainmail Sleeves of the @@BKEep's@@W Guard@@N~
+A pair of chainmail sleeves lie here, abandoned~
+9 201326592 8389632 135
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#177
+Bastard sword of the keep's guard keep~
+@@WBastard Sword of the @@BKeep's@@W Guard@@N~
+~
+5 -1946157056 8421376 20737
+0 0 0 3 0 0 0 0 0 0
+2
+L
+150
+#178
+Cloak of the Hermit~
+@@WCloak of the @@BHermit@@N~
+A cloak lies here, discarded~
+9 201326592 8454144 57889
+0 0 0 0 0 0 0 0 0 0
+1
+L
+150
+#179
+A Hermit's Mask~
+@@WA @@BHermit's@@W Mask@@N~
+A mask lies here, discarded~
+9 201326592 8388624 101
+0 0 0 0 0 0 0 0 0 0
+1
+L
+150
+#180
+A Hermit's Boots~
+@@WA @@BHermit's @@WBoots@@N~
+A pair of boots lie here, discarded~
+9 201326592 10485760 12417
+0 0 0 0 0 0 0 0 0 0
+1
+L
+150
 #0
 #RESETS
 D 0 168 1 1 (null)
@@ -1323,5 +1446,9 @@ M 0 166 25 183 (null)
 M 0 166 25 181 (null)
 
 M 0 167 1 203 (null)
+
+M 0 168 1 202 (null)
+G 0 167 0 (null)
+O 0 166 1 177 (null)
 S
 #$
