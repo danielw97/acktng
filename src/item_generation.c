@@ -218,10 +218,12 @@ OBJ_DATA *generate_item(int level)
       obj->weight = 14;
    else if (obj->weight == 11)
       obj->weight = 12;
-   else if (obj->weight == 9)
-      obj->weight = 8;
+   else if (obj->weight == 10)
+      obj->weight = 9;
+   else if (obj->weight == 6)
+      obj->weight = 7;
    else if (obj->weight == 5)
-      obj->weight = 6;
+      obj->weight = 4;
    else if (obj->weight < 2)
       obj->weight = 2;
 
