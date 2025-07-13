@@ -555,7 +555,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
 
    int ac_val = ac_bonus;
    if (ac_div != 0)
-      ac_val -= (ilevel * 2 / ac_div);
+      ac_val -= (ilevel / ac_div);
    if (ac_val == -88)
       ac_val = -87;
    int hr_val = hrdr_bonus;
