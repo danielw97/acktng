@@ -489,6 +489,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    {
       hr_div = jewelry_table[obj->weight].hr_div;
       dr_div = jewelry_table[obj->weight].dr_div;
+      ac_div = jewelry_table[obj->weight].ac_div;
       hp_div = jewelry_table[obj->weight].hp_div;
       move_div = jewelry_table[obj->weight].move_div;
       spellpower_div = jewelry_table[obj->weight].spellpower_div;
@@ -500,6 +501,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    {
       hr_div = weapon_table[obj->weight].hr_div;
       dr_div = weapon_table[obj->weight].dr_div;
+      ac_div = weapon_table[obj->weight].ac_div;
       hp_div = weapon_table[obj->weight].hp_div;
       move_div = weapon_table[obj->weight].move_div;
       spellpower_div = weapon_table[obj->weight].spellpower_div;
@@ -523,6 +525,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    {
       hr_div = armor_table[obj->weight].hr_div;
       dr_div = armor_table[obj->weight].dr_div;
+      ac_div = armor_table[obj->weight].ac_div;
       hp_div = armor_table[obj->weight].hp_div;
       move_div = armor_table[obj->weight].move_div;
       spellpower_div = armor_table[obj->weight].spellpower_div;
@@ -547,6 +550,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    {
       hr_div = misc_table[obj->weight].hr_div;
       dr_div = misc_table[obj->weight].dr_div;
+      ac_div = misc_table[obj->weight].ac_div;
       hp_div = misc_table[obj->weight].hp_div;
       move_div = misc_table[obj->weight].move_div;
       spellpower_div = misc_table[obj->weight].spellpower_div;
