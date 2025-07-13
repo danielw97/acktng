@@ -492,6 +492,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ac_div = jewelry_table[obj->weight].ac_div;
       hp_div = jewelry_table[obj->weight].hp_div;
       move_div = jewelry_table[obj->weight].move_div;
+      mana_div = jewelry_table[obj->weight].mana_div;
       spellpower_div = jewelry_table[obj->weight].spellpower_div;
       hrdr_bonus = jewelry_table[obj->weight].hrdr_bonus;
       ac_bonus = jewelry_table[obj->weight].ac_bonus;
@@ -504,6 +505,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ac_div = weapon_table[obj->weight].ac_div;
       hp_div = weapon_table[obj->weight].hp_div;
       move_div = weapon_table[obj->weight].move_div;
+      mana_div = weapon_table[obj->weight].mana_div;
       spellpower_div = weapon_table[obj->weight].spellpower_div;
       hrdr_bonus = weapon_table[obj->weight].hrdr_bonus;
       ac_bonus = weapon_table[obj->weight].ac_bonus;
@@ -528,6 +530,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ac_div = armor_table[obj->weight].ac_div;
       hp_div = armor_table[obj->weight].hp_div;
       move_div = armor_table[obj->weight].move_div;
+      mana_div = armor_table[obj->weight].mana_div;
       spellpower_div = armor_table[obj->weight].spellpower_div;
       hrdr_bonus = armor_table[obj->weight].hrdr_bonus;
       ac_bonus = armor_table[obj->weight].ac_bonus;
@@ -553,6 +556,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ac_div = misc_table[obj->weight].ac_div;
       hp_div = misc_table[obj->weight].hp_div;
       move_div = misc_table[obj->weight].move_div;
+      mana_div = misc_table[obj->weight].mana_div;
       spellpower_div = misc_table[obj->weight].spellpower_div;
       hrdr_bonus = misc_table[obj->weight].hrdr_bonus;
       ac_bonus = misc_table[obj->weight].ac_bonus;
