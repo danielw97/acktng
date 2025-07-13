@@ -748,7 +748,7 @@ int get_max_carry(CHAR_DATA *ch)
 
 int get_generation_chance()
 {
-   bool chance = 50;
+   bool chance = 5;
 
    if (happy_hour)
       chance *= 2;
