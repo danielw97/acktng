@@ -345,7 +345,7 @@ struct obj_stat_type
    int hrdr_bonus;
    int ac_bonus;
    int stat_bonus;
-}
+};
 
 struct race_type
 {
