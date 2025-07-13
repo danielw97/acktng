@@ -620,12 +620,12 @@ struct char_data
    time_t last_note;
    sh_int timer;
    sh_int wait;
-   int hit;
-   int max_hit;
-   int mana;
-   int max_mana;
-   int move;
-   int max_move;
+   long hit;
+   long max_hit;
+   long mana;
+   long max_mana;
+   long move;
+   long max_move;
    int gold;
    int balance; /* Amount of gold (if any) in bank */
    long exp;

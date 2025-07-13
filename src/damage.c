@@ -606,7 +606,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
 
         if (IS_NPC(ch) && IS_NPC(victim) && IS_SET(ch->act, ACT_INTELLIGENT))
         {
-            do_get(ch, "all from corpse");
+            do_get(ch, "all corpse");
             do_sacrifice(ch, "corpse");
             check_re_equip(ch);
             check_rewield(ch);
@@ -617,7 +617,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
             if (IS_SET(ch->config, CONFIG_AUTOMONEY))
                 do_get(ch, "money corpse");
             if (IS_SET(ch->config, CONFIG_AUTOLOOT))
-                do_get(ch, "all from corpse");
+                do_get(ch, "all corpse");
             else
                 do_look(ch, "in corpse");
 
