@@ -54,7 +54,7 @@ const sh_int movement_loss[SECT_MAX] = {
  * Local functions.
  */
 int find_door args((CHAR_DATA * ch, char *arg));
-bool has_key args((CHAR_DATA * ch, int key));
+OBJ_DATA *has_key args((CHAR_DATA * ch, int key));
 /*
 struct fol_data
 {
@@ -697,17 +697,19 @@ void do_close(CHAR_DATA *ch, char *argument)
    return;
 }
 
-bool has_key(CHAR_DATA *ch, int key)
+OBJ_DATA *has_key(CHAR_DATA *ch, int key)
 {
    OBJ_DATA *obj;
 
    for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
    {
       if (obj->pIndexData->vnum == key)
-         return TRUE;
+      {
+         return obj;
+      }
    }
 
-   return FALSE;
+   return NULL;
 }
 
 void do_lock(CHAR_DATA *ch, char *argument)
@@ -744,7 +746,7 @@ void do_lock(CHAR_DATA *ch, char *argument)
          send_to_char("It can't be locked.\n\r", ch);
          return;
       }
-      if (!has_key(ch, obj->value[2]))
+      if (has_key(ch, obj->value[2]) == NULL)
       {
          send_to_char("You lack the key.\n\r", ch);
          return;
@@ -781,7 +783,7 @@ void do_lock(CHAR_DATA *ch, char *argument)
          send_to_char("It can't be locked.\n\r", ch);
          return;
       }
-      if (!has_key(ch, pexit->key))
+      if (has_key(ch, pexit->key) == NULL)
       {
          send_to_char("You lack the key.\n\r", ch);
          return;
@@ -811,7 +813,7 @@ void do_lock(CHAR_DATA *ch, char *argument)
 void do_unlock(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
-   OBJ_DATA *obj;
+   OBJ_DATA *obj, *key;
    int door;
 
    one_argument(argument, arg);
@@ -842,20 +844,29 @@ void do_unlock(CHAR_DATA *ch, char *argument)
          send_to_char("It can't be unlocked.\n\r", ch);
          return;
       }
-      if (!has_key(ch, obj->value[2]))
-      {
-         send_to_char("You lack the key.\n\r", ch);
-         return;
-      }
       if (!IS_SET(obj->value[1], CONT_LOCKED))
       {
          send_to_char("It's already unlocked.\n\r", ch);
          return;
       }
 
+      key = has_key(ch, obj->value[2]);
+
+      if (key == NULL)
+      {
+         send_to_char("You lack the key.\n\r", ch);
+         return;
+      }
+
       REMOVE_BIT(obj->value[1], CONT_LOCKED);
       send_to_char("*Click*\n\r", ch);
       act("$n unlocks $p.", ch, obj, NULL, TO_ROOM);
+         if (IS_SET(key->extra_flags, ITEM_TRIG_DESTROY))
+         {
+            act("$p was consumed on use.", ch, key, NULL, TO_ROOM);
+            act("You consumed $p on use.", ch, key, NULL, TO_CHAR);
+            extract_obj(key);
+         }
       return;
    }
 
@@ -879,7 +890,8 @@ void do_unlock(CHAR_DATA *ch, char *argument)
          send_to_char("It can't be unlocked.\n\r", ch);
          return;
       }
-      if (!has_key(ch, pexit->key))
+      key = has_key(ch, pexit->key);
+      if (key == NULL)
       {
          send_to_char("You lack the key.\n\r", ch);
          return;
@@ -893,6 +905,12 @@ void do_unlock(CHAR_DATA *ch, char *argument)
       REMOVE_BIT(pexit->exit_info, EX_LOCKED);
       send_to_char("*Click*\n\r", ch);
       act("$n unlocks the $d.", ch, NULL, pexit->keyword, TO_ROOM);
+         if (IS_SET(key->extra_flags, ITEM_TRIG_DESTROY))
+         {
+            act("$p was consumed on use.", ch, key, NULL, TO_ROOM);
+            act("You consumed $p on use.", ch, key, NULL, TO_CHAR);
+            extract_obj(key);
+         }
 
       /*
        * unlock the other side
