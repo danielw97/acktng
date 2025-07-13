@@ -333,6 +333,20 @@ struct class_type
    sh_int mana_gain; /* Class gains mana on level    */
 };
 
+struct obj_stat_type
+{
+   int hr_div;
+   int dr_div;
+   int ac_div;
+   int hp_div;
+   int move_div;
+   int mana_div;
+   int spellpower_div;
+   int hrdr_bonus;
+   int ac_bonus;
+   int stat_bonus;
+}
+
 struct race_type
 {
    char race_name[4]; /* Three letter name for race */

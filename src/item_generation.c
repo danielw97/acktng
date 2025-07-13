@@ -7,6 +7,91 @@ char *get_suffix(OBJ_DATA *obj);
 bool is_jewelry(OBJ_DATA *obj);
 char *get_prefix(OBJ_DATA *obj);
 
+
+// hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
+const struct obj_stat_type weapon_table[16] = 
+{
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 1 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 2 */
+   { 5, 10, 20, 10, 20, 10, 8, 10, -5, 5 }, /* 3 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 4 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 5 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 6 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 7 */
+   { 5, 5, 20, 10, 10, 10, 0, 10, -5, 5 }, /* 8 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 9 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 10 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 11 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 12 */
+   { 5, 5, 15, 5, 20, 20, 0, 10, -5, 5 }, /* 13 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 14 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }  /* 15 */
+};
+
+// hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
+const struct obj_stat_type armor_table[16] = 
+{
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 1 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 2 */
+   { 10, 20, 2, 5, 10, 5, 15, 1, -10, 5 , /* 3 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 4 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 5 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 6 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 7 */
+   { 10, 10, 2, 5, 5, 5, 0, 1, -10, 5 }, /* 8 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 9 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 10 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 11 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 12 */
+   { 10, 10, 1, 5, 10, 10, 0, 1, -10, 5 }, /* 13 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 14 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }  /* 15 */
+};
+
+// hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
+const struct obj_stat_type jewelry_table[16] = 
+{
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 1 */
+   { 25, 25, 20, 2, 4, 4, 8, 1, -5, 5 }, /* 2 */
+   { 15, 25, 20, 2, 4, 4, 12, 1, -5, 5 }, /* 3 */
+   { 15, 15, 20, 2, 4, 2, 16, 1, -5, 5 }, /* 4 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 5 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 6 */
+   { 15, 15, 10, 2, 4, 4, 0, 1, -5, 5 }, /* 7 */
+   { 15, 15, 20, 2, 2, 2, 0, 1, -5, 5 }, /* 8 */
+   { 10, 10, 40, 4, 4, 4, 0, 1, -5, 5 }, /* 9 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 10 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 11 */
+   { 15, 15, 10, 1, 8, 8, 0, 1, -5, 5 }, /* 12 */
+   { 15, 15, 15, 2, 4, 4, 0, 1, -5, 5 }, /* 13 */
+   { 10, 10, 25, 1, 6, 6, 0, 1, -5, 5 }, /* 14 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }  /* 15 */
+};
+
+// hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
+const struct obj_stat_type misc_table[16] = 
+{
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 1 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 2 */
+   { 15, 30, 20, 10, 20, 10, 15, 1, -5, 5 }, /* 3 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 4 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 5 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 6 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 7 */
+   { 15, 15, 20, 10, 10, 10, 0, 1, -5, 5 }, /* 8 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 9 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 10 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 11 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 12 */
+   { 15, 15, 15, 5, 20, 20, 0, 1, -5, 5 }, /* 13 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 14 */
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }  /* 15 */
+};
+
 OBJ_DATA *generate_item(int level)
 {
    char buf[MSL];
@@ -209,9 +294,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HEAD))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Helmet";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Helm";
 
       return "Hat";
@@ -222,9 +307,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_FACE))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Visor";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Faceguard";
       else
          return "Visage";
@@ -241,9 +326,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_SHOULDERS))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Pauldrons";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Spaulders";
       else
          return "Epaulets";
@@ -251,9 +336,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_ARMS))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Plate Vambraces";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Leather Vambraces";
       else
          return "Sleeves";
@@ -261,9 +346,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_WRIST))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Plate Bracers";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Leather Bracers";
       else
          return "Bracers";
@@ -271,9 +356,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HANDS))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Plate Gauntlets";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Leather Rondel";
       else
          return "Gloves";
@@ -293,9 +378,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_BODY))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Platemail Armor";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Hauberk";
       else
          return "Robes";
@@ -306,9 +391,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_LEGS))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Plate Greaves";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Leather Greaves";
       else
          return "Leggings";
@@ -316,9 +401,9 @@ char *get_wear_name(OBJ_DATA *obj)
 
    if (IS_SET(obj->wear_flags, ITEM_WEAR_FEET))
    {
-      if (obj->weight == 3)
+      if (obj->weight > 10)
          return "Plate Boots";
-      else if (obj->weight == 2)
+      else if (obj->weight > 5)
          return "Leather Boots";
       else
          return "Boots";
@@ -400,67 +485,26 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    /* Jewelry */
    if (is_jewelry(obj))
    {
-      hr_div = 15;
-      dr_div = 15;
-      ac_div = 20;
-      hp_div = 2;
-      mana_div = 2;
-      move_div = 2;
-      ac_bonus = -5;
-      hrdr_bonus = 1;
-      stat_bonus = 5;
-
-      if (obj->weight > 10)
-      {
-         ac_div -= 5;
-         hp_div /= 2;
-         mana_div *= 2;
-         move_div *= 2;
-      }
-      else if (obj->weight > 5)
-      {
-         /* Do nothing for now */
-      }
-      else
-      {
-         /* Caster */
-         dr_div *= 2;
-         move_div *= 2;
-
-         spellpower_div = 12;
-      }
+      hr_div = jewelry_table[obj->weight].hr_div;
+      dr_div = jewelry_table[obj->weight].dr_div;
+      hp_div = jewelry_table[obj->weight].hp_div;
+      move_div = jewelry_table[obj->weight].move_div;
+      spellpower_div = jewelry_table[obj->weight].spellpower_div;
+      hrdr_bonus = jewelry_table[obj->weight].hrdr_bonus;
+      ac_bonus = jewelry_table[obj->weight].ac_bonus;
+      stat_bonus = jewelry_table[obj->weight].stat_bonus;
    }
    else if (obj->item_type == ITEM_WEAPON)
    {
-      hrdr_bonus = 10;
-      ac_bonus = -5;
-      stat_bonus = 5;
-      hr_div = 5;
-      dr_div = 5;
-      ac_div = 20;
-      hp_div = 10;
-      move_div = 10;
-      mana_div = 10;
+      hr_div = weapon_table[obj->weight].hr_div;
+      dr_div = weapon_table[obj->weight].dr_div;
+      hp_div = weapon_table[obj->weight].hp_div;
+      move_div = weapon_table[obj->weight].move_div;
+      spellpower_div = weapon_table[obj->weight].spellpower_div;
+      hrdr_bonus = weapon_table[obj->weight].hrdr_bonus;
+      ac_bonus = weapon_table[obj->weight].ac_bonus;
+      stat_bonus = weapon_table[obj->weight].stat_bonus;
 
-      if (obj->weight > 10)
-      {
-         ac_div -= 5;
-         hp_div /= 2;
-         mana_div *= 2;
-         move_div *= 2;
-      }
-      else if (obj->weight > 5)
-      {
-         /* Do nothing for now */
-      }
-      else
-      {
-         /* Caster */
-         dr_div *= 2;
-         move_div *= 2;
-
-         spellpower_div = 8;
-      }
       if (IS_SET(obj->extra_flags, ITEM_EXTRA_WAND))
       {
          // This is all in for caster stats
@@ -475,35 +519,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    }
    else if (obj->item_type == ITEM_ARMOR)
    {
-      ac_bonus = -10;
-      hrdr_bonus = 1;
-      stat_bonus = 5;
-      hr_div = 10;
-      dr_div = 10;
-      ac_div = 2;
-      hp_div = 5;
-      mana_div = 5;
-      move_div = 5;
-
-      if (obj->weight > 10)
-      {
-         ac_div -= 1;
-         hp_div /= 2;
-         mana_div *= 2;
-         move_div *= 2;
-      }
-      else if (obj->weight > 5)
-      {
-         /* Do nothing for now */
-      }
-      else
-      {
-         /* Caster */
-         dr_div *= 2;
-         move_div *= 2;
-
-         spellpower_div = 15;
-      }
+      hr_div = armor_table[obj->weight].hr_div;
+      dr_div = armor_table[obj->weight].dr_div;
+      hp_div = armor_table[obj->weight].hp_div;
+      move_div = armor_table[obj->weight].move_div;
+      spellpower_div = armor_table[obj->weight].spellpower_div;
+      hrdr_bonus = armor_table[obj->weight].hrdr_bonus;
+      ac_bonus = armor_table[obj->weight].ac_bonus;
+      stat_bonus = armor_table[obj->weight].stat_bonus;
 
       // Bucklers get poor stats
       if (IS_SET(obj->extra_flags, ITEM_BUCKLER))
@@ -520,36 +543,14 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    }
    else
    {
-      /* Well, shit stats since it doesn't follow the standards */
-      hr_div = 15;
-      dr_div = 15;
-      ac_div = 20;
-      hp_div = 10;
-      mana_div = 10;
-      move_div = 10;
-      ac_bonus = -5;
-      stat_bonus = 5;
-      hrdr_bonus = 1;
-
-      if (obj->weight > 10)
-      {
-         ac_div -= 5;
-         hp_div /= 2;
-         mana_div *= 2;
-         move_div *= 2;
-      }
-      else if (obj->weight > 5)
-      {
-         /* Do nothing for now */
-      }
-      else
-      {
-         /* Caster */
-         dr_div *= 2;
-         move_div *= 2;
-
-         spellpower_div = 15;
-      }
+      hr_div = misc_table[obj->weight].hr_div;
+      dr_div = misc_table[obj->weight].dr_div;
+      hp_div = misc_table[obj->weight].hp_div;
+      move_div = misc_table[obj->weight].move_div;
+      spellpower_div = misc_table[obj->weight].spellpower_div;
+      hrdr_bonus = misc_table[obj->weight].hrdr_bonus;
+      ac_bonus = misc_table[obj->weight].ac_bonus;
+      stat_bonus = misc_table[obj->weight].stat_bonus;
    }
 
    int ac_val = ac_bonus;
