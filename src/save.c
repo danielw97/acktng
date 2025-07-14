@@ -322,7 +322,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Roomexit     %s~\n", ch->pcdata->room_exit);
       fprintf(fp, "Title        %s~\n", ch->pcdata->title);
       fprintf(fp, "Immskll      %s~\n", ch->pcdata->immskll);
-      fprintf(fp, "Keep         %s~\n", ch->pcdata->keep_vnum);
+      fprintf(fp, "Keep         %d\n", ch->pcdata->keep_vnum);
       /*
        * We add a '*' to preserve leading spaces... strip * on load
        */
