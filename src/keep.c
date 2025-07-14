@@ -43,41 +43,30 @@ void do_makekeep(CHAR_DATA *ch, char *argument)
     /*
      * Create room
      */
-    pRoomIndex = new_room(pArea, vnum, SECT_INSIDE);
+    RoomIndex = new_room(pArea, vnum, SECT_INSIDE);
 
     /*
      * Add room to hash table
      */
 
     iHash = vnum % MAX_KEY_HASH;
-    SING_TOPLINK(pRoomIndex, room_index_hash[iHash], next);
+    SING_TOPLINK(RoomIndex, room_index_hash[iHash], next);
 
     /*
      * Add room into area list.
      */
     GET_FREE(pList, build_free);
-    pList->data = pRoomIndex;
+    pList->data = RoomIndex;
     LINK(pList, topRoom->area->first_area_room, pCurRoom->area->last_area_room, next, prev);
     top_room++;
 
     ch->pcdata->keep_vnum = vnum;
-    /*   pRoomIndex->first_person = NULL;
-   pRoomIndex->last_person = NULL;
-   pRoomIndex->first_content = NULL;
-   pRoomIndex->last_content = NULL;
-   pRoomIndex->first_exdesc = NULL;
-   pRoomIndex->last_exdesc = NULL;
-   pRoomIndex->area = pArea;
-   pRoomIndex->vnum = vnum;
+    /*
    pRoomIndex->name = str_dup("New room");
    pRoomIndex->description = str_dup("No description");
-   pRoomIndex->room_flags = 0;
-   pRoomIndex->sector_type = sector;
-   pRoomIndex->light = 0;
-   for (door = 0; door <= 5; door++)
-      pRoomIndex->exit[door] = NULL;
    pRoomIndex->first_room_reset = NULL;
-   pRoomIndex->last_room_reset = NULL;*/
+   pRoomIndex->last_room_reset = NULL;
+   */
 
     send_to_char("Your keep has been created\n\r",ch);
 }
