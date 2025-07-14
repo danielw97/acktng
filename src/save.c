@@ -321,7 +321,8 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Roomenter    %s~\n", ch->pcdata->room_enter);
       fprintf(fp, "Roomexit     %s~\n", ch->pcdata->room_exit);
       fprintf(fp, "Title        %s~\n", ch->pcdata->title);
-      fprintf(fp, "Immskll     %s~\n", ch->pcdata->immskll);
+      fprintf(fp, "Immskll      %s~\n", ch->pcdata->immskll);
+      fprintf(fp, "Keep         %s~\n", ch->pcdata->keep_vnum);
       /*
        * We add a '*' to preserve leading spaces... strip * on load
        */
@@ -590,6 +591,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->perm_dex = 13;
       ch->pcdata->perm_con = 13;
       ch->pcdata->bloodlust = 24;
+      ch->pcdata->keep_vnum = 0;
       ch->pcdata->condition[COND_THIRST] = 48;
       ch->pcdata->pagelen = 20;
       ch->pcdata->condition[COND_FULL] = 48;
@@ -1074,6 +1076,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          }
          break;
 
+      case 'K':
+         SKEY("Keep", ch->pcdata->keep_vnum, fread_number(fp));
       case 'L':
 
          KEY("Level", ch->level, fread_number(fp));

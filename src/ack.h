@@ -764,6 +764,7 @@ struct pc_data
 
    char *ignore_list[MAX_IGNORES]; /* Ignore this person */
    sh_int recall_vnum;
+   sh_int keep_vnum;
    int mana_from_gain; /* saves non-item oriented mana total */
    int hp_from_gain;   /* same for hitpoints */
    int move_from_gain;
