@@ -1,0 +1,22 @@
+#AREA
+@@WPlayer Housing@@N~
+Q 16
+K none ~
+L {?? ??}~
+N 3
+I 150 150
+V 310 609
+X 0
+F 10000
+U @@WThe @@ysun@@W shines everywhere.@@N~
+O Virant~
+R Virant~
+W Virant~
+#ROOMS
+#310
+New room~
+No description~
+16388 11
+S
+#0
+#$
