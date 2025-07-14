@@ -653,6 +653,7 @@ void do_hunt(CHAR_DATA *ch, char *argument)
          vcnt++;
       }
    }
+   
    /*
     * Max_level people can hunt through the world, and anyone who has
     * practiced over 70% can hunt through doors.. -- Alty
