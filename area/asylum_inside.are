@@ -68,7 +68,7 @@ The Entryway~
 seems to have been performed. It appears as if the Asylum is back in business.
 
 ~
-12 11
+16396 11
 D0
 ~
 ~
@@ -568,7 +568,9 @@ inmate~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16000
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16000
 chef cook~
 @@WThe @@mAsylum @@NChef~
 @@WA Chef is busily preparing mush for the @@einmates@@N.
@@ -580,7 +582,9 @@ chef cook~
 ! 0 0 0 7 0 0 0
 | 0 4128 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16001
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16001
 instructor~
 @@WAn @@mAsylum @@WInstructor@@N~
 ~
@@ -591,7 +595,9 @@ instructor~
 ! 0 0 0 7 0 0 0
 | 0 1081472 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16002
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16002
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -603,7 +609,9 @@ inmate~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16004
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16004
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -615,7 +623,9 @@ inmate~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16005
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16005
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -627,7 +637,9 @@ inmate~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16006
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16006
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -639,7 +651,9 @@ inmate~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16007
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16007
 inmate~
 @@WAn @@eimprisoned Inmate@@N~
 @@WAn @@einmate @@Wof the @@mAsylum@@N lies here looking miserable.@@N
@@ -651,7 +665,9 @@ inmate~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16008
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16008
 monitor~
 @@WAn @@mAsylum @@RMonitor@@N~
 @@WAn @@mAsylum@@R Monitor @@W ensures obedience within the Institution.@@N
@@ -663,7 +679,9 @@ monitor~
 ! 0 0 0 7 0 0 0
 | 0 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16010
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16010
 therapist~
 @@WAn @@mAsylum @@aTherapist@@N~
 @@WA pretty @@atherapist @@Wsmiles at you.@@N
@@ -675,7 +693,9 @@ therapist~
 ! 0 0 0 7 0 0 0
 | 0 16384 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #16009
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#16009
 surgeon~
 @@WThe @@mAsylum @@eSurgeon@@N~
 @@WA tall and evil looking man stares at you with interest.@@N
@@ -687,7 +707,9 @@ surgeon~
 ! 0 0 0 7 0 0 0
 | 0 16777216 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #16000
 ring turquoise~
@@ -696,7 +718,7 @@ ring turquoise~
 ~
 8 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 60
 A
@@ -716,7 +738,7 @@ cleaver~
 ~
 5 134217730 8421376 257
 0 0 0 3 0 0 0 0 0 0
-2
+8
 A
 18 12
 A
@@ -730,7 +752,7 @@ A nasty ribbed rod lies here.
 ~
 9 142606352 8421376 257
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 19 14
 A
@@ -752,7 +774,7 @@ A small pair of @@mspectacles@@N is almost crushed by your foot!@@N
 ~
 9 134217728 8388624 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 12 100
 A
@@ -770,7 +792,7 @@ key cell cellkey~
 ~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 60
 #16005
@@ -781,7 +803,7 @@ jerkin~
 ~
 9 134217730 8650752 4113
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -110
 A
@@ -805,7 +827,7 @@ enforcer~
 ~
 5 138412052 8421376 257
 0 0 0 8 0 0 0 0 0 0
-3
+13
 A
 19 14
 A
@@ -823,7 +845,7 @@ scalpel~
 ~
 5 167772180 8421376 257
 0 0 0 11 0 0 0 0 0 0
-1
+4
 A
 19 17
 A
@@ -838,7 +860,7 @@ medallion~
 @@WA @@rturquoise @@Wand @@dObsidian@@y medallion@@W lies here@@N.~
 9 134217728 8388736 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -100
 A
@@ -858,7 +880,7 @@ circle~
 ~
 1 134217888 8421376 3593
 0 0 -1 0 0 0 0 0 0 0
-1
+4
 A
 12 100
 A
@@ -877,7 +899,7 @@ L
 ~
 14 0 0 1
 9 0 16030 0 0 0 0 0 0 0
-3
+13
 E
 bookshelf~
 Noting something unusual, you may want to examine the bookshelf a little

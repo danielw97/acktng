@@ -21,7 +21,7 @@ You are on a small jetty, made out of old, almost rotten wood.  It looks like
 hear the sea gently lapping against the sides of the Jetty.  To the South,
 you can see a small beach.
 ~
-0 2
+16384 2
 D1
 The Sea.
 ~
@@ -1670,7 +1670,9 @@ The Tyrannosaurus stands many times taller than you, and looks to weigh at
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5002
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5002
 triceratops triccie dino~
 the Triceratops~
 A hungry looking Triceratops struts around here.
@@ -1685,7 +1687,9 @@ The Triceratops is the largest of the horn-faced dinosaurs.  The huge front
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5003
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5003
 stegosaurus stego dino~
 the Stegosaurus~
 A dumb looking Stegosaurus is here looking for a bush to eat.
@@ -1701,7 +1705,9 @@ The Stegosaurus looks fairly harmless, but also pretty large; eight feet of
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5004
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5004
 pterandon peri dino~
 the Pterandon~
 A large, flying Pterandon swoops around, looking mean.
@@ -1717,7 +1723,9 @@ The Pterandon, big brother of the Pteradactyl, has a four-foot long beak, which
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5005
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5005
 lambeosaurus lamb dino~
 the Lambeosaurus~
 A small, duck-billed Lambeosaurus is here, looking peaceful.
@@ -1732,7 +1740,9 @@ The Lambeosaurus has a flat snout and a large crest on it's head.  It looks
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5006
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5006
 elasmosaurus lassie dino~
 the Elasmosaurus~
 A Elasmosaurus is here, looking downright mean.
@@ -1746,7 +1756,9 @@ The Elasmosaurus looks like a huge snake.  Short fins protrude from it's thick
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5007
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5007
 diplodicos dippy dino~
 the Diplodocus~
 A medium-sized Diplodocus stands here looking for people to stomp on.
@@ -1760,7 +1772,9 @@ The Diplodocus doesn't look fully grown.  Standing taller than a Tyrannosurus
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5008
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5008
 deinonychus dino~
 the Deinonychus~
 A small, man-sized Deinonychus darts about, getting ready to attack.
@@ -1775,7 +1789,9 @@ The Deiononychus, due to it's small size, is an excellent fighter.  It looks
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5009
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5009
 paleocinthus dino~
 the Paleocinthus~
 A small Paleocinthus is here looking for a bush to eat.
@@ -1790,7 +1806,9 @@ The Paleocinthus has side spikes, and a smallish head.  It's large, spiked
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5010
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5010
 sea seahag hag~
 the Sea Hag~
 A *very* ugly old hag stands here, waiting to eat you.
@@ -1806,7 +1824,9 @@ The old Hag looks very old, and very hungry.  She licks her lips as she looks
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5011
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5011
 grippli frog~
 the Grippli~
 A small, frog like humanoid hops around, looking for insects to munch on.
@@ -1821,7 +1841,9 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5012
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5012
 grippli frog~
 the Grippli~
 A small, frog like humanoid hops around, looking for insects to munch on.
@@ -1836,7 +1858,9 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5013
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5013
 grippli frog~
 the Grippli~
 A small, frog like humanoid hops around, looking for insects to munch on.
@@ -1851,7 +1875,9 @@ The Grappli hopping about you is a small, intelligent forg-like humanoid.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5014
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5014
 druid getafix~
 the Druid~
 A small druid is here, looking just slightly mad.
@@ -1865,7 +1891,9 @@ The druid is dribbling all over the place, and now and again, barks at himself.
 ! 0 0 0 7 0 0 0
 | 0 33558528 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #5001
 key white~
@@ -1874,7 +1902,7 @@ A small, white key has been left here.
 ~
 18 32 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #5002
@@ -1884,7 +1912,7 @@ A small, yellow dagger lies here.
 ~
 5 134217730 8421376 1
 0 0 0 11 0 0 0 0 0 0
-3
+13
 L
 60
 #5003
@@ -1894,7 +1922,7 @@ An old ribcage has been left on the floor.
 ~
 9 134218752 8650752 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 13 -30
 A
@@ -1908,7 +1936,7 @@ A small sphere lies before you, softly glowing.
 ~
 1 134217792 8421376 1
 0 0 -1 0 0 0 0 0 0 0
-1
+4
 L
 50
 #5005
@@ -1918,7 +1946,7 @@ A small, gold staff has been dropped here.
 ~
 5 134217729 8421376 1
 0 0 0 7 0 0 0 0 0 0
-1
+4
 L
 50
 #5006
@@ -1928,7 +1956,7 @@ Someone has left a still-beating heart on the floor.  How silly.
 ~
 10 192 8388608 1
 80 43 14 35 0 0 0 0 0 0
-1
+4
 L
 30
 #5007
@@ -1938,7 +1966,7 @@ A large, leather-looking pair of wings has been left here.
 ~
 9 134217728 8389632 16385
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 18 18
 A
@@ -1957,7 +1985,7 @@ a Hag's Hat~
 A Hag's Pointy Hat lies here~
 9 134217728 8388616 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 50
 #5009
@@ -1966,7 +1994,7 @@ a Hag's Robes~
 An ugly set of robes of the hag lie here~
 9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 50
 #5010
@@ -1975,7 +2003,7 @@ a Hag's Soul~
 An abandoned soul of a hag lies here~
 28 134217728 8388609 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 50
 #5011
@@ -1984,7 +2012,7 @@ a Druidic Aura~
 An aura with a druidic feel lies here~
 28 134217728 8388610 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 50
 #5012
@@ -1993,7 +2021,7 @@ stegosaurus Spikes~
 Some stegosaurus spikes lie here~
 9 134217728 8389120 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 50
 #0

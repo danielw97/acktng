@@ -22,7 +22,7 @@ W Zenithar hephaestus~
 above the bed, and you wonder vaguely at their placement. The exit to this
 small home is to the North.@@N @@N
 ~
-4 11
+16388 11
 D0
 ~
 ~
@@ -1525,7 +1525,9 @@ mino minotaur captain~
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1301
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1301
 minotaur guard~
 @@eMinotaur @@dGuard@@M~
 @@dA @@eMinotaur@@d sworn to protect the Keep lunges at you.
@@ -1537,7 +1539,9 @@ minotaur guard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1302
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1302
 minotaur patrol~
 @@WA @@eMinotaur @@dPatrolman@@N~
 @@dA lone @@eMinotaur@@d patrols the Keep.
@@ -1549,7 +1553,9 @@ minotaur patrol~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1303
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1303
 Gate Guard Minotaur~
 @@dGate Guard@@N~
 @@dA @@eMinotaur@@d guarding the gates prowls around.@@N
@@ -1561,7 +1567,9 @@ Gate Guard Minotaur~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1304
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1304
 minotaur cook~
 @@eMinotaur@@d Cook@@N~
 @@dA cook stands here, waving a pot at you.@@N
@@ -1573,7 +1581,9 @@ minotaur cook~
 ! 0 0 0 7 0 0 0
 | 0 1064960 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1305
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1305
 minotaur swordsman swordsmaster trainer~
 @@WA @@eMinotaur @@dSwordmaster@@N~
 @@dA @@eMinotaur@@d Swordsmaster shouts commands to his pupils.@@N
@@ -1585,7 +1595,9 @@ minotaur swordsman swordsmaster trainer~
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1306
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1306
 minotaur swordsman student~
 @@WA @@eMinotaur @@dSword Student@@N~
 @@dA @@eMinotaur@@d student practices at the sword.@@N
@@ -1597,7 +1609,9 @@ minotaur swordsman student~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1307
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1307
 mino minotaur soldier~
 @@WA @@eMinotaur @@dSoldier@@N~
 @@dA @@eMinotaur@@d lays here in his bunk, sleeping quite soundly.
@@ -1609,7 +1623,9 @@ mino minotaur soldier~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1308
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1308
 prison mob~
 @@WThe @@eMinotaur @@dPrisoner@@N~
 @@dA beleaguered group of @@eMinotaur @@dprisoners mistakes you for food and
@@ -1622,7 +1638,9 @@ prison mob~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1309
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1309
 prison guard minotaur~
 @@dThe @@eMinotaur @@dprison guard @@N~
 A Prison Guard stands here, guarding the prisoners.
@@ -1634,7 +1652,9 @@ A Prison Guard stands here, guarding the prisoners.
 ! 0 0 0 7 0 0 0
 | 0 4096 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #1300
 mino minotaur earring~
@@ -1643,7 +1663,7 @@ mino minotaur earring~
 ~
 9 134217760 8388672 4097
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 125
 A
@@ -1663,7 +1683,7 @@ cloak~
 ~
 9 146800640 8454144 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -220
 A
@@ -1682,7 +1702,7 @@ flaming blade~
 @@WA @@ygolden @@Wblade with @@erubies @@Wencrusted in the hilt lies forgotten.@@N~
 5 134218758 8421376 257
 0 0 0 1 0 0 0 0 0 0
-1
+4
 A
 19 27
 A
@@ -1701,7 +1721,7 @@ longsword~
 @@WA nasty @@ylongsword@@N glitters in the light.@@N~
 5 134217728 8421376 1
 0 0 0 3 0 0 0 0 0 0
-2
+8
 A
 17 -150
 A
@@ -1718,7 +1738,7 @@ buckler~
 @@WA small @@bbuckler@@N, with one central @@eruby@@N and a @@ysun@@W emblazoned around it lies here.@@N~
 9 415236128 8421376 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -240
 A
@@ -1735,7 +1755,7 @@ fire dagger~
 @@WA small @@Rflaming @@Ydagger @@Wlies here.@@N~
 5 134217732 8421376 1
 0 0 0 11 0 0 0 0 0 0
-2
+8
 A
 19 35
 A

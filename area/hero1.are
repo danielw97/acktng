@@ -91,7 +91,7 @@ You are standing in a small square room.  The walls are lined with benches and
 the benches are lined with gladiators waiting for their turn to fight to the
 death in the arena to the west.
 ~
-0 11
+16384 11
 D1
 ~
 ~
@@ -140,7 +140,9 @@ This guy really is a huge killing machine perhaps you should walk away.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #301
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#301
 rat~
 rat~
 A large rat is scurring about here.
@@ -152,7 +154,9 @@ A large rat is scurring about here.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #302
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#302
 borg~
 Borg~
 Borg.
@@ -165,7 +169,9 @@ The big borgy bastard.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #304
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#304
 A dirty gladiator~
 A dirty gladiator~
 A filthy gladiator stands here~
@@ -176,7 +182,9 @@ A filthy gladiator stands here~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #305
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#305
 A harried cook~
 A harried cook~
 A cook is here, harried
@@ -188,7 +196,9 @@ A cook is here, harried
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #306
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#306
 A hurried patron~
 A hurried patron~
 A hurried patron is here, trying to get through lunch
@@ -200,7 +210,9 @@ A hurried patron is here, trying to get through lunch
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #301
 shield~
@@ -208,7 +220,7 @@ shield~
 A large flaming shield~
 9 134217728 8421376 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -20
 A
@@ -225,7 +237,7 @@ breastplate~
 A breast plate~
 9 134217728 8650752 1
 500 10 10 10 0 0 0 0 0 0
-1
+4
 A
 19 3
 A
@@ -251,7 +263,7 @@ a Borg's Compliance Enhancer~
 A compliance enhancer lies here~
 5 134217728 8421376 1
 0 0 0 4 0 0 0 0 0 0
-1
+4
 A
 18 10
 A
@@ -264,7 +276,7 @@ a Cook's White Hat~
 A cook's white hat lies here~
 9 134217728 8388616 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -20
 A
@@ -281,7 +293,7 @@ a Patron's Ring~
 A patron's ring lies here in the dust~
 8 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 40
 A

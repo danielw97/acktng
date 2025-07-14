@@ -669,7 +669,7 @@ This is where all the Remortals of the Realm gather to relax and chat,
 abound.
  
 ~
-1036 11
+17420 11
 D0
 ~
 ~
@@ -692,7 +692,9 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1105
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1105
 al bartender~
 Al the Bartender~
 Al the Bartender stands behind the bar, waiting for your order.
@@ -708,7 +710,9 @@ Al the Bartender is a short, fat, round kind of guy, always cleaning glasses,
 ! 0 0 0 7 22100 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1104
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1104
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -723,7 +727,9 @@ This is your master.  Big and strong with bulging muscles.  Several scars
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1103
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1103
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -738,7 +744,9 @@ You realize that whenever your guildmaster moves, you fail to notice it:
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1102
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1102
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -752,7 +760,9 @@ You are in no doubt that this guildmaster is truly close to your god; he has
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #1101
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#1101
 guildmaster master~
 the guildmaster~
 Your guildmaster is standing here.
@@ -767,7 +777,9 @@ Even though your guildmaster looks old and tired, you can clearly see the
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #1147
 seat~
@@ -775,7 +787,7 @@ a wooden garden seat~
 A very old, well-worn oak garden seat is tucked away in one corner.~
 12 64 0 1
 2 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #1146
@@ -785,7 +797,7 @@ A small china fountain gurgles away sweetly to itself.
 ~
 25 64 0 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 1
 #1145
@@ -794,7 +806,7 @@ a glass key~
 An Important Looking Glass Key Lies Here.~
 1 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #1144
@@ -803,7 +815,7 @@ a small, circular seat~
 A small, circular seat is in the middle of the room.~
 12 64 0 1
 2 0 0 0 0 0 0 0 0 0
-3
+13
 L
 1
 #1141
@@ -812,7 +824,7 @@ the Lovers' Board~
 The Lovers's Board is here, stuck to the wall with four arrows.~
 27 0 0 1
 14 1 1 1141 0 0 0 0 0 0
-3
+13
 L
 1
 #1117
@@ -822,7 +834,7 @@ The Info Board is here, holding Rules, and General Information.
 ~
 27 0 0 1
 365 1 82 1117 0 0 0 0 0 0
-1
+4
 L
 1
 #1105
@@ -832,7 +844,7 @@ A can of Pepsi lies forgotten on the floor.
 ~
 17 0 8388608 1
 4 4 15 0 0 0 0 0 0 0
-1
+4
 L
 1
 #1104
@@ -842,7 +854,7 @@ A glass of Jack Daniel's lies on the floor.
 ~
 17 0 8388608 1
 4 4 5 0 0 0 0 0 0 0
-1
+4
 L
 1
 #1103
@@ -852,7 +864,7 @@ A bottle of quality red wine has been left here.
 ~
 17 0 8388608 1
 4 4 2 0 0 0 0 0 0 0
-1
+4
 L
 1
 #1102
@@ -862,7 +874,7 @@ A bottle of warm beer has been left here.
 ~
 17 0 8388608 1
 4 4 1 0 0 0 0 0 0 0
-1
+4
 L
 1
 #1101
@@ -872,7 +884,7 @@ A small bottle of local spring water has been left here.
 ~
 17 0 8388608 1
 4 4 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #1100
@@ -881,7 +893,7 @@ board~
 @@bAn ancient board for Remortals' scribbles@@N~
 27 0 0 1
 30 35 35 1100 0 0 0 0 0 0
-1
+4
 L
 1
 #1106
@@ -890,7 +902,7 @@ key~
 @@bAncient key of the @@mRemortals' Sanctum@@N~
 4 0 8388608 1
 0 0 0 -1 0 0 0 0 0 0
-1
+4
 L
 80
 #1107
@@ -900,7 +912,7 @@ wed board~
 ~
 27 1 0 1
 60 1 1 1107 0 0 0 0 0 0
-3
+13
 L
 1
 #0

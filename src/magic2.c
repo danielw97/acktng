@@ -320,7 +320,13 @@ bool spell_refresh(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       send_to_char("That's not gonna help, you are carrying too much wieght!\n\r", ch);
       return FALSE;
    }
-   victim->move = UMIN(victim->move + level, victim->max_move);
+
+   int move = ch->lvl[CLASS_CLE]  + 50;
+
+   if (victim->fighting != NULL)
+      move = -1;
+
+   victim->move = UMIN(victim->move + move, victim->max_move);
    send_to_char("You feel less tired.\n\r", victim);
    act("$n looks less tired.", victim, NULL, NULL, TO_ROOM);
    return TRUE;
@@ -1334,15 +1340,6 @@ bool spell_animate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       return FALSE;
    }
 
-   if (ch->remort[CLASS_NEC] < 70)
-   {
-      send_to_char(" @@eDUE TO A ROLEPLAYING CHANGE, THIS SPELL IS NO LONGER AVAILABLE TO ANY CLASS\n\r", ch);
-      send_to_char(" BUT a high level @@dNECRMOANCER@@N.  THE SKILL HAS BEEN REMOVED FROM YOU CHARACTER, \n\r", ch);
-      send_to_char(" SORRY FOR THE INCONVIENENCE.  @@mTHANK YOU@@N :)\n\r", ch);
-      ch->pcdata->learned[sn] = 0;
-      return FALSE;
-   }
-
    if (ob->item_type != ITEM_CORPSE_NPC)
    {
       send_to_char("You can't animate that!\n\r", ch);
@@ -1368,7 +1365,7 @@ bool spell_animate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    corpse->level = ob->level; /* Level of (N)PC before death */
    corpse->max_hit = dice(5, level);
    corpse->hit = corpse->max_hit;
-   corpse->max_move = dice(10, level);
+   corpse->max_move = dice(10, corpse->level);
    corpse->move = corpse->max_move; /* Set Zombie's stats */
 
    for (;;)

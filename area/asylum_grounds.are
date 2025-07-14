@@ -1405,7 +1405,7 @@ S
 You see a small, weatherbeaten @@gsign@@N nailed to a @@Gtree@@N.
  
 ~
-2 2
+16386 2
 D0
 ~
 ~
@@ -2009,7 +2009,7 @@ a @@yrabbit's foot@@N~
 @@NThe poor paw of an unlucky @@ybunny@@N lies here.~
 9 134217729 8421376 16449
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -50
 A
@@ -2026,7 +2026,7 @@ medallion turquoise~
 @@NA small @@rturquoise @@Ndisc, with a strange rune etched on it's face lies here.~
 9 134217745 8388736 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 A
 12 60
 A
@@ -2043,7 +2043,7 @@ a @@dblack baton@@N~
 @@NAn evil looking baton of an unknown metal, and rings of @@rturquoise@@N beckons you to wield it.~
 5 134217812 8421376 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 19 13
 A
@@ -2060,7 +2060,7 @@ smock staff~
 @@NA a small smock, with a trace of some @@Rstain@@N lies crumpled in a heap.~
 9 134217728 8454144 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 12 45
 A
@@ -2083,7 +2083,7 @@ knuckles turquoise~
 @@NA nasty set of @@rturquoise @@Nknuckles glint in your light.~
 9 134217748 8392704 256
 0 0 0 0 0 0 0 0 0 0
-3
+13
 A
 19 12
 A
@@ -2101,7 +2101,7 @@ carrot~
 ~
 26 0 8388608 1
 0 61 66 -1 0 0 0 0 0 0
-1
+4
 L
 35
 #3906
@@ -2110,7 +2110,7 @@ Sai~
 @@dA martial arts weapon lies here, @@Wglinting@@d in the darkness@@N~
 5 240124032 8421376 1
 0 0 0 11 0 0 0 0 0 0
-2
+8
 A
 13 100
 A

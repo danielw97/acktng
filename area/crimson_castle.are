@@ -24,7 +24,7 @@ W Aenima fripp~
 tunnel that must extend high into the cavern.  As you squint you notice some
 flickering @@mmagenta@@d lights from high up into the tunnel.@@N
 ~
-139276 11
+155660 11
 D2
 ~
 ~
@@ -2762,7 +2762,9 @@ guard guardian tower~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11301
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11301
 Ixtochel~
 @@dI@@mx@@pt@@Wo@@gc@@ph@@me@@dl@@N~
 @@dThe castle guardian clutches the castle key tightly in his hands..@@N
@@ -2774,7 +2776,9 @@ Ixtochel~
 ! 0 0 0 7 0 0 0
 | 0 8683520 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11302
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11302
 tower demon~
 @@dA T@@mo@@pw@@we@@gr @@dDemon@@N~
 @@dA crimson demon of the tower sneaks up on you..@@N
@@ -2786,7 +2790,9 @@ tower demon~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11303
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11303
 Grastrou Beast~
 @@dG@@Wr@@ga@@Ws@@dt@@Wr@@go@@Wu @@gBeast@@N~
 @@dA dark grastrou beast lies in the shadows..@@N
@@ -2798,7 +2804,9 @@ Grastrou Beast~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11304
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11304
 Grastrou Beast~
 @@dG@@Wr@@ga@@Ws@@dt@@Wr@@go@@Wu @@gBeast@@N~
 @@dA dark grastrou beast lies in the shadows..@@N
@@ -2810,7 +2818,9 @@ Grastrou Beast~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11449
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11449
 Lord Dark~
 @@dJ@@mu@@pz@@Wa@@gm@@m, @@gHigh @@mKing @@pof @@dC@@mr@@pi@@Wm@@gs@@po@@mn@@N~
 @@dEvil reigns and the lord of the tower retakes his throne..@@N
@@ -2822,7 +2832,9 @@ Lord Dark~
 ! 0 0 0 7 0 0 0
 | 0 51380480 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11305
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11305
 healer seduction~
 @@dS@@me@@pd@@gu@@Wc@@gt@@pi@@mo@@dn@@N~
 @@dSeduction herself cleanses your soul with her silky hands..@@N
@@ -2834,7 +2846,9 @@ healer seduction~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11306
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11306
 lim dul limdul lim-dul~
 @@dL@@mi@@pm@@W-@@dD@@mu@@pl@@N~
 @@dLim-Dul, prince of the crimson realm, prepares armageddon..@@N
@@ -2846,7 +2860,9 @@ lim dul limdul lim-dul~
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 144
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11307
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11307
 paladin~
 @@BThe @@aP@@ga@@ll@@ca@@gd@@ai@@ln @@gof @@yLucrezia@@N~
 @@dThe Paladin of Lucrezia has been corrupted by the dark side..@@N
@@ -2858,7 +2874,9 @@ paladin~
 ! 0 0 0 7 0 0 0
 | 0 6488064 0 0 0 0 144
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11308
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11308
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
@@ -2870,7 +2888,9 @@ displacer beast~
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11309
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11309
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
@@ -2882,7 +2902,9 @@ displacer beast~
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11310
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11310
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
@@ -2894,7 +2916,9 @@ displacer beast~
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11311
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11311
 displacer beast~
 @@dD@@WD@@di@@Wi@@ds@@Ws@@dp@@Wp@@dl@@Wl@@da@@Wa@@dc@@Wc@@de@@We@@dr@@Wr @@dB@@WB@@de@@We@@da@@Wa@@ds@@Ws@@dt@@Wt@@N~
 @@dA large cat-like beast with two tails growls at you..@@N
@@ -2906,7 +2930,9 @@ displacer beast~
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11312
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11312
 Evil~
 @@dE@@mv@@pi@@gl@@N~
 @@dE@@mv@@pi@@gl@@N
@@ -2918,7 +2944,9 @@ Evil~
 ! 0 0 0 7 0 0 0
 | 0 67108862 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11313
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11313
 Evil~
 @@dE@@mv@@pi@@gl@@N~
 @@dE@@mv@@pi@@gl@@N
@@ -2930,7 +2958,9 @@ Evil~
 ! 0 0 0 7 0 0 0
 | 0 67108862 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11314
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11314
 Evil~
 @@dE@@mv@@pi@@gl@@N~
 @@dE@@mv@@pi@@gl@@N
@@ -2942,7 +2972,9 @@ Evil~
 ! 0 0 0 7 0 0 0
 | 0 67108862 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11315
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11315
 mirage~
 @@dJ@@mu@@pz@@Wa@@gm@@N~
 @@dJuzam is here, although he doesnt seem the same to you..@@N
@@ -2954,7 +2986,9 @@ mirage~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 56
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11316
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11316
 nether shadow~
 @@dA @@mN@@ge@@pt@@Wh@@me@@gr @@dShadow@@N~
 @@dA nether shadow is here with a part of the darkness..@@N
@@ -2966,7 +3000,9 @@ nether shadow~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11317
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11317
 nether shadow~
 @@dA @@mN@@ge@@pt@@Wh@@me@@gr @@dShadow@@N~
 @@dA nether shadow is here with a part of the darkness..@@N
@@ -2978,7 +3014,9 @@ nether shadow~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11318
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11318
 stargazer~
 @@dS@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr@@N~
 @@dA S@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr is here awaiting his fate..@@N
@@ -2990,7 +3028,9 @@ stargazer~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11319
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11319
 stargazer~
 @@dS@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr@@N~
 @@dA S@@mt@@pa@@Wr@@gg@@Wa@@pz@@me@@dr is here awaiting his fate..@@N
@@ -3002,7 +3042,9 @@ stargazer~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11320
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11320
 whirlwind~
 @@dW@@mh@@pi@@gr@@pl@@mw@@pi@@gn@@pd@@N~
 @@dA deadly whirlwind spins and spins..@@N
@@ -3014,7 +3056,9 @@ whirlwind~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11321
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11321
 whirlwind~
 @@dW@@mh@@pi@@gr@@pl@@mw@@pi@@gn@@pd@@N~
 @@dA deadly whirlwind spins and spins..@@N
@@ -3026,7 +3070,9 @@ whirlwind~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11322
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11322
 Omega~
 @@dThe @@BW@@li@@cn@@ad @@RO@@em@@ge@@eg@@Ra@@N~
 @@dThe @@BW@@li@@cn@@ad @@ROmega @@dfollows the biddings of its master..@@N
@@ -3038,7 +3084,9 @@ Omega~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11323
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11323
 sentinel~
 @@RO@@Wm@@Rega @@dS@@Wh@@dadow S@@We@@dntinel@@N~
 @@dA Shadow Sentinel scampers around waiting to ambush you..@@N
@@ -3050,7 +3098,9 @@ sentinel~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11324
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11324
 sentinel~
 @@RO@@Wm@@Rega @@dS@@Wh@@dadow S@@We@@dntinel@@N~
 @@dA Shadow Sentinel scampers around waiting to ambush you..@@N
@@ -3062,7 +3112,9 @@ sentinel~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11325
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11325
 jester~
 @@dA @@mC@@pa@@Ws@@gt@@pl@@me @@dJ@@me@@ps@@Wt@@ge@@pr@@N~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps@@d jester dances around in a fool's way..@@N
@@ -3074,7 +3126,9 @@ jester~
 ! 0 0 0 7 0 0 0
 | 0 2097152 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11326
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11326
 jester~
 @@dA @@mC@@pa@@Ws@@gt@@pl@@me @@dJ@@me@@ps@@Wt@@ge@@pr@@N~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps@@d jester dances around in a fool's way..@@N
@@ -3086,7 +3140,9 @@ jester~
 ! 0 0 0 7 0 0 0
 | 0 2097152 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11327
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11327
 servant~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps @@dSe@@Wr@@gv@@Wa@@dnt@@N~
 (Darkness) @@dA servant of the lord keeps his watch..@@N
@@ -3098,7 +3154,9 @@ servant~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11328
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11328
 servant~
 @@dThe @@mL@@po@@Wr@@gd@@m'@@ps @@dSe@@Wr@@gv@@Wa@@dnt@@N~
 (Darkness) @@dA servant of the lord keeps his watch..@@N
@@ -3110,7 +3168,9 @@ servant~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11329
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11329
 dancer exotic~
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@RE@@ex@@yo@@Wt@@gic@@N~
 (Sexy) @@dAn exotic dancer for the lord taunts you with her curves..@@N
@@ -3130,7 +3190,9 @@ dancer exotic~
 ! 0 0 0 7 0 0 0
 | 0 50331648 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11330
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11330
 Celestial~
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@yCeles@@gtial@@N~
 (Power) @@dThe celestial of the castle wanders the halls..@@N
@@ -3142,7 +3204,9 @@ Celestial~
 ! 0 0 0 7 0 0 0
 | 0 525312 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11331
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11331
 omega crimson captain guard stormguard~
 @@RThe @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@RO@@em@@ye@@Wg@@ga@@N~
 @@dThe Captain of the Castle Stormguards patrols the area..@@N
@@ -3154,7 +3218,9 @@ omega crimson captain guard stormguard~
 ! 0 0 0 7 0 0 0
 | 0 32768 0 0 0 0 144
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11332
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11332
 captain storm guard stormguard~
 @@dS@@mt@@po@@wr@@gm@@Wg@@pu@@ma@@dr@@md @@dC@@ma@@pp@@Wt@@ga@@pi@@mn@@N~
 @@dA stormguard captain wanders the halls guarding the castle.@@N
@@ -3166,7 +3232,9 @@ captain storm guard stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11333
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11333
 captain storm guard stormguard~
 @@dS@@mt@@po@@wr@@gm@@Wg@@pu@@ma@@dr@@md @@dC@@ma@@pp@@Wt@@ga@@pi@@mn@@N~
 @@dA stormguard captain wanders the halls guarding the castle.@@N
@@ -3178,7 +3246,9 @@ captain storm guard stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11334
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11334
 crimson guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3190,7 +3260,9 @@ crimson guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11335
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11335
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3202,7 +3274,9 @@ guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11336
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11336
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3214,7 +3288,9 @@ guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11337
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11337
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3226,7 +3302,9 @@ guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11338
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11338
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3238,7 +3316,9 @@ guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11339
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11339
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3250,7 +3330,9 @@ guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11341
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11341
 delphi~
 @@dD@@me@@pl@@dphi@@N~
 @@dDelphi wanders the halls looking to pick a fight..@@N
@@ -3262,7 +3344,9 @@ delphi~
 ! 0 0 0 7 0 0 0
 | 0 4194304 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11340
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11340
 clurven~
 @@BC@@gl@@Bu@@Brven@@N~
 @@BC@@gl@@Burven @@dwanders the halls of the castle..@@N
@@ -3274,7 +3358,9 @@ clurven~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11342
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11342
 secret~
 @@dA Dark Secret@@N~
 @@dOne of the dark secrets of your soul..@@N
@@ -3286,7 +3372,9 @@ secret~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11343
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11343
 name Beta~
 @@dB@@ye@@dta@@N~
 @@dThe second coming, B@@ye@@dta is here scouting the castle..@@N
@@ -3298,7 +3386,9 @@ name Beta~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11344
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11344
 impoyx~
 @@pI@@mm@@gpoyx@@N~
 @@dThe castle spirit, Impoyx, haunts the halls..@@N
@@ -3310,7 +3400,9 @@ impoyx~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11345
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11345
 Hartryx~
 @@dH@@Ra@@ertryx@@N~
 @@dImpoyx's living brother, Hartryx, searches to recieve eternal rest..@@N
@@ -3322,7 +3414,9 @@ Hartryx~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11346
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11346
 Ztur~
 @@cZtur@@N~
 @@dThe dead founder of the Stormguards, Ztur..@@N
@@ -3334,7 +3428,9 @@ Ztur~
 ! 0 0 0 7 0 0 0
 | 0 1183744 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11347
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11347
 Bogardan~
 @@RB@@eo@@Rg@@ea@@Rrdan@@N~
 @@dBogardan the ancient executioner dawns a black hood..@@N
@@ -3346,7 +3442,9 @@ Bogardan~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 144
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11349
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11349
 auroch~
 @@yA@@dur@@go@@dch@@N~
 @@dThe king of the crypts of crimson, @@yA@@dur@@go@@dch...@@N
@@ -3358,7 +3456,9 @@ auroch~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11348
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11348
 Soldelvi~
 @@dS@@mo@@pl@@gd@@delvi@@N~
 @@dCrimson's dark queen, @@dS@@mo@@pl@@gd@@delvi@@d stands alert..@@N
@@ -3370,7 +3470,9 @@ Soldelvi~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11350
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11350
 dancer~
 @@gBallroom @@dD@@ma@@pn@@Wc@@ge@@pr@@N~
 @@dA ballroom dancer is here doing an intricate dance on the floor..@@N
@@ -3382,7 +3484,9 @@ dancer~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11351
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11351
 dancer~
 @@gBallroom @@dD@@ma@@pn@@Wc@@ge@@pr@@N~
 @@dA ballroom dancer is here doing an intricate dance on the floor..@@N
@@ -3394,7 +3498,9 @@ dancer~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11352
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11352
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3406,7 +3512,9 @@ guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11353
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11353
 guard storm stormguard~
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@BSt@@lor@@cmg@@aua@@grd@@N~
 @@dA castle @@Bst@@lor@@cmg@@aua@@grd@@d watches for intruders..@@N
@@ -3418,7 +3526,9 @@ guard storm stormguard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11354
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11354
 skeleton~
 @@gS@@Wh@@ga@@Wm@@gb@@Wl@@gi@@Wn@@gg @@dS@@mk@@pe@@Wl@@ge@@pt@@mo@@dn@@N~
 @@dA skeleton replaces bones that break away..@@N
@@ -3430,7 +3540,9 @@ skeleton~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #11300
 cloak~
@@ -3447,7 +3559,7 @@ death crimson~
 @@mSome small patches of fog cover a long, thin dagger.@@N~
 5 134217748 8421376 433
 0 0 0 11 0 0 0 0 0 0
-2
+8
 A
 18 40
 A
@@ -3469,7 +3581,7 @@ left~
 @@dThe left piece to a key..@@N~
 29 0 8388608 1
 0 11304 11305 0 0 0 0 0 0 0
-2
+8
 L
 10
 #11304
@@ -3478,7 +3590,7 @@ right~
 @@dThe right piece to a key..@@N~
 29 0 8388608 1
 11303 0 11305 0 0 0 0 0 0 0
-2
+8
 L
 10
 #11305
@@ -3487,7 +3599,7 @@ The Gate Key~
 @@dThe key to the castle gates lie here gracefully..@@N~
 18 128 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 100
 #11449
@@ -3496,7 +3608,7 @@ throne~
 ~
 14 0 0 1
 9 0 11422 0 0 0 0 0 0 0
-3
+13
 L
 80
 #11306
@@ -3505,7 +3617,7 @@ Juzam's Hammer~
 @@dA hammer useful only to Juzam.@@N~
 5 167776273 8421376 1
 0 0 0 6 0 0 0 0 0 0
-1
+4
 L
 140
 #11307
@@ -3514,7 +3626,7 @@ ring ruby~
 @@dA ring of pure @@Rruby@@d engraved with a single @@ge@@ey@@ge@@d..@@N~
 9 134217744 8396800 77321
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -240
 A
@@ -3539,7 +3651,7 @@ boots~
 @@dBoots of an evil power fills the room with large shadows..@@N~
 9 134217744 10485760 353
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -250
 A
@@ -3585,7 +3697,7 @@ mask~
 A small mask that seems like a tight fit..~
 9 134217744 8388624 1153
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -200
 A
@@ -3608,7 +3720,7 @@ hammer lucrezia~
 @@dThe dark @@Rsledgehammer@@d of a corrupted paladin..@@N~
 5 167772176 8421376 417
 0 0 0 6 0 0 0 0 0 0
-1
+4
 A
 17 -150
 A
@@ -3633,7 +3745,7 @@ right seal~
 A piece of the seal..~
 29 0 8388608 1
 0 11316 11317 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11316
@@ -3642,7 +3754,7 @@ left seal~
 A piece of the seal..~
 29 0 8388608 1
 11315 0 11317 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11317
@@ -3651,7 +3763,7 @@ seal~
 A seal of the purest evil, the darkest urges..~
 14 6672 8421376 1
 9 0 11326 0 0 0 0 0 0 0
-2
+8
 A
 17 300
 A
@@ -3670,7 +3782,7 @@ sphere ruby~
 @@dThe sphere of evil's dwelling...@@N~
 14 65680 8388608 1
 9 0 11443 0 0 0 0 0 0 0
-3
+13
 L
 120
 #11319
@@ -3679,7 +3791,7 @@ evil eye~
 An evil eye with unbelievable powers..~
 5 671092864 8421376 1
 0 0 0 6 0 0 0 0 0 0
-1
+4
 A
 17 -1
 A
@@ -3720,7 +3832,7 @@ darkness~
 Darkness is here waiting to unlock evil..~
 18 16 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 80
 #11323
@@ -3729,7 +3841,7 @@ darkness~
 Darkness is here waiting to unlock evil..~
 18 16 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 80
 #11324
@@ -3738,7 +3850,7 @@ rune~
 @@NA magical @@yrune@@N lies in the dirt..~
 31 0 8388608 1
 -1 0 10 8 0 0 0 0 0 0
-1
+4
 L
 10
 #11325
@@ -3747,7 +3859,7 @@ bomb~
 @@NA small bomb is here ready to @@R@@fE@@e@@fX@@y@@fP@@g@@fL@@y@@fO@@e@@fD@@R@@fE@@N..~
 2 16 8388608 1
 140 200 201 202 0 0 0 0 0 0
-3
+13
 L
 80
 #11397
@@ -3756,7 +3868,7 @@ ruby~
 A small cracked ruby lies in the dust..~
 29 0 8388608 1
 0 11398 11399 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11398
@@ -3765,7 +3877,7 @@ shard~
 A small shard of amthyst~
 29 0 8388608 1
 11397 0 11399 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11399
@@ -3774,7 +3886,7 @@ facet~
 A tiny shining facet lies on the floor~
 29 0 8388608 1
 0 11402 11427 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11400
@@ -3783,7 +3895,7 @@ diamond~
 A small diamond..~
 29 0 8388608 1
 0 11401 11402 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11401
@@ -3792,7 +3904,7 @@ marble~
 ~
 29 0 8388608 1
 11400 0 11402 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11402
@@ -3801,7 +3913,7 @@ crystal ball~
 A tiny clear ball..~
 29 0 8388608 1
 11399 0 11427 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11403
@@ -3810,7 +3922,7 @@ arrowhead~
 A tiny stone arrowhead..~
 29 0 8388608 1
 0 11404 11405 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11404
@@ -3819,7 +3931,7 @@ broken glass~
 A tiny piece of broken glass..@@N~
 29 0 8388608 1
 11403 0 11405 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11405
@@ -3828,7 +3940,7 @@ charm~
 A tiny charm..~
 29 0 8388608 1
 0 11408 11428 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11406
@@ -3837,7 +3949,7 @@ emerald~
 A tiny sparkling @@remerald@@N~
 29 0 8388608 1
 0 11407 11408 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11407
@@ -3846,7 +3958,7 @@ onyx~
 ~
 29 0 8388608 1
 11406 0 11408 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11408
@@ -3855,7 +3967,7 @@ gemstone~
 A precious metal lies in the dust~
 29 0 8388608 1
 11405 0 11428 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11409
@@ -3864,7 +3976,7 @@ circle~
 A small metal circle~
 29 0 8388608 1
 0 11410 11411 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11410
@@ -3873,7 +3985,7 @@ topaz~
 A small chunk of topaz..~
 29 0 8388608 1
 11409 0 11411 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11411
@@ -3882,7 +3994,7 @@ ring~
 A tiny ring which fits the puzzle..~
 29 0 8388608 1
 0 11414 11429 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11412
@@ -3891,7 +4003,7 @@ pearls~
 A small round pearl lies here~
 29 0 8388608 1
 0 11413 11414 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11326
@@ -3900,7 +4012,7 @@ air charm~
 @@dSomeone dropped a @@ysparkling @@Ba@@li@@cr @@mc@@ph@@ga@@pr@@mm@@d..@@N~
 9 135266305 8421376 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 120
 #11413
@@ -3909,7 +4021,7 @@ sea shell seashell~
 A tiny seashell lies here dripping wet~
 29 0 8388608 1
 11412 0 11414 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11414
@@ -3918,7 +4030,7 @@ locket~
 Lockets..lockets..everywhere...~
 29 0 8388608 1
 11411 0 11429 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11415
@@ -3927,7 +4039,7 @@ gold~
 A tiny chunk of fools gold lies here..~
 29 0 8388608 1
 0 11416 11417 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11416
@@ -3936,7 +4048,7 @@ bloodstone~
 Caught unders wheels roll...oh the bleeding of me..~
 29 0 8388608 1
 11415 0 11417 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11417
@@ -3945,7 +4057,7 @@ insignia~
 A tiny emblem of the mist lies here~
 29 0 8388608 1
 0 11420 11430 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11418
@@ -3954,7 +4066,7 @@ moonstone~
 A small luner rock lies on the ground..~
 29 0 8388608 1
 0 11419 11420 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11419
@@ -3963,7 +4075,7 @@ comet~
 A chunk of meteor is stuck in the ground..~
 29 0 8388608 1
 11418 0 11420 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11420
@@ -3972,7 +4084,7 @@ rock~
 A rock.  Just a rock.~
 29 0 8388608 1
 0 11417 11430 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11421
@@ -3981,7 +4093,7 @@ opal~
 Some small chunks of white opal?~
 29 0 8388608 1
 0 11422 11423 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11422
@@ -3990,7 +4102,7 @@ silver~
 Some small chunks of silver here sparkle in the sun..~
 29 0 8388608 1
 11421 0 11423 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11423
@@ -3999,7 +4111,7 @@ crest~
 A small crest of the crimson guards..~
 29 0 8388608 1
 0 11426 11431 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11424
@@ -4008,7 +4120,7 @@ bronze~
 A small @@bbronze@@N chunk is here..~
 29 0 8388608 1
 0 11425 11426 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11425
@@ -4017,7 +4129,7 @@ turquoise~
 A small piece of turquoise...~
 29 0 8388608 1
 11424 0 11426 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11426
@@ -4026,7 +4138,7 @@ earring~
 A small earring made out of tiny jewels..~
 29 0 8388608 1
 11423 0 11431 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11427
@@ -4035,7 +4147,7 @@ necklace~
 A small necklace bites the dust..~
 29 0 8388608 1
 0 11428 11432 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11428
@@ -4044,7 +4156,7 @@ bracelet~
 A tiny bracelet of pure gemstones~
 29 0 8388608 1
 11427 0 11432 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11429
@@ -4053,7 +4165,7 @@ glove~
 A powerful glove lies in the dirt..~
 29 0 8388608 1
 11434 0 11435 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11430
@@ -4062,7 +4174,7 @@ belt~
 The small belt that belongs to the sea naga..~
 29 0 8388608 1
 0 11431 11433 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11431
@@ -4071,7 +4183,7 @@ facemask~
 A facemask from Juzam himself...~
 29 0 8388608 1
 11430 0 11433 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11432
@@ -4080,7 +4192,7 @@ shield~
 A shield of pure evil..~
 29 0 8388608 1
 0 11433 11434 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11433
@@ -4089,7 +4201,7 @@ sash~
 A tiny sash which fits about your waist nicely..~
 29 0 8388608 1
 11432 0 11434 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11434
@@ -4098,7 +4210,7 @@ armour~
 Some sturdy armour lies here..~
 29 0 8388608 1
 0 11429 11436 0 0 0 0 0 0 0
-1
+4
 L
 10
 #11435
@@ -4107,7 +4219,7 @@ sash~
 The almight sash of Alexandria..why is it on the ground..~
 9 138412112 8454144 18033
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -275
 A
@@ -4132,7 +4244,7 @@ Stealth~
 @@dA stealthy weapon lies on the ground...or does it?..@@N~
 5 171969108 8421376 369
 0 0 0 11 0 0 0 0 0 0
-2
+8
 A
 17 -250
 A
@@ -4156,7 +4268,7 @@ hood~
 @@WThe hood of an @@de@@Rx@@me@@dcutioner@@W..@@N~
 9 134217745 8388616 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -240
 A
@@ -4179,7 +4291,7 @@ Fury~
 @@dThe fury of the retributive staff of crimson..@@N~
 4 134217728 8421376 1
 0 0 0 -1 0 0 0 0 0 0
-1
+4
 L
 140
 #11328
@@ -4188,7 +4300,7 @@ bone~
 @@gA small bone from a skeleton..@@N~
 1 134217872 8421376 1561
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 18 25
 A

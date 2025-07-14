@@ -1364,8 +1364,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     MORTAL, NORM,
     "know weakness", {182, 182, 182, 182, 18, 182},
-    spell_know_weakness, TAR_CHAR_SELF, POS_FIGHTING,
-    NULL, SLOT( 530 ), 15, 12, TRUE,
+    spell_know_weakness, TAR_CHAR_SELF, POS_STANDING,
+    NULL, SLOT( 530 ), 15, 12, FALSE,
     "", "You are less aware of your enemy's weaknesses.",
     ""},
 
@@ -1373,8 +1373,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     MORTAL, NORM,
     "know critical", {182, 182, 182, 182, 28, 182},
-    spell_know_weakness, TAR_CHAR_SELF, POS_FIGHTING,
-    NULL, SLOT( 530 ), 15, 12, TRUE,
+    spell_know_weakness, TAR_CHAR_SELF, POS_STANDING,
+    NULL, SLOT( 530 ), 15, 12, FALSE,
     "", "You are less aware of critical damage points.",
     ""},
 
@@ -1645,7 +1645,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "shield", {9, 182, 182, 182, 182, 182},
     spell_shield, TAR_CHAR_DEFENSIVE, POS_STANDING,
-    NULL, SLOT( 67 ), 12, 18, TRUE,
+    NULL, SLOT( 67 ), 12, 18, FALSE,
     "", "Your force shield shimmers, then fades away.",
     "$n's force field shimmers, then fades away."},
 
@@ -1805,7 +1805,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     MORTAL, NORM,
     "barrier", {182, 182, 182, 182, 8, 182},
     spell_barrier, TAR_CHAR_SELF, POS_STANDING,
-    NULL, SLOT( 506 ), 30, 24, TRUE,
+    NULL, SLOT( 506 ), 30, 24, FALSE,
     "", "Your barrier slowly fades.",
     "The barrier around $n fades."},
 
@@ -2793,7 +2793,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "holy armor", {182, 30, 182, 182, 182, 182,
                    182, 19, 182, 182, 182, 182},
     spell_holy_armor, TAR_CHAR_DEFENSIVE, POS_STANDING,
-    NULL, SLOT( 636 ), 100, 12, TRUE,
+    NULL, SLOT( 636 ), 100, 12, FALSE,
     "", "Your armor is no longer blessed.",
     ""},
 

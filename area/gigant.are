@@ -20,7 +20,7 @@ Path into the Town~
 You are on a small, well-worn dirt path, which leads into the Ogre town, known
 as Giganthia.
 ~
-4 4
+16388 4
 D1
 The Path Continues in this Direction.
 ~
@@ -670,7 +670,9 @@ Gruth is a large Ogre, who smells awful.  Maybe you should tell him?  On
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3402
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3402
 chieftain ogre~
 the Ogre Chieftain~
 The Ogre Chieftain is here, doing his best to rule.
@@ -683,7 +685,9 @@ The Chieftain looks old, but still able to beat most people in a fight.
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3403
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3403
 armorer armourer~
 the Armourer~
 The Armourer stands here, waiting to rip you off.
@@ -696,7 +700,9 @@ The Armourer buys and sells armour.  What an exciting life!
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3404
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3404
 shopkeeper~
 the Shopkeeper~
 The Shopkeeper stands here, waiting to sell you stuff.
@@ -709,7 +715,9 @@ She looks quite clean as ogres go.  Shame she doesn't smell clean as well.
 ! 0 0 0 7 0 0 0
 | 0 96 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3405
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3405
 shopkeeper~
 the Shopkeeper~
 The Shopkeeper stands here, rubbing his hands together.
@@ -722,7 +730,9 @@ The shopkeeper is fairly short, and balding.
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3406
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3406
 healer huth~
 Huth~
 The Healer, Huth, stands here, looking in good health.
@@ -735,7 +745,9 @@ Huth is a retired killer, now employed to use his skills to heal adventurers.
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3407
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3407
 weaponsmith~
 the Weaponsmith~
 The Weaponsmith stands here.
@@ -748,7 +760,9 @@ The Weaponsmith has sold more weapons than you've you had hot dinners.
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3408
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3408
 wise man~
 A wise man~
 A wise man stands here, looking wise, and ummm male.
@@ -761,7 +775,9 @@ He looks very intelligent for an ogre.  Pretty big too.
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3409
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3409
 male ogre~
 A Male Ogre~
 A Male Ogre is here.
@@ -774,7 +790,9 @@ He looks like your typical ogre - untidy, and rather large.  Smells too.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3410
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3410
 female ogre~
 A female Ogre~
 A Female Ogre is here.
@@ -787,7 +805,9 @@ She looks like your typical ogre - untidy, and rather large.  Smells too.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3411
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3411
 barkeeper~
 the Barkeeper~
 The Barkeeper stands here, keeping bar.
@@ -800,7 +820,9 @@ He looks quite friendly, as well as being taller than you.
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3412
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3412
 elite guard~
 the elite guard~
 An elite guard stands here, ready to help the Chieftain.
@@ -813,7 +835,9 @@ He is   B  I  G  !
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3413
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3413
 guard~
 the guard~
 A guard stands here, looking out for criminals.
@@ -827,7 +851,9 @@ The guard looks you over, deciding if he should work his own form of justice
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3414
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3414
 guard~
 the guard~
 A guard stands here, looking out for criminals.
@@ -841,7 +867,9 @@ The guard looks you over, deciding if he should work his own form of justice
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3415
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3415
 shopkeeper~
 the shopkeeper~
 The shopkeeper stands here, waiting for you to buy stuff.
@@ -854,7 +882,9 @@ The shopkeeper is a big ogre.  Play nice.
 ! 0 0 0 7 0 0 0
 | 0 32 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #3432
 board~
@@ -862,7 +892,7 @@ the Town's Board~
 The Town's General-Purpose Notice Board is fixed to the wall.~
 27 0 0 1
 0 0 0 3089 0 0 0 0 0 0
-1
+4
 L
 1
 #3401
@@ -872,7 +902,7 @@ Gruth's Axe lies here, looking lethal.
 ~
 5 134217729 8421376 1
 0 0 0 3 0 0 0 0 0 0
-1
+4
 L
 100
 #3402
@@ -881,7 +911,7 @@ a squirming mass of worms~
 A mass of squirming worms lies on the floor.~
 19 0 8388608 1
 10 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #3403
@@ -890,7 +920,7 @@ a small cup of thick mud~
 A small cup, filled with mud has been left here.~
 17 0 8388608 1
 10 10 4 0 0 0 0 0 0 0
-2
+8
 L
 1
 #3404
@@ -899,7 +929,7 @@ a small cup of ale~
 A small cup of ale has been left here.~
 17 0 262144 1
 10 10 4 1 0 0 0 0 0 0
-2
+8
 L
 1
 #3405
@@ -908,7 +938,7 @@ a large club~
 A large club lies forogtton on the floor.~
 5 134217728 8421376 1
 0 0 0 7 0 0 0 0 0 0
-1
+4
 L
 20
 #3406
@@ -917,7 +947,7 @@ a small club~
 A small club lies forogtton on the floor.~
 5 134217728 8421376 1
 0 0 0 7 0 0 0 0 0 0
-1
+4
 L
 15
 #3407
@@ -926,7 +956,7 @@ a spiked belt~
 A lethal-looking spiked belt lies here.~
 9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 A
 18 1
 A
@@ -939,7 +969,7 @@ an iron bracer~
 A crude-looking iron bracer has been left here.~
 9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 25
 #3409
@@ -948,7 +978,7 @@ a pair of iron gauntlets~
 Someone has left a pair of iron gauntlets here.~
 9 134217728 8392704 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 20
 #3410
@@ -957,7 +987,7 @@ a burning elf head~
 A burning elf head has been left here.  How nice.~
 1 134217728 8421376 1
 0 0 20 0 0 0 0 0 0 0
-2
+8
 L
 10
 #3411
@@ -966,7 +996,7 @@ a black ring~
 A black ring has been dropped here.~
 9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 5
 A
@@ -983,7 +1013,7 @@ a dark, muddy puddle~
 A dark muddy puddle lies before you.~
 25 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 1
 #3413
@@ -992,7 +1022,7 @@ A chieftain's aura~
 A chieftain's aura~
 8 134217728 8388610 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 50
 #0

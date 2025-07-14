@@ -17,7 +17,7 @@ S Title not shown on area list.
 #66
 New room~
 No description~
-4 11
+16388 11
 D0
 ~
 ~
@@ -100,7 +100,9 @@ delvar~
 ! 0 0 16 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #67
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#67
 silverleaf~
 @@gSilver@@GLeaf @@WHalfmoon@@N~
 @@gSilver@@GLeaf @@WHalfmoon@@N, of The GoldenStar Elves
@@ -112,7 +114,9 @@ silverleaf~
 ! 0 0 0 7 0 0 0
 | 0 6283264 1024 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #69
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#69
 morganth~
 @@mMorganth @@dthe Mysterious@@N~
 @@mMorganth @@dthe Mysterious@@N, Follower of Magic
@@ -124,7 +128,9 @@ morganth~
 ! 32 0 1 7 0 0 0
 | 0 1022 1 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #66
 zenithars yinyang~
@@ -132,7 +138,7 @@ zenithars yinyang~
 @@mZenithar's @@psymbol @@Gof interdependence.@@N~
 16 64 8388608 1
 4 4 400 4000 0 0 0 0 0 0
-1
+4
 L
 3
 #67
@@ -141,7 +147,7 @@ cyberlichs soggy socks~
 @@GThese are the very same @@bsocks @@Gthat saw @@dCyber @@Gall through the war.@@N~
 16 64 8388608 1
 3 3 300 3000 0 0 0 0 0 0
-1
+4
 L
 3
 #68
@@ -150,7 +156,7 @@ dominias black soul~
 @@RDominia's @@dBlack @@WSoul @@Genvelops you.@@N~
 16 64 8388608 1
 3 3 300 3000 0 0 0 0 0 0
-1
+4
 E
 dom~
 ~
@@ -162,7 +168,7 @@ stimpys djgpp compiler~
 @@GThe very first @@gcompiler @@lStimpy @@Gever used.@@N~
 16 64 8388608 1
 1 1 100 1000 0 0 0 0 0 0
-1
+4
 L
 3
 #70
@@ -171,7 +177,7 @@ thalens olc~
 @@eThalen's @@dOnline Compiler @@Gused to dynamically build areas.@@N~
 16 64 8388608 1
 1 1 100 1000 0 0 0 0 0 0
-1
+4
 L
 3
 #71
@@ -180,7 +186,7 @@ spectrums ice~
 @@cSpectrum's @@aIntegrated Customization Engine @@Gused for intermud communication.@@N~
 16 64 8388608 1
 2 2 200 2000 0 0 0 0 0 0
-1
+4
 L
 3
 #72
@@ -189,7 +195,7 @@ altrags map~
 @@bAltrag's @@dMap @@Gshows you were you've been.@@N~
 16 64 8388608 1
 2 2 200 2000 0 0 0 0 0 0
-1
+4
 L
 3
 #73
@@ -198,7 +204,7 @@ present~
 A Christmas Present wrapped in red and green paper, with a golden bow.@@N~
 32 0 8388608 1
 0 0 0 0 0 0 74 20 0 0
-1
+4
 L
 1
 #74
@@ -208,7 +214,7 @@ intmob code~
 ~
 8 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #75
@@ -218,7 +224,7 @@ A ring with an opaque @@lm@@Bo@@lt@@Bt@@ll@@Be@@ld @@Bdeep blue@@N stone.
 ~
 8 134217729 8396800 3
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 1 5
 L
@@ -230,7 +236,7 @@ A ring with @@bbrown@@N, @@Bblue@@N, @@Rred@@N, and @@gwhite@@N stripes.
 ~
 8 134217730 8396800 5
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 2 5
 L
@@ -242,7 +248,7 @@ An amulet with a transparent pale @@ablue@@N stone.
 ~
 9 134217732 8388736 9
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 3 5
 L
@@ -255,7 +261,7 @@ An amulet with concentric rings of @@dgray@@N, @@gwhite@@N, @@bbrown@@N,
 ~
 9 134217760 8388736 17
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 4 5
 L
@@ -267,7 +273,7 @@ A @@dshadowy @@Nhalo.
 ~
 9 134217920 8388609 33
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 5 5
 L
@@ -279,7 +285,7 @@ A @@msticky@@N looking @@gaura@@N.
 ~
 9 134217920 8388610 65
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 6 1
 L

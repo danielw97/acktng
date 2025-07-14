@@ -56,17 +56,17 @@ D1
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3304
 D2
 Moribund.
 ~
 ~
-0 -1 3304
+0 -1 3303
 D3
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D4
 Moribund.
 ~
@@ -87,7 +87,7 @@ D0
 Moribund.
 ~
 ~
-0 -1 3306
+0 -1 3303
 D1
 Moribund.
 ~
@@ -97,17 +97,17 @@ D2
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D3
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D4
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3306
 D5
 Moribund.
 ~
@@ -129,17 +129,17 @@ D1
 Moribund.
 ~
 ~
-0 -1 3304
+0 -1 3305
 D2
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3304
 D3
 Moribund.
 ~
 ~
-0 -1 3305
+0 -1 3303
 D4
 Moribund.
 ~
@@ -206,7 +206,7 @@ D2
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D3
 Moribund.
 ~
@@ -216,7 +216,7 @@ D4
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D5
 Moribund.
 ~
@@ -242,12 +242,12 @@ D2
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D3
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D4
 Moribund.
 ~
@@ -273,7 +273,7 @@ You are in a large, cold white-tiled room.  You realize that some strange
 @@eAfter typing get all corpse, you may recall.@@N
 @@aIf there is more than one corpse, type exam 2.corpse, 3.corpse, etc. Until you find yours, then get all x.corpse.@@N
 ~
-214028 11
+214030 11
 S
 #0
 #MOBILES
@@ -288,7 +288,9 @@ A Pesky Gremlin stands here, looking for someone to hurt.~
 ! 0 0 0 7 0 0 0
 | 0 2 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3301
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3301
 will willo wisp~
 Will-o the Wisp~
 A strange, flickering light whirls around you.
@@ -302,7 +304,9 @@ As you look closer, you realise it is swamp gas.  You sense an evil force at
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #3300
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3300
 cadaver~
 Cadaver~
 Cadaver stands before you, looking downright evil.
@@ -317,7 +321,9 @@ Cadaver is a long dead adventurer, forever doomed to summon forth other
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #3301
 potion~
@@ -325,7 +331,7 @@ a potion~
 A strange potion lies here.~
 10 128 8388608 1
 1 19 -1 -1 0 0 0 0 0 0
-1
+4
 L
 1
 #3300
@@ -335,7 +341,7 @@ A small key made from human bone lies here.
 ~
 18 2 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #0

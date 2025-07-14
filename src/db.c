@@ -1267,12 +1267,6 @@ void load_objects(FILE *fp)
             ;
       }
       pObjIndex->weight = fread_number(fp);
-      if (pObjIndex->weight == 3)
-         pObjIndex->weight = 13;
-      else if (pObjIndex->weight == 2)
-         pObjIndex->weight = 8;
-      else if (pObjIndex->weight == 1)
-         pObjIndex->weight = 4;
       pObjIndex->cost = 0;
 
       if (pObjIndex->item_type == ITEM_POTION)

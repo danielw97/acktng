@@ -23,7 +23,7 @@ You are standing within the Public Dungeons of Midgaard.
 like all underground places do.  Above you, you see the light of Market
 Square, and to the south, further within the dungeon.
 ~
-9 11
+16393 11
 D2
 ~
 ~
@@ -1177,7 +1177,7 @@ L
 1
 #9558
 A Skeleton's Skull Skeleton~
-a cute little skeleton's skull~
+@@dA cute little @@WSkeleton's@@d skull@@N~
 Cute little skeleton skull~
 9 192 8388672 17
 0 0 0 0 0 0 0 0 0 0

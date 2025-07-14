@@ -787,7 +787,9 @@ The Guinea-pig guardian of the burrow awaits death here.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7307
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7307
 ram~
 a bleating starry-eyed ram~
 The sacred holy ram lies here, sleeping and unaware.
@@ -799,7 +801,9 @@ The sacred holy ram lies here, sleeping and unaware.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7306
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7306
 Lordly Healer~
 The Shadow~
 The Shadow is levitating here, ready to help the clan.
@@ -811,7 +815,9 @@ The Shadow is levitating here, ready to help the clan.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7305
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7305
 spider~
 a giant spider~
 A giant spider hangs on his web here.
@@ -823,7 +829,9 @@ A giant spider hangs on his web here.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7304
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7304
 shapeshifter~
 A shapeshifter~
 A small sniffing shapeshifter cringes in one corner.~
@@ -834,7 +842,9 @@ A small sniffing shapeshifter cringes in one corner.~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7303
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7303
 hermit~
 A grumpy hermit~
 A grumpy looking hermit shakes a stick at you.
@@ -846,7 +856,9 @@ A grumpy looking hermit shakes a stick at you.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7302
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7302
 tree~
 A rotting tree.~
 A rotting tree approaches you.
@@ -858,7 +870,9 @@ A rotting tree approaches you.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7301
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7301
 wolverine~
 A nasty vicious wolverine~
 A nasty vicious wolverine is rooting for food here.
@@ -870,7 +884,9 @@ A nasty vicious wolverine is rooting for food here.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7300
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7300
 ghost~
 ghost of the adventurer~
 The ghost of the dead adventurer rises from the ground and attacks!
@@ -882,7 +898,9 @@ The ghost of the dead adventurer rises from the ground and attacks!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7309
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7309
 mister mystoffeles~
 MaGiCaL MiStEr @@RM@@yy@@cs@@Gt@@Wo@@bf@@Rf@@ce@@yl@@Ge@@Ws@@g~
 A Strange cat lies here doing conjuring tricks.
@@ -894,7 +912,9 @@ A Strange cat lies here doing conjuring tricks.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #7316
 blood~
@@ -902,7 +922,7 @@ A drop of Isileth's sweet crimson blood~
 A drop of Isileth's sweet crimson blood~
 9 3 8388672 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 19 2
 A
@@ -916,7 +936,7 @@ The unholy grail lies here, shimmering softly.
 ~
 13 1 8421376 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7313
@@ -925,7 +945,7 @@ a tight fitting black silken gown~
 A grubby gown is lying here~
 9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7312
@@ -935,7 +955,7 @@ A beautiful gown lies here ground underfoot.
 ~
 9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7310
@@ -945,7 +965,7 @@ A huge bracer has been stupidly discarded here.
 ~
 9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 1 2
 A
@@ -962,7 +982,7 @@ The bloodring lies here, glowing in the dust.
 ~
 8 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 0
 A
@@ -978,7 +998,7 @@ A parchment nailed to the wall, for the sharing of knowledge.
 ~
 27 1 0 1
 28 1 1 9011 0 0 0 0 0 0
-1
+4
 L
 1
 #7307
@@ -988,7 +1008,7 @@ The fountain of all knowledge is here, gushing streams of words.
 ~
 25 0 0 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7306
@@ -998,7 +1018,7 @@ A small vial lies on the floor here, full of an azure liquid.
 ~
 10 128 8388608 1
 0 28 -1 -1 0 0 0 0 0 0
-2
+8
 L
 1
 #7305
@@ -1008,7 +1028,7 @@ A bit of tree is lying here forgotten.
 ~
 5 134217730 8421376 1
 0 0 0 7 0 0 0 0 0 0
-2
+8
 A
 19 3
 A
@@ -1024,7 +1044,7 @@ Some long razor blades on gloves lie on the floor here.
 ~
 5 134217728 8404992 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 2 -1
 A
@@ -1039,7 +1059,7 @@ key to discovery~
 Nah you dont want this.~
 9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7302
@@ -1048,7 +1068,7 @@ a smouldering cigarette~
 ~
 9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7301
@@ -1058,7 +1078,7 @@ An anchient black desk appears to be watching you.
 ~
 12 0 0 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7300
@@ -1068,7 +1088,7 @@ The lonely chair resides here waiting for a man.
 ~
 12 2 8388672 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #7317
@@ -1078,7 +1098,7 @@ Something shimmers on the ground here.
 ~
 1 4482 8421376 1
 0 0 -1 0 0 0 0 0 0 0
-1
+4
 A
 18 0
 A
@@ -1094,7 +1114,7 @@ A glinting silver wristband lies in the dirt here.
 ~
 9 2 8390656 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 18 0
 A

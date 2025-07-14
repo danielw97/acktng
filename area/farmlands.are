@@ -1837,7 +1837,9 @@ Slave~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7201
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7201
 a slave~
 @@Ga slave@@N~
 @@GA male slave is here, searching for weeds.@@N
@@ -1849,7 +1851,9 @@ a slave~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7202
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7202
 girl daughter woman~
 @@Gthe farmer's daughter@@N~
 @@GA young girl in a plain @@ggrey@@G dress is here, cooking.@@N
@@ -1861,7 +1865,9 @@ girl daughter woman~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7203
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7203
 boy man son~
 @@Gthe farmer's son@@N~
 @@GA teen in @@Bblue@@G overall's is here, cleaning out the farming equipment
@@ -1874,7 +1880,9 @@ boy man son~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7204
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7204
 wife woman~
 @@Gthe farmer's wife@@N~
 @@GA middle-aged woman directs the slaves, tired of her life.@@N
@@ -1886,7 +1894,9 @@ wife woman~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7205
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7205
 Farmer man~
 @@Gthe Farmer@@N~
 @@GThe Farmer is here, hands callused from years of work.@@N
@@ -1898,7 +1908,9 @@ Farmer man~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #7206
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#7206
 chicken~
 @@Ga chicken@@N~
 @@GA small runt-like chicken is here, searching for food.@@N
@@ -1910,7 +1922,9 @@ chicken~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #RESETS
 M 0 7200 50 7225 (null)
 

@@ -178,7 +178,7 @@ You stand in the Ethereal plane, it is a dark plane with nothing but floating
 see the same thing.
 
 ~
-8 11
+262152 11
 D0
 ~
 ~
@@ -593,7 +593,9 @@ A Plasma Beast
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #RESETS
 D 0 3863 4 1 (null)
 

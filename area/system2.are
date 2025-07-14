@@ -23,7 +23,7 @@ You are stanfnding in the front hall of a regular-looking two-story house. The
  
 
 ~
-8200 11
+155656 11
 D0
 ~
 ~
@@ -227,7 +227,9 @@ Bkla;dkhglkhjg
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #27
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#27
 Mr. Bumpy~
 Mr. Bumpy~
 Mr. Bumpy is here looking for left socks to eat.~
@@ -240,7 +242,9 @@ Blah blah blah blah *burp* blah blah blah
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #26
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#26
 Closet Monster~
 Closet Monster~
 The ugly closet monster is here! and hes gonna eat you!~
@@ -253,7 +257,9 @@ Blah blah blah
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #25
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#25
 kitty cat~
 cute little kitty cat~
 A cute little kitty cat sits here licking itself.~
@@ -267,7 +273,9 @@ Descriptive-type stuff...
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #24
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#24
 a bird~
 a little bird~
 A little bird sits here on the railing.. how cute.~
@@ -280,7 +288,9 @@ This cute littlwe bird couldnt hurt a flea...
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #23
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#23
 Fat guy~
 the fat guy~
 A big slimy fat man is here.~
@@ -293,7 +303,9 @@ Man.. does this guy reek. he looks even worse than he smells. You really didnt
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #21
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21
 REally Annoying kid ~
 the little brat~
 An annoying little kid
@@ -308,7 +320,9 @@ This little brat must belon gto the ppl who own this house.. this kid makes
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #22
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#22
 the fast housewife~
 blah~
 Cuper blah 
@@ -321,7 +335,9 @@ Oh blah~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #26
 Level 100 tester sword~
@@ -329,7 +345,7 @@ level 100 tester sword~
 100th level tester sword~
 5 0 8421376 1
 36 84 0 6 0 0 0 0 0 0
-1
+4
 A
 17 -500
 A
@@ -344,7 +360,7 @@ small laser connon white~
 A little white laser conna rests here.~
 5 0 8421376 1
 0 0 0 11 0 0 0 0 0 0
-3
+13
 A
 14 -200
 A
@@ -361,7 +377,7 @@ Corpse~
 Corpse~
 15 0 0 1
 10000 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #21
@@ -370,7 +386,7 @@ a bright ball of light~
 A bright ball of light shimmers in the air.~
 1 0 8388608 1
 0 0 -1 0 0 0 0 0 0 0
-1
+4
 L
 1
 #22
@@ -379,7 +395,7 @@ a small wooden desk~
 A small, fashionable oak desk sits here.~
 12 64 8421376 1
 2 0 0 0 0 0 0 0 0 0
-3
+13
 A
 14 -200
 A
@@ -392,7 +408,7 @@ Corpse~
 Corpse~
 15 0 0 1
 10000 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #0

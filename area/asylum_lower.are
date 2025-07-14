@@ -19,7 +19,7 @@ W Zenithar~
 more than you can bear. @@GSlime @@dcovers the walls, the floor, even the
 ceiling, and tracks can be seen wandering off into the darkness.@@N
 ~
-12 11
+16396 11
 D0
 @@dAhead lies a narrow corridor, gloomy in it's darkness.  You think you
 glance a few gleaming @@Reyes@@d just above floor level far ahead.@@N
@@ -212,15 +212,15 @@ S
 D0
 ~
 ~
-0 -1 5108
+0 -1 5110
 D3
 ~
 ~
-0 -1 5110
+0 -1 5116
 D4
 ~
 ~
-0 -1 5116
+0 -1 5108
 S
 #5110
 @@dThe Vast Darkness@@N~
@@ -279,7 +279,7 @@ D0
 ~
 ~
 0 -1 5113
-D1
+D2
 ~
 ~
 0 -1 5111
@@ -340,15 +340,15 @@ S
 D0
 ~
 ~
+0 -1 5114
+D1
+~
+~
 0 -1 5116
 D2
 ~
 ~
 0 0 5114
-D4
-~
-~
-0 -1 5114
 S
 #5116
 @@dThe Vast Darkness@@N~
@@ -439,7 +439,7 @@ S
 about.@@N
 ~
 9 11
-D0
+D1
 ~
 ~
 0 -1 5119
@@ -744,7 +744,9 @@ guardian~
 ! 0 0 0 7 0 0 0
 | 0 589824 0 0 0 0 72
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5101
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5101
 thing~
 @@dA @@Rhideous @@Gamphibious@@d @@dthing@@N~
 @@dA corrupted thing formed from an @@Gamphibian @@dmelded with a human hops
@@ -757,7 +759,9 @@ thing~
 ! 0 0 0 7 0 0 0
 | 0 589824 0 0 0 0 72
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5102
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5102
 thing~
 @@dAn oversized @@Gfrog-like @@dthing@@N~
 @@dAn oversized @@Gfrog@@d, strangely appearing humanoid, hops towards you.@@N
@@ -770,7 +774,9 @@ thing~
 ! 0 0 0 7 0 0 0
 | 0 589824 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5103
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5103
 frog~
 @@dA huge @@Rdemonic @@GFrog@@N~
 @@dThe @@Rdemonic @@dform of a human melded with a @@GFrog@@d glares at you
@@ -783,7 +789,9 @@ frog~
 ! 0 0 0 7 0 0 0
 | 0 17367040 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5104
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5104
 administrator~
 @@DThe @@mAsylum @@RAdministrator@@N~
 @@dA tiny man, looking rather harmless wanders about, observing the @@mAsylum
@@ -796,7 +804,9 @@ administrator~
 ! 0 0 0 7 0 0 0
 | 0 50921472 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #5105
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#5105
 monstrosity~
 @@dA @@RDemonic @@dMonstrosity@@N~
 @@dA monstrosity from the depths of @@Rcorruption @@dstands before you!!!@@N
@@ -808,7 +818,9 @@ monstrosity~
 ! 0 0 0 7 0 0 0
 | 0 50921472 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #5100
 key~
@@ -817,7 +829,7 @@ key~
 ~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 80
 #5101
@@ -826,7 +838,7 @@ L
 ~
 14 65536 0 1
 9 3 5105 0 0 0 0 0 0 0
-3
+13
 E
 altar~
 ~
@@ -838,7 +850,7 @@ sash~
 An abandoned sash lies here~
 9 134217872 8519680 1281
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -170
 A
@@ -859,7 +871,7 @@ gauntlets~
 @@dA pair of @@mAsylum @@dGauntlets@@d lies here.@@N~
 9 134217858 8392704 261
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 19 34
 A
@@ -878,7 +890,7 @@ stain~
 @@dThe remnants of a dried pool of @@Gslime@@d covers the floor.@@N~
 9 134348992 8389120 17
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -240
 A
@@ -901,7 +913,7 @@ rod~
 @@dA blackened rod, covered in @@Rstains@@d lies here.@@N~
 5 167772304 8421376 257
 0 0 0 8 0 0 0 0 0 0
-2
+8
 A
 18 23
 A
@@ -916,7 +928,7 @@ slime~
 @@dA tiny blob of petrified @@Gslime@@d lies here.@@N~
 9 134217856 8388609 65543
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -120
 A
@@ -933,7 +945,7 @@ boots~
 @@dA pair of @@mmalachite @@dboots@@N~
 9 134217856 10485760 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -150
 A

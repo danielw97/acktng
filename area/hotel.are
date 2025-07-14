@@ -801,7 +801,7 @@ S
 The Hotel's Attic~
 You are in the deserted, unused (and dusty!) Attic of the Hotel.
 ~
-9 11
+16393 11
 D0
 ~
 ~
@@ -826,7 +826,9 @@ He looks old, and bored.  Be nice and leave him alone.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4413
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4413
 bell boy bellboy~
 the bellboy~
 The bellboy stands here, looking to make a quick tip.
@@ -839,7 +841,9 @@ He is young, and ugly.  What else do you need to know?
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4412
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4412
 member staff~
 A member of Staff~
 A member of staff stands here, trying to ignore you.
@@ -852,7 +856,9 @@ She is old, and looks unhelpful, to say the least.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4411
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4411
 newlywed~
 A Newlywed Groom~
 A newlywed groom stands here, waiting for night time.
@@ -865,7 +871,9 @@ He has just got married, and is spending his honeymoon here.  Fool.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4410
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4410
 newlywed~
 A Newlywed Bride~
 A newlywed bride stands here, trying to fake a headache.
@@ -878,7 +886,9 @@ She is very pretty, and looks annoyed at having to honeymoon here.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4409
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4409
 guest~
 A guest~
 A guest is here, thinking of more things to complain about.
@@ -891,7 +901,9 @@ He is big, horrible and ugly.  The perfect guest for this hotel!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4408
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4408
 manager~
 The manager~
 The manager is here, suddenly looking VERY innocent.
@@ -905,7 +917,9 @@ The manager is a short fellow, the kind of person you take an instant dislike
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4407
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4407
 barmaid~
 The barmaid~
 The Barmaid is here, looking slightly naked.
@@ -918,7 +932,9 @@ She is indeed naked.  Where could her clothes have gone??
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4406
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4406
 clockwork fish~
 A clockwork fish~
 A clockwork fish swims about here.
@@ -931,7 +947,9 @@ It is made from various pieces of dolls and puppets.  Uh-oh...
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4405
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4405
 cook~
 The cook~
 The cook stands here, pretending to be in a coma, through all the excitement.
@@ -944,7 +962,9 @@ He looks bored, to say the least.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4404
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4404
 driller killer~
 driller killer~
 Driller Killer, the mean puppet stands here, waiting to kill you.  Run!?!?
@@ -957,7 +977,9 @@ Driller Killer is a small doll, but has a large, sharp head.
 ! 0 0 0 7 0 0 0
 | 0 1052672 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4403
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4403
 puppet master puppetmaster~
 The Puppetmaster~
 The Puppetmaster stands here, looking damn evil.
@@ -970,7 +992,9 @@ He is scared, and old.  However, he's still bigger than you!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 68
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4402
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4402
 giant puppet~
 A giant puppet~
 A giant puppet is waiting here......  for you maybe??
@@ -983,7 +1007,9 @@ The puppet is giant by puppet dimensions, but still smaller than you.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4401
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4401
 puppet~
 A puppet~
 A puppet is here, wandering around.
@@ -996,7 +1022,9 @@ The puppet looks like a normal puppet, except it is walking around!!!!!!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4400
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4400
 guard puppet~
 A guard puppet~
 A puppet is here, as if on guard.
@@ -1009,7 +1037,9 @@ It is a plain looking puppet, except is looks very evil.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #4409
 red staff~
@@ -1017,7 +1047,7 @@ a red staff~
 A red staff lies on the floor.~
 4 2576 8421376 1
 50 8 8 30 0 0 0 0 0 0
-2
+8
 L
 1
 #4408
@@ -1026,7 +1056,7 @@ a gnarled staff~
 A gnarled staff lies here.~
 5 134220304 8421376 1
 0 0 0 7 0 0 0 0 0 0
-1
+4
 L
 50
 #4407
@@ -1035,7 +1065,7 @@ some red armbands~
 A red pair of armbands lies here.~
 9 134217744 8390656 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -75
 A
@@ -1052,7 +1082,7 @@ red leggings~
 Some red leggings have been left here.~
 9 134217744 9437184 17
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 10
 A
@@ -1067,7 +1097,7 @@ a bag of coins~
 A bag of coins lies here.~
 20 0 8388608 1
 5000 0 0 0 0 0 0 0 0 0
-2
+8
 L
 1
 #4404
@@ -1076,7 +1106,7 @@ a kitchen knife~
 A kitchen knife has been left here.~
 5 134217744 8421376 1
 0 0 0 3 0 0 0 0 0 0
-3
+13
 A
 18 7
 A
@@ -1089,7 +1119,7 @@ a small hatpin~
 A small hatpin has been dropped here.~
 5 134217744 8421376 257
 0 0 0 11 0 0 0 0 0 0
-3
+8
 A
 18 8
 A
@@ -1102,7 +1132,7 @@ a leather belt~
 A leather belt has carelessly been left here.~
 9 134218256 8519680 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 40
 #4401
@@ -1111,7 +1141,7 @@ some brain fluid~
 Some brain fluid has been left here.~
 10 128 8388608 1
 50 56 67 1 0 0 0 0 0 0
-1
+4
 L
 1
 #4400
@@ -1120,7 +1150,7 @@ a gold band~
 A gold band has been dropped here.~
 9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 A
 13 -10
 A

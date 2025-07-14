@@ -22,7 +22,7 @@ You are in a large courtyard, built beneath the land.  Small torches flicker
 The Floor is paved here, whilst there are a few sturdy-looking wooden
 supports holding the ceiling in place.
 ~
-1036 11
+17420 11
 S
 #0
 #MOBILES
@@ -38,6 +38,9 @@ He is here to serve you.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #51
 beaver~
 A small cute and fuzzy beaver~
@@ -49,6 +52,9 @@ A beaver with red hair languishes in the sun here.
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #55
@@ -66,7 +72,7 @@ the board~
 The Clan Board is firmly fixed to the wall.~
 27 0 0 1
 28 1 1 1543 0 0 0 0 0 0
-1
+4
 L
 1
 #57
@@ -75,7 +81,7 @@ the Tome of the Ancients~
 An antique spellbook lies here radiating power.~
 9 1 8421376 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 A
 3 2
 A
@@ -90,7 +96,7 @@ bMX body Armour~
 ~
 9 4 8650752 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 1000
 A

@@ -102,6 +102,8 @@
 
 #define MAX_LOOT 9
 
+#define PLAYER_HOUSING_VNUM 310
+
 #define LEVEL_ONE 20
 #define LEVEL_TWO 200
 #define LEVEL_THREE 2000

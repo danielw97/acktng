@@ -561,7 +561,7 @@ S
 \br\br@@GYou know that it will be certain death for the unwary here.
 Go back if you value your lives!!! Only the most powerful will live!@@N
 ~
-4 2
+16388 2
 D1
 ~
 ~
@@ -1592,7 +1592,9 @@ death knight~
 ! 0 0 0 7 0 0 0
 | 0 33554432 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11012
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11012
 sentinel~
 @@dThe Death Guardian@@N~
 @@da huge shadowy sentinel stands before you.@@N
@@ -1604,7 +1606,9 @@ sentinel~
 ! 0 0 0 7 0 0 0
 | 0 16781440 0 0 0 0 144
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11011
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11011
 a harpie~
 A @@Bscreeching@@N @@Gharpie@@N~
 A sceaming harpie wails as you as it dives foerm the air above.
@@ -1616,7 +1620,9 @@ A sceaming harpie wails as you as it dives foerm the air above.
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11008
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11008
 legion death~
 @@gA @@RLegion of Death@@g~
 @@ga decaying member of the @@RLegion of Death@@g attacks you!@@g
@@ -1628,7 +1634,9 @@ legion death~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11007
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11007
 zombie lord~
 @@mA Zombie Lord@@g~
 @@RAn animated corpse of a long dead hero @@gstands in front of you.@@g
@@ -1640,7 +1648,9 @@ zombie lord~
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11006
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11006
 Gillian~
 @@WGillian@@g~
 @@RGillian@@g is here, comforting @@cManiac.@@g
@@ -1652,7 +1662,9 @@ Gillian~
 ! 0 0 0 7 0 0 0
 | 0 561152 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11004
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11004
 zombie~
 @@ma slow moving zombie@@g~
 @@m a shambling zombie decays into pieces in front of you.@@g
@@ -1664,7 +1676,9 @@ zombie~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11003
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11003
 skeleton~
 a nasty skeleton~
 @@bA silent skeleton wanders about.@@g
@@ -1677,7 +1691,9 @@ All bones, the skeleton laughs at your attempts to hurt it!!
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11000
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11000
 ghoul~
 a vicious ghoul~
 @@RAn evil ghoul with filthy claws lunges at you!@@g
@@ -1691,7 +1707,9 @@ a vicious ghoul~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11002
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11002
 vicious ghoul~
 a vicious ghoul~
 @@RAn evil ghoul with filthy claws lunges at you!@@g
@@ -1705,7 +1723,9 @@ a vicious ghoul~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11001
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11001
 wight~
 @@ma ghastly Wight@@g~
 @@Ra disgustingly filthy wight with an overpowering stench stares at you.@@g
@@ -1718,7 +1738,9 @@ wight~
 ! 0 0 0 7 0 0 0
 | 0 32832 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11005
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11005
 maniac~
 @@cManiac@@g the @@mLost@@g~
 A fear crazed adventurer named @@cManiac@@g attacks you!!
@@ -1730,7 +1752,9 @@ A fear crazed adventurer named @@cManiac@@g attacks you!!
 ! 0 0 0 7 0 0 0
 | 0 2103360 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11009
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11009
 shadow evil~
 @@Ran evil shadow@@g~
 @@Ran evil shadow@@g waits here, watching you!
@@ -1742,7 +1766,9 @@ shadow evil~
 ! 0 0 0 7 0 0 0
 | 0 3170304 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11010
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11010
 spirit~
 An @@eangered@@N spirit~
 An @@eangered@@N entity floats here, adding its troubled cries to the @@cair.@@N
@@ -1754,7 +1780,9 @@ An @@eangered@@N entity floats here, adding its troubled cries to the @@cair.@@N
 ! 0 0 0 7 0 0 0
 | 0 274432 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #11014
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#11014
 abraham helsing~
 @@aAbraham van Helsing@@N~
 Abraham van Helsing
@@ -1766,7 +1794,9 @@ Abraham van Helsing
 ! 0 0 0 7 0 0 0
 | 0 1085440 0 0 0 0 144
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #11012
 citadel pass~
@@ -1775,7 +1805,7 @@ A tiny key lies here.
 ~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 79
 #11009
@@ -1784,7 +1814,7 @@ hero's bastard sword~
 @@gan ancient bastard sword, fully 5 feet long, lies here.~
 5 134217795 8421376 257
 28 0 0 1 0 0 0 0 0 0
-3
+13
 A
 17 -15
 A
@@ -1801,7 +1831,7 @@ a @@RSkull Key@@g~
 A large black key shaped like a skull lies here.~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #11005
@@ -1811,7 +1841,7 @@ plate platemail archon~
 ~
 9 1281 8650752 4224
 40 0 0 0 0 0 0 0 0 0
-3
+13
 A
 24 -10
 A
@@ -1834,7 +1864,7 @@ mace archon~
 A shimmering, irridescent mace studded with diamonds lies here.~
 5 134219011 8421376 257
 35 0 0 7 0 0 0 0 0 0
-1
+4
 A
 17 -140
 A
@@ -1856,7 +1886,7 @@ A Large fleshy plant grows here.
 ~
 17 0 8388616 1
 50 50 0 0 0 0 0 0 0 0
-3
+13
 L
 1
 #11002
@@ -1866,7 +1896,7 @@ a black iron shield~
 ~
 9 134217748 8421376 1
 20 0 0 0 0 0 0 0 0 0
-2
+8
 A
 9 5
 A
@@ -1898,7 +1928,7 @@ A short mace, covered in graveyard dirt lies here.
 ~
 5 134217748 8421376 1
 20 0 0 7 0 0 0 0 0 0
-2
+8
 A
 9 20
 A
@@ -1917,7 +1947,7 @@ L
 @@d a large stone key in the shape of a dagger lies here.@@g~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 1
 #11006
@@ -1927,7 +1957,7 @@ A glimmering, irridescent faceguard is waiting to be worn.
 ~
 9 134217985 8388624 3594
 25 0 0 0 0 0 0 0 0 0
-3
+13
 A
 3 2
 A
@@ -1948,7 +1978,7 @@ Cabrilaan~
 ~
 5 134219011 8421376 384
 25 0 0 3 0 0 0 0 0 0
-1
+4
 A
 12 50
 A
@@ -1967,7 +1997,7 @@ helm legion~
 @@ga helm with a huge @@Reye@@g glares at you!~
 9 134217812 8388616 1035
 20 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -70
 A
@@ -1988,7 +2018,7 @@ sword death legion~
 ~
 5 134217814 8421376 257
 35 0 0 3 0 0 0 0 0 0
-1
+4
 A
 18 12
 A
@@ -2004,7 +2034,7 @@ What seems to be the bottom section of a broken staff lies here.
 ~
 29 0 8388608 1
 0 11014 11015 0 0 0 0 0 0 0
-1
+4
 L
 50
 #11014
@@ -2015,7 +2045,7 @@ The middle piece of a broken staff lies here, looking for it's connecting
 ~
 29 0 8388608 1
 11013 0 11015 0 0 0 0 0 0 0
-1
+4
 L
 50
 #11015
@@ -2025,7 +2055,7 @@ The connected bottom section of a staff lies here.
 ~
 29 0 8388608 1
 0 11016 11017 0 0 0 0 0 0 0
-1
+4
 L
 50
 #11016
@@ -2035,7 +2065,7 @@ The top piece of a beautiful staff lies here.
 ~
 29 0 8388608 1
 11015 0 11017 0 0 0 0 0 0 0
-1
+4
 L
 50
 #11017
@@ -2046,7 +2076,7 @@ A mostly completed staff lies here, looking for a beautiful gem to fit inside
 ~
 29 0 8388608 1
 0 11018 11019 0 0 0 0 0 0 0
-1
+4
 L
 50
 #11018
@@ -2056,7 +2086,7 @@ A beautiful glittering gem lies here, looking perfect for a moagical staff.
 ~
 29 0 8388608 1
 11017 0 11019 0 0 0 0 0 0 0
-1
+4
 L
 50
 #11019
@@ -2066,7 +2096,7 @@ A beautiful white staff, topped with a shimmering gem lies here.
 ~
 5 134218049 8421376 1
 0 0 0 7 0 0 0 0 0 0
-1
+4
 L
 60
 #0

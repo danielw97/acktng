@@ -409,7 +409,9 @@ minotaur patrol~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6605
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6605
 cut cutthroat throat minotaur~
 @@eMinotaur @@dCutthroat@@N~
 @@dA @@eMinotaur @@dCutthroat jumps out from behind the @@grocks.@@N
@@ -421,7 +423,9 @@ cut cutthroat throat minotaur~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6621
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6621
 minotaur lesser guard~
 @@eMinotaur @@dLesser Guard@@N~
 @@dThis @@eMinotaur@@d @@dGuard seems to be guarding a door.@@N
@@ -433,7 +437,9 @@ minotaur lesser guard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 2
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6622
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6622
 minotaur trainee~
 @@eMinotaur @@dTrainee@@N~
 @@dA @@eMinotaur @@dTrainee @@dis hard at work slashing a target.@@N
@@ -445,7 +451,9 @@ minotaur trainee~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6620
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6620
 minotaur worker~
 @@eMinotaur @@dWorker@@N~
 @@dA @@eMinotaur @@dWorker is busy carrying large bags of supplies down the
@@ -458,7 +466,9 @@ minotaur worker~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6614
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6614
 minotaur ranger~
 @@eMinotaur @@GRanger@@N~
 @@dA @@eMinotaur @@GRanger @@dscouts out the rear area of the camp.@@N
@@ -470,7 +480,9 @@ minotaur ranger~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 80
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6623
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6623
 minotaur commander~
 @@eMinotaur @@cCommander@@N~
 @@dThe @@eMinotaur @@cCommander@@d looks pissed that his plans have been
@@ -483,7 +495,9 @@ minotaur commander~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 48
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #6623
 key~
@@ -492,7 +506,7 @@ key~
 ~
 18 147488 8388608 1
 6623 0 0 0 0 0 0 0 0 0
-1
+4
 L
 100
 #6622
@@ -502,7 +516,7 @@ battleaxe~
 ~
 5 134217728 8421376 1
 0 0 0 3 0 0 0 0 0 0
-3
+13
 A
 13 200
 A
@@ -520,7 +534,7 @@ security pass~
 ~
 9 134348800 8421376 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 17 -175
 A
@@ -540,7 +554,7 @@ boots~
 ~
 9 134349120 12582912 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -150
 A
@@ -562,7 +576,7 @@ battle helmet~
 ~
 9 134348800 8388612 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 A
 19 18
 A

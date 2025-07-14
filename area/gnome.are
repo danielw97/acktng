@@ -34,7 +34,7 @@ Within the caverns and tunnels that surround and make up the gnomish home
 town, food is often difficult to find.  This food store was constructed by
 an enterprising gnome, and supplies the town with simple but tasty fare.
 ~
-8 1
+16392 1
 D0
 Through a small tunnel in the cave wall is the exit back to the town 
 walk-ways.~
@@ -701,7 +701,9 @@ Erin is a relatively large gnome, with a stature that would scare even
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6002
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6002
 healer ammira~
 Ammira the Healer~
 Ammira stands here, asking what ails she may cure you of.
@@ -717,7 +719,9 @@ Although only a small gnome in stature, Ammira has the spells to protect her
 ! 0 0 0 7 0 0 0
 | 0 32848 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6003
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6003
 gnome ciaran weaponsmith~
 Ciaran the Gnomish Weaponsmith~
 Ciaran the Gnomish Weaponsmith stands here waiting for you to make a purchase.
@@ -733,7 +737,9 @@ The Gnomish Weaponsmith has dark tan skin, a neatly trimmed grey beard, and
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6004
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6004
 elchern storekeeper owner shopkeeper keeper~
 Elchern~
 Elchern, the store owner, stands waiting to serve you a delicious meal.
@@ -750,7 +756,9 @@ Elchern has, over the years, found a wide variety of food that the gnomish
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6005
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6005
 garneth trainer~
 Garneth the Gnomish Trainer~
 Garneth stands here, waiting to train your attributes.
@@ -768,7 +776,9 @@ Garneth has the skills only taught in the olden days, the skills he learnt
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6006
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6006
 seth trainer~
 Seth the Enhancer~
 Seth stand here, waiting to assist your practicing techniques.
@@ -786,7 +796,9 @@ Seth is a seemingly average gnome.  He is of average height, he has the
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6007
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6007
 james grocer shopkeeper~
 James the Grocer~
 James the Grocer stands at his counter.
@@ -801,7 +813,9 @@ James is a dark brown skinned gnome, with a less than average gnome sized
 ! 0 0 0 7 0 0 0
 | 0 1064960 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6008
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6008
 armourer caedric~
 Caedric the Armourer~
 Caedric stands here, polishing his newly aquired armour.
@@ -817,7 +831,9 @@ Caedric is a stocky gnome, of average height, with a woody brown skin and
 ! 0 0 0 7 0 0 0
 | 0 16448 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6009
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6009
 jeweller nayelle~
 Nayelle the Jeweller~
 The jeweller, Nayelle, sits behind the counter filing her nails.
@@ -834,7 +850,9 @@ Nayelle buys and sells only the finest gnome gems, stones and jewellery
 ! 0 0 0 7 0 0 0
 | 0 40960 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6010
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6010
 gnome citizen~
 the gnome citizen~
 The gnome citizen wanders areound Erin's-Burrow.
@@ -849,7 +867,9 @@ Gnomes are similar to small, slightly thinner dwarves, excepting that they
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6011
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6011
 gnome miner~
 the gnome miner~
 The gnome miner wanders the tunnels looking for minerals to mine.
@@ -864,7 +884,9 @@ The miner is well muscled from extracting the gems and stones from the hard
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6012
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6012
 gnome guard~
 the gnome guard~
 The gnome guard wanders around the tunnels ensuring that no trouble is about.
@@ -879,7 +901,9 @@ The gnome guard is scarred from battles with kobolds and goblins.  His armour
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6013
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6013
 alnart gnome chieftain~
 Alnart the Gnome Chieftain~
 Alnart, the Gnome Chieftain is here ensuring the township runs smoothly.
@@ -896,7 +920,9 @@ His enormous nose and neatly trimmed grey beard, decorated with stones,
 ! 0 0 0 7 0 0 0
 | 0 64 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6014
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6014
 gnome child boy~
 the gnome child~
 The gnome child is here playing in the tunnels.
@@ -911,7 +937,9 @@ The gnome child is very small, even by the gnomish standards, and has a head
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #6015
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#6015
 gnome child girl~
 the gnome child~
 The gnome child is here playing in the tunnels.
@@ -926,7 +954,9 @@ The gnome child is very small, even by the gnomish standards, and has a head
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #6001
 short spear~
@@ -934,7 +964,7 @@ a short spear~
 A short spear has been left here to deteriorate.~
 5 134217728 8421376 1
 0 0 0 2 0 0 0 0 0 0
-1
+4
 E
 spear short~
 This spear has been made with a wood shaft and a small but very sharp metal
@@ -948,7 +978,7 @@ a short sword~
 A short sword has been left to rust here.~
 5 134217728 8421376 1
 0 0 0 3 0 0 0 0 0 0
-1
+4
 E
 short sword~
 This small sword is forged of strengthened steel.  It is both strong and 
@@ -964,7 +994,7 @@ a suit of studded leather armour~
 A small suit of studded leather armour has been left here to rot.~
 9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 E
 suit studded leather armour~
 This finely crafted piece of leather body armour has been carefully and
@@ -981,7 +1011,7 @@ a small quartz rock~
 A small quartz rock has been left here.~
 1 134217728 8421376 1
 0 0 -1 0 0 0 0 0 0 0
-1
+4
 E
 small quartz rock light~
 This light source is made from a small rock of the clear variety of quartz.
@@ -1000,7 +1030,7 @@ a small mining pick~
 A small mining pick has been left here.~
 5 134217728 8421376 1
 0 0 0 8 0 0 0 0 0 0
-1
+4
 E
 pick small mining~
 This small but strong mining pick is made by the gnomish weaponsmith to serve
@@ -1017,7 +1047,7 @@ a suit of jewelled plate mail~
 A suit of plate armour glitters in the light.~
 9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 E
 jewelled armour plate~
 This armour is forged with skill and strength by the gnomish weaponsmith, 
@@ -1036,7 +1066,7 @@ a pair of jewelled leg plates~
 A pair of leg plates glitter in the light.~
 9 134217728 9437184 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 E
 jewelled leg plate~
 This pair of leg plates have been decorated with different gems and stones to
@@ -1054,7 +1084,7 @@ a stained apron~
 A dirty, stained and crumpled apron has been abandoned here.~
 13 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 E
 apron stain~
 The apron was once a white colour, but has long since been stained with
@@ -1071,7 +1101,7 @@ a smiths hammer~
 A large smiths hammer, often used to bash metal into shape, lays here.~
 5 0 8421376 1
 0 0 0 7 0 0 0 0 0 0
-1
+4
 E
 smiths hammer~
 This hammer is fairly large and extreemly heavy, as gnome items go.  The 
@@ -1088,7 +1118,7 @@ a loaf of rye bread~
 A loaf of dark brown bread has been left to turn to mould here.~
 19 0 8421376 1
 12 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #6011
@@ -1097,7 +1127,7 @@ a bowl of kobold and vegetable stew with dumplings.~
 A bowl of stew is cooling and congealing here.~
 19 0 8421376 1
 22 0 0 0 0 0 0 0 0 0
-2
+8
 E
 stew kobold vegetable~
 It is an unfortunate fate for a poor kobold to end up in some gnomes dinner, 
@@ -1114,7 +1144,7 @@ a set of jewlled arm plates~
 A set of arm plates glitter in the light.~
 9 134217728 8389632 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 60
 #6013
@@ -1123,7 +1153,7 @@ a pair of studded leather sleeves~
 A pair of studded leather sleeves have been left here.~
 9 134217728 8389632 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 30
 #6014
@@ -1132,7 +1162,7 @@ a pair of studded leather leggings~
 A pair of studded leather leggings have been left here.~
 9 134217728 9437184 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 30
 #6015
@@ -1141,7 +1171,7 @@ a pair of studded leather gloves~
 A pair of studded leather gloves have been left here.~
 9 134217728 8392704 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 30
 #6016
@@ -1150,7 +1180,7 @@ a pair of studded leather boots~
 A pair of studded leather boots have been left here.~
 9 134217728 10485760 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 30
 #6017
@@ -1159,7 +1189,7 @@ a pair of gold rimmed spectacles~
 A pair of gold rimmed spectacles have been forgotten here.~
 8 134217728 8388624 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 E
 gold rimmed spectacles glasses~
 These glasses are made with a rim of almost pure gold, which makes them easy
@@ -1177,7 +1207,7 @@ a silver earring~
 A small, glittering silver earring has been dropped here.~
 8 134217728 8388672 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 40
 #6019
@@ -1186,7 +1216,7 @@ a dark green velvet cloak~
 A dark green piece of velvet has been discarded here.~
 9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #6020
@@ -1195,7 +1225,7 @@ a dark brown cloak~
 A dark brown piece of thick cloth has been left here.~
 9 134217728 8454144 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 15
 #6021
@@ -1204,7 +1234,7 @@ a thick purple velvet cloak with silver trim~
 A thick mass of purple velvet cloth lays here.~
 9 134217728 8454144 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 100
 #6022
@@ -1213,7 +1243,7 @@ a pair of jewelled gauntlets~
 A pair of jewelled gauntlets have been left to rust here.~
 9 134217728 8392704 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 60
 #6023
@@ -1222,7 +1252,7 @@ a banded ironstone ring~
 A ring of silver and brown has been dropped here.~
 9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 E
 ironstone banded ring~
 This carefully polished ring of stone has been carved from Ironstone.  The
@@ -1239,7 +1269,7 @@ an amber ring~
 A ring of orange brown has been dropped here.~
 9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 60
 #6025
@@ -1248,7 +1278,7 @@ a leather cap~
 A leather cap has been left here.~
 9 134217728 8388616 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 15
 #6026
@@ -1257,7 +1287,7 @@ a jewelled helmet~
 A steel helmet glitters in the light here.~
 9 134217728 8388616 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 60
 #6027
@@ -1266,7 +1296,7 @@ a canary on a string~
 A canary chirps about here with a piece of string tied to it's foot.~
 9 134217728 8388736 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 15
 #6028
@@ -1275,7 +1305,7 @@ a pair of shiny steel boots~
 A pair of shiny steel boots begin to tarnish in the air.~
 9 134217728 10485760 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 60
 #6029
@@ -1284,7 +1314,7 @@ a jewelled steel shield~
 A shield of steel glitters in the light.~
 9 134217728 8421376 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 60
 #6030
@@ -1293,7 +1323,7 @@ a studded leather belt~
 A belt of studded leather rests here.~
 9 134217728 8519680 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 30
 #6031
@@ -1302,7 +1332,7 @@ a jewelled leather belt~
 A belt of leather glitters in the light.~
 9 134217728 8519680 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 60
 #6032
@@ -1311,7 +1341,7 @@ a jewelled steel bracer~
 A bracer made from steel glitters in the light.~
 9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 60
 #6033
@@ -1320,7 +1350,7 @@ a studded leather bracer~
 A studded leather bracer rests here.~
 9 134217728 8390656 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 30
 #6034
@@ -1329,7 +1359,7 @@ a steel short sword with a jewelled hilt~
 A shining steel short sword glitters in the light.~
 5 134217728 8421376 1
 0 0 0 1 0 0 0 0 0 0
-2
+8
 E
 steel short sword jewelled~
 This short sword is rather thick in blade, but well balanced, and obviously
@@ -1359,7 +1389,7 @@ a goblin skin bag~
 A rather unfortunate goblin lost his skin here.~
 15 0 8421376 1
 30 1 0 0 0 0 0 0 0 0
-1
+4
 E
 goblin skin bag~
 One has to feel a little sorry for the poor, unsuspecting goblin who 
@@ -1380,7 +1410,7 @@ an opal necklace~
 A gold necklace inset with a shimmering blue opal lays here obviously lost.~
 8 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 L
 1
 #6037
@@ -1389,7 +1419,7 @@ a studded leather shield~
 A shield made of studded leather rests here.~
 9 134217728 8421376 1
 0 0 0 0 0 0 0 0 0 0
-3
+13
 L
 30
 #6000
@@ -1398,7 +1428,7 @@ a tiny black hole~
 ~
 15 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 1
 #6050
@@ -1407,7 +1437,7 @@ a bubbling spring~
 A spring bubbles up through a hole in the ground.~
 25 0 0 1
 50 50 0 0 0 0 0 0 0 0
-3
+13
 L
 1
 #0

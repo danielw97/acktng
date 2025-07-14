@@ -35,7 +35,7 @@ S
 @@WStone walls limit the perspective of your vision, and @@ddespair@@W
 overwhelms you as you consider the task of escaping these walls.
 ~
-204828 11
+221212 11
 S
 #4960
 @@WThe Maze of @@lIcarus@@N~
@@ -205,7 +205,9 @@ minotuar slave~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4951
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4951
 Minotaur Servant~
 @@WA @@RMinotuar Servant@@N~
 @@WA @@RServant of @@eKahl'Dann @@Wgoes about his business.@@N
@@ -217,7 +219,9 @@ Minotaur Servant~
 ! 0 0 0 7 0 0 0
 | 0 4128 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4952
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4952
 minotaur guard~
 @@WA @@RMinoatur Guard@@N~
 @@WA @@RMinotaur Guard@@N searches for intruders!@@N
@@ -229,7 +233,9 @@ minotaur guard~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4953
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4953
 minotaur master~
 @@WA @@RMinotaur Master@@N~
 @@WA Majestic @@RMinotaur Master@@N watches you closely!
@@ -241,7 +247,9 @@ minotaur master~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4954
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4954
 minotaur lord~
 @@WA Mighty @@RMinotuar Lord@@N~
 @@WOne of the @@eLords @@Wof the @@RMaze@@N ponders your fate.
@@ -253,7 +261,9 @@ minotaur lord~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4955
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4955
 minotaur prince~
 @@WOne of the @@RPrinces of the Maze@@W~
 @@WA @@RPrince of @@eKhal'Dann@@N laughs at you evilly!@@N 
@@ -265,7 +275,9 @@ minotaur prince~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4956
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4956
 Minotaur king~
 @@eTekk'Moran@@W, @@RKing of the Minotaurs@@N~
 @@eTekk'Moran@@W, @@RKing of the Minotaurs surveys his Realm@@N.
@@ -277,7 +289,9 @@ Minotaur king~
 ! 0 0 0 7 0 0 0
 | 0 4096 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4957
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4957
 scout minotaur~
 @@WA @@RMinotuar@@d Scout@@N~
 @@WA @@RMinotaur @@dScout @@Wsearches for strategic information.@@N
@@ -289,7 +303,9 @@ scout minotaur~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4958
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4958
 captain minotaur~
 @@WA @@RMinotaur @@eCaptain @@Wof @@dWar@@N~
 @@WA @@RMinotaur @@eCaptain @@Wof @@dWar@@N commands a war party!
@@ -301,7 +317,9 @@ captain minotaur~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4959
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4959
 diplomat~
 @@WA @@RMinotaur @@ydiplomat@@N~
 @@WA @@RMinotaur @@yDiplomat@@N tries to end this useless, unwanted war.@@N
@@ -313,7 +331,9 @@ diplomat~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #4960
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#4960
 assassin minotaur~
 @@WA @@RMinotaur @@dAssassin@@N~
 ~
@@ -324,7 +344,9 @@ assassin minotaur~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 L 0 0 0 0 0 0 0 0 0 #0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #4950
 gate~
@@ -333,7 +355,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4961 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4951
@@ -343,7 +365,7 @@ gate~
 ~
 14 0 0 1
 9 0 4972 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4952
@@ -353,7 +375,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4983 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4953
@@ -363,7 +385,7 @@ gate~
 ~
 14 0 0 1
 9 0 4954 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4954
@@ -373,7 +395,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4964 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4955
@@ -383,7 +405,7 @@ gate~
 ~
 14 0 0 1
 9 0 4980 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4956
@@ -393,7 +415,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4991 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4957
@@ -403,7 +425,7 @@ gate~
 ~
 14 0 0 1
 9 0 4973 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4958
@@ -413,7 +435,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4952 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4959
@@ -423,7 +445,7 @@ gate~
 ~
 14 0 0 1
 9 0 4994 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4960
@@ -433,7 +455,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4973 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4961
@@ -443,7 +465,7 @@ gate~
 ~
 14 0 0 1
 9 0 4974 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4962
@@ -453,7 +475,7 @@ gate~
 ~
 14 0 0 1
 9 0 4980 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4963
@@ -463,7 +485,7 @@ gate~
 ~
 14 0 0 1
 9 0 4954 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4964
@@ -473,7 +495,7 @@ gate~
 ~
 14 0 0 1
 9 0 4953 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4965
@@ -483,7 +505,7 @@ gate~
 ~
 14 0 0 1
 9 0 4962 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4966
@@ -493,7 +515,7 @@ gate~
 ~
 14 0 0 1
 9 0 4964 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4967
@@ -503,7 +525,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4982 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4968
@@ -513,7 +535,7 @@ gate~
 ~
 14 0 0 1
 9 0 4970 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4969
@@ -523,7 +545,7 @@ gate~
 ~
 14 0 0 1
 9 0 4984 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4970
@@ -533,7 +555,7 @@ gate~
 ~
 14 0 0 1
 9 3 4950 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4971
@@ -543,7 +565,7 @@ gate~
 ~
 14 0 0 1
 9 3 4951 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4972
@@ -553,7 +575,7 @@ gate~
 ~
 14 0 0 1
 9 3 4981 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4973
@@ -563,7 +585,7 @@ gate~
 ~
 14 0 0 1
 9 3 4952 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4974
@@ -573,7 +595,7 @@ gate~
 ~
 14 0 0 1
 9 3 4953 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4975
@@ -583,7 +605,7 @@ gate~
 ~
 14 0 0 1
 9 3 4954 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4976
@@ -593,7 +615,7 @@ gate~
 ~
 14 0 0 1
 9 3 4955 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4977
@@ -603,7 +625,7 @@ ring ruby obsidian~
 M~
 9 134217728 8396800 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 18 27
 A
@@ -623,7 +645,7 @@ bracers minotaur~
 ~
 9 134217730 8390656 1
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 17 -190
 A
@@ -641,7 +663,7 @@ hooves minotaur~
 ~
 9 134217730 12582912 1
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 18 35
 A
@@ -663,7 +685,7 @@ wax ball~
 ~
 29 0 8388608 1
 0 4981 4982 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4981
@@ -674,7 +696,7 @@ feathers eagle~
 ~
 29 1048576 8388608 1
 4980 0 4982 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4982
@@ -684,7 +706,7 @@ mess sticky~
 ~
 29 0 8388608 1
 0 4984 4991 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4983
@@ -694,7 +716,7 @@ rope coil~
 ~
 29 0 8388608 1
 0 4988 4984 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4984
@@ -703,7 +725,7 @@ rigging~
 @@WAn unusual rigging, complete with @@bwooden @@Wwings@@N lies here.@@N~
 29 0 8388608 1
 4982 0 4991 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4985
@@ -714,7 +736,7 @@ torch flickering~
 ~
 29 0 8388608 1
 0 4991 4986 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4986
@@ -724,7 +746,7 @@ wings icarus~
 ~
 9 134217921 8389632 20608
 0 0 0 0 0 0 0 0 0 0
-2
+8
 A
 12 200
 A
@@ -744,7 +766,7 @@ rod minotaur~
 ~
 5 134217747 8421376 16641
 0 0 0 8 0 0 0 0 0 0
-3
+13
 A
 18 40
 A
@@ -763,7 +785,7 @@ frame~
 @@WA lattice @@bframe@@W in the shape of a pair of wings lies here.@@N~
 29 0 8388608 1
 4983 0 4984 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4989
@@ -772,7 +794,7 @@ sticks~
 @@WA large pile of @@bwooden sticks and branches@@W.@@N~
 29 0 8388608 1
 0 4990 4988 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4990
@@ -781,7 +803,7 @@ twine~
 @@WA large ball of @@ytwine@@N lies abandoned in the corner@@N.~
 29 0 8388608 1
 4989 0 4988 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4991
@@ -790,7 +812,7 @@ dream~
 @@WThe result of long hard work, a @@rfanciful @@ADream of freedom stands before you.@@N~
 29 0 8388608 1
 4985 0 4986 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4992
@@ -800,7 +822,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4963 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4993
@@ -810,7 +832,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4981 0 0 0 0 0 0 0
-1
+4
 L
 10
 #4994
@@ -820,7 +842,7 @@ gate~
 ~
 14 65536 0 1
 9 0 4952 0 0 0 0 0 0 0
-1
+4
 L
 10
 #0

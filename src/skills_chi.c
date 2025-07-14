@@ -367,7 +367,7 @@ void do_flurry(CHAR_DATA *ch, char *argument)
 
     if (ch->chi < 5)
     {
-        sprintf(buf, "You must have at least 5 chi to initiate a flurry, you only have %s!\n\r", ch->chi);
+        sprintf(buf, "You must have at least 5 chi to initiate a flurry, you only have %d!\n\r", ch->chi);
         send_to_char(buf, ch);
         return;
     }
