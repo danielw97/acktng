@@ -57,7 +57,7 @@ void do_makekeep(CHAR_DATA *ch, char *argument)
      */
     GET_FREE(pList, build_free);
     pList->data = RoomIndex;
-    LINK(pList, topRoom->area->first_area_room, pCurRoom->area->last_area_room, next, prev);
+    LINK(pList, topRoom->area->first_area_room, topRoom->area->last_area_room, next, prev);
     top_room++;
 
     ch->pcdata->keep_vnum = vnum;
