@@ -1,5 +1,7 @@
 #include "globals.h"
 
+ROOM_INDEX_DATA *new_room(AREA_DATA *pArea, sh_int vnum, sh_int sector);
+
 extern int top_room;
 
 void do_makekeep(CHAR_DATA *ch, char *argument)
