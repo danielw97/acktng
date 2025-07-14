@@ -1,9 +1,13 @@
 #include "globals.h"
 
+extern int top_room;
+
 void do_makekeep(CHAR_DATA *ch, char *argument)
 {
     int vnum = 0;
-    ROOM_INDEX_DATA *pRoomIndex = get_room_index(PLAYER_HOUSING_START_VNUM);
+    int iHash;
+    ROOM_INDEX_DATA *topRoom = get_room_index(PLAYER_HOUSING_START_VNUM);
+    ROOM_INDEX_DATA *RoomIndex;
     BUILD_DATA_LIST *pList;
     AREA_DATA *pArea;
 
@@ -19,7 +23,7 @@ void do_makekeep(CHAR_DATA *ch, char *argument)
         return;
     }
 
-    pArea = pRoomIndex->area;
+    pArea = topRoom->area;
 
     for(int i = 0; i < 300; i++)
     {
@@ -53,10 +57,27 @@ void do_makekeep(CHAR_DATA *ch, char *argument)
      */
     GET_FREE(pList, build_free);
     pList->data = pRoomIndex;
-    LINK(pList, pCurRoom->area->first_area_room, pCurRoom->area->last_area_room, next, prev);
+    LINK(pList, topRoom->area->first_area_room, pCurRoom->area->last_area_room, next, prev);
     top_room++;
 
     ch->pcdata->keep_vnum = vnum;
+    /*   pRoomIndex->first_person = NULL;
+   pRoomIndex->last_person = NULL;
+   pRoomIndex->first_content = NULL;
+   pRoomIndex->last_content = NULL;
+   pRoomIndex->first_exdesc = NULL;
+   pRoomIndex->last_exdesc = NULL;
+   pRoomIndex->area = pArea;
+   pRoomIndex->vnum = vnum;
+   pRoomIndex->name = str_dup("New room");
+   pRoomIndex->description = str_dup("No description");
+   pRoomIndex->room_flags = 0;
+   pRoomIndex->sector_type = sector;
+   pRoomIndex->light = 0;
+   for (door = 0; door <= 5; door++)
+      pRoomIndex->exit[door] = NULL;
+   pRoomIndex->first_room_reset = NULL;
+   pRoomIndex->last_room_reset = NULL;*/
 
     send_to_char("Your keep has been created\n\r",ch);
 }
