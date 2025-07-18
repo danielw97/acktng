@@ -1688,7 +1688,7 @@ void do_save(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->level < 1)
+   if (ch->level < 1 && get_total_reincarnations(ch) < 1)
    {
       send_to_char("You must be at least second level to save.\n\r", ch);
       return;
