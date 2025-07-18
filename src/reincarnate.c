@@ -168,6 +168,8 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
             return;
          }
 
+         remove_all(ch);
+
          ch->pcdata->reincarnation_data[REINCARNATION_HP] += ch->pcdata->hp_from_gain;
          ch->pcdata->hp_from_gain = 0;
          ch->pcdata->reincarnation_data[REINCARNATION_MANA] += ch->pcdata->mana_from_gain;
