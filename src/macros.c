@@ -70,6 +70,13 @@ void reset_gain_stats(CHAR_DATA *ch)
          advance_level_adept(ch, i, FALSE);
       }
    }
+
+   ch->max_hit = ch->pcdata->hp_from_gain;
+   ch->hit = ch->max_hit;
+   ch->max_mana = ch->pcdata->mana_from_gain;
+   ch->mana = ch->max_mana;
+   ch->max_move = ch->pcdata->move_from_gain;
+   ch->move = ch->max_move;
 }
 
 sh_int get_remort_level(CHAR_DATA *ch)
