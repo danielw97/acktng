@@ -127,7 +127,7 @@ void save_char_obj(CHAR_DATA *ch)
       return;
    }
 
-   if (IS_NPC(ch) || ch->level < 2)
+   if (IS_NPC(ch) || (ch->level < 2 && get_total_reincarnations(ch) < 1))
       return;
 
    if (!IS_NPC(ch) && ch->desc != NULL && ch->desc->original != NULL)
