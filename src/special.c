@@ -68,6 +68,9 @@ DECLARE_SPEC_FUN(spec_wizardofoz);
 DECLARE_SPEC_FUN(spec_vamp_hunter);
 DECLARE_SPEC_FUN(spec_mino_guard);
 DECLARE_SPEC_FUN(spec_tax_man);
+DECLARE_SPEC_FUN(spec_keep_physical_captain);
+
+void do_massivestrike(CHAR_DATA *ch);
 
 /*
  * Given a name, return the appropriate spec fun.
@@ -135,6 +138,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_mino_guard;
    if (!str_cmp(name, "spec_tax_man"))
       return spec_tax_man;
+   if (!str_cmp(name, "spec_keep_physical_captain"))
+      return spec_keep_physical_captain;
 
    return 0;
 }
@@ -203,6 +208,8 @@ char *rev_spec_lookup(void *func)
       return "spec_mino_guard";
    if (func == spec_tax_man)
       return "spec_tax_man";
+   if (func == spec_keep_physical_captain)
+      return "spec_keep_physical_captain";
 
    return 0;
 }
@@ -236,6 +243,7 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_vamp_hunter (Int mobs only) \n\r");
    strcat(buf, "       spec_mino_guard \n\r");
    strcat(buf, "       spec_tax_man \n\r");
+   strcat(buf, "       spec_keep_physical_captain\n\r");
 
    return;
 }
@@ -1802,4 +1810,51 @@ bool spec_tax_man(CHAR_DATA *ch)
 
    do_save(victim, "");
    return TRUE;
+}
+
+bool spec_keep_physical_captain(CHAR_DATA *ch)
+{
+   char buf[MSL];
+
+   if (ch->fighting == NULL)
+   {
+      ch->spec_behavior = 0;
+      return FALSE;
+   }
+
+   ch->spec_behavior++;
+
+   switch(ch->spec_behavior%10)
+   {
+   case 1:
+      if (number_percent() < 50)
+         do_morale(ch, "");
+      else
+         do_leadership(ch, "");
+      break;
+   case 4:
+      if (number_percent() < 50)
+         do_warcry(ch,"");
+      else
+         do_beserk(ch,"");
+      break;
+   case 5:
+      sprintf(buf, "@@y$n brings his weapon over his head, preparing for a massive strike!@@N");
+      act(buf, ch, NULL, NULL, TO_ROOM);
+      break;
+   case 7:
+      sprintf(buf, "@@y$n brings his weapon down in a massive strike against $N!@@N");
+      act(buf, ch, NULL, ch->fighting, TO_ROOM);
+      do_massivestrike(ch);
+      break;
+   }
+
+   return TRUE;
+}
+
+void do_massivestrike(CHAR_DATA *ch)
+{
+     int dam = number_range(9000,11000);
+
+     calculate_damage(ch, ch->fighting, dam, gsn_holystrike, ELEMENT_PHYSICAL | ELEMENT_HOLY, TRUE);
 }

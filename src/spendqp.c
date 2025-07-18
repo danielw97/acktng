@@ -172,7 +172,7 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
 
    if (arg1[0] == '\0')
    {
-      send_to_char("Syntax: qpspend enter | exit | assist <message> \n\r", ch);
+      send_to_char("Syntax: qpspend enter | exit  <message> \n\r", ch);
       send_to_char("or:     qpspend show | buy | clear | recall | home | corpse | rescue\n\r", ch);
       send_to_char("or:     qpspend set name |short | long <message>\n\r", ch);
       send_to_char("To set your enter or exit message, for example, type:\n\r", ch);
@@ -222,7 +222,7 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
       ch->pcdata->pedit_string[1] = str_dup(argument);
       return;
    }
-   if (!str_cmp(arg1, "assist"))
+/*   if (!str_cmp(arg1, "assist"))
    {
       if (str_cmp(ch->pcdata->pedit_state, "assist"))
       {
@@ -247,7 +247,7 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
       }
       ch->pcdata->pedit_string[0] = str_dup(argument);
       return;
-   }
+   }*/
 
    if (!str_cmp(arg1, "show"))
    {
@@ -285,13 +285,13 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
          return;
       }
-      else if (!str_cmp(ch->pcdata->pedit_state, "assist"))
+/*      else if (!str_cmp(ch->pcdata->pedit_state, "assist"))
       {
          sprintf(buf, "Current message:\n\r  %s\n\r",
                  (!str_cmp(ch->pcdata->pedit_string[0], "none") ? ch->pcdata->assist_msg : ch->pcdata->pedit_string[0]));
          send_to_char(buf, ch);
       }
-      return;
+      return;*/
    }
 
    if (!str_cmp(arg1, "buy"))
@@ -412,8 +412,8 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
                safe_strcat(MSL, assistbuf, catbuf);
             }
          }
-         free_string(ch->pcdata->assist_msg);
-         ch->pcdata->assist_msg = str_dup(assistbuf);
+/*         free_string(ch->pcdata->assist_msg);
+         ch->pcdata->assist_msg = str_dup(assistbuf);*/
          for (i = 0; i < 5; i++)
          {
             if (str_cmp(ch->pcdata->pedit_string[i], "none"))
@@ -435,7 +435,7 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
             brand->branded = str_dup(ch->name);
             brand->branded_by = str_dup("@@rSystem@@N");
             brand->priority = str_dup("normal");
-            sprintf(brandbuf, "Assist message changed to %s\n\r", ch->pcdata->assist_msg);
+//            sprintf(brandbuf, "Assist message changed to %s\n\r", ch->pcdata->assist_msg);
             brand->message = str_dup(brandbuf);
             strtime = ctime(&current_time);
             strtime[strlen(strtime) - 1] = '\0';

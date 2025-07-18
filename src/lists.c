@@ -260,7 +260,6 @@ void pcd_free_destructor(PC_DATA *pcdat)
    free_string(pcdat->message);
    free_string(pcdat->who_name);
    free_string(pcdat->lastlogin);
-   free_string(pcdat->assist_msg);
    for (cnt = 0; cnt < MAX_ALIASES; cnt++)
    {
       free_string(pcdat->alias_name[cnt]);

@@ -1541,6 +1541,15 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
+    "refresh mana", {182, 182, 182, 182, 182, 182},
+    spell_refresh_mana, TAR_CHAR_DEFENSIVE, POS_STANDING,
+    NULL, SLOT( 81 ), 12, 18, FALSE,
+    "refresh mana", "!Refresh mana!",
+    ""},
+
+
+   {
+    MORTAL, NORM,
     "regen", {5, 182, 182, 182, 182, 182},
     spell_regen, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,

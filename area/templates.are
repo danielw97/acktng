@@ -94,10 +94,10 @@ delvar~
 @@lDelvar @@dIron@@bFist@@N, Singer of Dwarven Songs
 ~
 ~
-19922953 544 0 S
-72 1
-0 -20 0 0
-! 0 0 16 7 0 0 0
+19922953 17120 0 S
+170 1
+10000 -2000 1500 500
+! 0 0 14 7 0 0 0
 | 0 0 0 0 0 0 16
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
@@ -290,25 +290,128 @@ A
 6 1
 L
 100
+#81
+shield small metal~
+a small metal shield~
+A small metal shield is lying on the ground~
+9 134217728 8421376 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+150
+#82
+skirt scale mail~
+a long scale mail skirt~
+A long scale mail skirt is lying on the ground.~
+9 134217728 9437184 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#83
+gloves reinforced~
+a pair of reinforced gloves~
+A pair of reinforced gloves is lying on the ground.~
+9 134217728 8392704 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#84
+boots reinforced~
+a pair of reinforced boots~
+A pair of reinforced boots is lying on the ground.~
+9 134217728 10485760 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#85
+sleeves scale mail~
+a pair of scale mail sleeves.~
+A pair of scale mail sleeves is lying on the ground.~
+9 134217728 8389632 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#86
+Delvar's Aura~
+@@lDelvar's @@dAu@@yra@@N~
+An aura lies here~
+9 134217728 8388610 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+150
+#87
+Soul of the Ironfist~
+@@lSoul of the @@dIron@@yfist@@N~
+A discoarded soule lies here, lonely~
+9 134217728 8388609 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+150
+#88
+jerkin scale mail~
+a scale mail jerkin~
+A scale mail jerkin is lying on the ground~
+9 134217728 8650752 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#89
+coif scale mail~
+a scale mail coif~
+A scale mail coif is lying on the ground~
+9 134217728 8388616 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+150
+#90
+red battle axe~
+a red battle axe~
+A red battle axe lies here.~
+5 134217728 8421376 21915
+0 0 0 1 0 0 0 0 0 0
+13
+L
+150
+#92
+Virant's test obj~
+Virant's test obj~
+Virant's test obj (YOU SHOULD NOT HAVE, BAD!)~
+9 0 25165824 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
 #0
 #RESETS
 M 0 66 1 66 (null)
 
-E 0 3097 0 17 (null)
+E 0 90 0 0 (null)
 
-E 0 3074 0 7 (null)
+E 0 89 0 0 (null)
 
-E 0 3076 0 9 (null)
+E 0 88 0 0 (null)
 
-E 0 3075 0 8 (null)
+E 0 87 0 0 (null)
 
-E 0 3077 0 10 (null)
+E 0 86 0 0 (null)
 
-E 0 3072 0 5 (null)
+E 0 81 0 0 (null)
 
-E 0 3073 0 6 (null)
+E 0 82 0 0 (null)
 
-E 0 9626 0 16 (null)
+E 0 85 0 0 (null)
+
+E 0 84 0 0 (null)
+
+E 0 83 0 0 (null)
 
 M 0 67 1 67 (null)
 
@@ -378,5 +481,8 @@ E 0 6017 0 18 (null)
 
 E 0 6018 0 19 (null)
 
+S
+#OBJFUNS
+O 92 objfun_clan
 S
 #$

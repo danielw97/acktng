@@ -490,7 +490,6 @@ const struct lookup_type tab_mob_flags[] = {
 /* New bits to handle how mobs act */
 
 const struct lookup_type tab_mob_skill[] = {
-    {"none", MOB_NONE, 0},
     {"2_attack", MOB_SECOND, 100},
     {"3_attack", MOB_THIRD, 200},
     {"4_attack", MOB_FOURTH, 400},
@@ -649,6 +648,7 @@ const struct lookup_type tab_item_types[] = {
     {"matrix", 30, 50},
     {"enchantment", 31, 50},
     {"present", 32, 0},
+    {"stash",33, 0},
     {NULL, 0}};
 
 const struct lookup_type tab_obj_flags[] = {

@@ -196,6 +196,7 @@ DECLARE_SPELL_FUN(spell_produce_food);
 DECLARE_SPELL_FUN(spell_protection);
 DECLARE_SPELL_FUN(spell_psionic_recovery);
 DECLARE_SPELL_FUN(spell_refresh);
+DECLARE_SPELL_FUN(spell_refresh_mana);
 DECLARE_SPELL_FUN(spell_regen);
 DECLARE_SPELL_FUN(spell_remove_curse);
 DECLARE_SPELL_FUN(spell_sanctuary);

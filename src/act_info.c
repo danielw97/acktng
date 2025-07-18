@@ -191,7 +191,7 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
       strcat(sendBuf, " No Magic");
    if (IS_SET(race_table[i].race_flags, RACE_MOD_IMMUNE_POISON))
       strcat(sendBuf, " Immune Poison");
-   if (IS_SET(race_table[i].race_flags, RACE_MOD_RESIST_SPELL))
+   if (IS_SET(race_table[i].race_flags, RACE_MOD_RESIST_MAGIC))
       strcat(sendBuf, " Resist Spells");
    if (IS_SET(race_table[i].race_flags, RACE_MOD_WOODLAND))
       strcat(sendBuf, " Woodland");
@@ -453,6 +453,73 @@ void do_stancehelp(CHAR_DATA *ch, char *argument)
 
    sprintf(buf, "AC mod: %d%%  HR mod: %d%%  DR mod: %d%%  SPEED mod: %d  HEAL mod: %d%%  SPELL mod: %d%%\n\r", stance_app[i].ac_mod*10, stance_app[i].hr_mod*5, stance_app[i].dr_mod*5, stance_app[i].speed_mod, stance_app[i].heal_mod*10, stance_app[i].spell_mod*10);
    send_to_char(buf,ch);  
+}
+
+/*    char *text;
+   long int value;
+   int cost;
+   char *info;*/
+
+/*     {"none", RACE_MOD_NONE, 0, ""},
+    {"miracle heal", RACE_MOD_MIRACLE_HEAL, 1, "Increases regeneration by 3x"},
+    {"extraordinary heal", RACE_MOD_EXTRAORDINARY_HEAL, 1, "Increase regeneration by 2.5x"},
+    {"fast heal", RACE_MOD_FAST_HEAL, 1, "Increases regeneration by 2x"},
+    {"slow heal", RACE_MOD_SLOW_HEAL, -1, "Halves regeneration"},
+    {"strong magic", RACE_MOD_STRONG_MAGIC, 1, "Increases all magical damage by 10%"},
+    {"magic adept", RACE_MOD_MAGIC_ADEPT, 3, "Increases all magical damage by 20%"},
+    {"magic genius", RACE_MOD_MAGIC_GENIUS, 5, "Increases all magical damage by 30%"},
+    {"weak magic", RACE_MOD_WEAK_MAGIC, -1, "Reduces all magical damage by 25%"},
+    {"no magic", RACE_MOD_NO_MAGIC, -1, "Makes you extremely bad at magic"},
+    {"immune poison", RACE_MOD_IMMUNE_POISON, -1, "Grants poison immunity"},
+    {"resist magic", RACE_MOD_RESIST_MAGIC, 1, "Reduces magical damage by 10%"},
+    {"thwart magic", RACE_MOD_THWART_MAGIC, 2, "Reduces magical damage by 20%"},
+    {"magic foil", RACE_MOD_MAGIC_FOIL, 3, "Reduces magical damage by 30%"},
+    {"woodland", RACE_MOD_WOODLAND, 1, "Adds woodland"},
+    {"darkness", RACE_MOD_DARKNESS, 1, "Adds darkness"},
+    {"huge", RACE_MOD_HUGE, 1, "Adds huge"},
+    {"large", RACE_MOD_LARGE, 1, "Adds large"},
+    {"small", RACE_MOD_SMALL, 1, "Adds small"},
+    {"tiny", RACE_MOD_TINY, 1, "Adds tiny"},
+    {"tail", RACE_MOD_TAIL, 3, "Adds tail equip racial and tail extra attack."},
+    {"tough skin", RACE_MOD_TOUGH_SKIN, 1, "Reduces physical damage by 10%"},
+    {"stone skin", RACE_MOD_STONE_SKIN, 2, "Reduces physical damage by 20%"},
+    {"iron skin", RACE_MOD_IRON_SKIN, 3, "Reduces physical damage by 30%"},
+    {"strong", RACE_MOD_STRONG, 1, "Increases physical damage by 10%"},
+    {"hercules", RACE_MOD_HERCULES, 3, "Increases physical damage by 20%"},
+    {"goliath", RACE_MOD_GOLIATH, 5, "Increases physical damage by 30%"},*/
+
+void do_rmodhelp(CHAR_DATA *ch, char *argument)
+{
+   char arg[MSL];
+   char buf[MSL];
+
+   one_argument(argument, arg);
+
+   if (!str_prefix(arg, "list") || !str_prefix(arg, "show") || !str_prefix(arg, "info"))
+   {
+   send_to_char("Race Mod           Cost Pre-Req\n\r",ch);
+   for(int i = 0; tab_race_mod[i].text != NULL; i++)
+   {
+       if (tab_race_mod[i].cost == 0)
+          continue;
+
+       sprintf(buf, "%18s %4d %s\n\r", tab_race_mod[i].text, tab_race_mod[i].cost, lookup_race_bit_value(tab_race_mod[i].value2));
+       send_to_char(buf,ch);
+   }
+
+   return;
+   }
+
+   for(int i = 0; tab_race_mod[i].text != NULL; i++)
+   {
+       if (str_cmp(tab_race_mod[i].text, arg))
+          continue;
+
+       send_to_char("------RACE MOD INFO-----\n\r",ch);
+       sprintf(buf, "Name: %s\n\rAA Pre-Req Racial Mod(s): %s\n\rReincarnation Point cost: %d\n\rAffect: %s\n\r", tab_race_mod[i].text, lookup_race_bit_value(tab_race_mod[i].value2), tab_race_mod[i].cost, tab_race_mod[i].info);
+       send_to_char(buf,ch);
+       break;
+   }
 }
 
 /*
@@ -1677,11 +1744,11 @@ void do_score(CHAR_DATA *ch, char *argument)
    send_to_char(buf, ch);
 
    sprintf(buf,
-           "| @@WAutoexit: @@y%s   @@WAutoloot: @@y%s  @@WAutosac: @@y%s @@WAutomoney: @@y%s @@c|\n\r",
+           "| @@WAutoexit: @@y%s   @@WAutoloot: @@y%s  @@WAutosac: @@y%s @@WAutoass: @@y%s @@c|\n\r",
            (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOEXIT)) ? "*ON* " : "*OFF*",
            (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOLOOT)) ? "*ON* " : "*OFF*",
            (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOSAC)) ? "*ON* " : "*OFF*",
-           (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOMONEY)) ? "*ON* " : "*OFF*");
+           (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOASSIST)) ? "*ON* " : "*OFF*");
    send_to_char(buf, ch);
 
    if (!IS_NPC(ch))
@@ -3498,9 +3565,9 @@ void do_config(CHAR_DATA *ch, char *argument)
                        : "[-autoloot ] You don't automatically loot corpses.\n\r",
                    ch);
 
-      send_to_char(IS_SET(ch->config, CONFIG_AUTOMONEY)
-                       ? "[+AUTOLOOT ] You automatically loot money from corpses.\n\r"
-                       : "[-autoloot ] You don't automatically money from corpses.\n\r",
+      send_to_char(IS_SET(ch->config, CONFIG_AUTOASSIST)
+                       ? "[+AUTOASS  ] You automatically assist.\n\r"
+                       : "[-autoass  ] You don't automatically assist.\n\r",
                    ch);
 
       send_to_char(IS_SET(ch->config, CONFIG_AUTOSAC)
@@ -3573,8 +3640,8 @@ void do_config(CHAR_DATA *ch, char *argument)
          bit = CONFIG_AUTOEXIT;
       else if (!str_cmp(arg + 1, "autoloot"))
          bit = CONFIG_AUTOLOOT;
-      else if (!str_cmp(arg + 1, "automoney"))
-         bit = CONFIG_AUTOMONEY;
+      else if (!str_cmp(arg + 1, "autoassist"))
+         bit = CONFIG_AUTOASSIST;
       else if (!str_cmp(arg + 1, "autosac"))
          bit = CONFIG_AUTOSAC;
       else if (!str_cmp(arg + 1, "blank"))

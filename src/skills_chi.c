@@ -3,13 +3,28 @@
 
 int get_chi(CHAR_DATA *ch)
 {
-    int max_chi = 10;
+    int max_chi = 0;
 
-    if (ch->remort[CLASS_MON] > 0 || ch->remort[CLASS_BRA] > 0)
+    if (ch->lvl[CLASS_PUG] > 0)
         max_chi = 15;
 
-    if (ch->adept[CLASS_MAR] > 0)
+    if (!IS_NPC(ch) && ch->pcdata->reincarnations[CLASS_PUG] >= 20)
+        max_chi = 15;
+
+    if (max_chi == 0)
+       return max_chi;
+
+    if (ch->remort[CLASS_MON] > 0 || ch->remort[CLASS_BRA] > 0)
         max_chi = 20;
+
+    if (!IS_NPC(ch) && (ch->pcdata->remort_reincarnations[CLASS_MON] >= 20 || ch->pcdata->remort_reincarnations[CLASS_BRA] >= 20))
+        max_chi = 20;
+
+    if (ch->adept[CLASS_MAR] > 0)
+        max_chi = 25;
+
+    if (!IS_NPC(ch) && ch->pcdata->adept_reincarnations[CLASS_MAR] >= 20)
+        max_chi = 25;
 
     if (ch->chi > max_chi)
         ch->chi = max_chi;
@@ -43,7 +58,7 @@ void do_chiblock(CHAR_DATA *ch, char *argument)
     if (ch->cooldown[gsn_chiblock] > 0)
         cost *= 2;
 
-    if (ch->chi < cost)
+    if (get_chi(ch) < cost)
     {
         send_to_char("You do not have sufficient chi to use chiblock.\n\r", ch);
         return;
@@ -84,7 +99,7 @@ void do_chakra(CHAR_DATA *ch, char *argument)
     if (ch->cooldown[gsn_chiblock] > 0)
         cost *= 2;
 
-    if (ch->chi < cost)
+    if (get_chi(ch) < cost)
     {
         send_to_char("You do not have sufficient chi to use chakra.\n\r", ch);
         return;
@@ -175,14 +190,14 @@ void do_spinfist(CHAR_DATA *ch, char *argument)
     if (ch->cooldown[gsn_spinfist] > 0)
         cost *= 2;
 
-    if (ch->chi < cost)
+    if (get_chi(ch) < cost)
     {
         send_to_char("You do not have sufficient chi to use spinfist.\n\r", ch);
         return;
     }
 
-    act("You go into a FRENZY!!!\n\r", ch, NULL, NULL, TO_CHAR);
-    act("$n goes into a FRENZY!!!", ch, NULL, NULL, TO_ROOM);
+    act("You perform a spinfist!", ch, NULL, NULL, TO_CHAR);
+    act("$n performs a spinfist!", ch, NULL, NULL, TO_ROOM);
     for (vch = ch->in_room->first_person; vch != NULL; vch = vch_next)
     {
         vch_next = vch->next_in_room;
@@ -365,7 +380,7 @@ void do_flurry(CHAR_DATA *ch, char *argument)
     if (!can_use_skill_message(ch, gsn_flurry))
         return;
 
-    if (ch->chi < 5)
+    if (get_chi(ch) < 5)
     {
         sprintf(buf, "You must have at least 5 chi to initiate a flurry, you only have %d!\n\r", ch->chi);
         send_to_char(buf, ch);
@@ -381,7 +396,7 @@ void do_flurry(CHAR_DATA *ch, char *argument)
 
     ch->cooldown[gsn_flurry] = 30;
 
-    for (int i = 0; ch->chi > 0; ch->chi--)
+    for (int i = 0; get_chi(ch) > 0; ch->chi--)
     {
         one_hit(ch, ch->fighting, TYPE_HIT);
     }

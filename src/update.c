@@ -195,10 +195,12 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
 
    add_move = (get_curr_con(ch) + get_curr_dex(ch)) / 5;
 
-   add_hp = UMAX(1, add_hp);
-
-   add_mana = UMAX(0, add_mana);
-   add_move = UMAX(7, add_move);
+   if (class == ch->pcdata->order[0] && ch->pcdata->reincarnation_data[REINCARNATION_HP] > 0)
+   {
+      add_hp += get_reincarnate_hp_level(ch);
+      add_mana += get_reincarnate_mana_level(ch);
+      add_move += get_reincarnate_move_level(ch);
+   }
 
    ch->pcdata->mana_from_gain += add_mana;
    ch->pcdata->hp_from_gain += add_hp;
@@ -387,8 +389,6 @@ void round_update()
 
 void round_char_update(CHAR_DATA *ch)
 {
-   char buf[MSL];
-
    if (ch == NULL)
       return;
 
@@ -814,8 +814,6 @@ void gain_bloodlust(CHAR_DATA *ch, int value)
 
 void gain_condition(CHAR_DATA *ch, int iCond, int value)
 {
-   int condition;
-
    if (value == 0 || IS_NPC(ch) || ch->level >= LEVEL_HERO)
       return;
 
@@ -832,11 +830,6 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 
       case COND_THIRST:
          send_to_char("You are thirsty.\n\r", ch);
-         break;
-
-      case COND_DRUNK:
-         if (condition != 0)
-            send_to_char("You are sober.\n\r", ch);
          break;
       }
    }
@@ -1444,9 +1437,6 @@ void char_update(void)
    CREF(ch_next, CHAR_NEXT);
    for (ch = first_char; ch != NULL; ch = ch_next)
    {
-      AFFECT_DATA *paf;
-      AFFECT_DATA *paf_next;
-
       ch_next = ch->next;
       if (ch->is_free != FALSE)
          continue;
@@ -2079,7 +2069,6 @@ void update_handler(void)
    static int objfun_check;
    static int pulse_area;
    static int pulse_rooms;
-   static int pulse_mobile;
    static int pulse_gain;
    static int pulse_violence;
    static int pulse_point;
@@ -2130,6 +2119,7 @@ void update_handler(void)
    if (pulse_violence == PULSE_VIOLENCE / 2)
    {
       ai_update();
+      mobile_update();
    }
 
    if (--pulse_violence <= 0)
@@ -2138,12 +2128,6 @@ void update_handler(void)
       pulse_violence = PULSE_VIOLENCE;
       violence_update();
       round_update();
-   }
-
-   if (--pulse_mobile <= 0)
-   {
-      pulse_mobile = PULSE_MOBILE;
-      mobile_update();
    }
 
    if (--pulse_gain <= 0)

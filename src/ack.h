@@ -609,6 +609,7 @@ struct char_data
    int holy_power;
    int arcane_power;
    int psionic_power;
+   int spec_behavior;
    int sentence; /* For new legal system */
    sh_int invis; /* For wizinvis imms - lvl invis to */
    sh_int incog; /* Same as above except for incognito --Flar */
@@ -765,6 +766,13 @@ struct pc_data
    char *ignore_list[MAX_IGNORES]; /* Ignore this person */
    sh_int recall_vnum;
    int keep_vnum;
+   int reincarnations[MAX_CLASS];
+   int remort_reincarnations[MAX_REMORT];
+   int adept_reincarnations[MAX_CLASS];
+   int reincarnation_data[MAX_REINCARNATE];
+   int reincarnate_race;
+   int reincarnate_order[MAX_CLASS];
+   int reincarnate_confirm;
    int mana_from_gain; /* saves non-item oriented mana total */
    int hp_from_gain;   /* same for hitpoints */
    int move_from_gain;
@@ -778,7 +786,6 @@ struct pc_data
    sh_int term_columns;
    char *email_address;
    bool valid_email;
-   char *assist_msg;
 };
 
 /*
@@ -1181,6 +1188,15 @@ struct lookup_type
    int cost; /* if == NO_USE, only creators can set. */
 };
 
+struct lookup_extended_type
+{
+   char *text;
+   long int value;
+   long int value2;
+   int cost;
+   char *info;
+};
+
 /*
  * Skills include spells as a particular case.
  */
@@ -1262,6 +1278,7 @@ char *get_family_name args((CHAR_DATA * ch));
 char *get_tribe_name args((CHAR_DATA * ch));
 void do_learned args( (CHAR_DATA *ch, char *argument) );
 void do_stancehelp args( (CHAR_DATA *ch, char *argument) );
+void do_rmodhelp args( (CHAR_DATA *ch, char *argument) );
 
 /* act_mob.c */
 void int_combat_handler args((CHAR_DATA * ch, CHAR_DATA *victim));
@@ -1598,6 +1615,9 @@ void build_save args((void));
 extern const char *cDirs;
 int get_dir(char);
 char *show_values(const struct lookup_type *table, int value, bool fBit);
+
+/* Tables.c */
+const char* lookup_race_bit_value(int bit);
 
 /* buildtab.c  */
 /*

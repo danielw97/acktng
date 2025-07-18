@@ -259,10 +259,32 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    for (cnt = 0; cnt < MAX_REMORT; cnt++)
       fprintf(fp, "%2d ", ch->remort[cnt]);
    fprintf(fp, "\n");
+
    fprintf(fp, "Adept       ");
    for (cnt = 0; cnt < MAX_CLASS; cnt++)
       fprintf(fp, "%2d ", ch->adept[cnt]);
    fprintf(fp, "\n");
+
+   fprintf(fp, "Reincarnations ");
+   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      fprintf(fp, "%2d ", ch->pcdata->reincarnations[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Remortreincarnations ");
+   for (cnt = 0; cnt < MAX_REMORT; cnt++)
+      fprintf(fp, "%2d ", ch->pcdata->remort_reincarnations[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Adeptreincarnations ");
+   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      fprintf(fp, "%2d ", ch->pcdata->adept_reincarnations[cnt]);
+   fprintf(fp, "\n");
+
+   fprintf(fp, "Reinc_data ");
+   for (cnt = 0; cnt < MAX_REINCARNATE; cnt++)
+      fprintf(fp, "%2d ", ch->pcdata->reincarnation_data[cnt]);
+   fprintf(fp, "\n");
+
    fprintf(fp, "Adeptlevel   ");
    fprintf(fp, "%2d\n ", ch->adept_level);
 
@@ -337,7 +359,6 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "TermColumns    %i\n", ch->pcdata->term_columns);
       fprintf(fp, "Email   %s~\n", ch->pcdata->email_address);
       fprintf(fp, "EmailValid    %i\n", ch->pcdata->valid_email);
-      fprintf(fp, "AssistMsg     %s~\n", ch->pcdata->assist_msg);
       for (cnt = 0; cnt < MAX_ALIASES; cnt++)
       {
          fprintf(fp, "Alias_Name%d %s~\n", cnt, ch->pcdata->alias_name[cnt]);
@@ -423,7 +444,13 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
     * Also bypass no-save objects -S-
     */
 
-   if (get_psuedo_level(ch) + 5 < (obj->level) || obj->item_type == ITEM_KEY || obj->item_type == ITEM_BEACON || IS_SET(obj->extra_flags, ITEM_NOSAVE))
+   bool can_save = FALSE;
+   if (get_psuedo_level(ch) >= obj->level-5)
+      can_save = TRUE;
+   if (get_total_reincarnations(ch) > 0)
+      can_save = TRUE;
+
+   if (!can_save || obj->item_type == ITEM_KEY || obj->item_type == ITEM_BEACON || IS_SET(obj->extra_flags, ITEM_NOSAVE))
       return;
 
    fprintf(fp, "#OBJECT\n");
@@ -592,6 +619,14 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->perm_con = 13;
       ch->pcdata->bloodlust = 24;
       ch->pcdata->keep_vnum = 0;
+      for(int i = 0; i < MAX_CLASS; i++)
+         ch->pcdata->reincarnations[i] = 0;
+      for(int i = 0; i < MAX_REMORT; i++)
+         ch->pcdata->remort_reincarnations[i] = 0;
+      for(int i = 0; i < MAX_CLASS; i++)
+         ch->pcdata->adept_reincarnations[i] = 0;
+      for(int i = 0; i < MAX_REINCARNATE; i++)
+         ch->pcdata->reincarnation_data[i] = 0;
       ch->pcdata->condition[COND_THIRST] = 48;
       ch->pcdata->pagelen = 20;
       ch->pcdata->condition[COND_FULL] = 48;
@@ -615,12 +650,14 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->term_columns = 80;
       ch->pcdata->valid_email = FALSE;
       ch->pcdata->email_address = str_dup("not set");
-      ch->pcdata->assist_msg = str_dup("'@@eBANZAI!!@@N $N must be assisted!!@@N'");
       ch->quest_points = 0;
       for (foo = 0; foo < MAX_REMORT; foo++)
          ch->remort[foo] = -1;
       for (foo = 0; foo < MAX_CLASS; foo++)
          ch->adept[foo] = -1;
+      for (int i = 0; i < MAX_CLASS; i++)
+         ch->pcdata->reincarnate_order[i] = 0;
+      ch->pcdata->reincarnate_confirm = FALSE;
       ch->adept_level = -1;
       for (cnt = 0; cnt < MAX_ALIASES; cnt++)
       {
@@ -855,7 +892,6 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          KEY("Alignment", ch->alignment, fread_number(fp));
          KEY("Armor", ch->armor, fread_number(fp));
          KEY("Adeptlevel", ch->adept_level, fread_number(fp));
-         SKEY("AssistMsg", ch->pcdata->assist_msg, fread_string(fp));
          if (!IS_NPC(ch))
          {
             SKEY("Alias_Name0", ch->pcdata->alias_name[0], fread_string(fp));
@@ -881,6 +917,14 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             SKEY("Alias4", ch->pcdata->alias[4], fread_string(fp));
 
             SKEY("Alias5", ch->pcdata->alias[5], fread_string(fp));
+         }
+
+         if (!str_cmp(word, "Adeptreincarnations"))
+         {
+            for (cnt = 0; cnt < MAX_CLASS; cnt++)
+               ch->pcdata->adept_reincarnations[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
          }
 
          if (!str_cmp(word, "Affect"))
@@ -1170,6 +1214,30 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          {
             for (cnt = 0; cnt < MAX_REMORT; cnt++)
                ch->remort[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Reinc_data"))
+         {
+            for (cnt = 0; cnt < MAX_REINCARNATE; cnt++)
+               ch->pcdata->reincarnation_data[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Reincarnations"))
+         {
+            for (cnt = 0; cnt < MAX_CLASS; cnt++)
+               ch->pcdata->reincarnations[cnt] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Remortreincarnations"))
+         {
+            for (cnt = 0; cnt < MAX_REMORT; cnt++)
+               ch->pcdata->remort_reincarnations[cnt] = fread_number(fp);
             fMatch = TRUE;
             break;
          }

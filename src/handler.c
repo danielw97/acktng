@@ -331,6 +331,9 @@ int get_max_str(CHAR_DATA *ch)
          max++;
    }
 
+   if (ch->pcdata->reincarnations[CLASS_WAR] > 0)
+      max += (ch->pcdata->reincarnations[CLASS_WAR]+1)/2;
+
    return UMIN(max, STAT_MAX);
 }
 
@@ -369,6 +372,12 @@ int get_max_int(CHAR_DATA *ch)
          max++;
    }
 
+   if (ch->pcdata->reincarnations[CLASS_MAG] > 0)
+      max += (ch->pcdata->reincarnations[CLASS_MAG]+1)/2;
+
+   if (ch->pcdata->reincarnations[CLASS_PSI] > 0)
+      max += (ch->pcdata->reincarnations[CLASS_PSI]+1)/2;
+
    return UMIN(max, STAT_MAX);
 }
 
@@ -406,6 +415,9 @@ int get_max_wis(CHAR_DATA *ch)
       if (ch->adept[i] > 0 && adept_table[i].attr_prime == APPLY_WIS)
          max++;
    }
+
+   if (ch->pcdata->reincarnations[CLASS_CLE] > 0)
+      max += (ch->pcdata->reincarnations[CLASS_CLE]+1)/2;
 
    return UMIN(max, STAT_MAX);
 }
@@ -446,6 +458,9 @@ int get_max_dex(CHAR_DATA *ch)
          max++;
    }
 
+   if (ch->pcdata->reincarnations[CLASS_THI] > 0)
+      max += (ch->pcdata->reincarnations[CLASS_THI]+1)/2;
+
    return UMIN(max, STAT_MAX);
 }
 
@@ -484,6 +499,9 @@ int get_max_con(CHAR_DATA *ch)
          max++;
    }
 
+   if (ch->pcdata->reincarnations[CLASS_PUG] > 0)
+      max += (ch->pcdata->reincarnations[CLASS_PUG]+1)/2;
+
    return UMIN(max, STAT_MAX);
 }
 
@@ -510,6 +528,21 @@ int get_healing(CHAR_DATA *ch)
       healing += ch->healing_mod;
 
    return healing;
+}
+
+int get_total_reincarnations(CHAR_DATA *ch)
+{
+   int cnt;
+
+   if (IS_NPC(ch))
+      return 0;
+
+   for(int i = 0; i < MAX_CLASS; i++)
+   {
+      cnt += ch->pcdata->reincarnations[i];
+   }
+
+   return cnt;
 }
 
 int get_spell_crit(CHAR_DATA *ch)
@@ -748,7 +781,7 @@ int get_max_carry(CHAR_DATA *ch)
 
 int get_generation_chance()
 {
-   bool chance = 50;
+   bool chance = 5;
 
    if (happy_hour)
       chance *= 2;
@@ -915,12 +948,32 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    if (!IS_WOLF(ch) && skill_table[gsn].flag2 == WOLF)
       return FALSE;
 
+   if (gsn == gsn_enhanced_damage && ch->pcdata->reincarnations[CLASS_WAR] > 0)
+      return TRUE;
+
+   if (gsn == gsn_enhanced_critical && ch->pcdata->reincarnations[CLASS_THI] > 0)
+      return TRUE;
+
+   if (gsn == gsn_counter && ch->pcdata->reincarnations[CLASS_PUG] > 0)
+      return TRUE;
+
+   if (gsn == gsn_potency && ch->pcdata->reincarnations[CLASS_MAG] > 0)
+      return TRUE;
+
+   if (gsn == gsn_spell_critical && ch->pcdata->reincarnations[CLASS_PSI] > 0)
+      return TRUE;
+
+   if (gsn == gsn_spell_critical_damage && ch->pcdata->reincarnations[CLASS_CLE] > 0)
+      return TRUE;
+
    if (skill_table[gsn].flag1 == MORTAL)
    {
       for (int i = 0; i < MAX_CLASS; i++)
       {
          if (ch->lvl[i] >= skill_table[gsn].skill_level[i])
             return TRUE;
+         if (!IS_NPC(ch) && ch->pcdata->reincarnations[i] >= 20)
+	    return TRUE;
       }
    }
    else if (skill_table[gsn].flag1 == REMORT)

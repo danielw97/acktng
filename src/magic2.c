@@ -312,6 +312,18 @@ bool spell_protection(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    return TRUE;
 }
 
+bool spell_refresh_mana(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+
+   int move = ch->lvl[CLASS_CLE]  + 50;
+
+   victim->mana = UMIN(victim->mana + move, victim->max_mana);
+   send_to_char("You feel refreshed.\n\r", victim);
+   act("$n looks refreshed.", victim, NULL, NULL, TO_ROOM);
+   return TRUE;
+}
+
 bool spell_refresh(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
@@ -321,9 +333,9 @@ bool spell_refresh(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       return FALSE;
    }
 
-   int move = ch->lvl[CLASS_CLE]  + 50;
+   int move = ch->lvl[CLASS_CLE] + 50;
 
-   if (victim->fighting != NULL)
+   if (obj == NULL && victim->fighting != NULL)
       move = -1;
 
    victim->move = UMIN(victim->move + move, victim->max_move);

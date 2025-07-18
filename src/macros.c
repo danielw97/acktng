@@ -39,7 +39,7 @@ void reset_gain_stats(CHAR_DATA *ch)
    int curr;
    ch->pcdata->mana_from_gain = 100;
    ch->pcdata->hp_from_gain = 25;
-   ch->pcdata->move_from_gain = 0;
+   ch->pcdata->move_from_gain = 100;
 
    for (int i = 0; i < MAX_CLASS; i++)
    {

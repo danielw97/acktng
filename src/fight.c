@@ -161,20 +161,22 @@ void violence_update(void)
       /*
        * Fun for the whole family!   RCH is a non-fighting mob
        */
-      if (IS_NPC(victim) && (get_psuedo_level(victim) > 15))
-      {
          CREF(rch_next, CHAR_NEXTROOM);
          for (rch = ch->in_room->first_person; rch != NULL; rch = rch_next)
          {
             rch_next = rch->next_in_room;
-            if (!IS_NPC(rch))
-               continue;
 
             if (IS_AWAKE(rch) && rch->fighting == NULL && !IS_SET(rch->act, ACT_NOASSIST) && !IS_AFFECTED(rch, AFF_CHARM))
             {
+               if (!IS_NPC(rch) && IS_SET(ch->config, CONFIG_AUTOASSIST))
+               {
+                  do_assist(rch, ch->name);
+               }
+
                /*
                 * NPC's assist NPC's of same type or 45% chance regardless.
                 */
+               else if (IS_NPC(ch)) {
                if ((rch->pIndexData == victim->pIndexData) /* is it the same as a target here?  */
                    || ((number_percent() < 20) && (abs(get_psuedo_level(rch) - get_psuedo_level(victim)) < 35)))
                {
@@ -212,11 +214,11 @@ void violence_update(void)
                         }
                      }
                   }
-               }
+               } }
             }
          }
          CUREF(rch_next);
-      }
+      
    }
    CUREF(ch_next);
    return;
@@ -1475,9 +1477,9 @@ void do_assist(CHAR_DATA *ch, char *argument)
       }
       if ((assist->fighting != NULL) && (ch->fighting == NULL))
       {
-         sprintf(actbuf, "$n screams, '%s'", IS_NPC(ch) ? "BANZAI!! $N must be assisted!!" : ch->pcdata->assist_msg);
+         sprintf(actbuf, "$n screams, '%s'", "BANZAI!! $N must be assisted!!");
          act(actbuf, ch, NULL, assist, TO_ROOM);
-         sprintf(actbuf, "You scream, '%s'", IS_NPC(ch) ? "BANZAI!! $N must be assisted!!" : ch->pcdata->assist_msg);
+         sprintf(actbuf, "You scream, '%s'", "BANZAI!! $N must be assisted!!");
          act(actbuf, ch, NULL, assist, TO_CHAR);
          set_fighting(ch, assist->fighting, TRUE);
          return;
@@ -1505,9 +1507,9 @@ void do_assist(CHAR_DATA *ch, char *argument)
     */
    if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) && (ch->leader->fighting != NULL) && (ch->fighting == NULL) && (ch->leader != ch))
    {
-      sprintf(actbuf, "$n screams, '%s'", IS_NPC(ch) ? "BANZAI!! $N must be assisted!!" : ch->pcdata->assist_msg);
+      sprintf(actbuf, "$n screams, '%s'", "BANZAI!! $N must be assisted!!");
       act(actbuf, ch, NULL, ch->leader, TO_ROOM);
-      sprintf(actbuf, "You scream, '%s'", IS_NPC(ch) ? "BANZAI!! $N must be assisted!!" : ch->pcdata->assist_msg);
+      sprintf(actbuf, "You scream, '%s'", "BANZAI!! $N must be assisted!!");
       act(actbuf, ch, NULL, ch->leader, TO_CHAR);
       set_fighting(ch, ch->leader->fighting, TRUE);
       return;
@@ -1519,9 +1521,9 @@ void do_assist(CHAR_DATA *ch, char *argument)
    for (ppl = ch->in_room->first_person; ppl != NULL; ppl = ppl->next_in_room)
       if ((is_same_group(ch, ppl)) && (ppl != ch) && (ppl->fighting != NULL) && (ch->fighting == NULL))
       {
-         sprintf(actbuf, "$n screams, '%s'", IS_NPC(ch) ? "BANZAI!! $N must be assisted!!" : ch->pcdata->assist_msg);
+         sprintf(actbuf, "$n screams, '%s'", "BANZAI!! $N must be assisted!!");
          act(actbuf, ch, NULL, ppl, TO_ROOM);
-         sprintf(actbuf, "You scream, '%s'", IS_NPC(ch) ? "BANZAI!! $N must be assisted!!" : ch->pcdata->assist_msg);
+         sprintf(actbuf, "You scream, '%s'", "BANZAI!! $N must be assisted!!");
          act(actbuf, ch, NULL, ppl, TO_CHAR);
          set_fighting(ch, ppl->fighting, TRUE);
          return;

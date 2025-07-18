@@ -157,6 +157,8 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_INFO, C_SHOW_ALWAYS},
     {"sthelp", do_stancehelp, POS_DEAD, 0, LOG_NORMAL,
      C_TYPE_INFO, C_SHOW_ALWAYS},
+    {"rmlist", do_rmodhelp, POS_DEAD, 0, LOG_NORMAL,
+     C_TYPE_INFO, C_SHOW_ALWAYS},
     {"shelp", do_shelp, POS_DEAD, 0, LOG_NORMAL,
      C_TYPE_INFO, C_SHOW_ALWAYS},
     {"heal", do_heal, POS_STANDING, 0, LOG_NORMAL,
@@ -836,6 +838,10 @@ const struct cmd_type cmd_table[] = {
     {"mptransfer", do_mptransfer, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
     {"mpforce", do_mpforce, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
     {"mpforce", do_mpforce, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
+
+    /* Reincarnate */
+    {"reincarnate", do_reincarnate, POS_STANDING, 0, LOG_ALWAYS,
+     C_TYPE_ACTION, C_SHOW_ALWAYS},
 
     /*
      * End of list.

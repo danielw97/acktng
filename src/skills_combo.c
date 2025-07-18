@@ -488,6 +488,9 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
     int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
     int mult = 23;
 
+    if (max < 4)
+         return;
+
     for (i = 0; i < max; i++)
     {
         if (ch->combo[i] == gsn)
@@ -724,14 +727,23 @@ void reset_combo(CHAR_DATA *ch)
 
 int get_max_combo(CHAR_DATA *ch)
 {
-    if (ch->adept[CLASS_CRU] > 0)
-        return 6;
-
-    if (ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0)
-        return 5;
+    int max;
 
     if (ch->lvl[CLASS_WAR] > 0)
-        return 4;
+        max = 4;
 
-    return 0;
+    if (!IS_NPC(ch) && ch->pcdata->reincarnations[CLASS_WAR] >= 20)
+        max = 4;
+
+    if (ch->adept[CLASS_CRU] > 0 && max > 0)
+        max++;
+    else if (!IS_NPC(ch) && ch->pcdata->adept_reincarnations[CLASS_MAR] >= 20 && max > 0)
+        max++;
+
+    if ((ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0) && max > 0)
+        max++;
+    else if (max > 0 && (!IS_NPC(ch) && (ch->pcdata->remort_reincarnations[CLASS_KNI] >= 20 || ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20) ) )
+        max++;
+
+    return max;
 }

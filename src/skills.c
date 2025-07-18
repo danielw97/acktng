@@ -24,11 +24,8 @@ void do_rescue(CHAR_DATA *ch, char *argument)
    else
       best = ch->level;
 
-   if (best == -1)
-   {
-      send_to_char("You don't know how to rescue!!\n\r", ch);
+   if (!can_use_skill_message(ch, gsn_rescue))
       return;
-   }
 
    one_argument(argument, arg);
 
@@ -69,7 +66,7 @@ void do_rescue(CHAR_DATA *ch, char *argument)
    }
 
    WAIT_STATE(ch, skill_table[gsn_rescue].beats);
-   if (!IS_NPC(ch) && number_percent() > ch->pcdata->learned[gsn_rescue])
+   if (!IS_NPC(ch) && !skill_success(ch, victim, gsn_rescue, 0))
    {
       send_to_char("You fail the rescue.\n\r", ch);
       return;

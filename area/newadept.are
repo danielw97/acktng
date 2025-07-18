@@ -15,7 +15,9 @@ W Virant~
 #ROOMS
 #166
 Path to the Wizard's Keep~
-No description~
+This is a simple path. To the north, the Wizard's Keep can be seen, a majestic
+place for adepts. A dense forest can be seen below.
+~
 16384 11
 D0
 ~
@@ -28,7 +30,11 @@ D5
 S
 #167
 Path to Keep~
-No description~
+The path continues on, stretching north towards the Wizard's Keep. Birds can
+be heard all around, and the sun shines brightly. Little can be seen of
+anything to the sides of the path, the forest so dense that you cannot see a
+thing. The smell of the forest is overwhelming.
+~
 0 11
 D0
 ~
@@ -41,7 +47,11 @@ D2
 S
 #168
 Path to Keep~
-No description~
+The path continues on, stretching north towards the Wizard's Keep. Birds can
+be heard all around, and the sun shines brightly. Little can be seen of
+anything to the sides of the path, the forest so dense that you cannot see a
+thing. A faint scent of smoke wafts in from the east.
+~
 4 11
 D0
 ~
@@ -78,8 +88,12 @@ D3
 0 -1 171
 S
 #170
-Path Around Keep~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -91,8 +105,12 @@ D3
 0 -1 169
 S
 #171
-Path Around Keep~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -104,8 +122,12 @@ D3
 0 -1 172
 S
 #172
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -117,8 +139,12 @@ D3
 0 -1 173
 S
 #173
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -130,8 +156,12 @@ D3
 0 -1 174
 S
 #174
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -143,8 +173,11 @@ D3
 0 -1 175
 S
 #175
-New room~
-No description~
+Corner of the path around the Keep~
+To the east and the north, a path around the keep stretches. To the south and
+the west, a dense forest grows, of which only trees can be seen. The sun
+shines brightly above, giving an almost cheerful feeling to the area.
+~
 0 11
 D0
 ~
@@ -208,8 +241,11 @@ D2
 0 -1 178
 S
 #180
-New room~
-No description~
+Corner of the path around the Keep~
+To the east and the south, a path around the keep stretches. To the north and
+the west, a dense forest grows, of which only trees can be seen. The sun
+shines brightly above, giving an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -221,8 +257,12 @@ D2
 0 -1 179
 S
 #181
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -234,8 +274,12 @@ D3
 0 -1 170
 S
 #182
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -247,8 +291,12 @@ D3
 0 -1 181
 S
 #183
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -260,8 +308,12 @@ D3
 0 -1 182
 S
 #184
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -273,8 +325,11 @@ D3
 0 -1 183
 S
 #185
-New room~
-No description~
+Corner of the path around the Keep~
+To the west and the north, a path around the keep stretches. To the south and
+the east, a dense forest grows, of which only trees can be seen. The sun
+shines brightly above, giving an almost cheerful feeling to the area.
+~
 0 11
 D0
 ~
@@ -338,8 +393,11 @@ D2
 0 -1 188
 S
 #190
-New room~
-No description~
+Corner of the path around the Keep~
+To the west and the south, a path around the keep stretches. To the north and
+the east, a dense forest grows, of which only trees can be seen. The sun
+shines brightly above, giving an almost cheerful feeling to the area.
+~
 0 11
 D2
 ~
@@ -351,8 +409,12 @@ D3
 0 0 201
 S
 #191
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -364,8 +426,12 @@ D3
 0 -1 180
 S
 #192
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -377,8 +443,12 @@ D3
 0 -1 191
 S
 #193
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -390,8 +460,12 @@ D3
 0 -1 192
 S
 #194
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -403,8 +477,12 @@ D3
 0 -1 193
 S
 #195
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -416,8 +494,12 @@ D3
 0 -1 194
 S
 #196
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -429,8 +511,12 @@ D3
 0 -1 195
 S
 #197
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -442,8 +528,12 @@ D3
 0 -1 196
 S
 #198
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -455,8 +545,12 @@ D3
 0 -1 197
 S
 #199
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -468,8 +562,12 @@ D3
 0 -1 198
 S
 #200
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -481,8 +579,12 @@ D3
 0 -1 199
 S
 #201
-New room~
-No description~
+Path around the Keep~
+To the west and the east, a path around the keep stretches. To the north, you
+can see a moat that is completely impassable. To the south, a dense forest
+grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
+~
 0 11
 D1
 ~
@@ -503,8 +605,12 @@ D3
 481 166 168
 S
 #203
-Gate~
-No description~
+Gate of the Wizard's Keep~
+To the north, a large gate can be seen in front of the Wizard's Keep. It is a
+double-sided gate made of strong oak wood, banded by mithril. The path towards
+the gate is kept very clean, the cobblestones almost shining brightly in the
+sun.
+~
 4 11
 D0
 ~
@@ -675,7 +781,7 @@ S
 #213
 A Guard's Tower~
 No description~
-0 11
+4 11
 D1
 ~
 ~
@@ -697,7 +803,7 @@ S
 #215
 Guard's Tower~
 No description~
-0 11
+4 11
 D3
 ~
 ~
@@ -719,7 +825,7 @@ S
 #217
 Entrance to the Wizard's Keep~
 No description~
-0 11
+4 11
 D0
 ~
 ~
@@ -1222,27 +1328,27 @@ S
 #MOBILES
 #166
 A Patrolman of the Keep~
-A Patrolman of the Keep~
+@@WA @@BPatrolman@@W of the Keep@@N~
 A Patrolman patrols the keep
 ~
 ~
-101 27372 0 S
+16777317 27372 0 S
 161 1
 10000 -500 1000 300
-! 0 0 0 7 1079422 0 48
+! 0 0 0 7 1079423 0 48
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 10 170 171 172 173 0 0 0 0 0 
 L 25 25 25 25 0 0 0 0 0 
 #167
 A Guardsman of the Keep~
-A Guardsman of the Keep~
+@@WA @@BGuardsman @@Wof the Keep@@N~
 A guardsman stands here
 ~
 ~
-33554435 0 0 S
+33554435 18624 0 S
 167 1
-0 0 0 0
+15000 0 1200 500
 ! 0 0 0 7 536607 0 16
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
@@ -1251,7 +1357,7 @@ L 25 25 25 25 0 0 0 0 0
 #168
 A Grumpy Hermit~
 @@WA Grumpy @@BHermit@@N~
-A hermit stands here, grumpy from all of the new activity nearby.
+A grumpy hermit is here, looking at you angrily
 ~
 ~
 33554435 0 0 S
@@ -1262,6 +1368,90 @@ A hermit stands here, grumpy from all of the new activity nearby.
 + 200 0 0 0 0 0 0 0 0
 l 25 178 179 180 0 0 0 0 0 0 
 L 33 33 33 0 0 0 0 0 0 
+#169
+A Guard Captain~
+@@WA Guard @@BCaptain@@N~
+A guard captain stands here, observing the keep
+~
+~
+33554435 1698558 0 S
+166 1
+100000 -2000 1000 1000
+! 0 0 0 7 536607 0 80
+| 0 0 65604 0 0 4095 0
++ 0 0 0 0 0 0 0 0 0
+l 150 192 193 194 195 196 197 0 0 0 
+L 20 20 20 15 15 10 0 0 0 
+#170
+A Guard Captain~
+@@WA Guard @@BCaptain@@N~
+A Guard Captain (Unfinished boss Akrites, don't report ;))
+~
+~
+1 0 0 S
+1 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#171
+A Wizard's Servant~
+@@WA Wizard's @@BServant@@N~
+A Wizard's Servant is doing chores here
+~
+~
+1073741825 0 0 S
+168 1
+5000 -1000 0 0
+! 0 0 0 7 537600 41943040 16
+| 2049 0 65572 0 0 0 0
++ 400 0 0 0 0 0 0 0 0
+l 10 182 183 0 0 0 0 0 0 0 
+L 50 50 0 0 0 0 0 0 0 
+#172
+A Keep Drudge~
+@@WA Keep @@BDrudge@@N~
+A drudge is here, working
+~
+~
+1107296257 18624 0 S
+166 1
+25000 0 2000 0
+! 0 0 0 7 536735 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 10 184 185 0 0 0 0 0 0 0 
+L 50 50 0 0 0 0 0 0 0 
+#173
+A Keep Guard~
+@@WA Keep @@BGuard@@N~
+A guard stands here, guarding the courtyard
+~
+~
+33554433 16576 0 S
+1 1
+2000 0 1000 500
+! 0 0 0 7 536607 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 10 186 187 0 0 0 0 0 0 0 
+L 50 50 0 0 0 0 0 0 0 
+#174
+A Keep Sentinel~
+@@WA Keep @@BSentinel@@N~
+A Sentinel stands here
+~
+~
+11 8320 0 S
+170 1
+40000 -2000 1500 500
+! 0 0 0 7 12319 0 80
+| 0 0 80 0 0 4095 0
++ 0 0 0 0 0 0 0 0 0
+l 15 188 189 190 191 0 0 0 0 0 
+L 25 25 25 25 0 0 0 0 0 
 #0
 #OBJECTS
 #166
@@ -1283,10 +1473,10 @@ A key lies here, discarded~
 L
 1
 #168
-Wizard's Keep Key~
-~
-~
-18 0 0 1
+wizard's Keep Key~
+wizard's Keep Key~
+A key lies here~
+18 128 8421376 1
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -1399,6 +1589,159 @@ A pair of boots lie here, discarded~
 4
 L
 150
+#181
+npc~
+@@WWizard's Keep @@BNPC Shield@@N~
+~
+9 20608 32768 17
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+#182
+A Servant's Bonnet~
+@@WA @@BServant's @@WBonnet@@N~
+A bonnet is discarded here~
+9 201326592 8388616 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#183
+A Servant's Cravat~
+@@WA @@BServant's @@WCravat@@N~
+A cravat is abandoned here~
+9 134217792 8388736 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#184
+A Drudge's Hood~
+@@WA @@BDrudge's@@W Hood@@N~
+A hood is abandoned here~
+9 201326592 8388616 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#185
+A Drudge's Belt~
+@@WA @@BDrudge's@@W Belt@@N~
+A discarded belt lies here~
+9 201326592 8519680 257
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#186
+A Guard's Helmet~
+@@WA @@BGuard's@@W Helmet@@N~
+A helmet lies here, discarded~
+9 201326592 8388616 145
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#187
+A Guard's Breastplate~
+@@WA @@BGuard's @@WBreastplate@@N~
+A breastplate is discarded here~
+9 201326592 8650752 9243
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#188
+A Sentinel's Pauldrons~
+@@WA @@BSentinel's @@WPauldrons@@N~
+A discarded set of pauldrons lies here~
+9 201326592 8389120 20481
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#189
+@@WA @@BSentinel's@@W Shield@@N~
+@@WA @@BSentinel's@@W Shield@@N~
+An abandoned shield lies here~
+9 201326592 8421376 5
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#190
+A Sentinel's Gorget~
+@@WA @@BSentinel's@@W Gorget@@N~
+A discarded gorget lies here~
+9 201326592 8388736 129
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#191
+A Sentinel's Greaves~
+@@WA @@BSentinel's@@W Greaves@@N~
+A discarded pair of greaves lies here~
+9 201326592 9437184 33
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#192
+A Captain's Helm~
+@@WA @@BCaptain's @@WHelm@@N~
+A helm lies here, discarded~
+9 201326656 8388616 145
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#193
+A Captain's Breastplate~
+@@WA @@BCaptain's @@WBreastplate@@N~
+A discarded breastplate lies here~
+9 201326656 8650752 1049
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#194
+Bracers of the Guard Captain~
+@@WBracers of the Guard @@BCaptain@@N~
+Discarded bracers lie here~
+9 201326656 8390656 4353
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#195
+Greaves of the Guard Captain~
+@@WGreaves of the Guard @@BCaptain@@N~
+Greaves lie here, discarded~
+9 201326656 9437184 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#196
+Buckler of the Guard Captain~
+@@WBuckler of the Guard @@BCaptain@@N~
+A discarded buckler lies here~
+9 469762112 8421376 353
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#197
+Ribbon of the Guard Captain~
+@@WRibbon of the Guard @@BCaptain@@N~
+~
+5 1275069504 8421376 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+150
 #0
 #RESETS
 D 0 168 1 1 (null)
@@ -1453,5 +1796,39 @@ M 0 168 1 202 (null)
 
 G 0 167 0 (null)
 
+M 0 169 1 214 (null)
+
+E 0 181 0 0 (null)
+
+M 0 170 1 216 (null)
+
+M 0 171 3 210 (null)
+
+E 0 181 0 0 (null)
+
+M 0 172 4 205 (null)
+
+E 0 181 0 0 (null)
+
+M 0 173 5 206 (null)
+
+E 0 181 0 0 (null)
+
+M 0 174 2 217 (null)
+
+E 0 181 0 0 (null)
+
+G 0 168 0 (null)
+
+M 0 174 2 217 (null)
+
+E 0 181 0 0 (null)
+
+S
+#SPECIALS
+M 169 spec_keep_physical_captain
+S
+#OBJFUNS
+O 197 objfun_healing
 S
 #$

@@ -244,20 +244,19 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
     }
 
     set_fighting(ch, victim, TRUE);
-    if (obj == NULL)
+
+    obj = get_eq_char(victim, WEAR_HOLD_HAND_L);
+    if (obj == NULL || obj->item_type != ITEM_WEAPON)
+       obj = get_eq_char(victim, WEAR_HOLD_HAND_R);
+    if (obj == NULL || obj->item_type != ITEM_WEAPON)
+       obj = get_eq_char(victim, WEAR_TWO_HANDED);
+
+    if (obj == NULL || IS_SET(obj->extra_flags, ITEM_FIST))
     {
-        if (((obj = get_eq_char(victim, WEAR_HOLD_HAND_L)) == NULL) || (obj->item_type != ITEM_WEAPON))
-        {
-            if (((obj = get_eq_char(victim, WEAR_HOLD_HAND_R)) == NULL) || (obj->item_type != ITEM_WEAPON))
-            {
-                if (obj == NULL || IS_SET(obj->extra_flags, ITEM_FIST))
-                {
-                    send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
-                    return;
-                }
-            }
-        }
+        send_to_char("Your opponent is not wielding a weapon.\n\r", ch);
+        return;
     }
+
 
     if (!IS_NPC(victim) && IS_WOLF(victim) && (IS_SHIFTED(victim) || IS_RAGED(victim)))
     {

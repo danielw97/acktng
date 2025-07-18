@@ -293,7 +293,7 @@ bool saves_spell(int level, CHAR_DATA *victim)
           ((get_psuedo_level(victim) > 60 ? get_psuedo_level(victim) * 2 / 3 : get_psuedo_level(victim)) - level - URANGE(-40, victim->saving_throw, 40));
    if ((IS_NPC(victim)) && (IS_SET(victim->act, ACT_SOLO)))
       save += 20;
-   if (!IS_NPC(victim) && (IS_SET(race_table[victim->race].race_flags, RACE_MOD_RESIST_SPELL)))
+   if (!IS_NPC(victim) && (IS_SET(race_table[victim->race].race_flags, RACE_MOD_RESIST_MAGIC)))
       save += 20;
    save = URANGE(5, save, 95);
 

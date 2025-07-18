@@ -40,6 +40,7 @@ DECLARE_OBJ_FUN(objfun_flaming);      /* test obj_fun   */
 DECLARE_OBJ_FUN(objfun_healing);      /* test obj_fun   */
 DECLARE_OBJ_FUN(objfun_dispeller);    /* test obj_fun   */
 DECLARE_OBJ_FUN(objfun_regen);        /* test obj_fun   */
+DECLARE_OBJ_FUN(objfun_clan);
 
 OBJ_FUN *obj_fun_lookup(const char *name)
 {
@@ -61,6 +62,8 @@ OBJ_FUN *obj_fun_lookup(const char *name)
       return objfun_dispeller;
    if (!str_cmp(name, "objfun_regen"))
       return objfun_regen;
+   if (!str_cmp(name, "objfun_clan"))
+      return objfun_clan;
 
    return 0;
 }
@@ -86,6 +89,9 @@ char *rev_obj_fun_lookup(void *func)
    if (func == objfun_regen)
       return "objfun_regen";
 
+   if (func == objfun_clan)
+      return "objfun_clan";
+
    return 0;
 }
 
@@ -100,6 +106,7 @@ void print_obj_fun_lookup(char *buf)
    strcat(buf, " objfun_healing \n\r  ");
    strcat(buf, " objfun_dispeller \n\r  ");
    strcat(buf, " objfun_regen \n\r  ");
+   strcat(buf, " objfun_clan \n\r");
 
    return;
 }
@@ -531,5 +538,30 @@ void objfun_regen(OBJ_DATA *obj, CHAR_DATA *keeper)
    if (obj->wear_loc < 0)
       return;
    keeper->hit = UMIN(keeper->max_hit, keeper->hit + (number_range(obj->level / 20, obj->level / 5)));
+   return;
+}
+
+void objfun_clan(OBJ_DATA *obj, CHAR_DATA *keeper)
+{
+   int sn = skill_lookup("refresh");
+   if (number_percent() < 50)
+      sn = skill_lookup("refresh mana");
+
+   if (keeper == NULL || keeper->in_room == NULL)
+      return;
+
+   /*
+    * Come on... it was SO annoying!
+    */
+
+   if (obj->wear_loc < 0)
+      return;
+
+   if (number_percent() < 10 && keeper->fighting != NULL)
+   {
+      act("$p carried by $n briefly glows!", keeper, obj, NULL, TO_ROOM);
+      act("$p carried by you briefly glows!", keeper, obj, NULL, TO_CHAR);
+      obj_cast_spell(sn, obj->level, keeper, keeper, obj);
+   }
    return;
 }

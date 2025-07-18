@@ -212,15 +212,15 @@ S
 D0
 ~
 ~
+0 -1 5108
+D2
+~
+~
 0 -1 5110
 D3
 ~
 ~
 0 -1 5116
-D4
-~
-~
-0 -1 5108
 S
 #5110
 @@dThe Vast Darkness@@N~
@@ -275,7 +275,7 @@ S
 about.@@N
 ~
 9 11
-D0
+D1
 ~
 ~
 0 -1 5113
@@ -340,15 +340,15 @@ S
 D0
 ~
 ~
-0 -1 5114
-D1
-~
-~
-0 -1 5116
+0 0 5114
 D2
 ~
 ~
-0 0 5114
+0 -1 5116
+D4
+~
+~
+0 -1 5114
 S
 #5116
 @@dThe Vast Darkness@@N~
@@ -442,11 +442,11 @@ S
 D1
 ~
 ~
-0 -1 5119
+0 -1 5121
 D2
 ~
 ~
-0 -1 5121
+0 -1 5119
 S
 #5121
 @@dA Small Alcove@@N~
@@ -798,7 +798,7 @@ administrator~
  @@Rexperiments@@d.@@N
 ~
 ~
-36716561 68266 0 S
+53493777 68266 0 S
 138 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -924,7 +924,7 @@ L
 115
 #5106
 slime~
-@@dPetrified @@Gslime@@N~
+@@dPetrified @@rslime@@N~
 @@dA tiny blob of petrified @@Gslime@@d lies here.@@N~
 9 134217856 8388609 65543
 0 0 0 0 0 0 0 0 0 0
@@ -958,6 +958,42 @@ A
 13 100
 L
 115
+#5108
+Ribbon of the Administrator~
+@@dRibbon of the @@RAdministrator@@N~
+A ribbon lies here~
+5 1275068544 8421376 257
+0 0 0 0 0 0 0 0 0 0
+7
+L
+135
+#5109
+Wand of the Administrator~
+@@dWand of the @@RAdministrator@@N~
+A wand lies here, discarded~
+5 671088640 8421376 17
+0 0 0 6 0 0 0 0 0 0
+2
+L
+135
+#5110
+Soul of the Administrator~
+@@dSoul of the @@RAdministrator@@N~
+A soul lies here~
+9 134217792 8388610 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+135
+#5111
+An Administrator's Halo~
+@@dAn @@RAdministrator's@@d Halo@@N~
+A halo lies here, discarded~
+9 134217792 8388609 20609
+0 0 0 0 0 0 0 0 0 0
+4
+L
+135
 #0
 #RESETS
 R 0 5120 5 (null)
@@ -999,6 +1035,14 @@ E 0 5104 0 5 (null)
 E 0 5106 0 19 (null)
 
 M 0 5104 1 5126 (null)
+
+E 0 5111 0 0 (null)
+
+E 0 5110 0 0 (null)
+
+G 0 5109 0 (null)
+
+G 0 5108 0 (null)
 
 S
 #SPECIALS

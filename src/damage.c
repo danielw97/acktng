@@ -403,6 +403,9 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
         return -1;
     }
 
+    if (IS_NPC(ch))
+        damcap *= 5;
+
     if (critical)
         damcap *= 2;
 

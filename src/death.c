@@ -495,7 +495,7 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 
          gch->pcdata->vamp_exp += vamp_exp;
 
-      if (!IS_NPC(gch) && (gch->pcdata->learned[gsn_emotion_control] < 73))
+      if (!IS_NPC(gch) && !can_use_skill(gch, gsn_emotion_control))
       {
          align = gch->alignment - (victim->alignment * (80 - gch->pcdata->learned[gsn_emotion_control]) / 100);
 

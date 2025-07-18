@@ -638,3 +638,6 @@ DECLARE_DO_FUN(do_howl);
 DECLARE_DO_FUN(do_tribe);
 DECLARE_DO_FUN(do_scent);
 DECLARE_DO_FUN(do_imprint);
+
+/* Reincarnate */
+DECLARE_DO_FUN(do_reincarnate);
