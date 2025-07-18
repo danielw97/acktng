@@ -200,7 +200,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
             ch->pcdata->order[i] = ch->pcdata->reincarnate_order[i];
             ch->pcdata->index[ch->pcdata->reincarnate_order[i]] = i;
          }
-         ch->lvl[ch->pcdata->order[0]] = 1;
+         ch->lvl[ch->pcdata->order[0]] = 2;
          reset_gain_stats(ch);
          ch->level = 1;
          do_save(ch, "");
