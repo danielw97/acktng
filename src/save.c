@@ -445,7 +445,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
     */
 
    bool can_save = FALSE;
-   if (get_psuedo_level(ch) >= obj->level-5)
+   if (get_psuedo_level(ch)+5 <= obj->level)
       can_save = TRUE;
    if (get_total_reincarnations(ch) > 0)
       can_save = TRUE;
