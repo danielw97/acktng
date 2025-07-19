@@ -66,7 +66,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
                  class_table[ch->pcdata->reincarnate_order[1]].who_name, class_table[ch->pcdata->reincarnate_order[2]].who_name,
                  class_table[ch->pcdata->reincarnate_order[3]].who_name);
          send_to_char(buf, ch);
-         if (ch->pcdata->reincarnate_confirm)
+         if (IS_SET(ch->pcdata->reincarnate_confirm, REINCARNATE_CONFIRM))
             send_to_char("Reincarnation CONFIRMED, reincarnate set done to reincarnate.\n\r", ch);
       }
       else if (!str_prefix(arg, "race"))
