@@ -161,31 +161,34 @@ void violence_update(void)
       /*
        * Fun for the whole family!   RCH is a non-fighting mob
        */
-         CREF(rch_next, CHAR_NEXTROOM);
-         for (rch = ch->in_room->first_person; rch != NULL; rch = rch_next)
+      CREF(rch_next, CHAR_NEXTROOM);
+      for (rch = ch->in_room->first_person; rch != NULL; rch = rch_next)
+      {
+         rch_next = rch->next_in_room;
+
+         if (IS_AWAKE(rch) && rch->fighting == NULL && !IS_SET(rch->act, ACT_NOASSIST) && !IS_AFFECTED(rch, AFF_CHARM))
          {
-            rch_next = rch->next_in_room;
-
-            if (IS_AWAKE(rch) && rch->fighting == NULL && !IS_SET(rch->act, ACT_NOASSIST) && !IS_AFFECTED(rch, AFF_CHARM))
+            if (!IS_NPC(rch) && !IS_NPC(ch) && IS_SET(rch->config, CONFIG_AUTOASSIST) && is_same_group(rch, ch))
             {
-               if (!IS_NPC(rch) && IS_SET(ch->config, CONFIG_AUTOASSIST))
-               {
-                  do_assist(rch, ch->name);
-               }
+               do_assist(rch, ch->name);
+            }
+            else if (!IS_NPC(rch) && !IS_NPC(victim) && IS_SET(rch->config, CONFIG_AUTOASSIST) && is_same_group(rch, victim))
+            {
+               do_assist(rch, victim->name);
+            }
 
-               /*
-                * NPC's assist NPC's of same type or 45% chance regardless.
-                */
-               else if (IS_NPC(ch)) {
+            /*
+             * NPC's assist NPC's of same type or 45% chance regardless.
+             */
+            else if (IS_NPC(rch))
+            {
                if ((rch->pIndexData == victim->pIndexData) /* is it the same as a target here?  */
                    || ((number_percent() < 20) && (abs(get_psuedo_level(rch) - get_psuedo_level(victim)) < 35)))
                {
                   CHAR_DATA *vch;
                   CHAR_DATA *target;
-                  int number;
 
                   target = NULL;
-                  number = 0;
 
                   /*
                    * vch is the target of the lazy mob...a player
@@ -195,13 +198,12 @@ void violence_update(void)
                      if ((can_see(rch, vch)) && (!IS_NPC(vch)))
                      {
                         target = vch;
-                        number++;
                      }
                   }
 
                   if (target != NULL)
                   {
-                     if (abs(target->level - rch->level) < 40)
+                     if (abs(target->level - rch->level) < 40 && IS_NPC(rch) && IS_NPC(victim))
                      {
                         if ((victim->fighting != NULL) && (rch->fighting == NULL))
                         {
@@ -214,11 +216,11 @@ void violence_update(void)
                         }
                      }
                   }
-               } }
+               }
             }
          }
-         CUREF(rch_next);
-      
+      }
+      CUREF(rch_next);
    }
    CUREF(ch_next);
    return;
