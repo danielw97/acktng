@@ -532,7 +532,7 @@ int get_healing(CHAR_DATA *ch)
 
 int get_total_reincarnations(CHAR_DATA *ch)
 {
-   int cnt;
+   int cnt = 0;
 
    if (IS_NPC(ch))
       return 0;
