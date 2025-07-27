@@ -405,7 +405,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
         if (dt == TYPE_MARTIAL)
             dam_mod += 1 / 3;
 
-        dam += get_damroll(ch) / 2;
+        dam += get_damroll(ch) / 3;
     }
 
     if (IS_SET(element, ELE_HOLY))
