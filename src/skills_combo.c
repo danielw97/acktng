@@ -120,23 +120,6 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
     if (dam < 1)
         dam = 1;
 
-    float dam_mod = 0.0;
-
-    dam_mod += ch->lvl[CLASS_WAR] / 100;
-
-    if (skill_table[gsn].flag1 == REMORT || skill_table[gsn].flag1 == ADEPT)
-    {
-        dam_mod += ch->remort[CLASS_KNI] / 50;
-        dam_mod += ch->remort[CLASS_SWO] / 50;
-        dam_mod += ch->remort[CLASS_BRA] / 50 * 0.75;
-        dam_mod += ch->adept[CLASS_CRU] / 20;
-    }
-
-    dam += dam * dam_mod;
-
-    if (!IS_NPC(ch))
-       dam += dam * ch->pcdata->adept_reincarnations[CLASS_CRU] / 100;
-
     WAIT_STATE(ch, skill_table[gsn].beats);
 
     raise_skill(ch, gsn);

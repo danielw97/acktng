@@ -117,12 +117,7 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
     */
    dam = number_range(obj->value[1], obj->value[2]);
    dam += number_range(get_curr_dex(ch) * get_psuedo_level(ch) / 5, get_curr_dex(ch) * get_psuedo_level(ch) / 2);
-   dam += dam * ch->lvl[CLASS_THI] / 100;
-   dam += dam * ch->remort[CLASS_ASS] / 100;
-   dam += dam * ch->remort[CLASS_WLK] / 100 * .75;
-   dam += dam * ch->adept[CLASS_NIG] / 100;
-   if (!IS_NPC(ch))
-      dam += dam * ch->pcdata->adept_reincarnations[CLASS_NIG] / 100;
+
    check_killer(ch, victim);
 
    if (backstab && IS_NPC(victim) && IS_AFFECTED(victim, AFF_SANCTUARY) && (ch->remort[CLASS_ASS] > 0 || ch->remort[CLASS_WLK] > 0) && (number_percent() > 50))

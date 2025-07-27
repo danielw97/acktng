@@ -271,17 +271,6 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
     if (gsn != gsn_spinfist)
         ch->chi++;
 
-    float dam_mod = 0.0;
-
-    dam_mod += ch->lvl[CLASS_PUG] / 200;
-
-    if (skill_table[gsn].flag1 == REMORT || skill_table[gsn].flag1 == ADEPT)
-    {
-        dam_mod += ch->remort[CLASS_MON] / 200;
-        dam_mod += ch->remort[CLASS_BRA] / 200 * 0.75;
-        dam_mod += ch->adept[CLASS_MAR] / 100;
-    }
-
     dam += dam * dam_mod;
 
     if (gsn == gsn_palmstrike)

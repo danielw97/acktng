@@ -26,26 +26,17 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     {
         if ((dt > TYPE_HIT || (ch->remort[CLASS_MON] < 1 && ch->remort[CLASS_BRA] < 1)) && dam > 400)
         {
-           dam -= 400;
-           dam /= 3;
-           dam += 300;
+            dam -= 400;
+            dam /= 3;
+            dam += 300;
         }
         else if (dam > 200)
         {
-           dam -= 200;
-           dam /= 2;
-           dam += 200;
+            dam -= 200;
+            dam /= 2;
+            dam += 200;
         }
     }
-
-    if (dt == gsn_backstab)
-        dam *= 1.4;
-    if (dt == gsn_circle)
-        dam *= 1.1;
-    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
-        dam *= 1.2;
-    if (dam <= 0)
-        dam = 1;
 
     bool can_reflect = TRUE;
     bool can_absorb = TRUE;
@@ -85,187 +76,10 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         return FALSE;
     }
 
-    int ch_strong = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].strong_realms : ch->strong_magic) : race_table[ch->race].strong_realms);
-    int ch_resist = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].resist_realms : ch->resist) : race_table[ch->race].resist_realms);
-    int ch_weak = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].weak_realms : ch->weak_magic) : race_table[ch->race].weak_realms);
-    int ch_suscept = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].suscept_realms : ch->suscept) : race_table[ch->race].suscept_realms);
-    int ch_race = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].race_flags : ch->race_mods) : race_table[ch->race].race_flags);
-
-    if (IS_SET(ch_strong, element))
-    {
-        dam_modifier += .25;
-    }
-    else if (IS_SET(ch_weak, element))
-    {
-        dam_modifier -= .25;
-    }
-
-    if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
-    {
-        dam_modifier += .25;
-    }
-    else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_WEAK_MAGIC))
-    {
-        dam_modifier -= .25;
-    }
-    else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_NO_MAGIC))
-    {
-        dam_modifier -= .50;
-    }
-
-    if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
-    {
-        dam_modifier += .5;
-    }
-
-    int vi_strong = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].strong_realms : victim->strong_magic) : race_table[victim->race].strong_realms);
-    int vi_resist = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].resist_realms : victim->resist) : race_table[victim->race].resist_realms);
-    int vi_weak = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].weak_realms : victim->weak_magic) : race_table[victim->race].weak_realms);
-    int vi_suscept = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].suscept_realms : victim->suscept) : race_table[victim->race].suscept_realms);
-    int vi_race = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].race_flags : victim->race_mods) : race_table[victim->race].race_flags);
-
-    if (IS_SET(vi_suscept, element))
-    {
-        dam_modifier += .35;
-    }
-    else if (IS_SET(vi_resist, element))
-    {
-        dam_modifier -= .35;
-    }
-
-    else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != ELE_PHYSICAL)
-    {
-        dam_modifier -= .35;
-    }
-
-    if ((IS_SET(element, ELE_MENTAL)) && (!HAS_MIND(victim)))
-        dam_modifier = 0.0;
-
-    if (((IS_SET(element, ELEMENT_EARTH)) || (IS_SET(element, ELEMENT_AIR))) && (!HAS_BODY(victim)))
-        dam_modifier = 0.0;
-
-    if ((IS_SET(element, ELE_POISON)) && (IS_SET(vi_race, RACE_MOD_IMMUNE_POISON)))
-        dam_modifier = 0.0;
-
-    if ((IS_SET(element, ELEMENT_SHADOW)) && (IS_UNDEAD(victim)))
-        dam_modifier = 0.0;
-
-    dam = dam * dam_modifier;
-
-    dam_modifier = 0.0;
-
-    if (!IS_NPC(ch))
-    {
-       if (IS_SET(element, ELEMENT_FIRE) || IS_SET(element, ELEMENT_AIR) || IS_SET(element, ELEMENT_WATER) || 
-           IS_SET(element, ELEMENT_EARTH) )
-          dam += dam * ch->pcdata->adept_reincarnations[CLASS_GMA] / 100;
-
-       if (IS_SET(element, ELEMENT_HOLY) || IS_SET(element, ELEMENT_PHYSICAL) )
-          dam += dam * ch->pcdata->adept_reincarnations[CLASS_TEM] / 100;
-
-       if (IS_SET(element, ELEMENT_SHADOW) || IS_SET(element, ELEMENT_POISON) || IS_SET(element, ELEMENT_MENTAL) )
-          dam += dam * ch->pcdata->adept_reincarnations[CLASS_KIN] / 100;
-
-       if (dt >= TYPE_HIT || dt < 0)
-          dam += dam * ch->pcdata->adept_reincarnations[CLASS_MAR] / 100;
-    }
-
-    if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
-        dam += dam * 0.2;
-
-    if (!IS_SET(element, ELE_PHYSICAL))
-    {
-        if (IS_SET(element, SIXTH_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 6;
-            REMOVE_BIT(element, SIXTH_DIVISOR);
-        }
-        else if (IS_SET(element, FIFTH_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 5;
-            REMOVE_BIT(element, FIFTH_DIVISOR);
-        }
-        else if (IS_SET(element, FOURTH_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 4;
-            REMOVE_BIT(element, FOURTH_DIVISOR);
-        }
-        else if (IS_SET(element, THIRD_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 3;
-            REMOVE_BIT(element, THIRD_DIVISOR);
-        }
-        else if (IS_SET(element, SECOND_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 2;
-            REMOVE_BIT(element, SECOND_DIVISOR);
-        }
-        else
-            dam += get_spellpower(ch);
-
-        if (can_use_skill(ch, gsn_potency))
-        {
-            dam += dam * get_curr_int(ch) * 2 / 100;
-        }
-
-        if (stance_app[ch->stance].spell_mod != 0)
-            dam += dam * stance_app[ch->stance].spell_mod / 10;
-
-        if (is_affected(ch, skill_lookup("feeble mind") ) )
-           dam /= 2;
-    }
-    else if (IS_SET(element, ELE_PHYSICAL))
-    {
-
-        if (IS_SET(element, ELE_HOLY))
-        {
-            dam += dam * ch->adept[CLASS_TEM] / 50;
-            dam += dam * ch->remort[CLASS_PRI] / 100;
-        }
-        if (can_use_skill(ch, gsn_enhanced_damage))
-            dam += dam * get_curr_str(ch) * 2 / 100;
-        else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))
-            dam += dam * 0.2;
-
-        if (!IS_AWAKE(victim))
-            dam += dam * 0.5;
-
-        dam += dam * ch->remort[CLASS_PAL] / 100 * 0.75 * 0.5;
-        dam += dam * ch->adept[CLASS_TEM] / 50 * 0.5;
-
-        if ((dt == TYPE_HIT || dt == TYPE_MARTIAL || dt == gsn_counter) && can_use_skill(ch, gsn_bare_hand))
-        {
-            dam += dam * ch->remort[CLASS_BRA] / 100 * 0.75;
-            dam += dam * ch->remort[CLASS_MON] / 100;
-            dam += dam * ch->adept[CLASS_MAR] / 50;
-        }
-
-        wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
-        if (wield == NULL || wield->item_type != ITEM_WEAPON)
-           wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
-        if (wield == NULL || wield->item_type != ITEM_WEAPON)
-           wield = get_eq_char(ch, WEAR_TWO_HANDED);
-
-        if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword))
-        {
-            dam += dam * number_range(20, 40) / 100;
-        }
-
-        /*
-         * extra damage from martial arts
-         */
-        if (dt == TYPE_MARTIAL)
-            dam += dam / 3;
-
-        if (is_affected(ch, skill_lookup("feeble body") ) )
-           dam /= 2;
-    }
-
     if (!IS_SET(element, ELE_PHYSICAL))
         crit_chance = get_spell_crit(ch);
     else
     {
-        dam += get_damroll(ch)/2;
         crit_chance = get_crit(ch);
     }
 
@@ -285,25 +99,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     else
         dam -= dam * get_curr_con(victim) / 100;
 
-    if (!IS_SET(element, ELE_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
-    {
-        float dam_mod = 0;
-        dam_mod += ch->remort[CLASS_SOR] / 100;
-        dam_mod += ch->remort[CLASS_WIZ] / 100;
-        dam_mod += ch->remort[CLASS_NEC] / 100;
-        dam_mod += ch->remort[CLASS_EGO] / 100;
-        dam_mod += ch->remort[CLASS_WLK] / 100 * .75;
-        dam_mod += ch->adept[CLASS_GMA] * .05;
-        dam_mod += ch->adept[CLASS_KIN] * .05;
-
-        if (IS_SET(element, ELE_HOLY))
-        {
-            dam_mod += ch->adept[CLASS_TEM] / 50;
-            dam_mod += ch->remort[CLASS_PRI] / 100;
-        }
-
-        dam += dam * dam_mod / 100;
-    }
+    dam = scale_damage(ch, victim, element, dam, dt);
 
     int skin_mods;
     if (!IS_NPC(victim))
@@ -326,9 +122,15 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)) && IS_EVIL(ch))
         dam -= dam / 4;
 
+    if (is_affected(victim, skill_lookup("feeble body")) && IS_SET(element, ELE_PHYSICAL))
+        dam /= 2;
+
+    if (is_affected(ch, skill_lookup("feeble mind")) && !IS_SET(element, ELE_PHYSICAL))
+        dam /= 2;
+
     AFFECT_DATA *paf, *paf_next;
 
-    for (paf = ch->first_affect; paf != NULL; paf = paf_next)
+    for (paf = victim->first_affect; paf != NULL; paf = paf_next)
     {
         paf_next = paf->next;
 
@@ -416,6 +218,229 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     }
 
     do_damage(ch, victim, dam, dt, element, critical);
+
+    return dam;
+}
+
+int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
+{
+    OBJ_DATA *wield;
+ 
+    if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
+        dam *= 1.2;
+    if (dam <= 0)
+        dam = 1;
+
+    float dam_mod = 1.0;
+    int ch_strong = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].strong_realms : ch->strong_magic) : race_table[ch->race].strong_realms);
+    int ch_resist = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].resist_realms : ch->resist) : race_table[ch->race].resist_realms);
+    int ch_weak = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].weak_realms : ch->weak_magic) : race_table[ch->race].weak_realms);
+    int ch_suscept = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].suscept_realms : ch->suscept) : race_table[ch->race].suscept_realms);
+    int ch_race = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].race_flags : ch->race_mods) : race_table[ch->race].race_flags);
+
+    if (IS_SET(ch_strong, element))
+        dam_mod += .25;
+    else if (IS_SET(ch_weak, element))
+        dam_mod -= .5;
+
+    if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_STRONG_MAGIC))
+        dam_mod += .25;
+    else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_WEAK_MAGIC))
+        dam_mod -= .25;
+    else if (!IS_SET(element, ELE_PHYSICAL) && IS_SET(ch_race, RACE_MOD_NO_MAGIC))
+        dam_mod -= .50;
+
+    if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
+        dam_mod += .5;
+
+    int vi_strong = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].strong_realms : victim->strong_magic) : race_table[victim->race].strong_realms);
+    int vi_resist = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].resist_realms : victim->resist) : race_table[victim->race].resist_realms);
+    int vi_weak = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].weak_realms : victim->weak_magic) : race_table[victim->race].weak_realms);
+    int vi_suscept = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].suscept_realms : victim->suscept) : race_table[victim->race].suscept_realms);
+    int vi_race = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].race_flags : victim->race_mods) : race_table[victim->race].race_flags);
+
+    if (IS_SET(vi_suscept, element))
+    {
+        dam_mod += .5;
+    }
+    else if (IS_SET(vi_resist, element))
+    {
+        dam_mod -= .35;
+    }
+
+    else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != ELE_PHYSICAL)
+    {
+        dam_mod -= .35;
+    }
+
+    if (!IS_NPC(ch))
+    {
+        if (IS_SET(element, ELEMENT_FIRE) || IS_SET(element, ELEMENT_AIR) || IS_SET(element, ELEMENT_WATER) ||
+            IS_SET(element, ELEMENT_EARTH))
+            dam_mod += ch->pcdata->adept_reincarnations[CLASS_GMA] / 50;
+
+        if (IS_SET(element, ELEMENT_HOLY))
+            dam_mod += ch->pcdata->adept_reincarnations[CLASS_TEM] / 50;
+
+        if (IS_SET(element, ELEMENT_PHYSICAL))
+            dam_mod += ch->pcdata->adept_reincarnations[CLASS_TEM] / 100;
+
+        if (IS_SET(element, ELEMENT_SHADOW) || IS_SET(element, ELEMENT_POISON) || IS_SET(element, ELEMENT_MENTAL))
+            dam_mod += ch->pcdata->adept_reincarnations[CLASS_KIN] / 50;
+
+        if (dt >= TYPE_HIT || dt < 0)
+            dam_mod += ch->pcdata->adept_reincarnations[CLASS_MAR] / 50;
+
+        if (dt == gsn_circle || dt == gsn_backstab)
+            dam_mod += ch->pcdata->adept_reincarnations[CLASS_NIG] / 50;
+
+        if (dt == gsn_kick || dt == gsn_punch || dt_gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
+            dam_mod += ch->pcdata->adept_reincarnations[CLASS_CRU] / 50;
+    }
+
+    if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
+        dam += dam * 0.2;
+
+    if (!IS_SET(element, ELE_PHYSICAL))
+    {
+        if (IS_SET(element, SIXTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 6;
+            REMOVE_BIT(element, SIXTH_DIVISOR);
+        }
+        else if (IS_SET(element, FIFTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 5;
+            REMOVE_BIT(element, FIFTH_DIVISOR);
+        }
+        else if (IS_SET(element, FOURTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 4;
+            REMOVE_BIT(element, FOURTH_DIVISOR);
+        }
+        else if (IS_SET(element, THIRD_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 3;
+            REMOVE_BIT(element, THIRD_DIVISOR);
+        }
+        else if (IS_SET(element, SECOND_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 2;
+            REMOVE_BIT(element, SECOND_DIVISOR);
+        }
+        else
+            dam += get_spellpower(ch);
+
+        if (stance_app[ch->stance].spell_mod != 0)
+            dam += dam * stance_app[ch->stance].spell_mod / 10;
+    }
+
+    if (dt == gsn_circle || dt == gsn_backstab)
+    {
+        dam_mod += ch->lvl[CLASS_THI] / 100;
+        dam_mod += ch->remort[CLASS_ASS] / 100;       // 100% at 100
+        dam_mod += ch->remort[CLASS_WLK] / 100 * .75; // 75% at 100
+        dam_mod += ch->adept[CLASS_NIG] / 50;         // 40% at 20
+    }
+
+    if (dt == gsn_kick || dt == gsn_punch || dt_gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
+    {
+        dam_mod += ch->lvl[CLASS_WAR] / 100;
+
+        if (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT)
+        {
+            dam_mod += ch->remort[CLASS_KNI] / 50;
+            dam_mod += ch->remort[CLASS_SWO] / 50;
+            dam_mod += ch->remort[CLASS_BRA] / 50 * 0.75;
+            dam_mod += ch->adept[CLASS_CRU] / 20;
+        }
+    }
+
+    if (dt == gsn_palmstrike || dt == gsn_pummel || dt == gsn_aurabolt)
+    {
+        dam_mod += ch->lvl[CLASS_PUG] / 200;
+
+        if (skill_table[gsn].flag1 == REMORT || skill_table[gsn].flag1 == ADEPT)
+        {
+            dam_mod += ch->remort[CLASS_MON] / 200;
+            dam_mod += ch->remort[CLASS_BRA] / 200 * 0.75;
+            dam_mod += ch->adept[CLASS_MAR] / 40;
+        }
+    }
+
+    if (IS_SET(element, ELE_PHYSICAL))
+    {
+        if (can_use_skill(ch, gsn_enhanced_damage))
+            dam_mod += get_curr_str(ch) * 2 / 100;
+        else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))
+            dam_mod += 0.2;
+
+        if (!IS_AWAKE(victim))
+            dam_mod += 0.5;
+
+        dam_mod += ch->remort[CLASS_PAL] / 100 * 0.4; // 100 * 0.4 = 40% at 100
+        dam_mod += ch->adept[CLASS_TEM] / 100;        // 20% max at 20
+
+        if ((dt == TYPE_HIT || dt == TYPE_MARTIAL || dt == gsn_counter) && can_use_skill(ch, gsn_bare_hand))
+        {
+            dam += dam * ch->remort[CLASS_BRA] / 100 * 0.75;
+            dam += dam * ch->remort[CLASS_MON] / 100;
+            dam += dam * ch->adept[CLASS_MAR] / 50;
+        }
+
+        wield = get_eq_char(ch, WEAR_HOLD_HAND_L);
+        if (wield == NULL || wield->item_type != ITEM_WEAPON || wield->value[3] != 3)
+            wield = get_eq_char(ch, WEAR_HOLD_HAND_R);
+        if (wield == NULL || wield->item_type != ITEM_WEAPON || wield->value[3] != 3)
+            wield = get_eq_char(ch, WEAR_TWO_HANDED);
+
+        if (!IS_NPC(ch) && wield && wield->value[3] == 3 && can_use_skill(ch, gsn_enhanced_sword))
+        {
+            dam_mod += number_range(20, 40) / 100;
+        }
+
+        /*
+         * extra damage from martial arts
+         */
+        if (dt == TYPE_MARTIAL)
+            dam_mod += 1 / 3;
+
+        dam += get_damroll(ch) / 2;
+    }
+
+    if (IS_SET(element, ELE_HOLY))
+    {
+        dam_mod += ch->adept[CLASS_TEM] / 50;
+        dam_mod += ch->remort[CLASS_PRI] / 100;
+    }
+
+    if (!IS_SET(element, ELE_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
+    {
+        dam_mod += ch->remort[CLASS_SOR] / 100;
+        dam_mod += ch->remort[CLASS_WIZ] / 100;
+        dam_mod += ch->remort[CLASS_NEC] / 100;
+        dam_mod += ch->remort[CLASS_EGO] / 100;
+        dam_mod += ch->remort[CLASS_WLK] / 100 * .75;
+        dam_mod += ch->adept[CLASS_GMA] * .05;
+        dam_mod += ch->adept[CLASS_KIN] * .05;
+    }
+
+    if (can_use_skill(ch, gsn_potency) && !IS_SET(element, ELEMENT_PHYSICAL))
+        dam_mod += get_curr_int(ch) * 2 / 100;
+
+    if ((IS_SET(element, ELE_MENTAL)) && (!HAS_MIND(victim)))
+        dam_mod = 0.0;
+
+    if (((IS_SET(element, ELEMENT_EARTH)) || (IS_SET(element, ELEMENT_AIR))) && (!HAS_BODY(victim)))
+        dam_mod = 0.0;
+
+    if ((IS_SET(element, ELE_POISON)) && (IS_SET(vi_race, RACE_MOD_IMMUNE_POISON)))
+        dam_mod = 0.0;
+
+    if ((IS_SET(element, ELEMENT_SHADOW)) && (IS_UNDEAD(victim)))
+        dam_mod = 0.0;
+
+    dam = dam * dam_mod;
 
     return dam;
 }
@@ -555,39 +580,39 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
         case POS_DEAD:
             if ((sil_weapon = get_eq_char(ch, WEAR_HOLD_HAND_L)) == NULL)
                 sil_weapon = get_eq_char(ch, WEAR_HOLD_HAND_R);
-/*            if (IS_WOLF(victim) && (!IS_NPC(ch)) && (ch->pcdata->learned[gsn_decapitate] != 0) && (sil_weapon != NULL) && (IS_SET(sil_weapon->extra_flags, ITEM_SILVER)))
-            {
-                int chance;
+            /*            if (IS_WOLF(victim) && (!IS_NPC(ch)) && (ch->pcdata->learned[gsn_decapitate] != 0) && (sil_weapon != NULL) && (IS_SET(sil_weapon->extra_flags, ITEM_SILVER)))
+                        {
+                            int chance;
 
-                chance = IS_NPC(ch) ? ch->level * 2 : ch->pcdata->learned[gsn_decapitate];
-                chance += 25;
+                            chance = IS_NPC(ch) ? ch->level * 2 : ch->pcdata->learned[gsn_decapitate];
+                            chance += 25;
 
-                if ((victim->pcdata->vamp_level * 5) > ch->level)
-                    chance -= (victim->pcdata->vamp_level * 5) - ch->level;
+                            if ((victim->pcdata->vamp_level * 5) > ch->level)
+                                chance -= (victim->pcdata->vamp_level * 5) - ch->level;
 
-                if (number_percent() < chance)
-                {
-                    act("You DECAPITATE $N's head off with one skillful stroke!", ch, NULL, victim, TO_CHAR);
-                    act("$n DECAPITATES $N's head off with one skillful stroke!", ch, NULL, victim, TO_NOTVICT);
-                    send_to_char("You suddenly feel the world is spinning away from you!", victim);
-                    send_to_char("You have been DECAPITATED!!", victim);
-                    send_to_char("You feel the rage of the wolf flow from your body.....\n\r", victim);
-                    send_to_char("You THINK you are dead!  Ooops....\n\r", victim);
-                }
+                            if (number_percent() < chance)
+                            {
+                                act("You DECAPITATE $N's head off with one skillful stroke!", ch, NULL, victim, TO_CHAR);
+                                act("$n DECAPITATES $N's head off with one skillful stroke!", ch, NULL, victim, TO_NOTVICT);
+                                send_to_char("You suddenly feel the world is spinning away from you!", victim);
+                                send_to_char("You have been DECAPITATED!!", victim);
+                                send_to_char("You feel the rage of the wolf flow from your body.....\n\r", victim);
+                                send_to_char("You THINK you are dead!  Ooops....\n\r", victim);
+                            }
 
-                REMOVE_BIT(victim->pcdata->pflags, PFLAG_WEREWOLF);
-                victim->pcdata->vamp_level = 0;
-                victim->pcdata->vamp_exp = 0;
-                victim->pcdata->bloodlust = 0;
-                victim->pcdata->bloodlust_max = 0;
-                victim->pcdata->generation = -1;
-                victim->pcdata->vamp_bloodline = 0;
-                victim->pcdata->recall_vnum = 3001;
+                            REMOVE_BIT(victim->pcdata->pflags, PFLAG_WEREWOLF);
+                            victim->pcdata->vamp_level = 0;
+                            victim->pcdata->vamp_exp = 0;
+                            victim->pcdata->bloodlust = 0;
+                            victim->pcdata->bloodlust_max = 0;
+                            victim->pcdata->generation = -1;
+                            victim->pcdata->vamp_bloodline = 0;
+                            victim->pcdata->recall_vnum = 3001;
 
-                for (sn = 0; sn <= MAX_SKILL; sn++)
-                    if ((skill_table[sn].flag2 == WOLF) && (victim->pcdata->learned[sn] > 0))
-                        victim->pcdata->learned[sn] = 0;
-            }*/
+                            for (sn = 0; sn <= MAX_SKILL; sn++)
+                                if ((skill_table[sn].flag2 == WOLF) && (victim->pcdata->learned[sn] > 0))
+                                    victim->pcdata->learned[sn] = 0;
+                        }*/
 
             act("$n is DEAD!!", victim, 0, 0, TO_ROOM);
             send_to_char("You have been KILLED!!\n\r\n\r", victim);
