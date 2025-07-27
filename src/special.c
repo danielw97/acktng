@@ -572,9 +572,6 @@ bool spec_cast_mage(CHAR_DATA *ch)
          spell = "change sex";
          break;
       case 6:
-         min_level = 13;
-         spell = "energy drain";
-         break;
       case 7:
       case 8:
       case 9:
@@ -646,9 +643,6 @@ bool spec_cast_undead(CHAR_DATA *ch)
          spell = "poison";
          break;
       case 5:
-         min_level = 15;
-         spell = "energy drain";
-         break;
       case 6:
          min_level = 18;
          spell = "harm";
@@ -1136,9 +1130,6 @@ bool spec_undead(CHAR_DATA *ch)
          spell = "curse";
          break;
       case 6:
-         min_level = 20;
-         spell = "energy drain";
-         break;
       case 7:
          min_level = 40;
          spell = "gate";
@@ -1452,9 +1443,6 @@ bool spec_cast_bigtime(CHAR_DATA *ch)
          spell = "chain lightning";
          break;
       case 4:
-         min_level = 65;
-         spell = "energy drain";
-         break;
       case 5:
          min_level = 43;
          spell = "mindflame";

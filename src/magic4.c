@@ -49,7 +49,12 @@ bool spell_fireblast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      dam = (get_psuedo_level(ch) / 2) + dice((get_psuedo_level(ch) / 6 + ADEPT_LEVEL(ch) / 2), 10) + dice((get_psuedo_level(ch) / 6 + ADEPT_LEVEL(ch) / 2), 10);
+      int base = ch->remort[CLASS_SOR];
+      if (ch->remort[CLASS_WIZ] > base)
+         base = ch->remort[CLASS_WIZ];
+      if (ch->remort[CLASS_NEC] > base)
+         base = ch->remort[CLASS_NEC];
+      dam = 150 + dice(base/2, 20);
       act("@@gA blast of @@efire@@g flies from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA blast of @@efire@@g flies from your hands!@@N\n\r", ch);
    }
@@ -59,8 +64,6 @@ bool spell_fireblast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       act("@@gA blast of @@efire@@g flies from $p!@@N", ch, obj, NULL, TO_ROOM);
       act("@@gA blast of @@efire@@g flies from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
-   if (saves_spell(level, victim))
-      dam /= 2;
    act("@@g$n is struck by the blast of @@efire@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the @@efire @@gblast!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELE_FIRE, sn, TRUE);
@@ -74,7 +77,17 @@ bool spell_shockstorm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      dam = (get_psuedo_level(ch) / 2) + dice((get_psuedo_level(ch) / 5 + ADEPT_LEVEL(ch) / 2), 10) + dice((get_psuedo_level(ch) / 5 + ADEPT_LEVEL(ch) / 2), 10);
+      int base = ch->remort[CLASS_SOR];
+      if (ch->remort[CLASS_WIZ] > base)
+         base = ch->remort[CLASS_WIZ];
+      if (ch->remort[CLASS_SOR] > base)
+         base = ch->remort[CLASS_SOR];
+      if (ch->remort[CLASS_EGO] > base)
+         base = ch->remort[CLASS_EGO];
+      if (ch->remort[CLASS_NEC] > base)
+         base = ch->remort[CLASS_NEC];
+
+      dam = 150 + dice(base/2, 20);
       act("@@gA storm of @@lsparks@@g flies from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA storm of @@lsparks@@g flies from your hands!@@N\n\r", ch);
    }
@@ -84,8 +97,6 @@ bool spell_shockstorm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       act("@@gA storm of @@lsparks@@g flies from $p!@@N", ch, obj, NULL, TO_ROOM);
       act("@@gA storm of @@lsparks@@g flies from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
-   if (saves_spell(level, victim))
-      dam /= 2;
    act("@@g$n is struck by the storm of @@lsparks@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the storm of @@lsparks@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE);
@@ -99,7 +110,11 @@ bool spell_cone_cold(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      dam = (get_psuedo_level(ch) / 2) + dice((get_psuedo_level(ch) / 5 + ADEPT_LEVEL(ch) / 2), 10) + dice((get_psuedo_level(ch) / 5 + ADEPT_LEVEL(ch) / 2), 10);
+      int base = ch->remort[CLASS_SOR];
+      if (ch->remort[CLASS_WIZ] > base)
+         base = ch->remort[CLASS_WIZ];
+
+      dam = 150 + dice(base/2, 20);
       act("@@gA cone of @@acold@@g bursts forth from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA cone of @@acold@@g bursts forth from your hands!@@N\n\r", ch);
    }
@@ -109,8 +124,6 @@ bool spell_cone_cold(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       act("@@gA cone of @@acold@@g bursts forth from $p!@@N", ch, obj, NULL, TO_ROOM);
       act("@@gA cone of @@acold@@g bursts forth from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
-   if (saves_spell(level, victim))
-      dam /= 2;
    act("@@g$n is struck by the cone of @@acold@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the cone of @@acold@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE);
@@ -124,7 +137,11 @@ bool spell_holy_wrath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      dam = (get_psuedo_level(ch) / 2) + dice((get_psuedo_level(ch) / 4 + ADEPT_LEVEL(ch)), 12) + dice((get_psuedo_level(ch) / 4 + ADEPT_LEVEL(ch)), 12);
+      int base = ch->remort[CLASS_PRI];
+      if (ch->remort[CLASS_PAL] > base)
+         base = ch->remort[CLASS_PAL];
+
+      dam = 150 + dice(base/2, 20);
       act("@@gA coruscating sphere of @@ylight@@g bursts forth from $n's hands!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@gA coruscating sphere of @@ylight@@g bursts forth from your hands!@@N\n\r", ch);
    }
@@ -134,8 +151,6 @@ bool spell_holy_wrath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       act("@@gA coruscating sphere of @@ylight@@g bursts forth from $p!@@N", ch, obj, NULL, TO_ROOM);
       act("@@gA coruscating sphere of @@ylight@@g bursts forth from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
-   if (saves_spell(level, victim))
-      dam /= 2;
    act("@@g$n is struck by the coruscating sphere of @@ylight@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the coruscating sphere of @@ylight@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELE_HOLY, sn, TRUE);
@@ -150,21 +165,19 @@ bool spell_wraith_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    if (obj == NULL)
    {
-      dam = (get_psuedo_level(ch) / 3) + dice((get_psuedo_level(ch) / 6 + ADEPT_LEVEL(ch)), 8) + dice((get_psuedo_level(ch) / 6 + ADEPT_LEVEL(ch)), 8);
+      dam = 150 + dice(ch->remort[CLASS_NEC]/2, 20);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $n!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@RA @@dwraithlike hand @@Rleaps forth from your hands!@@N\n\r", ch);
    }
    else
    {
-      dam = dice(level / 5, 20);
+      dam = 150 + dice(ch->remort[CLASS_NEC]/2, 20);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_ROOM);
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
-   if (saves_spell(level, victim))
-      dam /= 2;
    act("@@R$n is struck by the @@dwraithlike hand @@R!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@RYou are struck by a @@dwraithlike hand @@R!!@@N\n\r", victim);
-   drain_mod = get_psuedo_level(ch) * dam / 130;
+   drain_mod = ch->remort[CLASS_NEC] * dam / 130;
    if (sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW | NO_REFLECT | NO_ABSORB, sn, TRUE))
       ch->hit = UMIN(ch->max_hit, (ch->hit + drain_mod));
    return TRUE;
@@ -177,7 +190,8 @@ bool spell_thought_vise(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    if (obj == NULL)
    {
-      dam = (get_psuedo_level(ch) / 2) + dice((get_psuedo_level(ch) / 3 + ADEPT_LEVEL(ch)), 10) + dice((get_psuedo_level(ch) / 3 + ADEPT_LEVEL(ch)), 10);
+      int base = ch->remort[CLASS_EGO];
+      dam = 250 + dice(base/2, 20);
       act("@@rA crushing weight brushes your mind, then is gone.@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@rYou clench your mind, crushing the thoughts of your foe.\n\r@@N", ch);
    }
@@ -186,8 +200,6 @@ bool spell_thought_vise(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       dam = dice(level / 5, 20);
       act("@@rA crushing weight fills your mind.@@N", ch, obj, NULL, TO_CHAR);
    }
-   if (saves_spell(level, victim))
-      dam /= 2;
    act("@@rA crushing weight brushes your mind, then is gone.@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@rA crushing weight fills your mind.@@N", victim);
    sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL | NO_REFLECT | NO_ABSORB, sn, TRUE);
@@ -384,9 +396,7 @@ bool spell_sonic_blast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
    int dam;
-   dam = dice(get_psuedo_level(ch) / 2, 3) + dice(get_psuedo_level(ch) / 2, 3);
-   if (saves_spell(level, victim))
-      dam = dam * 2 / 3;
+   dam = 150 + dice(ch->remort[CLASS_EGO]/2, 20);
    if (sp_damage(obj, ch, victim, dam, ELEMENT_AIR | NO_REFLECT | NO_ABSORB, sn, TRUE))
    {
       if (is_affected(ch, sn))
@@ -616,5 +626,72 @@ bool spell_refuge(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("$N is surrounded by a rainbow shell from $n's spell.", ch, NULL, victim, TO_ROOM);
    send_to_char("You are surrounded by a rainbow shell.\n\r", victim);
    ch->cooldown[sn] = 10;
+   return TRUE;
+}
+
+bool spell_feeble_mind(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+
+   if (ch->cooldown[skill_lookup("feeble mind")] > 0 || ch->cooldown[skill_lookup("feeble body")] > 0)
+   {
+      send_to_char("Your feeble spells are currently on cooldown\n\r",ch);
+      return FALSE;
+   }
+
+   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("feeble mind")) || is_affected(ch, skill_lookup("feeble body")))
+   {
+      send_to_char("Your target already is feebly afflicted!\n\r",ch);
+      return FALSE;
+   }
+
+   ch->cooldown[skill_lookup("feeble mind")] = 10;
+   ch->cooldown[skill_lookup("feeble body")] = 10;
+
+   af.type = skill_lookup("feeble mind");
+   af.duration = 3;
+   af.location = APPLY_SPEED;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = 0;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(victim, &af);
+   act("$N begins to think feebly from $n's spell.", ch, NULL, victim, TO_ROOM);
+   send_to_char("You begin to think feebly.\n\r", victim);
+   return TRUE;
+}
+
+bool spell_feeble_body(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+   AFFECT_DATA af;
+
+   if (ch->cooldown[skill_lookup("feeble mind")] > 0 || ch->cooldown[skill_lookup("feeble body")] > 0)
+   {
+      send_to_char("Your feeble spells are currently on cooldown\n\r",ch);
+      return FALSE;
+   }
+
+   if (is_affected(ch, sn) || is_affected(ch, skill_lookup("feeble mind")) || is_affected(ch, skill_lookup("feeble body")))
+   {
+      send_to_char("Your target already is feebly afflicted!\n\r",ch);
+      return FALSE;
+   }
+
+
+   ch->cooldown[skill_lookup("feeble mind")] = 10;
+   ch->cooldown[skill_lookup("feeble body")] = 10;
+
+   af.type = skill_lookup("feeble body");
+   af.duration = 3;
+   af.location = APPLY_SPEED;
+   af.duration_type = DURATION_ROUND;
+   af.modifier = 0;
+   af.bitvector = 0;
+   af.caster = ch;
+   affect_to_char(victim, &af);
+   act("$N begins to move feebly from $n's spell.", ch, NULL, victim, TO_ROOM);
+   send_to_char("You begin to feebly move.\n\r", victim);
    return TRUE;
 }

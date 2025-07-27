@@ -2215,13 +2215,13 @@ L
 banner~
 cross-like Symboled Banner~
 A banner lays here with a red cross like symbol on it!~
-1 0 8388608 1
-0 0 0 0 0 0 0 0 0 0
+1 134217728 8421376 1
+0 0 -1 0 0 0 0 0 0 0
 4
 A
 19 1
 L
-1
+150
 #9010
 gauntlets~
 gauntlets of SU~

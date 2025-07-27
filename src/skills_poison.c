@@ -63,6 +63,14 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    if ((victim == NULL) || (victim->is_free != FALSE))
       return;
 
+   if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_R)) == NULL || obj->value[3] != 11)
+      if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_L)) == NULL || obj->value[3] != 11)
+         if ((obj == get_eq_char(ch, WEAR_TWO_HANDED)) == NULL || obj->value[3] != 11)
+         {
+            send_to_char("You need to wield a piercing weapon.\n\r", ch);
+            return;
+         }
+
    if (IS_NPC(victim) && IS_SET(victim->act, ACT_NO_BODY))
    {
       act("$N has no body to backstab!", ch, NULL, victim, TO_CHAR);
@@ -86,13 +94,6 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
 
    if (is_safe(ch, victim))
       return;
-
-   if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_R)) == NULL || obj->value[3] != 11)
-      if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_L)) == NULL || obj->value[3] != 11)
-      {
-         send_to_char("You need to wield a piercing weapon.\n\r", ch);
-         return;
-      }
 
    if (backstab && victim->fighting != NULL)
    {
@@ -119,6 +120,9 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    dam += dam * ch->lvl[CLASS_THI] / 100;
    dam += dam * ch->remort[CLASS_ASS] / 100;
    dam += dam * ch->remort[CLASS_WLK] / 100 * .75;
+   dam += dam * ch->adept[CLASS_NIG] / 100;
+   if (!IS_NPC(ch))
+      dam += dam * ch->pcdata->adept_reincarnations[CLASS_NIG] / 100;
    check_killer(ch, victim);
 
    if (backstab && IS_NPC(victim) && IS_AFFECTED(victim, AFF_SANCTUARY) && (ch->remort[CLASS_ASS] > 0 || ch->remort[CLASS_WLK] > 0) && (number_percent() > 50))

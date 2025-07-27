@@ -134,7 +134,7 @@ bool spell_black_hand(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    if (obj == NULL)
    {
-      dam = (get_psuedo_level(ch) / 3) + dice((get_psuedo_level(ch) / 6 + ADEPT_LEVEL(ch)), 8) + dice((get_psuedo_level(ch) / 6 + ADEPT_LEVEL(ch)), 8);
+      dam = 150 + dice(ch->remort[CLASS_NEC] / 2, 20);
       act("@@dA black hand @@Rleaps forth from $n!@@N", ch, NULL, NULL, TO_ROOM);
       send_to_char("@@dA @@dblack hand @@Rleaps forth from your hands!@@N\n\r", ch);
    }
@@ -179,8 +179,12 @@ bool spell_ice_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    int dam;
+   int base = ch->remort[CLASS_SOR];
 
-   dam = 150 + dice(level / 4, 12);
+   if (ch->remort[CLASS_WIZ] > base)
+      base = ch->remort[CLASS_WIZ];
+
+   dam = 150 + dice(base / 2, 20);
    if (saves_spell(level, victim))
       dam /= 1.2;
    sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE);

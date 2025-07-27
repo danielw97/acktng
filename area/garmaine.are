@@ -1991,9 +1991,10 @@ Darkshade~
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
 #30004
-Xania~
-@@lXania@@N~
-@@lXania walks around you displaying various relics and artifacts@@N~
+Celes~
+@@lCeles@@N~
+@@lCeles walks around you displaying various relics and artifacts@@N
+~
 @@gCeles appears to be tired, and yawns at the sight of you.@@N
 ~
 3145835 27368 1000 S
@@ -2081,8 +2082,8 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #30010
 shawn~
-Shawn~
-@@lSean stands here, ready to stop your passage further into the mines.@@N
+@@lShawn@@N~
+@@lShawn stands here, ready to stop your passage further into the mines.@@N
 ~
 @@gHe is a master of the darkness, king of the shadows.@@N
 ~

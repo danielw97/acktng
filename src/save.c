@@ -445,12 +445,14 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
     */
 
    bool can_save = FALSE;
-   if (get_psuedo_level(ch)+5 <= obj->level)
+   if (get_psuedo_level(ch)+5 >= obj->level)
       can_save = TRUE;
    if (get_total_reincarnations(ch) > 0)
       can_save = TRUE;
+   if (obj->item_type == ITEM_KEY || obj->item_type == ITEM_BEACON || IS_SET(obj->extra_flags, ITEM_NOSAVE))
+      can_save = FALSE;
 
-   if (!can_save || obj->item_type == ITEM_KEY || obj->item_type == ITEM_BEACON || IS_SET(obj->extra_flags, ITEM_NOSAVE))
+   if (!can_save)
       return;
 
    fprintf(fp, "#OBJECT\n");

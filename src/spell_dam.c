@@ -181,6 +181,9 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
    heal += heal * ch->remort[CLASS_PAL] / 50 * 0.75;
    heal += heal * ch->adept[CLASS_TEM] / 25;
 
+   if (!IS_NPC(ch))
+      heal += heal * ch->pcdata->adept_reincarnations[CLASS_TEM]/100;
+
    if (stance_app[ch->stance].heal_mod != 0)
       heal += heal * stance_app[ch->stance].heal_mod / 10;
 

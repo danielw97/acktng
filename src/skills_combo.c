@@ -134,6 +134,9 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
 
     dam += dam * dam_mod;
 
+    if (!IS_NPC(ch))
+       dam += dam * ch->pcdata->adept_reincarnations[CLASS_CRU] / 100;
+
     WAIT_STATE(ch, skill_table[gsn].beats);
 
     raise_skill(ch, gsn);
@@ -742,7 +745,7 @@ int get_max_combo(CHAR_DATA *ch)
 
     if ((ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0) && max > 0)
         max++;
-    else if (max > 0 && (!IS_NPC(ch) && (ch->pcdata->remort_reincarnations[CLASS_KNI] >= 20 || ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20) ) )
+    else if (max > 0 && (!IS_NPC(ch) && (ch->pcdata->remort_reincarnations[CLASS_KNI] + ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20) ) )
         max++;
 
     return max;

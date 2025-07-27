@@ -951,20 +951,7 @@ bool spell_phobia(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    send_to_char("Your worst phobia springs to life in your mind. Arrrggghhh!\n\r", victim);
    act("$N suffers a mental phobia attack!", ch, NULL, victim, TO_NOTVICT);
 
-   if (sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE))
-   {
-      if (!IS_NPC(victim) && (IS_WOLF(victim) || IS_VAMP(victim)))
-         return TRUE;
-
-      if (number_percent() < 70) /* 70% chance */
-      {
-         act("$N screams at $n in horror!!", ch, NULL, victim, TO_ROOM);
-         act("$N screams at you in horror!!", ch, NULL, victim, TO_CHAR);
-         send_to_char("You flip, and look for escape!!\n\r", victim);
-         do_flee(victim, "");
-      }
-   }
-
+   sp_damage(obj, ch, victim, dam, ELEMENT_MENTAL, sn, TRUE);
    return TRUE;
 }
 

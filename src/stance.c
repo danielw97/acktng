@@ -55,7 +55,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Brawler", 0, 3, 3, 2, 0, 0, 0,
      REMORT, CLASS_BRA, 1, -1, -1, -1},
     /* Adept Stances */
-    {"Magi", 2, -1, -1, 0, 0, 0, STANCE_EITHER_CLASS | STANCE_MULTI_CAST | STANCE_DUAL_CAST,
+    {"Magi", 2, -1, -1, 0, 0, 3, STANCE_EITHER_CLASS | STANCE_MULTI_CAST | STANCE_DUAL_CAST,
      ADEPT, CLASS_GMA, 1, CLASS_KIN, 1, -1},
     {"Templar", -2, 3, 3, 3, 5, 0, 0,
      ADEPT, CLASS_TEM, 1, -1, -1, -1},
@@ -147,6 +147,14 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
 
             if (stance_app[stance].class_index2 > -1 && ch->adept[stance_app[stance].class_index2] < stance_app[stance].class_level2)
                 legal_stance = FALSE;
+
+            if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
+               ch->adept[stance_app[stance].class_index] >= stance_app[stance].class_level)
+                legal_stance = TRUE;
+
+            if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
+               ch->adept[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
+                legal_stance = TRUE;
         }
     }
     else if (stance_app[stance].tier == REMORT)
@@ -157,6 +165,14 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
 
             if (stance_app[stance].class_index2 > -1 && ch->remort[stance_app[stance].class_index2] < stance_app[stance].class_level2)
                 legal_stance = FALSE;
+
+            if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
+               ch->remort[stance_app[stance].class_index] >= stance_app[stance].class_level)
+                legal_stance = TRUE;
+
+            if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
+               ch->remort[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
+                legal_stance = TRUE;
         }
     }
     else if (stance_app[stance].tier == MORTAL)
@@ -167,6 +183,14 @@ bool is_legal_stance(CHAR_DATA *ch, int stance)
 
             if (stance_app[stance].class_index2 > -1 && ch->lvl[stance_app[stance].class_index2] < stance_app[stance].class_level2)
                 legal_stance = FALSE;
+
+            if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 &&
+               ch->lvl[stance_app[stance].class_index] >= stance_app[stance].class_level)
+                legal_stance = TRUE;
+
+            if(IS_SET(stance_app[stance].specials, STANCE_EITHER_CLASS) && stance_app[stance].class_index2 > -1 && 
+               ch->lvl[stance_app[stance].class_index2] >= stance_app[stance].class_level2)
+                legal_stance = TRUE;
         }
 
         if (stance_app[stance].class_override > -1)

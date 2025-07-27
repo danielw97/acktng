@@ -666,6 +666,11 @@ int get_damcap(CHAR_DATA *ch)
 
    damcap += get_stat(ch, APPLY_DAMCAP);
 
+   if (!IS_NPC(ch))
+   {
+      damcap += ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP] * 500;
+   }
+
    return damcap;
 }
 
@@ -964,6 +969,36 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
       return TRUE;
 
    if (gsn == gsn_spell_critical_damage && ch->pcdata->reincarnations[CLASS_CLE] > 0)
+      return TRUE;
+
+   if (gsn == gsn_dualwield && (ch->pcdata->remort_reincarnations[CLASS_ASS] + ch->pcdata->remort_reincarnations[CLASS_WLK] >= 20))
+      return TRUE;
+
+   if (gsn == gsn_two_handed && (ch->pcdata->remort_reincarnations[CLASS_KNI] + ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20))
+      return TRUE;
+
+   if (gsn == gsn_two_handed && (ch->pcdata->remort_reincarnations[CLASS_PAL] + ch->pcdata->remort_reincarnations[CLASS_PRI]) >= 20)
+      return TRUE;
+
+   if (gsn == gsn_equip_buckler && (ch->pcdata->remort_reincarnations[CLASS_KNI] + ch->pcdata->remort_reincarnations[CLASS_SWO] >= 20))
+      return TRUE;
+
+   if (gsn == gsn_equip_buckler && (ch->pcdata->remort_reincarnations[CLASS_PAL] + ch->pcdata->remort_reincarnations[CLASS_PRI]) >= 20)
+      return TRUE;
+
+   if (gsn == gsn_equip_fist && (ch->pcdata->remort_reincarnations[CLASS_BRA] + ch->pcdata->remort_reincarnations[CLASS_MON] >= 20))
+      return TRUE;
+
+   if (gsn == gsn_dual_fist && (ch->pcdata->remort_reincarnations[CLASS_BRA] + ch->pcdata->remort_reincarnations[CLASS_MON] >= 20))
+      return TRUE;
+
+   if (gsn == gsn_equip_wand && (ch->pcdata->remort_reincarnations[CLASS_WIZ] + ch->pcdata->remort_reincarnations[CLASS_SOR] >= 20))
+      return TRUE;
+
+   if (gsn == gsn_equip_wand && (ch->pcdata->remort_reincarnations[CLASS_NEC] + ch->pcdata->remort_reincarnations[CLASS_EGO] >= 20))
+      return TRUE;
+
+   if (gsn == gsn_equip_wand && (ch->pcdata->remort_reincarnations[CLASS_PRI] + ch->pcdata->remort_reincarnations[CLASS_PAL]) >= 20)
       return TRUE;
 
    if (skill_table[gsn].flag1 == MORTAL)

@@ -154,6 +154,25 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     dam_modifier = 0.0;
 
+    if (!IS_NPC(ch))
+    {
+       if (IS_SET(element, ELEMENT_FIRE) || IS_SET(element, ELEMENT_AIR) || IS_SET(element, ELEMENT_WATER) || 
+           IS_SET(element, ELEMENT_EARTH) )
+          dam += dam * ch->pcdata->adept_reincarnations[CLASS_GMA] / 100;
+
+       if (IS_SET(element, ELEMENT_HOLY) || IS_SET(element, ELEMENT_PHYSICAL) )
+          dam += dam * ch->pcdata->adept_reincarnations[CLASS_TEM] / 100;
+
+       if (IS_SET(element, ELEMENT_SHADOW) || IS_SET(element, ELEMENT_POISON) || IS_SET(element, ELEMENT_MENTAL) )
+          dam += dam * ch->pcdata->adept_reincarnations[CLASS_KIN] / 100;
+
+       if (dt >= TYPE_HIT || dt < 0)
+          dam += dam * ch->pcdata->adept_reincarnations[CLASS_MAR] / 100;
+    }
+
+    if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
+        dam += dam * 0.2;
+
     if (!IS_SET(element, ELE_PHYSICAL))
     {
         if (IS_SET(element, SIXTH_DIVISOR))
@@ -191,12 +210,18 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
         if (stance_app[ch->stance].spell_mod != 0)
             dam += dam * stance_app[ch->stance].spell_mod / 10;
+
+        if (is_affected(ch, skill_lookup("feeble mind") ) )
+           dam /= 2;
     }
     else if (IS_SET(element, ELE_PHYSICAL))
     {
-        if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
-            dam += dam * 0.2;
 
+        if (IS_SET(element, ELE_HOLY))
+        {
+            dam += dam * ch->adept[CLASS_TEM] / 50;
+            dam += dam * ch->remort[CLASS_PRI] / 100;
+        }
         if (can_use_skill(ch, gsn_enhanced_damage))
             dam += dam * get_curr_str(ch) * 2 / 100;
         else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))
@@ -207,6 +232,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
         dam += dam * ch->remort[CLASS_PAL] / 100 * 0.75 * 0.5;
         dam += dam * ch->adept[CLASS_TEM] / 50 * 0.5;
+
         if ((dt == TYPE_HIT || dt == TYPE_MARTIAL || dt == gsn_counter) && can_use_skill(ch, gsn_bare_hand))
         {
             dam += dam * ch->remort[CLASS_BRA] / 100 * 0.75;
@@ -230,6 +256,9 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
          */
         if (dt == TYPE_MARTIAL)
             dam += dam / 3;
+
+        if (is_affected(ch, skill_lookup("feeble body") ) )
+           dam /= 2;
     }
 
     if (!IS_SET(element, ELE_PHYSICAL))
@@ -256,12 +285,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     else
         dam -= dam * get_curr_con(victim) / 100;
 
-    if (IS_SET(element, ELE_HOLY))
-    {
-        dam += dam * ch->adept[CLASS_TEM] / 50;
-        dam += dam * ch->remort[CLASS_PRI] / 100;
-    }
-
     if (!IS_SET(element, ELE_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {
         float dam_mod = 0;
@@ -270,8 +293,14 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         dam_mod += ch->remort[CLASS_NEC] / 100;
         dam_mod += ch->remort[CLASS_EGO] / 100;
         dam_mod += ch->remort[CLASS_WLK] / 100 * .75;
-        dam_mod += ch->adept[CLASS_GMA] * .1;
-        dam_mod += ch->adept[CLASS_KIN] * .1;
+        dam_mod += ch->adept[CLASS_GMA] * .05;
+        dam_mod += ch->adept[CLASS_KIN] * .05;
+
+        if (IS_SET(element, ELE_HOLY))
+        {
+            dam_mod += ch->adept[CLASS_TEM] / 50;
+            dam_mod += ch->remort[CLASS_PRI] / 100;
+        }
 
         dam += dam * dam_mod / 100;
     }

@@ -4217,7 +4217,7 @@ L
 sash~
 @@dS@@ma@@ps@@gh @@Wof @@dAl@@mex@@pan@@Wdr@@gia@@N~
 The almight sash of Alexandria..why is it on the ground..~
-9 138412112 8454144 18033
+9 138412240 8454144 18033
 0 0 0 0 0 0 0 0 0 0
 8
 A
@@ -4242,7 +4242,7 @@ L
 Stealth~
 @@dS@@mt@@pe@@ga@@pl@@mt@@dh@@N~
 @@dA stealthy weapon lies on the ground...or does it?..@@N~
-5 171969108 8421376 369
+5 171969236 8421376 369
 0 0 0 11 0 0 0 0 0 0
 8
 A
@@ -4266,7 +4266,7 @@ L
 hood~
 @@dE@@Rx@@me@@dcutioner's @@dH@@Ro@@mo@@dd@@N~
 @@WThe hood of an @@de@@Rx@@me@@dcutioner@@W..@@N~
-9 134217745 8388616 1
+9 134217744 8388616 1
 0 0 0 0 0 0 0 0 0 0
 8
 A
@@ -4299,7 +4299,7 @@ bone~
 @@gBone@@N~
 @@gA small bone from a skeleton..@@N~
 1 134217872 8421376 1561
-0 0 0 0 0 0 0 0 0 0
+0 0 -1 0 0 0 0 0 0 0
 4
 A
 18 25

@@ -1,6 +1,6 @@
 #include "globals.h"
 
-int stat_calculated_value(int val);
+int stat_calculated_value(int val, int statcap_bonus);
 
 void do_reincarnate(CHAR_DATA *ch, char *argument)
 {
@@ -36,6 +36,11 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
       }
       send_to_char("\n\r", ch);
+      sprintf(buf, "Reincarnate HP: %d Mana: %d Move: %d Statcap: %d, Damcap: %d\n\r", 
+         ch->pcdata->reincarnation_data[REINCARNATION_HP]/10, ch->pcdata->reincarnation_data[REINCARNATION_MANA]/10, 
+         ch->pcdata->reincarnation_data[REINCARNATION_MOVE]/10, ch->pcdata->reincarnation_data[REINCARNATION_STATCAP], 
+         ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]);
+      send_to_char(buf,ch);
    }
    else if (!str_prefix(arg, "buy"))
    {
@@ -47,7 +52,44 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       #define REINCARNATION_MOVE 5
       #define REINCARNATION_POINTS 6*/
 
-      send_to_char("Buy\n\r", ch);
+      argument = one_argument(argument, arg);
+
+      if (!str_prefix(arg, "help"))
+      {
+         send_to_char("Buy:\n\r", ch);
+         sprintf(buf,"Damcap %d: %d\n\r", ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]+1, ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]*2+1);
+         send_to_char(buf,ch);
+         sprintf(buf,"Statcap %d: %d\n\r", ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]+1, ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]*ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]+1);
+         send_to_char(buf,ch);
+
+         return;
+      }
+      if (!str_prefix(arg, "damcap"))
+      {
+         int cost = ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]*2+1;
+         if (ch->pcdata->reincarnation_data[REINCARNATION_POINTS] < cost)
+         {
+            send_to_char("You do not have enough reincarnation points to increase your damcap.\n\r",ch);
+            return;
+         }
+         ch->pcdata->reincarnation_data[REINCARNATION_POINTS] -= cost;
+         ch->pcdata->reincarnation_data[REINCARNATION_DAMCAP]++;
+         send_to_char("Reincarnation damcap permanently increased!\n\r",ch);
+         return;
+      }
+      if (!str_prefix(arg, "statcap"))
+      {
+         int cost = ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]*ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]+1;
+         if (ch->pcdata->reincarnation_data[REINCARNATION_POINTS] < cost)
+         {
+            send_to_char("You do not have enough reincarnation points to increase your statcap.\n\r",ch);
+            return;
+         }
+         ch->pcdata->reincarnation_data[REINCARNATION_POINTS] -= cost;
+         ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]++;
+         send_to_char("Reincarnation statcap permanently increased!\n\r",ch);
+         return;
+      }
    }
    else if (!str_prefix(arg, "set"))
    {
@@ -222,20 +264,20 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
 
 int get_reincarnate_hp_level(CHAR_DATA *ch)
 {
-   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_HP]);
+   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_HP], ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
 }
 
 int get_reincarnate_mana_level(CHAR_DATA *ch)
 {
-   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MANA]);
+   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MANA], ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
 }
 
 int get_reincarnate_move_level(CHAR_DATA *ch)
 {
-   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MOVE]);
+   return stat_calculated_value(ch->pcdata->reincarnation_data[REINCARNATION_MOVE], ch->pcdata->reincarnation_data[REINCARNATION_STATCAP]);
 }
 
-int stat_calculated_value(int val)
+int stat_calculated_value(int val, int statcap_bonus)
 {
    int steps = 5000;
    int steps_1 = 3;
@@ -243,6 +285,8 @@ int stat_calculated_value(int val)
    int steps_3 = 10;
    int value = val / 10;
    int calculated_value = 0;
+
+   steps += statcap_bonus * 1000;
 
    if (value > steps)
    {

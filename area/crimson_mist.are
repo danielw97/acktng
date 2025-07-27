@@ -3849,7 +3849,7 @@ sash mist~
 @@NA small cord that seems to be packed @@dm@@mi@@ps@@Wt@@g...@@N~
 9 134217920 8519680 8449
 0 0 0 0 0 0 0 0 0 0
-0
+4
 A
 18 37
 A
@@ -4030,7 +4030,7 @@ twig~
 @@cA @@gC@@cr@@ay@@gs@@at@@ga@@cl @@bT@@Ww@@gi@@bg@@N~
 @@mA thin @@btwig@@m is here waiting to be held..@@N~
 29 1048768 8519680 1
-8363 0 8363 0 0 0 0 0 0 0
+8363 0 8365 0 0 0 0 0 0 0
 13
 L
 120
@@ -4101,9 +4101,9 @@ L
 independence~
 @@dIn@@mde@@pp@@gen@@pd@@men@@dce@@N~
 @@dYour freedom from the suggestions of evil lies here...@@N~
-5 135266500 8421376 1833
+5 134217924 8421376 1833
 0 0 0 11 0 0 0 0 0 0
-0
+4
 A
 18 31
 A

@@ -1571,17 +1571,17 @@ const struct skill_type skill_table[MAX_SKILL] = {
                  182, 182, 182, 182, 57, 182},
     spell_overdrive, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
-    "", "You are no longer moving quickly.",
-    "$n is no longer moving quickly."},   {
+    "", "You are no longer acting quickly.",
+    "$n is no longer acting quickly."},   
 
+   {
     REMORT, NORM,
     "magical supremacy", {182, 182, 182, 182, 182, 182,
-                 42, 182, 182, 182, 13, 182},
+                           42, 182, 182, 182, 13, 182},
     spell_magical_supremacy, TAR_CHAR_SELF, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You no longer have magical supremacy.",
     "$n no longer has magical supremacy."},
-
 
    {
     REMORT, NORM,
@@ -1589,8 +1589,28 @@ const struct skill_type skill_table[MAX_SKILL] = {
               92, 182, 182, 182, 182, 182},
     spell_slow, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 271 ), 12, 18, TRUE,
+    "", "You are no longer acting slowly.",
+    "$n is no longer acting slowly."},
+
+   {
+    REMORT, NORM,
+    "feeble mind", {182, 182, 182, 182, 45, 182,
+                    182, 182, 182, 182, 182, 182},
+    spell_feeble_mind, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 271 ), 12, 18, TRUE,
+    "", "You are now thinking quickly.",
+    "$n is now thinking quickly."},
+
+
+   {
+    REMORT, NORM,
+    "feeble body", {182, 182, 182, 182, 45, 182,
+                    182, 182, 182, 182, 182, 182},
+    spell_feeble_body, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 271 ), 12, 18, TRUE,
     "", "You are now moving quickly.",
     "$n is now moving quickly."},
+
 
    {
     MORTAL, NORM,
@@ -3112,7 +3132,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "Thought Vise", {182, 182, 182, 182, 70, 182,
+    "Thought Vise", {182, 182, 182, 182, 182, 182,
                      182, 182, 182, 182, 70, 182},
     spell_thought_vise, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 670 ), 200, 12, TRUE,
@@ -3316,7 +3336,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "sonic blast", {182, 182, 182, 182, 182, 182,
-                    182, 182, 182, 182, 182, 182},
+                    182, 182, 182, 182, 67, 182},
     spell_sonic_blast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 675 ), 140, 12, TRUE,
     "Sonic Blast", "@@N$nFeels much better!",

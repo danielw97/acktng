@@ -159,14 +159,14 @@ void violence_update(void)
       mprog_fight_trigger(ch, victim);
 
       /*
-       * Fun for the whole family!   RCH is a non-fighting mob
+       * Assisting
        */
       CREF(rch_next, CHAR_NEXTROOM);
       for (rch = ch->in_room->first_person; rch != NULL; rch = rch_next)
       {
          rch_next = rch->next_in_room;
 
-         if (IS_AWAKE(rch) && rch->fighting == NULL && !IS_SET(rch->act, ACT_NOASSIST) && !IS_AFFECTED(rch, AFF_CHARM))
+         if (IS_AWAKE(rch) && rch->fighting == NULL && !IS_AFFECTED(rch, AFF_CHARM))
          {
             if (!IS_NPC(rch) && !IS_NPC(ch) && IS_SET(rch->config, CONFIG_AUTOASSIST) && is_same_group(rch, ch))
             {
@@ -177,33 +177,13 @@ void violence_update(void)
                do_assist(rch, victim->name);
             }
 
-            /*
-             * NPC's assist NPC's of same type or 45% chance regardless.
-             */
-            else if (IS_NPC(rch))
+            else if (IS_NPC(rch) && !IS_SET(rch->act, ACT_NOASSIST))
             {
                if ((rch->pIndexData == victim->pIndexData) /* is it the same as a target here?  */
-                   || ((number_percent() < 20) && (abs(get_psuedo_level(rch) - get_psuedo_level(victim)) < 35)))
+                   || is_same_group(rch, victim) )
                {
-                  CHAR_DATA *vch;
-                  CHAR_DATA *target;
-
-                  target = NULL;
-
-                  /*
-                   * vch is the target of the lazy mob...a player
-                   */
-                  for (vch = ch->in_room->first_person; vch; vch = vch->next)
-                  {
-                     if ((can_see(rch, vch)) && (!IS_NPC(vch)))
-                     {
-                        target = vch;
-                     }
-                  }
-
-                  if (target != NULL)
-                  {
-                     if (abs(target->level - rch->level) < 40 && IS_NPC(rch) && IS_NPC(victim))
+                     if (IS_NPC(rch) && IS_NPC(victim) && can_see(rch, victim->fighting) &&
+                         (get_psuedo_level(ch) - get_psuedo_level(victim)) < 10 )
                      {
                         if ((victim->fighting != NULL) && (rch->fighting == NULL))
                         {
@@ -215,8 +195,25 @@ void violence_update(void)
                            set_fighting(rch, victim->fighting, TRUE);
                         }
                      }
-                  }
                }
+               if ((rch->pIndexData == ch->pIndexData) /* is it the same as a target here?  */
+                   || is_same_group(rch, ch) )
+               {
+                     if (IS_NPC(rch) && IS_NPC(ch) && can_see(rch, ch->fighting) && 
+                         (get_psuedo_level(ch) - get_psuedo_level(victim)) < 10 )
+                     {
+                        if ((victim->fighting != NULL) && (rch->fighting == NULL))
+                        {
+                           char actbuf[MSL];
+                           sprintf(actbuf, "$n screams, 'BANZAI!! $N must be assisted!!'");
+                           act(actbuf, rch, NULL, ch, TO_ROOM);
+                           sprintf(actbuf, "You scream, 'BANZAI!! $N must be assisted!!'");
+                           act(actbuf, rch, NULL, ch, TO_CHAR);
+                           set_fighting(rch, ch->fighting, TRUE);
+                        }
+                     }
+               }
+
             }
          }
       }
@@ -508,7 +505,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    }
    else
    {
-      if (dt == TYPE_MARTIAL)
+      if (dt == TYPE_MARTIAL || dt == gsn_counter)
       {
          if (can_use_skill(ch, gsn_bare_hand))
          {

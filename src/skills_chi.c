@@ -17,7 +17,7 @@ int get_chi(CHAR_DATA *ch)
     if (ch->remort[CLASS_MON] > 0 || ch->remort[CLASS_BRA] > 0)
         max_chi = 20;
 
-    if (!IS_NPC(ch) && (ch->pcdata->remort_reincarnations[CLASS_MON] >= 20 || ch->pcdata->remort_reincarnations[CLASS_BRA] >= 20))
+    if (!IS_NPC(ch) && (ch->pcdata->remort_reincarnations[CLASS_MON] + ch->pcdata->remort_reincarnations[CLASS_BRA] >= 20))
         max_chi = 20;
 
     if (ch->adept[CLASS_MAR] > 0)
