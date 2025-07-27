@@ -77,6 +77,51 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     }
 
     if (!IS_SET(element, ELE_PHYSICAL))
+        dam += dam * (get_curr_int(ch) - get_curr_wis(victim)) * 5 / 100;
+    else
+        dam -= dam * get_curr_con(victim) / 100;
+
+    dam = scale_damage(ch, victim, element, dam, dt);
+
+    if (!IS_SET(element, ELE_PHYSICAL))
+    {
+        if (IS_SET(element, SIXTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 6;
+            REMOVE_BIT(element, SIXTH_DIVISOR);
+        }
+        else if (IS_SET(element, FIFTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 5;
+            REMOVE_BIT(element, FIFTH_DIVISOR);
+        }
+        else if (IS_SET(element, FOURTH_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 4;
+            REMOVE_BIT(element, FOURTH_DIVISOR);
+        }
+        else if (IS_SET(element, THIRD_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 3;
+            REMOVE_BIT(element, THIRD_DIVISOR);
+        }
+        else if (IS_SET(element, SECOND_DIVISOR))
+        {
+            dam += get_spellpower(ch) / 2;
+            REMOVE_BIT(element, SECOND_DIVISOR);
+        }
+        else
+            dam += get_spellpower(ch);
+
+        if (stance_app[ch->stance].spell_mod != 0)
+            dam += dam * stance_app[ch->stance].spell_mod / 10;
+    }
+    else
+       dam += get_damroll(ch) / 3;
+
+       
+
+    if (!IS_SET(element, ELE_PHYSICAL))
         crit_chance = get_spell_crit(ch);
     else
     {
@@ -93,13 +138,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         else
             dam += dam * get_crit_mult(ch) / 100;
     }
-
-    if (!IS_SET(element, ELE_PHYSICAL))
-        dam += dam * (get_curr_int(ch) - get_curr_wis(victim)) * 5 / 100;
-    else
-        dam -= dam * get_curr_con(victim) / 100;
-
-    dam = scale_damage(ch, victim, element, dam, dt);
 
     int skin_mods;
     if (!IS_NPC(victim))
@@ -301,40 +339,6 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
     if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL)
         dam += dam * 0.2;
 
-    if (!IS_SET(element, ELE_PHYSICAL))
-    {
-        if (IS_SET(element, SIXTH_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 6;
-            REMOVE_BIT(element, SIXTH_DIVISOR);
-        }
-        else if (IS_SET(element, FIFTH_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 5;
-            REMOVE_BIT(element, FIFTH_DIVISOR);
-        }
-        else if (IS_SET(element, FOURTH_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 4;
-            REMOVE_BIT(element, FOURTH_DIVISOR);
-        }
-        else if (IS_SET(element, THIRD_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 3;
-            REMOVE_BIT(element, THIRD_DIVISOR);
-        }
-        else if (IS_SET(element, SECOND_DIVISOR))
-        {
-            dam += get_spellpower(ch) / 2;
-            REMOVE_BIT(element, SECOND_DIVISOR);
-        }
-        else
-            dam += get_spellpower(ch);
-
-        if (stance_app[ch->stance].spell_mod != 0)
-            dam += dam * stance_app[ch->stance].spell_mod / 10;
-    }
-
     if (dt == gsn_circle || dt == gsn_backstab)
     {
         dam_mod += ch->lvl[CLASS_THI] / 100;
@@ -404,8 +408,6 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
          */
         if (dt == TYPE_MARTIAL)
             dam_mod += 1 / 3;
-
-        dam += get_damroll(ch) / 3;
     }
 
     if (IS_SET(element, ELE_HOLY))
