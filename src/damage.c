@@ -117,16 +117,12 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
             dam += dam * stance_app[ch->stance].spell_mod / 10;
     }
     else
-       dam += get_damroll(ch) / 3;
-
-       
+       dam += get_damroll(ch) / 3;       
 
     if (!IS_SET(element, ELE_PHYSICAL))
         crit_chance = get_spell_crit(ch);
     else
-    {
         crit_chance = get_crit(ch);
-    }
 
     if (crit_possible && number_range(0, 100) < crit_chance)
         critical = TRUE;
@@ -143,7 +139,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (!IS_NPC(victim))
         skin_mods = race_table[victim->race].race_flags;
     else
-        skin_mods = (victim->race == 0 ? victim->pIndexData->race_mods : race_table[victim->race].race_flags);
+        skin_mods = victim->pIndexData->race_mods | race_table[victim->race].race_flags;
 
     if (IS_SET(element, ELE_PHYSICAL) && IS_SET(skin_mods, RACE_MOD_TOUGH_SKIN))
         dam = dam * 0.9;
@@ -157,7 +153,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC)))
         dam /= 2;
 
-    if (IS_SET(element, ELE_PHYSICAL) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)) && IS_EVIL(ch))
+    if (IS_EVIL(ch) && (IS_AFFECTED(victim, AFF_PROTECT) || item_has_apply(victim, ITEM_APPLY_PROT)))
         dam -= dam / 4;
 
     if (is_affected(victim, skill_lookup("feeble body")) && IS_SET(element, ELE_PHYSICAL))
