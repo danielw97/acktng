@@ -419,8 +419,8 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
         dam_mod += ch->remort[CLASS_NEC] / 100 * 0.5;
         dam_mod += ch->remort[CLASS_EGO] / 100 * 0.5;
         dam_mod += ch->remort[CLASS_WLK] / 100 * .75 * 0.5;
-        dam_mod += ch->adept[CLASS_GMA] * .05 * 0.5;
-        dam_mod += ch->adept[CLASS_KIN] * .05 * 0.5;
+        dam_mod += ch->adept[CLASS_GMA] / 50;
+        dam_mod += ch->adept[CLASS_KIN] / 50;
     }
 
     if (can_use_skill(ch, gsn_potency) && !IS_SET(element, ELEMENT_PHYSICAL))
