@@ -63,13 +63,20 @@ void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab)
    if ((victim == NULL) || (victim->is_free != FALSE))
       return;
 
-   if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_R)) == NULL || obj->value[3] != 11)
-      if ((obj = get_eq_char(ch, WEAR_HOLD_HAND_L)) == NULL || obj->value[3] != 11)
-         if ((obj == get_eq_char(ch, WEAR_TWO_HANDED)) == NULL || obj->value[3] != 11)
+   obj = get_eq_char(ch, WEAR_HOLD_HAND_R);
+   if (obj == NULL || obj->value[3] != 11)
+   {
+      obj = get_eq_char(ch, WEAR_HOLD_HAND_L);
+      if (obj == NULL || obj->value[3] != 11)
+      {
+         obj = get_eq_char(ch, WEAR_TWO_HANDED);
+         if (obj == NULL || obj->value[3] != 11)
          {
             send_to_char("You need to wield a piercing weapon.\n\r", ch);
             return;
          }
+      }
+   }
 
    if (IS_NPC(victim) && IS_SET(victim->act, ACT_NO_BODY))
    {
