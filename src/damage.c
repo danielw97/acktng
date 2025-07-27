@@ -76,10 +76,10 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
         return FALSE;
     }
 
-    if (!IS_SET(element, ELE_PHYSICAL))
-        dam += dam * (get_curr_int(ch) - get_curr_wis(victim)) * 5 / 100;
-    else
+    if (IS_SET(element, ELE_PHYSICAL))
         dam -= dam * get_curr_con(victim) / 100;
+    else
+        dam += dam * (get_curr_int(ch) - get_curr_wis(victim)) * 5 / 100;
 
     dam = scale_damage(ch, victim, element, dam, dt);
 
@@ -371,7 +371,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
     if (IS_SET(element, ELE_PHYSICAL))
     {
         if (can_use_skill(ch, gsn_enhanced_damage))
-            dam_mod += get_curr_str(ch) * 2 / 100;
+            dam_mod += get_curr_str(ch) * 3 / 100;
         else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))
             dam_mod += 0.2;
 
@@ -414,13 +414,13 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
 
     if (!IS_SET(element, ELE_PHYSICAL) && (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT))
     {
-        dam_mod += ch->remort[CLASS_SOR] / 100;
-        dam_mod += ch->remort[CLASS_WIZ] / 100;
-        dam_mod += ch->remort[CLASS_NEC] / 100;
-        dam_mod += ch->remort[CLASS_EGO] / 100;
-        dam_mod += ch->remort[CLASS_WLK] / 100 * .75;
-        dam_mod += ch->adept[CLASS_GMA] * .05;
-        dam_mod += ch->adept[CLASS_KIN] * .05;
+        dam_mod += ch->remort[CLASS_SOR] / 100 * 0.5;
+        dam_mod += ch->remort[CLASS_WIZ] / 100 * 0.5;
+        dam_mod += ch->remort[CLASS_NEC] / 100 * 0.5;
+        dam_mod += ch->remort[CLASS_EGO] / 100 * 0.5;
+        dam_mod += ch->remort[CLASS_WLK] / 100 * .75 * 0.5;
+        dam_mod += ch->adept[CLASS_GMA] * .05 * 0.5;
+        dam_mod += ch->adept[CLASS_KIN] * .05 * 0.5;
     }
 
     if (can_use_skill(ch, gsn_potency) && !IS_SET(element, ELEMENT_PHYSICAL))
