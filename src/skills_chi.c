@@ -271,8 +271,6 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
     if (gsn != gsn_spinfist)
         ch->chi++;
 
-    dam += dam * dam_mod;
-
     if (gsn == gsn_palmstrike)
     {
         dam *= 4;

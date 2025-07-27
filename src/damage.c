@@ -294,7 +294,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
         if (dt == gsn_circle || dt == gsn_backstab)
             dam_mod += ch->pcdata->adept_reincarnations[CLASS_NIG] / 50;
 
-        if (dt == gsn_kick || dt == gsn_punch || dt_gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
+        if (dt == gsn_kick || dt == gsn_punch || dt == gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
             dam_mod += ch->pcdata->adept_reincarnations[CLASS_CRU] / 50;
     }
 
@@ -343,7 +343,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
         dam_mod += ch->adept[CLASS_NIG] / 50;         // 40% at 20
     }
 
-    if (dt == gsn_kick || dt == gsn_punch || dt_gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
+    if (dt == gsn_kick || dt == gsn_punch || dt == gsn_knee || dt == gsn_headbutt || dt == gsn_charge || dt == gsn_holystrike || dt == gsn_fleche)
     {
         dam_mod += ch->lvl[CLASS_WAR] / 100;
 
@@ -360,7 +360,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
     {
         dam_mod += ch->lvl[CLASS_PUG] / 200;
 
-        if (skill_table[gsn].flag1 == REMORT || skill_table[gsn].flag1 == ADEPT)
+        if (skill_table[dt].flag1 == REMORT || skill_table[dt].flag1 == ADEPT)
         {
             dam_mod += ch->remort[CLASS_MON] / 200;
             dam_mod += ch->remort[CLASS_BRA] / 200 * 0.75;
