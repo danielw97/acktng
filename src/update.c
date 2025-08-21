@@ -206,10 +206,6 @@ void advance_level(CHAR_DATA *ch, int class, bool show)
    ch->pcdata->hp_from_gain += add_hp;
    ch->pcdata->move_from_gain += add_move;
 
-   ch->max_hit += add_hp;
-   ch->max_mana += add_mana;
-   ch->max_move += add_move;
-
    if (!IS_NPC(ch))
       REMOVE_BIT(ch->act, PLR_BOUGHT_PET);
 
@@ -254,10 +250,6 @@ void advance_level_remort(CHAR_DATA *ch, int class, bool show)
    ch->pcdata->mana_from_gain += add_mana;
    ch->pcdata->hp_from_gain += add_hp;
    ch->pcdata->move_from_gain += add_move;
-
-   ch->max_hit += add_hp;
-   ch->max_mana += add_mana;
-   ch->max_move += add_move;
 
    if (!IS_NPC(ch))
       REMOVE_BIT(ch->act, PLR_BOUGHT_PET);
@@ -305,10 +297,6 @@ void advance_level_adept(CHAR_DATA *ch, int class, bool show)
    ch->pcdata->mana_from_gain += add_mana;
    ch->pcdata->hp_from_gain += add_hp;
    ch->pcdata->move_from_gain += add_move;
-
-   ch->max_hit += add_hp;
-   ch->max_mana += add_mana;
-   ch->max_move += add_move;
 
    if (!IS_NPC(ch))
       REMOVE_BIT(ch->act, PLR_BOUGHT_PET);
@@ -488,7 +476,7 @@ void round_update_hot(CHAR_DATA *ch)
 
    for (paf = ch->first_affect; paf != NULL; paf = paf->next)
    {
-      if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < ch->max_hit && is_same_room(ch, paf->caster))
+      if (paf->location == APPLY_HOT && paf->caster != NULL && ch->hit < get_max_hp(ch) && is_same_room(ch, paf->caster))
       {
          heal_character(paf->caster, ch, paf->modifier, paf->type, TRUE);
       }
@@ -600,7 +588,7 @@ int hit_gain(CHAR_DATA *ch)
    if (is_fighting(ch) && gain > 0)
       gain = 0;
 
-   return UMIN(gain, ch->max_hit - ch->hit);
+   return UMAX(ch->hit + gain, get_max_hp(ch));
 }
 
 int mana_gain(CHAR_DATA *ch)
@@ -992,7 +980,7 @@ void mobile_update(void)
       /*
        * Flee
        */
-      if (ch->hit < (ch->max_hit / 2) && (door = number_bits(3)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
+      if (ch->hit < (get_max_hp(ch) / 2) && (door = number_bits(3)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
       {
          CHAR_DATA *rch;
          bool found;
@@ -1395,7 +1383,7 @@ void gain_update(void)
          continue;
       if (ch->position >= POS_STUNNED && !IS_SET(ch->affected_by, AFF_VAMP_HEALING))
       {
-         if ((ch->hit < ch->max_hit) && (!IS_SET(ch->in_room->affected_by, ROOM_BV_NONE)))
+         if ((ch->hit < get_max_hp(ch)) && (!IS_SET(ch->in_room->affected_by, ROOM_BV_NONE)))
             ch->hit += hit_gain(ch);
          if (!IS_NPC(ch))
             ch->hit = UMAX(25, ch->hit);

@@ -602,7 +602,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
       }
    }
 
-   if (IS_SET(stance_app[ch->stance].specials, STANCE_MULTI_CAST) && (skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (number_range(0, 99) < get_psuedo_level(ch) - 50))
+   if (IS_SET(stance_app[ch->stance].specials, STANCE_MULTI_CAST) && (skill_table[sn].target == TAR_CHAR_OFFENSIVE) && (number_percent() < get_psuedo_level(ch)/2))
    {
       mana = mana * 2 / 3;
       multi_cast = TRUE;
@@ -1280,7 +1280,7 @@ bool spell_cure_critical(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    int heal;
 
    heal = UMIN(150, dice(12, 8) + level);
-   victim->hit = UMIN(victim->hit + heal, victim->max_hit);
+   victim->hit = UMIN(victim->hit + heal, get_max_hp(victim));
    update_pos(victim);
    send_to_char("You feel better!\n\r", victim);
    if (ch != victim)
@@ -1294,7 +1294,7 @@ bool spell_cure_light(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    int heal;
 
    heal = UMIN(50, dice(5, 8) + level);
-   victim->hit = UMIN(victim->hit + heal, victim->max_hit);
+   victim->hit = UMIN(victim->hit + heal, get_max_hp(victim));
    update_pos(victim);
    send_to_char("You feel better!\n\r", victim);
    if (ch != victim)
@@ -1321,7 +1321,7 @@ bool spell_cure_serious(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    int heal;
 
    heal = UMIN(200, dice(6, 8) + level);
-   victim->hit = UMIN(victim->hit + heal, victim->max_hit);
+   victim->hit = UMIN(victim->hit + heal, get_max_hp(victim));
    update_pos(victim);
    send_to_char("You feel better!\n\r", victim);
    if (ch != victim)
@@ -1961,7 +1961,7 @@ bool spell_energy_drain(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       victim->mana /= 4;
       victim->move /= 4;
       dam = dice(level / 15, level);
-      ch->hit = UMIN(ch->max_hit, ch->hit + dam);
+      ch->hit = UMIN(get_max_hp(ch), ch->hit + dam);
    }
 
    sp_damage(obj, ch, victim, dam, ELE_SHADOW, sn, TRUE);
@@ -2211,7 +2211,7 @@ bool spell_influx(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    for (vch = ch->in_room->first_person; vch; vch = vch->next_in_room)
    {
-      vch->hit = UMIN(vch->hit + 40 + dice(20, level / 10), vch->max_hit);
+      vch->hit = UMIN(vch->hit + 40 + dice(20, level / 10), get_max_hp(vch));
       update_pos(vch);
    }
 
@@ -2223,7 +2223,7 @@ bool spell_influx(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       if ( vch->in_room == ch->in_room )
       {
           CHAR_DATA *victim = (CHAR_DATA *) vo;
-          victim->hit = UMIN( victim->hit + 40, victim->max_hit );
+          victim->hit = UMIN( victim->hit + 40, victim-> );
           update_pos( victim );
       }
        }*/

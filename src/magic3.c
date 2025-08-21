@@ -123,7 +123,7 @@ bool spell_black_hand(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       af.type = sn;
       af.duration = 3;
       af.location = APPLY_DOT;
-      af.modifier = level;
+      af.modifier = 50 + ch->remort[CLASS_NEC];
       af.bitvector = 0;
       af.caster = ch;
       affect_to_char(victim, &af);
@@ -1060,8 +1060,8 @@ bool spell_soul_net(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    send_to_char("@@NYou enshroud the room with a demonic @@dSoul Net@@N.\n\r", ch);
 
    raf.type = sn;
-   raf.duration = (level / 8);
-   raf.level = level;
+   raf.duration = 3;
+   raf.level = get_psuedo_level(ch);
    raf.bitvector = ROOM_BV_SOUL_NET;
    raf.caster = ch;
    raf.modifier = 0;
@@ -1094,8 +1094,6 @@ bool spell_condense_soul(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
 
    act("@@N$n gestures diabolically, and his captured soul condenses into a@@dSoul Potion@@N.", ch, NULL, NULL, TO_ROOM);
    send_to_char("@@NYou condense the soul and some of your life force into a @@dSoul potion@@N.\n\r", ch);
-   ch->max_hit -= 75;
-   ch->pcdata->hp_from_gain -= 75;
 
    return TRUE;
 }
@@ -1106,7 +1104,7 @@ bool spell_restoration(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    if (IS_NPC(ch))
       return FALSE;
 
-   ch->hit = ch->max_hit;
+   ch->hit = get_max_hp(ch);
    ch->mana = ch->max_mana;
    ch->move = ch->max_move;
    if (!IS_NPC(ch))
@@ -1233,7 +1231,7 @@ bool spell_holy_light(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
          continue;
       act("$N is invigorated by the light shining off of $n!", ch, NULL, gch, TO_NOTVICT);
       send_to_char("You feel a warm light invigorate you!\n\r", gch);
-      gch->hit = UMIN(gch->max_hit, (gch->hit + number_range(level * 2, level * 5)));
+      gch->hit = UMIN(get_max_hp(gch), (gch->hit + number_range(level * 2, level * 5)));
    }
    send_to_char("You invigorate the troops!\n\r", ch);
 
@@ -1268,7 +1266,7 @@ bool spell_divine_intervention(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_D
    int heal;
 
    heal = UMAX(600, number_range(level * 4, level * 10));
-   victim->hit = UMIN(victim->hit + heal, victim->max_hit);
+   victim->hit = UMIN(victim->hit + heal, get_max_hp(victim));
    update_pos(victim);
    send_to_char("You feel the hand of your God invigorate your soul!\n\r", victim);
    if (ch != victim)
@@ -1370,8 +1368,8 @@ bool spell_summon_pegasus(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *
    /*
     * don't think we need these
     * summoned->level    = 40;
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
+    * summoned->max_  = dice( 8, 40 );
+    * summoned->hit      = summoned->max_;
     * summoned->max_move = dice( 10, 40 );
     * summoned->move     = summoned->max_move;
     *
@@ -1400,8 +1398,8 @@ bool spell_summon_nightmare(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA
    /*
     * don't think we need these
     * summoned->level    = 40;
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
+    * summoned->max_  = dice( 8, 40 );
+    * summoned->hit      = summoned->max_;
     * summoned->max_move = dice( 10, 40 );
     * summoned->move     = summoned->max_move;
     *
@@ -1430,8 +1428,8 @@ bool spell_summon_beast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    /*
     * don't think we need these
     * summoned->level    = 40;
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
+    * summoned->max_  = dice( 8, 40 );
+    * summoned->hit      = summoned->max_;
     * summoned->max_move = dice( 10, 40 );
     * summoned->move     = summoned->max_move;
     *
@@ -1460,8 +1458,8 @@ bool spell_summon_devourer(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA 
    /*
     * don't think we need these
     * summoned->level    = 40;
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
+    * summoned->max_  = dice( 8, 40 );
+    * summoned->hit      = summoned->max_;
     * summoned->max_move = dice( 10, 40 );
     * summoned->move     = summoned->max_move;
     *
@@ -1490,8 +1488,8 @@ bool spell_summon_shadow(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    /*
     * don't think we need these
     * summoned->level    = 40;
-    * summoned->max_hit  = dice( 8, 40 );
-    * summoned->hit      = summoned->max_hit;
+    * summoned->max_  = dice( 8, 40 );
+    * summoned->hit      = summoned->max_;
     * summoned->max_move = dice( 10, 40 );
     * summoned->move     = summoned->max_move;
     *

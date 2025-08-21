@@ -2559,7 +2559,7 @@ the gift of the undead~
 @@W@@xThe @@N@@dGift @@W@@xof the @@N@@dUndead@@N~
 @@dA small pill, wrapped with a ribbon, lies here.@@N
 ~
-26 4 8388608 1
+10 4 8388608 1
 80 503 503 503 0 0 0 0 0 0
 0
 L
@@ -2961,7 +2961,7 @@ L
 feast of the unicorn~
 @@dThe @@eFeast @@dof the @@eUnicorn@@N~
 ~
-26 0 8421376 17
+10 0 8421376 17
 80 223 614 72 0 0 0 0 0 0
 4
 L

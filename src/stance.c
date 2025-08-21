@@ -55,7 +55,7 @@ const struct stance_app_type stance_app[MAX_STANCE] = {
     {"Brawler", 0, 3, 3, 2, 0, 0, 0,
      REMORT, CLASS_BRA, 1, -1, -1, -1},
     /* Adept Stances */
-    {"Magi", 2, -1, -1, 0, 0, 3, STANCE_EITHER_CLASS | STANCE_MULTI_CAST | STANCE_DUAL_CAST,
+    {"Magi", 2, -1, -1, 0, 0, 3, STANCE_EITHER_CLASS | STANCE_MULTI_CAST | STANCE_DUAL_CAST | STANCE_NO_HIT,
      ADEPT, CLASS_GMA, 1, CLASS_KIN, 1, -1},
     {"Templar", -2, 3, 3, 3, 5, 0, 0,
      ADEPT, CLASS_TEM, 1, -1, -1, -1},

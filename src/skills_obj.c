@@ -264,6 +264,8 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
         return;
     }
 
+    WAIT_STATE(ch, 18);
+
     chance = 0;
 
     if (IS_SET(obj->extra_flags, ITEM_NODISARM))

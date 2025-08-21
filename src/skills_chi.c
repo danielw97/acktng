@@ -350,7 +350,7 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
     af.bitvector = 0;
     af.caster = ch;
     affect_to_char(ch, &af);
-    act("$N begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
+    act("$n begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
     send_to_char("You begin to focus on mind over body.\n\r", ch);
     return TRUE;
 }

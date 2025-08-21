@@ -132,7 +132,7 @@ void do_mpstat(CHAR_DATA *ch, char *argument)
    send_to_char(buf, ch);
 
    sprintf(buf, "Hp: %d/%d.  Mana: %d/%d.  Move: %d/%d. \n\r",
-           victim->hit, victim->max_hit, victim->mana, victim->max_mana, victim->move, victim->max_move);
+           victim->hit, get_max_hp(victim), victim->mana, victim->max_mana, victim->move, victim->max_move);
    send_to_char(buf, ch);
 
    sprintf(buf,

@@ -537,7 +537,7 @@ void objfun_regen(OBJ_DATA *obj, CHAR_DATA *keeper)
 
    if (obj->wear_loc < 0)
       return;
-   keeper->hit = UMIN(keeper->max_hit, keeper->hit + (number_range(obj->level / 20, obj->level / 5)));
+   keeper->hit = UMIN(get_max_hp(keeper), keeper->hit + (number_range(obj->level / 20, obj->level / 5)));
    return;
 }
 

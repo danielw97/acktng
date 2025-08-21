@@ -675,10 +675,10 @@ void breath_damage(CHAR_DATA *ch, int sn, int element)
    if (ch == NULL)
       return;
 
-   int min_dam = ch->max_hit / 32;
-   int max_dam = ch->max_hit / 16;
+   int min_dam = get_max_hp(ch) / 32;
+   int max_dam = get_max_hp(ch) / 16;
 
-   int dam_mod = ((ch->hit * 50) / ch->max_hit) + 50;
+   int dam_mod = ((ch->hit * 50) / get_max_hp(ch)) + 50;
    min_dam = min_dam * dam_mod / 100;
    max_dam = max_dam * dam_mod / 100;
 

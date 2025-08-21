@@ -335,16 +335,16 @@ struct class_type
 
 struct obj_stat_type
 {
-   int hr_div;
-   int dr_div;
-   int ac_div;
-   int hp_div;
-   int move_div;
-   int mana_div;
-   int spellpower_div;
-   int hrdr_bonus;
-   int ac_bonus;
-   int stat_bonus;
+   float hr_div;
+   float dr_div;
+   float ac_div;
+   float hp_div;
+   float move_div;
+   float mana_div;
+   float spellpower_div;
+   float hrdr_bonus;
+   float ac_bonus;
+   float stat_bonus;
 };
 
 struct race_type

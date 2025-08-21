@@ -179,6 +179,11 @@ long exp_to_level_adept(CHAR_DATA *ch)
 
    exp += exp * max / 2;
 
+   exp -= exp/4;
+
+   for(int i = 0; i < get_total_reincarnations(ch); i++)
+      exp += exp/10;
+
    return exp * 3;
 }
 
@@ -193,6 +198,11 @@ long exp_to_level_remort(CHAR_DATA *ch, int index)
       return 0;
 
    cost = get_cost_to_level_remort(ch, index);
+
+   cost -= cost/4;
+
+   for(int i = 0; i < get_total_reincarnations(ch); i++)
+      cost += cost/10;
 
    return (cost);
 }
@@ -237,6 +247,11 @@ long exp_to_level(CHAR_DATA *ch, int index)
       cost += cost * diff / 10;
 
    cost = cost * mult / 4.3;
+
+   cost -= cost/4;
+
+   for(int i = 0; i < get_total_reincarnations(ch); i++)
+      cost += cost/10;
 
    return (cost);
 }

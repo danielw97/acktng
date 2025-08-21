@@ -316,7 +316,7 @@ int get_max_str(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_str;
 
-   if (class_table[ch->class].attr_prime == APPLY_STR)
+   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_STR)
       max++;
 
    for (int i = 0; i < MAX_REMORT; i++)
@@ -357,7 +357,7 @@ int get_max_int(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_int;
 
-   if (class_table[ch->class].attr_prime == APPLY_INT)
+   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_INT)
       max++;
 
    for (int i = 0; i < MAX_REMORT; i++)
@@ -401,7 +401,7 @@ int get_max_wis(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_wis;
 
-   if (class_table[ch->class].attr_prime == APPLY_WIS)
+   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_WIS)
       max++;
 
    for (int i = 0; i < MAX_REMORT; i++)
@@ -443,7 +443,7 @@ int get_max_dex(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_dex;
 
-   if (class_table[ch->class].attr_prime == APPLY_DEX)
+   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_DEX)
       max++;
 
    for (int i = 0; i < MAX_REMORT; i++)
@@ -484,7 +484,7 @@ int get_max_con(CHAR_DATA *ch)
 {
    int max = race_table[ch->race].race_con;
 
-   if (class_table[ch->class].attr_prime == APPLY_CON)
+   if (!IS_NPC(ch) && class_table[ch->pcdata->order[0]].attr_prime == APPLY_CON)
       max++;
 
    for (int i = 0; i < MAX_REMORT; i++)
@@ -518,6 +518,43 @@ int get_spellpower(CHAR_DATA *ch)
       spellpower += ch->spellpower_mod;
 
    return spellpower;
+}
+
+int get_max_hp(CHAR_DATA *ch)
+{
+   int hp = 25;
+
+   hp += get_stat(ch, APPLY_HIT);
+
+   if (!IS_NPC(ch))
+   {
+      hp += ch->pcdata->hp_from_gain;
+   }
+   else
+   {
+      hp += ch->hp_mod;
+      hp += (ch->level * 15) + (ch->level * ch->level * 3);
+   }
+
+   return hp;
+}
+
+int get_max_mana(CHAR_DATA *ch)
+{
+   int mana = 100;
+
+   mana += get_stat(ch, APPLY_MANA);
+
+   return mana;
+}
+
+int get_max_move(CHAR_DATA *ch)
+{
+   int move = 100;
+
+   move += get_stat(ch, APPLY_MOVE);
+
+   return move;
 }
 
 int get_healing(CHAR_DATA *ch)
@@ -1213,115 +1250,8 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
       mod = 0 - mod;
    }
 
-   if (IS_NPC(ch))
-   {
-      switch (paf->location)
-      {
-      default:
-         return;
-      case APPLY_MANA:
-         ch->max_mana += mod;
-         break;
-      case APPLY_HIT:
-         ch->max_hit += mod;
-         break;
-      case APPLY_MOVE:
-         ch->max_move += mod;
-         break;
-      case APPLY_SAVING_PARA:
-         ch->saving_throw += mod;
-         break;
-      case APPLY_SAVING_ROD:
-         ch->saving_throw += mod;
-         break;
-      case APPLY_SAVING_PETRI:
-         ch->saving_throw += mod;
-         break;
-      case APPLY_SAVING_BREATH:
-         ch->saving_throw += mod;
-         break;
-      case APPLY_SAVING_SPELL:
-         ch->saving_throw += mod;
-         break;
-      }
-      return;
-   }
-
    if (paf->type == skill_lookup("Enraged"))
       REMOVE_BIT(ch->pcdata->pflags, PFLAG_RAGED);
-
-   switch (paf->location)
-   {
-   default:
-      bug("Affect_modify: unknown location %d.", paf->location);
-      sprintf(buf, "Affect_modify: called for %s - unknown location %d.", ch->name, paf->location);
-      monitor_chan(buf, MONITOR_OBJ);
-      return;
-
-   case APPLY_NONE:
-      break;
-   case APPLY_STR:
-      break;
-   case APPLY_DEX:
-      break;
-   case APPLY_INT:
-      break;
-   case APPLY_WIS:
-      break;
-   case APPLY_CON:
-      break;
-   case APPLY_SEX:
-      ch->sex += mod;
-      break;
-   case APPLY_CLASS:
-      break;
-   case APPLY_LEVEL:
-      break;
-   case APPLY_AGE:
-      break;
-   case APPLY_HEIGHT:
-      break;
-   case APPLY_WEIGHT:
-      break;
-   case APPLY_MANA:
-      ch->max_mana += mod;
-      break;
-   case APPLY_HIT:
-      ch->max_hit += mod;
-      break;
-   case APPLY_MOVE:
-      ch->max_move += mod;
-      break;
-   case APPLY_GOLD:
-      break;
-   case APPLY_EXP:
-      break;
-   case APPLY_AC:
-      break;
-   case APPLY_HITROLL:
-      break;
-   case APPLY_DAMROLL:
-      break;
-   case APPLY_SAVING_PARA:
-      ch->saving_throw += mod;
-      break;
-   case APPLY_SAVING_ROD:
-      ch->saving_throw += mod;
-      break;
-   case APPLY_SAVING_PETRI:
-      ch->saving_throw += mod;
-      break;
-   case APPLY_SAVING_BREATH:
-      ch->saving_throw += mod;
-      break;
-   case APPLY_SAVING_SPELL:
-      ch->saving_throw += mod;
-      break;
-   case APPLY_HOT:
-      break;
-   case APPLY_DOT:
-      break;
-   }
 
    /*
     * Check for weapon wielding.

@@ -541,7 +541,7 @@ void do_rage(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   chance = 60 - (ch->hit / ch->max_hit * 100);
+   chance = 60 - (ch->hit / get_max_hp(ch) * 100);
    if (weather_info.moon_loc == MOON_PEAK)
       chance += 15;
    if (IS_SHIFTED(ch))

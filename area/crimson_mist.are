@@ -4353,11 +4353,11 @@ window~
 L
 2
 #8379
-red~
+red pebble~
 @@dT@@mh@@pe @@RRed @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@Rred@@m pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 0 0 0 0 0 0 0 0 0
+8380 8380 8385 0 0 0 0 0 0 0
 4
 A
 17 100
@@ -4370,11 +4370,11 @@ A
 L
 120
 #8380
-blue~
+blue pebble~
 @@dT@@mh@@pe @@BBlue @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@Bblue@@m pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 0 0 0 0 0 0 0 0 0
+8379 8379 8385 0 0 0 0 0 0 0
 4
 A
 17 -100
@@ -4387,11 +4387,11 @@ A
 L
 120
 #8381
-purple~
+purple pebble~
 @@dT@@mh@@pe @@pPurple @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@ppurple@@M pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 0 0 0 0 0 0 0 0 0
+8382 8382 8386 0 0 0 0 0 0 0
 4
 A
 17 500
@@ -4402,11 +4402,11 @@ A
 L
 120
 #8382
-yellow~
+yellow pebble~
 @@dT@@mh@@pe @@yYellow @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@yyellow@@M pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 0 0 0 0 0 0 0 0 0
+8381 8381 8386 0 0 0 0 0 0 0
 4
 A
 12 -200
@@ -4415,11 +4415,11 @@ A
 L
 120
 #8383
-green~
+green pebble~
 @@dT@@mh@@pe @@GGreen @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@Ggreen@@m pebble of the mist floats here..@@N~
 29 1048704 8421376 1
-0 0 0 0 0 0 0 0 0 0
+8384 8384 8387 0 0 0 0 0 0 0
 4
 A
 17 1000
@@ -4430,11 +4430,11 @@ A
 L
 120
 #8384
-grey~
+grey pebble~
 @@dT@@mh@@pe @@dGrey @@dP@@me@@pb@@Wb@@gl@@pe@@N~
 @@mThe @@dgrey@@m pebble of the mist floats here...@@N~
 29 1048704 8421376 1
-0 0 0 0 0 0 0 0 0 0
+8383 8383 8387 0 0 0 0 0 0 0
 4
 A
 24 -100

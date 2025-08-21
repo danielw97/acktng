@@ -295,7 +295,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    fprintf(fp, "Room         %d\n",
            (ch->in_room == get_room_index(ROOM_VNUM_LIMBO) && ch->was_in_room != NULL) ? ch->was_in_room->vnum : ch->in_room->vnum);
 
-   fprintf(fp, "HpManaMove   %ld %ld %ld %ld %ld %ld\n", ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move);
+   fprintf(fp, "HpManaMove   %ld %ld %ld %ld %ld %ld\n", ch->hit, ch->hit, ch->mana, ch->max_mana, ch->move, ch->max_move);
 
    fprintf(fp, "Exp          %ld\n", ch->exp);
    fprintf(fp, "Act          %d\n", ch->act);
@@ -1095,7 +1095,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          if (!str_cmp(word, "HpManaMove"))
          {
             ch->hit = fread_number(fp);
-            ch->max_hit = fread_number(fp);
+            ch->hit = fread_number(fp);
             ch->mana = fread_number(fp);
             ch->max_mana = fread_number(fp);
             ch->move = fread_number(fp);

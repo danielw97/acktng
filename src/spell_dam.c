@@ -52,6 +52,82 @@ struct sp_dam_str_type sp_dam_str[] = {
     /* mind      */ {ELEMENT_MENTAL, "@@m", "@@W", "@@p", "@@5", "%s/%sV%s\\", "zap", "BLAST", "zaps", "BLASTS"},
     /* holy      */ {ELEMENT_HOLY, "@@l", "@@W", "@@y", "@@1", "%s~%s\\/%s~", "holy", "HOLY", "holies", "HOLIES"}};
 
+/*    sh_int flag1;                   /* mort or remort?      *
+   sh_int flag2;                   /* normal and/or vamp?     *
+   char *name;                     /* Name of skill                *
+   sh_int skill_level[MAX_REMORT]; /* Level needed by class        *
+   SPELL_FUN *spell_fun;           /* Spell pointer (for spells)   *
+   sh_int target;                  /* Legal targets                *
+   sh_int minimum_position;        /* Position for caster / user   *
+   sh_int *pgsn;                   /* Pointer to associated gsn    *
+   sh_int slot;                    /* Slot for #OBJECT loading     *
+   sh_int min_mana;                /* Minimum mana used            *
+   sh_int beats;                   /* Waiting time after use       *
+   bool can_learn;
+   char *noun_damage;              /* Damage message               *
+   char *msg_off;                  /* Wear off message             *
+   char *room_off;                 /* Wear off msg TO_ROOM    *
+*/
+
+int get_spell_damage(CHAR_DATA *ch, int gsn)
+{
+   int base;
+   int d1, d2;
+
+   switch(skill_table[gsn].flag1)
+   {
+      case MORTAL:
+         d1 = get_best_level(ch, gsn)/5;
+         base = 10;
+         d2 = 10;
+      break;
+      case REMORT:
+         d1 = get_best_level(ch, gsn)/2;
+         base = 150;
+         d2 = 20;
+      break;
+      case ADEPT:
+         base = 350;
+         d1 = get_best_level(ch, gsn)*3;
+         d2 = 25;
+      break;
+   }
+
+   return dice(d1, d2)+base;
+}
+
+int get_best_level(CHAR_DATA *ch, int gsn)
+{
+   int best = -1;
+
+   if (skill_table[gsn].flag1 == MORTAL)
+   {
+      for(int i = 0; i < MAX_CLASS; i++)
+      {
+         if (ch->lvl[i] >= skill_table[gsn].skill_level[i] && ch->lvl[i] > best)
+            best = ch->lvl[i];
+      }
+   }
+   else if (skill_table[gsn].flag1 == REMORT)
+   {
+      for(int i = 0; i < MAX_REMORT; i++)
+      {
+         if (ch->remort[i] >= skill_table[gsn].skill_level[i] && ch->remort[i] > best)
+            best = ch->remort[i];
+      }
+   }
+   else if (skill_table[gsn].flag1 == ADEPT)
+   {
+      for(int i = 0; i < MAX_CLASS; i++)
+      {
+         if (ch->adept[i] >= skill_table[gsn].skill_level[i] && ch->adept[i] > best)
+            best = ch->adept[i];
+      }
+   }
+
+   return best;
+}
+
 CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int summon)
 {
    CHAR_DATA *summoned;
@@ -119,8 +195,7 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int summon)
    char_to_room(summoned, ch->in_room);
 
    summoned->level = level - base_penalty;
-   summoned->max_hit = summoned->level * 15 + number_range(summoned->level * summoned->level / 2, summoned->level * summoned->level / 1);
-   summoned->hit = summoned->max_hit;
+   summoned->hit = get_max_hp(summoned);
 
    summoned->exp = 0;
    summoned->intell_exp = 0;
@@ -216,7 +291,7 @@ void heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, boo
    if (!hot)
       heal = heal * number_range(75, 125) / 100;
 
-   victim->hit = UMIN(victim->hit + heal, victim->max_hit);
+   victim->hit = UMIN(victim->hit + heal, get_max_hp(victim));
    update_pos(victim);
 
    sprintf(buf1, "@@N$n's %s heals $N! (@@r%d@@N)", skill_table[sn].name, heal);
@@ -610,11 +685,11 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
    }
    if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
    {
-      if (dam < victim->max_hit / 30)
+      if (dam < get_max_hp(victim) / 30)
          act("You glance $K", ch, NULL, victim, TO_CHAR);
-      else if (dam < victim->max_hit / 20)
+      else if (dam < get_max_hp(victim) / 20)
          act("You hit $K", ch, NULL, victim, TO_CHAR);
-      else if (dam < victim->max_hit / 10)
+      else if (dam < get_max_hp(victim) / 10)
          act("You nail $K", ch, NULL, victim, TO_CHAR);
       else
          act("You thwack $K", ch, NULL, victim, TO_CHAR);
@@ -625,11 +700,11 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
    }
    if (!IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_BLIND_PLAYER))
    {
-      if (dam < victim->max_hit / 30)
+      if (dam < get_max_hp(victim) / 30)
          act("$k glances you", ch, NULL, victim, TO_VICT);
-      else if (dam < victim->max_hit / 20)
+      else if (dam < get_max_hp(victim) / 20)
          act("$k hits you", ch, NULL, victim, TO_VICT);
-      else if (dam < victim->max_hit / 10)
+      else if (dam < get_max_hp(victim) / 10)
          act("$k nails you", ch, NULL, victim, TO_VICT);
       else
          act("$k thwacks you", ch, NULL, victim, TO_VICT);

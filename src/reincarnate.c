@@ -245,6 +245,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
             ch->pcdata->order[i] = ch->pcdata->reincarnate_order[i];
             ch->pcdata->index[ch->pcdata->reincarnate_order[i]] = i;
          }
+         ch->class = ch->pcdata->order[0];
          ch->level = 1;
          ch->lvl[ch->pcdata->order[0]] = 1;
          reset_gain_stats(ch);

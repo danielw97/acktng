@@ -129,7 +129,7 @@ void trig_restore(CHAR_DATA *ch, OBJ_DATA *obj)
 {
    act("A beam of white light from $p sweeps over $n!", ch, obj, NULL, TO_ROOM);
    act("A beam of white light from $p sweeps over you!", ch, obj, NULL, TO_ROOM);
-   ch->hit = ch->max_hit;
+   ch->hit = get_max_hp(ch);
    ch->mana = ch->max_mana;
    ch->move = ch->max_move;
    send_to_char("You feel very healthy!\n\r", ch);
