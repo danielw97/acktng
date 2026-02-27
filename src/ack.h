@@ -59,6 +59,10 @@
 #include "proposition.h"
 #endif
 
+#ifndef INVASION_H
+#include "invasion.h"
+#endif
+
 struct str_array
 {
    char *this_string;

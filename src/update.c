@@ -2078,6 +2078,7 @@ void update_handler(void)
    {
       pulse_rooms = PULSE_ROOMS;
       rooms_update();
+      invasion_rooms_update();
    }
 
    if (--pulse_message <= 0)
@@ -2131,6 +2132,7 @@ void update_handler(void)
       char_update();
       obj_update();
       quest_update();
+      invasion_update();
 
       /*
        * This will log the number of perms being used...

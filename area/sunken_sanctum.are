@@ -464,7 +464,7 @@ ruinwarden fragment stone fragment~
 @@Ya Fragment of the Warden@@N~
 A jagged piece of magically hardened stone lies here.
 ~
-9 268435456 16 1
+9 201326592 8388624 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -474,131 +474,131 @@ ashwalker cloak smoky~
 @@DAn Ashwalker's Cloak@@N~
 A cloak of perpetual smoke swirls gently here.
 ~
-9 268435456 131072 1
+9 201326592 98304 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #9512
 ashwalker bracers grey~
 @@DGrey Ashwalker Bracers@@N~
 A pair of pale grey bracers lies here, trailing faint wisps of smoke.
 ~
-9 268435456 4096 1
+9 201326592 8390656 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #9513
 flamebound gauntlets fire~
 @@RFlamebound Gauntlets@@N~
 Gauntlets of fire-etched steel glow faintly here on the ground.
 ~
-9 268435456 8192 1
+9 201326592 8392704 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #9514
 flamebound helm blazing~
 @@RThe Flamebound Helm@@N~
 A helm adorned with flame runes rests here, still radiating heat.
 ~
-9 268435456 16 1
+9 201326592 8388616 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #9515
 crystalline ring band~
 @@CA Crystalline Ring@@N~
 A ring of clear faceted crystal catches what little light there is.
 ~
-9 268435456 8192 1
+9 201326592 8396800 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #9516
 crystalweaver robes arcane~
 @@CCrystalweaver's Robes@@N~
 Shimmering robes encrusted with tiny crystal shards lie here.
 ~
-9 402653184 524288 1
+9 201326592 8454144 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #9517
 vaultkeeper plate~
 @@WThe Vaultkeeper's Breastplate@@N~
 An enormous plate of layered iron and enchanted bone rests here.
 ~
-9 402653184 524288 1
+9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #9518
 vaultkeeper leggings~
 @@WThe Vaultkeeper's Leggings@@N~
 Massive greaves of iron and bound bone lie here.
 ~
-9 402653184 2097152 1
+9 201326592 9437184 1
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #9519
 vaultkeeper helm~
 @@WThe Vaultkeeper's Helm@@N~
 A fearsome helm of iron and pale rune-carved bone rests here.
 ~
-9 402653184 16 1
+9 201326592 8388616 1
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #9520
 shadowstalker cloak dark~
 @@BA Shadow Stalker's Shroud@@N~
 A cloak of solidified shadow lies here, oddly weightless.
 ~
-9 402653184 131072 1
+9 201326592 8389120 1
 0 0 0 0 0 0 0 0 0 0
 4
 L
-1
+150
 #9521
 gravelurker fang claw~
 @@mA Gravelurker's Fang@@N~
 A wickedly curved fang pulled from a Gravelurker rests here.
 ~
-5 402653184 16777216 1
+5 201326592 8421376 1
 0 5 9 5 0 0 0 0 0 0
 3
 L
-1
+150
 #9522
 spiritmage vestment robe~
 @@eA Spirit Mage's Vestment@@N~
 Ghostly white robes that seem to shift between solid and translucent lie here.
 ~
-9 402653184 524288 1
+9 201326592 8650752 1
 0 0 0 0 0 0 0 0 0 0
 4
 L
-1
+150
 #9523
 spiritmage medallion amulet~
 @@eA Spirit Mage's Medallion@@N~
 A silver medallion etched with arcane symbols floats an inch off the ground.
 ~
-9 402653184 256 1
+9 201326592 8388736 1
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #9530
 puzzle glyph stone shard~
 @@GA Glowing Glyph-Stone@@N~

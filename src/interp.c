@@ -805,6 +805,8 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"findreset", do_findreset, POS_DEAD, L_HER, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
+    {"invasion", do_invasion, POS_DEAD, LEVEL_IMMORTAL, LOG_ALWAYS,
+     C_TYPE_IMM, C_SHOW_ALWAYS},
 
     /*
      * Werewolf commands

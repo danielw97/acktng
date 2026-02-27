@@ -4487,7 +4487,7 @@ L 50 50 0 0 0 0 0 0 0
 void shard orb~
 @@ca shard of void@@n~
 A shard of pure void energy rests here.~
-9 201326592 8454144 0
+9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -4802,7 +4802,7 @@ L
 warden's halberd polearm weapon~
 @@ya warden's halberd@@n~
 A warden's halberd lies here, its blade gleaming darkly.~
-5 201326592 8454144 0
+5 201326592 8421376 0
 0 11 17 3 0 0 0 0 0 0
 9
 L
@@ -4815,7 +4815,7 @@ A tomb-sealed helm lies here, ancient and cold.~
 0 0 0 0 0 0 0 0 0 0
 13
 L
-1
+150
 #647
 life-drain pendant amulet leech~
 @@ca life-drain pendant@@n~
@@ -4824,34 +4824,34 @@ A pendant pulsing with draining energy lies here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #648
 void-silk boots feet armor speed~
 @@cvoid-silk boots@@n~
 A pair of void-silk boots lies here, impossibly light.~
-9 201326592 12582912 0
+9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
-1
+150
 #649
 phantom-woven robe body armor mage~
 @@cphantom-woven robes@@n~
 A set of phantom-woven robes lies here.~
-9 201326592 8912896 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #650
 arcane focus crystal wand mage~
 @@ean arcane focus crystal@@n~
 An arcane focus crystal lies here, pulsing with trapped energy.~
-5 738197504 8454144 0
+5 738197504 8421376 0
 0 6 12 4 0 0 0 0 0 0
 4
 L
-1
+150
 #651
 lightning-shard gauntlets hands armor~
 @@clightning-shard gauntlets@@n~
@@ -4860,7 +4860,7 @@ A pair of lightning-shard gauntlets lies here.~
 0 0 0 0 0 0 0 0 0 0
 8
 L
-1
+150
 #652
 storm-wracked shoulders pauldrons armor~
 @@cstorm-wracked pauldrons@@n~
@@ -4869,25 +4869,25 @@ Storm-wracked pauldrons lie here, crackling faintly.~
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #653
 golem-core energy sphere orb~
 @@ca golem core@@n~
 A pulsing golem core lies here, still active.~
-9 201326592 8388608 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #654
 rune-etched tower shield buckler~
 @@ca rune-etched tower shield@@n~
 A rune-etched tower shield lies here.~
-9 469762048 8454144 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #655
 wanderer's medallion pendant neck~
 @@ca wanderer's medallion@@n~
@@ -4896,52 +4896,52 @@ A worn medallion lies here, its face worn smooth.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #656
 corridor-dust boots feet leather~
 @@ccorridor-dust boots@@n~
 A pair of boots caked in pale dust lie here.~
-9 201326592 12582912 0
+9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
-1
+150
 #657
 architect's measuring rod staff weapon~
 @@ythe Architect's Rod@@n~
 A slender measuring rod of void-metal lies here.~
-5 738197504 8454144 0
+5 738197504 8421376 0
 0 7 13 1 0 0 0 0 0 0
 3
 L
-1
+150
 #658
 shifting belt waist armor corridor~
 @@ca shifting belt@@n~
 A belt that seems to change shape lies here.~
-9 201326592 8650752 0
+9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
-1
+150
 #659
 necromancer's skull head trophy~
 @@ca necromancer's skull@@n~
 A skull crackling with dark energy lies here.~
-9 201326592 8388608 0
+9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #660
 tome death void dark book~
 @@ca tome of the void dead@@n~
 A dread tome lies here, its pages moving without wind.~
-9 201326592 8388608 0
+9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #661
 catacomb lord crown helm head boss~
 @@ythe Crown of the Catacomb Lord@@n~
@@ -4950,34 +4950,34 @@ The Crown of the Catacomb Lord lies here, radiating death.~
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #662
 spire architect core orb boss~
 @@ythe Spire Architect's Core@@n~
 The Spire Architect's Core lies here, pulsing erratically.~
-9 201326592 8388608 0
+9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #663
 arcane-void staff boss weapon~
 @@ethe Staff of Shattered Arcana@@n~
 The Staff of Shattered Arcana lies here.~
-5 738197504 8454144 0
+5 738197504 8421376 0
 0 12 20 1 0 0 0 0 0 0
 5
 L
-1
+150
 #664
 architect robe boss body armor~
 @@ythe Architect's Robe@@n~
 The Architect's Robe lies here, runes shifting across its surface.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #665
 warden key eternal corridor~
 @@ythe Warden's Key@@n~
@@ -4991,25 +4991,25 @@ L
 corridor warden sword boss weapon~
 @@ythe Warden's Blade@@n~
 The Warden's Blade lies here, impossibly long.~
-5 201326592 8454144 0
+5 201326592 8421376 0
 0 13 22 2 0 0 0 0 0 0
-6
+9
 L
-1
+150
 #667
 warden armor body boss plate~
 @@ythe Warden's Plate@@n~
 The Warden's Plate lies here, still warm from battle.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #668
 warden shield boss buckler~
 @@ythe Warden's Shield@@n~
 The Warden's Shield lies here.~
-9 469762048 8454144 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 10
 L
@@ -5018,38 +5018,38 @@ L
 herald sword void keen boss~
 @@ythe Herald's Void-Keen Sword@@n~
 The Herald's Void-Keen Sword lies here, still humming.~
-5 201326592 8454144 0
+5 201326592 8421376 0
 0 14 22 2 0 0 0 0 0 0
 6
 L
-1
+150
 #670
 herald armor boss plate dark~
 @@ythe Herald's Dark Plate@@n~
 The Herald's Dark Plate lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #671
 herald ring boss finger void~
 @@ythe Herald's Signet Ring@@n~
 The Herald's Signet Ring lies here.~
-9 201326592 8388736 0
+9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #672
 herald cloak about boss shadow~
 @@ythe Herald's Shadow Cloak@@n~
 The Herald's Shadow Cloak lies here.~
-9 201326592 8519680 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #673
 drowned spirit essence flask~
 @@ca flask of drowned essence@@n~
@@ -5076,12 +5076,12 @@ A delicate shadow-silk wristband lies here.~
 0 0 0 0 0 0 0 0 0 0
 3
 L
-1
+150
 #676
 void-rat fang trophy tooth~
 @@ca void-rat fang@@n~
 A curved void-rat fang lies here.~
-9 201326592 8388608 0
+9 201326592 8388640 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
@@ -5090,92 +5090,92 @@ L
 wisp-core lantern light magic~
 @@ca wisp-core lantern@@n~
 A wisp-core lantern glows with cold shadow-light.~
-9 0 8388608 0
-0 0 0 0 0 0 0 0 0 0
+1 0 8421376 0
+0 0 -1 0 0 0 0 0 0 0
 1
 L
-1
+150
 #678
 shadow-weave vest body light armor~
 @@ca shadow-weave vest@@n~
 A shadow-weave vest lies here, barely visible.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #679
 spider-silk sash waist dark~
 @@ca spider-silk sash@@n~
 A spider-silk sash lies here, faintly adhesive.~
-9 201326592 8650752 0
+9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
-1
+150
 #680
 flayed-skin pouch container bag~
 @@ba flayed-skin pouch@@n~
 A pouch of unsettling material lies here.~
-15 201326592 8388608 0
+15 67108864 8388608 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #681
 beetle-chitin buckler shield~
 @@ca beetle-chitin buckler@@n~
 A buckler made of fused void-beetle chitin lies here.~
-9 469762048 8454144 0
+9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #682
 banshee-wail vial potion scream~
 @@ca vial of banshee wail@@n~
 A stoppered vial from which thin screams escape lies here.~
-9 201326592 8388608 0
+9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #683
-bat-wing cloak about flight~
-@@ca bat-wing cloak@@n~
-A bat-wing cloak lies here, wings spread.~
-9 201326592 8519680 0
+A pair of bat wings bat-wings~
+@@cA pair of bat-wings@@N~
+A pair of bat wings lie here~
+9 201326592 8388864 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #684
 fossil-knuckles fist weapon punch~
 @@efossil knuckledusters@@n~
 A pair of fossil-hard knuckledusters lies here.~
-5 201326592 8454144 0
-0 6 10 1 0 0 0 0 0 0
+5 201326592 8421376 0
+0 6 10 0 0 0 0 0 0 0
 4
 L
-1
+150
 #685
 apprentice staff void mage weapon~
 @@ean apprentice's staff@@n~
 A hastily-carved apprentice staff lies here.~
-5 738197504 8454144 0
+5 738197504 8421376 0
 0 5 9 4 0 0 0 0 0 0
 3
 L
-1
+150
 #686
 preserved champion bracers arms wrist~
 @@cpreserved champion's bracers@@n~
 Champion's bracers still bearing void preservation lie here.~
-9 201326592 8389632 0
+9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #687
 champion gauntlets hands preserved~
 @@cpreserved gauntlets@@n~
@@ -5184,7 +5184,7 @@ A set of preserved gauntlets lies here, fingers still curled.~
 0 0 0 0 0 0 0 0 0 0
 8
 L
-1
+150
 #688
 rat king crown helm title~
 @@ythe Rat King's Crown@@n~
@@ -5193,106 +5193,106 @@ A tiny crown of twisted wire and bone rests here.~
 0 0 0 0 0 0 0 0 0 0
 13
 L
-1
+150
 #689
 rat king tail trophy disgusting~
 @@ythe Rat King's tail@@n~
 The severed tail of the Rat King lies here, still twitching.~
-9 201326592 8388608 0
+9 201326592 8912896 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #690
 serpent-scale boots feet void~
 @@cvoid-serpent scale boots@@n~
 Boots of overlapping void-serpent scales lie here.~
-9 201326592 12582912 0
+9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
-1
+150
 #691
 serpent fang dagger poison~
 @@ea shadow serpent's fang dagger@@n~
 A hollow fang filed to a blade edge lies here.~
-5 201326592 8454144 0
-0 7 11 3 0 0 0 0 0 0
+5 201326592 8421376 0
+0 7 11 11 0 0 0 0 0 0
 9
 L
-1
+150
 #692
 ancient lich phylactery soul gem~
 @@ythe lich's phylactery@@n~
 A gem pulsing with contained soul-force lies here.~
-9 201326592 8388608 0
+9 201326592 8388610 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #693
 lich-bone staff necromancy arcane~
 @@ya lich-bone staff@@n~
 A staff of fused bone and void-metal lies here.~
-5 738197504 8454144 0
+5 738197504 8421376 0
 0 9 15 1 0 0 0 0 0 0
 5
 L
-1
+150
 #694
 lich-wrapped robes body armor ancient~
 @@ylich-wrapped robes@@n~
 Robes wrapped in thin phylactery-chains lie here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #695
 twin-mirror shard fragment unique~
 @@ca void-twin shard@@n~
 A shard that reflects two versions of you simultaneously lies here.~
-9 201326592 8388608 0
+9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #696
 arcane revenant core scroll spellbook~
 @@can arcane revenant's spellbook@@n~
 A spellbook of crackling arcane script lies here.~
-9 201326592 8388608 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #697
 revenant robe body arcane spire~
 @@can arcane revenant's robe@@n~
 Robes charged with residual arcane energy lie here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
-7
+2
 L
-1
+150
 #698
 crystal focus gem arcane core~
 @@ca crystalline focus gem@@n~
 A fractured focus gem trails arcane light here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 L
-1
+150
 #699
 crystal horror shard weapon dagger~
 @@ea crystal horror shard@@n~
 A razor-edged crystal shard lies here.~
-5 201326592 8454144 0
-0 6 10 3 0 0 0 0 0 0
+9 201326592 8388672 0
+0 6 10 2 0 0 0 0 0 0
 9
 L
-1
+150
 #700
 crystal horror plating body armor~
 @@ccrystal horror plating@@n~
@@ -5301,43 +5301,43 @@ Articulated crystal plating lies here, edges still sharp.~
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #701
 spire guardian core orb construct~
 @@ca spire guardian's core@@n~
 An orb containing a guardian's control-matrix lies here.~
-9 201326592 8388608 0
+9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #702
 guardian shield construct armor~
 @@ca construct's reinforced shield@@n~
 A shield of layered guardian-plating lies here.~
-9 469762048 8454144 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #703
 living spell weave cloth~
 @@ca weave of living spell@@n~
 A tightly wound weave of condensed spell-matter lies here.~
-9 201326592 8519680 0
+9 201326592 8388610 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #704
 mirror wraith reflection ring~
 @@ca mirror-wraith ring@@n~
 A ring bearing a reflection that moves independently lies here.~
-9 201326592 8388736 0
+9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #705
 conduit shard energy weapon~
 @@ea void-conduit shard@@n~

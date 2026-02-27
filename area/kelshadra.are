@@ -22,7 +22,7 @@ The towering iron gates of Kel'Shadra lie shattered and bent, torn from their
 broken from the archway overhead. A faint, sickly phosphorescence clings to
 the walls, just enough to reveal the horror of what lies ahead. The path
 south leads deeper into the crypts.~
-4096 11
+4100 11
 D0
 ~
 ~
@@ -1110,182 +1110,182 @@ L 30 50 0 0 0 0 0 0 0
 #OBJECTS
 #9400
 shadow iron helm~
-@@DA @@rShadow-Iron @@DHelm@@N~
+@@NA @@dShadow-Iron@@N Helm~
 A shadow-iron helm lies discarded here.~
-9 939524224 8390656 145
+9 201326720 8388616 145
 0 0 0 0 0 0 0 0 0 0
-5
+14
 L
 150
 #9401
 shadow iron breastplate~
-@@DA @@rShadow-Iron @@DBreastplate@@N~
+@@NA @@dShadow-Iron@@N Breastplate~
 A shadow-iron breastplate lies here.~
-9 939524224 8650752 1049
+9 201326720 8650752 1049
 0 0 0 0 0 0 0 0 0 0
-10
+14
 L
 150
 #9402
 shadow iron greaves~
-@@DShadow-Iron @@DGreaves@@N~
+@@dShadow-Iron @@NGreaves~
 A pair of shadow-iron greaves lies here.~
-9 939524224 9437184 1
+9 201326720 9437184 1
 0 0 0 0 0 0 0 0 0 0
-7
+14
 L
 150
 #9403
 shadow iron vambraces~
-@@DShadow-Iron @@DVambraces@@N~
+@@dShadow-Iron@@N Vambraces~
 Shadow-iron vambraces lie here.~
-9 939524224 8390656 4353
+9 201326720 8390656 4353
 0 0 0 0 0 0 0 0 0 0
-5
+14
 L
 150
 #9404
 shadow iron gauntlets~
-@@DShadow-Iron @@DGauntlets@@N~
+@@dShadow-Iron@@N Gauntlets~
 A pair of shadow-iron gauntlets lies here.~
-9 939524224 8390656 65537
+9 201326720 8392704 65537
 0 0 0 0 0 0 0 0 0 0
-5
+14
 L
 150
 #9405
 shadow iron boots~
-@@DShadow-Iron @@DBoots@@N~
+@@dShadow-Iron@@N Boots~
 A pair of shadow-iron boots lies here.~
-9 939524224 9437184 536870913
+9 201326720 10485760 536870913
 0 0 0 0 0 0 0 0 0 0
-6
+14
 L
 150
 #9406
 shadow iron pauldrons~
-@@DShadow-Iron @@DPauldrons@@N~
+@@dShadow-Iron@@N Pauldrons~
 Shadow-iron pauldrons lie here.~
-9 939524224 8390656 4097
+9 201326720 8389120 4097
 0 0 0 0 0 0 0 0 0 0
-8
+14
 L
 150
 #9407
 shadow iron buckler shield~
-@@DA @@rShadow-Iron @@DBuckler@@N~
+@@NA @@dShadow-Iron@@N Buckler~
 A shadow-iron buckler lies here.~
 9 469762176 8421376 8388608
 0 0 0 0 0 0 0 0 0 0
-4
+14
 L
 150
 #9408
 void blade longsword~
-@@DA @@DVoid @@rBlade@@N~
+@@NA Void@@d Blade@@N~
 A void blade lies here, absorbing the light around it.~
-5 939524224 8552448 0
-0 0 0 0 0 0 0 0 0 0
+5 134217856 8421376 0
+0 0 0 3 0 0 0 0 0 0
 8
 L
 150
 #9409
 bone scythe weapon~
-@@DA @@DBone @@rScythe@@N~
+@@NA Bone @@dScythe@@N~
 A scythe carved from enormous bones lies here.~
-5 939524224 8421376 0
-0 0 0 0 0 0 0 0 0 0
+5 201326720 8421376 0
+0 0 0 1 0 0 0 0 0 0
 10
 L
 150
 #9410
 shadow weave cloak~
-@@DA @@rShadow-Weave @@DCloak@@N~
+@@NA @@dShadow-Weave@@N Cloak~
 A cloak that seems to absorb shadow lies here.~
-9 939524224 8421376 16777216
+9 201326720 8454144 16777216
 0 0 0 0 0 0 0 0 0 0
-3
+14
 L
 150
 #9411
 ring shadow bound~
-@@DA @@DRing of @@rShadow-Binding@@N~
+@@NA Ring of @@dShadow-Binding@@N~
 A dark ring etched with binding runes lies here.~
-8 939524224 8421376 131072
+8 201326720 8421376 0
 0 0 0 0 0 0 0 0 0 0
-1
+14
 L
 150
 #9412
 amulet kel'shadra void~
-@@DAn @@rAmulet @@Dof Kel'Shadra@@N~
+@@NAn @@dAmulet@@N of Kel'Shadra~
 An amulet bearing the crest of Kel'Shadra lies here.~
-8 939524224 8421376 1024
+8 201326720 8388736 1024
 0 0 0 0 0 0 0 0 0 0
-1
+14
 L
 150
 #9413
 lich robes vestments~
-@@DLich @@rVestments@@N~
+@@NLich @@dVestments@@N~
 Ancient lich vestments lie here, radiating cold energy.~
-9 939524224 16777216 33554433
+9 201326720 8650752 33554433
 0 0 0 0 0 0 0 0 0 0
 3
 L
 150
 #9414
 shadow iron sword short~
-@@DA @@DShadow-Iron @@rShort Sword@@N~
+@@NA @@dShadow-Iron@@N Short Sword~
 A short shadow-iron sword lies here.~
-5 939524224 8421376 0
-0 0 0 0 0 0 0 0 0 0
-4
+5 134217856 8421376 0
+0 0 0 3 0 0 0 0 0 0
+14
 L
 150
 #9415
 void touched earring~
-@@DA @@DVoid-Touched @@rEarring@@N~
+@@NA Void-Touched @@dEarring@@N~
 A void-touched earring lies here.~
-8 939524224 8421376 384
+8 201326720 8388672 384
 0 0 0 0 0 0 0 0 0 0
-1
+14
 L
 150
 #9416
 shadow iron wristguards~
-@@DShadow-Iron @@DWristguards@@N~
+@@dShadow-Iron@@N Wristguards~
 Shadow-iron wristguards lie here.~
-9 939524224 8390656 49152
+9 201326720 8390656 49152
 0 0 0 0 0 0 0 0 0 0
-4
+14
 L
 150
 #9417
 darkbone staff weapon~
-@@DA @@DDarkbone @@rStaff@@N~
+@@NA Darkbone @@dStaff@@N~
 A staff carved from darkbone lies here.~
-5 939524224 8421376 0
-0 0 0 0 0 0 0 0 0 0
+5 671088768 8421376 0
+0 0 0 6 0 0 0 0 0 0
 7
 L
 150
 #9418
 void touched halo~
-@@DA @@DVoid-Touched @@rHalo@@N~
+@@NA Void-Touched @@dHalo@@N~
 An inverted halo of shadow-iron floats here.~
-9 939524224 8421376 2
+9 201326720 8388609 2
 0 0 0 0 0 0 0 0 0 0
-2
+14
 L
 150
 #9419
 shadow iron dagger~
-@@DA @@DShadow-Iron @@rDagger@@N~
+@@NA @@dShadow-Iron@@N Dagger~
 A shadow-iron dagger lies here.~
-5 939524224 8421376 0
-0 0 0 0 0 0 0 0 0 0
-3
+5 201326720 8421376 0
+0 0 0 11 0 0 0 0 0 0
+9
 L
 150
 #9420
