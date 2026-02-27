@@ -78,7 +78,13 @@ D2
 S
 #169
 Road to Keep~
-No description~
+The road widens here as it approaches the Keep from the south. Worn cobblestones
+
+line the path, smoothed by years of marching boots. A faint shimmer of magic
+
+lingers in the air, and the Keep's imposing silhouette looms just to the north.
+
+~
 0 11
 D0
 ~
@@ -222,8 +228,14 @@ D1
 0 -1 174
 S
 #176
-New room~
-No description~
+Northern Keep Path~
+The path curves gently around the northern face of the Keep. The great stone
+
+walls loom to the west, slick with moisture from the surrounding moat. A
+
+cold wind channels through here, carrying the smell of still water.
+
+~
 0 11
 D0
 ~
@@ -235,8 +247,14 @@ D2
 0 -1 175
 S
 #177
-New room~
-No description~
+Northern Keep Path~
+The northern stretch of the outer path runs straight and silent. The Keep's
+
+battlements are clearly visible above, and the occasional flash of a torch
+
+can be seen as a guard makes their rounds far above.
+
+~
 0 11
 D0
 ~
@@ -248,8 +266,14 @@ D2
 0 -1 176
 S
 #178
-New room~
-No description~
+Narrow Northern Path~
+The path here is particularly narrow, the moat pressing close on the north
+
+side and a dense wall of brambles choking the southern edge. A single weathered
+
+milestone marks the midpoint of the northern walk.
+
+~
 0 11
 D0
 ~
@@ -261,8 +285,14 @@ D2
 0 -1 177
 S
 #179
-New room~
-No description~
+Eastern Keep Path~
+The path begins to widen as it turns south, the moat receding behind you.
+
+The stone walls of the Keep's eastern face stretch ahead, and the distant
+
+chirping of birds from the southern forest can be heard again.
+
+~
 0 11
 D0
 ~
@@ -396,8 +426,14 @@ D3
 0 -1 184
 S
 #186
-New room~
-No description~
+Northwestern Keep Path~
+The northwestern corner of the outer path curves tightly around the Keep. The
+
+stone here is older, worn smooth by centuries of wind and rain. Moss clings to
+
+the base of the Keep's wall and a raven watches from atop the battlements.
+
+~
 0 11
 D0
 ~
@@ -409,8 +445,14 @@ D2
 0 -1 185
 S
 #187
-New room~
-No description~
+Northern Keep Path~
+The northern path stretches east and west along the Keep's rear face. The moat
+
+here is dark and deep, its surface perfectly still. No sound comes from within
+
+the Keep's walls on this side, lending the path an eerie quiet.
+
+~
 0 11
 D0
 ~
@@ -422,8 +464,14 @@ D2
 0 -1 186
 S
 #188
-New room~
-No description~
+Narrow Northern Path~
+A narrow section of the outer path runs here, hemmed in by the moat to the
+
+south and a crumbling retaining wall to the north. Weeds push up between the
+
+cobblestones, and the air smells faintly of algae and cold stone.
+
+~
 0 11
 D0
 ~
@@ -435,8 +483,14 @@ D2
 0 -1 187
 S
 #189
-New room~
-No description~
+Eastern Keep Path~
+The path widens slightly here as it passes beneath a cracked buttress. A few
+
+loose stones have fallen from the Keep's upper parapet and lie scattered at
+
+the path's edge. The moat laps quietly against the stone to the south.
+
+~
 0 11
 D0
 ~
@@ -698,8 +752,14 @@ D3
 0 -1 200
 S
 #202
-New room~
-No description~
+Hermit's Side Path~
+A narrow side path branches off from the main road here, cutting through a
+
+thicket of gnarled trees. The way is overgrown and clearly seldom used, yet
+
+boot prints in the soft mud suggest someone passes this way with purpose.
+
+~
 0 11
 D3
 ~
@@ -729,7 +789,15 @@ D2
 S
 #204
 Courtyard~
-No description~
+The inner courtyard of the Wizard's Keep spreads out before you, enclosed by
+
+tall stone walls on all sides. A worn flagstone path cuts through the centre,
+
+and a dry fountain stands at the middle, its basin cracked and forgotten. The
+
+smell of torch smoke and steel lingers in the still air.
+
+~
 0 11
 D0
 ~
@@ -750,7 +818,15 @@ D3
 S
 #205
 Courtyard~
-No description~
+The eastern section of the courtyard is quieter than the main gate area. A
+
+row of iron-bound weapon racks line the eastern wall, some still bearing
+
+training weapons. The shadows of the Keep's towers stretch long across the
+
+flagstones at this hour.
+
+~
 0 11
 D0
 ~
@@ -767,7 +843,15 @@ D3
 S
 #206
 Courtyard~
-No description~
+The western portion of the courtyard holds a small barracks building, its
+
+shutters thrown open to the morning air. The sound of snoring and the clank
+
+of armour being donned can be heard from within. A guardsman's discarded
+
+boot lies near the entrance.
+
+~
 0 11
 D0
 ~
@@ -784,7 +868,15 @@ D3
 S
 #207
 Courtyard~
-No description~
+The northern edge of the courtyard abuts the Keep's main keep building. A
+
+set of heavy oak double doors dominates the northern wall, their iron fittings
+
+polished bright. The flagstones here are swept clean, and two iron braziers
+
+flank the entrance, their flames guttering in the breeze.
+
+~
 0 11
 D0
 ~
@@ -805,7 +897,13 @@ D3
 S
 #208
 Courtyard~
-No description~
+A corner of the courtyard, sheltered from the wind by the intersecting walls.
+
+A lone apple tree grows here, its branches heavy with fruit that no one seems
+
+to bother harvesting. Fallen apples rot softly in the grass at its base.
+
+~
 0 11
 D0
 ~
@@ -822,7 +920,15 @@ D2
 S
 #209
 Courtyard~
-No description~
+The western corner of the courtyard is poorly lit, the torches on the nearby
+
+wall having burned down to stubs. Crates of supplies are stacked against the
+
+western wall, some open and partially emptied. The smell of salted meat and
+
+straw drifts from them.
+
+~
 0 11
 D0
 ~
@@ -839,7 +945,15 @@ D3
 S
 #210
 Courtyard~
-No description~
+The courtyard's northern interior lies just before the great Keep doors. This
+
+area is strictly maintained, and the flagstones are clean enough to eat from.
+
+Two enchanted lanterns hang from wrought-iron posts, casting a cold blue light
+
+that never flickers. The air here smells faintly of arcane reagents.
+
+~
 0 11
 D0
 ~
@@ -860,7 +974,15 @@ D3
 S
 #211
 Courtyard~
-No description~
+A narrow slice of the courtyard wedged between the Keep's eastern wall and a
+
+storage outbuilding. Barrels of oil for the torches are stacked here, along
+
+with spare chains and iron hooks. A rat darts between the barrels at your
+
+approach.
+
+~
 0 11
 D1
 ~
@@ -873,7 +995,15 @@ D2
 S
 #212
 Courtyard~
-No description~
+The rear western corner of the courtyard is dim and largely unvisited. A
+
+broken cart leans against the wall, one wheel missing. Rotting canvas covers
+
+a pile of something unidentifiable, and the flagstones here are cracked and
+
+uneven underfoot.
+
+~
 0 11
 D2
 ~
@@ -886,7 +1016,15 @@ D3
 S
 #213
 A Guard's Tower~
-No description~
+The base of the eastern guard tower rises here, its stone steps spiraling
+
+upward into the darkness. Arrow slits in the walls allow thin shafts of
+
+light to enter, and a small table bearing a half-eaten loaf of bread and an
+
+empty cup suggests the tower is occupied. The smell of lamp oil is strong.
+
+~
 4 11
 D1
 ~
@@ -898,8 +1036,16 @@ D4
 0 -1 214
 S
 #214
-New room~
-No description~
+Eastern Tower Top~
+The upper level of the eastern guard tower commands an excellent view of the
+
+courtyard below and the outer road beyond the main gate. A loaded crossbow
+
+rests on the battlements, and a bedroll in the corner suggests a guard rests
+
+here when not on watch. The wind is sharp and cold at this height.
+
+~
 0 11
 D5
 ~
@@ -908,7 +1054,15 @@ D5
 S
 #215
 Guard's Tower~
-No description~
+The base of the western guard tower is darker than its eastern counterpart,
+
+the arrow slits on this side partially blocked by years of accumulated grime.
+
+A rack of spears lines one wall, and a locked chest sits beneath the stairs.
+
+Worn boot-marks trace a familiar path across the floor.
+
+~
 4 11
 D3
 ~
@@ -920,8 +1074,16 @@ D4
 0 -1 216
 S
 #216
-New room~
-No description~
+Western Tower Top~
+The summit of the western guard tower offers a sweeping view over the Keep's
+
+western walls and the winding outer path below. A signal mirror mounted on
+
+a swivel bracket faces the road, used to warn of approaching visitors. The
+
+air up here tastes of iron and cold sky.
+
+~
 0 11
 D5
 ~
@@ -930,7 +1092,17 @@ D5
 S
 #217
 Entrance to the Wizard's Keep~
-No description~
+The main entrance hall of the Wizard's Keep stretches before you. A vaulted
+
+ceiling of pale stone arches overhead, carved with faded arcane runes that
+
+still faintly glow. Twin rows of iron torch sconces line the walls, and a
+
+thick carpet runner of deep violet stretches from the outer door to the inner
+
+passages ahead. The air hums with contained magical energy.
+
+~
 4 11
 D0
 ~
@@ -942,8 +1114,18 @@ D2
 0 -1 210
 S
 #218
-New room~
-No description~
+Keep Antechamber~
+A transition chamber between the Keep's entrance and its inner passages. The
+
+walls here are paneled in dark oak, hung with faded tapestries depicting
+
+battles fought by long-dead wizards. A suit of empty armour stands in one
+
+corner, its visor raised as if watching the door. Faint magical wards shimmer
+
+across the threshold to the south.
+
+~
 0 11
 D2
 ~
@@ -960,7 +1142,15 @@ D5
 S
 #219
 Entrance to the Rotunda~
-No description~
+The passage opens into a grand circular antechamber that serves as the
+
+threshold to the Keep's central rotunda. The polished marble floor reflects
+
+the light of floating arcane orbs drifting lazily overhead. Passages lead
+
+north into the rotunda proper, and a staircase descends into the basement below.
+
+~
 0 11
 D0
 ~
@@ -985,7 +1175,15 @@ D5
 S
 #220
 Rotunda~
-No description~
+The western arc of the grand rotunda curves gently around you. The polished
+
+stone floor is inlaid with a mosaic depicting celestial constellations, and
+
+tall arched windows of blue-tinted glass allow filtered light to fall across
+
+the patterns. The smell of old parchment and arcane chemicals permeates the air.
+
+~
 0 11
 D1
 ~
@@ -998,7 +1196,15 @@ D2
 S
 #221
 Rotunda~
-No description~
+A southern alcove of the rotunda holds a long reading bench and a glass-fronted
+
+cabinet filled with rolled scrolls. Most are sealed with wax and appear
+
+untouched for years. A single candle burns on the bench, nearly spent, as
+
+though someone was here recently and left in haste.
+
+~
 0 11
 D0
 ~
@@ -1015,7 +1221,15 @@ D3
 S
 #222
 Rotunda~
-No description~
+The northern arc of the rotunda is dominated by a massive carved stone map of
+
+the surrounding lands, set into the floor. Magical markers glow faintly at
+
+points of interest, though many have faded over the years. The ceiling here
+
+is painted with a sweeping mural of the sky at midnight.
+
+~
 0 11
 D2
 ~
@@ -1028,7 +1242,15 @@ D3
 S
 #223
 Rotunda~
-No description~
+A quiet eastern alcove of the rotunda serves as a small meditation space. A
+
+low circular dais of pale stone sits in the centre, and cushions arranged
+
+around it suggest it was once used for group study or ritual. The arcane orbs
+
+overhead pulse slowly, as if in rhythm with something unseen.
+
+~
 0 11
 D0
 ~
@@ -1041,7 +1263,17 @@ D3
 S
 #224
 Rotunda~
-No description~
+The southern curve of the rotunda connects its various alcoves. A series of
+
+carved archways lead off to the reading alcove and the western arc, and a
+
+decorative fountain set into the wall here trickles softly, the water glowing
+
+with a faint blue luminescence. Magical glyphs have been etched into the
+
+stone basin.
+
+~
 0 11
 D0
 ~
@@ -1054,7 +1286,15 @@ D1
 S
 #225
 Basement~
-No description~
+Stone steps lead down into the Keep's basement, a low-ceilinged space of
+
+bare rock and packed earth. The air is damp and cool, smelling of old stone
+
+and something faintly sulphurous. Wooden shelves line the rough walls, bearing
+
+crates, kegs, and a collection of items covered by dusty canvas.
+
+~
 0 11
 D2
 ~
@@ -1066,8 +1306,16 @@ D4
 225 -1 218
 S
 #226
-New room~
-No description~
+Basement Storage Hall~
+A wide corridor in the Keep's basement serves as its main storage hall. The
+
+ceiling is low and reinforced with heavy timber beams. Barrels of salted
+
+provisions and racks of preserved reagents line both walls. The floor is
+
+uneven, worn down by years of foot traffic to and from the kitchen above.
+
+~
 0 11
 D0
 ~
@@ -1083,8 +1331,16 @@ D2
 0 -1 227
 S
 #227
-New room~
-No description~
+Basement Corridor~
+The corridor narrows as it leads deeper into the basement. The torches here
+
+are fewer, and long stretches of shadow pool between them. The faint sound of
+
+dripping water echoes from somewhere further ahead, and the air grows noticeably
+
+colder.
+
+~
 0 11
 D0
 ~
@@ -1097,7 +1353,15 @@ D1
 S
 #228
 Entrance to Prison~
-No description~
+A heavy iron door, now standing open, marks the entrance to the Keep's old
+
+prison wing. The door's hinges are rusted and screech when moved, and old
+
+bloodstains dark the threshold stone. A smell of damp straw and despair wafts
+
+from the cells beyond.
+
+~
 0 11
 D1
 ~
@@ -1109,8 +1373,16 @@ D3
 0 -1 227
 S
 #229
-New room~
-No description~
+Prison Cell~
+A single damp cell, its walls scratched with the tally marks of a long-gone
+
+prisoner. A rusted chain bolted to the wall still bears a broken manacle, and
+
+a pile of mouldy straw in the corner serves as the remnant of a bed. The only
+
+light is a thin sliver from the door crack behind you.
+
+~
 0 11
 D3
 ~
@@ -1119,7 +1391,17 @@ D3
 S
 #230
 Wine Cellar~
-No description~
+The Keep's wine cellar is a vaulted stone room lined floor to ceiling with
+
+wooden racks. Most of the bottles are coated in thick dust, though a few
+
+recent additions stand out by their cleaner labels. A small table and two
+
+stools in the corner suggest the cellar is still visited for more than just
+
+inventory. The smell of old wine and damp wood is pleasantly strong.
+
+~
 0 11
 D3
 ~
@@ -1128,7 +1410,15 @@ D3
 S
 #231
 Entrance to the Foyer~
-No description~
+A formal passage connecting the rotunda antechamber to the Keep's grand foyer.
+
+The walls are hung with portraits of past wizards, their painted eyes seeming
+
+to follow you as you pass. The floor is polished white marble, and a faint
+
+echo turns every footstep into a small announcement of your presence.
+
+~
 0 11
 D0
 ~
@@ -1141,7 +1431,17 @@ D2
 S
 #232
 Foyer~
-No description~
+The grand foyer of the Wizard's Keep is a sweeping space of high ceilings and
+
+pale stone. Enchanted chandeliers hang overhead, their crystals casting
+
+prismatic light across the marble floor. Wide corridors lead in every direction,
+
+and the murmur of voices and distant arcane activity filters through from the
+
+passages ahead.
+
+~
 4 11
 D0
 ~
@@ -1162,7 +1462,15 @@ D3
 S
 #233
 Foyer~
-No description~
+The northern section of the foyer narrows into a more intimate corridor, its
+
+walls lined with glass display cases holding magical artefacts. Each case is
+
+sealed with an arcane lock and bears a small plaque in a flowing script. The
+
+air here carries a constant low hum, as if the artefacts are restless.
+
+~
 4 11
 D0
 ~
@@ -1183,7 +1491,15 @@ D3
 S
 #234
 Foyer~
-No description~
+A wide landing within the foyer connects the upper display corridor to the
+
+central passages. A broad staircase of pale marble descends to a lower level,
+
+and a pair of ornate iron doors to the north lead further into the Keep's
+
+interior. The scent of magical reagents is noticeably stronger here.
+
+~
 4 11
 D0
 ~
@@ -1204,7 +1520,17 @@ D3
 S
 #235
 Foyer - NORTH SECRET CODE FOR DOOR~
-No description~
+A long corridor terminates at a reinforced door set with a complex runic lock.
+
+The sigils on the door glow faintly with a cold white light, and the air
+
+before it crackles with suppressed magical energy. Only those who speak the
+
+correct incantation may pass beyond. The walls here are bare stone, stripped
+
+of any decoration.
+
+~
 4 11
 D0
 ~
@@ -1225,7 +1551,17 @@ D3
 S
 #236
 Foyer Lobby~
-No description~
+A small side lobby off the main foyer corridor. A wooden bench along one wall
+
+bears a few discarded cloaks and a forgotten satchel. A notice board on the
+
+opposite wall is pinned with messages and schedules, most of them faded beyond
+
+legibility. The floor here is scratched and dull compared to the polished
+
+marble of the main foyer.
+
+~
 0 11
 D1
 ~
@@ -1238,7 +1574,17 @@ D2
 S
 #237
 Foyer Lobby~
-No description~
+A narrow lobby annexe to the main foyer corridor, its ceiling lower than the
+
+grand passages nearby. A reading lectern stands near the east wall, an open
+
+tome resting upon it. The text inside is written in a cipher no ordinary
+
+scholar could decipher, and the pages turn of their own accord every few
+
+minutes.
+
+~
 0 11
 D2
 ~
@@ -1251,7 +1597,15 @@ D3
 S
 #238
 Foyer Lobby~
-No description~
+A corner room connecting two lobby passages, sparsely furnished with a wooden
+
+chest and a wall-mounted torch that burns with a soft violet flame rather than
+
+the usual orange. The unusual flame casts strange shadows and makes the room
+
+feel slightly uneasy to linger in.
+
+~
 0 11
 D0
 ~
@@ -1268,7 +1622,15 @@ D2
 S
 #239
 Foyer Lobby~
-No description~
+A secondary corridor of the foyer lobby runs east to west. The walls here are
+
+plain plaster, and several doors have been bricked over and painted to blend
+
+into the wall, their outlines barely visible. Whatever lay beyond those sealed
+
+doors is clearly meant to be forgotten.
+
+~
 0 11
 D0
 ~
@@ -1285,7 +1647,15 @@ D3
 S
 #240
 Foyer Lobby~
-No description~
+A quiet corner of the lobby, partially hidden behind a tapestry depicting the
+
+founding of the Keep. The tapestry's stitching is extraordinarily fine, and
+
+the faces of the wizards shown are eerily lifelike. The corner behind it is
+
+cool and dark, and something small and metallic glints on the floor.
+
+~
 0 11
 D0
 ~
@@ -1302,7 +1672,15 @@ D2
 S
 #241
 Foyer Lobby~
-No description~
+A passage along the foyer's eastern edge, its stone floors slightly warmer
+
+than the rest of the Keep due to a heating pipe running beneath them. Brass
+
+grates in the floor release gentle waves of warm air, and the sound of a
+
+distant fire crackling can be heard faintly underfoot.
+
+~
 0 11
 D0
 ~
@@ -1319,7 +1697,15 @@ D3
 S
 #242
 Foyer Lobby~
-No description~
+The southernmost part of the foyer lobby, where the grand passage begins to
+
+open up again toward the rotunda. A large mirror set in a gilded frame
+
+stands against one wall, its surface slightly murky, as though it reflects
+
+a slightly different room than the one you stand in.
+
+~
 0 11
 D0
 ~
@@ -1336,7 +1722,15 @@ D3
 S
 #243
 Foyer Lobby~
-No description~
+An alcove off the foyer's eastern passage, furnished with a low table and
+
+two chairs positioned as if for conversation. A cold cup of tea sits on
+
+the table, a thin skin of tannin floating on its surface. Whoever was here
+
+left recently, though in haste or simply forgetfulness is unclear.
+
+~
 0 11
 D0
 ~
@@ -1349,7 +1743,15 @@ D3
 S
 #244
 North - SECRET KEYWORD FOR DOOR~
-No description~
+Beyond the runed door lies a short passage of polished obsidian-black stone.
+
+The walls here are unnervingly smooth, as if carved by magical means rather
+
+than tools. The temperature drops noticeably, and the silence is absolute save
+
+for the distant sound of something rhythmic and mechanical further ahead.
+
+~
 0 11
 D0
 ~
@@ -1362,7 +1764,15 @@ D2
 S
 #245
 Secret Passageway~
-No description~
+A concealed passage, its entrance masked by a section of false wall. The
+
+stonework here is lighter in colour than the surrounding Keep, suggesting
+
+it was added later. The passage is narrow, forcing single-file movement, and
+
+the floor is bare stone free of dust, suggesting it is used with some regularity.
+
+~
 4 11
 D1
 ~
@@ -1375,7 +1785,15 @@ D3
 S
 #255
 Secret Passageway~
-No description~
+The hidden passage continues, curving gradually to the east. The walls are
+
+rough-hewn and unpainted, in stark contrast to the Keep's finished interiors.
+
+Grooves in the stone suggest a portcullis once sealed this passage, though the
+
+mechanism is long since gone.
+
+~
 0 11
 D1
 ~
@@ -1388,7 +1806,15 @@ D3
 S
 #256
 Secret Passageway~
-No description~
+A deeper section of the secret passage, far from the bustle of the Keep above.
+
+The air here is cold and still, and the only light comes from a line of
+
+dim phosphorescent moss growing along the base of the wall. The passage
+
+smells of damp rock and old secrets.
+
+~
 0 11
 D1
 ~
@@ -1401,7 +1827,15 @@ D3
 S
 #257
 Secret Passageway~
-No description~
+The secret passage descends slightly here, the floor sloping downward at a
+
+gentle angle. Water seeps through a crack in the ceiling, leaving a dark stain
+
+on the stone below. Faint scratches on the eastern wall look like they may once
+
+have been writing, but the marks have been deliberately defaced.
+
+~
 0 11
 D1
 ~
@@ -1414,7 +1848,17 @@ D5
 S
 #258
 Secret Room~
-No description~
+A hidden chamber concealed at the end of the secret passage. The room is small
+
+but clearly once served an important purpose: a heavy iron desk is bolted to
+
+the floor, its surface scarred by fire, and a scorched bookcase holds nothing
+
+but ash. Whatever knowledge was stored here was destroyed with great care. A
+
+single sealed iron box remains untouched in the corner, its lock intact.
+
+~
 0 11
 D4
 ~
@@ -1423,7 +1867,17 @@ D4
 S
 #259
 End of the Road...for now.~
-No description~
+The passage through the obsidian corridor terminates abruptly at a blank wall.
+
+The surface is perfectly smooth and faintly warm to the touch, and a circular
+
+groove in the stone suggests a door once opened here. Whatever mechanism
+
+operated it has been removed, leaving only the ghost of a threshold and the
+
+tantalising sense that something important lies just beyond.
+
+~
 0 11
 D2
 ~
@@ -1567,6 +2021,161 @@ A Sentinel stands here
 + 0 0 0 0 0 0 0 0 0
 l 15 188 189 190 191 0 0 0 0 0 
 L 25 25 25 25 0 0 0 0 0 
+#175
+A Keep Arcanist~
+@@WA Keep @@BArcanist@@N~
+A robed arcanist paces here, muttering arcane formulae beneath their breath
+
+Their pale eyes occasionally flash with an inner light, and their fingers trace
+glowing sigils in the air as they walk.
+~
+~
+33554433 8320 0 S
+168 1
+55000 -1500 2000 800
+! 0 0 0 7 537607 0 32
+| 0 0 65572 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 15 198 199 200 0 0 0 0 0 0 
+L 40 35 25 0 0 0 0 0 0 
+#176
+A Keep Inquisitor~
+@@WA Keep @@BInquisitor@@N~
+A grim inquisitor stands here, eyes scanning everything with cold suspicion
+
+Their dark uniform bears the Keep's silver sigil, and a sheathed blade hangs
+at their hip with practiced readiness.
+~
+~
+33554435 18624 0 S
+165 1
+65000 -1800 2200 900
+! 0 0 0 7 536607 0 48
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 15 201 202 203 204 0 0 0 0 0 
+L 30 30 25 15 0 0 0 0 0 
+#177
+A Tower Watcher~
+@@WA Tower @@BWatcher@@N~
+A watcher stands at the battlements here, crossbow in hand
+
+Their grey cloak blends with the stone walls, and their gaze sweeps the grounds
+below with practiced patience and quiet vigilance.
+~
+~
+33554433 27372 0 S
+165 1
+45000 -1000 1800 600
+! 0 0 0 7 1079423 0 48
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 10 205 206 0 0 0 0 0 0 0 
+L 60 40 0 0 0 0 0 0 0 
+#178
+A Keep Jailer~
+@@WA Keep @@BJailer@@N~
+A heavyset jailer sits here, twisting a ring of keys between thick fingers
+
+Their dull eyes betray little intelligence, but the club at their belt has
+seen considerable use judging by the dark stains on its head.
+~
+~
+33554433 18624 0 S
+162 1
+50000 -1200 2000 700
+! 0 0 0 7 536735 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 10 207 208 0 0 0 0 0 0 0 
+L 55 45 0 0 0 0 0 0 0 
+#179
+A Rotunda Scholar~
+@@WA Rotunda @@BScholar@@N~
+A scholar stands here surrounded by floating scrolls, lost in study
+
+Their ink-stained fingers move constantly, making notes in a tiny script on
+pages that drift and stack themselves without being touched.
+~
+~
+1073741825 0 0 S
+168 1
+40000 -1000 1500 600
+! 0 0 0 7 537600 41943040 16
+| 2049 0 65572 0 0 0 0
++ 400 0 0 0 0 0 0 0 0
+l 10 209 210 211 0 0 0 0 0 0 
+L 40 35 25 0 0 0 0 0 0 
+#180
+A Foyer Warden~
+@@WA Foyer @@BWarden@@N~
+A stern warden patrols the foyer corridor with measured, deliberate steps
+
+Clad in polished half-plate bearing the Keep's crest, they pause at each door
+to test the lock before continuing their unbroken circuit.
+~
+~
+33554435 18624 0 S
+167 1
+70000 -2000 2500 1000
+! 0 0 0 7 536607 0 64
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 15 212 213 214 215 0 0 0 0 0 
+L 30 25 25 20 0 0 0 0 0 
+#181
+The Keeper of the Sanctum~
+@@WThe @@BKeeper @@Wof the Sanctum@@N~
+The Keeper of the Sanctum stands here, wreathed in arcs of crackling arcane energy
+
+An ancient and formidable figure, their robes are etched with living runes that
+shift and writhe, and their eyes glow with the cold light of absolute authority
+over the Keep's most sacred spaces.
+~
+~
+33554435 1698558 0 S
+163 1
+500000 -3000 3000 2000
+! 0 0 0 7 537607 8323072 96
+| 0 0 65604 0 0 4095 0
++ 500 0 0 0 0 0 0 0 0
+l 150 216 217 218 219 220 221 222 0 0 
+L 20 15 15 15 10 10 15 0 0 
+#182
+The Vault Sentinel~
+@@WThe @@BVault @@WSentinel@@N~
+An enormous construct of animated iron stands here, its eyes burning like forge coals
+
+The Vault Sentinel is a towering guardian of enchanted steel, its body carved
+with warding runes that flare bright red when it senses intruders approaching.
+~
+~
+11 8320 0 S
+170 1
+400000 -3500 3500 1500
+! 0 0 0 7 12319 0 80
+| 0 0 80 0 0 4095 0
++ 0 0 0 0 0 0 0 0 0
+l 150 223 224 225 226 227 228 0 0 0 
+L 20 20 20 15 15 10 0 0 0 
+#183
+The Hermit Archon~
+@@WThe @@BHermit @@WArchon@@N~
+An immensely powerful hermit crouches here, radiating barely contained magical fury
+
+Ancient beyond reckoning, the Hermit Archon is the original guardian of the forest
+approaches, his tattered robes concealing a body hardened by centuries of solitary
+vigilance and arcane self-refinement.
+~
+~
+33554435 1698558 0 S
+166 1
+450000 -3000 3000 2000
+! 0 0 0 7 537607 860160 80
+| 0 0 65604 0 0 4095 0
++ 500 0 0 0 0 0 0 0 0
+l 150 229 230 231 232 0 0 0 0 0 
+L 30 25 25 20 0 0 0 0 0 
 #0
 #OBJECTS
 #166
@@ -1673,7 +2282,7 @@ Bastard sword of the keep's guard keep~
 @@WBastard Sword of the @@BKeep's@@W Guard@@N~
 ~
 5 -1946157056 8421376 20737
-0 0 0 3 0 0 0 0 0 0
+0 0 0 3 0 0 0 0 0
 8
 L
 150
@@ -1857,6 +2466,321 @@ Ribbon of the Guard Captain~
 9
 L
 150
+#198
+Arcanist's Cowl~
+@@WArcanist's @@BCowl@@N~
+An arcane cowl lies here, discarded~
+9 201326592 8388616 289
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+#199
+Arcanist's Robe~
+@@WArcanist's @@BRobe@@N~
+A robe lies crumpled here~
+9 201326592 8650752 18441
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#200
+Arcanist's Focus Ring~
+@@WArcanist's @@BFocus Ring@@N~
+A slim ring lies here, glowing faintly~
+9 201326592 8396800 32897
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#201
+Inquisitor's Pauldrons~
+@@WInquisitor's @@BPauldrons@@N~
+Darkened pauldrons lie here, abandoned~
+9 201326592 8389120 24577
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#202
+Inquisitor's Vambraces~
+@@WInquisitor's @@BVambraces@@N~
+A pair of vambraces lies here, discarded~
+9 201326592 8390656 5121
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#203
+Inquisitor's Blade~
+@@WInquisitor's @@BBlade@@N~
+A thin blade lies here, its edge still keen~
+5 -1946157056 8421376 28929
+0 0 0 0 4 0 0 0 0 0
+8
+L
+150
+#204
+Inquisitor's Sigil Pin~
+@@WInquisitor's @@BSigil Pin@@N~
+A sharp pin bearing a silver sigil lies here~
+9 201326592 8388672 193
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#205
+Watcher's Longbow~
+@@WWatcher's @@BLongbow@@N~
+A longbow lies here, unstrung~
+5 -1946157056 8421376 24577
+0 0 0 0 5 0 0 0 0 0
+8
+L
+150
+#206
+Watcher's Grey Cloak~
+@@WWatcher's @@BGrey Cloak@@N~
+A grey cloak lies here, folded neatly~
+9 201326592 8454144 65537
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#207
+Jailer's Manacles~
+@@WJailer's @@BManacles@@N~
+A set of heavy manacles lies here~
+9 201326592 8390656 6145
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#208
+Jailer's Iron Club~
+@@WJailer's @@BIron Club@@N~
+A heavy iron club lies here, stained dark~
+5 -1946157056 8421376 16385
+0 0 0 0 2 0 0 0 0 0
+8
+L
+150
+#209
+Scholar's Ink-Stained Gloves~
+@@WScholar's @@BInk-Stained Gloves@@N~
+A pair of ink-stained gloves lies here~
+9 201326592 8392704 513
+0 0 0 0 0 0 0 0 0 0
+13
+L
+150
+#210
+Scholar's Tome~
+@@WScholar's @@BTome@@N~
+A heavy tome lies here, its pages still turning~
+5 1275069504 8421376 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+150
+#211
+Scholar's Meditation Circlet~
+@@WScholar's @@BMeditation Circlet@@N~
+A delicate circlet lies here, humming softly~
+9 201326592 8388616 2305
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#212
+Warden's Half-Plate~
+@@WWarden's @@BHalf-Plate@@N~
+A set of polished half-plate lies here~
+9 201326656 8650752 20481
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#213
+Warden's Greaves~
+@@WWarden's @@BGreaves@@N~
+Heavy greaves lie here, discarded~
+9 201326656 9437184 4097
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#214
+Warden's Tower Shield~
+@@WWarden's @@BTower Shield@@N~
+A tower shield lies here, its face bearing the Keep's crest~
+9 469762112 8421376 1025
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+#215
+Warden's Longsword~
+@@WWarden's @@BLongsword@@N~
+A longsword lies here, its blade etched with wardings~
+5 -1946157056 8421376 36865
+0 0 0 0 3 0 0 0 0 0
+8
+L
+150
+#216
+Sanctum Keeper's Crown~
+@@WSanctum @@BKeeper's@@W Crown@@N~
+An ornate crown lies here, humming with power~
+9 201326656 8388616 33025
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#217
+Sanctum Keeper's Robes~
+@@WSanctum @@BKeeper's@@W Robes@@N~
+Magnificent robes lie here, rippling with arcane light~
+9 201326656 8650752 65545
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#218
+Sanctum Keeper's Bracers~
+@@WSanctum @@BKeeper's@@W Bracers@@N~
+Ornate bracers lie here, etched with living runes~
+9 201326656 8390656 16385
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#219
+Sanctum Keeper's Ring~
+@@WSanctum @@BKeeper's@@W Ring@@N~
+A powerful ring lies here, pulsing with cold light~
+9 201326656 8396800 49153
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#220
+Sanctum Keeper's Amulet~
+@@WSanctum @@BKeeper's@@W Amulet@@N~
+A glowing amulet lies here, warm to the touch~
+9 201326656 8388672 32769
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#221
+Sanctum Keeper's Sceptre~
+@@WSanctum @@BKeeper's@@W Sceptre@@N~
+A sceptre of dark wood and crystal lies here, radiating authority~
+5 1275069504 8421376 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+150
+#222
+Sanctum Keeper's Boots~
+@@WSanctum @@BKeeper's@@W Boots@@N~
+Rune-etched boots lie here, silent on any surface~
+9 201326656 10485760 24577
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#223
+Vault Sentinel's Core~
+@@WVault @@BSentinel's@@W Core@@N~
+A glowing iron core lies here, still warm from the golem~
+9 201326656 8388672 49153
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#224
+Vault Sentinel's Fist~
+@@WVault @@BSentinel's@@W Fist@@N~
+An enormous iron gauntlet lies here, covered in warding runes~
+9 201326656 8392704 32769
+0 0 0 0 0 0 0 0 0 0
+13
+L
+150
+#225
+Vault Sentinel's Legplates~
+@@WVault @@BSentinel's@@W Legplates@@N~
+Massive iron legplates lie here, still ringing from battle~
+9 201326656 9437184 16385
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#226
+Vault Sentinel's Chestplate~
+@@WVault @@BSentinel's@@W Chestplate@@N~
+An iron chestplate etched with warding runes lies here~
+9 201326656 8650752 65537
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#227
+Vault Sentinel's Pauldrons~
+@@WVault @@BSentinel's@@W Pauldrons@@N~
+Iron pauldrons carved with runes lie here, heavy with power~
+9 201326656 8389120 32769
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+#228
+Vault Sentinel's Eye~
+@@WVault @@BSentinel's@@W Eye@@N~
+A burning red gem lies here, torn from the golem's skull~
+9 201326656 8388672 65537
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+#229
+Archon's Tattered Cloak~
+@@WArchon's @@BTattered Cloak@@N~
+A ragged yet powerful cloak lies here~
+9 201326656 8454144 131073
+0 0 0 0 0 0 0 0 0 0
+4
+L
+150
+#230
+Archon's Gnarled Staff~
+@@WArchon's @@BGnarled Staff@@N~
+An ancient gnarled staff lies here, crackling with energy~
+5 1275069504 8421376 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+150
+#231
+Archon's Iron Boots~
+@@WArchon's @@BIron Boots@@N~
+Heavy boots lie here, worn by centuries of walking~
+9 201326656 10485760 32769
+0 0 0 0 0 0 0 0 0 0
+4
+L
+150
+#232
+Archon's Feral Ring~
+@@WArchon's @@BFeral Ring@@N~
+A crude iron ring lies here, vibrating with barely contained power~
+9 201326656 8396800 98305
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
 #0
 #RESETS
 D 0 168 1 1 (null)
@@ -1939,11 +2863,44 @@ M 0 174 2 217 (null)
 
 E 0 181 0 0 (null)
 
+M 0 175 3 222 (null)
+
+M 0 175 3 223 (null)
+
+M 0 176 2 233 (null)
+
+M 0 176 2 238 (null)
+
+M 0 177 2 214 (null)
+
+M 0 177 2 216 (null)
+
+M 0 178 2 228 (null)
+
+M 0 178 2 229 (null)
+
+M 0 179 3 220 (null)
+
+M 0 179 3 224 (null)
+
+M 0 180 3 235 (null)
+
+M 0 180 3 240 (null)
+
+M 0 181 1 258 (null)
+
+M 0 182 1 245 (null)
+
+M 0 183 1 202 (null)
+
 S
 #SPECIALS
 M 169 spec_keep_physical_captain
 S
 #OBJFUNS
 O 197 objfun_healing
+O 210 objfun_healing
+O 221 objfun_healing
+O 230 objfun_healing
 S
 #$
