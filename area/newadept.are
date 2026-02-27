@@ -1889,9 +1889,11 @@ S
 #166
 A Patrolman of the Keep~
 @@WA @@BPatrolman@@W of the Keep@@N~
-A Patrolman patrols the keep
-
+@@WA @@BPatrolman@@W of the Keep@@N is here, pacing a well-worn circuit of the grounds.
 ~
+This patrolman is clad in serviceable chainmail bearing the Keep's blue and silver sigil.
+They move with a practiced rhythm, eyes scanning the road without pause or hesitation.
+A shortsword hangs at their hip and a battered shield is strapped across their back.
 ~
 16777317 27372 0 S
 161 1
@@ -1904,9 +1906,11 @@ L 25 25 25 25 0 0 0 0 0
 #167
 A Guardsman of the Keep~
 @@WA @@BGuardsman @@Wof the Keep@@N~
-A guardsman stands here
-
+@@WA @@BGuardsman @@Wof the Keep@@N stands watch at his post.
 ~
+The guardsman is a broad-shouldered figure in polished plate, his expression unreadable
+beneath the rim of his great helm. He holds his halberd with easy confidence, and the
+Keep's crest gleams on the breast of his surcoat.
 ~
 33554435 18624 0 S
 167 1
@@ -1919,9 +1923,11 @@ L 25 25 25 25 0 0 0 0 0
 #168
 A Grumpy Hermit~
 @@WA Grumpy @@BHermit@@N~
-A grumpy hermit is here, looking at you angrily
-
+@@WA Grumpy @@BHermit@@N is here, glaring at you with undisguised irritation.
 ~
+The hermit is a wiry, weathered figure in a tattered cloak that has seen better decades.
+Deep-set eyes burn with surprising intelligence despite his dishevelled appearance,
+and his gnarled hands rest on a knotted walking staff worn smooth by years of use.
 ~
 33554435 0 0 S
 166 1
@@ -1934,9 +1940,11 @@ L 33 33 33 0 0 0 0 0 0
 #169
 A Guard Captain~
 @@WA Guard @@BCaptain@@N~
-A guard captain stands here, observing the keep
-
+@@WA Guard @@BCaptain@@N stands here, overseeing the Keep with sharp authority.
 ~
+The Guard Captain is a tall, iron-jawed veteran whose half-plate bears numerous nicks
+and scratches from past campaigns. A captain's ribbon at her collar marks her rank,
+and her gaze sweeps the courtyard with the calm alertness of someone who expects trouble.
 ~
 33554435 1698558 0 S
 166 1
@@ -1949,9 +1957,10 @@ L 20 20 20 15 15 10 0 0 0
 #170
 A Guard Captain~
 @@WA Guard @@BCaptain@@N~
-A Guard Captain (Unfinished boss Akrites, don't report ;))
-
+@@WA Guard @@BCaptain@@N stands here.
 ~
+This figure stands unnervingly still, their features indistinct as though seen through
+foggy glass. Something about them feels unfinished, like a half-formed thought.
 ~
 1 0 0 S
 1 1
@@ -1964,9 +1973,11 @@ L 0 0 0 0 0 0 0 0 0
 #171
 A Wizard's Servant~
 @@WA Wizard's @@BServant@@N~
-A Wizard's Servant is doing chores here
-
+@@WA Wizard's @@BServant@@N is here, quietly attending to their duties.
 ~
+The servant moves with quiet efficiency, their plain grey uniform immaculate despite
+the nature of their work. They carry a basket of linens and spare not a glance for
+visitors, though a faint shimmer about their eyes hints at an enchanted compulsion.
 ~
 1073741825 0 0 S
 168 1
@@ -1979,9 +1990,11 @@ L 50 50 0 0 0 0 0 0 0
 #172
 A Keep Drudge~
 @@WA Keep @@BDrudge@@N~
-A drudge is here, working
-
+@@WA Keep @@BDrudge@@N is here, hauling supplies with plodding determination.
 ~
+The drudge is a stocky figure in rough canvas work clothes, arms laden with crates
+and bundles. Their face is set in a permanent expression of resigned effort, and
+callused hands suggest a lifetime spent in physical labour within the Keep's walls.
 ~
 1107296257 18624 0 S
 166 1
@@ -1994,9 +2007,11 @@ L 50 50 0 0 0 0 0 0 0
 #173
 A Keep Guard~
 @@WA Keep @@BGuard@@N~
-A guard stands here, guarding the courtyard
-
+@@WA Keep @@BGuard@@N stands here, guarding the courtyard with vigilant eyes.
 ~
+The guard is armoured in a simple steel breastplate and open-faced helmet, their
+posture rigid and formal. A short sword hangs at their belt and they hold a spear
+upright, its butt resting on the flagstones with a faint clank as they shift weight.
 ~
 33554433 16576 0 S
 166 1
@@ -2009,9 +2024,11 @@ L 50 50 0 0 0 0 0 0 0
 #174
 A Keep Sentinel~
 @@WA Keep @@BSentinel@@N~
-A Sentinel stands here
-
+@@WA Keep @@BSentinel@@N stands here, radiating an aura of cold authority.
 ~
+The Sentinel towers over ordinary guards, clad head to toe in blackened plate etched
+with arcane sigils that faintly glow in dim light. Their visor is permanently lowered
+and no sound comes from within the armour, yet their presence alone commands silence.
 ~
 11 8320 0 S
 170 1
@@ -2024,11 +2041,11 @@ L 25 25 25 25 0 0 0 0 0
 #175
 A Keep Arcanist~
 @@WA Keep @@BArcanist@@N~
-A robed arcanist paces here, muttering arcane formulae beneath their breath
-
-Their pale eyes occasionally flash with an inner light, and their fingers trace
-glowing sigils in the air as they walk.
+@@WA Keep @@BArcanist@@N paces here, muttering arcane formulae beneath their breath.
 ~
+The arcanist is a lean figure in layered robes of deep blue, their cowl pushed back
+to reveal pale eyes that occasionally flash with inner light. Ink stains their fingers
+up to the knuckles, and a focus ring on their right hand pulses with contained energy.
 ~
 33554433 8320 0 S
 168 1
@@ -2041,11 +2058,11 @@ L 40 35 25 0 0 0 0 0 0
 #176
 A Keep Inquisitor~
 @@WA Keep @@BInquisitor@@N~
-A grim inquisitor stands here, eyes scanning everything with cold suspicion
-
-Their dark uniform bears the Keep's silver sigil, and a sheathed blade hangs
-at their hip with practiced readiness.
+@@WA Keep @@BInquisitor@@N stands here, studying you with cold and measured suspicion.
 ~
+The inquisitor wears a dark uniform trimmed with silver, bearing the Keep's sigil at
+the breast in cold steel. Their gaze is direct and unblinking, cataloguing every detail
+about you, and one hand rests habitually on the grip of the blade at their hip.
 ~
 33554435 18624 0 S
 165 1
@@ -2058,11 +2075,11 @@ L 30 30 25 15 0 0 0 0 0
 #177
 A Tower Watcher~
 @@WA Tower @@BWatcher@@N~
-A watcher stands at the battlements here, crossbow in hand
-
-Their grey cloak blends with the stone walls, and their gaze sweeps the grounds
-below with practiced patience and quiet vigilance.
+@@WA Tower @@BWatcher@@N stands at the battlements here, crossbow in hand.
 ~
+The watcher wears a grey cloak that blends almost perfectly with the weathered stone
+around them, making them easy to overlook until they move. A loaded crossbow sits
+steady in their hands and a quiver of bolts hangs at their hip, well within reach.
 ~
 33554433 27372 0 S
 165 1
@@ -2075,11 +2092,11 @@ L 60 40 0 0 0 0 0 0 0
 #178
 A Keep Jailer~
 @@WA Keep @@BJailer@@N~
-A heavyset jailer sits here, twisting a ring of keys between thick fingers
-
-Their dull eyes betray little intelligence, but the club at their belt has
-seen considerable use judging by the dark stains on its head.
+@@WA Keep @@BJailer@@N sits here, turning a ring of keys over thick fingers.
 ~
+The jailer is a heavyset figure with a shaved head and small, watchful eyes. A studded
+leather jerkin strains across their broad shoulders, and an iron-headed club hangs
+from a hook at their belt, its head dark with old stains that tell their own story.
 ~
 33554433 18624 0 S
 162 1
@@ -2092,11 +2109,11 @@ L 55 45 0 0 0 0 0 0 0
 #179
 A Rotunda Scholar~
 @@WA Rotunda @@BScholar@@N~
-A scholar stands here surrounded by floating scrolls, lost in study
-
-Their ink-stained fingers move constantly, making notes in a tiny script on
-pages that drift and stack themselves without being touched.
+@@WA Rotunda @@BScholar@@N stands here, surrounded by a slow orbit of floating scrolls.
 ~
+The scholar is a slight figure in ink-spotted robes, their eyes moving rapidly across
+the floating pages around them. They make constant small notes with a quill that
+writes of its own accord, never pausing even as they turn to regard you with curiosity.
 ~
 1073741825 0 0 S
 168 1
@@ -2109,11 +2126,11 @@ L 40 35 25 0 0 0 0 0 0
 #180
 A Foyer Warden~
 @@WA Foyer @@BWarden@@N~
-A stern warden patrols the foyer corridor with measured, deliberate steps
-
-Clad in polished half-plate bearing the Keep's crest, they pause at each door
-to test the lock before continuing their unbroken circuit.
+@@WA Foyer @@BWarden@@N patrols here with measured, deliberate steps.
 ~
+The warden is clad in polished half-plate bearing the Keep's crest, every buckle
+fastened with precision and every surface free of dust. They pause at each door
+to test its lock before moving on, unhurried and utterly reliable in their routine.
 ~
 33554435 18624 0 S
 167 1
@@ -2126,12 +2143,13 @@ L 30 25 25 20 0 0 0 0 0
 #181
 The Keeper of the Sanctum~
 @@WThe @@BKeeper @@Wof the Sanctum@@N~
-The Keeper of the Sanctum stands here, wreathed in arcs of crackling arcane energy
-
-An ancient and formidable figure, their robes are etched with living runes that
-shift and writhe, and their eyes glow with the cold light of absolute authority
-over the Keep's most sacred spaces.
+@@WThe @@BKeeper @@Wof the Sanctum@@N stands here, wreathed in arcs of crackling arcane energy.
 ~
+The Keeper is an ancient figure whose age is impossible to determine, their face
+smooth yet somehow ageless beneath a crown of cold light. Their robes are etched
+with living runes that shift and writhe as though alive, and the air around them
+crackles and distorts, bending reality slightly in their presence. Their eyes hold
+the absolute cold authority of one who has held power for centuries unchallenged.
 ~
 33554435 1698558 0 S
 163 1
@@ -2144,11 +2162,13 @@ L 20 15 15 15 10 10 15 0 0
 #182
 The Vault Sentinel~
 @@WThe @@BVault @@WSentinel@@N~
-An enormous construct of animated iron stands here, its eyes burning like forge coals
-
-The Vault Sentinel is a towering guardian of enchanted steel, its body carved
-with warding runes that flare bright red when it senses intruders approaching.
+@@WThe @@BVault @@WSentinel@@N looms here, its forge-coal eyes burning with warding fury.
 ~
+The Vault Sentinel is a towering construct of blackened iron, its body etched from
+helm to boot with warding runes that flare brilliant red when it senses intruders.
+It moves with an eerie mechanical grace, servos of enchanted steel grinding softly
+with each step. A single burning gem is set into its chest, its core and its heart,
+and to shatter it would be to silence the construct forever.
 ~
 11 8320 0 S
 170 1
@@ -2161,12 +2181,13 @@ L 20 20 20 15 15 10 0 0 0
 #183
 The Hermit Archon~
 @@WThe @@BHermit @@WArchon@@N~
-An immensely powerful hermit crouches here, radiating barely contained magical fury
-
-Ancient beyond reckoning, the Hermit Archon is the original guardian of the forest
-approaches, his tattered robes concealing a body hardened by centuries of solitary
-vigilance and arcane self-refinement.
+@@WThe @@BHermit @@WArchon@@N crouches here, radiating barely contained magical fury.
 ~
+The Hermit Archon appears ancient beyond reckoning, a hunched figure in robes so
+tattered they are held together by little more than pride and enchantment. Yet
+his frame is iron-hard beneath those rags, hardened by centuries of solitary vigil,
+and his eyes burn with the accumulated fury of a guardian who has suffered countless
+intrusions. The air around him smells of ozone and old forest, wild and dangerous.
 ~
 33554435 1698558 0 S
 166 1
