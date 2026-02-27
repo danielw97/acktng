@@ -338,9 +338,14 @@ static bool invasion_boss_cast(CHAR_DATA *mob)
  * spawn in.  An area qualifies if its min_level..max_level range overlaps
  * [boss_level - INVASION_BOSS_AREA_SLACK, boss_level + INVASION_BOSS_AREA_SLACK].
  *
+ * Additional constraint: the chosen room must be able to path to Gertrude's
+ * room (INVASION_SPAWN_VNUM / room 3001) via h_find_dir.  Rooms that have
+ * no valid path to that room are skipped.
+ *
  * Algorithm (reservoir sampling, single pass):
- *   Walk every qualifying area's room list, pick one room at random so
- *   that each qualifying room has equal probability of being chosen.
+ *   Walk every qualifying area's room list, skip rooms that cannot reach
+ *   the target, then pick one qualifying room at random so that each
+ *   reachable room has equal probability of being chosen.
  *
  * Falls back to INVASION_START_VNUM if no suitable area/room is found.
  * --------------------------------------------------------------------- */
@@ -348,10 +353,19 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
 {
     AREA_DATA        *pArea;
     BUILD_DATA_LIST  *pList;
-    ROOM_INDEX_DATA  *chosen  = NULL;
-    int               n       = 0;   /* total qualifying rooms seen so far */
-    int               lo      = boss_level - INVASION_BOSS_AREA_SLACK;
-    int               hi      = boss_level + INVASION_BOSS_AREA_SLACK;
+    ROOM_INDEX_DATA  *chosen      = NULL;
+    ROOM_INDEX_DATA  *target_room = NULL;
+    int               n           = 0;   /* total qualifying rooms seen so far */
+    int               lo          = boss_level - INVASION_BOSS_AREA_SLACK;
+    int               hi          = boss_level + INVASION_BOSS_AREA_SLACK;
+
+    /* Grab Gertrude's room once up front. */
+    target_room = get_room_index(INVASION_SPAWN_VNUM);   /* vnum 3001 */
+    if (target_room == NULL)
+    {
+        bug("pick_boss_room: target room vnum %d not found.", INVASION_SPAWN_VNUM);
+        return get_room_index(INVASION_START_VNUM);
+    }
 
     for (pArea = first_area; pArea != NULL; pArea = pArea->next)
     {
@@ -369,6 +383,15 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
             ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)pList->data;
             if (room == NULL) continue;
 
+            /*
+             * Reachability check: verify there is at least one valid exit
+             * direction from this room toward the target (room 3001).
+             * h_find_dir returns >= 0 when a path exists, -1 when it does not.
+             */
+            if (h_find_dir(room, target_room,
+                           HUNT_WORLD | HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR) < 0)
+                continue;   /* no path to Gertrude – skip this room */
+
             n++;
             /* Replace chosen with probability 1/n (uniform distribution). */
             if (number_range(1, n) == 1)
@@ -380,7 +403,7 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
         return chosen;
 
     /* Fallback: original fixed spawn room. */
-    bug("pick_boss_room: no level-appropriate room for boss level %d, "
+    bug("pick_boss_room: no reachable level-appropriate room for boss level %d, "
         "falling back to INVASION_START_VNUM.", boss_level);
     return get_room_index(INVASION_START_VNUM);
 }
