@@ -23,9 +23,18 @@
 #include <string.h>
 #include <time.h>
 
-#include "ack.h"
-#include "magic.h"
+#ifndef DEC_GLOBALS_H
+#include "globals.h"
+#endif
+
+#ifndef INVASION_H
 #include "invasion.h"
+#endif
+
+#ifndef DEC_MAGIC_H
+#include "magic.h"
+#endif
+
 
 /* -----------------------------------------------------------------------
  * Wave mob profile type — declared here so invasion_mobs.h can use it.
