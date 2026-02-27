@@ -28,7 +28,7 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o clutch.o comm.o \
 	  const.o damage.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  interp.o item_generation.o keep.o lists.o macros.o magic.o magic2.o magic3.o magic4.o mapper.o \
-	  mob_commands.o mob_prog.o mount.o obj_fun.o pdelete.o quest.o reincarnate.o rulers.o \
+	  mob_commands.o mob_prog.o mount.o obj_fun.o pdelete.o proposition.o quest.o reincarnate.o rulers.o \
 	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
 	  write.o

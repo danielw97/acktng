@@ -79,6 +79,7 @@ NPC_GROUP_DATA *last_npc_group = NULL;
 
 PORTAL_DATA *portal_free = NULL;
 AFFECT_DATA *affect_free = NULL;
+PROPOSITION_DATA *proposition_free = NULL;
 ROOM_AFFECT_DATA *raffect_free = NULL;
 AREA_DATA *area_free = NULL;
 BAN_DATA *ban_free = NULL;

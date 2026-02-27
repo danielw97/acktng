@@ -30,6 +30,7 @@
 #include <string.h>
 #include <time.h>
 #include "globals.h"
+#include "proposition.h"
 
 #ifndef DEC_ACT_MOB_H
 #include "act_mob.h"
@@ -1725,6 +1726,9 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
    extern OBJ_DATA *quest_object;
    obj->next_in_carry_list = NULL;
    obj->prev_in_carry_list = NULL;
+
+    if (!IS_NPC(ch))
+        proposition_obj_notify(ch, obj);
 
    if ((!IS_NPC(ch)) && (obj == quest_object))
    {

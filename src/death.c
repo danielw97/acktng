@@ -370,6 +370,9 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
    members = 0;
    huggy = 0;
 
+    if (!IS_NPC(ch))
+        proposition_kill_notify(ch, victim);
+
    base = victim->exp; /* Now share this out... */
    if (IS_SET(victim->act, ACT_INTELLIGENT))
       base = exp_for_mobile(victim->level, victim);

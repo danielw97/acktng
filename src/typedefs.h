@@ -242,6 +242,8 @@ typedef struct money_type MONEY_TYPE;
 typedef struct buf_data_struct BUF_DATA_STRUCT;
 typedef struct hash_entry_tp HASH_ENTRY;
 
+typedef struct proposition_data PROPOSITION_DATA;
+
 /*
  * Function types.
  */

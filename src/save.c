@@ -388,6 +388,16 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Vamppracs     %d\n", ch->pcdata->vamp_pracs);
       fprintf(fp, "Hasexpfix     %d\n", ch->pcdata->has_exp_fix);
       fprintf(fp, "Questpoints   %d\n", ch->quest_points);
+        int k;
+        fprintf(fp, "PropType     %d\n",  ch->pcdata->prop_type);
+        fprintf(fp, "PropDone     %d\n",  ch->pcdata->prop_completed  ? 1 : 0);
+        fprintf(fp, "PropTargets  %d\n",  ch->pcdata->prop_num_targets);
+        for (k = 0; k < ch->pcdata->prop_num_targets; k++)
+            fprintf(fp, "PropT        %d %d\n",
+                    ch->pcdata->prop_target_vnum[k],
+                    ch->pcdata->prop_target_done[k] ? 1 : 0);
+        fprintf(fp, "PropKillNeed %d\n",  ch->pcdata->prop_kill_needed);
+        fprintf(fp, "PropKillGot  %d\n",  ch->pcdata->prop_kill_count);
       fprintf(fp, "RecallVnum    %d\n", ch->pcdata->recall_vnum);
       fprintf(fp, "GainMana      %d\n", ch->pcdata->mana_from_gain);
       fprintf(fp, "GainHp        %d\n", ch->pcdata->hp_from_gain);
@@ -1199,6 +1209,62 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          KEY("Position", ch->position, fread_number(fp));
          KEY("Practice", ch->practice, fread_number(fp));
          SKEY("Prompt", ch->prompt, fread_string(fp));
+        if (!str_cmp(word, "PropType") && !IS_NPC(ch))
+        {
+            ch->pcdata->prop_type = fread_number(fp);
+            fMatch = TRUE;
+            break;
+        }
+        if (!str_cmp(word, "PropDone") && !IS_NPC(ch))
+        {
+            ch->pcdata->prop_completed = (fread_number(fp) != 0);
+            fMatch = TRUE;
+            break;
+        }
+        if (!str_cmp(word, "PropTargets") && !IS_NPC(ch))
+        {
+            ch->pcdata->prop_num_targets = fread_number(fp);
+            fMatch = TRUE;
+            break;
+        }
+        if (!str_cmp(word, "PropT") && !IS_NPC(ch))
+        {
+            /*
+             * We need a running index to know which slot to fill.
+             * The simplest approach: count how many slots already have
+             * a non-zero vnum, then place in the next free slot.
+             */
+            {
+                int _k, _slot = -1;
+                for (_k = 0; _k < PROP_MAX_TARGETS; _k++)
+                    if (ch->pcdata->prop_target_vnum[_k] == 0)
+                        { _slot = _k; break; }
+                if (_slot >= 0)
+                {
+                    ch->pcdata->prop_target_vnum[_slot] = fread_number(fp);
+                    ch->pcdata->prop_target_done[_slot] = (fread_number(fp) != 0);
+                }
+                else
+                {
+                    fread_number(fp);
+                    fread_number(fp);
+                }
+            }
+            fMatch = TRUE;
+            break;
+        }
+        if (!str_cmp(word, "PropKillNeed") && !IS_NPC(ch))
+        {
+            ch->pcdata->prop_kill_needed = fread_number(fp);
+            fMatch = TRUE;
+            break;
+        }
+        if (!str_cmp(word, "PropKillGot") && !IS_NPC(ch))
+        {
+            ch->pcdata->prop_kill_count = fread_number(fp);
+            fMatch = TRUE;
+            break;
+        }
          break;
 
       case 'Q':

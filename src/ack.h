@@ -55,6 +55,10 @@
 #include "act_mob.h"
 #endif
 
+#ifndef PROPOSITION_H
+#include "proposition.h"
+#endif
+
 struct str_array
 {
    char *this_string;
@@ -786,6 +790,14 @@ struct pc_data
    sh_int term_columns;
    char *email_address;
    bool valid_email;
+    /* --- Proposition quest system --- */
+    int   prop_type;                          /* PROP_TYPE_* constant; 0=none */
+    bool  prop_completed;                     /* TRUE = ready to hand in      */
+    int   prop_num_targets;                   /* slots in use (1-5)           */
+    int   prop_target_vnum[PROP_MAX_TARGETS]; /* mob or obj vnum per slot     */
+    bool  prop_target_done[PROP_MAX_TARGETS]; /* per-slot completion flag     */
+    int   prop_kill_needed;                   /* type 3: kill goal            */
+    int   prop_kill_count;                    /* type 3: kills so far         */
 };
 
 /*
