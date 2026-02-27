@@ -1,0 +1,2141 @@
+#AREA
+The Void Citadel of Kel'Shadra~
+V 610 999
+I 150 170
+~
+#HELPS
+0 $~
+
+#MOBILES
+
+#610
+shade wraith spectral~
+a spectral shade~
+A spectral shade drifts here, moaning softly.~
+This translucent figure is the remnant of a soul trapped within Kel'Shadra.
+Its hollow eyes glow with pale violet light, and wisps of shadow spiral
+from its incorporeal form. It reaches toward you with clawed hands of pure darkness.~
+16401 66 -500 S
+150 0
+1000 -50 15 15
+! 0 0 0 7 24578 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 610 611 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#611
+void stalker dark~
+a void stalker~
+A void stalker crouches here, waiting to strike.~
+Born of the pure nothingness between planes, this creature resembles a
+gaunt humanoid stitched together from living shadow. Its joints creak with
+an unnatural wrongness, and its face is a featureless smear of dark energy.~
+16417 0 -500 S
+150 0
+1000 -55 18 18
+! 0 0 0 7 2102018 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 612 613 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#612
+crumbling golem stone broken~
+a crumbling golem~
+A crumbling golem lumbers aimlessly through here.~
+Once a guardian of Kel'Shadra, this stone construct has partially collapsed.
+Cracks run across its massive chest from which dark energy bleeds. Despite
+its broken state, its remaining fist can still smash stone into powder.~
+16417 0 -500 S
+150 0
+1000 -55 15 20
+! 0 0 0 7 450 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 614 615 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#613
+corrupted cultist robed~
+a corrupted cultist~
+A corrupted cultist chants feverishly here.~
+Dressed in tattered robes bearing the sigil of Kel'Shadra, this once-human
+follower has been twisted beyond recognition. Their eyes have been replaced
+by swirling voids, and dark runes have been carved into their flesh.~
+16449 512 -500 S
+152 0
+1500 -55 18 20
+! 0 0 0 7 0 26 0
+| 0 0 0 0 0 0 0
++ 16 0 0 0 0 0 0 0 0
+l 100 616 617 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#614
+shadow hound beast prowling~
+a shadow hound~
+A shadow hound paces back and forth here, growling.~
+This creature resembles a massive hound, but its body is composed entirely
+of condensed shadow. When it breathes, frozen mist pours from between
+serrated teeth of solidified darkness. Its paws leave scorched marks on the
+stone wherever it walks.~
+16417 0 -500 S
+153 0
+2000 -57 20 22
+! 0 0 0 7 2363398 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 618 619 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#615
+bone guardian skeletal warrior~
+a bone guardian~
+A bone guardian stands watch here, armor gleaming darkly.~
+The skeleton of a warrior who fell defending Kel'Shadra has been reanimated
+with dark energy. Enchanted black armor still clings to its frame, and it
+grips an ancient blade with a grip that requires no living muscle to maintain.~
+16401 16 -500 S
+154 0
+2500 -58 20 22
+! 0 0 0 7 16582 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 620 621 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#616
+obsidian knight warrior dark~
+an obsidian knight~
+An obsidian knight stands motionless here.~
+Encased entirely in black glass-like armor, this knight serves Kel'Shadra
+directly. No flesh exists beneath the enchanted shell - only a shard of
+crystallized void energy powers its terrifying martial skill. The armor
+screams when struck, and feeds on the wounds it inflicts.~
+16417 0 -600 S
+157 1
+5000 -62 25 28
+! 0 0 0 7 26702 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 622 623 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#617
+void priest caster robed dark~
+a void priest~
+A void priest kneels in dark supplication here.~
+This hollow-eyed figure has given themselves wholly to the void. Their flesh
+has become pale as chalk, and sigils of dark power pulse beneath the skin.
+They chant in a language that makes the air vibrate painfully, channeling
+magic from the emptiness between worlds.~
+16449 512 -600 S
+158 0
+6500 -62 23 25
+! 0 0 0 7 0 6720 0
+| 0 0 0 0 0 0 0
++ 63 0 0 0 0 0 0 0 0
+l 100 624 625 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#618
+umbral wraith greater spectral~
+a greater umbral wraith~
+A greater umbral wraith hovers ominously here.~
+Far more powerful than a common shade, this ancient wraith has persisted
+for centuries within Kel'Shadra's walls. It can solidify its shadowy form
+into devastating strikes, yet pass through solid matter at will. The cold
+it emanates is enough to cause visible frost to form on nearby surfaces.~
+16401 66 -700 S
+160 0
+10000 -65 27 28
+! 0 0 0 7 0 581632 0
+| 0 0 0 0 0 0 0
++ 100 0 0 0 0 0 0 0 0
+l 100 626 627 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#619
+razorclaw demon shadow beast~
+a razorclaw demon~
+A razorclaw demon crouches on the ceiling above.~
+This winged horror has emerged from a tear in the boundary between the
+material plane and the void. Its four arms end in razor-sharp claws that
+drip a paralytic venom. The creature moves with terrifying speed, able to
+strike from unexpected angles before its prey can react.~
+16417 524288 -700 S
+163 0
+20000 -68 32 34
+! 0 0 0 7 1639198 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 628 629 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#620
+voidcaller sorcerer dark mage~
+a voidcaller~
+A voidcaller draws patterns in the air with crackling dark energy.~
+These masters of void magic have studied the dark arts for decades within
+Kel'Shadra. Their bodies have warped from prolonged exposure - fingers have
+elongated into claws, and their eyes constantly shift between forms as they
+perceive multiple planes simultaneously. They can tear rifts in reality itself.~
+16449 512 -700 S
+165 0
+31500 -70 28 30
+! 0 0 0 7 0 7343520 0
+| 0 0 0 0 0 0 0
++ 316 0 0 40 0 0 0 0 0
+l 100 630 631 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#621
+shadowlord commander undead~
+the Shadowlord Commander~
+The Shadowlord Commander stands in grim authority here.~
+Clad in black armor fused to what was once a powerful warlord, this undead
+commander has served Kel'Shadra for centuries. Discipline and dark power have
+rendered it virtually indestructible in open combat. A crown of void energy
+floats above its visored helm, marking it as one of Kel'Shadra's chosen.~
+16401 16 -800 S
+167 1
+50000 -75 38 42
+! 0 0 0 7 1699838 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 632 633 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+
+#622
+kel shadra avatar void incarnate~
+Kel'Shadra the Void Incarnate~
+Kel'Shadra the Void Incarnate manifests here in terrible glory.~
+This is the imprisoned consciousness of the ancient void entity itself,
+given temporary physical form. Its presence alone distorts reality; walls
+crack, light bends away, and the very air around it screams. Those who
+gaze upon it directly feel their minds begin to unravel. This is the
+ultimate challenge within the Citadel - few who face it live to tell the tale.~
+16417 16 -1000 S
+170 0
+100000 -90 50 55
+! 0 0 0 7 4194302 40901088 0
+| 0 0 0 0 0 0 0
++ 1000 100 100 100 100 50 50 50 50
+l 100 634 635 636 637 0 0 0 0 0
+L 30 25 25 20 0 0 0 0 0
+
+#0
+
+#OBJECTS
+
+#610
+void shard orb~
+a shard of void~
+A shard of pure void energy rests here.~
+9 201326592 8454144 0
+0 0 0 0 0 0 0 0 0 0
+3
+L
+150
+
+#611
+shadowed amulet void~
+a shadowed amulet~
+A shadowed amulet lies here, pulsing faintly.~
+9 201326592 8388736 0
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+
+#612
+crackling wand void energy~
+a crackling void wand~
+A crackling wand of void energy lies here.~
+5 738197504 8454144 0
+0 5 10 4 0 0 0 0 0 0
+4
+L
+150
+
+#613
+void-touched pauldrons shoulders~
+void-touched pauldrons~
+A pair of void-touched pauldrons lie here.~
+9 201326592 8389120 0
+0 0 0 0 0 0 0 0 0 0
+5
+L
+150
+
+#614
+dark runestone pendant~
+a dark runestone pendant~
+A dark runestone pendant rests here, humming softly.~
+9 201326592 8388736 0
+0 0 0 0 0 0 0 0 0 0
+1
+L
+150
+
+#615
+void-touched bracer wrist~
+a void-touched bracer~
+A void-touched bracer lies here.~
+9 201326592 8390656 0
+0 0 0 0 0 0 0 0 0 0
+3
+L
+150
+
+#616
+obsidian blade sword dark~
+an obsidian blade~
+An obsidian blade rests here, edge unnaturally sharp.~
+5 201326592 8454144 0
+0 8 14 2 0 0 0 0 0 0
+6
+L
+150
+
+#617
+shadowbound mace crush~
+a shadowbound mace~
+A shadowbound mace lies here, radiating cold.~
+5 201326592 8454144 0
+0 8 14 1 0 0 0 0 0 0
+8
+L
+150
+
+#618
+void-forged chainmail body armor~
+void-forged chainmail~
+A set of void-forged chainmail lies here.~
+9 201326592 8912896 0
+0 0 0 0 0 0 0 0 0 0
+7
+L
+150
+
+#619
+serrated void-dagger dagger pierce~
+a serrated void-dagger~
+A serrated void-dagger lies here, gleaming darkly.~
+5 201326592 8454144 0
+0 7 12 3 0 0 0 0 0 0
+9
+L
+150
+
+#620
+shadowsteel vambraces arms armor~
+shadowsteel vambraces~
+A pair of shadowsteel vambraces lies here.~
+9 201326592 8389632 0
+0 0 0 0 0 0 0 0 0 0
+5
+L
+150
+
+#621
+greatblade two-handed dark sword~
+a dark greatblade~
+A dark greatblade lies here, humming with menace.~
+5 201326592 8454144 0
+0 10 18 2 0 0 0 0 0 0
+6
+L
+150
+
+#622
+shadowforged gauntlets hands armor~
+shadowforged gauntlets~
+A pair of shadowforged gauntlets lies here.~
+9 201326592 8392704 0
+0 0 0 0 0 0 0 0 0 0
+8
+L
+150
+
+#623
+black iron platemail body armor~
+black iron platemail~
+A suit of black iron platemail lies here.~
+9 201326592 8912896 0
+0 0 0 0 0 0 0 0 0 0
+11
+L
+150
+
+#624
+void sentinel helm helmet head~
+a void sentinel helm~
+A void sentinel helm lies here.~
+9 201326592 8388616 0
+0 0 0 0 0 0 0 0 0 0
+13
+L
+150
+
+#625
+dusksteel buckler shield~
+a dusksteel buckler~
+A dusksteel buckler lies here.~
+9 469762048 8454144 0
+0 0 0 0 0 0 0 0 0 0
+10
+L
+150
+
+#626
+void-forged greaves legs armor~
+void-forged greaves~
+A pair of void-forged greaves lies here.~
+9 201326592 10485760 0
+0 0 0 0 0 0 0 0 0 0
+12
+L
+150
+
+#627
+cloak void shadow about~
+a cloak of shadows~
+A cloak of shadows lies here, darkness swirling within it.~
+9 201326592 8519680 0
+0 0 0 0 0 0 0 0 0 0
+15
+L
+150
+
+#628
+abyssal sabatons boots feet armor~
+abyssal sabatons~
+A pair of abyssal sabatons lies here.~
+9 201326592 12582912 0
+0 0 0 0 0 0 0 0 0 0
+14
+L
+150
+
+#629
+obsidian girdle waist armor~
+an obsidian girdle~
+An obsidian girdle lies here.~
+9 201326592 8650752 0
+0 0 0 0 0 0 0 0 0 0
+12
+L
+150
+
+#630
+nightshade kite shield buckler~
+a nightshade kite shield~
+A nightshade kite shield lies here.~
+9 469762048 8454144 0
+0 0 0 0 0 0 0 0 0 0
+10
+L
+150
+
+#631
+voidcleaver axe chop~
+a voidcleaver axe~
+A massive voidcleaver axe lies here.~
+5 201326592 8454144 0
+0 10 16 2 0 0 0 0 0 0
+11
+L
+150
+
+#632
+staff shadow void mage weapon~
+a staff of shadow~
+A staff wreathed in shadow stands here.~
+5 738197504 8454144 0
+0 8 14 1 0 0 0 0 0 0
+3
+L
+150
+
+#633
+runic wristguard wrist armor spell~
+a runic wristguard~
+A runic wristguard lies here, sigils glowing faintly.~
+9 201326592 8390656 0
+0 0 0 0 0 0 0 0 0 0
+2
+L
+150
+
+#634
+mantle void overlord shoulders~
+a mantle of the void overlord~
+An imposing mantle lies here, exuding dark power.~
+9 201326592 8389120 0
+0 0 0 0 0 0 0 0 0 0
+13
+L
+150
+
+#635
+void-piercer spear lance~
+a void-piercer~
+A void-piercer lies here, tip impossibly sharp.~
+5 201326592 8454144 0
+0 9 16 3 0 0 0 0 0 0
+7
+L
+150
+
+#636
+soul-rending falchion blade slash~
+a soul-rending falchion~
+A soul-rending falchion lies here.~
+5 201326592 8454144 0
+0 10 16 2 0 0 0 0 0 0
+9
+L
+150
+
+#637
+armor void incarnate boss~
+the Armor of the Void Incarnate~
+The Armor of the Void Incarnate lies here.~
+9 201326592 8912896 0
+0 0 0 0 0 0 0 0 0 0
+15
+L
+150
+
+#638
+key obsidian shadow gate~
+an obsidian key~
+An obsidian key lies here, cold to the touch.~
+18 0 8388608 0
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+
+#639
+key void shard puzzle~
+a shard-key~
+A peculiar shard-key lies here, fitting some strange lock.~
+18 0 8388608 0
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+
+#640
+key inner sanctum master~
+the Master Key~
+The Master Key rests here, vibrating with power.~
+18 0 8388608 0
+0 0 0 0 0 0 0 0 0 0
+1
+L
+1
+
+#0
+
+#ROOMS
+
+#610
+The Blighted Gateway~
+The massive iron gates of Kel'Shadra loom before you, twisted and
+blackened as if scorched by some unimaginable flame. Beyond them,
+a path of crushed obsidian winds into darkness. The air here carries
+the taste of ash and the faint whisper of countless lost souls. Pale
+violet light pulses from cracks in the gate's ancient frame, and the
+stones around the entrance are covered in dark runes that seem to
+shift and rearrange whenever you look away.
+~
+8201 11
+D1
+~
+~
+0 -1 611
+D3
+~
+~
+0 -1 615
+E gate~
+The iron gate bears countless ancient runes. You recognize some as
+wards against the living, others as bindings to prevent whatever is
+inside from escaping. Someone - or something - has partially broken
+several of the wards from the inside.
+~
+S
+
+#611
+The Obsidian Courtyard~
+This courtyard was once an assembly area for Kel'Shadra's forces. Cracked
+black flagstones line the ground, each one engraved with a name in a dead
+language. The walls rise sharply on three sides, their surfaces studded
+with extinguished torch sconces shaped like screaming faces. In the center
+of the courtyard, a fountain of some dark, viscous liquid gurgles slowly.
+Whatever it was made to hold, it is no longer water.
+~
+8201 11
+D0
+~
+~
+0 -1 612
+D2
+~
+~
+0 -1 610
+D1
+~
+~
+0 -1 613
+D3
+~
+~
+0 -1 617
+E fountain~
+The dark liquid in the fountain has the consistency of old blood but
+smells of nothing at all. Where it touches the stone basin, the stone
+has turned black and cracked. You sense that drinking from it would be
+very unwise.
+~
+S
+
+#612
+The Northern Hall~
+A long corridor stretches before you, its ceiling lost in shadow far
+above. Tattered black banners hang motionless from the walls despite
+a constant cold draft, as if the wind itself fears to disturb them.
+Between the banners, iron sconces hold torches that burn with cold
+blue flame, casting deep shadows that seem to have shapes of their own.
+~
+8201 11
+D2
+~
+~
+0 -1 611
+D0
+~
+~
+0 -1 616
+E banners~
+The banners bear the crest of Kel'Shadra - a void eye ringed by
+seven black stars. The fabric is impossibly cold to the touch and
+seems to absorb light rather than merely blocking it.
+~
+S
+
+#613
+The Eastern Alcove~
+A small alcove has been carved into the eastern wall of the courtyard.
+Within it stands a stone pedestal bearing a strange puzzle device: a set
+of interlocking obsidian rings that can be rotated independently. Each
+ring bears a symbol. Someone has been here recently - fresh scratches
+mark the pedestal where impatient hands tried to force the mechanism.
+~
+8201 11
+D3
+~
+~
+0 -1 611
+D1
+~
+hidden vault~
+7 639 614
+E puzzle pedestal rings~
+The three obsidian rings can each be rotated. If you study the symbols
+carefully, you notice that each ring depicts phases of some celestial body.
+The correct sequence will unlock a hidden door. Type 'solve puzzle' to
+attempt to align the rings. (Hint: full, crescent, new)
+~
+S
+
+#614
+The Hidden Vault~
+A narrow chamber revealed by the correct manipulation of the eastern
+puzzle. The walls are lined with obsidian shelves bearing ancient
+tomes and strange artifacts. A faint glow emanates from a gem embedded
+in the far wall. Most of the tomes are too damaged to read, but the
+presence of wealth is undeniable.
+~
+8201 11
+D3
+~
+~
+3 639 613
+E gem crystal wall~
+The gem is embedded deeply in the wall and cannot be removed without
+shattering it. It pulses with a slow, rhythmic light - almost like breathing.
+~
+S
+
+#615
+The Western Passage~
+This passage runs parallel to the main entrance but curves away into
+deeper darkness. The floor here is noticeably colder than the courtyard,
+and frost crystals have formed along the base of the walls. Ahead, the
+passage narrows significantly. Something large has clearly been dragged
+through here recently - claw marks and dark stains mark the floor.
+~
+8201 11
+D1
+~
+~
+0 -1 610
+D0
+~
+~
+0 -1 618
+E frost crystals marks~
+The frost crystals have formed into patterns that almost resemble runes.
+You notice that the drag marks lead deeper into the complex, not toward
+the exit. Whatever was dragged came from deeper within.
+~
+S
+
+#616
+The Hall of Broken Thrones~
+Three massive thrones of black stone have been overturned and shattered
+in this chamber. The walls bear the scars of ancient battle - sword and
+spell marks that must be centuries old. In the rubble between the thrones,
+dark energy pulses fitfully, the remnant of whatever cataclysm destroyed
+this room. The ceiling has partially collapsed on the western side.
+~
+8201 11
+D2
+~
+~
+0 -1 612
+D0
+~
+~
+0 -1 620
+D1
+~
+~
+0 -1 621
+E thrones rubble~
+The thrones were clearly once places of great authority. The carvings
+on them depict three figures: a warrior, a sorcerer, and a figure with
+no face at all. The faceless figure's throne is the one least damaged.
+~
+S
+
+#617
+The Corrupted Chapel~
+What was once a place of dark worship has been further defiled. Pews of
+black wood have been smashed and thrown against the walls. At the far end,
+an altar of void-stone still stands, but something is wrong with it - the
+air above it shimmers with barely contained energy that crackles and hisses.
+Candles of black wax burn in skull-shaped holders, their flames producing
+no warmth whatsoever.
+~
+8201 11
+D1
+~
+~
+0 -1 611
+D0
+~
+~
+0 -1 618
+D3
+~
+~
+0 -1 619
+E altar void-stone~
+The altar hums with dangerous energy. Carved into its surface are the
+words: 'Only the blood of the willing opens the path.' Below this,
+someone has scratched in more recent script: 'I was willing. Do not follow.'
+~
+S
+
+#618
+The Ice-Rimed Passage~
+This passage connects the western approach with the chapel. Ice has
+formed on every surface, thick enough that the original stone is invisible
+beneath it. The ice appears dark, as if something is trapped within.
+Looking closely, you can make out frozen faces pressing against the
+surface from within, mouths open in permanent silent screams.
+~
+8201 11
+D2
+~
+~
+0 -1 615
+D1
+~
+~
+0 -1 617
+D0
+~
+~
+0 -1 622
+E ice faces frozen~
+The faces within the ice are too numerous to count. Men, women, creatures
+of various races - all showing expressions of absolute terror. One face
+near the floor has eyes that seem to follow you as you move.
+~
+S
+
+#619
+The Chamber of Whispers~
+Every sound made in this small chamber is amplified and reflected in strange
+ways. Your own footsteps sound like the tread of armies. Your breathing
+becomes a crowd of whispered words in a language you almost understand.
+The walls are covered in thousands of scratched names - all in the same
+writing style, as if carved by a single hand over a very, very long time.
+~
+8201 11
+D1
+~
+~
+0 -1 617
+D0
+~
+~
+0 -1 623
+E names walls whispers~
+Scanning the names, you notice they begin in an ancient script and
+gradually evolve toward more modern writing. The most recent names are
+from people you might recognize. The very last name scratched appears
+to have been left unfinished - only the first three letters carved before
+whatever was doing the carving stopped.
+~
+S
+
+#620
+The Armory of Ashes~
+This chamber once served as an armory, but most of its contents have been
+reduced to cinders. Charred weapon racks and melted armor stands line the
+walls. A few items remain intact, protected by some enchantment that also
+seems to be slowly consuming them. The floor is covered in ash several
+inches deep that stirs despite the absence of wind.
+~
+8201 11
+D2
+~
+~
+0 -1 616
+D1
+~
+~
+0 -1 628
+D0
+~
+~
+0 -1 624
+E ashes ash floor~
+The ash on the floor forms patterns when disturbed - not the random patterns
+of settling dust, but deliberate shapes that reform within seconds of being
+disrupted. Circles within circles, over and over again, endlessly.
+~
+S
+
+#621
+The Gallery of Failures~
+Lining the walls of this grim gallery are portrait frames - but the
+paintings have been deliberately destroyed, leaving only scraps of canvas
+and flecks of dark paint. Beneath each ruined portrait is a plaque bearing
+a name and a date. The dates span centuries. Below the plaques, in smaller
+text, each reads: 'Failed.' The gallery is very long.
+~
+8201 11
+D3
+~
+~
+0 -1 616
+D0
+~
+~
+0 -1 625
+E portraits plaques names~
+Some of the names on the plaques match names from the Chamber of Whispers.
+The most recent plaque has a blank space where the name should be - the
+date upon it is contemporary. Whoever was meant to be remembered here
+either has not yet failed, or their failure is too recent to be chronicled.
+~
+S
+
+#622
+The Frost Sanctum~
+Cold beyond reason fills this chamber. Your breath hangs in clouds before
+you and the floor is sheeted with black ice. In the center of the room,
+a frozen figure stands within a block of void-ice - a tall humanoid whose
+features are distorted by the freezing. It holds out one hand, and in that
+hand is a key. The key is clearly visible through the ice but completely
+inaccessible.
+~
+8201 11
+D2
+~
+~
+0 -1 618
+D0
+~
+~
+0 -1 626
+E figure key ice frozen~
+The frozen figure's eyes are open. You notice with a start that they are
+tracking your movements. The key in its hand appears to be obsidian, deeply
+carved with void runes. If you could thaw the ice without shattering the key...
+The puzzle: the temperature runes on the walls suggest the ice responds to
+heat runes arranged in the correct order. Examine the walls for guidance.
+~
+S
+
+#623
+The Labyrinth Entrance~
+The passage here opens into the beginning of the famous Labyrinth of Lost
+Voices - a maze of corridors built to confuse and disorient intruders. The
+walls here are lined with mirrors of polished obsidian, but the reflections
+in them don't quite match reality. Your reflection moves a fraction of a
+second after you do, and sometimes appears to make gestures you didn't.
+~
+8201 11
+D2
+~
+~
+0 -1 619
+D0
+~
+~
+0 -1 640
+D1
+~
+~
+0 -1 630
+E mirrors reflections~
+If you stare at your reflection long enough, it seems to try to communicate
+with you - mouthing words, pointing in various directions. It looks frightened
+of something behind you, though nothing is there when you turn.
+~
+S
+
+#624
+The Scorched Corridor~
+A passage leading north from the armory of ashes. The walls here are
+scorched in patterns that suggest tremendous heat was released in a single
+instant - as if something exploded outward from the armory. The scorch
+marks grow less severe as you move north, suggesting whatever happened
+originated in the chamber to the south. Strange symbols are burned into
+the ceiling overhead.
+~
+8201 11
+D2
+~
+~
+0 -1 620
+E scorch marks ceiling symbols~
+The symbols on the ceiling are not the same as the runes elsewhere in
+Kel'Shadra. They are older, cruder - suggesting this part of the keep
+was built before the void entity arrived, by the original mortal builders.
+~
+S
+
+#625
+The Hall of Echoes~
+A long corridor whose walls are pocked with small alcoves, each containing
+a different object: a cracked bell, a fractured mirror, a dried flower, a
+child's toy. Each object produces a faint echo when the room is entered, as
+if whispering of the person who last touched it. The combined effect is a
+constant low murmur that follows you throughout the hall.
+~
+8201 11
+D2
+~
+~
+0 -1 621
+D1
+~
+~
+0 -1 702
+E alcoves objects bell mirror~
+The objects in the alcoves are personal items - things with emotional weight.
+Someone collected these deliberately. The dried flower is pressed flat but
+still faintly fragrant; the child's toy is painted with a name that has
+since faded. These are memories made physical.
+~
+S
+
+#626
+The Chamber of Frozen Tears~
+North of the frost sanctum, the cold persists but diminishes slightly.
+The floor here is wet from meltwater that seeps south from the sanctum.
+Strange crystalline formations grow from the walls - not quite ice, but
+something similar, with a faint inner glow. The ceiling drips constantly,
+each drop falling in perfect silence.
+~
+8201 11
+D2
+~
+~
+0 -1 622
+E crystals formations walls~
+The crystals appear to be condensed void-energy that has taken on a
+semi-solid state due to the extreme cold nearby. They are beautiful and
+completely inert, responding only to body heat by briefly brightening
+when touched, then fading back to their dim glow.
+~
+S
+
+#627
+The Passage of Whispered Names~
+A narrow corridor connecting the inner halls. The walls here are covered
+floor to ceiling in tiny inscribed names - thousands upon thousands of them,
+written in a hand so small that a lens would be needed to read most of them.
+Somewhere in this vast record may be the names of the sorcerers who first
+summoned Kel'Shadra, but finding them would take days.
+~
+8201 11
+D0
+~
+~
+0 -1 628
+D2
+~
+~
+0 -1 621
+E names inscriptions wall~
+The inscriptions are in dozens of languages, spanning what appears to be
+several centuries. Some names have been scratched out with apparent fury.
+Others have small symbols next to them - not words, but marks suggesting
+a category or fate. Most symbols repeat, suggesting they have meaning.
+~
+S
+
+#628
+The Watchman's Post~
+An elevated platform that must once have served as a guard post, now
+abandoned. Arrow slits look out over corridors you have passed through.
+The post is still stocked with equipment: quivers of arrows with void-
+black tips, a signaling horn whose sound you suspect would carry through
+the entire keep. A ladder leads back down to the south passage.
+~
+8201 11
+D2
+~
+~
+0 -1 620
+D3
+~
+~
+0 -1 627
+E arrow slits quiver horn~
+The arrows have corroded over time; the tips remain sharp but the fletching
+has long since rotted away. The signaling horn still gleams - made of some
+material that resists tarnish. You suspect blowing it would be unwise.
+~
+S
+
+#629
+The Sorcerer's Laboratory~
+A side chamber filled with the remnants of magical research: shattered
+glassware, burned parchment, overturned tables. One table remains upright,
+bearing an intact experiment - a crystal orb connected to several smaller
+gems by fine silver wire. The orb still pulses with a slow, rhythmic light.
+~
+8201 11
+D3
+~
+~
+0 -1 630
+E orb experiment wire gems~
+The experiment appears to be some kind of resonance device - each small
+gem vibrates at a different frequency, and the silver wire transmits these
+vibrations to the orb, which integrates them into the pulsing light. It
+is either beautiful mathematics or someone's attempt to hear the void.
+~
+S
+
+#630
+The Mirror Corridor~
+A passage connecting the labyrinth entrance to the inner halls. Every
+surface here is polished obsidian, creating infinite reflections that
+recede into apparent darkness. The effect is deeply disorienting - it is
+difficult to judge where walls are without touching them. Sounds here
+bounce strangely, arriving from unexpected directions.
+~
+8201 11
+D3
+~
+~
+0 -1 623
+D1
+~
+~
+0 -1 629
+E mirrors obsidian reflections corridor~
+The obsidian mirrors are seamlessly fitted and perfectly smooth. Whatever
+craftsmen created them were masters of their art. The reflections within
+are not quite accurate - there is always a slight lag, a slight wrongness
+that makes extended gazing uncomfortable. Best to navigate by touch.
+~
+S
+
+#640
+Maze - The First Fork~
+The labyrinth begins here in earnest. Identical-looking passages branch
+in three directions. The obsidian walls murmur with half-heard voices.
+The floor is dusty but you can see multiple sets of footprints, many of
+which seem to circle back to this very spot.
+~
+8201 11
+D2
+~
+~
+0 -1 623
+D0
+~
+~
+0 -1 641
+D1
+~
+~
+0 -1 643
+D3
+~
+~
+0 -1 645
+S
+
+#641
+Maze - Long Corridor~
+A straight passage runs north. The walls here are marked with scratches
+at regular intervals - someone's attempt to track their passage. Several
+of the marks have been scoured away, as if deliberately sabotaged.
+~
+8201 11
+D2
+~
+~
+0 -1 640
+D0
+~
+~
+0 -1 642
+S
+
+#642
+Maze - The Mirror Chamber~
+A small chamber where every wall is covered in obsidian mirrors. The
+reflections multiply infinitely, creating dizzying vistas of repeated
+images. In the reflection, you can see passages that don't exist in
+the real chamber - paths that perhaps once existed and were sealed.
+~
+8201 11
+D2
+~
+~
+0 -1 641
+D1
+~
+~
+0 -1 660
+D0
+~
+~
+0 -1 644
+S
+
+#643
+Maze - Dead End (east branch)~
+The eastern passage dead-ends at a wall covered in frenzied carvings.
+Someone spent a great deal of time here, judging by the depth and
+repetition of the marks. The carvings appear to be a person slowly
+losing their sanity in documented stages. The final carving is simply
+a pair of eyes, over and over, across the entire wall.
+~
+8201 11
+D3
+~
+~
+0 -1 640
+E carvings eyes wall~
+Looking carefully at the eyes, you notice some have pupils shaped like
+directional arrows. Following them in sequence: north, west, west, north.
+This may be a clue to navigating the labyrinth.
+~
+S
+
+#644
+Maze - The Whispering Alcove~
+A small side alcove where the whispers are louder than anywhere else.
+If you stand here for a moment and focus, you can begin to make out
+distinct voices giving directions. Unfortunately, several of the voices
+are giving contradictory advice, and at least two of them are clearly
+trying to lead you in circles.
+~
+8201 11
+D2
+~
+~
+0 -1 642
+S
+
+#645
+Maze - Western Branch~
+The western passage splits here. A faint smell of something burned - but
+strangely sweet - comes from the north. From the south, a rhythmic
+scratching sound can be heard. Both passages look identical in every
+other respect.
+~
+8201 11
+D1
+~
+~
+0 -1 640
+D0
+~
+~
+0 -1 646
+D2
+~
+~
+0 -1 648
+S
+
+#646
+Maze - The Scorched Room~
+The source of the burned smell: a chamber where some magical explosion
+took place long ago. The walls are blasted smooth and the floor is
+fused glass. Charred remnants of what might have been furniture or
+bodies are fused into the glass floor. A passage continues south.
+~
+8201 11
+D2
+~
+~
+0 -1 645
+D0
+~
+~
+0 -1 647
+S
+
+#647
+Maze - Dead End (north of scorched)~
+The passage ends abruptly here at a sealed door. The door bears no
+handle, no keyhole, and no visible means of opening. It is simply
+a wall of featureless black metal. Knocking on it produces no sound -
+the metal absorbs the impact completely, producing not even a vibration.
+~
+8201 11
+D2
+~
+~
+0 -1 646
+S
+
+#648
+Maze - The Clawed Crossing~
+The floor here is covered in parallel scratch marks, as if something
+massive and clawed paced back and forth across this point repeatedly.
+The grooves are deep enough to catch your foot. Passages lead north,
+east, and west. The western passage smells of blood.
+~
+8201 11
+D0
+~
+~
+0 -1 645
+D1
+~
+~
+0 -1 649
+D3
+~
+~
+0 -1 650
+D2
+~
+~
+0 -1 651
+S
+
+#649
+Maze - Dead End (blood scent)~
+The blood scent leads here, to a chamber that clearly served as a lair
+for something predatory. Bones of various creatures - some of them
+humanoid - are scattered across the floor. Whatever lived here has moved
+on, but not long ago.
+~
+8201 11
+D3
+~
+~
+0 -1 648
+S
+
+#650
+Maze - The Doubled Passage~
+This passage appears identical to one you've seen before, but subtle
+differences hint that it is not. The scratches on the wall are in
+slightly different positions. The dust has been recently disturbed in
+patterns that suggest careful, deliberate movement.
+~
+8201 11
+D1
+~
+~
+0 -1 648
+S
+
+#651
+Maze - The Heart of the Labyrinth~
+You have reached what feels like the center of the maze. The whispers
+here are almost loud enough to be speech. A single phrase repeats:
+'Remember why you came.' The walls here are clean, unmarked - as if
+nothing dared to touch them. Three passages lead away, each perfectly
+identical to the others.
+~
+8201 11
+D0
+~
+~
+0 -1 648
+D1
+~
+~
+0 -1 652
+D3
+~
+~
+0 -1 653
+D2
+~
+~
+0 -1 655
+S
+
+#652
+Maze - The False Exit~
+This passage seems to lead upward and the air freshens slightly, giving
+false hope of escape. But the passage curves and descends again, eventually
+rejoining the maze at a point you've already visited. Several sets of
+desperate footprints have run this route before you, and the turning-back
+marks are always at the same point.
+~
+8201 11
+D3
+~
+~
+0 -1 651
+D0
+~
+~
+0 -1 654
+S
+
+#653
+Maze - Dead End (the pit)~
+The western passage ends at a pit in the floor, roughly circular and
+about two meters across. Looking down, you cannot see the bottom. Faint
+light - greenish and cold - rises from below. The pit makes a sound like
+breathing.
+~
+8201 11
+D1
+~
+~
+0 -1 651
+E pit bottom~
+The pit goes down further than any light can reach. The breathing sound
+has a rhythm to it - slow and patient, like something very large and very
+old sleeping fitfully. You decide not to jump in.
+~
+S
+
+#654
+Maze - The Second False Hope~
+The air freshens even more here, and for a moment the whispers stop entirely.
+Then they return louder than ever, and the passage dead-ends at a blank wall
+bearing a single message: 'There is no shortcut. Only through.'
+~
+8201 11
+D2
+~
+~
+0 -1 652
+S
+
+#655
+Maze - The Narrowing~
+The passage narrows here until you must turn sideways to pass. The walls
+press close and the whispering becomes intense - dozens of voices all speaking
+simultaneously in your ears. The floor is covered in handprints, as if
+previous travelers crawled this section.
+~
+8201 11
+D0
+~
+~
+0 -1 651
+D2
+~
+~
+0 -1 656
+S
+
+#656
+Maze - After the Narrowing~
+Beyond the narrow passage, the corridor opens again. The air is colder
+and the obsidian walls here seem different - slightly transparent, and
+within them you can see vague shapes moving. Whether they are reflections
+of the present or visions of the past is impossible to tell.
+~
+8201 11
+D0
+~
+~
+0 -1 655
+D1
+~
+~
+0 -1 657
+D2
+~
+~
+0 -1 658
+S
+
+#657
+Maze - Dead End (the visions)~
+The passage ends at a wall that is completely transparent - a window into
+another place. Beyond it, you see a vast hall filled with the shades of an
+army, standing at attention before an empty throne. They face the throne
+with absolute devotion, waiting for a ruler who will never return. They
+cannot see you.
+~
+8201 11
+D3
+~
+~
+0 -1 656
+E window vision army shades~
+You watch for a while, transfixed. One of the shades near the back slowly
+turns its head in your direction. It can't possibly see you through this
+magical barrier. It stares directly at you. It raises one hand in what
+might be a warning gesture.
+~
+S
+
+#658
+Maze - The Crossroads~
+A four-way junction in the deepest part of the labyrinth. Marks on the
+floor indicate that hundreds of travelers have stood here before, most
+of them choosing the same directions. The north passage looks fresher,
+less worn. The south passage has been worn smooth by the most footfalls.
+~
+8201 11
+D0
+~
+~
+0 -1 656
+D1
+~
+~
+0 -1 659
+D2
+~
+~
+0 -1 660
+D3
+~
+~
+0 -1 661
+S
+
+#659
+Maze - Dead End (the most traveled)~
+The most-traveled path leads here. A chamber full of desperate graffiti
+- names, pleas, curses, prayers. In the center of the room stands a
+mirror that shows not the room itself but instead shows the crossroads
+junction. At least, it shows where you need to go.
+~
+8201 11
+D3
+~
+~
+0 -1 658
+S
+
+#660
+Maze - The Fresh Passage~
+The less-traveled northern path. The air here is slightly less stale
+and there are fewer footprints. Whether this indicates it leads somewhere
+new or simply that fewer reached this far is unclear. A faint light can
+be seen somewhere ahead to the north.
+~
+8201 11
+D2
+~
+~
+0 -1 658
+D3
+~
+~
+0 -1 642
+D0
+~
+~
+0 -1 665
+S
+
+#661
+Maze - Dead End (the western spiral)~
+The western passage spirals inward in a tight coil, bringing you back
+to a point you cannot connect to anywhere else. The spiral itself is
+a puzzle of sorts - standing at its center and looking outward, you
+can see an alignment of symbols on the walls that makes a complete
+sentence. It reads: 'The exit lies where fewer dare to walk.'
+~
+8201 11
+D1
+~
+~
+0 -1 658
+S
+
+#665
+Maze - The Light at the End~
+The source of the faint light: a door of black iron, set with a single
+luminous stone of pale blue. The door is locked, but the keyhole is
+shaped like an obsidian shard - as if made for a very specific key.
+Beyond this door, you sense open space and the presence of something
+very old and very powerful.
+~
+8201 11
+D2
+~
+~
+0 -1 660
+D0
+~
+~
+7 638 670
+E door keyhole stone~
+The door is solid iron, cold to the touch, bearing no decoration except
+the glowing stone. The stone's light pulses slowly, as if in reaction
+to your presence. The keyhole is deep and its shape precise - only the
+right key will work.
+~
+S
+
+#670
+The Threshold of the Sanctum~
+Passing through the iron door, you find yourself in a vast antechamber
+of polished black marble. Your reflection looks back at you from every
+surface, but each reflection is slightly different - showing you with
+different expressions, wearing different things, or in different poses.
+None of them quite match what you are actually doing. The air here
+carries real weight, pressing against you from all sides.
+~
+8201 11
+D2
+~
+~
+7 638 665
+D0
+~
+~
+0 -1 671
+E reflections marble floor~
+The reflections... if you watch closely, they are not showing alternate
+versions of you. They are showing your past - moments from your life,
+replayed on the polished surfaces. The citadel is watching. It knows
+who you are.
+~
+S
+
+#671
+The Corridor of Souls~
+This corridor is lined with niches, each containing a crystalline container
+the size of a fist. Inside each container floats a faint light - a
+captured soul. The containers number in the hundreds, perhaps thousands.
+Each one bears a name plate. The corridor stretches on ahead for what
+seems like an impossible distance given the size of the structure.
+~
+8201 11
+D2
+~
+~
+0 -1 670
+D0
+~
+~
+0 -1 672
+D1
+~
+~
+0 -1 675
+E souls containers niches names~
+You read a few names on the containers: adventurers, knights, scholars,
+all who dared enter Kel'Shadra and were taken. Some containers are empty
+and dark. Perhaps their owners escaped. Perhaps something else happened.
+~
+S
+
+#672
+The Hall of Void Studies~
+Bookshelves of blackened metal line this circular chamber, bearing
+volumes bound in material you prefer not to identify. Many are chained
+to their shelves. In the center, a lectern holds an open book in which
+text writes itself - forming observations about the room and its occupants,
+which currently includes you.
+~
+8201 11
+D2
+~
+~
+0 -1 671
+D0
+~
+~
+0 -1 673
+E book lectern writing~
+The book is writing about you in real time: your appearance, your equipment,
+your visible emotional state. The writing is precise and clinical, lacking
+any judgment. Disturbingly, it also describes the thoughts it believes you
+are currently thinking. It is more accurate than it should be.
+~
+S
+
+#673
+The Chamber of the Dark Puzzle~
+A large chamber with a complex mechanical device in its center - a three-
+dimensional puzzle of interlocking void-stone rings, each engraved with
+symbols. The rings must be aligned in the correct configuration to open
+the door to the inner sanctum. The door itself is a slab of pure void-
+stone, seamlessly fitted into the wall to the north.
+~
+8201 11
+D2
+~
+~
+0 -1 672
+D0
+~
+~
+7 640 676
+E puzzle rings mechanism door~
+The puzzle has twelve rings arranged in a three-by-four grid pattern,
+each capable of rotating independently. The engravings on each ring
+correspond to the phases of multiple celestial bodies. A faded inscription
+near the base of the mechanism reads: 'As above in darkness, so below in
+light. Align the void's own stars to open the way.' The key you found
+earlier bears symbols that match the alignment needed.
+~
+S
+
+#674
+The Overseer's Balcony~
+A balcony of black stone overlooking an impossibly large chamber below.
+From here, the full scale of the inner sanctum becomes apparent - it
+is several stories tall and wide, its ceiling lost in shadow. Below, you
+can see movement - figures walking in patterns too regular to be random.
+They haven't noticed you yet.
+~
+8201 11
+D2
+~
+~
+0 -1 675
+D5
+~
+~
+0 -1 681
+E below chamber figures~
+The figures below move in precise, ritualistic patterns. They are
+void priests, chanting in their silent language, maintaining some
+enchantment that keeps the inner sanctum stable. If their patterns
+were disrupted, something would change. You suspect it would not
+be an improvement.
+~
+S
+
+#675
+The Guard Post~
+A fortified position carved into the corridor wall where it widens.
+Arrow slits pierce the outer wall, and the narrow bottleneck forces
+visitors to pass through a chokepoint. The guards that once manned
+this post are gone, but the mechanisms they operated - iron gates
+that can drop to seal the passage - remain functional.
+~
+8201 11
+D2
+~
+~
+0 -1 671
+D1
+~
+~
+0 -1 674
+D0
+~
+~
+0 -1 680
+S
+
+#676
+The Inner Sanctum Gate~
+A wide landing before the innermost doors of Kel'Shadra. The doors
+themselves are not locked - they stand open, as if inviting entry.
+Or as if something beyond them is not concerned with keeping you out.
+Torches of void-fire flank the entrance, their black flames producing
+light that seems to make shadows deeper rather than banishing them.
+~
+8201 11
+D2
+~
+~
+7 640 673
+D0
+~
+~
+0 -1 677
+S
+
+#677
+The Throne Room Approach~
+A grand processional corridor leading to the throne room. The floor
+here is a mosaic of black and deep purple tiles depicting a battle:
+mortal forces being consumed by a vast darkness that the tile-work
+renders in breathtaking, terrible detail. On the far side of this
+corridor, two massive doors stand sealed.
+~
+8201 11
+D2
+~
+~
+0 -1 676
+D0
+~
+~
+7 640 678
+E mosaic battle history~
+The mosaic tells the story of Kel'Shadra's rise - a void entity drawn
+to the material plane by the ambitions of mortal sorcerers who sought
+to harness its power. The final tiles show the sorcerers' expressions
+of horrified realization as the entity turned on its summoners. The
+artist made sure to capture that moment in great detail.
+~
+S
+
+#678
+The Throne Room of Void~
+The throne room of Kel'Shadra is vast and terrible. A throne of solid
+darkness sits upon a dais at the room's far end - not a throne of dark
+stone or metal, but a throne made of crystallized void itself. Floating
+above it, a crown of black light hovers without support. The ceiling
+here appears to be looking back at you - thousands of void-eyes staring
+from the stone above.
+~
+8201 11
+D2
+~
+~
+7 640 677
+D1
+~
+~
+0 -1 679
+D3
+~
+~
+0 -1 680
+E throne crown void-eyes ceiling~
+The crown above the throne is the focus of the room's power. It bears
+an inscription: 'Only the worthy may unseat the void.' This room is
+a test as much as a destination. The void-eyes above seem to evaluate
+every choice you make.
+~
+S
+
+#679
+The Sanctum Archive~
+A side chamber off the throne room housing the most dangerous knowledge
+in Kel'Shadra. Texts sealed within barriers of void-light, accessible
+only to those who understand the nature of the void. Several barriers
+have been broken in the past, their contents removed - by whom, for what
+purpose, no one living knows.
+~
+8201 11
+D3
+~
+~
+0 -1 678
+D0
+~
+~
+0 -1 682
+E archive barriers texts void-light~
+The intact barriers hum with suppressed power. The texts within float
+freely, their pages turning as if being read by invisible scholars.
+The knowledge here is too dangerous to take, and you suspect that
+attempting to break a barrier would attract significant attention.
+~
+S
+
+#680
+The Preparation Hall~
+A chamber where Kel'Shadra's chosen prepare for battle. Weapon racks of
+void-stone line the walls, and training dummies made from crystallized
+dark matter stand in rows. Several of the dummies appear to have been
+recently used - their surfaces bear fresh damage.
+~
+8201 11
+D3
+~
+~
+0 -1 678
+D2
+~
+~
+0 -1 675
+E racks dummies battle preparation~
+The weapons on the racks are not for mortals - they are void-touched
+implements of war, their edges able to cut spirit as easily as flesh.
+The training dummies regenerate damage at a visible rate, reforming
+from whatever attack left them broken.
+~
+S
+
+#681
+The Chamber Below~
+The vast chamber visible from the balcony above. From ground level, the
+scale is even more intimidating. The void priests' ritual patterns become
+clear: they are tracing lines of power that converge on a single point
+at the room's center - a circular sigil of incredible complexity
+inscribed directly into the floor.
+~
+8201 11
+D4
+~
+~
+0 -1 674
+D0
+~
+~
+0 -1 682
+D2
+~
+~
+0 -1 685
+E sigil circle patterns ritual~
+The sigil at the center of the chamber is the binding seal that contains
+Kel'Shadra's consciousness within this plane. It was inscribed by the
+original sorcerers who summoned the entity and then realized their mistake.
+The void priests maintain it - not to honor the void, but because without
+it, Kel'Shadra would not be contained to this citadel.
+~
+S
+
+#682
+The Sanctum Gallery~
+A long gallery connecting the archive to the chamber below. The walls
+here are bare stone that has been burned smooth by incredible heat or
+cold at some point in the past. Abstract shapes have formed in the
+stone's surface - shapes that gain meaning only when viewed from
+specific angles.
+~
+8201 11
+D2
+~
+~
+0 -1 679
+D2
+~
+~
+0 -1 681
+S
+
+#683
+The Binding Circle~
+At the absolute center of Kel'Shadra's power. The sigil here is fully
+visible - a circle of void-runes forty feet across, glowing with restrained
+power. The air inside the circle shimmers and distorts, and through the
+distortion you can see something vast and dark pressing against reality
+itself. This is where Kel'Shadra is imprisoned. This is where it waits.
+~
+8201 11
+D2
+~
+~
+0 -1 685
+D0
+~
+~
+0 -1 690
+E sigil binding runes circle void~
+The binding is ancient but still strong - barely. Cracks have appeared
+in several of the runes, and the energy seeping through those cracks is
+intense. The circle was designed to hold the entity indefinitely, but
+'indefinitely' is a relative term when measured against the patience of
+a void entity.
+~
+S
+
+#684
+The Ritual Antechamber~
+Directly adjacent to the binding circle, this room serves as a staging
+area for the maintenance rituals. Spell components of dark power are
+stored here, along with detailed instructions in several languages for
+maintaining the binding. The instructions assume the reader has ten
+to fifteen years of void-magic training as a baseline.
+~
+8201 11
+D2
+~
+~
+0 -1 683
+D3
+~
+~
+0 -1 685
+E instructions components ritual maintenance~
+Skimming the instructions, the key steps appear to involve regular
+reinforcement of the outer runes, quarterly replacement of certain
+crystallized components, and an annual grand ritual that requires
+a significant sacrifice. The instructions note that failure to
+maintain the schedule could allow partial manifestation.
+~
+S
+
+#685
+The Path of Manifestation~
+A corridor leading to the binding circle that vibrates with contained
+energy. The floor here glows faintly with the overflow of power from
+the sigil. Walking this corridor, you feel the entity's consciousness
+pressing against the edges of your mind - not attacking, just... noticing.
+~
+8201 11
+D0
+~
+~
+0 -1 683
+D1
+~
+~
+0 -1 684
+D2
+~
+~
+0 -1 681
+E floor glow energy mind~
+The presence in the back of your mind is curious rather than malicious.
+It seems to be cataloging you, filing you away in some vast mental archive
+alongside all the other mortals who have walked this path. You are
+not the first. You will not be the last.
+~
+S
+
+#690
+The Presence Chamber~
+This is as close as you can come to the direct presence of Kel'Shadra
+without entering the binding circle itself. The entity is aware of you
+here - the walls pulse with its attention, and the shadows cast no
+shapes that match the room's contents. Something vast and ancient is
+looking at you from the other side of a very thin barrier.
+~
+8201 11
+D2
+~
+~
+0 -1 683
+D0
+~
+~
+0 -1 691
+E presence void entity shadow~
+Kel'Shadra does not speak - it has no need for such crude communication.
+But impressions filter through the barrier: curiosity, hunger, patience,
+and something that might, in a void entity, be called satisfaction.
+It has been waiting a long time for a worthy challenge.
+~
+S
+
+#691
+The Final Approach~
+The last passage before confronting Kel'Shadra's physical manifestation.
+The air here tears at your clothing and weapons and flesh, not from wind
+but from the sheer reality-distortion caused by the entity's proximity.
+Light bends visibly. Sound arrives before and after it should. Time
+itself seems unreliable in this corridor.
+~
+8201 11
+D2
+~
+~
+0 -1 690
+D0
+~
+~
+0 -1 695
+S
+
+#695
+The Void Sanctum~
+The ultimate chamber of Kel'Shadra - a space that exists at the
+intersection of material reality and the void. The floor is solid but
+the walls and ceiling are pure darkness from which forms constantly
+emerge and dissolve. Standing at the center is the physical manifestation
+of Kel'Shadra itself: a towering figure of crystallized void energy,
+watching your approach with the absolute calm of something that has never
+doubted its own victory.
+This is the final battle.
+~
+8201 11
+D2
+~
+~
+0 -1 691
+E kel'shadra entity manifestation void battle~
+Kel'Shadra regards you with something like interest. It has faced countless
+challengers over the centuries, and every single one has fallen. Its form
+shifts and moves, displaying weapons and abilities chosen specifically to
+counter what it has observed of your fighting style during your journey
+through the citadel. It has been watching since you entered the gate.
+~
+S
+
+#700
+The Chamber of Reflection~
+A hidden chamber accessible only to those who correctly solved the
+frozen puzzle in the Frost Sanctum. The chamber is perfectly circular
+and perfectly silent. At its center, a void-fire burns in a stone
+brazier, illuminating items left by previous challengers who did not
+survive their attempt on Kel'Shadra.
+~
+8201 11
+D2
+~
+~
+0 -1 622
+E brazier void-fire items relics~
+The void-fire burns cold and does not consume what it touches. The items
+around the brazier are not random - they have been deliberately placed here
+as offerings or warnings. A note in several languages reads:
+'Leave what you do not need. Take what you can carry. Do not linger.'
+~
+S
+
+#701
+The Sorcerer's Refuge~
+A hidden room that can only be found by those who paid attention to
+all the environmental clues throughout the citadel. Once a private
+study of a sorcerer who served Kel'Shadra before realizing his mistake,
+this room contains research notes, personal items, and most crucially,
+tactical advice for confronting the void entity.
+~
+8201 11
+D3
+~
+~
+0 -1 672
+E study notes research sorcerer advice~
+The sorcerer's notes are extensive and well-organized despite being
+centuries old. The critical section is titled 'Weaknesses of the Void':
+apparently the entity can be damaged significantly more effectively
+if attacked while it is maintaining one of its secondary abilities.
+The notes also mention that the sorcerer hid his best weapons here.
+~
+S
+
+#702
+The Memory Pool~
+A perfectly circular pool of dark water in a hidden alcove. Those who
+drink from it experience a vivid vision - not of the past, but of the
+most important moment in their own future. The vision is accurate but
+may be difficult to interpret. The pool has one cost: a small portion
+of the drinker's life force, permanently given.
+~
+8201 11
+D1
+~
+~
+0 -1 625
+E pool water vision memory~
+The pool's surface is absolutely still. Looking into it, you can see
+your own reflection clearly - but it changes, aging rapidly, then
+reversing, then stopping at a specific moment. The pool shows you
+something you will do. Whether it is a warning or a gift depends
+entirely on what you do with the knowledge.
+~
+S
+
+#0
+
+#RESETS
+
+M 0 610 2 610 (null)
+M 0 611 2 611 (null)
+M 0 610 2 612 (null)
+M 0 611 1 613 (null)
+M 0 612 1 614 (null)
+M 0 613 2 615 (null)
+M 0 614 1 617 (null)
+M 0 610 2 618 (null)
+M 0 611 1 619 (null)
+M 0 612 2 620 (null)
+M 0 613 1 621 (null)
+M 0 614 2 622 (null)
+M 0 615 1 623 (null)
+M 0 610 1 624 (null)
+M 0 611 2 625 (null)
+M 0 612 1 626 (null)
+M 0 613 2 627 (null)
+M 0 614 1 628 (null)
+M 0 610 2 629 (null)
+M 0 611 1 630 (null)
+
+M 0 614 2 641 (null)
+M 0 615 2 645 (null)
+M 0 613 1 648 (null)
+M 0 614 1 651 (null)
+M 0 615 2 655 (null)
+M 0 616 1 656 (null)
+M 0 615 2 658 (null)
+M 0 616 1 660 (null)
+
+M 0 616 2 670 (null)
+M 0 617 2 671 (null)
+M 0 616 1 672 (null)
+M 0 617 1 673 (null)
+M 0 618 2 674 (null)
+M 0 616 2 675 (null)
+M 0 617 1 676 (null)
+M 0 618 2 677 (null)
+M 0 617 2 680 (null)
+M 0 618 1 681 (null)
+
+M 0 619 1 683 (null)
+M 0 620 1 684 (null)
+M 0 619 2 685 (null)
+M 0 620 1 690 (null)
+M 0 621 1 691 (null)
+
+M 0 622 1 695 (null)
+
+O 0 638 0 700 (null)
+O 0 639 0 614 (null)
+O 0 640 0 701 (null)
+
+D 665 0 2
+D 673 0 2
+D 677 1 2
+D 613 1 2
+
+S
+
+#SPECIALS
+M 619 spec_fido
+M 620 spec_cast_mage
+M 621 spec_executioner
+M 622 spec_breath_any
+S
+
+#$
