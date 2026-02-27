@@ -175,7 +175,6 @@ L 40 40 20 0 0 0 0 0 0
 
 #OBJECTS
 
-* --- Regular auto-stat items (ITEM_AUTO only = 268435456) ---
 
 #9310
 ruinwarden fragment stone fragment~
@@ -243,7 +242,6 @@ A ring of clear faceted crystal catches what little light there is.
 L
 155
 
-* --- Loot-flagged items (ITEM_LOOT | ITEM_AUTO = 402653184) ---
 
 #9316
 crystalweaver robes arcane~
@@ -333,7 +331,6 @@ A silver medallion etched with arcane symbols floats an inch off the ground.
 L
 168
 
-* --- Puzzle/Quest items ---
 
 #9330
 puzzle glyph stone shard~
