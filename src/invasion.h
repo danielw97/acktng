@@ -25,6 +25,11 @@
 #define INVASION_MOB_MIN_OFFSET  5
 #define INVASION_MOB_MAX_OFFSET 15
 
+/* How far above/below boss_level an area's level range may be and still
+ * qualify as a valid boss spawn location.  E.g. a value of 10 means an
+ * area whose levels span [40, 60] can host a boss of level 50-70.        */
+#define INVASION_BOSS_AREA_SLACK  10
+
 /* Quest-point reward on success */
 #define INVASION_QP_REWARD      25
 
