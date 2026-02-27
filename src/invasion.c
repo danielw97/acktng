@@ -23,8 +23,9 @@
 #include <string.h>
 #include <time.h>
 
-#include "globals.h"
+#include "ack.h"
 #include "magic.h"
+#include "invasion.h"
 
 /* -----------------------------------------------------------------------
  * Wave mob profile type — declared here so invasion_mobs.h can use it.
@@ -81,6 +82,7 @@ static int        invasion_boss_profile  = -1;
 /* -----------------------------------------------------------------------
  * Forward declarations
  * --------------------------------------------------------------------- */
+static ROOM_INDEX_DATA *pick_boss_room    (int boss_level);
 static void       invasion_start         (void);
 static void       invasion_end           (bool success);
 static CHAR_DATA *spawn_invasion_mob     (int level, bool is_boss, int prof_idx);
@@ -322,9 +324,66 @@ static bool invasion_boss_cast(CHAR_DATA *mob)
 }
 
 /* -----------------------------------------------------------------------
+ * pick_boss_room()
+ * Finds a random room inside a level-appropriate area for the boss to
+ * spawn in.  An area qualifies if its min_level..max_level range overlaps
+ * [boss_level - INVASION_BOSS_AREA_SLACK, boss_level + INVASION_BOSS_AREA_SLACK].
+ *
+ * Algorithm (reservoir sampling, single pass):
+ *   Walk every qualifying area's room list, pick one room at random so
+ *   that each qualifying room has equal probability of being chosen.
+ *
+ * Falls back to INVASION_START_VNUM if no suitable area/room is found.
+ * --------------------------------------------------------------------- */
+static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
+{
+    AREA_DATA        *pArea;
+    BUILD_DATA_LIST  *pList;
+    ROOM_INDEX_DATA  *chosen  = NULL;
+    int               n       = 0;   /* total qualifying rooms seen so far */
+    int               lo      = boss_level - INVASION_BOSS_AREA_SLACK;
+    int               hi      = boss_level + INVASION_BOSS_AREA_SLACK;
+
+    for (pArea = first_area; pArea != NULL; pArea = pArea->next)
+    {
+        /* Skip areas with no level data set (both zero means "unset"). */
+        if (pArea->min_level == 0 && pArea->max_level == 0)
+            continue;
+
+        /* Area level range must overlap the boss level window. */
+        if (pArea->max_level < lo || pArea->min_level > hi)
+            continue;
+
+        /* Reservoir-sample every room in this qualifying area. */
+        for (pList = pArea->first_area_room; pList != NULL; pList = pList->next)
+        {
+            ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)pList->data;
+            if (room == NULL) continue;
+
+            n++;
+            /* Replace chosen with probability 1/n (uniform distribution). */
+            if (number_range(1, n) == 1)
+                chosen = room;
+        }
+    }
+
+    if (chosen != NULL)
+        return chosen;
+
+    /* Fallback: original fixed spawn room. */
+    bug("pick_boss_room: no level-appropriate room for boss level %d, "
+        "falling back to INVASION_START_VNUM.", boss_level);
+    return get_room_index(INVASION_START_VNUM);
+}
+
+/* -----------------------------------------------------------------------
  * spawn_invasion_mob()
  * Creates a clone of the template mob and configures it as an invasion mob.
  * prof_idx is only used when is_boss is TRUE.
+ *
+ * Bosses   : placed in a random room inside a level-appropriate area.
+ * Wave mobs: placed in INVASION_START_VNUM as before.
+ * All mobs : flagged ACT_UNDEAD, ACT_SENTINEL, ACT_NOASSIST.
  * --------------------------------------------------------------------- */
 static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx)
 {
@@ -343,9 +402,20 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx)
         bug("spawn_invasion_mob: template mob vnum %d not found.", INVASION_TEMPLATE_MOB);
         return NULL;
     }
-    if ((spawn_room = get_room_index(INVASION_START_VNUM)) == NULL)
+
+    /* Bosses get a level-appropriate random room; wave mobs use the fixed entry point. */
+    if (is_boss)
     {
-        bug("spawn_invasion_mob: spawn room %d not found.", INVASION_START_VNUM);
+        spawn_room = pick_boss_room(level);
+    }
+    else
+    {
+        spawn_room = get_room_index(INVASION_START_VNUM);
+    }
+
+    if (spawn_room == NULL)
+    {
+        bug("spawn_invasion_mob: no valid spawn room found.", 0);
         return NULL;
     }
 
@@ -393,6 +463,7 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx)
     REMOVE_BIT(mob->act, ACT_AGGRESSIVE);
     SET_BIT(mob->act, ACT_SENTINEL);
     SET_BIT(mob->act, ACT_NOASSIST);
+    SET_BIT(mob->act, ACT_UNDEAD);   /* all invasion mobs are undead */
 
     if (is_boss)
         apply_boss_profile(mob, prof_idx, level);
@@ -545,6 +616,7 @@ void invasion_rooms_update(void)
         ch_next = ch->next;
 
         if (!mob_is_invasion_mob(ch))    continue;
+        if (ch == invasion_boss)         continue;  /* boss does not march */
         if (ch->in_room == NULL)         continue;
         if (ch->fighting != NULL)        continue;
         if (ch->position < POS_STANDING) continue;
