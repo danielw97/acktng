@@ -1,8 +1,14 @@
 #AREA
-The Void Citadel of Kel'Shadra~
-V 610 999
+Kel'Shadra - The Void Citadel~
+Q 16
+K kelshadra~
+L {150 170}~
+N 0
 I 150 170
-~
+V 610 999
+X 0
+F 15
+U You hear the screams of the void within your head.~
 #HELPS
 0 $~
 
