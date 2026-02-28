@@ -2733,19 +2733,6 @@ M 0 1173 1 1211 (null)
 
 M 0 1179 1 1208 (null)
 
-
-
-
-
-
-D 0 1211 0 2 (null)
-
-D 0 1211 1 2 (null)
-
-D 0 1211 2 2 (null)
-
-D 0 1211 3 2 (null)
-
 S
 #SPECIALS
 M 1162 spec_cast_cleric
