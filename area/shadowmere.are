@@ -1771,11 +1771,12 @@ S
 #1400
 skeleton warrior~
 @@Ka skeleton warrior@@N~
-@@KA skeleton warrior@@D clad in @@Krusted armor@@D stands here, its empty eye sockets
-burning with @@Kfaint green light@@D.@@N~
+@@KA skeleton warrior@@D clad in @@Krusted armor@@D stands here, its empty eye sockets burning with @@Kfaint green light@@D.@@N
+~
 @@DThis undead warrior still carries the weapons of its living days, though
 the flesh that once wielded them is long gone. Its movements are jerky
-and purposeful, driven by @@Knecromantic compulsion@@D rather than thought.@@N~
+and purposeful, driven by @@Knecromantic compulsion@@D rather than thought.@@N
+~
 16481 512 -1000 S
 35 1
 0 -40 5 5
@@ -1789,9 +1790,11 @@ L 50 50 0 0 0 0 0 0 0
 #1401
 rotting ghoul~
 @@Da rotting ghoul@@N~
-@@DA rotting ghoul@@D lurches about the area, @@Rstained dark with old blood@@D.@@N~
+@@DA rotting ghoul@@D lurches about the area, @@Rstained dark with old blood@@D.@@N
+~
 @@DThis once-human creature was consumed by dark hunger in death, and now
-seeks living flesh with @@Rsingleminded@@D and terrible drive.@@N~
+seeks living flesh with @@Rsingleminded@@D and terrible drive.@@N
+~
 16481 512 -1000 S
 38 1
 0 -30 3 3
@@ -1805,9 +1808,11 @@ L 50 50 0 0 0 0 0 0 0
 #1402
 plague wraith~
 @@Da plague wraith@@N~
-@@DA plague wraith@@D drifts silently through the area, its form @@Kunsubstantial@@D.@@N~
+@@DA plague wraith@@D drifts silently through the area, its form @@Kunsubstantial@@D.@@N
+~
 @@DThe plague wraith is a spirit warped by disease, now capable of spreading its
-affliction through @@Rmerely being present@@D. It shimmers with @@Knecrotic energy@@D.@@N~
+affliction through @@Rmerely being present@@D. It shimmers with @@Knecrotic energy@@D.@@N
+~
 16481 524800 -1000 S
 40 0
 0 -20 0 0
@@ -1821,10 +1826,12 @@ L 50 50 0 0 0 0 0 0 0
 #1403
 grave robber~
 @@Ka grave robber@@N~
-@@KA grave robber@@D crouches in the shadows, a @@Rbloodied shovel@@D in hand.@@N~
+@@KA grave robber@@D crouches in the shadows, a @@Rbloodied shovel@@D in hand.@@N
+~
 @@DThis living human has gone feral in the service of the dark powers here,
 trading morality for whatever scraps of power the dead can offer. @@KUntrustworthy@@D
-in life and doubly so now.@@N~
+in life and doubly so now.@@N
+~
 97 0 -500 S
 36 1
 0 -35 6 6
@@ -1838,9 +1845,11 @@ L 50 50 0 0 0 0 0 0 0
 #1404
 shadow hound~
 @@Ra shadow hound@@N~
-@@RA shadow hound@@D prowls the area, a @@Ksolid shadow@@D in the shape of a massive dog.@@N~
+@@RA shadow hound@@D prowls the area, a @@Ksolid shadow@@D in the shape of a massive dog.@@N
+~
 @@DThis creature is pure concentrated darkness given predatory form. It hunts
-by sensing warmth and heartbeats, and @@Rno mere torchlight@@D can illuminate it fully.@@N~
+by sensing warmth and heartbeats, and @@Rno mere torchlight@@D can illuminate it fully.@@N
+~
 131169 512 -1000 S
 42 0
 0 -50 8 8
@@ -1854,10 +1863,12 @@ L 50 50 0 0 0 0 0 0 0
 #1405
 bone archer~
 @@Ka bone archer@@N~
-@@KA bone archer@@D takes aim from behind @@Kfallen masonry@@D.@@N~
+@@KA bone archer@@D takes aim from behind @@Kfallen masonry@@D.@@N
+~
 @@DSkeletal archers are a particularly nasty form of undead, capable of maintaining
 ranged assault while their melee brethren close in. This one's @@Kbow is strung
-with tendon@@D and the arrows tip with @@Rsharpened bone@@D.@@N~
+with tendon@@D and the arrows tip with @@Rsharpened bone@@D.@@N
+~
 16481 512 -1000 S
 37 1
 0 -35 6 6
@@ -1871,10 +1882,12 @@ L 50 50 0 0 0 0 0 0 0
 #1406
 necromancer acolyte~
 @@Ka necromancer acolyte@@N~
-@@KA necromancer acolyte@@D chants quietly, its @@Rrobes stained with ritual markings@@D.@@N~
+@@KA necromancer acolyte@@D chants quietly, its @@Rrobes stained with ritual markings@@D.@@N
+~
 @@DYoung students of the forbidden arts, these acolytes have proven their
 dedication by surviving this long in Shadowmere. They cast @@Roffensive spells@@D
-with reckless abandon, unconcerned with their own safety.@@N~
+with reckless abandon, unconcerned with their own safety.@@N
+~
 97 0 -750 S
 39 0
 0 -20 0 0
@@ -1888,10 +1901,12 @@ L 50 50 0 0 0 0 0 0 0
 #1407
 wight soldier~
 @@Ra wight soldier@@N~
-@@RA wight soldier@@D stands at attention, @@Kremnants of a uniform@@D still visible.@@N~
+@@RA wight soldier@@D stands at attention, @@Kremnants of a uniform@@D still visible.@@N
+~
 @@DWights retain a fragment of their former military discipline even in undeath.
 This one still marches routes it walked in life, @@Rdefending territory@@D it no
-longer has any stake in with @@Ksavage efficiency@@D.@@N~
+longer has any stake in with @@Ksavage efficiency@@D.@@N
+~
 16481 512 -1000 S
 44 1
 0 -55 8 9
@@ -1905,10 +1920,12 @@ L 50 50 0 0 0 0 0 0 0
 #1408
 swamp leech giant~
 @@Ra giant swamp leech@@N~
-@@RA giant swamp leech@@D undulates in the murk, @@Rseeking warm blood@@D.@@N~
+@@RA giant swamp leech@@D undulates in the murk, @@Rseeking warm blood@@D.@@N
+~
 @@DThese creatures have grown to enormous size in the corrupted waters of
 Shadowmere. Their bite @@Rdrains vital energy@@D as surely as it drains blood,
-and infections from their saliva are invariably fatal if untreated.@@N~
+and infections from their saliva are invariably fatal if untreated.@@N
+~
 97 0 -800 S
 41 0
 0 -40 7 7
@@ -1922,10 +1939,12 @@ L 50 50 0 0 0 0 0 0 0
 #1409
 revenant knight~
 @@Ka revenant knight@@N~
-@@KA revenant knight@@D stands guard, @@Rblack armor adorned with death runes@@D.@@N~
+@@KA revenant knight@@D stands guard, @@Rblack armor adorned with death runes@@D.@@N
+~
 @@DRevenant knights are warriors who died holding terrible grudges, and now
 stalk the world driven by @@Rpure hateful purpose@@D. They are faster and stronger
-than living knights and feel no pain.@@N~
+than living knights and feel no pain.@@N
+~
 16481 512 -1000 S
 46 1
 0 -60 10 11
@@ -1939,10 +1958,12 @@ L 50 50 0 0 0 0 0 0 0
 #1410
 dark sorcerer~
 @@Ka dark sorcerer@@N~
-@@KA dark sorcerer@@D gestures precisely, @@Rweaving ominous patterns in the air@@D.@@N~
+@@KA dark sorcerer@@D gestures precisely, @@Rweaving ominous patterns in the air@@D.@@N
+~
 @@DDark sorcerers have given their souls in exchange for power over death and
 shadow. They @@Rcast with terrifying effectiveness@@D and can call upon multiple
-destructive schools of magic simultaneously.@@N~
+destructive schools of magic simultaneously.@@N
+~
 131169 0 -800 S
 43 0
 0 -25 0 0
@@ -1956,10 +1977,12 @@ L 50 50 0 0 0 0 0 0 0
 #1411
 deathknight~
 @@Ra deathknight@@N~
-@@RA deathknight@@D strides through the hall, @@Rcorrupted plate radiating cold@@D.@@N~
+@@RA deathknight@@D strides through the hall, @@Rcorrupted plate radiating cold@@D.@@N
+~
 @@DA deathknight is both physical terror and wielder of dark magic - a martial
 champion cursed to serve death itself. They combine @@Rbrutal weapon skill@@D
-with @@Kdark sorcery@@D into an overwhelming offensive.@@N~
+with @@Kdark sorcery@@D into an overwhelming offensive.@@N
+~
 16481 512 -1000 S
 48 1
 0 -65 11 12
@@ -1973,10 +1996,12 @@ L 50 50 0 0 0 0 0 0 0
 #1412
 tomb lurker~
 @@Ka tomb lurker@@N~
-@@KA tomb lurker@@D skitters along the ceiling, @@Rdefying gravity with unnatural ease@@D.@@N~
+@@KA tomb lurker@@D skitters along the ceiling, @@Rdefying gravity with unnatural ease@@D.@@N
+~
 @@DTomb lurkers are @@Rmalformed undead@@D that have abandoned bipedal locomotion
 entirely, preferring to hunt from walls and ceilings. Their claws can @@Kpenetrate
-most armor@@D with ease.@@N~
+most armor@@D with ease.@@N
+~
 16481 512 -1000 S
 45 1
 0 -55 9 10
@@ -1990,10 +2015,12 @@ L 50 50 0 0 0 0 0 0 0
 #1413
 wailing banshee~
 @@Ra wailing banshee@@N~
-@@RA wailing banshee@@D drifts near the ceiling, its mouth frozen in a @@Ksilent scream@@D.@@N~
+@@RA wailing banshee@@D drifts near the ceiling, its mouth frozen in a @@Ksilent scream@@D.@@N
+~
 @@DThe banshee was once a person of great power and greater suffering. In death
 it became a vessel of @@Rpure auditory destruction@@D, its cry capable of @@Kcausing
-hemorrhage@@D in the unprepared.@@N~
+hemorrhage@@D in the unprepared.@@N
+~
 16481 524800 -1000 S
 50 2
 0 -30 0 0
@@ -2007,10 +2034,12 @@ L 50 50 0 0 0 0 0 0 0
 #1414
 cursed jailer~
 @@Ka cursed jailer@@N~
-@@KA cursed jailer@@D drags heavy chains, its @@Rflesh marked by decades of dark magic@@D.@@N~
+@@KA cursed jailer@@D drags heavy chains, its @@Rflesh marked by decades of dark magic@@D.@@N
+~
 @@DThe jailers of Shadowmere are living humans cursed to serve eternally.
 They @@Rcannot die naturally@@D and their prolonged torment has made them @@Kfearfully
-powerful@@D fighters who enjoy their work a great deal too much.@@N~
+powerful@@D fighters who enjoy their work a great deal too much.@@N
+~
 131169 0 -750 S
 47 1
 0 -70 12 13
@@ -2024,10 +2053,12 @@ L 50 50 0 0 0 0 0 0 0
 #1415
 bog horror~
 @@Ra bog horror@@N~
-@@RA bog horror@@D wallows half-submerged, @@Rits bloated form barely holding together@@D.@@N~
+@@RA bog horror@@D wallows half-submerged, @@Rits bloated form barely holding together@@D.@@N
+~
 @@DThe bog horror is what happens when a powerful entity drowns in @@Kcursed water@@D.
 It swells to enormous size and gains a @@Rterrifying resilience@@D, able to absorb
-tremendous damage before collapsing.@@N~
+tremendous damage before collapsing.@@N
+~
 97 0 -900 S
 49 0
 0 -45 8 8
@@ -2041,10 +2072,12 @@ L 50 50 0 0 0 0 0 0 0
 #1416
 shadow priest~
 @@Ka shadow priest@@N~
-@@KA shadow priest@@D intones a dark litany, @@Rarms spread wide in supplication@@D.@@N~
+@@KA shadow priest@@D intones a dark litany, @@Rarms spread wide in supplication@@D.@@N
+~
 @@DShadow priests have devoted themselves to the liturgy of undeath and corruption.
 They @@Rheal their allies@@D and @@Kinflict devastating dark magic@@D upon enemies,
-making them priority targets in any engagement.@@N~
+making them priority targets in any engagement.@@N
+~
 131169 0 -850 S
 51 0
 0 -25 0 0
@@ -2058,10 +2091,12 @@ L 50 50 0 0 0 0 0 0 0
 #1417
 executioner wraith~
 @@Ran executioner wraith@@N~
-@@RAn executioner wraith@@D hovers near the torture implements, @@Kgreat axe@@D drifting by its side.@@N~
+@@RAn executioner wraith@@D hovers near the torture implements, @@Kgreat axe@@D drifting by its side.@@N
+~
 @@DThis massive spectral figure was the chief torturer of Shadowmere Keep in
 life, and continued the role in death. It has developed @@Kterrifying skill@@D
-with its ghostly executioner's axe.@@N~
+with its ghostly executioner's axe.@@N
+~
 16481 524800 -1000 S
 52 1
 0 -75 13 14
@@ -2075,10 +2110,12 @@ L 50 50 0 0 0 0 0 0 0
 #1418
 corrupted alchemist~
 @@Ka corrupted alchemist@@N~
-@@KA corrupted alchemist@@D works frantically at the benches, @@Rits hands encrusted with reagents@@D.@@N~
+@@KA corrupted alchemist@@D works frantically at the benches, @@Rits hands encrusted with reagents@@D.@@N
+~
 @@DThis unfortunate scholar delved too deeply into the intersection of chemistry
 and necromancy. Its experiments continue beyond its death, its body acting as
-both @@Klaboratory and laboratory assistant@@D. It hurls @@Rcorrosive concoctions@@D.@@N~
+both @@Klaboratory and laboratory assistant@@D. It hurls @@Rcorrosive concoctions@@D.@@N
+~
 16481 0 -850 S
 50 0
 0 -30 0 0
@@ -2092,10 +2129,12 @@ L 50 50 0 0 0 0 0 0 0
 #1419
 chain revenant~
 @@Ra chain revenant@@N~
-@@RA chain revenant@@D rattles through the dungeon, @@Kchains trailing from its wrists@@D.@@N~
+@@RA chain revenant@@D rattles through the dungeon, @@Kchains trailing from its wrists@@D.@@N
+~
 @@DChain revenants are undead beings bound by @@Rmagical chains@@D they can control
 and weaponize. The chains extend far beyond their apparent length, lashing
-out with @@Kprecise and lethal intent@@D.@@N~
+out with @@Kprecise and lethal intent@@D.@@N
+~
 16481 512 -1000 S
 53 1
 0 -80 14 15
@@ -2109,10 +2148,12 @@ L 50 50 0 0 0 0 0 0 0
 #1420
 specter~
 @@Ra specter@@N~
-@@RA specter@@D drifts silently through the chapel, @@Kcold light where eyes should be@@D.@@N~
+@@RA specter@@D drifts silently through the chapel, @@Kcold light where eyes should be@@D.@@N
+~
 @@DSpecters are the @@Rhighly distilled remnants@@D of powerful spellcasters. They
 cast with @@Kfull effectiveness@@D despite having no physical form, and can pass
-through most physical barriers at will.@@N~
+through most physical barriers at will.@@N
+~
 16481 524800 -1000 S
 55 0
 0 -30 0 0
@@ -2126,10 +2167,12 @@ L 50 50 0 0 0 0 0 0 0
 #1421
 undying knight~
 @@Dan undying knight@@N~
-@@DAn undying knight@@D stands motionless in the antechamber, @@Rwaiting@@D.@@N~
+@@DAn undying knight@@D stands motionless in the antechamber, @@Rwaiting@@D.@@N
+~
 @@DThese elite undead warriors guard the Lich's inner sanctum, animated by a
 fragment of Valzareth's own will. They fight with @@Kinhuman precision@@D and
-combine devastating physical attacks with @@Rdark spell volleys@@D.@@N~
+combine devastating physical attacks with @@Rdark spell volleys@@D.@@N
+~
 16481 512 -1000 S
 60 1
 0 -90 16 17
@@ -2143,14 +2186,16 @@ L 50 50 0 0 0 0 0 0 0
 #1422
 VALZARETH THE UNDYING lich~
 @@KValzareth the Undying@@N~
-@@KValzareth the Undying@@R stands here upon the throne of bone, radiating dread power.@@N~
+@@KValzareth the Undying@@R stands here upon the throne of bone, radiating dread power.@@N
+~
 @@DValzareth the Undying is the Lich who rules Shadowmere, an undead archmage
 of immense power who transcended mortality through @@Rterrible sacrifice@@D. Its
 phylactery hangs openly at its neck - a @@Kgemmed skull@@D of deep violet - as
 a taunt to any who would attempt to destroy it. Valzareth's robe is a swirling
 mass of @@Rliving shadow@@D, and the bones of its visible hands are @@Kperfectly clean@@D
 and articulate with eerie grace. The air around it @@Rdistorts@@D as if reality
-itself recoils from the concentration of death-magic.@@N~
+itself recoils from the concentration of death-magic.@@N
+~
 16403 524800 -1000 S
 70 0
 50000 -200 0 0
@@ -2164,13 +2209,15 @@ L 50 90 0 0 0 0 0 0 0
 #1423
 MALGRATH THE BONELORD skeletal boss~
 @@KMalgrath the Bonelord@@N~
-@@KMalgrath the Bonelord@@R looms here, a towering construct of fused bone and iron.@@N~
+@@KMalgrath the Bonelord@@R looms here, a towering construct of fused bone and iron.@@N
+~
 @@DMalgrath the Bonelord is the Lich's primary enforcer - a @@Rcolossal skeletal
 construct@@D twelve feet tall, built from the bones of hundreds of fallen warriors,
 fused together with @@Knecrotic iron@@D and @@Rseal runes@@D. Its right arm has been
 replaced with a @@Kmassive bone-and-steel war hammer@@D. Its chest cavity is
 visible and @@Rpermanently alight with cold green flame@@D. It does not speak;
-it has no need.@@N~
+it has no need.@@N
+~
 16403 512 -1000 S
 65 1
 35000 -150 20 25
@@ -2183,10 +2230,12 @@ L 50 90 0 0 0 0 0 0 0
 #1424
 ossuary guardian~
 @@Ka ossuary guardian@@N~
-@@KAn ossuary guardian@@D stands watch over @@Rstacked bones with hollow reverence@@D.@@N~
+@@KAn ossuary guardian@@D stands watch over @@Rstacked bones with hollow reverence@@D.@@N
+~
 @@DThe ossuary guardian was once charged with maintaining this chamber's
 terrible order. It continues its role in undeath, attacking those who
-disturb the arranged dead with @@Kfurious physical retribution@@D.@@N~
+disturb the arranged dead with @@Kfurious physical retribution@@D.@@N
+~
 16481 512 -1000 S
 38 1
 0 -40 6 7
@@ -2200,10 +2249,12 @@ L 50 50 0 0 0 0 0 0 0
 #1425
 dark librarian~
 @@Ka dark librarian@@N~
-@@KA dark librarian@@D moves silently between shelves, clutching @@Ra tome of skin@@D.@@N~
+@@KA dark librarian@@D moves silently between shelves, clutching @@Ra tome of skin@@D.@@N
+~
 @@DThis undead scholar was the Black Library's keeper in life. It retains
 all its knowledge of dark magic and now casts with the accumulated
-expertise of @@Kcenturies of study@@D.@@N~
+expertise of @@Kcenturies of study@@D.@@N
+~
 16481 0 -900 S
 44 0
 0 -20 0 0
@@ -2217,10 +2268,12 @@ L 50 50 0 0 0 0 0 0 0
 #1426
 ritual construct~
 @@Ra ritual construct@@N~
-@@RA ritual construct@@D animated by @@Kcircle-bound magic@@D prowls this area.@@N~
+@@RA ritual construct@@D animated by @@Kcircle-bound magic@@D prowls this area.@@N
+~
 @@DA magical automaton built through a binding ritual. It has no mind of its
 own but defends its programmed territory with ruthless @@Kcombined physical
-and magical ability@@D.@@N~
+and magical ability@@D.@@N
+~
 16481 512 -1000 S
 47 1
 0 -60 9 9
@@ -2234,10 +2287,12 @@ L 50 50 0 0 0 0 0 0 0
 #1427
 skeletal commander~
 @@Ka skeletal commander@@N~
-@@KA skeletal commander@@D directs the undead garrison with @@Rpurposeful gestures@@D.@@N~
+@@KA skeletal commander@@D directs the undead garrison with @@Rpurposeful gestures@@D.@@N
+~
 @@DThis undead officer retains its battlefield intelligence and tactical skill,
 directing lesser skeletons even as it engages enemies personally with
-@@Kdevastating physical attacks@@D.@@N~
+@@Kdevastating physical attacks@@D.@@N
+~
 16481 512 -1000 S
 50 1
 0 -70 12 13
@@ -2251,10 +2306,12 @@ L 50 50 0 0 0 0 0 0 0
 #1428
 shadow bat swarm~
 @@Ra shadow bat swarm@@N~
-@@RA shadow bat swarm@@D boils out of the darkness, a @@Kcloud of teeth and claws@@D.@@N~
+@@RA shadow bat swarm@@D boils out of the darkness, a @@Kcloud of teeth and claws@@D.@@N
+~
 @@DNeither truly bats nor truly shadow, these creatures are a magical
 manifestation of darkness given predatory form. They attack in overwhelming
-numbers, their @@Kcollective bite@@D draining vital energy.@@N~
+numbers, their @@Kcollective bite@@D draining vital energy.@@N
+~
 131169 512 -1000 S
 40 0
 0 -45 7 7
@@ -2268,10 +2325,12 @@ L 50 50 0 0 0 0 0 0 0
 #1429
 vampire spawn~
 @@Ra vampire spawn@@N~
-@@RA vampire spawn@@D clings to the ceiling with @@Kunnatural ease@@D, eyes like red coals.@@N~
+@@RA vampire spawn@@D clings to the ceiling with @@Kunnatural ease@@D, eyes like red coals.@@N
+~
 @@DA recently-turned vampire still learning its new capabilities - which means it
 is @@Runpredictable and dangerous@@D. It combines the physical power of undeath
-with incipient magical ability.@@N~
+with incipient magical ability.@@N
+~
 16481 524800 -1000 S
 52 1
 0 -70 12 13
@@ -2285,10 +2344,12 @@ L 50 50 0 0 0 0 0 0 0
 #1430
 crypt spider~
 @@Ra crypt spider@@N~
-@@RA crypt spider@@D the size of a large dog skitters through the shadows here.@@N~
+@@RA crypt spider@@D the size of a large dog skitters through the shadows here.@@N
+~
 @@DEvolved in perfect darkness, the crypt spider hunts by vibration alone.
 Its venom is @@Rparalytic@@D, and it wraps victims in webs of extraordinary
-strength before feeding at leisure.@@N~
+strength before feeding at leisure.@@N
+~
 131169 0 -800 S
 43 0
 0 -50 8 9
@@ -2302,10 +2363,12 @@ L 50 50 0 0 0 0 0 0 0
 #1431
 fen shambler~
 @@Ra fen shambler@@N~
-@@RA fen shambler@@D rises from the dark water, @@Rdripping and vast@@D.@@N~
+@@RA fen shambler@@D rises from the dark water, @@Rdripping and vast@@D.@@N
+~
 @@DA plant-and-flesh hybrid born of the corrupted fens, the fen shambler is
 a creature of @@Rpure physical might@@D. It has survived centuries of
-corruption by @@Kabsorbing everything that entered its territory@@D.@@N~
+corruption by @@Kabsorbing everything that entered its territory@@D.@@N
+~
 97 0 -1000 S
 48 0
 0 -60 10 10
@@ -2319,10 +2382,12 @@ L 50 50 0 0 0 0 0 0 0
 #1432
 plague bearer~
 @@Ka plague bearer@@N~
-@@KA plague bearer@@D shuffles forward, @@Rsuppurating wounds visible even at distance@@D.@@N~
+@@KA plague bearer@@D shuffles forward, @@Rsuppurating wounds visible even at distance@@D.@@N
+~
 @@DThe plague bearer is a living vessel of magical disease, its body saturated
 with necromantic pathogen. It casts @@Rdisease-based spells@@D and its mere
-proximity is hazardous to health.@@N~
+proximity is hazardous to health.@@N
+~
 131169 0 -850 S
 46 0
 0 -25 0 0
@@ -2336,10 +2401,12 @@ L 50 50 0 0 0 0 0 0 0
 #1433
 bone golem~
 @@Ra bone golem@@N~
-@@RA bone golem@@D of enormous size @@Krumbles forward, joints grinding@@D.@@N~
+@@RA bone golem@@D of enormous size @@Krumbles forward, joints grinding@@D.@@N
+~
 @@DConstructed from the bones of dozens of creatures fused into a single
 mobile form, the bone golem is a purely physical engine of destruction.
-It hits @@Rwith the force of a battering ram@@D and shrugs off most damage.@@N~
+It hits @@Rwith the force of a battering ram@@D and shrugs off most damage.@@N
+~
 16481 512 -1000 S
 55 1
 0 -80 13 14
@@ -2353,10 +2420,12 @@ L 50 50 0 0 0 0 0 0 0
 #1434
 forsaken cultist~
 @@Ka forsaken cultist@@N~
-@@KA forsaken cultist@@D clutches a @@Rbloodstained ritual knife@@D, eyes wide.@@N~
+@@KA forsaken cultist@@D clutches a @@Rbloodstained ritual knife@@D, eyes wide.@@N
+~
 @@DA living human who has surrendered their sanity to the service of Shadowmere.
 They fight with suicidal ferocity and a @@Kblessed madness@@D that makes them
-immune to fear.@@N~
+immune to fear.@@N
+~
 131169 0 -700 S
 41 1
 0 -40 7 8
@@ -2370,10 +2439,12 @@ L 50 50 0 0 0 0 0 0 0
 #1435
 carrion horror~
 @@Ra carrion horror@@N~
-@@RA carrion horror@@D drags itself forward on too many limbs, @@Rreaking of decay@@D.@@N~
+@@RA carrion horror@@D drags itself forward on too many limbs, @@Rreaking of decay@@D.@@N
+~
 @@DThe carrion horror is a chimera of undead flesh from multiple sources,
 stitched together by necromantic energy. It is large, fast, and @@Kfeeds
-on the living and dead alike@@D.@@N~
+on the living and dead alike@@D.@@N
+~
 16481 512 -1000 S
 53 1
 0 -70 11 12
@@ -2387,10 +2458,12 @@ L 50 50 0 0 0 0 0 0 0
 #1436
 sorcerer lich minor~
 @@Ka minor lich@@N~
-@@KA minor lich@@D regards you with hollow eyes over steepled bone fingers.@@N~
+@@KA minor lich@@D regards you with hollow eyes over steepled bone fingers.@@N
+~
 @@DA lesser undead spellcaster who achieved a fragment of lichdom through
 inferior ritual. Still extraordinarily dangerous - it casts with the
-full power of @@Rdecades of collected necromantic study@@D.@@N~
+full power of @@Rdecades of collected necromantic study@@D.@@N
+~
 16481 524800 -1000 S
 58 0
 0 -30 0 0
@@ -2404,10 +2477,12 @@ L 50 50 0 0 0 0 0 0 0
 #1437
 death knight elite~
 @@Dan elite death knight@@N~
-@@DAn elite death knight@@D in @@Kpristine black plate@@D stands at guard.@@N~
+@@DAn elite death knight@@D in @@Kpristine black plate@@D stands at guard.@@N
+~
 @@DValzareth's personal guard - a death knight of exceptional power, refined
 over years of service into a @@Rperfect weapon@@D that combines martial
-dominance with lethal spellcasting.@@N~
+dominance with lethal spellcasting.@@N
+~
 16481 512 -1000 S
 62 1
 0 -100 16 18
@@ -2421,10 +2496,12 @@ L 50 50 0 0 0 0 0 0 0
 #1438
 blood wraith~
 @@Ra blood wraith@@N~
-@@RA blood wraith@@D coils in the air, @@Kits form a swirling mass of dried blood@@D.@@N~
+@@RA blood wraith@@D coils in the air, @@Kits form a swirling mass of dried blood@@D.@@N
+~
 @@DFormed from the blood of thousands of sacrifices, the blood wraith is a
 purely magical entity of considerable destructive power. It @@Rcasts exclusively@@D,
-never engaging physically.@@N~
+never engaging physically.@@N
+~
 16481 524800 -1000 S
 56 0
 0 -30 0 0
@@ -2438,10 +2515,12 @@ L 50 50 0 0 0 0 0 0 0
 #1439
 necromancer black robe~
 @@Ka black-robed necromancer@@N~
-@@KA black-robed necromancer@@D draws @@Rglyph patterns in the air@@D with practiced calm.@@N~
+@@KA black-robed necromancer@@D draws @@Rglyph patterns in the air@@D with practiced calm.@@N
+~
 @@DOne of Shadowmere's senior practitioners of death magic. A living human of
 considerable age who has @@Rextended their life@@D through dark means, trading
-fragments of humanity for @@Kever-greater power@@D.@@N~
+fragments of humanity for @@Kever-greater power@@D.@@N
+~
 131169 0 -900 S
 54 0
 0 -25 0 0
@@ -2455,10 +2534,11 @@ L 50 50 0 0 0 0 0 0 0
 #1440
 armory guardian animated~
 @@KAn animated armory guardian@@N~
-@@NAn animated armory guardian@@D, @@Rstill wearing and wielding the arms@@D it was
-assembled from, stands ready.@@N~
+@@NAn animated armory guardian@@D, @@Rstill wearing and wielding the arms@@D it was assembled from, stands ready.@@N
+~
 @@DThis guardian has been animated directly inside the armoury's best equipment.
-It fights with @@Kfull martial discipline@@D augmented by the quality of its arms.@@N~
+It fights with @@Kfull martial discipline@@D augmented by the quality of its arms.@@N
+~
 16481 512 -1000 S
 57 1
 0 -85 14 15
@@ -2472,10 +2552,12 @@ L 50 50 0 0 0 0 0 0 0
 #1441
 void stalker~
 @@Ra void stalker@@N~
-@@RA void stalker@@D flickers at the edge of visibility, @@Knot quite present@@D.@@N~
+@@RA void stalker@@D flickers at the edge of visibility, @@Knot quite present@@D.@@N
+~
 @@DThe void stalker exists partially outside normal space. It @@Rstrike from
 nowhere@@D, phase-step between attacks, and casts annihilating void energy
-with terrifying effect.@@N~
+with terrifying effect.@@N
+~
 16481 524800 -1000 S
 60 1
 0 -90 15 16
@@ -2489,13 +2571,15 @@ L 50 50 0 0 0 0 0 0 0
 #1442
 SERAPHINE THE CRIMSON COUNTESS vampire~
 @@KSeraphine the Crimson Countess@@N~
-@@KSeraphine the Crimson Countess@@R reclines languidly, regarding you with @@Kamused contempt@@D.@@N~
+@@KSeraphine the Crimson Countess@@R reclines languidly, regarding you with @@Kamused contempt@@D.@@N
+~
 @@DSeraphine the Crimson Countess is a vampire of vast age and terrible beauty.
 She ruled Shadowmere's keep long before Valzareth's ascension and remains
 here by @@Rterms of a compact@@D not widely understood. Her power is almost entirely
 magical - she casts with @@Kblinding speed and ruinous effect@@D, and her
 charisma is a weapon in itself. @@RHer eyes are deep red@@D, her smile @@Kknows
-something you do not@@D.@@N~
+something you do not@@D.@@N
+~
 16403 524800 -1000 S
 65 2
 20000 -150 0 0
@@ -2509,12 +2593,14 @@ L 50 90 0 0 0 0 0 0 0
 #1443
 MORDECHAI THE BONEWARDEN undead champion~
 @@KMordechai the Bonewarden@@N~
-@@KMordechai the Bonewarden@@R strides forward, @@Ka mountain of dark steel and purpose@@D.@@N~
+@@KMordechai the Bonewarden@@R strides forward, @@Ka mountain of dark steel and purpose@@D.@@N
+~
 @@DMordechai the Bonewarden was Shadowmere's greatest living champion, and
 death only improved him. He is the largest and most powerful physical
 combatant in the keep - a @@Rcolossal undead warrior@@D whose skill with weapons
 was unmatched in his living years and remains so in death. He does not cast;
-he does not need to. His @@Kwar-cleaver@@D removes the need for spells.@@N~
+he does not need to. His @@Kwar-cleaver@@D removes the need for spells.@@N
+~
 16403 512 -1000 S
 63 1
 25000 -160 22 25
@@ -2528,11 +2614,13 @@ L 50 90 0 0 0 0 0 0 0
 #1444
 THE MAZE HORROR labyrinth creature~
 @@KThe Maze Horror@@N~
-@@KThe Maze Horror@@R emerges from between the hedges, @@Kits true shape impossible to comprehend@@D.@@N~
+@@KThe Maze Horror@@R emerges from between the hedges, @@Kits true shape impossible to comprehend@@D.@@N
+~
 @@DThe Maze Horror is the creature that lives at the labyrinth's heart and
 has done so since before the labyrinth existed. It is a @@Rthing of pure
 spatial distortion@@D - when it attacks, space bends. It fights with both
-reality-warping physical strikes and @@Kexistence-erasing magical blasts@@D.@@N~
+reality-warping physical strikes and @@Kexistence-erasing magical blasts@@D.@@N
+~
 16403 524800 -1000 S
 67 0
 30000 -140 0 0
@@ -2546,11 +2634,13 @@ L 50 90 0 0 0 0 0 0 0
 #1445
 THE MASTER BINDER undead sorcerer~
 @@KThe Master Binder@@N~
-@@KThe Master Binder@@R hovers beside the iron mirror, @@Kone hand extended into its surface@@D.@@N~
+@@KThe Master Binder@@R hovers beside the iron mirror, @@Kone hand extended into its surface@@D.@@N
+~
 @@DThe Master Binder is Shadowmere's chief jailer and curse-weaver - a partially
 transformed necromancer whose body exists simultaneously in two states of being.
 It wields @@Rcorruption magic@@D and @@Kbinding spells@@D of extraordinary complexity,
-and hits with a @@Rphysical force@@D that should not be possible for something so thin.@@N~
+and hits with a @@Rphysical force@@D that should not be possible for something so thin.@@N
+~
 16403 524800 -1000 S
 64 0
 22000 -130 8 10
@@ -2564,10 +2654,12 @@ L 50 90 0 0 0 0 0 0 0
 #1446
 deathwing gargoyle~
 @@Ka deathwing gargoyle@@N~
-@@KA deathwing gargoyle@@D drops from a battlement, @@Rstone-grey wings snapping open@@D.@@N~
+@@KA deathwing gargoyle@@D drops from a battlement, @@Rstone-grey wings snapping open@@D.@@N
+~
 @@DThese massive stone-flesh hybrids haunt the outer walls of Shadowmere.
 Their hides are @@Knearly impenetrable@@D and their talons can rend most metals.
-They are @@Rdeceptively fast@@D for their size.@@N~
+They are @@Rdeceptively fast@@D for their size.@@N
+~
 16481 512 -1000 S
 49 1
 0 -75 12 13
@@ -2581,10 +2673,12 @@ L 50 50 0 0 0 0 0 0 0
 #1447
 shadow stalker~
 @@Ra shadow stalker@@N~
-@@RA shadow stalker@@D moves at the edge of perception, @@Kalways one step ahead@@D.@@N~
+@@RA shadow stalker@@D moves at the edge of perception, @@Kalways one step ahead@@D.@@N
+~
 @@DA pure stealth predator. The shadow stalker is the assassin of undeath -
 physically devastating, @@Rimpossible to pin down@@D, and capable of a few well-
-chosen debilitating spells that it uses with precision rather than abandon.@@N~
+chosen debilitating spells that it uses with precision rather than abandon.@@N
+~
 16481 524800 -1000 S
 51 1
 0 -65 10 11
@@ -2598,10 +2692,12 @@ L 50 50 0 0 0 0 0 0 0
 #1448
 forsaken priest~
 @@Ka forsaken priest@@N~
-@@KA forsaken priest@@D intones in a @@Rdead language, power gathering around it@@D.@@N~
+@@KA forsaken priest@@D intones in a @@Rdead language, power gathering around it@@D.@@N
+~
 @@DA former cleric who renounced their deity for the power of shadow. They
 retain @@Kdivine magic@@D but corrupted and inverted - spells of harm where
-there were spells of healing, @@Rcurse where there was grace@@D.@@N~
+there were spells of healing, @@Rcurse where there was grace@@D.@@N
+~
 131169 0 -850 S
 48 0
 0 -25 0 0
@@ -2615,10 +2711,12 @@ L 50 50 0 0 0 0 0 0 0
 #1449
 bone knight~
 @@Ka bone knight@@N~
-@@Ka bone knight@@D in @@Kimpressively complete armor@@D levels its lance.@@N~
+@@Ka bone knight@@D in @@Kimpressively complete armor@@D levels its lance.@@N
+~
 @@DThe bone knight is a mid-tier undead warrior - stronger than common skeletons,
 equipped with fine weapons, and capable of delivering @@Rstunning charges@@D. Its
-armor is real and maintained with unnatural care.@@N~
+armor is real and maintained with unnatural care.@@N
+~
 16481 512 -1000 S
 46 1
 0 -65 10 11
@@ -2632,10 +2730,12 @@ L 50 50 0 0 0 0 0 0 0
 #1450
 frost revenant~
 @@Ra frost revenant@@N~
-@@RA frost revenant@@D drifts forward, @@Kice crystals forming with each step@@D.@@N~
+@@RA frost revenant@@D drifts forward, @@Kice crystals forming with each step@@D.@@N
+~
 @@DA revenant whose lingering hatred has fused with the cold of the ice crypts.
 It delivers @@Rphysical attacks@@D suffused with @@Kfrost energy@@D and casts a small
-suite of cold-based offensive spells.@@N~
+suite of cold-based offensive spells.@@N
+~
 16481 524800 -1000 S
 53 1
 0 -70 11 11
@@ -2649,10 +2749,12 @@ L 50 50 0 0 0 0 0 0 0
 #1451
 fen witch~
 @@Ra fen witch@@N~
-@@RA fen witch@@D wades from the dark water, @@Rhair matted with weeds@@D.@@N~
+@@RA fen witch@@D wades from the dark water, @@Rhair matted with weeds@@D.@@N
+~
 @@DThe fen witch is a powerful caster who has lived in the corrupted fenland
 for decades, absorbing its dark magic into herself. She casts with the
-@@Kraw power of a naturally gifted witch@@D amplified by environmental corruption.@@N~
+@@Kraw power of a naturally gifted witch@@D amplified by environmental corruption.@@N
+~
 131169 0 -900 S
 52 0
 0 -25 0 0
@@ -2666,10 +2768,12 @@ L 50 50 0 0 0 0 0 0 0
 #1452
 catacomb crawler~
 @@Ra catacomb crawler@@N~
-@@RA catacomb crawler@@D skitters from a niche, @@Ksix limbs moving in eerie synchrony@@D.@@N~
+@@RA catacomb crawler@@D skitters from a niche, @@Ksix limbs moving in eerie synchrony@@D.@@N
+~
 @@DThe catacomb crawler is adapted for the narrow tunnels of the deep catacombs.
 Low to the ground and fast, it attacks with multiple @@Rlimbs simultaneously@@D,
-overwheling prey before it can respond.@@N~
+overwheling prey before it can respond.@@N
+~
 16481 512 -1000 S
 45 1
 0 -55 9 10
@@ -2683,10 +2787,12 @@ L 50 50 0 0 0 0 0 0 0
 #1453
 vampire lord~
 @@Ra vampire lord@@N~
-@@RA vampire lord@@D regards you with @@Kreign in its eyes@@D.@@N~
+@@RA vampire lord@@D regards you with @@Kreign in its eyes@@D.@@N
+~
 @@DAnother of Seraphine's get, the vampire lord has achieved enough power to
 act independently. It combines @@Rphysical vampiric might@@D with a
-comprehensive suite of @@Kdark magic@@D, making it dangerous at any range.@@N~
+comprehensive suite of @@Kdark magic@@D, making it dangerous at any range.@@N
+~
 16481 524800 -1000 S
 58 1
 0 -80 13 14
@@ -2700,11 +2806,13 @@ L 50 50 0 0 0 0 0 0 0
 #1454
 grave knight~
 @@Ka grave knight@@N~
-@@KA grave knight@@D in @@Rweathered armor covered in dried roses@@D stands vigil.@@N~
+@@KA grave knight@@D in @@Rweathered armor covered in dried roses@@D stands vigil.@@N
+~
 @@DA long-dead knight, still bound by an oath sworn over a grave. The grave
 knight has kept its watch for so long that it has @@Kfused with the stone@@D
 of the graveyard. Only the presence of living intruders brings it
-fully to violent life.@@N~
+fully to violent life.@@N
+~
 16481 512 -1000 S
 50 1
 0 -75 12 13
@@ -2718,10 +2826,12 @@ L 50 50 0 0 0 0 0 0 0
 #1455
 tower sentinel~
 @@Ka tower sentinel@@N~
-@@Ka tower sentinel@@D constructed of @@Kwhispering stone@@D watches the approach.@@N~
+@@Ka tower sentinel@@D constructed of @@Kwhispering stone@@D watches the approach.@@N
+~
 @@DA magical construct bound to the Screaming Tower, the sentinel uses the
 tower's acoustic properties to devastating magical effect while protecting
-itself with @@Rimpressive physical defenses@@D.@@N~
+itself with @@Rimpressive physical defenses@@D.@@N
+~
 16481 512 -1000 S
 49 1
 0 -65 10 10
@@ -2735,10 +2845,12 @@ L 50 50 0 0 0 0 0 0 0
 #1456
 corrupted oak ancient tree~
 @@Ka corrupted oak@@N~
-@@KA corrupted oak@@D shudders into movement, @@Rroots ripping free of the soil@@D.@@N~
+@@KA corrupted oak@@D shudders into movement, @@Rroots ripping free of the soil@@D.@@N
+~
 @@DThis once-ancient tree has been infused with dark magic over centuries of
 proximity to Shadowmere's corruption. It attacks with @@Kbranches like siege
-weapons@@D and is extraordinarily difficult to damage.@@N~
+weapons@@D and is extraordinarily difficult to damage.@@N
+~
 16481 512 -1000 S
 45 1
 0 -60 9 9
@@ -2752,10 +2864,12 @@ L 50 50 0 0 0 0 0 0 0
 #1457
 night hag~
 @@Ra night hag@@N~
-@@RA night hag@@D hovers in the corridor, @@Kher form flickering between solid and shadow@@D.@@N~
+@@RA night hag@@D hovers in the corridor, @@Kher form flickering between solid and shadow@@D.@@N
+~
 @@DThe night hag is a creature of pure malice - an ancient undead spellcaster
 who feeds on fear and despair. Her magical arsenal is @@Rdevastating and varied@@D,
-and she can sense weakness with @@Kunnatural precision@@D.@@N~
+and she can sense weakness with @@Kunnatural precision@@D.@@N
+~
 16481 524800 -1000 S
 55 0
 0 -30 0 0
@@ -2769,10 +2883,12 @@ L 50 50 0 0 0 0 0 0 0
 #1458
 void dragon young~
 @@Ka young void dragon@@N~
-@@KA young void dragon@@D raises its head from the ruins, @@Reyes like extinguished stars@@D.@@N~
+@@KA young void dragon@@D raises its head from the ruins, @@Reyes like extinguished stars@@D.@@N
+~
 @@DA dragon whose element is void rather than fire - this young specimen is
 already terrifyingly powerful, combining @@Rmassive physical attacks@@D with
-a breath weapon of @@Kpure annihilating darkness@@D.@@N~
+a breath weapon of @@Kpure annihilating darkness@@D.@@N
+~
 16481 512 -1000 S
 60 1
 0 -100 16 17
@@ -2786,10 +2902,12 @@ L 50 50 0 0 0 0 0 0 0
 #1459
 soulflayer worm~
 @@Ra soulflayer worm@@N~
-@@RA soulflayer worm@@D bursts from the earth, @@Rringed maw gaping@@D.@@N~
+@@RA soulflayer worm@@D bursts from the earth, @@Rringed maw gaping@@D.@@N
+~
 @@DThe soulflayer worm is a massive subterranean predator whose feeding
 process @@Rextracts and consumes the soul@@D directly. It is purely physical
-in its methodology but @@Keffective to a horrifying degree@@D.@@N~
+in its methodology but @@Keffective to a horrifying degree@@D.@@N
+~
 97 0 -1000 S
 56 0
 0 -80 12 12
@@ -2803,11 +2921,13 @@ L 50 50 0 0 0 0 0 0 0
 #1460
 crypt wight~
 @@Ka crypt wight@@N~
-@@KA crypt wight@@D emerges from a sealed niche, @@Kgrave-wrap still clinging to it@@D.@@N~
+@@KA crypt wight@@D emerges from a sealed niche, @@Kgrave-wrap still clinging to it@@D.@@N
+~
 @@DA powerful wight that has resided in the necropolis for centuries,
 growing steadily stronger. It combines formidable @@Rphysical attacks@@D with
 the ability to @@Kcall upon necromantic magic@@D learned from proximity to
-Shadowmere's dark power.@@N~
+Shadowmere's dark power.@@N
+~
 16481 512 -1000 S
 48 1
 0 -65 10 11
@@ -2828,7 +2948,7 @@ bone shortsword sword~
 @@KA bone shortsword@@D lies here, its edge @@Rstrangely sharp@@D.@@N~
 5 402653184 16842752 0
 2 2 3 11 0 0 0 0 0 0
-3
+6
 A
 19 4
 A
@@ -2842,7 +2962,7 @@ rusted longsword longsword~
 @@DA rusted longsword@@D with a @@Kcracked leather grip@@D lies discarded here.@@N~
 5 402653184 16842752 0
 3 3 5 3 0 0 0 0 0 0
-4
+7
 A
 19 5
 A
@@ -2856,7 +2976,7 @@ tainted dagger dagger~
 @@RA tainted dagger@@D with a @@Kblack stained blade@@D has been dropped here.@@N~
 5 402653184 16842752 0
 1 2 2 11 0 0 0 0 0 0
-2
+8
 A
 19 3
 A
@@ -2870,7 +2990,7 @@ shadowsteel mace mace~
 @@DA shadowsteel mace@@D forged from @@Kdark metal@@D rests here, humming faintly.@@N~
 5 402653184 16842752 0
 3 4 5 8 0 0 0 0 0 0
-5
+9
 A
 19 6
 A
@@ -2884,7 +3004,7 @@ deathwarden axe axe~
 @@KA deathwarden axe@@D with @@Rblood-grooved blade@@D rests against the wall.@@N~
 5 402653184 16842752 0
 4 4 6 3 0 0 0 0 0 0
-6
+10
 A
 19 7
 A
@@ -2898,7 +3018,7 @@ soulrending blade greatsword~
 @@RA soulrending blade@@D of black iron lies here, its edge @@Ktinged with violet@@D.@@N~
 5 402653184 16842752 0
 5 5 8 3 0 0 0 0 0 0
-8
+6
 A
 19 8
 A
@@ -2912,7 +3032,7 @@ bonecrusher maul maul~
 @@KA bonecrusher maul@@D of extraordinary weight has been left here.@@N~
 5 402653184 16842752 0
 5 5 9 8 0 0 0 0 0 0
-12
+7
 A
 19 9
 A
@@ -2926,7 +3046,7 @@ nightshroud blade nightshroud~
 @@DA nightshroud blade@@D seems to @@Kabsorb the light@@D around it.@@N~
 5 402653184 16842752 0
 6 5 10 3 0 0 0 0 0 0
-7
+8
 A
 19 10
 A
@@ -2940,7 +3060,7 @@ necrotic spear spear~
 @@KA necrotic spear@@D trails @@Rdark wisps@@D of energy from its tip.@@N~
 5 402653184 16842752 0
 4 5 8 6 0 0 0 0 0 0
-6
+9
 A
 19 8
 A
@@ -2954,7 +3074,7 @@ abyssal flail flail~
 @@KA abyssal flail@@D with @@Kchains of dark iron@@D clinks heavily here.@@N~
 5 402653184 16842752 0
 5 5 9 8 0 0 0 0 0 0
-8
+10
 A
 19 9
 A
@@ -2968,7 +3088,7 @@ corroded chainmail chainmail~
 @@KA corroded chainmail hauberk@@D lies in a heap here, @@Rrust-stained@@D.@@N~
 9 402653184 17301504 0
 10 0 0 0 0 0 0 0 0 0
-12
+11
 A
 17 -15
 A
@@ -2982,7 +3102,7 @@ tattered ringmail ringmail~
 @@DA tattered ringmail coat@@D of @@Ksupple dark leather@@D has been discarded here.@@N~
 9 402653184 17301504 0
 8 0 0 0 0 0 0 0 0 0
-10
+12
 A
 17 -12
 A
@@ -2996,7 +3116,7 @@ shadowforged breastplate breastplate~
 @@KA shadowforged breastplate@@D of @@Kblack steel@@D reflects no light at all.@@N~
 9 402653184 17301504 0
 14 0 0 0 0 0 0 0 0 0
-15
+13
 A
 17 -20
 A
@@ -3010,7 +3130,7 @@ deathplate cuirass cuirass deathplate~
 @@RA deathplate cuirass@@D covered in @@Kdeath runes@@D rests here.@@N~
 9 402653184 17301504 0
 18 0 0 0 0 0 0 0 0 0
-18
+14
 A
 17 -25
 A
@@ -3024,7 +3144,7 @@ wraith-iron armor wraith iron~
 @@KA suit of wraith-iron armor@@D shimmers at its edges as if @@Knot quite real@@D.@@N~
 9 402653184 17301504 0
 22 0 0 0 0 0 0 0 0 0
-20
+15
 A
 17 -30
 A
@@ -3038,7 +3158,7 @@ bone-helm helm skull~
 @@KA skull helm@@D made from @@Ka real skull re-inforced with iron@@D has been left here.@@N~
 9 402653184 16777232 0
 8 0 0 0 0 0 0 0 0 0
-6
+11
 A
 17 -10
 A
@@ -3052,7 +3172,7 @@ shadowsteel greathelm helm greathelm~
 @@KA shadowsteel greathelm@@D of dark-forged metal rests here, @@Dvisor closed@@D.@@N~
 9 402653184 16777232 0
 14 0 0 0 0 0 0 0 0 0
-8
+12
 A
 17 -18
 A
@@ -3064,9 +3184,9 @@ L
 death-knight helm helm~
 @@Ra death-knight greathelm@@N~
 @@RA death-knight greathelm@@D crested with @@Kblack iron horns@@D rests here.@@N~
-9 402653184 16777232 0
+9 268435456 16777232 0
 18 0 0 0 0 0 0 0 0 0
-10
+13
 A
 17 -22
 A
@@ -3080,7 +3200,7 @@ iron greaves greaves~
 @@KA pair of iron greaves@@D engraved with @@Rskull motifs@@D lies here.@@N~
 9 402653184 18874368 0
 10 0 0 0 0 0 0 0 0 0
-8
+14
 A
 17 -12
 A
@@ -3092,9 +3212,9 @@ L
 shadowsteel legguards legguards~
 @@Ka pair of shadowsteel legguards@@N~
 @@KA pair of shadowsteel legguards@@D of @@Kknight's quality@@D rests here.@@N~
-9 402653184 18874368 0
+9 268435456 18874368 0
 16 0 0 0 0 0 0 0 0 0
-10
+15
 A
 17 -20
 A
@@ -3108,7 +3228,7 @@ death-knight legplates legplates~
 @@RA pair of death-knight legplates@@D of @@Kblack iron@@D rests here, @@Rheavy@@D.@@N~
 9 402653184 18874368 0
 20 0 0 0 0 0 0 0 0 0
-12
+11
 A
 17 -25
 A
@@ -3120,9 +3240,9 @@ L
 iron sabatons sabatons boots~
 @@Ka pair of iron sabatons@@N~
 @@KA pair of iron sabatons@@D caked with @@Kdried mud@@D rests here.@@N~
-9 402653184 20971520 0
+9 268435456 20971520 0
 10 0 0 0 0 0 0 0 0 0
-6
+12
 A
 17 -10
 A
@@ -3134,9 +3254,9 @@ L
 shadowsteel plate boots boots~
 @@Ka pair of shadowsteel plate boots@@N~
 @@KA pair of shadowsteel plate boots@@D of @@Kdark forging@@D sits here.@@N~
-9 402653184 20971520 0
+9 268435456 20971520 0
 16 0 0 0 0 0 0 0 0 0
-8
+13
 A
 17 -18
 A
@@ -3148,9 +3268,9 @@ L
 iron gauntlets gauntlets~
 @@Ka pair of iron gauntlets@@N~
 @@KA pair of iron gauntlets@@D with @@Rknuckle spikes@@D lies here.@@N~
-9 402653184 16785408 0
+9 268435456 16785408 0
 10 0 0 0 0 0 0 0 0 0
-5
+9
 A
 17 -10
 A
@@ -3162,9 +3282,9 @@ L
 shadowsteel gauntlets gauntlets~
 @@Ka pair of shadowsteel gauntlets@@N~
 @@KA pair of shadowsteel gauntlets@@D etched with @@Ksealing runes@@D lies here.@@N~
-9 402653184 16785408 0
+9 268435456 16785408 0
 16 0 0 0 0 0 0 0 0 0
-7
+10
 A
 17 -18
 A
@@ -3178,7 +3298,7 @@ bone vambraces vambraces arm guards~
 @@KA pair of bone vambraces@@D fitted with @@Rsteel brackets@@D lies here.@@N~
 9 402653184 16779264 0
 8 0 0 0 0 0 0 0 0 0
-5
+11
 A
 17 -10
 A
@@ -3192,7 +3312,7 @@ shadowsteel vambraces vambraces~
 @@KA pair of shadowsteel vambraces@@D of @@Kdark crafting@@D rests here.@@N~
 9 402653184 16779264 0
 14 0 0 0 0 0 0 0 0 0
-7
+12
 A
 17 -18
 A
@@ -3206,7 +3326,7 @@ iron pauldrons pauldrons shoulder guards~
 @@KA pair of iron pauldrons@@D with @@Kchained spikes@@D has been discarded here.@@N~
 9 402653184 16778240 0
 10 0 0 0 0 0 0 0 0 0
-8
+13
 A
 17 -10
 A
@@ -3218,9 +3338,9 @@ L
 shadowsteel pauldrons pauldrons~
 @@Ka pair of shadowsteel pauldrons@@N~
 @@KA pair of shadowsteel pauldrons@@D decorated with @@Rbone inlays@@D rests here.@@N~
-9 402653184 16778240 0
+9 268435456 16778240 0
 16 0 0 0 0 0 0 0 0 0
-10
+14
 A
 17 -20
 A
@@ -3234,7 +3354,7 @@ iron bracers bracers~
 @@KA pair of iron bracers@@D with @@Kchain lace@@D has been discarded here.@@N~
 9 402653184 16781312 0
 8 0 0 0 0 0 0 0 0 0
-4
+15
 A
 17 -8
 A
@@ -3248,7 +3368,7 @@ shadow-iron bracers bracers~
 @@KA pair of shadow-iron bracers@@D etched with @@Kcursed runes@@D rests here.@@N~
 9 402653184 16781312 0
 14 0 0 0 0 0 0 0 0 0
-5
+11
 A
 17 -16
 A
@@ -3262,7 +3382,7 @@ blackened shield kite shield~
 @@KA blackened kite shield@@D bearing a @@Rwhite skull device@@D rests here.@@N~
 9 402653184 16842752 0
 20 0 0 0 0 0 0 0 0 0
-10
+12
 A
 17 -15
 A
@@ -3276,7 +3396,7 @@ shadowsteel tower shield tower shield~
 @@KA shadowsteel tower shield@@D of enormous size rests against the wall.@@N~
 9 402653184 16842752 0
 30 0 0 0 0 0 0 0 0 0
-14
+13
 A
 17 -25
 A
@@ -3290,7 +3410,7 @@ bone necklace necklace~
 @@KA bone necklace@@D strung with @@Ksmall carved skulls@@D lies here.@@N~
 8 402653184 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 25
 A
@@ -3304,7 +3424,7 @@ shadow pendant pendant~
 @@DA shadow pendant@@D of dark stone on a @@Ksilver chain@@D has been discarded here.@@N~
 8 402653184 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+5
 A
 13 35
 A
@@ -3332,7 +3452,7 @@ death-sigil ring ring~
 @@RA death-sigil ring@@D of @@Ktarnished silver@@D set with a @@Rdark stone@@D lies here.@@N~
 8 402653184 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+7
 A
 18 4
 A
@@ -3346,7 +3466,7 @@ shadow band ring band~
 @@KA shadow band@@D of @@Kdull iron@@D engraved with @@Rsigils@@D rests here.@@N~
 8 402653184 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+8
 A
 18 5
 A
@@ -3360,7 +3480,7 @@ void ring ring~
 @@DA void ring@@D seems to @@Dflicker in and out of existence@@D where it lies.@@N~
 8 402653184 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 27 8
 A
@@ -3374,7 +3494,7 @@ darksoul earring earring stud~
 @@KA darksoul earring@@D of @@Kbone and wire@@D rests here.@@N~
 8 402653184 16777344 0
 0 0 0 0 0 0 0 0 0 0
-1
+5
 A
 13 15
 A
@@ -3386,7 +3506,7 @@ L
 obsidian ear stud stud earring obsidian~
 @@Ka obsidian ear stud@@N~
 @@Ka obsidian ear stud@@D that @@Kpulses faintly@@D with dark energy lies here.@@N~
-8 402653184 16777344 0
+8 268435456 16777344 0
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -3400,9 +3520,9 @@ L
 corruption cloak cloak~
 @@Ka corruption cloak@@N~
 @@KA corruption cloak@@D of @@Krotting black velvet@@D trails across the floor here.@@N~
-8 402653184 16908288 0
+8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-4
+12
 A
 17 -8
 A
@@ -3414,9 +3534,9 @@ L
 shadowweave cape cape~
 @@Da shadowweave cape@@N~
 @@DA shadowweave cape@@D that seems to @@Dabsorb shadows@@D lies crumpled here.@@N~
-8 402653184 16908288 0
+8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-3
+13
 A
 17 -15
 A
@@ -3430,7 +3550,7 @@ deadman belt belt~
 @@KA deadman belt@@D of @@Kstudded black leather@@D has been discarded here.@@N~
 8 402653184 17039360 0
 0 0 0 0 0 0 0 0 0 0
-2
+9
 A
 13 20
 A
@@ -3442,9 +3562,9 @@ L
 iron-link belt belt iron link~
 @@Ka iron-link belt@@N~
 @@Ka iron-link belt@@D of @@Kdark iron@@D with a @@Rskull buckle@@D rests here.@@N~
-8 402653184 17039360 0
+8 268435456 17039360 0
 0 0 0 0 0 0 0 0 0 0
-4
+15
 A
 13 30
 A
@@ -3456,9 +3576,9 @@ L
 dark visage mask mask~
 @@Ka dark visage mask@@N~
 @@KA dark visage mask@@D carved from @@Kbone@@D with @@Rstaring eye-holes@@D rests here.@@N~
-8 402653184 16777248 0
+8 268435456 16777248 0
 0 0 0 0 0 0 0 0 0 0
-2
+11
 A
 17 -8
 A
@@ -3470,9 +3590,9 @@ L
 iron death-mask mask visor~
 @@Ka iron death-mask@@N~
 @@Ka iron death-mask@@D with @@Kscreaming features@@D has been left here.@@N~
-8 402653184 16777248 0
+8 268435456 16777248 0
 0 0 0 0 0 0 0 0 0 0
-3
+12
 A
 17 -14
 A
@@ -3486,7 +3606,7 @@ necrotic tome tome~
 @@KA necrotic tome@@D bound in @@Kdark leather@@D rests here, @@Rfaintly warm@@D to the touch.@@N~
 8 402653184 16842752 0
 0 0 0 0 0 0 0 0 0 0
-2
+3
 A
 27 12
 A
@@ -3500,7 +3620,7 @@ grimoire corruption grimoire~
 @@RA grimoire of corruption@@D bleeds @@Kdark energy from its spine@@D where it lies.@@N~
 8 402653184 16842752 0
 0 0 0 0 0 0 0 0 0 0
-2
+4
 A
 27 20
 A
@@ -3514,7 +3634,7 @@ phylactery shard shard crystal~
 @@DA phylactery shard@@D of @@Kdeep violet crystal@@D pulses with @@Rcaptured life-energy@@D here.@@N~
 8 402653184 16842752 0
 0 0 0 0 0 0 0 0 0 0
-1
+5
 A
 27 15
 A
@@ -3526,9 +3646,9 @@ L
 shadowpiercer blade sword boss~
 @@KShadowpiercer@@N~
 @@KShadowpiercer@@D, a @@Rvibrant blade of pure shadow-steel@@D, floats above the ground here.@@N~
-5 402653248 16842752 0
+5 268435456 16842752 0
 8 8 14 3 0 0 0 0 0 0
-8
+6
 A
 19 15
 A
@@ -3542,9 +3662,9 @@ L
 bonelord maul maul boss hammer~
 @@KThe Bonelord's Maul@@N~
 @@KThe Bonelord's Maul@@D, a weapon @@Rbuilt from fused femur and iron@@D, lies here.@@N~
-5 402653248 16842752 0
+5 268435456 16842752 0
 10 9 16 8 0 0 0 0 0 0
-18
+7
 A
 19 17
 A
@@ -3558,9 +3678,9 @@ L
 valzareth robe robe boss~
 @@KValzareth's Shadowweave Robe@@N~
 @@KValzareth's Shadowweave Robe@@D of @@Rliving shadow-thread@@D lies crumpled here.@@N~
-9 402653248 17301504 0
+9 268435456 17301504 0
 30 0 0 0 0 0 0 0 0 0
-5
+3
 A
 17 -40
 A
@@ -3574,9 +3694,9 @@ L
 bonelord chestplate chestplate boss plate~
 @@KThe Bonelord's Chestplate@@N~
 @@KThe Bonelord's Chestplate@@D of @@Kfused bone and cursed iron@@D rests here.@@N~
-9 402653248 17301504 0
+9 268435456 17301504 0
 35 0 0 0 0 0 0 0 0 0
-25
+9
 A
 17 -45
 A
@@ -3590,9 +3710,9 @@ L
 valzareth phylactery crown crown boss~
 @@KValzareth's Phylactery Crown@@N~
 @@KValzareth's Phylactery Crown@@D of @@Kblack bone set with violet gems@@D hovers here.@@N~
-9 402653248 16777232 0
+9 268435456 16777232 0
 25 0 0 0 0 0 0 0 0 0
-4
+5
 A
 17 -20
 A
@@ -3606,9 +3726,9 @@ L
 bonelord skull helm helm boss~
 @@KThe Bonelord's Skull Helm@@N~
 @@KThe Bonelord's Skull Helm@@D, a @@Kcrown of fused skulls@@D, rests here.@@N~
-9 402653248 16777232 0
+9 268435456 16777232 0
 28 0 0 0 0 0 0 0 0 0
-12
+6
 A
 17 -25
 A
@@ -3623,7 +3743,7 @@ frost longsword longsword frost~
 @@KA frost longsword@@D radiates @@Kcold@@D from its @@Kfrost-iron blade@@D.@@N~
 5 402653184 16842752 0
 3 3 5 3 0 0 0 0 0 0
-4
+7
 A
 19 6
 A
@@ -3635,9 +3755,9 @@ L
 void dagger dagger void~
 @@Ra void dagger@@N~
 @@RA void dagger@@D seems to @@Kabsorb the light@@D around its blade.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 2 2 3 11 0 0 0 0 0 0
-2
+8
 A
 19 5
 A
@@ -3649,9 +3769,9 @@ L
 black iron battleaxe battleaxe~
 @@Ka black iron battleaxe@@N~
 @@KA black iron battleaxe@@D with a @@Rblood-groove@@D on each face lies here.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 4 4 7 3 0 0 0 0 0 0
-7
+9
 A
 19 8
 A
@@ -3663,9 +3783,9 @@ L
 corrupted warhammer warhammer~
 @@Ka corrupted warhammer@@N~
 @@KA corrupted warhammer@@D of @@Kdark metal@@D crackles with @@Rnecromantic energy@@D.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 5 4 8 8 0 0 0 0 0 0
-9
+10
 A
 19 9
 A
@@ -3677,9 +3797,9 @@ L
 soul reaper scythe scythe~
 @@Ka soul reaper scythe@@N~
 @@KA soul reaper scythe@@D with a @@Rcrescent blade of dark steel@@D rests here.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 5 5 9 3 0 0 0 0 0 0
-8
+6
 A
 19 10
 A
@@ -3693,7 +3813,7 @@ deathwhisper lance lance~
 @@KA deathwhisper lance@@D of @@Kblack iron@@D still vibrates faintly with @@Rold magic@@D.@@N~
 5 402653184 16842752 0
 4 5 9 6 0 0 0 0 0 0
-9
+7
 A
 19 10
 A
@@ -3707,7 +3827,7 @@ shrieking blade sword shrieking~
 @@RA shrieking blade@@D emits a @@Klow constant moan@@D where it lies.@@N~
 5 402653184 16842752 0
 6 5 10 3 0 0 0 0 0 0
-7
+8
 A
 19 11
 A
@@ -3719,9 +3839,9 @@ L
 void crusher maul void~
 @@Ka void crusher maul@@N~
 @@KA void crusher maul@@D of @@Kenormous proportions@@D rests here, @@Rcracking the floor@@D.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 6 6 11 8 0 0 0 0 0 0
-15
+9
 A
 19 12
 A
@@ -3735,7 +3855,7 @@ necromancer staff staff~
 @@KA necromancer's staff@@D topped with a @@Kcrystal skull@@D rests against the wall.@@N~
 5 402653184 16842752 0
 3 3 5 6 0 0 0 0 0 0
-3
+5
 A
 27 15
 A
@@ -3747,9 +3867,9 @@ L
 shadow-iron chainmail chainmail shadow~
 @@Ka shadow-iron chainmail hauberk@@N~
 @@KA shadow-iron chainmail hauberk@@D of @@Kcraftsman quality@@D rests here.@@N~
-9 402653184 17301504 0
+9 268435456 17301504 0
 12 0 0 0 0 0 0 0 0 0
-13
+11
 A
 17 -18
 A
@@ -3761,9 +3881,9 @@ L
 enchanted breastplate breastplate~
 @@Ka enchanted breastplate@@N~
 @@KA enchanted breastplate@@D that @@Rglows faintly blue@@D in the dark rests here.@@N~
-9 402653184 17301504 0
+9 268435456 17301504 0
 16 0 0 0 0 0 0 0 0 0
-16
+12
 A
 17 -22
 A
@@ -3777,7 +3897,7 @@ bone-inlaid plate plate bone~
 @@KA suit of bone-inlaid plate@@D decorated with @@Kcarved femurs@@D rests here.@@N~
 9 402653184 17301504 0
 20 0 0 0 0 0 0 0 0 0
-19
+13
 A
 17 -28
 A
@@ -3789,9 +3909,9 @@ L
 necromancer robes robes mage~
 @@Ka set of necromancer's robes@@N~
 @@KA set of necromancer's robes@@D of @@Rrippling black silk@@D lies here.@@N~
-9 402653184 17301504 0
+9 268435456 17301504 0
 8 0 0 0 0 0 0 0 0 0
-3
+4
 A
 17 -10
 A
@@ -3805,9 +3925,9 @@ L
 warlock robes robes warlock~
 @@Ka set of warlock's robes@@N~
 @@KA set of warlock's robes@@D @@Rstained with ritual markings@@D lies here.@@N~
-9 402653184 17301504 0
+9 268435456 17301504 0
 10 0 0 0 0 0 0 0 0 0
-3
+5
 A
 17 -12
 A
@@ -3821,9 +3941,9 @@ L
 frost-iron greathelm helm frost~
 @@Ka frost-iron greathelm@@N~
 @@KA frost-iron greathelm@@D breathes @@Kcold@@D where it rests.@@N~
-9 402653184 16777232 0
+9 268435456 16777232 0
 16 0 0 0 0 0 0 0 0 0
-9
+11
 A
 17 -20
 A
@@ -3835,9 +3955,9 @@ L
 void-touched skullhelm helm void skull~
 @@Ka void-touched skullhelm@@N~
 @@KA void-touched skullhelm@@D that @@Kabsorbs light around it@@D sits here.@@N~
-9 402653184 16777232 0
+9 268435456 16777232 0
 20 0 0 0 0 0 0 0 0 0
-11
+12
 A
 17 -24
 A
@@ -3851,7 +3971,7 @@ corrupted plate greaves greaves plate~
 @@KA pair of corrupted plate greaves@@D @@Rdark with old enchantment@@D rests here.@@N~
 9 402653184 18874368 0
 18 0 0 0 0 0 0 0 0 0
-11
+13
 A
 17 -22
 A
@@ -3863,9 +3983,9 @@ L
 void-iron legplates legplates void~
 @@Ka pair of void-iron legplates@@N~
 @@KA pair of void-iron legplates@@D that seem to @@Kshift in darkness@@D rest here.@@N~
-9 402653184 18874368 0
+9 268435456 18874368 0
 22 0 0 0 0 0 0 0 0 0
-13
+14
 A
 17 -27
 A
@@ -3877,9 +3997,9 @@ L
 frost plate boots boots frost~
 @@Ka pair of frost plate boots@@N~
 @@KA pair of frost plate boots@@D that @@Kleave icy prints@@D on the floor rests here.@@N~
-9 402653184 20971520 0
+9 268435456 20971520 0
 18 0 0 0 0 0 0 0 0 0
-9
+15
 A
 17 -20
 A
@@ -3891,7 +4011,7 @@ L
 void-steel greaves plate boots~
 @@Ka pair of void-steel sabatons@@N~
 @@KA pair of void-steel sabatons@@D of @@Kexceptional dark crafting@@D rests here.@@N~
-9 402653184 20971520 0
+9 268435456 20971520 0
 22 0 0 0 0 0 0 0 0 0
 11
 A
@@ -3905,9 +4025,9 @@ L
 death knight gauntlets gauntlets plate~
 @@Ka pair of death knight gauntlets@@N~
 @@KA pair of death knight gauntlets@@D of @@Rexquisite dark iron@@D rests here.@@N~
-9 402653184 16785408 0
+9 268435456 16785408 0
 18 0 0 0 0 0 0 0 0 0
-8
+7
 A
 17 -20
 A
@@ -3919,9 +4039,9 @@ L
 void-iron plate gauntlets gauntlets void~
 @@Ka pair of void-iron plate gauntlets@@N~
 @@KA pair of void-iron plate gauntlets@@D that @@Kabsorb light@@D rests here.@@N~
-9 402653184 16785408 0
+9 268435456 16785408 0
 22 0 0 0 0 0 0 0 0 0
-10
+8
 A
 17 -26
 A
@@ -3933,9 +4053,9 @@ L
 corrupted vambraces vambraces corrupted~
 @@Ka pair of corrupted vambraces@@N~
 @@KA pair of corrupted vambraces@@D @@Rseeping dark energy@@D rests here.@@N~
-9 402653184 16779264 0
+9 268435456 16779264 0
 16 0 0 0 0 0 0 0 0 0
-8
+14
 A
 17 -20
 A
@@ -3947,9 +4067,9 @@ L
 void-iron vambraces vambraces void~
 @@Ka pair of void-iron vambraces@@N~
 @@KA pair of void-iron vambraces@@D @@Kthat flicker@@D with dark energy rests here.@@N~
-9 402653184 16779264 0
+9 268435456 16779264 0
 20 0 0 0 0 0 0 0 0 0
-10
+15
 A
 17 -26
 A
@@ -3961,7 +4081,7 @@ L
 death knight pauldrons pauldrons knight~
 @@Ka pair of death knight pauldrons@@N~
 @@KA pair of death knight pauldrons@@D with @@Kchain-hung skulls@@D rests here.@@N~
-9 402653184 16778240 0
+9 268435456 16778240 0
 18 0 0 0 0 0 0 0 0 0
 11
 A
@@ -3975,9 +4095,9 @@ L
 void-iron spaulders spaulders void~
 @@Ka pair of void-iron spaulders@@N~
 @@KA pair of void-iron spaulders@@D with @@Rvoid-crystal inlays@@D rests here.@@N~
-9 402653184 16778240 0
+9 268435456 16778240 0
 22 0 0 0 0 0 0 0 0 0
-13
+12
 A
 17 -28
 A
@@ -3989,9 +4109,9 @@ L
 necromancer plate bracers bracers plate~
 @@Ka pair of necromancer plate bracers@@N~
 @@KA pair of necromancer plate bracers@@D @@Rruned with binding glyphs@@D lies here.@@N~
-9 402653184 16781312 0
+9 268435456 16781312 0
 16 0 0 0 0 0 0 0 0 0
-6
+13
 A
 17 -18
 A
@@ -4003,9 +4123,9 @@ L
 void sorcerer bracers bracers void~
 @@Ka pair of void sorcerer bracers@@N~
 @@KA pair of void sorcerer bracers@@D @@Kcool to the touch@@D lies here.@@N~
-9 402653184 16781312 0
+9 268435456 16781312 0
 20 0 0 0 0 0 0 0 0 0
-7
+14
 A
 17 -22
 A
@@ -4019,7 +4139,7 @@ dark tower shield shield tower~
 @@KA dark tower shield@@D of @@Kmassive dimensions and dark steel@@D rests here.@@N~
 9 402653184 16842752 0
 32 0 0 0 0 0 0 0 0 0
-16
+15
 A
 17 -28
 A
@@ -4033,7 +4153,7 @@ void-iron kite shield shield kite void~
 @@KA void-iron kite shield@@D that @@Kabsorbs impacts soundlessly@@D rests here.@@N~
 9 402653184 16842752 0
 36 0 0 0 0 0 0 0 0 0
-18
+11
 A
 17 -32
 A
@@ -4047,7 +4167,7 @@ void crystal necklace necklace void~
 @@KA void crystal necklace@@D of @@Kdeep purple stones@@D on a dark chain lies here.@@N~
 8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 A
 13 40
 A
@@ -4059,9 +4179,9 @@ L
 sorcerer soul chain chain sorcerer~
 @@Ka sorcerer's soul chain@@N~
 @@KA sorcerer's soul chain@@D of @@Rlinked enchanted silver@@D lies here.@@N~
-8 268435456 16777472 0
+8 402653184 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 A
 27 14
 A
@@ -4075,7 +4195,7 @@ deathsight amulet amulet death~
 @@KA deathsight amulet@@D showing @@Ka stylized skull@@D of obsidian lies here.@@N~
 8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 27 20
 A
@@ -4089,7 +4209,7 @@ shadow signet ring signet shadow~
 @@RA shadow signet ring@@D bearing a @@Kshadow-cast device@@D lies here.@@N~
 8 268435456 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+10
 A
 18 6
 A
@@ -4117,7 +4237,7 @@ ring of binding ring binding~
 @@KA ring of binding@@D @@Rengraved with runes@@D that seem to tighten as you watch lies here.@@N~
 8 268435456 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+7
 A
 18 7
 A
@@ -4131,7 +4251,7 @@ night ear stud stud night earring~
 @@KA night ear stud@@D of @@Kblack iron@@D shaped like a @@Rtiny skull@@D lies here.@@N~
 8 268435456 16777344 0
 0 0 0 0 0 0 0 0 0 0
-1
+8
 A
 19 5
 A
@@ -4145,7 +4265,7 @@ shadow piercing earring earring shadow~
 @@KA shadow piercing@@D of @@Kvoid-crystal@@D that @@Rpulses with dark energy@@D lies here.@@N~
 8 268435456 16777344 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 27 8
 A
@@ -4157,9 +4277,9 @@ L
 deathshroud cloak cloak deathshroud~
 @@Ka deathshroud cloak@@N~
 @@KA deathshroud cloak@@D that @@Kclings to shadow@@D like a second skin lies here.@@N~
-8 268435456 16908288 0
+8 402653184 16908288 0
 0 0 0 0 0 0 0 0 0 0
-4
+15
 A
 17 -18
 A
@@ -4173,7 +4293,7 @@ void-silk cape cape void silk~
 @@KA void-silk cape@@D woven from @@Rthreads of compressed darkness@@D lies here.@@N~
 8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-3
+6
 A
 17 -22
 A
@@ -4187,7 +4307,7 @@ bone warden belt belt bone~
 @@KA bone warden belt@@D of @@Klinked vertebrae@@D with an iron clasp rests here.@@N~
 8 268435456 17039360 0
 0 0 0 0 0 0 0 0 0 0
-3
+7
 A
 13 35
 A
@@ -4201,7 +4321,7 @@ void-iron belt belt void~
 @@KA void-iron belt@@D that @@Rseems heavier than it should@@D rests here.@@N~
 8 268435456 17039360 0
 0 0 0 0 0 0 0 0 0 0
-5
+13
 A
 13 45
 A
@@ -4215,7 +4335,7 @@ shadow face mask mask shadow~
 @@KA shadow face mask@@D of @@Kfine black leather@@D with silver filigree rests here.@@N~
 8 268435456 16777248 0
 0 0 0 0 0 0 0 0 0 0
-2
+9
 A
 17 -16
 A
@@ -4229,7 +4349,7 @@ bone-steel death mask mask bone death~
 @@KA bone-steel death mask@@D of @@Rexquisite and disturbing craftsmanship@@D lies here.@@N~
 8 268435456 16777248 0
 0 0 0 0 0 0 0 0 0 0
-3
+15
 A
 17 -22
 A
@@ -4241,9 +4361,9 @@ L
 necrotic codex codex tome~
 @@Ka necrotic codex@@N~
 @@KA necrotic codex@@D of @@Kdark leather and iron clasps@@D rests here, pulsing faintly.@@N~
-8 268435456 16842752 0
+8 402653184 16842752 0
 0 0 0 0 0 0 0 0 0 0
-2
+1
 A
 27 18
 A
@@ -4255,7 +4375,7 @@ L
 void tome tome void~
 @@Ka void tome@@N~
 @@KA void tome@@D that @@Kabsorbs light@@D around it rests here, its pages black.@@N~
-8 268435456 16842752 0
+8 402653184 16842752 0
 0 0 0 0 0 0 0 0 0 0
 2
 A
@@ -4271,7 +4391,7 @@ shadow halo halo shadow~
 @@KA shadow halo@@D of @@Kdark matter@@D floats here, @@Rnot quite touching anything@@D.@@N~
 8 268435456 16777218 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 A
 27 12
 A
@@ -4285,7 +4405,7 @@ void aura aura void swirling~
 @@KA void aura@@D swirls here, @@Ra compact sphere of darkness@@D, awaiting a host.@@N~
 8 268435456 16777220 0
 0 0 0 0 0 0 0 0 0 0
-1
+9
 A
 17 -10
 A
@@ -4299,7 +4419,7 @@ cursed horns horns cursed~
 @@KA pair of cursed horns@@D of @@Kblack iron@@D that radiate @@Rcold@@D rests here.@@N~
 8 268435456 16777224 0
 0 0 0 0 0 0 0 0 0 0
-2
+10
 A
 18 5
 A
@@ -4313,7 +4433,7 @@ void crown horns crown~
 @@KA void crown@@D of @@Kcrystal and iron@@D that @@Rhovers slightly@@D rests here.@@N~
 8 268435456 16777224 0
 0 0 0 0 0 0 0 0 0 0
-3
+1
 A
 27 14
 A
@@ -4327,7 +4447,7 @@ necromancer sash waist sash~
 @@KA necromancer's sash@@D of @@Kblack silk and enchanted thread@@D rests here.@@N~
 8 268435456 17039360 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 A
 27 10
 A
@@ -4341,7 +4461,7 @@ potion shadow healing potion~
 @@KA potion of shadow healing@@D filled with @@Rswirling dark liquid@@D rests here.@@N~
 10 268435456 16777216 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 L
 40
 
@@ -4351,7 +4471,7 @@ potion dark clarity clarity~
 @@KA potion of dark clarity@@D in a @@Kblack vial@@D rests here.@@N~
 10 268435456 16777216 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 40
 
@@ -4361,7 +4481,7 @@ scroll death ward ward scroll~
 @@KA scroll of death ward@@D written on @@Kflesh-paper@@D rests here.@@N~
 2 268435456 16777216 0
 50 -1 -1 -1 0 0 0 0 0 0
-1
+5
 L
 45
 
@@ -4371,7 +4491,7 @@ death knight longsword longsword knight~
 @@KA death knight's longsword@@D of @@Kblack-forged steel@@D rests here, edge perfect.@@N~
 5 402653184 16842752 0
 5 5 9 3 0 0 0 0 0 0
-8
+6
 A
 19 11
 A
@@ -4385,9 +4505,9 @@ L
 soul-iron flail flail soul~
 @@Ka soul-iron flail@@N~
 @@KA soul-iron flail@@D with @@Rchain links of compressed darkness@@D lies here.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 5 5 9 8 0 0 0 0 0 0
-9
+7
 A
 19 11
 A
@@ -4399,9 +4519,9 @@ L
 necromancer's blade blade mage sword~
 @@Ra necromancer's blade@@N~
 @@RA necromancer's blade@@D, thin and @@Kdeadly precise@@D, rests here.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 3 4 6 11 0 0 0 0 0 0
-4
+8
 A
 19 7
 A
@@ -4417,7 +4537,7 @@ elite death plate plate elite death~
 @@KA suit of elite death plate@@D @@Krune-forged and impeccable@@D rests here.@@N~
 9 402653184 17301504 0
 25 0 0 0 0 0 0 0 0 0
-22
+9
 A
 17 -35
 A
@@ -4431,9 +4551,9 @@ L
 wraith armor set armor wraith set~
 @@Ka suit of wraith-forged armor@@N~
 @@KA suit of wraith-forged armor@@D that @@Rdrifts slightly at its edges@@D rests here.@@N~
-9 402653184 17301504 0
+9 268435456 17301504 0
 24 0 0 0 0 0 0 0 0 0
-6
+5
 A
 17 -32
 A
@@ -4447,9 +4567,9 @@ L
 elite death helm helm elite~
 @@KAn elite death helm@@N~
 @@KAn elite death helm@@D with a @@Kscreaming visor@@D rests here.@@N~
-9 402653184 16777232 0
+9 268435456 16777232 0
 22 0 0 0 0 0 0 0 0 0
-12
+11
 A
 17 -26
 A
@@ -4461,9 +4581,9 @@ L
 warlock hood hood warlock~
 @@Ka warlock's hood@@N~
 @@KA warlock's hood@@D of @@Kblack silk reinforced with iron rings@@D rests here.@@N~
-9 402653184 16777232 0
+9 268435456 16777232 0
 10 0 0 0 0 0 0 0 0 0
-3
+12
 A
 17 -12
 A
@@ -4475,9 +4595,9 @@ L
 elite death legs greaves legs elite~
 @@KA pair of elite death greaves@@N~
 @@KA pair of elite death greaves@@D of @@Kperfect dark plate@@D rest here.@@N~
-9 402653184 18874368 0
+9 268435456 18874368 0
 24 0 0 0 0 0 0 0 0 0
-14
+13
 A
 17 -29
 A
@@ -4489,9 +4609,9 @@ L
 elite death boots sabatons elite~
 @@KA pair of elite death sabatons@@N~
 @@KA pair of elite death sabatons@@D of @@Krune-worked dark iron@@D rest here.@@N~
-9 402653184 20971520 0
+9 268435456 20971520 0
 24 0 0 0 0 0 0 0 0 0
-12
+14
 A
 17 -28
 A
@@ -4503,9 +4623,9 @@ L
 elite death gauntlets gauntlets elite~
 @@KA pair of elite death gauntlets@@N~
 @@KA pair of elite death gauntlets@@D with @@Krune-inscribed knuckles@@D rest here.@@N~
-9 402653184 16785408 0
+9 268435456 16785408 0
 24 0 0 0 0 0 0 0 0 0
-11
+10
 A
 17 -28
 A
@@ -4517,9 +4637,9 @@ L
 elite death vambraces vambraces elite~
 @@KA pair of elite death vambraces@@N~
 @@KA pair of elite death vambraces@@D of @@Kconsummate dark craft@@D rest here.@@N~
-9 402653184 16779264 0
+9 268435456 16779264 0
 24 0 0 0 0 0 0 0 0 0
-12
+11
 A
 17 -28
 A
@@ -4531,9 +4651,9 @@ L
 elite death pauldrons pauldrons elite~
 @@KA pair of elite death pauldrons@@N~
 @@KA pair of elite death pauldrons@@D with @@Rbat-wing crests@@D rest here.@@N~
-9 402653184 16778240 0
+9 268435456 16778240 0
 24 0 0 0 0 0 0 0 0 0
-14
+12
 A
 17 -28
 A
@@ -4545,9 +4665,9 @@ L
 elite death bracers bracers elite~
 @@KA pair of elite death bracers@@N~
 @@KA pair of elite death bracers@@D of @@Krune-etched iron@@D rest here.@@N~
-9 402653184 16781312 0
+9 268435456 16781312 0
 22 0 0 0 0 0 0 0 0 0
-8
+13
 A
 17 -24
 A
@@ -4559,7 +4679,7 @@ L
 shadow reaver sword reaver shadow~
 @@Ka shadow reaver@@N~
 @@KA shadow reaver@@D that @@Kdrinks light from the air@@D where it lies.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 7 6 12 3 0 0 0 0 0 0
 9
 A
@@ -4573,9 +4693,9 @@ L
 darksouls void maul maul dark void~
 @@Ka darksouls void maul@@N~
 @@KA darksouls void maul@@D that @@Rcracks the stone floor@@D where it rests.@@N~
-5 402653184 16842752 0
+5 268435456 16842752 0
 7 7 13 8 0 0 0 0 0 0
-18
+10
 A
 19 14
 A
@@ -4587,9 +4707,9 @@ L
 necromancer tower shield shield tower necromancer~
 @@Ka necromancer's tower shield@@N~
 @@KA necromancer's tower shield@@D carved with @@Kwards and seals@@D rests here.@@N~
-9 402653184 16842752 0
+9 268435456 16842752 0
 38 0 0 0 0 0 0 0 0 0
-20
+11
 A
 17 -35
 A
@@ -4603,7 +4723,7 @@ void-iron cuirass cuirass void~
 @@KA void-iron cuirass@@D that @@Rseems heavier than the world@@D rests here.@@N~
 9 402653184 17301504 0
 26 0 0 0 0 0 0 0 0 0
-22
+12
 A
 17 -36
 A
@@ -4617,7 +4737,7 @@ ring of the executioner ring executioner~
 @@KA ring of the executioner@@D bears a @@Kminiature axe device@@D in dark iron.@@N~
 8 268435456 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+8
 A
 19 8
 A
@@ -4633,7 +4753,7 @@ amulet of void calling amulet void~
 @@KA amulet of void calling@@D @@Rdraws the eye and holds it@@D against will.@@N~
 8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 27 22
 A
@@ -4645,9 +4765,9 @@ L
 shadow-silk robes robes shadow silk~
 @@Ka set of shadow-silk robes@@N~
 @@KA set of shadow-silk robes@@D woven from @@Kcompressed shadow@@D rests here.@@N~
-9 402653184 17301504 0
+9 268435456 17301504 0
 12 0 0 0 0 0 0 0 0 0
-2
+5
 A
 17 -14
 A
@@ -4661,9 +4781,9 @@ L
 void-silk robes robes void silk~
 @@Ka set of void-silk robes@@N~
 @@KA set of void-silk robes@@D that @@Kabsorb all light@@D around them rests here.@@N~
-9 402653184 17301504 0
+9 268435456 17301504 0
 14 0 0 0 0 0 0 0 0 0
-2
+1
 A
 17 -16
 A
@@ -4679,7 +4799,7 @@ corpsewalker cloak cloak corpsewalker~
 @@KA corpsewalker cloak@@D of @@Rstitched undead hide@@D lies crumpled here.@@N~
 8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-5
+12
 A
 17 -20
 A
@@ -4693,7 +4813,7 @@ shadow mantle mantle shadow~
 @@KA shadow mantle@@D that @@Rclings and coils@@D like a living thing rests here.@@N~
 8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-4
+8
 A
 17 -24
 A
@@ -4707,7 +4827,7 @@ soulkeeper pendant pendant soul~
 @@KA soulkeeper pendant@@D contains @@Ka screaming captured soul@@D visible within it.@@N~
 8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 13 55
 A
@@ -4721,7 +4841,7 @@ night's embrace amulet amulet night~
 @@KA night's embrace amulet@@D of @@Kdark crystal set in bone@@D rests here.@@N~
 8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+5
 A
 27 24
 A
@@ -4735,7 +4855,7 @@ corpsewalker belt belt corpsewalker bone~
 @@KA corpsewalker belt@@D of @@Kbone-links and dark iron@@D rests here.@@N~
 8 268435456 17039360 0
 0 0 0 0 0 0 0 0 0 0
-5
+11
 A
 13 50
 A
@@ -4749,7 +4869,7 @@ void-iron mask mask void~
 @@KA void-iron mask@@D of @@Rterror-inducing craftsmanship@@D rests here.@@N~
 8 268435456 16777248 0
 0 0 0 0 0 0 0 0 0 0
-3
+7
 A
 17 -26
 A
@@ -4763,7 +4883,7 @@ skull earring of power earring skull power~
 @@KA skull earring of power@@D, a @@Kfine bone skull set with dark gems@@D, lies here.@@N~
 8 268435456 16777344 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 A
 27 12
 A
@@ -4777,7 +4897,7 @@ void ear-stud stud earring void~
 @@KA void ear-stud@@D of @@Kcompressed darkness@@D shaped into an impossibly small sphere.@@N~
 8 268435456 16777344 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 27 15
 A
@@ -4791,7 +4911,7 @@ apex void tome tome apex void~
 @@KA apex void tome@@D radiates @@Rover-pressure@@D as if the magic within fights containment.@@N~
 8 268435456 16842752 0
 0 0 0 0 0 0 0 0 0 0
-2
+5
 A
 27 30
 A
@@ -4805,9 +4925,9 @@ L
 shadow countess gown gown countess~
 @@KSeraphine's Midnight Gown@@N~
 @@KSeraphine's Midnight Gown@@D of @@Rliving shadow-silk@@D lies pooled here like spilled night.@@N~
-9 402653248 17301504 0
+9 268435520 17301504 0
 20 0 0 0 0 0 0 0 0 0
-2
+1
 A
 17 -30
 A
@@ -4821,9 +4941,9 @@ L
 countess crimson slippers boots slippers~
 @@KSeraphine's Crimson Slippers@@N~
 @@KSeraphine's Crimson Slippers@@D of @@Kenchanted dark leather@@D rest here.@@N~
-9 402653248 20971520 0
+9 268435456 20971520 0
 14 0 0 0 0 0 0 0 0 0
-1
+2
 A
 27 20
 A
@@ -4837,7 +4957,7 @@ countess obsidian ring ring countess obsidian~
 @@KSeraphine's Obsidian Ring@@D of @@Rdeep black stone@@D set in silver rests here.@@N~
 8 402653248 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 A
 27 25
 A
@@ -4853,7 +4973,7 @@ countess blood amulet amulet countess blood~
 @@KSeraphine's Blood Amulet@@D contains @@Ra swirling vial of crimson@@D.@@N~
 8 402653248 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 27 30
 A
@@ -4867,9 +4987,9 @@ L
 countess shadow cloak cloak countess shadow~
 @@KSeraphine's Shadow Cloak@@N~
 @@KSeraphine's Shadow Cloak@@D seems to @@Kabsorb the wearer into darkness@@D.@@N~
-8 402653248 16908288 0
+8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-3
+5
 A
 17 -20
 A
@@ -4883,9 +5003,9 @@ L
 countess wrist-chains bracers countess chains~
 @@KSeraphine's Wrist-Chains@@N~
 @@KSeraphine's Wrist-Chains@@D of @@Kenchanted silver@@D rattle softly with @@Kcaptured souls@@D.@@N~
-8 402653248 16781312 0
+8 268435456 16781312 0
 0 0 0 0 0 0 0 0 0 0
-2
+1
 A
 27 22
 A
@@ -4897,7 +5017,7 @@ L
 countess pale crown helm crown~
 @@KSeraphine's Pale Crown@@N~
 @@KSeraphine's Pale Crown@@D of @@Rbone and dark gem@@D floats here, radiating cold.@@N~
-9 402653248 16777232 0
+9 268435520 16777232 0
 16 0 0 0 0 0 0 0 0 0
 2
 A
@@ -4913,9 +5033,9 @@ L
 bonewarden cleaver cleaver bonewarden~
 @@KMordechai's War-Cleaver@@N~
 @@KMordechai's War-Cleaver@@D of @@Rblood-black iron the size of a door@@D rests here.@@N~
-5 402653248 16842752 0
+5 268435520 16842752 0
 12 10 18 3 0 0 0 0 0 0
-25
+8
 A
 19 20
 A
@@ -4929,9 +5049,9 @@ L
 bonewarden plate chest plate bonewarden~
 @@KMordechai's Death Plate@@N~
 @@KMordechai's Death Plate@@D of @@Kenormous proportions@@D rests on the floor, dented.@@N~
-9 402653248 17301504 0
+9 268435520 17301504 0
 40 0 0 0 0 0 0 0 0 0
-30
+9
 A
 17 -50
 A
@@ -4945,9 +5065,9 @@ L
 bonewarden greathelm helm bonewarden~
 @@KMordechai's Greathelm@@N~
 @@KMordechai's Greathelm@@D @@Kwith a full-face death mask@@D rests here.@@N~
-9 402653248 16777232 0
+9 268435456 16777232 0
 32 0 0 0 0 0 0 0 0 0
-18
+10
 A
 17 -30
 A
@@ -4963,7 +5083,7 @@ bonewarden legplates legs bonewarden~
 @@KMordechai's Legplates@@D of @@Kmassive proportions@@D rest here.@@N~
 9 402653248 18874368 0
 30 0 0 0 0 0 0 0 0 0
-22
+11
 A
 17 -32
 A
@@ -4977,7 +5097,7 @@ bonewarden gauntlets gauntlets bonewarden~
 @@KMordechai's Gauntlets@@D big enough to @@Ruseas a bucket@@D rest here.@@N~
 9 402653248 16785408 0
 28 0 0 0 0 0 0 0 0 0
-20
+7
 A
 17 -28
 A
@@ -4989,9 +5109,9 @@ L
 bonewarden pauldrons pauldrons bonewarden~
 @@KMordechai's Pauldrons@@N~
 @@KMordechai's Pauldrons@@D like @@Kfortress battlements@@D rest here.@@N~
-9 402653248 16778240 0
+9 268435456 16778240 0
 30 0 0 0 0 0 0 0 0 0
-22
+13
 A
 17 -30
 A
@@ -5003,9 +5123,9 @@ L
 bonewarden boots sabatons bonewarden~
 @@KMordechai's Sabatons@@N~
 @@KMordechai's Sabatons@@D of @@Rrune-forged death iron@@D rest here.@@N~
-9 402653248 20971520 0
+9 268435456 20971520 0
 28 0 0 0 0 0 0 0 0 0
-20
+14
 A
 17 -28
 A
@@ -5017,9 +5137,9 @@ L
 maze horror cloak cloak maze horror~
 @@KThe Maze Horror's Skin-Cloak@@N~
 @@KThe Maze Horror's Skin-Cloak@@D shifts @@Kspatially as you look at it@@D.@@N~
-8 402653248 16908288 0
+8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-4
+5
 A
 17 -25
 A
@@ -5033,7 +5153,7 @@ L
 maze horror amulet amulet maze~
 @@KThe Maze Horror's Core-Amulet@@N~
 @@KThe Maze Horror's Core-Amulet@@D @@Rseems to contain a space that is too large@@D.@@N~
-8 402653248 16777472 0
+8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
 1
 A
@@ -5049,7 +5169,7 @@ L
 maze horror tome tome maze~
 @@KThe Tome of Spatial Unmaking@@N~
 @@KThe Tome of Spatial Unmaking@@D @@Rexists in multiple places at once@@D.@@N~
-8 402653248 16842752 0
+8 268435456 16842752 0
 0 0 0 0 0 0 0 0 0 0
 2
 A
@@ -5063,9 +5183,9 @@ L
 maze horror ring ring maze spatial~
 @@KThe Maze Horror's Spatial Ring@@N~
 @@KThe Maze Horror's Spatial Ring@@D seems to bend space around it where it rests.@@N~
-8 402653248 16793600 0
+8 268435456 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+8
 A
 27 28
 A
@@ -5081,7 +5201,7 @@ maze horror gauntlets gauntlets maze~
 @@KThe Maze Horror's Crushing Gauntlets@@D of @@Kvoid-crystal and dark iron@@D rests here.@@N~
 9 402653248 16785408 0
 30 0 0 0 0 0 0 0 0 0
-15
+9
 A
 17 -25
 A
@@ -5097,7 +5217,7 @@ maze horror bracers bracers maze~
 @@KThe Maze Horror's Phase Bracers@@D seem to @@Rwink in and out of existence@@D.@@N~
 9 402653248 16781312 0
 28 0 0 0 0 0 0 0 0 0
-10
+15
 A
 17 -22
 A
@@ -5111,9 +5231,9 @@ L
 master binder cloak cloak binder~
 @@KThe Master Binder's Cloak@@N~
 @@KThe Master Binder's Cloak@@D is @@Rhalf-physical, half something else@@D.@@N~
-8 402653248 16908288 0
+8 268435520 16908288 0
 0 0 0 0 0 0 0 0 0 0
-5
+1
 A
 17 -22
 A
@@ -5127,9 +5247,9 @@ L
 master binder tome tome binder~
 @@KThe Ledger of Broken Souls@@N~
 @@KThe Ledger of Broken Souls@@D contains the @@Rrecords of every soul ever bound here@@D.@@N~
-8 402653248 16842752 0
+8 268435456 16842752 0
 0 0 0 0 0 0 0 0 0 0
-3
+2
 A
 27 35
 A
@@ -5141,9 +5261,9 @@ L
 master binder ring ring binder~
 @@KThe Binder's Seal-Ring@@N~
 @@KThe Binder's Seal-Ring@@D @@Kcracks with binding energy@@D where it rests.@@N~
-8 402653248 16793600 0
+8 268435456 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+8
 A
 18 10
 A
@@ -5157,9 +5277,9 @@ L
 master binder vambraces vambraces binder~
 @@KThe Master Binder's Vambraces@@N~
 @@KThe Master Binder's Vambraces@@D are inscribed with @@Rthousands of binding runes@@D.@@N~
-9 402653248 16779264 0
+9 268435456 16779264 0
 28 0 0 0 0 0 0 0 0 0
-12
+14
 A
 17 -28
 A
@@ -5173,9 +5293,9 @@ L
 master binder amulet amulet binder~
 @@KThe Amulet of Perfect Binding@@N~
 @@KThe Amulet of Perfect Binding@@D @@Rfreezes the air around it@@D.@@N~
-8 402653248 16777472 0
+8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+5
 A
 27 28
 A
@@ -5189,9 +5309,9 @@ L
 master binder bracers bracers binder staff~
 @@KThe Binder's Focus Staff@@N~
 @@KThe Binder's Focus Staff@@D channels @@Rcurse magic@@D to a @@Kfine lethal point@@D.@@N~
-5 402653248 16842752 0
+5 268435520 16842752 0
 4 5 8 6 0 0 0 0 0 0
-4
+1
 A
 27 26
 A
@@ -5207,7 +5327,7 @@ valzareth staff staff lich~
 @@KValzareth's Staff of Unmaking@@D trembles with @@Rcontained annihilation@@D.@@N~
 5 402653248 16842752 0
 10 10 18 6 0 0 0 0 0 0
-5
+2
 A
 27 45
 A
@@ -5223,7 +5343,7 @@ valzareth phylactery focus focus lich~
 @@KValzareth's Phylactery Focus@@D radiates @@Runlife energy@@D of staggering intensity.@@N~
 8 402653248 16842752 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 A
 27 50
 A
@@ -5237,9 +5357,9 @@ L
 valzareth ring ring lich void~
 @@KValzareth's Void Signet@@N~
 @@KValzareth's Void Signet@@D @@Rconsumes light in a foot-wide radius@@D.@@N~
-8 402653248 16793600 0
+8 268435456 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 A
 27 40
 A
@@ -5253,9 +5373,9 @@ L
 valzareth amulet amulet lich~
 @@KValzareth's Necrotic Heart@@N~
 @@KValzareth's Necrotic Heart@@D still @@Rbeats in a cage of dark iron@@D.@@N~
-8 402653248 16777472 0
+8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+5
 A
 27 45
 A
@@ -5269,9 +5389,9 @@ L
 valzareth helm helm lich crown~
 @@KValzareth's Death Crown@@N~
 @@KValzareth's Death Crown@@D of @@Rvoid-steel and bound ghosts@@D rests here.@@N~
-9 402653248 16777232 0
+9 268435520 16777232 0
 30 0 0 0 0 0 0 0 0 0
-4
+1
 A
 17 -25
 A
@@ -5285,9 +5405,9 @@ L
 valzareth robes robes lich void~
 @@KValzareth's Void Robes@@N~
 @@KValzareth's Void Robes@@D of @@Rliving shadow-thread and bone@@D rest here.@@N~
-9 402653248 17301504 0
+9 268435520 17301504 0
 30 0 0 0 0 0 0 0 0 0
-4
+2
 A
 17 -35
 A
@@ -5301,9 +5421,9 @@ L
 valzareth bracers bracers lich~
 @@KValzareth's Bone Bracers@@N~
 @@KValzareth's Bone Bracers@@D are carved from @@Kthe bones of heroes@@D.@@N~
-9 402653248 16781312 0
+9 268435456 16781312 0
 22 0 0 0 0 0 0 0 0 0
-6
+3
 A
 27 32
 A
@@ -5317,9 +5437,9 @@ L
 valzareth cloak cloak lich shadow~
 @@KValzareth's Umbral Cloak@@N~
 @@KValzareth's Umbral Cloak@@D @@Rerases the wearer from perception@@D.@@N~
-8 402653248 16908288 0
+8 268435456 16908288 0
 0 0 0 0 0 0 0 0 0 0
-3
+4
 A
 17 -20
 A
@@ -5333,9 +5453,9 @@ L
 malgrath greataxe axe malgrath bonelord~
 @@KMalgrath's Bonelord Greataxe@@N~
 @@KMalgrath's Bonelord Greataxe@@D of @@Rvast cursed iron@@D rests here.@@N~
-5 402653248 16842752 0
+5 268435456 16842752 0
 10 10 20 3 0 0 0 0 0 0
-25
+10
 A
 19 18
 A
@@ -5349,9 +5469,9 @@ L
 malgrath plate chest bonelord~
 @@KMalgrath's Iron Chestplate@@N~
 @@KMalgrath's Iron Chestplate@@D of @@Kfused bone and void-iron@@D rests here.@@N~
-9 402653248 17301504 0
+9 268435520 17301504 0
 45 0 0 0 0 0 0 0 0 0
-28
+6
 A
 17 -55
 A
@@ -5365,9 +5485,9 @@ L
 malgrath helm skull helm bonelord~
 @@KMalgrath's Skull Crest Helm@@N~
 @@KMalgrath's Skull Crest Helm@@D of @@Rclustered fused skulls@@D rests here.@@N~
-9 402653248 16777232 0
+9 268435520 16777232 0
 35 0 0 0 0 0 0 0 0 0
-16
+7
 A
 17 -28
 A
@@ -5381,9 +5501,9 @@ L
 malgrath ring ring bonelord~
 @@KMalgrath's Bonelord Signet@@N~
 @@KMalgrath's Bonelord Signet@@D is inscribed with a @@Rrampant skeleton device@@D.@@N~
-8 402653248 16793600 0
+8 268435456 16793600 0
 0 0 0 0 0 0 0 0 0 0
-1
+8
 A
 18 16
 A
@@ -5397,9 +5517,9 @@ L
 malgrath amulet amulet bonelord~
 @@KMalgrath's Warlord Amulet@@N~
 @@KMalgrath's Warlord Amulet@@D @@Rvibrates with contained battle-fury@@D.@@N~
-8 402653248 16777472 0
+8 268435456 16777472 0
 0 0 0 0 0 0 0 0 0 0
-1
+9
 A
 18 14
 A
@@ -5413,9 +5533,9 @@ L
 malgrath legplates legs bonelord~
 @@KMalgrath's Legplates@@N~
 @@KMalgrath's Legplates@@D of @@Kbattle-forged dark iron@@D rest here.@@N~
-9 402653248 18874368 0
+9 268435456 18874368 0
 35 0 0 0 0 0 0 0 0 0
-25
+15
 A
 17 -35
 A
@@ -5427,9 +5547,9 @@ L
 malgrath boots sabatons bonelord~
 @@KMalgrath's War Sabatons@@N~
 @@KMalgrath's War Sabatons@@D @@Rcrack the floor where they rest@@D.@@N~
-9 402653248 20971520 0
+9 268435456 20971520 0
 30 0 0 0 0 0 0 0 0 0
-24
+11
 A
 17 -30
 A
@@ -5441,9 +5561,9 @@ L
 malgrath gauntlets gauntlets bonelord~
 @@KMalgrath's Crushing Gauntlets@@N~
 @@KMalgrath's Crushing Gauntlets@@D could @@Kcrush stone without effort@@D.@@N~
-9 402653248 16785408 0
+9 268435456 16785408 0
 32 0 0 0 0 0 0 0 0 0
-22
+7
 A
 17 -30
 A
@@ -5457,9 +5577,9 @@ L
 malgrath pauldrons pauldrons bonelord~
 @@KMalgrath's Siege Pauldrons@@N~
 @@KMalgrath's Siege Pauldrons@@D like @@Rpaired fortress towers@@D rest here.@@N~
-9 402653248 16778240 0
+9 268435456 16778240 0
 35 0 0 0 0 0 0 0 0 0
-25
+13
 A
 17 -35
 A
@@ -5471,9 +5591,9 @@ L
 malgrath vambraces vambraces bonelord~
 @@KMalgrath's War Vambraces@@N~
 @@KMalgrath's War Vambraces@@D of @@Kvoid-iron and bone@@D rest here.@@N~
-9 402653248 16779264 0
+9 268435456 16779264 0
 30 0 0 0 0 0 0 0 0 0
-18
+14
 A
 17 -30
 A
@@ -5485,9 +5605,9 @@ L
 malgrath bracers bracers bonelord iron~
 @@KMalgrath's Iron Bracers@@N~
 @@KMalgrath's Iron Bracers@@D of @@Rrune-worked battle steel@@D rest here.@@N~
-9 402653248 16781312 0
+9 268435456 16781312 0
 28 0 0 0 0 0 0 0 0 0
-14
+10
 A
 17 -26
 A
@@ -5499,9 +5619,9 @@ L
 malgrath tower shield shield bonelord tower~
 @@KMalgrath's Tower Shield@@N~
 @@KMalgrath's Tower Shield@@D, @@Klarge enough to use as a door@@D, rests against the wall.@@N~
-9 402653248 16842752 0
+9 268435456 16842752 0
 50 0 0 0 0 0 0 0 0 0
-30
+11
 A
 17 -50
 A
@@ -5513,9 +5633,9 @@ L
 shadowmere relic belt belt relic shadowmere~
 @@KThe Warden's Relic Belt@@N~
 @@KThe Warden's Relic Belt@@D of @@Kancient enchanted leather and bone@@D rests here.@@N~
-8 402653248 17039360 0
+8 268435456 17039360 0
 0 0 0 0 0 0 0 0 0 0
-5
+12
 A
 13 70
 A
@@ -5529,9 +5649,9 @@ L
 shadowmere relic earring earring relic~
 @@KThe Shadowmere Relic Earring@@N~
 @@KThe Shadowmere Relic Earring@@D holds @@Ka sliver of the domain's own power@@D.@@N~
-8 402653248 16777344 0
+8 268435456 16777344 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 A
 27 22
 A
@@ -5545,9 +5665,9 @@ L
 shadowmere crown horns boss~
 @@KThe Crown of Shadowmere@@N~
 @@KThe Crown of Shadowmere@@D @@Rradiates authority and dread in equal measure@@D.@@N~
-9 402653248 16777224 0
+9 268435456 16777224 0
 0 0 0 0 0 0 0 0 0 0
-5
+9
 A
 18 15
 A
@@ -5563,9 +5683,9 @@ L
 shadowmere relic halo halo relic~
 @@KThe Halo of Unlife@@N~
 @@KThe Halo of Unlife@@D @@Rcircles above the ground, slowly@@D, waiting.@@N~
-8 402653248 16777218 0
+8 268435456 16777218 0
 0 0 0 0 0 0 0 0 0 0
-2
+5
 A
 27 28
 A
@@ -5579,9 +5699,9 @@ L
 shadowmere relic aura aura relic~
 @@KThe Aura of Eternal Darkness@@N~
 @@KThe Aura of Eternal Darkness@@D @@Kdarkens the air@@D around where it rests.@@N~
-8 402653248 16777220 0
+8 268435456 16777220 0
 0 0 0 0 0 0 0 0 0 0
-2
+6
 A
 17 -18
 A
@@ -5595,9 +5715,9 @@ L
 shadowmere waist soul chain soul belt~
 @@KThe Soulchain Waist-Band@@N~
 @@KThe Soulchain Waist-Band@@D of @@Klinks containing screaming soul-gems@@D rests here.@@N~
-8 402653248 17039360 0
+8 268435456 17039360 0
 0 0 0 0 0 0 0 0 0 0
-6
+2
 A
 27 26
 A
@@ -5611,9 +5731,9 @@ L
 shadowmere void face mask mask void~
 @@KThe Void Face-Mask@@N~
 @@KThe Void Face-Mask@@D @@Rreveals nothing where a face should be@@D.@@N~
-8 402653248 16777248 0
+8 268435456 16777248 0
 0 0 0 0 0 0 0 0 0 0
-4
+8
 A
 17 -28
 A
@@ -5627,9 +5747,9 @@ L
 shadowpiercer legs greaves legs shadow~
 @@KShadowpiercer's Cursed Greaves@@N~
 @@KShadowpiercer's Cursed Greaves@@D of @@Kthe finest shadow-steel@@D rest here.@@N~
-9 402653248 18874368 0
+9 268435456 18874368 0
 28 0 0 0 0 0 0 0 0 0
-16
+9
 A
 17 -32
 A
@@ -5643,9 +5763,9 @@ L
 shadowpiercer boots sabatons shadow~
 @@KShadowpiercer's War Sabatons@@N~
 @@KShadowpiercer's War Sabatons@@D of @@Rruned shadow-iron@@D rest here.@@N~
-9 402653248 20971520 0
+9 268435456 20971520 0
 26 0 0 0 0 0 0 0 0 0
-14
+10
 A
 17 -28
 A
@@ -5659,9 +5779,9 @@ L
 shadowpiercer vambraces vambraces shadow~
 @@KShadowpiercer's Vambraces@@N~
 @@KShadowpiercer's Vambraces@@D of @@Kvoid-shadow iron@@D rest here.@@N~
-9 402653248 16779264 0
+9 268435456 16779264 0
 26 0 0 0 0 0 0 0 0 0
-13
+6
 A
 17 -28
 A
@@ -5675,9 +5795,9 @@ L
 shadowpiercer pauldrons pauldrons shadow~
 @@KShadowpiercer's Pauldrons@@N~
 @@KShadowpiercer's Pauldrons@@D @@Rcrackle with contained shadow-energy@@D.@@N~
-9 402653248 16778240 0
+9 268435456 16778240 0
 28 0 0 0 0 0 0 0 0 0
-14
+7
 A
 17 -30
 A
@@ -5691,9 +5811,9 @@ L
 void dragon scale armor dragon scale~
 @@KA void dragon scale breastplate@@N~
 @@KA void dragon scale breastplate@@D of @@Kscales that absorb all light@@D rests here.@@N~
-9 402653248 17301504 0
+9 268435456 17301504 0
 40 0 0 0 0 0 0 0 0 0
-10
+13
 A
 17 -45
 A
@@ -5707,9 +5827,9 @@ L
 void dragon fang sword fang void~
 @@KA void dragon fang sword@@N~
 @@KA void dragon fang sword@@D ground from a @@Rvoid dragon's tooth@@D rests here.@@N~
-5 402653248 16842752 0
+5 268435456 16842752 0
 9 9 16 11 0 0 0 0 0 0
-10
+9
 A
 19 16
 A
@@ -5723,9 +5843,9 @@ L
 void dragon helm helm dragon void~
 @@KA void dragon skull helm@@N~
 @@KA void dragon skull helm@@D crafted from the @@Kskull of a void dragon@@D rests here.@@N~
-9 402653248 16777232 0
+9 268435456 16777232 0
 38 0 0 0 0 0 0 0 0 0
-18
+15
 A
 17 -32
 A
@@ -5739,9 +5859,9 @@ L
 deathbringer greatsword deathbringer greatsword boss~
 @@KDeathbringer@@N~
 @@KDeathbringer@@D, @@Ra two-handed greatsword that drinks in souls@@D, rests here.@@N~
-5 402653248 16842752 0
+5 268435456 16842752 0
 12 10 20 3 0 0 0 0 0 0
-18
+6
 A
 19 20
 A
