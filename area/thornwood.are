@@ -1205,13 +1205,11 @@ briar wolf thorn~
 @@dA Briar Wolf paces here, its grey coat matted with dark thorns that have grown
 into its flesh.
 @@N
-
 ~
 @@dThis creature has been part of the thornwood so long that the boundary between beast
 and briar is no longer clear. Thorns as thick as iron nails have pushed through
 the skin of its back and flanks, and where they have done so the flesh around them
 has darkened and hardened. Its eyes are the yellow of old bone. It is very large.@@N
-
 ~
 97 0 -250 S
 55 0
@@ -1226,14 +1224,12 @@ barrow wight~
 @@da Barrow Wight@@N~
 @@dA Barrow Wight stands motionless here, its burial wrappings still partially intact.
 @@N
-
 ~
 @@dThe barrow wight has existed in the thornwood long enough to absorb something of its
 character: the grave-cloth that wraps its form has dried to the texture of bark, and
 the briars have grown through what was once a burial mound and emerged from the wight
 itself, twisting from its shoulders and head. Its eyes are empty of light and full of
 old purpose.@@N
-
 ~
 16481 65536 -500 S
 58 0
@@ -1248,13 +1244,11 @@ thorned specter~
 @@da Thorned Specter@@N~
 @@dA Thorned Specter drifts here, its edges blurred and its form shot through with black thorns.
 @@N
-
 ~
 @@dThe specter is a thing of pure malice and old hurt, the lingering impression of something
 that died badly in the thornwood and has not accepted that fact. The thorns that run
 through its semi-translucent form are a remnant of the manner of its death. It does not
 breathe and it does not blink. It simply waits for something to be closer than it is.@@N
-
 ~
 16481 65538 -500 S
 60 0
@@ -1269,14 +1263,12 @@ thornwood druid corrupted~
 @@da Corrupted Thornwood Druid@@N~
 @@dA Corrupted Thornwood Druid kneels here, communing with something beneath the earth.
 @@N
-
 ~
 @@dWhatever they were before, this druid has become part of the thornwood's dark ecology.
 The skin of their face and hands has taken on the texture and color of bark, and from
 their shoulders grow thin thorned branches. They perform their rituals with the same
 care as ever, only the object of those rituals has changed beyond recognition. Their
 eyes, when they open them, are the deep red of thornwood berries.@@N
-
 ~
 97 65536 -250 S
 62 2
@@ -1291,14 +1283,12 @@ grave hound~
 @@da Grave Hound@@N~
 @@da Grave Hound crouches here, its rotten teeth bared.
 @@N
-
 ~
 @@dThe grave hound was a dog once. Now it is something that returns each night from
 whatever shallow grave the thornwood prepared for it. Its flesh has the texture of
 old leather, drawn tight over a frame of bone, and where its fur has worn away the
 skin beneath is dark and hard as ironwood. It moves with a jerky precision that is
 wrong in a way that is difficult to specify but impossible to ignore.@@N
-
 ~
 16481 0 -500 S
 55 0
@@ -1313,14 +1303,12 @@ corpse vine animated~
 @@dan Animated Corpse Vine@@N~
 @@dAn Animated Corpse Vine writhes here, its limbs a tangle of root and withered flesh.
 @@N
-
 ~
 @@dThe corpse vine began as a plant. The corpses it subsequently absorbed contributed a
 kind of mobile ambition that the thornwood encouraged. It now moves with deliberate
 purpose, using the bones within its body as a loose skeleton, the vine-mass holding
 them together in a rough approximation of a biped when it chooses. It does not breathe
 or bleed, and cutting it only makes it more.@@N
-
 ~
 97 0 -500 S
 57 0
@@ -1335,14 +1323,12 @@ estate wraith~
 @@dan Estate Wraith@@N~
 @@dAn Estate Wraith drifts through the hall, its form still wearing the clothes it died in.
 @@N
-
 ~
 @@dThe estate wraith was once a member of the household, which it has not forgotten. It
 moves through the halls performing tasks that were once its duties, the motions correct
 but the purpose empty. It pays no attention to its surroundings until provoked, at
 which point the pretense of domesticity collapses entirely and what is left is old fury
 and cold hunger. It is dressed in the estate's servant livery, still recognizable.@@N
-
 ~
 16481 65538 -500 S
 63 0
@@ -1357,7 +1343,6 @@ hunt rider wild~
 @@da Wild Hunt Rider@@N~
 @@dA Wild Hunt Rider wheels here on a pale horse that leaves no prints.
 @@N
-
 ~
 @@dThe wild hunt rider is mortal, or was: the hunt has taken them far enough that the
 boundary is academic. They wear the antler crown of the hunt's hierarchy, their face
@@ -1365,7 +1350,6 @@ paint (or the thing that looks like face paint) tracing patterns that match the 
 in the thornwood's bark. The horse beneath them is the color of birch bark and its
 eyes are the red of the thornwood berries. Both rider and mount smell of pine resin
 and something that has been burning for a very long time.@@N
-
 ~
 97 0 -250 S
 65 1
@@ -1380,14 +1364,12 @@ thornwood ghoul~
 @@da Thornwood Ghoul@@N~
 @@da Thornwood Ghoul lurches from the shadows, its hands black to the elbow.
 @@N
-
 ~
 @@dThe thornwood ghoul differs from the common variety in the modifications the thornwood
 has made to it over time. The black discoloration of its forearms and hands is bark,
 growing outward from the hands that first clawed up through the thornwood soil, and the
 finger-nails have long since been replaced by proper thorns. It is fast and it is hungry
 and the only thing it still remembers from its living days is how to use those hands.@@N
-
 ~
 16481 0 -500 S
 60 0
@@ -1402,14 +1384,12 @@ thornwood cultist~
 @@da Thornwood Cultist@@N~
 @@da Thornwood Cultist moves between the trees, lips moving in a constant murmur.
 @@N
-
 ~
 @@dThe cultist came to the thornwood by choice, which did not protect them from what the
 thornwood offered in return for devotion. They wear robes of dark homespun over light
 leather, marked everywhere with the thornwood's sigils in what was probably ink originally.
 Their face has been tattooed with thorn-patterns, and the thorns have since grown inward
 from those patterns as if following the guide. They carry the tools of their calling.@@N
-
 ~
 97 0 -250 S
 63 1
@@ -1424,7 +1404,6 @@ mire lurker~
 @@da Mire Lurker@@N~
 @@da Mire Lurker surfaces here, its skin the color of deep mud.
 @@N
-
 ~
 @@dThe mire lurker is adapted to the worst of the thornwood's wetlands in ways that suggest
 generations of specialized selection, or something worse. Its skin has the texture and
@@ -1432,7 +1411,6 @@ color of the mire's bottom mud, and it moves through water with no more disturba
 a thought. On land it is slower, pulling itself upright only reluctantly. Its eyes,
 solid black, are positioned to watch multiple directions simultaneously. It smells of
 cold water and the specific decay smell of the mire.@@N
-
 ~
 97 0 -500 S
 58 0
@@ -1447,7 +1425,6 @@ bone weaver~
 @@da Bone Weaver@@N~
 @@da Bone Weaver clicks and skitters here, trailing thin wires.
 @@N
-
 ~
 @@dThe bone weaver is a creature of craft and obsession, spending the long years in the
 thornwood constructing its elaborate ossuary works. It has the shape of a human woman,
@@ -1455,7 +1432,6 @@ approximately, but assembled from components that are not all biological: wire, 
 iron pins, and the bones of whatever the thornwood yields. It is not aggressive by
 nature but has long since lost the social context that would give it reason to
 distinguish between a visitor and raw material.@@N
-
 ~
 97 0 -500 S
 65 2
@@ -1470,7 +1446,6 @@ thornwood witch~
 @@da Thornwood Witch@@N~
 @@da Thornwood Witch regards you from within a thicket that should not have moved.
 @@N
-
 ~
 @@dThe thornwood witch predates the estate and may predate the thornwood itself, which
 is the most charitable interpretation of what they have become. Their cottage was
@@ -1478,7 +1453,6 @@ absorbed by the wood generations ago and they were absorbed with it, though they
 to operate with a degree of autonomous purpose that suggests the thornwood has given them
 something in exchange. Their eyes are the oldest eyes in the wood. Their hands know
 every working that can be done with thorn and bone.@@N
-
 ~
 97 0 -500 S
 68 2
@@ -1493,7 +1467,6 @@ thorn knight estate~
 @@dan Estate Thorn Knight@@N~
 @@dan Estate Thorn Knight stands vigil, its armored form grown over with black briars.
 @@N
-
 ~
 @@dThe thorn knight was a guardian of the estate in life and remains one in a form the
 original commission could not have anticipated. The armor has been on the body long
@@ -1501,7 +1474,6 @@ enough that both have changed to accommodate each other: the metal has darkened 
 grown brittleness where the briars have worked through it, and the body beneath has
 hardened to compensate. The lance it carries is a thorned branchwood pole, and its
 shield bears the estate's thorn crest in relief.@@N
-
 ~
 16497 0 -750 S
 65 1
@@ -1516,14 +1488,12 @@ estate revenant~
 @@dan Estate Revenant@@N~
 @@dan Estate Revenant stands in the corridor, still wearing the estate's livery.
 @@N
-
 ~
 @@dThe estate revenant is one of the household's former members returned with the specific
 purpose of protecting the estate from further intrusion. The thornwood obliges this
 impulse because its interests align. The revenant has full memory of its life, which
 is the cruelest part: it knows exactly what it is doing and continues. It also knows
 the estate's layout with a thoroughness that makes it extremely difficult to avoid.@@N
-
 ~
 147553 65538 -750 S
 67 0
@@ -1538,7 +1508,6 @@ corpse vine greater~
 @@da Greater Corpse Vine@@N~
 @@dA Greater Corpse Vine writhes here, larger and more integrated than its lesser kin.
 @@N
-
 ~
 @@dThis is what a corpse vine becomes when it has had sufficient time and sufficient material
 to work with. The Greater variety has absorbed several bodies, and the intelligence
@@ -1546,7 +1515,6 @@ they have contributed is evident: this creature moves with deliberate strategy r
 than simple predation. The bones within it have been rearranged into a more functional
 configuration. It is armored with bark and does not feel pain in any way that changes
 its behavior.@@N
-
 ~
 97 0 -500 S
 65 0
@@ -1561,7 +1529,6 @@ thornwood apparition~
 @@da Thornwood Apparition@@N~
 @@da Thornwood Apparition floats at the corridor's end, watching.
 @@N
-
 ~
 @@dThe apparition is not fully present in this world, which is both its greatest defense
 and its primary limitation. It can be clearly seen in the right light as a human
@@ -1569,7 +1536,6 @@ figure with one hand raised, the fingers spread in the family posture from the p
 gallery. The features change subtly each time it is observed directly. It casts no
 shadow, occupies no physical space, and is very difficult to harm by conventional means.
 It does not appear to mean well.@@N
-
 ~
 16481 65538 -500 S
 65 0
@@ -1584,7 +1550,6 @@ hunt master wild~
 @@dthe Wild Hunt Master@@N~
 @@dthe Wild Hunt Master stands here, the antler crown glinting with cold fire.
 @@N
-
 ~
 @@dThe hunt master commands the wild hunt and has done so long enough that the hunt has
 come to define them rather than the other way around. The antler crown they wear is
@@ -1592,7 +1557,6 @@ not decorative. The hounds that ring their feet are not hounds. The horn at thei
 hip, when it sounds, can be heard in the world that is not this one. They carry a
 black lance and wear the beast-mask of the hunt's oldest tradition. Their mount, a
 thing of shadow and cold fire, waits at the tree line.@@N
-
 ~
 33554539 0 -750 S
 70 1
@@ -1607,7 +1571,6 @@ crypt guardian bone~
 @@da Bone Crypt Guardian@@N~
 @@da Bone Crypt Guardian stands vigil among the sarcophagi.
 @@N
-
 ~
 @@dThe bone crypt guardian is assembled rather than animated, which may be a philosophical
 distinction but is not a practical one. It is four meters of articulated skeleton,
@@ -1616,7 +1579,6 @@ here long enough that the bones have fused at the joints. Its movement is precis
 and economical. It does not react to things that do not come between it and its
 charges, and the things it guards are the sarcophagi, which is all it has ever been
 asked to do.@@N
-
 ~
 16497 0 -500 S
 68 0
@@ -1631,14 +1593,12 @@ shade mire deep~
 @@da Deep Mire Shade@@N~
 @@da Deep Mire Shade rises from the water here, dark and cold.
 @@N
-
 ~
 @@dThe deep mire shade is older than the mire, which formed around it when the thornwood
 grew thick enough to shadow the low ground. It is the shadow of something that was
 never alive, and the cold it carries is the cold of a world without light. Water
 moves away from it. It does not interact with physical objects in any ordinary sense
 but can affect those that attempt to cross through it in deeply unpleasant ways.@@N
-
 ~
 16481 65538 -500 S
 60 0
@@ -1653,7 +1613,6 @@ thornwood cultist elder~
 @@dan Elder Thornwood Cultist@@N~
 @@dan Elder Thornwood Cultist presides here, eyes closed, hands open.
 @@N
-
 ~
 @@dThe elder cultist came to the thornwood decades ago and has been transfigured by those
 decades in ways that are no longer reversible and arguably no longer entirely tragic
@@ -1661,7 +1620,6 @@ from the cultist's own perspective. The thorn-pattern tattoos have been augmente
 actual thorns that have grown through the skin, and the cultist wears them proudly.
 Their ritual tools are of extraordinary quality and great age. They are in a state
 of deep trance during which they are still entirely capable of extreme violence.@@N
-
 ~
 97 0 -500 S
 70 2
@@ -1676,7 +1634,6 @@ estate knight thorn blackened~
 @@da Blackened Thorn Knight@@N~
 @@da Blackened Thorn Knight advances, its armor smoking at the joints.
 @@N
-
 ~
 @@dThis is what an estate thorn knight becomes under the thornwood's fullest influence.
 The armor has been completely overtaken: briars have fused the joints solid and new
@@ -1684,7 +1641,6 @@ joints have formed in other places, giving the knight a silhouette that is unset
 to track. The briars are flowering, which they should not be in this season or this
 darkness. The flowers are black and smell of old graves. The knight moves with a
 patience that suggests it has all the time that there is.@@N
-
 ~
 16497 0 -750 S
 70 1
@@ -1699,7 +1655,6 @@ marrow fiend~
 @@da Marrow Fiend@@N~
 @@da Marrow Fiend tears at the stone floor here, pulling up the bones beneath.
 @@N
-
 ~
 @@dThe marrow fiend is a type of construct unique to this part of the thornwood, built by
 the bone weaver at the thornwood's direction for purposes that were never explained to
@@ -1707,7 +1662,6 @@ the weaver. It is large: wider than it is tall, with limbs in excess of the usua
 number, all of them repurposed from the earth's bone-stock. Its torso is a cage of
 assembled ribs from multiple large species. It is not clever but it is persistent and
 it is very hard to damage in any lasting way.@@N
-
 ~
 97 0 -500 S
 70 0
@@ -1722,14 +1676,12 @@ revenant lord estate~
 @@dLord Harren, the Estate Revenant@@N~
 @@dLord Harren, the Estate Revenant, stands before you, the thorn motif of the estate branded on his brow.
 @@N
-
 ~
 @@dThis is the master of the estate, returned. Whatever arrangement Lord Harren made with
 the thornwood before his death, this is the fulfillment of it: he stands in the hall
 he built, wearing the face he had in life, with the estate's full history in his memory
 and the thornwood's full interest behind his eyes. He is articulate and deliberate
 and entirely without mercy. The briars at his feet are still growing.@@N
-
 ~
 33570923 65538 -1000 S
 75 1
@@ -1744,13 +1696,11 @@ hunt hound shadow~
 @@da Shadow Hunt Hound@@N~
 @@da Shadow Hunt Hound paces here, its paws leaving prints of frost.
 @@N
-
 ~
 @@dThe shadow hunt hound runs with the wild hunt and exists between kills in a state that
 is more concept than creature. When given form it has the shape of a very large,
 very lean hound, the color of deep shadow, with white-ringed eyes. Its breath is cold
 enough to frost the air at all temperatures. It is utterly silent until it is not.@@N
-
 ~
 97 0 -500 S
 60 0
@@ -1765,14 +1715,12 @@ estate bone soldier~
 @@dan Estate Bone Soldier@@N~
 @@dan Estate Bone Soldier marches here with an unhurried precision.
 @@N
-
 ~
 @@dThe bone soldiers are the thornwood estate's lowest-ranking undead garrison: individual
 skeletons fitted with the estate's house guard armor and armed with weapons from the
 armory, all of it now brown with age and patchy with the moss that has grown in the
 sheltered hollows of the kit. They move in silence, patrol assigned routes, and do not
 deviate. Their eyes have a dull orange light in the sockets, like an ember in old ash.@@N
-
 ~
 16481 0 -500 S
 60 0
@@ -1787,7 +1735,6 @@ thornwood shaman~
 @@da Thornwood Shaman@@N~
 @@da Thornwood Shaman chants here, its voice braided with thorns.
 @@N
-
 ~
 @@dThe shaman is the ritual specialist of the thornwood cult, a step above the ordinary
 cultist and several steps in a direction the ordinary cultist has not yet imagined.
@@ -1795,7 +1742,6 @@ The thorn integration in their body is so complete that the briars now constitut
 their circulatory system, their sap visible through the skin in fine dark lines. They
 speak in a voice that carries harmonics outside the human range. They are communing
 with the thornwood directly at all times. Their attention is not fully here.@@N
-
 ~
 97 0 -500 S
 67 2
@@ -1810,7 +1756,6 @@ wight barrow elder~
 @@dan Elder Barrow Wight@@N~
 @@dan Elder Barrow Wight emerges here, burial goods still clasped in its hands.
 @@N
-
 ~
 @@dThe elder barrow wight is one of the oldest undead in the thornwood, interred here
 before the estate was built and before the thornwood had its current character. It
@@ -1818,7 +1763,6 @@ has adapted, as old things do: the burial goods it carries have been transformed
 the same processes that transformed it, and what were once offerings of bronze and
 ceramic are now objects of dark significance. It does not acknowledge the existence
 of the living as a category.@@N
-
 ~
 16481 65538 -500 S
 67 0
@@ -1833,14 +1777,12 @@ spirit deep cave~
 @@da Deep Cave Spirit@@N~
 @@da Deep Cave Spirit moves through the crystal here, barely distinguishable from the light.
 @@N
-
 ~
 @@dThe deep cave spirit is ancient and has no truck with the concerns of the surface world.
 It is composed of whatever it is that occupies very old, very still places: concentrated
 presence without form, existing as a distortion in the light of the crystal cave. It is
 not hostile by intent, but the intense cold that surrounds it causes significant harm to
 living creatures that spend time in its vicinity, and it does not move away from them.@@N
-
 ~
 33570915 65538 -500 S
 65 0
@@ -1855,7 +1797,6 @@ crystal lich thornwood~
 @@dThe Thornwood Lich@@N~
 @@dThe Thornwood Lich rises from its throne here, cold fire crackling at its fingertips.
 @@N
-
 ~
 @@dThe figure on the throne in the sealed chamber is the thornwood's architect: the
 scholar-lord who designed the binding in the cave below and bound themselves into the
@@ -1864,7 +1805,6 @@ something that the word lich does not fully describe. They wear the estate's for
 dress, now fused to the form beneath it. They remember every room, every name, every
 choice, and the weight of that memory is visible in the stillness with which they regard
 you. They are the thornwood's heart and the thornwood is their body.@@N
-
 ~
 33570923 65538 -1000 S
 80 1
@@ -2672,7 +2612,11 @@ M 0 1159 3 1165 (null)
 
 M 0 1157 3 1168 (null)
 
+
+
 M 0 1157 2 1154 (null)
+
+
 
 M 0 1160 3 1169 (null)
 
@@ -2716,7 +2660,13 @@ M 0 1166 3 1173 (null)
 
 M 0 1168 2 1178 (null)
 
+
+
+
 M 0 1168 3 1170 (null)
+
+
+
 
 M 0 1169 2 1171 (null)
 
@@ -2734,13 +2684,31 @@ M 0 1175 3 1172 (null)
 
 M 0 1176 3 1184 (null)
 
+
+
+
+
+
+
 M 0 1176 3 1185 (null)
 
+
+
+
+
+
+
 M 0 1177 2 1188 (null)
+
+
+
 
 E 0 1179 0 13 (null)
 
 M 0 1177 2 1189 (null)
+
+
+
 
 E 0 1179 0 13 (null)
 
@@ -2748,9 +2716,26 @@ M 0 1178 1 1206 (null)
 
 M 0 1167 1 1157 (null)
 
+
+
+
 M 0 1173 1 1211 (null)
 
+
+
+
+
+
+
+
+
+
 M 0 1179 1 1208 (null)
+
+
+
+
+
 
 D 0 1211 0 2 (null)
 
