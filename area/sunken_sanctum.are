@@ -32,11 +32,15 @@ You stand at the edge of a massive collapse, where the mountainside has crumbled
 shattered stone litter the path leading down.  A faint cold wind rises from
 below, carrying the smell of old dust and something faintly magical.
 ~
-0 2
+0 8
 D2
 ~
 ~
 0 -1 9501
+D4
+~
+~
+0 0 7323
 E
 timbers stone~
 The timbers are ancient and rotted through.  Whatever held this entrance

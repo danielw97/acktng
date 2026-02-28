@@ -159,7 +159,7 @@ You are standing on Roc Road, the main link between Midgaard and the lands to
 to the North, toward the town of Kiess, whilst a small path leads of to the
 South, into the trees.
 ~
-0 3
+4 3
 D0
 Roc Road.
 ~
@@ -175,6 +175,10 @@ A Small Path.
 ~
 ~
 0 -1 3244
+D5
+~
+~
+0 -1 610
 S
 #3239
 Roc Road~
