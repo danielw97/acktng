@@ -2835,7 +2835,6 @@ A
 18 3
 L
 30
-S
 
 #1401
 rusted longsword longsword~
@@ -2850,7 +2849,6 @@ A
 18 4
 L
 33
-S
 
 #1402
 tainted dagger dagger~
@@ -2865,7 +2863,6 @@ A
 18 4
 L
 31
-S
 
 #1403
 shadowsteel mace mace~
@@ -2880,7 +2877,6 @@ A
 18 5
 L
 36
-S
 
 #1404
 deathwarden axe axe~
@@ -2895,7 +2891,6 @@ A
 18 6
 L
 40
-S
 
 #1405
 soulrending blade greatsword~
@@ -2910,7 +2905,6 @@ A
 18 7
 L
 44
-S
 
 #1406
 bonecrusher maul maul~
@@ -2925,7 +2919,6 @@ A
 18 8
 L
 47
-S
 
 #1407
 nightshroud blade nightshroud~
@@ -2940,7 +2933,6 @@ A
 18 9
 L
 50
-S
 
 #1408
 necrotic spear spear~
@@ -2955,7 +2947,6 @@ A
 18 7
 L
 43
-S
 
 #1409
 abyssal flail flail~
@@ -2970,7 +2961,6 @@ A
 18 8
 L
 48
-S
 
 #1410
 corroded chainmail chainmail~
@@ -2985,7 +2975,6 @@ A
 13 20
 L
 30
-S
 
 #1411
 tattered ringmail ringmail~
@@ -3000,7 +2989,6 @@ A
 13 18
 L
 32
-S
 
 #1412
 shadowforged breastplate breastplate~
@@ -3015,7 +3003,6 @@ A
 13 35
 L
 38
-S
 
 #1413
 deathplate cuirass cuirass deathplate~
@@ -3030,7 +3017,6 @@ A
 13 45
 L
 45
-S
 
 #1414
 wraith-iron armor wraith iron~
@@ -3045,7 +3031,6 @@ A
 13 55
 L
 52
-S
 
 #1415
 bone-helm helm skull~
@@ -3060,7 +3045,6 @@ A
 13 15
 L
 30
-S
 
 #1416
 shadowsteel greathelm helm greathelm~
@@ -3075,7 +3059,6 @@ A
 13 30
 L
 42
-S
 
 #1417
 death-knight helm helm~
@@ -3090,7 +3073,6 @@ A
 13 38
 L
 50
-S
 
 #1418
 iron greaves greaves~
@@ -3105,7 +3087,6 @@ A
 14 10
 L
 31
-S
 
 #1419
 shadowsteel legguards legguards~
@@ -3120,7 +3101,6 @@ A
 14 18
 L
 43
-S
 
 #1420
 death-knight legplates legplates~
@@ -3135,7 +3115,6 @@ A
 14 22
 L
 53
-S
 
 #1421
 iron sabatons sabatons boots~
@@ -3150,7 +3129,6 @@ A
 14 8
 L
 30
-S
 
 #1422
 shadowsteel plate boots boots~
@@ -3165,7 +3143,6 @@ A
 14 15
 L
 44
-S
 
 #1423
 iron gauntlets gauntlets~
@@ -3180,7 +3157,6 @@ A
 19 3
 L
 32
-S
 
 #1424
 shadowsteel gauntlets gauntlets~
@@ -3195,7 +3171,6 @@ A
 19 5
 L
 46
-S
 
 #1425
 bone vambraces vambraces arm guards~
@@ -3210,7 +3185,6 @@ A
 13 12
 L
 33
-S
 
 #1426
 shadowsteel vambraces vambraces~
@@ -3225,7 +3199,6 @@ A
 13 22
 L
 47
-S
 
 #1427
 iron pauldrons pauldrons shoulder guards~
@@ -3240,7 +3213,6 @@ A
 13 15
 L
 34
-S
 
 #1428
 shadowsteel pauldrons pauldrons~
@@ -3255,7 +3227,6 @@ A
 13 28
 L
 49
-S
 
 #1429
 iron bracers bracers~
@@ -3270,7 +3241,6 @@ A
 13 10
 L
 30
-S
 
 #1430
 shadow-iron bracers bracers~
@@ -3285,7 +3255,6 @@ A
 13 20
 L
 45
-S
 
 #1431
 blackened shield kite shield~
@@ -3300,7 +3269,6 @@ A
 13 25
 L
 35
-S
 
 #1432
 shadowsteel tower shield tower shield~
@@ -3315,7 +3283,6 @@ A
 13 40
 L
 50
-S
 
 #1433
 bone necklace necklace~
@@ -3330,7 +3297,6 @@ A
 12 20
 L
 30
-S
 
 #1434
 shadow pendant pendant~
@@ -3345,7 +3311,6 @@ A
 12 30
 L
 40
-S
 
 #1435
 obsidian amulet amulet~
@@ -3360,7 +3325,6 @@ A
 27 10
 L
 50
-S
 
 #1436
 death-sigil ring ring~
@@ -3375,7 +3339,6 @@ A
 19 3
 L
 30
-S
 
 #1437
 shadow band ring band~
@@ -3390,7 +3353,6 @@ A
 19 4
 L
 36
-S
 
 #1438
 void ring ring~
@@ -3405,7 +3367,6 @@ A
 12 25
 L
 44
-S
 
 #1439
 darksoul earring earring stud~
@@ -3420,7 +3381,6 @@ A
 12 15
 L
 30
-S
 
 #1440
 obsidian ear stud stud earring obsidian~
@@ -3435,7 +3395,6 @@ A
 13 20
 L
 42
-S
 
 #1441
 corruption cloak cloak~
@@ -3450,7 +3409,6 @@ A
 13 20
 L
 33
-S
 
 #1442
 shadowweave cape cape~
@@ -3465,7 +3423,6 @@ A
 13 35
 L
 47
-S
 
 #1443
 deadman belt belt~
@@ -3480,7 +3437,6 @@ A
 14 15
 L
 31
-S
 
 #1444
 iron-link belt belt iron link~
@@ -3495,7 +3451,6 @@ A
 17 -12
 L
 43
-S
 
 #1445
 dark visage mask mask~
@@ -3510,7 +3465,6 @@ A
 13 18
 L
 32
-S
 
 #1446
 iron death-mask mask visor~
@@ -3525,7 +3479,6 @@ A
 13 28
 L
 46
-S
 
 #1447
 necrotic tome tome~
@@ -3540,7 +3493,6 @@ A
 12 30
 L
 35
-S
 
 #1448
 grimoire corruption grimoire~
@@ -3555,7 +3507,6 @@ A
 12 50
 L
 52
-S
 
 #1449
 phylactery shard shard crystal~
@@ -3570,7 +3521,6 @@ A
 13 40
 L
 45
-S
 
 #1450
 shadowpiercer blade sword boss~
@@ -3587,7 +3537,6 @@ A
 17 -10
 L
 55
-S
 
 #1451
 bonelord maul maul boss hammer~
@@ -3604,7 +3553,6 @@ A
 13 60
 L
 60
-S
 
 #1452
 valzareth robe robe boss~
@@ -3621,7 +3569,6 @@ A
 12 80
 L
 60
-S
 
 #1453
 bonelord chestplate chestplate boss plate~
@@ -3638,7 +3585,6 @@ A
 19 12
 L
 60
-S
 
 #1454
 valzareth phylactery crown crown boss~
@@ -3655,7 +3601,6 @@ A
 12 60
 L
 60
-S
 
 #1455
 bonelord skull helm helm boss~
@@ -3672,7 +3617,6 @@ A
 18 8
 L
 60
-S
 #1456
 frost longsword longsword frost~
 @@Ka frost longsword@@N~
@@ -3686,7 +3630,6 @@ A
 18 5
 L
 34
-S
 
 #1457
 void dagger dagger void~
@@ -3701,7 +3644,6 @@ A
 18 6
 L
 38
-S
 
 #1458
 black iron battleaxe battleaxe~
@@ -3716,7 +3658,6 @@ A
 18 7
 L
 42
-S
 
 #1459
 corrupted warhammer warhammer~
@@ -3731,7 +3672,6 @@ A
 18 8
 L
 46
-S
 
 #1460
 soul reaper scythe scythe~
@@ -3746,7 +3686,6 @@ A
 18 9
 L
 50
-S
 
 #1461
 deathwhisper lance lance~
@@ -3761,7 +3700,6 @@ A
 18 9
 L
 53
-S
 
 #1462
 shrieking blade sword shrieking~
@@ -3776,7 +3714,6 @@ A
 18 10
 L
 56
-S
 
 #1463
 void crusher maul void~
@@ -3791,7 +3728,6 @@ A
 18 11
 L
 58
-S
 
 #1464
 necromancer staff staff~
@@ -3806,7 +3742,6 @@ A
 12 35
 L
 40
-S
 
 #1465
 shadow-iron chainmail chainmail shadow~
@@ -3821,7 +3756,6 @@ A
 13 28
 L
 36
-S
 
 #1466
 enchanted breastplate breastplate~
@@ -3836,7 +3770,6 @@ A
 13 40
 L
 42
-S
 
 #1467
 bone-inlaid plate plate bone~
@@ -3851,7 +3784,6 @@ A
 13 50
 L
 49
-S
 
 #1468
 necromancer robes robes mage~
@@ -3868,7 +3800,6 @@ A
 12 40
 L
 38
-S
 
 #1469
 warlock robes robes warlock~
@@ -3885,7 +3816,6 @@ A
 12 50
 L
 48
-S
 
 #1470
 frost-iron greathelm helm frost~
@@ -3900,7 +3830,6 @@ A
 13 33
 L
 45
-S
 
 #1471
 void-touched skullhelm helm void skull~
@@ -3915,7 +3844,6 @@ A
 27 12
 L
 55
-S
 
 #1472
 corrupted plate greaves greaves plate~
@@ -3930,7 +3858,6 @@ A
 14 20
 L
 48
-S
 
 #1473
 void-iron legplates legplates void~
@@ -3945,7 +3872,6 @@ A
 14 25
 L
 57
-S
 
 #1474
 frost plate boots boots frost~
@@ -3960,7 +3886,6 @@ A
 14 18
 L
 49
-S
 
 #1475
 void-steel greaves plate boots~
@@ -3975,7 +3900,6 @@ A
 14 22
 L
 58
-S
 
 #1476
 death knight gauntlets gauntlets plate~
@@ -3990,7 +3914,6 @@ A
 19 6
 L
 50
-S
 
 #1477
 void-iron plate gauntlets gauntlets void~
@@ -4005,7 +3928,6 @@ A
 19 8
 L
 59
-S
 
 #1478
 corrupted vambraces vambraces corrupted~
@@ -4020,7 +3942,6 @@ A
 13 26
 L
 49
-S
 
 #1479
 void-iron vambraces vambraces void~
@@ -4035,7 +3956,6 @@ A
 13 35
 L
 58
-S
 
 #1480
 death knight pauldrons pauldrons knight~
@@ -4050,7 +3970,6 @@ A
 13 32
 L
 51
-S
 
 #1481
 void-iron spaulders spaulders void~
@@ -4065,7 +3984,6 @@ A
 13 40
 L
 59
-S
 
 #1482
 necromancer plate bracers bracers plate~
@@ -4080,7 +3998,6 @@ A
 27 8
 L
 47
-S
 
 #1483
 void sorcerer bracers bracers void~
@@ -4095,7 +4012,6 @@ A
 27 14
 L
 57
-S
 
 #1484
 dark tower shield shield tower~
@@ -4110,7 +4026,6 @@ A
 13 44
 L
 52
-S
 
 #1485
 void-iron kite shield shield kite void~
@@ -4125,7 +4040,6 @@ A
 13 52
 L
 58
-S
 
 #1486
 void crystal necklace necklace void~
@@ -4140,7 +4054,6 @@ A
 12 35
 L
 44
-S
 
 #1487
 sorcerer soul chain chain sorcerer~
@@ -4155,7 +4068,6 @@ A
 12 40
 L
 52
-S
 
 #1488
 deathsight amulet amulet death~
@@ -4170,7 +4082,6 @@ A
 13 50
 L
 58
-S
 
 #1489
 shadow signet ring signet shadow~
@@ -4185,7 +4096,6 @@ A
 27 6
 L
 38
-S
 
 #1490
 necrotic band ring band~
@@ -4200,7 +4110,6 @@ A
 13 30
 L
 48
-S
 
 #1491
 ring of binding ring binding~
@@ -4215,7 +4124,6 @@ A
 19 6
 L
 55
-S
 
 #1492
 night ear stud stud night earring~
@@ -4230,7 +4138,6 @@ A
 13 22
 L
 38
-S
 
 #1493
 shadow piercing earring earring shadow~
@@ -4245,7 +4152,6 @@ A
 12 30
 L
 50
-S
 
 #1494
 deathshroud cloak cloak deathshroud~
@@ -4260,7 +4166,6 @@ A
 13 40
 L
 50
-S
 
 #1495
 void-silk cape cape void silk~
@@ -4275,7 +4180,6 @@ A
 27 12
 L
 58
-S
 
 #1496
 bone warden belt belt bone~
@@ -4290,7 +4194,6 @@ A
 14 20
 L
 40
-S
 
 #1497
 void-iron belt belt void~
@@ -4305,7 +4208,6 @@ A
 17 -15
 L
 52
-S
 
 #1498
 shadow face mask mask shadow~
@@ -4320,7 +4222,6 @@ A
 27 10
 L
 40
-S
 
 #1499
 bone-steel death mask mask bone death~
@@ -4335,7 +4236,6 @@ A
 13 35
 L
 53
-S
 
 #1500
 necrotic codex codex tome~
@@ -4350,7 +4250,6 @@ A
 12 45
 L
 44
-S
 
 #1501
 void tome tome void~
@@ -4365,7 +4264,6 @@ A
 12 60
 L
 55
-S
 
 #1502
 shadow halo halo shadow~
@@ -4380,7 +4278,6 @@ A
 12 30
 L
 38
-S
 
 #1503
 void aura aura void swirling~
@@ -4395,7 +4292,6 @@ A
 27 10
 L
 45
-S
 
 #1504
 cursed horns horns cursed~
@@ -4410,7 +4306,6 @@ A
 19 5
 L
 35
-S
 
 #1505
 void crown horns crown~
@@ -4425,7 +4320,6 @@ A
 13 40
 L
 52
-S
 
 #1506
 necromancer sash waist sash~
@@ -4440,7 +4334,6 @@ A
 12 30
 L
 36
-S
 
 #1507
 potion shadow healing potion~
@@ -4451,7 +4344,6 @@ potion shadow healing potion~
 1
 L
 40
-S
 
 #1508
 potion dark clarity clarity~
@@ -4462,7 +4354,6 @@ potion dark clarity clarity~
 1
 L
 40
-S
 
 #1509
 scroll death ward ward scroll~
@@ -4473,7 +4364,6 @@ scroll death ward ward scroll~
 1
 L
 45
-S
 
 #1510
 death knight longsword longsword knight~
@@ -4490,7 +4380,6 @@ A
 17 -8
 L
 54
-S
 
 #1511
 soul-iron flail flail soul~
@@ -4505,7 +4394,6 @@ A
 18 10
 L
 55
-S
 
 #1512
 necromancer's blade blade mage sword~
@@ -4522,7 +4410,6 @@ A
 27 8
 L
 43
-S
 
 #1513
 elite death plate plate elite death~
@@ -4539,7 +4426,6 @@ A
 19 8
 L
 57
-S
 
 #1514
 wraith armor set armor wraith set~
@@ -4556,7 +4442,6 @@ A
 12 50
 L
 54
-S
 
 #1515
 elite death helm helm elite~
@@ -4571,7 +4456,6 @@ A
 13 42
 L
 56
-S
 
 #1516
 warlock hood hood warlock~
@@ -4586,7 +4470,6 @@ A
 27 16
 L
 42
-S
 
 #1517
 elite death legs greaves legs elite~
@@ -4601,7 +4484,6 @@ A
 14 26
 L
 57
-S
 
 #1518
 elite death boots sabatons elite~
@@ -4616,7 +4498,6 @@ A
 14 24
 L
 57
-S
 
 #1519
 elite death gauntlets gauntlets elite~
@@ -4631,7 +4512,6 @@ A
 19 8
 L
 57
-S
 
 #1520
 elite death vambraces vambraces elite~
@@ -4646,7 +4526,6 @@ A
 13 44
 L
 57
-S
 
 #1521
 elite death pauldrons pauldrons elite~
@@ -4661,7 +4540,6 @@ A
 13 44
 L
 57
-S
 
 #1522
 elite death bracers bracers elite~
@@ -4676,7 +4554,6 @@ A
 13 38
 L
 56
-S
 
 #1523
 shadow reaver sword reaver shadow~
@@ -4691,7 +4568,6 @@ A
 18 12
 L
 58
-S
 
 #1524
 darksouls void maul maul dark void~
@@ -4706,7 +4582,6 @@ A
 18 12
 L
 59
-S
 
 #1525
 necromancer tower shield shield tower necromancer~
@@ -4721,7 +4596,6 @@ A
 27 10
 L
 58
-S
 
 #1526
 void-iron cuirass cuirass void~
@@ -4736,7 +4610,6 @@ A
 13 65
 L
 59
-S
 
 #1527
 ring of the executioner ring executioner~
@@ -4753,7 +4626,6 @@ A
 13 20
 L
 55
-S
 
 #1528
 amulet of void calling amulet void~
@@ -4768,7 +4640,6 @@ A
 12 55
 L
 57
-S
 
 #1529
 shadow-silk robes robes shadow silk~
@@ -4785,7 +4656,6 @@ A
 12 55
 L
 56
-S
 
 #1530
 void-silk robes robes void silk~
@@ -4802,7 +4672,6 @@ A
 12 65
 L
 59
-S
 
 #1531
 corpsewalker cloak cloak corpsewalker~
@@ -4817,7 +4686,6 @@ A
 13 45
 L
 54
-S
 
 #1532
 shadow mantle mantle shadow~
@@ -4832,7 +4700,6 @@ A
 27 14
 L
 58
-S
 
 #1533
 soulkeeper pendant pendant soul~
@@ -4847,7 +4714,6 @@ A
 12 45
 L
 56
-S
 
 #1534
 night's embrace amulet amulet night~
@@ -4862,7 +4728,6 @@ A
 13 60
 L
 59
-S
 
 #1535
 corpsewalker belt belt corpsewalker bone~
@@ -4877,7 +4742,6 @@ A
 17 -18
 L
 56
-S
 
 #1536
 void-iron mask mask void~
@@ -4892,7 +4756,6 @@ A
 27 16
 L
 57
-S
 
 #1537
 skull earring of power earring skull power~
@@ -4907,7 +4770,6 @@ A
 13 30
 L
 55
-S
 
 #1538
 void ear-stud stud earring void~
@@ -4922,7 +4784,6 @@ A
 12 35
 L
 58
-S
 
 #1539
 apex void tome tome apex void~
@@ -4939,7 +4800,6 @@ A
 13 50
 L
 59
-S
 
 #1540
 shadow countess gown gown countess~
@@ -4956,7 +4816,6 @@ A
 12 85
 L
 60
-S
 
 #1541
 countess crimson slippers boots slippers~
@@ -4971,7 +4830,6 @@ A
 14 25
 L
 60
-S
 
 #1542
 countess obsidian ring ring countess obsidian~
@@ -4988,7 +4846,6 @@ A
 13 45
 L
 60
-S
 
 #1543
 countess blood amulet amulet countess blood~
@@ -5005,7 +4862,6 @@ A
 13 50
 L
 60
-S
 
 #1544
 countess shadow cloak cloak countess shadow~
@@ -5022,7 +4878,6 @@ A
 12 65
 L
 60
-S
 
 #1545
 countess wrist-chains bracers countess chains~
@@ -5037,7 +4892,6 @@ A
 13 55
 L
 60
-S
 
 #1546
 countess pale crown helm crown~
@@ -5054,7 +4908,6 @@ A
 12 65
 L
 60
-S
 
 #1547
 bonewarden cleaver cleaver bonewarden~
@@ -5071,7 +4924,6 @@ A
 13 70
 L
 60
-S
 
 #1548
 bonewarden plate chest plate bonewarden~
@@ -5088,7 +4940,6 @@ A
 19 14
 L
 60
-S
 
 #1549
 bonewarden greathelm helm bonewarden~
@@ -5105,7 +4956,6 @@ A
 18 10
 L
 60
-S
 
 #1550
 bonewarden legplates legs bonewarden~
@@ -5120,7 +4970,6 @@ A
 14 28
 L
 60
-S
 
 #1551
 bonewarden gauntlets gauntlets bonewarden~
@@ -5135,7 +4984,6 @@ A
 19 12
 L
 60
-S
 
 #1552
 bonewarden pauldrons pauldrons bonewarden~
@@ -5150,7 +4998,6 @@ A
 13 65
 L
 60
-S
 
 #1553
 bonewarden boots sabatons bonewarden~
@@ -5165,7 +5012,6 @@ A
 14 28
 L
 60
-S
 
 #1554
 maze horror cloak cloak maze horror~
@@ -5182,7 +5028,6 @@ A
 12 75
 L
 60
-S
 
 #1555
 maze horror amulet amulet maze~
@@ -5199,7 +5044,6 @@ A
 13 50
 L
 60
-S
 
 #1556
 maze horror tome tome maze~
@@ -5214,7 +5058,6 @@ A
 12 80
 L
 60
-S
 
 #1557
 maze horror ring ring maze spatial~
@@ -5231,7 +5074,6 @@ A
 19 10
 L
 60
-S
 
 #1558
 maze horror gauntlets gauntlets maze~
@@ -5248,7 +5090,6 @@ A
 13 60
 L
 60
-S
 
 #1559
 maze horror bracers bracers maze~
@@ -5265,7 +5106,6 @@ A
 13 55
 L
 60
-S
 
 #1560
 master binder cloak cloak binder~
@@ -5282,7 +5122,6 @@ A
 12 70
 L
 60
-S
 
 #1561
 master binder tome tome binder~
@@ -5297,7 +5136,6 @@ A
 12 75
 L
 60
-S
 
 #1562
 master binder ring ring binder~
@@ -5314,7 +5152,6 @@ A
 27 18
 L
 60
-S
 
 #1563
 master binder vambraces vambraces binder~
@@ -5331,7 +5168,6 @@ A
 13 55
 L
 60
-S
 
 #1564
 master binder amulet amulet binder~
@@ -5348,7 +5184,6 @@ A
 13 55
 L
 60
-S
 
 #1565
 master binder bracers bracers binder staff~
@@ -5365,7 +5200,6 @@ A
 12 60
 L
 60
-S
 
 #1566
 valzareth staff staff lich~
@@ -5382,7 +5216,6 @@ A
 12 100
 L
 60
-S
 
 #1567
 valzareth phylactery focus focus lich~
@@ -5399,7 +5232,6 @@ A
 13 80
 L
 60
-S
 
 #1568
 valzareth ring ring lich void~
@@ -5416,7 +5248,6 @@ A
 19 12
 L
 60
-S
 
 #1569
 valzareth amulet amulet lich~
@@ -5433,7 +5264,6 @@ A
 12 90
 L
 60
-S
 
 #1570
 valzareth helm helm lich crown~
@@ -5450,7 +5280,6 @@ A
 12 85
 L
 60
-S
 
 #1571
 valzareth robes robes lich void~
@@ -5467,7 +5296,6 @@ A
 12 95
 L
 60
-S
 
 #1572
 valzareth bracers bracers lich~
@@ -5484,7 +5312,6 @@ A
 12 75
 L
 60
-S
 
 #1573
 valzareth cloak cloak lich shadow~
@@ -5501,7 +5328,6 @@ A
 12 90
 L
 60
-S
 
 #1574
 malgrath greataxe axe malgrath bonelord~
@@ -5518,7 +5344,6 @@ A
 13 75
 L
 60
-S
 
 #1575
 malgrath plate chest bonelord~
@@ -5535,7 +5360,6 @@ A
 19 15
 L
 60
-S
 
 #1576
 malgrath helm skull helm bonelord~
@@ -5552,7 +5376,6 @@ A
 18 12
 L
 60
-S
 
 #1577
 malgrath ring ring bonelord~
@@ -5569,7 +5392,6 @@ A
 13 60
 L
 60
-S
 
 #1578
 malgrath amulet amulet bonelord~
@@ -5586,7 +5408,6 @@ A
 13 70
 L
 60
-S
 
 #1579
 malgrath legplates legs bonelord~
@@ -5601,7 +5422,6 @@ A
 14 32
 L
 60
-S
 
 #1580
 malgrath boots sabatons bonelord~
@@ -5616,7 +5436,6 @@ A
 14 30
 L
 60
-S
 
 #1581
 malgrath gauntlets gauntlets bonelord~
@@ -5633,7 +5452,6 @@ A
 13 60
 L
 60
-S
 
 #1582
 malgrath pauldrons pauldrons bonelord~
@@ -5648,7 +5466,6 @@ A
 13 70
 L
 60
-S
 
 #1583
 malgrath vambraces vambraces bonelord~
@@ -5663,7 +5480,6 @@ A
 13 65
 L
 60
-S
 
 #1584
 malgrath bracers bracers bonelord iron~
@@ -5678,7 +5494,6 @@ A
 19 10
 L
 60
-S
 
 #1585
 malgrath tower shield shield bonelord tower~
@@ -5693,7 +5508,6 @@ A
 13 85
 L
 60
-S
 
 #1586
 shadowmere relic belt belt relic shadowmere~
@@ -5710,7 +5524,6 @@ A
 14 30
 L
 60
-S
 
 #1587
 shadowmere relic earring earring relic~
@@ -5727,7 +5540,6 @@ A
 12 50
 L
 60
-S
 
 #1588
 shadowmere crown horns boss~
@@ -5746,7 +5558,6 @@ A
 13 75
 L
 60
-S
 
 #1589
 shadowmere relic halo halo relic~
@@ -5763,7 +5574,6 @@ A
 12 70
 L
 60
-S
 
 #1590
 shadowmere relic aura aura relic~
@@ -5780,7 +5590,6 @@ A
 13 60
 L
 60
-S
 
 #1591
 shadowmere waist soul chain soul belt~
@@ -5797,7 +5606,6 @@ A
 12 65
 L
 60
-S
 
 #1592
 shadowmere void face mask mask void~
@@ -5814,7 +5622,6 @@ A
 13 55
 L
 60
-S
 
 #1593
 shadowpiercer legs greaves legs shadow~
@@ -5831,7 +5638,6 @@ A
 14 26
 L
 60
-S
 
 #1594
 shadowpiercer boots sabatons shadow~
@@ -5848,7 +5654,6 @@ A
 14 24
 L
 60
-S
 
 #1595
 shadowpiercer vambraces vambraces shadow~
@@ -5865,7 +5670,6 @@ A
 13 50
 L
 60
-S
 
 #1596
 shadowpiercer pauldrons pauldrons shadow~
@@ -5882,7 +5686,6 @@ A
 13 55
 L
 60
-S
 
 #1597
 void dragon scale armor dragon scale~
@@ -5899,7 +5702,6 @@ A
 27 20
 L
 60
-S
 
 #1598
 void dragon fang sword fang void~
@@ -5916,7 +5718,6 @@ A
 27 15
 L
 60
-S
 
 #1599
 void dragon helm helm dragon void~
@@ -5933,7 +5734,6 @@ A
 13 75
 L
 60
-S
 
 #1600
 deathbringer greatsword deathbringer greatsword boss~
@@ -5952,7 +5752,6 @@ A
 12 60
 L
 60
-S
 
 #0
 
