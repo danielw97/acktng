@@ -1,0 +1,2719 @@
+#AREA
+@@RHell@@N~
+Q 17
+K hell~
+L {@@r100 @@RRM@@N}~
+N 138
+I 100 130
+V 1400 1649
+X 0
+F 15
+U @@RThe screams of the damned echo through the eternal flames.@@N~
+O hell~
+R hell~
+W hell~
+#HELPS
+0 $~
+#ROOMS
+#1400
+The Gates of Hell~
+@@rMassive gates of scorched iron loom before you, wreathed in crimson flame.
+@@rThe iron is etched with the faces of the screaming damned, their mouths agape
+@@rin silent torment. Above the gate, letters of molten fire blaze the words:
+@@r'Abandon All Hope, Ye Who Enter Here.' A sulfurous wind howls through the
+@@rgate and the ground beneath your feet radiates an awful warmth. The stench
+@@rof brimstone and charred bone clings to everything. Iron spikes line the
+@@rtop of the gate, each one impaling a wailing shade whose screams blend
+@@rinto the endless chorus of the eternally condemned.
+~
+8233 10
+D2
+~
+~
+0 -1 1401
+S
+#1401
+The Vestibule of Hell~
+@@rYou stand in the vestibule between the mortal world and the infernal regions.
+@@rGrey shades drift past you, wailing softly -- the souls of those who lived
+@@rwithout praise or blame, condemned to spend eternity here, forgotten by both
+@@rHeaven and Hell. The ground is cracked and scorched, wisps of crimson smoke
+@@rcurling upward from fissures in the earth. A yellowed notice board stands
+@@rto one side, its surface covered in proclamations written in hellfire that
+@@rcontinually char the parchment and rewrite themselves. The shades here pay
+@@rit no mind -- they have read it ten thousand times and it has never changed.
+~
+8201 11
+D0
+~
+~
+0 -1 1400
+D2
+~
+~
+0 -1 1402
+D3
+~
+~
+0 -1 1410
+S
+#1402
+The River Acheron~
+@@rThe dark river Acheron stretches before you, its waters black as pitch and
+@@rsteaming faintly with infernal heat. Across the river lies the first true
+@@rcircle of Hell. The ancient ferryman Charon poles his skiff through the
+@@rmurk, his hollow eyes burning with ember-light. The wails of the waiting
+@@rdamned rise like a tide from the far bank. Coins glint on the eyes of newly
+@@rarrived shades, placed there by the living to pay the ferryman's toll. Those
+@@rwho cannot pay wade chest-deep in the shallows for a hundred years, begging
+@@rfor passage that Charon grants only when it amuses him. The water is cold
+@@rhere despite the heat of Hell -- the cold of the grave, not of the living world.
+~
+8201 6
+D0
+~
+~
+0 -1 1401
+D2
+~
+~
+0 -1 1403
+S
+#1403
+The First Circle - Limbo~
+@@rThis grey twilight realm is the outer edge of true Hell. Souls of the
+@@rvirtuous unbaptized wander here in a state of perpetual melancholy, denied
+@@rthe joys of Heaven yet spared the tortures further below. Ancient heroes
+@@rand philosophers drift past, their faces etched with noble sadness. The
+@@rair is still and cool compared to the inferno below. Great marble halls
+@@rrise here half-collapsed, the libraries and academies of a civilization
+@@rthat never reached its potential. Aristotle sits in a corner writing
+@@rformulae that solve nothing, and Virgil watches with an expression of
+@@rprofound and dignified regret. Even the light here is grey and beautiful.
+~
+8201 11
+D0
+~
+~
+0 -1 1402
+D2
+~
+~
+0 -1 1404
+D3
+~
+~
+0 -1 1411
+S
+#1404
+The Second Circle - Lust~
+@@rA howling tempest rages here with no respite, blasting the shades of the
+@@rlustful back and forth across a sky the color of a bruise. The sinners
+@@rscream and moan as the infernal storm tears at them, never letting them
+@@rrest, never letting them fall. Cleopatra, Helen, Achilles -- famous lovers
+@@rall, torn endlessly on the winds of their own passion. The wind smells
+@@rof perfume and rot in equal measure, and the screaming of the damned
+@@rtakes on a musical quality that is somehow worse than simple agony.
+@@rPairs of shades cling to each other as the storm drives them, still
+@@rtrying to hold on to what they loved even as it destroys them.
+~
+8233 10
+D0
+~
+~
+0 -1 1403
+D2
+~
+~
+0 -1 1405
+D1
+~
+~
+0 -1 1450
+S
+#1405
+The Third Circle - Gluttony~
+@@rFoul sleet and putrid hail hammer down ceaselessly upon the prostrate shades
+@@rof the gluttonous, who lie face-down in a filthy mix of mud, garbage and
+@@roffal. The three-headed dog Cerberus stalks among them, raking and tearing
+@@rat any shade that dares rise. The stench here is overwhelming, a thick and
+@@rphysical thing that clings to every surface. The ground squelches underfoot
+@@rwith the accumulated filth of eons. The shades here were great gourmands
+@@rin life; now they are fed nothing but the foulest refuse, their appetites
+@@rstimulated to agony by what they cannot have. The sound of Cerberus
+@@rechoes from every direction at once, three sets of jaws never silent.
+~
+8201 10
+D0
+~
+~
+0 -1 1404
+D2
+~
+~
+0 -1 1406
+S
+#1406
+The Fourth Circle - Greed~
+@@rTwo great masses of shades struggle against each other across a vast plain
+@@rof scorched rock. One group howls 'Why do you hoard?' while the other shrieks
+@@r'Why do you waste?' They crash together, pushing enormous weights of stone,
+@@rthen wheel back to crash together again. The misers and spendthrifts grind
+@@ragainst each other for all eternity, neither gaining, neither losing. The
+@@rstone weights they push are carved in the shape of coins, and the irony
+@@ris not lost on the souls condemned here. Some recognize each other from
+@@rlife -- merchants and beggars, kings and paupers -- and the recognition
+@@rmakes the torment keener. The plain stretches to the horizon in all
+@@rdirections, filled with the grinding sound of stone on stone.
+~
+8201 10
+D0
+~
+~
+0 -1 1405
+D1
+~
+~
+0 -1 1477
+D2
+~
+~
+0 -1 1407
+S
+#1407
+The River Styx - Fifth Circle~
+@@rThe sluggish River Styx oozes through this circle, its waters dark and foul.
+@@rThe wrathful fight each other on the surface, biting and striking in endless
+@@rfury. Beneath the surface, the sullen gurgle and choke in the black water,
+@@rtheir sighs rising as bubbles to the surface. A fetid miasma hangs over
+@@rthe river, turning the air to a reddish haze. The shades on the surface
+@@rfight with the intensity of those who have forgotten WHY they fight, driven
+@@rby an anger that will never be satisfied. Occasionally one drags another
+@@rbeneath the surface, and moments later the surface-fighter erupts from
+@@rthe water wearing the face of someone who has swallowed something they
+@@rcannot name. The smell is extraordinary and not in a good way.
+~
+8201 6
+D0
+~
+~
+0 -1 1406
+D2
+~
+~
+0 -1 1408
+D3
+~
+~
+0 -1 1420
+S
+#1408
+The City of Dis~
+@@rThe great city of Dis rises before you, its towers and battlements forged
+@@rof iron that glows red-hot from within. Fallen angels and demons patrol the
+@@rwalls, and a perpetual howl rises from the towers above. The gates of Dis
+@@rare wrought of iron and guarded by thousands of fallen souls who mock and
+@@rtorment all who approach. Crimson lightning splits the sky overhead. The
+@@rcity itself is a labyrinth of burning streets and molten plazas, where
+@@rheretics are sealed in blazing tombs that line every avenue like macabre
+@@rlamposts. The smoke from ten thousand burning souls gives the city its
+@@rpermanent twilight. Somewhere in the distance, a great bell tolls a sound
+@@rthat is not quite music and not quite thunder, marking the passage of eternities.
+~
+8201 11
+D0
+~
+~
+0 -1 1407
+D2
+~
+~
+0 -1 1409
+D1
+~
+~
+0 -1 1422
+S
+#1409
+The Sixth Circle - Heresy~
+@@rA vast cemetery stretches across this burning plain, its tombs all open and
+@@rlit from within by intense flame. Inside each burning tomb lie the heretics
+@@rand unbelievers, sealed in their fiery sepulchres for eternity. The heat
+@@rhere is immense, radiating from the stone in waves that shimmer the air.
+@@rThe cries of the entombed heretics create a constant, maddening chorus.
+@@rThe tombs are arranged in rows so precise they suggest a monstrous aesthetic
+@@rsense -- Hell's architects were clearly proud of this circle. The flames
+@@rinside each tomb burn in different colors: some blue, some green, some a
+@@rdark purple that suggests fires fed by something other than wood. The
+@@rheresies that earned each occupant their place are inscribed above the door
+@@rin a language that shifts and changes as you try to read it.
+~
+8233 11
+D0
+~
+~
+0 -1 1408
+D2
+~
+~
+0 -1 1412
+S
+#1410
+The Corridor of Shades~
+@@rA long corridor carved of red-veined obsidian stretches here, torchlit with
+@@rflames that burn without fuel. The shrieks of tortured souls echo from
+@@rdeep within the stone itself. Daemon guards patrol in pairs, their eyes
+@@rlike hot coals, their armor dripping with the blood of the condemned.
+@@rThe corridor is wide enough for six to walk abreast, and its ceiling is
+@@rthree times the height of a man, hung with iron chandeliers that drip
+@@rliquid fire. The walls are carved with scenes of famous sinners meeting
+@@rtheir fates, rendered with a craftsman's eye for suffering. Every twenty
+@@rpaces a sealed door stands in the wall, from behind which come sounds
+@@rthat suggest the tortures within are ongoing and enthusiastic.
+~
+8201 11
+D0
+~
+~
+0 -1 1401
+D2
+~
+~
+0 -1 1411
+S
+#1411
+The Passage of Torment~
+@@rThis narrow passage winds between towering walls of black basalt, the stone
+@@rstill warm from the forge of creation. Strange sigils burn on the walls,
+@@rsealing in the screaming souls that press against the stone from the other
+@@rside. The passage smells of sulfur and char, and the floor is wet with
+@@rsomething best left unnamed. The sigils pulse with a rhythmic light that
+@@rcould be confused for breathing if you were prone to anthropomorphizing
+@@rarchitectural features, which you are now. Claw marks score the stone
+@@rfrom the inside, where trapped souls made their last futile attempts at
+@@rfreedom. The air pressure here is slightly wrong, as if more of reality
+@@ris crammed into this passage than can comfortably fit, and sound travels
+@@rin strange ways that make your own footsteps sound like someone following.
+~
+8201 11
+D0
+~
+~
+0 -1 1403
+D2
+~
+~
+0 -1 1410
+D3
+~
+~
+0 -1 1412
+S
+#1412
+The Seventh Circle - Violence~
+@@rA river of boiling blood stretches across a burnt landscape. Within the
+@@rscarlet torrent, the violent against their neighbors bob and scream as
+@@rcentaurs patrol the banks and drive back with arrows any shade that dares
+@@rrise above its appointed depth. The plain beyond is a forest of grotesque
+@@rtwisted trees, each one a soul that did violence against itself. The
+@@rblood river Phlegethon steams constantly, and its heat can be felt a
+@@rhundred yards from its banks. The centaurs here are not the noble kind
+@@rfrom myth -- they are the infernal variant, with scorched coats and arrow
+@@rquivers that never empty. Their accuracy is unerring and their enjoyment
+@@rof their work is genuine. The twisted forest moans when the wind moves
+@@rthrough it, and the moan sounds precisely like people who regret things.
+~
+8233 10
+D0
+~
+~
+0 -1 1409
+D2
+~
+~
+0 -1 1413
+D1
+~
+~
+0 -1 1411
+S
+#1413
+The Wood of the Suicides~
+@@rThe forest of misshapen trees that stretches here is no natural wood -- each
+@@rgnarled and blackened trunk is a soul that destroyed its own life. Harpies
+@@rnest among the twisted branches, tearing at the leaves and bark, which weep
+@@rblood. The cries of the souls bleed out through every wound. There is no
+@@rpath here, only the suffering of those who chose oblivion. The trees have
+@@rfaces if you look closely enough, contorted into expressions of regret and
+@@rsomething that might be accusation. The harpies are enormous creatures,
+@@rstinking of old carrion, their human faces wearing expressions of abstract
+@@rcalm that make them more disturbing than simple savagery would. They eat
+@@rwhat they tear from the trees and seem nourished by it, which raises
+@@rquestions you do not wish to think about. The blood that runs down the
+@@rtrunks collects in pools at the roots, perfectly still and perfectly red.
+~
+8233 3
+D0
+~
+~
+0 -1 1412
+D2
+~
+~
+0 -1 1414
+S
+#1414
+The Burning Plain~
+@@rA great plain of burning sand stretches in every direction, fire raining
+@@rdown from the sky in slow, deliberate flakes of flame. The souls of the
+@@rviolent against God writhe on the sand, unable to stand still lest they
+@@rburn more deeply where they stand. The blasphemers and sodomites shuffle
+@@rthrough the rain of fire in endless, futile circles. The fire flakes fall
+@@rwith terrible slowness, each one finding its mark with what feels like
+@@rpurposeful cruelty. The heat here is absolute -- not the sharp heat of
+@@rflame but the deep saturation heat of stone and sand that has been burning
+@@rfor millennia. The horizon shimmers and dances, offering the mirage of
+@@rcooler places that never materialize. The screaming here is constant but
+@@rlacks desperation -- these souls have screamed too long for urgency.
+~
+8233 10
+D0
+~
+~
+0 -1 1413
+D2
+~
+~
+0 -1 1415
+S
+#1415
+The Waterfall to Malebolge~
+@@rHere the cliff drops away sharply, and a roaring waterfall of boiling
+@@rfoul water pours over the edge and into the vast pit of Malebolge below.
+@@rThe spray carries the stench of corruption and sin upward in clouds that
+@@rcling to the surrounding stone. Standing at the edge, you can see down
+@@rinto the ten great ditches of the Eighth Circle far below. The waterfall
+@@ritself is composed of things that are not entirely water -- the liquid has
+@@ra viscosity and color that suggests the distilled essence of every dishonest
+@@ract ever committed. It falls in silence broken only by the distant screaming
+@@rfrom below, which rises in waves as updrafts from the pit carry it to where
+@@ryou stand. The stone at the edge of the cliff is worn smooth by countless
+@@rreckless souls who have looked over this edge exactly once and then decided
+@@rto go back the way they came.
+~
+8201 10
+D0
+~
+~
+0 -1 1414
+D5
+~
+~
+0 -1 1416
+S
+#1416
+Malebolge - The First Bolgia~
+@@rThis great circular trench -- the first of ten that make up Malebolge --
+@@rseethes with seducers and panderers driven by horned demons with great
+@@rwhips. The sinners trot around the trench in a great circle, the crack
+@@rof demonic whips echoing off the stone walls. Below, nine more trenches
+@@rcut deeper and deeper into the rock, each holding a different category of
+@@rfraudulent and false souls. The demons doing the driving take great
+@@rprofessional pride in their work, selecting whips appropriate to each
+@@rsinner with a connoisseur's care. The trench walls are carved with
+@@rscenes that appear to be instructional diagrams for exactly the torments
+@@rbeing inflicted, rendered in a clinical cross-sectional style that is
+@@rsomehow more disturbing than simple gore would be. The sinners move in
+@@ra trot that has long since become automatic, their faces vacant with
+@@rthe particular blankness of those who have accepted their lot entirely.
+~
+8201 11
+D4
+~
+~
+0 -1 1415
+D2
+~
+~
+0 -1 1417
+S
+#1417
+Malebolge - The Fifth Bolgia~
+@@rThis deep trench reeks with a tar-black pitch that bubbles and boils.
+@@rThe souls of barrators -- those who sold public offices -- are flung into
+@@rthe boiling pitch by grinning demons called Malebranche. When a soul tries
+@@rto surface, the demons hook and drag it under again with great iron poles,
+@@rshouting and jeering at one another as they work. The heat is immense.
+@@rThe Malebranche have names that suggest they were assigned by someone
+@@rwith a sense of humor: Malacoda, Cagnazzo, Barbariccia, and their fellows
+@@rbandy insults between themselves as they work. The pitch itself moves
+@@rwith the slow, heavy intent of something alive, rolling and eddying
+@@raround submerged shapes that occasionally break the surface with one
+@@rfinal, futile scream before being driven under again by a hooked pole.
+~
+8233 11
+D0
+~
+~
+0 -1 1416
+D2
+~
+~
+0 -1 1418
+S
+#1418
+Malebolge - The Eighth Bolgia~
+@@rHere in the eighth bolgia, false counselors burn within columns of fire,
+@@reach flame concealing the soul inside. The flames walk and speak with the
+@@rvoices of the condemned, bobbing and weaving as if in conversation. The
+@@rlight from ten thousand burning souls casts wild, dancing shadows across
+@@rthe rock walls. Ulysses burns here, still recounting his last fatal voyage.
+@@rThe flames move with human purpose and gesture in ways that flames are
+@@rnot supposed to, pausing as if to listen, interrupting each other, arguing
+@@rpoints of rhetoric that no longer have any practical application. The heat
+@@rhere is intense but somehow directed inward rather than outward, as if
+@@rthe flames are too self-absorbed to bother burning things outside themselves.
+@@rThis is the bolgia of the silver-tongued, and even the fire is eloquent.
+~
+8233 11
+D0
+~
+~
+0 -1 1417
+D1
+~
+~
+0 -1 1479
+D2
+~
+~
+0 -1 1419
+S
+#1419
+The Ninth Circle - Treachery~
+@@rYou have descended to the lowest circle of Hell. A vast frozen lake called
+@@rCocytus stretches before you, its surface broken by the heads and torsos of
+@@rthe treacherous, frozen in the ice at various depths. The closer to the
+@@rcenter, the deeper the sinners are submerged. A terrible cold wind blows
+@@racross the ice, the source of which becomes terrifyingly apparent. The
+@@rcold here is not natural cold -- it is the cold of absolute betrayal, the
+@@rfreezing of trust itself made physical. The faces visible above the ice
+@@rwear expressions of permanent, horrified recognition, as if they have
+@@rfinally understood something too late. The ice is perfectly clear in some
+@@rsections, allowing you to see down through layers of frozen traitors to
+@@rdepths that suggest the lake is far deeper than it has any right to be.
+@@rYour breath does not fog here -- the cold takes it away before it can.
+~
+8201 10
+D0
+~
+~
+0 -1 1418
+D2
+~
+~
+0 -1 1421
+S
+#1420
+The Shores of the Styx~
+@@rThe fetid shore of the Styx is littered with the half-submerged bodies of
+@@rthe drowned damned, their hands reaching upward through the black silt in
+@@rsilent supplication. Massive hellish barges drift past, loaded with shades
+@@rin chains. The boatmen, faceless and silent, drive the shades with prods
+@@rof crackling hellfire, loading them for transport to deeper circles.
+@@rThe shore itself is a grey-black mud that smells of centuries of accumulated
+@@rdread. Reeds grow here, leafless and black, making sounds in a wind that
+@@rdoes not exist. The chains on the barges are not iron but something
+@@rdenser and colder, forged in a foundry that predates Hell itself. The
+@@rwaters close around the barges without splash or ripple, accepting them
+@@rwith the indifferent familiarity of long practice.
+~
+8201 6
+D0
+~
+~
+0 -1 1407
+D2
+~
+~
+0 -1 1421
+S
+#1421
+The Central Pit of Hell~
+@@rAt the very center of Hell is an immense pit, and at the pit's bottom is
+@@rSatan himself, half-frozen into the ice of Cocytus. His three faces chew
+@@rthe worst of all traitors in their mouths -- Judas, Brutus, and Cassius.
+@@rThe terrible beating of his six vast wings creates the howling frozen wind
+@@rthat locks all of Cocytus in its grip. This is the nadir of all creation.
+@@rThe scale of the figure at the pit's center defies comprehension -- what
+@@rappears small from this distance is in fact larger than any mortal structure
+@@rever built. The three faces work their jaws with mechanical, joyless
+@@rprecision, and the eyes above them hold an emptiness that makes the void
+@@rseem crowded by comparison. The cold radiates upward from the pit in
+@@rwaves that feel personal. You should not be here. Almost no one should.
+~
+8205 11
+D0
+~
+~
+0 -1 1419
+D1
+~
+~
+0 -1 1420
+S
+#1422
+The Tower of Hellfire~
+@@rA tower of black obsidian rises here, its every surface etched with scenes
+@@rof torment. Flames erupt from arrow slits and the screams of sinners echo
+@@rfrom within. Demon guards pace the battlements, their eyes tracking any
+@@rliving soul that dares enter. The tower gate is reinforced with iron bars
+@@rand hangs open on smoldering hinges, inviting the foolish to enter. The
+@@rbase of the tower is wide enough to house a small city, and its peak is
+@@rlost in the smoke-shrouded sky of Dis. The etched scenes on the walls
+@@rchange when you are not looking directly at them -- check the corner of
+@@ryour eye and the figures in the carvings are in different positions than
+@@rbefore. The flames from the arrow slits cast moving shadows that almost
+@@rresemble meaningful patterns if you are unwise enough to look for them.
+~
+8201 11
+D0
+~
+~
+0 -1 1408
+D2
+~
+~
+0 -1 1423
+S
+#1423
+The Throne Room of Beelzebub~
+@@rA vast chamber hewn from living rock, its ceiling lost in smoky darkness.
+@@rAt the far end sits a throne of skulls and molten iron -- the seat of
+@@rBeelzebub, Lord of Flies. A great buzzing fills the air, thousands upon
+@@rthousands of demonic flies circling in the darkness overhead. The floor
+@@ris carpeted with the crushed remains of defeated souls. The power here is
+@@rpalpable and crushing, a physical weight that presses down on everything.
+@@rThe throne itself appears simple until you look at it long enough to
+@@rrealize that the skulls are still alive, their eye sockets open and aware.
+@@rThe buzzing overhead has a tonal quality that is almost music, the
+@@rcollective drone of ten thousand insects organized into something that
+@@rpasses for infernal liturgy. The air tastes of rot and authority.
+~
+8205 11
+D0
+~
+~
+0 -1 1422
+D3
+~
+~
+0 -1 1424
+S
+#1424
+The Pit of Abaddon~
+@@rA yawning pit leads down into a darkness beyond measure, and from it rises
+@@ra constant shriek of wind and agony. This is the realm of Abaddon, the
+@@rAngel of the Abyss, and his locusts swarm about the entrance, their
+@@rscorpion tails raised to sting. The stench of the abyss rises in waves,
+@@rand the pit itself seems to breathe, expanding and contracting slightly
+@@rwith each eon that passes. The locusts here are not the natural kind --
+@@rthey wear crowns and have human faces and the sound of their wings is
+@@rlike the sound of many chariots rushing to war. They regard you with
+@@rintelligent interest, which is worse than if they had simply attacked.
+@@rThe darkness in the pit below is not merely an absence of light but a
+@@rpresence of something else entirely, something that presses upward against
+@@rthe boundary between this place and the abyss as if testing its strength.
+~
+8201 11
+D0
+~
+~
+0 -1 1409
+D2
+~
+~
+0 -1 1425
+S
+#1425
+The Throne Room of Lucifer~
+@@rAt the very heart of Hell, this chamber dwarfs all others. The walls are
+@@rplated in sheets of cooled but still-warm obsidian, reflecting the
+@@rcrimson torchlight in a thousand distorted images. The Throne of the
+@@rMorning Star dominates the far end -- carved from a single piece of
+@@rfallen meteor iron and encrusted with the gems Lucifer wore before the
+@@rFall. The air here hums with power ancient and absolute, and the darkness
+@@rseems to press inward, hungry and aware. The obsidian floor is so perfectly
+@@rpolished it reflects the room above like a black mirror, creating the
+@@rdisorienting sensation of floating above an identical abyss. The gems
+@@rin the throne still hold their original brilliance, unchanged by the Fall,
+@@rand their light is the only thing here that does not feel corrupted. It
+@@ris the most beautiful and the most terrible room in all of creation.
+~
+8205 11
+D0
+~
+~
+0 -1 1424
+S
+#1426
+The Screaming Chasm~
+@@rA deep chasm splits the rock here, its edges glowing orange-red with
+@@rlava that pulses far below. Chains of iron span the gap at intervals,
+@@reach one strung with the writhing forms of condemned souls forced to
+@@rcross endlessly back and forth. The screaming from the chasm below
+@@rmerges with the howling of the wind into a sound that has no mortal
+@@ranalogue. Stone bridges wide enough for two to walk side by side connect
+@@rthe far edges, but the bridges shift and crack at random intervals in a
+@@rway that suggests they are maintained specifically to be unreliable.
+@@rThe heat from below is wet, like a fever, and carries flecks of ash
+@@rthat were recently something else entirely.
+~
+8233 11
+D0
+~
+~
+0 -1 1408
+D2
+~
+~
+0 -1 1427
+S
+#1427
+The Forge of Suffering~
+@@rA vast forge fills this cavernous chamber, its bellows worked by the arms
+@@rof damned sinners whose backs are bent with centuries of labor. The anvils
+@@rare the size of houses and the hammers that fall on them are wielded by
+@@rmassive pain devils who shape instruments of torment with grim artistry.
+@@rEvery wall is lined with the products of this forge -- implements whose
+@@rpurposes require a moment's contemplation and a lifetime's regret to
+@@rfathom. The heat here is the focused heat of creation itself, harnessed
+@@rto the purpose of destruction. The ringing of metal on metal is constant
+@@rand rhythmic, an infernal industry running without pause. Some of the
+@@rtools on the walls bear maker's marks, and the marks look troublingly
+@@rfamiliar to those who have studied certain old and unlicensed texts.
+~
+8233 11
+D0
+~
+~
+0 -1 1426
+D2
+~
+~
+0 -1 1428
+S
+#1428
+The Hall of Mirrors~
+@@rA long hall lined floor to ceiling with mirrors of polished obsidian
+@@rreflects your form back at you, but the reflections are wrong -- each
+@@rmirror shows a different version of you, each one depicting some sin
+@@ryou have committed or contemplated. The effect is disorienting and
+@@raccusatory in equal measure. Fallen angels drift between the mirrors,
+@@rpointing at each reflection with long fingers and laughing softly in
+@@rvoices like the sound of bridges collapsing. The mirrors themselves
+@@rare warm to the touch, as if they have recently absorbed body heat.
+@@rThe versions of you in each mirror move independently of you, living
+@@rout their scenes with a terrible privacy that makes watching them
+@@rfeel like an intrusion even though they are you. Or were. Or will be.
+~
+8233 11
+D0
+~
+~
+0 -1 1427
+D2
+~
+~
+0 -1 1422
+S
+#1429
+The Wailing Vaults~
+@@rA series of arched vaults extends here, each one sealed with rusted iron
+@@rdoors behind which come sounds of extraordinary specificity -- not general
+@@rscreaming but the articulate cries of those being tormented in ways
+@@rprecisely calibrated to their particular failures. The corridors between
+@@rthe vaults are watched over by daemon archivists who carry ledgers listing
+@@rthe occupant, the nature of their sin, and the torment assigned. They
+@@rexamine these ledgers with the careful satisfaction of those who take
+@@rpride in thorough record-keeping. The vaults themselves are numbered in
+@@ra system that makes no sequential sense, suggesting either an organizational
+@@rphilosophy beyond mortal comprehension or no organizational philosophy at
+@@rall, both of which are equally unsettling in context.
+~
+8201 11
+D0
+~
+~
+0 -1 1403
+D2
+~
+~
+0 -1 1430
+S
+#1430
+The Bridge of Sighs~
+@@rAn ancient stone bridge arches over a river of liquid shadow that flows
+@@rwithout sound and without source. The bridge is wide and well-maintained,
+@@rwhich stands out here as either an architectural mercy or a deliberate
+@@rcruelty -- leading souls somewhere worse on a comfortable road. Shades
+@@rwalk across it in both directions with the focused purpose of those who
+@@rhave somewhere to be and prefer not to think about where. The handrails
+@@rare carved with the faces of famous betrayers in detailed cameos. The
+@@rliquid below is not water and not fire but moves with the intent of both.
+@@rSometimes shapes rise in it briefly, face-upward and still, before being
+@@rreclaimed. The sighing the bridge is named for is constant and comes
+@@rfrom the stone itself, as if the bridge shares the general ambience.
+~
+8201 11
+D0
+~
+~
+0 -1 1403
+D2
+~
+~
+0 -1 1429
+S
+#1431
+The Abyssal Antechamber~
+@@rA vast antechamber opens here before the approach to the pit of Abaddon.
+@@rThe walls are pierced by hundreds of small openings through which the
+@@rlocusts of the abyss pour in streams, circling the chamber in patterns
+@@rthat would mean something to someone with the wrong kind of education.
+@@rThe floor is thick with the shed carapaces of countless insects, creating
+@@ra crackling carpet that catches the lurid light filtering down from
+@@rabove. Greater demons stand at attention here, their attention fixed on
+@@rthe pit entrance as if standing guard against something trying to get
+@@rOUT as much as keeping things from getting in. The air has a metallic
+@@rquality like blood and ozone, and every breath tastes of the abyss.
+~
+8201 11
+D0
+~
+~
+0 -1 1424
+D2
+~
+~
+0 -1 1432
+S
+#1432
+The Obsidian Gallery~
+@@rA long gallery of polished obsidian walls displays the history of Hell's
+@@rconquest of the damned in scenes carved with brutal artistry. The earliest
+@@rscenes show the Fall itself -- angels becoming demons in cascades of
+@@rlight and fire. Later scenes show the construction of Hell's architecture,
+@@rwith damned souls used as building material in ways that explain some
+@@rof the more unusual load-bearing structures. Recent scenes -- rendered
+@@rin a style suggesting the carver was working with enthusiasm -- depict
+@@rfamous arrivals and the entertainments arranged for them. The gallery
+@@ris lit by floating spheres of captive fire that follow viewers as they
+@@rwalk, ensuring nothing is missed. A daemon curator lurks at the far end,
+@@ravailable to answer questions in a voice like a file on glass.
+~
+8201 11
+D0
+~
+~
+0 -1 1408
+D2
+~
+~
+0 -1 1433
+S
+#1433
+The Chamber of Final Judgment~
+@@rThis round chamber sits directly beneath the Throne Room of Beelzebub.
+@@rIts floor is a mosaic of damned souls rendered in infernal tile, their
+@@rfaces arranged in expressions of various stages of acceptance. The walls
+@@rare covered in proclamations of judgment written in hellfire, each one
+@@rspecific to a single soul now serving its assigned torment. A raised
+@@rdais in the center bears the scales used to weigh the sins of the
+@@rdamned -- enormous iron scales taller than a house, their pans still
+@@rshowing the slight tilt of the last judgment rendered. The chains holding
+@@rthe pans move slightly, as if the scales are still being calibrated for
+@@rthe next case. The chamber smells of justice, which smells exactly like
+@@rburning paper and absolutely nothing else.
+~
+8201 11
+D0
+~
+~
+0 -1 1423
+D3
+~
+~
+0 -1 1431
+S
+#1434
+The Crucible of Torment~
+@@rA massive stone chamber dominated by a central crucible of hellfire in
+@@rwhich the sins of the living are rendered into fuel for the torments of
+@@rthe dead. Greater demons tend this crucible with professional reverence,
+@@radding materials from sealed iron containers brought by chains of damned
+@@rporters. The heat is constant and focused and has a particular quality
+@@rthat seems to penetrate armor and conviction equally. Channels carved
+@@rinto the floor carry the rendered product away to various parts of Hell,
+@@rthe system arranged with the logic of industrial infrastructure. Signs
+@@rposted above each channel indicate their destinations in a script that
+@@rwould take a scholar of the forbidden texts several lifetimes to decode,
+@@rassuming they had several lifetimes available, which they would not.
+~
+8233 11
+D0
+~
+~
+0 -1 1433
+D2
+~
+~
+0 -1 1423
+S
+#1435
+The Frozen Wastes of Cocytus~
+@@rThe ice of Cocytus extends in all directions, its surface broken by the
+@@rprotruding limbs and faces of the deeply frozen. The wind here is knife-
+@@rsharp and comes from everywhere at once, the beating of Lucifer's wings
+@@rfelt even at this distance as a pressure change that arrives before the
+@@rcold does. The ice itself is of extraordinary clarity, allowing you to
+@@rsee deep into its depths where more frozen figures are visible, stacked
+@@rlike a terrible library of betrayal. The topmost layer is those who
+@@rbetrayed their kin; below them those who betrayed their country; below
+@@rthem those who betrayed their guests; deepest of all those who betrayed
+@@rtheir lords. The categorization is precise and merciless, as all truly
+@@rgood filing systems are. Nothing moves here but the wind. Everything
+@@ris exactly where it deserves to be, which is worse than chaos.
+~
+8201 10
+D0
+~
+~
+0 -1 1419
+D2
+~
+~
+0 -1 1421
+S
+#1436
+The Antechamber of the Fallen~
+@@rA broad antechamber opens before the approach to Lucifer's Throne Room.
+@@rThe walls here are hung with tapestries woven from the hair of damned
+@@rsouls, their colors still vivid despite their origins. The tapestries
+@@rdepict the story of the Fall in heroic scale -- the battle in Heaven,
+@@rthe plummet through the void, the arrival in Hell -- all rendered with
+@@ra kind of terrible grandeur that suggests the artist sympathized with
+@@rthe subject. Stone benches line the walls where greater demons sit in
+@@rwhat might be called a waiting room if the concept were not incongruously
+@@rdignified for its location. The doors at the far end are solid iron
+@@rand tall enough for a giant, their surfaces carved with images of what
+@@rwas lost and what was found and how those two things relate.
+~
+8201 11
+D0
+~
+~
+0 -1 1424
+D2
+~
+~
+0 -1 1425
+S
+#1437
+The Library of Forbidden Truths~
+@@rA vast library fills this chamber, its shelves carved from the bones
+@@rof angels who refused to fall and were broken for their resistance.
+@@rThe books here contain truths that cannot be known by the living without
+@@rcost -- the real names of demons, the original text of laws that have
+@@rbeen revised, the histories of events that were witnessed and then
+@@runwitnessed. Fallen angels serve as librarians, their wings folded close
+@@ras they glide between the shelves in silence. The books themselves are
+@@rchained to their shelves, but the chains are not locked -- they are
+@@rpresent only to mark which books are checked out and which remain.
+@@rThe reading tables are lit by globes of captive starlight, which is the
+@@ronly natural light visible anywhere in Hell and which has a quality of
+@@rprofound sadness for that reason.
+~
+8201 11
+D0
+~
+~
+0 -1 1432
+D2
+~
+~
+0 -1 1438
+S
+#1438
+The Corridor of Endless Descent~
+@@rA long corridor slopes steadily downward here, its incline so gradual
+@@rit is only apparent over distance. The walls are scored with depth
+@@rmarkings in a scale that does not correspond to any known measurement
+@@rsystem, counting downward in a sequence that has been going long enough
+@@rthat the numbers are very large indeed. The floor is worn smooth by
+@@rmillions of feet. Somewhere far ahead and below, the slope levels out
+@@rinto something that has not been named yet because naming would require
+@@racknowledging it, which the scholars who constructed this place preferred
+@@rnot to do. The air grows heavier as you descend. The light from behind
+@@rfades. The light ahead begins as a distant red glow and grows.
+~
+8201 11
+D0
+~
+~
+0 -1 1437
+D2
+~
+~
+0 -1 1419
+S
+#1450
+The Shore of the Lustful~
+@@rThe shore of the second circle's storm-sea lies here, its sand the deep
+@@rred of rust and dried blood. The storm above rages without pause, sending
+@@rits victims crashing into the sand before snatching them skyward again.
+@@rShattered fragments of the shades' memories materialize here as objects
+@@rthat dissolve when touched -- flowers, letters, faces -- appearing and
+@@rdisappearing in an endless exhibition of things that mattered once and
+@@rmatter still, which is the cruelest detail of this particular torment.
+@@rLust demons haunt this shore, feeding on the lingering emotional resonance
+@@rof what the damned carry with them. They are beautiful in the way that
+@@rpoisonous things are beautiful, which is completely and on purpose.
+~
+8233 10
+D0
+~
+~
+0 -1 1404
+D3
+~
+~
+0 -1 1451
+S
+#1451
+The Tempest's Heart~
+@@rHere at the center of the second circle's storm the winds reach their
+@@rmaximum fury, strong enough to lift stone and tear the ground. The sky
+@@ris a vortex of bruised purple and deep crimson, shot through with
+@@rlightning that never quite strikes. Famous lovers circle through this
+@@rcenter in pairs, still together in their punishment as they were in
+@@rlife, which would be touching if they were not screaming. The irony
+@@rof being inseparable from the one whose love condemned you is not lost
+@@ron any of them. The storm speaks here in fragments of the love poetry
+@@rthe damned once composed, recited back at them in a register just below
+@@rcomfort and just above mockery. The wind is sharp enough to draw blood.
+@@rYou will want to leave. You will have some difficulty doing so.
+~
+8233 10
+D0
+~
+~
+0 -1 1450
+D2
+~
+~
+0 -1 1476
+S
+#1476
+The Eye of the Storm~
+@@rAt the absolute center of the second circle's tempest, a strange stillness
+@@rreigns -- the eye of the infernal hurricane. The shrieking winds form walls
+@@raround this pocket of terrible calm, close enough to touch and loud enough
+@@rto shake the bones. The ground here is littered with the possessions of the
+@@rlustful, shed as the storm stripped them: rings, locks of hair, pressed
+@@rflowers, love letters charred but still partially legible. A few particularly
+@@rfamed sinners are pinned here in the calm, their torment the knowing that the
+@@rstorm will reclaim them the moment they step beyond this fragile sanctuary.
+@@rSome have been in the eye so long they have memorized every letter on the ground.
+@@rThey no longer read them. They no longer need to. The words are written in them now.
+~
+8233 10
+D0
+~
+~
+0 -1 1451
+S
+#1477
+The Plain of Weights~
+@@rA vast grey plain extends here, extending the fourth circle's punishment into
+@@rreckless geographic scope. The stone weights the greedy push are arranged in
+@@rrows at the far end, waiting for the next rotation of sinners. Between cycles
+@@rthe plain is briefly empty, which has a quality of held breath to it that the
+@@rnext wave of screaming misers shatters thoroughly. Greed demons patrol the
+@@rperimeter with ledgers, recording the transactions of the futile -- how much
+@@rweight was pushed, how far, in what time -- compiling statistics for a report
+@@rthat will never be filed and never be read. The numbers grow very large and
+@@rthe demons take modest professional pride in keeping them accurate. The plain
+@@ris scored with the grooves of ten thousand years of stone weights dragged across it.
+~
+8201 10
+D0
+~
+~
+0 -1 1406
+D2
+~
+~
+0 -1 1478
+S
+#1478
+The Vault of the Misers~
+@@rIn a cut-back alcove off the plain of weights, the worst of the hoarders
+@@rare confined behind iron bars of their own imagining -- their greed so
+@@rabsolute in life that Hell shaped their prison from its memory. Stacks of
+@@rcounterfeit infernal coin fill the vault floor, worth nothing and untouchable
+@@rthrough the bars regardless. The misers press their faces to the bars and
+@@rcount the coins in obsessive murmur, always arriving at the same sum, always
+@@rstarting again. A single greed archon keeps watch, dressed in the finery of
+@@rthose it once served, its ledger recording debts that can never be collected
+@@rfrom souls that own nothing and never will. The lock on the vault has no
+@@rkeyhole. There is no door. The bars are a courtesy of Hell's dark architects,
+@@rwho understood that a cage is most effective when the prisoner believes in it.
+~
+8201 11
+D0
+~
+~
+0 -1 1477
+S
+#1479
+The Bolgia of Thieves~
+@@rThe ninth bolgia of Malebolge writhes with thieves and robbers, each one
+@@rconstantly transforming -- serpents bite at humans who dissolve and reform
+@@ras serpents themselves, endlessly exchanging shapes. The metamorphosis is
+@@rnever comfortable and never complete, always arrested at the most unpleasant
+@@rmidpoint. The ground is carpeted with shed skins and scales that crumble to
+@@rash underfoot. A few half-human shapes crawl the edges of the trench, their
+@@ridentity so thoroughly confused by transformation that they have forgotten
+@@rwhich form is theirs originally. They reach for each other with hands that
+@@rbecome claws before they can grip. The serpents move with confident territorial
+@@rpurpose among the confusion, the only stable things in a bolgia defined by flux.
+~
+8233 11
+D0
+~
+~
+0 -1 1418
+D2
+~
+~
+0 -1 1480
+S
+#1480
+The Pit of the Flatterers~
+@@rThe second bolgia of Malebolge is crammed with flatterers immersed to their
+@@rcrowns in a river of foul excrement -- the distilled product of all the false
+@@rpraise they dispensed in life. The sinners thrash and wade through the filth,
+@@rtheir voices still shaping compliments even now as they choke and sputter.
+@@rThe stench here has a particular quality of embarrassment to it, as if even
+@@rHell finds this bolgia somewhat overdone. Demons on the banks toss additional
+@@rflattery back into the trench in the form of physical objects -- wreaths, ribbons,
+@@rphrases of excessive praise made solid -- which sink immediately. The flatterers
+@@rcatch them, delighted, and hold them until they dissolve. Then they reach for
+@@rmore. This is the essence of their punishment and also, if you watch carefully,
+@@rthe essence of why they are here at all. Some things do not change with the venue.
+~
+8233 11
+D0
+~
+~
+0 -1 1479
+S
+#0
+#MOBILES
+#1400
+damned soul shade~
+@@ra damned soul@@N~
+@@rA damned shade drifts here, mouth open in a soundless scream.@@N
+@@rIts tattered form flickers between solid and incorporeal, forever denied rest.
+
+~
+~
+147625 590506 0 S
+100 0
+0 50 0 0
+! 0 0 0 7 91978 0 0
+| 0 0 0 0 0 256 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1401
+wailing spirit~
+@@ra wailing spirit@@N~
+@@rA wailing spirit drifts here, its cries echoing off the scorched stone.@@N
+@@rSorrow radiates from its translucent form in waves of grey grief.
+
+~
+~
+147625 1574570 0 S
+103 0
+0 80 0 0
+! 0 0 0 7 91978 65536 4
+| 0 0 0 0 0 256 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1402
+hellfire imp~
+@@ra hellfire imp@@N~
+@@rA hellfire imp cackles here, trailing smoke from its fingertips.@@N
+@@rSmall and wiry, it dances with barely-contained infernal energy, gleeful in its cruelty.
+
+~
+~
+147657 1574714 0 S
+105 0
+-5 100 5 5
+! 0 0 0 7 0 32 4
+| 0 0 0 0 0 0 64
++ 50 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1403
+sinner condemned~
+@@ra condemned sinner@@N~
+@@rA condemned sinner stumbles here, burns covering its tormented flesh.@@N
+@@rIts eyes hold the blank stare of one who has abandoned all hope of redemption.
+
+~
+~
+278689 640 0 S
+107 0
+0 100 8 15
+! 0 0 0 7 2198 0 0
+| 0 0 0 0 0 0 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1404
+lust demon~
+@@ra lust demon@@N~
+@@rA lust demon stalks here, trailing crimson shadows.@@N
+@@rBeautiful and terrible, its form shifts constantly between alluring and monstrous.
+
+~
+~
+278689 1680122 0 S
+109 0
+-5 120 5 5
+! 0 0 0 7 0 98370 4
+| 0 0 0 0 0 0 2
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1405
+gluttony fiend~
+@@ra gluttony fiend@@N~
+@@rA gluttony fiend gnaws on a blackened bone, its three heads arguing over scraps.@@N
+@@rIts bloated form drips with the refuse of its endless, fruitless consumption.
+
+~
+~
+278689 656 0 S
+110 0
+0 150 10 18
+! 0 0 0 7 26838 0 8
+| 0 0 0 0 0 0 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1406
+greed devil~
+@@ra greed devil@@N~
+@@rA greed devil clutches stolen coins to its chest, its eyes burning with avarice.@@N
+@@rEvery motion is calculated to acquire more, even here where possession is meaningless.
+
+~
+~
+278689 17080 0 S
+110 0
+-5 150 10 15
+! 0 0 0 7 2198 33 4
+| 0 0 0 0 0 0 64
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1407
+wrath demon~
+@@ra wrath demon@@N~
+@@rA wrath demon rages here, its armor cracked and still smoldering from past battles.@@N
+@@rFury rolls off it in waves of heat, and its knuckles are bloody from countless fights.
+
+~
+~
+409769 17024 0 S
+112 0
+0 200 15 22
+! 0 0 0 7 26966 0 8
+| 0 0 0 0 0 0 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1408
+heresy shade~
+@@ra heresy shade@@N~
+@@rA heresy shade stumbles here, its form trailing acrid smoke.@@N
+@@rWhispers of doomed philosophy spill endlessly from its charred lips.
+
+~
+~
+147689 590506 0 S
+112 0
+-5 100 0 0
+! 0 0 0 7 91978 65600 4
+| 0 0 0 0 0 256 128
++ 40 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1409
+infernal centaur~
+@@ran infernal centaur@@N~
+@@rAn infernal centaur patrols here, arrow nocked and eyes burning red.@@N
+@@rIts hooves leave scorched prints in the stone and its bow is strung with sinew of the damned.
+
+~
+~
+409769 16440 0 S
+114 0
+0 200 20 25
+! 0 0 0 7 2703294 0 0
+| 0 0 0 0 0 0 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1410
+harpy hell~
+@@ra hellish harpy@@N~
+@@rA hellish harpy screams here, her talons slick with the blood of tree-souls.@@N
+@@rHer black wings beat a constant fetid wind, and her eyes hold nothing but contempt.
+
+~
+~
+147689 1680122 0 S
+114 0
+-5 150 5 5
+! 0 0 0 7 2097152 4096 4
+| 0 0 0 0 0 0 32
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1411
+malebranche demon~
+@@ra Malebranche demon@@N~
+@@rA Malebranche demon lounges here, its hooked iron pole resting on one shoulder.@@N
+@@rIt grins with too many teeth, delighting in its work of prodding the damned souls below.
+
+~
+~
+409769 17080 0 S
+115 0
+0 200 15 22
+! 0 0 0 7 26966 0 8
+| 0 0 0 0 0 0 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1412
+false counselor flame~
+@@ra burning false counselor@@N~
+@@rA column of hellfire walks here, the tormented voice of a false counselor crying from within.@@N
+@@rThe flame speaks in riddled half-truths even now, unable to abandon its deceitful nature.
+
+~
+~
+147689 1574714 0 S
+115 0
+-10 150 0 0
+! 0 0 0 7 0 33554560 4
+| 0 0 0 0 0 0 64
++ 80 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1413
+ice wraith cocytus~
+@@ran ice wraith of Cocytus@@N~
+@@rAn ice wraith of Cocytus drifts here, trailing frost and the chill of oblivion.@@N
+@@rWhere it passes the air crystallizes and the stone grows a rime of grey ice.
+
+~
+~
+147689 1574586 0 S
+116 0
+-10 150 0 0
+! 0 0 0 7 0 131072 8
+| 0 0 0 0 0 64 128
++ 60 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1414
+fallen angel~
+@@ra fallen angel@@N~
+@@rA fallen angel stands here, its once-bright wings now scorched to ruin.@@N
+@@rBeauty and horror war in its features, Heaven's grace corrupted by its own choice.
+
+~
+~
+213177 1173246 0 S
+118 0
+-10 200 10 10
+! 0 0 0 7 0 33621064 4
+| 0 0 0 0 0 128 8
++ 60 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1415
+greater demon~
+@@ra greater demon@@N~
+@@rA greater demon holds court here, its red eyes surveying all with contempt.@@N
+@@rIts massive form radiates authority and menace, and lesser demons scatter at its approach.
+
+~
+~
+409769 1075944 0 S
+120 0
+-5 250 15 20
+! 0 0 0 7 26966 33554560 8
+| 0 0 0 0 0 128 8
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1416
+pain devil~
+@@ra pain devil@@N~
+@@rA pain devil stretches its bone-white fingers, each tipped with a hook of iron.@@N
+@@rIt studies you with clinical detachment, calculating your precise points of weakness.
+
+~
+~
+409769 17024 0 S
+120 0
+0 250 20 28
+! 0 0 0 7 2703422 0 0
+| 0 0 0 0 0 0 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1417
+torment archon~
+@@ra torment archon@@N~
+@@rA torment archon paces here, its six arms each holding an instrument of suffering.@@N
+@@rIt hums a tuneless dirge as it works, utterly absorbed in its terrible craft.
+
+~
+~
+409769 1173246 0 S
+122 0
+-5 280 15 25
+! 0 0 0 7 26966 33621064 8
+| 0 0 0 0 0 128 8
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1418
+abyssal fiend~
+@@ran abyssal fiend@@N~
+@@rAn abyssal fiend crouches here, its form barely contained within its own skin.@@N
+@@rReality seems to bend around it, the air distorting with the sheer wrongness of its presence.
+
+~
+~
+409769 1075944 0 S
+123 0
+-5 300 15 22
+! 0 0 0 7 26966 33685184 8
+| 0 0 0 0 0 128 8
++ 50 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1419
+charon ferryman~
+@@rCharon the Ferryman@@N~
+@@rCharon the Ferryman poles his black skiff here, his ember-eyes judging all who pass.@@N
+@@rAncient beyond reckoning, he has made this crossing since before memory began.
+
+~
+~
+213209 1091320 -500 S
+118 1
+0 400 5 15
+! 0 0 0 7 2198 4 4
+| 0 0 0 0 0 256 128
++ 20 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1420
+cerberus~
+@@rCerberus@@N~
+@@rCerberus rages here, all three heads snapping and slavering with infernal hunger.@@N
+@@rEach head is the size of a horse, its breath a gust of scalding rot and fire.
+
+~
+~
+409833 16968 -800 S
+120 1
+-10 800 20 30
+! 0 0 0 7 2703358 64 8
+| 0 0 0 0 0 128 8
++ 0 0 0 0 0 10 10 20 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1421
+beelzebub lord flies~
+@@rBeelzebub, Lord of Flies@@N~
+@@rBeelzebub, Lord of Flies presides here, surrounded by a seething cloud of demonic insects.@@N
+@@rHis form is vast and terrible, his wings membranes of rotting chitin that buzz the air with menace.
+
+~
+~
+33722019 1075944 -1200 S
+125 1
+-15 1500 20 35
+! 0 0 0 7 26966 33685184 8
+| 0 0 0 0 0 128 8
++ 50 0 0 0 10 10 20 20 5
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1422
+lucifer satan~
+@@rLucifer, the Fallen Morning Star@@N~
+@@rLucifer, the Fallen Morning Star broods here upon his throne, his six wings stirring a freezing wind.@@N
+@@rOnce the brightest of Heaven's host, his beauty is now a terrible consuming darkness that unmakes hope.
+
+~
+~
+33722019 1091320 -2000 S
+130 1
+-20 2500 25 45
+! 0 0 0 7 2703486 33685184 8
+| 0 0 0 0 0 384 8
++ 100 0 0 0 20 15 25 30 10
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1423
+shade vestibule~
+@@ra vestibule shade@@N~
+@@rA pale vestibule shade drifts here, neither condemned nor reprieved, simply forgotten.@@N
+@@rIts expression holds the peculiar sadness of the irrelevant, those whose lives mattered to no one.
+
+~
+~
+147625 590506 0 S
+100 0
+0 50 0 0
+! 0 0 0 7 91978 0 0
+| 0 0 0 0 0 256 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1424
+daemon guard~
+@@ra daemon guard@@N~
+@@rA daemon guard stands at attention here, its coal-red eyes tracking every movement.@@N
+@@rIts armor is etched with infernal runes that glow faintly, and its spear drips with hellfire.
+
+~
+~
+409769 17088 0 S
+108 0
+0 180 15 20
+! 0 0 0 7 26966 128 8
+| 0 0 0 0 0 128 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1425
+brimstone wraith~
+@@ra brimstone wraith@@N~
+@@rA brimstone wraith drifts here, its sulfurous form trailing wisps of choking yellow smoke.@@N
+@@rWhere it passes the stone itself weeps sulfur, and the air turns sharp and acrid.
+
+~
+~
+147625 1574586 0 S
+106 0
+-5 100 0 0
+! 0 0 0 7 0 32 4
+| 0 0 0 0 0 256 64
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1426
+hellhound infernal~
+@@ran infernal hellhound@@N~
+@@rAn infernal hellhound prowls here, its obsidian coat smoking with suppressed flame.@@N
+@@rFour eyes burn like separate coals and its growl carries the harmonics of something enormous.
+
+~
+~
+278721 656 0 S
+111 0
+0 200 18 22
+! 0 0 0 7 2703358 64 0
+| 0 0 0 0 0 128 64
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1427
+locust abaddon~
+@@ra locust of Abaddon@@N~
+@@rA locust of Abaddon circles here, its human face wearing an expression of focused malice.@@N
+@@rThe scorpion tail curves over its head and its wings make the sound of approaching war.
+
+~
+~
+147689 1680122 0 S
+117 0
+-5 150 5 5
+! 0 0 0 7 2097152 512 4
+| 0 0 0 0 0 512 64
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1428
+barrator tar~
+@@ra tar-soaked barrator@@N~
+@@rA tar-soaked barrator thrashes here, its form black and glistening from the fifth bolgia's pitch.@@N
+@@rIt screams with the particular fury of those who know exactly what they did wrong and cannot stop doing it.
+
+~
+~
+278689 640 0 S
+113 0
+0 150 12 16
+! 0 0 0 7 26838 0 0
+| 0 0 0 0 0 0 512
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1429
+false counselor burning~
+@@ra burning false counselor@@N~
+@@rA false counselor burns within its column of flame, still gesticulating for emphasis.@@N
+@@rEven now, encased in fire, it attempts to convince the surrounding air of something.
+
+~
+~
+147689 1574714 0 S
+115 0
+-10 150 0 0
+! 0 0 0 7 0 33554560 4
+| 0 0 0 0 0 0 64
++ 70 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1430
+ice traitor frozen~
+@@ra frozen traitor@@N~
+@@rA frozen traitor strains against the ice of Cocytus, only its head and shoulders free.@@N
+@@rIts expression holds the horrified clarity of one who has understood something a moment too late.
+
+~
+~
+147625 590506 0 S
+116 0
+0 100 5 8
+! 0 0 0 7 2198 131072 4
+| 0 0 0 0 0 64 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1431
+howling shade styx~
+@@ra howling shade of the Styx@@N~
+@@rA howling shade of the Styx rises from the black water, its form streaming with foul river water.@@N
+@@rIt reaches toward the living with desperate hunger, drawn by the warmth it can no longer feel.
+
+~
+~
+147625 1574570 0 S
+108 0
+0 80 0 0
+! 0 0 0 7 91978 0 0
+| 0 0 0 0 0 256 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1432
+suicide tree~
+@@ra twisted suicide tree@@N~
+@@rA twisted suicide tree reaches its gnarled branches toward you, weeping dark blood.@@N
+@@rA face contorts in the bark, and the voice that comes from the bleeding wood is a human one.
+
+~
+~
+147689 590506 0 S
+113 0
+0 100 8 8
+! 0 0 0 7 0 32768 4
+| 0 0 0 0 0 0 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1433
+storm wraith lust~
+@@ra storm wraith@@N~
+@@rA storm wraith wheels here, its translucent form forever caught mid-scream.@@N
+@@rTorn from the tempest above, it carries fragments of the storm's fury in its trailing edges, dragging cold wind and grief wherever it moves.
+
+~
+~
+147689 1680122 0 S
+109 0
+-5 130 5 5
+! 0 0 0 7 2097152 4096 4
+| 0 0 0 0 0 256 64
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1434
+greed archon~
+@@ra greed archon@@N~
+@@rA greed archon stands here in stolen finery, its ledger open to a page of impossible debts.@@N
+@@rEven its armour was taken from someone -- the names of former owners are scratched into every piece, a record of acquisitions that pleases it enormously.
+
+~
+~
+409769 17080 0 S
+113 0
+-5 180 12 18
+! 0 0 0 7 2198 33 4
+| 0 0 0 0 0 0 64
++ 20 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1435
+infernal serpent thief~
+@@ran infernal serpent@@N~
+@@rAn infernal serpent coils here, its scales the deep red of cooling iron.@@N
+@@rIts eyes are human and hold the calculating gleam of one who spent a lifetime measuring what others owned against what they themselves possessed.
+
+~
+~
+278689 1680122 0 S
+114 0
+-5 160 8 12
+! 0 0 0 7 2097152 512 4
+| 0 0 0 0 0 512 64
++ 20 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1436
+flatterer excrement~
+@@ra floundering flatterer@@N~
+@@rA flatterer founders here, dripping with the produce of the second bolgia, its mouth still shaping praise.@@N
+@@rYou can almost hear the compliments it would offer if it were not choking, and the almost is the most disturbing part.
+
+~
+~
+147625 590506 0 S
+111 0
+0 120 8 10
+! 0 0 0 7 91978 0 0
+| 0 0 0 0 0 256 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1437
+harpy elder~
+@@ran elder harpy@@N~
+@@rAn elder harpy perches here, her enormous wings folding around her like a cloak of rot.@@N
+@@rShe is ancient even by the standards of Hell's wildlife, and her contempt for everything is absolute and undiscriminating.
+
+~
+~
+213177 1680122 0 S
+116 0
+-5 200 10 10
+! 0 0 0 7 2097152 4096 4
+| 0 0 0 0 0 0 32
++ 40 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1438
+daemon archivist~
+@@ra daemon archivist@@N~
+@@rA daemon archivist drifts here, its ledger held to its chest with both arms.@@N
+@@rIt examines you with the professional interest of one who is composing your entry before you have done anything worth recording, which suggests confidence in the outcome.
+
+~
+~
+147689 1574714 0 S
+116 0
+-10 160 0 0
+! 0 0 0 7 0 33554560 4
+| 0 0 0 0 0 0 64
++ 60 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1439
+pain sculptor~
+@@ra pain sculptor@@N~
+@@rA pain sculptor works here, its six fingers tracing patterns in the air that leave faint red lines.@@N
+@@rIt studies the space around you with the focused attention of a craftsman assessing a new medium, which in this context means you.
+
+~
+~
+409769 17024 0 S
+122 0
+0 260 20 28
+! 0 0 0 7 2703422 0 0
+| 0 0 0 0 0 0 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#1440
+vestibule wanderer~
+@@ra wandering shade@@N~
+@@rA wandering shade drifts here at the margins of Hell, neither here nor elsewhere.@@N
+@@rIt was not significant enough for either reward or punishment, and this ambiguity is written across its translucent features as a kind of permanent, bewildered embarrassment.
+
+~
+~
+147625 590506 0 S
+100 0
+0 40 0 0
+! 0 0 0 7 91978 0 0
+| 0 0 0 0 0 256 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0
+L 0 0 0 0 0 0
+#0
+#OBJECTS
+#1400
+soulfire ember~
+@@rA Soulfire Ember@@N~
+@@rA soulfire ember pulses here with dim, tormented light.@@N
+~
+1 268435456 16777217 2
+0 0 -1 0 0 0 0 0 0 0
+0
+L
+100
+#1401
+ring condemned~
+@@rRing of the Condemned@@N~
+@@rA ring forged of scorched iron lies here, still warm.@@N
+~
+9 268435456 8396800 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1402
+amulet hellfire~
+@@rAmulet of Hellfire@@N~
+@@rAn amulet of hellfire hangs here, trailing smoke.@@N
+~
+9 268435456 8388616 3
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1403
+gloves torment~
+@@rGloves of Torment@@N~
+@@rA pair of smoldering gloves lies here.@@N
+~
+9 268435456 8404992 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1404
+boots ashwalker~
+@@rBoots of the Ashwalker@@N~
+@@rA pair of ash-grey boots lies here, still radiating heat.@@N
+~
+9 268435456 10485760 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1405
+earring damned~
+@@rEarrings of the Damned@@N~
+@@rA pair of blood-iron earrings lies here.@@N
+~
+9 268435456 8388672 3
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1406
+bracers infernal~
+@@rBracers of Infernal Iron@@N~
+@@rHeavy bracers of infernal iron lie here, still hot to the touch.@@N
+~
+9 268435456 8390656 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1407
+belt soulchain~
+@@rBelt of Soulchains@@N~
+@@rA belt woven of glowing soul-chains lies here.@@N
+~
+9 268435456 8519680 7
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1408
+shoulderguards pain~
+@@rShoulderguards of Pain@@N~
+@@rA set of barbed shoulderguards lies here, dripping with old blood.@@N
+~
+9 268435456 8389632 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1409
+leggings hellforged~
+@@rLeggings of Hellfire@@N~
+@@rA set of leggings, forged in hellfire, lies here.@@N
+~
+9 268435456 9437184 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1410
+cloak suffering~
+@@rCloak of Suffering@@N~
+@@rA cloak woven from the screams of the damned hangs here.@@N
+~
+9 268435456 8388736 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1411
+body hellplate~
+@@rHellplate Breastplate@@N~
+@@rA massive breastplate of hellplate lies here, etched with scenes of torment.@@N
+~
+9 268435456 8650752 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1412
+helm torment~
+@@rHelm of Torment@@N~
+@@rA helm of black iron, studded with barbs, lies here.@@N
+~
+9 268435456 8388616 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1413
+wand hellfire~
+@@rWand of Hellfire@@N~
+@@rA wand carved from infernal bone lies here, pulsing with dark power.@@N
+~
+5 268435456 8421376 3
+0 0 0 6 0 0 0 0 0 0
+0
+L
+100
+#1414
+staff brimstone~
+@@rStaff of Brimstone@@N~
+@@rA staff capped with a smoking sulfur gem lies here.@@N
+~
+5 268435456 8421376 3
+0 0 0 6 0 0 0 0 0 0
+0
+L
+100
+#1415
+sword hellblade~
+@@rHellblade@@N~
+@@rA massive hellblade lies here, its edge still glowing orange from the forge.@@N
+~
+5 268435456 8421376 9
+0 0 0 3 0 0 0 0 0 0
+0
+L
+100
+#1416
+mace infernal~
+@@rMace of Infernal Judgment@@N~
+@@rA mace headed with a sphere of hardened hellstone lies here.@@N
+~
+5 268435456 8421376 9
+0 0 0 8 0 0 0 0 0 0
+0
+L
+100
+#1417
+axe soulcleaver~
+@@rSoulcleaver Axe@@N~
+@@rA great axe of infernal iron lies here, its blade etched with screaming faces.@@N
+~
+5 268435456 8421376 9
+0 0 0 3 0 0 0 0 0 0
+0
+L
+100
+#1418
+wings fallen~
+@@rWings of the Fallen@@N~
+@@rA pair of burnt, tattered wings lies here, still twitching.@@N
+~
+9 268435456 8388746 3
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1419
+face mask anguish~
+@@rMask of Anguish@@N~
+@@rA mask of tortured iron lies here, contorted into a permanent scream.@@N
+~
+9 268435456 8388640 7
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1420
+horns demon~
+@@rHorns of the Demon Prince@@N~
+@@rA pair of massive demon horns lies here, still attached to a shard of skull.@@N
+~
+9 268435456 8388616 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1421
+aura hellfire~
+@@rAura of Hellfire@@N~
+@@rA shimmering hellfire aura crackles here, seeking a host.@@N
+~
+9 268435456 8388610 3
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1422
+halo broken~
+@@rBroken Halo@@N~
+@@rA cracked and blackened halo lies here, its light extinguished.@@N
+~
+9 268435456 8388610 2
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1423
+tail devil~
+@@rTail of the Devil@@N~
+@@rA barbed devil tail lies here, still lashing.@@N
+~
+9 268435456 8519802 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1424
+claws hellfiend~
+@@rClaws of the Hell Fiend@@N~
+@@rA pair of iron-hard demon claws lies here.@@N
+~
+9 268435456 8405000 7
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1425
+veil sorrow~
+@@rVeil of Eternal Sorrow@@N~
+@@rA translucent veil of grey sorrow drifts here, seeking a face to haunt.@@N
+~
+9 268435456 8388640 2
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1426
+shield hellforged~
+@@rShield of Hellforged Iron@@N~
+@@rA shield of hellforged iron lies here, its surface scarred by infernal combat.@@N
+~
+9 268435456 8421376 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1427
+ring wrath~
+@@rRing of Wrath@@N~
+@@rA ring of blackened iron lies here, radiating barely-contained fury.@@N
+~
+9 268435456 8396800 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1428
+finger bone curse~
+@@rBone Ring of Eternal Damnation@@N~
+@@rA bone ring carved from the finger of the damned lies here.@@N
+~
+9 268435456 8396800 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1429
+wrist iron hellbound~
+@@rHellbound Iron Vambrace@@N~
+@@rAn iron vambrace lies here, its surface carved with names of the damned.@@N
+~
+9 268435456 8390656 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1430
+neck collar torment~
+@@rCollar of Torment@@N~
+@@rA heavy iron collar lies here, inscribed with infernal runes.@@N
+~
+9 268435456 8388616 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1431
+neck chain hellfire~
+@@rChain of Hellfire@@N~
+@@rA chain of glowing hellfire links lies here.@@N
+~
+9 268435456 8388616 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1432
+two handed greataxe oblivion~
+@@rGreataxe of Oblivion@@N~
+@@rA massive two-handed greataxe lies here, its blade black as the void.@@N
+~
+5 268435456 8421376 9
+0 0 0 3 0 0 0 0 0 0
+0
+L
+100
+#1433
+charon cloak ferryman~
+@@rCloak of the Ferryman@@N~
+@@rThe dark cloak of Charon lies here, smelling of river-mud and death.@@N
+~
+9 402653248 8388736 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1434
+charon ring styx~
+@@rRing of the Styx@@N~
+@@rA ring of black river-stone lies here, impossibly cold.@@N
+~
+9 402653248 8396800 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1435
+cerberus hide~
+@@rHide of Cerberus@@N~
+@@rThe matted, fire-scarred hide of Cerberus lies here.@@N
+~
+9 402653248 8650752 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1436
+cerberus fang~
+@@rFang of Cerberus@@N~
+@@rA massive fang wrenched from the jaw of Cerberus lies here.@@N
+~
+5 402653248 8421376 9
+0 0 0 10 0 0 0 0 0 0
+0
+L
+100
+#1437
+beelzebub crown flies~
+@@rCrown of Flies@@N~
+@@rA crown woven of demonic flies hovers here, their wings a constant, maddening buzz.@@N
+~
+9 402653248 8388616 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1438
+beelzebub wings pestilence~
+@@rWings of Pestilence@@N~
+@@rMassive wings of pestilence lie here, their membranes crawling with demonic vermin.@@N
+~
+9 402653248 8388746 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1439
+beelzebub scepter~
+@@rScepter of Beelzebub@@N~
+@@rThe dark scepter of Beelzebub lies here, still crackling with infernal authority.@@N
+~
+5 402653248 8421376 4
+0 0 0 6 0 0 0 0 0 0
+0
+L
+100
+#1440
+lucifer crown morning star~
+@@rCrown of the Morning Star@@N~
+@@rThe crown of Lucifer lies here, its gems still radiant despite the Fall.@@N
+~
+9 402653248 8388616 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1441
+lucifer wings fallen~
+@@rWings of the Fallen Morning Star@@N~
+@@rThe great wings of Lucifer lie folded here, black as the void between stars.@@N
+~
+9 402653248 8388746 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1442
+lucifer sword flaming~
+@@rSword of the Fallen Light@@N~
+@@rThe sword of Lucifer lies here, its blade still holding a faint echo of its former glory.@@N
+~
+5 402653248 8421376 9
+0 0 0 3 0 0 0 0 0 0
+0
+L
+100
+#1443
+lucifer armor fallen~
+@@rArmor of the Fallen@@N~
+@@rThe black armor of Lucifer lies here, etched with scenes of Heaven remembered.@@N
+~
+9 402653248 8650752 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1444
+charon pole ferryman~
+@@rPole of the Ferryman@@N~
+@@rA long pole of blackened bone lies here, used to push Charon's skiff through the dark waters.@@N
+~
+5 402653248 8421376 9
+0 0 0 3 0 0 0 0 0 0
+0
+L
+100
+#1445
+charon helm skulls~
+@@rHelm of River Skulls@@N~
+@@rA helm fashioned from the skulls of the uncrossed dead lies here, still dripping dark water.@@N
+~
+9 402653248 8388616 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1446
+charon boots marsh~
+@@rBoots of the Marsh-Walker@@N~
+@@rBoots of cured demon hide lie here, their soles stained by centuries of black river bottom.@@N
+~
+9 402653248 10485760 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1447
+cerberus collar iron~
+@@rCollar of the Three-Headed Terror@@N~
+@@rAn enormous iron collar lies here, thick enough to restrain something the size of three horses.@@N
+~
+9 402653248 8388616 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1448
+cerberus claw shredder~
+@@rClaw of the Hellhound Lord@@N~
+@@rA massive obsidian claw lies here, still warm and impossibly sharp.@@N
+~
+9 402653248 8405000 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1449
+beelzebub ring dominion~
+@@rRing of Pestilent Dominion@@N~
+@@rA ring of chitin and gold lies here, carved with images of swarming flies.@@N
+~
+9 402653248 8396800 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1451
+beelzebub belt dominion~
+@@rBelt of Infernal Dominion@@N~
+@@rA belt of woven fly-silk and iron links lies here, buzzing faintly.@@N
+~
+9 402653248 8519680 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1452
+lucifer ring dawn~
+@@rRing of the First Dawn@@N~
+@@rA ring of pure starlight-metal lies here, its surface bearing the inscription 'Morning Star'.@@N
+~
+9 402653248 8396800 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1453
+lucifer belt celestial~
+@@rBelt of Celestial Iron@@N~
+@@rA belt of heaven-forged iron lies here, its brightness somehow surviving the Fall.@@N
+~
+9 402653248 8519680 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1454
+lucifer greaves fallen~
+@@rGreaves of the Morning Star@@N~
+@@rA pair of greaves forged before the Fall lies here, their surface still faintly luminous.@@N
+~
+9 402653248 10485760 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1455
+lucifer gloves fallen~
+@@rGauntlets of the Fallen Light@@N~
+@@rA pair of gauntlets of fallen angel-metal lies here, their clenched fingers frozen in fury.@@N
+~
+9 402653248 8404992 14
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1466
+storm wraith veil~
+@@rVeil of the Storm Wraith@@N~
+@@rA torn veil of storm-grey mist lies here, crackling faintly with the charge of the infernal tempest.@@N
+~
+9 402653184 8388640 2
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1467
+ring greed archon~
+@@rRing of the Greed Archon@@N~
+@@rA heavy ring of stolen gold lies here, the names of its previous owners scratched along the inner band.@@N
+~
+9 402653184 8396800 4
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1468
+scroll false praise~
+@@rScroll of False Praise@@N~
+@@rA scroll of parchment lies here, its surface dense with elaborate, meaningless flattery.@@N
+~
+9 402653184 8388610 2
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1469
+fang infernal serpent~
+@@rFang of the Infernal Serpent@@N~
+@@rA long red fang lies here, still weeping a dark venom that smells of avarice.@@N
+~
+5 402653184 8421376 7
+0 0 0 10 0 0 0 0 0 0
+0
+L
+100
+#1470
+claw elder harpy~
+@@rTalon of the Elder Harpy@@N~
+@@rA great black talon lies here, its edge honed by centuries of tearing at the damned.@@N
+~
+5 402653184 8421376 9
+0 0 0 3 0 0 0 0 0 0
+0
+L
+100
+#1471
+ledger daemon archivist~
+@@rLedger of Infernal Record@@N~
+@@rA ledger bound in blackened leather lies here, its pages already filling with entries for the next arrival.@@N
+~
+9 402653184 8388610 3
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1472
+chisel pain sculptor~
+@@rChisel of the Pain Sculptor@@N~
+@@rAn implement of polished infernal bone lies here, its tip precisely shaped for purposes that bear no examination.@@N
+~
+5 402653184 8421376 7
+0 0 0 6 0 0 0 0 0 0
+0
+L
+100
+#1473
+amulet infernal storm~
+@@rAmulet of the Infernal Storm@@N~
+@@rAn amulet of dark iron lies here, a contained vortex of crimson storm visible within its crystal face.@@N
+~
+9 402653184 8388616 3
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1474
+bracers greed iron~
+@@rBracers of Accumulated Iron@@N~
+@@rA pair of bracers assembled from mismatched pieces of stolen armour lies here, the joins still sharp.@@N
+~
+9 402653184 8390656 13
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1475
+wings elder harpy~
+@@rWings of the Elder Harpy@@N~
+@@rA pair of vast black wings lies here, rank with old carrion, their span enough to shadow a small building.@@N
+~
+9 402653184 8388746 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#0
+#RESETS
+M 0 1400 10 1401 (null)
+
+M 0 1423 10 1401 (null)
+
+M 0 1424 8 1410 (null)
+
+M 0 1424 8 1411 (null)
+
+M 0 1425 6 1410 (null)
+
+M 0 1425 6 1411 (null)
+
+M 0 1401 8 1403 (null)
+
+M 0 1402 6 1402 (null)
+
+M 0 1402 4 1416 (null)
+
+M 0 1403 6 1405 (null)
+
+M 0 1428 5 1417 (null)
+
+M 0 1404 4 1404 (null)
+
+M 0 1404 4 1407 (null)
+
+M 0 1404 4 1450 (null)
+
+M 0 1404 4 1451 (null)
+
+M 0 1405 4 1405 (null)
+
+M 0 1426 5 1405 (null)
+
+M 0 1406 4 1406 (null)
+
+M 0 1406 4 1407 (null)
+
+M 0 1407 4 1407 (null)
+
+M 0 1407 4 1412 (null)
+
+M 0 1408 4 1409 (null)
+
+M 0 1408 4 1414 (null)
+
+M 0 1408 4 1428 (null)
+
+M 0 1409 4 1412 (null)
+
+M 0 1409 4 1413 (null)
+
+M 0 1410 4 1413 (null)
+
+M 0 1410 4 1413 (null)
+
+M 0 1432 5 1413 (null)
+
+M 0 1411 3 1416 (null)
+
+M 0 1411 3 1417 (null)
+
+M 0 1411 3 1427 (null)
+
+M 0 1412 3 1418 (null)
+
+M 0 1412 3 1418 (null)
+
+M 0 1429 4 1418 (null)
+
+M 0 1413 3 1419 (null)
+
+M 0 1413 3 1419 (null)
+
+M 0 1430 5 1419 (null)
+
+M 0 1430 5 1435 (null)
+
+M 0 1414 3 1414 (null)
+
+M 0 1414 3 1432 (null)
+
+M 0 1415 2 1416 (null)
+
+M 0 1415 2 1417 (null)
+
+M 0 1415 2 1418 (null)
+
+M 0 1416 2 1407 (null)
+
+M 0 1416 2 1426 (null)
+
+M 0 1417 2 1417 (null)
+
+M 0 1417 2 1427 (null)
+
+M 0 1418 2 1418 (null)
+
+M 0 1418 2 1419 (null)
+
+M 0 1418 2 1431 (null)
+
+M 0 1431 5 1420 (null)
+
+M 0 1427 4 1431 (null)
+
+M 0 1427 4 1424 (null)
+
+M 0 1419 1 1402 (null)
+
+E 0 1444 0 21 (null)
+
+E 0 1445 0 4 (null)
+
+E 0 1446 0 29 (null)
+
+E 0 1433 0 24 (null)
+
+E 0 1434 0 9 (null)
+
+M 0 1420 1 1405 (null)
+
+E 0 1435 0 26 (null)
+
+E 0 1436 0 21 (null)
+
+E 0 1447 0 9 (null)
+
+E 0 1448 0 19 (null)
+
+M 0 1421 1 1423 (null)
+
+E 0 1437 0 4 (null)
+
+E 0 1438 0 11 (null)
+
+E 0 1439 0 20 (null)
+
+E 0 1449 0 9 (null)
+
+E 0 1451 0 25 (null)
+
+M 0 1422 1 1425 (null)
+
+E 0 1440 0 4 (null)
+
+E 0 1441 0 11 (null)
+
+E 0 1442 0 21 (null)
+
+E 0 1443 0 26 (null)
+
+E 0 1452 0 17 (null)
+
+E 0 1453 0 25 (null)
+
+E 0 1454 0 28 (null)
+
+E 0 1455 0 16 (null)
+
+O 0 1400 0 1401 (null)
+
+O 0 1401 0 1403 (null)
+
+O 0 1402 0 1403 (null)
+
+O 0 1403 0 1405 (null)
+
+O 0 1404 0 1405 (null)
+
+O 0 1405 0 1407 (null)
+
+O 0 1406 0 1407 (null)
+
+O 0 1407 0 1407 (null)
+
+O 0 1408 0 1412 (null)
+
+O 0 1409 0 1412 (null)
+
+O 0 1410 0 1414 (null)
+
+O 0 1411 0 1416 (null)
+
+O 0 1412 0 1416 (null)
+
+O 0 1413 0 1416 (null)
+
+O 0 1414 0 1416 (null)
+
+O 0 1415 0 1417 (null)
+
+O 0 1416 0 1417 (null)
+
+O 0 1417 0 1417 (null)
+
+O 0 1418 0 1418 (null)
+
+O 0 1419 0 1418 (null)
+
+O 0 1420 0 1419 (null)
+
+O 0 1421 0 1419 (null)
+
+O 0 1422 0 1419 (null)
+
+O 0 1423 0 1419 (null)
+
+O 0 1424 0 1419 (null)
+
+O 0 1425 0 1419 (null)
+
+O 0 1426 0 1419 (null)
+
+O 0 1427 0 1419 (null)
+
+O 0 1428 0 1419 (null)
+
+O 0 1429 0 1419 (null)
+
+O 0 1430 0 1419 (null)
+
+O 0 1431 0 1419 (null)
+
+O 0 1432 0 1419 (null)
+
+D 0 1423 0 1 (null)
+
+D 0 1425 0 1 (null)
+
+M 0 1433 6 1451 (null)
+
+M 0 1433 6 1476 (null)
+
+E 0 1466 0 24 (null)
+
+M 0 1440 8 1401 (null)
+
+M 0 1434 5 1477 (null)
+
+M 0 1434 5 1478 (null)
+
+E 0 1467 0 17 (null)
+
+M 0 1435 5 1479 (null)
+
+M 0 1435 5 1480 (null)
+
+E 0 1469 0 19 (null)
+
+M 0 1436 6 1480 (null)
+
+E 0 1468 0 24 (null)
+
+M 0 1437 4 1413 (null)
+
+M 0 1437 4 1414 (null)
+
+E 0 1470 0 19 (null)
+
+E 0 1475 0 11 (null)
+
+M 0 1438 4 1429 (null)
+
+M 0 1438 4 1432 (null)
+
+E 0 1471 0 24 (null)
+
+M 0 1439 3 1427 (null)
+
+M 0 1439 3 1434 (null)
+
+E 0 1472 0 19 (null)
+
+E 0 1473 0 9 (null)
+
+M 0 1440 8 1410 (null)
+
+M 0 1440 8 1411 (null)
+
+S
+#SPECIALS
+M 1421 spec_bigtime
+M 1422 spec_bigtime
+S
+#$
