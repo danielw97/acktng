@@ -1238,7 +1238,7 @@ old purpose.@@N
 | 256 8 0 0 65536 258 8
 + 0 0 0 0 0 0 0 0 0
 l 3 1150 1151 1152 0 0 0 0 0 0 
-L 40 70 95 0 0 0 0 0 0 0 
+L 20 34 46 0 0 0 0 0 0 
 #1152
 thorned specter~
 @@da Thorned Specter@@N~
@@ -1277,7 +1277,7 @@ eyes, when they open them, are the deep red of thornwood berries.@@N
 | 32 16 0 0 66 32 192
 + 15 0 0 0 0 0 0 0 0
 l 3 1153 1154 1155 0 0 0 0 0 0 
-L 35 65 90 0 0 0 0 0 0 0 
+L 18 34 48 0 0 0 0 0 0 
 #1154
 grave hound~
 @@da Grave Hound@@N~
@@ -1337,7 +1337,7 @@ and cold hunger. It is dressed in the estate's servant livery, still recognizabl
 | 256 8 0 0 65536 256 8
 + 15 0 0 0 0 0 0 0 0
 l 3 1156 1157 1158 0 0 0 0 0 0 
-L 35 65 90 0 0 0 0 0 0 0 
+L 18 34 48 0 0 0 0 0 0 
 #1157
 hunt rider wild~
 @@da Wild Hunt Rider@@N~
@@ -1358,7 +1358,7 @@ and something that has been burning for a very long time.@@N
 | 16 128 0 25166 0 18 80
 + 0 0 0 0 0 5 5 0 0
 l 3 1159 1160 1161 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1158
 thornwood ghoul~
 @@da Thornwood Ghoul@@N~
@@ -1378,7 +1378,7 @@ and the only thing it still remembers from its living days is how to use those h
 | 256 8 0 8218 0 258 8
 + 0 0 0 0 0 0 5 0 0
 l 3 1162 1163 1164 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1159
 thornwood cultist~
 @@da Thornwood Cultist@@N~
@@ -1398,7 +1398,7 @@ from those patterns as if following the guide. They carry the tools of their cal
 | 32 8 0 0 66 32 200
 + 20 0 0 0 0 0 0 0 0
 l 3 1165 1166 1167 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1160
 mire lurker~
 @@da Mire Lurker@@N~
@@ -1440,7 +1440,7 @@ distinguish between a visitor and raw material.@@N
 | 4 8 0 0 66 6 8
 + 20 0 0 0 0 0 0 0 0
 l 3 1168 1169 1170 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1162
 thornwood witch~
 @@da Thornwood Witch@@N~
@@ -1461,7 +1461,7 @@ every working that can be done with thorn and bone.@@N
 | 4 8 0 0 33554530 6 192
 + 30 0 0 0 0 0 0 0 0
 l 3 1171 1172 1173 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1163
 thorn knight estate~
 @@dan Estate Thorn Knight@@N~
@@ -1482,7 +1482,7 @@ shield bears the estate's thorn crest in relief.@@N
 | 32 8 0 90270 0 34 8
 + 0 0 0 0 0 0 0 15 0
 l 3 1174 1175 1176 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1164
 estate revenant~
 @@dan Estate Revenant@@N~
@@ -1502,7 +1502,7 @@ the estate's layout with a thoroughness that makes it extremely difficult to avo
 | 256 8 0 8218 65536 258 8
 + 15 0 0 0 0 0 0 0 0
 l 3 1177 1178 1179 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1165
 corpse vine greater~
 @@da Greater Corpse Vine@@N~
@@ -1565,7 +1565,7 @@ thing of shadow and cold fire, waits at the tree line.@@N
 | 16 128 0 1597454 0 18 80
 + 0 5 0 0 0 10 10 0 0
 l 9 1180 1181 1182 1183 1213 1214 1215 1216 1219 
-L 10 20 35 50 63 74 83 90 97 0 
+L 2 4 7 10 12 14 16 17 18 
 #1168
 crypt guardian bone~
 @@da Bone Crypt Guardian@@N~
@@ -1587,7 +1587,7 @@ asked to do.@@N
 | 256 8 0 90286 0 258 8
 + 0 0 0 0 0 0 0 20 0
 l 3 1184 1185 1186 0 0 0 0 0 0 
-L 35 65 90 0 0 0 0 0 0 0 
+L 18 34 48 0 0 0 0 0 0 
 #1169
 shade mire deep~
 @@da Deep Mire Shade@@N~
@@ -1628,7 +1628,7 @@ of deep trance during which they are still entirely capable of extreme violence.
 | 32 8 0 0 33554530 32 200
 + 35 0 0 0 0 0 0 0 0
 l 3 1187 1188 1189 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1171
 estate knight thorn blackened~
 @@da Blackened Thorn Knight@@N~
@@ -1649,7 +1649,7 @@ patience that suggests it has all the time that there is.@@N
 | 32 8 0 98462 0 34 8
 + 0 0 0 0 0 0 0 20 0
 l 3 1190 1191 1192 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1172
 marrow fiend~
 @@da Marrow Fiend@@N~
@@ -1690,7 +1690,7 @@ and entirely without mercy. The briars at his feet are still growing.@@N
 | 256 8 0 98462 65536 258 8
 + 20 0 0 20 0 0 0 15 0
 l 9 1193 1194 1195 1196 1197 1209 1210 1211 1212 
-L 10 20 35 50 65 76 85 92 97 0 
+L 2 4 7 9 12 14 16 17 19 
 #1174
 hunt hound shadow~
 @@da Shadow Hunt Hound@@N~
@@ -1750,7 +1750,7 @@ with the thornwood directly at all times. Their attention is not fully here.@@N
 | 32 8 0 0 33556578 32 200
 + 40 0 0 0 0 0 0 0 0
 l 3 1198 1199 1200 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1177
 wight barrow elder~
 @@dan Elder Barrow Wight@@N~
@@ -1771,7 +1771,7 @@ of the living as a category.@@N
 | 256 8 0 8218 65536 258 8
 + 15 0 0 0 0 0 0 5 0
 l 3 1201 1202 1203 0 0 0 0 0 0 
-L 30 60 90 0 0 0 0 0 0 0 
+L 17 33 50 0 0 0 0 0 0 
 #1178
 spirit deep cave~
 @@da Deep Cave Spirit@@N~
@@ -1813,7 +1813,7 @@ you. They are the thornwood's heart and the thornwood is their body.@@N
 | 260 8 0 0 1610612834 260 8
 + 50 0 0 30 0 0 10 0 0
 l 9 1204 1205 1206 1207 1208 1220 1221 1222 1223 
-L 10 20 35 50 65 76 85 92 97 0 
+L 2 4 7 9 12 14 16 17 19 
 #0
 #OBJECTS
 #1150
