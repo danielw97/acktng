@@ -202,6 +202,17 @@ extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
 extern SYS_DATA_TYPE sysdata;
 
+/* Common combat/stat helpers shared across modules. */
+int get_max_hp args((CHAR_DATA * ch));
+int get_total_reincarnations args((CHAR_DATA * ch));
+bool is_fighting args((CHAR_DATA * ch));
+void heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bool hot);
+void set_fighting args((CHAR_DATA * ch, CHAR_DATA *victim, bool check));
+int get_reincarnate_hp_level(CHAR_DATA *ch);
+int get_reincarnate_mana_level(CHAR_DATA *ch);
+int get_reincarnate_move_level(CHAR_DATA *ch);
+void obj_damage(OBJ_DATA *obj, CHAR_DATA *victim, int dam);
+
 /* YUCK! */
 extern char *target_name;
 

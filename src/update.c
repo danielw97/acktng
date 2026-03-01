@@ -55,6 +55,12 @@ void auction_update args((void));
 void rooms_update args((void));
 void remember_attack args((CHAR_DATA * ch, CHAR_DATA *victim));
 void quest_update args((void));
+void round_char_update(CHAR_DATA *ch);
+void update_cooldown(CHAR_DATA *ch);
+void update_heat_armor(CHAR_DATA *ch);
+void update_buff_duration(CHAR_DATA *ch, int duration_type);
+void round_update_hot(CHAR_DATA *ch);
+void round_update_dot(CHAR_DATA *ch);
 
 int abort_threshold = BOOT_DB_ABORT_THRESHOLD;
 bool disable_timer_abort = FALSE;
@@ -1512,7 +1518,7 @@ void char_update(void)
                              "ERROR in expiring item %s(%s %d): item has a replace vnum set (%d), but that is not a valid item.",
                              obj->name, obj->pIndexData->area->keyword, obj->pIndexData->vnum, obj->value[6]);
                      monitor_chan(bug_buf, MONITOR_OBJ);
-                     log_f(bug_buf);
+                     log_f("%s", bug_buf);
                   }
                   else
                   {
@@ -1828,7 +1834,7 @@ void obj_update(void)
                     "ERROR in expiring item %s(%s %d): item has a replace vnum set (%d), but that is not a valid item.",
                     obj->name, obj->pIndexData->area->keyword, obj->pIndexData->vnum, obj->value[6]);
             monitor_chan(bug_buf, MONITOR_OBJ);
-            log_f(bug_buf);
+            log_f("%s", bug_buf);
          }
          else
          {
