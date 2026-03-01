@@ -778,6 +778,12 @@ bool do_lifesteal(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, 
     {
         int ls = dam * potency / 100;
 
+        if (ch == NULL || victim == NULL || wield == NULL)
+            return FALSE;
+
+        if (ch->is_free || victim->is_free || ch->in_room == NULL || victim->in_room == NULL)
+            return FALSE;
+
         ls = number_range(ls * 95 / 100, ls * 130 / 100);
 
         sprintf(buf, "@@W$n screams in @@Ragony@@W as an evil @@da@@eur@@da@@W flows from $p!@@N (@@r%d@@N)", ls);
