@@ -202,5 +202,6 @@ void npc_group_free_destructor(NPC_GROUP_DATA *ngrp);
     (item)->next = (freelist);                                \
     (item)->is_free = TRUE; /* This sets is_free flag */      \
     (freelist) = (item);                                      \
-    freelist##_destructor(item);                              \
+    if (freelist##_destructor != NULL)                        \
+      freelist##_destructor(item);                            \
   } while (0)
