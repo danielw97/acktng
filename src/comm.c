@@ -168,6 +168,30 @@ void free_desc args((DESCRIPTOR_DATA * d));
 
 int global_port;
 
+static void normalize_login_class(CHAR_DATA *ch)
+{
+   int cnt;
+
+   if (ch == NULL || IS_NPC(ch))
+      return;
+
+   if (ch->class >= 0 && ch->class < MAX_CLASS)
+      return;
+
+   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+   {
+      if (ch->lvl[cnt] >= 0)
+      {
+         ch->class = cnt;
+         return;
+      }
+   }
+
+   ch->class = 0;
+   for (cnt = 0; cnt < MAX_CLASS; cnt++)
+      ch->lvl[cnt] = (cnt == 0) ? UMAX(ch->level, 1) : 0;
+}
+
 int main(int argc, char **argv)
 {
    struct timeval now_time;
@@ -2227,6 +2251,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       log_string(log_buf);
       lines = ch->pcdata->pagelen;
       ch->pcdata->pagelen = 20;
+
+      normalize_login_class(ch);
 
       if (ch->lvl[ch->class] == -1)
          ch->lvl[ch->class] = ch->level;
