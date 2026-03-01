@@ -70,6 +70,14 @@ unit-test-sha256: test_sha256.o sha256.o
 	rm -f unit-test-sha256
 	$(CC) -o unit-test-sha256 test_sha256.o sha256.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256
+fight_testable.o: fight.c ack.h
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o fight_testable.o fight.c
+
+unit-test-fight: test_fight.o fight_testable.o
+	rm -f unit-test-fight
+	$(CC) -Wl,--gc-sections -o unit-test-fight test_fight.o fight_testable.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-fight
 	./unit-test-sha256
+	./unit-test-fight
 
