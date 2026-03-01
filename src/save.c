@@ -388,6 +388,8 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Vamppracs     %d\n", ch->pcdata->vamp_pracs);
       fprintf(fp, "Hasexpfix     %d\n", ch->pcdata->has_exp_fix);
       fprintf(fp, "Questpoints   %d\n", ch->quest_points);
+      fprintf(fp, "InvasionPoints %d\n", ch->pcdata->invasion_points);
+      fprintf(fp, "PropositionPoints %d\n", ch->pcdata->proposition_points);
         int k;
         fprintf(fp, "PropType     %d\n",  ch->pcdata->prop_type);
         fprintf(fp, "PropDone     %d\n",  ch->pcdata->prop_completed  ? 1 : 0);
@@ -663,6 +665,8 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->valid_email = FALSE;
       ch->pcdata->email_address = str_dup("not set");
       ch->quest_points = 0;
+      ch->pcdata->invasion_points = 0;
+      ch->pcdata->proposition_points = 0;
       for (foo = 0; foo < MAX_REMORT; foo++)
          ch->remort[foo] = -1;
       for (foo = 0; foo < MAX_CLASS; foo++)
@@ -1116,6 +1120,10 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          break;
 
       case 'I':
+         if (!IS_NPC(ch))
+         {
+            KEY("InvasionPoints", ch->pcdata->invasion_points, fread_number(fp));
+         }
          SKEY("Immskll", ch->pcdata->immskll, fread_string(fp));
          KEY("Incog", ch->incog, fread_number(fp));
          KEY("Invis", ch->invis, fread_number(fp));
@@ -1204,6 +1212,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             KEY("Pkills", ch->pcdata->pkills, fread_number(fp));
             KEY("Pkilled", ch->pcdata->pkilled, fread_number(fp));
             KEY("Pflags", ch->pcdata->pflags, fread_number(fp));
+            KEY("PropositionPoints", ch->pcdata->proposition_points, fread_number(fp));
          }
          KEY("Played", ch->played, fread_number(fp));
          KEY("Position", ch->position, fread_number(fp));

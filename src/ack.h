@@ -794,6 +794,8 @@ struct pc_data
    sh_int term_columns;
    char *email_address;
    bool valid_email;
+   int invasion_points;
+   int proposition_points;
     /* --- Proposition quest system --- */
     int   prop_type;                          /* PROP_TYPE_* constant; 0=none */
     bool  prop_completed;                     /* TRUE = ready to hand in      */
