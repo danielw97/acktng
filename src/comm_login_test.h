@@ -1,8 +1,6 @@
 #ifndef COMM_LOGIN_TEST_H
 #define COMM_LOGIN_TEST_H
 
-#include <stdbool.h>
-
 typedef enum
 {
    LOGIN_TRANSITION_NAME_REJECTED,
@@ -15,8 +13,8 @@ typedef enum
 LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
    int *connected_state,
    const char *input,
-   bool is_name_valid,
-   bool is_existing_player,
-   bool is_password_correct);
+   int is_name_valid,
+   int is_existing_player,
+   int is_password_correct);
 
 #endif

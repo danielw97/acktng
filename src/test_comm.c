@@ -83,7 +83,8 @@ static void test_existing_player_login_rejects_null_inputs(void)
     assert(simulate_existing_player_login_transition(NULL, "Zen", true, true, true) == LOGIN_TRANSITION_NAME_REJECTED);
     assert(simulate_existing_player_login_transition(&connected, NULL, true, true, true) == LOGIN_TRANSITION_NAME_REJECTED);
     assert(connected == CON_GET_NAME);
-  
+}
+
 static void test_login_name_rejects_reserved_words(void)
 {
     assert(!is_login_name_format_valid("all"));
