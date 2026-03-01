@@ -38,6 +38,13 @@ extern OBJ_DATA *quest_object;
 
 extern COUNCIL_DATA super_councils[MAX_SUPER];
 
+bool should_abort_for_checkpoint_timeout(int usage_now, int checkpoint, int threshold, bool disable_abort)
+{
+   return !disable_abort && (usage_now - checkpoint > threshold);
+}
+
+#ifndef UNIT_TEST_UPDATE
+
 /*
  * Local functions.
  */
@@ -122,7 +129,7 @@ void alarm_handler(int signo)
    /*
     * Has there gone abort_threshold CPU seconds without alarm_update?
     */
-   if (!disable_timer_abort && (usage_now - last_checkpoint > abort_threshold))
+   if (should_abort_for_checkpoint_timeout(usage_now, last_checkpoint, abort_threshold, disable_timer_abort))
    {
       /*
        * For the log file
@@ -2655,3 +2662,5 @@ void quest_update()
          generate_auto_quest();
    }
 }
+
+#endif
