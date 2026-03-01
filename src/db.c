@@ -1371,6 +1371,7 @@ void load_resets(FILE *fp)
 
    last_mob_room = NULL;
    last_obj_room = NULL;
+   (void)last_obj_room;
 
    if (area_load == NULL)
    {
@@ -1412,6 +1413,7 @@ void load_resets(FILE *fp)
        */
 
       Tifflag = fread_number(fp); /* Not used */
+      (void)Tifflag;
       Targ1 = fread_number(fp);
       Targ2 = fread_number(fp);
       Targ3 = (letter == 'G' || letter == 'R') ? 0 : fread_number(fp);
@@ -1506,6 +1508,8 @@ void load_rooms(FILE *fp)
    ROOM_INDEX_DATA *pRoomIndex;
    BUILD_DATA_LIST *pList;
    sh_int cnt;
+
+   (void)cnt;
 
    if (area_load == NULL)
    {
@@ -2156,6 +2160,7 @@ void reset_area(AREA_DATA *pArea)
    area_resetting_global = TRUE;
    mob = NULL;
    last = TRUE;
+   (void)last;
    level = 0;
    for (pReset = pArea->first_reset; pReset != NULL; pReset = pReset->next)
    {
@@ -2443,6 +2448,8 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
    char buf[255];
    sh_int cnt;
 
+   (void)cnt;
+
    if (pMobIndex == NULL)
    {
       bug("Create_mobile: NULL pMobIndex.", 0);
@@ -2599,6 +2606,10 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
    int looper;
    MONEY_TYPE *money;
    sh_int cnt;
+
+   (void)new_af;
+   (void)money;
+   (void)cnt;
 
    if (level < 0)
       level = 1;

@@ -19,6 +19,8 @@ static CHAR_DATA *short_fight_attacker = NULL;
 static CHAR_DATA *short_fight_victim = NULL;
 static int short_fight_total_damage = 0;
 
+void cloak_action(CHAR_DATA *ch, CHAR_DATA *victim, int dam);
+
 void short_fight_round_begin(CHAR_DATA *ch, CHAR_DATA *victim)
 {
     short_fight_enabled = FALSE;
@@ -56,11 +58,9 @@ int short_fight_round_end(CHAR_DATA *ch, CHAR_DATA *victim)
 
 int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible)
 {
-    OBJ_DATA *wield;
     char buf[MSL];
     bool critical = FALSE;
     int crit_chance;
-    float dam_modifier = 1.0;
 
     if (dt >= TYPE_HIT || dt < 0)
     {
@@ -79,7 +79,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     }
 
     bool can_reflect = TRUE;
-    bool can_absorb = TRUE;
 
     if (IS_SET(element, NO_REFLECT) || IS_SET(element, ELE_PHYSICAL))
     {
@@ -89,7 +88,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     if (IS_SET(element, NO_ABSORB) || IS_SET(element, ELE_PHYSICAL))
     {
         REMOVE_BIT(element, NO_ABSORB);
-        can_absorb = FALSE;
     }
     if (can_reflect && (skill_table[dt].target == TAR_CHAR_OFFENSIVE) && (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) && (ch != victim) && (number_percent() < (get_psuedo_level(victim) - 70)))
     {
@@ -298,7 +296,6 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
 int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
 {
-    OBJ_DATA *wield;
  
     if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
         dam *= 1.2;
@@ -306,10 +303,9 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
         dam = 1;
 
     float dam_mod = 1.0;
+    OBJ_DATA *wield;
     int ch_strong = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].strong_realms : ch->strong_magic) : race_table[ch->race].strong_realms);
-    int ch_resist = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].resist_realms : ch->resist) : race_table[ch->race].resist_realms);
     int ch_weak = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].weak_realms : ch->weak_magic) : race_table[ch->race].weak_realms);
-    int ch_suscept = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].suscept_realms : ch->suscept) : race_table[ch->race].suscept_realms);
     int ch_race = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].race_flags : ch->race_mods) : race_table[ch->race].race_flags);
 
     if (IS_SET(ch_strong, element))
@@ -327,9 +323,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
     if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
         dam_mod += .5;
 
-    int vi_strong = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].strong_realms : victim->strong_magic) : race_table[victim->race].strong_realms);
     int vi_resist = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].resist_realms : victim->resist) : race_table[victim->race].resist_realms);
-    int vi_weak = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].weak_realms : victim->weak_magic) : race_table[victim->race].weak_realms);
     int vi_suscept = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].suscept_realms : victim->suscept) : race_table[victim->race].suscept_realms);
     int vi_race = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].race_flags : victim->race_mods) : race_table[victim->race].race_flags);
 
@@ -486,7 +480,6 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
 int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool critical)
 {
     OBJ_DATA *sil_weapon;
-    int sn;
     int damcap = get_damcap(ch);
 
     if (victim->is_free == TRUE)
@@ -1072,7 +1065,7 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
     const char *attack;
     const char *col;
     char punct;
-    int dam_table_num, check_dt;
+    int dam_table_num;
     bool dead = FALSE;
 
     if (dam >= victim->hit)

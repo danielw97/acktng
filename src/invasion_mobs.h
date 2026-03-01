@@ -642,7 +642,7 @@ static const WAVE_MOB_PROFILE invasion_wave_profiles[] =
 #define NUM_INVASION_MOBS  45  /* must equal the array size above */
 
 /* Name strings — order must match invasion_wave_profiles[] above. */
-static const char *invasion_mob_names[NUM_INVASION_MOBS + 1] = {
+static const char *invasion_mob_names[NUM_INVASION_MOBS + 1] __attribute__((unused)) = {
     "Minotaur",         "Harpy",            "Gorgon",
     "Cyclops",          "Chimera",          "Cerberus",
     "Hydra",            "Manticore",        "Satyr",

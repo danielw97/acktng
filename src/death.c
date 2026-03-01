@@ -350,7 +350,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    char buf[MAX_STRING_LENGTH];
    CHAR_DATA *gch;
-   CHAR_DATA *lch;
    int members;
    int huggy; /* To work out exp gained */
    int funky; /* Hope you LOVE these var names, Mag */
@@ -420,7 +419,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
     *
     */
 
-   lch = (ch->leader != NULL) ? ch->leader : ch;
 
    for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {

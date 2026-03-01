@@ -1293,7 +1293,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
       {
          sh_int cl_index = -1;
          int cost;
-         bool remort = FALSE, adept = FALSE;
+         bool adept = FALSE;
          ++str;
          switch (*str)
          {
@@ -1313,7 +1313,6 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
             else if ((*str == 'o') || (*str == 'O'))
             {
                cl_index = 4;
-               remort = TRUE;
                break;
             }
             else
@@ -1351,7 +1350,6 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          case 'S':
             ++str;
             cl_index = 0;
-            remort = TRUE;
             break;
          case 'a':
          case 'A':
@@ -1360,7 +1358,6 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
             if ((*str == 's') || (*str == 'S'))
             {
                cl_index = 1;
-               remort = TRUE;
                break;
             }
             else if ((*str == 'd') || (*str == 'D'))
@@ -1381,13 +1378,11 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          case 'K':
             ++str;
             cl_index = 2;
-            remort = TRUE;
             break;
          case 'n':
          case 'N':
             ++str;
             cl_index = 3;
-            remort = TRUE;
             break;
          }
          if (cl_index < 0)
@@ -1404,7 +1399,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
       {
          sh_int cl_index = -1;
          int cost;
-         bool remort = FALSE, adept = FALSE;
+         bool adept = FALSE;
          ++str;
          switch (*str)
          {
@@ -1424,7 +1419,6 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
             else if ((*str == 'o') || (*str == 'O'))
             {
                cl_index = 4;
-               remort = TRUE;
                break;
             }
             else
@@ -1462,7 +1456,6 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          case 'S':
             ++str;
             cl_index = 0;
-            remort = TRUE;
             break;
          case 'a':
          case 'A':
@@ -1471,7 +1464,6 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
             if ((*str == 's') || (*str == 'S'))
             {
                cl_index = 1;
-               remort = TRUE;
                break;
             }
             else if ((*str == 'd') || (*str == 'D'))
@@ -1492,13 +1484,11 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          case 'K':
             ++str;
             cl_index = 2;
-            remort = TRUE;
             break;
          case 'n':
          case 'N':
             ++str;
             cl_index = 3;
-            remort = TRUE;
             break;
          }
          if (cl_index < 0)

@@ -1075,7 +1075,6 @@ void do_ofindlev(CHAR_DATA *ch, char *argument)
    bool found;
    int level;
    int level_top;
-   int objlev;
    bool mailme = FALSE;
    if (is_name("mailme", argument))
       mailme = TRUE;
@@ -1116,7 +1115,6 @@ void do_ofindlev(CHAR_DATA *ch, char *argument)
 
          {
             found = TRUE;
-            objlev = pObjIndex->level;
 
             sprintf(buf, "\n\r(@@aMORTAL@@N) [%3d] [%5d] %s", pObjIndex->level,
                     pObjIndex->vnum, capitalize(pObjIndex->short_descr));
@@ -4042,7 +4040,6 @@ void do_setclass(CHAR_DATA *ch, char *argument)
    bool cok, remort;
    int class = 0;
    int cnt;
-   int lose;
    bool vamp = FALSE;
 
    argument = one_argument(argument, arg1); /* Player */
@@ -4164,9 +4161,6 @@ void do_setclass(CHAR_DATA *ch, char *argument)
    if ((value < (remort ? victim->remort[class] : victim->lvl[class])) || ((vamp) && (value <= victim->pcdata->vamp_level)))
 
    {
-      int sn;
-
-      lose = (remort ? victim->remort[class] - 1 : victim->lvl[class] - 1);
 
       send_to_char("Lowering a player's level!\n\r", ch);
       send_to_char("**** OOOOHHHHHHHHHH  NNNNOOOO ****\n\r", victim);
@@ -5045,7 +5039,6 @@ void do_alink(CHAR_DATA *ch, char *argument)
 {
 
    AREA_DATA *this_area;
-   ROOM_INDEX_DATA *this_room;
 
    BUILD_DATA_LIST *pointer;
    ROOM_INDEX_DATA *current_room;
@@ -5053,7 +5046,6 @@ void do_alink(CHAR_DATA *ch, char *argument)
    sh_int doorway;
    char buf[MAX_STRING_LENGTH];
 
-   this_room = ch->in_room;
    this_area = ch->in_room->area;
    area_top = this_area->max_vnum;
    area_bottom = this_area->min_vnum;
@@ -5697,7 +5689,7 @@ void do_findreset(CHAR_DATA *ch, char *argument)
    char outbuf[MSL], catbuf[MSL];
    bool mworld = FALSE;
    bool mailme = FALSE;
-   bool fmob = FALSE, fobj = FALSE;
+   bool fmob = FALSE;
    int vnum = 0;
    char mailsub[MSL];
    RESET_DATA *reset;
@@ -5731,8 +5723,6 @@ void do_findreset(CHAR_DATA *ch, char *argument)
    }
    if (!str_cmp(arg1, "mob"))
       fmob = TRUE;
-   else
-      fobj = TRUE;
    argument = one_argument(argument, arg2);
    if ((arg2[0] == '\0') || (!is_number(arg2)))
    {

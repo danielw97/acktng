@@ -184,7 +184,6 @@ void build_makearea(CHAR_DATA *ch, char *argument)
    BUILD_DATA_LIST *pList;
    AREA_DATA *pArea = NULL;
    AREA_DATA *fpadd = NULL;
-   AREA_DATA *lpadd = NULL;
    FILE *fpArea;
 
    smash_tilde(argument);
@@ -230,7 +229,6 @@ void build_makearea(CHAR_DATA *ch, char *argument)
       }
 
       envnum = pArea->max_vnum;
-      lpadd = pArea;
    }
 
    if (vnum == mvnum)
