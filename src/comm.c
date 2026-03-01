@@ -69,6 +69,34 @@ const char echo_off_str[] = {IAC, WILL, TELOPT_ECHO, '\0'};
 const char echo_on_str[] = {IAC, WONT, TELOPT_ECHO, '\0'};
 const char go_ahead_str[] = {IAC, GA, '\0'};
 
+bool is_parse_name_syntax_valid(const char *name)
+{
+   const char *pc;
+   bool fIll = TRUE;
+   size_t name_len;
+
+   if (name == NULL)
+      return FALSE;
+
+   name_len = strlen(name);
+   if (name_len < 3 || name_len > 12)
+      return FALSE;
+
+   for (pc = name; *pc != '\0'; pc++)
+   {
+      char c = (char)tolower((unsigned char)*pc);
+
+      if (!isalpha((unsigned char)*pc))
+         return FALSE;
+      if (c != 'i' && c != 'l')
+         fIll = FALSE;
+   }
+
+   return !fIll;
+}
+
+#ifndef UNIT_TEST_COMM
+
 void copyover_recover args((void));
 
 /*
@@ -2811,35 +2839,8 @@ bool check_parse_name(char *name)
    if (is_name(name, "all auto everymob localmobs immortal zen self someone tank enemy"))
       return FALSE;
 
-   /*
-    * Length restrictions.
-    */
-   if (strlen(name) < 3)
+   if (!is_parse_name_syntax_valid(name))
       return FALSE;
-
-   if (strlen(name) > 12)
-      return FALSE;
-
-   /*
-    * Alphanumerics only.
-    * Lock out IllIll twits.
-    */
-   {
-      char *pc;
-      bool fIll;
-
-      fIll = TRUE;
-      for (pc = name; *pc != '\0'; pc++)
-      {
-         if (!isalpha(*pc))
-            return FALSE;
-         if (LOWER(*pc) != 'i' && LOWER(*pc) != 'l')
-            fIll = FALSE;
-      }
-
-      if (fIll)
-         return FALSE;
-   }
 
    /*
     * Prevent players from naming themselves after mobs.
@@ -3632,3 +3633,5 @@ void hang(const char *str)
    bug(str, 0);
    kill(getpid(), SIGQUIT);
 }
+
+#endif /* UNIT_TEST_COMM */
