@@ -54,12 +54,11 @@ endif
 
 clean:
 	rm -f *.o ack ack.exe ../area/core *~
-	$(MAKE)
 
 purge:
 	rm -f *.o ack ack.exe ../area/core *~
 
-.c.o: ack.h
+%.o: %.c ack.h
 	$(CC) -c $(C_FLAGS) $<
 
 scan: scan.o

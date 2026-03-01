@@ -55,7 +55,7 @@ void gain_level(CHAR_DATA *ch)
       return;
 
    ch->intell_exp -= cost;
-   ch->level = UMIN(140, ch->level++);
+   ch->level = UMIN(140, ch->level + 1);
 
    sprintf(buf, "%s gains a level!", ch->short_descr);
    info(buf, 1);
