@@ -2055,14 +2055,14 @@ void do_group(CHAR_DATA *ch, char *argument)
             if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
             {
                sprintf(buf,
-                       "%-16s %4d of %4d hp %4d of %4d mana %4d of %4d move %5d xp\n\r",
+                       "%-16s %4ld of %4ld hp %4ld of %4ld mana %4ld of %4ld move %5ld xp\n\r",
                        capitalize(PERS(gch, ch)),
                        gch->hit, gch->max_hit, gch->mana, gch->max_mana, gch->move, gch->max_move, gch->exp);
             }
             else
             {
                sprintf(buf,
-                       "[%2d %s] %-16s %4d/%4d hp %4d/%4d mana %4d/%4d mv %5d xp\n\r",
+                       "[%2d %s] %-16s %4ld/%4ld hp %4ld/%4ld mana %4ld/%4ld mv %5ld xp\n\r",
                        gch->level,
                        IS_NPC(gch) ? "Mob" : class_table[gch->class].who_name,
                        capitalize(PERS(gch, ch)),
