@@ -1729,7 +1729,10 @@ void do_score(CHAR_DATA *ch, char *argument)
    }
 
    sprintf(buf,
-           "X========= @@WExps: @@y%9d @@c========= @@aQuest Points: @@y%4d @@c========X\n\r", ch->exp, ch->quest_points);
+           "X== @@WExps: @@y%9d @@c== @@aQuest: @@y%4d @@c== @@GInvasion: @@y%4d @@c== @@MProposition: @@y%4d @@c==X\n\r",
+           ch->exp, ch->quest_points,
+           IS_NPC(ch) ? 0 : ch->pcdata->invasion_points,
+           IS_NPC(ch) ? 0 : ch->pcdata->proposition_points);
    send_to_char(buf, ch);
 
    if (get_trust(ch) != ch->level)

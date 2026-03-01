@@ -551,7 +551,7 @@ static void invasion_end(bool success)
     {
         announce("@@GThe invasion has been repelled!  The heroes of the realm "
                  "have saved Gertrude and the town!  "
-                 "Everyone receives @@Y25 quest points@@G!@@N");
+                 "Everyone receives @@Y25 quest points@@G and @@Y1 invasion point@@G!@@N");
 
         for (d = first_desc; d != NULL; d = d->next)
         {
@@ -559,8 +559,9 @@ static void invasion_end(bool success)
             ch = d->character;
             if (ch == NULL || IS_NPC(ch) || IS_IMMORTAL(ch)) continue;
             ch->quest_points += INVASION_QP_REWARD;
+            ch->pcdata->invasion_points += 1;
             snprintf(buf, sizeof(buf),
-                     "You receive @@Y%d quest points@@N for defending the realm!\n\r",
+                     "You receive @@Y%d quest points@@N and @@Y1 invasion point@@N for defending the realm!\n\r",
                      INVASION_QP_REWARD);
             send_to_char(buf, ch);
             do_save(ch, "");

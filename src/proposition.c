@@ -525,9 +525,11 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
     send_to_char(buf, ch);
     sprintf(buf, "  @@Y%d@@N quest point%s\n\r", qp_reward, qp_reward == 1 ? "" : "s");
     send_to_char(buf, ch);
+    send_to_char("  @@Y1@@N proposition point\n\r", ch);
 
     ch->gold         += gold_reward;
     ch->quest_points += qp_reward;
+    ch->pcdata->proposition_points += 1;
 
     clear_proposition(ch);
     do_save(ch, "");
