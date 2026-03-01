@@ -1538,7 +1538,11 @@ Narrowing tunnel~
 The hole in the ground quickly darkens, and closes in on you.  Forced to crawl
 you hope that nothing attacks you in this position!
 ~
-1 11
+5 11
+D0
+~
+~
+0 -1 1400
 D1
 ~
 ~

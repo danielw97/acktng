@@ -6427,7 +6427,7 @@ necromancer's skull head trophy~
 A skull crackling with dark energy lies here.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 150
 #660
@@ -6436,7 +6436,7 @@ tome death void dark book~
 A dread tome lies here, its pages moving without wind.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
-1
+3
 L
 150
 #661
@@ -6445,7 +6445,7 @@ catacomb lord crown helm head boss~
 The Crown of the Catacomb Lord lies here, radiating death.~
 9 201326592 8388616 0
 0 0 0 0 0 0 0 0 0 0
-15
+14
 L
 150
 #662
@@ -6454,7 +6454,7 @@ spire architect core orb boss~
 The Spire Architect's Core lies here, pulsing erratically.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
 150
 #663
@@ -6843,7 +6843,7 @@ A shard still humming with channeled energy lies here.~
 0 7 11 2 0 0 0 0 0 0
 6
 L
-1
+150
 #706
 corridor echo resonance amulet~
 @@ca corridor-echo amulet@@n~
@@ -6852,43 +6852,43 @@ An amulet containing a sustained whisper lies here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #707
 scholar notebook notes corridor~
 @@ca lost scholar's notebook@@n~
 A water-stained notebook crammed with navigation notes lies here.~
-9 201326592 8388608 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #708
 scholar pen quill writing tool~
 @@ca scholar's void-ink pen@@n~
 A pen that writes in void-ink lies here.~
-9 738197504 8388608 0
+5 738197504 8421376 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
-1
+150
 #709
 spatial fold lens glass optic~
 @@ca spatial fold lens@@n~
 A lens that bends space slightly when looked through lies here.~
-9 201326592 8388608 0
+9 201326592 8388624 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
-1
+150
 #710
 maze guardian barrier ward~
 @@ca maze guardian's ward-stone@@n~
 A ward-stone from a guardian's chest cavity lies here.~
-9 201326592 8388608 0
+9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
-1
+12
 L
-1
+150
 #711
 guardian wrist stone bracer~
 @@ca guardian's stone bracer@@n~
@@ -6897,43 +6897,43 @@ A bracer of shaped void-stone lies here.~
 0 0 0 0 0 0 0 0 0 0
 3
 L
-1
+150
 #712
 herald aspirant training blade~
 @@ean aspirant's practice blade@@n~
 A balanced practice blade lies here, slightly notched.~
-5 201326592 8454144 0
+5 201326592 8421376 0
 0 8 13 2 0 0 0 0 0 0
 6
 L
-1
+150
 #713
 aspirant training armor body~
 @@caspirant's training armor@@n~
 A set of well-worn training armor lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #714
 void echo crystalline shard~
 @@ca void echo shard@@n~
 A crystallized fragment of echo-form lies here.~
-9 201326592 8388608 0
+9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 L
-1
+150
 #715
 echo projection cloak shadow about~
 @@can echo projection cloak@@n~
 A cloak that makes the wearer appear to lag slightly lies here.~
-9 201326592 8519680 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #716
 binding guardian seal plate body~
 @@ca seal guardian's plate@@n~
@@ -6942,85 +6942,85 @@ A plate of binding-circle alloy lies here.~
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #717
 guardian seal ring rune ward~
 @@ca seal guardian's ring@@n~
 A ring bearing a binding rune lies here.~
-9 201326592 8388736 0
+9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
-1
+9
 L
-1
+150
 #718
 catacomb priest vestment robe body~
 @@ccatacomb priest vestments@@n~
 Dark vestments still carrying a faint death-magic charge lie here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #719
 catacomb priest skull implement ceremony~
 @@ca ceremony skull@@n~
 A lacquered skull used in catacomb ceremonies lies here.~
-9 201326592 8388608 0
-0 0 0 0 0 0 0 0 0 0
-1
+1 201326592 8421376 0
+0 0 -1 0 0 0 0 0 0 0
+8
 L
-1
+150
 #720
 leviathan scale plate body armor~
 @@cvoid leviathan scale@@n~
 A scale the size of a buckler from the void leviathan lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 11
 L
-1
+150
 #721
 leviathan fluid flask vial dark~
 @@ca flask of void leviathan fluid@@n~
 A sealed flask of black fluid from the leviathan lies here.~
-9 201326592 8388608 0
+9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #722
 trophy collector bag container trophy~
 @@ythe Trophy Collector's sack@@n~
 A sack stuffed with unidentifiable trophies lies here.~
 15 201326592 8388608 0
-0 0 0 0 0 0 0 0 0 0
+1000 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #723
 trophy collector cloak about shroud~
 @@ythe Trophy Collector's cloak@@n~
 A cloak hung with small trophies lies here, jingling faintly.~
-9 201326592 8519680 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #724
 memory eater vessel container brain~
 @@ca memory eater's vessel@@n~
 A vessel containing captured memories floats here.~
-9 201326592 8388608 0
+9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 L
-1
+150
 #725
 bone sculptor chisel tool weapon~
 @@ythe Bone Sculptor's chisel@@n~
 An obsidian chisel ground to surgical sharpness lies here.~
-5 201326592 8454144 0
-0 7 11 3 0 0 0 0 0 0
+5 201326592 8421376 0
+0 7 11 11 0 0 0 0 0 0
 9
 L
 1
@@ -7032,16 +7032,16 @@ A disturbing but exquisite bone sculpture rests here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #727
 void monk sash belt waist~
 @@ca void monk's training sash@@n~
 A coiled void-silk training sash lies here.~
-9 201326592 8650752 0
+9 201326592 8388624 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
-1
+150
 #728
 void monk wraps gloves fist~
 @@cvoid monk's hand wraps@@n~
@@ -7050,34 +7050,34 @@ Tightly bound void-fiber hand wraps lie here.~
 0 0 0 0 0 0 0 0 0 0
 8
 L
-1
+150
 #729
 voidfire torch light item dark~
 @@ca voidfire torch@@n~
 A torch burning with cold black flame stands here.~
-9 0 8388608 0
-0 0 0 0 0 0 0 0 0 0
-1
+1 201326592 8421376 0
+0 0 -1 0 0 0 0 0 0 0
+9
 L
-1
+150
 #730
 voidfire essence vial flask cold~
 @@ca vial of voidfire essence@@n~
 A vial containing a sliver of cold flame lies here.~
-9 201326592 8388608 0
+9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
-1
+4
 L
-1
+150
 #731
 echo knight duplicate sword blade~
 @@ean echo knight's mirror blade@@n~
 A blade that shows battles in its reflection lies here.~
-5 201326592 8454144 0
-0 9 14 2 0 0 0 0 0 0
-6
+5 201326592 8421376 0
+0 9 14 3 0 0 0 0 0 0
+10
 L
-1
+150
 #732
 echo knight duplicate helm head~
 @@can echo knight's helm@@n~
@@ -7086,79 +7086,79 @@ A helm in which another face can be glimpsed lies here.~
 0 0 0 0 0 0 0 0 0 0
 13
 L
-1
+150
 #733
 void crab claw weapon melee natural~
 @@ea void crab claw@@n~
 A severed void crab claw, crystal-hard, lies here.~
-5 201326592 8454144 0
+9 201326592 8404992 0
 0 8 12 1 0 0 0 0 0 0
-4
+9
 L
-1
+150
 #734
 void crab shell buckler shield~
 @@ca void crab shell buckler@@n~
 A section of crab carapace shaped into a buckler lies here.~
-9 469762048 8454144 0
+9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #735
 moth wing dust pouch reagent~
 @@ca pouch of moth wing dust@@n~
 A pouch leaking faint numbness lies here.~
-9 201326592 8388608 0
+9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
-1
+8
 L
-1
+150
 #736
 sentinel shard core construct~
 @@ca sentinel shard@@n~
 A shard from a dark sentinel's core lies here.~
-9 201326592 8388608 0
+9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
-1
+6
 L
-1
+150
 #737
 void eel skin belt waist~
 @@ca void eel skin belt@@n~
 A belt of iridescent void eel skin lies here.~
-9 201326592 8650752 0
+9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
-1
+150
 #738
 runed knight armor body plate~
 @@cruned plate armor@@n~
 A suit of plate armor covered in active runes lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 11
 L
-1
+150
 #739
 runed knight sword weapon~
 @@ea runed knight's sword@@n~
 A sword covered in active runes lies here.~
-5 201326592 8454144 0
-0 10 15 2 0 0 0 0 0 0
+5 201326592 8421376 0
+0 10 15 3 0 0 0 0 0 0
 6
 L
-1
+150
 #740
 oracle robe robes body seeing~
 @@ythe Oracle's Robe@@n~
 A robe patterned with scenes of possible futures lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
-7
+3
 L
-1
+150
 #741
 oracle pendant sight foresight~
 @@ythe Oracle's Pendant@@n~
@@ -7167,70 +7167,70 @@ A pendant that shows a different face each time it is looked at lies here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #742
 oracle staff walking implement~
 @@ythe Oracle's Walking Staff@@n~
 A staff engraved with scenes of prophecy lies here.~
 5 738197504 8454144 0
-0 7 11 1 0 0 0 0 0 0
+0 7 11 7 0 0 0 0 0 0
 3
 L
-1
+150
 #743
 memory eater shroud cloak about~
 @@ca memory eater's shroud@@n~
 A cloak that seems to make observers forget having seen it lies here.~
-9 201326592 8519680 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #744
 bone sculptor tools set workshop~
 @@ya bone sculptor's tool set@@n~
 A set of bone-shaping tools lies here in a leather roll.~
-9 201326592 8388608 0
+9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #745
 bone sculptor masterwork trophy art~
 @@ya bone sculptor's masterwork@@n~
 A sculpture of extraordinary quality lies here.~
-9 201326592 8388608 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #746
 void monk boots feet travel~
 @@cvoid monk travel boots@@n~
 Worn but precisely maintained travel boots lie here.~
-9 201326592 12582912 0
+9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
-1
+150
 #747
 void monk belt training waist~
 @@ca void monk's discipline belt@@n~
 A knotted rope belt carrying small test-stones lies here.~
-9 201326592 8650752 0
+9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
-1
+140
 #748
 voidfire elemental ember core~
 @@ca voidfire ember@@n~
 An ember of persistent voidfire sits cold in a stone cup here.~
-9 201326592 8388608 0
+1 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
-1
+14
 L
-1
+140
 #749
 voidfire mantle shoulders cold~
 @@ca voidfire mantle@@n~
@@ -7239,7 +7239,7 @@ A mantle radiating cold flame lies here.~
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #750
 echo knight greaves legs armor~
 @@cecho knight's greaves@@n~
@@ -7248,23 +7248,23 @@ Greaves bearing the ghost of a previous wearer lie here.~
 0 0 0 0 0 0 0 0 0 0
 12
 L
-1
+150
 #751
 echo knight cuirass body armor~
 @@can echo knight's cuirass@@n~
 A cuirass with a second warrior's outline visible in it lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #752
 familiar harness binding collar~
 @@ca familiar's binding collar@@n~
 A dark collar for a void familiar lies here.~
-9 201326592 8388608 0
+9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 L
 150
 #753
@@ -7275,7 +7275,7 @@ A talisman carved from a void strider's leg-joint lies here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #754
 void strider carapace shield~
 @@ca void strider carapace shield@@n~
@@ -7284,70 +7284,70 @@ A section of void strider carapace formed into a buckler lies here.~
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #755
 whisper entity resonance amulet sound~
 @@ca whisper entity's resonance amulet@@n~
 An amulet containing a trapped whisper lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
-2
+6
 L
-1
+150
 #756
 void stag antler weapon trophy~
 @@ea void stag antler tine@@n~
 A tine broken from a void stag's antler lies here, crackling.~
-5 201326592 8454144 0
+9 201326592 8388612 0
 0 7 10 2 0 0 0 0 0 0
 4
 L
-1
+150
 #757
 void stag hide cloak trophy~
 @@ca void stag hide cloak@@n~
 A cloak of supple void-stag hide lies here.~
-9 201326592 8519680 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #758
 night horror darkness flask vessel~
 @@ca flask of concentrated darkness@@n~
 A flask containing absolute light absence lies here.~
-9 201326592 8388608 0
+9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
-1
+6
 L
-1
+150
 #759
 night horror hide body armor stealth~
 @@cnight horror hide armor@@n~
 Armor of night horror hide that dampens light around it lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #760
 void zealot brand ring finger~
 @@ca void zealot's brand ring@@n~
 A ring branded into its own metal with devotion marks lies here.~
-9 201326592 8388736 0
+9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
-1
+15
 L
-1
+150
 #761
 void zealot torn cloak about~
 @@ca void zealot's torn cloak@@n~
 Devotion-rune-marked cloak with burned-away sections lies here.~
-9 201326592 8519680 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #762
 time-locked guardian fragments pauldrons~
 @@ctime-locked pauldrons@@n~
@@ -7356,48 +7356,48 @@ Pauldrons that exist in two moments simultaneously lie here.~
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #763
 time-locked guardian sabatons feet~
 @@ctime-locked sabatons@@n~
 Boots that step before and after simultaneously lie here.~
-9 201326592 12582912 0
+9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
-1
+150
 #764
 sanctum templar sword blade weapon~
 @@ea sanctum templar's sword@@n~
 A sword bearing the sanctum seal lies here.~
-5 201326592 8454144 0
+5 201326592 8421376 0
 0 11 18 2 0 0 0 0 0 0
 6
 L
-1
+150
 #765
 sanctum templar shield buckler defense~
 @@ca sanctum templar's shield@@n~
 A shield bearing Kel'Shadra's eye lies here.~
-9 469762048 8454144 0
+9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
 10
 L
-1
+150
 #766
 void conjurer robe body magic~
 @@ca void conjurer's robe@@n~
 Robes marked with rift-sigils lie here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #767
 void conjurer focus orb wand~
 @@ea void conjurer's rift-focus@@n~
 A focus that trails threads of open void lies here.~
-5 738197504 8454144 0
+9 738197504 8388609 0
 0 8 13 4 0 0 0 0 0 0
 4
 L
@@ -7410,43 +7410,43 @@ Battle-worn pauldrons bearing a commander's rank lie here.~
 0 0 0 0 0 0 0 0 0 0
 5
 L
-1
+150
 #769
 revenant commander greatsword weapon~
 @@ya revenant commander's greatsword@@n~
 A heavy greatsword marked with campaign tallies lies here.~
-5 201326592 8454144 0
-0 11 17 2 0 0 0 0 0 0
+5 -1946157056 8421376 0
+0 11 17 3 0 0 0 0 0 0
 11
 L
-1
+150
 #770
 deep guardian core plate body~
 @@ydeep guardian core plating@@n~
 Plating harvested from a deep guardian's chest lies here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 11
 L
-1
+150
 #771
 deep guardian limb weapon club~
 @@ya deep guardian's limb-club@@n~
 A massive broken limb from a deep guardian lies here.~
-5 201326592 8454144 0
-0 13 18 1 0 0 0 0 0 0
+5 201326592 8421376 0
+0 13 18 7 0 0 0 0 0 0
 8
 L
-1
+150
 #772
 void harbinger shard weapon dagger~
 @@ea void harbinger shard@@n~
 A condensed shard of harbinger-form lies here, distorting air.~
-5 201326592 8454144 0
+5 201326592 8388672 0
 0 10 14 3 0 0 0 0 0 0
 9
 L
-1
+150
 #773
 void harbinger resonance amulet dark~
 @@ca void harbinger resonance amulet@@n~
@@ -7455,7 +7455,7 @@ An amulet radiating a faint void-presence lies here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #774
 essence devourer vessel pendant~
 @@can essence devourer's soul-vessel@@n~
@@ -7464,34 +7464,34 @@ A pendant containing a captured soul-fragment lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #775
 essence devourer shroud cloak~
 @@can essence devourer's shroud@@n~
 A cloak that feels faintly hollow to touch lies here.~
-9 201326592 8519680 0
+9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
-1
+150
 #776
 grand overseer ledger book admin~
 @@ythe Grand Overseer's ledger@@n~
 A ledger cataloguing the entire citadel's inhabitants lies here.~
-9 201326592 8388608 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 L
-1
+150
 #777
 grand overseer robe administrative~
 @@ythe Grand Overseer's robe@@n~
 Administrative robes bearing rank-marks of every citadel division lie here.~
-9 201326592 8912896 0
+9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #778
 grand overseer pendant seal authority~
 @@ythe Grand Overseer's seal@@n~
@@ -7500,16 +7500,16 @@ A pendant-seal that carries administrative authority over all constructs lies he
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #779
 shattered construct arm weapon club~
 @@ea shattered construct arm@@n~
 A broken limb from a shattered construct lies here.~
-5 201326592 8454144 0
-0 9 13 1 0 0 0 0 0 0
+5 201326592 8421376 0
+0 9 13 7 0 0 0 0 0 0
 8
 L
-1
+150
 #780
 shattered construct shard plate body~
 @@cshattered construct plating@@n~
@@ -7518,16 +7518,16 @@ Cracked but still solid construct plating lies here.~
 0 0 0 0 0 0 0 0 0 0
 7
 L
-1
+150
 #781
 void incarnate fragment shard crystal~
 @@ya fragment of void incarnate@@n~
 A crystal of distilled void entity essence lies here.~
-9 201326592 8388608 0
+9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #782
 void incarnate fragment pendant essence~
 @@yan incarnate fragment pendant@@n~
@@ -7536,7 +7536,7 @@ A pendant containing a sliver of Kel'Shadra's essence lies here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #783
 void rune tablet stone inscription~
 @@ca void rune tablet@@n~
@@ -7545,7 +7545,7 @@ A stone tablet carved with active void runes lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #784
 cursed coin gold dark money~
 @@ca cursed void coin@@n~
@@ -7554,7 +7554,7 @@ A black gold coin that spends its value in ways other than money lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #785
 dark essence vial potion consumable~
 @@ca vial of dark essence@@n~
@@ -7568,20 +7568,20 @@ L
 void-touched ring minor finger enchanted~
 @@ca void-touched ring@@n~
 A simple ring humming with minor enchantment lies here.~
-9 201326592 8388736 0
+9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #787
 dark focus gem minor mage~
 @@ca minor void focus gem@@n~
 A small gem holding a thread of void energy lies here.~
-9 201326592 8388608 0
+9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #788
 shadow-ink bottle writing dark~
 @@ca bottle of shadow ink@@n~
@@ -7590,7 +7590,7 @@ A bottle of ink that writes in darkness lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #789
 void-salt pouch mineral preserve~
 @@ca pouch of void-salt@@n~
@@ -7599,7 +7599,7 @@ A pouch of mineral used to preserve void-infused material lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #790
 broken seal fragment rune piece~
 @@ca fragment of a binding seal@@n~
@@ -7608,7 +7608,7 @@ A piece of a broken binding seal lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #791
 void-prayer beads religion necklace~
 @@cvoid-prayer beads@@n~
@@ -7617,25 +7617,25 @@ A string of bone beads used in void rites lies here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-1
+150
 #792
 dark lantern hooded light item~
 @@ca hooded dark lantern@@n~
 A lantern that emits shadow rather than light lies here.~
-9 0 8388608 0
-0 0 0 0 0 0 0 0 0 0
+1 0 8421376 0
+0 0 -1 0 0 0 0 0 0 0
 1
 L
-1
+150
 #793
 void-compass navigation direction~
 @@ca void compass@@n~
 A compass that points toward sources of void energy lies here.~
-9 201326592 8388608 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #794
 citadel map parchment navigation~
 @@ca partial citadel map@@n~
@@ -7644,34 +7644,34 @@ A partial map of Kel'Shadra's known passages lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #795
 void-treated rope binding utility~
 @@cvoid-treated rope@@n~
 A length of rope treated to hold against void-entity strength lies here.~
-9 201326592 8388608 0
+9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #796
 sorcerer binding shackle chain restraint~
 @@ca sorcerer's binding shackle@@n~
 A shackle of void-alloy designed to suppress magic lies here.~
-9 201326592 8388608 0
+9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #797
 dark research journal log academic~
 @@ca dark research journal@@n~
 A journal filled with dangerous knowledge lies here.~
-9 201326592 8388608 0
+9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #798
 catacomb gate key iron unlock~
 @@ya catacomb gate key@@n~
@@ -7680,7 +7680,7 @@ An iron key to the lower catacomb gate lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #799
 spire access key arcane gate unlock~
 @@ya spire access key@@n~
@@ -7689,7 +7689,7 @@ An arcane key to the Shattered Spire entrance lies here.~
 0 0 0 0 0 0 0 0 0 0
 1
 L
-1
+150
 #0
 #RESETS
 M 0 610 2 610 (null)

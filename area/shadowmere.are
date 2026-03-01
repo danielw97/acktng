@@ -25,6 +25,10 @@ D0
 ~
 ~
 0 -1 1401
+D2
+~
+~
+0 0 11085
 S
 #1401
 @@KThe Blighted Courtyard@@N~
@@ -2716,124 +2720,124 @@ L 50 50 0 0 0 0 0 0 0
 bone shortsword sword~
 @@Ka bone shortsword@@N~
 @@KA bone shortsword@@D lies here, its edge @@Rstrangely sharp@@D.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 2 2 3 11 0 0 0 0 0 0
 6
 A
-19 4
+19 0
 A
-18 3
+18 0
 L
 30
 #1401
 rusted longsword longsword~
 @@Da rusted longsword@@N~
 @@DA rusted longsword@@D with a @@Kcracked leather grip@@D lies discarded here.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 3 3 5 3 0 0 0 0 0 0
 7
 A
-19 5
+19 0
 A
-18 4
+18 0
 L
 33
 #1402
 tainted dagger dagger~
 @@Ra tainted dagger@@N~
 @@RA tainted dagger@@D with a @@Kblack stained blade@@D has been dropped here.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 1 2 2 11 0 0 0 0 0 0
 8
 A
-19 3
+19 0
 A
-18 4
+18 0
 L
 31
 #1403
 shadowsteel mace mace~
 @@Da shadowsteel mace@@N~
 @@DA shadowsteel mace@@D forged from @@Kdark metal@@D rests here, humming faintly.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 3 4 5 8 0 0 0 0 0 0
 9
 A
-19 6
+19 0
 A
-18 5
+18 0
 L
 36
 #1404
 deathwarden axe axe~
 @@Ka deathwarden axe@@N~
 @@KA deathwarden axe@@D with @@Rblood-grooved blade@@D rests against the wall.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 4 4 6 3 0 0 0 0 0 0
 10
 A
-19 7
+19 0
 A
-18 6
+18 0
 L
 40
 #1405
 soulrending blade greatsword~
 @@Ra soulrending blade@@N~
 @@RA soulrending blade@@D of black iron lies here, its edge @@Ktinged with violet@@D.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 5 5 8 3 0 0 0 0 0 0
 6
 A
-19 8
+19 0
 A
-18 7
+18 0
 L
 44
 #1406
 bonecrusher maul maul~
 @@Ka bonecrusher maul@@N~
 @@KA bonecrusher maul@@D of extraordinary weight has been left here.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 5 5 9 8 0 0 0 0 0 0
 7
 A
-19 9
+19 0
 A
-18 8
+18 0
 L
 47
 #1407
 nightshroud blade nightshroud~
 @@Da nightshroud blade@@N~
 @@DA nightshroud blade@@D seems to @@Kabsorb the light@@D around it.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 6 5 10 3 0 0 0 0 0 0
 8
 A
-19 10
+19 0
 A
-18 9
+18 0
 L
 50
 #1408
 necrotic spear spear~
 @@Ka necrotic spear@@N~
 @@KA necrotic spear@@D trails @@Rdark wisps@@D of energy from its tip.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 4 5 8 6 0 0 0 0 0 0
 9
 A
-19 8
+19 0
 A
-18 7
+18 0
 L
 43
 #1409
 abyssal flail flail~
 @@Ka abyssal flail@@N~
 @@KA abyssal flail@@D with @@Kchains of dark iron@@D clinks heavily here.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 5 5 9 8 0 0 0 0 0 0
 10
 A
@@ -2846,111 +2850,111 @@ L
 corroded chainmail chainmail~
 @@Ka corroded chainmail hauberk@@N~
 @@KA corroded chainmail hauberk@@D lies in a heap here, @@Rrust-stained@@D.@@N~
-9 402653184 17301504 0
+9 134217728 8650752 0
 10 0 0 0 0 0 0 0 0 0
 11
 A
-17 -15
+17 0
 A
-13 20
+13 0
 L
 30
 #1411
 tattered ringmail ringmail~
 @@Da tattered ringmail coat@@N~
 @@DA tattered ringmail coat@@D of @@Ksupple dark leather@@D has been discarded here.@@N~
-9 402653184 17301504 0
+9 134217728 8650752 0
 8 0 0 0 0 0 0 0 0 0
 12
 A
-17 -12
+17 0
 A
-13 18
+13 0
 L
 32
 #1412
 shadowforged breastplate breastplate~
 @@Ka shadowforged breastplate@@N~
 @@KA shadowforged breastplate@@D of @@Kblack steel@@D reflects no light at all.@@N~
-9 402653184 17301504 0
+9 134217728 8650752 0
 14 0 0 0 0 0 0 0 0 0
 13
 A
-17 -20
+17 0
 A
-13 35
+13 0
 L
 38
 #1413
 deathplate cuirass cuirass deathplate~
 @@Ra deathplate cuirass@@N~
 @@RA deathplate cuirass@@D covered in @@Kdeath runes@@D rests here.@@N~
-9 402653184 17301504 0
+9 134217728 8650752 0
 18 0 0 0 0 0 0 0 0 0
 14
 A
-17 -25
+17 0
 A
-13 45
+13 0
 L
 45
 #1414
 wraith-iron armor wraith iron~
 @@Ka suit of wraith-iron armor@@N~
 @@KA suit of wraith-iron armor@@D shimmers at its edges as if @@Knot quite real@@D.@@N~
-9 402653184 17301504 0
+9 134217728 8650752 0
 22 0 0 0 0 0 0 0 0 0
 15
 A
-17 -30
+17 0
 A
-13 55
+13 0
 L
 52
 #1415
 bone-helm helm skull~
 @@Ka skull helm@@N~
 @@KA skull helm@@D made from @@Ka real skull re-inforced with iron@@D has been left here.@@N~
-9 402653184 16777232 0
+9 134217728 8388616 0
 8 0 0 0 0 0 0 0 0 0
 11
 A
-17 -10
+17 0
 A
-13 15
+13 0
 L
 30
 #1416
 shadowsteel greathelm helm greathelm~
 @@Ka shadowsteel greathelm@@N~
 @@KA shadowsteel greathelm@@D of dark-forged metal rests here, @@Dvisor closed@@D.@@N~
-9 402653184 16777232 0
+9 134217728 8388616 0
 14 0 0 0 0 0 0 0 0 0
 12
 A
-17 -18
+17 0
 A
-13 30
+13 0
 L
 42
 #1417
 death-knight helm helm~
 @@Ra death-knight greathelm@@N~
 @@RA death-knight greathelm@@D crested with @@Kblack iron horns@@D rests here.@@N~
-9 268435456 16777232 0
+9 268435456 8388616 0
 18 0 0 0 0 0 0 0 0 0
 13
 A
-17 -22
+17 0
 A
-13 38
+13 0
 L
 50
 #1418
 iron greaves greaves~
 @@Ka pair of iron greaves@@N~
 @@KA pair of iron greaves@@D engraved with @@Rskull motifs@@D lies here.@@N~
-9 402653184 18874368 0
+9 134217728 9437184 0
 10 0 0 0 0 0 0 0 0 0
 14
 A
@@ -2963,7 +2967,7 @@ L
 shadowsteel legguards legguards~
 @@Ka pair of shadowsteel legguards@@N~
 @@KA pair of shadowsteel legguards@@D of @@Kknight's quality@@D rests here.@@N~
-9 268435456 18874368 0
+9 0 9437184 0
 16 0 0 0 0 0 0 0 0 0
 15
 A
@@ -2976,7 +2980,7 @@ L
 death-knight legplates legplates~
 @@Ra pair of death-knight legplates@@N~
 @@RA pair of death-knight legplates@@D of @@Kblack iron@@D rests here, @@Rheavy@@D.@@N~
-9 402653184 18874368 0
+9 134217728 9437184 0
 20 0 0 0 0 0 0 0 0 0
 11
 A
@@ -2989,414 +2993,414 @@ L
 iron sabatons sabatons boots~
 @@Ka pair of iron sabatons@@N~
 @@KA pair of iron sabatons@@D caked with @@Kdried mud@@D rests here.@@N~
-9 268435456 20971520 0
+9 134217728 10485760 0
 10 0 0 0 0 0 0 0 0 0
 12
 A
-17 -10
+17 0
 A
-14 8
+14 0
 L
 30
 #1422
 shadowsteel plate boots boots~
 @@Ka pair of shadowsteel plate boots@@N~
 @@KA pair of shadowsteel plate boots@@D of @@Kdark forging@@D sits here.@@N~
-9 268435456 20971520 0
+9 134217728 10485760 0
 16 0 0 0 0 0 0 0 0 0
-13
+9
 A
-17 -18
+17 0
 A
-14 15
+14 0
 L
 44
 #1423
 iron gauntlets gauntlets~
 @@Ka pair of iron gauntlets@@N~
 @@KA pair of iron gauntlets@@D with @@Rknuckle spikes@@D lies here.@@N~
-9 268435456 16785408 0
+9 134217728 8392704 0
 10 0 0 0 0 0 0 0 0 0
 9
 A
-17 -10
+17 0
 A
-19 3
+19 0
 L
 32
 #1424
 shadowsteel gauntlets gauntlets~
 @@Ka pair of shadowsteel gauntlets@@N~
 @@KA pair of shadowsteel gauntlets@@D etched with @@Ksealing runes@@D lies here.@@N~
-9 268435456 16785408 0
+9 134217728 8392704 0
 16 0 0 0 0 0 0 0 0 0
 10
 A
-17 -18
+17 0
 A
-19 5
+19 0
 L
 46
 #1425
 bone vambraces vambraces arm guards~
 @@Ka pair of bone vambraces@@N~
 @@KA pair of bone vambraces@@D fitted with @@Rsteel brackets@@D lies here.@@N~
-9 402653184 16779264 0
+9 134217728 8390656 0
 8 0 0 0 0 0 0 0 0 0
 11
 A
-17 -10
+17 0
 A
-13 12
+13 0
 L
 33
 #1426
 shadowsteel vambraces vambraces~
 @@Ka pair of shadowsteel vambraces@@N~
 @@KA pair of shadowsteel vambraces@@D of @@Kdark crafting@@D rests here.@@N~
-9 402653184 16779264 0
+9 134217728 8390656 0
 14 0 0 0 0 0 0 0 0 0
 12
 A
-17 -18
+17 0
 A
-13 22
+13 0
 L
 47
 #1427
 iron pauldrons pauldrons shoulder guards~
 @@Ka pair of iron pauldrons@@N~
 @@KA pair of iron pauldrons@@D with @@Kchained spikes@@D has been discarded here.@@N~
-9 402653184 16778240 0
+9 134217728 8389120 0
 10 0 0 0 0 0 0 0 0 0
 13
 A
-17 -10
+17 0
 A
-13 15
+13 0
 L
 34
 #1428
 shadowsteel pauldrons pauldrons~
 @@Ka pair of shadowsteel pauldrons@@N~
 @@KA pair of shadowsteel pauldrons@@D decorated with @@Rbone inlays@@D rests here.@@N~
-9 268435456 16778240 0
+9 134217728 8389120 0
 16 0 0 0 0 0 0 0 0 0
-14
+9
 A
-17 -20
+17 0
 A
-13 28
+13 0
 L
 49
 #1429
 iron bracers bracers~
 @@Ka pair of iron bracers@@N~
 @@KA pair of iron bracers@@D with @@Kchain lace@@D has been discarded here.@@N~
-9 402653184 16781312 0
+9 134217728 8390656 0
 8 0 0 0 0 0 0 0 0 0
-15
+6
 A
-17 -8
+17 0
 A
-13 10
+13 0
 L
 30
 #1430
 shadow-iron bracers bracers~
 @@Ka pair of shadow-iron bracers@@N~
 @@KA pair of shadow-iron bracers@@D etched with @@Kcursed runes@@D rests here.@@N~
-9 402653184 16781312 0
+9 134217728 2048 0
 14 0 0 0 0 0 0 0 0 0
-11
+4
 A
-17 -16
+17 0
 A
-13 20
+13 0
 L
 45
 #1431
 blackened shield kite shield~
 @@Ka blackened kite shield@@N~
 @@KA blackened kite shield@@D bearing a @@Rwhite skull device@@D rests here.@@N~
-9 402653184 16842752 0
+9 134217728 8421376 0
 20 0 0 0 0 0 0 0 0 0
 12
 A
-17 -15
+17 0
 A
-13 25
+13 0
 L
 35
 #1432
 shadowsteel tower shield tower shield~
 @@Ka shadowsteel tower shield@@N~
 @@KA shadowsteel tower shield@@D of enormous size rests against the wall.@@N~
-9 402653184 16842752 0
+9 134217728 8421376 0
 30 0 0 0 0 0 0 0 0 0
 13
 A
-17 -25
+17 0
 A
-13 40
+13 0
 L
 50
 #1433
 bone necklace necklace~
 @@Ka bone necklace@@N~
 @@KA bone necklace@@D strung with @@Ksmall carved skulls@@D lies here.@@N~
-8 402653184 16777472 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 4
 A
-13 25
+13 0
 A
-12 20
+12 0
 L
 30
 #1434
 shadow pendant pendant~
 @@Da shadow pendant@@N~
 @@DA shadow pendant@@D of dark stone on a @@Ksilver chain@@D has been discarded here.@@N~
-8 402653184 16777472 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
-5
+9
 A
-13 35
+13 0
 A
-12 30
+12 0
 L
 40
 #1435
 obsidian amulet amulet~
 @@Ka obsidian amulet@@N~
 @@KA obsidian amulet@@D that seems to @@Kabsorb all light@@D around it lies here.@@N~
-8 402653184 16777472 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
-1
+14
 A
-13 45
+13 0
 A
-27 10
+27 0
 L
 50
 #1436
 death-sigil ring ring~
 @@Ra death-sigil ring@@N~
 @@RA death-sigil ring@@D of @@Ktarnished silver@@D set with a @@Rdark stone@@D lies here.@@N~
-8 402653184 16793600 0
+9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 7
 A
-18 4
+18 0
 A
-19 3
+19 0
 L
 30
 #1437
 shadow band ring band~
 @@Ka shadow band@@N~
 @@KA shadow band@@D of @@Kdull iron@@D engraved with @@Rsigils@@D rests here.@@N~
-8 402653184 16793600 0
+9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 8
 A
-18 5
+18 0
 A
-19 4
+19 0
 L
 36
 #1438
 void ring ring~
 @@Da void ring@@N~
 @@DA void ring@@D seems to @@Dflicker in and out of existence@@D where it lies.@@N~
-8 402653184 16793600 0
+9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 4
 A
-27 8
+27 0
 A
-12 25
+12 0
 L
 44
 #1439
 darksoul earring earring stud~
 @@Ka darksoul earring@@N~
 @@KA darksoul earring@@D of @@Kbone and wire@@D rests here.@@N~
-8 402653184 16777344 0
+9 134217728 8388672 0
 0 0 0 0 0 0 0 0 0 0
 5
 A
-13 15
+13 0
 A
-12 15
+12 0
 L
 30
 #1440
 obsidian ear stud stud earring obsidian~
 @@Ka obsidian ear stud@@N~
 @@Ka obsidian ear stud@@D that @@Kpulses faintly@@D with dark energy lies here.@@N~
-8 268435456 16777344 0
+9 134217728 8388672 0
 0 0 0 0 0 0 0 0 0 0
-1
+2
 A
-27 6
+27 0
 A
-13 20
+13 0
 L
 42
 #1441
 corruption cloak cloak~
 @@Ka corruption cloak@@N~
 @@KA corruption cloak@@D of @@Krotting black velvet@@D trails across the floor here.@@N~
-8 268435456 16908288 0
+8 134217728 8454144 0
 0 0 0 0 0 0 0 0 0 0
 12
 A
-17 -8
+17 0
 A
-13 20
+13 0
 L
 33
 #1442
 shadowweave cape cape~
 @@Da shadowweave cape@@N~
 @@DA shadowweave cape@@D that seems to @@Dabsorb shadows@@D lies crumpled here.@@N~
-8 268435456 16908288 0
+8 134217728 8454144 0
 0 0 0 0 0 0 0 0 0 0
 13
 A
-17 -15
+17 0
 A
-13 35
+13 0
 L
 47
 #1443
 deadman belt belt~
 @@Ka deadman belt@@N~
 @@KA deadman belt@@D of @@Kstudded black leather@@D has been discarded here.@@N~
-8 402653184 17039360 0
+8 134217728 8519680 0
 0 0 0 0 0 0 0 0 0 0
 9
 A
-13 20
+13 0
 A
-14 15
+14 0
 L
 31
 #1444
 iron-link belt belt iron link~
 @@Ka iron-link belt@@N~
 @@Ka iron-link belt@@D of @@Kdark iron@@D with a @@Rskull buckle@@D rests here.@@N~
-8 268435456 17039360 0
+9 134217728 8519680 0
 0 0 0 0 0 0 0 0 0 0
 15
 A
-13 30
+13 0
 A
-17 -12
+17 0
 L
 43
 #1445
 dark visage mask mask~
 @@Ka dark visage mask@@N~
 @@KA dark visage mask@@D carved from @@Kbone@@D with @@Rstaring eye-holes@@D rests here.@@N~
-8 268435456 16777248 0
+8 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
 11
 A
-17 -8
+17 0
 A
-13 18
+13 0
 L
 32
 #1446
 iron death-mask mask visor~
 @@Ka iron death-mask@@N~
 @@Ka iron death-mask@@D with @@Kscreaming features@@D has been left here.@@N~
-8 268435456 16777248 0
+9 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
-12
+9
 A
-17 -14
+17 0
 A
-13 28
+13 0
 L
 46
 #1447
 necrotic tome tome~
 @@Ka necrotic tome@@N~
 @@KA necrotic tome@@D bound in @@Kdark leather@@D rests here, @@Rfaintly warm@@D to the touch.@@N~
-8 402653184 16842752 0
+9 134217728 8421376 0
 0 0 0 0 0 0 0 0 0 0
 3
 A
-27 12
+27 0
 A
-12 30
+12 0
 L
 35
 #1448
 grimoire corruption grimoire~
 @@Ra grimoire of corruption@@N~
 @@RA grimoire of corruption@@D bleeds @@Kdark energy from its spine@@D where it lies.@@N~
-8 402653184 16842752 0
+9 134217728 8388609 0
 0 0 0 0 0 0 0 0 0 0
 4
 A
-27 20
+27 0
 A
-12 50
+12 0
 L
 52
 #1449
 phylactery shard shard crystal~
 @@Da phylactery shard@@N~
 @@DA phylactery shard@@D of @@Kdeep violet crystal@@D pulses with @@Rcaptured life-energy@@D here.@@N~
-8 402653184 16842752 0
+9 134217728 8388610 0
 0 0 0 0 0 0 0 0 0 0
 5
 A
-27 15
+27 0
 A
-13 40
+13 0
 L
 45
 #1450
 shadowpiercer blade sword boss~
 @@KShadowpiercer@@N~
 @@KShadowpiercer@@D, a @@Rvibrant blade of pure shadow-steel@@D, floats above the ground here.@@N~
-5 268435456 16842752 0
-8 8 14 3 0 0 0 0 0 0
+5 134217728 8421376 0
+8 8 14 11 0 0 0 0 0 0
 6
 A
-19 15
+19 0
 A
-18 14
+18 0
 A
-17 -10
+17 0
 L
 55
 #1451
 bonelord maul maul boss hammer~
 @@KThe Bonelord's Maul@@N~
 @@KThe Bonelord's Maul@@D, a weapon @@Rbuilt from fused femur and iron@@D, lies here.@@N~
-5 268435456 16842752 0
+5 134217728 8421376 0
 10 9 16 8 0 0 0 0 0 0
 7
 A
-19 17
+19 0
 A
-18 15
+18 0
 A
-13 60
+13 0
 L
 60
 #1452
 valzareth robe robe boss~
 @@KValzareth's Shadowweave Robe@@N~
 @@KValzareth's Shadowweave Robe@@D of @@Rliving shadow-thread@@D lies crumpled here.@@N~
-9 268435456 17301504 0
+9 134217792 8650752 0
 30 0 0 0 0 0 0 0 0 0
 3
 A
@@ -3411,268 +3415,268 @@ L
 bonelord chestplate chestplate boss plate~
 @@KThe Bonelord's Chestplate@@N~
 @@KThe Bonelord's Chestplate@@D of @@Kfused bone and cursed iron@@D rests here.@@N~
-9 268435456 17301504 0
+9 134217728 8650752 0
 35 0 0 0 0 0 0 0 0 0
 9
 A
-17 -45
+17 0
 A
-13 80
+13 0
 A
-19 12
+19 0
 L
 60
 #1454
 valzareth phylactery crown crown boss~
 @@KValzareth's Phylactery Crown@@N~
 @@KValzareth's Phylactery Crown@@D of @@Kblack bone set with violet gems@@D hovers here.@@N~
-9 268435456 16777232 0
+9 134217792 8388616 0
 25 0 0 0 0 0 0 0 0 0
-5
+2
 A
-17 -20
+17 0
 A
-27 25
+27 0
 A
-12 60
+12 0
 L
 60
 #1455
 bonelord skull helm helm boss~
 @@KThe Bonelord's Skull Helm@@N~
 @@KThe Bonelord's Skull Helm@@D, a @@Kcrown of fused skulls@@D, rests here.@@N~
-9 268435456 16777232 0
+9 134217728 8388616 0
 28 0 0 0 0 0 0 0 0 0
 6
 A
-17 -25
+17 0
 A
-13 60
+13 0
 A
-18 8
+18 0
 L
 60
 #1456
 frost longsword longsword frost~
 @@Ka frost longsword@@N~
 @@KA frost longsword@@D radiates @@Kcold@@D from its @@Kfrost-iron blade@@D.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 3 3 5 3 0 0 0 0 0 0
 7
 A
-19 6
+19 0
 A
-18 5
+18 0
 L
 34
 #1457
 void dagger dagger void~
 @@Ra void dagger@@N~
 @@RA void dagger@@D seems to @@Kabsorb the light@@D around its blade.@@N~
-5 268435456 16842752 0
+5 134217728 8421376 0
 2 2 3 11 0 0 0 0 0 0
 8
 A
-19 5
+19 0
 A
-18 6
+18 0
 L
 38
 #1458
 black iron battleaxe battleaxe~
 @@Ka black iron battleaxe@@N~
 @@KA black iron battleaxe@@D with a @@Rblood-groove@@D on each face lies here.@@N~
-5 268435456 16842752 0
-4 4 7 3 0 0 0 0 0 0
+5 134217728 8421376 0
+4 4 7 1 0 0 0 0 0 0
 9
 A
-19 8
+19 0
 A
-18 7
+18 0
 L
 42
 #1459
 corrupted warhammer warhammer~
 @@Ka corrupted warhammer@@N~
 @@KA corrupted warhammer@@D of @@Kdark metal@@D crackles with @@Rnecromantic energy@@D.@@N~
-5 268435456 16842752 0
+5 134217728 8421376 0
 5 4 8 8 0 0 0 0 0 0
 10
 A
-19 9
+19 0
 A
-18 8
+18 0
 L
 46
 #1460
 soul reaper scythe scythe~
 @@Ka soul reaper scythe@@N~
 @@KA soul reaper scythe@@D with a @@Rcrescent blade of dark steel@@D rests here.@@N~
-5 268435456 16842752 0
+5 134217728 8421376 0
 5 5 9 3 0 0 0 0 0 0
 6
 A
-19 10
+19 0
 A
-18 9
+18 0
 L
 50
 #1461
 deathwhisper lance lance~
 @@Ka deathwhisper lance@@N~
 @@KA deathwhisper lance@@D of @@Kblack iron@@D still vibrates faintly with @@Rold magic@@D.@@N~
-5 402653184 16842752 0
-4 5 9 6 0 0 0 0 0 0
+5 134217728 8421376 0
+4 5 9 2 0 0 0 0 0 0
 7
 A
-19 10
+19 0
 A
-18 9
+18 0
 L
 53
 #1462
 shrieking blade sword shrieking~
 @@Ra shrieking blade@@N~
 @@RA shrieking blade@@D emits a @@Klow constant moan@@D where it lies.@@N~
-5 402653184 16842752 0
+5 134217728 8421376 0
 6 5 10 3 0 0 0 0 0 0
 8
 A
-19 11
+19 0
 A
-18 10
+18 0
 L
 56
 #1463
 void crusher maul void~
 @@Ka void crusher maul@@N~
 @@KA void crusher maul@@D of @@Kenormous proportions@@D rests here, @@Rcracking the floor@@D.@@N~
-5 268435456 16842752 0
+5 134217728 8421376 0
 6 6 11 8 0 0 0 0 0 0
 9
 A
-19 12
+19 0
 A
-18 11
+18 0
 L
 58
 #1464
 necromancer staff staff~
 @@Ka necromancer's staff@@N~
 @@KA necromancer's staff@@D topped with a @@Kcrystal skull@@D rests against the wall.@@N~
-5 402653184 16842752 0
+5 671088640 8421376 0
 3 3 5 6 0 0 0 0 0 0
 5
 A
-27 15
+27 0
 A
-12 35
+12 0
 L
 40
 #1465
 shadow-iron chainmail chainmail shadow~
 @@Ka shadow-iron chainmail hauberk@@N~
 @@KA shadow-iron chainmail hauberk@@D of @@Kcraftsman quality@@D rests here.@@N~
-9 268435456 17301504 0
+9 134217728 8650752 0
 12 0 0 0 0 0 0 0 0 0
 11
 A
-17 -18
+17 0
 A
-13 28
+13 0
 L
 36
 #1466
 enchanted breastplate breastplate~
 @@Ka enchanted breastplate@@N~
 @@KA enchanted breastplate@@D that @@Rglows faintly blue@@D in the dark rests here.@@N~
-9 268435456 17301504 0
+9 134217728 8650752 0
 16 0 0 0 0 0 0 0 0 0
 12
 A
-17 -22
+17 0
 A
-13 40
+13 0
 L
 42
 #1467
 bone-inlaid plate plate bone~
 @@Ka suit of bone-inlaid plate@@N~
 @@KA suit of bone-inlaid plate@@D decorated with @@Kcarved femurs@@D rests here.@@N~
-9 402653184 17301504 0
+9 134217728 8650752 0
 20 0 0 0 0 0 0 0 0 0
 13
 A
-17 -28
+17 0
 A
-13 50
+13 0
 L
 49
 #1468
 necromancer robes robes mage~
 @@Ka set of necromancer's robes@@N~
 @@KA set of necromancer's robes@@D of @@Rrippling black silk@@D lies here.@@N~
-9 268435456 17301504 0
+9 134217728 8650752 0
 8 0 0 0 0 0 0 0 0 0
 4
 A
-17 -10
+17 0
 A
-27 18
+27 0
 A
-12 40
+12 0
 L
 38
 #1469
 warlock robes robes warlock~
 @@Ka set of warlock's robes@@N~
 @@KA set of warlock's robes@@D @@Rstained with ritual markings@@D lies here.@@N~
-9 268435456 17301504 0
+9 134217728 8650752 0
 10 0 0 0 0 0 0 0 0 0
 5
 A
-17 -12
+17 0
 A
-27 22
+27 0
 A
-12 50
+12 0
 L
 48
 #1470
 frost-iron greathelm helm frost~
 @@Ka frost-iron greathelm@@N~
 @@KA frost-iron greathelm@@D breathes @@Kcold@@D where it rests.@@N~
-9 268435456 16777232 0
+9 134217728 8388616 0
 16 0 0 0 0 0 0 0 0 0
 11
 A
-17 -20
+17 0
 A
-13 33
+13 0
 L
 45
 #1471
 void-touched skullhelm helm void skull~
 @@Ka void-touched skullhelm@@N~
 @@KA void-touched skullhelm@@D that @@Kabsorbs light around it@@D sits here.@@N~
-9 268435456 16777232 0
+9 134217728 8388616 0
 20 0 0 0 0 0 0 0 0 0
 12
 A
-17 -24
+17 0
 A
-27 12
+27 0
 L
 55
 #1472
 corrupted plate greaves greaves plate~
 @@Ka pair of corrupted plate greaves@@N~
 @@KA pair of corrupted plate greaves@@D @@Rdark with old enchantment@@D rests here.@@N~
-9 402653184 18874368 0
+9 134217728 10485760 0
 18 0 0 0 0 0 0 0 0 0
 13
 A
-17 -22
+17 0
 A
 14 20
 L
@@ -3681,254 +3685,254 @@ L
 void-iron legplates legplates void~
 @@Ka pair of void-iron legplates@@N~
 @@KA pair of void-iron legplates@@D that seem to @@Kshift in darkness@@D rest here.@@N~
-9 268435456 18874368 0
+9 134217728 10485760 0
 22 0 0 0 0 0 0 0 0 0
 14
 A
-17 -27
+17 0
 A
-14 25
+14 0
 L
 57
 #1474
 frost plate boots boots frost~
 @@Ka pair of frost plate boots@@N~
 @@KA pair of frost plate boots@@D that @@Kleave icy prints@@D on the floor rests here.@@N~
-9 268435456 20971520 0
+9 134217728 10485760 0
 18 0 0 0 0 0 0 0 0 0
 15
 A
-17 -20
+17 0
 A
-14 18
+14 0
 L
 49
 #1475
 void-steel greaves plate boots~
 @@Ka pair of void-steel sabatons@@N~
 @@KA pair of void-steel sabatons@@D of @@Kexceptional dark crafting@@D rests here.@@N~
-9 268435456 20971520 0
+9 134217728 10485760 0
 22 0 0 0 0 0 0 0 0 0
 11
 A
-17 -26
+17 0
 A
-14 22
+14 0
 L
 58
 #1476
 death knight gauntlets gauntlets plate~
 @@Ka pair of death knight gauntlets@@N~
 @@KA pair of death knight gauntlets@@D of @@Rexquisite dark iron@@D rests here.@@N~
-9 268435456 16785408 0
+9 134217728 8392704 0
 18 0 0 0 0 0 0 0 0 0
 7
 A
-17 -20
+17 0
 A
-19 6
+19 0
 L
 50
 #1477
 void-iron plate gauntlets gauntlets void~
 @@Ka pair of void-iron plate gauntlets@@N~
 @@KA pair of void-iron plate gauntlets@@D that @@Kabsorb light@@D rests here.@@N~
-9 268435456 16785408 0
+9 134217728 8392704 0
 22 0 0 0 0 0 0 0 0 0
 8
 A
-17 -26
+17 0
 A
-19 8
+19 0
 L
 59
 #1478
 corrupted vambraces vambraces corrupted~
 @@Ka pair of corrupted vambraces@@N~
 @@KA pair of corrupted vambraces@@D @@Rseeping dark energy@@D rests here.@@N~
-9 268435456 16779264 0
+9 134217728 8389632 0
 16 0 0 0 0 0 0 0 0 0
 14
 A
-17 -20
+17 0
 A
-13 26
+13 0
 L
 49
 #1479
 void-iron vambraces vambraces void~
 @@Ka pair of void-iron vambraces@@N~
 @@KA pair of void-iron vambraces@@D @@Kthat flicker@@D with dark energy rests here.@@N~
-9 268435456 16779264 0
+9 134217728 8389632 0
 20 0 0 0 0 0 0 0 0 0
 15
 A
-17 -26
+17 0
 A
-13 35
+13 0
 L
 58
 #1480
 death knight pauldrons pauldrons knight~
 @@Ka pair of death knight pauldrons@@N~
 @@KA pair of death knight pauldrons@@D with @@Kchain-hung skulls@@D rests here.@@N~
-9 268435456 16778240 0
+9 134217728 8389120 0
 18 0 0 0 0 0 0 0 0 0
 11
 A
-17 -22
+17 0
 A
-13 32
+13 0
 L
 51
 #1481
 void-iron spaulders spaulders void~
 @@Ka pair of void-iron spaulders@@N~
 @@KA pair of void-iron spaulders@@D with @@Rvoid-crystal inlays@@D rests here.@@N~
-9 268435456 16778240 0
+9 134217728 8389120 0
 22 0 0 0 0 0 0 0 0 0
-12
+9
 A
-17 -28
+17 0
 A
-13 40
+13 0
 L
 59
 #1482
 necromancer plate bracers bracers plate~
 @@Ka pair of necromancer plate bracers@@N~
 @@KA pair of necromancer plate bracers@@D @@Rruned with binding glyphs@@D lies here.@@N~
-9 268435456 16781312 0
+9 134217728 8390656 0
 16 0 0 0 0 0 0 0 0 0
-13
+2
 A
-17 -18
+17 0
 A
-27 8
+27 0
 L
 47
 #1483
 void sorcerer bracers bracers void~
 @@Ka pair of void sorcerer bracers@@N~
 @@KA pair of void sorcerer bracers@@D @@Kcool to the touch@@D lies here.@@N~
-9 268435456 16781312 0
+9 134217728 8390656 0
 20 0 0 0 0 0 0 0 0 0
-14
+1
 A
-17 -22
+17 0
 A
-27 14
+27 0
 L
 57
 #1484
 dark tower shield shield tower~
 @@Ka dark tower shield@@N~
 @@KA dark tower shield@@D of @@Kmassive dimensions and dark steel@@D rests here.@@N~
-9 402653184 16842752 0
+9 134217728 8421376 0
 32 0 0 0 0 0 0 0 0 0
 15
 A
-17 -28
+17 0
 A
-13 44
+13 0
 L
 52
 #1485
 void-iron kite shield shield kite void~
 @@Ka void-iron kite shield@@N~
 @@KA void-iron kite shield@@D that @@Kabsorbs impacts soundlessly@@D rests here.@@N~
-9 402653184 16842752 0
+9 134217728 8421376 0
 36 0 0 0 0 0 0 0 0 0
 11
 A
-17 -32
+17 0
 A
-13 52
+13 0
 L
 58
 #1486
 void crystal necklace necklace void~
 @@Ka void crystal necklace@@N~
 @@KA void crystal necklace@@D of @@Kdeep purple stones@@D on a dark chain lies here.@@N~
-8 268435456 16777472 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 2
 A
-13 40
+13 0
 A
-12 35
+12 0
 L
 44
 #1487
 sorcerer soul chain chain sorcerer~
 @@Ka sorcerer's soul chain@@N~
 @@KA sorcerer's soul chain@@D of @@Rlinked enchanted silver@@D lies here.@@N~
-8 402653184 16777472 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 3
 A
-27 14
+27 0
 A
-12 40
+12 0
 L
 52
 #1488
 deathsight amulet amulet death~
 @@Ka deathsight amulet@@N~
 @@KA deathsight amulet@@D showing @@Ka stylized skull@@D of obsidian lies here.@@N~
-8 268435456 16777472 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 4
 A
-27 20
+27 0
 A
-13 50
+13 0
 L
 58
 #1489
 shadow signet ring signet shadow~
 @@Ra shadow signet ring@@N~
 @@RA shadow signet ring@@D bearing a @@Kshadow-cast device@@D lies here.@@N~
-8 268435456 16793600 0
+8 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 10
 A
-18 6
+18 0
 A
-27 6
+27 0
 L
 38
 #1490
 necrotic band ring band~
 @@Ka necrotic band@@N~
 @@KA necrotic band@@D of @@Rdark iron pulsing with corruption@@D lies here.@@N~
-8 268435456 16793600 0
+8 134217728 25174016 0
 0 0 0 0 0 0 0 0 0 0
 1
 A
-27 10
+27 0
 A
-13 30
+13 0
 L
 48
 #1491
 ring of binding ring binding~
 @@Ka ring of binding@@N~
 @@KA ring of binding@@D @@Rengraved with runes@@D that seem to tighten as you watch lies here.@@N~
-8 268435456 16793600 0
+9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 7
 A
-18 7
+18 0
 A
-19 6
+19 0
 L
 55
 #1492
 night ear stud stud night earring~
 @@Ka night ear stud@@N~
 @@KA night ear stud@@D of @@Kblack iron@@D shaped like a @@Rtiny skull@@D lies here.@@N~
-8 268435456 16777344 0
+9 134217728 8388672 0
 0 0 0 0 0 0 0 0 0 0
 8
 A
@@ -3941,7 +3945,7 @@ L
 shadow piercing earring earring shadow~
 @@Ka shadow piercing@@N~
 @@KA shadow piercing@@D of @@Kvoid-crystal@@D that @@Rpulses with dark energy@@D lies here.@@N~
-8 268435456 16777344 0
+9 134217728 8388672 0
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -3954,7 +3958,7 @@ L
 deathshroud cloak cloak deathshroud~
 @@Ka deathshroud cloak@@N~
 @@KA deathshroud cloak@@D that @@Kclings to shadow@@D like a second skin lies here.@@N~
-8 402653184 16908288 0
+8 134217728 8454144 0
 0 0 0 0 0 0 0 0 0 0
 15
 A
@@ -3967,7 +3971,7 @@ L
 void-silk cape cape void silk~
 @@Ka void-silk cape@@N~
 @@KA void-silk cape@@D woven from @@Rthreads of compressed darkness@@D lies here.@@N~
-8 268435456 16908288 0
+9 134217728 8454144 0
 0 0 0 0 0 0 0 0 0 0
 6
 A

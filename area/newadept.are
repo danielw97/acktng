@@ -2176,7 +2176,7 @@ The Vault Sentinel is a towering construct of blackened iron, its body etched fr
 ! 0 0 0 7 12319 0 80
 | 0 0 80 0 0 4095 0
 + 0 0 0 0 0 0 0 0 0
-l 150 223 224 225 226 227 228 0 0 0 
+l 50 223 224 225 226 227 228 0 0 0 
 L 20 20 20 15 15 10 0 0 0 
 #183
 The Hermit Archon~
@@ -2913,6 +2913,7 @@ M 0 181 1 258 (null)
 M 0 182 1 245 (null)
 
 M 0 183 1 257 (null)
+
 S
 #SPECIALS
 M 169 spec_keep_physical_captain
