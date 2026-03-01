@@ -3583,6 +3583,11 @@ void do_config(CHAR_DATA *ch, char *argument)
                        : "[-autoass  ] You don't automatically assist.\n\r",
                    ch);
 
+      send_to_char(IS_SET(ch->config, CONFIG_SHORT_FIGHT)
+                       ? "[+SHORTFIGHT] You see short autoattack messages.\n\r"
+                       : "[-shortfight] You see detailed autoattack messages.\n\r",
+                   ch);
+
       send_to_char(IS_SET(ch->config, CONFIG_AUTOSAC)
                        ? "[+AUTOSAC  ] You automatically sacrifice corpses.\n\r"
                        : "[-autosac  ] You don't automatically sacrifice corpses.\n\r",
@@ -3657,6 +3662,8 @@ void do_config(CHAR_DATA *ch, char *argument)
          bit = CONFIG_AUTOASSIST;
       else if (!str_cmp(arg + 1, "autosac"))
          bit = CONFIG_AUTOSAC;
+      else if (!str_cmp(arg + 1, "shortfight"))
+         bit = CONFIG_SHORT_FIGHT;
       else if (!str_cmp(arg + 1, "blank"))
          bit = CONFIG_BLANK;
       else if (!str_cmp(arg + 1, "brief"))

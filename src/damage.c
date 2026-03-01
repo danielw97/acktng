@@ -14,6 +14,49 @@ extern POL_DATA politics_data;
 extern CHAR_DATA *quest_target;
 extern CHAR_DATA *quest_mob;
 
+static bool short_fight_enabled = FALSE;
+static CHAR_DATA *short_fight_attacker = NULL;
+static CHAR_DATA *short_fight_victim = NULL;
+static int short_fight_total_damage = 0;
+
+void short_fight_round_begin(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+    short_fight_enabled = FALSE;
+    short_fight_attacker = NULL;
+    short_fight_victim = NULL;
+    short_fight_total_damage = 0;
+
+    if (ch == NULL || victim == NULL || IS_NPC(ch))
+        return;
+
+    if (IS_SET(ch->config, CONFIG_SHORT_FIGHT))
+    {
+        short_fight_enabled = TRUE;
+        short_fight_attacker = ch;
+        short_fight_victim = victim;
+    }
+}
+
+bool short_fight_round_active(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+    return short_fight_enabled && ch == short_fight_attacker && victim == short_fight_victim;
+}
+
+int short_fight_round_end(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+    int total_damage = 0;
+
+    if (short_fight_round_active(ch, victim))
+        total_damage = short_fight_total_damage;
+
+    short_fight_enabled = FALSE;
+    short_fight_attacker = NULL;
+    short_fight_victim = NULL;
+    short_fight_total_damage = 0;
+
+    return total_damage;
+}
+
 int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible)
 {
     OBJ_DATA *wield;
@@ -1042,6 +1085,14 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
         sprintf(critical_message, "@@N(@@rCRITICAL@@N)");
     else
         sprintf(critical_message, "");
+
+    if (short_fight_round_active(ch, victim))
+    {
+        short_fight_total_damage += dam;
+        if (dead)
+            death_message(ch, victim, dt);
+        return;
+    }
 
     if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
     {
