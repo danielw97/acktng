@@ -2123,7 +2123,7 @@ void do_split(CHAR_DATA *ch, char *argument)
    char givebuf[MSL], numbuf[MSL], coinbuf[MSL], catbuf[MSL];
    CHAR_DATA *gch;
    int members;
-   int share;
+   int share = 0;
    bool valid = TRUE;
 
    givebuf[0] = '\0';
@@ -2159,7 +2159,10 @@ void do_split(CHAR_DATA *ch, char *argument)
          send_to_char("Your group members wouldn't like that!\n\r", ch);
          return;
       }
-      sprintf(catbuf, "%d %s ", share, coinbuf);
+      catbuf[0] = '\0';
+      snprintf(catbuf, sizeof(catbuf), "%d ", share);
+      safe_strcat(MSL, catbuf, coinbuf);
+      safe_strcat(MSL, catbuf, " ");
       safe_strcat(MSL, givebuf, catbuf);
    }
    if (valid)
@@ -2172,7 +2175,7 @@ void do_split(CHAR_DATA *ch, char *argument)
          {
             ch->gold -= share;
             gch->gold += share;
-            sprintf(outbuf, "%s gives you %s.\n\r", PERS(ch, gch), share);
+            snprintf(outbuf, sizeof(outbuf), "%s gives you %d.\n\r", PERS(ch, gch), share);
             send_to_char(outbuf, gch);
          }
       }
@@ -2435,8 +2438,15 @@ void do_tongue(CHAR_DATA *ch, char *argument)
          length = 1;
    }
 
-   sprintf(buf3, "$n tongues, '%s'", buf);
-   sprintf(buf2, "$n tongues, '%s'.", argument);
+   buf3[0] = '\0';
+   safe_strcat(sizeof(buf3), buf3, "$n tongues, '");
+   safe_strcat(sizeof(buf3), buf3, buf);
+   safe_strcat(sizeof(buf3), buf3, "'");
+
+   buf2[0] = '\0';
+   safe_strcat(sizeof(buf2), buf2, "$n tongues, '");
+   safe_strcat(sizeof(buf2), buf2, argument);
+   safe_strcat(sizeof(buf2), buf2, "'.");
 
    for (rch = ch->in_room->first_person; rch; rch = rch->next_in_room)
    {
@@ -2450,9 +2460,16 @@ void do_tongue(CHAR_DATA *ch, char *argument)
          act((ch->race == rch->race || rch->level > LEVEL_IMMORTAL) ? buf2 : buf3, ch, NULL, rch, TO_VICT);
    }
 
-   sprintf(buf2, "You tongue, '%s'.\n\r", buf);
+   buf2[0] = '\0';
+   safe_strcat(sizeof(buf2), buf2, "You tongue, '");
+   safe_strcat(sizeof(buf2), buf2, buf);
+   safe_strcat(sizeof(buf2), buf2, "'.\n\r");
    send_to_char(buf2, ch);
-   sprintf(buf2, "Translation: %s.\n\r", argument);
+
+   buf2[0] = '\0';
+   safe_strcat(sizeof(buf2), buf2, "Translation: ");
+   safe_strcat(sizeof(buf2), buf2, argument);
+   safe_strcat(sizeof(buf2), buf2, ".\n\r");
    send_to_char(buf2, ch);
    return;
 }
