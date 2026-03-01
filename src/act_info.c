@@ -1656,7 +1656,7 @@ void do_score(CHAR_DATA *ch, char *argument)
 
    sprintf(buf,
            "@@y%4ld/%4ld @@WHit @@y%4ld/%4ld @@WMana @@y%4ld/%4ld @@WMovement @@y%3d @@WPractices",
-           ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->practice);
+           ch->hit, get_max_hp(ch), ch->mana, get_max_mana(ch), ch->move, get_max_move(ch), ch->practice);
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
 
@@ -2988,12 +2988,12 @@ void do_report(CHAR_DATA *ch, char *argument)
 
    sprintf(buf,
            "You report: %ld/%ld hp %ld/%ld mana %ld/%ld mv %ld xp.\n\r",
-           ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->exp);
+           ch->hit, get_max_hp(ch), ch->mana, get_max_mana(ch), ch->move, get_max_move(ch), ch->exp);
 
    send_to_char(buf, ch);
 
    sprintf(buf, "$n reports: %ld/%ld hp %ld/%ld mana %ld/%ld mv %ld xp.",
-           ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->exp);
+           ch->hit, get_max_hp(ch), ch->mana, get_max_mana(ch), ch->move, get_max_move(ch), ch->exp);
 
    act(buf, ch, NULL, NULL, TO_ROOM);
 
