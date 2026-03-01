@@ -339,6 +339,19 @@ int exp_to_level_wolf(int level)
 int exp_for_mobile(int level, CHAR_DATA *mob)
 {
    int value, base_value;
+
+   if (level < 0)
+   {
+      bug("exp_for_mobile: negative level %d.", level);
+      level = 0;
+   }
+   else if (level >= MAX_MOB_LEVEL)
+   {
+      sprintf(log_buf, "exp_for_mobile: level %d exceeds table max %d.", level, MAX_MOB_LEVEL - 1);
+      bug(log_buf, 0);
+      level = MAX_MOB_LEVEL - 1;
+   }
+
    base_value = exp_table[level].mob_base;
    value = base_value;
 

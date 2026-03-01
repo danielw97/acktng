@@ -2246,18 +2246,22 @@ void reset_area(AREA_DATA *pArea)
             break;
          }
 
+         if ((IS_SET(pObjIndex->extra_flags, ITEM_RARE)) && !((number_percent() < 2) && (number_percent() < 8)))
+         {
+            last = TRUE;
+            break;
+         }
+
+         if ((IS_SET(pRoomIndex->room_flags, ROOM_NO_REPOP)) && (pRoomIndex->first_person != NULL))
+         {
+            last = TRUE;
+            break;
+         }
+
          obj = create_object(pObjIndex, number_fuzzy(level));
 
          obj_to_room(obj, pRoomIndex);
 
-         if ((IS_SET(obj->extra_flags, ITEM_RARE)) && !((number_percent() < 2) && (number_percent() < 8)))
-         {
-            extract_obj(obj);
-         }
-         else if ((IS_SET(pRoomIndex->room_flags, ROOM_NO_REPOP)) && (pRoomIndex->first_person != NULL))
-         {
-            extract_obj(obj);
-         }
          last = TRUE;
          break;
 
