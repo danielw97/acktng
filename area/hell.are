@@ -5,7 +5,7 @@ K hell~
 L {@@r100 @@RRM@@N}~
 N 138
 I 100 130
-V 1601 1749
+V 1601 1753
 X 0
 F 15
 U @@RThe screams of the damned echo through the eternal flames.@@N~
@@ -1439,8 +1439,8 @@ charon ferryman~
 ! 0 0 0 7 2198 4 4
 | 0 0 0 0 0 256 128
 + 20 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 1750 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #1621
 cerberus~
 @@RCerberus@@N~
@@ -1455,8 +1455,8 @@ cerberus~
 ! 0 0 0 7 2703358 64 8
 | 0 0 0 0 0 128 8
 + 0 0 0 0 0 10 10 20 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 1751 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #1622
 beelzebub lord flies~
 @@RBeelzebub, Lord of Flies@@N~
@@ -1471,8 +1471,8 @@ beelzebub lord flies~
 ! 0 0 0 7 26966 33685184 8
 | 0 0 0 0 0 128 8
 + 50 0 0 0 10 10 20 20 5
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 1752 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #1623
 lucifer satan~
 @@RLucifer, the Fallen Morning Star@@N~
@@ -1487,8 +1487,8 @@ lucifer satan~
 ! 0 0 0 7 2703486 33685184 8
 | 0 0 0 0 0 384 8
 + 100 0 0 0 20 15 25 30 10
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 2 1753 0 0 0 0 0 0 0 0 
+L 100 0 0 0 0 0 0 0 0 
 #1624
 shade vestibule~
 @@ea vestibule shade@@N~
@@ -2425,6 +2425,46 @@ wings elder harpy~
 @@eA pair of vast black wings lies here, rank with old carrion, their span enough to shadow a small building.@@N
 ~
 9 402653376 8388746 9
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1750
+obol charons coin soul-price~
+@@eObol of Charon@@N~
+@@eA single black coin lies here, etched with the face of death itself.@@N
+~
+8 404750528 16777216 1
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1751
+cerberus fang trophy hell-hound~
+@@eFang of Cerberus@@N~
+@@eA massive obsidian fang lies here, pulled from the three-headed guardian of Hell.@@N
+~
+8 404750528 16777216 1
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1752
+beelzebub crown flies lord~
+@@eCrown of the Lord of Flies@@N~
+@@eA crown of woven fly-chitin and blackened gold lies here, still humming with pestilence.@@N
+~
+8 404750528 16777216 1
+0 0 0 0 0 0 0 0 0 0
+0
+L
+100
+#1753
+lucifer morning star feather fallen~
+@@eFeather of the Fallen Morning Star@@N~
+@@eA single luminous feather lies here, darkened at the tip where the light died.@@N
+~
+8 404750528 16777216 1
 0 0 0 0 0 0 0 0 0 0
 0
 L
