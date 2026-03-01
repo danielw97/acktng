@@ -69,12 +69,19 @@ void pre_parse(char *list, char *victimname, char *containername, char *things)
       if (is_number(arg1))
       {
          argument = one_argument(argument, one_object);
-         sprintf(holdbuf, "%s %s ", arg1, one_object);
+         holdbuf[0] = '\0';
+         safe_strcat(MSL, holdbuf, arg1);
+         safe_strcat(MSL, holdbuf, " ");
+         safe_strcat(MSL, holdbuf, one_object);
+         safe_strcat(MSL, holdbuf, " ");
          safe_strcat(MSL, object_list, holdbuf);
       }
       else
       {
-         sprintf(holdbuf, "1 %s ", arg1);
+         holdbuf[0] = '\0';
+         safe_strcat(MSL, holdbuf, "1 ");
+         safe_strcat(MSL, holdbuf, arg1);
+         safe_strcat(MSL, holdbuf, " ");
          safe_strcat(MSL, object_list, holdbuf);
       }
    }
@@ -832,10 +839,11 @@ char *str_mod(char *mod_string, char *argument)
          if (multiple)
          {
             sprintf(temp, "\'%s\'", arg1);
-            sprintf(arg1, "%s", temp);
+            strncpy(arg1, temp, sizeof(arg1) - 1);
+            arg1[sizeof(arg1) - 1] = '\0';
          }
 
-         if (arg1)
+         if (arg1[0] != '\0')
          {
             buf2 = str_dup(mod_string);
             buf3 = buf2;
