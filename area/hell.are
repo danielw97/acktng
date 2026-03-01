@@ -1135,8 +1135,8 @@ damned soul shade~
 ! 0 0 0 7 91978 0 0
 | 0 0 0 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1602
 wailing spirit~
 @@ra wailing spirit@@N~
@@ -1151,8 +1151,8 @@ wailing spirit~
 ! 0 0 0 7 91978 65536 4
 | 0 0 0 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1603
 hellfire imp~
 @@ra hellfire imp@@N~
@@ -1167,8 +1167,8 @@ hellfire imp~
 ! 0 0 0 7 0 32 4
 | 0 0 0 0 0 0 64
 + 50 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1604
 sinner condemned~
 @@ra condemned sinner@@N~
@@ -1183,8 +1183,8 @@ sinner condemned~
 ! 0 0 0 7 2198 0 0
 | 0 0 0 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1605
 lust demon~
 @@ra lust demon@@N~
@@ -1199,8 +1199,8 @@ lust demon~
 ! 0 0 0 7 0 98370 4
 | 0 0 0 0 0 0 2
 + 30 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1606
 gluttony fiend~
 @@ra gluttony fiend@@N~
@@ -1215,8 +1215,8 @@ gluttony fiend~
 ! 0 0 0 7 26838 0 8
 | 0 0 0 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1607
 greed devil~
 @@ra greed devil@@N~
@@ -1231,8 +1231,8 @@ greed devil~
 ! 0 0 0 7 2198 33 4
 | 0 0 0 0 0 0 64
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1608
 wrath demon~
 @@ra wrath demon@@N~
@@ -1247,8 +1247,8 @@ wrath demon~
 ! 0 0 0 7 26966 0 8
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1609
 heresy shade~
 @@ra heresy shade@@N~
@@ -1263,8 +1263,8 @@ heresy shade~
 ! 0 0 0 7 91978 65600 4
 | 0 0 0 0 0 256 128
 + 40 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1610
 infernal centaur~
 @@ran infernal centaur@@N~
@@ -1279,8 +1279,8 @@ infernal centaur~
 ! 0 0 0 7 2703294 0 0
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1611
 harpy hell~
 @@ra hellish harpy@@N~
@@ -1295,8 +1295,8 @@ harpy hell~
 ! 0 0 0 7 2097152 4096 4
 | 0 0 0 0 0 0 32
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1612
 malebranche demon~
 @@ra Malebranche demon@@N~
@@ -1311,8 +1311,8 @@ malebranche demon~
 ! 0 0 0 7 26966 0 8
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1613
 false counselor flame~
 @@ra burning false counselor@@N~
@@ -1327,8 +1327,8 @@ false counselor flame~
 ! 0 0 0 7 0 33554560 4
 | 0 0 0 0 0 0 64
 + 80 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1614
 ice wraith cocytus~
 @@ran ice wraith of Cocytus@@N~
@@ -1343,8 +1343,8 @@ ice wraith cocytus~
 ! 0 0 0 7 0 131072 8
 | 0 0 0 0 0 64 128
 + 60 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1615
 fallen angel~
 @@ra fallen angel@@N~
@@ -1359,8 +1359,8 @@ fallen angel~
 ! 0 0 0 7 0 33621064 4
 | 0 0 0 0 0 128 8
 + 60 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1616
 greater demon~
 @@ra greater demon@@N~
@@ -1375,8 +1375,8 @@ greater demon~
 ! 0 0 0 7 26966 33554560 8
 | 0 0 0 0 0 128 8
 + 30 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1617
 pain devil~
 @@ra pain devil@@N~
@@ -1391,8 +1391,8 @@ pain devil~
 ! 0 0 0 7 2703422 0 0
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1618
 torment archon~
 @@ra torment archon@@N~
@@ -1407,8 +1407,8 @@ torment archon~
 ! 0 0 0 7 26966 33621064 8
 | 0 0 0 0 0 128 8
 + 30 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1619
 abyssal fiend~
 @@ran abyssal fiend@@N~
@@ -1423,8 +1423,8 @@ abyssal fiend~
 ! 0 0 0 7 26966 33685184 8
 | 0 0 0 0 0 128 8
 + 50 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1620
 charon ferryman~
 @@rCharon the Ferryman@@N~
@@ -1439,8 +1439,8 @@ charon ferryman~
 ! 0 0 0 7 2198 4 4
 | 0 0 0 0 0 256 128
 + 20 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1621
 cerberus~
 @@rCerberus@@N~
@@ -1455,8 +1455,8 @@ cerberus~
 ! 0 0 0 7 2703358 64 8
 | 0 0 0 0 0 128 8
 + 0 0 0 0 0 10 10 20 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1622
 beelzebub lord flies~
 @@rBeelzebub, Lord of Flies@@N~
@@ -1471,8 +1471,8 @@ beelzebub lord flies~
 ! 0 0 0 7 26966 33685184 8
 | 0 0 0 0 0 128 8
 + 50 0 0 0 10 10 20 20 5
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1623
 lucifer satan~
 @@rLucifer, the Fallen Morning Star@@N~
@@ -1487,8 +1487,8 @@ lucifer satan~
 ! 0 0 0 7 2703486 33685184 8
 | 0 0 0 0 0 384 8
 + 100 0 0 0 20 15 25 30 10
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1624
 shade vestibule~
 @@ra vestibule shade@@N~
@@ -1503,8 +1503,8 @@ shade vestibule~
 ! 0 0 0 7 91978 0 0
 | 0 0 0 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1625
 daemon guard~
 @@ra daemon guard@@N~
@@ -1519,8 +1519,8 @@ daemon guard~
 ! 0 0 0 7 26966 128 8
 | 0 0 0 0 0 128 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1626
 brimstone wraith~
 @@ra brimstone wraith@@N~
@@ -1535,8 +1535,8 @@ brimstone wraith~
 ! 0 0 0 7 0 32 4
 | 0 0 0 0 0 256 64
 + 30 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1627
 hellhound infernal~
 @@ran infernal hellhound@@N~
@@ -1551,8 +1551,8 @@ hellhound infernal~
 ! 0 0 0 7 2703358 64 0
 | 0 0 0 0 0 128 64
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1628
 locust abaddon~
 @@ra locust of Abaddon@@N~
@@ -1567,8 +1567,8 @@ locust abaddon~
 ! 0 0 0 7 2097152 512 4
 | 0 0 0 0 0 512 64
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1629
 barrator tar~
 @@ra tar-soaked barrator@@N~
@@ -1583,8 +1583,8 @@ barrator tar~
 ! 0 0 0 7 26838 0 0
 | 0 0 0 0 0 0 512
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1630
 false counselor burning~
 @@ra burning false counselor@@N~
@@ -1599,8 +1599,8 @@ false counselor burning~
 ! 0 0 0 7 0 33554560 4
 | 0 0 0 0 0 0 64
 + 70 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1631
 ice traitor frozen~
 @@ra frozen traitor@@N~
@@ -1615,8 +1615,8 @@ ice traitor frozen~
 ! 0 0 0 7 2198 131072 4
 | 0 0 0 0 0 64 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1632
 howling shade styx~
 @@ra howling shade of the Styx@@N~
@@ -1631,8 +1631,8 @@ howling shade styx~
 ! 0 0 0 7 91978 0 0
 | 0 0 0 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1633
 suicide tree~
 @@ra twisted suicide tree@@N~
@@ -1647,8 +1647,8 @@ suicide tree~
 ! 0 0 0 7 0 32768 4
 | 0 0 0 0 0 0 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1634
 storm wraith lust~
 @@ra storm wraith@@N~
@@ -1663,8 +1663,8 @@ storm wraith lust~
 ! 0 0 0 7 2097152 4096 4
 | 0 0 0 0 0 256 64
 + 30 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1635
 greed archon~
 @@ra greed archon@@N~
@@ -1679,8 +1679,8 @@ greed archon~
 ! 0 0 0 7 2198 33 4
 | 0 0 0 0 0 0 64
 + 20 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1636
 infernal serpent thief~
 @@ran infernal serpent@@N~
@@ -1695,8 +1695,8 @@ infernal serpent thief~
 ! 0 0 0 7 2097152 512 4
 | 0 0 0 0 0 512 64
 + 20 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1637
 flatterer excrement~
 @@ra floundering flatterer@@N~
@@ -1711,8 +1711,8 @@ flatterer excrement~
 ! 0 0 0 7 91978 0 0
 | 0 0 0 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1638
 harpy elder~
 @@ran elder harpy@@N~
@@ -1727,8 +1727,8 @@ harpy elder~
 ! 0 0 0 7 2097152 4096 4
 | 0 0 0 0 0 0 32
 + 40 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1639
 daemon archivist~
 @@ra daemon archivist@@N~
@@ -1743,8 +1743,8 @@ daemon archivist~
 ! 0 0 0 7 0 33554560 4
 | 0 0 0 0 0 0 64
 + 60 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1640
 pain sculptor~
 @@ra pain sculptor@@N~
@@ -1759,8 +1759,8 @@ pain sculptor~
 ! 0 0 0 7 2703422 0 0
 | 0 0 0 0 0 0 8
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #1641
 vestibule wanderer~
 @@ra wandering shade@@N~
@@ -1775,8 +1775,8 @@ vestibule wanderer~
 ! 0 0 0 7 91978 0 0
 | 0 0 0 0 0 256 128
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0
-L 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #1601
@@ -1784,7 +1784,7 @@ soulfire ember~
 @@rA Soulfire Ember@@N~
 @@rA soulfire ember pulses here with dim, tormented light.@@N
 ~
-1 268435456 16777217 2
+1 402653376 16777217 2
 0 0 -1 0 0 0 0 0 0 0
 0
 L
@@ -1794,7 +1794,7 @@ ring condemned~
 @@rRing of the Condemned@@N~
 @@rA ring forged of scorched iron lies here, still warm.@@N
 ~
-9 268435456 8396800 4
+9 402653376 8396800 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1804,7 +1804,7 @@ amulet hellfire~
 @@rAmulet of Hellfire@@N~
 @@rAn amulet of hellfire hangs here, trailing smoke.@@N
 ~
-9 268435456 8388616 3
+9 402653376 8388616 3
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1814,7 +1814,7 @@ gloves torment~
 @@rGloves of Torment@@N~
 @@rA pair of smoldering gloves lies here.@@N
 ~
-9 268435456 8404992 9
+9 402653376 8404992 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1824,7 +1824,7 @@ boots ashwalker~
 @@rBoots of the Ashwalker@@N~
 @@rA pair of ash-grey boots lies here, still radiating heat.@@N
 ~
-9 268435456 10485760 9
+9 402653376 10485760 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1834,7 +1834,7 @@ earring damned~
 @@rEarrings of the Damned@@N~
 @@rA pair of blood-iron earrings lies here.@@N
 ~
-9 268435456 8388672 3
+9 402653376 8388672 3
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1844,7 +1844,7 @@ bracers infernal~
 @@rBracers of Infernal Iron@@N~
 @@rHeavy bracers of infernal iron lie here, still hot to the touch.@@N
 ~
-9 268435456 8390656 9
+9 402653376 8390656 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1854,7 +1854,7 @@ belt soulchain~
 @@rBelt of Soulchains@@N~
 @@rA belt woven of glowing soul-chains lies here.@@N
 ~
-9 268435456 8519680 7
+9 402653376 8519680 7
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1864,7 +1864,7 @@ shoulderguards pain~
 @@rShoulderguards of Pain@@N~
 @@rA set of barbed shoulderguards lies here, dripping with old blood.@@N
 ~
-9 268435456 8389632 9
+9 402653376 8389632 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1874,7 +1874,7 @@ leggings hellforged~
 @@rLeggings of Hellfire@@N~
 @@rA set of leggings, forged in hellfire, lies here.@@N
 ~
-9 268435456 9437184 9
+9 402653376 9437184 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1884,7 +1884,7 @@ cloak suffering~
 @@rCloak of Suffering@@N~
 @@rA cloak woven from the screams of the damned hangs here.@@N
 ~
-9 268435456 8388736 9
+9 402653376 8388736 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1894,7 +1894,7 @@ body hellplate~
 @@rHellplate Breastplate@@N~
 @@rA massive breastplate of hellplate lies here, etched with scenes of torment.@@N
 ~
-9 268435456 8650752 14
+9 402653376 8650752 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1904,7 +1904,7 @@ helm torment~
 @@rHelm of Torment@@N~
 @@rA helm of black iron, studded with barbs, lies here.@@N
 ~
-9 268435456 8388616 9
+9 402653376 8388616 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1914,7 +1914,7 @@ wand hellfire~
 @@rWand of Hellfire@@N~
 @@rA wand carved from infernal bone lies here, pulsing with dark power.@@N
 ~
-5 268435456 8421376 3
+5 402653376 8421376 3
 0 0 0 6 0 0 0 0 0 0
 0
 L
@@ -1924,7 +1924,7 @@ staff brimstone~
 @@rStaff of Brimstone@@N~
 @@rA staff capped with a smoking sulfur gem lies here.@@N
 ~
-5 268435456 8421376 3
+5 402653376 8421376 3
 0 0 0 6 0 0 0 0 0 0
 0
 L
@@ -1934,7 +1934,7 @@ sword hellblade~
 @@rHellblade@@N~
 @@rA massive hellblade lies here, its edge still glowing orange from the forge.@@N
 ~
-5 268435456 8421376 9
+5 402653376 8421376 9
 0 0 0 3 0 0 0 0 0 0
 0
 L
@@ -1944,7 +1944,7 @@ mace infernal~
 @@rMace of Infernal Judgment@@N~
 @@rA mace headed with a sphere of hardened hellstone lies here.@@N
 ~
-5 268435456 8421376 9
+5 402653376 8421376 9
 0 0 0 8 0 0 0 0 0 0
 0
 L
@@ -1954,7 +1954,7 @@ axe soulcleaver~
 @@rSoulcleaver Axe@@N~
 @@rA great axe of infernal iron lies here, its blade etched with screaming faces.@@N
 ~
-5 268435456 8421376 9
+5 402653376 8421376 9
 0 0 0 3 0 0 0 0 0 0
 0
 L
@@ -1964,7 +1964,7 @@ wings fallen~
 @@rWings of the Fallen@@N~
 @@rA pair of burnt, tattered wings lies here, still twitching.@@N
 ~
-9 268435456 8388746 3
+9 402653376 8388746 3
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1974,7 +1974,7 @@ face mask anguish~
 @@rMask of Anguish@@N~
 @@rA mask of tortured iron lies here, contorted into a permanent scream.@@N
 ~
-9 268435456 8388640 7
+9 402653376 8388640 7
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1984,7 +1984,7 @@ horns demon~
 @@rHorns of the Demon Prince@@N~
 @@rA pair of massive demon horns lies here, still attached to a shard of skull.@@N
 ~
-9 268435456 8388616 9
+9 402653376 8388616 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -1994,7 +1994,7 @@ aura hellfire~
 @@rAura of Hellfire@@N~
 @@rA shimmering hellfire aura crackles here, seeking a host.@@N
 ~
-9 268435456 8388610 3
+9 402653376 8388610 3
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2004,7 +2004,7 @@ halo broken~
 @@rBroken Halo@@N~
 @@rA cracked and blackened halo lies here, its light extinguished.@@N
 ~
-9 268435456 8388610 2
+9 402653376 8388610 2
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2014,7 +2014,7 @@ tail devil~
 @@rTail of the Devil@@N~
 @@rA barbed devil tail lies here, still lashing.@@N
 ~
-9 268435456 8519802 9
+9 402653376 8519802 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2024,7 +2024,7 @@ claws hellfiend~
 @@rClaws of the Hell Fiend@@N~
 @@rA pair of iron-hard demon claws lies here.@@N
 ~
-9 268435456 8405000 7
+9 402653376 8405000 7
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2034,7 +2034,7 @@ veil sorrow~
 @@rVeil of Eternal Sorrow@@N~
 @@rA translucent veil of grey sorrow drifts here, seeking a face to haunt.@@N
 ~
-9 268435456 8388640 2
+9 402653376 8388640 2
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2044,7 +2044,7 @@ shield hellforged~
 @@rShield of Hellforged Iron@@N~
 @@rA shield of hellforged iron lies here, its surface scarred by infernal combat.@@N
 ~
-9 268435456 8421376 14
+9 402653376 8421376 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2054,7 +2054,7 @@ ring wrath~
 @@rRing of Wrath@@N~
 @@rA ring of blackened iron lies here, radiating barely-contained fury.@@N
 ~
-9 268435456 8396800 4
+9 402653376 8396800 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2064,7 +2064,7 @@ finger bone curse~
 @@rBone Ring of Eternal Damnation@@N~
 @@rA bone ring carved from the finger of the damned lies here.@@N
 ~
-9 268435456 8396800 4
+9 402653376 8396800 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2074,7 +2074,7 @@ wrist iron hellbound~
 @@rHellbound Iron Vambrace@@N~
 @@rAn iron vambrace lies here, its surface carved with names of the damned.@@N
 ~
-9 268435456 8390656 9
+9 402653376 8390656 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2084,7 +2084,7 @@ neck collar torment~
 @@rCollar of Torment@@N~
 @@rA heavy iron collar lies here, inscribed with infernal runes.@@N
 ~
-9 268435456 8388616 9
+9 402653376 8388616 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2094,7 +2094,7 @@ neck chain hellfire~
 @@rChain of Hellfire@@N~
 @@rA chain of glowing hellfire links lies here.@@N
 ~
-9 268435456 8388616 4
+9 402653376 8388616 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2104,7 +2104,7 @@ two handed greataxe oblivion~
 @@rGreataxe of Oblivion@@N~
 @@rA massive two-handed greataxe lies here, its blade black as the void.@@N
 ~
-5 268435456 8421376 9
+5 402653376 8421376 9
 0 0 0 3 0 0 0 0 0 0
 0
 L
@@ -2114,7 +2114,7 @@ charon cloak ferryman~
 @@rCloak of the Ferryman@@N~
 @@rThe dark cloak of Charon lies here, smelling of river-mud and death.@@N
 ~
-9 402653248 8388736 9
+9 402653376 8388736 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2124,7 +2124,7 @@ charon ring styx~
 @@rRing of the Styx@@N~
 @@rA ring of black river-stone lies here, impossibly cold.@@N
 ~
-9 402653248 8396800 4
+9 402653376 8396800 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2134,7 +2134,7 @@ cerberus hide~
 @@rHide of Cerberus@@N~
 @@rThe matted, fire-scarred hide of Cerberus lies here.@@N
 ~
-9 402653248 8650752 14
+9 402653376 8650752 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2144,7 +2144,7 @@ cerberus fang~
 @@rFang of Cerberus@@N~
 @@rA massive fang wrenched from the jaw of Cerberus lies here.@@N
 ~
-5 402653248 8421376 9
+5 402653376 8421376 9
 0 0 0 10 0 0 0 0 0 0
 0
 L
@@ -2154,7 +2154,7 @@ beelzebub crown flies~
 @@rCrown of Flies@@N~
 @@rA crown woven of demonic flies hovers here, their wings a constant, maddening buzz.@@N
 ~
-9 402653248 8388616 9
+9 402653376 8388616 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2164,7 +2164,7 @@ beelzebub wings pestilence~
 @@rWings of Pestilence@@N~
 @@rMassive wings of pestilence lie here, their membranes crawling with demonic vermin.@@N
 ~
-9 402653248 8388746 14
+9 402653376 8388746 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2174,7 +2174,7 @@ beelzebub scepter~
 @@rScepter of Beelzebub@@N~
 @@rThe dark scepter of Beelzebub lies here, still crackling with infernal authority.@@N
 ~
-5 402653248 8421376 4
+5 402653376 8421376 4
 0 0 0 6 0 0 0 0 0 0
 0
 L
@@ -2184,7 +2184,7 @@ lucifer crown morning star~
 @@rCrown of the Morning Star@@N~
 @@rThe crown of Lucifer lies here, its gems still radiant despite the Fall.@@N
 ~
-9 402653248 8388616 14
+9 402653376 8388616 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2194,7 +2194,7 @@ lucifer wings fallen~
 @@rWings of the Fallen Morning Star@@N~
 @@rThe great wings of Lucifer lie folded here, black as the void between stars.@@N
 ~
-9 402653248 8388746 14
+9 402653376 8388746 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2204,7 +2204,7 @@ lucifer sword flaming~
 @@rSword of the Fallen Light@@N~
 @@rThe sword of Lucifer lies here, its blade still holding a faint echo of its former glory.@@N
 ~
-5 402653248 8421376 9
+5 402653376 8421376 9
 0 0 0 3 0 0 0 0 0 0
 0
 L
@@ -2214,7 +2214,7 @@ lucifer armor fallen~
 @@rArmor of the Fallen@@N~
 @@rThe black armor of Lucifer lies here, etched with scenes of Heaven remembered.@@N
 ~
-9 402653248 8650752 14
+9 402653376 8650752 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2224,7 +2224,7 @@ charon pole ferryman~
 @@rPole of the Ferryman@@N~
 @@rA long pole of blackened bone lies here, used to push Charon's skiff through the dark waters.@@N
 ~
-5 402653248 8421376 9
+5 402653376 8421376 9
 0 0 0 3 0 0 0 0 0 0
 0
 L
@@ -2234,7 +2234,7 @@ charon helm skulls~
 @@rHelm of River Skulls@@N~
 @@rA helm fashioned from the skulls of the uncrossed dead lies here, still dripping dark water.@@N
 ~
-9 402653248 8388616 9
+9 402653376 8388616 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2244,7 +2244,7 @@ charon boots marsh~
 @@rBoots of the Marsh-Walker@@N~
 @@rBoots of cured demon hide lie here, their soles stained by centuries of black river bottom.@@N
 ~
-9 402653248 10485760 9
+9 402653376 10485760 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2254,7 +2254,7 @@ cerberus collar iron~
 @@rCollar of the Three-Headed Terror@@N~
 @@rAn enormous iron collar lies here, thick enough to restrain something the size of three horses.@@N
 ~
-9 402653248 8388616 14
+9 402653376 8388616 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2264,7 +2264,7 @@ cerberus claw shredder~
 @@rClaw of the Hellhound Lord@@N~
 @@rA massive obsidian claw lies here, still warm and impossibly sharp.@@N
 ~
-9 402653248 8405000 9
+9 402653376 8405000 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2274,7 +2274,7 @@ beelzebub ring dominion~
 @@rRing of Pestilent Dominion@@N~
 @@rA ring of chitin and gold lies here, carved with images of swarming flies.@@N
 ~
-9 402653248 8396800 4
+9 402653376 8396800 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2284,7 +2284,7 @@ beelzebub belt dominion~
 @@rBelt of Infernal Dominion@@N~
 @@rA belt of woven fly-silk and iron links lies here, buzzing faintly.@@N
 ~
-9 402653248 8519680 9
+9 402653376 8519680 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2294,7 +2294,7 @@ lucifer ring dawn~
 @@rRing of the First Dawn@@N~
 @@rA ring of pure starlight-metal lies here, its surface bearing the inscription 'Morning Star'.@@N
 ~
-9 402653248 8396800 4
+9 402653376 8396800 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2304,7 +2304,7 @@ lucifer belt celestial~
 @@rBelt of Celestial Iron@@N~
 @@rA belt of heaven-forged iron lies here, its brightness somehow surviving the Fall.@@N
 ~
-9 402653248 8519680 14
+9 402653376 8519680 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2314,7 +2314,7 @@ lucifer greaves fallen~
 @@rGreaves of the Morning Star@@N~
 @@rA pair of greaves forged before the Fall lies here, their surface still faintly luminous.@@N
 ~
-9 402653248 10485760 14
+9 402653376 10485760 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2324,7 +2324,7 @@ lucifer gloves fallen~
 @@rGauntlets of the Fallen Light@@N~
 @@rA pair of gauntlets of fallen angel-metal lies here, their clenched fingers frozen in fury.@@N
 ~
-9 402653248 8404992 14
+9 402653376 8404992 14
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2334,7 +2334,7 @@ storm wraith veil~
 @@rVeil of the Storm Wraith@@N~
 @@rA torn veil of storm-grey mist lies here, crackling faintly with the charge of the infernal tempest.@@N
 ~
-9 402653184 8388640 2
+9 402653376 8388640 2
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2344,7 +2344,7 @@ ring greed archon~
 @@rRing of the Greed Archon@@N~
 @@rA heavy ring of stolen gold lies here, the names of its previous owners scratched along the inner band.@@N
 ~
-9 402653184 8396800 4
+9 402653376 8396800 4
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2354,7 +2354,7 @@ scroll false praise~
 @@rScroll of False Praise@@N~
 @@rA scroll of parchment lies here, its surface dense with elaborate, meaningless flattery.@@N
 ~
-9 402653184 8388610 2
+9 402653376 8388610 2
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2364,7 +2364,7 @@ fang infernal serpent~
 @@rFang of the Infernal Serpent@@N~
 @@rA long red fang lies here, still weeping a dark venom that smells of avarice.@@N
 ~
-5 402653184 8421376 7
+5 402653376 8421376 7
 0 0 0 10 0 0 0 0 0 0
 0
 L
@@ -2374,7 +2374,7 @@ claw elder harpy~
 @@rTalon of the Elder Harpy@@N~
 @@rA great black talon lies here, its edge honed by centuries of tearing at the damned.@@N
 ~
-5 402653184 8421376 9
+5 402653376 8421376 9
 0 0 0 3 0 0 0 0 0 0
 0
 L
@@ -2384,7 +2384,7 @@ ledger daemon archivist~
 @@rLedger of Infernal Record@@N~
 @@rA ledger bound in blackened leather lies here, its pages already filling with entries for the next arrival.@@N
 ~
-9 402653184 8388610 3
+9 402653376 8388610 3
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2394,7 +2394,7 @@ chisel pain sculptor~
 @@rChisel of the Pain Sculptor@@N~
 @@rAn implement of polished infernal bone lies here, its tip precisely shaped for purposes that bear no examination.@@N
 ~
-5 402653184 8421376 7
+5 402653376 8421376 7
 0 0 0 6 0 0 0 0 0 0
 0
 L
@@ -2404,7 +2404,7 @@ amulet infernal storm~
 @@rAmulet of the Infernal Storm@@N~
 @@rAn amulet of dark iron lies here, a contained vortex of crimson storm visible within its crystal face.@@N
 ~
-9 402653184 8388616 3
+9 402653376 8388616 3
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2414,7 +2414,7 @@ bracers greed iron~
 @@rBracers of Accumulated Iron@@N~
 @@rA pair of bracers assembled from mismatched pieces of stolen armour lies here, the joins still sharp.@@N
 ~
-9 402653184 8390656 13
+9 402653376 8390656 13
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2424,7 +2424,7 @@ wings elder harpy~
 @@rWings of the Elder Harpy@@N~
 @@rA pair of vast black wings lies here, rank with old carrion, their span enough to shadow a small building.@@N
 ~
-9 402653184 8388746 9
+9 402653376 8388746 9
 0 0 0 0 0 0 0 0 0 0
 0
 L
@@ -2433,9 +2433,15 @@ L
 #RESETS
 M 0 1601 10 1602 (null)
 
+G 0 1601 0 (null)
+
 M 0 1624 10 1602 (null)
 
 M 0 1625 8 1611 (null)
+
+E 0 1627 0 11 (null)
+
+E 0 1630 0 14 (null)
 
 M 0 1625 8 1612 (null)
 
@@ -2447,13 +2453,25 @@ M 0 1602 8 1604 (null)
 
 M 0 1603 6 1603 (null)
 
+E 0 1603 0 3 (null)
+
+E 0 1614 0 17 (null)
+
+E 0 1622 0 18 (null)
+
 M 0 1603 4 1617 (null)
 
 M 0 1604 6 1606 (null)
 
+E 0 1602 0 1 (null)
+
+E 0 1629 0 20 (null)
+
 M 0 1629 5 1618 (null)
 
 M 0 1605 4 1605 (null)
+
+E 0 1624 0 27 (null)
 
 M 0 1605 4 1608 (null)
 
@@ -2467,13 +2485,27 @@ M 0 1627 5 1606 (null)
 
 M 0 1607 4 1607 (null)
 
+G 0 1618 0 (null)
+
 M 0 1607 4 1608 (null)
 
 M 0 1608 4 1608 (null)
 
+G 0 1605 0 (null)
+
+E 0 1616 0 16 (null)
+
+E 0 1628 0 1 (null)
+
+G 0 1633 0 (null)
+
 M 0 1608 4 1613 (null)
 
 M 0 1609 4 1610 (null)
+
+E 0 1606 0 20 (null)
+
+G 0 1620 0 (null)
 
 M 0 1609 4 1615 (null)
 
@@ -2485,11 +2517,17 @@ M 0 1610 4 1614 (null)
 
 M 0 1611 4 1614 (null)
 
+E 0 1625 0 26 (null)
+
 M 0 1611 4 1614 (null)
 
 M 0 1633 5 1614 (null)
 
 M 0 1612 3 1617 (null)
+
+E 0 1607 0 10 (null)
+
+E 0 1617 0 16 (null)
 
 M 0 1612 3 1618 (null)
 
@@ -2503,6 +2541,8 @@ M 0 1630 4 1619 (null)
 
 M 0 1614 3 1620 (null)
 
+E 0 1626 0 17 (null)
+
 M 0 1614 3 1620 (null)
 
 M 0 1631 5 1620 (null)
@@ -2511,9 +2551,23 @@ M 0 1631 5 1636 (null)
 
 M 0 1615 3 1615 (null)
 
+E 0 1611 0 24 (null)
+
+E 0 1615 0 16 (null)
+
+E 0 1619 0 26 (null)
+
+G 0 1623 0 (null)
+
 M 0 1615 3 1633 (null)
 
 M 0 1616 2 1617 (null)
+
+E 0 1610 0 7 (null)
+
+E 0 1612 0 5 (null)
+
+E 0 1621 0 18 (null)
 
 M 0 1616 2 1618 (null)
 
@@ -2521,13 +2575,25 @@ M 0 1616 2 1619 (null)
 
 M 0 1617 2 1608 (null)
 
+E 0 1604 0 9 (null)
+
+G 0 1609 0 (null)
+
+E 0 1613 0 17 (null)
+
 M 0 1617 2 1627 (null)
 
 M 0 1618 2 1618 (null)
 
+E 0 1608 0 13 (null)
+
+E 0 1632 0 16 (null)
+
 M 0 1618 2 1628 (null)
 
 M 0 1619 2 1619 (null)
+
+G 0 1631 0 (null)
 
 M 0 1619 2 1620 (null)
 
@@ -2591,71 +2657,38 @@ E 0 1655 0 28 (null)
 
 E 0 1656 0 16 (null)
 
-O 0 1601 0 1602 (null)
 
-O 0 1602 0 1604 (null)
 
-O 0 1603 0 1604 (null)
 
-O 0 1604 0 1606 (null)
 
-O 0 1605 0 1606 (null)
 
-O 0 1606 0 1608 (null)
 
-O 0 1607 0 1608 (null)
 
-O 0 1608 0 1608 (null)
 
-O 0 1609 0 1613 (null)
 
-O 0 1610 0 1613 (null)
 
-O 0 1611 0 1615 (null)
 
-O 0 1612 0 1617 (null)
 
-O 0 1613 0 1617 (null)
 
-O 0 1614 0 1617 (null)
 
-O 0 1615 0 1617 (null)
 
-O 0 1616 0 1618 (null)
 
-O 0 1617 0 1618 (null)
 
-O 0 1618 0 1618 (null)
 
-O 0 1619 0 1619 (null)
 
-O 0 1620 0 1619 (null)
 
-O 0 1621 0 1620 (null)
 
-O 0 1622 0 1620 (null)
 
-O 0 1623 0 1620 (null)
 
-O 0 1624 0 1620 (null)
 
-O 0 1625 0 1620 (null)
 
-O 0 1626 0 1620 (null)
 
-O 0 1627 0 1620 (null)
 
-O 0 1628 0 1620 (null)
 
-O 0 1629 0 1620 (null)
 
-O 0 1630 0 1620 (null)
 
-O 0 1631 0 1620 (null)
 
-O 0 1632 0 1620 (null)
 
-O 0 1633 0 1620 (null)
 
 D 0 1624 0 1 (null)
 
