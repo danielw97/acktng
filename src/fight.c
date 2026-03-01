@@ -359,11 +359,16 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    {
       char buf[MSL];
 
-      if ((!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT))
-          || (!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
+      for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
       {
-         sprintf(buf, "@@c$n@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
-         act(buf, ch, NULL, victim, TO_NOTVICT);
+         if (rch == ch || rch == victim)
+            continue;
+
+         if (IS_NPC(rch) || !IS_SET(rch->config, CONFIG_SHORT_FIGHT))
+            continue;
+
+         sprintf(buf, "@@c%s@@N total autoattack damage to @@c%s@@N: @@e%d@@N.\n\r", PERS(ch, rch), PERS(victim, rch), total_damage);
+         send_to_char(buf, rch);
       }
 
       if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT))
