@@ -799,7 +799,7 @@ D2
 ~
 ~
 0 -1 1633
-147689 1574714 0 S
+S
 #1633
 The Obsidian Gallery~
 @@RA long gallery of polished obsidian walls displays the history of Hell's
@@ -983,7 +983,7 @@ The Shore of the Lustful~
 @@Rpoisonous things are beautiful, which is completely and on purpose.
 ~
 8233 10
-213241 1091320 -500 S
+D0
 ~
 ~
 0 -1 1605
@@ -1163,7 +1163,7 @@ hellfire imp~
 
 ~
 ~
-147657 1574714 0 S
+147689 1574714 0 S
 105 0
 -5 100 5 5
 ! 0 0 0 7 0 32 4
@@ -1435,7 +1435,7 @@ charon ferryman~
 
 ~
 ~
-213209 1091320 -500 S
+213241 1091320 -500 S
 118 1
 0 400 5 15
 ! 0 0 0 7 2198 4 4
@@ -1547,7 +1547,7 @@ hellhound infernal~
 
 ~
 ~
-278721 656 0 S
+278753 656 0 S
 111 0
 0 200 18 22
 ! 0 0 0 7 2703358 64 0
