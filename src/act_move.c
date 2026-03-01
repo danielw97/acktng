@@ -359,9 +359,9 @@ void move_char(CHAR_DATA *ch, int door)
    {
       if (check_valid_ride(ch))
       {
-         sprintf(tmp, "You ride %s on %s.\n\r", door_name_leave, ch->riding->short_descr);
+         snprintf(tmp, sizeof(tmp), "You ride %s on %s.\n\r", door_name_leave, ch->riding->short_descr);
          send_to_char(tmp, ch);
-         sprintf(tmp, "$n rides %s on %s.", door_name_leave, ch->riding->short_descr);
+         snprintf(tmp, sizeof(tmp), "$n rides %s on %s.", door_name_leave, ch->riding->short_descr);
       }
    }
 
@@ -372,21 +372,21 @@ void move_char(CHAR_DATA *ch, int door)
          act("$n climbs $T.", ch, NULL, door_name_leave, TO_ROOM);
       else if (IS_SET(pexit->exit_info, EX_CLOSED)) /* using passdoor */
       {
-         sprintf(buf, "$L$n floats %s.", door_name_leave);
+         snprintf(buf, sizeof(buf), "$L$n floats %s.", door_name_leave);
          act(buf, ch, NULL, pexit->keyword, TO_ROOM);
       }
       else
       {
          if (IS_NPC(ch) || (!IS_NPC(ch) && (IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))))
-            sprintf(move_buf, "$L$n %s $T.", "wanders");
+            snprintf(move_buf, sizeof(move_buf), "$L$n %s $T.", "wanders");
          else if (ch->riding == NULL)
          {
-            sprintf(move_buf, "$L%s$n %s $T.",
+            snprintf(move_buf, sizeof(move_buf), "$L%s$n %s $T.",
                     get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->pcdata->room_exit);
          }
          else if (ch->riding != NULL)
          {
-            sprintf(move_buf, "$L%s$n rides $T on %s.",
+            snprintf(move_buf, sizeof(move_buf), "$L%s$n rides $T on %s.",
                     get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->riding->short_descr);
          }
          act(move_buf, ch, NULL, door_name_leave, TO_ROOM);
