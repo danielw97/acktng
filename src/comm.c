@@ -95,6 +95,7 @@ bool is_parse_name_syntax_valid(const char *name)
    return !fIll;
 }
 
+#ifdef UNIT_TEST_COMM
 typedef enum
 {
    LOGIN_TRANSITION_NAME_REJECTED,
@@ -140,6 +141,7 @@ LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
 
    return LOGIN_TRANSITION_NAME_REJECTED;
 }
+#endif
 
 #ifndef UNIT_TEST_COMM
 
