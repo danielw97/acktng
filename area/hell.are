@@ -2746,7 +2746,7 @@ M 0 1641 8 1612 (null)
 
 S
 #SPECIALS
-M 1622 spec_bigtime
-M 1623 spec_bigtime
+M 1622 spec_cast_bigtime
+M 1623 spec_cast_bigtime
 S
 #$
