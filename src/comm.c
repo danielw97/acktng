@@ -46,6 +46,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <time.h>
 #include <signal.h>
 #if defined(__CYGWIN__)
@@ -137,7 +138,33 @@ LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
 }
 #endif
 
-#ifndef UNIT_TEST_COMM
+static bool is_reserved_login_name(const char *name)
+{
+   static const char *const reserved_names[] = {
+      "all", "auto", "everymob", "localmobs", "immortal",
+      "zen", "self", "someone", "tank", "enemy"
+   };
+   size_t i;
+
+   if (name == NULL || name[0] == '\0')
+      return FALSE;
+
+   for (i = 0; i < (sizeof(reserved_names) / sizeof(reserved_names[0])); i++)
+   {
+      if (strcasecmp(name, reserved_names[i]) == 0)
+         return TRUE;
+   }
+
+   return FALSE;
+}
+
+bool is_login_name_format_valid(const char *name)
+{
+   if (is_reserved_login_name(name))
+      return FALSE;
+
+   return is_parse_name_syntax_valid(name);
+}
 
 void copyover_recover args((void));
 
@@ -2901,13 +2928,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
  */
 bool check_parse_name(char *name)
 {
-   /*
-    * Reserved words.
-    */
-   if (is_name(name, "all auto everymob localmobs immortal zen self someone tank enemy"))
-      return FALSE;
-
-   if (!is_parse_name_syntax_valid(name))
+   if (!is_login_name_format_valid(name))
       return FALSE;
 
    /*
