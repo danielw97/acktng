@@ -116,7 +116,7 @@ A wide chamber that once served as a guard post.  Recessed alcoves line the
 cracked and warped from decades of intense magical heat.  The door to the
 south is massive, reinforced iron -- and locked.
 ~
-4096 2
+4100 2
 D0
 ~
 ~
@@ -363,7 +363,7 @@ A soldier encased in fire-laced armour patrols here, leaving scorch marks behind
 ~
 A Flamebound Sentinel stands watch, crackling flames dancing across its armour.
 ~
-33 0 -250 S
+35 0 -250 S
 165 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
