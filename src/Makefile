@@ -77,9 +77,17 @@ unit-test-update: test_update.o update.unit-test.o
 	rm -f unit-test-update
 	$(CC) -o unit-test-update test_update.o update.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update
+
+comm.unit-test.o: comm.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_COMM -o comm.unit-test.o comm.c
+
+unit-test-comm: test_comm.o comm.unit-test.o
+	rm -f unit-test-comm
+	$(CC) -o unit-test-comm test_comm.o comm.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm
 	./unit-test-sha256
 	./unit-test-update
-	./unit-test-sha256
+	./unit-test-comm
 	./unit-test-fight
 
