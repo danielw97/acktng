@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 bool is_parse_name_syntax_valid(const char *name);
+bool is_login_name_format_valid(const char *name);
 
 static void test_parse_name_enforces_length_bounds(void)
 {
@@ -33,12 +34,27 @@ static void test_parse_name_accepts_normal_alphabetic_names(void)
     assert(is_parse_name_syntax_valid("Illidan"));
 }
 
+static void test_login_name_rejects_reserved_words(void)
+{
+    assert(!is_login_name_format_valid("all"));
+    assert(!is_login_name_format_valid("Self"));
+    assert(!is_login_name_format_valid("enemy"));
+}
+
+static void test_login_name_accepts_valid_player_names(void)
+{
+    assert(is_login_name_format_valid("Zenithar"));
+    assert(is_login_name_format_valid("Knight"));
+}
+
 int main(void)
 {
     test_parse_name_enforces_length_bounds();
     test_parse_name_rejects_non_alpha();
     test_parse_name_rejects_all_i_or_l_names();
     test_parse_name_accepts_normal_alphabetic_names();
+    test_login_name_rejects_reserved_words();
+    test_login_name_accepts_valid_player_names();
 
     puts("test_comm: all tests passed");
     return 0;
