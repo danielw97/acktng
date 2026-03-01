@@ -3722,5 +3722,3 @@ void hang(const char *str)
    bug(str, 0);
    kill(getpid(), SIGQUIT);
 }
-
-#endif /* UNIT_TEST_COMM */
