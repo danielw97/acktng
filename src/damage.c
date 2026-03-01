@@ -26,15 +26,12 @@ void short_fight_round_begin(CHAR_DATA *ch, CHAR_DATA *victim)
     short_fight_victim = NULL;
     short_fight_total_damage = 0;
 
-    if (ch == NULL || victim == NULL || IS_NPC(ch))
+    if (ch == NULL || victim == NULL)
         return;
 
-    if (IS_SET(ch->config, CONFIG_SHORT_FIGHT))
-    {
-        short_fight_enabled = TRUE;
-        short_fight_attacker = ch;
-        short_fight_victim = victim;
-    }
+    short_fight_enabled = TRUE;
+    short_fight_attacker = ch;
+    short_fight_victim = victim;
 }
 
 bool short_fight_round_active(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -1087,12 +1084,7 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
         sprintf(critical_message, "");
 
     if (short_fight_round_active(ch, victim))
-    {
         short_fight_total_damage += dam;
-        if (dead)
-            death_message(ch, victim, dt);
-        return;
-    }
 
     if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
     {
@@ -1126,8 +1118,24 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
         sprintf(buf3, "%s$n %s%s you%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message);
 
     act(buf1, ch, NULL, victim, TO_NOTVICT);
-    act(buf2, ch, NULL, victim, TO_CHAR);
-    act(buf3, ch, NULL, victim, TO_VICT);
+
+    if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim))
+    {
+        /* suppressed, this attacker gets a single total line at round end */
+    }
+    else
+    {
+        act(buf2, ch, NULL, victim, TO_CHAR);
+    }
+
+    if (!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim))
+    {
+        /* suppressed, this victim gets a single total line at round end */
+    }
+    else
+    {
+        act(buf3, ch, NULL, victim, TO_VICT);
+    }
 
     if (dead)
     {

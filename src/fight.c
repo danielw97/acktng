@@ -358,12 +358,18 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (total_damage > 0)
    {
       char buf[MSL];
-      sprintf(buf, "@@c$n@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
-      act(buf, ch, NULL, victim, TO_NOTVICT);
-      sprintf(buf, "@@cYou@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
-      act(buf, ch, NULL, victim, TO_CHAR);
-      sprintf(buf, "@@c$n@@N total autoattack damage to @@cyou@@N: @@e%d@@N.", total_damage);
-      act(buf, ch, NULL, victim, TO_VICT);
+
+      if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT))
+      {
+         sprintf(buf, "@@cYou@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
+         act(buf, ch, NULL, victim, TO_CHAR);
+      }
+
+      if (!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT))
+      {
+         sprintf(buf, "@@c$n@@N total autoattack damage to @@cyou@@N: @@e%d@@N.", total_damage);
+         act(buf, ch, NULL, victim, TO_VICT);
+      }
    }
 
    if (!IS_NPC(ch) && ch->stance > 0 && ((IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))))
