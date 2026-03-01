@@ -1623,6 +1623,7 @@ void do_score(CHAR_DATA *ch, char *argument)
    char buf[MAX_STRING_LENGTH];
    char buf2[MAX_STRING_LENGTH];
    int cnt;
+   const int score_inner_width = 78;
 
    sprintf(buf, "@@y%s%s, Race: %s%s, Clan: %s\n\rAge: ",
            IS_NPC(ch) ? ch->short_descr : ch->name,
@@ -1648,31 +1649,34 @@ void do_score(CHAR_DATA *ch, char *argument)
     * send_to_char( buf, ch );
     */
 
-   sprintf(buf, "@@c+===============================================================+\n\r");
+   sprintf(buf, "@@c+------------------------------------------------------------------------------+\n\r");
    send_to_char(buf, ch);
 
    sprintf(buf,
-           "| @@y%4d/%4d @@WHit @@y%4d/%4d @@WMana @@y%4d/%4d @@WMovement @@y%3d @@WPractices@@c |\n\r",
+           "@@y%4d/%4d @@WHit @@y%4d/%4d @@WMana @@y%4d/%4d @@WMovement @@y%3d @@WPractices",
            ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->practice);
-   send_to_char(buf, ch);
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+   send_to_char(buf2, ch);
 
    if (IS_NPC(ch))
    {
       sprintf(buf,
-              "|     @@R[ @@WStr:  @@y%2d  @@WInt:  @@y%2d  @@WWis:  @@y%2d  @@WDex:  @@y%2d  @@WCon:  @@y%2d @@R]      @@c|\n\r",
+              "@@R[ @@WStr:  @@y%2d  @@WInt:  @@y%2d  @@WWis:  @@y%2d  @@WDex:  @@y%2d  @@WCon:  @@y%2d @@R]",
               get_curr_str(ch), get_curr_int(ch), get_curr_wis(ch), get_curr_dex(ch), get_curr_con(ch));
-      send_to_char(buf, ch);
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+      send_to_char(buf2, ch);
    }
    else
    {
       sprintf(buf,
-              "|   @@R[ @@WStr:@@y%2d/%2d  @@WInt:@@y%2d/%2d  @@WWis:@@y%2d/%2d  @@WDex:@@y%2d/%2d  @@WCon:@@y%2d/%2d @@R]   @@c|\n\r",
+              "@@R[ @@WStr:@@y%2d/%2d  @@WInt:@@y%2d/%2d  @@WWis:@@y%2d/%2d  @@WDex:@@y%2d/%2d  @@WCon:@@y%2d/%2d @@R]",
               get_curr_str(ch), get_max_str(ch),
               get_curr_int(ch), get_max_int(ch),
               get_curr_wis(ch), get_max_wis(ch),
               get_curr_dex(ch), get_max_dex(ch),
               get_curr_con(ch), get_max_con(ch));
-      send_to_char(buf, ch);
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+      send_to_char(buf2, ch);
    }
 
    if (!IS_NPC(ch))
@@ -1694,7 +1698,7 @@ void do_score(CHAR_DATA *ch, char *argument)
    else
       sprintf(buf2, " @@WLevel: @@y%d", ch->level);
 
-   sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62));
+   sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
    send_to_char(buf, ch);
    buf2[0] = '\0';
 
@@ -1708,7 +1712,7 @@ void do_score(CHAR_DATA *ch, char *argument)
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
-      sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62));
+      sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
       send_to_char(buf, ch);
    }
 
@@ -1724,91 +1728,95 @@ void do_score(CHAR_DATA *ch, char *argument)
             safe_strcat(MAX_STRING_LENGTH, buf2, buf);
          }
       }
-      sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62));
+      sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
       send_to_char(buf, ch);
    }
 
    sprintf(buf,
-           "X== @@WExps: @@y%9d @@c== @@aQuest: @@y%4d @@c== @@GInvasion: @@y%4d @@c== @@MProposition: @@y%4d @@c==X\n\r",
+           "@@WExps: @@y%9d @@c== @@aQuest: @@y%4d @@c== @@GInvasion: @@y%4d @@c== @@MProposition: @@y%4d",
            ch->exp, ch->quest_points,
            IS_NPC(ch) ? 0 : ch->pcdata->invasion_points,
            IS_NPC(ch) ? 0 : ch->pcdata->proposition_points);
-   send_to_char(buf, ch);
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+   send_to_char(buf2, ch);
 
    if (get_trust(ch) != ch->level)
    {
-      sprintf(buf, "X================= @@WYou are trusted at level @@y%2d @@c=================X\n\r", get_trust(ch));
-      send_to_char(buf, ch);
+      sprintf(buf, "@@WYou are trusted at level @@y%2d", get_trust(ch));
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+      send_to_char(buf2, ch);
    }
 
    sprintf(buf,
-           "| @@WYou are carrying @@y%4d/%4d @@Witems, weight @@y%4.2f/%7d @@Wkg.  @@c|\n\r",
+           "@@WYou are carrying @@y%4d/%4d @@Witems, weight @@y%4.2f/%7d @@Wkg.",
            ch->carry_number, get_max_carry(ch), ch->carry_weight, get_max_carry_weight(ch));
-   send_to_char(buf, ch);
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+   send_to_char(buf2, ch);
 
    sprintf(buf,
-           "| @@WAutoexit: @@y%s   @@WAutoloot: @@y%s  @@WAutosac: @@y%s @@WAutoass: @@y%s @@c|\n\r",
+           "@@WAutoexit: @@y%s   @@WAutoloot: @@y%s  @@WAutosac: @@y%s @@WAutoass: @@y%s",
            (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOEXIT)) ? "*ON* " : "*OFF*",
            (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOLOOT)) ? "*ON* " : "*OFF*",
            (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOSAC)) ? "*ON* " : "*OFF*",
            (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_AUTOASSIST)) ? "*ON* " : "*OFF*");
-   send_to_char(buf, ch);
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+   send_to_char(buf2, ch);
 
    if (!IS_NPC(ch))
    {
       sprintf(buf, " @@WYou have killed a total of: @@y%d @@WNPCs, and @@y%d @@WPlayers.",
               ch->pcdata->mkills, ch->pcdata->pkills);
-      sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
       send_to_char(buf2, ch);
 
       sprintf(buf, " @@WA total of @@y%d @@WNPCs and @@y%d @@WPlayers have killed you.",
               ch->pcdata->mkilled, ch->pcdata->pkilled);
-      sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
       send_to_char(buf2, ch);
 
       sprintf(buf, " @@WWimpy Set to @@y%d @@WHitPoints.  Page Length is @@y%d @@Wlines.", ch->wimpy, ch->pcdata->pagelen);
-      sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
       send_to_char(buf2, ch);
 
       sprintf(buf, " @@WDrunk: @@y%3s   @@WThirsty: @@y%3s   @@WHungry: @@y%3s",
               (ch->pcdata->condition[COND_DRUNK] > 10) ? "Yes" : "No",
               (ch->pcdata->condition[COND_THIRST] == 0) ? "Yes" : "No",
               (ch->pcdata->condition[COND_FULL] == 0) ? "Yes" : "No");
-      sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
       send_to_char(buf2, ch);
 
       if (IS_VAMP(ch))
       {
          sprintf(buf, "@@eBLOODLUST@@W: @@e%d@@W/@@e%d@@N", ch->pcdata->bloodlust, ch->pcdata->bloodlust_max);
-         sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
          sprintf(buf, "@@dKindred Rank:@@N %d  @@rGeneration:@@N %d   @@mKnowledge Avail:@@N %d",
                  ch->pcdata->vamp_level, ch->pcdata->generation, ch->pcdata->vamp_pracs);
-         sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
          sprintf(buf, "@@WFAMILY: %s", get_family_name(ch));
-         sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
       }
       else if (IS_WOLF(ch))
       {
          sprintf(buf, "@@eRAGE@@W: @@e%d@@W/@@e%d@@N", ch->pcdata->bloodlust, ch->pcdata->bloodlust_max);
-         sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
          sprintf(buf, "@@rTribe Rank@@W:@@N %d  @@yTribe Standing@@W:@@N %s   @@GKnowledge Avail:@@N %d",
                  ch->pcdata->vamp_level, get_tribe_standing_name(ch->pcdata->generation), ch->pcdata->vamp_pracs);
-         sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
          sprintf(buf, "@@bTRIBE: %s", get_tribe_name(ch));
-         sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+         sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
          send_to_char(buf2, ch);
       }
    }
    sprintf(buf, "%s", "");
-   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
    sprintf(buf, "@@WYou have assumed the @@yStance @@Wof the@@N %s.", stance_app[ch->stance].name);
-   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
 
    switch (ch->position)
@@ -1844,7 +1852,7 @@ void do_score(CHAR_DATA *ch, char *argument)
       sprintf(buf, " You are @@ynone.");
       break;
    }
-   sprintf(buf2, "|@@W%s @@c|\n\r", center_text(buf, 62));
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
 
    sprintf(buf, "@@WYou are ");
@@ -1874,21 +1882,21 @@ void do_score(CHAR_DATA *ch, char *argument)
       safe_strcat(MAX_STRING_LENGTH, buf, "@@yalmost invincible!");
 
    sprintf(buf2, " @@WArmor Class: @@y%5d.   %s", get_ac(ch), buf);
-   sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62));
+   sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
    send_to_char(buf, ch);
 
    sprintf(buf, " @@WHitroll: @@y%-5d @@WDamroll: @@y%-5d @@WCrit: @@y%-5d @@WMult: @@y%-5d", get_hitroll(ch), get_damroll(ch), get_crit(ch), get_crit_mult(ch));
-   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
 
    sprintf(buf, " @@WSpellpower: @@y%-5d @@WSpell Crit: @@y%-5d @@WSpell Crit Mult: @@y%-5d", get_spellpower(ch), get_spell_crit(ch), get_spell_crit_mult(ch));
-   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
    sprintf(buf, "@@WParry: @@y%-3d @@WDodge: @@y%-3d@@W Block: @@y%-3d@@W Counter: @@y%-3d@@W Damcap: @@y%-5d", get_parry(ch), get_dodge(ch), get_block(ch), get_counter(ch), get_damcap(ch));
-   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
    sprintf(buf, "@@W Eva Pierc: @@y%-5d", get_evasion_piercing(ch));
-   sprintf(buf2, "@@c|%s @@c|\n\r", center_text(buf, 62));
+   sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
 
    if (ch->alignment > 900)
@@ -1911,10 +1919,10 @@ void do_score(CHAR_DATA *ch, char *argument)
       strcpy(buf, "@@ysatanic!");
 
    sprintf(buf2, "@@WAlignment: @@y%5d@@W.  You are %s", ch->alignment, buf);
-   sprintf(buf, "@@c|%s @@c|\n\r", center_text(buf2, 62));
+   sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
    send_to_char(buf, ch);
 
-   sprintf(buf, "+===============================================================+@@g\n\r");
+   sprintf(buf, "@@c+------------------------------------------------------------------------------+@@g\n\r");
    send_to_char(buf, ch);
 
    return;
