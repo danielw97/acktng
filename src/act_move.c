@@ -78,13 +78,12 @@ void move_char(CHAR_DATA *ch, int door)
    char move_buf[MAX_STRING_LENGTH];
    /*    struct fol_data *fol = NULL;   */
    char tmp[MAX_STRING_LENGTH];
-   int need_movement;
    char door_name_leave[MSL];
    char door_name_enter[MSL];
 
    buf[0] = '\0';
    move_buf[0] = '\0';
-   door_name_leave[0] = '\0';
+   door_name_enter[0] = '\0';
    door_name_leave[0] = '\0';
    tmp[0] = '\0';
 
@@ -192,12 +191,8 @@ void move_char(CHAR_DATA *ch, int door)
       ch->using_named_door = FALSE;
       return;
    }
-   /*
-    * need 1 move if riding - Celestian
-    */
    if (ch->position == POS_RIDING)
    {
-      need_movement = 1;
       if (IS_RIDING(ch))
       {
          if (!IS_AWAKE(ch->riding))
@@ -1332,16 +1327,13 @@ void do_recall(CHAR_DATA *ch, char *argument)
 void do_train(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];
-   char buf2[20];
    CHAR_DATA *mob;
    int hp_gain = 0;
    int mana_gain = 0;
-   sh_int *pAbility;
-   int pMax = 0;
+   long *pAbility;
    char *pOutput;
-   int cost, cost1, cost2, cost3, cost4, cost5; /* Urrgghh */
+   int cost;
    buf[0] = '\0';
-   buf2[0] = '\0';
 
    if (IS_NPC(ch))
    {
@@ -1437,24 +1429,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 
    else
    {
-      /*      /*
-             * Work out the costs...
-             *
-            cost1 = 4;
-            cost2 = 4;
-            cost3 = 4;
-            cost4 = 4;
-            cost5 = 4;
-            if( class_table[ch->class].attr_prime == APPLY_STR )
-               cost1 = 3;
-            if( class_table[ch->class].attr_prime == APPLY_INT )
-               cost2 = 3;
-            if( class_table[ch->class].attr_prime == APPLY_WIS )
-               cost3 = 3;
-            if( class_table[ch->class].attr_prime == APPLY_DEX )
-               cost4 = 3;
-            if( class_table[ch->class].attr_prime == APPLY_CON )
-               cost5 = 3;*/
+      /* Work out the attribute training costs here if that option is re-enabled. */
 
       strcpy(buf, "You can train: hp (4)  mana (5)");
 
