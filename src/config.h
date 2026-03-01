@@ -683,6 +683,7 @@
 #define CONFIG_JUSTIFY BIT_13
 #define CONFIG_AUTOMONEY BIT_14
 #define CONFIG_AUTOASSIST BIT_15
+#define CONFIG_SHORT_FIGHT BIT_16
 
 /*
  * ACT bits for players.

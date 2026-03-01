@@ -320,11 +320,16 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       }
    }
 
+   short_fight_round_begin(ch, victim);
+
    // First hit
    one_hit(ch, victim, dt);
 
    if (ch->fighting != victim)
+   {
+      short_fight_round_end(ch, victim);
       return;
+   }
 
    for (int i = 0; i < hits; i++)
    {
@@ -347,6 +352,19 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
    if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_TAIL) && number_percent() < 25)
       one_hit(ch, victim, TYPE_HIT + 13);
+
+   int total_damage = short_fight_round_end(ch, victim);
+
+   if (total_damage > 0)
+   {
+      char buf[MSL];
+      sprintf(buf, "@@c$n@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
+      act(buf, ch, NULL, victim, TO_NOTVICT);
+      sprintf(buf, "@@cYou@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
+      act(buf, ch, NULL, victim, TO_CHAR);
+      sprintf(buf, "@@c$n@@N total autoattack damage to @@cyou@@N: @@e%d@@N.", total_damage);
+      act(buf, ch, NULL, victim, TO_VICT);
+   }
 
    if (!IS_NPC(ch) && ch->stance > 0 && ((IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))))
    {
