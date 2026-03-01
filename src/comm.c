@@ -103,9 +103,9 @@ bool is_parse_name_syntax_valid(const char *name)
 LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
     int *connected_state,
     const char *input,
-    bool is_name_valid,
-    bool is_existing_player,
-    bool is_password_correct)
+    int is_name_valid,
+    int is_existing_player,
+    int is_password_correct)
 {
    if (connected_state == NULL || input == NULL)
       return LOGIN_TRANSITION_NAME_REJECTED;
@@ -165,6 +165,8 @@ bool is_login_name_format_valid(const char *name)
 
    return is_parse_name_syntax_valid(name);
 }
+
+#ifndef UNIT_TEST_COMM
 
 void copyover_recover args((void));
 
@@ -3722,3 +3724,5 @@ void hang(const char *str)
    bug(str, 0);
    kill(getpid(), SIGQUIT);
 }
+
+#endif /* !UNIT_TEST_COMM */
