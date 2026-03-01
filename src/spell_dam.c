@@ -599,18 +599,18 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
       dam_range -= 250;
    }
    punct = (!stress) ? '.' : '!';
-   sprintf(outercol, "%s%s",
+   snprintf(outercol, sizeof(outercol), "%s%s",
            (dam > 250 ? sp_dam_str[rtype].backcol : ""),
            (dam > 250 ? sp_dam_str[rtype].invertcol : sp_dam_str[rtype].basecol));
-   sprintf(innercol, "%s%s",
+   snprintf(innercol, sizeof(innercol), "%s%s",
            (dam > 250 ? sp_dam_str[rtype].backcol : ""),
            (dam > 500 ? sp_dam_str[rtype].stresscol : (dam > 250 ? sp_dam_str[rtype].invertcol : sp_dam_str[rtype].basecol)));
 
    catsymbuf[0] = '\0';
-   sprintf(symbuf, "%s", " ");
+   snprintf(symbuf, sizeof(symbuf), "%s", " ");
    for (; dam_range > 0; dam_range -= 50)
    {
-      sprintf(catsymbuf, sp_dam_str[rtype].formatter, outercol, innercol, outercol);
+      snprintf(catsymbuf, sizeof(catsymbuf), sp_dam_str[rtype].formatter, outercol, innercol, outercol);
       safe_strcat(MSL, symbuf, catsymbuf);
    }
    safe_strcat(MSL, symbuf, " ");
@@ -625,12 +625,12 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
    }
    if (obj == NULL)
    {
-      sprintf(buf1, "%s$n %s%s%s@@N $N %swith $s %s%c@@N%s",
+      snprintf(buf1, sizeof(buf1), "%s$n %.2000s%s%.2000s@@N $N %swith $s %.512s%c@@N%s",
               sp_dam_str[rtype].basecol,
               symbuf,
               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),
               symbuf, sp_dam_str[rtype].basecol, attack, punct, testerbuf);
-      sprintf(buf2, "%sYou %s%s%s@@N $N %swith your %s%c@@N%s",
+      snprintf(buf2, sizeof(buf2), "%sYou %.2000s%s%.2000s@@N $N %swith your %.512s%c@@N%s",
               sp_dam_str[rtype].basecol,
               symbuf,
               (stress ? sp_dam_str[rtype].vs_stress : sp_dam_str[rtype].vs),
@@ -639,7 +639,7 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
              sprintf( buf3, "%s$n %s%s your%s%s $s %s%c@@N",col,col, vp,col, str+2, attack, punct);
             else
       */
-      sprintf(buf3, "%s$n %s%s%s %syou with $s %s%c@@N%s",
+      snprintf(buf3, sizeof(buf3), "%s$n %.2000s%s%.2000s %syou with $s %.512s%c@@N%s",
               sp_dam_str[rtype].basecol,
               symbuf,
               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),
@@ -647,13 +647,13 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
    }
    else if (obj != NULL)
    {
-      sprintf(buf1, "%s$p %s%s%s@@N $N %swith a %s%c@@N",
+      snprintf(buf1, sizeof(buf1), "%s$p %.2000s%s%.2000s@@N $N %swith a %.512s%c@@N",
               sp_dam_str[rtype].basecol,
               symbuf,
               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),
               symbuf, sp_dam_str[rtype].basecol, attack, punct);
 #if 0
-      sprintf( buf2, "%sYou %s%s%s@@N $N %swith your %s%c@@N%s",
+      sprintf( buf2, "%sYou %.2000s%s%.2000s@@N $N %swith your %.512s%c@@N%s",
                sp_dam_str[rtype].basecol,
                symbuf,
                ( stress ? sp_dam_str[rtype].vs_stress : sp_dam_str[rtype].vs ),
@@ -663,7 +663,7 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
              sprintf( buf3, "%s$n %s%s your%s%s $s %s%c@@N",col,col, vp,col, str+2, attack, punct);
             else
       */
-      sprintf(buf3, "%s$p %s%s%s %syou with $s %s%c@@N",
+      snprintf(buf3, sizeof(buf3), "%s$p %.2000s%s%.2000s %syou with $s %.512s%c@@N",
               sp_dam_str[rtype].basecol,
               symbuf,
               (stress ? sp_dam_str[rtype].vp_stress : sp_dam_str[rtype].vp),

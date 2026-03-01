@@ -1337,22 +1337,22 @@ void int_combat_handler(CHAR_DATA *ch, CHAR_DATA *victim)
       switch (number_range(0, 5))
       {
       case 0:
-         sprintf(arg, "frenzy");
+         snprintf(arg, sizeof(arg), "frenzy");
          break;
       case 1:
-         sprintf(arg, "punch %s", buf);
+         snprintf(arg, sizeof(arg), "punch %.8000s", buf);
          break;
       case 2:
-         sprintf(arg, "knee %s", buf);
+         snprintf(arg, sizeof(arg), "knee %.8000s", buf);
          break;
       case 3:
-         sprintf(arg, "headbutt %s", buf);
+         snprintf(arg, sizeof(arg), "headbutt %.8000s", buf);
          break;
       case 4:
-         sprintf(arg, "punch %s", buf);
+         snprintf(arg, sizeof(arg), "punch %.8000s", buf);
          break;
       case 5:
-         sprintf(arg, "dirt %s", buf);
+         snprintf(arg, sizeof(arg), "dirt %.8000s", buf);
          break;
       }
       interpret(ch, arg);
@@ -1362,7 +1362,7 @@ void int_combat_handler(CHAR_DATA *ch, CHAR_DATA *victim)
       sn = find_spell(ch, TAR_CHAR_OFFENSIVE);
       if ((sn != -1) && (ch->mana > mana_cost(ch, sn)))
       {
-         sprintf(arg, "cast '%s' %s", skill_table[sn].name, buf);
+         snprintf(arg, sizeof(arg), "cast '%.96s' %.8000s", skill_table[sn].name, buf);
          interpret(ch, arg);
       }
    }
