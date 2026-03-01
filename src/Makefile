@@ -80,4 +80,6 @@ unit-test-update: test_update.o update.unit-test.o
 unit-tests: unit-test-sha256 unit-test-update
 	./unit-test-sha256
 	./unit-test-update
+	./unit-test-sha256
+	./unit-test-fight
 
