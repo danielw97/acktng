@@ -1227,9 +1227,11 @@ void do_look(CHAR_DATA *ch, char *argument)
       show_char_to_char(ch->in_room->first_person, ch);
       {
          char money_show[MSL];
-         sprintf(money_show, "%d gold lies in a pile.\n\r", ch->in_room->treasure);
-         if (ch->in_room->treasure > 0)
+         if (ch->in_room->treasure != NULL && ch->in_room->treasure->gold > 0)
+         {
+            snprintf(money_show, sizeof(money_show), "%d gold lies in a pile.\n\r", ch->in_room->treasure->gold);
             send_to_char(money_show, ch);
+         }
       }
 
       return;
@@ -1653,7 +1655,7 @@ void do_score(CHAR_DATA *ch, char *argument)
    send_to_char(buf, ch);
 
    sprintf(buf,
-           "@@y%4d/%4d @@WHit @@y%4d/%4d @@WMana @@y%4d/%4d @@WMovement @@y%3d @@WPractices",
+           "@@y%4ld/%4ld @@WHit @@y%4ld/%4ld @@WMana @@y%4ld/%4ld @@WMovement @@y%3d @@WPractices",
            ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->practice);
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
@@ -1733,7 +1735,7 @@ void do_score(CHAR_DATA *ch, char *argument)
    }
 
    sprintf(buf,
-           "@@WExps: @@y%9d @@c== @@aQuest: @@y%4d @@c== @@GInvasion: @@y%4d @@c== @@MProposition: @@y%4d",
+           "@@WExps: @@y%9ld @@c== @@aQuest: @@y%4d @@c== @@GInvasion: @@y%4d @@c== @@MProposition: @@y%4d",
            ch->exp, ch->quest_points,
            IS_NPC(ch) ? 0 : ch->pcdata->invasion_points,
            IS_NPC(ch) ? 0 : ch->pcdata->proposition_points);
@@ -2985,12 +2987,12 @@ void do_report(CHAR_DATA *ch, char *argument)
    char buf[MAX_INPUT_LENGTH];
 
    sprintf(buf,
-           "You report: %d/%d hp %d/%d mana %d/%d mv %ld xp.\n\r",
+           "You report: %ld/%ld hp %ld/%ld mana %ld/%ld mv %ld xp.\n\r",
            ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->exp);
 
    send_to_char(buf, ch);
 
-   sprintf(buf, "$n reports: %d/%d hp %d/%d mana %d/%d mv %ld xp.",
+   sprintf(buf, "$n reports: %ld/%ld hp %ld/%ld mana %ld/%ld mv %ld xp.",
            ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move, ch->exp);
 
    act(buf, ch, NULL, NULL, TO_ROOM);
@@ -3094,13 +3096,13 @@ void do_password(CHAR_DATA *ch, char *argument)
    }
    *pArg = '\0';
 
-   if ((ch->pcdata->pwd != '\0') && (arg1[0] == '\0' || arg2[0] == '\0'))
+   if ((ch->pcdata->pwd[0] != '\0') && (arg1[0] == '\0' || arg2[0] == '\0'))
    {
       send_to_char("Syntax: password <old> <new>.\n\r", ch);
       return;
    }
 
-   if ((ch->pcdata->pwd != '\0') && (strcmp(crypt(arg1, ch->pcdata->pwd), ch->pcdata->pwd)))
+   if ((ch->pcdata->pwd[0] != '\0') && (strcmp(crypt(arg1, ch->pcdata->pwd), ch->pcdata->pwd)))
    {
       WAIT_STATE(ch, 40);
       send_to_char("Wrong password.  Wait 10 seconds.\n\r", ch);
@@ -4659,7 +4661,7 @@ void do_gain(CHAR_DATA *ch, char *argument)
 
    else if (ch->exp < cost)
    {
-      sprintf(buf, "Cost is %d Exp.  You only have %d (%d short).\n\r", cost, ch->exp, (cost - ch->exp));
+      sprintf(buf, "Cost is %ld Exp.  You only have %ld (%ld short).\n\r", (long)cost, ch->exp, ((long)cost - ch->exp));
       send_to_char(buf, ch);
       return;
    }
@@ -5138,7 +5140,7 @@ void do_worth(CHAR_DATA *ch, char *argument)
          cost = exp_to_level_adept(ch);
          any = TRUE;
 
-         sprintf(buf, "%-14s  %9d %9d.\n\r", adept_table[cnt].who_name, cost, UMAX(0, cost - ch->exp));
+         sprintf(buf, "%-14s  %9ld %9ld.\n\r", adept_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
          send_to_char(buf, ch);
       }
    }
@@ -5160,7 +5162,7 @@ void do_worth(CHAR_DATA *ch, char *argument)
          any = TRUE;
          cost = exp_to_level(ch, cnt);
 
-         sprintf(buf, "%-14s  %9d %9d.\n\r", class_table[cnt].who_name, cost, UMAX(0, cost - ch->exp));
+         sprintf(buf, "%-14s  %9ld %9ld.\n\r", class_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
          send_to_char(buf, ch);
       }
    }
@@ -5174,7 +5176,7 @@ void do_worth(CHAR_DATA *ch, char *argument)
       {
          any = TRUE;
          cost = exp_to_level_remort(ch, cnt);
-         sprintf(buf, "%-14s  %9d %9d.\n\r", remort_table[cnt].who_name, cost, UMAX(0, cost - ch->exp));
+         sprintf(buf, "%-14s  %9ld %9ld.\n\r", remort_table[cnt].who_name, (long)cost, (long)UMAX(0, cost - ch->exp));
          send_to_char(buf, ch);
       }
    }

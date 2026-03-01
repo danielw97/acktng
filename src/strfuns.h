@@ -54,6 +54,7 @@ char *get_moon_phase_name args((void));
 char *get_tribe_standing_name args((int standing));
 bool is_number args((char *arg));
 bool is_name args((const char *str, char *namelist));
+bool is_name_relaxed args((const char *str, char *namelist));
 bool list_in_list args((char *first_list, char *second_list));
 int number_argument args((char *argument, char *arg));
 char *one_argument args((char *argument, char *arg_first));
