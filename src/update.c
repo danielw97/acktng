@@ -2230,8 +2230,7 @@ bool check_rewield(CHAR_DATA *ch)
          if (weapon->wear_loc == WEAR_NONE && weapon != quest_object)
          {
             act("$n sniffs sadly.  'Baah!  It's no good to me!'", ch, NULL, NULL, TO_ROOM);
-            extract_obj(weapon);
-            act("$n sacrifices $p.", ch, weapon, NULL, TO_ROOM);
+            act("$n sacrifices it.", ch, NULL, NULL, TO_ROOM);
          }
          return TRUE;
       }
@@ -2375,8 +2374,7 @@ bool check_re_equip(CHAR_DATA *ch)
       if (armor->wear_loc == WEAR_NONE && armor != quest_object)
       {
          act("$n sniffs sadly.  'Baah!  It's no good to me!'", ch, NULL, NULL, TO_ROOM);
-         extract_obj(armor);
-         act("$n sacrifices $p.", ch, armor, NULL, TO_ROOM);
+         act("$n sacrifices it.", ch, NULL, NULL, TO_ROOM);
       }
       return TRUE;
    }
@@ -2409,8 +2407,7 @@ bool check_re_equip(CHAR_DATA *ch)
       if (light->wear_loc == WEAR_NONE && light != quest_object)
       {
          act("$n sniffs sadly.  'Baah!  It's no good to me!'", ch, NULL, NULL, TO_ROOM);
-         extract_obj(light);
-         act("$n sacrifices $p.", ch, light, NULL, TO_ROOM);
+         act("$n sacrifices it.", ch, NULL, NULL, TO_ROOM);
       }
       return TRUE;
    }
