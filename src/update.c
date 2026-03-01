@@ -1397,15 +1397,15 @@ void gain_update(void)
       if (ch->position >= POS_STUNNED && !IS_SET(ch->affected_by, AFF_VAMP_HEALING))
       {
          if ((ch->hit < get_max_hp(ch)) && (!IS_SET(ch->in_room->affected_by, ROOM_BV_NONE)))
-            ch->hit += hit_gain(ch);
+            ch->hit = UMIN(get_max_hp(ch), ch->hit + hit_gain(ch));
          if (!IS_NPC(ch))
             ch->hit = UMAX(25, ch->hit);
 
-         if ((ch->mana < ch->max_mana) && (!IS_SET(ch->in_room->affected_by, ROOM_BV_NONE)))
-            ch->mana += mana_gain(ch);
+         if ((ch->mana < get_max_mana(ch)) && (!IS_SET(ch->in_room->affected_by, ROOM_BV_NONE)))
+            ch->mana = UMIN(get_max_mana(ch), ch->mana + mana_gain(ch));
 
-         if ((ch->move < ch->max_move) && (ch->carry_weight < can_carry_w(ch)))
-            ch->move += move_gain(ch);
+         if ((ch->move < get_max_move(ch)) && (ch->carry_weight < can_carry_w(ch)))
+            ch->move = UMIN(get_max_move(ch), ch->move + move_gain(ch));
          else if (ch->carry_weight >= can_carry_w(ch))
          {
             send_to_char("You are carrying so much weight that you are @@eEXHAUSTED@@N!!\n\r", ch);

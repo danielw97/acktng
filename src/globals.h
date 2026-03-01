@@ -204,6 +204,8 @@ extern SYS_DATA_TYPE sysdata;
 
 /* Common combat/stat helpers shared across modules. */
 int get_max_hp args((CHAR_DATA * ch));
+int get_max_mana args((CHAR_DATA * ch));
+int get_max_move args((CHAR_DATA * ch));
 int get_total_reincarnations args((CHAR_DATA * ch));
 bool is_fighting args((CHAR_DATA * ch));
 void heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn, bool hot);
