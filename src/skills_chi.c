@@ -302,7 +302,7 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
         sprintf(actbuf, "$n tries to %s $N, but misses!", skill_table[gsn].name);
         act(actbuf, ch, NULL, victim, TO_NOTVICT);
         sprintf(actbuf, "$N tries to %s you, but misses!", skill_table[gsn].name);
-        act(actbuf, ch, victim, NULL, TO_VICT);
+        act(actbuf, ch, NULL, victim, TO_VICT);
         sprintf(actbuf, "You try to %s $N, but miss!", skill_table[gsn].name);
         act(actbuf, ch, NULL, victim, TO_CHAR);
         set_fighting(victim, ch, TRUE);
