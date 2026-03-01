@@ -1226,12 +1226,12 @@ void do_look(CHAR_DATA *ch, char *argument)
       show_room_list_to_char(ch->in_room->first_content, ch, FALSE, FALSE);
       show_char_to_char(ch->in_room->first_person, ch);
       {
-         char money_show[MSL];
+/*         char money_show[MSL];
          if (ch->in_room->treasure != NULL && ch->in_room->treasure->gold > 0)
          {
             snprintf(money_show, sizeof(money_show), "%d gold lies in a pile.\n\r", ch->in_room->treasure->gold);
             send_to_char(money_show, ch);
-         }
+         }*/
       }
 
       return;
