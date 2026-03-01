@@ -95,6 +95,52 @@ bool is_parse_name_syntax_valid(const char *name)
    return !fIll;
 }
 
+typedef enum
+{
+   LOGIN_TRANSITION_NAME_REJECTED,
+   LOGIN_TRANSITION_PASSWORD_PROMPTED,
+   LOGIN_TRANSITION_WRONG_PASSWORD,
+   LOGIN_TRANSITION_SHOW_MOTD,
+   LOGIN_TRANSITION_ENTERED_GAME
+} LOGIN_TRANSITION_RESULT;
+
+LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
+    int *connected_state,
+    const char *input,
+    bool is_name_valid,
+    bool is_existing_player,
+    bool is_password_correct)
+{
+   if (connected_state == NULL || input == NULL)
+      return LOGIN_TRANSITION_NAME_REJECTED;
+
+   if (*connected_state == CON_GET_NAME)
+   {
+      if (!is_name_valid || !is_existing_player)
+         return LOGIN_TRANSITION_NAME_REJECTED;
+
+      *connected_state = CON_GET_OLD_PASSWORD;
+      return LOGIN_TRANSITION_PASSWORD_PROMPTED;
+   }
+
+   if (*connected_state == CON_GET_OLD_PASSWORD)
+   {
+      if (!is_password_correct)
+         return LOGIN_TRANSITION_WRONG_PASSWORD;
+
+      *connected_state = CON_READ_MOTD;
+      return LOGIN_TRANSITION_SHOW_MOTD;
+   }
+
+   if (*connected_state == CON_READ_MOTD)
+   {
+      *connected_state = CON_PLAYING;
+      return LOGIN_TRANSITION_ENTERED_GAME;
+   }
+
+   return LOGIN_TRANSITION_NAME_REJECTED;
+}
+
 #ifndef UNIT_TEST_COMM
 
 void copyover_recover args((void));
