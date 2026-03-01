@@ -33,8 +33,12 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
 	  write.o
 
+.PHONY: all clean purge unit-tests
+
 all:
+	$(MAKE) clean
 	$(MAKE) ack
+	$(MAKE) unit-tests
 
 ifdef CYGWIN
 ack: $(O_FILES)
@@ -90,4 +94,3 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm
 	./unit-test-update
 	./unit-test-comm
 	./unit-test-fight
-
