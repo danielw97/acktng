@@ -358,12 +358,30 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (total_damage > 0)
    {
       char buf[MSL];
-      sprintf(buf, "@@c$n@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
-      act(buf, ch, NULL, victim, TO_NOTVICT);
-      sprintf(buf, "@@cYou@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
-      act(buf, ch, NULL, victim, TO_CHAR);
-      sprintf(buf, "@@c$n@@N total autoattack damage to @@cyou@@N: @@e%d@@N.", total_damage);
-      act(buf, ch, NULL, victim, TO_VICT);
+
+      for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+      {
+         if (rch == ch || rch == victim)
+            continue;
+
+         if (IS_NPC(rch) || !IS_SET(rch->config, CONFIG_SHORT_FIGHT))
+            continue;
+
+         sprintf(buf, "@@c%s@@N total autoattack damage to @@c%s@@N: @@e%d@@N.\n\r", PERS(ch, rch), PERS(victim, rch), total_damage);
+         send_to_char(buf, rch);
+      }
+
+      if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT))
+      {
+         sprintf(buf, "@@cYou@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
+         act(buf, ch, NULL, victim, TO_CHAR);
+      }
+
+      if (!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT))
+      {
+         sprintf(buf, "@@c$n@@N total autoattack damage to @@cyou@@N: @@e%d@@N.", total_damage);
+         act(buf, ch, NULL, victim, TO_VICT);
+      }
    }
 
    if (!IS_NPC(ch) && ch->stance > 0 && ((IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))))
