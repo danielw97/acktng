@@ -780,6 +780,24 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
    return;
 }
 
+
+static void act_avoidance_notvict(CHAR_DATA *ch, CHAR_DATA *victim, const char *verb)
+{
+   char buf[MAX_STRING_LENGTH];
+
+   for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+   {
+      if (rch == ch || rch == victim)
+         continue;
+
+      if (!IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT))
+         continue;
+
+      sprintf(buf, "%s %s %s's attack.\n\r", PERS(victim, rch), verb, PERS(ch, rch));
+      send_to_char(buf, rch);
+   }
+}
+
 bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    int max_avoidance = 75;
@@ -815,9 +833,13 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (chance < parry)
    {
-      act("You parry $n's attack.", ch, NULL, victim, TO_VICT);
-      act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
-      act("$N parries $n's attack.", ch, NULL, victim, TO_NOTVICT);
+      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+         act("You parry $n's attack.", ch, NULL, victim, TO_VICT);
+
+      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+         act("$N parries your attack.", ch, NULL, victim, TO_CHAR);
+
+      act_avoidance_notvict(ch, victim, "parries");
 
       if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
@@ -844,9 +866,13 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (chance < parry + block)
    {
-      act("You block $n's attack.", ch, NULL, victim, TO_VICT);
-      act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
-      act("$N blocks $n's attack.", ch, NULL, victim, TO_NOTVICT);
+      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+         act("You block $n's attack.", ch, NULL, victim, TO_VICT);
+
+      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+         act("$N blocks your attack.", ch, NULL, victim, TO_CHAR);
+
+      act_avoidance_notvict(ch, victim, "blocks");
 
       if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
@@ -873,9 +899,13 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (chance < parry + block + dodge)
    {
-      act("You dodge $n's attack.", ch, NULL, victim, TO_VICT);
-      act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
-      act("$N dodges $n's attack.", ch, NULL, victim, TO_NOTVICT);
+      if (!(!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+         act("You dodge $n's attack.", ch, NULL, victim, TO_VICT);
+
+      if (!(!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT) && short_fight_round_active(ch, victim)))
+         act("$N dodges your attack.", ch, NULL, victim, TO_CHAR);
+
+      act_avoidance_notvict(ch, victim, "dodges");
 
       if (number_percent() < (get_counter(victim) - get_evasion_piercing(ch)))
          one_hit(victim, ch, gsn_counter);
