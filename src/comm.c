@@ -56,6 +56,9 @@
 #include <unistd.h> /* for execl */
 #include "globals.h"
 #include "cursor.h"
+#ifdef UNIT_TEST_COMM
+#include "comm_login_test.h"
+#endif
 
 /*
  * Socket and TCP/IP stuff.
@@ -96,15 +99,6 @@ bool is_parse_name_syntax_valid(const char *name)
 }
 
 #ifdef UNIT_TEST_COMM
-typedef enum
-{
-   LOGIN_TRANSITION_NAME_REJECTED,
-   LOGIN_TRANSITION_PASSWORD_PROMPTED,
-   LOGIN_TRANSITION_WRONG_PASSWORD,
-   LOGIN_TRANSITION_SHOW_MOTD,
-   LOGIN_TRANSITION_ENTERED_GAME
-} LOGIN_TRANSITION_RESULT;
-
 LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
     int *connected_state,
     const char *input,
