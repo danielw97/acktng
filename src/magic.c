@@ -100,7 +100,6 @@ int mana_cost(CHAR_DATA *ch, int sn)
  */
 int skill_lookup(const char *name)
 {
-   char buf[MAX_STRING_LENGTH];
    int sn;
 
    if (strlen(name) < 1)

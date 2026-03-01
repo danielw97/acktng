@@ -276,8 +276,7 @@ char *reset_to_text(BUILD_DATA_LIST **, int *);
 ROOM_INDEX_DATA *new_room(AREA_DATA *pArea, sh_int vnum, sh_int sector)
 {
    ROOM_INDEX_DATA *pRoomIndex;
-   sh_int door, cnt;
-   MONEY_TYPE *room_treasure;
+   sh_int door;
    /*
     * Now add room
     */
@@ -429,7 +428,6 @@ void build_showmob(CHAR_DATA *ch, char *argument)
    MOB_INDEX_DATA *pMob;
    /*    RESET_DATA     *pReset; Unused var */
    SHOP_DATA *pShop;
-   bool is_shopkeeper = 0;
    int iTrade;
 
    argument = one_argument(argument, arg1);
@@ -532,7 +530,6 @@ void build_showmob(CHAR_DATA *ch, char *argument)
 
    if ((pShop = pMob->pShop) != 0)
    {
-      is_shopkeeper = 1;
       strcat(buf1, "@@WMobile is a shopkeeper, will buy @@y");
       for (iTrade = 0; iTrade < MAX_TRADE; iTrade++)
       {

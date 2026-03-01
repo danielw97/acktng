@@ -517,7 +517,6 @@ void do_drop(CHAR_DATA *ch, char *argument)
    bool found = FALSE;
    char object_number[MSL];
    char one_object[MSL];
-   char actbuf[MSL];
 
    victim_name[0] = '\0';
    pre_parse(argument, victim_name, container_name, object_list);
@@ -617,7 +616,6 @@ void do_give(CHAR_DATA *ch, char *argument)
    char one_object[MSL];
    char object_number[MSL];
    char buf[MAX_STRING_LENGTH];
-   char actbuf[MSL];
    CHAR_DATA *victim;
    OBJ_DATA *obj;
    extern bool quest;
@@ -2095,8 +2093,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
 void do_junk(CHAR_DATA *ch, char *argument)
 {
    OBJ_DATA *obj;
-   char *buf[MSL];
-   char *arg[MAX_INPUT_LENGTH];
+   char arg[MAX_INPUT_LENGTH];
 
    argument = one_argument(argument, arg);
 
@@ -2639,7 +2636,6 @@ int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj)
    if (obj == NULL || (pShop = keeper->pIndexData->pShop) == NULL)
       return 0;
    {
-      OBJ_DATA *obj2;
       int itype;
       cost = 0;
       for (itype = 0; itype < MAX_TRADE; itype++)
@@ -2684,9 +2680,6 @@ void do_buy(CHAR_DATA *ch, char *argument)
       CHAR_DATA *pet;
       ROOM_INDEX_DATA *pRoomIndexNext;
       ROOM_INDEX_DATA *in_room;
-      int change = 0;
-      char *cost_string;
-      char givebuf[MSL], changebuf[MSL];
       if (IS_NPC(ch))
          return;
       pRoomIndexNext = get_room_index(ch->in_room->vnum + 1);
@@ -2756,9 +2749,6 @@ void do_buy(CHAR_DATA *ch, char *argument)
 
       OBJ_DATA *obj;
       int cost;
-      int change = 0;
-      char givebuf[MSL], changebuf[MSL];
-      char *cost_string;
       obj = get_obj_carry(keeper, arg);
       cost = get_cost(keeper, obj);
       if (cost <= 0 || !can_see_obj(ch, obj))
@@ -3338,13 +3328,6 @@ void do_appraise(CHAR_DATA *ch, char *argument)
 {
    OBJ_DATA *obj;
    void *vo;
-   char buf[MAX_STRING_LENGTH];
-   int av;
-   int gold;
-   int ac;
-   int hold;
-   int foo;
-   int lv;
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
    {
       send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
@@ -3669,7 +3652,6 @@ void do_auction(CHAR_DATA *ch, char *argument)
 
    if (auction_item != NULL)
    {
-      char lastbidbuf[MSL];
       sprintf(buf, "The current object being auctioned is: %s\n\r", auction_item->short_descr);
       send_to_char(buf, ch);
       sprintf(buf, "Item was offered for sale by %s.\n\r", auction_owner->name);

@@ -435,7 +435,6 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 {
    EXTRA_DESCR_DATA *ed;
    AFFECT_DATA *paf;
-   sh_int foo;
    /*
     * Slick recursion to write lists backwards,
     *   so loading them will load in forwards order.
@@ -1738,8 +1737,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
          {
             if (cur_revision < UPGRADE_REVISION)
             {
-               int temp_loc;
-               temp_loc = fread_number(fp);
+               fread_number(fp);
                obj->wear_loc = -1;
                fMatch = TRUE;
                break;
@@ -2077,7 +2075,6 @@ void fwrite_corpse(OBJ_DATA *obj, FILE *fp, int iNest)
    EXTRA_DESCR_DATA *ed;
    AFFECT_DATA *paf;
    int where_vnum = 3300;
-   sh_int foo;
    /*
     * Slick recursion to write lists backwards,
     *   so loading them will load in forwards order.

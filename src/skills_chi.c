@@ -164,11 +164,6 @@ void do_phantomfist(CHAR_DATA *ch, char *argument)
 
     AFFECT_DATA af;
 
-    int dur = 2;
-
-    if (ch->adept[CLASS_MAR] > 0)
-        dur = 3;
-
     af.type = gsn_phantomfist;
     af.duration = 2;
     af.duration_type = DURATION_ROUND;
@@ -383,7 +378,7 @@ void do_flurry(CHAR_DATA *ch, char *argument)
 
     ch->cooldown[gsn_flurry] = 30;
 
-    for (int i = 0; get_chi(ch) > 0; ch->chi--)
+    for (; get_chi(ch) > 0; ch->chi--)
     {
         one_hit(ch, ch->fighting, TYPE_HIT);
     }

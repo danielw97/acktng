@@ -37,6 +37,7 @@
 #endif
 
 extern OBJ_DATA *quest_object;
+static char buf[MAX_STRING_LENGTH];
 extern bool quest;
 extern CHAR_DATA *quest_mob;
 extern CHAR_DATA *quest_target;
@@ -1235,7 +1236,6 @@ int can_carry_w(CHAR_DATA *ch)
  */
 void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 {
-   char buf[MAX_STRING_LENGTH];
    OBJ_DATA *wield;
    int mod;
 
@@ -1353,7 +1353,6 @@ void mark_from_room(int this_room_vnum, MARK_DATA *mark)
 void affect_to_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *raf)
 {
    ROOM_AFFECT_DATA *raf_new;
-   char buf[MAX_STRING_LENGTH];
 
    GET_FREE(raf_new, raffect_free);
    /* Ramias... Don't copy uninitialized fields: next, prev, is_free */
@@ -1385,8 +1384,7 @@ void r_affect_remove(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *raf)
 {
    if (room->first_room_affect == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "r_affect_remove: no affect to remove from room %d.", room->vnum);
+         sprintf(buf, "r_affect_remove: no affect to remove from room %d.", room->vnum);
       monitor_chan(buf, MONITOR_ROOM);
 
       bug("R_affect_remove: no affect for room: %d.", room->vnum);
@@ -1446,8 +1444,7 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 
    if (ch->first_affect == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "affect_remove: %s did not have aff %d to remove.",
+         sprintf(buf, "affect_remove: %s did not have aff %d to remove.",
               IS_NPC(ch) ? ch->short_descr : ch->name, paf->type);
       monitor_chan(buf, MONITOR_MOB);
 
@@ -1576,8 +1573,7 @@ void char_from_room(CHAR_DATA *ch)
 
    if (ch->in_room == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "char_from_room: %s in NULL room.", IS_NPC(ch) ? ch->short_descr : ch->name);
+         sprintf(buf, "char_from_room: %s in NULL room.", IS_NPC(ch) ? ch->short_descr : ch->name);
       monitor_chan(buf, MONITOR_ROOM);
 
       bug("Char_from_room: NULL.", 0);
@@ -1616,8 +1612,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
    AFFECT_DATA af;
    if (pRoomIndex == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "char_to_room: Attempted to move %s to a NULL room.", NAME(ch));
+         sprintf(buf, "char_to_room: Attempted to move %s to a NULL room.", NAME(ch));
       monitor_chan(buf, MONITOR_ROOM);
 
       bug("Char_to_room: NULL.", 0);
@@ -1825,8 +1820,7 @@ void obj_from_char(OBJ_DATA *obj)
 
    if ((ch = obj->carried_by) == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "obj_from_char: NULL ch to remove %s from.", obj->short_descr);
+         sprintf(buf, "obj_from_char: NULL ch to remove %s from.", obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("Obj_from_char: null ch.", 0);
@@ -2022,8 +2016,7 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj)
 
    if (obj->wear_loc == WEAR_NONE)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "unequip_char: %s is not wearing %s.", NAME(ch), obj->short_descr);
+         sprintf(buf, "unequip_char: %s is not wearing %s.", NAME(ch), obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("Unequip_char: already unequipped.", 0);
@@ -2147,8 +2140,7 @@ void obj_from_room(OBJ_DATA *obj)
 
    if ((in_room = obj->in_room) == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "obj_from_room: %s in NULL room.", obj->short_descr);
+         sprintf(buf, "obj_from_room: %s in NULL room.", obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("obj_from_room: NULL.", 0);
@@ -2234,8 +2226,7 @@ void obj_from_obj(OBJ_DATA *obj)
 
    if ((obj_from = obj->in_obj) == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "obj_from_obj: %s not in another object.", obj->short_descr);
+         sprintf(buf, "obj_from_obj: %s not in another object.", obj->short_descr);
       monitor_chan(buf, MONITOR_OBJ);
       bug("Obj_from_obj: null obj_from.", 0);
       return;
@@ -2398,8 +2389,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
    if (ch->in_room == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "extract_char: %s in NULL room., Moved to room 2", NAME(ch));
+         sprintf(buf, "extract_char: %s in NULL room., Moved to room 2", NAME(ch));
       monitor_chan(buf, MONITOR_MOB);
 
       bug("Extract_char: NULL.", 0);
@@ -2864,13 +2854,11 @@ OBJ_DATA *get_obj_world(CHAR_DATA *ch, char *argument)
  */
 OBJ_DATA *create_money(int amount)
 {
-   char buf[MAX_STRING_LENGTH];
    OBJ_DATA *obj;
 
    if (amount <= 0)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "create_money: %d provided as amount.", amount);
+         sprintf(buf, "create_money: %d provided as amount.", amount);
       monitor_chan(buf, MONITOR_OBJ);
 
       bug("Create_money: zero or negative money %d.", amount);
@@ -3119,7 +3107,6 @@ void notify(char *message, int lv)
     */
 
    DESCRIPTOR_DATA *d;
-   char buf[MAX_STRING_LENGTH];
 
    sprintf(buf, "[NOTE]: %s\n\r", message);
    for (d = first_desc; d; d = d->next)
@@ -3131,7 +3118,6 @@ void notify(char *message, int lv)
 void auction(char *message)
 {
    DESCRIPTOR_DATA *d;
-   char buf[MAX_STRING_LENGTH];
 
    sprintf(buf, "[AUCTION]: %s\n\r", message);
    for (d = first_desc; d; d = d->next)
@@ -3149,7 +3135,6 @@ void info(char *message, int lv)
     * * - Stephen
     */
    DESCRIPTOR_DATA *d;
-   char buf[MAX_STRING_LENGTH];
 
    for (d = first_desc; d; d = d->next)
       if ((d->connected == CON_PLAYING) && (d->character->level >= lv) && !IS_NPC(d->character) && !IS_SET(d->character->deaf, CHANNEL_INFO))
@@ -3168,7 +3153,6 @@ void log_chan(const char *message, int lv)
     * * Level is used to determine WHO gets the message...
     */
    DESCRIPTOR_DATA *d;
-   char buf[MAX_STRING_LENGTH];
 
    sprintf(buf, "[LOG]: %s\n\r", message);
    for (d = first_desc; d; d = d->next)
@@ -3367,8 +3351,7 @@ void remove_shield(CHAR_DATA *ch, MAGIC_SHIELD *shield)
 {
    if (ch->first_shield == NULL)
    {
-      char buf[MAX_STRING_LENGTH];
-      sprintf(buf, "shield_remove: %s did not have a shield to remove.", IS_NPC(ch) ? ch->short_descr : ch->name);
+         sprintf(buf, "shield_remove: %s did not have a shield to remove.", IS_NPC(ch) ? ch->short_descr : ch->name);
       monitor_chan(buf, MONITOR_MOB);
 
       bug("Remove_shield: no shield.", 0);
