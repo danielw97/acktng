@@ -822,18 +822,91 @@ void load_area(FILE *fp)
 /*
  * Snarf a help section.
  */
+static bool try_read_help_level(FILE *fp, long *level)
+{
+   long number = 0;
+   bool sign = FALSE;
+   int c;
+
+   do
+   {
+      c = getc(fp);
+   } while (isspace(c));
+
+   if (c == EOF)
+      return FALSE;
+
+   if (c == '+')
+   {
+      c = getc(fp);
+   }
+   else if (c == '-')
+   {
+      sign = TRUE;
+      c = getc(fp);
+   }
+
+   if (!isdigit(c))
+   {
+      if (c != EOF)
+         ungetc(c, fp);
+      return FALSE;
+   }
+
+   while (isdigit(c))
+   {
+      number = number * 10 + c - '0';
+      c = getc(fp);
+   }
+
+   if (sign)
+      number = 0 - number;
+
+   if (c != EOF && c != ' ')
+      ungetc(c, fp);
+
+   *level = number;
+   return TRUE;
+}
+
+#ifdef UNIT_TEST_DB
+bool db_test_try_read_help_level(FILE *fp, long *level)
+{
+   return try_read_help_level(fp, level);
+}
+#endif
+
 void load_helps(FILE *fp)
 {
    HELP_DATA *pHelp;
    BUILD_DATA_LIST *pList;
+   long level;
 
    for (;;)
    {
+      int c;
+
+      if (!try_read_help_level(fp, &level))
+      {
+         c = getc(fp);
+         if (c == EOF)
+            break;
+
+         bug("load_helps: malformed help header, skipping text.", 0);
+
+         while (c != '~' && c != EOF)
+            c = getc(fp);
+         continue;
+      }
+
       GET_FREE(pHelp, help_free);
-      pHelp->level = fread_number(fp);
+      pHelp->level = level;
       pHelp->keyword = fread_string(fp);
       if (pHelp->keyword[0] == '$')
+      {
+         PUT_FREE(pHelp, help_free);
          break;
+      }
       pHelp->text = fread_string(fp);
 
       /*
