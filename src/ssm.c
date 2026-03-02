@@ -410,7 +410,9 @@ char *_fread_string(FILE *fp, const char *caller)
 {
    char buf[MAX_STRING_LENGTH * 4];
    char *ptr = buf;
+   char *buf_end = buf + sizeof(buf) - 2;
    char c;
+   bool overflowed = FALSE;
 
    do
    {
@@ -425,7 +427,10 @@ char *_fread_string(FILE *fp, const char *caller)
       switch (*ptr = getc(fp))
       {
       default:
-         ptr++;
+         if (ptr < buf_end)
+            ptr++;
+         else
+            overflowed = TRUE;
          break;
 
       case EOF:
@@ -434,8 +439,13 @@ char *_fread_string(FILE *fp, const char *caller)
          break;
 
       case '\n':
-         ptr++;
-         *ptr++ = '\r';
+         if (ptr < buf_end)
+         {
+            ptr++;
+            *ptr++ = '\r';
+         }
+         else
+            overflowed = TRUE;
          break;
 
       case '\r':
@@ -443,6 +453,8 @@ char *_fread_string(FILE *fp, const char *caller)
 
       case '~':
          *ptr = '\0';
+         if (overflowed)
+            bugf("Fread_string: string truncated (max %zu bytes)", sizeof(buf) - 1);
          if (fBootDb)
          {
             ptr = temp_hash_find(buf);
@@ -471,7 +483,9 @@ char *_fread_string_eol(FILE *fp, const char *caller)
 {
    char buf[MAX_STRING_LENGTH * 4];
    char *ptr = buf;
+   char *buf_end = buf + sizeof(buf) - 1;
    char c;
+   bool overflowed = FALSE;
 
    do
    {
@@ -486,7 +500,10 @@ char *_fread_string_eol(FILE *fp, const char *caller)
       switch (*ptr = getc(fp))
       {
       default:
-         ptr++;
+         if (ptr < buf_end)
+            ptr++;
+         else
+            overflowed = TRUE;
          break;
 
       case EOF:
@@ -497,6 +514,8 @@ char *_fread_string_eol(FILE *fp, const char *caller)
       case '\n':
       case '\r':
          *ptr = '\0';
+         if (overflowed)
+            bugf("Fread_string_eol: string truncated (max %zu bytes)", sizeof(buf) - 1);
          if (fBootDb)
          {
             ptr = temp_hash_find(buf);
