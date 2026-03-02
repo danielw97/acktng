@@ -55,6 +55,9 @@ bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, 
 bool should_summon_assist_master_round args((int is_npc, int is_charmed, int has_master,
                                       int master_fighting, int same_room,
                                       int is_player_summon, int can_see_master_target));
+bool should_summon_cast_round args((int is_npc, int is_player_summon,
+                                    int is_fighting, int has_spec_fun,
+                                    int should_cast_now));
 
 bool is_safe args((CHAR_DATA * ch, CHAR_DATA *victim));
 void make_corpse args((CHAR_DATA * ch, char *argument));
@@ -77,6 +80,13 @@ bool should_summon_assist_master_round(int is_npc, int is_charmed, int has_maste
 {
    return is_npc && is_charmed && has_master && master_fighting && same_room
        && is_player_summon && can_see_master_target;
+}
+
+bool should_summon_cast_round(int is_npc, int is_player_summon,
+                              int is_fighting, int has_spec_fun,
+                              int should_cast_now)
+{
+   return is_npc && is_player_summon && is_fighting && has_spec_fun && should_cast_now;
 }
 
 /*
@@ -266,8 +276,15 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (IS_SET(stance_app[ch->stance].specials, STANCE_NO_HIT))
       return;
 
-   if (IS_NPC(ch) && is_player_summon_special(ch->spec_fun))
+   if (should_summon_cast_round(IS_NPC(ch),
+                                is_player_summon_special(ch->spec_fun),
+                                ch->position == POS_FIGHTING,
+                                ch->spec_fun != NULL,
+                                number_bits(1) == 0))
+   {
+      (*ch->spec_fun)(ch);
       return;
+   }
 
    if ((((wield1 = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL) && (wield1->item_type == ITEM_WEAPON)) && (((wield2 = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL) && (wield2->item_type == ITEM_WEAPON)))
       dual_chance = 15;
