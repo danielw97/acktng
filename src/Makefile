@@ -129,6 +129,13 @@ unit-test-spendqp: test_spendqp.o spendqp.unit-test.o
 	rm -f unit-test-spendqp
 	$(CC) -Wl,--gc-sections -o unit-test-spendqp test_spendqp.o spendqp.unit-test.o $(L_FLAGS)
 
+skills_chi.unit-test.o: skills_chi.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o skills_chi.unit-test.o skills_chi.c
+
+unit-test-skills-chi: test_skills_chi.o skills_chi.unit-test.o
+	rm -f unit-test-skills-chi
+	$(CC) -Wl,--gc-sections -o unit-test-skills-chi test_skills_chi.o skills_chi.unit-test.o $(L_FLAGS)
+
 spell_dam.unit-test.o: spell_dam.c
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o spell_dam.unit-test.o spell_dam.c
 
@@ -136,7 +143,7 @@ unit-test-spell-dam: test_spell_dam.o spell_dam.unit-test.o
 	rm -f unit-test-spell-dam
 	$(CC) -Wl,--gc-sections -o unit-test-spell-dam test_spell_dam.o spell_dam.unit-test.o $(L_FLAGS)
 
-email.unit-test.o: email.c
+\email.unit-test.o: email.c
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_EMAIL -o email.unit-test.o email.c
 
 unit-test-email: test_email.o email.unit-test.o
@@ -151,5 +158,6 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-act-info
 	./unit-test-cloak
 	./unit-test-spendqp
+	./unit-test-skills-chi
 	./unit-test-spell-dam
 	./unit-test-email

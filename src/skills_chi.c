@@ -1,6 +1,25 @@
 #include "globals.h"
 #include "magic.h"
 
+int get_max_combo(CHAR_DATA *ch);
+bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
+void war_attack(CHAR_DATA *ch, char *argument, int gsn);
+bool subtract_energy_cost(CHAR_DATA *ch, int gsn);
+void pug_attack(CHAR_DATA *ch, char *argument, int gsn);
+
+int chi_skill_cost(int base_cost, int cooldown)
+{
+    if (cooldown > 0)
+        return base_cost * 2;
+
+    return base_cost;
+}
+
+bool chi_should_block_mindoverbody(bool has_mindoverbody, bool has_named_mindoverbody)
+{
+    return has_mindoverbody || has_named_mindoverbody;
+}
+
 int get_chi(CHAR_DATA *ch)
 {
     int max_chi = 0;
@@ -54,9 +73,7 @@ void do_chiblock(CHAR_DATA *ch, char *argument)
     if (!can_use_skill_message(ch, gsn_chiblock))
         return;
 
-    int cost = 5;
-    if (ch->cooldown[gsn_chiblock] > 0)
-        cost *= 2;
+    int cost = chi_skill_cost(5, ch->cooldown[gsn_chiblock]);
 
     if (get_chi(ch) < cost)
     {
@@ -95,9 +112,7 @@ void do_chakra(CHAR_DATA *ch, char *argument)
     if (!can_use_skill_message(ch, gsn_chakra))
         return;
 
-    int cost = 5;
-    if (ch->cooldown[gsn_chiblock] > 0)
-        cost *= 2;
+    int cost = chi_skill_cost(5, ch->cooldown[gsn_chiblock]);
 
     if (get_chi(ch) < cost)
     {
@@ -181,9 +196,7 @@ void do_spinfist(CHAR_DATA *ch, char *argument)
     if (!can_use_skill_message(ch, gsn_spinfist))
         return;
 
-    int cost = 5;
-    if (ch->cooldown[gsn_spinfist] > 0)
-        cost *= 2;
+    int cost = chi_skill_cost(5, ch->cooldown[gsn_spinfist]);
 
     if (get_chi(ch) < cost)
     {
@@ -335,8 +348,8 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
     base_heal += ch->remort[CLASS_BRA] * 2;
     base_heal += ch->adept[CLASS_MAR] * 5;
 
-    if (is_affected(ch, gsn_mindoverbody) || is_affected(ch, skill_lookup("mindoverbody")))
-        return FALSE;
+    if (chi_should_block_mindoverbody(is_affected(ch, gsn_mindoverbody), is_affected(ch, skill_lookup("mindoverbody"))))
+        return;
     af.type = gsn_mindoverbody;
     af.duration = 3;
     af.location = APPLY_HOT;
@@ -347,7 +360,6 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
     affect_to_char(ch, &af);
     act("$n begins to focus on mind over body.", ch, NULL, NULL, TO_ROOM);
     send_to_char("You begin to focus on mind over body.\n\r", ch);
-    return TRUE;
 }
 
 void do_flurry(CHAR_DATA *ch, char *argument)
