@@ -1740,9 +1740,6 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
    obj->next_in_carry_list = NULL;
    obj->prev_in_carry_list = NULL;
 
-    if (!IS_NPC(ch))
-        proposition_obj_notify(ch, obj);
-
    if ((!IS_NPC(ch)) && (obj == quest_object))
    {
       bool valid_questor = FALSE;
@@ -1781,6 +1778,9 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
    obj->prev_in_room = NULL;
    ch->carry_number += get_obj_number(obj);
    ch->carry_weight += get_obj_weight(obj);
+
+   if (!IS_NPC(ch))
+      proposition_obj_notify(ch, obj);
 
    if (AI_MOB(ch))
    {

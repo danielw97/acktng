@@ -638,6 +638,8 @@ void proposition_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj)
                     "\n\r@@G*** Proposition complete! Visit any postman to claim your reward. ***@@N\n\r\n\r",
                     ch);
             }
+
+            extract_obj(obj);
             do_save(ch, "");
             break;
         }
