@@ -1831,10 +1831,26 @@ static int resolve_persistent_container_room_vnum(int room_vnum)
    return ROOM_VNUM_LIMBO;
 }
 
+static int persistent_container_where_vnum_for_save(int in_room_vnum, bool in_obj)
+{
+   if (in_obj)
+      return 3300;
+
+   if (in_room_vnum > 0)
+      return in_room_vnum;
+
+   return 3300;
+}
+
 #ifdef UNIT_TEST_SAVE
 int resolve_persistent_container_room_vnum_for_test(int room_vnum)
 {
    return resolve_persistent_container_room_vnum(room_vnum);
+}
+
+int persistent_container_where_vnum_for_save_for_test(int in_room_vnum, int in_obj)
+{
+   return persistent_container_where_vnum_for_save(in_room_vnum, in_obj != 0);
 }
 #endif
 
@@ -2149,7 +2165,7 @@ void fwrite_corpse(OBJ_DATA *obj, FILE *fp, int iNest)
 {
    EXTRA_DESCR_DATA *ed;
    AFFECT_DATA *paf;
-   int where_vnum = 3300;
+   int where_vnum;
    /*
     * Slick recursion to write lists backwards,
     *   so loading them will load in forwards order.
@@ -2157,10 +2173,8 @@ void fwrite_corpse(OBJ_DATA *obj, FILE *fp, int iNest)
    if (obj->next_in_carry_list != NULL)
       fwrite_corpse(obj->next_in_carry_list, fp, iNest);
 
-   if (obj->in_obj != NULL)
-      where_vnum = 3300;
-   if (obj->in_room != NULL)
-      where_vnum = obj->in_room->vnum;
+   where_vnum = persistent_container_where_vnum_for_save(obj->in_room != NULL ? obj->in_room->vnum : 0,
+                                                         obj->in_obj != NULL);
 
    if (obj->in_room == NULL && obj->in_obj == NULL)
       obj->in_room = get_room_index(ROOM_VNUM_LIMBO);

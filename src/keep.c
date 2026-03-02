@@ -23,6 +23,26 @@ void keep_format_chest_short_descr(const char *owner_name, char *dest, size_t de
     snprintf(dest, dest_size, "%s's Keep Chest", safe_owner);
 }
 
+void keep_format_room_name(const char *owner_name, char *dest, size_t dest_size)
+{
+    const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
+
+    if (dest == NULL || dest_size == 0)
+        return;
+
+    snprintf(dest, dest_size, "%s's Keep", safe_owner);
+}
+
+void keep_format_room_description(const char *owner_name, char *dest, size_t dest_size)
+{
+    const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
+
+    if (dest == NULL || dest_size == 0)
+        return;
+
+    snprintf(dest, dest_size, "Keep of %s", safe_owner);
+}
+
 static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const char *owner_name)
 {
     int iHash;
@@ -95,6 +115,8 @@ void do_keep(CHAR_DATA *ch, char *argument)
     EXIT_DATA *pExit;
     BUILD_DATA_LIST *pList;
     AREA_DATA *pArea = NULL;
+    char room_name[MAX_STRING_LENGTH];
+    char room_description[MAX_STRING_LENGTH];
 
     argument = one_argument(argument, arg1);
 
@@ -160,6 +182,13 @@ void do_keep(CHAR_DATA *ch, char *argument)
     }
 
     RoomIndex = new_room(pArea, vnum, SECT_INSIDE);
+
+    keep_format_room_name(ch->name, room_name, sizeof(room_name));
+    keep_format_room_description(ch->name, room_description, sizeof(room_description));
+    free_string(RoomIndex->name);
+    free_string(RoomIndex->description);
+    RoomIndex->name = str_dup(room_name);
+    RoomIndex->description = str_dup(room_description);
 
     iHash = vnum % MAX_KEY_HASH;
     SING_TOPLINK(RoomIndex, room_index_hash[iHash], next);
