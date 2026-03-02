@@ -14,5 +14,9 @@ int cloak_drain_damage_from_level(int pseudo_level);
 int cloak_level_damage_reduction(int pseudo_level);
 long cloak_drain_attacker_hp_after_hit(long attacker_hp, int drain_damage);
 long cloak_drain_victim_hp_after_hit(long victim_hp, long victim_max_hp, int drain_damage);
+int cloak_oathbreaker_avoidance_chance(int pseudo_level);
+int cloak_transcendence_avoidance_chance(int pseudo_level);
+bool cloak_oathbreaker_avoids_spell_damage(int dam, int element, bool has_cloak, int pseudo_level, int roll_percent);
+bool cloak_transcendence_avoids_physical_hit(int dam, int element, int dt, bool has_cloak, int pseudo_level, int roll_percent);
 
 #endif

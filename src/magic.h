@@ -312,6 +312,8 @@ DECLARE_SPELL_FUN(spell_cloak_misery);
 DECLARE_SPELL_FUN(spell_cloak_drain);
 DECLARE_SPELL_FUN(spell_cloak_iron);
 DECLARE_SPELL_FUN(spell_cloak_mental);
+DECLARE_SPELL_FUN(spell_cloak_oathbreaker);
+DECLARE_SPELL_FUN(spell_cloak_transcendence);
 DECLARE_SPELL_FUN(spell_sonic_blast);
 DECLARE_SPELL_FUN(spell_haste);
 DECLARE_SPELL_FUN(spell_slow);

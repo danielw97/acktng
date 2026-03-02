@@ -565,6 +565,24 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     {
         int cloak_reduction = 0;
 
+        if (cloak_oathbreaker_avoids_spell_damage(dam, element, is_affected(victim, skill_lookup("cloak:oathbreaker")),
+                                              get_psuedo_level(victim), number_percent()))
+        {
+            act("@@N$N's @@dcloak@@N shatters your magic harmlessly!", ch, NULL, victim, TO_CHAR);
+            act("@@NYour @@dcloak@@N shatters $N's magic harmlessly!", victim, NULL, ch, TO_CHAR);
+            act("@@N$n's @@dcloak@@N shatters $N's magic harmlessly!", victim, NULL, ch, TO_NOTVICT);
+            return -1;
+        }
+
+        if (cloak_transcendence_avoids_physical_hit(dam, element, dt, is_affected(victim, skill_lookup("cloak:transcendence")),
+                                                 get_psuedo_level(victim), number_percent()))
+        {
+            act("@@N$N transcends your strike completely!", ch, NULL, victim, TO_CHAR);
+            act("@@NYou transcend $N's strike completely!", victim, NULL, ch, TO_CHAR);
+            act("@@N$n transcends $N's strike completely!", victim, NULL, ch, TO_NOTVICT);
+            return -1;
+        }
+
         if (IS_SET(element, ELE_PHYSICAL) && is_affected(victim, skill_lookup("cloak:iron")))
             cloak_reduction = cloak_level_damage_reduction(get_psuedo_level(victim));
         else if (!IS_SET(element, ELE_PHYSICAL) && is_affected(victim, skill_lookup("cloak:mental")))

@@ -282,6 +282,38 @@ int cloak_level_damage_reduction(int pseudo_level)
     return pseudo_level / 2;
 }
 
+int cloak_oathbreaker_avoidance_chance(int pseudo_level)
+{
+    if (pseudo_level < 0)
+        return 0;
+
+    return pseudo_level / 10;
+}
+
+int cloak_transcendence_avoidance_chance(int pseudo_level)
+{
+    if (pseudo_level < 0)
+        return 0;
+
+    return pseudo_level / 15;
+}
+
+bool cloak_oathbreaker_avoids_spell_damage(int dam, int element, bool has_cloak, int pseudo_level, int roll_percent)
+{
+    if (!has_cloak || dam <= 0 || IS_SET(element, ELE_PHYSICAL))
+        return FALSE;
+
+    return roll_percent < cloak_oathbreaker_avoidance_chance(pseudo_level);
+}
+
+bool cloak_transcendence_avoids_physical_hit(int dam, int element, int dt, bool has_cloak, int pseudo_level, int roll_percent)
+{
+    if (!has_cloak || dam <= 0 || !IS_SET(element, ELE_PHYSICAL))
+        return FALSE;
+
+    return roll_percent < cloak_transcendence_avoidance_chance(pseudo_level);
+}
+
 long cloak_drain_attacker_hp_after_hit(long attacker_hp, int drain_damage)
 {
     long next_hp;
