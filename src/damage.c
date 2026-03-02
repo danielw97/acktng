@@ -3,6 +3,7 @@
 #endif
 #include "magic.h"
 #include "cloak.h"
+#include "cloak_drain.h"
 
 #include <stdio.h>
 #include <stdlib.h> /* For div_t, div() */
@@ -1827,6 +1828,52 @@ void cloak_action(CHAR_DATA *ch, CHAR_DATA *victim, int dam)
             af.modifier = -5;
             affect_join(ch, &af);
         }
+    }
+
+    if ((is_affected(victim, skill_lookup("cloak:drain"))) && (ch != victim) && (number_range(0, 99) < 35))
+    {
+        int drain_damage;
+
+        if (!shortfight_round)
+        {
+            act("@@N$n's @@rcloak@@N flares and drains life from $N!!", victim, NULL, ch, TO_NOTVICT);
+        }
+        else
+        {
+            CHAR_DATA *rch;
+            for (rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+            {
+                char buf[MSL];
+                if (rch == ch || rch == victim)
+                    continue;
+                if (!IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT))
+                    continue;
+                sprintf(buf, "@@N%s's @@rcloak@@N flares and drains life from %s!!@@N\n\r", PERS(victim, rch), PERS(ch, rch));
+                send_to_char(buf, rch);
+            }
+        }
+
+        if (!(shortfight_round && !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT)))
+        {
+            if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
+                act("Flame cloak on $K ouch", ch, NULL, victim, TO_CHAR);
+            else
+                act("@@N$N's @@rcloak@@N flares, and drains your life!!", ch, NULL, victim, TO_CHAR);
+        }
+
+        if (!(shortfight_round && !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
+        {
+            if (!IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_BLIND_PLAYER))
+                act("Your Death cloak flares", victim, NULL, ch, TO_CHAR);
+            else
+                act("@@NYour @@rcloak@@N flares, draining life from $N!!!", victim, NULL, ch, TO_CHAR);
+        }
+
+        drain_damage = cloak_drain_damage_from_level(get_psuedo_level(victim));
+        ch->hit = cloak_drain_attacker_hp_after_hit(ch->hit, drain_damage);
+        victim->hit = cloak_drain_victim_hp_after_hit(victim->hit, get_max_hp(victim), drain_damage);
+        if (short_fight_round_active(ch, victim))
+            short_fight_reactive_damage += drain_damage;
     }
 
     /* for now, can only have one shield up, or alternatively, only the first

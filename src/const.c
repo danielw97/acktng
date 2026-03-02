@@ -3196,6 +3196,15 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
+    "cloak:drain", {182, 182, 47, 182, 182, 182,
+                    182, 182, 47, 182, 182, 182},
+    spell_cloak_drain, TAR_CHAR_DEFENSIVE, POS_STANDING,
+    NULL, SLOT( 677 ), 550, 12, FALSE,
+    "", "@@NThe @@rcloak@@N around your body fades.",
+    "@@NThe @@rcloak@@N around $n's body fades."},
+
+   {
+    REMORT, NORM,
     "poison:quinine", {182, 182, 56, 182, 182, 182,
                        182, 182, 21, 182, 182, 182},
     spell_null, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
