@@ -2692,7 +2692,7 @@ void do_where(CHAR_DATA *ch, char *argument)
           * * -- Stephen
           */
 
-         if (victim->in_room != NULL && (!IS_AFFECTED(victim, AFF_HIDE) && !item_has_apply(victim, ITEM_APPLY_HIDE)) && (victim->in_room->area == ch->in_room->area) && (!IS_AFFECTED(victim, AFF_SNEAK) && !item_has_apply(victim, ITEM_APPLY_SNEAK)) && can_see(ch, victim) && is_name(arg, victim->name))
+         if (victim->in_room != NULL && (!IS_AFFECTED(victim, AFF_HIDE) && !item_has_apply(victim, ITEM_APPLY_HIDE)) && (victim->in_room->area == ch->in_room->area) && (!IS_AFFECTED(victim, AFF_SNEAK) && !item_has_apply(victim, ITEM_APPLY_SNEAK)) && can_see(ch, victim) && !(IS_NPC(victim) && invasion_is_hidden_mobile(victim)) && is_name(arg, victim->name))
          {
             found = TRUE;
             sprintf(buf, "%-28s %s\n\r", PERS(victim, ch), victim->in_room->name);

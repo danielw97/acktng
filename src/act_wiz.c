@@ -1344,7 +1344,7 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
    {
       for (victim = first_char; victim != NULL; victim = victim->next)
       {
-         if (IS_NPC(victim) && victim->in_room != NULL && IS_SET(victim->act, ACT_INTELLIGENT))
+         if (IS_NPC(victim) && victim->in_room != NULL && !invasion_is_hidden_mobile(victim) && IS_SET(victim->act, ACT_INTELLIGENT))
          {
             sprintf(buf, "[%5d] %-20s [%5d] %-30s\n\r",
                     victim->pIndexData->vnum, victim->short_descr, victim->in_room->vnum, victim->in_room->name);
@@ -1357,7 +1357,7 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
    found = FALSE;
    for (victim = first_char; victim != NULL; victim = victim->next)
    {
-      if (IS_NPC(victim) && victim->in_room != NULL && is_name(arg, victim->name))
+      if (IS_NPC(victim) && victim->in_room != NULL && !invasion_is_hidden_mobile(victim) && is_name(arg, victim->name))
       {
          found = TRUE;
          sprintf(buf, "[%5d] %-20s [%5d] %-30s\n\r",

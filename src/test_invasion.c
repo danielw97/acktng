@@ -9,6 +9,10 @@
 int invasion_test_count_regular_players(int *out_lo, int *out_hi);
 int invasion_test_calculate_boss_hp_mod(int level);
 int invasion_test_is_invasion_mob(CHAR_DATA *ch);
+int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
+int invasion_test_is_midgaard_area_name(const char *area_name);
+int invasion_test_should_self_destruct_for_path_dir(int dir);
+int invasion_is_hidden_mobile(CHAR_DATA *ch);
 
 DESCRIPTOR_DATA *first_desc = NULL;
 
@@ -81,6 +85,56 @@ static void test_boss_hp_mod_scaling_and_caps(void)
     assert(invasion_test_calculate_boss_hp_mod(-20) == 6100);
 }
 
+
+static void test_boss_spawn_count_scales_with_uptime(void)
+{
+    assert(invasion_test_boss_spawn_count_for_tick(-1) == 1);
+    assert(invasion_test_boss_spawn_count_for_tick(0) == 1);
+    assert(invasion_test_boss_spawn_count_for_tick(14) == 1);
+    assert(invasion_test_boss_spawn_count_for_tick(15) == 2);
+    assert(invasion_test_boss_spawn_count_for_tick(29) == 2);
+    assert(invasion_test_boss_spawn_count_for_tick(30) == 3);
+    assert(invasion_test_boss_spawn_count_for_tick(44) == 3);
+    assert(invasion_test_boss_spawn_count_for_tick(45) == 4);
+    assert(invasion_test_boss_spawn_count_for_tick(500) == 4);
+}
+
+
+static void test_midgaard_area_name_matching(void)
+{
+    assert(invasion_test_is_midgaard_area_name("Midgaard") == 1);
+    assert(invasion_test_is_midgaard_area_name("The City of Midgaard") == 1);
+    assert(invasion_test_is_midgaard_area_name("MIDGAARD Sewers") == 1);
+    assert(invasion_test_is_midgaard_area_name("Avernus") == 0);
+    assert(invasion_test_is_midgaard_area_name(NULL) == 0);
+    assert(invasion_test_is_midgaard_area_name("") == 0);
+}
+
+static void test_unreachable_path_marks_for_self_destruct(void)
+{
+    assert(invasion_test_should_self_destruct_for_path_dir(-1) == 1);
+    assert(invasion_test_should_self_destruct_for_path_dir(-9) == 1);
+    assert(invasion_test_should_self_destruct_for_path_dir(0) == 0);
+    assert(invasion_test_should_self_destruct_for_path_dir(5) == 0);
+}
+
+
+static void test_hidden_mobile_matches_invasion_tagging(void)
+{
+    CHAR_DATA mob = {0};
+    CHAR_DATA player = {0};
+
+    mob.act = ACT_IS_NPC;
+    mob.extract_timer = -999;
+    assert(invasion_is_hidden_mobile(&mob) == 1);
+
+    mob.extract_timer = 0;
+    assert(invasion_is_hidden_mobile(&mob) == 0);
+
+    player.extract_timer = -999;
+    assert(invasion_is_hidden_mobile(&player) == 0);
+}
+
 static void test_is_invasion_mob_requires_npc_tag(void)
 {
     CHAR_DATA mob = {0};
@@ -102,6 +156,10 @@ int main(void)
     test_count_regular_players_ignores_non_players_and_immortals();
     test_count_regular_players_no_regular_players_sets_bounds_to_zero();
     test_boss_hp_mod_scaling_and_caps();
+    test_boss_spawn_count_scales_with_uptime();
+    test_midgaard_area_name_matching();
+    test_unreachable_path_marks_for_self_destruct();
+    test_hidden_mobile_matches_invasion_tagging();
     test_is_invasion_mob_requires_npc_tag();
 
     puts("test_invasion: all tests passed");

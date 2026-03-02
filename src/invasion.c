@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <ctype.h>
 
 #ifndef DEC_GLOBALS_H
 #include "globals.h"
@@ -84,6 +85,7 @@ static bool       invasion_active        = FALSE;
 static int        invasion_timer         = 0;
 static CHAR_DATA *invasion_boss          = NULL;
 static int        invasion_boss_profile  = -1;
+static int        invasion_boss_ticks_up = 0;
 
 /* Sentinel stored in extract_timer to mark invasion mobs */
 #define INVASION_TAG  (-999)
@@ -92,6 +94,7 @@ static int        invasion_boss_profile  = -1;
  * Forward declarations
  * --------------------------------------------------------------------- */
 static ROOM_INDEX_DATA *pick_boss_room    (int boss_level);
+static ROOM_INDEX_DATA *pick_random_room_in_area(AREA_DATA *area);
 static void       invasion_start         (void);
 static void       invasion_end           (bool success);
 static CHAR_DATA *spawn_invasion_mob     (int level, bool is_boss, int prof_idx);
@@ -103,11 +106,16 @@ static int        count_regular_players  (int *out_lo, int *out_hi);
 static CHAR_DATA *find_gertrude          (void);
 static bool       mob_is_invasion_mob    (CHAR_DATA *ch);
 static void       despawn_all_invasion   (void);
+static int        boss_spawn_count_for_tick(int boss_ticks_up);
+static bool       is_midgaard_area_name(const char *area_name);
 
 #ifdef UNIT_TEST_INVASION
 int invasion_test_count_regular_players(int *out_lo, int *out_hi);
 int invasion_test_calculate_boss_hp_mod(int level);
 int invasion_test_is_invasion_mob(CHAR_DATA *ch);
+int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
+int invasion_test_is_midgaard_area_name(const char *area_name);
+int invasion_test_should_self_destruct_for_path_dir(int dir);
 #endif
 
 /* -----------------------------------------------------------------------
@@ -159,6 +167,45 @@ static bool mob_is_invasion_mob(CHAR_DATA *ch)
     return (ch->extract_timer == INVASION_TAG);
 }
 
+int invasion_is_hidden_mobile(CHAR_DATA *ch)
+{
+    return mob_is_invasion_mob(ch) ? 1 : 0;
+}
+
+/* -----------------------------------------------------------------------
+ * boss_spawn_count_for_tick()
+ * Bosses spawn more minions as they survive longer in the world.
+ * --------------------------------------------------------------------- */
+static int boss_spawn_count_for_tick(int boss_ticks_up)
+{
+    int tiers;
+
+    if (boss_ticks_up < 0)
+        boss_ticks_up = 0;
+
+    tiers = boss_ticks_up / 15;
+    return UMIN(4, 1 + tiers);
+}
+
+static bool is_midgaard_area_name(const char *area_name)
+{
+    size_t i, len;
+    char lower_name[MAX_STRING_LENGTH];
+
+    if (area_name == NULL || area_name[0] == '\0')
+        return FALSE;
+
+    len = strlen(area_name);
+    if (len >= sizeof(lower_name))
+        len = sizeof(lower_name) - 1;
+
+    for (i = 0; i < len; i++)
+        lower_name[i] = (char)tolower((unsigned char)area_name[i]);
+    lower_name[len] = '\0';
+
+    return (strstr(lower_name, "midgaard") != NULL);
+}
+
 #ifdef UNIT_TEST_INVASION
 int invasion_test_count_regular_players(int *out_lo, int *out_hi)
 {
@@ -174,6 +221,21 @@ int invasion_test_calculate_boss_hp_mod(int level)
 int invasion_test_is_invasion_mob(CHAR_DATA *ch)
 {
     return mob_is_invasion_mob(ch);
+}
+
+int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up)
+{
+    return boss_spawn_count_for_tick(boss_ticks_up);
+}
+
+int invasion_test_is_midgaard_area_name(const char *area_name)
+{
+    return is_midgaard_area_name(area_name) ? 1 : 0;
+}
+
+int invasion_test_should_self_destruct_for_path_dir(int dir)
+{
+    return (dir < 0) ? 1 : 0;
 }
 #endif
 
@@ -432,6 +494,28 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
     return get_room_index(INVASION_START_VNUM);
 }
 
+static ROOM_INDEX_DATA *pick_random_room_in_area(AREA_DATA *area)
+{
+    BUILD_DATA_LIST *pList;
+    ROOM_INDEX_DATA *chosen = NULL;
+    int n = 0;
+
+    if (area == NULL)
+        return NULL;
+
+    for (pList = area->first_area_room; pList != NULL; pList = pList->next)
+    {
+        ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)pList->data;
+        if (room == NULL) continue;
+
+        n++;
+        if (number_range(1, n) == 1)
+            chosen = room;
+    }
+
+    return chosen;
+}
+
 /* -----------------------------------------------------------------------
  * spawn_invasion_mob()
  * Creates a clone of the template mob and configures it as an invasion mob.
@@ -463,6 +547,11 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx)
     if (is_boss)
     {
         spawn_room = pick_boss_room(level);
+    }
+    else if (invasion_boss != NULL && !invasion_boss->is_free
+             && invasion_boss->in_room != NULL && invasion_boss->in_room->area != NULL)
+    {
+        spawn_room = pick_random_room_in_area(invasion_boss->in_room->area);
     }
     else
     {
@@ -520,6 +609,7 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx)
     SET_BIT(mob->act, ACT_SENTINEL);
     SET_BIT(mob->act, ACT_NOASSIST);
     SET_BIT(mob->act, ACT_UNDEAD);   /* all invasion mobs are undead */
+    SET_BIT(mob->act, ACT_NO_HUNT);  /* cannot be hunted */
 
     if (is_boss)
         apply_boss_profile(mob, prof_idx, level);
@@ -548,6 +638,7 @@ static void invasion_start(void)
 
     invasion_boss_profile = prof;
     invasion_active       = TRUE;
+    invasion_boss_ticks_up = 0;
 
     invasion_boss = spawn_invasion_mob(boss_level, TRUE, prof);
     if (invasion_boss == NULL)
@@ -601,6 +692,7 @@ static void invasion_end(bool success)
 
     invasion_boss_profile = -1;
     invasion_active       = FALSE;
+    invasion_boss_ticks_up = 0;
     invasion_timer        = INVASION_MIN_INTERVAL;
 }
 
@@ -638,6 +730,17 @@ void invasion_update(void)
         invasion_boss = NULL;
         invasion_end(TRUE);
         return;
+    }
+
+    if (invasion_boss != NULL && !invasion_boss->is_free)
+    {
+        int boss_spawn_count;
+
+        invasion_boss_ticks_up++;
+        boss_spawn_count = boss_spawn_count_for_tick(invasion_boss_ticks_up);
+
+        for (i = 0; i < boss_spawn_count; i++)
+            spawn_invasion_mob(number_range(lo, hi), FALSE, -1);
     }
 
     if (invasion_boss != NULL && !invasion_boss->is_free
@@ -701,10 +804,36 @@ void invasion_rooms_update(void)
             continue;
         }
 
+        if (ch->fighting == NULL && ch->in_room != NULL && ch->in_room->area != NULL
+            && is_midgaard_area_name(ch->in_room->area->name))
+        {
+            CHAR_DATA *victim;
+
+            for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
+            {
+                if (victim == ch)                 continue;
+                if (!IS_NPC(victim))              continue;
+                if (mob_is_invasion_mob(victim))  continue;
+                if (!can_see(ch, victim))         continue;
+                multi_hit(ch, victim, TYPE_UNDEFINED);
+                break;
+            }
+            if (ch->fighting != NULL)
+                continue;
+        }
+
         dir = h_find_dir(ch->in_room, target_room,
                          HUNT_WORLD | HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR);
-        if (dir >= 0)
-            move_char(ch, dir);
+        if (dir < 0)
+        {
+            act("$n cannot find a path to Gertrude and crumbles into dust.",
+                ch, NULL, NULL, TO_ROOM);
+            ch->extract_timer = 0;
+            extract_char(ch, TRUE);
+            continue;
+        }
+
+        move_char(ch, dir);
     }
 }
 
