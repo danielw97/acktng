@@ -2492,7 +2492,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
     * Changed exp value for mobs
     */
 
-   level = URANGE(1, number_fuzzy(pMobIndex->level), MAX_MOB_LEVEL - 1);
+   level = URANGE(1, number_fuzzy(URANGE(1, pMobIndex->level, MAX_MOB_LEVEL - 1)), MAX_MOB_LEVEL - 1);
 
    mob->level = level;
 
