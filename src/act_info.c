@@ -91,6 +91,29 @@ void show_char_to_char_0 args((CHAR_DATA * victim, CHAR_DATA *ch));
 void show_char_to_char_1 args((CHAR_DATA * victim, CHAR_DATA *ch));
 void show_char_to_char args((CHAR_DATA * list, CHAR_DATA *ch));
 bool check_blind args((CHAR_DATA * ch));
+int find_race_index_by_name(const char *name);
+
+int find_race_index_by_name(const char *name)
+{
+   int i;
+
+   if (name == NULL || name[0] == '\0')
+      return -1;
+
+   for (i = 0; i < MAX_RACE; i++)
+   {
+      if (!str_cmp(race_table[i].race_name, name) || !str_cmp(race_table[i].race_title, name))
+         return i;
+   }
+
+   for (i = 0; i < MAX_RACE; i++)
+   {
+      if (!str_prefix(name, race_table[i].race_name) || !str_prefix(name, race_table[i].race_title))
+         return i;
+   }
+
+   return -1;
+}
 
 char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort)
 {
@@ -124,7 +147,6 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
    char buf[MAX_STRING_LENGTH], sendBuf[MAX_STRING_LENGTH];
-   bool found = FALSE;
    int i;
 
    one_argument(argument, arg);
@@ -135,28 +157,8 @@ void do_rhelp(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   for (i = 0; i < MAX_RACE; i++)
-   {
-      if (!str_cmp(race_table[i].race_name, arg) || !str_cmp(race_table[i].race_title, arg))
-      {
-         found = TRUE;
-         break;
-      }
-   }
-
-   if (!found)
-   {
-      for (i = 0; i < MAX_RACE; i++)
-      {
-         if (!str_prefix(arg, race_table[i].race_name) || !str_prefix(arg, race_table[i].race_title))
-         {
-            found = TRUE;
-            break;
-         }
-      }
-   }
-
-   if (!found)
+   i = find_race_index_by_name(arg);
+   if (i < 0)
    {
       send_to_char("No such race found.\r\n", ch);
       return;
@@ -5508,3 +5510,4 @@ void do_loot(CHAR_DATA *ch, char *argument)
    send_to_char("You cannot loot this corpse.\n\r", ch);
    return;
 }
+
