@@ -226,6 +226,13 @@ unit-test-magic: test_magic.o magic.unit-test.o
 	rm -f unit-test-magic
 	$(CC) -Wl,--gc-sections -o unit-test-magic test_magic.o magic.unit-test.o $(L_FLAGS)
 
+magic4.unit-test.o: magic4.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o magic4.unit-test.o magic4.c
+
+unit-test-magic4: test_magic4.o magic4.unit-test.o
+	rm -f unit-test-magic4
+	$(CC) -Wl,--gc-sections -o unit-test-magic4 test_magic4.o magic4.unit-test.o $(L_FLAGS)
+
 mapper.unit-test.o: mapper.c
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAPPER -ffunction-sections -fdata-sections -o mapper.unit-test.o mapper.c
 
@@ -277,7 +284,7 @@ unit-test-build: test_build.o build.unit-test.o
 	$(CC) -Wl,--gc-sections -o unit-test-build test_build.o build.unit-test.o $(L_FLAGS)
 
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-proposition unit-test-keep unit-test-act-obj
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-proposition unit-test-keep unit-test-act-obj
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -297,6 +304,7 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-mob-commands
 	./unit-test-db
 	./unit-test-magic
+	./unit-test-magic4
 	./unit-test-mapper
 	./unit-test-damage
 	./unit-test-buildare

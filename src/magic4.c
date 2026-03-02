@@ -36,6 +36,20 @@
 
 extern bool deathmatch;
 
+
+int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower)
+{
+   int base_heal = 10 + (mage_level / 2);
+   int remort_level = UMAX(sorcerer_level, wizard_level);
+
+   if (remort_level > 0)
+      base_heal += 3 + remort_level;
+
+   base_heal += spellpower / 4;
+
+   return base_heal;
+}
+
 /*
  * This file should contain:
  *	o Adept Spells
@@ -549,9 +563,7 @@ bool spell_regen(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *victim = (CHAR_DATA *)vo;
    AFFECT_DATA af;
 
-   int base_heal = 10;
-
-   int heal = class_heal_character(ch, victim, base_heal, sn, INDEX_MAG, TRUE);
+   int base_heal = spell_regen_base_heal(ch->lvl[CLASS_MAG], ch->remort[CLASS_SOR], ch->remort[CLASS_WIZ], get_spellpower(ch));
 
    if (is_affected(ch, sn) || is_affected(ch, skill_lookup("regen")))
       return FALSE;
@@ -559,7 +571,7 @@ bool spell_regen(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    af.duration = 15 + ch->lvl[CLASS_MAG] / 4;
    af.location = APPLY_HOT;
    af.duration_type = DURATION_ROUND;
-   af.modifier = heal;
+   af.modifier = class_heal_character(ch, victim, base_heal, sn, INDEX_MAG, TRUE);
    af.bitvector = 0;
    af.caster = ch;
    affect_to_char(victim, &af);
