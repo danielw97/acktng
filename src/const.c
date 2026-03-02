@@ -1916,6 +1916,17 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
 
    {
+    REMORT, NORM,
+    "cloak:elements", {70, 182, 182, 182, 60, 78,
+                        70, 182, 182, 182, 60, 78},
+    spell_cloak_elements, TAR_CHAR_DEFENSIVE, POS_STANDING,
+    NULL, SLOT( 225 ), 750, 12, FALSE,
+    "", "@@NThe @@lcloak@@N around your body fades.",
+    "@@NThe @@lcloak@@N around $n's body fades."},
+
+
+
+   {
     MORTAL, VAMP,
     "cloak:darkness", {18, 13, 14, 14, 16, 15},
     spell_cloak_darkness, TAR_CHAR_DEFENSIVE, POS_STANDING,

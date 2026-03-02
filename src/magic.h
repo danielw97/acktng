@@ -260,6 +260,7 @@ DECLARE_SPELL_FUN(spell_cage);                /* slot 620 */
 DECLARE_SPELL_FUN(spell_cloak_absorb);        /* slot 621 */
 DECLARE_SPELL_FUN(spell_cloak_reflect);       /* slot 622 */
 DECLARE_SPELL_FUN(spell_cloak_flaming);       /* slot 623 */
+DECLARE_SPELL_FUN(spell_cloak_elements);      /* slot 624 */
 DECLARE_SPELL_FUN(spell_cloak_darkness);      /* slot 624 */
 DECLARE_SPELL_FUN(spell_room_dispel);         /* slot 625 */
 DECLARE_SPELL_FUN(spell_cloak_adept);         /* slot 626 */
