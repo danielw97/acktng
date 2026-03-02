@@ -8,6 +8,13 @@ extern CHAR_DATA *quest_mob;
 OBJ_DATA *generate_item(int level);
 bool create_loot(CHAR_DATA *ch, OBJ_DATA *obj);
 
+bool are_clans_hostile(int victim_clan, int killer_clan, const POL_DATA *politics)
+{
+   return victim_clan > 0 && victim_clan < MAX_CLAN &&
+      killer_clan > 0 && killer_clan < MAX_CLAN &&
+      politics->diplomacy[victim_clan][killer_clan] < -450;
+}
+
 /*
  * Make a corpse out of a character.
  */
@@ -23,6 +30,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
    CHAR_DATA *wch;
    char *name;
    bool leave_corpse = FALSE;
+   bool has_hostile_clan_killer = FALSE;
    /*
     * int counter, num;
     */
@@ -124,6 +132,8 @@ void make_corpse(CHAR_DATA *ch, char *argument)
          }
          if ((target != NULL) && !IS_NPC(target))
          {
+            bool clans_in_war = are_clans_hostile(ch->pcdata->clan, target->pcdata->clan, &politics_data);
+
             if ((IS_WOLF(ch)) && (IS_VAMP(target) || IS_WOLF(target)))
             {
                leave_corpse = TRUE;
@@ -131,13 +141,10 @@ void make_corpse(CHAR_DATA *ch, char *argument)
             }
             if (IS_SET(ch->pcdata->pflags, PFLAG_PKOK))
                corpse->value[0] = 1;
-            if (ch->pcdata->clan > 0)
+            if (clans_in_war)
             {
-               if (target->pcdata->clan != ch->pcdata->clan &&
-                   (politics_data.diplomacy[ch->pcdata->clan][target->pcdata->clan] < -450))
-               {
-                  corpse->value[2] = target->pcdata->clan;
-               }
+               corpse->value[2] = target->pcdata->clan;
+               has_hostile_clan_killer = TRUE;
             }
             else
                corpse->value[2] = -1;
@@ -190,7 +197,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
 
    if (!IS_NPC(ch))
    {
-      if ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) || (target != NULL && (target->pcdata->clan != ch->pcdata->clan) && (politics_data.diplomacy[ch->pcdata->clan][target->pcdata->clan] < -450)) || ((ch->level > 30) && (IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF))) || (leave_corpse))
+      if ((IS_SET(ch->pcdata->pflags, PFLAG_PKOK)) || has_hostile_clan_killer || ((ch->level > 30) && (IS_SET(ch->act, PLR_KILLER) || IS_SET(ch->act, PLR_THIEF))) || (leave_corpse))
          obj_to_room(corpse, ch->in_room);
       else
          obj_to_room(corpse, get_room_index(ROOM_VNUM_MORGUE));
