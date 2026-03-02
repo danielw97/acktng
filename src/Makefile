@@ -173,7 +173,21 @@ unit-test-save: test_save.o save.unit-test.o
 	rm -f unit-test-save
 	$(CC) -Wl,--gc-sections -o unit-test-save test_save.o save.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save
+skills_obj.unit-test.o: skills_obj.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o skills_obj.unit-test.o skills_obj.c
+
+unit-test-skills-obj: test_skills_obj.o skills_obj.unit-test.o
+	rm -f unit-test-skills-obj
+	$(CC) -Wl,--gc-sections -o unit-test-skills-obj test_skills_obj.o skills_obj.unit-test.o $(L_FLAGS)
+
+skills_combo.unit-test.o: skills_combo.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o skills_combo.unit-test.o skills_combo.c
+
+unit-test-skills-combo: test_skills_combo.o skills_combo.unit-test.o
+	rm -f unit-test-skills-combo
+	$(CC) -Wl,--gc-sections -o unit-test-skills-combo test_skills_combo.o skills_combo.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -186,3 +200,5 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-pdelete
 	./unit-test-rulers
 	./unit-test-save
+	./unit-test-skills-obj
+	./unit-test-skills-combo

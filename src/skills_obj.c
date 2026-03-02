@@ -2,6 +2,40 @@
 #include "magic.h"
 
 void disarm(CHAR_DATA *ch, CHAR_DATA *victim);
+int find_door(CHAR_DATA *ch, char *arg);
+
+int disarm_select_weapon_slot(int left_type, int right_type, int two_handed_type)
+{
+    if (left_type == ITEM_WEAPON)
+        return WEAR_HOLD_HAND_L;
+
+    if (right_type == ITEM_WEAPON)
+        return WEAR_HOLD_HAND_R;
+
+    if (two_handed_type == ITEM_WEAPON)
+        return WEAR_TWO_HANDED;
+
+    return -1;
+}
+
+OBJ_DATA *disarm_find_weapon(OBJ_DATA *left, OBJ_DATA *right, OBJ_DATA *two_handed)
+{
+    int slot = disarm_select_weapon_slot(
+        left == NULL ? -1 : left->item_type,
+        right == NULL ? -1 : right->item_type,
+        two_handed == NULL ? -1 : two_handed->item_type);
+
+    if (slot == WEAR_HOLD_HAND_L)
+        return left;
+
+    if (slot == WEAR_HOLD_HAND_R)
+        return right;
+
+    if (slot == WEAR_TWO_HANDED)
+        return two_handed;
+
+    return NULL;
+}
 
 void do_pick(CHAR_DATA *ch, char *argument)
 {
@@ -245,11 +279,10 @@ void disarm(CHAR_DATA *ch, CHAR_DATA *victim)
 
     set_fighting(ch, victim, TRUE);
 
-    obj = get_eq_char(victim, WEAR_HOLD_HAND_L);
-    if (obj == NULL || obj->item_type != ITEM_WEAPON)
-       obj = get_eq_char(victim, WEAR_HOLD_HAND_R);
-    if (obj == NULL || obj->item_type != ITEM_WEAPON)
-       obj = get_eq_char(victim, WEAR_TWO_HANDED);
+    obj = disarm_find_weapon(
+        get_eq_char(victim, WEAR_HOLD_HAND_L),
+        get_eq_char(victim, WEAR_HOLD_HAND_R),
+        get_eq_char(victim, WEAR_TWO_HANDED));
 
     if (obj == NULL || IS_SET(obj->extra_flags, ITEM_FIST))
     {
