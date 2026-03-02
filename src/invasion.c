@@ -8,7 +8,7 @@
  *    Boss has unique elemental strengths, weaknesses, spells & skills.    *
  *  - Every PULSE_TICK spawns 0-2 ordinary wave mobs.                      *
  *  - Every PULSE_ROOMS the spawned mobs march toward room 3001.           *
- *  - On reaching 3001 the mobs attack Gertrude (mob named "gertrude").    *
+ *  - On reaching 3001 the mobs sacrifice themselves to wound Gertrude.      *
  *  - If Gertrude dies  -> failure announcement.                           *
  *  - If the Boss dies  -> success + 25 QP + despawn ALL invasion mobs.    *
  *  - Spawned mobs are NOT aggressive, are SENTINEL, and have ACT_NOASSIST. *
@@ -656,17 +656,24 @@ void invasion_rooms_update(void)
 
         if (ch->in_room->vnum == INVASION_SPAWN_VNUM)
         {
+            long hp_loss;
+
             gertrude = find_gertrude();
-            if (gertrude != NULL && gertrude->fighting == NULL)
+            if (gertrude != NULL)
             {
-                if (ch == invasion_boss && invasion_boss_profile >= 0)
-                    act(boss_profiles[invasion_boss_profile].emote_skill,
-                        ch, NULL, gertrude, TO_ROOM);
-                else
-                    act("$n lets out a war cry and charges at Gertrude!",
-                        ch, NULL, NULL, TO_ROOM);
-                multi_hit(ch, gertrude, TYPE_UNDEFINED);
+                hp_loss = UMAX(1, (gertrude->max_hit * 5) / 100);
+                gertrude->hp_mod -= hp_loss;
+                gertrude->hit = UMIN(gertrude->hit, get_max_hp(gertrude));
+
+                act("$n reaches Gertrude, siphons her lifeforce, and crumbles away!",
+                    ch, NULL, gertrude, TO_ROOM);
+
+                if ((get_max_hp(gertrude) - gertrude->hp_mod) <= 100)
+                    raw_kill(gertrude, "");
             }
+
+            ch->extract_timer = 0;
+            extract_char(ch, TRUE);
             continue;
         }
 
