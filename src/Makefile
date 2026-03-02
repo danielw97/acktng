@@ -158,7 +158,14 @@ unit-test-email: test_email.o email.unit-test.o
 	rm -f unit-test-email
 	$(CC) -o unit-test-email test_email.o email.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete
+rulers.unit-test.o: rulers.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_RULERS -o rulers.unit-test.o rulers.c
+
+unit-test-rulers: test_rulers.o rulers.unit-test.o
+	rm -f unit-test-rulers
+	$(CC) -o unit-test-rulers test_rulers.o rulers.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -169,3 +176,4 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-spell-dam
 	./unit-test-email
 	./unit-test-pdelete
+	./unit-test-rulers
