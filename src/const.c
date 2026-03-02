@@ -1917,8 +1917,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:elements", {70, 182, 182, 182, 60, 78,
-                        70, 182, 182, 182, 60, 78},
+    "cloak:elements", {182, 182, 182, 182, 182, 182,
+                        48, 182, 182, 182, 182, 182},
     spell_cloak_elements, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 225 ), 750, 12, FALSE,
     "", "@@NThe @@lcloak@@N around your body fades.",
@@ -3196,8 +3196,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:drain", {182, 182, 47, 182, 182, 182,
-                    182, 182, 47, 182, 182, 182},
+    "cloak:drain", {182, 182, 182, 182, 48, 182,
+                    182, 182, 182, 182, 182, 182},
     spell_cloak_drain, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 677 ), 550, 12, FALSE,
     "", "@@NThe @@rcloak@@N around your body fades.",
