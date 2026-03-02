@@ -258,6 +258,11 @@ void death_cry(CHAR_DATA *ch)
    return;
 }
 
+bool should_extract_npc_on_death(const CHAR_DATA *victim)
+{
+   return (victim != NULL) && IS_NPC(victim);
+}
+
 void raw_kill(CHAR_DATA *victim, char *argument)
 {
    CHAR_DATA *check;
@@ -288,6 +293,12 @@ void raw_kill(CHAR_DATA *victim, char *argument)
       /*        unhunt(check);*/
    }
 
+   if (should_extract_npc_on_death(victim))
+   {
+      extract_char(victim, TRUE);
+      return;
+   }
+
    extract_char(victim, FALSE);
    while (victim->first_affect)
       affect_remove(victim, victim->first_affect);
@@ -299,6 +310,7 @@ void raw_kill(CHAR_DATA *victim, char *argument)
    victim->move = UMAX(1, victim->move);
    save_char_obj(victim);
 }
+
 
 void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 {
