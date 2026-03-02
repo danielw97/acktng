@@ -17,463 +17,245 @@ W zenithar maple~
 ~
 1 seal seal_room web cage~
 Seal room and cage are spells used for the purpose of literally sealing a room
-
-either to keep pcs and npcs in or out. There are both positive and negative
-
-affects to those spells. There are limits though.
-
-                      
-
-@@eDO NOT CAST SEAL IN TOWN!!!!!@@N
-
-@@eDO NOT CAST SEAL IN A NEWBIE PRONE AREA!!!!@@N
-
-ANYONE seen doing one of these two things or anything else of not common sense will be PUNISHED!!!
-
+either to keep pcs and npcs in or out. There are both positive and negative
+affects to those spells. There are limits though.
+                      
+@@eDO NOT CAST SEAL IN TOWN!!!!!@@N
+@@eDO NOT CAST SEAL IN A NEWBIE PRONE AREA!!!!@@N
+ANYONE seen doing one of these two things or anything else of not common sense will be PUNISHED!!!
+~
+1 mr~
+NEW HELP.  DELETE THIS LINE FIRST!~
+0 $~
+#ROOMS
+#3969
+Along the western woods~
+@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassible
+trees.
+~
+0 3
+D0
 ~
-trees.
 ~
-#3967
-South of the @@dAsylum@@N~
-@@NThe huge form of @@NThe @@dAsylum@@N proper is to your north, while @@NThe @@dgravel
-path@@N continues to @@NThe west.
-0 2
-0 -1 3966
-0 -1 3957
+0 0 3979
+D1
+~
+~
 0 -1 3968
+D2
+~
+~
+0 -1 3959
 S
 #3968
 A @@dGravel Path@@N~
 @@NThis @@dgravel path @@Nmeanders around the hill the Asylum perches upon,
-with some ruts from long ago, possibly from a wagon or cart, still visible.
-~
+with some ruts from long ago, possibly from a wagon or cart, still visible.
+~
+0 2
 D0
 ~
 ~
 0 0 3978
-0 -1 3967
-~
-~
-0 -1 3958
-0 -1 3969
-door to the north.  Strangely enough, the door is barred and chained, and you
-can see no way to open it up to see what mysteries lie inside this eerie
-structure.
-~
-D2
-S
-
-up to the grim structure to the northwest.
-
-~
-
-west now is the hill that supports the @@dstone @@Nbuilding that draws your
-
-eye to it's @@leerie@@N form.
-
-~
-0 -1 3963
-
-overgrowth of @@NThe @@dAsylum@@N grounds.
-
-~
-0 2
-D0
-~
-~
-
-@@Gweeds@@N fill the grounds to the north.
-
-~
-~
-~
-0 -1 3963
-
-sunlight comes from the open area to the north and west.
-
-~
-~
-
- 
-
-You see a few @@dblack@@b squirrels@@N jumping from @@Gtree@@N to @@Gtree@@N.
-
-~
-~
-D2
-
-trees.
-
-
-~
-
-they must have tasted pretty good to Someone!
-
-~
-~
-
-@@rvines@@N destroying whatever order was originally placed amongst the
-
-various sections.  Here, you see that several @@estrawberry@@N plants have
-
-become wildly overgrown.
-
-~
-
-for a moment, and you are certain that you sense decades of @@ddoom@@N and @@ldespair@@N
-
-from the @@dstone walls@@N.  Shortly thereafter, you regain your orientation,
-
-and everything appears normal.
-
-~
-0 -1 3957
-
-long ago many wagons and carts were marshalled for various groundskeeping
-
-tasks. To the immediate east, you see the rotted doors of a large, open
-
-@@Rbarn@@N.
-
-~
-S
-
-seems that the floor of the hayloft has rotted out, dropping tons of nasty wet
-
-@@yhay@@N to the floor in front of you.
-
-~
-
-been used in many years, by the broken wheels and rotted boards that make up
-
-it's large bed.
-
-~
-
-time.
-
-~
-
-apparent that this path has not been used for quite some time.
-
-~
-~
-
-~
-D0
-~
-~
-
-trees.
-
- @@aThe path widens into a very small clearing, possibly a passing point for
-
-the horses.@@N
-
-~
-
-@@rcucumbers@@N lying about.@@N
-
-~
-
-section is so overgrown that even the @@ybunnies@@N gave up long ago.
-
-~
-0 -1 3948
-
-seemingly now used only by the mice that have made it their home.
-
-~
-
-you is a large circle of @@dgravel@@N, apparently for manuevering carts.
-
-~
-~
-~
-
-south and east you see some stalls.
-
-~
-
-The various tie posts on the walls seem to indicate that it might have been a
-
-breeding stall for the horses of the groundskeeper.
-
-~
-
-clumps of ancient @@yhay@@N that this may have been a birthing spot for horses.
-
-
-~
-~
-
-seems to have been formed by countless years of tracks.
-
-~
-~
-~
-
- 
-
-A @@astream@@N disappears into a @@ddark @@bhole@@N.
-
-There seems to be no way someone of your size could fit.
-
-~
-
-trees.
-
-
-~
-~
-
-large has stomped all of the vegtables to mush.
-
-~
-
-on by the various animals that inhabit the grounds.
-
-~
-
-animal long ago abandoned, or something slightly more @@leerie@@N.
-
-~
-
-caught by a glimps of a @@dgloomy stone@@N structure, perched upon a lonely
-
-hill to the northwest.
-
-~
-
-~
-~
-
-sweet, yet acrid scent coming from the east.
-
-~
-~
-~
-D3
-~
-~
-
-with starvation, his mouldering skeleton a mute witness to that ultimate
-
-struggle.
-
-~
-
-Looking into the @@Gforest@@N, you see some unusual @@mbirds@@N, squawking in anger.
-
-~
-
-~
-
-your view of the surrounding landscape.
-
-~
-~
-
-blossoms point every which way, some towards the north, some south, some at
-
-the ground.
-
-~
-~
-
-~
 D1
 ~
 ~
-
-still supplies water to the garden, from a series of raised troughs running
-
-trickles of scummy liquid into the plants around you.
-
+0 -1 3967
+D2
 ~
 ~
-
-years, it appears that this was once a beautiful path between the @@rgarden@@N
-
-to the west and the @@RBarn@@N to the east.
-
+0 -1 3958
+D3
 ~
-
-broken down walls of an ancient @@RBarn@@N.
-
 ~
-
+0 -1 3969
+S
+#3967
+South of the @@dAsylum@@N~
+@@NThe huge form of @@NThe @@dAsylum@@N proper is to your north, while @@NThe @@dgravel
+path@@N continues to @@NThe west.
+~
+0 2
+D1
 ~
-
-As you push through the undergrowth the @@Gtrees@@N seem to reach for you
-
-with their deformed @@bbranches@@N and you hear eerie creatures around you.
-
 ~
+0 -1 3966
+D2
+~
+~
+0 -1 3957
+D3
+~
+~
+0 -1 3968
+S
+#3966
+@@NThe @@dAsylum @@NSteps@@N~
+@@NThe @@dgravel path@@N leads to a set of ancient stone steps, that lead to a
+door to the north.  Strangely enough, the door is barred and chained, and you
+can see no way to open it up to see what mysteries lie inside this eerie
+structure.
+~
 0 2
 D0
 ~
 ~
-
- 
-
-The undergrowth seems a little clearer here as the @@Gbushes@@N are all
-
-broken and trampled as though a large creature has passed this way.
-
- 
-
+0 -1 16000
+D1
 ~
+~
+0 -1 3965
+D2
+~
+~
+0 -1 3956
 D3
 ~
 ~
-
- 
-
-The undergrowth seems a little clearer here as the @@Gbushes@@N are all
-
-broken and trampled as though a large creature has passed this way.
-
- 
-
-~
-
- 
-
-The undergrowth seems a little clearer here as the @@Gbushes@@N are all
-
-broken and trampled as though a large creature has passed this way.
-
- 
-
-  
-
-~
-~
-~
-
-continues on to another ancient stone structure, perched upon a lonely hill.
-
-~
-~
-~
-
-As you push through the undergrowth the @@Gtrees@@N seem to reach for you
-
-with their deformed @@bbranches@@N and you hear eerie creatures around you.
-
- 
-
-~
-
-As you push through the undergrowth the @@Gtrees@@N seem to reach for you
-
-with their deformed @@bbranches@@N and you hear eerie creatures around you.
-
-~
-~
-
-As you push through the undergrowth the @@Gtrees@@N seem to reach for you
-
-with their deformed @@bbranches@@N and you hear eerie creatures around you.
-
-~
-
-As you push through the undergrowth the @@Gtrees@@N seem to reach for you
-
-with their deformed @@bbranches@@N and you hear eerie creatures around you.
-
-~
-
- 
-
-@@RYou see some strange tracks, almost like a very large @@Gfrog@@R has passed this way recently....@@eVERY@@R large...@@N
-
-~
-
-~
-~
-
-@@Gtrees@@N.
-
-~
-~
-~
-
- 
-
-A tiny @@astream@@N flows across the @@gpath@@N here, disappearing back into the @@bground@@N.
-
-~
-~
-
- 
-
-A @@dgravel path@@N leads to the north, heading towards an open @@Rbarn@@N.
-
-~
-~
-
-~
+0 -1 3967
 S
-
-~
-
-@@Gtrees@@N.
-
- A small, meandering @@gpath@@N borders the @@dAsylum@@N Grounds seemingly
-
-for @@bhorses@@N, but wildly @@rovergrown@@N.
-
-~
-
-~
-
-You can see a large building in front of you.  On a hill in the distance is
-
-a much larger, stone structure with some barred windows. The @@Ggrasses@@N in the
-
-open area seem ill kept, and the few @@Gtrees@@N and @@rshrubs@@N that dot the landscape
-
-seem windswept and forlorn.
-
- 
-
-You see a small, weatherbeaten @@gsign@@N nailed to a @@Gtree@@N.
-
- 
-
+#3965
+The @@dgravel path@@N~
+@@NThe @@dgravel path@@N continues to the south, and to the west, leading
+up to the grim structure to the northwest.
+~
+0 2
+D1
 ~
 ~
+0 -1 3964
+D2
 ~
-
-@@rDo not feed the inmates!!@@N
-
 ~
-
- 
-
-You can feel a slight @@ybreeze@@N playing with the branches around you...
-
-at least, you @@ethink@@N it is a breeze.
-
+0 -1 3955
+D3
 ~
-
-ornamental @@GHedge@@N.
-
 ~
-
-see the @@dAsylum@@N proper.
-
+0 -1 3966
+S
+#3964
+A pleasant view~
+@@NThe @@bwood@@N bordering the grounds can be seen to the northeast, and to the
+west now is the hill that supports the @@dstone @@Nbuilding that draws your
+eye to it's @@leerie@@N form.
+~
+0 2
+D1
 ~
-
-animal and human. To the west lies @@NA large @@dstone@@N wall, the first closup view of the @@dAsylum@@N.
-
- 
-
-You can hear @@NA small @@astream@@N burbling to the north and east.
-
 ~
+0 -1 3963
+D3
+~
+~
+0 -1 3965
+S
+#3963
+A Path around the @@RBarn@@N~
+@@NThe northern wall of @@NThe @@RBarn@@N marks a firm line in @@NThe otherwise wild
+overgrowth of @@NThe @@dAsylum@@N grounds.
+~
+0 2
+D0
+~
+~
+0 0 3973
+D1
+~
+~
+0 -1 3962
+D3
+~
+~
+0 -1 3964
+S
+#3962
+The path~
+The path around the barn continues to the east and west, while overgrown
+@@Gweeds@@N fill the grounds to the north.
+~
+0 2
+D0
+~
+~
+0 0 3972
+D1
+~
+~
+0 -1 3961
+D3
+~
+~
+0 -1 3963
+S
+#3961
+The turn in the path~
+This sharp bend in the path is unremarkeable, except for the fact that some
+sunlight comes from the open area to the north and west.
+~
+0 2
+D0
+~
+~
+0 0 3971
+D1
+~
+~
+0 -1 3960
+D2
+~
+~
+0 -1 3951
+D3
+~
+~
+0 -1 3962
+S
+#3960
+A dark area amongst the trees.~
+@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassable @@Gtrees@@N.
+ 
+You see a few @@dblack@@b squirrels@@N jumping from @@Gtree@@N to @@Gtree@@N.
+~
+0 3
+D0
+~
+~
+0 -1 3970
+D2
+~
+~
+0 -1 3950
+D3
+~
+~
+0 -1 3961
+S
+#3959
+@@NThe middle of the @@dAsylum's@@N Path@@N~
+@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassible
+trees.
+
+~
+0 3
+D0
+~
+~
+0 0 3969
+D1
+~
+~
+0 -1 3958
+D2
+~
+~
+0 -1 3949
+S
+#3958
+The @@rCabbage Patch@@N~
+@@NThe chewed stumps of several @@rcabbages@@N are planted here..looks like
+they must have tasted pretty good to Someone!
+~
+0 2
 D0
 ~
 ~
@@ -592,10 +374,8 @@ This room is dominated by a large, broken cart.  It is obvious that it hasn't
 been used in many years, by the broken wheels and rotted boards that make up
 it's large bed.
 ~
-0 11
-D1
-~
-~
+ 
+A small @@astream@@N burbles quietly to the south.
 0 0 3952
 D3
 ~
@@ -673,7 +453,7 @@ D1
 D2
 ~
 ~
-0 -1 3939
+#3944
 S
 #3948
 @@NThe @@rCucumber Corner@@N~
@@ -1444,92 +1224,45 @@ D1
 D2
 ~
 ~
-0 0 3909
-S
-#3909
-The tracks~
-@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassable @@Gtrees@@N.
- 
-@@RYou see some strange tracks, almost like a very large @@Gfrog@@R has passed this way recently....@@eVERY@@R large...@@N
-~
-0 3
-D0
-~
-~
-0 -1 3919
+0 0 3912
 D1
 ~
-~
-0 -1 3908
-S
-#3908
-The bridle path~
-@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassable @@Gtrees@@N.
-~
-0 3
-D0
-~
-~
-0 0 3918
-D1
-~
-~
-0 -1 3907
+0 -1 3901
 D3
-~
-~
-0 -1 3909
-S
-#3907
-@@NThe path narrows~
-@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassable
-@@Gtrees@@N.
+0 -1 3903
+#3901
+@@NEdge of the @@dAsylum@@N Grounds~
 ~
 0 3
-D0
-~
-~
-0 0 3917
+0 0 3911
 D1
-~
-~
-0 -1 3906
+0 -1 3900
 D3
-~
-~
-0 -1 3908
+0 -1 3902
 S
-#3906
-@@NA tiny stream~
-@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassable @@Gtrees@@N.
+#3900
+@@NPathway to the @@dArkham Asylum@@N~
+@@NThe path opens into a small clearing here then spreads out to the northwest.
+You can see a large building in front of you.  On a hill in the distance is
+a much larger, stone structure with some barred windows. The @@Ggrasses@@N in the
+open area seem ill kept, and the few @@Gtrees@@N and @@rshrubs@@N that dot the landscape
+seem windswept and forlorn.
  
-A tiny @@astream@@N flows across the @@gpath@@N here, disappearing back into the @@bground@@N.
+You see a small, weatherbeaten @@gsign@@N nailed to a @@Gtree@@N.
+ 
 ~
-0 3
+16386 2
 D0
 ~
+0 0 3910
+D2
 ~
-0 0 3916
-D1
-~
-~
-0 -1 3905
+0 0 7315
 D3
-~
-~
-0 -1 3907
-S
-#3905
-@@NThe path widens~
-@@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassable @@Gtrees@@N.
- 
-A @@dgravel path@@N leads to the north, heading towards an open @@Rbarn@@N.
-~
-0 3
-D0
-~
-~
-0 0 3915
+0 -1 3901
+E
+sign~
+@@NWelcome to the @@dArkham Asylum for the Criminally @@eInsane@@N.  @@lPlease:
 D1
 ~
 ~
@@ -1944,7 +1677,6 @@ D1
 D2
 ~
 ~
-0 -1 3973
 S
 #3984
 Inside the asylum~
@@ -2171,7 +1903,7 @@ S
 Their twisted @@bbranches@@N seem to lower and reach for you and you think you ought
 to hastily depart.
 ~
-0 3
+5 240124032 8421376 1
 D1
 ~
 ~
