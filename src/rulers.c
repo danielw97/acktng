@@ -34,8 +34,23 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+#ifdef UNIT_TEST_RULERS
+#include "config.h"
+#else
 #include "globals.h"
 #include "tables.h"
+#endif
+
+size_t rulers_format_status_message(char *dest, size_t dest_size, const char *status, const char *filename)
+{
+   const char *safe_status = (status != NULL) ? status : "";
+   const char *safe_filename = (filename != NULL) ? filename : "";
+
+   if (dest == NULL || dest_size == 0)
+      return 0;
+
+   return snprintf(dest, dest_size, "%s %s\n\r", safe_status, safe_filename);
+}
 
 char *get_ruler_title(int ruler_rank, int sex)
 {
@@ -47,26 +62,23 @@ char *get_ruler_title(int ruler_rank, int sex)
    case 1:
       return ((sex == SEX_NEUTRAL) ? "@@WMonitor@@N " : (sex == SEX_MALE) ? "@@WLord@@N "
                                                                           : "@@WLady@@N ");
-      break;
    case 2:
       return ((sex == SEX_NEUTRAL) ? "@@eOverseer@@N " : (sex == SEX_MALE) ? "@@eBaron@@N "
                                                                            : "@@eBaroness@@N ");
-      break;
    case 3:
       return ((sex == SEX_NEUTRAL) ? "@@mController@@N " : (sex == SEX_MALE) ? "@@mDuke@@N "
                                                                              : "@@mDuchess@@N ");
-      break;
    case 4:
       return ((sex == SEX_NEUTRAL) ? "@@lDirector@@N " : (sex == SEX_MALE) ? "@@lPrince@@N "
                                                                            : "@@lPrincess@@N ");
-      break;
    case 5:
       return ((sex == SEX_NEUTRAL) ? "@@aDominator@@N " : (sex == SEX_MALE) ? "@@aKing@@N "
                                                                             : "@@aQueen@@N ");
-      break;
    }
    return "Lord";
 }
+
+#ifndef UNIT_TEST_RULERS
 
 void save_rulers()
 {
@@ -139,7 +151,7 @@ void load_rulers(void)
 
    sprintf(rulers_file_name, "%s", RULERS_FILE);
 
-   sprintf(buf, "Loading %s\n\r", rulers_file_name);
+   rulers_format_status_message(buf, sizeof(buf), "Loading", rulers_file_name);
    monitor_chan(buf, MONITOR_CLAN);
 
    if ((rulersfp = fopen(rulers_file_name, "r")) == NULL)
@@ -197,7 +209,7 @@ void load_rulers(void)
          rulersfp = NULL;
       }
 
-      sprintf(buf, "Done Loading %s\n\r", rulers_file_name);
+      rulers_format_status_message(buf, sizeof(buf), "Done Loading", rulers_file_name);
       monitor_chan(buf, MONITOR_CLAN);
    }
 }
@@ -487,3 +499,5 @@ void do_rulers(CHAR_DATA *ch, char *argument)
    send_to_char("rulers new/affiliation/delete/sex name <clan number>\n\r", ch);
    return;
 }
+
+#endif /* UNIT_TEST_RULERS */
