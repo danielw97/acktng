@@ -485,6 +485,13 @@ void do_put(CHAR_DATA *ch, char *argument)
                continue;
             }
 
+            if (is_keep_chest(container_obj)
+                && (obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC || obj->item_type == ITEM_CONTAINER))
+            {
+               send_to_char("Keep chests cannot hold corpses or containers.\n\r", ch);
+               continue;
+            }
+
             if (get_obj_weight(obj) + get_obj_weight(container_obj) > container_obj->value[0])
             {
                act("$p won't fit into $P.", ch, obj, container_obj, TO_CHAR);
