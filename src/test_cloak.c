@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
+#include <string.h>
 
 #define DEC_GLOBALS_H 1
 #include "magic.h"
@@ -14,9 +15,49 @@ static void test_cloak_reactive_can_trigger_only_for_non_physical(void)
     assert(cloak_reactive_can_trigger(ELE_NONE) == TRUE);
 }
 
+static void test_damage_matches_psuedo_level(void)
+{
+    assert(cloak_drain_damage_from_level(47) == 47);
+    assert(cloak_drain_damage_from_level(0) == 0);
+    assert(cloak_drain_damage_from_level(-10) == 0);
+}
+
+static void test_attacker_hp_has_floor(void)
+{
+    assert(cloak_drain_attacker_hp_after_hit(100, 47) == 53);
+    assert(cloak_drain_attacker_hp_after_hit(20, 25) == 10);
+}
+
+static void test_victim_hp_heals_half_and_caps_at_max(void)
+{
+    assert(cloak_drain_victim_hp_after_hit(100, 200, 47) == 123);
+    assert(cloak_drain_victim_hp_after_hit(190, 200, 47) == 200);
+}
+
+
+static void test_cloak_adept_helpers(void)
+{
+    CHAR_DATA ch;
+    memset(&ch, 0, sizeof(ch));
+    ch.level = 50;
+
+    assert(cloak_adept_hitroll_bonus(&ch) == 0);
+    assert(cloak_adept_defense_bonus(&ch) == 0);
+    assert(cloak_adept_scale_damage(&ch, 100) == 100);
+
+    SET_BIT(ch.affected_by, AFF_CLOAK_ADEPT);
+    assert(cloak_adept_hitroll_bonus(&ch) == 100);
+    assert(cloak_adept_defense_bonus(&ch) == 5);
+    assert(cloak_adept_scale_damage(&ch, 100) == 120);
+}
+
 int main(void)
 {
     test_cloak_reactive_can_trigger_only_for_non_physical();
+    test_damage_matches_psuedo_level();
+    test_attacker_hp_has_floor();
+    test_victim_hp_heals_half_and_caps_at_max();
+    test_cloak_adept_helpers();
 
     puts("test_cloak: all tests passed");
     return 0;
