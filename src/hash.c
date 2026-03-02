@@ -17,7 +17,14 @@ void *get_hash_entry(hash_table *hash_head, int key)
    HASH_ENTRY *rvalue;
    HASH_ENTRY **hash_table;
 
+   if (hash_head == NULL || hash_head->table == NULL || hash_head->max_hash <= 0)
+      return NULL;
+
    a = key % hash_head->max_hash;
+
+   if (a < 0)
+      a += hash_head->max_hash;
+
    hash_table = hash_head->table;
 
    for (rvalue = hash_table[a]; rvalue != NULL; rvalue = rvalue->next)
