@@ -105,12 +105,6 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 }
 
 
-#ifdef UNIT_TEST_ACT_OBJ
-void act_obj_testable_format_missing(char *dest, size_t dest_size, const char *name)
-{
-   snprintf(dest, dest_size, "I see no more %.128s here.", name != NULL ? name : "");
-}
-#endif
 void do_get(CHAR_DATA *ch, char *argument)
 {
 

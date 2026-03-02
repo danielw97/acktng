@@ -1574,12 +1574,6 @@ void do_halls(CHAR_DATA *ch, char *argument)
 }
 
 
-#ifdef UNIT_TEST_ACT_MOVE
-void act_move_testable_format_scout_line(char *dest, size_t dest_size, const char *pre, const char *name)
-{
-   snprintf(dest, dest_size, "%.64s%.256s\n\r", pre != NULL ? pre : "", name != NULL ? name : "");
-}
-#endif
 void do_scan(CHAR_DATA *ch, char *argument)
 /* Informs ch if there are any (N)PCs in the 6 adjacent rooms.
  * I'm sure this could be written better.... ;)

@@ -49,17 +49,6 @@ static int hash_value_to_vnum(void *value)
    return (int)(intptr_t)value;
 }
 
-#ifdef UNIT_TEST_AREACHK
-void *areachk_testable_vnum_to_hash_value(int vnum)
-{
-   return vnum_to_hash_value(vnum);
-}
-
-int areachk_testable_hash_value_to_vnum(void *value)
-{
-   return hash_value_to_vnum(value);
-}
-#endif
 
 void swap_global_hash(char Tp, void *Ptr, int old_vnum, int new_vnum)
 {

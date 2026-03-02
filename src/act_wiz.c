@@ -5685,12 +5685,6 @@ void do_areasave(CHAR_DATA *ch, char *argument)
 }
 
 
-#ifdef UNIT_TEST_ACT_WIZ
-void act_wiz_testable_format_findreset(char *dest, size_t dest_size, const char *arg1, int vnum)
-{
-   snprintf(dest, dest_size, "Findresets for %.64s %d:\n\r", arg1 != NULL ? arg1 : "", vnum);
-}
-#endif
 void do_findreset(CHAR_DATA *ch, char *argument)
 {
    char arg1[MSL], arg2[MSL];

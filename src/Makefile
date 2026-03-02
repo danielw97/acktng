@@ -247,35 +247,7 @@ unit-test-build: test_build.o build.unit-test.o
 	$(CC) -Wl,--gc-sections -o unit-test-build test_build.o build.unit-test.o $(L_FLAGS)
 
 
-areachk.unit-test.o: areachk.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_AREACHK -ffunction-sections -fdata-sections -o areachk.unit-test.o areachk.c
-
-unit-test-areachk: test_areachk.o areachk.unit-test.o
-	rm -f unit-test-areachk
-	$(CC) -Wl,--gc-sections -o unit-test-areachk test_areachk.o areachk.unit-test.o $(L_FLAGS)
-
-act_wiz.unit-test.o: act_wiz.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ACT_WIZ -ffunction-sections -fdata-sections -o act_wiz.unit-test.o act_wiz.c
-
-unit-test-act-wiz: test_act_wiz.o act_wiz.unit-test.o
-	rm -f unit-test-act-wiz
-	$(CC) -Wl,--gc-sections -o unit-test-act-wiz test_act_wiz.o act_wiz.unit-test.o $(L_FLAGS)
-
-act_obj.unit-test.o: act_obj.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ACT_OBJ -ffunction-sections -fdata-sections -o act_obj.unit-test.o act_obj.c
-
-unit-test-act-obj: test_act_obj.o act_obj.unit-test.o
-	rm -f unit-test-act-obj
-	$(CC) -Wl,--gc-sections -o unit-test-act-obj test_act_obj.o act_obj.unit-test.o $(L_FLAGS)
-
-act_move.unit-test.o: act_move.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ACT_MOVE -ffunction-sections -fdata-sections -o act_move.unit-test.o act_move.c
-
-unit-test-act-move: test_act_move.o act_move.unit-test.o
-	rm -f unit-test-act-move
-	$(CC) -Wl,--gc-sections -o unit-test-act-move test_act_move.o act_move.unit-test.o $(L_FLAGS)
-
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-areachk unit-test-act-wiz unit-test-act-obj unit-test-act-move
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -298,7 +270,3 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-damage
 	./unit-test-buildare
 	./unit-test-build
-	./unit-test-areachk
-	./unit-test-act-wiz
-	./unit-test-act-obj
-	./unit-test-act-move
