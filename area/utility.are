@@ -3579,6 +3579,44 @@ Description: Surrounds the caster with a transcendence cloak.  While active,
 *******************************************************************************
 
 ~
+-1 shelp_cloak iron~
+*******************************************************************************
+
+       Name: cloak:iron
+
+    Classes: Knight(48)
+
+   Duration: pseudo_level / 8 ticks
+
+   Modifies: N/A
+
+       Type: Defensive
+
+Description: Surrounds the caster with an iron cloak.  While active,
+             incoming physical damage is reduced by pseudo_level/2.
+
+*******************************************************************************
+
+~
+-1 shelp_cloak mental~
+*******************************************************************************
+
+       Name: cloak:mental
+
+    Classes: Monk(48)
+
+   Duration: pseudo_level / 8 ticks
+
+   Modifies: N/A
+
+       Type: Defensive
+
+Description: Surrounds the caster with a mental cloak.  While active,
+             incoming magical damage is reduced by pseudo_level/2.
+
+*******************************************************************************
+
+~
 -1 shelp_summary~
 *******************************************************************************
 
