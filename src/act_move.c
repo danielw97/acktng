@@ -31,7 +31,6 @@
 #include <stdlib.h>
 #include "globals.h"
 #define NOWHERE -1
-bool check_valid_ride(CHAR_DATA *ch);
 
 char *const compass_name[] = {
     "north", "east", "south", "west", "up", "down"};
@@ -191,34 +190,6 @@ void move_char(CHAR_DATA *ch, int door)
       ch->using_named_door = FALSE;
       return;
    }
-   if (ch->position == POS_RIDING)
-   {
-      if (IS_RIDING(ch))
-      {
-         if (!IS_AWAKE(ch->riding))
-         {
-            send_to_char("Your mount ignores you completely.\r\n", ch);
-            ch->using_named_door = FALSE;
-            return;
-         }
-         if ((ch->riding)->position != POS_STANDING)
-         {
-            act("$N twists $S head around and looks at you quizzically.", ch, 0, ch->riding, TO_CHAR);
-            act("$N looks quizzically at $n.", ch, 0, ch->riding, TO_CHAR);
-            ch->using_named_door = FALSE;
-            return;
-         }
-      }
-      else
-      {
-         send_to_char("Bummer, looks like your mount gave you the slip.\r\n", ch);
-         ch->position = POS_STANDING;
-         update_pos(ch);
-         ch->using_named_door = FALSE;
-         return;
-      }
-   }
-
    if (IS_SET(pexit->exit_info, EX_IMMORTAL) && !IS_IMMORTAL(ch))
    {
       send_to_char("Only an Immortal may use that exit.\n\r", ch);
@@ -283,7 +254,7 @@ void move_char(CHAR_DATA *ch, int door)
 
       if (in_room->sector_type == SECT_AIR || to_room->sector_type == SECT_AIR)
       {
-         if (((!IS_AFFECTED(ch, AFF_FLYING)) && (!item_has_apply(ch, ITEM_APPLY_FLY))) && ((ch->riding != NULL) && (!IS_SET(ch->riding->affected_by, AFF_FLYING))))
+         if ((!IS_AFFECTED(ch, AFF_FLYING)) && (!item_has_apply(ch, ITEM_APPLY_FLY)))
          {
 
             if ((IS_NPC(ch)) && (IS_SET(ch->act, ACT_INTELLIGENT)) && (ch->mana > mana_cost(ch, skill_lookup("fly"))))
@@ -313,8 +284,6 @@ void move_char(CHAR_DATA *ch, int door)
           * Suggestion for flying above water by Sludge
           */
          if ((IS_AFFECTED(ch, AFF_FLYING)) || (item_has_apply(ch, ITEM_APPLY_FLY)))
-            found = TRUE;
-         if ((ch->riding != NULL) && (IS_SET(ch->riding->affected_by, AFF_FLYING)))
             found = TRUE;
          for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
          {
@@ -354,17 +323,6 @@ void move_char(CHAR_DATA *ch, int door)
       WAIT_STATE(ch, 1);
       ch->move -= move;
    }
-   /* Mount code - Celestian */
-   /*   if( ch->position == POS_RIDING )*/
-   {
-      if (check_valid_ride(ch))
-      {
-         snprintf(tmp, sizeof(tmp), "You ride %.64s on %.128s.\n\r", door_name_leave, ch->riding->short_descr);
-         send_to_char(tmp, ch);
-         snprintf(tmp, sizeof(tmp), "$n rides %.64s on %.128s.", door_name_leave, ch->riding->short_descr);
-      }
-   }
-
    /*    if ( ( !IS_AFFECTED(ch, AFF_SNEAK) && !item_has_apply( ch, ITEM_APPLY_SNEAK ) )
        && ( IS_NPC(ch) || !IS_SET(ch->act, PLR_WIZINVIS) ) )  */
    {
@@ -379,33 +337,16 @@ void move_char(CHAR_DATA *ch, int door)
       {
          if (IS_NPC(ch) || (!IS_NPC(ch) && (IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))))
             snprintf(move_buf, sizeof(move_buf), "$L$n %s $T.", "wanders");
-         else if (ch->riding == NULL)
+         else
          {
             snprintf(move_buf, sizeof(move_buf), "$L%s$n %s $T.",
                     get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->pcdata->room_exit);
-         }
-         else if (ch->riding != NULL)
-         {
-            snprintf(move_buf, sizeof(move_buf), "$L%s$n rides $T on %s.",
-                    get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->riding->short_descr);
          }
          act(move_buf, ch, NULL, door_name_leave, TO_ROOM);
       }
    }
    char_from_room(ch);
    char_to_room(ch, to_room);
-   /* Mount code - Celestian */
-   if (IS_RIDING(ch))
-   {
-      char_from_room(ch->riding);
-      char_to_room(ch->riding, to_room);
-      if ((ch->riding)->in_room->vnum == NOWHERE)
-      {
-         ch->using_named_door = FALSE;
-         return;
-      }
-   }
-
    /*
     * if ( ( !IS_AFFECTED(ch, AFF_SNEAK) && !item_has_apply( ch, ITEM_APPLY_SNEAK ) )
     * && ( IS_NPC(ch) || !IS_SET(ch->act, PLR_WIZINVIS) ) )
@@ -413,15 +354,10 @@ void move_char(CHAR_DATA *ch, int door)
    {
       if (IS_NPC(ch) || (!IS_NPC(ch) && (IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))))
          sprintf(move_buf, "$L$n %s $T.", "wanders in from");
-      else if (ch->riding == NULL)
+      else
       {
          sprintf(move_buf, "$L%s$n %s $T.",
                  get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->pcdata->room_enter);
-      }
-      else if (ch->riding != NULL)
-      {
-         sprintf(move_buf, "$L%s$n rides in from $T on %s.",
-                 get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), ch->riding->short_descr);
       }
       act(move_buf, ch, NULL, door_name_enter, TO_ROOM);
    }
@@ -953,9 +889,6 @@ void do_stand(CHAR_DATA *ch, char *argument)
    case POS_FIGHTING:
       send_to_char("You are already fighting!\n\r", ch);
       break;
-   case POS_RIDING:
-      send_to_char("Dismount first!\n\r", ch);
-      break;
    }
 
    return;
@@ -1013,9 +946,6 @@ void do_rest(CHAR_DATA *ch, char *argument)
    case POS_FIGHTING:
       send_to_char("You are already fighting!\n\r", ch);
       break;
-   case POS_RIDING:
-      send_to_char("Dismount first!\n\r", ch);
-      break;
    }
 
    return;
@@ -1038,9 +968,6 @@ void do_sleep(CHAR_DATA *ch, char *argument)
 
    case POS_FIGHTING:
       send_to_char("You are already fighting!\n\r", ch);
-      break;
-   case POS_RIDING:
-      send_to_char("Dismount first!\n\r", ch);
       break;
    }
 
@@ -1207,11 +1134,6 @@ void do_clan_recall(CHAR_DATA *ch, char *argument)
    send_to_char("You are engulfed in a stream of red light, carrying you home!\n\r", ch);
    char_from_room(ch);
    char_to_room(ch, location);
-   if (ch->riding != NULL)
-   {
-      char_from_room(ch->riding);
-      char_to_room(ch->riding, location);
-   }
 
    act("$n arrives, carried upon a stream of red light!!", ch, NULL, NULL, TO_ROOM);
    do_look(ch, "auto");
@@ -1312,11 +1234,6 @@ void do_recall(CHAR_DATA *ch, char *argument)
 
    char_from_room(ch);
    char_to_room(ch, location);
-   if (ch->riding != NULL)
-   {
-      char_from_room(ch->riding);
-      char_to_room(ch->riding, location);
-   }
 
    act("$n arrives, carried by a stream of blue light!", ch, NULL, NULL, TO_ROOM);
    do_look(ch, "auto");

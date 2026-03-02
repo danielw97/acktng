@@ -363,7 +363,7 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
     * -S- Mod: INTELLIGENT mobs *can* gain exp.  So there!
     */
 
-   if (((IS_NPC(ch)) && ((!IS_SET(ch->act, ACT_INTELLIGENT)) && (ch->rider == NULL))) || (!IS_NPC(victim)) || (victim == ch))
+   if (((IS_NPC(ch)) && (!IS_SET(ch->act, ACT_INTELLIGENT))) || (!IS_NPC(victim)) || (victim == ch))
       return;
 
    members = 0;

@@ -182,7 +182,6 @@ struct char_ref_type
 
 #define MANA_COST(ch, sn) (IS_NPC(ch) ? 0 : UMAX(skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->class])))
 
-#define IS_RIDING(ch) (!IS_NPC(ch) && ((ch)->riding))
 
 #define ADEPT_LEVEL(ch) (IS_NPC(ch) ? (ch)->level / 7 : (ch)->adept_level)
 

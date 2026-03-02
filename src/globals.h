@@ -140,7 +140,6 @@ extern sh_int gsn_charge;
 extern sh_int gsn_unit_tactics;
 extern sh_int gsn_spinfist;
 
-extern sh_int gsn_mount; /* for mount skill */
 extern sh_int gsn_imprint;
 extern sh_int gsn_scent;
 extern sh_int gsn_scout;
@@ -585,8 +584,6 @@ DECLARE_DO_FUN(do_ignore);
 
 */
 DECLARE_DO_FUN(do_family);
-DECLARE_DO_FUN(do_mount);
-DECLARE_DO_FUN(do_dismount);
 DECLARE_DO_FUN(do_qpspend);
 DECLARE_DO_FUN(do_disguise);
 DECLARE_DO_FUN(do_instruct);

@@ -596,11 +596,6 @@ bool spell_ethereal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       act("@@N$n begins to disperse into @@lghostly @@Nparticles, then disappears!!", ch, NULL, NULL, TO_ROOM);
       char_from_room(ch);
       char_to_room(ch, get_room_index(ROOM_VNUM_LIMBO));
-      if (ch->riding != NULL)
-      {
-         char_from_room(ch->riding);
-         char_to_room(ch->riding, get_room_index(ROOM_VNUM_LIMBO));
-      }
 
       act("@@N$n coelesces from a @@lghostly@@N image into the room.", ch, NULL, NULL, TO_ROOM);
       do_look(ch, "auto");
@@ -610,11 +605,6 @@ bool spell_ethereal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("@@N$n begins to disperse into @@lghostly @@Nparticles, then disappears!!", ch, NULL, NULL, TO_ROOM);
    char_from_room(ch);
    char_to_room(ch, get_room_index(ROOM_VNUM_ETHEREAL_PLANE));
-   if (ch->riding != NULL)
-   {
-      char_from_room(ch->riding);
-      char_to_room(ch->riding, get_room_index(ROOM_VNUM_ETHEREAL_PLANE));
-   }
 
    act("@@N$n coelesces from a @@lghostly@@N image into the room.", ch, NULL, NULL, TO_ROOM);
    send_to_char("@@NYou enter the @@lEthereal Plane@@N!\n\r", ch);

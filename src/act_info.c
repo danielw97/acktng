@@ -960,12 +960,6 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
       safe_strcat(MSL, buf, "\n\r");
    }
 
-   if (victim->riding != NULL)
-   {
-      sprintf(buf2, "  riding %s.\n\r", victim->riding->short_descr);
-      safe_strcat(MSL, buf, buf2);
-   }
-
    send_to_char(buf, ch);
    return;
 }
@@ -1072,8 +1066,6 @@ void show_char_to_char(CHAR_DATA *list, CHAR_DATA *ch)
       if (!IS_NPC(rch) && IS_SET(rch->act, PLR_WIZINVIS) && get_trust(ch) < rch->invis)
          continue;
 
-      if ((rch->rider != NULL) && (rch->rider != ch))
-         continue; /* show under the rider */
 
       if (can_see(ch, rch))
       {
@@ -1864,9 +1856,6 @@ void do_score(CHAR_DATA *ch, char *argument)
       break;
    case POS_FIGHTING:
       sprintf(buf, " You are @@yfighting.");
-      break;
-   case POS_RIDING:
-      sprintf(buf, " You are @@yriding.");
       break;
    default:
       sprintf(buf, " You are @@ynone.");

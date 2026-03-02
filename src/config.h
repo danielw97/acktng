@@ -83,7 +83,6 @@
 #define INDEX_THI 2
 #define MAX_PC_CLASS 4
 #define MAX_LEVEL 105
-#define MOUNT_COST 10
 #define LEVEL_HERO (MAX_LEVEL - 4)
 #define LEVEL_IMMORTAL (MAX_LEVEL - 3)
 #define MAX_MORTAL (MAX_LEVEL - 5)
@@ -662,7 +661,6 @@
 #define POS_STANDING 7
 #define POS_WRITING 8
 #define POS_BUILDING 9
-#define POS_RIDING 10
 
 /*
  *  Configuration Bits for players
@@ -975,7 +973,6 @@
 #define ACT_NO_HUNT 16777216                             /* Mob can breed        */
 #define ACT_SOLO 33554432                                /* Mob is buffed for solo combat */
 #define ACT_WEREWOLF 67108864 /* Werewolf mob         */ /* doesn't do anything in ack4.0 ZENFIX */
-#define ACT_MOUNT 134217728                              /* Mountable MOB */
 #define ACT_NOBLOOD BIT_29
 #define ACT_NOASSIST BIT_31
 

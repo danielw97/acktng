@@ -1741,8 +1741,6 @@ void do_follow(CHAR_DATA *ch, char *argument)
       send_to_char("You are not of the right caliber to follow.\n\r", ch);
       return;
    }
-   if (IS_RIDING(ch) && is_same_group(ch, ch->riding))
-      do_group(ch, ch->riding->name);
 
    if (ch->master != NULL)
       stop_follower(ch);
@@ -2090,12 +2088,6 @@ void do_group(CHAR_DATA *ch, char *argument)
    if (victim->master != ch && ch != victim)
    {
       act("$N isn't following you.", ch, NULL, victim, TO_CHAR);
-      return;
-   }
-
-   if (IS_NPC(victim) && !IS_NPC(ch) && ch->riding != victim)
-   {
-      send_to_char("You can't group non-mounted NPCs.\n\r", ch);
       return;
    }
 

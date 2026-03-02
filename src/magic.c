@@ -40,6 +40,29 @@
  */
 void say_spell args((CHAR_DATA * ch, int sn));
 
+
+static bool npc_remort_cast_blocked(const CHAR_DATA *ch, int sn)
+{
+   if (!IS_NPC(ch))
+      return FALSE;
+
+   if (skill_table[sn].flag1 != REMORT && skill_table[sn].flag1 != ADEPT)
+      return FALSE;
+
+   return IS_SET(ch->act, ACT_PET) || IS_AFFECTED(ch, AFF_CHARM);
+}
+
+#ifdef UNIT_TEST_MAGIC
+bool magic_test_npc_remort_cast_blocked_flags(int flag1, int act_bits, int affected_by_bits)
+{
+   if (flag1 != REMORT && flag1 != ADEPT)
+      return FALSE;
+
+   return IS_SET(act_bits, ACT_PET) || IS_SET(affected_by_bits, AFF_CHARM);
+}
+#endif
+
+
 /* Calculate mana cost */
 int mana_cost(CHAR_DATA *ch, int sn)
 {
@@ -403,14 +426,8 @@ void do_cast(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (IS_NPC(ch))
-   {
-      if (skill_table[sn].flag1 == REMORT || skill_table[sn].flag1 == ADEPT)
-      {
-         if (IS_SET(ch->act, ACT_PET) || IS_AFFECTED(ch, AFF_CHARM) || ch->rider != NULL)
-            return;
-      }
-   }
+   if (npc_remort_cast_blocked(ch, sn))
+      return;
 
    if (!can_use_skill(ch, sn) || ((skill_table[sn].flag2 == VAMP) && (!IS_VAMP(ch))) || ((skill_table[sn].flag2 == WOLF) && (!IS_WOLF(ch))))
    {
