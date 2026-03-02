@@ -143,7 +143,14 @@ unit-test-spell-dam: test_spell_dam.o spell_dam.unit-test.o
 	rm -f unit-test-spell-dam
 	$(CC) -Wl,--gc-sections -o unit-test-spell-dam test_spell_dam.o spell_dam.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-skills-chi unit-test-spell-dam
+\email.unit-test.o: email.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_EMAIL -o email.unit-test.o email.c
+
+unit-test-email: test_email.o email.unit-test.o
+	rm -f unit-test-email
+	$(CC) -o unit-test-email test_email.o email.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -153,3 +160,4 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-spendqp
 	./unit-test-skills-chi
 	./unit-test-spell-dam
+	./unit-test-email
