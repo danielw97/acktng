@@ -2087,10 +2087,10 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj)
       act("$n gently floats to the ground!", ch, NULL, NULL, TO_ROOM);
       send_to_char("You gently float to the ground!\n\r", ch);
    }
-   if (ch->mana > ch->max_mana)
-      ch->mana = ch->max_mana;
-   if (ch->hit > ch->max_hit)
-      ch->hit = ch->max_hit;
+   if (ch->mana > get_max_mana(ch))
+      ch->mana = get_max_mana(ch);
+   if (ch->hit > get_max_hp(ch))
+      ch->hit = get_max_hp(ch);
 
    return;
 }

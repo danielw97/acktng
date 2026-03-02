@@ -3,10 +3,21 @@
 #include <stdio.h>
 
 #include "config.h"
+#define DEC_GLOBALS_H 1
+#include "ack.h"
 #include "comm_login_test.h"
 
 bool is_parse_name_syntax_valid(const char *name);
 bool is_login_name_format_valid(const char *name);
+
+
+static int stub_max_hp = 100;
+static int stub_max_mana = 100;
+static int stub_max_move = 100;
+
+int get_max_hp(CHAR_DATA *ch) { (void)ch; return stub_max_hp; }
+int get_max_mana(CHAR_DATA *ch) { (void)ch; return stub_max_mana; }
+int get_max_move(CHAR_DATA *ch) { (void)ch; return stub_max_move; }
 
 
 static void test_parse_name_enforces_length_bounds(void)
@@ -99,6 +110,47 @@ static void test_login_name_accepts_valid_player_names(void)
     assert(is_login_name_format_valid("Knight"));
 }
 
+static void test_prompt_thresholds_use_max_helpers(void)
+{
+    CHAR_DATA ch;
+
+    memset(&ch, 0, sizeof(ch));
+
+    ch.hit = 99;
+    stub_max_hp = 100;
+    assert(should_show_default_prompt_hp(&ch));
+    stub_max_hp = 90;
+    assert(!should_show_default_prompt_hp(&ch));
+
+    ch.mana = 40;
+    stub_max_mana = 50;
+    assert(should_show_default_prompt_mana(&ch));
+    stub_max_mana = 35;
+    assert(!should_show_default_prompt_mana(&ch));
+
+    ch.move = 70;
+    stub_max_move = 100;
+    assert(should_show_default_prompt_move(&ch));
+    stub_max_move = 60;
+    assert(!should_show_default_prompt_move(&ch));
+}
+
+static void test_prompt_max_tokens_use_max_helpers(void)
+{
+    CHAR_DATA ch;
+
+    memset(&ch, 0, sizeof(ch));
+
+    stub_max_hp = 111;
+    stub_max_mana = 222;
+    stub_max_move = 333;
+
+    assert(prompt_max_value_for_code(&ch, 'H') == 111);
+    assert(prompt_max_value_for_code(&ch, 'M') == 222);
+    assert(prompt_max_value_for_code(&ch, 'V') == 333);
+    assert(prompt_max_value_for_code(&ch, 'X') == 0);
+}
+
 int main(void)
 {
     test_parse_name_enforces_length_bounds();
@@ -107,6 +159,8 @@ int main(void)
     test_parse_name_accepts_normal_alphabetic_names();
     test_login_name_rejects_reserved_words();
     test_login_name_accepts_valid_player_names();
+    test_prompt_thresholds_use_max_helpers();
+    test_prompt_max_tokens_use_max_helpers();
 
     test_existing_player_login_happy_path_reaches_playing();
     test_existing_player_login_rejects_invalid_name();

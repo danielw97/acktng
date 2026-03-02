@@ -287,7 +287,7 @@ bool ready_heal_room(CHAR_DATA *ch)
 {
    bool ready = TRUE;
 
-   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_HEAL_REGEN)) && (ch->hit < ch->max_hit * 75 / 100))
+   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_HEAL_REGEN)) && (ch->hit < get_max_hp(ch) * 75 / 100))
    {
       if (ch->mana >= mana_cost(ch, skill_lookup("healing light")))
       {
@@ -297,7 +297,7 @@ bool ready_heal_room(CHAR_DATA *ch)
       }
    }
 
-   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN)) && (ch->mana < ch->max_mana * 75 / 100))
+   if ((!IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_REGEN)) && (ch->mana < get_max_mana(ch) * 75 / 100))
    {
       if (ch->mana >= mana_cost(ch, skill_lookup("mana flare")))
       {
@@ -351,7 +351,7 @@ void need_to_stand(CHAR_DATA *ch)
    /*
     * if your leader is up and ready to move, get up
     */
-   if ((ch->leader != NULL) && (ch->in_room == ch->leader->in_room) && (ch->leader->position == POS_STANDING) && (ch->leader->hit >= ch->leader->max_hit * 85 / 100) && (ch->leader->mana >= ch->leader->max_mana * 85 / 100))
+   if ((ch->leader != NULL) && (ch->in_room == ch->leader->in_room) && (ch->leader->position == POS_STANDING) && (ch->leader->hit >= get_max_hp(ch->leader) * 85 / 100) && (ch->leader->mana >= get_max_mana(ch->leader) * 85 / 100))
    {
       get_up(ch, current_state);
       return;
@@ -360,7 +360,7 @@ void need_to_stand(CHAR_DATA *ch)
    /*
     * Do you need heal? if so, can you heal?
     */
-   if (ch->hit < ch->max_hit * 85 / 100)
+   if (ch->hit < get_max_hp(ch) * 85 / 100)
    {
       if ((ch->mana >= mana_cost(ch, skill_lookup("heal"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure critical"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure serious"))))
       {
@@ -388,7 +388,7 @@ void need_to_stand(CHAR_DATA *ch)
    /*
     * if you're ready to move, stand
     */
-   if ((ch->hit >= ch->max_hit * 85 / 100) && (ch->mana >= ch->max_mana * 85 / 100))
+   if ((ch->hit >= get_max_hp(ch) * 85 / 100) && (ch->mana >= get_max_mana(ch) * 85 / 100))
       get_up(ch, current_state);
 
    return;
@@ -461,13 +461,13 @@ void mob_is_fighting(CHAR_DATA *ch)
 
       if (is_being_attacked == TRUE && target != ch)
          do_rescue(target, ch->name);
-      else if (target->hit < target->max_hit * 50 / 100)
+      else if (target->hit < get_max_hp(target) * 50 / 100)
          mob_regen_check(ch, target, need_flee);
       else
       {
          for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
          {
-            if ((is_same_group(ch, vch)) && (vch->hit < vch->max_hit * 20 / 100))
+            if ((is_same_group(ch, vch)) && (vch->hit < get_max_hp(vch) * 20 / 100))
             {
                mob_regen_check(ch, vch, need_flee);
                return;
@@ -484,9 +484,9 @@ void mob_is_fighting(CHAR_DATA *ch)
    /*
     * either heal yourself or flee
     */
-   if (ch->hit < ch->max_hit * 50 / 100)
+   if (ch->hit < get_max_hp(ch) * 50 / 100)
    {
-      if (ch->hit < ch->max_hit * 20 / 100)
+      if (ch->hit < get_max_hp(ch) * 20 / 100)
          need_flee = TRUE;
       mob_regen_check(ch, target, need_flee);
    }
@@ -640,7 +640,7 @@ void mob_is_standing(CHAR_DATA *ch)
    /*
     * do you need to heal?
     */
-   if (ch->hit < ch->max_hit * 85 / 100)
+   if (ch->hit < get_max_hp(ch) * 85 / 100)
    {
       if ((ch->mana >= mana_cost(ch, skill_lookup("heal"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure critical"))) || (ch->mana >= mana_cost(ch, skill_lookup("cure serious"))))
 
@@ -649,11 +649,11 @@ void mob_is_standing(CHAR_DATA *ch)
       /*
        * if leader is ready to move, just keep standing
        */
-      if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) && (ch->leader->position == POS_STANDING) && (ch->leader->mana >= ch->leader->max_mana * 85 / 100) && (ch->leader->hit >= ch->leader->max_hit * 85 / 100))
+      if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) && (ch->leader->position == POS_STANDING) && (ch->leader->mana >= get_max_mana(ch->leader) * 85 / 100) && (ch->leader->hit >= get_max_hp(ch->leader) * 85 / 100))
          return;
       else
       {
-         if (ch->mana >= ch->max_mana * 75 / 100)
+         if (ch->mana >= get_max_mana(ch) * 75 / 100)
             ready = ready_heal_room(ch);
 
          if (ready == TRUE)
@@ -663,7 +663,7 @@ void mob_is_standing(CHAR_DATA *ch)
       }
    }
 
-   if (ch->mana < ch->max_mana * 85 / 100)
+   if (ch->mana < get_max_mana(ch) * 85 / 100)
    {
       do_sleep(ch, "");
       return;
@@ -1037,19 +1037,19 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
 
    // check for leader's needs
 
-   if (leader->hit < leader->max_hit * 25 / 100)
+   if (leader->hit < get_max_hp(leader) * 25 / 100)
    {
       leader_wants = GRP_STATE_CRIT_HEAL;
    }
-   else if (leader->mana < leader->max_mana * 25 / 100)
+   else if (leader->mana < get_max_mana(leader) * 25 / 100)
    {
       leader_wants = GRP_STATE_CRIT_MANA;
    }
-   else if (leader->hit < leader->max_hit * 60 / 100)
+   else if (leader->hit < get_max_hp(leader) * 60 / 100)
    {
       leader_wants = GRP_STATE_NORM_HEAL;
    }
-   else if (leader->mana < leader->max_mana * 50 / 100)
+   else if (leader->mana < get_max_mana(leader) * 50 / 100)
    {
       leader_wants = GRP_STATE_NORM_MANA;
    }
@@ -1071,10 +1071,10 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
       bool everyone_ready = TRUE;
       bool room_ready = FALSE;
       //      ready_heal_room( leader );
-      if ((leader->mana < leader->max_mana * 85 / 100) || (leader->hit < leader->max_hit * 85 / 100))
+      if ((leader->mana < get_max_mana(leader) * 85 / 100) || (leader->hit < get_max_hp(leader) * 85 / 100))
       {
          everyone_ready = FALSE;
-         if (((room_ready = ready_heal_room(leader)) == TRUE) || (leader->mana < leader->max_mana * 20 / 100))
+         if (((room_ready = ready_heal_room(leader)) == TRUE) || (leader->mana < get_max_mana(leader) * 20 / 100))
          {
             do_sleep(leader, "");
          }
@@ -1086,7 +1086,7 @@ void int_group_handler(NPC_GROUP_DATA *ngroup)
       for (follower_ptr = ngroup->first_follower; follower_ptr; follower_ptr = follower_ptr->next)
       {
          follower = follower_ptr->this_one;
-         if ((follower->mana < follower->max_mana * 75 / 100) || (follower->hit < follower->max_hit * 75 / 100))
+         if ((follower->mana < get_max_mana(follower) * 75 / 100) || (follower->hit < get_max_hp(follower) * 75 / 100))
          {
             everyone_ready = FALSE;
             do_sleep(follower, "");
@@ -1284,8 +1284,8 @@ void int_handler(CHAR_DATA *ch)
     */
    if (ch->hit < 100)
    {
-      ch->hit = ch->max_hit * 50 / 100;
-      ch->mana = ch->max_mana * 50 / 100;
+      ch->hit = get_max_hp(ch) * 50 / 100;
+      ch->mana = get_max_mana(ch) * 50 / 100;
    }
 
    /*

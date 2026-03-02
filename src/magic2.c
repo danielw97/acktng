@@ -318,7 +318,7 @@ bool spell_refresh_mana(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
    int move = ch->lvl[CLASS_CLE]  + 50;
 
-   victim->mana = UMIN(victim->mana + move, victim->max_mana);
+   victim->mana = UMIN(victim->mana + move, get_max_mana(victim));
    send_to_char("You feel refreshed.\n\r", victim);
    act("$n looks refreshed.", victim, NULL, NULL, TO_ROOM);
    return TRUE;
@@ -338,7 +338,7 @@ bool spell_refresh(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (obj == NULL && victim->fighting != NULL)
       move = -1;
 
-   victim->move = UMIN(victim->move + move, victim->max_move);
+   victim->move = UMIN(victim->move + move, get_max_move(victim));
    send_to_char("You feel less tired.\n\r", victim);
    act("$n looks less tired.", victim, NULL, NULL, TO_ROOM);
    return TRUE;

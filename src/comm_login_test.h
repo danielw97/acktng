@@ -17,4 +17,12 @@ LOGIN_TRANSITION_RESULT simulate_existing_player_login_transition(
    int is_existing_player,
    int is_password_correct);
 
+
+typedef struct char_data CHAR_DATA;
+
+bool should_show_default_prompt_hp(CHAR_DATA *ch);
+bool should_show_default_prompt_mana(CHAR_DATA *ch);
+bool should_show_default_prompt_move(CHAR_DATA *ch);
+long prompt_max_value_for_code(CHAR_DATA *ch, char code);
+
 #endif

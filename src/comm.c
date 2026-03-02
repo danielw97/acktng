@@ -166,6 +166,46 @@ bool is_login_name_format_valid(const char *name)
    return is_parse_name_syntax_valid(name);
 }
 
+static bool prompt_should_show_hp(CHAR_DATA *ch)
+{
+   return ch != NULL && ch->hit < get_max_hp(ch);
+}
+
+static bool prompt_should_show_mana(CHAR_DATA *ch)
+{
+   return ch != NULL && ch->mana < get_max_mana(ch);
+}
+
+static bool prompt_should_show_move(CHAR_DATA *ch)
+{
+   return ch != NULL && ch->move < get_max_move(ch);
+}
+
+static long prompt_max_value_for_code_internal(CHAR_DATA *ch, char code)
+{
+   if (ch == NULL)
+      return 0;
+
+   switch (code)
+   {
+   case 'H':
+      return get_max_hp(ch);
+   case 'M':
+      return get_max_mana(ch);
+   case 'V':
+      return get_max_move(ch);
+   default:
+      return 0;
+   }
+}
+
+#ifdef UNIT_TEST_COMM
+bool should_show_default_prompt_hp(CHAR_DATA *ch) { return prompt_should_show_hp(ch); }
+bool should_show_default_prompt_mana(CHAR_DATA *ch) { return prompt_should_show_mana(ch); }
+bool should_show_default_prompt_move(CHAR_DATA *ch) { return prompt_should_show_move(ch); }
+long prompt_max_value_for_code(CHAR_DATA *ch, char code) { return prompt_max_value_for_code_internal(ch, code); }
+#endif
+
 #ifndef UNIT_TEST_COMM
 
 void copyover_recover args((void));
@@ -1233,13 +1273,13 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
    if (!IS_SET(ch->config, CONFIG_PROMPT))
    {
       sprintf(buf2, "\r");
-      if (ch->hit < ch->max_hit)
+      if (prompt_should_show_hp(ch))
       {
          check = 1;
          sprintf(buf, "<%ldhp", ch->hit);
          strcat(buf2, buf);
       }
-      if (ch->mana < ch->max_mana)
+      if (prompt_should_show_mana(ch))
       {
          if (check == 1)
             sprintf(buf, " %ldmn", ch->mana);
@@ -1248,7 +1288,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          check = 1;
          strcat(buf2, buf);
       }
-      if (ch->move < ch->max_move)
+      if (prompt_should_show_move(ch))
       {
          if (check == 1)
             sprintf(buf, " %ldmv", ch->move);
@@ -1518,7 +1558,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          i = buf2;
          break;
       case 'H':
-         sprintf(buf2, "%ld", ch->max_hit);
+         sprintf(buf2, "%ld", prompt_max_value_for_code_internal(ch, *str));
          i = buf2;
          break;
       case 'm':
@@ -1526,7 +1566,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          i = buf2;
          break;
       case 'M':
-         sprintf(buf2, "%ld", ch->max_mana);
+         sprintf(buf2, "%ld", prompt_max_value_for_code_internal(ch, *str));
          i = buf2;
          break;
       case 'v':
@@ -1534,7 +1574,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          i = buf2;
          break;
       case 'V':
-         sprintf(buf2, "%ld", ch->max_move);
+         sprintf(buf2, "%ld", prompt_max_value_for_code_internal(ch, *str));
          i = buf2;
          break;
       case 'x':

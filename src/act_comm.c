@@ -2057,7 +2057,7 @@ void do_group(CHAR_DATA *ch, char *argument)
                sprintf(buf,
                        "%-16s %4ld of %4ld hp %4ld of %4ld mana %4ld of %4ld move %5ld xp\n\r",
                        capitalize(PERS(gch, ch)),
-                       gch->hit, gch->max_hit, gch->mana, gch->max_mana, gch->move, gch->max_move, gch->exp);
+                       gch->hit, get_max_hp(gch), gch->mana, get_max_mana(gch), gch->move, get_max_move(gch), gch->exp);
             }
             else
             {
@@ -2066,7 +2066,7 @@ void do_group(CHAR_DATA *ch, char *argument)
                        gch->level,
                        IS_NPC(gch) ? "Mob" : class_table[gch->class].who_name,
                        capitalize(PERS(gch, ch)),
-                       gch->hit, gch->max_hit, gch->mana, gch->max_mana, gch->move, gch->max_move, gch->exp);
+                       gch->hit, get_max_hp(gch), gch->mana, get_max_mana(gch), gch->move, get_max_move(gch), gch->exp);
             }
 
             send_to_char(buf, ch);

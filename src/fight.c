@@ -103,7 +103,7 @@ void violence_update(void)
       {
          if (!is_affected(ch, skill_lookup("Enraged")))
             REMOVE_BIT(ch->pcdata->pflags, PFLAG_RAGED);
-         ch->hit = (UMIN(ch->max_hit, (ch->hit + ch->max_hit / 150)));
+         ch->hit = (UMIN(get_max_hp(ch), (ch->hit + get_max_hp(ch) / 150)));
       }
 
       /* slight damage for players in a speeded stance, simulates fatigue */
