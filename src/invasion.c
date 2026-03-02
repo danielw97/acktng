@@ -104,6 +104,12 @@ static CHAR_DATA *find_gertrude          (void);
 static bool       mob_is_invasion_mob    (CHAR_DATA *ch);
 static void       despawn_all_invasion   (void);
 
+#ifdef UNIT_TEST_INVASION
+int invasion_test_count_regular_players(int *out_lo, int *out_hi);
+int invasion_test_calculate_boss_hp_mod(int level);
+int invasion_test_is_invasion_mob(CHAR_DATA *ch);
+#endif
+
 /* -----------------------------------------------------------------------
  * announce() - send a message to every online player
  * --------------------------------------------------------------------- */
@@ -152,6 +158,24 @@ static bool mob_is_invasion_mob(CHAR_DATA *ch)
     if (!IS_NPC(ch)) return FALSE;
     return (ch->extract_timer == INVASION_TAG);
 }
+
+#ifdef UNIT_TEST_INVASION
+int invasion_test_count_regular_players(int *out_lo, int *out_hi)
+{
+    return count_regular_players(out_lo, out_hi);
+}
+
+int invasion_test_calculate_boss_hp_mod(int level)
+{
+    long hp_bonus = 100L + ((long)level * (long)level * 15L);
+    return (int)URANGE(100L, hp_bonus, 250000L);
+}
+
+int invasion_test_is_invasion_mob(CHAR_DATA *ch)
+{
+    return mob_is_invasion_mob(ch);
+}
+#endif
 
 /* -----------------------------------------------------------------------
  * find_gertrude()
