@@ -143,6 +143,14 @@ unit-test-spell-dam: test_spell_dam.o spell_dam.unit-test.o
 	rm -f unit-test-spell-dam
 	$(CC) -Wl,--gc-sections -o unit-test-spell-dam test_spell_dam.o spell_dam.unit-test.o $(L_FLAGS)
 
+
+pdelete.unit-test.o: pdelete.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o pdelete.unit-test.o pdelete.c
+
+unit-test-pdelete: test_pdelete.o pdelete.unit-test.o
+	rm -f unit-test-pdelete
+	$(CC) -Wl,--gc-sections -o unit-test-pdelete test_pdelete.o pdelete.unit-test.o $(L_FLAGS)
+
 email.unit-test.o: email.c
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_EMAIL -o email.unit-test.o email.c
 
@@ -150,7 +158,7 @@ unit-test-email: test_email.o email.unit-test.o
 	rm -f unit-test-email
 	$(CC) -o unit-test-email test_email.o email.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -160,3 +168,4 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-spendqp
 	./unit-test-spell-dam
 	./unit-test-email
+	./unit-test-pdelete

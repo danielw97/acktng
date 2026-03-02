@@ -40,6 +40,16 @@
 #include <math.h>
 #include <ctype.h>
 
+bool pdelete_has_password(const char *pwd)
+{
+   return (pwd != NULL) && (pwd[0] != '\0');
+}
+
+bool pdelete_missing_password_argument(const char *pwd, const char *arg)
+{
+   return pdelete_has_password(pwd) && ((arg == NULL) || (arg[0] == '\0'));
+}
+
 void do_sdelete(CHAR_DATA *ch, char *argument)
 {
    DESCRIPTOR_DATA *d;
@@ -73,12 +83,13 @@ void do_sdelete(CHAR_DATA *ch, char *argument)
    }
    *pArg = '\0';
 
-   if ((ch->pcdata->pwd != '\0') && (arg1[0] == '\0'))
+   if (pdelete_missing_password_argument(ch->pcdata->pwd, arg1))
    {
       send_to_char("Syntax: pdelete <password>.\n\r", ch);
       return;
    }
-   if ((ch->pcdata->pwd != '\0') && (strcmp(crypt(arg1, ch->pcdata->pwd), ch->pcdata->pwd)))
+   if (pdelete_has_password(ch->pcdata->pwd)
+       && (strcmp(crypt(arg1, ch->pcdata->pwd), ch->pcdata->pwd)))
    {
       WAIT_STATE(ch, 40);
       send_to_char("Wrong password.  Wait 10 seconds.\n\r", ch);
