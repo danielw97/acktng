@@ -71,6 +71,16 @@ static void test_regen_returns_delta_out_of_combat(void)
     assert(move_gain(&ch) == 75);
 }
 
+
+static void test_npc_regen_uses_standard_formula(void)
+{
+    CHAR_DATA ch = make_test_character();
+    ch.act = ACT_IS_NPC;
+
+    assert(hit_gain(&ch) == 30);
+    assert(mana_gain(&ch) == 30);
+}
+
 static void test_regen_is_zero_in_combat(void)
 {
     CHAR_DATA ch = make_test_character();
@@ -88,6 +98,7 @@ int main(void)
     test_timeout_requires_strictly_greater_than_threshold();
     test_negative_and_small_deltas_do_not_abort();
     test_regen_returns_delta_out_of_combat();
+    test_npc_regen_uses_standard_formula();
     test_regen_is_zero_in_combat();
 
     puts("test_update: all tests passed");

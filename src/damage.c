@@ -814,15 +814,6 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
 
         if (deathmatch && !IS_NPC(victim))
             do_quit(victim, "");
-
-        if (IS_NPC(ch) && IS_NPC(victim) && IS_SET(ch->act, ACT_INTELLIGENT))
-        {
-            do_get(ch, "all corpse");
-            do_sacrifice(ch, "corpse");
-            check_re_equip(ch);
-            check_rewield(ch);
-        }
-
         if (!IS_NPC(ch) && IS_NPC(victim))
         {
             if (IS_SET(ch->config, CONFIG_AUTOMONEY))

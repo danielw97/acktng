@@ -364,9 +364,6 @@ void advance_level_wolf(CHAR_DATA *ch)
 
 void gain_exp(CHAR_DATA *ch, long_int gain)
 {
-   if ((IS_NPC(ch)) && !(IS_SET(ch->act, ACT_INTELLIGENT)))
-      return;
-
    if (IS_IMMORTAL(ch))
       return;
 
@@ -520,10 +517,6 @@ int hit_gain(CHAR_DATA *ch)
    if (ch->is_free != FALSE)
       return 0;
 
-   if (IS_NPC(ch) && !IS_SET(ch->act, ACT_INTELLIGENT))
-
-      gain = (5 + ch->level / 30);
-
    gain = (5 + (get_psuedo_level(ch) / 20));
 
    switch (ch->position)
@@ -611,15 +604,9 @@ int mana_gain(CHAR_DATA *ch)
    int gain;
    if (ch->is_free != FALSE)
       return 0;
-   if (IS_NPC(ch) && !IS_SET(ch->act, ACT_INTELLIGENT))
-   {
-      gain = (1 + ch->level / 30);
-   }
-   else
-   {
-      gain = (5 + (get_psuedo_level(ch) / 20));
+   gain = (5 + (get_psuedo_level(ch) / 20));
 
-      switch (ch->position)
+   switch (ch->position)
       {
       case POS_SLEEPING:
          gain += get_curr_int(ch);
@@ -666,7 +653,6 @@ int mana_gain(CHAR_DATA *ch)
       if (IS_SET(ch->in_room->affected_by, ROOM_BV_MANA_STEAL))
          if (gain > 0)
             gain *= -1;
-   }
 
    if (IS_AFFECTED(ch, AFF_POISON))
       gain /= 4;
@@ -897,7 +883,7 @@ void mobile_update(void)
       /*
        * Intelligent mob?
        */
-      /*	if ( IS_SET( ch->act, ACT_INTELLIGENT ) )
+      /*	if ( IS_SET( ch->act, ACT_IS_NPC ) )
             int_handler( ch ); Disabled for now, for bugs.  */
 
       /*
@@ -1979,7 +1965,7 @@ void aggr_update(void)
          {
             vch_next = vch->next_in_room;
 
-            if ((!IS_NPC(vch) || IS_SET(vch->act, ACT_INTELLIGENT)) && vch->level < LEVEL_IMMORTAL && (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch)) && can_see(ch, vch) && (!(IS_UNDEAD(ch) && IS_VAMP(vch))))
+            if (!IS_NPC(vch) && vch->level < LEVEL_IMMORTAL && (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch)) && can_see(ch, vch) && (!(IS_UNDEAD(ch) && IS_VAMP(vch))))
             {
                if (number_range(0, count) == 0)
                   victim = vch;

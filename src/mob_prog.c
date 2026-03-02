@@ -1504,7 +1504,7 @@ void mprog_driver(char *com_list, CHAR_DATA *mob, CHAR_DATA *actor, OBJ_DATA *ob
     * get a random visable mortal player who is in the room with the mob
     */
    for (vch = mob->in_room->first_person; vch; vch = vch->next_in_room)
-      if ((!IS_NPC(vch) || IS_SET(vch->act, ACT_INTELLIGENT)) && vch->level < LEVEL_IMMORTAL && can_see(mob, vch))
+      if (!IS_NPC(vch) && vch->level < LEVEL_IMMORTAL && can_see(mob, vch))
       {
          if (number_range(0, count) == 0)
             rndm = vch;

@@ -968,7 +968,6 @@
 #define ACT_POSTMAN 524288                               /* Postmaster     */
 #define ACT_REWIELD 1048576                              /* Uses better weapons  */
 #define ACT_RE_EQUIP 2097152                             /* Uses better equipment */
-#define ACT_INTELLIGENT 4194304                          /* For shitkicking mobs */
 #define ACT_VAMPIRE 8388608                              /* Vampire mob    */
 #define ACT_NO_HUNT 16777216                             /* Mob can breed        */
 #define ACT_SOLO 33554432                                /* Mob is buffed for solo combat */

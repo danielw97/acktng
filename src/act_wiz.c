@@ -1340,20 +1340,6 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
       send_to_char("Mwhere whom? or int to see the intelligent mobs.\n\r", ch);
       return;
    }
-   if (!str_cmp(arg, "int"))
-   {
-      for (victim = first_char; victim != NULL; victim = victim->next)
-      {
-         if (IS_NPC(victim) && victim->in_room != NULL && IS_SET(victim->act, ACT_INTELLIGENT))
-         {
-            sprintf(buf, "[%5d] %-20s [%5d] %-30s\n\r",
-                    victim->pIndexData->vnum, victim->short_descr, victim->in_room->vnum, victim->in_room->name);
-            send_to_char(buf, ch);
-         }
-      }
-      return;
-   }
-
    found = FALSE;
    for (victim = first_char; victim != NULL; victim = victim->next)
    {
@@ -2554,26 +2540,6 @@ void do_mset(CHAR_DATA *ch, char *argument)
       send_to_char("Your classes have been re-ordered.\n\r", victim);
       send_to_char("Done.\n\r", ch);
       return;
-   }
-
-   if (!str_cmp(arg2, "intel"))
-   {
-      if (!IS_NPC(victim))
-      {
-         send_to_char("Not on PCs.\n\r", ch);
-         return;
-      }
-
-      if (IS_SET(victim->act, ACT_INTELLIGENT))
-      {
-         send_to_char("Removing intelligence.\n\r", ch);
-         REMOVE_BIT(victim->act, ACT_INTELLIGENT);
-      }
-      else
-      {
-         send_to_char("Adding intelligence.\n\r", ch);
-         SET_BIT(victim->act, ACT_INTELLIGENT);
-      }
    }
 
    if (!str_cmp(arg2, "str"))

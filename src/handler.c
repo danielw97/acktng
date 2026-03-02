@@ -2480,11 +2480,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
    if (!fPull)
    {
-      if (IS_NPC(ch) && IS_SET(ch->act, ACT_INTELLIGENT))
-      {
-         char_to_room(ch, get_room_index(ROOM_VNUM_INT_HEAL));
-      }
-      else if (!IS_VAMP(ch))
+      if (!IS_VAMP(ch))
       {
          char_to_room(ch, get_room_index(ROOM_VNUM_MORIBUND));
       }

@@ -377,7 +377,7 @@ void need_to_stand(CHAR_DATA *ch)
    {
       for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
       {
-         if ((AI_MOB(vch)) && (vch->leader == NULL) && (!is_same_group(vch, ch)) && (IS_SET(vch->act, ACT_INTELLIGENT)) && (vch != ch) && ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20) && (get_psuedo_level(vch) - get_psuedo_level(ch) >= -20)))
+         if ((AI_MOB(vch)) && (vch->leader == NULL) && (!is_same_group(vch, ch)) && (vch != ch) && ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20) && (get_psuedo_level(vch) - get_psuedo_level(ch) >= -20)))
          {
             get_up(ch, current_state);
             return;
@@ -613,7 +613,7 @@ void mob_is_standing(CHAR_DATA *ch)
             if (vch->leader != NULL)
                continue;
 
-            if ((vch != ch) && (IS_NPC(vch)) && (IS_SET(vch->act, ACT_INTELLIGENT)) && (!is_same_group(ch, vch)) && (vch->position == POS_STANDING) && ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20 && get_psuedo_level(vch) - get_psuedo_level(ch) >= -20) || (get_psuedo_level(ch) - get_psuedo_level(vch) <= 20 && get_psuedo_level(ch) - get_psuedo_level(vch) >= -20)) && (can_see(vch, ch)) && (can_see(ch, vch)))
+            if ((vch != ch) && (IS_NPC(vch)) && (!is_same_group(ch, vch)) && (vch->position == POS_STANDING) && ((get_psuedo_level(vch) - get_psuedo_level(ch) <= 20 && get_psuedo_level(vch) - get_psuedo_level(ch) >= -20) || (get_psuedo_level(ch) - get_psuedo_level(vch) <= 20 && get_psuedo_level(ch) - get_psuedo_level(vch) >= -20)) && (can_see(vch, ch)) && (can_see(ch, vch)))
 
             {
                if (vch->leader == NULL)
@@ -810,12 +810,6 @@ bool valid_target(CHAR_DATA *ch, CHAR_DATA *victim, int l)
     * Don't attack group members or self!
     */
    if (is_same_group(ch, victim))
-      return FALSE;
-
-   /*
-    * Don't attack other int mobs!
-    */
-   if (IS_NPC(victim) && IS_SET(victim->act, ACT_INTELLIGENT))
       return FALSE;
 
    /*
@@ -1301,7 +1295,7 @@ void int_combat_handler(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    /*
     * Called from fight.c during combat to enable mobs to use spells and
-    * skills.  ACT_INTELLIGENT mobs can call cast() now.
+    * skills.  ACT_IS_NPC mobs can call cast() now.
     * --Stephen
     */
 

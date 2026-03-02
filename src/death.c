@@ -207,14 +207,7 @@ void make_corpse(CHAR_DATA *ch, char *argument)
    }
    else
    {
-      if (IS_SET(ch->act, ACT_INTELLIGENT))
-      {
-         obj_to_room(corpse, get_room_index(ROOM_VNUM_INT_HEAL));
-      }
-      else
-      {
-         obj_to_room(corpse, ch->in_room);
-      }
+      obj_to_room(corpse, ch->in_room);
       return;
    }
 }
@@ -288,14 +281,6 @@ void raw_kill(CHAR_DATA *victim, char *argument)
       /*        unhunt(check);*/
    }
 
-   if (IS_NPC(victim) && !IS_SET(victim->act, ACT_INTELLIGENT))
-   {
-      victim->pIndexData->killed++;
-      kill_table[URANGE(0, victim->level, MAX_LEVEL - 1)].killed++;
-      extract_char(victim, TRUE);
-      return;
-   }
-
    extract_char(victim, FALSE);
    while (victim->first_affect)
       affect_remove(victim, victim->first_affect);
@@ -306,44 +291,6 @@ void raw_kill(CHAR_DATA *victim, char *argument)
    victim->mana = UMAX(1, victim->mana);
    victim->move = UMAX(1, victim->move);
    save_char_obj(victim);
-   if (IS_NPC(victim) && IS_SET(victim->act, ACT_INTELLIGENT))
-   {
-
-      OBJ_DATA *my_corpse = NULL;
-
-      for (my_corpse = victim->in_room->first_content; my_corpse; my_corpse = my_corpse->next_in_room)
-      {
-         if ((my_corpse->item_type == ITEM_CORPSE_NPC)
-             /*
-              * && ( strstr( victim->short_descr, my_corpse->description ) != NULL )
-              */
-         )
-         {
-            break;
-         }
-      }
-      if (my_corpse == NULL)
-      {
-         char monbuf[MSL];
-         sprintf(monbuf, "%s is looking for their corpse in room %d, but it's not there",
-                 victim->name, victim->in_room->vnum);
-         monitor_chan(monbuf, MONITOR_MOB);
-      }
-      else
-      {
-         OBJ_DATA *obj;
-         victim->is_quitting = FALSE;
-         do_stand(victim, "");
-         for (obj = my_corpse->first_content; obj; obj = obj->next_content)
-         {
-            obj_from_obj(obj);
-            obj_to_char(obj, victim);
-         }
-         do_get(victim, "all from corpse");
-         do_sacrifice(victim, "corpse");
-         do_wear(victim, "all");
-      }
-   }
 }
 
 void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -363,7 +310,7 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
     * -S- Mod: INTELLIGENT mobs *can* gain exp.  So there!
     */
 
-   if (((IS_NPC(ch)) && (!IS_SET(ch->act, ACT_INTELLIGENT))) || (!IS_NPC(victim)) || (victim == ch))
+   if ((IS_NPC(ch)) || (!IS_NPC(victim)) || (victim == ch))
       return;
 
    members = 0;
@@ -375,8 +322,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
    invasion_on_death(victim, ch);
 
    base = victim->exp; /* Now share this out... */
-   if (IS_SET(victim->act, ACT_INTELLIGENT))
-      base = exp_for_mobile(victim->level, victim);
 
    for (gch = ch->in_room->first_person; gch != NULL; gch = gch->next_in_room)
    {
@@ -486,8 +431,6 @@ void group_gain(CHAR_DATA *ch, CHAR_DATA *victim)
 
       sprintf(buf, "You Receive %d Experience Points.\n\r", funky);
       send_to_char(buf, gch);
-      if (IS_NPC(gch) && IS_SET(gch->act, ACT_INTELLIGENT))
-         gch->intell_exp += funky;
       gain_exp(gch, funky);
 
       if (IS_VAMP(gch) && !IS_NPC(gch))

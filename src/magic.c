@@ -382,7 +382,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
     */
    /*
     * if ( IS_NPC(ch)
-    * && ( !IS_SET( ch->act, ACT_INTELLIGENT ) )
+    * && ( !IS_SET( ch->act, ACT_IS_NPC ) )
     * && ( !ch->pIndexData->progtypes
     * || IS_AFFECTED( ch, AFF_CHARM ) ) )
     * return;
