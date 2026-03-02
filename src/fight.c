@@ -31,6 +31,7 @@
 #include <time.h>
 #include "globals.h"
 #include "magic.h"
+#include "cloak.h"
 #include "tables.h"
 #include <math.h>
 
@@ -480,8 +481,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       if (IS_SET(ch->act, ACT_SOLO))
          diceroll += (get_psuedo_level(ch) * 5);
    }
-   if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
-      diceroll += get_psuedo_level(ch) * 2;
+   diceroll += cloak_adept_hitroll_bonus(ch);
 
    /* Player vs player bonus, to handle unbalanced hitroll vs ac */
    if (!IS_NPC(ch) && !IS_NPC(victim) && get_psuedo_level(ch) > 80 && get_psuedo_level(victim) > 80)
@@ -970,8 +970,7 @@ int get_parry(CHAR_DATA *ch)
 
       chance = get_curr_str(ch);
    }
-   if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
-      chance += 5;
+   chance += cloak_adept_defense_bonus(ch);
 
    chance += stance_app[ch->stance].speed_mod;
    chance += get_speed(ch) * 5;
@@ -1013,8 +1012,7 @@ int get_dodge(CHAR_DATA *ch)
    {
       chance = get_curr_dex(ch);
    }
-   if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
-      chance += 5;
+   chance += cloak_adept_defense_bonus(ch);
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
       chance += 20;
@@ -1068,8 +1066,7 @@ int get_block(CHAR_DATA *ch)
       chance = get_curr_con(ch);
    }
 
-   if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
-      chance += 5;
+   chance += cloak_adept_defense_bonus(ch);
 
    if (buckler)
       chance /= 2;
@@ -1126,8 +1123,7 @@ int get_counter(CHAR_DATA *ch)
 
    chance += get_speed(ch) * 5;
 
-   if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
-      chance += 5;
+   chance += cloak_adept_defense_bonus(ch);
 
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
       chance += 20;

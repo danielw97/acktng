@@ -1884,8 +1884,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:absorption", {60, 182, 182, 182, 182, 43,
-                         60, 182, 182, 182, 182, 43},
+    "cloak:absorption", {102, 102, 102, 102, 102, 102,
+                         102, 102, 102, 102, 102, 102},
     spell_cloak_absorb, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 221 ), 500, 12, FALSE,
     "", "@@NThe @@lcloak@@N around your body fades.",
@@ -1895,8 +1895,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:reflection", {48, 182, 182, 182, 182, 182,
-                         48, 182, 182, 182, 182, 182},
+    "cloak:reflection", {102, 102, 102, 102, 102, 102,
+                         102, 102, 102, 102, 102, 102},
     spell_cloak_reflect, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 222 ), 500, 12, FALSE,
     "", "@@NThe @@lc@@el@@ro@@ya@@ak@@N around your body fades.",

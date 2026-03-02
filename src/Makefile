@@ -37,7 +37,7 @@ O_FILES = act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o \
 	  werewolf.o wizutil.o write.o
 O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o clutch.o comm.o \
-	  const.o damage.o cloak_drain.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
+	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  interp.o invasion.o item_generation.o keep.o lists.o macros.o magic.o magic2.o magic3.o magic4.o mapper.o \
 	  mob_commands.o mob_prog.o mount.o obj_fun.o pdelete.o proposition.o quest.o reincarnate.o rulers.o \
 	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
@@ -103,9 +103,9 @@ unit-test-comm: test_comm.o comm.unit-test.o
 fight.unit-test.o: fight.c
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o fight.unit-test.o fight.c
 
-unit-test-fight: test_fight.o fight.unit-test.o
+unit-test-fight: test_fight.o fight.unit-test.o cloak.unit-test.o
 	rm -f unit-test-fight
-	$(CC) -Wl,--gc-sections -o unit-test-fight test_fight.o fight.unit-test.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o unit-test-fight test_fight.o fight.unit-test.o cloak.unit-test.o $(L_FLAGS)
 
 act_info.unit-test.o: act_info.c
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o act_info.unit-test.o act_info.c
@@ -115,20 +115,17 @@ unit-test-act-info: test_act_info.o act_info.unit-test.o
 	$(CC) -Wl,--gc-sections -o unit-test-act-info test_act_info.o act_info.unit-test.o $(L_FLAGS)
 
 
-unit-test-cloak: test_cloak.o cloak.o
+cloak.unit-test.o: cloak.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_CLOAK -o cloak.unit-test.o cloak.c
+
+unit-test-cloak: test_cloak.o cloak.unit-test.o
 	rm -f unit-test-cloak
-	$(CC) -o unit-test-cloak test_cloak.o cloak.o $(L_FLAGS)
+	$(CC) -o unit-test-cloak test_cloak.o cloak.unit-test.o $(L_FLAGS)
 
 unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak
-unit-test-cloak-drain: test_cloak_drain.o cloak_drain.o
-	rm -f unit-test-cloak-drain
-	$(CC) -o unit-test-cloak-drain test_cloak_drain.o cloak_drain.o $(L_FLAGS)
-
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak-drain
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
 	./unit-test-fight
 	./unit-test-act-info
 	./unit-test-cloak
-	./unit-test-cloak-drain
