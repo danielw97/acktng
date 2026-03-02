@@ -522,9 +522,9 @@ int get_spellpower(CHAR_DATA *ch)
    return spellpower;
 }
 
-int get_max_hp(CHAR_DATA *ch)
+long get_max_hp(CHAR_DATA *ch)
 {
-   int hp = 25;
+   long hp = 25;
 
    hp += get_stat(ch, APPLY_HIT);
 
@@ -541,20 +541,38 @@ int get_max_hp(CHAR_DATA *ch)
    return hp;
 }
 
-int get_max_mana(CHAR_DATA *ch)
+long get_max_mana(CHAR_DATA *ch)
 {
-   int mana = 100;
+   long mana = 100;
 
    mana += get_stat(ch, APPLY_MANA);
+
+   if (!IS_NPC(ch))
+   {
+      mana += ch->pcdata->mana_from_gain;
+   }
+   else
+   {
+      mana += (ch->level * 5) + (ch->level*ch->level*2);
+   }
 
    return mana;
 }
 
-int get_max_move(CHAR_DATA *ch)
+long get_max_move(CHAR_DATA *ch)
 {
-   int move = 100;
+   long move = 100;
 
    move += get_stat(ch, APPLY_MOVE);
+
+   if (!IS_NPC(ch))
+   {
+      move += ch->pcdata->move_from_gain;
+   }
+   else
+   {
+      move += (ch->level * 5) + (ch->level*ch->level*2);
+   }
 
    return move;
 }

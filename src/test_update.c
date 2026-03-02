@@ -18,9 +18,9 @@ int get_curr_wis(CHAR_DATA *ch) { (void)ch; return 10; }
 int get_curr_dex(CHAR_DATA *ch) { (void)ch; return 10; }
 int get_curr_con(CHAR_DATA *ch) { (void)ch; return 10; }
 sh_int get_psuedo_level(CHAR_DATA *ch) { return ch->level; }
-int get_max_hp(CHAR_DATA *ch) { (void)ch; return 100; }
-int get_max_mana(CHAR_DATA *ch) { (void)ch; return 120; }
-int get_max_move(CHAR_DATA *ch) { (void)ch; return 130; }
+long get_max_hp(CHAR_DATA *ch) { (void)ch; return 100; }
+long get_max_mana(CHAR_DATA *ch) { (void)ch; return 120; }
+long get_max_move(CHAR_DATA *ch) { (void)ch; return 130; }
 bool is_fighting(CHAR_DATA *ch) { return ch->fighting != NULL; }
 
 static CHAR_DATA make_test_character(void)
