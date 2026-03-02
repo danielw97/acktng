@@ -106,7 +106,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
     {
         int mana;
         mana = mana_cost(ch, dt);
-        victim->mana = UMIN(victim->max_mana, victim->mana + mana);
+        victim->mana = UMIN(get_max_mana(victim), victim->mana + mana);
 
         act("@@N$n's @@lcloak@@N glows brightly as $N's spell hits it, then fades@@N!!", victim, NULL, ch, TO_ROOM);
         act("@@N$N's @@lcloak@@N glows brightly, and absorbs your spell@@N!!", ch, NULL, victim, TO_CHAR);
@@ -650,9 +650,9 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
             break;
 
         default:
-            if (dam > victim->max_hit / 4)
+            if (dam > get_max_hp(victim) / 4)
                 send_to_char("That really did HURT!\n\r", victim);
-            if (victim->hit < victim->max_hit / 4)
+            if (victim->hit < get_max_hp(victim) / 4)
                 send_to_char("You sure are BLEEDING!\n\r", victim);
             break;
         }
@@ -736,7 +736,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
      */
     if (IS_NPC(victim) && dam > 0)
     {
-        if ((IS_SET(victim->act, ACT_WIMPY) && number_bits(1) == 0 && victim->hit < victim->max_hit / 2) || (IS_AFFECTED(victim, AFF_CHARM) && victim->master != NULL && victim->master->in_room != victim->in_room))
+        if ((IS_SET(victim->act, ACT_WIMPY) && number_bits(1) == 0 && victim->hit < get_max_hp(victim) / 2) || (IS_AFFECTED(victim, AFF_CHARM) && victim->master != NULL && victim->master->in_room != victim->in_room))
             do_flee(victim, "");
     }
 
@@ -793,7 +793,7 @@ bool do_lifesteal(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, 
         sprintf(buf, "@@WYou scream in @@Ragony@@W as $p shrieks, and shrouds you in an evil @@da@@eur@@da@@N!! (@@r%d@@N)", ls);
         act(buf, victim, wield, ch, TO_CHAR);
 
-        ch->hit = UMIN(ch->max_hit, ch->hit + ls);
+        ch->hit = UMIN(get_max_hp(ch), ch->hit + ls);
 
         ch->alignment = UMAX(-1000, ch->alignment - 50);
 
@@ -1193,9 +1193,9 @@ void obj_damage(OBJ_DATA *obj, CHAR_DATA *victim, int dam)
         break;
 
     default:
-        if (dam > victim->max_hit / 4)
+        if (dam > get_max_hp(victim) / 4)
             send_to_char("That really did HURT!\n\r", victim);
-        if (victim->hit < victim->max_hit / 4)
+        if (victim->hit < get_max_hp(victim) / 4)
             send_to_char("You sure are BLEEDING!\n\r", victim);
         break;
     }

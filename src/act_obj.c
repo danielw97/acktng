@@ -1121,7 +1121,7 @@ bool remove_obj(CHAR_DATA *ch, int iWear, bool fReplace)
          hp_mod += aff->modifier;
    }
 
-   if ((hp_mod >= ch->max_hit) || (hp_mod >= ch->hit))
+   if ((hp_mod >= get_max_hp(ch)) || (hp_mod >= ch->hit))
    {
       send_to_char("That is the only thing keeping you alive!\n\r", ch);
       return FALSE;

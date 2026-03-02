@@ -136,13 +136,13 @@ bool round_ai_update(CHAR_DATA *ch)
       }
    }
 
-   if (IS_SET(ch->act, ACT_SOLO) && (ch->hit < ch->max_hit * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))) && ch->level > 80)
+   if (IS_SET(ch->act, ACT_SOLO) && (ch->hit < get_max_hp(ch) * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))) && ch->level > 80)
    {
       do_cast(ch, "heal self");
    }
    else if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && ch->hit > 0)
    {
-      if (ch->hit < ch->max_hit * 2 / 3)
+      if (ch->hit < get_max_hp(ch) * 2 / 3)
       {
          if (IS_SET(ch->def, DEF_HEAL))
          {
@@ -190,7 +190,7 @@ bool check_cast(CHAR_DATA *ch)
       sh_int index;
 
       cast_frequency = get_psuedo_level(ch) / 3; /* maybe set in olc later? */
-      if ((number_range(0, 99) < cast_frequency) && (ch->mana >= (40 * ch->max_mana / 100)))
+      if ((number_range(0, 99) < cast_frequency) && (ch->mana >= (40 * get_max_mana(ch) / 100)))
       {
          for (index = 1; index < 32; index++)
          {

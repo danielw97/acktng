@@ -977,8 +977,8 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
       act("You see nothing special about $M.", ch, NULL, victim, TO_CHAR);
    }
 
-   if (victim->max_hit > 0)
-      pct = (100 * victim->hit) / victim->max_hit;
+   if (get_max_hp(victim) > 0)
+      pct = (100 * victim->hit) / get_max_hp(victim);
    else
       pct = -1;
 
@@ -3018,7 +3018,7 @@ void do_wimpy(CHAR_DATA *ch, char *argument)
    one_argument(argument, arg);
 
    if (arg[0] == '\0')
-      wimpy = ch->max_hit / 5;
+      wimpy = get_max_hp(ch) / 5;
    else
       wimpy = atoi(arg);
 
@@ -3028,7 +3028,7 @@ void do_wimpy(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (wimpy > ch->max_hit)
+   if (wimpy > get_max_hp(ch))
    {
       send_to_char("Such cowardice ill becomes you.\n\r", ch);
       return;
@@ -4244,8 +4244,8 @@ void do_diagnose(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (victim->max_hit > 0)
-      pct = (100 * victim->hit) / victim->max_hit;
+   if (get_max_hp(victim) > 0)
+      pct = (100 * victim->hit) / get_max_hp(victim);
    else
       pct = -1;
 
@@ -4349,7 +4349,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
       act("$N gestures towards $n.", ch, NULL, mob, TO_NOTVICT);
       act("$N gestures towards you.", ch, NULL, mob, TO_CHAR);
       ch->gold -= 1000;
-      ch->mana = UMIN(ch->max_mana, ch->mana + 50);
+      ch->mana = UMIN(get_max_mana(ch), ch->mana + 50);
       break;
 
    case 'H': /* Heal */
