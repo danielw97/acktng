@@ -2796,9 +2796,10 @@ void do_mset(CHAR_DATA *ch, char *argument)
          return;
       }
 
-      if (value < 0 || value > 100)
+      if (value < 1 || value >= MAX_MOB_LEVEL)
       {
-         send_to_char("Level range is 0 to 100.\n\r", ch);
+         sprintf(buf, "Level range is 1 to %d.\n\r", MAX_MOB_LEVEL - 1);
+         send_to_char(buf, ch);
          return;
       }
       victim->level = value;

@@ -1622,9 +1622,10 @@ void build_setmob(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg2, "level"))
    {
-      if (value < 1 || value > 170)
+      if (value < 1 || value >= MAX_MOB_LEVEL)
       {
-         send_to_char("Level range is 1 to 170.\n\r", ch);
+         sprintf(buf, "Level range is 1 to %d.\n\r", MAX_MOB_LEVEL - 1);
+         send_to_char(buf, ch);
          return;
       }
       pMob->level = value;
