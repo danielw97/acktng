@@ -53,6 +53,8 @@ bool valid_email_addy(char *address)
    return valid;
 }
 
+#ifndef UNIT_TEST_EMAIL
+
 void do_email(CHAR_DATA *ch, char *argument)
 {
    /* interface for setting up email addresses */
@@ -155,7 +157,7 @@ void do_email(CHAR_DATA *ch, char *argument)
       }
       else
       {
-         sprintf(outbuf, "%s is not an acceptable email address.\n\r", arg2);
+         snprintf(outbuf, sizeof(outbuf), "%.4000s is not an acceptable email address.\n\r", arg2);
          send_to_char(outbuf, ch);
          return;
       }
@@ -249,22 +251,23 @@ void send_email(const char *m_address, const char *m_subject, const char *mfilen
    char dbbuf[MSL];
    int forkval;
 
-   sprintf(mailbuf, "mail -s \"%s\" %s <%s%s", m_subject, m_address, MAIL_DIR, capitalize(mfilename));
+   snprintf(mailbuf, sizeof(mailbuf), "mail -s \"%s\" %s <%s%s", m_subject, m_address, MAIL_DIR,
+            capitalize(mfilename));
    signal(SIGCHLD, SIG_IGN);
    if ((forkval = fork()) > 0)
    {
-      sprintf(dbbuf, "Just sent email: %s", mailbuf);
+      snprintf(dbbuf, sizeof(dbbuf), "Just sent email: %.8000s", mailbuf);
       monitor_chan(dbbuf, MONITOR_SYSTEM);
       return;
    }
    else if (forkval < 0)
    {
-      sprintf(dbbuf, "Error in fork for sent email: %s", mailbuf);
+      snprintf(dbbuf, sizeof(dbbuf), "Error in fork for sent email: %.8000s", mailbuf);
       monitor_chan(dbbuf, MONITOR_SYSTEM);
 
       return;
    }
-   sprintf(mailfpbuf, "%s%s", MAIL_DIR, mfilename);
+   snprintf(mailfpbuf, sizeof(mailfpbuf), "%s%s", MAIL_DIR, mfilename);
    if ((mailfp = fopen(mailfpbuf, "r")) == NULL)
    {
       kill(getpid(), SIGKILL); /* didn't have a valid file to mail */
@@ -275,9 +278,11 @@ void send_email(const char *m_address, const char *m_subject, const char *mfilen
       fclose(mailfp);
       mailfp = NULL;
    }
-   system(mailbuf);
-   sprintf(delbuf, "rm %s%s", MAIL_DIR, mfilename);
-   system(delbuf);
+   if (system(mailbuf) == -1)
+      monitor_chan("Error running mail command.", MONITOR_SYSTEM);
+   snprintf(delbuf, sizeof(delbuf), "rm %s%s", MAIL_DIR, mfilename);
+   if (system(delbuf) == -1)
+      monitor_chan("Error deleting temporary mail file.", MONITOR_SYSTEM);
    kill(getpid(), SIGKILL);
    return;
 }
@@ -291,11 +296,10 @@ bool save_mail_file(const char *mfilename, char *mtext)
       fclose(fpReserve);
       fpReserve = NULL;
    }
-   sprintf(mailfpfilename, "%s%s", MAIL_DIR, mfilename);
+   snprintf(mailfpfilename, sizeof(mailfpfilename), "%s%s", MAIL_DIR, mfilename);
    if ((mailfp = fopen(mailfpfilename, "w")) == NULL)
    {
       if (fpReserve != NULL)
-         ;
       {
          fclose(fpReserve);
          fpReserve = NULL;
@@ -355,3 +359,6 @@ void send_rep_out(CHAR_DATA *ch, char *outbuf, bool mailme, char *msub)
       send_to_char(outbuf, ch);
    }
 }
+
+
+#endif /* UNIT_TEST_EMAIL */
