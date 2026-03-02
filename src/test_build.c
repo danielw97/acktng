@@ -16,5 +16,8 @@ int main(void)
 
     build_testable_join_command_and_argument(buf, 8, "abcdef", "ghijk");
     assert(buf[7] == '\0');
+
+    build_testable_join_command_and_argument(buf, sizeof(buf), NULL, "name");
+    assert(strcmp(buf, " name") == 0);
     return 0;
 }

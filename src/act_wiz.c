@@ -894,12 +894,12 @@ void do_mstat(CHAR_DATA *ch, char *argument)
       strcat(buf1, buf);
    }
 
-   sprintf(buf, "Hp: %d/%d.  Mana: %d/%d.  Move: %d/%d.  Practices: %d.\n\r",
+   sprintf(buf, "Hp: %ld/%ld.  Mana: %ld/%ld.  Move: %ld/%ld.  Practices: %d.\n\r",
            victim->hit, get_max_hp(victim), victim->mana, get_max_mana(victim), victim->move, get_max_move(victim), victim->practice);
    strcat(buf1, buf);
 
    sprintf(buf,
-           "Lv: %d.  Class: %d.  Align: %d.  AC: %d.  Gold: %d.  Exp: %d.\n\r",
+           "Lv: %d.  Class: %d.  Align: %d.  AC: %d.  Gold: %d.  Exp: %ld.\n\r",
            victim->level, victim->class, victim->alignment, get_ac(victim), victim->gold, victim->exp);
    strcat(buf1, buf);
 
@@ -3479,16 +3479,16 @@ void do_users(CHAR_DATA *ch, char *argument)
             break;
          }
 
-         sprintf(buf + strlen(buf), "[%3d %2d %18s] %-12s %-30s",
-                 d->descriptor,
-                 d->connected,
-                 buf3, d->original ? d->original->name : d->character ? d->character->name
-                                                                      : "(none)",
-                 d->host);
+         snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "[%3d %2d %18.18s] %-12.12s %-30.30s",
+                  d->descriptor,
+                  d->connected,
+                  buf3, d->original ? d->original->name : d->character ? d->character->name
+                                                                       : "(none)",
+                  d->host);
          if (get_trust(ch) == 85)
-            sprintf(buf + strlen(buf), "  %5d\n\r", d->remote_port);
+            snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "  %5d\n\r", d->remote_port);
          else
-            sprintf(buf + strlen(buf), "\n\r");
+            snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "\n\r");
       }
    }
 
@@ -3873,7 +3873,7 @@ void do_resetpassword(CHAR_DATA *ch, char *argument)
 
    victim = get_char_world(ch, arg1);
 
-   if (victim == '\0')
+   if (victim == NULL)
    {
       send_to_char("This character is not playing at this time\n\r", ch);
       return;
@@ -3889,7 +3889,7 @@ void do_resetpassword(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if ((ch->pcdata->pwd != '\0') && (arg1[0] == '\0' || arg2[0] == '\0'))
+   if ((ch->pcdata->pwd != NULL) && (arg1[0] == '\0' || arg2[0] == '\0'))
    {
       send_to_char("Syntax: password <char> <new>.\n\r", ch);
       return;
@@ -4698,7 +4698,7 @@ void do_test(CHAR_DATA *ch, char *argument)
    char testing[MSL];
    char catbuf[MSL];
    sprintf(testing, "%s", "Testing anti-color capitalize:");
-   sprintf(catbuf, argument);
+   snprintf(catbuf, sizeof(catbuf), "%s", argument);
    safe_strcat(MSL, testing, capitalize(catbuf));
    safe_strcat(MSL, testing, "\n\r");
    send_to_char(testing, ch);
@@ -5229,7 +5229,7 @@ void do_imtlset(CHAR_DATA *ch, char *argument)
             send_to_char("All immskills have been deleted.\n\r", ch);
             return;
          }
-         else if (arg1)
+         else if (arg1[0] != '\0')
          {
             /*
              * Cool great imtlset <victim> - <skill> code...
@@ -5364,7 +5364,7 @@ const char *name_expand(CHAR_DATA *ch)
       if (is_name(name, rch->name))
          count++;
 
-   sprintf(outbuf, "%d.%s", count, name);
+   snprintf(outbuf, sizeof(outbuf), "%d.%.120s", count, name);
    return outbuf;
 }
 
@@ -5684,6 +5684,7 @@ void do_areasave(CHAR_DATA *ch, char *argument)
    return;
 }
 
+
 void do_findreset(CHAR_DATA *ch, char *argument)
 {
    char arg1[MSL], arg2[MSL];
@@ -5732,7 +5733,7 @@ void do_findreset(CHAR_DATA *ch, char *argument)
    }
    vnum = atoi(arg2);
 
-   sprintf(outbuf, "Resets for %s %d:\n\r", arg1, vnum);
+   snprintf(outbuf, sizeof(outbuf), "Resets for %.64s %d:\n\r", arg1, vnum);
    if (mworld)
    {
       AREA_DATA *pArea;
@@ -5807,7 +5808,7 @@ void do_findreset(CHAR_DATA *ch, char *argument)
             } /* if ( fmob ) */
          } /* for reset */
       } /* for pArea */
-      sprintf(mailsub, "Findresets for %s %d:\n\r", arg1, vnum);
+      snprintf(mailsub, sizeof(mailsub), "Findresets for %.64s %d:\n\r", arg1, vnum);
       send_rep_out(ch, outbuf, mailme, mailsub);
       return;
    } /* if ( mworld ) */
