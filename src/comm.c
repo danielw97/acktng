@@ -1707,8 +1707,8 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          int percent;
          char wound[100];
 
-         if (tank->max_hit > 0)
-            percent = tank->hit * 100 / tank->max_hit;
+         if (get_max_hp(tank) > 0)
+            percent = tank->hit * 100 / get_max_hp(tank);
          else
             percent = -1;
 
@@ -1749,8 +1749,8 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
       char wound[100];
       char buf[MAX_STRING_LENGTH];
 
-      if (victim->max_hit > 0)
-         percent = victim->hit * 100 / victim->max_hit;
+      if (get_max_hp(victim) > 0)
+         percent = victim->hit * 100 / get_max_hp(victim);
       else
          percent = -1;
 

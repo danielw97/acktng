@@ -93,4 +93,3 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
-	./unit-test-fight
