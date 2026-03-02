@@ -5,7 +5,6 @@ bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
 bool subtract_energy_cost(CHAR_DATA *ch, int gsn);
 int get_energy_cost(CHAR_DATA *ch, int gsn);
 void trip(CHAR_DATA *ch, CHAR_DATA *victim);
-int one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 
 void do_rescue(CHAR_DATA *ch, char *argument)
 {
