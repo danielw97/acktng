@@ -131,6 +131,36 @@ static void test_get_parry_composition_and_cap(void)
     reset_equipment();
 }
 
+static void test_get_parry_weapon_slot_fallbacks(void)
+{
+    CHAR_DATA ch;
+    OBJ_DATA left_weapon;
+    OBJ_DATA two_hand_weapon;
+
+    clear_character(&ch);
+    memset(&left_weapon, 0, sizeof(left_weapon));
+    left_weapon.item_type = ITEM_WEAPON;
+    left_hand = &left_weapon;
+
+    ch.damroll = 12;
+    ch.wait = 1;
+    ch.stance = 3;
+    assert(get_parry(&ch) == 18);
+
+    reset_equipment();
+    clear_character(&ch);
+    memset(&two_hand_weapon, 0, sizeof(two_hand_weapon));
+    two_hand_weapon.item_type = ITEM_WEAPON;
+    two_handed = &two_hand_weapon;
+
+    ch.damroll = 14;
+    ch.wait = 0;
+    ch.stance = 2;
+    assert(get_parry(&ch) == 17);
+
+    reset_equipment();
+}
+
 static void test_get_dodge_guard_and_wolf_bonus(void)
 {
     CHAR_DATA ch;
@@ -226,6 +256,27 @@ static void test_get_block_standard_shield_and_wolf_lockout(void)
     reset_equipment();
 }
 
+static void test_get_block_npc_left_shield_and_cap(void)
+{
+    CHAR_DATA ch;
+    OBJ_DATA shield;
+
+    clear_character(&ch);
+    memset(&shield, 0, sizeof(shield));
+    shield.item_type = ITEM_ARMOR;
+    left_hand = &shield;
+
+    ch.act = ACT_IS_NPC | ACT_SOLO;
+    ch.saving_throw = 40;
+    ch.wait = 2;
+    ch.stance = 2;
+    ch.block_mod = 8;
+
+    assert(get_block(&ch) == 50);
+
+    reset_equipment();
+}
+
 static void test_get_counter_requires_awake_and_training(void)
 {
     CHAR_DATA ch;
@@ -289,6 +340,22 @@ static void test_get_counter_wolf_bonus_for_pc(void)
     assert(get_counter(&ch) == 47);
 }
 
+static void test_get_counter_npc_ignores_can_use_skill(void)
+{
+    CHAR_DATA ch;
+
+    clear_character(&ch);
+    ch.act = ACT_IS_NPC | ACT_SOLO;
+    ch.skills = MOB_COUNTER;
+    ch.level = 31;
+    ch.hitroll = 10;
+    ch.wait = 1;
+
+    skill_available = FALSE;
+    assert(get_counter(&ch) == 34);
+    skill_available = TRUE;
+}
+
 static void test_get_evasion_piercing_composition(void)
 {
     CHAR_DATA ch;
@@ -309,13 +376,16 @@ int main(void)
 {
     test_get_parry_guard_clauses();
     test_get_parry_composition_and_cap();
+    test_get_parry_weapon_slot_fallbacks();
     test_get_dodge_guard_and_wolf_bonus();
     test_get_dodge_npc_and_cap();
     test_get_block_shield_requirements_and_buckler();
     test_get_block_standard_shield_and_wolf_lockout();
+    test_get_block_npc_left_shield_and_cap();
     test_get_counter_requires_awake_and_training();
     test_get_counter_applies_modifiers();
     test_get_counter_wolf_bonus_for_pc();
+    test_get_counter_npc_ignores_can_use_skill();
     test_get_evasion_piercing_composition();
 
     puts("test_fight: all tests passed");
