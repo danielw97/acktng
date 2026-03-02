@@ -4,6 +4,7 @@
 void *hash_ref_from_vnum(int vnum);
 int vnum_from_hash_ref(void *ref);
 int resolve_persistent_container_room_vnum_for_test(int room_vnum);
+int persistent_container_where_vnum_for_save_for_test(int in_room_vnum, int in_obj);
 
 struct room_index_data
 {
@@ -71,6 +72,21 @@ static void test_keep_chest_corpse_load_uses_limbo_vnum_when_requested_room_is_m
     assert(resolve_persistent_container_room_vnum_for_test(requested_room.vnum) == ROOM_VNUM_LIMBO);
 }
 
+static void test_keep_chest_corpse_save_uses_container_vnum_when_in_room(void)
+{
+    assert(persistent_container_where_vnum_for_save_for_test(4567, 0) == 4567);
+}
+
+static void test_keep_chest_corpse_save_uses_default_when_nested_in_object(void)
+{
+    assert(persistent_container_where_vnum_for_save_for_test(4567, 1) == 3300);
+}
+
+static void test_keep_chest_corpse_save_uses_default_when_room_missing(void)
+{
+    assert(persistent_container_where_vnum_for_save_for_test(0, 0) == 3300);
+}
+
 int main(void)
 {
     test_round_trip_positive_vnum();
@@ -79,6 +95,9 @@ int main(void)
     test_resolve_persistent_room_uses_requested_room_when_present();
     test_keep_chest_corpse_load_falls_back_to_limbo_room();
     test_keep_chest_corpse_load_uses_limbo_vnum_when_requested_room_is_missing();
+    test_keep_chest_corpse_save_uses_container_vnum_when_in_room();
+    test_keep_chest_corpse_save_uses_default_when_nested_in_object();
+    test_keep_chest_corpse_save_uses_default_when_room_missing();
 
     puts("test_save: all tests passed");
     return 0;
