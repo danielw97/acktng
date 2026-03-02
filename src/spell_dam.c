@@ -122,6 +122,31 @@ int spell_dam_base_penalty_for_summon(int summon)
    }
 }
 
+const char *spell_dam_special_for_summon(int summon)
+{
+   switch (summon)
+   {
+      case WATER_ELEMENTAL:
+         return "spec_summon_water";
+      case FIRE_ELEMENTAL:
+         return "spec_summon_fire";
+      case EARTH_ELEMENTAL:
+         return "spec_summon_earth";
+      case SKELETON:
+         return "spec_summon_undead";
+      case HOLY_AVENGER:
+         return "spec_summon_holy";
+      case SOUL_THIEF:
+         return "spec_summon_shadow";
+      case IRON_GOLEM:
+      case DIAMOND_GOLEM:
+         return "spec_summon_metal";
+      default:
+         return NULL;
+   }
+}
+
+
 int get_spell_damage(CHAR_DATA *ch, int gsn)
 {
    int base;
@@ -170,6 +195,9 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int summon)
    CHAR_DATA *summoned;
    char name[MAX_STRING_LENGTH], short_desc[MAX_STRING_LENGTH], long_desc[MAX_STRING_LENGTH];
    int base_penalty = spell_dam_base_penalty_for_summon(summon);
+
+   const char *summon_special_name = spell_dam_special_for_summon(summon);
+   SPEC_FUN *summon_special = summon_special_name != NULL ? spec_lookup(summon_special_name) : NULL;
 
    if (summon == WATER_ELEMENTAL)
    {
@@ -233,6 +261,7 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int summon)
    summoned->mana = summoned->max_mana;
 
    summoned->name = str_dup(name);
+   summoned->spec_fun = summon_special;
    summoned->short_descr = str_dup(short_desc);
    summoned->long_descr = str_dup(long_desc);
 

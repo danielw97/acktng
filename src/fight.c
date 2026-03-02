@@ -168,8 +168,18 @@ void violence_update(void)
       {
          rch_next = rch->next_in_room;
 
-         if (IS_AWAKE(rch) && rch->fighting == NULL && !IS_AFFECTED(rch, AFF_CHARM))
+         if (IS_AWAKE(rch) && rch->fighting == NULL)
          {
+            if (IS_NPC(rch) && IS_AFFECTED(rch, AFF_CHARM) && rch->master != NULL && rch->master->fighting != NULL
+                && rch->in_room == rch->master->in_room && is_player_summon_special(rch->spec_fun)
+                && can_see(rch, rch->master->fighting))
+            {
+               set_fighting(rch, rch->master->fighting, TRUE);
+               continue;
+            }
+
+            if (IS_AFFECTED(rch, AFF_CHARM))
+               continue;
             if (!IS_NPC(rch) && !IS_NPC(ch) && IS_SET(rch->config, CONFIG_AUTOASSIST) && is_same_group(rch, ch))
             {
                do_assist(rch, ch->name);
@@ -236,6 +246,9 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    int dual_chance = 0;
 
    if (IS_SET(stance_app[ch->stance].specials, STANCE_NO_HIT))
+      return;
+
+   if (IS_NPC(ch) && is_player_summon_special(ch->spec_fun))
       return;
 
    if ((((wield1 = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL) && (wield1->item_type == ITEM_WEAPON)) && (((wield2 = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL) && (wield2->item_type == ITEM_WEAPON)))

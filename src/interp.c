@@ -97,8 +97,6 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"look", do_look, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_INFO, C_SHOW_ALWAYS},
-    {"order", do_order, POS_RESTING, 0, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"rest", do_rest, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"sleep", do_sleep, POS_SLEEPING, 0, LOG_NORMAL,
