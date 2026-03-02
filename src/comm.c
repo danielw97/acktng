@@ -77,6 +77,7 @@ bool is_valid_finisher(CHAR_DATA *ch);
 int get_combo_count(CHAR_DATA *ch);
 int get_max_combo(CHAR_DATA *ch);
 int get_chi(CHAR_DATA *ch);
+void trigger_happy_hour(void);
 
 bool is_parse_name_syntax_valid(const char *name)
 {
@@ -204,11 +205,30 @@ static long prompt_max_value_for_code_internal(CHAR_DATA *ch, char code)
    }
 }
 
+void comm_format_builder_prompt(char *dest, size_t dest_size, const char *mode, const char *details)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   snprintf(dest, dest_size, "< %s %s >", mode != NULL ? mode : "", details != NULL ? details : "");
+}
+
+void comm_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   snprintf(dest, dest_size, "%3.3s    %3.3s    %-10.10s\n\r",
+            who_name != NULL ? who_name : "", stat != NULL ? stat : "", class_name != NULL ? class_name : "");
+}
+
 #ifdef UNIT_TEST_COMM
 bool should_show_default_prompt_hp(CHAR_DATA *ch) { return prompt_should_show_hp(ch); }
 bool should_show_default_prompt_mana(CHAR_DATA *ch) { return prompt_should_show_mana(ch); }
 bool should_show_default_prompt_move(CHAR_DATA *ch) { return prompt_should_show_move(ch); }
 long prompt_max_value_for_code(CHAR_DATA *ch, char code) { return prompt_max_value_for_code_internal(ch, code); }
+void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode, const char *details) { comm_format_builder_prompt(dest, dest_size, mode, details); }
+void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name) { comm_format_class_menu_line(dest, dest_size, who_name, stat, class_name); }
 #endif
 
 #ifndef UNIT_TEST_COMM
@@ -1268,7 +1288,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
                sprintf(msg2, "[%5d]: %s", ch->build_vnum, mob->short_descr);
          }
       }
-      sprintf(msg3, "< %s %s >", msg, msg2);
+      comm_format_builder_prompt(msg3, sizeof(msg3), msg, msg2);
       write_to_buffer(d, msg3, 0);
       return;
    }
@@ -2172,8 +2192,8 @@ void show_cmenu_to(DESCRIPTOR_DATA *d)
    {
       char stat[MSL];
       strcpy(stat, stat_to_string(class_table[iClass].attr_prime));
-      sprintf(buf, "%3s    %3s    %-10s\n\r", class_table[iClass].who_name, stat,
-              class_table[iClass].class_name);
+      comm_format_class_menu_line(buf, sizeof(buf), class_table[iClass].who_name, stat,
+                                  class_table[iClass].class_name);
       strcat(menu, buf);
    }
    strcat(menu, "\n\rOrder: ");

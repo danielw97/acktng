@@ -225,7 +225,29 @@ unit-test-mapper: test_mapper.o mapper.unit-test.o
 	rm -f unit-test-mapper
 	$(CC) -Wl,--gc-sections -o unit-test-mapper test_mapper.o mapper.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper
+damage.unit-test.o: damage.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_DAMAGE -ffunction-sections -fdata-sections -o damage.unit-test.o damage.c
+
+unit-test-damage: test_damage.o damage.unit-test.o
+	rm -f unit-test-damage
+	$(CC) -Wl,--gc-sections -o unit-test-damage test_damage.o damage.unit-test.o $(L_FLAGS)
+
+buildare.unit-test.o: buildare.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILDARE -ffunction-sections -fdata-sections -o buildare.unit-test.o buildare.c
+
+unit-test-buildare: test_buildare.o buildare.unit-test.o
+	rm -f unit-test-buildare
+	$(CC) -Wl,--gc-sections -o unit-test-buildare test_buildare.o buildare.unit-test.o $(L_FLAGS)
+
+build.unit-test.o: build.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILD -ffunction-sections -fdata-sections -o build.unit-test.o build.c
+
+unit-test-build: test_build.o build.unit-test.o
+	rm -f unit-test-build
+	$(CC) -Wl,--gc-sections -o unit-test-build test_build.o build.unit-test.o $(L_FLAGS)
+
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -245,3 +267,6 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-db
 	./unit-test-magic
 	./unit-test-mapper
+	./unit-test-damage
+	./unit-test-buildare
+	./unit-test-build

@@ -9,6 +9,9 @@
 
 bool is_parse_name_syntax_valid(const char *name);
 bool is_login_name_format_valid(const char *name);
+long prompt_max_value_for_code(CHAR_DATA *ch, char code);
+void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode, const char *details);
+void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name);
 
 
 static int stub_max_hp = 100;
@@ -135,6 +138,18 @@ static void test_prompt_thresholds_use_max_helpers(void)
     assert(!should_show_default_prompt_move(&ch));
 }
 
+
+static void test_comm_safe_formatters_truncate(void)
+{
+    char buf[16];
+
+    comm_testable_format_builder_prompt(buf, sizeof(buf), "Mode: Redit", "A very very long description");
+    assert(buf[15] == '\0');
+
+    comm_testable_format_class_menu_line(buf, sizeof(buf), "warrior", "strength", "verylongclassname");
+    assert(buf[15] == '\0');
+}
+
 static void test_prompt_max_tokens_use_max_helpers(void)
 {
     CHAR_DATA ch;
@@ -161,6 +176,7 @@ int main(void)
     test_login_name_accepts_valid_player_names();
     test_prompt_thresholds_use_max_helpers();
     test_prompt_max_tokens_use_max_helpers();
+    test_comm_safe_formatters_truncate();
 
     test_existing_player_login_happy_path_reaches_playing();
     test_existing_player_login_rejects_invalid_name();
