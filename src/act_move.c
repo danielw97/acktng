@@ -76,7 +76,6 @@ void move_char(CHAR_DATA *ch, int door)
    char buf[MAX_STRING_LENGTH];
    char move_buf[MAX_STRING_LENGTH];
    /*    struct fol_data *fol = NULL;   */
-   char tmp[MAX_STRING_LENGTH];
    char door_name_leave[MSL];
    char door_name_enter[MSL];
 
@@ -84,7 +83,6 @@ void move_char(CHAR_DATA *ch, int door)
    move_buf[0] = '\0';
    door_name_enter[0] = '\0';
    door_name_leave[0] = '\0';
-   tmp[0] = '\0';
 
    if (door < 0 || door > 5)
    {

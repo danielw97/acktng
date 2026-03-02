@@ -115,6 +115,14 @@ unit-test-act-info: test_act_info.o act_info.unit-test.o
 	$(CC) -Wl,--gc-sections -o unit-test-act-info test_act_info.o act_info.unit-test.o $(L_FLAGS)
 
 
+act_move.unit-test.o: act_move.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o act_move.unit-test.o act_move.c
+
+unit-test-act-move: test_act_move.o act_move.unit-test.o
+	rm -f unit-test-act-move
+	$(CC) -Wl,--gc-sections -o unit-test-act-move test_act_move.o act_move.unit-test.o $(L_FLAGS)
+
+
 cloak.unit-test.o: cloak.c
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_CLOAK -o cloak.unit-test.o cloak.c
 
@@ -255,12 +263,13 @@ unit-test-build: test_build.o build.unit-test.o
 	$(CC) -Wl,--gc-sections -o unit-test-build test_build.o build.unit-test.o $(L_FLAGS)
 
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-proposition
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-proposition
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
 	./unit-test-fight
 	./unit-test-act-info
+	./unit-test-act-move
 	./unit-test-cloak
 	./unit-test-spendqp
 	./unit-test-spell-dam
