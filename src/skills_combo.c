@@ -35,6 +35,11 @@ bool combo_has_duplicate_skill(const int *combo_values, int max, int gsn)
     return FALSE;
 }
 
+const char *war_attack_miss_to_victim_format(void)
+{
+    return "$n tries to %s you, but misses!";
+}
+
 void do_dirt(CHAR_DATA *ch, char *argument)
 {
     AFFECT_DATA af;
@@ -184,7 +189,7 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
     {
         sprintf(actbuf, "$n tries to %s $N, but misses!", skill_table[gsn].name);
         act(actbuf, ch, NULL, victim, TO_NOTVICT);
-        sprintf(actbuf, "$N tries to %s you, but misses!", skill_table[gsn].name);
+        sprintf(actbuf, war_attack_miss_to_victim_format(), skill_table[gsn].name);
         act(actbuf, ch, NULL, victim, TO_VICT);
         sprintf(actbuf, "You try to %s $N, but miss!", skill_table[gsn].name);
         act(actbuf, ch, NULL, victim, TO_CHAR);
