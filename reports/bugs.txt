@@ -1,2 +1,8 @@
 [*****] BUG: exp_for_mobile: The Vault Sentinel level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: lich undead necromancer ancient level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: kel shadra avatar void incarnate level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
 [*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.

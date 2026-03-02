@@ -343,7 +343,7 @@ int exp_for_mobile(int level, CHAR_DATA *mob)
    if (level < 0)
    {
       bug("exp_for_mobile: negative level %d.", level);
-      level = 0;
+      level = 1;
    }
    else if (level >= MAX_MOB_LEVEL)
    {
