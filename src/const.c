@@ -3224,7 +3224,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "cloak:oathbreaker", {182, 182, 182, 182, 182, 182,
-                           182, 182, 182, 182, 48, 182},
+                           182, 182, 48, 182, 182, 182},
     spell_cloak_oathbreaker, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 680 ), 550, 12, FALSE,
     "", "@@NThe @@dcloak@@N around your body fades.",
@@ -3232,8 +3232,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:transcendence", {182, 182, 182, 182, 182, 182,
-                              182, 182, 48, 182, 182, 182},
+    "cloak:transcendence", {182, 182, 48, 182, 182, 182,
+                              182, 182, 182, 182, 182, 182},
     spell_cloak_transcendence, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 681 ), 550, 12, FALSE,
     "", "@@NThe @@Ccloak@@N around your body fades.",
