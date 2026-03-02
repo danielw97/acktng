@@ -344,6 +344,14 @@ DIAGNOSE allows you to check on the condition of a player or mob.
 to them!
 
 ~
+  keep title <string>
+  keep desc <string>
+Using @@ykeep title <string>@@N while inside your keep will update your keep's
+title.
+
+Using @@ykeep desc <string>@@N while inside your keep will update your keep's
+description.
+
 0 imm immortal immortals~
 Due to some past events where common sense was overlooked
 it was brought to the attentions of the immortals that there is a

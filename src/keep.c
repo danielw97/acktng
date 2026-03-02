@@ -43,6 +43,22 @@ void keep_format_room_description(const char *owner_name, char *dest, size_t des
     snprintf(dest, dest_size, "Keep of %s", safe_owner);
 }
 
+int keep_is_customization_command(const char *arg)
+{
+    return (arg != NULL && (!str_cmp(arg, "title") || !str_cmp(arg, "desc")));
+}
+
+int keep_player_can_customize(const CHAR_DATA *ch)
+{
+    if (ch == NULL || ch->pcdata == NULL || ch->in_room == NULL)
+        return 0;
+
+    if (ch->pcdata->keep_vnum <= 0)
+        return 0;
+
+    return (ch->in_room->vnum == ch->pcdata->keep_vnum);
+}
+
 static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const char *owner_name)
 {
     int iHash;
@@ -137,13 +153,47 @@ void do_keep(CHAR_DATA *ch, char *argument)
             return;
         }
 
-        send_to_char("Syntax: keep create\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string>\n\r", ch);
+        return;
+    }
+
+    if (keep_is_customization_command(arg1))
+    {
+        if (!keep_player_can_customize(ch))
+        {
+            send_to_char("You must be in your keep to do that.\n\r", ch);
+            return;
+        }
+
+        if (argument == NULL || argument[0] == '\0')
+        {
+            if (!str_cmp(arg1, "title"))
+                send_to_char("Syntax: keep title <string>\n\r", ch);
+            else
+                send_to_char("Syntax: keep desc <string>\n\r", ch);
+            return;
+        }
+
+        if (!str_cmp(arg1, "title"))
+        {
+            free_string(ch->in_room->name);
+            ch->in_room->name = str_dup(argument);
+            send_to_char("Keep title updated.\n\r", ch);
+        }
+        else
+        {
+            free_string(ch->in_room->description);
+            ch->in_room->description = str_dup(argument);
+            send_to_char("Keep description updated.\n\r", ch);
+        }
+
+        do_savearea(NULL, (char *)ch->in_room->area);
         return;
     }
 
     if (str_cmp(arg1, "create"))
     {
-        send_to_char("Syntax: keep create\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string>\n\r", ch);
         return;
     }
 

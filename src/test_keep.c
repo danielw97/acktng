@@ -1,11 +1,27 @@
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
+#include <strings.h>
+
+#include "config.h"
+#define DEC_GLOBALS_H 1
+#include "ack.h"
+
+bool str_cmp(const char *s1, const char *s2)
+{
+    if (s1 == NULL && s2 == NULL)
+        return FALSE;
+    if (s1 == NULL || s2 == NULL)
+        return TRUE;
+    return (strcasecmp(s1, s2) != 0) ? TRUE : FALSE;
+}
 
 void keep_format_chest_short_descr(const char *owner_name, char *dest, size_t dest_size);
 void keep_format_room_name(const char *owner_name, char *dest, size_t dest_size);
 void keep_format_room_description(const char *owner_name, char *dest, size_t dest_size);
 int keep_chest_max_items(void);
+int keep_is_customization_command(const char *arg);
+int keep_player_can_customize(const CHAR_DATA *ch);
 
 static void test_keep_chest_name_uses_creator(void)
 {
@@ -89,6 +105,43 @@ static void test_keep_room_description_handles_missing_owner(void)
     assert(strcmp(buf, "Keep of Unknown") == 0);
 }
 
+static void test_keep_customization_command_detection(void)
+{
+    assert(keep_is_customization_command("title") != 0);
+    assert(keep_is_customization_command("desc") != 0);
+    assert(keep_is_customization_command("create") == 0);
+    assert(keep_is_customization_command(NULL) == 0);
+}
+
+static void test_keep_player_can_customize(void)
+{
+    PC_DATA pcdata;
+    ROOM_INDEX_DATA room;
+    CHAR_DATA ch;
+
+    memset(&pcdata, 0, sizeof(pcdata));
+    memset(&room, 0, sizeof(room));
+    memset(&ch, 0, sizeof(ch));
+
+    pcdata.keep_vnum = 1234;
+    room.vnum = 1234;
+    ch.pcdata = &pcdata;
+    ch.in_room = &room;
+
+    assert(keep_player_can_customize(&ch) != 0);
+
+    room.vnum = 1235;
+    assert(keep_player_can_customize(&ch) == 0);
+
+    ch.in_room = NULL;
+    assert(keep_player_can_customize(&ch) == 0);
+
+    ch.in_room = &room;
+    ch.pcdata = NULL;
+    assert(keep_player_can_customize(&ch) == 0);
+}
+
+
 int main(void)
 {
     test_keep_chest_name_uses_creator();
@@ -102,6 +155,8 @@ int main(void)
     test_keep_room_name_handles_missing_owner();
     test_keep_room_description_uses_creator();
     test_keep_room_description_handles_missing_owner();
+    test_keep_customization_command_detection();
+    test_keep_player_can_customize();
     puts("test_keep: all tests passed");
     return 0;
 }
