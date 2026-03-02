@@ -3205,7 +3205,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:iron", {182, 48, 182, 182, 182, 182,
+    "cloak:iron", {182, 182, 182, 48, 182, 182,
                     182, 182, 182, 182, 182, 182},
     spell_cloak_iron, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 678 ), 550, 12, FALSE,

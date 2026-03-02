@@ -6,3 +6,6 @@
 [*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
 [*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
 [*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: vaultkeeper vault keeper level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
