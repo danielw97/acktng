@@ -347,7 +347,7 @@ int exp_for_mobile(int level, CHAR_DATA *mob)
    }
    else if (level >= MAX_MOB_LEVEL)
    {
-      sprintf(log_buf, "exp_for_mobile: level %d exceeds table max %d.", level, MAX_MOB_LEVEL - 1);
+      sprintf(log_buf, "exp_for_mobile: %s level %d exceeds table max %d.", mob->name, level, MAX_MOB_LEVEL - 1);
       bug(log_buf, 0);
       level = MAX_MOB_LEVEL - 1;
    }
