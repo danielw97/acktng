@@ -613,7 +613,21 @@ This help page is used to offer thanks to those players who have kindly
 a) Be HELPFUL to players whenever possible.  If you're just sitting around
    talking to a friend, then you're not too busy to help a player.
    (Building *is* considered a good reason not to be helpful, but it would
-    be nice if you could inform the player, instead of ignoring them.)
+~
+0 keep keeps~
+The KEEP command lets eligible players create and return to a personal keep.
+Syntax:
+  keep
+  keep create
+
+Using @@ykeep@@N with no argument will attempt to recall you directly to your
+keep, if you already have one.
+
+Using @@ykeep create@@N will create a keep for a realm lord (adept level 20)
+who does not already have a keep.
+
+If you already have a keep, use @@ykeep@@N to return there.
+    be nice if you could inform the player, instead of ignoring them.)
 b) Be NEUTRAL - i.e. try not to play an evil or ultra-good char.  Players,
    especially newbies, will be more likely to stay if immortals are FAIR.
    For example, roleplaying Satan when an immortal would not be a Good Thing.

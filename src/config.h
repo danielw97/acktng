@@ -1280,6 +1280,7 @@
 #define CONT_PICKPROOF 2
 #define CONT_CLOSED 4
 #define CONT_LOCKED 8
+#define CONT_KEEP_CHEST 16
 
 /*
  * Data files used by the server.

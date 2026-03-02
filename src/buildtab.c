@@ -197,7 +197,7 @@ const struct lookup_type tab_value_meanings[] = {
     {"Unused", 149, 0},
 
     {"Weight Capacity", 150, 10},
-    {"Flags: 1:closeable 2:pickproof 4:closed 8:locked", 151, 0},
+    {"Flags: 1:closeable 2:pickproof 4:closed 8:locked 16:keep_chest", 151, 0},
     {"Key Vnum", 152, 0},
     {"Unused", 153, 0},
     {"Unused", 154, 0},
