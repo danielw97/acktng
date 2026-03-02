@@ -89,7 +89,15 @@ unit-test-comm: test_comm.o comm.unit-test.o
 	rm -f unit-test-comm
 	$(CC) -o unit-test-comm test_comm.o comm.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm
+fight.unit-test.o: fight.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o fight.unit-test.o fight.c
+
+unit-test-fight: test_fight.o fight.unit-test.o
+	rm -f unit-test-fight
+	$(CC) -Wl,--gc-sections -o unit-test-fight test_fight.o fight.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
+	./unit-test-fight
