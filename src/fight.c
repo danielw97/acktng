@@ -286,6 +286,9 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       return;
    }
 
+   if (IS_NPC(ch) && is_player_summon_special(ch->spec_fun))
+      return;
+
    if ((((wield1 = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL) && (wield1->item_type == ITEM_WEAPON)) && (((wield2 = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL) && (wield2->item_type == ITEM_WEAPON)))
       dual_chance = 15;
 
