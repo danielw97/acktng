@@ -2,6 +2,9 @@
 #include "magic.h"
 
 bool do_poison(CHAR_DATA *ch, char *argument, int gsn);
+void backstab(CHAR_DATA *ch, CHAR_DATA *victim, bool backstab);
+bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
+bool subtract_energy_cost(CHAR_DATA *ch, int gsn);
 
 void do_backstab(CHAR_DATA *ch, char *argument)
 {
@@ -272,7 +275,7 @@ bool do_poison(CHAR_DATA *ch, char *argument, int gsn)
    if (!subtract_energy_cost(ch, gsn))
       return FALSE;
 
-   if (is_affected(ch, skill_table[gsn].name))
+   if (is_affected(victim, gsn))
    {
       send_to_char("Your victim is already inflicted with that.\n\r", ch);
       return FALSE;
