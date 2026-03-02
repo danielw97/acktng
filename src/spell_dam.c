@@ -34,6 +34,9 @@
 #include "magic.h"
 #endif
 
+int get_best_level(CHAR_DATA *ch, int gsn);
+int get_healing(CHAR_DATA *ch);
+
 /*
  * This file should contain:
  *	o advanced damage engine
@@ -52,46 +55,80 @@ struct sp_dam_str_type sp_dam_str[] = {
     /* mind      */ {ELEMENT_MENTAL, "@@m", "@@W", "@@p", "@@5", "%s/%sV%s\\", "zap", "BLAST", "zaps", "BLASTS"},
     /* holy      */ {ELEMENT_HOLY, "@@l", "@@W", "@@y", "@@1", "%s~%s\\/%s~", "holy", "HOLY", "holies", "HOLIES"}};
 
-/*    sh_int flag1;                   /* mort or remort?      *
-   sh_int flag2;                   /* normal and/or vamp?     *
-   char *name;                     /* Name of skill                *
-   sh_int skill_level[MAX_REMORT]; /* Level needed by class        *
-   SPELL_FUN *spell_fun;           /* Spell pointer (for spells)   *
-   sh_int target;                  /* Legal targets                *
-   sh_int minimum_position;        /* Position for caster / user   *
-   sh_int *pgsn;                   /* Pointer to associated gsn    *
-   sh_int slot;                    /* Slot for #OBJECT loading     *
-   sh_int min_mana;                /* Minimum mana used            *
-   sh_int beats;                   /* Waiting time after use       *
-   bool can_learn;
-   char *noun_damage;              /* Damage message               *
-   char *msg_off;                  /* Wear off message             *
-   char *room_off;                 /* Wear off msg TO_ROOM    *
-*/
+/*
+ * skill_table fields used by this module:
+ *   sh_int flag1;
+ *   sh_int flag2;
+ *   char *name;
+ *   sh_int skill_level[MAX_REMORT];
+ *   SPELL_FUN *spell_fun;
+ *   sh_int target;
+ *   sh_int minimum_position;
+ *   sh_int *pgsn;
+ *   sh_int slot;
+ *   sh_int min_mana;
+ *   sh_int beats;
+ *   bool can_learn;
+ *   char *noun_damage;
+ *   char *msg_off;
+ *   char *room_off;
+ */
+
+void spell_dam_damage_params(int flag1, int best_level, int *base, int *d1, int *d2)
+{
+   *base = 0;
+   *d1 = 0;
+   *d2 = 0;
+
+   switch (flag1)
+   {
+      case MORTAL:
+         *d1 = best_level / 5;
+         *base = 10;
+         *d2 = 10;
+      break;
+      case REMORT:
+         *d1 = best_level / 2;
+         *base = 150;
+         *d2 = 20;
+      break;
+      case ADEPT:
+         *base = 350;
+         *d1 = best_level * 3;
+         *d2 = 25;
+      break;
+   }
+}
+
+int spell_dam_base_penalty_for_summon(int summon)
+{
+   switch (summon)
+   {
+      case WATER_ELEMENTAL:
+      case FIRE_ELEMENTAL:
+      case HOLY_AVENGER:
+         return 40;
+      case EARTH_ELEMENTAL:
+      case SOUL_THIEF:
+         return 35;
+      case SKELETON:
+         return 50;
+      case IRON_GOLEM:
+         return 25;
+      case DIAMOND_GOLEM:
+         return 15;
+      default:
+         return 0;
+   }
+}
 
 int get_spell_damage(CHAR_DATA *ch, int gsn)
 {
-   int base = 0;
-   int d1 = 0, d2 = 0;
+   int base;
+   int d1;
+   int d2;
 
-   switch(skill_table[gsn].flag1)
-   {
-      case MORTAL:
-         d1 = get_best_level(ch, gsn)/5;
-         base = 10;
-         d2 = 10;
-      break;
-      case REMORT:
-         d1 = get_best_level(ch, gsn)/2;
-         base = 150;
-         d2 = 20;
-      break;
-      case ADEPT:
-         base = 350;
-         d1 = get_best_level(ch, gsn)*3;
-         d2 = 25;
-      break;
-   }
+   spell_dam_damage_params(skill_table[gsn].flag1, get_best_level(ch, gsn), &base, &d1, &d2);
 
    return dice(d1, d2)+base;
 }
@@ -132,63 +169,55 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int summon)
 {
    CHAR_DATA *summoned;
    char name[MAX_STRING_LENGTH], short_desc[MAX_STRING_LENGTH], long_desc[MAX_STRING_LENGTH];
-   int base_penalty;
+   int base_penalty = spell_dam_base_penalty_for_summon(summon);
 
    if (summon == WATER_ELEMENTAL)
    {
       strcpy(name, "Water Elemental");
       strcpy(short_desc, "@@lW@@Bater @@lE@@Blemental@@N");
       strcpy(long_desc, "A @@lW@@Bater @@lE@@Blemental@@N surfs here.\n\r");
-      base_penalty = 40;
    }
    else if (summon == FIRE_ELEMENTAL)
    {
       strcpy(name, "Fire Elemental");
       strcpy(short_desc, "@@eF@@Rire @@eE@@Rlemental@@N");
       strcpy(long_desc, "A @@eF@@Rire @@eE@@Rlemental@@N burns here.\n\r");
-      base_penalty = 40;
    }
    else if (summon == EARTH_ELEMENTAL)
    {
       strcpy(name, "Earth Elemental");
       strcpy(short_desc, "@@yE@@barth @@yE@@blemental@@N");
       strcpy(long_desc, "A @@yE@@barth @@yE@@blemental@@N rumbles here.\n\r");
-      base_penalty = 35;
    }
    else if (summon == SKELETON)
    {
       strcpy(name, "Skeleton");
       strcpy(short_desc, "A @@dSkeleton@@N");
       strcpy(long_desc, "A @@dSkeleton@@N goes 'Myaah!' here.\n\r");
-      base_penalty = 50;
    }
    else if (summon == HOLY_AVENGER)
    {
       strcpy(name, "Holy Avenger");
       strcpy(short_desc, "@@cHoly @@WAvenger@@N");
       strcpy(long_desc, "A majestic @@cHoly @@WAvenger@@N stands before you.\n\r");
-      base_penalty = 40;
    }
    else if (summon == SOUL_THIEF)
    {
       strcpy(name, "Soul Thief");
       strcpy(short_desc, "@@dSoul @@BThief@@N");
       strcpy(long_desc, "A @@dSoul @@BThief@@N skulks about here.\n\r");
-      base_penalty = 35;
    }
    else if (summon == IRON_GOLEM)
    {
       strcpy(name, "Iron Golem");
       strcpy(short_desc, "@@dIron @@WGolem@@N");
       strcpy(long_desc, "@@NA towering mass of @@dmetal@@N peers into your soul.\n\r");
-      base_penalty = 25;
    }
    else if (summon == DIAMOND_GOLEM)
    {
       strcpy(name, "Diamond Golem");
       strcpy(short_desc, "@@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@WGolem@@N");
       strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.\n\r");
-      base_penalty = 15;
    }
 
    summoned = create_mobile(get_mob_index(MOB_VNUM_WATERELEM));
