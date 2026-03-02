@@ -509,6 +509,8 @@ void round_update_dot(CHAR_DATA *ch)
    }
 }
 
+#endif
+
 /*
  * Regeneration stuff.
  */
@@ -601,7 +603,7 @@ int hit_gain(CHAR_DATA *ch)
    if (is_fighting(ch) && gain > 0)
       gain = 0;
 
-   return UMIN(ch->hit + gain, get_max_hp(ch));
+   return gain;
 }
 
 int mana_gain(CHAR_DATA *ch)
@@ -703,7 +705,7 @@ int mana_gain(CHAR_DATA *ch)
    if (is_fighting(ch))
       gain = 0;
 
-   return UMIN(get_max_mana(ch), ch->mana + gain);
+   return gain;
 }
 
 int move_gain(CHAR_DATA *ch)
@@ -757,8 +759,10 @@ int move_gain(CHAR_DATA *ch)
    if (is_fighting(ch) && gain > 0)
       gain = 0;
 
-   return UMIN(ch->move + gain, get_max_move(ch));
+   return gain;
 }
+
+#ifndef UNIT_TEST_UPDATE
 
 void gain_rage(CHAR_DATA *ch)
 {
