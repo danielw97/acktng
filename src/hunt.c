@@ -221,7 +221,8 @@ bool set_hunt(CHAR_DATA *ch, CHAR_DATA *fch, CHAR_DATA *vch, OBJ_DATA *vobj, int
    troom = (vch ? vch->in_room : vobj ? vobj->in_room
                                       : NULL);
    nflags = ((ch ? ch->hunt_flags : 0) | set_flags) & ~rem_flags;
-   if (!ch || !troom || h_find_dir(ch->in_room, troom, nflags) < 0)
+   if (!ch || !troom || (vch != NULL && IS_SET(vch->act, ACT_NO_HUNT))
+       || h_find_dir(ch->in_room, troom, nflags) < 0)
       return FALSE;
    ch->hunting = vch;
    ch->hunt_obj = vobj;
