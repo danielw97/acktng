@@ -1821,6 +1821,21 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
       }
    }
 }
+static int resolve_persistent_container_room_vnum(int room_vnum)
+{
+   if (get_room_index(room_vnum) != NULL)
+      return room_vnum;
+
+   return ROOM_VNUM_LIMBO;
+}
+
+#ifdef UNIT_TEST_SAVE
+int resolve_persistent_container_room_vnum_for_test(int room_vnum)
+{
+   return resolve_persistent_container_room_vnum(room_vnum);
+}
+#endif
+
 void fread_corpse(FILE *fp)
 {
    static OBJ_DATA obj_zero;
@@ -1973,7 +1988,23 @@ void fread_corpse(FILE *fp)
                }
 
                if (iNest == 0 || rgObjNest[iNest] == NULL)
-                  obj_to_room(obj, get_room_index(this_room_vnum));
+               {
+                  ROOM_INDEX_DATA *target_room;
+                  int target_room_vnum = resolve_persistent_container_room_vnum(this_room_vnum);
+
+                  target_room = get_room_index(target_room_vnum);
+                  if (target_room == NULL)
+                     target_room = get_room_index(ROOM_VNUM_LIMBO);
+
+                  if (target_room == NULL)
+                  {
+                     monitor_chan("Fread_corpse: limbo room missing for persistent container.", MONITOR_BAD);
+                     PUT_FREE(obj, obj_free);
+                     return;
+                  }
+
+                  obj_to_room(obj, target_room);
+               }
                else
                   obj_to_obj(obj, rgObjNest[iNest - 1]);
                return;

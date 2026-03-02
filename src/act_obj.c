@@ -62,6 +62,24 @@ static int container_item_count(const OBJ_DATA *container)
    return count;
 }
 
+#define KEEP_CHEST_PUT_ALLOWED 0
+#define KEEP_CHEST_PUT_ERR_FULL 1
+#define KEEP_CHEST_PUT_ERR_INVALID_ITEM 2
+
+int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *obj)
+{
+   if (!is_keep_chest(container_obj))
+      return KEEP_CHEST_PUT_ALLOWED;
+
+   if (container_item_count(container_obj) >= 50)
+      return KEEP_CHEST_PUT_ERR_FULL;
+
+   if (obj != NULL && (obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC || obj->item_type == ITEM_CONTAINER))
+      return KEEP_CHEST_PUT_ERR_INVALID_ITEM;
+
+   return KEEP_CHEST_PUT_ALLOWED;
+}
+
 void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 {
 
@@ -479,17 +497,19 @@ void do_put(CHAR_DATA *ch, char *argument)
                send_to_char("You can't fold it into itself.\n\r", ch);
                continue;
             }
-            if (is_keep_chest(container_obj) && container_item_count(container_obj) >= 50)
             {
-               send_to_char("That keep chest cannot hold any more items.\n\r", ch);
-               continue;
-            }
+               int keep_chest_restriction = keep_chest_put_denial_reason(container_obj, obj);
+               if (keep_chest_restriction == KEEP_CHEST_PUT_ERR_FULL)
+               {
+                  send_to_char("That keep chest cannot hold any more items.\n\r", ch);
+                  continue;
+               }
 
-            if (is_keep_chest(container_obj)
-                && (obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC || obj->item_type == ITEM_CONTAINER))
-            {
-               send_to_char("Keep chests cannot hold corpses or containers.\n\r", ch);
-               continue;
+               if (keep_chest_restriction == KEEP_CHEST_PUT_ERR_INVALID_ITEM)
+               {
+                  send_to_char("Keep chests cannot hold corpses or containers.\n\r", ch);
+                  continue;
+               }
             }
 
             if (get_obj_weight(obj) + get_obj_weight(container_obj) > container_obj->value[0])

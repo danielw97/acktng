@@ -189,6 +189,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
     save_corpses();
 
     ch->pcdata->keep_vnum = vnum;
+    do_savearea(NULL, (char *)pArea);
 
     send_to_char("Your keep has been created.\n\r", ch);
 }
