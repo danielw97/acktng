@@ -105,6 +105,7 @@ D1
 ~
 ~
 0 -1 3963
+0 -1 3963
 0 -1 3965
 0 -1 3963
 ~
@@ -418,8 +419,9 @@ S
 Entering the bordering woods~
 @@NThe edge of the @@dAsylum@@N grounds ends here in scrawny but impassable @@Gtrees@@N.
 0 -1 3948
- 
-A small @@astream@@N burbles quietly to the south.
+0 -1 3948
+#3944
+A small @@astream@@N burbles quietly to the south.
 ~
 0 3
 D0
