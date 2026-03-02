@@ -1078,7 +1078,7 @@ You are by the temple altar in the northern end of the Temple of Midgaard.
 behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
 To the West is the meeting point of the Immortal and mortal worlds and to the East lies the Quest Room.
 ~
-132104 11
+132106 11
 D2
 You see the southern end of the temple.
 ~
@@ -4633,8 +4633,6 @@ O 0 3048 0 3014 (null)
 O 0 3049 0 3056 (null)
 
 M 0 3095 1 3032 (null)
-
-M 0 3016 2 3001 (null)
 
 O 0 3052 0 3062 (null)
 
