@@ -91,6 +91,35 @@ int RevDirs[] = {2, 3, 0, 1, 5, 4};
  */
 extern bool fLogAll;
 
+void build_join_command_and_argument(char *dest, size_t dest_size, const char *command, const char *argument)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   snprintf(dest, dest_size, "%s %s", command != NULL ? command : "", argument != NULL ? argument : "");
+}
+
+void build_format_vnum_usage_summary(char *dest, size_t dest_size, const char *label, const char *used, const char *free_text)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   snprintf(dest, dest_size, "%s vnum usage summary:\n\r\n\r%s\n\r\n\r%s\n\r",
+            label != NULL ? label : "", used != NULL ? used : "", free_text != NULL ? free_text : "");
+}
+
+#ifdef UNIT_TEST_BUILD
+void build_testable_join_command_and_argument(char *dest, size_t dest_size, const char *command, const char *argument)
+{
+   build_join_command_and_argument(dest, dest_size, command, argument);
+}
+
+void build_testable_format_vnum_usage_summary(char *dest, size_t dest_size, const char *label, const char *used, const char *free_text)
+{
+   build_format_vnum_usage_summary(dest, dest_size, label, used, free_text);
+}
+#endif
+
 /* -S- Additions */
 DECLARE_DO_FUN(build_set_medit);
 DECLARE_DO_FUN(build_set_oedit);
@@ -372,7 +401,7 @@ void build_interpret(CHAR_DATA *ch, char *argument)
 
    if (!found)
    {
-      sprintf(buffer, "%s %s", command, argument);
+      build_join_command_and_argument(buffer, sizeof(buffer), command, argument);
       build_set(ch, buffer);
       return;
    }
@@ -469,8 +498,8 @@ void build_showmob(CHAR_DATA *ch, char *argument)
    sprintf(buf, " @@WLv: @@y%d.    @@WAlign: @@y%d.\n\r", pMob->level, pMob->alignment);
    strcat(buf1, buf);
 
-   sprintf(buf, "@@WModifiers: HP: @@y%d.   @@WAC: @@y%d.  @@WHitroll: @@y%d.  @@WDamroll: @@y%d.\n\r",
-           pMob->hp_mod, pMob->ac_mod, pMob->hr_mod, pMob->dr_mod);
+   snprintf(buf, sizeof(buf), "@@WModifiers: HP: @@y%ld.   @@WAC: @@y%d.  @@WHitroll: @@y%d.  @@WDamroll: @@y%d.\n\r",
+            pMob->hp_mod, pMob->ac_mod, pMob->hr_mod, pMob->dr_mod);
    strcat(buf1, buf);
    sprintf(buf, "@@WSpellpower: @@y%d@@W   Crit: @@y%d@@W   Crit Mult: @@y%d  @@WSpell Crit: @@y%d @@W Spell Crit Mult: @@y%d\n\r",
            pMob->spellpower_mod, pMob->crit_mod, pMob->crit_mult_mod, pMob->spell_crit_mod, pMob->spell_mult_mod );
@@ -5571,7 +5600,7 @@ void build_urooms(CHAR_DATA *ch, char *argument)
       }
    }
 
-   sprintf(buf, "Room vnum usage summary:\n\r\n\r%s\n\r\n\r%s\n\r", used, free);
+   build_format_vnum_usage_summary(buf, sizeof(buf), "Room", used, free);
    send_to_char(buf, ch);
    return;
 }
@@ -5694,7 +5723,7 @@ void build_uobjs(CHAR_DATA *ch, char *argument)
       }
    }
 
-   sprintf(buf, "Object vnum usage summary:\n\r\n\r%s\n\r\n\r%s\n\r", used, free);
+   build_format_vnum_usage_summary(buf, sizeof(buf), "Object", used, free);
    send_to_char(buf, ch);
    return;
 }
@@ -5814,7 +5843,7 @@ void build_umobs(CHAR_DATA *ch, char *argument)
       }
    }
 
-   sprintf(buf, "Mobile vnum usage summary:\n\r\n\r%s\n\r\n\r%s\n\r", used, free);
+   build_format_vnum_usage_summary(buf, sizeof(buf), "Mobile", used, free);
    send_to_char(buf, ch);
    return;
 }

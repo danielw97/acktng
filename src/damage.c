@@ -27,6 +27,39 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
 void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int realm, int dt, bool critical);
 void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 
+void damage_build_hit_messages(char *buf1, size_t buf1_size,
+                               char *buf2, size_t buf2_size,
+                               char *buf3, size_t buf3_size,
+                               const char *col, const char *vp, const char *vs,
+                               const char *str, const char *attack, char punct,
+                               int dam, const char *critical_message)
+{
+    const char *safe_col = (col != NULL) ? col : "";
+    const char *safe_vp = (vp != NULL) ? vp : "";
+    const char *safe_vs = (vs != NULL) ? vs : "";
+    const char *safe_str = (str != NULL) ? str : "";
+    const char *safe_attack = (attack != NULL) ? attack : "";
+    const char *safe_critical = (critical_message != NULL) ? critical_message : "";
+
+    if (buf1 != NULL && buf1_size > 0)
+        snprintf(buf1, buf1_size, "%s$n %s%s $N%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s",
+                 safe_col, safe_col, safe_vp, safe_col, safe_str, safe_attack, punct, dam, safe_critical);
+
+    if (buf2 != NULL && buf2_size > 0)
+        snprintf(buf2, buf2_size, "%sYou %s%s $N%s%s your %s%c@@g @@l(@@e%d@@l)@@N %s",
+                 safe_col, safe_col, safe_vs, safe_col, safe_str, safe_attack, punct, dam, safe_critical);
+
+    if (buf3 != NULL && buf3_size > 0)
+    {
+        if (safe_str[0] == '\'')
+            snprintf(buf3, buf3_size, "%s$n %s%s your%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s",
+                     safe_col, safe_col, safe_vp, safe_col, safe_str + 2, safe_attack, punct, dam, safe_critical);
+        else
+            snprintf(buf3, buf3_size, "%s$n %s%s you%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s",
+                     safe_col, safe_col, safe_vp, safe_col, safe_str, safe_attack, punct, dam, safe_critical);
+    }
+}
+
 void short_fight_round_begin(CHAR_DATA *ch, CHAR_DATA *victim)
 {
     short_fight_enabled = FALSE;
@@ -1199,12 +1232,8 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
 
     attack = get_dt_name(dt);
 
-    sprintf(buf1, "%s$n %s%s $N%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message);
-    sprintf(buf2, "%sYou %s%s $N%s%s your %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vs, col, str, attack, punct, dam, critical_message);
-    if (*str == '\'')
-        sprintf(buf3, "%s$n %s%s your%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str + 2, attack, punct, dam, critical_message);
-    else
-        sprintf(buf3, "%s$n %s%s you%s%s $s %s%c@@g @@l(@@e%d@@l)@@N %s", col, col, vp, col, str, attack, punct, dam, critical_message);
+    damage_build_hit_messages(buf1, sizeof(buf1), buf2, sizeof(buf2), buf3, sizeof(buf3),
+                              col, vp, vs, str, attack, punct, dam, critical_message);
 
     act(buf1, ch, NULL, victim, TO_NOTVICT);
 

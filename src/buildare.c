@@ -70,6 +70,21 @@ void build_strdup(char **dest, char *src, bool freesrc, CHAR_DATA *ch);
 char *build_simpstrdup(char *);
 ROOM_INDEX_DATA *new_room(AREA_DATA *pArea, sh_int vnum, sh_int sector);
 
+void buildare_append_permission(char *dest, size_t dest_size, const char *existing, const char *name)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   snprintf(dest, dest_size, "%s %s", existing != NULL ? existing : "", name != NULL ? name : "");
+}
+
+#ifdef UNIT_TEST_BUILDARE
+void buildare_testable_append_permission(char *dest, size_t dest_size, const char *existing, const char *name)
+{
+   buildare_append_permission(dest, dest_size, existing, name);
+}
+#endif
+
 int build_canread(AREA_DATA *Area, CHAR_DATA *ch, int showerror)
 {
    if (get_trust(ch) >= MAX_LEVEL - 1)
@@ -217,7 +232,7 @@ void build_makearea(CHAR_DATA *ch, char *argument)
          send_to_char(buf,ch);
               sprintf(buf,"%s\r\n",pArea->name);
                send_to_char(buf,ch); */
-      if ((rooms <= a && buf != NULL))
+      if (rooms <= a)
       {
          send_to_char("found one!\r\n", ch);
          vnum = envnum + 1;
@@ -641,7 +656,7 @@ void build_setarea(CHAR_DATA *ch, char *argument)
          }
          if (!is_name(argn, pArea->can_read))
          {
-            sprintf(buffer, "%s %s", pArea->can_read, argn);
+            buildare_append_permission(buffer, sizeof(buffer), pArea->can_read, argn);
             free_string(pArea->can_read);
             pArea->can_read = str_dup(buffer);
          }
@@ -692,7 +707,7 @@ void build_setarea(CHAR_DATA *ch, char *argument)
          }
          if (!is_name(argn, pArea->can_write))
          {
-            sprintf(buffer, "%s %s", pArea->can_write, argn);
+            buildare_append_permission(buffer, sizeof(buffer), pArea->can_write, argn);
             free_string(pArea->can_write);
             pArea->can_write = str_dup(buffer);
          }
