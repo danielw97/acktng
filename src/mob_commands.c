@@ -136,7 +136,7 @@ void do_mpstat(CHAR_DATA *ch, char *argument)
    send_to_char(buf, ch);
 
    sprintf(buf,
-           "Lv: %d.  Class: %d.  Align: %d.  AC: %d.  Gold: %d.  Exp: %d.\n\r",
+           "Lv: %d.  Class: %d.  Align: %d.  AC: %d.  Gold: %d.  Exp: %ld.\n\r",
            victim->level, victim->class, victim->alignment, get_ac(victim), victim->gold, victim->exp);
    send_to_char(buf, ch);
 

@@ -1,6 +1,7 @@
 #include "globals.h"
 
 int stat_calculated_value(int val, int statcap_bonus);
+void remove_all(CHAR_DATA *ch);
 
 void do_reincarnate(CHAR_DATA *ch, char *argument)
 {
@@ -254,7 +255,7 @@ void do_reincarnate(CHAR_DATA *ch, char *argument)
       }
       else
       {
-         sprintf(buf, "Invalid input %s\n\r", arg);
+         snprintf(buf, sizeof(buf), "Invalid input %.128s\n\r", arg);
          send_to_char(buf, ch);
          send_to_char("Valid set args: show, race, order, confirm, done", ch);
       }

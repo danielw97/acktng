@@ -187,7 +187,22 @@ unit-test-skills-combo: test_skills_combo.o skills_combo.unit-test.o
 	rm -f unit-test-skills-combo
 	$(CC) -Wl,--gc-sections -o unit-test-skills-combo test_skills_combo.o skills_combo.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo
+
+reincarnate.unit-test.o: reincarnate.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o reincarnate.unit-test.o reincarnate.c
+
+unit-test-reincarnate: test_reincarnate.o reincarnate.unit-test.o
+	rm -f unit-test-reincarnate
+	$(CC) -Wl,--gc-sections -o unit-test-reincarnate test_reincarnate.o reincarnate.unit-test.o $(L_FLAGS)
+
+mob_commands.unit-test.o: mob_commands.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o mob_commands.unit-test.o mob_commands.c
+
+unit-test-mob-commands: test_mob_commands.o mob_commands.unit-test.o
+	rm -f unit-test-mob-commands
+	$(CC) -Wl,--gc-sections -o unit-test-mob-commands test_mob_commands.o mob_commands.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -202,3 +217,5 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-save
 	./unit-test-skills-obj
 	./unit-test-skills-combo
+	./unit-test-reincarnate
+	./unit-test-mob-commands
