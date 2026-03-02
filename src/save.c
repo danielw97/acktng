@@ -29,6 +29,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <stdint.h>
 #include "globals.h"
 #include "hash.h"
 
@@ -182,7 +183,16 @@ void save_char_obj(CHAR_DATA *ch)
     * Tack on a .temp to strsave, use as tempstrsave
     */
 
-   sprintf(tempstrsave, "%s.temp", strsave);
+   {
+      size_t strsave_len = strlen(strsave);
+      if (strsave_len + sizeof(".temp") <= sizeof(tempstrsave))
+      {
+         memcpy(tempstrsave, strsave, strsave_len + 1);
+         memcpy(tempstrsave + strsave_len, ".temp", sizeof(".temp"));
+      }
+      else
+         tempstrsave[0] = '\0';
+   }
 
    if ((fp = fopen(tempstrsave, "w")) == NULL)
    {
@@ -548,6 +558,24 @@ void abort_wrapper(void)
 
 hash_table *hash_changed_vnums = NULL;
 
+#if defined(UNIT_TEST_SAVE)
+void *hash_ref_from_vnum(int vnum)
+#else
+static void *hash_ref_from_vnum(int vnum)
+#endif
+{
+   return (void *)(intptr_t)vnum;
+}
+
+#if defined(UNIT_TEST_SAVE)
+int vnum_from_hash_ref(void *ref)
+#else
+static int vnum_from_hash_ref(void *ref)
+#endif
+{
+   return (int)(intptr_t)ref;
+}
+
 /* Nasty hack for db.c to get back address of ch */
 CHAR_DATA *loaded_mob_addr;
 
@@ -588,7 +616,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
             else
             {
                fread_to_eol(fp);
-               add_hash_entry(hash_changed_vnums, oldvnum, (void *)newvnum);
+               add_hash_entry(hash_changed_vnums, oldvnum, hash_ref_from_vnum(newvnum));
             }
          }
          if (fp != NULL)
@@ -767,14 +795,26 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
 #endif
 
 #if !defined(macintosh) && !defined(MSDOS)
-   sprintf(tempstrsave, "%s%s", strsave, ".gz");
+   {
+      size_t strsave_len = strlen(strsave);
+      if (strsave_len + sizeof(".gz") <= sizeof(tempstrsave))
+      {
+         memcpy(tempstrsave, strsave, strsave_len + 1);
+         memcpy(tempstrsave + strsave_len, ".gz", sizeof(".gz"));
+      }
+      else
+         tempstrsave[0] = '\0';
+   }
    if ((fp = fopen(tempstrsave, "r")) != NULL)
    {
       char buf[MAX_STRING_LENGTH];
       fclose(fp);
       fp = NULL;
-      sprintf(buf, "gzip -dfq %s", tempstrsave);
-      system(buf);
+      snprintf(buf, sizeof(buf), "gzip -dfq %s", tempstrsave);
+      {
+         int system_result = system(buf);
+         (void)system_result;
+      }
    }
 #endif
 
@@ -1140,7 +1180,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          break;
 
       case 'K':
-         SKEY("Keep", ch->pcdata->keep_vnum, fread_number(fp));
+         KEY("Keep", ch->pcdata->keep_vnum, fread_number(fp));
       case 'L':
 
          KEY("Level", ch->level, fread_number(fp));
@@ -1564,7 +1604,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
                      /*
                       * Check on move table
                       */
-                     if ((newvnum = (int)get_hash_entry(hash_changed_vnums, OldVnum)) != 0)
+                     if ((newvnum = vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
                      {
                         obj->pIndexData = get_obj_index(newvnum);
                         if (obj->pIndexData == NULL)
@@ -1901,7 +1941,7 @@ void fread_corpse(FILE *fp)
                      /*
                       * Check on move table
                       */
-                     if ((newvnum = (int)get_hash_entry(hash_changed_vnums, OldVnum)) != 0)
+                     if ((newvnum = vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
                      {
                         obj->pIndexData = get_obj_index(newvnum);
                         if (obj->pIndexData == NULL)

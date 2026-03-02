@@ -165,7 +165,15 @@ unit-test-rulers: test_rulers.o rulers.unit-test.o
 	rm -f unit-test-rulers
 	$(CC) -o unit-test-rulers test_rulers.o rulers.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers
+
+save.unit-test.o: save.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o save.unit-test.o save.c
+
+unit-test-save: test_save.o save.unit-test.o
+	rm -f unit-test-save
+	$(CC) -Wl,--gc-sections -o unit-test-save test_save.o save.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -177,3 +185,4 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-email
 	./unit-test-pdelete
 	./unit-test-rulers
+	./unit-test-save
