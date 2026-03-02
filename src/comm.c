@@ -73,6 +73,11 @@ const char echo_off_str[] = {IAC, WILL, TELOPT_ECHO, '\0'};
 const char echo_on_str[] = {IAC, WONT, TELOPT_ECHO, '\0'};
 const char go_ahead_str[] = {IAC, GA, '\0'};
 
+bool is_valid_finisher(CHAR_DATA *ch);
+int get_combo_count(CHAR_DATA *ch);
+int get_max_combo(CHAR_DATA *ch);
+int get_chi(CHAR_DATA *ch);
+
 bool is_parse_name_syntax_valid(const char *name)
 {
    const char *pc;
@@ -738,7 +743,8 @@ void new_descriptor(int control)
     * BAN_DATA *pban;
     */
    struct sockaddr_in sock;
-   size_t desc, size;
+   int desc;
+   socklen_t size;
 
    size = sizeof(sock);
    getsockname(control, (struct sockaddr *)&sock, &size);
@@ -1431,7 +1437,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
             cost = exp_to_level_adept(ch);
          else
             cost = exp_to_level(ch, cl_index);
-         sprintf(buf2, "%d", UMAX(0, cost - ch->exp));
+         sprintf(buf2, "%ld", UMAX(0, cost - ch->exp));
          i = buf2;
          break;
       }
@@ -3623,7 +3629,8 @@ void copyover_recover()
 
    for (;;)
    {
-      fscanf(fp, "%d %s %s\n", &desc, name, host);
+      if (fscanf(fp, "%d %99s %8191s\n", &desc, name, host) != 3)
+         break;
       if (desc == -1)
          break;
 

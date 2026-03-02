@@ -71,8 +71,8 @@ struct sp_dam_str_type sp_dam_str[] = {
 
 int get_spell_damage(CHAR_DATA *ch, int gsn)
 {
-   int base;
-   int d1, d2;
+   int base = 0;
+   int d1 = 0, d2 = 0;
 
    switch(skill_table[gsn].flag1)
    {
@@ -225,7 +225,7 @@ int class_heal_character(CHAR_DATA *ch, CHAR_DATA *victim, int base_heal, int sn
 
       heal += heal * intel / 100;
 
-      if (sn != spell_psionic_recovery)
+      if (sn != skill_lookup("psionic recovery"))
       {
          heal += heal * ch->lvl[CLASS_MAG] / 50;
          heal += heal * ch->remort[CLASS_SOR] / 50;
@@ -726,5 +726,5 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
 
 bool sp_damage(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int type, int sn, bool show_msg)
 {
-   calculate_damage(ch, victim, dam, sn, type, TRUE);
+   return calculate_damage(ch, victim, dam, sn, type, TRUE);
 }
