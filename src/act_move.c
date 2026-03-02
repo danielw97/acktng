@@ -126,31 +126,15 @@ void move_char(CHAR_DATA *ch, int door)
 
    if (IS_SET(in_room->affected_by, ROOM_BV_ENCAPS) || IS_SET(to_room->affected_by, ROOM_BV_ENCAPS))
    {
-      if (IS_NPC(ch) && IS_SET(ch->act, ACT_INTELLIGENT))
-      {
-         if (ch->mana > mana_cost(ch, skill_lookup("room dispel")))
-            do_cast(ch, "room dispel");
-      }
-      else
-      {
-         send_to_char("A barely visible energy web stops your movement!\n\r", ch);
-         ch->using_named_door = FALSE;
-         return;
-      }
+      send_to_char("A barely visible energy web stops your movement!\n\r", ch);
+      ch->using_named_door = FALSE;
+      return;
    }
    if (IS_SET(in_room->affected_by, ROOM_BV_HOLD))
    {
-      if (IS_NPC(ch) && IS_SET(ch->act, ACT_INTELLIGENT))
-      {
-         if (ch->mana > mana_cost(ch, skill_lookup("room dispel")))
-            do_cast(ch, "room dispel");
-      }
-      else
-      {
-         send_to_char("A fleeting vision of bars appears before the exit, and stops your movement!\n\r", ch);
-         ch->using_named_door = FALSE;
-         return;
-      }
+      send_to_char("A fleeting vision of bars appears before the exit, and stops your movement!\n\r", ch);
+      ch->using_named_door = FALSE;
+      return;
    }
 
    if (IS_SET(pexit->exit_info, EX_CLOSED))
@@ -255,7 +239,7 @@ void move_char(CHAR_DATA *ch, int door)
          if ((!IS_AFFECTED(ch, AFF_FLYING)) && (!item_has_apply(ch, ITEM_APPLY_FLY)))
          {
 
-            if ((IS_NPC(ch)) && (IS_SET(ch->act, ACT_INTELLIGENT)) && (ch->mana > mana_cost(ch, skill_lookup("fly"))))
+            if ((IS_NPC(ch)) && (ch->mana > mana_cost(ch, skill_lookup("fly"))))
             {
                do_cast(ch, "fly");
             }
@@ -293,7 +277,7 @@ void move_char(CHAR_DATA *ch, int door)
          }
          if (!found)
          {
-            if ((IS_NPC(ch)) && (IS_SET(ch->act, ACT_INTELLIGENT)) && (ch->mana > mana_cost(ch, skill_lookup("fly"))))
+            if ((IS_NPC(ch)) && (ch->mana > mana_cost(ch, skill_lookup("fly"))))
             {
                do_cast(ch, "fly");
             }

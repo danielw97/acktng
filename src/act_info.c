@@ -775,8 +775,6 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
           (is_affected(ch, skill_lookup("detect undead")) || item_has_apply(ch, ITEM_APPLY_DET_UNDEAD)))
          safe_strcat(MAX_STRING_LENGTH, buf, "(UnDead) ");
 
-      if (IS_SET(victim->act, ACT_INTELLIGENT))
-         safe_strcat(MAX_STRING_LENGTH, buf, "(Int) ");
    }
 
    if (IS_AFFECTED(victim, AFF_INVISIBLE))

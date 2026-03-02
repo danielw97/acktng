@@ -580,7 +580,7 @@ bool spell_ethereal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       send_to_char("Not during a @@eDeath Match@@N!!\n\r", ch);
       return FALSE;
    }
-   if ((IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL)) && (!IS_NPC(ch) && (!IS_SET(ch->act, ACT_INTELLIGENT))))
+   if ((IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL)) && (!IS_NPC(ch)))
    {
       send_to_char("You failed.\n\r", ch);
       return FALSE;
@@ -1000,10 +1000,7 @@ bool spell_room_dispel(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj
    if (room == NULL)
       return FALSE;
 
-   if (IS_NPC(ch) && IS_SET(ch->act, ACT_INTELLIGENT))
-      chance = 1000;
-   else
-      chance = ch->level + 20;
+   chance = ch->level + 20;
 
    act("$n gestures demonically at the magical spells around the room.", ch, NULL, NULL, TO_ROOM);
    send_to_char("@@NYou gesture demonically!\n\r", ch);

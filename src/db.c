@@ -2546,7 +2546,6 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 {
    CHAR_DATA *mob;
    int level;
-   char buf[255];
    sh_int cnt;
 
    (void)cnt;
@@ -2556,28 +2555,11 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
       bug("Create_mobile: NULL pMobIndex.", 0);
       hang("Create Mobile in db.c");
    }
-
-   if (IS_SET(pMobIndex->act, ACT_INTELLIGENT))
-   {
-      /*
-       * Only load one with the same name
-       */
-#if !defined(machintosh) && !defined(MSDOS)
-      sprintf(buf, "%s n%i", pMobIndex->player_name, pMobIndex->count + 1);
-#else
-      sprintf(buf, "n%i %s", pMobIndex->count + 1, pMobIndex->player_name);
-#endif
-   }
-
    GET_FREE(mob, char_free);
 
    clear_char(mob);
    mob->pIndexData = pMobIndex;
-
-   if (IS_SET(pMobIndex->act, ACT_INTELLIGENT))
-      mob->name = str_dup(buf);
-   else
-      mob->name = str_dup(pMobIndex->player_name);
+   mob->name = str_dup(pMobIndex->player_name);
 
    mob->short_descr = str_dup(pMobIndex->short_descr);
    mob->long_descr = str_dup(pMobIndex->long_descr);
