@@ -895,7 +895,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
    }
 
    sprintf(buf, "Hp: %d/%d.  Mana: %d/%d.  Move: %d/%d.  Practices: %d.\n\r",
-           victim->hit, victim->max_hit, victim->mana, victim->max_mana, victim->move, victim->max_move, victim->practice);
+           victim->hit, get_max_hp(victim), victim->mana, get_max_mana(victim), victim->move, get_max_move(victim), victim->practice);
    strcat(buf1, buf);
 
    sprintf(buf,
