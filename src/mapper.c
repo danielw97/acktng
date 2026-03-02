@@ -613,6 +613,23 @@ void MapArea(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int x, int y, int min, int ma
    return;
 }
 
+static void mapper_append_color_display(char *dest, int max_len, const char *color, const char *display)
+{
+   char joined[MSL];
+
+   joined[0] = '\0';
+   safe_strcat(MSL, joined, (char *)color);
+   safe_strcat(MSL, joined, (char *)display);
+   safe_strcat(max_len, dest, joined);
+}
+
+#ifdef UNIT_TEST_MAPPER
+void mapper_test_append_color_display(char *dest, int max_len, const char *color, const char *display)
+{
+   mapper_append_color_display(dest, max_len, color, display);
+}
+#endif
+
 void ShowRoom(CHAR_DATA *ch, int min, int max, int size, int center)
 {
    void disp_map(char *border, char *map, CHAR_DATA *ch);
@@ -644,8 +661,7 @@ void ShowRoom(CHAR_DATA *ch, int min, int max, int size, int center)
                     ((contents[x][y].string[0] == '\0') ? "" : get_invert_color(map[x][y])));
             sprintf(displaybuf, "%s",
                     ((map[x][y] <= 0) ? get_door_display(map[x][y]) : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y]) : contents[x][y].string)));
-            snprintf(catbuf, sizeof(catbuf), "%s%s", colorbuf, displaybuf);
-            safe_strcat(MSL, outbuf, catbuf);
+            mapper_append_color_display(outbuf, MSL, colorbuf, displaybuf);
          }
          else
          {
@@ -695,8 +711,7 @@ void ShowMap(CHAR_DATA *ch, int min, int max, int size, int center)
                     ((contents[x][y].string[0] == '\0') ? "" : get_invert_color(map[x][y])));
             sprintf(displaybuf, "%s",
                     ((map[x][y] <= 0) ? get_door_display(map[x][y]) : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y]) : contents[x][y].string)));
-            snprintf(catbuf, sizeof(catbuf), "%s%s", colorbuf, displaybuf);
-            safe_strcat(MSL, outbuf, catbuf);
+            mapper_append_color_display(outbuf, MSL, colorbuf, displaybuf);
          }
          else
          {
