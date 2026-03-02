@@ -561,6 +561,18 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
         }
     }
 
+    if (ch != victim)
+    {
+        int cloak_reduction = 0;
+
+        if (IS_SET(element, ELE_PHYSICAL) && is_affected(victim, skill_lookup("cloak:iron")))
+            cloak_reduction = cloak_level_damage_reduction(get_psuedo_level(victim));
+        else if (!IS_SET(element, ELE_PHYSICAL) && is_affected(victim, skill_lookup("cloak:mental")))
+            cloak_reduction = cloak_level_damage_reduction(get_psuedo_level(victim));
+
+        dam = UMAX(0, dam - cloak_reduction);
+    }
+
     /*
      * Hurt the victim.
      * Inform the victim of his new state.

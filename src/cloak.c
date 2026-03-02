@@ -74,7 +74,9 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, bool
 {
     int reactive_damage = 0;
 
-    if (!IS_AFFECTED(victim, AFF_CLOAK_FLAMING) && !is_affected(victim, skill_lookup("cloak:elements")))
+    if (!IS_AFFECTED(victim, AFF_CLOAK_FLAMING) && !is_affected(victim, skill_lookup("cloak:elements"))
+        && !is_affected(victim, skill_lookup("cloak:drain"))
+        && !is_affected(victim, skill_lookup("cloak:misery")))
         return reactive_damage;
 
     if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING) || is_affected(victim, skill_lookup("cloak:elements"))) && (ch != victim))
@@ -259,6 +261,7 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, bool
         reactive_damage += drain_damage;
     }
 
+
     return reactive_damage;
 }
 #endif
@@ -269,6 +272,14 @@ int cloak_drain_damage_from_level(int pseudo_level)
         return 0;
 
     return pseudo_level;
+}
+
+int cloak_level_damage_reduction(int pseudo_level)
+{
+    if (pseudo_level < 0)
+        return 0;
+
+    return pseudo_level / 2;
 }
 
 long cloak_drain_attacker_hp_after_hit(long attacker_hp, int drain_damage)
