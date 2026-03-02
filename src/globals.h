@@ -486,7 +486,6 @@ DECLARE_DO_FUN(do_notell);
 DECLARE_DO_FUN(do_ofind);
 DECLARE_DO_FUN(do_oload);
 DECLARE_DO_FUN(do_open);
-DECLARE_DO_FUN(do_order);
 DECLARE_DO_FUN(do_oset);
 DECLARE_DO_FUN(do_ostat);
 DECLARE_DO_FUN(do_owhere);
@@ -652,3 +651,5 @@ DECLARE_DO_FUN(do_imprint);
 
 /* Reincarnate */
 DECLARE_DO_FUN(do_reincarnate);
+
+bool is_player_summon_special(SPEC_FUN *spec_fun);

@@ -69,6 +69,13 @@ DECLARE_SPEC_FUN(spec_vamp_hunter);
 DECLARE_SPEC_FUN(spec_mino_guard);
 DECLARE_SPEC_FUN(spec_tax_man);
 DECLARE_SPEC_FUN(spec_keep_physical_captain);
+DECLARE_SPEC_FUN(spec_summon_water);
+DECLARE_SPEC_FUN(spec_summon_fire);
+DECLARE_SPEC_FUN(spec_summon_earth);
+DECLARE_SPEC_FUN(spec_summon_undead);
+DECLARE_SPEC_FUN(spec_summon_holy);
+DECLARE_SPEC_FUN(spec_summon_shadow);
+DECLARE_SPEC_FUN(spec_summon_metal);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -140,6 +147,20 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_tax_man;
    if (!str_cmp(name, "spec_keep_physical_captain"))
       return spec_keep_physical_captain;
+   if (!str_cmp(name, "spec_summon_water"))
+      return spec_summon_water;
+   if (!str_cmp(name, "spec_summon_fire"))
+      return spec_summon_fire;
+   if (!str_cmp(name, "spec_summon_earth"))
+      return spec_summon_earth;
+   if (!str_cmp(name, "spec_summon_undead"))
+      return spec_summon_undead;
+   if (!str_cmp(name, "spec_summon_holy"))
+      return spec_summon_holy;
+   if (!str_cmp(name, "spec_summon_shadow"))
+      return spec_summon_shadow;
+   if (!str_cmp(name, "spec_summon_metal"))
+      return spec_summon_metal;
 
    return 0;
 }
@@ -210,6 +231,20 @@ char *rev_spec_lookup(void *func)
       return "spec_tax_man";
    if (func == spec_keep_physical_captain)
       return "spec_keep_physical_captain";
+   if (func == spec_summon_water)
+      return "spec_summon_water";
+   if (func == spec_summon_fire)
+      return "spec_summon_fire";
+   if (func == spec_summon_earth)
+      return "spec_summon_earth";
+   if (func == spec_summon_undead)
+      return "spec_summon_undead";
+   if (func == spec_summon_holy)
+      return "spec_summon_holy";
+   if (func == spec_summon_shadow)
+      return "spec_summon_shadow";
+   if (func == spec_summon_metal)
+      return "spec_summon_metal";
 
    return 0;
 }
@@ -244,6 +279,13 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_mino_guard \n\r");
    strcat(buf, "       spec_tax_man \n\r");
    strcat(buf, "       spec_keep_physical_captain\n\r");
+   strcat(buf, "       spec_summon_water        \n\r");
+   strcat(buf, "       spec_summon_fire         \n\r");
+   strcat(buf, "       spec_summon_earth        \n\r");
+   strcat(buf, "       spec_summon_undead       \n\r");
+   strcat(buf, "       spec_summon_holy         \n\r");
+   strcat(buf, "       spec_summon_shadow       \n\r");
+   strcat(buf, "       spec_summon_metal        \n\r");
 
    return;
 }
@@ -270,6 +312,105 @@ bool dragon(CHAR_DATA *ch, char *spell_name)
       return FALSE;
    (*skill_table[sn].spell_fun)(sn, ch->level, ch, victim, NULL);
    return TRUE;
+}
+
+bool is_player_summon_special(SPEC_FUN *spec_fun)
+{
+   return spec_fun == spec_summon_water
+      || spec_fun == spec_summon_fire
+      || spec_fun == spec_summon_earth
+      || spec_fun == spec_summon_undead
+      || spec_fun == spec_summon_holy
+      || spec_fun == spec_summon_shadow
+      || spec_fun == spec_summon_metal;
+}
+
+static bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells, int spell_count)
+{
+   int i;
+   int start;
+
+   if (ch->position != POS_FIGHTING || target == NULL || spell_count <= 0)
+      return FALSE;
+
+   start = number_range(0, spell_count - 1);
+
+   for (i = 0; i < spell_count; i++)
+   {
+      int index = (start + i) % spell_count;
+      int sn = skill_lookup(spells[index]);
+
+      if (sn < 0)
+         continue;
+
+      (*skill_table[sn].spell_fun)(sn, ch->level, ch, target, NULL);
+      return TRUE;
+   }
+
+   return FALSE;
+}
+
+static bool spec_summon_heal_master(CHAR_DATA *ch, const char *const *spells, int spell_count, int hp_threshold)
+{
+   if (ch->master == NULL || ch->master->in_room != ch->in_room)
+      return FALSE;
+
+   if (ch->master->hit >= (get_max_hp(ch->master) * hp_threshold) / 100)
+      return FALSE;
+
+   return spec_summon_cast_random(ch, ch->master, spells, spell_count);
+}
+
+bool spec_summon_water(CHAR_DATA *ch)
+{
+   static const char *const heal_spells[] = {"cure critical", "cure serious", "refresh"};
+   static const char *const spells[] = {"chill touch", "acid blast", "weaken"};
+
+   if (spec_summon_heal_master(ch, heal_spells, 3, 80))
+      return TRUE;
+
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_fire(CHAR_DATA *ch)
+{
+   static const char *const spells[] = {"fireball", "high explosive", "curse"};
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_earth(CHAR_DATA *ch)
+{
+   static const char *const spells[] = {"earthquake", "acid blast", "weaken"};
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_undead(CHAR_DATA *ch)
+{
+   static const char *const spells[] = {"harm", "chill touch", "poison"};
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_holy(CHAR_DATA *ch)
+{
+   static const char *const heal_spells[] = {"heal", "cure critical", "cure poison"};
+   static const char *const spells[] = {"holy wrath", "dispel evil", "curse"};
+
+   if (spec_summon_heal_master(ch, heal_spells, 3, 90))
+      return TRUE;
+
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_shadow(CHAR_DATA *ch)
+{
+   static const char *const spells[] = {"energy drain", "curse", "weaken"};
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_metal(CHAR_DATA *ch)
+{
+   static const char *const spells[] = {"acid blast", "lightning bolt", "high explosive"};
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
 }
 
 /*
