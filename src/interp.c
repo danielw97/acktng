@@ -517,6 +517,8 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"hunt", do_hunt, POS_STANDING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
+    {"keep", do_keep, POS_DEAD, 0, LOG_NORMAL,
+     C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"leav", do_leav, POS_RESTING, CLAN_ONLY, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_NEVER},
     {"leave", do_leave, POS_RESTING, CLAN_ONLY, LOG_NORMAL,

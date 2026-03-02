@@ -41,6 +41,27 @@ void check_guards(CHAR_DATA *ch);
 
 char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort);
 
+
+static bool is_keep_chest(const OBJ_DATA *obj)
+{
+   return (obj != NULL && obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST));
+}
+
+
+static int container_item_count(const OBJ_DATA *container)
+{
+   const OBJ_DATA *obj;
+   int count = 0;
+
+   if (container == NULL)
+      return 0;
+
+   for (obj = container->first_in_carry_list; obj != NULL; obj = obj->next_in_carry_list)
+      count++;
+
+   return count;
+}
+
 void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
 {
 
@@ -209,10 +230,10 @@ void do_get(CHAR_DATA *ch, char *argument)
          }
          else
          {
-            if (container->item_type == ITEM_CORPSE_PC)
+            if (container->item_type == ITEM_CORPSE_PC || is_keep_chest(container))
                save_corpses();
          }
-         if (ch->level > 1)
+         if (!IS_NPC(ch))
             do_save(ch, "");
          return;
       }
@@ -247,7 +268,10 @@ void do_get(CHAR_DATA *ch, char *argument)
                get_obj(ch, obj, container);
             }
          }
-         if (ch->level > 1)
+         if (container->item_type == ITEM_CORPSE_PC || is_keep_chest(container))
+            save_corpses();
+
+         if (!IS_NPC(ch))
             do_save(ch, "");
 
          return;
@@ -437,7 +461,7 @@ void do_put(CHAR_DATA *ch, char *argument)
             {
                break;
             }
-            if (!can_drop_obj(ch, obj))
+            if (!is_keep_chest(container_obj) && !can_drop_obj(ch, obj))
             {
                act("You can't let go of $d.", ch, NULL, obj->name, TO_CHAR);
 
@@ -455,6 +479,12 @@ void do_put(CHAR_DATA *ch, char *argument)
                send_to_char("You can't fold it into itself.\n\r", ch);
                continue;
             }
+            if (is_keep_chest(container_obj) && container_item_count(container_obj) >= 50)
+            {
+               send_to_char("That keep chest cannot hold any more items.\n\r", ch);
+               continue;
+            }
+
             if (get_obj_weight(obj) + get_obj_weight(container_obj) > container_obj->value[0])
             {
                act("$p won't fit into $P.", ch, obj, container_obj, TO_CHAR);
@@ -499,7 +529,10 @@ void do_put(CHAR_DATA *ch, char *argument)
              */
          }
       }
-      if (ch->level > 2)
+      if (is_keep_chest(container_obj))
+         save_corpses();
+
+      if (!IS_NPC(ch))
          do_save(ch, "");
       return;
    }

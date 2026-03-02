@@ -296,6 +296,7 @@ DECLARE_DO_FUN(do_guild);
 DECLARE_DO_FUN(do_halls);
 DECLARE_DO_FUN(do_headbutt);
 DECLARE_DO_FUN(do_knee);
+DECLARE_DO_FUN(do_keep);
 DECLARE_DO_FUN(do_detox);
 DECLARE_DO_FUN(do_heal);
 DECLARE_DO_FUN(do_hunt);

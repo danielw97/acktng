@@ -2149,6 +2149,32 @@ int count_obj_room(OBJ_INDEX_DATA *pObjIndex, OBJ_DATA *list)
    return nMatch;
 }
 
+static bool is_keep_chest_obj(const OBJ_DATA *obj)
+{
+   return (obj != NULL && obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST));
+}
+
+static void register_persistent_container(OBJ_DATA *obj)
+{
+   CORPSE_DATA *this_corpse;
+
+   if (obj == NULL)
+      return;
+
+   if (obj->item_type != ITEM_CORPSE_PC && !is_keep_chest_obj(obj))
+      return;
+
+   for (this_corpse = first_corpse; this_corpse != NULL; this_corpse = this_corpse->next)
+      if (this_corpse->this_corpse == obj)
+         return;
+
+   GET_FREE(this_corpse, corpse_free);
+   this_corpse->next = NULL;
+   this_corpse->prev = NULL;
+   this_corpse->this_corpse = obj;
+   LINK(this_corpse, first_corpse, last_corpse, next, prev);
+}
+
 /*
  * Move an obj out of a room.
  */
@@ -2207,6 +2233,8 @@ void obj_to_room(OBJ_DATA *obj, ROOM_INDEX_DATA *pRoomIndex)
    obj->in_obj = NULL;
    obj->next_in_carry_list = NULL;
    obj->prev_in_carry_list = NULL;
+
+   register_persistent_container(obj);
    return;
 }
 
@@ -2371,7 +2399,7 @@ void extract_obj(OBJ_DATA *obj)
       }
    }
 
-   if (obj->item_type == ITEM_CORPSE_PC)
+   if (obj->item_type == ITEM_CORPSE_PC || is_keep_chest_obj(obj))
    {
       CORPSE_DATA *this_corpse;
       for (this_corpse = first_corpse; this_corpse != NULL; this_corpse = this_corpse->next)
