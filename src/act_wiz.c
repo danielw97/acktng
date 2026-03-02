@@ -1793,9 +1793,9 @@ void do_restore(CHAR_DATA *ch, char *argument)
             }
             else
             {
-               vch->hit = vch->max_hit;
-               vch->mana = vch->max_mana;
-               vch->move = vch->max_move;
+               vch->hit = get_max_hp(vch);
+               vch->mana = get_max_move(vch);
+               vch->move = get_max_move(vch);
                update_pos(vch);
                act("$n kindly restores you.", ch, NULL, vch, TO_VICT);
             }
@@ -1812,9 +1812,9 @@ void do_restore(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   victim->hit = victim->max_hit;
-   victim->mana = victim->max_mana;
-   victim->move = victim->max_move;
+   victim->hit = get_max_hp(victim);
+   victim->mana = get_max_mana(victim);
+   victim->move = get_max_move(victim);
    update_pos(victim);
    act("$n kindly restores you.", ch, NULL, victim, TO_VICT);
    send_to_char("Ok.\n\r", ch);
