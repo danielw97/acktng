@@ -197,14 +197,29 @@ Syntax: auction  <message>      Syntax: gossip   <message>
 Syntax: yell     <message>      Syntax: zzz      <message>
 Syntax: flame    <message>      Syntax: race     <message>
 Syntax: clan     <message>      syntax: music    <message>
-These commands send messages through communication channels to other players.
-SHOUT sends a message to all awake players in the world.  To curb excessive
-shouting, SHOUT imposes a three-second delay on the shouter.
-MUSIC, AUCTION, GOSSIP, NEWBIE, and QUESTION and ANSWER also send messages 
-to all interested players.  '.' is a synonym for GOSSIP.  The QUESTION and 
-ANSWER commands both use the same 'question' channel
-FLAME is similar to auction, gossip, etc, but is intended for moaning about
-life, players, etc.  ZZZ may only be used when sleeping.
+        Your @@yfirst@@W remort class requires the matching mortal
+        pre-requisite class at @@y100@@W.
+
+        Your @@ysecond@@W remort class requires:
+          - your first remort class at @@y100@@W,
+          - all mortal classes at @@y100@@W, and
+          - the matching mortal pre-requisite class for that second remort
+            at @@y100@@W.
+When you are ready to remort, type gain <first three letters of new class>.
+
+Remort classes and mortal pre-requisites are:
+        -@@pSorcerer@@W (Mage)
+        -@@WWizard@@W (Mage)
+        -@@aPaladin@@W (Cleric)
+        -@@CPriest@@W (Cleric)
+        -@@dAssassin@@W (Thief)
+        -@@dWarlock@@W (Thief)
+        -@@cKnight@@W (Warrior)
+        -@@cSwordsman@@W (Warrior)
+        -@@GNecromancer@@W (Psionicist)
+        -@@mEgomancer@@W (Psionicist)
+        -@@gMonk@@W (Pugilist)
+        -@@gBrawler@@W (Pugilist)
 YELL sends a message to all awake players within your area.
 RACE sends a message to members of your own race.  CLAN sends a message to
 those in your clan.

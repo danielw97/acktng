@@ -3539,6 +3539,46 @@ Description: This spell conjures forth a blast of acid to strike the victim.
 *******************************************************************************
 
 ~
+-1 shelp_cloak oathbreaker~
+*******************************************************************************
+
+       Name: cloak:oathbreaker
+
+    Classes: Warlock(48)
+
+   Duration: pseudo_level / 8 ticks
+
+   Modifies: N/A
+
+       Type: Defensive
+
+Description: Surrounds the caster with an oathbreaker cloak.  While active,
+             incoming magical damage attacks have a pseudo_level/10 chance of
+             being completely avoided.
+
+*******************************************************************************
+
+~
+-1 shelp_cloak transcendence~
+*******************************************************************************
+
+       Name: cloak:transcendence
+
+    Classes: Assassin(48)
+
+   Duration: pseudo_level / 8 ticks
+
+   Modifies: N/A
+
+       Type: Defensive
+
+Description: Surrounds the caster with a transcendence cloak.  While active,
+             incoming physical attacks have a pseudo_level/15 chance of being
+             completely avoided.
+
+*******************************************************************************
+
+~
 -1 shelp_summary~
 *******************************************************************************
 
