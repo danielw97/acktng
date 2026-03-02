@@ -1885,7 +1885,8 @@ void do_score(CHAR_DATA *ch, char *argument)
    else
       safe_strcat(MAX_STRING_LENGTH, buf, "@@yalmost invincible!");
 
-   sprintf(buf2, " @@WArmor Class: @@y%5d.   %s", get_ac(ch), buf);
+   snprintf(buf2, sizeof(buf2), " @@WArmor Class: @@y%5d.   ", get_ac(ch));
+   safe_strcat(MAX_STRING_LENGTH, buf2, buf);
    sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
    send_to_char(buf, ch);
 
@@ -1922,7 +1923,8 @@ void do_score(CHAR_DATA *ch, char *argument)
    else
       strcpy(buf, "@@ysatanic!");
 
-   sprintf(buf2, "@@WAlignment: @@y%5d@@W.  You are %s", ch->alignment, buf);
+   snprintf(buf2, sizeof(buf2), "@@WAlignment: @@y%5d@@W.  You are ", ch->alignment);
+   safe_strcat(MAX_STRING_LENGTH, buf2, buf);
    sprintf(buf, "@@c|%s@@c|\n\r", center_text(buf2, score_inner_width));
    send_to_char(buf, ch);
 
@@ -1958,11 +1960,14 @@ void do_affected(CHAR_DATA *ch, char *argument)
                sprintf(duration, "%d rounds", paf->duration);
             if (paf->location > APPLY_NONE)
             {
-               sprintf(buf,
-                       " modifies %s by %d for %s", affect_loc_name(paf->location), paf->modifier, duration);
+               snprintf(buf, sizeof(buf), " modifies %s by %d for ", affect_loc_name(paf->location), paf->modifier);
+               safe_strcat(MAX_STRING_LENGTH, buf, duration);
             }
             else
-               sprintf(buf, " lasts for %s", duration);
+            {
+               snprintf(buf, sizeof(buf), " lasts for ");
+               safe_strcat(MAX_STRING_LENGTH, buf, duration);
+            }
             send_to_char(buf, ch);
          }
 
@@ -2423,40 +2428,61 @@ void do_who(CHAR_DATA *ch, char *argument)
          {
             if (slength + excess <= 43)
             {
-               sprintf(buf + strlen(buf), "@@R|%s%s%s  %s @@R| %s%s%s%s",
-                       color_string(ch, "stats"),
-                       buf3,
-                       color_string(ch, "stats"),
-                       fgs,
-                       color_string(ch, "stats"), wch->name, buf4, IS_SET(wch->act, PLR_WIZINVIS) ? "(WIZI)" : "");
-               sprintf(buf + strlen(buf), "@@R|@@g\n\r");
+               buf2[0] = '\0';
+               safe_strcat(MAX_STRING_LENGTH, buf2, "@@R|");
+               safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+               safe_strcat(MAX_STRING_LENGTH, buf2, buf3);
+               safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+               safe_strcat(MAX_STRING_LENGTH, buf2, "  ");
+               safe_strcat(MAX_STRING_LENGTH, buf2, fgs);
+               safe_strcat(MAX_STRING_LENGTH, buf2, " @@R| ");
+               safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+               safe_strcat(MAX_STRING_LENGTH, buf2, wch->name);
+               safe_strcat(MAX_STRING_LENGTH, buf2, buf4);
+               safe_strcat(MAX_STRING_LENGTH, buf2, IS_SET(wch->act, PLR_WIZINVIS) ? "(WIZI)" : "");
+               safe_strcat(MAX_STRING_LENGTH, buf2, "@@R|@@g\n\r");
+               safe_strcat(MAX_STRING_LENGTH, buf, buf2);
             }
             else
             {
-               sprintf(buf + strlen(buf), "@@R|%s%s%s  %s @@R| %s%s%s%s",
-                       color_string(ch, "stats"),
-                       buf3,
-                       color_string(ch, "stats"),
-                       fgs,
-                       color_string(ch, "stats"), wch->name, buf4, IS_SET(wch->act, PLR_WIZINVIS) ? " (WIZI) " : "");
-               sprintf(buf + strlen(buf), "@@R|@@g\n\r");
+               buf2[0] = '\0';
+               safe_strcat(MAX_STRING_LENGTH, buf2, "@@R|");
+               safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+               safe_strcat(MAX_STRING_LENGTH, buf2, buf3);
+               safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+               safe_strcat(MAX_STRING_LENGTH, buf2, "  ");
+               safe_strcat(MAX_STRING_LENGTH, buf2, fgs);
+               safe_strcat(MAX_STRING_LENGTH, buf2, " @@R| ");
+               safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+               safe_strcat(MAX_STRING_LENGTH, buf2, wch->name);
+               safe_strcat(MAX_STRING_LENGTH, buf2, buf4);
+               safe_strcat(MAX_STRING_LENGTH, buf2, IS_SET(wch->act, PLR_WIZINVIS) ? " (WIZI) " : "");
+               safe_strcat(MAX_STRING_LENGTH, buf2, "@@R|@@g\n\r");
+               safe_strcat(MAX_STRING_LENGTH, buf, buf2);
             }
          }
          else
          {
-            sprintf(buf + strlen(buf), "@@R|%s%s%s  %s @@R| %s%s%s%s",
-                    color_string(ch, "stats"),
-                    buf3,
-                    color_string(ch, "stats"),
-                    fgs,
-                    color_string(ch, "stats"),
-                    wch->name,
-                    buf4, (IS_SET(wch->act, PLR_KILLER) || IS_SET(wch->act, PLR_THIEF)) ? "(WANTED)" : "");
+            buf2[0] = '\0';
+            safe_strcat(MAX_STRING_LENGTH, buf2, "@@R|");
+            safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+            safe_strcat(MAX_STRING_LENGTH, buf2, buf3);
+            safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+            safe_strcat(MAX_STRING_LENGTH, buf2, "  ");
+            safe_strcat(MAX_STRING_LENGTH, buf2, fgs);
+            safe_strcat(MAX_STRING_LENGTH, buf2, " @@R| ");
+            safe_strcat(MAX_STRING_LENGTH, buf2, color_string(ch, "stats"));
+            safe_strcat(MAX_STRING_LENGTH, buf2, wch->name);
+            safe_strcat(MAX_STRING_LENGTH, buf2, buf4);
+            safe_strcat(MAX_STRING_LENGTH, buf2,
+                        (IS_SET(wch->act, PLR_KILLER) || IS_SET(wch->act, PLR_THIEF)) ? "(WANTED)" : "");
+            safe_strcat(MAX_STRING_LENGTH, buf, buf2);
 
             if (wch->timer > 5)
-               sprintf(buf + strlen(buf), "[IDLE:%2d] @@R|@@g\n\r", wch->timer);
+               snprintf(buf2, sizeof(buf2), "[IDLE:%2d] @@R|@@g\n\r", wch->timer);
             else
-               sprintf(buf + strlen(buf), "@@R|@@g\n\r");
+               snprintf(buf2, sizeof(buf2), "@@R|@@g\n\r");
+            safe_strcat(MAX_STRING_LENGTH, buf, buf2);
          }
       }
 
@@ -5510,4 +5536,3 @@ void do_loot(CHAR_DATA *ch, char *argument)
    send_to_char("You cannot loot this corpse.\n\r", ch);
    return;
 }
-
