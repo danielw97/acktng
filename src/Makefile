@@ -202,7 +202,30 @@ unit-test-mob-commands: test_mob_commands.o mob_commands.unit-test.o
 	rm -f unit-test-mob-commands
 	$(CC) -Wl,--gc-sections -o unit-test-mob-commands test_mob_commands.o mob_commands.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands
+
+
+db.unit-test.o: db.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_DB -ffunction-sections -fdata-sections -o db.unit-test.o db.c
+
+unit-test-db: test_db.o db.unit-test.o
+	rm -f unit-test-db
+	$(CC) -Wl,--gc-sections -o unit-test-db test_db.o db.unit-test.o $(L_FLAGS)
+
+magic.unit-test.o: magic.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC -ffunction-sections -fdata-sections -o magic.unit-test.o magic.c
+
+unit-test-magic: test_magic.o magic.unit-test.o
+	rm -f unit-test-magic
+	$(CC) -Wl,--gc-sections -o unit-test-magic test_magic.o magic.unit-test.o $(L_FLAGS)
+
+mapper.unit-test.o: mapper.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAPPER -ffunction-sections -fdata-sections -o mapper.unit-test.o mapper.c
+
+unit-test-mapper: test_mapper.o mapper.unit-test.o
+	rm -f unit-test-mapper
+	$(CC) -Wl,--gc-sections -o unit-test-mapper test_mapper.o mapper.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-mapper
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -219,3 +242,6 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-skills-combo
 	./unit-test-reincarnate
 	./unit-test-mob-commands
+	./unit-test-db
+	./unit-test-magic
+	./unit-test-mapper

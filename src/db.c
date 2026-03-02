@@ -268,6 +268,7 @@ int sAllocPerm;
 extern long MAX_STRING;
 void init_string_space(void);
 void boot_done(void);
+bool generate_ai_spawn(CHAR_DATA *ch);
 
 /*
  * Semi-locals.
@@ -306,9 +307,37 @@ void reset_area args((AREA_DATA * pArea));
 #define SHOW_AREA                                \
    if (!previous_bug)                            \
    {                                             \
-      bug("      In %s.", (int)pArea->filename); \
+      bug("      In area file:", 0);            \
+      log_f("      In %s.", pArea->filename);    \
       previous_bug = 1;                          \
    }
+
+static void db_format_status(char *dest, size_t dest_size, const char *prefix, const char *file_name)
+{
+   snprintf(dest, dest_size, "%s %s", prefix, file_name);
+}
+
+static void db_set_area_name(const char *file_name)
+{
+   snprintf(strArea, sizeof(strArea), "%.*s", (int)sizeof(strArea) - 1, file_name);
+}
+
+#ifdef UNIT_TEST_DB
+void db_test_format_status(char *dest, size_t dest_size, const char *prefix, const char *file_name)
+{
+   db_format_status(dest, dest_size, prefix, file_name);
+}
+
+void db_test_set_area_name(const char *file_name)
+{
+   db_set_area_name(file_name);
+}
+
+const char *db_test_get_area_name(void)
+{
+   return strArea;
+}
+#endif
 
 /*
  * Big mama top level function.
@@ -457,9 +486,9 @@ void boot_db(void)
       char buf[MAX_STRING_LENGTH];
       log_f("Loading in Clan diplomacy info.");
 
-      sprintf(clan_file_name, "%s", CLAN_FILE);
+      snprintf(clan_file_name, sizeof(clan_file_name), "%s", CLAN_FILE);
 
-      sprintf(buf, "Loading %s\n\r", clan_file_name);
+      db_format_status(buf, sizeof(buf), "Loading", clan_file_name);
       monitor_chan(buf, MONITOR_CLAN);
 
       if ((clanfp = fopen(clan_file_name, "r")) == NULL)
@@ -469,7 +498,7 @@ void boot_db(void)
       else
       {
          fpArea = clanfp;
-         sprintf(strArea, "%s", clan_file_name);
+         db_set_area_name(clan_file_name);
 
          for (x = 1; x < MAX_CLAN; x++)
          {
@@ -499,8 +528,8 @@ void boot_db(void)
          }
       }
       fpArea = NULL;
-      sprintf(buf, "Done Loading %s", clan_file_name);
-      log_f(buf);
+      db_format_status(buf, sizeof(buf), "Done Loading", clan_file_name);
+      log_f("%s", buf);
    }
 
    /*
@@ -831,10 +860,10 @@ void load_corpses(void)
    char corpse_file_name[MAX_STRING_LENGTH];
    char buf[MAX_STRING_LENGTH];
 
-   sprintf(corpse_file_name, "%s", CORPSE_FILE);
+   snprintf(corpse_file_name, sizeof(corpse_file_name), "%s", CORPSE_FILE);
 
-   sprintf(buf, "Loading %s\n\r", corpse_file_name);
-   log_f(buf);
+   db_format_status(buf, sizeof(buf), "Loading", corpse_file_name);
+   log_f("%s", buf);
 
    if ((corpsefp = fopen(corpse_file_name, "r")) == NULL)
    {
@@ -845,7 +874,7 @@ void load_corpses(void)
    else
    {
       fpArea = corpsefp;
-      sprintf(strArea, "%s", corpse_file_name);
+      db_set_area_name(corpse_file_name);
 
       for (;;)
 
@@ -884,7 +913,7 @@ void load_corpses(void)
       corpsefp = NULL;
    }
    fpArea = NULL;
-   sprintf(buf, "Done Loading %s", corpse_file_name);
+   db_format_status(buf, sizeof(buf), "Done Loading", corpse_file_name);
    monitor_chan(buf, MONITOR_CLAN);
 }
 
@@ -900,10 +929,10 @@ void load_marks(void)
    char marks_file_name[MAX_STRING_LENGTH];
    char buf[MAX_STRING_LENGTH];
 
-   sprintf(marks_file_name, "%s", MARKS_FILE);
+   snprintf(marks_file_name, sizeof(marks_file_name), "%s", MARKS_FILE);
 
-   sprintf(buf, "Loading %s\n\r", marks_file_name);
-   log_f(buf);
+   db_format_status(buf, sizeof(buf), "Loading", marks_file_name);
+   log_f("%s", buf);
 
    if ((marksfp = fopen(marks_file_name, "r")) == NULL)
    {
@@ -913,7 +942,7 @@ void load_marks(void)
    else
    {
       fpArea = marksfp;
-      sprintf(strArea, "%s", marks_file_name);
+      db_set_area_name(marks_file_name);
 
       for (;;)
       {
@@ -954,7 +983,7 @@ void load_marks(void)
       }
       // Since fpArea is just a pointer to the above marksfp, setting it to NULL should be enough -V
       fpArea = NULL;
-      sprintf(buf, "Done Loading %s", marks_file_name);
+      db_format_status(buf, sizeof(buf), "Done Loading", marks_file_name);
       monitor_chan(buf, MONITOR_CLAN);
    }
 }
@@ -966,9 +995,9 @@ void load_bans(void)
    char bans_file_name[MAX_STRING_LENGTH];
    char buf[MAX_STRING_LENGTH];
 
-   sprintf(bans_file_name, "%s", BANS_FILE);
-   sprintf(buf, "Loading %s\n\r", bans_file_name);
-   log_f(buf);
+   snprintf(bans_file_name, sizeof(bans_file_name), "%s", BANS_FILE);
+   db_format_status(buf, sizeof(buf), "Loading", bans_file_name);
+   log_f("%s", buf);
 
    if ((bansfp = fopen(bans_file_name, "r")) == NULL)
    {
@@ -978,7 +1007,7 @@ void load_bans(void)
    else
    {
       fpArea = bansfp;
-      sprintf(strArea, "%s", bans_file_name);
+      db_set_area_name(bans_file_name);
 
       for (;;)
       {
@@ -1019,8 +1048,8 @@ void load_bans(void)
          bansfp = NULL;
       }
       fpArea = NULL;
-      sprintf(buf, "Done Loading %s", bans_file_name);
-      log_f(buf);
+      db_format_status(buf, sizeof(buf), "Done Loading", bans_file_name);
+      log_f("%s", buf);
    }
 }
 
@@ -1757,10 +1786,10 @@ void load_objfuns(FILE *fp)
             char *temp;
             char buf[MSL];
             temp = fread_word(fp);
-            sprintf(buf,
+            snprintf(buf, sizeof(buf),
                     "Error in Load Objfuns:  area %s has Objfun without corresponding object.  Save this area after booting complete to remove.",
                     strArea);
-            log_f(buf);
+            log_f("%s", buf);
             free_string(temp);
          }
          else

@@ -153,6 +153,18 @@ int slot_lookup(int slot)
 /*
  * Utter mystical words for an sn.
  */
+static void format_spell_utterance(char *dest, size_t dest_size, const char *words)
+{
+   snprintf(dest, dest_size, "$n utters the words, '%.*s'.", (int)dest_size - 26, words);
+}
+
+#ifdef UNIT_TEST_MAGIC
+void magic_test_format_spell_utterance(char *dest, size_t dest_size, const char *words)
+{
+   format_spell_utterance(dest, dest_size, words);
+}
+#endif
+
 void say_spell(CHAR_DATA *ch, int sn)
 {
    char buf[MAX_STRING_LENGTH];
@@ -268,8 +280,8 @@ void say_spell(CHAR_DATA *ch, int sn)
    act(msg, ch, NULL, ch, TO_NOTVICT);
    send_to_char(msg2, ch);
 
-   sprintf(buf2, "$n utters the words, '%s'.", buf);
-   sprintf(buf, "$n utters the words, '%s'.", skill_table[sn].name);
+   format_spell_utterance(buf2, sizeof(buf2), buf);
+   format_spell_utterance(buf, sizeof(buf), skill_table[sn].name);
 
    for (rch = ch->in_room->first_person; rch; rch = rch->next_in_room)
    {
