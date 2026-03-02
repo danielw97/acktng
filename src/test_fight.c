@@ -59,6 +59,7 @@ int get_dodge(CHAR_DATA *ch);
 int get_block(CHAR_DATA *ch);
 int get_counter(CHAR_DATA *ch);
 int get_evasion_piercing(CHAR_DATA *ch);
+bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight);
 
 static void clear_character(CHAR_DATA *ch)
 {
@@ -356,6 +357,92 @@ static void test_get_counter_npc_ignores_can_use_skill(void)
     skill_available = TRUE;
 }
 
+
+
+static void test_shortfight_summary_recipient_null_inputs(void)
+{
+    CHAR_DATA attacker;
+    CHAR_DATA victim;
+    CHAR_DATA observer;
+
+    clear_character(&attacker);
+    clear_character(&victim);
+    clear_character(&observer);
+
+    assert(shortfight_summary_recipient_matches(&observer, NULL, &victim, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(&observer, &attacker, NULL, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(NULL, NULL, NULL, TRUE) == FALSE);
+}
+
+static void test_shortfight_summary_recipient_expected_toggle(void)
+{
+    CHAR_DATA attacker;
+    CHAR_DATA victim;
+    CHAR_DATA observer;
+
+    clear_character(&attacker);
+    clear_character(&victim);
+    clear_character(&observer);
+
+    assert(shortfight_summary_recipient_matches(&observer, &attacker, &victim, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(&observer, &attacker, &victim, FALSE) == TRUE);
+
+    SET_BIT(observer.config, CONFIG_SHORT_FIGHT);
+    assert(shortfight_summary_recipient_matches(&observer, &attacker, &victim, TRUE) == TRUE);
+    assert(shortfight_summary_recipient_matches(&observer, &attacker, &victim, FALSE) == FALSE);
+}
+
+static void test_shortfight_summary_recipient_npc_is_never_shortfight(void)
+{
+    CHAR_DATA attacker;
+    CHAR_DATA victim;
+    CHAR_DATA npc_observer;
+
+    clear_character(&attacker);
+    clear_character(&victim);
+    clear_character(&npc_observer);
+
+    npc_observer.act = ACT_IS_NPC;
+    SET_BIT(npc_observer.config, CONFIG_SHORT_FIGHT);
+
+    assert(shortfight_summary_recipient_matches(&npc_observer, &attacker, &victim, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(&npc_observer, &attacker, &victim, FALSE) == TRUE);
+}
+
+static void test_shortfight_summary_recipient_matching(void)
+{
+    CHAR_DATA attacker;
+    CHAR_DATA victim;
+    CHAR_DATA observer_short;
+    CHAR_DATA observer_long;
+    CHAR_DATA npc_observer;
+
+    clear_character(&attacker);
+    clear_character(&victim);
+    clear_character(&observer_short);
+    clear_character(&observer_long);
+    clear_character(&npc_observer);
+
+    attacker.name = "attacker";
+    victim.name = "victim";
+
+    SET_BIT(observer_short.config, CONFIG_SHORT_FIGHT);
+
+    assert(shortfight_summary_recipient_matches(NULL, &attacker, &victim, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(&attacker, &attacker, &victim, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(&victim, &attacker, &victim, TRUE) == FALSE);
+
+    assert(shortfight_summary_recipient_matches(&observer_short, &attacker, &victim, TRUE) == TRUE);
+    assert(shortfight_summary_recipient_matches(&observer_short, &attacker, &victim, FALSE) == FALSE);
+
+    assert(shortfight_summary_recipient_matches(&observer_long, &attacker, &victim, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(&observer_long, &attacker, &victim, FALSE) == TRUE);
+
+    npc_observer.act = ACT_IS_NPC;
+    assert(shortfight_summary_recipient_matches(&npc_observer, &attacker, &victim, TRUE) == FALSE);
+    assert(shortfight_summary_recipient_matches(&npc_observer, &attacker, &victim, FALSE) == TRUE);
+}
+
 static void test_get_evasion_piercing_composition(void)
 {
     CHAR_DATA ch;
@@ -386,6 +473,10 @@ int main(void)
     test_get_counter_applies_modifiers();
     test_get_counter_wolf_bonus_for_pc();
     test_get_counter_npc_ignores_can_use_skill();
+    test_shortfight_summary_recipient_null_inputs();
+    test_shortfight_summary_recipient_expected_toggle();
+    test_shortfight_summary_recipient_npc_is_never_shortfight();
+    test_shortfight_summary_recipient_matching();
     test_get_evasion_piercing_composition();
 
     puts("test_fight: all tests passed");

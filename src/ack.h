@@ -1443,7 +1443,7 @@ int get_counter args((CHAR_DATA * ch));
 int get_damcap args((CHAR_DATA * ch));
 int get_evasion_piercing args((CHAR_DATA * ch));
 void short_fight_round_begin args((CHAR_DATA * ch, CHAR_DATA *victim));
-int short_fight_round_end args((CHAR_DATA * ch, CHAR_DATA *victim));
+int short_fight_round_end args((CHAR_DATA * ch, CHAR_DATA *victim, int *reactive_damage));
 bool short_fight_round_active args((CHAR_DATA * ch, CHAR_DATA *victim));
 
 int get_racial_penalty_to_level args((int base, int race, int class));
