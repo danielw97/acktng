@@ -89,9 +89,12 @@ void load_brands(void)
    BRAND_DATA *this_brand;
    DL_LIST *brand_member;
 
-   sprintf(brands_file_name, "%s", BRANDS_FILE);
+   snprintf(brands_file_name, sizeof(brands_file_name), "%s", BRANDS_FILE);
 
-   sprintf(buf, "Loading %s\n\r", brands_file_name);
+   buf[0] = '\0';
+   safe_strcat(MAX_STRING_LENGTH, buf, "Loading ");
+   safe_strcat(MAX_STRING_LENGTH, buf, brands_file_name);
+   safe_strcat(MAX_STRING_LENGTH, buf, "\n\r");
    monitor_chan(buf, MONITOR_CLAN);
 
    if ((brandsfp = fopen(brands_file_name, "r")) == NULL)
@@ -143,7 +146,10 @@ void load_brands(void)
          brandsfp = NULL;
       }
 
-      sprintf(buf, "Done Loading %s\n\r", brands_file_name);
+      buf[0] = '\0';
+      safe_strcat(MAX_STRING_LENGTH, buf, "Done Loading ");
+      safe_strcat(MAX_STRING_LENGTH, buf, brands_file_name);
+      safe_strcat(MAX_STRING_LENGTH, buf, "\n\r");
       monitor_chan(buf, MONITOR_CLAN);
    }
 }
@@ -157,8 +163,8 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
    char brandbuf[MSL];
    char catbuf[MSL];
 
-   sprintf(brandbuf, "%s", "");
-   sprintf(catbuf, "%s", "");
+   brandbuf[0] = '\0';
+   catbuf[0] = '\0';
 
    smash_tilde(argument);
    argument = one_argument(argument, arg1);
@@ -259,26 +265,40 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
 
          if (!str_cmp(ch->pcdata->pedit_string[0], "none"))
          {
-            sprintf(test_string, ch->pcdata->room_enter);
+            test_string[0] = '\0';
+            safe_strcat(MSL, test_string, ch->pcdata->room_enter);
          }
          else
          {
-            sprintf(test_string, ch->pcdata->pedit_string[0]);
+            test_string[0] = '\0';
+            safe_strcat(MSL, test_string, ch->pcdata->pedit_string[0]);
             qp_cost++;
          }
-         sprintf(move_buf, "$L%s$n %s $T.", get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), test_string);
+         move_buf[0] = '\0';
+         safe_strcat(MSL, move_buf, "$L");
+         safe_strcat(MSL, move_buf, get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex));
+         safe_strcat(MSL, move_buf, "$n ");
+         safe_strcat(MSL, move_buf, test_string);
+         safe_strcat(MSL, move_buf, " $T.");
          act(move_buf, ch, NULL, rev_name[1], TO_CHAR);
          if (!str_cmp(ch->pcdata->pedit_string[1], "none"))
          {
-            sprintf(test_string, ch->pcdata->room_exit);
+            test_string[0] = '\0';
+            safe_strcat(MSL, test_string, ch->pcdata->room_exit);
          }
          else
          {
-            sprintf(test_string, ch->pcdata->pedit_string[1]);
+            test_string[0] = '\0';
+            safe_strcat(MSL, test_string, ch->pcdata->pedit_string[1]);
             qp_cost++;
          }
 
-         sprintf(move_buf, "$L%s$n %s $T.", get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), test_string);
+         move_buf[0] = '\0';
+         safe_strcat(MSL, move_buf, "$L");
+         safe_strcat(MSL, move_buf, get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex));
+         safe_strcat(MSL, move_buf, "$n ");
+         safe_strcat(MSL, move_buf, test_string);
+         safe_strcat(MSL, move_buf, " $T.");
          act(move_buf, ch, NULL, dir_name[1], TO_CHAR);
 
          sprintf(buf, "Purchase cost is %d qps.\n\r", qp_cost);
@@ -408,7 +428,9 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
             }
             else
             {
-               sprintf(catbuf, "%s ", word1);
+               catbuf[0] = '\0';
+               safe_strcat(MSL, catbuf, word1);
+               safe_strcat(MSL, catbuf, " ");
                safe_strcat(MSL, assistbuf, catbuf);
             }
          }
