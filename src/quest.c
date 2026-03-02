@@ -38,6 +38,49 @@ CHAR_DATA *get_quest_giver args((int min_level, int max_level));
 OBJ_DATA *load_quest_object args((CHAR_DATA * target));
 void clear_quest args((void));
 
+static void format_quest_message(char *dest, const char *message,
+                                 const char *value1, const char *value2)
+{
+   const char *scan;
+   char *out;
+   const char *values[2];
+   int value_index;
+
+   if (dest == NULL)
+      return;
+
+   if (message == NULL)
+   {
+      dest[0] = '\0';
+      return;
+   }
+
+   values[0] = (value1 != NULL) ? value1 : "";
+   values[1] = (value2 != NULL) ? value2 : "";
+   value_index = 0;
+   scan = message;
+   out = dest;
+
+   while ((*scan != '\0') && (out < (dest + MAX_STRING_LENGTH - 1)))
+   {
+      if (scan[0] == '%' && scan[1] == 's' && value_index < 2)
+      {
+         const char *replacement;
+
+         replacement = values[value_index++];
+         while ((*replacement != '\0') && (out < (dest + MAX_STRING_LENGTH - 1)))
+            *out++ = *replacement++;
+
+         scan += 2;
+         continue;
+      }
+
+      *out++ = *scan++;
+   }
+
+   *out = '\0';
+}
+
 /* 17 messages, organised by blocks for each personality
    indented messages are for when the target mob gets killed  */
 struct qmessage_type
@@ -500,15 +543,23 @@ void quest_inform(void)
     */
    if (quest_timer < 7)
    {
-      sprintf(buf, qmessages[quest_personality][quest_timer].message1, quest_object->short_descr);
+      format_quest_message(buf,
+                           qmessages[quest_personality][quest_timer].message1,
+                           quest_object->short_descr,
+                           NULL);
    }
    else
    {
       if (quest_target)
-         sprintf(buf, qmessages[quest_personality][quest_timer].message1,
-                 quest_target->short_descr, quest_object->short_descr);
+         format_quest_message(buf,
+                              qmessages[quest_personality][quest_timer].message1,
+                              quest_target->short_descr,
+                              quest_object->short_descr);
       else
-         sprintf(buf, qmessages[quest_personality][quest_timer].message2, quest_object->short_descr);
+         format_quest_message(buf,
+                              qmessages[quest_personality][quest_timer].message2,
+                              quest_object->short_descr,
+                              NULL);
    }
 
    quest_timer++;
@@ -535,7 +586,10 @@ void quest_complete(CHAR_DATA *ch)
 
    char buf[MAX_STRING_LENGTH];
 
-   sprintf(buf, qmessages[quest_personality][16].message1, NAME(ch), quest_object->short_descr);
+   format_quest_message(buf,
+                        qmessages[quest_personality][16].message1,
+                        NAME(ch),
+                        quest_object->short_descr);
    do_crusade(quest_mob, buf);
    clear_quest();
    return;
