@@ -122,10 +122,18 @@ unit-test-cloak: test_cloak.o cloak.unit-test.o
 	rm -f unit-test-cloak
 	$(CC) -o unit-test-cloak test_cloak.o cloak.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak
+spendqp.unit-test.o: spendqp.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SPENDQP -ffunction-sections -fdata-sections -o spendqp.unit-test.o spendqp.c
+
+unit-test-spendqp: test_spendqp.o spendqp.unit-test.o
+	rm -f unit-test-spendqp
+	$(CC) -Wl,--gc-sections -o unit-test-spendqp test_spendqp.o spendqp.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-cloak unit-test-spendqp
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
 	./unit-test-fight
 	./unit-test-act-info
 	./unit-test-cloak
+	./unit-test-spendqp
