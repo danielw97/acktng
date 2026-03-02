@@ -1,4 +1,2 @@
-[*****] BUG: exp_for_mobile: level 171 exceeds table max 170.
-[*****] BUG: exp_for_mobile: level 171 exceeds table max 170.
-[*****] BUG: exp_for_mobile: level 171 exceeds table max 170.
-[*****] BUG: exp_for_mobile: level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: The Vault Sentinel level 171 exceeds table max 170.
+[*****] BUG: exp_for_mobile: guardian level 171 exceeds table max 170.
