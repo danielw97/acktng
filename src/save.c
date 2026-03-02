@@ -576,6 +576,34 @@ static int vnum_from_hash_ref(void *ref)
    return (int)(intptr_t)ref;
 }
 
+static void init_changed_vnum_hash(void)
+{
+   FILE *fp;
+   int oldvnum, newvnum;
+
+   if (hash_changed_vnums != NULL)
+      return;
+
+   hash_changed_vnums = create_hash_table(1024);
+
+   fp = fopen("area_changes.txt", "r");
+   if (fp == NULL)
+      return;
+
+   while (!feof(fp))
+   {
+      if (str_cmp(fread_word(fp), "Obj:") || fread_letter(fp) != '[' || (oldvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']' || str_cmp(fread_word(fp), "->") || fread_letter(fp) != '[' || (newvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']')
+         fread_to_eol(fp);
+      else
+      {
+         fread_to_eol(fp);
+         add_hash_entry(hash_changed_vnums, oldvnum, hash_ref_from_vnum(newvnum));
+      }
+   }
+
+   fclose(fp);
+}
+
 /* Nasty hack for db.c to get back address of ch */
 CHAR_DATA *loaded_mob_addr;
 
@@ -597,35 +625,9 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
    FILE *fp;
    bool found;
    bool is_npc;
-   int oldvnum, newvnum;
    int foo;
 
-   if (hash_changed_vnums == NULL)
-   {
-      /*
-       * Initialise hash table for changed vnums, and read in file.
-       */
-      hash_changed_vnums = create_hash_table(1024);
-
-      if ((fp = fopen("area_changes.txt", "r")) != NULL) /* -- Alty */
-      {
-         while (!feof(fp))
-         {
-            if (str_cmp(fread_word(fp), "Obj:") || fread_letter(fp) != '[' || (oldvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']' || str_cmp(fread_word(fp), "->") || fread_letter(fp) != '[' || (newvnum = fread_number(fp)) == 0 || fread_letter(fp) != ']')
-               fread_to_eol(fp);
-            else
-            {
-               fread_to_eol(fp);
-               add_hash_entry(hash_changed_vnums, oldvnum, hash_ref_from_vnum(newvnum));
-            }
-         }
-         if (fp != NULL)
-         {
-            fclose(fp);
-            fp = NULL;
-         }
-      }
-   }
+   init_changed_vnum_hash();
 
    if ((d == NULL) /* load npc */
        && (!system_call))
@@ -1857,6 +1859,8 @@ void fread_corpse(FILE *fp)
    fVnum = TRUE;
    iNest = 0;
    this_room_vnum = 0;
+
+   init_changed_vnum_hash();
 
    for (;;)
    {
