@@ -1667,7 +1667,8 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
             return;
          }
 
-         if ((get_eq_char(ch, WEAR_HOLD_HAND_L) && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace)) != NULL || (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace)))
+         if ((get_eq_char(ch, WEAR_HOLD_HAND_L) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_L, fReplace)) ||
+             (get_eq_char(ch, WEAR_HOLD_HAND_R) != NULL && !remove_obj(ch, WEAR_HOLD_HAND_R, fReplace)))
          {
             act("You cannot remove what is in your hands!", ch, obj, NULL, TO_CHAR);
             return;
@@ -1691,13 +1692,13 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       }
       else
       {
-         if (get_eq_char(ch, WEAR_TWO_HANDED) && !remove_obj(ch, WEAR_TWO_HANDED, fReplace) != NULL)
+         if (get_eq_char(ch, WEAR_TWO_HANDED) != NULL && !remove_obj(ch, WEAR_TWO_HANDED, fReplace))
          {
             act("You cannot remove your 2-handed weapon!", ch, obj, NULL, TO_CHAR);
             return;
          }
 
-         if (get_eq_char(ch, WEAR_BUCKLER) && !remove_obj(ch, WEAR_BUCKLER, fReplace) != NULL)
+         if (get_eq_char(ch, WEAR_BUCKLER) != NULL && !remove_obj(ch, WEAR_BUCKLER, fReplace))
          {
             act("You cannot remove your buckler!", ch, obj, NULL, TO_CHAR);
             return;
@@ -2074,7 +2075,8 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
       }
       if (obj->item_type == ITEM_BEACON || obj->item_type == ITEM_LIGHT || obj->item_type == ITEM_PORTAL || obj->item_type == ITEM_FOOD)
          align_change /= 10;
-      ch->alignment = URANGE(-1000, (ch->alignment += align_direction * align_change), 1000);
+      ch->alignment += align_direction * align_change;
+      ch->alignment = URANGE(-1000, ch->alignment, 1000);
    }
 
    if (!change_align)
@@ -2853,7 +2855,7 @@ void do_list(CHAR_DATA *ch, char *argument)
             stopcounter++;
             rounded_cost = 10 * pet->level * pet->level;
             sprintf(costbuf, "%d", rounded_cost);
-            sprintf(buf, "[ @@W%3d@@g]  @@c%-*s@@g  @@W%d@@N \n\r", pet->level, ccode_len(pet->short_descr, 30),
+            sprintf(buf, "[ @@W%3d@@g]  @@c%-*s@@g  @@W%s@@N \n\r", pet->level, ccode_len(pet->short_descr, 30),
                     capitalize(pet->short_descr), costbuf);
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
@@ -3049,7 +3051,7 @@ void do_donate(CHAR_DATA *ch, char *argument)
    if ((room = get_room_index(place_to_put_it)) == NULL)
    {
       sprintf(log_buf, "No valid donation room: %d", place_to_put_it);
-      log_f(log_buf);
+      log_f("%s", log_buf);
       send_to_char("System Error.  Contact an Administrator.\n\r", ch);
       return;
    }
@@ -3305,7 +3307,7 @@ void do_cdonate(CHAR_DATA *ch, char *argument)
    if ((room = get_room_index(place_to_put_it)) == NULL)
    {
       sprintf(log_buf, "Cdonate: no valid room for vnum %d", place_to_put_it);
-      log_f(log_buf);
+      log_f("%s", log_buf);
       send_to_char("Invalid Clan Donation Room.  Please contact an Administrator.\n\r", ch);
       return;
    }
@@ -3726,7 +3728,7 @@ void do_auction(CHAR_DATA *ch, char *argument)
    }
 
    sprintf(buf, "You have placed %s up for auction.  %d @@Whas been charged for these services.\n\r",
-           auction_item->name, reserve * .1);
+           auction_item->name, (int)(reserve * 0.1));
    send_to_char(buf, ch);
    auction_owner = ch;
    auction_bidder = NULL;
