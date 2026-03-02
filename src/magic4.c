@@ -331,6 +331,24 @@ bool spell_cloak_misery(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    return TRUE;
 }
 
+bool spell_cloak_drain(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+
+   AFFECT_DATA af;
+
+   if (is_affected(ch, sn))
+      return FALSE;
+
+   af.type = sn;
+   af.duration = get_psuedo_level(ch) / 8;
+   af.location = 0;
+   af.modifier = 0;
+   af.bitvector = 0;
+   affect_to_char(ch, &af);
+
+   return TRUE;
+}
+
 bool spell_poison_quinine(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *victim = (CHAR_DATA *)vo;
