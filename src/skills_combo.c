@@ -6,6 +6,34 @@ bool is_valid_finisher(CHAR_DATA *ch);
 bool is_ready_finisher(CHAR_DATA *ch);
 void reset_combo(CHAR_DATA *ch);
 int get_max_combo(CHAR_DATA *ch);
+bool subtract_energy_cost(CHAR_DATA *ch, int gsn);
+bool can_hit_skill(CHAR_DATA *ch, CHAR_DATA *victim, int gsn);
+void stun(CHAR_DATA *ch, CHAR_DATA *victim);
+void disarm(CHAR_DATA *ch, CHAR_DATA *victim);
+
+int combo_damage_multiplier_for_max_combo(int max)
+{
+    if (max == 5)
+        return 18;
+
+    if (max == 6)
+        return 15;
+
+    return 23;
+}
+
+bool combo_has_duplicate_skill(const int *combo_values, int max, int gsn)
+{
+    int i;
+
+    for (i = 0; i < max; i++)
+    {
+        if (combo_values[i] == gsn)
+            return TRUE;
+    }
+
+    return FALSE;
+}
 
 void do_dirt(CHAR_DATA *ch, char *argument)
 {
@@ -472,19 +500,19 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
     int i;
     int max = get_max_combo(ch);
     int punch_cnt = 0, knee_cnt = 0, headbutt_cnt = 0, kick_cnt = 0, disarm_cnt = 0, dirt_cnt = 0, bash_cnt = 0, charge_cnt = 0, fleche_cnt = 0, holystrike_cnt = 0;
-    int mult = 23;
+    int mult;
 
     if (max < 4)
-         return;
+        return FALSE;
+
+    if (combo_has_duplicate_skill(ch->combo, max, gsn))
+    {
+        send_to_char("Bad combo.\n\r", ch);
+        reset_combo(ch);
+    }
 
     for (i = 0; i < max; i++)
     {
-        if (ch->combo[i] == gsn)
-        {
-           send_to_char("Bad combo.\n\r",ch);
-           reset_combo(ch);
-           i = 0;
-        }
         if (ch->combo[i] == -1 || ch->combo[i] == 0)
         {
             ch->combo[i] = gsn;
@@ -498,15 +526,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
     if (!is_ready_finisher(ch))
         return FALSE;
 
-    if (max == 5)
-    {
-        mult = 18;
-    }
-
-    if (max == 6)
-    {
-        mult = 15;
-    }
+    mult = combo_damage_multiplier_for_max_combo(max);
 
     // Calc our chances
     for (int i = 0; i < max; i++)
