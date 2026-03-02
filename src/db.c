@@ -168,7 +168,6 @@ sh_int gsn_charge;
 sh_int gsn_unit_tactics;
 sh_int gsn_imprint;
 sh_int gsn_scent;
-sh_int gsn_mount;
 sh_int gsn_scout;
 sh_int gsn_decapitate;
 sh_int gsn_potency;

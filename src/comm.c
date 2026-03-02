@@ -3707,8 +3707,6 @@ void copyover_recover()
          LINK(this_char, first_char, last_char, next, prev);
 
          char_to_room(d->character, d->character->in_room);
-         if (d->character->position == POS_RIDING)
-            d->character->position = POS_STANDING;
          do_look(d->character, "");
          act("$n's atoms materialize and reform.", d->character, NULL, NULL, TO_ROOM);
          /*

@@ -2812,14 +2812,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
     "", "",
     ""},
    {
-    MORTAL, NORM,
-    "mount", {182, 182, 20, 20, 182, 20},
-    spell_null, TAR_IGNORE, POS_STANDING,
-    &gsn_mount, SLOT( 0 ), 0, 0, FALSE,
-    "", "",
-    ""},
-
-   {
     REMORT, NORM,
     "divine intervention", {182, 67, 182, 182, 182, 182,
                             182, 12, 182, 182, 182, 182},

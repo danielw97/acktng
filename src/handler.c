@@ -2495,13 +2495,6 @@ void extract_char(CHAR_DATA *ch, bool fPull)
          free_string(wch->target);
          wch->target = NULL; /* spec- fix the evil nasty duplicate frees */
       }
-      if (wch->riding == ch)
-      {
-         do_dismount(wch, "");
-         wch->riding = NULL;
-      }
-      if (wch->rider == ch)
-         wch->rider = NULL;
       for (paf = wch->first_affect; paf; paf = paf->next)
          if (paf->caster == ch)
             paf->caster = NULL;

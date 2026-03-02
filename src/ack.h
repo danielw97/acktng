@@ -688,8 +688,6 @@ struct char_data
    int race_mods;
    int power_skills;
    int power_cast;
-   CHAR_DATA *riding;
-   CHAR_DATA *rider;
 
    /* Stuff to handle automatic quests for players */
    int quest_points; /* The reason to quest!  */

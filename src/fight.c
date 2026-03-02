@@ -238,17 +238,6 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (IS_SET(stance_app[ch->stance].specials, STANCE_NO_HIT))
       return;
 
-   if (ch->position == POS_RIDING)
-   {
-      if (ch->riding && (ch->riding->in_room == ch->in_room))
-      {
-         do_dismount(ch, "");
-      }
-      else
-      {
-         ch->position = POS_FIGHTING;
-      }
-   }
    if ((((wield1 = get_eq_char(ch, WEAR_HOLD_HAND_L)) != NULL) && (wield1->item_type == ITEM_WEAPON)) && (((wield2 = get_eq_char(ch, WEAR_HOLD_HAND_R)) != NULL) && (wield2->item_type == ITEM_WEAPON)))
       dual_chance = 15;
 
