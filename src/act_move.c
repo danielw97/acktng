@@ -359,9 +359,9 @@ void move_char(CHAR_DATA *ch, int door)
    {
       if (check_valid_ride(ch))
       {
-         snprintf(tmp, sizeof(tmp), "You ride %s on %s.\n\r", door_name_leave, ch->riding->short_descr);
+         snprintf(tmp, sizeof(tmp), "You ride %.64s on %.128s.\n\r", door_name_leave, ch->riding->short_descr);
          send_to_char(tmp, ch);
-         snprintf(tmp, sizeof(tmp), "$n rides %s on %s.", door_name_leave, ch->riding->short_descr);
+         snprintf(tmp, sizeof(tmp), "$n rides %.64s on %.128s.", door_name_leave, ch->riding->short_descr);
       }
    }
 
@@ -372,7 +372,7 @@ void move_char(CHAR_DATA *ch, int door)
          act("$n climbs $T.", ch, NULL, door_name_leave, TO_ROOM);
       else if (IS_SET(pexit->exit_info, EX_CLOSED)) /* using passdoor */
       {
-         snprintf(buf, sizeof(buf), "$L$n floats %s.", door_name_leave);
+         snprintf(buf, sizeof(buf), "$L$n floats %.64s.", door_name_leave);
          act(buf, ch, NULL, pexit->keyword, TO_ROOM);
       }
       else
@@ -1573,6 +1573,13 @@ void do_halls(CHAR_DATA *ch, char *argument)
    return;
 }
 
+
+#ifdef UNIT_TEST_ACT_MOVE
+void act_move_testable_format_scout_line(char *dest, size_t dest_size, const char *pre, const char *name)
+{
+   snprintf(dest, dest_size, "%.64s%.256s\n\r", pre != NULL ? pre : "", name != NULL ? name : "");
+}
+#endif
 void do_scan(CHAR_DATA *ch, char *argument)
 /* Informs ch if there are any (N)PCs in the 6 adjacent rooms.
  * I'm sure this could be written better.... ;)
@@ -1626,7 +1633,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
                   sprintf(person, "%s", PERS(d, ch));
                }
 
-               sprintf(buf, "%s : %s\n\r", dir_name[door], person);
+               snprintf(buf, sizeof(buf), "%.32s : %.256s\n\r", dir_name[door], person);
 
                send_to_char(buf, ch);
             }
@@ -1796,9 +1803,9 @@ void do_scout(CHAR_DATA *ch, char *argument)
                sprintf(pre, "Distant %s : ", dir_name[door]);
 
             if (IS_NPC(target))
-               sprintf(buf, "%s%s\n\r", pre, target->short_descr);
+               snprintf(buf, sizeof(buf), "%.64s%.256s\n\r", pre, target->short_descr);
             else
-               sprintf(buf, "%s%s\n\r", pre, target->name);
+               snprintf(buf, sizeof(buf), "%.64s%.256s\n\r", pre, target->name);
 
             send_to_char(buf, ch);
          }

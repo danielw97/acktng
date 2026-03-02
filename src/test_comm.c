@@ -148,6 +148,9 @@ static void test_comm_safe_formatters_truncate(void)
 
     comm_testable_format_class_menu_line(buf, sizeof(buf), "warrior", "strength", "verylongclassname");
     assert(buf[15] == '\0');
+
+    comm_testable_format_builder_prompt(buf, sizeof(buf), NULL, NULL);
+    assert(buf[15] == '\0');
 }
 
 static void test_prompt_max_tokens_use_max_helpers(void)

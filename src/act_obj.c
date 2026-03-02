@@ -104,6 +104,13 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container)
    return;
 }
 
+
+#ifdef UNIT_TEST_ACT_OBJ
+void act_obj_testable_format_missing(char *dest, size_t dest_size, const char *name)
+{
+   snprintf(dest, dest_size, "I see no more %.128s here.", name != NULL ? name : "");
+}
+#endif
 void do_get(CHAR_DATA *ch, char *argument)
 {
 
@@ -239,7 +246,7 @@ void do_get(CHAR_DATA *ch, char *argument)
                obj = get_obj_list(ch, one_object, container->first_in_carry_list);
                if ((obj == NULL) || (!can_see_obj(ch, obj)))
                {
-                  sprintf(actbuf, "I see no more %s in the %s.", one_object, container_name);
+                  snprintf(actbuf, sizeof(actbuf), "I see no more %.128s in the %.128s.", one_object, container_name);
                   act(actbuf, ch, NULL, NULL, TO_CHAR);
                   break;
                }
@@ -303,7 +310,7 @@ void do_get(CHAR_DATA *ch, char *argument)
                {
                   if (found_one_obj)
                   {
-                     sprintf(actbuf, "There isn't another %s here.", one_object);
+                     snprintf(actbuf, sizeof(actbuf), "There isn't another %.128s here.", one_object);
                      act(actbuf, ch, NULL, NULL, TO_CHAR);
                      break;
                   }
@@ -325,7 +332,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 
                else if (!can_see_obj(ch, obj))
                {
-                  sprintf(actbuf, "I see no more %s here.", one_object);
+                  snprintf(actbuf, sizeof(actbuf), "I see no more %.128s here.", one_object);
                   act(actbuf, ch, NULL, NULL, TO_CHAR);
                   break;
                }
@@ -852,7 +859,7 @@ void do_drink(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
    OBJ_DATA *obj;
-   int amount;
+   int amount = 0;
    int liquid;
 
    one_argument(argument, arg);
@@ -1796,7 +1803,7 @@ void do_wear(CHAR_DATA *ch, char *argument)
                sprintf(colbuf, "%s", "@@.");
                sprintf(eqbuf, "%s", "@@dNothing@@N");
             }
-            sprintf(catbuf, "%s%25s@@N %-*s\n\r", colbuf, where_name[location], ccode_len(eqbuf, 40), eqbuf);
+            snprintf(catbuf, sizeof(catbuf), "%.8s%25.25s@@N %-*.*s\n\r", colbuf, where_name[location], ccode_len(eqbuf, 40), 200, eqbuf);
             strcat(outbuf, catbuf);
          }
       }
@@ -2457,7 +2464,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg1, "coin") || !str_cmp(arg1, "coins") || !str_cmp(arg1, "gold"))
    {
-      int amount;
+      int amount = 0;
       amount = victim->gold * number_range(1, 10) / 100;
       if (amount <= 0)
       {
@@ -2855,8 +2862,8 @@ void do_list(CHAR_DATA *ch, char *argument)
             stopcounter++;
             rounded_cost = 10 * pet->level * pet->level;
             sprintf(costbuf, "%d", rounded_cost);
-            sprintf(buf, "[ @@W%3d@@g]  @@c%-*s@@g  @@W%s@@N \n\r", pet->level, ccode_len(pet->short_descr, 30),
-                    capitalize(pet->short_descr), costbuf);
+            snprintf(buf, sizeof(buf), "[ @@W%3d@@g]  @@c%-*.*s@@g  @@W%.32s@@N \n\r", pet->level, ccode_len(pet->short_descr, 30),
+                     200, capitalize(pet->short_descr), costbuf);
             safe_strcat(MAX_STRING_LENGTH, buf1, buf);
             if (stopcounter > 45)
             {
@@ -3515,7 +3522,7 @@ void do_bid(CHAR_DATA *ch, char *argument)
    extern int auction_bid;
    extern int auction_stage;
    extern bool auction_flop;
-   int amount;
+   int amount = 0;
    if (!IS_NPC(ch) && IS_WOLF(ch) && (IS_SHIFTED(ch) || IS_RAGED(ch)))
    {
       send_to_char("Your claws are too clumsy!!!@@N\n\r", ch);
