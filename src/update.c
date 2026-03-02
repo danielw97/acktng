@@ -985,7 +985,15 @@ void mobile_update(void)
       /*
        * Wander
        */
-      if (!IS_SET(ch->act, ACT_SENTINEL) && ch->leader == NULL && (door = number_bits(5)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB) && (!IS_SET(ch->act, ACT_STAY_AREA) || pexit->to_room->area == ch->in_room->area))
+      if (!IS_SET(ch->act, ACT_INVASION)
+          && !IS_SET(ch->act, ACT_SENTINEL)
+          && ch->leader == NULL
+          && (door = number_bits(5)) <= 5
+          && (pexit = ch->in_room->exit[door]) != NULL
+          && pexit->to_room != NULL
+          && !IS_SET(pexit->exit_info, EX_CLOSED)
+          && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB)
+          && (!IS_SET(ch->act, ACT_STAY_AREA) || pexit->to_room->area == ch->in_room->area))
       {
          move_char(ch, door);
          /*
@@ -1001,7 +1009,13 @@ void mobile_update(void)
       /*
        * Flee
        */
-      if (ch->hit < (get_max_hp(ch) / 2) && (door = number_bits(3)) <= 5 && (pexit = ch->in_room->exit[door]) != NULL && pexit->to_room != NULL && !IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
+      if (!IS_SET(ch->act, ACT_INVASION)
+          && ch->hit < (get_max_hp(ch) / 2)
+          && (door = number_bits(3)) <= 5
+          && (pexit = ch->in_room->exit[door]) != NULL
+          && pexit->to_room != NULL
+          && !IS_SET(pexit->exit_info, EX_CLOSED)
+          && !IS_SET(pexit->to_room->room_flags, ROOM_NO_MOB))
       {
          CHAR_DATA *rch;
          bool found;

@@ -86,6 +86,7 @@ static int        invasion_timer         = 0;
 static CHAR_DATA *invasion_boss          = NULL;
 static int        invasion_boss_profile  = -1;
 static int        invasion_boss_ticks_up = 0;
+static int        invasion_room_ticks    = 0;
 
 /* -----------------------------------------------------------------------
  * Forward declarations
@@ -105,6 +106,7 @@ static bool       mob_is_invasion_mob    (CHAR_DATA *ch);
 static void       despawn_all_invasion   (void);
 static int        boss_spawn_count_for_tick(int boss_ticks_up);
 static bool       is_midgaard_area_name(const char *area_name);
+static bool       invasion_should_advance_on_room_tick(void);
 
 #ifdef UNIT_TEST_INVASION
 int invasion_test_count_regular_players(int *out_lo, int *out_hi);
@@ -203,6 +205,12 @@ static bool is_midgaard_area_name(const char *area_name)
     return (strstr(lower_name, "midgaard") != NULL);
 }
 
+static bool invasion_should_advance_on_room_tick(void)
+{
+    invasion_room_ticks++;
+    return ((invasion_room_ticks % 2) == 0);
+}
+
 #ifdef UNIT_TEST_INVASION
 int invasion_test_count_regular_players(int *out_lo, int *out_hi)
 {
@@ -234,6 +242,7 @@ int invasion_test_should_self_destruct_for_path_dir(int dir)
 {
     return (dir < 0) ? 1 : 0;
 }
+
 #endif
 
 /* -----------------------------------------------------------------------
@@ -636,6 +645,7 @@ static void invasion_start(void)
     invasion_boss_profile = prof;
     invasion_active       = TRUE;
     invasion_boss_ticks_up = 0;
+    invasion_room_ticks    = 0;
 
     invasion_boss = spawn_invasion_mob(boss_level, TRUE, prof);
     if (invasion_boss == NULL)
@@ -690,6 +700,7 @@ static void invasion_end(bool success)
     invasion_boss_profile = -1;
     invasion_active       = FALSE;
     invasion_boss_ticks_up = 0;
+    invasion_room_ticks    = 0;
     invasion_timer        = INVASION_MIN_INTERVAL;
 }
 
@@ -718,6 +729,7 @@ void invasion_update(void)
         despawn_all_invasion();
         invasion_boss_profile = -1;
         invasion_active       = FALSE;
+        invasion_room_ticks   = 0;
         invasion_timer        = INVASION_MIN_INTERVAL;
         return;
     }
@@ -764,6 +776,7 @@ void invasion_rooms_update(void)
     sh_int           dir;
 
     if (!invasion_active) return;
+    if (!invasion_should_advance_on_room_tick()) return;
 
     target_room = get_room_index(INVASION_SPAWN_VNUM);
     if (!target_room) return;
@@ -799,24 +812,6 @@ void invasion_rooms_update(void)
             REMOVE_BIT(ch->act, ACT_INVASION);
             extract_char(ch, TRUE);
             continue;
-        }
-
-        if (ch->fighting == NULL && ch->in_room != NULL && ch->in_room->area != NULL
-            && is_midgaard_area_name(ch->in_room->area->name))
-        {
-            CHAR_DATA *victim;
-
-            for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
-            {
-                if (victim == ch)                 continue;
-                if (!IS_NPC(victim))              continue;
-                if (mob_is_invasion_mob(victim))  continue;
-                if (!can_see(ch, victim))         continue;
-                multi_hit(ch, victim, TYPE_UNDEFINED);
-                break;
-            }
-            if (ch->fighting != NULL)
-                continue;
         }
 
         dir = h_find_dir(ch->in_room, target_room,
