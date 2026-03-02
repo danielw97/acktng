@@ -3,3 +3,4 @@ ack
 *.old
 nohup.out
 *.save
+unit-test*
