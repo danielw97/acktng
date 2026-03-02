@@ -52,6 +52,10 @@ void do_knee args((CHAR_DATA * ch, char *argument));
 bool do_lifesteal args((CHAR_DATA * ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam));
 bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight));
 
+bool should_summon_assist_master_round args((int is_npc, int is_charmed, int has_master,
+                                      int master_fighting, int same_room,
+                                      int is_player_summon, int can_see_master_target));
+
 bool is_safe args((CHAR_DATA * ch, CHAR_DATA *victim));
 void make_corpse args((CHAR_DATA * ch, char *argument));
 void one_hit args((CHAR_DATA * ch, CHAR_DATA *victim, int dt));
@@ -66,6 +70,14 @@ int do_damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt, int elem
 int damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt));
 int get_counter args((CHAR_DATA * ch));
 int get_evasion_piercing args((CHAR_DATA * ch));
+
+bool should_summon_assist_master_round(int is_npc, int is_charmed, int has_master,
+                                      int master_fighting, int same_room,
+                                      int is_player_summon, int can_see_master_target)
+{
+   return is_npc && is_charmed && has_master && master_fighting && same_room
+       && is_player_summon && can_see_master_target;
+}
 
 /*
  * Control the fights going on.
@@ -170,11 +182,17 @@ void violence_update(void)
 
          if (IS_AWAKE(rch) && rch->fighting == NULL)
          {
-            if (IS_NPC(rch) && IS_AFFECTED(rch, AFF_CHARM) && rch->master != NULL && rch->master->fighting != NULL
-                && rch->in_room == rch->master->in_room && is_player_summon_special(rch->spec_fun)
-                && can_see(rch, rch->master->fighting))
+            if (should_summon_assist_master_round(IS_NPC(rch), IS_AFFECTED(rch, AFF_CHARM), rch->master != NULL,
+                                                 rch->master != NULL && rch->master->fighting != NULL,
+                                                 rch->master != NULL && rch->in_room == rch->master->in_room,
+                                                 is_player_summon_special(rch->spec_fun),
+                                                 rch->master != NULL && rch->master->fighting != NULL
+                                                    && can_see(rch, rch->master->fighting)))
             {
                set_fighting(rch, rch->master->fighting, TRUE);
+
+               if (rch->spec_fun != NULL)
+                  (*rch->spec_fun)(rch);
                continue;
             }
 

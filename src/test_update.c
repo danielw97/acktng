@@ -81,6 +81,7 @@ static void test_npc_regen_uses_standard_formula(void)
     assert(mana_gain(&ch) == 30);
 }
 
+
 static void test_regen_is_zero_in_combat(void)
 {
     CHAR_DATA ch = make_test_character();
