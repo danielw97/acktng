@@ -601,7 +601,7 @@ int hit_gain(CHAR_DATA *ch)
    if (is_fighting(ch) && gain > 0)
       gain = 0;
 
-   return UMAX(ch->hit + gain, get_max_hp(ch));
+   return UMIN(ch->hit + gain, get_max_hp(ch));
 }
 
 int mana_gain(CHAR_DATA *ch)
@@ -695,11 +695,15 @@ int mana_gain(CHAR_DATA *ch)
             gain = gain * 1.3;
       }
    }
-   if (gain > 0 && !is_fighting(ch))
+   if (gain > 0)
    {
       gain = gain * (get_curr_int(ch) + get_curr_wis(ch)) / 20;
    }
-   return UMIN(gain, ch->max_mana - ch->mana);
+
+   if (is_fighting(ch))
+      gain = 0;
+
+   return UMIN(get_max_mana(ch), ch->mana + gain);
 }
 
 int move_gain(CHAR_DATA *ch)
@@ -753,7 +757,7 @@ int move_gain(CHAR_DATA *ch)
    if (is_fighting(ch) && gain > 0)
       gain = 0;
 
-   return UMIN(gain, ch->max_move - ch->move);
+   return UMIN(ch->move + gain, get_max_move(ch));
 }
 
 void gain_rage(CHAR_DATA *ch)
