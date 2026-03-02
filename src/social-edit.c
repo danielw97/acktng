@@ -75,7 +75,12 @@ void load_social_table()
       exit(1);
    }
 
-   fscanf(fp, "%d\n", &maxSocial);
+   if (fscanf(fp, "%d\n", &maxSocial) != 1)
+   {
+      bug("Could not read social count from " SOCIAL_FILE ".", 0);
+      fclose(fp);
+      exit(1);
+   }
 
    /*
     * IMPORTANT to use malloc so we can realloc later on
