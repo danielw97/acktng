@@ -1206,16 +1206,16 @@ char *get_dt_name(int sn)
         "head punch", "high kick", "vital kick", "head bash", "side kick", "spinning elbow",
         "body punch", "low kick", "foot stomp", "knee smash", "kidney punch", "arm twist",
         "uppercut", "rabbit punch", "foot sweep"};
+   const size_t attack_count = sizeof(attack_table) / sizeof(attack_table[0]);
 
    if (sn < MAX_SKILL && sn > 0)
       return skill_table[sn].name;
 
-   if (sn >= TYPE_HIT)
+   if (sn >= TYPE_HIT && (size_t) (sn - TYPE_HIT) < attack_count)
    {
-      return attack_table[sn-TYPE_HIT];
+      return attack_table[sn - TYPE_HIT];
    }
 
-   if (sn < 0)
    return "bugged damage type";
 }
 
@@ -1495,8 +1495,8 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
          char buf1[MSL];
          char buf2[MSL];
 
-         sprintf(buf1, this_shield->wearoff_room);
-         sprintf(buf2, this_shield->wearoff_self);
+         snprintf(buf1, sizeof(buf1), "%s", this_shield->wearoff_room);
+         snprintf(buf2, sizeof(buf2), "%s", this_shield->wearoff_self);
          act(buf1, ch, NULL, NULL, TO_ROOM);
          act(buf2, ch, NULL, NULL, TO_CHAR);
 
