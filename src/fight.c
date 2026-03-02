@@ -49,6 +49,7 @@ void death_cry args((CHAR_DATA * ch));
 void group_gain args((CHAR_DATA * ch, CHAR_DATA *victim));
 void do_knee args((CHAR_DATA * ch, char *argument));
 bool do_lifesteal args((CHAR_DATA * ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam));
+bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight));
 
 bool is_safe args((CHAR_DATA * ch, CHAR_DATA *victim));
 void make_corpse args((CHAR_DATA * ch, char *argument));
@@ -327,7 +328,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
    if (ch->fighting != victim)
    {
-      short_fight_round_end(ch, victim);
+      short_fight_round_end(ch, victim, NULL);
       return;
    }
 
@@ -353,34 +354,35 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    if (IS_SET(race_table[ch->race].race_flags, RACE_MOD_TAIL) && number_percent() < 25)
       one_hit(ch, victim, TYPE_HIT + 13);
 
-   int total_damage = short_fight_round_end(ch, victim);
+   int reactive_damage = 0;
+   int total_damage = short_fight_round_end(ch, victim, &reactive_damage);
 
-   if (total_damage > 0)
+   if (total_damage > 0 || reactive_damage > 0)
    {
       char buf[MSL];
+      bool expected_shortfight = TRUE;
+      bool ch_shortfight = !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT);
+      bool victim_shortfight = !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT);
 
-      for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+      if (ch_shortfight == expected_shortfight)
       {
-         if (rch == ch || rch == victim)
-            continue;
-
-         if (IS_NPC(rch) || !IS_SET(rch->config, CONFIG_SHORT_FIGHT))
-            continue;
-
-         sprintf(buf, "@@c%s@@N total autoattack damage to @@c%s@@N: @@e%d@@N.\n\r", PERS(ch, rch), PERS(victim, rch), total_damage);
-         send_to_char(buf, rch);
-      }
-
-      if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT))
-      {
-         sprintf(buf, "@@cYou@@N total autoattack damage to @@c$N@@N: @@e%d@@N.", total_damage);
+         sprintf(buf, "@@cYou@@N autoattack summary vs @@c$N@@N: dealt @@e%d@@N, took @@r%d@@N reactive.", total_damage, reactive_damage);
          act(buf, ch, NULL, victim, TO_CHAR);
       }
 
-      if (!IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT))
+      if (victim_shortfight == expected_shortfight)
       {
-         sprintf(buf, "@@c$n@@N total autoattack damage to @@cyou@@N: @@e%d@@N.", total_damage);
+         sprintf(buf, "@@c$n@@N autoattack summary vs @@cyou@@N: dealt @@e%d@@N, took @@r%d@@N reactive.", total_damage, reactive_damage);
          act(buf, ch, NULL, victim, TO_VICT);
+      }
+
+      for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+      {
+         if (!shortfight_summary_recipient_matches(rch, ch, victim, expected_shortfight))
+            continue;
+
+         sprintf(buf, "@@c%s@@N autoattack summary vs @@c%s@@N: dealt @@e%d@@N, took @@r%d@@N reactive.\n\r", PERS(ch, rch), PERS(victim, rch), total_damage, reactive_damage);
+         send_to_char(buf, rch);
       }
    }
 
@@ -780,6 +782,20 @@ void check_killer(CHAR_DATA *ch, CHAR_DATA *victim)
    return;
 }
 
+
+bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight)
+{
+   bool rch_shortfight;
+
+   if (rch == NULL || ch == NULL || victim == NULL)
+      return FALSE;
+
+   if (rch == ch || rch == victim)
+      return FALSE;
+
+   rch_shortfight = !IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT);
+   return rch_shortfight == expected_shortfight;
+}
 
 static void act_avoidance_notvict(CHAR_DATA *ch, CHAR_DATA *victim, const char *verb)
 {
