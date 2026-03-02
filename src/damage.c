@@ -2,6 +2,7 @@
 #include "globals.h"
 #endif
 #include "magic.h"
+#include "cloak.h"
 #include "cloak_drain.h"
 
 #include <stdio.h>
@@ -600,7 +601,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     if (!IS_NPC(victim) && IS_WOLF(victim) && (dam > 350))
         do_rage(victim, "FORCE");
 
-    if (IS_SET(element, ELE_PHYSICAL))
+    if (cloak_reactive_can_trigger(element))
         cloak_action(ch, victim, dam);
 
     update_pos(victim);
@@ -1587,7 +1588,10 @@ void cloak_action(CHAR_DATA *ch, CHAR_DATA *victim, int dam)
 {
     bool shortfight_round = short_fight_round_active(ch, victim);
 
-    if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING)) && (ch != victim))
+    if (!IS_AFFECTED(victim, AFF_CLOAK_FLAMING) && !is_affected(victim, skill_lookup("cloak:elements")))
+        return;
+
+    if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING) || is_affected(victim, skill_lookup("cloak:elements"))) && (ch != victim))
     {
 
         if (!shortfight_round)
@@ -1688,6 +1692,8 @@ void cloak_action(CHAR_DATA *ch, CHAR_DATA *victim, int dam)
             affect_strip(victim, skill_lookup("fireshield"));
             affect_strip(ch, skill_lookup("cloak:flaming"));
             affect_strip(victim, skill_lookup("cloak:flaming"));
+            affect_strip(ch, skill_lookup("cloak:elements"));
+            affect_strip(victim, skill_lookup("cloak:elements"));
             if (IS_SET(ch->affected_by, AFF_CLOAK_FLAMING))
                 REMOVE_BIT(ch->affected_by, AFF_CLOAK_FLAMING);
             if (IS_SET(victim->affected_by, AFF_CLOAK_FLAMING))

@@ -820,11 +820,13 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
       safe_strcat(MAX_STRING_LENGTH, buf, victim->long_descr);
       safe_strcat(MAX_STRING_LENGTH, buf, color_string(ch, "normal"));
 
-      if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING)) || (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) || (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) || (is_affected(victim, skill_lookup("cloak:misery")) || is_affected(victim, skill_lookup("cloak:drain"))))
+     if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING)) || (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) || (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) || (is_affected(victim, skill_lookup("cloak:misery")) || is_affected(victim, skill_lookup("cloak:drain"))) || (is_affected(victim, skill_lookup("cloak:elements"))))
       {
          safe_strcat(MAX_STRING_LENGTH, buf, "  @@NCLOAK:");
          if (IS_AFFECTED(victim, AFF_CLOAK_FLAMING))
             safe_strcat(MAX_STRING_LENGTH, buf, " @@eFLAMING@@N");
+         if (is_affected(victim, skill_lookup("cloak:elements")))
+            safe_strcat(MAX_STRING_LENGTH, buf, " @@lELEMENTS@@N");
          if (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION))
             safe_strcat(MAX_STRING_LENGTH, buf, " @@lABSORB@@N");
          if (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION))
@@ -921,11 +923,13 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
    safe_strcat(MAX_STRING_LENGTH, buf, color_string(ch, "normal"));
    safe_strcat(MAX_STRING_LENGTH, buf, "\n\r");
 
-   if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING)) || (IS_AFFECTED(victim, AFF_CLOAK_ADEPT)) || (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) || (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) || (is_affected(victim, skill_lookup("cloak:misery")) || is_affected(victim, skill_lookup("cloak:drain"))))
+   if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING)) || (is_affected(victim, skill_lookup("cloak:elements"))) || (IS_AFFECTED(victim, AFF_CLOAK_ADEPT)) || (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION)) || (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) || is_affected(victim, skill_lookup("cloak:misery")) || is_affected(victim, skill_lookup("cloak:drain")))
    {
       safe_strcat(MAX_STRING_LENGTH, buf, "  @@NCLOAK:");
       if (IS_AFFECTED(victim, AFF_CLOAK_FLAMING))
          safe_strcat(MAX_STRING_LENGTH, buf, " @@eFLAMING@@N");
+      if (is_affected(victim, skill_lookup("cloak:elements")))
+         safe_strcat(MAX_STRING_LENGTH, buf, " @@lELEMENTS@@N");
       if (IS_AFFECTED(victim, AFF_CLOAK_ABSORPTION))
          safe_strcat(MAX_STRING_LENGTH, buf, " @@lABSORB@@N");
       if (IS_AFFECTED(victim, AFF_CLOAK_REFLECTION))
