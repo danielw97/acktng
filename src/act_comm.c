@@ -761,7 +761,20 @@ void do_gossip(CHAR_DATA *ch, char *argument)
 
 void do_crusade(CHAR_DATA *ch, char *argument)
 {
-   talk_channel(ch, argument, CHANNEL_CRUSADE, "@@lcrusade");
+   extern bool quest;
+   extern int quest_level_min;
+   extern int quest_level_max;
+   char buf[MAX_STRING_LENGTH];
+
+   if (IS_NPC(ch) && quest && quest_level_min > 0 && quest_level_max > 0)
+   {
+      snprintf(buf, sizeof(buf), "@@W[Lv %d-%d]@@N %s", quest_level_min, quest_level_max,
+               argument ? argument : "");
+      talk_channel(ch, buf, CHANNEL_CRUSADE, "@@lcrusade");
+   }
+   else
+      talk_channel(ch, argument, CHANNEL_CRUSADE, "@@lcrusade");
+
    if ((!str_cmp(argument, "what mob?")) || (!str_cmp(argument, "who was the thief?")) || (!str_cmp(argument, "who is the thief?")) || (!str_cmp(argument, "what item?")) || (!str_cmp(argument, "where are you?")) || (!str_cmp(argument, "who stole the item?")) || (!str_cmp(argument, "where is the thief?")))
       ask_quest_question(ch, argument);
 

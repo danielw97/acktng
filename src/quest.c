@@ -217,6 +217,8 @@ void do_quest(CHAR_DATA *ch, char *argument)
    extern OBJ_DATA *quest_object;
    extern int quest_timer;
    extern int quest_wait;
+   extern int quest_level_min;
+   extern int quest_level_max;
 
    char buf[MAX_STRING_LENGTH];
    char new_long_desc[MAX_STRING_LENGTH];
@@ -327,6 +329,8 @@ void do_quest(CHAR_DATA *ch, char *argument)
       }
       b = UMIN(b, 110);
       a = UMAX(20, a);
+      quest_level_min = a;
+      quest_level_max = b;
 
       quest_target = get_quest_target(a, b);
       if ((quest_target == NULL) || (quest_target == quest_mob))
@@ -615,6 +619,8 @@ void clear_quest()
    extern int quest_timer;
    extern int quest_wait;
    extern sh_int quest_personality;
+   extern int quest_level_min;
+   extern int quest_level_max;
 
    /*
     * Clear ALL values, ready for next quest
@@ -643,6 +649,8 @@ void clear_quest()
    quest_timer = 0;
    quest_wait = 2 + number_range(1, 4);
    quest_personality = 0;
+   quest_level_min = 0;
+   quest_level_max = 0;
 
    return;
 }
@@ -658,6 +666,8 @@ void generate_auto_quest()
    extern int quest_timer;
    extern int quest_wait;
    extern sh_int quest_personality;
+   extern int quest_level_min;
+   extern int quest_level_max;
    int hunt_flags = 0;
    char new_long_desc[MAX_STRING_LENGTH];
    sh_int loop_counter = 0;
@@ -714,6 +724,9 @@ void generate_auto_quest()
          hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR;
          quest_personality = 3;
       }
+
+      quest_level_min = a;
+      quest_level_max = b;
 
       while ((quest_mob == NULL) && (loop_counter < 500))
       {

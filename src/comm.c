@@ -271,6 +271,8 @@ OBJ_DATA *quest_object;   /* Object to recover    */
 int quest_timer;          /* Time left to get object */
 int quest_wait = 0;       /* Min time until next quest  */
 sh_int quest_personality; /* mob's crusade personality :) */
+int quest_level_min;
+int quest_level_max;
 
 /* Zen mod: Diplomatics globals */
 
