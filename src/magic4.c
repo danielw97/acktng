@@ -503,6 +503,8 @@ bool spell_group_heal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
          do_spell_heal(ch, vch, sn);
       }
    }
+
+   return TRUE;
 }
 
 bool spell_haste(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)

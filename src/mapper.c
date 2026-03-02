@@ -505,7 +505,7 @@ void disp_map(char *border, char *map, CHAR_DATA *ch)
       ox = x;
       while (*x != '\n' && *x != '\r' && *x != '\0')
          ++x;
-      sprintf(bufs[y], "%.*s", (x - ox), ox);
+      sprintf(bufs[y], "%.*s", (int)(x - ox), ox);
    }
 #ifdef ACK_43
    if (!IS_NPC(ch) && IS_SET(ch->config, CONFIG_FULL_ANSI))
@@ -644,7 +644,7 @@ void ShowRoom(CHAR_DATA *ch, int min, int max, int size, int center)
                     ((contents[x][y].string[0] == '\0') ? "" : get_invert_color(map[x][y])));
             sprintf(displaybuf, "%s",
                     ((map[x][y] <= 0) ? get_door_display(map[x][y]) : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y]) : contents[x][y].string)));
-            sprintf(catbuf, "%s%s", colorbuf, displaybuf);
+            snprintf(catbuf, sizeof(catbuf), "%s%s", colorbuf, displaybuf);
             safe_strcat(MSL, outbuf, catbuf);
          }
          else
@@ -695,7 +695,7 @@ void ShowMap(CHAR_DATA *ch, int min, int max, int size, int center)
                     ((contents[x][y].string[0] == '\0') ? "" : get_invert_color(map[x][y])));
             sprintf(displaybuf, "%s",
                     ((map[x][y] <= 0) ? get_door_display(map[x][y]) : ((contents[x][y].string[0] == '\0') ? get_sector_display(map[x][y]) : contents[x][y].string)));
-            sprintf(catbuf, "%s%s", colorbuf, displaybuf);
+            snprintf(catbuf, sizeof(catbuf), "%s%s", colorbuf, displaybuf);
             safe_strcat(MSL, outbuf, catbuf);
          }
          else

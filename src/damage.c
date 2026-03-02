@@ -20,6 +20,11 @@ static CHAR_DATA *short_fight_victim = NULL;
 static int short_fight_total_damage = 0;
 
 void cloak_action(CHAR_DATA *ch, CHAR_DATA *victim, int dam);
+int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt);
+bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim);
+void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical);
+void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int realm, int dt, bool critical);
+void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 
 void short_fight_round_begin(CHAR_DATA *ch, CHAR_DATA *victim)
 {
@@ -258,7 +263,7 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
                     act(buf, ch, NULL, victim, TO_CHAR);
                     calculate_damage(victim, ch, dam, gsn_riposte, ELEMENT_PHYSICAL, TRUE);
                     affect_strip(victim, gsn_riposte);
-                    return;
+                    return FALSE;
                 }
 
                 if (paf->type == gsn_shieldblock && shield != NULL && shield->item_type == ITEM_ARMOR)
@@ -406,7 +411,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
     {
         if (can_use_skill(ch, gsn_enhanced_damage))
             dam_mod += get_curr_str(ch) * 3 / 100;
-        else if (IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED) || (item_has_apply(ch, ITEM_APPLY_ENHANCED)))
+        else if ((IS_NPC(ch) && IS_SET(ch->skills, MOB_ENHANCED)) || item_has_apply(ch, ITEM_APPLY_ENHANCED))
             dam_mod += 0.2;
 
         if (!IS_AWAKE(victim))
@@ -507,7 +512,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
          * Most other attacks are returned.
          */
         if (is_safe(ch, victim))
-            return;
+            return FALSE;
         if (victim != ch->fighting)
             check_killer(ch, victim);
 
@@ -1080,7 +1085,7 @@ void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critica
     if (critical)
         sprintf(critical_message, "@@N(@@rCRITICAL@@N)");
     else
-        sprintf(critical_message, "");
+        critical_message[0] = '\0';
 
     if (short_fight_round_active(ch, victim))
         short_fight_total_damage += dam;

@@ -39,6 +39,7 @@
 
 extern bool deathmatch;
 void breath_damage(CHAR_DATA *ch, int sn, int element);
+void aoe_damage(CHAR_DATA *ch, int element, int sn, int min_damage, int max_damage);
 
 bool spell_invis(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {

@@ -131,7 +131,7 @@ void do_mpstat(CHAR_DATA *ch, char *argument)
            victim->short_descr, victim->long_descr[0] != '\0' ? victim->long_descr : "(none).\n\r");
    send_to_char(buf, ch);
 
-   sprintf(buf, "Hp: %d/%d.  Mana: %d/%d.  Move: %d/%d. \n\r",
+   sprintf(buf, "Hp: %ld/%ld.  Mana: %ld/%ld.  Move: %ld/%ld. \n\r",
            victim->hit, get_max_hp(victim), victim->mana, get_max_mana(victim), victim->move, get_max_move(victim));
    send_to_char(buf, ch);
 
