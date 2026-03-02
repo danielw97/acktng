@@ -1906,8 +1906,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:flaming", {102, 182, 182, 182, 48, 182,
-                      102, 182, 182, 182, 48, 182},
+    "cloak:flaming", {48, 182, 182, 182, 182, 182,
+                      182, 182, 182, 182, 182, 182},
     spell_cloak_flaming, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 223 ), 750, 12, FALSE,
     "", "@@NThe @@ecloak@@N around your body fades.",
@@ -3205,8 +3205,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:iron", {182, 182, 182, 182, 182, 48,
-                    182, 182, 182, 182, 182, 48},
+    "cloak:iron", {182, 48, 182, 182, 182, 182,
+                    182, 182, 182, 182, 182, 182},
     spell_cloak_iron, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 678 ), 550, 12, FALSE,
     "", "@@NThe @@Wcloak@@N around your body fades.",
@@ -3214,8 +3214,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "cloak:mental", {182, 182, 182, 182, 182, 182,
-                      182, 182, 182, 182, 182, 48},
+    "cloak:mental", {182, 182, 182, 182, 182, 48,
+                      182, 182, 182, 182, 182, 182},
     spell_cloak_mental, TAR_CHAR_DEFENSIVE, POS_STANDING,
     NULL, SLOT( 679 ), 550, 12, FALSE,
     "", "@@NThe @@mcloak@@N around your body fades.",
