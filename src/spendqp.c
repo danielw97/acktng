@@ -37,6 +37,52 @@
 #include "globals.h"
 #include "tables.h"
 
+void spendqp_copy_text(char *dest, size_t dest_size, const char *src)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   if (src == NULL)
+   {
+      dest[0] = '\0';
+      return;
+   }
+
+   snprintf(dest, dest_size, "%s", src);
+}
+
+void spendqp_build_move_message(char *dest, size_t dest_size, const char *title, const char *message)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   if (title == NULL)
+      title = "";
+   if (message == NULL)
+      message = "";
+
+   snprintf(dest, dest_size, "$L%s$n %s $T.", title, message);
+}
+
+void spendqp_append_word_with_space(char *dest, size_t dest_size, const char *word)
+{
+   size_t len;
+
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   len = strlen(dest);
+   if (len >= dest_size - 1)
+      return;
+
+   if (word == NULL)
+      word = "";
+
+   snprintf(dest + len, dest_size - len, "%s ", word);
+}
+
+#ifndef UNIT_TEST_SPENDQP
+
 void save_brands()
 {
 
@@ -89,9 +135,12 @@ void load_brands(void)
    BRAND_DATA *this_brand;
    DL_LIST *brand_member;
 
-   sprintf(brands_file_name, "%s", BRANDS_FILE);
+   snprintf(brands_file_name, sizeof(brands_file_name), "%s", BRANDS_FILE);
 
-   sprintf(buf, "Loading %s\n\r", brands_file_name);
+   buf[0] = '\0';
+   safe_strcat(MAX_STRING_LENGTH, buf, "Loading ");
+   safe_strcat(MAX_STRING_LENGTH, buf, brands_file_name);
+   safe_strcat(MAX_STRING_LENGTH, buf, "\n\r");
    monitor_chan(buf, MONITOR_CLAN);
 
    if ((brandsfp = fopen(brands_file_name, "r")) == NULL)
@@ -143,7 +192,10 @@ void load_brands(void)
          brandsfp = NULL;
       }
 
-      sprintf(buf, "Done Loading %s\n\r", brands_file_name);
+      buf[0] = '\0';
+      safe_strcat(MAX_STRING_LENGTH, buf, "Done Loading ");
+      safe_strcat(MAX_STRING_LENGTH, buf, brands_file_name);
+      safe_strcat(MAX_STRING_LENGTH, buf, "\n\r");
       monitor_chan(buf, MONITOR_CLAN);
    }
 }
@@ -157,8 +209,8 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
    char brandbuf[MSL];
    char catbuf[MSL];
 
-   sprintf(brandbuf, "%s", "");
-   sprintf(catbuf, "%s", "");
+   brandbuf[0] = '\0';
+   catbuf[0] = '\0';
 
    smash_tilde(argument);
    argument = one_argument(argument, arg1);
@@ -259,26 +311,30 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
 
          if (!str_cmp(ch->pcdata->pedit_string[0], "none"))
          {
-            sprintf(test_string, ch->pcdata->room_enter);
+            spendqp_copy_text(test_string, sizeof(test_string), ch->pcdata->room_enter);
          }
          else
          {
-            sprintf(test_string, ch->pcdata->pedit_string[0]);
+            spendqp_copy_text(test_string, sizeof(test_string), ch->pcdata->pedit_string[0]);
             qp_cost++;
          }
-         sprintf(move_buf, "$L%s$n %s $T.", get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), test_string);
+         spendqp_build_move_message(move_buf, sizeof(move_buf),
+                                    get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex),
+                                    test_string);
          act(move_buf, ch, NULL, rev_name[1], TO_CHAR);
          if (!str_cmp(ch->pcdata->pedit_string[1], "none"))
          {
-            sprintf(test_string, ch->pcdata->room_exit);
+            spendqp_copy_text(test_string, sizeof(test_string), ch->pcdata->room_exit);
          }
          else
          {
-            sprintf(test_string, ch->pcdata->pedit_string[1]);
+            spendqp_copy_text(test_string, sizeof(test_string), ch->pcdata->pedit_string[1]);
             qp_cost++;
          }
 
-         sprintf(move_buf, "$L%s$n %s $T.", get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex), test_string);
+         spendqp_build_move_message(move_buf, sizeof(move_buf),
+                                    get_ruler_title(ch->pcdata->ruler_rank, ch->login_sex),
+                                    test_string);
          act(move_buf, ch, NULL, dir_name[1], TO_CHAR);
 
          sprintf(buf, "Purchase cost is %d qps.\n\r", qp_cost);
@@ -408,7 +464,8 @@ void do_qpspend(CHAR_DATA *ch, char *argument)
             }
             else
             {
-               sprintf(catbuf, "%s ", word1);
+               catbuf[0] = '\0';
+               spendqp_append_word_with_space(catbuf, sizeof(catbuf), word1);
                safe_strcat(MSL, assistbuf, catbuf);
             }
          }
@@ -817,3 +874,5 @@ void do_immbrand(CHAR_DATA *ch, char *argument)
    send_to_char("Huh?  Type 'help letter' for usage.\n\r", ch);
    return;
 }
+
+#endif /* !UNIT_TEST_SPENDQP */
