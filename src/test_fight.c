@@ -64,6 +64,9 @@ bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DA
 bool should_summon_assist_master_round(int is_npc, int is_charmed, int has_master,
                                       int master_fighting, int same_room,
                                       int is_player_summon, int can_see_master_target);
+bool should_summon_cast_round(int is_npc, int is_player_summon,
+                              int is_fighting, int has_spec_fun,
+                              int should_cast_now);
 
 static void clear_character(CHAR_DATA *ch)
 {
@@ -460,6 +463,17 @@ static void test_should_summon_assist_master_round(void)
     assert(should_summon_assist_master_round(true, true, true, true, true, false, true) == false);
     assert(should_summon_assist_master_round(true, true, true, true, true, true, false) == false);
 }
+
+static void test_should_summon_cast_round(void)
+{
+    assert(should_summon_cast_round(true, true, true, true, true) == true);
+
+    assert(should_summon_cast_round(false, true, true, true, true) == false);
+    assert(should_summon_cast_round(true, false, true, true, true) == false);
+    assert(should_summon_cast_round(true, true, false, true, true) == false);
+    assert(should_summon_cast_round(true, true, true, false, true) == false);
+    assert(should_summon_cast_round(true, true, true, true, false) == false);
+}
 static void test_get_evasion_piercing_composition(void)
 {
     CHAR_DATA ch;
@@ -495,6 +509,7 @@ int main(void)
     test_shortfight_summary_recipient_npc_is_never_shortfight();
     test_shortfight_summary_recipient_matching();
     test_should_summon_assist_master_round();
+    test_should_summon_cast_round();
     test_get_evasion_piercing_composition();
 
     puts("test_fight: all tests passed");
