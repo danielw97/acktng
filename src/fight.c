@@ -407,7 +407,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
    OBJ_DATA *dualwield = NULL;
    int victim_ac;
    int remort_bonus;
-   int dam;
+   int dam = 0;
    int diceroll;
    int ix;
    float dam_mod;
@@ -557,7 +557,7 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
             dam = number_range(2, get_psuedo_level(ch) / 4) + dam_bonus;
       }
       else
-         UMAX(number_range(2, 4), get_psuedo_level(ch) / 4);
+         dam += UMAX(number_range(2, 4), get_psuedo_level(ch) / 4);
    }
 
    dam = dam * dam_mod;
