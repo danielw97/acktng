@@ -22,6 +22,16 @@ static void test_damage_matches_psuedo_level(void)
     assert(cloak_drain_damage_from_level(-10) == 0);
 }
 
+static void test_level_damage_reduction_is_half_level(void)
+{
+    assert(cloak_level_damage_reduction(48) == 24);
+    assert(cloak_level_damage_reduction(47) == 23);
+    assert(cloak_level_damage_reduction(0) == 0);
+    assert(cloak_level_damage_reduction(1) == 0);
+    assert(cloak_level_damage_reduction(101) == 50);
+    assert(cloak_level_damage_reduction(-10) == 0);
+}
+
 static void test_attacker_hp_has_floor(void)
 {
     assert(cloak_drain_attacker_hp_after_hit(100, 47) == 53);
@@ -55,6 +65,7 @@ int main(void)
 {
     test_cloak_reactive_can_trigger_only_for_non_physical();
     test_damage_matches_psuedo_level();
+    test_level_damage_reduction_is_half_level();
     test_attacker_hp_has_floor();
     test_victim_hp_heals_half_and_caps_at_max();
     test_cloak_adept_helpers();
