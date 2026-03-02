@@ -322,50 +322,6 @@ Syntax: flame    <message>      Syntax: race     <message>
 Syntax: clan     <message>      syntax: music    <message>
 
 
-        Your @@yfirst@@W remort class requires the matching mortal
-
-        pre-requisite class at @@y100@@W.
-
-
-        Your @@ysecond@@W remort class requires:
-
-          - your first remort class at @@y100@@W,
-
-          - all mortal classes at @@y100@@W, and
-
-          - the matching mortal pre-requisite class for that second remort
-
-            at @@y100@@W.
-
-When you are ready to remort, type gain <first three letters of new class>.
-
-
-Remort classes and mortal pre-requisites are:
-
-        -@@pSorcerer@@W (Mage)
-
-        -@@WWizard@@W (Mage)
-
-        -@@aPaladin@@W (Cleric)
-
-        -@@CPriest@@W (Cleric)
-
-        -@@dAssassin@@W (Thief)
-
-        -@@dWarlock@@W (Thief)
-
-        -@@cKnight@@W (Warrior)
-
-        -@@cSwordsman@@W (Warrior)
-
-        -@@GNecromancer@@W (Psionicist)
-
-        -@@mEgomancer@@W (Psionicist)
-
-        -@@gMonk@@W (Pugilist)
-
-        -@@gBrawler@@W (Pugilist)
-
 YELL sends a message to all awake players within your area.
 
 RACE sends a message to members of your own race.  CLAN sends a message to
@@ -635,37 +591,49 @@ lately; and some random variation.~
 0 REMORT~
 @@aREMORT@@W
 
-Shades of Evil's remort policy is as follows:
+Your @@yfirst@@W remort class requires the matching mortal
 
-        When you have attained 70th level in @@ytwo@@W classes, you may add
-
-        @@yone@@W of the five remort classes to your character.
-
-        When you have attained 70th level in that new class, and have
-
-        attained 80th level in @@yall@@W five basic classes, you may add
-
-        a @@ysecond@@W remort class.
+pre-requisite class at @@y100@@W.
 
 
-        When you have attained 80th level in all classes, including the
+Your @@ysecond@@W remort class requires:
 
-        two remort classes, you will become an @@gAdept@@W.
+  - your first remort class at @@y100@@W,
+
+  - all mortal classes at @@y100@@W, and
+
+  - the matching mortal pre-requisite class for that second remort
+
+    at @@y100@@W.
 
 When you are ready to remort, type gain <first three letters of new class>.
 
 
-Remort classes are:
+Remort classes and mortal pre-requisites are:
 
-        -@@cKnight@@W
+        -@@pSorcerer@@W (Mage)
 
-        -@@pSorcerer@@W
+        -@@WWizard@@W (Mage)
 
-        -@@GNecromancer@@W
+        -@@aPaladin@@W (Cleric)
 
-        -@@gMonk@@W
+        -@@CPriest@@W (Cleric)
 
-        -@@dAssassin@@W~
+        -@@dAssassin@@W (Thief)
+
+        -@@dWarlock@@W (Thief)
+
+        -@@cKnight@@W (Warrior)
+
+        -@@cSwordsman@@W (Warrior)
+
+        -@@GNecromancer@@W (Psionicist)
+
+        -@@mEgomancer@@W (Psionicist)
+
+        -@@gMonk@@W (Pugilist)
+
+        -@@gBrawler@@W (Pugilist)~
 
 0 DEATH~
 When your character dies, your corpse is magically transported to the 
