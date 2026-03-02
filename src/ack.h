@@ -1395,6 +1395,7 @@ void log_f(char *fmt, ...) __attribute__((format(printf, 1, 2)));
 /* fight.c */
 void violence_update args((void));
 void multi_hit args((CHAR_DATA * ch, CHAR_DATA *victim, int dt));
+void one_hit args((CHAR_DATA * ch, CHAR_DATA *victim, int dt));
 int damage args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt));
 int swing args((CHAR_DATA * ch, CHAR_DATA *victim, int dam, int dt));
 void update_pos args((CHAR_DATA * victim));
