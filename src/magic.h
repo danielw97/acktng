@@ -308,6 +308,7 @@ DECLARE_SPELL_FUN(spell_spirit_curse);
 DECLARE_SPELL_FUN(spell_rictus_curse);
 DECLARE_SPELL_FUN(spell_kinetic_reversion);
 DECLARE_SPELL_FUN(spell_cloak_misery);
+DECLARE_SPELL_FUN(spell_cloak_drain);
 DECLARE_SPELL_FUN(spell_sonic_blast);
 DECLARE_SPELL_FUN(spell_haste);
 DECLARE_SPELL_FUN(spell_slow);
