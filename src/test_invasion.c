@@ -125,14 +125,28 @@ static void test_hidden_mobile_matches_invasion_tagging(void)
     CHAR_DATA player = {0};
 
     mob.act = ACT_IS_NPC;
-    mob.extract_timer = -999;
+    mob.act |= ACT_INVASION;
     assert(invasion_is_hidden_mobile(&mob) == 1);
 
-    mob.extract_timer = 0;
+    mob.act &= ~ACT_INVASION;
     assert(invasion_is_hidden_mobile(&mob) == 0);
 
-    player.extract_timer = -999;
+    player.act |= ACT_INVASION;
     assert(invasion_is_hidden_mobile(&player) == 0);
+}
+
+
+static void test_is_invasion_mob_ignores_extract_timer_sentinel(void)
+{
+    CHAR_DATA mob = {0};
+
+    mob.act = ACT_IS_NPC;
+    mob.extract_timer = -999;
+    assert(invasion_test_is_invasion_mob(&mob) == 0);
+
+    mob.act |= ACT_INVASION;
+    mob.extract_timer = 0;
+    assert(invasion_test_is_invasion_mob(&mob) == 1);
 }
 
 static void test_is_invasion_mob_requires_npc_tag(void)
@@ -141,13 +155,13 @@ static void test_is_invasion_mob_requires_npc_tag(void)
     CHAR_DATA player = {0};
 
     mob.act = ACT_IS_NPC;
-    mob.extract_timer = -999;
+    mob.act |= ACT_INVASION;
     assert(invasion_test_is_invasion_mob(&mob) != 0);
 
-    mob.extract_timer = 0;
+    mob.act &= ~ACT_INVASION;
     assert(invasion_test_is_invasion_mob(&mob) == 0);
 
-    player.extract_timer = -999;
+    player.act |= ACT_INVASION;
     assert(invasion_test_is_invasion_mob(&player) == 0);
 }
 
@@ -160,6 +174,7 @@ int main(void)
     test_midgaard_area_name_matching();
     test_unreachable_path_marks_for_self_destruct();
     test_hidden_mobile_matches_invasion_tagging();
+    test_is_invasion_mob_ignores_extract_timer_sentinel();
     test_is_invasion_mob_requires_npc_tag();
 
     puts("test_invasion: all tests passed");

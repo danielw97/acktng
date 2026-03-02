@@ -974,6 +974,7 @@
 #define ACT_SOLO 33554432                                /* Mob is buffed for solo combat */
 #define ACT_WEREWOLF 67108864 /* Werewolf mob         */ /* doesn't do anything in ack4.0 ZENFIX */
 #define ACT_NOBLOOD BIT_29
+#define ACT_INVASION BIT_30
 #define ACT_NOASSIST BIT_31
 
 /* build bits for OLC -S- */

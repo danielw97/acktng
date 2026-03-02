@@ -87,9 +87,6 @@ static CHAR_DATA *invasion_boss          = NULL;
 static int        invasion_boss_profile  = -1;
 static int        invasion_boss_ticks_up = 0;
 
-/* Sentinel stored in extract_timer to mark invasion mobs */
-#define INVASION_TAG  (-999)
-
 /* -----------------------------------------------------------------------
  * Forward declarations
  * --------------------------------------------------------------------- */
@@ -164,7 +161,7 @@ static int count_regular_players(int *out_lo, int *out_hi)
 static bool mob_is_invasion_mob(CHAR_DATA *ch)
 {
     if (!IS_NPC(ch)) return FALSE;
-    return (ch->extract_timer == INVASION_TAG);
+    return IS_SET(ch->act, ACT_INVASION) ? TRUE : FALSE;
 }
 
 int invasion_is_hidden_mobile(CHAR_DATA *ch)
@@ -267,7 +264,7 @@ static void despawn_all_invasion(void)
         if (!mob_is_invasion_mob(ch)) continue;
         if (ch->fighting != NULL)
             stop_fighting(ch, TRUE);
-        ch->extract_timer = 0;   /* clear tag before extract */
+        REMOVE_BIT(ch->act, ACT_INVASION);
         extract_char(ch, TRUE);
     }
     invasion_boss = NULL;
@@ -616,7 +613,7 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx)
     else
         apply_wave_mob_profile(mob, wave_idx, level);
 
-    mob->extract_timer = INVASION_TAG;
+    SET_BIT(mob->act, ACT_INVASION);
 
     char_to_room(mob, spawn_room);
     return mob;
@@ -799,7 +796,7 @@ void invasion_rooms_update(void)
                     raw_kill(gertrude, "");
             }
 
-            ch->extract_timer = 0;
+            REMOVE_BIT(ch->act, ACT_INVASION);
             extract_char(ch, TRUE);
             continue;
         }
@@ -828,7 +825,7 @@ void invasion_rooms_update(void)
         {
             act("$n cannot find a path to Gertrude and crumbles into dust.",
                 ch, NULL, NULL, TO_ROOM);
-            ch->extract_timer = 0;
+            REMOVE_BIT(ch->act, ACT_INVASION);
             extract_char(ch, TRUE);
             continue;
         }
@@ -847,7 +844,7 @@ void invasion_on_death(CHAR_DATA *ch, CHAR_DATA *killer)
 
     if (ch == invasion_boss)
     {
-        ch->extract_timer = 0;
+        REMOVE_BIT(ch->act, ACT_INVASION);
         invasion_boss = NULL;
         invasion_end(TRUE);
         return;
@@ -859,14 +856,14 @@ void invasion_on_death(CHAR_DATA *ch, CHAR_DATA *killer)
          * walks the char list, so the boss extracts cleanly like any
          * other mob rather than being left in a half-extracted state. */
         if (invasion_boss != NULL && !invasion_boss->is_free)
-            invasion_boss->extract_timer = 0;
+            REMOVE_BIT(invasion_boss->act, ACT_INVASION);
         invasion_boss = NULL;
         invasion_end(FALSE);
         return;
     }
 
     if (mob_is_invasion_mob(ch))
-        ch->extract_timer = 0;
+        REMOVE_BIT(ch->act, ACT_INVASION);
 }
 
 /* -----------------------------------------------------------------------
