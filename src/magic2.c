@@ -1323,11 +1323,13 @@ bool spell_produce_food(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    return TRUE;
 }
 
+
 bool spell_animate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    OBJ_DATA *ob;
    OBJ_DATA *bits;
    CHAR_DATA *corpse;
+   SPEC_FUN *summon_special = spec_lookup("spec_summon_animate");
 
    if (IS_NPC(ch))
       return FALSE;
@@ -1363,10 +1365,12 @@ bool spell_animate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    }
 
    corpse->level = ob->level; /* Level of (N)PC before death */
-   corpse->max_hit = dice(5, level);
-   corpse->hit = corpse->max_hit;
-   corpse->max_move = dice(10, corpse->level);
-   corpse->move = corpse->max_move; /* Set Zombie's stats */
+   corpse->hit = get_max_hp(corpse);
+   corpse->exp = 0;
+   corpse->intell_exp = 0;
+   corpse->max_mana = corpse->level * 25;
+   corpse->mana = corpse->max_mana;
+   corpse->spec_fun = summon_special;
 
    for (;;)
    {
@@ -1381,7 +1385,7 @@ bool spell_animate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    do_wear(corpse, "all"); /* FIXME: better to check items, then wear... */
    SET_BIT(corpse->act, ACT_PET);
    SET_BIT(corpse->affected_by, AFF_CHARM);
-   corpse->extract_timer = get_psuedo_level(ch) / 3;
+   corpse->extract_timer = get_psuedo_level(ch) / 4;
 
    add_follower(corpse, ch);
    return TRUE;
