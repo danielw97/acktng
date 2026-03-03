@@ -116,6 +116,7 @@ int spell_dam_base_penalty_for_summon(int summon)
       case IRON_GOLEM:
          return 25;
       case DIAMOND_GOLEM:
+      case THOUGHT_DEVOURER:
          return 15;
       default:
          return 0;
@@ -141,6 +142,8 @@ const char *spell_dam_special_for_summon(int summon)
       case IRON_GOLEM:
       case DIAMOND_GOLEM:
          return "spec_summon_metal";
+      case THOUGHT_DEVOURER:
+         return "spec_summon_thought";
       default:
          return NULL;
    }
@@ -246,6 +249,12 @@ CHAR_DATA *player_summon(CHAR_DATA *ch, int level, int summon)
       strcpy(name, "Diamond Golem");
       strcpy(short_desc, "@@WD@@yi@@Wa@@ym@@Wo@@yn@@Wd @@WGolem@@N");
       strcpy(long_desc, "@@yA shimmering tower of @@cdiamond@@y glitters before you.\n\r");
+   }
+   else if (summon == THOUGHT_DEVOURER)
+   {
+      strcpy(name, "Thought Devourer");
+      strcpy(short_desc, "@@cThought @@bDevourer@@N");
+      strcpy(long_desc, "A @@cThought @@bDevourer@@N coils in from the astral void.\n\r");
    }
 
    summoned = create_mobile(get_mob_index(MOB_VNUM_WATERELEM));

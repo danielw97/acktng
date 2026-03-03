@@ -956,7 +956,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     MORTAL, NORM,
-    "charm person", {49, 60, 182, 182, 182, 182},
+    "charm person", {182, 182, 182, 182, 182, 182},
     spell_charm_person, TAR_CHAR_OFFENSIVE, POS_STANDING,
     &gsn_charm_person, SLOT( 7 ), 5, 12, FALSE,
     "", "You feel more self-confident.",
@@ -3019,8 +3019,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "summon pegasus", {182, 60, 182, 60, 182, 182, 
-                       182, 60, 182, 60, 182, 182},
+    "summon pegasus", {182, 182, 182, 182, 182, 182, 
+                       182, 182, 182, 182, 182, 182},
     spell_summon_pegasus, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 659 ), 1200, 24, FALSE,
     "", "",
@@ -3028,8 +3028,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "summon nightmare", {182, 182, 182, 182, 60, 182, 
-                         182, 182, 182, 182, 60, 182},
+    "summon nightmare", {182, 182, 182, 182, 182, 182, 
+                         182, 182, 182, 182, 182, 182},
     spell_summon_nightmare, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 660 ), 1200, 24, FALSE,
     "", "",
@@ -3037,8 +3037,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "summon beast", {60, 182, 182, 182, 182, 182,
-                     60, 182, 182, 182, 182, 182},
+    "summon beast", {182, 182, 182, 182, 182, 182,
+                     182, 182, 182, 182, 182, 182},
     spell_summon_beast, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 661 ), 1200, 24, FALSE,
     "", "",
@@ -3046,8 +3046,8 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "summon devourer", {182, 182, 182, 182, 182, 60, 
-                        182, 182, 182, 182, 182, 60},
+    "summon devourer", {182, 182, 182, 182, 182, 182, 
+                        182, 182, 182, 182, 182, 182},
     spell_summon_devourer, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 662 ), 1200, 24, FALSE,
     "", "",
@@ -3055,10 +3055,19 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "summon shadow", {182, 182, 60, 182, 182, 182, 
-                      182, 182, 60, 182, 182, 182},
+    "summon shadow", {182, 182, 182, 182, 182, 182, 
+                      182, 182, 182, 182, 182, 182},
     spell_summon_shadow, TAR_IGNORE, POS_STANDING,
     NULL, SLOT( 663 ), 1200, 24, FALSE,
+    "", "",
+    ""},
+
+   {
+    REMORT, NORM,
+    "thought devourer", {182, 182, 182, 182, 182, 182,
+                                 182, 182, 182, 182, 65, 182},
+    spell_summon_thought_devourer, TAR_IGNORE, POS_STANDING,
+    NULL, SLOT( 754 ), 1200, 24, FALSE,
     "", "",
     ""},
 

@@ -77,6 +77,7 @@ DECLARE_SPEC_FUN(spec_summon_holy);
 DECLARE_SPEC_FUN(spec_summon_shadow);
 DECLARE_SPEC_FUN(spec_summon_metal);
 DECLARE_SPEC_FUN(spec_summon_animate);
+DECLARE_SPEC_FUN(spec_summon_thought);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -164,6 +165,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_summon_metal;
    if (!str_cmp(name, "spec_summon_animate"))
       return spec_summon_animate;
+   if (!str_cmp(name, "spec_summon_thought"))
+      return spec_summon_thought;
 
    return 0;
 }
@@ -250,6 +253,8 @@ char *rev_spec_lookup(void *func)
       return "spec_summon_metal";
    if (func == spec_summon_animate)
       return "spec_summon_animate";
+   if (func == spec_summon_thought)
+      return "spec_summon_thought";
 
    return 0;
 }
@@ -292,6 +297,7 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_summon_shadow       \n\r");
    strcat(buf, "       spec_summon_metal        \n\r");
    strcat(buf, "       spec_summon_animate      \n\r");
+   strcat(buf, "       spec_summon_thought      \n\r");
 
    return;
 }
@@ -329,7 +335,8 @@ bool is_player_summon_special(SPEC_FUN *spec_fun)
       || spec_fun == spec_summon_holy
       || spec_fun == spec_summon_shadow
       || spec_fun == spec_summon_metal
-      || spec_fun == spec_summon_animate;
+      || spec_fun == spec_summon_animate
+      || spec_fun == spec_summon_thought;
 }
 
 static bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells, int spell_count)
@@ -375,6 +382,38 @@ static int summon_master_heal_chance(int master_hit, int master_max_hp, int them
 int summon_master_heal_chance_for_test(int master_hit, int master_max_hp, int thematic_bonus)
 {
    return summon_master_heal_chance(master_hit, master_max_hp, thematic_bonus);
+}
+
+int summon_special_count_for_test(void)
+{
+   return 9;
+}
+
+bool summon_special_casts_in_combat_for_test(CHAR_DATA *ch, int index)
+{
+   switch (index)
+   {
+   case 0:
+      return spec_summon_water(ch);
+   case 1:
+      return spec_summon_fire(ch);
+   case 2:
+      return spec_summon_earth(ch);
+   case 3:
+      return spec_summon_undead(ch);
+   case 4:
+      return spec_summon_holy(ch);
+   case 5:
+      return spec_summon_shadow(ch);
+   case 6:
+      return spec_summon_metal(ch);
+   case 7:
+      return spec_summon_animate(ch);
+   case 8:
+      return spec_summon_thought(ch);
+   default:
+      return FALSE;
+   }
 }
 #endif
 
@@ -482,6 +521,16 @@ bool spec_summon_animate(CHAR_DATA *ch)
    static const char *const spells[] = {"harm", "poison", "weaken"};
 
    if (spec_summon_heal_master(ch, 8))
+      return TRUE;
+
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_thought(CHAR_DATA *ch)
+{
+   static const char *const spells[] = {"thought vise", "mind bolt", "feeble mind"};
+
+   if (spec_summon_heal_master(ch, 12))
       return TRUE;
 
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);

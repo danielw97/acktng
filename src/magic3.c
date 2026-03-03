@@ -1356,6 +1356,21 @@ bool spell_diamond_golem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    return TRUE;
 }
 
+bool spell_summon_thought_devourer(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_MON] / 4, THOUGHT_DEVOURER);
+
+   act("@@N$n draws in the fractured echoes of @@rthought@@N!", ch, obj, NULL, TO_ROOM);
+   act("@@NYou draw in the fractured echoes of @@rthought@@N.", ch, obj, NULL, TO_CHAR);
+
+   act("A jagged psionic rift opens, and a @@cThought @@bDevourer@@N emerges!!", ch, obj, NULL, TO_ROOM);
+   act("A jagged psionic rift opens, and a @@cThought @@bDevourer@@N emerges!!", ch, obj, NULL, TO_CHAR);
+
+   act("$n slithers free of the rift, devouring loose thoughts as it forms.", summoned, NULL, NULL, TO_ROOM);
+
+   return TRUE;
+}
+
 bool spell_summon_pegasus(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *summoned;
