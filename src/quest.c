@@ -97,6 +97,20 @@ void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_lev
    *maximum_level = max_level;
 }
 
+sh_int quest_resolve_crusade_personality(sh_int personality, int mob_level)
+{
+   if (personality >= 1 && personality <= 3)
+      return personality;
+
+   if (mob_level < 60)
+      return 1;
+
+   if (mob_level < 100)
+      return 2;
+
+   return 3;
+}
+
 
 /* 17 messages, organised by blocks for each personality
    indented messages are for when the target mob gets killed  */
@@ -554,6 +568,11 @@ void quest_inform(void)
    extern int quest_timer;
    extern sh_int quest_personality;
    extern const struct qmessage_type qmessages[4][17];
+   sh_int active_personality;
+
+   active_personality = quest_resolve_crusade_personality(quest_personality,
+                                                           quest_mob ? quest_mob->level : 1);
+   quest_personality = active_personality;
 
    /*
     * Work out what the mob should tell the players....
@@ -564,7 +583,7 @@ void quest_inform(void)
    if (quest_timer < 7)
    {
       format_quest_message(buf,
-                           qmessages[quest_personality][quest_timer].message1,
+                           qmessages[active_personality][quest_timer].message1,
                            quest_object->short_descr,
                            NULL);
    }
@@ -572,12 +591,12 @@ void quest_inform(void)
    {
       if (quest_target)
          format_quest_message(buf,
-                              qmessages[quest_personality][quest_timer].message1,
+                              qmessages[active_personality][quest_timer].message1,
                               quest_target->short_descr,
                               quest_object->short_descr);
       else
          format_quest_message(buf,
-                              qmessages[quest_personality][quest_timer].message2,
+                              qmessages[active_personality][quest_timer].message2,
                               quest_object->short_descr,
                               NULL);
    }
@@ -603,11 +622,16 @@ void quest_complete(CHAR_DATA *ch)
    extern OBJ_DATA *quest_object;
    extern sh_int quest_personality;
    extern const struct qmessage_type qmessages[4][17];
+   sh_int active_personality;
 
    char buf[MAX_STRING_LENGTH];
 
+   active_personality = quest_resolve_crusade_personality(quest_personality,
+                                                           quest_mob ? quest_mob->level : 1);
+   quest_personality = active_personality;
+
    format_quest_message(buf,
-                        qmessages[quest_personality][16].message1,
+                        qmessages[active_personality][16].message1,
                         NAME(ch),
                         quest_object->short_descr);
    do_crusade(quest_mob, buf);
