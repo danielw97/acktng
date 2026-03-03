@@ -81,6 +81,23 @@ static void format_quest_message(char *dest, const char *message,
    *out = '\0';
 }
 
+void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level, int *maximum_level)
+{
+   int min_level;
+   int max_level;
+
+   if (minimum_level == NULL || maximum_level == NULL)
+      return;
+
+   min_level = URANGE(1, mob_level - 30, MAX_LEVEL);
+   max_level = URANGE(1, mob_level + 20, MAX_LEVEL);
+   max_level = UMAX(min_level, max_level);
+
+   *minimum_level = min_level;
+   *maximum_level = max_level;
+}
+
+
 /* 17 messages, organised by blocks for each personality
    indented messages are for when the target mob gets killed  */
 struct qmessage_type
@@ -327,10 +344,9 @@ void do_quest(CHAR_DATA *ch, char *argument)
          send_to_char("Failed to find a quest mob\n\r", ch);
          return;
       }
-      a = quest_mob->level - 30;
-      b = quest_mob->level + 20;
-      quest_level_min = a;
-      quest_level_max = b;
+      quest_set_crusade_level_range_for_mob_level(quest_mob->level, &quest_level_min, &quest_level_max);
+      a = quest_level_min;
+      b = quest_level_max;
 
       quest_target = get_quest_target(a, b);
       if ((quest_target == NULL) || (quest_target == quest_mob))
@@ -740,10 +756,9 @@ void generate_auto_quest()
          return;
       }
 
-      a = quest_mob->level - 30;
-      b = quest_mob->level + 20;
-      quest_level_min = a;
-      quest_level_max = b;
+      quest_set_crusade_level_range_for_mob_level(quest_mob->level, &quest_level_min, &quest_level_max);
+      a = quest_level_min;
+      b = quest_level_max;
 
       loop_counter = 0;
       while ((quest_target == NULL) && (loop_counter < 500))

@@ -307,7 +307,7 @@ unit-test-special: test_special.o special.unit-test.o test_is_fighting.o
 	$(CC) -Wl,--gc-sections -o unit-test-special test_special.o special.unit-test.o test_is_fighting.o $(L_FLAGS)
 
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-proposition unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-death
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-proposition unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-quest unit-test-death
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -338,8 +338,16 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-act-obj
 	./unit-test-ssm
 	./unit-test-special
+	./unit-test-quest
 	./unit-test-death
 
+
+quest.unit-test.o: quest.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o quest.unit-test.o quest.c
+
+unit-test-quest: test_quest.o quest.unit-test.o test_is_fighting.o
+	rm -f unit-test-quest
+	$(CC) -Wl,--gc-sections -o unit-test-quest test_quest.o quest.unit-test.o test_is_fighting.o $(L_FLAGS)
 
 death.unit-test.o: death.c
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o death.unit-test.o death.c
