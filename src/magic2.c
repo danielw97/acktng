@@ -1331,6 +1331,13 @@ bool spell_animate(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    CHAR_DATA *corpse;
    SPEC_FUN *summon_special = spec_lookup("spec_summon_animate");
 
+   if (summon_special == NULL)
+   {
+      bug("Spell_animate: missing spec_summon_animate.", 0);
+      send_to_char("Necromantic energies waver and fail.\n\r", ch);
+      return FALSE;
+   }
+
    if (IS_NPC(ch))
       return FALSE;
 

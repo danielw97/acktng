@@ -280,7 +280,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
                                 is_player_summon_special(ch->spec_fun),
                                 ch->position == POS_FIGHTING,
                                 ch->spec_fun != NULL,
-                                number_bits(1) == 0))
+                                TRUE))
    {
       (*ch->spec_fun)(ch);
       return;

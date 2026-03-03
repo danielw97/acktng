@@ -86,6 +86,7 @@ int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, 
 #define SKELETON 6
 #define SOUL_THIEF 7
 #define HOLY_AVENGER 8
+#define THOUGHT_DEVOURER 9
 
 struct sp_dam_str_type
 {
@@ -297,6 +298,7 @@ DECLARE_SPELL_FUN(spell_summon_nightmare);    /* slot 660 */
 DECLARE_SPELL_FUN(spell_summon_beast);        /* 661 */
 DECLARE_SPELL_FUN(spell_summon_devourer);     /* 662 */
 DECLARE_SPELL_FUN(spell_summon_shadow);       /* 663 */
+DECLARE_SPELL_FUN(spell_summon_thought_devourer); /* 754 */
 DECLARE_SPELL_FUN(spell_creature_bond);       /* 664 */
 DECLARE_SPELL_FUN(spell_corrupt_bond);        /* 665 */
 DECLARE_SPELL_FUN(spell_fireblast);           /* 666 */
