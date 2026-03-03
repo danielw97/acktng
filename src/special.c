@@ -76,6 +76,7 @@ DECLARE_SPEC_FUN(spec_summon_undead);
 DECLARE_SPEC_FUN(spec_summon_holy);
 DECLARE_SPEC_FUN(spec_summon_shadow);
 DECLARE_SPEC_FUN(spec_summon_metal);
+DECLARE_SPEC_FUN(spec_summon_animate);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -161,6 +162,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_summon_shadow;
    if (!str_cmp(name, "spec_summon_metal"))
       return spec_summon_metal;
+   if (!str_cmp(name, "spec_summon_animate"))
+      return spec_summon_animate;
 
    return 0;
 }
@@ -245,6 +248,8 @@ char *rev_spec_lookup(void *func)
       return "spec_summon_shadow";
    if (func == spec_summon_metal)
       return "spec_summon_metal";
+   if (func == spec_summon_animate)
+      return "spec_summon_animate";
 
    return 0;
 }
@@ -286,6 +291,7 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_summon_holy         \n\r");
    strcat(buf, "       spec_summon_shadow       \n\r");
    strcat(buf, "       spec_summon_metal        \n\r");
+   strcat(buf, "       spec_summon_animate      \n\r");
 
    return;
 }
@@ -322,7 +328,8 @@ bool is_player_summon_special(SPEC_FUN *spec_fun)
       || spec_fun == spec_summon_undead
       || spec_fun == spec_summon_holy
       || spec_fun == spec_summon_shadow
-      || spec_fun == spec_summon_metal;
+      || spec_fun == spec_summon_metal
+      || spec_fun == spec_summon_animate;
 }
 
 static bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char *const *spells, int spell_count)
@@ -465,6 +472,16 @@ bool spec_summon_metal(CHAR_DATA *ch)
    static const char *const spells[] = {"acid blast", "lightning bolt", "high explosive"};
 
    if (spec_summon_heal_master(ch, 15))
+      return TRUE;
+
+   return spec_summon_cast_random(ch, ch->fighting, spells, 3);
+}
+
+bool spec_summon_animate(CHAR_DATA *ch)
+{
+   static const char *const spells[] = {"harm", "poison", "weaken"};
+
+   if (spec_summon_heal_master(ch, 8))
       return TRUE;
 
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
