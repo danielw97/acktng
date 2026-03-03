@@ -350,12 +350,26 @@ static bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char
    return FALSE;
 }
 
-static bool spec_summon_heal_master(CHAR_DATA *ch, const char *const *spells, int spell_count, int hp_threshold)
+static bool spec_summon_heal_master(CHAR_DATA *ch, const char *const *spells, int spell_count, int thematic_bonus)
 {
+   int max_hp;
+   int master_hp_pct;
+   int chance_to_heal;
+
    if (ch->master == NULL || ch->master->in_room != ch->in_room)
       return FALSE;
 
-   if (ch->master->hit >= (get_max_hp(ch->master) * hp_threshold) / 100)
+   max_hp = get_max_hp(ch->master);
+   if (max_hp <= 0)
+      return FALSE;
+
+   if (ch->master->hit >= max_hp)
+      return FALSE;
+
+   master_hp_pct = UMAX(0, (ch->master->hit * 100) / max_hp);
+   chance_to_heal = thematic_bonus + (100 - master_hp_pct);
+
+   if (number_range(1, 100) > URANGE(5, chance_to_heal, 95))
       return FALSE;
 
    return spec_summon_cast_random(ch, ch->master, spells, spell_count);
@@ -366,7 +380,7 @@ bool spec_summon_water(CHAR_DATA *ch)
    static const char *const heal_spells[] = {"cure critical", "cure serious", "refresh"};
    static const char *const spells[] = {"chill touch", "acid blast", "weaken"};
 
-   if (spec_summon_heal_master(ch, heal_spells, 3, 80))
+   if (spec_summon_heal_master(ch, heal_spells, 3, 30))
       return TRUE;
 
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
@@ -374,19 +388,34 @@ bool spec_summon_water(CHAR_DATA *ch)
 
 bool spec_summon_fire(CHAR_DATA *ch)
 {
+   static const char *const heal_spells[] = {"cure serious", "refresh", "cure light"};
    static const char *const spells[] = {"fireball", "high explosive", "curse"};
+
+   if (spec_summon_heal_master(ch, heal_spells, 3, 12))
+      return TRUE;
+
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
 }
 
 bool spec_summon_earth(CHAR_DATA *ch)
 {
+   static const char *const heal_spells[] = {"cure serious", "cure light", "refresh"};
    static const char *const spells[] = {"earthquake", "acid blast", "weaken"};
+
+   if (spec_summon_heal_master(ch, heal_spells, 3, 20))
+      return TRUE;
+
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
 }
 
 bool spec_summon_undead(CHAR_DATA *ch)
 {
+   static const char *const heal_spells[] = {"cure serious", "cure light", "refresh"};
    static const char *const spells[] = {"harm", "chill touch", "poison"};
+
+   if (spec_summon_heal_master(ch, heal_spells, 3, 8))
+      return TRUE;
+
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
 }
 
@@ -395,7 +424,7 @@ bool spec_summon_holy(CHAR_DATA *ch)
    static const char *const heal_spells[] = {"heal", "cure critical", "cure poison"};
    static const char *const spells[] = {"holy wrath", "dispel evil", "curse"};
 
-   if (spec_summon_heal_master(ch, heal_spells, 3, 90))
+   if (spec_summon_heal_master(ch, heal_spells, 3, 40))
       return TRUE;
 
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
@@ -403,13 +432,23 @@ bool spec_summon_holy(CHAR_DATA *ch)
 
 bool spec_summon_shadow(CHAR_DATA *ch)
 {
+   static const char *const heal_spells[] = {"cure serious", "refresh", "cure light"};
    static const char *const spells[] = {"energy drain", "curse", "weaken"};
+
+   if (spec_summon_heal_master(ch, heal_spells, 3, 10))
+      return TRUE;
+
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
 }
 
 bool spec_summon_metal(CHAR_DATA *ch)
 {
+   static const char *const heal_spells[] = {"cure serious", "cure light", "refresh"};
    static const char *const spells[] = {"acid blast", "lightning bolt", "high explosive"};
+
+   if (spec_summon_heal_master(ch, heal_spells, 3, 15))
+      return TRUE;
+
    return spec_summon_cast_random(ch, ch->fighting, spells, 3);
 }
 
