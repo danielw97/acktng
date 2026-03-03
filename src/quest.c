@@ -327,8 +327,8 @@ void do_quest(CHAR_DATA *ch, char *argument)
          send_to_char("Failed to find a quest mob\n\r", ch);
          return;
       }
-      b = UMIN(b, 110);
-      a = UMAX(20, a);
+      a = quest_mob->level - 30;
+      b = quest_mob->level + 20;
       quest_level_min = a;
       quest_level_max = b;
 
@@ -725,9 +725,6 @@ void generate_auto_quest()
          quest_personality = 3;
       }
 
-      quest_level_min = a;
-      quest_level_max = b;
-
       while ((quest_mob == NULL) && (loop_counter < 500))
       {
          loop_counter++;
@@ -742,6 +739,12 @@ void generate_auto_quest()
          quest_wait = number_range(1, 3);
          return;
       }
+
+      a = quest_mob->level - 30;
+      b = quest_mob->level + 20;
+      quest_level_min = a;
+      quest_level_max = b;
+
       loop_counter = 0;
       while ((quest_target == NULL) && (loop_counter < 500))
       {
