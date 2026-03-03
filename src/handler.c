@@ -1779,52 +1779,7 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
    if (!IS_NPC(ch))
       proposition_obj_notify(ch, obj);
 
-   if (AI_MOB(ch))
-   {
-      OBJ_DATA *armor = NULL;
-      OBJ_DATA *obj2 = NULL;
-      bool ident = TRUE;
-      if ((obj->item_type == ITEM_ARMOR) || (obj->item_type == ITEM_LIGHT))
-      {
-         if (obj->item_type == ITEM_ARMOR)
-         {
-            /*
-             * Check this object against our equiped objects
-             */
-            ident = FALSE;
-            for (obj2 = ch->first_carry; obj2 != NULL; obj2 = obj2->next_in_carry_list)
-            {
-               if ((obj2 != obj) && (obj2->wear_loc != WEAR_NONE) && ((obj2->item_type == ITEM_ARMOR) || (obj2->item_type == ITEM_LIGHT)) && (can_wear_at(ch, obj, obj2->wear_loc)) && (get_item_value(obj) > get_item_value(obj2)))
-               {
-                  ident = TRUE; /* identical wear_loc */
-                  armor = obj;
-                  break;
-               }
-            }
-         }
-
-         /*
-          * Found no match for locations, so get and wear.
-          */
-         if (!ident)
-         {
-            armor = obj;
-            //            break;
-         }
-         if (armor != NULL)
-         {
-            do_wear(ch, armor->name);
-         }
-         else
-         {
-            do_drop(ch, obj->name);
-         }
-      }
-      // else if light
-      // else if weapon
-   }
-
-} // end if ai_mob
+}
 
 /*
  * Take an obj from its character.
