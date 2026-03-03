@@ -5,6 +5,7 @@
 #include "globals.h"
 
 int keep_chest_put_denial_reason(const OBJ_DATA *container_obj, const OBJ_DATA *obj);
+bool should_enforce_equip_restrictions(const CHAR_DATA *ch);
 
 #define KEEP_CHEST_PUT_ALLOWED 0
 #define KEEP_CHEST_PUT_ERR_FULL 1
@@ -43,6 +44,40 @@ static void test_keep_chest_rejects_container_items(void)
     assert(keep_chest_put_denial_reason(&chest, &inner_container) == KEEP_CHEST_PUT_ERR_INVALID_ITEM);
 }
 
+
+
+static void init_char(CHAR_DATA *ch)
+{
+    memset(ch, 0, sizeof(*ch));
+}
+
+static void test_equip_restrictions_enforced_for_players(void)
+{
+    CHAR_DATA ch;
+
+    init_char(&ch);
+    assert(should_enforce_equip_restrictions(&ch) == TRUE);
+}
+
+static void test_equip_restrictions_not_enforced_for_non_charmed_npcs(void)
+{
+    CHAR_DATA ch;
+
+    init_char(&ch);
+    ch.act = ACT_IS_NPC;
+    assert(should_enforce_equip_restrictions(&ch) == FALSE);
+}
+
+static void test_equip_restrictions_enforced_for_charmed_npcs(void)
+{
+    CHAR_DATA ch;
+
+    init_char(&ch);
+    ch.act = ACT_IS_NPC;
+    ch.affected_by = AFF_CHARM;
+    assert(should_enforce_equip_restrictions(&ch) == TRUE);
+}
+
 static void test_keep_chest_rejects_more_than_fifty_items(void)
 {
     OBJ_DATA chest;
@@ -72,6 +107,9 @@ int main(void)
     test_keep_chest_rejects_corpse_pc();
     test_keep_chest_rejects_container_items();
     test_keep_chest_rejects_more_than_fifty_items();
+    test_equip_restrictions_enforced_for_players();
+    test_equip_restrictions_not_enforced_for_non_charmed_npcs();
+    test_equip_restrictions_enforced_for_charmed_npcs();
 
     puts("test_act_obj: all tests passed");
     return 0;
