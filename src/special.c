@@ -350,11 +350,31 @@ static bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char
    return FALSE;
 }
 
+static int summon_master_heal_chance(int master_hit, int master_max_hp, int thematic_bonus)
+{
+   int master_hp_pct;
+   int chance_to_heal;
+
+   if (master_max_hp <= 0 || master_hit >= master_max_hp)
+      return 0;
+
+   master_hp_pct = UMAX(0, (master_hit * 100) / master_max_hp);
+   chance_to_heal = thematic_bonus + (100 - master_hp_pct);
+
+   return URANGE(5, chance_to_heal, 95);
+}
+
+#ifdef UNIT_TEST_SPECIAL
+int summon_master_heal_chance_for_test(int master_hit, int master_max_hp, int thematic_bonus)
+{
+   return summon_master_heal_chance(master_hit, master_max_hp, thematic_bonus);
+}
+#endif
+
 static bool spec_summon_heal_master(CHAR_DATA *ch, int thematic_bonus)
 {
    int sn;
    int max_hp;
-   int master_hp_pct;
    int chance_to_heal;
 
    if (ch->master == NULL || ch->master->in_room != ch->in_room)
@@ -367,10 +387,9 @@ static bool spec_summon_heal_master(CHAR_DATA *ch, int thematic_bonus)
    if (ch->master->hit >= max_hp)
       return FALSE;
 
-   master_hp_pct = UMAX(0, (ch->master->hit * 100) / max_hp);
-   chance_to_heal = thematic_bonus + (100 - master_hp_pct);
+   chance_to_heal = summon_master_heal_chance(ch->master->hit, max_hp, thematic_bonus);
 
-   if (number_range(1, 100) > URANGE(5, chance_to_heal, 95))
+   if (chance_to_heal <= 0 || number_range(1, 100) > chance_to_heal)
       return FALSE;
 
    sn = skill_lookup("heal");

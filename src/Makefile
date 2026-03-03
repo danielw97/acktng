@@ -299,8 +299,15 @@ unit-test-invasion: test_invasion.o invasion.unit-test.o
 	rm -f unit-test-invasion
 	$(CC) -Wl,--gc-sections -o unit-test-invasion test_invasion.o invasion.unit-test.o $(L_FLAGS)
 
+special.unit-test.o: special.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SPECIAL -ffunction-sections -fdata-sections -o special.unit-test.o special.c
 
-unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-proposition unit-test-keep unit-test-act-obj unit-test-ssm unit-test-death
+unit-test-special: test_special.o special.unit-test.o
+	rm -f unit-test-special
+	$(CC) -Wl,--gc-sections -o unit-test-special test_special.o special.unit-test.o $(L_FLAGS)
+
+
+unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-proposition unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-death
 	./unit-test-sha256
 	./unit-test-update
 	./unit-test-comm
@@ -330,6 +337,7 @@ unit-tests: unit-test-sha256 unit-test-update unit-test-comm unit-test-fight uni
 	./unit-test-keep
 	./unit-test-act-obj
 	./unit-test-ssm
+	./unit-test-special
 	./unit-test-death
 
 
