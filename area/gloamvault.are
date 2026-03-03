@@ -3,7 +3,7 @@
 Q 16
 K kelshadra gloamvault gothic dungeon~
 L {5-20}~
-N 0
+N 8
 I 5 20
 V 30100 30174
 X 0
@@ -16,15 +16,19 @@ W all~
 #30100
 Riven Gate~
 The shattered threshold groans under drifting ash, and broken portcullis teeth jut from the stone like black fangs. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. Only a southern route appears open from here, pulling adventurers farther inside.~
-8 11
-D2
-~
-~
-0 -1 30101
+12 11
 D1
 ~
 ~
 0 -1 30105
+D2
+~
+~
+0 -1 30101
+D4
+~
+~
+0 0 3005
 S
 #30101
 Riven Gate~
@@ -34,14 +38,14 @@ D0
 ~
 ~
 0 -1 30100
-D2
-~
-~
-0 -1 30102
 D1
 ~
 ~
 0 -1 30106
+D2
+~
+~
+0 -1 30102
 S
 #30102
 Riven Gate~
@@ -51,14 +55,14 @@ D0
 ~
 ~
 0 -1 30101
-D2
-~
-~
-0 -1 30103
 D1
 ~
 ~
 0 -1 30122
+D2
+~
+~
+0 -1 30103
 S
 #30103
 Riven Gate~
@@ -68,14 +72,14 @@ D0
 ~
 ~
 0 -1 30102
-D2
-~
-~
-0 -1 30104
 D1
 ~
 ~
 0 -1 30108
+D2
+~
+~
+0 -1 30104
 S
 #30104
 Riven Gate~
@@ -85,14 +89,14 @@ D0
 ~
 ~
 0 -1 30103
-D2
-~
-~
-0 -1 30105
 D1
 ~
 ~
 0 -1 30114
+D2
+~
+~
+0 -1 30105
 S
 #30105
 Riven Gate~
@@ -102,14 +106,14 @@ D0
 ~
 ~
 0 -1 30104
-D2
-~
-~
-0 -1 30106
 D1
 ~
 ~
 0 -1 30115
+D2
+~
+~
+0 -1 30106
 D3
 ~
 ~
@@ -123,14 +127,14 @@ D0
 ~
 ~
 0 -1 30105
-D2
-~
-~
-0 -1 30107
 D1
 ~
 ~
 0 -1 30126
+D2
+~
+~
+0 -1 30107
 D3
 ~
 ~
@@ -144,14 +148,14 @@ D0
 ~
 ~
 0 -1 30106
-D2
-~
-~
-0 -1 30108
 D1
 ~
 ~
 0 -1 30112
+D2
+~
+~
+0 -1 30108
 S
 #30108
 Riven Gate~
@@ -178,14 +182,14 @@ D0
 ~
 ~
 0 -1 30108
-D2
-~
-~
-0 -1 30110
 D1
 ~
 ~
 0 -1 30119
+D2
+~
+~
+0 -1 30110
 S
 #30110
 Processional Halls~
@@ -195,14 +199,14 @@ D0
 ~
 ~
 0 -1 30109
-D2
-~
-~
-0 -1 30111
 D1
 ~
 ~
 0 -1 30130
+D2
+~
+~
+0 -1 30111
 S
 #30111
 Processional Halls~
@@ -212,14 +216,14 @@ D0
 ~
 ~
 0 -1 30110
-D2
-~
-~
-0 -1 30112
 D1
 ~
 ~
 0 -1 30116
+D2
+~
+~
+0 -1 30112
 S
 #30112
 Processional Halls~
@@ -246,14 +250,14 @@ D0
 ~
 ~
 0 -1 30112
-D2
-~
-~
-0 -1 30114
 D1
 ~
 ~
 0 -1 30123
+D2
+~
+~
+0 -1 30114
 S
 #30114
 Processional Halls~
@@ -263,14 +267,14 @@ D0
 ~
 ~
 0 -1 30113
-D2
-~
-~
-0 -1 30115
 D1
 ~
 ~
 0 -1 30134
+D2
+~
+~
+0 -1 30115
 D3
 ~
 ~
@@ -318,14 +322,14 @@ D0
 ~
 ~
 0 -1 30116
-D2
-~
-~
-0 -1 30118
 D1
 ~
 ~
 0 -1 30127
+D2
+~
+~
+0 -1 30118
 S
 #30118
 Processional Halls~
@@ -335,14 +339,14 @@ D0
 ~
 ~
 0 -1 30117
-D2
-~
-~
-0 -1 30119
 D1
 ~
 ~
 0 -1 30138
+D2
+~
+~
+0 -1 30119
 S
 #30119
 Processional Halls~
@@ -369,14 +373,14 @@ D0
 ~
 ~
 0 -1 30119
-D2
-~
-~
-0 -1 30121
 D1
 ~
 ~
 0 -1 30125
+D2
+~
+~
+0 -1 30121
 S
 #30121
 Censer Galleries~
@@ -386,14 +390,14 @@ D0
 ~
 ~
 0 -1 30120
-D2
-~
-~
-0 -1 30122
 D1
 ~
 ~
 0 -1 30131
+D2
+~
+~
+0 -1 30122
 S
 #30122
 Censer Galleries~
@@ -437,14 +441,14 @@ D0
 ~
 ~
 0 -1 30123
-D2
-~
-~
-0 -1 30125
 D1
 ~
 ~
 0 -1 30128
+D2
+~
+~
+0 -1 30125
 S
 #30125
 Censer Galleries~
@@ -522,14 +526,14 @@ D0
 ~
 ~
 0 -1 30128
-D2
-~
-~
-0 -1 30130
 D1
 ~
 ~
 0 -1 30139
+D2
+~
+~
+0 -1 30130
 S
 #30130
 Choir Crypts~
@@ -573,14 +577,14 @@ D0
 ~
 ~
 0 -1 30131
-D2
-~
-~
-0 -1 30133
 D1
 ~
 ~
 0 -1 30142
+D2
+~
+~
+0 -1 30133
 S
 #30133
 Choir Crypts~
@@ -590,14 +594,14 @@ D0
 ~
 ~
 0 -1 30132
-D2
-~
-~
-0 -1 30134
 D1
 ~
 ~
 0 -1 30135
+D2
+~
+~
+0 -1 30134
 S
 #30134
 Choir Crypts~
@@ -641,14 +645,14 @@ D0
 ~
 ~
 0 -1 30135
-D2
-~
-~
-0 -1 30137
 D1
 ~
 ~
 0 -1 30146
+D2
+~
+~
+0 -1 30137
 S
 #30137
 Choir Crypts~
@@ -658,14 +662,14 @@ D0
 ~
 ~
 0 -1 30136
-D2
-~
-~
-0 -1 30138
 D1
 ~
 ~
 0 -1 30147
+D2
+~
+~
+0 -1 30138
 S
 #30138
 Choir Crypts~
@@ -709,14 +713,14 @@ D0
 ~
 ~
 0 -1 30139
-D2
-~
-~
-0 -1 30141
 D1
 ~
 ~
 0 -1 30150
+D2
+~
+~
+0 -1 30141
 S
 #30141
 Scriptorium of Ash~
@@ -726,14 +730,14 @@ D0
 ~
 ~
 0 -1 30140
-D2
-~
-~
-0 -1 30142
 D1
 ~
 ~
 0 -1 30143
+D2
+~
+~
+0 -1 30142
 S
 #30142
 Scriptorium of Ash~
@@ -743,14 +747,14 @@ D0
 ~
 ~
 0 -1 30141
-D2
-~
-~
-0 -1 30143
 D1
 ~
 ~
 0 -1 30162
+D2
+~
+~
+0 -1 30143
 D3
 ~
 ~
@@ -781,14 +785,14 @@ D0
 ~
 ~
 0 -1 30143
-D2
-~
-~
-0 -1 30145
 D1
 ~
 ~
 0 -1 30154
+D2
+~
+~
+0 -1 30145
 S
 #30145
 Scriptorium of Ash~
@@ -798,14 +802,14 @@ D0
 ~
 ~
 0 -1 30144
-D2
-~
-~
-0 -1 30146
 D1
 ~
 ~
 0 -1 30155
+D2
+~
+~
+0 -1 30146
 S
 #30146
 Scriptorium of Ash~
@@ -815,14 +819,14 @@ D0
 ~
 ~
 0 -1 30145
-D2
-~
-~
-0 -1 30147
 D1
 ~
 ~
 0 -1 30166
+D2
+~
+~
+0 -1 30147
 D3
 ~
 ~
@@ -853,14 +857,14 @@ D0
 ~
 ~
 0 -1 30147
-D2
-~
-~
-0 -1 30149
 D1
 ~
 ~
 0 -1 30158
+D2
+~
+~
+0 -1 30149
 S
 #30149
 Scriptorium of Ash~
@@ -870,14 +874,14 @@ D0
 ~
 ~
 0 -1 30148
-D2
-~
-~
-0 -1 30150
 D1
 ~
 ~
 0 -1 30153
+D2
+~
+~
+0 -1 30150
 S
 #30150
 Knight Reliquary~
@@ -887,14 +891,14 @@ D0
 ~
 ~
 0 -1 30149
-D2
-~
-~
-0 -1 30151
 D1
 ~
 ~
 0 -1 30170
+D2
+~
+~
+0 -1 30151
 D3
 ~
 ~
@@ -908,14 +912,14 @@ D0
 ~
 ~
 0 -1 30150
-D2
-~
-~
-0 -1 30152
 D1
 ~
 ~
 0 -1 30161
+D2
+~
+~
+0 -1 30152
 S
 #30152
 Knight Reliquary~
@@ -1002,14 +1006,14 @@ D0
 ~
 ~
 0 -1 30156
-D2
-~
-~
-0 -1 30158
 D1
 ~
 ~
 0 -1 30160
+D2
+~
+~
+0 -1 30158
 S
 #30158
 Knight Reliquary~
@@ -1036,14 +1040,14 @@ D0
 ~
 ~
 0 -1 30158
-D2
-~
-~
-0 -1 30160
 D1
 ~
 ~
 0 -1 30169
+D2
+~
+~
+0 -1 30160
 S
 #30160
 Sanguine Cloisters~
@@ -1104,14 +1108,14 @@ D0
 ~
 ~
 0 -1 30162
-D2
-~
-~
-0 -1 30164
 D1
 ~
 ~
 0 -1 30173
+D2
+~
+~
+0 -1 30164
 S
 #30164
 Sanguine Cloisters~
@@ -1121,14 +1125,14 @@ D0
 ~
 ~
 0 -1 30163
-D2
-~
-~
-0 -1 30165
 D1
 ~
 ~
 0 -1 30168
+D2
+~
+~
+0 -1 30165
 S
 #30165
 Sanguine Cloisters~
@@ -1232,14 +1236,14 @@ D0
 ~
 ~
 0 -1 30170
-D2
-~
-~
-0 -1 30172
 D1
 ~
 ~
 0 -1 30174
+D2
+~
+~
+0 -1 30172
 S
 #30172
 Inner Sepulcher~
@@ -1290,7 +1294,7 @@ S
 ash acolyte kelshadra cultist~
 an ash acolyte~
 An ash acolyte murmurs blasphemies here.
-~
+~
 A novice devotee in soot-stained robes clutches a guttering censer and whispers invocations to the dead stars.~
 167772257 512 -500 S
 8 0
@@ -1304,7 +1308,7 @@ L 40 40 20 0 0 0 0 0 0
 crypt usher kelshadra zealot~
 a crypt usher~
 A crypt usher blocks passage here.
-~
+~
 This gaunt usher bears a rusted halberd and a bell of black iron, corralling intruders toward sacrificial circles.~
 167772257 512 -500 S
 9 0
@@ -1318,7 +1322,7 @@ L 40 40 20 0 0 0 0 0 0
 grave choir novice~
 a grave choir novice~
 A grave choir novice hums a dirge here.
-~
+~
 Their voice is thin and cracking, but the hymn carries a predatory joy that makes the candles tremble.~
 167772257 512 -500 S
 10 2
@@ -1332,7 +1336,7 @@ L 40 40 20 0 0 0 0 0 0
 bone scrivener cult archivist~
 a bone scrivener~
 A bone scrivener scratches runes into femurs here.
-~
+~
 Ink-stained fingers guide a needle of silver through ancient bone, recording heresies for their hidden masters.~
 167772257 512 -500 S
 11 0
@@ -1346,7 +1350,7 @@ L 40 40 20 0 0 0 0 0 0
 gloom sentry kelshadra guard~
 a gloom sentry~
 A gloom sentry scans the hall with fanatic focus.
-~
+~
 Layered mail creaks as this zealot watches for trespassers, jaw wired shut with vow-cords of brass.~
 167772257 512 -500 S
 12 0
@@ -1360,7 +1364,7 @@ L 40 40 20 0 0 0 0 0 0
 carrion templar~
 a carrion templar~
 A carrion templar patrols here.
-~
+~
 A knight in dented plate marked by kel sigils drags a notched blade and reeks of embalming oils.~
 167772257 512 -500 S
 13 0
@@ -1374,7 +1378,7 @@ L 40 40 20 0 0 0 0 0 0
 violet lector shadow priest~
 a violet lector~
 A violet lector recites from a chained tome.
-~
+~
 Their blindfolded face tilts upward while they chant in a tongue that stings the ears like frost.~
 167772257 512 -500 S
 14 0
@@ -1388,7 +1392,7 @@ L 40 40 20 0 0 0 0 0 0
 sepulcher hound~
 a sepulcher hound~
 A sepulcher hound prowls in tight circles.
-~
+~
 Once a war-dog, now stitched with sigils and bone plates, it waits for a whispered command to tear flesh.~
 167772257 512 -500 S
 15 0
@@ -1402,7 +1406,7 @@ L 40 40 20 0 0 0 0 0 0
 thorn reliquary knight~
 a reliquary knight~
 A reliquary knight kneels in prayer here.
-~
+~
 A spear rests across this armored fanatic's lap while reliquary thorns are hammered through their pauldrons.~
 167772257 512 -500 S
 16 0
@@ -1416,7 +1420,7 @@ L 40 40 20 0 0 0 0 0 0
 umbral cantor~
 an umbral cantor~
 An umbral cantor conducts unseen voices.
-~
+~
 Dark ribbons whirl around this liturgist as ghostly harmonies rise from cracked sarcophagi.~
 167772257 512 -500 S
 17 2
@@ -1430,7 +1434,7 @@ L 40 40 20 0 0 0 0 0 0
 ashen warlock kelshadra adept~
 an ashen warlock~
 An ashen warlock traces glowing circles here.
-~
+~
 Sable robes and silver fetishes mark this adept, whose fingertips leak violet sparks and cold smoke.~
 167772257 512 -500 S
 18 0
@@ -1444,7 +1448,7 @@ L 40 40 20 0 0 0 0 0 0
 catacomb marshal~
 a catacomb marshal~
 A catacomb marshal drills lesser cultists here.
-~
+~
 Scarred and deliberate, the marshal wears pragmatic war-gear and barks clipped orders between prayers.~
 167772257 512 -500 S
 19 0
@@ -1458,7 +1462,7 @@ L 40 40 20 0 0 0 0 0 0
 dusk prelate kelshadra boss~
 the Dusk Prelate~
 The Dusk Prelate presides over this sanctum.
-~
+~
 A towering priest in layered vestments crowned with horned gold, the prelate grips a star-metal crozier and never blinks.~
 167772259 512 -500 S
 20 0
@@ -1472,7 +1476,7 @@ L 40 40 20 0 0 0 0 0 0
 ossuary champion kelshadra boss~
 the Ossuary Champion~
 The Ossuary Champion stands like a tomb-forged idol.
-~
+~
 Rune-etched plate and chained relics armor this hulking champion, whose helm vents violet breath with every exhale.~
 167772259 512 -500 S
 21 0
@@ -1486,7 +1490,7 @@ L 40 40 20 0 0 0 0 0 0
 matriarch velastra kelshadra boss~
 Matriarch Velastra~
 Matriarch Velastra watches you with pitiless calm.
-~
+~
 High hierophant of this dungeon-cult, Velastra is robed in midnight silk and armored in living shadow.~
 167772259 512 -500 S
 22 2
@@ -1500,7 +1504,7 @@ L 40 40 20 0 0 0 0 0 0
 vault stalker cult assassin~
 a vault stalker~
 A vault stalker waits in the shadows here.
-~
+~
 Wrapped in black gauze and grave ash, this killer moves only when candlelight flickers.~
 167772257 512 -500 S
 16 2
@@ -1514,7 +1518,7 @@ L 40 40 20 0 0 0 0 0 0
 funerary warden~
 a funerary warden~
 A funerary warden stands watch over the maze.
-~
+~
 This armored zealot bears ritual scars and a tower shield etched with saintly skulls.~
 167772257 512 -500 S
 17 0
@@ -1528,7 +1532,7 @@ L 40 40 20 0 0 0 0 0 0
 bone lantern bearer~
 a bone lantern bearer~
 A bone lantern bearer drifts silently here.
-~
+~
 A hooded servant carries a lantern made from a saint's skull, trailing violet soot.~
 167772257 512 -500 S
 15 0
@@ -1542,7 +1546,7 @@ L 40 40 20 0 0 0 0 0 0
 crypt interrogator~
 a crypt interrogator~
 A crypt interrogator circles, choosing a victim.
-~
+~
 Tools of devotion and torture hang from their belt, polished to a surgical gleam.~
 167772257 512 -500 S
 18 0
@@ -1556,7 +1560,7 @@ L 40 40 20 0 0 0 0 0 0
 velastra handmaiden~
 a handmaiden of Velastra~
 A handmaiden of Velastra kneels in prayer here.
-~
+~
 Her veil is stitched with star-metal wire, and her whispered rites bend shadows around her.~
 167772257 512 -500 S
 19 2
@@ -1594,7 +1598,7 @@ Horned Penitent Circlet rests here.~
 0 0 0 0 0 0 0 0 0 0
 7
 L
-12
+20
 #30103
 black choir cowl~
 @@dCowl of the Black Choir@@N~
@@ -1612,7 +1616,7 @@ Bone-Filed Visage rests here.~
 0 0 0 0 0 0 0 0 0 0
 6
 L
-14
+20
 #30105
 raven beak reliquary~
 @@dRaven Beak Reliquary@@N~
@@ -1747,7 +1751,7 @@ Barrowtail Sash rests here.~
 0 0 0 0 0 0 0 0 0 0
 2
 L
-14
+20
 #30120
 graveplate tassets~
 @@dGraveplate Tassets@@N~
@@ -1931,8 +1935,5 @@ M 0 30110 1 30167 (null)
 
 M 0 30109 1 30171 (null)
 
-S
-
-#SPECIALS
 S
 #$
