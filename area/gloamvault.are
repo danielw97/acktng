@@ -21,6 +21,10 @@ D2
 ~
 ~
 0 -1 30101
+D1
+~
+~
+0 -1 30105
 S
 #30101
 Riven Gate~
@@ -34,6 +38,10 @@ D2
 ~
 ~
 0 -1 30102
+D1
+~
+~
+0 -1 30106
 S
 #30102
 Riven Gate~
@@ -47,6 +55,10 @@ D2
 ~
 ~
 0 -1 30103
+D1
+~
+~
+0 -1 30122
 S
 #30103
 Riven Gate~
@@ -60,6 +72,10 @@ D2
 ~
 ~
 0 -1 30104
+D1
+~
+~
+0 -1 30108
 S
 #30104
 Riven Gate~
@@ -73,6 +89,10 @@ D2
 ~
 ~
 0 -1 30105
+D1
+~
+~
+0 -1 30114
 S
 #30105
 Riven Gate~
@@ -86,6 +106,14 @@ D2
 ~
 ~
 0 -1 30106
+D1
+~
+~
+0 -1 30115
+D3
+~
+~
+0 -1 30100
 S
 #30106
 Riven Gate~
@@ -99,6 +127,14 @@ D2
 ~
 ~
 0 -1 30107
+D1
+~
+~
+0 -1 30126
+D3
+~
+~
+0 -1 30101
 S
 #30107
 Riven Gate~
@@ -112,6 +148,10 @@ D2
 ~
 ~
 0 -1 30108
+D1
+~
+~
+0 -1 30112
 S
 #30108
 Riven Gate~
@@ -125,6 +165,10 @@ D2
 ~
 ~
 0 -1 30109
+D3
+~
+~
+0 -1 30103
 S
 #30109
 Riven Gate~
@@ -138,6 +182,10 @@ D2
 ~
 ~
 0 -1 30110
+D1
+~
+~
+0 -1 30119
 S
 #30110
 Processional Halls~
@@ -151,6 +199,10 @@ D2
 ~
 ~
 0 -1 30111
+D1
+~
+~
+0 -1 30130
 S
 #30111
 Processional Halls~
@@ -164,6 +216,10 @@ D2
 ~
 ~
 0 -1 30112
+D1
+~
+~
+0 -1 30116
 S
 #30112
 Processional Halls~
@@ -177,6 +233,10 @@ D2
 ~
 ~
 0 -1 30113
+D3
+~
+~
+0 -1 30107
 S
 #30113
 Processional Halls~
@@ -190,6 +250,10 @@ D2
 ~
 ~
 0 -1 30114
+D1
+~
+~
+0 -1 30123
 S
 #30114
 Processional Halls~
@@ -203,6 +267,14 @@ D2
 ~
 ~
 0 -1 30115
+D1
+~
+~
+0 -1 30134
+D3
+~
+~
+0 -1 30104
 S
 #30115
 Processional Halls~
@@ -216,6 +288,10 @@ D2
 ~
 ~
 0 -1 30116
+D3
+~
+~
+0 -1 30105
 S
 #30116
 Processional Halls~
@@ -229,6 +305,10 @@ D2
 ~
 ~
 0 -1 30117
+D3
+~
+~
+0 -1 30111
 S
 #30117
 Processional Halls~
@@ -242,6 +322,10 @@ D2
 ~
 ~
 0 -1 30118
+D1
+~
+~
+0 -1 30127
 S
 #30118
 Processional Halls~
@@ -255,6 +339,10 @@ D2
 ~
 ~
 0 -1 30119
+D1
+~
+~
+0 -1 30138
 S
 #30119
 Processional Halls~
@@ -268,6 +356,10 @@ D2
 ~
 ~
 0 -1 30120
+D3
+~
+~
+0 -1 30109
 S
 #30120
 Censer Galleries~
@@ -281,6 +373,10 @@ D2
 ~
 ~
 0 -1 30121
+D1
+~
+~
+0 -1 30125
 S
 #30121
 Censer Galleries~
@@ -294,6 +390,10 @@ D2
 ~
 ~
 0 -1 30122
+D1
+~
+~
+0 -1 30131
 S
 #30122
 Censer Galleries~
@@ -307,6 +407,10 @@ D2
 ~
 ~
 0 -1 30123
+D3
+~
+~
+0 -1 30102
 S
 #30123
 Censer Galleries~
@@ -320,6 +424,10 @@ D2
 ~
 ~
 0 -1 30124
+D3
+~
+~
+0 -1 30113
 S
 #30124
 Censer Galleries~
@@ -333,6 +441,10 @@ D2
 ~
 ~
 0 -1 30125
+D1
+~
+~
+0 -1 30128
 S
 #30125
 Censer Galleries~
@@ -346,6 +458,10 @@ D2
 ~
 ~
 0 -1 30126
+D3
+~
+~
+0 -1 30120
 S
 #30126
 Censer Galleries~
@@ -359,6 +475,10 @@ D2
 ~
 ~
 0 -1 30127
+D3
+~
+~
+0 -1 30106
 S
 #30127
 Censer Galleries~
@@ -372,6 +492,10 @@ D2
 ~
 ~
 0 -1 30128
+D3
+~
+~
+0 -1 30117
 S
 #30128
 Censer Galleries~
@@ -385,6 +509,10 @@ D2
 ~
 ~
 0 -1 30129
+D3
+~
+~
+0 -1 30124
 S
 #30129
 Censer Galleries~
@@ -398,6 +526,10 @@ D2
 ~
 ~
 0 -1 30130
+D1
+~
+~
+0 -1 30139
 S
 #30130
 Choir Crypts~
@@ -411,6 +543,10 @@ D2
 ~
 ~
 0 -1 30131
+D3
+~
+~
+0 -1 30110
 S
 #30131
 Choir Crypts~
@@ -424,6 +560,10 @@ D2
 ~
 ~
 0 -1 30132
+D3
+~
+~
+0 -1 30121
 S
 #30132
 Choir Crypts~
@@ -437,6 +577,10 @@ D2
 ~
 ~
 0 -1 30133
+D1
+~
+~
+0 -1 30142
 S
 #30133
 Choir Crypts~
@@ -450,6 +594,10 @@ D2
 ~
 ~
 0 -1 30134
+D1
+~
+~
+0 -1 30135
 S
 #30134
 Choir Crypts~
@@ -463,6 +611,10 @@ D2
 ~
 ~
 0 -1 30135
+D3
+~
+~
+0 -1 30114
 S
 #30135
 Choir Crypts~
@@ -476,6 +628,10 @@ D2
 ~
 ~
 0 -1 30136
+D3
+~
+~
+0 -1 30133
 S
 #30136
 Choir Crypts~
@@ -489,6 +645,10 @@ D2
 ~
 ~
 0 -1 30137
+D1
+~
+~
+0 -1 30146
 S
 #30137
 Choir Crypts~
@@ -502,6 +662,10 @@ D2
 ~
 ~
 0 -1 30138
+D1
+~
+~
+0 -1 30147
 S
 #30138
 Choir Crypts~
@@ -515,6 +679,10 @@ D2
 ~
 ~
 0 -1 30139
+D3
+~
+~
+0 -1 30118
 S
 #30139
 Choir Crypts~
@@ -528,6 +696,10 @@ D2
 ~
 ~
 0 -1 30140
+D3
+~
+~
+0 -1 30129
 S
 #30140
 Scriptorium of Ash~
@@ -541,6 +713,10 @@ D2
 ~
 ~
 0 -1 30141
+D1
+~
+~
+0 -1 30150
 S
 #30141
 Scriptorium of Ash~
@@ -554,6 +730,10 @@ D2
 ~
 ~
 0 -1 30142
+D1
+~
+~
+0 -1 30143
 S
 #30142
 Scriptorium of Ash~
@@ -567,6 +747,14 @@ D2
 ~
 ~
 0 -1 30143
+D1
+~
+~
+0 -1 30162
+D3
+~
+~
+0 -1 30132
 S
 #30143
 Scriptorium of Ash~
@@ -580,6 +768,10 @@ D2
 ~
 ~
 0 -1 30144
+D3
+~
+~
+0 -1 30141
 S
 #30144
 Scriptorium of Ash~
@@ -593,6 +785,10 @@ D2
 ~
 ~
 0 -1 30145
+D1
+~
+~
+0 -1 30154
 S
 #30145
 Scriptorium of Ash~
@@ -606,6 +802,10 @@ D2
 ~
 ~
 0 -1 30146
+D1
+~
+~
+0 -1 30155
 S
 #30146
 Scriptorium of Ash~
@@ -619,6 +819,14 @@ D2
 ~
 ~
 0 -1 30147
+D1
+~
+~
+0 -1 30166
+D3
+~
+~
+0 -1 30136
 S
 #30147
 Scriptorium of Ash~
@@ -632,6 +840,10 @@ D2
 ~
 ~
 0 -1 30148
+D3
+~
+~
+0 -1 30137
 S
 #30148
 Scriptorium of Ash~
@@ -645,6 +857,10 @@ D2
 ~
 ~
 0 -1 30149
+D1
+~
+~
+0 -1 30158
 S
 #30149
 Scriptorium of Ash~
@@ -658,6 +874,10 @@ D2
 ~
 ~
 0 -1 30150
+D1
+~
+~
+0 -1 30153
 S
 #30150
 Knight Reliquary~
@@ -671,6 +891,14 @@ D2
 ~
 ~
 0 -1 30151
+D1
+~
+~
+0 -1 30170
+D3
+~
+~
+0 -1 30140
 S
 #30151
 Knight Reliquary~
@@ -684,6 +912,10 @@ D2
 ~
 ~
 0 -1 30152
+D1
+~
+~
+0 -1 30161
 S
 #30152
 Knight Reliquary~
@@ -710,6 +942,10 @@ D2
 ~
 ~
 0 -1 30154
+D3
+~
+~
+0 -1 30149
 S
 #30154
 Knight Reliquary~
@@ -723,6 +959,10 @@ D2
 ~
 ~
 0 -1 30155
+D3
+~
+~
+0 -1 30144
 S
 #30155
 Knight Reliquary~
@@ -736,6 +976,10 @@ D2
 ~
 ~
 0 -1 30156
+D3
+~
+~
+0 -1 30145
 S
 #30156
 Knight Reliquary~
@@ -762,6 +1006,10 @@ D2
 ~
 ~
 0 -1 30158
+D1
+~
+~
+0 -1 30160
 S
 #30158
 Knight Reliquary~
@@ -775,6 +1023,10 @@ D2
 ~
 ~
 0 -1 30159
+D3
+~
+~
+0 -1 30148
 S
 #30159
 Knight Reliquary~
@@ -788,6 +1040,10 @@ D2
 ~
 ~
 0 -1 30160
+D1
+~
+~
+0 -1 30169
 S
 #30160
 Sanguine Cloisters~
@@ -801,6 +1057,10 @@ D2
 ~
 ~
 0 -1 30161
+D3
+~
+~
+0 -1 30157
 S
 #30161
 Sanguine Cloisters~
@@ -814,6 +1074,10 @@ D2
 ~
 ~
 0 -1 30162
+D3
+~
+~
+0 -1 30151
 S
 #30162
 Sanguine Cloisters~
@@ -827,6 +1091,10 @@ D2
 ~
 ~
 0 -1 30163
+D3
+~
+~
+0 -1 30142
 S
 #30163
 Sanguine Cloisters~
@@ -840,6 +1108,10 @@ D2
 ~
 ~
 0 -1 30164
+D1
+~
+~
+0 -1 30173
 S
 #30164
 Sanguine Cloisters~
@@ -853,6 +1125,10 @@ D2
 ~
 ~
 0 -1 30165
+D1
+~
+~
+0 -1 30168
 S
 #30165
 Sanguine Cloisters~
@@ -879,6 +1155,10 @@ D2
 ~
 ~
 0 -1 30167
+D3
+~
+~
+0 -1 30146
 S
 #30167
 Sanguine Cloisters~
@@ -905,6 +1185,10 @@ D2
 ~
 ~
 0 -1 30169
+D3
+~
+~
+0 -1 30164
 S
 #30169
 Sanguine Cloisters~
@@ -918,6 +1202,10 @@ D2
 ~
 ~
 0 -1 30170
+D3
+~
+~
+0 -1 30159
 S
 #30170
 Inner Sepulcher~
@@ -931,6 +1219,10 @@ D2
 ~
 ~
 0 -1 30171
+D3
+~
+~
+0 -1 30150
 S
 #30171
 Inner Sepulcher~
@@ -944,6 +1236,10 @@ D2
 ~
 ~
 0 -1 30172
+D1
+~
+~
+0 -1 30174
 S
 #30172
 Inner Sepulcher~
@@ -970,6 +1266,10 @@ D2
 ~
 ~
 0 -1 30174
+D3
+~
+~
+0 -1 30163
 S
 #30174
 Inner Sepulcher~
@@ -979,6 +1279,10 @@ D0
 ~
 ~
 0 -1 30173
+D3
+~
+~
+0 -1 30171
 S
 #0
 #MOBILES
@@ -1192,13 +1496,81 @@ High hierophant of this dungeon-cult, Velastra is robed in midnight silk and arm
 + 0 0 0 0 0 0 0 0 0
 l 100 20 22 0 0 0 0 0 0 0 
 L 40 40 20 0 0 0 0 0 0 
+#30115
+vault stalker cult assassin~
+a vault stalker~
+A vault stalker waits in the shadows here.
+~
+Wrapped in black gauze and grave ash, this killer moves only when candlelight flickers.~
+167772257 512 -500 S
+16 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 15 17 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30116
+funerary warden~
+a funerary warden~
+A funerary warden stands watch over the maze.
+~
+This armored zealot bears ritual scars and a tower shield etched with saintly skulls.~
+167772257 512 -500 S
+17 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 16 18 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30117
+bone lantern bearer~
+a bone lantern bearer~
+A bone lantern bearer drifts silently here.
+~
+A hooded servant carries a lantern made from a saint's skull, trailing violet soot.~
+167772257 512 -500 S
+15 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 14 16 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30118
+crypt interrogator~
+a crypt interrogator~
+A crypt interrogator circles, choosing a victim.
+~
+Tools of devotion and torture hang from their belt, polished to a surgical gleam.~
+167772257 512 -500 S
+18 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 17 19 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30119
+velastra handmaiden~
+a handmaiden of Velastra~
+A handmaiden of Velastra kneels in prayer here.
+~
+Her veil is stitched with star-metal wire, and her whispered rites bend shadows around her.~
+167772257 512 -500 S
+19 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 18 20 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
 #0
 #OBJECTS
 #30100
-halo grave light
-~
+halo grave light~
 @@dHalo of Grave Light@@N~
-~
 Halo of Grave Light rests here.~
 9 134217728 8388609 1
 0 0 0 0 0 0 0 0 0 0
@@ -1505,7 +1877,62 @@ E 0 30102 0 3 (null)
 
 E 0 30104 0 5 (null)
 
+M 0 30115 1 30118 (null)
+
+M 0 30116 1 30129 (null)
+
+M 0 30117 1 30137 (null)
+
+M 0 30118 1 30152 (null)
+
+M 0 30119 1 30171 (null)
+
+M 0 30107 1 30160 (null)
+
+M 0 30110 1 30166 (null)
+
+M 0 30105 1 30144 (null)
+
+M 0 30103 1 30158 (null)
+
+M 0 30100 1 30133 (null)
+
+M 0 30103 1 30141 (null)
+
+M 0 30106 1 30157 (null)
+
+M 0 30109 1 30164 (null)
+
+M 0 30112 1 30168 (null)
+
+M 0 30114 1 30172 (null)
+
+M 0 30115 1 30124 (null)
+
+M 0 30116 1 30128 (null)
+
+M 0 30117 1 30133 (null)
+
+M 0 30118 1 30135 (null)
+
+M 0 30119 1 30141 (null)
+
+M 0 30108 1 30143 (null)
+
+M 0 30111 1 30149 (null)
+
+M 0 30112 1 30152 (null)
+
+M 0 30113 1 30156 (null)
+
+M 0 30114 1 30160 (null)
+
+M 0 30110 1 30167 (null)
+
+M 0 30109 1 30171 (null)
+
 S
+
 #SPECIALS
 S
 #$

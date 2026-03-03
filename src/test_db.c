@@ -163,14 +163,21 @@ static int has_prefixed_int_count(const char *line, char prefix, int count)
     return *p == '\0';
 }
 
-static int consume_tilde_terminated_string(FILE *fp)
+static int consume_tilde_terminated_string(FILE *fp, int require_same_line)
 {
     int c;
+    int saw_newline = 0;
 
     while ((c = fgetc(fp)) != EOF)
     {
+        if (c == '\n' || c == '\r')
+            saw_newline = 1;
+
         if (c == '~')
         {
+            if (require_same_line && saw_newline)
+                return 0;
+
             while (c != EOF && c != '\n')
                 c = fgetc(fp);
             return 1;
@@ -201,8 +208,8 @@ static void validate_rooms_section_exit_format(FILE *fp)
 
             if (trimmed[0] == 'D' && trimmed[1] >= '0' && trimmed[1] <= '5')
             {
-                assert(consume_tilde_terminated_string(fp));
-                assert(consume_tilde_terminated_string(fp));
+                assert(consume_tilde_terminated_string(fp, 0));
+                assert(consume_tilde_terminated_string(fp, 0));
                 assert(read_non_empty_line(fp, line, sizeof(line)));
                 assert(is_exit_triple_line(skip_space(line)));
             }
@@ -225,10 +232,10 @@ static void validate_mobiles_section_format(FILE *fp)
 
         assert(trimmed[0] == '#');
 
-        assert(consume_tilde_terminated_string(fp));
-        assert(consume_tilde_terminated_string(fp));
-        assert(consume_tilde_terminated_string(fp));
-        assert(consume_tilde_terminated_string(fp));
+        assert(consume_tilde_terminated_string(fp, 0));
+        assert(consume_tilde_terminated_string(fp, 0));
+        assert(consume_tilde_terminated_string(fp, 0));
+        assert(consume_tilde_terminated_string(fp, 0));
 
         assert(read_non_empty_line(fp, line, sizeof(line)));
         assert(strchr(line, 'S') != NULL);
@@ -291,11 +298,16 @@ static void validate_objects_section_format(FILE *fp)
 
         assert(trimmed[0] == '#');
 
-        assert(consume_tilde_terminated_string(fp));
-        assert(consume_tilde_terminated_string(fp));
-        assert(consume_tilde_terminated_string(fp));
+        assert(consume_tilde_terminated_string(fp, 1));
+        assert(consume_tilde_terminated_string(fp, 0));
+        assert(consume_tilde_terminated_string(fp, 0));
 
         assert(read_non_empty_line(fp, line, sizeof(line)));
+        if (!is_four_number_line(skip_space(line)))
+        {
+            assert(consume_tilde_terminated_string(fp, 0));
+            assert(read_non_empty_line(fp, line, sizeof(line)));
+        }
         assert(is_four_number_line(skip_space(line)));
         assert(read_non_empty_line(fp, line, sizeof(line)));
         assert(is_ten_number_line(skip_space(line)));
@@ -324,8 +336,8 @@ static void validate_objects_section_format(FILE *fp)
             }
             else if (trimmed[0] == 'E')
             {
-                assert(consume_tilde_terminated_string(fp));
-                assert(consume_tilde_terminated_string(fp));
+                assert(consume_tilde_terminated_string(fp, 0));
+                assert(consume_tilde_terminated_string(fp, 0));
             }
             else if (trimmed[0] == 'L')
             {
