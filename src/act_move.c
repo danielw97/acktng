@@ -1106,7 +1106,7 @@ void do_clan_recall(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
    {
       send_to_char("You can't use this command when fighting!!\n\r", ch);
       return;

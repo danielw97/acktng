@@ -58,7 +58,7 @@ void do_chiblock(CHAR_DATA *ch, char *argument)
     if (IS_NPC(ch))
         return;
 
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only prepare for a chi block when fightingg!\n\r", ch);
         return;
@@ -103,7 +103,7 @@ void do_chiblock(CHAR_DATA *ch, char *argument)
 
 void do_chakra(CHAR_DATA *ch, char *argument)
 {
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only prepare for a chakra when fighting!\n\r", ch);
         return;
@@ -157,7 +157,7 @@ void do_chakra(CHAR_DATA *ch, char *argument)
 
 void do_phantomfist(CHAR_DATA *ch, char *argument)
 {
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only prepare for a phantomfist when fighting!\n\r", ch);
         return;
@@ -259,7 +259,7 @@ void pug_attack(CHAR_DATA *ch, char *argument, int gsn)
     if (!can_use_skill_message(ch, gsn))
         return;
 
-    if (((victim = get_char_room(ch, argument)) == NULL) && ch->fighting == NULL)
+    if (((victim = get_char_room(ch, argument)) == NULL) && !is_fighting(ch))
     {
         send_to_char("No such victim!\n\r", ch);
         return;
@@ -326,7 +326,7 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
 {
     AFFECT_DATA af;
 
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only perform mindoverbody when fighting!\n\r", ch);
         return;
@@ -365,7 +365,7 @@ void do_mindoverbody(CHAR_DATA *ch, char *argument)
 void do_flurry(CHAR_DATA *ch, char *argument)
 {
     char buf[MSL];
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only perform a flurry when fighting!\n\r", ch);
         return;

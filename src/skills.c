@@ -165,7 +165,7 @@ void do_beserk(CHAR_DATA *ch, char *argument)
    if (IS_NPC(ch))
       return;
 
-   if (ch->fighting == NULL)
+   if (!is_fighting(ch))
    {
       send_to_char("You can only go beserk when fighting!\n\r", ch);
       return;
@@ -237,7 +237,7 @@ void do_warcry(CHAR_DATA *ch, char *argument)
 
    level = ch->lvl[CLASS_WAR];
 
-   if (ch->fighting == NULL)
+   if (!is_fighting(ch))
    {
       send_to_char("You can only give a warcry when fighting!\n\r", ch);
       return;
@@ -281,7 +281,7 @@ void do_detox(CHAR_DATA *ch, char *argument)
    if (!can_use_skill_message(ch, gsn_detox))
       return;
 
-   if (((victim = get_char_room(ch, argument)) == NULL) && ch->fighting == NULL)
+   if (((victim = get_char_room(ch, argument)) == NULL) && !is_fighting(ch))
    {
       send_to_char("No such victim!\n\r", ch);
       return;
@@ -317,7 +317,7 @@ void do_morale(CHAR_DATA *ch, char *argument)
    if (!can_use_skill_message(ch, gsn_morale))
       return;
 
-   if (ch->fighting == NULL)
+   if (!is_fighting(ch))
    {
       send_to_char("You must be fighting to do this!\n\r",ch);
       return;
@@ -356,7 +356,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
    if (!can_use_skill_message(ch, gsn_leadership))
       return;
 
-   if (ch->fighting == NULL)
+   if (!is_fighting(ch))
    {
       send_to_char("You must be fighting to do this!\n\r",ch);
       return;
@@ -469,7 +469,7 @@ void do_target(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->position == POS_FIGHTING)
+   if (is_fighting(ch))
    {
       send_to_char("@@rTracking, tracking, tracking...@@eGOT HIM!!!@@N\n\r", ch);
       stop_fighting(ch, FALSE);

@@ -22,12 +22,12 @@ void ai_update()
       if (!IS_NPC(ch))
          continue;
 
-      if (ch->stunTimer > 0 || ch->position != POS_FIGHTING)
+      if (ch->stunTimer > 0 || !is_fighting(ch))
          continue;
 
       ch_next = ch->next;
 
-      if (IS_NPC(ch) && ch->fighting != NULL)
+      if (IS_NPC(ch) && is_fighting(ch))
       {
          if (!check_skills(ch))
             check_cast(ch);
@@ -120,7 +120,7 @@ bool round_ai_update(CHAR_DATA *ch)
    if (ch == NULL || !IS_NPC(ch))
       return FALSE;
 
-   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && (ch->hit > 0) && (ch->first_shield == NULL) && (ch->fighting == NULL))
+   if ((ch->is_free == FALSE) && (IS_NPC(ch)) && (!IS_SET(ch->def, DEF_NONE)) && (ch->hit > 0) && (ch->first_shield == NULL) && (!is_fighting(ch)))
    {
       if ((IS_SET(ch->def, DEF_FIRESHIELD)) && (!is_affected(ch, skill_lookup("fireshield"))) && (ch->mana > mana_cost(ch, skill_lookup("fireshield"))))
       {
@@ -184,7 +184,7 @@ bool check_cast(CHAR_DATA *ch)
       return FALSE;
 
    /* Offensive spell handler, only use when actually fighting.. */
-   if ((IS_NPC(ch)) && (ch->is_free == FALSE) && (ch->cast > 1) && (ch->position > POS_RESTING) && (ch->fighting != NULL) && (ch->fighting->is_free != TRUE) && (ch->in_room != NULL) && (ch->hit > 1) && (ch->position == POS_FIGHTING))
+   if ((IS_NPC(ch)) && (ch->is_free == FALSE) && (ch->cast > 1) && (ch->position > POS_RESTING) && (is_fighting(ch)) && (ch->fighting->is_free != TRUE) && (ch->in_room != NULL) && (ch->hit > 1) && (is_fighting(ch)))
    {
       sh_int cast_frequency;
       sh_int index;

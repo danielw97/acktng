@@ -616,7 +616,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
       else
          good_cast = TRUE;
 
-      if (!good_cast && ch->position == POS_FIGHTING)
+      if (!good_cast && is_fighting(ch))
       {
          send_to_char("You lost your concentration.\n\r", ch);
 
@@ -1539,12 +1539,12 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
       return FALSE;
    }
 
-   if (target_name[0] == '\0' && ch->fighting == NULL)
+   if (target_name[0] == '\0' && !is_fighting(ch))
    {
       send_to_char("Dispel who or what??\n\r", ch);
       return FALSE;
    }
-   if (target_name[0] == '\0' && ch->fighting != NULL)
+   if (target_name[0] == '\0' && is_fighting(ch))
       target_name = "enemy";
 
    if ((victim = get_char_room(ch, target_name)) != NULL)
