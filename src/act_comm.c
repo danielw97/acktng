@@ -1629,7 +1629,7 @@ void do_quit(CHAR_DATA *ch, char *argument)
    if (IS_NPC(ch))
       return;
 
-   if (ch->position == POS_FIGHTING)
+   if (is_fighting(ch))
    {
       send_to_char("No way! You are fighting.\n\r", ch);
       return;

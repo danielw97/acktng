@@ -328,7 +328,7 @@ void do_cripple(CHAR_DATA *ch, char *argument)
     if (IS_NPC(ch))
         return;
 
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only prepare to cripple when fighting!\n\r", ch);
         return;

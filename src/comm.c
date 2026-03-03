@@ -1756,7 +1756,7 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
    /*
     * Also have part of battle prompt showing tank status -S-
     */
-   if (ch->fighting != NULL) /* only way to do it, sorry */
+   if (is_fighting(ch)) /* only way to do it, sorry */
    {
       /*
        * We'll just show a percentage for people in the group

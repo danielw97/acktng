@@ -866,10 +866,7 @@ bool learn_skill(CHAR_DATA *ch, int gsn)
 
 bool is_fighting(CHAR_DATA *ch)
 {
-   if (ch->fighting != NULL || ch->position == POS_FIGHTING)
-      return TRUE;
-
-   return FALSE;
+   return ch->fighting != NULL;
 }
 
 char *stat_to_string(int stat)
@@ -1610,7 +1607,7 @@ void char_from_room(CHAR_DATA *ch)
    ch->next_in_room = NULL;
    ch->prev_in_room = NULL;
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
       if (ch->fighting->in_room != ch->in_room)
       {
          ch->fighting = NULL;
@@ -1648,7 +1645,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
    if ((obj = get_light_char(ch)) != NULL)
       ++ch->in_room->light;
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
       if (ch->fighting->in_room != ch->in_room)
       {
          ch->fighting = NULL;
@@ -2615,7 +2612,7 @@ CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
       return ch;
    if (!str_cmp(arg, "tank"))
    {
-      if (ch->fighting == NULL)
+      if (!is_fighting(ch))
       {
          send_to_char("You aren't fighting anyone!\n\r", ch);
          return NULL;
@@ -2633,7 +2630,7 @@ CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg, "enemy"))
    {
-      if (ch->fighting == NULL)
+      if (!is_fighting(ch))
       {
          send_to_char("You aren't fighting anyone!\n\r", ch);
          return NULL;

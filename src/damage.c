@@ -545,7 +545,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
 
         if (victim->position > POS_STUNNED)
         {
-            if (ch->fighting == NULL)
+            if (!is_fighting(ch))
             {
                 set_fighting(ch, victim, TRUE);
                 /*

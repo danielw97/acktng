@@ -51,13 +51,13 @@ void do_dirt(CHAR_DATA *ch, char *argument)
 
     one_argument(argument, arg);
 
-    if (arg[0] == '\0' && ch->fighting == NULL)
+    if (arg[0] == '\0' && !is_fighting(ch))
     {
         send_to_char("Kick dirt at whom?\n\r", ch);
         return;
     }
 
-    if ((victim = get_char_room(ch, arg)) == NULL && ch->fighting == NULL)
+    if ((victim = get_char_room(ch, arg)) == NULL && !is_fighting(ch))
     {
         send_to_char("They aren't here.\n\r", ch);
         return;
@@ -136,7 +136,7 @@ void war_attack(CHAR_DATA *ch, char *argument, int gsn)
     if (!can_use_skill_message(ch, gsn))
         return;
 
-    if (((victim = get_char_room(ch, argument)) == NULL) && ch->fighting == NULL)
+    if (((victim = get_char_room(ch, argument)) == NULL) && !is_fighting(ch))
     {
         send_to_char("No such victim!\n\r", ch);
         return;
@@ -246,7 +246,7 @@ void do_riposte(CHAR_DATA *ch, char *argument)
     if (IS_NPC(ch))
         return;
 
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only prepare for a riposte when fighting!\n\r", ch);
         return;
@@ -295,7 +295,7 @@ void do_shieldblock(CHAR_DATA *ch, char *argument)
     if (IS_NPC(ch))
         return;
 
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only prepare for a shield block when fightingg!\n\r", ch);
         return;
@@ -344,7 +344,7 @@ void do_anti_magic_shell(CHAR_DATA *ch, char *argument)
     if (IS_NPC(ch))
         return;
 
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only create an anti-magic shell when fighting!\n\r", ch);
         return;
@@ -407,7 +407,7 @@ void do_frenzy(CHAR_DATA *ch, char *argument)
     if (IS_NPC(ch))
         return;
 
-    if (ch->fighting == NULL)
+    if (!is_fighting(ch))
     {
         send_to_char("You can only frenzy when fighting!\n\r", ch);
         return;
@@ -592,7 +592,7 @@ bool combo(CHAR_DATA *ch, CHAR_DATA *victim, int gsn)
     {
         reset_combo(ch);
 
-        if (ch->fighting == NULL)
+        if (!is_fighting(ch))
             break;
 
         if (i == 0 && number_percent() < combo_chance)

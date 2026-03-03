@@ -315,7 +315,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
    /*
     * Bug fix from Alander
     */
-   fprintf(fp, "Position     %d\n", ch->position == POS_FIGHTING ? POS_STANDING : ch->position);
+   fprintf(fp, "Position     %d\n", is_fighting(ch) ? POS_STANDING : ch->position);
 
    fprintf(fp, "Practice     %d\n", ch->practice);
    fprintf(fp, "SavingThrow  %d\n", ch->saving_throw);

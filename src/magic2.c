@@ -1870,7 +1870,7 @@ bool spell_travel(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 
    ROOM_INDEX_DATA *room;
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
    {
       send_to_char("You can't travel when fighting!\n\r", ch);
       return FALSE;

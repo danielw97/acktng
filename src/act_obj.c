@@ -2353,7 +2353,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
    }
 
    one_argument( argument, arg );
-   if( arg[0] == '\0' && ch->fighting == NULL )
+   if( arg[0] == '\0' && !is_fighting(ch) )
    {
       send_to_char( "Zap whom or what?\n\r", ch );
       return;
@@ -2371,7 +2371,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
    obj = NULL;
    if( arg[0] == '\0' )
    {
-      if( ch->fighting != NULL )
+      if( is_fighting(ch) )
       {
          victim = ch->fighting;
       }

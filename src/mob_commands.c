@@ -225,7 +225,7 @@ void do_mpkill(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->position == POS_FIGHTING)
+   if (is_fighting(ch))
    {
       bug("MpKill - Already fighting from vnum %d", ch->pIndexData->vnum);
       return;
@@ -559,7 +559,7 @@ void do_mpgoto(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
       stop_fighting(ch, TRUE);
 
    char_from_room(ch);

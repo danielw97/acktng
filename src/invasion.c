@@ -271,7 +271,7 @@ static void despawn_all_invasion(void)
     {
         ch_next = ch->next;
         if (!mob_is_invasion_mob(ch)) continue;
-        if (ch->fighting != NULL)
+        if (is_fighting(ch))
             stop_fighting(ch, TRUE);
         REMOVE_BIT(ch->act, ACT_INVASION);
         extract_char(ch, TRUE);
@@ -788,7 +788,7 @@ void invasion_rooms_update(void)
         if (!mob_is_invasion_mob(ch))    continue;
         if (ch == invasion_boss)         continue;  /* boss does not march */
         if (ch->in_room == NULL)         continue;
-        if (ch->fighting != NULL)        continue;
+        if (is_fighting(ch))        continue;
         if (ch->position < POS_STANDING) continue;
 
         if (ch->in_room->vnum == INVASION_SPAWN_VNUM)

@@ -396,7 +396,7 @@ void round_char_update(CHAR_DATA *ch)
    round_update_dot(ch);
    update_buff_duration(ch, DURATION_ROUND);
 
-   if (ch->fighting == NULL && ch->chi > 0)
+   if (!is_fighting(ch) && ch->chi > 0)
    {
       send_to_char("Your chi has dissipated as you are not fighting.\n\r",ch);
       ch->chi = 0;
@@ -538,7 +538,7 @@ int hit_gain(CHAR_DATA *ch)
          gain = (5 + ch->level / 25);
    }
 
-   if (ch->fighting == NULL)
+   if (!is_fighting(ch))
       gain *= 5;
    else
       gain /= 2;
@@ -627,7 +627,7 @@ int mana_gain(CHAR_DATA *ch)
          if (IS_WOLF(ch) && IS_RAGED(ch))
             gain = 0;
       }
-      if (ch->fighting == NULL)
+      if (!is_fighting(ch))
          gain *= 5;
       else
          gain /= 2;
@@ -715,7 +715,7 @@ int move_gain(CHAR_DATA *ch)
          gain += get_curr_dex(ch) / 4;
          break;
       }
-      if (ch->fighting == NULL)
+      if (!is_fighting(ch))
          gain *= 5;
       else
          gain /= 2;
@@ -1555,7 +1555,7 @@ void char_update(void)
             if (ch->was_in_room == NULL && ch->in_room != NULL)
             {
                ch->was_in_room = ch->in_room;
-               if (ch->fighting != NULL)
+               if (is_fighting(ch))
                   stop_fighting(ch, TRUE);
                act("$n disappears into the void.", ch, NULL, NULL, TO_ROOM);
                send_to_char("You disappear into the void.\n\r", ch);
@@ -1947,7 +1947,7 @@ void aggr_update(void)
 
          ch_next = ch->next_in_room;
 
-         if (!IS_NPC(ch) || !IS_SET(ch->act, ACT_AGGRESSIVE) || ch->fighting != NULL || ch->hunting != NULL || IS_AFFECTED(ch, AFF_CHARM) || !IS_AWAKE(ch) || (IS_SET(ch->act, ACT_WIMPY) && IS_AWAKE(wch)) || !can_see(ch, wch))
+         if (!IS_NPC(ch) || !IS_SET(ch->act, ACT_AGGRESSIVE) || is_fighting(ch) || ch->hunting != NULL || IS_AFFECTED(ch, AFF_CHARM) || !IS_AWAKE(ch) || (IS_SET(ch->act, ACT_WIMPY) && IS_AWAKE(wch)) || !can_see(ch, wch))
             continue;
 
          if ((IS_AFFECTED(wch, AFF_SNEAK) || item_has_apply(wch, ITEM_APPLY_SNEAK)) && (number_percent() < 50 + (2 * (get_psuedo_level(wch) - get_psuedo_level(ch)))))
@@ -2182,7 +2182,7 @@ bool check_rewield(CHAR_DATA *ch)
    pickup = TRUE;
    dam = 0;
 
-   chance = (ch->fighting == NULL ? 35 : 60);
+   chance = (!is_fighting(ch) ? 35 : 60);
 
    if (number_percent() < chance)
    {
@@ -2260,7 +2260,7 @@ bool check_re_equip(CHAR_DATA *ch)
    int objnum;
    pickup = TRUE;
 
-   chance = (ch->fighting == NULL ? 35 : 60);
+   chance = (!is_fighting(ch) ? 35 : 60);
    if (number_percent() < chance)
    {
       /*

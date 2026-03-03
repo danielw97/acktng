@@ -113,7 +113,7 @@ void trig_transfer(CHAR_DATA *ch, OBJ_DATA *obj)
 
    act("$p glows brightly!", ch, obj, NULL, TO_CHAR);
    act("$p glows brightly!", ch, obj, NULL, TO_ROOM);
-   if (ch->position == POS_FIGHTING)
+   if (is_fighting(ch))
       stop_fighting(ch, TRUE);
 
    act("$n vanishes suddenly!", ch, NULL, NULL, TO_ROOM);

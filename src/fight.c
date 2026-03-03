@@ -149,7 +149,7 @@ void violence_update(void)
       if (IS_NPC(ch) && ch->hit < 0)
       {
          ch->position = POS_DEAD;
-         if (ch->fighting == NULL)
+         if (!is_fighting(ch))
             if (ch->in_room != NULL)
                act("Suddenly, $n is enveloped in a @@mBeam of light@@N, and is gone!", ch, NULL, NULL, TO_ROOM);
          extract_char(ch, TRUE);
@@ -161,7 +161,7 @@ void violence_update(void)
        * Hunting mobs.
        * -S- Mod: use flags to work out what to do....
        */
-      if (IS_NPC(ch) && ch->fighting == NULL && IS_AWAKE(ch))
+      if (IS_NPC(ch) && !is_fighting(ch) && IS_AWAKE(ch))
       {
          mob_hunt(ch);
          continue;
@@ -278,7 +278,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
    if (should_summon_cast_round(IS_NPC(ch),
                                 is_player_summon_special(ch->spec_fun),
-                                ch->fighting != NULL,
+                                is_fighting(ch),
                                 ch->spec_fun != NULL,
                                 TRUE))
    {
@@ -1199,7 +1199,7 @@ int get_evasion_piercing(CHAR_DATA *ch)
  */
 void set_fighting(CHAR_DATA *ch, CHAR_DATA *victim, bool check)
 {
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
    {
       /*
        * bug( "Set_fighting: already fighting", 0 );
@@ -1325,7 +1325,7 @@ void do_kill(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->position == POS_FIGHTING)
+   if (is_fighting(ch))
    {
       send_to_char("You do the best you can!\n\r", ch);
       return;
@@ -1381,7 +1381,7 @@ void do_murder(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->position == POS_FIGHTING)
+   if (is_fighting(ch))
    {
       send_to_char("You do the best you can!\n\r", ch);
       return;
@@ -1416,7 +1416,7 @@ void do_flee(CHAR_DATA *ch, char *argument)
 
    if ((victim = ch->fighting) == NULL)
    {
-      if (ch->position == POS_FIGHTING)
+      if (is_fighting(ch))
          ch->position = POS_STANDING;
       send_to_char("You aren't fighting anyone.\n\r", ch);
       return;
@@ -1490,7 +1490,7 @@ void do_flee(CHAR_DATA *ch, char *argument)
          send_to_char(buf, ch);
          gain_exp(ch, (0 - cost));
       }
-      if ((ch->fighting != NULL) && (AI_MOB(ch->fighting)))
+      if ((is_fighting(ch)) && (AI_MOB(ch->fighting)))
       {
          ch->fighting->ngroup->state = GRP_STATE_HUNTING;
          ch->fighting->ngroup->leader->hunting = ch;
@@ -1592,7 +1592,7 @@ void do_assist(CHAR_DATA *ch, char *argument)
          act("Sorry, $N isn't in your group...", ch, NULL, assist, TO_CHAR);
          return;
       }
-      if ((assist->fighting != NULL) && (ch->fighting == NULL))
+      if ((assist->fighting != NULL) && (!is_fighting(ch)))
       {
          sprintf(actbuf, "$n screams, '%s'", "BANZAI!! $N must be assisted!!");
          act(actbuf, ch, NULL, assist, TO_ROOM);
@@ -1622,7 +1622,7 @@ void do_assist(CHAR_DATA *ch, char *argument)
    /*
     * Assisting leader is main priority
     */
-   if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) && (ch->leader->fighting != NULL) && (ch->fighting == NULL) && (ch->leader != ch))
+   if ((ch->leader != NULL) && (ch->leader->in_room == ch->in_room) && (ch->leader->fighting != NULL) && (!is_fighting(ch)) && (ch->leader != ch))
    {
       sprintf(actbuf, "$n screams, '%s'", "BANZAI!! $N must be assisted!!");
       act(actbuf, ch, NULL, ch->leader, TO_ROOM);
@@ -1636,7 +1636,7 @@ void do_assist(CHAR_DATA *ch, char *argument)
     * Ok, so no leader to help... lets look for other group members
     */
    for (ppl = ch->in_room->first_person; ppl != NULL; ppl = ppl->next_in_room)
-      if ((is_same_group(ch, ppl)) && (ppl != ch) && (ppl->fighting != NULL) && (ch->fighting == NULL))
+      if ((is_same_group(ch, ppl)) && (ppl != ch) && (ppl->fighting != NULL) && (!is_fighting(ch)))
       {
          sprintf(actbuf, "$n screams, '%s'", "BANZAI!! $N must be assisted!!");
          act(actbuf, ch, NULL, ppl, TO_ROOM);

@@ -559,7 +559,7 @@ void do_goto(CHAR_DATA *ch, char *argument)
       return;
    }
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
       stop_fighting(ch, TRUE);
    /*
     * if ( !IS_SET(ch->act, PLR_WIZINVIS) )

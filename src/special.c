@@ -310,7 +310,7 @@ bool dragon(CHAR_DATA *ch, char *spell_name)
    CHAR_DATA *victim;
    int sn;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -344,7 +344,7 @@ static bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char
    int i;
    int start;
 
-   if (ch->position != POS_FIGHTING || target == NULL || spell_count <= 0)
+   if (!is_fighting(ch) || target == NULL || spell_count <= 0)
       return FALSE;
 
    start = number_range(0, spell_count - 1);
@@ -541,7 +541,7 @@ bool spec_summon_thought(CHAR_DATA *ch)
  */
 bool spec_breath_any(CHAR_DATA *ch)
 {
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    switch (number_bits(3))
@@ -583,7 +583,7 @@ bool spec_breath_gas(CHAR_DATA *ch)
 {
    int sn;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    if ((sn = skill_lookup("gas breath")) < 0)
@@ -605,7 +605,7 @@ bool spec_cast_adept(CHAR_DATA *ch)
    if (!IS_AWAKE(ch))
       return FALSE;
 
-   if (ch->position == POS_FIGHTING)
+   if (is_fighting(ch))
       return FALSE;
 
    if (ch->in_room != NULL)
@@ -690,7 +690,7 @@ bool spec_cast_cleric(CHAR_DATA *ch)
    char *spell;
    int sn;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -772,7 +772,7 @@ bool spec_cast_judge(CHAR_DATA *ch)
    char *spell;
    int sn;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -795,7 +795,7 @@ bool spec_cast_mage(CHAR_DATA *ch)
    char *spell;
    int sn;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -870,7 +870,7 @@ bool spec_cast_undead(CHAR_DATA *ch)
    char *spell;
    int sn;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -945,7 +945,7 @@ bool spec_executioner(CHAR_DATA *ch)
 
    undead = FALSE;
 
-   if (!IS_AWAKE(ch) || ch->fighting != NULL)
+   if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;
 
    crime = "";
@@ -993,7 +993,7 @@ bool spec_mino_guard(CHAR_DATA *ch)
    CHAR_DATA *victim;
    OBJ_DATA *pass;
 
-   if (!IS_AWAKE(ch) || ch->fighting != NULL)
+   if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -1110,7 +1110,7 @@ bool spec_mayor(CHAR_DATA *ch)
       }
    }
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
       return spec_cast_cleric(ch);
    if (!move || ch->position < POS_SLEEPING)
       return FALSE;
@@ -1183,7 +1183,7 @@ bool spec_poison(CHAR_DATA *ch)
 {
    CHAR_DATA *victim;
 
-   if (ch->position != POS_FIGHTING || (victim = ch->fighting) == NULL || number_percent() > 2 * ch->level)
+   if (!is_fighting(ch) || (victim = ch->fighting) == NULL || number_percent() > 2 * ch->level)
       return FALSE;
 
    act("You bite $N!", ch, NULL, victim, TO_CHAR);
@@ -1231,7 +1231,7 @@ bool spec_policeman(CHAR_DATA *ch)
    CHAR_DATA *victim;
    char *crime;
 
-   if (!IS_AWAKE(ch) || ch->fighting != NULL)
+   if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;
 
    crime = "";
@@ -1353,7 +1353,7 @@ bool spec_undead(CHAR_DATA *ch)
    char *spell;
    int sn, sum_lev;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim != NULL; victim = victim->next_in_room)
@@ -1463,7 +1463,7 @@ bool spec_stephen(CHAR_DATA *ch)
    int vic_cnt;
    //    int sn;
 
-   /*    if ( ch->position == POS_FIGHTING )
+   /*    if ( is_fighting(ch) )
           return FALSE;*/
 
    /*
@@ -1541,7 +1541,7 @@ bool spec_rewield(CHAR_DATA *ch)
    pickup = TRUE;
    dam = 0;
 
-   chance = (ch->fighting == NULL ? 35 : 60);
+   chance = (!is_fighting(ch) ? 35 : 60);
 
    if (number_percent() < chance)
    {
@@ -1619,7 +1619,7 @@ bool spec_sylai_priest(CHAR_DATA *ch)
    CHAR_DATA *victim;
    ROOM_INDEX_DATA *location;
 
-   if (ch->fighting == NULL)
+   if (!is_fighting(ch))
       return FALSE;
 
    if (ch->in_room->vnum != 439)
@@ -1674,7 +1674,7 @@ bool spec_cast_bigtime(CHAR_DATA *ch)
    int sn;
    int crun;
 
-   if (ch->position != POS_FIGHTING)
+   if (!is_fighting(ch))
       return FALSE;
 
    for (victim = ch->in_room->first_person; victim; victim = victim->next_in_room)
@@ -1778,7 +1778,7 @@ bool spec_sage(CHAR_DATA *ch)
       }
    }
 
-   if (ch->fighting != NULL)
+   if (is_fighting(ch))
       return spec_cast_cleric(ch);
    if (!move || ch->position < POS_SLEEPING)
       return FALSE;
@@ -1970,7 +1970,7 @@ bool spec_tax_man(CHAR_DATA *ch)
    char mon_buf[MSL];
    char cat_buf[MSL];
 
-   /*    if ( ch->position == POS_FIGHTING )
+   /*    if ( is_fighting(ch) )
           return FALSE;*/
 
    /*
@@ -2068,7 +2068,7 @@ bool spec_keep_physical_captain(CHAR_DATA *ch)
 {
    char buf[MSL];
 
-   if (ch->fighting == NULL)
+   if (!is_fighting(ch))
    {
       ch->spec_behavior = 0;
       return FALSE;
