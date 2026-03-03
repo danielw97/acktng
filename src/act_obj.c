@@ -1351,7 +1351,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
-   if (get_psuedo_level(ch) < obj->level)
+   if ((!IS_NPC(ch) || IS_AFFECTED(ch, AFF_CHARM)) && get_psuedo_level(ch) < obj->level)
    {
       sprintf(buf, "You must be level %d to use this object.\n\r", obj->level);
       send_to_char(buf, ch);
@@ -1387,7 +1387,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
    int weight_class = (obj->weight+4)/5;
    int max_weight = (get_curr_str(ch)/10)+1;
 
-   if (weight_class > max_weight)
+   if (((!IS_NPC(ch) || IS_AFFECTED(ch, AFF_CHARM))) && (weight_class > max_weight))
    {
       send_to_char("You are not of sufficient strength to use it effectively.\n\r", ch);
       act("$L$n nearly drops a $p.", ch, obj, NULL, TO_ROOM);
