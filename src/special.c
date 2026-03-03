@@ -352,11 +352,13 @@ static bool spec_summon_cast_random(CHAR_DATA *ch, CHAR_DATA *target, const char
 
 static bool spec_summon_heal_master(CHAR_DATA *ch, const char *const *spells, int spell_count, int thematic_bonus)
 {
+   int i;
+   int start;
    int max_hp;
    int master_hp_pct;
    int chance_to_heal;
 
-   if (ch->master == NULL || ch->master->in_room != ch->in_room)
+   if (ch->master == NULL || ch->master->in_room != ch->in_room || spell_count <= 0)
       return FALSE;
 
    max_hp = get_max_hp(ch->master);
@@ -372,7 +374,21 @@ static bool spec_summon_heal_master(CHAR_DATA *ch, const char *const *spells, in
    if (number_range(1, 100) > URANGE(5, chance_to_heal, 95))
       return FALSE;
 
-   return spec_summon_cast_random(ch, ch->master, spells, spell_count);
+   start = number_range(0, spell_count - 1);
+
+   for (i = 0; i < spell_count; i++)
+   {
+      int index = (start + i) % spell_count;
+      int sn = skill_lookup(spells[index]);
+
+      if (sn < 0)
+         continue;
+
+      (*skill_table[sn].spell_fun)(sn, ch->level, ch, ch->master, NULL);
+      return TRUE;
+   }
+
+   return FALSE;
 }
 
 bool spec_summon_water(CHAR_DATA *ch)
