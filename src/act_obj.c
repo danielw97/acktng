@@ -42,6 +42,13 @@ void check_guards(CHAR_DATA *ch);
 char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort);
 
 
+
+bool should_enforce_equip_restrictions(const CHAR_DATA *ch)
+{
+   return (!IS_NPC(ch) || IS_AFFECTED(ch, AFF_CHARM));
+}
+
+
 static bool is_keep_chest(const OBJ_DATA *obj)
 {
    return (obj != NULL && obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST));
@@ -1351,7 +1358,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       return;
    }
 
-   if ((!IS_NPC(ch) || IS_AFFECTED(ch, AFF_CHARM)) && get_psuedo_level(ch) < obj->level)
+   if (should_enforce_equip_restrictions(ch) && get_psuedo_level(ch) < obj->level)
    {
       sprintf(buf, "You must be level %d to use this object.\n\r", obj->level);
       send_to_char(buf, ch);
@@ -1387,7 +1394,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
    int weight_class = (obj->weight+4)/5;
    int max_weight = (get_curr_str(ch)/10)+1;
 
-   if (((!IS_NPC(ch) || IS_AFFECTED(ch, AFF_CHARM))) && (weight_class > max_weight))
+   if (should_enforce_equip_restrictions(ch) && (weight_class > max_weight))
    {
       send_to_char("You are not of sufficient strength to use it effectively.\n\r", ch);
       act("$L$n nearly drops a $p.", ch, obj, NULL, TO_ROOM);
