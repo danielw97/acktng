@@ -404,6 +404,43 @@ static void test_mock_load_all_areas_and_validate_formats(void)
     fclose(list_fp);
 }
 
+static void test_area_list_has_no_duplicate_entries(void)
+{
+    FILE *list_fp = fopen("../area/area.lst", "r");
+    char area_name[1024];
+    char seen_names[512][1024];
+    int seen_count = 0;
+
+    if (list_fp == NULL)
+        list_fp = fopen("area/area.lst", "r");
+
+    assert(list_fp != NULL);
+
+    while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
+    {
+        char *nl = strpbrk(area_name, "\r\n");
+
+        if (nl != NULL)
+            *nl = '\0';
+
+        if (area_name[0] == '\0')
+            continue;
+
+        if (strcmp(area_name, "$") == 0)
+            break;
+
+        for (int i = 0; i < seen_count; i++)
+            assert(strcmp(seen_names[i], area_name) != 0);
+
+        assert(seen_count < (int)(sizeof(seen_names) / sizeof(seen_names[0])));
+        strncpy(seen_names[seen_count], area_name, sizeof(seen_names[0]) - 1);
+        seen_names[seen_count][sizeof(seen_names[0]) - 1] = '\0';
+        seen_count++;
+    }
+
+    fclose(list_fp);
+}
+
 int main(void)
 {
     test_format_status_builds_expected_message();
@@ -411,6 +448,7 @@ int main(void)
     test_try_read_help_level_accepts_numeric_prefix();
     test_try_read_help_level_rejects_non_numeric_prefix();
     test_mock_load_all_areas_and_validate_formats();
+    test_area_list_has_no_duplicate_entries();
 
     puts("test_db: all tests passed");
     return 0;
