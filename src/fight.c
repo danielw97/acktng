@@ -278,7 +278,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
    if (should_summon_cast_round(IS_NPC(ch),
                                 is_player_summon_special(ch->spec_fun),
-                                ch->position == POS_FIGHTING,
+                                ch->fighting != NULL,
                                 ch->spec_fun != NULL,
                                 TRUE))
    {
