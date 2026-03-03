@@ -145,7 +145,7 @@ The Third Circle - Gluttony~
 @@Rstimulated to agony by what they cannot have. The sound of Cerberus
 @@Rechoes from every direction at once, three sets of jaws never silent.
 ~
-8201 10
+8205 10
 D0
 ~
 ~
@@ -1435,7 +1435,7 @@ charon ferryman~
 
 ~
 ~
-213241 1091320 -500 S
+213243 1091320 -500 S
 118 1
 0 400 5 15
 ! 0 0 0 7 2198 4 4
@@ -1786,7 +1786,7 @@ soulfire ember~
 @@eA Soulfire Ember@@N~
 @@eA soulfire ember pulses here with dim, tormented light.@@N
 ~
-1 134217856 8421376 2
+1 134217920 8421376 2
 0 0 -1 0 0 0 0 0 0 0
 5
 L
@@ -1796,7 +1796,7 @@ ring condemned~
 @@eRing of the Condemned@@N~
 @@eA ring forged of scorched iron lies here, still warm.@@N
 ~
-9 134217856 8396800 2
+9 134217920 8396800 2
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -1806,7 +1806,7 @@ amulet hellfire~
 @@eAmulet of Hellfire@@N~
 @@eAn amulet of hellfire hangs here, trailing smoke.@@N
 ~
-9 134217856 8388736 2
+9 134217920 8388736 2
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1816,7 +1816,7 @@ gloves torment~
 @@eGloves of Torment@@N~
 @@eA pair of smoldering gloves lies here.@@N
 ~
-9 402653312 8392704 3
+9 134217920 8392704 3
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -1826,7 +1826,7 @@ boots ashwalker~
 @@eBoots of the Ashwalker@@N~
 @@eA pair of ash-grey boots lies here, still radiating heat.@@N
 ~
-9 134217856 10485760 3
+9 134217920 10485760 3
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1836,7 +1836,7 @@ earring damned~
 @@eEarrings of the Damned@@N~
 @@eA pair of blood-iron earrings lies here.@@N
 ~
-9 134217856 8388672 1
+9 134217920 8388672 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1846,9 +1846,9 @@ bracers infernal~
 @@eBracers of Infernal Iron@@N~
 @@eHeavy bracers of infernal iron lie here, still hot to the touch.@@N
 ~
-9 134217856 8390656 8
+9 134217920 8390656 8
 0 0 0 0 0 0 0 0 0 0
-0
+8
 L
 120
 #1608
@@ -1856,7 +1856,7 @@ belt soulchain~
 @@eBelt of Soulchains@@N~
 @@eA belt woven of glowing soul-chains lies here.@@N
 ~
-9 134217856 8519680 7
+9 134217920 8519680 7
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1866,7 +1866,7 @@ shoulderguards pain~
 @@eShoulderguards of Pain@@N~
 @@eA set of barbed shoulderguards lies here, dripping with old blood.@@N
 ~
-9 134217856 8389120 10
+9 134217920 8389120 10
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -1876,7 +1876,7 @@ leggings hellforged~
 @@eLeggings of Hellfire@@N~
 @@eA set of leggings, forged in hellfire, lies here.@@N
 ~
-9 134217856 9437184 12
+9 134217920 9437184 12
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1886,7 +1886,7 @@ cloak suffering~
 @@eCloak of Suffering@@N~
 @@eA cloak woven from the screams of the damned hangs here.@@N
 ~
-9 134217856 8454144 3
+9 134217920 8454144 3
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1896,7 +1896,7 @@ body hellplate~
 @@eHellplate Breastplate@@N~
 @@eA massive breastplate of hellplate lies here, etched with scenes of torment.@@N
 ~
-9 134217856 8650752 14
+9 134217920 8650752 14
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -1906,7 +1906,7 @@ helm torment~
 @@eHelm of Torment@@N~
 @@eA helm of black iron, studded with barbs, lies here.@@N
 ~
-9 134217856 8388616 12
+9 134217920 8388616 12
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -1916,7 +1916,7 @@ wand hellfire~
 @@eWand of Hellfire@@N~
 @@eA wand carved from infernal bone lies here, pulsing with dark power.@@N
 ~
-5 671088768 8421376 2
+5 671088832 8421376 2
 0 0 0 6 0 0 0 0 0 0
 2
 L
@@ -1926,7 +1926,7 @@ staff brimstone~
 @@eStaff of Brimstone@@N~
 @@eA staff capped with a smoking sulfur gem lies here.@@N
 ~
-5 671088768 8421376 3
+5 671088832 8421376 3
 0 0 0 6 0 0 0 0 0 0
 4
 L
@@ -1936,7 +1936,7 @@ sword hellblade~
 @@eHellblade@@N~
 @@eA massive hellblade lies here, its edge still glowing orange from the forge.@@N
 ~
-5 -2013265792 8421376 8
+5 -2013265728 8421376 8
 0 0 0 3 0 0 0 0 0 0
 9
 L
@@ -1946,7 +1946,7 @@ mace infernal~
 @@eMace of Infernal Judgment@@N~
 @@eA mace headed with a sphere of hardened hellstone lies here.@@N
 ~
-5 134217856 8421376 9
+5 134217920 8421376 9
 0 0 0 8 0 0 0 0 0 0
 9
 L
@@ -1956,7 +1956,7 @@ axe soulcleaver~
 @@eSoulcleaver Axe@@N~
 @@eA great axe of infernal iron lies here, its blade etched with screaming faces.@@N
 ~
-5 134217856 8421376 9
+5 134217920 8421376 9
 0 0 0 3 0 0 0 0 0 0
 7
 L
@@ -1966,7 +1966,7 @@ wings fallen~
 @@eWings of the Fallen@@N~
 @@eA pair of burnt, tattered wings lies here, still twitching.@@N
 ~
-9 134217856 8388864 4
+9 134217920 8388864 4
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1976,7 +1976,7 @@ face mask anguish~
 @@eMask of Anguish@@N~
 @@eA mask of tortured iron lies here, contorted into a permanent scream.@@N
 ~
-9 134217856 8388624 2
+9 134217920 8388624 2
 0 0 0 0 0 0 0 0 0 0
 5
 L
@@ -1986,7 +1986,7 @@ horns demon~
 @@eHorns of the Demon Prince@@N~
 @@eA pair of massive demon horns lies here, still attached to a shard of skull.@@N
 ~
-9 134217856 8388612 6
+9 134217920 8388612 6
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -1996,7 +1996,7 @@ aura hellfire~
 @@eAura of Hellfire@@N~
 @@eA shimmering hellfire aura crackles here, seeking a host.@@N
 ~
-9 134217856 8388610 1
+9 134217920 8388610 1
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2006,7 +2006,7 @@ halo broken~
 @@eBroken Halo@@N~
 @@eA cracked and blackened halo lies here, its light extinguished.@@N
 ~
-9 134217856 8388609 1
+9 134217920 8388609 1
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2016,7 +2016,7 @@ tail devil~
 @@eTail of the Devil@@N~
 @@eA barbed devil tail lies here, still lashing.@@N
 ~
-9 134217856 8912896 5
+9 134217920 8912896 5
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2026,7 +2026,7 @@ claws hellfiend~
 @@eClaws of the Hell Fiend@@N~
 @@eA pair of iron-hard demon claws lies here.@@N
 ~
-9 134217856 8404992 7
+9 134217920 8404992 7
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2036,7 +2036,7 @@ veil sorrow~
 @@eVeil of Eternal Sorrow@@N~
 @@eA translucent veil of grey sorrow drifts here, seeking a face to haunt.@@N
 ~
-9 134217856 8388624 1
+9 134217920 8388624 1
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2046,7 +2046,7 @@ shield hellforged~
 @@eShield of Hellforged Iron@@N~
 @@eA shield of hellforged iron lies here, its surface scarred by infernal combat.@@N
 ~
-9 134217856 8421376 13
+9 134217920 8421376 13
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2056,7 +2056,7 @@ ring wrath~
 @@eRing of Wrath@@N~
 @@eA ring of blackened iron lies here, radiating barely-contained fury.@@N
 ~
-9 134217856 8396800 2
+9 134217920 8396800 2
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -2066,7 +2066,7 @@ finger bone curse~
 @@eBone Ring of Eternal Damnation@@N~
 @@eA bone ring carved from the finger of the damned lies here.@@N
 ~
-9 134217856 8396800 2
+9 134217920 8396800 2
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2076,7 +2076,7 @@ wrist iron hellbound~
 @@eHellbound Iron Vambrace@@N~
 @@eAn iron vambrace lies here, its surface carved with names of the damned.@@N
 ~
-9 134217856 8390656 9
+9 134217920 8390656 9
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2086,7 +2086,7 @@ neck collar torment~
 @@eCollar of Torment@@N~
 @@eA heavy iron collar lies here, inscribed with infernal runes.@@N
 ~
-9 134217856 8388736 8
+9 134217920 8388736 8
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2096,7 +2096,7 @@ neck chain hellfire~
 @@eChain of Hellfire@@N~
 @@eA chain of glowing hellfire links lies here.@@N
 ~
-9 134217856 8388736 6
+9 134217920 8388736 6
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -2106,7 +2106,7 @@ two handed greataxe oblivion~
 @@eGreataxe of Oblivion@@N~
 @@eA massive two-handed greataxe lies here, its blade black as the void.@@N
 ~
-5 -2013265792 8421376 10
+5 -2013265728 8421376 10
 0 0 0 1 0 0 0 0 0 0
 9
 L
@@ -2116,7 +2116,7 @@ charon cloak ferryman~
 @@eCloak of the Ferryman@@N~
 @@eThe dark cloak of Charon lies here, smelling of river-mud and death.@@N
 ~
-9 134217856 8454144 4
+9 134217920 8454144 4
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2126,7 +2126,7 @@ charon ring styx~
 @@eRing of the Styx@@N~
 @@eA ring of black river-stone lies here, impossibly cold.@@N
 ~
-9 134217856 8396800 2
+9 134217920 8396800 2
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -2136,21 +2136,21 @@ cerberus hide~
 @@eHide of Cerberus@@N~
 @@eThe matted, fire-scarred hide of Cerberus lies here.@@N
 ~
-9 134217856 8454144 14
+9 135266432 8454144 14
 0 0 0 0 0 0 0 0 0 0
 14
 L
-120
+130
 #1637
 cerberus fang~
 @@eFang of Cerberus@@N~
 @@eA massive fang wrenched from the jaw of Cerberus lies here.@@N
 ~
-9 134217856 8388640 8
+9 135266432 8388640 8
 0 0 0 10 0 0 0 0 0 0
 8
 L
-120
+130
 #1638
 beelzebub crown flies~
 @@eCrown of Flies@@N~
@@ -2186,17 +2186,17 @@ lucifer crown morning star~
 @@eCrown of the Morning Star@@N~
 @@eThe crown of Lucifer lies here, its gems still radiant despite the Fall.@@N
 ~
-9 134217920 8388616 6
+9 135266432 8388616 6
 0 0 0 0 0 0 0 0 0 0
 13
 L
-120
+130
 #1642
 lucifer wings fallen~
 @@eWings of the Fallen Morning Star@@N~
 @@eThe great wings of Lucifer lie folded here, black as the void between stars.@@N
 ~
-9 134217920 8388864 4
+9 135266432 8388864 4
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2206,21 +2206,21 @@ lucifer sword flaming~
 @@eSword of the Fallen Light@@N~
 @@eThe sword of Lucifer lies here, its blade still holding a faint echo of its former glory.@@N
 ~
-5 134217920 8421376 8
+5 135266432 8421376 8
 0 0 0 3 0 0 0 0 0 0
 13
 L
-120
+130
 #1644
 lucifer armor fallen~
 @@eArmor of the Fallen@@N~
 @@eThe black armor of Lucifer lies here, etched with scenes of Heaven remembered.@@N
 ~
-9 134217920 8650752 14
+9 135266432 8650752 14
 0 0 0 0 0 0 0 0 0 0
 13
 L
-120
+130
 #1645
 charon pole ferryman~
 @@ePole of the Ferryman@@N~
@@ -2256,7 +2256,7 @@ cerberus collar iron~
 @@eCollar of the Three-Headed Terror@@N~
 @@eAn enormous iron collar lies here, thick enough to restrain something the size of three horses.@@N
 ~
-9 134217920 8388736 11
+9 135266432 8388736 11
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2266,9 +2266,9 @@ cerberus claw shredder~
 @@eClaw of the Hellhound Lord@@N~
 @@eA massive obsidian claw lies here, still warm and impossibly sharp.@@N
 ~
-9 402653312 16809984 7
+9 135266432 8404992 7
 0 0 0 0 0 0 0 0 0 0
-0
+7
 L
 120
 #1650
@@ -2296,7 +2296,7 @@ lucifer ring dawn~
 @@eRing of the First Dawn@@N~
 @@eA ring of pure starlight-metal lies here, its surface bearing the inscription 'Morning Star'.@@N
 ~
-9 134217920 8396800 2
+9 135266432 8396800 2
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2306,7 +2306,7 @@ lucifer belt celestial~
 @@eBelt of Celestial Iron@@N~
 @@eA belt of heaven-forged iron lies here, its brightness somehow surviving the Fall.@@N
 ~
-9 134217920 8519680 12
+9 135266432 8519680 12
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2316,7 +2316,7 @@ lucifer greaves fallen~
 @@eGreaves of the Morning Star@@N~
 @@eA pair of greaves forged before the Fall lies here, their surface still faintly luminous.@@N
 ~
-9 134217920 9437184 13
+9 135266432 9437184 13
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2326,11 +2326,11 @@ lucifer gloves fallen~
 @@eGauntlets of the Fallen Light@@N~
 @@eA pair of gauntlets of fallen angel-metal lies here, their clenched fingers frozen in fury.@@N
 ~
-9 134217920 8392704 12
+9 135266432 8392704 12
 0 0 0 0 0 0 0 0 0 0
 13
 L
-120
+130
 #1667
 storm wraith veil~
 @@eVeil of the Storm Wraith@@N~
@@ -2446,9 +2446,9 @@ cerberus fang trophy hell-hound~
 @@eFang of Cerberus@@N~
 @@eA massive obsidian fang lies here, pulled from the three-headed guardian of Hell.@@N
 ~
-5 201326784 8421376 3
-0 0 0 0 0 0 0 0 0 0
-13
+5 202375296 8421376 3
+0 0 0 11 0 0 0 0 0 0
+7
 L
 130
 #1752
