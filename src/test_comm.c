@@ -12,6 +12,7 @@ bool is_login_name_format_valid(const char *name);
 long prompt_max_value_for_code(CHAR_DATA *ch, char code);
 void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode, const char *details);
 void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name);
+bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight, int observer_is_fighting);
 
 
 static int stub_max_hp = 100;
@@ -169,6 +170,14 @@ static void test_prompt_max_tokens_use_max_helpers(void)
     assert(prompt_max_value_for_code(&ch, 'X') == 0);
 }
 
+static void test_shortfight_watched_autoattack_suppression(void)
+{
+    assert(shortfight_should_suppress_watched_autoattack(false, true, false));
+    assert(!shortfight_should_suppress_watched_autoattack(false, true, true));
+    assert(!shortfight_should_suppress_watched_autoattack(false, false, false));
+    assert(!shortfight_should_suppress_watched_autoattack(true, true, false));
+}
+
 int main(void)
 {
     test_parse_name_enforces_length_bounds();
@@ -180,6 +189,7 @@ int main(void)
     test_prompt_thresholds_use_max_helpers();
     test_prompt_max_tokens_use_max_helpers();
     test_comm_safe_formatters_truncate();
+    test_shortfight_watched_autoattack_suppression();
 
     test_existing_player_login_happy_path_reaches_playing();
     test_existing_player_login_rejects_invalid_name();

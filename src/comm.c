@@ -229,6 +229,11 @@ bool should_show_default_prompt_move(CHAR_DATA *ch) { return prompt_should_show_
 long prompt_max_value_for_code(CHAR_DATA *ch, char code) { return prompt_max_value_for_code_internal(ch, code); }
 void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode, const char *details) { comm_format_builder_prompt(dest, dest_size, mode, details); }
 void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name) { comm_format_class_menu_line(dest, dest_size, who_name, stat, class_name); }
+
+bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight, int observer_is_fighting)
+{
+   return !observer_is_npc && observer_has_shortfight && !observer_is_fighting;
+}
 #endif
 
 #ifndef UNIT_TEST_COMM
@@ -252,6 +257,20 @@ int port;
 int control;
 
 int max_players = 0;
+
+static int count_playing_players(void)
+{
+   DESCRIPTOR_DATA *d;
+   int playing_players = 0;
+
+   for (d = first_desc; d != NULL; d = d->next)
+   {
+      if (d->connected == CON_PLAYING && d->character != NULL)
+         playing_players++;
+   }
+
+   return playing_players;
+}
 
 /* -S- Mod: Some Globals for auctioning an item */
 OBJ_DATA *auction_item;    /* Item being sold      */
@@ -694,11 +713,6 @@ void game_loop(int control)
                out_file = NULL;
             }
 
-            if (cur_players > max_players)
-            {
-               trigger_happy_hour();
-               max_players = cur_players;
-            }
          }
 
          usecDelta = ((int)last_time.tv_usec) - ((int)now_time.tv_usec) + 1000000 / PULSE_PER_SECOND;
@@ -895,12 +909,6 @@ void new_descriptor(int control)
    }
 
    cur_players++;
-   if (cur_players > max_players)
-   {
-      trigger_happy_hour();
-      max_players = cur_players;
-      info("New max players reached for this boot! Happy hour triggered!", 1);
-   }
 
    return;
 }
@@ -2836,6 +2844,18 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
       sprintf(buf, "%s has entered the game.", ch->name);
       monitor_chan(buf, MONITOR_CONNECT);
 
+      {
+         int playing_players = count_playing_players();
+
+         if (playing_players > max_players)
+         {
+            max_players = playing_players;
+            trigger_happy_hour();
+            happy_hour_ticks_remaining = 1;
+            info("New player record reached! Happy hour triggered for one in-game hour!", 1);
+         }
+      }
+
       if ((number_range(0, 99) < (ch->balance / 10000000)) && (ch->balance > (get_psuedo_level(ch) * 100000)))
       {
          int loss;
@@ -3304,6 +3324,12 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
       if (type == TO_ROOM && to == ch)
          continue;
       if (type == TO_NOTVICT && (to == ch || to == vch))
+         continue;
+
+      if (type == TO_NOTVICT
+          && vch != NULL
+          && (ch->fighting == vch || vch->fighting == ch)
+          && shortfight_should_suppress_watched_autoattack(IS_NPC(to), IS_SET(to->config, CONFIG_SHORT_FIGHT), to->fighting != NULL))
          continue;
 
       /*
