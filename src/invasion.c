@@ -114,6 +114,8 @@ static bool       invasion_should_advance_on_room_tick(void);
 static bool       invasion_should_boss_trash_talk_for_respawn_count(int respawn_count);
 static bool       invasion_should_boss_trash_talk_after_respawn(void);
 static int        invasion_random_trash_talk_index(int line_count);
+static bool       room_has_valid_boss_spawn_conditions(long room_flags, int path_dir);
+static bool       room_is_valid_boss_spawn(ROOM_INDEX_DATA *room, ROOM_INDEX_DATA *target_room);
 int              invasion_reward_index_for_kill(bool is_boss, int mob_level);
 static void       invasion_award_kill_reward(CHAR_DATA *killer, int reward_idx);
 int              invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
@@ -130,6 +132,7 @@ int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_test_is_midgaard_area_name(const char *area_name);
 int invasion_test_should_self_destruct_for_path_dir(int dir);
 int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
+int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir);
 const char *invasion_test_trash_talk_for_profile(int prof_idx);
 #endif
 
@@ -246,6 +249,30 @@ static int invasion_random_trash_talk_index(int line_count)
 #else
     return number_range(0, line_count - 1);
 #endif
+}
+
+static bool room_has_valid_boss_spawn_conditions(long room_flags, int path_dir)
+{
+    if (IS_SET(room_flags, ROOM_SAFE))
+        return FALSE;
+
+    if (path_dir < 0)
+        return FALSE;
+
+    return TRUE;
+}
+
+static bool room_is_valid_boss_spawn(ROOM_INDEX_DATA *room, ROOM_INDEX_DATA *target_room)
+{
+    int path_dir;
+
+    if (room == NULL || target_room == NULL)
+        return FALSE;
+
+    path_dir = h_find_dir(room, target_room,
+                          HUNT_WORLD | HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR);
+
+    return room_has_valid_boss_spawn_conditions(room->room_flags, path_dir);
 }
 
 int invasion_reward_index_for_kill(bool is_boss, int mob_level)
@@ -637,6 +664,11 @@ int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count)
     return invasion_should_boss_trash_talk_for_respawn_count(respawn_count) ? 1 : 0;
 }
 
+int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir)
+{
+    return room_has_valid_boss_spawn_conditions(room_flags, path_dir) ? 1 : 0;
+}
+
 const char *invasion_test_trash_talk_for_profile(int prof_idx)
 {
     return invasion_boss_trash_talk_for_profile(prof_idx);
@@ -879,9 +911,8 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
              * direction from this room toward the target (room 3001).
              * h_find_dir returns >= 0 when a path exists, -1 when it does not.
              */
-            if (h_find_dir(room, target_room,
-                           HUNT_WORLD | HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR) < 0)
-                continue;   /* no path to Gertrude – skip this room */
+            if (!room_is_valid_boss_spawn(room, target_room))
+                continue;   /* safe or no path to Gertrude – skip this room */
 
             n++;
             /* Replace chosen with probability 1/n (uniform distribution). */
