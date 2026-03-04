@@ -1,0 +1,2336 @@
+#AREA
+Sepulcher Pasture~
+Q 16
+K sepulcher pasture~
+L { 15-30 }~
+N 140
+I 15 30
+V 30175 30249
+X 0
+F 10
+U A funeral bell tolls somewhere in the Sepulcher Pasture.~
+O codex~
+R all~
+W all~
+#ROOMS
+#30175
+The Withered Gate~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At The Withered Gate, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30176
+D1
+~
+~
+0 -1 30180
+S
+#30176
+Mourners' Cart Track~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Mourners' Cart Track, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30177
+D2
+~
+~
+0 -1 30175
+S
+#30177
+Fog-Soaked Furrow~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Fog-Soaked Furrow still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30178
+D2
+~
+~
+0 -1 30176
+S
+#30178
+Thorn-Black Hedgerow~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Thorn-Black Hedgerow, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30179
+D2
+~
+~
+0 -1 30177
+S
+#30179
+Rook Lantern Post~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Rook Lantern Post, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30180
+D2
+~
+~
+0 -1 30178
+S
+#30180
+Gravebell Milestone~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Gravebell Milestone, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30181
+D1
+~
+~
+0 -1 30185
+D2
+~
+~
+0 -1 30179
+D3
+~
+~
+0 -1 30175
+S
+#30181
+Crowspine Crossing~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Crowspine Crossing, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30182
+D2
+~
+~
+0 -1 30180
+S
+#30182
+Mire of Bent Scythes~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Mire of Bent Scythes still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30183
+D2
+~
+~
+0 -1 30181
+S
+#30183
+Sepulcher Windbreak~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Sepulcher Windbreak, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30184
+D2
+~
+~
+0 -1 30182
+S
+#30184
+Ashen Tithe Path~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Ashen Tithe Path, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30185
+D2
+~
+~
+0 -1 30183
+S
+#30185
+Pilgrim's Hollow~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Pilgrim's Hollow, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30186
+D1
+~
+~
+0 -1 30190
+D2
+~
+~
+0 -1 30184
+D3
+~
+~
+0 -1 30180
+S
+#30186
+Stag-Bone Marker~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Stag-Bone Marker, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30187
+D2
+~
+~
+0 -1 30185
+S
+#30187
+Veilfern Verge~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Veilfern Verge still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30188
+D2
+~
+~
+0 -1 30186
+S
+#30188
+Widow's Furrows~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Widow's Furrows, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30189
+D2
+~
+~
+0 -1 30187
+S
+#30189
+Riven Barrowmouth~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Riven Barrowmouth, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30190
+D2
+~
+~
+0 -1 30188
+S
+#30190
+Nightsoil Channel~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Nightsoil Channel, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30191
+D1
+~
+~
+0 -1 30195
+D2
+~
+~
+0 -1 30189
+D3
+~
+~
+0 -1 30185
+S
+#30191
+The Bleak Orchard~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Bleak Orchard, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30192
+D2
+~
+~
+0 -1 30190
+S
+#30192
+Corpse-Lily Bend~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Corpse-Lily Bend still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30193
+D2
+~
+~
+0 -1 30191
+S
+#30193
+Sable Fieldstone Way~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Sable Fieldstone Way, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30194
+D2
+~
+~
+0 -1 30192
+S
+#30194
+Prayerwheel Turn~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Prayerwheel Turn, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30195
+D2
+~
+~
+0 -1 30193
+S
+#30195
+Abbot's Sluice~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Abbot's Sluice, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30196
+D1
+~
+~
+0 -1 30200
+D2
+~
+~
+0 -1 30194
+D3
+~
+~
+0 -1 30190
+S
+#30196
+Harrower's Rest~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Harrower's Rest, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30197
+D2
+~
+~
+0 -1 30195
+S
+#30197
+Funeral Wheat Stand~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Funeral Wheat Stand still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30198
+D2
+~
+~
+0 -1 30196
+S
+#30198
+The Crooked Boundary~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across The Crooked Boundary, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30199
+D2
+~
+~
+0 -1 30197
+S
+#30199
+Saint's Dry Well~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Saint's Dry Well, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30200
+D2
+~
+~
+0 -1 30198
+S
+#30200
+Rimebound Acre~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Rimebound Acre, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30201
+D1
+~
+~
+0 -1 30205
+D2
+~
+~
+0 -1 30199
+D3
+~
+~
+0 -1 30195
+S
+#30201
+Tombstone Trellis~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Tombstone Trellis, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30202
+D2
+~
+~
+0 -1 30200
+S
+#30202
+Duskseed Row~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Duskseed Row still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30203
+D2
+~
+~
+0 -1 30201
+S
+#30203
+Mossed Reliquary Post~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Mossed Reliquary Post, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30204
+D2
+~
+~
+0 -1 30202
+S
+#30204
+The Dirge Causeway~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Dirge Causeway, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30205
+D2
+~
+~
+0 -1 30203
+S
+#30205
+Charnel Briar Ring~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Charnel Briar Ring, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30206
+D1
+~
+~
+0 -1 30210
+D2
+~
+~
+0 -1 30204
+D3
+~
+~
+0 -1 30200
+S
+#30206
+Rookwatch Knoll~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Rookwatch Knoll, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30207
+D2
+~
+~
+0 -1 30205
+S
+#30207
+Moonless Paddock~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Moonless Paddock still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30208
+D2
+~
+~
+0 -1 30206
+S
+#30208
+The Salted Trench~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across The Salted Trench, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30209
+D2
+~
+~
+0 -1 30207
+S
+#30209
+Lichenshade Verge~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Lichenshade Verge, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30210
+D2
+~
+~
+0 -1 30208
+S
+#30210
+Pale Banner Rise~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Pale Banner Rise, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30211
+D1
+~
+~
+0 -1 30215
+D2
+~
+~
+0 -1 30209
+D3
+~
+~
+0 -1 30205
+S
+#30211
+The Candle Ditch~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Candle Ditch, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30212
+D2
+~
+~
+0 -1 30210
+S
+#30212
+Mercyless Furrow~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Mercyless Furrow still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30213
+D2
+~
+~
+0 -1 30211
+S
+#30213
+Penance Cairn~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Penance Cairn, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30214
+D2
+~
+~
+0 -1 30212
+S
+#30214
+Blackwater Cistern~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Blackwater Cistern, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30215
+D2
+~
+~
+0 -1 30213
+S
+#30215
+Sepulcher Green~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Sepulcher Green, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30216
+D1
+~
+~
+0 -1 30220
+D2
+~
+~
+0 -1 30214
+D3
+~
+~
+0 -1 30210
+S
+#30216
+The Vesper Gallows~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Vesper Gallows, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30217
+D2
+~
+~
+0 -1 30215
+S
+#30217
+Thistle Ossuary~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Thistle Ossuary still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30218
+D2
+~
+~
+0 -1 30216
+S
+#30218
+Nave of Brambles~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Nave of Brambles, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30219
+D2
+~
+~
+0 -1 30217
+S
+#30219
+Lament Reaping Lane~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Lament Reaping Lane, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30220
+D2
+~
+~
+0 -1 30218
+S
+#30220
+Rotglass Fence~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Rotglass Fence, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30221
+D1
+~
+~
+0 -1 30225
+D2
+~
+~
+0 -1 30219
+D3
+~
+~
+0 -1 30215
+S
+#30221
+The Hollow Shepherd's Stand~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Hollow Shepherd's Stand, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30222
+D2
+~
+~
+0 -1 30220
+S
+#30222
+Anointing Rut~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Anointing Rut still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30223
+D2
+~
+~
+0 -1 30221
+S
+#30223
+Vigilant Scarefield~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Vigilant Scarefield, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+13 11
+D0
+~
+~
+0 -1 30224
+D2
+~
+~
+0 -1 30222
+S
+#30224
+The Tallow Bridge~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Tallow Bridge, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30225
+D2
+~
+~
+0 -1 30223
+S
+#30225
+Morndrift Spur~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Morndrift Spur, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30226
+D1
+~
+~
+0 -1 30230
+D2
+~
+~
+0 -1 30224
+D3
+~
+~
+0 -1 30220
+S
+#30226
+The Chapel Runnel~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Chapel Runnel, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30227
+D2
+~
+~
+0 -1 30225
+S
+#30227
+Sorrowharvest Plot~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Sorrowharvest Plot still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30228
+D2
+~
+~
+0 -1 30226
+S
+#30228
+Gloamwound Track~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Gloamwound Track, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30229
+D2
+~
+~
+0 -1 30227
+S
+#30229
+The Bonewind Gap~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Bonewind Gap, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30230
+D2
+~
+~
+0 -1 30228
+S
+#30230
+Knellroot Verge~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Knellroot Verge, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30231
+D1
+~
+~
+0 -1 30235
+D2
+~
+~
+0 -1 30229
+D3
+~
+~
+0 -1 30225
+S
+#30231
+The Cracked Granary Yard~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Cracked Granary Yard, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30232
+D2
+~
+~
+0 -1 30230
+S
+#30232
+Altar of Last Seed~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Altar of Last Seed still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30233
+D2
+~
+~
+0 -1 30231
+S
+#30233
+Midden of Rosaries~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Midden of Rosaries, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30234
+D2
+~
+~
+0 -1 30232
+S
+#30234
+The Moon-Scoured Pen~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Moon-Scoured Pen, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30235
+D2
+~
+~
+0 -1 30233
+S
+#30235
+Reaper's Shepherd Walk~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Reaper's Shepherd Walk, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30236
+D1
+~
+~
+0 -1 30240
+D2
+~
+~
+0 -1 30234
+D3
+~
+~
+0 -1 30230
+S
+#30236
+Pillar of Cinders~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Pillar of Cinders, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30237
+D2
+~
+~
+0 -1 30235
+S
+#30237
+The Pewter Fen Dike~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. The Pewter Fen Dike still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30238
+D2
+~
+~
+0 -1 30236
+S
+#30238
+Mildewed Cart Hollow~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Mildewed Cart Hollow, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30239
+D2
+~
+~
+0 -1 30237
+S
+#30239
+Ruinwheat Terrace~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Ruinwheat Terrace, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30240
+D2
+~
+~
+0 -1 30238
+S
+#30240
+The Last Bell Furrow~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At The Last Bell Furrow, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30241
+D1
+~
+~
+0 -1 30245
+D2
+~
+~
+0 -1 30239
+D3
+~
+~
+0 -1 30235
+S
+#30241
+Wolfshade Meadow~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in Wolfshade Meadow, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30242
+D2
+~
+~
+0 -1 30240
+S
+#30242
+The Parish Stakes~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. The Parish Stakes still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30243
+D2
+~
+~
+0 -1 30241
+S
+#30243
+Cryptmoss Thoroughfare~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across Cryptmoss Thoroughfare, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30244
+D2
+~
+~
+0 -1 30242
+S
+#30244
+The Bleeding Rain Basin~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In The Bleeding Rain Basin, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+9 11
+D0
+~
+~
+0 -1 30245
+D2
+~
+~
+0 -1 30243
+S
+#30245
+Narthex Windline~
+A wind colder than winter drifts across this quarter of the pasture, carrying the smell of wet ash, old incense, and turned graves. The mud is churned by cart wheels, boots, and hoofprints that end abruptly at the edge of shallow ditches lined with corpse-lilies. At Narthex Windline, the earth has been salted, blessed, and cursed so many times that nothing grows true; even moss climbs in funereal spirals.~
+9 11
+D0
+~
+~
+0 -1 30246
+D2
+~
+~
+0 -1 30244
+D3
+~
+~
+0 -1 30240
+S
+#30246
+The Heretic's Fallow~
+Uneven furrows lie like scars under your boots, and every pooled reflection shows a duskier sky than the one above you. Weatherworn icons hang from split posts beside the track, each one painted over with tar except for a single silver tear. Here in The Heretic's Fallow, the air tastes faintly metallic, and the back of your throat tightens each time the bellwind shifts through the hedgerows.~
+9 11
+D0
+~
+~
+0 -1 30247
+D2
+~
+~
+0 -1 30245
+S
+#30247
+Sepulcher Crown Rise~
+Rusted prayer stakes and cracked boundary stones crowd the path, each scratched with names that parish records no longer admit existed. You can hear grain whispering though no healthy crop remains, only brittle stalks that clatter together like rosary beads in a shaking hand. Sepulcher Crown Rise still bears old harvest markers, but each marker now points toward barrows, shrines, and sluices meant to guide processions of the dead.~
+9 11
+D0
+~
+~
+0 -1 30248
+D2
+~
+~
+0 -1 30246
+S
+#30248
+The Ossified Pasture~
+Somewhere beyond sight, a funeral bell answers itself in staggered peals, as if two towers now stand where one once was. Briars trained like vineyard rows have gone feral here; they knot around old fencing in cathedral arches and hook at your clothes as you pass. Across The Ossified Pasture, lengths of black ribbon are nailed to posts at shoulder height, snapping in the wind like a line of muttered refusals.~
+9 11
+D0
+~
+~
+0 -1 30249
+D2
+~
+~
+0 -1 30247
+S
+#30249
+Throne of the Black Shepherd~
+Pale moths orbit guttering lanterns tied to iron crooks, and their wings leave powdery crescents on the blackened stalks. Scarecrows with ossuary masks tilt toward the lane, their straw ribs packed with raven feathers, wax drippings, and saintly bone chips. In Throne of the Black Shepherd, the darkness feels cultivated rather than natural, as if an unseen caretaker waters shadow the way farmers once watered wheat.~
+13 11
+D2
+~
+~
+0 -1 30248
+S
+#0
+#MOBILES
+#30175
+grave shepherd~
+a grave shepherd~
+A grave shepherd counts graves between the dead rows here.
+~
+This gaunt herdsman carries a hooked crook and mutters numbers that never reset.
+~
+167772257 512 -500 S
+17 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 15 17 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30176
+barrow reaper~
+a barrow reaper~
+A barrow reaper hones a rust-pitted blade in silence.
+~
+Funeral linen hangs from the reaper's armor, soaked with mist and old blood.
+~
+167772257 512 -500 S
+18 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 16 18 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30177
+thorn vicar~
+a thorn vicar~
+A thorn vicar recites a bitter litany to the hedges.
+~
+Black rosaries coil around their wrists while thorn-vines twitch in answer.
+~
+167772257 512 -500 S
+19 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 17 19 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30178
+sepulcher outrider~
+a sepulcher outrider~
+A sepulcher outrider patrols with measured, relentless strides.
+~
+A rider's saddle is strapped to their back though no horse remains alive to carry it.
+~
+167772257 512 -500 S
+20 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 18 20 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30179
+mire cantor~
+a mire cantor~
+A mire cantor intones a low dirge over the standing water.
+~
+Mud cakes their vestments, but silver sigils still gleam through the filth.
+~
+167772257 512 -500 S
+21 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 19 21 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30180
+gravebound pikeman~
+a gravebound pikeman~
+A gravebound pikeman bars this lane with a corroded polearm.
+~
+His pike hums softly, hungry for trespass and confession alike.
+~
+167772257 512 -500 S
+22 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 20 22 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30181
+ossuary falconer~
+an ossuary falconer~
+An ossuary falconer waits beneath a hood with a bone hawk.
+~
+The hawk's eye sockets burn violet whenever strangers draw near.
+~
+167772257 512 -500 S
+23 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 21 23 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30182
+charnel lay sister~
+a charnel lay sister~
+A charnel lay sister harvests corpse-lilies with careful hands.
+~
+She clips pale petals into a satchel packed with wax and prayer bones.
+~
+167772257 512 -500 S
+24 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 22 24 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30183
+blacksoil warden~
+a blacksoil warden~
+A blacksoil warden drags a shield through the mire.
+~
+Every step leaves a trench filled with oily water and drifting ash.
+~
+167772257 512 -500 S
+25 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 23 25 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30184
+dirge-thorn knight~
+a dirge-thorn knight~
+A dirge-thorn knight kneels in painful vigil.
+~
+Thorned plate bites into their flesh, feeding on old vows and newer sins.
+~
+167772257 512 -500 S
+26 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 24 26 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30185
+dread tithe collector~
+a dread tithe collector~
+A dread tithe collector rattles chained ledgers as you approach.
+~
+Wax-sealed tablets hang from their belt, each marked with a debtor's last prayer.
+~
+167772257 512 -500 S
+27 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 25 27 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30186
+gallows shepherd~
+a gallows shepherd~
+A gallows shepherd guides unseen livestock through dead wheat.
+~
+Invisible shapes jostle around him, leaving fresh hoofprints in stale mud.
+~
+167772257 512 -500 S
+28 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 26 28 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30187
+ravenmask harrier~
+a ravenmask harrier~
+A ravenmask harrier circles with predatory patience.
+~
+Its lacquered beak-mask hides a grin that never seems to close.
+~
+167772257 512 -500 S
+29 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 27 29 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30188
+sepulcher dragoon~
+a sepulcher dragoon~
+A sepulcher dragoon stands rigid beside a weathered marker.
+~
+Rain slides from their cuirass in lines like black tears.
+~
+167772257 512 -500 S
+30 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 28 30 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30189
+hallowfield executor~
+a hallowfield executor~
+A hallowfield executor tests the edge of a broad axe.
+~
+Pale script on the blade lists names erased from parish memory.
+~
+167772257 512 -500 S
+31 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 29 31 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30190
+grave-lantern novice~
+a grave-lantern novice~
+A grave-lantern novice trims a wavering violet flame.
+~
+The lantern glass is fused from skull shards and weeps warm light.
+~
+167772257 512 -500 S
+32 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 32 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30191
+fallow inquisitor~
+a fallow inquisitor~
+A fallow inquisitor watches you from beneath a stitched hood.
+~
+Needles and prayer nails clink softly against their chain shirt.
+~
+167772257 512 -500 S
+17 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 15 17 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30192
+boneflail penitents~
+a boneflail penitent~
+A boneflail penitent lashes the air in ritual rhythm.
+~
+Every stroke of the flail throws off dust that smells faintly of myrrh.
+~
+167772257 512 -500 S
+18 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 16 18 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30193
+crypt houndmaster~
+a crypt houndmaster~
+A crypt houndmaster whistles for beasts that never appear.
+~
+His gauntlet is scarred by teeth marks too large for any living hound.
+~
+167772257 512 -500 S
+19 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 17 19 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30194
+veilbound archer~
+a veilbound archer~
+A veilbound archer keeps an arrow nocked in silence.
+~
+Black fletching drinks the lanternlight before your eyes can follow it.
+~
+167772257 512 -500 S
+20 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 18 20 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30195
+mourning templar~
+a mourning templar~
+A mourning templar plants a tower shield in the mud.
+~
+Saintly skulls embossed on the shield seem to grin when bells toll.
+~
+167772257 512 -500 S
+21 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 19 21 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30196
+rosary breaker~
+a rosary breaker~
+A rosary breaker fingers cracked beads with bloody thumbs.
+~
+He murmurs one absolution for every threat and none for himself.
+~
+167772257 512 -500 S
+22 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 20 22 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30197
+sepulcher standard-bearer~
+a sepulcher standard-bearer~
+A sepulcher standard-bearer braces a tattered black banner.
+~
+The banner cloth is woven with horsehair and grave-soaked wool.
+~
+167772257 512 -500 S
+23 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 21 23 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30198
+wheatshade stalker~
+a wheatshade stalker~
+A wheatshade stalker slips between rows of dead grain.
+~
+Only the glint of a narrow knife gives away their position.
+~
+167772257 512 -500 S
+24 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 22 24 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30199
+barrow chanter~
+a barrow chanter~
+A barrow chanter recites litanies in a cracked voice.
+~
+Each syllable stirs the mist into shapes that bow and fade.
+~
+167772257 512 -500 S
+25 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 23 25 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30200
+censer marshal~
+a censer marshal~
+A censer marshal swings a smoking iron censer.
+~
+The incense reeks of pitch, bitter herbs, and old burial cloth.
+~
+167772257 512 -500 S
+26 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 24 26 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30201
+grave oathbreaker~
+a grave oathbreaker~
+A grave oathbreaker hefts a dented mace in both hands.
+~
+Vow-cords still bind his wrists, though most have been chewed through.
+~
+167772257 512 -500 S
+27 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 25 27 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30202
+mire rosarist~
+a mire rosarist~
+A mire rosarist kneels in water black as ink.
+~
+She strings fresh beads from knucklebones and whisper-thin wire.
+~
+167772257 512 -500 S
+28 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 26 28 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30203
+thornfield bailiff~
+a thornfield bailiff~
+A thornfield bailiff patrols with legal writs nailed to a spear.
+~
+Each writ is signed in dark wax by abbots long interred nearby.
+~
+167772257 512 -500 S
+29 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 27 29 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30204
+ashcrop skirmisher~
+an ashcrop skirmisher~
+An ashcrop skirmisher stalks around broken threshing stones.
+~
+Their boots are wrapped in gravecloth to muffle every step.
+~
+167772257 512 -500 S
+30 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 28 30 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30205
+nightseed herald~
+a nightseed herald~
+A nightseed herald calls warnings no one heeds.
+~
+Her brass trumpet is dented and stuffed with black thistle stems.
+~
+167772257 512 -500 S
+31 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 29 31 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30206
+blackwater confessor~
+a blackwater confessor~
+A blackwater confessor offers absolution with a serrated smile.
+~
+Ink from his confession book runs like blood across his gloves.
+~
+167772257 512 -500 S
+32 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 32 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30207
+cairnbound lancer~
+a cairnbound lancer~
+A cairnbound lancer lowers a long spear and squares up.
+~
+Cairn dust cakes their armor, and each breath rattles like stone.
+~
+167772257 512 -500 S
+17 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 15 17 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30208
+ossified warden~
+an ossified warden~
+An ossified warden keeps this stretch of pasture under harsh watch.
+~
+Riveted plates of bone and iron creak with each deliberate movement.
+~
+167772257 512 -500 S
+18 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 16 18 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30209
+black shepherd morcant~
+Morcant, the Black Shepherd~
+Morcant, the Black Shepherd stands among the bent standards of the pasture.
+~
+Morcant wears a crown of antlers and iron bells; each breath sounds like a crypt door closing.
+~
+33554435 512 -500 S
+35 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 33 35 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30210
+abbess of the last furrow elysse~
+Abbess Elysse of the Last Furrow~
+Abbess Elysse of the Last Furrow presides with absolute stillness.
+~
+Her vestments are sewn from mourning banners, and her crozier leaks starless radiance into the soil.
+~
+33554435 512 -500 S
+35 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 33 35 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#0
+#OBJECTS
+#30211
+mourning halo~
+@@dMourning Halo@@N~
+@@dMourning Halo@@N rests here.~
+9 134217729 8388610 15
+0 0 0 0 0 0 0 0 0 0
+3
+L
+15
+#30212
+penumbral aura clasp~
+@@dPenumbral Aura Clasp@@N~
+@@dPenumbral Aura Clasp@@N rests here.~
+9 134217729 8388612 16
+0 0 0 0 0 0 0 0 0 0
+3
+L
+16
+#30213
+thorn diadem~
+@@dThorn Diadem@@N~
+@@dThorn Diadem@@N rests here.~
+9 134217729 8388624 17
+0 0 0 0 0 0 0 0 0 0
+8
+L
+17
+#30214
+graveglass visor~
+@@dGraveglass Visor@@N~
+@@dGraveglass Visor@@N rests here.~
+9 134217729 8388640 18
+0 0 0 0 0 0 0 0 0 0
+12
+L
+18
+#30215
+ravenbone earring~
+@@dRavenbone Earring@@N~
+@@dRavenbone Earring@@N rests here.~
+9 134217729 8388736 19
+0 0 0 0 0 0 0 0 0 0
+3
+L
+19
+#30216
+sepulcher prayer chain~
+@@dSepulcher Prayer Chain@@N~
+@@dSepulcher Prayer Chain@@N rests here.~
+9 134217729 8388864 20
+0 0 0 0 0 0 0 0 0 0
+12
+L
+20
+#30217
+dirge-feather wings~
+@@dDirge-Feather Wings@@N~
+@@dDirge-Feather Wings@@N rests here.~
+9 134217729 8389120 21
+0 0 0 0 0 0 0 0 0 0
+3
+L
+21
+#30218
+reliquary pauldrons~
+@@dReliquary Pauldrons@@N~
+@@dReliquary Pauldrons@@N rests here.~
+9 134217729 8389632 22
+0 0 0 0 0 0 0 0 0 0
+12
+L
+22
+#30219
+reaper vambraces~
+@@dReaper Vambraces@@N~
+@@dReaper Vambraces@@N rests here.~
+9 134217729 8390656 23
+0 0 0 0 0 0 0 0 0 0
+8
+L
+23
+#30220
+writ-iron wristguard~
+@@dWrit-Iron Wristguard@@N~
+@@dWrit-Iron Wristguard@@N rests here.~
+9 134217729 8392704 24
+0 0 0 0 0 0 0 0 0 0
+12
+L
+24
+#30221
+gravewool gloves~
+@@dGravewool Gloves@@N~
+@@dGravewool Gloves@@N rests here.~
+9 134217729 8396800 25
+0 0 0 0 0 0 0 0 0 0
+3
+L
+25
+#30222
+ledger signet~
+@@dLedger Signet@@N~
+@@dLedger Signet@@N rests here.~
+9 134217729 8404992 15
+0 0 0 0 0 0 0 0 0 0
+3
+L
+15
+#30223
+blackthorn talons~
+@@dBlackthorn Talons@@N~
+@@dBlackthorn Talons@@N rests here.~
+9 134217729 8421376 25
+0 0 0 0 0 0 0 0 0 0
+8
+L
+25
+#30224
+lantern of violet wake~
+@@dLantern of Violet Wake@@N~
+@@dLantern of Violet Wake@@N rests here.~
+9 134217729 8454144 22
+0 0 0 0 0 0 0 0 0 0
+3
+L
+22
+#30225
+mourner cloak~
+@@dMourner Cloak@@N~
+@@dMourner Cloak@@N rests here.~
+9 134217729 8519680 20
+0 0 0 0 0 0 0 0 0 0
+3
+L
+20
+#30226
+tithe girdle~
+@@dTithe Girdle@@N~
+@@dTithe Girdle@@N rests here.~
+9 134217729 8650752 21
+0 0 0 0 0 0 0 0 0 0
+12
+L
+21
+#30227
+sepulcher cuirass~
+@@dSepulcher Cuirass@@N~
+@@dSepulcher Cuirass@@N rests here.~
+9 134217729 8912896 24
+0 0 0 0 0 0 0 0 0 0
+12
+L
+24
+#30228
+barrowtail sash~
+@@dBarrowtail Sash@@N~
+@@dBarrowtail Sash@@N rests here.~
+9 134217729 9437184 19
+0 0 0 0 0 0 0 0 0 0
+12
+L
+19
+#30229
+gloam tassets~
+@@dGloam Tassets@@N~
+@@dGloam Tassets@@N rests here.~
+9 134217729 10485760 23
+0 0 0 0 0 0 0 0 0 0
+12
+L
+23
+#30230
+mire sabatons~
+@@dMire Sabatons@@N~
+@@dMire Sabatons@@N rests here.~
+9 134217729 12582912 22
+0 0 0 0 0 0 0 0 0 0
+12
+L
+22
+#30231
+grim hoofguards~
+@@dGrim Hoofguards@@N~
+@@dGrim Hoofguards@@N rests here.~
+9 134217729 8388608 18
+0 0 0 0 0 0 0 0 0 0
+12
+L
+18
+#30232
+violet chapel lantern~
+@@dViolet Chapel Lantern@@N~
+@@dViolet Chapel Lantern@@N rests here.~
+9 134217729 8454144 17
+0 0 0 0 0 0 0 0 0 0
+3
+L
+17
+#30233
+fallow field buckler~
+@@dFallow Field Buckler@@N~
+@@dFallow Field Buckler@@N rests here.~
+9 134217729 8396800 20
+0 0 0 0 0 0 0 0 0 0
+12
+L
+20
+#30234
+blackgrain faceguard~
+@@dBlackgrain Faceguard@@N~
+@@dBlackgrain Faceguard@@N rests here.~
+9 134217729 8388640 21
+0 0 0 0 0 0 0 0 0 0
+12
+L
+21
+#30235
+abbess veil of last seed~
+@@dAbbess Veil of Last Seed@@N~
+@@dAbbess Veil of Last Seed@@N rests here.~
+9 134217793 8388640 30
+0 0 0 0 0 0 0 0 0 0
+3
+L
+30
+#30236
+shepherd crook of black bells~
+@@dShepherd Crook of Black Bells@@N~
+@@dShepherd Crook of Black Bells@@N rests here.~
+9 134217793 8454144 30
+0 0 0 0 0 0 0 0 0 0
+8
+L
+30
+#30237
+crown of the unharvested~
+@@dCrown of the Unharvested@@N~
+@@dCrown of the Unharvested@@N rests here.~
+9 134217793 8388624 30
+0 0 0 0 0 0 0 0 0 0
+12
+L
+30
+#30238
+pasture-bound oathmail~
+@@dPasture-Bound Oathmail@@N~
+@@dPasture-Bound Oathmail@@N rests here.~
+9 134217793 8912896 30
+0 0 0 0 0 0 0 0 0 0
+12
+L
+30
+#30239
+vesper wristlet~
+@@dVesper Wristlet@@N~
+@@dVesper Wristlet@@N rests here.~
+9 134217729 8392704 25
+0 0 0 0 0 0 0 0 0 0
+3
+L
+25
+#30240
+nightsoil warpick~
+@@dNightsoil Warpick@@N~
+@@dNightsoil Warpick@@N rests here.~
+9 134217729 8454144 24
+0 0 0 0 0 0 0 0 0 0
+8
+L
+24
+#0
+#RESETS
+M 0 30175 1 30176 (null)
+
+E 0 30211 0 1 (null)
+
+E 0 30218 0 13 (null)
+
+M 0 30175 1 30178 (null)
+
+E 0 30212 0 2 (null)
+
+E 0 30219 0 14 (null)
+
+M 0 30176 1 30180 (null)
+
+E 0 30212 0 2 (null)
+
+E 0 30219 0 14 (null)
+
+M 0 30176 1 30182 (null)
+
+E 0 30213 0 4 (null)
+
+E 0 30220 0 16 (null)
+
+M 0 30177 1 30184 (null)
+
+E 0 30213 0 4 (null)
+
+E 0 30220 0 16 (null)
+
+M 0 30177 1 30186 (null)
+
+E 0 30214 0 5 (null)
+
+E 0 30221 0 17 (null)
+
+M 0 30178 1 30188 (null)
+
+E 0 30214 0 5 (null)
+
+E 0 30221 0 17 (null)
+
+M 0 30178 1 30190 (null)
+
+E 0 30215 0 7 (null)
+
+E 0 30222 0 20 (null)
+
+M 0 30179 1 30192 (null)
+
+E 0 30215 0 7 (null)
+
+E 0 30222 0 20 (null)
+
+M 0 30179 1 30194 (null)
+
+E 0 30216 0 9 (null)
+
+E 0 30223 0 24 (null)
+
+M 0 30180 1 30196 (null)
+
+E 0 30216 0 9 (null)
+
+E 0 30223 0 24 (null)
+
+M 0 30180 1 30198 (null)
+
+E 0 30217 0 12 (null)
+
+E 0 30224 0 25 (null)
+
+M 0 30181 1 30200 (null)
+
+E 0 30217 0 12 (null)
+
+E 0 30224 0 25 (null)
+
+M 0 30181 1 30202 (null)
+
+E 0 30218 0 13 (null)
+
+E 0 30225 0 26 (null)
+
+M 0 30182 1 30204 (null)
+
+E 0 30218 0 13 (null)
+
+E 0 30225 0 26 (null)
+
+M 0 30182 1 30206 (null)
+
+E 0 30219 0 14 (null)
+
+E 0 30226 0 28 (null)
+
+M 0 30183 1 30208 (null)
+
+E 0 30219 0 14 (null)
+
+E 0 30226 0 28 (null)
+
+M 0 30183 1 30211 (null)
+
+E 0 30220 0 16 (null)
+
+E 0 30227 0 29 (null)
+
+M 0 30184 1 30213 (null)
+
+E 0 30220 0 16 (null)
+
+E 0 30227 0 29 (null)
+
+M 0 30184 1 30215 (null)
+
+E 0 30221 0 17 (null)
+
+E 0 30228 0 30 (null)
+
+M 0 30185 1 30217 (null)
+
+E 0 30221 0 17 (null)
+
+E 0 30228 0 30 (null)
+
+M 0 30185 1 30219 (null)
+
+E 0 30222 0 20 (null)
+
+E 0 30229 0 1 (null)
+
+M 0 30186 1 30221 (null)
+
+E 0 30222 0 20 (null)
+
+E 0 30229 0 1 (null)
+
+M 0 30186 1 30224 (null)
+
+E 0 30223 0 24 (null)
+
+E 0 30230 0 2 (null)
+
+M 0 30187 1 30226 (null)
+
+E 0 30223 0 24 (null)
+
+E 0 30230 0 2 (null)
+
+M 0 30187 1 30228 (null)
+
+E 0 30224 0 25 (null)
+
+E 0 30231 0 4 (null)
+
+M 0 30188 1 30230 (null)
+
+E 0 30224 0 25 (null)
+
+E 0 30231 0 4 (null)
+
+M 0 30188 1 30232 (null)
+
+E 0 30225 0 26 (null)
+
+E 0 30232 0 5 (null)
+
+M 0 30189 1 30234 (null)
+
+E 0 30225 0 26 (null)
+
+E 0 30232 0 5 (null)
+
+M 0 30189 1 30236 (null)
+
+E 0 30226 0 28 (null)
+
+E 0 30233 0 7 (null)
+
+M 0 30190 1 30238 (null)
+
+E 0 30226 0 28 (null)
+
+E 0 30233 0 7 (null)
+
+M 0 30190 1 30240 (null)
+
+E 0 30227 0 29 (null)
+
+E 0 30234 0 9 (null)
+
+M 0 30191 1 30242 (null)
+
+E 0 30227 0 29 (null)
+
+E 0 30234 0 9 (null)
+
+M 0 30191 1 30244 (null)
+
+E 0 30228 0 30 (null)
+
+E 0 30211 0 12 (null)
+
+M 0 30192 1 30246 (null)
+
+E 0 30228 0 30 (null)
+
+E 0 30211 0 12 (null)
+
+M 0 30192 1 30248 (null)
+
+E 0 30229 0 1 (null)
+
+E 0 30212 0 13 (null)
+
+M 0 30193 1 30176 (null)
+
+E 0 30229 0 1 (null)
+
+E 0 30212 0 13 (null)
+
+M 0 30193 1 30178 (null)
+
+E 0 30230 0 2 (null)
+
+E 0 30213 0 14 (null)
+
+M 0 30194 1 30180 (null)
+
+E 0 30230 0 2 (null)
+
+E 0 30213 0 14 (null)
+
+M 0 30194 1 30182 (null)
+
+E 0 30231 0 4 (null)
+
+E 0 30214 0 16 (null)
+
+M 0 30195 1 30184 (null)
+
+E 0 30231 0 4 (null)
+
+E 0 30214 0 16 (null)
+
+M 0 30195 1 30186 (null)
+
+E 0 30232 0 5 (null)
+
+E 0 30215 0 17 (null)
+
+M 0 30196 1 30188 (null)
+
+E 0 30232 0 5 (null)
+
+E 0 30215 0 17 (null)
+
+M 0 30196 1 30190 (null)
+
+E 0 30233 0 7 (null)
+
+E 0 30216 0 20 (null)
+
+M 0 30197 1 30192 (null)
+
+E 0 30233 0 7 (null)
+
+E 0 30216 0 20 (null)
+
+M 0 30197 1 30194 (null)
+
+E 0 30234 0 9 (null)
+
+E 0 30217 0 24 (null)
+
+M 0 30198 1 30196 (null)
+
+E 0 30234 0 9 (null)
+
+E 0 30217 0 24 (null)
+
+M 0 30198 1 30198 (null)
+
+E 0 30211 0 12 (null)
+
+E 0 30218 0 25 (null)
+
+M 0 30199 1 30200 (null)
+
+E 0 30211 0 12 (null)
+
+E 0 30218 0 25 (null)
+
+M 0 30199 1 30202 (null)
+
+E 0 30212 0 13 (null)
+
+E 0 30219 0 26 (null)
+
+M 0 30200 1 30204 (null)
+
+E 0 30212 0 13 (null)
+
+E 0 30219 0 26 (null)
+
+M 0 30200 1 30206 (null)
+
+E 0 30213 0 14 (null)
+
+E 0 30220 0 28 (null)
+
+M 0 30201 1 30208 (null)
+
+E 0 30213 0 14 (null)
+
+E 0 30220 0 28 (null)
+
+M 0 30201 1 30211 (null)
+
+E 0 30214 0 16 (null)
+
+E 0 30221 0 29 (null)
+
+M 0 30202 1 30213 (null)
+
+E 0 30214 0 16 (null)
+
+E 0 30221 0 29 (null)
+
+M 0 30202 1 30215 (null)
+
+E 0 30215 0 17 (null)
+
+E 0 30222 0 30 (null)
+
+M 0 30203 1 30217 (null)
+
+E 0 30215 0 17 (null)
+
+E 0 30222 0 30 (null)
+
+M 0 30203 1 30219 (null)
+
+E 0 30216 0 20 (null)
+
+E 0 30223 0 1 (null)
+
+M 0 30204 1 30221 (null)
+
+E 0 30216 0 20 (null)
+
+E 0 30223 0 1 (null)
+
+M 0 30204 1 30224 (null)
+
+E 0 30217 0 24 (null)
+
+E 0 30224 0 2 (null)
+
+M 0 30205 1 30226 (null)
+
+E 0 30217 0 24 (null)
+
+E 0 30224 0 2 (null)
+
+M 0 30205 1 30228 (null)
+
+E 0 30218 0 25 (null)
+
+E 0 30225 0 4 (null)
+
+M 0 30206 1 30230 (null)
+
+E 0 30218 0 25 (null)
+
+E 0 30225 0 4 (null)
+
+M 0 30206 1 30232 (null)
+
+E 0 30219 0 26 (null)
+
+E 0 30226 0 5 (null)
+
+M 0 30207 1 30234 (null)
+
+E 0 30219 0 26 (null)
+
+E 0 30226 0 5 (null)
+
+M 0 30207 1 30236 (null)
+
+E 0 30220 0 28 (null)
+
+E 0 30227 0 7 (null)
+
+M 0 30208 1 30238 (null)
+
+E 0 30220 0 28 (null)
+
+E 0 30227 0 7 (null)
+
+M 0 30208 1 30240 (null)
+
+E 0 30221 0 29 (null)
+
+E 0 30228 0 9 (null)
+
+M 0 30209 1 30223 (null)
+
+E 0 30236 0 20 (null)
+
+E 0 30237 0 4 (null)
+
+E 0 30238 0 26 (null)
+
+M 0 30210 1 30249 (null)
+
+E 0 30235 0 5 (null)
+
+E 0 30238 0 26 (null)
+
+E 0 30239 0 14 (null)
+
+S
+#$
