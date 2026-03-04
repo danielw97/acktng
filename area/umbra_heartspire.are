@@ -17,24 +17,28 @@ W all~
 @@mThe Sable Causeway@@n~
 The Sable Causeway lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-The long approach channels pilgrims into a single file between watching statues.
+The long approach channels pilgrims into a single file between watching statues.
 
-The air tastes of cold iron and old incense.
-~
-0 3
+The air tastes of cold iron and old incense.
+~
+4 3
 D0
 ~
 ~
 0 -1 11201
+D2
+~
+~
+0 0 3234
 S
 #11201
 @@mGate of Mourning Iron@@n~
 Gate of Mourning Iron lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -45,10 +49,10 @@ S
 @@mAtrium of Bleeding Glass@@n~
 Atrium of Bleeding Glass lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -58,6 +62,10 @@ D1
 ~
 ~
 0 -1 11221
+D2
+~
+~
+0 -1 11272
 D3
 ~
 ~
@@ -66,19 +74,15 @@ D4
 ~
 ~
 0 -1 11255
-D2
-~
-~
-0 -1 11272
 S
 #11203
 @@mNave of Hollow Psalms@@n~
 Nave of Hollow Psalms lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -89,10 +93,10 @@ S
 @@mChancel of Ash Veils@@n~
 Chancel of Ash Veils lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -103,10 +107,10 @@ S
 @@mReliquary of Cindered Saints@@n~
 Reliquary of Cindered Saints lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Reliquary niches glitter with finger bones, saint-teeth, and iron prayer chains.
+Reliquary niches glitter with finger bones, saint-teeth, and iron prayer chains.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -117,10 +121,10 @@ S
 @@mCrypt-Warden Gallery@@n~
 Crypt-Warden Gallery lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -131,10 +135,10 @@ S
 @@mHall of Stitched Banners@@n~
 Hall of Stitched Banners lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -145,10 +149,10 @@ S
 @@mChoir Stairs of Dread@@n~
 Choir Stairs of Dread lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -159,10 +163,10 @@ S
 @@mLantern Cloister@@n~
 Lantern Cloister lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -173,10 +177,10 @@ S
 @@mTransept of Black Snow@@n~
 Transept of Black Snow lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
+Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -187,10 +191,10 @@ S
 @@mReliquary of Hollow Kings@@n~
 Reliquary of Hollow Kings lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Reliquary niches glitter with finger bones, saint-teeth, and iron prayer chains.
+Reliquary niches glitter with finger bones, saint-teeth, and iron prayer chains.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -201,10 +205,10 @@ S
 @@mBalcony of Veiled Moons@@n~
 Balcony of Veiled Moons lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -215,10 +219,10 @@ S
 @@mAntechamber of Bone Incense@@n~
 Antechamber of Bone Incense lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -229,10 +233,10 @@ S
 @@mShrine of the Last Bell@@n~
 Shrine of the Last Bell lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -243,10 +247,10 @@ S
 @@mMausoleum Crossing@@n~
 Mausoleum Crossing lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
+Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -257,10 +261,10 @@ S
 @@mVault of Red Candlewax@@n~
 Vault of Red Candlewax lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -271,10 +275,10 @@ S
 @@mThe Oathbound Rotunda@@n~
 The Oathbound Rotunda lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -285,10 +289,10 @@ S
 @@mProcessional of Splintered Crowns@@n~
 Processional of Splintered Crowns lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -299,10 +303,10 @@ S
 @@mSepulchral Verge@@n~
 Sepulchral Verge lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -313,20 +317,20 @@ S
 @@mThe Thorned Throne@@n~
 The Thorned Throne lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-A throne of thorn-iron dominates the far wall, its seat polished by nothing human.
+A throne of thorn-iron dominates the far wall, its seat polished by nothing human.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 4 3
 S
 #11221
 @@mMirror Arcade@@n~
 Mirror Arcade lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Tall mirrors return your reflection in delayed fragments, each one a little more corpse-pale.
+Tall mirrors return your reflection in delayed fragments, each one a little more corpse-pale.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -337,10 +341,10 @@ S
 @@mGallery of Rain-Black Marble@@n~
 Gallery of Rain-Black Marble lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -351,10 +355,10 @@ S
 @@mScriptorium of Torn Litanies@@n~
 Scriptorium of Torn Litanies lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Lecterns hold skin-bound folios where the ink still crawls as if alive.
+Lecterns hold skin-bound folios where the ink still crawls as if alive.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -365,10 +369,10 @@ S
 @@mThe Ink-Drowned Corridor@@n~
 The Ink-Drowned Corridor lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -379,10 +383,10 @@ S
 @@mHall of Distant Organ Notes@@n~
 Hall of Distant Organ Notes lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
+Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -393,10 +397,10 @@ S
 @@mArchive of Unquiet Tomes@@n~
 Archive of Unquiet Tomes lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Stacked shelves lean like gravestones, and chained books breathe dust when they shift.
+Stacked shelves lean like gravestones, and chained books breathe dust when they shift.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -407,10 +411,10 @@ S
 @@mPassage of Raven-Wing Drapes@@n~
 Passage of Raven-Wing Drapes lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -421,10 +425,10 @@ S
 @@mDust Chapel@@n~
 Dust Chapel lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Rows of pews kneel toward an altar where wax and blood have become one lacquered crust.
+Rows of pews kneel toward an altar where wax and blood have become one lacquered crust.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -435,10 +439,10 @@ S
 @@mRookery Stair@@n~
 Rookery Stair lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -449,10 +453,10 @@ S
 @@mThe Weeping Belfry@@n~
 The Weeping Belfry lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Overhead, cracked bells sway in a wind that never reaches the floor.
+Overhead, cracked bells sway in a wind that never reaches the floor.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -463,10 +467,10 @@ S
 @@mGallery of Cracked Reliquaries@@n~
 Gallery of Cracked Reliquaries lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -477,10 +481,10 @@ S
 @@mShaft of Blue Night@@n~
 Shaft of Blue Night lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -491,10 +495,10 @@ S
 @@mBone-Latched Vestibule@@n~
 Bone-Latched Vestibule lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -505,10 +509,10 @@ S
 @@mConservatory of Dead Roses@@n~
 Conservatory of Dead Roses lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Dead roses are wired upright in silver cages so they never fully fall.
+Dead roses are wired upright in silver cages so they never fully fall.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -519,10 +523,10 @@ S
 @@mObsidian Service Hall@@n~
 Obsidian Service Hall lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
+Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -533,10 +537,10 @@ S
 @@mThe Casket Promenade@@n~
 The Casket Promenade lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -547,20 +551,20 @@ S
 @@mThe Harrowed Duchess's Chamber@@n~
 The Harrowed Duchess's Chamber lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 4 3
 S
 #11238
 @@mSoot-Fresco Passage@@n~
 Soot-Fresco Passage lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -571,10 +575,10 @@ S
 @@mAnvil Cloister@@n~
 Anvil Cloister lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Hammers rest on anvils shaped like kneeling angels with broken wings.
+Hammers rest on anvils shaped like kneeling angels with broken wings.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -585,10 +589,10 @@ S
 @@mBastion Walk of Rusted Pikes@@n~
 Bastion Walk of Rusted Pikes lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
+Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -599,10 +603,10 @@ S
 @@mBarracks of Silent Plate@@n~
 Barracks of Silent Plate lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Bedframes of black oak stand immaculate, each one draped in folded war-shrouds.
+Bedframes of black oak stand immaculate, each one draped in folded war-shrouds.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -613,10 +617,10 @@ S
 @@mChamber of Severed Heraldry@@n~
 Chamber of Severed Heraldry lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -627,10 +631,10 @@ S
 @@mThe Gallowglass Hall@@n~
 The Gallowglass Hall lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -641,10 +645,10 @@ S
 @@mTithe Vault of Iron Teeth@@n~
 Tithe Vault of Iron Teeth lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -655,10 +659,10 @@ S
 @@mForge of Funeral Steel@@n~
 Forge of Funeral Steel lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Banked coals glow violet beneath grates shaped like cathedral rose windows.
+Banked coals glow violet beneath grates shaped like cathedral rose windows.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -669,10 +673,10 @@ S
 @@mSmelter Steps@@n~
 Smelter Steps lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -683,10 +687,10 @@ S
 @@mDripstone Armory@@n~
 Dripstone Armory lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Weapon racks display funeral steel arranged with priestly precision.
+Weapon racks display funeral steel arranged with priestly precision.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -697,10 +701,10 @@ S
 @@mArsenal of Veinfire@@n~
 Arsenal of Veinfire lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -711,10 +715,10 @@ S
 @@mWarden's Dais@@n~
 Warden's Dais lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -725,10 +729,10 @@ S
 @@mBridge of Charred Pennants@@n~
 Bridge of Charred Pennants lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Beneath the bridge yawns a shaft full of torn pennants and extinguished braziers.
+Beneath the bridge yawns a shaft full of torn pennants and extinguished braziers.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -739,10 +743,10 @@ S
 @@mMercyless Guardpost@@n~
 Mercyless Guardpost lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -753,10 +757,10 @@ S
 @@mThe Last Portcullis@@n~
 The Last Portcullis lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-The gate teeth are etched with names, each notch marking a penitent execution.
+The gate teeth are etched with names, each notch marking a penitent execution.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -767,10 +771,10 @@ S
 @@mWar-crypt Antechamber@@n~
 War-crypt Antechamber lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -781,20 +785,20 @@ S
 @@mExecution Chapel@@n~
 Execution Chapel lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Rows of pews kneel toward an altar where wax and blood have become one lacquered crust.
+Rows of pews kneel toward an altar where wax and blood have become one lacquered crust.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 4 3
 S
 #11255
 @@mSpiral of Mourning Stars@@n~
 Spiral of Mourning Stars lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
+Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -805,10 +809,10 @@ S
 @@mObservatory of Drowned Constellations@@n~
 Observatory of Drowned Constellations lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Brass lenses point through slits in the vault, studying a sky of moving void.
+Brass lenses point through slits in the vault, studying a sky of moving void.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -819,10 +823,10 @@ S
 @@mArcane Choir Loft@@n~
 Arcane Choir Loft lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -833,10 +837,10 @@ S
 @@mThe Gloom Compass Hall@@n~
 The Gloom Compass Hall lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -847,10 +851,10 @@ S
 @@mAstral Ossuary@@n~
 Astral Ossuary lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -861,10 +865,10 @@ S
 @@mMoonwell of Black Milk@@n~
 Moonwell of Black Milk lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-A circular basin ripples with black milk that reflects stars no sky should hold.
+A circular basin ripples with black milk that reflects stars no sky should hold.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -875,10 +879,10 @@ S
 @@mPhial Laboratory@@n~
 Phial Laboratory lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Glassware hangs from hooked chains, filled with reagents that pulse in bruise-violet bands.
+Glassware hangs from hooked chains, filled with reagents that pulse in bruise-violet bands.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -889,10 +893,10 @@ S
 @@mRune-Braided Passage@@n~
 Rune-Braided Passage lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -903,10 +907,10 @@ S
 @@mShadow Orrery@@n~
 Shadow Orrery lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Metal planets turn around a black sun, ticking like a gigantic clockwork heart.
+Metal planets turn around a black sun, ticking like a gigantic clockwork heart.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -917,10 +921,10 @@ S
 @@mHematite Planetarium@@n~
 Hematite Planetarium lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-A domed ceiling maps dead constellations in powdered hematite and bone ash.
+A domed ceiling maps dead constellations in powdered hematite and bone ash.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -931,10 +935,10 @@ S
 @@mAetheric Causeway@@n~
 Aetheric Causeway lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-The long approach channels pilgrims into a single file between watching statues.
+The long approach channels pilgrims into a single file between watching statues.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -945,10 +949,10 @@ S
 @@mVault of Crystalline Screams@@n~
 Vault of Crystalline Screams lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 0 3
 D0
 ~
@@ -959,10 +963,10 @@ S
 @@mThe Null-Sigil Gallery@@n~
 The Null-Sigil Gallery lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
+Obsidian tiles veined with silver dust frame the passage while murmured prayers spoken backward circles the chamber without a source.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -973,10 +977,10 @@ S
 @@mNight Prism Landing@@n~
 Night Prism Landing lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
+Needle-thin buttresses frame the passage while the drip of something thicker than water circles the chamber without a source.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -987,10 +991,10 @@ S
 @@mApse of Broken Prophecies@@n~
 Apse of Broken Prophecies lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
+Iron ribs fused into the ceiling frame the passage while the rustle of unseen vestments circles the chamber without a source.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 0 3
 D0
 ~
@@ -1001,10 +1005,10 @@ S
 @@mThe Starved Abbot's Pinnacle@@n~
 The Starved Abbot's Pinnacle lies steeped in amethyst witchflame, its stones lacquered with soot and violet varnish.
 
-Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
+Gargoyles with cracked teeth frame the passage while a distant organ moan circles the chamber without a source.
 
-The air tastes of cold iron and old incense.
-~
+The air tastes of cold iron and old incense.
+~
 0 3
 D0
 ~
@@ -1015,20 +1019,20 @@ S
 @@mRoot of the Heartspire@@n~
 Root of the Heartspire lies steeped in bruise-colored lanternlight, its stones lacquered with soot and violet varnish.
 
-Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
+Saintly effigies with broken eyes frame the passage while ravens scratching behind stone circles the chamber without a source.
 
-A violet draft crawls over your skin like wet silk.
-~
+A violet draft crawls over your skin like wet silk.
+~
 4 3
 S
 #11272
 @@mCauseway of Converging Wings@@n~
 Causeway of Converging Wings lies steeped in violet-black candlelight, its stones lacquered with soot and violet varnish.
 
-The long approach channels pilgrims into a single file between watching statues.
+The long approach channels pilgrims into a single file between watching statues.
 
-Every breath fogs black before vanishing into the stone.
-~
+Every breath fogs black before vanishing into the stone.
+~
 0 3
 D0
 ~
@@ -1039,10 +1043,10 @@ S
 @@mSanctum of the Ebon Pulse@@n~
 Sanctum of the Ebon Pulse lies steeped in ink-violet moonshine, its stones lacquered with soot and violet varnish.
 
-Prayer sigils burn in the stone as though etched by lightning and grief.
+Prayer sigils burn in the stone as though etched by lightning and grief.
 
-Somewhere nearby, chains tap a slow funeral rhythm.
-~
+Somewhere nearby, chains tap a slow funeral rhythm.
+~
 0 3
 D0
 ~
@@ -1053,10 +1057,10 @@ S
 @@mThe Umbral Crownseat@@n~
 The Umbral Crownseat lies steeped in cold plum fire, its stones lacquered with soot and violet varnish.
 
-The crownseat rises above steps of onyx, surrounded by severed standards and votive skulls.
+The crownseat rises above steps of onyx, surrounded by severed standards and votive skulls.
 
-Your shadow stretches wrong, lagging half a heartbeat behind you.
-~
+Your shadow stretches wrong, lagging half a heartbeat behind you.
+~
 4 3
 S
 #0
@@ -1066,10 +1070,10 @@ crypt acolyte~
 @@RA Crypt Acolyte@@n~
 A crypt acolyte stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 30 0
 1400 -45 10 13
@@ -1083,10 +1087,10 @@ grave cantor~
 @@RA Grave Cantor@@n~
 A grave cantor stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 31 0
 1435 -45 10 13
@@ -1100,10 +1104,10 @@ black-velvet duelist~
 @@RA Black-Velvet Duelist@@n~
 A black-velvet duelist stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 32 0
 1470 -45 10 13
@@ -1117,10 +1121,10 @@ ossuary pikeman~
 @@RA Ossuary Pikeman@@n~
 A ossuary pikeman stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 33 0
 1505 -45 10 13
@@ -1134,10 +1138,10 @@ candle-fed hexer~
 @@RA Candle-Fed Hexer@@n~
 A candle-fed hexer stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 34 0
 1540 -45 10 13
@@ -1151,10 +1155,10 @@ mourning hound~
 @@RA Mourning Hound@@n~
 A mourning hound stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 35 0
 1575 -45 10 13
@@ -1168,10 +1172,10 @@ veilbound archer~
 @@RA Veilbound Archer@@n~
 A veilbound archer stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 36 0
 1610 -45 10 13
@@ -1185,10 +1189,10 @@ gargoyle servitor~
 @@RA Gargoyle Servitor@@n~
 A gargoyle servitor stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 37 0
 1645 -45 10 13
@@ -1202,10 +1206,10 @@ ink-priest~
 @@RA Ink-Priest@@n~
 A ink-priest stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 38 0
 1680 -45 10 13
@@ -1219,10 +1223,10 @@ ravenous ghoul~
 @@RA Ravenous Ghoul@@n~
 A ravenous ghoul stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 39 0
 1715 -45 10 13
@@ -1236,10 +1240,10 @@ cathedral butcher~
 @@RA Cathedral Butcher@@n~
 A cathedral butcher stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 40 0
 1750 -45 10 13
@@ -1253,10 +1257,10 @@ thorn reliquarist~
 @@RA Thorn Reliquarist@@n~
 A thorn reliquarist stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 30 0
 1785 -45 10 13
@@ -1270,10 +1274,10 @@ night watch penitent~
 @@RA Night Watch Penitent@@n~
 A night watch penitent stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 31 0
 1820 -45 10 13
@@ -1287,10 +1291,10 @@ funeral alchemist~
 @@RA Funeral Alchemist@@n~
 A funeral alchemist stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 32 0
 1855 -45 10 13
@@ -1304,10 +1308,10 @@ bone choir adept~
 @@RA Bone Choir Adept@@n~
 A bone choir adept stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 33 0
 1890 -45 10 13
@@ -1321,10 +1325,10 @@ vitrified templar~
 @@RA Vitrified Templar@@n~
 A vitrified templar stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 34 0
 1925 -45 10 13
@@ -1338,10 +1342,10 @@ starved confessor~
 @@RA Starved Confessor@@n~
 A starved confessor stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 35 0
 1960 -45 10 13
@@ -1355,10 +1359,10 @@ sepulcher huntress~
 @@RA Sepulcher Huntress@@n~
 A sepulcher huntress stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 36 0
 1995 -45 10 13
@@ -1372,10 +1376,10 @@ dread chorister~
 @@RA Dread Chorister@@n~
 A dread chorister stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 37 0
 2030 -45 10 13
@@ -1389,10 +1393,10 @@ bloodwax curate~
 @@RA Bloodwax Curate@@n~
 A bloodwax curate stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 38 0
 2065 -45 10 13
@@ -1406,10 +1410,10 @@ casket dragger~
 @@RA Casket Dragger@@n~
 A casket dragger stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 39 0
 2100 -45 10 13
@@ -1423,10 +1427,10 @@ chain-lashed beadle~
 @@RA Chain-Lashed Beadle@@n~
 A chain-lashed beadle stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 40 0
 2135 -45 10 13
@@ -1440,10 +1444,10 @@ iron psalmist~
 @@RA Iron Psalmist@@n~
 A iron psalmist stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 30 0
 2170 -45 10 13
@@ -1457,10 +1461,10 @@ graveglass seer~
 @@RA Graveglass Seer@@n~
 A graveglass seer stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 31 0
 2205 -45 10 13
@@ -1474,10 +1478,10 @@ vellum excoriator~
 @@RA Vellum Excoriator@@n~
 A vellum excoriator stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 32 0
 2240 -45 10 13
@@ -1491,10 +1495,10 @@ midnight flagellant~
 @@RA Midnight Flagellant@@n~
 A midnight flagellant stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 33 0
 2275 -45 10 13
@@ -1508,10 +1512,10 @@ crypt mastiff~
 @@RA Crypt Mastiff@@n~
 A crypt mastiff stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 34 0
 2310 -45 10 13
@@ -1525,10 +1529,10 @@ cinder sacristan~
 @@RA Cinder Sacristan@@n~
 A cinder sacristan stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 35 0
 2345 -45 10 13
@@ -1542,10 +1546,10 @@ ashen margrave~
 @@RA Ashen Margrave@@n~
 A ashen margrave stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 36 0
 2380 -45 10 13
@@ -1559,10 +1563,10 @@ veil-stitched assassin~
 @@RA Veil-Stitched Assassin@@n~
 A veil-stitched assassin stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 37 0
 2415 -45 10 13
@@ -1576,10 +1580,10 @@ hollow cantor~
 @@RA Hollow Cantor@@n~
 A hollow cantor stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 38 0
 2450 -45 10 13
@@ -1593,10 +1597,10 @@ umbra novice~
 @@RA Umbra Novice@@n~
 A umbra novice stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 39 0
 2485 -45 10 13
@@ -1610,10 +1614,10 @@ sable outrider~
 @@RA Sable Outrider@@n~
 A sable outrider stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 40 0
 2520 -45 10 13
@@ -1627,10 +1631,10 @@ rosecrypt fencer~
 @@RA Rosecrypt Fencer@@n~
 A rosecrypt fencer stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 30 0
 2555 -45 10 13
@@ -1644,10 +1648,10 @@ lantern exciseman~
 @@RA Lantern Exciseman@@n~
 A lantern exciseman stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 31 0
 2590 -45 10 13
@@ -1661,10 +1665,10 @@ obituary monk~
 @@RA Obituary Monk@@n~
 A obituary monk stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 32 0
 2625 -45 10 13
@@ -1678,10 +1682,10 @@ rime gargoyle~
 @@RA Rime Gargoyle@@n~
 A rime gargoyle stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 33 0
 2660 -45 10 13
@@ -1695,10 +1699,10 @@ oath-forged pikeman~
 @@RA Oath-Forged Pikeman@@n~
 A oath-forged pikeman stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 34 0
 2695 -45 10 13
@@ -1712,10 +1716,10 @@ dusk chamberlain~
 @@RA Dusk Chamberlain@@n~
 A dusk chamberlain stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 35 0
 2730 -45 10 13
@@ -1729,10 +1733,10 @@ gloom archivist~
 @@RA Gloom Archivist@@n~
 A gloom archivist stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 36 0
 2765 -45 10 13
@@ -1746,10 +1750,10 @@ starless confessor~
 @@RA Starless Confessor@@n~
 A starless confessor stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 37 0
 2800 -45 10 13
@@ -1763,10 +1767,10 @@ raven choir page~
 @@RA Raven Choir Page@@n~
 A raven choir page stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 38 0
 2835 -45 10 13
@@ -1780,10 +1784,10 @@ iron reliquary warden~
 @@RA Iron Reliquary Warden@@n~
 A iron reliquary warden stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 39 0
 2870 -45 10 13
@@ -1797,10 +1801,10 @@ black chapel zealot~
 @@RA Black Chapel Zealot@@n~
 A black chapel zealot stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 40 0
 2905 -45 10 13
@@ -1814,10 +1818,10 @@ veil-torn huntmaster~
 @@RA Veil-Torn Huntmaster@@n~
 A veil-torn huntmaster stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 30 0
 2940 -45 10 13
@@ -1831,10 +1835,10 @@ cathedral outrider~
 @@RA Cathedral Outrider@@n~
 A cathedral outrider stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 31 0
 2975 -45 10 13
@@ -1848,10 +1852,10 @@ smoke-eyed oracle~
 @@RA Smoke-Eyed Oracle@@n~
 A smoke-eyed oracle stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 32 0
 3010 -45 10 13
@@ -1865,10 +1869,10 @@ shroud duelist~
 @@RA Shroud Duelist@@n~
 A shroud duelist stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 33 0
 3045 -45 10 13
@@ -1882,10 +1886,10 @@ ink-blood chanter~
 @@RA Ink-Blood Chanter@@n~
 A ink-blood chanter stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 34 0
 3080 -45 10 13
@@ -1899,10 +1903,10 @@ ash veiled torturer~
 @@RA Ash Veiled Torturer@@n~
 A ash veiled torturer stalks this hall with predatory devotion.
 
-~
+~
 Robes, mail, and ritual scars mark this servant of the Heartspire as both soldier and supplicant.
 
-~
+~
 16419 0 -500 S
 35 0
 3115 -45 10 13
@@ -1916,11 +1920,11 @@ thorn-crowned castellan boss~
 @@DA Thorn-Crowned Castellan@@n~
 Thorn-Crowned Castellan waits in absolute stillness, as if listening to a choir beneath the stone.
 
-~
+~
 Ceremonial armor and rune-laced regalia radiate violet-black menace from every seam.
 
-~
-33570818 0 -900 S
+~
+33570819 0 -900 S
 45 0
 5000 -80 18 22
 ! 0 0 0 7 0 0 0
@@ -1933,11 +1937,11 @@ lady vespera the mirror-queen boss~
 @@DA Lady Vespera the Mirror-Queen@@n~
 Lady Vespera the Mirror-Queen waits in absolute stillness, as if listening to a choir beneath the stone.
 
-~
+~
 Ceremonial armor and rune-laced regalia radiate violet-black menace from every seam.
 
-~
-33570818 0 -900 S
+~
+33570819 0 -900 S
 45 0
 5000 -80 18 22
 ! 0 0 0 7 0 0 0
@@ -1950,11 +1954,11 @@ marshal of the iron wake boss~
 @@DA Marshal of the Iron Wake@@n~
 Marshal of the Iron Wake waits in absolute stillness, as if listening to a choir beneath the stone.
 
-~
+~
 Ceremonial armor and rune-laced regalia radiate violet-black menace from every seam.
 
-~
-33570818 0 -900 S
+~
+33570819 0 -900 S
 45 0
 5000 -80 18 22
 ! 0 0 0 7 0 0 0
@@ -1967,11 +1971,11 @@ the astral mortifier boss~
 @@DA The Astral Mortifier@@n~
 The Astral Mortifier waits in absolute stillness, as if listening to a choir beneath the stone.
 
-~
+~
 Ceremonial armor and rune-laced regalia radiate violet-black menace from every seam.
 
-~
-33570818 0 -900 S
+~
+33570819 0 -900 S
 45 0
 5000 -80 18 22
 ! 0 0 0 7 0 0 0
@@ -1984,11 +1988,11 @@ abbot noctivar, ebon hierophant boss~
 @@DA Abbot Noctivar, Ebon Hierophant@@n~
 Abbot Noctivar, Ebon Hierophant waits in absolute stillness, as if listening to a choir beneath the stone.
 
-~
+~
 Ceremonial armor and rune-laced regalia radiate violet-black menace from every seam.
 
-~
-33570818 0 -900 S
+~
+33570819 0 -900 S
 45 0
 5000 -80 18 22
 ! 0 0 0 7 0 0 0
@@ -2541,123 +2545,234 @@ L
 #0
 #RESETS
 M 0 11200 1 11203 (null)
-G 1 11200 0
+
+G 0 11200 0 
+
 M 0 11201 1 11204 (null)
-G 1 11201 0
+
+G 0 11201 0 
+
 M 0 11202 1 11205 (null)
-G 1 11202 0
+
+G 0 11202 0 
+
 M 0 11203 1 11206 (null)
-G 1 11203 0
+
+G 0 11203 0 
+
 M 0 11204 1 11207 (null)
-G 1 11204 0
+
+G 0 11204 0 
+
 M 0 11205 1 11208 (null)
-G 1 11205 0
+
+G 0 11205 0 
+
 M 0 11206 1 11209 (null)
-G 1 11206 0
+
+G 0 11206 0 
+
 M 0 11207 1 11210 (null)
-G 1 11207 0
+
+G 0 11207 0 
+
 M 0 11208 1 11211 (null)
-G 1 11208 0
+
+G 0 11208 0 
+
 M 0 11209 1 11212 (null)
-G 1 11209 0
+
+G 0 11209 0 
+
 M 0 11210 1 11213 (null)
-G 1 11210 0
+
+G 0 11210 0 
+
 M 0 11211 1 11214 (null)
-G 1 11211 0
+
+G 0 11211 0 
+
 M 0 11212 1 11215 (null)
-G 1 11212 0
+
+G 0 11212 0 
+
 M 0 11213 1 11216 (null)
-G 1 11213 0
+
+G 0 11213 0 
+
 M 0 11214 1 11217 (null)
-G 1 11214 0
+
+G 0 11214 0 
+
 M 0 11215 1 11218 (null)
-G 1 11215 0
+
+G 0 11215 0 
+
 M 0 11216 1 11219 (null)
-G 1 11216 0
+
+G 0 11216 0 
+
 M 0 11217 1 11221 (null)
-G 1 11217 0
+
+G 0 11217 0 
+
 M 0 11218 1 11222 (null)
-G 1 11218 0
+
+G 0 11218 0 
+
 M 0 11219 1 11223 (null)
-G 1 11219 0
+
+G 0 11219 0 
+
 M 0 11220 1 11224 (null)
-G 1 11220 0
+
+G 0 11220 0 
+
 M 0 11221 1 11225 (null)
-G 1 11221 0
+
+G 0 11221 0 
+
 M 0 11222 1 11226 (null)
-G 1 11222 0
+
+G 0 11222 0 
+
 M 0 11223 1 11227 (null)
-G 1 11223 0
+
+G 0 11223 0 
+
 M 0 11224 1 11228 (null)
-G 1 11224 0
+
+G 0 11224 0 
+
 M 0 11225 1 11229 (null)
-G 1 11225 0
+
+G 0 11225 0 
+
 M 0 11226 1 11230 (null)
-G 1 11226 0
+
+G 0 11226 0 
+
 M 0 11227 1 11231 (null)
-G 1 11227 0
+
+G 0 11227 0 
+
 M 0 11228 1 11232 (null)
-G 1 11228 0
+
+G 0 11228 0 
+
 M 0 11229 1 11233 (null)
-G 1 11229 0
+
+G 0 11229 0 
+
 M 0 11230 1 11234 (null)
-G 1 11230 0
+
+G 0 11230 0 
+
 M 0 11231 1 11235 (null)
-G 1 11231 0
+
+G 0 11231 0 
+
 M 0 11232 1 11236 (null)
-G 1 11232 0
+
+G 0 11232 0 
+
 M 0 11233 1 11238 (null)
-G 1 11233 0
+
+G 0 11233 0 
+
 M 0 11234 1 11239 (null)
-G 1 11234 0
+
+G 0 11234 0 
+
 M 0 11235 1 11240 (null)
-G 1 11235 0
+
+G 0 11235 0 
+
 M 0 11236 1 11241 (null)
-G 1 11236 0
+
+G 0 11236 0 
+
 M 0 11237 1 11242 (null)
-G 1 11237 0
+
+G 0 11237 0 
+
 M 0 11238 1 11243 (null)
-G 1 11238 0
+
+G 0 11238 0 
+
 M 0 11239 1 11244 (null)
-G 1 11239 0
+
+G 0 11239 0 
+
 M 0 11240 1 11245 (null)
-G 1 11240 0
+
+G 0 11240 0 
+
 M 0 11241 1 11246 (null)
-G 1 11241 0
+
+G 0 11241 0 
+
 M 0 11242 1 11247 (null)
-G 1 11242 0
+
+G 0 11242 0 
+
 M 0 11243 1 11248 (null)
-G 1 11243 0
+
+G 0 11243 0 
+
 M 0 11244 1 11249 (null)
-G 1 11244 0
+
+G 0 11244 0 
+
 M 0 11245 1 11250 (null)
-G 1 11245 0
+
+G 0 11245 0 
+
 M 0 11246 1 11251 (null)
-G 1 11246 0
+
+G 0 11246 0 
+
 M 0 11247 1 11252 (null)
-G 1 11247 0
+
+G 0 11247 0 
+
 M 0 11248 1 11253 (null)
-G 1 11248 0
+
+G 0 11248 0 
+
 M 0 11249 1 11255 (null)
-G 1 11249 0
+
+G 0 11249 0 
+
 M 0 11250 1 11220 (null)
-G 1 11252 0
-G 1 11256 0
+
+G 0 11252 0 
+
+G 0 11256 0 
+
 M 0 11251 1 11237 (null)
-G 1 11253 0
-G 1 11257 0
+
+G 0 11253 0 
+
+G 0 11257 0 
+
 M 0 11252 1 11254 (null)
-G 1 11254 0
-G 1 11258 0
+
+G 0 11254 0 
+
+G 0 11258 0 
+
 M 0 11253 1 11271 (null)
-G 1 11255 0
-G 1 11259 0
+
+G 0 11255 0 
+
+G 0 11259 0 
+
 M 0 11254 1 11274 (null)
-G 1 11256 0
-G 1 11256 0
-S
-#SHOPS
-0
-#SPECIALS
+
+G 0 11256 0 
+
+G 0 11256 0 
+
 S
 #$
