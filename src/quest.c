@@ -37,6 +37,10 @@ CHAR_DATA *get_quest_target args((int min_level, int max_level));
 CHAR_DATA *get_quest_giver args((int min_level, int max_level));
 OBJ_DATA *load_quest_object args((CHAR_DATA * target));
 void clear_quest args((void));
+sh_int quest_tier_from_level args((int mob_level));
+void quest_set_crusade_level_range_for_tier args((sh_int tier, int *minimum_level, int *maximum_level));
+void quest_set_effective_crusade_level_range args((sh_int tier, int highest_level_in_range, int *minimum_level, int *maximum_level));
+int quest_crusade_level_cap_for_range args((int range_minimum, int range_maximum, int highest_level_in_range));
 
 static void format_quest_message(char *dest, const char *message,
                                  const char *value1, const char *value2)
@@ -83,32 +87,115 @@ static void format_quest_message(char *dest, const char *message,
 
 void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level, int *maximum_level)
 {
-   int min_level;
-   int max_level;
+   int resolved_level;
+   sh_int tier;
 
    if (minimum_level == NULL || maximum_level == NULL)
       return;
 
-   min_level = URANGE(1, mob_level - 30, MAX_LEVEL);
-   max_level = URANGE(1, mob_level + 20, MAX_LEVEL);
-   max_level = UMAX(min_level, max_level);
+   resolved_level = URANGE(1, mob_level, 170);
+   tier = quest_tier_from_level(resolved_level);
+   quest_set_crusade_level_range_for_tier(tier, minimum_level, maximum_level);
+}
 
-   *minimum_level = min_level;
-   *maximum_level = max_level;
+sh_int quest_tier_from_level(int mob_level)
+{
+   if (mob_level <= 100)
+      return 1;
+
+   if (mob_level <= 149)
+      return 2;
+
+   return 3;
+}
+
+void quest_set_crusade_level_range_for_tier(sh_int tier, int *minimum_level, int *maximum_level)
+{
+   if (minimum_level == NULL || maximum_level == NULL)
+      return;
+
+   if (tier == 1)
+   {
+      *minimum_level = 1;
+      *maximum_level = 100;
+      return;
+   }
+
+   if (tier == 2)
+   {
+      *minimum_level = 101;
+      *maximum_level = 149;
+      return;
+   }
+
+   *minimum_level = 150;
+   *maximum_level = 170;
+}
+
+void quest_set_effective_crusade_level_range(sh_int tier,
+                                             int highest_level_in_range,
+                                             int *minimum_level,
+                                             int *maximum_level)
+{
+   int capped_max;
+
+   quest_set_crusade_level_range_for_tier(tier, minimum_level, maximum_level);
+
+   if (minimum_level == NULL || maximum_level == NULL)
+      return;
+
+   if (highest_level_in_range <= 0)
+      return;
+
+   capped_max = quest_crusade_level_cap_for_range(*minimum_level, *maximum_level, highest_level_in_range);
+   *maximum_level = capped_max;
+}
+
+int quest_crusade_level_cap_for_range(int range_minimum, int range_maximum, int highest_level_in_range)
+{
+   int cap_level;
+
+   cap_level = UMIN(range_maximum, highest_level_in_range + 20);
+   cap_level = UMAX(range_minimum, cap_level);
+
+   return cap_level;
+}
+
+void quest_note_player_crusade_range(int pseudo_level,
+                                     int *highest_mortal,
+                                     int *highest_remortal,
+                                     int *highest_adept)
+{
+   if ((highest_mortal == NULL) || (highest_remortal == NULL) || (highest_adept == NULL))
+      return;
+
+   if (pseudo_level <= 100)
+   {
+      if (pseudo_level > *highest_mortal)
+         *highest_mortal = pseudo_level;
+      return;
+   }
+
+   if (pseudo_level <= 149)
+   {
+      if (pseudo_level > *highest_remortal)
+         *highest_remortal = pseudo_level;
+      return;
+   }
+
+   if (pseudo_level > *highest_adept)
+      *highest_adept = pseudo_level;
 }
 
 sh_int quest_resolve_crusade_personality(sh_int personality, int mob_level)
 {
+   int resolved_level;
+
    if (personality >= 1 && personality <= 3)
       return personality;
 
-   if (mob_level < 60)
-      return 1;
-
-   if (mob_level < 100)
-      return 2;
-
-   return 3;
+   resolved_level = URANGE(1, mob_level, 170);
+   return quest_tier_from_level(resolved_level);
 }
 
 
@@ -250,6 +337,7 @@ void do_quest(CHAR_DATA *ch, char *argument)
    extern int quest_wait;
    extern int quest_level_min;
    extern int quest_level_max;
+   extern sh_int quest_personality;
 
    char buf[MAX_STRING_LENGTH];
    char new_long_desc[MAX_STRING_LENGTH];
@@ -326,6 +414,8 @@ void do_quest(CHAR_DATA *ch, char *argument)
       int a = 80;
       int b = 0;
       sh_int player_count = 0, average_level = 0, total_levels = 0;
+      int highest_mortal = 0, highest_remortal = 0, highest_adept = 0;
+      int highest_level_for_range = 0;
 
       /*
        * generate a new quest!
@@ -347,10 +437,15 @@ void do_quest(CHAR_DATA *ch, char *argument)
        */
       for (d = first_desc; d; d = d->next)
       {
-         if ((d->connected != CON_PLAYING) || (IS_IMMORTAL(d->character)))
+         int pseudo_level;
+
+         if ((d->connected != CON_PLAYING) || (d->character == NULL) || (IS_IMMORTAL(d->character)))
             continue;
          player_count += 1;
          total_levels += d->character->level;
+
+         pseudo_level = get_psuedo_level(d->character);
+         quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal, &highest_adept);
       }
       average_level = (((total_levels == 0) ? 30 : total_levels) / ((player_count == 0) ? 1 : player_count));
       a = average_level - 20;
@@ -361,9 +456,32 @@ void do_quest(CHAR_DATA *ch, char *argument)
          send_to_char("Failed to find a quest mob\n\r", ch);
          return;
       }
-      quest_set_crusade_level_range_for_mob_level(quest_mob->level, &quest_level_min, &quest_level_max);
-      a = quest_level_min;
-      b = quest_level_max;
+      quest_personality = quest_tier_from_level(quest_mob->level);
+
+      if (quest_personality == 1)
+         highest_level_for_range = highest_mortal;
+      else if (quest_personality == 2)
+         highest_level_for_range = highest_remortal;
+      else
+         highest_level_for_range = highest_adept;
+
+      quest_set_effective_crusade_level_range(quest_personality,
+                                              highest_level_for_range,
+                                              &a,
+                                              &b);
+
+      quest_level_min = a;
+      quest_level_max = b;
+
+      if ((quest_mob->level < a) || (quest_mob->level > b))
+      {
+         quest_mob = get_quest_giver(a, b);
+         if (quest_mob == NULL)
+         {
+            send_to_char("Failed to find a quest mob\n\r", ch);
+            return;
+         }
+      }
 
       quest_target = get_quest_target(a, b);
       if ((quest_target == NULL) || (quest_target == quest_mob))
@@ -405,6 +523,7 @@ void do_quest(CHAR_DATA *ch, char *argument)
       SET_BIT(quest_mob->act, PLR_NOSUMMON);
       SET_BIT(quest_mob->act, PLR_NOVISIT);
       SET_BIT(quest_mob->act, PLR_NOBLOOD);
+      SET_BIT(quest_mob->act, ACT_NO_HUNT);
 
       new_long_desc[0] = '\0';
       if (quest_target->long_descr_orig != NULL)
@@ -418,6 +537,7 @@ void do_quest(CHAR_DATA *ch, char *argument)
       SET_BIT(quest_target->act, PLR_NOSUMMON);
       SET_BIT(quest_target->act, PLR_NOVISIT);
       SET_BIT(quest_target->act, PLR_NOBLOOD);
+      SET_BIT(quest_target->act, ACT_NO_HUNT);
 
       send_to_char("QUEST STARTED!\n\r\n\r", ch);
 
@@ -680,6 +800,10 @@ void clear_quest()
       quest_mob->long_descr = str_dup(quest_mob->long_descr_orig);
       free_string(quest_mob->long_descr_orig);
       quest_mob->long_descr_orig = NULL;
+      REMOVE_BIT(quest_mob->act, PLR_NOSUMMON);
+      REMOVE_BIT(quest_mob->act, PLR_NOVISIT);
+      REMOVE_BIT(quest_mob->act, PLR_NOBLOOD);
+      REMOVE_BIT(quest_mob->act, ACT_NO_HUNT);
    }
    if (quest_target)
    {
@@ -687,6 +811,10 @@ void clear_quest()
       quest_target->long_descr = str_dup(quest_target->long_descr_orig);
       free_string(quest_target->long_descr_orig);
       quest_target->long_descr_orig = NULL;
+      REMOVE_BIT(quest_target->act, PLR_NOSUMMON);
+      REMOVE_BIT(quest_target->act, PLR_NOVISIT);
+      REMOVE_BIT(quest_target->act, PLR_NOBLOOD);
+      REMOVE_BIT(quest_target->act, ACT_NO_HUNT);
    };
 
    quest_mob = NULL;
@@ -720,7 +848,17 @@ void generate_auto_quest()
 
    int a = 170;
    int b = 0;
-   sh_int player_count = 0, average_level = 0, total_levels = 0;
+   sh_int player_count = 0;
+   int highest_mortal = 0;
+   int highest_remortal = 0;
+   int highest_adept = 0;
+   int highest_level_for_range = 0;
+   bool has_mortal = FALSE;
+   bool has_remortal = FALSE;
+   bool has_adept = FALSE;
+   sh_int available_ranges[3];
+   sh_int available_count = 0;
+   sh_int selected_range = 1;
 
    /*
     * generate a new quest!
@@ -730,130 +868,171 @@ void generate_auto_quest()
       return;
    }
 
+   quest_mob = NULL;
+   quest_target = NULL;
+
    /*
     * Work out levels of currently playing folks
     */
-   if (first_desc && first_desc->connected == CON_PLAYING)
+   for (d = first_desc; d; d = d->next)
    {
-      for (d = first_desc; d; d = d->next)
-      {
-         if (d->connected != CON_PLAYING)
-            continue;
-         player_count += 1;
-         total_levels += d->character->level;
-      }
-      player_count = UMAX(1, player_count);
-      average_level = (total_levels / player_count);
+      int pseudo_level;
 
-      quest_mob = NULL;
-      quest_target = NULL;
+      if (d->connected != CON_PLAYING || d->character == NULL || IS_IMMORTAL(d->character))
+         continue;
 
-      average_level = number_range(0, 99);
-      if (average_level < 20)
-      {
-         a = number_range(5, 25);
-         b = number_range(30, 45);
-         hunt_flags = HUNT_WORLD | HUNT_OPENDOOR;
-         quest_personality = 1;
-      }
-      else if (average_level < 65)
-      {
-         a = number_range(40, 55);
-         b = number_range(60, 84);
-         hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR;
-         quest_personality = 2;
-      }
+      player_count += 1;
+      pseudo_level = get_psuedo_level(d->character);
+
+      quest_note_player_crusade_range(pseudo_level, &highest_mortal, &highest_remortal, &highest_adept);
+
+      if (pseudo_level <= 100)
+         has_mortal = TRUE;
+      else if (pseudo_level <= 149)
+         has_remortal = TRUE;
       else
-      {
-         a = number_range(100, 110);
-         b = number_range(115, 170);
-         hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR;
-         quest_personality = 3;
-      }
+         has_adept = TRUE;
+   }
 
-      while ((quest_mob == NULL) && (loop_counter < 500))
-      {
-         loop_counter++;
-         quest_mob = get_quest_giver(a, b);
-         if ((quest_mob == NULL) || ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_mob->in_room, hunt_flags) < 0)))
-            quest_mob = NULL;
-      }
-
-      if (quest_mob == NULL)
-      {
-         quest = FALSE;
-         quest_wait = number_range(1, 3);
-         return;
-      }
-
-      quest_set_crusade_level_range_for_mob_level(quest_mob->level, &quest_level_min, &quest_level_max);
-      a = quest_level_min;
-      b = quest_level_max;
-
-      loop_counter = 0;
-      while ((quest_target == NULL) && (loop_counter < 500))
-      {
-         loop_counter++;
-         quest_target = get_quest_target(a, b);
-         if ((quest_target == NULL) || ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_target->in_room, hunt_flags) < 0)) || (quest_target == quest_mob))
-            quest_target = NULL;
-      }
-
-      if (quest_target == NULL)
-      {
-         quest = FALSE;
-         quest_wait = number_range(1, 3);
-         return;
-      }
-      quest_object = load_quest_object(quest_target);
-      if (quest_object == NULL)
-      {
-         quest = FALSE;
-         quest_wait = number_range(1, 3);
-         return;
-      }
-      /*
-       * Set values on quest item for Qp, Pracs, Exp, Gold
-       */
-      quest_object->value[0] = UMAX(1, (quest_target->level / 20));
-      quest_object->value[1] = UMAX(1, (quest_target->level / 18));
-      quest_object->value[2] = (quest_target->level * 20);
-      quest_object->value[3] = average_level;
-
-      if (number_percent() < 10)
-      {
-         quest_object->value[0] += 2;
-         quest_object->value[1] += 3;
-         quest_object->value[2] *= 2;
-      }
-
-      quest_timer = 0;
-      quest = TRUE;
-      new_long_desc[0] = '\0';
-      if (quest_mob->long_descr_orig != NULL)
-         free_string(quest_mob->long_descr_orig);
-      quest_mob->long_descr_orig = str_dup(quest_mob->long_descr);
-      sprintf(new_long_desc, "%s @@Nsays have you found my %s ?\n\r", quest_mob->short_descr, quest_object->short_descr);
-      if (quest_mob->long_descr != NULL)
-         free_string(quest_mob->long_descr);
-      quest_mob->long_descr = str_dup(new_long_desc);
-      SET_BIT(quest_mob->act, PLR_NOSUMMON);
-      SET_BIT(quest_mob->act, PLR_NOVISIT);
-      SET_BIT(quest_mob->act, PLR_NOBLOOD);
-
-      new_long_desc[0] = '\0';
-      if (quest_target->long_descr_orig != NULL)
-         free_string(quest_target->long_descr_orig);
-      quest_target->long_descr_orig = str_dup(quest_target->long_descr);
-      sprintf(new_long_desc, "%s @@Nsays I stole the %s !!!\n\r", quest_target->short_descr, quest_object->short_descr);
-      if (quest_target->long_descr != NULL)
-         free_string(quest_target->long_descr);
-      quest_target->long_descr = str_dup(new_long_desc);
-
-      SET_BIT(quest_target->act, PLR_NOSUMMON);
-      SET_BIT(quest_target->act, PLR_NOVISIT);
-      SET_BIT(quest_target->act, PLR_NOBLOOD);
-
+   if (player_count == 0)
+   {
+      quest_wait = number_range(1, 3);
       return;
    }
+
+   if (has_mortal)
+      available_ranges[available_count++] = 1;
+   if (has_remortal)
+      available_ranges[available_count++] = 2;
+   if (has_adept)
+      available_ranges[available_count++] = 3;
+
+   if (available_count == 0)
+   {
+      quest_wait = number_range(1, 3);
+      return;
+   }
+
+   selected_range = available_ranges[number_range(0, available_count - 1)];
+
+   if (selected_range == 1)
+   {
+      highest_level_for_range = highest_mortal;
+      hunt_flags = HUNT_WORLD | HUNT_OPENDOOR;
+   }
+   else if (selected_range == 2)
+   {
+      highest_level_for_range = highest_remortal;
+      hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR;
+   }
+   else
+   {
+      highest_level_for_range = highest_adept;
+      hunt_flags = HUNT_WORLD | HUNT_OPENDOOR | HUNT_PICKDOOR | HUNT_UNLOCKDOOR;
+   }
+
+   quest_personality = selected_range;
+   quest_set_effective_crusade_level_range(selected_range,
+                                           highest_level_for_range,
+                                           &a,
+                                           &b);
+
+   while ((quest_mob == NULL) && (loop_counter < 500))
+   {
+      loop_counter++;
+      quest_mob = get_quest_giver(a, b);
+      if ((quest_mob == NULL) || ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_mob->in_room, hunt_flags) < 0)))
+         quest_mob = NULL;
+   }
+
+   if (quest_mob == NULL)
+   {
+      quest = FALSE;
+      quest_wait = number_range(1, 3);
+      return;
+   }
+
+   quest_set_effective_crusade_level_range(selected_range,
+                                           highest_level_for_range,
+                                           &a,
+                                           &b);
+
+   quest_level_min = a;
+   quest_level_max = b;
+
+   if ((quest_mob->level < a) || (quest_mob->level > b))
+   {
+      quest = FALSE;
+      quest_wait = number_range(1, 3);
+      return;
+   }
+
+   loop_counter = 0;
+   while ((quest_target == NULL) && (loop_counter < 500))
+   {
+      loop_counter++;
+      quest_target = get_quest_target(a, b);
+      if ((quest_target == NULL) || ((h_find_dir(get_room_index(ROOM_VNUM_TEMPLE), quest_target->in_room, hunt_flags) < 0)) || (quest_target == quest_mob))
+         quest_target = NULL;
+   }
+
+   if (quest_target == NULL)
+   {
+      quest = FALSE;
+      quest_wait = number_range(1, 3);
+      return;
+   }
+   quest_object = load_quest_object(quest_target);
+   if (quest_object == NULL)
+   {
+      quest = FALSE;
+      quest_wait = number_range(1, 3);
+      return;
+   }
+   /*
+    * Set values on quest item for Qp, Pracs, Exp, Gold
+    */
+   quest_object->value[0] = UMAX(1, (quest_target->level / 20));
+   quest_object->value[1] = UMAX(1, (quest_target->level / 18));
+   quest_object->value[2] = (quest_target->level * 20);
+   quest_object->value[3] = selected_range;
+
+   if (number_percent() < 10)
+   {
+      quest_object->value[0] += 2;
+      quest_object->value[1] += 3;
+      quest_object->value[2] *= 2;
+   }
+
+   quest_timer = 0;
+   quest = TRUE;
+   new_long_desc[0] = '\0';
+   if (quest_mob->long_descr_orig != NULL)
+      free_string(quest_mob->long_descr_orig);
+   quest_mob->long_descr_orig = str_dup(quest_mob->long_descr);
+   sprintf(new_long_desc, "%s @@Nsays have you found my %s ?\n\r", quest_mob->short_descr, quest_object->short_descr);
+   if (quest_mob->long_descr != NULL)
+      free_string(quest_mob->long_descr);
+   quest_mob->long_descr = str_dup(new_long_desc);
+   SET_BIT(quest_mob->act, PLR_NOSUMMON);
+   SET_BIT(quest_mob->act, PLR_NOVISIT);
+   SET_BIT(quest_mob->act, PLR_NOBLOOD);
+   SET_BIT(quest_mob->act, ACT_NO_HUNT);
+
+   new_long_desc[0] = '\0';
+   if (quest_target->long_descr_orig != NULL)
+      free_string(quest_target->long_descr_orig);
+   quest_target->long_descr_orig = str_dup(quest_target->long_descr);
+   sprintf(new_long_desc, "%s @@Nsays I stole the %s !!!\n\r", quest_target->short_descr, quest_object->short_descr);
+   if (quest_target->long_descr != NULL)
+      free_string(quest_target->long_descr);
+   quest_target->long_descr = str_dup(new_long_desc);
+
+   SET_BIT(quest_target->act, PLR_NOSUMMON);
+   SET_BIT(quest_target->act, PLR_NOVISIT);
+   SET_BIT(quest_target->act, PLR_NOBLOOD);
+   SET_BIT(quest_target->act, ACT_NO_HUNT);
+
+   return;
 }
+
