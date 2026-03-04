@@ -21,6 +21,10 @@ D2
 ~
 ~
 0 -1 30251
+D4
+~
+~
+0 0 7307
 S
 #30251
 Censer-Fog Vestibule~
@@ -987,10 +991,10 @@ grave verger violet eclipse servant~
 a grave verger~
 A grave verger keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 25 2
 0 0 0 0
@@ -1004,10 +1008,10 @@ iron censer knight violet eclipse servant~
 a iron censer knight~
 A iron censer knight keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 26 0
 0 0 0 0
@@ -1021,10 +1025,10 @@ veilbound cantor violet eclipse servant~
 a veilbound cantor~
 A veilbound cantor keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 27 0
 0 0 0 0
@@ -1038,10 +1042,10 @@ crypt gargoyle violet eclipse servant~
 a crypt gargoyle~
 A crypt gargoyle keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 28 0
 0 0 0 0
@@ -1055,10 +1059,10 @@ rose-thorn penitent violet eclipse servant~
 a rose-thorn penitent~
 A rose-thorn penitent keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 29 0
 0 0 0 0
@@ -1072,10 +1076,10 @@ bell-forged watcher violet eclipse servant~
 a bell-forged watcher~
 A bell-forged watcher keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 30 2
 0 0 0 0
@@ -1089,10 +1093,10 @@ mirelit chaplain violet eclipse servant~
 a mirelit chaplain~
 A mirelit chaplain keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 31 0
 0 0 0 0
@@ -1106,10 +1110,10 @@ blood quill scribe violet eclipse servant~
 a blood quill scribe~
 A blood quill scribe keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 32 0
 0 0 0 0
@@ -1123,10 +1127,10 @@ obsidian halberdier violet eclipse servant~
 a obsidian halberdier~
 A obsidian halberdier keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 33 0
 0 0 0 0
@@ -1140,10 +1144,10 @@ charnel duelist violet eclipse servant~
 a charnel duelist~
 A charnel duelist keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 34 0
 0 0 0 0
@@ -1157,10 +1161,10 @@ ash veil mystic violet eclipse servant~
 a ash veil mystic~
 A ash veil mystic keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 35 2
 0 0 0 0
@@ -1174,10 +1178,10 @@ sepulchral huntsman violet eclipse servant~
 a sepulchral huntsman~
 A sepulchral huntsman keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 25 0
 0 0 0 0
@@ -1191,10 +1195,10 @@ midnight confessor violet eclipse servant~
 a midnight confessor~
 A midnight confessor keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 26 0
 0 0 0 0
@@ -1208,10 +1212,10 @@ blacklace assassin violet eclipse servant~
 a blacklace assassin~
 A blacklace assassin keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 27 0
 0 0 0 0
@@ -1225,10 +1229,10 @@ hollow reliquary guard violet eclipse servant~
 a hollow reliquary guard~
 A hollow reliquary guard keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 28 0
 0 0 0 0
@@ -1242,10 +1246,10 @@ thornmail sentinel violet eclipse servant~
 a thornmail sentinel~
 A thornmail sentinel keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 29 2
 0 0 0 0
@@ -1259,10 +1263,10 @@ velvet dirgeborn violet eclipse servant~
 a velvet dirgeborn~
 A velvet dirgeborn keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 30 0
 0 0 0 0
@@ -1276,10 +1280,10 @@ cathedral excoriator violet eclipse servant~
 a cathedral excoriator~
 A cathedral excoriator keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 31 0
 0 0 0 0
@@ -1293,10 +1297,10 @@ casket marshal violet eclipse servant~
 a casket marshal~
 A casket marshal keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 32 0
 0 0 0 0
@@ -1310,10 +1314,10 @@ lament archivist violet eclipse servant~
 a lament archivist~
 A lament archivist keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 33 0
 0 0 0 0
@@ -1327,10 +1331,10 @@ votive butcher violet eclipse servant~
 a votive butcher~
 A votive butcher keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 34 2
 0 0 0 0
@@ -1344,10 +1348,10 @@ nocturne acolyte violet eclipse servant~
 a nocturne acolyte~
 A nocturne acolyte keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 35 0
 0 0 0 0
@@ -1361,10 +1365,10 @@ grave-ink theurge violet eclipse servant~
 a grave-ink theurge~
 A grave-ink theurge keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 25 0
 0 0 0 0
@@ -1378,10 +1382,10 @@ catacomb arbalester violet eclipse servant~
 a catacomb arbalester~
 A catacomb arbalester keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 26 0
 0 0 0 0
@@ -1395,10 +1399,10 @@ mourning pikebearer violet eclipse servant~
 a mourning pikebearer~
 A mourning pikebearer keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 27 0
 0 0 0 0
@@ -1412,10 +1416,10 @@ stained-glass revenant violet eclipse servant~
 a stained-glass revenant~
 A stained-glass revenant keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 28 2
 0 0 0 0
@@ -1429,10 +1433,10 @@ bonewire deacon violet eclipse servant~
 a bonewire deacon~
 A bonewire deacon keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 29 0
 0 0 0 0
@@ -1446,10 +1450,10 @@ scarlet altar guard violet eclipse servant~
 a scarlet altar guard~
 A scarlet altar guard keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 30 0
 0 0 0 0
@@ -1463,10 +1467,10 @@ dread psalmist violet eclipse servant~
 a dread psalmist~
 A dread psalmist keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 31 0
 0 0 0 0
@@ -1480,10 +1484,10 @@ crypt-veil reaver violet eclipse servant~
 a crypt-veil reaver~
 A crypt-veil reaver keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 32 0
 0 0 0 0
@@ -1497,10 +1501,10 @@ iron rosary enforcer violet eclipse servant~
 a iron rosary enforcer~
 A iron rosary enforcer keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 33 2
 0 0 0 0
@@ -1514,10 +1518,10 @@ vesper chainbreaker violet eclipse servant~
 a vesper chainbreaker~
 A vesper chainbreaker keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 34 0
 0 0 0 0
@@ -1531,10 +1535,10 @@ funeral torch zealot violet eclipse servant~
 a funeral torch zealot~
 A funeral torch zealot keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 35 0
 0 0 0 0
@@ -1548,10 +1552,10 @@ bloodwax liturgist violet eclipse servant~
 a bloodwax liturgist~
 A bloodwax liturgist keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 25 0
 0 0 0 0
@@ -1565,10 +1569,10 @@ roseglass inquisitor violet eclipse servant~
 a roseglass inquisitor~
 A roseglass inquisitor keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 26 0
 0 0 0 0
@@ -1582,10 +1586,10 @@ hushed nave stalker violet eclipse servant~
 a hushed nave stalker~
 A hushed nave stalker keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 27 2
 0 0 0 0
@@ -1599,10 +1603,10 @@ dirgebound man-at-arms violet eclipse servant~
 a dirgebound man-at-arms~
 A dirgebound man-at-arms keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 28 0
 0 0 0 0
@@ -1616,10 +1620,10 @@ saint-bone collector violet eclipse servant~
 a saint-bone collector~
 A saint-bone collector keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 29 0
 0 0 0 0
@@ -1633,10 +1637,10 @@ gloom censer adept violet eclipse servant~
 a gloom censer adept~
 A gloom censer adept keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 30 0
 0 0 0 0
@@ -1650,10 +1654,10 @@ carrion reliquarist violet eclipse servant~
 a carrion reliquarist~
 A carrion reliquarist keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 31 0
 0 0 0 0
@@ -1667,10 +1671,10 @@ penumbral scourge violet eclipse servant~
 a penumbral scourge~
 A penumbral scourge keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 32 2
 0 0 0 0
@@ -1684,10 +1688,10 @@ ashen choir hunter violet eclipse servant~
 a ashen choir hunter~
 A ashen choir hunter keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 33 0
 0 0 0 0
@@ -1701,10 +1705,10 @@ black mitre disciplinarian violet eclipse servant~
 a black mitre disciplinarian~
 A black mitre disciplinarian keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 34 0
 0 0 0 0
@@ -1718,10 +1722,10 @@ thorn crypt outrider violet eclipse servant~
 a thorn crypt outrider~
 A thorn crypt outrider keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 35 0
 0 0 0 0
@@ -1735,10 +1739,10 @@ grave-cant herald violet eclipse servant~
 a grave-cant herald~
 A grave-cant herald keeps vigil beneath violet torchlight.
 
-~
+~
 This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
 
-~
+~
 65 0 -400 S
 25 0
 0 0 0 0
@@ -1752,10 +1756,10 @@ lady noctyra wing boss~
 @@dLady Noctyra@@N~
 @@dLady Noctyra@@N reigns over this wing's terminal sanctum.
 
-~
+~
 Lady Noctyra stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
 
-~
+~
 33554435 0 -700 S
 40 0
 0 0 0 0
@@ -1769,10 +1773,10 @@ abbot vharos wing boss~
 @@dAbbot Vharos@@N~
 @@dAbbot Vharos@@N reigns over this wing's terminal sanctum.
 
-~
+~
 Abbot Vharos stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
 
-~
+~
 33554435 0 -700 S
 40 0
 0 0 0 0
@@ -1786,10 +1790,10 @@ the thorn cardinal wing boss~
 @@dThe Thorn Cardinal@@N~
 @@dThe Thorn Cardinal@@N reigns over this wing's terminal sanctum.
 
-~
+~
 The Thorn Cardinal stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
 
-~
+~
 33554435 0 -700 S
 40 0
 0 0 0 0
@@ -1803,10 +1807,10 @@ marshal gravemaw wing boss~
 @@dMarshal Gravemaw@@N~
 @@dMarshal Gravemaw@@N reigns over this wing's terminal sanctum.
 
-~
+~
 Marshal Gravemaw stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
 
-~
+~
 33554435 0 -700 S
 40 0
 0 0 0 0
@@ -1820,10 +1824,10 @@ the violet hierophant wing boss~
 @@mThe Violet Hierophant@@N~
 @@mThe Violet Hierophant@@N reigns over this wing's terminal sanctum.
 
-~
+~
 The Violet Hierophant stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
 
-~
+~
 33554435 0 -700 S
 40 0
 0 0 0 0
