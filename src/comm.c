@@ -229,6 +229,11 @@ bool should_show_default_prompt_move(CHAR_DATA *ch) { return prompt_should_show_
 long prompt_max_value_for_code(CHAR_DATA *ch, char code) { return prompt_max_value_for_code_internal(ch, code); }
 void comm_testable_format_builder_prompt(char *dest, size_t dest_size, const char *mode, const char *details) { comm_format_builder_prompt(dest, dest_size, mode, details); }
 void comm_testable_format_class_menu_line(char *dest, size_t dest_size, const char *who_name, const char *stat, const char *class_name) { comm_format_class_menu_line(dest, dest_size, who_name, stat, class_name); }
+
+bool shortfight_should_suppress_watched_autoattack(int observer_is_npc, int observer_has_shortfight, int observer_is_fighting)
+{
+   return !observer_is_npc && observer_has_shortfight && !observer_is_fighting;
+}
 #endif
 
 #ifndef UNIT_TEST_COMM
@@ -3319,6 +3324,12 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
       if (type == TO_ROOM && to == ch)
          continue;
       if (type == TO_NOTVICT && (to == ch || to == vch))
+         continue;
+
+      if (type == TO_NOTVICT
+          && vch != NULL
+          && (ch->fighting == vch || vch->fighting == ch)
+          && shortfight_should_suppress_watched_autoattack(IS_NPC(to), IS_SET(to->config, CONFIG_SHORT_FIGHT), to->fighting != NULL))
          continue;
 
       /*
