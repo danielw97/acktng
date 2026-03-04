@@ -14,6 +14,7 @@ int invasion_test_is_midgaard_area_name(const char *area_name);
 int invasion_test_should_self_destruct_for_path_dir(int dir);
 int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
 int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir);
+int invasion_test_should_explode_at_spawn_room(int room_vnum);
 int invasion_reward_index_for_kill(bool is_boss, int mob_level);
 int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
@@ -214,6 +215,12 @@ static void test_gertrude_explosion_counter_and_thresholds(void)
     assert(invasion_gertrude_should_fall_for_explosions(25) == TRUE);
 }
 
+static void test_spawn_room_explosion_trigger_ignores_combat_state(void)
+{
+    assert(invasion_test_should_explode_at_spawn_room(INVASION_SPAWN_VNUM) == 1);
+    assert(invasion_test_should_explode_at_spawn_room(INVASION_SPAWN_VNUM + 1) == 0);
+}
+
 static void test_is_invasion_mob_ignores_extract_timer_sentinel(void)
 {
     CHAR_DATA mob = {0};
@@ -258,6 +265,7 @@ int main(void)
     test_boss_trash_talk_lines_are_available_per_profile();
     test_invasion_reward_tiers_and_boss_exclusion();
     test_gertrude_explosion_counter_and_thresholds();
+    test_spawn_room_explosion_trigger_ignores_combat_state();
     test_is_invasion_mob_ignores_extract_timer_sentinel();
     test_is_invasion_mob_requires_npc_tag();
 
