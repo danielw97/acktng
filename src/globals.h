@@ -159,6 +159,7 @@ extern char *const dir_name[];
 extern char *const rev_name[];
 
 extern int max_players;
+extern int happy_hour_ticks_remaining;
 
 extern bool happy_hour;
 

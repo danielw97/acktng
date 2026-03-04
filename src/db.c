@@ -71,6 +71,7 @@ SYS_DATA_TYPE sysdata;
 
 bool booting_up;
 bool happy_hour;
+int happy_hour_ticks_remaining;
 bool area_resetting_global;
 bool mem_log;
 sh_int gsn_martial_arts;
@@ -391,6 +392,7 @@ void boot_db(void)
       weather_info.moon_phase = number_range(MOON_NEW, MOON_FULL);
 
       happy_hour = FALSE;
+      happy_hour_ticks_remaining = 0;
 
       if (time_info.hour < 5)
          weather_info.sunlight = SUN_DARK;
