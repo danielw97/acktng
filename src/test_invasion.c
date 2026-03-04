@@ -18,7 +18,7 @@ int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
 bool invasion_gertrude_should_fall_for_explosions(int explosion_count);
 int invasion_boss_pending_trash_talks_for_respawns(int respawn_count);
-bool invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced);
+bool invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced, int crusade_activity_this_tick);
 int invasion_is_hidden_mobile(CHAR_DATA *ch);
 const char *invasion_door_command_argument(const char *keyword, sh_int dir,
                                            char *buf, size_t buf_len);
@@ -210,10 +210,11 @@ static void test_boss_trash_talk_pending_schedule(void)
     assert(invasion_boss_pending_trash_talks_for_respawns(8) == 2);
     assert(invasion_boss_pending_trash_talks_for_respawns(9) == 3);
 
-    assert(invasion_should_emit_pending_boss_trash_talk(0, 1) == FALSE);
-    assert(invasion_should_emit_pending_boss_trash_talk(1, 0) == FALSE);
-    assert(invasion_should_emit_pending_boss_trash_talk(1, 1) == TRUE);
-    assert(invasion_should_emit_pending_boss_trash_talk(4, 1) == TRUE);
+    assert(invasion_should_emit_pending_boss_trash_talk(0, 1, 0) == FALSE);
+    assert(invasion_should_emit_pending_boss_trash_talk(1, 0, 0) == FALSE);
+    assert(invasion_should_emit_pending_boss_trash_talk(1, 1, 1) == FALSE);
+    assert(invasion_should_emit_pending_boss_trash_talk(1, 1, 0) == TRUE);
+    assert(invasion_should_emit_pending_boss_trash_talk(4, 1, 0) == TRUE);
 }
 
 static void test_gertrude_explosion_counter_and_thresholds(void)

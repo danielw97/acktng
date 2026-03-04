@@ -38,6 +38,7 @@
  * --------------------------------------------------------------------- */
 void invasion_update   (void);   /* Called once per PULSE_TICK              */
 void invasion_rooms_update(void);/* Called once per PULSE_ROOMS to move mobs*/
+void invasion_note_crusade_activity(void); /* avoid clash with boss taunts */
 void invasion_on_death (CHAR_DATA *ch, CHAR_DATA *killer); /* hook in fight.c*/
 int  invasion_is_hidden_mobile(CHAR_DATA *ch); /* hidden from where/hunt */
 
