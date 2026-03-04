@@ -51,6 +51,7 @@ void group_gain args((CHAR_DATA * ch, CHAR_DATA *victim));
 void do_knee args((CHAR_DATA * ch, char *argument));
 bool do_lifesteal args((CHAR_DATA * ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam));
 bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight));
+bool shortfight_can_broadcast_room_summary args((CHAR_DATA *ch));
 
 bool should_summon_assist_master_round args((int is_npc, int is_charmed, int has_master,
                                       int master_fighting, int same_room,
@@ -417,13 +418,16 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
          act(buf, ch, NULL, victim, TO_VICT);
       }
 
-      for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+      if (shortfight_can_broadcast_room_summary(ch))
       {
-         if (!shortfight_summary_recipient_matches(rch, ch, victim, expected_shortfight))
-            continue;
+         for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+         {
+            if (!shortfight_summary_recipient_matches(rch, ch, victim, expected_shortfight))
+               continue;
 
-         sprintf(buf, "@@c%s@@N autoattack summary vs @@c%s@@N: dealt @@e%d@@N, took @@r%d@@N reactive.\n\r", PERS(ch, rch), PERS(victim, rch), total_damage, reactive_damage);
-         send_to_char(buf, rch);
+            sprintf(buf, "@@c%s@@N autoattack summary vs @@c%s@@N: dealt @@e%d@@N, took @@r%d@@N reactive.\n\r", PERS(ch, rch), PERS(victim, rch), total_damage, reactive_damage);
+            send_to_char(buf, rch);
+         }
       }
    }
 
@@ -835,6 +839,11 @@ bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DA
 
    rch_shortfight = !IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT);
    return rch_shortfight == expected_shortfight;
+}
+
+bool shortfight_can_broadcast_room_summary(CHAR_DATA *ch)
+{
+   return ch != NULL && ch->in_room != NULL;
 }
 
 static void act_avoidance_notvict(CHAR_DATA *ch, CHAR_DATA *victim, const char *verb)

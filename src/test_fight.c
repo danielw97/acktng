@@ -61,6 +61,7 @@ int get_block(CHAR_DATA *ch);
 int get_counter(CHAR_DATA *ch);
 int get_evasion_piercing(CHAR_DATA *ch);
 bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight);
+bool shortfight_can_broadcast_room_summary(CHAR_DATA *ch);
 bool should_summon_assist_master_round(int is_npc, int is_charmed, int has_master,
                                       int master_fighting, int same_room,
                                       int is_player_summon, int can_see_master_target);
@@ -366,6 +367,30 @@ static void test_get_counter_npc_ignores_can_use_skill(void)
 
 
 
+
+static void test_shortfight_can_broadcast_room_summary_requires_room(void)
+{
+    CHAR_DATA ch;
+
+    assert(shortfight_can_broadcast_room_summary(NULL) == FALSE);
+
+    clear_character(&ch);
+    ch.in_room = NULL;
+    assert(shortfight_can_broadcast_room_summary(&ch) == FALSE);
+}
+
+static void test_shortfight_can_broadcast_room_summary_with_room(void)
+{
+    CHAR_DATA ch;
+    ROOM_INDEX_DATA room;
+
+    clear_character(&ch);
+    memset(&room, 0, sizeof(room));
+    ch.in_room = &room;
+
+    assert(shortfight_can_broadcast_room_summary(&ch) == TRUE);
+}
+
 static void test_shortfight_summary_recipient_null_inputs(void)
 {
     CHAR_DATA attacker;
@@ -504,6 +529,8 @@ int main(void)
     test_get_counter_applies_modifiers();
     test_get_counter_wolf_bonus_for_pc();
     test_get_counter_npc_ignores_can_use_skill();
+    test_shortfight_can_broadcast_room_summary_requires_room();
+    test_shortfight_can_broadcast_room_summary_with_room();
     test_shortfight_summary_recipient_null_inputs();
     test_shortfight_summary_recipient_expected_toggle();
     test_shortfight_summary_recipient_npc_is_never_shortfight();
