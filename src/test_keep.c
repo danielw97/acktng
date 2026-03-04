@@ -21,6 +21,7 @@ void keep_format_room_name(const char *owner_name, char *dest, size_t dest_size)
 void keep_format_room_description(const char *owner_name, char *dest, size_t dest_size);
 int keep_chest_max_items(void);
 int keep_is_customization_command(const char *arg);
+int keep_is_upgrade_command(const char *arg);
 int keep_player_can_customize(const CHAR_DATA *ch);
 
 static void test_keep_chest_name_uses_creator(void)
@@ -113,6 +114,15 @@ static void test_keep_customization_command_detection(void)
     assert(keep_is_customization_command(NULL) == 0);
 }
 
+
+static void test_keep_upgrade_command_detection(void)
+{
+    assert(keep_is_upgrade_command("regen") != 0);
+    assert(keep_is_upgrade_command("inside") != 0);
+    assert(keep_is_upgrade_command("create") == 0);
+    assert(keep_is_upgrade_command(NULL) == 0);
+}
+
 static void test_keep_player_can_customize(void)
 {
     PC_DATA pcdata;
@@ -156,6 +166,7 @@ int main(void)
     test_keep_room_description_uses_creator();
     test_keep_room_description_handles_missing_owner();
     test_keep_customization_command_detection();
+    test_keep_upgrade_command_detection();
     test_keep_player_can_customize();
     puts("test_keep: all tests passed");
     return 0;

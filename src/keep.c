@@ -48,6 +48,11 @@ int keep_is_customization_command(const char *arg)
     return (arg != NULL && (!str_cmp(arg, "title") || !str_cmp(arg, "desc")));
 }
 
+int keep_is_upgrade_command(const char *arg)
+{
+    return (arg != NULL && (!str_cmp(arg, "regen") || !str_cmp(arg, "inside")));
+}
+
 int keep_player_can_customize(const CHAR_DATA *ch)
 {
     if (ch == NULL || ch->pcdata == NULL || ch->in_room == NULL)
@@ -153,7 +158,59 @@ void do_keep(CHAR_DATA *ch, char *argument)
             return;
         }
 
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string>\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside\n\r", ch);
+        return;
+    }
+
+    if (keep_is_upgrade_command(arg1))
+    {
+        int qp_cost;
+        int room_flag;
+        const char *flag_name;
+
+        if (ch->pcdata->keep_vnum <= 0)
+        {
+            send_to_char("You do not have a keep yet.\n\r", ch);
+            return;
+        }
+
+        if (!keep_player_can_customize(ch))
+        {
+            send_to_char("You must be in your keep to do that.\n\r", ch);
+            return;
+        }
+
+        if (!str_cmp(arg1, "regen"))
+        {
+            qp_cost = 100;
+            room_flag = ROOM_REGEN;
+            flag_name = "regen";
+        }
+        else
+        {
+            qp_cost = 50;
+            room_flag = ROOM_INDOORS;
+            flag_name = "inside";
+        }
+
+        if (IS_SET(ch->in_room->room_flags, room_flag))
+        {
+            send_to_char("That keep upgrade has already been applied.\n\r", ch);
+            return;
+        }
+
+        if (ch->quest_points < qp_cost)
+        {
+            send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
+            return;
+        }
+
+        ch->quest_points -= qp_cost;
+        SET_BIT(ch->in_room->room_flags, room_flag);
+        do_savearea(NULL, (char *)ch->in_room->area);
+
+        send_to_char("Keep upgraded.\n\r", ch);
+        act("$n upgrades the keep with the $T flag.", ch, NULL, (char *)flag_name, TO_ROOM);
         return;
     }
 
@@ -193,7 +250,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
 
     if (str_cmp(arg1, "create"))
     {
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string>\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside\n\r", ch);
         return;
     }
 
@@ -232,6 +289,12 @@ void do_keep(CHAR_DATA *ch, char *argument)
     }
 
     RoomIndex = new_room(pArea, vnum, SECT_INSIDE);
+
+    SET_BIT(RoomIndex->room_flags, ROOM_NO_TELEPORT);
+    SET_BIT(RoomIndex->room_flags, ROOM_NOBLOODWALK);
+    SET_BIT(RoomIndex->room_flags, ROOM_NO_PORTAL);
+    SET_BIT(RoomIndex->room_flags, ROOM_NO_MOB);
+    SET_BIT(RoomIndex->room_flags, ROOM_SAFE);
 
     keep_format_room_name(ch->name, room_name, sizeof(room_name));
     keep_format_room_description(ch->name, room_description, sizeof(room_description));
