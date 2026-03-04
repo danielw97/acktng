@@ -702,6 +702,8 @@ int invasion_test_scaled_spawn_count(int base_count, int player_count)
 int invasion_test_is_wide_area_spawn_eligible(int spawns_this_reset)
 {
     return invasion_is_wide_area_spawn_eligible(spawns_this_reset) ? 1 : 0;
+}
+
 int invasion_test_should_explode_at_spawn_room(int room_vnum)
 {
     return invasion_should_explode_at_spawn_room(room_vnum) ? 1 : 0;
