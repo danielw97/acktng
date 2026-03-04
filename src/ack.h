@@ -793,6 +793,7 @@ struct pc_data
    char *email_address;
    bool valid_email;
    int invasion_points;
+   int invasion_rewards[3];
    int proposition_points;
     /* --- Proposition quest system --- */
     int   prop_type;                          /* PROP_TYPE_* constant; 0=none */

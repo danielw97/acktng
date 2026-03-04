@@ -87,6 +87,8 @@ static CHAR_DATA *invasion_boss          = NULL;
 static int        invasion_boss_profile  = -1;
 static int        invasion_boss_ticks_up = 0;
 static int        invasion_room_ticks    = 0;
+static int        invasion_wave_respawns = 0;
+static int        invasion_gertrude_explosions = 0;
 
 /* -----------------------------------------------------------------------
  * Forward declarations
@@ -107,6 +109,16 @@ static void       despawn_all_invasion   (void);
 static int        boss_spawn_count_for_tick(int boss_ticks_up);
 static bool       is_midgaard_area_name(const char *area_name);
 static bool       invasion_should_advance_on_room_tick(void);
+static bool       invasion_should_boss_trash_talk_for_respawn_count(int respawn_count);
+static bool       invasion_should_boss_trash_talk_after_respawn(void);
+static int        invasion_random_trash_talk_index(int line_count);
+int              invasion_reward_index_for_kill(bool is_boss, int mob_level);
+static void       invasion_award_kill_reward(CHAR_DATA *killer, int reward_idx);
+int              invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
+const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
+bool             invasion_gertrude_should_fall_for_explosions(int explosion_count);
+static const char *invasion_boss_trash_talk_for_profile(int prof_idx);
+static void       invasion_boss_trash_talk(void);
 
 #ifdef UNIT_TEST_INVASION
 int invasion_test_count_regular_players(int *out_lo, int *out_hi);
@@ -115,6 +127,8 @@ int invasion_test_is_invasion_mob(CHAR_DATA *ch);
 int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_test_is_midgaard_area_name(const char *area_name);
 int invasion_test_should_self_destruct_for_path_dir(int dir);
+int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
+const char *invasion_test_trash_talk_for_profile(int prof_idx);
 #endif
 
 /* -----------------------------------------------------------------------
@@ -211,6 +225,372 @@ static bool invasion_should_advance_on_room_tick(void)
     return ((invasion_room_ticks % 2) == 0);
 }
 
+static bool invasion_should_boss_trash_talk_for_respawn_count(int respawn_count)
+{
+    return (respawn_count > 0 && (respawn_count % 3) == 0);
+}
+
+static bool invasion_should_boss_trash_talk_after_respawn(void)
+{
+    invasion_wave_respawns++;
+    return invasion_should_boss_trash_talk_for_respawn_count(invasion_wave_respawns);
+}
+
+static int invasion_random_trash_talk_index(int line_count)
+{
+#ifdef UNIT_TEST_INVASION
+    (void)line_count;
+    return 0;
+#else
+    return number_range(0, line_count - 1);
+#endif
+}
+
+int invasion_reward_index_for_kill(bool is_boss, int mob_level)
+{
+    if (is_boss || mob_level < 1)
+        return -1;
+
+    if (mob_level <= 100)
+        return 0;
+    if (mob_level <= 149)
+        return 1;
+    return 2;
+}
+
+static void invasion_award_kill_reward(CHAR_DATA *killer, int reward_idx)
+{
+    if (killer == NULL || IS_NPC(killer) || killer->pcdata == NULL)
+        return;
+
+    if (reward_idx == 0)
+    {
+        killer->pcdata->invasion_rewards[0]++;
+        send_to_char("You acquire an invader's commendation.\n\r", killer);
+        return;
+    }
+
+    if (reward_idx == 1)
+    {
+        killer->pcdata->invasion_rewards[1]++;
+        send_to_char("You acquire an invader's ribbon.\n\r", killer);
+        return;
+    }
+
+    if (reward_idx == 2)
+    {
+        killer->pcdata->invasion_rewards[2]++;
+        send_to_char("You acquire an invader's medal.\n\r", killer);
+    }
+}
+
+int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick)
+{
+    if (current_count < 0)
+        current_count = 0;
+
+    if (had_explosion_this_tick)
+        current_count++;
+
+    return UMIN(20, current_count);
+}
+
+const char *invasion_gertrude_quest_message_for_explosions(int explosion_count)
+{
+    if (explosion_count == 10)
+        return "Please help defend the realm! These invaders are tearing me apart!";
+    if (explosion_count == 15)
+        return "I beg you, heroes, please hurry! I cannot hold them back much longer!";
+    if (explosion_count == 19)
+        return "Please! I cannot handle another hit! Defend the realm now!";
+
+    return NULL;
+}
+
+bool invasion_gertrude_should_fall_for_explosions(int explosion_count)
+{
+    return (explosion_count >= 20) ? TRUE : FALSE;
+}
+
+static const char *invasion_boss_trash_talk_for_profile(int prof_idx)
+{
+    static const char *const fallback_line =
+        "You fight the inevitable. Every third wave proves it.";
+    static const char *const trash_talk_by_profile[NUM_BOSSES][15] =
+    {
+        {
+            "I am Typhon, sire of monsters; your bones are my hatchery.",
+            "Zeus chained me once. You will not.",
+            "Every roar you hear is one of my hundred heads naming your doom.",
+            "I breathe wildfire and venom; choose which death you prefer.",
+            "Mountains split when I strike. What chance has mortal steel?",
+            "Your heroes are kindling for my dragon-throated wrath.",
+            "Kneel, and I may let one of my heads finish you swiftly.",
+            "I forged the Hydra's hunger; your town will feed it in spirit.",
+            "The earth cracks because it knows its true king has returned.",
+            "You call this resistance? I call it a warm-up.",
+            "My offspring devoured gods' champions; you are lesser prey.",
+            "Venom in your veins, fire in your lungs, terror in your eyes.",
+            "When I fall, I rise in legend; when you fall, you are forgotten.",
+            "Run to your temples. Even stone altars melt in my breath.",
+            "I am the storm beneath the mountain, and you are standing on it."
+        },
+        {
+            "The World-Serpent's blood remembers you, little shore-crawlers.",
+            "I am the tide before Ragnarok. You are driftwood.",
+            "Your walls are sandcastles at high tide.",
+            "Breathe deep; that is my venom replacing your courage.",
+            "Midgard will drown while I coil and smile.",
+            "Each wave that rises carries another of your names to Hel.",
+            "Throw fire if you like; the sea will swallow your sparks.",
+            "I crush ships in my sleep. You are smaller than splinters.",
+            "The deep has no mercy, and neither do I.",
+            "Your champions thrash like fish on a deck.",
+            "Hear the surf? It chants your funeral rites.",
+            "I was spawned for endings, and yours begins now.",
+            "Knees buckle quickly when the ocean enters your lungs.",
+            "The serpent below Midgard hungers, and I am its jaw.",
+            "Pray to thunder-gods. Their hammer cannot find me beneath the waves."
+        },
+        {
+            "Hope is a lantern; I am the hand that snuffs it.",
+            "Your minds are loud. I will silence them one scream at a time.",
+            "I was old when your gods were still whispers.",
+            "Watch your allies closely; paranoia is my favorite blade.",
+            "I do not kill bodies first. I kill certainty.",
+            "Kneel in the dark and perhaps I pass over your thoughts.",
+            "I have eaten brighter souls than yours for less offense.",
+            "Your prayers echo beautifully in the void before they die.",
+            "Light cannot save you when the shadow is inside your skull.",
+            "Your nightmares report to me.",
+            "Steel rings, spells flare, and still your fear smells strongest.",
+            "Every heartbeat is another crack in your sanity.",
+            "I am not your end. I am your unmaking.",
+            "Close your eyes; it changes nothing.",
+            "You call me pale because terror drained your own color first."
+        },
+        {
+            "I crawled from the Abyss to teach your world despair.",
+            "Stone breaks beneath me as easily as men do.",
+            "Your courage is a candle in a demon wind.",
+            "I wear night like armor and hate like a crown.",
+            "Each crack in the ground is my signature.",
+            "You stand on borrowed earth. I am here to reclaim it.",
+            "Angels turned their faces when I rose. Wise of them.",
+            "My laughter shakes foundations because your gods built them poorly.",
+            "Come closer. The Abyss has room for all of you.",
+            "I have broken paladins better than your strongest.",
+            "Your city is a toy fort to my talons.",
+            "Fear me now, or fear me later from beneath the rubble.",
+            "I am the pit staring back.",
+            "Every wound you deal is just a new mouth for me to grin through.",
+            "When I am done, even your ruins will beg for silence."
+        },
+        {
+            "Inferno does not bargain. It consumes.",
+            "Your armor glows red because my legion is near.",
+            "I march from Hell with drums made of broken vows.",
+            "Each spark in this sky carries a contract for your soul.",
+            "You smell brimstone because destiny just opened.",
+            "My hounds have your scent, and they are very patient.",
+            "I have burned saints and sinners; both screamed the same.",
+            "Mercy was left at the gate of Dis.",
+            "Raise shields if you wish; flame climbs over pride.",
+            "The pit sings tonight, and your names are in the chorus.",
+            "I was forged in punishment. You are merely practice.",
+            "The damned cheer each time one of you falls.",
+            "I will brand this battlefield with your failures.",
+            "Your water hisses; my fire laughs.",
+            "When dawn comes, it will rise over cinders and regret."
+        },
+        {
+            "I am Surtr's edge at the end of ages.",
+            "The horizon reddens because I have begun to smile.",
+            "You cannot quench what was born to end the world.",
+            "My blade wrote prophecies in fire long before you were born.",
+            "Stand firm; it only helps the flames catch faster.",
+            "Even gods feared this fire at Ragnarok.",
+            "Your banners will be torches by sunset.",
+            "I carve runes of ruin in burning air.",
+            "Try water. It only makes the steam scream louder.",
+            "Each step I take is a funeral pyre waiting for a body.",
+            "I do not chase prey; the fire drives it to me.",
+            "Your healers mend flesh, not ash.",
+            "There is no shade in Muspelheim, and none here tonight.",
+            "My sword is sunrise for the dead.",
+            "When this blaze fades, your names will fade with it."
+        },
+        {
+            "I am the maw beneath the waves and I am still hungry.",
+            "Ships, crews, heroes—everything spins the same in my throat.",
+            "Feel the pull? That is hopelessness gaining current.",
+            "Anchor yourselves if you like. I drag continents in my dreams.",
+            "Wind obeys me, and water kneels.",
+            "Your battle line is already a whirlpool.",
+            "I swallow prayers and belch storms.",
+            "Do not scream; the sea mutes all confessions.",
+            "Every splash is another promise you cannot keep.",
+            "I have drowned kings in calmer waters than these.",
+            "Breathe now while you still own the air.",
+            "Your boots are heavy. Good. Sink faster.",
+            "The deep keeps what it takes.",
+            "Tides turn. So do fortunes. Yours just did.",
+            "I am Charybdis—escape is a myth sailors tell children."
+        },
+        {
+            "I gnawed Yggdrasil's roots; your walls are softer.",
+            "Corpse-venom is my wine, and you are tonight's feast.",
+            "Nastrond taught me patience and cruelty in equal measure.",
+            "Your flesh will rot before it cools.",
+            "I have chewed through oaths, bones, and worlds.",
+            "Holy light stings, but your fear tastes sweeter.",
+            "Hear that scraping? That is my hunger sharpening itself.",
+            "I drag the stink of the underworld wherever I crawl.",
+            "The dead envy the living until I arrive.",
+            "You clutch talismans; I clutch throats.",
+            "I do not hoard gold. I hoard endings.",
+            "Your champions will decorate Hel's shore by dawn.",
+            "One bite for marrow, one for memory.",
+            "Rot is inevitable. I simply hurry it.",
+            "Yggdrasil endured me. You will not."
+        },
+        {
+            "Hear my song and ride with me into your own grave.",
+            "The Wild Hunt never misses debtors.",
+            "Your heartbeat is the hoofbeat beneath my stirrup.",
+            "I take children from cradles and kings from thrones alike.",
+            "The night wind carries your surrender already.",
+            "Do not look into my eyes unless you wish to follow forever.",
+            "Iron charms tremble when my reins snap.",
+            "I promised your souls to the dark wood before I arrived.",
+            "My hounds know your scent better than your lovers do.",
+            "Run through the forest; every branch bends toward me.",
+            "You are not hunted for sport. You are hunted for silence.",
+            "Moonlight is just my lantern on this ride.",
+            "Your bravest rider would not survive my first gallop.",
+            "Kiss your world goodbye; the Hunt has sounded.",
+            "I am the Erlking, and every path tonight ends at my saddle."
+        },
+        {
+            "The scales of Ma'at tip, and you are found wanting.",
+            "Bring me your hearts; I judge by hunger.",
+            "Lion's wrath, crocodile's jaws, hippo's strength—your verdict is death.",
+            "I devour the unworthy, and I am never full.",
+            "You cannot argue with a beast built from sentence and punishment.",
+            "Your sins weigh more than your steel.",
+            "The hall of judgment sent me your names in advance.",
+            "Pray for mercy; I am not authorized to grant it.",
+            "Truth is heavy. Your hearts are heavier.",
+            "I hear your pulse fluttering like a guilty prayer.",
+            "Even brave souls taste of fear when the scales tilt.",
+            "I am the final mouth after final judgment.",
+            "The righteous pass by me. You do not.",
+            "Struggle if you must; it seasons the heart.",
+            "Sentence delivered: consumed."
+        },
+        {
+            "Order is a fragile sun. I am the shadow across it.",
+            "I coil around dawn and squeeze until daylight screams.",
+            "Ra burns above, but chaos rises below.",
+            "Your formations amuse me; entropy has no formation.",
+            "Each command you shout dissolves into panic.",
+            "I have swallowed certainties older than your temples.",
+            "Poison is honest—it tells you exactly how quickly you lose.",
+            "The Duat opens and your courage leaks into it.",
+            "You cannot kill chaos. You can only delay your fear.",
+            "Look skyward. Even the sun blinks when I move.",
+            "Your laws, your vows, your walls—all kindling for disorder.",
+            "I am the knot in creation's throat.",
+            "When I hiss, empires forget their own names.",
+            "Stand in line if you want; I break lines for sport.",
+            "I am Apep. Night itself marches under my scales."
+        },
+        {
+            "Bronze does not panic. Bronze advances.",
+            "I was forged by a god-smith; you were not.",
+            "Hear my stride—Crete remembers this sound as judgment.",
+            "Your blades ring against me like chimes in a storm.",
+            "Molten ichor is the only blood I need.",
+            "I patrol, I punish, I persist.",
+            "Rust is your prayer; steel is mine.",
+            "You are flesh confronting engineering.",
+            "I circled islands in a day. I can circle your graves all night.",
+            "Every footfall is a siege engine.",
+            "Your cleverness fails against inevitability and mass.",
+            "I do not tire, hesitate, or forgive.",
+            "The bronze giant has no fear to exploit.",
+            "You are dents waiting to happen.",
+            "When I fall, I rise heated and angrier."
+        },
+        {
+            "Sleep no more. Your nightmares have a face now.",
+            "I drink screams and exhale prophecy.",
+            "The moon dimmed so you could see me better.",
+            "I was stitched from fear and fed on omens.",
+            "Your minds are open doors in a storm.",
+            "Do not blink; horrors breed in that instant.",
+            "I crawl between thoughts where prayers cannot follow.",
+            "Each shadow behind you belongs to me.",
+            "I break heroes by showing them tomorrow.",
+            "Courage cracks fastest in the dark.",
+            "Your pulse keeps time for my feast.",
+            "I am the reason children fear sleeping alone.",
+            "Call me nightmare, call me doom—the result is unchanged.",
+            "Even your victories taste like dread when I am near.",
+            "Tonight, terror graduates from rumor to memory."
+        },
+        {
+            "I am Fenrir's hunger and the dark between stars.",
+            "Your moon is only a lantern for my feast.",
+            "I bite through fate, not just flesh.",
+            "The pack has no pity for trembling prey.",
+            "I hunted gods in dreams before I hunted you awake.",
+            "Hear the drums? That is extinction finding rhythm.",
+            "Your bravest howl still sounds like fear to me.",
+            "Run—predators enjoy a chase.",
+            "I wear midnight like fur and wrath like teeth.",
+            "Blood on snow is a poem I write often.",
+            "I am the first shadow at dusk and the last at dawn.",
+            "Your silver shakes. Good. So should you.",
+            "The feast begins with your champions.",
+            "I do not stalk. I arrive.",
+            "When I am done, even the ravens will whisper your names."
+        },
+        {
+            "I am no dragon, no god—only the void that survives both.",
+            "Stars die quietly. You will not.",
+            "Fate is thread; I am the hand that unravels it.",
+            "Your reality frays each time I breathe.",
+            "The cosmos forgot me on purpose. I returned anyway.",
+            "I speak in silences between screams.",
+            "You clutch meaning. I deal in endings.",
+            "Even time slows to watch me erase you.",
+            "Your names are sparks in a windless dark.",
+            "I watched civilizations bloom and vanish like frost.",
+            "Steel, magic, prayer—noise before oblivion.",
+            "There is no sanctuary at the edge of existence.",
+            "I do not conquer worlds. I outlast them.",
+            "Be grateful: oblivion is impartial.",
+            "Witness the void's rhythm, and count your remaining heartbeats."
+        }
+    };
+    int line_idx;
+
+    if (prof_idx < 0 || prof_idx >= NUM_BOSSES)
+        return fallback_line;
+
+    line_idx = invasion_random_trash_talk_index(15);
+    return trash_talk_by_profile[prof_idx][line_idx];
+}
+
+static void invasion_boss_trash_talk(void)
+{
+    if (invasion_boss == NULL || invasion_boss->is_free)
+        return;
+
+    do_quest2(invasion_boss, (char *)invasion_boss_trash_talk_for_profile(invasion_boss_profile));
+}
+
 #ifdef UNIT_TEST_INVASION
 int invasion_test_count_regular_players(int *out_lo, int *out_hi)
 {
@@ -241,6 +621,16 @@ int invasion_test_is_midgaard_area_name(const char *area_name)
 int invasion_test_should_self_destruct_for_path_dir(int dir)
 {
     return (dir < 0) ? 1 : 0;
+}
+
+int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count)
+{
+    return invasion_should_boss_trash_talk_for_respawn_count(respawn_count) ? 1 : 0;
+}
+
+const char *invasion_test_trash_talk_for_profile(int prof_idx)
+{
+    return invasion_boss_trash_talk_for_profile(prof_idx);
 }
 
 #endif
@@ -646,6 +1036,8 @@ static void invasion_start(void)
     invasion_active       = TRUE;
     invasion_boss_ticks_up = 0;
     invasion_room_ticks    = 0;
+    invasion_wave_respawns = 0;
+    invasion_gertrude_explosions = 0;
 
     invasion_boss = spawn_invasion_mob(boss_level, TRUE, prof);
     if (invasion_boss == NULL)
@@ -701,6 +1093,8 @@ static void invasion_end(bool success)
     invasion_active       = FALSE;
     invasion_boss_ticks_up = 0;
     invasion_room_ticks    = 0;
+    invasion_wave_respawns = 0;
+    invasion_gertrude_explosions = 0;
     invasion_timer        = INVASION_MIN_INTERVAL;
 }
 
@@ -730,6 +1124,8 @@ void invasion_update(void)
         invasion_boss_profile = -1;
         invasion_active       = FALSE;
         invasion_room_ticks   = 0;
+        invasion_wave_respawns = 0;
+        invasion_gertrude_explosions = 0;
         invasion_timer        = INVASION_MIN_INTERVAL;
         return;
     }
@@ -749,7 +1145,11 @@ void invasion_update(void)
         boss_spawn_count = boss_spawn_count_for_tick(invasion_boss_ticks_up);
 
         for (i = 0; i < boss_spawn_count; i++)
-            spawn_invasion_mob(number_range(lo, hi), FALSE, -1);
+        {
+            if (spawn_invasion_mob(number_range(lo, hi), FALSE, -1) != NULL
+                && invasion_should_boss_trash_talk_after_respawn())
+                invasion_boss_trash_talk();
+        }
     }
 
     if (invasion_boss != NULL && !invasion_boss->is_free
@@ -762,7 +1162,11 @@ void invasion_update(void)
     hi_lvl = URANGE(lo_lvl, hi + INVASION_MOB_MAX_OFFSET, MAX_LEVEL);
 
     for (i = 0; i < number_range(0, 2); i++)
-        spawn_invasion_mob(number_range(lo_lvl, hi_lvl), FALSE, -1);
+    {
+        if (spawn_invasion_mob(number_range(lo_lvl, hi_lvl), FALSE, -1) != NULL
+            && invasion_should_boss_trash_talk_after_respawn())
+            invasion_boss_trash_talk();
+    }
 }
 
 /* -----------------------------------------------------------------------
@@ -774,12 +1178,15 @@ void invasion_rooms_update(void)
     ROOM_INDEX_DATA *target_room;
     CHAR_DATA       *gertrude;
     sh_int           dir;
+    bool             had_explosion_this_tick = FALSE;
 
     if (!invasion_active) return;
     if (!invasion_should_advance_on_room_tick()) return;
 
     target_room = get_room_index(INVASION_SPAWN_VNUM);
     if (!target_room) return;
+
+    gertrude = find_gertrude();
 
     for (ch = first_char; ch != NULL; ch = ch_next)
     {
@@ -788,25 +1195,17 @@ void invasion_rooms_update(void)
         if (!mob_is_invasion_mob(ch))    continue;
         if (ch == invasion_boss)         continue;  /* boss does not march */
         if (ch->in_room == NULL)         continue;
-        if (is_fighting(ch))        continue;
+        if (is_fighting(ch))             continue;
         if (ch->position < POS_STANDING) continue;
 
         if (ch->in_room->vnum == INVASION_SPAWN_VNUM)
         {
-            long hp_loss;
+            had_explosion_this_tick = TRUE;
 
-            gertrude = find_gertrude();
             if (gertrude != NULL)
             {
-                hp_loss = UMAX(1, (gertrude->max_hit * 5) / 100);
-                gertrude->hp_mod -= hp_loss;
-                gertrude->hit = UMIN(gertrude->hit, get_max_hp(gertrude));
-
-                act("$n reaches Gertrude, siphons her lifeforce, and crumbles away!",
+                act("$n reaches Gertrude, explodes in a violent burst, and crumbles away!",
                     ch, NULL, gertrude, TO_ROOM);
-
-                if ((get_max_hp(gertrude) - gertrude->hp_mod) <= 100)
-                    raw_kill(gertrude, "");
             }
 
             REMOVE_BIT(ch->act, ACT_INVASION);
@@ -827,6 +1226,22 @@ void invasion_rooms_update(void)
 
         move_char(ch, dir);
     }
+
+    if (had_explosion_this_tick)
+    {
+        const char *quest_msg;
+
+        invasion_gertrude_explosions = invasion_gertrude_explosions_after_tick(
+            invasion_gertrude_explosions, 1);
+
+        quest_msg = invasion_gertrude_quest_message_for_explosions(invasion_gertrude_explosions);
+        if (quest_msg != NULL && gertrude != NULL && !gertrude->is_free)
+            do_quest2(gertrude, (char *)quest_msg);
+
+        if (invasion_gertrude_should_fall_for_explosions(invasion_gertrude_explosions)
+            && gertrude != NULL && !gertrude->is_free)
+            raw_kill(gertrude, "");
+    }
 }
 
 /* -----------------------------------------------------------------------
@@ -834,7 +1249,6 @@ void invasion_rooms_update(void)
  * --------------------------------------------------------------------- */
 void invasion_on_death(CHAR_DATA *ch, CHAR_DATA *killer)
 {
-    (void)killer;
     if (!invasion_active) return;
 
     if (ch == invasion_boss)
@@ -858,7 +1272,12 @@ void invasion_on_death(CHAR_DATA *ch, CHAR_DATA *killer)
     }
 
     if (mob_is_invasion_mob(ch))
+    {
+        int reward_idx = invasion_reward_index_for_kill(FALSE, ch->level);
+
+        invasion_award_kill_reward(killer, reward_idx);
         REMOVE_BIT(ch->act, ACT_INVASION);
+    }
 }
 
 /* -----------------------------------------------------------------------
