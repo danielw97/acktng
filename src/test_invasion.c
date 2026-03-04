@@ -13,6 +13,7 @@ int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_test_is_midgaard_area_name(const char *area_name);
 int invasion_test_should_self_destruct_for_path_dir(int dir);
 int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
+int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir);
 int invasion_reward_index_for_kill(bool is_boss, int mob_level);
 int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
@@ -152,6 +153,14 @@ static void test_boss_trash_talk_trigger_timing(void)
     assert(invasion_test_should_boss_trash_talk_for_respawn_count(9) == 1);
 }
 
+static void test_boss_spawn_room_validation_excludes_safe_rooms(void)
+{
+    assert(invasion_test_boss_spawn_room_is_valid(0, 0) == 1);
+    assert(invasion_test_boss_spawn_room_is_valid(ROOM_SAFE, 0) == 0);
+    assert(invasion_test_boss_spawn_room_is_valid(0, -1) == 0);
+    assert(invasion_test_boss_spawn_room_is_valid(ROOM_SAFE, -1) == 0);
+}
+
 static void test_boss_trash_talk_does_not_repeat_consecutively(void)
 {
     const char *first_line = invasion_test_trash_talk_for_profile(3);
@@ -244,6 +253,7 @@ int main(void)
     test_unreachable_path_marks_for_self_destruct();
     test_hidden_mobile_matches_invasion_tagging();
     test_boss_trash_talk_trigger_timing();
+    test_boss_spawn_room_validation_excludes_safe_rooms();
     test_boss_trash_talk_does_not_repeat_consecutively();
     test_boss_trash_talk_lines_are_available_per_profile();
     test_invasion_reward_tiers_and_boss_exclusion();
