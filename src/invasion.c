@@ -92,6 +92,7 @@ static int        invasion_gertrude_explosions = 0;
 static int        invasion_last_trash_talk_profile = -1;
 static int        invasion_last_trash_talk_line    = -1;
 static int        invasion_pending_trash_talks     = 0;
+static bool       invasion_crusade_activity_since_last_room_tick = FALSE;
 
 /* -----------------------------------------------------------------------
  * Forward declarations
@@ -140,7 +141,7 @@ static void       invasion_award_kill_reward(CHAR_DATA *killer, int reward_idx);
 int              invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
 bool             invasion_gertrude_should_fall_for_explosions(int explosion_count);
-bool             invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced);
+bool             invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced, int crusade_activity_this_tick);
 static const char *invasion_boss_trash_talk_for_profile(int prof_idx);
 static void       invasion_boss_trash_talk(void);
 
@@ -266,9 +267,12 @@ static bool invasion_should_boss_trash_talk_after_respawn(void)
     return TRUE;
 }
 
-bool invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced)
+bool invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced, int crusade_activity_this_tick)
 {
-    return (pending_talk_count > 0 && room_tick_advanced > 0) ? TRUE : FALSE;
+    if (pending_talk_count <= 0 || room_tick_advanced == 0 || crusade_activity_this_tick != 0)
+        return FALSE;
+
+    return TRUE;
 }
 
 static bool invasion_should_explode_at_spawn_room(int room_vnum)
@@ -1455,6 +1459,11 @@ void invasion_update(void)
     }
 }
 
+void invasion_note_crusade_activity(void)
+{
+    invasion_crusade_activity_since_last_room_tick = TRUE;
+}
+
 /* -----------------------------------------------------------------------
  * invasion_rooms_update() — called once per PULSE_ROOMS
  * --------------------------------------------------------------------- */
@@ -1471,11 +1480,14 @@ void invasion_rooms_update(void)
 
     if (invasion_boss != NULL
         && !invasion_boss->is_free
-        && invasion_should_emit_pending_boss_trash_talk(invasion_pending_trash_talks, 1))
+        && invasion_should_emit_pending_boss_trash_talk(invasion_pending_trash_talks, 1,
+                                                        invasion_crusade_activity_since_last_room_tick))
     {
         invasion_boss_trash_talk();
         invasion_pending_trash_talks--;
     }
+
+    invasion_crusade_activity_since_last_room_tick = FALSE;
 
     target_room = get_room_index(INVASION_SPAWN_VNUM);
     if (!target_room) return;

@@ -766,6 +766,8 @@ void do_crusade(CHAR_DATA *ch, char *argument)
    extern int quest_level_max;
    char buf[MAX_STRING_LENGTH];
 
+   invasion_note_crusade_activity();
+
    if (IS_NPC(ch) && quest && quest_level_min > 0 && quest_level_max > 0)
    {
       snprintf(buf, sizeof(buf), "@@W[Lv %d-%d]@@N %s", quest_level_min, quest_level_max,
