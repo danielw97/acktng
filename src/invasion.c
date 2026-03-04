@@ -113,6 +113,7 @@ static void       despawn_all_invasion   (void);
 int              invasion_boss_spawn_count_for_tick(int boss_ticks_up);
 static bool       is_midgaard_area_name(const char *area_name);
 static bool       invasion_should_advance_on_room_tick(void);
+int               invasion_should_advance_for_room_tick_count(int room_tick_count);
 static bool       invasion_should_boss_trash_talk_for_respawn_count(int respawn_count);
 static bool       invasion_should_boss_trash_talk_after_respawn(void);
 static bool       invasion_should_explode_at_spawn_room(int room_vnum);
@@ -222,10 +223,17 @@ static bool is_midgaard_area_name(const char *area_name)
     return (strstr(lower_name, "midgaard") != NULL);
 }
 
+int invasion_should_advance_for_room_tick_count(int room_tick_count)
+{
+    /* Advance every room tick to make invasion pressure/explosions land faster. */
+    return (room_tick_count > 0) ? 1 : 0;
+}
+
 static bool invasion_should_advance_on_room_tick(void)
 {
     invasion_room_ticks++;
-    return ((invasion_room_ticks % 2) == 0);
+    return invasion_should_advance_for_room_tick_count(invasion_room_ticks)
+           ? TRUE : FALSE;
 }
 
 static bool invasion_should_boss_trash_talk_for_respawn_count(int respawn_count)
@@ -1470,12 +1478,13 @@ void do_invasion(CHAR_DATA *ch, char *argument)
                  "Boss alive      : %s\n\r"
                  "Boss profile    : %s\n\r"
                  "Cooldown        : %d ticks remaining\n\r"
-                 "Player levels   : %d - %d (pseudo)\n\r",
+                 "Player levels   : %d - %d (pseudo)\n\r"
+                 "Gertrude hits   : %d / 20\n\r",
                  invasion_active ? "@@GYES@@N" : "@@RNO@@N",
                  (invasion_boss != NULL && !invasion_boss->is_free) ? "@@GYES@@N" : "@@RNO@@N",
                  invasion_boss_profile >= 0
                      ? boss_profiles[invasion_boss_profile].name : "none",
-                 invasion_timer, lo, hi);
+                 invasion_timer, lo, hi, invasion_gertrude_explosions);
         send_to_char(buf, ch);
     }
     else if (!str_cmp(arg, "bosses"))
