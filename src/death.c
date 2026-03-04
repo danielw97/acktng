@@ -293,6 +293,7 @@ void raw_kill(CHAR_DATA *victim, char *argument)
       /*        unhunt(check);*/
    }
 
+
    if (should_extract_npc_on_death(victim))
    {
       extract_char(victim, TRUE);
