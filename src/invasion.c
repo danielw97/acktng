@@ -1330,7 +1330,11 @@ void invasion_rooms_update(void)
             continue;
         }
 
-        move_char(ch, dir);
+        /*
+         * Use hunt_move so invasion mobs can open/unlock/pick doors along
+         * their route to Gertrude, matching the h_find_dir flags above.
+         */
+        hunt_move(ch, dir);
     }
 
     if (had_explosion_this_tick)
