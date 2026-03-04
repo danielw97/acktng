@@ -6,12 +6,17 @@
 #include "magic.h"
 #include "cloak.h"
 
-static void test_cloak_reactive_can_trigger_only_for_non_physical(void)
+sh_int get_psuedo_level(CHAR_DATA *ch)
 {
-    assert(cloak_reactive_can_trigger(ELE_PHYSICAL) == FALSE);
+    return ch->level;
+}
+
+static void test_cloak_reactive_can_trigger_for_all_elements(void)
+{
+    assert(cloak_reactive_can_trigger(ELE_PHYSICAL) == TRUE);
     assert(cloak_reactive_can_trigger(ELE_FIRE) == TRUE);
     assert(cloak_reactive_can_trigger(ELE_WATER | ELE_AIR) == TRUE);
-    assert(cloak_reactive_can_trigger(ELE_PHYSICAL | ELE_FIRE) == FALSE);
+    assert(cloak_reactive_can_trigger(ELE_PHYSICAL | ELE_FIRE) == TRUE);
     assert(cloak_reactive_can_trigger(ELE_NONE) == TRUE);
 }
 
@@ -98,7 +103,7 @@ static void test_cloak_adept_helpers(void)
 
 int main(void)
 {
-    test_cloak_reactive_can_trigger_only_for_non_physical();
+    test_cloak_reactive_can_trigger_for_all_elements();
     test_damage_matches_psuedo_level();
     test_level_damage_reduction_is_half_level();
     test_oathbreaker_avoidance_chance_scales_from_level();
