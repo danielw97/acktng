@@ -4,7 +4,7 @@ Q 16
 K etherealplane~
 L @@W{@@mRMORT@@W}@@N~
 N 83
-I 90 120
+I 0 0
 V 3850 3899
 X 0
 F 15
@@ -12,6 +12,7 @@ U You hear the screams of the Dead within your head.~
 O oderus~
 R oderus~
 W oderus~
+S Title not shown on area list.
 #ROOMS
 #3860
 Ethereal Plane~

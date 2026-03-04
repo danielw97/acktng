@@ -4,7 +4,7 @@ Q 16
 K moribund~
 L @@W{ @@rALL@@W }@@N~
 N 19
-I 1 120
+I 0 0
 V 3300 3310
 X 0
 F 15
@@ -13,6 +13,7 @@ O stephen~
 R stephen~
 W stephen~
 T You can teleport into here
+S Title not shown on area list.
 #ROOMS
 #3308
 The Room Of Private Contemplation~
@@ -56,7 +57,7 @@ D1
 Moribund.
 ~
 ~
-0 -1 3304
+0 -1 3302
 D2
 Moribund.
 ~
@@ -66,7 +67,7 @@ D3
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3304
 D4
 Moribund.
 ~
@@ -92,12 +93,12 @@ D1
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D2
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D3
 Moribund.
 ~
@@ -121,20 +122,20 @@ You are in the inner lands of Moribund.  Whisps of grey smoke float by.
 ~
 9228 11
 D0
-The Morgue!
+Moribund.
 ~
 ~
-0 -1 3300
+0 -1 3304
 D1
 Moribund.
 ~
 ~
 0 -1 3305
 D2
-Moribund.
+The Morgue!
 ~
 ~
-0 -1 3304
+0 -1 3300
 D3
 Moribund.
 ~
@@ -175,12 +176,12 @@ D3
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3304
 D4
 Moribund.
 ~
 ~
-0 -1 3304
+0 -1 3303
 D5
 Moribund.
 ~
@@ -211,12 +212,12 @@ D3
 Moribund.
 ~
 ~
-0 -1 3303
+0 -1 3302
 D4
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3303
 D5
 Moribund.
 ~
@@ -232,22 +233,22 @@ D0
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D1
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D2
 Moribund.
 ~
 ~
-0 -1 3302
+0 -1 3301
 D3
 Moribund.
 ~
 ~
-0 -1 3301
+0 -1 3302
 D4
 Moribund.
 ~
