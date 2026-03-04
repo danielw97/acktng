@@ -113,6 +113,7 @@ static bool       is_midgaard_area_name(const char *area_name);
 static bool       invasion_should_advance_on_room_tick(void);
 static bool       invasion_should_boss_trash_talk_for_respawn_count(int respawn_count);
 static bool       invasion_should_boss_trash_talk_after_respawn(void);
+static bool       invasion_should_explode_at_spawn_room(int room_vnum);
 static int        invasion_random_trash_talk_index(int line_count);
 static bool       room_has_valid_boss_spawn_conditions(long room_flags, int path_dir);
 static bool       room_is_valid_boss_spawn(ROOM_INDEX_DATA *room, ROOM_INDEX_DATA *target_room);
@@ -133,6 +134,7 @@ int invasion_test_is_midgaard_area_name(const char *area_name);
 int invasion_test_should_self_destruct_for_path_dir(int dir);
 int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
 int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir);
+int invasion_test_should_explode_at_spawn_room(int room_vnum);
 const char *invasion_test_trash_talk_for_profile(int prof_idx);
 #endif
 
@@ -239,6 +241,11 @@ static bool invasion_should_boss_trash_talk_after_respawn(void)
 {
     invasion_wave_respawns++;
     return invasion_should_boss_trash_talk_for_respawn_count(invasion_wave_respawns);
+}
+
+static bool invasion_should_explode_at_spawn_room(int room_vnum)
+{
+    return (room_vnum == INVASION_SPAWN_VNUM);
 }
 
 static int invasion_random_trash_talk_index(int line_count)
@@ -667,6 +674,11 @@ int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count)
 int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir)
 {
     return room_has_valid_boss_spawn_conditions(room_flags, path_dir) ? 1 : 0;
+}
+
+int invasion_test_should_explode_at_spawn_room(int room_vnum)
+{
+    return invasion_should_explode_at_spawn_room(room_vnum) ? 1 : 0;
 }
 
 const char *invasion_test_trash_talk_for_profile(int prof_idx)
@@ -1241,10 +1253,7 @@ void invasion_rooms_update(void)
         if (!mob_is_invasion_mob(ch))    continue;
         if (ch == invasion_boss)         continue;  /* boss does not march */
         if (ch->in_room == NULL)         continue;
-        if (is_fighting(ch))             continue;
-        if (ch->position < POS_STANDING) continue;
-
-        if (ch->in_room->vnum == INVASION_SPAWN_VNUM)
+        if (invasion_should_explode_at_spawn_room(ch->in_room->vnum))
         {
             had_explosion_this_tick = TRUE;
 
@@ -1258,6 +1267,9 @@ void invasion_rooms_update(void)
             extract_char(ch, TRUE);
             continue;
         }
+
+        if (is_fighting(ch))             continue;
+        if (ch->position < POS_STANDING) continue;
 
         dir = h_find_dir(ch->in_room, target_room,
                          HUNT_WORLD | HUNT_OPENDOOR | HUNT_UNLOCKDOOR | HUNT_PICKDOOR);
