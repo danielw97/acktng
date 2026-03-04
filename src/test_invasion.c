@@ -14,6 +14,8 @@ int invasion_test_is_midgaard_area_name(const char *area_name);
 int invasion_test_should_self_destruct_for_path_dir(int dir);
 int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
 int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir);
+int invasion_test_scaled_spawn_count(int base_count, int player_count);
+int invasion_test_is_wide_area_spawn_eligible(int spawns_this_reset);
 int invasion_test_should_explode_at_spawn_room(int room_vnum);
 int invasion_reward_index_for_kill(bool is_boss, int mob_level);
 int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
@@ -162,6 +164,24 @@ static void test_boss_spawn_room_validation_excludes_safe_rooms(void)
     assert(invasion_test_boss_spawn_room_is_valid(ROOM_SAFE, -1) == 0);
 }
 
+static void test_spawn_count_scales_with_regular_player_count(void)
+{
+    assert(invasion_test_scaled_spawn_count(0, 1) == 0);
+    assert(invasion_test_scaled_spawn_count(2, 1) == 2);
+    assert(invasion_test_scaled_spawn_count(2, 3) == 6);
+    assert(invasion_test_scaled_spawn_count(4, 5) == 20);
+    assert(invasion_test_scaled_spawn_count(-2, 5) == 0);
+    assert(invasion_test_scaled_spawn_count(2, 0) == 2);
+}
+
+static void test_wide_area_spawn_threshold(void)
+{
+    assert(invasion_test_is_wide_area_spawn_eligible(0) == 0);
+    assert(invasion_test_is_wide_area_spawn_eligible(9) == 0);
+    assert(invasion_test_is_wide_area_spawn_eligible(10) == 1);
+    assert(invasion_test_is_wide_area_spawn_eligible(25) == 1);
+}
+
 static void test_boss_trash_talk_does_not_repeat_consecutively(void)
 {
     const char *first_line = invasion_test_trash_talk_for_profile(3);
@@ -261,6 +281,8 @@ int main(void)
     test_hidden_mobile_matches_invasion_tagging();
     test_boss_trash_talk_trigger_timing();
     test_boss_spawn_room_validation_excludes_safe_rooms();
+    test_spawn_count_scales_with_regular_player_count();
+    test_wide_area_spawn_threshold();
     test_boss_trash_talk_does_not_repeat_consecutively();
     test_boss_trash_talk_lines_are_available_per_profile();
     test_invasion_reward_tiers_and_boss_exclusion();
