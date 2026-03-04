@@ -6,18 +6,15 @@
 
 bool cloak_reactive_can_trigger(int element)
 {
-    return !IS_SET(element, ELE_PHYSICAL);
+    (void)element;
+    return TRUE;
 }
 
 int cloak_adept_hitroll_bonus(CHAR_DATA *ch)
 {
     if (IS_AFFECTED(ch, AFF_CLOAK_ADEPT))
     {
-#ifdef UNIT_TEST_CLOAK
-        return ch->level * 2;
-#else
         return get_psuedo_level(ch) * 2;
-#endif
     }
 
     return 0;
