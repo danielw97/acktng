@@ -4,7 +4,7 @@ Q 16
 K players~
 L @@W{@@mRMORT@@W}@@N~
 N 27
-I 70 120
+I 0 0
 V 1100 1149
 X 0
 F 15
@@ -13,6 +13,7 @@ O stephen~
 R stephen~
 W stephen~
 T You can teleport into here
+S Title not shown on area list.
 #ROOMS
 #1146
 The Secret Garden~
