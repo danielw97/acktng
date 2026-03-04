@@ -5,6 +5,7 @@
 #include "globals.h"
 
 int find_race_index_by_name(const char *name);
+int score_should_show_invasion_rewards(CHAR_DATA *ch);
 
 bool str_cmp(const char *astr, const char *bstr)
 {
@@ -71,11 +72,30 @@ static void test_find_race_index_rejects_unknown_or_empty_values(void)
     assert(find_race_index_by_name(NULL) == -1);
 }
 
+
+static void test_score_invasion_rewards_visibility(void)
+{
+    CHAR_DATA player = {0};
+    PC_DATA pc = {0};
+    CHAR_DATA npc = {0};
+
+    player.pcdata = &pc;
+    npc.act = ACT_IS_NPC;
+
+    assert(score_should_show_invasion_rewards(NULL) == 0);
+    assert(score_should_show_invasion_rewards(&npc) == 0);
+    assert(score_should_show_invasion_rewards(&player) == 0);
+
+    pc.invasion_rewards[1] = 2;
+    assert(score_should_show_invasion_rewards(&player) == 1);
+}
+
 int main(void)
 {
     test_find_race_index_matches_exact_name_or_title();
     test_find_race_index_falls_back_to_prefix_matching();
     test_find_race_index_rejects_unknown_or_empty_values();
+    test_score_invasion_rewards_visibility();
 
     puts("test_act_info: all tests passed");
     return 0;

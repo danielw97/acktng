@@ -399,6 +399,10 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Hasexpfix     %d\n", ch->pcdata->has_exp_fix);
       fprintf(fp, "Questpoints   %d\n", ch->quest_points);
       fprintf(fp, "InvasionPoints %d\n", ch->pcdata->invasion_points);
+      fprintf(fp, "InvasionRewards %d %d %d\n",
+              ch->pcdata->invasion_rewards[0],
+              ch->pcdata->invasion_rewards[1],
+              ch->pcdata->invasion_rewards[2]);
       fprintf(fp, "PropositionPoints %d\n", ch->pcdata->proposition_points);
         int k;
         fprintf(fp, "PropType     %d\n",  ch->pcdata->prop_type);
@@ -695,6 +699,9 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->email_address = str_dup("not set");
       ch->quest_points = 0;
       ch->pcdata->invasion_points = 0;
+      ch->pcdata->invasion_rewards[0] = 0;
+      ch->pcdata->invasion_rewards[1] = 0;
+      ch->pcdata->invasion_rewards[2] = 0;
       ch->pcdata->proposition_points = 0;
       for (foo = 0; foo < MAX_REMORT; foo++)
          ch->remort[foo] = -1;
@@ -1164,6 +1171,14 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          if (!IS_NPC(ch))
          {
             KEY("InvasionPoints", ch->pcdata->invasion_points, fread_number(fp));
+            if (!str_cmp(word, "InvasionRewards"))
+            {
+               ch->pcdata->invasion_rewards[0] = fread_number(fp);
+               ch->pcdata->invasion_rewards[1] = fread_number(fp);
+               ch->pcdata->invasion_rewards[2] = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
          }
          SKEY("Immskll", ch->pcdata->immskll, fread_string(fp));
          KEY("Incog", ch->incog, fread_number(fp));

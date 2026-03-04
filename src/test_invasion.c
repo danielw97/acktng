@@ -12,6 +12,12 @@ int invasion_test_is_invasion_mob(CHAR_DATA *ch);
 int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_test_is_midgaard_area_name(const char *area_name);
 int invasion_test_should_self_destruct_for_path_dir(int dir);
+int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
+int invasion_reward_index_for_kill(bool is_boss, int mob_level);
+int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
+const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
+bool invasion_gertrude_should_fall_for_explosions(int explosion_count);
+const char *invasion_test_trash_talk_for_profile(int prof_idx);
 int invasion_is_hidden_mobile(CHAR_DATA *ch);
 
 DESCRIPTOR_DATA *first_desc = NULL;
@@ -135,6 +141,61 @@ static void test_hidden_mobile_matches_invasion_tagging(void)
     assert(invasion_is_hidden_mobile(&player) == 0);
 }
 
+static void test_boss_trash_talk_trigger_timing(void)
+{
+    assert(invasion_test_should_boss_trash_talk_for_respawn_count(0) == 0);
+    assert(invasion_test_should_boss_trash_talk_for_respawn_count(1) == 0);
+    assert(invasion_test_should_boss_trash_talk_for_respawn_count(2) == 0);
+    assert(invasion_test_should_boss_trash_talk_for_respawn_count(3) == 1);
+    assert(invasion_test_should_boss_trash_talk_for_respawn_count(4) == 0);
+    assert(invasion_test_should_boss_trash_talk_for_respawn_count(6) == 1);
+    assert(invasion_test_should_boss_trash_talk_for_respawn_count(9) == 1);
+}
+
+static void test_boss_trash_talk_lines_are_available_per_profile(void)
+{
+    assert(strcmp(invasion_test_trash_talk_for_profile(0), "") != 0);
+    assert(strcmp(invasion_test_trash_talk_for_profile(7), "") != 0);
+    assert(strcmp(invasion_test_trash_talk_for_profile(14), "") != 0);
+    assert(strcmp(invasion_test_trash_talk_for_profile(-1),
+                  "You fight the inevitable. Every third wave proves it.") == 0);
+}
+
+
+static void test_invasion_reward_tiers_and_boss_exclusion(void)
+{
+    assert(invasion_reward_index_for_kill(TRUE, 1) == -1);
+    assert(invasion_reward_index_for_kill(TRUE, 250) == -1);
+
+    assert(invasion_reward_index_for_kill(FALSE, 0) == -1);
+    assert(invasion_reward_index_for_kill(FALSE, 1) == 0);
+    assert(invasion_reward_index_for_kill(FALSE, 100) == 0);
+    assert(invasion_reward_index_for_kill(FALSE, 101) == 1);
+    assert(invasion_reward_index_for_kill(FALSE, 149) == 1);
+    assert(invasion_reward_index_for_kill(FALSE, 150) == 2);
+    assert(invasion_reward_index_for_kill(FALSE, 220) == 2);
+}
+
+
+static void test_gertrude_explosion_counter_and_thresholds(void)
+{
+    assert(invasion_gertrude_explosions_after_tick(0, 0) == 0);
+    assert(invasion_gertrude_explosions_after_tick(0, 1) == 1);
+    assert(invasion_gertrude_explosions_after_tick(9, 1) == 10);
+    assert(invasion_gertrude_explosions_after_tick(19, 1) == 20);
+    assert(invasion_gertrude_explosions_after_tick(20, 1) == 20);
+    assert(invasion_gertrude_explosions_after_tick(-2, 1) == 1);
+
+    assert(invasion_gertrude_quest_message_for_explosions(9) == NULL);
+    assert(invasion_gertrude_quest_message_for_explosions(10) != NULL);
+    assert(invasion_gertrude_quest_message_for_explosions(15) != NULL);
+    assert(invasion_gertrude_quest_message_for_explosions(19) != NULL);
+    assert(invasion_gertrude_quest_message_for_explosions(20) == NULL);
+
+    assert(invasion_gertrude_should_fall_for_explosions(19) == FALSE);
+    assert(invasion_gertrude_should_fall_for_explosions(20) == TRUE);
+    assert(invasion_gertrude_should_fall_for_explosions(25) == TRUE);
+}
 
 static void test_is_invasion_mob_ignores_extract_timer_sentinel(void)
 {
@@ -174,6 +235,10 @@ int main(void)
     test_midgaard_area_name_matching();
     test_unreachable_path_marks_for_self_destruct();
     test_hidden_mobile_matches_invasion_tagging();
+    test_boss_trash_talk_trigger_timing();
+    test_boss_trash_talk_lines_are_available_per_profile();
+    test_invasion_reward_tiers_and_boss_exclusion();
+    test_gertrude_explosion_counter_and_thresholds();
     test_is_invasion_mob_ignores_extract_timer_sentinel();
     test_is_invasion_mob_requires_npc_tag();
 

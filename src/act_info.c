@@ -114,6 +114,19 @@ int find_race_index_by_name(const char *name)
 
    return -1;
 }
+int score_should_show_invasion_rewards(CHAR_DATA *ch)
+{
+   if (ch == NULL || IS_NPC(ch) || ch->pcdata == NULL)
+      return 0;
+
+   if (ch->pcdata->invasion_rewards[0] > 0
+       || ch->pcdata->invasion_rewards[1] > 0
+       || ch->pcdata->invasion_rewards[2] > 0)
+      return 1;
+
+   return 0;
+}
+
 
 char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort)
 {
@@ -1749,6 +1762,18 @@ void do_score(CHAR_DATA *ch, char *argument)
            IS_NPC(ch) ? 0 : ch->pcdata->proposition_points);
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
+
+   if (score_should_show_invasion_rewards(ch))
+   {
+      sprintf(buf,
+              "@@WInvader's Commendation: @@y%d @@c== @@WInvader's Ribbon: @@y%d @@c== @@WInvader's Medal: @@y%d",
+              ch->pcdata->invasion_rewards[0],
+              ch->pcdata->invasion_rewards[1],
+              ch->pcdata->invasion_rewards[2]);
+      sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
+      send_to_char(buf2, ch);
+   }
+
 
    if (get_trust(ch) != ch->level)
    {
