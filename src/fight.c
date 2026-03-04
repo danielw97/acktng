@@ -51,7 +51,7 @@ void group_gain args((CHAR_DATA * ch, CHAR_DATA *victim));
 void do_knee args((CHAR_DATA * ch, char *argument));
 bool do_lifesteal args((CHAR_DATA * ch, CHAR_DATA *victim, OBJ_DATA *wield, bool dual, int dam));
 bool shortfight_summary_recipient_matches args((CHAR_DATA * rch, CHAR_DATA *ch, CHAR_DATA *victim, bool expected_shortfight));
-bool shortfight_can_broadcast_room_summary args((CHAR_DATA *ch));
+bool shortfight_can_broadcast_room_summary args((CHAR_DATA *ch, CHAR_DATA *victim));
 
 bool should_summon_assist_master_round args((int is_npc, int is_charmed, int has_master,
                                       int master_fighting, int same_room,
@@ -418,7 +418,7 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
          act(buf, ch, NULL, victim, TO_VICT);
       }
 
-      if (shortfight_can_broadcast_room_summary(ch))
+      if (shortfight_can_broadcast_room_summary(ch, victim))
       {
          for (CHAR_DATA *rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
          {
@@ -841,9 +841,11 @@ bool shortfight_summary_recipient_matches(CHAR_DATA *rch, CHAR_DATA *ch, CHAR_DA
    return rch_shortfight == expected_shortfight;
 }
 
-bool shortfight_can_broadcast_room_summary(CHAR_DATA *ch)
+bool shortfight_can_broadcast_room_summary(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-   return ch != NULL && ch->in_room != NULL;
+   return ch != NULL && victim != NULL
+       && ch->in_room != NULL && victim->in_room != NULL
+       && ch->in_room == victim->in_room;
 }
 
 static void act_avoidance_notvict(CHAR_DATA *ch, CHAR_DATA *victim, const char *verb)
