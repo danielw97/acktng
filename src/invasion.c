@@ -1571,9 +1571,17 @@ void invasion_rooms_update(void)
         if (quest_msg != NULL && gertrude != NULL && !gertrude->is_free)
             do_quest2(gertrude, (char *)quest_msg);
 
-        if (invasion_gertrude_should_fall_for_explosions(invasion_gertrude_explosions)
-            && gertrude != NULL && !gertrude->is_free)
-            raw_kill(gertrude, "");
+        if (invasion_gertrude_should_fall_for_explosions(invasion_gertrude_explosions))
+        {
+            if (gertrude == NULL || gertrude->is_free)
+                gertrude = find_gertrude();
+
+            if (gertrude != NULL && !gertrude->is_free)
+                raw_kill(gertrude, "");
+
+            if (invasion_active)
+                invasion_end(FALSE);
+        }
     }
 }
 
