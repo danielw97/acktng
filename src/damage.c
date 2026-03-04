@@ -26,6 +26,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim);
 void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical);
 void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, int realm, int dt, bool critical);
 void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt);
+void shortfight_emit_autoattack_summary(CHAR_DATA *ch, CHAR_DATA *victim);
+bool shortfight_should_emit_before_victim_raw_kill(int shortfight_round_active_now, int victim_is_npc, int victim_is_dead_position);
 
 void damage_build_hit_messages(char *buf1, size_t buf1_size,
                                char *buf2, size_t buf2_size,
@@ -102,6 +104,11 @@ int short_fight_round_end(CHAR_DATA *ch, CHAR_DATA *victim, int *reactive_damage
     short_fight_reactive_damage = 0;
 
     return total_damage;
+}
+
+bool shortfight_should_emit_before_victim_raw_kill(int shortfight_round_active_now, int victim_is_npc, int victim_is_dead_position)
+{
+    return shortfight_round_active_now && victim_is_npc && victim_is_dead_position;
 }
 
 int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible)
@@ -786,6 +793,9 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
 
     if (victim->position == POS_DEAD && (IS_NPC(victim) || !IS_VAMP(victim) || (deathmatch)))
     {
+        if (shortfight_should_emit_before_victim_raw_kill(short_fight_round_active(ch, victim), IS_NPC(victim), victim->position == POS_DEAD))
+            shortfight_emit_autoattack_summary(ch, victim);
+
         group_gain(ch, victim);
 
         if (!IS_NPC(ch))

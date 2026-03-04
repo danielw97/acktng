@@ -1,5 +1,8 @@
 #include <assert.h>
 #include <string.h>
+#include <stdbool.h>
+
+bool shortfight_should_emit_before_victim_raw_kill(int shortfight_round_active_now, int victim_is_npc, int victim_is_dead_position);
 
 void damage_build_hit_messages(char *buf1, size_t buf1_size,
                                char *buf2, size_t buf2_size,
@@ -36,9 +39,19 @@ static void test_damage_message_builder_handles_apostrophe_and_truncates(void)
     assert(buf3[7] == '\0');
 }
 
+
+static void test_shortfight_should_emit_before_victim_raw_kill(void)
+{
+    assert(shortfight_should_emit_before_victim_raw_kill(true, true, true));
+    assert(!shortfight_should_emit_before_victim_raw_kill(false, true, true));
+    assert(!shortfight_should_emit_before_victim_raw_kill(true, false, true));
+    assert(!shortfight_should_emit_before_victim_raw_kill(true, true, false));
+}
+
 int main(void)
 {
     test_damage_message_builder_formats_expected_lines();
     test_damage_message_builder_handles_apostrophe_and_truncates();
+    test_shortfight_should_emit_before_victim_raw_kill();
     return 0;
 }
