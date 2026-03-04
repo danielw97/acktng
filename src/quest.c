@@ -36,6 +36,7 @@
 CHAR_DATA *get_quest_target args((int min_level, int max_level));
 CHAR_DATA *get_quest_giver args((int min_level, int max_level));
 OBJ_DATA *load_quest_object args((CHAR_DATA * target));
+int quest_is_valid_crusade_mobile args((CHAR_DATA *target, int min_level, int max_level));
 void clear_quest args((void));
 sh_int quest_tier_from_level args((int mob_level));
 void quest_set_crusade_level_range_for_tier args((sh_int tier, int *minimum_level, int *maximum_level));
@@ -522,7 +523,7 @@ void do_quest(CHAR_DATA *ch, char *argument)
       quest_mob->long_descr = str_dup(new_long_desc);
       SET_BIT(quest_mob->act, PLR_NOSUMMON);
       SET_BIT(quest_mob->act, PLR_NOVISIT);
-      SET_BIT(quest_mob->act, PLR_NOBLOOD);
+      SET_BIT(quest_mob->act, ACT_NOBLOOD);
       SET_BIT(quest_mob->act, ACT_NO_HUNT);
 
       new_long_desc[0] = '\0';
@@ -536,7 +537,7 @@ void do_quest(CHAR_DATA *ch, char *argument)
 
       SET_BIT(quest_target->act, PLR_NOSUMMON);
       SET_BIT(quest_target->act, PLR_NOVISIT);
-      SET_BIT(quest_target->act, PLR_NOBLOOD);
+      SET_BIT(quest_target->act, ACT_NOBLOOD);
       SET_BIT(quest_target->act, ACT_NO_HUNT);
 
       send_to_char("QUEST STARTED!\n\r\n\r", ch);
@@ -567,6 +568,23 @@ void do_quest(CHAR_DATA *ch, char *argument)
    }
 
    return;
+}
+
+
+int quest_is_valid_crusade_mobile(CHAR_DATA *target, int min_level, int max_level)
+{
+   if (target == NULL || !IS_NPC(target) || target->in_room == NULL || target->in_room->area == NULL)
+      return 0;
+
+   if ((target->level < min_level) || (target->level > max_level)
+       || (IS_VAMP(target))
+       || (IS_SET(target->in_room->area->flags, AREA_NOSHOW))
+       || (IS_SET(target->act, ACT_SENTINEL))
+       || (IS_SET(target->act, ACT_PET))
+       || (IS_SET(target->act, ACT_INVASION)))
+      return 0;
+
+   return 1;
 }
 
 /*
@@ -603,7 +621,11 @@ CHAR_DATA *get_quest_target(int min_level, int max_level)
        * as train/prac mobs, healers, etc
        */
 
-      if ((target->level < min_level) || (target->level > max_level) || (IS_VAMP(target)) || (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) || (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
+      if (!quest_is_valid_crusade_mobile(target, min_level, max_level))
+         continue;
+
+      if ((!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen"))
+          || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
          continue;
 
       /*
@@ -667,7 +689,7 @@ CHAR_DATA *get_quest_giver(int min_level, int max_level)
        * as train/prac mobs, healers, etc
        */
 
-      if ((target->level < min_level) || (target->level > max_level) || (IS_VAMP(target)) || (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) || (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
+      if ((target->level < min_level) || (target->level > max_level) || (IS_VAMP(target)) || (IS_SET(target->in_room->area->flags, AREA_NOSHOW)) || (IS_SET(target->act, ACT_SENTINEL)) || (IS_SET(target->act, ACT_PET)) || (IS_SET(target->act, ACT_INVASION)) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_stephen")) || (!str_cmp(rev_spec_lookup(target->spec_fun), "spec_tax_man")))
 
          continue;
       {
@@ -802,7 +824,7 @@ void clear_quest()
       quest_mob->long_descr_orig = NULL;
       REMOVE_BIT(quest_mob->act, PLR_NOSUMMON);
       REMOVE_BIT(quest_mob->act, PLR_NOVISIT);
-      REMOVE_BIT(quest_mob->act, PLR_NOBLOOD);
+      REMOVE_BIT(quest_mob->act, ACT_NOBLOOD);
       REMOVE_BIT(quest_mob->act, ACT_NO_HUNT);
    }
    if (quest_target)
@@ -813,7 +835,7 @@ void clear_quest()
       quest_target->long_descr_orig = NULL;
       REMOVE_BIT(quest_target->act, PLR_NOSUMMON);
       REMOVE_BIT(quest_target->act, PLR_NOVISIT);
-      REMOVE_BIT(quest_target->act, PLR_NOBLOOD);
+      REMOVE_BIT(quest_target->act, ACT_NOBLOOD);
       REMOVE_BIT(quest_target->act, ACT_NO_HUNT);
    };
 
@@ -1016,7 +1038,7 @@ void generate_auto_quest()
    quest_mob->long_descr = str_dup(new_long_desc);
    SET_BIT(quest_mob->act, PLR_NOSUMMON);
    SET_BIT(quest_mob->act, PLR_NOVISIT);
-   SET_BIT(quest_mob->act, PLR_NOBLOOD);
+   SET_BIT(quest_mob->act, ACT_NOBLOOD);
    SET_BIT(quest_mob->act, ACT_NO_HUNT);
 
    new_long_desc[0] = '\0';
@@ -1030,7 +1052,7 @@ void generate_auto_quest()
 
    SET_BIT(quest_target->act, PLR_NOSUMMON);
    SET_BIT(quest_target->act, PLR_NOVISIT);
-   SET_BIT(quest_target->act, PLR_NOBLOOD);
+   SET_BIT(quest_target->act, ACT_NOBLOOD);
    SET_BIT(quest_target->act, ACT_NO_HUNT);
 
    return;

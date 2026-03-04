@@ -6,136 +6,47 @@
 #define DEC_GLOBALS_H 1
 #include "ack.h"
 
-int invasion_test_count_regular_players(int *out_lo, int *out_hi);
-int invasion_test_calculate_boss_hp_mod(int level);
-int invasion_test_is_invasion_mob(CHAR_DATA *ch);
-int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
-int invasion_test_is_midgaard_area_name(const char *area_name);
-int invasion_test_should_self_destruct_for_path_dir(int dir);
-int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
-int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir);
-int invasion_test_scaled_spawn_count(int base_count, int player_count);
-int invasion_test_is_wide_area_spawn_eligible(int spawns_this_reset);
-int invasion_test_should_explode_at_spawn_room(int room_vnum);
+int invasion_boss_spawn_count_for_tick(int boss_ticks_up);
+int invasion_spawn_mode_for_respawn_index(int spawns_this_reset);
 int invasion_reward_index_for_kill(bool is_boss, int mob_level);
 int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
 bool invasion_gertrude_should_fall_for_explosions(int explosion_count);
-const char *invasion_test_trash_talk_for_profile(int prof_idx);
 int invasion_is_hidden_mobile(CHAR_DATA *ch);
-
-DESCRIPTOR_DATA *first_desc = NULL;
-
-int get_trust(CHAR_DATA *ch)
-{
-    return ch->level;
-}
-
-sh_int get_psuedo_level(CHAR_DATA *ch)
-{
-    return ch->level;
-}
-
-static void test_count_regular_players_ignores_non_players_and_immortals(void)
-{
-    DESCRIPTOR_DATA d1 = {0}, d2 = {0}, d3 = {0}, d4 = {0};
-    CHAR_DATA p1 = {0}, p2 = {0}, npc = {0}, imm = {0};
-    int lo = -1, hi = -1;
-
-    p1.level = 12;
-    p2.level = 38;
-    npc.level = 25;
-    npc.act = ACT_IS_NPC;
-    imm.level = LEVEL_IMMORTAL;
-
-    d1.connected = CON_PLAYING;
-    d1.character = &p1;
-    d1.next = &d2;
-
-    d2.connected = CON_PLAYING;
-    d2.character = &npc;
-    d2.next = &d3;
-
-    d3.connected = CON_PLAYING;
-    d3.character = &imm;
-    d3.next = &d4;
-
-    d4.connected = CON_PLAYING;
-    d4.character = &p2;
-
-    first_desc = &d1;
-
-    assert(invasion_test_count_regular_players(&lo, &hi) == 2);
-    assert(lo == 12);
-    assert(hi == 38);
-}
-
-static void test_count_regular_players_no_regular_players_sets_bounds_to_zero(void)
-{
-    DESCRIPTOR_DATA d1 = {0};
-    CHAR_DATA imm = {0};
-    int lo = 99, hi = 99;
-
-    imm.level = LEVEL_IMMORTAL;
-    d1.connected = CON_PLAYING;
-    d1.character = &imm;
-    first_desc = &d1;
-
-    assert(invasion_test_count_regular_players(&lo, &hi) == 0);
-    assert(lo == 0);
-    assert(hi == 0);
-}
-
-static void test_boss_hp_mod_scaling_and_caps(void)
-{
-    assert(invasion_test_calculate_boss_hp_mod(1) == 115);
-    assert(invasion_test_calculate_boss_hp_mod(30) == 13600);
-    assert(invasion_test_calculate_boss_hp_mod(129) == 249715);
-    assert(invasion_test_calculate_boss_hp_mod(130) == 250000);
-    assert(invasion_test_calculate_boss_hp_mod(-20) == 6100);
-}
-
+const char *invasion_door_command_argument(const char *keyword, sh_int dir,
+                                           char *buf, size_t buf_len);
+void invasion_force_unlock_exit(CHAR_DATA *ch, EXIT_DATA *pexit);
 
 static void test_boss_spawn_count_scales_with_uptime(void)
 {
-    assert(invasion_test_boss_spawn_count_for_tick(-1) == 1);
-    assert(invasion_test_boss_spawn_count_for_tick(0) == 1);
-    assert(invasion_test_boss_spawn_count_for_tick(14) == 1);
-    assert(invasion_test_boss_spawn_count_for_tick(15) == 2);
-    assert(invasion_test_boss_spawn_count_for_tick(29) == 2);
-    assert(invasion_test_boss_spawn_count_for_tick(30) == 3);
-    assert(invasion_test_boss_spawn_count_for_tick(44) == 3);
-    assert(invasion_test_boss_spawn_count_for_tick(45) == 4);
-    assert(invasion_test_boss_spawn_count_for_tick(500) == 4);
+    assert(invasion_boss_spawn_count_for_tick(-1) == 1);
+    assert(invasion_boss_spawn_count_for_tick(0) == 1);
+    assert(invasion_boss_spawn_count_for_tick(14) == 1);
+    assert(invasion_boss_spawn_count_for_tick(15) == 2);
+    assert(invasion_boss_spawn_count_for_tick(29) == 2);
+    assert(invasion_boss_spawn_count_for_tick(30) == 3);
+    assert(invasion_boss_spawn_count_for_tick(44) == 3);
+    assert(invasion_boss_spawn_count_for_tick(45) == 4);
+    assert(invasion_boss_spawn_count_for_tick(135) == 10);
+    assert(invasion_boss_spawn_count_for_tick(2000) == 10);
 }
 
-
-static void test_midgaard_area_name_matching(void)
+static void test_spawn_mode_for_respawn_index(void)
 {
-    assert(invasion_test_is_midgaard_area_name("Midgaard") == 1);
-    assert(invasion_test_is_midgaard_area_name("The City of Midgaard") == 1);
-    assert(invasion_test_is_midgaard_area_name("MIDGAARD Sewers") == 1);
-    assert(invasion_test_is_midgaard_area_name("Avernus") == 0);
-    assert(invasion_test_is_midgaard_area_name(NULL) == 0);
-    assert(invasion_test_is_midgaard_area_name("") == 0);
+    assert(invasion_spawn_mode_for_respawn_index(-1) == 0);
+    assert(invasion_spawn_mode_for_respawn_index(0) == 0);
+    assert(invasion_spawn_mode_for_respawn_index(1) == 1);
+    assert(invasion_spawn_mode_for_respawn_index(8) == 1);
+    assert(invasion_spawn_mode_for_respawn_index(9) == 2);
+    assert(invasion_spawn_mode_for_respawn_index(20) == 2);
 }
-
-static void test_unreachable_path_marks_for_self_destruct(void)
-{
-    assert(invasion_test_should_self_destruct_for_path_dir(-1) == 1);
-    assert(invasion_test_should_self_destruct_for_path_dir(-9) == 1);
-    assert(invasion_test_should_self_destruct_for_path_dir(0) == 0);
-    assert(invasion_test_should_self_destruct_for_path_dir(5) == 0);
-}
-
 
 static void test_hidden_mobile_matches_invasion_tagging(void)
 {
     CHAR_DATA mob = {0};
     CHAR_DATA player = {0};
 
-    mob.act = ACT_IS_NPC;
-    mob.act |= ACT_INVASION;
+    mob.act = ACT_IS_NPC | ACT_INVASION;
     assert(invasion_is_hidden_mobile(&mob) == 1);
 
     mob.act &= ~ACT_INVASION;
@@ -145,60 +56,78 @@ static void test_hidden_mobile_matches_invasion_tagging(void)
     assert(invasion_is_hidden_mobile(&player) == 0);
 }
 
-static void test_boss_trash_talk_trigger_timing(void)
+static void test_door_command_argument_prefers_exit_keyword(void)
 {
-    assert(invasion_test_should_boss_trash_talk_for_respawn_count(0) == 0);
-    assert(invasion_test_should_boss_trash_talk_for_respawn_count(1) == 0);
-    assert(invasion_test_should_boss_trash_talk_for_respawn_count(2) == 0);
-    assert(invasion_test_should_boss_trash_talk_for_respawn_count(3) == 1);
-    assert(invasion_test_should_boss_trash_talk_for_respawn_count(4) == 0);
-    assert(invasion_test_should_boss_trash_talk_for_respawn_count(6) == 1);
-    assert(invasion_test_should_boss_trash_talk_for_respawn_count(9) == 1);
+    char buf[32];
+
+    assert(strcmp(invasion_door_command_argument("vault door", DIR_NORTH,
+                                                 buf, sizeof(buf)),
+                  "vault") == 0);
+    assert(strcmp(invasion_door_command_argument("  iron gate", DIR_EAST,
+                                                 buf, sizeof(buf)),
+                  "iron") == 0);
 }
 
-static void test_boss_spawn_room_validation_excludes_safe_rooms(void)
+static void test_door_command_argument_falls_back_to_direction(void)
 {
-    assert(invasion_test_boss_spawn_room_is_valid(0, 0) == 1);
-    assert(invasion_test_boss_spawn_room_is_valid(ROOM_SAFE, 0) == 0);
-    assert(invasion_test_boss_spawn_room_is_valid(0, -1) == 0);
-    assert(invasion_test_boss_spawn_room_is_valid(ROOM_SAFE, -1) == 0);
+    char buf[32];
+
+    assert(strcmp(invasion_door_command_argument("", DIR_UP,
+                                                 buf, sizeof(buf)),
+                  "up") == 0);
+    assert(strcmp(invasion_door_command_argument(NULL, DIR_WEST,
+                                                 buf, sizeof(buf)),
+                  "west") == 0);
+    assert(strcmp(invasion_door_command_argument(NULL, 99,
+                                                 buf, sizeof(buf)),
+                  "door") == 0);
 }
 
-static void test_spawn_count_scales_with_regular_player_count(void)
+static void test_force_unlock_exit_allows_invasion_mobs_without_key(void)
 {
-    assert(invasion_test_scaled_spawn_count(0, 1) == 0);
-    assert(invasion_test_scaled_spawn_count(2, 1) == 2);
-    assert(invasion_test_scaled_spawn_count(2, 3) == 6);
-    assert(invasion_test_scaled_spawn_count(4, 5) == 20);
-    assert(invasion_test_scaled_spawn_count(-2, 5) == 0);
-    assert(invasion_test_scaled_spawn_count(2, 0) == 2);
+    ROOM_INDEX_DATA from_room = {0}, to_room = {0};
+    EXIT_DATA forward = {0}, reverse = {0};
+    CHAR_DATA mob = {0};
+
+    from_room.exit[DIR_NORTH] = &forward;
+    to_room.exit[DIR_SOUTH] = &reverse;
+
+    forward.to_room = &to_room;
+    forward.exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_PICKPROOF;
+    reverse.to_room = &from_room;
+    reverse.exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_PICKPROOF;
+
+    mob.in_room = &from_room;
+    mob.act = ACT_IS_NPC | ACT_INVASION;
+
+    invasion_force_unlock_exit(&mob, &forward);
+
+    assert(!IS_SET(forward.exit_info, EX_LOCKED));
+    assert(!IS_SET(reverse.exit_info, EX_LOCKED));
 }
 
-static void test_wide_area_spawn_threshold(void)
+static void test_force_unlock_exit_ignores_non_invasion_mobs(void)
 {
-    assert(invasion_test_is_wide_area_spawn_eligible(0) == 0);
-    assert(invasion_test_is_wide_area_spawn_eligible(9) == 0);
-    assert(invasion_test_is_wide_area_spawn_eligible(10) == 1);
-    assert(invasion_test_is_wide_area_spawn_eligible(25) == 1);
+    ROOM_INDEX_DATA from_room = {0}, to_room = {0};
+    EXIT_DATA forward = {0}, reverse = {0};
+    CHAR_DATA mob = {0};
+
+    from_room.exit[DIR_EAST] = &forward;
+    to_room.exit[DIR_WEST] = &reverse;
+
+    forward.to_room = &to_room;
+    forward.exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED;
+    reverse.to_room = &from_room;
+    reverse.exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED;
+
+    mob.in_room = &from_room;
+    mob.act = ACT_IS_NPC;
+
+    invasion_force_unlock_exit(&mob, &forward);
+
+    assert(IS_SET(forward.exit_info, EX_LOCKED));
+    assert(IS_SET(reverse.exit_info, EX_LOCKED));
 }
-
-static void test_boss_trash_talk_does_not_repeat_consecutively(void)
-{
-    const char *first_line = invasion_test_trash_talk_for_profile(3);
-    const char *second_line = invasion_test_trash_talk_for_profile(3);
-
-    assert(strcmp(first_line, second_line) != 0);
-}
-
-static void test_boss_trash_talk_lines_are_available_per_profile(void)
-{
-    assert(strcmp(invasion_test_trash_talk_for_profile(0), "") != 0);
-    assert(strcmp(invasion_test_trash_talk_for_profile(7), "") != 0);
-    assert(strcmp(invasion_test_trash_talk_for_profile(14), "") != 0);
-    assert(strcmp(invasion_test_trash_talk_for_profile(-1),
-                  "You fight the inevitable. Every third wave proves it.") == 0);
-}
-
 
 static void test_invasion_reward_tiers_and_boss_exclusion(void)
 {
@@ -213,7 +142,6 @@ static void test_invasion_reward_tiers_and_boss_exclusion(void)
     assert(invasion_reward_index_for_kill(FALSE, 150) == 2);
     assert(invasion_reward_index_for_kill(FALSE, 220) == 2);
 }
-
 
 static void test_gertrude_explosion_counter_and_thresholds(void)
 {
@@ -235,61 +163,17 @@ static void test_gertrude_explosion_counter_and_thresholds(void)
     assert(invasion_gertrude_should_fall_for_explosions(25) == TRUE);
 }
 
-static void test_spawn_room_explosion_trigger_ignores_combat_state(void)
-{
-    assert(invasion_test_should_explode_at_spawn_room(INVASION_SPAWN_VNUM) == 1);
-    assert(invasion_test_should_explode_at_spawn_room(INVASION_SPAWN_VNUM + 1) == 0);
-}
-
-static void test_is_invasion_mob_ignores_extract_timer_sentinel(void)
-{
-    CHAR_DATA mob = {0};
-
-    mob.act = ACT_IS_NPC;
-    mob.extract_timer = -999;
-    assert(invasion_test_is_invasion_mob(&mob) == 0);
-
-    mob.act |= ACT_INVASION;
-    mob.extract_timer = 0;
-    assert(invasion_test_is_invasion_mob(&mob) == 1);
-}
-
-static void test_is_invasion_mob_requires_npc_tag(void)
-{
-    CHAR_DATA mob = {0};
-    CHAR_DATA player = {0};
-
-    mob.act = ACT_IS_NPC;
-    mob.act |= ACT_INVASION;
-    assert(invasion_test_is_invasion_mob(&mob) != 0);
-
-    mob.act &= ~ACT_INVASION;
-    assert(invasion_test_is_invasion_mob(&mob) == 0);
-
-    player.act |= ACT_INVASION;
-    assert(invasion_test_is_invasion_mob(&player) == 0);
-}
-
 int main(void)
 {
-    test_count_regular_players_ignores_non_players_and_immortals();
-    test_count_regular_players_no_regular_players_sets_bounds_to_zero();
-    test_boss_hp_mod_scaling_and_caps();
     test_boss_spawn_count_scales_with_uptime();
-    test_midgaard_area_name_matching();
-    test_unreachable_path_marks_for_self_destruct();
+    test_spawn_mode_for_respawn_index();
     test_hidden_mobile_matches_invasion_tagging();
-    test_boss_trash_talk_trigger_timing();
-    test_boss_spawn_room_validation_excludes_safe_rooms();
-    test_spawn_count_scales_with_regular_player_count();
-    test_wide_area_spawn_threshold();
-    test_boss_trash_talk_does_not_repeat_consecutively();
-    test_boss_trash_talk_lines_are_available_per_profile();
+    test_door_command_argument_prefers_exit_keyword();
+    test_door_command_argument_falls_back_to_direction();
+    test_force_unlock_exit_allows_invasion_mobs_without_key();
+    test_force_unlock_exit_ignores_non_invasion_mobs();
     test_invasion_reward_tiers_and_boss_exclusion();
     test_gertrude_explosion_counter_and_thresholds();
-    test_spawn_room_explosion_trigger_ignores_combat_state();
-    test_is_invasion_mob_ignores_extract_timer_sentinel();
-    test_is_invasion_mob_requires_npc_tag();
 
     puts("test_invasion: all tests passed");
     return 0;

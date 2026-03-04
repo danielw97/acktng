@@ -1,6 +1,10 @@
 #include <assert.h>
 #include <stdio.h>
 
+#include "config.h"
+#define DEC_GLOBALS_H 1
+#include "ack.h"
+
 void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level, int *maximum_level);
 short int quest_resolve_crusade_personality(short int personality, int mob_level);
 short int quest_tier_from_level(int mob_level);
@@ -8,6 +12,7 @@ void quest_set_crusade_level_range_for_tier(short int tier, int *minimum_level, 
 void quest_set_effective_crusade_level_range(short int tier, int highest_level_in_range, int *minimum_level, int *maximum_level);
 int quest_crusade_level_cap_for_range(int range_minimum, int range_maximum, int highest_level_in_range);
 void quest_note_player_crusade_range(int pseudo_level, int *highest_mortal, int *highest_remortal, int *highest_adept);
+int quest_is_valid_crusade_mobile(CHAR_DATA *target, int min_level, int max_level);
 
 static void test_range_for_normal_mob_level(void)
 {
@@ -122,6 +127,30 @@ static void test_valid_personality_is_preserved(void)
    assert(quest_resolve_crusade_personality(3, 75) == 3);
 }
 
+
+static void test_crusade_mobile_validation_excludes_invaders(void)
+{
+   AREA_DATA area = {0};
+   ROOM_INDEX_DATA room = {0};
+   CHAR_DATA mob = {0};
+
+   room.area = &area;
+   mob.act = ACT_IS_NPC;
+   mob.level = 75;
+   mob.in_room = &room;
+
+   assert(quest_is_valid_crusade_mobile(&mob, 1, 100) == 1);
+
+   mob.act |= ACT_INVASION;
+   assert(quest_is_valid_crusade_mobile(&mob, 1, 100) == 0);
+}
+
+static void test_no_blood_flag_does_not_overlap_invasion_act_bit(void)
+{
+   assert(ACT_NOBLOOD != ACT_INVASION);
+   assert(PLR_NOBLOOD == ACT_INVASION);
+}
+
 int main(void)
 {
    test_range_for_normal_mob_level();
@@ -132,6 +161,8 @@ int main(void)
    test_note_player_crusade_range();
    test_tier_mapping_helpers();
    test_effective_range_helper();
+   test_crusade_mobile_validation_excludes_invaders();
+   test_no_blood_flag_does_not_overlap_invasion_act_bit();
 
    puts("test_quest: all tests passed");
    return 0;

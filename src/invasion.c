@@ -100,7 +100,8 @@ static ROOM_INDEX_DATA *pick_random_room_in_area(AREA_DATA *area);
 static void       invasion_start         (void);
 static void       invasion_end           (bool success);
 static CHAR_DATA *spawn_invasion_mob     (int level, bool is_boss, int prof_idx,
-                                          bool allow_wide_area_spawn);
+                                          bool allow_wide_area_spawn,
+                                          int spawns_this_reset);
 static void       apply_boss_profile     (CHAR_DATA *mob, int prof_idx, int level);
 static void       apply_wave_mob_profile (CHAR_DATA *mob, int wave_idx, int level);
 static bool       invasion_boss_cast     (CHAR_DATA *mob);
@@ -109,17 +110,21 @@ static int        count_regular_players  (int *out_lo, int *out_hi);
 static CHAR_DATA *find_gertrude          (void);
 static bool       mob_is_invasion_mob    (CHAR_DATA *ch);
 static void       despawn_all_invasion   (void);
-static int        boss_spawn_count_for_tick(int boss_ticks_up);
+int              invasion_boss_spawn_count_for_tick(int boss_ticks_up);
 static bool       is_midgaard_area_name(const char *area_name);
 static bool       invasion_should_advance_on_room_tick(void);
 static bool       invasion_should_boss_trash_talk_for_respawn_count(int respawn_count);
 static bool       invasion_should_boss_trash_talk_after_respawn(void);
 static bool       invasion_should_explode_at_spawn_room(int room_vnum);
+const char *invasion_door_command_argument(const char *keyword, sh_int dir,
+                                          char *buf, size_t buf_len);
+void invasion_force_unlock_exit(CHAR_DATA *ch, EXIT_DATA *pexit);
 static int        invasion_random_trash_talk_index(int line_count);
 static bool       room_has_valid_boss_spawn_conditions(long room_flags, int path_dir);
 static bool       room_is_valid_boss_spawn(ROOM_INDEX_DATA *room, ROOM_INDEX_DATA *target_room);
 static int        invasion_scaled_spawn_count(int base_count, int player_count);
 static bool       invasion_is_wide_area_spawn_eligible(int spawns_this_reset);
+int invasion_spawn_mode_for_respawn_index(int spawns_this_reset);
 int              invasion_reward_index_for_kill(bool is_boss, int mob_level);
 static void       invasion_award_kill_reward(CHAR_DATA *killer, int reward_idx);
 int              invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
@@ -128,20 +133,6 @@ bool             invasion_gertrude_should_fall_for_explosions(int explosion_coun
 static const char *invasion_boss_trash_talk_for_profile(int prof_idx);
 static void       invasion_boss_trash_talk(void);
 
-#ifdef UNIT_TEST_INVASION
-int invasion_test_count_regular_players(int *out_lo, int *out_hi);
-int invasion_test_calculate_boss_hp_mod(int level);
-int invasion_test_is_invasion_mob(CHAR_DATA *ch);
-int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up);
-int invasion_test_is_midgaard_area_name(const char *area_name);
-int invasion_test_should_self_destruct_for_path_dir(int dir);
-int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count);
-int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir);
-int invasion_test_scaled_spawn_count(int base_count, int player_count);
-int invasion_test_is_wide_area_spawn_eligible(int spawns_this_reset);
-int invasion_test_should_explode_at_spawn_room(int room_vnum);
-const char *invasion_test_trash_talk_for_profile(int prof_idx);
-#endif
 
 /* -----------------------------------------------------------------------
  * announce() - send a message to every online player
@@ -201,7 +192,7 @@ int invasion_is_hidden_mobile(CHAR_DATA *ch)
  * boss_spawn_count_for_tick()
  * Bosses spawn more minions as they survive longer in the world.
  * --------------------------------------------------------------------- */
-static int boss_spawn_count_for_tick(int boss_ticks_up)
+int invasion_boss_spawn_count_for_tick(int boss_ticks_up)
 {
     int tiers;
 
@@ -209,7 +200,7 @@ static int boss_spawn_count_for_tick(int boss_ticks_up)
         boss_ticks_up = 0;
 
     tiers = boss_ticks_up / 15;
-    return UMIN(4, 1 + tiers);
+    return UMIN(10, 1 + tiers);
 }
 
 static bool is_midgaard_area_name(const char *area_name)
@@ -253,14 +244,77 @@ static bool invasion_should_explode_at_spawn_room(int room_vnum)
     return (room_vnum == INVASION_SPAWN_VNUM);
 }
 
+const char *invasion_door_command_argument(const char *keyword, sh_int dir,
+                                          char *buf, size_t buf_len)
+{
+    size_t i = 0;
+
+    if (buf == NULL || buf_len == 0)
+        return "";
+
+    if (keyword != NULL)
+    {
+        while (*keyword != '\0' && isspace((unsigned char)*keyword))
+            keyword++;
+
+        while (*keyword != '\0'
+               && !isspace((unsigned char)*keyword)
+               && i + 1 < buf_len)
+        {
+            buf[i++] = *keyword++;
+        }
+    }
+
+    if (i == 0)
+    {
+        static const char *const dir_fallback[6] =
+        {
+            "north", "east", "south", "west", "up", "down"
+        };
+        const char *fallback = ((dir >= 0 && dir <= 5) ? dir_fallback[dir] : "door");
+        snprintf(buf, buf_len, "%s", fallback);
+    }
+    else
+    {
+        buf[i] = '\0';
+    }
+
+    return buf;
+}
+
+void invasion_force_unlock_exit(CHAR_DATA *ch, EXIT_DATA *pexit)
+{
+    int rev_dir;
+
+    if (ch == NULL || pexit == NULL)
+        return;
+
+    if (!mob_is_invasion_mob(ch))
+        return;
+
+    if (!IS_SET(pexit->exit_info, EX_LOCKED))
+        return;
+
+    REMOVE_BIT(pexit->exit_info, EX_LOCKED);
+
+    if (pexit->to_room == NULL || ch->in_room == NULL)
+        return;
+
+    for (rev_dir = 0; rev_dir < 6; rev_dir++)
+    {
+        EXIT_DATA *pexit_rev = pexit->to_room->exit[rev_dir];
+
+        if (pexit_rev != NULL && pexit_rev->to_room == ch->in_room)
+        {
+            REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
+            break;
+        }
+    }
+}
+
 static int invasion_random_trash_talk_index(int line_count)
 {
-#ifdef UNIT_TEST_INVASION
-    (void)line_count;
-    return 0;
-#else
     return number_range(0, line_count - 1);
-#endif
 }
 
 static bool room_has_valid_boss_spawn_conditions(long room_flags, int path_dir)
@@ -297,7 +351,18 @@ static int invasion_scaled_spawn_count(int base_count, int player_count)
 
 static bool invasion_is_wide_area_spawn_eligible(int spawns_this_reset)
 {
-    return (spawns_this_reset >= 10);
+    return (spawns_this_reset >= 9);
+}
+
+int invasion_spawn_mode_for_respawn_index(int spawns_this_reset)
+{
+    if (spawns_this_reset <= 0)
+        return 0;
+
+    if (invasion_is_wide_area_spawn_eligible(spawns_this_reset))
+        return 2;
+
+    return 1;
 }
 
 int invasion_reward_index_for_kill(bool is_boss, int mob_level)
@@ -652,69 +717,6 @@ static void invasion_boss_trash_talk(void)
     do_quest2(invasion_boss, (char *)invasion_boss_trash_talk_for_profile(invasion_boss_profile));
 }
 
-#ifdef UNIT_TEST_INVASION
-int invasion_test_count_regular_players(int *out_lo, int *out_hi)
-{
-    return count_regular_players(out_lo, out_hi);
-}
-
-int invasion_test_calculate_boss_hp_mod(int level)
-{
-    long hp_bonus = 100L + ((long)level * (long)level * 15L);
-    return (int)URANGE(100L, hp_bonus, 250000L);
-}
-
-int invasion_test_is_invasion_mob(CHAR_DATA *ch)
-{
-    return mob_is_invasion_mob(ch);
-}
-
-int invasion_test_boss_spawn_count_for_tick(int boss_ticks_up)
-{
-    return boss_spawn_count_for_tick(boss_ticks_up);
-}
-
-int invasion_test_is_midgaard_area_name(const char *area_name)
-{
-    return is_midgaard_area_name(area_name) ? 1 : 0;
-}
-
-int invasion_test_should_self_destruct_for_path_dir(int dir)
-{
-    return (dir < 0) ? 1 : 0;
-}
-
-int invasion_test_should_boss_trash_talk_for_respawn_count(int respawn_count)
-{
-    return invasion_should_boss_trash_talk_for_respawn_count(respawn_count) ? 1 : 0;
-}
-
-int invasion_test_boss_spawn_room_is_valid(long room_flags, int path_dir)
-{
-    return room_has_valid_boss_spawn_conditions(room_flags, path_dir) ? 1 : 0;
-}
-
-int invasion_test_scaled_spawn_count(int base_count, int player_count)
-{
-    return invasion_scaled_spawn_count(base_count, player_count);
-}
-
-int invasion_test_is_wide_area_spawn_eligible(int spawns_this_reset)
-{
-    return invasion_is_wide_area_spawn_eligible(spawns_this_reset) ? 1 : 0;
-}
-
-int invasion_test_should_explode_at_spawn_room(int room_vnum)
-{
-    return invasion_should_explode_at_spawn_room(room_vnum) ? 1 : 0;
-}
-
-const char *invasion_test_trash_talk_for_profile(int prof_idx)
-{
-    return invasion_boss_trash_talk_for_profile(prof_idx);
-}
-
-#endif
 
 /* -----------------------------------------------------------------------
  * find_gertrude()
@@ -1002,7 +1004,8 @@ static ROOM_INDEX_DATA *pick_random_room_in_area(AREA_DATA *area)
  * All mobs : flagged ACT_UNDEAD, ACT_SENTINEL, ACT_NOASSIST.
  * --------------------------------------------------------------------- */
 static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
-                                     bool allow_wide_area_spawn)
+                                     bool allow_wide_area_spawn,
+                                     int spawns_this_reset)
 {
     ROOM_INDEX_DATA *spawn_room;
     MOB_INDEX_DATA  *pIndex;
@@ -1020,23 +1023,35 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
         return NULL;
     }
 
-    /* Bosses and overflow waves use level-appropriate area picks; regular waves use the boss area. */
+    /* Bosses spawn by level. Wave spawn placement is phased per respawn count:
+     * 1st in boss room, 2nd-9th in boss area, 10th+ wide by level. */
     if (is_boss)
     {
         spawn_room = pick_boss_room(level);
     }
-    else if (allow_wide_area_spawn)
-    {
-        spawn_room = pick_boss_room(level);
-    }
-    else if (invasion_boss != NULL && !invasion_boss->is_free
-             && invasion_boss->in_room != NULL && invasion_boss->in_room->area != NULL)
-    {
-        spawn_room = pick_random_room_in_area(invasion_boss->in_room->area);
-    }
     else
     {
-        spawn_room = get_room_index(INVASION_START_VNUM);
+        int spawn_mode = invasion_spawn_mode_for_respawn_index(spawns_this_reset);
+
+        if (spawn_mode == 0
+            && invasion_boss != NULL && !invasion_boss->is_free
+            && invasion_boss->in_room != NULL)
+        {
+            spawn_room = invasion_boss->in_room;
+        }
+        else if ((allow_wide_area_spawn || spawn_mode == 2))
+        {
+            spawn_room = pick_boss_room(level);
+        }
+        else if (invasion_boss != NULL && !invasion_boss->is_free
+                 && invasion_boss->in_room != NULL && invasion_boss->in_room->area != NULL)
+        {
+            spawn_room = pick_random_room_in_area(invasion_boss->in_room->area);
+        }
+        else
+        {
+            spawn_room = get_room_index(INVASION_START_VNUM);
+        }
     }
 
     if (spawn_room == NULL)
@@ -1126,7 +1141,7 @@ static void invasion_start(void)
     invasion_last_trash_talk_profile = -1;
     invasion_last_trash_talk_line = -1;
 
-    invasion_boss = spawn_invasion_mob(boss_level, TRUE, prof, FALSE);
+    invasion_boss = spawn_invasion_mob(boss_level, TRUE, prof, FALSE, -1);
     if (invasion_boss == NULL)
     {
         bug("invasion_start: failed to spawn boss.", 0);
@@ -1235,7 +1250,7 @@ void invasion_update(void)
         int scaled_boss_spawn_count;
 
         invasion_boss_ticks_up++;
-        boss_spawn_count = boss_spawn_count_for_tick(invasion_boss_ticks_up);
+        boss_spawn_count = invasion_boss_spawn_count_for_tick(invasion_boss_ticks_up);
         scaled_boss_spawn_count = invasion_scaled_spawn_count(boss_spawn_count, count);
 
         for (i = 0; i < scaled_boss_spawn_count; i++)
@@ -1243,7 +1258,7 @@ void invasion_update(void)
             bool allow_wide_area_spawn = invasion_is_wide_area_spawn_eligible(spawns_this_reset);
 
             if (spawn_invasion_mob(number_range(lo, hi), FALSE, -1,
-                                   allow_wide_area_spawn) != NULL)
+                                   allow_wide_area_spawn, spawns_this_reset) != NULL)
             {
                 spawns_this_reset++;
                 if (invasion_should_boss_trash_talk_after_respawn())
@@ -1266,7 +1281,7 @@ void invasion_update(void)
         bool allow_wide_area_spawn = invasion_is_wide_area_spawn_eligible(spawns_this_reset);
 
         if (spawn_invasion_mob(number_range(lo_lvl, hi_lvl), FALSE, -1,
-                               allow_wide_area_spawn) != NULL)
+                               allow_wide_area_spawn, spawns_this_reset) != NULL)
         {
             spawns_this_reset++;
             if (invasion_should_boss_trash_talk_after_respawn())
@@ -1330,11 +1345,34 @@ void invasion_rooms_update(void)
             continue;
         }
 
-        /*
-         * Use hunt_move so invasion mobs can open/unlock/pick doors along
-         * their route to Gertrude, matching the h_find_dir flags above.
-         */
-        hunt_move(ch, dir);
+        {
+            EXIT_DATA *pexit = ch->in_room->exit[dir];
+            char door_arg[MAX_INPUT_LENGTH];
+
+            if (pexit == NULL)
+                continue;
+
+            if (IS_SET(pexit->exit_info, EX_CLOSED))
+            {
+                const char *arg = invasion_door_command_argument(pexit->keyword, dir,
+                                                                 door_arg, sizeof(door_arg));
+
+                if (IS_SET(pexit->exit_info, EX_LOCKED))
+                {
+                    do_unlock(ch, (char *)arg);
+
+                    if (IS_SET(pexit->exit_info, EX_LOCKED))
+                        invasion_force_unlock_exit(ch, pexit);
+                }
+
+                if (!IS_SET(pexit->exit_info, EX_LOCKED)
+                    && IS_SET(pexit->exit_info, EX_CLOSED))
+                    do_open(ch, (char *)arg);
+            }
+
+            if (!IS_SET(pexit->exit_info, EX_CLOSED))
+                move_char(ch, dir);
+        }
     }
 
     if (had_explosion_this_tick)
