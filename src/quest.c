@@ -303,6 +303,9 @@ void do_quest(CHAR_DATA *ch, char *argument)
       sprintf(buf, "The Quest has been running for %d/15 minutes.\n\r", quest_timer);
       send_to_char(buf, ch);
 
+      sprintf(buf, "Quest level range is: %d to %d.\n\r", quest_level_min, quest_level_max);
+      send_to_char(buf, ch);
+
       return;
    }
    if (!strcmp(argument, "stop"))
@@ -429,6 +432,9 @@ void do_quest(CHAR_DATA *ch, char *argument)
 
       sprintf(buf, "Quest Object is worth: %d QP, %d Prac, %d GP\n\r",
               quest_object->value[0], quest_object->value[1], quest_object->value[2]);
+      send_to_char(buf, ch);
+
+      sprintf(buf, "Quest level range is: %d to %d.\n\r", quest_level_min, quest_level_max);
       send_to_char(buf, ch);
 
       return;
