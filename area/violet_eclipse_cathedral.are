@@ -1,0 +1,2490 @@
+#AREA
+@@mCathedral of the Violet Eclipse@@N~
+Q 16
+K violet eclipse cathedral gothic dark~
+L {20-35}~
+N 8
+I 20 35
+V 30250 30324
+X 0
+F 20
+U Amethyst and obsidian hues dominate this terror-soaked gothic cathedral.~
+O virant~
+R all~
+W all~
+#ROOMS
+#30250
+Shattered Rose Gate~
+@@mAmethyst@@N @@mwitchlight@@N crawls over needle-arched vaulting, while gargoyles brood above this stretch of the central nave. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D2
+~
+~
+0 -1 30251
+S
+#30251
+Censer-Fog Vestibule~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the central nave. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30250
+D2
+~
+~
+0 -1 30252
+S
+#30252
+Pilgrim's Lament Walk~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the central nave. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30251
+D2
+~
+~
+0 -1 30253
+S
+#30253
+Gargoyle Choir Landing~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the central nave. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30252
+D2
+~
+~
+0 -1 30254
+S
+#30254
+Narthex of Stilled Wings~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the central nave. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30253
+D1
+~
+~
+0 -1 30265
+D2
+~
+~
+0 -1 30255
+S
+#30255
+Sepulchral Procession~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the central nave. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30254
+D1
+~
+~
+0 -1 30277
+D2
+~
+~
+0 -1 30256
+S
+#30256
+Chalice Echo Hall~
+Violet @@mwitchlight@@N crawls over sepulchral columns, while gargoyles brood above this stretch of the central nave. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30255
+D1
+~
+~
+0 -1 30289
+D2
+~
+~
+0 -1 30257
+S
+#30257
+Veil of Black Incense~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the central nave. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30256
+D1
+~
+~
+0 -1 30301
+D2
+~
+~
+0 -1 30258
+S
+#30258
+Mauve Lantern Arcade~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the central nave. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30257
+D1
+~
+~
+0 -1 30313
+D2
+~
+~
+0 -1 30259
+S
+#30259
+Cathedral Midspine~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the central nave. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30258
+D2
+~
+~
+0 -1 30260
+S
+#30260
+Litany Crossing~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the central nave. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30259
+D2
+~
+~
+0 -1 30261
+S
+#30261
+Roseglass Transept~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the central nave. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30260
+D2
+~
+~
+0 -1 30262
+S
+#30262
+Funeral Bell Gallery~
+Indigo @@mwitchlight@@N crawls over gothic tracery, while gargoyles brood above this stretch of the central nave. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30261
+D2
+~
+~
+0 -1 30263
+S
+#30263
+Reliquary Axis~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the central nave. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30262
+D2
+~
+~
+0 -1 30264
+S
+#30264
+Eclipse High Nave~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the central nave. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30263
+S
+#30265
+Blood Psalm Entry~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the sanguine choir wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D1
+~
+~
+0 -1 30266
+D3
+~
+~
+0 -1 30254
+S
+#30266
+Velvet Wound Cloister~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the sanguine choir wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30265
+D1
+~
+~
+0 -1 30267
+S
+#30267
+Hemorrhage Chapel~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the sanguine choir wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30266
+D1
+~
+~
+0 -1 30268
+S
+#30268
+Dirge-Stained Aisle~
+Black-violet @@mwitchlight@@N crawls over funerary cornices, while gargoyles brood above this stretch of the sanguine choir wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30267
+D1
+~
+~
+0 -1 30269
+S
+#30269
+Scarlet Organ Loft~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the sanguine choir wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30268
+D1
+~
+~
+0 -1 30270
+S
+#30270
+Sable Choir Stalls~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the sanguine choir wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30269
+D1
+~
+~
+0 -1 30271
+S
+#30271
+Crypt-Glass Passage~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the sanguine choir wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30270
+D1
+~
+~
+0 -1 30272
+S
+#30272
+Vesper Thorn Niche~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the sanguine choir wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30271
+D1
+~
+~
+0 -1 30273
+S
+#30273
+Mourner's Spiral~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the sanguine choir wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30272
+D1
+~
+~
+0 -1 30274
+S
+#30274
+Black Mass Rotunda~
+Obsidian @@mwitchlight@@N crawls over ribbed buttresses, while gargoyles brood above this stretch of the sanguine choir wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30273
+D1
+~
+~
+0 -1 30275
+S
+#30275
+Candled Casket Hall~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the sanguine choir wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30274
+D1
+~
+~
+0 -1 30276
+S
+#30276
+Throne of the Crimson Matron~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the sanguine choir wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+13 11
+D0
+~
+~
+0 -1 30275
+S
+#30277
+Reliquary Mouth~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the violet reliquary wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D1
+~
+~
+0 -1 30278
+D3
+~
+~
+0 -1 30255
+S
+#30278
+Crown of Violet Icons~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the violet reliquary wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30277
+D1
+~
+~
+0 -1 30279
+S
+#30279
+Lantern of Closed Eyes~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the violet reliquary wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30278
+D1
+~
+~
+0 -1 30280
+S
+#30280
+Cat's-Eye Apse~
+@@mAmethyst@@N @@mwitchlight@@N crawls over needle-arched vaulting, while gargoyles brood above this stretch of the violet reliquary wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30279
+D1
+~
+~
+0 -1 30281
+S
+#30281
+Incantor's Crosshall~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the violet reliquary wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30280
+D1
+~
+~
+0 -1 30282
+S
+#30282
+Amethyst Sacristy~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the violet reliquary wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30281
+D1
+~
+~
+0 -1 30283
+S
+#30283
+Votive Bone Gallery~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the violet reliquary wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30282
+D1
+~
+~
+0 -1 30284
+S
+#30284
+Whisper Reliquary~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the violet reliquary wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30283
+D1
+~
+~
+0 -1 30285
+S
+#30285
+Starless Relic Court~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the violet reliquary wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30284
+D1
+~
+~
+0 -1 30286
+S
+#30286
+Chained Saint Corridor~
+Violet @@mwitchlight@@N crawls over sepulchral columns, while gargoyles brood above this stretch of the violet reliquary wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30285
+D1
+~
+~
+0 -1 30287
+S
+#30287
+Miter of Night~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the violet reliquary wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30286
+D1
+~
+~
+0 -1 30288
+S
+#30288
+Seat of @@dLady Noctyra@@N~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the violet reliquary wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+13 11
+D0
+~
+~
+0 -1 30287
+S
+#30289
+Basalt Threshold~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the obsidian cloister wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D1
+~
+~
+0 -1 30290
+D3
+~
+~
+0 -1 30256
+S
+#30290
+Ink-Well Cloister~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the obsidian cloister wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30289
+D1
+~
+~
+0 -1 30291
+S
+#30291
+Abjurer's Cross~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the obsidian cloister wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30290
+D1
+~
+~
+0 -1 30292
+S
+#30292
+Obsidian Lectern Hall~
+Indigo @@mwitchlight@@N crawls over gothic tracery, while gargoyles brood above this stretch of the obsidian cloister wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30291
+D1
+~
+~
+0 -1 30293
+S
+#30293
+Sealed Homily Lane~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the obsidian cloister wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30292
+D1
+~
+~
+0 -1 30294
+S
+#30294
+Nocturne Scriptor~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the obsidian cloister wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30293
+D1
+~
+~
+0 -1 30295
+S
+#30295
+Blind Archivum~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the obsidian cloister wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30294
+D1
+~
+~
+0 -1 30296
+S
+#30296
+Wax-Etched Court~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the obsidian cloister wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30295
+D1
+~
+~
+0 -1 30297
+S
+#30297
+Ash Quire Stacks~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the obsidian cloister wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30296
+D1
+~
+~
+0 -1 30298
+S
+#30298
+Penitent's Margin~
+Black-violet @@mwitchlight@@N crawls over funerary cornices, while gargoyles brood above this stretch of the obsidian cloister wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30297
+D1
+~
+~
+0 -1 30299
+S
+#30299
+Vellum Catacomb~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the obsidian cloister wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30298
+D1
+~
+~
+0 -1 30300
+S
+#30300
+Abbot Vharos's Reliquary~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the obsidian cloister wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+13 11
+D0
+~
+~
+0 -1 30299
+S
+#30301
+Briar Stair~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D1
+~
+~
+0 -1 30302
+D3
+~
+~
+0 -1 30257
+S
+#30302
+Gothic Script Gate~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30301
+D1
+~
+~
+0 -1 30303
+S
+#30303
+Splintered Margin~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30302
+D1
+~
+~
+0 -1 30304
+S
+#30304
+Thorn-Pierced Hall~
+Obsidian @@mwitchlight@@N crawls over ribbed buttresses, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30303
+D1
+~
+~
+0 -1 30305
+S
+#30305
+Cardinal's Footway~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30304
+D1
+~
+~
+0 -1 30306
+S
+#30306
+Ivory Quill Court~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30305
+D1
+~
+~
+0 -1 30307
+S
+#30307
+Sanguine Annotation~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30306
+D1
+~
+~
+0 -1 30308
+S
+#30308
+Binder's Ossuary~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30307
+D1
+~
+~
+0 -1 30309
+S
+#30309
+Inkblight Rotunda~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30308
+D1
+~
+~
+0 -1 30310
+S
+#30310
+Razorleaf Balcony~
+@@mAmethyst@@N @@mwitchlight@@N crawls over needle-arched vaulting, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30309
+D1
+~
+~
+0 -1 30311
+S
+#30311
+Needled Crossing~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30310
+D1
+~
+~
+0 -1 30312
+S
+#30312
+Sanctum of the Thorn Cardinal~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the thorned scriptorium wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+13 11
+D0
+~
+~
+0 -1 30311
+S
+#30313
+Moonbone Entry~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D1
+~
+~
+0 -1 30314
+D3
+~
+~
+0 -1 30258
+S
+#30314
+Silver Shroud Court~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30313
+D1
+~
+~
+0 -1 30315
+S
+#30315
+Pale Sarcophagus Line~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30314
+D1
+~
+~
+0 -1 30316
+S
+#30316
+Noctilucent Pillars~
+Violet @@mwitchlight@@N crawls over sepulchral columns, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30315
+D1
+~
+~
+0 -1 30317
+S
+#30317
+Widow's Reliquary~
+Indigo witchlight crawls over gothic tracery, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30316
+D1
+~
+~
+0 -1 30318
+S
+#30318
+Echoing Ossicle Hall~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30317
+D1
+~
+~
+0 -1 30319
+S
+#30319
+Sable Mortuary Walk~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+9 11
+D0
+~
+~
+0 -1 30318
+D1
+~
+~
+0 -1 30320
+S
+#30320
+Corpse-Lily Atrium~
+Amethyst witchlight crawls over needle-arched vaulting, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, whispered litanies pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of char and saintly wax, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The air itself feels like a held breath.~
+9 11
+D0
+~
+~
+0 -1 30319
+D1
+~
+~
+0 -1 30321
+S
+#30321
+Maw of Quiet Bells~
+Violet witchlight crawls over sepulchral columns, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, shackled censers pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of ozone and embalming spice, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Every shadow seems to kneel before unseen royalty.~
+9 11
+D0
+~
+~
+0 -1 30320
+D1
+~
+~
+0 -1 30322
+S
+#30322
+Nightglass Corridor~
+Indigo @@mwitchlight@@N crawls over gothic tracery, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, weeping choir-notes pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of myrrh and old blood, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. The dark here feels ceremonial, not natural.~
+9 11
+D0
+~
+~
+0 -1 30321
+D1
+~
+~
+0 -1 30323
+S
+#30323
+Penumbral Last Rite~
+Black-violet witchlight crawls over funerary cornices, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, distant bells pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of grave-oil and wet ash, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Something listens behind every slab of stone.~
+9 11
+D0
+~
+~
+0 -1 30322
+D1
+~
+~
+0 -1 30324
+S
+#30324
+Throne of the Violet Hierophant~
+Obsidian witchlight crawls over ribbed buttresses, while gargoyles brood above this stretch of the moonlit ossuary wing. Here, broken pipe-organ sighs pulse between arches draped in torn velvet and thornwork iron. The chamber tastes of cold iron and incense, and runes carved into cracked roseglass leak a muted glow that stains armor and skin alike. Each echo returns with one syllable missing.~
+13 11
+D0
+~
+~
+0 -1 30323
+S
+#0
+#MOBILES
+#30250
+grave verger violet eclipse servant~
+a grave verger~
+A grave verger keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+25 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 23 25 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30251
+iron censer knight violet eclipse servant~
+a iron censer knight~
+A iron censer knight keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+26 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 24 26 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30252
+veilbound cantor violet eclipse servant~
+a veilbound cantor~
+A veilbound cantor keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+27 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 25 27 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30253
+crypt gargoyle violet eclipse servant~
+a crypt gargoyle~
+A crypt gargoyle keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+28 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 26 28 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30254
+rose-thorn penitent violet eclipse servant~
+a rose-thorn penitent~
+A rose-thorn penitent keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+29 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 27 29 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30255
+bell-forged watcher violet eclipse servant~
+a bell-forged watcher~
+A bell-forged watcher keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+30 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 28 30 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30256
+mirelit chaplain violet eclipse servant~
+a mirelit chaplain~
+A mirelit chaplain keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+31 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 29 31 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30257
+blood quill scribe violet eclipse servant~
+a blood quill scribe~
+A blood quill scribe keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+32 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 32 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30258
+obsidian halberdier violet eclipse servant~
+a obsidian halberdier~
+A obsidian halberdier keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+33 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 31 33 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30259
+charnel duelist violet eclipse servant~
+a charnel duelist~
+A charnel duelist keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+34 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 32 34 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30260
+ash veil mystic violet eclipse servant~
+a ash veil mystic~
+A ash veil mystic keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+35 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 33 35 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30261
+sepulchral huntsman violet eclipse servant~
+a sepulchral huntsman~
+A sepulchral huntsman keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+25 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 23 25 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30262
+midnight confessor violet eclipse servant~
+a midnight confessor~
+A midnight confessor keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+26 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 24 26 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30263
+blacklace assassin violet eclipse servant~
+a blacklace assassin~
+A blacklace assassin keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+27 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 25 27 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30264
+hollow reliquary guard violet eclipse servant~
+a hollow reliquary guard~
+A hollow reliquary guard keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+28 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 26 28 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30265
+thornmail sentinel violet eclipse servant~
+a thornmail sentinel~
+A thornmail sentinel keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+29 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 27 29 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30266
+velvet dirgeborn violet eclipse servant~
+a velvet dirgeborn~
+A velvet dirgeborn keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+30 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 28 30 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30267
+cathedral excoriator violet eclipse servant~
+a cathedral excoriator~
+A cathedral excoriator keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+31 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 29 31 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30268
+casket marshal violet eclipse servant~
+a casket marshal~
+A casket marshal keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+32 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 32 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30269
+lament archivist violet eclipse servant~
+a lament archivist~
+A lament archivist keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+33 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 31 33 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30270
+votive butcher violet eclipse servant~
+a votive butcher~
+A votive butcher keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+34 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 32 34 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30271
+nocturne acolyte violet eclipse servant~
+a nocturne acolyte~
+A nocturne acolyte keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+35 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 33 35 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30272
+grave-ink theurge violet eclipse servant~
+a grave-ink theurge~
+A grave-ink theurge keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+25 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 23 25 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30273
+catacomb arbalester violet eclipse servant~
+a catacomb arbalester~
+A catacomb arbalester keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+26 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 24 26 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30274
+mourning pikebearer violet eclipse servant~
+a mourning pikebearer~
+A mourning pikebearer keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+27 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 25 27 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30275
+stained-glass revenant violet eclipse servant~
+a stained-glass revenant~
+A stained-glass revenant keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+28 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 26 28 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30276
+bonewire deacon violet eclipse servant~
+a bonewire deacon~
+A bonewire deacon keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+29 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 27 29 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30277
+scarlet altar guard violet eclipse servant~
+a scarlet altar guard~
+A scarlet altar guard keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+30 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 28 30 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30278
+dread psalmist violet eclipse servant~
+a dread psalmist~
+A dread psalmist keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+31 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 29 31 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30279
+crypt-veil reaver violet eclipse servant~
+a crypt-veil reaver~
+A crypt-veil reaver keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+32 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 32 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30280
+iron rosary enforcer violet eclipse servant~
+a iron rosary enforcer~
+A iron rosary enforcer keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+33 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 31 33 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30281
+vesper chainbreaker violet eclipse servant~
+a vesper chainbreaker~
+A vesper chainbreaker keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+34 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 32 34 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30282
+funeral torch zealot violet eclipse servant~
+a funeral torch zealot~
+A funeral torch zealot keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+35 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 33 35 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30283
+bloodwax liturgist violet eclipse servant~
+a bloodwax liturgist~
+A bloodwax liturgist keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+25 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 23 25 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30284
+roseglass inquisitor violet eclipse servant~
+a roseglass inquisitor~
+A roseglass inquisitor keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+26 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 24 26 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30285
+hushed nave stalker violet eclipse servant~
+a hushed nave stalker~
+A hushed nave stalker keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+27 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 25 27 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30286
+dirgebound man-at-arms violet eclipse servant~
+a dirgebound man-at-arms~
+A dirgebound man-at-arms keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+28 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 26 28 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30287
+saint-bone collector violet eclipse servant~
+a saint-bone collector~
+A saint-bone collector keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+29 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 27 29 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30288
+gloom censer adept violet eclipse servant~
+a gloom censer adept~
+A gloom censer adept keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+30 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 28 30 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30289
+carrion reliquarist violet eclipse servant~
+a carrion reliquarist~
+A carrion reliquarist keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+31 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 29 31 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30290
+penumbral scourge violet eclipse servant~
+a penumbral scourge~
+A penumbral scourge keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+32 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 32 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30291
+ashen choir hunter violet eclipse servant~
+a ashen choir hunter~
+A ashen choir hunter keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+33 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 31 33 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30292
+black mitre disciplinarian violet eclipse servant~
+a black mitre disciplinarian~
+A black mitre disciplinarian keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+34 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 32 34 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30293
+thorn crypt outrider violet eclipse servant~
+a thorn crypt outrider~
+A thorn crypt outrider keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+35 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 33 35 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30294
+grave-cant herald violet eclipse servant~
+a grave-cant herald~
+A grave-cant herald keeps vigil beneath violet torchlight.
+
+~
+This cult warrior is draped in blackened steel, amethyst sigils, and ritual scars of the Violet Eclipse.
+
+~
+65 0 -400 S
+25 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 23 25 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30295
+lady noctyra wing boss~
+@@dLady Noctyra@@N~
+@@dLady Noctyra@@N reigns over this wing's terminal sanctum.
+
+~
+Lady Noctyra stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
+
+~
+33554435 0 -700 S
+40 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 34 0 0 0 0 0 0 0 
+L 45 45 25 0 0 0 0 0 0 
+#30296
+abbot vharos wing boss~
+@@dAbbot Vharos@@N~
+@@dAbbot Vharos@@N reigns over this wing's terminal sanctum.
+
+~
+Abbot Vharos stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
+
+~
+33554435 0 -700 S
+40 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 34 0 0 0 0 0 0 0 
+L 45 45 25 0 0 0 0 0 0 
+#30297
+the thorn cardinal wing boss~
+@@dThe Thorn Cardinal@@N~
+@@dThe Thorn Cardinal@@N reigns over this wing's terminal sanctum.
+
+~
+The Thorn Cardinal stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
+
+~
+33554435 0 -700 S
+40 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 34 0 0 0 0 0 0 0 
+L 45 45 25 0 0 0 0 0 0 
+#30298
+marshal gravemaw wing boss~
+@@dMarshal Gravemaw@@N~
+@@dMarshal Gravemaw@@N reigns over this wing's terminal sanctum.
+
+~
+Marshal Gravemaw stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
+
+~
+33554435 0 -700 S
+40 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 34 0 0 0 0 0 0 0 
+L 45 45 25 0 0 0 0 0 0 
+#30299
+the violet hierophant wing boss~
+@@mThe Violet Hierophant@@N~
+@@mThe Violet Hierophant@@N reigns over this wing's terminal sanctum.
+
+~
+The Violet Hierophant stands in predatory stillness, swathed in sentient shadow and crowned with amethyst fire.
+
+~
+33554435 0 -700 S
+40 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 30 34 0 0 0 0 0 0 0 
+L 45 45 25 0 0 0 0 0 0 
+#0
+#OBJECTS
+#30250
+halo of grieving stars~
+@@mHalo of Grieving Stars@@N~
+Halo of Grieving Stars has been left in the cathedral gloom.~
+9 268435456 8388609 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+20
+#30251
+aura of nocturne grace~
+@@mAura of Nocturne Grace@@N~
+Aura of Nocturne Grace has been left in the cathedral gloom.~
+9 268435456 8388610 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+21
+#30252
+wicked horned diadem~
+@@mWicked Horned Diadem@@N~
+Wicked Horned Diadem has been left in the cathedral gloom.~
+9 268435456 8388612 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+22
+#30253
+helm of the violet oath~
+@@mHelm of the Violet Oath@@N~
+Helm of the Violet Oath has been left in the cathedral gloom.~
+9 268435456 8388616 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+23
+#30254
+funeral visage mask~
+@@mFuneral Visage Mask@@N~
+Funeral Visage Mask has been left in the cathedral gloom.~
+9 268435456 8388624 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+24
+#30255
+raven-beak reliquary~
+@@mRaven-Beak Reliquary@@N~
+Raven-Beak Reliquary has been left in the cathedral gloom.~
+9 268435456 8388640 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+25
+#30256
+whisperbone earring~
+@@mWhisperbone Earring@@N~
+Whisperbone Earring has been left in the cathedral gloom.~
+9 268435456 8388672 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+26
+#30257
+mourning chain collar~
+@@mMourning Chain Collar@@N~
+Mourning Chain Collar has been left in the cathedral gloom.~
+9 268435456 8388736 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+27
+#30258
+mantle of fallen wings~
+@@mMantle of Fallen Wings@@N~
+Mantle of Fallen Wings has been left in the cathedral gloom.~
+9 268435456 8388864 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+28
+#30259
+amethyst pauldrons~
+@@mAmethyst Pauldrons@@N~
+Amethyst Pauldrons has been left in the cathedral gloom.~
+9 268435456 8389120 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+29
+#30260
+gravecrawl sleeves~
+@@mGravecrawl Sleeves@@N~
+Gravecrawl Sleeves has been left in the cathedral gloom.~
+9 268435456 8389632 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+30
+#30261
+bellringer wristguard~
+@@mBellringer Wristguard@@N~
+Bellringer Wristguard has been left in the cathedral gloom.~
+9 268435456 8390656 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+20
+#30262
+sepulcher gauntlets~
+@@mSepulcher Gauntlets@@N~
+Sepulcher Gauntlets has been left in the cathedral gloom.~
+9 268435456 8392704 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+21
+#30263
+signet of the eclipse~
+@@mSignet of the Eclipse@@N~
+Signet of the Eclipse has been left in the cathedral gloom.~
+9 268435456 8396800 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+22
+#30264
+ghoulclaw talons~
+@@mGhoulclaw Talons@@N~
+Ghoulclaw Talons has been left in the cathedral gloom.~
+9 268435456 8404992 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+23
+#30265
+lector's star rod~
+@@mLector's Star Rod@@N~
+Lector's Star Rod has been left in the cathedral gloom.~
+9 268435456 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+24
+#30266
+shroud of black liturgy~
+@@mShroud of Black Liturgy@@N~
+Shroud of Black Liturgy has been left in the cathedral gloom.~
+9 268435456 8454144 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+25
+#30267
+oathcord girdle~
+@@mOathcord Girdle@@N~
+Oathcord Girdle has been left in the cathedral gloom.~
+9 268435456 8519680 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+26
+#30268
+cathedral war-cuirass~
+@@mCathedral War-Cuirass@@N~
+Cathedral War-Cuirass has been left in the cathedral gloom.~
+9 268435456 8650752 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+27
+#30269
+barrowtail sash~
+@@mBarrowtail Sash@@N~
+Barrowtail Sash has been left in the cathedral gloom.~
+9 268435456 8912896 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+28
+#30270
+graveplate tassets~
+@@mGraveplate Tassets@@N~
+Graveplate Tassets has been left in the cathedral gloom.~
+9 268435456 9437184 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+29
+#30271
+cryptwalker sabatons~
+@@mCryptwalker Sabatons@@N~
+Cryptwalker Sabatons has been left in the cathedral gloom.~
+9 268435456 10485760 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+30
+#30272
+hoofguards of the dead march~
+@@mHoofguards of the Dead March@@N~
+Hoofguards of the Dead March has been left in the cathedral gloom.~
+9 268435456 12582912 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+20
+#30273
+crownlet of hollow sanctity~
+@@mCrownlet of Hollow Sanctity@@N~
+Crownlet of Hollow Sanctity has been left in the cathedral gloom.~
+9 268435456 8388609 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+21
+#30274
+aura of dread benediction~
+@@mAura of Dread Benediction@@N~
+Aura of Dread Benediction has been left in the cathedral gloom.~
+9 268435456 8388610 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+22
+#30275
+hooked penitent horns~
+@@mHooked Penitent Horns@@N~
+Hooked Penitent Horns has been left in the cathedral gloom.~
+9 268435456 8388612 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+23
+#30276
+widow-glass circlet~
+@@mWidow-Glass Circlet@@N~
+Widow-Glass Circlet has been left in the cathedral gloom.~
+9 268435456 8388616 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+24
+#30277
+mask of the black sermon~
+@@mMask of the Black Sermon@@N~
+Mask of the Black Sermon has been left in the cathedral gloom.~
+9 268435456 8388624 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+25
+#30278
+carrion-beak mask~
+@@mCarrion-Beak Mask@@N~
+Carrion-Beak Mask has been left in the cathedral gloom.~
+9 268435456 8388640 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+26
+#30279
+twinned ossuary studs~
+@@mTwinned Ossuary Studs@@N~
+Twinned Ossuary Studs has been left in the cathedral gloom.~
+9 268435456 8388672 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+27
+#30280
+neckchain of last vespers~
+@@mNeckchain of Last Vespers@@N~
+Neckchain of Last Vespers has been left in the cathedral gloom.~
+9 268435456 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+28
+#30281
+mourner's flight mantle~
+@@mMourner's Flight Mantle@@N~
+Mourner's Flight Mantle has been left in the cathedral gloom.~
+9 268435456 8388864 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+29
+#30282
+shoulders of the pale bell~
+@@mShoulders of the Pale Bell@@N~
+Shoulders of the Pale Bell has been left in the cathedral gloom.~
+9 268435456 8389120 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+30
+#30283
+runic mortuary bracers~
+@@mRunic Mortuary Bracers@@N~
+Runic Mortuary Bracers has been left in the cathedral gloom.~
+9 268435456 8389632 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+20
+#30284
+wristchain of silent mass~
+@@mWristchain of Silent Mass@@N~
+Wristchain of Silent Mass has been left in the cathedral gloom.~
+9 268435456 8390656 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+21
+#30285
+handguards of grave devotion~
+@@mHandguards of Grave Devotion@@N~
+Handguards of Grave Devotion has been left in the cathedral gloom.~
+9 268435456 8392704 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+22
+#30286
+ring of the violet dirge~
+@@mRing of the Violet Dirge@@N~
+Ring of the Violet Dirge has been left in the cathedral gloom.~
+9 268435456 8396800 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+23
+#30287
+clawguards of the dusk hunt~
+@@mClawguards of the Dusk Hunt@@N~
+Clawguards of the Dusk Hunt has been left in the cathedral gloom.~
+9 268435456 8404992 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+24
+#30288
+grandscript crozier~
+@@mGrandscript Crozier@@N~
+Grandscript Crozier has been left in the cathedral gloom.~
+9 268435456 8421376 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+25
+#30289
+cloak of ruined choirs~
+@@mCloak of Ruined Choirs@@N~
+Cloak of Ruined Choirs has been left in the cathedral gloom.~
+9 268435456 8454144 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+26
+#30290
+belt of thornbound oaths~
+@@mBelt of Thornbound Oaths@@N~
+Belt of Thornbound Oaths has been left in the cathedral gloom.~
+9 268435456 8519680 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+27
+#30291
+warplate of chancel iron~
+@@mWarplate of Chancel Iron@@N~
+Warplate of Chancel Iron has been left in the cathedral gloom.~
+9 268435456 8650752 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+28
+#30292
+tailband of ash litany~
+@@mTailband of Ash Litany@@N~
+Tailband of Ash Litany has been left in the cathedral gloom.~
+9 268435456 8912896 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+29
+#30293
+legguards of the reliquary watch~
+@@mLegguards of the Reliquary Watch@@N~
+Legguards of the Reliquary Watch has been left in the cathedral gloom.~
+9 268435456 9437184 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+30
+#30294
+sabatons of candle soot~
+@@mSabatons of Candle Soot@@N~
+Sabatons of Candle Soot has been left in the cathedral gloom.~
+9 268435456 10485760 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+20
+#30295
+crown of lady noctyra~
+@@dCrown of Lady Noctyra@@N~
+Crown of Lady Noctyra hums with ruinous magic.~
+9 268435520 8388616 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+35
+#30296
+crozier of abbot vharos~
+@@dCrozier of Abbot Vharos@@N~
+Crozier of Abbot Vharos hums with ruinous magic.~
+9 268435520 8421376 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+35
+#30297
+mantle of the thorn cardinal~
+@@dMantle of the Thorn Cardinal@@N~
+Mantle of the Thorn Cardinal hums with ruinous magic.~
+9 268435520 8454144 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+35
+#30298
+bulwark of marshal gravemaw~
+@@dBulwark of Marshal Gravemaw@@N~
+Bulwark of Marshal Gravemaw hums with ruinous magic.~
+9 268435520 8650752 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+35
+#30299
+diadem of the violet hierophant~
+@@dDiadem of the Violet Hierophant@@N~
+Diadem of the Violet Hierophant hums with ruinous magic.~
+9 268435520 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+35
+#0
+#RESETS
+M 0 30250 1 30250 (null)
+
+E 0 30250 0 1 (null)
+
+M 0 30251 1 30252 (null)
+
+E 0 30251 0 2 (null)
+
+M 0 30252 1 30254 (null)
+
+E 0 30252 0 3 (null)
+
+M 0 30253 1 30256 (null)
+
+E 0 30253 0 4 (null)
+
+M 0 30254 1 30258 (null)
+
+E 0 30254 0 5 (null)
+
+M 0 30255 1 30260 (null)
+
+E 0 30255 0 6 (null)
+
+M 0 30256 1 30262 (null)
+
+E 0 30256 0 7 (null)
+
+M 0 30257 1 30264 (null)
+
+E 0 30257 0 8 (null)
+
+M 0 30258 1 30266 (null)
+
+E 0 30258 0 9 (null)
+
+M 0 30259 1 30268 (null)
+
+E 0 30259 0 10 (null)
+
+M 0 30260 1 30270 (null)
+
+E 0 30260 0 11 (null)
+
+M 0 30261 1 30272 (null)
+
+E 0 30261 0 12 (null)
+
+M 0 30262 1 30274 (null)
+
+E 0 30262 0 13 (null)
+
+M 0 30263 1 30277 (null)
+
+E 0 30263 0 14 (null)
+
+M 0 30264 1 30279 (null)
+
+E 0 30264 0 15 (null)
+
+M 0 30265 1 30281 (null)
+
+E 0 30265 0 16 (null)
+
+M 0 30266 1 30283 (null)
+
+E 0 30266 0 17 (null)
+
+M 0 30267 1 30285 (null)
+
+E 0 30267 0 18 (null)
+
+M 0 30268 1 30287 (null)
+
+E 0 30268 0 19 (null)
+
+M 0 30269 1 30290 (null)
+
+E 0 30269 0 20 (null)
+
+M 0 30270 1 30292 (null)
+
+E 0 30270 0 21 (null)
+
+M 0 30271 1 30294 (null)
+
+E 0 30271 0 22 (null)
+
+M 0 30272 1 30296 (null)
+
+E 0 30272 0 23 (null)
+
+M 0 30273 1 30298 (null)
+
+E 0 30273 0 24 (null)
+
+M 0 30274 1 30301 (null)
+
+E 0 30274 0 1 (null)
+
+M 0 30275 1 30303 (null)
+
+E 0 30275 0 2 (null)
+
+M 0 30276 1 30305 (null)
+
+E 0 30276 0 3 (null)
+
+M 0 30277 1 30307 (null)
+
+E 0 30277 0 4 (null)
+
+M 0 30278 1 30309 (null)
+
+E 0 30278 0 5 (null)
+
+M 0 30279 1 30311 (null)
+
+E 0 30279 0 6 (null)
+
+M 0 30280 1 30314 (null)
+
+E 0 30280 0 7 (null)
+
+M 0 30281 1 30316 (null)
+
+E 0 30281 0 8 (null)
+
+M 0 30282 1 30318 (null)
+
+E 0 30282 0 9 (null)
+
+M 0 30283 1 30320 (null)
+
+E 0 30283 0 10 (null)
+
+M 0 30284 1 30322 (null)
+
+E 0 30284 0 11 (null)
+
+M 0 30285 1 30250 (null)
+
+E 0 30285 0 12 (null)
+
+M 0 30286 1 30252 (null)
+
+E 0 30286 0 13 (null)
+
+M 0 30287 1 30254 (null)
+
+E 0 30287 0 14 (null)
+
+M 0 30288 1 30256 (null)
+
+E 0 30288 0 15 (null)
+
+M 0 30289 1 30258 (null)
+
+E 0 30289 0 16 (null)
+
+M 0 30290 1 30260 (null)
+
+E 0 30290 0 17 (null)
+
+M 0 30291 1 30262 (null)
+
+E 0 30291 0 18 (null)
+
+M 0 30292 1 30264 (null)
+
+E 0 30292 0 19 (null)
+
+M 0 30293 1 30266 (null)
+
+E 0 30293 0 20 (null)
+
+M 0 30294 1 30268 (null)
+
+E 0 30294 0 21 (null)
+
+M 0 30295 1 30276 (null)
+
+E 0 30295 0 1 (null)
+
+M 0 30296 1 30288 (null)
+
+E 0 30296 0 2 (null)
+
+M 0 30297 1 30300 (null)
+
+E 0 30297 0 3 (null)
+
+M 0 30298 1 30312 (null)
+
+E 0 30298 0 4 (null)
+
+M 0 30299 1 30324 (null)
+
+E 0 30299 0 5 (null)
+
+S
+#$
