@@ -253,6 +253,20 @@ int control;
 
 int max_players = 0;
 
+static int count_playing_players(void)
+{
+   DESCRIPTOR_DATA *d;
+   int playing_players = 0;
+
+   for (d = first_desc; d != NULL; d = d->next)
+   {
+      if (d->connected == CON_PLAYING && d->character != NULL)
+         playing_players++;
+   }
+
+   return playing_players;
+}
+
 /* -S- Mod: Some Globals for auctioning an item */
 OBJ_DATA *auction_item;    /* Item being sold      */
 CHAR_DATA *auction_owner;  /* Item's owner         */
@@ -694,11 +708,6 @@ void game_loop(int control)
                out_file = NULL;
             }
 
-            if (cur_players > max_players)
-            {
-               trigger_happy_hour();
-               max_players = cur_players;
-            }
          }
 
          usecDelta = ((int)last_time.tv_usec) - ((int)now_time.tv_usec) + 1000000 / PULSE_PER_SECOND;
@@ -895,12 +904,6 @@ void new_descriptor(int control)
    }
 
    cur_players++;
-   if (cur_players > max_players)
-   {
-      trigger_happy_hour();
-      max_players = cur_players;
-      info("New max players reached for this boot! Happy hour triggered!", 1);
-   }
 
    return;
 }
@@ -2835,6 +2838,18 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
       sprintf(buf, "%s has entered the game.", ch->name);
       monitor_chan(buf, MONITOR_CONNECT);
+
+      {
+         int playing_players = count_playing_players();
+
+         if (playing_players > max_players)
+         {
+            max_players = playing_players;
+            trigger_happy_hour();
+            happy_hour_ticks_remaining = 1;
+            info("New player record reached! Happy hour triggered for one in-game hour!", 1);
+         }
+      }
 
       if ((number_range(0, 99) < (ch->balance / 10000000)) && (ch->balance > (get_psuedo_level(ch) * 100000)))
       {

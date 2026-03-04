@@ -1143,6 +1143,17 @@ void weather_update(void)
    buf[0] = '\0';
    buf2[0] = '\0';
 
+   if (happy_hour && happy_hour_ticks_remaining > 0)
+   {
+      happy_hour_ticks_remaining--;
+      if (happy_hour_ticks_remaining == 0)
+      {
+         happy_hour = FALSE;
+         info("Happy hour has ended!", 1);
+         info("Xp has returned to normal!", 1);
+      }
+   }
+
    switch (++time_info.hour)
    {
    case 5:
@@ -1187,6 +1198,8 @@ void weather_update(void)
 
       if (happy_hour)
       {
+         happy_hour = FALSE;
+         happy_hour_ticks_remaining = 0;
          info("Happy hour has ended!", 1);
          info("Xp has returned to normal!", 1);
       }
