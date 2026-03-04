@@ -91,6 +91,7 @@ static int        invasion_wave_respawns = 0;
 static int        invasion_gertrude_explosions = 0;
 static int        invasion_last_trash_talk_profile = -1;
 static int        invasion_last_trash_talk_line    = -1;
+static int        invasion_pending_trash_talks     = 0;
 
 /* -----------------------------------------------------------------------
  * Forward declarations
@@ -103,7 +104,11 @@ static CHAR_DATA *spawn_invasion_mob     (int level, bool is_boss, int prof_idx,
                                           bool allow_wide_area_spawn,
                                           int spawns_this_reset);
 static void       apply_boss_profile     (CHAR_DATA *mob, int prof_idx, int level);
-static void       apply_wave_mob_profile (CHAR_DATA *mob, int wave_idx, int level);
+static void       apply_wave_mob_profile (CHAR_DATA *mob, int wave_idx, int level,
+                                          int wave_progress_tier);
+static void       apply_wave_level_and_theme_skills(CHAR_DATA *mob,
+                                                    const WAVE_MOB_PROFILE *wp,
+                                                    int level);
 static bool       invasion_boss_cast     (CHAR_DATA *mob);
 static void       announce               (const char *msg);
 static int        count_regular_players  (int *out_lo, int *out_hi);
@@ -114,8 +119,8 @@ int              invasion_boss_spawn_count_for_tick(int boss_ticks_up);
 static bool       is_midgaard_area_name(const char *area_name);
 static bool       invasion_should_advance_on_room_tick(void);
 int               invasion_should_advance_for_room_tick_count(int room_tick_count);
-static bool       invasion_should_boss_trash_talk_for_respawn_count(int respawn_count);
 static bool       invasion_should_boss_trash_talk_after_respawn(void);
+int               invasion_boss_pending_trash_talks_for_respawns(int respawn_count);
 static bool       invasion_should_explode_at_spawn_room(int room_vnum);
 const char *invasion_door_command_argument(const char *keyword, sh_int dir,
                                           char *buf, size_t buf_len);
@@ -126,11 +131,16 @@ static bool       room_is_valid_boss_spawn(ROOM_INDEX_DATA *room, ROOM_INDEX_DAT
 static int        invasion_scaled_spawn_count(int base_count, int player_count);
 static bool       invasion_is_wide_area_spawn_eligible(int spawns_this_reset);
 int invasion_spawn_mode_for_respawn_index(int spawns_this_reset);
+int invasion_wave_progress_tier_for_respawn_index(int spawns_this_reset);
+int invasion_wave_hp_bonus_for_progress_tier(int level, int wave_progress_tier);
+int invasion_wave_drhr_bonus_for_progress_tier(int level, int wave_progress_tier);
+int invasion_wave_ac_bonus_for_progress_tier(int level, int wave_progress_tier);
 int              invasion_reward_index_for_kill(bool is_boss, int mob_level);
 static void       invasion_award_kill_reward(CHAR_DATA *killer, int reward_idx);
 int              invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
 bool             invasion_gertrude_should_fall_for_explosions(int explosion_count);
+bool             invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced);
 static const char *invasion_boss_trash_talk_for_profile(int prof_idx);
 static void       invasion_boss_trash_talk(void);
 
@@ -236,15 +246,29 @@ static bool invasion_should_advance_on_room_tick(void)
            ? TRUE : FALSE;
 }
 
-static bool invasion_should_boss_trash_talk_for_respawn_count(int respawn_count)
+int invasion_boss_pending_trash_talks_for_respawns(int respawn_count)
 {
-    return (respawn_count > 0 && (respawn_count % 3) == 0);
+    if (respawn_count <= 0)
+        return 0;
+
+    return respawn_count / 3;
 }
 
 static bool invasion_should_boss_trash_talk_after_respawn(void)
 {
     invasion_wave_respawns++;
-    return invasion_should_boss_trash_talk_for_respawn_count(invasion_wave_respawns);
+
+    if (invasion_boss_pending_trash_talks_for_respawns(invasion_wave_respawns)
+        <= invasion_pending_trash_talks)
+        return FALSE;
+
+    invasion_pending_trash_talks++;
+    return TRUE;
+}
+
+bool invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced)
+{
+    return (pending_talk_count > 0 && room_tick_advanced > 0) ? TRUE : FALSE;
 }
 
 static bool invasion_should_explode_at_spawn_room(int room_vnum)
@@ -371,6 +395,50 @@ int invasion_spawn_mode_for_respawn_index(int spawns_this_reset)
         return 2;
 
     return 1;
+}
+
+int invasion_wave_progress_tier_for_respawn_index(int spawns_this_reset)
+{
+    if (spawns_this_reset <= 2)
+        return 0;
+
+    if (spawns_this_reset <= 8)
+        return 1;
+
+    if (spawns_this_reset <= 17)
+        return 2;
+
+    return 3;
+}
+
+int invasion_wave_hp_bonus_for_progress_tier(int level, int wave_progress_tier)
+{
+    int tier = URANGE(0, wave_progress_tier, 3);
+
+    if (level < 1 || tier == 0)
+        return 0;
+
+    return tier * (level * 2);
+}
+
+int invasion_wave_drhr_bonus_for_progress_tier(int level, int wave_progress_tier)
+{
+    int tier = URANGE(0, wave_progress_tier, 3);
+
+    if (tier == 0)
+        return 0;
+
+    return tier * UMAX(1, level / 12);
+}
+
+int invasion_wave_ac_bonus_for_progress_tier(int level, int wave_progress_tier)
+{
+    int tier = URANGE(0, wave_progress_tier, 3);
+
+    if (tier == 0)
+        return 0;
+
+    return tier * UMAX(4, level / 6);
 }
 
 int invasion_reward_index_for_kill(bool is_boss, int mob_level)
@@ -831,7 +899,8 @@ static void apply_boss_profile(CHAR_DATA *mob, int prof_idx, int level)
  * HP is kept modest (wave mobs should die, but put up a fight):
  *   max_hit = level*20 + rand(level*3, level*6) + level*5
  * --------------------------------------------------------------------- */
-static void apply_wave_mob_profile(CHAR_DATA *mob, int wave_idx, int level)
+static void apply_wave_mob_profile(CHAR_DATA *mob, int wave_idx, int level,
+                                   int wave_progress_tier)
 {
     const WAVE_MOB_PROFILE *wp;
 
@@ -856,11 +925,42 @@ static void apply_wave_mob_profile(CHAR_DATA *mob, int wave_idx, int level)
     SET_BIT(mob->skills, MOB_DODGE);    /* every wave mob can dodge        */
     SET_BIT(mob->skills, MOB_NODISARM); /* natural weapons can't be taken  */
 
+    apply_wave_level_and_theme_skills(mob, wp, level);
+
+    if (wave_progress_tier >= 1)
+    {
+        SET_BIT(mob->skills, MOB_FOURTH);
+        SET_BIT(mob->skills, MOB_ENHANCED);
+    }
+    if (wave_progress_tier >= 2)
+    {
+        SET_BIT(mob->skills, MOB_FIFTH);
+        SET_BIT(mob->skills, MOB_COUNTER);
+    }
+    if (wave_progress_tier >= 3)
+    {
+        SET_BIT(mob->skills, MOB_SIXTH);
+        SET_BIT(mob->skills, MOB_MARTIAL);
+    }
+
     /* Natural armour / tough hide */
     mob->block_mod += wp->block_mod;
 
     /* HP */
     mob->hp_mod  = level * 5;
+    mob->hp_mod += invasion_wave_hp_bonus_for_progress_tier(level, wave_progress_tier);
+    if (wp->cast == 0)
+    {
+        /*
+         * Non-caster profiles get extra physical pressure so they still
+         * feel threatening in high-level invasions.
+         */
+        mob->hp_mod += level * 3;
+        mob->dr_mod += UMAX(1, level / 10);
+        mob->hr_mod += UMAX(1, level / 10);
+        mob->ac_mod -= UMAX(5, level / 4);
+    }
+
     mob->max_hit = level * 20
                  + number_range(level * 3, level * 6)
                  + mob->hp_mod;
@@ -869,6 +969,61 @@ static void apply_wave_mob_profile(CHAR_DATA *mob, int wave_idx, int level)
     /* Modest combat stat scaling with level */
     mob->dr_mod += level / 8;
     mob->hr_mod += level / 8;
+
+    if (wave_progress_tier > 0)
+    {
+        mob->dr_mod += invasion_wave_drhr_bonus_for_progress_tier(level, wave_progress_tier);
+        mob->hr_mod += invasion_wave_drhr_bonus_for_progress_tier(level, wave_progress_tier);
+        mob->ac_mod -= invasion_wave_ac_bonus_for_progress_tier(level, wave_progress_tier);
+    }
+}
+
+static void apply_wave_level_and_theme_skills(CHAR_DATA *mob,
+                                              const WAVE_MOB_PROFILE *wp,
+                                              int level)
+{
+    if (wp->cast != 0)
+    {
+        if (IS_SET(wp->resist, ELE_FIRE) && level >= 55)
+            SET_BIT(mob->cast, CAST_FLAMESTRIKE);
+        if (IS_SET(wp->resist, ELE_WATER) && level >= 55)
+            SET_BIT(mob->cast, CAST_SUFFOCATE);
+        if (IS_SET(wp->resist, ELE_AIR) && level >= 45)
+            SET_BIT(mob->cast, CAST_STATIC);
+        if (IS_SET(wp->resist, ELE_EARTH) && level >= 65)
+            SET_BIT(mob->cast, CAST_EARTHQUAKE);
+        if (IS_SET(wp->resist, ELE_SHADOW) && level >= 45)
+            SET_BIT(mob->cast, CAST_HELLSPAWN);
+        if (IS_SET(wp->resist, ELE_MENTAL) && level >= 45)
+            SET_BIT(mob->cast, CAST_MIND_BOLT);
+    }
+
+    if (level >= 45) SET_BIT(mob->skills, MOB_FOURTH);
+    if (level >= 70) SET_BIT(mob->skills, MOB_FIFTH);
+    if (level >= 95) SET_BIT(mob->skills, MOB_SIXTH);
+    if (level >= 60) SET_BIT(mob->skills, MOB_ENHANCED);
+    if (level >= 80) SET_BIT(mob->skills, MOB_COUNTER);
+
+    /*
+     * Thematic nudges so wave mobs feel closer to their elemental identity.
+     */
+    if (IS_SET(wp->resist, ELE_EARTH) || IS_SET(wp->resist, ELE_PHYSICAL))
+    {
+        SET_BIT(mob->skills, MOB_HEADBUTT);
+        SET_BIT(mob->skills, MOB_NOTRIP);
+    }
+
+    if (IS_SET(wp->resist, ELE_AIR))
+        SET_BIT(mob->skills, MOB_KICK);
+
+    if (IS_SET(wp->resist, ELE_POISON))
+        SET_BIT(mob->skills, MOB_DIRT);
+
+    if (IS_SET(wp->resist, ELE_SHADOW))
+        SET_BIT(mob->skills, MOB_COUNTER);
+
+    if (wp->cast == 0)
+        SET_BIT(mob->skills, MOB_CHARGE);
 }
 
 /* -----------------------------------------------------------------------
@@ -1118,7 +1273,8 @@ static CHAR_DATA *spawn_invasion_mob(int level, bool is_boss, int prof_idx,
     if (is_boss)
         apply_boss_profile(mob, prof_idx, level);
     else
-        apply_wave_mob_profile(mob, wave_idx, level);
+        apply_wave_mob_profile(mob, wave_idx, level,
+                               invasion_wave_progress_tier_for_respawn_index(spawns_this_reset));
 
     SET_BIT(mob->act, ACT_INVASION);
 
@@ -1148,6 +1304,7 @@ static void invasion_start(void)
     invasion_gertrude_explosions = 0;
     invasion_last_trash_talk_profile = -1;
     invasion_last_trash_talk_line = -1;
+    invasion_pending_trash_talks = 0;
 
     invasion_boss = spawn_invasion_mob(boss_level, TRUE, prof, FALSE, -1);
     if (invasion_boss == NULL)
@@ -1207,6 +1364,7 @@ static void invasion_end(bool success)
     invasion_gertrude_explosions = 0;
     invasion_last_trash_talk_profile = -1;
     invasion_last_trash_talk_line = -1;
+    invasion_pending_trash_talks = 0;
     invasion_timer        = INVASION_MIN_INTERVAL;
 }
 
@@ -1241,6 +1399,7 @@ void invasion_update(void)
         invasion_gertrude_explosions = 0;
         invasion_last_trash_talk_profile = -1;
         invasion_last_trash_talk_line = -1;
+        invasion_pending_trash_talks = 0;
         invasion_timer        = INVASION_MIN_INTERVAL;
         return;
     }
@@ -1269,8 +1428,7 @@ void invasion_update(void)
                                    allow_wide_area_spawn, spawns_this_reset) != NULL)
             {
                 spawns_this_reset++;
-                if (invasion_should_boss_trash_talk_after_respawn())
-                    invasion_boss_trash_talk();
+                invasion_should_boss_trash_talk_after_respawn();
             }
         }
     }
@@ -1292,8 +1450,7 @@ void invasion_update(void)
                                allow_wide_area_spawn, spawns_this_reset) != NULL)
         {
             spawns_this_reset++;
-            if (invasion_should_boss_trash_talk_after_respawn())
-                invasion_boss_trash_talk();
+            invasion_should_boss_trash_talk_after_respawn();
         }
     }
 }
@@ -1311,6 +1468,14 @@ void invasion_rooms_update(void)
 
     if (!invasion_active) return;
     if (!invasion_should_advance_on_room_tick()) return;
+
+    if (invasion_boss != NULL
+        && !invasion_boss->is_free
+        && invasion_should_emit_pending_boss_trash_talk(invasion_pending_trash_talks, 1))
+    {
+        invasion_boss_trash_talk();
+        invasion_pending_trash_talks--;
+    }
 
     target_room = get_room_index(INVASION_SPAWN_VNUM);
     if (!target_room) return;

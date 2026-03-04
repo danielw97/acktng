@@ -8,11 +8,17 @@
 
 int invasion_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_spawn_mode_for_respawn_index(int spawns_this_reset);
+int invasion_wave_progress_tier_for_respawn_index(int spawns_this_reset);
+int invasion_wave_hp_bonus_for_progress_tier(int level, int wave_progress_tier);
+int invasion_wave_drhr_bonus_for_progress_tier(int level, int wave_progress_tier);
+int invasion_wave_ac_bonus_for_progress_tier(int level, int wave_progress_tier);
 int invasion_reward_index_for_kill(bool is_boss, int mob_level);
 int invasion_should_advance_for_room_tick_count(int room_tick_count);
 int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
 bool invasion_gertrude_should_fall_for_explosions(int explosion_count);
+int invasion_boss_pending_trash_talks_for_respawns(int respawn_count);
+bool invasion_should_emit_pending_boss_trash_talk(int pending_talk_count, int room_tick_advanced);
 int invasion_is_hidden_mobile(CHAR_DATA *ch);
 const char *invasion_door_command_argument(const char *keyword, sh_int dir,
                                            char *buf, size_t buf_len);
@@ -40,6 +46,44 @@ static void test_spawn_mode_for_respawn_index(void)
     assert(invasion_spawn_mode_for_respawn_index(8) == 1);
     assert(invasion_spawn_mode_for_respawn_index(9) == 2);
     assert(invasion_spawn_mode_for_respawn_index(20) == 2);
+}
+
+
+static void test_wave_progress_tier_for_respawn_index(void)
+{
+    assert(invasion_wave_progress_tier_for_respawn_index(-1) == 0);
+    assert(invasion_wave_progress_tier_for_respawn_index(0) == 0);
+    assert(invasion_wave_progress_tier_for_respawn_index(2) == 0);
+    assert(invasion_wave_progress_tier_for_respawn_index(3) == 1);
+    assert(invasion_wave_progress_tier_for_respawn_index(8) == 1);
+    assert(invasion_wave_progress_tier_for_respawn_index(9) == 2);
+    assert(invasion_wave_progress_tier_for_respawn_index(17) == 2);
+    assert(invasion_wave_progress_tier_for_respawn_index(18) == 3);
+    assert(invasion_wave_progress_tier_for_respawn_index(500) == 3);
+}
+
+static void test_wave_progress_stat_bonus_helpers(void)
+{
+    assert(invasion_wave_hp_bonus_for_progress_tier(100, 0) == 0);
+    assert(invasion_wave_hp_bonus_for_progress_tier(100, 1) == 200);
+    assert(invasion_wave_hp_bonus_for_progress_tier(100, 2) == 400);
+    assert(invasion_wave_hp_bonus_for_progress_tier(100, 3) == 600);
+    assert(invasion_wave_hp_bonus_for_progress_tier(100, 99) == 600);
+    assert(invasion_wave_hp_bonus_for_progress_tier(100, -9) == 0);
+    assert(invasion_wave_hp_bonus_for_progress_tier(-5, 3) == 0);
+
+    assert(invasion_wave_drhr_bonus_for_progress_tier(11, 1) == 1);
+    assert(invasion_wave_drhr_bonus_for_progress_tier(12, 1) == 1);
+    assert(invasion_wave_drhr_bonus_for_progress_tier(36, 2) == 6);
+    assert(invasion_wave_drhr_bonus_for_progress_tier(120, 3) == 30);
+    assert(invasion_wave_drhr_bonus_for_progress_tier(120, 99) == 30);
+    assert(invasion_wave_drhr_bonus_for_progress_tier(120, -1) == 0);
+
+    assert(invasion_wave_ac_bonus_for_progress_tier(6, 1) == 4);
+    assert(invasion_wave_ac_bonus_for_progress_tier(60, 2) == 20);
+    assert(invasion_wave_ac_bonus_for_progress_tier(120, 3) == 60);
+    assert(invasion_wave_ac_bonus_for_progress_tier(120, 99) == 60);
+    assert(invasion_wave_ac_bonus_for_progress_tier(120, -1) == 0);
 }
 
 static void test_hidden_mobile_matches_invasion_tagging(void)
@@ -155,6 +199,23 @@ static void test_invasion_reward_tiers_and_boss_exclusion(void)
     assert(invasion_reward_index_for_kill(FALSE, 220) == 2);
 }
 
+
+static void test_boss_trash_talk_pending_schedule(void)
+{
+    assert(invasion_boss_pending_trash_talks_for_respawns(-2) == 0);
+    assert(invasion_boss_pending_trash_talks_for_respawns(0) == 0);
+    assert(invasion_boss_pending_trash_talks_for_respawns(1) == 0);
+    assert(invasion_boss_pending_trash_talks_for_respawns(2) == 0);
+    assert(invasion_boss_pending_trash_talks_for_respawns(3) == 1);
+    assert(invasion_boss_pending_trash_talks_for_respawns(8) == 2);
+    assert(invasion_boss_pending_trash_talks_for_respawns(9) == 3);
+
+    assert(invasion_should_emit_pending_boss_trash_talk(0, 1) == FALSE);
+    assert(invasion_should_emit_pending_boss_trash_talk(1, 0) == FALSE);
+    assert(invasion_should_emit_pending_boss_trash_talk(1, 1) == TRUE);
+    assert(invasion_should_emit_pending_boss_trash_talk(4, 1) == TRUE);
+}
+
 static void test_gertrude_explosion_counter_and_thresholds(void)
 {
     assert(invasion_gertrude_explosions_after_tick(0, 0) == 0);
@@ -182,6 +243,8 @@ int main(void)
 {
     test_boss_spawn_count_scales_with_uptime();
     test_spawn_mode_for_respawn_index();
+    test_wave_progress_tier_for_respawn_index();
+    test_wave_progress_stat_bonus_helpers();
     test_hidden_mobile_matches_invasion_tagging();
     test_door_command_argument_prefers_exit_keyword();
     test_door_command_argument_falls_back_to_direction();
@@ -189,6 +252,7 @@ int main(void)
     test_force_unlock_exit_ignores_non_invasion_mobs();
     test_room_tick_advance_rate();
     test_invasion_reward_tiers_and_boss_exclusion();
+    test_boss_trash_talk_pending_schedule();
     test_gertrude_explosion_counter_and_thresholds();
 
     puts("test_invasion: all tests passed");
