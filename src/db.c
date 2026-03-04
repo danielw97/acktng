@@ -3374,13 +3374,33 @@ void free_string( char *pstr )
 
 #endif
 
+
+static int compare_area_levels(const void *left, const void *right)
+{
+   const AREA_DATA *left_area;
+   const AREA_DATA *right_area;
+
+   left_area = *(const AREA_DATA *const *)left;
+   right_area = *(const AREA_DATA *const *)right;
+
+   if (left_area->min_level != right_area->min_level)
+      return left_area->min_level - right_area->min_level;
+   if (left_area->max_level != right_area->max_level)
+      return left_area->max_level - right_area->max_level;
+
+   return strcmp(left_area->name, right_area->name);
+}
+
 void do_areas(CHAR_DATA *ch, char *argument)
 {
    char buf[MAX_STRING_LENGTH];
    char msg[MAX_STRING_LENGTH];
    char arg1[MSL];
    sh_int foo;
+   int area_count;
+   int area_index;
    AREA_DATA *pArea;
+   AREA_DATA **area_list;
    bool fall = FALSE;
 
    argument = one_argument(argument, arg1);
@@ -3395,18 +3415,51 @@ void do_areas(CHAR_DATA *ch, char *argument)
                "|  @@yrange@@W  |   @@yAuthor@@W   |      @@yName of Area@@W                              |\n\r");
    safe_strcat(MAX_STRING_LENGTH, buf, "+---------+------------+------------------------------------------------+\n\r");
 
-   foo = 0;
+   area_count = 0;
    for (pArea = first_area; pArea != NULL; pArea = pArea->next)
    {
       if ((IS_SET(pArea->flags, AREA_NOSHOW)) || (IS_SET(pArea->flags, AREA_BUILDING)))
          continue; /* for non-finished areas - don't show */
       if ((!fall) && ((pArea->min_level > (get_psuedo_level(ch))) || (pArea->max_level < (get_psuedo_level(ch)))))
          continue;
+      area_count++;
+   }
 
+   area_list = NULL;
+   if (area_count > 0)
+   {
+      area_list = malloc(sizeof(AREA_DATA *) * area_count);
+      if (area_list == NULL)
+      {
+         send_to_char("Area list is currently unavailable.\n\r", ch);
+         return;
+      }
+   }
+
+   area_index = 0;
+   for (pArea = first_area; pArea != NULL; pArea = pArea->next)
+   {
+      if ((IS_SET(pArea->flags, AREA_NOSHOW)) || (IS_SET(pArea->flags, AREA_BUILDING)))
+         continue; /* for non-finished areas - don't show */
+      if ((!fall) && ((pArea->min_level > (get_psuedo_level(ch))) || (pArea->max_level < (get_psuedo_level(ch)))))
+         continue;
+      area_list[area_index++] = pArea;
+   }
+
+   qsort(area_list, area_count, sizeof(AREA_DATA *), compare_area_levels);
+
+   foo = 0;
+   for (area_index = 0; area_index < area_count; area_index++)
+   {
+      pArea = area_list[area_index];
       foo++;
       sprintf(msg, "@@N{@@r%3d %3d@@N} %12s         %s\n\r", pArea->min_level, pArea->max_level, capitalize(pArea->owner), pArea->name);
       safe_strcat(MAX_STRING_LENGTH, buf, msg);
    }
+
+   if (area_list != NULL)
+      free(area_list);
+
    sprintf(msg, "@@R%d Areas listed.\n\r@@N Type areas all to list the entire " mudnamecolor " realm.\n\r@@N", foo);
    safe_strcat(MAX_STRING_LENGTH, buf, msg);
    send_to_char(buf, ch);
