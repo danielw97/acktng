@@ -100,6 +100,43 @@ static void assert_area_mobiles_section_is_terminated(const char *area_path)
     assert(saw_mobiles_end);
 }
 
+static void assert_area_objects_section_is_terminated(const char *area_path)
+{
+    FILE *fp = fopen(area_path, "r");
+    char line[4096];
+    int saw_objects = 0;
+    int saw_objects_end = 0;
+
+    assert(fp != NULL);
+
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+        const char *trimmed = skip_space(line);
+
+        if (!saw_objects)
+        {
+            if (line_starts_with(trimmed, "#OBJECTS"))
+                saw_objects = 1;
+            continue;
+        }
+
+        if (line_starts_with(trimmed, "#0"))
+        {
+            saw_objects_end = 1;
+            break;
+        }
+
+        assert(!line_starts_with(trimmed, "#RESETS"));
+    }
+
+    fclose(fp);
+
+    if (!saw_objects)
+        return;
+
+    assert(saw_objects_end);
+}
+
 static void test_all_areas_rooms_section_has_terminator(void)
 {
     FILE *list_fp = fopen("../area/area.lst", "r");
@@ -140,6 +177,7 @@ static void test_all_areas_rooms_section_has_terminator(void)
 
         assert_area_rooms_section_is_terminated(area_path);
         assert_area_mobiles_section_is_terminated(area_path);
+        assert_area_objects_section_is_terminated(area_path);
     }
 
     fclose(list_fp);
