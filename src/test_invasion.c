@@ -9,6 +9,7 @@
 int invasion_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_spawn_mode_for_respawn_index(int spawns_this_reset);
 int invasion_reward_index_for_kill(bool is_boss, int mob_level);
+int invasion_should_advance_for_room_tick_count(int room_tick_count);
 int invasion_gertrude_explosions_after_tick(int current_count, int had_explosion_this_tick);
 const char *invasion_gertrude_quest_message_for_explosions(int explosion_count);
 bool invasion_gertrude_should_fall_for_explosions(int explosion_count);
@@ -129,6 +130,17 @@ static void test_force_unlock_exit_ignores_non_invasion_mobs(void)
     assert(IS_SET(reverse.exit_info, EX_LOCKED));
 }
 
+static void test_room_tick_advance_rate(void)
+{
+    assert(invasion_should_advance_for_room_tick_count(0) == 0);
+    assert(invasion_should_advance_for_room_tick_count(1) == 1);
+    assert(invasion_should_advance_for_room_tick_count(2) == 1);
+    assert(invasion_should_advance_for_room_tick_count(3) == 1);
+    assert(invasion_should_advance_for_room_tick_count(4) == 1);
+    assert(invasion_should_advance_for_room_tick_count(5) == 1);
+    assert(invasion_should_advance_for_room_tick_count(8) == 1);
+}
+
 static void test_invasion_reward_tiers_and_boss_exclusion(void)
 {
     assert(invasion_reward_index_for_kill(TRUE, 1) == -1);
@@ -151,6 +163,9 @@ static void test_gertrude_explosion_counter_and_thresholds(void)
     assert(invasion_gertrude_explosions_after_tick(19, 1) == 20);
     assert(invasion_gertrude_explosions_after_tick(20, 1) == 20);
     assert(invasion_gertrude_explosions_after_tick(-2, 1) == 1);
+    assert(invasion_gertrude_explosions_after_tick(0, 3) == 1);
+    assert(invasion_gertrude_explosions_after_tick(18, 3) == 19);
+    assert(invasion_gertrude_explosions_after_tick(5, -3) == 6);
 
     assert(invasion_gertrude_quest_message_for_explosions(9) == NULL);
     assert(invasion_gertrude_quest_message_for_explosions(10) != NULL);
@@ -172,6 +187,7 @@ int main(void)
     test_door_command_argument_falls_back_to_direction();
     test_force_unlock_exit_allows_invasion_mobs_without_key();
     test_force_unlock_exit_ignores_non_invasion_mobs();
+    test_room_tick_advance_rate();
     test_invasion_reward_tiers_and_boss_exclusion();
     test_gertrude_explosion_counter_and_thresholds();
 
