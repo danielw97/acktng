@@ -89,6 +89,8 @@ static int        invasion_boss_ticks_up = 0;
 static int        invasion_room_ticks    = 0;
 static int        invasion_wave_respawns = 0;
 static int        invasion_gertrude_explosions = 0;
+static int        invasion_last_trash_talk_profile = -1;
+static int        invasion_last_trash_talk_line    = -1;
 
 /* -----------------------------------------------------------------------
  * Forward declarations
@@ -580,6 +582,13 @@ static const char *invasion_boss_trash_talk_for_profile(int prof_idx)
         return fallback_line;
 
     line_idx = invasion_random_trash_talk_index(15);
+
+    if (invasion_last_trash_talk_profile == prof_idx
+        && invasion_last_trash_talk_line == line_idx)
+        line_idx = (line_idx + 1) % 15;
+
+    invasion_last_trash_talk_profile = prof_idx;
+    invasion_last_trash_talk_line = line_idx;
     return trash_talk_by_profile[prof_idx][line_idx];
 }
 
@@ -1038,6 +1047,8 @@ static void invasion_start(void)
     invasion_room_ticks    = 0;
     invasion_wave_respawns = 0;
     invasion_gertrude_explosions = 0;
+    invasion_last_trash_talk_profile = -1;
+    invasion_last_trash_talk_line = -1;
 
     invasion_boss = spawn_invasion_mob(boss_level, TRUE, prof);
     if (invasion_boss == NULL)
@@ -1095,6 +1106,8 @@ static void invasion_end(bool success)
     invasion_room_ticks    = 0;
     invasion_wave_respawns = 0;
     invasion_gertrude_explosions = 0;
+    invasion_last_trash_talk_profile = -1;
+    invasion_last_trash_talk_line = -1;
     invasion_timer        = INVASION_MIN_INTERVAL;
 }
 
@@ -1126,6 +1139,8 @@ void invasion_update(void)
         invasion_room_ticks   = 0;
         invasion_wave_respawns = 0;
         invasion_gertrude_explosions = 0;
+        invasion_last_trash_talk_profile = -1;
+        invasion_last_trash_talk_line = -1;
         invasion_timer        = INVASION_MIN_INTERVAL;
         return;
     }

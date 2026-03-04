@@ -152,6 +152,14 @@ static void test_boss_trash_talk_trigger_timing(void)
     assert(invasion_test_should_boss_trash_talk_for_respawn_count(9) == 1);
 }
 
+static void test_boss_trash_talk_does_not_repeat_consecutively(void)
+{
+    const char *first_line = invasion_test_trash_talk_for_profile(3);
+    const char *second_line = invasion_test_trash_talk_for_profile(3);
+
+    assert(strcmp(first_line, second_line) != 0);
+}
+
 static void test_boss_trash_talk_lines_are_available_per_profile(void)
 {
     assert(strcmp(invasion_test_trash_talk_for_profile(0), "") != 0);
@@ -236,6 +244,7 @@ int main(void)
     test_unreachable_path_marks_for_self_destruct();
     test_hidden_mobile_matches_invasion_tagging();
     test_boss_trash_talk_trigger_timing();
+    test_boss_trash_talk_does_not_repeat_consecutively();
     test_boss_trash_talk_lines_are_available_per_profile();
     test_invasion_reward_tiers_and_boss_exclusion();
     test_gertrude_explosion_counter_and_thresholds();
