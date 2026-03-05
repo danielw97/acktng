@@ -5757,72 +5757,6 @@ An executioner's axe is here waiting to possess its next user.~
 5 134220800 8421376 1
 0 5 6 1 0 0 0 0 0 0
 13
-A
-18 35
-A
-19 35
-A
-17 -200
-A
-12 100
-A
-13 100
-A
-14 100
-E
-axe blade~
-It is quite heavy.  The blade is made of some metal that you can't even
-
-spell.  The edge of the blade looks as if it could cut through anything
-
-or anyone.
-
-~
-L
-120
-10
-30
-15
-25
-40
-15
-8
-L
-30
-40
-20
-45
-A firebreather has been left here.~
-17 0 8388608 1
-8 8 7 0 0 0 0 0 0 0
-8
-L
-1
-#3002
-bottle ale~
-a bottle of ale~
-A dark bottle of ale has been left here.~
-17 0 8388608 1
-8 8 3 0 0 0 0 0 0 0
-8
-L
-1
-#3001
-bottle beer~
-a bottle of beer~
-A beer bottle has been left here.~
-17 0 8388608 1
-8 8 1 0 0 0 0 0 0 0
-8
-L
-1
-#3044
-barrel beer~
-a barrel of beer~
-A beer barrel has been left here.~
-17 0 8388608 1
-50 50 1 0 0 0 0 0 0 0
-13
 L
 1
 #3047
@@ -5972,26 +5906,9 @@ A bastion fieldcloak is folded with military precision.~
 9 0 8388624 14
 0 0 0 0 0 0 0 0 0 0
 4
-A
-10
-A
-15
 L
-20
-20
-35
-20
-20
-25
-0 0 0 0 0 0 0 0 0 0
-4
-A
-35
-A
-25
-L
-35
-45
+22
+#3166
 sylphic lens~
 a sylphic prism lens~
 A sylphic prism lens spins slowly in place.~
@@ -6464,36 +6381,6 @@ A @@ysunveil @@Wsash@@N glints with tiny ward-sewn charms.~
 9 0 8388624 2
 0 0 0 0 0 0 0 0 0 0
 4
-A
-12 22
-A
-13 18
-L
-5
-10
-10
-15
-25
-9 0 8388624 3
-0 0 0 0 0 0 0 0 0 0
-4
-A
-30
-A
-30
-L
-35
-35
-40
-45
-50
-9 0 8388624 3
-0 0 0 0 0 0 0 0 0 0
-4
-A
-12 24
-A
-13 19
 L
 75
 #3274
@@ -6970,11 +6857,7 @@ M 0 3006 1 3049       A Captain (selling boats) at Levee
 
 M 0 3007 1 3050       Sailor training in the warehouse
 
-M 0 3046 1 3048       Filthy (bartender) in Grubby Inn
-
-G 0 3003 100 
-
-G 0 3004 100 
+M 0 3046 1 3048       Filthy (bartender) in Grubby Inn 
 
 E 0 3022 100 16            wields a longsword
 
@@ -7183,10 +7066,6 @@ G 0 3269 100
 G 0 3270 100 
 
 G 0 3271 100 
-
-G 0 3272 100 
-
-G 0 3273 100 
 
 G 0 3274 100 
 
