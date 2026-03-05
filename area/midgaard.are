@@ -4766,17 +4766,17 @@ A fat, nice looking baker. But you can see that he has many scars on his
 95 1
 0 -10 0 0
 ! 0 0 0 7 0 0 0
-| 0 16384 0 0 0 0 0
+~
+1 0 900 S
+46 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3014
-wizard~
-the wizard~
-A wizard walks around behind the counter, talking to himself.
-
-~
-The wizard looks old and senile, and yet he looks like a very powerful
+#3152
+arcanist emberglass~
 
 wizard. He is equipped with fine clothing, and is wearing many fine
 
@@ -5147,29 +5147,11 @@ The lover's board is stuck to the wall with 4 arrows.
 L
 1
 #3089
-board~
-a bulletin board.~
-A decrepit board with sheets of paper stuck to it is tacked to the wall.
-
+Merc Industries
 ~
-27 0 0 1
-0 0 0 3089 0 0 0 0 0 0
-4
-L
-1
-#3090
-letter~
-<Obj Name> not available.~
-A letter of condolence lies here.
-
-~
-13 0 8388608 1
-0 0 0 0 0 0 0 0 0 0
-4
-L
-1
-#3011
-board notice bulletin~
+25
+#3026
+leggings~
 the notice board.~
 There is a large notice board fixed to the wall.~
 27 0 0 1
@@ -5496,21 +5478,8 @@ The letter is written in a reserved and dignified Spencer hand.
 L
 1
 #3139
-letter resignation~
-the receptionist's letter of resignation~
-The receptionist's letter of resignation is taped to the wall.~
-12 0 0 1
-0 0 0 0 0 0 0 0 0 0
-13
-E
-letter resignation~
-The letter is written in a bold and feminine Carolinian hand.
-
-
-    To whom it may concern,
-
-
-	Merc Industries has installed a new no-rent save and quit
+1
+#3107
 
 	system.  Apparently one can now save and quit at any time
 
