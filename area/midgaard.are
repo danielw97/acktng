@@ -4863,6 +4863,125 @@ warhorse horse~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#3150
+armorer argent~
+The Argent Armorer~
+The Argent Armorer appraises a rack of polished blades.
+
+~
+A disciplined quartermaster in polished mail, ready to match steel to soldier.
+
+~
+1 0 900 S
+45 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3151
+outfitter moonthread~
+The Moonthread Outfitter~
+The Moonthread Outfitter measures a reinforced coat for a customer.
+
+~
+A patient tailor known for practical armor, layered leathers, and expedition wear.
+
+~
+1 0 900 S
+42 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3152
+arcanist emberglass~
+The Emberglass Arcanist~
+The Emberglass Arcanist tends a shelf of glowing curios.
+
+~
+An attentive mage-merchant cataloging charms, lenses, and warded tools.
+
+~
+1 0 900 S
+48 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3153
+provisioner exchange~
+The Provisioner~
+The Provisioner weighs travel packs behind a brass counter.
+
+~
+A sturdy supplier specializing in hardwear for caravans and long campaigns.
+
+~
+1 0 900 S
+36 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3154
+quartermaster invasion~
+The Invasion Quartermaster~
+The Invasion Quartermaster checks requisition manifests.
+
+~
+A veteran logistician who issues field-ready weapons and disciplined kit.
+
+~
+1 8 900 S
+52 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3155
+clerk proposition~
+The Proposition Clerk~
+The Proposition Clerk arranges stamped contracts and sigils.
+
+~
+A precise bureaucrat trading in legal wards, favors, and tactical charters.
+
+~
+1 0 900 S
+40 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3156
+broker quest~
+The Quest Broker~
+The Quest Broker flips through reward ledgers and bounty notices.
+
+~
+A seasoned fixer who outfits expeditions with practical rewards for every role.
+
+~
+1 0 900 S
+46 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #3057
@@ -6126,6 +6245,279 @@ A board on which to issue challenges to those deserving them~
 13
 L
 1
+#3160
+argent falchion steel~
+an argent falchion~
+An argent falchion rests on a velvet-lined rack.~
+5 0 8421376 8
+0 0 0 11 0 0 0 0 0 0
+8
+A
+18 8
+A
+19 8
+L
+12
+#3161
+wardpiercer estoc~
+a wardpiercer estoc~
+A wardpiercer estoc glints with a cold edge.~
+5 0 8421376 9
+0 0 0 11 0 0 0 0 0 0
+8
+A
+18 12
+A
+19 10
+L
+24
+#3162
+drillmaster poleaxe~
+a drillmaster poleaxe~
+A drillmaster poleaxe is racked for issue.~
+5 0 8421376 7
+0 0 0 11 0 0 0 0 0 0
+8
+A
+18 15
+A
+19 12
+L
+36
+#3163
+moonthread brigandine~
+a moonthread brigandine~
+A moonthread brigandine hangs ready for fitting.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 6
+A
+19 6
+L
+10
+#3164
+trailwarden boots~
+trailwarden boots~
+A pair of trailwarden boots sits beside a packing bench.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 10
+A
+19 8
+L
+22
+#3165
+bastion fieldcloak~
+a bastion fieldcloak~
+A bastion fieldcloak is folded with military precision.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 14
+A
+19 12
+L
+34
+#3166
+emberglass charm~
+an emberglass focus charm~
+An emberglass focus charm pulses faintly with arcane heat.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 4
+A
+13 4
+L
+8
+#3167
+sylphic lens~
+a sylphic prism lens~
+A sylphic prism lens spins slowly in place.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 8
+A
+13 7
+L
+20
+#3168
+runespun clasp~
+a runespun mantle clasp~
+A runespun mantle clasp waits in a lacquered box.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 12
+A
+13 10
+L
+32
+#3169
+supply crate plate~
+a supply crate harness~
+A supply crate harness lies near bundled expedition goods.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 7
+A
+19 7
+L
+14
+#3170
+longmarch pauldrons~
+longmarch pauldrons~
+Longmarch pauldrons are stacked by the receiving desk.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 11
+A
+19 9
+L
+26
+#3171
+convoy tower shield~
+a convoy tower shield~
+A convoy tower shield leans against a crate of hardtack.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 15
+A
+19 13
+L
+38
+#3172
+requisition sabre~
+a requisition sabre~
+A requisition sabre waits beside stamped manifests.~
+5 0 8421376 7
+0 0 0 11 0 0 0 0 0 0
+8
+A
+18 9
+A
+19 8
+L
+16
+#3173
+breach pike~
+a breach pike~
+A breach pike rests upright in a steel stand.~
+5 0 8421376 8
+0 0 0 11 0 0 0 0 0 0
+8
+A
+18 13
+A
+19 11
+L
+28
+#3174
+siege cleaver~
+a siege cleaver~
+A siege cleaver sits oiled and battle-ready.~
+5 0 8421376 9
+0 0 0 11 0 0 0 0 0 0
+8
+A
+18 17
+A
+19 14
+L
+42
+#3175
+charter seal~
+a chartered sigil seal~
+A chartered sigil seal rests atop legal parchment.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 5
+A
+13 3
+L
+18
+#3176
+notary circlet~
+a notary's ward-circlet~
+A notary's ward-circlet hums softly with sanctioned magic.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 9
+A
+13 7
+L
+30
+#3177
+arbitration vellum~
+a vellum of arbitration~
+A vellum of arbitration glows with binding clauses.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 13
+A
+13 11
+L
+44
+#3178
+brokerblade~
+a broker's sideblade~
+A broker's sideblade is tagged for bounty work.~
+5 0 8421376 7
+0 0 0 11 0 0 0 0 0 0
+8
+A
+18 10
+A
+19 9
+L
+20
+#3179
+seeker charm~
+a seeker's mnemonic charm~
+A seeker's mnemonic charm hangs from a quest board peg.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 10
+A
+13 8
+L
+30
+#3180
+vanguard hauberk~
+a vanguard hauberk~
+A vanguard hauberk is displayed beside bounty ledgers.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 16
+A
+19 14
+L
+50
 #0
 #SHOPS
 3100 0 0 0 0 0 110 90 6 23
@@ -6142,6 +6534,13 @@ L
 3140 5 9 0 0 0 120 90 0 23
 3142 29 0 0 0 0 120 90 0 23
 3143 25 26 27 0 0 125 85 0 23
+3150 5 9 0 0 0 130 60 0 23
+3151 9 0 0 0 0 120 70 0 23
+3152 2 3 4 10 0 120 70 0 23
+3153 9 13 15 0 0 120 65 0 23
+3154 5 9 0 0 0 135 60 0 23
+3155 2 3 4 0 0 120 70 0 23
+3156 5 9 2 0 0 125 65 0 23
 0
 #RESETS
 M 0 3011 1 3110       Gertrude the executioner
@@ -6581,13 +6980,34 @@ O 0 3052 0 3062 (null)
 O 0 3014 0 3025 (null)
 
 M 0 3015 1 3121       The Postmaster
-M 0 3003 1 3122       The armorer
-M 0 3010 1 3123       The outfitter
-M 0 3014 1 3124       The arcanist
-M 0 3004 1 3125       The provisioner
-M 0 3140 1 3126       The invasion quartermaster
-M 0 3142 1 3127       The proposition clerk
-M 0 3143 1 3128       The quest broker
+M 0 3150 1 3122       The Argent armorer
+G 0 3160 100 
+G 0 3161 100 
+G 0 3162 100 
+M 0 3151 1 3123       The Moonthread outfitter
+G 0 3163 100 
+G 0 3164 100 
+G 0 3165 100 
+M 0 3152 1 3124       The Emberglass arcanist
+G 0 3166 100 
+G 0 3167 100 
+G 0 3168 100 
+M 0 3153 1 3125       The provisioner
+G 0 3169 100 
+G 0 3170 100 
+G 0 3171 100 
+M 0 3154 1 3126       The invasion quartermaster
+G 0 3172 100 
+G 0 3173 100 
+G 0 3174 100 
+M 0 3155 1 3127       The proposition clerk
+G 0 3175 100 
+G 0 3176 100 
+G 0 3177 100 
+M 0 3156 1 3128       The quest broker
+G 0 3178 100 
+G 0 3179 100 
+G 0 3180 100 
 
 S
 #SPECIALS
