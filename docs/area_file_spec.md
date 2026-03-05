@@ -36,7 +36,7 @@ Implications:
 
 ## 3) `#AREA` section
 
-`#AREA` contains one required string, followed by zero or more single-letter directives:
+`#AREA` contains one required string, followed by directives. The `Q` directive is mandatory and must be set to version `16`:
 
 ```text
 #AREA
@@ -46,7 +46,7 @@ Implications:
 
 Supported directives:
 
-- `Q <int>`: area revision/version
+- `Q 16`: required area revision/version (other values are out of spec)
 - `K <string>~`: keyword
 - `L <string>~`: level label
 - `N <int>`: area number
