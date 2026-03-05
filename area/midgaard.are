@@ -5889,26 +5889,26 @@ L
 #3164
 trailwarden boots~
 trailwarden boots~
-A pair of trailwarden boots sits beside a packing bench.~
-9 0 8388624 13
+10
+15
 0 0 0 0 0 0 0 0 0 0
 4
 A
-18 10
+20
 A
-19 8
+20
 L
-22
-#3165
-bastion fieldcloak~
-a bastion fieldcloak~
-A bastion fieldcloak is folded with military precision.~
-9 0 8388624 14
+35
+20
+20
+25
+35
+25
 0 0 0 0 0 0 0 0 0 0
 4
 L
-22
-#3166
+35
+45
 sylphic lens~
 a sylphic prism lens~
 A sylphic prism lens spins slowly in place.~
@@ -6349,27 +6349,27 @@ A
 L
 55
 #3269
-@@bwayfarer @@awardwrap@@N~
-a @@bwayfarer @@awardwrap@@N~
-A @@bwayfarer @@awardwrap@@N hangs from a row of brass hooks.~
+5
+10
+10
 9 0 8388624 2
 0 0 0 0 0 0 0 0 0 0
 4
 A
-12 20
+15
 A
-13 17
+25
 L
-60
-#3270
-@@crunestitched @@Wcuffs@@N~
-@@crunestitched @@Wcuffs@@N~
-@@cRunestitched @@Wcuffs@@N rest on folded bolts of dyed cotton.~
-9 0 8388624 2
+30
+30
+35
+35
+40
+45
 0 0 0 0 0 0 0 0 0 0
 4
 A
-12 21
+50
 A
 13 17
 L
