@@ -2,7 +2,7 @@
  * invasion.h -- Invasion System for Shades of Evil                        *
  *                                                                         *
  * An invasion event that spawns a boss and waves of mythological mobs     *
- * that march toward room 3001 to attack Gertrude.                         *
+ * that march toward room 3110 to attack Gertrude.                         *
  ***************************************************************************/
 
 #ifndef INVASION_H
@@ -11,7 +11,7 @@
 /* -----------------------------------------------------------------------
  * Tuning constants
  * --------------------------------------------------------------------- */
-#define INVASION_SPAWN_VNUM     3001   /* Gertrude's room – also the target */
+#define INVASION_SPAWN_VNUM     3110   /* Gertrude's room – also the target */
 #define INVASION_START_VNUM     30000  /* Room where the invasion spawns in  */
                                        /* Change this to a suitable entry    */
                                        /* point in your world.               */

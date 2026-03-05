@@ -5,6 +5,7 @@
 #include "config.h"
 #define DEC_GLOBALS_H 1
 #include "ack.h"
+#include "invasion.h"
 
 int invasion_boss_spawn_count_for_tick(int boss_ticks_up);
 int invasion_spawn_mode_for_respawn_index(int spawns_this_reset);
@@ -23,6 +24,12 @@ int invasion_is_hidden_mobile(CHAR_DATA *ch);
 const char *invasion_door_command_argument(const char *keyword, sh_int dir,
                                            char *buf, size_t buf_len);
 void invasion_force_unlock_exit(CHAR_DATA *ch, EXIT_DATA *pexit);
+
+
+static void test_invasion_target_room_vnum(void)
+{
+    assert(INVASION_SPAWN_VNUM == 3110);
+}
 
 static void test_boss_spawn_count_scales_with_uptime(void)
 {
@@ -242,6 +249,7 @@ static void test_gertrude_explosion_counter_and_thresholds(void)
 
 int main(void)
 {
+    test_invasion_target_room_vnum();
     test_boss_spawn_count_scales_with_uptime();
     test_spawn_mode_for_respawn_index();
     test_wave_progress_tier_for_respawn_index();
