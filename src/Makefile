@@ -308,6 +308,13 @@ unit-test-special: test_special.o special.unit-test.o test_is_fighting.o
 
 
 
+item_generation.unit-test.o: item_generation.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ITEM_GENERATION -ffunction-sections -fdata-sections -o item_generation.unit-test.o item_generation.c
+
+unit-test-item-generation: test_item_generation.o item_generation.unit-test.o test_is_fighting.o
+	rm -f unit-test-item-generation
+	$(CC) -Wl,--gc-sections -o unit-test-item-generation test_item_generation.o item_generation.unit-test.o test_is_fighting.o $(L_FLAGS)
+
 unit-test-act-flags: test_act_flags.o
 	rm -f unit-test-act-flags
 	$(CC) -o unit-test-act-flags test_act_flags.o $(L_FLAGS)
@@ -316,7 +323,7 @@ unit-test-area-format: test_area_format.o
 	rm -f unit-test-area-format
 	$(CC) -o unit-test-area-format test_area_format.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-proposition unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-quest unit-test-death
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-sha256 unit-test-update unit-test-comm unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-proposition unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-quest unit-test-death unit-test-item-generation
 	./unit-test-act-flags
 	./unit-test-area-format
 	./unit-test-sha256
@@ -351,6 +358,7 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-sha256 unit-test
 	./unit-test-special
 	./unit-test-quest
 	./unit-test-death
+	./unit-test-item-generation
 
 
 quest.unit-test.o: quest.c
