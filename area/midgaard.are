@@ -5800,18 +5800,18 @@ It is quite heavy.  The blade is made of some metal that you can't even
 ~
 L
 120
-#3004
-bottle local~
-a bottle of local specialty~
-A dark bottle has been left here.~
-17 0 8388608 1
-8 8 8 0 0 0 0 0 0 0
+10
+30
+15
+25
+40
+15
 8
 L
-1
-#3003
-bottle firebreather~
-a bottle of firebreather~
+30
+40
+20
+45
 A firebreather has been left here.~
 17 0 8388608 1
 8 8 7 0 0 0 0 0 0 0
@@ -5993,25 +5993,25 @@ A bastion fieldcloak is folded with military precision.~
 0 0 0 0 0 0 0 0 0 0
 4
 A
-18 14
+10
 A
-19 12
+15
 L
-34
-#3166
-emberglass charm~
-an emberglass focus charm~
-An emberglass focus charm pulses faintly with arcane heat.~
-9 0 8388624 2
+20
+20
+35
+20
+20
+25
 0 0 0 0 0 0 0 0 0 0
 4
 A
-12 4
+35
 A
-13 4
+25
 L
-8
-#3167
+35
+45
 sylphic lens~
 a sylphic prism lens~
 A sylphic prism lens spins slowly in place.~
@@ -6486,24 +6486,24 @@ A
 A
 13 18
 L
-70
-#3272
-@@amoonthread @@Wshoulders@@N~
-@@amoonthread @@Wshoulders@@N~
-@@aMoonthread @@Wshoulders@@N are arranged in a precise tiered display.~
+5
+10
+10
+15
+25
 9 0 8388624 3
 0 0 0 0 0 0 0 0 0 0
 4
 A
-12 23
+30
 A
-13 18
+30
 L
-70
-#3273
-@@dnightwatch @@Wrobe@@N~
-a @@dnightwatch @@Wrobe@@N~
-A @@dnightwatch @@Wrobe@@N hangs beneath a ring of lantern light.~
+35
+35
+40
+45
+50
 9 0 8388624 3
 0 0 0 0 0 0 0 0 0 0
 4
