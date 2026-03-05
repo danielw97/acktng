@@ -4038,11 +4038,9 @@ L 0 0 0 0 0 0 0 0 0
 sexton~
 the sexton~
 A sexton is sitting here, drinking hot tea.
-
-~
+~
 The sexton looks like he is relaxing after another grave-digging job.
-
-~
+~
 1 0 800 S
 10 1
 0 0 0 0
@@ -4055,100 +4053,12 @@ L 0 0 0 0 0 0 0 0 0
 maid~
 the maid~
 The maid is waiting for your order.
-
-~
+~
 She is very beautiful with golden hair, and deep blue eyes. A good reason
-
-for coming here more often.
-
-~
+for coming here more often.
+~
 1 0 1000 S
 29 2
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3094
-wolf~
-the wolf~
-A large, trained wolf is here.
-
-~
-The wolf looks like a strong, fearless fighter.
-
-~
-1 0 0 S
-4 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3093
-rottweiler~
-the rottweiler~
-A large, loyal rottweiler is here.
-
-~
-The rottweiler looks like a strong, fierce fighter.
-
-~
-1 0 400 S
-25 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3092
-beagle~
-the beagle~
-A small, quick, loyal beagle is here.
-
-~
-The beagle looks like a fierce fighter.
-
-~
-1 0 400 S
-12 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3091
-puppy~
-the puppy~
-A small loyal puppy is here.
-
-~
-The puppy looks like a cute, little, fierce fighter.
-
-~
-1 0 400 S
-5 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3090
-kitten~
-the kitten~
-A small loyal kitten is here.
-
-~
-The kitten looks like a cute, little, fierce fighter.
-
-~
-1 0 400 S
-4 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -4159,11 +4069,9 @@ L 0 0 0 0 0 0 0 0 0
 cityguard guard~
 the cityguard~
 A cityguard is here, guarding the mayor.
-
-~
+~
 A big, strong, helpful, trustworthy guard.
-
-~
+~
 65 65538 1000 S
 3 1
 0 0 0 0
@@ -4436,33 +4344,13 @@ He looks as an honest, hard-working artisan who only just earns enough to
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3009
-jeweller~
-the jeweller~
-The jeweller is standing behind the desk.
-
-#3200
-~
-He is fat and has a content although watchful look on his face.
-
-~
-8388611 8320 900 S
-87 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 64 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
 #3008
 boy~
 the pet shop boy~
 A pet shop boy is here, humming gently.
-
-~
+~
 He is young and close-cropped and looks quite happy.
-
-~
+~
 3 0 900 S
 71 1
 0 0 0 0
@@ -4475,11 +4363,9 @@ L 0 0 0 0 0 0 0 0 0
 sailor~
 the sailor~
 A sailor stands here, waiting to train you.
-
-~
+~
 He looks like a strong, fit sailor.
-
-~
+~
 515 0 900 S
 71 1
 0 0 0 0
@@ -4492,11 +4378,9 @@ L 0 0 0 0 0 0 0 0 0
 captain~
 the captain~
 A retired captain stands here, selling boats.
-
-~
+~
 This captain has killed more sharks than you have eaten peas.
-
-~
+~
 3 40 900 S
 22 1
 0 0 0 0
@@ -4526,13 +4410,10 @@ L 0 0 0 0 0 0 0 0 0
 armourer armorer~
 the armourer~
 An armourer stands here.
-
-~
+~
 An old but very strong armourer, he has made more armours in his
-
-lifetime than you have ever seen.
-
-~
+lifetime than you have ever seen.
+~
 9438211 8328 900 S
 102 1
 0 0 0 0
@@ -4542,7 +4423,6 @@ An old but very strong armourer, he has made more armours in his
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
 #3199
-#3198
 The Granite Bastion Tank Armourer~
 The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand.
 ~
