@@ -295,6 +295,12 @@ A list of object records terminated by `#0`:
 #0
 ```
 
+Object weight ranges encode item archetype in area content policy:
+
+- `1`-`5`: caster item
+- `6`-`10`: melee item
+- `11`-`15`: tank item
+
 Per-object trailing entries:
 
 - `A` then `<location> <modifier>` on next line (object affect)
