@@ -3149,14 +3149,6 @@ D0
 ~
 ~
 0 -1 3141
-D1
-~
-~
-0 -1 3162
-D2
-~
-~
-0 -1 3181
 S
 #3162
 @@WSilver Marketwalk@@N~
@@ -3174,10 +3166,6 @@ D2
 ~
 ~
 0 -1 3182
-D3
-~
-~
-0 -1 3161
 S
 #3163
 @@WCrimson Concourse@@N~
@@ -3557,10 +3545,6 @@ S
 @@WCedar Square@@N~
 The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
-D0
-~
-~
-0 -1 3161
 D1
 ~
 ~
@@ -4673,30 +4657,26 @@ L 0 0 0 0 0 0 0 0 0
 armorer argent~
 The Argent Armorer~
 The Argent Armorer appraises a rack of polished blades.
-
 ~
 A disciplined quartermaster in polished mail, ready to match steel to soldier.
-
-#3251
-clothier armorer moonthread~
-The Moonthread Cloth Armorer~
-The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
-
-~
-A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor.
-
-~
-3 0 900 S
-54 2
+~
+1 0 900 S
+45 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-~
-1 0 900 S
-45 1
+#3251
+clothier armorer moonthread~
+The Moonthread Cloth Armorer~
+The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
+~
+A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor.
+~
+3 0 900 S
+54 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -6422,6 +6402,9 @@ An adamant bulwark dominates the rear of the showroom.~
 0 0 0 0 0 0 0 0 0 0
 4
 A
+18 16
+L
+55
 #3267
 @@astormlinen @@Wcap@@N~
 a @@astormlinen @@Wcap@@N~
@@ -6678,14 +6661,6 @@ A @@Wconstellation @@bgreatcloak@@N hangs beneath an arc of tiny crystal lights.
 4
 A
 12 29
-A
-13 23
-L
-95
-3251 9 0 0 0 0 130 70 0 23
-18 18
-A
-19 15
 L
 50
 #3251
@@ -6920,6 +6895,7 @@ L
 3156 5 9 2 0 0 125 65 0 23
 3157 9 0 0 0 0 130 65 0 23
 3250 9 0 0 0 0 125 70 0 23
+3251 9 0 0 0 0 130 100 0 23
 0
 #RESETS
 M 0 3011 1 3110       Gertrude the executioner
