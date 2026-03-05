@@ -407,7 +407,11 @@ S
 @@ySomewhere out in the open waste, canvas rigging snaps in the wind, a faint reminder that this road is still the desert's main artery.@@N
 @@yThe straight alignment makes travel simple, but the silence beyond the road reminds you how quickly a single step off-course can turn hostile.@@N
 ~
-4 8
+0 8
+D1
+~
+~
+0 -1 8600
 D3
 Back along the caravan road.
 ~

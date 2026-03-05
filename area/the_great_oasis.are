@@ -16,1795 +16,1799 @@ W builder~
 #8600
 @@ySunward Causeway@@N~
 @@ySunfire spills across broken cistern stones while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA chipped survey plate marked with @@lblue@@N triangles beside waypoint 8600, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA chipped survey plate marked with @@lblue@@N triangles beside waypoint 8600, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8601
+D3
+~
+~
+0 0 8519
 S
 #8601
 @@yAmberwake Traverse@@N~
 @@yMirage-light crowns half-buried trade jars where old bootprints turn and disappear.@@N
-@@lA weather-cut obelisk etched with a faded caravan sigil beside waypoint 8601, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA weather-cut obelisk etched with a faded caravan sigil beside waypoint 8601, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8600
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8602
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8600
 S
 #8602
 @@yMirage Corridor@@N~
 @@yA furnace gust rolls over a drift-choked wash while the desert hums like a taut bowstring.@@N
-@@lA trader glyph carved with horizon rune pairs beside waypoint 8602, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA trader glyph carved with horizon rune pairs beside waypoint 8602, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8601
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8603
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8601
 S
 #8603
 @@yCairnline Reach@@N~
 @@yAn ochre haze blankets sun-cracked clay pans where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA cracked stele painted with sun-prayer hash lines beside waypoint 8603, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA cracked stele painted with sun-prayer hash lines beside waypoint 8603, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8602
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8604
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8602
 S
 #8604
 @@yDustveil Crossing@@N~
 @@ySalt-dust whispers around an arc of lapis cairns where jackal tracks tangle toward the east.@@N
-@@lA prayer-stone scratched with @@bbrown@@N spiral knots beside waypoint 8604, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA prayer-stone scratched with @@bbrown@@N spiral knots beside waypoint 8604, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8603
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8605
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8603
 S
 #8605
 @@ySunward Path@@N~
 @@ySunfire spills across broken cistern stones while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA sand-polished slab branded with a serpent-eye motif beside waypoint 8605, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA sand-polished slab branded with a serpent-eye motif beside waypoint 8605, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8604
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8606
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8604
 S
 #8606
 @@yAmberwake Run@@N~
 @@yMirage-light crowns half-buried trade jars where old bootprints turn and disappear.@@N
-@@lA toppled beacon inked with a pilgrim's route chain beside waypoint 8606, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA toppled beacon inked with a pilgrim's route chain beside waypoint 8606, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8605
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8607
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8605
 S
 #8607
 @@yMirage March@@N~
 @@yA furnace gust rolls over a drift-choked wash while the desert hums like a taut bowstring.@@N
-@@lA worn boundary post notched with @@yyellow@@N arrows beside waypoint 8607, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA worn boundary post notched with @@yyellow@@N arrows beside waypoint 8607, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8606
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8608
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8606
 S
 #8608
 @@yCairnline Bend@@N~
 @@yAn ochre haze blankets sun-cracked clay pans where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA split limestone tile signed with old water tally marks beside waypoint 8608, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA split limestone tile signed with old water tally marks beside waypoint 8608, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8607
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8609
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8607
 S
 #8609
 @@yDustveil Way@@N~
 @@ySalt-dust whispers around an arc of lapis cairns where jackal tracks tangle toward the east.@@N
-@@lA half-buried tablet scored with dry-season warning cuts beside waypoint 8609, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-@@bNear the marker, a precise triangle-over-triangle emblem hints at a future road into a buried pyramid.@@N
-~
+@@lA half-buried tablet scored with dry-season warning cuts beside waypoint 8609, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+@@bNear the marker, a precise triangle-over-triangle emblem hints at a future road into a buried pyramid.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8608
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8610
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8608
 S
 #8610
 @@yPalmward Traverse@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA weather-cut obelisk etched with a pilgrim's route chain beside waypoint 8610, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA weather-cut obelisk etched with a pilgrim's route chain beside waypoint 8610, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8609
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8611
 S
 #8611
 @@yPalmward Corridor@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA trader glyph carved with dry-season warning cuts beside waypoint 8611, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA trader glyph carved with dry-season warning cuts beside waypoint 8611, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8610
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8612
 S
 #8612
 @@yPalmward Reach@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA cracked stele painted with horizon rune pairs beside waypoint 8612, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA cracked stele painted with horizon rune pairs beside waypoint 8612, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8611
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8613
 S
 #8613
 @@yPalmward Crossing@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA prayer-stone scratched with a serpent-eye motif beside waypoint 8613, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA prayer-stone scratched with a serpent-eye motif beside waypoint 8613, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8612
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8614
 S
 #8614
 @@yPalmward Path@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA sand-polished slab branded with old water tally marks beside waypoint 8614, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA sand-polished slab branded with old water tally marks beside waypoint 8614, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8613
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8615
 S
 #8615
 @@yPalmward Run@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA toppled beacon inked with a faded caravan sigil beside waypoint 8615, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA toppled beacon inked with a faded caravan sigil beside waypoint 8615, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8614
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8616
 S
 #8616
 @@yPalmward March@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA worn boundary post notched with @@bbrown@@N spiral knots beside waypoint 8616, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA worn boundary post notched with @@bbrown@@N spiral knots beside waypoint 8616, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8615
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8617
 S
 #8617
 @@yPalmward Bend@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA split limestone tile signed with @@yyellow@@N arrows beside waypoint 8617, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA split limestone tile signed with @@yyellow@@N arrows beside waypoint 8617, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8616
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8618
 S
 #8618
 @@yPalmward Way@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA half-buried tablet scored with @@lblue@@N triangles beside waypoint 8618, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA half-buried tablet scored with @@lblue@@N triangles beside waypoint 8618, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8617
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8619
 S
 #8619
 @@yPalmward Causeway@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA chipped survey plate marked with sun-prayer hash lines beside waypoint 8619, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA chipped survey plate marked with sun-prayer hash lines beside waypoint 8619, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8618
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8620
 S
 #8620
 @@ySunward Corridor@@N~
 @@ySunfire spills across half-buried trade jars where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA trader glyph carved with @@lblue@@N triangles beside waypoint 8620, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA trader glyph carved with @@lblue@@N triangles beside waypoint 8620, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8619
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8621
 S
 #8621
 @@yAmberwake Reach@@N~
 @@yMirage-light crowns a drift-choked wash where jackal tracks tangle toward the east.@@N
-@@lA cracked stele painted with a faded caravan sigil beside waypoint 8621, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA cracked stele painted with a faded caravan sigil beside waypoint 8621, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8620
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8622
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8620
 S
 #8622
 @@yMirage Crossing@@N~
 @@yA furnace gust rolls over sun-cracked clay pans while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA prayer-stone scratched with horizon rune pairs beside waypoint 8622, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-@@bA carved map fragment here ends in a sharply drawn pyramid face beyond this oasis.@@N
-~
+@@lA prayer-stone scratched with horizon rune pairs beside waypoint 8622, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+@@bA carved map fragment here ends in a sharply drawn pyramid face beyond this oasis.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8621
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8623
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8621
 S
 #8623
 @@yCairnline Path@@N~
 @@yAn ochre haze blankets an arc of lapis cairns where old bootprints turn and disappear.@@N
-@@lA sand-polished slab branded with sun-prayer hash lines beside waypoint 8623, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA sand-polished slab branded with sun-prayer hash lines beside waypoint 8623, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8622
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8624
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8622
 S
 #8624
 @@yDustveil Run@@N~
 @@ySalt-dust whispers around broken cistern stones while the desert hums like a taut bowstring.@@N
-@@lA toppled beacon inked with @@bbrown@@N spiral knots beside waypoint 8624, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA toppled beacon inked with @@bbrown@@N spiral knots beside waypoint 8624, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8623
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8625
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8623
 S
 #8625
 @@ySunward March@@N~
 @@ySunfire spills across half-buried trade jars where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA worn boundary post notched with a serpent-eye motif beside waypoint 8625, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA worn boundary post notched with a serpent-eye motif beside waypoint 8625, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8624
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8626
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8624
 S
 #8626
 @@yAmberwake Bend@@N~
 @@yMirage-light crowns a drift-choked wash where jackal tracks tangle toward the east.@@N
-@@lA split limestone tile signed with a pilgrim's route chain beside waypoint 8626, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA split limestone tile signed with a pilgrim's route chain beside waypoint 8626, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8625
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8627
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8625
 S
 #8627
 @@yMirage Way@@N~
 @@yA furnace gust rolls over sun-cracked clay pans while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA half-buried tablet scored with @@yyellow@@N arrows beside waypoint 8627, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA half-buried tablet scored with @@yyellow@@N arrows beside waypoint 8627, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8626
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8628
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8626
 S
 #8628
 @@yCairnline Causeway@@N~
 @@yAn ochre haze blankets an arc of lapis cairns where old bootprints turn and disappear.@@N
-@@lA chipped survey plate marked with old water tally marks beside waypoint 8628, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA chipped survey plate marked with old water tally marks beside waypoint 8628, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8627
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8629
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8627
 S
 #8629
 @@yDustveil Traverse@@N~
 @@ySalt-dust whispers around broken cistern stones while the desert hums like a taut bowstring.@@N
-@@lA weather-cut obelisk etched with dry-season warning cuts beside waypoint 8629, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA weather-cut obelisk etched with dry-season warning cuts beside waypoint 8629, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8628
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8630
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8628
 S
 #8630
 @@yPalmward Reach@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA cracked stele painted with a pilgrim's route chain beside waypoint 8630, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA cracked stele painted with a pilgrim's route chain beside waypoint 8630, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8629
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8631
 S
 #8631
 @@yPalmward Crossing@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA prayer-stone scratched with dry-season warning cuts beside waypoint 8631, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA prayer-stone scratched with dry-season warning cuts beside waypoint 8631, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8630
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8632
 S
 #8632
 @@yPalmward Path@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA sand-polished slab branded with horizon rune pairs beside waypoint 8632, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA sand-polished slab branded with horizon rune pairs beside waypoint 8632, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8631
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8633
 S
 #8633
 @@yPalmward Run@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA toppled beacon inked with a serpent-eye motif beside waypoint 8633, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA toppled beacon inked with a serpent-eye motif beside waypoint 8633, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8632
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8634
 S
 #8634
 @@yPalmward March@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA worn boundary post notched with old water tally marks beside waypoint 8634, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA worn boundary post notched with old water tally marks beside waypoint 8634, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8633
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8635
 S
 #8635
 @@yPalmward Bend@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA split limestone tile signed with a faded caravan sigil beside waypoint 8635, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA split limestone tile signed with a faded caravan sigil beside waypoint 8635, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8634
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8636
 S
 #8636
 @@yPalmward Way@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA half-buried tablet scored with @@bbrown@@N spiral knots beside waypoint 8636, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA half-buried tablet scored with @@bbrown@@N spiral knots beside waypoint 8636, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8635
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8637
 S
 #8637
 @@yPalmward Causeway@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA chipped survey plate marked with @@yyellow@@N arrows beside waypoint 8637, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA chipped survey plate marked with @@yyellow@@N arrows beside waypoint 8637, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8636
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8638
 S
 #8638
 @@yPalmward Traverse@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA weather-cut obelisk etched with @@lblue@@N triangles beside waypoint 8638, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA weather-cut obelisk etched with @@lblue@@N triangles beside waypoint 8638, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8637
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8639
 S
 #8639
 @@yPalmward Corridor@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA trader glyph carved with sun-prayer hash lines beside waypoint 8639, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA trader glyph carved with sun-prayer hash lines beside waypoint 8639, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8638
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8640
 S
 #8640
 @@ySunward Crossing@@N~
 @@ySunfire spills across a drift-choked wash where old bootprints turn and disappear.@@N
-@@lA prayer-stone scratched with @@lblue@@N triangles beside waypoint 8640, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA prayer-stone scratched with @@lblue@@N triangles beside waypoint 8640, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8639
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8641
 S
 #8641
 @@yAmberwake Path@@N~
 @@yMirage-light crowns sun-cracked clay pans while the desert hums like a taut bowstring.@@N
-@@lA sand-polished slab branded with a faded caravan sigil beside waypoint 8641, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-@@bThree stacked triangular glyphs suggest engineers once planned a pyramid approach from this route.@@N
-~
+@@lA sand-polished slab branded with a faded caravan sigil beside waypoint 8641, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+@@bThree stacked triangular glyphs suggest engineers once planned a pyramid approach from this route.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8640
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8642
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8640
 S
 #8642
 @@yMirage Run@@N~
 @@yA furnace gust rolls over an arc of lapis cairns where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA toppled beacon inked with horizon rune pairs beside waypoint 8642, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA toppled beacon inked with horizon rune pairs beside waypoint 8642, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8641
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8643
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8641
 S
 #8643
 @@yCairnline March@@N~
 @@yAn ochre haze blankets broken cistern stones where jackal tracks tangle toward the east.@@N
-@@lA worn boundary post notched with sun-prayer hash lines beside waypoint 8643, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA worn boundary post notched with sun-prayer hash lines beside waypoint 8643, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8642
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8644
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8642
 S
 #8644
 @@yDustveil Bend@@N~
 @@ySalt-dust whispers around half-buried trade jars while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA split limestone tile signed with @@bbrown@@N spiral knots beside waypoint 8644, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA split limestone tile signed with @@bbrown@@N spiral knots beside waypoint 8644, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8643
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8645
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8643
 S
 #8645
 @@ySunward Way@@N~
 @@ySunfire spills across a drift-choked wash where old bootprints turn and disappear.@@N
-@@lA half-buried tablet scored with a serpent-eye motif beside waypoint 8645, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA half-buried tablet scored with a serpent-eye motif beside waypoint 8645, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8644
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8646
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8644
 S
 #8646
 @@yAmberwake Causeway@@N~
 @@yMirage-light crowns sun-cracked clay pans while the desert hums like a taut bowstring.@@N
-@@lA chipped survey plate marked with a pilgrim's route chain beside waypoint 8646, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA chipped survey plate marked with a pilgrim's route chain beside waypoint 8646, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8645
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8647
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8645
 S
 #8647
 @@yMirage Traverse@@N~
 @@yA furnace gust rolls over an arc of lapis cairns where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA weather-cut obelisk etched with @@yyellow@@N arrows beside waypoint 8647, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA weather-cut obelisk etched with @@yyellow@@N arrows beside waypoint 8647, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8646
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8648
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8646
 S
 #8648
 @@yCairnline Corridor@@N~
 @@yAn ochre haze blankets broken cistern stones where jackal tracks tangle toward the east.@@N
-@@lA trader glyph carved with old water tally marks beside waypoint 8648, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA trader glyph carved with old water tally marks beside waypoint 8648, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8647
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8649
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8647
 S
 #8649
 @@yDustveil Reach@@N~
 @@ySalt-dust whispers around half-buried trade jars while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA cracked stele painted with dry-season warning cuts beside waypoint 8649, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA cracked stele painted with dry-season warning cuts beside waypoint 8649, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8648
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8650
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8648
 S
 #8650
 @@yPalmward Path@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA sand-polished slab branded with a pilgrim's route chain beside waypoint 8650, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA sand-polished slab branded with a pilgrim's route chain beside waypoint 8650, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8649
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8651
 S
 #8651
 @@yPalmward Run@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA toppled beacon inked with dry-season warning cuts beside waypoint 8651, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA toppled beacon inked with dry-season warning cuts beside waypoint 8651, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8650
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8652
 S
 #8652
 @@yPalmward March@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA worn boundary post notched with horizon rune pairs beside waypoint 8652, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA worn boundary post notched with horizon rune pairs beside waypoint 8652, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8651
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8653
 S
 #8653
 @@yPalmward Bend@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA split limestone tile signed with a serpent-eye motif beside waypoint 8653, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA split limestone tile signed with a serpent-eye motif beside waypoint 8653, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8652
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8654
 S
 #8654
 @@yPalmward Way@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA half-buried tablet scored with old water tally marks beside waypoint 8654, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA half-buried tablet scored with old water tally marks beside waypoint 8654, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8653
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8655
 S
 #8655
 @@yPalmward Causeway@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA chipped survey plate marked with a faded caravan sigil beside waypoint 8655, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA chipped survey plate marked with a faded caravan sigil beside waypoint 8655, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8654
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8656
 S
 #8656
 @@yPalmward Traverse@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA weather-cut obelisk etched with @@bbrown@@N spiral knots beside waypoint 8656, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA weather-cut obelisk etched with @@bbrown@@N spiral knots beside waypoint 8656, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8655
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8657
 S
 #8657
 @@yPalmward Corridor@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA trader glyph carved with @@yyellow@@N arrows beside waypoint 8657, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA trader glyph carved with @@yyellow@@N arrows beside waypoint 8657, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8656
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8658
 S
 #8658
 @@yPalmward Reach@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA cracked stele painted with @@lblue@@N triangles beside waypoint 8658, giving this square hunt-road a measured rhythm.@@N
-@@yThe path tightens and the dunes open like a corridor toward relief.@@N
-~
+@@lA cracked stele painted with @@lblue@@N triangles beside waypoint 8658, giving this square hunt-road a measured rhythm.@@N
+@@yThe path tightens and the dunes open like a corridor toward relief.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8657
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8659
 S
 #8659
 @@yPalmward Crossing@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA prayer-stone scratched with sun-prayer hash lines beside waypoint 8659, giving this square hunt-road a measured rhythm.@@N
-@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
-~
+@@lA prayer-stone scratched with sun-prayer hash lines beside waypoint 8659, giving this square hunt-road a measured rhythm.@@N
+@@yThe hunt for the hidden oasis feels closer here than anywhere behind you.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8658
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8660
 S
 #8660
 @@ySunward Run@@N~
 @@ySunfire spills across sun-cracked clay pans where jackal tracks tangle toward the east.@@N
-@@lA toppled beacon inked with @@lblue@@N triangles beside waypoint 8660, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA toppled beacon inked with @@lblue@@N triangles beside waypoint 8660, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8659
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8661
 S
 #8661
 @@yAmberwake March@@N~
 @@yMirage-light crowns an arc of lapis cairns while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA worn boundary post notched with a faded caravan sigil beside waypoint 8661, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA worn boundary post notched with a faded caravan sigil beside waypoint 8661, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8660
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8662
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8660
 S
 #8662
 @@yMirage Bend@@N~
 @@yA furnace gust rolls over broken cistern stones where old bootprints turn and disappear.@@N
-@@lA split limestone tile signed with horizon rune pairs beside waypoint 8662, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA split limestone tile signed with horizon rune pairs beside waypoint 8662, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8661
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8663
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8661
 S
 #8663
 @@yCairnline Way@@N~
 @@yAn ochre haze blankets half-buried trade jars while the desert hums like a taut bowstring.@@N
-@@lA half-buried tablet scored with sun-prayer hash lines beside waypoint 8663, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-@@bCut limestone chips at your feet look quarried, not natural, and they point toward a hidden pyramid site.@@N
-~
+@@lA half-buried tablet scored with sun-prayer hash lines beside waypoint 8663, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+@@bCut limestone chips at your feet look quarried, not natural, and they point toward a hidden pyramid site.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8662
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8664
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8662
 S
 #8664
 @@yDustveil Causeway@@N~
 @@ySalt-dust whispers around a drift-choked wash where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA chipped survey plate marked with @@bbrown@@N spiral knots beside waypoint 8664, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA chipped survey plate marked with @@bbrown@@N spiral knots beside waypoint 8664, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8663
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8665
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8663
 S
 #8665
 @@ySunward Traverse@@N~
 @@ySunfire spills across sun-cracked clay pans where jackal tracks tangle toward the east.@@N
-@@lA weather-cut obelisk etched with a serpent-eye motif beside waypoint 8665, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA weather-cut obelisk etched with a serpent-eye motif beside waypoint 8665, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8664
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8666
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8664
 S
 #8666
 @@yAmberwake Corridor@@N~
 @@yMirage-light crowns an arc of lapis cairns while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA trader glyph carved with a pilgrim's route chain beside waypoint 8666, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA trader glyph carved with a pilgrim's route chain beside waypoint 8666, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8665
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8667
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8665
 S
 #8667
 @@yMirage Reach@@N~
 @@yA furnace gust rolls over broken cistern stones where old bootprints turn and disappear.@@N
-@@lA cracked stele painted with @@yyellow@@N arrows beside waypoint 8667, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA cracked stele painted with @@yyellow@@N arrows beside waypoint 8667, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8666
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8668
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8666
 S
 #8668
 @@yCairnline Crossing@@N~
 @@yAn ochre haze blankets half-buried trade jars while the desert hums like a taut bowstring.@@N
-@@lA prayer-stone scratched with old water tally marks beside waypoint 8668, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
+@@lA prayer-stone scratched with old water tally marks beside waypoint 8668, giving this square hunt-road a measured rhythm.@@N
+@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8667
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8669
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8667
 S
 #8669
 @@yDustveil Path@@N~
 @@ySalt-dust whispers around a drift-choked wash where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA sand-polished slab branded with dry-season warning cuts beside waypoint 8669, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
+@@lA sand-polished slab branded with dry-season warning cuts beside waypoint 8669, giving this square hunt-road a measured rhythm.@@N
+@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8668
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8670
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8668
 S
 #8670
 @@yPalmward March@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA worn boundary post notched with a pilgrim's route chain beside waypoint 8670, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA worn boundary post notched with a pilgrim's route chain beside waypoint 8670, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8669
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8671
 S
 #8671
 @@yPalmward Bend@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA split limestone tile signed with dry-season warning cuts beside waypoint 8671, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA split limestone tile signed with dry-season warning cuts beside waypoint 8671, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8670
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8672
 S
 #8672
 @@yPalmward Way@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA half-buried tablet scored with horizon rune pairs beside waypoint 8672, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA half-buried tablet scored with horizon rune pairs beside waypoint 8672, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8671
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8673
 S
 #8673
 @@yPalmward Causeway@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA chipped survey plate marked with a serpent-eye motif beside waypoint 8673, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA chipped survey plate marked with a serpent-eye motif beside waypoint 8673, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8672
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8674
 S
 #8674
 @@yPalmward Traverse@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA weather-cut obelisk etched with old water tally marks beside waypoint 8674, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA weather-cut obelisk etched with old water tally marks beside waypoint 8674, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8673
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8675
 S
 #8675
 @@yPalmward Corridor@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA trader glyph carved with a faded caravan sigil beside waypoint 8675, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA trader glyph carved with a faded caravan sigil beside waypoint 8675, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8674
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8676
 S
 #8676
 @@yPalmward Reach@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA cracked stele painted with @@bbrown@@N spiral knots beside waypoint 8676, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA cracked stele painted with @@bbrown@@N spiral knots beside waypoint 8676, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8675
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8677
 S
 #8677
 @@yPalmward Crossing@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA prayer-stone scratched with @@yyellow@@N arrows beside waypoint 8677, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA prayer-stone scratched with @@yyellow@@N arrows beside waypoint 8677, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8676
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8678
 S
 #8678
 @@yPalmward Path@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA sand-polished slab branded with @@lblue@@N triangles beside waypoint 8678, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
+@@lA sand-polished slab branded with @@lblue@@N triangles beside waypoint 8678, giving this square hunt-road a measured rhythm.@@N
+@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8677
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8679
 S
 #8679
 @@yPalmward Run@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA toppled beacon inked with sun-prayer hash lines beside waypoint 8679, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
+@@lA toppled beacon inked with sun-prayer hash lines beside waypoint 8679, giving this square hunt-road a measured rhythm.@@N
+@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8678
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8680
 S
 #8680
 @@ySunward Bend@@N~
 @@ySunfire spills across an arc of lapis cairns while the desert hums like a taut bowstring.@@N
-@@lA split limestone tile signed with @@lblue@@N triangles beside waypoint 8680, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA split limestone tile signed with @@lblue@@N triangles beside waypoint 8680, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8679
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8681
 S
 #8681
 @@yAmberwake Way@@N~
 @@yMirage-light crowns broken cistern stones where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA half-buried tablet scored with a faded caravan sigil beside waypoint 8681, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA half-buried tablet scored with a faded caravan sigil beside waypoint 8681, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8680
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8682
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8680
 S
 #8682
 @@yMirage Causeway@@N~
 @@yA furnace gust rolls over half-buried trade jars where jackal tracks tangle toward the east.@@N
-@@lA chipped survey plate marked with horizon rune pairs beside waypoint 8682, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA chipped survey plate marked with horizon rune pairs beside waypoint 8682, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8681
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8683
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8681
 S
 #8683
 @@yCairnline Traverse@@N~
 @@yAn ochre haze blankets a drift-choked wash while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA weather-cut obelisk etched with sun-prayer hash lines beside waypoint 8683, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA weather-cut obelisk etched with sun-prayer hash lines beside waypoint 8683, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8682
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8684
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8682
 S
 #8684
 @@yDustveil Corridor@@N~
 @@ySalt-dust whispers around sun-cracked clay pans where old bootprints turn and disappear.@@N
-@@lA trader glyph carved with @@bbrown@@N spiral knots beside waypoint 8684, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA trader glyph carved with @@bbrown@@N spiral knots beside waypoint 8684, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8683
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8685
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8683
 S
 #8685
 @@ySunward Reach@@N~
 @@ySunfire spills across an arc of lapis cairns while the desert hums like a taut bowstring.@@N
-@@lA cracked stele painted with a serpent-eye motif beside waypoint 8685, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA cracked stele painted with a serpent-eye motif beside waypoint 8685, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8684
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8686
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8684
 S
 #8686
 @@yAmberwake Crossing@@N~
 @@yMirage-light crowns broken cistern stones where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA prayer-stone scratched with a pilgrim's route chain beside waypoint 8686, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-~
+@@lA prayer-stone scratched with a pilgrim's route chain beside waypoint 8686, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8685
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8687
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8685
 S
 #8687
 @@yMirage Path@@N~
 @@yA furnace gust rolls over half-buried trade jars where jackal tracks tangle toward the east.@@N
-@@lA sand-polished slab branded with @@yyellow@@N arrows beside waypoint 8687, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA sand-polished slab branded with @@yyellow@@N arrows beside waypoint 8687, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8686
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8688
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8686
 S
 #8688
 @@yCairnline Run@@N~
 @@yAn ochre haze blankets a drift-choked wash while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA toppled beacon inked with old water tally marks beside waypoint 8688, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
-@@bAn angular funerary sigil implies this oasis may someday connect to a pyramid necropolis.@@N
-~
+@@lA toppled beacon inked with old water tally marks beside waypoint 8688, giving this square hunt-road a measured rhythm.@@N
+@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
+@@bAn angular funerary sigil implies this oasis may someday connect to a pyramid necropolis.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8687
 D1
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8689
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8687
 S
 #8689
 @@yDustveil March@@N~
 @@ySalt-dust whispers around sun-cracked clay pans where old bootprints turn and disappear.@@N
-@@lA worn boundary post notched with dry-season warning cuts beside waypoint 8689, giving this square hunt-road a measured rhythm.@@N
-@@ySomewhere beyond the next rise, real water must be waiting.@@N
-~
+@@lA worn boundary post notched with dry-season warning cuts beside waypoint 8689, giving this square hunt-road a measured rhythm.@@N
+@@ySomewhere beyond the next rise, real water must be waiting.@@N
+~
 0 10
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8688
 D2
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8690
+D3
+The trail winds back through the glare.
+~
+~
+0 -1 8688
 S
 #8690
 @@yPalmward Way@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA half-buried tablet scored with a pilgrim's route chain beside waypoint 8690, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA half-buried tablet scored with a pilgrim's route chain beside waypoint 8690, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
 D0
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8689
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8691
 S
 #8691
 @@yPalmward Causeway@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA chipped survey plate marked with dry-season warning cuts beside waypoint 8691, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA chipped survey plate marked with dry-season warning cuts beside waypoint 8691, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8690
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8692
 S
 #8692
 @@yPalmward Traverse@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA weather-cut obelisk etched with horizon rune pairs beside waypoint 8692, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA weather-cut obelisk etched with horizon rune pairs beside waypoint 8692, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8691
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8693
 S
 #8693
 @@yPalmward Corridor@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA trader glyph carved with a serpent-eye motif beside waypoint 8693, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA trader glyph carved with a serpent-eye motif beside waypoint 8693, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8692
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8694
 S
 #8694
 @@yPalmward Reach@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA cracked stele painted with old water tally marks beside waypoint 8694, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA cracked stele painted with old water tally marks beside waypoint 8694, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8693
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8695
 S
 #8695
 @@yPalmward Crossing@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
-@@lA prayer-stone scratched with a faded caravan sigil beside waypoint 8695, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA prayer-stone scratched with a faded caravan sigil beside waypoint 8695, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8694
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8696
 S
 #8696
 @@yPalmward Path@@N~
 @@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA sand-polished slab branded with @@bbrown@@N spiral knots beside waypoint 8696, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA sand-polished slab branded with @@bbrown@@N spiral knots beside waypoint 8696, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8695
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8697
 S
 #8697
 @@yPalmward Run@@N~
 @@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA toppled beacon inked with @@yyellow@@N arrows beside waypoint 8697, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA toppled beacon inked with @@yyellow@@N arrows beside waypoint 8697, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 0 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8696
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8698
 S
 #8698
 @@yPalmward March@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA worn boundary post notched with @@lblue@@N triangles beside waypoint 8698, giving this square hunt-road a measured rhythm.@@N
-@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
-~
+@@lA worn boundary post notched with @@lblue@@N triangles beside waypoint 8698, giving this square hunt-road a measured rhythm.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
+~
 4 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8697
 D3
 The oasis hunt continues ahead through blowing sand.
-~
+~
 ~
 0 -1 8699
 S
 #8699
 @@yPalmward Bend@@N~
 @@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA split limestone tile signed with sun-prayer hash lines beside waypoint 8699, giving this square hunt-road a measured rhythm.@@N
-@@yYou hear no fountain, yet the wind carries a cool promise.@@N
-~
+@@lA split limestone tile signed with sun-prayer hash lines beside waypoint 8699, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
+~
 4 10
 D1
 The trail winds back through the glare.
-~
+~
 ~
 0 -1 8698
 S
@@ -1814,158 +1818,182 @@ S
 oasis scout watcher~
 @@lBlue-Sashed Oasis Scout@@N~
 @@lBlue-Sashed Oasis Scout@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8601
 dune skirmisher yellow scarf~
 @@yYellow-Scarf Dune Skirmisher@@N~
 @@yYellow-Scarf Dune Skirmisher@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 52 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8602
 brown cloak sand stalker~
 @@bBrown-Cloaked Sand Stalker@@N~
 @@bBrown-Cloaked Sand Stalker@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8603
 parched caravan deserter~
 @@yParched Caravan Deserter@@N~
 @@yParched Caravan Deserter@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 54 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8604
 mirage basin adept~
 @@lMirage Adept of the Basin@@N~
 @@lMirage Adept of the Basin@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 56 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8605
 sunwell guardian keeper~
 @@ySunwell Guardian@@N~
 @@ySunwell Guardian@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 58 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8606
 jackal raider blue eye~
 @@lBlue-Eyed Jackal Raider@@N~
 @@lBlue-Eyed Jackal Raider@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 55 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8607
 dust prophet thirst~
 @@yDust Prophet of Thirst@@N~
 @@yDust Prophet of Thirst@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 60 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8608
 reedknife oasis hunter~
 @@lReedknife Oasis Hunter@@N~
 @@lReedknife Oasis Hunter@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 57 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8609
 salt crust marauder~
 @@ySalt-Crust Marauder@@N~
 @@ySalt-Crust Marauder@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 1 0 0 S
 59 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8610
 basin tyrant boss~
 @@lThe Basin Tyrant@@N~
 @@lThe Basin Tyrant@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 33554435 0 0 S
 65 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8611
 keeper hidden spring boss~
 @@yKeeper of the Hidden Spring@@N~
 @@yKeeper of the Hidden Spring@@N holds this stretch of desert with unwavering vigilance.@@N
-~
+~
 A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
-~
+~
 33554435 0 0 S
 65 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 4
 + 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #8620
@@ -2168,41 +2196,54 @@ M 0 8601 2 8680 (null)
 M 0 8602 2 8690 (null)
 
 M 0 8600 1 8601 (null)
-E 1 8620 1 1 (null)
+
+E 0 8620 1 1 (null)
 
 M 0 8601 1 8603 (null)
-E 1 8621 1 2 (null)
+
+E 0 8621 1 2 (null)
 
 M 0 8602 1 8605 (null)
-E 1 8622 1 4 (null)
+
+E 0 8622 1 4 (null)
 
 M 0 8603 1 8607 (null)
-E 1 8623 1 5 (null)
+
+E 0 8623 1 5 (null)
 
 M 0 8604 1 8609 (null)
-E 1 8624 1 9 (null)
+
+E 0 8624 1 9 (null)
 
 M 0 8605 1 8611 (null)
-E 1 8625 1 12 (null)
+
+E 0 8625 1 12 (null)
 
 M 0 8606 1 8613 (null)
-E 1 8626 1 13 (null)
+
+E 0 8626 1 13 (null)
 
 M 0 8607 1 8615 (null)
-E 1 8627 1 14 (null)
+
+E 0 8627 1 14 (null)
 
 M 0 8608 1 8617 (null)
-E 1 8628 1 16 (null)
+
+E 0 8628 1 16 (null)
 
 M 0 8609 1 8619 (null)
-E 1 8629 1 17 (null)
+
+E 0 8629 1 17 (null)
 
 M 0 8610 1 8698 (null)
-E 1 8637 1 20 (null)
-E 1 8638 1 26 (null)
+
+E 0 8637 1 20 (null)
+
+E 0 8638 1 26 (null)
 
 M 0 8611 1 8699 (null)
-E 1 8637 1 20 (null)
+
+E 0 8637 1 20 (null)
 
 S
 #$
