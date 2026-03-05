@@ -5889,26 +5889,13 @@ L
 #3164
 trailwarden boots~
 trailwarden boots~
-10
-15
-0 0 0 0 0 0 0 0 0 0
-4
-A
-20
-A
-20
-L
-35
-20
-20
-25
-35
-25
+A pair of trailwarden boots lie here.~
+9 0 8388624 4
 0 0 0 0 0 0 0 0 0 0
 4
 L
 35
-45
+#3165
 sylphic lens~
 a sylphic prism lens~
 A sylphic prism lens spins slowly in place.~
@@ -7062,10 +7049,6 @@ G 0 3267 100
 G 0 3268 100 
 
 G 0 3269 100 
-
-G 0 3270 100 
-
-G 0 3271 100 
 
 G 0 3274 100 
 
