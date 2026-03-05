@@ -4982,6 +4982,40 @@ A seasoned fixer who outfits expeditions with practical rewards for every role.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#3157
+armorer bulwark bastion~
+The Bulwark Armorer~
+The Bulwark Armorer checks rivets on a wall of weighted harness.
+
+~
+A broad-shouldered smith outfitting mages, duelists, and guardians with role-tuned armor.
+
+~
+1 0 900 S
+50 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3250
+armourer armorer moonthread arcanoweaver~
+The Moonthread Arcanoweaver~
+The Moonthread Arcanoweaver adjusts rune-stitched armor on a dress form.
+
+~
+A meticulous moonthread armourer who tailors arcane vestments for hedge mages and archons alike.
+
+~
+1 0 900 S
+47 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #3057
@@ -6518,6 +6552,448 @@ A
 19 14
 L
 50
+#3181
+spellwoven cowl~
+a spellwoven cowl~
+A spellwoven cowl hangs from a silver mannequin.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 4
+A
+13 3
+L
+8
+#3182
+astral thread mantle~
+an astral thread mantle~
+An astral thread mantle shimmers with quiet starlight.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 6
+A
+13 5
+L
+14
+#3183
+runebound sash~
+a runebound sash~
+A runebound sash is pinned above a rack of robes.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 8
+A
+13 6
+L
+18
+#3184
+mistglass bracers~
+mistglass bracers~
+Mistglass bracers rest in a padded velvet tray.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 9
+A
+13 7
+L
+22
+#3185
+archmage weavecoat~
+an archmage weavecoat~
+An archmage weavecoat is stitched with tiny ward sigils.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 12
+A
+13 10
+L
+30
+#3186
+stormcall slippers~
+stormcall slippers~
+Stormcall slippers crackle softly on a cedar stand.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 13
+A
+13 11
+L
+34
+#3187
+duelist brigandine~
+a duelist brigandine~
+A duelist brigandine is polished and ready for the ring.~
+9 0 8388624 7
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 8
+A
+19 7
+L
+18
+#3188
+ironstep vambraces~
+ironstep vambraces~
+Ironstep vambraces are lined in red leather.~
+9 0 8388624 7
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 9
+A
+19 8
+L
+22
+#3189
+raider scalecoat~
+a raider scalecoat~
+A raider scalecoat is hung beside a rack of training blades.~
+9 0 8388624 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 11
+A
+19 9
+L
+26
+#3190
+vanguard greaves~
+vanguard greaves~
+Vanguard greaves stand in matched pairs near the forge.~
+9 0 8388624 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 12
+A
+19 10
+L
+30
+#3191
+warbrand cuirass~
+a warbrand cuirass~
+A warbrand cuirass bears nicks from demonstration bouts.~
+9 0 8388624 9
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 14
+A
+19 12
+L
+36
+#3192
+fieldmarshal gorget~
+a fieldmarshal gorget~
+A fieldmarshal gorget rests atop a folded banner.~
+9 0 8388624 9
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 15
+A
+19 13
+L
+40
+#3193
+bastion wallplate~
+a bastion wallplate~
+A bastion wallplate is mounted on an oak armor stand.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 9
+A
+19 9
+L
+20
+#3194
+citadel pauldrons~
+citadel pauldrons~
+Citadel pauldrons gleam under lamplight.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 10
+A
+19 10
+L
+24
+#3195
+gatewarden shield~
+a gatewarden shield~
+A gatewarden shield leans against stacked ingots.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 12
+A
+19 11
+L
+30
+#3196
+ironbulwark helm~
+an ironbulwark helm~
+An ironbulwark helm crowns a suit of demonstration plate.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 14
+A
+19 12
+L
+36
+#3197
+towerguard harness~
+a towerguard harness~
+A towerguard harness hangs from a reinforced gantry.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 16
+A
+19 14
+L
+44
+#3198
+adamant bulwark~
+an adamant bulwark~
+An adamant bulwark dominates the rear of the showroom.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 18
+A
+19 15
+L
+50
+#3251
+initiate moonthread hood~
+an initiate moonthread hood~
+An initiate moonthread hood is folded beside silver needles.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 3
+A
+13 2
+L
+4
+#3252
+apprentice rune-wrap~
+an apprentice rune-wrap~
+An apprentice rune-wrap hangs from a lacquered stand.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 4
+A
+13 3
+L
+8
+#3253
+whisperweave mantle~
+a whisperweave mantle~
+A whisperweave mantle shivers with faint ward-light.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 5
+A
+13 4
+L
+12
+#3254
+glyphstitched cuffs~
+glyphstitched cuffs~
+Glyphstitched cuffs rest in a cedar display tray.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 6
+A
+13 5
+L
+16
+#3255
+amberlace sash~
+an amberlace sash~
+An amberlace sash glows gently with preserved sigils.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 7
+A
+13 6
+L
+20
+#3256
+moonthread shoulders~
+moonthread shoulders~
+Moonthread shoulders are pinned with tiny astral charms.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 8
+A
+13 6
+L
+24
+#3257
+silversigil robe~
+a silversigil robe~
+A silversigil robe drapes over a polished mannequin.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 9
+A
+13 7
+L
+28
+#3258
+starbound slippers~
+starbound slippers~
+Starbound slippers sit inside an etched brass circle.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 10
+A
+13 8
+L
+30
+#3259
+veilguard vestment~
+a veilguard vestment~
+A veilguard vestment is stitched with mirrored runes.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 11
+A
+13 9
+L
+32
+#3260
+astral knot girdle~
+an astral knot girdle~
+An astral knot girdle hangs above coiled spell-cord.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 12
+A
+13 10
+L
+34
+#3261
+spellglass vambraces~
+spellglass vambraces~
+Spellglass vambraces gleam beside a stack of pattern books.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 13
+A
+13 10
+L
+36
+#3262
+highweave tabard~
+a highweave tabard~
+A highweave tabard bears layered moonthread embroidery.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 14
+A
+13 11
+L
+38
+#3263
+sigilward cloak~
+a sigilward cloak~
+A sigilward cloak rustles without any breeze.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 15
+A
+13 12
+L
+40
+#3264
+archon moonmail~
+archon moonmail~
+Archon moonmail is layered from rune-silk and soft steel links.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 16
+A
+13 13
+L
+44
+#3265
+oracle threadplate~
+oracle threadplate~
+Oracle threadplate hangs under a ring of hovering motes.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 17
+A
+13 14
+L
+48
+#3266
+eclipsed aegis robe~
+an eclipsed aegis robe~
+An eclipsed aegis robe hums with disciplined arcane wards.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 18
+A
+13 15
+L
+50
 #0
 #SHOPS
 3100 0 0 0 0 0 110 90 6 23
@@ -6541,6 +7017,8 @@ L
 3154 5 9 0 0 0 135 60 0 23
 3155 2 3 4 0 0 120 70 0 23
 3156 5 9 2 0 0 125 65 0 23
+3157 9 0 0 0 0 130 65 0 23
+3250 9 0 0 0 0 125 70 0 23
 0
 #RESETS
 M 0 3011 1 3110       Gertrude the executioner
@@ -7008,6 +7486,44 @@ M 0 3156 1 3128       The quest broker
 G 0 3178 100 
 G 0 3179 100 
 G 0 3180 100 
+M 0 3157 1 3122       The Bulwark armorer
+G 0 3181 100 
+G 0 3182 100 
+G 0 3183 100 
+G 0 3184 100 
+G 0 3185 100 
+G 0 3186 100 
+G 0 3187 100 
+G 0 3188 100 
+G 0 3189 100 
+G 0 3190 100 
+G 0 3191 100 
+G 0 3192 100 
+G 0 3193 100 
+G 0 3194 100 
+G 0 3195 100 
+G 0 3196 100 
+G 0 3197 100 
+G 0 3198 100 
+
+
+M 0 3250 1 3123       The Moonthread arcanoweaver
+G 0 3251 100 
+G 0 3252 100 
+G 0 3253 100 
+G 0 3254 100 
+G 0 3255 100 
+G 0 3256 100 
+G 0 3257 100 
+G 0 3258 100 
+G 0 3259 100 
+G 0 3260 100 
+G 0 3261 100 
+G 0 3262 100 
+G 0 3263 100 
+G 0 3264 100 
+G 0 3265 100 
+G 0 3266 100 
 
 S
 #SPECIALS
