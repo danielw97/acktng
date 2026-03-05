@@ -4755,18 +4755,9 @@ L 0 0 0 0 0 0 0 0 0
 baker~
 the baker~
 The baker looks at you calmly, wiping flour from his face with one hand.
-
 ~
 A fat, nice looking baker. But you can see that he has many scars on his
-
-body.
-
-~
-9437187 8320 900 S
-95 1
-0 -10 0 0
-! 0 0 0 7 0 0 0
-~
+body.~
 1 0 900 S
 46 1
 0 0 0 0
@@ -4791,68 +4782,16 @@ arcanist emberglass~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3013
-temp~
-~
-This is a test
-
-.This is another
-
-.~
-~
-1 0 0 S
-11 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
 #3099
 max teller~
 Max~
 Max the bank teller stands here, ready to take your money.
-
-@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
-
-~
+@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
+~
 He looks greasy, and not very trustworthy.  Go figure.
-
-~
+~
 9469963 128 0 S
 94 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3016
-collector~
-@@WA @@lS@@do@@eE@@W @@eTax Collector@@N~
-@@WA @@lS@@do@@eE Tax Collector@@W wanders about looking for poeple who
-
-haven't filed their taxes.@@N
-
-~
-~
-1090846721 1591528 0 S
-133 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 128 0 0 0 0 16
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3095
-warhorse horse~
-@@WA Warhorse@@N~
-@@WA Warhorse snorts at you!@@N
-
-~
-~
-134217985 0 0 S
-34 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
