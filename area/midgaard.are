@@ -17,199 +17,952 @@ T You can teleport into here
 B Currently building area.
 M No bad room spells allowed.
 #ROOMS
-#3055
-Entering the @@eSyringe@@N~
-@@NWoW!!! That was...different.  You are very disoriented..suddenly, a crazed
-man with unkempt hair and the smell of cheap wine on his breath appears, and
-shouts: "Oh my, another victim to experiment on!!!  MUAHHAAAAA!!" He waves his
-hands and mutters loudly, and suddenly, you begin to shrink!!! Smaller and
-smaller you become, until you are smaller than the dust particles around you..
-
-It seems the only way to go is DOWN.
-~
-12 1
+#3001
+The Temple of Midgaard~
+White-veined marble columns ring the Temple of Midgaard, their bases worn smooth by generations of pilgrims and adventurers seeking blessing before the road. Incense curls through stained light while votive candles burn in disciplined rows around a central altar of sunstone. A broad stair ascends to the mud school for novices, and avenues radiate outward into a rebuilt city planned with deliberate symmetry.~
+0 1
+D1
+0 -1 3002
+0 -1 3015
+D4
+0 -1 3700
+#3002
+Ledger Exchange~
+A polished granite counter runs the length of this narrow hall, where clerks tally deposits under watchful brass lamps. Iron grates, counting slates, and locked chests make it clear this is Midgaard's trusted banking exchange.~
+0 1
+0 -1 3003
+D2
+0 -1 3016
+D3
+0 -1 3001
+#3003
+The Iron Skillet Bakery~
+Wood-fired ovens radiate comforting heat while racks of crusty loaves cool beside baskets of sweet rolls. Flour hangs in the air like pale mist and the scent of buttered crust draws a steady line of customers.~
+0 1
+0 -1 3004
+D2
+~
+0 -1 3017
+~
+0 -1 3002
+#3004
+Armorer's Hall~
+Breastplates and shields gleam from oak stands, each tagged with steel stamps naming maker and fit. Rivet hammers ring from a back forge where apprentices repair dented mail for returning adventurers.~
+0 1
+~
+~
+0 -1 3005
+0 -1 3018
+~
+0 -1 3003
+S
+#3005
+The Copperblade Forge~
+Weapon racks line these soot-dark walls: spears bundled by length, blades oiled and wrapped, and hafts marked for balance. The sharp scent of quenched iron and leather grip wrap lingers in every breath.~
+0 1
+0 -1 3006
+D2
+~
+~
+0 -1 3019
+0 -1 3004
+#3006
+Rivergate Inn Entrance~
+Travel-stained patrons stamp mud from their boots beneath a carved signboard of crossed mugs. Warm laughter and the smell of stew drift from the common room deeper inside.~
+0 1
+D1
+0 -1 3007
+D2
+~
+0 -1 3020
+0 -1 3005
+#3007
+Rivergate Taproom~
+Long tables, clean tankards, and a polished bar make this tavern a favored stop for guards and teamsters alike. A chalkboard lists house specials while a barkeep keeps one eye on every doorway.~
+0 1
+0 -1 3008
+D2
+~
+~
+0 -1 3021
+0 -1 3006
+#3008
+Petkeeper's Arcade~
+Colorful cages, training leads, and carved feeding bowls fill this tidy storefront. Happy yips, chirps, and the occasional hiss rise above the hum of bargaining.~
+0 1
+0 -1 3009
+D2
+~
+~
+0 -1 3022
+0 -1 3007
+#3009
+Sunstone Provisioners~
+Shelves of preserved meat, flour sacks, and spice jars climb to the rafters in orderly rows. A service bell and stout scales sit on the counter for quick trade with passing adventurers.~
+0 1
+0 -1 3010
+0 -1 3023
+D3
+~
+~
+0 -1 3008
+#3010
+Market Grocer~
+Fresh produce, smoked fish, and imported tea bricks are sorted by district and season. Couriers move in and out with baskets tagged for inns, guild halls, and private homes.~
+D1
+~
+0 -1 3011
+D2
+~
+~
+0 -1 3024
+0 -1 3009
+#3011
+Guild Arms Counter~
+Training blades and practical field weapons hang behind a reinforced counter where craftsmen discuss edge geometry with pride. Adventurers test grips at a worn rail before making a purchase.~
+~
+0 -1 3012
+D2
+~
+~
+0 -1 3025
+~
+~
+0 -1 3010
+#3012
+Main Cross Avenue~
+A broad paved crossing channels traffic from temple quarter to artisan blocks, marked by painted wayfinders and public notices.~
+0 1
+0 -1 3013
+0 -1 3026
+0 -1 3011
+#3013
+Lantern Market~
+Vendors call from under striped awnings, offering maps, rope, lamp oil, and travel kits to those bound for distant roads.~
+D1
+~
+0 -1 3014
+D2
+0 -1 3027
+D3
+~
+~
+0 -1 3012
+#3014
+Justice Square~
+Stone stairs descend through an iron grate into Midgaard's Public Dungeon while magistrate notices flutter on a nearby bulletin wall. Guard patrols maintain order here at all hours.~
+D2
+0 -1 3028
+0 -1 3013
 D5
 ~
 ~
-0 -1 5600
-S
-#3039
-The Mad Scientist's Lab~
-@@NThe scent of chemicals, burning fires, and bubbling fluids overwhelm you as
-you enter. Scattered about on various tables and workbenches are wierd glass
-flasks, tubes, and unusual pieces of equipment, with what seems to be some
-sort of strange experiments being performed..all with no apparent rhyme or
-reason. Who ever works here is absent, but you are drawn towards the center
-workbench, where a large @@eSyringe@@N lies next to a covered glass dish
-filled with a dark @@Rfluid@@N--maybe it's blood!
-~
-12 1
+0 -1 9551
+#3015
+West Wall Walk~
+The city wall rises in stern lines of stone, banners snapping from iron poles above. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+D0
+~
+~
+0 -1 3001
+0 -1 3016
+0 -1 3029
+#3016
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3002
+0 -1 3017
+0 -1 3030
+D3
+~
+~
+0 -1 3015
+#3017
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3003
+D1
+0 -1 3018
 D2
+~
+0 -1 3031
+0 -1 3016
+#3018
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3004
+0 -1 3019
+D2
+~
+~
+0 -1 3032
+0 -1 3017
+#3019
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3005
+0 -1 3020
+D2
+~
+~
+0 -1 3033
+0 -1 3018
+#3020
+Steel & Plate Outfitters~
+Mannequins dressed in brigandine, chain, and lacquered shields stand in disciplined ranks. A measuring dais helps customers fit armor before they brave the frontier.~
+~
+0 -1 3006
+0 -1 3021
+D2
+~
+~
+0 -1 3034
+D3
+~
+~
+0 -1 3019
+#3021
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+0 -1 3007
+D1
+~
+~
+0 -1 3022
+0 -1 3035
+D3
+~
+~
+0 -1 3020
+#3022
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+0 -1 3008
+D1
+~
+~
+0 -1 3023
+0 -1 3036
+D3
+~
+~
+0 -1 3021
+#3023
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3009
+D1
+~
+~
+0 -1 3024
+D2
+~
+~
+0 -1 3037
+0 -1 3022
+#3024
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3010
+~
+0 -1 3025
+D2
+~
+~
+0 -1 3038
+0 -1 3023
+#3025
+Mourner's Gatehouse~
+This heavy gatehouse smells faintly of incense and wet stone, where funerary processions and grim expeditions are directed below the city. Black iron sigils mark the arch that leads toward the Nightfall depths.~
+0 -1 3011
+0 -1 3026
+0 -1 3039
+D3
 ~
 ~
 0 -1 3024
 D5
 ~
 ~
-0 -1 3055
-E
-syringe~
-Go Down to enter the @@eSyringe@@N!!!~
-S
-#3038
-The Midgaard Post Office~
-This is the Midgaard branch of the Global Post Office.
-From here you may read or write letters to friends
-and enemies alike...
-There is a large SIGN here... perhaps you should look at it?
-~
-17436 11
+0 -1 21000
+#3026
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3012
+0 -1 3027
+0 -1 3040
+D3
+~
+~
+0 -1 3025
+#3027
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3013
+0 -1 3028
+0 -1 3041
+0 -1 3026
+#3028
+East Wall Walk~
+Moss-clung merlons top the outer wall here, where sentries pace with practiced rhythm. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+~
+0 -1 3014
+D2
+~
+~
+0 -1 3042
+D3
+0 -1 3027
+#3029
+West Wall Walk~
+Moss-clung merlons top the outer wall here, where sentries pace with practiced rhythm. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 -1 3015
 D1
 ~
 ~
-0 -1 3005
-E
-sign~
-@@WTo send notes use the following commands:-
- 
-Note to (name)
- 
-  Note subject (subject)
- 
-    Note + (msg) for each subsequent line of text.
-      Note show to see your note
-~
-S
-#3085
-The quiet room~
-This is a room where players can come and sleep with no interuptions. There is
-a sign on the wall.
-~
-25886 11
+0 -1 3030
+0 -1 3043
+#3030
+The Convergence Rotunda~
+At the geometric heart of Midgaard stands a circular rotunda under a brass-domed ceiling, engraved with maps of roads, catacombs, and stranger frontiers. Archways of distinct stone frame each route: ironbound stairs to the Public Dungeon, a soot-dark crypt passage, a rune-cracked vault road toward Kel'Shadra, a spiral stair to the Sepulcher Pasture, and a humming brass hatch into the Microcosm. Every path feels intentional, as if the city planners built this chamber to tame the unknown by naming every threshold.~
+~
+0 -1 3031
+0 -1 9400
+~
+~
+0 -1 9551
+D3
+~
+~
+0 -1 21000
+D4
+~
+0 -1 30175
 D5
 ~
 ~
-0 -1 3054
-E
-sign~
-Sssshh! No talking in this room.
-~
-S
-#3086
-The Power Trivia Room~
-This room is used by the players of the mud, to engage in the totally
-pointless pursuit of trivial knowledge.
-~
-8 11
+0 -1 5600
+#3031
+Scholars' Stair and Pet Lane~
+A carved stair rises toward mud school classrooms while nearby storefronts cater to handlers and trainers. Chalkboards display lesson schedules and pet-care postings.~
+0 -1 3017
+0 -1 3032
+D2
+0 -1 3030
+D3
+0 -1 3030
 D4
 ~
-~
-0 -1 3054
+0 -1 3700
 S
-#3004
-The Undead Shrine to Cyberlich.~
-This horrid place is predominately black.  If you look closely, you see that blood seeps from the walls, pools here and there on the floor.  This is where Cyberlich's devout followers come to worship him, and where they come to hire his minions.~
-18 11
-D1
-~
-~
-0 -1 3002
-S
-#3017
-The Miscellaneous Donation Area~
-You are in the part of the donation area used to hold items other than
-weapons or amror.
-~
-12 11
-D0
-The central donation area.
-~
-~
-0 -1 3021
-S
-#3018
-The Armor Donation Area~
-You are in part of the donation area used to hold armor items. 
-~
-12 11
-D3
-The central donation area.
-~
-~
-0 -1 3021
-S
-#3019
-The Weapons Donation Area~
-You are in part of the donation area used to hold weapons.
-~
-12 11
+#3032
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3018
+0 -1 3033
 D2
-The central donation area.
-~
-~
-0 -1 3021
-S
-#3021
-The Donation Area~
-You are standing in a cross-shaped room.  To the west you can see the Temple.
-To the North, East and South, you see the various donation locations.  These
-are used to house unwanted equipment, donated by players who no longer need
-them.
-~
-12 11
-D0
-You see the Weapon donation area.
-~
-~
+0 -1 3046
+0 -1 3031
+#3033
+Arcane Curio Shop~
+Glass cabinets display scrolls, reagents, and runed trinkets behind silver wire mesh. A crystal pendulum above the counter hums softly when spellcraft is nearby.~
 0 -1 3019
 D1
-You see the Armor donation area.
-~
 ~
-0 -1 3018
+0 -1 3034
+0 -1 3047
+0 -1 3032
+#3034
+Moonring Jewelers~
+Locked cases glitter with rings, amulets, and gemmed clasps arranged by cut and origin. A loupe and jeweler's lamp rest beside a velvet appraisal pad.~
+~
+0 -1 3020
+~
+~
+0 -1 3035
 D2
-You see a room used for various donations.
-~
 ~
-0 -1 3017
-D3
-You see the Temple of Midgaard.
-~
 ~
-0 -1 3001
-S
-#3022
-On the River~
-The river enters from a hole in the eastern city wall.  The hole has been
-blocked by several vertically positioned iron bars set into the wall.
-~
-0 7
+0 -1 3048
 D3
 ~
 ~
-0 -1 3023
+0 -1 3033
 S
-#3023
-On the River~
-You see the warehouse on the northern riverbank.  East of here you see the
-city wall.  The river flows west towards the levee.
-~
-0 7
-D1
+#3035
+Tanners' Row Workshop~
+Soft leather, waxed thread, and brass buckles are stacked in meticulous trays around cutting benches. Finished cloaks and travel harnesses hang from cedar beams overhead.~
+D0
+~
+~
+0 -1 3021
+0 -1 3036
+~
+0 -1 3049
+~
+0 -1 3034
+S
+#3036
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
 ~
 ~
 0 -1 3022
+~
+0 -1 3037
+D2
+~
+0 -1 3050
+~
+~
+0 -1 3035
+S
+#3037
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3023
+D1
+~
+~
+0 -1 3038
+D2
+~
+~
+0 -1 3051
 D3
 ~
 ~
-0 -1 3027
+0 -1 3036
 S
-#3027
-On the River~
-The levee is directly north of here.  The river flows in an east west
-direction.
-~
-4 7
+#3038
+Midgaard Post Office~
+Mail cubbies cover one wall from floor to ceiling, each slot labeled by district, guild, or caravan lane. Ink pots, wax seals, and message tubes make this room the city's communication hub.~
+0 1
+D0
+~
+~
+0 -1 3024
+D1
+~
+~
+0 -1 3039
+D2
+~
+~
+0 -1 3052
+D3
+~
+~
+0 -1 3037
+S
+#3039
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3025
+D1
+~
+~
+0 -1 3040
+D2
+~
+~
+0 -1 3053
+D3
+~
+~
+0 -1 3038
+S
+#3040
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3026
+D1
+~
+~
+0 -1 3041
+D2
+~
+~
+0 -1 3054
+D3
+~
+~
+0 -1 3039
+S
+#3041
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3027
+D1
+~
+~
+0 -1 3042
+D2
+~
+~
+0 -1 3055
+D3
+~
+~
+0 -1 3040
+S
+#3042
+East Wall Walk~
+Murder-holes and arrow slits punctuate the wall, reminding all travelers this city endures by vigilance. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3028
+D2
+~
+~
+0 -1 3056
+D3
+~
+~
+0 -1 3041
+S
+#3043
+Wall Watchtower 3043~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+D0
+~
+~
+0 -1 3029
+D1
+~
+~
+0 -1 3044
+D2
+~
+~
+0 -1 3057
+S
+#3044
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3030
+D1
+~
+~
+0 -1 3045
+D2
+~
+~
+0 -1 3058
+D3
+~
+~
+0 -1 3043
+S
+#3045
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3031
+D1
+~
+~
+0 -1 3046
+D2
+~
+~
+0 -1 3059
+D3
+~
+~
+0 -1 3044
+S
+#3046
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3032
+D1
+~
+~
+0 -1 3047
+D2
+~
+~
+0 -1 3060
+D3
+~
+~
+0 -1 3045
+S
+#3047
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3033
+D1
+~
+~
+0 -1 3048
+D2
+~
+~
+0 -1 3061
+D3
+~
+~
+0 -1 3046
+S
+#3048
+The Grubby Griffin Inn~
+Low beams, mismatched chairs, and stew-kettles give this rough inn a noisy but welcoming character. Mercenaries and laborers trade rumors over strong drink.~
+0 1
+D0
+~
+~
+0 -1 3034
+D1
+~
+~
+0 -1 3049
+D2
+~
+~
+0 -1 3062
+D3
+~
+~
+0 -1 3047
+S
+#3049
+Levee Landing Office~
+Rope coils and tide ledgers crowd this riverfront office where captains lease skiffs and ferries. Through open shutters you hear gulls, ropes creaking, and hulls knocking against pilings.~
+0 1
+D0
+~
+~
+0 -1 3035
+D1
+~
+~
+0 -1 3050
+D2
+~
+~
+0 -1 3063
+D3
+~
+~
+0 -1 3048
+S
+#3050
+Boathouse Drill Deck~
+A timber deck extends over the water for sailor drills, knot practice, and emergency mustering. Oars, life rings, and signal flags are stacked with naval precision.~
+0 1
+D0
+~
+~
+0 -1 3036
+D1
+~
+~
+0 -1 3051
+D2
+~
+~
+0 -1 3064
+D3
+~
+~
+0 -1 3049
+S
+#3051
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3037
+D1
+~
+~
+0 -1 3052
+D2
+~
+~
+0 -1 3065
+D3
+~
+~
+0 -1 3050
+S
+#3052
+Grand Gate of Roads~
+This monumental east-west gate aligns perfectly with Midgaard's central avenue, guiding travelers to Roc Road or the Eastern Desert. Portcullis teeth hang overhead while customs clerks direct caravans through marked lanes.~
+0 1
+D0
+~
+~
+0 -1 3038
+D1
+~
+~
+0 -1 8500
+D2
+~
+~
+0 -1 3066
+D3
+~
+~
+0 -1 3230
+S
+#3053
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3039
+D1
+~
+~
+0 -1 3054
+D2
+~
+~
+0 -1 3067
+D3
+~
+~
+0 -1 3052
+S
+#3054
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3040
+D1
+~
+~
+0 -1 3055
+D2
+~
+~
+0 -1 3068
+D3
+~
+~
+0 -1 3053
+S
+#3055
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3041
+D1
+~
+~
+0 -1 3056
+D2
+~
+~
+0 -1 3069
+D3
+~
+~
+0 -1 3054
+S
+#3056
+Wall Watchtower 3056~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+D0
+~
+~
+0 -1 3042
+D2
+~
+~
+0 -1 3070
+D3
+~
+~
+0 -1 3055
+S
+#3057
+West Wall Walk~
+A high curtain wall of fitted granite blocks the horizon, crenellated and patrolled. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3043
+D1
+~
+~
+0 -1 3058
+D2
+~
+~
+0 -1 3071
+S
+#3058
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3044
+D1
+~
+~
+0 -1 3059
+D2
+~
+~
+0 -1 3072
+D3
+~
+~
+0 -1 3057
+S
+#3059
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3045
+D1
+~
+~
+0 -1 3060
+D2
+~
+~
+0 -1 3073
+D3
+~
+~
+0 -1 3058
+S
+#3060
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3046
+D1
+~
+~
+0 -1 3061
+D2
+~
+~
+0 -1 3074
+D3
+~
+~
+0 -1 3059
+S
+#3061
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3047
+D1
+~
+~
+0 -1 3062
+D2
+~
+~
+0 -1 3075
+D3
+~
+~
+0 -1 3060
+S
+#3062
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3048
+D1
+~
+~
+0 -1 3063
+D2
+~
+~
+0 -1 3076
+D3
+~
+~
+0 -1 3061
+S
+#3063
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
 D0
 ~
 ~
@@ -217,402 +970,1215 @@ D0
 D1
 ~
 ~
-0 -1 3023
-D3
-~
-~
-0 -1 3028
-S
-#3028
-On the River~
-North of here you see the dump.  The river flows from east to west.  The
-riverbanks are too steep to climb.
-~
-0 7
-D1
-~
-~
-0 -1 3027
-D3
-~
-~
-0 -1 3036
-S
-#3036
-On the River~
-North of here you see the miserable buildings of the poor alley.  The
-river flows west towards the bridge.  The riverbanks are too steep to climb.
-~
-0 7
-D1
-~
-~
-0 -1 3028
-D3
-~
-~
-0 -1 3200
-S
-#3200
-Under the Bridge~
-The arch under the bridge is covered by seaweed for one foot above the
-surface of the river.  The water gently flows through an opening in the lower
-part of the city wall.
-~
-0 7
-D1
-~
-~
-0 -1 3036
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  Looks pretty solid.
-~
-S
-#3143
-The Jail~
-You are in a dark and humid jail.  The dark stone walls are hard and cold
-to the touch.  A heavy steel door is to the north.
-~
-8 11
-D0
-You see the heavy steel door.
-~
-door~
-1 3137 3142
-E
-wall walls~
-The walls are marked with lots of scratches.  Some of them spell sentences
-like "JAIL IS BETTER THAN SQL" and "INGRES STRIKES AGAIN".
-~
-S
-#3142
-Captain's Office~
-You are in the Office of the Captain of the Guard.  The Midgaard Coat of
-Arms is hanging on the north wall and a heavy steel door is to the south.
-~
-8 11
-D1
-You see the Cityguard Head Quarters.
-~
-door~
-1 3120 3110
-D2
-You see the heavy steel door.
-~
-door~
-1 3137 3143
-E
-arms~
-Although a bit dusty the Coat of Arms is an excellent piece of work.
-~
-S
-#3141
-End of Penny Lane~
-You are at the end of Penny Lane.  The only exit appears to be south.
-~
-0 1
+0 -1 3064
 D2
 ~
 ~
-0 -1 3140
+0 -1 3077
+D3
+~
+~
+0 -1 3062
 S
-#3140
-Penny Lane~
-You are on Penny Lane.  The narrow road continues north and west.
-~
+#3064
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3141
-D3
-~
-~
-0 -1 3139
-S
-#3139
-Penny Lane~
-You are on Penny Lane.  Emerald Avenue is to the west and Penny Lane
-continues in eastward direction.
-~
-0 1
+0 -1 3050
 D1
 ~
 ~
-0 -1 3140
-D3
-~
-~
-0 -1 3132
-S
-#3138
-The Mayor's Office~
-You are in the not very big office of the Mayor of Midgaard.  A large and
-polished but completely empty desk is standing in front of an armchair that
-looks so comfortable that it most of all resembles a bed with the head end
-raised slightly.
-~
-8 11
-D3
-The waiting room is to the west.
-~
-~
-0 -1 3137
-E
-chair armchair~
-This chair is really a masterpiece.  A chair where one can sit as comfortably
-as in a bed.  All lecture halls should be equipped with these things.
-~
-S
-#3137
-The Waiting Room~
-You are standing in the waiting room at the town hall.  Wooden chairs stand
-along the walls and a long desk is placed in the middle of the room.
-~
-8 11
-D1
-It looks like some kind of office.
-~
-~
-0 -1 3138
-D3
-The exit west leads to Emerald Avenue.
-~
-~
-0 -1 3117
-S
-#3136
-Park Road~
-You are at a bend on Park Road.  To the south the road goes on and to the
-west is the Road Crossing.
-~
-0 1
+0 -1 3065
 D2
 ~
 ~
-0 -1 3122
+0 -1 3078
 D3
 ~
 ~
-0 -1 3120
+0 -1 3063
 S
-#3135
-Park Road~
-You are at a bend on Park Road.  To the north the road goes on and to the
-east is the Road Crossing.  To the south, the ancient cliffs rise from deep
-under the ground, forming a wall.
-~
+#3065
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3118
+0 -1 3051
 D1
 ~
 ~
-0 -1 3120
-S
-#3134
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  To the west the road goes on
-and to the north is the Road Crossing.
-~
-0 1
-D0
+0 -1 3066
+D2
 ~
 ~
-0 -1 3120
+0 -1 3079
 D3
 ~
 ~
-0 -1 3121
+0 -1 3064
 S
-#3133
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  To the east the road goes on
-and to the south is the Road Crossing.
-~
-0 1
-D1
-~
-~
-0 -1 3119
-D2
-~
-~
-0 -1 3120
-S
-#3132
-Emerald Avenue~
-You are standing on the north end of Emerald Avenue.  To the north is the
-promenade and to the east is the small street Penny Lane.
-~
+#3066
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3103
+0 -1 3052
 D1
 ~
 ~
-0 -1 3139
+0 -1 3067
 D2
 ~
 ~
-0 -1 3117
+0 -1 3080
+D3
+~
+~
+0 -1 3065
 S
-#3131
-Park Road~
-You are at Park Road which continues north and south.
-~
+#3067
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
+~
+~
+0 -1 3053
+D1
+~
+~
+0 -1 3068
+D2
+~
+~
+0 -1 3081
+D3
+~
+~
+0 -1 3066
+S
+#3068
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3054
+D1
+~
+~
+0 -1 3069
+D2
+~
+~
+0 -1 3082
+D3
+~
+~
+0 -1 3067
+S
+#3069
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3055
+D1
+~
+~
+0 -1 3070
+D2
+~
+~
+0 -1 3083
+D3
+~
+~
+0 -1 3068
+S
+#3070
+East Wall Walk~
+The city wall rises in stern lines of stone, banners snapping from iron poles above. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3056
+D2
+~
+~
+0 -1 3084
+D3
+~
+~
+0 -1 3069
+S
+#3071
+West Wall Walk~
+The city wall rises in stern lines of stone, banners snapping from iron poles above. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3057
+D1
+~
+~
+0 -1 3072
+D2
+~
+~
+0 -1 3085
+S
+#3072
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3058
+D1
+~
+~
+0 -1 3073
+D2
+~
+~
+0 -1 3086
+D3
+~
+~
+0 -1 3071
+S
+#3073
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3059
+D1
+~
+~
+0 -1 3074
+D2
+~
+~
+0 -1 3087
+D3
+~
+~
+0 -1 3072
+S
+#3074
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3060
+D1
+~
+~
+0 -1 3075
+D2
+~
+~
+0 -1 3088
+D3
+~
+~
+0 -1 3073
+S
+#3075
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3061
+D1
+~
+~
+0 -1 3076
+D2
+~
+~
+0 -1 3089
+D3
+~
+~
+0 -1 3074
+S
+#3076
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3062
+D1
+~
+~
+0 -1 3077
+D2
+~
+~
+0 -1 3090
+D3
+~
+~
+0 -1 3075
+S
+#3077
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3063
+D1
+~
+~
+0 -1 3078
+D2
+~
+~
+0 -1 3091
+D3
+~
+~
+0 -1 3076
+S
+#3078
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3064
+D1
+~
+~
+0 -1 3079
+D2
+~
+~
+0 -1 3092
+D3
+~
+~
+0 -1 3077
+S
+#3079
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3065
+D1
+~
+~
+0 -1 3080
+D2
+~
+~
+0 -1 3093
+D3
+~
+~
+0 -1 3078
+S
+#3080
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3066
+D1
+~
+~
+0 -1 3081
+D2
+~
+~
+0 -1 3094
+D3
+~
+~
+0 -1 3079
+S
+#3081
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3067
+D1
+~
+~
+0 -1 3082
+D2
+~
+~
+0 -1 3095
+D3
+~
+~
+0 -1 3080
+S
+#3082
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3068
+D1
+~
+~
+0 -1 3083
+D2
+~
+~
+0 -1 3096
+D3
+~
+~
+0 -1 3081
+S
+#3083
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3069
+D1
+~
+~
+0 -1 3084
+D2
+~
+~
+0 -1 3097
+D3
+~
+~
+0 -1 3082
+S
+#3084
+East Wall Walk~
+Moss-clung merlons top the outer wall here, where sentries pace with practiced rhythm. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3070
+D2
+~
+~
+0 -1 3098
+D3
+~
+~
+0 -1 3083
+S
+#3085
+Wall Watchtower 3085~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+D0
+~
+~
+0 -1 3071
+D1
+~
+~
+0 -1 3086
+D2
+~
+~
+0 -1 3099
+S
+#3086
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3072
+D1
+~
+~
+0 -1 3087
+D2
+~
+~
+0 -1 3100
+D3
+~
+~
+0 -1 3085
+S
+#3087
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3073
+D1
+~
+~
+0 -1 3088
+D2
 ~
 ~
 0 -1 3101
+D3
+~
+~
+0 -1 3086
+S
+#3088
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3074
+D1
+~
+~
+0 -1 3089
 D2
 ~
 ~
-0 -1 3111
+0 -1 3102
+D3
+~
+~
+0 -1 3087
 S
-#3130
-On the Concourse~
-You are at the southeast corner of the city wall.  The Concourse leads
-both north and west.  A small path leads off the concourse to the South, and
-is partly obscured by the overgrowth.
-~
+#3089
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
+~
+~
+0 -1 3075
+D1
+~
+~
+0 -1 3090
+D2
+~
+~
+0 -1 3103
+D3
+~
+~
+0 -1 3088
+S
+#3090
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3076
+D1
+~
+~
+0 -1 3091
+D2
 ~
 ~
 0 -1 3104
 D3
 ~
 ~
-0 -1 3129
+0 -1 3089
 S
-#3129
-On the Concourse~
-The Concourse continues both east and west.  Park Road is north of here.
-~
+#3091
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3126
+0 -1 3077
 D1
 ~
 ~
-0 -1 3130
+0 -1 3092
+D2
+~
+~
+0 -1 3105
 D3
 ~
 ~
-0 -1 3128
+0 -1 3090
 S
-#3128
-On the Concourse~
-The Concourse continues both east and west.  Emerald Avenue is north of
-here.
-~
+#3092
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3125
+0 -1 3078
 D1
 ~
 ~
-0 -1 3129
+0 -1 3093
+D2
+~
+~
+0 -1 3106
 D3
 ~
 ~
-0 -1 3127
+0 -1 3091
 S
-#3127
-On the Concourse~
-You are at the southwest corner of the city wall.  The Concourse leads
-both north and east.
-~
+#3093
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
+~
+~
+0 -1 3079
+D1
+~
+~
+0 -1 3094
+D2
+~
+~
+0 -1 3107
+D3
+~
+~
+0 -1 3092
+S
+#3094
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3080
+D1
+~
+~
+0 -1 3095
+D2
+~
+~
+0 -1 3108
+D3
+~
+~
+0 -1 3093
+S
+#3095
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3081
+D1
+~
+~
+0 -1 3096
+D2
+~
+~
+0 -1 3109
+D3
+~
+~
+0 -1 3094
+S
+#3096
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3082
+D1
+~
+~
+0 -1 3097
+D2
+~
+~
+0 -1 3110
+D3
+~
+~
+0 -1 3095
+S
+#3097
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3083
+D1
+~
+~
+0 -1 3098
+D2
+~
+~
+0 -1 3111
+D3
+~
+~
+0 -1 3096
+S
+#3098
+Wall Watchtower 3098~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+D0
+~
+~
+0 -1 3084
+D2
+~
+~
+0 -1 3112
+D3
+~
+~
+0 -1 3097
+S
+#3099
+Westgate Bastion~
+Twin towers flank this massive gatehouse where chains, gears, and oak doors are maintained by veteran wardens. Roc Road stretches west beyond the lifted portcullis. Within the walls, disciplined avenues continue toward Midgaard's central temple and markets.~
+0 1
+D0
+~
+~
+0 -1 3085
+D1
 ~
 ~
 0 -1 3100
-D1
-~
-~
-0 -1 3128
-S
-#3126
-Park Road~
-You are on Park Road which continues north.  The Concourse is south of here.
-~
-0 1
-D0
-~
-~
-0 -1 3122
 D2
 ~
 ~
-0 -1 3129
-S
-#3125
-Emerald Avenue~
-You are on Emerald Avenue which continues north.
-The Concourse is south of here.
-~
-0 1
-D0
-~
-~
-0 -1 3121
-D2
-~
-~
-0 -1 3128
-S
-#3124
-End of Elm Street~
-You are at the end of Elm Street.  An old elm tree grows here.
-~
-0 1
+0 -1 3113
 D3
 ~
 ~
-0 -1 3123
-E
-elm tree~
-The fresh young leaves of the elm tree wave gently in the wind.
-~
+0 -1 3230
 S
-#3123
-Elm Street~
-You are on Elm street.  Park Road is to the west and Elm Street continues
-in eastward direction.
-~
+#3100
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
+D0
+~
+~
+0 -1 3086
 D1
+~
+~
+0 -1 3101
+D2
+~
+~
+0 -1 3114
+D3
+~
+~
+0 -1 3099
+S
+#3101
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3087
+D1
+~
+~
+0 -1 3102
+D2
+~
+~
+0 -1 3115
+D3
+~
+~
+0 -1 3100
+S
+#3102
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3088
+D1
+~
+~
+0 -1 3103
+D2
+~
+~
+0 -1 3116
+D3
+~
+~
+0 -1 3101
+S
+#3103
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3089
+D1
+~
+~
+0 -1 3104
+D2
+~
+~
+0 -1 3117
+D3
+~
+~
+0 -1 3102
+S
+#3104
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3090
+D1
+~
+~
+0 -1 3105
+D2
+~
+~
+0 -1 3118
+D3
+~
+#3105
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3091
+D1
+~
+~
+0 -1 3106
+D2
+~
+~
+0 -1 3119
+D3
+~
+~
+0 -1 3104
+S
+#3106
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3092
+D1
+~
+~
+0 -1 3107
+D2
+~
+~
+0 -1 3120
+D3
+~
+~
+0 -1 3105
+S
+#3107
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3093
+D1
+~
+~
+0 -1 3108
+D2
+~
+~
+0 -1 3121
+D3
+~
+~
+0 -1 3106
+S
+#3108
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3094
+D1
+~
+~
+0 -1 3109
+D2
+~
+~
+0 -1 3122
+D3
+~
+~
+0 -1 3107
+S
+#3109
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3095
+D1
+~
+~
+0 -1 3110
+D2
+~
+~
+0 -1 3123
+D3
+~
+~
+0 -1 3108
+S
+#3110
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3096
+D1
+~
+~
+0 -1 3111
+D2
 ~
 ~
 0 -1 3124
 D3
 ~
 ~
-0 -1 3122
+0 -1 3109
 S
-#3122
-Park Road~
-You are on Park Road which leads south and north.  Elm Street is east of
-here.
-~
+#3111
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3136
+0 -1 3097
+D1
+~
+~
+0 -1 3112
+D2
+~
+~
+0 -1 3125
+D3
+~
+~
+0 -1 3110
+S
+#3112
+Eastgate Bastion~
+Twin towers flank this massive gatehouse where chains, gears, and oak doors are maintained by veteran wardens. The caravan way to the Eastern Desert begins beyond a sun-burnished gate. Within the walls, disciplined avenues continue toward Midgaard's central temple and markets.~
+0 1
+D0
+~
+~
+0 -1 3098
+D1
+~
+~
+0 -1 8500
+D2
+~
+~
+0 -1 3126
+D3
+~
+~
+0 -1 3111
+S
+#3113
+West Wall Walk~
+A high curtain wall of fitted granite blocks the horizon, crenellated and patrolled. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3099
+D1
+~
+~
+0 -1 3114
+D2
+~
+~
+0 -1 3127
+S
+#3114
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3100
+D1
+~
+~
+0 -1 3115
+D2
+~
+~
+0 -1 3128
+D3
+~
+~
+0 -1 3113
+S
+#3115
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3101
+D1
+~
+~
+0 -1 3116
+D2
+~
+~
+0 -1 3129
+D3
+~
+~
+0 -1 3114
+S
+#3116
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3102
+D1
+~
+~
+0 -1 3117
+D2
+~
+~
+0 -1 3130
+D3
+~
+~
+0 -1 3115
+S
+#3117
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3103
+D1
+~
+~
+0 -1 3118
+D2
+~
+~
+0 -1 3131
+D3
+~
+~
+0 -1 3116
+S
+#3118
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3104
+D1
+~
+~
+0 -1 3119
+D2
+~
+~
+0 -1 3132
+D3
+~
+~
+0 -1 3117
+S
+#3119
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3105
+D1
+~
+~
+0 -1 3120
+D2
+~
+~
+0 -1 3133
+D3
+~
+~
+0 -1 3118
+S
+#3120
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3106
+D1
+~
+~
+0 -1 3121
+D2
+~
+~
+0 -1 3134
+D3
+~
+~
+0 -1 3119
+S
+#3121
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3107
+D1
+~
+~
+0 -1 3122
+D2
+~
+~
+0 -1 3135
+D3
+~
+~
+0 -1 3120
+S
+#3122
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3108
 D1
 ~
 ~
@@ -620,14 +2186,222 @@ D1
 D2
 ~
 ~
-0 -1 3126
+0 -1 3136
+D3
+~
+~
+0 -1 3121
 S
-#3121
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  The road leads south and
-east.
-~
+#3123
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
+D0
+~
+~
+0 -1 3109
+D1
+~
+~
+0 -1 3124
+D2
+~
+~
+0 -1 3137
+D3
+~
+~
+0 -1 3122
+S
+#3124
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3110
+D1
+~
+~
+0 -1 3125
+D2
+~
+~
+0 -1 3138
+D3
+~
+~
+0 -1 3123
+S
+#3125
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3111
+D1
+~
+~
+0 -1 3126
+D2
+~
+~
+0 -1 3139
+D3
+~
+~
+0 -1 3124
+S
+#3126
+East Wall Walk~
+The city wall rises in stern lines of stone, banners snapping from iron poles above. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3112
+D2
+~
+~
+0 -1 3140
+D3
+~
+~
+0 -1 3125
+S
+#3127
+Wall Watchtower 3127~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+D0
+~
+~
+0 -1 3113
+D1
+~
+~
+0 -1 3128
+D2
+~
+~
+0 -1 3141
+S
+#3128
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3114
+D1
+~
+~
+0 -1 3129
+D2
+~
+~
+0 -1 3142
+D3
+~
+~
+0 -1 3127
+S
+#3129
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3115
+D1
+~
+~
+0 -1 3130
+D2
+~
+~
+0 -1 3143
+D3
+~
+~
+0 -1 3128
+S
+#3130
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3116
+D1
+~
+~
+0 -1 3131
+D2
+~
+~
+0 -1 3144
+D3
+~
+~
+0 -1 3129
+S
+#3131
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3117
+D1
+~
+~
+0 -1 3132
+D2
+~
+~
+0 -1 3145
+D3
+~
+~
+0 -1 3130
+S
+#3132
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3118
+D1
+~
+~
+0 -1 3133
+D2
+~
+~
+0 -1 3146
+D3
+~
+~
+0 -1 3131
+S
+#3133
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3119
 D1
 ~
 ~
@@ -635,18 +2409,41 @@ D1
 D2
 ~
 ~
-0 -1 3125
+0 -1 3147
+D3
+~
+~
+0 -1 3132
 S
-#3120
-Road Crossing~
-You are in the middle of the road cross.  Roads lead in all directions.
-A road sign is here.
-~
+#3134
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
+0 -1 3120
+D1
+~
+~
+0 -1 3135
+D2
+~
+~
+0 -1 3148
+D3
+~
+~
 0 -1 3133
+S
+#3135
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3121
 D1
 ~
 ~
@@ -654,60 +2451,20 @@ D1
 D2
 ~
 ~
+0 -1 3149
+D3
+~
+~
 0 -1 3134
-D3
-~
-~
-0 -1 3135
-E
-sign~
-The sign points in all directions:
-
-   North - Emerald Avenue.
-   East  - Park Road.
-   South - Emerald Avenue.
-   West  - Park Road.
-
-~
 S
-#3119
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  The road leads north and west.
-~
+#3136
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3117
-D3
-~
-~
-0 -1 3133
-S
-#3118
-Park Road~
-You are on Park Road which leads north and south.
-~
-0 1
-D0
-~
-~
-0 -1 3111
-D2
-~
-~
-0 -1 3135
-S
-#3117
-Emerald Avenue~
-You are at Emerald Avenue which continues north and south.  To the west is
-the park entrance and to the east is the not very big Town Hall of Midgaard.
-~
-0 1
-D0
-~
-~
-0 -1 3132
+0 -1 3122
 D1
 ~
 ~
@@ -715,811 +2472,1208 @@ D1
 D2
 ~
 ~
-0 -1 3119
+0 -1 3150
 D3
 ~
 ~
-0 -1 3116
+0 -1 3135
 S
-#3116
-Eastern Park Entrance~
-You are standing at the eastern end of the park.  A small path leads west
-into the park.  Going east through the entrance you will reach Emerald
-Avenue.
-~
-4 1
-D1
-~
-~
-0 -1 3117
-D3
-~
-~
-0 -1 3115
-S
-#3115
-A path in the park~
-You are in the park.  The paths lead north and east.  Eastwards is the
-park entrance and to the west you see a small pond.
-~
+#3137
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3109
+0 -1 3123
 D1
 ~
 ~
-0 -1 3116
+0 -1 3138
+D2
+~
+~
+0 -1 3151
 D3
 ~
 ~
-0 -1 3114
+0 -1 3136
 S
-#3114
-The Pond~
-You are swimming around in the pond, feeling rather stupid.  You can get
-back on the path from the eastern and western end of the pond.
-~
-0 6
-D1
-~
-~
-0 -1 3115
-D3
-~
-~
-0 -1 3113
-S
-#3113
-A path in the park~
-You are in the park.  The paths lead north and west.  Westwards is the
-park entrance and to the east you see a small pond.
-~
+#3138
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3107
-D1
-You see the pond.
-~
-~
-0 -1 3114
-D3
-You see the western park entrance.
-~
-~
-0 -1 3112
-S
-#3112
-Western Park Entrance~
-You are standing at the western end of the park.  A small path leads east
-into the park and going west through the entrance you will reach Park Road.
-~
-4 1
+0 -1 3124
 D1
 ~
 ~
-0 -1 3113
+0 -1 3139
+D2
+~
+~
+0 -1 3152
 D3
 ~
 ~
-0 -1 3111
+0 -1 3137
 S
-#3111
-Park Road~
-The road continues north and south.  A building is just west of here, you
-notice a sign on the door.  The park entrance is to the east.
-~
+#3139
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
 0 1
 D0
 ~
 ~
-0 -1 3131
+0 -1 3125
 D1
-You see the park entrance.
-~
 ~
-0 -1 3112
+~
+0 -1 3140
 D2
 ~
 ~
-0 -1 3118
-D3
-You see the cityguard head quarters.
-~
-door~
-1 -1 3110
-E
-building door sign~
-The sign on the door says:-
-
-		 Cityguard Head Quarters
-~
-S
-#3110
-Cityguard Head Quarters~
-You are inside a tidy office.  A big desk made from dark wood is standing
-in the centre of the room.
-~
-8 11
-D1
-You see Park Road.
-~
-door~
-1 -1 3111
-D3
-You see a sign saying 'KEEP OUT'.
-~
-door~
-1 3120 3142
-S
-#3109
-Small path in the park~
-You are on a small path running through the park.  It continues west and
-south and just north of here you see the southern wall of Park Cafe.
-~
-0 1
-D2
-~
-~
-0 -1 3115
+0 -1 3153
 D3
 ~
 ~
-0 -1 3108
+0 -1 3138
 S
-#3108
-Small path in the park~
-You are standing on a small path inside the park.  The park entrance is
-just north of here, and Park Cafe is just east of the entrance.  The path
-leads further east and west.
-~
+#3140
+Wall Watchtower 3140~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
 0 1
 D0
-You see the northern park entrance.
-~
-~
-0 -1 3105
-D1
 ~
 ~
-0 -1 3109
-D3
-~
-~
-0 -1 3107
-S
-#3107
-Small path through the park~
-You are walking along a small path through the park.  The path continues
-south and east.
-~
-0 1
-D1
-~
-~
-0 -1 3108
+0 -1 3126
 D2
 ~
 ~
-0 -1 3113
-S
-#3106
-Park Cafe~
-You are inside Park Cafe, a very well lighted, cosy place. The cafe
-is built from large logs. Through the windows in the northern wall you
-see the river, and through the southern window you see many vigorous
-colorful plants.
-~
-8 11
+0 -1 3154
 D3
-You see the park entrance.
-~
 ~
-0 -1 3105
+~
+0 -1 3139
 S
-#3105
-Park Entrance~
-You are standing just inside the small park of Midgaard.  To the north is
-the promenade and a small path leads south into the park.  To your east is
-the famous Park Cafe.
-~
-4 1
-D0
-You see the promenade.
-~
-~
-0 -1 3102
-D1
-You see Park Cafe.
-~
-~
-0 -1 3106
-D2
-You see the park.
-~
-~
-0 -1 3108
-S
-#3104
-Northeast end of Concourse~
-You are at the Concourse.  The city wall is just east and a small
-promenade goes west.  Looking across the river you see a building that
-resembles a warehouse.  The Concourse continues south along the city wall.
-~
-0 1
-D2
-The Concourse continues south.
-~
-~
-0 -1 3130
-D3
-You see the promenade.
-~
-~
-0 -1 3103
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#3103
-Promenade~
-The river gently flows west just north of here.  The promenade continues
-both east and west.  A small path leads south.  Looking across the river you
-see the levee.
-~
-0 1
-D1
-You see the Concourse.
-~
-~
-0 -1 3104
-D2
-The small path leads south.
-~
-~
-0 -1 3132
-D3
-You see the promenade.
-~
-~
-0 -1 3102
-S
-#3102
-Promenade~
-The river gently flows west just north of here.  The promenade continues
-both east and west.  South of here you see the entrance to the park, and a
-small building seems to be just west of the entrance.
-~
-0 1
-D1
-You see the promenade.
-~
-~
-0 -1 3103
-D2
-You see the park entrance.
-~
-~
-0 -1 3105
-D3
-You see the promenade.
-~
-~
-0 -1 3101
-S
-#3101
-Promenade~
-The river gently flows west just north of here.  The promenade continues
-further east and to the west you see the city wall.  Park Road leads south
-from here.
-~
-0 1
-D1
-The promenade.
-~
-~
-0 -1 3102
-D2
-Park Road leads south.
-~
-~
-0 -1 3131
-D3
-You see the Concourse.
-~
-~
-0 -1 3100
-S
-#3100
-Northwest end of Concourse~
-You are at the concourse, the city wall is just west.  A small promenade
-goes east, and the bridge is just north of here.  The concourse continues
-south along the city wall.
-~
+#3141
+West Wall Walk~
+Moss-clung merlons top the outer wall here, where sentries pace with practiced rhythm. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
 0 1
 D0
-You see the Bridge.
-~
 ~
-0 -1 3051
-D1
-You see the promenade.
-~
-~
-0 -1 3101
-D2
-The promenade continues far south.
-~
 ~
 0 -1 3127
-S
-#3057
-Entrance to the Valkyrie~
-WOW you can fly!  You are floating in the air above Temple Square of Midgaard.
-
-A ladder leading to the Valkyrie clan room has been left here.
-~
-4 9
-D5
-Back down on the earth where you should be!
-~
+D1
 ~
-0 0 3005
-S
-#3054
-By the Temple Altar~
-You are by the temple altar in the northern end of the Temple of Midgaard.
-A huge altar made from white polished marble is standing in front of you and
-behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
-To the West is the meeting point of the Immortal and mortal worlds and to the East lies the Quest Room.
-~
-132106 11
+~
+0 -1 3142
 D2
-You see the southern end of the temple.
-~
+~
+~
+0 -1 3155
+S
+#3142
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3128
+D1
+~
+~
+0 -1 3143
+D2
+~
+~
+0 -1 3156
+D3
+~
+~
+0 -1 3141
+S
+#3143
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3129
+D1
+~
+~
+0 -1 3144
+D2
+~
+~
+0 -1 3157
+D3
+~
+~
+0 -1 3142
+S
+#3144
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3130
+D1
+~
+~
+0 -1 3145
+D2
+~
+~
+0 -1 3158
+D3
+~
+~
+0 -1 3143
+S
+#3145
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3131
+D1
+~
+~
+0 -1 3146
+D2
+~
+~
+0 -1 3159
+D3
+~
+~
+0 -1 3144
+S
+#3146
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3132
+D1
+~
+~
+0 -1 3147
+D2
+~
+~
+0 -1 3160
+D3
+~
+~
+0 -1 3145
+S
+#3147
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3133
+D1
+~
+~
+0 -1 3148
+D2
+~
+~
+0 -1 3161
+D3
+~
+~
+0 -1 3146
+S
+#3148
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3134
+~
+~
+0 -1 3149
+~
+0 -1 3162
+~
+~
+0 -1 3147
+#3149
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3135
+~
+~
+0 -1 3150
+~
+0 -1 3163
+~
+0 -1 3148
+#3150
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3136
+D1
+~
+~
+0 -1 3151
+D2
+~
+~
+0 -1 3164
+D3
+~
+~
+0 -1 3149
+S
+#3151
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3137
+D1
+~
+~
+0 -1 3152
+D2
+~
+~
+0 -1 3165
+D3
+~
+~
+0 -1 3150
+S
+#3152
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3138
+D1
+~
+~
+0 -1 3153
+D2
+~
+~
+0 -1 3166
+D3
+~
+~
+0 -1 3151
+S
+#3153
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3139
+D1
+~
+~
+0 -1 3154
+D2
+~
+~
+0 -1 3167
+D3
+~
+~
+0 -1 3152
+S
+#3154
+East Wall Walk~
+Murder-holes and arrow slits punctuate the wall, reminding all travelers this city endures by vigilance. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3140
+D2
+~
+~
+0 -1 3168
+D3
+~
+~
+0 -1 3153
+S
+#3155
+West Wall Walk~
+Murder-holes and arrow slits punctuate the wall, reminding all travelers this city endures by vigilance. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3141
+D1
+~
+~
+0 -1 3156
+D2
+~
+~
+0 -1 3169
+S
+#3156
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3142
+D1
+~
+~
+0 -1 3157
+D2
+~
+~
+0 -1 3170
+D3
+~
+~
+0 -1 3155
+S
+#3157
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3143
+D1
+~
+~
+0 -1 3158
+D2
+~
+~
+0 -1 3171
+D3
+~
+~
+0 -1 3156
+S
+#3158
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3144
+D1
+~
+~
+0 -1 3159
+D2
+~
+~
+0 -1 3172
+D3
+~
+~
+0 -1 3157
+S
+#3159
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3145
+D1
+~
+~
+0 -1 3160
+D2
+~
+~
+0 -1 3173
+D3
+~
+~
+0 -1 3158
+S
+#3160
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3146
+D1
+~
+~
+0 -1 3161
+D2
+~
+~
+0 -1 3174
+D3
+~
+~
+0 -1 3159
+S
+#3161
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3147
+D1
+~
+~
+0 -1 3162
+D2
+~
+~
+0 -1 3175
+D3
+~
+~
+0 -1 3160
+S
+#3162
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3148
+D1
+~
+~
+0 -1 3163
+D2
+~
+~
+0 -1 3176
+D3
+~
+~
+0 -1 3161
+S
+#3163
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3149
+D1
+~
+~
+0 -1 3164
+D2
+~
+~
+0 -1 3177
+D3
+~
+~
+0 -1 3162
+S
+#3164
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3150
+D1
+~
+~
+0 -1 3165
+D2
+~
+~
+0 -1 3178
+D3
+~
+~
+0 -1 3163
+S
+#3165
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3151
+D1
+~
+~
+0 -1 3166
+D2
+~
+~
+0 -1 3179
+D3
+~
+~
+0 -1 3164
+S
+#3166
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3152
+~
+~
+0 -1 3167
+~
+0 -1 3180
+~
+0 -1 3165
+#3167
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+~
+0 -1 3153
+D1
+~
+0 -1 3168
+~
+~
+0 -1 3181
+D3
+~
+~
+0 -1 3166
+#3168
+East Wall Walk~
+A high curtain wall of fitted granite blocks the horizon, crenellated and patrolled. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+D0
+0 -1 3154
+D2
+~
+0 -1 3182
+~
+0 -1 3167
+#3169
+Wall Watchtower 3169~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+~
+~
+0 -1 3155
+D1
+~
+~
+0 -1 3170
+0 -1 3183
+#3170
+Gilded Scribe's Run~
+Water from carved lionheads runs into stone gutters. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3156
+D1
+~
+~
+0 -1 3171
+~
+~
+0 -1 3184
+~
+0 -1 3169
+#3171
+Crimson Cobbler's Walk~
+The scent of bread and spice drifts from nearby stalls. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+0 -1 3157
+~
+0 -1 3172
+~
+0 -1 3185
+~
+0 -1 3170
+#3172
+Amber Foundry Walk~
+Couriers thread through the crowd with satchels at their hips. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+~
+0 -1 3158
+~
+0 -1 3173
+D2
+~
+~
+0 -1 3186
+~
+0 -1 3171
+#3173
+Verdant Guild Row~
+Street musicians fill the air with quick fiddle reels. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+0 -1 3159
+~
+0 -1 3174
+~
+0 -1 3187
+D3
+~
+~
+0 -1 3172
+S
+#3174
+Gilded Stonewell Way~
+Chalk sigils mark delivery routes beside each doorway. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+0 -1 3160
+D1
+~
+~
+0 -1 3175
+D2
+~
+0 -1 3188
+D3
+~
+~
+0 -1 3173
+#3175
+Crimson Harborward Walk~
+Well-dressed merchants haggle in low, practiced tones. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3161
+~
+0 -1 3176
+D2
+~
+~
+0 -1 3189
+~
+0 -1 3174
+#3176
+Amber Herald Square~
+Temple bells carry softly over the rooftops. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+D0
+~
+~
+0 -1 3162
+~
+0 -1 3177
+~
+0 -1 3190
+0 -1 3175
+#3177
+Verdant Pilgrim Lane~
+Watch patrols move in steady pairs along the lane. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+0 -1 3163
+D1
+~
+~
+0 -1 3178
+~
+0 -1 3191
+D3
+~
+~
+0 -1 3176
+#3178
+Gilded Lantern Lane~
+Pigeons scatter from grain sacks stacked by a warehouse. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+~
+0 -1 3164
+D1
+~
+~
+0 -1 3179
+D2
+0 -1 3192
+D3
+0 -1 3177
+#3179
+Crimson Silk Arcade~
+Flower boxes brighten upper windows with bold color. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 1
+D0
+~
+~
+0 -1 3165
+~
+0 -1 3180
+~
+0 -1 3193
+~
+0 -1 3178
+#3180
+Amber Market Court~
+Hanging banners snap above the street. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+~
+~
+0 -1 3166
+~
+~
+0 -1 3181
+~
+0 -1 3194
+D3
+0 -1 3179
+#3181
+Verdant Brazier Street~
+Shop lanterns paint warm circles on the cobbles. Timber-and-stone facades line this square-planned avenue, each building numbered in brass for easy navigation. The rebuilt quarters of Midgaard feel ordered yet lively, with each block devoted to crafts, trade, lodging, or civic life.~
+0 -1 3167
+~
+0 -1 3182
+~
+~
+0 -1 3195
+~
+0 -1 3180
+#3182
+Wall Watchtower 3182~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 -1 3168
+0 -1 3196
+~
+~
+0 -1 3181
+#3183
+Granite Corner Watchtower~
+A circular watchtower crowns the corner of Midgaard's walls, offering a commanding view of rooftops within and wild country beyond. Signal braziers, spare bowstrings, and stacked quarrels wait beside rain-dark crenellations.~
+~
+0 -1 3169
+~
+0 -1 3184
+S
+#3184
+South Wall Walk~
+Moss-clung merlons top the outer wall here, where sentries pace with practiced rhythm. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+~
+0 -1 3170
+D1
+~
+~
+0 -1 3185
+~
+0 -1 3183
+#3185
+South Wall Walk~
+Murder-holes and arrow slits punctuate the wall, reminding all travelers this city endures by vigilance. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+~
+0 -1 3171
+0 -1 3186
+0 -1 3184
+#3186
+Wall Watchtower 3186~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+~
+0 -1 3172
+~
+0 -1 3187
+~
+0 -1 3185
+#3187
+South Wall Walk~
+The city wall rises in stern lines of stone, banners snapping from iron poles above. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 -1 3173
+D1
+0 -1 3188
+~
+0 -1 3186
+#3188
+South Wall Walk~
+Moss-clung merlons top the outer wall here, where sentries pace with practiced rhythm. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+0 -1 3174
+D1
+0 -1 3189
+D3
+~
+0 -1 3187
+#3189
+Wall Watchtower 3189~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+D0
+~
+~
+0 -1 3175
+~
+0 -1 3190
+~
+0 -1 3188
+#3190
+Southgate Bastion~
+Twin towers flank this massive gatehouse where chains, gears, and oak doors are maintained by veteran wardens. A forest road slips south into the Eccentric Woodland beneath tangled boughs. Within the walls, disciplined avenues continue toward Midgaard's central temple and markets.~
+0 1
+~
+0 -1 3176
+~
+0 -1 3191
+~
+0 -1 7302
+0 -1 3189
+S
+#3191
+South Wall Walk~
+The city wall rises in stern lines of stone, banners snapping from iron poles above. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+0 -1 3177
+D1
+~
+0 -1 3192
+D3
+0 -1 3190
+S
+#3192
+Wall Watchtower 3192~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+D0
+~
+~
+0 -1 3178
+D1
+0 -1 3193
+D3
+0 -1 3191
+#3193
+South Wall Walk~
+Murder-holes and arrow slits punctuate the wall, reminding all travelers this city endures by vigilance. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+~
+0 -1 3179
+D1
+0 -1 3194
+D3
+~
+~
+0 -1 3192
+#3194
+South Wall Walk~
+A high curtain wall of fitted granite blocks the horizon, crenellated and patrolled. The parapet stones are swept clean, and patrol marks tally each completed circuit.~
+0 1
+D0
+~
+0 -1 3180
+D1
+~
+0 -1 3195
+D3
+0 -1 3193
+#3195
+Wall Watchtower 3195~
+This raised watch platform projects from the city wall, reinforced with oak beams and iron braces. Guards can survey roads and fields while bell-lines run back toward nearby barracks.~
+0 1
+0 -1 3181
+D1
+0 -1 3196
+D3
+0 -1 3194
+#3196
+Silver Corner Watchtower~
+A circular watchtower crowns the corner of Midgaard's walls, offering a commanding view of rooftops within and wild country beyond. Signal braziers, spare bowstrings, and stacked quarrels wait beside rain-dark crenellations.~
+0 1
+0 -1 3182
+D3
+0 -1 3195
+#3197
+Northwest Tower Stairs~
+A narrow stairwell curls within the northwest wall tower, lit by slit windows and braziers that smell of lamp oil and pine resin.~
+0 1
+D2
 ~
 0 -1 3001
-D4
-~
-~
-0 -1 3085
-D5
-~
-~
-0 -1 3086
-E
-statue odin king god~
-The statue represents the one-eyed Odin sitting on a his throne.  He has
-long, grey hair and beard and a strict look on his face.  On top of the
-throne, just above his shoulders, his two ravens Hugin and Munin are sitting
-and at his feet are his wolves Gere and Freke.
-~
-E
-altar~
-Even though the altar is more than ten feet long it appears to be made from a
-single block of white virgin marble.
-~
 S
-#3053
-Outside the East Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  To the east is the
-Midgaard Road. To the north a small dusty trail follow the city wall.  
-A new path leads to the south.....
-~
+#3198
+Northeast Tower Stairs~
+Stone steps wind between murder-holes and storage niches where spare shields and spear-racks await emergency musters.~
 0 1
-D1
-~
-~
-0 -1 8500
-D3
-You see the city gate.
-~
-~
-1 3133 3041
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
-~
-S
-#3052
-Outside the West Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  To the west you
-can see Roc Road, which runs to the West.
-~
-0 1
-D1
-The city gate is to the east.
-~
-~
-1 3133 3040
-D3
-Roc Road.
-~
-~
-0 -1 3230
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
-~
-S
-#3051
-On the Bridge~
-You are standing on the stone bridge crosses the river.  The bridge is
-built out from the western city wall and the river flows west through an
-opening in the wall ten feet below the bridge.
-~
+0 -1 3014
+#3199
+Southwest Tower Stairs~
+The lower level of the southwest tower stores signal drums, weather cloaks, and scroll racks listing patrol changes by bell.~
 0 1
 D0
-You see the road.
-~
-~
-0 -1 3047
-D2
-You see the Concourse.
-~
-~
-0 -1 3100
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-opening~
-You cannot really see it from here as it is somewhere beneath your feet.
-~
-E
-bridge~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar, just like the wall.
-~
-S
-#3050
-The Unused Whorehouse~
-This rundown house used to be the "Escort Service" for those citizens of
-~
-8 11
-D0
-You see the alley.
-~
-~
-0 -1 3046
-S
-#3049
-Levee~
-You are at the levee.  South of here you see the river gently flowing west.
-~
+0 -1 3183
+#3200
+Southeast Tower Stairs~
+An echoing stair chamber links battlements to a vaulted guardroom where maps, tide charts, and message tubes are kept ready.~
 0 1
 D0
-You see the Alley.
-~
 ~
-0 -1 3045
-S
-#3048
-Grubby Inn~
-You are inside the old Grubby Inn.  This place has not been cleaned for
-several decades, vile smells make you dizzy.
-~
-1032 11
-D0
-You see the alley.
-~
-~
-0 -1 3024
-S
-#3047
-Wall Road~
-You are standing on the road next to the western city wall which
-continues north.  South of here is a bridge across the river.
-~
-0 1
-D0
-You see the road.
-~
-~
-0 -1 3043
-D2
-You see the bridge.
-~
-~
-0 -1 3051
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#3046
-Eastern end of Alley~
-You are standing at the eastern end of the alley, the city wall is just
-east, blocking any further movement.  An old three-story warehouse is
-directly south of here.
-~
-0 1
-D2
-You see the warehouse.
-~
-~
-0 -1 3050
-D3
-You see the alley.
-~
-~
-0 -1 3045
-S
-#3045
-Alley at Levee~
-You are standing in the alley which continues east and west.  South of
-here you see the levee.  North is the Pet Shop.
-~
-0 1
-D0
-You see, hear, and smell the pet shop.
-~
-~
-0 0 3031
-D1
-The alley leads east.
-~
-~
-0 -1 3046
-D2
-You see the levee.
-~
-~
-0 -1 3049
-D3
-The alley leads west.
-~
-~
-0 -1 3026
-S
-#3044
-Poor Alley~
-You are in narrow and dirty alley leading east and west.  The leather shop
-is to the north.
-~
-0 1
-D0
-The leather shop is to the north.
-~
-~
-0 -1 3035
-D1
-The alley leads east.
-~
-~
-0 -1 3024
-D3
-The alley leads west.
-~
-~
-0 -1 3043
-S
-#3043
-Wall Road~
-You are walking next to the western city wall.  Wall Road continues further
-north and south.  A small, poor alley leads east.
-Some letters have been written on the wall here.
-~
-0 1
-D0
-The road continues further north.
-~
-~
-0 -1 3042
-D1
-The alley leads east.
-~
-~
-0 -1 3044
-D2
-The road continues further south.
-~
-~
-0 -1 3047
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-letters~
-It says 'Who watches the watchmen?'
-~
-S
-#3042
-Wall Road~
-You are walking next to the western city wall.  The road continues further
-south and the city gate is just north of here.
-~
-0 1
-D0
-You see the city gate.
-~
-~
-0 -1 3040
-D2
-The road continues further south.
-~
-~
-0 -1 3043
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-S
-#3041
-Inside the East Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  Main Street leads
-west from here.  South of here is the wall road, but it looks dirty and 
-not too safe.
-~
-0 1
-D1
-You see the city gate.
-~
-~
-1 3133 3053
-D3
-You see Main Street.~
-~
-0 -1 3016
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
-~
-S
-#3040
-Inside the West Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-connected with a footbridge across the heavy wooden gate.  Main Street leads
-east and Wall Road leads south from here.
-~
-0 1
-D1
-You see Main Street.
-~
-~
-0 -1 3012
-D2
-You see the road running along the inner side of the city wall.  You notice
-that it is called Wall Road.
-~
-~
-0 -1 3042
-D3
-The city gate is to the west.
-~
-~
-1 3133 3052
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  It is far too high to climb.
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-each other with some kind of mortar, just like the city wall.
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-reinforced with large iron bands to make them even more sturdy.  One of the
-doors is equipped with a very big lock.
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-from one tower to the other.
-~
-S
-#3035
-The Leather Shop~
-An acrid smell fills this large room.  Along the walls are numerous
-shelves containing all sorts of animal hide and in the crackling fireplace
-hangs a big iron pot with boiling water.  In the middle of the room is a
-large oak table.
-A wooden sign is hanging above the fireplace.
-~
-1032 11
-D2
-You see the alley.
-~
-~
-0 -1 3044
-E
-sign~
-The wooden sign says :-
+0 -1 3196
 
-    Use 'list' to see what is in store,
-	'buy <item>' to buy an item,
-	'sell <item>' to sell an item and
-	'value <item>' to make the leather worker evaluate an item.
-~
-E
-pot~
-Several large pieces of leather hide are boiling in the iron pot.
-~
-E
-table~
-It is made from solid oak but appears to be very used.  Its surface is
-covered in marks and scratches.  A large burning candle stands directly on
-the table surface, tallow flowing down its sides.
-~
-E
-fireplace~
-It is a rather large fireplace made from heavy granite rocks.
-~
-S
-#3034
-The Jeweller's Shop~
-You are in a small, beautifully furnished room.  The warm light emanating from
-the small oil lamps on the walls is reflected in the hard, polished surface of
-the big mahogany desk that stands in the centre of the room. A small sign with
-golden letters stands on the desk.
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+The Secretary says 'Sorry, but the Mayor is extremely busy today'.
+
+The Secretary says 'Please sit down and have a seat in the meantime'.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+for coming here more often.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+concert shirt and Levi 501's.  His hair is pulled back into a pony tail.
+
+A beard and moustache complete the look.  Aod has brought some drugs
+
+with him from Generic Mud.
+
+~
+
+~
+
+but do not mess with him or else he'll get upset.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+the look in her eyes that she enjoys seeing you cower in her presence.
+
+~
+
+~
+
+keep himself going.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+lifetime than you have ever seen.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+body.
+
+~
+
+~
+
+wizard. He is equipped with fine clothing, and is wearing many fine
+
+rings and bracelets.
+
+~
+
+.This is another
+
+.~
+
+@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
+
+~
+
+~
+
+haven't filed their taxes.@@N
+
+~
+
+~
+
+~
+
+sad and evil soul.  You sense the power stored within this weapon to be awesome,
+
+ready to strike your enemies at the slightest chance.  You are forced to look
+
+away, rather than be dragged into it's dark heart....
+
+~
+golden letters stands on the desk.
 ~
 1032 11
 D0
@@ -2501,66 +4655,134 @@ the rottweiler~
 A large, loyal rottweiler is here.
 ~
 The rottweiler looks like a strong, fierce fighter.
-~
-1 0 400 S
-25 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3092
-beagle~
-the beagle~
-A small, quick, loyal beagle is here.
-~
-The beagle looks like a fierce fighter.
-~
-1 0 400 S
-12 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3091
-puppy~
-the puppy~
-A small loyal puppy is here.
-~
-The puppy looks like a cute, little, fierce fighter.
-~
-1 0 400 S
-5 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3090
-kitten~
-the kitten~
-A small loyal kitten is here.
-~
-The kitten looks like a cute, little, fierce fighter.
-~
-1 0 400 S
-4 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3069
-cityguard guard~
-the cityguard~
-A cityguard is here, guarding the mayor.
-~
-A big, strong, helpful, trustworthy guard.
+
+~
+
+~
+
+~
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+
+    To whom it may concern,
+
+
+	Merc Industries has charmed your money.  Apparently one's
+
+	gold will remain close, even beyond death. We are closing
+
+	down our offices and ATM machines.  Our services here are
+
+	no longer required.
+
+
+    Midgaard City Bank
+
+~
+
+
+    To whom it may concern,
+
+
+	Merc Industries has installed a new no-rent save and quit
+
+	system.  Apparently one can now save and quit at any time
+
+	from anywhere inside a town or out.  My services here are
+
+	no longer required.
+
+
+    Diana the Receptionist
+
+~
+
+~
+
+~
+
+towards the river so you can sit and watch the river and the houses on the
+
+other side.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 ~
 65 65538 1000 S
 3 1
@@ -3170,21 +5392,36 @@ There is a large notice board fixed to the wall.~
 13
 L
 1
-#3012
-board notice bulletin~
-the test board.~
-There is a Test Bulletin Board here.~
-27 0 0 1
-10 1 1 1 0 0 0 0 0 0
-13
-L
-1
-#3013
-Band Temp Wedding~
-@@WA @@ybeautiful @@gdiamond @@yring @@d<@@WT@@d>@@N~
-@@yA wide, plain circle of gold inscribed:~
-9 0 8396800 1
-1 0 0 0 0 0 0 0 0 0
+
+~
+
+~
+
+~
+
+~
+
+     ???
+
+    ?   ?
+
+       ?
+
+      ?
+
+      ?
+
+      *
+
+~
+
+~
+
+equipped with a handle to make it handy and a hood to protect its flame.
+
+Some letters have been scratched on its bottom.
+
+~
 4
 L
 2
@@ -3334,9 +5571,12 @@ L
 cloak~
 a standard issue cloak~
 You see a standard issue cloak here.~
-9 134217728 8454144 1
-5 0 0 0 0 0 0 0 0 0
-4
+
+spell.  The edge of the blade looks as if it could cut through anything
+
+or anyone.
+
+~
 E
 cloak~
 You see a cloak of great craftsmanship.  Imprinted on the side is:
@@ -3382,10 +5622,14 @@ You see a standard issue mace here.~
 A
 19 2
 A
-18 2
-E
-mace~
-You see a mace of great craftsmanship.  Imprinted on the side is:
+
+~
+
+~
+
+~
+
+~
 Merc Industries
 ~
 L
@@ -3879,6 +6123,30 @@ L
 canoe~
 a canoe~
 A canoe has been left here.~
+M 0 3068 1 3197      Wall guard in northwest tower
+
+E 0 3037 199 16
+
+E 0 3029 99 11
+
+M 0 3067 1 3198      Wall guard in northeast tower
+
+E 0 3037 199 16
+
+E 0 3027 99 6
+
+M 0 3060 1 3199      Patrol guard in southwest tower
+
+E 0 3037 199 16
+
+E 0 3019 99 12
+
+M 0 3060 1 3200      Patrol guard in southeast tower
+
+E 0 3037 199 16
+
+E 0 3025 99 8
+
 22 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 13
