@@ -566,10 +566,6 @@ D3
 ~
 ~
 0 -1 3029
-D2
-The Eccentric Woodland.~
-~
-0 -1 7302
 D5
 Sepulcher Pasture.~
 ~
@@ -797,6 +793,10 @@ D2
 ~
 ~
 0 -1 3061
+D3
+Roc Road.~
+~
+0 -1 3230
 S
 #3042
 @@WSilver Marketwalk@@N~
@@ -1028,14 +1028,6 @@ D3
 ~
 ~
 0 -1 3051
-D3
-Roc Road.~
-~
-0 -1 3230
-D1
-Eastern Desert.~
-~
-0 -1 8500
 S
 #3053
 @@WGilded Crossing@@N~
@@ -1200,6 +1192,10 @@ D3
 ~
 ~
 0 -1 3059
+D1
+Eastern Desert.~
+~
+0 -1 8500
 S
 #3061
 @@WCedar Square@@N~
@@ -1595,6 +1591,10 @@ D3
 ~
 ~
 0 -1 3078
+D5
+Bank of Midgaard.~
+~
+0 -1 3099
 S
 #3080
 @@WLantern Promenade@@N~
@@ -2007,6 +2007,10 @@ D3
 ~
 ~
 0 -1 3098
+D4
+Street Above.~
+~
+0 -1 3079
 S
 #3100
 @@WLantern Promenade@@N~
@@ -2037,8 +2041,8 @@ D1
 ~
 ~
 0 -1 3102
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3121
 S
@@ -2054,8 +2058,8 @@ D1
 ~
 ~
 0 -1 3103
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3122
 D3
@@ -2075,8 +2079,8 @@ D1
 ~
 ~
 0 -1 3104
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3123
 D3
@@ -2096,8 +2100,8 @@ D1
 ~
 ~
 0 -1 3105
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3124
 D3
@@ -2117,8 +2121,8 @@ D1
 ~
 ~
 0 -1 3106
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3125
 D3
@@ -2138,8 +2142,8 @@ D1
 ~
 ~
 0 -1 3107
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3126
 D3
@@ -2159,8 +2163,8 @@ D1
 ~
 ~
 0 -1 3108
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3127
 D3
@@ -2180,8 +2184,8 @@ D1
 ~
 ~
 0 -1 3109
-D2
-~
+D5
+Shop Below.~
 ~
 0 -1 3128
 D3
@@ -2445,8 +2449,8 @@ S
 @@cThe Grand Post Office@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3101
 D1
@@ -2462,8 +2466,8 @@ S
 @@cThe Argent Armory@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3102
 D1
@@ -2483,8 +2487,8 @@ S
 @@cThe Moonthread Outfitters@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3103
 D1
@@ -2504,8 +2508,8 @@ S
 @@cThe Emberglass Arcana@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3104
 D1
@@ -2525,8 +2529,8 @@ S
 @@cThe Provisioner's Exchange@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3105
 D1
@@ -2546,8 +2550,8 @@ S
 @@cThe Invasion Requisitions@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3106
 D1
@@ -2567,8 +2571,8 @@ S
 @@cThe Proposition Exchange@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3107
 D1
@@ -2588,8 +2592,8 @@ S
 @@cThe Quest Broker's Hall@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 16396 1
-D0
-~
+D4
+Street Above.~
 ~
 0 -1 3108
 D1
@@ -3825,14 +3829,14 @@ D3
 ~
 ~
 0 -1 3188
-D0
+D4
 The Microcosm.~
 ~
-0 -1 5788
+0 -1 5600
 S
 #3190
-@@yNorthwall Crypt Gate@@N~
-Two mausoleum pylons flank this northern gate, each etched with warding prayers against ancient kings. The road beyond descends toward the haunted marches of Kel'Shadra. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+@@yThe Southern Wild Gate@@N~
+The southern gate arches over a causeway of old stone. Lantern hooks rattle above notices for hunters, pilgrims, and scouts bound for dark woodlands and sepulcher fields. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 0 1
 D0
 ~
@@ -3846,6 +3850,10 @@ D3
 ~
 ~
 0 -1 3189
+D2
+The Eccentric Woodland.~
+~
+0 -1 7302
 D0
 The Crypts of Kel'Shadra.~
 ~
