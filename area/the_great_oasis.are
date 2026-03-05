@@ -1532,6 +1532,58 @@ The oasis hunt continues ahead through blowing sand.
 ~
 0 -1 8671
 S
+#8669
+@@yPalmward Approach@@N~
+@@yBlue noon glare hardens a drift-choked wash where the wind carries a cooler scent from deeper in the hunt-road.@@N
+
+@@lA chipped survey plate marked with winding route marks beside waypoint 8669, keeping this measured path aligned with the oasis search.@@N
+
+@@yThe route briefly widens here before narrowing toward the heart of the basin.@@N
+
+~
+0 10
+D0
+The trail winds back through the glare.
+
+~
+~
+0 -1 8664
+D1
+The oasis hunt continues ahead through blowing sand.
+
+~
+~
+0 -1 8670
+S
+#8670
+@@yPalmward Threshold@@N~
+@@yBlue noon glare hardens around broken marker stones where heat-haze bends the horizon into wavering bands.@@N
+
+@@lA weathered route tablet etched with old caravan notches beside waypoint 8670 marks a turning toward greener rumors.@@N
+
+@@yThe air feels a touch less dry, as if hidden water is finally near.@@N
+
+~
+0 10
+D0
+The trail winds back through the glare.
+
+~
+~
+0 -1 8665
+D1
+The oasis hunt continues ahead through blowing sand.
+
+~
+~
+0 -1 8671
+D3
+A narrower cut through the dunes bends away from the main track.
+
+~
+~
+0 -1 8669
+S
 #8671
 @@yPalmward Bend@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
@@ -1699,6 +1751,52 @@ The trail winds back through the glare.
 ~
 0 -1 8679
 D1
+The oasis hunt continues ahead through blowing sand.
+
+~
+~
+0 -1 8681
+S
+#8679
+@@yAmberwake Spur@@N~
+@@yMirage-light pools between weathered stones where old caravan footprints overlap in looping circles.@@N
+
+@@lA sand-polished slab scored with route glyphs beside waypoint 8679 marks this spur as a deliberate connector in the hunt.@@N
+
+@@yThe wind shifts here, tugging you between the main approach and a hidden side-run.@@N
+
+~
+0 10
+D1
+The oasis hunt continues ahead through blowing sand.
+
+~
+~
+0 -1 8693
+D3
+A narrow side-run slips along the edge of the basin.
+
+~
+~
+0 -1 8680
+S
+#8680
+@@yAmberwake Link@@N~
+@@yMirage-light crowns a line of half-buried stones while the desert hushes as though listening.@@N
+
+@@lA cracked stele painted with faded direction arrows beside waypoint 8680 ties this link-road back into the oasis circuit.@@N
+
+@@yEvery step from here feels guided, as if the route was laid for this exact search.@@N
+
+~
+0 10
+D1
+The trail winds back through the glare.
+
+~
+~
+0 -1 8679
+D3
 The oasis hunt continues ahead through blowing sand.
 
 ~
