@@ -17,716 +17,2455 @@ T You can teleport into here
 B Currently building area.
 M No bad room spells allowed.
 #ROOMS
-#3055
-Entering the @@eSyringe@@N~
-@@NWoW!!! That was...different.  You are very disoriented..suddenly, a crazed
-
-man with unkempt hair and the smell of cheap wine on his breath appears, and
-
-shouts: "Oh my, another victim to experiment on!!!  MUAHHAAAAA!!" He waves his
-
-hands and mutters loudly, and suddenly, you begin to shrink!!! Smaller and
-
-smaller you become, until you are smaller than the dust particles around you..
-
-
-It seems the only way to go is DOWN.
-
-~
-12 1
-D5
-~
-~
-0 -1 5600
-S
-#3039
-The Mad Scientist's Lab~
-@@NThe scent of chemicals, burning fires, and bubbling fluids overwhelm you as
-
-you enter. Scattered about on various tables and workbenches are wierd glass
-
-flasks, tubes, and unusual pieces of equipment, with what seems to be some
-
-sort of strange experiments being performed..all with no apparent rhyme or
-
-reason. Who ever works here is absent, but you are drawn towards the center
-
-workbench, where a large @@eSyringe@@N lies next to a covered glass dish
-
-filled with a dark @@Rfluid@@N--maybe it's blood!
-
-~
-12 1
-D2
-~
-~
-0 -1 3024
-D5
-~
-~
-0 -1 3055
-E
-syringe~
-Go Down to enter the @@eSyringe@@N!!!~
-S
-#3038
-The Midgaard Post Office~
-This is the Midgaard branch of the Global Post Office.
-
-From here you may read or write letters to friends
-
-and enemies alike...
-
-There is a large SIGN here... perhaps you should look at it?
-
-~
-17436 11
-D1
-~
-~
-0 -1 3005
-E
-sign~
-@@WTo send notes use the following commands:-
-
- 
-
-Note to (name)
-
- 
-
-  Note subject (subject)
-
- 
-
-    Note + (msg) for each subsequent line of text.
-
-      Note show to see your note
-
-~
-S
-#3085
-The quiet room~
-This is a room where players can come and sleep with no interuptions. There is
-
-a sign on the wall.
-
-~
-25886 11
-D5
-~
-~
-0 -1 3054
-E
-sign~
-Sssshh! No talking in this room.
-
-~
-S
-#3086
-The Power Trivia Room~
-This room is used by the players of the mud, to engage in the totally
-
-pointless pursuit of trivial knowledge.
-
-~
-8 11
-D4
-~
-~
-0 -1 3054
-S
-#3004
-The Undead Shrine to Cyberlich.~
-This horrid place is predominately black.  If you look closely, you see that blood seeps from the walls, pools here and there on the floor.  This is where Cyberlich's devout followers come to worship him, and where they come to hire his minions.~
-18 11
+#3001
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D1
 ~
 ~
 0 -1 3002
-S
-#3017
-The Miscellaneous Donation Area~
-You are in the part of the donation area used to hold items other than
-
-weapons or amror.
-
-~
-12 11
-D0
-The central donation area.
-
-~
-~
-0 -1 3021
-S
-#3018
-The Armor Donation Area~
-You are in part of the donation area used to hold armor items. 
-
-~
-12 11
-D3
-The central donation area.
-
-~
-~
-0 -1 3021
-S
-#3019
-The Weapons Donation Area~
-You are in part of the donation area used to hold weapons.
-
-~
-12 11
 D2
-The central donation area.
-
 ~
 ~
 0 -1 3021
 S
-#3021
-The Donation Area~
-You are standing in a cross-shaped room.  To the west you can see the Temple.
-
-To the North, East and South, you see the various donation locations.  These
-
-are used to house unwanted equipment, donated by players who no longer need
-
-them.
-
-~
-12 11
-D0
-You see the Weapon donation area.
-
-~
-~
-0 -1 3019
+#3002
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D1
-You see the Armor donation area.
-
 ~
 ~
-0 -1 3018
+0 -1 3003
 D2
-You see a room used for various donations.
-
-~
-~
-0 -1 3017
-D3
-You see the Temple of Midgaard.
-
-~
-~
-0 -1 3001
-S
-#3022
-On the River~
-The river enters from a hole in the eastern city wall.  The hole has been
-
-blocked by several vertically positioned iron bars set into the wall.
-
-~
-0 7
-D3
-~
-~
-0 -1 3023
-S
-#3023
-On the River~
-You see the warehouse on the northern riverbank.  East of here you see the
-
-city wall.  The river flows west towards the levee.
-
-~
-0 7
-D1
 ~
 ~
 0 -1 3022
 D3
 ~
 ~
-0 -1 3027
+0 -1 3001
 S
-#3027
-On the River~
-The levee is directly north of here.  The river flows in an east west
-
-direction.
-
-~
-4 7
-D0
-~
-~
-0 -1 3049
+#3003
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D1
+~
+~
+0 -1 3004
+D2
 ~
 ~
 0 -1 3023
 D3
 ~
 ~
-0 -1 3028
+0 -1 3002
 S
-#3028
-On the River~
-North of here you see the dump.  The river flows from east to west.  The
-
-riverbanks are too steep to climb.
-
-~
-0 7
+#3004
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D1
+~
+~
+0 -1 3005
+D2
+~
+~
+0 -1 3024
+D3
+~
+~
+0 -1 3003
+S
+#3005
+@@WThe Violet Reliquary Arch@@N~
+A warded arch inscribed in violet lacquer stands at the center of this square, watched by lantern-bearing sentries. Cold air seeps up from the stair that leads into the @@dGloamvault of Kel'Shadra@@N. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+0 1
+D1
+~
+~
+0 -1 3006
+D2
+~
+~
+0 -1 3025
+D3
+~
+~
+0 -1 3004
+D5
+The Gloamvault of Kel'Shadra.~
+~
+0 -1 30100
+S
+#3006
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3007
+D2
+~
+~
+0 -1 3026
+D3
+~
+~
+0 -1 3005
+S
+#3007
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3008
+D2
 ~
 ~
 0 -1 3027
 D3
 ~
 ~
-0 -1 3036
+0 -1 3006
 S
-#3036
-On the River~
-North of here you see the miserable buildings of the poor alley.  The
-
-river flows west towards the bridge.  The riverbanks are too steep to climb.
-
-~
-0 7
+#3008
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D1
+~
+~
+0 -1 3009
+D2
 ~
 ~
 0 -1 3028
 D3
 ~
 ~
-0 -1 3200
+0 -1 3007
 S
-#3200
-Under the Bridge~
-The arch under the bridge is covered by seaweed for one foot above the
-
-surface of the river.  The water gently flows through an opening in the lower
-
-part of the city wall.
-
+#3009
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
 ~
-0 7
+~
+0 -1 3010
+D2
+~
+~
+0 -1 3029
+D3
+~
+~
+0 -1 3008
+S
+#3010
+@@WSaffron Walk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and bookbinders repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3011
+D2
+~
+~
+0 -1 3030
+D3
+~
+~
+0 -1 3009
+S
+#3011
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3012
+D2
+~
+~
+0 -1 3031
+D3
+~
+~
+0 -1 3010
+S
+#3012
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3013
+D2
+~
+~
+0 -1 3032
+D3
+~
+~
+0 -1 3011
+S
+#3013
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3014
+D2
+~
+~
+0 -1 3033
+D3
+~
+~
+0 -1 3012
+S
+#3014
+@@WThe Dungeon Intake Yard@@N~
+Shackles hang from a black iron rack beside a stair that descends into the public dungeons. Scribes sit under awnings recording warrants, bonds, and names of the condemned. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+0 1
+D1
+~
+~
+0 -1 3015
+D2
+~
+~
+0 -1 3034
+D3
+~
+~
+0 -1 3013
+D5
+Public Dungeon.~
+~
+0 -1 9551
+S
+#3015
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3016
+D2
+~
+~
+0 -1 3035
+D3
+~
+~
+0 -1 3014
+S
+#3016
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3017
+D2
+~
+~
+0 -1 3036
+D3
+~
+~
+0 -1 3015
+S
+#3017
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3018
+D2
+~
+~
+0 -1 3037
+D3
+~
+~
+0 -1 3016
+S
+#3018
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3019
+D2
+~
+~
+0 -1 3038
+D3
+~
+~
+0 -1 3017
+S
+#3019
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D1
+~
+~
+0 -1 3020
+D2
+~
+~
+0 -1 3039
+D3
+~
+~
+0 -1 3018
+S
+#3020
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D2
+~
+~
+0 -1 3040
+D3
+~
+~
+0 -1 3019
+S
+#3021
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3001
+D1
+~
+~
+0 -1 3022
+D2
+~
+~
+0 -1 3041
+S
+#3022
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3002
+D1
+~
+~
+0 -1 3023
+D2
+~
+~
+0 -1 3042
+D3
+~
+~
+0 -1 3021
+S
+#3023
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3003
+D1
+~
+~
+0 -1 3024
+D2
+~
+~
+0 -1 3043
+D3
+~
+~
+0 -1 3022
+S
+#3024
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3004
+D1
+~
+~
+0 -1 3025
+D2
+~
+~
+0 -1 3044
+D3
+~
+~
+0 -1 3023
+S
+#3025
+@@WThe Ossuary Transit Court@@N~
+Funerary braziers smoke in copper bowls while pale clergy direct processions below. A broad stair drops into the @@dCatacombs of Nightfall@@N beneath carved saint-stones. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+1 1
+D0
+~
+~
+0 -1 3005
+D1
+~
+~
+0 -1 3026
+D2
+~
+~
+0 -1 3045
+D3
+~
+~
+0 -1 3024
+D5
+The Catacombs of Nightfall.~
+~
+0 -1 21000
+S
+#3026
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3006
+D1
+~
+~
+0 -1 3027
+D2
+~
+~
+0 -1 3046
+D3
+~
+~
+0 -1 3025
+S
+#3027
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3007
+D1
+~
+~
+0 -1 3028
+D2
+~
+~
+0 -1 3047
+D3
+~
+~
+0 -1 3026
+S
+#3028
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3008
+D1
+~
+~
+0 -1 3029
+D2
+~
+~
+0 -1 3048
+D3
+~
+~
+0 -1 3027
+S
+#3029
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3009
+D1
+~
+~
+0 -1 3030
+D2
+~
+~
+0 -1 3049
+D3
+~
+~
+0 -1 3028
+S
+#3030
+@@yThe Southern Wild Gate@@N~
+The southern gate arches over a causeway of old stone. Lantern hooks rattle above notices for hunters, pilgrims, and scouts bound for dark woodlands and sepulcher fields. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+1 1
+D0
+~
+~
+0 -1 3010
+D1
+~
+~
+0 -1 3031
+D2
+~
+~
+0 -1 3050
+D3
+~
+~
+0 -1 3029
+D2
+The Eccentric Woodland.~
+~
+0 -1 7302
+D5
+Sepulcher Pasture.~
+~
+0 -1 30175
+S
+#3031
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3011
+D1
+~
+~
+0 -1 3032
+D2
+~
+~
+0 -1 3051
+D3
+~
+~
+0 -1 3030
+S
+#3032
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3012
+D1
+~
+~
+0 -1 3033
+D2
+~
+~
+0 -1 3052
+D3
+~
+~
+0 -1 3031
+S
+#3033
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3013
+D1
+~
+~
+0 -1 3034
+D2
+~
+~
+0 -1 3053
+D3
+~
+~
+0 -1 3032
+S
+#3034
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3014
+D1
+~
+~
+0 -1 3035
+D2
+~
+~
+0 -1 3054
+D3
+~
+~
+0 -1 3033
+S
+#3035
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3015
 D1
 ~
 ~
 0 -1 3036
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  Looks pretty solid.
-
-~
-S
-#3143
-The Jail~
-You are in a dark and humid jail.  The dark stone walls are hard and cold
-
-to the touch.  A heavy steel door is to the north.
-
-~
-8 11
-D0
-You see the heavy steel door.
-
-~
-door~
-1 3137 3142
-E
-wall walls~
-The walls are marked with lots of scratches.  Some of them spell sentences
-
-like "JAIL IS BETTER THAN SQL" and "INGRES STRIKES AGAIN".
-
-~
-S
-#3142
-Captain's Office~
-You are in the Office of the Captain of the Guard.  The Midgaard Coat of
-
-Arms is hanging on the north wall and a heavy steel door is to the south.
-
-~
-8 11
-D1
-You see the Cityguard Head Quarters.
-
-~
-door~
-1 3120 3110
-D2
-You see the heavy steel door.
-
-~
-door~
-1 3137 3143
-E
-arms~
-Although a bit dusty the Coat of Arms is an excellent piece of work.
-
-~
-S
-#3141
-End of Penny Lane~
-You are at the end of Penny Lane.  The only exit appears to be south.
-
-~
-0 1
 D2
 ~
 ~
-0 -1 3140
-S
-#3140
-Penny Lane~
-You are on Penny Lane.  The narrow road continues north and west.
-
+0 -1 3055
+D3
 ~
-0 1
+~
+0 -1 3034
+S
+#3036
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
 ~
 ~
-0 -1 3141
-D3
-~
-~
-0 -1 3139
-S
-#3139
-Penny Lane~
-You are on Penny Lane.  Emerald Avenue is to the west and Penny Lane
-
-continues in eastward direction.
-
-~
-0 1
+0 -1 3016
 D1
 ~
 ~
-0 -1 3140
-D3
-~
-~
-0 -1 3132
-S
-#3138
-The Mayor's Office~
-You are in the not very big office of the Mayor of Midgaard.  A large and
-
-polished but completely empty desk is standing in front of an armchair that
-
-looks so comfortable that it most of all resembles a bed with the head end
-
-raised slightly.
-
-~
-8 11
-D3
-The waiting room is to the west.
-
-~
-~
-0 -1 3137
-E
-chair armchair~
-This chair is really a masterpiece.  A chair where one can sit as comfortably
-
-as in a bed.  All lecture halls should be equipped with these things.
-
-~
-S
-#3137
-The Waiting Room~
-You are standing in the waiting room at the town hall.  Wooden chairs stand
-
-along the walls and a long desk is placed in the middle of the room.
-
-~
-8 11
-D1
-It looks like some kind of office.
-
-~
-~
-0 -1 3138
-D3
-The exit west leads to Emerald Avenue.
-
-~
-~
-0 -1 3117
-S
-#3136
-Park Road~
-You are at a bend on Park Road.  To the south the road goes on and to the
-
-west is the Road Crossing.
-
-~
-0 1
+0 -1 3037
 D2
 ~
 ~
-0 -1 3122
+0 -1 3056
 D3
 ~
 ~
-0 -1 3120
+0 -1 3035
 S
-#3135
-Park Road~
-You are at a bend on Park Road.  To the north the road goes on and to the
-
-east is the Road Crossing.  To the south, the ancient cliffs rise from deep
-
-under the ground, forming a wall.
-
-~
-0 1
+#3037
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
 ~
 ~
-0 -1 3118
+0 -1 3017
 D1
 ~
 ~
-0 -1 3120
-S
-#3134
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  To the west the road goes on
-
-and to the north is the Road Crossing.
-
-~
-0 1
-D0
+0 -1 3038
+D2
 ~
 ~
-0 -1 3120
+0 -1 3057
 D3
 ~
 ~
-0 -1 3121
+0 -1 3036
 S
-#3133
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  To the east the road goes on
-
-and to the south is the Road Crossing.
-
+#3038
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
-0 1
+~
+0 -1 3018
 D1
 ~
 ~
-0 -1 3119
+0 -1 3039
 D2
 ~
 ~
-0 -1 3120
-S
-#3132
-Emerald Avenue~
-You are standing on the north end of Emerald Avenue.  To the north is the
-
-promenade and to the east is the small street Penny Lane.
-
+0 -1 3058
+D3
 ~
+~
+0 -1 3037
+S
+#3039
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3019
+D1
+~
+~
+0 -1 3040
+D2
+~
+~
+0 -1 3059
+D3
+~
+~
+0 -1 3038
+S
+#3040
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
 ~
 ~
-0 -1 3103
-D1
-~
-~
-0 -1 3139
+0 -1 3020
 D2
 ~
 ~
-0 -1 3117
-S
-#3131
-Park Road~
-You are at Park Road which continues north and south.
-
+0 -1 3060
+D3
 ~
+~
+0 -1 3039
+S
+#3041
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
+~
+~
+0 -1 3021
+D1
+~
+~
+0 -1 3042
+D2
+~
+~
+0 -1 3061
+S
+#3042
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3022
+D1
+~
+~
+0 -1 3043
+D2
+~
+~
+0 -1 3062
+D3
+~
+~
+0 -1 3041
+S
+#3043
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3023
+D1
+~
+~
+0 -1 3044
+D2
+~
+~
+0 -1 3063
+D3
+~
+~
+0 -1 3042
+S
+#3044
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3024
+D1
+~
+~
+0 -1 3045
+D2
+~
+~
+0 -1 3064
+D3
+~
+~
+0 -1 3043
+S
+#3045
+@@WBronze Colonnade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and watch sergeants repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3025
+D1
+~
+~
+0 -1 3046
+D2
+~
+~
+0 -1 3065
+D3
+~
+~
+0 -1 3044
+S
+#3046
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3026
+D1
+~
+~
+0 -1 3047
+D2
+~
+~
+0 -1 3066
+D3
+~
+~
+0 -1 3045
+S
+#3047
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3027
+D1
+~
+~
+0 -1 3048
+D2
+~
+~
+0 -1 3067
+D3
+~
+~
+0 -1 3046
+S
+#3048
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3028
+D1
+~
+~
+0 -1 3049
+D2
+~
+~
+0 -1 3068
+D3
+~
+~
+0 -1 3047
+S
+#3049
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3029
+D1
+~
+~
+0 -1 3050
+D2
+~
+~
+0 -1 3069
+D3
+~
+~
+0 -1 3048
+S
+#3050
+@@WSaffron Walk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and bookbinders repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3030
+D1
+~
+~
+0 -1 3051
+D2
+~
+~
+0 -1 3070
+D3
+~
+~
+0 -1 3049
+S
+#3051
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3031
+D1
+~
+~
+0 -1 3052
+D2
+~
+~
+0 -1 3071
+D3
+~
+~
+0 -1 3050
+S
+#3052
+@@yThe Western Caravan Gate@@N~
+A double gate of ironbound cedar opens toward the trade roads. Caravan wardens inspect wagons here, and painted milestones point west to @@bRoc Road@@N and east toward the desert thoroughfare. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+1 1
+D0
+~
+~
+0 -1 3032
+D1
+~
+~
+0 -1 3053
+D2
+~
+~
+0 -1 3072
+D3
+~
+~
+0 -1 3051
+D3
+Roc Road.~
+~
+0 -1 3230
+D1
+Eastern Desert.~
+~
+0 -1 8500
+S
+#3053
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3033
+D1
+~
+~
+0 -1 3054
+D2
+~
+~
+0 -1 3073
+D3
+~
+~
+0 -1 3052
+S
+#3054
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3034
+D1
+~
+~
+0 -1 3055
+D2
+~
+~
+0 -1 3074
+D3
+~
+~
+0 -1 3053
+S
+#3055
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3035
+D1
+~
+~
+0 -1 3056
+D2
+~
+~
+0 -1 3075
+D3
+~
+~
+0 -1 3054
+S
+#3056
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3036
+D1
+~
+~
+0 -1 3057
+D2
+~
+~
+0 -1 3076
+D3
+~
+~
+0 -1 3055
+S
+#3057
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3037
+D1
+~
+~
+0 -1 3058
+D2
+~
+~
+0 -1 3077
+D3
+~
+~
+0 -1 3056
+S
+#3058
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3038
+D1
+~
+~
+0 -1 3059
+D2
+~
+~
+0 -1 3078
+D3
+~
+~
+0 -1 3057
+S
+#3059
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3039
+D1
+~
+~
+0 -1 3060
+D2
+~
+~
+0 -1 3079
+D3
+~
+~
+0 -1 3058
+S
+#3060
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3040
+D2
+~
+~
+0 -1 3080
+D3
+~
+~
+0 -1 3059
+S
+#3061
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3041
+D1
+~
+~
+0 -1 3062
+D2
+~
+~
+0 -1 3081
+S
+#3062
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3042
+D1
+~
+~
+0 -1 3063
+D2
+~
+~
+0 -1 3082
+D3
+~
+~
+0 -1 3061
+S
+#3063
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3043
+D1
+~
+~
+0 -1 3064
+D2
+~
+~
+0 -1 3083
+D3
+~
+~
+0 -1 3062
+S
+#3064
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3044
+D1
+~
+~
+0 -1 3065
+D2
+~
+~
+0 -1 3084
+D3
+~
+~
+0 -1 3063
+S
+#3065
+@@WBronze Colonnade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and watch sergeants repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3045
+D1
+~
+~
+0 -1 3066
+D2
+~
+~
+0 -1 3085
+D3
+~
+~
+0 -1 3064
+S
+#3066
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3046
+D1
+~
+~
+0 -1 3067
+D2
+~
+~
+0 -1 3086
+D3
+~
+~
+0 -1 3065
+S
+#3067
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3047
+D1
+~
+~
+0 -1 3068
+D2
+~
+~
+0 -1 3087
+D3
+~
+~
+0 -1 3066
+S
+#3068
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3048
+D1
+~
+~
+0 -1 3069
+D2
+~
+~
+0 -1 3088
+D3
+~
+~
+0 -1 3067
+S
+#3069
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3049
+D1
+~
+~
+0 -1 3070
+D2
+~
+~
+0 -1 3089
+D3
+~
+~
+0 -1 3068
+S
+#3070
+@@WSaffron Walk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and bookbinders repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3050
+D1
+~
+~
+0 -1 3071
+D2
+~
+~
+0 -1 3090
+D3
+~
+~
+0 -1 3069
+S
+#3071
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3051
+D1
+~
+~
+0 -1 3072
+D2
+~
+~
+0 -1 3091
+D3
+~
+~
+0 -1 3070
+S
+#3072
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3052
+D1
+~
+~
+0 -1 3073
+D2
+~
+~
+0 -1 3092
+D3
+~
+~
+0 -1 3071
+S
+#3073
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3053
+D1
+~
+~
+0 -1 3074
+D2
+~
+~
+0 -1 3093
+D3
+~
+~
+0 -1 3072
+S
+#3074
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3054
+D1
+~
+~
+0 -1 3075
+D2
+~
+~
+0 -1 3094
+D3
+~
+~
+0 -1 3073
+S
+#3075
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3055
+D1
+~
+~
+0 -1 3076
+D2
+~
+~
+0 -1 3095
+D3
+~
+~
+0 -1 3074
+S
+#3076
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3056
+D1
+~
+~
+0 -1 3077
+D2
+~
+~
+0 -1 3096
+D3
+~
+~
+0 -1 3075
+S
+#3077
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3057
+D1
+~
+~
+0 -1 3078
+D2
+~
+~
+0 -1 3097
+D3
+~
+~
+0 -1 3076
+S
+#3078
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3058
+D1
+~
+~
+0 -1 3079
+D2
+~
+~
+0 -1 3098
+D3
+~
+~
+0 -1 3077
+S
+#3079
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3059
+D1
+~
+~
+0 -1 3080
+D2
+~
+~
+0 -1 3099
+D3
+~
+~
+0 -1 3078
+S
+#3080
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3060
+D2
+~
+~
+0 -1 3100
+D3
+~
+~
+0 -1 3079
+S
+#3081
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3061
+D1
+~
+~
+0 -1 3082
+D2
 ~
 ~
 0 -1 3101
+S
+#3082
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3062
+D1
+~
+~
+0 -1 3083
 D2
 ~
 ~
-0 -1 3111
-S
-#3130
-On the Concourse~
-You are at the southeast corner of the city wall.  The Concourse leads
-
-both north and west.  A small path leads off the concourse to the South, and
-
-is partly obscured by the overgrowth.
-
+0 -1 3102
+D3
 ~
-0 1
+~
+0 -1 3081
+S
+#3083
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
+~
+~
+0 -1 3063
+D1
+~
+~
+0 -1 3084
+D2
+~
+~
+0 -1 3103
+D3
+~
+~
+0 -1 3082
+S
+#3084
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3064
+D1
+~
+~
+0 -1 3085
+D2
 ~
 ~
 0 -1 3104
 D3
 ~
 ~
-0 -1 3129
+0 -1 3083
 S
-#3129
-On the Concourse~
-The Concourse continues both east and west.  Park Road is north of here.
-
-~
-0 1
+#3085
+@@WBronze Colonnade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and watch sergeants repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
 ~
 ~
-0 -1 3126
+0 -1 3065
 D1
 ~
 ~
-0 -1 3130
+0 -1 3086
+D2
+~
+~
+0 -1 3105
 D3
 ~
 ~
-0 -1 3128
+0 -1 3084
 S
-#3128
-On the Concourse~
-The Concourse continues both east and west.  Emerald Avenue is north of
-
-here.
-
-~
-0 1
+#3086
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
 ~
 ~
-0 -1 3125
+0 -1 3066
 D1
 ~
 ~
-0 -1 3129
+0 -1 3087
+D2
+~
+~
+0 -1 3106
 D3
 ~
 ~
-0 -1 3127
+0 -1 3085
 S
-#3127
-On the Concourse~
-You are at the southwest corner of the city wall.  The Concourse leads
-
-both north and east.
-
-~
-0 1
+#3087
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
+~
+~
+0 -1 3067
+D1
+~
+~
+0 -1 3088
+D2
+~
+~
+0 -1 3107
+D3
+~
+~
+0 -1 3086
+S
+#3088
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3068
+D1
+~
+~
+0 -1 3089
+D2
+~
+~
+0 -1 3108
+D3
+~
+~
+0 -1 3087
+S
+#3089
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3069
+D1
+~
+~
+0 -1 3090
+D2
+~
+~
+0 -1 3109
+D3
+~
+~
+0 -1 3088
+S
+#3090
+@@WSaffron Walk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and bookbinders repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3070
+D1
+~
+~
+0 -1 3091
+D2
+~
+~
+0 -1 3110
+D3
+~
+~
+0 -1 3089
+S
+#3091
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3071
+D1
+~
+~
+0 -1 3092
+D2
+~
+~
+0 -1 3111
+D3
+~
+~
+0 -1 3090
+S
+#3092
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3072
+D1
+~
+~
+0 -1 3093
+D2
+~
+~
+0 -1 3112
+D3
+~
+~
+0 -1 3091
+S
+#3093
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3073
+D1
+~
+~
+0 -1 3094
+D2
+~
+~
+0 -1 3113
+D3
+~
+~
+0 -1 3092
+S
+#3094
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3074
+D1
+~
+~
+0 -1 3095
+D2
+~
+~
+0 -1 3114
+D3
+~
+~
+0 -1 3093
+S
+#3095
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3075
+D1
+~
+~
+0 -1 3096
+D2
+~
+~
+0 -1 3115
+D3
+~
+~
+0 -1 3094
+S
+#3096
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3076
+D1
+~
+~
+0 -1 3097
+D2
+~
+~
+0 -1 3116
+D3
+~
+~
+0 -1 3095
+S
+#3097
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3077
+D1
+~
+~
+0 -1 3098
+D2
+~
+~
+0 -1 3117
+D3
+~
+~
+0 -1 3096
+S
+#3098
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3078
+D1
+~
+~
+0 -1 3099
+D2
+~
+~
+0 -1 3118
+D3
+~
+~
+0 -1 3097
+S
+#3099
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3079
+D1
 ~
 ~
 0 -1 3100
-D1
-~
-~
-0 -1 3128
-S
-#3126
-Park Road~
-You are on Park Road which continues north.  The Concourse is south of here.
-
-~
-0 1
-D0
-~
-~
-0 -1 3122
 D2
 ~
 ~
-0 -1 3129
-S
-#3125
-Emerald Avenue~
-You are on Emerald Avenue which continues north.
-
-The Concourse is south of here.
-
-~
-0 1
-D0
-~
-~
-0 -1 3121
-D2
-~
-~
-0 -1 3128
-S
-#3124
-End of Elm Street~
-You are at the end of Elm Street.  An old elm tree grows here.
-
-~
-0 1
+0 -1 3119
 D3
 ~
 ~
-0 -1 3123
-E
-elm tree~
-The fresh young leaves of the elm tree wave gently in the wind.
-
-~
+0 -1 3098
 S
-#3123
-Elm Street~
-You are on Elm street.  Park Road is to the west and Elm Street continues
-
-in eastward direction.
-
-~
+#3100
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
+D0
+~
+~
+0 -1 3080
+D2
+~
+~
+0 -1 3120
+D3
+~
+~
+0 -1 3099
+S
+#3101
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3081
 D1
+~
+~
+0 -1 3102
+D2
+~
+~
+0 -1 3121
+S
+#3102
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3082
+D1
+~
+~
+0 -1 3103
+D2
+~
+~
+0 -1 3122
+D3
+~
+~
+0 -1 3101
+S
+#3103
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3083
+D1
+~
+~
+0 -1 3104
+D2
+~
+~
+0 -1 3123
+D3
+~
+~
+0 -1 3102
+S
+#3104
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3084
+D1
+~
+~
+0 -1 3105
+D2
 ~
 ~
 0 -1 3124
 D3
 ~
 ~
-0 -1 3122
+0 -1 3103
 S
-#3122
-Park Road~
-You are on Park Road which leads south and north.  Elm Street is east of
-
-here.
-
+#3105
+@@WBronze Colonnade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and watch sergeants repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
+~
+0 -1 3085
+D1
+~
+~
+0 -1 3106
+D2
+~
+~
+0 -1 3125
+D3
+~
+~
+0 -1 3104
+S
+#3106
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3086
+D1
+~
+~
+0 -1 3107
+D2
+~
+~
+0 -1 3126
+D3
+~
+~
+0 -1 3105
+S
+#3107
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3087
+D1
+~
+~
+0 -1 3108
+D2
+~
+~
+0 -1 3127
+D3
+~
+~
+0 -1 3106
+S
+#3108
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3088
+D1
+~
+~
+0 -1 3109
+D2
+~
+~
+0 -1 3128
+D3
+~
+~
+0 -1 3107
+S
+#3109
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3089
+D1
+~
+~
+0 -1 3110
+D2
+~
+~
+0 -1 3129
+D3
+~
+~
+0 -1 3108
+S
+#3110
+@@WThe Temple of the Resounding Heart@@N~
+Marble columns rise around a radiant altar where recall sigils are carved into the floor in concentric rings. Bells ring softly in unseen chambers overhead, and @@mincense@@N drifts upward toward the stair that leads to mud school. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+12 1
+D0
+~
+~
+0 -1 3090
+D1
+~
+~
+0 -1 3111
+D2
+~
+~
+0 -1 3130
+D3
+~
+~
+0 -1 3109
+D4
+~
+~
+0 -1 3717
+S
+#3111
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3091
+D1
+~
+~
+0 -1 3112
+D2
+~
+~
+0 -1 3131
+D3
+~
+~
+0 -1 3110
+S
+#3112
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3092
+D1
+~
+~
+0 -1 3113
+D2
+~
+~
+0 -1 3132
+D3
+~
+~
+0 -1 3111
+S
+#3113
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3093
+D1
+~
+~
+0 -1 3114
+D2
+~
+~
+0 -1 3133
+D3
+~
+~
+0 -1 3112
+S
+#3114
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3094
+D1
+~
+~
+0 -1 3115
+D2
+~
+~
+0 -1 3134
+D3
+~
+~
+0 -1 3113
+S
+#3115
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3095
+D1
+~
+~
+0 -1 3116
+D2
+~
+~
+0 -1 3135
+D3
+~
+~
+0 -1 3114
+S
+#3116
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3096
+D1
+~
+~
+0 -1 3117
+D2
+~
+~
+0 -1 3136
+D3
+~
+~
+0 -1 3115
+S
+#3117
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3097
+D1
+~
+~
+0 -1 3118
+D2
+~
+~
+0 -1 3137
+D3
+~
+~
+0 -1 3116
+S
+#3118
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3098
+D1
+~
+~
+0 -1 3119
+D2
+~
+~
+0 -1 3138
+D3
+~
+~
+0 -1 3117
+S
+#3119
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3099
+D1
+~
+~
+0 -1 3120
+D2
+~
+~
+0 -1 3139
+D3
+~
+~
+0 -1 3118
+S
+#3120
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
 ~
 ~
-0 -1 3136
+0 -1 3100
+D2
+~
+~
+0 -1 3140
+D3
+~
+~
+0 -1 3119
+S
+#3121
+@@cThe Grand Post Office@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
+~
+~
+0 -1 3101
+D1
+~
+~
+0 -1 3122
+D2
+~
+~
+0 -1 3141
+S
+#3122
+@@cThe Argent Armory@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
+~
+~
+0 -1 3102
 D1
 ~
 ~
@@ -734,16 +2473,230 @@ D1
 D2
 ~
 ~
+0 -1 3142
+D3
+~
+~
+0 -1 3121
+S
+#3123
+@@cThe Moonthread Outfitters@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
+~
+~
+0 -1 3103
+D1
+~
+~
+0 -1 3124
+D2
+~
+~
+0 -1 3143
+D3
+~
+~
+0 -1 3122
+S
+#3124
+@@cThe Emberglass Arcana@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
+~
+~
+0 -1 3104
+D1
+~
+~
+0 -1 3125
+D2
+~
+~
+0 -1 3144
+D3
+~
+~
+0 -1 3123
+S
+#3125
+@@cThe Provisioner's Exchange@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
+~
+~
+0 -1 3105
+D1
+~
+~
+0 -1 3126
+D2
+~
+~
+0 -1 3145
+D3
+~
+~
+0 -1 3124
+S
+#3126
+@@cThe Invasion Requisitions@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
+~
+~
+0 -1 3106
+D1
+~
+~
+0 -1 3127
+D2
+~
+~
+0 -1 3146
+D3
+~
+~
+0 -1 3125
+S
+#3127
+@@cThe Proposition Exchange@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
+~
+~
+0 -1 3107
+D1
+~
+~
+0 -1 3128
+D2
+~
+~
+0 -1 3147
+D3
+~
+~
 0 -1 3126
 S
-#3121
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  The road leads south and
-
-east.
-
+#3128
+@@cThe Quest Broker's Hall@@N~
+Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+16396 1
+D0
 ~
-0 1
+~
+0 -1 3108
+D1
+~
+~
+0 -1 3129
+D2
+~
+~
+0 -1 3148
+D3
+~
+~
+0 -1 3127
+S
+#3129
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3109
+D1
+~
+~
+0 -1 3130
+D2
+~
+~
+0 -1 3149
+D3
+~
+~
+0 -1 3128
+S
+#3130
+@@WSaffron Walk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and bookbinders repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3110
+D1
+~
+~
+0 -1 3131
+D2
+~
+~
+0 -1 3150
+D3
+~
+~
+0 -1 3129
+S
+#3131
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3111
+D1
+~
+~
+0 -1 3132
+D2
+~
+~
+0 -1 3151
+D3
+~
+~
+0 -1 3130
+S
+#3132
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3112
+D1
+~
+~
+0 -1 3133
+D2
+~
+~
+0 -1 3152
+D3
+~
+~
+0 -1 3131
+S
+#3133
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3113
 D1
 ~
 ~
@@ -751,20 +2704,41 @@ D1
 D2
 ~
 ~
-0 -1 3125
-S
-#3120
-Road Crossing~
-You are in the middle of the road cross.  Roads lead in all directions.
-
-A road sign is here.
-
+0 -1 3153
+D3
 ~
-0 1
+~
+0 -1 3132
+S
+#3134
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
 ~
 ~
+0 -1 3114
+D1
+~
+~
+0 -1 3135
+D2
+~
+~
+0 -1 3154
+D3
+~
+~
 0 -1 3133
+S
+#3135
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3115
 D1
 ~
 ~
@@ -772,69 +2746,20 @@ D1
 D2
 ~
 ~
+0 -1 3155
+D3
+~
+~
 0 -1 3134
-D3
-~
-~
-0 -1 3135
-E
-sign~
-The sign points in all directions:
-
-
-   North - Emerald Avenue.
-
-   East  - Park Road.
-
-   South - Emerald Avenue.
-
-   West  - Park Road.
-
-
-~
 S
-#3119
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  The road leads north and west.
-
-~
-0 1
+#3136
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
 ~
 ~
-0 -1 3117
-D3
-~
-~
-0 -1 3133
-S
-#3118
-Park Road~
-You are on Park Road which leads north and south.
-
-~
-0 1
-D0
-~
-~
-0 -1 3111
-D2
-~
-~
-0 -1 3135
-S
-#3117
-Emerald Avenue~
-You are at Emerald Avenue which continues north and south.  To the west is
-
-the park entrance and to the east is the not very big Town Hall of Midgaard.
-
-~
-0 1
-D0
-~
-~
-0 -1 3132
+0 -1 3116
 D1
 ~
 ~
@@ -842,2023 +2767,1255 @@ D1
 D2
 ~
 ~
-0 -1 3119
+0 -1 3156
 D3
 ~
 ~
-0 -1 3116
+0 -1 3135
 S
-#3116
-Eastern Park Entrance~
-You are standing at the eastern end of the park.  A small path leads west
-
-into the park.  Going east through the entrance you will reach Emerald
-
-Avenue.
-
-~
-4 1
-D1
+#3137
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
 ~
 0 -1 3117
-D3
-~
-~
-0 -1 3115
-S
-#3115
-A path in the park~
-You are in the park.  The paths lead north and east.  Eastwards is the
-
-park entrance and to the west you see a small pond.
-
-~
-0 1
-D0
-~
-~
-0 -1 3109
 D1
 ~
 ~
-0 -1 3116
-D3
-~
-~
-0 -1 3114
-S
-#3114
-The Pond~
-You are swimming around in the pond, feeling rather stupid.  You can get
-
-back on the path from the eastern and western end of the pond.
-
-~
-0 6
-D1
-~
-~
-0 -1 3115
-D3
-~
-~
-0 -1 3113
-S
-#3113
-A path in the park~
-You are in the park.  The paths lead north and west.  Westwards is the
-
-park entrance and to the east you see a small pond.
-
-~
-0 1
-D0
-~
-~
-0 -1 3107
-D1
-You see the pond.
-
-~
-~
-0 -1 3114
-D3
-You see the western park entrance.
-
-~
-~
-0 -1 3112
-S
-#3112
-Western Park Entrance~
-You are standing at the western end of the park.  A small path leads east
-
-into the park and going west through the entrance you will reach Park Road.
-
-~
-4 1
-D1
-~
-~
-0 -1 3113
-D3
-~
-~
-0 -1 3111
-S
-#3111
-Park Road~
-The road continues north and south.  A building is just west of here, you
-
-notice a sign on the door.  The park entrance is to the east.
-
-~
-0 1
-D0
-~
-~
-0 -1 3131
-D1
-You see the park entrance.
-
-~
-~
-0 -1 3112
+0 -1 3138
 D2
+~
+~
+0 -1 3157
+D3
+~
+~
+0 -1 3136
+S
+#3138
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
 ~
 0 -1 3118
-D3
-You see the cityguard head quarters.
-
-~
-door~
-1 -1 3110
-E
-building door sign~
-The sign on the door says:-
-
-
-		 Cityguard Head Quarters
-
-~
-S
-#3110
-Cityguard Head Quarters~
-You are inside a tidy office.  A big desk made from dark wood is standing
-
-in the centre of the room.
-
-~
-8 11
 D1
-You see Park Road.
-
 ~
-door~
-1 -1 3111
-D3
-You see a sign saying 'KEEP OUT'.
-
 ~
-door~
-1 3120 3142
-S
-#3109
-Small path in the park~
-You are on a small path running through the park.  It continues west and
-
-south and just north of here you see the southern wall of Park Cafe.
-
-~
-0 1
+0 -1 3139
 D2
 ~
 ~
-0 -1 3115
+0 -1 3158
 D3
 ~
 ~
-0 -1 3108
+0 -1 3137
 S
-#3108
-Small path in the park~
-You are standing on a small path inside the park.  The park entrance is
-
-just north of here, and Park Cafe is just east of the entrance.  The path
-
-leads further east and west.
-
+#3139
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
+~
+0 -1 3119
+D1
+~
+~
+0 -1 3140
+D2
+~
+~
+0 -1 3159
+D3
+~
+~
+0 -1 3138
+S
+#3140
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
-You see the northern park entrance.
-
 ~
 ~
-0 -1 3105
-D1
-~
-~
-0 -1 3109
-D3
-~
-~
-0 -1 3107
-S
-#3107
-Small path through the park~
-You are walking along a small path through the park.  The path continues
-
-south and east.
-
-~
-0 1
-D1
-~
-~
-0 -1 3108
+0 -1 3120
 D2
 ~
 ~
-0 -1 3113
-S
-#3106
-Park Cafe~
-You are inside Park Cafe, a very well lighted, cosy place. The cafe
-
-is built from large logs. Through the windows in the northern wall you
-
-see the river, and through the southern window you see many vigorous
-
-colorful plants.
-
-~
-8 11
+0 -1 3160
 D3
-You see the park entrance.
-
 ~
 ~
-0 -1 3105
+0 -1 3139
 S
-#3105
-Park Entrance~
-You are standing just inside the small park of Midgaard.  To the north is
-
-the promenade and a small path leads south into the park.  To your east is
-
-the famous Park Cafe.
-
-~
-4 1
-D0
-You see the promenade.
-
-~
-~
-0 -1 3102
-D1
-You see Park Cafe.
-
-~
-~
-0 -1 3106
-D2
-You see the park.
-
-~
-~
-0 -1 3108
-S
-#3104
-Northeast end of Concourse~
-You are at the Concourse.  The city wall is just east and a small
-
-promenade goes west.  Looking across the river you see a building that
-
-resembles a warehouse.  The Concourse continues south along the city wall.
-
-~
-0 1
-D2
-The Concourse continues south.
-
-~
-~
-0 -1 3130
-D3
-You see the promenade.
-
-~
-~
-0 -1 3103
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-S
-#3103
-Promenade~
-The river gently flows west just north of here.  The promenade continues
-
-both east and west.  A small path leads south.  Looking across the river you
-
-see the levee.
-
-~
-0 1
-D1
-You see the Concourse.
-
-~
-~
-0 -1 3104
-D2
-The small path leads south.
-
-~
-~
-0 -1 3132
-D3
-You see the promenade.
-
-~
-~
-0 -1 3102
-S
-#3102
-Promenade~
-The river gently flows west just north of here.  The promenade continues
-
-both east and west.  South of here you see the entrance to the park, and a
-
-small building seems to be just west of the entrance.
-
-~
-0 1
-D1
-You see the promenade.
-
-~
-~
-0 -1 3103
-D2
-You see the park entrance.
-
-~
-~
-0 -1 3105
-D3
-You see the promenade.
-
-~
-~
-0 -1 3101
-S
-#3101
-Promenade~
-The river gently flows west just north of here.  The promenade continues
-
-further east and to the west you see the city wall.  Park Road leads south
-
-from here.
-
-~
-0 1
-D1
-The promenade.
-
-~
-~
-0 -1 3102
-D2
-Park Road leads south.
-
-~
-~
-0 -1 3131
-D3
-You see the Concourse.
-
-~
-~
-0 -1 3100
-S
-#3100
-Northwest end of Concourse~
-You are at the concourse, the city wall is just west.  A small promenade
-
-goes east, and the bridge is just north of here.  The concourse continues
-
-south along the city wall.
-
-~
+#3141
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
-You see the Bridge.
-
 ~
 ~
-0 -1 3051
+0 -1 3121
 D1
-You see the promenade.
-
 ~
 ~
-0 -1 3101
+0 -1 3142
 D2
-The promenade continues far south.
-
+~
+~
+0 -1 3161
+S
+#3142
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3122
+D1
+~
+~
+0 -1 3143
+D2
+~
+~
+0 -1 3162
+D3
+~
+~
+0 -1 3141
+S
+#3143
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3123
+D1
+~
+~
+0 -1 3144
+D2
+~
+~
+0 -1 3163
+D3
+~
+~
+0 -1 3142
+S
+#3144
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3124
+D1
+~
+~
+0 -1 3145
+D2
+~
+~
+0 -1 3164
+D3
+~
+~
+0 -1 3143
+S
+#3145
+@@WBronze Colonnade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and watch sergeants repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3125
+D1
+~
+~
+0 -1 3146
+D2
+~
+~
+0 -1 3165
+D3
+~
+~
+0 -1 3144
+S
+#3146
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3126
+D1
+~
+~
+0 -1 3147
+D2
+~
+~
+0 -1 3166
+D3
+~
+~
+0 -1 3145
+S
+#3147
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
 ~
 0 -1 3127
-S
-#3057
-Entrance to the Valkyrie~
-WOW you can fly!  You are floating in the air above Temple Square of Midgaard.
-
-
-A ladder leading to the Valkyrie clan room has been left here.
-
-~
-4 9
-D5
-Back down on the earth where you should be!
-
-~
-~
-0 0 3005
-S
-#3054
-By the Temple Altar~
-You are by the temple altar in the northern end of the Temple of Midgaard.
-
-A huge altar made from white polished marble is standing in front of you and
-
-behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
-
-To the West is the meeting point of the Immortal and mortal worlds and to the East lies the Quest Room.
-
-~
-132106 11
-D2
-You see the southern end of the temple.
-
-~
-~
-0 -1 3001
-D4
-~
-~
-0 -1 3085
-D5
-~
-~
-0 -1 3086
-E
-statue odin king god~
-The statue represents the one-eyed Odin sitting on a his throne.  He has
-
-long, grey hair and beard and a strict look on his face.  On top of the
-
-throne, just above his shoulders, his two ravens Hugin and Munin are sitting
-
-and at his feet are his wolves Gere and Freke.
-
-~
-E
-altar~
-Even though the altar is more than ten feet long it appears to be made from a
-
-single block of white virgin marble.
-
-~
-S
-#3053
-Outside the East Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-
-connected with a footbridge across the heavy wooden gate.  To the east is the
-
-Midgaard Road. To the north a small dusty trail follow the city wall.  
-
-A new path leads to the south.....
-
-~
-0 1
 D1
 ~
 ~
-0 -1 8500
+0 -1 3148
+D2
+~
+~
+0 -1 3167
 D3
-You see the city gate.
-
 ~
 ~
-1 3133 3041
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-
-each other with some kind of mortar, just like the city wall.
-
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-
-reinforced with large iron bands to make them even more sturdy.  One of the
-
-doors is equipped with a very big lock.
-
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-
-from one tower to the other.
-
-~
+0 -1 3146
 S
-#3052
-Outside the West Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-
-connected with a footbridge across the heavy wooden gate.  To the west you
-
-can see Roc Road, which runs to the West.
-
+#3148
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
-0 1
+~
+0 -1 3128
 D1
-The city gate is to the east.
-
 ~
 ~
-1 3133 3040
+0 -1 3149
+D2
+~
+~
+0 -1 3168
 D3
-Roc Road.
-
 ~
 ~
-0 -1 3230
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-
-each other with some kind of mortar, just like the city wall.
-
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-
-reinforced with large iron bands to make them even more sturdy.  One of the
-
-doors is equipped with a very big lock.
-
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-
-from one tower to the other.
-
-~
+0 -1 3147
 S
-#3051
-On the Bridge~
-You are standing on the stone bridge crosses the river.  The bridge is
-
-built out from the western city wall and the river flows west through an
-
-opening in the wall ten feet below the bridge.
-
-~
-0 1
+#3149
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
-You see the road.
-
 ~
 ~
-0 -1 3047
-D2
-You see the Concourse.
-
-~
-~
-0 -1 3100
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-E
-opening~
-You cannot really see it from here as it is somewhere beneath your feet.
-
-~
-E
-bridge~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar, just like the wall.
-
-~
-S
-#3050
-The Unused Whorehouse~
-This rundown house used to be the "Escort Service" for those citizens of
-
-~
-8 11
-D0
-You see the alley.
-
-~
-~
-0 -1 3046
-S
-#3049
-Levee~
-You are at the levee.  South of here you see the river gently flowing west.
-
-~
-0 1
-D0
-You see the Alley.
-
-~
-~
-0 -1 3045
-S
-#3048
-Grubby Inn~
-You are inside the old Grubby Inn.  This place has not been cleaned for
-
-several decades, vile smells make you dizzy.
-
-~
-1032 11
-D0
-You see the alley.
-
-~
-~
-0 -1 3024
-S
-#3047
-Wall Road~
-You are standing on the road next to the western city wall which
-
-continues north.  South of here is a bridge across the river.
-
-~
-0 1
-D0
-You see the road.
-
-~
-~
-0 -1 3043
-D2
-You see the bridge.
-
-~
-~
-0 -1 3051
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-S
-#3046
-Eastern end of Alley~
-You are standing at the eastern end of the alley, the city wall is just
-
-east, blocking any further movement.  An old three-story warehouse is
-
-directly south of here.
-
-~
-0 1
-D2
-You see the warehouse.
-
-~
-~
-0 -1 3050
-D3
-You see the alley.
-
-~
-~
-0 -1 3045
-S
-#3045
-Alley at Levee~
-You are standing in the alley which continues east and west.  South of
-
-here you see the levee.  North is the Pet Shop.
-
-~
-0 1
-D0
-You see, hear, and smell the pet shop.
-
-~
-~
-0 0 3031
+0 -1 3129
 D1
-The alley leads east.
-
 ~
 ~
-0 -1 3046
+0 -1 3150
 D2
-You see the levee.
-
 ~
 ~
-0 -1 3049
+0 -1 3169
 D3
-The alley leads west.
-
 ~
 ~
-0 -1 3026
+0 -1 3148
 S
-#3044
-Poor Alley~
-You are in narrow and dirty alley leading east and west.  The leather shop
-
-is to the north.
-
-~
-0 1
+#3150
+@@WSaffron Walk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and bookbinders repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
-The leather shop is to the north.
-
 ~
 ~
-0 -1 3035
+0 -1 3130
 D1
-The alley leads east.
-
 ~
 ~
-0 -1 3024
+0 -1 3151
+D2
+~
+~
+0 -1 3170
 D3
-The alley leads west.
-
 ~
 ~
-0 -1 3043
+0 -1 3149
 S
-#3043
-Wall Road~
-You are walking next to the western city wall.  Wall Road continues further
-
-north and south.  A small, poor alley leads east.
-
-Some letters have been written on the wall here.
-
-~
-0 1
+#3151
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
-The road continues further north.
-
 ~
 ~
-0 -1 3042
+0 -1 3131
 D1
-The alley leads east.
-
 ~
 ~
-0 -1 3044
+0 -1 3152
 D2
-The road continues further south.
-
 ~
 ~
-0 -1 3047
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-E
-letters~
-It says 'Who watches the watchmen?'
-
-~
-S
-#3042
-Wall Road~
-You are walking next to the western city wall.  The road continues further
-
-south and the city gate is just north of here.
-
-~
-0 1
-D0
-You see the city gate.
-
-~
-~
-0 -1 3040
-D2
-The road continues further south.
-
-~
-~
-0 -1 3043
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-S
-#3041
-Inside the East Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-
-connected with a footbridge across the heavy wooden gate.  Main Street leads
-
-west from here.  South of here is the wall road, but it looks dirty and 
-
-not too safe.
-
-~
-0 1
-D1
-You see the city gate.
-
-~
-~
-1 3133 3053
+0 -1 3171
 D3
-You see Main Street.~
 ~
-0 -1 3016
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
 ~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-
-each other with some kind of mortar, just like the city wall.
-
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-
-reinforced with large iron bands to make them even more sturdy.  One of the
-
-doors is equipped with a very big lock.
-
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-
-from one tower to the other.
-
-~
+0 -1 3150
 S
-#3040
-Inside the West Gate of Midgaard~
-You are by two small towers that have been built into the city wall and
-
-connected with a footbridge across the heavy wooden gate.  Main Street leads
-
-east and Wall Road leads south from here.
-
+#3152
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
-0 1
+~
+0 -1 3132
 D1
-You see Main Street.
-
 ~
 ~
-0 -1 3012
+0 -1 3153
 D2
-You see the road running along the inner side of the city wall.  You notice
-
-that it is called Wall Road.
-
 ~
 ~
-0 -1 3042
+0 -1 3172
 D3
-The city gate is to the west.
-
 ~
 ~
-1 3133 3052
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-
-some kind of mortar.  It is far too high to climb.
-
-~
-E
-tower towers~
-Both of the towers are built from large grey rocks that have been fastened to
-
-each other with some kind of mortar, just like the city wall.
-
-~
-E
-gate~
-It is a set of very big double doors made from hard wood.  They have been
-
-reinforced with large iron bands to make them even more sturdy.  One of the
-
-doors is equipped with a very big lock.
-
-~
-E
-bridge footbridge~
-It is too high up to reach but it looks as if one easily could walk across it
-
-from one tower to the other.
-
-~
+0 -1 3151
 S
-#3035
-The Leather Shop~
-An acrid smell fills this large room.  Along the walls are numerous
-
-shelves containing all sorts of animal hide and in the crackling fireplace
-
-hangs a big iron pot with boiling water.  In the middle of the room is a
-
-large oak table.
-
-A wooden sign is hanging above the fireplace.
-
-~
-1032 11
-D2
-You see the alley.
-
-~
-~
-0 -1 3044
-E
-sign~
-The wooden sign says :-
-
-
-    Use 'list' to see what is in store,
-
-	'buy <item>' to buy an item,
-
-	'sell <item>' to sell an item and
-
-	'value <item>' to make the leather worker evaluate an item.
-
-~
-E
-pot~
-Several large pieces of leather hide are boiling in the iron pot.
-
-~
-E
-table~
-It is made from solid oak but appears to be very used.  Its surface is
-
-covered in marks and scratches.  A large burning candle stands directly on
-
-the table surface, tallow flowing down its sides.
-
-~
-E
-fireplace~
-It is a rather large fireplace made from heavy granite rocks.
-
-~
-S
-#3034
-The Jeweller's Shop~
-You are in a small, beautifully furnished room.  The warm light emanating from
-
-the small oil lamps on the walls is reflected in the hard, polished surface of
-
-the big mahogany desk that stands in the centre of the room. A small sign with
-
-golden letters stands on the desk.
-
-~
-1032 11
+#3153
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
-You see Main Street.
-
 ~
 ~
-0 -1 3015
-E
-sign~
-The golden letters say :-
-
-
-    Use 'list' to see what is in store,
-
-	'buy <item>' to buy an item,
-
-	'sell <item>' to sell an item and
-
-	'value <item>' to make the jeweller evaluate an item.
-
-~
-E
-desk~
-Your face is reflected in its surface.
-
-~
-E
-oil lamps~
-They are made from polished gold and looks as if they are securely fastened
-
-to the smooth stone walls.
-
-~
-S
-#3033
-The Magic Shop~
-You are in a small room that smells of rare chemicals and spices.
-
-Dividing the room in two is a large desk, and on the wall behind it are
-
-numerous shelves crammed with jars, bottles, books and scrolls of all
-
-sorts and sizes.
-
-~
-1032 11
-D2
-You see the main street.
-
-~
-~
-0 -1 3012
-E
-scrolls~
-Each scroll is stored in a leather tube that protects it from moist.
-
-~
-E
-books~
-Most of them appear to be very old and dusty.
-
-~
-E
-jars bottles~
-Some of them are transparent enabling you to see that some contain colored
-
-powders while others contain body parts of various animals.
-
-~
-S
-#3032
-Pet Shop Store~
-This is the small dark room in which the Pet Shop Boy keeps his pets.
-
-It is vital that this room be immediately after the pet shop.
-
-~
-12 11
-S
-#3031
-The Pet Shop~
-The Pet Shop is a small crowded store, full of cages and animals of
-
-various sorts and sizes.  There is a sign on the wall.
-
-~
-5128 11
-D2
-You see the Alley.
-
-~
-~
-0 -1 3045
-E
-sign~
-The sign reads:
-
-
-  Use 'List' to see the available pets.
-
-  Use 'Buy <pet> <name>' to buy yourself a pet and name it.
-
-
-  You can use 'order <pet> <instructions>' to order your pets around.
-
-  If you abuse your pet, it will no longer regard you as its master.
-
-  If you have several pets you may use 'order all <instructions>'
-
-
- Regards,
-
-
-   The Shopkeeper
-
-~
-S
-#3030
-The Dump~
-(Dwf) An adorable leper stands here rotting quietly.
-
-~
-4 2
-D0
-You see the common square.
-
-~
-~
-0 -1 3025
-D2
-~
-~
-0 -1 7302
-D4
-~
-~
-0 -1 3056
-D5
-~
-~
-0 -1 30175
-S
-#3029
-Abandoned Warehouse~
-You are inside the only room in the old warehouse.  The place is very dusty
-
-and appears to have been unused for many years.  The skylight spills
-
-violet-tinged light.
-
-~
-8 11
-D0
-The Dark Alley.
-
-~
-~
-0 -1 3026
-E
-sign~
--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
-
-xWELCOME TO THE BLACK DETH'S CORPSE RETRIEVAL SERVICE!                        x
-
--                                                                             -
-
-x If you've died, and were unable to get back to your corpse, why not let the x
-
-- Black Deth use his dark powers to summon forth your rotting remains?        -
-
-x We offer reasonable rates:                                                  x
-
--                                                                             -
-
-x       Levels 1 to 10 : 1000 gold coins.                                     x
-
--       Levels 11 +    : 3000 gold coins.                                     -
-
-x                                                                             x
-
--                        Please note:                                         -
-
-x 1) NO REFUNDS!                                                              x
-
-- 2) If you pay for the Black Deth's services, and receive no corpse, tough.  -
-
-x 3) You will only receive the first corpse the Black Deth finds with his     x
-
--    dark powers.  So try not to die everywhere and expect him to get         -
-
-x    the corpse with your equipment first time.  Remember, time IS money!     x
-
-- 4) The prices shown are likely to change at any time.                       -
-
-x 5) E&OE                                                                     x
-
--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
-
-~
-S
-#3026
-The Dark Alley~
-The dark alley, to the west is the common square.  The alley continues east.
-
-A forboding unused whorehouse lies to the south.
-
-~
-0 1
+0 -1 3133
 D1
-The alley continues east.
-
 ~
 ~
-0 -1 3045
+0 -1 3154
 D2
-The Unused Whorehouse.
-
 ~
 ~
-0 -1 3029
+0 -1 3173
 D3
-You see the common square.
-
 ~
 ~
-0 -1 3025
+0 -1 3152
 S
-#3025
-The Common Square~
-The common square, people pass you, talking to each other.  To the west is
-
-the poor alley and to the east is the dark alley.  To the north, this square
-
-is connected to the market square.  From the south you notice a nasty smell.
-
-~
-0 1
+#3154
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
 D0
-You see the market square.
-
 ~
 ~
-0 -1 3014
+0 -1 3134
 D1
-You see the dark alley.
-
 ~
 ~
-0 -1 3026
+0 -1 3155
 D2
-You see the city dump.
-
 ~
 ~
-0 -1 3030
+0 -1 3174
 D3
-You see the poor alley.
-
 ~
 ~
-0 -1 3024
-D5
-~
-~
-0 -1 21000
+0 -1 3153
 S
-#3024
-Eastern End of Poor Alley~
-You are at the poor alley.  South of here is the Grubby Inn and to the
-
-east you see common square.  The alley continues further west.
-
+#3155
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
+~
+0 -1 3135
+D1
+~
+~
+0 -1 3156
+D2
+~
+~
+0 -1 3175
+D3
+~
+~
+0 -1 3154
+S
+#3156
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3136
+D1
+~
+~
+0 -1 3157
+D2
+~
+~
+0 -1 3176
+D3
+~
+~
+0 -1 3155
+S
+#3157
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3137
+D1
+~
+~
+0 -1 3158
+D2
+~
+~
+0 -1 3177
+D3
+~
+~
+0 -1 3156
+S
+#3158
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3138
+D1
+~
+~
+0 -1 3159
+D2
+~
+~
+0 -1 3178
+D3
+~
+~
+0 -1 3157
+S
+#3159
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3139
+D1
+~
+~
+0 -1 3160
+D2
+~
+~
+0 -1 3179
+D3
+~
+~
+0 -1 3158
+S
+#3160
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
 ~
 ~
-0 -1 3039
-D1
-You see the common square.
-
-~
-~
-0 -1 3025
+0 -1 3140
 D2
-You see the Inn.
-
 ~
 ~
-0 -1 3048
+0 -1 3180
 D3
-You see the poor alley.
-
 ~
 ~
-0 -1 3044
+0 -1 3159
 S
-#3020
-The Armoury~
-The armoury with all kinds of armours on the walls and in the window.  You
-
-see helmets, shields and chain mails.  To the north is the main street.
-
-On the wall is a small note.
-
-~
-1032 11
-D0
-You see the main street.
-
-~
-~
-0 -1 3013
-E
-note~
-You can use these commands for trading:
-
-
-  value <item>     To get the price of an item in your possession.
-
-  sell <item>      To sell something.
-
-  buy <item>       To buy something (provided that the shop has it in store).
-
-  list             Gives you a listing of the shop's inventory.
-
-
-	WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
-
-			     NO HAGGLING
-
-~
-S
-#3016
-The Main Street~
-The main street, to the north is the weapon shop.  To the east you leave town
-
-and to the west the street leads to the market square. A doorway to the south
-
-marks the entrance to the Sample House.
-
-~
+#3161
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
-You see the weapon shop.
-
 ~
 ~
-0 -1 3011
+0 -1 3141
 D1
-You see the city gate.
-
 ~
 ~
-0 -1 3041
+0 -1 3162
 D2
 ~
 ~
-0 -1 1001
-D3
-You see the main street leading to the market square.
-
-~
-~
-0 -1 3015
+0 -1 3181
 S
-#3015
-The Main Street~
-You are on Main Street crossing through town.  To the north is the general
-
-store, and the main street continues east.  To the west you see and hear the
-
-market place and to the south is the Jeweller's Shop.
-
+#3162
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
 ~
+~
+0 -1 3142
+D1
+~
+~
+0 -1 3163
+D2
+~
+~
+0 -1 3182
+D3
+~
+~
+0 -1 3161
+S
+#3163
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3143
+D1
+~
+~
+0 -1 3164
+D2
+~
+~
+0 -1 3183
+D3
+~
+~
+0 -1 3162
+S
+#3164
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3144
+D1
+~
+~
+0 -1 3165
+D2
+~
+~
+0 -1 3184
+D3
+~
+~
+0 -1 3163
+S
+#3165
+@@WBronze Colonnade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and watch sergeants repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3145
+D1
+~
+~
+0 -1 3166
+D2
+~
+~
+0 -1 3185
+D3
+~
+~
+0 -1 3164
+S
+#3166
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3146
+D1
+~
+~
+0 -1 3167
+D2
+~
+~
+0 -1 3186
+D3
+~
+~
+0 -1 3165
+S
+#3167
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3147
+D1
+~
+~
+0 -1 3168
+D2
+~
+~
+0 -1 3187
+D3
+~
+~
+0 -1 3166
+S
+#3168
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3148
+D1
+~
+~
+0 -1 3169
+D2
+~
+~
+0 -1 3188
+D3
+~
+~
+0 -1 3167
+S
+#3169
+@@WGranite Arcade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and scribes repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3149
+D1
+~
+~
+0 -1 3170
+D2
+~
+~
+0 -1 3189
+D3
+~
+~
+0 -1 3168
+S
+#3170
+@@WSaffron Walk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and bookbinders repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3150
+D1
+~
+~
+0 -1 3171
+D2
+~
+~
+0 -1 3190
+D3
+~
+~
+0 -1 3169
+S
+#3171
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3151
+D1
+~
+~
+0 -1 3172
+D2
+~
+~
+0 -1 3191
+D3
+~
+~
+0 -1 3170
+S
+#3172
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3152
+D1
+~
+~
+0 -1 3173
+D2
+~
+~
+0 -1 3192
+D3
+~
+~
+0 -1 3171
+S
+#3173
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3153
+D1
+~
+~
+0 -1 3174
+D2
+~
+~
+0 -1 3193
+D3
+~
+~
+0 -1 3172
+S
+#3174
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3154
+D1
+~
+~
+0 -1 3175
+D2
+~
+~
+0 -1 3194
+D3
+~
+~
+0 -1 3173
+S
+#3175
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3155
+D1
+~
+~
+0 -1 3176
+D2
+~
+~
+0 -1 3195
+D3
+~
+~
+0 -1 3174
+S
+#3176
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3156
+D1
+~
+~
+0 -1 3177
+D2
+~
+~
+0 -1 3196
+D3
+~
+~
+0 -1 3175
+S
+#3177
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3157
+D1
+~
+~
+0 -1 3178
+D2
+~
+~
+0 -1 3197
+D3
+~
+~
+0 -1 3176
+S
+#3178
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3158
+D1
+~
+~
+0 -1 3179
+D2
+~
+~
+0 -1 3198
+D3
+~
+~
+0 -1 3177
+S
+#3179
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+1 1
+D0
+~
+~
+0 -1 3159
+D1
+~
+~
+0 -1 3180
+D2
+~
+~
+0 -1 3199
+D3
+~
+~
+0 -1 3178
+S
+#3180
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
-You see the general store.
-
 ~
 ~
-0 -1 3010
-D1
-You see Main Street.
-
-~
-~
-0 -1 3016
+0 -1 3160
 D2
-You see the Jeweller's Shop.
-
 ~
 ~
-0 -1 3034
+0 -1 3200
 D3
-You see the market square.
-
 ~
 ~
-0 -1 3014
+0 -1 3179
 S
-#3014
-Market Square~
-You are standing on the market square, the famous Square of Midgaard. A
-
-large,  peculiar looking statue is standing in the middle of the square. Roads
-
-lead in  every direction, north to the temple square, south to the common
-
-square, east   and westbound is the main street.  Some small steps lead down
-
-below the Square.
-
-~
+#3181
+@@WCedar Square@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
-You see the temple square.
-
 ~
 ~
-0 -1 3005
+0 -1 3161
 D1
-You see the main street.
-
 ~
 ~
-0 -1 3015
-D2
-You see the common square.
-
-~
-~
-0 -1 3025
-D3
-You see the main street.
-
-~
-~
-0 -1 3013
-D4
-~
-~
-0 -1 3062
-D5
-Some steps lead this way....
-
-~
-~
-1 -1 9551
-E
-statue~
-What you see is the Midgaard Worm, stretching around the Palace of Midgaard.
-
-~
+0 -1 3182
 S
-#3013
-Main Street~
-You are on the main street passing through the City of Midgaard.  South of
-
-here is the entrance to the Armoury, and the bakery is to the north.  East of
-
-here is the market square.
-
-~
+#3182
+@@WSilver Marketwalk@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
-You see the bakery.
-
 ~
 ~
-0 -1 3009
+0 -1 3162
 D1
-You see the market square.
-
 ~
 ~
-0 -1 3014
-D2
-You see the armoury.
-
-~
-~
-0 -1 3020
+0 -1 3183
 D3
-You see the main street.
-
 ~
 ~
-0 -1 3012
+0 -1 3181
 S
-#3012
-Main Street~
-You are at the end of the main street of Midgaard.  The street continues 
-
-east towards the market square.  The magic shop is to the north and to the 
-
-west is the city gate.
-
-~
+#3183
+@@WCrimson Concourse@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
 D0
-You see the magic shop.
-
 ~
 ~
-0 -1 3033
+0 -1 3163
 D1
-You see the main street.
-
 ~
 ~
-0 -1 3013
-D2
-~
-~
-0 -1 1022
+0 -1 3184
 D3
-You see the city gate.
-
 ~
 ~
-0 -1 3040
+0 -1 3182
 S
-#3011
-The Weapon Shop~
-You are inside the weapon shop.  There is a small note on the counter.
-
-~
-1032 11
-D2
-You see the main street.
-
+#3184
+@@WAuburn Traverse@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and chanters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
 ~
 ~
-0 -1 3016
-E
-note~
-The note reads:
-
-
-  List  - Show which various items are in the store.
-
-  Buy   - Buy an item.
-
-  Value - The shopkeeper will (free of charge) tell how much he will
-
-	  pay for your item.
-
-  Sell  - Sell an item.
-
-~
-S
-#3010
-The General Store~
-You are inside the general store.  All sorts of items are stacked on shelves
-
-behind the counter, safely out of your reach.
-
-A small note hangs on the wall.
-
-~
-1032 11
-D2
-You see the main street.
-
-~
-~
-0 -1 3015
-E
-note~
-The note reads:
-
-
-  List  - Show which various items are in the store.
-
-  Buy   - Buy an item.
-
-  Value - The shopkeeper will (free of charge) tell how much he will
-
-	  pay for your item.
-
-  Sell  - Sell an item.
-
-~
-S
-#3009
-The Bakery~
-You are standing inside the small bakery.  A sweet scent of Danish and
-
-fine bread fills the room.  The bread and Danish are arranged in fine order
-
-on the shelves, and seem to be of the finest quality.
-
-A small sign is on the counter.
-
-~
-1036 11
-D2
-You see the main street.
-
-~
-~
-0 -1 3013
-E
-sign~
-Free instructions provided by the store:
-
-
-   Buy  - Will buy you some bread or pastry.
-
-   List - The baker will kindly tell you the price and sort of the bread in
-
-	  his bakery.
-
-~
-E
-danish pastry~
-You see that this is truly delicious pastry.  Must be made by a Dane from
-
-Denmark (which surely is not the capital of Sweden!).  Former ruler of
-
-Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
-
-Iceland, Estonia etc. etc.
-
-   The sight of those large, wholesome chokoladeboller makes your mouth water
-
-and your soul sing.
-
-
-~
-S
-#3008
-The lover's hideaway.~
-A quiet, ornately furnished room, for you to sit and chat with your loved one.
-
-Relax for a while, get the strains out of your system. In fact, its really
-
-just a glorified private room isnt it.
-
-~
-1548 11
-D4
-~
-~
-0 -1 3037
-D5
-You see the entrance hall.
-
-~
-~
-0 -1 3006
-S
-#3007
-The Grunting Boar~
-You are standing in the bar.  The bar is set against the northern wall, old
-
-archaic writing, carvings and symbols cover its top.  A fireplace is built into
-
-the western wall, and through the southeastern windows you can see the temple
-
-square.  This place makes you feel like home.
-
-A small sign with big letters is fastened to the bar.
-
-~
-8 11
-D3
-You see the exit to the entrance hall.
-
-~
-~
-0 -1 3006
-E
-writing carving carvings symbols symbol~
-Although it is very hard to understand, you think it looks a lot like beer,
-
-poems about beer, and small beer-mugs.
-
-~
-E
-sign~
-The sign reads:
-
-Free instructions provided by the Grunting Boar Inn.
-
-
-   Buy  - Buy something (drinkable) from the bartender.
-
-   List - The bartender will show you all the different drinks and
-
-	  specialties, and tell the price of each.
-
-~
-S
-#3006
-Entrance to the Grunting Boar Inn~
-You are standing in the entrance hall of the Grunting Boar Inn.  The hall
-
-has been wisely decorated with simple but functional furniture.  A small
-
-staircase leads up to the defunct reception room and the bar is to the east.
-
-~
-8 11
+0 -1 3164
 D1
-Surprise! You see the bar.
-
 ~
 ~
-0 -1 3007
+0 -1 3185
 D3
-You see the temple square.
-
 ~
 ~
-0 -1 3005
-D4
-You see the defunct reception room.
-
-~
-~
-0 -1 3008
+0 -1 3183
 S
-#3005
-The Temple Square~
-You are standing in Temple Square. Huge, marble steps lead up to the Temple
-
-Gate. Ye Old Grunting Boar Inn lies to the east. South of you is Market Square
-
-the center of Midgaard.
-
-~
-16400 1
+#3185
+@@WBronze Colonnade@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and watch sergeants repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D0
-You see the temple.
-
 ~
 ~
-0 -1 3001
+0 -1 3165
 D1
-You see the good old Grunting Boar Inn.
-
 ~
 ~
-0 -1 3006
-D2
-You see the Market Square.
-
-~
-~
-0 -1 3014
+0 -1 3186
 D3
 ~
 ~
-0 -1 3038
-D4
-~
-~
-0 -1 3057
-D5
-~
-~
-0 -1 30100
+0 -1 3184
 S
-#3001
-The Temple Of Midgaard~
-@@WYou stand at the southern end of the Temple Hall in the Temple of Midgaard.
-
-The Temple has been constructed from giant marble blocks, eternal in
-
-appearance.  Most of the walls are covered by ancient murals depicting Gods,
-
-Giants and peasants.
-
-   Large steps lead down through the Grand Temple Gate, descending the huge
-
-mound upon which the temple is built ending at the Temple Square below.
-
-   Equally large steps lead UP through a small door into the ENTRANCE to MUD
-
-SCHOOL.  (type '@@yup@@W' to go to @@RMUD SCHOOL@@W.)
-
-You see a small plaque and spy a small doorway to the east, which looks like
-
-it was just made, as well as a Grand Archway to the west.
-
-  The Temple itself with the Midgaard Healer lie North of here.
-
-~
-213020 8
+#3186
+@@WSunward Way@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and carters repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D0
-At the northern end of the temple hall is a statue and a huge altar.
-
 ~
 ~
-0 -1 3054
+0 -1 3166
 D1
-The Donation Area.
-
 ~
 ~
-0 -1 3021
-D2
-You see the temple square.
-
-~
-~
-0 -1 3005
-D3
-The Entrance Hall to the Player's Rooms.
-
-~
-~
-0 -1 1101
-D4
-~
-~
-0 -1 3700
-D5
-~
-~
-0 -1 3002
-E
-plaque~
-This entire world has been integrated, modified, debugged, and enhanced by
-
-Hatchet, Kahn, and Furey of MERC Industries to be run by any MERC Mud.
-
-1992 December 17
-
-~
-S
-#3002
-The Bank of Midgaard~
-You are in a small room, home to the Midgaard branch of Globank, the bank that
-
-likes to say no.  The room is very small, and looks like most other banks
-
--silent, and well-kept.  You hate it already.
-
- 
-
- 
-
-@@lYou notice a shadowy form in the corner, seemingly casing the joint.@@N
-
-~
-8 11
-D0
-~
-~
-0 -1 3003
+0 -1 3187
 D3
 ~
 ~
-0 -1 3004
-D4
-~
-~
-0 -1 3001
+0 -1 3185
 S
-#3003
-The Idea Board Room~
-~
-8 11
-D2
-~
-~
-0 -1 3002
-S
-#3037
-Calm room of relaxation and meditation.~
-Theres a natural mystic flowing through the air, and if you listen carefully
-
-you will hear, sweet sweet sounds of trickling water, gentle chiming and winds
-
-stirring through forrests. Calm feelings pervade the air, and you breathe
-
-deeply in an atmosphere of true relaxation and utmost tranquility
-
- 
-
-~
-1562 11
-D5
-~
-~
-0 -1 3008
-S
-#3058
-A dusty trail into nowhere~
-Managing to escape the hustle and bustle of Midgaard, you now find yourself
-
-standing in the middle of an open field...Dusty trails lead in all directions
-
-to what appears to be.....a farm?!?!?!
-
-~
-1024 2
+#3187
+@@WMarble Ring@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and spice factors repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D0
 ~
 ~
-0 -1 3059
-S
-#3059
-Leading to the pond~
-The tall grass starts to creep up on your sides, as the smell of water and
-
-green grass linger in the air. Gazing towards the north more you can barely
-
-make out what appears to be a pond.
-
+0 -1 3167
+D1
 ~
-1024 2
+~
+0 -1 3188
+D3
+~
+~
+0 -1 3186
+S
+#3188
+@@WGolden Mews@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and armorers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
 D0
 ~
 ~
-0 -1 3060
-D2
+0 -1 3168
+D1
 ~
 ~
-0 -1 3058
+0 -1 3189
+D3
+~
+~
+0 -1 3187
 S
-#3060
-The shores of a small pond~
-You find yourself waist deep in tall grasses and cat-o-nine tails. The ground
-
-beneath your feet is soft and squishy. Kind of makes you feel like if you
-
-don't move soon you know your will become a permanent fixture here.
-
-~
-1024 2
+#3189
+@@yNorthwall Astral Gate@@N~
+Bronze astrolabes and rotating mirrors frame this northern breach where scholars chart impossible constellations. The passage beyond bends into the impossible geometries of the @@bMicrocosm@@N. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+0 1
 D0
 ~
 ~
-0 -1 3061
-D2
+0 -1 3169
+D1
 ~
 ~
-0 -1 3059
+0 -1 3190
+D3
+~
+~
+0 -1 3188
+D0
+The Microcosm.~
+~
+0 -1 5788
 S
-#3061
-The @@GP@@Bo@@Gn@@Bd@@g~
+#3190
+@@yNorthwall Crypt Gate@@N~
+Two mausoleum pylons flank this northern gate, each etched with warding prayers against ancient kings. The road beyond descends toward the haunted marches of Kel'Shadra. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
+0 1
+D0
 ~
-0 2
-D2
+~
+0 -1 3170
+D1
 ~
 ~
-0 -1 3060
+0 -1 3191
+D3
+~
+~
+0 -1 3189
+D0
+The Crypts of Kel'Shadra.~
+~
+0 -1 9400
 S
-#3056
-The Immortal Contact Area~
-This room is for use of contacting an immortal when none can be found thru
-
-other means. If you have bugs to report, reims to ask for, and other
-
-situations that need an immortals guidance please feel free to post here. This
-
-board is meant for that one purpose alone, excessive use will lead to the
-
-board being unavailable for the purposes which is was intended for, which is
-
-to help in coping with the frequest adsence of immortals when they are needed.
-
-
-~
-1032 1
-D5
+#3191
+@@WAzure Plaza@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and masons repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
 ~
 ~
-0 -1 3030
+0 -1 3171
+D1
+~
+~
+0 -1 3192
+D3
+~
+~
+0 -1 3190
 S
-#3062
-@@WTales of Power, Despair and Honor@@N~
-@@aThis room is placed for mortals to comment and compliment the roleplaying
-
-qualities of other players.  It is NOT here for in character stories, flames,
-
-or boosting your own multi-play characters.  Messages will be reviewed, and
-
-researched notes will be used in calculating the weekly roleplayer of the week
-
-award of 10 qps.@@N
-
-~
-1052 1
-D5
+#3192
+@@WEmber Court@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and woodwrights repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
 ~
 ~
-0 -1 3014
+0 -1 3172
+D1
+~
+~
+0 -1 3193
+D3
+~
+~
+0 -1 3191
+S
+#3193
+@@WGilded Crossing@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and tanners repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3173
+D1
+~
+~
+0 -1 3194
+D3
+~
+~
+0 -1 3192
+S
+#3194
+@@WIron Byway@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and priests repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries beeswax polish, while hushed bargaining rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through carved curbstones, and at the edge of the street stands a guild marker hammered into the curb, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3174
+D1
+~
+~
+0 -1 3195
+D3
+~
+~
+0 -1 3193
+S
+#3195
+@@WViolet Terrace@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and healers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries @@mincense@@N and myrrh, while cobbler taps rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through river-smoothed cobbles, and at the edge of the street stands an oath-stone worn by countless hands, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3175
+D1
+~
+~
+0 -1 3196
+D3
+~
+~
+0 -1 3194
+S
+#3196
+@@WVerdant Causeway@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and ferrymen repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries warm bread from distant kitchens, while street laughter rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through old slate patches, and at the edge of the street stands a weather pillar wrapped in ribbons, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3176
+D1
+~
+~
+0 -1 3197
+D3
+~
+~
+0 -1 3195
+S
+#3197
+@@WObsidian Crescent@@N~
+The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3177
+D1
+~
+~
+0 -1 3198
+D3
+~
+~
+0 -1 3196
+S
+#3198
+@@WIvory Passage@@N~
+The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3178
+D1
+~
+~
+0 -1 3199
+D3
+~
+~
+0 -1 3197
+S
+#3199
+@@WMoonlit Approach@@N~
+The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3179
+D1
+~
+~
+0 -1 3200
+D3
+~
+~
+0 -1 3198
+S
+#3200
+@@WLantern Promenade@@N~
+The avenue broadens here into a lived-in civic pocket where spice factors and pilgrims repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries lamp oil and rain, while bronze bells rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through cut basalt channels, and at the edge of the street stands a saint niche packed with candles, giving this stretch of @@WMidgaard@@N a character all its own.~
+0 1
+D0
+~
+~
+0 -1 3180
+D3
+~
+~
+0 -1 3199
 S
 #0
 #MOBILES
@@ -3426,7 +4583,7 @@ the look in her eyes that she enjoys seeing you cower in her presence.
 
 ~
 131103 1633020 1000 S
-139 2
+150 2
 0 0 0 0
 ! 0 0 0 7 0 0 32
 | 0 7637056 0 0 0 0 48
@@ -4969,16 +6126,17 @@ L
 3040 0 0 0 0 0 110 100 0 23
 3010 9 0 0 0 0 110 90 8 21
 3009 8 31 0 0 0 150 50 0 23
-3008 0 0 0 0 0 100 100 0 23
 3006 22 0 0 0 0 120 90 6 22
 3004 9 0 0 0 0 100 50 0 23
 3003 5 6 7 0 0 130 40 0 23
 3002 1 8 13 15 19 150 40 0 23
-3001 0 0 0 0 0 110 100 0 23
 3014 2 3 4 10 0 105 15 0 23
+3140 5 9 0 0 0 120 90 0 23
+3142 29 0 0 0 0 120 90 0 23
+3143 25 26 27 0 0 125 85 0 23
 0
 #RESETS
-M 0 3011 1 3001       The executioner
+M 0 3011 1 3110       Gertrude the executioner
 
 E 0 3005 100 16         wield the executioners blade
 
@@ -5026,13 +6184,7 @@ G 0 3138 999
 
 E 0 3022 900 16            wields a longsword
 
-M 0 3001 1 3009       The baker
 
-G 0 3009 100 
-
-E 0 3022 100 16            wields a longsword
-
-M 0 3008 1 3031       The Pet Shop Boy
 
 M 0 3009 1 3034       The Jeweller
 
@@ -5232,15 +6384,10 @@ M 0 3066 1 3026       The Alley Cat (at Dark Alley)
 
 M 0 3061 5 3006       The janitor (at Inn Entrance)
 
-M 0 3090 1 3032       Kitten in pet shop
 
-M 0 3091 1 3032       Puppy in pet shop
 
-M 0 3092 1 3032       Beagle in pet shop
 
-M 0 3093 1 3032       Rottweiler in pet shop
 
-M 0 3094 1 3032       Wolf in pet shop
 
 M 0 3005 5 3026         thief at entrance to thief guild
 
@@ -5420,11 +6567,19 @@ O 0 3048 0 3014 (null)
 
 O 0 3049 0 3056 (null)
 
-M 0 3095 1 3032 (null)
 
 O 0 3052 0 3062 (null)
 
 O 0 3014 0 3025 (null)
+
+M 0 3015 1 3121       The Postmaster
+M 0 3003 1 3122       The armorer
+M 0 3010 1 3123       The outfitter
+M 0 3014 1 3124       The arcanist
+M 0 3004 1 3125       The provisioner
+M 0 3140 1 3126       The invasion quartermaster
+M 0 3142 1 3127       The proposition clerk
+M 0 3143 1 3128       The quest broker
 
 S
 #SPECIALS
