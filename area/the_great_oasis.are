@@ -1189,99 +1189,7 @@ S
 #8665
 @@ySunward Traverse@@N~
 @@ySunfire spills across sun-cracked clay pans where jackal tracks tangle toward the east.@@N
-@@lA weather-cut obelisk etched with a serpent-eye motif beside waypoint 8665, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-~
 ~
-0 -1 8666
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8664
-S
-#8666
-@@yAmberwake Corridor@@N~
-@@yMirage-light crowns an arc of lapis cairns while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA trader glyph carved with a pilgrim's route chain beside waypoint 8666, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-~
-~
-0 -1 8667
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8665
-S
-#8667
-@@yMirage Reach@@N~
-@@yA furnace gust rolls over broken cistern stones where old bootprints turn and disappear.@@N
-@@lA cracked stele painted with @@yyellow@@N arrows beside waypoint 8667, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-~
-~
-0 -1 8668
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8666
-S
-#8668
-@@yCairnline Crossing@@N~
-@@yAn ochre haze blankets half-buried trade jars while the desert hums like a taut bowstring.@@N
-@@lA prayer-stone scratched with old water tally marks beside waypoint 8668, giving this square hunt-road a measured rhythm.@@N
-@@yEven the scavenger birds circle farther east, guarding an unseen center.@@N
-~
-0 10
-D1
-The oasis hunt continues ahead through blowing sand.
-~
-~
-0 -1 8669
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8667
-S
-#8669
-@@yDustveil Path@@N~
-@@ySalt-dust whispers around a drift-choked wash where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA sand-polished slab branded with dry-season warning cuts beside waypoint 8669, giving this square hunt-road a measured rhythm.@@N
-@@yEvery landmark now points forward, as if the desert itself wants you to continue.@@N
-~
-0 10
-D2
-The oasis hunt continues ahead through blowing sand.
-~
-~
-0 -1 8670
-D3
-The trail winds back through the glare.
-~
-~
-0 -1 8668
-S
-#8670
-@@yPalmward March@@N~
-@@yBlue noon glare hardens a basin of fossil shells where jackal tracks tangle toward the east.@@N
-@@lA worn boundary post notched with a pilgrim's route chain beside waypoint 8670, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
 0 10
 D0
 The trail winds back through the glare.
@@ -1388,79 +1296,34 @@ S
 @@yPalmward Reach@@N~
 @@yBlue noon glare hardens a spill of bronze pebbles while the desert hums like a taut bowstring.@@N
 @@lA cracked stele painted with @@bbrown@@N spiral knots beside waypoint 8676, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
+@@yThe way remains linear and relentless, pulling you toward an unseen basin.@@N
 ~
 0 10
 D1
 The trail winds back through the glare.
 ~
 ~
-0 -1 8675
+0 -1 8691
 D3
 The oasis hunt continues ahead through blowing sand.
 ~
 ~
-0 -1 8677
+0 -1 8693
 S
-#8677
-@@yPalmward Crossing@@N~
-@@yBlue noon glare hardens a line of reed stakes while @@yyellow@@N pennants twitch against the heat.@@N
-@@lA prayer-stone scratched with @@yyellow@@N arrows beside waypoint 8677, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
-~
-0 10
-D1
-The trail winds back through the glare.
-~
-~
-0 -1 8676
-D3
-The oasis hunt continues ahead through blowing sand.
-~
-~
-0 -1 8678
-S
-#8678
-@@yPalmward Path@@N~
-@@yBlue noon glare hardens an old caravan marker where @@bbrown@@N grit stings your lips and eyes.@@N
-@@lA sand-polished slab branded with @@lblue@@N triangles beside waypoint 8678, giving this square hunt-road a measured rhythm.@@N
-@@yYour skin cools for a heartbeat, then heat returns with a challenge.@@N
-~
-0 10
-D1
-The trail winds back through the glare.
-~
-~
-0 -1 8677
-D3
-The oasis hunt continues ahead through blowing sand.
-~
-~
-0 -1 8679
-S
-#8679
-@@yPalmward Run@@N~
+#8693
+@@yPalmward Corridor@@N~
 @@yBlue noon glare hardens collapsed watering troughs where old bootprints turn and disappear.@@N
-@@lA toppled beacon inked with sun-prayer hash lines beside waypoint 8679, giving this square hunt-road a measured rhythm.@@N
-@@yThe square route remains disciplined, but the silence ahead feels newly alive.@@N
+@@lA trader glyph carved with a serpent-eye motif beside waypoint 8693, giving this square hunt-road a measured rhythm.@@N
+@@yYou hear no fountain, yet the wind carries a cool promise.@@N
 ~
 0 10
 D1
 The trail winds back through the glare.
 ~
 ~
-0 -1 8678
-D2
+0 -1 8692
+D3
 The oasis hunt continues ahead through blowing sand.
-~
-~
-0 -1 8680
-S
-#8680
-@@ySunward Bend@@N~
-@@ySunfire spills across an arc of lapis cairns while the desert hums like a taut bowstring.@@N
-@@lA split limestone tile signed with @@lblue@@N triangles beside waypoint 8680, giving this square hunt-road a measured rhythm.@@N
-@@yThe long search feels deliberate, as if shaped by ancient hands.@@N
 ~
 0 10
 D0
@@ -1702,6 +1565,126 @@ The trail winds back through the glare.
 ~
 0 -1 8685
 S
+#8612
+sunken-way outrider~
+@@lSunken-Way Outrider@@N~
+@@lSunken-Way Outrider@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+45 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8613
+welltrail cutthroat~
+@@yWelltrail Cutthroat@@N~
+@@yWelltrail Cutthroat@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+47 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8614
+dunefold spearhand~
+@@bDunefold Spearhand@@N~
+@@bDunefold Spearhand@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+49 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8615
+sirocco blade pilgrim~
+@@lSirocco Blade Pilgrim@@N~
+@@lSirocco Blade Pilgrim@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+51 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8616
+saltwake hexbinder~
+@@ySaltwake Hexbinder@@N~
+@@ySaltwake Hexbinder@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+53 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8617
+reedbank warcaller~
+@@bReedbank Warcaller@@N~
+@@bReedbank Warcaller@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+56 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8618
+oasis glass sentinel~
+@@lOasis Glass Sentinel@@N~
+@@lOasis Glass Sentinel@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#8619
+deepspring reaver~
+@@yDeepspring Reaver@@N~
+@@yDeepspring Reaver@@N holds this stretch of desert with unwavering vigilance.@@N
+~
+A hardened wanderer in @@lbright-blue@@N wraps, @@yyellow@@N scarfing, and @@bbrown@@N leathers watches every movement with desert patience.@@N
+~
+1 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #8687
 @@yMirage Path@@N~
 @@yA furnace gust rolls over half-buried trade jars where jackal tracks tangle toward the east.@@N
@@ -1848,6 +1831,127 @@ dawn-respite shroud~
 A brown-blue shroud hangs from a wind-polished post.~
 9 134217856 8454144 1
 0 0 0 0 0 0 0 0 0 0
+#8639
+horizon call gorget~
+@@lGorget of Horizon Call@@N~
+A blue-edged gorget lies propped against a dune marker.~
+9 134217856 8388736 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+56
+#8640
+windscoured command mantle~
+@@yMantle of Windscoured Command@@N~
+A yellow command mantle ripples in dry crosswinds.~
+9 134217856 8389120 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+57
+#8641
+reedward bastion vambraces~
+@@bVambraces of Reedward Bastion@@N~
+Brown-blue vambraces are stacked beside a cracked basin stone.~
+9 134217856 8389632 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+58
+#8642
+sunmark oath wraps~
+@@lWraps of Sunmark Oath@@N~
+Blue oath wraps are wound around a splintered spear haft.~
+9 134217856 8390656 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+59
+#8643
+drifting oasis signet~
+@@ySignet of Drifting Oasis@@N~
+A yellow signet ring gleams from beneath a lace of sand.~
+9 134217856 8396800 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+60
+#8644
+dawn-respite shroud~
+@@bShroud of Dawn Respite@@N~
+A brown-blue shroud hangs from a wind-polished post.~
+9 134217856 8454144 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+58
+#8645
+wellbound war cincture~
+@@lCincture of the Wellbound War@@N~
+A bright-blue war cincture rests atop shattered amphorae.~
+9 134217856 8519680 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+59
+#8646
+sirocco edge falchion~
+@@yFalchion of Sirocco Edge@@N~
+A yellow-edged falchion hums softly in the noon heat.~
+5 134217856 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+60
+M 0 8601 2 8608 (null)
+
+M 0 8602 2 8614 (null)
+
+M 0 8603 2 8620 (null)
+
+M 0 8604 2 8626 (null)
+
+M 0 8605 2 8632 (null)
+
+M 0 8606 2 8638 (null)
+
+M 0 8608 2 8650 (null)
+
+M 0 8609 2 8656 (null)
+
+M 0 8612 2 8662 (null)
+
+E 0 8639 1 9 (null)
+
+M 0 8613 2 8668 (null)
+
+E 0 8640 1 12 (null)
+
+M 0 8614 2 8674 (null)
+
+E 0 8641 1 13 (null)
+
+M 0 8615 2 8680 (null)
+
+E 0 8642 1 14 (null)
+
+M 0 8616 2 8686 (null)
+
+E 0 8643 1 17 (null)
+
+M 0 8617 2 8692 (null)
+
+E 0 8644 1 18 (null)
+
+M 0 8618 2 8696 (null)
+
+E 0 8645 1 19 (null)
+
+M 0 8619 2 8690 (null)
+
+E 0 8646 1 20 (null)
+
+
 12
 L
 58
