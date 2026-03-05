@@ -2852,8 +2852,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          {
             max_players = playing_players;
             trigger_happy_hour();
-            happy_hour_ticks_remaining = 1;
-            info("New player record reached! Happy hour triggered for one in-game hour!", 1);
+            happy_hour_ticks_remaining = 3;
+            info("New player record reached! Happy hour triggered for three in-game hours!", 1);
          }
       }
 
