@@ -279,6 +279,28 @@ static void parse_objects_section(FILE *fp, char *line, int *line_number, const 
     }
 }
 
+static void consume_exit_keyword_string(FILE *fp, char *line, int *line_number, const char *area_path)
+{
+    for (;;)
+    {
+        const char *trimmed;
+
+        if (!read_line(fp, line, line_number))
+            fail_area_test(area_path, *line_number, "unexpected EOF while reading room exit keyword");
+
+        trimmed = skip_space(line);
+
+        if ((trimmed[0] == 'D' && trimmed[1] >= '0' && trimmed[1] <= '5') || trimmed[0] == 'E' || trimmed[0] == 'S' || trimmed[0] == '#')
+            fail_area_test(area_path, *line_number, "room exit keyword missing '~' terminator before room token");
+
+        if (parse_exact_n_ints(trimmed, 2) || parse_exact_n_ints(trimmed, 3))
+            fail_area_test(area_path, *line_number, "room exit keyword missing '~' terminator before numeric exit data");
+
+        if (strchr(line, '~') != NULL)
+            return;
+    }
+}
+
 static void parse_rooms_section(FILE *fp, char *line, int *line_number, const char *area_path)
 {
     int saw_room = 0;
@@ -321,7 +343,7 @@ static void parse_rooms_section(FILE *fp, char *line, int *line_number, const ch
                     fail_area_test(area_path, *line_number, "room exit door must be D0..D5");
                 (void)door;
                 consume_tilde_string(fp, line, line_number, area_path);
-                consume_tilde_string(fp, line, line_number, area_path);
+                consume_exit_keyword_string(fp, line, line_number, area_path);
                 if (!read_line(fp, line, line_number) || !parse_exact_n_ints(line, 3))
                     fail_area_test(area_path, *line_number, "exit destination line must contain exactly 3 integers");
                 continue;
@@ -518,6 +540,7 @@ static void assert_area_matches_spec(const char *area_path)
     if (!saw_eof)
         fail_area_test(area_path, line_number, "missing required #$ end-of-file marker");
 }
+
 
 int main(void)
 {
