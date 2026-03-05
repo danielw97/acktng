@@ -3144,7 +3144,7 @@ S
 #3161
 @@aMoonthread Clothier's Court@@N~
 Bolts of dyed linen and rune-stitched cotton now frame this corner of Midgaard, where apprentice couriers stop to be measured beside veteran hedge-mages in need of fresh wardcloth. Tailor's bells and shearsong mingle with market noise, and mannequins in layered travel robes stand beneath practical @@ylanterns@@N while a cloth armorer displays ready stock for every discipline. The paving still bears old ward sigils, but this square now clearly serves as a bustling outfitter's court for soft armor and reinforced garments.~
-0 1
+1028 1
 D0
 ~
 ~
@@ -3153,40 +3153,20 @@ S
 #3162
 @@aIronweave Armourer's Arcade@@N~
 Forged greaves and ringed harness now crowd this corner arcade, where mercenaries and caravan guards queue beside sparring veterans for fresh steel. The rhythmic clatter of rivets and the hiss of quenched plate roll out from open-front stalls lit by practical @@ylanterns@@N, while weapon racks and measuring frames line the walls in strict order. A mezzanine counter displays heavy melee panoplies by rank and campaign, marking this square as Midgaard's dedicated hall for close-combat armorers.~
-1 1
+1029 1
 D0
 ~
 ~
 0 -1 3142
-D1
-~
-~
-0 -1 3163
-D2
-~
-~
-0 -1 3182
 S
 #3163
 @@aGranite Bastion Armory@@N~
 Heavy chain curtains and slab-stone counters turn this corner of Midgaard into a dedicated outfitter's bastion for shield-bearing veterans. Racks of tower plates, reinforced straps, and impact-tested greaves crowd the walls beneath practical @@ylanterns@@N, while smiths call out measurements over the ring of anvils. The paving here is scarred by repeated weight drops and drill formations, and a carved inventory board lists defensive harness by campaign tier, making this square the city's unmistakable market for tank armor.~
-1 1
+1029 1
 D0
 ~
 ~
 0 -1 3143
-D1
-~
-~
-0 -1 3164
-D2
-~
-~
-0 -1 3183
-D3
-~
-~
-0 -1 3162
 S
 #3164
 @@WAuburn Traverse@@N~
@@ -3204,10 +3184,6 @@ D2
 ~
 ~
 0 -1 3184
-D3
-~
-~
-0 -1 3163
 S
 #3165
 @@WBronze Colonnade@@N~
@@ -3554,10 +3530,6 @@ S
 @@WSilver Marketwalk@@N~
 The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
-D0
-~
-~
-0 -1 3162
 D1
 ~
 ~
@@ -3571,10 +3543,6 @@ S
 @@WCrimson Concourse@@N~
 The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
 0 1
-D0
-~
-~
-0 -1 3163
 D1
 ~
 ~
@@ -4576,24 +4544,26 @@ L 0 0 0 0 0 0 0 0 0
 armourer armorer granite bastion tank~
 The Granite Bastion Tank Armourer~
 The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand.
-^M~
+
+
+~
 A broad-shouldered armourer who outfits defenders in heavy, impact-ready tank harness.
-^M~
+^M~
 3 0 900 S
 60 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0
-L 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #3003
 weaponsmith~
 the weaponsmith~
 A weaponsmith.
-~
+~
 A young weaponsmith, who still has lots to learn.
-~
+~
 8396807 8328 900 S
 85 1
 0 0 0 0
@@ -4684,7 +4654,8 @@ L 0 0 0 0 0 0 0 0 0
 #3252
 armourer armorer ironweave melee~
 The Ironweave Melee Armourer~
-The Ironweave Melee Armourer checks the balance of plated harness with practiced hands.
+The Ironweave Melee Armourer checks the balance of plated harness with
+practiced hands.
 ~
 A scarred melee armourer in a soot-dark apron, fitting reinforced wargear for front-line fighters.
 ~
@@ -4700,7 +4671,7 @@ L 0 0 0 0 0 0 0 0 0
 clothier armorer moonthread~
 The Moonthread Cloth Armorer~
 The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
-^M~
+~
 A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor.
 ~
 3 0 900 S
@@ -6364,33 +6335,7 @@ A
 L
 55
 #3269
-5
-10
-10
-9 0 8388624 2
-0 0 0 0 0 0 0 0 0 0
-4
-A
-15
-A
-25
-L
-30
-30
-35
-35
-40
-45
-0 0 0 0 0 0 0 0 0 0
-4
-A
-50
-A
-13 17
-L
-65
-#3271
-@@ysunveil @@Wsash@@N~
+a sunveil sash~
 a @@ysunveil @@Wsash@@N~
 A @@ysunveil @@Wsash@@N glints with tiny ward-sewn charms.~
 9 0 8388624 2
@@ -6803,7 +6748,7 @@ an ironweave skullguard~
 An ironweave skullguard rests on an anvil-black stand.~
 9 0 8388616 7
 0 0 0 0 0 0 0 0 0 0
-4
+9
 A
 18 19
 A
@@ -6920,7 +6865,7 @@ a towerkeeper greatshield~
 A towerkeeper greatshield leans against a reinforced pillar.~
 9 0 8421376 7
 0 0 0 0 0 0 0 0 0 0
-4
+8
 A
 18 27
 A
@@ -7238,6 +7183,8 @@ L
 3157 9 0 0 0 0 130 65 0 23
 3250 9 0 0 0 0 125 70 0 23
 3251 9 0 0 0 0 130 100 0 23
+3253 9 0 0 0 0 100 100 0 23
+3252 9 0 0 0 0 100 100 0 23
 0
 #RESETS
 M 0 3011 1 3110       Gertrude the executioner
@@ -7577,7 +7524,6 @@ G 0 3284 100
 G 0 3285 100 
 
 G 0 3286 100 
-
 
 M 0 3252 1 3162       The Ironweave melee armourer
 
