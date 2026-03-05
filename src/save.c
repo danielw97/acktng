@@ -683,7 +683,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->mkilled = 0;
       ch->pcdata->pflags = 0;
       ch->pcdata->has_exp_fix = 0;
-      ch->pcdata->recall_vnum = 3001;
+      ch->pcdata->recall_vnum = 3110;
       ch->pcdata->mana_from_gain = -1;
       ch->pcdata->hp_from_gain = -1;
       ch->pcdata->move_from_gain = -1;
