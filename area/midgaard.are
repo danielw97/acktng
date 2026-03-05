@@ -4572,30 +4572,28 @@ An old but very strong armourer, he has made more armours in his
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3003
-weaponsmith~
-the weaponsmith~
-A weaponsmith.
 #3253
 armourer armorer granite bastion tank~
 The Granite Bastion Tank Armourer~
 The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand.
-~
+^M~
 A broad-shouldered armourer who outfits defenders in heavy, impact-ready tank harness.
-~
+^M~
 3 0 900 S
 60 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-
-~
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#3003
+weaponsmith~
+the weaponsmith~
+A weaponsmith.
+~
 A young weaponsmith, who still has lots to learn.
-
-~
+~
 8396807 8328 900 S
 85 1
 0 0 0 0
@@ -6367,32 +6365,32 @@ L
 55
 #3269
 5
-10
-10
-9 0 8388624 2
-0 0 0 0 0 0 0 0 0 0
-4
-A
-15
-A
-25
-L
-30
-30
-35
-35
-40
-45
-0 0 0 0 0 0 0 0 0 0
-4
-A
-50
-A
-13 17
-L
-65
-#3271
-@@ysunveil @@Wsash@@N~
+10
+10
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+15
+A
+25
+L
+30
+30
+35
+35
+40
+45
+0 0 0 0 0 0 0 0 0 0
+4
+A
+50
+A
+13 17
+L
+65
+#3271
+@@ysunveil @@Wsash@@N~
 a @@ysunveil @@Wsash@@N~
 A @@ysunveil @@Wsash@@N glints with tiny ward-sewn charms.~
 9 0 8388624 2
@@ -7251,10 +7249,6 @@ M 0 3011 1 3110       Gertrude the executioner
 
 E 0 3005 100 16         wield the executioners blade
 
-G 0 3040 500                Give identify scroll.
-
-G 0 3041 500                Give potion of see invisible.
-
 M 0 3004 1 3020       The armourer
 
 G 0 3072 100 
@@ -7727,8 +7721,6 @@ O 0 3014 0 3025 (null)
 M 0 3015 1 3121       The Postmaster
 
 M 0 3152 1 3124       The Emberglass arcanist
-
-G 0 3166 100 
 
 G 0 3168 100 
 
