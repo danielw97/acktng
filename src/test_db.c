@@ -630,15 +630,6 @@ static void test_area_index_vnums_have_no_duplicates(void)
                 continue;
             }
 
-            if (skip_space(line)[0] == '#'
-                && !line_starts_with(line, "#ROOMS")
-                && !line_starts_with(line, "#MOBILES")
-                && !line_starts_with(line, "#OBJECTS")
-                && section != INDEX_SECTION_NONE)
-            {
-                section = INDEX_SECTION_NONE;
-            }
-
             if (section == INDEX_SECTION_NONE)
                 continue;
 
