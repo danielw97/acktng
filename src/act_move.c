@@ -1146,7 +1146,11 @@ void do_recall(CHAR_DATA *ch, char *argument)
       location = get_room_index(ROOM_VNUM_TEMPLE);
 
    if (!IS_NPC(ch))
+   {
+      if (ch->pcdata->recall_vnum == 3001)
+         ch->pcdata->recall_vnum = 3110;
       location = get_room_index(ch->pcdata->recall_vnum);
+   }
 
    if (deathmatch)
    {
