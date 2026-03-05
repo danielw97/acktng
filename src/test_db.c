@@ -173,6 +173,117 @@ static int line_starts_with(const char *line, const char *prefix)
     return strncmp(line, prefix, strlen(prefix)) == 0;
 }
 
+static void validate_vnum_in_area_range(const char *area_name, int area_line, int area_min_vnum, int area_max_vnum, int vnum,
+                                        const char *context)
+{
+    if (vnum < area_min_vnum || vnum > area_max_vnum)
+    {
+        fail_area_validation(area_name, area_line, "%s vnum %d is outside assigned area range %d-%d", context, vnum,
+                             area_min_vnum, area_max_vnum);
+    }
+}
+
+static void validate_area_uses_only_assigned_vnums(FILE *fp, const char *area_name)
+{
+    char line[4096];
+    int area_min_vnum = 0;
+    int area_max_vnum = 0;
+    int has_vnum_range = 0;
+    enum
+    {
+        AREA_SECTION_OTHER,
+        AREA_SECTION_HEADER,
+        AREA_SECTION_ROOMS,
+        AREA_SECTION_MOBILES,
+        AREA_SECTION_OBJECTS,
+        AREA_SECTION_SHOPS,
+        AREA_SECTION_SPECIALS
+    } section = AREA_SECTION_OTHER;
+
+    rewind(fp);
+
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+        const char *trimmed = skip_space(line);
+        int vnum;
+        int parsed_max;
+
+        if (line_starts_with(trimmed, "#AREA"))
+        {
+            section = AREA_SECTION_HEADER;
+            continue;
+        }
+        if (line_starts_with(trimmed, "#ROOMS"))
+        {
+            section = AREA_SECTION_ROOMS;
+            continue;
+        }
+        if (line_starts_with(trimmed, "#MOBILES"))
+        {
+            section = AREA_SECTION_MOBILES;
+            continue;
+        }
+        if (line_starts_with(trimmed, "#OBJECTS"))
+        {
+            section = AREA_SECTION_OBJECTS;
+            continue;
+        }
+        if (line_starts_with(trimmed, "#SHOPS"))
+        {
+            section = AREA_SECTION_SHOPS;
+            continue;
+        }
+        if (line_starts_with(trimmed, "#SPECIALS"))
+        {
+            section = AREA_SECTION_SPECIALS;
+            continue;
+        }
+        if (trimmed[0] == '#' && section != AREA_SECTION_HEADER)
+            section = AREA_SECTION_OTHER;
+
+        if (section == AREA_SECTION_HEADER && sscanf(trimmed, "V %d %d", &area_min_vnum, &parsed_max) == 2)
+        {
+            area_max_vnum = parsed_max;
+            has_vnum_range = 1;
+            if (area_min_vnum > area_max_vnum)
+                fail_area_validation(area_name, current_area_line(fp), "invalid V vnum range %d-%d", area_min_vnum,
+                                     area_max_vnum);
+            continue;
+        }
+
+        if (!has_vnum_range)
+            continue;
+
+        if ((section == AREA_SECTION_ROOMS || section == AREA_SECTION_MOBILES || section == AREA_SECTION_OBJECTS)
+            && sscanf(trimmed, "#%d", &vnum) == 1 && vnum != 0)
+        {
+            validate_vnum_in_area_range(area_name, current_area_line(fp), area_min_vnum, area_max_vnum, vnum,
+                                        "section entry");
+            continue;
+        }
+
+        if (section == AREA_SECTION_SHOPS && sscanf(trimmed, "%d", &vnum) == 1 && vnum != 0)
+        {
+            validate_vnum_in_area_range(area_name, current_area_line(fp), area_min_vnum, area_max_vnum, vnum,
+                                        "shopkeeper");
+            continue;
+        }
+
+        if (section == AREA_SECTION_SPECIALS
+            && ((sscanf(trimmed, "M %d", &vnum) == 1) || (sscanf(trimmed, "O %d", &vnum) == 1)))
+        {
+            validate_vnum_in_area_range(area_name, current_area_line(fp), area_min_vnum, area_max_vnum, vnum,
+                                        "special target");
+            continue;
+        }
+    }
+
+    if (!has_vnum_range)
+        fail_area_validation(area_name, 0, "missing V <min> <max> directive in #AREA section");
+
+    rewind(fp);
+}
+
 
 static int has_prefixed_int_count(const char *line, char prefix, int count)
 {
@@ -378,6 +489,8 @@ static void test_mock_load_all_areas_and_validate_formats(void)
         }
 
         assert(area_fp != NULL);
+
+        validate_area_uses_only_assigned_vnums(area_fp, area_name);
 
         while (read_non_empty_line(area_fp, line, sizeof(line)))
         {
