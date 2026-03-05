@@ -20,639 +20,1229 @@ M No bad room spells allowed.
 #3055
 Entering the @@eSyringe@@N~
 @@NWoW!!! That was...different.  You are very disoriented..suddenly, a crazed
-man with unkempt hair and the smell of cheap wine on his breath appears, and
-shouts: "Oh my, another victim to experiment on!!!  MUAHHAAAAA!!" He waves his
-hands and mutters loudly, and suddenly, you begin to shrink!!! Smaller and
-smaller you become, until you are smaller than the dust particles around you..
 
-It seems the only way to go is DOWN.
-~
-12 1
+man with unkempt hair and the smell of cheap wine on his breath appears, and
+
+shouts: "Oh my, another victim to experiment on!!!  MUAHHAAAAA!!" He waves his
+
+hands and mutters loudly, and suddenly, you begin to shrink!!! Smaller and
+
+smaller you become, until you are smaller than the dust particles around you..
+
+
+It seems the only way to go is DOWN.
+
+~
+
+you enter. Scattered about on various tables and workbenches are wierd glass
+
+flasks, tubes, and unusual pieces of equipment, with what seems to be some
+
+sort of strange experiments being performed..all with no apparent rhyme or
+
+reason. Who ever works here is absent, but you are drawn towards the center
+
+workbench, where a large @@eSyringe@@N lies next to a covered glass dish
+
+filled with a dark @@Rfluid@@N--maybe it's blood!
+
+~
 D5
 ~
 ~
-0 -1 5600
+
+From here you may read or write letters to friends
+
+and enemies alike...
+
+There is a large SIGN here... perhaps you should look at it?
+
+~
+
+ 
+
+Note to (name)
+
+ 
+
+  Note subject (subject)
+
+ 
+
+    Note + (msg) for each subsequent line of text.
+
+      Note show to see your note
+
+~
+
+a sign on the wall.
+
+~
+
+~
+
+pointless pursuit of trivial knowledge.
+
+~
+
+weapons or amror.
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+~
+
+To the North, East and South, you see the various donation locations.  These
+
+are used to house unwanted equipment, donated by players who no longer need
+
+them.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+blocked by several vertically positioned iron bars set into the wall.
+
+~
+
+city wall.  The river flows west towards the levee.
+
+~
+
+direction.
+
+~
+
+riverbanks are too steep to climb.
+
+~
+~
+
+river flows west towards the bridge.  The riverbanks are too steep to climb.
+
+~
+~
+~
+
+surface of the river.  The water gently flows through an opening in the lower
+
+part of the city wall.
+
+~
+
+some kind of mortar.  Looks pretty solid.
+
+~
+
+to the touch.  A heavy steel door is to the north.
+
+~
+
+~
+
+like "JAIL IS BETTER THAN SQL" and "INGRES STRIKES AGAIN".
+
+~
+
+Arms is hanging on the north wall and a heavy steel door is to the south.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+continues in eastward direction.
+
+~
+~
 S
-#3039
-The Mad Scientist's Lab~
-@@NThe scent of chemicals, burning fires, and bubbling fluids overwhelm you as
-you enter. Scattered about on various tables and workbenches are wierd glass
-flasks, tubes, and unusual pieces of equipment, with what seems to be some
-sort of strange experiments being performed..all with no apparent rhyme or
-reason. Who ever works here is absent, but you are drawn towards the center
-workbench, where a large @@eSyringe@@N lies next to a covered glass dish
-filled with a dark @@Rfluid@@N--maybe it's blood!
-~
-12 1
-D2
+
+polished but completely empty desk is standing in front of an armchair that
+
+looks so comfortable that it most of all resembles a bed with the head end
+
+raised slightly.
+
+~
+
+~
+
+as in a bed.  All lecture halls should be equipped with these things.
+
+~
+
+along the walls and a long desk is placed in the middle of the room.
+
+~
+
 ~
 ~
-0 -1 3024
-D5
+
+~
+
+west is the Road Crossing.
+
+~
+
+east is the Road Crossing.  To the south, the ancient cliffs rise from deep
+
+under the ground, forming a wall.
+
+~
+S
+
+and to the north is the Road Crossing.
+
+~
+
+and to the south is the Road Crossing.
+
+~
+
+promenade and to the east is the small street Penny Lane.
+
 ~
 ~
-0 -1 3055
+
+~
+
+both north and west.  A small path leads off the concourse to the South, and
+
+is partly obscured by the overgrowth.
+
+~
+
+~
+S
+
+here.
+
+~
+
+both north and east.
+
+~
+D1
+~
+~
+
+~
+S
+
+The Concourse is south of here.
+
+~
+
+~
+
+~
+
+in eastward direction.
+
+~
+~
+
+here.
+
+~
+
+east.
+
+~
+~
+~
+
+A road sign is here.
+
+~
+
+
+   North - Emerald Avenue.
+
+   East  - Park Road.
+
+   South - Emerald Avenue.
+
+   West  - Park Road.
+
+
+~
+
+~
+
+~
+~
+~
+
+the park entrance and to the east is the not very big Town Hall of Midgaard.
+
+~
+
+into the park.  Going east through the entrance you will reach Emerald
+
+Avenue.
+
+~
+
+park entrance and to the west you see a small pond.
+
+~
+
+back on the path from the eastern and western end of the pond.
+
+~
+
+park entrance and to the east you see a small pond.
+
+~
+~
+~
+
+~
+
+~
+
+into the park and going west through the entrance you will reach Park Road.
+
+~
+
+notice a sign on the door.  The park entrance is to the east.
+
+~
+
+~
+
+~
+
+
+		 Cityguard Head Quarters
+
+~
+
+in the centre of the room.
+
+~
+
+~
+
+~
+
+south and just north of here you see the southern wall of Park Cafe.
+
+~
+~
+~
+
+just north of here, and Park Cafe is just east of the entrance.  The path
+
+leads further east and west.
+
+~
+
+~
+~
+~
+
+south and east.
+
+~
+
+is built from large logs. Through the windows in the northern wall you
+
+see the river, and through the southern window you see many vigorous
+
+colorful plants.
+
+~
+
+~
+
+the promenade and a small path leads south into the park.  To your east is
+
+the famous Park Cafe.
+
+~
+
+~
+~
+
+~
+
+~
+
+promenade goes west.  Looking across the river you see a building that
+
+resembles a warehouse.  The Concourse continues south along the city wall.
+
+~
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+both east and west.  A small path leads south.  Looking across the river you
+
+see the levee.
+
+~
+
+~
+
+~
+
+~
+
+both east and west.  South of here you see the entrance to the park, and a
+
+small building seems to be just west of the entrance.
+
+~
+
+~
+
+~
+
+~
+~
+
+further east and to the west you see the city wall.  Park Road leads south
+
+from here.
+
+~
+
+~
+
+~
+D3
+
+~
+~
+
+goes east, and the bridge is just north of here.  The concourse continues
+
+south along the city wall.
+
+~
+
+~
+
+~
+
+~
+
+
+A ladder leading to the Valkyrie clan room has been left here.
+
+~
+
+~
+
+A huge altar made from white polished marble is standing in front of you and
+
+behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
+
+To the West is the meeting point of the Immortal and mortal worlds and to the East lies the Quest Room.
+
+~
+
+~
+~
+~
+
+long, grey hair and beard and a strict look on his face.  On top of the
+
+throne, just above his shoulders, his two ravens Hugin and Munin are sitting
+
+and at his feet are his wolves Gere and Freke.
+
+~
+
+single block of white virgin marble.
+
+~
+
+connected with a footbridge across the heavy wooden gate.  To the east is the
+
+Midgaard Road. To the north a small dusty trail follow the city wall.  
+
+A new path leads to the south.....
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+each other with some kind of mortar, just like the city wall.
+
+~
+
+reinforced with large iron bands to make them even more sturdy.  One of the
+
+doors is equipped with a very big lock.
+
+~
+
+from one tower to the other.
+
+~
+
+connected with a footbridge across the heavy wooden gate.  To the west you
+
+can see Roc Road, which runs to the West.
+
+~
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+each other with some kind of mortar, just like the city wall.
+
+~
+
+reinforced with large iron bands to make them even more sturdy.  One of the
+
+doors is equipped with a very big lock.
+
+~
+
+from one tower to the other.
+
+~
+
+built out from the western city wall and the river flows west through an
+
+opening in the wall ten feet below the bridge.
+
+~
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+~
+
+some kind of mortar, just like the wall.
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+several decades, vile smells make you dizzy.
+
+~
+
+~
+~
+
+continues north.  South of here is a bridge across the river.
+
+~
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+east, blocking any further movement.  An old three-story warehouse is
+
+directly south of here.
+
+~
+
+~
+
+~
+
+here you see the levee.
+
+0 1
+
+~
+
+~
+~
+
+~
+
+is to the north.
+
+~
+
+~
+
+~
+
+~
+
+north and south.  A small, poor alley leads east.
+
+Some letters have been written on the wall here.
+
+~
+
+~
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+~
+
+south and the city gate is just north of here.
+
+~
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+connected with a footbridge across the heavy wooden gate.  Main Street leads
+
+west from here.  South of here is the wall road, but it looks dirty and 
+
+not too safe.
+
+~
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+each other with some kind of mortar, just like the city wall.
+
+~
 E
-syringe~
-Go Down to enter the @@eSyringe@@N!!!~
-S
-#3038
-The Midgaard Post Office~
-This is the Midgaard branch of the Global Post Office.
-From here you may read or write letters to friends
-and enemies alike...
-There is a large SIGN here... perhaps you should look at it?
-~
-17436 11
-D1
+
+reinforced with large iron bands to make them even more sturdy.  One of the
+
+doors is equipped with a very big lock.
+
+~
+
+from one tower to the other.
+
+~
+
+connected with a footbridge across the heavy wooden gate.  Main Street leads
+
+east and Wall Road leads south from here.
+
+~
+
 ~
 ~
-0 -1 3005
-E
-sign~
-@@WTo send notes use the following commands:-
- 
-Note to (name)
- 
-  Note subject (subject)
- 
-    Note + (msg) for each subsequent line of text.
-      Note show to see your note
-~
-S
-#3085
-The quiet room~
-This is a room where players can come and sleep with no interuptions. There is
-a sign on the wall.
-~
-25886 11
-D5
+
+that it is called Wall Road.
+
 ~
 ~
-0 -1 3054
-E
-sign~
-Sssshh! No talking in this room.
-~
-S
-#3086
-The Power Trivia Room~
-This room is used by the players of the mud, to engage in the totally
-pointless pursuit of trivial knowledge.
-~
-8 11
-D4
+
+~
+
+some kind of mortar.  It is far too high to climb.
+
+~
+
+each other with some kind of mortar, just like the city wall.
+
+~
+
+reinforced with large iron bands to make them even more sturdy.  One of the
+
+doors is equipped with a very big lock.
+
+~
+
+from one tower to the other.
+
+~
+
+shelves containing all sorts of animal hide and in the crackling fireplace
+
+hangs a big iron pot with boiling water.  In the middle of the room is a
+
+large oak table.
+
+A wooden sign is hanging above the fireplace.
+
+~
+
+~
+
+
+    Use 'list' to see what is in store,
+
+	'buy <item>' to buy an item,
+
+	'sell <item>' to sell an item and
+
+	'value <item>' to make the leather worker evaluate an item.
+
+~
+
+~
+
+covered in marks and scratches.  A large burning candle stands directly on
+
+the table surface, tallow flowing down its sides.
+
+~
+
+~
+
+the small oil lamps on the walls is reflected in the hard, polished surface of
+
+the big mahogany desk that stands in the centre of the room. A small sign with
+
+golden letters stands on the desk.
+
+~
+
 ~
 ~
-0 -1 3054
-S
-#3004
-The Undead Shrine to Cyberlich.~
-This horrid place is predominately black.  If you look closely, you see that blood seeps from the walls, pools here and there on the floor.  This is where Cyberlich's devout followers come to worship him, and where they come to hire his minions.~
-18 11
-D1
+
+
+    Use 'list' to see what is in store,
+
+	'buy <item>' to buy an item,
+
+	'sell <item>' to sell an item and
+
+	'value <item>' to make the jeweller evaluate an item.
+
+~
+
+~
+
+to the smooth stone walls.
+
+~
+
+Dividing the room in two is a large desk, and on the wall behind it are
+
+numerous shelves crammed with jars, bottles, books and scrolls of all
+
+sorts and sizes.
+
+~
+
+~
+
+~
+
+~
+
+powders while others contain body parts of various animals.
+
+
+~
+
+~
+
+and appears to have been unused for many years.  The skylight spills
+
+violet-tinged light.
+
+~
+
+~
+
+xWELCOME TO THE BLACK DETH'S CORPSE RETRIEVAL SERVICE!                        x
+
+-                                                                             -
+
+x If you've died, and were unable to get back to your corpse, why not let the x
+
+- Black Deth use his dark powers to summon forth your rotting remains?        -
+
+x We offer reasonable rates:                                                  x
+
+-                                                                             -
+
+x       Levels 1 to 10 : 1000 gold coins.                                     x
+
+-       Levels 11 +    : 3000 gold coins.                                     -
+
+x                                                                             x
+
+-                        Please note:                                         -
+
+x 1) NO REFUNDS!                                                              x
+
+- 2) If you pay for the Black Deth's services, and receive no corpse, tough.  -
+
+x 3) You will only receive the first corpse the Black Deth finds with his     x
+
+-    dark powers.  So try not to die everywhere and expect him to get         -
+
+x    the corpse with your equipment first time.  Remember, time IS money!     x
+
+- 4) The prices shown are likely to change at any time.                       -
+
+x 5) E&OE                                                                     x
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+
+~
+
+A forboding unused whorehouse lies to the south.
+
+~
+
+~
+
+~
+
 ~
 ~
-0 -1 3002
-S
-#3017
-The Miscellaneous Donation Area~
-You are in the part of the donation area used to hold items other than
-weapons or amror.
-~
-12 11
-D0
-The central donation area.
-~
+
+the poor alley and to the east is the dark alley.  To the north, this square
+
+is connected to the market square.  From the south you notice a nasty smell.
+
 ~
-0 -1 3021
-S
-#3018
-The Armor Donation Area~
-You are in part of the donation area used to hold armor items. 
-~
-12 11
-D3
-The central donation area.
-~
+
 ~
-0 -1 3021
-S
-#3019
-The Weapons Donation Area~
-You are in part of the donation area used to hold weapons.
-~
-12 11
-D2
-The central donation area.
-~
+
 ~
-0 -1 3021
-S
-#3021
-The Donation Area~
-You are standing in a cross-shaped room.  To the west you can see the Temple.
-To the North, East and South, you see the various donation locations.  These
-are used to house unwanted equipment, donated by players who no longer need
-them.
-~
-12 11
-D0
-You see the Weapon donation area.
-~
+
 ~
-0 -1 3019
-D1
-You see the Armor donation area.
-~
+
 ~
-0 -1 3018
-D2
-You see a room used for various donations.
-~
-~
-0 -1 3017
-D3
-You see the Temple of Midgaard.
-~
-~
-0 -1 3001
-S
-#3022
-On the River~
-The river enters from a hole in the eastern city wall.  The hole has been
-blocked by several vertically positioned iron bars set into the wall.
-~
-0 7
-D3
+
+east you see common square.  The alley continues further west.
+
 ~
 ~
-0 -1 3023
-S
-#3023
-On the River~
-You see the warehouse on the northern riverbank.  East of here you see the
-city wall.  The river flows west towards the levee.
-~
-0 7
-D1
+
+~
+
 ~
 ~
-0 -1 3022
-D3
+
 ~
+
+see helmets, shields and chain mails.  To the north is the main street.
+
+On the wall is a small note.
+
 ~
-0 -1 3027
-S
-#3027
-On the River~
-The levee is directly north of here.  The river flows in an east west
-direction.
-~
-4 7
-D0
+
 ~
+
+
+  value <item>     To get the price of an item in your possession.
+
+  sell <item>      To sell something.
+
+  buy <item>       To buy something (provided that the shop has it in store).
+
+  list             Gives you a listing of the shop's inventory.
+
+
+	WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
+
+			     NO HAGGLING
+
 ~
-0 -1 3049
-D1
+
+and to the west the street leads to the market square. A doorway to the south
+
+marks the entrance to the Sample House.
+
 ~
+
 ~
-0 -1 3023
-D3
+
 ~
-~
-0 -1 3028
-S
-#3028
-On the River~
-North of here you see the dump.  The river flows from east to west.  The
-riverbanks are too steep to climb.
-~
-0 7
-D1
-~
-~
-0 -1 3027
-D3
-~
-~
-0 -1 3036
-S
-#3036
-On the River~
-North of here you see the miserable buildings of the poor alley.  The
-river flows west towards the bridge.  The riverbanks are too steep to climb.
-~
-0 7
-D1
-~
-~
-0 -1 3028
-D3
-~
-~
-0 -1 3200
-S
-#3200
-Under the Bridge~
-The arch under the bridge is covered by seaweed for one foot above the
-surface of the river.  The water gently flows through an opening in the lower
-part of the city wall.
-~
-0 7
-D1
-~
-~
-0 -1 3036
-E
-wall~
-It is built from large grey rocks that have been fastened to each other with
-some kind of mortar.  Looks pretty solid.
-~
-S
-#3143
-The Jail~
-You are in a dark and humid jail.  The dark stone walls are hard and cold
-to the touch.  A heavy steel door is to the north.
-~
-8 11
-D0
-You see the heavy steel door.
-~
-door~
-1 3137 3142
-E
-wall walls~
-The walls are marked with lots of scratches.  Some of them spell sentences
-like "JAIL IS BETTER THAN SQL" and "INGRES STRIKES AGAIN".
-~
-S
-#3142
-Captain's Office~
-You are in the Office of the Captain of the Guard.  The Midgaard Coat of
-Arms is hanging on the north wall and a heavy steel door is to the south.
-~
-8 11
-D1
-You see the Cityguard Head Quarters.
-~
-door~
-1 3120 3110
-D2
-You see the heavy steel door.
-~
-door~
-1 3137 3143
-E
-arms~
-Although a bit dusty the Coat of Arms is an excellent piece of work.
-~
-S
-#3141
-End of Penny Lane~
-You are at the end of Penny Lane.  The only exit appears to be south.
-~
-0 1
 D2
 ~
 ~
-0 -1 3140
+
+~
 S
-#3140
-Penny Lane~
-You are on Penny Lane.  The narrow road continues north and west.
-~
-0 1
-D0
+
+store, and the main street continues east.  To the west you see and hear the
+
+market place and to the south is the Jeweller's Shop.
+
+~
+
+~
+
+~
+
 ~
 ~
-0 -1 3141
-D3
+
+~
+
+large,  peculiar looking statue is standing in the middle of the square. Roads
+
+lead in  every direction, north to the temple square, south to the common
+
+square, east   and westbound is the main street.  Some small steps lead down
+
+below the Square.
+
+~
+
 ~
 ~
-0 -1 3139
-S
-#3139
-Penny Lane~
-You are on Penny Lane.  Emerald Avenue is to the west and Penny Lane
-continues in eastward direction.
-~
-0 1
-D1
+
 ~
-~
-0 -1 3140
-D3
-~
-~
-0 -1 3132
-S
-#3138
-The Mayor's Office~
-You are in the not very big office of the Mayor of Midgaard.  A large and
-polished but completely empty desk is standing in front of an armchair that
-looks so comfortable that it most of all resembles a bed with the head end
-raised slightly.
-~
-8 11
-D3
-The waiting room is to the west.
-~
-~
-0 -1 3137
-E
-chair armchair~
-This chair is really a masterpiece.  A chair where one can sit as comfortably
-as in a bed.  All lecture halls should be equipped with these things.
-~
-S
-#3137
-The Waiting Room~
-You are standing in the waiting room at the town hall.  Wooden chairs stand
-along the walls and a long desk is placed in the middle of the room.
-~
-8 11
-D1
-It looks like some kind of office.
-~
-~
-0 -1 3138
-D3
-The exit west leads to Emerald Avenue.
-~
-~
-0 -1 3117
-S
-#3136
-Park Road~
-You are at a bend on Park Road.  To the south the road goes on and to the
-west is the Road Crossing.
-~
-0 1
 D2
+
 ~
 ~
-0 -1 3122
-D3
+
+~
+
+~
+
+~
+
+here is the entrance to the Armoury, and the bakery is to the north.  East of
+
+here is the market square.
+
+~
+
+~
+
+~
+
 ~
 ~
-0 -1 3120
+
+~
+
+east towards the market square.  The magic shop is to the north and to the 
+
+west is the city gate.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+
+  List  - Show which various items are in the store.
+
+  Buy   - Buy an item.
+
+  Value - The shopkeeper will (free of charge) tell how much he will
+
+	  pay for your item.
+
+  Sell  - Sell an item.
+
+~
+
+behind the counter, safely out of your reach.
+
+A small note hangs on the wall.
+
+~
+
+~
+
+
+  List  - Show which various items are in the store.
+
+  Buy   - Buy an item.
+
+  Value - The shopkeeper will (free of charge) tell how much he will
+
+	  pay for your item.
+
+  Sell  - Sell an item.
+
+~
+
+fine bread fills the room.  The bread and Danish are arranged in fine order
+
+on the shelves, and seem to be of the finest quality.
+
+A small sign is on the counter.
+
+~
+
+~
+
+
+   Buy  - Will buy you some bread or pastry.
+
+   List - The baker will kindly tell you the price and sort of the bread in
+
+	  his bakery.
+
+~
+
+Denmark (which surely is not the capital of Sweden!).  Former ruler of
+
+Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
+
+Iceland, Estonia etc. etc.
+
+   The sight of those large, wholesome chokoladeboller makes your mouth water
+
+and your soul sing.
+
+
+~
 S
-#3135
-Park Road~
-You are at a bend on Park Road.  To the north the road goes on and to the
-east is the Road Crossing.  To the south, the ancient cliffs rise from deep
-under the ground, forming a wall.
-~
-0 1
-D0
+
+Relax for a while, get the strains out of your system. In fact, its really
+
+just a glorified private room isnt it.
+
+~
+
+~
+
+archaic writing, carvings and symbols cover its top.  A fireplace is built into
+
+the western wall, and through the southeastern windows you can see the temple
+
+square.  This place makes you feel like home.
+
+A small sign with big letters is fastened to the bar.
+
+~
+
+~
+~
+
+poems about beer, and small beer-mugs.
+
+~
+
+Free instructions provided by the Grunting Boar Inn.
+
+
+   Buy  - Buy something (drinkable) from the bartender.
+
+   List - The bartender will show you all the different drinks and
+
+	  specialties, and tell the price of each.
+
+~
+
+has been wisely decorated with simple but functional furniture.  A small
+
+staircase leads up to the defunct reception room and the bar is to the east.
+
+~
+
+~
+
+~
+
+~
+
+Gate. Ye Old Grunting Boar Inn lies to the east. South of you is Market Square
+
+the center of Midgaard.
+
+~
+
+~
+
+~
+~
+
 ~
+
+The Temple has been constructed from giant marble blocks, eternal in
+
+appearance.  Most of the walls are covered by ancient murals depicting Gods,
+
+Giants and peasants.
+
+   Large steps lead down through the Grand Temple Gate, descending the huge
+
+mound upon which the temple is built ending at the Temple Square below.
+
+   Equally large steps lead UP through a small door into the ENTRANCE to MUD
+
+SCHOOL.  (type '@@yup@@W' to go to @@RMUD SCHOOL@@W.)
+
+You see a small plaque and spy a small doorway to the east, which looks like
+
+it was just made, as well as a Grand Archway to the west.
+
+  The Temple itself with the Midgaard Healer lie North of here.
+
 ~
-0 -1 3118
-D1
+
 ~
+
 ~
-0 -1 3120
-S
-#3134
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  To the west the road goes on
-and to the north is the Road Crossing.
-~
-0 1
-D0
 ~
+
 ~
-0 -1 3120
-D3
+
 ~
+
+Hatchet, Kahn, and Furey of MERC Industries to be run by any MERC Mud.
+
+1992 December 17
+
 ~
-0 -1 3121
-S
-#3133
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  To the east the road goes on
-and to the south is the Road Crossing.
-~
-0 1
-D1
+
+likes to say no.  The room is very small, and looks like most other banks
+
+-silent, and well-kept.  You hate it already.
+
+ 
+
+ 
+
+@@lYou notice a shadowy form in the corner, seemingly casing the joint.@@N
+
 ~
+
+you will hear, sweet sweet sounds of trickling water, gentle chiming and winds
+
+stirring through forrests. Calm feelings pervade the air, and you breathe
+
+deeply in an atmosphere of true relaxation and utmost tranquility
+
+ 
+
 ~
-0 -1 3119
-D2
 ~
 ~
-0 -1 3120
-S
-#3132
-Emerald Avenue~
-You are standing on the north end of Emerald Avenue.  To the north is the
-promenade and to the east is the small street Penny Lane.
-~
-0 1
-D0
+
+standing in the middle of an open field...Dusty trails lead in all directions
+
+to what appears to be.....a farm?!?!?!
+
 ~
 ~
-0 -1 3103
-D1
+
+green grass linger in the air. Gazing towards the north more you can barely
+
+make out what appears to be a pond.
+
 ~
+
+beneath your feet is soft and squishy. Kind of makes you feel like if you
+
+don't move soon you know your will become a permanent fixture here.
+
 ~
-0 -1 3139
-D2
 ~
+#0
+#MOBILES
+immortal contact area~
+The Immortal Contact Area is here.~
 ~
-0 -1 3117
-S
-#3131
-Park Road~
-You are at Park Road which continues north and south.
-~
-0 1
-D0
+
 ~
 ~
-0 -1 3101
-D2
+
 ~
+
 ~
-0 -1 3111
-S
-#3130
-On the Concourse~
-You are at the southeast corner of the city wall.  The Concourse leads
-both north and west.  A small path leads off the concourse to the South, and
-is partly obscured by the overgrowth.
-~
-0 1
-D0
+
 ~
+
 ~
-0 -1 3104
-D3
+
 ~
+
 ~
-0 -1 3129
-S
-#3129
-On the Concourse~
-The Concourse continues both east and west.  Park Road is north of here.
-~
-0 1
-D0
+
 ~
+
 ~
-0 -1 3126
-D1
+
 ~
+
 ~
-0 -1 3130
-D3
+
 ~
+
 ~
-0 -1 3128
-S
-#3128
-On the Concourse~
-The Concourse continues both east and west.  Emerald Avenue is north of
-here.
-~
-0 1
-D0
+
 ~
+
+for coming here more often.
+
 ~
-0 -1 3125
-D1
+#0
+
 ~
-~
-0 -1 3129
-D3
-~
-~
-0 -1 3127
-S
-#3127
-On the Concourse~
-You are at the southwest corner of the city wall.  The Concourse leads
-both north and east.
-~
-0 1
-D0
-~
-~
-0 -1 3100
-D1
-~
-~
-0 -1 3128
-S
-#3126
-Park Road~
-You are on Park Road which continues north.  The Concourse is south of here.
-~
-0 1
-D0
-~
-~
-0 -1 3122
-D2
-~
-~
-0 -1 3129
-S
-#3125
-Emerald Avenue~
-You are on Emerald Avenue which continues north.
-The Concourse is south of here.
-~
-0 1
-D0
-~
-~
-0 -1 3121
-D2
-~
-~
-0 -1 3128
-S
-#3124
-End of Elm Street~
-You are at the end of Elm Street.  An old elm tree grows here.
-~
-0 1
-D3
-~
-~
-0 -1 3123
-E
-elm tree~
-The fresh young leaves of the elm tree wave gently in the wind.
-~
-S
-#3123
-Elm Street~
-You are on Elm street.  Park Road is to the west and Elm Street continues
-in eastward direction.
-~
-0 1
-D1
-~
-~
-0 -1 3124
-D3
-~
-~
-0 -1 3122
-S
-#3122
-Park Road~
-You are on Park Road which leads south and north.  Elm Street is east of
-here.
-~
-0 1
-D0
-~
-~
-0 -1 3136
-D1
-~
-~
-0 -1 3123
-D2
-~
-~
-0 -1 3126
-S
-#3121
-Emerald Avenue~
-You are standing at a bend on Emerald Avenue.  The road leads south and
-east.
-~
-0 1
-D1
-~
-~
-0 -1 3134
-D2
-~
-~
-0 -1 3125
-S
-#3120
-Road Crossing~
-You are in the middle of the road cross.  Roads lead in all directions.
-A road sign is here.
-~
-0 1
-D0
-~
-~
-0 -1 3133
-D1
-~
-~
-0 -1 3136
-D2
-~
+
 ~
 0 -1 3134
 D3
@@ -2042,63 +2632,145 @@ The sign reads:
 
    Buy  - Buy something (drinkable) from the bartender.
    List - The bartender will show you all the different drinks and
-	  specialties, and tell the price of each.
-~
-S
-#3006
-Entrance to the Grunting Boar Inn~
-You are standing in the entrance hall of the Grunting Boar Inn.  The hall
-has been wisely decorated with simple but functional furniture.  A small
-staircase leads up to the defunct reception room and the bar is to the east.
-~
-8 11
-D1
-Surprise! You see the bar.
-~
+
 ~
-0 -1 3007
-D3
-You see the temple square.
-~
+
 ~
-0 -1 3005
-D4
-You see the defunct reception room.
-~
+
 ~
-0 -1 3008
-S
-#3005
-The Temple Square~
-You are standing in Temple Square. Huge, marble steps lead up to the Temple
-Gate. Ye Old Grunting Boar Inn lies to the east. South of you is Market Square
-the center of Midgaard.
-~
-16400 1
-D0
-You see the temple.
-~
+
 ~
-0 -1 3001
-D1
-You see the good old Grunting Boar Inn.
-~
+
 ~
-0 -1 3006
-D2
-You see the Market Square.
-~
+
 ~
-0 -1 3014
-D3
+
 ~
+
 ~
-0 -1 3038
-D4
+
 ~
+
 ~
-0 -1 3057
-D5
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+concert shirt and Levi 501's.  His hair is pulled back into a pony tail.
+
+A beard and moustache complete the look.  Aod has brought some drugs
+
+with him from Generic Mud.
+
+~
+
+~
+
+but do not mess with him or else he'll get upset.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+the look in her eyes that she enjoys seeing you cower in her presence.
+
+~
+
+~
+
+keep himself going.
+
+~
+
+~
+
+~
+the boy~
+A boy is here, humming gently.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+lifetime than you have ever seen.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+body.
+
+~
+
+~
+
+wizard. He is equipped with fine clothing, and is wearing many fine
+
+rings and bracelets.
+
+~
+
+.This is another
+
+.~
+~
+
+@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
+
+~
+
+~
+
+haven't filed their taxes.@@N
+
+~
+
+~
+
+sad and evil soul.  You sense the power stored within this weapon to be awesome,
+
+ready to strike your enemies at the slightest chance.  You are forced to look
+
+away, rather than be dragged into it's dark heart....
+
+~
 ~
 ~
 0 -1 30100
@@ -2520,6 +3192,73 @@ Merc Industries
 ~
 
 
+~
+
+~
+
+~
+#0
+
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+Merc Industries
+
+~
+
+
     To whom it may concern,
 
 
@@ -2555,8 +3294,6 @@ Merc Industries
 
 ~
 
-~
-
 towards the river so you can sit and watch the river and the houses on the
 
 other side.
@@ -2582,9 +3319,6 @@ other side.
 ~
 
 ~
-~
-65 65538 1000 S
-3 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -3221,21 +3955,37 @@ A
 E
 banner~
 This is the official Merc war banner to see you through the darkest realm!
-~
+
+~
+
+~
 L
-25
-#3016
-ring signet~
-a city guard signet ring~
-You see a ring with a strange symbol on the floor.~
-9 134217792 8396800 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-24 -2
-A
-17 -6
-L
+
+~
+
+~
+
+     ???
+
+    ?   ?
+
+       ?
+
+      ?
+
+      ?
+
+      *
+
+~
+
+~
+
+equipped with a handle to make it handy and a hood to protect its flame.
+
+Some letters have been scratched on its bottom.
+
+~
 25
 #3017
 bracer~
@@ -3383,9 +4133,12 @@ L
 #3034
 vest~
 a standard issue vest~
-You see a standard issue vest here.~
-9 134217728 8650752 1
-5 0 0 0 0 0 0 0 0 0
+
+spell.  The edge of the blade looks as if it could cut through anything
+
+or anyone.
+
+~
 4
 E
 vest~
@@ -3431,12 +4184,15 @@ E
 dagger~
 You see a dagger of great craftsmanship.  Imprinted on the side is:
 Merc Industries
-~
+
+~
 L
-25
-#3037
-sword~
-a standard issue sword~
+
+~
+
+~
+
+~
 You see a standard issue sword here.~
 5 134217792 8421376 1
 0 3 4 3 0 0 0 0 0 0
@@ -3549,8 +4305,6 @@ A lot of gold is here.~
 52385 0 0 0 0 0 0 0 0 0
 0
 L
-1
-#3131
 safe~
 the safe~
 A safe is placed in a dark corner of the room.~
@@ -3739,16 +4493,6 @@ boots reinforced~
 a pair of reinforced boots~
 A pair of reinforced boots lies here.~
 9 134217728 10485760 1
-4 0 0 0 0 0 0 0 0 0
-4
-L
-15
-#3074
-skirt scale mail~
-a long scale mail skirt~
-A long scale mail skirt is lying on the ground.~
-9 134217728 9437184 1
-4 0 0 0 0 0 0 0 0 0
 8
 L
 15
@@ -3925,9 +4669,7 @@ A raft has been left here.~
 E
 raft~
 The raft looks very primitive.
-~
-L
-1
+1
 #3046
 bronze breast plate~
 a bronze breast plate~
