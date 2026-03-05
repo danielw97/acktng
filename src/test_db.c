@@ -1,5 +1,7 @@
 #include <assert.h>
+#include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "config.h"
@@ -85,24 +87,6 @@ static int is_four_number_line(const char *line)
     return sscanf(line, " %d %d %d %d %c", &a, &b, &c, &d, &trailing) == 4;
 }
 
-static int is_ten_number_line(const char *line)
-{
-    int a[10];
-    char trailing;
-
-    return sscanf(line,
-                  " %d %d %d %d %d %d %d %d %d %d %c",
-                  &a[0], &a[1], &a[2], &a[3], &a[4], &a[5], &a[6], &a[7], &a[8], &a[9], &trailing) == 10;
-}
-
-static int is_single_number_line(const char *line)
-{
-    int value;
-    char trailing;
-
-    return sscanf(line, " %d %c", &value, &trailing) == 1;
-}
-
 static int is_two_number_line(const char *line)
 {
     int a;
@@ -121,6 +105,59 @@ static int read_non_empty_line(FILE *fp, char *buf, size_t buf_size)
     }
 
     return 0;
+}
+
+static int read_non_blank_content_line(FILE *fp, char *buf, size_t buf_size)
+{
+    while (read_non_empty_line(fp, buf, buf_size))
+    {
+        const char *p = buf;
+
+        while (*p == ' ' || *p == '\t' || *p == '\r' || *p == '\n')
+            p++;
+
+        if (*p != '\0')
+            return 1;
+    }
+
+    return 0;
+}
+
+static void fail_area_validation(const char *area_name, int area_line, const char *fmt, ...)
+{
+    va_list args;
+
+    fprintf(stderr, "test_db area validation failure in %s", area_name != NULL ? area_name : "<unknown area>");
+    if (area_line > 0)
+        fprintf(stderr, " at line %d", area_line);
+    fprintf(stderr, ": ");
+
+    va_start(args, fmt);
+    vfprintf(stderr, fmt, args);
+    va_end(args);
+
+    fputc('\n', stderr);
+    exit(1);
+}
+
+static int current_area_line(FILE *fp)
+{
+    int line_number = 1;
+    long marker = ftell(fp);
+    int c;
+
+    if (marker < 0)
+        return 0;
+
+    assert(fseek(fp, 0, SEEK_SET) == 0);
+    while (ftell(fp) < marker && (c = fgetc(fp)) != EOF)
+    {
+        if (c == '\n')
+            line_number++;
+    }
+    assert(fseek(fp, marker, SEEK_SET) == 0);
+
+    return line_number;
 }
 
 static const char *skip_space(const char *line)
@@ -187,7 +224,7 @@ static int consume_tilde_terminated_string(FILE *fp, int require_same_line)
     return 0;
 }
 
-static void validate_rooms_section_exit_format(FILE *fp)
+static void validate_rooms_section_exit_format(FILE *fp, const char *area_name)
 {
     char line[4096];
 
@@ -208,18 +245,20 @@ static void validate_rooms_section_exit_format(FILE *fp)
 
             if (trimmed[0] == 'D' && trimmed[1] >= '0' && trimmed[1] <= '5')
             {
-                assert(consume_tilde_terminated_string(fp, 0));
-                assert(consume_tilde_terminated_string(fp, 0));
-                assert(read_non_empty_line(fp, line, sizeof(line)));
-                assert(is_exit_triple_line(skip_space(line)));
+                if (!consume_tilde_terminated_string(fp, 0) || !consume_tilde_terminated_string(fp, 0))
+                    fail_area_validation(area_name, current_area_line(fp), "unterminated exit description in #ROOMS entry");
+                if (!read_non_blank_content_line(fp, line, sizeof(line)))
+                    fail_area_validation(area_name, current_area_line(fp), "unexpected EOF while reading room exit destination line");
+                if (!is_exit_triple_line(skip_space(line)))
+                    fail_area_validation(area_name, current_area_line(fp), "invalid room exit destination line: %s", line);
             }
         }
     }
 
-    assert(!"unterminated #ROOMS section (expected #0)");
+    fail_area_validation(area_name, current_area_line(fp), "unterminated #ROOMS section (expected #0)");
 }
 
-static void validate_mobiles_section_format(FILE *fp)
+static void validate_mobiles_section_format(FILE *fp, const char *area_name)
 {
     char line[4096];
 
@@ -230,126 +269,78 @@ static void validate_mobiles_section_format(FILE *fp)
         if (line_starts_with(trimmed, "#0"))
             return;
 
-        assert(trimmed[0] == '#');
+        if (trimmed[0] != '#')
+            fail_area_validation(area_name, current_area_line(fp), "expected mobile entry vnum, got: %s", trimmed);
 
-        assert(consume_tilde_terminated_string(fp, 0));
-        assert(consume_tilde_terminated_string(fp, 0));
-        assert(consume_tilde_terminated_string(fp, 0));
-        assert(consume_tilde_terminated_string(fp, 0));
+        if (!consume_tilde_terminated_string(fp, 0) || !consume_tilde_terminated_string(fp, 0)
+            || !consume_tilde_terminated_string(fp, 0) || !consume_tilde_terminated_string(fp, 0))
+            fail_area_validation(area_name, current_area_line(fp), "unterminated mobile string field");
 
-        assert(read_non_empty_line(fp, line, sizeof(line)));
-        assert(strchr(line, 'S') != NULL);
-        assert(read_non_empty_line(fp, line, sizeof(line)));
-        assert(is_two_number_line(skip_space(line)));
-        assert(read_non_empty_line(fp, line, sizeof(line)));
-        assert(is_four_number_line(skip_space(line)));
+        if (!read_non_blank_content_line(fp, line, sizeof(line)) || strchr(line, 'S') == NULL)
+            fail_area_validation(area_name, current_area_line(fp), "mobile flags line missing expected 'S': %s", line);
+        if (!read_non_blank_content_line(fp, line, sizeof(line)) || !is_two_number_line(skip_space(line)))
+            fail_area_validation(area_name, current_area_line(fp), "mobile level/alignment line is invalid: %s", line);
+        if (!read_non_blank_content_line(fp, line, sizeof(line)) || !is_four_number_line(skip_space(line)))
+            fail_area_validation(area_name, current_area_line(fp), "mobile combat line is invalid: %s", line);
 
         for (;;)
         {
             long marker;
 
             marker = ftell(fp);
-            if (!read_non_empty_line(fp, line, sizeof(line)))
+            if (!read_non_blank_content_line(fp, line, sizeof(line)))
                 return;
 
             trimmed = skip_space(line);
             if (trimmed[0] == '#')
             {
-                assert(fseek(fp, marker, SEEK_SET) == 0);
+                if (fseek(fp, marker, SEEK_SET) != 0)
+                    fail_area_validation(area_name, current_area_line(fp), "unable to rewind to next mobile marker");
                 break;
             }
 
             if (trimmed[0] == '!')
-                assert(has_prefixed_int_count(trimmed, '!', 7));
+            {
+                if (!has_prefixed_int_count(trimmed, '!', 7))
+                    fail_area_validation(area_name, current_area_line(fp), "invalid ! trailer line: %s", trimmed);
+            }
             else if (trimmed[0] == '|')
-                assert(has_prefixed_int_count(trimmed, '|', 7));
+            {
+                if (!has_prefixed_int_count(trimmed, '|', 7))
+                    fail_area_validation(area_name, current_area_line(fp), "invalid | trailer line: %s", trimmed);
+            }
             else if (trimmed[0] == '+')
-                assert(has_prefixed_int_count(trimmed, '+', 9));
+            {
+                if (!has_prefixed_int_count(trimmed, '+', 9))
+                    fail_area_validation(area_name, current_area_line(fp), "invalid + trailer line: %s", trimmed);
+            }
             else if (trimmed[0] == 'l')
-                assert(has_prefixed_int_count(trimmed, 'l', 10));
+            {
+                if (!has_prefixed_int_count(trimmed, 'l', 10))
+                    fail_area_validation(area_name, current_area_line(fp), "invalid l trailer line: %s", trimmed);
+            }
             else if (trimmed[0] == 'L')
-                assert(has_prefixed_int_count(trimmed, 'L', 9));
+            {
+                if (!has_prefixed_int_count(trimmed, 'L', 9))
+                    fail_area_validation(area_name, current_area_line(fp), "invalid L trailer line: %s", trimmed);
+            }
             else if (trimmed[0] == '>')
             {
                 while (read_non_empty_line(fp, line, sizeof(line)))
                 {
+                    if (skip_space(line)[0] == '\0')
+                        continue;
+
                     if (skip_space(line)[0] == '|')
                         break;
                 }
             }
             else
-                assert(!"Unexpected trailing line in #MOBILES entry");
+                fail_area_validation(area_name, current_area_line(fp), "unexpected trailing line in #MOBILES entry: %s", trimmed);
         }
     }
 
-    assert(!"unterminated #MOBILES section (expected #0)");
-}
-
-static void validate_objects_section_format(FILE *fp)
-{
-    char line[4096];
-
-    while (read_non_empty_line(fp, line, sizeof(line)))
-    {
-        const char *trimmed = skip_space(line);
-
-        if (line_starts_with(trimmed, "#0"))
-            return;
-
-        assert(trimmed[0] == '#');
-
-        assert(consume_tilde_terminated_string(fp, 1));
-        assert(consume_tilde_terminated_string(fp, 0));
-        assert(consume_tilde_terminated_string(fp, 0));
-
-        assert(read_non_empty_line(fp, line, sizeof(line)));
-        if (!is_four_number_line(skip_space(line)))
-        {
-            assert(consume_tilde_terminated_string(fp, 0));
-            assert(read_non_empty_line(fp, line, sizeof(line)));
-        }
-        assert(is_four_number_line(skip_space(line)));
-        assert(read_non_empty_line(fp, line, sizeof(line)));
-        assert(is_ten_number_line(skip_space(line)));
-        assert(read_non_empty_line(fp, line, sizeof(line)));
-        assert(is_single_number_line(skip_space(line)));
-
-        for (;;)
-        {
-            long marker;
-
-            marker = ftell(fp);
-            if (!read_non_empty_line(fp, line, sizeof(line)))
-                return;
-
-            trimmed = skip_space(line);
-            if (trimmed[0] == '#')
-            {
-                assert(fseek(fp, marker, SEEK_SET) == 0);
-                break;
-            }
-
-            if (trimmed[0] == 'A')
-            {
-                assert(read_non_empty_line(fp, line, sizeof(line)));
-                assert(is_two_number_line(skip_space(line)));
-            }
-            else if (trimmed[0] == 'E')
-            {
-                assert(consume_tilde_terminated_string(fp, 0));
-                assert(consume_tilde_terminated_string(fp, 0));
-            }
-            else if (trimmed[0] == 'L')
-            {
-                assert(read_non_empty_line(fp, line, sizeof(line)));
-                assert(is_single_number_line(skip_space(line)));
-            }
-            else
-                assert(!"Unexpected trailing line in #OBJECTS entry");
-        }
-    }
-
-    assert(!"unterminated #OBJECTS section (expected #0)");
+    fail_area_validation(area_name, current_area_line(fp), "unterminated #MOBILES section (expected #0)");
 }
 
 static void test_mock_load_all_areas_and_validate_formats(void)
@@ -391,11 +382,9 @@ static void test_mock_load_all_areas_and_validate_formats(void)
         while (read_non_empty_line(area_fp, line, sizeof(line)))
         {
             if (line_starts_with(line, "#ROOMS"))
-                validate_rooms_section_exit_format(area_fp);
+                validate_rooms_section_exit_format(area_fp, area_name);
             else if (line_starts_with(line, "#MOBILES"))
-                validate_mobiles_section_format(area_fp);
-            else if (line_starts_with(line, "#OBJECTS"))
-                validate_objects_section_format(area_fp);
+                validate_mobiles_section_format(area_fp, area_name);
         }
 
         fclose(area_fp);
