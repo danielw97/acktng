@@ -4681,11 +4681,6 @@ A disciplined quartermaster in polished mail, ready to match steel to soldier.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3251
-clothier armorer moonthread~
-The Moonthread Cloth Armorer~
-The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
-~
 #3252
 armourer armorer ironweave melee~
 The Ironweave Melee Armourer~
@@ -4701,6 +4696,11 @@ A scarred melee armourer in a soot-dark apron, fitting reinforced wargear for fr
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#3251
+clothier armorer moonthread~
+The Moonthread Cloth Armorer~
+The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
+^M~
 A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor.
 ~
 3 0 900 S
@@ -6561,7 +6561,8 @@ A @@Wconstellation @@bgreatcloak@@N hangs beneath an arc of tiny crystal lights.
 9 0 8388624 4
 0 0 0 0 0 0 0 0 0 0
 4
-A
+L
+95
 #3141
 bulwark oathhelm~
 a bulwark oathhelm~
@@ -6965,7 +6966,7 @@ A
 19 19
 L
 75
-#3300
+#3107
 rampart poleyns~
 rampart poleyns~
 Rampart poleyns are displayed on a scarred training dummy.~
@@ -6978,7 +6979,7 @@ A
 19 20
 L
 85
-#3301
+#3096
 oathwall cuirass~
 an oathwall cuirass~
 An oathwall cuirass dominates the center fitting frame.~
@@ -7004,11 +7005,6 @@ A
 19 23
 L
 100
-
-3252 9 0 0 0 0 135 75 0 23
-12 29
-L
-50
 #3251
 initiate moonthread hood~
 an initiate moonthread hood~
@@ -7021,13 +7017,12 @@ A
 A
 13 2
 L
-4
+5
 #3252
 apprentice rune-wrap~
 an apprentice rune-wrap~
 An apprentice rune-wrap hangs from a lacquered stand.~
 9 0 8388624 2
-3253 9 0 0 0 0 135 75 0 23
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -7035,7 +7030,7 @@ A
 A
 13 3
 L
-8
+10
 #3253
 whisperweave mantle~
 a whisperweave mantle~
@@ -7048,7 +7043,7 @@ A
 A
 13 4
 L
-12
+15
 #3254
 glyphstitched cuffs~
 glyphstitched cuffs~
@@ -7061,7 +7056,7 @@ A
 A
 13 5
 L
-16
+20
 #3255
 amberlace sash~
 an amberlace sash~
@@ -7087,7 +7082,7 @@ A
 A
 13 6
 L
-24
+25
 #3257
 silversigil robe~
 a silversigil robe~
@@ -7100,7 +7095,7 @@ A
 A
 13 7
 L
-28
+30
 #3258
 starbound slippers~
 starbound slippers~
@@ -7126,7 +7121,7 @@ A
 A
 13 9
 L
-32
+35
 #3260
 astral knot girdle~
 an astral knot girdle~
@@ -7139,7 +7134,7 @@ A
 A
 13 10
 L
-34
+35
 #3261
 spellglass vambraces~
 spellglass vambraces~
@@ -7152,7 +7147,7 @@ A
 A
 13 10
 L
-36
+35
 #3262
 highweave tabard~
 a highweave tabard~
@@ -7165,7 +7160,7 @@ A
 A
 13 11
 L
-38
+40
 #3263
 sigilward cloak~
 a sigilward cloak~
@@ -7191,7 +7186,7 @@ A
 A
 13 13
 L
-44
+45
 #3265
 oracle threadplate~
 oracle threadplate~
@@ -7204,7 +7199,7 @@ A
 A
 13 14
 L
-48
+50
 #3266
 eclipsed aegis robe~
 an eclipsed aegis robe~
