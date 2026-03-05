@@ -3142,8 +3142,8 @@ D3
 0 -1 3159
 S
 #3161
-@@WCedar Square@@N~
-The avenue broadens here into a lived-in civic pocket where couriers and fishmongers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries wet stone and ash, while distant hymnwork rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through inlaid ward sigils, and at the edge of the street stands a public fountain carved with lions, giving this stretch of @@WMidgaard@@N a character all its own.~
+@@aMoonthread Clothier's Court@@N~
+Bolts of dyed linen and rune-stitched cotton now frame this corner of Midgaard, where apprentice couriers stop to be measured beside veteran hedge-mages in need of fresh wardcloth. Tailor's bells and shearsong mingle with market noise, and mannequins in layered travel robes stand beneath practical @@ylanterns@@N while a cloth armorer displays ready stock for every discipline. The paving still bears old ward sigils, but this square now clearly serves as a bustling outfitter's court for soft armor and reinforced garments.~
 0 1
 D0
 ~
@@ -4677,7 +4677,24 @@ The Argent Armorer appraises a rack of polished blades.
 ~
 A disciplined quartermaster in polished mail, ready to match steel to soldier.
 
-~
+#3251
+clothier armorer moonthread~
+The Moonthread Cloth Armorer~
+The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
+
+~
+A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor.
+
+~
+3 0 900 S
+54 2
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+~
 1 0 900 S
 45 1
 0 0 0 0
@@ -6405,6 +6422,267 @@ An adamant bulwark dominates the rear of the showroom.~
 0 0 0 0 0 0 0 0 0 0
 4
 A
+#3267
+@@astormlinen @@Wcap@@N~
+a @@astormlinen @@Wcap@@N~
+A @@astormlinen @@Wcap@@N is pinned beside silver tailor shears.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 19
+A
+13 16
+L
+55
+#3268
+@@eemberspun @@amantle@@N~
+an @@eemberspun @@amantle@@N~
+An @@eemberspun @@amantle@@N drapes over a polished dress form.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 20
+A
+13 16
+L
+55
+#3269
+@@bwayfarer @@awardwrap@@N~
+a @@bwayfarer @@awardwrap@@N~
+A @@bwayfarer @@awardwrap@@N hangs from a row of brass hooks.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 20
+A
+13 17
+L
+60
+#3270
+@@crunestitched @@Wcuffs@@N~
+@@crunestitched @@Wcuffs@@N~
+@@cRunestitched @@Wcuffs@@N rest on folded bolts of dyed cotton.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 21
+A
+13 17
+L
+65
+#3271
+@@ysunveil @@Wsash@@N~
+a @@ysunveil @@Wsash@@N~
+A @@ysunveil @@Wsash@@N glints with tiny ward-sewn charms.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 22
+A
+13 18
+L
+70
+#3272
+@@amoonthread @@Wshoulders@@N~
+@@amoonthread @@Wshoulders@@N~
+@@aMoonthread @@Wshoulders@@N are arranged in a precise tiered display.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 23
+A
+13 18
+L
+70
+#3273
+@@dnightwatch @@Wrobe@@N~
+a @@dnightwatch @@Wrobe@@N~
+A @@dnightwatch @@Wrobe@@N hangs beneath a ring of lantern light.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 24
+A
+13 19
+L
+75
+#3274
+@@cstarglass @@Wslippers@@N~
+@@cstarglass @@Wslippers@@N~
+@@cStarglass @@Wslippers@@N sit in a velvet-lined lacquer tray.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 24
+A
+13 19
+L
+80
+#3275
+@@awardweave @@Wvestment@@N~
+a @@awardweave @@Wvestment@@N~
+A @@awardweave @@Wvestment@@N ripples softly without wind.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 25
+A
+13 20
+L
+80
+#3276
+@@castral knot @@Wgirdle@@N~
+an @@castral knot @@Wgirdle@@N~
+An @@castral knot @@Wgirdle@@N hangs above carefully coiled thread-cord.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 26
+A
+13 20
+L
+85
+#3277
+@@bspellguard @@Wvambraces@@N~
+@@bspellguard @@Wvambraces@@N~
+@@bSpellguard @@Wvambraces@@N gleam beside stamped moonthread seals.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 26
+A
+13 21
+L
+90
+#3278
+@@Whighweave @@ctabard@@N~
+a @@Whighweave @@ctabard@@N~
+A @@Whighweave @@ctabard@@N bears layered sigils in silver stitchwork.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 27
+A
+13 21
+L
+95
+#3279
+@@csigilward @@Wcloak@@N~
+a @@csigilward @@Wcloak@@N~
+A @@csigilward @@Wcloak@@N rustles around a polished oak mannequin.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 28
+A
+13 22
+L
+95
+#3280
+@@Warchon @@athreadmail@@N~
+@@Warchon @@athreadmail@@N~
+@@WArchon @@athreadmail@@N is layered from rune-silk and tempered rings.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 29
+A
+13 23
+L
+100
+#3281
+@@bscribecloth @@Wcowl@@N~
+a @@bscribecloth @@Wcowl@@N~
+A @@bscribecloth @@Wcowl@@N is hung above an inkwell of warding dye.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 19
+A
+13 16
+L
+50
+#3282
+@@ydusttrail @@Wponcho@@N~
+a @@ydusttrail @@Wponcho@@N~
+A @@ydusttrail @@Wponcho@@N hangs from a traveler-marked coat rail.~
+9 0 8388624 2
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 21
+A
+13 17
+L
+60
+#3283
+@@Wpilgrim @@ahemguard@@N~
+a @@Wpilgrim @@ahemguard@@N~
+A @@Wpilgrim @@ahemguard@@N is folded with disciplined precision.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 23
+A
+13 18
+L
+65
+#3284
+@@charborwind @@Wovercoat@@N~
+a @@charborwind @@Wovercoat@@N~
+A @@charborwind @@Wovercoat@@N sways gently beside hanging lanterns.~
+9 0 8388624 3
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 25
+A
+13 20
+L
+75
+#3285
+@@mwardscribe @@Wdoublet@@N~
+a @@mwardscribe @@Wdoublet@@N~
+A @@mwardscribe @@Wdoublet@@N is stitched with mirrored safety runes.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 27
+A
+13 21
+L
+90
+#3286
+@@Wconstellation @@bgreatcloak@@N~
+a @@Wconstellation @@bgreatcloak@@N~
+A @@Wconstellation @@bgreatcloak@@N hangs beneath an arc of tiny crystal lights.~
+9 0 8388624 4
+0 0 0 0 0 0 0 0 0 0
+4
+A
+12 29
+A
+13 23
+L
+95
+3251 9 0 0 0 0 130 70 0 23
 18 18
 A
 19 15
@@ -6917,6 +7195,48 @@ E 0 3016 99 1           signet ring
 E 0 3037 199 16         sword
 
 E 0 3034 99 5           vest
+
+M 0 3251 1 3161       The Moonthread cloth armorer
+
+G 0 3267 100 
+
+G 0 3268 100 
+
+G 0 3269 100 
+
+G 0 3270 100 
+
+G 0 3271 100 
+
+G 0 3272 100 
+
+G 0 3273 100 
+
+G 0 3274 100 
+
+G 0 3275 100 
+
+G 0 3276 100 
+
+G 0 3277 100 
+
+G 0 3278 100 
+
+G 0 3279 100 
+
+G 0 3280 100 
+
+G 0 3281 100 
+
+G 0 3282 100 
+
+G 0 3283 100 
+
+G 0 3284 100 
+
+G 0 3285 100 
+
+G 0 3286 100 
 
 M 0 3060 20 3111      Cityguard 2
 
