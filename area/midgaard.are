@@ -2041,10 +2041,6 @@ D1
 ~
 ~
 0 -1 3102
-D5
-Shop Below.~
-~
-0 -1 3121
 S
 #3102
 @@WSilver Marketwalk@@N~
@@ -2062,10 +2058,6 @@ D3
 ~
 ~
 0 -1 3101
-D5
-Shop Below.~
-~
-0 -1 3122
 S
 #3103
 @@WCrimson Concourse@@N~
@@ -2083,10 +2075,6 @@ D3
 ~
 ~
 0 -1 3102
-D5
-Shop Below.~
-~
-0 -1 3123
 S
 #3104
 @@WAuburn Traverse@@N~
@@ -2104,10 +2092,6 @@ D3
 ~
 ~
 0 -1 3103
-D5
-Shop Below.~
-~
-0 -1 3124
 S
 #3105
 @@WBronze Colonnade@@N~
@@ -2125,10 +2109,6 @@ D3
 ~
 ~
 0 -1 3104
-D5
-Shop Below.~
-~
-0 -1 3125
 S
 #3106
 @@WSunward Way@@N~
@@ -2146,10 +2126,6 @@ D3
 ~
 ~
 0 -1 3105
-D5
-Shop Below.~
-~
-0 -1 3126
 S
 #3107
 @@WMarble Ring@@N~
@@ -2167,10 +2143,6 @@ D3
 ~
 ~
 0 -1 3106
-D5
-Shop Below.~
-~
-0 -1 3127
 S
 #3108
 @@WGolden Mews@@N~
@@ -2188,10 +2160,6 @@ D3
 ~
 ~
 0 -1 3107
-D5
-Shop Below.~
-~
-0 -1 3128
 S
 #3109
 @@WGranite Arcade@@N~
@@ -2449,165 +2417,73 @@ S
 @@cThe Grand Post Office@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3122
 D2
 ~
 ~
 0 -1 3141
-D4
-Street Above.~
-~
-0 -1 3101
 S
 #3122
 @@cThe Argent Armory@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3123
 D2
 ~
 ~
 0 -1 3142
-D3
-~
-~
-0 -1 3121
-D4
-Street Above.~
-~
-0 -1 3102
 S
 #3123
 @@cThe Moonthread Outfitters@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3124
 D2
 ~
 ~
 0 -1 3143
-D3
-~
-~
-0 -1 3122
-D4
-Street Above.~
-~
-0 -1 3103
 S
 #3124
 @@cThe Emberglass Arcana@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3125
 D2
 ~
 ~
 0 -1 3144
-D3
-~
-~
-0 -1 3123
-D4
-Street Above.~
-~
-0 -1 3104
 S
 #3125
 @@cThe Provisioner's Exchange@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3126
 D2
 ~
 ~
 0 -1 3145
-D3
-~
-~
-0 -1 3124
-D4
-Street Above.~
-~
-0 -1 3105
 S
 #3126
 @@cThe Invasion Requisitions@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3127
 D2
 ~
 ~
 0 -1 3146
-D3
-~
-~
-0 -1 3125
-D4
-Street Above.~
-~
-0 -1 3106
 S
 #3127
 @@cThe Proposition Exchange@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3128
 D2
 ~
 ~
 0 -1 3147
-D3
-~
-~
-0 -1 3126
-D4
-Street Above.~
-~
-0 -1 3107
 S
 #3128
 @@cThe Quest Broker's Hall@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
 17420 1
-D1
-~
-~
-0 -1 3129
 D2
 ~
 ~
 0 -1 3148
-D3
-~
-~
-0 -1 3127
-D4
-Street Above.~
-~
-0 -1 3108
 S
 #3129
 @@WGranite Arcade@@N~
@@ -2625,10 +2501,6 @@ D2
 ~
 ~
 0 -1 3149
-D3
-~
-~
-0 -1 3128
 S
 #3130
 @@WSaffron Walk@@N~
@@ -3829,8 +3701,8 @@ D3
 ~
 ~
 0 -1 3188
-D4
-The Microcosm.~
+D5
+~
 ~
 0 -1 5600
 S
@@ -3841,11 +3713,11 @@ The southern gate arches over a causeway of old stone. Lantern hooks rattle abov
 D0
 The Crypts of Kel'Shadra.~
 ~
-0 -1 9400
+0 -1 3170
 D1
 ~
 ~
-0 -1 3191
+0 0 3191
 D2
 The Eccentric Woodland.~
 ~
@@ -3853,7 +3725,7 @@ The Eccentric Woodland.~
 D3
 ~
 ~
-0 -1 3189
+0 0 3189
 S
 #3191
 @@WAzure Plaza@@N~
@@ -4578,8 +4450,7 @@ L 0 0 0 0 0 0 0 0 0
 #3011
 gertrude executioner~
 Gertrude~
-Gertrude the Executioner polishes her blade...
-
+Gertrude the Executioner polishes her blade.
 ~
 A masked woman with muscles bulging all over her body.  You can tell by
 
@@ -4770,10 +4641,10 @@ L 0 0 0 0 0 0 0 0 0
 arcanist emberglass~
 Arcanist Emberglass~
 Arcanist Emberglass stands here, trying to sell arcane items.
-~
+~
 A wizard. He is equipped with fine clothing, and is wearing many fine
-rings and bracelets.
-~
+rings and bracelets.
+~
 3 0 900 S
 74 1
 0 0 0 0
@@ -4786,10 +4657,10 @@ L 0 0 0 0 0 0 0 0 0
 max teller~
 Max~
 Max the bank teller stands here, ready to take your money.
-@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
-~
+@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
+~
 He looks greasy, and not very trustworthy.  Go figure.
-~
+~
 9469963 128 0 S
 94 1
 0 0 0 0
@@ -4819,9 +4690,9 @@ L 0 0 0 0 0 0 0 0 0
 outfitter moonthread~
 The Moonthread Outfitter~
 The Moonthread Outfitter measures a reinforced coat for a customer.
-~
+~
 A patient tailor known for practical armor, layered leathers, and expedition wear.
-~
+~
 3 0 900 S
 48 2
 0 0 0 0
@@ -5065,12 +4936,8 @@ The lover's board is stuck to the wall with 4 arrows.
 4
 L
 1
-#3089
-Merc Industries
-~
-25
 #3026
-leggings~
+notice board~
 the notice board.~
 There is a large notice board fixed to the wall.~
 27 0 0 1
@@ -5201,34 +5068,12 @@ You see a pair of standard issue gloves here.~
 E
 gloves~
 You see gloves of great craftsmanship.  Imprinted on the side is:
-
-12 134217728 0 1
-12 134217728 0 1
-
-17 134217728 8388608 1
-18 134217728 8388608 1
+Merc Industries
+~
 L
-20 134217728 8388608 1
-25 134217728 0 1
-12 134217728 0 1
-18 134217728 8388608 1
-20 134217728 8388608 1
-15 134217728 0 1
-15 134217728 0 1
-13 134217728 8421376 1
-5 134217728 8421376 1
-18 134217728 8388608 1
-18 134217728 8388608 1
-
-18 134217728 8388608 1
-18 134217728 8388608 1
-
-9 134217728 8390656 1
-9 134217728 8390656 1
-L
-17 134217728 8388608 1
-17 134217728 8388608 1
-17 134217728 8388608 1
+25
+#3025
+leggings~
 a pair of standard issue leggings~
 You see a pair of standard issue leggings here.~
 9 134217728 9437184 1
@@ -5378,37 +5223,14 @@ E
 notice liquidation bank~
 The letter is written in a reserved and dignified Spencer hand.
 
-
     To whom it may concern,
 
-
 	Merc Industries has charmed your money.  Apparently one's
-
 	gold will remain close, even beyond death. We are closing
-
 	down our offices and ATM machines.  Our services here are
-
 	no longer required.
-
 
     Midgaard City Bank
-
-~
-L
-1
-#3139
-1
-#3107
-
-	system.  Apparently one can now save and quit at any time
-
-	from anywhere inside a town or out.  My services here are
-
-	no longer required.
-
-
-    Diana the Receptionist
-
 ~
 L
 1
@@ -5572,23 +5394,8 @@ The wooden key is not special.
 
 ~
 L
-9 134217728 8389632 1
-9 134217728 8392704 1
-9 134217728 10485760 1
-9 134217728 9437184 1
-9 134217728 8388616 1
-9 134217728 8650752 1
-22 134217728 8388608 1
-22 134217728 8388608 1
-E
-9 134217728 8650752 1
-9 134217728 8650752 1
-2 134217792 8388608 1
-10 134217920 8388608 1
-2 134217792 8388608 1
-L
-15 134217728 8388608 1
-15 134217728 8388608 1
+1
+#3121
 key iron~
 a key~
 An iron key has been left here.~
@@ -5799,86 +5606,11 @@ L
 1
 #3063
 boots~
-19 134225920 8388608 1
-17 134217728 8388608 1
-17 134217728 8388608 1
-17 134217728 8388608 1
-17 134217728 8388608 1
-L
-1
-17 134217728 8388608 1
-27 134217728 0 1
-9 134218048 8388736 1
-12 134217729 0 1
-27 134217728 0 1
-27 134217728 0 1
-27 134217729 0 1
-L
-1
-5 134217728 8421376 8
-5 134217728 8421376 9
-5 134217728 8421376 7
-9 134217728 8388624 12
-9 134217728 8388624 13
-9 134217728 8388624 14
+a pair of leather boots~
+A pair of leather boots is lying here on the ground.~
+0 9 8392704 1
+2 0 0 0 0 0 0 0 0 0
 4
-L
-9 134217728 8388624 2
-9 134217728 8388624 3
-9 134217728 8388624 4
-9 134217728 8388624 12
-9 134217728 8388624 13
-9 134217728 8388624 14
-5 134217728 8421376 7
-5 134217728 8421376 8
-L
-5 134217728 8421376 9
-9 134217728 8388624 2
-9 134217728 8388624 3
-9 134217728 8388624 4
-5 134217728 8421376 7
-9 134217728 8388624 3
-0 0 0 0 0 0 0 0 0 0
-9 134217728 8388624 14
-9 134217728 8388624 2
-9 134217728 8388624 2
-9 134217728 8388624 3
-9 134217728 8388624 3
-9 134217728 8388624 4
-9 134217728 8388624 4
-L
-9 134217728 8388624 7
-9 134217728 8388624 7
-9 134217728 8388624 8
-9 134217728 8388624 8
-9 134217728 8388624 9
-9 134217728 8388624 9
-0 0 0 0 0 0 0 0 0 0
-9 134217728 8388624 12
-9 134217728 8388624 12
-9 134217728 8388624 13
-9 134217728 8388624 13
-9 134217728 8388624 14
-9 134217728 8388624 14
-9 134217728 8388624 2
-L
-9 134217728 8388624 2
-9 134217728 8388624 2
-9 134217728 8388624 2
-9 134217728 8388624 2
-9 134217728 8388624 3
-9 134217728 8388624 3
-9 134217728 8388624 3
-9 134217728 8388624 3
-L
-9 134217728 8388624 3
-9 134217728 8388624 4
-9 134217728 8388624 4
-9 134217728 8388624 4
-9 134217728 8388624 4
-9 134217728 8388624 4
-9 134217728 8388624 4
-13
 L
 1
 #3042
@@ -6898,7 +6630,6 @@ L
 3004 9 0 0 0 0 100 50 0 23
 3003 5 6 7 0 0 130 40 0 23
 3002 1 8 13 15 19 150 40 0 23
-3014 2 3 4 10 0 105 15 0 23
 3140 5 9 0 0 0 120 90 0 23
 3142 29 0 0 0 0 120 90 0 23
 3143 25 26 27 0 0 125 85 0 23
@@ -6917,19 +6648,9 @@ M 0 3011 1 3110       Gertrude the executioner
 
 E 0 3005 100 16         wield the executioners blade
 
-M 0 3014 1 3033       The Wizard Shop Keeper
-
 G 0 3040 500                Give identify scroll.
 
 G 0 3041 500                Give potion of see invisible.
-
-M 0 3003 1 3011       The weaponsmith
-
-G 0 3020 100 
-
-G 0 3021 100 
-
-G 0 3022 100 
 
 M 0 3004 1 3020       The armourer
 
@@ -6948,18 +6669,6 @@ G 0 3077 100
 G 0 3097 100 
 
 E 0 3022 100 16            wields a longsword
-
-M 0 3002 1 3010       The grocer
-
-G 0 3032 0 (null)
-
-G 0 3030 900 
-
-G 0 3031 900 
-
-G 0 3138 999 
-
-E 0 3022 900 16            wields a longsword
 
 M 0 3009 1 3034       The Jeweller
 
@@ -7005,19 +6714,7 @@ G 0 3071 100
 
 M 0 3006 1 3049       A Captain (selling boats) at Levee
 
-G 0 3050 20              Give a raft to the captain
-
-G 0 3051 10              Give canoe to Captain
-
 M 0 3007 1 3050       Sailor training in the warehouse
-
-M 0 3040 1 3007       The bartender
-
-G 0 3044 100 
-
-G 0 3001 100 
-
-E 0 3022 100 16            wields a longsword
 
 M 0 3046 1 3048       Filthy (bartender) in Grubby Inn
 
@@ -7221,8 +6918,6 @@ E 0 3037 199 16         sword
 
 E 0 3034 99 5           vest
 
-G 0 3120 8                 Has an iron key to Captain's Office
-
 M 0 3060 20 3111      Cityguard 2
 
 E 0 3015 99 0           banner
@@ -7297,8 +6992,6 @@ E 0 3037 199 16         sword
 
 M 0 3144 1 3120       Town Crier
 
-O 0 3089 0 3003 (null)
-
 O 0 1141 0 3008 (null)
 
 O 0 3047 0 3037 (null)
@@ -7310,8 +7003,6 @@ E 0 3038 0 16 (null)
 O 0 3135 0 3086 (null)
 
 M 0 3099 1 3002 (null)
-
-O 0 3032 0 3010 (null)
 
 M 0 3066 2 3046 (null)
 
@@ -7456,8 +7147,6 @@ M 3060 spec_policeman
 M 3050 spec_cast_undead
 M 3012 spec_cast_adept
 M 3005 spec_thief
-M 3014 spec_cast_bigtime
 M 3011 spec_executioner
-M 3016 spec_tax_man
 S
 #$
