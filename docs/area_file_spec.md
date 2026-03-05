@@ -33,6 +33,7 @@ Implications:
 
 - Single-line and multi-line strings are allowed, but a terminating `~` is required.
 - A missing `~` causes parse failure.
+- For mobile `long_descr` and all extra-description text blocks (`E` entries in `#OBJECTS` and `#ROOMS`), the string must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`).
 
 ## 3) `#AREA` section
 
@@ -100,6 +101,8 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 ...
 #0
 ```
+
+`<long_descr>` must include exactly one trailing newline before the terminating `~`.
 
 Optional extension blocks (detected by leading marker):
 
@@ -296,6 +299,8 @@ Per-object trailing entries:
 - `E` then `<keyword>~` and `<description>~` (extra description)
 - `L` then `<level>` on next line
 
+For `E` entries, `<description>` must include exactly one trailing newline before the terminating `~`.
+
 Loader stops this trailing-entry loop at first unrecognized marker (which starts next object/terminator).
 
 ### 7.1) Item `extra_flags` bitvector
@@ -399,6 +404,7 @@ Room entries are one of:
   <keyword>~
   <description>~
   ```
+  - `<description>` must include exactly one trailing newline before the terminating `~`.
 - End of room: `S`
 
 Any other token in a room body is invalid.
