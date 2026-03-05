@@ -371,6 +371,11 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 - `ITEM_TAKE` = `BIT_24`
 - `ITEM_WEAR_CLAN_COLORS` = `BIT_25`
 
+Area policy constraints for object wear flags:
+
+- Every object **must** include `ITEM_TAKE`.
+- No object may include `ITEM_WEAR_CLAN_COLORS`.
+
 ## 8) `#ROOMS` section
 
 A list of room records terminated by `#0`:
