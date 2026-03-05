@@ -7,8 +7,8 @@
  *    Boss has scaled hp_mod (100 to 250,000) based on level.              *
  *    Boss has unique elemental strengths, weaknesses, spells & skills.    *
  *  - Every PULSE_TICK spawns ordinary wave mobs scaled by player count.   *
- *  - Every PULSE_ROOMS the spawned mobs march toward room 3001.           *
- *  - On reaching 3001 the mobs sacrifice themselves to wound Gertrude.      *
+ *  - Every PULSE_ROOMS the spawned mobs march toward room 3110.           *
+ *  - On reaching 3110 the mobs sacrifice themselves to wound Gertrude.      *
  *  - If Gertrude dies  -> failure announcement.                           *
  *  - If the Boss dies  -> success + 25 QP + despawn ALL invasion mobs.    *
  *  - Spawned mobs are NOT aggressive, are SENTINEL, and have ACT_NOASSIST. *
@@ -1071,7 +1071,7 @@ static bool invasion_boss_cast(CHAR_DATA *mob)
  * [boss_level - INVASION_BOSS_AREA_SLACK, boss_level + INVASION_BOSS_AREA_SLACK].
  *
  * Additional constraint: the chosen room must be able to path to Gertrude's
- * room (INVASION_SPAWN_VNUM / room 3001) via h_find_dir.  Rooms that have
+ * room (INVASION_SPAWN_VNUM / room 3110) via h_find_dir.  Rooms that have
  * no valid path to that room are skipped.
  *
  * Algorithm (reservoir sampling, single pass):
@@ -1092,7 +1092,7 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
     int               hi          = boss_level + INVASION_BOSS_AREA_SLACK;
 
     /* Grab Gertrude's room once up front. */
-    target_room = get_room_index(INVASION_SPAWN_VNUM);   /* vnum 3001 */
+    target_room = get_room_index(INVASION_SPAWN_VNUM);   /* vnum 3110 */
     if (target_room == NULL)
     {
         bug("pick_boss_room: target room vnum %d not found.", INVASION_SPAWN_VNUM);
@@ -1117,7 +1117,7 @@ static ROOM_INDEX_DATA *pick_boss_room(int boss_level)
 
             /*
              * Reachability check: verify there is at least one valid exit
-             * direction from this room toward the target (room 3001).
+             * direction from this room toward the target (room 3110).
              * h_find_dir returns >= 0 when a path exists, -1 when it does not.
              */
             if (!room_is_valid_boss_spawn(room, target_room))
