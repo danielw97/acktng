@@ -6,6 +6,20 @@
 
 #define LINE_MAX_LEN 4096
 
+typedef struct vnum_node VNUM_NODE;
+
+struct vnum_node
+{
+    int vnum;
+    VNUM_NODE *next;
+};
+
+
+static int read_line(FILE *fp, char *line, int *line_number);
+static const char *skip_space(const char *s);
+static int starts_with(const char *line, const char *prefix);
+static int is_int_token(const char *s, char **end);
+
 static void fail_area_test(const char *area_path, int line_number, const char *fmt, ...)
 {
     va_list args;
@@ -21,6 +35,94 @@ static void fail_area_test(const char *area_path, int line_number, const char *f
 
     fputc('\n', stderr);
     exit(1);
+}
+
+static int vnum_set_contains(const VNUM_NODE *set, int vnum)
+{
+    while (set != NULL)
+    {
+        if (set->vnum == vnum)
+            return 1;
+        set = set->next;
+    }
+    return 0;
+}
+
+static void vnum_set_add(VNUM_NODE **set, int vnum)
+{
+    VNUM_NODE *node;
+
+    if (vnum_set_contains(*set, vnum))
+        return;
+
+    node = malloc(sizeof(*node));
+    if (node == NULL)
+    {
+        fprintf(stderr, "out of memory while building vnum set\n");
+        exit(1);
+    }
+
+    node->vnum = vnum;
+    node->next = *set;
+    *set = node;
+}
+
+static void vnum_set_free(VNUM_NODE *set)
+{
+    while (set != NULL)
+    {
+        VNUM_NODE *next = set->next;
+        free(set);
+        set = next;
+    }
+}
+
+static int parse_int_tokens(const char *line, int *out_values, int max_values)
+{
+    const char *cursor = skip_space(line);
+    char *end;
+    int count = 0;
+
+    while (count < max_values && is_int_token(cursor, &end))
+    {
+        out_values[count++] = (int)strtol(cursor, &end, 10);
+        cursor = skip_space(end);
+    }
+
+    return count;
+}
+
+static void scan_area_rooms(const char *area_path, VNUM_NODE **global_room_vnums)
+{
+    FILE *fp = fopen(area_path, "r");
+    char line[LINE_MAX_LEN];
+    int line_number = 0;
+    int in_rooms = 0;
+
+    if (fp == NULL)
+        fail_area_test(area_path, 0, "unable to open area file while scanning room vnums");
+
+    while (read_line(fp, line, &line_number))
+    {
+        const char *trimmed = skip_space(line);
+
+        if (starts_with(trimmed, "#ROOMS"))
+        {
+            in_rooms = 1;
+            continue;
+        }
+
+        if (!in_rooms)
+            continue;
+
+        if (starts_with(trimmed, "#0"))
+            break;
+
+        if (trimmed[0] == '#' && isdigit((unsigned char)trimmed[1]))
+            vnum_set_add(global_room_vnums, atoi(trimmed + 1));
+    }
+
+    fclose(fp);
 }
 
 static int read_line(FILE *fp, char *line, int *line_number)
@@ -346,6 +448,7 @@ static void parse_rooms_section(FILE *fp, char *line, int *line_number, const ch
                 consume_exit_keyword_string(fp, line, line_number, area_path);
                 if (!read_line(fp, line, line_number) || !parse_exact_n_ints(line, 3))
                     fail_area_test(area_path, *line_number, "exit destination line must contain exactly 3 integers");
+
                 continue;
             }
 
@@ -409,7 +512,7 @@ static void parse_specials_section(FILE *fp, char *line, int *line_number, const
     }
 }
 
-static void parse_resets_section(FILE *fp, char *line, int *line_number, const char *area_path)
+static void parse_resets_section(FILE *fp, char *line, int *line_number, const char *area_path, const VNUM_NODE *global_room_vnums, int area_min_vnum, int area_max_vnum)
 {
     for (;;)
     {
@@ -428,6 +531,24 @@ static void parse_resets_section(FILE *fp, char *line, int *line_number, const c
 
         if (strchr("MOGEDRAP", cmd) == NULL)
             fail_area_test(area_path, *line_number, "unknown reset command '%c'", cmd);
+
+        {
+            int values[5];
+            int value_count = parse_int_tokens(trimmed + 1, values, 5);
+
+            if ((cmd == 'M' || cmd == 'O' || cmd == 'P') && value_count >= 4)
+            {
+                int room_vnum = values[3];
+                if (room_vnum >= area_min_vnum && room_vnum <= area_max_vnum && !vnum_set_contains(global_room_vnums, room_vnum))
+                    fail_area_test(area_path, *line_number, "reset '%c' references unknown room vnum %d", cmd, room_vnum);
+            }
+            else if ((cmd == 'D' || cmd == 'R') && value_count >= 2)
+            {
+                int room_vnum = values[1];
+                if (room_vnum >= area_min_vnum && room_vnum <= area_max_vnum && !vnum_set_contains(global_room_vnums, room_vnum))
+                    fail_area_test(area_path, *line_number, "reset '%c' references unknown room vnum %d", cmd, room_vnum);
+            }
+        }
 
         if (cmd == 'G' || cmd == 'R')
         {
@@ -450,7 +571,41 @@ static void parse_resets_section(FILE *fp, char *line, int *line_number, const c
     }
 }
 
-static void assert_area_matches_spec(const char *area_path)
+
+static void read_area_vnum_range(const char *area_path, int *min_vnum, int *max_vnum)
+{
+    FILE *fp = fopen(area_path, "r");
+    char line[LINE_MAX_LEN];
+    int line_number = 0;
+
+    *min_vnum = -1;
+    *max_vnum = -1;
+
+    if (fp == NULL)
+        fail_area_test(area_path, 0, "unable to open area file while reading area vnum range");
+
+    while (read_line(fp, line, &line_number))
+    {
+        const char *trimmed = skip_space(line);
+        if (trimmed[0] == 'V')
+        {
+            int values[2];
+            if (parse_int_tokens(trimmed + 1, values, 2) == 2)
+            {
+                *min_vnum = values[0];
+                *max_vnum = values[1];
+                break;
+            }
+        }
+
+        if (starts_with(trimmed, "#ROOMS"))
+            break;
+    }
+
+    fclose(fp);
+}
+
+static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *global_room_vnums, int area_min_vnum, int area_max_vnum)
 {
     FILE *fp = fopen(area_path, "r");
     char line[LINE_MAX_LEN];
@@ -524,7 +679,7 @@ static void assert_area_matches_spec(const char *area_path)
         }
         if (starts_with(trimmed, "#RESETS"))
         {
-            parse_resets_section(fp, line, &line_number, area_path);
+            parse_resets_section(fp, line, &line_number, area_path, global_room_vnums, area_min_vnum, area_max_vnum);
             continue;
         }
 
@@ -546,6 +701,7 @@ int main(void)
 {
     FILE *list_fp = fopen("../area/area.lst", "r");
     char area_name[1024];
+    VNUM_NODE *global_room_vnums = NULL;
 
     if (list_fp == NULL)
         list_fp = fopen("area/area.lst", "r");
@@ -579,10 +735,45 @@ int main(void)
             fail_area_test(area_name, 0, "listed area file could not be opened");
         fclose(area_fp);
 
-        assert_area_matches_spec(area_path);
+        scan_area_rooms(area_path, &global_room_vnums);
+    }
+
+    rewind(list_fp);
+
+    while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
+    {
+        char *nl = strpbrk(area_name, "\r\n");
+        char area_path[2048];
+
+        if (nl != NULL)
+            *nl = '\0';
+
+        if (area_name[0] == '\0')
+            continue;
+        if (strcmp(area_name, "$") == 0)
+            break;
+
+        int area_min_vnum;
+        int area_max_vnum;
+        FILE *area_fp;
+
+        snprintf(area_path, sizeof(area_path), "../area/%s", area_name);
+        area_fp = fopen(area_path, "r");
+        if (area_fp == NULL)
+        {
+            snprintf(area_path, sizeof(area_path), "area/%s", area_name);
+            area_fp = fopen(area_path, "r");
+        }
+        if (area_fp == NULL)
+            fail_area_test(area_name, 0, "listed area file could not be opened");
+        fclose(area_fp);
+
+        read_area_vnum_range(area_path, &area_min_vnum, &area_max_vnum);
+        assert_area_matches_spec(area_path, global_room_vnums, area_min_vnum, area_max_vnum);
     }
 
     fclose(list_fp);
+    vnum_set_free(global_room_vnums);
     puts("test_area_format: all tests passed");
     return 0;
 }

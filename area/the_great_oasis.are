@@ -1483,7 +1483,7 @@ The oasis hunt continues ahead through blowing sand.
 
 ~
 ~
-0 -1 8664
+0 -1 8669
 D3
 The trail winds back through the glare.
 
@@ -1506,7 +1506,7 @@ The oasis hunt continues ahead through blowing sand.
 
 ~
 ~
-0 -1 8665
+0 -1 8670
 D3
 The trail winds back through the glare.
 
@@ -1524,7 +1524,7 @@ The trail winds back through the glare.
 
 ~
 ~
-0 -1 8669
+0 -1 8664
 D3
 The oasis hunt continues ahead through blowing sand.
 
@@ -1547,7 +1547,7 @@ The trail winds back through the glare.
 
 ~
 ~
-0 -1 8670
+0 -1 8665
 D3
 The oasis hunt continues ahead through blowing sand.
 
@@ -1668,7 +1668,7 @@ The oasis hunt continues ahead through blowing sand.
 
 ~
 ~
-0 -1 8693
+0 -1 8680
 S
 #8693
 @@yPalmward Corridor@@N~
@@ -1726,7 +1726,7 @@ The trail winds back through the glare.
 
 ~
 ~
-0 -1 8680
+0 -1 8693
 S
 #8682
 @@yMirage Causeway@@N~
@@ -2512,9 +2512,9 @@ M 0 8608 2 8652 (null)
 
 M 0 8609 2 8661 (null)
 
-M 0 8600 2 8670 (null)
+M 0 8600 2 8671 (null)
 
-M 0 8601 2 8680 (null)
+M 0 8601 2 8681 (null)
 
 M 0 8602 2 8690 (null)
 
