@@ -1,0 +1,3137 @@
+#AREA
+@@lThe Great Oasis@@N~
+Q 16
+K the great oasis~
+L @@y{40 60}@@N~
+N 101
+I 40 60
+V 8600 8699
+X 0
+F 12
+U @@yHot wind carries a @@lbright-blue@@y whisper of hidden water.@@N~
+O builder~
+R builder~
+W builder~
+#ROOMS
+#8600
+@@ySunward Causeway of Thirst@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8601
+S
+#8601
+@@yAmberdune Traverse of the Distant Well@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8600
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8602
+S
+#8602
+@@yMirage Corridor of Salted Earth@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8601
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8603
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8612
+S
+#8603
+@@ySirocco Reach of Hidden Springs@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8602
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8604
+S
+#8604
+@@yBrasslight Crossing of Wind-Worn Cairns@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8603
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8605
+S
+#8605
+@@ySunward Path of Blazing Noon@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8604
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8606
+S
+#8606
+@@yAmberdune Run of Caravan Echoes@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8605
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8607
+S
+#8607
+@@yMirage March of Shifting Glass@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8606
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8608
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8617
+S
+#8608
+@@ySirocco Bend of Reed Shadows@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8607
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8609
+S
+#8609
+@@yBrasslight Way of Whispering Sand@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8608
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8610
+S
+#8610
+@@yHorizon Traverse of Shifting Glass@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8609
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8611
+S
+#8611
+@@yHorizon Corridor of Reed Shadows@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+@@lA triangular chisel-mark repeats across a nearby slab, echoing architecture that feels older than any caravan road.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8610
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8612
+S
+#8612
+@@yHorizon Reach of Whispering Sand@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8611
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8613
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8622
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8602
+S
+#8613
+@@yHorizon Crossing of Thirst@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8612
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8614
+S
+#8614
+@@yHorizon Path of the Distant Well@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8613
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8615
+S
+#8615
+@@yHorizon Run of Salted Earth@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8614
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8616
+S
+#8616
+@@yHorizon March of Hidden Springs@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8615
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8617
+S
+#8617
+@@yHorizon Bend of Wind-Worn Cairns@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8616
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8618
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8627
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8607
+S
+#8618
+@@yHorizon Way of Blazing Noon@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8617
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8619
+S
+#8619
+@@yHorizon Causeway of Caravan Echoes@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8618
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8620
+S
+#8620
+@@ySunward Corridor of Wind-Worn Cairns@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8619
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8621
+S
+#8621
+@@yAmberdune Reach of Blazing Noon@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8620
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8622
+S
+#8622
+@@yMirage Crossing of Caravan Echoes@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8621
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8623
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8632
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8612
+S
+#8623
+@@ySirocco Path of Shifting Glass@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8622
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8624
+S
+#8624
+@@yBrasslight Run of Reed Shadows@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8623
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8625
+S
+#8625
+@@ySunward March of Whispering Sand@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8624
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8626
+S
+#8626
+@@yAmberdune Bend of Thirst@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+@@yFragments of precision-cut limestone lie in the sand, too geometric to be natural weathering.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8625
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8627
+S
+#8627
+@@yMirage Way of the Distant Well@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8626
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8628
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8637
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8617
+S
+#8628
+@@ySirocco Causeway of Salted Earth@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8627
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8629
+S
+#8629
+@@yBrasslight Traverse of Hidden Springs@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8628
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8630
+S
+#8630
+@@yHorizon Reach of the Distant Well@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8629
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8631
+S
+#8631
+@@yHorizon Crossing of Salted Earth@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8630
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8632
+S
+#8632
+@@yHorizon Path of Hidden Springs@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8631
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8633
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8642
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8622
+S
+#8633
+@@yHorizon Run of Wind-Worn Cairns@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8632
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8634
+S
+#8634
+@@yHorizon March of Blazing Noon@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8633
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8635
+S
+#8635
+@@yHorizon Bend of Caravan Echoes@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8634
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8636
+S
+#8636
+@@yHorizon Way of Shifting Glass@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8635
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8637
+S
+#8637
+@@yHorizon Causeway of Reed Shadows@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8636
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8638
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8647
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8627
+S
+#8638
+@@yHorizon Traverse of Whispering Sand@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8637
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8639
+S
+#8639
+@@yHorizon Corridor of Thirst@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8638
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8640
+S
+#8640
+@@ySunward Crossing of Reed Shadows@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8639
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8641
+S
+#8641
+@@yAmberdune Path of Whispering Sand@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8640
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8642
+S
+#8642
+@@yMirage Run of Thirst@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8641
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8643
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8652
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8632
+S
+#8643
+@@ySirocco March of the Distant Well@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+@@bA weathered sketch of stacked triangles stains a broken post, suggesting a future route to a buried monument.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8642
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8644
+S
+#8644
+@@yBrasslight Bend of Salted Earth@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8643
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8645
+S
+#8645
+@@ySunward Way of Hidden Springs@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8644
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8646
+S
+#8646
+@@yAmberdune Causeway of Wind-Worn Cairns@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8645
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8647
+S
+#8647
+@@yMirage Traverse of Blazing Noon@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8646
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8648
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8657
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8637
+S
+#8648
+@@ySirocco Corridor of Caravan Echoes@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8647
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8649
+S
+#8649
+@@yBrasslight Reach of Shifting Glass@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8648
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8650
+S
+#8650
+@@yHorizon Path of Blazing Noon@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8649
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8651
+S
+#8651
+@@yHorizon Run of Caravan Echoes@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8650
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8652
+S
+#8652
+@@yHorizon March of Shifting Glass@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8651
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8653
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8662
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8642
+S
+#8653
+@@yHorizon Bend of Reed Shadows@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8652
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8654
+S
+#8654
+@@yHorizon Way of Whispering Sand@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8653
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8655
+S
+#8655
+@@yHorizon Causeway of Thirst@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8654
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8656
+S
+#8656
+@@yHorizon Traverse of the Distant Well@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8655
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8657
+S
+#8657
+@@yHorizon Corridor of Salted Earth@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8656
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8658
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8667
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8647
+S
+#8658
+@@yHorizon Reach of Hidden Springs@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8657
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8659
+S
+#8659
+@@yHorizon Crossing of Wind-Worn Cairns@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+@@yAn angular funerary sigil appears on a shard of stone, hinting at secrets waiting beyond the oasis.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8658
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8660
+S
+#8660
+@@ySunward Run of Salted Earth@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8659
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8661
+S
+#8661
+@@yAmberdune March of Hidden Springs@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8660
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8662
+S
+#8662
+@@yMirage Bend of Wind-Worn Cairns@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8661
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8663
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8672
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8652
+S
+#8663
+@@ySirocco Way of Blazing Noon@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8662
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8664
+S
+#8664
+@@yBrasslight Causeway of Caravan Echoes@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8663
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8665
+S
+#8665
+@@ySunward Traverse of Shifting Glass@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8664
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8666
+S
+#8666
+@@yAmberdune Corridor of Reed Shadows@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8665
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8667
+S
+#8667
+@@yMirage Reach of Whispering Sand@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8666
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8668
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8677
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8657
+S
+#8668
+@@ySirocco Crossing of Thirst@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8667
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8669
+S
+#8669
+@@yBrasslight Path of the Distant Well@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8668
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8670
+S
+#8670
+@@yHorizon March of Whispering Sand@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8669
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8671
+S
+#8671
+@@yHorizon Bend of Thirst@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8670
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8672
+S
+#8672
+@@yHorizon Way of the Distant Well@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8671
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8673
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8682
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8662
+S
+#8673
+@@yHorizon Causeway of Salted Earth@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8672
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8674
+S
+#8674
+@@yHorizon Traverse of Hidden Springs@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+@@lA carved line map ends at a pyramid-shaped icon, then breaks off where the stone has fractured.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8673
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8675
+S
+#8675
+@@yHorizon Corridor of Wind-Worn Cairns@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8674
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8676
+S
+#8676
+@@yHorizon Reach of Blazing Noon@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8675
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8677
+S
+#8677
+@@yHorizon Crossing of Caravan Echoes@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8676
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8678
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8687
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8667
+S
+#8678
+@@yHorizon Path of Shifting Glass@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8677
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8679
+S
+#8679
+@@yHorizon Run of Reed Shadows@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8678
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8680
+S
+#8680
+@@ySunward Bend of Caravan Echoes@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8679
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8681
+S
+#8681
+@@yAmberdune Way of Shifting Glass@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8680
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8682
+S
+#8682
+@@yMirage Causeway of Reed Shadows@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8681
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8683
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8692
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8672
+S
+#8683
+@@ySirocco Traverse of Whispering Sand@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8682
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8684
+S
+#8684
+@@yBrasslight Corridor of Thirst@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8683
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8685
+S
+#8685
+@@ySunward Reach of the Distant Well@@N~
+@@yA hard sun beats down on scalloped dunes, turning every ridge into flowing brass and fire.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8684
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8686
+S
+#8686
+@@yAmberdune Crossing of Salted Earth@@N~
+@@yHeat haze ripples at eye level, folding distant landmarks into wavering, uncertain shapes.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8685
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8687
+S
+#8687
+@@yMirage Path of Hidden Springs@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8686
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8688
+D4
+A narrow wind-carved cleft rises toward another dune shelf.
+~
+~
+0 -1 8697
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8677
+S
+#8688
+@@ySirocco Run of Wind-Worn Cairns@@N~
+@@yWind skims the desert floor, lifting narrow curtains of sand that drift like pale smoke.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8687
+D1
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8689
+S
+#8689
+@@yBrasslight March of Blazing Noon@@N~
+@@yA long tongue of packed earth cuts through softer drifts, showing where countless boots once passed.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D3
+The trail turns back through blowing sand.
+~
+~
+0 -1 8688
+D2
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8690
+S
+#8690
+@@yHorizon Way of Hidden Springs@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D0
+The trail turns back through blowing sand.
+~
+~
+0 -1 8689
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8691
+S
+#8691
+@@yHorizon Causeway of Wind-Worn Cairns@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+@@lA triangular chisel-mark repeats across a nearby slab, echoing architecture that feels older than any caravan road.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8690
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8692
+S
+#8692
+@@yHorizon Traverse of Blazing Noon@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8691
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8693
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8682
+S
+#8693
+@@yHorizon Corridor of Caravan Echoes@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8692
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8694
+S
+#8694
+@@yHorizon Reach of Shifting Glass@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8693
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8695
+S
+#8695
+@@yHorizon Crossing of Reed Shadows@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA faded caravan sign leans toward the east, marked with careful blue strokes that survive despite the weather.@@N
+@@yYellow chalk lines on nearby stone point onward, renewed by many hands over many seasons.@@N
+@@bBrown leather scraps from an old pack lie caught in thorn, dried stiff as bark.@@N
+@@yNo water is visible yet, but every sign suggests you are moving toward something carefully hidden.@@N
+~
+0 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8694
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8696
+S
+#8696
+@@yHorizon Path of Whispering Sand@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lBlue-painted waystones rise from the ground at measured intervals, their edges smoothed by years of grit.@@N
+@@yYellow pennants tied to bone-dry stakes flutter in restless bursts, then fall silent all at once.@@N
+@@bA drift of brown grit has banked against a low rock shelf, softening its sharp edges.@@N
+@@yThe path remains deliberate and almost ritual, as though ancient builders planned every turn.@@N
+~
+4 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8695
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8697
+S
+#8697
+@@yHorizon Run of Thirst@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lStrips of bright-blue cloth knot around broken poles, snapping sharply whenever the wind surges.@@N
+@@yThe sand here flashes yellow-white in the light, bright enough to make your eyes water.@@N
+@@bBrown dust clings to every surface, muting color and scent until only thirst seems real.@@N
+@@yThe desert offers no mercy here, only direction, persistence, and the possibility of relief ahead.@@N
+~
+4 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8696
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8698
+D5
+A steep sandy chute drops back toward the lower trail.
+~
+~
+0 -1 8687
+S
+#8698
+@@yHorizon March of the Distant Well@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lA fallen marker still holds traces of lapis pigment, its carved lines guiding travelers toward rumor and hope.@@N
+@@ySun-bleached cloth wrapped around cairn tops glows yellow against the hard cobalt sky.@@N
+@@bDark brown pebbles ring the trail like spilled beads, worn smooth by wind and travel.@@N
+@@yEven in the heat, a faint cool promise hangs in the air and urges you onward.@@N
+~
+4 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8697
+D3
+The trail pushes onward through the desert hunt.
+~
+~
+0 -1 8699
+S
+#8699
+@@yHorizon Bend of Salted Earth@@N~
+@@yDry thorn and brittle reed roots poke from the sand, stubborn signs that water once lingered nearby.@@N
+@@lShallow shadows pool beneath slate-colored stones, giving brief relief from the blazing glare.@@N
+@@yA scatter of yellow beads lies half-buried near a cracked jar, likely dropped by a hurried pilgrim.@@N
+@@bCracked brown clay peeks through the sand, hinting at old flood channels beneath your feet.@@N
+@@yThe hunt for a true oasis continues, each step pressing deeper into an intentional desert route.@@N
+~
+4 10
+D1
+The trail turns back through blowing sand.
+~
+~
+0 -1 8698
+S
+#0
+#MOBILES
+#8600
+oasis sandrunner oasis great~
+@@lBlue-Sashed Oasis Sandrunner@@N~
+@@lBlue-Sashed Oasis Sandrunner@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+48 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8601
+cairn watcher oasis great~
+@@yYellow-Clad Cairn Watcher@@N~
+@@yYellow-Clad Cairn Watcher@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+49 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8602
+dune scavenger oasis great~
+@@bBrown-Cloaked Dune Scavenger@@N~
+@@bBrown-Cloaked Dune Scavenger@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+50 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8603
+thirst zealot oasis great~
+@@yThirst Zealot of the Open Waste@@N~
+@@yThirst Zealot of the Open Waste@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+51 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8604
+mirage skirmisher oasis great~
+@@lMirage Skirmisher@@N~
+@@lMirage Skirmisher@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+52 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8605
+reedknife hunter oasis great~
+@@bReedknife Hunter@@N~
+@@bReedknife Hunter@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+53 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8606
+sunward marauder oasis great~
+@@ySunward Marauder@@N~
+@@ySunward Marauder@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+54 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8607
+saltflat raider oasis great~
+@@lSaltflat Raider@@N~
+@@lSaltflat Raider@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8608
+dust prophet oasis great~
+@@yDust Prophet@@N~
+@@yDust Prophet@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+56 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8609
+wellless nomad oasis great~
+@@bWellless Nomad@@N~
+@@bWellless Nomad@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+57 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8610
+obelisk fanatic oasis great~
+@@lObelisk Fanatic@@N~
+@@lObelisk Fanatic@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8611
+caravan cutthroat oasis great~
+@@yCaravan Cutthroat@@N~
+@@yCaravan Cutthroat@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+59 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8612
+sirocco bruiser oasis great~
+@@bSirocco Bruiser@@N~
+@@bSirocco Bruiser@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8613
+bluebanner lancer oasis great~
+@@lBluebanner Lancer@@N~
+@@lBluebanner Lancer@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+50 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8614
+amber scarf duelist oasis great~
+@@yAmber-Scarf Duelist@@N~
+@@yAmber-Scarf Duelist@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+52 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8615
+cairnfoot prowler oasis great~
+@@bCairnfoot Prowler@@N~
+@@bCairnfoot Prowler@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+54 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8616
+glasswind stalker oasis great~
+@@lGlasswind Stalker@@N~
+@@lGlasswind Stalker@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+56 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8617
+yellow-sash outrider oasis great~
+@@yYellow-Sash Outrider@@N~
+@@yYellow-Sash Outrider@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8618
+dustline breaker oasis great~
+@@bDustline Breaker@@N~
+@@bDustline Breaker@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8619
+sunwell seeker oasis great~
+@@ySunwell Seeker@@N~
+@@ySunwell Seeker@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8620
+dryreed pillager oasis great~
+@@bDryreed Pillager@@N~
+@@bDryreed Pillager@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+53 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8621
+gilded jackal hand oasis great~
+@@yGilded Jackal Hand@@N~
+@@yGilded Jackal Hand@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+57 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8622
+haze archer oasis great~
+@@lHaze Archer@@N~
+@@lHaze Archer@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+51 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8623
+basin strangler oasis great~
+@@bBasin Strangler@@N~
+@@bBasin Strangler@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+59 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8624
+blue mirage adept oasis great~
+@@lBlue Mirage Adept@@N~
+@@lBlue Mirage Adept@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8625
+parched vanguard oasis great~
+@@yParched Vanguard@@N~
+@@yParched Vanguard@@N stalks the desert route with predatory focus.@@N
+~
+A ruthless wanderer wrapped in @@lbright-blue@@N cloth, @@yyellow@@N scarves, and @@bbrown@@N leathers waits for the next intruder.@@N
+~
+1 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8626
+basin tyrant oasis boss~
+@@lThe Basin Tyrant@@N~
+@@lThe Basin Tyrant@@N stands perfectly still beside the path to living water.@@N
+~
+Ancient desert regalia in @@lbright-blue@@N, @@yyellow@@N, and @@bbrown@@N hangs from this warlord like a moving standard.@@N
+~
+33554435 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8627
+keeper hidden spring oasis boss~
+@@yKeeper of the Hidden Spring@@N~
+@@yKeeper of the Hidden Spring@@N stands perfectly still beside the path to living water.@@N
+~
+Ancient desert regalia in @@lbright-blue@@N, @@yyellow@@N, and @@bbrown@@N hangs from this warlord like a moving standard.@@N
+~
+33554435 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8628
+jackal of the blue mirage oasis boss~
+@@lJackal of the Blue Mirage@@N~
+@@lJackal of the Blue Mirage@@N stands perfectly still beside the path to living water.@@N
+~
+Ancient desert regalia in @@lbright-blue@@N, @@yyellow@@N, and @@bbrown@@N hangs from this warlord like a moving standard.@@N
+~
+33554435 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#8629
+sultan of dry thunder oasis boss~
+@@ySultan of Dry Thunder@@N~
+@@ySultan of Dry Thunder@@N stands perfectly still beside the path to living water.@@N
+~
+Ancient desert regalia in @@lbright-blue@@N, @@yyellow@@N, and @@bbrown@@N hangs from this warlord like a moving standard.@@N
+~
+33554435 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+#0
+#OBJECTS
+#8630
+halo oasis great~
+@@lHalo of the Great Oasis@@N~
+A bright-blue halo lies here, weathered by desert wind.~
+9 134217856 8388609 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+45
+#8631
+aura oasis great~
+@@yAura of the Great Oasis@@N~
+A yellow aura lies here, weathered by desert wind.~
+9 134217856 8388610 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+46
+#8632
+head oasis great~
+@@bHead of the Great Oasis@@N~
+A brown head lies here, weathered by desert wind.~
+9 134217856 8388616 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+47
+#8633
+face oasis great~
+@@lFace of the Great Oasis@@N~
+A bright-blue face lies here, weathered by desert wind.~
+9 134217856 8388624 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+48
+#8634
+earring oasis great~
+@@yEarring of the Great Oasis@@N~
+A yellow earring lies here, weathered by desert wind.~
+9 134217856 8388672 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+49
+#8635
+necklace oasis great~
+@@bNecklace of the Great Oasis@@N~
+A brown necklace lies here, weathered by desert wind.~
+9 134217856 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+50
+#8636
+shoulders oasis great~
+@@lShoulders of the Great Oasis@@N~
+A bright-blue shoulders lies here, weathered by desert wind.~
+9 134217856 8389120 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+51
+#8637
+arms oasis great~
+@@yArms of the Great Oasis@@N~
+A yellow arms lies here, weathered by desert wind.~
+9 134217856 8389632 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+52
+#8638
+wristwraps oasis great~
+@@bWristwraps of the Great Oasis@@N~
+A brown wristwraps lies here, weathered by desert wind.~
+9 134217856 8390656 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+53
+#8639
+gloves oasis great~
+@@lGloves of the Great Oasis@@N~
+A bright-blue gloves lies here, weathered by desert wind.~
+9 134217856 8392704 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+54
+#8640
+ring oasis great~
+@@yRing of the Great Oasis@@N~
+A yellow ring lies here, weathered by desert wind.~
+9 134217856 8396800 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+55
+#8641
+scimitar oasis great~
+@@bScimitar of the Great Oasis@@N~
+A brown scimitar lies here, weathered by desert wind.~
+5 134217856 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+45
+#8642
+cloak oasis great~
+@@lCloak of the Great Oasis@@N~
+A bright-blue cloak lies here, weathered by desert wind.~
+9 134217856 8454144 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+46
+#8643
+belt oasis great~
+@@yBelt of the Great Oasis@@N~
+A yellow belt lies here, weathered by desert wind.~
+9 134217856 8519680 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+47
+#8644
+hauberk oasis great~
+@@bHauberk of the Great Oasis@@N~
+A brown hauberk lies here, weathered by desert wind.~
+9 134217856 8912896 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+48
+#8645
+legplates oasis great~
+@@lLegplates of the Great Oasis@@N~
+A bright-blue legplates lies here, weathered by desert wind.~
+9 134217856 9437184 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+49
+#8646
+boots oasis great~
+@@yBoots of the Great Oasis@@N~
+A yellow boots lies here, weathered by desert wind.~
+9 134217856 10485760 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+50
+#8647
+halo oasis great~
+@@bHalo of the Great Oasis@@N~
+A brown halo lies here, weathered by desert wind.~
+9 134217856 8388609 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+51
+#8648
+aura oasis great~
+@@lAura of the Great Oasis@@N~
+A bright-blue aura lies here, weathered by desert wind.~
+9 134217856 8388610 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+52
+#8649
+head oasis great~
+@@yHead of the Great Oasis@@N~
+A yellow head lies here, weathered by desert wind.~
+9 134217856 8388616 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+53
+#8650
+face oasis great~
+@@bFace of the Great Oasis@@N~
+A brown face lies here, weathered by desert wind.~
+9 134217856 8388624 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+54
+#8651
+earring oasis great~
+@@lEarring of the Great Oasis@@N~
+A bright-blue earring lies here, weathered by desert wind.~
+9 134217856 8388672 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+55
+#8652
+necklace oasis great~
+@@yNecklace of the Great Oasis@@N~
+A yellow necklace lies here, weathered by desert wind.~
+9 134217856 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+45
+#8653
+shoulders oasis great~
+@@bShoulders of the Great Oasis@@N~
+A brown shoulders lies here, weathered by desert wind.~
+9 134217856 8389120 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+46
+#8654
+arms oasis great~
+@@lArms of the Great Oasis@@N~
+A bright-blue arms lies here, weathered by desert wind.~
+9 134217856 8389632 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+47
+#8655
+wristwraps oasis great~
+@@yWristwraps of the Great Oasis@@N~
+A yellow wristwraps lies here, weathered by desert wind.~
+9 134217856 8390656 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+48
+#8656
+gloves oasis great~
+@@bGloves of the Great Oasis@@N~
+A brown gloves lies here, weathered by desert wind.~
+9 134217856 8392704 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+49
+#8657
+ring oasis great~
+@@lRing of the Great Oasis@@N~
+A bright-blue ring lies here, weathered by desert wind.~
+9 134217856 8396800 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+50
+#8658
+scimitar oasis great~
+@@yScimitar of the Great Oasis@@N~
+A yellow scimitar lies here, weathered by desert wind.~
+5 134217856 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+51
+#8659
+cloak oasis great~
+@@bCloak of the Great Oasis@@N~
+A brown cloak lies here, weathered by desert wind.~
+9 134217856 8454144 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+52
+#8660
+belt oasis great~
+@@lBelt of the Great Oasis@@N~
+A bright-blue belt lies here, weathered by desert wind.~
+9 134217856 8519680 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+53
+#8661
+hauberk oasis great~
+@@yHauberk of the Great Oasis@@N~
+A yellow hauberk lies here, weathered by desert wind.~
+9 134217856 8912896 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+54
+#8662
+legplates oasis great~
+@@bLegplates of the Great Oasis@@N~
+A brown legplates lies here, weathered by desert wind.~
+9 134217856 9437184 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+55
+#8663
+boots oasis great~
+@@lBoots of the Great Oasis@@N~
+A bright-blue boots lies here, weathered by desert wind.~
+9 134217856 10485760 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+45
+#8664
+scepter oasis boss~
+@@lScepter of the Hidden Oasis@@N~
+A relic-grade scepter hums with desert magic.~
+5 134217920 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+60
+#8665
+carapace oasis boss~
+@@yCarapace of the Hidden Oasis@@N~
+A relic-grade carapace hums with desert magic.~
+9 134217920 8912896 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+60
+#8666
+crown oasis boss~
+@@bCrown of the Hidden Oasis@@N~
+A relic-grade crown hums with desert magic.~
+9 134217920 8388616 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+60
+#8667
+warbelt oasis boss~
+@@lWarbelt of the Hidden Oasis@@N~
+A relic-grade warbelt hums with desert magic.~
+9 134217920 8519680 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+60
+#8668
+greatblade oasis boss~
+@@yGreatblade of the Hidden Oasis@@N~
+A relic-grade greatblade hums with desert magic.~
+5 134217920 8421376 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+60
+#8669
+mantle oasis boss~
+@@bMantle of the Hidden Oasis@@N~
+A relic-grade mantle hums with desert magic.~
+9 134217920 8454144 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+60
+#0
+#RESETS
+M 0 8600 2 8602 (null)
+
+E 1 8630 1 1 (null)
+
+M 0 8601 2 8604 (null)
+
+E 1 8631 1 2 (null)
+
+M 0 8602 2 8606 (null)
+
+E 1 8632 1 4 (null)
+
+M 0 8603 2 8608 (null)
+
+E 1 8633 1 5 (null)
+
+M 0 8604 2 8611 (null)
+
+E 1 8634 1 7 (null)
+
+M 0 8605 2 8613 (null)
+
+E 1 8635 1 9 (null)
+
+M 0 8606 2 8615 (null)
+
+E 1 8636 1 12 (null)
+
+M 0 8607 2 8617 (null)
+
+E 1 8637 1 13 (null)
+
+M 0 8608 2 8620 (null)
+
+E 1 8638 1 14 (null)
+
+M 0 8609 2 8622 (null)
+
+E 1 8639 1 16 (null)
+
+M 0 8610 2 8624 (null)
+
+E 1 8640 1 17 (null)
+
+M 0 8611 2 8626 (null)
+
+E 1 8641 1 20 (null)
+
+M 0 8612 2 8628 (null)
+
+E 1 8642 1 24 (null)
+
+M 0 8613 2 8631 (null)
+
+E 1 8643 1 25 (null)
+
+M 0 8614 2 8633 (null)
+
+E 1 8644 1 26 (null)
+
+M 0 8615 2 8635 (null)
+
+E 1 8645 1 28 (null)
+
+M 0 8616 2 8637 (null)
+
+E 1 8646 1 29 (null)
+
+M 0 8617 2 8640 (null)
+
+E 1 8647 1 1 (null)
+
+M 0 8618 2 8642 (null)
+
+E 1 8648 1 2 (null)
+
+M 0 8619 2 8644 (null)
+
+E 1 8649 1 4 (null)
+
+M 0 8620 2 8646 (null)
+
+E 1 8650 1 5 (null)
+
+M 0 8621 2 8649 (null)
+
+E 1 8651 1 7 (null)
+
+M 0 8622 2 8651 (null)
+
+E 1 8652 1 9 (null)
+
+M 0 8623 2 8653 (null)
+
+E 1 8653 1 12 (null)
+
+M 0 8624 2 8655 (null)
+
+E 1 8654 1 13 (null)
+
+M 0 8625 2 8658 (null)
+
+E 1 8655 1 14 (null)
+
+M 0 8600 2 8660 (null)
+
+E 1 8656 1 16 (null)
+
+M 0 8601 2 8662 (null)
+
+E 1 8657 1 17 (null)
+
+M 0 8602 2 8664 (null)
+
+E 1 8658 1 20 (null)
+
+M 0 8603 2 8667 (null)
+
+E 1 8659 1 24 (null)
+
+M 0 8604 2 8669 (null)
+
+E 1 8630 1 25 (null)
+
+M 0 8605 2 8671 (null)
+
+E 1 8631 1 26 (null)
+
+M 0 8606 2 8673 (null)
+
+E 1 8632 1 28 (null)
+
+M 0 8607 2 8676 (null)
+
+E 1 8633 1 29 (null)
+
+M 0 8608 2 8678 (null)
+
+E 1 8634 1 1 (null)
+
+M 0 8609 2 8680 (null)
+
+E 1 8635 1 2 (null)
+
+M 0 8610 2 8682 (null)
+
+E 1 8636 1 4 (null)
+
+M 0 8611 2 8685 (null)
+
+E 1 8637 1 5 (null)
+
+M 0 8612 2 8687 (null)
+
+E 1 8638 1 7 (null)
+
+M 0 8613 2 8689 (null)
+
+E 1 8639 1 9 (null)
+
+M 0 8614 2 8691 (null)
+
+E 1 8640 1 12 (null)
+
+M 0 8615 2 8693 (null)
+
+E 1 8641 1 13 (null)
+
+M 0 8616 2 8695 (null)
+
+E 1 8642 1 14 (null)
+
+M 0 8626 1 8696 (null)
+E 1 8664 1 20 (null)
+E 1 8665 1 26 (null)
+
+M 0 8627 1 8697 (null)
+E 1 8666 1 4 (null)
+E 1 8669 1 24 (null)
+
+M 0 8628 1 8698 (null)
+E 1 8668 1 20 (null)
+E 1 8667 1 25 (null)
+
+M 0 8629 1 8699 (null)
+E 1 8665 1 26 (null)
+E 1 8669 1 24 (null)
+
+S
+#$
