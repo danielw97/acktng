@@ -488,7 +488,7 @@ Commands used by validation/editor paths:
 
 ## 13) Structural constraints enforced by tests
 
-From `src/test_area_format.c` and `src/test_wood_area.c`:
+From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
 
 - `#ROOMS` must exist.
 - `#ROOMS` must end with `#0` before the next section header.
@@ -501,6 +501,10 @@ From `src/test_area_format.c` and `src/test_wood_area.c`:
   - `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry headers (`#<vnum>`)
   - `#SHOPS` shopkeeper vnums (first integer on each shop line)
   - `#SPECIALS` targets for `M` and `O` lines
+- Duplicate index vnums are invalid for `#ROOMS`, `#MOBILES`, and `#OBJECTS`:
+  - A given room vnum may appear only once across all loaded area files.
+  - A given mobile vnum may appear only once across all loaded area files.
+  - A given object vnum may appear only once across all loaded area files.
 
 ## 14) Canonical section order emitted by saver
 

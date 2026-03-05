@@ -543,6 +543,150 @@ static void test_area_list_has_no_duplicate_entries(void)
     fclose(list_fp);
 }
 
+static int parse_index_vnum_header(const char *line, int *out_vnum)
+{
+    int vnum;
+    char trailing;
+
+    if (sscanf(skip_space(line), "#%d %c", &vnum, &trailing) == 1)
+    {
+        *out_vnum = vnum;
+        return 1;
+    }
+
+    return 0;
+}
+
+static void test_area_index_vnums_have_no_duplicates(void)
+{
+    enum
+    {
+        INDEX_SECTION_NONE,
+        INDEX_SECTION_ROOMS,
+        INDEX_SECTION_MOBILES,
+        INDEX_SECTION_OBJECTS
+    } section = INDEX_SECTION_NONE;
+    FILE *list_fp = fopen("../area/area.lst", "r");
+    char area_name[1024];
+    static int seen_room_line[65536] = {0};
+    static int seen_mob_line[65536] = {0};
+    static int seen_obj_line[65536] = {0};
+    static char seen_room_area[65536][64] = {{0}};
+    static char seen_mob_area[65536][64] = {{0}};
+    static char seen_obj_area[65536][64] = {{0}};
+
+    if (list_fp == NULL)
+        list_fp = fopen("area/area.lst", "r");
+
+    assert(list_fp != NULL);
+
+    while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
+    {
+        char *nl = strpbrk(area_name, "\r\n");
+        char area_path[2048];
+        FILE *area_fp;
+        char line[4096];
+
+        if (nl != NULL)
+            *nl = '\0';
+
+        if (area_name[0] == '\0')
+            continue;
+
+        if (strcmp(area_name, "$") == 0)
+            break;
+
+        snprintf(area_path, sizeof(area_path), "../area/%s", area_name);
+        area_fp = fopen(area_path, "r");
+        if (area_fp == NULL)
+        {
+            snprintf(area_path, sizeof(area_path), "area/%s", area_name);
+            area_fp = fopen(area_path, "r");
+        }
+
+        assert(area_fp != NULL);
+        section = INDEX_SECTION_NONE;
+
+        while (fgets(line, sizeof(line), area_fp) != NULL)
+        {
+            int *seen_line = NULL;
+            char (*seen_area)[64] = NULL;
+            int vnum;
+            int line_no;
+
+            if (line_starts_with(line, "#ROOMS"))
+            {
+                section = INDEX_SECTION_ROOMS;
+                continue;
+            }
+            if (line_starts_with(line, "#MOBILES"))
+            {
+                section = INDEX_SECTION_MOBILES;
+                continue;
+            }
+            if (line_starts_with(line, "#OBJECTS"))
+            {
+                section = INDEX_SECTION_OBJECTS;
+                continue;
+            }
+
+            if (skip_space(line)[0] == '#'
+                && !line_starts_with(line, "#ROOMS")
+                && !line_starts_with(line, "#MOBILES")
+                && !line_starts_with(line, "#OBJECTS")
+                && section != INDEX_SECTION_NONE)
+            {
+                section = INDEX_SECTION_NONE;
+            }
+
+            if (section == INDEX_SECTION_NONE)
+                continue;
+
+            if (!parse_index_vnum_header(line, &vnum) || vnum == 0)
+                continue;
+
+            assert(vnum >= 0 && vnum <= 65535);
+
+            if (section == INDEX_SECTION_ROOMS)
+            {
+                seen_line = seen_room_line;
+                seen_area = seen_room_area;
+            }
+            else if (section == INDEX_SECTION_MOBILES)
+            {
+                seen_line = seen_mob_line;
+                seen_area = seen_mob_area;
+            }
+            else
+            {
+                seen_line = seen_obj_line;
+                seen_area = seen_obj_area;
+            }
+
+            line_no = current_area_line(area_fp);
+
+            if (seen_line[vnum] != 0)
+            {
+                fail_area_validation(area_name, line_no,
+                                     "duplicate index vnum %d in %s (first seen in %s line %d)",
+                                     vnum,
+                                     section == INDEX_SECTION_ROOMS ? "#ROOMS"
+                                     : section == INDEX_SECTION_MOBILES ? "#MOBILES"
+                                     : "#OBJECTS",
+                                     seen_area[vnum], seen_line[vnum]);
+            }
+
+            seen_line[vnum] = line_no;
+            strncpy(seen_area[vnum], area_name, sizeof(seen_area[vnum]) - 1);
+            seen_area[vnum][sizeof(seen_area[vnum]) - 1] = '\0';
+        }
+
+        fclose(area_fp);
+    }
+
+    fclose(list_fp);
+}
+
 int main(void)
 {
     test_format_status_builds_expected_message();
@@ -551,6 +695,7 @@ int main(void)
     test_try_read_help_level_rejects_non_numeric_prefix();
     test_mock_load_all_areas_and_validate_formats();
     test_area_list_has_no_duplicate_entries();
+    test_area_index_vnums_have_no_duplicates();
 
     puts("test_db: all tests passed");
     return 0;
