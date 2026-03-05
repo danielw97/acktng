@@ -9,7 +9,7 @@ V 30400 30479
 X 0
 F 20
 U @@bCobalt@@N twilight and @@ydune-gold@@N glare wash over a ruined desert metropolis of toppled arches, buried plazas, and sealed tyrant crypts.~
-O codex~
+O virant~
 R all~
 W all~
 #ROOMS
@@ -17,7 +17,7 @@ W all~
 Sunken Gate of Obelisks~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -27,6 +27,10 @@ D2
 ~
 ~
 0 -1 30471
+D3
+~
+~
+0 0 8523
 D5
 ~
 ~
@@ -36,7 +40,7 @@ S
 Wind-Flayed Bazaar~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -59,7 +63,7 @@ S
 Half-Buried Cistern Walk~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D2
 ~
@@ -82,7 +86,7 @@ S
 Cracked Processional Way~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -105,7 +109,7 @@ S
 Dune-Choked Court~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -132,7 +136,7 @@ S
 Saffron Dust Arcade~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -159,7 +163,7 @@ S
 Tilted Lantern Forum~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -186,7 +190,7 @@ S
 Broken Aqueduct Span~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -213,7 +217,7 @@ S
 Collapsed Caravanserai~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -236,7 +240,7 @@ S
 Shattered Sun Plaza~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -259,7 +263,7 @@ S
 Leaning Idol Terrace~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -278,7 +282,7 @@ S
 Glass-Sand Causeway~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -301,7 +305,7 @@ S
 Riven Tax Court~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -320,7 +324,7 @@ S
 Fallen Minaret Yard~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -339,7 +343,7 @@ S
 Salt-Scoured Archive~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D2
 ~
@@ -358,7 +362,7 @@ S
 Crumbling Coin Exchange~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -381,7 +385,7 @@ S
 Ashen Silk Market~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -404,7 +408,7 @@ S
 Buried Tribunal Stairs~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -431,7 +435,7 @@ S
 Split Mosaic Concourse~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -454,7 +458,7 @@ S
 Bleached Foundry Lane~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -481,7 +485,7 @@ S
 Scorpion Banner Square~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -508,7 +512,7 @@ S
 Carved Well Approach~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -531,7 +535,7 @@ S
 Pillared Ember Road~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -554,7 +558,7 @@ S
 Hushed Portico Ring~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -577,7 +581,7 @@ S
 Sunblind Shrine Street~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -600,7 +604,7 @@ S
 Ragged Tapestry Hall~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -623,7 +627,7 @@ S
 Gilded Rubble Walk~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -642,7 +646,7 @@ S
 Ancient Bell Crossing~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -661,7 +665,7 @@ S
 Jagged Marble Alley~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -680,7 +684,7 @@ S
 Skull-Dial Promenade~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -703,7 +707,7 @@ S
 Wind Harp Colonnade~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -726,7 +730,7 @@ S
 Silted Fountain Nook~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -749,7 +753,7 @@ S
 Dust Oracle Vestibule~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -776,7 +780,7 @@ S
 Sundered Heraldry Court~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D2
 ~
@@ -799,7 +803,7 @@ S
 Vermilion Ruin Path~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -822,7 +826,7 @@ S
 Canted Arch Gallery~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -845,7 +849,7 @@ S
 Forgotten Mint Alley~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -868,7 +872,7 @@ S
 Cracked Reliquary Drift~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -895,7 +899,7 @@ S
 Brittle Cedar Lane~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D2
 ~
@@ -918,7 +922,7 @@ S
 Torn Canopy Junction~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -941,7 +945,7 @@ S
 Old Astronomer Turn~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -960,7 +964,7 @@ S
 Vaulted Clay Avenue~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -979,7 +983,7 @@ S
 Erased Name Court~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -998,7 +1002,7 @@ S
 Whispering Kiln Rise~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1021,7 +1025,7 @@ S
 Pale Brick Switchback~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D2
 ~
@@ -1040,7 +1044,7 @@ S
 Sunk Pilgrim Road~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1067,7 +1071,7 @@ S
 Obsidian Shard Run~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1090,7 +1094,7 @@ S
 Chiseled Drought Plaza~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1113,7 +1117,7 @@ S
 Rubble Compass Street~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1136,7 +1140,7 @@ S
 Fractured Cedar Steps~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1159,7 +1163,7 @@ S
 Moon-Baked Stelae Way~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1182,7 +1186,7 @@ S
 Crownless Monument Ring~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1209,7 +1213,7 @@ S
 Rope Bridge of Courtyards~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1236,7 +1240,7 @@ S
 Silt-Drum Passage~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1263,7 +1267,7 @@ S
 Knotwork Alley of Dust~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1282,7 +1286,7 @@ S
 Shardwind Exchange~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1301,7 +1305,7 @@ S
 Thorned Sundial Turn~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D2
 ~
@@ -1320,7 +1324,7 @@ S
 Collapsed Pigeon Loft~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D2
 ~
@@ -1343,7 +1347,7 @@ S
 Parched Mosaic Gate~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1366,7 +1370,7 @@ S
 Granite Breath Crossing~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1389,7 +1393,7 @@ S
 Sunken Senate Vault~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1412,7 +1416,7 @@ S
 Broken Chariot Yard~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1431,7 +1435,7 @@ S
 Hewn Dust Stair~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1454,7 +1458,7 @@ S
 Dry River Market~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1481,7 +1485,7 @@ S
 Cleft Banner Corridor~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1512,7 +1516,7 @@ S
 Sable Masonry Drift~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1543,7 +1547,7 @@ S
 Bent Astrolabe Walk~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1566,7 +1570,7 @@ S
 Desiccated Laurel Court~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1589,7 +1593,7 @@ S
 Shorn Bastion Loop~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1612,7 +1616,7 @@ S
 Amber Ash Causeway~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1635,7 +1639,7 @@ S
 Bronze Lintel Antechamber~
 @@yDesert-yellow@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. sand hisses through gaps in the masonry, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D0
 ~
@@ -1658,7 +1662,7 @@ S
 Ivory Chain Antechamber~
 @@yBleached-blue@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. distant stone clicks like teeth, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.~
 0 1
 D1
 ~
@@ -1685,9 +1689,9 @@ S
 Onyx Seal Antechamber~
 @@ySun-burnished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. a hollow whistle circles the plaza, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-A named barrier—the bronze-sun gate—stands to the east, and its warding sigils mark the route toward Dune Vizier.~
+A named barrier—the bronze-sun gate—stands to the east, and its warding sigils mark the route toward Dune Vizier.~
 0 1
 D0
 ~
@@ -1706,9 +1710,9 @@ S
 Jade Lock Antechamber~
 @@yStorm-faded@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. buried beams groan and settle, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-A named barrier—the ivory-chain gate—stands to the east, and its warding sigils mark the route toward Salt Hierophant.~
+A named barrier—the ivory-chain gate—stands to the east, and its warding sigils mark the route toward Salt Hierophant.~
 0 1
 D0
 ~
@@ -1727,9 +1731,9 @@ S
 Throne of the Dune Vizier~
 @@yOchre-swept@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. wind moans across broken rooftops, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-A named barrier—the onyx-seal gate—stands to the east, and its warding sigils mark the route toward Sunbreaker Marshal.~
+A named barrier—the onyx-seal gate—stands to the east, and its warding sigils mark the route toward Sunbreaker Marshal.~
 0 1
 D0
 ~
@@ -1748,9 +1752,9 @@ S
 Crypt of the Salt Hierophant~
 @@yCobalt-dusted@@N sandstone colonnades sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. grit skates along the flagstones, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-A named barrier—the jade-lock gate—stands to the east, and its warding sigils mark the route toward Buried Matriarch.~
+A named barrier—the jade-lock gate—stands to the east, and its warding sigils mark the route toward Buried Matriarch.~
 0 1
 D0
 ~
@@ -1769,9 +1773,9 @@ S
 Sanctum of the Sunbreaker Marshal~
 @@yHeat-cracked@@N sandstone stone awnings sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dust drifts in slow spirals, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
+No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
 4 1
 D2
 ~
@@ -1786,9 +1790,9 @@ S
 Vault of the Buried Matriarch~
 @@ySand-polished@@N sandstone cistern lips sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. old chains ring once and go still, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
+No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
 4 1
 D0
 ~
@@ -1807,9 +1811,9 @@ S
 Sepulchral Sandwheel Nexus~
 @@yDune-worn@@N sandstone fallen statues sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. dry reeds rattle beneath paving cracks, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
+No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
 4 1
 D0
 ~
@@ -1828,9 +1832,9 @@ S
 Royal Ossuary Apex~
 @@yWind-scored@@N sandstone banner poles sag beneath veils of @@bblue@@N shadow, where chiselled dynastic faces are worn smooth by centuries of desert abrasion. Shards of enamel and brass peek from drifts, suggesting this district was once extravagant before the sun consumed it.
 
-A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
+A lane of broken markers forks and rejoins in confusing angles around fallen lintels. faint chimes tremble under the sun, and every gust carries the dry taste of old tomb air from somewhere deeper in the city.
 
-No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
+No scavengers linger here; the chamber is held as a lethal dueling ground, untouched by lesser wanderers.~
 4 1
 D0
 ~
@@ -1848,10 +1852,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 40 0
 0 0 0 0
@@ -1865,10 +1869,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 41 0
 0 0 0 0
@@ -1882,10 +1886,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 42 0
 0 0 0 0
@@ -1899,10 +1903,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 43 0
 0 0 0 0
@@ -1916,10 +1920,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 44 0
 0 0 0 0
@@ -1933,10 +1937,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1950,10 +1954,10 @@ obelisk scout lostcity trash~
 @@yObelisk Scout@@N~
 A @@ydune-marked@@N obelisk scout prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1967,10 +1971,10 @@ market ghoul lostcity trash~
 @@yMarket Ghoul@@N~
 A @@ydune-marked@@N market ghoul prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1984,10 +1988,10 @@ scarab knight lostcity trash~
 @@yScarab Knight@@N~
 A @@ydune-marked@@N scarab knight prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -2001,10 +2005,10 @@ wind oathkeeper lostcity trash~
 @@yWind Oathkeeper@@N~
 A @@ydune-marked@@N wind oathkeeper prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -2018,10 +2022,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -2035,10 +2039,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 51 0
 0 0 0 0
@@ -2052,10 +2056,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 52 0
 0 0 0 0
@@ -2069,10 +2073,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 53 0
 0 0 0 0
@@ -2086,10 +2090,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 54 0
 0 0 0 0
@@ -2103,10 +2107,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 55 0
 0 0 0 0
@@ -2120,10 +2124,10 @@ obelisk scout lostcity trash~
 @@yObelisk Scout@@N~
 A @@ydune-marked@@N obelisk scout prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 40 0
 0 0 0 0
@@ -2137,10 +2141,10 @@ market ghoul lostcity trash~
 @@yMarket Ghoul@@N~
 A @@ydune-marked@@N market ghoul prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 41 0
 0 0 0 0
@@ -2154,10 +2158,10 @@ scarab knight lostcity trash~
 @@yScarab Knight@@N~
 A @@ydune-marked@@N scarab knight prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 42 0
 0 0 0 0
@@ -2171,10 +2175,10 @@ wind oathkeeper lostcity trash~
 @@yWind Oathkeeper@@N~
 A @@ydune-marked@@N wind oathkeeper prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 43 0
 0 0 0 0
@@ -2188,10 +2192,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 44 0
 0 0 0 0
@@ -2205,10 +2209,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -2222,10 +2226,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -2239,10 +2243,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -2256,10 +2260,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -2273,10 +2277,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -2290,10 +2294,10 @@ obelisk scout lostcity trash~
 @@yObelisk Scout@@N~
 A @@ydune-marked@@N obelisk scout prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -2307,10 +2311,10 @@ market ghoul lostcity trash~
 @@yMarket Ghoul@@N~
 A @@ydune-marked@@N market ghoul prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 51 0
 0 0 0 0
@@ -2324,10 +2328,10 @@ scarab knight lostcity trash~
 @@yScarab Knight@@N~
 A @@ydune-marked@@N scarab knight prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 52 0
 0 0 0 0
@@ -2341,10 +2345,10 @@ wind oathkeeper lostcity trash~
 @@yWind Oathkeeper@@N~
 A @@ydune-marked@@N wind oathkeeper prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 53 0
 0 0 0 0
@@ -2358,10 +2362,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 54 0
 0 0 0 0
@@ -2375,10 +2379,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 55 0
 0 0 0 0
@@ -2392,10 +2396,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 40 0
 0 0 0 0
@@ -2409,10 +2413,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 41 0
 0 0 0 0
@@ -2426,10 +2430,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 42 0
 0 0 0 0
@@ -2443,10 +2447,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 43 0
 0 0 0 0
@@ -2460,10 +2464,10 @@ obelisk scout lostcity trash~
 @@yObelisk Scout@@N~
 A @@ydune-marked@@N obelisk scout prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 44 0
 0 0 0 0
@@ -2477,10 +2481,10 @@ market ghoul lostcity trash~
 @@yMarket Ghoul@@N~
 A @@ydune-marked@@N market ghoul prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -2494,10 +2498,10 @@ scarab knight lostcity trash~
 @@yScarab Knight@@N~
 A @@ydune-marked@@N scarab knight prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -2511,10 +2515,10 @@ wind oathkeeper lostcity trash~
 @@yWind Oathkeeper@@N~
 A @@ydune-marked@@N wind oathkeeper prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -2528,10 +2532,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -2545,10 +2549,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -2562,10 +2566,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -2579,10 +2583,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 51 0
 0 0 0 0
@@ -2596,10 +2600,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 52 0
 0 0 0 0
@@ -2613,10 +2617,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 53 0
 0 0 0 0
@@ -2630,10 +2634,10 @@ obelisk scout lostcity trash~
 @@yObelisk Scout@@N~
 A @@ydune-marked@@N obelisk scout prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 54 0
 0 0 0 0
@@ -2647,10 +2651,10 @@ market ghoul lostcity trash~
 @@yMarket Ghoul@@N~
 A @@ydune-marked@@N market ghoul prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 55 0
 0 0 0 0
@@ -2664,10 +2668,10 @@ scarab knight lostcity trash~
 @@yScarab Knight@@N~
 A @@ydune-marked@@N scarab knight prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 40 0
 0 0 0 0
@@ -2681,10 +2685,10 @@ wind oathkeeper lostcity trash~
 @@yWind Oathkeeper@@N~
 A @@ydune-marked@@N wind oathkeeper prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 41 0
 0 0 0 0
@@ -2698,10 +2702,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 42 0
 0 0 0 0
@@ -2715,10 +2719,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 43 0
 0 0 0 0
@@ -2732,10 +2736,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 44 0
 0 0 0 0
@@ -2749,10 +2753,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -2766,10 +2770,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -2783,10 +2787,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -2800,10 +2804,10 @@ obelisk scout lostcity trash~
 @@yObelisk Scout@@N~
 A @@ydune-marked@@N obelisk scout prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -2817,10 +2821,10 @@ market ghoul lostcity trash~
 @@yMarket Ghoul@@N~
 A @@ydune-marked@@N market ghoul prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -2834,10 +2838,10 @@ scarab knight lostcity trash~
 @@yScarab Knight@@N~
 A @@ydune-marked@@N scarab knight prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -2851,10 +2855,10 @@ wind oathkeeper lostcity trash~
 @@yWind Oathkeeper@@N~
 A @@ydune-marked@@N wind oathkeeper prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 51 0
 0 0 0 0
@@ -2868,10 +2872,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 52 0
 0 0 0 0
@@ -2885,10 +2889,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 53 0
 0 0 0 0
@@ -2902,10 +2906,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 54 0
 0 0 0 0
@@ -2919,10 +2923,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 55 0
 0 0 0 0
@@ -2936,10 +2940,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 40 0
 0 0 0 0
@@ -2953,10 +2957,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 41 0
 0 0 0 0
@@ -2970,10 +2974,10 @@ obelisk scout lostcity trash~
 @@yObelisk Scout@@N~
 A @@ydune-marked@@N obelisk scout prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 42 0
 0 0 0 0
@@ -2987,10 +2991,10 @@ market ghoul lostcity trash~
 @@yMarket Ghoul@@N~
 A @@ydune-marked@@N market ghoul prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 43 0
 0 0 0 0
@@ -3004,10 +3008,10 @@ scarab knight lostcity trash~
 @@yScarab Knight@@N~
 A @@ydune-marked@@N scarab knight prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 44 0
 0 0 0 0
@@ -3021,10 +3025,10 @@ wind oathkeeper lostcity trash~
 @@yWind Oathkeeper@@N~
 A @@ydune-marked@@N wind oathkeeper prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -3038,10 +3042,10 @@ sand reaver lostcity trash~
 @@ySand Reaver@@N~
 A @@ydune-marked@@N sand reaver prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -3055,10 +3059,10 @@ ruin acolyte lostcity trash~
 @@yRuin Acolyte@@N~
 A @@ydune-marked@@N ruin acolyte prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -3072,10 +3076,10 @@ glass lancer lostcity trash~
 @@yGlass Lancer@@N~
 A @@ydune-marked@@N glass lancer prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -3089,10 +3093,10 @@ sunken guard lostcity trash~
 @@ySunken Guard@@N~
 A @@ydune-marked@@N sunken guard prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -3106,10 +3110,10 @@ dust cantor lostcity trash~
 @@yDust Cantor@@N~
 A @@ydune-marked@@N dust cantor prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -3123,10 +3127,10 @@ dune stalker lostcity trash~
 @@yDune Stalker@@N~
 A @@ydune-marked@@N dune stalker prowls the wreckage under @@bblue@@N heat-haze.
 
-~
+~
 The wanderer wears patched ruin-mail and sun-bleached wraps, moving with the tense caution of something that has outlived empires.
 
-~
+~
 65 0 -450 S
 51 0
 0 0 0 0
@@ -3140,10 +3144,10 @@ Dune Vizier lostcity boss~
 @@yDune Vizier@@N~
 @@yDune Vizier@@N guards this sealed ruin with ruthless calm beneath @@bblue@@N firelight.
 
-~
+~
 This ancient champion is wrapped in ceremonial remnants and mineral-crusted armor, each motion grinding grit from the stones.
 
-~
+~
 33554499 0 -450 S
 60 0
 0 0 0 0
@@ -3157,10 +3161,10 @@ Salt Hierophant lostcity boss~
 @@ySalt Hierophant@@N~
 @@ySalt Hierophant@@N guards this sealed ruin with ruthless calm beneath @@bblue@@N firelight.
 
-~
+~
 This ancient champion is wrapped in ceremonial remnants and mineral-crusted armor, each motion grinding grit from the stones.
 
-~
+~
 33554499 0 -450 S
 60 0
 0 0 0 0
@@ -3174,10 +3178,10 @@ Sunbreaker Marshal lostcity boss~
 @@ySunbreaker Marshal@@N~
 @@ySunbreaker Marshal@@N guards this sealed ruin with ruthless calm beneath @@bblue@@N firelight.
 
-~
+~
 This ancient champion is wrapped in ceremonial remnants and mineral-crusted armor, each motion grinding grit from the stones.
 
-~
+~
 33554499 0 -450 S
 60 0
 0 0 0 0
@@ -3191,10 +3195,10 @@ Buried Matriarch lostcity boss~
 @@yBuried Matriarch@@N~
 @@yBuried Matriarch@@N guards this sealed ruin with ruthless calm beneath @@bblue@@N firelight.
 
-~
+~
 This ancient champion is wrapped in ceremonial remnants and mineral-crusted armor, each motion grinding grit from the stones.
 
-~
+~
 33554499 0 -450 S
 60 0
 0 0 0 0
@@ -3928,243 +3932,323 @@ L
 #0
 #RESETS
 M 0 30400 1 30400 (null)
+
 E 0 30400 0 1 (null)
 
 M 0 30401 1 30401 (null)
+
 E 0 30401 0 2 (null)
 
 M 0 30402 1 30402 (null)
+
 E 0 30402 0 3 (null)
 
 M 0 30403 1 30403 (null)
+
 E 0 30403 0 4 (null)
 
 M 0 30404 1 30404 (null)
+
 E 0 30404 0 5 (null)
 
 M 0 30405 1 30405 (null)
+
 E 0 30405 0 6 (null)
 
 M 0 30406 1 30406 (null)
+
 E 0 30406 0 7 (null)
 
 M 0 30407 1 30407 (null)
+
 E 0 30407 0 9 (null)
 
 M 0 30408 1 30408 (null)
+
 E 0 30408 0 11 (null)
 
 M 0 30409 1 30409 (null)
+
 E 0 30409 0 12 (null)
 
 M 0 30410 1 30410 (null)
+
 E 0 30410 0 13 (null)
 
 M 0 30411 1 30411 (null)
+
 E 0 30411 0 14 (null)
 
 M 0 30412 1 30412 (null)
+
 E 0 30412 0 16 (null)
 
 M 0 30413 1 30413 (null)
+
 E 0 30413 0 17 (null)
 
 M 0 30414 1 30414 (null)
+
 E 0 30414 0 19 (null)
 
 M 0 30415 1 30415 (null)
+
 E 0 30415 0 23 (null)
 
 M 0 30416 1 30416 (null)
+
 E 0 30416 0 24 (null)
 
 M 0 30417 1 30417 (null)
+
 E 0 30417 0 25 (null)
 
 M 0 30418 1 30418 (null)
+
 E 0 30418 0 26 (null)
 
 M 0 30419 1 30419 (null)
+
 E 0 30419 0 27 (null)
 
 M 0 30420 1 30420 (null)
+
 E 0 30420 0 28 (null)
 
 M 0 30421 1 30421 (null)
+
 E 0 30421 0 30 (null)
 
 M 0 30422 1 30422 (null)
+
 E 0 30422 0 31 (null)
 
 M 0 30423 1 30423 (null)
+
 E 0 30423 0 1 (null)
 
 M 0 30424 1 30424 (null)
+
 E 0 30424 0 2 (null)
 
 M 0 30425 1 30425 (null)
+
 E 0 30425 0 3 (null)
 
 M 0 30426 1 30426 (null)
+
 E 0 30426 0 4 (null)
 
 M 0 30427 1 30427 (null)
+
 E 0 30427 0 5 (null)
 
 M 0 30428 1 30428 (null)
+
 E 0 30428 0 6 (null)
 
 M 0 30429 1 30429 (null)
+
 E 0 30429 0 7 (null)
 
 M 0 30430 1 30430 (null)
+
 E 0 30430 0 9 (null)
 
 M 0 30431 1 30431 (null)
+
 E 0 30431 0 11 (null)
 
 M 0 30432 1 30432 (null)
+
 E 0 30432 0 12 (null)
 
 M 0 30433 1 30433 (null)
+
 E 0 30433 0 13 (null)
 
 M 0 30434 1 30434 (null)
+
 E 0 30434 0 14 (null)
 
 M 0 30435 1 30435 (null)
+
 E 0 30435 0 16 (null)
 
 M 0 30436 1 30436 (null)
+
 E 0 30436 0 17 (null)
 
 M 0 30437 1 30437 (null)
+
 E 0 30437 0 19 (null)
 
 M 0 30438 1 30438 (null)
+
 E 0 30438 0 23 (null)
 
 M 0 30439 1 30439 (null)
+
 E 0 30439 0 24 (null)
 
 M 0 30440 1 30440 (null)
+
 E 0 30440 0 25 (null)
 
 M 0 30441 1 30441 (null)
+
 E 0 30441 0 26 (null)
 
 M 0 30442 1 30442 (null)
+
 E 0 30442 0 27 (null)
 
 M 0 30443 1 30443 (null)
+
 E 0 30443 0 28 (null)
 
 M 0 30444 1 30444 (null)
+
 E 0 30444 0 30 (null)
 
 M 0 30445 1 30445 (null)
+
 E 0 30445 0 31 (null)
 
 M 0 30446 1 30446 (null)
+
 E 0 30446 0 1 (null)
 
 M 0 30447 1 30447 (null)
+
 E 0 30447 0 2 (null)
 
 M 0 30448 1 30448 (null)
+
 E 0 30448 0 3 (null)
 
 M 0 30449 1 30449 (null)
+
 E 0 30449 0 4 (null)
 
 M 0 30450 1 30450 (null)
+
 E 0 30450 0 5 (null)
 
 M 0 30451 1 30451 (null)
+
 E 0 30451 0 6 (null)
 
 M 0 30452 1 30452 (null)
+
 E 0 30452 0 7 (null)
 
 M 0 30453 1 30453 (null)
+
 E 0 30453 0 9 (null)
 
 M 0 30454 1 30454 (null)
+
 E 0 30454 0 11 (null)
 
 M 0 30455 1 30455 (null)
+
 E 0 30455 0 12 (null)
 
 M 0 30456 1 30456 (null)
+
 E 0 30456 0 13 (null)
 
 M 0 30457 1 30457 (null)
+
 E 0 30457 0 14 (null)
 
 M 0 30458 1 30458 (null)
+
 E 0 30458 0 16 (null)
 
 M 0 30459 1 30459 (null)
+
 E 0 30459 0 17 (null)
 
 M 0 30460 1 30460 (null)
+
 E 0 30460 0 19 (null)
 
 M 0 30461 1 30461 (null)
+
 E 0 30461 0 23 (null)
 
 M 0 30462 1 30462 (null)
+
 E 0 30462 0 24 (null)
 
 M 0 30463 1 30463 (null)
+
 E 0 30463 0 25 (null)
 
 M 0 30464 1 30464 (null)
+
 E 0 30464 0 26 (null)
 
 M 0 30465 1 30465 (null)
+
 E 0 30465 0 27 (null)
 
 M 0 30466 1 30466 (null)
+
 E 0 30466 0 28 (null)
 
 M 0 30467 1 30467 (null)
+
 E 0 30467 0 30 (null)
 
 M 0 30468 1 30468 (null)
+
 E 0 30468 0 31 (null)
 
 M 0 30469 1 30469 (null)
+
 E 0 30469 0 1 (null)
 
 M 0 30470 1 30470 (null)
+
 E 0 30470 0 2 (null)
 
 M 0 30471 1 30471 (null)
+
 E 0 30471 0 3 (null)
 
 M 0 30472 1 30472 (null)
+
 E 0 30472 0 4 (null)
 
 M 0 30473 1 30473 (null)
+
 E 0 30473 0 5 (null)
 
 M 0 30474 1 30474 (null)
+
 E 0 30474 0 6 (null)
 
 M 0 30475 1 30475 (null)
+
 E 0 30475 0 7 (null)
 
 M 0 30476 1 30476 (null)
+
 E 0 30476 0 9 (null)
 
 M 0 30477 1 30477 (null)
+
 E 0 30477 0 11 (null)
 
 M 0 30478 1 30478 (null)
+
 E 0 30478 0 12 (null)
 
 M 0 30479 1 30479 (null)
+
 E 0 30479 0 13 (null)
 
 S

@@ -478,12 +478,16 @@ S
 @@yBits of cloth, bone, and hammered metal cling to cracks in the masonry, hints that offerings and violence share this same ground.
 @@yHere in this pocket of the Eastern Desert, room 8523 feels distinct: the wind changes pitch, and even the light seems to weigh your choices.@@N
 ~
-0 10
+4 10
 D0
 Deeper into the wing's shifting corridors.
 ~
 ~
 0 -1 8524
+D1
+~
+~
+0 -1 30400
 D2
 Back toward the wing entrance.
 ~
