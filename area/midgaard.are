@@ -3168,8 +3168,8 @@ D2
 0 -1 3182
 S
 #3163
-@@WCrimson Concourse@@N~
-The avenue broadens here into a lived-in civic pocket where woodwrights and glassblowers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries fresh cedar shavings, while public proclamations rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through ashlar gutters, and at the edge of the street stands a memorial stele listing old defenders, giving this stretch of @@WMidgaard@@N a character all its own.~
+@@aGranite Bastion Armory@@N~
+Heavy chain curtains and slab-stone counters turn this corner of Midgaard into a dedicated outfitter's bastion for shield-bearing veterans. Racks of tower plates, reinforced straps, and impact-tested greaves crowd the walls beneath practical @@ylanterns@@N, while smiths call out measurements over the ring of anvils. The paving here is scarred by repeated weight drops and drill formations, and a carved inventory board lists defensive harness by campaign tier, making this square the city's unmistakable market for tank armor.~
 1 1
 D0
 ~
@@ -4576,6 +4576,21 @@ L 0 0 0 0 0 0 0 0 0
 weaponsmith~
 the weaponsmith~
 A weaponsmith.
+#3253
+armourer armorer granite bastion tank~
+The Granite Bastion Tank Armourer~
+The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand.
+~
+A broad-shouldered armourer who outfits defenders in heavy, impact-ready tank harness.
+~
+3 0 900 S
+60 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 
 ~
 A young weaponsmith, who still has lots to learn.
@@ -6549,6 +6564,240 @@ A @@Wconstellation @@bgreatcloak@@N hangs beneath an arc of tiny crystal lights.
 0 0 0 0 0 0 0 0 0 0
 4
 A
+#3141
+bulwark oathhelm~
+a bulwark oathhelm~
+A bulwark oathhelm rests on a granite shelf.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 20
+A
+19 17
+L
+55
+#3142
+sentinel gorget~
+a sentinel gorget~
+A sentinel gorget hangs from a chain-hook display.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 21
+A
+19 18
+L
+55
+#3143
+bastion pauldrons~
+bastion pauldrons~
+Bastion pauldrons are lined in thick leather padding.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 22
+A
+19 19
+L
+60
+#3144
+citadel chestplate~
+a citadel chestplate~
+A citadel chestplate stands strapped to a broad mannequin.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 23
+A
+19 20
+L
+60
+#3145
+keeper elbowguards~
+keeper elbowguards~
+Keeper elbowguards lie beside a tray of steel rivets.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 24
+A
+19 21
+L
+65
+#3146
+stonewall gauntlets~
+stonewall gauntlets~
+Stonewall gauntlets are stacked in matching pairs.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 25
+A
+19 22
+L
+65
+#3147
+gatewarden girdle~
+a gatewarden girdle~
+A gatewarden girdle hangs above reinforced belts.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 26
+A
+19 23
+L
+70
+#3148
+towerstep greaves~
+towerstep greaves~
+Towerstep greaves stand at the base of a fitting frame.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 27
+A
+19 24
+L
+70
+#3149
+wardcrest helm~
+a wardcrest helm~
+A wardcrest helm gleams beneath a brass workshop lamp.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 28
+A
+19 25
+L
+75
+#3150
+anchor gorget~
+an anchor gorget~
+An anchor gorget is displayed with layered neck guards.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 29
+A
+19 26
+L
+75
+#3151
+redoubt shoulderplate~
+a redoubt shoulderplate~
+A redoubt shoulderplate bears marks from hammer testing.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 30
+A
+19 27
+L
+80
+#3152
+shieldwall breastplate~
+a shieldwall breastplate~
+A shieldwall breastplate dominates a steel armor stand.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 31
+A
+19 28
+L
+80
+#3153
+fortress vambraces~
+fortress vambraces~
+Fortress vambraces rest beside hardened strap buckles.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 32
+A
+19 29
+L
+85
+#3154
+breakwater warbelt~
+a breakwater warbelt~
+A breakwater warbelt is coiled on a stone counter.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 33
+A
+19 30
+L
+90
+#3155
+adamant sabatons~
+adamant sabatons~
+Adamant sabatons are arrayed in a disciplined line.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 34
+A
+19 31
+L
+90
+#3156
+bulwark treads~
+bulwark treads~
+Bulwark treads sit beneath a wall of tower shields.~
+9 0 8388624 12
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 35
+A
+19 32
+L
+95
+#3157
+oathwall greatplate~
+an oathwall greatplate~
+An oathwall greatplate anchors the central fitting bay.~
+9 0 8388624 13
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 36
+A
+19 33
+L
+100
+#3158
+granite bastion helm~
+a granite bastion helm~
+A granite bastion helm crowns a suit of veteran armor.~
+9 0 8388624 14
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 37
+A
+19 34
+L
+100
 #3287
 ironweave skullguard~
 an ironweave skullguard~
@@ -6780,6 +7029,7 @@ apprentice rune-wrap~
 an apprentice rune-wrap~
 An apprentice rune-wrap hangs from a lacquered stand.~
 9 0 8388624 2
+3253 9 0 0 0 0 135 75 0 23
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -7120,6 +7370,44 @@ E 0 3016 99 1           signet ring
 E 0 3037 199 16         sword
 
 E 0 3034 99 5           vest
+
+M 0 3253 1 3163       The Granite Bastion tank armourer
+
+G 0 3141 100 
+
+G 0 3142 100 
+
+G 0 3143 100 
+
+G 0 3144 100 
+
+G 0 3145 100 
+
+G 0 3146 100 
+
+G 0 3147 100 
+
+G 0 3148 100 
+
+G 0 3149 100 
+
+G 0 3150 100 
+
+G 0 3151 100 
+
+G 0 3152 100 
+
+G 0 3153 100 
+
+G 0 3154 100 
+
+G 0 3155 100 
+
+G 0 3156 100 
+
+G 0 3157 100 
+
+G 0 3158 100 
 
 E 0 3025 99 8            boots
 
