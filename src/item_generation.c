@@ -6,6 +6,7 @@ void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
 char *get_suffix(OBJ_DATA *obj);
 bool is_jewelry(OBJ_DATA *obj);
 char *get_prefix(OBJ_DATA *obj);
+int get_obj_stat_weight_index(const OBJ_DATA *obj);
 
 
 //  hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
@@ -440,6 +441,7 @@ char *get_wear_name(OBJ_DATA *obj)
 void set_obj_stat_auto(OBJ_DATA *obj)
 {
    int ilevel = obj->level;
+   int stat_weight = get_obj_stat_weight_index(obj);
    int hr_div = 0;
    int dr_div = 0;
    int ac_div = 0;
@@ -499,29 +501,29 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    /* Jewelry */
    if (is_jewelry(obj))
    {
-      hr_div = jewelry_table[obj->weight].hr_div;
-      dr_div = jewelry_table[obj->weight].dr_div;
-      ac_div = jewelry_table[obj->weight].ac_div;
-      hp_div = jewelry_table[obj->weight].hp_div;
-      move_div = jewelry_table[obj->weight].move_div;
-      mana_div = jewelry_table[obj->weight].mana_div;
-      spellpower_div = jewelry_table[obj->weight].spellpower_div;
-      hrdr_bonus = jewelry_table[obj->weight].hrdr_bonus;
-      ac_bonus = jewelry_table[obj->weight].ac_bonus;
-      stat_bonus = jewelry_table[obj->weight].stat_bonus;
+      hr_div = jewelry_table[stat_weight].hr_div;
+      dr_div = jewelry_table[stat_weight].dr_div;
+      ac_div = jewelry_table[stat_weight].ac_div;
+      hp_div = jewelry_table[stat_weight].hp_div;
+      move_div = jewelry_table[stat_weight].move_div;
+      mana_div = jewelry_table[stat_weight].mana_div;
+      spellpower_div = jewelry_table[stat_weight].spellpower_div;
+      hrdr_bonus = jewelry_table[stat_weight].hrdr_bonus;
+      ac_bonus = jewelry_table[stat_weight].ac_bonus;
+      stat_bonus = jewelry_table[stat_weight].stat_bonus;
    }
    else if (obj->item_type == ITEM_WEAPON)
    {
-      hr_div = weapon_table[obj->weight].hr_div;
-      dr_div = weapon_table[obj->weight].dr_div;
-      ac_div = weapon_table[obj->weight].ac_div;
-      hp_div = weapon_table[obj->weight].hp_div;
-      move_div = weapon_table[obj->weight].move_div;
-      mana_div = weapon_table[obj->weight].mana_div;
-      spellpower_div = weapon_table[obj->weight].spellpower_div;
-      hrdr_bonus = weapon_table[obj->weight].hrdr_bonus;
-      ac_bonus = weapon_table[obj->weight].ac_bonus;
-      stat_bonus = weapon_table[obj->weight].stat_bonus;
+      hr_div = weapon_table[stat_weight].hr_div;
+      dr_div = weapon_table[stat_weight].dr_div;
+      ac_div = weapon_table[stat_weight].ac_div;
+      hp_div = weapon_table[stat_weight].hp_div;
+      move_div = weapon_table[stat_weight].move_div;
+      mana_div = weapon_table[stat_weight].mana_div;
+      spellpower_div = weapon_table[stat_weight].spellpower_div;
+      hrdr_bonus = weapon_table[stat_weight].hrdr_bonus;
+      ac_bonus = weapon_table[stat_weight].ac_bonus;
+      stat_bonus = weapon_table[stat_weight].stat_bonus;
 
       if (IS_SET(obj->extra_flags, ITEM_EXTRA_WAND))
       {
@@ -537,16 +539,16 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    }
    else if (obj->item_type == ITEM_ARMOR)
    {
-      hr_div = armor_table[obj->weight].hr_div;
-      dr_div = armor_table[obj->weight].dr_div;
-      ac_div = armor_table[obj->weight].ac_div;
-      hp_div = armor_table[obj->weight].hp_div;
-      move_div = armor_table[obj->weight].move_div;
-      mana_div = armor_table[obj->weight].mana_div;
-      spellpower_div = armor_table[obj->weight].spellpower_div;
-      hrdr_bonus = armor_table[obj->weight].hrdr_bonus;
-      ac_bonus = armor_table[obj->weight].ac_bonus;
-      stat_bonus = armor_table[obj->weight].stat_bonus;
+      hr_div = armor_table[stat_weight].hr_div;
+      dr_div = armor_table[stat_weight].dr_div;
+      ac_div = armor_table[stat_weight].ac_div;
+      hp_div = armor_table[stat_weight].hp_div;
+      move_div = armor_table[stat_weight].move_div;
+      mana_div = armor_table[stat_weight].mana_div;
+      spellpower_div = armor_table[stat_weight].spellpower_div;
+      hrdr_bonus = armor_table[stat_weight].hrdr_bonus;
+      ac_bonus = armor_table[stat_weight].ac_bonus;
+      stat_bonus = armor_table[stat_weight].stat_bonus;
 
       // Bucklers get poor stats
       if (IS_SET(obj->extra_flags, ITEM_BUCKLER))
@@ -563,16 +565,16 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    }
    else
    {
-      hr_div = misc_table[obj->weight].hr_div;
-      dr_div = misc_table[obj->weight].dr_div;
-      ac_div = misc_table[obj->weight].ac_div;
-      hp_div = misc_table[obj->weight].hp_div;
-      move_div = misc_table[obj->weight].move_div;
-      mana_div = misc_table[obj->weight].mana_div;
-      spellpower_div = misc_table[obj->weight].spellpower_div;
-      hrdr_bonus = misc_table[obj->weight].hrdr_bonus;
-      ac_bonus = misc_table[obj->weight].ac_bonus;
-      stat_bonus = misc_table[obj->weight].stat_bonus;
+      hr_div = misc_table[stat_weight].hr_div;
+      dr_div = misc_table[stat_weight].dr_div;
+      ac_div = misc_table[stat_weight].ac_div;
+      hp_div = misc_table[stat_weight].hp_div;
+      move_div = misc_table[stat_weight].move_div;
+      mana_div = misc_table[stat_weight].mana_div;
+      spellpower_div = misc_table[stat_weight].spellpower_div;
+      hrdr_bonus = misc_table[stat_weight].hrdr_bonus;
+      ac_bonus = misc_table[stat_weight].ac_bonus;
+      stat_bonus = misc_table[stat_weight].stat_bonus;
    }
 
    int ac_val = ac_bonus;
@@ -678,6 +680,17 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       set_aff_to_obj(obj, APPLY_DAMCAP, 20);
    else if (IS_SET(obj->extra_flags, ITEM_LEGENDARY))
       set_aff_to_obj(obj, APPLY_DAMCAP, 40);
+}
+
+int get_obj_stat_weight_index(const OBJ_DATA *obj)
+{
+   if (obj->weight < 0)
+      return 0;
+
+   if (obj->weight > 15)
+      return 15;
+
+   return obj->weight;
 }
 
 void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier)
