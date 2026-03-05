@@ -3151,8 +3151,8 @@ D0
 0 -1 3141
 S
 #3162
-@@WSilver Marketwalk@@N~
-The avenue broadens here into a lived-in civic pocket where apothecaries and couriers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries hot iron scale, while measured drill calls rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through painted survey marks, and at the edge of the street stands a prayer rail polished to a shine, giving this stretch of @@WMidgaard@@N a character all its own.~
+@@aIronweave Armourer's Arcade@@N~
+Forged greaves and ringed harness now crowd this corner arcade, where mercenaries and caravan guards queue beside sparring veterans for fresh steel. The rhythmic clatter of rivets and the hiss of quenched plate roll out from open-front stalls lit by practical @@ylanterns@@N, while weapon racks and measuring frames line the walls in strict order. A mezzanine counter displays heavy melee panoplies by rank and campaign, marking this square as Midgaard's dedicated hall for close-combat armorers.~
 1 1
 D0
 ~
@@ -4673,6 +4673,21 @@ clothier armorer moonthread~
 The Moonthread Cloth Armorer~
 The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
 ~
+#3252
+armourer armorer ironweave melee~
+The Ironweave Melee Armourer~
+The Ironweave Melee Armourer checks the balance of plated harness with practiced hands.
+~
+A scarred melee armourer in a soot-dark apron, fitting reinforced wargear for front-line fighters.
+~
+3 0 900 S
+58 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor.
 ~
 3 0 900 S
@@ -6534,6 +6549,216 @@ A @@Wconstellation @@bgreatcloak@@N hangs beneath an arc of tiny crystal lights.
 0 0 0 0 0 0 0 0 0 0
 4
 A
+#3287
+ironweave skullguard~
+an ironweave skullguard~
+An ironweave skullguard rests on an anvil-black stand.~
+9 0 8388616 7
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 19
+A
+19 16
+L
+55
+#3288
+mercenary neckplate~
+a mercenary neckplate~
+A mercenary neckplate hangs beside a strip of hardened leather.~
+9 0 8389632 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 20
+A
+19 17
+L
+60
+#3289
+vanguard shoulderplate~
+a vanguard shoulderplate~
+A vanguard shoulderplate gleams with fresh hammer marks.~
+9 0 8392704 9
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 21
+A
+19 18
+L
+65
+#3290
+pitfighter chestguard~
+a pitfighter chestguard~
+A pitfighter chestguard is strapped to a broad oak mannequin.~
+9 0 8650752 7
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 22
+A
+19 18
+L
+70
+#3291
+bulwark elbowplates~
+bulwark elbowplates~
+Bulwark elbowplates are stacked in matched pairs.~
+9 0 10485760 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 23
+A
+19 19
+L
+75
+#3292
+breaker gauntlets~
+breaker gauntlets~
+Breaker gauntlets sit beside a rack of rivet punches.~
+9 0 9437184 9
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 24
+A
+19 20
+L
+80
+#3293
+gatewatch girdle~
+a gatewatch girdle~
+A gatewatch girdle lies coiled atop folded battle sashes.~
+9 0 8388616 7
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 24
+A
+19 20
+L
+85
+#3294
+stoneheel legguards~
+stoneheel legguards~
+Stoneheel legguards are fitted with dense steel lames.~
+9 0 8519680 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 25
+A
+19 21
+L
+90
+#3295
+linebreaker sabatons~
+linebreaker sabatons~
+Linebreaker sabatons stand in a neat formation near the forge.~
+9 0 8454144 9
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 26
+A
+19 22
+L
+95
+#3296
+towerkeeper greatshield~
+a towerkeeper greatshield~
+A towerkeeper greatshield leans against a reinforced pillar.~
+9 0 8421376 7
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 27
+A
+19 23
+L
+100
+#3297
+duelmarshal visor~
+a duelmarshal visor~
+A duelmarshal visor hangs from a polished iron hook.~
+9 0 8388616 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 20
+A
+19 17
+L
+55
+#3298
+warbrand gorget~
+a warbrand gorget~
+A warbrand gorget sits beside stamped company crests.~
+9 0 8389632 9
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 21
+A
+19 18
+L
+65
+#3299
+hailiron vambraces~
+hailiron vambraces~
+Hailiron vambraces glint beneath hanging tallow lamps.~
+9 0 9437184 7
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 23
+A
+19 19
+L
+75
+#3300
+rampart poleyns~
+rampart poleyns~
+Rampart poleyns are displayed on a scarred training dummy.~
+9 0 8519680 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 24
+A
+19 20
+L
+85
+#3301
+oathwall cuirass~
+an oathwall cuirass~
+An oathwall cuirass dominates the center fitting frame.~
+9 0 8650752 9
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 26
+A
+19 22
+L
+95
+#3302
+siegeborn battlemantle~
+a siegeborn battlemantle~
+A siegeborn battlemantle is hung behind a rack of tower shields.~
+9 0 8392704 8
+0 0 0 0 0 0 0 0 0 0
+4
+A
+18 27
+A
+19 23
+L
+100
+
+3252 9 0 0 0 0 135 75 0 23
 12 29
 L
 50
@@ -7075,6 +7300,41 @@ G 0 3284 100
 G 0 3285 100 
 
 G 0 3286 100 
+
+
+M 0 3252 1 3162       The Ironweave melee armourer
+
+G 0 3287 100 
+
+G 0 3288 100 
+
+G 0 3289 100 
+
+G 0 3290 100 
+
+G 0 3291 100 
+
+G 0 3292 100 
+
+G 0 3293 100 
+
+G 0 3294 100 
+
+G 0 3295 100 
+
+G 0 3296 100 
+
+G 0 3297 100 
+
+G 0 3298 100 
+
+G 0 3299 100 
+
+G 0 3300 100 
+
+G 0 3301 100 
+
+G 0 3302 100 
 
 M 0 3060 20 3111      Cityguard 2
 
