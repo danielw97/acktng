@@ -67,6 +67,8 @@ Supported directives:
 
 Parsing stops when the next `#` section header is encountered.
 
+`V` defines the area's assigned vnum envelope. Area-owned entries should stay inside that envelope (see Structural constraints).
+
 ## 4) `#HELPS` section
 
 A list of help entries terminated by `0 $~`:
@@ -489,6 +491,10 @@ From `src/test_area_format.c` and `src/test_wood_area.c`:
 - If `#MOBILES` exists, it must terminate with `#0` before `#OBJECTS`.
 - If `#OBJECTS` exists, it must terminate with `#0` before `#RESETS`.
 - `#ROOMS` must contain at least one room in listed area files.
+- Area-owned vnums must stay inside the `#AREA` `V <min> <max>` range:
+  - `#ROOMS`, `#MOBILES`, and `#OBJECTS` entry headers (`#<vnum>`)
+  - `#SHOPS` shopkeeper vnums (first integer on each shop line)
+  - `#SPECIALS` targets for `M` and `O` lines
 
 ## 14) Canonical section order emitted by saver
 

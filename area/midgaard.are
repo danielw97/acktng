@@ -4441,7 +4441,8 @@ jeweller~
 the jeweller~
 The jeweller is standing behind the desk.
 
-~
+#3200
+~
 He is fat and has a content although watchful look on his face.
 
 ~
@@ -4540,8 +4541,8 @@ An old but very strong armourer, he has made more armours in his
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3253
-armourer armorer granite bastion tank~
+#3199
+#3198
 The Granite Bastion Tank Armourer~
 The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand.
 
@@ -4654,7 +4655,7 @@ L 0 0 0 0 0 0 0 0 0
 #3252
 armourer armorer ironweave melee~
 The Ironweave Melee Armourer~
-The Ironweave Melee Armourer checks the balance of plated harness with
+#3197
 practiced hands.
 ~
 A scarred melee armourer in a soot-dark apron, fitting reinforced wargear for front-line fighters.
@@ -6090,32 +6091,32 @@ A
 L
 8
 #3182
-astral thread mantle~
-an astral thread mantle~
-An astral thread mantle shimmers with quiet starlight.~
+#3061
+#3062
+#3078
 9 0 8388624 2
 0 0 0 0 0 0 0 0 0 0
 4
+#3079
+#3080
 A
-12 6
-A
-13 5
+#3081
 L
-14
-#3183
-runebound sash~
-a runebound sash~
-A runebound sash is pinned above a rack of robes.~
-9 0 8388624 3
+#3082
+#3083
+#3084
+#3085
+#3086
+#3087
 0 0 0 0 0 0 0 0 0 0
 4
 A
-12 8
+#3088
 A
-13 6
+#3089
 L
-18
-#3184
+#3090
+#3091
 mistglass bracers~
 mistglass bracers~
 Mistglass bracers rest in a padded velvet tray.~
@@ -6524,340 +6525,340 @@ L
 #3142
 sentinel gorget~
 a sentinel gorget~
-A sentinel gorget hangs from a chain-hook display.~
-9 0 8388624 13
+#3092
+#3093
 0 0 0 0 0 0 0 0 0 0
 4
 A
-18 21
+#3094
 A
 19 18
 L
-55
-#3143
-bastion pauldrons~
-bastion pauldrons~
-Bastion pauldrons are lined in thick leather padding.~
-9 0 8388624 14
+#3095
+#3099
+#3103
+#3104
+#3108
+#3109
 0 0 0 0 0 0 0 0 0 0
 4
 A
-18 22
+#3110
 A
-19 19
+#3111
 L
-60
-#3144
-citadel chestplate~
-a citadel chestplate~
-A citadel chestplate stands strapped to a broad mannequin.~
-9 0 8388624 12
+#3112
+#3113
+#3116
+#3002
+#3003
+#3004
 0 0 0 0 0 0 0 0 0 0
 4
 A
-18 23
+#3011
 A
-19 20
+#3044
 L
-60
-#3145
-keeper elbowguards~
-keeper elbowguards~
-Keeper elbowguards lie beside a tray of steel rivets.~
-9 0 8388624 13
+#3045
+#3046
+#3050
+#3051
+#3053
+#3054
 0 0 0 0 0 0 0 0 0 0
 4
 A
-18 24
+#3055
 A
-19 21
+#3056
 L
-65
-#3146
-stonewall gauntlets~
-stonewall gauntlets~
-Stonewall gauntlets are stacked in matching pairs.~
-9 0 8388624 14
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 25
-A
-19 22
-L
-65
-#3147
-gatewarden girdle~
-a gatewarden girdle~
-A gatewarden girdle hangs above reinforced belts.~
-9 0 8388624 12
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 26
-A
-19 23
-L
-70
-#3148
-towerstep greaves~
-towerstep greaves~
-Towerstep greaves stand at the base of a fitting frame.~
-9 0 8388624 13
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 27
-A
-19 24
-L
-70
-#3149
-wardcrest helm~
-a wardcrest helm~
-A wardcrest helm gleams beneath a brass workshop lamp.~
-9 0 8388624 14
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 28
-A
-19 25
-L
-75
-#3150
-anchor gorget~
-an anchor gorget~
-An anchor gorget is displayed with layered neck guards.~
-9 0 8388624 12
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 29
-A
-19 26
-L
-75
-#3151
-redoubt shoulderplate~
-a redoubt shoulderplate~
-A redoubt shoulderplate bears marks from hammer testing.~
-9 0 8388624 13
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 30
-A
-19 27
-L
-80
-#3152
-shieldwall breastplate~
-a shieldwall breastplate~
-A shieldwall breastplate dominates a steel armor stand.~
-9 0 8388624 14
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 31
-A
-19 28
-L
-80
-#3153
-fortress vambraces~
-fortress vambraces~
-Fortress vambraces rest beside hardened strap buckles.~
-9 0 8388624 12
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 32
-A
-19 29
-L
-85
-#3154
-breakwater warbelt~
-a breakwater warbelt~
-A breakwater warbelt is coiled on a stone counter.~
-9 0 8388624 13
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 33
-A
-19 30
-L
-90
-#3155
-adamant sabatons~
-adamant sabatons~
-Adamant sabatons are arrayed in a disciplined line.~
-9 0 8388624 14
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 34
-A
-19 31
-L
-90
-#3156
-bulwark treads~
-bulwark treads~
-Bulwark treads sit beneath a wall of tower shields.~
-9 0 8388624 12
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 35
-A
-19 32
-L
-95
-#3157
-oathwall greatplate~
-an oathwall greatplate~
-An oathwall greatplate anchors the central fitting bay.~
-9 0 8388624 13
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 36
-A
-19 33
-L
-100
-#3158
-granite bastion helm~
-a granite bastion helm~
-A granite bastion helm crowns a suit of veteran armor.~
-9 0 8388624 14
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 37
-A
-19 34
-L
-100
-#3287
-ironweave skullguard~
-an ironweave skullguard~
-An ironweave skullguard rests on an anvil-black stand.~
-9 0 8388616 7
-0 0 0 0 0 0 0 0 0 0
-9
-A
-18 19
-A
-19 16
-L
-55
-#3288
-mercenary neckplate~
-a mercenary neckplate~
-A mercenary neckplate hangs beside a strip of hardened leather.~
-9 0 8389632 8
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 20
-A
-19 17
-L
-60
-#3289
-vanguard shoulderplate~
-a vanguard shoulderplate~
-A vanguard shoulderplate gleams with fresh hammer marks.~
-9 0 8392704 9
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 21
-A
-19 18
-L
-65
-#3290
-pitfighter chestguard~
-a pitfighter chestguard~
-A pitfighter chestguard is strapped to a broad oak mannequin.~
-9 0 8650752 7
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 22
-A
-19 18
-L
-70
-#3291
-bulwark elbowplates~
-bulwark elbowplates~
-Bulwark elbowplates are stacked in matched pairs.~
-9 0 10485760 8
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 23
-A
-19 19
-L
-75
-#3292
-breaker gauntlets~
-breaker gauntlets~
-Breaker gauntlets sit beside a rack of rivet punches.~
-9 0 9437184 9
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 24
-A
-19 20
-L
-80
-#3293
-gatewatch girdle~
-a gatewatch girdle~
-A gatewatch girdle lies coiled atop folded battle sashes.~
-9 0 8388616 7
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 24
-A
-19 20
-L
-85
-#3294
-stoneheel legguards~
-stoneheel legguards~
-Stoneheel legguards are fitted with dense steel lames.~
-9 0 8519680 8
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 25
-A
-19 21
-L
-90
-#3295
-linebreaker sabatons~
-linebreaker sabatons~
-Linebreaker sabatons stand in a neat formation near the forge.~
-9 0 8454144 9
-0 0 0 0 0 0 0 0 0 0
-4
-A
-18 26
-A
-19 22
-L
+#3058
+#3059
+#3060
+3197 9 0 0 0 0 125 70 0 23
+3198 9 0 0 0 0 130 100 0 23
+3200 9 0 0 0 0 100 100 0 23
+3199 9 0 0 0 0 100 100 0 23
+M 0 3011 1 3110 Gertrude the executioner
+E 0 3005 100 16 wield the executioners blade
+M 0 3004 1 3020 The armourer
+G 0 3072 100
+G 0 3073 100
+G 0 3074 100
+G 0 3075 100
+G 0 3076 100
+G 0 3077 100
+G 0 3097 100
+E 0 3022 100 16 wields a longsword
+M 0 3009 1 3034 The Jeweller
+G 0 3199 0 (null)
+G 0 3167 0 (null)
+G 0 3166 0 (null)
+G 0 3159 0 (null)
+G 0 3139 0 (null)
+G 0 3128 0 (null)
+G 0 3127 0 (null)
+G 0 3126 0 (null)
+G 0 3125 0 (null)
+G 0 3120 0 (null)
+G 0 3119 0 (null)
+G 0 3118 0 (null)
+G 0 3117 0 (null)
+M 0 3010 1 3035 The Leather Worker
+G 0 3066 100
+G 0 3067 100
+G 0 3068 100
+G 0 3069 100
+G 0 3070 100
+G 0 3071 100
+M 0 3006 1 3049 A Captain (selling boats) at Levee
+M 0 3007 1 3050 Sailor training in the warehouse
+M 0 3046 1 3048 Filthy (bartender) in Grubby Inn
+E 0 3022 100 16 wields a longsword
+M 0 3050 1 3025 Aod the Dealer
+M 0 3060 12 3005 Cityguard 1
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3028 199 4 cloak
+M 0 3060 12 3014 Cityguard 2
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3027 99 6 helmet
+M 0 3060 10 3014 Cityguard 3
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3026 99 7 leggings
+M 0 3060 10 3020 Cityguard 4
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+M 0 3200 1 3163 The Granite Bastion tank armourer
+G 0 3141 100
+G 0 3142 100
+G 0 3143 100
+G 0 3144 100
+G 0 3145 100
+G 0 3146 100
+G 0 3147 100
+G 0 3148 100
+G 0 3149 100
+G 0 3150 100
+G 0 3151 100
+G 0 3152 100
+G 0 3153 100
+G 0 3154 100
+G 0 3155 100
+G 0 3156 100
+G 0 3157 100
+G 0 3158 100
+E 0 3025 99 8 boots
+M 0 3060 12 3026 Cityguard 5
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3024 99 9 gloves
+M 0 3067 2 3041 Cityguard 1 at east gate
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3023 99 10 sleeves
+M 0 3067 2 3041 Cityguard 2 at east gate
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3029 99 11 shield
+M 0 3068 2 3040 Cityguard 1 at west gate
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3019 99 12 cape
+M 0 3068 2 3040 Cityguard 2 at west gate
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3018 99 13 belt
+M 0 3063 5 3026 A Mercenary (at Dark Alley)
+E 0 3021 100 16 wields a shortsword
+M 0 3064 3 3007 A Happy Drunk (at Inn)
+M 0 3065 2 3044 A Beggar in poor alley
+M 0 3065 2 3048 A Beggar in Grubby Inn
+M 0 3062 15 3024 The Cute Little Doggy Fido (at Poor Alley)
+M 0 3062 15 3025 The Cute Little Doggy Fido (at Common Square)
+M 0 3062 15 3016 The Cute Little Doggy Fido (at Main Street)
+M 0 3062 15 3012 The Cute Little Doggy Fido (at Main Street)
+M 0 3066 1 3026 The Alley Cat (at Dark Alley)
+M 0 3061 5 3006 The janitor (at Inn Entrance)
+M 0 3005 5 3026 thief at entrance to thief guild
+E 0 3020 99 16
+O 0 3135 10 3005 fountain at temple
+O 0 3134 3 3101 Bench 1 at promenade
+O 0 3134 3 3102 Bench 2 at promenade
+O 0 3134 3 3103 Bench 3 at promenade
+M 0 3100 1 3106 Maid in Park Cafe
+G 0 3100 500 A cup of tea
+G 0 3101 500 A cup of coffee
+G 0 3102 500 A cup of water
+M 0 3120 1 3106 Sexton in Park Cafe
+G 0 3121 2 A rusty old key (to graveyard)
+M 0 3121 1 3114 Swan in Pond
+M 0 3122 1 3114 Duckling in Pond
+M 0 3123 1 3109 Sparrow in Park
+M 0 3124 2 3113 Duck 1 in Park
+M 0 3124 2 3115 Duck 2 in Park
+M 0 3140 1 3142 Captain of the Guard in H.Q.
+G 0 3122 2 Give Captain A wooden key to the desk.
+G 0 3137 2 Give Captain A steel key to the jail.
+M 0 3141 4 3142 Mad Guard in H.Q.
+M 0 3141 4 3142 Mad Guard in H.Q.
+M 0 3141 4 3142 Mad Guard in H.Q.
+M 0 3141 4 3142 Mad Guard in H.Q.
+O 0 3130 1 3142 Load the desk
+O 0 3131 1 3142 Load the safe
+M 0 3060 20 3111 Cityguard 1
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+M 0 3198 1 3161 The Moonthread cloth armorer
+G 0 3061 100
+G 0 3062 100
+G 0 3078 100
+G 0 3079 100
+G 0 3080 100
+G 0 3081 100
+G 0 3082 100
+G 0 3083 100
+G 0 3084 100
+G 0 3085 100
+G 0 3086 100
+G 0 3087 100
+G 0 3088 100
+G 0 3089 100
+G 0 3090 100
+G 0 3091 100
+M 0 3199 1 3162 The Ironweave melee armourer
+G 0 3092 100
+G 0 3093 100
+G 0 3094 100
+G 0 3095 100
+G 0 3099 100
+G 0 3103 100
+G 0 3104 100
+G 0 3108 100
+G 0 3109 100
+G 0 3110 100
+G 0 3111 100
+G 0 3112 100
+G 0 3113 100
+G 0 3114 100
+G 0 3115 100
+G 0 3116 100
+M 0 3060 20 3111 Cityguard 2
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+E 0 3017 199 15 bracer
+M 0 3060 20 3111 Cityguard 3
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+M 0 3060 20 3111 Cityguard 4
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+E 0 3034 99 5 vest
+M 0 3142 1 3137 Secretary at town hall
+M 0 3143 1 3138 Mayor at town hall
+E 0 3133 80 17 Has the City Key
+E 0 3124 80 16 Mayor's sword
+M 0 3069 4 3138 Cityguard for the Mayor
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+M 0 3069 4 3138 Cityguard for the Mayor
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+M 0 3069 4 3138 Cityguard for the Mayor
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+M 0 3069 4 3138 Cityguard for the Mayor
+E 0 3015 99 0 banner
+E 0 3016 99 1 signet ring
+E 0 3037 199 16 sword
+M 0 3144 1 3120 Town Crier
+O 0 3001 0 3008 (null)
+M 0 3015 1 3121 The Postmaster
+M 0 3152 1 3124 The Emberglass arcanist
+G 0 3168 100
+M 0 3153 1 3125 The provisioner
+G 0 3169 100
+G 0 3170 100
+G 0 3171 100
+M 0 3154 1 3126 The invasion quartermaster
+G 0 3172 100
+G 0 3173 100
+G 0 3174 100
+M 0 3155 1 3127 The proposition clerk
+G 0 3175 100
+G 0 3176 100
+G 0 3177 100
+M 0 3156 1 3128 The quest broker
+G 0 3178 100
+G 0 3179 100
+G 0 3180 100
+M 0 3157 1 3122 The Bulwark armorer
+G 0 3181 100
+G 0 3182 100
+G 0 3183 100
+G 0 3184 100
+G 0 3185 100
+G 0 3186 100
+G 0 3187 100
+G 0 3188 100
+G 0 3189 100
+G 0 3190 100
+G 0 3191 100
+G 0 3192 100
+G 0 3193 100
+G 0 3194 100
+G 0 3195 100
+G 0 3196 100
+G 0 3197 100
+G 0 3198 100
+M 0 3197 1 3123 The Moonthread arcanoweaver
+G 0 3002 100
+G 0 3003 100
+G 0 3004 100
+G 0 3011 100
+G 0 3044 100
+G 0 3045 100
+G 0 3046 100
+G 0 3050 100
+G 0 3051 100
+G 0 3053 100
+G 0 3054 100
+G 0 3055 100
+G 0 3056 100
+G 0 3058 100
+G 0 3059 100
+G 0 3060 100
 95
 #3296
 towerkeeper greatshield~
