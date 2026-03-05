@@ -4545,11 +4545,9 @@ L 0 0 0 0 0 0 0 0 0
 #3198
 The Granite Bastion Tank Armourer~
 The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand.
-
-
-~
+~
 A broad-shouldered armourer who outfits defenders in heavy, impact-ready tank harness.
-^M~
+~
 3 0 900 S
 60 1
 0 0 0 0
@@ -4562,9 +4560,9 @@ L 0 0 0 0 0 0 0 0 0
 weaponsmith~
 the weaponsmith~
 A weaponsmith.
-~
+~
 A young weaponsmith, who still has lots to learn.
-~
+~
 8396807 8328 900 S
 85 1
 0 0 0 0
@@ -4577,11 +4575,9 @@ L 0 0 0 0 0 0 0 0 0
 grocer~
 the grocer~
 A grocer stands at the counter, with a slightly impatient look on his face.
-
-~
+~
 A tall grocer, who moves two 200 pounds bag of flour around on his shoulders.
-
-~
+~
 8388611 8320 900 S
 111 1
 0 0 0 0
