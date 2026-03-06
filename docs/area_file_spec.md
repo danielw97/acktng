@@ -350,34 +350,35 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 
 ### 7.2) Item `wear_flags` bitvector
 
-`wear_flags` is a bitvector field in the object header line and supports the following bits from `src/config.h`:
+`wear_flags` is a bitvector field in the object header line. Builder-facing names and values are defined by `tab_wear_flags` in `src/buildtab.c`:
 
-- `ITEM_WEAR_NONE` = `BIT_0`
-- `ITEM_WEAR_HALO` = `BIT_1`
-- `ITEM_WEAR_AURA` = `BIT_2`
-- `ITEM_WEAR_HORNS` = `BIT_3`
-- `ITEM_WEAR_HEAD` = `BIT_4`
-- `ITEM_WEAR_FACE` = `BIT_5`
-- `ITEM_WEAR_BEAK` = `BIT_6`
-- `ITEM_WEAR_EAR` = `BIT_7`
-- `ITEM_WEAR_NECK` = `BIT_8`
-- `ITEM_WEAR_WINGS` = `BIT_9`
-- `ITEM_WEAR_SHOULDERS` = `BIT_10`
-- `ITEM_WEAR_ARMS` = `BIT_11`
-- `ITEM_WEAR_WRIST` = `BIT_12`
-- `ITEM_WEAR_HANDS` = `BIT_13`
-- `ITEM_WEAR_FINGER` = `BIT_14`
-- `ITEM_WEAR_CLAWS` = `BIT_15`
-- `ITEM_WEAR_HOLD_HAND` = `BIT_16`
-- `ITEM_WEAR_ABOUT` = `BIT_17`
-- `ITEM_WEAR_WAIST` = `BIT_18`
-- `ITEM_WEAR_BODY` = `BIT_19`
-- `ITEM_WEAR_TAIL` = `BIT_20`
-- `ITEM_WEAR_LEGS` = `BIT_21`
-- `ITEM_WEAR_FEET` = `BIT_22`
-- `ITEM_WEAR_HOOVES` = `BIT_23`
-- `ITEM_TAKE` = `BIT_24`
-- `ITEM_WEAR_CLAN_COLORS` = `BIT_25`
+- `halo` = `BIT_1`
+- `aura` = `BIT_2`
+- `horns` = `BIT_3`
+- `head` = `BIT_4`
+- `face` = `BIT_5`
+- `beak` = `BIT_6`
+- `ear` = `BIT_7`
+- `neck` = `BIT_8`
+- `wings` = `BIT_9`
+- `shoulders` = `BIT_10`
+- `arms` = `BIT_11`
+- `wrist` = `BIT_12`
+- `hands` = `BIT_13`
+- `finger` = `BIT_14`
+- `claws` = `BIT_15`
+- `hold` = `BIT_16`
+- `about` = `BIT_17`
+- `waist` = `BIT_18`
+- `body` = `BIT_19`
+- `tail` = `BIT_20`
+- `legs` = `BIT_21`
+- `feet` = `BIT_22`
+- `hooves` = `BIT_23`
+- `take` = `BIT_24`
+- `clan_colors` = `BIT_25`
+
+Note: `ITEM_WEAR_NONE` (`BIT_0`) exists in `src/config.h`, but it is not exposed in `tab_wear_flags` and therefore is not a valid builder keyword in area files.
 
 Area policy constraints for object wear flags:
 
