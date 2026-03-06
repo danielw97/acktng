@@ -12,7 +12,20 @@ void db_test_format_status(char *dest, size_t dest_size, const char *prefix, con
 void db_test_set_area_name(const char *file_name);
 const char *db_test_get_area_name(void);
 bool db_test_try_read_help_level(FILE *fp, long *level);
+int object_spawn_level(int prototype_level, int requested_level);
 
+
+static void test_object_spawn_level_uses_requested_level_when_present(void)
+{
+    assert(object_spawn_level(45, 12) == 12);
+    assert(object_spawn_level(45, 1) == 1);
+}
+
+static void test_object_spawn_level_falls_back_to_prototype_level(void)
+{
+    assert(object_spawn_level(45, 0) == 45);
+    assert(object_spawn_level(45, -3) == 45);
+}
 static void test_format_status_builds_expected_message(void)
 {
     char buf[64];
@@ -680,6 +693,8 @@ static void test_area_index_vnums_have_no_duplicates(void)
 
 int main(void)
 {
+    test_object_spawn_level_uses_requested_level_when_present();
+    test_object_spawn_level_falls_back_to_prototype_level();
     test_format_status_builds_expected_message();
     test_set_area_name_truncates_and_terminates();
     test_try_read_help_level_accepts_numeric_prefix();

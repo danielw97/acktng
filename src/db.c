@@ -50,6 +50,7 @@ extern int _filbuf args((FILE *));
 
 void set_obj_stat_auto(OBJ_DATA *obj);
 void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier);
+int object_spawn_level(int prototype_level, int requested_level);
 
 /* Getstats */
 int get_spellpower(CHAR_DATA *ch);
@@ -2709,7 +2710,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
    *obj = obj_zero;
    obj->pIndexData = pObjIndex;
    obj->in_room = NULL;
-   obj->level = pObjIndex->level;
+   obj->level = object_spawn_level(pObjIndex->level, level);
 
    obj->wear_loc = -1;
 
@@ -2836,6 +2837,14 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
    pObjIndex->count++;
 
    return obj;
+}
+
+int object_spawn_level(int prototype_level, int requested_level)
+{
+   if (requested_level > 0)
+      return requested_level;
+
+   return prototype_level;
 }
 
 /*
