@@ -8063,7 +8063,7 @@ L 0 0 0 0 0 0 0 0 0
 southern oasis azure melee halo gear 0~
 @@yAzure Melee Halo@@N~
 A azure halo crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8072,7 +8072,7 @@ L
 southern oasis sunlit tank aura gear 1~
 @@bSunlit Tank Aura@@N~
 A sunlit aura crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8081,7 +8081,7 @@ L
 southern oasis brownstone caster horns gear 2~
 @@lBrownstone Caster Horns@@N~
 A brownstone horns crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8090,7 +8090,7 @@ L
 southern oasis azure melee head gear 3~
 @@yAzure Melee Head@@N~
 A azure head crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8099,7 +8099,7 @@ L
 southern oasis sunlit tank face gear 4~
 @@bSunlit Tank Face@@N~
 A sunlit face crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8108,7 +8108,7 @@ L
 southern oasis brownstone caster beak gear 5~
 @@lBrownstone Caster Beak@@N~
 A brownstone beak crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8117,7 +8117,7 @@ L
 southern oasis azure melee ear gear 6~
 @@yAzure Melee Ear@@N~
 A azure ear crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8126,7 +8126,7 @@ L
 southern oasis sunlit tank neck gear 7~
 @@bSunlit Tank Neck@@N~
 A sunlit neck crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8135,7 +8135,7 @@ L
 southern oasis brownstone caster wings gear 8~
 @@lBrownstone Caster Wings@@N~
 A brownstone wings crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8144,7 +8144,7 @@ L
 southern oasis azure melee shoulders gear 9~
 @@yAzure Melee Shoulders@@N~
 A azure shoulders crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8153,7 +8153,7 @@ L
 southern oasis sunlit melee arms gear 10~
 @@bSunlit Melee Arms@@N~
 A sunlit arms crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8162,7 +8162,7 @@ L
 southern oasis brownstone tank wrist gear 11~
 @@lBrownstone Tank Wrist@@N~
 A brownstone wrist crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8171,7 +8171,7 @@ L
 southern oasis azure caster hands gear 12~
 @@yAzure Caster Hands@@N~
 A azure hands crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8180,7 +8180,7 @@ L
 southern oasis sunlit melee finger gear 13~
 @@bSunlit Melee Finger@@N~
 A sunlit finger crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8189,7 +8189,7 @@ L
 southern oasis brownstone tank hold gear 14~
 @@lBrownstone Tank Hold@@N~
 A brownstone hold crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8198,7 +8198,7 @@ L
 southern oasis azure caster about gear 15~
 @@yAzure Caster About@@N~
 A azure about crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8207,7 +8207,7 @@ L
 southern oasis sunlit melee waist gear 16~
 @@bSunlit Melee Waist@@N~
 A sunlit waist crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8216,7 +8216,7 @@ L
 southern oasis brownstone tank body gear 17~
 @@lBrownstone Tank Body@@N~
 A brownstone body crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8225,7 +8225,7 @@ L
 southern oasis azure caster legs gear 18~
 @@yAzure Caster Legs@@N~
 A azure legs crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8234,7 +8234,7 @@ L
 southern oasis sunlit melee feet gear 19~
 @@bSunlit Melee Feet@@N~
 A sunlit feet crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8252,7 +8252,7 @@ L
 southern oasis azure tank halo gear 21~
 @@yAzure Tank Halo@@N~
 A azure halo crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8261,7 +8261,7 @@ L
 southern oasis sunlit caster aura gear 22~
 @@bSunlit Caster Aura@@N~
 A sunlit aura crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8270,7 +8270,7 @@ L
 southern oasis brownstone melee horns gear 23~
 @@lBrownstone Melee Horns@@N~
 A brownstone horns crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8279,7 +8279,7 @@ L
 southern oasis azure tank head gear 24~
 @@yAzure Tank Head@@N~
 A azure head crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8288,7 +8288,7 @@ L
 southern oasis sunlit caster face gear 25~
 @@bSunlit Caster Face@@N~
 A sunlit face crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8297,7 +8297,7 @@ L
 southern oasis brownstone melee beak gear 26~
 @@lBrownstone Melee Beak@@N~
 A brownstone beak crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8306,7 +8306,7 @@ L
 southern oasis azure tank ear gear 27~
 @@yAzure Tank Ear@@N~
 A azure ear crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8315,7 +8315,7 @@ L
 southern oasis sunlit caster neck gear 28~
 @@bSunlit Caster Neck@@N~
 A sunlit neck crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8324,7 +8324,7 @@ L
 southern oasis brownstone melee wings gear 29~
 @@lBrownstone Melee Wings@@N~
 A brownstone wings crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8333,7 +8333,7 @@ L
 southern oasis azure melee shoulders gear 30~
 @@yAzure Melee Shoulders@@N~
 A azure shoulders crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8342,7 +8342,7 @@ L
 southern oasis sunlit tank arms gear 31~
 @@bSunlit Tank Arms@@N~
 A sunlit arms crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8351,7 +8351,7 @@ L
 southern oasis brownstone caster wrist gear 32~
 @@lBrownstone Caster Wrist@@N~
 A brownstone wrist crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8360,7 +8360,7 @@ L
 southern oasis azure melee hands gear 33~
 @@yAzure Melee Hands@@N~
 A azure hands crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8369,7 +8369,7 @@ L
 southern oasis sunlit tank finger gear 34~
 @@bSunlit Tank Finger@@N~
 A sunlit finger crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8378,7 +8378,7 @@ L
 southern oasis brownstone caster hold gear 35~
 @@lBrownstone Caster Hold@@N~
 A brownstone hold crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8387,7 +8387,7 @@ L
 southern oasis azure melee about gear 36~
 @@yAzure Melee About@@N~
 A azure about crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8396,7 +8396,7 @@ L
 southern oasis sunlit tank waist gear 37~
 @@bSunlit Tank Waist@@N~
 A sunlit waist crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8405,7 +8405,7 @@ L
 southern oasis brownstone caster body gear 38~
 @@lBrownstone Caster Body@@N~
 A brownstone body crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8414,7 +8414,7 @@ L
 southern oasis azure melee legs gear 39~
 @@yAzure Melee Legs@@N~
 A azure legs crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8423,7 +8423,7 @@ L
 southern oasis sunlit melee feet gear 40~
 @@bSunlit Melee Feet@@N~
 A sunlit feet crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8441,7 +8441,7 @@ L
 southern oasis azure caster halo gear 42~
 @@yAzure Caster Halo@@N~
 A azure halo crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8450,7 +8450,7 @@ L
 southern oasis sunlit melee aura gear 43~
 @@bSunlit Melee Aura@@N~
 A sunlit aura crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8459,7 +8459,7 @@ L
 southern oasis brownstone tank horns gear 44~
 @@lBrownstone Tank Horns@@N~
 A brownstone horns crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8468,7 +8468,7 @@ L
 southern oasis azure caster head gear 45~
 @@yAzure Caster Head@@N~
 A azure head crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8477,7 +8477,7 @@ L
 southern oasis sunlit melee face gear 46~
 @@bSunlit Melee Face@@N~
 A sunlit face crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8486,7 +8486,7 @@ L
 southern oasis brownstone tank beak gear 47~
 @@lBrownstone Tank Beak@@N~
 A brownstone beak crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8495,7 +8495,7 @@ L
 southern oasis azure caster ear gear 48~
 @@yAzure Caster Ear@@N~
 A azure ear crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8504,7 +8504,7 @@ L
 southern oasis sunlit melee neck gear 49~
 @@bSunlit Melee Neck@@N~
 A sunlit neck crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8513,7 +8513,7 @@ L
 southern oasis brownstone melee wings gear 50~
 @@lBrownstone Melee Wings@@N~
 A brownstone wings crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8522,7 +8522,7 @@ L
 southern oasis azure tank shoulders gear 51~
 @@yAzure Tank Shoulders@@N~
 A azure shoulders crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8531,7 +8531,7 @@ L
 southern oasis sunlit caster arms gear 52~
 @@bSunlit Caster Arms@@N~
 A sunlit arms crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8540,7 +8540,7 @@ L
 southern oasis brownstone melee wrist gear 53~
 @@lBrownstone Melee Wrist@@N~
 A brownstone wrist crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8549,7 +8549,7 @@ L
 southern oasis azure tank hands gear 54~
 @@yAzure Tank Hands@@N~
 A azure hands crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8558,7 +8558,7 @@ L
 southern oasis sunlit caster finger gear 55~
 @@bSunlit Caster Finger@@N~
 A sunlit finger crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8567,7 +8567,7 @@ L
 southern oasis brownstone melee hold gear 56~
 @@lBrownstone Melee Hold@@N~
 A brownstone hold crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8576,7 +8576,7 @@ L
 southern oasis azure tank about gear 57~
 @@yAzure Tank About@@N~
 A azure about crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8585,7 +8585,7 @@ L
 southern oasis sunlit caster waist gear 58~
 @@bSunlit Caster Waist@@N~
 A sunlit waist crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8594,7 +8594,7 @@ L
 southern oasis brownstone melee body gear 59~
 @@lBrownstone Melee Body@@N~
 A brownstone body crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8603,7 +8603,7 @@ L
 southern oasis azure melee legs gear 60~
 @@yAzure Melee Legs@@N~
 A azure legs crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8612,7 +8612,7 @@ L
 southern oasis sunlit tank feet gear 61~
 @@bSunlit Tank Feet@@N~
 A sunlit feet crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8630,7 +8630,7 @@ L
 southern oasis azure melee halo gear 63~
 @@yAzure Melee Halo@@N~
 A azure halo crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8639,7 +8639,7 @@ L
 southern oasis sunlit tank aura gear 64~
 @@bSunlit Tank Aura@@N~
 A sunlit aura crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8648,7 +8648,7 @@ L
 southern oasis brownstone caster horns gear 65~
 @@lBrownstone Caster Horns@@N~
 A brownstone horns crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8657,7 +8657,7 @@ L
 southern oasis azure melee head gear 66~
 @@yAzure Melee Head@@N~
 A azure head crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8666,7 +8666,7 @@ L
 southern oasis sunlit tank face gear 67~
 @@bSunlit Tank Face@@N~
 A sunlit face crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8675,7 +8675,7 @@ L
 southern oasis brownstone caster beak gear 68~
 @@lBrownstone Caster Beak@@N~
 A brownstone beak crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8684,7 +8684,7 @@ L
 southern oasis azure melee ear gear 69~
 @@yAzure Melee Ear@@N~
 A azure ear crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8693,7 +8693,7 @@ L
 southern oasis sunlit melee neck gear 70~
 @@bSunlit Melee Neck@@N~
 A sunlit neck crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8702,7 +8702,7 @@ L
 southern oasis brownstone tank wings gear 71~
 @@lBrownstone Tank Wings@@N~
 A brownstone wings crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8711,7 +8711,7 @@ L
 southern oasis azure caster shoulders gear 72~
 @@yAzure Caster Shoulders@@N~
 A azure shoulders crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8720,7 +8720,7 @@ L
 southern oasis sunlit melee arms gear 73~
 @@bSunlit Melee Arms@@N~
 A sunlit arms crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8729,7 +8729,7 @@ L
 southern oasis brownstone tank wrist gear 74~
 @@lBrownstone Tank Wrist@@N~
 A brownstone wrist crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8738,7 +8738,7 @@ L
 southern oasis azure caster hands gear 75~
 @@yAzure Caster Hands@@N~
 A azure hands crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8747,7 +8747,7 @@ L
 southern oasis sunlit melee finger gear 76~
 @@bSunlit Melee Finger@@N~
 A sunlit finger crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8756,7 +8756,7 @@ L
 southern oasis brownstone tank hold gear 77~
 @@lBrownstone Tank Hold@@N~
 A brownstone hold crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8765,7 +8765,7 @@ L
 southern oasis azure caster about gear 78~
 @@yAzure Caster About@@N~
 A azure about crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8774,7 +8774,7 @@ L
 southern oasis sunlit melee waist gear 79~
 @@bSunlit Melee Waist@@N~
 A sunlit waist crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8783,7 +8783,7 @@ L
 southern oasis brownstone melee body gear 80~
 @@lBrownstone Melee Body@@N~
 A brownstone body crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8792,7 +8792,7 @@ L
 southern oasis azure tank legs gear 81~
 @@yAzure Tank Legs@@N~
 A azure legs crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8801,7 +8801,7 @@ L
 southern oasis sunlit caster feet gear 82~
 @@bSunlit Caster Feet@@N~
 A sunlit feet crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8819,7 +8819,7 @@ L
 southern oasis azure tank halo gear 84~
 @@yAzure Tank Halo@@N~
 A azure halo crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8828,7 +8828,7 @@ L
 southern oasis sunlit caster aura gear 85~
 @@bSunlit Caster Aura@@N~
 A sunlit aura crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8837,7 +8837,7 @@ L
 southern oasis brownstone melee horns gear 86~
 @@lBrownstone Melee Horns@@N~
 A brownstone horns crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8846,7 +8846,7 @@ L
 southern oasis azure tank head gear 87~
 @@yAzure Tank Head@@N~
 A azure head crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8855,7 +8855,7 @@ L
 southern oasis sunlit caster face gear 88~
 @@bSunlit Caster Face@@N~
 A sunlit face crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8864,7 +8864,7 @@ L
 southern oasis brownstone melee beak gear 89~
 @@lBrownstone Melee Beak@@N~
 A brownstone beak crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8873,7 +8873,7 @@ L
 southern oasis azure melee ear gear 90~
 @@yAzure Melee Ear@@N~
 A azure ear crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8882,7 +8882,7 @@ L
 southern oasis sunlit tank neck gear 91~
 @@bSunlit Tank Neck@@N~
 A sunlit neck crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8891,7 +8891,7 @@ L
 southern oasis brownstone caster wings gear 92~
 @@lBrownstone Caster Wings@@N~
 A brownstone wings crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8900,7 +8900,7 @@ L
 southern oasis azure melee shoulders gear 93~
 @@yAzure Melee Shoulders@@N~
 A azure shoulders crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8909,7 +8909,7 @@ L
 southern oasis sunlit tank arms gear 94~
 @@bSunlit Tank Arms@@N~
 A sunlit arms crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8918,7 +8918,7 @@ L
 southern oasis brownstone caster wrist gear 95~
 @@lBrownstone Caster Wrist@@N~
 A brownstone wrist crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8927,7 +8927,7 @@ L
 southern oasis azure melee hands gear 96~
 @@yAzure Melee Hands@@N~
 A azure hands crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8936,7 +8936,7 @@ L
 southern oasis sunlit tank finger gear 97~
 @@bSunlit Tank Finger@@N~
 A sunlit finger crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8945,7 +8945,7 @@ L
 southern oasis brownstone caster hold gear 98~
 @@lBrownstone Caster Hold@@N~
 A brownstone hold crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8954,7 +8954,7 @@ L
 southern oasis azure melee about gear 99~
 @@yAzure Melee About@@N~
 A azure about crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8963,7 +8963,7 @@ L
 southern oasis sunlit melee waist gear 100~
 @@bSunlit Melee Waist@@N~
 A sunlit waist crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -8972,7 +8972,7 @@ L
 southern oasis brownstone tank body gear 101~
 @@lBrownstone Tank Body@@N~
 A brownstone body crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -8981,7 +8981,7 @@ L
 southern oasis azure caster legs gear 102~
 @@yAzure Caster Legs@@N~
 A azure legs crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -8990,7 +8990,7 @@ L
 southern oasis sunlit melee feet gear 103~
 @@bSunlit Melee Feet@@N~
 A sunlit feet crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9008,7 +9008,7 @@ L
 southern oasis azure caster halo gear 105~
 @@yAzure Caster Halo@@N~
 A azure halo crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9017,7 +9017,7 @@ L
 southern oasis sunlit melee aura gear 106~
 @@bSunlit Melee Aura@@N~
 A sunlit aura crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9026,7 +9026,7 @@ L
 southern oasis brownstone tank horns gear 107~
 @@lBrownstone Tank Horns@@N~
 A brownstone horns crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9035,7 +9035,7 @@ L
 southern oasis azure caster head gear 108~
 @@yAzure Caster Head@@N~
 A azure head crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9044,7 +9044,7 @@ L
 southern oasis sunlit melee face gear 109~
 @@bSunlit Melee Face@@N~
 A sunlit face crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9053,7 +9053,7 @@ L
 southern oasis brownstone melee beak gear 110~
 @@lBrownstone Melee Beak@@N~
 A brownstone beak crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9062,7 +9062,7 @@ L
 southern oasis azure tank ear gear 111~
 @@yAzure Tank Ear@@N~
 A azure ear crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9071,7 +9071,7 @@ L
 southern oasis sunlit caster neck gear 112~
 @@bSunlit Caster Neck@@N~
 A sunlit neck crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9080,7 +9080,7 @@ L
 southern oasis brownstone melee wings gear 113~
 @@lBrownstone Melee Wings@@N~
 A brownstone wings crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9089,7 +9089,7 @@ L
 southern oasis azure tank shoulders gear 114~
 @@yAzure Tank Shoulders@@N~
 A azure shoulders crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9098,7 +9098,7 @@ L
 southern oasis sunlit caster arms gear 115~
 @@bSunlit Caster Arms@@N~
 A sunlit arms crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9107,7 +9107,7 @@ L
 southern oasis brownstone melee wrist gear 116~
 @@lBrownstone Melee Wrist@@N~
 A brownstone wrist crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9116,7 +9116,7 @@ L
 southern oasis azure tank hands gear 117~
 @@yAzure Tank Hands@@N~
 A azure hands crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9125,7 +9125,7 @@ L
 southern oasis sunlit caster finger gear 118~
 @@bSunlit Caster Finger@@N~
 A sunlit finger crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9134,7 +9134,7 @@ L
 southern oasis brownstone melee hold gear 119~
 @@lBrownstone Melee Hold@@N~
 A brownstone hold crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9143,7 +9143,7 @@ L
 southern oasis azure melee about gear 120~
 @@yAzure Melee About@@N~
 A azure about crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9152,7 +9152,7 @@ L
 southern oasis sunlit tank waist gear 121~
 @@bSunlit Tank Waist@@N~
 A sunlit waist crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9161,7 +9161,7 @@ L
 southern oasis brownstone caster body gear 122~
 @@lBrownstone Caster Body@@N~
 A brownstone body crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9170,7 +9170,7 @@ L
 southern oasis azure melee legs gear 123~
 @@yAzure Melee Legs@@N~
 A azure legs crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9179,7 +9179,7 @@ L
 southern oasis sunlit tank feet gear 124~
 @@bSunlit Tank Feet@@N~
 A sunlit feet crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9197,7 +9197,7 @@ L
 southern oasis azure melee halo gear 126~
 @@yAzure Melee Halo@@N~
 A azure halo crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9206,7 +9206,7 @@ L
 southern oasis sunlit tank aura gear 127~
 @@bSunlit Tank Aura@@N~
 A sunlit aura crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9215,7 +9215,7 @@ L
 southern oasis brownstone caster horns gear 128~
 @@lBrownstone Caster Horns@@N~
 A brownstone horns crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9224,7 +9224,7 @@ L
 southern oasis azure melee head gear 129~
 @@yAzure Melee Head@@N~
 A azure head crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9233,7 +9233,7 @@ L
 southern oasis sunlit melee face gear 130~
 @@bSunlit Melee Face@@N~
 A sunlit face crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9242,7 +9242,7 @@ L
 southern oasis brownstone tank beak gear 131~
 @@lBrownstone Tank Beak@@N~
 A brownstone beak crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9251,7 +9251,7 @@ L
 southern oasis azure caster ear gear 132~
 @@yAzure Caster Ear@@N~
 A azure ear crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9260,7 +9260,7 @@ L
 southern oasis sunlit melee neck gear 133~
 @@bSunlit Melee Neck@@N~
 A sunlit neck crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9269,7 +9269,7 @@ L
 southern oasis brownstone tank wings gear 134~
 @@lBrownstone Tank Wings@@N~
 A brownstone wings crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9278,7 +9278,7 @@ L
 southern oasis azure caster shoulders gear 135~
 @@yAzure Caster Shoulders@@N~
 A azure shoulders crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9287,7 +9287,7 @@ L
 southern oasis sunlit melee arms gear 136~
 @@bSunlit Melee Arms@@N~
 A sunlit arms crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9296,7 +9296,7 @@ L
 southern oasis brownstone tank wrist gear 137~
 @@lBrownstone Tank Wrist@@N~
 A brownstone wrist crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9305,7 +9305,7 @@ L
 southern oasis azure caster hands gear 138~
 @@yAzure Caster Hands@@N~
 A azure hands crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9314,7 +9314,7 @@ L
 southern oasis sunlit melee finger gear 139~
 @@bSunlit Melee Finger@@N~
 A sunlit finger crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9323,7 +9323,7 @@ L
 southern oasis brownstone melee hold gear 140~
 @@lBrownstone Melee Hold@@N~
 A brownstone hold crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9332,7 +9332,7 @@ L
 southern oasis azure tank about gear 141~
 @@yAzure Tank About@@N~
 A azure about crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9341,7 +9341,7 @@ L
 southern oasis sunlit caster waist gear 142~
 @@bSunlit Caster Waist@@N~
 A sunlit waist crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9350,7 +9350,7 @@ L
 southern oasis brownstone melee body gear 143~
 @@lBrownstone Melee Body@@N~
 A brownstone body crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9359,7 +9359,7 @@ L
 southern oasis azure tank legs gear 144~
 @@yAzure Tank Legs@@N~
 A azure legs crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9368,7 +9368,7 @@ L
 southern oasis sunlit caster feet gear 145~
 @@bSunlit Caster Feet@@N~
 A sunlit feet crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9386,7 +9386,7 @@ L
 southern oasis azure tank halo gear 147~
 @@yAzure Tank Halo@@N~
 A azure halo crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9395,7 +9395,7 @@ L
 southern oasis sunlit caster aura gear 148~
 @@bSunlit Caster Aura@@N~
 A sunlit aura crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9404,7 +9404,7 @@ L
 southern oasis brownstone melee horns gear 149~
 @@lBrownstone Melee Horns@@N~
 A brownstone horns crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9413,7 +9413,7 @@ L
 southern oasis azure melee head gear 150~
 @@yAzure Melee Head@@N~
 A azure head crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9422,7 +9422,7 @@ L
 southern oasis sunlit tank face gear 151~
 @@bSunlit Tank Face@@N~
 A sunlit face crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9431,7 +9431,7 @@ L
 southern oasis brownstone caster beak gear 152~
 @@lBrownstone Caster Beak@@N~
 A brownstone beak crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9440,7 +9440,7 @@ L
 southern oasis azure melee ear gear 153~
 @@yAzure Melee Ear@@N~
 A azure ear crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9449,7 +9449,7 @@ L
 southern oasis sunlit tank neck gear 154~
 @@bSunlit Tank Neck@@N~
 A sunlit neck crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9458,7 +9458,7 @@ L
 southern oasis brownstone caster wings gear 155~
 @@lBrownstone Caster Wings@@N~
 A brownstone wings crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9467,7 +9467,7 @@ L
 southern oasis azure melee shoulders gear 156~
 @@yAzure Melee Shoulders@@N~
 A azure shoulders crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9476,7 +9476,7 @@ L
 southern oasis sunlit tank arms gear 157~
 @@bSunlit Tank Arms@@N~
 A sunlit arms crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9485,7 +9485,7 @@ L
 southern oasis brownstone caster wrist gear 158~
 @@lBrownstone Caster Wrist@@N~
 A brownstone wrist crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9494,7 +9494,7 @@ L
 southern oasis azure melee hands gear 159~
 @@yAzure Melee Hands@@N~
 A azure hands crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9503,7 +9503,7 @@ L
 southern oasis sunlit melee finger gear 160~
 @@bSunlit Melee Finger@@N~
 A sunlit finger crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9512,7 +9512,7 @@ L
 southern oasis brownstone tank hold gear 161~
 @@lBrownstone Tank Hold@@N~
 A brownstone hold crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9521,7 +9521,7 @@ L
 southern oasis azure caster about gear 162~
 @@yAzure Caster About@@N~
 A azure about crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9530,7 +9530,7 @@ L
 southern oasis sunlit melee waist gear 163~
 @@bSunlit Melee Waist@@N~
 A sunlit waist crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9539,7 +9539,7 @@ L
 southern oasis brownstone tank body gear 164~
 @@lBrownstone Tank Body@@N~
 A brownstone body crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9548,7 +9548,7 @@ L
 southern oasis azure caster legs gear 165~
 @@yAzure Caster Legs@@N~
 A azure legs crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9557,7 +9557,7 @@ L
 southern oasis sunlit melee feet gear 166~
 @@bSunlit Melee Feet@@N~
 A sunlit feet crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9575,7 +9575,7 @@ L
 southern oasis azure caster halo gear 168~
 @@yAzure Caster Halo@@N~
 A azure halo crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9584,7 +9584,7 @@ L
 southern oasis sunlit melee aura gear 169~
 @@bSunlit Melee Aura@@N~
 A sunlit aura crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388612 1
+9 0 8388610 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9593,7 +9593,7 @@ L
 southern oasis brownstone melee horns gear 170~
 @@lBrownstone Melee Horns@@N~
 A brownstone horns crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388616 1
+9 0 8388612 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9602,7 +9602,7 @@ L
 southern oasis azure tank head gear 171~
 @@yAzure Tank Head@@N~
 A azure head crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9611,7 +9611,7 @@ L
 southern oasis sunlit caster face gear 172~
 @@bSunlit Caster Face@@N~
 A sunlit face crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388640 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9620,7 +9620,7 @@ L
 southern oasis brownstone melee beak gear 173~
 @@lBrownstone Melee Beak@@N~
 A brownstone beak crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388672 1
+9 0 8388640 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9629,7 +9629,7 @@ L
 southern oasis azure tank ear gear 174~
 @@yAzure Tank Ear@@N~
 A azure ear crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8388736 1
+9 0 8388672 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9638,7 +9638,7 @@ L
 southern oasis sunlit caster neck gear 175~
 @@bSunlit Caster Neck@@N~
 A sunlit neck crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9647,7 +9647,7 @@ L
 southern oasis brownstone melee wings gear 176~
 @@lBrownstone Melee Wings@@N~
 A brownstone wings crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8389120 1
+9 0 8388864 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9656,7 +9656,7 @@ L
 southern oasis azure tank shoulders gear 177~
 @@yAzure Tank Shoulders@@N~
 A azure shoulders crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9665,7 +9665,7 @@ L
 southern oasis sunlit caster arms gear 178~
 @@bSunlit Caster Arms@@N~
 A sunlit arms crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8390656 1
+9 0 8389632 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9674,7 +9674,7 @@ L
 southern oasis brownstone melee wrist gear 179~
 @@lBrownstone Melee Wrist@@N~
 A brownstone wrist crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8392704 1
+9 0 8390656 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9683,7 +9683,7 @@ L
 southern oasis azure melee hands gear 180~
 @@yAzure Melee Hands@@N~
 A azure hands crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9692,7 +9692,7 @@ L
 southern oasis sunlit tank finger gear 181~
 @@bSunlit Tank Finger@@N~
 A sunlit finger crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8404992 1
+9 0 8396800 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9701,7 +9701,7 @@ L
 southern oasis brownstone caster hold gear 182~
 @@lBrownstone Caster Hold@@N~
 A brownstone hold crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9710,7 +9710,7 @@ L
 southern oasis azure melee about gear 183~
 @@yAzure Melee About@@N~
 A azure about crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9719,7 +9719,7 @@ L
 southern oasis sunlit tank waist gear 184~
 @@bSunlit Tank Waist@@N~
 A sunlit waist crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9728,7 +9728,7 @@ L
 southern oasis brownstone caster body gear 185~
 @@lBrownstone Caster Body@@N~
 A brownstone body crafted for a caster lies here, marked with southern oasis sigils.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9737,7 +9737,7 @@ L
 southern oasis azure melee legs gear 186~
 @@yAzure Melee Legs@@N~
 A azure legs crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9746,7 +9746,7 @@ L
 southern oasis sunlit tank feet gear 187~
 @@bSunlit Tank Feet@@N~
 A sunlit feet crafted for a tank lies here, marked with southern oasis sigils.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9764,7 +9764,7 @@ L
 southern oasis azure melee halo gear 189~
 @@yAzure Melee Halo@@N~
 A azure halo crafted for a melee lies here, marked with southern oasis sigils.~
-9 0 8388610 1
+9 0 8388609 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9773,7 +9773,7 @@ L
 southern oasis boss crown relic~
 @@lCrown of the Southern Seal@@N~
 Crown of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8388624 1
+9 0 8388616 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9782,7 +9782,7 @@ L
 southern oasis boss greaves relic~
 @@yGreaves of the Southern Seal@@N~
 Greaves of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 10485760 1
+9 0 9437184 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9791,7 +9791,7 @@ L
 southern oasis boss gauntlets relic~
 @@lGauntlets of the Southern Seal@@N~
 Gauntlets of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8396800 1
+9 0 8392704 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9800,7 +9800,7 @@ L
 southern oasis boss carapace relic~
 @@yCarapace of the Southern Seal@@N~
 Carapace of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8912896 1
+9 0 8650752 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9809,7 +9809,7 @@ L
 southern oasis boss sabatons relic~
 @@lSabatons of the Southern Seal@@N~
 Sabatons of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 12582912 1
+9 0 10485760 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -9818,7 +9818,7 @@ L
 southern oasis boss mantle relic~
 @@yMantle of the Southern Seal@@N~
 Mantle of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8519680 1
+9 0 8454144 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9827,7 +9827,7 @@ L
 southern oasis boss girdle relic~
 @@lGirdle of the Southern Seal@@N~
 Girdle of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8650752 1
+9 0 8519680 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9836,7 +9836,7 @@ L
 southern oasis boss focus relic~
 @@yFocus of the Southern Seal@@N~
 Focus of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8454144 1
+9 0 8421376 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9845,7 +9845,7 @@ L
 southern oasis boss pauldrons relic~
 @@lPauldrons of the Southern Seal@@N~
 Pauldrons of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8389632 1
+9 0 8389120 1
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -9854,7 +9854,7 @@ L
 southern oasis boss amulet relic~
 @@yAmulet of the Southern Seal@@N~
 Amulet of the Southern Seal gleams with restrained pyramid-ward magic.~
-9 0 8388864 1
+9 0 8388736 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
