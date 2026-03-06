@@ -1475,8 +1475,6 @@ char *extra_bit_name(int extra_flags)
       safe_strcat(MAX_STRING_LENGTH, buf, " wand");
    if (extra_flags & ITEM_FIST)
       safe_strcat(MAX_STRING_LENGTH, buf, " fist");
-   if (extra_flags & ITEM_AUTO)
-      safe_strcat(MAX_STRING_LENGTH, buf, " auto");
    if (extra_flags & ITEM_TWO_HANDED)
       safe_strcat(MAX_STRING_LENGTH, buf, " 2-handed");
 
