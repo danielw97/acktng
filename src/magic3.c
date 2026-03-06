@@ -368,8 +368,8 @@ bool spell_iceshield(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
      if ( is_shielded( victim, ICE_SHIELD ) )
        return FALSE;
 
-       for now, we are gonna allow only one shield up at a time  */
-   if (ch->first_shield != NULL)
+       allow iceshield to coexist with other shield effects */
+   if (is_shielded(ch, ICE_SHIELD))
    {
       return FALSE;
    }

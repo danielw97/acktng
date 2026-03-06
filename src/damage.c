@@ -650,7 +650,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
 
     if (cloak_reactive_can_trigger(element))
     {
-        int cloak_reactive = cloak_apply_reactive_effects(ch, victim, dam, shortfight_round);
+        int cloak_reactive = cloak_apply_reactive_effects(ch, victim, dam, element, shortfight_round);
         if (shortfight_round)
             short_fight_reactive_damage += cloak_reactive;
     }

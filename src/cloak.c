@@ -67,7 +67,7 @@ bool cloak_handle_spell_defense(CHAR_DATA *ch, CHAR_DATA *victim, int dt, int el
     return FALSE;
 }
 
-int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, bool shortfight_round)
+int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int element, bool shortfight_round)
 {
     int reactive_damage = 0;
 
@@ -78,62 +78,16 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, bool
 
     if ((IS_AFFECTED(victim, AFF_CLOAK_FLAMING) || is_affected(victim, skill_lookup("cloak:elements"))) && (ch != victim))
     {
-        int flame_damage;
-        if (!shortfight_round)
-        {
-            act("@@N$n's @@ecloak@@N flares and envelops $N in @@eflames@@N!!", victim, NULL, ch, TO_NOTVICT);
-        }
-        else
-        {
-            CHAR_DATA *rch;
-            for (rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
-            {
-                char buf[MSL];
-                if (rch == ch || rch == victim)
-                    continue;
-                if (!IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT))
-                    continue;
-                sprintf(buf, "@@N%s's @@ecloak@@N flares and envelops %s in @@eflames@@N!!\n\r", PERS(victim, rch), PERS(ch, rch));
-                send_to_char(buf, rch);
-            }
-        }
+        int reflected_damage = 0;
+        bool has_flaming = IS_AFFECTED(victim, AFF_CLOAK_FLAMING) ? TRUE : FALSE;
+        bool has_elements = is_affected(victim, skill_lookup("cloak:elements"));
 
-        if (!(shortfight_round && !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT)))
-        {
-            if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
-                act("Flame cloak on $K ouch", ch, NULL, victim, TO_CHAR);
-            else
-                act("@@N$N's @@ecloak@@N flares, and envelops you with @@eflame@@N!!", ch, NULL, victim, TO_CHAR);
-        }
-
-        if (!(shortfight_round && !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
-        {
-            if (!IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_BLIND_PLAYER))
-                act("Your Flame cloak flares", victim, NULL, ch, TO_CHAR);
-            else
-                act("@@NYour @@ecloak@@N flares, and envelops $N with @@eflame@@N!!!", victim, NULL, ch, TO_CHAR);
-        }
-
-        flame_damage = get_psuedo_level(victim);
-        if (is_affected(victim, skill_lookup("cloak:elements")))
-            flame_damage = flame_damage * 1.5;
-
-        ch->hit = UMAX(10, ch->hit - flame_damage);
-        reactive_damage += flame_damage;
-
-        if (is_affected(ch, skill_lookup("cloak:elements")) && number_range(0, 99) < 20)
-        {
-            send_to_char("@@NYour @@ecloak@@N is ripped to shreds!!!@@N\n\r", ch);
-            affect_strip(ch, skill_lookup("cloak:flaming"));
-            affect_strip(ch, skill_lookup("cloak:elements"));
-            if (IS_SET(ch->affected_by, AFF_CLOAK_FLAMING))
-                REMOVE_BIT(ch->affected_by, AFF_CLOAK_FLAMING);
-        }
-
-        if (is_affected(victim, skill_lookup("cloak:elements")) && number_range(0, 99) < 20)
+        if (has_flaming && IS_SET(element, ELE_PHYSICAL))
         {
             if (!shortfight_round)
-                send_to_char("@@NYour @@ecloak@@N is ripped to shreds!!!@@N\n\r", victim);
+            {
+                act("@@N$n's @@ecloak@@N flares and engulfs $N in @@eflames@@N!!", victim, NULL, ch, TO_NOTVICT);
+            }
             else
             {
                 CHAR_DATA *rch;
@@ -144,19 +98,73 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, bool
                         continue;
                     if (!IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT))
                         continue;
-                    sprintf(buf, "@@N%s's @@ecloak@@N is ripped to shreds!!!@@N\n\r", PERS(victim, rch));
+                    sprintf(buf, "@@N%s's @@ecloak@@N flares and engulfs %s in @@eflames@@N!!@@N\n\r", PERS(victim, rch), PERS(ch, rch));
                     send_to_char(buf, rch);
                 }
             }
 
-            affect_strip(ch, skill_lookup("cloak:flaming"));
-            affect_strip(victim, skill_lookup("cloak:flaming"));
-            affect_strip(ch, skill_lookup("cloak:elements"));
-            affect_strip(victim, skill_lookup("cloak:elements"));
-            if (IS_SET(ch->affected_by, AFF_CLOAK_FLAMING))
-                REMOVE_BIT(ch->affected_by, AFF_CLOAK_FLAMING);
-            if (IS_SET(victim->affected_by, AFF_CLOAK_FLAMING))
-                REMOVE_BIT(victim->affected_by, AFF_CLOAK_FLAMING);
+            if (!(shortfight_round && !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT)))
+            {
+                if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
+                    act("Flame cloak on $K ouch", ch, NULL, victim, TO_CHAR);
+                else
+                    act("@@N$N's @@ecloak@@N erupts and burns you in retaliation!!", ch, NULL, victim, TO_CHAR);
+            }
+
+            if (!(shortfight_round && !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
+            {
+                if (!IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_BLIND_PLAYER))
+                    act("Your Flame cloak flares", victim, NULL, ch, TO_CHAR);
+                else
+                    act("@@NYour @@ecloak@@N erupts and scorches $N!!!", victim, NULL, ch, TO_CHAR);
+            }
+
+            reflected_damage = UMAX(1, dam * 15 / 100);
+        }
+        else if (has_elements && !IS_SET(element, ELE_PHYSICAL))
+        {
+            if (!shortfight_round)
+            {
+                act("@@N$n's @@lELEMENTS @@Ncloak crackles and lashes $N with raw power!!", victim, NULL, ch, TO_NOTVICT);
+            }
+            else
+            {
+                CHAR_DATA *rch;
+                for (rch = ch->in_room->first_person; rch != NULL; rch = rch->next_in_room)
+                {
+                    char buf[MSL];
+                    if (rch == ch || rch == victim)
+                        continue;
+                    if (!IS_NPC(rch) && IS_SET(rch->config, CONFIG_SHORT_FIGHT))
+                        continue;
+                    sprintf(buf, "@@N%s's @@lELEMENTS @@Ncloak crackles and lashes %s with raw power!!@@N\n\r", PERS(victim, rch), PERS(ch, rch));
+                    send_to_char(buf, rch);
+                }
+            }
+
+            if (!(shortfight_round && !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT)))
+            {
+                if (!IS_NPC(ch) && IS_SET(ch->pcdata->pflags, PFLAG_BLIND_PLAYER))
+                    act("Element cloak on $K ouch", ch, NULL, victim, TO_CHAR);
+                else
+                    act("@@N$N's @@lELEMENTS @@Ncloak crackles and shocks you in retaliation!!", ch, NULL, victim, TO_CHAR);
+            }
+
+            if (!(shortfight_round && !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
+            {
+                if (!IS_NPC(victim) && IS_SET(victim->pcdata->pflags, PFLAG_BLIND_PLAYER))
+                    act("Your Elements cloak flares", victim, NULL, ch, TO_CHAR);
+                else
+                    act("@@NYour @@lELEMENTS @@Ncloak crackles and lashes back at $N!!!", victim, NULL, ch, TO_CHAR);
+            }
+
+            reflected_damage = UMAX(1, dam * 15 / 100);
+        }
+
+        if (reflected_damage > 0)
+        {
+            ch->hit = UMAX(10, ch->hit - reflected_damage);
+            reactive_damage += reflected_damage;
         }
     }
 

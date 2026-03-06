@@ -5,7 +5,7 @@
 
 bool cloak_reactive_can_trigger(int element);
 bool cloak_handle_spell_defense(CHAR_DATA *ch, CHAR_DATA *victim, int dt, int element, int dam);
-int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, bool shortfight_round);
+int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int element, bool shortfight_round);
 int cloak_adept_hitroll_bonus(CHAR_DATA *ch);
 int cloak_adept_defense_bonus(CHAR_DATA *ch);
 int cloak_adept_scale_damage(CHAR_DATA *ch, int dam);
