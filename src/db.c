@@ -2710,7 +2710,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
    *obj = obj_zero;
    obj->pIndexData = pObjIndex;
    obj->in_room = NULL;
-   obj->level = object_spawn_level(pObjIndex->level, level);
+   obj->level = pObjIndex->level;
 
    obj->wear_loc = -1;
 
@@ -2738,18 +2738,8 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 
    obj->in_obj = NULL;
 
-   /*
-    * We want to copy pObjIndex->affected to obj->index
-    */
-   if (!IS_SET(pObjIndex->extra_flags, ITEM_AUTO))
-   {
-      for (af = pObjIndex->first_apply; af != NULL; af = af->next)
-      {
-         set_aff_to_obj(obj, af->location, af->modifier);
-      }
-   } /* We have an automatically stat'd item */
-   else
-      set_obj_stat_auto(obj);
+   set_obj_stat_auto(obj);
+
    for (looper = 0; looper < 10; looper++)
    {
       obj->value[looper] = pObjIndex->value[looper];

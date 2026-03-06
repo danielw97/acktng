@@ -9755,7 +9755,7 @@ L
 southern oasis brownstone caster hooves gear 188~
 @@lBrownstone Caster Hooves@@N~
 A brownstone hooves crafted for a caster lies here, marked with southern oasis sigils.~
-9 268435584 25165824 1
+9 128 12582912 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -9764,11 +9764,11 @@ L
 southern oasis azure melee halo gear 189~
 @@yAzure Melee Halo@@N~
 A azure halo crafted for a melee lies here, marked with southern oasis sigils.~
-9 268435584 16777218 1
+9 128 8388610 1
 0 0 0 0 0 0 0 0 0 0
 8
 L
-68
+65
 #9990
 southern oasis boss crown relic~
 @@lCrown of the Southern Seal@@N~
