@@ -658,7 +658,7 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     /* for now, can only have one shield up, or alternatively, only the first
    shield does anything		 */
 
-    if ((victim->first_shield != NULL) && (ch != victim) && (dam > 0))
+    if ((victim->first_shield != NULL) && (ch != victim) && (dam > 0) && !IS_SET(element, NO_ABSORB))
     {
         char buf1[MSL];
         char buf2[MSL];
@@ -672,13 +672,49 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
             sprintf(buf3, "%s", "Your shield cool");
         else
             sprintf(buf3, "%s", victim->first_shield->absorb_message_self);
+        int damage_dealt_to_victim = dam;
+
         victim->first_shield->hits -= dam;
         dam = dam - dam * (victim->first_shield->percent / 100);
         if (victim->first_shield->harmfull == TRUE)
         {
-            ch->hit = UMAX(10, (ch->hit - victim->first_shield->attack_dam));
-            if (short_fight_round_active(ch, victim))
-                short_fight_reactive_damage += victim->first_shield->attack_dam;
+            int reactive_dam = victim->first_shield->attack_dam;
+            int reactive_element = ELE_PHYSICAL;
+            int reactive_applied;
+
+            if (victim->first_shield->sn == skill_lookup("fireshield"))
+            {
+                reactive_dam = damage_dealt_to_victim * 30 / 100;
+                reactive_element = ELE_FIRE;
+            }
+            else if (victim->first_shield->sn == skill_lookup("shockshield"))
+            {
+                reactive_dam = damage_dealt_to_victim * 25 / 100;
+                reactive_element = ELE_AIR;
+            }
+
+            reactive_applied = do_damage(victim, ch, reactive_dam, -1, reactive_element | NO_REFLECT | NO_ABSORB, FALSE);
+            if (reactive_applied > 0)
+            {
+                char shield_dam_buf[MSL];
+
+                sprintf(shield_dam_buf, "@@N$N's shield hits you for @@e%d@@N damage!!", reactive_applied);
+                if (!(shortfight_round && !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT)))
+                    act(shield_dam_buf, ch, NULL, victim, TO_CHAR);
+
+                sprintf(shield_dam_buf, "@@NYour shield hits $N for @@e%d@@N damage!!", reactive_applied);
+                if (!(shortfight_round && !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
+                    act(shield_dam_buf, victim, NULL, ch, TO_CHAR);
+
+                if (!shortfight_round)
+                {
+                    sprintf(shield_dam_buf, "@@N$n's shield reacts and hits $N for @@e%d@@N damage!!", reactive_applied);
+                    act(shield_dam_buf, victim, NULL, ch, TO_NOTVICT);
+                }
+            }
+
+            if (short_fight_round_active(ch, victim) && reactive_applied > 0)
+                short_fight_reactive_damage += reactive_applied;
         }
         if (!shortfight_round)
         {
