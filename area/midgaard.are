@@ -2416,7 +2416,7 @@ S
 #3121
 @@cThe Grand Post Office@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -2425,7 +2425,7 @@ S
 #3122
 @@cThe Argent Armory@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -2434,7 +2434,7 @@ S
 #3123
 @@cThe Moonthread Outfitters@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -2443,7 +2443,7 @@ S
 #3124
 @@cThe Emberglass Arcana@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -2452,7 +2452,7 @@ S
 #3125
 @@cThe Provisioner's Exchange@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -2461,7 +2461,7 @@ S
 #3126
 @@cThe Invasion Requisitions@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -2470,7 +2470,7 @@ S
 #3127
 @@cThe Proposition Exchange@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -2479,7 +2479,7 @@ S
 #3128
 @@cThe Quest Broker's Hall@@N~
 Lantern-lit counters, locked cabinets, and brass scales define this tightly run storefront. Painted ordinances on the walls forbid mounts, familiars, and summoned creatures from entering while trade is underway. City stewards have reinforced this junction with extra lamps, @@cwarding sigils@@N, and civic notices so travelers can orient themselves quickly before committing to the roads beyond @@WMidgaard@@N's walls.~
-17420 1
+17420 11
 D2
 ~
 ~
@@ -3144,7 +3144,7 @@ S
 #3161
 @@aMoonthread Clothier's Court@@N~
 Bolts of dyed linen and rune-stitched cotton now frame this corner of Midgaard, where apprentice couriers stop to be measured beside veteran hedge-mages in need of fresh wardcloth. Tailor's bells and shearsong mingle with market noise, and mannequins in layered travel robes stand beneath practical @@ylanterns@@N while a cloth armorer displays ready stock for every discipline. The paving still bears old ward sigils, but this square now clearly serves as a bustling outfitter's court for soft armor and reinforced garments.~
-1028 1
+1028 11
 D0
 ~
 ~
@@ -3153,7 +3153,7 @@ S
 #3162
 @@aIronweave Armourer's Arcade@@N~
 Forged greaves and ringed harness now crowd this corner arcade, where mercenaries and caravan guards queue beside sparring veterans for fresh steel. The rhythmic clatter of rivets and the hiss of quenched plate roll out from open-front stalls lit by practical @@ylanterns@@N, while weapon racks and measuring frames line the walls in strict order. A mezzanine counter displays heavy melee panoplies by rank and campaign, marking this square as Midgaard's dedicated hall for close-combat armorers.~
-1029 1
+1028 11
 D0
 ~
 ~
@@ -3162,7 +3162,7 @@ S
 #3163
 @@aGranite Bastion Armory@@N~
 Heavy chain curtains and slab-stone counters turn this corner of Midgaard into a dedicated outfitter's bastion for shield-bearing veterans. Racks of tower plates, reinforced straps, and impact-tested greaves crowd the walls beneath practical @@ylanterns@@N, while smiths call out measurements over the ring of anvils. The paving here is scarred by repeated weight drops and drill formations, and a carved inventory board lists defensive harness by campaign tier, making this square the city's unmistakable market for tank armor.~
-1029 1
+1029 11
 D0
 ~
 ~
@@ -3853,7 +3853,7 @@ The Postmaster~
 The Postmaster stands here, watching over you...
 
 
-~
+~
 ~
 524299 8320 1000 S
 72 1
@@ -3869,7 +3869,7 @@ Cyberlich's Black Avenger.~
 Cyberlich's Black Avenger is here, staring at you with @@Rred eyes.@@g
 
 
-~
+~
 ~
 3153927 1157800 1000 S
 140 0
@@ -3885,11 +3885,11 @@ the town crier~
 The town crier is here, weeping quietly.
 
 
-~
+~
 He is very good at his job - completely dissolved in tears.
 
 
-~
+~
 1 0 900 S
 27 1
 0 0 0 0
@@ -3904,11 +3904,11 @@ the mayor~
 The mayor is here.  He shakes your hand.
 
 
-~
+~
 He is a well-built, middle-aged man with thin, grey hair.
 
 
-~
+~
 1 8192 900 S
 19 1
 0 0 0 0
@@ -3923,17 +3923,17 @@ the secretary~
 A secretary is sitting at the desk.
 
 
-~
+~
 She looks very busy.
 
 
-The Secretary says 'Sorry, but the Mayor is extremely busy today'.
+The Secretary says 'Sorry, but the Mayor is extremely busy today'.
 
 
-The Secretary says 'Please sit down and have a seat in the meantime'.
+The Secretary says 'Please sit down and have a seat in the meantime'.
 
 
-~
+~
 1 0 900 S
 19 2
 0 0 0 0
@@ -3948,11 +3948,11 @@ the cityguard~
 A cityguard stands here, looking very upset.
 
 
-~
+~
 A big, strong, angry guard.
 
 
-~
+~
 1 0 1000 S
 8 1
 0 0 0 0
@@ -3967,11 +3967,11 @@ the captain~
 The captain of the guard is looking very upset.
 
 
-~
+~
 A big, strong, angry captain.
 
 
-~
+~
 1 8 1000 S
 18 1
 0 0 0 0
@@ -3986,11 +3986,11 @@ the duck~
 A duck is here, quacking happily.
 
 
-~
+~
 The duck is quite fat.  It looks like it is enjoying life.
 
 
-~
+~
 1 0 1000 S
 7 0
 0 0 0 0
@@ -4005,11 +4005,11 @@ the sparrow~
 A sparrow is flapping around on the ground.
 
 
-~
+~
 The sparrow looks like it is enjoying life.
 
 
-~
+~
 1 0 1000 S
 9 0
 0 0 0 0
@@ -4024,11 +4024,11 @@ the duckling~
 A duckling is swimming around in the pond.
 
 
-~
+~
 The duckling is adorable, it looks most of all like a tiny furball.
 
 
-~
+~
 1 0 1000 S
 1 0
 0 0 0 0
@@ -4043,11 +4043,11 @@ the swan~
 A swan is swimming around in the pond.
 
 
-~
+~
 The white swan is very elegant.
 
 
-~
+~
 1 0 1000 S
 2 0
 0 0 0 0
@@ -4062,11 +4062,11 @@ the sexton~
 A sexton is sitting here, drinking hot tea.
 
 
-~
+~
 The sexton looks like he is relaxing after another grave-digging job.
 
 
-~
+~
 1 0 800 S
 10 1
 0 0 0 0
@@ -4081,14 +4081,14 @@ the maid~
 The maid is waiting for your order.
 
 
-~
+~
 She is very beautiful with golden hair, and deep blue eyes. A good reason
 
 
-for coming here more often.
+for coming here more often.
 
 
-~
+~
 1 0 1000 S
 29 2
 0 0 0 0
@@ -4103,11 +4103,11 @@ the wolf~
 A large, trained wolf is here.
 
 
-~
+~
 The wolf looks like a strong, fearless fighter.
 
 
-~
+~
 1 0 0 S
 4 0
 0 0 0 0
@@ -4122,11 +4122,11 @@ the rottweiler~
 A large, loyal rottweiler is here.
 
 
-~
+~
 The rottweiler looks like a strong, fierce fighter.
 
 
-~
+~
 1 0 400 S
 25 0
 0 0 0 0
@@ -4141,11 +4141,11 @@ the beagle~
 A small, quick, loyal beagle is here.
 
 
-~
+~
 The beagle looks like a fierce fighter.
 
 
-~
+~
 1 0 400 S
 12 0
 0 0 0 0
@@ -4160,11 +4160,11 @@ the puppy~
 A small loyal puppy is here.
 
 
-~
+~
 The puppy looks like a cute, little, fierce fighter.
 
 
-~
+~
 1 0 400 S
 5 0
 0 0 0 0
@@ -4179,11 +4179,11 @@ the kitten~
 A small loyal kitten is here.
 
 
-~
+~
 The kitten looks like a cute, little, fierce fighter.
 
 
-~
+~
 1 0 400 S
 4 0
 0 0 0 0
@@ -4198,11 +4198,11 @@ the cityguard~
 A cityguard is here, guarding the mayor.
 
 
-~
+~
 A big, strong, helpful, trustworthy guard.
 
 
-~
+~
 65 65538 1000 S
 3 1
 0 0 0 0
@@ -4217,11 +4217,11 @@ the cityguard~
 A cityguard is here, guarding the gate.
 
 
-~
+~
 A big, strong, helpful, trustworthy guard.
 
 
-~
+~
 65 0 1000 S
 27 1
 0 0 0 0
@@ -4236,11 +4236,11 @@ the cityguard~
 A cityguard is here, guarding the gate.
 
 
-~
+~
 A big, strong, helpful, trustworthy guard.
 
 
-~
+~
 65 0 1000 S
 11 1
 0 0 0 0
@@ -4255,11 +4255,11 @@ an alley cat~
 An alley cat hisses at you.
 
 
-~
+~
 The alley cat is half starved and more than a little feral.
 
 
-~
+~
 1 0 -200 S
 42 1
 0 0 0 0
@@ -4274,11 +4274,11 @@ the beggar~
 A beggar is here, asking for a few coins.
 
 
-~
+~
 The beggar looks like she is fed up with life.
 
 
-~
+~
 1 0 400 S
 2 2
 0 0 0 0
@@ -4293,11 +4293,11 @@ the drunk~
 A singing, happy drunk.
 
 
-~
+~
 A drunk who seems to be too happy, and to carry too much money.
 
 
-~
+~
 1 0 400 S
 10 1
 0 0 0 0
@@ -4312,11 +4312,11 @@ the vagabond~
 A vagabond is here, looking for victims.
 
 
-~
+~
 He looks pretty mean.
 
 
-~
+~
 1 0 -200 S
 1 1
 0 0 0 0
@@ -4331,11 +4331,11 @@ A bug~
 A furry little system bug is here.
 
 
-~
+~
 A system bug is something from a computer programer's worst nightmare.
 
 
-~
+~
 131201 40 -200 S
 14 0
 0 0 0 0
@@ -4350,7 +4350,7 @@ the janitor~
 A janitor is walking around, cleaning up.
 
 
-~
+~
 ~
 1 0 900 S
 9 1
@@ -4366,11 +4366,11 @@ the cityguard~
 A cityguard stands here.
 
 
-~
+~
 A big, strong, helpful, trustworthy guard.
 
 
-~
+~
 65 0 1000 S
 36 1
 0 0 0 0
@@ -4385,20 +4385,20 @@ Aod the Dealer~
 Aod the Dealer stands in the shadows here.
 
 
-~
+~
 Aod looks just like the dealer hoodlum you see on T.V.  He's wearing a
 
 
-concert shirt and Levi 501's.  His hair is pulled back into a pony tail.
+concert shirt and Levi 501's.  His hair is pulled back into a pony tail.
 
 
-A beard and moustache complete the look.  Aod has brought some drugs
+A beard and moustache complete the look.  Aod has brought some drugs
 
 
-with him from Generic Mud.
+with him from Generic Mud.
 
 
-~
+~
 8388611 552 0 S
 13 1
 0 0 0 0
@@ -4413,14 +4413,14 @@ Filthy~
 Filthy is standing here, eager to serve you a special drink.
 
 
-~
+~
 Filthy looks real, ehm, dirty. He likes to keep his costumers happy,
 
 
-but do not mess with him or else he'll get upset.
+but do not mess with him or else he'll get upset.
 
 
-~
+~
 3 0 600 S
 15 1
 0 0 0 0
@@ -4435,11 +4435,11 @@ the bartender~
 A bartender watches you calmly, while he skillfully mixes a drink.
 
 
-~
+~
 A tired looking Bartender who hates trouble in his bar.
 
 
-~
+~
 8388611 0 900 S
 46 1
 0 0 0 0
@@ -4454,11 +4454,11 @@ the healer~
 A healer is here.
 
 
-~
+~
 Although retired from adventuring, the healer still lends a hand.
 
 
-~
+~
 4099 8328 1000 S
 114 1
 0 0 0 0
@@ -4471,15 +4471,14 @@ L 0 0 0 0 0 0 0 0 0
 gertrude executioner~
 Gertrude~
 Gertrude the Executioner polishes her blade.
-
-~
+~
 A masked woman with muscles bulging all over her body.  You can tell by
 
 
-the look in her eyes that she enjoys seeing you cower in her presence.
+the look in her eyes that she enjoys seeing you cower in her presence.
 
 
-~
+~
 131103 1633020 1000 S
 150 2
 0 0 0 0
@@ -4494,14 +4493,14 @@ the leather worker~
 The leather worker is sitting by the table, sewing a leather cap.
 
 
-~
+~
 He looks as an honest, hard-working artisan who only just earns enough to
 
 
-keep himself going.
+keep himself going.
 
 
-~
+~
 3 128 900 S
 105 1
 0 0 0 0
@@ -4516,11 +4515,11 @@ the jeweller~
 The jeweller is standing behind the desk.
 
 
-~
+~
 He is fat and has a content although watchful look on his face.
 
 
-~
+~
 8388611 8320 900 S
 87 1
 0 0 0 0
@@ -4535,11 +4534,11 @@ the pet shop boy~
 A pet shop boy is here, humming gently.
 
 
-~
+~
 He is young and close-cropped and looks quite happy.
 
 
-~
+~
 3 0 900 S
 71 1
 0 0 0 0
@@ -4554,11 +4553,11 @@ the sailor~
 A sailor stands here, waiting to train you.
 
 
-~
+~
 He looks like a strong, fit sailor.
 
 
-~
+~
 515 0 900 S
 71 1
 0 0 0 0
@@ -4573,11 +4572,11 @@ the captain~
 A retired captain stands here, selling boats.
 
 
-~
+~
 This captain has killed more sharks than you have eaten peas.
 
 
-~
+~
 3 40 900 S
 22 1
 0 0 0 0
@@ -4592,11 +4591,11 @@ the thief~
 A thief, all dressed in black.
 
 
-~
+~
 Well COUNT your money!
 
 
-~
+~
 3 98304 100 S
 35 1
 0 0 0 0
@@ -4611,14 +4610,14 @@ the armourer~
 An armourer stands here.
 
 
-~
+~
 An old but very strong armourer, he has made more armours in his
 
 
-lifetime than you have ever seen.
+lifetime than you have ever seen.
 
 
-~
+~
 9438211 8328 900 S
 102 1
 0 0 0 0
@@ -4634,10 +4633,10 @@ The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand.
 
 
 
-~
+~
 A broad-shouldered armourer who outfits defenders in heavy, impact-ready tank harness.
 
-^M~
+^M~
 3 0 900 S
 60 1
 0 0 0 0
@@ -4651,10 +4650,10 @@ weaponsmith~
 the weaponsmith~
 A weaponsmith.
 
-~
+~
 A young weaponsmith, who still has lots to learn.
 
-~
+~
 8396807 8328 900 S
 85 1
 0 0 0 0
@@ -4669,11 +4668,11 @@ the grocer~
 A grocer stands at the counter, with a slightly impatient look on his face.
 
 
-~
+~
 A tall grocer, who moves two 200 pounds bag of flour around on his shoulders.
 
 
-~
+~
 8388611 8320 900 S
 111 1
 0 0 0 0
@@ -4687,10 +4686,10 @@ baker~
 the baker~
 The baker looks at you calmly, wiping flour from his face with one hand.
 
-~
+~
 A fat, nice looking baker. But you can see that he has many scars on his
 
-body.~
+body.~
 1 0 900 S
 46 1
 0 0 0 0
@@ -4704,12 +4703,12 @@ arcanist emberglass~
 Arcanist Emberglass~
 Arcanist Emberglass stands here, trying to sell arcane items.
 
-~
+~
 A wizard. He is equipped with fine clothing, and is wearing many fine
 
-rings and bracelets.
+rings and bracelets.
 
-~
+~
 3 0 900 S
 74 1
 0 0 0 0
@@ -4723,12 +4722,12 @@ max teller~
 Max~
 Max the bank teller stands here, ready to take your money.
 
-@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
+@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
 
-~
+~
 He looks greasy, and not very trustworthy.  Go figure.
 
-~
+~
 9469963 128 0 S
 94 1
 0 0 0 0
@@ -4742,10 +4741,10 @@ armorer argent~
 The Argent Armorer~
 The Argent Armorer appraises a rack of polished blades.
 
-~
+~
 A disciplined quartermaster in polished mail, ready to match steel to soldier.
 
-~
+~
 1 0 900 S
 45 1
 0 0 0 0
@@ -4759,12 +4758,12 @@ armourer armorer ironweave melee~
 The Ironweave Melee Armourer~
 The Ironweave Melee Armourer checks the balance of plated harness with
 
-practiced hands.
+practiced hands.
 
-~
+~
 A scarred melee armourer in a soot-dark apron, fitting reinforced wargear for front-line fighters.
 
-~
+~
 3 0 900 S
 58 1
 0 0 0 0
@@ -4778,10 +4777,10 @@ clothier armorer moonthread~
 The Moonthread Cloth Armorer~
 The Moonthread Cloth Armorer smooths layered robes across a cedar rack.
 
-~
+~
 A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor.
 
-~
+~
 3 0 900 S
 54 2
 0 0 0 0
@@ -4795,10 +4794,10 @@ outfitter moonthread~
 The Moonthread Outfitter~
 The Moonthread Outfitter measures a reinforced coat for a customer.
 
-~
+~
 A patient tailor known for practical armor, layered leathers, and expedition wear.
 
-~
+~
 3 0 900 S
 48 2
 0 0 0 0
@@ -4813,11 +4812,11 @@ The Provisioner~
 The Provisioner weighs travel packs behind a brass counter.
 
 
-~
+~
 A sturdy supplier specializing in hardwear for caravans and long campaigns.
 
 
-~
+~
 3 0 900 S
 36 1
 0 0 0 0
@@ -4832,11 +4831,11 @@ The Invasion Quartermaster~
 The Invasion Quartermaster checks requisition manifests.
 
 
-~
+~
 A veteran logistician who issues field-ready weapons and disciplined kit.
 
 
-~
+~
 3 8 900 S
 52 1
 0 0 0 0
@@ -4851,11 +4850,11 @@ The Proposition Clerk~
 The Proposition Clerk arranges stamped contracts and sigils.
 
 
-~
+~
 A precise bureaucrat trading in legal wards, favors, and tactical charters.
 
 
-~
+~
 3 0 900 S
 40 2
 0 0 0 0
@@ -4870,11 +4869,11 @@ The Quest Broker~
 The Quest Broker flips through reward ledgers and bounty notices.
 
 
-~
+~
 A seasoned fixer who outfits expeditions with practical rewards for every role.
 
 
-~
+~
 3 0 900 S
 46 1
 0 0 0 0
@@ -4889,11 +4888,11 @@ The Bulwark Armorer~
 The Bulwark Armorer checks rivets on a wall of weighted harness.
 
 
-~
+~
 A broad-shouldered smith outfitting mages, duelists, and guardians with role-tuned armor.
 
 
-~
+~
 3 0 900 S
 50 1
 0 0 0 0
@@ -4908,11 +4907,11 @@ The Moonthread Arcanoweaver~
 The Moonthread Arcanoweaver adjusts rune-stitched armor on a dress form.
 
 
-~
+~
 A meticulous moonthread armourer who tailors arcane vestments for hedge mages and archons alike.
 
 
-~
+~
 3 0 900 S
 47 2
 0 0 0 0
@@ -4938,7 +4937,7 @@ darkness~
 A blade of @@GDarkness@@g lies here.
 
 
-~
+~
 5 134220288 8421376 33
 0 0 0 9 0 0 0 0 0 0
 8
@@ -4959,16 +4958,16 @@ darkness~
 Looking at @@GDarkness@@g is like looking into the furthest corner of your
 
 
-sad and evil soul.  You sense the power stored within this weapon to be awesome,
+sad and evil soul.  You sense the power stored within this weapon to be awesome,
 
 
-ready to strike your enemies at the slightest chance.  You are forced to look
+ready to strike your enemies at the slightest chance.  You are forced to look
 
 
-away, rather than be dragged into it's dark heart....
+away, rather than be dragged into it's dark heart....
 
 
-~
+~
 L
 120
 #3039
@@ -5054,7 +5053,7 @@ the lover's board~
 The lover's board is stuck to the wall with 4 arrows.
 
 
-~
+~
 27 0 0 1
 0 0 0 0 0 0 0 0 0 0
 4
@@ -5103,7 +5102,7 @@ banner~
 This is the official Merc war banner to see you through the darkest realm!
 
 
-~
+~
 L
 25
 #3016
@@ -5131,10 +5130,10 @@ bracer~
 You see a bracer of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3018
@@ -5149,10 +5148,10 @@ belt~
 You see a belt of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3019
@@ -5167,10 +5166,10 @@ cape~
 You see a cape of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3023
@@ -5185,10 +5184,10 @@ sleeves~
 You see sleeves of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3024
@@ -5202,9 +5201,9 @@ E
 gloves~
 You see gloves of great craftsmanship.  Imprinted on the side is:
 
-Merc Industries
+Merc Industries
 
-~
+~
 L
 25
 #3025
@@ -5219,10 +5218,10 @@ leggings~
 You see leggings of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3027
@@ -5237,10 +5236,10 @@ helmet~
 You see a helmet of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3028
@@ -5255,10 +5254,10 @@ cloak~
 You see a cloak of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3029
@@ -5273,10 +5272,10 @@ shield~
 You see a shield of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3034
@@ -5291,10 +5290,10 @@ vest~
 You see a vest of great craftsmanship.  Stamped on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3035
@@ -5313,10 +5312,10 @@ mace~
 You see a mace of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3036
@@ -5335,10 +5334,10 @@ dagger~
 You see a dagger of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 25
 #3037
@@ -5357,10 +5356,10 @@ sword~
 You see a sword of great craftsmanship.  Imprinted on the side is:
 
 
-Merc Industries
+Merc Industries
 
 
-~
+~
 L
 20
 #3140
@@ -5375,21 +5374,21 @@ notice liquidation bank~
 The letter is written in a reserved and dignified Spencer hand.
 
 
-    To whom it may concern,
+    To whom it may concern,
 
 
-	Merc Industries has charmed your money.  Apparently one's
+	Merc Industries has charmed your money.  Apparently one's
 
-	gold will remain close, even beyond death. We are closing
+	gold will remain close, even beyond death. We are closing
 
-	down our offices and ATM machines.  Our services here are
+	down our offices and ATM machines.  Our services here are
 
-	no longer required.
+	no longer required.
 
 
-    Midgaard City Bank
+    Midgaard City Bank
 
-~
+~
 L
 1
 #3138
@@ -5413,7 +5412,7 @@ key steel~
 A key of this size must fit a very strong lock.
 
 
-~
+~
 L
 1
 #3136
@@ -5437,7 +5436,7 @@ fountain~
 It is very nice.  Made from fine white marble.
 
 
-~
+~
 L
 1
 #3134
@@ -5452,13 +5451,13 @@ bench~
 It is a quite heavy but very comfortable bench.  It is placed with its front
 
 
-towards the river so you can sit and watch the river and the houses on the
+towards the river so you can sit and watch the river and the houses on the
 
 
-other side.
+other side.
 
 
-~
+~
 L
 1
 #3133
@@ -5491,7 +5490,7 @@ safe~
 The safe is very heavy.
 
 
-~
+~
 L
 1
 #3130
@@ -5506,7 +5505,7 @@ drawer~
 You notice a keyhole in the drawer.
 
 
-~
+~
 L
 1
 #3129
@@ -5530,7 +5529,7 @@ sword long~
 This is the ceremonial sword of the Mayor of Midgaard.
 
 
-~
+~
 L
 1
 #3123
@@ -5545,7 +5544,7 @@ key brass~
 The brass key is small and looks like it fits a very complicated lock.
 
 
-~
+~
 L
 1
 #3122
@@ -5560,7 +5559,7 @@ key wooden~
 The wooden key is not special.
 
 
-~
+~
 L
 1
 #3121
@@ -5575,7 +5574,7 @@ key iron~
 The iron key is not special.
 
 
-~
+~
 L
 1
 #3106
@@ -5608,7 +5607,7 @@ cup~
 It is a large simple cup.
 
 
-~
+~
 L
 1
 #3101
@@ -5623,7 +5622,7 @@ cup~
 It is a small simple cup.
 
 
-~
+~
 L
 1
 #3100
@@ -5638,7 +5637,7 @@ cup~
 It is a small simple cup.
 
 
-~
+~
 L
 1
 #3097
@@ -5797,7 +5796,7 @@ scroll~
 The scroll has written a formulae of 'Word of Recall' upon it.
 
 
-~
+~
 L
 1
 #3041
@@ -5812,7 +5811,7 @@ potion yellow~
 The potion has a small label 'Detect The Invisible'.
 
 
-~
+~
 L
 1
 #3040
@@ -5827,25 +5826,25 @@ scroll identify~
 The scroll has a magic formula drawn upon it:
 
 
-     ???
+     ???
 
 
-    ?   ?
+    ?   ?
 
 
-       ?
+       ?
 
 
-      ?
+      ?
 
 
-      ?
+      ?
 
 
-      *
+      *
 
 
-~
+~
 L
 2
 #3033
@@ -5878,19 +5877,19 @@ letters~
 They say, "Use 'hold lantern' to activate."
 
 
-~
+~
 E
 lantern~
 It is a large and robust but somewhat battered oil lantern made from brass,
 
 
-equipped with a handle to make it handy and a hood to protect its flame.
+equipped with a handle to make it handy and a hood to protect its flame.
 
 
-Some letters have been scratched on its bottom.
+Some letters have been scratched on its bottom.
 
 
-~
+~
 L
 20
 #3030
@@ -5953,7 +5952,7 @@ the Board of Thought~
 The board for thought sharing is here, floating downwind slowly.
 
 
-~
+~
 27 0 0 1
 0 0 0 3191 0 0 0 0 0 0
 4
@@ -5965,7 +5964,7 @@ the @@yamulet@@g of @@By@@Wo@@Ru@@Wt@@Bh@@g~
 An amulet depicting life lies here.
 
 
-~
+~
 9 320 8388736 1
 0 0 0 0 0 0 0 0 0 0
 13
@@ -5993,7 +5992,7 @@ plaque~
 @@gThis statue represents one of the great gods of Egypt, @@cOsiris@@g, the loving husband of @@yIsis@@g.  It is placed here in the @@Wcenter @@gof town for all to see, and as a @@Rreminder @@gto all that not all Gods are @@dImmortal@@G.
 
 
-~
+~
 L
 1
 #3049
@@ -6002,7 +6001,7 @@ the Immortal contact board~
 A board sits here, with post it notes attached, a single one saying if in need of an immortal please leave message here.
 
 
-~
+~
 27 0 0 1
 10 0 0 3049 0 0 0 0 0 0
 4
@@ -7745,10 +7744,6 @@ G 0 3111 100
 G 0 3112 100 
 
 G 0 3113 100 
-
-G 0 3114 100 
-
-G 0 3115 100 
 
 G 0 3116 100 
 
