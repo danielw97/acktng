@@ -1,0 +1,3881 @@
+#AREA
+@@lThe Southern Oasis@@N~
+Q 16
+K the southern oasis~
+L @@y{50 70}@@N~
+N 109
+I 50 70
+V 9800 9999
+X 0
+F 12
+U @@lLight blue@@N banners and @@yyellow@@N sunfire sweep over @@bbrown@@N stone in the Southern Oasis.@@N~
+O virant~
+R builder~
+W builder~
+#ROOMS
+#9800
+@@ySunforged Causeway of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts and the air smells faintly of wet clay.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections and scouts can pivot quickly between side passages.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9801
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9810
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9801
+@@ySunforged Terrace of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane while tiny eddies of sand curl around your boots.@@N
+Interlocked tiles form an old caravan map beneath drifting sand while secondary paths reconnect after every bend.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9802
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9811
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9800
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9802
+@@ySunforged Arcade of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth as far drums pulse from another district.@@N
+Reinforced berms divide this stretch into narrow tactical lanes forcing caravans to move in disciplined lines.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9803
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9801
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9803
+@@ySunforged Promenade of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones and even the heat carries a trace of mint.@@N
+Cistern ladders descend through iron rings worn smooth by use and their colors match the oasis triad exactly.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9804
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9802
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9804
+@@ySunforged Crossing of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo where each footprint lingers before being erased.@@N
+Merchants' awnings hang low, creating tight chokepoints as if every patrol captain signed in turn.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9805
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9814
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9803
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9805
+@@ySunforged Gallery of Survey@@N~
+A low spill of water runs through chiseled channels at your feet while gulls circle far above the palms.@@N
+A chain of spill basins captures every drop from northern channels and scouts can pivot quickly between side passages.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9806
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9815
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9804
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9806
+@@ySunforged Passage of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind and the walls hum with trapped day-warmth.@@N
+Thin prayer ribbons knot from post to post above the path while secondary paths reconnect after every bend.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9807
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9805
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9807
+@@ySunforged Landing of Datefire@@N~
+A long bank of carved jars cools in a strip of shade as bright reflections skitter across broken glaze.@@N
+Painted milestones note distances to wells and guard courts forcing caravans to move in disciplined lines.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9808
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9817
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9806
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9808
+@@ySunforged Court of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept while distant voices vanish behind shutters.@@N
+Stone benches flank the route, each carved with oath marks and their colors match the oasis triad exactly.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9809
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9807
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9809
+@@ySunforged Span of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter and a cool draft escapes from hidden vents.@@N
+A dry fountain bowl reflects the sky like a bright shield as if every patrol captain signed in turn.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9819
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9808
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9810
+@@yReedbound Causeway of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane as far drums pulse from another district.@@N
+Cistern ladders descend through iron rings worn smooth by use and scouts can pivot quickly between side passages.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9811
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9820
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9811
+@@yReedbound Terrace of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth and even the heat carries a trace of mint.@@N
+Merchants' awnings hang low, creating tight chokepoints while secondary paths reconnect after every bend.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9812
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9821
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9810
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9812
+@@yReedbound Arcade of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones where each footprint lingers before being erased.@@N
+A chain of spill basins captures every drop from northern channels forcing caravans to move in disciplined lines.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9802
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9813
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9811
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9813
+@@yReedbound Promenade of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo while gulls circle far above the palms.@@N
+Thin prayer ribbons knot from post to post above the path and their colors match the oasis triad exactly.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9814
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9812
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9814
+@@yReedbound Crossing of Survey@@N~
+A low spill of water runs through chiseled channels at your feet and the walls hum with trapped day-warmth.@@N
+Painted milestones note distances to wells and guard courts as if every patrol captain signed in turn.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9815
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9824
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9813
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9815
+@@yReedbound Gallery of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind as bright reflections skitter across broken glaze.@@N
+Stone benches flank the route, each carved with oath marks and scouts can pivot quickly between side passages.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9805
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9816
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9825
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9814
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9816
+@@yReedbound Passage of Datefire@@N~
+A long bank of carved jars cools in a strip of shade while distant voices vanish behind shutters.@@N
+A dry fountain bowl reflects the sky like a bright shield while secondary paths reconnect after every bend.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9806
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9817
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9815
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9817
+@@yReedbound Landing of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept and a cool draft escapes from hidden vents.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections forcing caravans to move in disciplined lines.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9818
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9827
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9816
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9818
+@@yReedbound Court of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter and the air smells faintly of wet clay.@@N
+Interlocked tiles form an old caravan map beneath drifting sand and their colors match the oasis triad exactly.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9808
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9819
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9817
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9819
+@@yReedbound Span of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts while tiny eddies of sand curl around your boots.@@N
+Reinforced berms divide this stretch into narrow tactical lanes as if every patrol captain signed in turn.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9818
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9820
+@@yAmberlit Causeway of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth where each footprint lingers before being erased.@@N
+Thin prayer ribbons knot from post to post above the path and scouts can pivot quickly between side passages.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9810
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9821
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9830
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9821
+@@yAmberlit Terrace of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones while gulls circle far above the palms.@@N
+Painted milestones note distances to wells and guard courts while secondary paths reconnect after every bend.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9822
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9831
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9820
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9822
+@@yAmberlit Arcade of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo and the walls hum with trapped day-warmth.@@N
+Stone benches flank the route, each carved with oath marks forcing caravans to move in disciplined lines.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9812
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9823
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9821
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9823
+@@yAmberlit Promenade of Survey@@N~
+A low spill of water runs through chiseled channels at your feet as bright reflections skitter across broken glaze.@@N
+A dry fountain bowl reflects the sky like a bright shield and their colors match the oasis triad exactly.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9824
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9822
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9824
+@@yAmberlit Crossing of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind while distant voices vanish behind shutters.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections as if every patrol captain signed in turn.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9814
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9825
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9834
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9823
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9825
+@@yAmberlit Gallery of Datefire@@N~
+A long bank of carved jars cools in a strip of shade and a cool draft escapes from hidden vents.@@N
+Interlocked tiles form an old caravan map beneath drifting sand and scouts can pivot quickly between side passages.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9815
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9826
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9835
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9824
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9826
+@@yAmberlit Passage of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept and the air smells faintly of wet clay.@@N
+Reinforced berms divide this stretch into narrow tactical lanes while secondary paths reconnect after every bend.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9827
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9825
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9827
+@@yAmberlit Landing of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter while tiny eddies of sand curl around your boots.@@N
+Cistern ladders descend through iron rings worn smooth by use forcing caravans to move in disciplined lines.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9828
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9837
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9826
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9828
+@@yAmberlit Court of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts as far drums pulse from another district.@@N
+Merchants' awnings hang low, creating tight chokepoints and their colors match the oasis triad exactly.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9818
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9829
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9827
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9829
+@@yAmberlit Span of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane and even the heat carries a trace of mint.@@N
+A chain of spill basins captures every drop from northern channels as if every patrol captain signed in turn.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9839
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9828
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9830
+@@ySkywashed Causeway of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones and the walls hum with trapped day-warmth.@@N
+A dry fountain bowl reflects the sky like a bright shield and scouts can pivot quickly between side passages.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9831
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9840
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9831
+@@ySkywashed Terrace of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo as bright reflections skitter across broken glaze.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections while secondary paths reconnect after every bend.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9832
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9841
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9830
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9832
+@@ySkywashed Arcade of Survey@@N~
+A low spill of water runs through chiseled channels at your feet while distant voices vanish behind shutters.@@N
+Interlocked tiles form an old caravan map beneath drifting sand forcing caravans to move in disciplined lines.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9822
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9833
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9831
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9833
+@@ySkywashed Promenade of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind and a cool draft escapes from hidden vents.@@N
+Reinforced berms divide this stretch into narrow tactical lanes and their colors match the oasis triad exactly.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9834
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9832
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9834
+@@ySkywashed Crossing of Datefire@@N~
+A long bank of carved jars cools in a strip of shade and the air smells faintly of wet clay.@@N
+Cistern ladders descend through iron rings worn smooth by use as if every patrol captain signed in turn.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9835
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9844
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9833
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9835
+@@ySkywashed Gallery of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept while tiny eddies of sand curl around your boots.@@N
+Merchants' awnings hang low, creating tight chokepoints and scouts can pivot quickly between side passages.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9825
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9836
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9845
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9834
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9836
+@@ySkywashed Passage of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter as far drums pulse from another district.@@N
+A chain of spill basins captures every drop from northern channels while secondary paths reconnect after every bend.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9826
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9837
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9835
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9837
+@@ySkywashed Landing of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts and even the heat carries a trace of mint.@@N
+Thin prayer ribbons knot from post to post above the path forcing caravans to move in disciplined lines.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9838
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9847
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9836
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9838
+@@ySkywashed Court of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane where each footprint lingers before being erased.@@N
+Painted milestones note distances to wells and guard courts and their colors match the oasis triad exactly.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9828
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9839
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9837
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9839
+@@ySkywashed Span of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth while gulls circle far above the palms.@@N
+Stone benches flank the route, each carved with oath marks as if every patrol captain signed in turn.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9838
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9840
+@@yDuneshaped Causeway of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo while distant voices vanish behind shutters.@@N
+Reinforced berms divide this stretch into narrow tactical lanes and scouts can pivot quickly between side passages.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9830
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9841
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9850
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9841
+@@yDuneshaped Terrace of Survey@@N~
+A low spill of water runs through chiseled channels at your feet and a cool draft escapes from hidden vents.@@N
+Cistern ladders descend through iron rings worn smooth by use while secondary paths reconnect after every bend.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9842
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9851
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9840
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9842
+@@yDuneshaped Arcade of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind and the air smells faintly of wet clay.@@N
+Merchants' awnings hang low, creating tight chokepoints forcing caravans to move in disciplined lines.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9832
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9843
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9841
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9843
+@@yDuneshaped Promenade of Datefire@@N~
+A long bank of carved jars cools in a strip of shade while tiny eddies of sand curl around your boots.@@N
+A chain of spill basins captures every drop from northern channels and their colors match the oasis triad exactly.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9844
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9842
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9844
+@@yDuneshaped Crossing of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept as far drums pulse from another district.@@N
+Thin prayer ribbons knot from post to post above the path as if every patrol captain signed in turn.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9834
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9845
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9854
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9843
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9845
+@@yDuneshaped Gallery of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter and even the heat carries a trace of mint.@@N
+Painted milestones note distances to wells and guard courts and scouts can pivot quickly between side passages.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9835
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9846
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9855
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9844
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9846
+@@yDuneshaped Passage of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts where each footprint lingers before being erased.@@N
+Stone benches flank the route, each carved with oath marks while secondary paths reconnect after every bend.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9847
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9845
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9847
+@@yDuneshaped Landing of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane while gulls circle far above the palms.@@N
+A dry fountain bowl reflects the sky like a bright shield forcing caravans to move in disciplined lines.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9848
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9857
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9846
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9848
+@@yDuneshaped Court of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth and the walls hum with trapped day-warmth.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections and their colors match the oasis triad exactly.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9838
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9849
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9847
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9849
+@@yDuneshaped Span of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones as bright reflections skitter across broken glaze.@@N
+Interlocked tiles form an old caravan map beneath drifting sand as if every patrol captain signed in turn.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9859
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9848
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9850
+@@yPalmshadow Causeway of Survey@@N~
+A low spill of water runs through chiseled channels at your feet and the air smells faintly of wet clay.@@N
+A chain of spill basins captures every drop from northern channels and scouts can pivot quickly between side passages.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9851
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9860
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9851
+@@yPalmshadow Terrace of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind while tiny eddies of sand curl around your boots.@@N
+Thin prayer ribbons knot from post to post above the path while secondary paths reconnect after every bend.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9852
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9861
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9850
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9852
+@@yPalmshadow Arcade of Datefire@@N~
+A long bank of carved jars cools in a strip of shade as far drums pulse from another district.@@N
+Painted milestones note distances to wells and guard courts forcing caravans to move in disciplined lines.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9842
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9853
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9851
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9853
+@@yPalmshadow Promenade of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept and even the heat carries a trace of mint.@@N
+Stone benches flank the route, each carved with oath marks and their colors match the oasis triad exactly.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9854
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9852
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9854
+@@yPalmshadow Crossing of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter where each footprint lingers before being erased.@@N
+A dry fountain bowl reflects the sky like a bright shield as if every patrol captain signed in turn.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9855
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9864
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9853
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9855
+@@yPalmshadow Gallery of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts while gulls circle far above the palms.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections and scouts can pivot quickly between side passages.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9845
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9856
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9865
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9854
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9856
+@@yPalmshadow Passage of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane and the walls hum with trapped day-warmth.@@N
+Interlocked tiles form an old caravan map beneath drifting sand while secondary paths reconnect after every bend.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9846
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9857
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9855
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9857
+@@yPalmshadow Landing of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth as bright reflections skitter across broken glaze.@@N
+Reinforced berms divide this stretch into narrow tactical lanes forcing caravans to move in disciplined lines.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9858
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9867
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9856
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9858
+@@yPalmshadow Court of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones while distant voices vanish behind shutters.@@N
+Cistern ladders descend through iron rings worn smooth by use and their colors match the oasis triad exactly.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9848
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9859
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9857
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9859
+@@yPalmshadow Span of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo and a cool draft escapes from hidden vents.@@N
+Merchants' awnings hang low, creating tight chokepoints as if every patrol captain signed in turn.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+4 10
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9858
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9860
+@@yCisternborn Causeway of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind as far drums pulse from another district.@@N
+Stone benches flank the route, each carved with oath marks and scouts can pivot quickly between side passages.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9850
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9861
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9870
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9861
+@@yCisternborn Terrace of Datefire@@N~
+A long bank of carved jars cools in a strip of shade and even the heat carries a trace of mint.@@N
+A dry fountain bowl reflects the sky like a bright shield while secondary paths reconnect after every bend.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9862
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9871
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9860
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9862
+@@yCisternborn Arcade of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept where each footprint lingers before being erased.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections forcing caravans to move in disciplined lines.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9852
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9863
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9861
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9863
+@@yCisternborn Promenade of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter while gulls circle far above the palms.@@N
+Interlocked tiles form an old caravan map beneath drifting sand and their colors match the oasis triad exactly.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9864
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9862
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9864
+@@yCisternborn Crossing of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts and the walls hum with trapped day-warmth.@@N
+Reinforced berms divide this stretch into narrow tactical lanes as if every patrol captain signed in turn.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9854
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9865
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9874
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9863
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9865
+@@yCisternborn Gallery of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane as bright reflections skitter across broken glaze.@@N
+Cistern ladders descend through iron rings worn smooth by use and scouts can pivot quickly between side passages.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9855
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9866
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9875
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9864
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9866
+@@yCisternborn Passage of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth while distant voices vanish behind shutters.@@N
+Merchants' awnings hang low, creating tight chokepoints while secondary paths reconnect after every bend.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9867
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9865
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9867
+@@yCisternborn Landing of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones and a cool draft escapes from hidden vents.@@N
+A chain of spill basins captures every drop from northern channels forcing caravans to move in disciplined lines.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9868
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9877
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9866
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9868
+@@yCisternborn Court of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo and the air smells faintly of wet clay.@@N
+Thin prayer ribbons knot from post to post above the path and their colors match the oasis triad exactly.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9858
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9869
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9867
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9869
+@@yCisternborn Span of Survey@@N~
+A low spill of water runs through chiseled channels at your feet while tiny eddies of sand curl around your boots.@@N
+Painted milestones note distances to wells and guard courts as if every patrol captain signed in turn.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+4 10
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9879
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9868
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9870
+@@yCaravaned Causeway of Datefire@@N~
+A long bank of carved jars cools in a strip of shade where each footprint lingers before being erased.@@N
+Interlocked tiles form an old caravan map beneath drifting sand and scouts can pivot quickly between side passages.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9871
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9880
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9871
+@@yCaravaned Terrace of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept while gulls circle far above the palms.@@N
+Reinforced berms divide this stretch into narrow tactical lanes while secondary paths reconnect after every bend.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9872
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9881
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9870
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9872
+@@yCaravaned Arcade of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter and the walls hum with trapped day-warmth.@@N
+Cistern ladders descend through iron rings worn smooth by use forcing caravans to move in disciplined lines.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9862
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9873
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9871
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9873
+@@yCaravaned Promenade of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts as bright reflections skitter across broken glaze.@@N
+Merchants' awnings hang low, creating tight chokepoints and their colors match the oasis triad exactly.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9874
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9872
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9874
+@@yCaravaned Crossing of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane while distant voices vanish behind shutters.@@N
+A chain of spill basins captures every drop from northern channels as if every patrol captain signed in turn.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9875
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9884
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9873
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9875
+@@yCaravaned Gallery of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth and a cool draft escapes from hidden vents.@@N
+Thin prayer ribbons knot from post to post above the path and scouts can pivot quickly between side passages.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9865
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9876
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9885
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9874
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9876
+@@yCaravaned Passage of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones and the air smells faintly of wet clay.@@N
+Painted milestones note distances to wells and guard courts while secondary paths reconnect after every bend.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9866
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9877
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9875
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9877
+@@yCaravaned Landing of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo while tiny eddies of sand curl around your boots.@@N
+Stone benches flank the route, each carved with oath marks forcing caravans to move in disciplined lines.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9878
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9887
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9876
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9878
+@@yCaravaned Court of Survey@@N~
+A low spill of water runs through chiseled channels at your feet as far drums pulse from another district.@@N
+A dry fountain bowl reflects the sky like a bright shield and their colors match the oasis triad exactly.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9868
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9879
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9877
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9879
+@@yCaravaned Span of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind and even the heat carries a trace of mint.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections as if every patrol captain signed in turn.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+4 10
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9878
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9880
+@@ySiltcarved Causeway of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept and the walls hum with trapped day-warmth.@@N
+Merchants' awnings hang low, creating tight chokepoints and scouts can pivot quickly between side passages.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9870
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9881
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9890
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9881
+@@ySiltcarved Terrace of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter as bright reflections skitter across broken glaze.@@N
+A chain of spill basins captures every drop from northern channels while secondary paths reconnect after every bend.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9882
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9891
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9880
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9882
+@@ySiltcarved Arcade of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts while distant voices vanish behind shutters.@@N
+Thin prayer ribbons knot from post to post above the path forcing caravans to move in disciplined lines.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9872
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9883
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9881
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9883
+@@ySiltcarved Promenade of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane and a cool draft escapes from hidden vents.@@N
+Painted milestones note distances to wells and guard courts and their colors match the oasis triad exactly.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9884
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9882
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9884
+@@ySiltcarved Crossing of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth and the air smells faintly of wet clay.@@N
+Stone benches flank the route, each carved with oath marks as if every patrol captain signed in turn.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9874
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9885
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9894
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9883
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9885
+@@ySiltcarved Gallery of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones while tiny eddies of sand curl around your boots.@@N
+A dry fountain bowl reflects the sky like a bright shield and scouts can pivot quickly between side passages.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9875
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9886
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9895
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9884
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9886
+@@ySiltcarved Passage of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo as far drums pulse from another district.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections while secondary paths reconnect after every bend.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9887
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9885
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9887
+@@ySiltcarved Landing of Survey@@N~
+A low spill of water runs through chiseled channels at your feet and even the heat carries a trace of mint.@@N
+Interlocked tiles form an old caravan map beneath drifting sand forcing caravans to move in disciplined lines.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9888
+D2
+A sloped ramp drops toward lower basin lanes.
+~
+~
+0 -1 9897
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9886
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9888
+@@ySiltcarved Court of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind where each footprint lingers before being erased.@@N
+Reinforced berms divide this stretch into narrow tactical lanes and their colors match the oasis triad exactly.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9878
+D1
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9889
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9887
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9889
+@@ySiltcarved Span of Datefire@@N~
+A long bank of carved jars cools in a strip of shade while gulls circle far above the palms.@@N
+Cistern ladders descend through iron rings worn smooth by use as if every patrol captain signed in turn.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+4 10
+D2
+Stone steps descend to the next caravan tier.
+~
+~
+0 -1 9899
+D3
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9888
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9890
+@@yStonebloom Causeway of Starpool@@N~
+A fan of wind-cut steps opens toward the next basin quarter while distant voices vanish behind shutters.@@N
+Painted milestones note distances to wells and guard courts and scouts can pivot quickly between side passages.@@N
+Survey stakes and chalk arrows push southward in strict geometry, outlining where a pyramid causeway will eventually run.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9891
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9891
+@@yStonebloom Terrace of Lantern@@N~
+A curtain of @@llight blue@@N silk trembles between mudbrick posts and a cool draft escapes from hidden vents.@@N
+Stone benches flank the route, each carved with oath marks while secondary paths reconnect after every bend.@@N
+A blocked triumphal gate bears fresh chisels depicting a southern pyramid, clear foreshadowing of an expansion still to come.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9892
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9890
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9892
+@@yStonebloom Arcade of Mosaic@@N~
+A chalky wash of @@yyellow@@N dust softens every hard edge of the lane and the air smells faintly of wet clay.@@N
+A dry fountain bowl reflects the sky like a bright shield forcing caravans to move in disciplined lines.@@N
+To the south, an unnatural triangular ridge rises beyond the palms, promising a future road into a sealed pyramid quarter.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9882
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9893
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9891
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9893
+@@yStonebloom Promenade of Basin@@N~
+A brace of @@bbrown@@N pylons leans toward a shaded cistern mouth while tiny eddies of sand curl around your boots.@@N
+Banners in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N mark patrol intersections and their colors match the oasis triad exactly.@@N
+Far on the horizon, a geometric silhouette cuts the dunes where engineers whisper a pyramid gate will open one season soon.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9894
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9892
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9894
+@@yStonebloom Crossing of Canopy@@N~
+A grove of date palms throws patterned shadows over old paving stones as far drums pulse from another district.@@N
+Interlocked tiles form an old caravan map beneath drifting sand as if every patrol captain signed in turn.@@N
+Southward waystones stop at a barricaded arch, yet survey marks clearly continue toward a buried pyramid complex.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9895
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9893
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9895
+@@yStonebloom Gallery of Windbell@@N~
+A scatter of polished shells glints where traders once sorted cargo and even the heat carries a trace of mint.@@N
+Reinforced berms divide this stretch into narrow tactical lanes and scouts can pivot quickly between side passages.@@N
+A distant capstone-like glimmer flashes between heat waves, foreshadowing the unopened pyramid district beyond this oasis.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9885
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9896
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9894
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9896
+@@yStonebloom Passage of Survey@@N~
+A low spill of water runs through chiseled channels at your feet where each footprint lingers before being erased.@@N
+Cistern ladders descend through iron rings worn smooth by use while secondary paths reconnect after every bend.@@N
+Guard chatter mentions convoy plans for a southern pyramid dig, though the final passage remains barred today.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9886
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9897
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9895
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9897
+@@yStonebloom Landing of Saltline@@N~
+A fringe of woven reed screens clicks in the dry afternoon wind while gulls circle far above the palms.@@N
+Merchants' awnings hang low, creating tight chokepoints forcing caravans to move in disciplined lines.@@N
+Old maps etched on plaster show this corridor as the approach line to a pyramid that has not yet been connected.@@N
+~
+0 10
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9898
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9896
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9898
+@@yStonebloom Court of Datefire@@N~
+A long bank of carved jars cools in a strip of shade and the walls hum with trapped day-warmth.@@N
+A chain of spill basins captures every drop from northern channels and their colors match the oasis triad exactly.@@N
+Wind-driven sand reveals straight foundation cuts running south, hinting at the coming link to pyramid ruins.@@N
+~
+0 10
+D0
+A sloped ramp climbs toward higher water courts.
+~
+~
+0 -1 9888
+D1
+The lane curves back toward prior market terraces.
+~
+~
+0 -1 9899
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9897
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#9899
+@@yStonebloom Span of Clayrune@@N~
+A line of stone braziers sits dark but meticulously swept as bright reflections skitter across broken glaze.@@N
+Thin prayer ribbons knot from post to post above the path as if every patrol captain signed in turn.@@N
+Even from here, the skyline forms precise angles no dune could make, and everyone pretends not to notice the waiting pyramid.@@N
+~
+4 10
+D2
+A sealed sandstone arch bears symbols of an unopened pyramid approach.
+~
+~
+0 -1 -1
+D3
+The marked lane continues beneath fluttering oasis cloth.
+~
+~
+0 -1 9898
+E
+pyramid markers~
+Survey stakes and chalk lines indicate this route is planned to connect south into a future pyramid district.~
+E
+route line~
+Carved arrows suggest a forward caravan line with frequent side links for patrol circulation.~
+S
+#0
+#MOBILES
+#9900
+southern oasis sand skirmisher 0~
+@@ySaffron Skirmisher@@N~
+@@ySaffron Skirmisher@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9901
+southern oasis reed lurker 1~
+@@lAzure Lurker@@N~
+@@lAzure Lurker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+56 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9902
+southern oasis basin scout 2~
+@@bBrownstone Scout@@N~
+@@bBrownstone Scout@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+57 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9903
+southern oasis caravan reaver 3~
+@@yCaravan Reaver@@N~
+@@yCaravan Reaver@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9904
+southern oasis well sentry 4~
+@@lWell Sentry@@N~
+@@lWell Sentry@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+59 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9905
+southern oasis silt marauder 5~
+@@bSilt Marauder@@N~
+@@bSilt Marauder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9906
+southern oasis tile duelist 6~
+@@yTile Duelist@@N~
+@@yTile Duelist@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+61 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9907
+southern oasis awning stalker 7~
+@@lAwning Stalker@@N~
+@@lAwning Stalker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+62 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9908
+southern oasis cistern hunter 8~
+@@bCistern Hunter@@N~
+@@bCistern Hunter@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+63 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9909
+southern oasis dust binder 9~
+@@yDust Binder@@N~
+@@yDust Binder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+64 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9910
+southern oasis sand skirmisher 10~
+@@ySaffron Skirmisher@@N~
+@@ySaffron Skirmisher@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9911
+southern oasis reed lurker 11~
+@@lAzure Lurker@@N~
+@@lAzure Lurker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+66 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9912
+southern oasis basin scout 12~
+@@bBrownstone Scout@@N~
+@@bBrownstone Scout@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+67 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9913
+southern oasis caravan reaver 13~
+@@yCaravan Reaver@@N~
+@@yCaravan Reaver@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+68 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9914
+southern oasis well sentry 14~
+@@lWell Sentry@@N~
+@@lWell Sentry@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+69 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9915
+southern oasis silt marauder 15~
+@@bSilt Marauder@@N~
+@@bSilt Marauder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9916
+southern oasis tile duelist 16~
+@@yTile Duelist@@N~
+@@yTile Duelist@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9917
+southern oasis awning stalker 17~
+@@lAwning Stalker@@N~
+@@lAwning Stalker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+56 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9918
+southern oasis cistern hunter 18~
+@@bCistern Hunter@@N~
+@@bCistern Hunter@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+57 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9919
+southern oasis dust binder 19~
+@@yDust Binder@@N~
+@@yDust Binder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9920
+southern oasis sand skirmisher 20~
+@@ySaffron Skirmisher@@N~
+@@ySaffron Skirmisher@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+59 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9921
+southern oasis reed lurker 21~
+@@lAzure Lurker@@N~
+@@lAzure Lurker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9922
+southern oasis basin scout 22~
+@@bBrownstone Scout@@N~
+@@bBrownstone Scout@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+61 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9923
+southern oasis caravan reaver 23~
+@@yCaravan Reaver@@N~
+@@yCaravan Reaver@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+62 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9924
+southern oasis well sentry 24~
+@@lWell Sentry@@N~
+@@lWell Sentry@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+63 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9925
+southern oasis silt marauder 25~
+@@bSilt Marauder@@N~
+@@bSilt Marauder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+64 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9926
+southern oasis tile duelist 26~
+@@yTile Duelist@@N~
+@@yTile Duelist@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9927
+southern oasis awning stalker 27~
+@@lAwning Stalker@@N~
+@@lAwning Stalker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+66 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9928
+southern oasis cistern hunter 28~
+@@bCistern Hunter@@N~
+@@bCistern Hunter@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+67 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9929
+southern oasis dust binder 29~
+@@yDust Binder@@N~
+@@yDust Binder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+68 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9930
+southern oasis sand skirmisher 30~
+@@ySaffron Skirmisher@@N~
+@@ySaffron Skirmisher@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+69 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9931
+southern oasis reed lurker 31~
+@@lAzure Lurker@@N~
+@@lAzure Lurker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9932
+southern oasis basin scout 32~
+@@bBrownstone Scout@@N~
+@@bBrownstone Scout@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+55 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9933
+southern oasis caravan reaver 33~
+@@yCaravan Reaver@@N~
+@@yCaravan Reaver@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+56 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9934
+southern oasis well sentry 34~
+@@lWell Sentry@@N~
+@@lWell Sentry@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+57 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9935
+southern oasis silt marauder 35~
+@@bSilt Marauder@@N~
+@@bSilt Marauder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+58 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9936
+southern oasis tile duelist 36~
+@@yTile Duelist@@N~
+@@yTile Duelist@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+59 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9937
+southern oasis awning stalker 37~
+@@lAwning Stalker@@N~
+@@lAwning Stalker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+60 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9938
+southern oasis cistern hunter 38~
+@@bCistern Hunter@@N~
+@@bCistern Hunter@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+61 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9939
+southern oasis dust binder 39~
+@@yDust Binder@@N~
+@@yDust Binder@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+62 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9940
+southern oasis sand skirmisher 40~
+@@ySaffron Skirmisher@@N~
+@@ySaffron Skirmisher@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+63 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9941
+southern oasis reed lurker 41~
+@@lAzure Lurker@@N~
+@@lAzure Lurker@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+64 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9942
+southern oasis basin scout 42~
+@@bBrownstone Scout@@N~
+@@bBrownstone Scout@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+65 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9943
+southern oasis caravan reaver 43~
+@@yCaravan Reaver@@N~
+@@yCaravan Reaver@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+66 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9944
+southern oasis well sentry 44~
+@@lWell Sentry@@N~
+@@lWell Sentry@@N prowls the southern oasis routes with focused desert discipline.
+~
+Layered cloth in @@llight blue@@N, @@yyellow@@N, and @@bbrown@@N marks this fighter as a sworn defender of the basin roads.
+~
+1 0 0 S
+67 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9945
+southern oasis boss 0~
+@@lSovereign of the Southspring@@N~
+@@lSovereign of the Southspring@@N stands unmoving inside a sanctum warded against intruders.
+~
+Power coils around this champion in @@llight blue@@N vapor, @@yyellow@@N glare, and @@bbrown@@N stone-dust.
+~
+33554435 0 0 S
+75 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9946
+southern oasis boss 1~
+@@ySunscale Vizier@@N~
+@@ySunscale Vizier@@N stands unmoving inside a sanctum warded against intruders.
+~
+Power coils around this champion in @@llight blue@@N vapor, @@yyellow@@N glare, and @@bbrown@@N stone-dust.
+~
+33554435 0 0 S
+75 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9947
+southern oasis boss 2~
+@@bKeeper of Earthen Seals@@N~
+@@bKeeper of Earthen Seals@@N stands unmoving inside a sanctum warded against intruders.
+~
+Power coils around this champion in @@llight blue@@N vapor, @@yyellow@@N glare, and @@bbrown@@N stone-dust.
+~
+33554435 0 0 S
+75 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9948
+southern oasis boss 3~
+@@lTriad Mirage Magister@@N~
+@@lTriad Mirage Magister@@N stands unmoving inside a sanctum warded against intruders.
+~
+Power coils around this champion in @@llight blue@@N vapor, @@yyellow@@N glare, and @@bbrown@@N stone-dust.
+~
+33554435 0 0 S
+75 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#9949
+southern oasis boss 4~
+@@yWarden of the Final Causeway@@N~
+@@yWarden of the Final Causeway@@N stands unmoving inside a sanctum warded against intruders.
+~
+Power coils around this champion in @@llight blue@@N vapor, @@yyellow@@N glare, and @@bbrown@@N stone-dust.
+~
+33554435 0 0 S
+75 0
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
+#OBJECTS
+#9950
+southern oasis azure halo bulwark 0~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16777218 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+55
+#9951
+southern oasis sunlit aura razor 1~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16777220 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+56
+#9952
+southern oasis brownstone horns focus 2~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16777224 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+57
+#9953
+southern oasis azure head bulwark 3~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16777232 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+58
+#9954
+southern oasis sunlit face razor 4~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16777248 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+59
+#9955
+southern oasis brownstone beak focus 5~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16777280 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+60
+#9956
+southern oasis azure ear bulwark 6~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16777344 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+61
+#9957
+southern oasis sunlit neck razor 7~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16777472 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+62
+#9958
+southern oasis brownstone wings focus 8~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16777728 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+63
+#9959
+southern oasis azure shoulders bulwark 9~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16778240 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+64
+#9960
+southern oasis sunlit arms razor 10~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16779264 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+65
+#9961
+southern oasis brownstone wrist focus 11~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16781312 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+66
+#9962
+southern oasis azure hands bulwark 12~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16785408 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+67
+#9963
+southern oasis sunlit finger razor 13~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16793600 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+68
+#9964
+southern oasis brownstone hold focus 14~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16842752 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+69
+#9965
+southern oasis azure about bulwark 15~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16908288 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+70
+#9966
+southern oasis sunlit waist razor 16~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 17039360 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+55
+#9967
+southern oasis brownstone body focus 17~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 17301504 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+56
+#9968
+southern oasis azure legs bulwark 18~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 18874368 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+57
+#9969
+southern oasis sunlit feet razor 19~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 20971520 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+58
+#9970
+southern oasis brownstone hooves focus 20~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 25165824 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+59
+#9971
+southern oasis azure halo bulwark 21~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16777218 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+60
+#9972
+southern oasis sunlit aura razor 22~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16777220 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+61
+#9973
+southern oasis brownstone horns focus 23~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16777224 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+62
+#9974
+southern oasis azure head bulwark 24~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16777232 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+63
+#9975
+southern oasis sunlit face razor 25~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16777248 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+64
+#9976
+southern oasis brownstone beak focus 26~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16777280 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+65
+#9977
+southern oasis azure ear bulwark 27~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16777344 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+66
+#9978
+southern oasis sunlit neck razor 28~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16777472 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+67
+#9979
+southern oasis brownstone wings focus 29~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16777728 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+68
+#9980
+southern oasis azure shoulders bulwark 30~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16778240 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+69
+#9981
+southern oasis sunlit arms razor 31~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16779264 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#9982
+southern oasis brownstone wrist focus 32~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16781312 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+55
+#9983
+southern oasis azure hands bulwark 33~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16785408 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+56
+#9984
+southern oasis sunlit finger razor 34~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16793600 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+57
+#9985
+southern oasis brownstone hold focus 35~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16842752 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+58
+#9986
+southern oasis azure about bulwark 36~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16908288 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+59
+#9987
+southern oasis sunlit waist razor 37~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 17039360 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+60
+#9988
+southern oasis brownstone body focus 38~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 17301504 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+61
+#9989
+southern oasis azure legs bulwark 39~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 18874368 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+62
+#9990
+southern oasis sunlit feet razor 40~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 20971520 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+63
+#9991
+southern oasis brownstone hooves focus 41~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 25165824 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+64
+#9992
+southern oasis azure halo bulwark 42~
+@@lAzure Bulwark@@N~
+Azure bulwark lies half-buried beside an oasis marker stone.~
+9 268435584 16777218 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+65
+#9993
+southern oasis sunlit aura razor 43~
+@@ySunlit Razor@@N~
+Sunlit razor lies half-buried beside an oasis marker stone.~
+9 268435584 16777220 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+66
+#9994
+southern oasis brownstone horns focus 44~
+@@bBrownstone Focus@@N~
+Brownstone focus lies half-buried beside an oasis marker stone.~
+9 268435584 16777224 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+67
+#9995
+southern oasis boss pyramidbreaker feet relic~
+@@lSabatons of the Southern Seal@@N~
+Sabatons of the Southern Seal gleams with warded oasis light.~
+9 268435648 20971520 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#9996
+southern oasis boss sunvault hooves relic~
+@@yGreaves of the Southern Seal@@N~
+Greaves of the Southern Seal gleams with warded oasis light.~
+9 268435648 25165824 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+70
+#9997
+southern oasis boss triune halo relic~
+@@lCrown of the Southern Seal@@N~
+Crown of the Southern Seal gleams with warded oasis light.~
+9 268435648 16777218 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#9998
+southern oasis boss warden hands relic~
+@@yGauntlets of the Southern Seal@@N~
+Gauntlets of the Southern Seal gleams with warded oasis light.~
+9 268435648 16785408 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+70
+#9999
+southern oasis boss sealkeeper body relic~
+@@lCarapace of the Southern Seal@@N~
+Carapace of the Southern Seal gleams with warded oasis light.~
+9 268435648 17301504 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+70
+#0
+#RESETS
+M 0 9900 1 9800 southern patrol
+
+E 0 9950 1 0 patrol gear
+
+M 0 9901 1 9802 southern patrol
+
+E 0 9951 1 1 patrol gear
+
+M 0 9902 1 9804 southern patrol
+
+E 0 9952 1 2 patrol gear
+
+M 0 9903 1 9806 southern patrol
+
+E 0 9953 1 3 patrol gear
+
+M 0 9904 1 9808 southern patrol
+
+E 0 9954 1 4 patrol gear
+
+M 0 9905 1 9810 southern patrol
+
+E 0 9955 1 5 patrol gear
+
+M 0 9906 1 9812 southern patrol
+
+E 0 9956 1 6 patrol gear
+
+M 0 9907 1 9814 southern patrol
+
+E 0 9957 1 7 patrol gear
+
+M 0 9908 1 9816 southern patrol
+
+E 0 9958 1 8 patrol gear
+
+M 0 9909 1 9818 southern patrol
+
+E 0 9959 1 9 patrol gear
+
+M 0 9910 1 9820 southern patrol
+
+E 0 9960 1 10 patrol gear
+
+M 0 9911 1 9822 southern patrol
+
+E 0 9961 1 11 patrol gear
+
+M 0 9912 1 9824 southern patrol
+
+E 0 9962 1 12 patrol gear
+
+M 0 9913 1 9826 southern patrol
+
+E 0 9963 1 13 patrol gear
+
+M 0 9914 1 9828 southern patrol
+
+E 0 9964 1 14 patrol gear
+
+M 0 9915 1 9830 southern patrol
+
+E 0 9965 1 15 patrol gear
+
+M 0 9916 1 9832 southern patrol
+
+E 0 9966 1 16 patrol gear
+
+M 0 9917 1 9834 southern patrol
+
+E 0 9967 1 17 patrol gear
+
+M 0 9918 1 9836 southern patrol
+
+E 0 9968 1 18 patrol gear
+
+M 0 9919 1 9838 southern patrol
+
+E 0 9969 1 0 patrol gear
+
+M 0 9920 1 9840 southern patrol
+
+E 0 9970 1 1 patrol gear
+
+M 0 9921 1 9842 southern patrol
+
+E 0 9971 1 2 patrol gear
+
+M 0 9922 1 9844 southern patrol
+
+E 0 9972 1 3 patrol gear
+
+M 0 9923 1 9846 southern patrol
+
+E 0 9973 1 4 patrol gear
+
+M 0 9924 1 9848 southern patrol
+
+E 0 9974 1 5 patrol gear
+
+M 0 9925 1 9850 southern patrol
+
+E 0 9975 1 6 patrol gear
+
+M 0 9926 1 9852 southern patrol
+
+E 0 9976 1 7 patrol gear
+
+M 0 9927 1 9854 southern patrol
+
+E 0 9977 1 8 patrol gear
+
+M 0 9928 1 9856 southern patrol
+
+E 0 9978 1 9 patrol gear
+
+M 0 9929 1 9858 southern patrol
+
+E 0 9979 1 10 patrol gear
+
+M 0 9930 1 9860 southern patrol
+
+E 0 9980 1 11 patrol gear
+
+M 0 9931 1 9862 southern patrol
+
+E 0 9981 1 12 patrol gear
+
+M 0 9932 1 9864 southern patrol
+
+E 0 9982 1 13 patrol gear
+
+M 0 9933 1 9866 southern patrol
+
+E 0 9983 1 14 patrol gear
+
+M 0 9934 1 9868 southern patrol
+
+E 0 9984 1 15 patrol gear
+
+M 0 9935 1 9870 southern patrol
+
+E 0 9985 1 16 patrol gear
+
+M 0 9936 1 9872 southern patrol
+
+E 0 9986 1 17 patrol gear
+
+M 0 9937 1 9874 southern patrol
+
+E 0 9987 1 18 patrol gear
+
+M 0 9938 1 9876 southern patrol
+
+E 0 9988 1 0 patrol gear
+
+M 0 9939 1 9878 southern patrol
+
+E 0 9989 1 1 patrol gear
+
+M 0 9940 1 9880 southern patrol
+
+E 0 9990 1 2 patrol gear
+
+M 0 9941 1 9882 southern patrol
+
+E 0 9991 1 3 patrol gear
+
+M 0 9942 1 9884 southern patrol
+
+E 0 9992 1 4 patrol gear
+
+M 0 9943 1 9886 southern patrol
+
+E 0 9993 1 5 patrol gear
+
+M 0 9944 1 9888 southern patrol
+
+E 0 9994 1 6 patrol gear
+
+M 0 9945 1 9859 boss guardian
+
+E 0 9995 1 0 boss relic
+
+M 0 9946 1 9869 boss guardian
+
+E 0 9996 1 3 boss relic
+
+M 0 9947 1 9879 boss guardian
+
+E 0 9997 1 6 boss relic
+
+M 0 9948 1 9889 boss guardian
+
+E 0 9998 1 9 boss relic
+
+M 0 9949 1 9899 boss guardian
+
+E 0 9999 1 12 boss relic
+
+S
+#$
