@@ -342,7 +342,6 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 - `ITEM_UNIQUE` = `BIT_25`
 - `ITEM_LIFESTEALER` = `BIT_26`
 - `ITEM_LOOT` = `BIT_27`
-- `ITEM_AUTO` = `BIT_28`
 - `ITEM_BUCKLER` = `BIT_29`
 - `ITEM_EXTRA_WAND` = `BIT_30`
 - `ITEM_FIST` = `BIT_31`

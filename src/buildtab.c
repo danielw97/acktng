@@ -680,7 +680,6 @@ const struct lookup_type tab_obj_flags[] = {
     {"unique", 16777216, 100},
     {"lifestealer", BIT_26, 100},
     {"loot", BIT_27, 100},
-    {"auto", BIT_28, NO_USE},
     {"buckler", BIT_29, NO_USE},
     {"wand", BIT_30, NO_USE},
     {"fist", BIT_31, NO_USE},
