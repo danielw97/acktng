@@ -6,8 +6,7 @@
 
 bool cloak_reactive_can_trigger(int element)
 {
-    (void)element;
-    return TRUE;
+    return !IS_SET(element, NO_REFLECT);
 }
 
 int cloak_adept_hitroll_bonus(CHAR_DATA *ch)
@@ -163,8 +162,11 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int 
 
         if (reflected_damage > 0)
         {
-            ch->hit = UMAX(10, ch->hit - reflected_damage);
-            reactive_damage += reflected_damage;
+            int reactive_element = has_flaming ? ELE_FIRE : ELEMENT_WATER;
+            int applied_damage = do_damage(victim, ch, reflected_damage, -1,
+                                           reactive_element | NO_REFLECT | NO_ABSORB, FALSE);
+            if (applied_damage > 0)
+                reactive_damage += applied_damage;
         }
     }
 
