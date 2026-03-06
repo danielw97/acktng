@@ -351,31 +351,31 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 
 `wear_flags` is a bitvector field in the object header line. Builder-facing names and values are defined by `tab_wear_flags` in `src/buildtab.c`:
 
-- `halo` = `BIT_1`
-- `aura` = `BIT_2`
-- `horns` = `BIT_3`
-- `head` = `BIT_4`
-- `face` = `BIT_5`
-- `beak` = `BIT_6`
-- `ear` = `BIT_7`
-- `neck` = `BIT_8`
-- `wings` = `BIT_9`
-- `shoulders` = `BIT_10`
-- `arms` = `BIT_11`
-- `wrist` = `BIT_12`
-- `hands` = `BIT_13`
-- `finger` = `BIT_14`
-- `claws` = `BIT_15`
-- `hold` = `BIT_16`
-- `about` = `BIT_17`
-- `waist` = `BIT_18`
-- `body` = `BIT_19`
-- `tail` = `BIT_20`
-- `legs` = `BIT_21`
-- `feet` = `BIT_22`
-- `hooves` = `BIT_23`
-- `take` = `BIT_24`
-- `clan_colors` = `BIT_25`
+- `halo` = `1`
+- `aura` = `2`
+- `horns` = `4`
+- `head` = `8`
+- `face` = `16`
+- `beak` = `32`
+- `ear` = `64`
+- `neck` = `128`
+- `wings` = `256`
+- `shoulders` = `512`
+- `arms` = `1024`
+- `wrist` = `2048`
+- `hands` = `4096`
+- `finger` = `8192`
+- `claws` = `16384`
+- `hold` = `32768`
+- `about` = `65536`
+- `waist` = `131072`
+- `body` = `262144`
+- `tail` = `524288`
+- `legs` = `1048576`
+- `feet` = `2097152`
+- `hooves` = `4194304`
+- `take` = `8388608`
+- `clan_colors` = `16777216`
 
 Note: `ITEM_WEAR_NONE` (`BIT_0`) exists in `src/config.h`, but it is not exposed in `tab_wear_flags` and therefore is not a valid builder keyword in area files.
 
