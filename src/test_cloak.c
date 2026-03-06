@@ -18,6 +18,8 @@ static void test_cloak_reactive_can_trigger_for_all_elements(void)
     assert(cloak_reactive_can_trigger(ELE_WATER | ELE_AIR) == TRUE);
     assert(cloak_reactive_can_trigger(ELE_PHYSICAL | ELE_FIRE) == TRUE);
     assert(cloak_reactive_can_trigger(ELE_NONE) == TRUE);
+    assert(cloak_reactive_can_trigger(ELE_FIRE | NO_REFLECT) == FALSE);
+    assert(cloak_reactive_can_trigger(ELE_FIRE | NO_ABSORB) == FALSE);
 }
 
 static void test_damage_matches_psuedo_level(void)
@@ -60,6 +62,8 @@ static void test_oathbreaker_avoidance_conditions(void)
     assert(cloak_oathbreaker_avoids_spell_damage(100, ELE_PHYSICAL, TRUE, 48, 0) == FALSE);
     assert(cloak_oathbreaker_avoids_spell_damage(0, ELE_FIRE, TRUE, 48, 0) == FALSE);
     assert(cloak_oathbreaker_avoids_spell_damage(100, ELE_FIRE, FALSE, 48, 0) == FALSE);
+    assert(cloak_oathbreaker_avoids_spell_damage(100, ELE_FIRE | NO_REFLECT, TRUE, 48, 0) == FALSE);
+    assert(cloak_oathbreaker_avoids_spell_damage(100, ELE_FIRE | NO_ABSORB, TRUE, 48, 0) == FALSE);
 }
 
 static void test_transcendence_avoidance_conditions(void)

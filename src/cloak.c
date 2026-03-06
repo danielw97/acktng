@@ -6,7 +6,7 @@
 
 bool cloak_reactive_can_trigger(int element)
 {
-    return !IS_SET(element, NO_REFLECT);
+    return !IS_SET(element, NO_REFLECT) && !IS_SET(element, NO_ABSORB);
 }
 
 int cloak_adept_hitroll_bonus(CHAR_DATA *ch)
@@ -120,7 +120,7 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int 
 
             reflected_damage = UMAX(1, dam * 15 / 100);
         }
-        else if (has_elements && !IS_SET(element, ELE_PHYSICAL))
+        else if (has_elements && !IS_SET(element, ELE_PHYSICAL) && !IS_SET(element, NO_REFLECT) && !IS_SET(element, NO_ABSORB))
         {
             if (!shortfight_round)
             {
@@ -166,7 +166,29 @@ int cloak_apply_reactive_effects(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int 
             int applied_damage = do_damage(victim, ch, reflected_damage, -1,
                                            reactive_element | NO_REFLECT | NO_ABSORB, FALSE);
             if (applied_damage > 0)
+            {
+                char buf[MSL];
+
                 reactive_damage += applied_damage;
+
+                if (!shortfight_round)
+                {
+                    sprintf(buf, "@@N$n's cloak lashes $N for @@e%d@@N damage!!", applied_damage);
+                    act(buf, victim, NULL, ch, TO_NOTVICT);
+                }
+
+                if (!(shortfight_round && !IS_NPC(ch) && IS_SET(ch->config, CONFIG_SHORT_FIGHT)))
+                {
+                    sprintf(buf, "@@N$N's cloak hits you for @@e%d@@N damage!!", applied_damage);
+                    act(buf, ch, NULL, victim, TO_CHAR);
+                }
+
+                if (!(shortfight_round && !IS_NPC(victim) && IS_SET(victim->config, CONFIG_SHORT_FIGHT)))
+                {
+                    sprintf(buf, "@@NYour cloak hits $N for @@e%d@@N damage!!", applied_damage);
+                    act(buf, victim, NULL, ch, TO_CHAR);
+                }
+            }
         }
     }
 
@@ -307,7 +329,7 @@ int cloak_transcendence_avoidance_chance(int pseudo_level)
 
 bool cloak_oathbreaker_avoids_spell_damage(int dam, int element, bool has_cloak, int pseudo_level, int roll_percent)
 {
-    if (!has_cloak || dam <= 0 || IS_SET(element, ELE_PHYSICAL))
+    if (!has_cloak || dam <= 0 || IS_SET(element, ELE_PHYSICAL) || IS_SET(element, NO_REFLECT) || IS_SET(element, NO_ABSORB))
         return FALSE;
 
     return roll_percent < cloak_oathbreaker_avoidance_chance(pseudo_level);
