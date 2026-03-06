@@ -220,23 +220,20 @@ Optional extension blocks (detected by leading marker):
 - `invasion` = `BIT_30`
 - `noassist` = `BIT_31`
 
-### 5.5) Mobile strong/weak/resist/suscept realm flags (`|` extension)
+### 5.5) Mobile strong/weak/resist/suscept element flags (`|` extension)
 
-The `|` extension fields `strong_magic`, `weak_magic`, `resist`, and `suscept` are all bitvectors over the same magic realm table:
+The `|` extension fields `strong_magic`, `weak_magic`, `resist`, and `suscept` are all bitvectors over the element definitions in `src/magic.h` (`ELE_*` / `ELEMENT_*`):
 
-- `nada` = `BIT_0`
-- `fire` = `BIT_1`
-- `shock` = `BIT_2`
-- `light` = `BIT_3`
-- `gas` = `BIT_4`
-- `poison` = `BIT_5`
-- `cold` = `BIT_6`
-- `sound` = `BIT_7`
-- `acid` = `BIT_8`
-- `negation` = `BIT_9`
-- `impact` = `BIT_10`
-- `psionic` = `BIT_11`
-- `holy` = `BIT_12`
+- `none` = `BIT_0` (`ELE_NONE`)
+- `physical` = `BIT_1` (`ELE_PHYSICAL`)
+- `mental` = `BIT_2` (`ELE_MENTAL`)
+- `holy` = `BIT_3` (`ELE_HOLY`)
+- `air` = `BIT_4` (`ELE_AIR`)
+- `earth` = `BIT_5` (`ELE_EARTH`)
+- `water` = `BIT_6` (`ELE_WATER`)
+- `fire` = `BIT_7` (`ELE_FIRE`)
+- `shadow` = `BIT_8` (`ELE_SHADOW`)
+- `poison` = `BIT_9` (`ELE_POISON`)
 
 ### 5.6) Mobile program trigger names
 
