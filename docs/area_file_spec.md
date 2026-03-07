@@ -528,6 +528,7 @@ From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
   - A given room vnum may appear only once across all loaded area files.
   - A given mobile vnum may appear only once across all loaded area files.
   - A given object vnum may appear only once across all loaded area files.
+  - Cross-type overlap is allowed: a room, mobile, and object may share the same numeric vnum as long as each remains unique within its own index type.
 
 ## 13.1) Vnum allocation policy
 
