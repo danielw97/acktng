@@ -1,8 +1,14 @@
 #include <assert.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdlib.h>
+
+#include "globals.h"
 
 bool shortfight_should_emit_before_victim_raw_kill(int shortfight_round_active_now, int victim_is_npc, int victim_is_dead_position);
+bool should_handle_victim_death(const CHAR_DATA *victim);
+
+bool deathmatch = false;
 
 void damage_build_hit_messages(char *buf1, size_t buf1_size,
                                char *buf2, size_t buf2_size,
@@ -48,10 +54,36 @@ static void test_shortfight_should_emit_before_victim_raw_kill(void)
     assert(!shortfight_should_emit_before_victim_raw_kill(true, true, false));
 }
 
+static void test_should_handle_victim_death(void)
+{
+    CHAR_DATA victim = {0};
+    PC_DATA pcdata = {0};
+
+    victim.pcdata = &pcdata;
+
+    victim.position = POS_DEAD;
+    SET_BIT(victim.act, ACT_IS_NPC);
+    assert(should_handle_victim_death(&victim));
+
+    victim.act = 0;
+    assert(should_handle_victim_death(&victim));
+
+    victim.act = 0;
+    SET_BIT(victim.pcdata->pflags, PFLAG_VAMP);
+    assert(!should_handle_victim_death(&victim));
+    victim.pcdata->pflags = 0;
+
+    victim.position = POS_FIGHTING;
+    assert(!should_handle_victim_death(&victim));
+
+    assert(!should_handle_victim_death(NULL));
+}
+
 int main(void)
 {
     test_damage_message_builder_formats_expected_lines();
     test_damage_message_builder_handles_apostrophe_and_truncates();
     test_shortfight_should_emit_before_victim_raw_kill();
+    test_should_handle_victim_death();
     return 0;
 }
