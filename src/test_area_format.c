@@ -260,6 +260,16 @@ static void parse_mobile_loot_extension(const char *line, int line_number, const
     }
 }
 
+static void require_inline_tilde_terminated_string(FILE *fp, char *line, int *line_number, const char *area_path,
+                                                 const char *field_name)
+{
+    if (!read_line(fp, line, line_number))
+        fail_area_test(area_path, *line_number, "unexpected EOF while reading mobile %s", field_name);
+
+    if (strchr(line, '~') == NULL)
+        fail_area_test(area_path, *line_number, "mobile %s must end with '~' on the same line", field_name);
+}
+
 static void consume_tilde_string(FILE *fp, char *line, int *line_number, const char *area_path)
 {
     do
@@ -346,8 +356,8 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
         if (trimmed[0] != '#' || !isdigit((unsigned char)trimmed[1]))
             fail_area_test(area_path, *line_number, "expected mobile vnum '#<n>' or '#0'");
 
-        consume_tilde_string(fp, line, line_number, area_path);
-        consume_tilde_string(fp, line, line_number, area_path);
+        require_inline_tilde_terminated_string(fp, line, line_number, area_path, "name");
+        require_inline_tilde_terminated_string(fp, line, line_number, area_path, "short description");
         consume_tilde_string(fp, line, line_number, area_path);
         consume_tilde_string(fp, line, line_number, area_path);
 
