@@ -213,29 +213,29 @@ Optional extension blocks (detected by leading marker):
 - `postman` = `524288`
 - `rewield` = `1048576`
 - `reequip` = `2097152`
-- `intelligent` = `BIT_23`
-- `vampire` = `BIT_24`
-- `no_hunt` = `BIT_25`
-- `solo` = `BIT_26`
-- `mount` = `BIT_28`
-- `no_blood` = `BIT_29`
-- `invasion` = `BIT_30`
-- `noassist` = `BIT_31`
+- `intelligent` = `8388608`
+- `vampire` = `16777216`
+- `no_hunt` = `33554432`
+- `solo` = `67108864`
+- `mount` = `268435456`
+- `no_blood` = `536870912`
+- `invasion` = `1073741824`
+- `noassist` = `2147483648`
 
 ### 5.5) Mobile strong/weak/resist/suscept element flags (`|` extension)
 
 The `|` extension fields `strong_magic`, `weak_magic`, `resist`, and `suscept` are all bitvectors over the element definitions in `src/magic.h` (`ELE_*` / `ELEMENT_*`):
 
-- `none` = `BIT_0` (`ELE_NONE`)
-- `physical` = `BIT_1` (`ELE_PHYSICAL`)
-- `mental` = `BIT_2` (`ELE_MENTAL`)
-- `holy` = `BIT_3` (`ELE_HOLY`)
-- `air` = `BIT_4` (`ELE_AIR`)
-- `earth` = `BIT_5` (`ELE_EARTH`)
-- `water` = `BIT_6` (`ELE_WATER`)
-- `fire` = `BIT_7` (`ELE_FIRE`)
-- `shadow` = `BIT_8` (`ELE_SHADOW`)
-- `poison` = `BIT_9` (`ELE_POISON`)
+- `none` = `1` (`ELE_NONE`)
+- `physical` = `2` (`ELE_PHYSICAL`)
+- `mental` = `4` (`ELE_MENTAL`)
+- `holy` = `8` (`ELE_HOLY`)
+- `air` = `16` (`ELE_AIR`)
+- `earth` = `32` (`ELE_EARTH`)
+- `water` = `64` (`ELE_WATER`)
+- `fire` = `128` (`ELE_FIRE`)
+- `shadow` = `256` (`ELE_SHADOW`)
+- `poison` = `512` (`ELE_POISON`)
 
 ### 5.6) Mobile program trigger names
 
@@ -332,19 +332,19 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 - `ITEM_CLAN_EQ` = `32768`
 - `ITEM_TRIG_DESTROY` = `65536`
 - `ITEM_NO_AUCTION` = `131072`
-- `ITEM_MYTHIC` = `BIT_19`
-- `ITEM_LEGENDARY` = `BIT_20`
-- `ITEM_RARE` = `BIT_21`
-- `ITEM_VAMP` = `BIT_22`
-- `ITEM_NOLOOT` = `BIT_23`
-- `ITEM_NOSAC` = `BIT_24`
-- `ITEM_UNIQUE` = `BIT_25`
-- `ITEM_LIFESTEALER` = `BIT_26`
-- `ITEM_LOOT` = `BIT_27`
-- `ITEM_BUCKLER` = `BIT_29`
-- `ITEM_EXTRA_WAND` = `BIT_30`
-- `ITEM_FIST` = `BIT_31`
-- `ITEM_TWO_HANDED` = `BIT_32`
+- `ITEM_MYTHIC` = `524288`
+- `ITEM_LEGENDARY` = `1048576`
+- `ITEM_RARE` = `2097152`
+- `ITEM_VAMP` = `4194304`
+- `ITEM_NOLOOT` = `8388608`
+- `ITEM_NOSAC` = `16777216`
+- `ITEM_UNIQUE` = `33554432`
+- `ITEM_LIFESTEALER` = `67108864`
+- `ITEM_LOOT` = `134217728`
+- `ITEM_BUCKLER` = `536870912`
+- `ITEM_EXTRA_WAND` = `1073741824`
+- `ITEM_FIST` = `2147483648`
+- `ITEM_TWO_HANDED` = `4294967296`
 
 ### 7.2) Item `wear_flags` bitvector
 
@@ -376,7 +376,7 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 - `take` = `8388608`
 - `clan_colors` = `16777216`
 
-Note: `ITEM_WEAR_NONE` (`BIT_0`) exists in `src/config.h`, but it is not exposed in `tab_wear_flags` and therefore is not a valid builder keyword in area files.
+Note: `ITEM_WEAR_NONE` (`1`) exists in `src/config.h`, but it is not exposed in `tab_wear_flags` and therefore is not a valid builder keyword in area files.
 
 Area policy constraints for object wear flags:
 
