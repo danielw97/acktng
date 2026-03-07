@@ -3171,7 +3171,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     ADEPT, NORM,
-    "elemental inferno", {61, 182, 182, 182, 182, 182},
+    "elemental inferno", {1, 182, 182, 182, 182, 182},
     spell_elemental_inferno, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 686 ), 120, 12, TRUE,
     "elemental inferno", "!elemental inferno!",
@@ -3179,7 +3179,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     ADEPT, NORM,
-    "elemental shock", {62, 182, 182, 182, 182, 182},
+    "elemental shock", {5, 182, 182, 182, 182, 182},
     spell_elemental_shock, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 687 ), 120, 12, TRUE,
     "elemental shock", "!elemental shock!",
@@ -3187,7 +3187,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     ADEPT, NORM,
-    "elemental deluge", {63, 182, 182, 182, 182, 182},
+    "elemental deluge", {10, 182, 182, 182, 182, 182},
     spell_elemental_deluge, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 688 ), 120, 12, TRUE,
     "elemental deluge", "!elemental deluge!",
@@ -3195,7 +3195,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     ADEPT, NORM,
-    "elemental rupture", {64, 182, 182, 182, 182, 182},
+    "elemental rupture", {15, 182, 182, 182, 182, 182},
     spell_elemental_rupture, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 689 ), 120, 12, TRUE,
     "elemental rupture", "!elemental rupture!",
