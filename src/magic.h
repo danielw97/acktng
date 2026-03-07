@@ -42,6 +42,7 @@ void check_adrenaline args((CHAR_DATA * ch, sh_int damage));
 void do_spell_heal args((CHAR_DATA * ch, CHAR_DATA *victim, int sn));
 void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, const char *debuff_msg);
 bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn, int level);
+void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int direct_damage, OBJ_DATA *obj);
 
 /* magic.c */
 int mana_cost(CHAR_DATA *ch, int sn);

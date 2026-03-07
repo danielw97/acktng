@@ -145,7 +145,8 @@ bool spell_black_hand(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
       act("@@RA @@dwraithlike hand @@Rleaps forth from $p!@@N", ch, obj, NULL, TO_CHAR);
    }
 
-   sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW | NO_REFLECT | NO_ABSORB, sn, TRUE);
+   if (sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW | NO_REFLECT | NO_ABSORB, sn, TRUE))
+      apply_necromancer_damage_debuff(ch, victim, sn, dam, obj);
    act("The Black Hand surrounds $N and begins to choke!", ch, NULL, victim, TO_ROOM);
 
    return TRUE;
