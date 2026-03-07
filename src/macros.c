@@ -437,6 +437,9 @@ int exp_for_mobile(int level, CHAR_DATA *mob)
    if (IS_SET(mob->act, ACT_SOLO))
       value += .500 * base_value;
 
+   if (IS_SET(mob->act, ACT_BOSS))
+      value += 1.500 * base_value;
+
    if (IS_SET(mob->act, ACT_WIMPY))
       value += .500 * base_value;
 
