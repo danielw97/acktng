@@ -402,6 +402,28 @@ For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots de
 
 At runtime, two piece objects connect successfully when either `pieceA.value0 == pieceB.vnum` or `pieceA.value1 == pieceB.vnum`. On success, both pieces are consumed and a new object with vnum `pieceA.value2` is created.
 
+### 7.4) `ITEM_WEAPON` object values
+
+For objects with `item_type = 5` (`ITEM_WEAPON`), `value3` stores the weapon attack type (`Weapon Type` in builder displays).
+
+Allowed `value3` values (from `tab_weapon_types` in `src/buildtab.c`):
+
+Area policy constraint: for `ITEM_WEAPON`, `value3` should be thematically consistent with the weapon's concept and presentation (`name`, `short_descr`, and `description`) so combat messaging matches builder intent.
+
+- `0`: `hit`
+- `1`: `slice`
+- `2`: `stab`
+- `3`: `slash`
+- `4`: `whip`
+- `5`: `claw`
+- `6`: `blast`
+- `7`: `pound`
+- `8`: `crush`
+- `9`: `grep`
+- `10`: `bite`
+- `11`: `pierce`
+- `12`: `suction`
+
 ## 8) `#ROOMS` section
 
 A list of room records terminated by `#0`:
