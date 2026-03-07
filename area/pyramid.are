@@ -11,10 +11,8 @@ U @@yThe stones of the pyramid tremble as ancient mechanisms reset.@@N~
 O builder~
 R all~
 W builder~
-
 #HELPS
 0 $~
-
 #MOBILES
 #30526
 pyramid_guard guard~
@@ -29,7 +27,8 @@ spear leveled at any who dare approach without invitation.
 0 0 5 5
 ! 2 7 3 8 65535 256 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30527
 desert_skeleton skeleton~
 @@ya Desert Skeleton@@N~
@@ -43,7 +42,8 @@ purpose, the hollow eye sockets glowing with a sickly amber light.
 0 0 4 4
 ! 2 3 3 8 1025 64 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30528
 tomb_robber robber~
 @@ya Tomb Robber@@N~
@@ -57,7 +57,8 @@ nervously as though expecting the dead themselves to rise in retribution.
 0 0 4 4
 ! 2 7 3 8 1089 128 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30529
 sand_viper viper snake~
 @@ya Sand Viper@@N~
@@ -71,7 +72,8 @@ hypnotic patience, fangs gleaming with amber venom in the torchlight.
 0 0 3 3
 ! 2 0 3 8 4 0 0
 | 0 0 256 0 0 512 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30530
 ancient_mummy mummy~
 @@yan Ancient Mummy@@N~
@@ -85,7 +87,8 @@ grinding joints, hieroglyphs burnt into its exposed flesh still glowing faintly.
 0 0 5 5
 ! 2 3 3 8 2049 64 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30531
 scarab_swarm scarab~
 @@ya Scarab Swarm@@N~
@@ -99,7 +102,8 @@ chittering and clicking as they surge forward in a glittering living carpet.
 0 0 2 2
 ! 4 0 7 8 0 0 0
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30532
 curse_priest priest~
 @@ya Cursed Priest@@N~
@@ -113,7 +117,8 @@ of a dead language pouring from cracked lips as spectral fire dances at his fing
 0 0 4 5
 ! 2 3 5 8 0 32770 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30533
 guardian_golem golem~
 @@ya Guardian Golem@@N~
@@ -127,7 +132,8 @@ thunderous steps, the golden runes etched into its chest blazing with inner fire
 0 0 6 6
 ! 2 3 0 8 2048 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30534
 death_asp asp~
 @@ya Death Asp@@N~
@@ -141,7 +147,8 @@ hooded head, revealing a throat that glows with dark necrotic energy.
 0 0 4 4
 ! 4 0 3 8 4 0 0
 | 0 0 256 0 0 256 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30535
 trapped_spirit spirit~
 @@ya Trapped Spirit@@N~
@@ -155,7 +162,8 @@ within the pyramid walls, condemned to haunt these passages until judgment day.
 0 0 3 4
 ! 2 3 3 8 0 8192 4
 | 0 32 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30536
 sand_elemental elemental~
 @@ya Sand Elemental@@N~
@@ -169,7 +177,8 @@ breathing, amber eyes forming and dissolving within the swirling granular mass.
 0 0 5 6
 ! 2 3 0 8 1024 0 4
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30537
 cult_fanatic fanatic~
 @@ya Pyramid Cult Fanatic@@N~
@@ -183,7 +192,8 @@ the whites of his eyes rolled back as he surrenders himself wholly to the death 
 0 0 4 4
 ! 2 7 3 8 65 0 2
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30538
 tomb_spider spider~
 @@ya Tomb Spider@@N~
@@ -197,7 +207,8 @@ eight milky eyes fixed with patient malice upon those who disturb the tomb.
 0 0 3 4
 ! 4 0 3 8 4 0 0
 | 0 0 0 0 0 512 256
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30539
 hieroglyph_construct construct~
 @@ya Hieroglyph Construct@@N~
@@ -211,7 +222,8 @@ assembled into a composite guardian, the painted colors still vivid upon their f
 0 0 5 5
 ! 2 3 0 8 2049 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30540
 sarcophagus_wraith wraith~
 @@ya Sarcophagus Wraith@@N~
@@ -225,7 +237,8 @@ by dark magic, still wearing the shadow of its gold death mask in ghostly outlin
 0 0 4 5
 ! 2 3 3 8 0 8192 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30541
 blood_cultist cultist~
 @@ya Blood Cultist@@N~
@@ -239,7 +252,8 @@ has been painted in ritual patterns across their shaved skull and hollow cheeks.
 0 0 4 5
 ! 2 3 5 8 0 16386 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30542
 stone_sentinel sentinel~
 @@ya Stone Sentinel@@N~
@@ -253,7 +267,8 @@ an entire stone body that stands twice the height of any mortal, unyielding.
 0 0 7 7
 ! 2 3 0 8 2048 0 4
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30543
 sacred_ibis ibis~
 @@ya Sacred Ibis@@N~
@@ -267,7 +282,8 @@ absolute disdain, summoned by Thoth's priests to guard their sacred texts.
 0 0 3 3
 ! 4 0 3 8 0 512 0
 | 0 4 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30544
 chamber_guardian guardian~
 @@ya Chamber Guardian@@N~
@@ -281,7 +297,8 @@ still, the preservation magic keeping their form battle-ready for eternity.
 0 0 5 6
 ! 2 7 3 8 67585 256 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30545
 golden_asp asp golden~
 @@ya Golden Asp@@N~
@@ -295,7 +312,8 @@ construct slithers forward with the clink of metallic scales, striking like ligh
 0 0 5 4
 ! 6 0 3 8 4 0 0
 | 0 0 0 0 0 256 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30546
 canopic_jackal jackal~
 @@ya Canopic Jackal@@N~
@@ -309,7 +327,8 @@ bandages, one of Anubis's own servants dispatched to judge the unworthy dead.
 0 0 5 5
 ! 2 3 3 8 1089 128 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30547
 desert_ghoul ghoul~
 @@ya Desert Ghoul@@N~
@@ -323,7 +342,8 @@ it once plundered, its craving for flesh only sharpened by centuries of hunger.
 0 0 4 4
 ! 2 3 3 8 1024 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30548
 palace_shade shade~
 @@ya Palace Shade@@N~
@@ -337,7 +357,8 @@ in the memory of silk and gold, its face a void save for two cold burning points
 0 0 3 5
 ! 2 3 3 8 0 8192 4
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30549
 ritual_slayer slayer~
 @@ya Ritual Slayer@@N~
@@ -351,7 +372,8 @@ carries a curved khopesh that has never failed to take its appointed head.
 0 0 5 6
 ! 2 7 3 8 65601 256 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30550
 fire_scarab scarab fire~
 @@ya Fire Scarab@@N~
@@ -365,7 +387,8 @@ scorch marks wherever it scuttles, drawn to living warmth like a coal to tinder.
 0 0 3 3
 ! 4 0 7 8 0 8 0
 | 0 0 128 0 0 0 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30551
 pyramid_lich lich~
 @@ya Pyramid Lich@@N~
@@ -379,7 +402,8 @@ the phylactery gem in its chest cavity pulsing with cold lavender light and stol
 0 0 6 6
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30552
 anubis_hound hound~
 @@ya Hound of Anubis@@N~
@@ -393,7 +417,8 @@ judgment across its back and walks with the deliberate calm of divine purpose.
 0 0 5 5
 ! 2 3 3 8 1025 128 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30553
 royal_archer archer~
 @@ya Royal Tomb Archer@@N~
@@ -407,7 +432,8 @@ stands on guard with bow nocked, never blinking, never wavering, never resting.
 0 0 4 4
 ! 2 3 3 8 65 32 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30554
 curse_bearer bearer~
 @@ya Curse Bearer@@N~
@@ -421,7 +447,8 @@ weight of every curse laid upon this tomb, its joints bending at impossible angl
 0 0 4 4
 ! 2 3 3 8 0 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30555
 burial_jackal jackal burial~
 @@ya Burial Jackal@@N~
@@ -435,7 +462,8 @@ its master's burial goods with tireless supernatural devotion, black fur still p
 0 0 4 4
 ! 2 3 3 8 1024 128 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30556
 eye_of_ra eye ra~
 @@yan Eye of Ra@@N~
@@ -449,7 +477,8 @@ golden light and scorching heat in all directions from its radiant core.
 0 0 4 5
 ! 2 3 0 8 0 32800 4
 | 0 0 128 0 0 0 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30557
 black_anubite anubite~
 @@ya Black Anubite@@N~
@@ -463,7 +492,8 @@ here, twin black blades crossed over chest, awaiting judgment upon all intruders
 0 0 6 6
 ! 2 7 3 8 67585 256 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30558
 seti_captain captain~
 @@ya Captain of the Seti Guard@@N~
@@ -477,7 +507,8 @@ compulsion, decorated armor gleaming with the maintenance of obsessive undead pr
 0 0 6 6
 ! 2 7 3 8 67585 384 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30559
 tomb_warden warden~
 @@ya Tomb Warden@@N~
@@ -491,7 +522,8 @@ with casual ease, its hollow helmet revealing only burning amber eyes within.
 0 0 6 7
 ! 2 7 3 8 67585 256 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30560
 desert_lich lich desert~
 @@ya Desert Lich@@N~
@@ -505,7 +537,8 @@ from its sealed antechamber, preserved in patient malice through sheer force of 
 0 0 6 6
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30561
 high_priest_amenhotep amenhotep priest boss~
 @@yHigh Priest Amenhotep@@N~
@@ -520,7 +553,8 @@ power channeled through three hundred years of undying dedication to the death c
 5 5 10 10
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30562
 vizier_khamsin khamsin vizier boss~
 @@yVizier Khamsin the Deceiver@@N~
@@ -535,7 +569,8 @@ representing one dynasty brought low through art rather than violence.
 5 5 9 9
 ! 2 7 3 8 67585 640 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30563
 ra_avatar avatar ra boss~
 @@yAvatar of Ra@@N~
@@ -550,7 +585,8 @@ perfect circles as divine power pours from its incandescent form without ceasing
 5 5 9 10
 ! 2 3 0 8 0 49154 4
 | 0 0 128 0 0 0 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30564
 anubis_champion champion anubis boss~
 @@yChampion of Anubis@@N~
@@ -565,7 +601,8 @@ blades are so sharp they can cut the soul free from flesh in a single perfect st
 5 5 10 10
 ! 2 7 3 8 67585 256 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30565
 lady_sekhmet sekhmet lady boss~
 @@yLady Sekhmet@@N~
@@ -580,7 +617,8 @@ a crook and flail of solid divine power, her roar shaking dust from the pyramid 
 5 5 10 10
 ! 2 7 3 8 65601 640 6
 | 0 0 128 0 0 0 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30566
 pharaoh_ramesses ramesses pharaoh boss~
 @@yPharaoh Ramesses the Eternal@@N~
@@ -595,7 +633,8 @@ who dared disturb his eternal rest, a living god who will not abide the profane.
 10 10 15 15
 ! 2 7 5 8 67585 49666 7
 | 0 64 128 0 0 0 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30567
 tomb_architect architect boss~
 @@yThe Tomb Architect@@N~
@@ -610,7 +649,8 @@ and secret passage in the pyramid haunting his own masterwork for eternity.
 4 4 8 8
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30568
 serpent_god_apep apep boss~
 @@yApep the Serpent God@@N~
@@ -625,7 +665,8 @@ hissing fills the chamber with a sound like all the world ending at once.
 5 5 8 10
 ! 6 0 5 8 4 16386 0
 | 0 64 256 0 0 512 256
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30569
 high_sorceress_neferu neferu sorceress boss~
 @@yHigh Sorceress Neferu@@N~
@@ -640,7 +681,8 @@ now devoted eternally to perfecting the death magic that keeps this pyramid aliv
 4 4 8 10
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 6
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30570
 golden_colossus colossus boss~
 @@yThe Golden Colossus@@N~
@@ -655,7 +697,8 @@ and imbued with the strength of ten thousand men and the will of a god-king.
 10 10 15 15
 ! 2 3 0 8 2048 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30480
 entombed_soldier soldier entombed~
 @@ya Entombed Soldier@@N~
@@ -670,7 +713,8 @@ compressed into a form that moves with terrible deliberate purpose.
 0 0 5 5
 ! 2 7 3 8 65601 256 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30481
 ossuary_crawler crawler ossuary~
 @@yan Ossuary Crawler@@N~
@@ -685,7 +729,8 @@ being poured down a stone staircase, its many skulls all facing outward.
 0 0 4 5
 ! 2 3 3 8 1025 64 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30482
 crypt_asp asp crypt~
 @@ya Crypt Asp@@N~
@@ -700,7 +745,8 @@ a venom that stops the heart within seconds of entering the blood.
 0 0 4 4
 ! 4 0 3 8 4 0 0
 | 0 0 256 0 0 512 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30483
 blackened_revenant revenant blackened~
 @@ya Blackened Revenant@@N~
@@ -715,7 +761,8 @@ scorch marks wherever the blackened wrappings drag across the stone floor.
 0 0 4 5
 ! 2 3 3 8 0 8 4
 | 0 0 128 0 0 0 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30484
 bone_archer archer bone~
 @@ya Bone Archer@@N~
@@ -730,7 +777,8 @@ from the thighbone of an enemy slain in life and preserved for eternal service.
 0 0 4 4
 ! 2 3 3 8 65 32 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30485
 festering_ghoul ghoul festering~
 @@ya Festering Ghoul@@N~
@@ -745,7 +793,8 @@ it has begun consuming itself in the absence of anything else to devour.
 0 0 4 4
 ! 2 3 3 8 1024 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30486
 shadow_scarab scarab shadow~
 @@ya Shadow Scarab@@N~
@@ -760,7 +809,8 @@ total silence, emerging from solid shadow to strike and withdrawing without trac
 0 0 3 3
 ! 4 0 7 8 0 0 0
 | 0 256 0 0 0 0 64
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30487
 silt_elemental elemental silt~
 @@ya Silt Elemental@@N~
@@ -775,7 +825,8 @@ built from ten thousand years of deposited Nile silt beneath the stone.
 0 0 5 6
 ! 2 3 0 8 1024 0 4
 | 0 0 96 0 0 0 96
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30488
 tomb_rat rat tomb giant~
 @@ya Giant Tomb Rat@@N~
@@ -790,7 +841,8 @@ sharpened to an almost supernatural degree by the demands of subterranean life.
 0 0 3 3
 ! 4 0 3 8 4 0 0
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30489
 foundation_wraith wraith foundation~
 @@ya Foundation Wraith@@N~
@@ -805,7 +857,8 @@ barely coherent, stretched thin by three thousand years of forced haunting.
 0 0 3 5
 ! 2 3 3 8 0 8192 4
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30490
 catacomb_wight wight catacomb~
 @@ya Catacomb Wight@@N~
@@ -820,7 +873,8 @@ resentment now weaponized into an undying hatred for all living intruders.
 0 0 4 5
 ! 2 3 3 8 1024 8192 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30491
 crypt_golem golem crypt~
 @@ya Crypt Golem@@N~
@@ -835,7 +889,8 @@ carved faces of a hundred different dead staring outward from its assembled form
 0 0 7 7
 ! 2 3 0 8 2048 0 4
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30492
 bleeding_shade shade bleeding~
 @@ya Bleeding Shade@@N~
@@ -850,7 +905,8 @@ death and who has been punished with an eternity of visible, inescapable guilt.
 0 0 3 5
 ! 2 3 3 8 0 8192 4
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30493
 subterranean_cultist cultist subterranean~
 @@ya Subterranean Cultist@@N~
@@ -865,7 +921,8 @@ sun, their devotion to the death god absolute and their violence unpredictable.
 0 0 4 5
 ! 2 7 3 8 65 16386 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30494
 obsidian_scarab scarab obsidian~
 @@yan Obsidian Scarab@@N~
@@ -880,7 +937,8 @@ now genuinely stone-hard, its pincers capable of cutting through bronze armor.
 0 0 4 4
 ! 4 0 7 8 0 0 0
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30495
 corpse_tender tender corpse~
 @@ya Corpse Tender@@N~
@@ -895,7 +953,8 @@ their natron jars and linen strips ever-ready for their compulsive dark work.
 0 0 3 4
 ! 2 3 3 8 0 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30496
 deep_viper viper deep~
 @@ya Deep Viper@@N~
@@ -910,7 +969,8 @@ more potent to compensate for the reduced frequency of prey in the deep dark.
 0 0 4 4
 ! 4 0 3 8 4 0 0
 | 0 0 256 0 0 512 256
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30497
 risen_executioner executioner risen~
 @@ya Risen Executioner@@N~
@@ -925,7 +985,8 @@ beneath the silence when this enormous undead warrior stalks through the catacom
 0 0 6 6
 ! 2 7 3 8 67585 256 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30498
 plague_bat bat plague~
 @@ya Plague Bat@@N~
@@ -940,7 +1001,8 @@ into stalagmites below their roosts, their bite carrying a vicious fever.
 0 0 2 3
 ! 4 0 3 8 4 0 0
 | 0 0 0 0 0 256 512
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30499
 stone_mummy mummy stone~
 @@ya Stone Mummy@@N~
@@ -955,7 +1017,8 @@ moving with the grinding slowness of a millstone but hitting with comparable for
 0 0 6 6
 ! 2 3 3 8 2049 64 6
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30500
 tunnel_specter specter tunnel~
 @@ya Tunnel Specter@@N~
@@ -970,7 +1033,8 @@ an exit that no longer exists, attacking anything that might know the way out.
 0 0 3 4
 ! 2 3 3 8 0 8192 4
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30501
 necrotic_priest priest necrotic~
 @@ya Necrotic Priest@@N~
@@ -985,7 +1049,8 @@ by dark sacrament, his mind fractured by centuries of chosen darkness and prayer
 0 0 5 6
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 6
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30502
 calcified_horror horror calcified~
 @@ya Calcified Horror@@N~
@@ -1000,7 +1065,8 @@ thick white calcium that makes it nearly impervious to physical attack.
 0 0 6 7
 ! 2 3 3 8 2049 64 6
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30503
 void_scarab scarab void~
 @@ya Void Scarab@@N~
@@ -1015,7 +1081,8 @@ flickering as they move between the material world and whatever lies adjacent.
 0 0 4 4
 ! 4 0 7 8 0 0 0
 | 0 288 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30504
 crypt_horror horror crypt~
 @@ya Crypt Horror@@N~
@@ -1030,7 +1097,8 @@ to be the ultimate guardian, inheriting the worst qualities of everything it con
 0 0 7 7
 ! 2 3 3 8 3073 64 6
 | 0 64 32 0 0 256 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30505
 dust_lich lich dust~
 @@ya Dust Lich@@N~
@@ -1045,7 +1113,8 @@ of animated funerary dust held together by pure necromantic will and spite.
 0 0 6 6
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30506
 brood_scarab scarab brood~
 @@ya Brood Scarab@@N~
@@ -1060,7 +1129,8 @@ protective instinct, and her pincers strong enough to shear through solid bronze
 0 0 4 4
 ! 4 0 7 8 0 0 0
 | 0 256 0 0 0 0 64
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30507
 pit_viper viper pit~
 @@ya Pit Viper@@N~
@@ -1075,7 +1145,8 @@ the same mechanisms that seal the pit covers, now ancient and enormous.
 0 0 4 4
 ! 4 0 3 8 4 0 0
 | 0 0 256 0 0 512 256
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30508
 iron_revenant revenant iron~
 @@yan Iron Revenant@@N~
@@ -1090,7 +1161,8 @@ preserved flesh over centuries, making him a walking iron-wrapped nightmare.
 0 0 6 6
 ! 2 7 3 8 67585 256 6
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30509
 blood_pool_elemental elemental blood pool~
 @@ya Blood Pool Elemental@@N~
@@ -1105,7 +1177,8 @@ form that moves with a liquid grace and strikes with the weight of the tide.
 0 0 5 6
 ! 2 3 0 8 1024 0 4
 | 0 0 128 0 0 0 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30510
 forgotten_guardian guardian forgotten~
 @@ya Forgotten Guardian@@N~
@@ -1120,7 +1193,8 @@ thousand years, its mind eroded to a single imperative: prevent passage.
 0 0 7 7
 ! 2 3 0 8 2048 0 4
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30511
 grave_stalker stalker grave~
 @@ya Grave Stalker@@N~
@@ -1135,7 +1209,8 @@ visible to the living as a flickering smear of motion at the edge of light.
 0 0 5 5
 ! 2 7 3 8 65537 128 4
 | 0 288 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30512
 petrified_overseer overseer petrified~
 @@ya Petrified Overseer@@N~
@@ -1150,7 +1225,8 @@ him to partial granite, his expression of dawning horror still perfectly preserv
 0 0 5 6
 ! 2 3 3 8 2049 64 6
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30513
 abyss_shade shade abyss~
 @@yan Abyss Shade@@N~
@@ -1165,7 +1241,8 @@ cold and despair in equal measure and feeds on the fear it generates.
 0 0 4 6
 ! 2 3 3 8 0 8192 4
 | 0 320 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30514
 death_priest priest death~
 @@ya Death Priest@@N~
@@ -1180,7 +1257,8 @@ to function, each spell cast tearing further at the fragile thread of its being.
 0 0 5 6
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 6
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30515
 charnel_beast beast charnel~
 @@ya Charnel Beast@@N~
@@ -1195,7 +1273,8 @@ alone into a mobile mass of preserved tissue and ancient appetite.
 0 0 5 5
 ! 2 3 3 8 1025 0 4
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30516
 bone_colossus colossus bone~
 @@ya Bone Colossus@@N~
@@ -1210,7 +1289,8 @@ temperature, the stolen grief of five hundred deaths given terrible coherent for
 0 0 8 8
 ! 2 3 0 8 2048 0 4
 | 0 0 32 0 0 0 32
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30517
 mold_specter specter mold~
 @@ya Mold Specter@@N~
@@ -1225,7 +1305,8 @@ ideas and invocations of dead texts, incomprehensible and hostile.
 0 0 3 5
 ! 2 3 3 8 0 8192 4
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30518
 catacomb_lurker lurker catacomb~
 @@ya Catacomb Lurker@@N~
@@ -1240,7 +1321,8 @@ copper, leaving behind only scattered bones and scratches in the floor.
 0 0 5 5
 ! 4 0 3 8 4 128 4
 | 0 256 0 0 0 0 64
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30519
 mummified_priest priest mummified~
 @@ya Mummified Priest@@N~
@@ -1255,7 +1337,8 @@ the missing final verse of the entombment ritual leaving a door open that should
 0 0 4 5
 ! 2 3 5 8 0 32770 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30520
 sub_boss_vizier vizier sub undead~
 @@yThe Vizier's Shadow@@N~
@@ -1270,7 +1353,8 @@ shadow-duplicate that carries all his viciousness and none of his charm, pure ma
 5 5 9 9
 ! 2 7 3 8 67585 640 6
 | 0 64 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30521
 foundation_horror horror foundation boss~
 @@yThe Foundation Horror@@N~
@@ -1285,7 +1369,8 @@ of every burial above, patient as stone, hungry as the void, vast beyond reckoni
 10 10 15 15
 ! 2 3 3 8 3073 64 6
 | 0 64 32 0 0 256 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30522
 the_sealed_one sealed one~
 @@yThe Sealed One@@N~
@@ -1300,7 +1385,8 @@ free of containment, three thousand years of pent fury unleashed into the deep d
 8 8 12 12
 ! 2 3 5 8 0 49154 6
 | 0 64 0 0 0 0 6
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30523
 abyssal_jackal jackal abyssal boss~
 @@yThe Abyssal Jackal@@N~
@@ -1315,7 +1401,8 @@ absorbing light, its golden eyes the only illumination in the passages it walks.
 6 6 11 11
 ! 2 3 3 8 1089 128 6
 | 0 0 0 0 0 0 0
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30524
 the_nameless nameless~
 @@yThe Nameless@@N~
@@ -1330,7 +1417,8 @@ identity, which has not diminished its power but has made it incomprehensibly an
 10 10 15 15
 ! 2 3 5 8 0 49154 6
 | 0 320 0 0 0 0 4
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #30525
 catacomb_lord lord catacomb boss~
 @@yThe Catacomb Lord@@N~
@@ -1345,11 +1433,10 @@ every spirit and monster that ever entered its domain and simply became more.
 12 12 18 18
 ! 2 3 5 8 3073 49154 7
 | 0 320 160 0 0 256 128
-
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
-
 #OBJECTS
-
 #30516
 gilded_khopesh khopesh gilded sword~
 @@ya Gilded Khopesh@@N~
@@ -1358,11 +1445,12 @@ honed to cut through both flesh and the bonds of the spirit world with equal eas
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 7
-A 19 10
-A 17 8
+A
+19 10
+A
+17 8
 L
 100
-
 #30517
 tomb_sickle sickle tomb sword~
 @@ya Tomb Sickle@@N~
@@ -1371,11 +1459,12 @@ in linen strips stained with ritual ink, sacred kill-marks etched into both face
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 7
-A 19 9
-A 18 6
+A
+19 9
+A
+18 6
 L
 100
-
 #30518
 dune_scimitar scimitar dune sword~
 @@ya Dune Scimitar@@N~
@@ -1384,11 +1473,12 @@ aloft, its edge treated with sand-serpent venom for a wound that festers with th
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 7
-A 19 11
-A 17 9
+A
+19 11
+A
+17 9
 L
 100
-
 #30519
 war_flail flail war~
 @@ya Ceremonial War Flail@@N~
@@ -1397,11 +1487,12 @@ the faces of conquered enemies, each ball engraved with a different pharaoh's se
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 10
-A 18 8
+A
+19 10
+A
+18 8
 L
 100
-
 #30520
 hunters_spear spear hunter~
 @@ya Hunter's Ritual Spear@@N~
@@ -1410,11 +1501,12 @@ decorated with woven hawk feathers, blessed by temple hunters before each sacred
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 12
-A 17 7
+A
+19 12
+A
+17 7
 L
 100
-
 #30521
 priests_staff staff priest~
 @@ya Priest's Ceremonial Staff@@N~
@@ -1423,11 +1515,12 @@ the wood carved with columns of hieroglyphs that glow with soft amber light when
 5 64 8388632 0
 0 0 0 0 0 0 0 0 0 0
 3
-A 22 10
-A 20 8
+A
+22 10
+A
+20 8
 L
 100
-
 #30522
 scribes_rod rod scribe~
 @@ya Scribe's Channeling Rod@@N~
@@ -1436,11 +1529,12 @@ of Thoth, warm to the touch with barely-contained divine language of creation.~
 5 64 8388632 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 12
-A 20 6
+A
+22 12
+A
+20 6
 L
 100
-
 #30523
 lotus_amulet amulet lotus neck~
 @@ya Lotus Amulet@@N~
@@ -1449,11 +1543,12 @@ the petals inlaid with carnelian and each stamped with Isis's seal of protection
 5 64 8388736 0
 0 0 0 0 0 0 0 0 0 0
 1
-A 22 8
-A 20 10
+A
+22 8
+A
+20 10
 L
 100
-
 #30524
 ka_bracelet bracelet ka wrist~
 @@ya Ka Bracelet@@N~
@@ -1462,11 +1557,12 @@ bracelet of woven gold and lapis focuses divine power through the wearer's hands
 5 64 8389056 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 9
-A 20 7
+A
+22 9
+A
+20 7
 L
 100
-
 #30525
 eye_of_thoth eye thoth head~
 @@ya Eye of Thoth@@N~
@@ -1475,11 +1571,12 @@ above the brow and granting the ability to perceive truth in all written things.
 5 64 8388616 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 11
-A 20 9
+A
+22 11
+A
+20 9
 L
 100
-
 #30526
 sandstone_breastplate breastplate sandstone~
 @@ya Sandstone Breastplate@@N~
@@ -1488,11 +1585,12 @@ this surprisingly effective armor, carved with the image of scarabs ascending th
 5 128 8651264 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 10
-A 24 8
+A
+21 10
+A
+24 8
 L
 100
-
 #30527
 obsidian_bracers bracers obsidian wrist~
 @@ya Obsidian Bracers@@N~
@@ -1501,11 +1599,12 @@ cured crocodile hide for comfort, the outer face etched with ward-signs against 
 5 128 8389056 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 9
-A 24 7
+A
+21 9
+A
+24 7
 L
 100
-
 #30528
 golden_helm helm golden head~
 @@ya Golden Helm of the Pharaoh's Guard@@N~
@@ -1514,11 +1613,12 @@ brow, the gold thick enough to turn most blows while still shining like divinity
 5 128 8388616 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 11
-A 24 9
+A
+21 11
+A
+24 9
 L
 100
-
 #30529
 guardian_shield shield guardian~
 @@ya Guardian's Tower Shield@@N~
@@ -1527,11 +1627,12 @@ weighing of the heart before Anubis, sized to shelter a warrior from head to kne
 5 128 8421376 0
 0 0 0 0 0 0 0 0 0 0
 14
-A 21 12
-A 24 10
+A
+21 12
+A
+24 10
 L
 100
-
 #30530
 stone_pauldrons pauldrons stone shoulders~
 @@ya Stone Pauldrons@@N~
@@ -1540,11 +1641,12 @@ both protective and political, the royal name stamped into each piece in cartouc
 5 128 8389120 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 8
-A 24 12
+A
+21 8
+A
+24 12
 L
 100
-
 #30531
 assassins_gloves gloves assassin hands~
 @@ya Assassin's Ritual Gloves@@N~
@@ -1553,11 +1655,12 @@ up with the wielder's killing intent, improving grip and strike precision alike.
 5 192 8392704 0
 0 0 0 0 0 0 0 0 0 0
 7
-A 19 8
-A 17 10
+A
+19 8
+A
+17 10
 L
 100
-
 #30532
 warriors_belt belt warrior waist~
 @@ya Warrior's Ritual Belt@@N~
@@ -1566,11 +1669,12 @@ small gold tablets inscribed with battle prayers to Montu, god of war.~
 5 192 8519168 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 7
-A 17 11
+A
+19 7
+A
+17 11
 L
 100
-
 #30533
 sandals_of_haste sandals feet~
 @@ya Sandals of Haste@@N~
@@ -1579,11 +1683,12 @@ Horus the Swift, each step carrying the wearer with the speed of a hawk diving.~
 5 192 8585216 0
 0 0 0 0 0 0 0 0 0 0
 7
-A 19 9
-A 16 6
+A
+19 9
+A
+16 6
 L
 100
-
 #30534
 kilt_of_valor kilt waist legs~
 @@ya Kilt of Valor@@N~
@@ -1592,11 +1697,12 @@ with resin and painted with scenes of martial triumph from an age of conquest.~
 5 192 8519168 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 6
-A 17 8
+A
+19 6
+A
+17 8
 L
 100
-
 #30535
 necklace_of_isis necklace isis neck~
 @@ya Necklace of Isis@@N~
@@ -1605,11 +1711,12 @@ gold scarabs, each inscribed with a word of power from the Book of the Dead.~
 5 64 8388736 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 12
-A 20 8
+A
+22 12
+A
+20 8
 L
 100
-
 #30536
 ring_of_heka ring heka finger~
 @@ya Ring of Heka@@N~
@@ -1618,11 +1725,12 @@ worn by sorcerers who called upon Heka, the divine personification of magic itse
 5 64 8392192 0
 0 0 0 0 0 0 0 0 0 0
 1
-A 22 10
-A 20 12
+A
+22 10
+A
+20 12
 L
 100
-
 #30537
 magi_sandals sandals magi feet~
 @@ya Magi's Sandals@@N~
@@ -1631,11 +1739,12 @@ and into the body, grounding the wearer against magical backlash and feedback.~
 5 64 8585216 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 7
-A 20 11
+A
+22 7
+A
+20 11
 L
 100
-
 #30538
 celestial_robe robe celestial body~
 @@ya Celestial Robe@@N~
@@ -1644,11 +1753,12 @@ connected to a different school of magic, the collar heavy with protective amule
 5 64 8650752 0
 0 0 0 0 0 0 0 0 0 0
 4
-A 22 14
-A 20 10
+A
+22 14
+A
+20 10
 L
 100
-
 #30539
 star_crown crown star head~
 @@ya Star Crown@@N~
@@ -1657,11 +1767,12 @@ worn by royal astrologers who charted the heavens for favorable times to cast.~
 5 64 8388616 0
 0 0 0 0 0 0 0 0 0 0
 3
-A 22 11
-A 20 9
+A
+22 11
+A
+20 9
 L
 100
-
 #30540
 iron_kilt kilt iron legs~
 @@ya Iron-Plated Kilt@@N~
@@ -1670,11 +1781,12 @@ each segment hanging from a sturdy belt and overlapping like fish scales.~
 5 128 8585728 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 10
-A 24 12
+A
+21 10
+A
+24 12
 L
 100
-
 #30541
 stone_boots boots stone feet~
 @@ya Stone-Soled Boots@@N~
@@ -1683,11 +1795,12 @@ uppers reinforced with strips of bronze hammered in the shapes of warrior runes.
 5 128 8585216 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 9
-A 24 8
+A
+21 9
+A
+24 8
 L
 100
-
 #30542
 bulwark_ring ring bulwark finger~
 @@ya Ring of Bulwark@@N~
@@ -1696,11 +1809,12 @@ by their honor guard and said to transfer a measure of divine protection to the 
 5 128 8392192 0
 0 0 0 0 0 0 0 0 0 0
 11
-A 21 8
-A 24 10
+A
+21 8
+A
+24 10
 L
 100
-
 #30543
 guardian_cape cape guardian about~
 @@ya Guardian's Ceremonial Cape@@N~
@@ -1709,11 +1823,12 @@ elite bodyguard, the outer face stiffened with resin and stamped with ward-runes
 5 128 8454144 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 11
-A 24 9
+A
+21 11
+A
+24 9
 L
 100
-
 #30544
 ankh_ring ring ankh finger~
 @@ya Ankh Ring@@N~
@@ -1722,11 +1837,12 @@ worn by those who seek the blessing of eternal vigor from the gods of the living
 5 128 8392192 0
 0 0 0 0 0 0 0 0 0 0
 11
-A 21 9
-A 24 7
+A
+21 9
+A
+24 7
 L
 100
-
 #30545
 amenhotep_crook crook amenhotep~
 @@yAmenhotep's Sacred Crook@@N~
@@ -1736,12 +1852,14 @@ priestly power from every atom of its holy gold frame.~
 5 192 8388632 0
 0 0 0 0 0 0 0 0 0 0
 3
-A 22 20
-A 20 18
-A 15 15
+A
+22 20
+A
+20 18
+A
+15 15
 L
 100
-
 #30546
 khamsin_blade blade khamsin~
 @@yKhamsin's Poisoned Blade@@N~
@@ -1751,12 +1869,14 @@ wondering what could possibly have weakened them, the blade still weeping silver
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 18
-A 17 15
-A 15 12
+A
+19 18
+A
+17 15
+A
+15 12
 L
 100
-
 #30547
 ra_disc disc ra~
 @@yThe Disc of Ra@@N~
@@ -1766,12 +1886,14 @@ the noon sun into whatever divine magic its wielder directs, blinding and burnin
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 4
-A 22 22
-A 20 16
-A 15 14
+A
+22 22
+A
+20 16
+A
+15 14
 L
 100
-
 #30548
 anubis_blade blade anubis~
 @@yBlade of Anubis@@N~
@@ -1781,12 +1903,14 @@ they can separate the ka from the body with a precision no mortal blade can matc
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 22
-A 17 18
-A 24 10
+A
+19 22
+A
+17 18
+A
+24 10
 L
 100
-
 #30549
 sekhmet_armor armor sekhmet body~
 @@yArmor of Sekhmet@@N~
@@ -1796,12 +1920,14 @@ shields the wearer, the leonine face worked into the chest projecting divine wra
 5 192 8651264 0
 0 0 0 0 0 0 0 0 0 0
 14
-A 21 22
-A 24 18
-A 15 15
+A
+21 22
+A
+24 18
+A
+15 15
 L
 100
-
 #30550
 ramesses_crown crown ramesses head~
 @@yThe Crown of Ramesses the Eternal@@N~
@@ -1811,12 +1937,14 @@ right of kingship that makes all who behold it know they stand before a living g
 5 192 8388616 0
 0 0 0 0 0 0 0 0 0 0
 4
-A 22 20
-A 21 16
-A 15 18
+A
+22 20
+A
+21 16
+A
+15 18
 L
 100
-
 #30551
 architect_blueprint blueprint architect~
 @@yBlueprint of the Eternal Tomb@@N~
@@ -1826,12 +1954,14 @@ power to those who carry it, the paper warm with frustrated genius.~
 5 192 8388632 0
 0 0 0 0 0 0 0 0 0 0
 1
-A 22 18
-A 20 16
-A 15 14
+A
+22 18
+A
+20 16
+A
+15 14
 L
 100
-
 #30552
 apep_scale scale apep~
 @@ya Scale of Apep@@N~
@@ -1841,12 +1971,14 @@ thing, channeling obliteration through every cutting edge of its absolute darkne
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 20
-A 22 14
-A 15 16
+A
+19 20
+A
+22 14
+A
+15 16
 L
 100
-
 #30553
 neferu_headdress headdress neferu head~
 @@yNeferu's Starmap Headdress@@N~
@@ -1856,12 +1988,14 @@ with cosmological energy that bends fate around the wearer like river water arou
 5 192 8388616 0
 0 0 0 0 0 0 0 0 0 0
 3
-A 22 22
-A 20 20
-A 15 15
+A
+22 22
+A
+20 20
+A
+15 15
 L
 100
-
 #30554
 colossus_gauntlet gauntlet colossus hands~
 @@yGauntlet of the Golden Colossus@@N~
@@ -1871,12 +2005,14 @@ warm with animated divine power that has never stopped flowing since it was cast
 5 192 8392704 0
 0 0 0 0 0 0 0 0 0 0
 14
-A 19 20
-A 21 18
-A 17 12
+A
+19 20
+A
+21 18
+A
+17 12
 L
 100
-
 #30555
 scarab_ring ring scarab finger~
 @@ya Scarab Signet Ring@@N~
@@ -1885,11 +2021,12 @@ the desert, the symbol of rebirth and the rising sun worn by those who court fav
 5 192 8392192 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 8
-A 16 7
+A
+19 8
+A
+16 7
 L
 100
-
 #30556
 jackal_collar collar jackal neck~
 @@ya Jackal Collar@@N~
@@ -1898,11 +2035,12 @@ sacred jackals of Anubis, the central medallion etched with the scales of judgme
 5 192 8388736 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 21 10
-A 17 8
+A
+21 10
+A
+17 8
 L
 100
-
 #30557
 feather_earring earring feather ear~
 @@ya Ma'at Feather Earring@@N~
@@ -1911,11 +2049,12 @@ the feather of Ma'at against which all hearts are weighed at death's final gate.
 5 64 8388672 0
 0 0 0 0 0 0 0 0 0 0
 1
-A 22 8
-A 20 6
+A
+22 8
+A
+20 6
 L
 100
-
 #30558
 warriors_armband armband warrior arms~
 @@ya Warrior's Armband@@N~
@@ -1924,11 +2063,12 @@ relief carvings of the pharaoh's greatest battles, worn as both armor and honor.
 5 192 8389632 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 9
-A 17 7
+A
+19 9
+A
+17 7
 L
 100
-
 #30559
 cloak_of_shadows cloak shadows about~
 @@ya Cloak of Desert Shadows@@N~
@@ -1937,11 +2077,12 @@ the wearer blend into deep shadow with practiced stillness, favored by tomb guar
 5 192 8454144 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 8
-A 16 10
+A
+19 8
+A
+16 10
 L
 100
-
 #30560
 casters_aura aura caster~
 @@ya Caster's Aura Band@@N~
@@ -1950,11 +2091,12 @@ magical energy as the wearer moves, the metal warm and vibrating with stored pow
 5 64 8388610 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 13
-A 20 7
+A
+22 13
+A
+20 7
 L
 100
-
 #30561
 halo_of_devotion halo devotion~
 @@ya Halo of Devotion@@N~
@@ -1963,11 +2105,12 @@ skull cap of woven gold thread, worn only by the most favored servants of the go
 5 64 8388609 0
 0 0 0 0 0 0 0 0 0 0
 1
-A 22 12
-A 20 10
+A
+22 12
+A
+20 10
 L
 100
-
 #30562
 winged_mantle mantle wings shoulders~
 @@ya Winged Mantle of Horus@@N~
@@ -1976,11 +2119,12 @@ dramatic shoulder piece, each wing-tip blessed to deflect the unseen strike.~
 5 128 8389120 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 10
-A 24 12
+A
+21 10
+A
+24 12
 L
 100
-
 #30563
 gilded_leggings leggings gilded legs~
 @@ya Gilded Ceremonial Leggings@@N~
@@ -1989,11 +2133,12 @@ pharaoh's chariot drivers, practical enough for battle and splendid enough for c
 5 128 8585728 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 11
-A 24 9
+A
+21 11
+A
+24 9
 L
 100
-
 #30564
 desert_vambraces vambraces desert arms~
 @@ya Desert Vambraces@@N~
@@ -2002,11 +2147,12 @@ in extreme heat and etched with prayers to Aten, the sun disc, for endurance.~
 5 128 8389632 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 9
-A 24 11
+A
+21 9
+A
+24 11
 L
 100
-
 #30565
 ka_stone stone ka hold~
 @@ya Ka Stone@@N~
@@ -2016,11 +2162,12 @@ to keep the wielder's spirit anchored to their body through violent exertion.~
 5 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 9
-A 20 11
+A
+22 9
+A
+20 11
 L
 100
-
 #30480
 bone_shard_blade blade shard bone~
 @@ya Bone Shard Blade@@N~
@@ -2030,11 +2177,12 @@ functional in the hands of something with the strength to drive it home.~
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 7
-A 19 9
-A 18 7
+A
+19 9
+A
+18 7
 L
 100
-
 #30481
 catacomb_chain chain catacomb~
 @@ya Catacomb Chain@@N~
@@ -2044,11 +2192,12 @@ carved stone weight engraved with a curse against the living.~
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 10
-A 18 8
+A
+19 10
+A
+18 8
 L
 100
-
 #30482
 obsidian_dagger dagger obsidian~
 @@yan Obsidian Dagger@@N~
@@ -2058,11 +2207,12 @@ preserved snake skin and its pommel set with a chip of deep amber.~
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 7
-A 19 11
-A 17 8
+A
+19 11
+A
+17 8
 L
 100
-
 #30483
 reaper_scythe scythe reaper~
 @@ya Reaper's Harvest Scythe@@N~
@@ -2072,11 +2222,12 @@ guardian, its blade reforged from sacred bronze and its haft carved with skull-r
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 12
-A 17 9
+A
+19 12
+A
+17 9
 L
 100
-
 #30484
 crypt_spear spear crypt~
 @@ya Crypt Spear@@N~
@@ -2086,11 +2237,12 @@ seems to carry the lingering judgment of Anubis in its cold black gleam.~
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 10
-A 17 9
+A
+19 10
+A
+17 9
 L
 100
-
 #30485
 dark_ankh ankh dark hold~
 @@ya Dark Ankh@@N~
@@ -2100,11 +2252,12 @@ the ambient death energy of the catacombs into the wielder's spellwork.~
 5 64 8421376 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 12
-A 20 10
+A
+22 12
+A
+20 10
 L
 100
-
 #30486
 necrotic_staff staff necrotic~
 @@ya Necrotic Staff@@N~
@@ -2114,11 +2267,12 @@ necrotic energies, each pulse of power visibly traveling up the shaft to the cas
 5 64 8388632 0
 0 0 0 0 0 0 0 0 0 0
 3
-A 22 13
-A 20 9
+A
+22 13
+A
+20 9
 L
 100
-
 #30487
 void_crown crown void head~
 @@ya Void Crown@@N~
@@ -2128,11 +2282,12 @@ the gods above but from the empty spaces between the stars where no god dwells.~
 5 64 8388616 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 12
-A 20 10
+A
+22 12
+A
+20 10
 L
 100
-
 #30488
 shadow_robe robe shadow body~
 @@ya Shadow Robe@@N~
@@ -2142,11 +2297,12 @@ robe channels and amplifies shadow magic through its very substance.~
 5 64 8650752 0
 0 0 0 0 0 0 0 0 0 0
 4
-A 22 14
-A 20 10
+A
+22 14
+A
+20 10
 L
 100
-
 #30489
 death_mask mask death face~
 @@ya Death Mask@@N~
@@ -2156,11 +2312,12 @@ power to see through the eyes of spirits passing between worlds.~
 5 64 8388624 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 10
-A 20 12
+A
+22 10
+A
+20 12
 L
 100
-
 #30490
 catacomb_ring ring catacomb finger~
 @@ya Catacomb Ring@@N~
@@ -2170,11 +2327,12 @@ persists in this ring despite every effort to erase it from existence.~
 5 64 8392192 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 11
-A 20 9
+A
+22 11
+A
+20 9
 L
 100
-
 #30491
 iron_burial_plate plate iron body~
 @@ya Iron Burial Plate@@N~
@@ -2184,11 +2342,12 @@ that still pit the surface, reforged now into heavy practical protection.~
 5 128 8651264 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 12
-A 24 10
+A
+21 12
+A
+24 10
 L
 100
-
 #30492
 calcite_pauldrons pauldrons calcite shoulders~
 @@ya Calcite Pauldrons@@N~
@@ -2198,11 +2357,12 @@ stone and naturally resistant to the necrotic energies prevalent in the deep.~
 5 128 8389120 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 10
-A 24 12
+A
+21 10
+A
+24 12
 L
 100
-
 #30493
 crypt_bracers bracers crypt wrist~
 @@ya Crypt Bracers@@N~
@@ -2212,11 +2372,12 @@ engraved ward-signs against the dead lending them an inadvertent protective powe
 5 128 8389056 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 9
-A 24 8
+A
+21 9
+A
+24 8
 L
 100
-
 #30494
 bone_helm helm bone head~
 @@ya Bone Helm@@N~
@@ -2226,11 +2387,12 @@ curved bone absorbing blows with a give that hard metal cannot replicate.~
 5 128 8388616 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 10
-A 24 9
+A
+21 10
+A
+24 9
 L
 100
-
 #30495
 obsidian_shield shield obsidian~
 @@yan Obsidian Shield@@N~
@@ -2240,11 +2402,12 @@ attackers, the edge sharp enough to serve as a weapon on its own terms.~
 5 128 8421376 0
 0 0 0 0 0 0 0 0 0 0
 14
-A 21 13
-A 24 11
+A
+21 13
+A
+24 11
 L
 100
-
 #30496
 grave_wraps wraps grave wrist~
 @@ya Grave Wraps@@N~
@@ -2254,11 +2417,12 @@ and offering surprising resistance to both blade and spell alike.~
 5 128 8389056 0
 0 0 0 0 0 0 0 0 0 0
 11
-A 21 8
-A 24 10
+A
+21 8
+A
+24 10
 L
 100
-
 #30497
 catacomb_greaves greaves catacomb legs~
 @@ya Catacomb Greaves@@N~
@@ -2268,11 +2432,12 @@ scales facing outward from each greave like a constant reminder of mortality.~
 5 128 8585728 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 10
-A 24 11
+A
+21 10
+A
+24 11
 L
 100
-
 #30498
 stone_sabatons sabatons stone feet~
 @@ya Stone Sabatons@@N~
@@ -2282,11 +2447,12 @@ of the stone actually beneficial for maintaining footing on uneven subterranean 
 5 128 8585216 0
 0 0 0 0 0 0 0 0 0 0
 13
-A 21 9
-A 24 10
+A
+21 9
+A
+24 10
 L
 100
-
 #30499
 necrotic_ring ring necrotic finger~
 @@ya Ring of Necrotic Ward@@N~
@@ -2296,11 +2462,12 @@ catacomb's most dangerous passages and need protection from its own guardians.~
 5 128 8392192 0
 0 0 0 0 0 0 0 0 0 0
 11
-A 21 8
-A 24 10
+A
+21 8
+A
+24 10
 L
 100
-
 #30500
 shroud_cloak cloak shroud about~
 @@ya Shroud Cloak@@N~
@@ -2310,11 +2477,12 @@ more resistant to cutting than its textile origin would suggest.~
 5 128 8454144 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 10
-A 24 9
+A
+21 10
+A
+24 9
 L
 100
-
 #30501
 ossuary_earring earring ossuary ear~
 @@yan Ossuary Earring@@N~
@@ -2324,11 +2492,12 @@ the residual enchantment in the bone to enhance the wearer's magical focus.~
 5 64 8388672 0
 0 0 0 0 0 0 0 0 0 0
 1
-A 22 9
-A 20 7
+A
+22 9
+A
+20 7
 L
 100
-
 #30502
 depths_amulet amulet depths neck~
 @@yan Amulet of the Depths@@N~
@@ -2338,11 +2507,12 @@ in darkness and inscribed with the secret name of the god who rules below all.~
 5 64 8388736 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 13
-A 20 11
+A
+22 13
+A
+20 11
 L
 100
-
 #30503
 rite_belt belt rite waist~
 @@ya Rite of Passage Belt@@N~
@@ -2352,11 +2522,12 @@ and a practical brace for the long descent through increasingly oppressive passa
 5 192 8519168 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 8
-A 17 10
+A
+19 8
+A
+17 10
 L
 100
-
 #30504
 gauntlets_of_the_pit gauntlets pit hands~
 @@ya Gauntlets of the Pit@@N~
@@ -2366,11 +2537,12 @@ on the smooth stone walls to haul themselves free of any accidental tumble.~
 5 192 8392704 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 10
-A 17 8
+A
+19 10
+A
+17 8
 L
 100
-
 #30505
 melee_catacomb_ring ring fighter catacomb~
 @@ya Ring of the Catacomb Fighter@@N~
@@ -2380,11 +2552,12 @@ than seems plausible for a single guardian's service record.~
 5 192 8392192 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 9
-A 17 7
+A
+19 9
+A
+17 7
 L
 100
-
 #30506
 shadow_boots boots shadow feet~
 @@ya Shadow Boots@@N~
@@ -2394,11 +2567,12 @@ passages in near-perfect silence even on the loose gravel floors.~
 5 192 8585216 0
 0 0 0 0 0 0 0 0 0 0
 8
-A 19 10
-A 16 8
+A
+19 10
+A
+16 8
 L
 100
-
 #30507
 crypt_vambraces vambraces crypt arms~
 @@ya Crypt Vambraces@@N~
@@ -2408,11 +2582,12 @@ inventory numbers for goods that were consumed a thousand years ago.~
 5 128 8389632 0
 0 0 0 0 0 0 0 0 0 0
 12
-A 21 9
-A 24 10
+A
+21 9
+A
+24 10
 L
 100
-
 #30508
 petrified_wood_staff staff petrified wood~
 @@ya Staff of Petrified Wood@@N~
@@ -2422,11 +2597,12 @@ balance and grip of wood, a perfect conductor for the forces it was born from.~
 5 64 8388632 0
 0 0 0 0 0 0 0 0 0 0
 3
-A 22 11
-A 20 10
+A
+22 11
+A
+20 10
 L
 100
-
 #30509
 horns_of_the_dead horns dead~
 @@ya Horns of the Dead@@N~
@@ -2436,11 +2612,12 @@ with the power of every ceremony that required their presence over centuries.~
 5 64 8388612 0
 0 0 0 0 0 0 0 0 0 0
 2
-A 22 10
-A 20 8
+A
+22 10
+A
+20 8
 L
 100
-
 #30510
 vizier_shadow_blade blade vizier shadow~
 @@yThe Vizier's Shadow Blade@@N~
@@ -2450,12 +2627,14 @@ pass through to reach its target, each wound it makes slow to close and quick to
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 20
-A 17 16
-A 15 12
+A
+19 20
+A
+17 16
+A
+15 12
 L
 100
-
 #30511
 foundation_shard shard foundation~
 @@yA Shard of the Foundation@@N~
@@ -2465,12 +2644,14 @@ that makes nearby undead deferential and nearby living creatures deeply uncomfor
 5 192 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
-A 19 18
-A 21 14
-A 15 12
+A
+19 18
+A
+21 14
+A
+15 12
 L
 100
-
 #30512
 sealed_one_shroud shroud sealed~
 @@yThe Sealed One's Shroud@@N~
@@ -2480,12 +2661,14 @@ charged with the intention of a thousand priests who could not agree on anything
 5 192 8454144 0
 0 0 0 0 0 0 0 0 0 0
 4
-A 21 20
-A 22 14
-A 15 14
+A
+21 20
+A
+22 14
+A
+15 14
 L
 100
-
 #30513
 abyssal_collar collar abyssal neck~
 @@yThe Abyssal Jackal's Collar@@N~
@@ -2495,12 +2678,14 @@ weight of resolved deaths making this collar a conduit for divine funerary power
 5 192 8388736 0
 0 0 0 0 0 0 0 0 0 0
 3
-A 21 18
-A 17 14
-A 15 12
+A
+21 18
+A
+17 14
+A
+15 12
 L
 100
-
 #30514
 nameless_crown crown nameless head~
 @@yThe Nameless Crown@@N~
@@ -2510,12 +2695,14 @@ power that has only grown stranger and more potent for the erasure of its contex
 5 192 8388616 0
 0 0 0 0 0 0 0 0 0 0
 4
-A 22 20
-A 21 16
-A 15 14
+A
+22 20
+A
+21 16
+A
+15 14
 L
 100
-
 #30515
 catacomb_lord_mantle mantle lord about~
 @@yMantle of the Catacomb Lord@@N~
@@ -2525,16 +2712,16 @@ radiates the cold authority of something that has been sovereign of death for mi
 5 192 8454144 0
 0 0 0 0 0 0 0 0 0 0
 5
-A 21 22
-A 22 18
-A 15 18
+A
+21 22
+A
+22 18
+A
+15 18
 L
 100
-
 #0
-
 #ROOMS
-
 #30580
 @@yThe Desert Approach@@N~
 A vast expanse of sun-bleached desert stretches to the horizon in every direction,
@@ -2553,7 +2740,6 @@ A crumbled section of paving conceals a shaft descending into darkness beneath t
 shaft~
 0 0 30480
 S
-
 #30581
 @@yThe Grand Entrance Plaza@@N~
 Enormous carved pylons flank the approach to the pyramid, their faces still bearing
@@ -2572,7 +2758,6 @@ The grand entrance to the pyramid lies ahead, through massive bronze doors.
 ~
 0 0 30582
 S
-
 #30582
 @@yThe Outer Vestibule@@N~
 Two rows of granite columns support a low ceiling painted deep blue with gold
@@ -2596,7 +2781,6 @@ A side passage leads east into an antechamber.
 ~
 0 0 30590
 S
-
 #30583
 @@yThe Hall of Cartouches@@N~
 The walls from floor to ceiling are dense with carved cartouches, the royal names
@@ -2620,7 +2804,6 @@ A narrow passage leads east to side chambers.
 ~
 0 0 30591
 S
-
 #30584
 @@yThe Guardhouse@@N~
 A heavy-beamed chamber with thick stone walls served as the primary security post
@@ -2644,7 +2827,6 @@ A side passage leads west to storage areas.
 ~
 0 0 30592
 S
-
 #30585
 @@yThe First Gallery@@N~
 A long, high-ceilinged gallery stretches ahead, its walls adorned with continuous
@@ -2668,7 +2850,6 @@ A branching passage leads east.
 ~
 0 0 30593
 S
-
 #30586
 @@yThe Hall of Offerings@@N~
 Carved offering tables line both walls, many still bearing calcified remnants of
@@ -2692,7 +2873,6 @@ A passage to the west leads to side chambers.
 ~
 0 0 30594
 S
-
 #30587
 @@yThe Antechamber of the Dead@@N~
 This chamber served as a transition space between the world of the living and the
@@ -2716,7 +2896,6 @@ Side chambers lie to the east.
 ~
 0 0 30595
 S
-
 #30588
 @@yThe Lower Junction@@N~
 Several passages converge here in a broad junction chamber, the vaulted ceiling
@@ -2745,7 +2924,6 @@ Western passages lead to more outer rooms.
 ~
 0 0 30610
 S
-
 #30589
 @@yThe Rear Vestibule@@N~
 The southernmost major chamber on the base level, this room's walls are notably
@@ -2769,7 +2947,6 @@ A western passage leads toward the pyramid's outer wall.
 ~
 0 0 30611
 S
-
 #30590
 @@yThe East Antechamber@@N~
 A side chamber used for the temporary storage of offerings before they were
@@ -2788,7 +2965,6 @@ Another side chamber lies to the south.
 ~
 0 0 30598
 S
-
 #30591
 @@yThe Map Room@@N~
 An entire wall of this room is carved with a relief map of the surrounding desert
@@ -2807,7 +2983,6 @@ A passage leads south.
 ~
 0 0 30599
 S
-
 #30592
 @@yThe Storage Vault@@N~
 Empty now but clearly once used to store vast quantities of grave goods, the
@@ -2826,7 +3001,6 @@ A connecting passage leads south.
 ~
 0 0 30600
 S
-
 #30593
 @@yThe Scribes' Alcove@@N~
 A narrow side room where the pyramid's administrative scribes worked by lamplight,
@@ -2845,7 +3019,6 @@ A connecting passage leads south.
 ~
 0 0 30601
 S
-
 #30594
 @@yThe West Side Chamber@@N~
 Thick walls and a low ceiling make this room feel particularly oppressive, and
@@ -2864,7 +3037,6 @@ A passage continues south.
 ~
 0 0 30602
 S
-
 #30595
 @@yThe Ritual Preparation Chamber@@N~
 The walls are stained with the residue of oils, unguents, and natron used in
@@ -2883,7 +3055,6 @@ A passage continues south.
 ~
 0 0 30603
 S
-
 #30596
 @@yThe East Guard Post@@N~
 A forward guard position with a slit window overlooking the outer approach,
@@ -2902,7 +3073,6 @@ A passage leads south along the inner east wall.
 ~
 0 0 30604
 S
-
 #30597
 @@yThe Rear East Passage@@N~
 A utility corridor connecting the rear chambers, the walls unadorned and plain
@@ -2921,7 +3091,6 @@ The corridor continues south.
 ~
 0 0 30605
 S
-
 #30598
 @@yThe Offering Alcove@@N~
 A small recessed chamber with its own offering table and a carved false door
@@ -2940,7 +3109,6 @@ A passage leads south.
 ~
 0 0 30606
 S
-
 #30599
 @@yThe Hall of Painted Hunts@@N~
 Desert hunts play out in vivid painted scenes across these walls, chariots thundering
@@ -2959,7 +3127,6 @@ A passage continues south toward inner chambers.
 ~
 0 0 30607
 S
-
 #30600
 @@yThe Sealed Storage Room@@N~
 The outer door to this room was sealed with a clay cartouche seal, long since
@@ -2978,7 +3145,6 @@ A narrow passage leads south.
 ~
 0 0 30608
 S
-
 #30601
 @@yThe Ink Room@@N~
 The heavy smell of ancient pigments still clings here, the walls themselves
@@ -2997,7 +3163,6 @@ A passage leads south.
 ~
 0 0 30609
 S
-
 #30602
 @@yThe Chamber of Wailing@@N~
 The professional mourners employed during the pharaoh's burial used this chamber
@@ -3016,7 +3181,6 @@ A passage leads south along the outer wall.
 ~
 0 0 30613
 S
-
 #30603
 @@yThe Embalming Annex@@N~
 Secondary preparation work was performed here, the basins smaller than in the
@@ -3035,7 +3199,6 @@ A passage leads south.
 ~
 0 0 30614
 S
-
 #30604
 @@yThe Inner East Passage@@N~
 A long passage connecting the middle and rear portions of the pyramid's first
@@ -3054,7 +3217,6 @@ The passage continues south.
 ~
 0 0 30615
 S
-
 #30605
 @@yThe Builders' Record Room@@N~
 The original construction records were kept here, the walls covered with
@@ -3073,7 +3235,6 @@ A passage leads west.
 ~
 0 0 30612
 S
-
 #30606
 @@yThe Canopic Cache@@N~
 The recessed shelves in this room held the canopic jars containing the preserved
@@ -3092,7 +3253,6 @@ A short passage leads south to a junction.
 ~
 0 0 30616
 S
-
 #30607
 @@yThe Gallery of Conquest@@N~
 The campaigns of successive dynasties are laid out in chronological sequence on
@@ -3111,7 +3271,6 @@ The gallery continues south.
 ~
 0 0 30617
 S
-
 #30608
 @@yThe Forgotten Annex@@N~
 This room's purpose was never completed, the reliefs half-carved and unpainted,
@@ -3130,7 +3289,6 @@ A passage leads south.
 ~
 0 0 30618
 S
-
 #30609
 @@yThe Color Chamber@@N~
 The pigments mixed here were the finest the ancient world could produce, and
@@ -3149,7 +3307,6 @@ A connecting passage leads south.
 ~
 0 0 30619
 S
-
 #30610
 @@yThe West Guard Post@@N~
 A mirror of the east post, this guardroom faces the western desert approach and
@@ -3168,7 +3325,6 @@ A passage leads south along the inner west wall.
 ~
 0 0 30620
 S
-
 #30611
 @@yThe Rear West Passage@@N~
 Matching the eastern utility corridor, this passage runs along the western inner
@@ -3187,7 +3343,6 @@ The corridor continues south.
 ~
 0 0 30621
 S
-
 #30612
 @@yThe Junction of Paths@@N~
 Three corridors meet here in a junction marked with a carved palm tree indicating
@@ -3211,7 +3366,6 @@ The junction connects south to deeper chambers.
 ~
 0 0 30623
 S
-
 #30613
 @@yThe South West Chamber@@N~
 A spacious side chamber used as a gathering place for cult ceremonies, the walls
@@ -3230,7 +3384,6 @@ A passage leads east.
 ~
 0 0 30614
 S
-
 #30614
 @@yThe Passageway of Bound Prisoners@@N~
 The floor is recessed here, creating a shallow trench lined on both sides with
@@ -3254,7 +3407,6 @@ The passage continues south to a deeper chamber.
 ~
 0 0 30624
 S
-
 #30615
 @@yThe Long East Corridor@@N~
 An exceptionally long corridor runs parallel to the pyramid's east face, giving
@@ -3273,7 +3425,6 @@ The corridor continues south.
 ~
 0 0 30625
 S
-
 #30616
 @@yThe Archivist's Storeroom@@N~
 Rows of stone pegs from which papyrus scrolls were once hung line the walls of
@@ -3292,7 +3443,6 @@ A passage continues south.
 ~
 0 0 30626
 S
-
 #30617
 @@yThe Hall of Divine Barques@@N~
 Four enormous carved boats occupy stone cradles in this hall, the sacred barques
@@ -3311,7 +3461,6 @@ A corridor continues south.
 ~
 0 0 30627
 S
-
 #30618
 @@yThe Crocodile Chamber@@N~
 Paintings of enormous crocodiles frame the ceiling here, sacred to Sobek whose
@@ -3330,7 +3479,6 @@ A passage leads south.
 ~
 0 0 30628
 S
-
 #30619
 @@yThe Chamber of Friezes@@N~
 An unusually sophisticated decorative scheme covers every wall here, interlocking
@@ -3349,7 +3497,6 @@ A passage leads south.
 ~
 0 0 30629
 S
-
 #30620
 @@yThe West Guard Station@@N~
 A second guard station on the west side with a different angle of coverage from
@@ -3368,7 +3515,6 @@ A passage leads south.
 ~
 0 0 30623
 S
-
 #30621
 @@yThe Outer West Corridor@@N~
 Running close to the pyramid's outer western face, this passage is notably colder
@@ -3387,7 +3533,6 @@ A passage leads east to central chambers.
 ~
 0 0 30612
 S
-
 #30622
 @@yThe Outer West Chamber@@N~
 This room's position against the outer wall has meant it is slightly tilted by
@@ -3406,7 +3551,6 @@ A passage leads south.
 ~
 0 0 30624
 S
-
 #30623
 @@yThe Central South Junction@@N~
 The central routing junction for the pyramid's lower level opens here in a broad
@@ -3425,7 +3569,6 @@ The path forward leads to the lower level's deepest chambers.
 ~
 0 0 30630
 S
-
 #30624
 @@yThe Deep South West Chamber@@N~
 Far from the entrance now, this deep chamber served ritual functions the carved
@@ -3444,7 +3587,6 @@ The outer west chamber lies to the west.
 ~
 0 0 30622
 S
-
 #30625
 @@yThe Deep East Corridor@@N~
 A corresponding deep corridor on the east side connects to the main passages,
@@ -3463,7 +3605,6 @@ The corridor connects west to the central junction.
 ~
 0 0 30623
 S
-
 #30626
 @@yThe North Registry Room@@N~
 A bureaucratic chamber where the comings and goings of all offerings were
@@ -3482,7 +3623,6 @@ A passage leads west.
 ~
 0 0 30627
 S
-
 #30627
 @@yThe South Registry Room@@N~
 A sister chamber to the north registry, this room handled outgoing tallies and
@@ -3501,7 +3641,6 @@ The hall of divine barques lies to the north.
 ~
 0 0 30617
 S
-
 #30628
 @@yThe Serpent Hall@@N~
 The cobra goddess Wadjet is honored here in abundant carved relief, her coiled
@@ -3520,7 +3659,6 @@ A passage leads west to the south registry.
 ~
 0 0 30627
 S
-
 #30629
 @@yThe Threshold of Ascent@@N~
 This chamber marks the transition point between the pyramid's base level and
@@ -3544,7 +3682,6 @@ A hidden passage ascends upward through a stone counterweighted door.
 entrance~
 0 0 30630
 S
-
 #30630
 @@yThe Second Level Entrance@@N~
 The air changes immediately upon entering the second level, drier and carrying
@@ -3568,7 +3705,6 @@ A passage leads west into the second level.
 ~
 0 0 30637
 S
-
 #30631
 @@yThe Hall of Ancestors@@N~
 Painted portraits of the pyramid's royal lineage stretch back to the very first
@@ -3587,7 +3723,6 @@ The hall continues south.
 ~
 0 0 30632
 S
-
 #30632
 @@yThe Offering Repository@@N~
 Stone shelves carved into the walls at regular intervals once held objects of
@@ -3611,7 +3746,6 @@ A side passage leads west.
 ~
 0 0 30638
 S
-
 #30633
 @@yThe Weighing Chamber@@N~
 The central ritual chamber for the weighing of the heart ceremony is depicted
@@ -3635,7 +3769,6 @@ A side passage leads east.
 ~
 0 0 30639
 S
-
 #30634
 @@yThe Hall of Divine Names@@N~
 Every wall is dense with the hidden names of the gods, written in a script more
@@ -3654,7 +3787,6 @@ A passage continues toward deeper second-level chambers.
 ~
 0 0 30635
 S
-
 #30635
 @@yThe Ritual Procession Way@@N~
 A long narrow corridor aligned precisely with the path of a specific star at the
@@ -3678,7 +3810,6 @@ A side passage leads west to an antechamber.
 ~
 0 0 30640
 S
-
 #30636
 @@yThe Guardian's Sanctum@@N~
 The elite protectors of the second level were housed here, their quarters sparse
@@ -3697,7 +3828,6 @@ A narrow passage descends slightly to a junction.
 ~
 0 0 30641
 S
-
 #30637
 @@yThe West Second Level Passage@@N~
 The western approach to the second level offers a longer route that passes
@@ -3716,7 +3846,6 @@ The passage continues south.
 ~
 0 0 30642
 S
-
 #30638
 @@yThe Silver Shrine Chamber@@N~
 The walls here are sheathed in sheets of tarnished silver that reflect lamplight
@@ -3735,7 +3864,6 @@ A passage continues south.
 ~
 0 0 30643
 S
-
 #30639
 @@yThe High Priest's Antechamber@@N~
 The private antechamber of the high priest who served this pyramid shows the
@@ -3754,7 +3882,6 @@ A passage leads south to the high priest's inner sanctum.
 ~
 0 0 30644
 S
-
 #30640
 @@yThe Star Alignment Chamber@@N~
 This room's ceiling is pierced by five small shafts that align with the five
@@ -3773,7 +3900,6 @@ A passage leads south.
 ~
 0 0 30645
 S
-
 #30641
 @@yThe Crossroads Chamber@@N~
 Four passages meet here with precisely carved junction indicators showing which
@@ -3802,7 +3928,6 @@ A passage leads east.
 ~
 0 0 30644
 S
-
 #30642
 @@yThe Hall of Sacred Geometry@@N~
 Mathematical precision made divine: every wall here bears geometric diagrams
@@ -3821,7 +3946,6 @@ A passage continues south.
 ~
 0 0 30647
 S
-
 #30643
 @@yThe Moon Chamber@@N~
 Painted entirely in blue and silver with no other colors permitted, this chamber
@@ -3840,7 +3964,6 @@ A passage continues south.
 ~
 0 0 30648
 S
-
 #30644
 @@yThe High Priest's Inner Sanctum@@N~
 The private working space of the high priest is dominated by a carved desk of
@@ -3859,7 +3982,6 @@ The crossroads chamber lies to the west.
 ~
 0 0 30641
 S
-
 #30645
 @@yThe Chamber of Eternal Flame@@N~
 A stone brazier that once burned continuously for three centuries without being
@@ -3878,7 +4000,6 @@ The crossroads chamber lies to the east.
 ~
 0 0 30641
 S
-
 #30646
 @@yThe Passage to the Inner Sanctum@@N~
 The approach to the second level's most sacred spaces narrows deliberately, forcing
@@ -3897,7 +4018,6 @@ The passage continues south to a great hall.
 ~
 0 0 30649
 S
-
 #30647
 @@yThe Hall of the Solar Barque@@N~
 A large votive hall where worshippers made offerings to the sun during its
@@ -3916,7 +4036,6 @@ A passage leads east to central chambers.
 ~
 0 0 30646
 S
-
 #30648
 @@yThe Chamber of Written Stars@@N~
 Every star visible from this location has been named and given a hieroglyphic
@@ -3935,7 +4054,6 @@ A passage leads east to the passage of the inner sanctum.
 ~
 0 0 30646
 S
-
 #30649
 @@yThe Great Hall of the Second Level@@N~
 The grandest room on this level spreads before you, its ceiling twice the height
@@ -3964,7 +4082,6 @@ A side passage leads west.
 ~
 0 0 30652
 S
-
 #30650
 @@yThe Second Level South Chamber@@N~
 The southernmost main chamber of the second level is dominated by a carved false
@@ -3983,7 +4100,6 @@ A hidden ascent leads upward toward the third level of the pyramid.
 ascent~
 0 0 30655
 S
-
 #30651
 @@yThe East Devotional Chamber@@N~
 Personal votive objects left by priests and worshippers over centuries line the
@@ -4002,7 +4118,6 @@ A short passage connects to a secondary chamber.
 ~
 0 0 30653
 S
-
 #30652
 @@yThe West Devotional Chamber@@N~
 A matching devotional space on the west side shows different priorities in its
@@ -4021,7 +4136,6 @@ A short passage connects to a secondary chamber.
 ~
 0 0 30654
 S
-
 #30653
 @@yThe East Inner Passage@@N~
 A connecting corridor running along the eastern side of the great hall provides
@@ -4040,7 +4154,6 @@ The passage connects west to the south chamber.
 ~
 0 0 30650
 S
-
 #30654
 @@yThe West Inner Passage@@N~
 The western counterpart to the east inner passage runs along the hall's far side,
@@ -4059,7 +4172,6 @@ The passage connects east to the south chamber.
 ~
 0 0 30650
 S
-
 #30655
 @@yThe Third Level Threshold@@N~
 The stones here are perfectly fitted without mortar, each block set with
@@ -4083,7 +4195,6 @@ A corridor leads west.
 ~
 0 0 30660
 S
-
 #30656
 @@yThe Chamber of Eternal Law@@N~
 The forty-two precepts of Ma'at, goddess of justice and cosmic order, are inscribed
@@ -4102,7 +4213,6 @@ A passage leads south.
 ~
 0 0 30657
 S
-
 #30657
 @@yThe Hall of Sealed Names@@N~
 The names of individuals found unworthy at death's judgment have been deliberately
@@ -4126,7 +4236,6 @@ A side passage leads west.
 ~
 0 0 30661
 S
-
 #30658
 @@yThe Sanctum of Anubis@@N~
 An entire room dedicated to Anubis in his role as guardian of the dead and guide
@@ -4145,7 +4254,6 @@ A passage leads south to the third level junction.
 ~
 0 0 30659
 S
-
 #30659
 @@yThe Third Level Junction@@N~
 The passages of the third level converge in a chamber whose walls bear the
@@ -4169,7 +4277,6 @@ A narrow stair leads upward toward the fourth level.
 ~
 0 0 30665
 S
-
 #30660
 @@yThe West Third Level Chamber@@N~
 This chamber is cooler than the rest of the third level, the thick stone here
@@ -4188,7 +4295,6 @@ A passage leads south.
 ~
 0 0 30661
 S
-
 #30661
 @@yThe Vault of Memory@@N~
 Inscribed here is the biographical record of the pyramid's primary occupant, the
@@ -4212,7 +4318,6 @@ A passage leads south.
 ~
 0 0 30662
 S
-
 #30662
 @@yThe Antechamber of the Throne@@N~
 The approach to the divine throne room requires this final antechamber, a space
@@ -4236,7 +4341,6 @@ The throne chamber lies to the south.
 ~
 0 0 30663
 S
-
 #30663
 @@yThe Throne Chamber@@N~
 A carved throne of black basalt still dominates this high-ceilinged room, flanked
@@ -4255,7 +4359,6 @@ A passage leads to a restricted inner sanctum.
 guardian~
 1 0 30664
 S
-
 #30664
 @@yThe Inner Sanctum of the Third Level@@N~
 The most protected chamber of the third level, its walls sheeted in gold leaf
@@ -4274,7 +4377,6 @@ A hidden ascent rises to the fourth level through a counterweighted stone.
 hidden~
 0 0 30670
 S
-
 #30665
 @@yThe Upper Stair Passage@@N~
 A steep passage connecting the third and fourth levels, the walls here polished
@@ -4293,7 +4395,6 @@ The upper stair continues south.
 ~
 0 0 30666
 S
-
 #30666
 @@yThe Upper Stair Landing@@N~
 A landing partway up the connecting stair where worshippers could pause and
@@ -4317,7 +4418,6 @@ A side passage leads east to a lookout.
 ~
 0 0 30668
 S
-
 #30667
 @@yThe Third Level Connection Point@@N~
 This small chamber serves as the mechanical junction point for the pyramid's
@@ -4341,7 +4441,6 @@ The approach to the fourth level lies ahead, upward to the south.
 ~
 0 0 30670
 S
-
 #30668
 @@yThe Lookout Alcove@@N~
 A small chamber cut into the pyramid's core that offers, through an angled shaft,
@@ -4355,7 +4454,6 @@ The upper stair landing lies to the west.
 ~
 0 0 30666
 S
-
 #30669
 @@yThe Inner Sanctum Approach@@N~
 The final approach to the inner sanctum rings with silence so complete it seems
@@ -4374,7 +4472,6 @@ The inner sanctum entrance lies to the south.
 ~
 0 0 30664
 S
-
 #30670
 @@yThe Apex Approach@@N~
 The fourth level announces itself with a change in stone quality, the blocks here
@@ -4398,7 +4495,6 @@ A corridor leads west into the apex chambers.
 ~
 0 0 30675
 S
-
 #30671
 @@yThe Hall of the Divine Pharaoh@@N~
 Every surface proclaims the divinity of the pyramid's owner, not as inherited
@@ -4417,7 +4513,6 @@ A passage leads south to an inner chamber.
 ~
 0 0 30672
 S
-
 #30672
 @@yThe Solar Chamber@@N~
 Aligned precisely with the sunrise on the pharaoh's accession day, this chamber
@@ -4436,7 +4531,6 @@ A passage leads south to the treasury antechamber.
 ~
 0 0 30673
 S
-
 #30673
 @@yThe Treasury Antechamber@@N~
 The vault that once held the pyramid's portable wealth is accessible through
@@ -4460,7 +4554,6 @@ A passage leads west to the apex approach.
 ~
 0 0 30676
 S
-
 #30674
 @@yThe Inner Treasury@@N~
 Even robbed, this room radiates the memory of wealth, the shelving niches still
@@ -4479,7 +4572,6 @@ A passage leads to the apex sanctum.
 ~
 0 0 30677
 S
-
 #30675
 @@yThe West Apex Passage@@N~
 The western approach to the apex level passes through this narrow corridor carved
@@ -4498,7 +4590,6 @@ The passage continues south.
 ~
 0 0 30676
 S
-
 #30676
 @@yThe Chamber of the Two Truths@@N~
 Ma'at's dual aspects of truth and justice are given equal prominence here in a
@@ -4522,7 +4613,6 @@ A passage leads south to the sarcophagus approach.
 ~
 0 0 30678
 S
-
 #30677
 @@yThe Apex Sanctum@@N~
 The primary worship space of the entire pyramid, this room's proportions are
@@ -4546,7 +4636,6 @@ The approach to the pharaoh's chamber lies to the south.
 ~
 0 0 30679
 S
-
 #30678
 @@yThe Sarcophagus Approach@@N~
 The last passage before the pharaoh's burial chamber is the most elaborately
@@ -4570,7 +4659,6 @@ The pharaoh's outer burial chamber lies to the south.
 ~
 0 0 30679
 S
-
 #30679
 @@yThe Pharaoh's Outer Burial Chamber@@N~
 The outer room of the burial complex contains the nested outer coffins of the
@@ -4589,7 +4677,6 @@ The pharaoh's inner sanctum lies ahead, sealed with divine authority.
 royal seal~
 1 0 30680
 S
-
 #30680
 @@yThe Pharaoh's Inner Sanctum@@N~
 Gold leaf covers every surface of this room without exception, the carved reliefs
@@ -4608,7 +4695,6 @@ The innermost burial chamber lies ahead.
 ~
 0 0 30681
 S
-
 #30681
 @@yThe Chamber of the Golden Sarcophagus@@N~
 The pharaoh's nested sarcophagi rest in their stone case at the room's center,
@@ -4632,7 +4718,6 @@ A secret passage west leads to the divine armory.
 pharaoh eye~
 0 0 30683
 S
-
 #30682
 @@yThe Hidden Treasury@@N~
 A secret room known only to the highest priests, this chamber held the pharaoh's
@@ -4651,7 +4736,6 @@ The absolute summit chamber lies ahead.
 ~
 0 0 30684
 S
-
 #30683
 @@yThe Divine Armory@@N~
 The weapons and regalia of divine office were stored here in the highest secret,
@@ -4670,7 +4754,6 @@ The absolute summit chamber lies ahead.
 ~
 0 0 30684
 S
-
 #30684
 @@yThe Absolute Summit@@N~
 The very apex of the pyramid's interior, where the capstone sits above in its
@@ -4689,7 +4772,6 @@ The divine armory also reaches this point from the northwest.
 ~
 0 0 30683
 S
-
 #30480
 @@yThe Collapsed Shaft@@N~
 The crumbled paving that concealed this shaft gives way to a vertical drop ending
@@ -4713,7 +4795,6 @@ A low passage leads west into a side chamber.
 ~
 0 0 30490
 S
-
 #30481
 @@yThe Antechamber of the Deep@@N~
 Whoever carved these walls worked in a style older than anything in the pyramid
@@ -4737,7 +4818,6 @@ A passage descends south into darkness.
 ~
 0 0 30491
 S
-
 #30482
 @@yThe Hall of Old Bones@@N~
 The floor is thick with loose bones that crunch underfoot, the remains of something
@@ -4761,7 +4841,6 @@ A side passage leads south.
 ~
 0 0 30492
 S
-
 #30483
 @@yThe Flooded Passage@@N~
 Ancient groundwater has seeped in here and never fully drained, leaving a
@@ -4785,7 +4864,6 @@ A side tunnel branches south.
 ~
 0 0 30493
 S
-
 #30484
 @@yThe Drowned Gallery@@N~
 The flooding is deeper here and the gallery walls are crusted with white mineral
@@ -4804,7 +4882,6 @@ The gallery continues east to a junction.
 ~
 0 0 30485
 S
-
 #30485
 @@yThe Subterranean Junction@@N~
 A broad natural cavern modified by human hands serves as the primary routing point
@@ -4833,7 +4910,6 @@ A passage leads north to outer rooms.
 ~
 0 0 30494
 S
-
 #30486
 @@yThe Outer Burial Vault@@N~
 Rows of smaller burial niches cover every wall from floor to ceiling, each sealed
@@ -4857,7 +4933,6 @@ A passage leads south.
 ~
 0 0 30495
 S
-
 #30487
 @@yThe Sealed Vault Corridor@@N~
 Unlike the looted outer vault, these wall niches are still sealed, the plaster
@@ -4876,7 +4951,6 @@ A passage leads east to an inner chamber.
 ~
 0 0 30488
 S
-
 #30488
 @@yThe Inner Vault Chamber@@N~
 The inner sanctum of the upper burial level holds the remains of the pyramid's
@@ -4895,7 +4969,6 @@ A side passage leads south to a restricted area.
 ~
 0 0 30496
 S
-
 #30489
 @@yThe Restricted Annex@@N~
 A smaller chamber sealed off from the main vault corridors, its single entrance
@@ -4909,7 +4982,6 @@ The inner vault chamber lies to the north.
 ~
 0 0 30488
 S
-
 #30490
 @@yThe West Side Passage@@N~
 A utility passage running along the western edge of the complex's upper level,
@@ -4928,7 +5000,6 @@ The passage descends south.
 ~
 0 0 30497
 S
-
 #30491
 @@yThe Ossuary Annex@@N~
 When the individual niches were full, bones were transferred here to make room
@@ -4947,7 +5018,6 @@ A passage leads south.
 ~
 0 0 30498
 S
-
 #30492
 @@yThe Rubble Chamber@@N~
 A partial ceiling collapse long ago left this chamber half-buried in stone rubble,
@@ -4966,7 +5036,6 @@ The passage continues south past the rubble.
 ~
 0 0 30499
 S
-
 #30493
 @@yThe Seepage Chamber@@N~
 Groundwater seeps through every joint in the stone here, coating the walls in
@@ -4985,7 +5054,6 @@ A passage continues south.
 ~
 0 0 30501
 S
-
 #30494
 @@yThe North Outer Chamber@@N~
 A wide chamber at the northern extent of the catacomb complex, its walls blank
@@ -4999,7 +5067,6 @@ The subterranean junction lies to the south.
 ~
 0 0 30485
 S
-
 #30495
 @@yThe Crypt Servant's Quarters@@N~
 The workers who maintained the burial complex lived here during their service
@@ -5018,7 +5085,6 @@ A passage leads south to deeper chambers.
 ~
 0 0 30502
 S
-
 #30496
 @@yThe Embalmer's Deep Workshop@@N~
 A second embalming station serving the lower burial levels, its basins larger
@@ -5037,7 +5103,6 @@ A passage leads south.
 ~
 0 0 30503
 S
-
 #30497
 @@yThe West Descent Passage@@N~
 A long sloping passage following the pyramid's western outer foundation line,
@@ -5056,7 +5121,6 @@ The passage descends further south.
 ~
 0 0 30504
 S
-
 #30498
 @@yThe Bone Gallery@@N~
 An entire gallery given over to the sorted remains of those deemed insufficiently
@@ -5075,7 +5139,6 @@ A passage leads south.
 ~
 0 0 30505
 S
-
 #30499
 @@yThe Rubble Bypass@@N~
 The path through the collapsed area emerges in this cramped passage, the ceiling
@@ -5094,7 +5157,6 @@ The bypass continues south.
 ~
 0 0 30506
 S
-
 #30500
 @@yThe First Deep Landing@@N~
 The descending passage from the upper level arrives here in a chamber that marks
@@ -5123,7 +5185,6 @@ The deeper passage continues south.
 ~
 0 0 30510
 S
-
 #30501
 @@yThe Glowing Passage@@N~
 The bioluminescent algae that begins in the seepage chamber spreads through this
@@ -5142,7 +5203,6 @@ The passage continues south.
 ~
 0 0 30509
 S
-
 #30502
 @@yThe Guard Station Below@@N~
 A guard station at the transition between upper and deep catacomb, staffed in
@@ -5161,7 +5221,6 @@ The lower passage continues south.
 ~
 0 0 30511
 S
-
 #30503
 @@yThe Preparation Alcove@@N~
 A small antechamber for final preparations before entering the deep catacomb,
@@ -5180,7 +5239,6 @@ A passage leads south to the deep level.
 ~
 0 0 30512
 S
-
 #30504
 @@yThe Foundation Level Passage@@N~
 At this depth the passage runs directly along the pyramid's lowest foundation
@@ -5199,7 +5257,6 @@ The foundation passage continues south.
 ~
 0 0 30513
 S
-
 #30505
 @@yThe Silt Floor Chamber@@N~
 The floor here is not stone but compressed silt, thousands of years of fine
@@ -5218,7 +5275,6 @@ A passage leads south.
 ~
 0 0 30514
 S
-
 #30506
 @@yThe Narrow Bypass South@@N~
 The replacement tunnel continues, its roof still uncomfortably close and its
@@ -5237,7 +5293,6 @@ The narrow passage opens south onto the first deep landing.
 ~
 0 0 30500
 S
-
 #30507
 @@yThe East Deep Corridor@@N~
 A long, straight corridor driven east through the bedrock with geometric precision,
@@ -5261,7 +5316,6 @@ A side passage leads south.
 ~
 0 0 30516
 S
-
 #30508
 @@yThe West Deep Alcove@@N~
 A wide alcove carved into the western rock face, its walls bearing the earliest
@@ -5280,7 +5334,6 @@ A passage leads south.
 ~
 0 0 30517
 S
-
 #30509
 @@yThe Algae Cavern@@N~
 The bioluminescent growth reaches its densest concentration here in a natural
@@ -5304,7 +5357,6 @@ A side passage leads east.
 ~
 0 0 30507
 S
-
 #30510
 @@yThe Pit Trap Passage@@N~
 The floor here is interrupted by a series of open pits cut into the stone, each
@@ -5323,7 +5375,6 @@ The pit trap passage continues south.
 ~
 0 0 30519
 S
-
 #30511
 @@yThe Hall of Failed Intruders@@N~
 The walls here bear crude additions in a much later hand, tally marks counting
@@ -5342,7 +5393,6 @@ The hall continues south.
 ~
 0 0 30520
 S
-
 #30512
 @@yThe Ritual Descent Chamber@@N~
 The beginning of the truly sacred descent, this chamber is lined with painted
@@ -5361,7 +5411,6 @@ The descent continues south.
 ~
 0 0 30521
 S
-
 #30513
 @@yThe Bedrock Gallery@@N~
 Cut directly into the native bedrock rather than the limestone blocks of the
@@ -5385,7 +5434,6 @@ The gallery descends south.
 ~
 0 0 30522
 S
-
 #30514
 @@yThe Groundwater Sump@@N~
 A low-ceilinged chamber where groundwater drains into a central sump, the
@@ -5409,7 +5457,6 @@ A passage leads south to the deep levels.
 ~
 0 0 30523
 S
-
 #30515
 @@yThe Deep Burial Vault@@N~
 The deepest individual burial niches in the complex are concentrated here,
@@ -5428,7 +5475,6 @@ A passage leads south to an inner chamber.
 ~
 0 0 30524
 S
-
 #30516
 @@yThe Charnel Pit@@N~
 A natural pit in the stone floor, deliberately deepened and expanded, was used
@@ -5447,7 +5493,6 @@ A narrow passage continues south.
 ~
 0 0 30525
 S
-
 #30517
 @@yThe Inscription Chamber@@N~
 Every surface of this small chamber is covered in the oldest writing found
@@ -5466,7 +5511,6 @@ A narrow passage leads south.
 ~
 0 0 30526
 S
-
 #30518
 @@yThe Cavern Passage@@N~
 Beyond the algae cavern the passage widens briefly into something almost naturally
@@ -5485,7 +5529,6 @@ The passage continues south to the deep vault approach.
 ~
 0 0 30527
 S
-
 #30519
 @@yThe Southern Pit Room@@N~
 A second concentration of pit traps guards this passage, these ones deeper than
@@ -5504,7 +5547,6 @@ The passage continues south to the deep catacomb proper.
 ~
 0 0 30528
 S
-
 #30520
 @@yThe Vigil Chamber@@N~
 Priests on rotation were required to maintain a continuous vigil here, and
@@ -5523,7 +5565,6 @@ A passage leads south to the deep level entrance.
 ~
 0 0 30529
 S
-
 #30521
 @@yThe Prayer Passage@@N~
 The protective texts continue along this passage's entire length, the prayers
@@ -5542,7 +5583,6 @@ The passage reaches the deep catacomb entrance.
 ~
 0 0 30530
 S
-
 #30522
 @@yThe Ancient Vault Approach@@N~
 The passage here bears the marks of multiple reinforcement campaigns, each
@@ -5561,7 +5601,6 @@ The approach descends to the ancient vault proper.
 ~
 0 0 30531
 S
-
 #30523
 @@yThe Drip Chamber@@N~
 The constant dripping from the groundwater sump feeds a small shallow pool here,
@@ -5580,7 +5619,6 @@ A passage leads south to the outer ring of the deep complex.
 ~
 0 0 30532
 S
-
 #30524
 @@yThe Sinner's Gallery@@N~
 The deep burial vault opens into this gallery lined with the remains of those
@@ -5599,7 +5637,6 @@ The gallery continues south.
 ~
 0 0 30533
 S
-
 #30525
 @@yThe Charnel Overflow@@N~
 The charnel pit above was not the only mass burial site in this complex, and this
@@ -5618,7 +5655,6 @@ A passage continues south.
 ~
 0 0 30534
 S
-
 #30526
 @@yThe Forgotten Scriptorium@@N~
 Scrolls were copied and stored here at the deepest interpretable level of the
@@ -5637,7 +5673,6 @@ A passage leads south.
 ~
 0 0 30535
 S
-
 #30527
 @@yThe Deep Vault Approach@@N~
 The approach to the complex's inner vaults passes through this chamber where
@@ -5656,7 +5691,6 @@ The inner vault approach leads south.
 ~
 0 0 30536
 S
-
 #30528
 @@yThe Deep Catacomb Entry@@N~
 Several passages converge at this point that marks the true beginning of the deep
@@ -5685,7 +5719,6 @@ The deep catacomb corridor continues south.
 ~
 0 0 30542
 S
-
 #30529
 @@yThe Vigil End Chamber@@N~
 The final chamber before the deepest sacred spaces, where the priests ended their
@@ -5704,7 +5737,6 @@ The passage enters the deep sacred precincts.
 ~
 0 0 30543
 S
-
 #30530
 @@yThe Threshold of the Deep@@N~
 The boundary between the catacomb's transitional spaces and its true depths is
@@ -5723,7 +5755,6 @@ Beyond the threshold stone, the passage continues south.
 ~
 0 0 30544
 S
-
 #30531
 @@yThe Ancient Vault Chamber@@N~
 The oldest chamber in the entire complex predates the pyramid above by generations,
@@ -5742,7 +5773,6 @@ A passage leads south to the primary deep complex.
 ~
 0 0 30545
 S
-
 #30532
 @@yThe Outer Ring Corridor@@N~
 A broad corridor running in a partial arc around the outermost ring of the deep
@@ -5766,7 +5796,6 @@ The corridor curves south.
 ~
 0 0 30546
 S
-
 #30533
 @@yThe East Outer Ring@@N~
 The eastern section of the outer ring corridor, where several sealed alcoves
@@ -5785,7 +5814,6 @@ The ring corridor continues south.
 ~
 0 0 30547
 S
-
 #30534
 @@yThe South Overflow Chamber@@N~
 Another storage space for excess remains, this one evidently from the complex's
@@ -5804,7 +5832,6 @@ A passage leads south to the deep level.
 ~
 0 0 30548
 S
-
 #30535
 @@yThe Scriptorium Annex@@N~
 A secondary copying room serving the forgotten scriptorium above, this one
@@ -5823,7 +5850,6 @@ A passage leads south.
 ~
 0 0 30549
 S
-
 #30536
 @@yThe Inner Vault Corridor@@N~
 The heart of the complex's vault system is accessed through this corridor,
@@ -5842,7 +5868,6 @@ The inner vault corridor leads south to the primary chambers.
 ~
 0 0 30550
 S
-
 #30537
 @@yThe Blind Passage@@N~
 A deliberately disorienting passage with no distinguishing features and identical
@@ -5861,7 +5886,6 @@ The west passage loops back to the deep entry.
 ~
 0 0 30528
 S
-
 #30538
 @@yThe Trap Alcove@@N~
 A dead end alcove whose entry triggers a ceiling pressure plate, the original
@@ -5875,7 +5899,6 @@ The east outer ring passage leads back north.
 ~
 0 0 30547
 S
-
 #30539
 @@yThe Empty Shrine@@N~
 A small shrine chamber stripped of its cult object centuries ago, the empty
@@ -5889,7 +5912,6 @@ The west outer ring passage leads east.
 ~
 0 0 30541
 S
-
 #30540
 @@yThe East Deep Passage@@N~
 A passage running east along the deep catacomb's northern perimeter, the walls
@@ -5908,7 +5930,6 @@ The passage leads south to the inner complex.
 ~
 0 0 30551
 S
-
 #30541
 @@yThe West Deep Passage@@N~
 The western deep passage runs parallel to its eastern counterpart, its walls
@@ -5927,7 +5948,6 @@ The passage leads south to the inner complex.
 ~
 0 0 30552
 S
-
 #30542
 @@yThe Deep Catacomb Corridor@@N~
 The primary north-south spine of the deep catacomb stretches ahead, its ceiling
@@ -5956,7 +5976,6 @@ A side passage leads west.
 ~
 0 0 30541
 S
-
 #30543
 @@yThe Sacred Precinct Entrance@@N~
 The sacred precincts of the deep complex are announced by a carved archway
@@ -5975,7 +5994,6 @@ The sacred precincts lie beyond the archway to the south.
 ~
 0 0 30554
 S
-
 #30544
 @@yThe Passage Beyond the Threshold@@N~
 After the threshold stone the passage changes character, the walls no longer
@@ -5994,7 +6012,6 @@ The geometric passage continues south.
 ~
 0 0 30555
 S
-
 #30545
 @@yThe Primary Deep Chamber@@N~
 The central chamber of the deep complex proper opens here, its dimensions
@@ -6023,7 +6040,6 @@ The deepest passage descends south.
 ~
 0 0 30558
 S
-
 #30546
 @@yThe Curving Outer Ring@@N~
 The outer ring corridor curves here following the natural shape of the cavern system
@@ -6042,7 +6058,6 @@ The ring corridor continues south.
 ~
 0 0 30559
 S
-
 #30547
 @@yThe Sealed Alcove Passage@@N~
 The sealed alcoves are most concentrated here, a dozen of them in a row, each
@@ -6061,7 +6076,6 @@ A short passage leads to a side chamber.
 ~
 0 0 30538
 S
-
 #30548
 @@yThe South Outer Ring@@N~
 The southernmost accessible section of the outer ring corridor, this passage
@@ -6080,7 +6094,6 @@ An inner passage leads east to the primary chambers.
 ~
 0 0 30545
 S
-
 #30549
 @@yThe Archive Passage@@N~
 A connecting passage between the upper scriptorium complex and the deep inner
@@ -6099,7 +6112,6 @@ A passage leads south to the inner complex.
 ~
 0 0 30560
 S
-
 #30550
 @@yThe Inner Vault Approach@@N~
 The most serious containment chambers of the entire complex lie beyond this
@@ -6118,7 +6130,6 @@ The approach opens into the great inner vault.
 ~
 0 0 30561
 S
-
 #30551
 @@yThe East Inner Complex Passage@@N~
 A passage running south through the eastern portion of the inner complex, its walls
@@ -6137,7 +6148,6 @@ The passage continues south to the inner complex proper.
 ~
 0 0 30562
 S
-
 #30552
 @@yThe West Inner Complex Passage@@N~
 Matching the eastern passage, this western corridor bears the faces of the
@@ -6156,7 +6166,6 @@ The passage continues south.
 ~
 0 0 30563
 S
-
 #30553
 @@yThe Spine Junction@@N~
 The main corridor crosses here with a lateral passage, creating the primary routing
@@ -6185,7 +6194,6 @@ The main corridor continues south.
 ~
 0 0 30564
 S
-
 #30554
 @@yThe Inner Sacred Precinct@@N~
 The most sacred space accessible to the highest ranking priests, this chamber is
@@ -6204,7 +6212,6 @@ The deepest sacred passage lies to the south.
 ~
 0 0 30565
 S
-
 #30555
 @@yThe Geometric Chamber@@N~
 The abstract patterns from the passage reach their full expression here in a
@@ -6223,7 +6230,6 @@ A passage continues south.
 ~
 0 0 30566
 S
-
 #30556
 @@yThe East Inner Chamber@@N~
 A side chamber off the primary deep space, this room has been used for rites
@@ -6237,7 +6243,6 @@ The primary deep chamber lies to the west.
 ~
 0 0 30545
 S
-
 #30557
 @@yThe West Inner Chamber@@N~
 The mirror of the east inner chamber, this room contains the physical remnants
@@ -6251,7 +6256,6 @@ The primary deep chamber lies to the east.
 ~
 0 0 30545
 S
-
 #30558
 @@yThe Descent to the Void Vaults@@N~
 The passage descends more steeply here, the stone replaced by carved steps, each
@@ -6270,7 +6274,6 @@ The descent continues south to the void vault antechamber.
 ~
 0 0 30567
 S
-
 #30559
 @@yThe South Outer Ring Curve@@N~
 The outer ring reaches its southernmost extent here, the passage curved enough
@@ -6289,7 +6292,6 @@ The outer ring connects east to the south outer section.
 ~
 0 0 30548
 S
-
 #30560
 @@yThe Archive Inner Connection@@N~
 Where the archive passage meets the inner complex proper, this junction chamber
@@ -6308,7 +6310,6 @@ A passage leads south into the inner complex.
 ~
 0 0 30564
 S
-
 #30561
 @@yThe Great Inner Vault@@N~
 The centerpiece of the entire catacomb system, this enormous vault houses the most
@@ -6337,7 +6338,6 @@ The deepest passage descends south to the final vaults.
 ~
 0 0 30567
 S
-
 #30562
 @@yThe East Vault Chamber@@N~
 An enormous side vault off the great inner vault, its walls paneled with granite
@@ -6356,7 +6356,6 @@ The east inner complex passage lies to the north.
 ~
 0 0 30551
 S
-
 #30563
 @@yThe West Vault Chamber@@N~
 The western counterpart to the east vault, this chamber was used for the most
@@ -6375,7 +6374,6 @@ The west inner complex passage lies to the north.
 ~
 0 0 30552
 S
-
 #30564
 @@yThe Inner Spine Passage@@N~
 The deep catacomb's central north-south corridor continues here through its
@@ -6399,7 +6397,6 @@ The spine passage continues south to the final approaches.
 ~
 0 0 30568
 S
-
 #30565
 @@yThe Deepest Sacred Passage@@N~
 Beyond the inner sacred precinct, the passage has been cut with such care that
@@ -6418,7 +6415,6 @@ The deepest sacred passage continues south.
 ~
 0 0 30569
 S
-
 #30566
 @@yThe Pattern Chamber@@N~
 The geometric patterns culminate here in a chamber where the abstract forms
@@ -6437,7 +6433,6 @@ A passage leads south to the void vault approach.
 ~
 0 0 30570
 S
-
 #30567
 @@yThe Void Vault Antechamber@@N~
 The air here has changed quality entirely, cold and dry in a way inconsistent
@@ -6461,7 +6456,6 @@ The void vault proper lies ahead to the south.
 ~
 0 0 30571
 S
-
 #30568
 @@yThe Final Spine Approach@@N~
 The last section of the main corridor before the deepest boss chambers, the walls
@@ -6480,7 +6474,6 @@ The final passage leads south to the sovereign's vault.
 ~
 0 0 30572
 S
-
 #30569
 @@yThe Sacred Descent Passage@@N~
 The approach to the deepest sacred chamber descends through this passage where
@@ -6499,7 +6492,6 @@ The sacred descent passage leads to the final chamber.
 ~
 0 0 30573
 S
-
 #30570
 @@yThe Void Vault Approach@@N~
 The final approach to the void vaults where the most dangerous containments rest,
@@ -6518,7 +6510,6 @@ The void vault entrance lies to the south.
 ~
 0 0 30574
 S
-
 #30571
 @@yThe Void Vault@@N~
 A vast chamber of perfectly smooth black stone that absorbs all light, the walls
@@ -6532,7 +6523,6 @@ The void vault antechamber lies to the north.
 ~
 0 0 30567
 S
-
 #30572
 @@yThe Sovereign's Vault@@N~
 The final chamber of the deep catacomb spine holds the contained essence of the
@@ -6546,7 +6536,6 @@ The final spine approach lies to the north.
 ~
 0 0 30568
 S
-
 #30573
 @@yThe Deepest Sacred Chamber@@N~
 At the absolute lowest point of the sacred precinct, this chamber is where
@@ -6560,7 +6549,6 @@ The sacred descent passage leads back north.
 ~
 0 0 30569
 S
-
 #30574
 @@yThe Outer Void Vault@@N~
 The antechamber to the void vault proper, a preparation space for those conducting
@@ -6579,7 +6567,6 @@ The void vault proper lies to the south.
 ~
 0 0 30571
 S
-
 #30575
 @@yThe Bone Colossus Hall@@N~
 A chamber tall enough to accommodate the bone colossus that serves as its
@@ -6593,7 +6580,6 @@ A passage leads west to the great inner vault.
 ~
 0 0 30561
 S
-
 #30576
 @@yThe Vizier's Condemned Chamber@@N~
 The sealed room where the Vizier Khamsin was entombed alive, the walls covered in
@@ -6607,7 +6593,6 @@ The passage leads east back to the inner complex.
 ~
 0 0 30563
 S
-
 #30577
 @@yThe Nameless One's Vault@@N~
 A chamber with every surface deliberately defaced, every inscription hammered flat,
@@ -6626,7 +6611,6 @@ A passage leads north to the inner vault.
 ~
 0 0 30561
 S
-
 #30578
 @@yThe Catacomb Lord's Vault@@N~
 The largest chamber in the entire subterranean complex, its walls lost in shadow,
@@ -6640,7 +6624,6 @@ The nameless one's vault lies to the north.
 ~
 0 0 30577
 S
-
 #30579
 @@yThe Sealed One's Prison@@N~
 A chamber sealed within a chamber within a chamber, each layer of containment
@@ -6654,18 +6637,13 @@ A passage leads west to the primary deep chamber.
 ~
 0 0 30545
 S
-
 #0
-
 #SHOPS
 0
-
 #SPECIALS
 S
-
 #OBJFUNS
 S
-
 #RESETS
 M 0 30526 5 30582
 M 0 30526 5 30583
@@ -7036,6 +7014,4 @@ E 0 30514 1 11
 M 0 30525 1 30578
 E 0 30515 1 18
 S
-
 #$
-
