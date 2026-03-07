@@ -16,7 +16,7 @@ W all~
 #610
 shade wraith spectral~
 @@ma spectral shade@@n~
-A spectral shade drifts here, moaning softly.
+A spectral shade drifts here, moaning softly.~
 This translucent figure is the remnant of a soul trapped within Kel'Shadra.
 Its hollow eyes glow with pale violet light, and wisps of shadow spiral
 from its incorporeal form. It reaches toward you with clawed hands of pure darkness.~
@@ -31,7 +31,7 @@ L 50 50 0 0 0 0 0 0 0
 #611
 void stalker dark~
 @@ma void stalker@@n~
-A void stalker crouches here, waiting to strike.
+A void stalker crouches here, waiting to strike.~
 Born of the pure nothingness between planes, this creature resembles a
 gaunt humanoid stitched together from living shadow. Its joints creak with
 an unnatural wrongness, and its face is a featureless smear of dark energy.~
@@ -46,7 +46,7 @@ L 50 50 0 0 0 0 0 0 0
 #612
 crumbling golem stone broken~
 @@ca crumbling golem@@n~
-A crumbling golem lumbers aimlessly through here.
+A crumbling golem lumbers aimlessly through here.~
 Once a guardian of Kel'Shadra, this stone construct has partially collapsed.
 Cracks run across its massive chest from which dark energy bleeds. Despite
 its broken state, its remaining fist can still smash stone into powder.~
@@ -61,7 +61,7 @@ L 50 50 0 0 0 0 0 0 0
 #613
 corrupted cultist robed~
 @@Ra corrupted cultist@@n~
-A corrupted cultist chants feverishly here.
+A corrupted cultist chants feverishly here.~
 Dressed in tattered robes bearing the sigil of Kel'Shadra, this once-human
 follower has been twisted beyond recognition. Their eyes have been replaced
 by swirling voids, and dark runes have been carved into their flesh.~
@@ -76,7 +76,7 @@ L 50 50 0 0 0 0 0 0 0
 #614
 shadow hound beast prowling~
 @@ma shadow hound@@n~
-A shadow hound paces back and forth here, growling.
+A shadow hound paces back and forth here, growling.~
 This creature resembles a massive hound, but its body is composed entirely
 of condensed shadow. When it breathes, frozen mist pours from between
 serrated teeth of solidified darkness. Its paws leave scorched marks on the
@@ -92,7 +92,7 @@ L 50 50 0 0 0 0 0 0 0
 #615
 bone guardian skeletal warrior~
 @@da bone guardian@@n~
-A bone guardian stands watch here, armor gleaming darkly.
+A bone guardian stands watch here, armor gleaming darkly.~
 The skeleton of a warrior who fell defending Kel'Shadra has been reanimated
 with dark energy. Enchanted black armor still clings to its frame, and it
 grips an ancient blade with a grip that requires no living muscle to maintain.~
@@ -107,7 +107,7 @@ L 50 50 0 0 0 0 0 0 0
 #616
 obsidian knight warrior dark~
 @@yan obsidian knight@@n~
-@@yAn obsidian knight stands motionless here.@@n
+@@yAn obsidian knight stands motionless here.@@n~
 Encased entirely in black glass-like armor, this knight serves Kel'Shadra
 directly. No flesh exists beneath the enchanted shell - only a shard of
 crystallized void energy powers its terrifying martial skill. The armor
@@ -123,7 +123,7 @@ L 50 50 0 0 0 0 0 0 0
 #617
 void priest caster robed dark~
 @@Ra void priest@@n~
-A void priest kneels in dark supplication here.
+A void priest kneels in dark supplication here.~
 This hollow-eyed figure has given themselves wholly to the void. Their flesh
 has become pale as chalk, and sigils of dark power pulse beneath the skin.
 They chant in a language that makes the air vibrate painfully, channeling
@@ -139,7 +139,7 @@ L 50 50 0 0 0 0 0 0 0
 #618
 umbral wraith greater spectral~
 @@ma greater umbral wraith@@n~
-A greater umbral wraith hovers ominously here.
+A greater umbral wraith hovers ominously here.~
 Far more powerful than a common shade, this ancient wraith has persisted
 for centuries within Kel'Shadra's walls. It can solidify its shadowy form
 into devastating strikes, yet pass through solid matter at will. The cold
@@ -155,7 +155,7 @@ L 50 50 0 0 0 0 0 0 0
 #619
 razorclaw demon shadow beast~
 @@ma razorclaw demon@@n~
-A razorclaw demon crouches on the ceiling above.
+A razorclaw demon crouches on the ceiling above.~
 This winged horror has emerged from a tear in the boundary between the
 material plane and the void. Its four arms end in razor-sharp claws that
 drip a paralytic venom. The creature moves with terrifying speed, able to
@@ -171,8 +171,7 @@ L 50 50 0 0 0 0 0 0 0
 #620
 voidcaller sorcerer dark mage~
 @@Ra voidcaller@@n~
-A voidcaller draws patterns in the air with crackling dark energy.
-~
+A voidcaller draws patterns in the air with crackling dark energy.~
 These masters of void magic have studied the dark arts for decades within
 Kel'Shadra. Their bodies have warped from prolonged exposure - fingers have
 elongated into claws, and their eyes constantly shift between forms as they
@@ -188,7 +187,7 @@ L 50 50 0 0 0 0 0 0 0
 #621
 shadowlord commander undead~
 @@ythe Shadowlord Commander@@n~
-@@yThe Shadowlord Commander stands in grim authority here.@@n
+@@yThe Shadowlord Commander stands in grim authority here.@@n~
 Clad in black armor fused to what was once a powerful warlord, this undead
 commander has served Kel'Shadra for centuries. Discipline and dark power have
 rendered it virtually indestructible in open combat. A crown of void energy
@@ -204,7 +203,7 @@ L 50 50 0 0 0 0 0 0 0
 #622
 kel shadra avatar void incarnate~
 @@eKel'Shadra the Void Incarnate@@n~
-@@eKel'Shadra the Void Incarnate manifests here in terrible glory.@@n
+@@eKel'Shadra the Void Incarnate manifests here in terrible glory.@@n~
 This is the imprisoned consciousness of the ancient void entity itself,
 given temporary physical form. Its presence alone distorts reality; walls
 crack, light bends away, and the very air around it screams. Those who
@@ -221,7 +220,7 @@ L 30 25 25 20 0 0 0 0 0
 #623
 hollow revenant warrior undead~
 @@da hollow revenant@@n~
-A hollow revenant stalks here, its armor clanking emptily.
+A hollow revenant stalks here, its armor clanking emptily.~
 A warrior whose soul was consumed entirely by Kel'Shadra, leaving only
 the body to animate. Its chest cavity is literally hollow - the void
 energy that moves it can be seen pulsing in the gap where its heart once
@@ -237,7 +236,7 @@ L 50 50 0 0 0 0 0 0 0
 #624
 catacomb crawler worm void~
 @@ca catacomb crawler@@n~
-A catacomb crawler writhes here, leaving black slime in its wake.
+A catacomb crawler writhes here, leaving black slime in its wake.~
 A massive worm-like creature spawned from the void-tainted soil beneath
 Kel'Shadra. Its segmented body is ten feet long and armored with plates
 of natural obsidian that have grown from its skin. Its mouth is a spiral
@@ -253,7 +252,7 @@ L 50 50 0 0 0 0 0 0 0
 #625
 tomb warden ancient guardian~
 @@da tomb warden@@n~
-A tomb warden stands at rigid attention here.
+A tomb warden stands at rigid attention here.~
 The ancient guardians of the Void Catacombs, these skeletal warriors
 have been reinforced over the centuries by the ambient void energy of
 the tomb complex. Their bones are now shot through with crystallized
@@ -270,7 +269,7 @@ L 50 50 0 0 0 0 0 0 0
 #626
 void leech parasite drain~
 @@da void leech@@n~
-A void leech clings to the ceiling, sensing your warmth.
+A void leech clings to the ceiling, sensing your warmth.~
 Parasitic creatures that feed on life energy rather than blood, these
 pale, slug-like entities can drain the very essence of a living being
 through touch alone. They reproduce rapidly in areas of high void
@@ -286,7 +285,7 @@ L 50 50 35 0 0 0 0 0 0
 #627
 spire phantom mage ghost arcane~
 @@aa spire phantom@@n~
-A spire phantom drifts here, trailing fading light.
+A spire phantom drifts here, trailing fading light.~
 The ghost of one of the mages who originally built the Shattered Spire,
 this entity is trapped in a loop of its final moments - endlessly repeating
 the ritual that destroyed it. The magic it channels is dangerous not through
@@ -302,7 +301,7 @@ L 50 50 0 0 0 0 0 0 0
 #628
 void elemental air storm spire~
 @@aa void-storm elemental@@n~
-A void-storm elemental crackles with dark lightning here.
+A void-storm elemental crackles with dark lightning here.~
 The collision of void energy with the raw arcane forces of the Shattered
 Spire has created these hybrid entities: elemental beings of pure void-
 lightning. They move at terrifying speed, can pass through the bars of
@@ -319,7 +318,7 @@ L 50 50 0 0 0 0 0 0 0
 #629
 rune golem arcane construct spire~
 @@ca rune-bound golem@@n~
-@@yA rune-bound golem thunders through here.@@n
+@@yA rune-bound golem thunders through here.@@n~
 Created to serve the mages of the Shattered Spire, these massive constructs
 have been corrupted by the void energy that now saturates the structure.
 Their bodies bear the original arcane runes of their creation overlaid with
@@ -336,7 +335,7 @@ L 50 50 0 0 0 0 0 0 0
 #630
 eternal wanderer lost corridor~
 @@can eternal wanderer@@n~
-An eternal wanderer paces the same route here, endlessly.
+An eternal wanderer paces the same route here, endlessly.~
 Those who entered the Eternal Corridors and could not find their way out
 eventually became something other than mortal. The wanderers have lost all
 memory of who they were; they simply walk, forever, in patterns determined
@@ -353,7 +352,7 @@ L 50 50 18 0 0 0 0 0 0
 #631
 void architect builder dark ancient~
 @@aa void architect@@n~
-A void architect studies the walls here with cold scrutiny.
+A void architect studies the walls here with cold scrutiny.~
 Ancient servants of Kel'Shadra who designed and maintain the Eternal
 Corridors, these gaunt humanoids have been altered by centuries of void
 exposure until they are barely recognizable as the scholars they once were.
@@ -371,7 +370,7 @@ L 50 50 15 0 0 0 0 0 0
 #632
 catacomb lord necromancer undead boss~
 @@ythe Catacomb Lord@@n~
-@@yThe Catacomb Lord enthroned on bones watches your approach.@@n
+@@yThe Catacomb Lord enthroned on bones watches your approach.@@n~
 The ruler of the Void Catacombs, this ancient undead necromancer served
 Kel'Shadra in life and continues that service in death. Its body has
 been preserved for centuries by void energy, and it has spent that time
@@ -388,7 +387,7 @@ L 40 35 25 23 0 0 0 0 0
 #633
 spire architect construct boss arcane~
 @@ythe Spire Architect@@n~
-@@yThe Spire Architect assembles and disassembles itself here continuously.@@n
+@@yThe Spire Architect assembles and disassembles itself here continuously.@@n~
 The master construct of the Shattered Spire, this entity was created by
 the spire's chief mage to maintain and defend the tower. It is now a
 fusion of arcane construct and void entity, able to reconfigure its body
@@ -405,7 +404,7 @@ L 40 35 25 0 0 0 0 0 0
 #634
 corridor warden eternal final guardian~
 @@ythe Corridor Warden@@n~
-@@yThe Corridor Warden stands at the far end of the passage, unmoving.@@n
+@@yThe Corridor Warden stands at the far end of the passage, unmoving.@@n~
 The ultimate guardian of the Eternal Corridors, this entity is the
 physical manifestation of the labyrinthine magic itself. It exists
 simultaneously in every corridor, present everywhere at once. When it
@@ -423,7 +422,7 @@ L 35 30 25 10 22 22 0 0 0
 #635
 void herald messenger darkness servant~
 @@ythe Void Herald@@n~
-@@yThe Void Herald kneels in reverence, awaiting your challenge.@@n
+@@yThe Void Herald kneels in reverence, awaiting your challenge.@@n~
 Kel'Shadra's chosen champion and herald, this entity exists to test
 worthy challengers before they reach the Void Incarnate itself. Created
 from the essence of the ten greatest warriors who ever fell within the
@@ -441,7 +440,7 @@ L 35 30 25 10 19 18 0 0 0
 #636
 drowned spirit waterlogged ghost~
 @@ma drowned spirit@@n~
-A drowned spirit drifts here, still choking on phantom water.
+A drowned spirit drifts here, still choking on phantom water.~
 This spectral remnant met its end in the flooded lower vaults of
 Kel'Shadra. It still enacts the moment of drowning endlessly, its
 translucent form convulsing with silent screams. The water it once
@@ -458,7 +457,7 @@ L 50 50 0 0 0 0 0 0 0
 #637
 charred husk burned animated~
 @@ea charred husk@@n~
-A charred husk shambles here, smelling of old fire.
+A charred husk shambles here, smelling of old fire.~
 Whatever this creature was in life, it burned. The void energies of
 Kel'Shadra reanimated it without cooling it: its bones glow orange
 within the blackened shell of its body, and anything it touches chars
@@ -474,7 +473,7 @@ L 50 50 0 0 0 0 0 0 0
 #638
 void rat vermin pest~
 @@ma void rat@@n~
-A void rat skitters here, its eyes pools of black nothing.
+A void rat skitters here, its eyes pools of black nothing.~
 An ordinary rat twisted by prolonged exposure to void energy. Its fur
 has fallen out in patches revealing skin that shifts between solid and
 slightly transparent. It travels in packs and its bite carries a mild
@@ -490,7 +489,7 @@ L 100 32 17 33 28 16 0 0 0
 #639
 shadow wisp minor incorporeal~
 @@ma shadow wisp@@n~
-A shadow wisp bobs here, barely visible in the dim light.
+A shadow wisp bobs here, barely visible in the dim light.~
 The smallest and weakest manifestation of void energy in Kel'Shadra,
 these drifting sparks of darkness are barely sentient. They cluster
 around concentrations of dark magic and can deliver a painful cold
@@ -507,7 +506,7 @@ L 100 15 0 0 0 0 0 0 0
 #640
 scuttling horror spider arachnid void~
 @@ra scuttling horror@@n~
-A scuttling horror drops from the ceiling on thread-thin shadow strands.
+A scuttling horror drops from the ceiling on thread-thin shadow strands.~
 Eight-legged and the size of a large dog, this creature is what results
 when a spider colony nests too long in void-tainted stone. The carapace
 has fused with crystallized darkness, and its web-spinning glands now
@@ -523,7 +522,7 @@ L 50 50 0 0 0 0 0 0 0
 #641
 animated armor empty construct sentinel~
 @@can animated armor@@n~
-An animated armor clanks here with methodical vigilance.
+An animated armor clanks here with methodical vigilance.~
 A full suit of black iron plate animated by a sliver of void energy
 embedded in the breastplate. There is nothing inside - lift the visor
 and find only shadow. It follows patrol patterns established centuries
@@ -540,7 +539,7 @@ L 50 50 0 0 0 0 0 0 0
 #642
 flayed servant skinless undead~
 @@da flayed servant@@n~
-A flayed servant moves here in constant agony.
+A flayed servant moves here in constant agony.~
 An example of Kel'Shadra's cruelty: a mortal servant whose skin was
 removed as punishment and preserved separately so they could never
 fully die. The flayed body continues to serve; the preserved skin is
@@ -557,7 +556,7 @@ L 50 50 0 0 0 0 0 0 0
 #643
 void beetle swarm insect~
 @@ra void beetle@@n~
-A void beetle the size of a fist scuttles here.
+A void beetle the size of a fist scuttles here.~
 Insects drawn to void energy have mutated over generations into creatures
 of considerable power. The void beetle's carapace is harder than iron,
 and its mandibles can bite through most metals given time. They are
@@ -574,7 +573,7 @@ L 100 17 0 0 0 0 0 0 0
 #644
 wailing banshee undead spirit scream~
 @@ma wailing banshee@@n~
-A wailing banshee shrieks somewhere nearby, then falls silent.
+A wailing banshee shrieks somewhere nearby, then falls silent.~
 The preserved emotional anguish of someone who died in absolute torment
 within Kel'Shadra. The banshee has no physical form but is intensely
 real in its effects: its cry causes confusion and temporary blindness,
@@ -591,7 +590,7 @@ L 100 21 0 0 0 0 0 0 0
 #645
 crypt bat swarm flying undead~
 @@da crypt bat@@n~
-A crypt bat hangs from the ceiling, unmoving but aware.
+A crypt bat hangs from the ceiling, unmoving but aware.~
 Ordinary bats transformed by centuries of habitation in Kel'Shadra's
 void-saturated stone. They are blind in normal ways but can perceive
 life force directly, tracking targets through walls. Their guano is
@@ -608,7 +607,7 @@ L 100 0 0 0 0 0 0 0 0
 #646
 ossified giant skeleton large~
 @@dan ossified giant@@n~
-An ossified giant blocks the passage, its bones like white stone.
+An ossified giant blocks the passage, its bones like white stone.~
 The reanimated skeleton of a giant creature - species unidentifiable
 after centuries of void exposure - that fell within the catacombs.
 Its bones have been fossilized by the ambient magic into something
@@ -625,7 +624,7 @@ L 50 50 0 0 0 0 0 0 0
 #647
 necromantic apprentice student undead mage~
 @@Ra necromantic apprentice@@n~
-A necromantic apprentice kneels over a body, muttering.
+A necromantic apprentice kneels over a body, muttering.~
 A junior practitioner of the Catacomb Lord's dark arts, these half-
 corrupted scholars maintain the lower levels of the catacomb complex.
 They have enough power to animate the recently dead and cast basic
@@ -642,7 +641,7 @@ L 50 50 0 0 0 0 0 0 0
 #648
 preserved champion ancient warrior catacomb~
 @@da preserved champion@@n~
-A preserved champion stirs here, centuries of readiness waking.
+A preserved champion stirs here, centuries of readiness waking.~
 One of the honored dead of the Vault of Champions, this warrior's
 preservation is so perfect that it still moves with the grace of the
 living. Its void-preserved muscles function as they did in life.
@@ -660,7 +659,7 @@ L 50 50 22 31 0 0 0 0 0
 #649
 void-tainted rat king alpha swarm~
 @@ythe Rat King of Kel'Shadra@@n~
-@@yThe Rat King of Kel'Shadra crouches here, surrounded by its court.@@n
+@@yThe Rat King of Kel'Shadra crouches here, surrounded by its court.@@n~
 An alpha void rat grown enormous through decades of feeding on void
 energy. The size of a large dog and hideously intelligent, the Rat
 King has organized the entire rat population of the catacombs into a
@@ -677,7 +676,7 @@ L 50 50 34 15 0 0 0 0 0
 #650
 shadow serpent snake void dark~
 @@ma shadow serpent@@n~
-A shadow serpent coils here, tongue flickering darkly.
+A shadow serpent coils here, tongue flickering darkly.~
 A serpent of pure condensed shadow, this creature has no actual mass
 but can still constrict and bite as if solid. Its fangs inject a
 venom of distilled void energy that numbs sensation progressively.
@@ -694,7 +693,7 @@ L 50 50 0 0 0 0 0 0 0
 #651
 ancient lich sorcerer undead arch-mage~
 @@pan ancient lich@@n~
-An ancient lich levitates here, studying you with cold interest.
+An ancient lich levitates here, studying you with cold interest.~
 A sorcerer who achieved lichdom long before Kel'Shadra took its current
 form, this entity predates the void entity's arrival. It negotiated a
 position of relative independence within the citadel in exchange for
@@ -712,7 +711,7 @@ L 45 35 20 32 21 35 0 0 0
 #652
 void-merged twin duplicate mirror~
 a void-merged twin~
-A void-merged twin stands here, moving exactly as you move.
+A void-merged twin stands here, moving exactly as you move.~
 An unfortunate soul who walked too deeply into a void-mirror's reflection
 and merged with their own duplicate. The resulting entity is two people
 occupying one body, their individual wills constantly fighting for
@@ -730,8 +729,7 @@ L 100 0 0 0 0 0 0 0 0
 #653
 arcane revenant mage spire ghost~
 @@Ran arcane revenant@@n~
-An arcane revenant channels crackling energy here.
-~
+An arcane revenant channels crackling energy here.~
 One of the Shattered Spire's original mages, returned as an undead
 bound to the spire by unfinished magical work. Unlike most undead, the
 arcane revenant retains full intelligence and memory. It is furious
@@ -749,7 +747,7 @@ L 50 50 0 0 0 0 0 0 0
 #654
 crystalline horror construct spire arcane~
 @@ca crystalline horror@@n~
-A crystalline horror refracts light in disturbing patterns here.
+A crystalline horror refracts light in disturbing patterns here.~
 A construct made entirely of void-crystal that has grown spontaneously
 within the Shattered Spire's walls over centuries. It has no builder
 and no purpose - it simply grew until it became mobile. Its body
@@ -766,7 +764,7 @@ L 50 50 32 28 0 0 0 0 0
 #655
 spire guardian sentinel construct magical~
 @@ca spire guardian@@n~
-@@yA spire guardian patrols here with measured mechanical steps.@@n
+@@yA spire guardian patrols here with measured mechanical steps.@@n~
 Purpose-built by the original mages to protect the spire's research,
 these constructs are more sophisticated than the crumbling golems in the
 main citadel. They can assess magical threats and select appropriate
@@ -784,7 +782,7 @@ L 50 50 22 29 0 0 0 0 0
 #656
 living spell autonomous arcane construct~
 @@Ra living spell@@n~
-A living spell traces hypnotic patterns in the air here.
+A living spell traces hypnotic patterns in the air here.~
 When a complex spell is cast in an area saturated with void energy,
 occasionally the spell becomes self-sustaining - feeding on the ambient
 magic rather than dissipating. This particular living spell has been
@@ -802,7 +800,7 @@ L 100 0 0 0 0 0 0 0 0
 #657
 mirror wraith reflection obsidian~
 @@aa mirror wraith@@n~
-A mirror wraith lurks within the obsidian surface here.
+A mirror wraith lurks within the obsidian surface here.~
 Something that developed inside a void-mirror after centuries of
 reflecting scenes of death and suffering. It has absorbed so many
 images that it has become capable of manifesting physically by stepping
@@ -819,7 +817,7 @@ L 100 0 0 0 0 0 0 0 0
 #658
 void conduit channel energy pulsing~
 @@Ra void conduit@@n~
-A void conduit drifts here, attached to the wall by energy tendrils.
+A void conduit drifts here, attached to the wall by energy tendrils.~
 A semi-organic entity that grew along the magical conduit in the Spire's
 lower levels, feeding on the flow of void energy. It is essentially a
 living channel: energy enters at one end and exits at the other in
@@ -836,7 +834,7 @@ L 100 0 0 0 0 0 0 0 0
 #659
 corridor echo autonomous sound entity~
 @@ca corridor echo@@n~
-A corridor echo resonates here, mimicking sounds from elsewhere.
+A corridor echo resonates here, mimicking sounds from elsewhere.~
 A consequence of the Eternal Corridors' spatial anomalies: sound
 travels through folded space in ways that occasionally create standing
 waves with enough energy to develop semi-sentience. Corridor echoes
@@ -853,7 +851,7 @@ L 100 33 23 15 0 0 0 0 0
 #660
 lost scholar eternal corridor wanderer~
 @@Ra lost scholar@@n~
-A lost scholar wanders here, muttering about navigation.
+A lost scholar wanders here, muttering about navigation.~
 An academic who entered the Eternal Corridors to study them and was
 never able to leave. Years of wandering have not broken their mind
 entirely - they still carry extensive notes and will trade information
@@ -871,7 +869,7 @@ L 50 50 20 28 0 0 0 0 0
 #661
 spatial fold living anomaly corridor~
 @@ca spatial fold@@n~
-A spatial fold shimmers here, edges fraying into nothing.
+A spatial fold shimmers here, edges fraying into nothing.~
 The Eternal Corridors' most dangerous autonomous phenomenon: a region
 of folded space that has become mobile. Walking into one without
 preparation teleports the victim to a random point in the corridor
@@ -888,7 +886,7 @@ L 100 0 0 0 0 0 0 0 0
 #662
 maze guardian warden servant corridor~
 @@ca maze guardian@@n~
-A maze guardian blocks the passage here, unmoving.
+A maze guardian blocks the passage here, unmoving.~
 Lesser versions of the Corridor Warden, these constructs maintain
 specific junctions in the Eternal Corridors. They cannot reshape
 the maze like the Warden can, but they are physically powerful and
@@ -905,7 +903,7 @@ L 50 50 0 0 0 0 0 0 0
 #663
 herald aspirant trainee warrior dark~
 a herald aspirant~
-A herald aspirant runs forms here, practicing in perfect solitude.
+A herald aspirant runs forms here, practicing in perfect solitude.~
 Mortal warriors who have volunteered to serve as future components of
 the Void Herald, training within the Herald's domain until they are
 deemed worthy of absorption. They do not seem to object to their
@@ -922,7 +920,7 @@ L 50 50 25 23 19 0 0 0 0
 #664
 void echo kel'shadra projection minor~
 @@ma void echo@@n~
-A void echo watches you with borrowed patience.
+A void echo watches you with borrowed patience.~
 A fragment of Kel'Shadra's consciousness given temporary physical form
 to test, observe, or discourage visitors. Not powerful enough to
 represent a serious threat to anyone who has reached this point, but
@@ -939,7 +937,7 @@ L 50 50 0 0 0 0 0 0 0
 #665
 binding seal guardian circle void~
 @@Ba binding seal guardian@@n~
-A binding seal guardian orbits the inscribed circle slowly.
+A binding seal guardian orbits the inscribed circle slowly.~
 Created by the original sorcerers to maintain the binding circle's
 integrity, these entities are entirely purpose-built: they exist only
 to detect and report damage to the sealing runes and to temporarily
@@ -956,7 +954,7 @@ L 50 50 0 0 0 0 0 0 0
 #666
 catacomb priest ceremony death dark~
 @@Ra catacomb priest@@n~
-A catacomb priest performs rites here over a fresh burial.
+A catacomb priest performs rites here over a fresh burial.~
 The religious caste of the catacomb complex, these robed figures
 conduct the ceremonies that maintain the void-preservation of the
 honored dead. They are not fighters by inclination but are formidably
@@ -974,7 +972,7 @@ L 50 50 21 25 18 17 27 18 26
 #667
 void leviathan massive creature water deep~
 @@da void leviathan@@n~
-A void leviathan surfaces briefly from the seeping pool here.
+A void leviathan surfaces briefly from the seeping pool here.~
 Something vast that lives in - or is - the black pool in the Seeping
 Chamber. Whether it is a creature or a manifestation of the pool itself
 is unclear. What emerges during an attack is a portion of its bulk: a
@@ -991,7 +989,7 @@ L 50 50 0 0 0 0 0 0 0
 #668
 trophy collector animated void obsessed~
 @@ythe Trophy Collector@@n~
-@@yThe Trophy Collector paces its gallery, cataloguing its prizes.@@n
+@@yThe Trophy Collector paces its gallery, cataloguing its prizes.@@n~
 An undead entity obsessed with collecting and categorizing trophies
 from defeated adventurers. Unlike the passive trophy display in the
 Hall, the Collector actively hunts for new acquisitions. It is
@@ -1009,7 +1007,7 @@ L 50 50 26 34 23 16 29 0 0
 #669
 spire echo ghost observation~
 @@aa spire echo@@n~
-A spire echo replays a fragment of ancient memory here.
+A spire echo replays a fragment of ancient memory here.~
 A lesser form of the arcane revenant, a spire echo is not fully
 conscious - it simply replays the last major event it witnessed on
 an endless loop. Disrupting the loop is painful for it and causes
@@ -1027,7 +1025,7 @@ L 100 32 18 27 0 0 0 0 0
 #670
 void spawn newborn creature minor~
 @@ma void spawn@@n~
-A void spawn writhes here, newly formed and ravenous.
+A void spawn writhes here, newly formed and ravenous.~
 Freshly born manifestations of void energy that have not yet developed
 into any specific creature type. They are in a state of constant flux,
 their forms cycling rapidly through possible shapes. Despite this
@@ -1044,7 +1042,7 @@ L 100 0 0 0 0 0 0 0 0
 #671
 dusk shade twilight form~
 @@ma dusk shade@@n~
-A dusk shade ripples through the half-light here.
+A dusk shade ripples through the half-light here.~
 A variety of shade that exists specifically in transitional light
 conditions - neither fully in darkness nor fully illuminated. It is
 harder to see than other shades and harder to target, flickering
@@ -1061,7 +1059,7 @@ L 100 17 32 24 0 0 0 0 0
 #672
 forgotten prisoner undead starved~
 @@da forgotten prisoner@@n~
-A forgotten prisoner rattles its chains weakly here.
+A forgotten prisoner rattles its chains weakly here.~
 Something that has been chained in the void-suspension of the Hall of
 Chains for so long that it is no longer quite what it was. The
 void-energy meant to preserve it has instead slowly transformed it.
@@ -1079,7 +1077,7 @@ L 100 35 34 0 0 0 0 0 0
 #673
 void crab crustacean armored carapace~
 @@ra void crab@@n~
-A void crab side-steps here, claws raised defensively.
+A void crab side-steps here, claws raised defensively.~
 A crustacean from some planar depth, dragged into Kel'Shadra through
 one of the void-tears in the deeper chambers. Its carapace is made
 of fused void-crystal that absorbs magical damage. The claws are
@@ -1096,7 +1094,7 @@ L 50 50 26 0 0 0 0 0 0
 #674
 void moth large insect drain~
 @@ra void moth@@n~
-A void moth circles a light source here, drawn compulsively.
+A void moth circles a light source here, drawn compulsively.~
 A moth the size of a small bird, its wings dusted with scales of
 crystallized void energy. The wing-dust causes numbness on contact
 and the moth seeks light with single-minded intensity, which means
@@ -1113,8 +1111,7 @@ L 100 33 21 0 0 0 0 0 0
 #675
 dark sentinel construct tower permanent~
 @@ca dark sentinel@@n~
-A dark sentinel stands absolutely still here, attention total.
-~
+A dark sentinel stands absolutely still here, attention total.~
 The standard permanent guardian construct of Kel'Shadra, these
 featureless pillars of void-stone animate when any unauthorized entity
 enters their defined patrol zone. They cannot be negotiated with,
@@ -1132,7 +1129,7 @@ L 100 17 16 0 0 0 0 0 0
 #676
 void eel serpentine water dark~
 @@ra void eel@@n~
-A void eel slithers across the wet floor here.
+A void eel slithers across the wet floor here.~
 A long, eel-like creature that moves through void-saturated liquid as
 easily as through air. Found primarily in the Seeping Chamber's
 outflows, it can navigate the thin film of dark fluid on the catacomb
@@ -1149,7 +1146,7 @@ L 100 22 0 0 0 0 0 0 0
 #677
 runed knight advanced warrior elite~
 @@ya runed knight@@n~
-@@yA runed knight stands at ready, runes blazing across its armor.@@n
+@@yA runed knight stands at ready, runes blazing across its armor.@@n~
 An elite variant of the obsidian knight, the runed knight has been
 further enchanted with active ward-runes that both protect it and
 store offensive power. The runes cycle through colors as they charge
@@ -1167,7 +1164,7 @@ L 50 50 0 0 0 0 0 0 0
 #678
 void oracle seer prophet blind~
 @@pthe Void Oracle@@n~
-The Void Oracle sits here, seeing nothing and everything.
+The Void Oracle sits here, seeing nothing and everything.~
 A mortal seer who sought enlightenment within Kel'Shadra and found it,
 at terrible cost. The Oracle perceives all possible futures and presents
 simultaneously, which has rendered it cataleptic - but it will answer
@@ -1185,7 +1182,7 @@ L 40 35 25 24 17 22 18 27 23
 #679
 memory eater psychic horror void~
 @@Ba memory eater@@n~
-A memory eater approaches with a sound like rustling paper.
+A memory eater approaches with a sound like rustling paper.~
 An entity that feeds specifically on memories rather than life force.
 Victims of a memory eater's attack do not feel pain - they feel the
 specific absence of something they cannot name, and only realize what
@@ -1202,7 +1199,7 @@ L 100 0 0 0 0 0 0 0 0
 #680
 bone sculptor artisan undead artist~
 @@ythe Bone Sculptor@@n~
-@@yThe Bone Sculptor works here, assembling something from remains.@@n
+@@yThe Bone Sculptor works here, assembling something from remains.@@n~
 An undead artisan who has been crafting sculptures from the bones of
 the catacomb's occupants for longer than anyone can accurately determine.
 The sculptures are extraordinary works of dark art. The Sculptor resents
@@ -1219,8 +1216,7 @@ L 50 50 29 0 0 0 0 0 0
 #681
 void monk ascetic meditating dark~
 @@Ba void monk@@n~
-A void monk sits in motionless meditation here.
-~
+A void monk sits in motionless meditation here.~
 A practitioner of a martial philosophy that seeks enlightenment through
 mastery of void energy rather than through more conventional paths.
 Void monks are not affiliated with Kel'Shadra in the way its servants
@@ -1238,8 +1234,7 @@ L 50 50 0 0 0 0 0 0 0
 #682
 voidfire elemental flame dark cold~
 @@ea voidfire elemental@@n~
-A voidfire elemental burns here, its flame radiating cold.
-~
+A voidfire elemental burns here, its flame radiating cold.~
 The void's inversion of natural fire: a flame that generates intense
 cold rather than heat. Voidfire can burn through most materials but
 does not spread by normal means. It can only ignite other void-infused
@@ -1256,7 +1251,7 @@ L 50 50 35 26 0 0 0 0 0
 #683
 echo knight duplicate replica warrior~
 @@can echo knight@@n~
-An echo knight steps from the wall here, a perfect copy.
+An echo knight steps from the wall here, a perfect copy.~
 An echo of a warrior who fought in this corridor recorded by the void-
 mirrors and given autonomous form. The echo knight has all the skill of
 the original fighter but none of their personality, values, or hesitation.
@@ -1273,7 +1268,7 @@ L 50 50 20 26 26 21 23 0 0
 #684
 dark familiar bound small servant~
 a dark familiar~
-A dark familiar perches here, waiting for its master.
+A dark familiar perches here, waiting for its master.~
 A small void-entity bound to serve a mortal practitioner of dark magic.
 The familiar is separated from its master - either the master is dead
 or the bond has frayed from disuse. Unbound familiars are dangerous
@@ -1290,8 +1285,7 @@ L 100 35 0 0 0 0 0 0 0
 #685
 void strider long-legged hunter~
 @@ma void strider@@n~
-A void strider picks its way through here on impossibly long legs.
-~
+A void strider picks its way through here on impossibly long legs.~
 A predator from the void planes, accidentally drawn through during
 one of the spire's earlier experiments. Resembling a spider's body
 mounted on the legs of a heron, six feet tall with a reach of fifteen,
@@ -1309,8 +1303,7 @@ L 50 50 17 34 35 20 32 0 0
 #686
 whisper entity autonomous sound corridor~
 @@ca whisper entity@@n~
-A whisper entity surrounds you with voices that mean something almost.
-~
+A whisper entity surrounds you with voices that mean something almost.~
 A being made entirely of sound: specifically of the half-heard whispers
 that fill the Eternal Corridors. It is dozens of voices that have coalesced
 into a single entity over the centuries. It communicates in overlapping
@@ -1327,8 +1320,7 @@ L 100 0 0 0 0 0 0 0 0
 #687
 void stag beast creature dark~
 @@ma void stag@@n~
-A void stag stands motionless here, antlers crackling darkly.
-~
+A void stag stands motionless here, antlers crackling darkly.~
 A stag whose form has been completely overtaken by void energy,
 transforming it from an ordinary animal into something magnificent
 and terrible. Its antlers are solid void-crystal and can conduct
@@ -1346,8 +1338,7 @@ L 50 50 0 0 0 0 0 0 0
 #688
 night horror predator hunting dark~
 @@da night horror@@n~
-A night horror moves here, body absorbing all light.
-~
+A night horror moves here, body absorbing all light.~
 A predator evolved in absolute void-darkness, its body biologically
 designed to suppress all light in its immediate vicinity. Being near
 a night horror is like being suddenly and completely blind. It navigates
@@ -1364,8 +1355,7 @@ L 50 50 22 20 29 27 23 35 0
 #689
 void cultist fanatic zealot extreme~
 @@Ra void zealot@@n~
-A void zealot charges forward, screaming devotion.
-~
+A void zealot charges forward, screaming devotion.~
 Unlike the corrupted cultists who serve out of twisted obligation,
 the void zealot has embraced their transformation entirely and pursues
 it willingly. Their corruption is more advanced and self-directed;
@@ -1383,7 +1373,7 @@ L 50 50 32 22 0 0 0 0 0
 #690
 time-locked guardian stasis preserved ancient~
 @@ca time-locked guardian@@n~
-A time-locked guardian moves here in stuttering, frozen intervals.
+A time-locked guardian moves here in stuttering, frozen intervals.~
 A guardian that was caught in a time-stasis effect during one of the
 spire's experiments and never fully released. It moves in discrete
 frames, jumping from one position to the next with no visible
@@ -1401,7 +1391,7 @@ L 50 50 0 0 0 0 0 0 0
 #691
 sanctum templar defender elite dark~
 @@ya sanctum templar@@n~
-@@yA sanctum templar stands at immaculate attention here.@@n
+@@yA sanctum templar stands at immaculate attention here.@@n~
 The elite guard of Kel'Shadra's inner sanctum, templars are selected
 from the best warriors the entity has consumed and rebuilt. They retain
 their martial personality and skill but serve the entity with absolute
@@ -1418,7 +1408,7 @@ L 50 50 25 16 22 16 0 0 0
 #692
 void conjurer summoner dark mage high~
 @@Ra void conjurer@@n~
-A void conjurer opens rifts in the air with casual expertise.
+A void conjurer opens rifts in the air with casual expertise.~
 A step above the voidcaller in mastery and ambition, the void conjurer
 can open stable rifts to the void plane and pull entities through at
 will. The rifts are small and the entities relatively minor, but the
@@ -1436,7 +1426,7 @@ L 50 50 0 0 0 0 0 0 0
 #693
 revenant commander warlord dark undead~
 @@ya revenant commander@@n~
-@@yA revenant commander marshals invisible forces here.@@n
+@@yA revenant commander marshals invisible forces here.@@n~
 The rank between the hollow revenant and the Shadowlord Commander: a
 dead warlord reanimated with enough void energy to retain their
 strategic mind. It treats combat as a campaign problem rather than a
@@ -1454,7 +1444,7 @@ L 50 50 0 0 0 0 0 0 0
 #694
 deep guardian massive ancient immovable~
 @@ya deep guardian@@n~
-@@yA deep guardian looms here, nearly filling the passage.@@n
+@@yA deep guardian looms here, nearly filling the passage.@@n~
 The oldest and largest of Kel'Shadra's guardian constructs, the deep
 guardians were placed in the lowest accessible passages when the
 citadel was first established. They have not been maintained; the
@@ -1473,7 +1463,7 @@ L 50 50 0 0 0 0 0 0 0
 #695
 void harbinger herald dark powerful~
 @@ma void harbinger@@n~
-A void harbinger walks here, reality flinching from its passage.
+A void harbinger walks here, reality flinching from its passage.~
 A being of such concentrated void essence that its presence alone
 causes measurable physical effects: temperature drops, light dims,
 surfaces vibrate at subsonic frequencies. The harbinger is not quite
@@ -1491,7 +1481,7 @@ L 50 50 0 0 0 0 0 0 0
 #696
 essence devourer soul drain undead~
 @@man essence devourer@@n~
-An essence devourer drifts here, pulling toward life.
+An essence devourer drifts here, pulling toward life.~
 An undead entity that has evolved beyond its original state through
 centuries of soul-consumption within Kel'Shadra. Where lesser undead
 drain small amounts of life force, the essence devourer can strip a
@@ -1509,7 +1499,7 @@ L 50 50 25 27 0 0 0 0 0
 #697
 grand overseer supervisor administrator void~
 @@ythe Grand Overseer@@n~
-@@yThe Grand Overseer reviews scrolls here with meticulous attention.@@n
+@@yThe Grand Overseer reviews scrolls here with meticulous attention.@@n~
 The administrative entity responsible for the day-to-day operation of
 the entire citadel complex - managing the undead workforce, scheduling
 maintenance rituals, tracking prisoner status, and reporting to the
@@ -1527,7 +1517,7 @@ L 40 35 25 23 17 0 0 0 0
 #698
 shattered construct broken autonomous~
 @@ca shattered construct@@n~
-A shattered construct drags itself here on mismatched limbs.
+A shattered construct drags itself here on mismatched limbs.~
 A guardian that has been partially destroyed at some point and
 continues to function despite missing critical components. Its
 behavior is erratic from the damaged control matrix: it still
@@ -1545,8 +1535,7 @@ L 50 50 0 0 0 0 0 0 0
 #699
 void incarnate fragment shard kel'shadra projection~
 @@pa fragment of the Void Incarnate@@n~
-A fragment of the Void Incarnate drifts here in distorted space.
-~
+A fragment of the Void Incarnate drifts here in distorted space.~
 A minor manifestation of the entity's consciousness, shed through
 one of the cracks in the binding circle. Not remotely comparable to
 the entity itself, but carrying a fraction of its power and something
@@ -6207,6 +6196,7 @@ the citadel contains, the exit is deliberately unremarkable: a reminder
 that the world outside, with all its ordinariness, is the point. What
 was done here was done so that ordinary doors could remain possible.
 ~
+S
 #0
 #RESETS
 M 0 610 2 610 (null)
