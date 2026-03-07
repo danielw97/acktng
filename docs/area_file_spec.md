@@ -445,7 +445,10 @@ For objects with `item_type = 5` (`ITEM_WEAPON`), `value3` stores the weapon att
 
 Allowed `value3` values (from `tab_weapon_types` in `src/buildtab.c`):
 
-Area policy constraint: for `ITEM_WEAPON`, `value3` should be thematically consistent with the weapon's concept and presentation (`name`, `short_descr`, and `description`) so combat messaging matches builder intent.
+Area policy constraints for `ITEM_WEAPON`:
+
+- `value3` should be thematically consistent with the weapon's concept and presentation (`name`, `short_descr`, and `description`) so combat messaging matches builder intent.
+- `value3 = 0` (`hit`) should not be used unless the object also has the `ITEM_FIST` extra flag.
 
 - `0`: `hit`
 - `1`: `slice`
