@@ -387,11 +387,13 @@ Area policy constraints for object wear flags:
 Builder conventions for held equipment archetypes:
 
 - A **shield** is an object with `item_type = ITEM_ARMOR` and wear flags including `hold`.
-- A **weapon** is an object with `item_type = ITEM_WEAPON` and wear flags including `hold`.
+- A **weapon** is an object with `item_type = ITEM_WEAPON` and wear flags including both `hold` and `take`.
 - A **buckler** is an object with `item_type = ITEM_ARMOR`, wear flags including `hold`, and extra flags including `buckler`.
 - A **wand** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `wand`.
 - A **fist weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `fist`.
 - A **two-handed weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `two-handed`.
+
+Additional constraint: an item may only be set to `item_type = ITEM_WEAPON` if its wear flags include both `hold` and `take`.
 
 ### 7.3) `ITEM_PIECE` object values
 
