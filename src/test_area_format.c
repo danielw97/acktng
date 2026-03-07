@@ -92,34 +92,79 @@ static int parse_int_tokens(const char *line, int *out_values, int max_values)
     return count;
 }
 
-static void scan_area_rooms(const char *area_path, VNUM_NODE **global_room_vnums)
+static int is_blank_or_comment(const char *line)
+{
+    const char *trimmed = skip_space(line);
+
+    return trimmed[0] == '\0' || trimmed[0] == '\r' || trimmed[0] == '\n' || trimmed[0] == '*';
+}
+
+
+static void add_unique_vnum(VNUM_NODE **set, int vnum, const char *area_path, int line_number, const char *kind)
+{
+    if (vnum_set_contains(*set, vnum))
+        fail_area_test(area_path, line_number, "duplicate %s vnum %d across loaded area files", kind, vnum);
+
+    vnum_set_add(set, vnum);
+}
+
+static void scan_area_indexes(const char *area_path, VNUM_NODE **global_room_vnums, VNUM_NODE **global_mobile_vnums, VNUM_NODE **global_object_vnums)
 {
     FILE *fp = fopen(area_path, "r");
     char line[LINE_MAX_LEN];
     int line_number = 0;
-    int in_rooms = 0;
+    enum
+    {
+        SCAN_NONE,
+        SCAN_ROOMS,
+        SCAN_MOBILES,
+        SCAN_OBJECTS
+    } section = SCAN_NONE;
 
     if (fp == NULL)
-        fail_area_test(area_path, 0, "unable to open area file while scanning room vnums");
+        fail_area_test(area_path, 0, "unable to open area file while scanning index vnums");
 
     while (read_line(fp, line, &line_number))
     {
         const char *trimmed = skip_space(line);
 
-        if (starts_with(trimmed, "#ROOMS"))
+        if (starts_with(trimmed, "#MOBILES"))
         {
-            in_rooms = 1;
+            section = SCAN_MOBILES;
             continue;
         }
 
-        if (!in_rooms)
+        if (starts_with(trimmed, "#OBJECTS"))
+        {
+            section = SCAN_OBJECTS;
+            continue;
+        }
+
+        if (starts_with(trimmed, "#ROOMS"))
+        {
+            section = SCAN_ROOMS;
+            continue;
+        }
+
+        if (section == SCAN_NONE)
             continue;
 
         if (starts_with(trimmed, "#0"))
-            break;
+        {
+            section = SCAN_NONE;
+            continue;
+        }
 
         if (trimmed[0] == '#' && isdigit((unsigned char)trimmed[1]))
-            vnum_set_add(global_room_vnums, atoi(trimmed + 1));
+        {
+            int vnum = atoi(trimmed + 1);
+            if (section == SCAN_ROOMS)
+                add_unique_vnum(global_room_vnums, vnum, area_path, line_number, "room");
+            else if (section == SCAN_MOBILES)
+                add_unique_vnum(global_mobile_vnums, vnum, area_path, line_number, "mobile");
+            else if (section == SCAN_OBJECTS)
+                add_unique_vnum(global_object_vnums, vnum, area_path, line_number, "object");
+        }
     }
 
     fclose(fp);
@@ -223,6 +268,9 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
         if (trimmed[0] == '\0' || trimmed[0] == '\r' || trimmed[0] == '\n')
             continue;
 
+        if (trimmed[0] == '*')
+            continue;
+
         if (strchr("QKNILVXFUORWPTBSM", trimmed[0]) == NULL)
             fail_area_test(area_path, *line_number, "invalid #AREA directive '%c'", trimmed[0]);
     }
@@ -269,6 +317,8 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
             fail_area_test(area_path, *line_number, "unexpected EOF inside #MOBILES");
 
         trimmed = skip_space(line);
+        if (is_blank_or_comment(trimmed))
+            continue;
         if (starts_with(trimmed, "#0"))
             return;
 
@@ -293,6 +343,8 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
             if (!read_line(fp, line, line_number))
                 fail_area_test(area_path, *line_number, "unexpected EOF inside mobile body");
             trimmed = skip_space(line);
+            if (is_blank_or_comment(trimmed))
+                continue;
             marker = trimmed[0];
 
             if (marker == '#')
@@ -331,6 +383,8 @@ static void parse_objects_section(FILE *fp, char *line, int *line_number, const 
             fail_area_test(area_path, *line_number, "unexpected EOF inside #OBJECTS");
 
         trimmed = skip_space(line);
+        if (is_blank_or_comment(trimmed))
+            continue;
         if (starts_with(trimmed, "#0"))
             return;
 
@@ -353,6 +407,8 @@ static void parse_objects_section(FILE *fp, char *line, int *line_number, const 
             if (!read_line(fp, line, line_number))
                 fail_area_test(area_path, *line_number, "unexpected EOF inside object body");
             trimmed = skip_space(line);
+            if (is_blank_or_comment(trimmed))
+                continue;
 
             if (trimmed[0] != 'A' && trimmed[0] != 'E' && trimmed[0] != 'L')
             {
@@ -364,6 +420,9 @@ static void parse_objects_section(FILE *fp, char *line, int *line_number, const 
 
             if (trimmed[0] == 'A')
             {
+                if (parse_exact_n_ints(trimmed + 1, 2))
+                    continue;
+
                 if (!read_line(fp, line, line_number) || !parse_exact_n_ints(line, 2))
                     fail_area_test(area_path, *line_number, "object affect must contain location and modifier");
             }
@@ -374,6 +433,9 @@ static void parse_objects_section(FILE *fp, char *line, int *line_number, const 
             }
             else
             {
+                if (parse_exact_n_ints(trimmed + 1, 1))
+                    continue;
+
                 if (!read_line(fp, line, line_number) || !parse_exact_n_ints(line, 1))
                     fail_area_test(area_path, *line_number, "object level marker must be followed by integer level");
             }
@@ -415,6 +477,8 @@ static void parse_rooms_section(FILE *fp, char *line, int *line_number, const ch
             fail_area_test(area_path, *line_number, "unexpected EOF inside #ROOMS");
 
         trimmed = skip_space(line);
+        if (is_blank_or_comment(trimmed))
+            continue;
         if (starts_with(trimmed, "#0"))
             break;
 
@@ -434,6 +498,8 @@ static void parse_rooms_section(FILE *fp, char *line, int *line_number, const ch
             if (!read_line(fp, line, line_number))
                 fail_area_test(area_path, *line_number, "unexpected EOF while reading room entries");
             trimmed = skip_space(line);
+            if (is_blank_or_comment(trimmed))
+                continue;
 
             if (trimmed[0] == 'S')
                 break;
@@ -479,6 +545,8 @@ static void parse_shops_section(FILE *fp, char *line, int *line_number, const ch
             fail_area_test(area_path, *line_number, "unexpected EOF inside #SHOPS");
 
         trimmed = skip_space(line);
+        if (is_blank_or_comment(trimmed))
+            continue;
         if (parse_exact_n_ints(trimmed, 1) && atoi(trimmed) == 0)
             return;
 
@@ -493,7 +561,7 @@ static void parse_shops_section(FILE *fp, char *line, int *line_number, const ch
     }
 }
 
-static void parse_specials_section(FILE *fp, char *line, int *line_number, const char *area_path, char expected_lead)
+static void parse_specials_section(FILE *fp, char *line, int *line_number, const char *area_path, const char *allowed_leads)
 {
     for (;;)
     {
@@ -505,10 +573,11 @@ static void parse_specials_section(FILE *fp, char *line, int *line_number, const
         trimmed = skip_space(line);
         if (trimmed[0] == 'S')
             return;
-        if (trimmed[0] == '*')
+        if (is_blank_or_comment(trimmed))
             continue;
-        if (trimmed[0] != expected_lead)
+        if (strchr(allowed_leads, trimmed[0]) == NULL)
             fail_area_test(area_path, *line_number, "invalid section line: %.20s", trimmed);
+
     }
 }
 
@@ -648,7 +717,7 @@ static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *glo
         }
         if (starts_with(trimmed, "#MOBPROGS"))
         {
-            parse_specials_section(fp, line, &line_number, area_path, 'M');
+            parse_specials_section(fp, line, &line_number, area_path, "M");
             continue;
         }
         if (starts_with(trimmed, "#OBJECTS"))
@@ -669,12 +738,12 @@ static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *glo
         }
         if (starts_with(trimmed, "#SPECIALS"))
         {
-            parse_specials_section(fp, line, &line_number, area_path, 'M');
+            parse_specials_section(fp, line, &line_number, area_path, "MO");
             continue;
         }
         if (starts_with(trimmed, "#OBJFUNS"))
         {
-            parse_specials_section(fp, line, &line_number, area_path, 'O');
+            parse_specials_section(fp, line, &line_number, area_path, "O");
             continue;
         }
         if (starts_with(trimmed, "#RESETS"))
@@ -702,6 +771,8 @@ int main(void)
     FILE *list_fp = fopen("../area/area.lst", "r");
     char area_name[1024];
     VNUM_NODE *global_room_vnums = NULL;
+    VNUM_NODE *global_mobile_vnums = NULL;
+    VNUM_NODE *global_object_vnums = NULL;
 
     if (list_fp == NULL)
         list_fp = fopen("area/area.lst", "r");
@@ -735,7 +806,7 @@ int main(void)
             fail_area_test(area_name, 0, "listed area file could not be opened");
         fclose(area_fp);
 
-        scan_area_rooms(area_path, &global_room_vnums);
+        scan_area_indexes(area_path, &global_room_vnums, &global_mobile_vnums, &global_object_vnums);
     }
 
     rewind(list_fp);
@@ -774,6 +845,8 @@ int main(void)
 
     fclose(list_fp);
     vnum_set_free(global_room_vnums);
+    vnum_set_free(global_mobile_vnums);
+    vnum_set_free(global_object_vnums);
     puts("test_area_format: all tests passed");
     return 0;
 }
