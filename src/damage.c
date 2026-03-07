@@ -33,6 +33,7 @@ bool should_emit_shortfight_kill_summary(CHAR_DATA *ch, CHAR_DATA *victim);
 void update_kill_counts(CHAR_DATA *ch, CHAR_DATA *victim);
 void execute_raw_kill(CHAR_DATA *ch, CHAR_DATA *victim);
 void handle_autoloot_on_npc_kill(CHAR_DATA *ch, CHAR_DATA *victim);
+int apply_elemental_resistance_and_susceptibility(CHAR_DATA *victim, int element, int dam);
 
 void damage_build_hit_messages(char *buf1, size_t buf1_size,
                                char *buf2, size_t buf2_size,
@@ -170,6 +171,28 @@ void handle_autoloot_on_npc_kill(CHAR_DATA *ch, CHAR_DATA *victim)
 
     if (IS_SET(ch->config, CONFIG_AUTOSAC))
         do_sacrifice(ch, "corpse");
+}
+
+int apply_elemental_resistance_and_susceptibility(CHAR_DATA *victim, int element, int dam)
+{
+    int vi_resist = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].resist_realms : victim->resist) : race_table[victim->race].resist_realms);
+    int vi_suscept = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].suscept_realms : victim->suscept) : race_table[victim->race].suscept_realms);
+    int vi_race = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].race_flags : victim->race_mods) : race_table[victim->race].race_flags);
+
+    if (IS_SET(vi_suscept, element))
+    {
+        dam += dam * 50 / 100;
+    }
+    else if (IS_SET(vi_resist, element))
+    {
+        dam -= dam * 35 / 100;
+    }
+    else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && !IS_SET(element, ELE_PHYSICAL))
+    {
+        dam -= dam * 35 / 100;
+    }
+
+    return dam;
 }
 
 int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible)
@@ -400,6 +423,7 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
     int ch_strong = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].strong_realms : ch->strong_magic) : race_table[ch->race].strong_realms);
     int ch_weak = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].weak_realms : ch->weak_magic) : race_table[ch->race].weak_realms);
     int ch_race = (IS_NPC(ch) ? (((ch->race > 0) && (ch->race < MAX_RACE)) ? race_table[ch->race].race_flags : ch->race_mods) : race_table[ch->race].race_flags);
+    int vi_race = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].race_flags : victim->race_mods) : race_table[victim->race].race_flags);
 
     if (IS_SET(ch_strong, element))
         dam_mod += .25;
@@ -415,24 +439,6 @@ int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt)
 
     if (!IS_SET(element, ELE_PHYSICAL) && is_affected(ch, skill_lookup("mystical focus")))
         dam_mod += .5;
-
-    int vi_resist = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].resist_realms : victim->resist) : race_table[victim->race].resist_realms);
-    int vi_suscept = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].suscept_realms : victim->suscept) : race_table[victim->race].suscept_realms);
-    int vi_race = (IS_NPC(victim) ? (((victim->race > 0) && (victim->race < MAX_RACE)) ? race_table[victim->race].race_flags : victim->race_mods) : race_table[victim->race].race_flags);
-
-    if (IS_SET(vi_suscept, element))
-    {
-        dam_mod += .5;
-    }
-    else if (IS_SET(vi_resist, element))
-    {
-        dam_mod -= .35;
-    }
-
-    else if (IS_SET(vi_race, RACE_MOD_NO_MAGIC) && element != ELE_PHYSICAL)
-    {
-        dam_mod -= .35;
-    }
 
     if (!IS_NPC(ch))
     {
@@ -690,6 +696,8 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
             cloak_reduction = cloak_level_damage_reduction(get_psuedo_level(victim));
 
         dam = UMAX(0, dam - cloak_reduction);
+
+        dam = apply_elemental_resistance_and_susceptibility(victim, element, dam);
     }
 
     /*
