@@ -2480,7 +2480,8 @@ shadow stalker~
 @@RA shadow stalker@@D moves at the edge of perception, @@Kalways one step ahead@@D.@@N
 ~
 @@DA pure stealth predator. The shadow stalker is the assassin of undeath -
-physically devastating, @@Rimpossible to pin down@@D, and capable of a few well-
+9 134217728 8390656 0
+physically devastating, @@Rimpossible to pin down@@D, and capable of a few well-
 chosen debilitating spells that it uses with precision rather than abandon.@@N
 ~
 16481 524800 -1000 S
@@ -2877,7 +2878,7 @@ shadowforged breastplate breastplate~
 @@Ka shadowforged breastplate@@N~
 @@KA shadowforged breastplate@@D of @@Kblack steel@@D reflects no light at all.@@N~
 9 134217728 8650752 0
-14 0 0 0 0 0 0 0 0 0
+5 134217728 8421376 0
 13
 A
 17 0
@@ -3220,7 +3221,7 @@ void ring ring~
 A
 27 0
 A
-12 0
+8 134217728 8396800 0
 L
 44
 #1439
@@ -3298,155 +3299,155 @@ iron-link belt belt iron link~
 A
 13 0
 A
-17 0
+8 268435456 8650752 0
 L
-43
-#1445
-dark visage mask mask~
-@@Ka dark visage mask@@N~
-@@KA dark visage mask@@D carved from @@Kbone@@D with @@Rstaring eye-holes@@D rests here.@@N~
-8 134217728 8388624 0
+8 268435456 8650752 0
+8 268435456 8388640 0
+8 268435456 8388640 0
+8 402653184 8454144 0
+8 402653184 8454144 0
+8 268435456 8388610 0
 0 0 0 0 0 0 0 0 0 0
-11
+8 268435456 8388612 0
 A
-17 0
+8 268435456 8388616 0
 A
-13 0
+8 268435456 8388616 0
 L
-32
-#1446
-iron death-mask mask visor~
-@@Ka iron death-mask@@N~
-@@Ka iron death-mask@@D with @@Kscreaming features@@D has been left here.@@N~
-9 134217728 8388624 0
+8 268435456 8650752 0
+10 268435584 8388608 0
+10 268435584 8388608 0
+2 268435456 8388608 0
+5 402653184 8421376 0
+5 268435456 8421376 0
+5 268435456 8421376 0
+9 402653184 8912896 0
+A
+9 268435456 8912896 0
+A
+9 268435456 8388624 0
+L
+9 268435456 8388624 0
+9 268435456 10485760 0
+9 268435456 12582912 0
+9 268435456 8396800 0
+9 268435456 8390656 0
+9 268435456 8389632 0
+9 268435456 8392704 0
+5 268435456 8421376 0
+A
+5 268435456 8421376 0
+A
+9 268435456 8454144 0
+L
+9 402653184 8912896 0
+8 268435456 8404992 0
+8 268435456 8388864 0
+9 268435456 8912896 0
+9 268435456 8912896 0
+8 268435456 8519680 0
 0 0 0 0 0 0 0 0 0 0
-9
+8 268435456 8519680 0
 A
-17 0
+8 268435456 8388864 0
 A
-13 0
+8 268435456 8388864 0
 L
-46
-#1447
-necrotic tome tome~
-@@Ka necrotic tome@@N~
-@@KA necrotic tome@@D bound in @@Kdark leather@@D rests here, @@Rfaintly warm@@D to the touch.@@N~
-9 134217728 8421376 0
-0 0 0 0 0 0 0 0 0 0
-3
+8 268435456 8650752 0
+8 268435456 8388640 0
+8 268435456 8388736 0
+8 268435456 8388736 0
+8 268435456 8454144 0
+9 268435520 8912896 0
+9 268435456 12582912 0
+8 402653248 8404992 0
 A
-27 0
+8 402653248 8388864 0
 A
-12 0
+8 268435456 8519680 0
 L
-35
-#1448
-grimoire corruption grimoire~
-@@Ra grimoire of corruption@@N~
-@@RA grimoire of corruption@@D bleeds @@Kdark energy from its spine@@D where it lies.@@N~
-9 134217728 8388609 0
-0 0 0 0 0 0 0 0 0 0
-4
+8 268435456 8392704 0
+9 268435520 8388624 0
+5 268435520 8421376 0
+9 268435520 8912896 0
+9 268435456 8388624 0
+9 402653248 10485760 0
+9 402653248 8396800 0
+9 268435456 8389632 0
 A
-27 0
+9 268435456 12582912 0
 A
-12 0
+8 268435456 8519680 0
+A
+8 268435456 8388864 0
 L
-52
-#1449
-phylactery shard shard crystal~
-@@Da phylactery shard@@N~
-@@DA phylactery shard@@D of @@Kdeep violet crystal@@D pulses with @@Rcaptured life-energy@@D here.@@N~
-9 134217728 8388610 0
-0 0 0 0 0 0 0 0 0 0
-5
+8 268435456 8454144 0
+8 268435456 8404992 0
+9 402653248 8396800 0
+9 402653248 8392704 0
+8 268435520 8519680 0
+8 268435456 8454144 0
+8 268435456 8404992 0
+9 268435456 8390656 0
 A
-27 0
+8 268435456 8388864 0
 A
-13 0
-L
-45
-#1450
-shadowpiercer blade sword boss~
-@@KShadowpiercer@@N~
-@@KShadowpiercer@@D, a @@Rvibrant blade of pure shadow-steel@@D, floats above the ground here.@@N~
-5 134217728 8421376 0
-8 8 14 11 0 0 0 0 0 0
-6
+5 268435520 8421376 0
 A
-19 0
-A
-18 0
-A
-17 0
-L
-55
-#1451
-bonelord maul maul boss hammer~
-@@KThe Bonelord's Maul@@N~
-@@KThe Bonelord's Maul@@D, a weapon @@Rbuilt from fused femur and iron@@D, lies here.@@N~
-5 134217728 8421376 0
-10 9 16 8 0 0 0 0 0 0
-7
-A
-19 0
-A
-18 0
-A
-13 0
+5 402653248 8421376 0
 L
 60
-#1452
-valzareth robe robe boss~
-@@KValzareth's Shadowweave Robe@@N~
-@@KValzareth's Shadowweave Robe@@D of @@Rliving shadow-thread@@D lies crumpled here.@@N~
-9 134217792 8650752 0
+8 402653248 8454144 0
+8 268435456 8404992 0
+8 268435456 8388864 0
+9 268435520 8388624 0
+9 268435520 8912896 0
 30 0 0 0 0 0 0 0 0 0
-3
+9 268435456 8392704 0
 A
-17 -40
+8 268435456 8519680 0
 A
-27 30
+5 268435456 8421376 0
 A
-12 80
+9 268435520 8912896 0
 L
 60
-#1453
-bonelord chestplate chestplate boss plate~
-@@KThe Bonelord's Chestplate@@N~
-@@KThe Bonelord's Chestplate@@D of @@Kfused bone and cursed iron@@D rests here.@@N~
-9 134217728 8650752 0
-35 0 0 0 0 0 0 0 0 0
-9
+9 268435520 8388624 0
+8 268435456 8404992 0
+8 268435456 8388864 0
+9 268435456 10485760 0
+9 268435456 12582912 0
+9 268435456 8396800 0
+9 268435456 8389632 0
 A
-17 0
+9 268435456 8390656 0
 A
-13 0
+9 268435456 8392704 0
 A
-19 0
+9 268435456 8454144 0
 L
 60
-#1454
-valzareth phylactery crown crown boss~
-@@KValzareth's Phylactery Crown@@N~
-@@KValzareth's Phylactery Crown@@D of @@Kblack bone set with violet gems@@D hovers here.@@N~
-9 134217792 8388616 0
-25 0 0 0 0 0 0 0 0 0
+8 268435456 8650752 0
+8 268435456 8388736 0
+9 268435456 8388616 0
+8 268435456 8388610 0
+8 268435456 8388612 0
+8 268435456 8650752 0
 2
 A
-17 0
+8 268435456 8388640 0
 A
-27 0
+9 268435456 10485760 0
 A
-12 0
+9 268435456 12582912 0
 L
 60
-#1455
-bonelord skull helm helm boss~
-@@KThe Bonelord's Skull Helm@@N~
-@@KThe Bonelord's Skull Helm@@D, a @@Kcrown of fused skulls@@D, rests here.@@N~
-9 134217728 8388616 0
-28 0 0 0 0 0 0 0 0 0
+9 268435456 8390656 0
+9 268435456 8389632 0
+9 268435456 8912896 0
+5 268435456 8421376 0
+9 268435456 8388624 0
+5 268435456 8421376 0
 6
 A
 17 0
