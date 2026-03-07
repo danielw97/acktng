@@ -316,6 +316,8 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 
 `extra_flags` is a bitvector field in the object header line and supports the following bits from `src/config.h`:
 
+Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is runtime-managed by item generation systems.
+
 - `ITEM_GENERATED` = `1`
 - `ITEM_BIND_EQUIP` = `2`
 - `ITEM_NODISARM` = `4`
