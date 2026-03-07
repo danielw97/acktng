@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "config.h"
+
 #define LINE_MAX_LEN 4096
 
 typedef struct vnum_node VNUM_NODE;
@@ -239,6 +241,25 @@ static int parse_at_least_n_ints(const char *line, int count)
     return 1;
 }
 
+static void parse_mobile_loot_extension(const char *line, int line_number, const char *area_path)
+{
+    const char *trimmed = skip_space(line);
+
+    if (trimmed[0] == 'l')
+    {
+        if (!parse_exact_n_ints(trimmed + 1, MAX_LOOT + 1))
+            fail_area_test(area_path, line_number, "mobile 'l' line must contain loot_amount plus %d loot vnums", MAX_LOOT);
+        return;
+    }
+
+    if (trimmed[0] == 'L')
+    {
+        if (!parse_exact_n_ints(trimmed + 1, MAX_LOOT))
+            fail_area_test(area_path, line_number, "mobile 'L' line must contain exactly %d loot chance values", MAX_LOOT);
+        return;
+    }
+}
+
 static void consume_tilde_string(FILE *fp, char *line, int *line_number, const char *area_path)
 {
     do
@@ -355,8 +376,14 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
                 break;
             }
 
-            if (marker == '!' || marker == '|' || marker == '+' || marker == 'l' || marker == 'L')
+            if (marker == '!' || marker == '|' || marker == '+')
                 continue;
+
+            if (marker == 'l' || marker == 'L')
+            {
+                parse_mobile_loot_extension(trimmed, *line_number, area_path);
+                continue;
+            }
 
             if (marker == '>')
             {
