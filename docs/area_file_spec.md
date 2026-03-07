@@ -382,6 +382,16 @@ Area policy constraints for object wear flags:
 - Every object **must** include `ITEM_TAKE`.
 - No object may include `ITEM_WEAR_CLAN_COLORS`.
 
+### 7.3) `ITEM_PIECE` object values
+
+For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots define how piece-combining works (`connect` command in `src/act_obj.c`):
+
+- `value0`: previous-piece vnum in the connection chain
+- `value1`: next-piece vnum in the connection chain
+- `value2`: replacement object vnum created when two matching pieces are connected
+
+At runtime, two piece objects connect successfully when either `pieceA.value0 == pieceB.vnum` or `pieceA.value1 == pieceB.vnum`. On success, both pieces are consumed and a new object with vnum `pieceA.value2` is created.
+
 ## 8) `#ROOMS` section
 
 A list of room records terminated by `#0`:
@@ -419,6 +429,11 @@ Room entries are one of:
 - End of room: `S`
 
 Any other token in a room body is invalid.
+
+Room description content requirements:
+
+- Each room's main `<description>~` must contain at least 3 lines of text.
+- Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
 
 ## 9) `#SHOPS` section
 
