@@ -383,6 +383,15 @@ Area policy constraints for object wear flags:
 - No object may include `ITEM_WEAR_CLAN_COLORS`.
 - Object `name`, `short_descr`, and `description` fields should be thematically consistent with the object's non-`take` wear flags (e.g., a `head` item should read as headgear, `wrist` as wristwear, `hold` as a held item).
 
+Builder conventions for held equipment archetypes:
+
+- A **shield** is an object with `item_type = ITEM_ARMOR` and wear flags including `hold`.
+- A **weapon** is an object with `item_type = ITEM_WEAPON` and wear flags including `hold`.
+- A **buckler** is an object with `item_type = ITEM_ARMOR`, wear flags including `hold`, and extra flags including `buckler`.
+- A **wand** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `wand`.
+- A **fist weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `fist`.
+- A **two-handed weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `two-handed`.
+
 ### 7.3) `ITEM_PIECE` object values
 
 For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots define how piece-combining works (`connect` command in `src/act_obj.c`):
