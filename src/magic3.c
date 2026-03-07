@@ -188,6 +188,8 @@ bool spell_ice_bolt(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    if (saves_spell(level, victim))
       dam /= 1.2;
    sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE);
+   if (!trigger_elemental_spell_combo(ch, victim, obj, sn, level))
+      apply_elemental_spell_debuff(ch, victim, sn, "@@aFrost clings to your body, slowing your recovery.@@N\n\r");
    return TRUE;
 }
 
