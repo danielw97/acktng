@@ -321,7 +321,45 @@ For `E` entries, `<description>` must include exactly one trailing newline befor
 
 Loader stops this trailing-entry loop at first unrecognized marker (which starts next object/terminator).
 
-### 7.1) Item `extra_flags` bitvector
+### 7.1) Item `item_type` enum
+
+`item_type` is the first numeric field on the object header line. Builder-facing names and values are defined by `tab_item_types` in `src/buildtab.c`.
+
+- `light` = `1` (`ITEM_LIGHT`)
+- `scroll` = `2` (`ITEM_SCROLL`)
+- `null` = `3` (legacy placeholder; no `ITEM_*` define)
+- `staff` = `4` (`ITEM_STAFF`)
+- `weapon` = `5` (`ITEM_WEAPON`)
+- `beacon` = `6` (`ITEM_BEACON`)
+- `portal` = `7` (`ITEM_PORTAL`)
+- `treasure` = `8` (`ITEM_TREASURE`)
+- `armor` = `9` (`ITEM_ARMOR`)
+- `potion` = `10` (`ITEM_POTION`)
+- `clutch` = `11` (`ITEM_CLUTCH`)
+- `furniture` = `12` (`ITEM_FURNITURE`)
+- `trash` = `13` (`ITEM_TRASH`)
+- `trigger` = `14` (`ITEM_TRIGGER`)
+- `container` = `15` (`ITEM_CONTAINER`)
+- `quest` = `16` (`ITEM_QUEST`)
+- `drink_con` = `17` (`ITEM_DRINK_CON`)
+- `key` = `18` (`ITEM_KEY`)
+- `food` = `19` (`ITEM_FOOD`)
+- `money` = `20` (`ITEM_MONEY`)
+- `stake` = `21` (`ITEM_STAKE`)
+- `boat` = `22` (`ITEM_BOAT`)
+- `corpse_npc` = `23` (`ITEM_CORPSE_NPC`)
+- `corpse_pc` = `24` (`ITEM_CORPSE_PC`)
+- `fountain` = `25` (`ITEM_FOUNTAIN`)
+- `pill` = `26` (`ITEM_PILL`)
+- `board` = `27` (`ITEM_BOARD`)
+- `soul` = `28` (`ITEM_SOUL`)
+- `piece` = `29` (`ITEM_PIECE`)
+- `matrix` = `30` (`ITEM_SPELL_MATRIX`)
+- `enchantment` = `31` (`ITEM_ENCHANTMENT`)
+- `present` = `32` (`ITEM_WRAPPED_PRESENT`)
+- `stash` = `33` (`ITEM_STASH`)
+
+### 7.2) Item `extra_flags` bitvector
 
 `extra_flags` is a bitvector field in the object header line and supports the following bits from `src/config.h`:
 
@@ -361,7 +399,7 @@ Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is
 - `ITEM_FIST` = `2147483648`
 - `ITEM_TWO_HANDED` = `4294967296`
 
-### 7.2) Item `wear_flags` bitvector
+### 7.3) Item `wear_flags` bitvector
 
 `wear_flags` is a bitvector field in the object header line. Builder-facing names and values are defined by `tab_wear_flags` in `src/buildtab.c`:
 
@@ -410,7 +448,7 @@ Builder conventions for held equipment archetypes:
 
 Additional constraint: an item may only be set to `item_type = ITEM_WEAPON` if its wear flags include both `hold` and `take`.
 
-### 7.3) Item `item_apply` bitvector
+### 7.4) Item `item_apply` bitvector
 
 `item_apply` is a bitvector field in the object header line. Builder-facing names and values are defined by `tab_item_apply` in `src/buildtab.c`:
 
@@ -438,7 +476,7 @@ Notes:
 - `nada` (`ITEM_APPLY_NONE`) is the baseline/default bit and is set on newly created objects.
 - This field is additive, so multiple `item_apply` effects may be combined with bitwise OR.
 
-### 7.4) `ITEM_PIECE` object values
+### 7.5) `ITEM_PIECE` object values
 
 For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots define how piece-combining works (`connect` command in `src/act_obj.c`):
 
@@ -448,7 +486,7 @@ For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots de
 
 At runtime, two piece objects connect successfully when either `pieceA.value0 == pieceB.vnum` or `pieceA.value1 == pieceB.vnum`. On success, both pieces are consumed and a new object with vnum `pieceA.value2` is created.
 
-### 7.5) `ITEM_WEAPON` object values
+### 7.6) `ITEM_WEAPON` object values
 
 For objects with `item_type = 5` (`ITEM_WEAPON`), `value3` stores the weapon attack type (`Weapon Type` in builder displays).
 
