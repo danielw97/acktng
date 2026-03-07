@@ -24,6 +24,7 @@ Notes:
 - Section order is flexible for loading (the loader dispatches by section name).
 - Some sections are optional.
 - Section names are case-sensitive in area files as written.
+- Area files must not contain comments; comment syntax is not part of the accepted on-disk format.
 
 ## 2) String encoding
 
