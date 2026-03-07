@@ -538,6 +538,7 @@ Room entries are one of:
   ```
   - `door` must be 0..5.
   - destination line must be exactly 3 integers.
+  - Named doors must be prefixed with `^` in `<exit_keyword>` (for example, `^iron gate`).
 - Extra description:
   ```text
   E
@@ -603,6 +604,15 @@ Directional traversal constraint:
 
 ### 8.3) Exit `locks` and reset door state values
 
+Door indices in `D<door>` lines map to movement directions (from `compass_name` in `src/act_move.c`):
+
+- `0` = north
+- `1` = east
+- `2` = south
+- `3` = west
+- `4` = up
+- `5` = down
+
 In room `D<door>` entries, the destination line field `<locks>` is a bitvector over `tab_door_types` in `src/buildtab.c`:
 
 - `door` = `1`
@@ -614,6 +624,13 @@ In room `D<door>` entries, the destination line field `<locks>` is a bitvector o
 - `smashproof` = `64`
 - `passproof` = `128`
 - `nodetect` = `256`
+
+Practical door behavior in area files/runtime:
+
+- Set `<locks>` bit `door` (`EX_ISDOOR`) when the exit should behave like an actual door/gate that can be opened/closed/locked.
+- `closed`/`locked` are runtime state bits (`EX_CLOSED`/`EX_LOCKED`). On save, the area writer strips these two bits from `<locks>`, so persistent initial door state should be authored through `#RESETS` command `D`, not by relying on `closed`/`locked` in the room exit line.
+- During gameplay, opening/closing/locking/unlocking an exit updates the reverse side too when the reverse exit exists and points back to the source room.
+- Named door keywords must start with `^` (for example, `^stone hatch`) so movement messaging treats the keyword as a standalone noun phrase.
 
 In `#RESETS`, command `D` uses door state enum values from `tab_door_states` in `src/buildtab.c`:
 
