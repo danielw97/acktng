@@ -33,6 +33,7 @@ Most text fields are read with `fread_string()`: they must be terminated by `~`.
 Implications:
 
 - Single-line and multi-line strings are allowed, but a terminating `~` is required.
+- Strings must not contain back-to-back newlines (no blank lines represented by `\n\n`).
 - A missing `~` causes parse failure.
 - For mobile `long_descr` and all extra-description text blocks (`E` entries in `#OBJECTS` and `#ROOMS`), the string must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`).
 
