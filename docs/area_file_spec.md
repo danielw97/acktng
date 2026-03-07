@@ -189,7 +189,7 @@ Optional extension blocks (detected by leading marker):
 
 ### 5.4) Mobile `act` flags bitvector
 
-`act` on the main mobile data line (`<act> <affected_by> <alignment> S`) is a bitvector with these known flags:
+`act` on the main mobile data line (`<act> <affected_by> <alignment> S`) is a bitvector. Runtime flags are defined in `src/config.h` (builder keywords are mapped in `tab_mob_flags`):
 
 Builder note: set the `aggressive` flag for mobs whose intended behavior is to initiate combat on sight (for example, feral beasts in dangerous wilds, hostile undead in cursed ruins, or demonic sentries in enemy strongholds), and leave it unset for neutral/civilian roles (for example, townsfolk, merchants, quest givers, and guards meant to react only when provoked).
 
@@ -215,14 +215,21 @@ Builder note: set the `aggressive` flag for mobs whose intended behavior is to i
 - `postman` = `524288`
 - `rewield` = `1048576`
 - `reequip` = `2097152`
-- `intelligent` = `8388608`
-- `vampire` = `16777216`
-- `no_hunt` = `33554432`
-- `solo` = `67108864`
-- `mount` = `268435456`
-- `no_blood` = `536870912`
-- `invasion` = `1073741824`
-- `noassist` = `2147483648`
+- `intelligent` = `4194304`
+- `vampire` = `8388608`
+- `no_hunt` = `16777216`
+- `solo` = `33554432`
+- `boss` = `67108864`
+- `mount` = `134217728`
+- `no_blood` = `268435456`
+- `invasion` = `536870912` (runtime-only flag; do not set in area files)
+- `noassist` = `1073741824`
+
+Builder policy for special difficulty mobs:
+
+- Boss mobs must be flagged `sentinel` and `boss` and should be placed only in rooms flagged `no_mob`.
+- `invasion` should never be set by builders in area files; it is set/cleared by runtime invasion systems only.
+- Strong (non-boss) mobs should be flagged `solo`.
 
 ### 5.5) Mobile strong/weak/resist/suscept element flags (`|` extension)
 
@@ -504,7 +511,7 @@ Any other token in a room body is invalid.
 
 Room description content requirements:
 
-- Each room's main `<description>~` must contain at least 3 lines of text.
+- Each room's main `<description>~` must not contain any newline characters (it must be a single line terminated by `~`).
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
 
 Directional traversal constraint:
