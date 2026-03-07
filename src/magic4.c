@@ -50,6 +50,59 @@ int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, 
    return base_heal;
 }
 
+static bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim,
+                                            OBJ_DATA *obj, const char *cast_msg, const char *hit_msg,
+                                            int element)
+{
+   AFFECT_DATA af;
+   int base_damage;
+   int up_front_damage;
+   int dot_tick_damage;
+
+   if (is_affected(victim, sn))
+   {
+      send_to_char("They are already affected by that spell.\n\r", ch);
+      return FALSE;
+   }
+
+   if (obj == NULL)
+   {
+      int base = ch->remort[CLASS_WIZ];
+
+      if (ch->remort[CLASS_SOR] > base)
+         base = ch->remort[CLASS_SOR];
+
+      base_damage = 150 + dice(base / 2, 20);
+      act(cast_msg, ch, NULL, NULL, TO_ROOM);
+      act(cast_msg, ch, NULL, NULL, TO_CHAR);
+   }
+   else
+   {
+      base_damage = dice(level / 4, 20);
+      act(cast_msg, ch, obj, NULL, TO_ROOM);
+      act(cast_msg, ch, obj, NULL, TO_CHAR);
+   }
+
+   up_front_damage = base_damage * 60 / 100;
+   dot_tick_damage = (base_damage * 50 / 100) / 3;
+
+   act(hit_msg, victim, NULL, NULL, TO_ROOM);
+   act(hit_msg, victim, NULL, NULL, TO_CHAR);
+   sp_damage(obj, ch, victim, up_front_damage, element, sn, TRUE);
+
+   af.type = sn;
+   af.duration = 3;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_DOT;
+   af.modifier = dot_tick_damage;
+   af.bitvector = 0;
+   af.caster = ch;
+   af.element = element;
+   affect_to_char(victim, &af);
+
+   return TRUE;
+}
+
 /*
  * This file should contain:
  *	o Adept Spells
@@ -169,6 +222,46 @@ bool spell_holy_wrath(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    send_to_char("@@gYou are struck by the coruscating sphere of @@ylight@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELE_HOLY, sn, TRUE);
    return TRUE;
+}
+
+bool spell_arc_lightning(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+
+   return cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
+                                          "@@gA crackling surge of @@ls h o c k@@g bursts from $n's hands!@@N",
+                                          "@@g$n is scorched by crackling @@ls h o c k@@g!@@N",
+                                          ELEMENT_AIR);
+}
+
+bool spell_terra_rend(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+
+   return cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
+                                          "@@gJagged @@bearth@@g erupts from $n's grasp!@@N",
+                                          "@@g$n is ripped by jagged @@bearth@@g shards!@@N",
+                                          ELE_EARTH);
+}
+
+bool spell_tidal_lash(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+
+   return cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
+                                          "@@gA crushing wave of @@lwater@@g pours from $n's hands!@@N",
+                                          "@@g$n is battered by a crushing wave of @@lwater@@g!@@N",
+                                          ELEMENT_WATER);
+}
+
+bool spell_phoenix_flare(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
+{
+   CHAR_DATA *victim = (CHAR_DATA *)vo;
+
+   return cast_wizard_elemental_dot_spell(sn, level, ch, victim, obj,
+                                          "@@gA searing burst of @@efire@@g roars from $n's hands!@@N",
+                                          "@@g$n is engulfed by searing @@efire@@g!@@N",
+                                          ELE_FIRE);
 }
 
 bool spell_wraith_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
