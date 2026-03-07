@@ -18,11 +18,11 @@ W builder~
 #MOBILES
 #30526
 pyramid_guard guard~
-@@ya Pyramid Guard@@N
+@@ya Pyramid Guard@@N~
+A pyramid guardian clad in ancient golden armor stands here, spear at the ready.
+~
 A broad-shouldered guardian clad in layered golden armor stands at attention,
 spear leveled at any who dare approach without invitation.
-~
-A pyramid guardian clad in ancient golden armor stands here, spear at the ready.
 ~
 32835 0 -250 S
 100 0
@@ -32,11 +32,11 @@ A pyramid guardian clad in ancient golden armor stands here, spear at the ready.
 
 #30527
 desert_skeleton skeleton~
-@@ya Desert Skeleton@@N
+@@ya Desert Skeleton@@N~
+A desert skeleton shambles about, its burial wrappings trailing like pale ribbons.
+~
 Bleached bones wrapped in tattered burial wrappings animate with malevolent
 purpose, the hollow eye sockets glowing with a sickly amber light.
-~
-A desert skeleton shambles about, its burial wrappings trailing like pale ribbons.
 ~
 16419 0 -100 S
 101 0
@@ -46,11 +46,11 @@ A desert skeleton shambles about, its burial wrappings trailing like pale ribbon
 
 #30528
 tomb_robber robber~
-@@ya Tomb Robber@@N
+@@ya Tomb Robber@@N~
+A tomb robber crouches here, stuffing trinkets into a worn leather sack.
+~
 A gaunt figure in dust-caked robes clutches a bag of stolen relics, eyes darting
 nervously as though expecting the dead themselves to rise in retribution.
-~
-A tomb robber crouches here, stuffing trinkets into a worn leather sack.
 ~
 32835 0 -200 S
 100 0
@@ -60,11 +60,11 @@ A tomb robber crouches here, stuffing trinkets into a worn leather sack.
 
 #30529
 sand_viper viper snake~
-@@ya Sand Viper@@N
+@@ya Sand Viper@@N~
+A sand viper coils here, watching with cold unblinking eyes.
+~
 A thick-bodied serpent with scales the color of pale sand coils and uncoils with
 hypnotic patience, fangs gleaming with amber venom in the torchlight.
-~
-A sand viper coils here, watching with cold unblinking eyes.
 ~
 32865 0 -50 S
 102 0
@@ -74,11 +74,11 @@ A sand viper coils here, watching with cold unblinking eyes.
 
 #30530
 ancient_mummy mummy~
-@@yan Ancient Mummy@@N
+@@yan Ancient Mummy@@N~
+An ancient mummy lurches about, its burial wrappings dragging across the stone floor.
+~
 Layers of yellowed linen wind about a dessicated form that lurches forward with
 grinding joints, hieroglyphs burnt into its exposed flesh still glowing faintly.
-~
-An ancient mummy lurches about, its burial wrappings dragging across the stone floor.
 ~
 16419 0 -150 S
 103 0
@@ -88,11 +88,11 @@ An ancient mummy lurches about, its burial wrappings dragging across the stone f
 
 #30531
 scarab_swarm scarab~
-@@ya Scarab Swarm@@N
+@@ya Scarab Swarm@@N~
+A swarm of scarab beetles skitters across the floor in a clicking tide.
+~
 Hundreds of iridescent blue-black beetles pour from cracks in the stonework,
 chittering and clicking as they surge forward in a glittering living carpet.
-~
-A swarm of scarab beetles skitters across the floor in a clicking tide.
 ~
 32865 0 0 S
 100 0
@@ -102,11 +102,11 @@ A swarm of scarab beetles skitters across the floor in a clicking tide.
 
 #30532
 curse_priest priest~
-@@ya Cursed Priest@@N
+@@ya Cursed Priest@@N~
+A cursed priest intones endless prayers in a forgotten tongue, spectral fire wreathing his hands.
+~
 A hollow-eyed priest in tattered ceremonial robes chants ceaselessly, the words
 of a dead language pouring from cracked lips as spectral fire dances at his fingers.
-~
-A cursed priest intones endless prayers in a forgotten tongue, spectral fire wreathing his hands.
 ~
 16419 0 -200 S
 102 0
@@ -116,11 +116,11 @@ A cursed priest intones endless prayers in a forgotten tongue, spectral fire wre
 
 #30533
 guardian_golem golem~
-@@ya Guardian Golem@@N
+@@ya Guardian Golem@@N~
+A basalt guardian golem strides about, golden runes blazing on its massive chest.
+~
 Carved from a single block of black basalt, this construct strides forward with
 thunderous steps, the golden runes etched into its chest blazing with inner fire.
-~
-A basalt guardian golem strides about, golden runes blazing on its massive chest.
 ~
 32835 0 -300 S
 103 0
@@ -130,11 +130,11 @@ A basalt guardian golem strides about, golden runes blazing on its massive chest
 
 #30534
 death_asp asp~
-@@ya Death Asp@@N
+@@ya Death Asp@@N~
+A death asp rears its hooded head, throat pulsing with dark necrotic light.
+~
 Jet-black scales ripple across a serpent of unnatural length as it rears its
 hooded head, revealing a throat that glows with dark necrotic energy.
-~
-A death asp rears its hooded head, throat pulsing with dark necrotic light.
 ~
 32865 0 -50 S
 103 0
@@ -144,11 +144,11 @@ A death asp rears its hooded head, throat pulsing with dark necrotic light.
 
 #30535
 trapped_spirit spirit~
-@@ya Trapped Spirit@@N
+@@ya Trapped Spirit@@N~
+A trapped spirit drifts here, its form rippling with anguished energy.
+~
 A translucent form writhes in eternal anguish, the soul of someone sealed alive
 within the pyramid walls, condemned to haunt these passages until judgment day.
-~
-A trapped spirit drifts here, its form rippling with anguished energy.
 ~
 16419 0 -100 S
 101 0
@@ -158,11 +158,11 @@ A trapped spirit drifts here, its form rippling with anguished energy.
 
 #30536
 sand_elemental elemental~
-@@ya Sand Elemental@@N
+@@ya Sand Elemental@@N~
+A sand elemental swirls here, its amber eyes forming and dissolving within the storm.
+~
 A towering column of compressed desert sand rises and falls in a mockery of
 breathing, amber eyes forming and dissolving within the swirling granular mass.
-~
-A sand elemental swirls here, its amber eyes forming and dissolving within the storm.
 ~
 32865 0 -200 S
 104 0
@@ -172,11 +172,11 @@ A sand elemental swirls here, its amber eyes forming and dissolving within the s
 
 #30537
 cult_fanatic fanatic~
-@@ya Pyramid Cult Fanatic@@N
+@@ya Pyramid Cult Fanatic@@N~
+A pyramid cult fanatic lurches about, curved blade raised in zealous fervor.
+~
 A wild-eyed devotee in black and gold robes brandishes a curved ceremonial blade,
 the whites of his eyes rolled back as he surrenders himself wholly to the death cult.
-~
-A pyramid cult fanatic lurches about, curved blade raised in zealous fervor.
 ~
 32867 0 -200 S
 101 0
@@ -186,11 +186,11 @@ A pyramid cult fanatic lurches about, curved blade raised in zealous fervor.
 
 #30538
 tomb_spider spider~
-@@ya Tomb Spider@@N
+@@ya Tomb Spider@@N~
+A massive tomb spider descends silently on a strand of pale web.
+~
 An enormous pale arachnid descends from shadowed rafters on silken thread, its
 eight milky eyes fixed with patient malice upon those who disturb the tomb.
-~
-A massive tomb spider descends silently on a strand of pale web.
 ~
 32865 0 -50 S
 102 0
@@ -200,11 +200,11 @@ A massive tomb spider descends silently on a strand of pale web.
 
 #30539
 hieroglyph_construct construct~
-@@ya Hieroglyph Construct@@N
+@@ya Hieroglyph Construct@@N~
+A hieroglyph construct stalks about, painted colors still bright on its assembled form.
+~
 Flattened relief figures have torn themselves from the painted stone walls and
 assembled into a composite guardian, the painted colors still vivid upon their form.
-~
-A hieroglyph construct stalks about, painted colors still bright on its assembled form.
 ~
 32835 0 -150 S
 103 0
@@ -214,11 +214,11 @@ A hieroglyph construct stalks about, painted colors still bright on its assemble
 
 #30540
 sarcophagus_wraith wraith~
-@@ya Sarcophagus Wraith@@N
+@@ya Sarcophagus Wraith@@N~
+A sarcophagus wraith rises from the floor, shadow of a death mask visible on its face.
+~
 A chill wind heralds the rising of this spectral noble, torn from its sarcophagus
 by dark magic, still wearing the shadow of its gold death mask in ghostly outline.
-~
-A sarcophagus wraith rises from the floor, shadow of a death mask visible on its face.
 ~
 16419 0 -250 S
 104 0
@@ -228,11 +228,11 @@ A sarcophagus wraith rises from the floor, shadow of a death mask visible on its
 
 #30541
 blood_cultist cultist~
-@@ya Blood Cultist@@N
+@@ya Blood Cultist@@N~
+A blood cultist chants softly, crimson-painted robes swaying with each ritual movement.
+~
 Crimson handprints cover every inch of this cultist's robes, and fresh blood
 has been painted in ritual patterns across their shaved skull and hollow cheeks.
-~
-A blood cultist chants softly, crimson-painted robes swaying with each ritual movement.
 ~
 32867 0 -200 S
 102 0
@@ -242,11 +242,11 @@ A blood cultist chants softly, crimson-painted robes swaying with each ritual mo
 
 #30542
 stone_sentinel sentinel~
-@@ya Stone Sentinel@@N
+@@ya Stone Sentinel@@N~
+A stone sentinel pulls itself free from the carved wall, towering above all else.
+~
 Two enormous stone hands emerge from carved niches in the wall and pull free
 an entire stone body that stands twice the height of any mortal, unyielding.
-~
-A stone sentinel pulls itself free from the carved wall, towering above all else.
 ~
 32835 0 -300 S
 104 0
@@ -256,11 +256,11 @@ A stone sentinel pulls itself free from the carved wall, towering above all else
 
 #30543
 sacred_ibis ibis~
-@@ya Sacred Ibis@@N
+@@ya Sacred Ibis@@N~
+A sacred ibis stands motionless, its dark curved beak aimed like a weapon.
+~
 This enormous white bird with a black crescent head regards all intruders with
 absolute disdain, summoned by Thoth's priests to guard their sacred texts.
-~
-A sacred ibis stands motionless, its dark curved beak aimed like a weapon.
 ~
 32865 0 -100 S
 101 0
@@ -270,11 +270,11 @@ A sacred ibis stands motionless, its dark curved beak aimed like a weapon.
 
 #30544
 chamber_guardian guardian~
-@@ya Chamber Guardian@@N
+@@ya Chamber Guardian@@N~
+A chamber guardian stands at perfect attention, spear planted before him.
+~
 Chosen from the pharaoh's finest warriors in life, this warrior serves in death
 still, the preservation magic keeping their form battle-ready for eternity.
-~
-A chamber guardian stands at perfect attention, spear planted before him.
 ~
 32835 0 -250 S
 103 0
@@ -284,11 +284,11 @@ A chamber guardian stands at perfect attention, spear planted before him.
 
 #30545
 golden_asp asp golden~
-@@ya Golden Asp@@N
+@@ya Golden Asp@@N~
+A golden asp slithers forward, its metal scales chiming softly with each movement.
+~
 Hammered from solid gold and animated by ancient temple magic, this serpentine
 construct slithers forward with the clink of metallic scales, striking like lightning.
-~
-A golden asp slithers forward, its metal scales chiming softly with each movement.
 ~
 32865 0 -100 S
 103 0
@@ -298,11 +298,11 @@ A golden asp slithers forward, its metal scales chiming softly with each movemen
 
 #30546
 canopic_jackal jackal~
-@@ya Canopic Jackal@@N
+@@ya Canopic Jackal@@N~
+A canopic jackal prowls here, black resin bandages trailing, weighing the worth of all it sees.
+~
 The embalmed head of a jackal sits atop a preserved body wrapped in black resin
 bandages, one of Anubis's own servants dispatched to judge the unworthy dead.
-~
-A canopic jackal prowls here, black resin bandages trailing, weighing the worth of all it sees.
 ~
 32835 0 -150 S
 104 0
@@ -312,11 +312,11 @@ A canopic jackal prowls here, black resin bandages trailing, weighing the worth 
 
 #30547
 desert_ghoul ghoul~
-@@ya Desert Ghoul@@N
+@@ya Desert Ghoul@@N~
+A desert ghoul prowls the passage, grave dirt still caked into its cracked fingernails.
+~
 Sun-bleached and desiccated, this former grave robber now haunts the passages
 it once plundered, its craving for flesh only sharpened by centuries of hunger.
-~
-A desert ghoul prowls the passage, grave dirt still caked into its cracked fingernails.
 ~
 16419 0 -150 S
 101 0
@@ -326,11 +326,11 @@ A desert ghoul prowls the passage, grave dirt still caked into its cracked finge
 
 #30548
 palace_shade shade~
-@@ya Palace Shade@@N
+@@ya Palace Shade@@N~
+A palace shade drifts through the chamber, clothed in shadow that mimics royal garb.
+~
 A rippling darkness shaped loosely like a royal courtier drifts here, clothed
 in the memory of silk and gold, its face a void save for two cold burning points.
-~
-A palace shade drifts through the chamber, clothed in shadow that mimics royal garb.
 ~
 16419 0 -200 S
 104 0
@@ -340,11 +340,11 @@ A palace shade drifts through the chamber, clothed in shadow that mimics royal g
 
 #30549
 ritual_slayer slayer~
-@@ya Ritual Slayer@@N
+@@ya Ritual Slayer@@N~
+A ritual slayer stands ready, khopesh drawn and brands glowing with ceremonial light.
+~
 Branded from head to toe with sacred kill-marks, this imposing executioner
 carries a curved khopesh that has never failed to take its appointed head.
-~
-A ritual slayer stands ready, khopesh drawn and brands glowing with ceremonial light.
 ~
 32867 0 -300 S
 104 0
@@ -354,11 +354,11 @@ A ritual slayer stands ready, khopesh drawn and brands glowing with ceremonial l
 
 #30550
 fire_scarab scarab fire~
-@@ya Fire Scarab@@N
+@@ya Fire Scarab@@N~
+A fire scarab skitters across the stone, its burning carapace leaving faint scorch marks.
+~
 No ordinary beetle, this creature's carapace burns with an inner flame and leaves
 scorch marks wherever it scuttles, drawn to living warmth like a coal to tinder.
-~
-A fire scarab skitters across the stone, its burning carapace leaving faint scorch marks.
 ~
 32865 0 0 S
 102 0
@@ -368,11 +368,11 @@ A fire scarab skitters across the stone, its burning carapace leaving faint scor
 
 #30551
 pyramid_lich lich~
-@@ya Pyramid Lich@@N
+@@ya Pyramid Lich@@N~
+A pyramid lich sits enthroned in bones and wrapped flesh, its phylactery pulsing with stolen life.
+~
 A skeletal figure wrapped in mummified flesh sits upright on an obsidian throne,
 the phylactery gem in its chest cavity pulsing with cold lavender light and stolen life.
-~
-A pyramid lich sits enthroned in bones and wrapped flesh, its phylactery pulsing with stolen life.
 ~
 16419 0 -350 S
 105 0
@@ -382,11 +382,11 @@ A pyramid lich sits enthroned in bones and wrapped flesh, its phylactery pulsing
 
 #30552
 anubis_hound hound~
-@@ya Hound of Anubis@@N
+@@ya Hound of Anubis@@N~
+A hound of Anubis paces here, golden scales of judgment gleaming on its back.
+~
 Larger than any natural wolf, this sleek black canine bears the golden scales of
 judgment across its back and walks with the deliberate calm of divine purpose.
-~
-A hound of Anubis paces here, golden scales of judgment gleaming on its back.
 ~
 32865 0 -200 S
 103 0
@@ -396,11 +396,11 @@ A hound of Anubis paces here, golden scales of judgment gleaming on its back.
 
 #30553
 royal_archer archer~
-@@ya Royal Tomb Archer@@N
+@@ya Royal Tomb Archer@@N~
+A royal tomb archer stands at post, arrow perpetually nocked on a preserved bow.
+~
 Still wearing the ceremonial uniform of the royal guard, this undead soldier
 stands on guard with bow nocked, never blinking, never wavering, never resting.
-~
-A royal tomb archer stands at post, arrow perpetually nocked on a preserved bow.
 ~
 16419 0 -250 S
 102 0
@@ -410,11 +410,11 @@ A royal tomb archer stands at post, arrow perpetually nocked on a preserved bow.
 
 #30554
 curse_bearer bearer~
-@@ya Curse Bearer@@N
+@@ya Curse Bearer@@N~
+A curse bearer lurches through the corridor, its joints bending at wrong angles.
+~
 This loping figure seems wrong proportioned, a body stretched and bent by the
 weight of every curse laid upon this tomb, its joints bending at impossible angles.
-~
-A curse bearer lurches through the corridor, its joints bending at wrong angles.
 ~
 16419 0 -100 S
 100 0
@@ -424,11 +424,11 @@ A curse bearer lurches through the corridor, its joints bending at wrong angles.
 
 #30555
 burial_jackal jackal burial~
-@@ya Burial Jackal@@N
+@@ya Burial Jackal@@N~
+A burial jackal crouches over gilded burial goods, black fur sleek despite ancient age.
+~
 Preserved through the same arts that kept pharaohs immortal, this jackal guards
 its master's burial goods with tireless supernatural devotion, black fur still perfect.
-~
-A burial jackal crouches over gilded burial goods, black fur sleek despite ancient age.
 ~
 32835 0 -150 S
 102 0
@@ -438,11 +438,11 @@ A burial jackal crouches over gilded burial goods, black fur sleek despite ancie
 
 #30556
 eye_of_ra eye ra~
-@@yan Eye of Ra@@N
+@@yan Eye of Ra@@N~
+An eye of Ra drifts here, blazing with concentrated solar fire that sears the air around it.
+~
 A blazing orb of concentrated solar fire drifts at eye level, casting blinding
 golden light and scorching heat in all directions from its radiant core.
-~
-An eye of Ra drifts here, blazing with concentrated solar fire that sears the air around it.
 ~
 32865 0 0 S
 104 0
@@ -452,11 +452,11 @@ An eye of Ra drifts here, blazing with concentrated solar fire that sears the ai
 
 #30557
 black_anubite anubite~
-@@ya Black Anubite@@N
+@@ya Black Anubite@@N~
+A black anubite stands with crossed blades, jackal-masked helm lowered in readiness.
+~
 A warrior bearing the jackal-masked helm of Anubis's personal guard stands
 here, twin black blades crossed over chest, awaiting judgment upon all intruders.
-~
-A black anubite stands with crossed blades, jackal-masked helm lowered in readiness.
 ~
 32835 0 -250 S
 104 0
@@ -466,11 +466,11 @@ A black anubite stands with crossed blades, jackal-masked helm lowered in readin
 
 #30558
 seti_captain captain~
-@@ya Captain of the Seti Guard@@N
+@@ya Captain of the Seti Guard@@N~
+A captain of the Seti Guard patrols here, decorated armor immaculate despite ancient age.
+~
 The finest soldier of an ancient dynasty still holds his post through necromantic
 compulsion, decorated armor gleaming with the maintenance of obsessive undead pride.
-~
-A captain of the Seti Guard patrols here, decorated armor immaculate despite ancient age.
 ~
 16419 0 -300 S
 105 0
@@ -480,11 +480,11 @@ A captain of the Seti Guard patrols here, decorated armor immaculate despite anc
 
 #30559
 tomb_warden warden~
-@@ya Tomb Warden@@N
+@@ya Tomb Warden@@N~
+A tomb warden patrols with heavy, measured steps, flail dangling from an armored fist.
+~
 A massive figure in layered obsidian plate armor carries an executioner's flail
 with casual ease, its hollow helmet revealing only burning amber eyes within.
-~
-A tomb warden patrols with heavy, measured steps, flail dangling from an armored fist.
 ~
 32835 0 -300 S
 105 0
@@ -494,11 +494,11 @@ A tomb warden patrols with heavy, measured steps, flail dangling from an armored
 
 #30560
 desert_lich lich desert~
-@@ya Desert Lich@@N
+@@ya Desert Lich@@N~
+A desert lich watches from a sunken throne, its ancient malice so dense it bends the air.
+~
 Ancient beyond reckoning, this lich has witnessed the rise and fall of dynasties
 from its sealed antechamber, preserved in patient malice through sheer force of will.
-~
-A desert lich watches from a sunken throne, its ancient malice so dense it bends the air.
 ~
 16419 0 -400 S
 105 0
@@ -508,12 +508,12 @@ A desert lich watches from a sunken throne, its ancient malice so dense it bends
 
 #30561
 high_priest_amenhotep amenhotep priest boss~
-@@yHigh Priest Amenhotep@@N
+@@yHigh Priest Amenhotep@@N~
+@@yHigh Priest Amenhotep@@N stands here, golden cobras coiled upon his headdress, crackling with ancient power.
+~
 Amenhotep towers over mortals, his ceremonial headdress of golden cobras and
 lapis lazuli radiating divine authority, his every gesture crackling with pyramid
 power channeled through three hundred years of undying dedication to the death cult.
-~
-@@yHigh Priest Amenhotep@@N stands here, golden cobras coiled upon his headdress, crackling with ancient power.
 ~
 67108867 0 -500 S
 110 0
@@ -523,12 +523,12 @@ power channeled through three hundred years of undying dedication to the death c
 
 #30562
 vizier_khamsin khamsin vizier boss~
-@@yVizier Khamsin the Deceiver@@N
+@@yVizier Khamsin the Deceiver@@N~
+@@yVizier Khamsin@@N leans against a golden pillar, every movement calculated and dangerous.
+~
 The vizier's handsome face conceals a mind that has destroyed forty pharaohs
 through subtle poison and careful rumor, each golden ring upon his fingers
 representing one dynasty brought low through art rather than violence.
-~
-@@yVizier Khamsin@@N leans against a golden pillar, every movement calculated and dangerous.
 ~
 67108867 0 -500 S
 110 0
@@ -538,12 +538,12 @@ representing one dynasty brought low through art rather than violence.
 
 #30563
 ra_avatar avatar ra boss~
-@@yAvatar of Ra@@N
+@@yAvatar of Ra@@N~
+@@yThe Avatar of Ra@@N blazes with solar fury, the sun disc above its head scorching the very air.
+~
 A figure of living solar fire stands twelve feet tall, the disc of the sun blazing
 above its head like a halo of destruction, its footsteps leaving scorched stone in
 perfect circles as divine power pours from its incandescent form without ceasing.
-~
-@@yThe Avatar of Ra@@N blazes with solar fury, the sun disc above its head scorching the very air.
 ~
 67108867 0 -500 S
 110 0
@@ -553,12 +553,12 @@ perfect circles as divine power pours from its incandescent form without ceasing
 
 #30564
 anubis_champion champion anubis boss~
-@@yChampion of Anubis@@N
+@@yChampion of Anubis@@N~
+@@yThe Champion of Anubis@@N stands ready with twin khopesh blades, jackal helm glinting.
+~
 The god of death has sent his finest warrior to reclaim souls stolen from the
 underworld, a colossal jackal-headed being in black gold armor whose twin khopesh
 blades are so sharp they can cut the soul free from flesh in a single perfect stroke.
-~
-@@yThe Champion of Anubis@@N stands ready with twin khopesh blades, jackal helm glinting.
 ~
 67108867 0 -500 S
 110 0
@@ -568,12 +568,12 @@ blades are so sharp they can cut the soul free from flesh in a single perfect st
 
 #30565
 lady_sekhmet sekhmet lady boss~
-@@yLady Sekhmet@@N
+@@yLady Sekhmet@@N~
+@@yLady Sekhmet@@N paces here, leonine and deadly, the Eye of Ra blazing in her brow.
+~
 The embodiment of Sekhmet's war-aspect manifests as a tall lioness-headed woman
 armored in scales of molten gold, the Eye of Ra burning in her brow as she raises
 a crook and flail of solid divine power, her roar shaking dust from the pyramid stones.
-~
-@@yLady Sekhmet@@N paces here, leonine and deadly, the Eye of Ra blazing in her brow.
 ~
 67108867 0 -500 S
 110 0
@@ -583,12 +583,12 @@ a crook and flail of solid divine power, her roar shaking dust from the pyramid 
 
 #30566
 pharaoh_ramesses ramesses pharaoh boss~
-@@yPharaoh Ramesses the Eternal@@N
+@@yPharaoh Ramesses the Eternal@@N~
+@@yPharaoh Ramesses the Eternal@@N rises from his sarcophagus, burial mask blazing with divine fury.
+~
 The pharaoh himself rises from his nested sarcophagi, burial mask gleaming,
 his preserved form animated by divine right and centuries of festering fury at those
 who dared disturb his eternal rest, a living god who will not abide the profane.
-~
-@@yPharaoh Ramesses the Eternal@@N rises from his sarcophagus, burial mask blazing with divine fury.
 ~
 67108867 0 -1000 S
 110 0
@@ -598,12 +598,12 @@ who dared disturb his eternal rest, a living god who will not abide the profane.
 
 #30567
 tomb_architect architect boss~
-@@yThe Tomb Architect@@N
+@@yThe Tomb Architect@@N~
+@@yThe Tomb Architect@@N drifts here, skeletal fingers clutching rearranging blueprints.
+~
 A skeletal figure in ink-stained linen clutches yellowed papyrus blueprints that
 seem to rearrange themselves constantly, the master builder who designed every trap
 and secret passage in the pyramid haunting his own masterwork for eternity.
-~
-@@yThe Tomb Architect@@N drifts here, skeletal fingers clutching rearranging blueprints.
 ~
 67108867 0 -400 S
 110 0
@@ -613,12 +613,12 @@ and secret passage in the pyramid haunting his own masterwork for eternity.
 
 #30568
 serpent_god_apep apep boss~
-@@yApep the Serpent God@@N
+@@yApep the Serpent God@@N~
+@@yApep the Serpent God@@N coils through the chamber, scales black as void, eyes like emptiness.
+~
 The great enemy of Ra coils through the apex chamber, a serpent of impossible
 size whose scales are painted midnight and whose eyes are the color of nothing, whose
 hissing fills the chamber with a sound like all the world ending at once.
-~
-@@yApep the Serpent God@@N coils through the chamber, scales black as void, eyes like emptiness.
 ~
 67108867 0 -500 S
 110 0
@@ -628,12 +628,12 @@ hissing fills the chamber with a sound like all the world ending at once.
 
 #30569
 high_sorceress_neferu neferu sorceress boss~
-@@yHigh Sorceress Neferu@@N
+@@yHigh Sorceress Neferu@@N~
+@@yHigh Sorceress Neferu@@N floats here, star-mapped robes swirling, death magic coiling at her fingers.
+~
 Neferu's beauty was so legendary that pharaohs commissioned her portrait in stone
 throughout the kingdom, but beneath that famous face burns a mind like a trapped sun,
 now devoted eternally to perfecting the death magic that keeps this pyramid alive.
-~
-@@yHigh Sorceress Neferu@@N floats here, star-mapped robes swirling, death magic coiling at her fingers.
 ~
 67108867 0 -500 S
 110 0
@@ -643,12 +643,12 @@ now devoted eternally to perfecting the death magic that keeps this pyramid aliv
 
 #30570
 golden_colossus colossus boss~
-@@yThe Golden Colossus@@N
+@@yThe Golden Colossus@@N~
+@@yThe Golden Colossus@@N looms over the chamber, each footfall shaking the pyramid to its foundations.
+~
 Cast from gold taken from a hundred conquered kingdoms, this enormous animated
 statue was the pharaoh's greatest vanity, built to guard the innermost treasury
 and imbued with the strength of ten thousand men and the will of a god-king.
-~
-@@yThe Golden Colossus@@N looms over the chamber, each footfall shaking the pyramid to its foundations.
 ~
 67108867 0 -600 S
 110 0
@@ -658,12 +658,12 @@ and imbued with the strength of ten thousand men and the will of a god-king.
 
 #30480
 entombed_soldier soldier entombed~
-@@ya Entombed Soldier@@N
+@@ya Entombed Soldier@@N~
+A soldier entombed alive stands here, battle dress intact, fury undiminished by centuries.
+~
 Sealed beneath the pyramid's foundation stones for a crime now lost to history,
 this warrior was buried alive in full battle dress, the rage of three millennia
 compressed into a form that moves with terrible deliberate purpose.
-~
-A soldier entombed alive stands here, battle dress intact, fury undiminished by centuries.
 ~
 16451 0 -200 S
 100 0
@@ -673,12 +673,12 @@ A soldier entombed alive stands here, battle dress intact, fury undiminished by 
 
 #30481
 ossuary_crawler crawler ossuary~
-@@yan Ossuary Crawler@@N
+@@yan Ossuary Crawler@@N~
+An ossuary crawler lurches here, its mismatched bones grinding and clicking with each step.
+~
 Assembled from the discarded bones of a hundred different bodies, this shambling
 horror reaches the height of two men and moves with a sound like a bag of gravel
 being poured down a stone staircase, its many skulls all facing outward.
-~
-An ossuary crawler lurches here, its mismatched bones grinding and clicking with each step.
 ~
 16451 0 -150 S
 101 0
@@ -688,12 +688,12 @@ An ossuary crawler lurches here, its mismatched bones grinding and clicking with
 
 #30482
 crypt_asp asp crypt~
-@@ya Crypt Asp@@N
+@@ya Crypt Asp@@N~
+A crypt asp glides silently here, pale scales barely visible in the dimness.
+~
 Pale as chalk and eyeless from generations in absolute darkness, this serpent
 navigates entirely by the heat and heartbeat of living creatures, striking with
 a venom that stops the heart within seconds of entering the blood.
-~
-A crypt asp glides silently here, pale scales barely visible in the dimness.
 ~
 32865 0 -50 S
 102 0
@@ -703,12 +703,12 @@ A crypt asp glides silently here, pale scales barely visible in the dimness.
 
 #30483
 blackened_revenant revenant blackened~
-@@ya Blackened Revenant@@N
+@@ya Blackened Revenant@@N~
+A blackened revenant shambles here, still smouldering, scorch marks trailing behind it.
+~
 Charred beyond recognition by whatever punishment ended their mortal life, this
 undead servant shambles through the lowest passages still smouldering, leaving
 scorch marks wherever the blackened wrappings drag across the stone floor.
-~
-A blackened revenant shambles here, still smouldering, scorch marks trailing behind it.
 ~
 16451 0 -250 S
 102 0
@@ -718,12 +718,12 @@ A blackened revenant shambles here, still smouldering, scorch marks trailing beh
 
 #30484
 bone_archer archer bone~
-@@ya Bone Archer@@N
+@@ya Bone Archer@@N~
+A bone archer nocks an arrow of carved bone, training empty sockets on any who enter.
+~
 A skeletal archer takes position against the wall with mechanical precision,
 drawing a bow strung with preserved sinew, each arrow tipped with a head carved
 from the thighbone of an enemy slain in life and preserved for eternal service.
-~
-A bone archer nocks an arrow of carved bone, training empty sockets on any who enter.
 ~
 16451 0 -200 S
 101 0
@@ -733,12 +733,12 @@ A bone archer nocks an arrow of carved bone, training empty sockets on any who e
 
 #30485
 festering_ghoul ghoul festering~
-@@ya Festering Ghoul@@N
+@@ya Festering Ghoul@@N~
+A festering ghoul drags itself forward, leaving a dark trail across the stone floor.
+~
 Whatever process preserves the typical desert ghoul has failed here in the damp
 dark below, leaving a creature in active decomposition, its hunger so absolute
 it has begun consuming itself in the absence of anything else to devour.
-~
-A festering ghoul drags itself forward, leaving a dark trail across the stone floor.
 ~
 16451 0 -150 S
 101 0
@@ -748,12 +748,12 @@ A festering ghoul drags itself forward, leaving a dark trail across the stone fl
 
 #30486
 shadow_scarab scarab shadow~
-@@ya Shadow Scarab@@N
+@@ya Shadow Scarab@@N~
+A shadow scarab is barely perceptible here, its light-absorbing carapace a moving void.
+~
 A scarab beetle the size of a man's fist whose carapace absorbs all light,
 leaving only the absence of a beetle-shaped hole in the world. It moves in
 total silence, emerging from solid shadow to strike and withdrawing without trace.
-~
-A shadow scarab is barely perceptible here, its light-absorbing carapace a moving void.
 ~
 32865 0 -100 S
 102 0
@@ -763,12 +763,12 @@ A shadow scarab is barely perceptible here, its light-absorbing carapace a movin
 
 #30487
 silt_elemental elemental silt~
-@@ya Silt Elemental@@N
+@@ya Silt Elemental@@N~
+A silt elemental oozes forward, its muddy form leaving wet prints on the dry stone.
+~
 Far below the desert, ancient silted floodwater has given rise to a creature
 of compressed mud and mineral, its form a grotesque parody of human shape
 built from ten thousand years of deposited Nile silt beneath the stone.
-~
-A silt elemental oozes forward, its muddy form leaving wet prints on the dry stone.
 ~
 32865 0 -200 S
 103 0
@@ -778,12 +778,12 @@ A silt elemental oozes forward, its muddy form leaving wet prints on the dry sto
 
 #30488
 tomb_rat rat tomb giant~
-@@ya Giant Tomb Rat@@N
+@@ya Giant Tomb Rat@@N~
+A giant tomb rat crouches here, albino eyes catching any faint light, whiskers twitching.
+~
 Bred in absolute darkness through a hundred generations, this rodent has grown
 to the size of a small dog, its eyes vestigial white discs, its other senses
 sharpened to an almost supernatural degree by the demands of subterranean life.
-~
-A giant tomb rat crouches here, albino eyes catching any faint light, whiskers twitching.
 ~
 32865 0 -50 S
 100 0
@@ -793,12 +793,12 @@ A giant tomb rat crouches here, albino eyes catching any faint light, whiskers t
 
 #30489
 foundation_wraith wraith foundation~
-@@ya Foundation Wraith@@N
+@@ya Foundation Wraith@@N~
+A foundation wraith drifts here, its form stretched thin by millennia of compelled service.
+~
 The spirits of workers who died during the pyramid's construction were deliberately
 sealed into the foundations to serve as supernatural guardians, their forms now
 barely coherent, stretched thin by three thousand years of forced haunting.
-~
-A foundation wraith drifts here, its form stretched thin by millennia of compelled service.
 ~
 16451 0 -150 S
 102 0
@@ -808,12 +808,12 @@ A foundation wraith drifts here, its form stretched thin by millennia of compell
 
 #30490
 catacomb_wight wight catacomb~
-@@ya Catacomb Wight@@N
+@@ya Catacomb Wight@@N~
+A catacomb wight skulks here, court insignia still visible on its desiccated robes.
+~
 A wight bearing the rank insignia of a mid-level court official, condemned to
 the catacombs for embezzlement against the royal household, its bureaucratic
 resentment now weaponized into an undying hatred for all living intruders.
-~
-A catacomb wight skulks here, court insignia still visible on its desiccated robes.
 ~
 16451 0 -200 S
 103 0
@@ -823,12 +823,12 @@ A catacomb wight skulks here, court insignia still visible on its desiccated rob
 
 #30491
 crypt_golem golem crypt~
-@@ya Crypt Golem@@N
+@@ya Crypt Golem@@N~
+A crypt golem advances, a hundred carved faces staring from its sarcophagus-lid body.
+~
 Constructed from the lids of a hundred sarcophagi and animated by the collective
 displeasure of those whose rest was disturbed to build it, this golem bears the
 carved faces of a hundred different dead staring outward from its assembled form.
-~
-A crypt golem advances, a hundred carved faces staring from its sarcophagus-lid body.
 ~
 32835 0 -300 S
 104 0
@@ -838,12 +838,12 @@ A crypt golem advances, a hundred carved faces staring from its sarcophagus-lid 
 
 #30492
 bleeding_shade shade bleeding~
-@@ya Bleeding Shade@@N
+@@ya Bleeding Shade@@N~
+A bleeding shade drifts here, dark fluid streaming ceaselessly from its spectral form.
+~
 An apparition that weeps a constant stream of something dark that is not blood
 but behaves like it, the remains of a priest whose ritual error caused a mass
 death and who has been punished with an eternity of visible, inescapable guilt.
-~
-A bleeding shade drifts here, dark fluid streaming ceaselessly from its spectral form.
 ~
 16451 0 -250 S
 103 0
@@ -853,12 +853,12 @@ A bleeding shade drifts here, dark fluid streaming ceaselessly from its spectral
 
 #30493
 subterranean_cultist cultist subterranean~
-@@ya Subterranean Cultist@@N
+@@ya Subterranean Cultist@@N~
+A subterranean cultist lurks here, pale as bone, clutching ritual implements with shaking hands.
+~
 Unlike the fanatics above who worship in stolen golden robes, these true believers
 chose to descend and never return, their skin gone paper-white from years without
 sun, their devotion to the death god absolute and their violence unpredictable.
-~
-A subterranean cultist lurks here, pale as bone, clutching ritual implements with shaking hands.
 ~
 32867 0 -250 S
 102 0
@@ -868,12 +868,12 @@ A subterranean cultist lurks here, pale as bone, clutching ritual implements wit
 
 #30494
 obsidian_scarab scarab obsidian~
-@@yan Obsidian Scarab@@N
+@@yan Obsidian Scarab@@N~
+An obsidian scarab clicks forward, its volcanic shell catching the light like black glass.
+~
 A massive scarab whose natural carapace has been reinforced over centuries by
 the slow absorption of volcanic obsidian from the stone it inhabits, its shell
 now genuinely stone-hard, its pincers capable of cutting through bronze armor.
-~
-An obsidian scarab clicks forward, its volcanic shell catching the light like black glass.
 ~
 32865 0 -100 S
 103 0
@@ -883,12 +883,12 @@ An obsidian scarab clicks forward, its volcanic shell catching the light like bl
 
 #30495
 corpse_tender tender corpse~
-@@ya Corpse Tender@@N
+@@ya Corpse Tender@@N~
+A corpse tender reaches forward with natron-stained hands, preservation instinct overriding all else.
+~
 Animated embalmers who were sealed below with their craft supplies, these
 undead still perform the motions of preservation on anything they can catch,
 their natron jars and linen strips ever-ready for their compulsive dark work.
-~
-A corpse tender reaches forward with natron-stained hands, preservation instinct overriding all else.
 ~
 16419 0 -150 S
 101 0
@@ -898,12 +898,12 @@ A corpse tender reaches forward with natron-stained hands, preservation instinct
 
 #30496
 deep_viper viper deep~
-@@ya Deep Viper@@N
+@@ya Deep Viper@@N~
+A deep viper coils tightly here, body longer and paler than its desert kin.
+~
 A relative of the surface sand viper adapted entirely to subterranean life,
 its body longer and thinner than its desert cousin, its venom evolved to be
 more potent to compensate for the reduced frequency of prey in the deep dark.
-~
-A deep viper coils tightly here, body longer and paler than its desert kin.
 ~
 32865 0 -50 S
 103 0
@@ -913,12 +913,12 @@ A deep viper coils tightly here, body longer and paler than its desert kin.
 
 #30497
 risen_executioner executioner risen~
-@@ya Risen Executioner@@N
+@@ya Risen Executioner@@N~
+A risen executioner patrols here, enormous axe trailing, screams echoing faintly in its wake.
+~
 The pyramid's chief executioner was buried with his tools and his victims' final
 screams seem somehow stored in the stone around him, audible as a faint susurrus
 beneath the silence when this enormous undead warrior stalks through the catacombs.
-~
-A risen executioner patrols here, enormous axe trailing, screams echoing faintly in its wake.
 ~
 16419 0 -300 S
 104 0
@@ -928,12 +928,12 @@ A risen executioner patrols here, enormous axe trailing, screams echoing faintly
 
 #30498
 plague_bat bat plague~
-@@ya Plague Bat@@N
+@@ya Plague Bat@@N~
+A plague bat swoops low here, squealing with aggression at any light source.
+~
 Colonies of enormous bats have roosted in the deepest vaults for centuries,
 feeding on the rats and insects of the subterranean dark, their guano building
 into stalagmites below their roosts, their bite carrying a vicious fever.
-~
-A plague bat swoops low here, squealing with aggression at any light source.
 ~
 32865 0 -50 S
 100 0
@@ -943,12 +943,12 @@ A plague bat swoops low here, squealing with aggression at any light source.
 
 #30499
 stone_mummy mummy stone~
-@@ya Stone Mummy@@N
+@@ya Stone Mummy@@N~
+A stone mummy grinds forward with ponderous momentum, each footfall cracking the floor slightly.
+~
 The embalming process that created this mummy used a mineral solution rather
 than the standard oils, petrifying the subject partially, the resulting creature
 moving with the grinding slowness of a millstone but hitting with comparable force.
-~
-A stone mummy grinds forward with ponderous momentum, each footfall cracking the floor slightly.
 ~
 16419 0 -250 S
 104 0
@@ -958,12 +958,12 @@ A stone mummy grinds forward with ponderous momentum, each footfall cracking the
 
 #30500
 tunnel_specter specter tunnel~
-@@ya Tunnel Specter@@N
+@@ya Tunnel Specter@@N~
+A tunnel specter drifts here, its expression locked in the terror of its last living moment.
+~
 The ghost of a worker who became lost during construction and starved to death
 in an unmapped shaft, this specter still wanders the same passages searching for
 an exit that no longer exists, attacking anything that might know the way out.
-~
-A tunnel specter drifts here, its expression locked in the terror of its last living moment.
 ~
 16451 0 -100 S
 101 0
@@ -973,12 +973,12 @@ A tunnel specter drifts here, its expression locked in the terror of its last li
 
 #30501
 necrotic_priest priest necrotic~
-@@ya Necrotic Priest@@N
+@@ya Necrotic Priest@@N~
+A necrotic priest floats inches above the floor, his body sustained by dark sacrament alone.
+~
 A high priest who chose to perform the ritual of voluntary interment, sealing
 himself alive to continue serving the death cult from beyond, his body sustained
 by dark sacrament, his mind fractured by centuries of chosen darkness and prayer.
-~
-A necrotic priest floats inches above the floor, his body sustained by dark sacrament alone.
 ~
 16419 0 -300 S
 104 0
@@ -988,12 +988,12 @@ A necrotic priest floats inches above the floor, his body sustained by dark sacr
 
 #30502
 calcified_horror horror calcified~
-@@ya Calcified Horror@@N
+@@ya Calcified Horror@@N~
+A calcified horror lurches forward, mineral-sheathed bones making it look carved from limestone.
+~
 A creature that began as an animate skeleton but has been absorbing mineral
 deposits from the seeping groundwater for centuries, its bones now sheathed in
 thick white calcium that makes it nearly impervious to physical attack.
-~
-A calcified horror lurches forward, mineral-sheathed bones making it look carved from limestone.
 ~
 16451 0 -300 S
 105 0
@@ -1003,12 +1003,12 @@ A calcified horror lurches forward, mineral-sheathed bones making it look carved
 
 #30503
 void_scarab scarab void~
-@@ya Void Scarab@@N
+@@ya Void Scarab@@N~
+A void scarab flickers in and out of visibility here, its form straddling two realities.
+~
 At the very deepest point of the catacombs, these scarabs have absorbed so much
 residual death magic that they exist partially outside normal reality, their forms
 flickering as they move between the material world and whatever lies adjacent.
-~
-A void scarab flickers in and out of visibility here, its form straddling two realities.
 ~
 32865 0 -150 S
 104 0
@@ -1018,12 +1018,12 @@ A void scarab flickers in and out of visibility here, its form straddling two re
 
 #30504
 crypt_horror horror crypt~
-@@ya Crypt Horror@@N
+@@ya Crypt Horror@@N~
+A crypt horror looms here, its patchwork form radiating the wrongness of forced assembly.
+~
 An abomination assembled by ancient necromancy from the parts of dozens of
 different creatures both human and animal, this patchwork nightmare was designed
 to be the ultimate guardian, inheriting the worst qualities of everything it contains.
-~
-A crypt horror looms here, its patchwork form radiating the wrongness of forced assembly.
 ~
 16451 0 -350 S
 105 0
@@ -1033,12 +1033,12 @@ A crypt horror looms here, its patchwork form radiating the wrongness of forced 
 
 #30505
 dust_lich lich dust~
-@@ya Dust Lich@@N
+@@ya Dust Lich@@N~
+A dust lich coalesces here, ancient beyond reckoning, its form a living column of grave dust.
+~
 The oldest undead in the subterranean complex, this lich has deteriorated
 past the point of skeletal coherence, existing now as a vaguely humanoid column
 of animated funerary dust held together by pure necromantic will and spite.
-~
-A dust lich coalesces here, ancient beyond reckoning, its form a living column of grave dust.
 ~
 16451 0 -400 S
 105 0
@@ -1048,12 +1048,12 @@ A dust lich coalesces here, ancient beyond reckoning, its form a living column o
 
 #30506
 brood_scarab scarab brood~
-@@ya Brood Scarab@@N
+@@ya Brood Scarab@@N~
+A brood scarab rears defensively, abdomen swollen, pincers raised in territorial warning.
+~
 A female of the shadow scarab species at the height of her egg-laying cycle,
 her abdomen swollen to grotesque proportions, her aggression amplified by
 protective instinct, and her pincers strong enough to shear through solid bronze.
-~
-A brood scarab rears defensively, abdomen swollen, pincers raised in territorial warning.
 ~
 32865 0 -100 S
 102 0
@@ -1063,12 +1063,12 @@ A brood scarab rears defensively, abdomen swollen, pincers raised in territorial
 
 #30507
 pit_viper viper pit~
-@@ya Pit Viper@@N
+@@ya Pit Viper@@N~
+A pit viper surges upward from a floor pit, body coiling with coiled striking potential.
+~
 At the bottom of deliberately carved pits in the catacomb floor, these thick-bodied
 vipers were placed by the original builders as a living trap, fed periodically by
 the same mechanisms that seal the pit covers, now ancient and enormous.
-~
-A pit viper surges upward from a floor pit, body coiling with coiled striking potential.
 ~
 32865 0 -50 S
 103 0
@@ -1078,12 +1078,12 @@ A pit viper surges upward from a floor pit, body coiling with coiled striking po
 
 #30508
 iron_revenant revenant iron~
-@@yan Iron Revenant@@N
+@@yan Iron Revenant@@N~
+An iron revenant clanks forward, rust-fused iron bands embedded in its preserved body.
+~
 An officer of the pyramid's defense who was ritually executed and entombed in
 iron bands to prevent his spirit from wandering, the bands have rusted into his
 preserved flesh over centuries, making him a walking iron-wrapped nightmare.
-~
-An iron revenant clanks forward, rust-fused iron bands embedded in its preserved body.
 ~
 16451 0 -300 S
 104 0
@@ -1093,12 +1093,12 @@ An iron revenant clanks forward, rust-fused iron bands embedded in its preserved
 
 #30509
 blood_pool_elemental elemental blood pool~
-@@ya Blood Pool Elemental@@N
+@@ya Blood Pool Elemental@@N~
+A blood pool elemental rises from the floor cracks here, crimson and purposeful.
+~
 Ancient sacrificial blood that soaked into the floor over centuries has gathered
 into a coherent malevolence, rising from the cracks in the stone as a dark crimson
 form that moves with a liquid grace and strikes with the weight of the tide.
-~
-A blood pool elemental rises from the floor cracks here, crimson and purposeful.
 ~
 32865 0 -200 S
 104 0
@@ -1108,12 +1108,12 @@ A blood pool elemental rises from the floor cracks here, crimson and purposeful.
 
 #30510
 forgotten_guardian guardian forgotten~
-@@ya Forgotten Guardian@@N
+@@ya Forgotten Guardian@@N~
+A forgotten guardian blocks the passage, its millennia-old duty the only thought remaining.
+~
 Posted at a junction so long ago that even the priests who commanded it are dead,
 this guardian has continued its rounds without instruction or purpose for three
 thousand years, its mind eroded to a single imperative: prevent passage.
-~
-A forgotten guardian blocks the passage, its millennia-old duty the only thought remaining.
 ~
 32835 0 -350 S
 105 0
@@ -1123,12 +1123,12 @@ A forgotten guardian blocks the passage, its millennia-old duty the only thought
 
 #30511
 grave_stalker stalker grave~
-@@ya Grave Stalker@@N
+@@ya Grave Stalker@@N~
+A grave stalker flickers at the edge of visibility here, hunting something already dead.
+~
 A predator that evolved specifically to hunt the undead of these catacombs,
 neither fully alive nor fully dead, occupying a liminal state that makes it
 visible to the living as a flickering smear of motion at the edge of light.
-~
-A grave stalker flickers at the edge of visibility here, hunting something already dead.
 ~
 16451 0 -200 S
 103 0
@@ -1138,12 +1138,12 @@ A grave stalker flickers at the edge of visibility here, hunting something alrea
 
 #30512
 petrified_overseer overseer petrified~
-@@ya Petrified Overseer@@N
+@@ya Petrified Overseer@@N~
+A petrified overseer lurches stiffly here, granite-grey flesh cracking at every joint.
+~
 A construction overseer whose cruelty toward workers led to his entombment by
 his own crew, the slow stone-curse laid on him by a resentful priest has turned
 him to partial granite, his expression of dawning horror still perfectly preserved.
-~
-A petrified overseer lurches stiffly here, granite-grey flesh cracking at every joint.
 ~
 16451 0 -250 S
 103 0
@@ -1153,12 +1153,12 @@ A petrified overseer lurches stiffly here, granite-grey flesh cracking at every 
 
 #30513
 abyss_shade shade abyss~
-@@yan Abyss Shade@@N
+@@yan Abyss Shade@@N~
+An abyss shade hangs in the air here, dense as frozen shadow, radiating cold despair.
+~
 Deeper than the other shades, this one has been compressed by the weight of
 stone above it into a form denser than shadow, a near-solid darkness that radiates
 cold and despair in equal measure and feeds on the fear it generates.
-~
-An abyss shade hangs in the air here, dense as frozen shadow, radiating cold despair.
 ~
 16451 0 -300 S
 105 0
@@ -1168,12 +1168,12 @@ An abyss shade hangs in the air here, dense as frozen shadow, radiating cold des
 
 #30514
 death_priest priest death~
-@@ya Death Priest@@N
+@@ya Death Priest@@N~
+A death priest stands here, mummified yet clearly animate, death magic seeping from every pore.
+~
 Voluntarily mummified while still conscious as the ultimate act of devotion,
 this priest channels divine death magic through a body that should not be able
 to function, each spell cast tearing further at the fragile thread of its being.
-~
-A death priest stands here, mummified yet clearly animate, death magic seeping from every pore.
 ~
 16419 0 -350 S
 105 0
@@ -1183,12 +1183,12 @@ A death priest stands here, mummified yet clearly animate, death magic seeping f
 
 #30515
 charnel_beast beast charnel~
-@@ya Charnel Beast@@N
+@@ya Charnel Beast@@N~
+A charnel beast heaves itself forward, its assembled mass reeking of ancient preservation.
+~
 In the deep catacombs where organic matter never fully decomposes, a creature
 has assembled itself from generations of accumulated grave offal, driven by hunger
 alone into a mobile mass of preserved tissue and ancient appetite.
-~
-A charnel beast heaves itself forward, its assembled mass reeking of ancient preservation.
 ~
 16451 0 -200 S
 102 0
@@ -1198,12 +1198,12 @@ A charnel beast heaves itself forward, its assembled mass reeking of ancient pre
 
 #30516
 bone_colossus colossus bone~
-@@ya Bone Colossus@@N
+@@ya Bone Colossus@@N~
+A bone colossus fills the passage here, five hundred pairs of eye sockets staring outward.
+~
 Assembled from the remains of five hundred workers and warriors, this enormous
 construct stands four meters tall and radiates a chill that has nothing to do with
 temperature, the stolen grief of five hundred deaths given terrible coherent form.
-~
-A bone colossus fills the passage here, five hundred pairs of eye sockets staring outward.
 ~
 16451 0 -400 S
 105 0
@@ -1213,12 +1213,12 @@ A bone colossus fills the passage here, five hundred pairs of eye sockets starin
 
 #30517
 mold_specter specter mold~
-@@ya Mold Specter@@N
+@@ya Mold Specter@@N~
+A mold specter drifts here, its form resembling pages of disintegrating text given motion.
+~
 Where ancient papyrus scrolls rotted in sealed rooms, their words dissolved into
 the damp air and eventually coalesced into this specter formed entirely from the
 ideas and invocations of dead texts, incomprehensible and hostile.
-~
-A mold specter drifts here, its form resembling pages of disintegrating text given motion.
 ~
 16451 0 -150 S
 102 0
@@ -1228,12 +1228,12 @@ A mold specter drifts here, its form resembling pages of disintegrating text giv
 
 #30518
 catacomb_lurker lurker catacomb~
-@@ya Catacomb Lurker@@N
+@@ya Catacomb Lurker@@N~
+A catacomb lurker crouches in the deepest shadows here, its form never quite fully visible.
+~
 A thing that has never been seen clearly by any survivor, only described in
 panicked fragments: too many limbs, entirely silent, smelling of old stone and
 copper, leaving behind only scattered bones and scratches in the floor.
-~
-A catacomb lurker crouches in the deepest shadows here, its form never quite fully visible.
 ~
 32865 0 -250 S
 103 0
@@ -1243,12 +1243,12 @@ A catacomb lurker crouches in the deepest shadows here, its form never quite ful
 
 #30519
 mummified_priest priest mummified~
-@@ya Mummified Priest@@N
+@@ya Mummified Priest@@N~
+A mummified priest wanders here, burial honors intact, the final prayer unspoken.
+~
 A mid-ranking priest mummified by the standard process and buried with full
 honors, who has nonetheless risen because the prayers said over him were incomplete,
 the missing final verse of the entombment ritual leaving a door open that should be closed.
-~
-A mummified priest wanders here, burial honors intact, the final prayer unspoken.
 ~
 16419 0 -200 S
 102 0
@@ -1258,12 +1258,12 @@ A mummified priest wanders here, burial honors intact, the final prayer unspoken
 
 #30520
 sub_boss_vizier vizier sub undead~
-@@yThe Vizier's Shadow@@N
+@@yThe Vizier's Shadow@@N~
+@@yThe Vizier's Shadow@@N coils here, a perfect silhouette of treachery and ancient vendetta.
+~
 When Vizier Khamsin's treachery was finally discovered he was entombed alive in
 the deepest catacomb, his influence and cunning surviving death to animate a
 shadow-duplicate that carries all his viciousness and none of his charm, pure malice given form.
-~
-@@yThe Vizier's Shadow@@N coils here, a perfect silhouette of treachery and ancient vendetta.
 ~
 67108867 0 -400 S
 110 0
@@ -1273,12 +1273,12 @@ shadow-duplicate that carries all his viciousness and none of his charm, pure ma
 
 #30521
 foundation_horror horror foundation boss~
-@@yThe Foundation Horror@@N
+@@yThe Foundation Horror@@N~
+@@yThe Foundation Horror@@N rises from the bedrock here, patient hunger given impossible form.
+~
 Built into the very first stone laid in the pyramid's construction, this entity
 predates everything above it by years, woken into coherence by the death energy
 of every burial above, patient as stone, hungry as the void, vast beyond reckoning.
-~
-@@yThe Foundation Horror@@N rises from the bedrock here, patient hunger given impossible form.
 ~
 67108867 0 -500 S
 110 0
@@ -1288,12 +1288,12 @@ of every burial above, patient as stone, hungry as the void, vast beyond reckoni
 
 #30522
 the_sealed_one sealed one~
-@@yThe Sealed One@@N
+@@yThe Sealed One@@N~
+@@yThe Sealed One@@N stands here, three millennia of contained fury radiating in visible waves.
+~
 A figure entombed within a specially prepared chamber during the pyramid's
 construction, kept in stasis by the power of its own immense will, now broken
 free of containment, three thousand years of pent fury unleashed into the deep dark.
-~
-@@yThe Sealed One@@N stands here, three millennia of contained fury radiating in visible waves.
 ~
 67108867 0 -600 S
 110 0
@@ -1303,12 +1303,12 @@ free of containment, three thousand years of pent fury unleashed into the deep d
 
 #30523
 abyssal_jackal jackal abyssal boss~
-@@yThe Abyssal Jackal@@N
+@@yThe Abyssal Jackal@@N~
+@@yThe Abyssal Jackal@@N prowls here, golden eyes the only light, sent by Anubis for souls.
+~
 A direct servant of Anubis dispatched to the deepest catacomb to retrieve souls
 that were never properly sent to judgment, ancient and enormous, its black coat
 absorbing light, its golden eyes the only illumination in the passages it walks.
-~
-@@yThe Abyssal Jackal@@N prowls here, golden eyes the only light, sent by Anubis for souls.
 ~
 67108867 0 -500 S
 110 0
@@ -1318,12 +1318,12 @@ absorbing light, its golden eyes the only illumination in the passages it walks.
 
 #30524
 the_nameless nameless~
-@@yThe Nameless@@N
+@@yThe Nameless@@N~
+@@yThe Nameless@@N moves here in a silence that feels like erasure, its identity stripped away.
+~
 Its name was cut from every surface in the pyramid in a deliberate act of
 damnation, every record of its existence expunged, condemned to wander without
 identity, which has not diminished its power but has made it incomprehensibly angry.
-~
-@@yThe Nameless@@N moves here in a silence that feels like erasure, its identity stripped away.
 ~
 67108867 0 -700 S
 110 0
@@ -1333,12 +1333,12 @@ identity, which has not diminished its power but has made it incomprehensibly an
 
 #30525
 catacomb_lord lord catacomb boss~
-@@yThe Catacomb Lord@@N
+@@yThe Catacomb Lord@@N~
+@@yThe Catacomb Lord@@N fills the great vault here, vast and accumulated, sovereign of all death below.
+~
 Whatever it was in life has long been irrelevant. In death it has grown into
 something that fills the largest vault of the catacombs, a presence that has absorbed
 every spirit and monster that ever entered its domain and simply became more.
-~
-@@yThe Catacomb Lord@@N fills the great vault here, vast and accumulated, sovereign of all death below.
 ~
 67108867 0 -800 S
 110 0
