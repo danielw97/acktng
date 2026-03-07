@@ -534,6 +534,24 @@ static void test_get_evasion_piercing_composition(void)
     assert(get_evasion_piercing(&ch) == 0);
 }
 
+
+static void test_boss_avoidance_bonuses(void)
+{
+    CHAR_DATA ch;
+
+    clear_character(&ch);
+    ch.act = ACT_IS_NPC | ACT_BOSS;
+    ch.skills = MOB_DODGE | MOB_PARRY | MOB_COUNTER;
+    ch.hitroll = 18;
+    ch.damroll = 19;
+    ch.wait = 1;
+
+    assert(get_dodge(&ch) == 48);
+    assert(get_parry(&ch) == 49);
+    assert(get_counter(&ch) == 37);
+    assert(get_evasion_piercing(&ch) == 15);
+}
+
 int main(void)
 {
     test_get_parry_guard_clauses();
@@ -557,6 +575,7 @@ int main(void)
     test_should_summon_assist_master_round();
     test_should_summon_cast_round();
     test_get_evasion_piercing_composition();
+    test_boss_avoidance_bonuses();
 
     puts("test_fight: all tests passed");
     return 0;

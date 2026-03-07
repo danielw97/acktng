@@ -968,14 +968,12 @@
 #define ACT_POSTMAN 524288                               /* Postmaster     */
 #define ACT_REWIELD 1048576                              /* Uses better weapons  */
 #define ACT_RE_EQUIP 2097152                             /* Uses better equipment */
-#define ACT_INTELLIGENT BIT_23
 #define ACT_VAMPIRE 8388608                              /* Vampire mob    */
 #define ACT_NO_HUNT 16777216                             /* Mob can breed        */
 #define ACT_SOLO 33554432                                /* Mob is buffed for solo combat */
-#define ACT_MOUNT BIT_28
+#define ACT_BOSS BIT_27                                  /* Mob is buffed for boss combat */
 #define ACT_NOBLOOD BIT_29
 #define ACT_INVASION BIT_30
-#define ACT_BOSS BIT_27
 #define ACT_NOASSIST BIT_31
 
 /* build bits for OLC -S- */

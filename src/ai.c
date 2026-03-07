@@ -136,7 +136,7 @@ bool round_ai_update(CHAR_DATA *ch)
       }
    }
 
-   if (IS_SET(ch->act, ACT_SOLO) && (ch->hit < get_max_hp(ch) * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))) && ch->level > 80)
+   if ((IS_SET(ch->act, ACT_SOLO) || IS_SET(ch->act, ACT_BOSS)) && (ch->hit < get_max_hp(ch) * 3 / 4) && (ch->mana > mana_cost(ch, skill_lookup("heal"))) && ch->level > 80)
    {
       do_cast(ch, "heal self");
    }
