@@ -35,7 +35,7 @@
 #endif
 
 extern bool deathmatch;
-
+void round_update_dot(CHAR_DATA *ch);
 
 static bool is_grand_magi_elemental_spell(int sn)
 {
@@ -188,6 +188,67 @@ void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, cons
    default:
       return;
    }
+}
+
+
+static bool is_necromancer_direct_damage_spell(int sn)
+{
+   return sn == skill_lookup("black hand") || sn == skill_lookup("wraith touch");
+}
+
+void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int direct_damage, OBJ_DATA *obj)
+{
+   AFFECT_DATA af;
+   AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
+   int marker_sn;
+   int debuff_count = 0;
+
+   (void)obj;
+
+   if (ch == NULL || victim == NULL || direct_damage <= 0)
+      return;
+
+   if (!is_necromancer_direct_damage_spell(sn))
+      return;
+
+   marker_sn = skill_lookup("wither shadow");
+   if (marker_sn <= 0)
+      return;
+
+   af.type = marker_sn;
+   af.duration = 6;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_NONE;
+   af.modifier = 0;
+   af.bitvector = 0;
+   af.caster = ch;
+   af.element = ELEMENT_SHADOW;
+   affect_to_char(victim, &af);
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf->next)
+   {
+      if (paf->type == marker_sn && paf->location == APPLY_NONE)
+         debuff_count++;
+   }
+
+   if (debuff_count < 3)
+      return;
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf_next)
+   {
+      paf_next = paf->next;
+      if (paf->type == marker_sn && paf->location == APPLY_NONE)
+         affect_remove(victim, paf);
+   }
+
+   act("@@dNecrotic marks @@Non $n rupture in a burst of shadow!", victim, NULL, NULL, TO_ROOM);
+   send_to_char("@@dNecrotic marks@@N on you rupture in a burst of shadow!\n\r", victim);
+   if (ch != victim)
+      send_to_char("@@dYour necrotic marks rupture violently!@@N\n\r", ch);
+
+   round_update_dot(victim);
+   round_update_dot(victim);
 }
 
 bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn, int level)
@@ -580,7 +641,10 @@ bool spell_wraith_touch(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
    send_to_char("@@RYou are struck by a @@dwraithlike hand @@R!!@@N\n\r", victim);
    drain_mod = ch->remort[CLASS_NEC] * dam / 130;
    if (sp_damage(obj, ch, victim, dam, ELEMENT_SHADOW | NO_REFLECT | NO_ABSORB, sn, TRUE))
+   {
       ch->hit = UMIN(get_max_hp(ch), (ch->hit + drain_mod));
+      apply_necromancer_damage_debuff(ch, victim, sn, dam, obj);
+   }
    return TRUE;
 }
 
