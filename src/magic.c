@@ -342,6 +342,8 @@ bool saves_spell(int level, CHAR_DATA *victim)
           ((get_psuedo_level(victim) > 60 ? get_psuedo_level(victim) * 2 / 3 : get_psuedo_level(victim)) - level - URANGE(-40, victim->saving_throw, 40));
    if ((IS_NPC(victim)) && (IS_SET(victim->act, ACT_SOLO)))
       save += 20;
+   if ((IS_NPC(victim)) && (IS_SET(victim->act, ACT_BOSS)))
+      save += 30;
    if (!IS_NPC(victim) && (IS_SET(race_table[victim->race].race_flags, RACE_MOD_RESIST_MAGIC)))
       save += 20;
    save = URANGE(5, save, 95);
@@ -1611,6 +1613,8 @@ bool spell_dispel_magic(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *ob
 
       if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
          cloak_chance += 15;
+      if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))
+         cloak_chance += 25;
 
       if ((IS_AFFECTED(victim, AFF_CLOAK_REFLECTION)) && (ch != victim) && (number_percent() < cloak_chance))
       {

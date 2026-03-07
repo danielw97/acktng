@@ -311,6 +311,8 @@ void multi_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
       if (IS_SET(ch->act, ACT_SOLO))
          hits++;
+      if (IS_SET(ch->act, ACT_BOSS))
+         hits += 2;
 
       if (ch->level > 30)
          hits++;
@@ -492,6 +494,8 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
       diceroll += (get_psuedo_level(ch) * 5);
       if (IS_SET(ch->act, ACT_SOLO))
          diceroll += (get_psuedo_level(ch) * 5);
+      if (IS_SET(ch->act, ACT_BOSS))
+         diceroll += (get_psuedo_level(ch) * 8);
    }
    diceroll += cloak_adept_hitroll_bonus(ch);
 
@@ -552,6 +556,8 @@ void one_hit(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 
       if (IS_SET(ch->act, ACT_SOLO))
          dam *= 1.5;
+      if (IS_SET(ch->act, ACT_BOSS))
+         dam *= 2;
    }
    else
    {
@@ -886,6 +892,8 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_SOLO))
       max_avoidance += 10;
+   if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))
+      max_avoidance += 20;
 
    int parry = get_parry(victim) - get_evasion_piercing(ch);
    if (parry > 0)
@@ -1010,6 +1018,8 @@ int get_parry(CHAR_DATA *ch)
       chance = get_curr_str(ch);
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
+      if (IS_SET(ch->act, ACT_BOSS))
+         chance += 25;
    }
    else
    {
@@ -1064,6 +1074,8 @@ int get_dodge(CHAR_DATA *ch)
       chance = get_curr_dex(ch);
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
+      if (IS_SET(ch->act, ACT_BOSS))
+         chance += 25;
    }
    else
    {
@@ -1113,6 +1125,8 @@ int get_block(CHAR_DATA *ch)
       chance = get_curr_con(ch);
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
+      if (IS_SET(ch->act, ACT_BOSS))
+         chance += 25;
    }
    else
    {
@@ -1158,6 +1172,8 @@ int get_counter(CHAR_DATA *ch)
       chance = get_psuedo_level(ch) / 3.1 + get_curr_dex(ch) * 2 / 5;
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 15;
+      if (IS_SET(ch->act, ACT_BOSS))
+         chance += 25;
    }
    else
    {
@@ -1200,6 +1216,8 @@ int get_evasion_piercing(CHAR_DATA *ch)
    {
       if (IS_SET(ch->act, ACT_SOLO))
          chance += 5;
+      if (IS_SET(ch->act, ACT_BOSS))
+         chance += 10;
    }
 
    chance += get_speed(ch) * 5;

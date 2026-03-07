@@ -481,6 +481,7 @@ const struct lookup_type tab_mob_flags[] = {
     {"vampire", BIT_24, 1000000},
     {"no_hunt", BIT_25, NO_USE},
     {"solo", BIT_26, 5000}, /*  mob is designed to fight solo */
+    {"boss", ACT_BOSS, 15000}, /*  mob is designed to fight as a boss */
     {"mount", BIT_28, 1000},
     {"no_blood", BIT_29, 4000},
     {"invasion", ACT_INVASION, NO_USE},
