@@ -1303,7 +1303,8 @@ bool can_wear_at(CHAR_DATA *ch, OBJ_DATA *obj, int location)
       break;
    }
 
-   if (race_table[URANGE(0, ch->race, MAX_RACE)].wear_locs[location] == FALSE)
+   if (!((IS_NPC(ch)) && area_resetting_global) &&
+       race_table[URANGE(0, ch->race, MAX_RACE)].wear_locs[location] == FALSE)
    {
       act("You don't have anywhere to wear $p!", ch, obj, NULL, TO_CHAR);
       act("$L$n fumbles about with $p, looking for a place to wear it.", ch, obj, NULL, TO_ROOM);
