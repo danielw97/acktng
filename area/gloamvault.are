@@ -12,1289 +12,12 @@ U Candles gutter in violet gloom while whispered liturgies scrape the stone.~
 O virant~
 R all~
 W all~
-#ROOMS
-#30100
-Riven Gate~
-The shattered threshold groans under drifting ash, and broken portcullis teeth jut from the stone like black fangs. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. Only a southern route appears open from here, pulling adventurers farther inside.~
-12 11
-D1
-~
-~
-0 -1 30105
-D2
-~
-~
-0 -1 30101
-D4
-~
-~
-0 0 3005
-S
-#30101
-Riven Gate~
-Wind leaks through fractured masonry, carrying distant bells and the smell of wet iron from deeper in the vault. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30100
-D1
-~
-~
-0 -1 30106
-D2
-~
-~
-0 -1 30102
-S
-#30102
-Riven Gate~
-Defaced ward-runes crawl across the arch in silver scars, marking where the outer seal was violently broken. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30101
-D1
-~
-~
-0 -1 30122
-D2
-~
-~
-0 -1 30103
-S
-#30103
-Riven Gate~
-Collapsed watch alcoves and toppled saints suggest this was once a defensive choke point before the cult reclaimed it. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30102
-D1
-~
-~
-0 -1 30108
-D2
-~
-~
-0 -1 30104
-S
-#30104
-Riven Gate~
-Torch brackets stand cold and empty, but ghostlight still clings to the floor in thin violet smears. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30103
-D1
-~
-~
-0 -1 30114
-D2
-~
-~
-0 -1 30105
-S
-#30105
-Riven Gate~
-The shattered threshold groans under drifting ash, and broken portcullis teeth jut from the stone like black fangs. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30104
-D1
-~
-~
-0 -1 30115
-D2
-~
-~
-0 -1 30106
-D3
-~
-~
-0 -1 30100
-S
-#30106
-Riven Gate~
-Wind leaks through fractured masonry, carrying distant bells and the smell of wet iron from deeper in the vault. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30105
-D1
-~
-~
-0 -1 30126
-D2
-~
-~
-0 -1 30107
-D3
-~
-~
-0 -1 30101
-S
-#30107
-Riven Gate~
-Defaced ward-runes crawl across the arch in silver scars, marking where the outer seal was violently broken. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30106
-D1
-~
-~
-0 -1 30112
-D2
-~
-~
-0 -1 30108
-S
-#30108
-Riven Gate~
-Collapsed watch alcoves and toppled saints suggest this was once a defensive choke point before the cult reclaimed it. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30107
-D2
-~
-~
-0 -1 30109
-D3
-~
-~
-0 -1 30103
-S
-#30109
-Riven Gate~
-Torch brackets stand cold and empty, but ghostlight still clings to the floor in thin violet smears. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30108
-D1
-~
-~
-0 -1 30119
-D2
-~
-~
-0 -1 30110
-S
-#30110
-Processional Halls~
-A long nave-like corridor runs beneath pointed arches, its floor worn by generations of ceremonial footfalls. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30109
-D1
-~
-~
-0 -1 30130
-D2
-~
-~
-0 -1 30111
-S
-#30111
-Processional Halls~
-Torn banners depicting Kel'Shadra's crescent sigil sway in stale air, as if unseen choristers still pass in line. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30110
-D1
-~
-~
-0 -1 30116
-D2
-~
-~
-0 -1 30112
-S
-#30112
-Processional Halls~
-Brass censers hang from chainwork ribs overhead, each packed with old resin and blackened prayer ash. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30111
-D2
-~
-~
-0 -1 30113
-D3
-~
-~
-0 -1 30107
-S
-#30113
-Processional Halls~
-The walls are carved with liturgical reliefs that shift from solemn devotion near the gate to open fanaticism deeper in. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30112
-D1
-~
-~
-0 -1 30123
-D2
-~
-~
-0 -1 30114
-S
-#30114
-Processional Halls~
-Muted drumbeats seem to echo from nowhere, giving each step the rhythm of a funeral procession. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30113
-D1
-~
-~
-0 -1 30134
-D2
-~
-~
-0 -1 30115
-D3
-~
-~
-0 -1 30104
-S
-#30115
-Processional Halls~
-A long nave-like corridor runs beneath pointed arches, its floor worn by generations of ceremonial footfalls. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30114
-D2
-~
-~
-0 -1 30116
-D3
-~
-~
-0 -1 30105
-S
-#30116
-Processional Halls~
-Torn banners depicting Kel'Shadra's crescent sigil sway in stale air, as if unseen choristers still pass in line. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30115
-D2
-~
-~
-0 -1 30117
-D3
-~
-~
-0 -1 30111
-S
-#30117
-Processional Halls~
-Brass censers hang from chainwork ribs overhead, each packed with old resin and blackened prayer ash. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30116
-D1
-~
-~
-0 -1 30127
-D2
-~
-~
-0 -1 30118
-S
-#30118
-Processional Halls~
-The walls are carved with liturgical reliefs that shift from solemn devotion near the gate to open fanaticism deeper in. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30117
-D1
-~
-~
-0 -1 30138
-D2
-~
-~
-0 -1 30119
-S
-#30119
-Processional Halls~
-Muted drumbeats seem to echo from nowhere, giving each step the rhythm of a funeral procession. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30118
-D2
-~
-~
-0 -1 30120
-D3
-~
-~
-0 -1 30109
-S
-#30120
-Censer Galleries~
-Tiered balconies overlook narrow smoke channels, and guttering braziers stain the vault with oily violet haze. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30119
-D1
-~
-~
-0 -1 30125
-D2
-~
-~
-0 -1 30121
-S
-#30121
-Censer Galleries~
-Rows of bronze incense bowls sit on waist-high plinths, each engraved with names scratched out and replaced. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30120
-D1
-~
-~
-0 -1 30131
-D2
-~
-~
-0 -1 30122
-S
-#30122
-Censer Galleries~
-Condensed soot glitters along the ribs of the ceiling like dark frost, disturbed by every movement. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30121
-D2
-~
-~
-0 -1 30123
-D3
-~
-~
-0 -1 30102
-S
-#30123
-Censer Galleries~
-Cracked mirrors mounted between alcoves reflect only candle halos and not the chamber itself. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30122
-D2
-~
-~
-0 -1 30124
-D3
-~
-~
-0 -1 30113
-S
-#30124
-Censer Galleries~
-A bitter blend of myrrh, blood-resin, and grave mold hangs so thickly that breathing feels like swallowing incense. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-12 11
-D0
-~
-~
-0 -1 30123
-D1
-~
-~
-0 -1 30128
-D2
-~
-~
-0 -1 30125
-S
-#30125
-Censer Galleries~
-Tiered balconies overlook narrow smoke channels, and guttering braziers stain the vault with oily violet haze. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30124
-D2
-~
-~
-0 -1 30126
-D3
-~
-~
-0 -1 30120
-S
-#30126
-Censer Galleries~
-Rows of bronze incense bowls sit on waist-high plinths, each engraved with names scratched out and replaced. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30125
-D2
-~
-~
-0 -1 30127
-D3
-~
-~
-0 -1 30106
-S
-#30127
-Censer Galleries~
-Condensed soot glitters along the ribs of the ceiling like dark frost, disturbed by every movement. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30126
-D2
-~
-~
-0 -1 30128
-D3
-~
-~
-0 -1 30117
-S
-#30128
-Censer Galleries~
-Cracked mirrors mounted between alcoves reflect only candle halos and not the chamber itself. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30127
-D2
-~
-~
-0 -1 30129
-D3
-~
-~
-0 -1 30124
-S
-#30129
-Censer Galleries~
-A bitter blend of myrrh, blood-resin, and grave mold hangs so thickly that breathing feels like swallowing incense. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30128
-D1
-~
-~
-0 -1 30139
-D2
-~
-~
-0 -1 30130
-S
-#30130
-Choir Crypts~
-Sarcophagi are stacked in choir-stall rows, their lids drilled with speaking vents for unending ritual chants. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30129
-D2
-~
-~
-0 -1 30131
-D3
-~
-~
-0 -1 30110
-S
-#30131
-Choir Crypts~
-Bone chimes hang from the rafters and answer the slightest draft with thin, off-key harmonies. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30130
-D2
-~
-~
-0 -1 30132
-D3
-~
-~
-0 -1 30121
-S
-#30132
-Choir Crypts~
-Each pillar bears a line of hymn script cut into marrow-white inlay, then crossed out by later heresies. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30131
-D1
-~
-~
-0 -1 30142
-D2
-~
-~
-0 -1 30133
-S
-#30133
-Choir Crypts~
-Rotting hymnals lie chained to lecterns beside open tomb niches where attendants once kept vigil. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30132
-D1
-~
-~
-0 -1 30135
-D2
-~
-~
-0 -1 30134
-S
-#30134
-Choir Crypts~
-Faint antiphonal whispers trade from one side of the crypt to the other, never revealing a living source. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30133
-D2
-~
-~
-0 -1 30135
-D3
-~
-~
-0 -1 30114
-S
-#30135
-Choir Crypts~
-Sarcophagi are stacked in choir-stall rows, their lids drilled with speaking vents for unending ritual chants. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30134
-D2
-~
-~
-0 -1 30136
-D3
-~
-~
-0 -1 30133
-S
-#30136
-Choir Crypts~
-Bone chimes hang from the rafters and answer the slightest draft with thin, off-key harmonies. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30135
-D1
-~
-~
-0 -1 30146
-D2
-~
-~
-0 -1 30137
-S
-#30137
-Choir Crypts~
-Each pillar bears a line of hymn script cut into marrow-white inlay, then crossed out by later heresies. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30136
-D1
-~
-~
-0 -1 30147
-D2
-~
-~
-0 -1 30138
-S
-#30138
-Choir Crypts~
-Rotting hymnals lie chained to lecterns beside open tomb niches where attendants once kept vigil. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30137
-D2
-~
-~
-0 -1 30139
-D3
-~
-~
-0 -1 30118
-S
-#30139
-Choir Crypts~
-Faint antiphonal whispers trade from one side of the crypt to the other, never revealing a living source. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30138
-D2
-~
-~
-0 -1 30140
-D3
-~
-~
-0 -1 30129
-S
-#30140
-Scriptorium of Ash~
-Stone desks crowd the chamber, their surfaces dusted in powdered charcoal from burned doctrinal pages. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30139
-D1
-~
-~
-0 -1 30150
-D2
-~
-~
-0 -1 30141
-S
-#30141
-Scriptorium of Ash~
-Shelves of lead-bound folios lean at dangerous angles, held together by wax seals and rusted clasps. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30140
-D1
-~
-~
-0 -1 30143
-D2
-~
-~
-0 -1 30142
-S
-#30142
-Scriptorium of Ash~
-Copying frames, quills, and drying racks remain in place as though the scribes rose only moments ago. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30141
-D1
-~
-~
-0 -1 30162
-D2
-~
-~
-0 -1 30143
-D3
-~
-~
-0 -1 30132
-S
-#30143
-Scriptorium of Ash~
-Glass inkwells are clouded with old reagents, and half-finished sigils still mark drafting slates. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30142
-D2
-~
-~
-0 -1 30144
-D3
-~
-~
-0 -1 30141
-S
-#30144
-Scriptorium of Ash~
-Every sound is muffled by hanging parchment strips coated in soot-black lacquer. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30143
-D1
-~
-~
-0 -1 30154
-D2
-~
-~
-0 -1 30145
-S
-#30145
-Scriptorium of Ash~
-Stone desks crowd the chamber, their surfaces dusted in powdered charcoal from burned doctrinal pages. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30144
-D1
-~
-~
-0 -1 30155
-D2
-~
-~
-0 -1 30146
-S
-#30146
-Scriptorium of Ash~
-Shelves of lead-bound folios lean at dangerous angles, held together by wax seals and rusted clasps. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30145
-D1
-~
-~
-0 -1 30166
-D2
-~
-~
-0 -1 30147
-D3
-~
-~
-0 -1 30136
-S
-#30147
-Scriptorium of Ash~
-Copying frames, quills, and drying racks remain in place as though the scribes rose only moments ago. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30146
-D2
-~
-~
-0 -1 30148
-D3
-~
-~
-0 -1 30137
-S
-#30148
-Scriptorium of Ash~
-Glass inkwells are clouded with old reagents, and half-finished sigils still mark drafting slates. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30147
-D1
-~
-~
-0 -1 30158
-D2
-~
-~
-0 -1 30149
-S
-#30149
-Scriptorium of Ash~
-Every sound is muffled by hanging parchment strips coated in soot-black lacquer. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
-12 11
-D0
-~
-~
-0 -1 30148
-D1
-~
-~
-0 -1 30153
-D2
-~
-~
-0 -1 30150
-S
-#30150
-Knight Reliquary~
-Funerary plinths display battered helms and ritual weapons, each tagged with an oath etched into iron. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30149
-D1
-~
-~
-0 -1 30170
-D2
-~
-~
-0 -1 30151
-D3
-~
-~
-0 -1 30140
-S
-#30151
-Knight Reliquary~
-Narrow armor stands line the walls where reliquary knights once armed before descending into the inner tombs. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30150
-D1
-~
-~
-0 -1 30161
-D2
-~
-~
-0 -1 30152
-S
-#30152
-Knight Reliquary~
-Chain curtains divide the space into martial chapels, clinking softly whenever the air shifts. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30151
-D2
-~
-~
-0 -1 30153
-S
-#30153
-Knight Reliquary~
-Shield-racks are bolted to basalt columns, most stripped bare except for a few cracked tower shields. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30152
-D2
-~
-~
-0 -1 30154
-D3
-~
-~
-0 -1 30149
-S
-#30154
-Knight Reliquary~
-Austere drill circles are inscribed in the floor, measuring paces for disciplined spear forms. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30153
-D2
-~
-~
-0 -1 30155
-D3
-~
-~
-0 -1 30144
-S
-#30155
-Knight Reliquary~
-Funerary plinths display battered helms and ritual weapons, each tagged with an oath etched into iron. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30154
-D2
-~
-~
-0 -1 30156
-D3
-~
-~
-0 -1 30145
-S
-#30156
-Knight Reliquary~
-Narrow armor stands line the walls where reliquary knights once armed before descending into the inner tombs. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30155
-D2
-~
-~
-0 -1 30157
-S
-#30157
-Knight Reliquary~
-Chain curtains divide the space into martial chapels, clinking softly whenever the air shifts. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30156
-D1
-~
-~
-0 -1 30160
-D2
-~
-~
-0 -1 30158
-S
-#30158
-Knight Reliquary~
-Shield-racks are bolted to basalt columns, most stripped bare except for a few cracked tower shields. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30157
-D2
-~
-~
-0 -1 30159
-D3
-~
-~
-0 -1 30148
-S
-#30159
-Knight Reliquary~
-Austere drill circles are inscribed in the floor, measuring paces for disciplined spear forms. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30158
-D1
-~
-~
-0 -1 30169
-D2
-~
-~
-0 -1 30160
-S
-#30160
-Sanguine Cloisters~
-Arcaded walkways frame shallow channels cut for sacrificial runoff, now crusted into dark glassy rivulets. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30159
-D2
-~
-~
-0 -1 30161
-D3
-~
-~
-0 -1 30157
-S
-#30161
-Sanguine Cloisters~
-Niches hold saint-effigies daubed with fresh-looking crimson despite the age of the stone. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30160
-D2
-~
-~
-0 -1 30162
-D3
-~
-~
-0 -1 30151
-S
-#30162
-Sanguine Cloisters~
-Prayer wheels of bone and copper turn intermittently on their own, clicking through forbidden invocations. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30161
-D2
-~
-~
-0 -1 30163
-D3
-~
-~
-0 -1 30142
-S
-#30163
-Sanguine Cloisters~
-The cloister walls bloom with iron-red mineral streaks that resemble old handprints and dripping seals. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30162
-D1
-~
-~
-0 -1 30173
-D2
-~
-~
-0 -1 30164
-S
-#30164
-Sanguine Cloisters~
-A warm metallic scent rises from grates between flagstones where deeper cisterns still churn. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30163
-D1
-~
-~
-0 -1 30168
-D2
-~
-~
-0 -1 30165
-S
-#30165
-Sanguine Cloisters~
-Arcaded walkways frame shallow channels cut for sacrificial runoff, now crusted into dark glassy rivulets. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30164
-D2
-~
-~
-0 -1 30166
-S
-#30166
-Sanguine Cloisters~
-Niches hold saint-effigies daubed with fresh-looking crimson despite the age of the stone. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30165
-D2
-~
-~
-0 -1 30167
-D3
-~
-~
-0 -1 30146
-S
-#30167
-Sanguine Cloisters~
-Prayer wheels of bone and copper turn intermittently on their own, clicking through forbidden invocations. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30166
-D2
-~
-~
-0 -1 30168
-S
-#30168
-Sanguine Cloisters~
-The cloister walls bloom with iron-red mineral streaks that resemble old handprints and dripping seals. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30167
-D2
-~
-~
-0 -1 30169
-D3
-~
-~
-0 -1 30164
-S
-#30169
-Sanguine Cloisters~
-A warm metallic scent rises from grates between flagstones where deeper cisterns still churn. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30168
-D2
-~
-~
-0 -1 30170
-D3
-~
-~
-0 -1 30159
-S
-#30170
-Inner Sepulcher~
-The architecture tightens into a sanctum approach, with heavier buttresses and fewer places to retreat. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30169
-D2
-~
-~
-0 -1 30171
-D3
-~
-~
-0 -1 30150
-S
-#30171
-Inner Sepulcher~
-Obsidian funerary doors stand ajar here, their hinges fused by heat and shadowy residue. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30170
-D1
-~
-~
-0 -1 30174
-D2
-~
-~
-0 -1 30172
-S
-#30172
-Inner Sepulcher~
-Star-map mosaics spiral inward toward a central axis, guiding pilgrims to the final cult chambers. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30171
-D2
-~
-~
-0 -1 30173
-S
-#30173
-Inner Sepulcher~
-Silence becomes oppressive this deep; even armor and breath seem swallowed before they can echo. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
-D0
-~
-~
-0 -1 30172
-D2
-~
-~
-0 -1 30174
-D3
-~
-~
-0 -1 30163
-S
-#30174
-Inner Sepulcher~
-The stone itself feels awake, thrumming with warded pressure around the matriarch's domain. Only the deepest command chambers remain beyond these sepulchral approaches. The only clear retreat lies north, back through the dungeon's blood-stained path.~
-12 11
-D0
-~
-~
-0 -1 30173
-D3
-~
-~
-0 -1 30171
-S
-#0
 #MOBILES
 #30100
 ash acolyte kelshadra cultist~
 an ash acolyte~
 An ash acolyte murmurs blasphemies here.
-~
+~
 A novice devotee in soot-stained robes clutches a guttering censer and whispers invocations to the dead stars.~
 167772257 512 -500 S
 8 0
@@ -1308,7 +31,7 @@ L 40 40 20 0 0 0 0 0 0
 crypt usher kelshadra zealot~
 a crypt usher~
 A crypt usher blocks passage here.
-~
+~
 This gaunt usher bears a rusted halberd and a bell of black iron, corralling intruders toward sacrificial circles.~
 167772257 512 -500 S
 9 0
@@ -1322,7 +45,7 @@ L 40 40 20 0 0 0 0 0 0
 grave choir novice~
 a grave choir novice~
 A grave choir novice hums a dirge here.
-~
+~
 Their voice is thin and cracking, but the hymn carries a predatory joy that makes the candles tremble.~
 167772257 512 -500 S
 10 2
@@ -1336,7 +59,7 @@ L 40 40 20 0 0 0 0 0 0
 bone scrivener cult archivist~
 a bone scrivener~
 A bone scrivener scratches runes into femurs here.
-~
+~
 Ink-stained fingers guide a needle of silver through ancient bone, recording heresies for their hidden masters.~
 167772257 512 -500 S
 11 0
@@ -1350,7 +73,7 @@ L 40 40 20 0 0 0 0 0 0
 gloom sentry kelshadra guard~
 a gloom sentry~
 A gloom sentry scans the hall with fanatic focus.
-~
+~
 Layered mail creaks as this zealot watches for trespassers, jaw wired shut with vow-cords of brass.~
 167772257 512 -500 S
 12 0
@@ -1364,7 +87,7 @@ L 40 40 20 0 0 0 0 0 0
 carrion templar~
 a carrion templar~
 A carrion templar patrols here.
-~
+~
 A knight in dented plate marked by kel sigils drags a notched blade and reeks of embalming oils.~
 167772257 512 -500 S
 13 0
@@ -1378,7 +101,7 @@ L 40 40 20 0 0 0 0 0 0
 violet lector shadow priest~
 a violet lector~
 A violet lector recites from a chained tome.
-~
+~
 Their blindfolded face tilts upward while they chant in a tongue that stings the ears like frost.~
 167772257 512 -500 S
 14 0
@@ -1392,7 +115,7 @@ L 40 40 20 0 0 0 0 0 0
 sepulcher hound~
 a sepulcher hound~
 A sepulcher hound prowls in tight circles.
-~
+~
 Once a war-dog, now stitched with sigils and bone plates, it waits for a whispered command to tear flesh.~
 167772257 512 -500 S
 15 0
@@ -1406,7 +129,7 @@ L 40 40 20 0 0 0 0 0 0
 thorn reliquary knight~
 a reliquary knight~
 A reliquary knight kneels in prayer here.
-~
+~
 A spear rests across this armored fanatic's lap while reliquary thorns are hammered through their pauldrons.~
 167772257 512 -500 S
 16 0
@@ -1420,7 +143,7 @@ L 40 40 20 0 0 0 0 0 0
 umbral cantor~
 an umbral cantor~
 An umbral cantor conducts unseen voices.
-~
+~
 Dark ribbons whirl around this liturgist as ghostly harmonies rise from cracked sarcophagi.~
 167772257 512 -500 S
 17 2
@@ -1434,7 +157,7 @@ L 40 40 20 0 0 0 0 0 0
 ashen warlock kelshadra adept~
 an ashen warlock~
 An ashen warlock traces glowing circles here.
-~
+~
 Sable robes and silver fetishes mark this adept, whose fingertips leak violet sparks and cold smoke.~
 167772257 512 -500 S
 18 0
@@ -1448,7 +171,7 @@ L 40 40 20 0 0 0 0 0 0
 catacomb marshal~
 a catacomb marshal~
 A catacomb marshal drills lesser cultists here.
-~
+~
 Scarred and deliberate, the marshal wears pragmatic war-gear and barks clipped orders between prayers.~
 167772257 512 -500 S
 19 0
@@ -1462,9 +185,9 @@ L 40 40 20 0 0 0 0 0 0
 dusk prelate kelshadra boss~
 the Dusk Prelate~
 The Dusk Prelate presides over this sanctum.
-~
+~
 A towering priest in layered vestments crowned with horned gold, the prelate grips a star-metal crozier and never blinks.~
-167772259 512 -500 S
+234881123 512 -500 S
 20 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1476,9 +199,9 @@ L 40 40 20 0 0 0 0 0 0
 ossuary champion kelshadra boss~
 the Ossuary Champion~
 The Ossuary Champion stands like a tomb-forged idol.
-~
+~
 Rune-etched plate and chained relics armor this hulking champion, whose helm vents violet breath with every exhale.~
-167772259 512 -500 S
+234881123 512 -500 S
 21 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1490,9 +213,9 @@ L 40 40 20 0 0 0 0 0 0
 matriarch velastra kelshadra boss~
 Matriarch Velastra~
 Matriarch Velastra watches you with pitiless calm.
-~
+~
 High hierophant of this dungeon-cult, Velastra is robed in midnight silk and armored in living shadow.~
-167772259 512 -500 S
+234881123 512 -500 S
 22 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1504,7 +227,7 @@ L 40 40 20 0 0 0 0 0 0
 vault stalker cult assassin~
 a vault stalker~
 A vault stalker waits in the shadows here.
-~
+~
 Wrapped in black gauze and grave ash, this killer moves only when candlelight flickers.~
 167772257 512 -500 S
 16 2
@@ -1518,7 +241,7 @@ L 40 40 20 0 0 0 0 0 0
 funerary warden~
 a funerary warden~
 A funerary warden stands watch over the maze.
-~
+~
 This armored zealot bears ritual scars and a tower shield etched with saintly skulls.~
 167772257 512 -500 S
 17 0
@@ -1532,7 +255,7 @@ L 40 40 20 0 0 0 0 0 0
 bone lantern bearer~
 a bone lantern bearer~
 A bone lantern bearer drifts silently here.
-~
+~
 A hooded servant carries a lantern made from a saint's skull, trailing violet soot.~
 167772257 512 -500 S
 15 0
@@ -1546,7 +269,7 @@ L 40 40 20 0 0 0 0 0 0
 crypt interrogator~
 a crypt interrogator~
 A crypt interrogator circles, choosing a victim.
-~
+~
 Tools of devotion and torture hang from their belt, polished to a surgical gleam.~
 167772257 512 -500 S
 18 0
@@ -1560,7 +283,7 @@ L 40 40 20 0 0 0 0 0 0
 velastra handmaiden~
 a handmaiden of Velastra~
 A handmaiden of Velastra kneels in prayer here.
-~
+~
 Her veil is stitched with star-metal wire, and her whispered rites bend shadows around her.~
 167772257 512 -500 S
 19 2
@@ -1779,6 +502,1283 @@ Champion's Hoofguards rests here.~
 11
 L
 20
+#0
+#ROOMS
+#30100
+Riven Gate~
+The shattered threshold groans under drifting ash, and broken portcullis teeth jut from the stone like black fangs. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. Only a southern route appears open from here, pulling adventurers farther inside.~
+12 11
+D1
+~
+~
+0 -1 30105
+D2
+~
+~
+0 -1 30101
+D4
+~
+~
+0 0 3005
+S
+#30101
+Riven Gate~
+Wind leaks through fractured masonry, carrying distant bells and the smell of wet iron from deeper in the vault. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30100
+D1
+~
+~
+0 -1 30106
+D2
+~
+~
+0 -1 30102
+S
+#30102
+Riven Gate~
+Defaced ward-runes crawl across the arch in silver scars, marking where the outer seal was violently broken. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30101
+D1
+~
+~
+0 -1 30122
+D2
+~
+~
+0 -1 30103
+S
+#30103
+Riven Gate~
+Collapsed watch alcoves and toppled saints suggest this was once a defensive choke point before the cult reclaimed it. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30102
+D1
+~
+~
+0 -1 30108
+D2
+~
+~
+0 -1 30104
+S
+#30104
+Riven Gate~
+Torch brackets stand cold and empty, but ghostlight still clings to the floor in thin violet smears. The breach behind you still leaks cold air, while the cult's interior passages drag you onward. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30103
+D1
+~
+~
+0 -1 30114
+D2
+~
+~
+0 -1 30105
+S
+#30105
+Riven Gate~
+A scattered stone avalanche blocks the western arch completely, and to the east empty alcoves swallow sound and light in equal measure.~
+8 11
+D0
+~
+~
+0 -1 30104
+D1
+~
+~
+0 -1 30115
+D2
+~
+~
+0 -1 30106
+D3
+~
+~
+0 -1 30100
+S
+#30106
+Riven Gate~
+A slow drip of black water marks time from a cracked lintel, its cadence carrying the same hollow rhythm as a death-knell.~
+8 11
+D0
+~
+~
+0 -1 30105
+D1
+~
+~
+0 -1 30126
+D2
+~
+~
+0 -1 30107
+D3
+~
+~
+0 -1 30101
+S
+#30107
+Riven Gate~
+Inscribed floor tiles bear cult symbols that were later scrubbed to illegibility, though faint phosphorescent lines still trace the original shapes.~
+8 11
+D0
+~
+~
+0 -1 30106
+D1
+~
+~
+0 -1 30112
+D2
+~
+~
+0 -1 30108
+S
+#30108
+Riven Gate~
+The corridor floor buckles where an old cistern collapsed below, and the gap exhales a cold mineral breath at long irregular intervals.~
+8 11
+D0
+~
+~
+0 -1 30107
+D2
+~
+~
+0 -1 30109
+D3
+~
+~
+0 -1 30103
+S
+#30109
+Riven Gate~
+A row of iron-bound doors stands sealed with lead poured into the frames; small square windows offer only darkness beyond.~
+8 11
+D0
+~
+~
+0 -1 30108
+D1
+~
+~
+0 -1 30119
+D2
+~
+~
+0 -1 30110
+S
+#30110
+Processional Halls~
+A long nave-like corridor runs beneath pointed arches, its floor worn by generations of ceremonial footfalls. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30109
+D1
+~
+~
+0 -1 30130
+D2
+~
+~
+0 -1 30111
+S
+#30111
+Processional Halls~
+Torn banners depicting Kel'Shadra's crescent sigil sway in stale air, as if unseen choristers still pass in line. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30110
+D1
+~
+~
+0 -1 30116
+D2
+~
+~
+0 -1 30112
+S
+#30112
+Processional Halls~
+Brass censers hang from chainwork ribs overhead, each packed with old resin and blackened prayer ash. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30111
+D2
+~
+~
+0 -1 30113
+D3
+~
+~
+0 -1 30107
+S
+#30113
+Processional Halls~
+The walls are carved with liturgical reliefs that shift from solemn devotion near the gate to open fanaticism deeper in. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30112
+D1
+~
+~
+0 -1 30123
+D2
+~
+~
+0 -1 30114
+S
+#30114
+Processional Halls~
+Muted drumbeats seem to echo from nowhere, giving each step the rhythm of a funeral procession. The route now feels ceremonial rather than defensive, drawing trespassers deeper by design. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30113
+D1
+~
+~
+0 -1 30134
+D2
+~
+~
+0 -1 30115
+D3
+~
+~
+0 -1 30104
+S
+#30115
+Processional Halls~
+The arch keystones are carved with open-mouthed saints, their stone tongues removed and replaced with tiny iron bells that ring whenever air stirs.~
+8 11
+D0
+~
+~
+0 -1 30114
+D2
+~
+~
+0 -1 30116
+D3
+~
+~
+0 -1 30105
+S
+#30116
+Processional Halls~
+Fresh chalk outlines mark positions on the floor, as though a choreographer rehearsed a procession here only hours before the hall fell silent.~
+8 11
+D0
+~
+~
+0 -1 30115
+D2
+~
+~
+0 -1 30117
+D3
+~
+~
+0 -1 30111
+S
+#30117
+Processional Halls~
+Smoke stains the pointed arches in graduated rings, each layer a different ritual hue blending from bone-white to deep ash-violet.~
+8 11
+D0
+~
+~
+0 -1 30116
+D1
+~
+~
+0 -1 30127
+D2
+~
+~
+0 -1 30118
+S
+#30118
+Processional Halls~
+A lectern of black stone stands alone at the nave's center, its carved surface worn mirror-smooth by innumerable recitations.~
+8 11
+D0
+~
+~
+0 -1 30117
+D1
+~
+~
+0 -1 30138
+D2
+~
+~
+0 -1 30119
+S
+#30119
+Processional Halls~
+Carved devotees on the columns face inward with clasped hands, watching the corridor with hollow stone eyes that follow no living gaze.~
+8 11
+D0
+~
+~
+0 -1 30118
+D2
+~
+~
+0 -1 30120
+D3
+~
+~
+0 -1 30109
+S
+#30120
+Censer Galleries~
+Tiered balconies overlook narrow smoke channels, and guttering braziers stain the vault with oily violet haze. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30119
+D1
+~
+~
+0 -1 30125
+D2
+~
+~
+0 -1 30121
+S
+#30121
+Censer Galleries~
+Rows of bronze incense bowls sit on waist-high plinths, each engraved with names scratched out and replaced. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30120
+D1
+~
+~
+0 -1 30131
+D2
+~
+~
+0 -1 30122
+S
+#30122
+Censer Galleries~
+Condensed soot glitters along the ribs of the ceiling like dark frost, disturbed by every movement. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30121
+D2
+~
+~
+0 -1 30123
+D3
+~
+~
+0 -1 30102
+S
+#30123
+Censer Galleries~
+Cracked mirrors mounted between alcoves reflect only candle halos and not the chamber itself. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30122
+D2
+~
+~
+0 -1 30124
+D3
+~
+~
+0 -1 30113
+S
+#30124
+Censer Galleries~
+A bitter blend of myrrh, blood-resin, and grave mold hangs so thickly that breathing feels like swallowing incense. Smoke-thick corridors knot together here, obscuring sightlines as the dungeon descends. A passage returns north toward earlier chambers while another continues south into darker halls.~
+12 11
+D0
+~
+~
+0 -1 30123
+D1
+~
+~
+0 -1 30128
+D2
+~
+~
+0 -1 30125
+S
+#30125
+Censer Galleries~
+A chain pulley still holds a broken censer aloft, its bowl fused shut by cooled resin and a thick dark mineral crust.~
+8 11
+D0
+~
+~
+0 -1 30124
+D2
+~
+~
+0 -1 30126
+D3
+~
+~
+0 -1 30120
+S
+#30126
+Censer Galleries~
+The floor tiles near the smoke channels are darkened with oily residue, permanently warm to the touch beneath their heavy coat of soot.~
+8 11
+D0
+~
+~
+0 -1 30125
+D2
+~
+~
+0 -1 30127
+D3
+~
+~
+0 -1 30106
+S
+#30127
+Censer Galleries~
+Half-melted candelabra line the walls, their wax flows long since hardened into pale stalactites that hang motionless in the still air.~
+8 11
+D0
+~
+~
+0 -1 30126
+D2
+~
+~
+0 -1 30128
+D3
+~
+~
+0 -1 30117
+S
+#30128
+Censer Galleries~
+A low stone altar bristles with unlit tapers, each stamped with a pressed impression of Kel'Shadra's crescent baked into the dried wax.~
+8 11
+D0
+~
+~
+0 -1 30127
+D2
+~
+~
+0 -1 30129
+D3
+~
+~
+0 -1 30124
+S
+#30129
+Censer Galleries~
+The smoke here drifts against any ambient draft, curling in slow spirals toward the center of the room as though drawn by unseen breath.~
+8 11
+D0
+~
+~
+0 -1 30128
+D1
+~
+~
+0 -1 30139
+D2
+~
+~
+0 -1 30130
+S
+#30130
+Choir Crypts~
+Sarcophagi are stacked in choir-stall rows, their lids drilled with speaking vents for unending ritual chants. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30129
+D2
+~
+~
+0 -1 30131
+D3
+~
+~
+0 -1 30110
+S
+#30131
+Choir Crypts~
+Bone chimes hang from the rafters and answer the slightest draft with thin, off-key harmonies. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30130
+D2
+~
+~
+0 -1 30132
+D3
+~
+~
+0 -1 30121
+S
+#30132
+Choir Crypts~
+Each pillar bears a line of hymn script cut into marrow-white inlay, then crossed out by later heresies. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30131
+D1
+~
+~
+0 -1 30142
+D2
+~
+~
+0 -1 30133
+S
+#30133
+Choir Crypts~
+Rotting hymnals lie chained to lecterns beside open tomb niches where attendants once kept vigil. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30132
+D1
+~
+~
+0 -1 30135
+D2
+~
+~
+0 -1 30134
+S
+#30134
+Choir Crypts~
+Faint antiphonal whispers trade from one side of the crypt to the other, never revealing a living source. The atmosphere shifts from public rite to intimate necromancy as tomb-chapels multiply. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30133
+D2
+~
+~
+0 -1 30135
+D3
+~
+~
+0 -1 30114
+S
+#30135
+Choir Crypts~
+Shallow wall niches are sealed with single iron bars each, and faint scratching sounds from within are spaced too deliberately to be random.~
+8 11
+D0
+~
+~
+0 -1 30134
+D2
+~
+~
+0 -1 30136
+D3
+~
+~
+0 -1 30133
+S
+#30136
+Choir Crypts~
+The chime-cord nearest the archway is newer than the rest, its bone pieces still showing pale unsmoked marrow where the cord was replaced.~
+8 11
+D0
+~
+~
+0 -1 30135
+D1
+~
+~
+0 -1 30146
+D2
+~
+~
+0 -1 30137
+S
+#30137
+Choir Crypts~
+A collapsed pew lies crushed beneath a toppled column, and pinned beneath it is a stack of liturgical broadsheets the scribes never collected.~
+8 11
+D0
+~
+~
+0 -1 30136
+D1
+~
+~
+0 -1 30147
+D2
+~
+~
+0 -1 30138
+S
+#30138
+Choir Crypts~
+One tomb niche stands open and empty, its stone lid pried free and leaned against the opposite wall with deliberate care.~
+8 11
+D0
+~
+~
+0 -1 30137
+D2
+~
+~
+0 -1 30139
+D3
+~
+~
+0 -1 30118
+S
+#30139
+Choir Crypts~
+Tallow lines every corner of the ceiling, blackened by generations of open-flame ceremonies, giving the vault a low and furry darkness.~
+8 11
+D0
+~
+~
+0 -1 30138
+D2
+~
+~
+0 -1 30140
+D3
+~
+~
+0 -1 30129
+S
+#30140
+Scriptorium of Ash~
+Stone desks crowd the chamber, their surfaces dusted in powdered charcoal from burned doctrinal pages. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30139
+D1
+~
+~
+0 -1 30150
+D2
+~
+~
+0 -1 30141
+S
+#30141
+Scriptorium of Ash~
+Shelves of lead-bound folios lean at dangerous angles, held together by wax seals and rusted clasps. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30140
+D1
+~
+~
+0 -1 30143
+D2
+~
+~
+0 -1 30142
+S
+#30142
+Scriptorium of Ash~
+Copying frames, quills, and drying racks remain in place as though the scribes rose only moments ago. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30141
+D1
+~
+~
+0 -1 30162
+D2
+~
+~
+0 -1 30143
+D3
+~
+~
+0 -1 30132
+S
+#30143
+Scriptorium of Ash~
+Glass inkwells are clouded with old reagents, and half-finished sigils still mark drafting slates. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30142
+D2
+~
+~
+0 -1 30144
+D3
+~
+~
+0 -1 30141
+S
+#30144
+Scriptorium of Ash~
+Every sound is muffled by hanging parchment strips coated in soot-black lacquer. This wing records and refines doctrine, a midpoint between worship and war. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30143
+D1
+~
+~
+0 -1 30154
+D2
+~
+~
+0 -1 30145
+S
+#30145
+Scriptorium of Ash~
+Broken quills have been swept into the corners in neat piles, as if a final scribe tidied the hall before departing it forever.~
+8 11
+D0
+~
+~
+0 -1 30144
+D1
+~
+~
+0 -1 30155
+D2
+~
+~
+0 -1 30146
+S
+#30146
+Scriptorium of Ash~
+Ink-stained fabric strips are pinned across one archway as a crude blackout curtain, dulling the amber glow of distant brazier light.~
+8 11
+D0
+~
+~
+0 -1 30145
+D1
+~
+~
+0 -1 30166
+D2
+~
+~
+0 -1 30147
+D3
+~
+~
+0 -1 30136
+S
+#30147
+Scriptorium of Ash~
+A wide drainage channel cuts the floor from wall to wall, clogged now with matted parchment shards and rusted clasps from burst folios.~
+8 11
+D0
+~
+~
+0 -1 30146
+D2
+~
+~
+0 -1 30148
+D3
+~
+~
+0 -1 30137
+S
+#30148
+Scriptorium of Ash~
+Wall shelves have collapsed outward under their own weight, scattering hundreds of pressed-clay tablet fragments across the floor.~
+8 11
+D0
+~
+~
+0 -1 30147
+D1
+~
+~
+0 -1 30158
+D2
+~
+~
+0 -1 30149
+S
+#30149
+Scriptorium of Ash~
+A single unfinished manuscript remains on its copying frame, the final text cut off mid-sentence at a word too faded to make out.~
+12 11
+D0
+~
+~
+0 -1 30148
+D1
+~
+~
+0 -1 30153
+D2
+~
+~
+0 -1 30150
+S
+#30150
+Knight Reliquary~
+Funerary plinths display battered helms and ritual weapons, each tagged with an oath etched into iron. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30149
+D1
+~
+~
+0 -1 30170
+D2
+~
+~
+0 -1 30151
+D3
+~
+~
+0 -1 30140
+S
+#30151
+Knight Reliquary~
+Narrow armor stands line the walls where reliquary knights once armed before descending into the inner tombs. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30150
+D1
+~
+~
+0 -1 30161
+D2
+~
+~
+0 -1 30152
+S
+#30152
+Knight Reliquary~
+Chain curtains divide the space into martial chapels, clinking softly whenever the air shifts. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30151
+D2
+~
+~
+0 -1 30153
+S
+#30153
+Knight Reliquary~
+Shield-racks are bolted to basalt columns, most stripped bare except for a few cracked tower shields. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30152
+D2
+~
+~
+0 -1 30154
+D3
+~
+~
+0 -1 30149
+S
+#30154
+Knight Reliquary~
+Austere drill circles are inscribed in the floor, measuring paces for disciplined spear forms. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30153
+D2
+~
+~
+0 -1 30155
+D3
+~
+~
+0 -1 30144
+S
+#30155
+Knight Reliquary~
+A practice effigy of bundled reeds and scavenged plate is mounted upright in a wall bracket, its torso riddled with drill-rune inscriptions.~
+8 11
+D0
+~
+~
+0 -1 30154
+D2
+~
+~
+0 -1 30156
+D3
+~
+~
+0 -1 30145
+S
+#30156
+Knight Reliquary~
+Strips of consecrated cloth are lashed to every door frame, the prayers stitched into them worn nearly blank from years of brushing hands.~
+8 11
+D0
+~
+~
+0 -1 30155
+D2
+~
+~
+0 -1 30157
+S
+#30157
+Knight Reliquary~
+A knightly effigy occupies a central plinth, carved in full regalia but with the face deliberately chiseled off at the collar.~
+8 11
+D0
+~
+~
+0 -1 30156
+D1
+~
+~
+0 -1 30160
+D2
+~
+~
+0 -1 30158
+S
+#30158
+Knight Reliquary~
+Iron training wheels are fixed to opposite walls, their grip-handles worn smooth by untold repetitions of prescribed guard forms.~
+8 11
+D0
+~
+~
+0 -1 30157
+D2
+~
+~
+0 -1 30159
+D3
+~
+~
+0 -1 30148
+S
+#30159
+Knight Reliquary~
+Trophy brackets on the columns hold severed weapon heads rather than full blades, each labeled with a scratched date and a short invocation.~
+8 11
+D0
+~
+~
+0 -1 30158
+D1
+~
+~
+0 -1 30169
+D2
+~
+~
+0 -1 30160
+S
+#30160
+Sanguine Cloisters~
+Arcaded walkways frame shallow channels cut for sacrificial runoff, now crusted into dark glassy rivulets. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30159
+D2
+~
+~
+0 -1 30161
+D3
+~
+~
+0 -1 30157
+S
+#30161
+Sanguine Cloisters~
+Niches hold saint-effigies daubed with fresh-looking crimson despite the age of the stone. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30160
+D2
+~
+~
+0 -1 30162
+D3
+~
+~
+0 -1 30151
+S
+#30162
+Sanguine Cloisters~
+Prayer wheels of bone and copper turn intermittently on their own, clicking through forbidden invocations. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30161
+D2
+~
+~
+0 -1 30163
+D3
+~
+~
+0 -1 30142
+S
+#30163
+Sanguine Cloisters~
+The cloister walls bloom with iron-red mineral streaks that resemble old handprints and dripping seals. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30162
+D1
+~
+~
+0 -1 30173
+D2
+~
+~
+0 -1 30164
+S
+#30164
+Sanguine Cloisters~
+A warm metallic scent rises from grates between flagstones where deeper cisterns still churn. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30163
+D1
+~
+~
+0 -1 30168
+D2
+~
+~
+0 -1 30165
+S
+#30165
+Sanguine Cloisters~
+Low iron hooks set into the arcade columns once held ladles and basins for the bloodwork rites; the hooks remain, the vessels long gone.~
+8 11
+D0
+~
+~
+0 -1 30164
+D2
+~
+~
+0 -1 30166
+S
+#30166
+Sanguine Cloisters~
+The flagstones nearest the runoff channels sit slightly lower than the rest, tilted to direct flow toward a sealed drain at the center.~
+8 11
+D0
+~
+~
+0 -1 30165
+D2
+~
+~
+0 -1 30167
+D3
+~
+~
+0 -1 30146
+S
+#30167
+Sanguine Cloisters~
+Guttered oil lamps sit cold on every sill, their reservoirs long dry, yet the faint smell of rancid tallow still saturates the stone.~
+8 11
+D0
+~
+~
+0 -1 30166
+D2
+~
+~
+0 -1 30168
+S
+#30168
+Sanguine Cloisters~
+A low arch connects this passage to a lateral alcove where a standing stone basin is carved with supplicants raising upturned cups.~
+8 11
+D0
+~
+~
+0 -1 30167
+D2
+~
+~
+0 -1 30169
+D3
+~
+~
+0 -1 30164
+S
+#30169
+Sanguine Cloisters~
+Stone benches line both walls with kneeling depressions worn into their surfaces, and crude brackets show where foot-restraints were once bolted.~
+8 11
+D0
+~
+~
+0 -1 30168
+D2
+~
+~
+0 -1 30170
+D3
+~
+~
+0 -1 30159
+S
+#30170
+Inner Sepulcher~
+The architecture tightens into a sanctum approach, with heavier buttresses and fewer places to retreat. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30169
+D2
+~
+~
+0 -1 30171
+D3
+~
+~
+0 -1 30150
+S
+#30171
+Inner Sepulcher~
+Obsidian funerary doors stand ajar here, their hinges fused by heat and shadowy residue. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30170
+D1
+~
+~
+0 -1 30174
+D2
+~
+~
+0 -1 30172
+S
+#30172
+Inner Sepulcher~
+Star-map mosaics spiral inward toward a central axis, guiding pilgrims to the final cult chambers. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30171
+D2
+~
+~
+0 -1 30173
+S
+#30173
+Inner Sepulcher~
+Silence becomes oppressive this deep; even armor and breath seem swallowed before they can echo. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
+8 11
+D0
+~
+~
+0 -1 30172
+D2
+~
+~
+0 -1 30174
+D3
+~
+~
+0 -1 30163
+S
+#30174
+Inner Sepulcher~
+The stone itself feels awake, thrumming with warded pressure around the matriarch's domain. Only the deepest command chambers remain beyond these sepulchral approaches. The only clear retreat lies north, back through the dungeon's blood-stained path.~
+12 11
+D0
+~
+~
+0 -1 30173
+D3
+~
+~
+0 -1 30171
+S
 #0
 #RESETS
 M 0 30100 1 30105 (null)
