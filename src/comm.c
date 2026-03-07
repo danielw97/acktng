@@ -1714,6 +1714,13 @@ void bust_a_prompt(DESCRIPTOR_DATA *d)
          sprintf(buf2, " %d", get_chi(ch));
          i = buf2;
          break;
+      case 'A':
+         if (!IS_NPC(ch))
+            sprintf(buf2, "%d", ch->arcane_power);
+         else
+            sprintf(buf2, " ");
+         i = buf2;
+         break;
       case 't':
          if (!IS_NPC(ch))
             sprintf(buf2, "%d %s", (time_info.hour % 12 == 0) ? 12 : time_info.hour % 12,

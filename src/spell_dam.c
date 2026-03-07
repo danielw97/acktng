@@ -169,7 +169,12 @@ int get_best_level(CHAR_DATA *ch, int gsn)
    {
       for(int i = 0; i < MAX_CLASS; i++)
       {
-         if (ch->lvl[i] >= skill_table[gsn].skill_level[i] && ch->lvl[i] > best)
+         int required_level = skill_table[gsn].skill_level[i];
+
+         if (required_level < 0)
+            continue;
+
+         if (ch->lvl[i] >= required_level && ch->lvl[i] > best)
             best = ch->lvl[i];
       }
    }
@@ -177,7 +182,12 @@ int get_best_level(CHAR_DATA *ch, int gsn)
    {
       for(int i = 0; i < MAX_REMORT; i++)
       {
-         if (ch->remort[i] >= skill_table[gsn].skill_level[i] && ch->remort[i] > best)
+         int required_level = skill_table[gsn].skill_level[i];
+
+         if (required_level < 0)
+            continue;
+
+         if (ch->remort[i] >= required_level && ch->remort[i] > best)
             best = ch->remort[i];
       }
    }
@@ -185,7 +195,12 @@ int get_best_level(CHAR_DATA *ch, int gsn)
    {
       for(int i = 0; i < MAX_CLASS; i++)
       {
-         if (ch->adept[i] >= skill_table[gsn].skill_level[i] && ch->adept[i] > best)
+         int required_level = skill_table[gsn].skill_level[i];
+
+         if (required_level < 0)
+            continue;
+
+         if (ch->adept[i] >= required_level && ch->adept[i] > best)
             best = ch->adept[i];
       }
    }

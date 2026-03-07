@@ -990,6 +990,12 @@ bool can_use_skill_by_name(CHAR_DATA *ch, char *skill)
    return can_use_skill(ch, gsn);
 }
 
+
+static bool skill_requirement_is_usable(int required_level)
+{
+   return required_level >= 0;
+}
+
 bool can_use_skill(CHAR_DATA *ch, int gsn)
 {
    if (gsn == -1 || gsn >= MAX_SKILL)
@@ -1059,7 +1065,12 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    {
       for (int i = 0; i < MAX_CLASS; i++)
       {
-         if (ch->lvl[i] >= skill_table[gsn].skill_level[i])
+         int required_level = skill_table[gsn].skill_level[i];
+
+         if (!skill_requirement_is_usable(required_level))
+            continue;
+
+         if (ch->lvl[i] >= required_level)
             return TRUE;
          if (!IS_NPC(ch) && ch->pcdata->reincarnations[i] >= 20)
 	    return TRUE;
@@ -1069,7 +1080,12 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    {
       for (int i = 0; i < MAX_REMORT; i++)
       {
-         if (ch->remort[i] >= skill_table[gsn].skill_level[i])
+         int required_level = skill_table[gsn].skill_level[i];
+
+         if (!skill_requirement_is_usable(required_level))
+            continue;
+
+         if (ch->remort[i] >= required_level)
             return TRUE;
       }
    }
@@ -1077,7 +1093,12 @@ bool can_use_skill(CHAR_DATA *ch, int gsn)
    {
       for (int i = 0; i < MAX_CLASS; i++)
       {
-         if (ch->adept[i] >= skill_table[gsn].skill_level[i])
+         int required_level = skill_table[gsn].skill_level[i];
+
+         if (!skill_requirement_is_usable(required_level))
+            continue;
+
+         if (ch->adept[i] >= required_level)
             return TRUE;
       }
    }

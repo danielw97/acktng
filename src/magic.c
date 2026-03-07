@@ -147,6 +147,21 @@ int skill_lookup(const char *name)
    return -1;
 }
 
+
+
+bool is_arcane_spell(int sn)
+{
+   if (sn < 0 || sn >= MAX_SKILL)
+      return FALSE;
+
+   if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
+      return FALSE;
+
+   return skill_table[sn].skill_level[CLASS_MAG] >= 0
+       || skill_table[sn].skill_level[CLASS_SOR] >= 0
+       || skill_table[sn].skill_level[CLASS_WIZ] >= 0
+       || skill_table[sn].skill_level[CLASS_GMA] >= 0;
+}
 /*
  * Lookup a skill by slot number.
  * Used for object loading.
@@ -645,6 +660,9 @@ void do_cast(CHAR_DATA *ch, char *argument)
    }
    if ((*skill_table[sn].spell_fun)(sn, best, ch, vo, NULL))
    {
+      if (is_arcane_spell(sn))
+         ch->arcane_power++;
+
       if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
       {
          ch->pcdata->bloodlust -= mana;
@@ -688,6 +706,9 @@ void do_cast(CHAR_DATA *ch, char *argument)
          }
          if ((*skill_table[sn].spell_fun)(sn, best, ch, vo, NULL))
          {
+            if (is_arcane_spell(sn))
+               ch->arcane_power++;
+
             if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
             {
                ch->pcdata->bloodlust -= mana;
@@ -733,6 +754,9 @@ void do_cast(CHAR_DATA *ch, char *argument)
          }
          if ((*skill_table[sn].spell_fun)(sn, best, ch, vo, NULL))
          {
+            if (is_arcane_spell(sn))
+               ch->arcane_power++;
+
             if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
             {
                ch->pcdata->bloodlust -= mana;
