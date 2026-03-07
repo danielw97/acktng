@@ -381,6 +381,7 @@ Area policy constraints for object wear flags:
 
 - Every object **must** include `ITEM_TAKE`.
 - No object may include `ITEM_WEAR_CLAN_COLORS`.
+- Object `name`, `short_descr`, and `description` fields should be thematically consistent with the object's non-`take` wear flags (e.g., a `head` item should read as headgear, `wrist` as wristwear, `hold` as a held item).
 
 ### 7.3) `ITEM_PIECE` object values
 
@@ -518,6 +519,15 @@ From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
   - A given room vnum may appear only once across all loaded area files.
   - A given mobile vnum may appear only once across all loaded area files.
   - A given object vnum may appear only once across all loaded area files.
+
+## 13.1) Vnum allocation policy
+
+For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums should be assigned in ascending sequential order.
+
+- Use lower available vnums before higher ones (i.e., use `1` before `2`, `2` before `3`, and so on).
+- Do not leave gaps in vnum sequences.
+- When gaps exist in an area's assigned vnum range, fill those gaps wherever possible before assigning new higher vnums.
+- For `#ROOMS`, attempt to use all room vnums in the area's assigned range (i.e., fill every available room-vnum slot where practical).
 
 ## 14) Canonical section order emitted by saver
 
