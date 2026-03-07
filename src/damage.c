@@ -28,6 +28,11 @@ void sp_dam_message(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int dam, in
 void death_message(CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 void shortfight_emit_autoattack_summary(CHAR_DATA *ch, CHAR_DATA *victim);
 bool shortfight_should_emit_before_victim_raw_kill(int shortfight_round_active_now, int victim_is_npc, int victim_is_dead_position);
+bool should_handle_victim_death(const CHAR_DATA *victim);
+bool should_emit_shortfight_kill_summary(CHAR_DATA *ch, CHAR_DATA *victim);
+void update_kill_counts(CHAR_DATA *ch, CHAR_DATA *victim);
+void execute_raw_kill(CHAR_DATA *ch, CHAR_DATA *victim);
+void handle_autoloot_on_npc_kill(CHAR_DATA *ch, CHAR_DATA *victim);
 
 void damage_build_hit_messages(char *buf1, size_t buf1_size,
                                char *buf2, size_t buf2_size,
@@ -109,6 +114,62 @@ int short_fight_round_end(CHAR_DATA *ch, CHAR_DATA *victim, int *reactive_damage
 bool shortfight_should_emit_before_victim_raw_kill(int shortfight_round_active_now, int victim_is_npc, int victim_is_dead_position)
 {
     return shortfight_round_active_now && victim_is_npc && victim_is_dead_position;
+}
+
+bool should_handle_victim_death(const CHAR_DATA *victim)
+{
+    return victim != NULL && victim->position == POS_DEAD && (IS_NPC(victim) || !IS_VAMP(victim) || deathmatch);
+}
+
+bool should_emit_shortfight_kill_summary(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+    return shortfight_should_emit_before_victim_raw_kill(short_fight_round_active(ch, victim), IS_NPC(victim), victim->position == POS_DEAD);
+}
+
+void update_kill_counts(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+    if (!IS_NPC(ch))
+    {
+        if (!IS_NPC(victim))
+            ch->pcdata->pkills++;
+        else
+            ch->pcdata->mkills++;
+    }
+
+    if (!IS_NPC(victim))
+    {
+        if (!IS_NPC(ch))
+            victim->pcdata->pkilled++;
+        else
+            victim->pcdata->mkilled++;
+    }
+}
+
+void execute_raw_kill(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+    if (IS_NPC(ch))
+    {
+        raw_kill(victim, "");
+        return;
+    }
+
+    raw_kill(victim, ch->name);
+}
+
+void handle_autoloot_on_npc_kill(CHAR_DATA *ch, CHAR_DATA *victim)
+{
+    if (IS_NPC(ch) || !IS_NPC(victim))
+        return;
+
+    if (IS_SET(ch->config, CONFIG_AUTOMONEY))
+        do_get(ch, "money corpse");
+    if (IS_SET(ch->config, CONFIG_AUTOLOOT))
+        do_get(ch, "all corpse");
+    else
+        do_look(ch, "in corpse");
+
+    if (IS_SET(ch->config, CONFIG_AUTOSAC))
+        do_sacrifice(ch, "corpse");
 }
 
 int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bool crit_possible)
@@ -827,51 +888,18 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     if (!IS_AWAKE(victim))
         stop_fighting(victim, FALSE);
 
-    if (victim->position == POS_DEAD && (IS_NPC(victim) || !IS_VAMP(victim) || (deathmatch)))
+    if (should_handle_victim_death(victim))
     {
-        if (shortfight_should_emit_before_victim_raw_kill(short_fight_round_active(ch, victim), IS_NPC(victim), victim->position == POS_DEAD))
+        if (should_emit_shortfight_kill_summary(ch, victim))
             shortfight_emit_autoattack_summary(ch, victim);
 
         group_gain(ch, victim);
-
-        if (!IS_NPC(ch))
-        {
-            if (!IS_NPC(victim))
-                ch->pcdata->pkills++;
-            else
-                ch->pcdata->mkills++;
-        }
-        if (!IS_NPC(victim))
-        {
-            if (!IS_NPC(ch))
-                victim->pcdata->pkilled++;
-            else
-                victim->pcdata->mkilled++;
-        }
-
-        if (IS_NPC(ch))
-            raw_kill(victim, "");
-        else
-        {
-            char name_buf[MAX_STRING_LENGTH];
-            sprintf(name_buf, "%s", ch->name);
-            raw_kill(victim, name_buf);
-        }
+        update_kill_counts(ch, victim);
+        execute_raw_kill(ch, victim);
 
         if (deathmatch && !IS_NPC(victim))
             do_quit(victim, "");
-        if (!IS_NPC(ch) && IS_NPC(victim))
-        {
-            if (IS_SET(ch->config, CONFIG_AUTOMONEY))
-                do_get(ch, "money corpse");
-            if (IS_SET(ch->config, CONFIG_AUTOLOOT))
-                do_get(ch, "all corpse");
-            else
-                do_look(ch, "in corpse");
-
-            if (IS_SET(ch->config, CONFIG_AUTOSAC))
-                do_sacrifice(ch, "corpse");
-        }
+        handle_autoloot_on_npc_kill(ch, victim);
 
         return dam;
     }
