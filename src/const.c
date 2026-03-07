@@ -2533,7 +2533,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "Ice Bolt", {3, 182, 182, 182, 182, 182,
-                 3, 182, 182, 182, 182, 182},
+                 182, 182, 182, 182, 182, 182},
     spell_ice_bolt, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 605 ), 20, 12, TRUE,
     "Ice Bolt", "!Ice Bolt!",
@@ -3100,7 +3100,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "Fire Blast", {34, 182, 182, 182, 55, 182,
-                   40, 182, 182, 182, 182, 182},
+                   182, 182, 182, 182, 182, 182},
     spell_fireblast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 666 ), 80, 12, TRUE,
     "Fire Blast", "!Fire Blast!",
@@ -3109,7 +3109,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "Shock Storm", {42, 182, 182, 182, 68, 182,
-                    42, 182, 182, 182, 68, 182},
+                    182, 182, 182, 182, 68, 182},
     spell_shockstorm, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 667 ), 100, 12, TRUE,
     "Shock Storm", "!Shock Storm!",
@@ -3118,7 +3118,7 @@ const struct skill_type skill_table[MAX_SKILL] = {
    {
     REMORT, NORM,
     "Cone of cold", {56, 182, 182, 182, 182, 182,
-                     56, 182, 182, 182, 182, 182},
+                     182, 182, 182, 182, 182, 182},
     spell_cone_cold, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 668 ), 100, 12, TRUE,
     "Cone of Cold", "!Cone of Cold!",

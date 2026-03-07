@@ -103,6 +103,119 @@ static bool cast_wizard_elemental_dot_spell(int sn, int level, CHAR_DATA *ch, CH
    return TRUE;
 }
 
+
+static void apply_spell_debuff_dot(CHAR_DATA *ch, CHAR_DATA *victim, int sn, int element, int duration, int dot_tick_damage,
+                                  const char *debuff_msg)
+{
+   AFFECT_DATA af;
+
+   af.type = sn;
+   af.duration = duration;
+   af.duration_type = DURATION_ROUND;
+   af.location = APPLY_DOT;
+   af.modifier = dot_tick_damage;
+   af.bitvector = 0;
+   af.caster = ch;
+   af.element = element;
+   affect_join(victim, &af);
+
+   if (debuff_msg != NULL && debuff_msg[0] != '\0')
+      act((char *)debuff_msg, victim, NULL, NULL, TO_CHAR);
+}
+
+void apply_elemental_spell_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, const char *debuff_msg)
+{
+   if (sn == skill_lookup("Ice Bolt"))
+   {
+      apply_spell_debuff_dot(ch, victim, sn, ELEMENT_WATER, 3, 20, debuff_msg);
+      return;
+   }
+
+   if (sn == skill_lookup("Fire Blast"))
+   {
+      apply_spell_debuff_dot(ch, victim, sn, ELEMENT_FIRE, 3, 24, debuff_msg);
+      return;
+   }
+
+   if (sn == skill_lookup("Shock Storm"))
+   {
+      apply_spell_debuff_dot(ch, victim, sn, ELEMENT_AIR, 3, 22, debuff_msg);
+      return;
+   }
+
+   if (sn == skill_lookup("Cone of cold"))
+      apply_spell_debuff_dot(ch, victim, sn, ELEMENT_WATER, 3, 18, debuff_msg);
+}
+
+bool trigger_elemental_spell_combo(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj, int sn, int level)
+{
+   AFFECT_DATA *paf;
+   AFFECT_DATA *paf_next;
+   bool has_ice_bolt = FALSE;
+   bool has_fire_blast = FALSE;
+   bool has_shock_storm = FALSE;
+   bool has_cone_cold = FALSE;
+   int ice_bolt_sn = skill_lookup("Ice Bolt");
+   int fire_blast_sn = skill_lookup("Fire Blast");
+   int shock_storm_sn = skill_lookup("Shock Storm");
+   int cone_cold_sn = skill_lookup("Cone of cold");
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf->next)
+   {
+      if (paf->type == sn)
+         continue;
+      if (paf->type == ice_bolt_sn)
+         has_ice_bolt = TRUE;
+      else if (paf->type == fire_blast_sn)
+         has_fire_blast = TRUE;
+      else if (paf->type == shock_storm_sn)
+         has_shock_storm = TRUE;
+      else if (paf->type == cone_cold_sn)
+         has_cone_cold = TRUE;
+   }
+
+   if (sn == fire_blast_sn && (has_ice_bolt || has_cone_cold))
+   {
+      int combo_dam = dice(level / 4, 24) + 35;
+      act("@@eSteam erupts@@N as fire meets frost around $n!", victim, NULL, NULL, TO_ROOM);
+      send_to_char("@@eSteam erupts@@N around you as fire meets frost!\n\r", victim);
+      sp_damage(obj, ch, victim, combo_dam, ELEMENT_FIRE | ELEMENT_WATER, sn, TRUE);
+   }
+   else if (sn == ice_bolt_sn && (has_fire_blast || has_shock_storm))
+   {
+      int combo_dam = dice(level / 5, 20) + 25;
+      act("@@lRime crackles@@N over $n, locking in elemental energy!", victim, NULL, NULL, TO_ROOM);
+      send_to_char("@@lRime crackles@@N over you, locking in elemental energy!\n\r", victim);
+      sp_damage(obj, ch, victim, combo_dam, ELEMENT_WATER | ELEMENT_AIR, sn, TRUE);
+   }
+   else if (sn == shock_storm_sn && (has_ice_bolt || has_cone_cold))
+   {
+      int combo_dam = dice(level / 4, 22) + 30;
+      act("@@lLightning chains@@N through frost coating $n!", victim, NULL, NULL, TO_ROOM);
+      send_to_char("@@lLightning chains@@N through the frost coating you!\n\r", victim);
+      sp_damage(obj, ch, victim, combo_dam, ELEMENT_AIR | ELEMENT_WATER, sn, TRUE);
+   }
+   else if (sn == cone_cold_sn && (has_fire_blast || has_shock_storm))
+   {
+      int combo_dam = dice(level / 5, 24) + 28;
+      act("@@aFrozen shards@@N explode from the elemental backlash around $n!", victim, NULL, NULL, TO_ROOM);
+      send_to_char("@@aFrozen shards@@N explode from the elemental backlash around you!\n\r", victim);
+      sp_damage(obj, ch, victim, combo_dam, ELEMENT_WATER, sn, TRUE);
+   }
+   else
+      return FALSE;
+
+   for (paf = victim->first_affect; paf != NULL; paf = paf_next)
+   {
+      paf_next = paf->next;
+      if (paf->type == ice_bolt_sn || paf->type == fire_blast_sn || paf->type == shock_storm_sn || paf->type == cone_cold_sn)
+         affect_remove(victim, paf);
+   }
+
+   return TRUE;
+}
+
+
 /*
  * This file should contain:
  *	o Adept Spells
@@ -134,6 +247,8 @@ bool spell_fireblast(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("@@g$n is struck by the blast of @@efire@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the @@efire @@gblast!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELE_FIRE, sn, TRUE);
+   if (!trigger_elemental_spell_combo(ch, victim, obj, sn, level))
+      apply_elemental_spell_debuff(ch, victim, sn, "@@rLingering flames@@N continue to scorch you.\n\r");
    return TRUE;
 }
 
@@ -167,6 +282,8 @@ bool spell_shockstorm(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("@@g$n is struck by the storm of @@lsparks@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the storm of @@lsparks@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELEMENT_AIR, sn, TRUE);
+   if (!trigger_elemental_spell_combo(ch, victim, obj, sn, level))
+      apply_elemental_spell_debuff(ch, victim, sn, "@@lStatic arcs@@N keep dancing across your skin.\n\r");
    return TRUE;
 }
 
@@ -194,6 +311,8 @@ bool spell_cone_cold(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
    act("@@g$n is struck by the cone of @@acold@@g!!@@N", victim, NULL, NULL, TO_ROOM);
    send_to_char("@@gYou are struck by the cone of @@acold@@g!!@@N\n\r", victim);
    sp_damage(obj, ch, victim, dam, ELEMENT_WATER, sn, TRUE);
+   if (!trigger_elemental_spell_combo(ch, victim, obj, sn, level))
+      apply_elemental_spell_debuff(ch, victim, sn, "@@aYou are rimed with deep frost.@@N\n\r");
    return TRUE;
 }
 
