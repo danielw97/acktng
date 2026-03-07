@@ -1747,7 +1747,7 @@ ledger signet~
 0 0 0 0 0 0 0 0 0 0
 3
 L
-15
+9 671088641 8421376 20
 #30223
 blackthorn talons~
 @@dBlackthorn Talons@@N~
@@ -1996,9 +1996,9 @@ E 0 30218 0 13 (null)
 
 E 0 30225 0 26 (null)
 
-M 0 30182 1 30204 (null)
+E 0 30233 0 23 (null)
 
-E 0 30218 0 13 (null)
+E 0 30233 0 23 (null)
 
 E 0 30225 0 26 (null)
 
@@ -2076,9 +2076,9 @@ E 0 30231 0 4 (null)
 
 M 0 30188 1 30232 (null)
 
-E 0 30225 0 26 (null)
+E 0 30233 0 23 (null)
 
-E 0 30232 0 5 (null)
+E 0 30233 0 23 (null)
 
 M 0 30189 1 30234 (null)
 
