@@ -275,12 +275,20 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
        dam += get_damroll(ch) / 3;       
 
     if (!IS_SET(element, ELE_PHYSICAL))
+    {
         crit_chance = get_spell_crit(ch);
+
+        if (is_arcane_spell(dt))
+            crit_chance += ch->arcane_power * 5;
+    }
     else
         crit_chance = get_crit(ch);
 
     if (crit_possible && number_range(0, 100) < crit_chance)
         critical = TRUE;
+
+    if (critical && !IS_SET(element, ELE_PHYSICAL) && is_arcane_spell(dt))
+        ch->arcane_power = 0;
 
     if (critical)
     {

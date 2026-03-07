@@ -1559,6 +1559,7 @@ int get_item_value args((OBJ_DATA * obj));
 int mana_cost args((CHAR_DATA * ch, int sn));
 int skill_lookup args((const char *name));
 int slot_lookup args((int slot));
+bool is_arcane_spell args((int sn));
 bool saves_spell args((int level, CHAR_DATA *victim));
 void obj_cast_spell args((int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj));
 bool spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj);

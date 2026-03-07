@@ -1923,6 +1923,12 @@ void do_score(CHAR_DATA *ch, char *argument)
    send_to_char(buf2, ch);
 
    sprintf(buf, " @@WSpellpower: @@y%-5d @@WSpell Crit: @@y%-5d @@WSpell Crit Mult: @@y%-5d", get_spellpower(ch), get_spell_crit(ch), get_spell_crit_mult(ch));
+   if (ch->arcane_power > 0)
+   {
+      char arcane_buf[MSL];
+      sprintf(arcane_buf, " @@WArcane Power: @@y%-5d@@W (+%d%% spell crit)", ch->arcane_power, ch->arcane_power * 5);
+      safe_strcat(MAX_STRING_LENGTH, buf, arcane_buf);
+   }
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
    sprintf(buf, "@@WParry: @@y%-3d @@WDodge: @@y%-3d@@W Block: @@y%-3d@@W Counter: @@y%-3d@@W Damcap: @@y%-5d", get_parry(ch), get_dodge(ch), get_block(ch), get_counter(ch), get_damcap(ch));
