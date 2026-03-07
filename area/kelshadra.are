@@ -897,8 +897,8 @@ L 50 30 0 0 0 0 0 0 0
 #9402
 bone guardian skeleton~
 a bone guardian~
-A bone guardian stands watch with ancient vigilance.~
-Assembled from the bones of multiple warriors and bound together by dark
+9 738197632 8421376 8388608
+8 201326720 8396800 0
 sorcery, this construct carries two blades of shadow-iron and wears armor
 fashioned from its own ribs. Its skull bears an eternal grin of menace.
 It exists only to destroy the living.~
@@ -972,9 +972,9 @@ This creature exists partially outside normal reality, its outline flickering
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9402 9403 0 0 0 0 0 0 0 
-L 30 50 0 0 0 0 0 0 0 
-#9407
+5 134217856 8421376 0
+18 268435456 8388608 0
+18 268435456 8388608 0
 death knight warden eternal~
 a death knight~
 A death knight blocks the way, black armor gleaming with cold light.~
