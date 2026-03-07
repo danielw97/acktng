@@ -218,10 +218,10 @@ Builder note: set the `aggressive` flag for mobs whose intended behavior is to i
 - `vampire` = `8388608`
 - `no_hunt` = `16777216`
 - `solo` = `33554432`
-- `boss` = `134217728`
-- `no_blood` = `536870912`
-- `invasion` = `1073741824` (runtime-only flag; do not set in area files)
-- `noassist` = `2147483648`
+- `boss` = `67108864`
+- `no_blood` = `268435456`
+- `invasion` = `536870912` (runtime-only flag; do not set in area files)
+- `noassist` = `1073741824`
 
 Legacy keyword note from `tab_mob_flags` in `src/buildtab.c`:
 
