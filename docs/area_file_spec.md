@@ -397,7 +397,35 @@ Builder conventions for held equipment archetypes:
 
 Additional constraint: an item may only be set to `item_type = ITEM_WEAPON` if its wear flags include both `hold` and `take`.
 
-### 7.3) `ITEM_PIECE` object values
+### 7.3) Item `item_apply` bitvector
+
+`item_apply` is a bitvector field in the object header line. Builder-facing names and values are defined by `tab_item_apply` in `src/buildtab.c`:
+
+- `nada` = `1`
+- `infra` = `2`
+- `invis` = `4`
+- `det_invis` = `8`
+- `sanc` = `16`
+- `sneak` = `32`
+- `hide` = `64`
+- `prot` = `128`
+- `enhanced` = `256`
+- `det_mag` = `512`
+- `det_hid` = `1024`
+- `det_evil` = `2048`
+- `pass_door` = `4096`
+- `det_poison` = `8192`
+- `fly` = `16384`
+- `know_align` = `32768`
+- `detect_undead` = `65536`
+- `heated` = `131072`
+
+Notes:
+
+- `nada` (`ITEM_APPLY_NONE`) is the baseline/default bit and is set on newly created objects.
+- This field is additive, so multiple `item_apply` effects may be combined with bitwise OR.
+
+### 7.4) `ITEM_PIECE` object values
 
 For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots define how piece-combining works (`connect` command in `src/act_obj.c`):
 
@@ -407,7 +435,7 @@ For objects with `item_type = 29` (`ITEM_PIECE`), the first three value slots de
 
 At runtime, two piece objects connect successfully when either `pieceA.value0 == pieceB.vnum` or `pieceA.value1 == pieceB.vnum`. On success, both pieces are consumed and a new object with vnum `pieceA.value2` is created.
 
-### 7.4) `ITEM_WEAPON` object values
+### 7.5) `ITEM_WEAPON` object values
 
 For objects with `item_type = 5` (`ITEM_WEAPON`), `value3` stores the weapon attack type (`Weapon Type` in builder displays).
 
