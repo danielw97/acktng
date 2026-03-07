@@ -3126,6 +3126,15 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
+    "Earth Shatter", {60, 182, 182, 182, 182, 182,
+                       182, 182, 182, 182, 182, 182},
+    spell_earth_shatter, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 690 ), 100, 12, TRUE,
+    "Earth Shatter", "!Earth Shatter!",
+    ""},
+
+   {
+    REMORT, NORM,
     "arc lightning", {182, 182, 182, 182, 182, 182,
                       30, 182, 182, 182, 182, 182},
     spell_arc_lightning, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
@@ -3158,6 +3167,38 @@ const struct skill_type skill_table[MAX_SKILL] = {
     spell_phoenix_flare, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
     NULL, SLOT( 685 ), 120, 12, TRUE,
     "phoenix flare", "!phoenix flare!",
+    ""},
+
+   {
+    ADEPT, NORM,
+    "elemental inferno", {61, 182, 182, 182, 182, 182},
+    spell_elemental_inferno, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 686 ), 120, 12, TRUE,
+    "elemental inferno", "!elemental inferno!",
+    ""},
+
+   {
+    ADEPT, NORM,
+    "elemental shock", {62, 182, 182, 182, 182, 182},
+    spell_elemental_shock, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 687 ), 120, 12, TRUE,
+    "elemental shock", "!elemental shock!",
+    ""},
+
+   {
+    ADEPT, NORM,
+    "elemental deluge", {63, 182, 182, 182, 182, 182},
+    spell_elemental_deluge, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 688 ), 120, 12, TRUE,
+    "elemental deluge", "!elemental deluge!",
+    ""},
+
+   {
+    ADEPT, NORM,
+    "elemental rupture", {64, 182, 182, 182, 182, 182},
+    spell_elemental_rupture, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 689 ), 120, 12, TRUE,
+    "elemental rupture", "!elemental rupture!",
     ""},
 
    {

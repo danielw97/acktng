@@ -306,6 +306,7 @@ DECLARE_SPELL_FUN(spell_corrupt_bond);        /* 665 */
 DECLARE_SPELL_FUN(spell_fireblast);           /* 666 */
 DECLARE_SPELL_FUN(spell_shockstorm);
 DECLARE_SPELL_FUN(spell_cone_cold);
+DECLARE_SPELL_FUN(spell_earth_shatter);
 DECLARE_SPELL_FUN(spell_holy_wrath);
 DECLARE_SPELL_FUN(spell_wraith_touch);
 DECLARE_SPELL_FUN(spell_thought_vise); /* 670 */
@@ -332,3 +333,7 @@ DECLARE_SPELL_FUN(spell_arc_lightning);
 DECLARE_SPELL_FUN(spell_terra_rend);
 DECLARE_SPELL_FUN(spell_tidal_lash);
 DECLARE_SPELL_FUN(spell_phoenix_flare);
+DECLARE_SPELL_FUN(spell_elemental_inferno);
+DECLARE_SPELL_FUN(spell_elemental_shock);
+DECLARE_SPELL_FUN(spell_elemental_deluge);
+DECLARE_SPELL_FUN(spell_elemental_rupture);
