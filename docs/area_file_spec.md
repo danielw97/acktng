@@ -467,6 +467,11 @@ Room description content requirements:
 - Each room's main `<description>~` must contain at least 3 lines of text.
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
 
+Directional traversal constraint:
+
+- Unless a vnum is part of a set of vnums designed as a maze, repeated movement in the same direction should not enter a directional loop.
+- Example (disallowed outside maze areas): repeatedly taking `east` yields `a -> b -> c -> a`.
+
 ## 9) `#SHOPS` section
 
 Terminated by keeper `0`:
