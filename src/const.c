@@ -3126,6 +3126,42 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
+    "arc lightning", {182, 182, 182, 182, 182, 182,
+                      30, 182, 182, 182, 182, 182},
+    spell_arc_lightning, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 682 ), 120, 12, TRUE,
+    "arc lightning", "!arc lightning!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "terra rend", {182, 182, 182, 182, 182, 182,
+                      40, 182, 182, 182, 182, 182},
+    spell_terra_rend, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 683 ), 120, 12, TRUE,
+    "terra rend", "!terra rend!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "tidal lash", {182, 182, 182, 182, 182, 182,
+                      50, 182, 182, 182, 182, 182},
+    spell_tidal_lash, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 684 ), 120, 12, TRUE,
+    "tidal lash", "!tidal lash!",
+    ""},
+
+   {
+    REMORT, NORM,
+    "phoenix flare", {182, 182, 182, 182, 182, 182,
+                     60, 182, 182, 182, 182, 182},
+    spell_phoenix_flare, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
+    NULL, SLOT( 685 ), 120, 12, TRUE,
+    "phoenix flare", "!phoenix flare!",
+    ""},
+
+   {
+    REMORT, NORM,
     "Holy Wrath", {182, 80, 182, 182, 182, 182,
                    182, 40, 182, 182, 182, 182},
     spell_holy_wrath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,

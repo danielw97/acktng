@@ -326,3 +326,7 @@ DECLARE_SPELL_FUN(spell_magical_supremacy);
 DECLARE_SPELL_FUN(spell_refuge);
 DECLARE_SPELL_FUN(spell_feeble_mind);
 DECLARE_SPELL_FUN(spell_feeble_body);
+DECLARE_SPELL_FUN(spell_arc_lightning);
+DECLARE_SPELL_FUN(spell_terra_rend);
+DECLARE_SPELL_FUN(spell_tidal_lash);
+DECLARE_SPELL_FUN(spell_phoenix_flare);
