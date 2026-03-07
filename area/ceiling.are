@@ -3205,10 +3205,32 @@ Syntax:  rchannels                  - display your current IMC channel state
          rchannels +<channel>       - turn on an IMC channel
          rchannels -<channel>       - turn off an IMC channel
 
-rchannels on its own will show you which IMC channels you have access to, and
-whether they are currently on or off.
+Syntax: prompt.
+Syntax: prompt all.
+Syntax: prompt <%*>.
 
-rchannels with an argument will turn on or off a given IMC channel that you
+PROMPT with no argument toggles your prompt on or off.
+PROMPT ALL sets the default "<%hhp %mm %vmv> " prompt.
+PROMPT <%*> lets you build a custom prompt using the codes below.
+
+ %h  current hit points        %H  maximum hit points.
+ %m  current mana              %M  maximum mana.
+ %v  current movement          %V  maximum movement.
+ %x  current experience        %g  current gold.
+ %a  alignment                 %r  room name.
+ %R  room vnum (imm only)      %z  area name (imm only).
+ %s  current stance            %t  mud time.
+ %i  visibility status         %p  moon phase.
+ %F  current form              %c  carriage return/new line.
+ %!  hitroll                   %+  damroll.
+ %*  armor class               %%  literal percent sign.
+ %b  current bloodlust (vamp)  %B  max bloodlust (vamp).
+ %C  combo status              %I  current chi.
+
+Class experience tokens:
+ %wXX = remaining exp to next class level.
+ %WXX = total exp required for that class level.
+ XX accepts class codes: Ma, Mo, C, T, W, P, S, As, Ad, K, N.
 have access to.
 
 rchannels can also be used to block rtells and rbeeps if necessary.
