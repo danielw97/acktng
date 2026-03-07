@@ -318,6 +318,8 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 
 Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is runtime-managed by item generation systems.
 
+`ITEM_LOOT` usage policy: items intended to be spawned from a mobile's loot table (`#MOBILES` `l`/`L` extension data) should have `ITEM_LOOT` set in `extra_flags`. Items loaded onto mobiles via `#RESETS` (`G`/`E`) are normal reset equipment/inventory and should not be treated as loot-only objects unless explicitly intended.
+
 - `ITEM_GENERATED` = `1`
 - `ITEM_BIND_EQUIP` = `2`
 - `ITEM_NODISARM` = `4`
