@@ -215,15 +215,17 @@ Builder note: set the `aggressive` flag for mobs whose intended behavior is to i
 - `postman` = `524288`
 - `rewield` = `1048576`
 - `reequip` = `2097152`
-- `intelligent` = `4194304`
 - `vampire` = `8388608`
 - `no_hunt` = `16777216`
 - `solo` = `33554432`
-- `boss` = `67108864`
-- `mount` = `134217728`
-- `no_blood` = `268435456`
-- `invasion` = `536870912` (runtime-only flag; do not set in area files)
-- `noassist` = `1073741824`
+- `boss` = `134217728`
+- `no_blood` = `536870912`
+- `invasion` = `1073741824` (runtime-only flag; do not set in area files)
+- `noassist` = `2147483648`
+
+Legacy keyword note from `tab_mob_flags` in `src/buildtab.c`:
+
+- `intelligent` and `mount` appear in the builder lookup table as legacy keywords, but they do not have active `ACT_*` definitions in `src/config.h` in this codebase, so they should not be used in area files.
 
 Builder policy for special difficulty mobs:
 
@@ -518,6 +520,68 @@ Directional traversal constraint:
 
 - Unless a vnum is part of a set of vnums designed as a maze, repeated movement in the same direction should not enter a directional loop.
 - Example (disallowed outside maze areas): repeatedly taking `east` yields `a -> b -> c -> a`.
+
+### 8.1) `room_flags` bitvector
+
+`room_flags` is a bitvector field in room headers (`<room_flags> <sector_type>`). Builder-facing names and values are defined by `tab_room_flags` in `src/buildtab.c`:
+
+- `nada` = `0`
+- `dark` = `1`
+- `regen` = `2`
+- `no_mob` = `4`
+- `indoors` = `8`
+- `no_magic` = `16`
+- `hot` = `32`
+- `cold` = `64`
+- `pk` = `128`
+- `quiet` = `256`
+- `private` = `512`
+- `safe` = `1024`
+- `solitary` = `2048`
+- `pet_shop` = `4096`
+- `no_recall` = `8192`
+- `no_teleport` = `16384`
+- `hunt_hunt` = `32768`
+- `no_bloodwalk` = `65536`
+- `no_portal` = `131072`
+- `no_repop` = `524288`
+
+### 8.2) `sector_type` values
+
+`sector_type` is a numeric enum in room headers. Builder-facing names and values are defined by `tab_sector_types` in `src/buildtab.c`:
+
+- `nada` = `0`
+- `city` = `1`
+- `field` = `2`
+- `forest` = `3`
+- `hills` = `4`
+- `mountain` = `5`
+- `water_swim` = `6`
+- `water_noswim` = `7`
+- `recall_set` = `8`
+- `air` = `9`
+- `desert` = `10`
+- `inside` = `11`
+
+### 8.3) Exit `locks` and reset door state values
+
+In room `D<door>` entries, the destination line field `<locks>` is a bitvector over `tab_door_types` in `src/buildtab.c`:
+
+- `door` = `1`
+- `closed` = `2`
+- `locked` = `4`
+- `climb` = `8`
+- `immortal` = `16`
+- `pickproof` = `32`
+- `smashproof` = `64`
+- `passproof` = `128`
+- `nodetect` = `256`
+
+In `#RESETS`, command `D` uses door state enum values from `tab_door_states` in `src/buildtab.c`:
+
+- `open` = `0`
+- `closed` = `1`
+- `locked` = `2`
 
 ## 9) `#SHOPS` section
 
