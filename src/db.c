@@ -36,6 +36,8 @@
 #include "hash.h"
 #include "ssm.h"
 #include <unistd.h> /* for execl */
+#include <dirent.h>
+#include <sys/stat.h>
 #include <sys/wait.h>
 #include <errno.h>
 #include <signal.h>

@@ -255,8 +255,10 @@ void do_get(CHAR_DATA *ch, char *argument)
          }
          else
          {
-            if (container->item_type == ITEM_CORPSE_PC || is_keep_chest(container))
+            if (container->item_type == ITEM_CORPSE_PC)
                save_corpses();
+            else if (is_keep_chest(container))
+               save_chest(container);
          }
          if (!IS_NPC(ch))
             do_save(ch, "");
@@ -293,8 +295,10 @@ void do_get(CHAR_DATA *ch, char *argument)
                get_obj(ch, obj, container);
             }
          }
-         if (container->item_type == ITEM_CORPSE_PC || is_keep_chest(container))
+         if (container->item_type == ITEM_CORPSE_PC)
             save_corpses();
+         else if (is_keep_chest(container))
+            save_chest(container);
 
          if (!IS_NPC(ch))
             do_save(ch, "");
@@ -564,7 +568,7 @@ void do_put(CHAR_DATA *ch, char *argument)
          }
       }
       if (is_keep_chest(container_obj))
-         save_corpses();
+         save_chest(container_obj);
 
       if (!IS_NPC(ch))
          do_save(ch, "");
