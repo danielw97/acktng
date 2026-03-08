@@ -5,7 +5,11 @@ ROOM_INDEX_DATA *new_room(AREA_DATA *pArea, sh_int vnum, sh_int sector);
 extern int top_room;
 extern int top_exit;
 extern int top_obj_index;
+extern int top_mob_index;
+extern int top_reset;
 extern char str_empty[1];
+extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
+
 
 
 int keep_chest_max_items(void)
@@ -62,6 +66,91 @@ int keep_player_can_customize(const CHAR_DATA *ch)
         return 0;
 
     return (ch->in_room->vnum == ch->pcdata->keep_vnum);
+}
+
+
+static void keep_format_healer_name(const char *owner_name, char *dest, size_t dest_size)
+{
+    const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
+
+    if (dest == NULL || dest_size == 0)
+        return;
+
+    snprintf(dest, dest_size, "%s's healer", safe_owner);
+}
+
+static MOB_INDEX_DATA *create_keep_healer_index(AREA_DATA *pArea, int vnum, const char *owner_name)
+{
+    int iHash;
+    MOB_INDEX_DATA *pMobIndex;
+    BUILD_DATA_LIST *pList;
+    char name_buf[MAX_INPUT_LENGTH];
+    char short_buf[MAX_STRING_LENGTH];
+    char long_buf[MAX_STRING_LENGTH];
+    char themed_name[256];
+
+    GET_FREE(pMobIndex, mid_free);
+    pMobIndex->vnum = vnum;
+    pMobIndex->area = pArea;
+
+    snprintf(name_buf, sizeof(name_buf), "%s keep healer", owner_name);
+    pMobIndex->player_name = str_dup(name_buf);
+
+    keep_format_healer_name(owner_name, themed_name, sizeof(themed_name));
+    snprintf(short_buf, sizeof(short_buf), "%s", themed_name);
+    pMobIndex->short_descr = str_dup(short_buf);
+
+    snprintf(long_buf, sizeof(long_buf), "%.200s is here, ready to heal and aid you.\n\r", themed_name);
+    pMobIndex->long_descr = str_dup(long_buf);
+    pMobIndex->description = str_dup(long_buf);
+
+    pMobIndex->act = ACT_IS_NPC | ACT_SENTINEL;
+    pMobIndex->affected_by = 0;
+    pMobIndex->pShop = NULL;
+    pMobIndex->alignment = 1000;
+    pMobIndex->level = 1;
+    pMobIndex->sex = SEX_NEUTRAL;
+    pMobIndex->ac_mod = 0;
+    pMobIndex->hr_mod = 0;
+    pMobIndex->dr_mod = 0;
+    pMobIndex->spec_fun = spec_lookup("spec_cast_adept");
+    pMobIndex->count = 0;
+    pMobIndex->killed = 0;
+    pMobIndex->target = NULL;
+    pMobIndex->first_mprog = NULL;
+    pMobIndex->last_mprog = NULL;
+    pMobIndex->progtypes = 0;
+
+    iHash = vnum % MAX_KEY_HASH;
+    SING_TOPLINK(pMobIndex, mob_index_hash[iHash], next);
+
+    GET_FREE(pList, build_free);
+    pList->data = pMobIndex;
+    LINK(pList, pArea->first_area_mobile, pArea->last_area_mobile, next, prev);
+
+    top_mob_index++;
+
+    return pMobIndex;
+}
+
+static void add_keep_healer_reset(AREA_DATA *pArea, ROOM_INDEX_DATA *room, int healer_vnum)
+{
+    RESET_DATA *pReset;
+    BUILD_DATA_LIST *pList;
+
+    GET_FREE(pReset, reset_free);
+    pReset->command = 'M';
+    pReset->arg1 = healer_vnum;
+    pReset->arg2 = 1;
+    pReset->arg3 = room->vnum;
+
+    GET_FREE(pList, build_free);
+    pList->data = pReset;
+
+    LINK(pReset, pArea->first_reset, pArea->last_reset, next, prev);
+    LINK(pList, room->first_room_reset, room->last_room_reset, next, prev);
+
+    top_reset++;
 }
 
 static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const char *owner_name)
@@ -158,7 +247,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
             return;
         }
 
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep healer\n\r", ch);
         return;
     }
 
@@ -214,6 +303,73 @@ void do_keep(CHAR_DATA *ch, char *argument)
         return;
     }
 
+    if (!str_cmp(arg1, "healer"))
+    {
+        ROOM_INDEX_DATA *keep_room;
+        int healer_vnum;
+        MOB_INDEX_DATA *keepHealerIndex;
+        CHAR_DATA *keepHealer;
+
+        if (ch->pcdata->keep_vnum <= 0)
+        {
+            send_to_char("You do not have a keep yet.\n\r", ch);
+            return;
+        }
+
+        keep_room = get_room_index(ch->pcdata->keep_vnum);
+        if (keep_room == NULL)
+        {
+            send_to_char("Your keep cannot be found. Contact an immortal.\n\r", ch);
+            return;
+        }
+
+        if (!keep_player_can_customize(ch))
+        {
+            send_to_char("You must be in your keep to do that.\n\r", ch);
+            return;
+        }
+
+        if (ch->pcdata->keep_healer_bought)
+        {
+            send_to_char("Your keep healer has already been purchased.\n\r", ch);
+            return;
+        }
+
+        if (ch->quest_points < 250)
+        {
+            send_to_char("You do not have enough quest points for that upgrade.\n\r", ch);
+            return;
+        }
+
+        for (healer_vnum = keep_room->area->min_vnum; healer_vnum <= keep_room->area->max_vnum; healer_vnum++)
+        {
+            if (get_room_index(healer_vnum) == NULL && get_obj_index(healer_vnum) == NULL && get_mob_index(healer_vnum) == NULL)
+                break;
+        }
+
+        if (healer_vnum > keep_room->area->max_vnum)
+        {
+            send_to_char("Couldn't find an open vnum to create your keep healer in!\n\r", ch);
+            return;
+        }
+
+        ch->quest_points -= 250;
+
+        keepHealerIndex = create_keep_healer_index(keep_room->area, healer_vnum, ch->name);
+        keepHealer = create_mobile(keepHealerIndex);
+        char_to_room(keepHealer, keep_room);
+        add_keep_healer_reset(keep_room->area, keep_room, healer_vnum);
+
+        ch->pcdata->keep_healer_bought = 1;
+        ch->pcdata->keep_healer_vnum = healer_vnum;
+
+        do_savearea(NULL, (char *)keep_room->area);
+
+        send_to_char("A personal healer now tends your keep.\n\r", ch);
+        act("$n purchases a personal keep healer.", ch, NULL, NULL, TO_ROOM);
+        return;
+    }
+
     if (keep_is_customization_command(arg1))
     {
         if (!keep_player_can_customize(ch))
@@ -250,7 +406,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
 
     if (str_cmp(arg1, "create"))
     {
-        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside\n\r", ch);
+        send_to_char("Syntax: keep create | keep title <string> | keep desc <string> | keep regen | keep inside | keep healer\n\r", ch);
         return;
     }
 

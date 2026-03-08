@@ -282,6 +282,7 @@ to them!~
   keep desc <string>
   keep regen
   keep inside
+  keep healer
 Using @@ykeep@@N will recall you to your keep.
 Using @@ykeep create@@N creates your keep with @@yno_teleport@@N, @@yno_bloodwalk@@N,
 @@yno_portal@@N, @@yno_mob@@N, and @@ysafe@@N flags.
@@ -292,7 +293,9 @@ description.
 Using @@ykeep regen@@N while inside your keep adds the @@yregen@@N room flag for
 @@Y100@@N quest points.
 Using @@ykeep inside@@N while inside your keep adds the @@yinside@@N room flag for
-@@Y50@@N quest points.~
+@@Y50@@N quest points.
+Using @@ykeep healer@@N while inside your keep purchases a personal healer for
+@@Y250@@N quest points. This purchase is permanent and can only be done once.~
 0 imm immortal immortals~
 Due to some past events where common sense was overlooked
 it was brought to the attentions of the immortals that there is a

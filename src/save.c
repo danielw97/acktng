@@ -355,6 +355,8 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
       fprintf(fp, "Title        %s~\n", ch->pcdata->title);
       fprintf(fp, "Immskll      %s~\n", ch->pcdata->immskll);
       fprintf(fp, "Keep         %d\n", ch->pcdata->keep_vnum);
+      fprintf(fp, "KeepHealerBought %d\n", ch->pcdata->keep_healer_bought);
+      fprintf(fp, "KeepHealerVnum %d\n", ch->pcdata->keep_healer_vnum);
       /*
        * We add a '*' to preserve leading spaces... strip * on load
        */
@@ -666,6 +668,8 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->perm_con = 13;
       ch->pcdata->bloodlust = 24;
       ch->pcdata->keep_vnum = 0;
+      ch->pcdata->keep_healer_bought = 0;
+      ch->pcdata->keep_healer_vnum = 0;
       for(int i = 0; i < MAX_CLASS; i++)
          ch->pcdata->reincarnations[i] = 0;
       for(int i = 0; i < MAX_REMORT; i++)
@@ -1198,6 +1202,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
       case 'K':
          KEY("Keep", ch->pcdata->keep_vnum, fread_number(fp));
+         KEY("KeepHealerBought", ch->pcdata->keep_healer_bought, fread_number(fp));
+         KEY("KeepHealerVnum", ch->pcdata->keep_healer_vnum, fread_number(fp));
       case 'L':
 
          KEY("Level", ch->level, fread_number(fp));
