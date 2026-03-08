@@ -1009,6 +1009,14 @@ char *reset_to_text(BUILD_DATA_LIST **pList, int *pcount)
       sprintf(buf, " Randomize doors up to number %d.\n\r", pReset->arg2);
       strcat(buf1, buf);
       break;
+   case 'P': /* put object in container */
+      pObj = get_obj_index(pReset->arg1);
+      if (pObj != NULL)
+         sprintf(buf, " Put [%d] %s inside container [%d].\n\r", pObj->vnum, pObj->name, pReset->arg3);
+      else
+         sprintf(buf, " Put unknown object [%d] inside container [%d].\n\r", pReset->arg1, pReset->arg3);
+      strcat(buf1, buf);
+      break;
    }
 
    return buf1;
@@ -3592,13 +3600,14 @@ void build_addreset(CHAR_DATA *ch, char *argument)
       send_to_char("         obj   <vnum> <max number in room>\n\r", ch);
       send_to_char("         equip <n.mob-vnum> <obj-vnum> <location>\n\r", ch);
       send_to_char("         give  <n.mob-vnum> <obj-vnum>\n\r", ch);
+      send_to_char("         put   <obj-vnum> <container-vnum>\n\r", ch);
       send_to_char("         door  <dir> <state>\n\r", ch);
       send_to_char("         rand  <num-dirs>\n\r", ch);
       send_to_char("         message <min_lev> <max_lev> <text>\n\r", ch);
       return;
    }
 
-   if (!is_name(arg1, "mob obj equip message give door rand"))
+   if (!is_name(arg1, "mob obj equip message give put door rand"))
    {
       build_addreset(ch, "");
       return;
@@ -3828,22 +3837,7 @@ void build_addreset(CHAR_DATA *ch, char *argument)
 
    if (!str_cmp(arg1, "put"))
    {
-      num = number_argument(arg2, buf);
       vnum = is_number(arg2) ? atoi(arg2) : -1;
-
-      found = num;
-      for (pMobList = pRoomIndex->first_room_reset; pMobList != NULL; pMobList = pMobList->next)
-      {
-         pMobReset = pMobList->data;
-         if (pMobReset->command == 'M' && pMobReset->arg1 == vnum)
-         {
-            found--;
-            if (found <= 0)
-               break;
-         }
-      }
-
-      vnum = is_number(arg3) ? atoi(arg3) : -1;
       if (!(pObj = get_obj_index(vnum)))
       {
          send_to_char("Object not found.\n\r", ch);
@@ -3864,7 +3858,20 @@ void build_addreset(CHAR_DATA *ch, char *argument)
 
       rarg1 = vnum;
       rarg2 = 0;
-      rarg3 = 0;
+      vnum = is_number(arg3) ? atoi(arg3) : -1;
+      if (!(pObj = get_obj_index(vnum)))
+      {
+         send_to_char("Container object not found.\n\r", ch);
+         return;
+      }
+
+      if (!build_canread(pObj->area, ch, 0))
+      {
+         send_to_char("You cannot use that object as a container.\n\r", ch);
+         return;
+      }
+
+      rarg3 = vnum;
       command = 'P';
    }
 
