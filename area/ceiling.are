@@ -3217,6 +3217,25 @@ Syntax: prompt.
  %h  current hit points        %H  maximum hit points.
  %m  current mana              %M  maximum mana.
  %v  current movement          %V  maximum movement.
+0 arcane power arcane_power arcanepower~
+Arcane Power builds while you are in combat whenever you successfully cast an
+arcane spell (mage, sorcerer, wizard, or grand mage spell lists).
+
+Each Arcane Power adds +5% spell critical chance to your arcane spells.
+
+Arcane Power is consumed when one of your arcane spells critically hits.
+It also dissipates if you leave combat.
+~
+0 holy power holy_power holypower~
+Holy Power builds whenever you successfully cast healing spells such as
+cure light/serious/critical, heal, group heal, regen, influx, psionic
+recovery, and healing light.
+
+Each Holy Power adds +5% bonus damage to your next damaging holy spell
+(cleric, priest, paladin, or templar spell lists), up to +100%.
+
+When you deal damage with a holy spell, all stored Holy Power is consumed.
+~
  %x  current experience        %g  current gold.
  %a  alignment                 %r  room name.
  %R  room vnum (imm only)      %z  area name (imm only).
