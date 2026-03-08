@@ -749,6 +749,10 @@ Commands used by validation/editor paths:
 - `P`: put object into previous room-reset object/container (`arg1` object vnum, `arg2` limit, `arg3` container object vnum)
 - `A`: obsolete; loader/checker still recognize it
 
+Builder editor mapping:
+
+- `addreset put <obj-vnum> <container-vnum>` emits reset command `P` with `arg1=<obj-vnum>`, `arg2=0`, and `arg3=<container-vnum>`.
+
 Reset vnum validity rule:
 
 - Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
