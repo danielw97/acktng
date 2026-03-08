@@ -605,79 +605,62 @@ char *learnt_name(int sn, int learnt)
 
 char *get_adept_name(CHAR_DATA *ch)
 {
-   /*
-    * this is weak for now..will eventually have like 200 total names, based on the remort
-    * classes the adept has
-    */
-   int max = 0;
+   static const char *const adept_titles[MAX_CLASS][20] = {
+      {
+       "@@b Arcane Initiate @@N", "@@b Cantrip Adept   @@N", "@@b Rune Scholar    @@N", "@@b Glyphbinder     @@N", "@@b Spellweaver     @@N",
+       "@@b Mana Savant     @@N", "@@b Ether Scribe    @@N", "@@b Star Channeler  @@N", "@@b Astral Arcanist @@N", "@@b Archmage Ascend @@N",
+       "@@b Leyline Warden  @@N", "@@b Storm Theorist  @@N", "@@b Rift Magister   @@N", "@@b Void Cartograph @@N", "@@b Prism Hierophant@@N",
+       "@@b Celestial Sage  @@N", "@@b Reality Etcher  @@N", "@@b Aether Regent   @@N", "@@b Worldspell Lord @@N", "@@B Grandmagi Exalt @@N"
+      },
+      {
+       "@@a Temple Novice   @@N", "@@a Votive Keeper   @@N", "@@a Oath Bearer     @@N", "@@a Faith Adept     @@N", "@@a Relic Guardian  @@N",
+       "@@a Litany Master   @@N", "@@a Ward Canon      @@N", "@@a Sanctum Knight  @@N", "@@a Creed Arbiter   @@N", "@@a Dawn Inquisitor @@N",
+       "@@a Sacred Marshal  @@N", "@@a Radiant Justicar@@N", "@@a Chapel Commander@@N", "@@a Anointed Judge  @@N", "@@a Seraphic Warden @@N",
+       "@@a Temple Champion @@N", "@@a Covenant Lord   @@N", "@@a Light Paragon   @@N", "@@a Throne Templar  @@N", "@@A High Hierotemplar@@N"
+      },
+      {
+       "@@d Shadow Footpad  @@N", "@@d Dusk Stalker    @@N", "@@d Gloom Knifework @@N", "@@d Veil Skirmisher @@N", "@@d Night Prowler   @@N",
+       "@@d Silent Ambusher @@N", "@@d Umbral Duelist  @@N", "@@d Moonlit Cutter  @@N", "@@d Shade Reaver    @@N", "@@d Midnight Hunter @@N",
+       "@@d Cloak Assassin  @@N", "@@d Tenebrous Fang  @@N", "@@d Ebon Shadowhand @@N", "@@d Nocturne Slayer @@N", "@@d Dread Nightblade@@N",
+       "@@d Eclipse Butcher @@N", "@@d Phantom Exegete @@N", "@@d Voidstep Master @@N", "@@d Crown of Cinders@@N", "@@D Nightblade Prime@@N"
+      },
+      {
+       "@@e Banner Squire   @@N", "@@e Shield Adept    @@N", "@@e Battle Votary   @@N", "@@e Iron Legionary  @@N", "@@e Oathbound Guard @@N",
+       "@@e Vanguard Captain@@N", "@@e War Chantblade  @@N", "@@e Siege Standard  @@N", "@@e Bastion Reaver  @@N", "@@e Crusade Herald  @@N",
+       "@@e Bulwark Marshal @@N", "@@e Host Commander  @@N", "@@e Warpath Arbiter @@N", "@@e Lionheart Tact  @@N", "@@e Storm Crusader  @@N",
+       "@@e Conquest Regent @@N", "@@e Dominion Spear  @@N", "@@e Bannerlord Asc  @@N", "@@e Thronebreaker   @@N", "@@E Eternal Crusarch@@N"
+      },
+      {
+       "@@m Pulse Student   @@N", "@@m Force Adept     @@N", "@@m Vector Caller   @@N", "@@m Motion Scribe   @@N", "@@m Flux Binder     @@N",
+       "@@m Momentum Savant @@N", "@@m Kinesis Warden  @@N", "@@m Resonance Master@@N", "@@m Graviton Duelist@@N", "@@m Quantum Strider @@N",
+       "@@m Singularity Seer@@N", "@@m Continuum Keeper@@N", "@@m Orbit Lawgiver  @@N", "@@m Tensor Arcanist @@N", "@@m Rift Physicist  @@N",
+       "@@m Hyperion Architect@@N", "@@m Eventide Director@@N", "@@m Cosmos Engineer @@N", "@@m Fate Deflector  @@N", "@@M Kinetimancer Apex@@N"
+      },
+      {
+       "@@r Iron Trainee    @@N", "@@r Form Adept      @@N", "@@r Stance Keeper   @@N", "@@r Palm Disciple   @@N", "@@r Bone Tempered   @@N",
+       "@@r Flow Fighter    @@N", "@@r Ki Striker      @@N", "@@r Fist Virtuoso   @@N", "@@r Spirit Brawler  @@N", "@@r Tempest Monk    @@N",
+       "@@r Adamant Master  @@N", "@@r Dragon Fist     @@N", "@@r Hundred Form    @@N", "@@r Mountain Breaker@@N", "@@r Soul Pugilist   @@N",
+       "@@r Grand Combatant @@N", "@@r Heaven Knuckle  @@N", "@@r Wyrmhand Regent @@N", "@@r Legend of Blows @@N", "@@R Martial Paragon @@N"
+      }
+   };
+   int dominant_class = -1;
+   int dominant_level = 0;
 
    for (int i = 0; i < MAX_CLASS; i++)
    {
-      if (ch->adept[i] > max)
-         max = ch->adept[i];
+      if (ch->adept[i] > dominant_level)
+      {
+         dominant_level = ch->adept[i];
+         dominant_class = i;
+      }
    }
 
-   switch (max)
-   {
-   case 1:
-      return "@@W    Mystic    @@N";
-      break;
-   case 2:
-      return "@@a   Templar    @@N";
-      break;
-   case 3:
-      return "@@l Illusionist  @@N";
-      break;
-   case 4:
-      return "@@e   Crusader   @@N";
-      break;
-   case 5:
-      return "@@d   Warlock    @@N";
-      break;
-   case 6:
-      return "@@a   Paladin    @@N";
+   if (dominant_class < 0 || dominant_level < 1)
+      return "@@W    Adept     @@N";
 
-   case 7:
-      return "@@r    Ranger    @@N";
-      break;
-   case 8:
-      return "@@c  Gladiator   @@N";
-      break;
-   case 9:
-      return "@@l    Shogun    @@N";
-      break;
-   case 10:
-      return "@@e    Shamen    @@N";
-      break;
-   case 11:
-      return "@@r    Druid     @@N";
-      break;
-   case 12:
-      return "@@b  Conjurer    @@N";
-   case 13:
-      return "@@l Elementalist @@N";
-      break;
-   case 14:
-      return "@@m  Runemaster  @@N";
-   case 15:
-      return "@@d Shadowmaster @@N";
-      break;
-   case 16:
-      return "@@b Beastmaster  @@N";
-      break;
-   case 17:
-      return "@@R   Warlord    @@N";
-      break;
-   case 18:
-      return "@@e  Dragonlord  @@N";
-      break;
-   case 19:
-      return "@@d  Demonlord   @@N";
-      break;
-   case 20:
-      return "@@m  Realm Lord  @@N";
-   }
-   return "@@W    Adept     @@N";
+   dominant_level = URANGE(1, dominant_level, 20);
+
+   return (char *)adept_titles[dominant_class][dominant_level - 1];
 }
 
 int nocol_strlen(const char *text)
