@@ -12,1141 +12,13 @@ U @@cTurquoise@@N and @@aazure@@N torchlight stain every gothic arch in this hau
 O virant~
 R all~
 W all~
-#ROOMS
-#30325
-Moonlit Antechamber~
-@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-12 11
-D0
-~
-~
-0 0 8504
-D2
-~
-~
-0 -1 30326
-S
-#30326
-Veiled Gallery~
-@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30325
-D1
-~
-~
-0 -1 30327
-D2
-~
-~
-0 -1 30341
-D3
-~
-~
-0 -1 30355
-D4
-~
-~
-0 -1 30369
-D5
-~
-~
-0 -1 30383
-S
-#30327
-Sable Arcade~
-@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30326
-D2
-~
-~
-0 -1 30328
-S
-#30328
-Lacquered Promenade~
-@@aopal lantern-smoke@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30327
-D2
-~
-~
-0 -1 30329
-S
-#30329
-Cypress Court~
-@@cjade firebowls@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30328
-D2
-~
-~
-0 -1 30330
-S
-#30330
-Opaline Hall~
-@@acold cerulean candles@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30329
-D2
-~
-~
-0 -1 30331
-S
-#30331
-Iron Passage~
-@@cseaglass braziers@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30330
-D2
-~
-~
-0 -1 30332
-S
-#30332
-Perfumed Loggia~
-@@aturquoise witchflame@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30331
-D2
-~
-~
-0 -1 30333
-S
-#30333
-Lantern Rotunda~
-@@cblue funeral lamps@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30332
-D2
-~
-~
-0 -1 30334
-S
-#30334
-Whispering Vestibule~
-@@aopal lantern-smoke@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30333
-D2
-~
-~
-0 -1 30335
-S
-#30335
-Marble Sanctum~
-@@cjade firebowls@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30334
-D2
-~
-~
-0 -1 30336
-S
-#30336
-Ivory Recess~
-@@acold cerulean candles@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30335
-D2
-~
-~
-0 -1 30337
-S
-#30337
-Obsidian Stair~
-@@cseaglass braziers@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30336
-D2
-~
-~
-0 -1 30338
-S
-#30338
-Myrrh Balcony~
-@@aturquoise witchflame@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30337
-D2
-~
-~
-0 -1 30339
-S
-#30339
-Silken Reliquary~
-@@cblue funeral lamps@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30338
-D2
-~
-~
-0 -1 30340
-S
-#30340
-Amber Cloister~
-@@aopal lantern-smoke@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-12 11
-D0
-~
-~
-0 -1 30339
-S
-#30341
-Crescent Causeway~
-@@cjade firebowls@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30326
-D2
-~
-~
-0 -1 30342
-S
-#30342
-Gilded Salon~
-@@acold cerulean candles@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30341
-D2
-~
-~
-0 -1 30343
-S
-#30343
-Basilisk Pavilion~
-@@cseaglass braziers@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30342
-D2
-~
-~
-0 -1 30344
-S
-#30344
-Echoing Niche~
-@@aturquoise witchflame@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30343
-D2
-~
-~
-0 -1 30345
-S
-#30345
-Coffered Walk~
-@@cblue funeral lamps@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30344
-D2
-~
-~
-0 -1 30346
-S
-#30346
-Velvet Observatory~
-@@aopal lantern-smoke@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30345
-D2
-~
-~
-0 -1 30347
-S
-#30347
-Mournful Parlor~
-@@cjade firebowls@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30346
-D2
-~
-~
-0 -1 30348
-S
-#30348
-Ember Annex~
-@@acold cerulean candles@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30347
-D2
-~
-~
-0 -1 30349
-S
-#30349
-Fractured Threshold~
-@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30348
-D2
-~
-~
-0 -1 30350
-S
-#30350
-Starless Spine~
-@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30349
-D2
-~
-~
-0 -1 30351
-S
-#30351
-Duskwater Crossing~
-@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30350
-D2
-~
-~
-0 -1 30352
-S
-#30352
-Onyx Aisle~
-@@aopal lantern-smoke@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30351
-D2
-~
-~
-0 -1 30353
-S
-#30353
-Royal Trellis~
-@@cjade firebowls@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30352
-D2
-~
-~
-0 -1 30354
-S
-#30354
-Blackglass Vault~
-@@acold cerulean candles@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-12 11
-D0
-~
-~
-0 -1 30353
-S
-#30355
-Sighing Lattice~
-@@cseaglass braziers@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30326
-D2
-~
-~
-0 -1 30356
-S
-#30356
-Runed Concourse~
-@@aturquoise witchflame@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30355
-D2
-~
-~
-0 -1 30357
-S
-#30357
-Hollow Bastion~
-@@cblue funeral lamps@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30356
-D2
-~
-~
-0 -1 30358
-S
-#30358
-Crimson Orrery~
-@@aopal lantern-smoke@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30357
-D2
-~
-~
-0 -1 30359
-S
-#30359
-Nocturne Pulpit~
-@@cjade firebowls@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30358
-D2
-~
-~
-0 -1 30360
-S
-#30360
-Sepulchral Landing~
-@@acold cerulean candles@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30359
-D2
-~
-~
-0 -1 30361
-S
-#30361
-Shrouded Mandapa~
-@@cseaglass braziers@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30360
-D2
-~
-~
-0 -1 30362
-S
-#30362
-Ebon Mausoleum~
-@@aturquoise witchflame@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30361
-D2
-~
-~
-0 -1 30363
-S
-#30363
-Tarnished Bath~
-@@cblue funeral lamps@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30362
-D2
-~
-~
-0 -1 30364
-S
-#30364
-Phantom Library~
-@@aopal lantern-smoke@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30363
-D2
-~
-~
-0 -1 30365
-S
-#30365
-Smokewreathed Atrium~
-@@cjade firebowls@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30364
-D2
-~
-~
-0 -1 30366
-S
-#30366
-Ashen Workshop~
-@@acold cerulean candles@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30365
-D2
-~
-~
-0 -1 30367
-S
-#30367
-Incense Chapel~
-@@cseaglass braziers@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30366
-D2
-~
-~
-0 -1 30368
-S
-#30368
-Brazen Cistern~
-@@aturquoise witchflame@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-12 11
-D0
-~
-~
-0 -1 30367
-S
-#30369
-Serpentine Garden~
-@@cblue funeral lamps@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30326
-D2
-~
-~
-0 -1 30370
-S
-#30370
-Nightbloom Grotto~
-@@aopal lantern-smoke@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30369
-D2
-~
-~
-0 -1 30371
-S
-#30371
-Umbral Colonnade~
-@@cjade firebowls@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30370
-D2
-~
-~
-0 -1 30372
-S
-#30372
-Pale Transept~
-@@acold cerulean candles@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30371
-D2
-~
-~
-0 -1 30373
-S
-#30373
-Crowned Audience Hall~
-@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30372
-D2
-~
-~
-0 -1 30374
-S
-#30374
-Riven Wing~
-@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30373
-D2
-~
-~
-0 -1 30375
-S
-#30375
-Sultan's Perch~
-@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30374
-D2
-~
-~
-0 -1 30376
-S
-#30376
-Rook Gallery~
-@@aopal lantern-smoke@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30375
-D2
-~
-~
-0 -1 30377
-S
-#30377
-Belltower Court~
-@@cjade firebowls@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30376
-D2
-~
-~
-0 -1 30378
-S
-#30378
-Thorned Cells~
-@@acold cerulean candles@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30377
-D2
-~
-~
-0 -1 30379
-S
-#30379
-Cathedral Causeway~
-@@cseaglass braziers@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30378
-D2
-~
-~
-0 -1 30380
-S
-#30380
-Cryptic Archive~
-@@aturquoise witchflame@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30379
-D2
-~
-~
-0 -1 30381
-S
-#30381
-Mosaic Dais~
-@@cblue funeral lamps@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30380
-D2
-~
-~
-0 -1 30382
-S
-#30382
-Graven Bridge~
-@@aopal lantern-smoke@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-12 11
-D0
-~
-~
-0 -1 30381
-S
-#30383
-Silent Terminus~
-@@cjade firebowls@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30326
-D2
-~
-~
-0 -1 30384
-S
-#30384
-Sunken Choir~
-@@acold cerulean candles@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30383
-D2
-~
-~
-0 -1 30385
-S
-#30385
-Ritual Spire~
-@@cseaglass braziers@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30384
-D2
-~
-~
-0 -1 30386
-S
-#30386
-Fane Hallway~
-@@aturquoise witchflame@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30385
-D2
-~
-~
-0 -1 30387
-S
-#30387
-Abyssal Pass~
-@@cblue funeral lamps@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30386
-D2
-~
-~
-0 -1 30388
-S
-#30388
-Haunted Yard~
-@@aopal lantern-smoke@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30387
-D2
-~
-~
-0 -1 30389
-S
-#30389
-Ceremonial Terrace~
-@@cjade firebowls@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30388
-D2
-~
-~
-0 -1 30390
-S
-#30390
-Barbed Keep~
-@@acold cerulean candles@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30389
-D2
-~
-~
-0 -1 30391
-S
-#30391
-Stilled Quarters~
-@@cseaglass braziers@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30390
-D2
-~
-~
-0 -1 30392
-S
-#30392
-Frosted Chamber~
-@@aturquoise witchflame@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30391
-D2
-~
-~
-0 -1 30393
-S
-#30393
-Dread Walkway~
-@@cblue funeral lamps@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents.
-
-A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30392
-D2
-~
-~
-0 -1 30394
-S
-#30394
-Wraith Path~
-@@aopal lantern-smoke@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents.
-
-A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30393
-D2
-~
-~
-0 -1 30395
-S
-#30395
-Oracle Stairwell~
-@@cjade firebowls@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents.
-
-A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30394
-D2
-~
-~
-0 -1 30396
-S
-#30396
-Penumbral Gallery~
-@@acold cerulean candles@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents.
-
-A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30395
-D2
-~
-~
-0 -1 30397
-S
-#30397
-Raven Apex~
-@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents.
-
-A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30396
-D2
-~
-~
-0 -1 30398
-S
-#30398
-Hushed Nave~
-@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents.
-
-A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
-8 11
-D0
-~
-~
-0 -1 30397
-D2
-~
-~
-0 -1 30399
-S
-#30399
-Final Keep~
-@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents.
-
-A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
-12 11
-D0
-~
-~
-0 -1 30398
-S
-#0
 #MOBILES
 #30325
 jade janissary palace trash~
 @@cJade Janissary@@N~
 A jade janissary stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1159,13 +31,8 @@ L 45 45 20 0 0 0 0 0 0
 veilbound eunuch palace trash~
 @@cVeilbound Eunuch@@N~
 A veilbound eunuch stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1178,13 +45,8 @@ L 45 45 20 0 0 0 0 0 0
 mosaic ghulam palace trash~
 @@cMosaic Ghulam@@N~
 A mosaic ghulam stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1197,13 +59,8 @@ L 45 45 20 0 0 0 0 0 0
 ink-veiled vizier palace trash~
 @@cInk-Veiled Vizier@@N~
 A ink-veiled vizier stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -1216,13 +73,8 @@ L 45 45 20 0 0 0 0 0 0
 turquoise mamluk palace trash~
 @@cTurquoise Mamluk@@N~
 A turquoise mamluk stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -1235,13 +87,8 @@ L 45 45 20 0 0 0 0 0 0
 crypt falconer palace trash~
 @@cCrypt Falconer@@N~
 A crypt falconer stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -1254,13 +101,8 @@ L 45 45 20 0 0 0 0 0 0
 mourning chamberlain palace trash~
 @@cMourning Chamberlain@@N~
 A mourning chamberlain stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1273,13 +115,8 @@ L 45 45 20 0 0 0 0 0 0
 silk-wrapped warder palace trash~
 @@cSilk-Wrapped Warder@@N~
 A silk-wrapped warder stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1292,13 +129,8 @@ L 45 45 20 0 0 0 0 0 0
 censer dragoon palace trash~
 @@cCenser Dragoon@@N~
 A censer dragoon stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1311,13 +143,8 @@ L 45 45 20 0 0 0 0 0 0
 obsidian page palace trash~
 @@cObsidian Page@@N~
 A obsidian page stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -1330,13 +157,8 @@ L 45 45 20 0 0 0 0 0 0
 moon-court duelist palace trash~
 @@cMoon-Court Duelist@@N~
 A moon-court duelist stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -1349,13 +171,8 @@ L 45 45 20 0 0 0 0 0 0
 rose-iron sentry palace trash~
 @@cRose-Iron Sentry@@N~
 A rose-iron sentry stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -1368,13 +185,8 @@ L 45 45 20 0 0 0 0 0 0
 hush-voiced herald palace trash~
 @@cHush-Voiced Herald@@N~
 A hush-voiced herald stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1387,13 +199,8 @@ L 45 45 20 0 0 0 0 0 0
 nightglass lancer palace trash~
 @@cNightglass Lancer@@N~
 A nightglass lancer stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1406,13 +213,8 @@ L 45 45 20 0 0 0 0 0 0
 sable archivist palace trash~
 @@cSable Archivist@@N~
 A sable archivist stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1425,13 +227,8 @@ L 45 45 20 0 0 0 0 0 0
 tomb-lantern steward palace trash~
 @@cTomb-Lantern Steward@@N~
 A tomb-lantern steward stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -1444,13 +241,8 @@ L 45 45 20 0 0 0 0 0 0
 amber-eyed falcon knight palace trash~
 @@cAmber-Eyed Falcon Knight@@N~
 A amber-eyed falcon knight stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -1463,13 +255,8 @@ L 45 45 20 0 0 0 0 0 0
 catacomb steward palace trash~
 @@cCatacomb Steward@@N~
 A catacomb steward stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -1482,13 +269,8 @@ L 45 45 20 0 0 0 0 0 0
 azure hookblade guard palace trash~
 @@cAzure Hookblade Guard@@N~
 A azure hookblade guard stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1501,13 +283,8 @@ L 45 45 20 0 0 0 0 0 0
 lacquered coffin bearer palace trash~
 @@cLacquered Coffin Bearer@@N~
 A lacquered coffin bearer stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1520,13 +297,8 @@ L 45 45 20 0 0 0 0 0 0
 cobalt minaret guard palace trash~
 @@cCobalt Minaret Guard@@N~
 A cobalt minaret guard stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1539,13 +311,8 @@ L 45 45 20 0 0 0 0 0 0
 opal chain inquisitor palace trash~
 @@cOpal Chain Inquisitor@@N~
 A opal chain inquisitor stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -1558,13 +325,8 @@ L 45 45 20 0 0 0 0 0 0
 kohl-eyed adjudicator palace trash~
 @@cKohl-Eyed Adjudicator@@N~
 A kohl-eyed adjudicator stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -1577,13 +339,8 @@ L 45 45 20 0 0 0 0 0 0
 censer oathbreaker palace trash~
 @@cCenser Oathbreaker@@N~
 A censer oathbreaker stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -1596,13 +353,8 @@ L 45 45 20 0 0 0 0 0 0
 blackwater courier palace trash~
 @@cBlackwater Courier@@N~
 A blackwater courier stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1615,13 +367,8 @@ L 45 45 20 0 0 0 0 0 0
 sepulchral astrologer palace trash~
 @@cSepulchral Astrologer@@N~
 A sepulchral astrologer stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1634,13 +381,8 @@ L 45 45 20 0 0 0 0 0 0
 mausoleum butler palace trash~
 @@cMausoleum Butler@@N~
 A mausoleum butler stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1653,13 +395,8 @@ L 45 45 20 0 0 0 0 0 0
 turquoise coffin knight palace trash~
 @@cTurquoise Coffin Knight@@N~
 A turquoise coffin knight stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -1672,13 +409,8 @@ L 45 45 20 0 0 0 0 0 0
 glass-veiled examiner palace trash~
 @@cGlass-Veiled Examiner@@N~
 A glass-veiled examiner stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -1691,13 +423,8 @@ L 45 45 20 0 0 0 0 0 0
 midnight halberdier palace trash~
 @@cMidnight Halberdier@@N~
 A midnight halberdier stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -1710,13 +437,8 @@ L 45 45 20 0 0 0 0 0 0
 ashen peacock keeper palace trash~
 @@cAshen Peacock Keeper@@N~
 A ashen peacock keeper stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1729,13 +451,8 @@ L 45 45 20 0 0 0 0 0 0
 thorned lattice scout palace trash~
 @@cThorned Lattice Scout@@N~
 A thorned lattice scout stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1748,13 +465,8 @@ L 45 45 20 0 0 0 0 0 0
 crypt-bath executioner palace trash~
 @@cCrypt-Bath Executioner@@N~
 A crypt-bath executioner stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1767,13 +479,8 @@ L 45 45 20 0 0 0 0 0 0
 moon-ink calligrapher palace trash~
 @@cMoon-Ink Calligrapher@@N~
 A moon-ink calligrapher stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -1786,13 +493,8 @@ L 45 45 20 0 0 0 0 0 0
 iron jasmine constable palace trash~
 @@cIron Jasmine Constable@@N~
 A iron jasmine constable stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -1805,13 +507,8 @@ L 45 45 20 0 0 0 0 0 0
 sultanate grave archer palace trash~
 @@cSultanate Grave Archer@@N~
 A sultanate grave archer stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -1824,13 +521,8 @@ L 45 45 20 0 0 0 0 0 0
 opal marrow collector palace trash~
 @@cOpal Marrow Collector@@N~
 A opal marrow collector stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1843,13 +535,8 @@ L 45 45 20 0 0 0 0 0 0
 raven-hood marshal palace trash~
 @@cRaven-Hood Marshal@@N~
 A raven-hood marshal stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1862,13 +549,8 @@ L 45 45 20 0 0 0 0 0 0
 bluebraid undertaker palace trash~
 @@cBluebraid Undertaker@@N~
 A bluebraid undertaker stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1881,13 +563,8 @@ L 45 45 20 0 0 0 0 0 0
 hooked-veil duelist palace trash~
 @@cHooked-Veil Duelist@@N~
 A hooked-veil duelist stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 48 0
 0 0 0 0
@@ -1900,13 +577,8 @@ L 45 45 20 0 0 0 0 0 0
 ossuary carpet warden palace trash~
 @@cOssuary Carpet Warden@@N~
 A ossuary carpet warden stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 49 0
 0 0 0 0
@@ -1919,13 +591,8 @@ L 45 45 20 0 0 0 0 0 0
 starless tapestry guard palace trash~
 @@cStarless Tapestry Guard@@N~
 A starless tapestry guard stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 50 0
 0 0 0 0
@@ -1938,13 +605,8 @@ L 45 45 20 0 0 0 0 0 0
 cathedral harem gaoler palace trash~
 @@cCathedral Harem Gaoler@@N~
 A cathedral harem gaoler stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 45 0
 0 0 0 0
@@ -1957,13 +619,8 @@ L 45 45 20 0 0 0 0 0 0
 turquoise reliquary guard palace trash~
 @@cTurquoise Reliquary Guard@@N~
 A turquoise reliquary guard stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 46 0
 0 0 0 0
@@ -1976,13 +633,8 @@ L 45 45 20 0 0 0 0 0 0
 night bazaar enforcer palace trash~
 @@cNight Bazaar Enforcer@@N~
 A night bazaar enforcer stalks these haunted halls beneath @@aazure@@N lanternlight.
-
-
-~
-This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.
-
-
-~
+~
+This palace retainer wears lacquered funerary steel, sea-glass silk, and bells tuned to mournful court rhythms.~
 65 0 -450 S
 47 0
 0 0 0 0
@@ -1995,14 +647,9 @@ L 45 45 20 0 0 0 0 0 0
 peacock-throne reaver palace elite~
 @@aPeacock-Throne Reaver@@N~
 A peacock-throne reaver stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2014,14 +661,9 @@ L 50 50 20 0 0 0 0 0 0
 emerald censer champion palace elite~
 @@aEmerald Censer Champion@@N~
 A emerald censer champion stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2033,14 +675,9 @@ L 50 50 20 0 0 0 0 0 0
 crypt seraglio warmaster palace elite~
 @@aCrypt Seraglio Warmaster@@N~
 A crypt seraglio warmaster stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2052,14 +689,9 @@ L 50 50 20 0 0 0 0 0 0
 opal eclipse inquisitor palace elite~
 @@aOpal Eclipse Inquisitor@@N~
 A opal eclipse inquisitor stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2071,14 +703,9 @@ L 50 50 20 0 0 0 0 0 0
 moon-crescent adjudicator palace elite~
 @@aMoon-Crescent Adjudicator@@N~
 A moon-crescent adjudicator stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2090,14 +717,9 @@ L 50 50 20 0 0 0 0 0 0
 grave-anthem dragoon palace elite~
 @@aGrave-Anthem Dragoon@@N~
 A grave-anthem dragoon stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2109,14 +731,9 @@ L 50 50 20 0 0 0 0 0 0
 turquoise gallowglass palace elite~
 @@aTurquoise Gallowglass@@N~
 A turquoise gallowglass stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2128,14 +745,9 @@ L 50 50 20 0 0 0 0 0 0
 sable rose castellan palace elite~
 @@aSable Rose Castellan@@N~
 A sable rose castellan stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2147,14 +759,9 @@ L 50 50 20 0 0 0 0 0 0
 minaret blood marshal palace elite~
 @@aMinaret Blood Marshal@@N~
 A minaret blood marshal stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2166,14 +773,9 @@ L 50 50 20 0 0 0 0 0 0
 obsidian canopy vanguard palace elite~
 @@aObsidian Canopy Vanguard@@N~
 A obsidian canopy vanguard stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2185,14 +787,9 @@ L 50 50 20 0 0 0 0 0 0
 catacomb wing prefect palace elite~
 @@aCatacomb Wing Prefect@@N~
 A catacomb wing prefect stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2204,14 +801,9 @@ L 50 50 20 0 0 0 0 0 0
 sepulcher silk commander palace elite~
 @@aSepulcher Silk Commander@@N~
 A sepulcher silk commander stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2223,14 +815,9 @@ L 50 50 20 0 0 0 0 0 0
 gilded mausoleum butcher palace elite~
 @@aGilded Mausoleum Butcher@@N~
 A gilded mausoleum butcher stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2242,14 +829,9 @@ L 50 50 20 0 0 0 0 0 0
 nightglass execution prelate palace elite~
 @@aNightglass Execution Prelate@@N~
 A nightglass execution prelate stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2261,14 +843,9 @@ L 50 50 20 0 0 0 0 0 0
 azure reliquary captain palace elite~
 @@aAzure Reliquary Captain@@N~
 A azure reliquary captain stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2280,14 +857,9 @@ L 50 50 20 0 0 0 0 0 0
 lacquered crypt templar palace elite~
 @@aLacquered Crypt Templar@@N~
 A lacquered crypt templar stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2299,14 +871,9 @@ L 50 50 20 0 0 0 0 0 0
 mournsong wing-warden palace elite~
 @@aMournsong Wing-Warden@@N~
 A mournsong wing-warden stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2318,14 +885,9 @@ L 50 50 20 0 0 0 0 0 0
 blackwater ziggurat knight palace elite~
 @@aBlackwater Ziggurat Knight@@N~
 A blackwater ziggurat knight stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2337,14 +899,9 @@ L 50 50 20 0 0 0 0 0 0
 thalassic tomb herald palace elite~
 @@aThalassic Tomb Herald@@N~
 A thalassic tomb herald stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2356,14 +913,9 @@ L 50 50 20 0 0 0 0 0 0
 hollow court breaker palace elite~
 @@aHollow Court Breaker@@N~
 A hollow court breaker stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2375,14 +927,9 @@ L 50 50 20 0 0 0 0 0 0
 thorn-dais enforcer palace elite~
 @@aThorn-Dais Enforcer@@N~
 A thorn-dais enforcer stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2394,14 +941,9 @@ L 50 50 20 0 0 0 0 0 0
 dusk-lattice champion palace elite~
 @@aDusk-Lattice Champion@@N~
 A dusk-lattice champion stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2413,14 +955,9 @@ L 50 50 20 0 0 0 0 0 0
 funeral bath sentinel palace elite~
 @@aFuneral Bath Sentinel@@N~
 A funeral bath sentinel stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 49 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2432,14 +969,9 @@ L 50 50 20 0 0 0 0 0 0
 ivory ossuary marshal palace elite~
 @@aIvory Ossuary Marshal@@N~
 A ivory ossuary marshal stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 50 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2451,14 +983,9 @@ L 50 50 20 0 0 0 0 0 0
 crescent crypt slayer palace elite~
 @@aCrescent Crypt Slayer@@N~
 A crescent crypt slayer stands at ritual attention near a wing approach.
-
-
-~
-Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.
-
-
-~
-65 2 -520 S
+~
+Veteran scars and ritual tattoos mark this elite guardian as one who has survived dozens of palace purges.~
+33554497 2 -520 S
 48 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2470,14 +997,9 @@ L 50 50 20 0 0 0 0 0 0
 sultan of cinders wing boss~
 @@aSultan Of Cinders@@N~
 @@aSultan Of Cinders@@N rules this wing with icy ceremonial authority.
-
-
-~
-Draped in @@copaline@@N regalia and ritual armor, Sultan Of Cinders radiates predatory calm and sovereign violence.
-
-
-~
-33554435 0 -800 S
+~
+Draped in @@copaline@@N regalia and ritual armor, Sultan Of Cinders radiates predatory calm and sovereign violence.~
+100663299 0 -800 S
 55 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2489,14 +1011,9 @@ L 55 55 25 0 0 0 0 0 0
 the azure bride wing boss~
 @@aThe Azure Bride@@N~
 @@aThe Azure Bride@@N rules this wing with icy ceremonial authority.
-
-
-~
-Draped in @@copaline@@N regalia and ritual armor, The Azure Bride radiates predatory calm and sovereign violence.
-
-
-~
-33554435 0 -800 S
+~
+Draped in @@copaline@@N regalia and ritual armor, The Azure Bride radiates predatory calm and sovereign violence.~
+100663299 0 -800 S
 55 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2508,14 +1025,9 @@ L 55 55 25 0 0 0 0 0 0
 grand vizier nocturne wing boss~
 @@aGrand Vizier Nocturne@@N~
 @@aGrand Vizier Nocturne@@N rules this wing with icy ceremonial authority.
-
-
-~
-Draped in @@copaline@@N regalia and ritual armor, Grand Vizier Nocturne radiates predatory calm and sovereign violence.
-
-
-~
-33554435 0 -800 S
+~
+Draped in @@copaline@@N regalia and ritual armor, Grand Vizier Nocturne radiates predatory calm and sovereign violence.~
+100663299 0 -800 S
 55 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2527,14 +1039,9 @@ L 55 55 25 0 0 0 0 0 0
 maw of the peacock throne wing boss~
 @@aMaw Of The Peacock Throne@@N~
 @@aMaw Of The Peacock Throne@@N rules this wing with icy ceremonial authority.
-
-
-~
-Draped in @@copaline@@N regalia and ritual armor, Maw Of The Peacock Throne radiates predatory calm and sovereign violence.
-
-
-~
-33554435 0 -800 S
+~
+Draped in @@copaline@@N regalia and ritual armor, Maw Of The Peacock Throne radiates predatory calm and sovereign violence.~
+100663299 0 -800 S
 55 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -2546,14 +1053,9 @@ L 55 55 25 0 0 0 0 0 0
 the last chamberlain wing boss~
 @@aThe Last Chamberlain@@N~
 @@aThe Last Chamberlain@@N rules this wing with icy ceremonial authority.
-
-
-~
-Draped in @@copaline@@N regalia and ritual armor, The Last Chamberlain radiates predatory calm and sovereign violence.
-
-
-~
-33554435 0 -800 S
+~
+Draped in @@copaline@@N regalia and ritual armor, The Last Chamberlain radiates predatory calm and sovereign violence.~
+100663299 0 -800 S
 55 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -3239,516 +1741,1234 @@ final chamberlain sabatons~
 L
 55
 #0
+#ROOMS
+#30325
+Moonlit Antechamber~
+@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+12 11
+D0
+~
+~
+0 0 8504
+D2
+~
+~
+0 -1 30326
+S
+#30326
+Veiled Gallery~
+@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30325
+D1
+~
+~
+0 -1 30327
+D2
+~
+~
+0 -1 30341
+D3
+~
+~
+0 -1 30355
+D4
+~
+~
+0 -1 30369
+D5
+~
+~
+0 -1 30383
+S
+#30327
+Sable Arcade~
+@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30326
+D2
+~
+~
+0 -1 30328
+S
+#30328
+Lacquered Promenade~
+@@aopal lantern-smoke@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30327
+D2
+~
+~
+0 -1 30329
+S
+#30329
+Cypress Court~
+@@cjade firebowls@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30328
+D2
+~
+~
+0 -1 30330
+S
+#30330
+Opaline Hall~
+@@acold cerulean candles@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30329
+D2
+~
+~
+0 -1 30331
+S
+#30331
+Iron Passage~
+@@cseaglass braziers@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30330
+D2
+~
+~
+0 -1 30332
+S
+#30332
+Perfumed Loggia~
+@@aturquoise witchflame@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30331
+D2
+~
+~
+0 -1 30333
+S
+#30333
+Lantern Rotunda~
+@@cblue funeral lamps@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30332
+D2
+~
+~
+0 -1 30334
+S
+#30334
+Whispering Vestibule~
+@@aopal lantern-smoke@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30333
+D2
+~
+~
+0 -1 30335
+S
+#30335
+Marble Sanctum~
+@@cjade firebowls@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30334
+D2
+~
+~
+0 -1 30336
+S
+#30336
+Ivory Recess~
+@@acold cerulean candles@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30335
+D2
+~
+~
+0 -1 30337
+S
+#30337
+Obsidian Stair~
+@@cseaglass braziers@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30336
+D2
+~
+~
+0 -1 30338
+S
+#30338
+Myrrh Balcony~
+@@aturquoise witchflame@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30337
+D2
+~
+~
+0 -1 30339
+S
+#30339
+Silken Reliquary~
+@@cblue funeral lamps@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30338
+D2
+~
+~
+0 -1 30340
+S
+#30340
+Amber Cloister~
+@@aopal lantern-smoke@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+12 11
+D0
+~
+~
+0 -1 30339
+S
+#30341
+Crescent Causeway~
+@@cjade firebowls@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30326
+D2
+~
+~
+0 -1 30342
+S
+#30342
+Gilded Salon~
+@@acold cerulean candles@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30341
+D2
+~
+~
+0 -1 30343
+S
+#30343
+Basilisk Pavilion~
+@@cseaglass braziers@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30342
+D2
+~
+~
+0 -1 30344
+S
+#30344
+Echoing Niche~
+@@aturquoise witchflame@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30343
+D2
+~
+~
+0 -1 30345
+S
+#30345
+Coffered Walk~
+@@cblue funeral lamps@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30344
+D2
+~
+~
+0 -1 30346
+S
+#30346
+Velvet Observatory~
+@@aopal lantern-smoke@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30345
+D2
+~
+~
+0 -1 30347
+S
+#30347
+Mournful Parlor~
+@@cjade firebowls@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30346
+D2
+~
+~
+0 -1 30348
+S
+#30348
+Ember Annex~
+@@acold cerulean candles@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30347
+D2
+~
+~
+0 -1 30349
+S
+#30349
+Fractured Threshold~
+@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30348
+D2
+~
+~
+0 -1 30350
+S
+#30350
+Starless Spine~
+@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30349
+D2
+~
+~
+0 -1 30351
+S
+#30351
+Duskwater Crossing~
+@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30350
+D2
+~
+~
+0 -1 30352
+S
+#30352
+Onyx Aisle~
+@@aopal lantern-smoke@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30351
+D2
+~
+~
+0 -1 30353
+S
+#30353
+Royal Trellis~
+@@cjade firebowls@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30352
+D2
+~
+~
+0 -1 30354
+S
+#30354
+Blackglass Vault~
+@@acold cerulean candles@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+12 11
+D0
+~
+~
+0 -1 30353
+S
+#30355
+Sighing Lattice~
+@@cseaglass braziers@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30326
+D2
+~
+~
+0 -1 30356
+S
+#30356
+Runed Concourse~
+@@aturquoise witchflame@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30355
+D2
+~
+~
+0 -1 30357
+S
+#30357
+Hollow Bastion~
+@@cblue funeral lamps@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30356
+D2
+~
+~
+0 -1 30358
+S
+#30358
+Crimson Orrery~
+@@aopal lantern-smoke@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30357
+D2
+~
+~
+0 -1 30359
+S
+#30359
+Nocturne Pulpit~
+@@cjade firebowls@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30358
+D2
+~
+~
+0 -1 30360
+S
+#30360
+Sepulchral Landing~
+@@acold cerulean candles@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30359
+D2
+~
+~
+0 -1 30361
+S
+#30361
+Shrouded Mandapa~
+@@cseaglass braziers@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30360
+D2
+~
+~
+0 -1 30362
+S
+#30362
+Ebon Mausoleum~
+@@aturquoise witchflame@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30361
+D2
+~
+~
+0 -1 30363
+S
+#30363
+Tarnished Bath~
+@@cblue funeral lamps@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30362
+D2
+~
+~
+0 -1 30364
+S
+#30364
+Phantom Library~
+@@aopal lantern-smoke@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30363
+D2
+~
+~
+0 -1 30365
+S
+#30365
+Smokewreathed Atrium~
+@@cjade firebowls@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30364
+D2
+~
+~
+0 -1 30366
+S
+#30366
+Ashen Workshop~
+@@acold cerulean candles@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30365
+D2
+~
+~
+0 -1 30367
+S
+#30367
+Incense Chapel~
+@@cseaglass braziers@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30366
+D2
+~
+~
+0 -1 30368
+S
+#30368
+Brazen Cistern~
+@@aturquoise witchflame@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+12 11
+D0
+~
+~
+0 -1 30367
+S
+#30369
+Serpentine Garden~
+@@cblue funeral lamps@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30326
+D2
+~
+~
+0 -1 30370
+S
+#30370
+Nightbloom Grotto~
+@@aopal lantern-smoke@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30369
+D2
+~
+~
+0 -1 30371
+S
+#30371
+Umbral Colonnade~
+@@cjade firebowls@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30370
+D2
+~
+~
+0 -1 30372
+S
+#30372
+Pale Transept~
+@@acold cerulean candles@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30371
+D2
+~
+~
+0 -1 30373
+S
+#30373
+Crowned Audience Hall~
+@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30372
+D2
+~
+~
+0 -1 30374
+S
+#30374
+Riven Wing~
+@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30373
+D2
+~
+~
+0 -1 30375
+S
+#30375
+Sultan's Perch~
+@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30374
+D2
+~
+~
+0 -1 30376
+S
+#30376
+Rook Gallery~
+@@aopal lantern-smoke@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30375
+D2
+~
+~
+0 -1 30377
+S
+#30377
+Belltower Court~
+@@cjade firebowls@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30376
+D2
+~
+~
+0 -1 30378
+S
+#30378
+Thorned Cells~
+@@acold cerulean candles@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30377
+D2
+~
+~
+0 -1 30379
+S
+#30379
+Cathedral Causeway~
+@@cseaglass braziers@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30378
+D2
+~
+~
+0 -1 30380
+S
+#30380
+Cryptic Archive~
+@@aturquoise witchflame@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30379
+D2
+~
+~
+0 -1 30381
+S
+#30381
+Mosaic Dais~
+@@cblue funeral lamps@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30380
+D2
+~
+~
+0 -1 30382
+S
+#30382
+Graven Bridge~
+@@aopal lantern-smoke@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+12 11
+D0
+~
+~
+0 -1 30381
+S
+#30383
+Silent Terminus~
+@@cjade firebowls@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30326
+D2
+~
+~
+0 -1 30384
+S
+#30384
+Sunken Choir~
+@@acold cerulean candles@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30383
+D2
+~
+~
+0 -1 30385
+S
+#30385
+Ritual Spire~
+@@cseaglass braziers@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30384
+D2
+~
+~
+0 -1 30386
+S
+#30386
+Fane Hallway~
+@@aturquoise witchflame@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30385
+D2
+~
+~
+0 -1 30387
+S
+#30387
+Abyssal Pass~
+@@cblue funeral lamps@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30386
+D2
+~
+~
+0 -1 30388
+S
+#30388
+Haunted Yard~
+@@aopal lantern-smoke@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30387
+D2
+~
+~
+0 -1 30389
+S
+#30389
+Ceremonial Terrace~
+@@cjade firebowls@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30388
+D2
+~
+~
+0 -1 30390
+S
+#30390
+Barbed Keep~
+@@acold cerulean candles@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30389
+D2
+~
+~
+0 -1 30391
+S
+#30391
+Stilled Quarters~
+@@cseaglass braziers@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30390
+D2
+~
+~
+0 -1 30392
+S
+#30392
+Frosted Chamber~
+@@aturquoise witchflame@@N crawl over thorned tracery, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30391
+D2
+~
+~
+0 -1 30393
+S
+#30393
+Dread Walkway~
+@@cblue funeral lamps@@N crawl over collapsed cupolas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of dust and funeral incense, while a lone ney flute drift through hidden vents. A mural nearby shows a throne carved from stormwater. Thin rivulets of condensation move like tears along the pillars. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30392
+D2
+~
+~
+0 -1 30394
+S
+#30394
+Wraith Path~
+@@aopal lantern-smoke@@N crawl over hanging mashrabiyas, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of violet musk and cold brass, while muted sabers clashing drift through hidden vents. A mural nearby shows minarets devouring their own shadows. Chisel marks under the polish suggest older names were erased. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30393
+D2
+~
+~
+0 -1 30395
+S
+#30395
+Oracle Stairwell~
+@@cjade firebowls@@N crawl over hooked flying arches, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of cardamom and grave-wax, while distant anklets drift through hidden vents. A mural nearby shows a sleepless sultan above a drowned moon. The floor is inlaid with cracked lapis tesserae that drink torchlight. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30394
+D2
+~
+~
+0 -1 30396
+S
+#30396
+Penumbral Gallery~
+@@acold cerulean candles@@N crawl over coffered vaultwork, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of attar and iron rust, while slow drumbeats drift through hidden vents. A mural nearby shows viziers stitched into constellations. Mosaic grout glitters like powdered bone between each tile. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30395
+D2
+~
+~
+0 -1 30397
+S
+#30397
+Raven Apex~
+@@cseaglass braziers@@N crawl over ribbed domes, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of myrrh and wet stone, while whispered prayers drift through hidden vents. A mural nearby shows hunted saints kneeling to peacocks. The paving stones slope inward, as if the room is listening. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30396
+D2
+~
+~
+0 -1 30398
+S
+#30398
+Hushed Nave~
+@@aturquoise witchflame@@N crawl over needle minarets, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of rose ash and old blood, while chain-rattle drift through hidden vents. A mural nearby shows executioners crowned with halos. Ink-dark marble reflects your silhouette one heartbeat too late. Even in silence, this room feels occupied by ceremonial intent.~
+8 11
+D0
+~
+~
+0 -1 30397
+D2
+~
+~
+0 -1 30399
+S
+#30399
+Final Keep~
+@@cblue funeral lamps@@N crawl over black buttresses, and latticed shadows paint @@aazure@@N script across the walls. The chamber smells of amber smoke and salt, while faint ululations drift through hidden vents. A mural nearby shows brides of smoke crossing a black garden. Silver prayer nails jut from the walls in ritual rows. Even in silence, this room feels occupied by ceremonial intent.~
+12 11
+D0
+~
+~
+0 -1 30398
+S
+#0
 #RESETS
 M 0 30325 1 30327 (null)
-
 E 0 30325 0 1 (null)
-
 E 0 30326 0 2 (null)
-
 M 0 30326 1 30328 (null)
-
 E 0 30327 0 3 (null)
-
 E 0 30328 0 4 (null)
-
 M 0 30327 1 30329 (null)
-
 E 0 30329 0 5 (null)
-
 E 0 30330 0 6 (null)
-
 M 0 30328 1 30330 (null)
-
 E 0 30331 0 7 (null)
-
 E 0 30332 0 8 (null)
-
 M 0 30329 1 30331 (null)
-
 E 0 30333 0 9 (null)
-
 E 0 30334 0 10 (null)
-
 M 0 30330 1 30332 (null)
-
 E 0 30335 0 11 (null)
-
 E 0 30336 0 12 (null)
-
 M 0 30331 1 30333 (null)
-
 E 0 30337 0 13 (null)
-
 E 0 30338 0 14 (null)
-
 M 0 30332 1 30334 (null)
-
 E 0 30339 0 15 (null)
-
 E 0 30340 0 16 (null)
-
 M 0 30333 1 30335 (null)
-
 E 0 30341 0 17 (null)
-
 E 0 30342 0 18 (null)
-
 M 0 30334 1 30336 (null)
-
 E 0 30343 0 19 (null)
-
 E 0 30344 0 20 (null)
-
 M 0 30335 1 30337 (null)
-
 E 0 30345 0 21 (null)
-
 E 0 30346 0 24 (null)
-
 M 0 30336 1 30338 (null)
-
 E 0 30347 0 25 (null)
-
 E 0 30348 0 26 (null)
-
 M 0 30337 1 30339 (null)
-
 E 0 30349 0 27 (null)
-
 E 0 30350 0 28 (null)
-
 M 0 30338 1 30341 (null)
-
 E 0 30351 0 29 (null)
-
 E 0 30352 0 30 (null)
-
 M 0 30339 1 30342 (null)
-
 E 0 30353 0 1 (null)
-
 E 0 30354 0 2 (null)
-
 M 0 30340 1 30343 (null)
-
 E 0 30355 0 3 (null)
-
 E 0 30356 0 4 (null)
-
 M 0 30341 1 30344 (null)
-
 E 0 30357 0 5 (null)
-
 E 0 30358 0 6 (null)
-
 M 0 30342 1 30345 (null)
-
 E 0 30359 0 7 (null)
-
 E 0 30360 0 8 (null)
-
 M 0 30343 1 30346 (null)
-
 E 0 30361 0 9 (null)
-
 E 0 30362 0 10 (null)
-
 M 0 30344 1 30347 (null)
-
 E 0 30363 0 11 (null)
-
 E 0 30364 0 12 (null)
-
 M 0 30345 1 30348 (null)
-
 E 0 30365 0 13 (null)
-
 E 0 30366 0 14 (null)
-
 M 0 30346 1 30349 (null)
-
 E 0 30367 0 15 (null)
-
 E 0 30368 0 16 (null)
-
 M 0 30347 1 30350 (null)
-
 E 0 30369 0 17 (null)
-
 E 0 30370 0 18 (null)
-
 M 0 30348 1 30351 (null)
-
 E 0 30371 0 19 (null)
-
 E 0 30372 0 20 (null)
-
 M 0 30349 1 30352 (null)
-
 E 0 30373 0 21 (null)
-
 E 0 30374 0 24 (null)
-
 M 0 30350 1 30353 (null)
-
 E 0 30375 0 25 (null)
-
 E 0 30376 0 26 (null)
-
 M 0 30351 1 30355 (null)
-
 E 0 30377 0 27 (null)
-
 E 0 30378 0 28 (null)
-
 M 0 30352 1 30356 (null)
-
 E 0 30379 0 29 (null)
-
 E 0 30380 0 30 (null)
-
 M 0 30353 1 30357 (null)
-
 E 0 30381 0 1 (null)
-
 E 0 30382 0 2 (null)
-
 M 0 30354 1 30358 (null)
-
 E 0 30383 0 3 (null)
-
 E 0 30384 0 4 (null)
-
 M 0 30355 1 30359 (null)
-
 E 0 30325 0 5 (null)
-
 E 0 30326 0 6 (null)
-
 M 0 30356 1 30360 (null)
-
 E 0 30327 0 7 (null)
-
 E 0 30328 0 8 (null)
-
 M 0 30357 1 30361 (null)
-
 E 0 30329 0 9 (null)
-
 E 0 30330 0 10 (null)
-
 M 0 30358 1 30362 (null)
-
 E 0 30331 0 11 (null)
-
 E 0 30332 0 12 (null)
-
 M 0 30359 1 30363 (null)
-
 E 0 30333 0 13 (null)
-
 E 0 30334 0 14 (null)
-
 M 0 30360 1 30364 (null)
-
 E 0 30335 0 15 (null)
-
 E 0 30336 0 16 (null)
-
 M 0 30361 1 30365 (null)
-
 E 0 30337 0 17 (null)
-
 E 0 30338 0 18 (null)
-
 M 0 30362 1 30366 (null)
-
 E 0 30339 0 19 (null)
-
 E 0 30340 0 20 (null)
-
 M 0 30363 1 30367 (null)
-
 E 0 30341 0 21 (null)
-
 E 0 30342 0 24 (null)
-
 M 0 30364 1 30369 (null)
-
 E 0 30343 0 25 (null)
-
 E 0 30344 0 26 (null)
-
 M 0 30365 1 30370 (null)
-
 E 0 30345 0 27 (null)
-
 E 0 30346 0 28 (null)
-
 M 0 30366 1 30371 (null)
-
 E 0 30347 0 29 (null)
-
 E 0 30348 0 30 (null)
-
 M 0 30367 1 30372 (null)
-
 E 0 30349 0 1 (null)
-
 E 0 30350 0 2 (null)
-
 M 0 30368 1 30373 (null)
-
 E 0 30351 0 3 (null)
-
 E 0 30352 0 4 (null)
-
 M 0 30369 1 30374 (null)
-
 E 0 30353 0 5 (null)
-
 E 0 30354 0 6 (null)
-
 M 0 30370 1 30337 (null)
-
 E 0 30355 0 11 (null)
-
 E 0 30356 0 12 (null)
-
 E 0 30357 0 13 (null)
-
 M 0 30371 1 30338 (null)
-
 E 0 30358 0 14 (null)
-
 E 0 30359 0 15 (null)
-
 E 0 30360 0 16 (null)
-
 M 0 30372 1 30339 (null)
-
 E 0 30361 0 17 (null)
-
 E 0 30362 0 18 (null)
-
 E 0 30363 0 19 (null)
-
 M 0 30373 1 30341 (null)
-
 E 0 30364 0 20 (null)
-
 E 0 30365 0 21 (null)
-
 E 0 30366 0 24 (null)
-
 M 0 30374 1 30342 (null)
-
 E 0 30367 0 25 (null)
-
 E 0 30368 0 26 (null)
-
 E 0 30369 0 27 (null)
-
 M 0 30375 1 30343 (null)
-
 E 0 30370 0 28 (null)
-
 E 0 30371 0 29 (null)
-
 E 0 30372 0 30 (null)
-
 M 0 30376 1 30344 (null)
-
 E 0 30373 0 1 (null)
-
 E 0 30374 0 2 (null)
-
 E 0 30375 0 3 (null)
-
 M 0 30377 1 30345 (null)
-
 E 0 30376 0 4 (null)
-
 E 0 30377 0 5 (null)
-
 E 0 30378 0 6 (null)
-
 M 0 30378 1 30346 (null)
-
 E 0 30379 0 7 (null)
-
 E 0 30380 0 8 (null)
-
 E 0 30381 0 9 (null)
-
 M 0 30379 1 30347 (null)
-
 E 0 30382 0 10 (null)
-
 E 0 30383 0 11 (null)
-
 E 0 30384 0 12 (null)
-
 M 0 30380 1 30348 (null)
-
 E 0 30325 0 13 (null)
-
 E 0 30326 0 14 (null)
-
 E 0 30327 0 15 (null)
-
 M 0 30381 1 30349 (null)
-
 E 0 30328 0 16 (null)
-
 E 0 30329 0 17 (null)
-
 E 0 30330 0 18 (null)
-
 M 0 30382 1 30350 (null)
-
 E 0 30331 0 19 (null)
-
 E 0 30332 0 20 (null)
-
 E 0 30333 0 21 (null)
-
 M 0 30383 1 30351 (null)
-
 E 0 30334 0 24 (null)
-
 E 0 30335 0 25 (null)
-
 E 0 30336 0 26 (null)
-
 M 0 30384 1 30352 (null)
-
 E 0 30337 0 27 (null)
-
 E 0 30338 0 28 (null)
-
 E 0 30339 0 29 (null)
-
 M 0 30385 1 30353 (null)
-
 E 0 30340 0 30 (null)
-
 E 0 30341 0 1 (null)
-
 E 0 30342 0 2 (null)
-
 M 0 30386 1 30355 (null)
-
 E 0 30343 0 3 (null)
-
 E 0 30344 0 4 (null)
-
 E 0 30345 0 5 (null)
-
 M 0 30387 1 30356 (null)
-
 E 0 30346 0 6 (null)
-
 E 0 30347 0 7 (null)
-
 E 0 30348 0 8 (null)
-
 M 0 30388 1 30357 (null)
-
 E 0 30349 0 9 (null)
-
 E 0 30350 0 10 (null)
-
 E 0 30351 0 11 (null)
-
 M 0 30389 1 30358 (null)
-
 E 0 30352 0 12 (null)
-
 E 0 30353 0 13 (null)
-
 E 0 30354 0 14 (null)
-
 M 0 30390 1 30359 (null)
-
 E 0 30355 0 15 (null)
-
 E 0 30356 0 16 (null)
-
 E 0 30357 0 17 (null)
-
 M 0 30391 1 30360 (null)
-
 E 0 30358 0 18 (null)
-
 E 0 30359 0 19 (null)
-
 E 0 30360 0 20 (null)
-
 M 0 30392 1 30361 (null)
-
 E 0 30361 0 21 (null)
-
 E 0 30362 0 24 (null)
-
 E 0 30363 0 25 (null)
-
 M 0 30393 1 30362 (null)
-
 E 0 30364 0 26 (null)
-
 E 0 30365 0 27 (null)
-
 E 0 30366 0 28 (null)
-
 M 0 30394 1 30363 (null)
-
 E 0 30367 0 29 (null)
-
 E 0 30368 0 30 (null)
-
 E 0 30369 0 1 (null)
-
 M 0 30395 1 30340 (null)
-
 E 0 30385 0 4 (null)
-
 E 0 30386 0 5 (null)
-
 E 0 30387 0 6 (null)
-
 M 0 30396 1 30354 (null)
-
 E 0 30388 0 7 (null)
-
 E 0 30389 0 8 (null)
-
 E 0 30390 0 9 (null)
-
 M 0 30397 1 30368 (null)
-
 E 0 30391 0 10 (null)
-
 E 0 30392 0 11 (null)
-
 E 0 30393 0 12 (null)
-
 M 0 30398 1 30382 (null)
-
 E 0 30394 0 13 (null)
-
 E 0 30395 0 14 (null)
-
 E 0 30396 0 15 (null)
-
 M 0 30399 1 30399 (null)
-
 E 0 30397 0 16 (null)
-
 E 0 30398 0 17 (null)
-
 E 0 30399 0 18 (null)
-
 S
 #$
