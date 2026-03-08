@@ -41,6 +41,37 @@
 void say_spell args((CHAR_DATA * ch, int sn));
 
 
+
+static bool is_healing_spell(int sn)
+{
+   if (sn < 0 || sn >= MAX_SKILL)
+      return FALSE;
+
+   if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
+      return FALSE;
+
+   return !str_cmp(skill_table[sn].name, "cure light")
+       || !str_cmp(skill_table[sn].name, "cure serious")
+       || !str_cmp(skill_table[sn].name, "cure critical")
+       || !str_cmp(skill_table[sn].name, "heal")
+       || !str_cmp(skill_table[sn].name, "group heal")
+       || !str_cmp(skill_table[sn].name, "psionic recovery")
+       || !str_cmp(skill_table[sn].name, "regen")
+       || !str_cmp(skill_table[sn].name, "influx")
+       || !str_cmp(skill_table[sn].name, "healing light");
+}
+
+static void gain_holy_power_from_healing_spell(CHAR_DATA *ch, int sn)
+{
+   if (ch == NULL || IS_NPC(ch))
+      return;
+
+   if (!is_healing_spell(sn))
+      return;
+
+   ch->holy_power = UMIN(ch->holy_power + 1, 100 / 5);
+}
+
 static bool npc_remort_cast_blocked(const CHAR_DATA *ch, int sn)
 {
    if (!IS_NPC(ch))
@@ -161,6 +192,20 @@ bool is_arcane_spell(int sn)
        || skill_table[sn].skill_level[CLASS_SOR] >= 0
        || skill_table[sn].skill_level[CLASS_WIZ] >= 0
        || skill_table[sn].skill_level[CLASS_GMA] >= 0;
+}
+
+bool is_holy_power_spell(int sn)
+{
+   if (sn < 0 || sn >= MAX_SKILL)
+      return FALSE;
+
+   if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
+      return FALSE;
+
+   return skill_table[sn].skill_level[CLASS_CLE] >= 0
+       || skill_table[sn].skill_level[CLASS_PRI] >= 0
+       || skill_table[sn].skill_level[CLASS_PAL] >= 0
+       || skill_table[sn].skill_level[CLASS_TEM] >= 0;
 }
 /*
  * Lookup a skill by slot number.
@@ -664,6 +709,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
    {
       if (is_arcane_spell(sn))
          ch->arcane_power++;
+      gain_holy_power_from_healing_spell(ch, sn);
 
       if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
       {
@@ -710,6 +756,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
          {
             if (is_arcane_spell(sn))
                ch->arcane_power++;
+            gain_holy_power_from_healing_spell(ch, sn);
 
             if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
             {
@@ -758,6 +805,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
          {
             if (is_arcane_spell(sn))
                ch->arcane_power++;
+            gain_holy_power_from_healing_spell(ch, sn);
 
             if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
             {
