@@ -35,7 +35,7 @@ Implications:
 - Single-line and multi-line strings are allowed, but a terminating `~` is required.
 - Strings must not contain back-to-back newlines (no blank lines represented by `\n\n`).
 - A missing `~` causes parse failure.
-- For mobile `long_descr` and all extra-description text blocks (`E` entries in `#OBJECTS` and `#ROOMS`), the string must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`).
+- For mobile `long_descr` and mobile `description`, the string must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`, with no extra trailing blank lines).
 
 ### 2.1) In-string color codes (`colist`)
 
@@ -150,7 +150,7 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 #0
 ```
 
-`<long_descr>` must include exactly one trailing newline before the terminating `~`.
+`<long_descr>` and `<description>` must each include exactly one trailing newline before the terminating `~`.
 
 Optional extension blocks (detected by leading marker):
 
@@ -364,6 +364,8 @@ Per-object trailing entries:
 For `E` entries, `<description>` must include exactly one trailing newline before the terminating `~`.
 
 Loader stops this trailing-entry loop at first unrecognized marker (which starts next object/terminator).
+
+Within an area, object `<name>~` values must be unique (no duplicate item names in the same area file).
 
 ### 7.1) Item `item_type` enum
 
@@ -596,7 +598,8 @@ Any other token in a room body is invalid.
 
 Room description content requirements:
 
-- Each room's main `<description>~` must not contain any newline characters (it must be a single line terminated by `~`).
+- Each room's main `<description>~` must end with exactly one trailing newline immediately before the terminating `~`.
+- Each room's main `<description>~` must not contain any other newline characters.
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
 
 Directional traversal constraints:
@@ -743,6 +746,7 @@ S
 
 Encoding details:
 
+- `#RESETS` must not contain blank lines.
 - For commands `G` and `R`, there is **no** `arg3` in file; parser sets it to `0`.
 - For other commands, `arg3` is required.
 - Remaining text on the line is stored as `notes`.
