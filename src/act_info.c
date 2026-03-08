@@ -811,6 +811,9 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
    if (IS_AFFECTED(victim, AFF_SANCTUARY) || item_has_apply(victim, ITEM_APPLY_SANC))
       safe_strcat(MAX_STRING_LENGTH, buf, "(White) ");
 
+   if (IS_NPC(victim) && IS_SET(victim->act, ACT_BOSS))
+      safe_strcat(MAX_STRING_LENGTH, buf, "(Boss) ");
+
    if (!IS_NPC(victim) && IS_SET(victim->act, PLR_KILLER))
       safe_strcat(MAX_STRING_LENGTH, buf, "(KILLER) ");
 
