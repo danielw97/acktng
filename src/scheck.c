@@ -496,6 +496,9 @@ static void walk_helps(void)
 
    for (h = first_help; h; h = h->next)
       walk_help_data(h);
+
+   for (h = first_shelp; h; h = h->next)
+      walk_help_data(h);
 }
 
 static void walk_chars(void)

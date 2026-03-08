@@ -5361,46 +5361,35 @@ void do_whois(CHAR_DATA *ch, char *argument)
 
 void do_shelp(CHAR_DATA *ch, char *argument)
 {
-   /*
-    * Like help, except for spells and skills.
-    */
-   int sn;
-   char buf[MAX_STRING_LENGTH];
    HELP_DATA *pHelp;
-   bool found = FALSE;
-   buf[0] = '\0';
 
    if (argument[0] == '\0')
-   {
-      do_help(ch, "shelp_summary");
-      return;
-   }
+      argument = "shelp_summary";
 
-   if ((sn = skill_lookup(argument)) < 0)
+   for (pHelp = first_shelp; pHelp != NULL; pHelp = pHelp->next)
    {
-      sprintf(buf, "No sHelp found for argument:%s\n\r", argument);
-      send_to_char(buf, ch);
-      return;
-   }
-   sprintf(buf, "shelp_%s", skill_table[sn].name);
+      if (pHelp->level > get_trust(ch))
+         continue;
 
-   /*
-    * Search help texts for 'shelp_<name>' as keyword....
-    */
-   for (pHelp = first_help; pHelp != NULL; pHelp = pHelp->next)
-      if (!str_cmp(buf, pHelp->keyword))
+      if (is_name(argument, pHelp->keyword))
       {
-         found = TRUE;
-         send_to_char(pHelp->text, ch);
-         break;
+         if (pHelp->level >= 0)
+         {
+            send_to_char(pHelp->keyword, ch);
+            send_to_char("\n\r", ch);
+         }
+
+         if (pHelp->text[0] == '.')
+            send_to_char(pHelp->text + 1, ch);
+         else
+            send_to_char(pHelp->text, ch);
+         return;
       }
+   }
 
-   if (!found)
-      send_to_char("Couldn't find a sHelp for that skill/spell.\n\r", ch);
-
+   send_to_char("No help on that word.\n\r", ch);
    return;
 }
-
 void do_afk(CHAR_DATA *ch, char *argument)
 {
    int value;

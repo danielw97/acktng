@@ -17,446 +17,1031 @@ T You can teleport into here
 #5001
 The Jetty~
 You are on a small jetty, made out of old, almost rotten wood.  It looks like
-it was built by travellers from a past age.  All around you, you can see and
-hear the sea gently lapping against the sides of the Jetty.  To the South,
-you can see a small beach.
-~
-16384 2
+
+it was built by travellers from a past age.  All around you, you can see and
+
+hear the sea gently lapping against the sides of the Jetty.  To the South,
+
+you can see a small beach.
+
+~
+
+~
+
+~
+
+and West.  To the North you can see a Jetty, and to the South, a large cliff.
+
+~
+
+~
 D1
-The Sea.
-~
+
 ~
-0 -1 5081
-D2
-A small beach.
-~
+
 ~
-0 -1 5002
+~
+
+The cliff to the South looks like there is a small path running up it.
+
+~
+
+~
+
+~
+
+just make out a little wooden jetty near the beach.
+
+~
+
+~
+
+~
 S
-#5002
-A Small Beach~
-You are roughly in the middle of a small beach, which continues to the East
-and West.  To the North you can see a Jetty, and to the South, a large cliff.
-~
-0 10
+
+your head.
+
+~
+
+~
+
+~
+
+your head.
+
+~
+
+~
+
+~
+
+to the South looks impossible to climb, but you can see a steep path leading
+
+up the western wall of the cliff.
+
+~
+
+~
+~
+
+~
+
+lies to the South.
+
+~
+
+~
+~
+
+~
+
+your head.
+
+~
+
+~
+
+~
+~
+
+your head.
+
+~
+
+~
+
+~
+
+~
+
+your head.
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+your head.
+
+~
+
+~
+~
+
+~
+
+your head.
+
+~
+
+~
+
+~
+
+your head.
+
+~
+
+~
+
+~
+~
+
+your head.
+
+~
+The Forest.
+
+~
+~
+
+~
+
+your head.
+
+~
+
+~
+
+your head.  You seem to be at a sort of crossroads of paths within the forest.
+
+~
+
+~
+
+~
+
+~
+
+~
+The Forest~
+You are in a large, overgrown forest.  Tall majestic trees tower far above 
+
+your head.
+
+~
+
+~
+~
+
+~
+
+your head.
+
+~
+
+~
+~
+
+~
+
+your head.  It looks like you're in some sort of round clearing.
+
+~
+The Forest.
+
+~
+~
+
+your head.
+
+~
+
+~
+
+~
+
+~
+You are in a large, overgrown forest.  Tall majestic trees tower far above 
+
+your head.
+
+~
+
+~
+~
+
+~
+
+~
+
+your head.
+
+~
+
+~
+~
+
+~
+
+In the distance, you can make out the odd roaring sound.
+
+ 
+
+@@NYou noticed some loose @@Gmoss@@N scattered about.
+
+~
+
+~
+
+~
+S
+
+your head.
+
+~
+
+~
+
+~
+
+your head.
+
+~
+
+~
+
+~
+~
+
+~
+
+your head.
+
+~
+
+~
+~
+
+~
+
+South, you can see the valley itself stretching out before you.
+
+@@WAbove you ,you notice the underside of a trapdoor.@@N
+
+~
+
+~
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+D2
+
+~
+
+~
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+0 2
 D0
-The Jetty.
-~
+
 ~
-0 -1 5001
-D1
-A Small Beach.
-~
+
 ~
-0 -1 5003
+
+~
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+~
+
+~
 D3
-A Small Beach.
-~
+
 ~
-0 -1 5007
-S
-#5003
-A Small Beach~
-You are at the Eastern end of a small beach, which continues to the West.
-The cliff to the South looks like there is a small path running up it.
-~
-0 10
-D3
-A Small Beach.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
 ~
-0 -1 5002
-D4
-The Cliff Top.
-~
+
 ~
-0 -1 5004
-S
-#5004
-A Cliff Top~
-You are on the top of the cliff.  Looking Down, you can see a small beach, and
-just make out a little wooden jetty near the beach.
-~
-0 3
-D1
-The Forest.
-~
+
 ~
-0 -1 5005
-D5
-A Small Beach.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
 ~
-0 -1 5003
-S
-#5005
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
+
+~
+
+~
+
+~
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+There is a large cliff face to the East, looks like you can climb up it.
+
+~
+
+~
+
+~
+
+~
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+There is a large cliff face to the east, looks like you can climb up it.
+
+~
+
+~
+
+~
+
+~
+~
+
+room to move here.  The wind whistles past you like a lost soul, screeching
+
+as it does so.
+
+~
+
+~
+~
+
+~
+
+It looks like you can climb down ok.  You're glad you're not scared of heights.
+
+~
+
+~
+
+~
+~
+
+~
+
+You are unable to see any way down from here.
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+~
+
+~
+D2
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+The wet grass below your feet smells, and looks like it's covered in an
+
+almost black liquid - almost black, but with many streaks of dark red.
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
 D0
-The Forest.
-~
+
 ~
-0 -1 5006
-D3
-The Forest.
-~
+
 ~
-0 -1 5004
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+~
+
+The wet grass below your feet smells, and looks like it's covered in an
+
+almost black liquid - almost black, but with many streaks of dark red.
+
+~
+
+~
+~
+
+~
+
+The wet grass below your feet smells, and looks like it's covered in an
+
+almost black liquid - almost black, but with many streaks of dark red.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+~
+
+~
+
+The wet grass below your feet smells, and looks like it's covered in an
+
+almost black liquid - almost black, but with many streaks of dark red.
+
+~
+
+~
+~
+
+~
 S
-#5006
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D2
-The Forest.
-~
+
+The wet grass below your feet smells, and looks like it's covered in an
+
+almost black liquid - almost black, but with many streaks of dark red.
+
 ~
-0 -1 5005
-D5
-A Small Beach.
-~
+
 ~
-0 -1 5012
-S
-#5007
-A Small Beach~
-You are at the Western end of a small beach.  The cliffs that enclose the beach
-to the South looks impossible to climb, but you can see a steep path leading
-up the western wall of the cliff.
-~
-0 10
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
 D1
-A Small Beach.
-~
+
 ~
-0 -1 5002
-D4
-A Cliff Top.
-~
+
 ~
-0 -1 5008
-S
-#5008
-A Cliff Top~
-You are on a cliff top, overlooking a small beach below you.  A dense forest
-lies to the South.
-~
-0 3
-D2
-The Forest.
-~
 ~
-0 -1 5009
-D5
-A Small Beach.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
 ~
-0 -1 5007
-S
-#5009
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-A Cliff Top.
-~
+
 ~
-0 -1 5008
-D1
-The Forest.
-~
+
 ~
-0 -1 5010
-S
-#5010
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D1
-The Forest.
-~
+
 ~
-0 -1 5011
-D2
-The Forest.
-~
+
 ~
-0 -1 5015
-D3
-The Forest.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
 ~
-0 -1 5009
-S
-#5011
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D2
-The Forest.
-~
+
 ~
-0 -1 5014
-D3
-The Forest.
-~
+
 ~
-0 -1 5010
-S
-#5012
-A Small Beach~
-You are on a small beach, on the Eastern side of the Island.
-~
-0 10
-D1
-A Small Beach.
-~
+
 ~
-0 -1 5013
-D4
-The Forest.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
 ~
-0 -1 5006
-S
-#5013
-A Small Beach~
-You are on a small beach, on the Eastern side of the Island.
-~
-0 10
-D2
-A Small Beach.
-~
+
 ~
-0 -1 5077
-D3
-A Small Beach.
-~
+
 ~
-0 -1 5012
-S
-#5014
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-The Forest.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+This area is surrounded by cliff, apart from to the East.
+
 ~
-0 -1 5011
-D2
-The Forest.
-~
+
 ~
-0 -1 5019
-S
-#5015
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-The Forest.
-~
+
+bubble plops to the surface around your feet.  It smells as bad as it looks.
+
 ~
-0 -1 5010
-D3
-The Forest.
-~
+
 ~
-0 -1 5016
-S
-#5016
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D1
-The Forest.
-~
 ~
-0 -1 5015
-D2
-The Forest.
-~
+
 ~
-0 -1 5017
-S
-#5017
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-The Forest.
-~
+
+bubble plops to the surface around your feet.  It smells as bad as it looks.
+
 ~
-0 -1 5016
-D2
-The Forest.
-~
+
 ~
-0 -1 5021
-S
-#5018
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D1
-The Forest.
-~
+
 ~
-0 -1 5019
-S
-#5019
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.  You seem to be at a sort of crossroads of paths within the forest.
-~
-1 3
-D0
-The Forest.
-~
 ~
-0 -1 5014
-D1
-The Forest.
-~
+
+bubble plops to the surface around your feet.  It smells as bad as it looks.
+
 ~
-0 -1 5020
-D2
-The Forest.
-~
+
 ~
-0 -1 5023
-D3
-The Forest.
-~
+
 ~
-0 -1 5018
-S
-#5020
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D2
-The Forest.
-~
+
 ~
-0 -1 5024
-D3
-The Forest.
-~
+
+bubble plops to the surface around your feet.  It smells as bad as it looks.
+
 ~
-0 -1 5019
-S
-#5021
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-The Forest.
-~
+
 ~
-0 -1 5017
-D2
-The Forest.
-~
+
 ~
-0 -1 5027
-S
-#5022
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.  It looks like you're in some sort of round clearing.
-~
-1 3
-D2
-The Forest.
-~
 ~
-0 -1 5028
-S
-#5023
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-The Forest.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
 ~
-0 -1 5019
-D1
-The Forest.
-~
+
 ~
-0 -1 5024
-D2
-The Forest.
-~
 ~
-0 -1 5029
-S
-#5024
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-The Forest.
-~
+
 ~
-0 -1 5020
-D1
-The Forest.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
 ~
-0 -1 5025
-D3
-The Forest.
-~
+
 ~
-0 -1 5023
-S
-#5025
-The Forest~
-You are in a large, overgrown forest.  Tall majestic trees tower far above 
-your head.
-~
-1 3
-D0
-The Forest.
-~
 ~
-0 -1 5026
-D3
-The Forest.
-~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+
+~
+
+there, some of which displays teeth-marks.  The air is alive with various
+
+loud, rumbling sounds - growls, hisses.  It sounds like a zoo in here.
+
+~
+
+~
+~
+
+~
+
+cut from the surrounding cliff face.  Above you, scratched into the wall to
+
+your left are the words: 'Rest Here Ye Weary Adventurer'.
+
+~
+
+~
+~
+
+walk along, you can feel small popping and hear cracks, as if something
+
+fragile was in the sand.
+
+~
+
+~
+~
+
+~
+
+the odd bone - human bone.
+
+~
+
+~
+
+~
+
+the beach lies back to the West.
+
+~
+
+~
+
+~
+~
+
+There floor is littered with bones and skulls, most of which look like they
+
+came from fellow adventurers.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+can see a small Isle.
+
+~
+
+~
+
+~
+
+can see a small Isle.
+
+~
+
+~
+
+~
+
+~
+
+least eight tons.  It's large, awesome head is home to an equally impressive
+
+set of razor-sharp teeth, some over six inches in length.  As you look closer 
+
+at these gleaming teeth, you notice body parts of adventurers who were not so
+
+lucky at conquering this ravenous creature.
+
+~
+
+~
+
+bone plate protects his head against attack from other dinosaurs, whilst the
+
+two great horns jutting from it provide an ample form of attack.
+
+~
+
+~
+
+towering dinosaur hardly inspire your self-confidence.  It's humped spine is
+
+lined with a double set of diamond shaped plates, used to regulate body heat.
+
+The spiked tail looks unfriendly, too, now you think about it.
+
+~
+
+~
+
+it sometimes uses to spear pray.  With it's large wingspan, you expect it to
+
+be cumbersome, but as it swoops to and fro around your head, you realise
+
+quite the opposite.
+
+~
+
+~
+
+quite happy to stay where it is right now, although it looks at you like a 
+
+mouse would look at a cat.
+
+~
+
+~
+
+body.  It looks menacing, and seems to be sizing you up for a meal.
+
+~
+
+~
+
+Rex, however, she still looks absolutely deadly if annoyed.
+
+~
+
+~
+
+almost intelligent.  It stares at you for a moment, before continuing to dart
+
+around you.
+
+~
+
+~
+
+tail looks pretty mean.  You wonder why he needs it when all he eats is
+
+vegetation.
+
+~
+
+~
+
+you over.  Looks like you're invited to (be) lunch!  Her dark red eyes, with 
+
+pitch black pupils almost hypnotise you, but her warts, and rotting flesh
+
+make you feel more like chucking than falling into a trance.
+
+~
+
+~
+
+It seems to be occupied looking for insects to eat, rather than trying to eat
+
+you, like most of the other inhabitants of the Isle.
+
+~
+
+~
+
+It seems to be occupied looking for insects to eat, rather than trying to eat
+
+you, like most of the other inhabitants of the Isle.
+
+~
+
+~
+
+It seems to be occupied looking for insects to eat, rather than trying to eat
+
+you, like most of the other inhabitants of the Isle.
+
+~
+
+~
+
+He mumbles something about lizards before doing his best doggy woof again.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
 ~
 0 -1 5024
 S
@@ -1597,26 +2182,29 @@ You are standing on a small, rocky outcrop, just above the beach to the West.
 0 4
 D3
 The Beach.
-~
-~
-0 -1 5079
-S
-#5081
-Out to Sea~
-You are in the Sea, to the East of the Jetty, and the small Isle attached to it.
-~
-0 7
-D1
-Lost at Sea.
-~
-~
-0 -1 5082
-D3
-The Jetty.
-~
-~
-0 -1 5001
-S
+M 0 5001 1 5073 - Trex
+E 0 5004 0 17   - Make Trex hold spere
+M 0 5002 1 5056 - Triceratops
+G 0 5005 0      - Give triccie staff
+M 0 5003 1 5036 - Steg
+M 0 5004 1 5049 - Pter
+G 0 5007 0      - Give wings
+M 0 5005 2 5032 - Lamb
+M 0 5006 1 5070 - Elasmo
+M 0 5007 1 5053 - Dippy
+G 0 5003 0      - Give ribcage to dippy
+M 0 5008 1 5063 - Deinony
+M 0 5009 2 5031 - Paleo
+M 0 5010 1 5080 - SeaHag
+M 0 5011 1 5015 - Grippli(1)
+E 0 5002 0 16   - Grippli wields dagger
+M 0 5012 1 5027 - Grippli(2)
+M 0 5013 1 5020 - Grippli(3)
+M 0 5014 1 5022 - Druid (the mad one ;)
+E 0 5001 0 17   - Druid holds key
+G 0 5006 0      - Give druid beating-heart
+D 0 5026 5 2 
+D 0 5030 4 2 
 #5082
 Lost at Sea~
 You are out at Sea, bobbing gently up and down on the waves.  To the West you

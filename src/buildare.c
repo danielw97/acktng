@@ -339,8 +339,6 @@ void build_makearea(CHAR_DATA *ch, char *argument)
    pArea->flags = AREA_NOSHOW; /* don't list on 'areas' -S- */
    pArea->first_area_room = NULL;
    pArea->last_area_room = NULL;
-   pArea->first_area_help_text = NULL;
-   pArea->last_area_help_text = NULL;
    pArea->first_area_object = NULL;
    pArea->last_area_object = NULL;
    pArea->first_area_mobile = NULL;
@@ -481,8 +479,6 @@ void build_addarea(CHAR_DATA *ch, char *argument)
    pArea->flags = AREA_NOSHOW; /* don't list on 'areas' -S- */
    pArea->first_area_room = NULL;
    pArea->last_area_room = NULL;
-   pArea->first_area_help_text = NULL;
-   pArea->last_area_help_text = NULL;
    pArea->first_area_object = NULL;
    pArea->last_area_object = NULL;
    pArea->first_area_mobile = NULL;

@@ -1,0 +1,11 @@
+level -1
+keywords shelp_cause light
+---
+*******************************************************************************
+       Name: Cause Light		
+    Classes: Cleric(4)
+   Duration: Permanent
+   Modifies: N/A
+       Type: Offensive
+Description: This spell causes light injuries to the victim.
+*******************************************************************************

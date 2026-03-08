@@ -1,0 +1,11 @@
+level -1
+keywords shelp_detect undead
+---
+*******************************************************************************
+       Name: Detect Undead		
+    Classes: Mage(8)
+   Duration: 5 + ( Cast Level / 6 )
+   Modifies: N/A
+       Type: Defensive - Self
+Description: This spell allows the caster to sense if a being is undead.
+*******************************************************************************

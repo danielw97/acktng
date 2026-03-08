@@ -1,0 +1,13 @@
+level -1
+keywords shelp_dispel evil
+---
+*******************************************************************************
+       Name: Dispel Evil		
+    Classes: Cleric(63)
+   Duration: N/A
+   Modifies: N/A
+       Type: Offensive
+Description: This spell is used by the caster, to ask his/her God to strike
+             against an evil being.  Remember that the Gods do not take
+             lightly such requests from evil spellcasters!
+*******************************************************************************

@@ -17,646 +17,357 @@ W Virant~
 Path to the Wizard's Keep~
 This is a simple path. To the north, the Wizard's Keep can be seen, a majestic
 
-place for adepts. A dense forest can be seen below.
 
-~
-16384 11
-D0
-~
-~
-0 -1 167
-D5
-~
-~
-0 0 9725
-S
-#167
-Path to Keep~
-The path continues on, stretching north towards the Wizard's Keep. Birds can
+place for adepts. A dense forest can be seen below.
 
-be heard all around, and the sun shines brightly. Little can be seen of
 
-anything to the sides of the path, the forest so dense that you cannot see a
+~
 
-thing. The smell of the forest is overwhelming.
 
-~
-0 11
-D0
-~
-~
-0 -1 168
-D2
-~
-~
-0 -1 166
-S
-#168
-Path to Keep~
-The path continues on, stretching north towards the Wizard's Keep. Birds can
+be heard all around, and the sun shines brightly. Little can be seen of
 
-be heard all around, and the sun shines brightly. Little can be seen of
 
-anything to the sides of the path, the forest so dense that you cannot see a
+anything to the sides of the path, the forest so dense that you cannot see a
 
-thing. A faint scent of smoke wafts in from the east.
 
-~
-4 11
-D0
-~
-~
-0 -1 169
-D1
-~
-~
-481 166 202
-D2
-~
-~
-0 -1 167
-S
-#169
-Road to Keep~
-The road widens here as it approaches the Keep from the south. Worn cobblestones
+thing. The smell of the forest is overwhelming.
 
-line the path, smoothed by years of marching boots. A faint shimmer of magic
 
-lingers in the air, and the Keep's imposing silhouette looms just to the north.
+~
+~
+~
 
-~
-0 11
-D0
+
+be heard all around, and the sun shines brightly. Little can be seen of
+
+
+anything to the sides of the path, the forest so dense that you cannot see a
+
+
+thing. A faint scent of smoke wafts in from the east.
+
+
+~
+
+
+line the path, smoothed by years of marching boots. A faint shimmer of magic
+
+
+lingers in the air, and the Keep's imposing silhouette looms just to the north.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+the west, a dense forest grows, of which only trees can be seen. The sun
+
+
+shines brightly above, giving an almost cheerful feeling to the area.
+
+
+~
+
+
+walls loom to the west, slick with moisture from the surrounding moat. A
+
+
+cold wind channels through here, carrying the smell of still water.
+
+
+~
+
+
+battlements are clearly visible above, and the occasional flash of a torch
+
+
+can be seen as a guard makes their rounds far above.
+
+
+~
+
+
+side and a dense wall of brambles choking the southern edge. A single weathered
+
+
+milestone marks the midpoint of the northern walk.
+
+
 ~
 ~
-0 -1 203
-D1
+~
+
+
+The stone walls of the Keep's eastern face stretch ahead, and the distant
+
+
+chirping of birds from the southern forest can be heard again.
+
+
+~
+
+
+the west, a dense forest grows, of which only trees can be seen. The sun
+
+
+shines brightly above, giving an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
 ~
 ~
-0 -1 170
-D2
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
 ~
 ~
-0 -1 168
+
+
+the east, a dense forest grows, of which only trees can be seen. The sun
+
+
+shines brightly above, giving an almost cheerful feeling to the area.
+
+
+~
+~
+~
+
+
+stone here is older, worn smooth by centuries of wind and rain. Moss clings to
+
+
+the base of the Keep's wall and a raven watches from atop the battlements.
+
+
+~
+
+
+here is dark and deep, its surface perfectly still. No sound comes from within
+
+
+the Keep's walls on this side, lending the path an eerie quiet.
+
+
+~
+
+
+south and a crumbling retaining wall to the north. Weeds push up between the
+
+
+cobblestones, and the air smells faintly of algae and cold stone.
+
+
+~
+
+
+loose stones have fallen from the Keep's upper parapet and lie scattered at
+
+
+the path's edge. The moat laps quietly against the stone to the south.
+
+
+~
+~
+
+
+the east, a dense forest grows, of which only trees can be seen. The sun
+
+
+shines brightly above, giving an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
 D3
 ~
 ~
-0 -1 171
-S
-#170
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+can see a moat that is completely impassable. To the south, a dense forest
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 181
-D3
-~
-~
-0 -1 169
-S
-#171
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
-
-can see a moat that is completely impassable. To the south, a dense forest
-
-grows, of which only trees can be seen. The sun shines brightly above, giving
-
-an almost cheerful feeling to the area.
-
-~
-0 11
-D1
-~
-~
-0 -1 169
-D3
-~
-~
-0 -1 172
-S
-#172
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
-
-can see a moat that is completely impassable. To the south, a dense forest
-
-grows, of which only trees can be seen. The sun shines brightly above, giving
-
-an almost cheerful feeling to the area.
-
-~
-0 11
-D1
-~
-~
-0 -1 171
-D3
-~
-~
-0 -1 173
-S
-#173
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
-
-can see a moat that is completely impassable. To the south, a dense forest
-
-grows, of which only trees can be seen. The sun shines brightly above, giving
-
-an almost cheerful feeling to the area.
-
-~
-0 11
-D1
-~
-~
-0 -1 172
-D3
-~
-~
-0 -1 174
-S
-#174
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
-
-can see a moat that is completely impassable. To the south, a dense forest
-
-grows, of which only trees can be seen. The sun shines brightly above, giving
-
-an almost cheerful feeling to the area.
-
-~
-0 11
-D1
-~
-~
-0 -1 173
-D3
-~
-~
-0 -1 175
-S
-#175
-Corner of the path around the Keep~
-To the east and the north, a path around the keep stretches. To the south and
-
-the west, a dense forest grows, of which only trees can be seen. The sun
-
-shines brightly above, giving an almost cheerful feeling to the area.
-
-~
-0 11
-D0
-~
-~
-0 -1 176
-D1
-~
-~
-0 -1 174
-S
-#176
-Northern Keep Path~
-The path curves gently around the northern face of the Keep. The great stone
-
-walls loom to the west, slick with moisture from the surrounding moat. A
-
-cold wind channels through here, carrying the smell of still water.
-
-~
-0 11
-D0
-~
-~
-0 -1 177
-D2
-~
-~
-0 -1 175
-S
-#177
-Northern Keep Path~
-The northern stretch of the outer path runs straight and silent. The Keep's
-
-battlements are clearly visible above, and the occasional flash of a torch
-
-can be seen as a guard makes their rounds far above.
-
-~
-0 11
-D0
-~
-~
-0 -1 178
-D2
-~
-~
-0 -1 176
-S
-#178
-Narrow Northern Path~
-The path here is particularly narrow, the moat pressing close on the north
-
-side and a dense wall of brambles choking the southern edge. A single weathered
-
-milestone marks the midpoint of the northern walk.
-
-~
-0 11
-D0
-~
-~
-0 -1 179
-D2
-~
-~
-0 -1 177
-S
-#179
-Eastern Keep Path~
-The path begins to widen as it turns south, the moat receding behind you.
-
-The stone walls of the Keep's eastern face stretch ahead, and the distant
-
-chirping of birds from the southern forest can be heard again.
-
-~
-0 11
-D0
-~
-~
-0 -1 180
-D2
-~
-~
-0 -1 178
-S
-#180
-Corner of the path around the Keep~
-To the east and the south, a path around the keep stretches. To the north and
-
-the west, a dense forest grows, of which only trees can be seen. The sun
-
-shines brightly above, giving an almost cheerful feeling to the area.
-
-~
-0 11
-D1
-~
-~
-0 -1 191
-D2
-~
-~
-0 -1 179
-S
-#181
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
-
-can see a moat that is completely impassable. To the south, a dense forest
-
-grows, of which only trees can be seen. The sun shines brightly above, giving
-
-an almost cheerful feeling to the area.
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
-~
-0 11
-D1
-~
-~
-0 -1 182
-D3
-~
-~
-0 -1 170
-S
-#182
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
-
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 183
-D3
 ~
-~
-0 -1 181
-S
-#183
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+can see a moat that is completely impassable. To the south, a dense forest
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 184
-D3
-~
-~
-0 -1 182
-S
-#184
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 185
-D3
-~
-~
-0 -1 183
-S
-#185
-Corner of the path around the Keep~
-To the west and the north, a path around the keep stretches. To the south and
-
-the east, a dense forest grows, of which only trees can be seen. The sun
-
-shines brightly above, giving an almost cheerful feeling to the area.
-
-~
-0 11
-D0
-~
-~
-0 -1 186
-D3
-~
-~
-0 -1 184
-S
-#186
-Northwestern Keep Path~
-The northwestern corner of the outer path curves tightly around the Keep. The
-
-stone here is older, worn smooth by centuries of wind and rain. Moss clings to
-
-the base of the Keep's wall and a raven watches from atop the battlements.
-
-~
-0 11
-D0
-~
-~
-0 -1 187
-D2
-~
-~
-0 -1 185
-S
-#187
-Northern Keep Path~
-The northern path stretches east and west along the Keep's rear face. The moat
-
-here is dark and deep, its surface perfectly still. No sound comes from within
-
-the Keep's walls on this side, lending the path an eerie quiet.
-
-~
-0 11
-D0
-~
-~
-0 -1 188
-D2
-~
-~
-0 -1 186
-S
-#188
-Narrow Northern Path~
-A narrow section of the outer path runs here, hemmed in by the moat to the
-
-south and a crumbling retaining wall to the north. Weeds push up between the
-
-cobblestones, and the air smells faintly of algae and cold stone.
-
-~
-0 11
-D0
-~
-~
-0 -1 189
-D2
-~
 ~
-0 -1 187
-S
-#189
-Eastern Keep Path~
-The path widens slightly here as it passes beneath a cracked buttress. A few
-
-loose stones have fallen from the Keep's upper parapet and lie scattered at
-
-the path's edge. The moat laps quietly against the stone to the south.
-
-~
-0 11
-D0
 ~
-~
-0 -1 190
-D2
-~
-~
-0 -1 188
-S
-#190
-Corner of the path around the Keep~
-To the west and the south, a path around the keep stretches. To the north and
-
-the east, a dense forest grows, of which only trees can be seen. The sun
-
-shines brightly above, giving an almost cheerful feeling to the area.
-
-~
-0 11
-D2
-~
-~
-0 -1 189
-D3
-~
-~
-0 0 201
-S
-#191
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+can see a moat that is completely impassable. To the south, a dense forest
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 192
-D3
-~
-~
-0 -1 180
-S
-#192
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
 ~
-0 -1 193
-D3
-~
-~
-0 -1 191
-S
-#193
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+can see a moat that is completely impassable. To the south, a dense forest
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 194
-D3
-~
-~
-0 -1 192
-S
-#194
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 195
-D3
 ~
-~
-0 -1 193
-S
-#195
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+can see a moat that is completely impassable. To the south, a dense forest
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 196
-D3
-~
-~
-0 -1 194
-S
-#196
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
+grows, of which only trees can be seen. The sun shines brightly above, giving
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+an almost cheerful feeling to the area.
 
-an almost cheerful feeling to the area.
 
-~
-0 11
-D1
-~
-~
-0 -1 197
-D3
-~
 ~
-0 -1 195
-S
-#197
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
-
-can see a moat that is completely impassable. To the south, a dense forest
-
-grows, of which only trees can be seen. The sun shines brightly above, giving
-
-an almost cheerful feeling to the area.
-
-~
 0 11
 D1
 ~
@@ -664,30 +375,846 @@ D1
 0 -1 198
 D3
 ~
-~
-0 -1 196
 S
-#198
-Path around the Keep~
-To the west and the east, a path around the keep stretches. To the north, you
 
-can see a moat that is completely impassable. To the south, a dense forest
 
-grows, of which only trees can be seen. The sun shines brightly above, giving
+can see a moat that is completely impassable. To the south, a dense forest
 
-an almost cheerful feeling to the area.
 
-~
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+can see a moat that is completely impassable. To the south, a dense forest
+
+
+grows, of which only trees can be seen. The sun shines brightly above, giving
+
+
+an almost cheerful feeling to the area.
+
+
+~
+
+
+thicket of gnarled trees. The way is overgrown and clearly seldom used, yet
+
+
+boot prints in the soft mud suggest someone passes this way with purpose.
+
+
+~
+
+
+double-sided gate made of strong oak wood, banded by mithril. The path towards
+
+
+the gate is kept very clean, the cobblestones almost shining brightly in the
+
+
+sun.
+
+
+~
+
+
+tall stone walls on all sides. A worn flagstone path cuts through the centre,
+
+
+and a dry fountain stands at the middle, its basin cracked and forgotten. The
+
+
+smell of torch smoke and steel lingers in the still air.
+
+
+~
+
+
+row of iron-bound weapon racks line the eastern wall, some still bearing
+
+
+training weapons. The shadows of the Keep's towers stretch long across the
+
+
+flagstones at this hour.
+
+
+~
+~
+~
+
+
+shutters thrown open to the morning air. The sound of snoring and the clank
+
+
+of armour being donned can be heard from within. A guardsman's discarded
+
+
+boot lies near the entrance.
+
+
+~
+
+
+set of heavy oak double doors dominates the northern wall, their iron fittings
+
+
+polished bright. The flagstones here are swept clean, and two iron braziers
+
+
+flank the entrance, their flames guttering in the breeze.
+
+
+~
+~
+~
+
+
+A lone apple tree grows here, its branches heavy with fruit that no one seems
+
+
+to bother harvesting. Fallen apples rot softly in the grass at its base.
+
+
+~
+
+
+wall having burned down to stubs. Crates of supplies are stacked against the
+
+
+western wall, some open and partially emptied. The smell of salted meat and
+
+
+straw drifts from them.
+
+
+~
+
+
+area is strictly maintained, and the flagstones are clean enough to eat from.
+
+
+Two enchanted lanterns hang from wrought-iron posts, casting a cold blue light
+
+
+that never flickers. The air here smells faintly of arcane reagents.
+
+
+~
+
+
+storage outbuilding. Barrels of oil for the torches are stacked here, along
+
+
+with spare chains and iron hooks. A rat darts between the barrels at your
+
+
+approach.
+
+
+~
+
+
+broken cart leans against the wall, one wheel missing. Rotting canvas covers
+
+
+a pile of something unidentifiable, and the flagstones here are cracked and
+
+
+uneven underfoot.
+
+
+~
+
+
+upward into the darkness. Arrow slits in the walls allow thin shafts of
+
+
+light to enter, and a small table bearing a half-eaten loaf of bread and an
+
+
+empty cup suggests the tower is occupied. The smell of lamp oil is strong.
+
+
+~
+~
+
+
+courtyard below and the outer road beyond the main gate. A loaded crossbow
+
+
+rests on the battlements, and a bedroll in the corner suggests a guard rests
+
+
+here when not on watch. The wind is sharp and cold at this height.
+
+
+~
+
+
+the arrow slits on this side partially blocked by years of accumulated grime.
+
+
+A rack of spears lines one wall, and a locked chest sits beneath the stairs.
+
+
+Worn boot-marks trace a familiar path across the floor.
+
+
+~
+
+
+western walls and the winding outer path below. A signal mirror mounted on
+
+
+a swivel bracket faces the road, used to warn of approaching visitors. The
+
+
+air up here tastes of iron and cold sky.
+
+
+~
+~
+
+
+ceiling of pale stone arches overhead, carved with faded arcane runes that
+
+
+still faintly glow. Twin rows of iron torch sconces line the walls, and a
+
+
+thick carpet runner of deep violet stretches from the outer door to the inner
+
+
+passages ahead. The air hums with contained magical energy.
+
+
+~
+
+
+walls here are paneled in dark oak, hung with faded tapestries depicting
+
+
+battles fought by long-dead wizards. A suit of empty armour stands in one
+
+
+corner, its visor raised as if watching the door. Faint magical wards shimmer
+
+
+across the threshold to the south.
+
+
+~
+~
+
+
+threshold to the Keep's central rotunda. The polished marble floor reflects
+
+
+the light of floating arcane orbs drifting lazily overhead. Passages lead
+
+
+north into the rotunda proper, and a staircase descends into the basement below.
+
+
+~
+
+
+stone floor is inlaid with a mosaic depicting celestial constellations, and
+
+
+tall arched windows of blue-tinted glass allow filtered light to fall across
+
+
+the patterns. The smell of old parchment and arcane chemicals permeates the air.
+
+
+~
+
+
+cabinet filled with rolled scrolls. Most are sealed with wax and appear
+
+
+untouched for years. A single candle burns on the bench, nearly spent, as
+
+
+though someone was here recently and left in haste.
+
+
+~
+~
+
+
+the surrounding lands, set into the floor. Magical markers glow faintly at
+
+
+points of interest, though many have faded over the years. The ceiling here
+
+
+is painted with a sweeping mural of the sky at midnight.
+
+
+~
+
+
+low circular dais of pale stone sits in the centre, and cushions arranged
+
+
+around it suggest it was once used for group study or ritual. The arcane orbs
+
+
+overhead pulse slowly, as if in rhythm with something unseen.
+
+
+~
+
+
+carved archways lead off to the reading alcove and the western arc, and a
+
+
+decorative fountain set into the wall here trickles softly, the water glowing
+
+
+with a faint blue luminescence. Magical glyphs have been etched into the
+
+
+stone basin.
+
+
+~
+
+
+bare rock and packed earth. The air is damp and cool, smelling of old stone
+
+
+and something faintly sulphurous. Wooden shelves line the rough walls, bearing
+
+
+crates, kegs, and a collection of items covered by dusty canvas.
+
+
+~
+
+
+ceiling is low and reinforced with heavy timber beams. Barrels of salted
+
+
+provisions and racks of preserved reagents line both walls. The floor is
+
+
+uneven, worn down by years of foot traffic to and from the kitchen above.
+
+
+~
+
+
+are fewer, and long stretches of shadow pool between them. The faint sound of
+
+
+dripping water echoes from somewhere further ahead, and the air grows noticeably
+
+
+colder.
+
+
+~
+~
+~
+
+
+prison wing. The door's hinges are rusted and screech when moved, and old
+
+
+bloodstains dark the threshold stone. A smell of damp straw and despair wafts
+
+
+from the cells beyond.
+
+
+~
+
+
+prisoner. A rusted chain bolted to the wall still bears a broken manacle, and
+
+
+a pile of mouldy straw in the corner serves as the remnant of a bed. The only
+
+
+light is a thin sliver from the door crack behind you.
+
+
+~
+~
+~
+
+
+wooden racks. Most of the bottles are coated in thick dust, though a few
+
+
+recent additions stand out by their cleaner labels. A small table and two
+
+
+stools in the corner suggest the cellar is still visited for more than just
+
+
+inventory. The smell of old wine and damp wood is pleasantly strong.
+
+
+~
+
+
+The walls are hung with portraits of past wizards, their painted eyes seeming
+
+
+to follow you as you pass. The floor is polished white marble, and a faint
+
+
+echo turns every footstep into a small announcement of your presence.
+
+
+~
 0 11
+D0
+~
+~
+
+
+pale stone. Enchanted chandeliers hang overhead, their crystals casting
+
+
+prismatic light across the marble floor. Wide corridors lead in every direction,
+
+
+and the murmur of voices and distant arcane activity filters through from the
+
+
+passages ahead.
+
+
+~
+
+
+walls lined with glass display cases holding magical artefacts. Each case is
+
+
+sealed with an arcane lock and bears a small plaque in a flowing script. The
+
+
+air here carries a constant low hum, as if the artefacts are restless.
+
+
+~
+
+
+central passages. A broad staircase of pale marble descends to a lower level,
+
+
+and a pair of ornate iron doors to the north lead further into the Keep's
+
+
+interior. The scent of magical reagents is noticeably stronger here.
+
+
+~
+
+
+The sigils on the door glow faintly with a cold white light, and the air
+
+
+before it crackles with suppressed magical energy. Only those who speak the
+
+
+correct incantation may pass beyond. The walls here are bare stone, stripped
+
+
+of any decoration.
+
+
+~
+
+
+bears a few discarded cloaks and a forgotten satchel. A notice board on the
+
+
+opposite wall is pinned with messages and schedules, most of them faded beyond
+
+
+legibility. The floor here is scratched and dull compared to the polished
+
+
+marble of the main foyer.
+
+
+~
+~
+~
+
+
+grand passages nearby. A reading lectern stands near the east wall, an open
+
+
+tome resting upon it. The text inside is written in a cipher no ordinary
+
+
+scholar could decipher, and the pages turn of their own accord every few
+
+
+minutes.
+
+
+~
+
+
+chest and a wall-mounted torch that burns with a soft violet flame rather than
+
+
+the usual orange. The unusual flame casts strange shadows and makes the room
+
+
+feel slightly uneasy to linger in.
+
+
+~
 D1
 ~
 ~
-0 -1 199
-D3
+
+
+plain plaster, and several doors have been bricked over and painted to blend
+
+
+into the wall, their outlines barely visible. Whatever lay beyond those sealed
+
+
+doors is clearly meant to be forgotten.
+
+
+~
+
+
+founding of the Keep. The tapestry's stitching is extraordinarily fine, and
+
+
+the faces of the wizards shown are eerily lifelike. The corner behind it is
+
+
+cool and dark, and something small and metallic glints on the floor.
+
+
+~
+
+
+than the rest of the Keep due to a heating pipe running beneath them. Brass
+
+
+grates in the floor release gentle waves of warm air, and the sound of a
+
+
+distant fire crackling can be heard faintly underfoot.
+
+
 ~
 ~
-0 -1 197
-S
+
+
+open up again toward the rotunda. A large mirror set in a gilded frame
+
+
+stands against one wall, its surface slightly murky, as though it reflects
+
+
+a slightly different room than the one you stand in.
+
+
+~
+
+
+two chairs positioned as if for conversation. A cold cup of tea sits on
+
+
+the table, a thin skin of tannin floating on its surface. Whoever was here
+
+
+left recently, though in haste or simply forgetfulness is unclear.
+
+
+~
+
+
+The walls here are unnervingly smooth, as if carved by magical means rather
+
+
+than tools. The temperature drops noticeably, and the silence is absolute save
+
+
+for the distant sound of something rhythmic and mechanical further ahead.
+
+
+~
+~
+
+
+stonework here is lighter in colour than the surrounding Keep, suggesting
+
+
+it was added later. The passage is narrow, forcing single-file movement, and
+
+
+the floor is bare stone free of dust, suggesting it is used with some regularity.
+
+
+~
+
+
+rough-hewn and unpainted, in stark contrast to the Keep's finished interiors.
+
+
+Grooves in the stone suggest a portcullis once sealed this passage, though the
+
+
+mechanism is long since gone.
+
+
+~
+
+
+The air here is cold and still, and the only light comes from a line of
+
+
+dim phosphorescent moss growing along the base of the wall. The passage
+
+
+smells of damp rock and old secrets.
+
+
+~
+~
+
+
+gentle angle. Water seeps through a crack in the ceiling, leaving a dark stain
+
+
+on the stone below. Faint scratches on the eastern wall look like they may once
+
+
+have been writing, but the marks have been deliberately defaced.
+
+
+~
+
+
+but clearly once served an important purpose: a heavy iron desk is bolted to
+
+
+the floor, its surface scarred by fire, and a scorched bookcase holds nothing
+
+
+but ash. Whatever knowledge was stored here was destroyed with great care. A
+
+
+single sealed iron box remains untouched in the corner, its lock intact.
+
+
+~
+
+
+The surface is perfectly smooth and faintly warm to the touch, and a circular
+
+
+groove in the stone suggests a door once opened here. Whatever mechanism
+
+
+operated it has been removed, leaving only the ghost of a threshold and the
+
+
+tantalising sense that something important lies just beyond.
+
+
+~
+~
+
+~
+
+They move with a practiced rhythm, eyes scanning the road without pause or hesitation.
+
+A shortsword hangs at their hip and a battered shield is strapped across their back.
+
+~
+
+~
+
+beneath the rim of his great helm. He holds his halberd with easy confidence, and the
+
+Keep's crest gleams on the breast of his surcoat.
+
+~
+
+~
+
+Deep-set eyes burn with surprising intelligence despite his dishevelled appearance,
+
+and his gnarled hands rest on a knotted walking staff worn smooth by years of use.
+
+~
+
+~
+
+and scratches from past campaigns. A captain's ribbon at her collar marks her rank,
+
+and her gaze sweeps the courtyard with the calm alertness of someone who expects trouble.
+
+~
+
+~
+
+foggy glass. Something about them feels unfinished, like a half-formed thought.
+
+~
+
+~
+
+the nature of their work. They carry a basket of linens and spare not a glance for
+
+visitors, though a faint shimmer about their eyes hints at an enchanted compulsion.
+
+~
+
+~
+
+and bundles. Their face is set in a permanent expression of resigned effort, and
+
+callused hands suggest a lifetime spent in physical labour within the Keep's walls.
+
+~
+
+~
+
+posture rigid and formal. A short sword hangs at their belt and they hold a spear
+
+upright, its butt resting on the flagstones with a faint clank as they shift weight.
+
+~
+
+~
+
+with arcane sigils that faintly glow in dim light. Their visor is permanently lowered
+
+and no sound comes from within the armour, yet their presence alone commands silence.
+
+~
+
+~
+
+to reveal pale eyes that occasionally flash with inner light. Ink stains their fingers
+
+up to the knuckles, and a focus ring on their right hand pulses with contained energy.
+
+~
+
+~
+
+the breast in cold steel. Their gaze is direct and unblinking, cataloguing every detail
+
+about you, and one hand rests habitually on the grip of the blade at their hip.
+
+~
+
+~
+
+around them, making them easy to overlook until they move. A loaded crossbow sits
+
+steady in their hands and a quiver of bolts hangs at their hip, well within reach.
+
+~
+
+~
+
+leather jerkin strains across their broad shoulders, and an iron-headed club hangs
+
+from a hook at their belt, its head dark with old stains that tell their own story.
+
+~
+
+~
+
+the floating pages around them. They make constant small notes with a quill that
+
+writes of its own accord, never pausing even as they turn to regard you with curiosity.
+
+~
+
+~
+
+fastened with precision and every surface free of dust. They pause at each door
+
+to test its lock before moving on, unhurried and utterly reliable in their routine.
+
+~
+
+~
+
+smooth yet somehow ageless beneath a crown of cold light. Their robes are etched
+
+with living runes that shift and writhe as though alive, and the air around them
+
+crackles and distorts, bending reality slightly in their presence. Their eyes hold
+
+the absolute cold authority of one who has held power for centuries unchallenged.
+
+~
+
+~
+
+helm to boot with warding runes that flare brilliant red when it senses intruders.
+
+It moves with an eerie mechanical grace, servos of enchanted steel grinding softly
+
+with each step. A single burning gem is set into its chest, its core and its heart,
+
+and to shatter it would be to silence the construct forever.
+
+~
+
+~
+
+tattered they are held together by little more than pride and enchantment. Yet
+
+his frame is iron-hard beneath those rags, hardened by centuries of solitary vigil,
+
+and his eyes burn with the accumulated fury of a guardian who has suffered countless
+
+intrusions. The air around him smells of ozone and old forest, wild and dangerous.
+
+~
 #199
 Path around the Keep~
 To the west and the east, a path around the keep stretches. To the north, you

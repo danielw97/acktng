@@ -16,1320 +16,3208 @@ W builder~
 #30580
 @@yThe Desert Approach@@N~
 A vast expanse of sun-bleached desert stretches to the horizon in every direction,
-broken only by the tremendous shadow cast by the pyramid looming before you. The heat
-is absolute, the silence broken only by the dry whisper of sand across stone.
-~
-0 3
-D1
-The ancient path leads north toward the pyramid's grand entrance.
-~
+
+broken only by the tremendous shadow cast by the pyramid looming before you. The heat
+
+is absolute, the silence broken only by the dry whisper of sand across stone.
+
 ~
-0 0 30581
-D5
-A crumbled section of paving conceals a shaft descending into darkness beneath the pyramid.
-~
-shaft~
-0 0 30480
-S
-#30581
-@@yThe Grand Entrance Plaza@@N~
-Enormous carved pylons flank the approach to the pyramid, their faces still bearing
-faint traces of paint that once blazed in red, blue, and gold. Colossal statues of
-seated pharaohs observe the approach with expressions of serene and total authority.
-~
+
+~
+
+~
+
+faint traces of paint that once blazed in red, blue, and gold. Colossal statues of
+
+seated pharaohs observe the approach with expressions of serene and total authority.
+
+~
+
+~
+
+~
+~
+
+stars in constellations sacred to the cult of Ra. The air here is immediately cooler
+
+than outside, carrying the dry mineral scent of cut stone that has never seen rain.
+
+~
+
+~
+
+~
+~
+
+~
+
+of every pharaoh who contributed to or was buried within this monument, each name
+
+outlined in faded gold leaf and surrounded by images of their divine patrons.
+
+~
+
+~
+
+~
+
+~
+
+for the pyramid's mortal guardians, their stone-carved furniture still in place,
+
+clay tablet schedules still bearing duty rosters in faded ink no one will ever read.
+
+~
+
+~
+~
+
+~
+
+~
+
+narrative scenes depicting the pharaoh's military campaigns, each enemy represented
+
+as smaller and humbler than the triumphant god-king who dominates every composition.
+
+~
+
+~
+
+~
+
+~
+
+foods placed here centuries ago. The ceiling is painted with a procession of offering
+
+bearers in white linen, each carrying a different sacred gift toward the west wall.
+
+~
+
+~
+
+~
+
+~
+
+deeper sanctums of the dead, the floor inscribed with a complete map of the underworld
+
+and the forty-two judgment questions to be answered before Osiris and his court.
+
+~
+
+~
+
+~
+
+~
+
+above painted with the solar barque carrying Ra through the twelve hours of the
+
+night, each hour populated with the gods who guide the sun through darkness and back.
+
+~
 0 3
 D0
-The path back to the open desert lies to the south.
-~
+
 ~
-0 0 30580
-D1
-The grand entrance to the pyramid lies ahead, through massive bronze doors.
-~
+
 ~
-0 0 30582
-S
-#30582
-@@yThe Outer Vestibule@@N~
-Two rows of granite columns support a low ceiling painted deep blue with gold
-stars in constellations sacred to the cult of Ra. The air here is immediately cooler
-than outside, carrying the dry mineral scent of cut stone that has never seen rain.
-~
-0 3
-D0
-The grand entrance plaza and the desert beyond lie to the south.
-~
 ~
-0 0 30581
-D1
-A wide corridor leads deeper into the pyramid's first level.
-~
+
 ~
-0 0 30583
+
+~
+
+undamaged, the reliefs of bound enemies paraded before the pharaoh still crisply cut
+
+and brightly painted in a palette of ochre, turquoise, and black that defies the age.
+
+~
+
+~
+~
+
+~
 D3
-A side passage leads east into an antechamber.
-~
+
 ~
-0 0 30590
+
+placed on the sacred tables, now home only to empty stone platforms and the faint
+
+smell of incense that has outlasted everything that burned it by a thousand years.
+
+~
+
+~
+
+~
+
+and the territories claimed by the pyramid's patron dynasty, trading routes marked
+
+with dotted lines and rival kingdoms shaded in an ochre that signified danger.
+
+~
+
+~
+
+~
+
+walls still bear inventory markings in hieratic script, a bureaucratic record of
+
+wealth moved out or pillaged long ago, the shelving niches gaping like open mouths.
+
+~
+
+~
+
+~
+
+the floor still littered with fragments of limestone practice tablets and the dried
+
+husks of reed brushes, the palette wells still stained black and red with dry pigment.
+
+~
+
+~
+~
+
+~
+
+the reliefs here depict not military triumph but the judgment of the wicked dead,
+
+their hearts weighed against the feather and found wanting, consumed by Ammit below.
+
+~
+
+~
+~
+
+~
+
+embalming rituals, the stone basins still present where the sacred processes were
+
+performed, and the carved instructions for proper mummification still legible above.
+
+~
+
+~
+~
+
+~
 S
-#30583
-@@yThe Hall of Cartouches@@N~
-The walls from floor to ceiling are dense with carved cartouches, the royal names
-of every pharaoh who contributed to or was buried within this monument, each name
-outlined in faded gold leaf and surrounded by images of their divine patrons.
-~
-0 3
-D0
-The vestibule and the outside world lie to the north.
-~
+
+the stone seat worn smooth from centuries of use by watchmen now long dead,
+
+crude graffiti scratched into the sill in the cursive hand of bored soldiers.
+
 ~
-0 0 30582
-D2
-The corridor continues south into the pyramid's depths.
-~
+
 ~
-0 0 30584
-D3
-A narrow passage leads east to side chambers.
-~
+
 ~
-0 0 30591
-S
-#30584
-@@yThe Guardhouse@@N~
-A heavy-beamed chamber with thick stone walls served as the primary security post
-for the pyramid's mortal guardians, their stone-carved furniture still in place,
-clay tablet schedules still bearing duty rosters in faded ink no one will ever read.
-~
-0 3
-D0
-The hall of cartouches lies to the north.
-~
+
+except for the guide markings left by the original builders indicating directions
+
+and structural loads, a working language of the pyramid that tourists never see.
+
 ~
-0 0 30583
-D1
-The main corridor continues south into the pyramid.
-~
+
 ~
-0 0 30585
-D2
-A side passage leads west to storage areas.
-~
+
+~
+
+behind which the ba of a favored official was intended to enter and receive the
+
+goods left for him, the painted spirit still vivid in yellow and black above the door.
+
+~
+
+~
+~
+
+~
+
+across register lines, archers releasing while riding at full gallop, fallen quarry
+
+rendered in loving detail that reveals more respect for the prey than the hunter.
+
+~
+
+~
+~
+
+~
+
+broken, the interior stripped bare by whoever broke that seal, leaving only dust and
+
+shadow where wealth once waited the eternal dead in patient darkness.
+
+~
+
+~
 ~
 0 0 30592
+
+~
+
+stained from a hundred years of mixing and grinding colors, the grinding stones
+
+still present, a kind of timeless tool that changed nothing about its own existence.
+
+~
+
+~
+
+~
+
+to rest between their performances, and something of that ritual grief has soaked
+
+into the stone, a heaviness of atmosphere that is difficult to name but impossible to miss.
+
+~
+
+~
+
+~
+
+main chamber but the smell no less insistent, the carved diagrams on the walls
+
+depicting the steps of preservation in clinical anatomical detail.
+
+~
+
+~
+~
+
+~
+
+level, the walls here bearing structural reinforcement markings from a repair campaign
+
+centuries after the original construction, the later writing cruder but earnest.
+
+~
+
+~
+~
+
+~
+
+measurements, load calculations, and worker tallies, a monument to administrative
+
+achievement as impressive as the stonework those records document and oversaw.
+
+~
+
+~
+~
+
+~
 S
-#30585
-@@yThe First Gallery@@N~
-A long, high-ceilinged gallery stretches ahead, its walls adorned with continuous
-narrative scenes depicting the pharaoh's military campaigns, each enemy represented
-as smaller and humbler than the triumphant god-king who dominates every composition.
-~
+
+organs of the embalmed dead, the stone shelves carved with the four sons of Horus
+
+who protect stomach, intestines, lungs, and liver through eternity alike.
+
+~
+
+~
+
+~
+
+these walls, a painted history of expansion and tribute that reads from right to
+
+left following the sun's path, the enemy faces growing more elaborate as the years pass.
+
+~
+
+~
+
+~
+
+the floor unfinished, suggesting it was abandoned partway through construction and
+
+simply sealed rather than demolished, an unresolved parenthesis in stone.
+
+~
+
+~
+~
+
+~
+
+the walls of this workshop still display sample swatches where colors were tested
+
+before application, a gallery of ancient aesthetics in rows of faded rectangles.
+
+~
+
+~
+~
+
+~
+
+has its own slit window, the view now choked with centuries of drifted sand but
+
+once offering a clear line of sight to deter any western approach from the necropolis.
+
+~
+
+~
+~
+
+~
+S
+
+wall, carrying no decoration other than the occasional mason's mark and the scuff
+
+marks of countless sandaled feet crossing stone in religious procession.
+
+~
+
+~
+
+~
+
+direction, the ancient navigational landmark for workers who might otherwise become
+
+turned around in the pyramid's dense lower level during their long shifts.
+
+~
+
+~
+
+~
+
+~
+
+painted with dancing figures making offerings by torchlight in a ritual whose exact
+
+meaning has been lost but whose joyfulness somehow remains perfectly legible.
+
+~
+
+~
+
+~
+
+carved bound prisoner figures, each representing a foreign nation conquered and
+
+subjugated, their names in cartouches that have been deliberately defaced.
+
+~
+
+~
+~
+
+~
+
+~
+
+access to a series of chambers at regular intervals, the walls here carrying nothing
+
+but the structural surveys of engineers who tested the integrity of the outer skin.
+
+~
+
+~
+
+~
+S
+
+this narrow room, each peg labeled with a subject header in hieratic shorthand.
+
+The scrolls themselves are long gone, but the organizational system they served remains.
+
+~
+
+~
+
+~
+
+that carried divine images in procession, their gilded prows still gleaming with
+
+gold leaf so thick it has survived both time and multiple attempts at looting.
+
+~
+
+~
+
+~
+
+waters brought life to the desert, depicted receiving tribute of captured prey from
+
+human devotees who seem to offer the animals freely to the great reptilian god.
+
+~
+
+~
+~
+
+~
+
+geometric friezes alternating with hieroglyphic text columns in a pattern so
+
+mathematically precise it required specialist craftsmen working from detailed plans.
+
+~
+
+~
+~
+
+~
+
+the post to the north, this room's window looks south along the pyramid's exterior,
+
+commanding the desert approach from a lower but wider field of observation.
+
+~
+
+~
+~
+
+~
+
+than the inner rooms, the immense stone blocks breathing a chill that has nothing
+
+to do with the desert outside and everything to do with proximity to the dead within.
+
+~
+
+~
+~
+
+~
+S
+
+ancient settling, one corner lower than the others, the floor worn smooth by water
+
+that must have seeped in during some long-forgotten flood season a hundred years past.
+
+~
+
+~
+
+~
+
+chamber, the ceiling higher than elsewhere, the walls carved with directional guides
+
+that served the hundreds of workers and priests who moved through these spaces daily.
+
+~
+
+~
+
+~
+
+imagery only partially clarifies, showing robed figures performing gestures around
+
+a central flame while jackals observe from the chamber's four corners with golden eyes.
+
+~
+
+~
+~
+
+~
+
+the reliefs here depicting the barque of the dead crossing the celestial Nile as
+
+stars wheel above in a dome of black stone polished to a mirror finish overhead.
+
+~
+
+~
+~
+
+~
+
+logged and verified, the walls serving as both archive and working surface, covered
+
+in accounting tallies no one will ever audit again in this eternal ledger of loss.
+
+~
+
+~
+~
+
+~
+S
+
+final verification of goods placed permanently in the burial chambers, its accounting
+
+complete to a degree that suggests obsessive institutional thoroughness.
+
+~
+
+~
+
+~
+
+form repeated in a pattern that covers every surface, the protective serpent that
+
+rears above the crowns of pharaohs given an entire room of veneration in living stone.
+
+~
+
+~
+
+~
+
+the upper reaches, the floor rising perceptibly as the ceiling narrows toward the
+
+heart of the monument. Carved figures on the walls seem to lean forward in anticipation.
+
+~
+
+~
+~
+
+~
+
+~
+
+the sharp bite of concentrated incense that has never fully dissipated from the
+
+chamber walls despite the centuries of absolute solitude. The passages here are narrower.
+
+~
+
+~
+
+~
+
+~
+
+pharaoh of this dynasty, each face individualized with a skill that makes these
+
+long-dead faces somehow still present, still watching, still demanding recognition.
+
+~
+
+~
+
+~
+
+immense value now entirely removed by ancient robbers who spared not even the
+
+clay shabti figures that were supposed to serve the dead in their eternal afterlife.
+
+~
+
+~
+
+~
+
+~
+
+in full on these walls, Anubis at the scales, Thoth recording the result, Ammit
+
+waiting in eager hope beside the balance while the deceased's fate hangs in the air.
+
+~
+
+~
+
+~
+
+~
+
+ancient than the main building's hieroglyphs, the sacred language of creation that
+
+carries power in each symbol to those who know how to pronounce it correctly.
+
+~
+
+~
+
+~
+S
+
+pyramid's founding, the ceiling cut to form a slot that would have illuminated
+
+the floor with starlight on one night each year during the appropriate ceremony.
+
+~
+
+~
+
+~
+
+~
+
+but dignified, the walls painted not with royal triumph but with the private devotions
+
+of soldiers who took seriously the sacred weight of their centuries-long commission.
+
+~
+0 3
+
+~
+
+~
+
+through a series of smaller chambers, each one slightly different in decoration
+
+as if different hands worked them, a collaborative monument in stone and pigment.
+
+~
+
+~
+D2
+
+~
+
+into fractured constellations across the ceiling, the offerings niche carved in the
+
+shape of a crescent moon, the god Khonsu venerated in lunar silver and cool shadow.
+
+~
+
+~
+
+~
+
+trappings of both great power and great asceticism, the throne plain stone but
+
+elevated by carved texts proclaiming its occupant the voice of the divine on earth.
+
+~
+
+~
+
+~
+
+brightest stars visible from this latitude, their light forming a pattern on the
+
+floor that spells a royal name in the sacred script of the divine architects.
+
+~
+
+~
+
+~
+
+way leads to which sacred space, the directional system here more sophisticated than
+
+on the base level, suggesting the second level was considered more important to navigate.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+explaining the proportions of sacred architecture, the mathematical relationships
+
+between pyramid dimensions and astronomical constants made visible in ochre and black.
+
+~
+
+~
+
+~
+
+is dedicated to the moon in its twenty-eight phases, each depicted around the walls
+
+in a cycle that creates a complete lunar calendar in painted stone above the faithful.
+
+~
+
+~
+
+~
+
+red granite and walls absolutely covered in ritual text, every surface a working
+
+reference for the ceremonies that could take days to complete correctly and completely.
+
+~
+
+~
+
+~
+
+refueled sits cold at the room's center, the walls blackened with smoke in a halo
+
+around the ceiling and pale below, a clear record of where fire lived for so long.
+
+~
+
+~
+~
+
+~
+
+supplicants to walk single-file in humility before the divine, the walls pressing
+
+close with carved eyes that feel as though they are genuinely watching the approach.
+
+~
+
+~
+~
+
+~
+S
+
+nightly passage through the underworld, the walls depicting the twelve gates of
+
+the night each guarded by a different deity who must be appeased to allow safe passage.
+
+~
+
+~
+
+~
+
+representation on these painted walls, an astronomical catalog rendered in art,
+
+each star's divine patron noted in tiny precise script above the glittering image.
+
+~
+
+~
+
+~
+
+of any other chamber and its walls presenting a complete cosmological narrative from
+
+creation to final judgment in the most accomplished painted style the ancient world achieved.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+door nearly three meters high, the gateway through which the dead were believed to
+
+pass to receive offerings, its threshold worn smooth by the passage of something.
+
+~
+
+~
+
+~
+
+carved shelves of this chamber, or their impressions do, the goods themselves
+
+removed but the shapes of their leaving still visible in dust and stone memory.
+
+~
+
+~
+
+~
+
+decorative program, the west being sacred to the dead while the east honors the
+
+living, the shift in imagery from hopeful offerings to solemn funerary rite.
+
+~
+
+~
+
+~
+
+a secondary routing path, its walls carved with the names and epithets of the
+
+building's divine patrons repeated in a litany of holy names that fills every surface.
+
+~
+
+~
+~
+
+~
+
+the decoration here focused on protective spells rather than divine names, every
+
+surface inscribed with the words that guard a sacred space from malign intrusion.
+
+~
+
+~
+~
+
+~
+S
+
+millimeter precision that still defeats attempts to find the seams, the masterwork
+
+of the pyramid's interior becoming more refined the closer one approaches the apex.
+
+~
+
+~
+
+~
+
+~
+
+in their entirety on these walls in the oldest style of the funerary script, each law
+
+accompanied by the punishment for its violation described in precise and unsparing detail.
+
+~
+0 3
+D2
+
+~
+
+~
+~
+
+erased from these walls, the cartouches hammered smooth in a final condemnation that
+
+denies the condemned any existence in the afterlife, an eternal punishment in absence.
+
+~
+
+~
+
+~
+~
+
+~
+
+of souls, his black jackal form reproduced dozens of times in every medium available
+
+to the ancient artists, each image slightly different in expression from the last.
+
+~
+
+~
+
+~
+
+pyramid's most accomplished relief carving, every figure cut with a clarity of
+
+line and expressiveness of pose that makes the base level's work look merely competent.
+
+~
+
+~
+
+~
+~
+
+~
+
+at the pyramid's midpoint insulating against both heat and time, the air carrying
+
+a mineral purity that makes breathing feel like drinking clear water in a desert.
+
+~
+
+~
+~
+
+~
+
+story of their life, campaigns, marriages, and divine favor rendered in formal
+
+biographical style that is moving even now for those who can read its ancient script.
+
+~
+
+~
+~
+
+~
+
+~
+
+designed to overwhelm with its beauty before revealing the greater beauty beyond,
+
+the walls here bearing the most precious and best-preserved painted reliefs in the pyramid.
+
+~
+
+~
+
+~
+
+~
+
+by the carved forms of gods in attendance, the ceiling a masterwork of astronomical
+
+art showing the complete sky of the pyramid's founding night in accurate star positions.
+
+~
+
+~
+
+~
+
+over carved reliefs, the ceiling set with lapis lazuli tile spelling out the complete
+
+text of creation, the room humming with the residual energy of ten thousand ceremonies.
+
+~
+
+~
+
+~
+
+smooth by the hands of countless priests and worshippers who braced themselves on
+
+the cut stone during the climb, their touch wearing fingerprints into living rock.
+
+~
+
+~
+~
+
+~
+S
+
+rest, the walls here bearing texts of encouragement and divine blessing for those
+
+making the sacred ascent to the higher mysteries of the pyramid's inner workings.
+
+~
+
+~
+
+~
+
+~
+
+ventilation system, a series of stone tubes designed to move air through the entire
+
+structure visible in cross-section where the walls have been left deliberately unfinished.
+
+~
 0 3
 D0
-The guardhouse lies to the north.
-~
+
 ~
-0 0 30584
-D1
-A branching passage leads east.
-~
+
 ~
-0 0 30593
-D2
-The gallery continues south.
-~
 ~
-0 0 30586
+
+~
+
+a sliver of view down through the levels below, the shaft designed so sound carries
+
+upward, allowing supervisors to hear what occurred in the lower chambers without descending.
+
+~
+
+~
+~
+
+architectural, designed into the space rather than merely the absence of sound,
+
+the carved figures on the walls seeming to lean forward in sacred attention.
+
+~
+
+~
+
+~
+
+hewn from a rarer harder granite that resonates differently underfoot, and the
+
+decoration reaches its apex in artistry matching the literal apex of the structure above.
+
+~
+
+~
+
+~
+
+~
+~
+
+title but as lived reality, the reliefs showing the pharaoh performing divine acts
+
+that should be impossible for mortals, accepted without irony by all who watched.
+
+~
+
+~
+~
+
+~
+
+fills entirely with golden light for several minutes each dawn, the experience of
+
+the divine timed to the astronomical precision of a civilization that tracked the stars.
+
+~
+
+~
+~
+
+~
+
+this antechamber, its empty shelves and broken seal-holes testament to the success
+
+of at least one team of ancient thieves who reached this deep without being stopped.
+
+~
+
+~
+
+~
+
+~
+
+bearing traces of color from the objects that rested in them, the floor worn into
+
+patterns by the feet of those who carried riches here and those who took them away.
+
+~
+
+~
+
+~
+
+through the pyramid's thickest point, the stone here close enough to touch on both
+
+sides simultaneously, the walls warm with the heat absorbed and retained from above.
+
+~
+
+~
+~
+
+~
+
+chamber designed for the most solemn of the pyramid's ceremonies, the black stone
+
+floor inlaid with the balance of judgment in gold and lapis in the exact room center.
+
+~
+
+~
+~
+
+~
+
+~
 S
-#30586
-@@yThe Hall of Offerings@@N~
-Carved offering tables line both walls, many still bearing calcified remnants of
-foods placed here centuries ago. The ceiling is painted with a procession of offering
-bearers in white linen, each carrying a different sacred gift toward the west wall.
-~
+
+designed to echo those of the entire structure in miniature, a pyramid within a
+
+pyramid, the ceiling pointed and set at its apex with a single slab of pure quartz crystal.
+
+~
+
+~
+
+~
+
+~
+
+decorated in the entire pyramid, the walls presenting a final synthesis of all the
+
+symbolic systems used throughout the monument in one overwhelming visual statement.
+
+~
 0 3
 D0
-The first gallery lies to the north.
-~
+
 ~
-0 0 30585
+
+~
+~
+
+~
+
+royal court who chose to be buried alongside their pharaoh, each sarcophagus a
+
+masterwork of gold work and inlay that has outlasted every ambition it once embodied.
+
+~
+
+~
+~
+
+~
+
+of the innermost chamber glittering in any light, the ceiling a single enormous
+
+carved scene of the pharaoh's apotheosis into godhood played out in magnificent relief.
+
+~
+
+~
+
+~
+
+the outermost case carved in the pharaoh's likeness with an idealized expression
+
+of divine serenity that seems almost to breathe in the absolute stillness of this place.
+
+~
+
+~
+
+~
+
+~
+
+most personal treasures, objects connected to his own divine power rather than his
+
+political authority, the walls bearing private names and invocations of the most intimate character.
+
+~
+
+~
+~
+
+~
+
+items too sacred for public ritual but too powerful to be destroyed, their presence
+
+making the air in this room vibrate at a frequency just below the threshold of hearing.
+
+~
+
+~
+
+~
+~
+
+electrum glory, a point of concentrated spiritual power that hums with three thousand
+
+years of continuous ceremony focused upon this single magnificent convergence of stone and sky.
+
+~
+
+~
+
+in a rough-hewn antechamber far below the pyramid's foundations. Dust motes swirl
+
+in the faint light from above, and the air is thick with the smell of sealed stone and old death.
+
+~
+
+~
+
+~
+
+~
+
+above, the glyphs cruder but somehow more urgent, painted in a red ochre that has
+
+kept its color as though applied yesterday rather than a dynasty before the pyramid was built.
+
+~
+
+~
+
+~
+~
+
+~
+
+that happened here long before any living person would have thought to record it,
+
+the walls stained a rust-brown that imagination insists on interpreting as old blood.
+
+~
+
+~
+~
+
+~
+
+~
+S
+
+shallow black pool across the floor through which the passage continues, the
+
+water cold and perfectly still and somehow more disturbing for its perfect clarity.
+
+~
+
+~
+
+~
+
+~
+
+deposits that sparkle faintly in any light, the formations growing from every surface
+
+in clusters of needles that make the room look dressed in frozen spray.
+
+~
+0 3
+
+~
+
+~
+
+for the catacombs' upper level, the walls here bearing directional marks and tally
+
+counts from multiple different periods, none of them in agreement about what lies ahead.
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+originally with a plaster tablet bearing the occupant's name and station, most broken
+
+open, the niches gaping like open mouths, a few still sealed with faded intact plaster.
+
+~
+
+~
+
+~
+
+~
+
+tablets intact and the contents untouched, row upon row of the anonymous dead resting
+
+in the darkness they were promised, their names still legible to those who can read them.
+
+~
+
+~
+
+~
+~
+
+administrative class, their niches slightly larger and their plaster tablets more
+
+elaborately painted, occupants of middle rank who served the pharaoh faithfully in life.
+
+~
+
+~
+~
+
+~
+
+once blocked by a stone door whose hinges corroded enough to fail in the millennia
+
+since it was set. The contents of these niches are not labeled, their names deliberately omitted.
+
+~
+
+~
+~
+
+originally used by the workers who maintained the burial niches, too narrow for
+
+comfortable passage and marked with the casual scratches of bored maintenance crews.
+
+~
+
+~
+
+~
+
+for new burials, the ossuary now a dense geometric arrangement of sorted remains:
+
+skulls in rows, long bones stacked, smaller bones filling the gaps between.
+
+~
+
+~
+
+~
+
+the surviving passage threading through the debris on a path that someone has kept
+
+deliberately clear, marked with small stones placed to indicate the safe route.
+
+~
+D0
+
+~
+
+~
+~
+
+algae that glows a faint bioluminescent green, the only natural light source in the
+
+entire subterranean complex, giving the chamber an eerie and beautiful underwater quality.
+
+~
+
+~
+
+~
+~
+
+and its floor clear, the emptiness suggesting it was always intended as a staging
+
+area for the movement of remains rather than a permanent resting place for any of them.
+
+~
+
+~
+
+periods, sleeping in carved stone bunks stacked three high, the stone still bearing
+
+faint depressions worn by centuries of bodies and a lingering smell of tallow lamps.
+
+~
+
+~
+
+~
+
+than those above and its carved instructions more detailed, designed for bodies
+
+that required extraordinary preservation after longer journeys to reach the complex.
+
+~
+0 3
+D0
+
+~
+
+~
+~
+
+the walls here bearing the stress fractures of millennia of geological pressure, each
+
+crack carefully grouted by maintenance workers whose repairs are now as old as the original damage.
+
+~
+
+~
+
+~
+~
+
+important for individual niches, the arrangement here aesthetic rather than practical,
+
+the bones arranged in patterns that suggest a worker who found meaning in symmetry.
+
+~
+
+~
+
+~
+
+noticeably lower here where the original has been replaced by a rough-hewn secondary
+
+tunnel cut at a different angle to bypass the worst of the structural damage.
+
+~
+
+~
+
+~
+
+the boundary between the catacomb's two major levels, the air noticeably colder,
+
+the silence more complete, the darkness ahead absolute and somehow attentive.
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+passage in a continuous green glow, the light too faint for comfortable sight but
+
+enough to navigate by, the algae covering the floor as well as the walls underfoot.
+
+~
+
+~
+~
+
+~
+
+the original design by a permanent rotation of living guards who were never meant
+
+to be here alone, all of whom are now neither living nor departed.
+
+~
+
+~
+
+~
+
+equipped with a wash basin, oil lamp niches, and carved instructions for the
+
+purification rituals required before approaching the deepest burial chambers.
+
+~
+
+~
+
+~
+~
+
+stones, massive blocks of granite that extend down further than the passage itself,
+
+each one weighing more than can easily be conceived of and set with absolute precision.
+
+~
+
+~
+~
+
+~
+
+particles that seeped in with the groundwater, built up into a surface that gives
+
+slightly underfoot and bears the prints of every creature that has passed through.
+
+~
+
+~
+~
+
+~
+
+floor uneven, the excavation work clearly done in haste by someone working alone,
+
+the pick marks never smoothed and the rubble never fully cleared from underfoot.
+
+~
+
+~
+
+~
+
+the walls here showing the highest quality stonework in the entire subterranean complex,
+
+suggesting these deeper passages were built with more care and deliberation than those above.
+
+~
+
+~
+
+~
+~
+
+~
+
+layer of inscription found anywhere in the complex, the oldest symbols predating
+
+the standard hieroglyphic system, their meaning understood only by the deepest initiates.
+
+~
+
+~
+~
+
+~
+
+cavern, coating every surface and the ceiling in a continuous green luminescence,
+
+the light sufficient to cast shadows, the effect uncanny and the smell sharp and mineral.
+
+~
+
+~
+~
+
+~
+
+~
+
+about two meters deep and filled with the preserved remains of those who fell in
+
+and were not retrieved, the path threading between them on a narrow stone bridge.
+
+~
+
+~
+
+~
+S
+
+the intruders intercepted at this point over the centuries, a number so large it
+
+wraps several times around the room, the counter clearly having never stopped.
+
+~
+
+~
+
+~
+
+texts of protection that the descending priest was meant to speak aloud as they
+
+passed through, the words still legible, the descent still requiring the same courage.
+
+~
+
+~
+
+~
+
+pyramid foundation, this gallery has a rougher, more primitive quality, the walls
+
+marked with the pick scars of the original excavation never dressed or smoothed.
+
+~
+
+~
+~
+
+~
+
+~
+
+floor always wet, the ceiling hung with mineral stalactites that have grown over
+
+millennia, the dripping sound constant and rhythmic as a slow heartbeat.
+
+~
+
+~
+
+~
+
+~
+
+their plaques more elaborate and their contents more carefully preserved, housing
+
+the remains of those whose sins required deeper burial to contain their restless dead.
+
+~
+
+~
+
+~
+
+as a mass disposal for bodies not meriting individual burial, the pit still dense
+
+with the compressed remains of those who ended here, the walls stained dark.
+
+~
+
+~
+
+~
+
+in the complex, layer upon layer of text from multiple periods, the newest still
+
+centuries old, each generation adding their interpretations over their predecessors.
+
+~
+
+~
+~
+
+~
+
+formed, the walls bearing the rippled marks of ancient flowing water that carved
+
+these passages long before any human hand touched stone here.
+
+~
+
+~
+~
+
+~
+
+those to the north, the bottoms invisible in the darkness below, the bridge between
+
+them barely wide enough for one person, the worn stone suggesting heavy traffic.
+
+~
+
+~
+~
+
+~
+S
+
+the stone floor bears the depressions of kneeling bodies worn smooth over centuries
+
+of prayers, a dozen lamp niches carved at perfect intervals around the walls.
+
+~
+
+~
+
+~
+
+for safe descent densely written in multiple hands over multiple centuries, each
+
+generation adding their own words of protection to those of all the priests before.
+
+~
+
+~
+
+~
+
+visible as a different style of masonry pressed against the original bedrock,
+
+layers of construction history stacked like geological strata in the passage walls.
+
+~
+
+~
+~
+
+~
+
+perfectly round, its depth unknowable, the bottom invisible, its surface disturbed
+
+only by the rhythm of drops that have fallen in the same spot for three thousand years.
+
+~
+
+~
+~
+
+~
+S
+
+whose sins in life required the deepest possible containment, their names preserved
+
+only to record the charges against them rather than to honor any memory of life.
+
+~
+
+~
+
+~
+
+chamber served as overflow when even the pit was full, the walls here thicker with
+
+mineral deposits than elsewhere, decades of burial chemistry leaching into the stone.
+
+~
+
+~
+
+~
+
+complex, the shelves still bearing the clay tags from which scroll identifiers
+
+once hung, the scrolls themselves reduced to compressed dust in the humid dark.
+
+~
+
+~
+~
+
+~
+
+the ceiling is at its lowest, forcing a stoop, possibly deliberate humility enforced
+
+by architecture, the low ceiling ending abruptly as the vault passage opens beyond.
+
+~
+
+~
+~
+
+~
+S
+
+catacomb, a chamber whose walls bear warnings in a dozen scripts and languages about
+
+what lies ahead, none of them subtle, all of them worth heeding.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+vigil and prepared for the most serious work, the walls here stripped of all decoration,
+
+the emptiness intentional and meditative, nothing to distract from the gravity of descent.
+
+~
+D0
+
+~
+
+~
+~
+
+marked here by a carved threshold stone set into the floor, the inscription worn
+
+but still readable: a warning that what passes this threshold does not pass back.
+
+~
+
+~
+
+~
+~
+
+the walls carved in a script so ancient only a handful of the most learned priests
+
+could read it, the content describing burial practices too extreme for later centuries.
+
+~
+
+~
+
+~
+
+complex, designed to allow access to all the deep chambers without passing through
+
+the most dangerous central spaces, though the outer ring is not without its own hazards.
+
+~
+
+~
+
+~
+
+~
+~
+
+suggest experiments in containment, each alcove door carved with the same binding
+
+symbol repeated in obsessive iteration, the repetition suggesting the carver's fear.
+
+~
+
+~
+~
+
+~
+
+most active period, the density of the material here suggesting catastrophic
+
+mortality at some point in the complex's history, the cause unrecorded.
+
+~
+
+~
+~
+
+~
+
+used for the most sensitive texts that required the extra privacy of additional
+
+depth, the shelving niches carved with the special security marks of restricted material.
+
+~
+
+~
+
+~
+
+its walls dense with the names of those interred in the innermost chambers,
+
+a catalog of the very worst offenders the ancient world produced and judged.
+
+~
+
+~
+
+~
+~
+
+junctions at each end, a trap for the unwary designed to send intruders circling
+
+indefinitely, its floor worn smooth by the confused pacing of those who fell for it.
+
+~
+
+~
+~
+
+~
+
+mechanism long since frozen in place and harmless now, but the grooves in the floor
+
+where the stone block would have fallen are still sharp-edged and explanatory.
+
+~
+
+~
+~
+
+plinth at its center still bearing the shadow of whatever it held in a ring of
+
+cleaner stone, the identity of the deity once worshipped here deliberately obscured.
+
+~
+
+~
+
+here showing the clearest evidence of repair and reinforcement, sections of newer
+
+masonry pressed against the original where the deeper excavation caused instability.
+
+~
+
+~
+
+~
+
+bearing the debris from a minor collapse that has been pushed to the sides of
+
+the passage, the rubble still present but the path cleared, years ago by someone now dead.
+
+~
+0 3
+
+~
+
+~
+
+higher here than in the approach passages, the walls bearing a continuous mural of
+
+the underworld's geography that has never been studied by any living scholar.
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+covered entirely in protective text, the passage through it cold enough to see
+
+breath despite the general warmth of the deep, something resistant to trespass.
+
+~
+
+~
+
+~
+
+bearing any instructive or narrative text, only abstract geometric patterns that
+
+repeat in ways that suggest mathematical precision rather than artistic decoration.
+
+~
+
+~
+
+~
+
+larger than any space this far underground has a right to be, the ceiling lost
+
+in darkness above, the walls receding into shadows that do not respond to torchlight normally.
+
+~
+D0
+
+~
+
+~
+~
+
+~
+
+~
+
+beneath the pyramid, the geometry not quite matching the precise rectangles of the
+
+constructed passages, suggesting this section follows an older natural formation.
+
+~
+
+~
+~
+
+~
+S
+
+one with its door intact and its binding symbols freshly retouched at some point
+
+long past, the retouching itself now ancient, the seals holding despite everything.
+
+~
+
+~
+
+~
+
+connects to the inner complex from the exterior, offering an alternative route
+
+that bypasses the most dangerous central passages at the cost of added distance.
+
+~
+
+~
+
+~
+
+chambers, lined with empty shelving niches that once held the duplicate records
+
+required by the complex's obsessive administrative culture.
+
+~
+
+~
+~
+
+~
+
+approach, the walls here bearing the faces of the forty-two judges of the dead
+
+carved in relief, each face slightly different, each expressing the same verdict.
+
+~
+
+~
+~
+
+~
+S
+
+carved with the names of everything the death cult feared and contained in these
+
+depths, a catalog of banished things presented as a warning and a boast simultaneously.
+
+~
+
+~
+
+~
+
+condemned rather than their names, hundreds of individual portrait reliefs carved
+
+over centuries by different hands, the styles shifting but the subjects' expressions uniform.
+
+~
+
+~
+
+~
+
+junction for the inner complex, the walls bearing the clearest surviving version
+
+of the underworld map mural, showing the geography of death in meticulous painted detail.
+
+~
+
+~
+~
+
+~
 D2
-The corridor narrows and continues south.
-~
+
 ~
-0 0 30587
+
+~
+~
+
+lined with beaten gold sheeting nailed to the walls, tarnished now to near-black,
+
+each sheet engraved with the complete text of a different funerary spell.
+
+~
+
+~
+
+~
+
+chamber whose every surface is covered in interlocking geometric forms that, studied
+
+carefully, resolve into diagrams of something that does not exist in the visible world.
+
+~
+
+~
+
+~
+
+whose nature the walls only obliquely suggest, the imagery abstract and the
+
+carved figures engaged in activities that resist straightforward interpretation.
+
+~
+
+~
+
+of rites complementary to those in the east, the two chambers together constituting
+
+a single ceremony that could not be performed in one space.
+
+~
+
+~
+
+tread worn smooth by the passage of feet over uncountable years, the descent leading
+
+to the deepest and most dangerous chambers in the entire complex.
+
+~
+
+~
+~
+
+~
+
+that neither end is visible from the center, the walls bearing the accumulated
+
+scratch marks of creatures that have paced this loop for longer than memory serves.
+
+~
+
+~
+
+~
+
+served as the handoff point between the administrative and sacred functions of
+
+the complex, the boundary between bureaucracy and religion marked in the floor.
+
+~
+
+~
+
+~
+~
+
+significant containment chambers, its ceiling vaulted high above and painted with a
+
+complete cosmological diagram of the underworld visible only to those entering from below.
+
+~
+
+~
+~
+
+~
+
+~
 D3
-A passage to the west leads to side chambers.
-~
+
 ~
-0 0 30594
+
+slabs each bearing a different protective inscription in a different style, the work
+
+of priests from successive generations all contributing to the same endless ward.
+
+~
+
+~
+
+~
+
+extreme containment rites, the walls bearing the results of those rites in the form
+
+of channels carved to direct and drain away whatever the rites produced.
+
+~
+
+~
+
+~
+
+most heavily guarded section, every meter of wall covered in both protective
+
+text and warnings, the corridor somehow narrower than its dimensions suggest.
+
+~
+
+~
+
+~
+
+~
+
+the walls are truly smooth, the floor level to within a hair's breadth across its
+
+entire width, the craftsmanship a devotional act in itself.
+
+~
+
+~
+
+~
+
+on the walls have been arranged so that viewed from the room's center, they resolve
+
+into a coherent three-dimensional diagram of something terrible and precise.
+
+~
+
+~
+~
+
+~
 S
-#30587
-@@yThe Antechamber of the Dead@@N~
-This chamber served as a transition space between the world of the living and the
-deeper sanctums of the dead, the floor inscribed with a complete map of the underworld
-and the forty-two judgment questions to be answered before Osiris and his court.
-~
-0 3
-D0
-The hall of offerings lies to the north.
-~
+
+with the depth and the surrounding geology, the silence absolute and pressure-bearing,
+
+as though the emptiness itself has weight and intent in this penultimate space.
+
 ~
-0 0 30586
-D1
-Side chambers lie to the east.
-~
+
 ~
-0 0 30595
-D2
-A narrow stairway descends briefly before leveling out southward.
-~
+
 ~
-0 0 30588
+
+here stripped even of protective text, the stone left bare as if whoever was responsible
+
+for the final chambers acknowledged that words had no power over what lay ahead.
+
+~
+
+~
+
+~
+
+the floor has been inlaid with copper wire in the shape of the sacred path through
+
+the underworld, the metal long since oxidized to blue-green but the pattern intact.
+
+~
+
+~
+~
+
+~
+
+the walls here bearing nothing but the marks of enormous tension in the stone itself,
+
+fracture patterns radiating outward from the direction of what lies ahead.
+
+~
+
+~
+~
+
+~
 S
-#30588
-@@yThe Lower Junction@@N~
-Several passages converge here in a broad junction chamber, the vaulted ceiling
-above painted with the solar barque carrying Ra through the twelve hours of the
-night, each hour populated with the gods who guide the sun through darkness and back.
-~
-0 3
-D0
-The antechamber of the dead lies to the north.
-~
-~
-0 0 30587
-D1
-Eastern passages lead to outer rooms.
-~
-~
-0 0 30596
-D2
-A passage continues south into the base level's rear chambers.
-~
-~
-0 0 30589
-D3
-Western passages lead to more outer rooms.
-~
-~
-0 0 30610
-S
-#30589
-@@yThe Rear Vestibule@@N~
-The southernmost major chamber on the base level, this room's walls are notably
-undamaged, the reliefs of bound enemies paraded before the pharaoh still crisply cut
-and brightly painted in a palette of ochre, turquoise, and black that defies the age.
-~
-0 3
-D0
-The lower junction lies to the north.
-~
-~
-0 0 30588
-D1
-An eastern corridor leads to the rear outer rooms.
-~
-~
-0 0 30597
-D3
-A western passage leads toward the pyramid's outer wall.
-~
-~
-0 0 30611
-S
-#30590
-@@yThe East Antechamber@@N~
-A side chamber used for the temporary storage of offerings before they were
-placed on the sacred tables, now home only to empty stone platforms and the faint
-smell of incense that has outlasted everything that burned it by a thousand years.
-~
-0 3
-D2
-Another side chamber lies to the south.
-~
-~
-0 0 30598
-D3
-The outer vestibule lies to the west.
-~
-~
-0 0 30582
-S
-#30591
-@@yThe Map Room@@N~
-An entire wall of this room is carved with a relief map of the surrounding desert
-and the territories claimed by the pyramid's patron dynasty, trading routes marked
-with dotted lines and rival kingdoms shaded in an ochre that signified danger.
-~
-0 3
-D2
-A passage leads south.
-~
-~
-0 0 30599
-D3
-The hall of cartouches lies to the west.
-~
-~
-0 0 30583
-S
-#30592
-@@yThe Storage Vault@@N~
-Empty now but clearly once used to store vast quantities of grave goods, the
-walls still bear inventory markings in hieratic script, a bureaucratic record of
-wealth moved out or pillaged long ago, the shelving niches gaping like open mouths.
-~
-0 3
-D1
-The guardhouse lies to the east.
-~
-~
-0 0 30584
-D2
-A connecting passage leads south.
-~
-~
-0 0 30600
-S
-#30593
-@@yThe Scribes' Alcove@@N~
-A narrow side room where the pyramid's administrative scribes worked by lamplight,
-the floor still littered with fragments of limestone practice tablets and the dried
-husks of reed brushes, the palette wells still stained black and red with dry pigment.
-~
-0 3
-D2
-A connecting passage leads south.
-~
-~
-0 0 30601
-D3
-The first gallery lies to the west.
-~
-~
-0 0 30585
-S
-#30594
-@@yThe West Side Chamber@@N~
-Thick walls and a low ceiling make this room feel particularly oppressive, and
-the reliefs here depict not military triumph but the judgment of the wicked dead,
-their hearts weighed against the feather and found wanting, consumed by Ammit below.
-~
-0 3
-D1
-The hall of offerings lies to the east.
-~
-~
-0 0 30586
-D2
-A passage continues south.
-~
-~
-0 0 30602
-S
-#30595
-@@yThe Ritual Preparation Chamber@@N~
-The walls are stained with the residue of oils, unguents, and natron used in
-embalming rituals, the stone basins still present where the sacred processes were
-performed, and the carved instructions for proper mummification still legible above.
-~
-0 3
-D2
-A passage continues south.
-~
-~
-0 0 30603
-D3
-The antechamber of the dead lies to the west.
-~
-~
-0 0 30587
-S
-#30596
-@@yThe East Guard Post@@N~
-A forward guard position with a slit window overlooking the outer approach,
-the stone seat worn smooth from centuries of use by watchmen now long dead,
-crude graffiti scratched into the sill in the cursive hand of bored soldiers.
-~
-0 3
-D2
-A passage leads south along the inner east wall.
-~
-~
-0 0 30604
-D3
-The lower junction lies to the west.
-~
-~
-0 0 30588
-S
-#30597
-@@yThe Rear East Passage@@N~
-A utility corridor connecting the rear chambers, the walls unadorned and plain
-except for the guide markings left by the original builders indicating directions
-and structural loads, a working language of the pyramid that tourists never see.
-~
-0 3
-D2
-The corridor continues south.
-~
-~
-0 0 30605
-D3
-The rear vestibule lies to the west.
-~
-~
-0 0 30589
-S
-#30598
-@@yThe Offering Alcove@@N~
-A small recessed chamber with its own offering table and a carved false door
-behind which the ba of a favored official was intended to enter and receive the
-goods left for him, the painted spirit still vivid in yellow and black above the door.
-~
-0 3
-D0
-The east antechamber lies to the north.
-~
-~
-0 0 30590
-D2
-A passage leads south.
-~
-~
-0 0 30606
-S
-#30599
-@@yThe Hall of Painted Hunts@@N~
-Desert hunts play out in vivid painted scenes across these walls, chariots thundering
-across register lines, archers releasing while riding at full gallop, fallen quarry
-rendered in loving detail that reveals more respect for the prey than the hunter.
-~
-0 3
-D0
-The map room lies to the north.
-~
-~
-0 0 30591
-D2
-A passage continues south toward inner chambers.
-~
-~
-0 0 30607
-S
-#30600
-@@yThe Sealed Storage Room@@N~
-The outer door to this room was sealed with a clay cartouche seal, long since
-broken, the interior stripped bare by whoever broke that seal, leaving only dust and
-shadow where wealth once waited the eternal dead in patient darkness.
-~
-0 3
-D0
-The storage vault lies to the north.
-~
-~
-0 0 30592
-D2
-A narrow passage leads south.
-~
-~
-0 0 30608
-S
-#30601
-@@yThe Ink Room@@N~
-The heavy smell of ancient pigments still clings here, the walls themselves
-stained from a hundred years of mixing and grinding colors, the grinding stones
-still present, a kind of timeless tool that changed nothing about its own existence.
-~
-0 3
-D0
-The scribes' alcove lies to the north.
-~
-~
-0 0 30593
-D2
-A passage leads south.
-~
-~
-0 0 30609
-S
-#30602
-@@yThe Chamber of Wailing@@N~
-The professional mourners employed during the pharaoh's burial used this chamber
-to rest between their performances, and something of that ritual grief has soaked
-into the stone, a heaviness of atmosphere that is difficult to name but impossible to miss.
-~
-0 3
-D0
-The west side chamber lies to the north.
-~
-~
-0 0 30594
-D2
-A passage leads south along the outer wall.
-~
-~
-0 0 30613
-S
-#30603
-@@yThe Embalming Annex@@N~
-Secondary preparation work was performed here, the basins smaller than in the
-main chamber but the smell no less insistent, the carved diagrams on the walls
-depicting the steps of preservation in clinical anatomical detail.
-~
-0 3
-D0
-The ritual preparation chamber lies to the north.
-~
-~
-0 0 30595
-D2
-A passage leads south.
-~
-~
-0 0 30614
-S
-#30604
-@@yThe Inner East Passage@@N~
-A long passage connecting the middle and rear portions of the pyramid's first
-level, the walls here bearing structural reinforcement markings from a repair campaign
-centuries after the original construction, the later writing cruder but earnest.
-~
-0 3
-D0
-The east guard post lies to the north.
-~
-~
-0 0 30596
-D2
-The passage continues south.
-~
-~
-0 0 30615
-S
-#30605
-@@yThe Builders' Record Room@@N~
-The original construction records were kept here, the walls covered with
-measurements, load calculations, and worker tallies, a monument to administrative
-achievement as impressive as the stonework those records document and oversaw.
-~
-0 3
-D0
-The rear east passage lies to the north.
-~
-~
-0 0 30597
-D3
-A passage leads west.
-~
-~
-0 0 30612
-S
-#30606
-@@yThe Canopic Cache@@N~
-The recessed shelves in this room held the canopic jars containing the preserved
-organs of the embalmed dead, the stone shelves carved with the four sons of Horus
-who protect stomach, intestines, lungs, and liver through eternity alike.
-~
-0 3
-D0
-The offering alcove lies to the north.
-~
-~
-0 0 30598
-D2
-A short passage leads south to a junction.
-~
-~
-0 0 30616
-S
-#30607
-@@yThe Gallery of Conquest@@N~
-The campaigns of successive dynasties are laid out in chronological sequence on
-these walls, a painted history of expansion and tribute that reads from right to
-left following the sun's path, the enemy faces growing more elaborate as the years pass.
-~
-0 3
-D0
-The hall of painted hunts lies to the north.
-~
-~
-0 0 30599
-D2
-The gallery continues south.
-~
-~
-0 0 30617
-S
-#30608
-@@yThe Forgotten Annex@@N~
-This room's purpose was never completed, the reliefs half-carved and unpainted,
-the floor unfinished, suggesting it was abandoned partway through construction and
-simply sealed rather than demolished, an unresolved parenthesis in stone.
-~
-0 3
-D0
-The sealed storage room lies to the north.
-~
-~
-0 0 30600
-D2
-A passage leads south.
-~
-~
-0 0 30618
-S
-#30609
-@@yThe Color Chamber@@N~
-The pigments mixed here were the finest the ancient world could produce, and
-the walls of this workshop still display sample swatches where colors were tested
-before application, a gallery of ancient aesthetics in rows of faded rectangles.
-~
-0 3
-D0
-The ink room lies to the north.
-~
-~
-0 0 30601
-D2
-A connecting passage leads south.
-~
-~
-0 0 30619
-S
-#30610
-@@yThe West Guard Post@@N~
-A mirror of the east post, this guardroom faces the western desert approach and
-has its own slit window, the view now choked with centuries of drifted sand but
-once offering a clear line of sight to deter any western approach from the necropolis.
-~
-0 3
-D1
-The lower junction lies to the east.
-~
-~
-0 0 30588
-D2
-A passage leads south along the inner west wall.
-~
-~
-0 0 30620
-S
-#30611
-@@yThe Rear West Passage@@N~
-Matching the eastern utility corridor, this passage runs along the western inner
-wall, carrying no decoration other than the occasional mason's mark and the scuff
-marks of countless sandaled feet crossing stone in religious procession.
-~
-0 3
-D1
-The rear vestibule lies to the east.
-~
-~
-0 0 30589
-D2
-The corridor continues south.
-~
-~
-0 0 30621
-S
-#30612
-@@yThe Junction of Paths@@N~
-Three corridors meet here in a junction marked with a carved palm tree indicating
-direction, the ancient navigational landmark for workers who might otherwise become
-turned around in the pyramid's dense lower level during their long shifts.
-~
-0 3
-D1
-The builders' record room lies to the east.
-~
-~
-0 0 30605
-D2
-The junction connects south to deeper chambers.
-~
-~
-0 0 30623
-D3
-A passage leads west to outer rooms.
-~
-~
-0 0 30622
-S
-#30613
-@@yThe South West Chamber@@N~
-A spacious side chamber used as a gathering place for cult ceremonies, the walls
-painted with dancing figures making offerings by torchlight in a ritual whose exact
-meaning has been lost but whose joyfulness somehow remains perfectly legible.
-~
-0 3
-D0
-The chamber of wailing lies to the north.
-~
-~
-0 0 30602
-D1
-A passage leads east.
-~
-~
-0 0 30614
-S
-#30614
-@@yThe Passageway of Bound Prisoners@@N~
-The floor is recessed here, creating a shallow trench lined on both sides with
-carved bound prisoner figures, each representing a foreign nation conquered and
-subjugated, their names in cartouches that have been deliberately defaced.
-~
-0 3
-D0
-The embalming annex lies to the north.
-~
-~
-0 0 30603
-D2
-The passage continues south to a deeper chamber.
-~
-~
-0 0 30624
-D3
-A passage leads west.
-~
-~
-0 0 30613
-S
-#30615
-@@yThe Long East Corridor@@N~
-An exceptionally long corridor runs parallel to the pyramid's east face, giving
-access to a series of chambers at regular intervals, the walls here carrying nothing
-but the structural surveys of engineers who tested the integrity of the outer skin.
-~
-0 3
-D0
-The inner east passage lies to the north.
-~
-~
-0 0 30604
-D2
-The corridor continues south.
-~
-~
-0 0 30625
-S
-#30616
-@@yThe Archivist's Storeroom@@N~
-Rows of stone pegs from which papyrus scrolls were once hung line the walls of
-this narrow room, each peg labeled with a subject header in hieratic shorthand.
-The scrolls themselves are long gone, but the organizational system they served remains.
-~
-0 3
-D0
-The canopic cache lies to the north.
-~
-~
-0 0 30606
-D2
-A passage continues south.
-~
-~
-0 0 30626
-S
-#30617
-@@yThe Hall of Divine Barques@@N~
-Four enormous carved boats occupy stone cradles in this hall, the sacred barques
-that carried divine images in procession, their gilded prows still gleaming with
-gold leaf so thick it has survived both time and multiple attempts at looting.
-~
-0 3
-D0
-The gallery of conquest lies to the north.
-~
-~
-0 0 30607
-D2
-A corridor continues south.
-~
-~
-0 0 30627
-S
-#30618
-@@yThe Crocodile Chamber@@N~
-Paintings of enormous crocodiles frame the ceiling here, sacred to Sobek whose
-waters brought life to the desert, depicted receiving tribute of captured prey from
-human devotees who seem to offer the animals freely to the great reptilian god.
-~
-0 3
-D0
-The forgotten annex lies to the north.
-~
-~
-0 0 30608
-D2
-A passage leads south.
-~
-~
-0 0 30628
-S
-#30619
-@@yThe Chamber of Friezes@@N~
-An unusually sophisticated decorative scheme covers every wall here, interlocking
-geometric friezes alternating with hieroglyphic text columns in a pattern so
-mathematically precise it required specialist craftsmen working from detailed plans.
-~
-0 3
-D0
-The color chamber lies to the north.
-~
-~
-0 0 30609
-D2
-A passage leads south.
-~
-~
-0 0 30629
-S
-#30620
-@@yThe West Guard Station@@N~
-A second guard station on the west side with a different angle of coverage from
-the post to the north, this room's window looks south along the pyramid's exterior,
-commanding the desert approach from a lower but wider field of observation.
-~
-0 3
-D0
-The west guard post lies to the north.
-~
-~
-0 0 30610
-D2
-A passage leads south.
-~
-~
-0 0 30623
-S
-#30621
-@@yThe Outer West Corridor@@N~
-Running close to the pyramid's outer western face, this passage is notably colder
-than the inner rooms, the immense stone blocks breathing a chill that has nothing
-to do with the desert outside and everything to do with proximity to the dead within.
-~
-0 3
-D0
-The rear west passage lies to the north.
-~
-~
-0 0 30611
-D1
-A passage leads east to central chambers.
-~
-~
-0 0 30612
-S
-#30622
-@@yThe Outer West Chamber@@N~
-This room's position against the outer wall has meant it is slightly tilted by
-ancient settling, one corner lower than the others, the floor worn smooth by water
-that must have seeped in during some long-forgotten flood season a hundred years past.
-~
-0 3
-D1
-The junction of paths lies to the east.
-~
-~
-0 0 30612
-D2
-A passage leads south.
-~
-~
-0 0 30624
-S
-#30623
-@@yThe Central South Junction@@N~
-The central routing junction for the pyramid's lower level opens here in a broad
-chamber, the ceiling higher than elsewhere, the walls carved with directional guides
-that served the hundreds of workers and priests who moved through these spaces daily.
-~
-0 3
-D0
-The junction of paths and west guard station lie to the north.
-~
-~
-0 0 30612
-D2
-The path forward leads to the lower level's deepest chambers.
-~
-~
-0 0 30630
-S
-#30624
-@@yThe Deep South West Chamber@@N~
-Far from the entrance now, this deep chamber served ritual functions the carved
-imagery only partially clarifies, showing robed figures performing gestures around
-a central flame while jackals observe from the chamber's four corners with golden eyes.
-~
-0 3
-D0
-The passageway of bound prisoners lies to the north.
-~
-~
-0 0 30614
-D3
-The outer west chamber lies to the west.
-~
-~
-0 0 30622
-S
-#30625
-@@yThe Deep East Corridor@@N~
-A corresponding deep corridor on the east side connects to the main passages,
-the reliefs here depicting the barque of the dead crossing the celestial Nile as
-stars wheel above in a dome of black stone polished to a mirror finish overhead.
-~
-0 3
-D0
-The long east corridor lies to the north.
-~
-~
-0 0 30615
-D3
-The corridor connects west to the central junction.
-~
-~
-0 0 30623
-S
-#30626
-@@yThe North Registry Room@@N~
-A bureaucratic chamber where the comings and goings of all offerings were
-logged and verified, the walls serving as both archive and working surface, covered
-in accounting tallies no one will ever audit again in this eternal ledger of loss.
-~
-0 3
-D0
-The archivist's storeroom lies to the north.
-~
-~
-0 0 30616
-D3
-A passage leads west.
-~
-~
-0 0 30627
-S
-#30627
-@@yThe South Registry Room@@N~
-A sister chamber to the north registry, this room handled outgoing tallies and
-final verification of goods placed permanently in the burial chambers, its accounting
-complete to a degree that suggests obsessive institutional thoroughness.
-~
-0 3
-D0
-The hall of divine barques lies to the north.
-~
-~
-0 0 30617
-D1
-The north registry room lies to the east.
-~
-~
-0 0 30626
-S
-#30628
-@@yThe Serpent Hall@@N~
-The cobra goddess Wadjet is honored here in abundant carved relief, her coiled
-form repeated in a pattern that covers every surface, the protective serpent that
-rears above the crowns of pharaohs given an entire room of veneration in living stone.
-~
-0 3
-D0
-The crocodile chamber lies to the north.
-~
-~
-0 0 30618
-D3
-A passage leads west to the south registry.
-~
-~
-0 0 30627
-S
-#30629
-@@yThe Threshold of Ascent@@N~
-This chamber marks the transition point between the pyramid's base level and
-the upper reaches, the floor rising perceptibly as the ceiling narrows toward the
-heart of the monument. Carved figures on the walls seem to lean forward in anticipation.
-~
-0 3
-D0
-The chamber of friezes lies to the north.
-~
-~
-0 0 30619
-D3
-The serpent hall lies to the west.
-~
-~
-0 0 30628
-D5
-A hidden passage ascends upward through a stone counterweighted door.
-~
-entrance~
-0 0 30630
-S
-#30630
-@@yThe Second Level Entrance@@N~
-The air changes immediately upon entering the second level, drier and carrying
-the sharp bite of concentrated incense that has never fully dissipated from the
-chamber walls despite the centuries of absolute solitude. The passages here are narrower.
-~
-0 3
-D1
-A passage leads east into the second level.
-~
-~
-0 0 30631
-D3
-A passage leads west into the second level.
-~
-~
-0 0 30637
-D4
-The descending passage leads back to the base level below.
-~
-~
-0 0 30629
-S
-#30631
-@@yThe Hall of Ancestors@@N~
-Painted portraits of the pyramid's royal lineage stretch back to the very first
-pharaoh of this dynasty, each face individualized with a skill that makes these
-long-dead faces somehow still present, still watching, still demanding recognition.
-~
-0 3
-D2
-The hall continues south.
-~
-~
-0 0 30632
-D3
-The second level entrance lies to the west.
-~
-~
-0 0 30630
-S
-#30632
-@@yThe Offering Repository@@N~
-Stone shelves carved into the walls at regular intervals once held objects of
-immense value now entirely removed by ancient robbers who spared not even the
-clay shabti figures that were supposed to serve the dead in their eternal afterlife.
-~
-0 3
-D0
-The hall of ancestors lies to the north.
-~
-~
-0 0 30631
-D2
-A passage leads south.
-~
-~
-0 0 30633
-D3
-A side passage leads west.
-~
-~
-0 0 30638
-S
-#30633
-@@yThe Weighing Chamber@@N~
-The central ritual chamber for the weighing of the heart ceremony is depicted
-in full on these walls, Anubis at the scales, Thoth recording the result, Ammit
-waiting in eager hope beside the balance while the deceased's fate hangs in the air.
-~
-0 3
-D0
-The offering repository lies to the north.
-~
-~
-0 0 30632
-D1
-A side passage leads east.
-~
-~
-0 0 30639
-D2
-A passage continues south.
-~
-~
-0 0 30634
-S
-#30634
-@@yThe Hall of Divine Names@@N~
-Every wall is dense with the hidden names of the gods, written in a script more
-ancient than the main building's hieroglyphs, the sacred language of creation that
-carries power in each symbol to those who know how to pronounce it correctly.
-~
-0 3
-D0
-The weighing chamber lies to the north.
-~
-~
-0 0 30633
-D2
-A passage continues toward deeper second-level chambers.
-~
-~
-0 0 30635
-S
-#30635
-@@yThe Ritual Procession Way@@N~
-A long narrow corridor aligned precisely with the path of a specific star at the
-pyramid's founding, the ceiling cut to form a slot that would have illuminated
-the floor with starlight on one night each year during the appropriate ceremony.
-~
-0 3
-D0
-The hall of divine names lies to the north.
-~
-~
-0 0 30634
-D2
-The procession way continues south.
-~
-~
-0 0 30636
-D3
-A side passage leads west to an antechamber.
-~
-~
-0 0 30640
-S
-#30636
-@@yThe Guardian's Sanctum@@N~
-The elite protectors of the second level were housed here, their quarters sparse
-but dignified, the walls painted not with royal triumph but with the private devotions
-of soldiers who took seriously the sacred weight of their centuries-long commission.
-~
-0 3
-D0
-The ritual procession way lies to the north.
-~
-~
-0 0 30635
-D2
-A narrow passage descends slightly to a junction.
-~
-~
-0 0 30641
-S
-#30637
-@@yThe West Second Level Passage@@N~
-The western approach to the second level offers a longer route that passes
-through a series of smaller chambers, each one slightly different in decoration
-as if different hands worked them, a collaborative monument in stone and pigment.
-~
-0 3
-D1
-The second level entrance lies to the east.
-~
-~
-0 0 30630
-D2
-The passage continues south.
-~
-~
-0 0 30642
-S
-#30638
-@@yThe Silver Shrine Chamber@@N~
-The walls here are sheathed in sheets of tarnished silver that reflect lamplight
-into fractured constellations across the ceiling, the offerings niche carved in the
-shape of a crescent moon, the god Khonsu venerated in lunar silver and cool shadow.
-~
-0 3
-D1
-The offering repository lies to the east.
-~
-~
-0 0 30632
-D2
-A passage continues south.
-~
-~
-0 0 30643
-S
-#30639
-@@yThe High Priest's Antechamber@@N~
-The private antechamber of the high priest who served this pyramid shows the
-trappings of both great power and great asceticism, the throne plain stone but
-elevated by carved texts proclaiming its occupant the voice of the divine on earth.
-~
-0 3
-D2
-A passage leads south to the high priest's inner sanctum.
-~
-~
-0 0 30644
-D3
-The weighing chamber lies to the west.
-~
-~
-0 0 30633
-S
-#30640
-@@yThe Star Alignment Chamber@@N~
-This room's ceiling is pierced by five small shafts that align with the five
-brightest stars visible from this latitude, their light forming a pattern on the
-floor that spells a royal name in the sacred script of the divine architects.
-~
-0 3
-D1
-The ritual procession way lies to the east.
-~
-~
-0 0 30635
-D2
-A passage leads south.
-~
-~
-0 0 30645
-S
-#30641
-@@yThe Crossroads Chamber@@N~
-Four passages meet here with precisely carved junction indicators showing which
-way leads to which sacred space, the directional system here more sophisticated than
-on the base level, suggesting the second level was considered more important to navigate.
-~
-0 3
-D0
-The guardian's sanctum lies to the north.
-~
-~
-0 0 30636
-D1
-A passage leads east.
-~
-~
-0 0 30644
-D2
-A passage leads south to the second level's inner sanctum approach.
-~
-~
-0 0 30646
-D3
-A passage leads west.
-~
-~
-0 0 30645
-S
-#30642
-@@yThe Hall of Sacred Geometry@@N~
-Mathematical precision made divine: every wall here bears geometric diagrams
-explaining the proportions of sacred architecture, the mathematical relationships
-between pyramid dimensions and astronomical constants made visible in ochre and black.
-~
-0 3
-D0
-The west second level passage lies to the north.
-~
-~
-0 0 30637
-D2
-A passage continues south.
-~
-~
-0 0 30647
-S
-#30643
-@@yThe Moon Chamber@@N~
-Painted entirely in blue and silver with no other colors permitted, this chamber
-is dedicated to the moon in its twenty-eight phases, each depicted around the walls
-in a cycle that creates a complete lunar calendar in painted stone above the faithful.
-~
-0 3
-D0
-The silver shrine chamber lies to the north.
-~
-~
-0 0 30638
-D2
-A passage continues south.
-~
-~
-0 0 30648
-S
-#30644
-@@yThe High Priest's Inner Sanctum@@N~
-The private working space of the high priest is dominated by a carved desk of
-red granite and walls absolutely covered in ritual text, every surface a working
-reference for the ceremonies that could take days to complete correctly and completely.
-~
-0 3
-D0
-The high priest's antechamber lies to the north.
-~
-~
-0 0 30639
-D3
-The crossroads chamber lies to the west.
-~
-~
-0 0 30641
-S
-#30645
-@@yThe Chamber of Eternal Flame@@N~
-A stone brazier that once burned continuously for three centuries without being
-refueled sits cold at the room's center, the walls blackened with smoke in a halo
-around the ceiling and pale below, a clear record of where fire lived for so long.
-~
-0 3
-D0
-The star alignment chamber lies to the north.
-~
-~
-0 0 30640
-D1
-The crossroads chamber lies to the east.
-~
-~
-0 0 30641
-S
-#30646
-@@yThe Passage to the Inner Sanctum@@N~
-The approach to the second level's most sacred spaces narrows deliberately, forcing
-supplicants to walk single-file in humility before the divine, the walls pressing
-close with carved eyes that feel as though they are genuinely watching the approach.
-~
-0 3
-D0
-The crossroads chamber lies to the north.
-~
-~
-0 0 30641
-D2
-The passage continues south to a great hall.
-~
-~
-0 0 30649
-S
-#30647
-@@yThe Hall of the Solar Barque@@N~
-A large votive hall where worshippers made offerings to the sun during its
-nightly passage through the underworld, the walls depicting the twelve gates of
-the night each guarded by a different deity who must be appeased to allow safe passage.
-~
-0 3
-D0
-The hall of sacred geometry lies to the north.
-~
-~
-0 0 30642
-D1
-A passage leads east to central chambers.
-~
-~
-0 0 30646
-S
-#30648
-@@yThe Chamber of Written Stars@@N~
-Every star visible from this location has been named and given a hieroglyphic
+
+receding into absolute darkness at every direction, the floor cold enough to ache
+
+through boots, the presence in this room unmistakable and focused and ancient.
+
+~
+
+~
+
+pyramid's most powerful condemned prisoner, the walls thick with binding runes
+
+layered over centuries, the floor cracked where the containment has been tested.
+
+~
+
+~
+~
+
+the most extreme rites were performed, the floor a single carved diagram of the
+
+underworld compressed into this space, the ceiling lost to darkness far above.
+
+~
+
+~
+~
+
+the most dangerous rites, the walls bearing the names of every priest who entered
+
+the true void vault and did not return, a very long list that continues on the ceiling.
+
+~
+
+~
+
+~
+~
+
+primary guardian, the ceiling high and the room wide, every surface carved with
+
+the names of warriors whose remains were incorporated into the guardian's construction.
+
+~
+
+~
+
+his own scratched desperate writing from the period before the darkness took him, the
+
+content documenting his crimes in his own hand as the priests intended it should be.
+
+~
+
+~
+
+every carved image obliterated, the emptiness of the walls more unsettling for the
+
+visible effort of erasure, the absence of identity somehow louder than any name.
+
+~
+
+~
+
+~
+
+its floor covered in the accumulated remains of centuries, the air dense with
+
+something that is not quite smell and not quite sound but is entirely and immediately wrong.
+
+~
+
+~
+~
+
+visible as a different quality of stone, the innermost being the oldest and roughest,
+
+built in desperate haste around something that was not expected to ever be here.
+
+~
+
+~
+~
+
+~
+
+spear leveled at any who dare approach without invitation.
+
+~
+
+~
+
+purpose, the hollow eye sockets glowing with a sickly amber light.
+
+~
+
+~
+
+nervously as though expecting the dead themselves to rise in retribution.
+
+~
+
+~
+
+hypnotic patience, fangs gleaming with amber venom in the torchlight.
+
+~
+
+~
+
+grinding joints, hieroglyphs burnt into its exposed flesh still glowing faintly.
+
+~
+
+~
+
+chittering and clicking as they surge forward in a glittering living carpet.
+
+~
+
+~
+
+of a dead language pouring from cracked lips as spectral fire dances at his fingers.
+
+~
+
+~
+
+thunderous steps, the golden runes etched into its chest blazing with inner fire.
+
+~
+
+~
+
+hooded head, revealing a throat that glows with dark necrotic energy.
+
+~
+
+~
+
+within the pyramid walls, condemned to haunt these passages until judgment day.
+
+~
+
+~
+
+breathing, amber eyes forming and dissolving within the swirling granular mass.
+
+~
+
+~
+
+the whites of his eyes rolled back as he surrenders himself wholly to the death cult.
+
+~
+
+~
+
+eight milky eyes fixed with patient malice upon those who disturb the tomb.
+
+~
+
+~
+
+assembled into a composite guardian, the painted colors still vivid upon their form.
+
+~
+
+~
+
+by dark magic, still wearing the shadow of its gold death mask in ghostly outline.
+
+~
+
+~
+
+has been painted in ritual patterns across their shaved skull and hollow cheeks.
+
+~
+
+~
+
+an entire stone body that stands twice the height of any mortal, unyielding.
+
+~
+
+~
+
+absolute disdain, summoned by Thoth's priests to guard their sacred texts.
+
+~
+
+~
+
+still, the preservation magic keeping their form battle-ready for eternity.
+
+~
+
+~
+
+construct slithers forward with the clink of metallic scales, striking like lightning.
+
+~
+
+~
+
+bandages, one of Anubis's own servants dispatched to judge the unworthy dead.
+
+~
+
+~
+
+it once plundered, its craving for flesh only sharpened by centuries of hunger.
+
+~
+
+~
+
+in the memory of silk and gold, its face a void save for two cold burning points.
+
+~
+
+~
+
+carries a curved khopesh that has never failed to take its appointed head.
+
+~
+
+~
+
+scorch marks wherever it scuttles, drawn to living warmth like a coal to tinder.
+
+~
+
+~
+
+the phylactery gem in its chest cavity pulsing with cold lavender light and stolen life.
+
+~
+
+~
+
+judgment across its back and walks with the deliberate calm of divine purpose.
+
+~
+
+~
+
+stands on guard with bow nocked, never blinking, never wavering, never resting.
+
+~
+
+~
+
+weight of every curse laid upon this tomb, its joints bending at impossible angles.
+
+~
+
+~
+
+its master's burial goods with tireless supernatural devotion, black fur still perfect.
+
+~
+
+~
+
+golden light and scorching heat in all directions from its radiant core.
+
+~
+
+~
+
+here, twin black blades crossed over chest, awaiting judgment upon all intruders.
+
+~
+
+~
+
+compulsion, decorated armor gleaming with the maintenance of obsessive undead pride.
+
+~
+
+~
+
+with casual ease, its hollow helmet revealing only burning amber eyes within.
+
+~
+
+~
+
+from its sealed antechamber, preserved in patient malice through sheer force of will.
+
+~
+
+~
+
+lapis lazuli radiating divine authority, his every gesture crackling with pyramid
+
+power channeled through three hundred years of undying dedication to the death cult.
+
+~
+
+~
+
+through subtle poison and careful rumor, each golden ring upon his fingers
+
+representing one dynasty brought low through art rather than violence.
+
+~
+
+~
+
+above its head like a halo of destruction, its footsteps leaving scorched stone in
+
+perfect circles as divine power pours from its incandescent form without ceasing.
+
+~
+
+~
+
+underworld, a colossal jackal-headed being in black gold armor whose twin khopesh
+
+blades are so sharp they can cut the soul free from flesh in a single perfect stroke.
+
+~
+
+~
+
+armored in scales of molten gold, the Eye of Ra burning in her brow as she raises
+
+a crook and flail of solid divine power, her roar shaking dust from the pyramid stones.
+
+~
+
+~
+
+his preserved form animated by divine right and centuries of festering fury at those
+
+who dared disturb his eternal rest, a living god who will not abide the profane.
+
+~
+
+~
+
+seem to rearrange themselves constantly, the master builder who designed every trap
+
+and secret passage in the pyramid haunting his own masterwork for eternity.
+
+~
+
+~
+
+size whose scales are painted midnight and whose eyes are the color of nothing, whose
+
+hissing fills the chamber with a sound like all the world ending at once.
+
+~
+
+~
+
+throughout the kingdom, but beneath that famous face burns a mind like a trapped sun,
+
+now devoted eternally to perfecting the death magic that keeps this pyramid alive.
+
+~
+
+~
+
+statue was the pharaoh's greatest vanity, built to guard the innermost treasury
+
+and imbued with the strength of ten thousand men and the will of a god-king.
+
+~
+
+~
+
+this warrior was buried alive in full battle dress, the rage of three millennia
+
+compressed into a form that moves with terrible deliberate purpose.
+
+~
+
+~
+
+horror reaches the height of two men and moves with a sound like a bag of gravel
+
+being poured down a stone staircase, its many skulls all facing outward.
+
+~
+
+~
+
+navigates entirely by the heat and heartbeat of living creatures, striking with
+
+a venom that stops the heart within seconds of entering the blood.
+
+~
+
+~
+
+undead servant shambles through the lowest passages still smouldering, leaving
+
+scorch marks wherever the blackened wrappings drag across the stone floor.
+
+~
+
+~
+
+drawing a bow strung with preserved sinew, each arrow tipped with a head carved
+
+from the thighbone of an enemy slain in life and preserved for eternal service.
+
+~
+
+~
+
+dark below, leaving a creature in active decomposition, its hunger so absolute
+
+it has begun consuming itself in the absence of anything else to devour.
+
+~
+
+~
+
+leaving only the absence of a beetle-shaped hole in the world. It moves in
+
+total silence, emerging from solid shadow to strike and withdrawing without trace.
+
+~
+
+~
+
+of compressed mud and mineral, its form a grotesque parody of human shape
+
+built from ten thousand years of deposited Nile silt beneath the stone.
+
+~
+
+~
+
+to the size of a small dog, its eyes vestigial white discs, its other senses
+
+sharpened to an almost supernatural degree by the demands of subterranean life.
+
+~
+
+~
+
+sealed into the foundations to serve as supernatural guardians, their forms now
+
+barely coherent, stretched thin by three thousand years of forced haunting.
+
+~
+
+~
+
+the catacombs for embezzlement against the royal household, its bureaucratic
+
+resentment now weaponized into an undying hatred for all living intruders.
+
+~
+
+~
+
+displeasure of those whose rest was disturbed to build it, this golem bears the
+
+carved faces of a hundred different dead staring outward from its assembled form.
+
+~
+
+~
+
+but behaves like it, the remains of a priest whose ritual error caused a mass
+
+death and who has been punished with an eternity of visible, inescapable guilt.
+
+~
+
+~
+
+chose to descend and never return, their skin gone paper-white from years without
+
+sun, their devotion to the death god absolute and their violence unpredictable.
+
+~
+
+~
+
+the slow absorption of volcanic obsidian from the stone it inhabits, its shell
+
+now genuinely stone-hard, its pincers capable of cutting through bronze armor.
+
+~
+
+~
+
+undead still perform the motions of preservation on anything they can catch,
+
+their natron jars and linen strips ever-ready for their compulsive dark work.
+
+~
+
+~
+
+its body longer and thinner than its desert cousin, its venom evolved to be
+
+more potent to compensate for the reduced frequency of prey in the deep dark.
+
+~
+
+~
+
+screams seem somehow stored in the stone around him, audible as a faint susurrus
+
+beneath the silence when this enormous undead warrior stalks through the catacombs.
+
+~
+
+~
+
+feeding on the rats and insects of the subterranean dark, their guano building
+
+into stalagmites below their roosts, their bite carrying a vicious fever.
+
+~
+
+~
+
+than the standard oils, petrifying the subject partially, the resulting creature
+
+moving with the grinding slowness of a millstone but hitting with comparable force.
+
+~
+
+~
+
+in an unmapped shaft, this specter still wanders the same passages searching for
+
+an exit that no longer exists, attacking anything that might know the way out.
+
+~
+
+~
+
+himself alive to continue serving the death cult from beyond, his body sustained
+
+by dark sacrament, his mind fractured by centuries of chosen darkness and prayer.
+
+~
+
+~
+
+deposits from the seeping groundwater for centuries, its bones now sheathed in
+
+thick white calcium that makes it nearly impervious to physical attack.
+
+~
+
+~
+
+residual death magic that they exist partially outside normal reality, their forms
+
+flickering as they move between the material world and whatever lies adjacent.
+
+~
+
+~
+
+different creatures both human and animal, this patchwork nightmare was designed
+
+to be the ultimate guardian, inheriting the worst qualities of everything it contains.
+
+~
+
+~
+
+past the point of skeletal coherence, existing now as a vaguely humanoid column
+
+of animated funerary dust held together by pure necromantic will and spite.
+
+~
+
+~
+
+her abdomen swollen to grotesque proportions, her aggression amplified by
+
+protective instinct, and her pincers strong enough to shear through solid bronze.
+
+~
+
+~
+
+vipers were placed by the original builders as a living trap, fed periodically by
+
+the same mechanisms that seal the pit covers, now ancient and enormous.
+
+~
+
+~
+
+iron bands to prevent his spirit from wandering, the bands have rusted into his
+
+preserved flesh over centuries, making him a walking iron-wrapped nightmare.
+
+~
+
+~
+
+into a coherent malevolence, rising from the cracks in the stone as a dark crimson
+
+form that moves with a liquid grace and strikes with the weight of the tide.
+
+~
+
+~
+
+this guardian has continued its rounds without instruction or purpose for three
+
+thousand years, its mind eroded to a single imperative: prevent passage.
+
+~
+
+~
+
+neither fully alive nor fully dead, occupying a liminal state that makes it
+
+visible to the living as a flickering smear of motion at the edge of light.
+
+~
+
+~
+
+his own crew, the slow stone-curse laid on him by a resentful priest has turned
+
+him to partial granite, his expression of dawning horror still perfectly preserved.
+
+~
+
+~
+
+stone above it into a form denser than shadow, a near-solid darkness that radiates
+
+cold and despair in equal measure and feeds on the fear it generates.
+
+~
+
+~
+
+this priest channels divine death magic through a body that should not be able
+
+to function, each spell cast tearing further at the fragile thread of its being.
+
+~
+
+~
+
+has assembled itself from generations of accumulated grave offal, driven by hunger
+
+alone into a mobile mass of preserved tissue and ancient appetite.
+
+~
+
+~
+
+construct stands four meters tall and radiates a chill that has nothing to do with
+
+temperature, the stolen grief of five hundred deaths given terrible coherent form.
+
+~
+
+~
+
+the damp air and eventually coalesced into this specter formed entirely from the
+
+ideas and invocations of dead texts, incomprehensible and hostile.
+
+~
+
+~
+
+panicked fragments: too many limbs, entirely silent, smelling of old stone and
+
+copper, leaving behind only scattered bones and scratches in the floor.
+
+~
+
+~
+
+honors, who has nonetheless risen because the prayers said over him were incomplete,
+
+the missing final verse of the entombment ritual leaving a door open that should be closed.
+
+~
+
+~
+
+the deepest catacomb, his influence and cunning surviving death to animate a
+
+shadow-duplicate that carries all his viciousness and none of his charm, pure malice given form.
+
+~
+
+~
+
+predates everything above it by years, woken into coherence by the death energy
+
+of every burial above, patient as stone, hungry as the void, vast beyond reckoning.
+
+~
+
+~
+
+construction, kept in stasis by the power of its own immense will, now broken
+
+free of containment, three thousand years of pent fury unleashed into the deep dark.
+
+~
+
+~
+
+that were never properly sent to judgment, ancient and enormous, its black coat
+
+absorbing light, its golden eyes the only illumination in the passages it walks.
+
+~
+
+~
+
+damnation, every record of its existence expunged, condemned to wander without
+
+identity, which has not diminished its power but has made it incomprehensibly angry.
+
+~
+
+~
+
+something that fills the largest vault of the catacombs, a presence that has absorbed
+
+every spirit and monster that ever entered its domain and simply became more.
+
+~
+
+honed to cut through both flesh and the bonds of the spirit world with equal ease.~
+
+in linen strips stained with ritual ink, sacred kill-marks etched into both faces.~
+
+aloft, its edge treated with sand-serpent venom for a wound that festers with the desert heat.~
+
+the faces of conquered enemies, each ball engraved with a different pharaoh's seal of war.~
+
+decorated with woven hawk feathers, blessed by temple hunters before each sacred hunt.~
+
+the wood carved with columns of hieroglyphs that glow with soft amber light when held.~
+
+of Thoth, warm to the touch with barely-contained divine language of creation.~
+
+the petals inlaid with carnelian and each stamped with Isis's seal of protection.~
+
+bracelet of woven gold and lapis focuses divine power through the wearer's hands.~
+
+above the brow and granting the ability to perceive truth in all written things.~
+
+this surprisingly effective armor, carved with the image of scarabs ascending the sun.~
+
+cured crocodile hide for comfort, the outer face etched with ward-signs against blades.~
+
+brow, the gold thick enough to turn most blows while still shining like divinity.~
+
+weighing of the heart before Anubis, sized to shelter a warrior from head to knee.~
+
+both protective and political, the royal name stamped into each piece in cartouche.~
+
+up with the wielder's killing intent, improving grip and strike precision alike.~
+
+small gold tablets inscribed with battle prayers to Montu, god of war.~
+
+Horus the Swift, each step carrying the wearer with the speed of a hawk diving.~
+
+with resin and painted with scenes of martial triumph from an age of conquest.~
+
+gold scarabs, each inscribed with a word of power from the Book of the Dead.~
+
+worn by sorcerers who called upon Heka, the divine personification of magic itself.~
+
+and into the body, grounding the wearer against magical backlash and feedback.~
+
+connected to a different school of magic, the collar heavy with protective amulets.~
+
+worn by royal astrologers who charted the heavens for favorable times to cast.~
+
+each segment hanging from a sturdy belt and overlapping like fish scales.~
+
+uppers reinforced with strips of bronze hammered in the shapes of warrior runes.~
+
+by their honor guard and said to transfer a measure of divine protection to the wearer.~
+
+elite bodyguard, the outer face stiffened with resin and stamped with ward-runes.~
+
+worn by those who seek the blessing of eternal vigor from the gods of the living.~
+
+the instrument of Amenhotep's office for over three centuries, radiating barely-contained
+
+priestly power from every atom of its holy gold frame.~
+
+leaves no mark on entry but introduces a poison so subtle that victims die days later
+
+wondering what could possibly have weakened them, the blade still weeping silver venom.~
+
+radiates heat visible as distortion in the air and channels the raw power of
+
+the noon sun into whatever divine magic its wielder directs, blinding and burning.~
+
+inscribed with the forty-two confessions of the dead along the fuller, so sharp
+
+they can separate the ka from the body with a precision no mortal blade can match.~
+
+scales burns with a contained solar ferocity that devastates attackers even as it
+
+shields the wearer, the leonine face worked into the chest projecting divine wrath.~
+
+set with every precious stone found in the ancient world, blazing with the divine
+
+right of kingship that makes all who behold it know they stand before a living god.~
+
+pyramid's secret interior, the master architect's life work somehow lending its
+
+power to those who carry it, the paper warm with frustrated genius.~
+
+as void, fashioned into a weapon by hands that should never have touched such a
+
+thing, channeling obliteration through every cutting edge of its absolute darkness.~
+
+to the ancient world in hammered electrum on black enamel, the whole piece thrumming
+
+with cosmological energy that bends fate around the wearer like river water around a stone.~
+
+still radiating the impossible strength of the original construction, the gold
+
+warm with animated divine power that has never stopped flowing since it was cast.~
+
+the desert, the symbol of rebirth and the rising sun worn by those who court favor with Khepri.~
+
+sacred jackals of Anubis, the central medallion etched with the scales of judgment.~
+
+the feather of Ma'at against which all hearts are weighed at death's final gate.~
+
+relief carvings of the pharaoh's greatest battles, worn as both armor and honor.~
+
+the wearer blend into deep shadow with practiced stillness, favored by tomb guardians.~
+
+magical energy as the wearer moves, the metal warm and vibrating with stored power.~
+
+skull cap of woven gold thread, worn only by the most favored servants of the gods.~
+
+dramatic shoulder piece, each wing-tip blessed to deflect the unseen strike.~
+
+pharaoh's chariot drivers, practical enough for battle and splendid enough for courts.~
+
+in extreme heat and etched with prayers to Aten, the sun disc, for endurance.~
+
+touch with contained spiritual energy, held in the off-hand during ritual combat
+
+to keep the wielder's spirit anchored to their body through violent exertion.~
+
+of wrapped linen and hardened with ancient resin, serrated and cruel and entirely
+
+functional in the hands of something with the strength to drive it home.~
+
+a flail, each link worn smooth from centuries of use, the end fitted with a
+
+carved stone weight engraved with a curse against the living.~
+
+this dagger holds an edge finer than any metal blade, its handle wrapped in
+
+preserved snake skin and its pommel set with a chip of deep amber.~
+
+was buried with a farming official and has since been claimed by a death cult
+
+guardian, its blade reforged from sacred bronze and its haft carved with skull-rows.~
+
+unworthy at death's scales, the tainted metal given new purpose as a weapon that
+
+seems to carry the lingering judgment of Anubis in its cold black gleam.~
+
+loop fitted with a dark gemstone that pulses faintly in the hand, channeling
+
+the ambient death energy of the catacombs into the wielder's spellwork.~
+
+to death magic, the head bound with copper wire in a pattern that amplifies
+
+necrotic energies, each pulse of power visibly traveling up the shaft to the caster.~
+
+consume it, worn by the priests of the deep catacomb whose power comes not from
+
+the gods above but from the empty spaces between the stars where no god dwells.~
+
+a mineral pigment that makes the wearer difficult to perceive in dim light, this
+
+robe channels and amplifies shadow magic through its very substance.~
+
+face meant to represent the idealized features of the dead, imbued with the
+
+power to see through the eyes of spirits passing between worlds.~
+
+in the pyramid above, the name of someone deliberately forgotten, whose power
+
+persists in this ring despite every effort to erase it from existence.~
+
+this breastplate carries the marks of its original purpose in the bolt holes
+
+that still pit the surface, reforged now into heavy practical protection.~
+
+shaped carefully while still forming around a mold, the resulting piece hard as
+
+stone and naturally resistant to the necrotic energies prevalent in the deep.~
+
+repurposed by tomb robbers who never made it back to the surface, the
+
+engraved ward-signs against the dead lending them an inadvertent protective power.~
+
+catacomb, this helm is unsettling to behold but surprisingly effective, the
+
+curved bone absorbing blows with a give that hard metal cannot replicate.~
+
+with copper rivets, the surface mirror-polished to reflect spells and disorient
+
+attackers, the edge sharp enough to serve as a weapon on its own terms.~
+
+the dead, wound tight around the forearms and hands, harder than leather when set
+
+and offering surprising resistance to both blade and spell alike.~
+
+flat and shaped to the leg, the hammered scenes of weighing hearts and judgment
+
+scales facing outward from each greave like a constant reminder of mortality.~
+
+with extraordinary patience into plates that fit the foot, the natural weight
+
+of the stone actually beneficial for maintaining footing on uneven subterranean floors.~
+
+known to the death cult's deepest doctrine, worn by those who navigate the
+
+catacomb's most dangerous passages and need protection from its own guardians.~
+
+oils used in mummification, the result stiff but impervious to moisture and far
+
+more resistant to cutting than its textile origin would suggest.~
+
+of twisted copper wire and worn at the ear, the proximity to the brain allowing
+
+the residual enchantment in the bone to enhance the wearer's magical focus.~
+
+hung on a chain of heavy copper links, the stone carved with the eye that sees
+
+in darkness and inscribed with the secret name of the god who rules below all.~
+
+by cult initiates descending to the deepest chambers as both a spiritual record
+
+and a practical brace for the long descent through increasingly oppressive passages.~
+
+claws, worn by the guardians of the pit traps, the claws allowing a firm grip
+
+on the smooth stone walls to haul themselves free of any accidental tumble.~
+
+each engraved with the number of intruders stopped, this one bearing more tally marks
+
+than seems plausible for a single guardian's service record.~
+
+readily as it absorbs light, allowing the wearer to move through the catacomb
+
+passages in near-perfect silence even on the loose gravel floors.~
+
+flat and curved to the arm, the jar inscription still faintly visible reading
+
+inventory numbers for goods that were consumed a thousand years ago.~
+
+stone over generations, this staff is as hard as granite while maintaining the
+
+balance and grip of wood, a perfect conductor for the forces it was born from.~
+
+worn only during the most solemn of the death cult's underground rites, imbued
+
+with the power of every ceremony that required their presence over centuries.~
+
+its edge through sheer spite, the very material of it loathing the light it must
+
+pass through to reach its target, each wound it makes slow to close and quick to corrupt.~
+
+death energy of three thousand years of burial above it, pulsing with a dark warmth
+
+that makes nearby undead deferential and nearby living creatures deeply uncomfortable.~
+
+its fabric woven with binding spells of extraordinary complexity, each thread
+
+charged with the intention of a thousand priests who could not agree on anything else.~
+
+different soul's name that has been safely delivered to judgment, the accumulated
+
+weight of resolved deaths making this collar a conduit for divine funerary power.~
+
+hammered flat, the divine names scraped away, leaving a diadem of pure anonymous
+
+power that has only grown stranger and more potent for the erasure of its context.~
+
+woven into every fiber, this heavy mantle moves with its own slow purpose and
+
+radiates the cold authority of something that has been sovereign of death for millennia.~
 representation on these painted walls, an astronomical catalog rendered in art,
 each star's divine patron noted in tiny precise script above the glittering image.
 ~

@@ -1,0 +1,7 @@
+level -1
+keywords show_showobject
+---
+BUILD HELP : SHOWOBJECT
+-----------------------
+The SHOWOBJECT command displays various details about a given object.
+Syntax:  SHOWOBJECT <object-vnum>

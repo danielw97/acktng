@@ -16,338 +16,736 @@ W darksol~
 #30000
 @@lA Snowy Path@@N~
 @@gIt just gets harder and harder to walk through the snow, and it seems to be
-getting colder and colder.  Thoughts like sitting by a fire and sleeping in a
-nice cozy bed are comforting at times like these, but going forward is
-essential.  Vague sounds of what may be a town can be heard, but a town way
-out here?@@N
-~
-81989 5
+
+getting colder and colder.  Thoughts like sitting by a fire and sleeping in a
+
+nice cozy bed are comforting at times like these, but going forward is
+
+essential.  Vague sounds of what may be a town can be heard, but a town way
+
+out here?@@N
+
+~
+
+~
+
+~
+
+here to stop people from entering, because you can't trust anybody during
+
+times of war.  There is a snow covered chair near the left gate, with some
+
+footprints around it.@@N
+
+~
 D0
 ~
 ~
-0 -1 30001
-D2
+
+there is still a small coating of snow on the ground.  The front of the
+
+building must be right here, but the snow is so thick, hardly anything can be
+
+seen clearly.  There may be a door here, and there may be some light coming
+
+from the building.@@N
+
 ~
+E
+
+there aren't any stairs visible.  There is a nice set of french doors to the
+
+north, where some odd noises appear to be coming from.  There is also a sign
+
+feebly hanging on a wall.@@N
+
 ~
-257 0 7310
 E
-snow~
-@lThe snow is very deep, and very cold.@N
-~
-E
-@@lThe snow is very deep, and very cold.@@N
-~
+
+a fighting tournament of some kind.  There are shelves on the walls also, each
+
+overflowing with trophies.  All of the have the name 'Martin' written on them,
+
+who is the likely guildmaster.@@N
+
 ~
 S
-#30001
-@@lThe Gates of Garmaine@@N~
-@@gThese are the grand gates of Garmaine.  There is usually a guard positioned
-here to stop people from entering, because you can't trust anybody during
-times of war.  There is a snow covered chair near the left gate, with some
-footprints around it.@@N
-~
-81985 5
-D0
+
+before, there is a small coating of snow on the ground, but the storm is still
+
+raging on.  Directly to the east is a building of some kind, but it looks very
+
+old and worn down.@@N
+
 ~
-gates~
-225 30099 30002
-D2
+
+recently.  There are books lying all over the ground, and there is a thick
+
+layer of dust on everything.  The floor is soggy from the the melting snow
+
+overhead.  There appears to be another room east, but it may not be fit to
+
+enter.@@N
+
+~
+
+water dripping from the ceiling again, right onto the bed.  Old clothing is
+
+scattered throughout the room, and some other items are also.  There is a
+
+small fireplace with some burnt wood in it here also.@@N
+
 ~
 ~
-0 -1 30000
+
+sleeves lying on the ground and some is hanging on the walls.  It is warm
+
+inside, so somebody must run the place.@@N
+
+~
+~
+~
+
+mysterious shimmering of the snow can be seen out the window, and there is a
+
+nice fire going in the fireplace.  This house has only one room, but the owner
+
+must still live comfortably.@@N
+
+~
 E
-gates~
-@@lThe top of the gates cannot be seen through the snow, but it looks as if they are very tall.@@N~
-E
-chair~
-@@lThe chair is covered with a thin layer of snow, so someone must use it regularly.@@N~
-E
-footprints~
-@@lThe footprints are very wide and deep.  The owner of those feet must be a giant.@@N~
+
+wealthy.  There are dozens of crystal figurines and knick-knacks around the
+
+room, and the paintings on the wall look wierd enough to be valuable.  The
+
+furniture is apholstered with plush velvet, wood floor is polished until it
+
+shines.@@N
+
+~
 S
-#30003
-@@lThe Road through Garmaine@@N~
-@@gThere seems to be even more wind and snow here than in other places, but
-there is still a small coating of snow on the ground.  The front of the
-building must be right here, but the snow is so thick, hardly anything can be
-seen clearly.  There may be a door here, and there may be some light coming
-from the building.@@N
-~
+
+are even more buildings in all directions, and the road is completely bare of
+
+all snow.  The snow, however, is more thick in the air than anywhere else.@@N
+
+~
+
+trying to avoid hitting it.  The path continues to the west, and back to the
+
+east.@@N
+
+~
+
+while other heavier weapons such as battle axes adorn the ground.  There is a
+
+small counter to do business on, and a fire in the fireplace.@@N
+
+~
+
+doesn't appear to be a reason why.  There is a small building, more like a
+
+shack here, with a sturdy wooden door.  The path ends here, but continues back
+
+east.@@N
+
+~
 81985 5
 D0
 ~
 door~
-1 -1 30004
-D1
+
+of a fire can be heard, but one cannot be seen.  The door south is open, but
+
+nothing can be seen through it.@@N
+
 ~
 ~
-0 0 30002
-D3
+
+is a small sign swinging in the wind, and the door is slightly ajar.  There is
+
+a warm glow coming from the door, which seems to beckon for people to come in
+
+@@N
+
 ~
+
+up to it.  The wood seems very strong, but it is easily just as old.  There is
+
+a warm fire in the fireplace, and there is a small counter here.@@N
+
 ~
-0 -1 30031
-E
-ground~
-@@lThere is only a small coating of snow on the ground.@@N~
-E
-building~
-@@lIt is quite possibly a building.@@N~
-E
-door~
-@@lIt appears to be a door, but may just be a tree or something.@@N~
+
+weight.  Who knows how long they have been here, or how long they will
+
+continue to be here.  Looking up the stairs, a small building can be seen.@@N
+
+~
+
+the outline of what may be a sign can be seen, which swings violently back and
+
+forth in the wind.  There are railings made of the same wood here, probably to
+
+stop people from blowing off the stairs.@@N
+
+~
 S
-#30004
-@@lThe Garmaine Training Center@@N~
-@@gThis building is quite large, and there appears to be a second floor, but
-there aren't any stairs visible.  There is a nice set of french doors to the
-north, where some odd noises appear to be coming from.  There is also a sign
-feebly hanging on a wall.@@N
-~
-81928 1
-D0
+
+seen, with some furniture around it.  Down the path another home can be seen,
+
+and then the path justs continues past it.@@N
+
 ~
-french~
-1 -1 30005
+
+the snow.  There are buildings on either side of the road here, and they look
+
+like residences.  Up ahead there appears to be a steep staircase, but what it
+
+leads to isn't distinguishable.@@N
+
+~
+
+layer of snow here, even though the snow is still coming down just as hard.
+
+It is hard to imagine people living in a desolate place like this, but
+
+anything is possible.  The outline of a building can barely be recognized to
+
+the west, and more of this road can be seen to the east.@@N
+
+~
+
+ground, and the road can even be seen in a few places.  The snow is still
+
+coming down just as hard, but before most if it has the chance to reach the
+
+ground, it shimmers, then disappears.  There is also a door directly west of
+
+here.@@N
+
+~
+~
+~
+
+everywhere, and the fire is very warm and cozy.  There are paitings hanging on
+
+the walls, and some books lying around.@@N
+
+~
+
+almost like it is heading in the mountain.  There is another home here, and
+
+some faint noises can be heard from further down the path.@@N
+
+~
+
+furniture is covered in fine silk, there is a beautiful ornamental fireplace,
+
+and everything is extremely clean.  The only thing that looks out place is the
+
+rusty broadsword hanging on the wall.@@N
+
+~
+E
+
+shaft up ahead.  There are no more buildings along the path, but louder sounds
+
+can now be heard seemingly from within the mines.@@N
+
+~
+
+noises can be heard from within the mines.  There are many footprints in the
+
+path here, but they are headed the other way.@@N
+
+~
+
+of a building can be seen back the other way, but there appears to be nothing
+
+ahead.  There is just snow and coldness.@@N
+
+~
+
+like whips, and is cracking at everything around.  A huge dark object seems to
+
+fade in out of the snow, but there are no apparent signs of life.@@N
+
+~
+
+more powerfully than anywhere else.  The wind howls like werewolves after a
+
+kill, and the cold stings like thousands of tiny needles.@@N
+
+~
 D2
 ~
 ~
-1 0 30003
-E
-sign~
-@@lWelcome to the Garmaine Training Center!  Prepare yourself before you venture out into the mines and beyond.@@N~
-E
-wall~
-@@lThere is a sign hanging here.@@N~
-E
-door~
-@@lThe door is made out of a strong wood, probably oak.@@N~
-E
-french~
-@@lThe french doors are made out of a pretty cherry.@@N~
-S
-#30005
-@@lThe Garmaine Guild Room@@N~
-@@gPosted neatly on the walls are ribbons and other awards, most likely won at
-a fighting tournament of some kind.  There are shelves on the walls also, each
-overflowing with trophies.  All of the have the name 'Martin' written on them,
-who is the likely guildmaster.@@N
-~
-81928 1
-D2
+
+there is momentary shelter from the weather.  Looking around, nothing but rock
+
+can be seen, except for a few nooks and crannies.  Looking back, all that can
+
+be seen is bitter cold and despair.@@N
+
 ~
+E
+
+step.  They sound like the cries of battle, but it's just a mine shaft.  There
+
+are, however, a barrage of footprints in the ground heading toward Garmaine
+
+@@N
+
 ~
-1 0 30004
-E
-walls~
-@@lThere are ribbons and many, many other awards on them.  What champion won them all?@@N~
-E
-shelves~
-@@lLike the walls, the shelves are littered with awards and trophies.@@N~
-S
-#30008
-@@lThe Road through Garmaine@@N~
-@@gThis part of the road continues north, where vague shapes can be seen.  As
-before, there is a small coating of snow on the ground, but the storm is still
-raging on.  Directly to the east is a building of some kind, but it looks very
-old and worn down.@@N
-~
-81985 5
+
+blowing out of it, all extremely freezing.  There are numerous sounds coming
+
+from within, but from and unknown origin.  The inside of the shaft is
+
+completely black, so nothing can be seen inside.@@N
+
+~
+
+perfectly smooth, and a large dome has been carved into the ceiling.  There is
+
+however, a small hairline crack in one of the walls.@@N
+
+~
+
+be something nearby giving off a lot of heat, or something was here recently.
+
+The ice on the walls is melting, and there are a few puddles on the ground.@@N
+
+
+~
 D0
 ~
 ~
-0 -1 30006
-D1
+
+doesn't seem that the temperature will be rising any time soon.  The walls are
+
+coated with thick ice, which gleams in the light.@@N
+
 ~
-door~
-1 -1 30009
-D3
-~
-~
-0 -1 30002
-E
-road~
-@@lThere isn't much snow on the ground, as before.@@N~
-E
-building~
-@@lEven though it is not clearly visible, it looks as if time as taken its toll on this building.@@N~
-S
-#30009
-@@lA Filthy Home@@N~
-@@gFrom the looks of things, not many people have come through this building
-recently.  There are books lying all over the ground, and there is a thick
-layer of dust on everything.  The floor is soggy from the the melting snow
-overhead.  There appears to be another room east, but it may not be fit to
-enter.@@N
-~
-81992 1
-D1
+
+exceptionally smooth, as well as the ceilings.  The air keeps getting much
+
+colder though.@@N
+
 ~
 ~
-0 -1 30010
-D3
 ~
+
+it seems to get even wider to the south.  The walls are carved very smooth
+
+here also.@@N
+
 ~
-1 0 30008
-E
-books~
-@@lThere are many books lying on the ground, none of which seem important.@@N~
-E
-dust~
-@@lThe dust is thick and disgusting.  Breathing in all of this can't be good.@@N~
-E
-floor~
-@@lThe floot makes a squishy sound as you walk over it.@@N~
-S
-#30010
-@@lA Filthy Home@@N~
-@@gThis part of the building may have been a bedroom at one time.  There is
-water dripping from the ceiling again, right onto the bed.  Old clothing is
-scattered throughout the room, and some other items are also.  There is a
-small fireplace with some burnt wood in it here also.@@N
-~
-81992 1
-D3
+
+space to walk through.  Up further, though, it looks as if the tunnel is
+
+getting larger.@@N
+
 ~
+
+could not think that the temperature could go below that of the rest of the
+
+mines, but it has, almost to the point that anything that tries to move, is
+
+frozen solid.  The tunnel continues in both directions.@@N
+
 ~
-0 0 30009
-E
-water~
-@@lDrip, drip, drip.@@N~
-E
-clothing~
-@@lThere are a few shirts and some pants.@@N~
-E
-items~
-@@lThere is a small pad of paper, a rock, and a pile of snow here.@@N~
-E
-fireplace~
-@@lThere are five or six pieces of wood in it.@@N~
-E
-wood~
-@@lThe wood appears wet due to water coming down the chimney.@@N~
-E
-chimney~
-@@lThe chimney looks as if it wants to collapse right now.@@N~
-S
-#30007
-@@lThe Armour Shop@@N~
-@@gThis is indeed an armour store.  There are helmets, and leggings, and
-sleeves lying on the ground and some is hanging on the walls.  It is warm
-inside, so somebody must run the place.@@N
-~
-81928 1
+
+as if hundreds of daggers are protruding from them, wanting to stab into
+
+anyone who walks by.  If the tunnel continues to shrink, that's probably what
+
+will happen.@@N
+
+~
+
+well.  The walls are extremely jagged, evidence that hardly any care was taken
+
+when making it, unlike back in the large chamber.  The tunnel turns, the
+
+continues.@@N
+
+~
+
+this tunnel.  The height of the tunnel is uneven, showing a careless manner in
+
+carving out the ceiling.  The walls are not an even distance apart either.
+
+Maybe something hurried the miners to make this tunnel.@@N
+
+~
 D1
 ~
 ~
-1 1 30006
+
+The ceilings are almost low enough to jump and reach, but not quite.  The
+
+walls are also jagged here.@@N
+
+~
+~
+
+They must angle down and away from the center of the chamber.  As like the
+
+rest of the chamber, the walls are perfectly smooth, and freezing cold.@@N
+
+~
+
+though there is only a difference of a few feet.  The chamber continues to the
+
+north, and there seems to be a small tunnel heading off of the tunnel to the
+
+south.@@N
+
+~
+
+out such a large room.  The ceilings height is out of sight, and the walls are
+
+perfectly smooth, unlike the walls before.  There is nothing in the chamber,
+
+but more tunnels branch off from it.@@N
+
+~
+
+sparkle from the light.  From here, it looks as if the room has immense
+
+proportions, but there doesn't look like anything is inside.@@N
+
+~
+
+the south.  Looking into the tunnel, the walls become jagged, and the ceiling
+
+extremely low.  A freezing blast of air flows from the tunnel.@@N
+
+~
+
+incredibly smooth, and they seem to rise without bounds.  More of the tunnel
+
+is in every direction, and there is a tunnel heading off of the chamber to the
+
+east.@@N
+
+~
+~
+
+appear to contain anything, but from this distance one could not be sure.
+
+There seems to be some things sparkling ahead, also.@@N
+
+~
+~
+
+on the ground is becoming more evident.  There must be something of importance
+
+ahead.@@N
+
+~
+
+wider tunnels.  There is a thick coating of mud on the ground, with many
+
+footprints in it.  Ahead the tunnel turns, but nothing further can be noticed.
+
+@@N
+
+~
 E
-helmets~
-@@lThere are viking battle helmets, and some other various pieces.@@N~
+
+and nothing can be seen from within.  All that can be heard are distant
+
+screams and other sounds.@@N
+
+~
+
+showing the carelessness of the miners.  There are a lot of footprints in the
+
+mud, in both directions, and some sparkling can be seen up ahead.@@N
+
+~
+
+many diamonds sticking out of the walls and ceiling.  They sparkle in the
+
+light like stars at night, trully a beautiful scene.  Even more sparkling can
+
+be scene further down the tunnel.@@N
+
+~
+
+diamonds poke there way through the rock, glistening in the light.  For some
+
+reason, the digging stopped right here though.@@N
+
+~
+
+There is a steep grade in the ground, and torrential blasts of cold air are
+
+coming from the passage.  Something ominous seems near.@@N
+
+~
+
+winds is coming from within.  The walls are extremely rough, and the air is
+
+even colder.@@N
+
+~
+
+All of these twists and turns make it hard to decipher what is up ahead.  The
+
+wind coming from this tunnel gets increasingly stronger with each step, and
+
+the temperature falls just as quickly.@@N
+
+~
+~
+~
+
+The walls start to become more smooth, and the coldness and wind seem to die
+
+down a bit.  There is more room to walk around, since the ceiling are also
+
+higher here.@@N
+
+~
 E
-leggings~
-@@lSome of the leggings look to be made out of human flesh...@@N~
+
+mines.  The walls are perfectly smooth here, and the ceiling just seemed to
+
+vanish out of sight.  There is almost no wind, and the temperature is
+
+drastically warmer.@@N
+
+~
+
+different.  As before, the ceiling gets lower in one part of the chamber, but
+
+out of sight in another.  The only difference is the odd heat coming from
+
+somewhere.@@N
+
+~
 E
-sleeves~
-@@lThe sleeves are made out of some strong, rock-like material.@@N~
-E
-walls~
-@@lThere is some armour hanging on the walls.@@N~
-E
-ground~
-@@lThere are various pieces of armour on the ground.@@N~
+
+There is a small tunnel toward the south, which appears to be headed deeper
+
+into the bowels of the mines.  However, the tunnel looks like it was
+
+meticulously carved, unlike previous tunnels.@@N
+
+~
+
+melt.  There are a few small puddles on the ground also.  The chamber
+
+continues east, and south where a small tunnel branches out.@@N
+
+~
+
+to the north.  The ice has formed large puddles of water on the ground, which
+
+is bubbling, almost to the point of boiling.  There seems to be a tunnel a
+
+little further south.@@N
+
+~
+
+generating all of this heat, because the rest of the mines are as cold as it
+
+is hot in here.  There are large pools of water on the ground, indicating that
+
+there was a lot of ice in here recently.@@N
+
+~
+
+seems to be coming from the west.  This must be the lower end of the chamber,
+
+for the ceiling is rather low here.@@N
+
+~
+
+heat there is seems to be generated somewhere from the north-west.  The
+
+ceiling seems to slope to the north, and there is a small tunnel to the west
+
+@@N
+
+~
 S
-#30012
-@@lA Well-Kept Home@@N~
-@@gThis house is very well kept, maybe because it is still in use.  The
-mysterious shimmering of the snow can be seen out the window, and there is a
-nice fire going in the fireplace.  This house has only one room, but the owner
-must still live comfortably.@@N
-~
-81928 11
-D3
+
+strange wind has started up again, and the temperature as drastically gone
+
+down.@@N
+
+~
+
+even more.  The ice on the wall must be a foot thick, which is greatly cutting
+
+down on the space in the tunnel.  The tunnel turns here, then probably
+
+continues.@@N
+
+~
+
+farther down the tunnel.  The temperature has seemed to level off at it's
+
+present temperature also.  The tunnel just keeps continuing.@@N
+
+~
+
+continues to pick up speed.  The walls are still coated with a thick layer of
+
+ice.  The tunnel continues to the east.@@N
+
+~
+
+The ice on the walls is getting thicker, and it looks pretty tight up ahead.
+
+The wind has seemed to die down a bit.@@N
+
 ~
 ~
-1 0 30011
+
+bounce off of, but it is still there.  It sounds as if something large is
+
+pacing back and forth ahead.  The wind has picked up a tad, and the ice is
+
+even thicker.@@N
+
+~
 E
-fireplace~
-@@lThe fire in the fireplace is very warm.@@N~
-S
-#30013
-@@lA Luxurious Residence@@N~
-@@gEven though the house itself is quite small, the owner must be rather
-wealthy.  There are dozens of crystal figurines and knick-knacks around the
-room, and the paintings on the wall look wierd enough to be valuable.  The
-furniture is apholstered with plush velvet, wood floor is polished until it
-shines.@@N
-~
-81928 11
-D1
+
+source.  The wind is like small tornado, blowing bits of rock and ice
+
+everywhere.  The tunnel appears to turn ahead.@@N
+
 ~
+
+The ice on the walls almost totally constricts the path, but there is still a
+
+little room.  The wind is dying down again, and the tunnel continues northward
+
+@@N
+
 ~
-1 0 30011
-E
-figurines~
-@@lThere are many different animals protrayed.@@N~
-E
-crystal~
-@@lThere are many different animals protrayed.@@N~
-E
-knick-knacks~
-@@lThere are a few small carriages, and buildings.@@N~
-E
-paintings~
-@@lThe artist must not have been able to see very well, for her nose is on the side of her head.@@N~
-E
-furniture~
-@@lThe furniture is very soft.@@N~
-E
-wood~
-@@lThe wood is very shiny, and slippery.@@N~
-S
-#30014
-@@lThe Road through Garmaine@@N~
-@@gThere is a staircase here, and it seems to lead up to a building.  There
-are even more buildings in all directions, and the road is completely bare of
-all snow.  The snow, however, is more thick in the air than anywhere else.@@N
-~
-81985 5
-D1
+
+than an echo.  There is little room to walk through the tunnel with all of
+
+this ice, and the wind is totally gone now.@@N
+
 ~
+
+coldness seems to be coming from the back wall.  Also, the wall back there
+
+looks an odd blue color...@@N
+
 ~
-0 -1 30023
-D2
+
+room seems like a hollow sphere, and there is a pedestool fixed in the center
+
+of the room, with an inscription written in it.@@N
+
 ~
+
 ~
-0 -1 30011
-D3
+
 ~
+
 ~
-0 -1 30015
-D4
+
 ~
+
 ~
-0 -1 30019
-E
-snow~
-@@lEvery piece of snow disappears before it reaches the ground.@@N~
-E
-staircase~
-@@lThe staircase is steep, and looks old.@@N~
-E
-road~
-@@lThe road is completely bare of snow.@@N~
-S
-#30015
-@@lThe Road through Garmaine@@N~
-@@gThere is a sign hanging on one of the buildings here, and the snow seems be
-trying to avoid hitting it.  The path continues to the west, and back to the
-east.@@N
-~
-81985 5
-D0
+
 ~
-weapon~
-1 -1 30016
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 D1
 ~
 ~

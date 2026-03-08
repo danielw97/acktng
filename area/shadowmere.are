@@ -16,575 +16,1366 @@ W all~
 #1400
 @@KThe Gates of Shadowmere@@N~
 @@DYou stand before @@Ktowering iron gates@@D twisted into shapes of howling souls. 
-Corroded chains hang between pillars of @@Kblackened stone@@D, their surfaces
-carved with @@Rrunic warnings@@D in a dead tongue. The air reeks of @@Rcorruption@@D
-and @@Kcold ash@@D. A @@kfog@@D clings low to the ground, swirling around your feet
-as though alive. Beyond the gates, a @@Ddim path@@D vanishes into @@Kutter darkness@@D.@@N~
-1 8
-D0
-~
-~
+
+Corroded chains hang between pillars of @@Kblackened stone@@D, their surfaces
+
+carved with @@Rrunic warnings@@D in a dead tongue. The air reeks of @@Rcorruption@@D
+
+and @@Kcold ash@@D. A @@kfog@@D clings low to the ground, swirling around your feet
+
+as though alive. Beyond the gates, a @@Ddim path@@D vanishes into @@Kutter darkness@@D.@@N~
+
+branches clawing at a @@kperpetually overcast@@D sky. Shattered statues of
+
+forgotten nobles litter the ground, their faces worn smooth by @@Kdecades of acid rain@@D.
+
+At the far wall, a @@Rstained fountain@@D gurgles @@Ra thick crimson fluid@@D.
+
+The @@Rfaint sound of chains@@D rattles somewhere in the dark.@@N~
+
+@@Rcrimson-tipped petals@@D grow in twisted clusters around @@Kfungal formations@@D
+
+the color of bruised flesh. A @@Drusty iron trellis@@D collapses under the weight
+
+of @@Kdead vines@@D thick as rope. The ground is @@Rsoft and wet@@D beneath your feet,
+
+yielding with an @@Runpleasant squelch@@D.@@N~
 0 -1 1401
-D2
-~
-~
-0 0 11085
+
+hollow trunks housing @@Rnests of pale insects@@D. Bones - human and otherwise - 
+
+lie half-buried in the @@Kdark soil@@D, bleached white against the black earth.
+
+A @@Kstone altar@@D sits at the grove's center, its surface @@Rgrooved with channels@@D
+
+that once directed blood toward a @@Dgutter at its base@@D.@@N~
 S
-#1401
-@@KThe Blighted Courtyard@@N~
-@@DCreaking @@Kskeletal trees@@D border this cracked stone courtyard, their bare
-branches clawing at a @@kperpetually overcast@@D sky. Shattered statues of
-forgotten nobles litter the ground, their faces worn smooth by @@Kdecades of acid rain@@D.
-At the far wall, a @@Rstained fountain@@D gurgles @@Ra thick crimson fluid@@D.
-The @@Rfaint sound of chains@@D rattles somewhere in the dark.@@N~
-9 11
+
+here like @@Kdecayed teeth@@D. Arrow slits reveal @@Dnothing but darkness@@D within.
+
+Rusted @@Karmor fragments@@D lay scattered across the flagstones - remnants of
+
+a siege long since decided. A @@Rwind moans@@D through the gap in the wall,
+
+carrying with it the @@Ksmell of old fire@@D and something @@Rmuch worse@@D.@@N~
+
+since collapsed into @@Krubble@@D. @@RGlowing runes@@D are scratched into the doorframe
+
+in multiple overlapping layers, as if many different @@Khands over many years@@D
+
+added their own warnings. The interior @@Rstair@@D still appears passable, winding
+
+up into @@Kimpenetrable shadow@@D above. Something @@Rwatches@@D from the dark.@@N~
+
+with a @@Kdesiccated skull@@D. Some skulls bear expressions of @@Rterror@@D, others of
+
+@@Kblankness@@D - whatever they witnessed at the end, it broke them utterly.
+
+The road surface is @@Rstained dark@@D in long dried lines. At the road's end,
+
+@@Ka massive black keep@@D looms against the @@Dsick grey sky@@D.@@N~
 D0
 ~
 ~
-0 -1 1402
-D1
+
+below. @@KDead fields@@D and @@Rruined structures@@D stretch to every horizon.
+
+The @@Dcloud-choked sky@@D presses down like a lid. To the north, the @@Kblack keep@@D
+
+dominates everything. A @@Rwarding stone@@D has been placed here, its surface
+
+still @@Dfaintly warm@@D despite the biting cold. @@KSomething moved@@D in the courtyard below.@@N~
+
+with @@Rbrick stained dark@@D by some @@Kdreadful discharge@@D. The trenches are
+
+partially filled with @@Ra dense, slow-moving black water@@D that gives off
+
+a faint @@Rbioluminescent glow@@D. You can hear things @@Ksplashing@@D below the
+
+surface. The smell here is @@Rprofoundly wrong@@D.@@N~
+
+that trickles down in long rivulets to pool at the base. @@Kgargoyles@@D carved
+
+from @@Dblack marble@@D line the battlements above, their eyes set with @@Rdim red stones@@D
+
+that @@Rfaintly glow@@D. The @@Rmassive portcullis@@D is raised, revealing a passage
+
+into @@Kutter blackness@@D. A @@Kchill wind@@D rolls out of the opening.@@N~
+
+@@Rnoticeably colder@@D. @@KIron portcullises@@D flank either end, their mechanisms
+
+encrusted with @@Drust and old bone@@D. @@RBlood channels@@D in the ceiling mark where
+
+boiling oil was once poured on attackers. The walls are @@Kcovered in tally marks@@D - 
+
+someone kept count of something here for @@Ra very long time@@D.@@N~
+
+Long @@Dtrestle tables@@D of rotted wood still hold the remnants of a feast long
+
+consumed - by time and by @@Rother things@@D. @@KTorches of cold blue flame@@D burn in
+
+iron sconces without heat or comfort. At the hall's end, a @@Rthrone@@D of fused
+
+bones sits upon a @@Kraised dais@@D, currently empty. The @@Kfloor@@D is polished bone-white.@@N~
+
+carved with @@Kreliefs depicting@@D the torment of prisoners in nauseating detail.
+
+A @@Rchain handrail@@D has been bolted to the wall - the links @@Ksticky@@D with something
+
+that does not bear close examination. The @@Dsounds of dripping water@@D and
+
+@@Rdistant wailing@@D rise from below.@@N~
+~
+
+empty, though some hold @@Rindistinct shapes@@D that no longer respond to any
+
+stimulus. @@KFeather-like fungi@@D grow in pale clusters from the mortar between
+
+stones. The air is @@Rstale and cold@@D and carries a tang of @@Kdespair@@D that
+
+settles uncomfortably into your lungs.@@N~
+
+of @@Kblack water@@D that reaches your knees. The submerged ground is @@Rslick and treacherous@@D.
+
+@@KDead crops@@D of some unknown plant stand in rows above the waterline,
+
+their dried heads bobbing in the @@Dunnatural wind@@D. Something large 
+
+makes a @@Rslow circular wake@@D in the water to the east.@@N~
+
+rise above the waterline, their carved lids askew. @@KWatery moonlight@@D filters
+
+through a @@Dcracked ceiling vault@@D above, illuminating the @@Rswirling black water@@D
+
+that fills the lower third of the room. The @@Kdead here@@D do not always remain still.@@N~
+
+walls, each niche housing a @@Kfunerary urn@@D or @@Rsarcophagus@@D of blackened stone.
+
+Names are carved above each - @@Rnone readable@@D now. The floor tiles show a 
+
+mosaic of @@Ka writhing serpent@@D devouring its own tail. Several tiles have been
+
+@@Dshattered@@D, revealing @@Rcavities below@@D.@@N~
+
+A @@Kcentral rack@@D dominates the room, its mechanisms still operational, chains
+
+still attached. @@RDark stains@@D cover nearly every horizontal surface. The @@Khooded
+
+lanterns@@D on the walls burn with @@Ra sickly orange light@@D. This place has
+
+@@Kabsorbed something@@D of all the suffering it witnessed; the very air feels @@Rbent@@D.@@N~
 ~
 ~
-0 -1 1404
-D2
-~
-~
-0 -1 1400
-S
-#1402
-@@KThe Withered Garden@@N~
-@@DWhat was once a garden has become a @@Kfield of rot@@D. Dead black flowers with
-@@Rcrimson-tipped petals@@D grow in twisted clusters around @@Kfungal formations@@D
-the color of bruised flesh. A @@Drusty iron trellis@@D collapses under the weight
-of @@Kdead vines@@D thick as rope. The ground is @@Rsoft and wet@@D beneath your feet,
-yielding with an @@Runpleasant squelch@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1403
-D2
-~
-~
-0 -1 1401
-S
-#1403
-@@KThe Charnel Grove@@N~
-@@DAncient oaks @@Kblackened by some long-past conflagration@@D rise here, their 
-hollow trunks housing @@Rnests of pale insects@@D. Bones - human and otherwise - 
-lie half-buried in the @@Kdark soil@@D, bleached white against the black earth.
-A @@Kstone altar@@D sits at the grove's center, its surface @@Rgrooved with channels@@D
-that once directed blood toward a @@Dgutter at its base@@D.@@N~
-9 3
-D1
-~
-~
-0 -1 1404
-D2
-~
-~
-0 -1 1402
+
+and @@Kcorroded equipment@@D line the walls. A @@Rcentral worktable@@D holds the remnants
+
+of some @@Kaborted experiment@@D - the nature of which is unclear, but deeply
+
+troubling. @@RGreen-black vapors@@D seep from a cracked @@Kretort@@D in the corner.
+
+A @@Dcrumbling journal@@D lies open on the table, its pages black with age.@@N~
+
+The walls glisten with @@Kseeping moisture@@D and are covered with @@Rscratch marks@@D
+
+- thousands of them, at all heights. @@KBodies@@D in various states of preservation
+
+are @@Rchained to the walls@@D, some moving weakly. The ceiling here is @@Klow and pressing@@D,
+
+and the darkness beyond the room's edges feels @@Ralmost solid@@D.@@N~
+
+original color unknowable beneath the grime. @@KStained glass@@D windows depict
+
+scenes of @@Rmass suffering@@D rendered in @@Kcrimson and void-black@@D. Candles of
+
+@@Rbone-white wax@@D burn in a chandelier overhead, their light @@Kcold and wrong@@D.
+
+A @@Rstained lectern@@D holds an open @@Kgrimoire@@D. The air @@Rtastes of metal@@D.@@N~
+
+The floor is a mosaic of @@Kcracked obsidian tiles@@D, their surface carved with 
+
+@@Rsealing runes@@D that glow faintly @@Dblue-white@@D. @@KSkeletons in full plate@@D
+
+stand silent vigil in alcoves along the walls - @@Rthe armor still pristine@@D.
+
+A @@Kmassive iron door@@D set with @@Rlocking runes@@D stands to the north.
+
+@@KSomething enormous@@D breathes beyond it.@@N~
+
+ceiling is painted with @@Ra star map of no known sky@@D. At the chamber's heart
+
+sits a @@Kdark throne@@D upon a raised plinth of carved bone, and upon it rests
+
+@@K@@RVALZARETH THE UNDYING@@K@@D, a @@Rlich of terrible power@@D, its @@Kphylactery@@D displayed
+
+openly on a chain around its fleshless neck. @@RThe air crackles@@D with barely
+
+contained necromantic energy. The temperature @@Kdrops sharply@@D as you enter.@@N~
+
+with meticulous, almost loving care. Femurs form archways. Skulls fill niches
+
+in patterns of @@Kgeometric precision@@D. The arrangement is beautiful and deeply wrong.
+
+A @@Rlantern of pale blue fire@@D burns atop a central pillar. The bones
+
+here are @@Knot entirely still@@D.@@N~
+
+and @@Ksmall cages@@D containing things that no longer die. A @@Rlarge writing desk@@D
+
+dominates the center, covered in open @@Kscrolls@@D filled with cramped notation.
+
+A @@Dhalf-finished homunculus@@D sits in a glass vessel on a side table, its
+
+eyes open and @@Rtracking your movement@@D.@@N~
 D3
 ~
 ~
-0 -1 1408
-S
-#1404
-@@KThe Eastern Battlements@@N~
-@@DThe @@Kbroken battlements@@D of some ancient fortification jut from the earth
-here like @@Kdecayed teeth@@D. Arrow slits reveal @@Dnothing but darkness@@D within.
-Rusted @@Karmor fragments@@D lay scattered across the flagstones - remnants of
-a siege long since decided. A @@Rwind moans@@D through the gap in the wall,
-carrying with it the @@Ksmell of old fire@@D and something @@Rmuch worse@@D.@@N~
-9 11
-D0
+
+softest sound to the @@Rfar wall@@D with uncanny clarity. The walls are covered
+
+with @@Krelief carvings@@D of faces with open mouths - and occasionally, very
+
+occasionally, one of them @@Rmoves@@D. Scraps of @@Kblack silk@@D hang between columns,
+
+stirring in a wind that @@Rhas no source@@D.@@N~
+
+their frames @@Rcarved with screaming faces@@D. The reflections they cast are
+
+@@Rone step behind@@D - if you move, your reflection @@Kpauses for a fraction of a second@@D
+
+before following. In some mirrors, there are @@Rreflections of people@@D who are
+
+not present.@@N~
+
+@@Rspiral iron stairs@@D. Every shelf is full to bursting with @@Kbooks bound in skin@@D.
+
+A @@Rreading fire@@D of cold violet burns in a central brazier, providing just
+
+enough light to read - which may be exactly the wrong amount. A @@Kskeletal
+
+librarian@@D still maintains order here with @@Rterrible diligence@@D.@@N~
+
+of extraordinary complexity - dozens of nested rings, each filled with @@Ksymbols@@D
+
+in a language that hurts to look at directly. The circle @@Rglows faintly@@D at its
+
+outer edge. @@KCandles@@D of black wax ring the outermost line. Whatever
+
+this circle was used for, @@Rthe effects linger@@D.@@N~
 ~
+
+Something @@Kcold and massive@@D breathes in the darkness below - you can feel
+
+the @@Rdisplaced air@@D and hear the slow exhalation. @@KIron chains@@D thick as a man's
+
+arm descend into the pit from a ceiling winch. The floor around the pit
+
+is @@Rstained concentrically darker@@D toward the edge.@@N~
+
+the arch reads, in @@Rold script@@D: @@K"HERE LIE THOSE WHO SERVED"@@D - though the word
+
+"served" has been scratched out and replaced with @@R"SERVE"@@D. The passage below
+
+reeks of @@Kdamp earth and old magic@@D.@@N~
 ~
-0 -1 1405
+
+with @@Kcarved slabs@@D. Several slabs have been @@Rpushed outward from within@@D and
+
+rest broken on the floor. @@KFungal growths@@D of nauseating variety cover the
+
+lower walls, and their spores @@Rglow faintly orange@@D in the dark. Passages
+
+lead further down and horizontally into the @@Drock@@D.@@N~
+
+is covered with @@Rloose bones@@D that crunch underfoot. Crude @@Kpictures have been
+
+scratched@@D into the walls at knee height - @@Rdone by hands that worked from
+
+the floor@@D. Distant sounds echo in @@Kconfusing ways@@D here; voices seem close
+
+and then @@Rfar and then silent@@D.@@N~
+
+are @@Knatural stone@@D, not worked, hung with @@Rcrystals that grow from the rock@@D
+
+in violet and black clusters. The crystals pulse with a @@Kfaint heartbeat rhythm@@D.
+
+In the center, a @@Rstone bier@@D holds the desiccated remains of something that
+
+was not quite human - @@Ktoo tall, too many joints@@D.@@N~
+
+in what passes for summer in Shadowmere. @@KGargoyles@@D crouch at each corner,
+
+the largest spanning a doorway with @@Koutstretched wings@@D. A @@Rchest of black iron@@D
+
+has been chained to the floor here - someone @@Kwanted it near the edge@@D, near
+
+the long drop.@@N~
+~
+
+@@KWind screams@@D through the crenellations, carrying with it @@Rmoaning voices@@D.
+
+Beneath the walk, the keep's walls drop @@Kstraight and sheer@@D for sixty feet.
+
+Fires in the @@Rdead lands@@D below flicker and go out one by one as you watch.
+
+This place feels @@Kuwholesomely exposed@@D.@@N~
+
+the keep's main gate. @@KDetachment of skeleton archers@@D once held this position;
+
+their bones remain at their posts, bows still in hand, waiting for
+
+an order that will never come - unless something decides to give it.
+
+The floor is thick with @@Rspent arrow shafts@@D.@@N~
+
+incense@@D. @@KIron coffins@@D are stacked three high around the walls, most sealed
+
+with @@Krune-locks@@D. A @@Rcentral altar@@D of jet-black stone bears a @@Kchalice@@D
+
+perpetually filled with @@Rsome viscous dark fluid@@D. The candles here burn
+
+@@Kdownward@@D, their flames pointing at the floor.@@N~
+
+purpose and @@Kdifficult provenance@@D. A @@Rhand in a jar@@D. A @@Kjar inside a hand@@D.
+
+Weapons mounted on @@Rblack velvet@@D. A @@Kdesiccated heart@@D still beating in a
+
+crystal sphere. The chamber smells of @@Rpreservative and old power@@D. Each
+
+relic is @@Klabeled in the same cramped hand@@D.@@N~
+
+for undead soldiers. @@KRaw materials@@D arrive via chute from above; @@Rfinished
+
+product@@D departs through iron doors to the south. The machinery runs itself,
+
+directed by @@Ka controlling intelligence@@D nowhere visible. The air reeks of
+
+@@Rscorched bone@@D and @@Kozone@@D.@@N~
+~
+
+Some are skeletal, some wrapped in @@Kdecaying flesh@@D, all are motionless - for now.
+
+The smell is @@Roverpowering@@D. @@KIron frames@@D and @@Rstraw dummies@@D line the walls where
+
+something practiced battlefield formations. In the back, @@Ka completed unit
+
+stands at perfect attention@@D, eyes empty but @@Rfaint green lights@@D already burning.@@N~
+
+by the passage of @@Kcountless feet and hooves@@D. Iron doors flank both sides at
+
+intervals, each sealed and @@Rrune-locked@@D. The corridor slopes gently @@Kupward@@D
+
+toward the keep's surface exits and @@Rdownward@@D toward something that
+
+vibrates with @@Klow frequency sound@@D.@@N~
+
+but the @@Khunter is not human@@D and the prey emphatically are. @@RChandeliers of
+
+bone@@D hang overhead. The floor is @@Kkept scrupulously clean@@D - not a speck of
+
+dust, not a single bone or scrap of debris. Something @@Rtends this place
+
+obsessively@@D. The air is perfumed with @@Kan overwhelming scent of roses@@D.@@N~
+
+curtains of @@Rblood-red silk@@D drawn closed. A @@Kvanity of black glass@@D reflects
+
+nothing - not even the room. Silk gowns hang in an open wardrobe, all black.
+
+On the dresser, @@Rjewelry of extraordinary craftsmanship@@D is arranged with
+
+precision. The bed curtains @@Kstir@@D, though there is no wind.@@N~
+~
+
+of the bottles are labeled with grapes or vintage - instead, @@Knames of the
+
+vintage's donor@@D are scratched into the glass. Many are very old names.
+
+A @@Rlarge oak cask@@D at the far end drips something @@Kdark and viscous@@D onto
+
+the floor, forming a pool that @@Rhas not been cleaned up@@D.@@N~
+
+Breath mists. Frost covers the bottles. The floor is @@Kice over stone@@D. Frozen
+
+within the ice are @@Rpartially visible shapes@@D - humanoid, still. Some appear
+
+to be @@Kstill breathing@@D slowly, at a pace so slow it must last @@Ryears between
+
+each inhale@@D.@@N~
+
+@@Rportraits of the dead@@D in frames of corroded gold. The subjects'
+
+@@Keyes all follow movement@@D. Several portraits have been @@Rdefaced@@D - slashed
+
+or painted over - by someone with a very specific grudge. A candelabra
+
+of @@Kfifteen candles@@D burns at the corridor's center; @@Ronly three are lit@@D.@@N~
+
+together like a vast puzzle@@D. In aggregate they seem to form @@Ka single massive
+
+image@@D - but only glimpsed from the corner of the eye. There are no labels,
+
+no names. At the hall's end, one @@Rframe hangs empty@@D, its canvas removed.
+
+Something is @@Kbeing decided@@D about who goes there next.@@N~
+
+equipment is @@Kstill serviceable@@D despite the age and the damp - maintained by
+
+forces that never sleep. @@RShadowsteel blades@@D catch no light. @@KDeath-plate
+
+hauberks@@D hang neatly on iron frames. A @@Rwhetstone wheel@@D in the corner spins
+
+on its own, grinding @@Kthe edge of nothing@@D.@@N~
+~
+
+since rotted, leaving only the @@Rskeletons of the last occupants@@D lying in
+
+their original positions. Each lies at attention, hands folded, as if laid
+
+out for burial @@Kthen forgotten@@D. Their hollow eyes are all pointed at the
+
+ceiling, as if watching something pass overhead @@Rwith great interest@@D.@@N~
+
+nightshade the size of trees. @@KFatally beautiful flowers@@D whose pollen hangs
+
+visible in the air. @@RA carpet of creeping deathcap mushrooms@@D. The paths
+
+between the beds are @@Knarrow and overgrown@@D. At the garden's heart, a figure
+
+in a @@Rhooded cloak@@D tends a specimen of @@Ksomething that has no name@@D.@@N~
+
+etched with @@Kmoisture and green slime@@D. Inside, the temperature is oppressively
+
+warm, the air thick with @@Rfloral miasma@@D. Plants here have grown @@Kbeyond all
+
+proportion@@D and several have developed rudimentary @@Rmotion@@D - slow, questing,
+
+inevitably toward anything warm.@@N~
+
+this workspace is @@Rorderly and precise@@D. Tools hang in rows by size. @@KVials
+
+of toxin@@D are stoppered and sorted by color, from pale yellow through to
+
+@@Rdeep arterial red@@D. A @@Kwork-in-progress@@D sits in a small crucible, its
+
+fumes alone enough to cause @@Rdizziness@@D. The poisoner @@Kis not present@@D.@@N~
+
+occupant in @@Kvarious stages of decomposition@@D - or something worse than
+
+decomposition. @@RThe hanged do not hang still@@D; they sway even without wind,
+
+and occasionally one @@Kturns to look@@D. The cobblestones are @@Rblack and oily@@D.
+
+A raven the size of a dog watches from a post.@@N~
+~
+
+and sorted into categories. Iron cages hang from the ceiling, most empty,
+
+some @@Knot@@D. A @@Rprocessing desk@@D with bound ledgers sits under an iron lantern.
+
+The ledger's most recent entries are @@Kstrikingly current@@D - entries from what
+
+appears to be @@Rlast week@@D in a fresh hand.@@N~
+
+of this chamber. The bars are @@Renchanted steel@@D; scratches and impact marks
+
+on the @@Kinner surfaces@@D show that many have tried and none have succeeded.
+
+Several pens still contain what they held - shapes that @@Rmove too slowly@@D
+
+for living things, and @@Knot in any direction@@D that makes sense.@@N~
+
+Necropolis district. The gate's face is @@Ksculpted as a screaming skull@@D the
+
+size of a wagon. Its jaw hangs open as the gate; its eyes are @@Rlanterns of green
+
+flame@@D. Beyond, the Necropolis spreads in @@Ka maze of tombs and monuments@@D,
+
+each more elaborate and disturbing than the last.@@N~
+
+Necropolis. The structures crowd close, their upper stories @@Kraking overhead@@D
+
+and nearly blocking the sickly sky. @@RShadows move@@D between them with more
+
+purpose than shadows should have. The avenue's stone surface is worn @@Ksmooth
+
+and dark@@D by the passage of @@Rcountless feet over centuries@@D.@@N~
+
+@@Rstatues of weeping figures@@D with @@Kstone tears@@D trailing their carved cheeks.
+
+The entrance is @@Ropen but dark@@D; a cold wind breathes out from within.
+
+The name above the door has been @@Kdeliberately removed@@D - the stonework
+
+chiseled clean - and @@Rsomething else inscribed over it@@D in the same
+
+rune-script seen everywhere in Shadowmere.@@N~
+
+painted with a @@Kstarfield@@D of no recognizable sky. A central @@Rstone sarcophagus@@D
+
+of extraordinary size rests on a plinth of @@Kblack marble@@D, carved with
+
+reliefs of battles and rituals. The air here is @@Rtense@@D - charged with some
+
+residual magic that raises the hairs on your arms. The sarcophagus
+
+@@Khas recently been disturbed@@D.@@N~
 D2
 ~
 ~
-0 -1 1401
-D3
-~
-~
-0 -1 1403
-S
-#1405
-@@KThe Watch Tower Base@@N~
-@@DThe base of a crumbling @@Kwatch tower@@D stands here, its upper levels long
-since collapsed into @@Krubble@@D. @@RGlowing runes@@D are scratched into the doorframe
-in multiple overlapping layers, as if many different @@Khands over many years@@D
-added their own warnings. The interior @@Rstair@@D still appears passable, winding
-up into @@Kimpenetrable shadow@@D above. Something @@Rwatches@@D from the dark.@@N~
+
+rows of @@Rsealed stone caskets@@D, each marked with a military rank and @@Kunit number@@D.
+
+The unit numbers go very @@Rhigh@@D. At the far end, a larger casket marked
+
+@@K"COMMANDER"@@D sits open and empty. The armaments stored with the dead
+
+are @@Rstill here@@D - and in better condition than they have any right to be.@@N~
+
+surrounding area. Gravestones lean at @@Kunnatural angles@@D, some nearly horizontal.
+
+Several graves are @@Ropen - dug from below@@D. The soil between them is @@Ksoft
+
+and disturbed@@D in long linear patterns, as if things move beneath it.
+
+Water fills several of the @@Ropen graves@@D, perfectly still and perfectly black.@@N~
+
+those whose names were to be forgotten. The walls are @@Kcovered with the scratched
+
+messages@@D of the interred, overlapping layer on layer over @@Ryears and decades@@D.
+
+The messages get @@Kincreasingly frantic@@D the further they were made from the
+
+entrance, and the innermost are @@Rlegible only as feeling@@D.@@N~
+
+just @@Rstanding frames@@D at which the animated dead can be stored at rest.
+
+Most frames are @@Koccupied@@D. The occupants are @@Rswitched off@@D - eyes dim, bodies
+
+motionless - but respond to the presence of living intruders by @@Kstirring slowly@@D,
+
+green lights brightening, heads turning.@@N~
 9 11
 D0
-~
-~
-0 -1 1406
+
+in various stages of cursed transformation. Iron bands inscribed with @@Ksealing
+
+runes@@D restrain them. Several of the subjects @@Rspeak to visitors@@D - in voices
+
+that are sometimes coherent and sometimes @@Knot@@D. What they say is often more
+
+alarming than their silence.@@N~
 D2
 ~
 ~
-0 -1 1404
-D4
+
+A @@Kdesk of iron and bone@@D holds a ledger of extraordinary length, each page
+
+filled with @@Rtransformation notes@@D in clinical, detached prose. A @@Klarge iron
+
+mirror@@D against the wall reflects not the room but @@Rsomething else entirely@@D.
+
+The desk chair still holds @@Kwarm.@@N~
+
+that offers no reflection and @@Kno visibility@@D of the floor below. Things
+
+brush past your legs with @@Rdeliberate purpose@@D. The walls above the waterline
+
+are covered with @@Kdepictions of submersion@@D - drawn by many different hands
+
+over @@Rmany different years@@D.@@N~
+
+surface perfectly still, its depth unknown. @@KBioluminescent fungi@@D on the
+
+cavern ceiling provide @@Rdim green light@@D reflected in the black water.
+
+Shapes move in the depths, large and slow. @@KA stone jetty@@D extends into
+
+the lake, at the end of which is moored a @@Rblack-hulled boat@@D.@@N~
+
+its altar dedicated to a @@Kdomain with no spoken name@@D. The shrine is ancient -
+
+far older than Shadowmere itself. Someone has maintained it regardless,
+
+keeping the @@Raltar-fires lit@@D with @@Kblue flame@@D and laying fresh offerings
+
+of @@Rbone and dried black flowers@@D.@@N~
 ~
-~
-0 -1 1407
+
+centuries into fantastic shapes@@D. Preserved within the ice are @@Kfigures,
+
+some human-shaped, some not@@D, frozen at the moment of whatever
+
+they were doing when the cold took them. The preservation is perfect.
+
+Their @@Reyes are open@@D.@@N~
+
+dropping the temperature with each flare rather than raising it. Weapons
+
+of @@Kfrost-iron@@D are made here - @@Rforged in cold flame@@D, quenched in heated water.
+
+The forge still operates, @@Kdirected by nothing visible@@D, producing weapons
+
+of extraordinary cold-damage with mechanical regularity.@@N~
+
+its entrance an arch of interlaced branches. The maze is @@Ktaller than it
+
+looks@@D and the sound-absorbing vegetation means you can hear nothing
+
+of what may be inside until you are @@Rwell within it@@D. Scratch marks on
+
+the stone path at the entrance show @@Ktally marks@@D - how many went in,
+
+and noticeably @@Rfewer marks@@D for how many came out.@@N~
+
+one person. Thorns catch at clothing and skin. The sky is completely hidden
+
+by the @@Kinterlaced branches overhead@@D. Direction becomes uncertain. Sounds
+
+come from @@Rall directions at once@@D. The path seems to @@Kloop and double back@@D,
+
+yet consistently trends deeper and @@Rmore inward@@D.@@N~
+
+A single @@Kstone chair@@D sits in the clearing. The chair has been worn smooth
+
+by long use. Whatever sits in the chair at this center of this maze
+
+has done so for a @@Rvery long time@@D. Currently the chair is @@Kempty@@D -
+
+but the grass around it is @@Rfreshly flattened@@D.@@N~
+
+dead reeds. The water on either side moves @@Kslowly and purposefully@@D despite
+
+the absence of current or wind. @@RGreen witch-lights@@D bob above the fen in the
+
+middle distance. The causeway stones are @@Kslick and uneven@@D; some have
+
+submerged, leaving @@Rgaps of uncertain depth@@D.@@N~
+
+are closer now - hovering spheres of @@Kbile-green luminescence@@D that drift
+
+with eerie purpose. Where they pass, @@Rthe water moves@@D slightly, as if being
+
+swept. Something very large is @@Kpresent beneath the surface@@D here -
+
+the water occasionally @@Rbulges upward@@D.@@N~
+
+exactly, more a @@Rarrangement of standing stones@@D in a pattern that means
+
+something to those who understand such things. The stones are carved with
+
+@@Kwater and moon symbols@@D. @@ROffrings have been left@@D at the base of each stone -
+
+fairly recently, by the look of them. Whatever is @@Ksummoned here@@D has been
+
+summoned repeatedly.@@N~
 S
-#1406
-@@KThe Corpse Road@@N~
-@@DA @@Knarrow stone road@@D leads between rows of @@Rrusted iron spikes@@D, each topped
-with a @@Kdesiccated skull@@D. Some skulls bear expressions of @@Rterror@@D, others of
-@@Kblankness@@D - whatever they witnessed at the end, it broke them utterly.
-The road surface is @@Rstained dark@@D in long dried lines. At the road's end,
-@@Ka massive black keep@@D looms against the @@Dsick grey sky@@D.@@N~
-1 2
-D0
+
+Shadowmere, its surface @@Rincised with thousands of open mouths@@D carved in
+
+bas-relief. When the wind passes, the tower @@Kscreams@@D - a cacophony of
+
+different voices all crying different things at once. The sound is @@Runbearable
+
+at close range@@D. The tower door stands open.@@N~
+
+larger here and @@Kmore detailed@@D. The acoustic properties channel sound in
+
+overwhelming ways. A @@Rcircular stair@@D of black iron winds up through the
+
+center. The stone walls @@Kvibrate perceptibly@@D with some deep resonance.
+
+Scratched into the floor: @@R"THE VOICES WERE PEOPLE"@@D.@@N~
+
+Shadowmere's full extent. @@KDead city blocks@@D to the south. The keep's
+
+black bulk to the west. The @@Rfen glimmering@@D to the northeast. At the
+
+chamber's center, a @@Kcrystal sphere@@D on an iron stand shows a different
+
+view - the same landscape, @@Rbut populated@@D, as it appeared in @@Ksome bygone life@@D.@@N~
 ~
-~
-0 -1 1409
-D2
-~
-~
-0 -1 1405
-S
-#1407
-@@KAtop the Crumbling Tower@@N~
-@@DFrom this precarious @@Kvantage point@@D, the full horror of Shadowmere spreads
-below. @@KDead fields@@D and @@Rruined structures@@D stretch to every horizon.
-The @@Dcloud-choked sky@@D presses down like a lid. To the north, the @@Kblack keep@@D
-dominates everything. A @@Rwarding stone@@D has been placed here, its surface
-still @@Dfaintly warm@@D despite the biting cold. @@KSomething moved@@D in the courtyard below.@@N~
-9 11
-D5
-~
-~
-0 -1 1405
-S
-#1408
-@@KThe Plague Trenches@@N~
-@@DHere the earth has been @@Kexcavated into long trenches@@D, their walls lined
-with @@Rbrick stained dark@@D by some @@Kdreadful discharge@@D. The trenches are
-partially filled with @@Ra dense, slow-moving black water@@D that gives off
-a faint @@Rbioluminescent glow@@D. You can hear things @@Ksplashing@@D below the
-surface. The smell here is @@Rprofoundly wrong@@D.@@N~
-9 2
-D0
-~
-~
+
+partially intact despite the @@Rcenturies of abandonment@@D. Stone houses with
+
+@@Kcollapsed roofs@@D line a small square around a @@Rdry fountain@@D of cracked stone.
+
+Personal effects - @@Kpots, tools, toys@@D - lie where they were dropped
+
+when the village was @@Rabruptly abandoned@@D. Nothing was taken. Nobody came back.@@N~
 0 -1 1414
-D1
-~
-~
-0 -1 1403
+
+dry millrace. The interior smells of @@Rmold and something sharper@@D. The
+
+millstones still occasionally @@Kturn@@D, grinding with a @@Rterrible purpose@@D
+
+despite the absence of grain - or anything else visible. The sound
+
+is deeply unsettling.@@N~
 S
-#1409
-@@KBefore the Iron Keep@@N~
-@@DThe @@Kmonolithic iron keep@@D rises before you, its walls @@Rseeping a dark fluid@@D
-that trickles down in long rivulets to pool at the base. @@Kgargoyles@@D carved
-from @@Dblack marble@@D line the battlements above, their eyes set with @@Rdim red stones@@D
-that @@Rfaintly glow@@D. The @@Rmassive portcullis@@D is raised, revealing a passage
-into @@Kutter blackness@@D. A @@Kchill wind@@D rolls out of the opening.@@N~
-1 11
-D0
-~
-~
-0 -1 1410
-D2
-~
-~
-0 -1 1406
+
+Bedrolls of dark cloth. Cold ash in a firepit. @@KEmpty cages@@D of varying sizes.
+
+Whatever lived here recently did not live @@Rcomfortably or safely@@D. Scratch marks
+
+on the walls are @@Kfrom the inside@@D. A tunnel at the back leads deeper @@Rinto the
+
+dark@@D.@@N~
+
+Thornbushes with @@Kblack flowers@@D grow in the cracks of the flagstones.
+
+Crows of @@Runnatural size@@D cluster on the roadside walls, watching with @@Kintelligent
+
+and unfriendly eyes@@D. In the distance, the silhouette of @@Ra collapsed tower@@D
+
+marks the road's southern terminus.@@N~
+
+block weathered and @@Kcovered in pale lichen@@D. The collapse created natural
+
+chambers and passages in the rubble. @@RSomething large@@D nests here - evidence
+
+of its presence is @@Kclear and recent@@D. The ruins smell of @@Rrotten meat@@D and
+
+a sharp, @@Kchemical musk@@D.@@N~
+
+when the masonry settled. The floor is @@Rthick with centuries of debris@@D.
+
+Bones - @@Klarge, non-human bones@@D - frame the walls. A @@Rpermanent cold spot@@D
+
+occupies the center, accompanied by the faint but @@Kunmistakable presence@@D of
+
+something just outside perception.@@N~
+
+any nameable deity but to @@Rcorruption itself@@D. The altar is a @@Kpile of rotting
+
+things@@D in various states of putrefaction. @@RFungi and mold@@D grow in
+
+extraordinary variety and color from every surface. Surprisingly, it
+
+smells @@Kalmost pleasant@@D - sweet and heavy.@@N~
+
+of stone on which rests @@Ka constantly decomposing and renewing object@@D,
+
+the same object perpetually dying and being reborn. The floor around
+
+the pillar is @@Rrich with growth@@D - a circle of profound fertility, fed
+
+by @@Kconstant death@@D.@@N~
 S
-#1410
-@@KThe Keep Gatehouse@@N~
-@@DYou pass into the @@Kgatehouse@@D, a cramped stone corridor where the air turns
-@@Rnoticeably colder@@D. @@KIron portcullises@@D flank either end, their mechanisms
-encrusted with @@Drust and old bone@@D. @@RBlood channels@@D in the ceiling mark where
-boiling oil was once poured on attackers. The walls are @@Kcovered in tally marks@@D - 
-someone kept count of something here for @@Ra very long time@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1411
-D2
-~
-~
-0 -1 1409
+
+are @@Kcrumbling but wide@@D enough to walk atop. @@RIron cressets@@D of black flame
+
+burn at intervals. Looking outward: @@Kdead plains@@D stretching to a horizon
+
+that seems @@Rfurther than it should@@D be. Looking inward: the keep, the village,
+
+the @@Knecropolis - all visible@@D, all wrong.@@N~
+
+Its iron doors are @@Rlocked and rusted shut@@D; they haven't opened in a
+
+very long time. @@KArrow loops@@D on three sides give a clear field of fire.
+
+Whatever threatened from outside @@Rstopped trying@@D at some point. The
+
+decision to @@Klock the gates permanently@@D was made by something still inside.@@N~
+
+have @@Rcrumbled away@@D, leaving gaps you could walk a horse through. @@KScaffolding
+
+of bone and iron@@D has been erected over the largest gap, a repair project
+
+never completed. Through the gaps, the @@Rdead landscape@@D stretches away.
+
+The scaffolding @@Krattles@@D in the wind.@@N~
+
+walls. The passages are @@Rstifling and dark@@D, barely wide enough for two
+
+people abreast. @@KHidden peepholes@@D at intervals provide views into the
+
+main rooms. Whatever secrets were observed through them @@Rare written on
+
+the passage walls@@D, in a very small and increasingly disturbed hand.@@N~
+
+rooms are tiny, @@Rcrammed with cots and personal effects@@D now decades-dead.
+
+Photographs and letters @@Kstuck to walls with bone pins@@D tell of lives
+
+interrupted. The inhabitants are @@Rstill here@@D - in forms that no longer
+
+require the comforts of @@Kbed or letter or photograph@@D.@@N~
 S
-#1411
-@@KThe Keep's Great Hall@@N~
-@@DThe great hall stretches wide, its @@Kvaulted ceiling lost in darkness@@D above.
-Long @@Dtrestle tables@@D of rotted wood still hold the remnants of a feast long
-consumed - by time and by @@Rother things@@D. @@KTorches of cold blue flame@@D burn in
-iron sconces without heat or comfort. At the hall's end, a @@Rthrone@@D of fused
-bones sits upon a @@Kraised dais@@D, currently empty. The @@Kfloor@@D is polished bone-white.@@N~
-9 11
-D0
+
+a specific @@Rloose stone@@D - lies this small vault. @@KIts shelves are full@@D of
+
+objects wrapped in @@Rblack cloth@@D, each carefully labeled. A locked iron
+
+chest sits in the corner. The dust in here is @@Kindistinguishable from the rest@@D,
+
+suggesting the hidden nature of this room is @@Rknown to the current occupants@@D.@@N~
+
+are covered in @@Rastronomical charts@@D of considerable accuracy - but the sky
+
+they depict does not match any known @@Kcelestial arrangement@@D. The stairs creak
+
+with the voices of @@Rthe dead who once climbed them@@D, preserved in
+
+the @@Kmemory of the stone itself@@D.@@N~
+
+pointing at an aperture in the @@Rdomed ceiling@@D. The telescope is still in
+
+use - it has been moved recently, and eye-marks on the viewing piece
+
+suggest @@Ksomething with very large eyes@@D. Through the aperture,
+
+the @@Rnight sky of Shadowmere@@D is visible - and it @@Kcontains@@D
+
+@@Rstars that should not exist@@D.@@N~
+~
+~
+
+present and still used by the evidence of @@Krecent dark stains@@D. @@RCrows and
+
+ravens@@D of unnatural size carpet the surrounding walls. A @@Kbell tower@@D
+
+at the yard's corner holds a cracked bell that rings @@Rof its own accord@@D
+
+at irregular intervals with no perceivable cause.@@N~
+
+quality and quantity that should not be possible. The spiral stair
+
+to the bell is @@Kcaked in white silk@@D. At the top of the stair, through
+
+the silk, @@Rthe reason for the cobwebs@@D is apparent - and it is large
+
+and it @@Khas been there for a long time@@D.@@N~
+
+a hillside. The graves here are @@Rolder than the keep@@D - predating it by
+
+centuries. @@KThe headstones list@@D in multiple directions. @@RA figure in black@@D
+
+moves between the stones, bending occasionally as if to read an inscription,
+
+never acknowledging your presence.@@N~
+
+The stones here have sunk so deeply they are @@Kbarely visible@@D above ground.
+
+The earth is @@Rsoft and unstable@@D; footing is treacherous. In the
+
+graveyard's darkest corner, @@Ka mausoleum with no door@@D stands sealed
+
+and silent. @@KSomething moves inside it@@D. It has been moving for
+
+a @@Rvery long time@@D.@@N~
+
+~
+
+the flesh that once wielded them is long gone. Its movements are jerky
+
+and purposeful, driven by @@Knecromantic compulsion@@D rather than thought.@@N
+
+~
+
+~
+
+seeks living flesh with @@Rsingleminded@@D and terrible drive.@@N
+
+~
+
+~
+
+affliction through @@Rmerely being present@@D. It shimmers with @@Knecrotic energy@@D.@@N
+
+~
+
+~
+
+trading morality for whatever scraps of power the dead can offer. @@KUntrustworthy@@D
+
+in life and doubly so now.@@N
+
+~
+
+~
+
+by sensing warmth and heartbeats, and @@Rno mere torchlight@@D can illuminate it fully.@@N
+
+~
+
+~
+
+ranged assault while their melee brethren close in. This one's @@Kbow is strung
+
+with tendon@@D and the arrows tip with @@Rsharpened bone@@D.@@N
+
 ~
+
+~
+
+dedication by surviving this long in Shadowmere. They cast @@Roffensive spells@@D
+
+with reckless abandon, unconcerned with their own safety.@@N
+
 ~
-0 -1 1412
-D1
+
+~
+
+This one still marches routes it walked in life, @@Rdefending territory@@D it no
+
+longer has any stake in with @@Ksavage efficiency@@D.@@N
+
 ~
+
+~
+
+Shadowmere. Their bite @@Rdrains vital energy@@D as surely as it drains blood,
+
+and infections from their saliva are invariably fatal if untreated.@@N
+
 ~
-0 -1 1415
-D2
+
+~
+
+stalk the world driven by @@Rpure hateful purpose@@D. They are faster and stronger
+
+than living knights and feel no pain.@@N
+
 ~
+
+~
+
+shadow. They @@Rcast with terrifying effectiveness@@D and can call upon multiple
+
+destructive schools of magic simultaneously.@@N
+
+~
+
+~
+
+champion cursed to serve death itself. They combine @@Rbrutal weapon skill@@D
+
+with @@Kdark sorcery@@D into an overwhelming offensive.@@N
+
+~
+
+~
+
+entirely, preferring to hunt from walls and ceilings. Their claws can @@Kpenetrate
+
+most armor@@D with ease.@@N
+
+~
+
+~
+
+it became a vessel of @@Rpure auditory destruction@@D, its cry capable of @@Kcausing
+
+hemorrhage@@D in the unprepared.@@N
+
+~
+
+~
+
+They @@Rcannot die naturally@@D and their prolonged torment has made them @@Kfearfully
+
+powerful@@D fighters who enjoy their work a great deal too much.@@N
+
+~
+
+~
+
+It swells to enormous size and gains a @@Rterrifying resilience@@D, able to absorb
+
+tremendous damage before collapsing.@@N
+
+~
+
+~
+
+They @@Rheal their allies@@D and @@Kinflict devastating dark magic@@D upon enemies,
+
+making them priority targets in any engagement.@@N
+
+~
+
+~
+
+life, and continued the role in death. It has developed @@Kterrifying skill@@D
+
+with its ghostly executioner's axe.@@N
+
+~
+16481 524800 -1000 S
+
+~
+
+and necromancy. Its experiments continue beyond its death, its body acting as
+
+both @@Klaboratory and laboratory assistant@@D. It hurls @@Rcorrosive concoctions@@D.@@N
+
+~
+
+~
+
+and weaponize. The chains extend far beyond their apparent length, lashing
+
+out with @@Kprecise and lethal intent@@D.@@N
+
+~
+
+~
+
+cast with @@Kfull effectiveness@@D despite having no physical form, and can pass
+
+through most physical barriers at will.@@N
+
+~
+
+~
+
+fragment of Valzareth's own will. They fight with @@Kinhuman precision@@D and
+
+combine devastating physical attacks with @@Rdark spell volleys@@D.@@N
+
+~
+
+~
+
+of immense power who transcended mortality through @@Rterrible sacrifice@@D. Its
+
+phylactery hangs openly at its neck - a @@Kgemmed skull@@D of deep violet - as
+
+a taunt to any who would attempt to destroy it. Valzareth's robe is a swirling
+
+mass of @@Rliving shadow@@D, and the bones of its visible hands are @@Kperfectly clean@@D
+
+and articulate with eerie grace. The air around it @@Rdistorts@@D as if reality
+
+itself recoils from the concentration of death-magic.@@N
+
+~
+
+~
+
+construct@@D twelve feet tall, built from the bones of hundreds of fallen warriors,
+
+fused together with @@Knecrotic iron@@D and @@Rseal runes@@D. Its right arm has been
+
+replaced with a @@Kmassive bone-and-steel war hammer@@D. Its chest cavity is
+
+visible and @@Rpermanently alight with cold green flame@@D. It does not speak;
+
+it has no need.@@N
+
+~
+
+~
+
+terrible order. It continues its role in undeath, attacking those who
+
+disturb the arranged dead with @@Kfurious physical retribution@@D.@@N
+
+~
+
+~
+
+all its knowledge of dark magic and now casts with the accumulated
+
+expertise of @@Kcenturies of study@@D.@@N
+
+~
+
+~
+
+own but defends its programmed territory with ruthless @@Kcombined physical
+
+and magical ability@@D.@@N
+
+~
+
+~
+
+directing lesser skeletons even as it engages enemies personally with
+
+@@Kdevastating physical attacks@@D.@@N
+
+~
+
+~
+
+manifestation of darkness given predatory form. They attack in overwhelming
+
+numbers, their @@Kcollective bite@@D draining vital energy.@@N
+
+~
+
+~
+
+is @@Runpredictable and dangerous@@D. It combines the physical power of undeath
+
+with incipient magical ability.@@N
+
+~
+
+~
+
+Its venom is @@Rparalytic@@D, and it wraps victims in webs of extraordinary
+
+strength before feeding at leisure.@@N
+
+~
+
+~
+
+a creature of @@Rpure physical might@@D. It has survived centuries of
+
+corruption by @@Kabsorbing everything that entered its territory@@D.@@N
+
+~
+
+~
+
+with necromantic pathogen. It casts @@Rdisease-based spells@@D and its mere
+
+proximity is hazardous to health.@@N
+
+~
+
+~
+
+mobile form, the bone golem is a purely physical engine of destruction.
+
+It hits @@Rwith the force of a battering ram@@D and shrugs off most damage.@@N
+
+~
+
+~
+
+They fight with suicidal ferocity and a @@Kblessed madness@@D that makes them
+
+immune to fear.@@N
+
+~
+
+~
+
+stitched together by necromantic energy. It is large, fast, and @@Kfeeds
+
+on the living and dead alike@@D.@@N
+
+~
+
+~
+
+inferior ritual. Still extraordinarily dangerous - it casts with the
+
+full power of @@Rdecades of collected necromantic study@@D.@@N
+
+~
+
+~
+
+over years of service into a @@Rperfect weapon@@D that combines martial
+
+dominance with lethal spellcasting.@@N
+
+~
+
+~
+
+purely magical entity of considerable destructive power. It @@Rcasts exclusively@@D,
+
+never engaging physically.@@N
+
+~
+
+~
+
+considerable age who has @@Rextended their life@@D through dark means, trading
+
+fragments of humanity for @@Kever-greater power@@D.@@N
+
+~
+
+~
+
+It fights with @@Kfull martial discipline@@D augmented by the quality of its arms.@@N
+
+~
+
+~
+
+nowhere@@D, phase-step between attacks, and casts annihilating void energy
+
+with terrifying effect.@@N
+
+~
+
+~
+
+She ruled Shadowmere's keep long before Valzareth's ascension and remains
+
+here by @@Rterms of a compact@@D not widely understood. Her power is almost entirely
+
+magical - she casts with @@Kblinding speed and ruinous effect@@D, and her
+
+charisma is a weapon in itself. @@RHer eyes are deep red@@D, her smile @@Kknows
+
+something you do not@@D.@@N
+
+~
+
+~
+
+death only improved him. He is the largest and most powerful physical
+
+combatant in the keep - a @@Rcolossal undead warrior@@D whose skill with weapons
+
+was unmatched in his living years and remains so in death. He does not cast;
+
+he does not need to. His @@Kwar-cleaver@@D removes the need for spells.@@N
+
+~
+
+~
+
+has done so since before the labyrinth existed. It is a @@Rthing of pure
+
+spatial distortion@@D - when it attacks, space bends. It fights with both
+
+reality-warping physical strikes and @@Kexistence-erasing magical blasts@@D.@@N
+
+~
+
+~
+
+transformed necromancer whose body exists simultaneously in two states of being.
+
+It wields @@Rcorruption magic@@D and @@Kbinding spells@@D of extraordinary complexity,
+
+and hits with a @@Rphysical force@@D that should not be possible for something so thin.@@N
+
+~
+
+~
+
+Their hides are @@Knearly impenetrable@@D and their talons can rend most metals.
+
+They are @@Rdeceptively fast@@D for their size.@@N
+
+~
+
+~
+
+physically devastating, @@Rimpossible to pin down@@D, and capable of a few well-
+
+chosen debilitating spells that it uses with precision rather than abandon.@@N
+
+~
+
+~
+
+retain @@Kdivine magic@@D but corrupted and inverted - spells of harm where
+
+there were spells of healing, @@Rcurse where there was grace@@D.@@N
+
+~
+
+~
+
+equipped with fine weapons, and capable of delivering @@Rstunning charges@@D. Its
+
+armor is real and maintained with unnatural care.@@N
+
+~
+
+~
+
+It delivers @@Rphysical attacks@@D suffused with @@Kfrost energy@@D and casts a small
+
+suite of cold-based offensive spells.@@N
+
+~
+
+~
+
+for decades, absorbing its dark magic into herself. She casts with the
+
+@@Kraw power of a naturally gifted witch@@D amplified by environmental corruption.@@N
+
+~
+
+~
+
+Low to the ground and fast, it attacks with multiple @@Rlimbs simultaneously@@D,
+
+overwheling prey before it can respond.@@N
+
+~
+
+~
+
+act independently. It combines @@Rphysical vampiric might@@D with a
+
+comprehensive suite of @@Kdark magic@@D, making it dangerous at any range.@@N
+
+~
+
+~
+
+knight has kept its watch for so long that it has @@Kfused with the stone@@D
+
+of the graveyard. Only the presence of living intruders brings it
+
+fully to violent life.@@N
+
+~
+
+~
+
+tower's acoustic properties to devastating magical effect while protecting
+
+itself with @@Rimpressive physical defenses@@D.@@N
+
+~
+
+~
+
+proximity to Shadowmere's corruption. It attacks with @@Kbranches like siege
+
+weapons@@D and is extraordinarily difficult to damage.@@N
+
+~
+
+~
+
+who feeds on fear and despair. Her magical arsenal is @@Rdevastating and varied@@D,
+
+and she can sense weakness with @@Kunnatural precision@@D.@@N
+
+~
+
+~
+
+already terrifyingly powerful, combining @@Rmassive physical attacks@@D with
+
+a breath weapon of @@Kpure annihilating darkness@@D.@@N
+
+~
+
+~
+
+process @@Rextracts and consumes the soul@@D directly. It is purely physical
+
+in its methodology but @@Keffective to a horrifying degree@@D.@@N
+
+~
+
+~
+
+growing steadily stronger. It combines formidable @@Rphysical attacks@@D with
+
+the ability to @@Kcall upon necromantic magic@@D learned from proximity to
+
+Shadowmere's dark power.@@N
+
 ~
-0 -1 1410
-D3
-~
-~
-0 -1 1416
-S
-#1412
-@@KThe Dungeon Stair@@N~
-@@DStone steps spiral @@Kdownward@@D into @@Rsmothering darkness@@D. The walls are
-carved with @@Kreliefs depicting@@D the torment of prisoners in nauseating detail.
-A @@Rchain handrail@@D has been bolted to the wall - the links @@Ksticky@@D with something
-that does not bear close examination. The @@Dsounds of dripping water@@D and
-@@Rdistant wailing@@D rise from below.@@N~
-9 11
-D0
-~
-~
-0 -1 1413
-D2
-~
-~
-0 -1 1411
-S
-#1413
-@@KThe Upper Dungeon@@N~
-@@DThe dungeon stretches in a @@Klong corridor@@D of iron-barred cells. Most are
-empty, though some hold @@Rindistinct shapes@@D that no longer respond to any
-stimulus. @@KFeather-like fungi@@D grow in pale clusters from the mortar between
-stones. The air is @@Rstale and cold@@D and carries a tang of @@Kdespair@@D that
-settles uncomfortably into your lungs.@@N~
-9 11
-D0
-~
-~
-0 -1 1419
-D2
-~
-~
-0 -1 1412
-D3
-~
-~
-0 -1 1417
-S
-#1414
-@@KThe Drowned Fields@@N~
-@@DFloodwater has @@Kinundated these fields@@D, turning them into a @@Rfoul shallow lake@@D
-of @@Kblack water@@D that reaches your knees. The submerged ground is @@Rslick and treacherous@@D.
-@@KDead crops@@D of some unknown plant stand in rows above the waterline,
-their dried heads bobbing in the @@Dunnatural wind@@D. Something large 
-makes a @@Rslow circular wake@@D in the water to the east.@@N~
-9 6
-D0
-~
-~
-0 -1 1415
-D1
-~
-~
-0 -1 1403
-D2
-~
-~
-0 -1 1408
-S
-#1415
-@@KThe Flooded Crypt@@N~
-@@DThis @@Kpartially submerged crypt@@D smells of @@Rearth and old death@@D. Stone sarcophagi
-rise above the waterline, their carved lids askew. @@KWatery moonlight@@D filters
-through a @@Dcracked ceiling vault@@D above, illuminating the @@Rswirling black water@@D
-that fills the lower third of the room. The @@Kdead here@@D do not always remain still.@@N~
-9 11
-D0
-~
-~
-0 -1 1416
-D2
-~
-~
-0 -1 1414
-D3
-~
-~
-0 -1 1411
-S
-#1416
-@@KThe Mausoleum Corridor@@N~
-@@DA @@Klong, low corridor@@D passes between sealed @@Rmarble niches@@D set into both
-walls, each niche housing a @@Kfunerary urn@@D or @@Rsarcophagus@@D of blackened stone.
-Names are carved above each - @@Rnone readable@@D now. The floor tiles show a 
-mosaic of @@Ka writhing serpent@@D devouring its own tail. Several tiles have been
-@@Dshattered@@D, revealing @@Rcavities below@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1420
-D1
-~
-~
-0 -1 1411
-D2
-~
-~
-0 -1 1415
-S
-#1417
-@@KThe Torture Chamber@@N~
-@@KIron implements@@D of unspeakable purpose line the walls of this @@Rstone chamber@@D.
-A @@Kcentral rack@@D dominates the room, its mechanisms still operational, chains
-still attached. @@RDark stains@@D cover nearly every horizontal surface. The @@Khooded
-lanterns@@D on the walls burn with @@Ra sickly orange light@@D. This place has
-@@Kabsorbed something@@D of all the suffering it witnessed; the very air feels @@Rbent@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1418
-D1
-~
-~
-0 -1 1413
-S
-#1418
-@@KThe Alchemist's Laboratory@@N~
-@@DThis @@Kstone chamber@@D reeks of @@Rsulfur and decay@@D. Shelves of @@Dshattered vials@@D
-and @@Kcorroded equipment@@D line the walls. A @@Rcentral worktable@@D holds the remnants
-of some @@Kaborted experiment@@D - the nature of which is unclear, but deeply
-troubling. @@RGreen-black vapors@@D seep from a cracked @@Kretort@@D in the corner.
-A @@Dcrumbling journal@@D lies open on the table, its pages black with age.@@N~
-9 11
-D2
-~
-~
-0 -1 1417
-S
-#1419
-@@KThe Deep Dungeon@@N~
-@@DFar below the keep, this @@Krough-hewn chamber@@D was carved from @@Rliving rock@@D.
-The walls glisten with @@Kseeping moisture@@D and are covered with @@Rscratch marks@@D
-- thousands of them, at all heights. @@KBodies@@D in various states of preservation
-are @@Rchained to the walls@@D, some moving weakly. The ceiling here is @@Klow and pressing@@D,
-and the darkness beyond the room's edges feels @@Ralmost solid@@D.@@N~
-9 11
-D1
-~
-~
-0 -1 1413
-S
-#1420
-@@KThe Shadow Chapel@@N~
-@@DBlack @@Kstone pews@@D face an altar draped in @@Rrotting velvet@@D, the fabric's
-original color unknowable beneath the grime. @@KStained glass@@D windows depict
-scenes of @@Rmass suffering@@D rendered in @@Kcrimson and void-black@@D. Candles of
-@@Rbone-white wax@@D burn in a chandelier overhead, their light @@Kcold and wrong@@D.
-A @@Rstained lectern@@D holds an open @@Kgrimoire@@D. The air @@Rtastes of metal@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1421
-D2
-~
-~
-0 -1 1416
-S
-#1421
-@@KThe Lich's Antechamber@@N~
-@@DThis @@Kcircular chamber@@D serves as approach to something @@Rfar worse@@D within.
-The floor is a mosaic of @@Kcracked obsidian tiles@@D, their surface carved with 
-@@Rsealing runes@@D that glow faintly @@Dblue-white@@D. @@KSkeletons in full plate@@D
-stand silent vigil in alcoves along the walls - @@Rthe armor still pristine@@D.
-A @@Kmassive iron door@@D set with @@Rlocking runes@@D stands to the north.
-@@KSomething enormous@@D breathes beyond it.@@N~
-8205 11
-D0
-~
-~
-0 -1 1422
-D2
-~
-~
-0 -1 1420
-S
-#1422
-@@RThe Lich's Sanctum@@N~
-@@DThe @@Ksanctum@@D is a vast circular chamber of @@Kpolished black stone@@D. The domed
-ceiling is painted with @@Ra star map of no known sky@@D. At the chamber's heart
-sits a @@Kdark throne@@D upon a raised plinth of carved bone, and upon it rests
-@@K@@RVALZARETH THE UNDYING@@K@@D, a @@Rlich of terrible power@@D, its @@Kphylactery@@D displayed
-openly on a chain around its fleshless neck. @@RThe air crackles@@D with barely
-contained necromantic energy. The temperature @@Kdrops sharply@@D as you enter.@@N~
-8205 11
-D2
-~
-~
-0 -1 1421
-S
-#1423
-@@KThe Ossuary Vault@@N~
-@@DThis @@Ksubterranean vault@@D is lined floor-to-ceiling with @@Rneatly stacked bones@@D arranged
-with meticulous, almost loving care. Femurs form archways. Skulls fill niches
-in patterns of @@Kgeometric precision@@D. The arrangement is beautiful and deeply wrong.
-A @@Rlantern of pale blue fire@@D burns atop a central pillar. The bones
-here are @@Knot entirely still@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1424
-D1
-~
-~
-0 -1 1419
-S
-#1424
-@@KThe Necromancer's Study@@N~
-@@DFloor-to-ceiling @@Kshelves@@D hold grimoires, specimen jars of @@Rpickled curiosities@@D,
-and @@Ksmall cages@@D containing things that no longer die. A @@Rlarge writing desk@@D
-dominates the center, covered in open @@Kscrolls@@D filled with cramped notation.
-A @@Dhalf-finished homunculus@@D sits in a glass vessel on a side table, its
-eyes open and @@Rtracking your movement@@D.@@N~
-9 11
-D2
-~
-~
-0 -1 1423
-D3
-~
-~
-0 -1 1425
-S
-#1425
-@@KThe Whispering Gallery@@N~
-@@DA long @@Kelliptical gallery@@D where the curved stone ceiling channels even the
-softest sound to the @@Rfar wall@@D with uncanny clarity. The walls are covered
-with @@Krelief carvings@@D of faces with open mouths - and occasionally, very
-occasionally, one of them @@Rmoves@@D. Scraps of @@Kblack silk@@D hang between columns,
-stirring in a wind that @@Rhas no source@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1426
-D1
-~
-~
-0 -1 1424
-S
-#1426
-@@KThe Mirror Corridor@@N~
-@@DFull-length mirrors of @@Kblack-backed glass@@D line both walls of this corridor,
-their frames @@Rcarved with screaming faces@@D. The reflections they cast are
-@@Rone step behind@@D - if you move, your reflection @@Kpauses for a fraction of a second@@D
-before following. In some mirrors, there are @@Rreflections of people@@D who are
-not present.@@N~
-9 11
-D0
-~
-~
-0 -1 1427
-D2
-~
-~
-0 -1 1425
-S
-#1427
-@@KThe Black Library@@N~
-@@DThis @@Kgreat circular library@@D rises three stories, its balconies connected by
-@@Rspiral iron stairs@@D. Every shelf is full to bursting with @@Kbooks bound in skin@@D.
-A @@Rreading fire@@D of cold violet burns in a central brazier, providing just
-enough light to read - which may be exactly the wrong amount. A @@Kskeletal
-librarian@@D still maintains order here with @@Rterrible diligence@@D.@@N~
-9 11
-D0
-~
-~
-0 -1 1428
-D2
-~
-~
-0 -1 1426
-S
-#1428
-@@KThe Ritual Circle@@N~
-@@DThe floor here has been @@Ksanded smooth@@D and inscribed with a @@Rlarge ritual circle@@D
-of extraordinary complexity - dozens of nested rings, each filled with @@Ksymbols@@D
-in a language that hurts to look at directly. The circle @@Rglows faintly@@D at its
-outer edge. @@KCandles@@D of black wax ring the outermost line. Whatever
-this circle was used for, @@Rthe effects linger@@D.@@N~
-9 11
-D2
-~
-~
-0 -1 1427
-D3
-~
-~
-0 -1 1429
-S
-#1429
-@@KThe Sacrificial Pit@@N~
-@@DA @@Kdeep circular pit@@D occupies the center of this chamber, its sides @@Rsmooth and sheer@@D.
-Something @@Kcold and massive@@D breathes in the darkness below - you can feel
-the @@Rdisplaced air@@D and hear the slow exhalation. @@KIron chains@@D thick as a man's
-arm descend into the pit from a ceiling winch. The floor around the pit
-is @@Rstained concentrically darker@@D toward the edge.@@N~
-9 11
-D0
-~
-~
-0 -1 1430
-D1
-~
-~
-0 -1 1428
-S
-#1430
-@@KThe Catacombs Entrance@@N~
-@@DA @@Knarrow archway@@D of @@Rcarved bone@@D leads down into @@Kfull darkness@@D. A sign above
-the arch reads, in @@Rold script@@D: @@K"HERE LIE THOSE WHO SERVED"@@D - though the word
-"served" has been scratched out and replaced with @@R"SERVE"@@D. The passage below
-reeks of @@Kdamp earth and old magic@@D.@@N~
-9 11
-D2
-~
-~
-0 -1 1429
-D5
-~
-~
-0 -1 1431
-S
-#1431
-@@KThe Upper Catacombs@@N~
-@@DThe first level of the catacombs is lined with @@Kclosed stone niches@@D, sealed
-with @@Kcarved slabs@@D. Several slabs have been @@Rpushed outward from within@@D and
-rest broken on the floor. @@KFungal growths@@D of nauseating variety cover the
-lower walls, and their spores @@Rglow faintly orange@@D in the dark. Passages
-lead further down and horizontally into the @@Drock@@D.@@N~
-9 11
-D1
-~
-~
-0 -1 1432
-D4
-~
-~
-0 -1 1430
-S
-#1432
-@@KThe Catacomb Warren@@N~
-@@DThe catacombs here break into a @@Kcross-hatched maze@@D of low tunnels. The floor
-is covered with @@Rloose bones@@D that crunch underfoot. Crude @@Kpictures have been
 scratched@@D into the walls at knee height - @@Rdone by hands that worked from
 the floor@@D. Distant sounds echo in @@Kconfusing ways@@D here; voices seem close
 and then @@Rfar and then silent@@D.@@N~

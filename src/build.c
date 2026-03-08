@@ -5884,8 +5884,6 @@ void build_findhelp(CHAR_DATA *ch, char *argument)
 void build_helpedit(CHAR_DATA *ch, char *argument)
 {
    HELP_DATA *pHelp;
-   AREA_DATA *area;
-   BUILD_DATA_LIST *plist;
    char arg[MAX_STRING_LENGTH];
    int number;
    int count;
@@ -5912,33 +5910,14 @@ void build_helpedit(CHAR_DATA *ch, char *argument)
    }
 
    build_strdup(&pHelp->text, "$edit", TRUE, ch);
-   /*
-    * Mark the help's area as modified so the help saves...
-    */
-   for (area = first_area; area != NULL; area = area->next)
-   {
-      if (area->first_area_help_text != NULL)
-      {
-         for (plist = area->first_area_help_text; plist != NULL; plist = plist->next)
-         {
-            if (plist->data == pHelp)
-            {
-               area_modified(area);
-               break;
-            }
-         }
-      }
-   }
    return;
 }
 
 void build_addhelp(CHAR_DATA *ch, char *argument)
 {
    HELP_DATA *pHelp;
-   BUILD_DATA_LIST *pList;
    char arg[MAX_STRING_LENGTH];
    int level;
-   AREA_DATA *area;
    argument = one_argument(argument, arg);
 
    if (!is_number(arg) || argument[0] == '\0')
@@ -5961,17 +5940,6 @@ void build_addhelp(CHAR_DATA *ch, char *argument)
    pHelp->text = str_dup("NEW HELP.  DELETE THIS LINE FIRST!");
 
    LINK(pHelp, first_help, last_help, next, prev);
-   /* MAG Mod */
-   GET_FREE(pList, build_free);
-   pList->data = pHelp;
-   /* find helps area, or use system if not set */
-
-   for (area = first_area; area; area = area->next)
-      if (!str_cmp(area->keyword, "helps"))
-         break;
-   if (area == NULL)
-      area = first_area;
-   LINK(pList, area->first_area_help_text, area->last_area_help_text, next, prev);
 
    top_help++;
    send_to_char("Help added.  Use HELPEDIT <keyword> to edit it.\n\r", ch);

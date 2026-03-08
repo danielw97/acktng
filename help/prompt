@@ -1,0 +1,16 @@
+level 0
+keywords prompt
+---
+Prompt all gives you a default prompt.
+
+ %h for current HP. %H for maximum HP.
+
+ %m for current mana. %M for maximum mana.
+
+ #v for current move. #V for maximum move.
+
+
+%C for current combo count.
+
+ #I for current chi.
+

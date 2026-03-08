@@ -1,0 +1,25 @@
+level 0
+keywords REMORT
+---
+@@aREMORT@@W
+Your @@yfirst@@W remort class requires the matching mortal
+pre-requisite class at @@y100@@W.
+Your @@ysecond@@W remort class requires:
+  - your first remort class at @@y100@@W,
+  - all mortal classes at @@y100@@W, and
+  - the matching mortal pre-requisite class for that second remort
+    at @@y100@@W.
+When you are ready to remort, type gain <first three letters of new class>.
+Remort classes and mortal pre-requisites are:
+        -@@pSorcerer@@W (Mage)
+        -@@WWizard@@W (Mage)
+        -@@aPaladin@@W (Cleric)
+        -@@CPriest@@W (Cleric)
+        -@@dAssassin@@W (Thief)
+        -@@dWarlock@@W (Thief)
+        -@@cKnight@@W (Warrior)
+        -@@cSwordsman@@W (Warrior)
+        -@@GNecromancer@@W (Psionicist)
+        -@@mEgomancer@@W (Psionicist)
+        -@@gMonk@@W (Pugilist)
+        -@@gBrawler@@W (Pugilist)

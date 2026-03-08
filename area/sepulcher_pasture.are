@@ -1102,82 +1102,165 @@ S
 grave shepherd~
 a grave shepherd~
 A grave shepherd counts graves between the dead rows here.
-~
-This gaunt herdsman carries a hooked crook and mutters numbers that never reset.
-~
-167772257 512 -500 S
-17 0
-0 0 0 0
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 15 17 0 0 0 0 0 0 0 
-L 40 40 20 0 0 0 0 0 0 
-#30176
-barrow reaper~
-a barrow reaper~
-A barrow reaper hones a rust-pitted blade in silence.
-~
-Funeral linen hangs from the reaper's armor, soaked with mist and old blood.
-~
-167772257 512 -500 S
-18 0
-0 0 0 0
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 16 18 0 0 0 0 0 0 0 
-L 40 40 20 0 0 0 0 0 0 
-#30177
-thorn vicar~
-a thorn vicar~
-A thorn vicar recites a bitter litany to the hedges.
-~
-Black rosaries coil around their wrists while thorn-vines twitch in answer.
-~
-167772257 512 -500 S
-19 0
-0 0 0 0
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 17 19 0 0 0 0 0 0 0 
-L 40 40 20 0 0 0 0 0 0 
-#30178
-sepulcher outrider~
-a sepulcher outrider~
-A sepulcher outrider patrols with measured, relentless strides.
-~
-A rider's saddle is strapped to their back though no horse remains alive to carry it.
-~
-167772257 512 -500 S
-20 0
-0 0 0 0
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 18 20 0 0 0 0 0 0 0 
-L 40 40 20 0 0 0 0 0 0 
-#30179
-mire cantor~
-a mire cantor~
-A mire cantor intones a low dirge over the standing water.
-~
-Mud cakes their vestments, but silver sigils still gleam through the filth.
-~
-167772257 512 -500 S
-21 0
-0 0 0 0
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 19 21 0 0 0 0 0 0 0 
-L 40 40 20 0 0 0 0 0 0 
-#30180
-gravebound pikeman~
-a gravebound pikeman~
-A gravebound pikeman bars this lane with a corroded polearm.
-~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 His pike hums softly, hungry for trespass and confession alike.
 ~
 167772257 512 -500 S

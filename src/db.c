@@ -39,6 +39,7 @@
 #include <sys/wait.h>
 #include <errno.h>
 #include <signal.h>
+#include <dirent.h>
 
 #ifndef DEC_ACT_MOB_H
 #include "act_mob.h"
@@ -285,7 +286,6 @@ int area_revision = -1;
 void init_mm args((void));
 
 void load_area args((FILE * fp));
-void load_helps args((FILE * fp));
 void load_mobiles args((FILE * fp));
 void load_objects args((FILE * fp));
 void load_resets args((FILE * fp));
@@ -293,6 +293,7 @@ void load_rooms args((FILE * fp));
 void load_shops args((FILE * fp));
 void load_specials args((FILE * fp));
 void load_objfuns args((FILE * fp));
+void load_help_files args((void));
 void load_notes args((void));
 void load_gold args((void));
 void load_corpses args((void));
@@ -596,8 +597,6 @@ void boot_db(void)
                break;
             else if (!str_cmp(word, "AREA"))
                load_area(fpArea);
-            else if (!str_cmp(word, "HELPS"))
-               load_helps(fpArea);
             else if (!str_cmp(word, "MOBILES"))
                load_mobiles(fpArea);
             else if (!str_cmp(word, "MOBPROGS"))
@@ -631,6 +630,8 @@ void boot_db(void)
          fpList = NULL;
       }
    }
+
+   load_help_files();
 
    /*
     * Fix up exits.
@@ -710,8 +711,6 @@ void load_area(FILE *fp)
    pArea->flags = 0;
    pArea->first_area_room = NULL;
    pArea->last_area_room = NULL;
-   pArea->first_area_help_text = NULL;
-   pArea->last_area_help_text = NULL;
    pArea->first_area_object = NULL;
    pArea->last_area_object = NULL;
    pArea->first_area_mobile = NULL;
@@ -822,110 +821,133 @@ void load_area(FILE *fp)
    return;
 }
 
-/*
- * Snarf a help section.
- */
-static bool try_read_help_level(FILE *fp, long *level)
+
+
+static void load_help_file(const char *help_path, HELP_DATA **first, HELP_DATA **last)
 {
-   long number = 0;
-   bool sign = FALSE;
-   int c;
-
-   do
-   {
-      c = getc(fp);
-   } while (isspace(c));
-
-   if (c == EOF)
-      return FALSE;
-
-   if (c == '+')
-   {
-      c = getc(fp);
-   }
-   else if (c == '-')
-   {
-      sign = TRUE;
-      c = getc(fp);
-   }
-
-   if (!isdigit(c))
-   {
-      if (c != EOF)
-         ungetc(c, fp);
-      return FALSE;
-   }
-
-   while (isdigit(c))
-   {
-      number = number * 10 + c - '0';
-      c = getc(fp);
-   }
-
-   if (sign)
-      number = 0 - number;
-
-   if (c != EOF && c != ' ')
-      ungetc(c, fp);
-
-   *level = number;
-   return TRUE;
-}
-
-#ifdef UNIT_TEST_DB
-bool db_test_try_read_help_level(FILE *fp, long *level)
-{
-   return try_read_help_level(fp, level);
-}
-#endif
-
-void load_helps(FILE *fp)
-{
-   HELP_DATA *pHelp;
-   BUILD_DATA_LIST *pList;
+   FILE *fp;
+   char line[MAX_STRING_LENGTH];
    long level;
+   char keywords[MAX_STRING_LENGTH];
+   char text[MAX_STRING_LENGTH * 8];
+   size_t text_len = 0;
+   HELP_DATA *pHelp;
 
-   for (;;)
+   fp = fopen(help_path, "r");
+   if (fp == NULL)
    {
-      int c;
+      log_f("Unable to open help file: %s", help_path);
+      return;
+   }
 
-      if (!try_read_help_level(fp, &level))
+   if (fgets(line, sizeof(line), fp) == NULL || sscanf(line, "level %ld", &level) != 1)
+   {
+      bug("load_help_file: invalid level header", 0);
+      fclose(fp);
+      return;
+   }
+
+   if (fgets(line, sizeof(line), fp) == NULL || strncmp(line, "keywords ", 9) != 0)
+   {
+      bug("load_help_file: missing keywords header", 0);
+      fclose(fp);
+      return;
+   }
+   snprintf(keywords, sizeof(keywords), "%s", line + 9);
+   keywords[strcspn(keywords, "\r\n")] = '\0';
+
+   if (fgets(line, sizeof(line), fp) == NULL || strncmp(line, "---", 3) != 0)
+   {
+      bug("load_help_file: missing separator", 0);
+      fclose(fp);
+      return;
+   }
+
+   text[0] = '\0';
+   while (fgets(line, sizeof(line), fp) != NULL)
+   {
+      size_t line_len = strlen(line);
+      if (text_len + line_len + 1 >= sizeof(text))
       {
-         c = getc(fp);
-         if (c == EOF)
-            break;
-
-         bug("load_helps: malformed help header, skipping text.", 0);
-
-         while (c != '~' && c != EOF)
-            c = getc(fp);
-         continue;
+         bug("load_help_file: help text too long", 0);
+         fclose(fp);
+         return;
       }
+      memcpy(text + text_len, line, line_len);
+      text_len += line_len;
+      text[text_len] = '\0';
+   }
 
-      GET_FREE(pHelp, help_free);
-      pHelp->level = level;
-      pHelp->keyword = fread_string(fp);
-      if (pHelp->keyword[0] == '$')
+   GET_FREE(pHelp, help_free);
+   pHelp->level = level;
+   pHelp->keyword = str_dup(keywords);
+   pHelp->text = str_dup(text);
+   LINK(pHelp, *first, *last, next, prev);
+   top_help++;
+
+   fclose(fp);
+}
+
+static int compare_help_file_names(const void *a, const void *b)
+{
+   const char * const *sa = (const char * const *)a;
+   const char * const *sb = (const char * const *)b;
+   return str_cmp(*sa, *sb);
+}
+
+static void load_help_directory(const char *directory, HELP_DATA **first, HELP_DATA **last)
+{
+   DIR *dir;
+   struct dirent *entry;
+   char path[MAX_STRING_LENGTH];
+   char *file_names[2048];
+   int file_count = 0;
+   int i;
+
+   dir = opendir(directory);
+   if (dir == NULL)
+   {
+      log_f("Help directory not found: %s", directory);
+      return;
+   }
+
+   while ((entry = readdir(dir)) != NULL)
+   {
+      size_t len;
+
+      if (entry->d_name[0] == '.')
+         continue;
+
+      len = strlen(entry->d_name);
+      if (len == 0 || entry->d_name[len - 1] == '~')
+         continue;
+      if (file_count >= 2048)
       {
-         PUT_FREE(pHelp, help_free);
+         bug("load_help_files: too many help files", 0);
          break;
       }
-      pHelp->text = fread_string(fp);
 
-      /*
-       * greeting text handled in comm.c now -S-
-       */
-
-      LINK(pHelp, first_help, last_help, next, prev);
-      /* MAG Mod */
-      GET_FREE(pList, build_free);
-      pList->data = pHelp;
-      LINK(pList, area_load->first_area_help_text, area_load->last_area_help_text, next, prev);
-
-      top_help++;
+      file_names[file_count++] = str_dup(entry->d_name);
    }
 
-   return;
+   closedir(dir);
+
+   qsort(file_names, file_count, sizeof(file_names[0]), compare_help_file_names);
+
+   for (i = 0; i < file_count; i++)
+   {
+      snprintf(path, sizeof(path), "%s%s", directory, file_names[i]);
+      db_set_area_name(path);
+      load_help_file(path, first, last);
+      log_f("%s successfully loaded.", path);
+      free_string(file_names[i]);
+   }
+}
+
+void load_help_files(void)
+{
+   load_help_directory(HELP_DIR, &first_help, &last_help);
+   load_help_directory(SHELP_DIR, &first_shelp, &last_shelp);
 }
 
 void load_corpses(void)

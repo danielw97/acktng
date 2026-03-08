@@ -1,0 +1,22 @@
+level 0
+keywords ICHAN
+---
+Syntax:  ichan               - display current ICE channel status
+
+         ichan <localname>   - toggle an ICE channel
+
+
+IChan lets you show and toggle which ICE channels you are listening
+
+to. Without arguments, it will show you the channels you belog to; with
+
+an argument, it will turn on or off that channel.
+
+
+Any channels you listen to must be locally configured first - see
+
+ISETUP. ILIST can be used to see available channels.
+
+
+See also: IMC ICE ILIST ISETUP
+

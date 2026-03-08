@@ -1,0 +1,23 @@
+level 0
+keywords keep
+---
+  keep
+  keep create
+  keep title <string>
+  keep desc <string>
+  keep regen
+  keep inside
+  keep healer
+Using @@ykeep@@N will recall you to your keep.
+Using @@ykeep create@@N creates your keep with @@yno_teleport@@N, @@yno_bloodwalk@@N,
+@@yno_portal@@N, @@yno_mob@@N, and @@ysafe@@N flags.
+Using @@ykeep title <string>@@N while inside your keep will update your keep's
+title.
+Using @@ykeep desc <string>@@N while inside your keep will update your keep's
+description.
+Using @@ykeep regen@@N while inside your keep adds the @@yregen@@N room flag for
+@@Y100@@N quest points.
+Using @@ykeep inside@@N while inside your keep adds the @@yinside@@N room flag for
+@@Y50@@N quest points.
+Using @@ykeep healer@@N while inside your keep purchases a personal healer for
+@@Y250@@N quest points. This purchase is permanent and can only be done once.

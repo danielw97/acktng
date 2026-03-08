@@ -307,37 +307,6 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
     }
 }
 
-static void parse_helps_section(FILE *fp, char *line, int *line_number, const char *area_path)
-{
-    for (;;)
-    {
-        const char *trimmed;
-        char *end;
-
-        if (!read_line(fp, line, line_number))
-            fail_area_test(area_path, *line_number, "unexpected EOF inside #HELPS");
-
-        trimmed = skip_space(line);
-        if (trimmed[0] == "\0"[0] || trimmed[0] == "\r"[0] || trimmed[0] == "\n"[0])
-            continue;
-        if (strncmp(trimmed, "0 $~", 4) == 0)
-            return;
-
-        if (!is_int_token(trimmed, &end))
-            fail_area_test(area_path, *line_number, "help entry must start with level integer");
-
-        if (strchr(end, '~') == NULL)
-            consume_tilde_string(fp, line, line_number, area_path);
-
-        {
-            const char *first_tilde = strchr(end, '~');
-            const char *second_tilde = first_tilde != NULL ? strchr(first_tilde + 1, '~') : NULL;
-            if (second_tilde == NULL)
-                consume_tilde_string(fp, line, line_number, area_path);
-        }
-    }
-}
-
 static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const char *area_path)
 {
     for (;;)
@@ -740,11 +709,6 @@ static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *glo
         {
             saw_area = 1;
             parse_area_section(fp, line, &line_number, area_path);
-            continue;
-        }
-        if (starts_with(trimmed, "#HELPS"))
-        {
-            parse_helps_section(fp, line, &line_number, area_path);
             continue;
         }
         if (starts_with(trimmed, "#MOBILES"))

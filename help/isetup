@@ -1,0 +1,67 @@
+level 0
+keywords ISETUP
+---
+Syntax: isetup add <ice-channel> <localname>   - add a channel
+
+        isetup delete <localname>              - delete a channel
+
+        isetup rename <oldname> <newname>      - rename a channel
+
+        isetup format1 <localname> <format>    - change format1 on a channel
+
+        isetup format2 <localname> <format>    - change format2 on a channel
+
+        isetup level <localname> <level>       - set channel level
+
+
+ISetup allows you to change the local configuration of an ICE
+
+channel. None of these commands have a lasting effect on the channel's
+
+configuration on other muds.
+
+
+ISetup add begins the configuration of a channel. It connects the
+
+specified ice-channel (of the form nodename:channelname) to a local name.
+
+For example: isetup add hub2:IAdmin IAdmin. The local name is also the
+
+command used to speak on the channel.
+
+
+When the channel is added, various default values are filled in for
+
+format1, format2, and level.
+
+
+ISetup delete removes this link. It does not affect the channel itself;
+
+it just deletes the local configuration link for the channel.
+
+
+ISetup rename changes the local name of a channel. It does not affect the
+
+channel name itself for other muds - just the command used locally to
+
+access it.
+
+
+ISetup format1 and format2 change how a channel is displayed locally.
+
+Each format string must have exactly two %s's within it (this is checked
+
+for) - the first will be replaced by the speaker's name, the second by
+
+whatever they say. Format1 is used for normal speech, format2 for emotes.
+
+See ILIST for more information.
+
+
+ISetup level sets the minimum level necessary on your mud to hear or use
+
+the channel.
+
+
+See also: IMC ICE ILIST
+

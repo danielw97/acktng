@@ -3853,371 +3853,538 @@ The Postmaster~
 The Postmaster stands here, watching over you...
 
 
-~
+
 ~
-524299 8320 1000 S
-72 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3020
-The Black Avenger~
-Cyberlich's Black Avenger.~
-Cyberlich's Black Avenger is here, staring at you with @@Rred eyes.@@g
-
-
-~
 ~
-3153927 1157800 1000 S
-140 0
+
+
+
+~
 0 0 0 0
 ! 0 0 0 7 0 0 0
-| 0 64 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3144
-crier~
-the town crier~
-The town crier is here, weeping quietly.
 
 
-~
-He is very good at his job - completely dissolved in tears.
+
+~
 
 
-~
-1 0 900 S
-27 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3143
-mayor~
-the mayor~
-The mayor is here.  He shakes your hand.
+
+~
 
 
-~
-He is a well-built, middle-aged man with thin, grey hair.
+
+~
 
 
-~
-1 8192 900 S
-19 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 32
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3142
-secretary~
-the secretary~
-A secretary is sitting at the desk.
+
+~
 
 
-~
-She looks very busy.
+
+~
 
 
-The Secretary says 'Sorry, but the Mayor is extremely busy today'.
+
+The Secretary says 'Sorry, but the Mayor is extremely busy today'.
 
 
-The Secretary says 'Please sit down and have a seat in the meantime'.
+
+The Secretary says 'Please sit down and have a seat in the meantime'.
 
 
-~
-1 0 900 S
-19 2
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3141
-cityguard guard~
-the cityguard~
-A cityguard stands here, looking very upset.
 
 
-~
-A big, strong, angry guard.
+
+~
 
 
-~
-1 0 1000 S
-8 1
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+for coming here more often.
+
+
+
+~
+
+
+
+~
+
+
+
+~
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+concert shirt and Levi 501's.  His hair is pulled back into a pony tail.
+
+
+
+A beard and moustache complete the look.  Aod has brought some drugs
+
+
+
+with him from Generic Mud.
+
+
+
+~
+
+
+
+~
+
+
+
+but do not mess with him or else he'll get upset.
+
+
+
+~
+
+
+
+~
+
+
+
+~
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+~
+
+
+
+the look in her eyes that she enjoys seeing you cower in her presence.
+
+
+
+~
+
+
+
+~
+
+
+
+keep himself going.
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3140
-captain~
-the captain~
-The captain of the guard is looking very upset.
 
 
-~
-A big, strong, angry captain.
+
+~
 
 
-~
-1 8 1000 S
-18 1
-0 0 0 0
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+lifetime than you have ever seen.
+
+
+
+~
+
+
+
+
+~
+
+
+^M~
+
+
+~
+
+
+~
+
+
+
+~
+
+
+
+~
+! 0 0 0 7 0 0 0
+
+
+~
+
+
+body.~
+
+
+~
+
+
+rings and bracelets.
+
+
+~
+
+
+@@W  Max the bank teller says, 'Have you seen those shady dudes loitering about?'@@N
+
+
+~
+
+
+~
+
+
+~
+
+
+~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3124
-duck~
-the duck~
-A duck is here, quacking happily.
 
 
-~
-The duck is quite fat.  It looks like it is enjoying life.
+practiced hands.
 
 
-~
-1 0 1000 S
-7 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
+~
+
+
+~
+
+
+~
+
+
+~
+
+
+~
+
+
+~
+
+
+
+~
+
+
+
+~
+L 0 0 0 0 0 0 0 0 0 
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
-#3123
-sparrow~
-the sparrow~
-A sparrow is flapping around on the ground.
 
 
-~
-The sparrow looks like it is enjoying life.
+
+~
 
 
-~
-1 0 1000 S
-9 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3122
-duckling~
-the duckling~
-A duckling is swimming around in the pond.
+
+~
 
 
-~
-The duckling is adorable, it looks most of all like a tiny furball.
+
+~
 
 
-~
-1 0 1000 S
-1 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3121
-swan~
-the swan~
-A swan is swimming around in the pond.
+
+~
+~
 
 
-~
-The white swan is very elegant.
+
+~
 
 
-~
-1 0 1000 S
-2 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3120
-sexton~
-the sexton~
-A sexton is sitting here, drinking hot tea.
+
+sad and evil soul.  You sense the power stored within this weapon to be awesome,
 
 
-~
-The sexton looks like he is relaxing after another grave-digging job.
+
+ready to strike your enemies at the slightest chance.  You are forced to look
 
 
-~
-1 0 800 S
-10 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3100
-maid~
-the maid~
-The maid is waiting for your order.
+
+away, rather than be dragged into it's dark heart....
 
 
-~
-She is very beautiful with golden hair, and deep blue eyes. A good reason
 
-
-for coming here more often.
-
-
-~
-1 0 1000 S
-29 2
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3094
-wolf~
-the wolf~
-A large, trained wolf is here.
-
-
-~
-The wolf looks like a strong, fearless fighter.
-
-
-~
-1 0 0 S
-4 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3093
-rottweiler~
-the rottweiler~
-A large, loyal rottweiler is here.
-
-
-~
-The rottweiler looks like a strong, fierce fighter.
-
-
-~
-1 0 400 S
-25 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3092
-beagle~
-the beagle~
-A small, quick, loyal beagle is here.
-
-
-~
-The beagle looks like a fierce fighter.
-
-
-~
-1 0 400 S
-12 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3091
-puppy~
-the puppy~
-A small loyal puppy is here.
-
-
-~
-The puppy looks like a cute, little, fierce fighter.
-
-
-~
-1 0 400 S
-5 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3090
-kitten~
-the kitten~
-A small loyal kitten is here.
-
-
-~
-The kitten looks like a cute, little, fierce fighter.
-
-
-~
-1 0 400 S
-4 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3069
-cityguard guard~
-the cityguard~
-A cityguard is here, guarding the mayor.
-
-
-~
-A big, strong, helpful, trustworthy guard.
-
-
-~
-65 65538 1000 S
-3 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#3068
-cityguard guard~
-the cityguard~
-A cityguard is here, guarding the gate.
-
-
-~
+~
+~
 A big, strong, helpful, trustworthy guard.
 
 
@@ -4907,145 +5074,201 @@ The Moonthread Arcanoweaver~
 The Moonthread Arcanoweaver adjusts rune-stitched armor on a dress form.
 
 
-~
-A meticulous moonthread armourer who tailors arcane vestments for hedge mages and archons alike.
 
 
-~
-3 0 900 S
-47 2
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#0
-#OBJECTS
-#3057
-ladder~
 ~
+
+
+
 ~
-1 0 0 1
-0 0 0 0 0 0 0 0 0 0
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
 4
+
+
+
+Merc Industries
+
+
+
+~
+
+
+Merc Industries
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+Merc Industries
+
+
+
+~
+4
+
+
+
+Merc Industries
+
+
+
+~
+
+
+
+    To whom it may concern,
+
+
+
+	Merc Industries has charmed your money.  Apparently one's
+
+
+	gold will remain close, even beyond death. We are closing
+
+
+	down our offices and ATM machines.  Our services here are
+
+
+	no longer required.
+
+
+
+    Midgaard City Bank
+
+
+~
+4
+
+
+
+~
+
+
+
+~
+
+
+
+towards the river so you can sit and watch the river and the houses on the
+
+
+
+other side.
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
+
+
+
+~
 L
 1
-#3038
-darkness~
-@@GDarkness@@g~
-A blade of @@GDarkness@@g lies here.
 
 
-~
-5 134220288 8421376 33
-0 0 0 9 0 0 0 0 0 0
-8
-A
-18 35
-A
-19 35
-A
-14 100
-A
-12 20
-A
-13 20
-A
-17 -200
-E
-darkness~
-Looking at @@GDarkness@@g is like looking into the furthest corner of your
+
+~
 
 
-sad and evil soul.  You sense the power stored within this weapon to be awesome,
 
-
-ready to strike your enemies at the slightest chance.  You are forced to look
-
-
-away, rather than be dragged into it's dark heart....
-
-
-~
-L
-120
-#3039
-oil~
-some cinnamon massage oil~
-An oily patch on the ground~
-13 2 8388608 1
-0 0 0 0 0 0 0 0 0 0
+~
 4
-L
-1
-#3043
-loren mask~
-loren's Silver Mask~
-The Mask of Loren lies here.~
-9 1 8388624 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-17 -100
-A
-18 15
-A
-19 15
-L
-1
-#3006
-ddagger~
-a dagger~
-A dagger lies here.~
-5 1 8421376 1
-0 0 0 11 0 0 0 0 0 0
-4
-A
-19 20
-A
-18 30
-A
-12 200
-A
-13 100
-L
-1
-#3007
-dcomic~
-a Dark Horse Comic~
-A tattered, well-read edition of Dark Horse Presents... lies forgotten here.~
-1 1 8421376 1
-0 0 -1 0 0 0 0 0 0 0
-4
-A
-17 -100
-A
-12 200
-A
-18 10
-A
-19 10
-A
-13 100
-L
-1
-#3010
-ddhell~
-darkDemon's flaming blade named "HellsFury"~
-DarkDemon's blazing blade is here !~
-5 3 8421376 1
-0 0 0 11 0 0 0 0 0 0
-4
-A
-12 50
-A
-17 -100
-A
-19 10
-A
-18 10
-L
+
+
+
+~
+
+
+
+~
+
+
+
+~
 1
 #3008
 board~
@@ -5596,44 +5819,59 @@ A bronze bracer is lying on the ground.~
 L
 1
 #3102
-water cup~
-a cup of water~
-A cup has been set here.~
-17 0 8388608 1
-2 2 0 0 0 0 0 0 0 0
-13
+
+
+
+~
+
+
+
+~
 E
-cup~
-It is a large simple cup.
 
 
-~
-L
-1
-#3101
-coffee cup~
-a cup of coffee~
-A cup has been set here.~
-17 0 8388608 1
-2 2 12 0 0 0 0 0 0 0
-13
-E
-cup~
-It is a small simple cup.
+
+     ???
 
 
-~
-L
-1
-#3100
-tea cup~
-a cup of tea~
-A cup has been set here.~
-17 0 8388608 1
-2 2 11 0 0 0 0 0 0 0
-13
-E
-cup~
+
+    ?   ?
+
+
+
+       ?
+
+
+
+      ?
+
+
+
+      ?
+
+
+
+      *
+
+
+
+~
+
+
+
+~
+
+
+
+equipped with a handle to make it handy and a hood to protect its flame.
+
+
+
+Some letters have been scratched on its bottom.
+
+
+
+~
 It is a small simple cup.
 
 
@@ -5749,19 +5987,23 @@ A hard leather cap is lying on the ground.~
 L
 40
 #3066
-jerkin~
-a studded leather jerkin~
-A studded leather jerkin is lying on the ground.~
-9 134217728 8650752 1
-3 0 0 0 0 0 0 0 0 0
-8
+
+
+
+~
+
+
+
+~
 L
-40
-#3065
-sleeves~
-a pair of leather sleeves~
-A pair of leather sleeves is lying on the ground.~
-9 0 8389632 1
+
+
+
+~
+
+
+
+~
 2 0 0 0 0 0 0 0 0 0
 13
 L

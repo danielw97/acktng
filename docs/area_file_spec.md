@@ -9,7 +9,6 @@ An area file is a sequence of named sections. Each section starts with `#<NAME>`
 Recognized section names:
 
 - `#AREA`
-- `#HELPS`
 - `#MOBILES`
 - `#MOBPROGS`
 - `#OBJECTS`
@@ -116,22 +115,7 @@ Parsing stops when the next `#` section header is encountered.
 
 `V` defines the area's assigned vnum envelope. Area-owned entries must stay inside that envelope (see Structural constraints).
 
-## 4) `#HELPS` section
-
-A list of help entries terminated by `0 $~`:
-
-```text
-#HELPS
-<level> <keyword>~
-<text>~
-...
-0 $~
-```
-
-- `<level>` is an integer (signed values accepted by parser).
-- If help text starts with whitespace when saved, saver prefixes `.` to preserve formatting.
-
-## 5) `#MOBILES` section
+## 4) `#MOBILES` section
 
 A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 
@@ -161,7 +145,7 @@ Optional extension blocks (detected by leading marker):
 - `l <loot_amount> <loot[0..MAX_LOOT-1]>`
 - `L <loot_chance[0..MAX_LOOT-1]>`
 
-### 5.1) Mobile `skills` bitvector (`!` extension)
+### 4.1) Mobile `skills` bitvector (`!` extension)
 
 `skills` in the `!` extension line is a bitvector. Known flags (from builder lookup tables) are:
 
@@ -187,7 +171,7 @@ Optional extension blocks (detected by leading marker):
 - `counter` = `524288`
 - `kick` = `1048576`
 
-### 5.2) Mobile `cast` bitvector (`!` extension)
+### 4.2) Mobile `cast` bitvector (`!` extension)
 
 `cast` in the `!` extension line is a bitvector of offensive spells the mobile may use:
 
@@ -802,15 +786,14 @@ For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums must be assi
 `areasave.c` writes sections in this order when present:
 
 1. `#AREA`
-2. `#HELPS`
-3. `#MOBILES`
-4. `#MOBPROGS`
-5. `#OBJECTS`
-6. `#ROOMS`
-7. `#SHOPS`
-8. `#SPECIALS`
-9. `#OBJFUNS`
-10. `#RESETS`
-11. `#$`
+2. `#MOBILES`
+3. `#MOBPROGS`
+4. `#OBJECTS`
+5. `#ROOMS`
+6. `#SHOPS`
+7. `#SPECIALS`
+8. `#OBJFUNS`
+9. `#RESETS`
+10. `#$`
 
 Using this order is recommended for consistency, even though the loader dispatch is name-based.

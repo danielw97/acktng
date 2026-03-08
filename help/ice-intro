@@ -1,0 +1,41 @@
+level -1
+keywords ICE-INTRO
+---
+A Quick Introduction to ICE
+
+
+This assumes that the code for IMC and ICE is installed and running, and
+
+that you have an active connection to an IMC network.
+
+
+1. ILIST. This will give you a list of possible channels to choose from.
+
+   Pick one that you want to add, that has a policy of 'open'. Note its
+
+   name (of the form node:channel).
+
+
+2. Decide what command you want to use to speak on this channel on your
+
+   mud. This is the channel's localname.
+
+
+3. Type: ISETUP ADD <node:channel> <localname>
+
+
+4. You should now be able to use the channel. Others can listen to and
+
+   speak on the channel by using ICHAN <localname>.
+
+
+5. You may wish to reconfigure the default local channel settings.
+
+   ILIST <localname> will display them; ISETUP will change them.
+
+
+6. Repeat for whatever other channels you wish to have.
+
+
+See also: IMC ICE ISETUP ICOMMAND ICHAN ILIST
+

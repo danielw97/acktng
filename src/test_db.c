@@ -11,7 +11,6 @@
 void db_test_format_status(char *dest, size_t dest_size, const char *prefix, const char *file_name);
 void db_test_set_area_name(const char *file_name);
 const char *db_test_get_area_name(void);
-bool db_test_try_read_help_level(FILE *fp, long *level);
 int object_spawn_level(int prototype_level, int requested_level);
 
 
@@ -45,38 +44,6 @@ static void test_set_area_name_truncates_and_terminates(void)
 
     assert(db_test_get_area_name()[MAX_INPUT_LENGTH - 1] == '\0');
     assert(strlen(db_test_get_area_name()) == MAX_INPUT_LENGTH - 1);
-}
-
-static void test_try_read_help_level_accepts_numeric_prefix(void)
-{
-    FILE *fp = tmpfile();
-    long level = -1;
-
-    assert(fp != NULL);
-    fputs("   42 keyword~\n", fp);
-    rewind(fp);
-
-    assert(db_test_try_read_help_level(fp, &level));
-    assert(level == 42);
-
-    fclose(fp);
-}
-
-static void test_try_read_help_level_rejects_non_numeric_prefix(void)
-{
-    FILE *fp = tmpfile();
-    long level = -1;
-    int c;
-
-    assert(fp != NULL);
-    fputs("keep title <string>\n", fp);
-    rewind(fp);
-
-    assert(!db_test_try_read_help_level(fp, &level));
-    c = fgetc(fp);
-    assert(c == 'k');
-
-    fclose(fp);
 }
 
 static int is_exit_triple_line(const char *line)
@@ -697,8 +664,6 @@ int main(void)
     test_object_spawn_level_falls_back_to_prototype_level();
     test_format_status_builds_expected_message();
     test_set_area_name_truncates_and_terminates();
-    test_try_read_help_level_accepts_numeric_prefix();
-    test_try_read_help_level_rejects_non_numeric_prefix();
     test_mock_load_all_areas_and_validate_formats();
     test_area_list_has_no_duplicate_entries();
     test_area_index_vnums_have_no_duplicates();
