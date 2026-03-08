@@ -9,8 +9,15 @@
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DIR="$SCRIPT_DIR/src"
 AREA_DIR="$SCRIPT_DIR/area"
-TEST_PORT=18890
 RUN_SECONDS=8
+
+# Ask the OS for a free ephemeral port to avoid collisions on shared CI hosts.
+if command -v python3 >/dev/null 2>&1; then
+    TEST_PORT=$(python3 -c \
+        "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()")
+else
+    TEST_PORT=$((RANDOM % 16383 + 49152))
+fi
 LOG_FILE="/tmp/mud-integration-test-$$.log"
 
 # ---------------------------------------------------------------------------
