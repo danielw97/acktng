@@ -37,6 +37,50 @@ Implications:
 - A missing `~` causes parse failure.
 - For mobile `long_descr` and all extra-description text blocks (`E` entries in `#OBJECTS` and `#ROOMS`), the string must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`).
 
+### 2.1) In-string color codes (`colist`)
+
+Area strings may include inline color escapes using `@@<code>`. The runtime/player `colist` command exposes this same palette (`do_colist()` over `ansi_table`).
+
+Supported `colist` codes:
+
+- `g` gray
+- `R` red
+- `G` green
+- `b` brown
+- `B` blue
+- `m` magenta
+- `c` cyan
+- `k` black
+- `y` yellow
+- `W` white
+- `N` normal (reset)
+- `p` purple
+- `d` dark_grey
+- `l` light_blue
+- `r` light_green
+- `a` light_cyan
+- `e` light_red
+- `x` bold
+- `f` flashing
+- `i` inverse
+- `2` back_red
+- `3` back_green
+- `4` back_yellow
+- `1` back_blue
+- `5` back_magenta
+- `6` back_cyan
+- `0` back_black
+- `7` back_white
+
+Color theme policy:
+
+- Every area must have a defined color theme.
+- Theme usage can be sparse or strict, but should be intentional and consistent with the area's identity.
+- Keep control codes readable/maintainable: avoid noisy color-code churn that obscures base text.
+- Automatic tools must not add background color codes (`back_*`, codes `0`-`7`) or the flashing code (`f`).
+- Background/flashing codes are allowed only when explicitly added manually by a human author.
+
+
 ## 3) `#AREA` section
 
 `#AREA` contains one required string, followed by directives. The `Q` directive is mandatory and must be set to version `16`:
@@ -558,9 +602,11 @@ Room description content requirements:
 Directional traversal constraints:
 
 - Areas must use a linear room layout by default.
-- Room connections must not loop back in non-linear patterns (for example, `a -> b -> c -> d -> e -> a -> b`) unless the involved vnum set is explicitly flagged as a maze.
-- Repeated movement in the same direction must not enter a directional loop unless the involved vnum set is explicitly flagged as a maze.
-- Example (disallowed outside flagged maze vnum sets): repeatedly taking `east` yields `a -> b -> c -> a`.
+- Room connections must not loop back in non-linear patterns (for example, `a -> b -> c -> d -> e -> a -> b`) unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
+- Repeated movement in the same direction must not enter a directional loop unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
+- Example (disallowed outside `ROOM_MAZE`-flagged maze vnum sets): repeatedly taking `east` yields `a -> b -> c -> a`.
+- Rooms that are part of a maze must be flagged `ROOM_MAZE`.
+- Every vnum in a maze vnum set must be flagged `ROOM_MAZE`.
 
 ### 8.1) `room_flags` bitvector
 
@@ -586,6 +632,13 @@ Directional traversal constraints:
 - `no_bloodwalk` = `65536`
 - `no_portal` = `131072`
 - `no_repop` = `524288`
+- `maze` = `1048576` (`ROOM_MAZE`)
+
+Maze flag requirements:
+
+- Rooms that are part of a maze must have `ROOM_MAZE` set.
+- Every vnum in a maze vnum set must have `ROOM_MAZE` set.
+- Only `ROOM_MAZE` rooms may use non-linear or looping exits.
 
 ### 8.2) `sector_type` values
 
@@ -724,6 +777,9 @@ From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
   - A given mobile vnum may appear only once across all loaded area files.
   - A given object vnum may appear only once across all loaded area files.
   - Cross-type overlap is allowed: a room, mobile, and object may share the same numeric vnum as long as each remains unique within its own index type.
+- Bitvector hygiene: undefined bits must be removed from serialized fields when detected.
+  - Do not persist undefined/unknown bits in any bitvector-backed area field.
+  - Keep only bits explicitly defined for that field (or documented runtime-only exceptions where applicable).
 
 ## 13.1) Vnum allocation policy
 

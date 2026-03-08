@@ -542,6 +542,7 @@
 #define ROOM_NOBLOODWALK 65536
 #define ROOM_NO_PORTAL 131072
 #define ROOM_NO_REPOP BIT_19
+#define ROOM_MAZE BIT_20
 
 /*
  * Directions.
