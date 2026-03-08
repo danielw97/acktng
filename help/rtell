@@ -1,0 +1,21 @@
+level 0
+keywords RTELL RREPLY
+---
+Syntax:  rtell <player@mudname> <message>    - send a 'tell' to another player
+
+         rreply <message>                    - send a 'tell' to the last player
+
+                                               to send you a rtell
+
+
+rtell and rreply are the IMC equivalents of tell and reply, and work nearly
+
+identically. To rtell, however, you need to supply both a playername and a
+
+mudname (as shown in 'imclist'). rreply will reply to the last rtell you
+
+received from a player - even if that player was invisible to you.
+
+
+See also: IMC IMCLIST
+

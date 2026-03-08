@@ -1,0 +1,13 @@
+level -1
+keywords shelp_word of recall
+---
+*******************************************************************************
+       Name: Word of Recall		
+    Classes: Priest(66)
+   Duration: N/A
+   Modifies: N/A
+       Type: Defensive - Self
+Description: This spell allows the caster assured recall, even under extreme
+             circumstances, by reinforcing the usual recall ability with 
+             his/her magical abilities.
+*******************************************************************************

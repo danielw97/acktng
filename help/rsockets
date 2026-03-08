@@ -1,0 +1,40 @@
+level 0
+keywords RSOCKETS
+---
+Syntax:  rsockets                   - display IMC socket usage
+
+
+rsockets displays the current connection state for the direct IMC connections
+
+that your mud has. The various fields are:
+
+
+Desc  : the system-level descriptor used for this connection
+
+
+Mud   : which mud this connection is for
+
+
+State : how far through the connection process this connection is:
+
+        - connecting: waiting for the other end to accept our TCP connection
+
+        - wait1:      waiting for the password from an incoming client
+
+        - wait2:      waiting for the server to respond to our password
+
+        - connected:  the connection is completely 'up'
+
+
+Inbuf : the size of data waiting in the input and output queues for this
+
+Outbuf: connection.
+
+
+Spam1 : spam-protection counters
+
+Spam2 :
+
+
+See also: IMC 'IMC IMMORTAL COMMANDS'
+

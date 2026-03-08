@@ -16,1643 +16,3774 @@ W builder~
 #8700
 @@yNorthwind Traverse@@N~
 The wind-scoured quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D1
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8701
-D2
-Footprints descend where the route steps into the next grid lane.
-~
 ~
-0 -1 8720
-E
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8701
-@@ySaffron Driftway@@N~
-The sun-flared quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
 0 10
 D1
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8702
-D2
-Footprints descend where the route steps into the next grid lane.
-~
 ~
-0 -1 8721
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
 D3
 The marked lane curves back toward earlier watch-cairns.
-~
+
 ~
-0 -1 8700
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8702
-@@yBluewater Verge@@N~
-The salt-silvered quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
 D1
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8703
-D2
-Footprints descend where the route steps into the next grid lane.
-~
 ~
-0 -1 8722
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
 D3
 The marked lane curves back toward earlier watch-cairns.
-~
+
 ~
-0 -1 8701
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8703
-@@ySunplate Causeway@@N~
-The lapis-dusted quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
 D1
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8704
-D2
-Footprints descend where the route steps into the next grid lane.
-~
 ~
-0 -1 8723
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
 D3
 The marked lane curves back toward earlier watch-cairns.
-~
+
 ~
-0 -1 8702
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8704
-@@yMirage March@@N~
-The amber-lit quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
 D1
 The caravan line continues through a bright seam of blown sand.
-~
+
+~
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+D3
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+0 10
+
+~
+The caravan line continues through a bright seam of blown sand.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+D2
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
 ~
 0 -1 8705
-D2
-Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8724
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
+
 ~
-0 -1 8703
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+
+~
 S
-#8705
-@@yGolden Dust Walk@@N~
-The reed-ringed quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D1
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8706
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+~
+
+~
 D2
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8725
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8704
-E
-route line~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8706
-@@yNorthwind Traverse@@N~
-The stone-terraced quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D1
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8707
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+~
+
+~
 D2
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8726
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8705
-E
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8707
-@@ySaffron Driftway@@N~
-The ochre-breathed quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
 0 10
-D1
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8708
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+One dressed block survives the wind: its incised pyramid sigil points beyond the oasis toward buried stone corridors.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
 D2
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8727
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8706
-E
-route line~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8708
-@@yBluewater Verge@@N~
-The mirage-cast quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D1
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8709
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+~
+
+~
 D2
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8728
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8707
-E
-route line~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8709
-@@ySunplate Causeway@@N~
-The brass-marked quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D1
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8710
-D2
-Footprints descend where the route steps into the next grid lane.
-~
 ~
-0 -1 8729
-D3
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
 The marked lane curves back toward earlier watch-cairns.
-~
+
 ~
-0 -1 8708
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8710
-@@yMirage March@@N~
-The dawn-baked quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D1
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8711
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+~
+
+~
 D2
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8730
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8709
-E
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+~
+
+~
+
+~
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8711
-@@yGolden Dust Walk@@N~
-The dusk-cooled quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
 ~
-0 -1 8712
-D2
-Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8731
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
+
 ~
-0 -1 8710
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8712
-@@yNorthwind Traverse@@N~
-The wind-scoured quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8713
-D2
-Footprints descend where the route steps into the next grid lane.
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
 ~
-0 -1 8732
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8711
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8713
-@@ySaffron Driftway@@N~
-The sun-flared quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8714
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8733
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8712
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8714
-@@yBluewater Verge@@N~
-The salt-silvered quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8715
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8734
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8713
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8715
-@@ySunplate Causeway@@N~
-The lapis-dusted quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8716
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8735
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8714
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8716
-@@yMirage March@@N~
-The amber-lit quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8717
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8736
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8715
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8717
-@@yGolden Dust Walk@@N~
-The reed-ringed quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8718
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8737
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8716
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8718
-@@yNorthwind Traverse@@N~
-The stone-terraced quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8719
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8738
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8717
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8719
-@@ySaffron Driftway@@N~
-The ochre-breathed quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8739
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8718
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8720
-@@yGolden Dust Walk@@N~
-The brass-marked quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
-A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
-~
 0 10
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8700
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8721
-D2
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8740
-E
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+A broken plinth bears a precise stepped-triangle emblem, hinting at a sealed pyramid road still waiting to be opened.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+~
+
+~
+
+~
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8721
-@@yNorthwind Traverse@@N~
-The dawn-baked quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
-Shallow trenches funnel drifting sand away from the main caravan path.@@N
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
 0 10
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8701
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8722
-D2
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8741
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8720
-E
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+~
+
+~
+
+~
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8722
-@@ySaffron Driftway@@N~
-The dusk-cooled quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
-A line of carved stones suggests engineers once measured every span here.@@N
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
 0 10
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8702
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8723
-D2
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8742
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8721
-E
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+One dressed block survives the wind: its incised pyramid sigil points beyond the oasis toward buried stone corridors.@@N
+
+~
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+~
+
+~
+
+~
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8723
-@@yBluewater Verge@@N~
-The wind-scoured quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
-A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
 0 10
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8703
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8724
-D2
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8743
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8722
-E
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+~
+
+~
+
+~
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8724
-@@ySunplate Causeway@@N~
-The sun-flared quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
-Shallow trenches funnel drifting sand away from the main caravan path.@@N
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
 0 10
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8704
-D1
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+D0
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+Footprints descend where the route steps into the next grid lane.
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
 The caravan line continues through a bright seam of blown sand.
-~
+
 ~
-0 -1 8725
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+
+~
+
+~
+The marked lane curves back toward earlier watch-cairns.
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
+S
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
+
+Even in the heat, you smell mineral damp that should not exist this far north.@@N
+
+A broken plinth bears a precise stepped-triangle emblem, hinting at a sealed pyramid road still waiting to be opened.@@N
+
+~
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
+
+Sun-hardened mud still keeps impressions of last season's flood channels.@@N
+
+~
+A narrow ramp climbs toward another survey-marked square.
+
+~
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
+
+Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
+
+~
+
+~
 D2
 Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8744
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
 ~
-0 -1 8723
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+~
+
+~
 E
 route line~
 Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
 S
-#8725
-@@yMirage March@@N~
-The salt-silvered quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
-A line of carved stones suggests engineers once measured every span here.@@N
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
 0 10
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8705
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8726
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
 D2
-Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8745
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
 ~
-0 -1 8724
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8726
-@@yGolden Dust Walk@@N~
-The lapis-dusted quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
-A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
-~
-0 10
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8706
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8727
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
 D2
-Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8746
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
 ~
-0 -1 8725
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8727
-@@yNorthwind Traverse@@N~
-The amber-lit quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
-Shallow trenches funnel drifting sand away from the main caravan path.@@N
-~
-0 10
+
+~
+
+~
+
+~
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8707
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8728
-D2
-Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8747
-D3
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
+
+~
+
+~
 The marked lane curves back toward earlier watch-cairns.
-~
+
 ~
-0 -1 8726
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8728
-@@ySaffron Driftway@@N~
-The reed-ringed quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
-A line of carved stones suggests engineers once measured every span here.@@N
-~
-0 10
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
+
+Shallow trenches funnel drifting sand away from the main caravan path.@@N
+
+~
 D0
 A narrow ramp climbs toward another survey-marked square.
-~
+
 ~
-0 -1 8708
-D1
-The caravan line continues through a bright seam of blown sand.
-~
 ~
-0 -1 8729
-D2
-Footprints descend where the route steps into the next grid lane.
-~
+
 ~
-0 -1 8748
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
+
+A line of carved stones suggests engineers once measured every span here.@@N
+
+~
+
+~
+
+~
+
+~
+
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
+
+A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
+
+~
+
+~
 D3
 The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8727
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8729
-@@yBluewater Verge@@N~
-The stone-terraced quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
-A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8709
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8730
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8749
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8728
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8730
-@@ySunplate Causeway@@N~
-The ochre-breathed quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
-Shallow trenches funnel drifting sand away from the main caravan path.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8710
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8731
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8750
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8729
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8731
-@@yMirage March@@N~
-The mirage-cast quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
-A line of carved stones suggests engineers once measured every span here.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8711
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8732
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8751
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8730
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8732
-@@yGolden Dust Walk@@N~
-The brass-marked quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
-A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8712
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8733
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8752
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8731
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8733
-@@yNorthwind Traverse@@N~
-The dawn-baked quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
-Shallow trenches funnel drifting sand away from the main caravan path.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8713
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8734
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8753
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8732
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8734
-@@ySaffron Driftway@@N~
-The dusk-cooled quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
-A line of carved stones suggests engineers once measured every span here.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8714
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8735
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8754
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8733
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8735
-@@yBluewater Verge@@N~
-The wind-scoured quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
-A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8715
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8736
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8755
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8734
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8736
-@@ySunplate Causeway@@N~
-The sun-flared quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
-Shallow trenches funnel drifting sand away from the main caravan path.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8716
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8737
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8756
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8735
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8737
-@@yMirage March@@N~
-The salt-silvered quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, a flat @@yyellow@@N glare runs from ridge to ridge, and every marker suggests traders once moved in disciplined columns.@@N
-A line of carved stones suggests engineers once measured every span here.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8717
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8738
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8757
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8736
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8738
-@@yGolden Dust Walk@@N~
-The lapis-dusted quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, heat ripples fold distant dunes into moving walls, and every marker suggests traders once moved in disciplined columns.@@N
-A snapped survey rod is wrapped in three faded cloth bands: blue, yellow, and brown.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8718
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8739
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8758
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8737
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8739
-@@yNorthwind Traverse@@N~
-The amber-lit quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the wind carries reed-chime clicks from unseen pools, and every marker suggests traders once moved in disciplined columns.@@N
-Shallow trenches funnel drifting sand away from the main caravan path.@@N
-~
-4 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8719
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8759
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8738
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8740
-@@yMirage March@@N~
-The stone-terraced quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8720
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8741
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8760
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8741
-@@yGolden Dust Walk@@N~
-The ochre-breathed quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8721
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8742
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8761
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8740
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8742
-@@yNorthwind Traverse@@N~
-The mirage-cast quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8722
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8743
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8762
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8741
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8743
-@@ySaffron Driftway@@N~
-The brass-marked quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8723
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8744
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8763
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8742
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8744
-@@yBluewater Verge@@N~
-The dawn-baked quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-One dressed block survives the wind: its incised pyramid sigil points beyond the oasis toward buried stone corridors.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8724
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8745
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8764
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8743
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8745
-@@ySunplate Causeway@@N~
-The dusk-cooled quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8725
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8746
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8765
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8744
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8746
-@@yMirage March@@N~
-The wind-scoured quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8726
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8747
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8766
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8745
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8747
-@@yGolden Dust Walk@@N~
-The sun-flared quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8727
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8748
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8767
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8746
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8748
-@@yNorthwind Traverse@@N~
-The salt-silvered quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8728
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8749
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8768
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8747
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8749
-@@ySaffron Driftway@@N~
-The lapis-dusted quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8729
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8750
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8769
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8748
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8750
-@@yBluewater Verge@@N~
-The amber-lit quarter of the northern oasis opens around cistern ribs stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8730
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8751
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8770
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8749
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8751
-@@ySunplate Causeway@@N~
-The reed-ringed quarter of the northern oasis opens around reed windbreaks stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8731
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8752
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8771
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8750
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8752
-@@yMirage March@@N~
-The stone-terraced quarter of the northern oasis opens around sunken spillways stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
-Sun-hardened mud still keeps impressions of last season's flood channels.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8732
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8753
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8772
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8751
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8753
-@@yGolden Dust Walk@@N~
-The ochre-breathed quarter of the northern oasis opens around salt pans stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, @@bbrown@@N dust streams low across your boots, and every marker suggests traders once moved in disciplined columns.@@N
-Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8733
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8754
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8773
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8752
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8754
-@@yNorthwind Traverse@@N~
-The mirage-cast quarter of the northern oasis opens around old watch posts stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
-From this square, gulls track the hidden waterline somewhere ahead, and every marker suggests traders once moved in disciplined columns.@@N
-Even in the heat, you smell mineral damp that should not exist this far north.@@N
-~
-0 10
-D0
-A narrow ramp climbs toward another survey-marked square.
-~
-~
-0 -1 8734
-D1
-The caravan line continues through a bright seam of blown sand.
-~
-~
-0 -1 8755
-D2
-Footprints descend where the route steps into the next grid lane.
-~
-~
-0 -1 8774
-D3
-The marked lane curves back toward earlier watch-cairns.
-~
-~
-0 -1 8753
-E
-route line~
-Painted arrows and knot-marks imply the intended progression: west-to-east across a row, then south to the next line.~
-S
-#8755
-@@ySaffron Driftway@@N~
-The brass-marked quarter of the northern oasis opens around dry sluice channels stitched with @@lbright blue@@N banners.@@N
-Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+Wind drives @@yyellow@@N grit in low ribbons while @@bbrown@@N retaining walls keep the lane coherent despite branching footpaths.@@N
 From this square, the northern sky holds a fierce @@lbright blue@@N vault, and every marker suggests traders once moved in disciplined columns.@@N
 Sun-hardened mud still keeps impressions of last season's flood channels.@@N
 ~

@@ -1,0 +1,13 @@
+level -1
+keywords shelp_ventriloquate
+---
+*******************************************************************************
+       Name: Ventriloquate		
+    Classes: Mage(3)
+   Duration: N/A
+   Modifies: N/A
+       Type: N/A
+Description: This spell allows the caster to throw his/her voice onto a
+             being in the same room.  To use the spell correctly, the caster
+             must specify a target, and the message to be given.
+*******************************************************************************

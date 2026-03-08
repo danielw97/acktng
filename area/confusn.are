@@ -17,965 +17,2167 @@ T You can teleport into here
 #9601
 Edge of the Forest~
 You are standing at the edge of a large, gloomy forest.  Looking inside, you
-find it hard to see more than a few feet in any direction.  The trees inside
-are short and withered, as if some force has mutated them.  You realize that
-the forest is deathly quiet.
-~
-16384 3
-D1
-Inside the Forest.
-~
+
+find it hard to see more than a few feet in any direction.  The trees inside
+
+are short and withered, as if some force has mutated them.  You realize that
+
+the forest is deathly quiet.
+
 ~
-0 -1 9602
-D3
-Roc Road.
-~
+
 ~
-0 -1 3240
+
+~
+
+thick mist wafts about, obscuring your view of anything but that immediately
+
+in front of you.  You find it very hard to keep to bearings in this strange
+
+mist, which seems almost alive, and intent of keeping you out.
+
+~
+
+~
+
+~
+~
+
+thick mist wafts about, obscuring your view of anything but that immediately
+
+in front of you.  You find it very hard to keep to bearings in this strange
+
+mist, which seems almost alive, and intent of keeping you out.
+
+~
+
+~
+~
+
+~
+
+thick mist wafts about, obscuring your view of anything but that immediately
+
+in front of you.  You find it very hard to keep to bearings in this strange
+
+mist, which seems almost alive, and intent of keeping you out.
+
+~
+
+~
+
+~
+
+thick mist wafts about, obscuring your view of anything but that immediately
+
+in front of you.  You find it very hard to keep to bearings in this strange
+
+mist, which seems almost alive, and intent of keeping you out.  You are able
+
+to see more clearly to the east.
+
+~
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence. One tree
+
+draws your attention, a large carving embossed in it's bark.
+
+~
+
+~
+
+~
+
+letter M when studied.
+
+~
+
+~
+
+the ground at either side of the mountain.@@N
+
+~
+
+and a rounded, smooth central channel.@@N
+
+~
+
+capped by another perfectly straight line of trees from east to west.@@N
+
+~
+
+glance.@@N
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+~
+The Forest Path~
+You are on a narrow, winding path, running through this strange, twisted
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+The Forest Path~
+You are on a narrow, winding path, running through this strange, twisted
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
 S
-#9602
-Inside the Mist~
-You are within the forest, surrounded by strange, withered trees.  A strange,
-thick mist wafts about, obscuring your view of anything but that immediately
-in front of you.  You find it very hard to keep to bearings in this strange
-mist, which seems almost alive, and intent of keeping you out.
-~
-0 3
-D2
-Inside the Mist.
-~
+
+forest, full of stunted, withered trees and an enormous silence.
+
 ~
-0 -1 9603
-D3
-The Edge of the Forest.
-~
+
 ~
-0 -1 9601
-S
-#9603
-Inside the Mist~
-You are within the forest, surrounded by strange, withered trees.  A strange,
-thick mist wafts about, obscuring your view of anything but that immediately
-in front of you.  You find it very hard to keep to bearings in this strange
-mist, which seems almost alive, and intent of keeping you out.
-~
-0 3
-D2
-Inside the Mist.
-~
+
 ~
-0 -1 9602
-D3
-Inside the Mist.
-~
+
+forest, full of stunted, withered trees and an enormous silence.
+
 ~
-0 -1 9604
-S
-#9604
-Inside the Mist~
-You are within the forest, surrounded by strange, withered trees.  A strange,
-thick mist wafts about, obscuring your view of anything but that immediately
-in front of you.  You find it very hard to keep to bearings in this strange
-mist, which seems almost alive, and intent of keeping you out.
-~
+
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+The Path.
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+The Path.
+
+~
+~
+
+~
+
+forest, full of stunted, withered trees and an enormous silence.
+
+~
+
+~
+
+~
+
+continues South, through the twisted undergrowth.
+
+~
+
+~
+
+~
+~
+
+twisted undergrowth.  The main path lies to the North, whilst the track meets
+
+a corner to the South.
+
+~
+
+~
+~
+
+~
+
+through the thick undergrowth towards the main path, or travel East, further 
+
+into the undergrowth, where the track is lost between the thick bushes.
+
+~
+
+~
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
 0 3
 D0
-Inside the Mist.
-~
+
 ~
-0 -1 9603
-D2
-Inside the Mist.
-~
+
 ~
-0 -1 9605
-S
-#9605
-Inside the Mist~
-You are within the forest, surrounded by strange, withered trees.  A strange,
-thick mist wafts about, obscuring your view of anything but that immediately
-in front of you.  You find it very hard to keep to bearings in this strange
-mist, which seems almost alive, and intent of keeping you out.  You are able
-to see more clearly to the east.
-~
+~
+
+rough marks on the walls, it looks like this area has been mined in the past.
+
+~
+
+~
+
+~
+
+~
+~
+
+rough marks on the walls, it looks like this area has been mined in the past.
+
+~
+
+~
+
+~
+
+~
+~
+
+rough marks on the walls, it looks like this area has been mined in the past.
+
+~
+
+~
+
+~
+
+~
+
+it still is.  It looks like this room is currently being mined.
+
+~
+
+~
+
+rough marks on the walls, it looks like this area has been mined in the past.
+
+~
+
+~
+
+~
+
+~
+
+rough marks on the walls, it looks like this area has been mined in the past.
+
+~
+
+~
+
+~
+
+~
+
+it still is.  It looks like this room is currently being mined.
+
+~
+
+~
+~
+
+it still is.  It looks like this room is currently being mined.
+
+~
+
+~
+
+it still is.  It looks like this room is currently being mined.
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
 0 3
-D0
-Inside the Mist.
-~
+
 ~
-0 -1 9604
-D1
-The Forest Path.
-~
-~
-0 -1 9606
-S
-#9606
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
-~
-0 -1 9607
-D3
-Inside The Mist.
-~
-~
-0 -1 9605
-S
-#9607
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
-~
-0 -1 9608
-D3
-The Path.
-~
-~
-0 -1 9606
-S
-#9608
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9609
-D2
-The Path.
-~
-~
-0 -1 9622
-D3
-The Path.
-~
-~
-0 -1 9607
-S
-#9609
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9610
-D2
-The Path.
-~
-~
-0 -1 9608
-S
-#9610
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9613
-D1
-The Path.
-~
-~
-0 -1 9611
-D2
-The Path.
-~
-~
-0 -1 9609
-S
-#9611
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
-~
-0 -1 9612
-D3
-The Path.
-~
-~
-0 -1 9610
-S
-#9612
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D2
 The Undergrowth.
-~
+
 ~
-0 -1 9748
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+~
+
+~
+
+your underwear.  Now and again, you catch a glimpse of tiny beetle-like
+
+insects scampering about on the water's edge.  Short, withered rushes line
+
+the edge of the pond.
+
+~
+
+~
+~
+
+~
+
+~
+
+size, like many things in this strange forest.  Short, twisted rushes attempt
+
+to grow around the edge of the water, but aren't doing too well.  The smell
+
+here is pretty gross.
+
+~
+
+~
+
+~
+~
+
+pretty unwell.  Considering the sickly colour of the water, and the nose-
+
+curdling smell, you're hardly surprised.  To the South, just past the water's
+
+edge, you can see a small opening in the ground.
+
+~
+
+~
+~
+
+~
+D2
+
+~
+
+buzz around your head, just out of reach for a good swat.  What plant life
+
+that manages to grow here only just manages to do so, but looks horrible
+
+anyway.
+
+~
+
+~
+
+~
+
+it looks like there is only room for two people at most in here.  The earth
+
+here looks dirty, and smells faintly.  The opening leads Down, whilst you
+
+are able to see the pond to the North.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+S
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+0 3
+
+~
+
+~
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+it still is.  It looks like this room is currently being mined.
+
+~
+
+~
+
+rough marks on the walls, it looks like this area has been mined in the past.
+
+~
+
+~
+
+~
+S
+
+come to meet sometimes, and discuss their latest plans for global domination.
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.  To the West you
+
+can just about see the main path.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.  There is a large
+
+mound of earth to the south.
+
+~
+
+~
+
+~
 D3
-The Path.
-~
+
 ~
-0 -1 9611
+
+not much special to see.  It looks unused.
+
+~
+
+~
+
+~
 S
-#9613
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
 ~
-0 -1 9614
-D2
-The Path.
-~
+
 ~
-0 -1 9610
-S
-#9614
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
+
 ~
-0 -1 9615
-D2
-The Path.
-~
+
 ~
-0 -1 9613
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+~
+
+~
 D3
-The Path.
-~
+
 ~
-0 -1 9617
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+growing around your feet looks brown, and poisoned.
+
+~
+
+~
+
+~
+
+growing around your feet looks brown, and poisoned.
+
+~
+
+~
+~
+
+~
 S
-#9615
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
+
+growing around your feet looks brown, and poisoned.
+
+~
+
+~
+
+~
+
+~
+
+growing around your feet looks brown, and poisoned.
+
+~
+
+~
+
+~
+
+growing around your feet looks brown, and poisoned.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+
+~
+~
+S
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+~
+
+~
+
+~
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+~
+
+~
+S
+
+piles of bones lie on the floor, among the occasional pool of blood.
+
+~
+
+~
+
+~
+
+higher up, although a large branch to the East has a large nest built on it.
+
+~
+
+~
+
+~
+
+many other types of assorted junk that the Hippogriffs have collected from
+
+the bizare forest.
+
+~
+
+~
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
 0 3
-D1
-The Path.
-~
+
 ~
-0 -1 9616
-D3
-The Path.
-~
+
 ~
-0 -1 9614
-S
-#9616
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-4 3
+
+~
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+@@GA small @@rbush@@G obscures the view to the south.@@N
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
+
+~
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
+
+~
+
+~
 D2
+
 ~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
 ~
-0 -1 9052
-D3
-The Path.
-~
+
 ~
-0 -1 9615
-S
-#9617
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
+
+~
+
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
 0 3
 D0
-The Undergrowth.
-~
+
 ~
-0 -1 9709
-D1
-The Path.
-~
+
 ~
-0 -1 9614
-D3
-The Path.
-~
 ~
-0 -1 9618
+
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
+
+~
+
+~
 S
-#9618
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
 ~
-0 -1 9617
-D2
-The Path.
-~
+
 ~
-0 -1 9620
-D3
-The Path.
-~
+
 ~
-0 -1 9619
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
+
+~
+
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+~
+
+~
+
+here were felled many years ago, and have never grown back.  The odd weed
+
+pokes its head through the dirty ground, but they don't seem to have been
+
+able to grow much.
+
+ 
+
+@@dTo the north, you can faintly here the sounds of a hammer striking wood.@@N
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.  To the West you can
+
+see the door to a small cabin.
+
+~
+
+~
+
+~
+
+dust covers the rotten, wooden floor.  The hallway continues to the North and
+
+South, whilst there is a door to the East.
+
+~
+
+~
+
+~
+
+~
+
+A thick coating of dust covers just about everything in here.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+for experiments of some sort.  Various parts of different beasts lie around
+
+you on the floor - lion's bodies, parts of bats and others you can't identify.
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+and depraved forest, and all its inhabitants.  Just being in this room makes
+
+you feel ill.
+
+~
+
+~
+
+~
+
+which appears to have been built out of the bones of many creatures.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.  A huge, thick
+
+thorn bush lies to the South.
+
+~
+
+~
+
+~
 S
-#9619
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
+
+to a small tribe of Centaurs, who, created along with all the other horrific
+
+creatures here, have decided to create an area of peace, rather than just
+
+try to kill everything that moves.
+
 ~
-0 -1 9618
-S
-#9620
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
+
+~
+
+~
+~
+
+~
+
+~
+
+to a small tribe of Centaurs, who, created along with all the other horrific
+
+creatures here, have decided to create an area of peace, rather than just
+
+try to kill everything that moves.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+to a small tribe of Centaurs, who, created along with all the other horrific
+
+creatures here, have decided to create an area of peace, rather than just
+
+try to kill everything that moves.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+to a small tribe of Centaurs, who, created along with all the other horrific
+
+creatures here, have decided to create an area of peace, rather than just
+
+try to kill everything that moves.
+
+~
 D0
-The Path.
-~
+
 ~
-0 -1 9618
-D2
-The Path.
-~
+
 ~
-0 -1 9621
+~
+
+to a small tribe of Centaurs, who, created along with all the other horrific
+
+creatures here, have decided to create an area of peace, rather than just
+
+try to kill everything that moves.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+to a small tribe of Centaurs, who, created along with all the other horrific
+
+creatures here, have decided to create an area of peace, rather than just
+
+try to kill everything that moves.
+
+~
+
+~
+
+~
+~
+
+to a small tribe of Centaurs, who, created along with all the other horrific
+
+creatures here, have decided to create an area of peace, rather than just
+
+try to kill everything that moves.
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+like all life in the forest, is strange and mutated.  The large, thick bushes
+
+and weeds seem to be everywhere, hampering your movement.
+
+~
+
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+@@bAbove you hangs a large nexus of roots.@@N
+
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+~
 S
-#9621
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence. One tree
-draws your attention, a large carving embossed in it's bark.
-~
-0 3
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
 D0
-The Path.
-~
+
 ~
-0 -1 9620
-E
-carving~
-@@WSeemingly a pictograph, you see a @@gmountain @@Wsheathed in @@dstormclouds@@W, @@lthunderbolts@@W flashing from the @@dmount@@W to strike the @@Gforests@@W below@@N.
-~
-E
-mountain~
-Peering even closer to the mountain, you note that it strangely resembles the
-letter M when studied.
-~
-E
-stormclouds~
-@@dSheathing the peak in a perfect circle, the clouds weigh upon your vision.@@N
-~
-E
-thunderbolts~
-@@lArcing from opposite sides of the clouds, the bolts cross once, piercing
-the ground at either side of the mountain.@@N
-~
-E
-mount~
-@@dThe mount itself is dominated by a strangely shaped valley, with sheer walls
-and a rounded, smooth central channel.@@N
-~
-E
-forests~
-@@GTowering over the undergrowth, a precise north to south line of trees are
-capped by another perfectly straight line of trees from east to west.@@N
-~
-E
-moxut~
-@@WA @@ashimmering @@yHand@@W slides just out of the range of your casual
-glance.@@N
-~
+
+~
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+~
+
+~
 S
-#9622
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9608
-D1
-The Path.
-~
-~
-0 -1 9623
-D2
-The Path.
-~
-~
-0 -1 9625
-S
-#9623
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
-~
-0 -1 9624
-D3
-The Path.
-~
-~
-0 -1 9622
-S
-#9624
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D2
-A Small Track.
-~
-~
-0 -1 9636
-D3
-The Path.
-~
-~
-0 -1 9623
-S
-#9625
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9622
-D2
-The Path.
-~
-~
-0 -1 9626
-S
-#9626
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9625
-D3
-The Path.
-~
-~
-0 -1 9627
-S
-#9627
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
-~
-0 -1 9626
-D2
-Undergrowth.
-~
-~
-0 -1 9733
-D3
-The Path.
-~
-~
-0 -1 9628
-S
-#9628
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9629
-D1
-The Path.
-~
-~
-0 -1 9627
-D2
-The Path.
-~
-~
-0 -1 9631
-S
-#9629
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9630
-D2
-The Path.
-~
-~
-0 -1 9628
-S
-#9630
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D2
-The Path.
-~
-~
-0 -1 9629
-D3
-The Undergrowth.
-~
-~
-0 -1 9723
-S
-#9631
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9628
-D2
-The Path.
-~
-~
-0 -1 9632
-S
-#9632
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D0
-The Path.
-~
-~
-0 -1 9631
-D1
-The Path.
-~
-~
-0 -1 9633
-S
-#9633
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
-~
-0 -1 9634
-D3
-The Path.
-~
-~
-0 -1 9632
-S
-#9634
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-The Path.
-~
-~
-0 -1 9635
-D3
-The Path.
-~
-~
-0 -1 9633
-S
-#9635
-The Forest Path~
-You are on a narrow, winding path, running through this strange, twisted
-forest, full of stunted, withered trees and an enormous silence.
-~
-0 3
-D1
-Some Undergrowth.
-~
-~
-0 -1 9671
-D3
-The Path.
-~
-~
-0 -1 9634
-S
-#9636
-A Small Track~
-You are on a small, narrow track, which runs North to the main path, or
-continues South, through the twisted undergrowth.
-~
-0 3
-D0
-The Main Path.
-~
-~
-0 -1 9624
-D2
-Further along the Track.
-~
-~
-0 -1 9637
-S
-#9637
-Further along the Track~
-You are on a small, narrow track, which runs through the forest's bitter,
-twisted undergrowth.  The main path lies to the North, whilst the track meets
-a corner to the South.
-~
-0 3
-D0
-A Small Track.
-~
-~
-0 -1 9636
-D2
-A Corner in the Track.
-~
-~
-0 -1 9638
-S
-#9638
-A Corner in the Track~
-You are at a corner of this small and narrow track.  You can head North, 
-through the thick undergrowth towards the main path, or travel East, further 
-into the undergrowth, where the track is lost between the thick bushes.
-~
-0 3
-D0
-The Track.
-~
-~
-0 -1 9637
-D1
-Into the Undergrowth.
-~
-~
-0 -1 9639
-S
-#9639
-In the Undergrowth~
-You are deep within this strange, monstrous forest.  The undergrowth here,
-like all life in the forest, is strange and mutated.  The large, thick bushes
-and weeds seem to be everywhere, hampering your movement.
-~
-0 3
-D1
-The Undergrowth.
-~
-~
-0 -1 9640
-D2
-The Undergrowth.
-~
-~
-0 -1 9652
-D3
-The Corner of the Track.
-~
-~
-0 -1 9638
-S
-#9640
-In the Undergrowth~
-You are deep within this strange, monstrous forest.  The undergrowth here,
-like all life in the forest, is strange and mutated.  The large, thick bushes
-and weeds seem to be everywhere, hampering your movement.
-~
-0 3
-D0
-The Undergrowth.
-~
-~
-0 -1 9650
-D3
-The Undergrowth.
-~
-~
-0 -1 9639
-S
-#9641
-A Passage~
-You are in a small passage, cut out of the rock itself.  From the looks of the
-rough marks on the walls, it looks like this area has been mined in the past.
-~
-9 11
-D0
-A Passage.
-~
-~
-0 -1 9645
-D2
-A Passage.
-~
-~
-0 -1 9642
-D4
-A Small Opening.
-~
-~
-0 -1 9659
-S
-#9642
-A Passage~
-You are in a small passage, cut out of the rock itself.  From the looks of the
-rough marks on the walls, it looks like this area has been mined in the past.
-~
-9 11
-D0
-A Passage.
-~
-~
-0 -1 9641
-D1
-A Passage.
-~
-~
-0 -1 9643
-D3
-A Passage.
-~
-~
-0 -1 9646
-S
-#9643
-A Passage~
-You are in a small passage, cut out of the rock itself.  From the looks of the
-rough marks on the walls, it looks like this area has been mined in the past.
-~
-9 11
-D1
-A Mining Room.
-~
-~
-0 -1 9644
-D2
-A Mining Room.
-~
-~
-0 -1 9648
-D3
-A Passage.
-~
-~
-0 -1 9642
-S
-#9644
-A Mining Room~
-You are in a small room, cut out of the rock, and by the looks of the walls,
-it still is.  It looks like this room is currently being mined.
-~
-9 11
-D3
-A Passage.
-~
-~
-0 -1 9643
-S
-#9645
-A Passage~
-You are in a small passage, cut out of the rock itself.  From the looks of the
-rough marks on the walls, it looks like this area has been mined in the past.
-~
-9 11
-D0
-A Mining Room.
-~
-~
-0 -1 9667
-D2
-A Passage.
-~
-~
-0 -1 9641
-D3
-A Passage.
-~
-~
-0 -1 9668
-S
-#9646
-A Passage~
-You are in a small passage, cut out of the rock itself.  From the looks of the
-rough marks on the walls, it looks like this area has been mined in the past.
-~
-9 11
-D0
-A Mining Room.
-~
-~
-0 -1 9649
-D1
-A Passage.
-~
-~
-0 -1 9642
-D2
-A Mining Room.
-~
-~
-0 -1 9647
-S
-#9647
-A Mining Room~
-You are in a small room, cut out of the rock, and by the looks of the walls,
-it still is.  It looks like this room is currently being mined.
-~
-9 11
-D0
-A Passage.
-~
-~
-0 -1 9646
-S
-#9648
-A Mining Room~
-You are in a small room, cut out of the rock, and by the looks of the walls,
-it still is.  It looks like this room is currently being mined.
-~
-9 11
-D0
-A Passage.
-~
-~
-0 -1 9643
-S
-#9649
-A Mining Room~
-You are in a small room, cut out of the rock, and by the looks of the walls,
-it still is.  It looks like this room is currently being mined.
-~
-9 11
-D2
-A Passage.
-~
-~
-0 -1 9646
-S
-#9650
-In the Undergrowth~
-You are deep within this strange, monstrous forest.  The undergrowth here,
-like all life in the forest, is strange and mutated.  The large, thick bushes
-and weeds seem to be everywhere, hampering your movement.
-~
-0 3
-D0
-The Undergrowth.
-~
-~
-0 -1 9651
-D2
-The Undergrowth.
-~
-~
-0 -1 9640
-S
-#9651
-In the Undergrowth~
-You are deep within this strange, monstrous forest.  The undergrowth here,
-like all life in the forest, is strange and mutated.  The large, thick bushes
-and weeds seem to be everywhere, hampering your movement.
-~
-0 3
-D2
-The Undergrowth.
-~
-~
-0 -1 9650
-S
-#9652
-In the Undergrowth~
-You are deep within this strange, monstrous forest.  The undergrowth here,
-like all life in the forest, is strange and mutated.  The large, thick bushes
-and weeds seem to be everywhere, hampering your movement.
-~
-0 3
-D0
-The Undergrowth.
-~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+
+~
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+dusty floor.  Smells in here as well.
+
+~
+
+without a light source, you'd be blind down here.  It appears that the cave
+
+you are in is connected to other such caves, and so on....
+
+~
+
+~
+~
+
+~
+
+as their name suggests.  Needless to say, they are most ugly.
+
+~
+
+~
+
+as their name suggests.  Needless to say, they are most ugly.
+
+~
+
+~
+
+as their name suggests.  Needless to say, they are most ugly.
+
+~
+
+~
+
+replaced by webbed feet, and the rear half is a silver, scaled tail.
+
+~
+
+~
+
+eight-legged bodies and a long, slippery neck.  This one has obviously not
+
+managed to reach the level of master, and has therefore been mastered itself.
+
+~
+
+~
+
+eight-legged bodies and a long, slippery neck.  This one has obviously not
+
+managed to reach the level of master, and has therefore been mastered itself.
+
+~
+
+~
+
+eight-legged bodies and a long, slippery neck.  This one has reached the level
+
+of master, and is in charge of making sure the slaves do their work.
+
+~
+
+~
+
+eight-legged bodies and a long, slippery neck.  This one has reached the 
+
+supreme rank of ruler over this small mine, and is in charge of all of the
+
+operations.
+
+~
+
+~
+
+eight-legged bodies and a long, slippery neck.  This one has reached a high
+
+rank in the mine, answering only to the Ruler itself.
+
+~
+
+~
+
+you as it goes about its task of looking for small insects.
+
+~
+
+~
+
+you as it goes about its task of looking for small insects.
+
+~
+
+~
+
+combine a lizard man with a hawk.  Boy, he's ugly.
+
+~
+
+~
+
+combine a lizard man with a hawk.  Boy, he's ugly.
+
+~
+
+~
+
+combine a lizard man with a hawk.  Boy, he's ugly.  He's also the leader of
+
+the other broken ones in this clearing.
+
+~
+
+~
+
+features of its race: the head and wings of an eagle, and the body of a horse.
+
+~
+
+~
+
+It doesn't look too pleased to see you!
+
+~
+
+~
+
+of face on its bark.
+
+~
+
+~
+
+of face on its bark.
+
+~
+
+~
+
+7 feet tall.  It's dusky golden fur is topped by fine, black mane.
+
+~
+
+~
+
+6 feet tall.  It's dusky golden fur is topped by fine, black mane.
+
+~
+
+~
+
+3 feet tall.  It's dusky golden fur is topped by the beginnings of a fine
+
+black mane.
+
+~
+
+~
+
+It looks like it's been left here to guard something...
+
+~
+
+~
+
+about corrupting all life here as a form of revenge for his punishment.
+
+He is about 8 feet tall, and appears to have added parts of other creatures
+
+to his own body, in an attempt to boost his powers.
+
+~
+
+~
+
+~
+
+~
+
+large, and responsible for the supply of food to the tribe, via hunting.
+
+~
+
+~
+
+medium sized, and generally looks after its young.
+
+~
+
+~
+
+small, and loos to be about one year old.
+
+~
+
+~
+
+very large, and in charge of this small tribe.  Look like he knows some
+
+simple magic, too.
+
+~
+
+~
+
+of man (upper body).  It looks pretty big, and pretty angry to see you!
+
+~
+
+~
+
+of man (upper body).  It looks pretty big, and pretty angry to see you!
+
+~
+
+~
+
+of man (upper body).  It looks pretty big, and pretty angry to see you!
+
+The King is in charge of this small colony, and does not take kindly to
+
+intruders!
+
+~
+
+~
+
+of man (upper body).  It looks pretty big, and pretty angry to see you!
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+to make it look valuable.  The blade is real, however, and very sharp!.
+
+~
+
+thick, and appears to be in good condition.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+caasual glance.@@N
+
+~
+M 0 9601 1 9651           Young male catrats
+M 0 9601 2 9663 
+M 0 9601 3 9653 
+M 0 9602 1 9651           Female catrats
+M 0 9602 2 9662 
+M 0 9603 1 9666           Male catrat
+E 0 9605 0 5              Wear fur on body
+M 0 9603 2 9652           Male catrat
+M 0 9604 1 9658           Hippocampus
+G 0 9601 0                Give hippo food pack
+M 0 9605 1 9644           Slave neogi (lv 18)
+M 0 9605 2 9667 
+M 0 9605 3 9647 
+M 0 9606 1 9648           Slave Neogi (lv 16)
+M 0 9606 2 9649           
+M 0 9607 1 9644           Master Neogi
+E 0 9603 0 16             wields whip
+M 0 9607 2 9649           Master neogi
+M 0 9607 3 9667 
+M 0 9608 1 9669           Neogi leader
+E 0 9604 0 16             wields dagger
+E 0 9602 0 17             holds pouch
+M 0 9609 1 9669           Neogi
+M 0 9609 2 9645 
+M 0 9610 1 9696           Cockatrice
+M 0 9610 2 9702           cockatrice
+M 0 9610 3 9703           cockatrice
+M 0 9611 1 9700           cockatrice
+E 0 9609 0 17             give yellow stone
+M 0 9612 1 9682           broken one
+M 0 9612 2 9681           broken one
+E 0 9610 0 16             wield club
+M 0 9613 1 9683           broken one
+M 0 9613 2 9679           broken one
+M 0 9614 1 9680           greater broken one
+E 0 9610 0 16             wield club
+M 0 9615 1 9707           baby hippogriff
+M 0 9615 2 9707           baby griff
+M 0 9616 1 9706           big griff
+E 0 9607 0 16             wield beak (!)
+G 0 9606 0                give gold
+M 0 9617 1 9694          small treant
+E 0 9608 0 16            wield branch
+M 0 9618 1 9689          large treant
+E 0 9608 0 16             wield branch
+M 0 9619 1 9720         male wemic
+E 0 9611 0 11           hold shield
+E 0 9613 0 13           wear belt
+M 0 9619 2 9715         male wemic
+E 0 9611 0 11           hold shield
+E 0 9612 0 16           wield hammer
+M 0 9619 3 9717         male wemic
+E 0 9613 0 13           wear belt
+E 0 9612 0 16           wield hammer
+M 0 9620 1 9722         female wemic
+M 0 9620 2 9721         female wemic
+M 0 9621 1 9722         wemic cub
+M 0 9621 2 9722         wemic cub
+M 0 9621 3 9721         wemic cub
+M 0 9621 4 9721         wemic cub
+M 0 9622 1 9725         yugoloth guardian
+E 0 9614 0 16           wield sword
+E 0 9615 0 5            wear breastplate
+E 0 9616 0 6            wear helm
+E 0 9617 0 8            wear boots
+E 0 9618 0 7            wear leggings
+M 0 9622 2 9725         yugoloth guardian
+E 0 9614 0 16           wield sword
+E 0 9615 0 5            wear breastplate
+E 0 9616 0 6            wear helm
+E 0 9617 0 8            wear boots
+E 0 9618 0 7            wear leggings
+G 0 9619 0              give key
+M 0 9623 1 9732         YMMAS!!
+O 0 9621 0 9727         potion into strongroom
+O 0 9622 0 9727         scroll into strongroom
+M 0 9625 1 9736         male centaur
+E 0 9623 0 11           hold shield
+E 0 9624 0 16           wield club
+M 0 9625 2 9742         male centaur
+E 0 9623 0 11           hold shield
+E 0 9624 0 16           wield club
+M 0 9626 1 9740         female centaur
+M 0 9626 2 9738         female centaur
+M 0 9626 3 9747         female centaur
+M 0 9626 4 9745         female centaur
+M 0 9627 1 9740         baby centaurs
+M 0 9627 2 9740 
+M 0 9627 3 9738 
+M 0 9627 4 9747 
+M 0 9627 5 9747 
+M 0 9627 6 9745 
+M 0 9628 1 9746         centaur leader
+E 0 9625 0 16           wield lance
+E 0 9623 0 11           Hold shield
+M 0 9629 1 9757         patrol manscorpian
+E 0 9626 0 16           wield battle axe
+M 0 9629 2 9770         patrol manscorpian
+M 0 9629 3 9766         patrol manscorpian
+E 0 9626 0 16           wield battle axe
+M 0 9629 4 9759         patrol manscorpian
+M 0 9630 1 9757         patrol/spellcaster manscorpian
+M 0 9630 2 9765         patrol/spellcaster manscorpian
+M 0 9630 3 9753         patrol/spellcaster manscorpian
+M 0 9632 1 9768         manscorpian guard
+E 0 9628 0 14           wear bracer - left
+E 0 9628 0 15           wear bracer - right
+M 0 9632 2 9768         manscorpian guard
+E 0 9628 0 14           wear bracer - left
+E 0 9628 0 15           wear bracer - right
+D 0 9673 5 1  Slab at cave entrance
+D 0 9696 4 1 
+D 0 9678 2 1  Bush at undergrowth/forest
+D 0 9684 0 1 
+D 0 9710 0 1  Bush near wemic glade
+D 0 9712 2 1 
+D 0 9725 3 1  Door to cabin
+D 0 9726 1 1 
+D 0 9730 3 2  Door to Ymass' lair
+D 0 9731 1 2 
+D 0 9727 5 1 
+D 0 9728 3 1  Door in cabin
+D 0 9729 1 1 
+D 0 9735 2 1  Close thorn bush to centaurs
+D 0 9736 0 1 
+D 0 9739 2 1  Close door to hut in Centaurs
+D 0 9740 0 1 
+D 0 9737 2 1  Close door to hut in Centaurs
+D 0 9738 0 1 
+D 0 9744 2 1  Close door to hut in Centaurs
+D 0 9745 0 1 
+D 0 9742 2 1  Close door to hut in Centaurs
+D 0 9746 0 1 
+D 0 9743 2 1  Close door to hut in Centaurs
+D 0 9747 0 1 
+D 0 9750 5 1  Close trapdoor to Manscorpians
+D 0 9751 4 1 
+~
 ~
 0 -1 9639
 D1

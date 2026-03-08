@@ -18,196 +18,446 @@ S Title not shown on area list.
 #1146
 The Secret Garden~
 This small garden is built on the roof of part of the Players' Rooms.
-Lush green grass softly ripples around your legs, while unseen birds
-serenade you with their sweet song.  On the bushes that encompass this
-area, small, brightly-coloured butterflies flutter back and forth,
-while a soft breeze helps to keep you cool and relaxed.
-~
-17935 11
-D4
+
+Lush green grass softly ripples around your legs, while unseen birds
+
+serenade you with their sweet song.  On the bushes that encompass this
+
+area, small, brightly-coloured butterflies flutter back and forth,
+
+while a soft breeze helps to keep you cool and relaxed.
+
+~
+
+around the Observation Room to the East.  From here, you seem uninterested
+
+in the amazing view, and more worried about not falling to the ground, many
+
+tens of feet below you.
+
 ~
 ~
-8 -1 1145
+
+adjacent Temple and buildings of Midgaard.
+
+Circular in shape, with a domed roof, this room offers clear views across
+
+Midgaard and the surrounding area.  Far off to the West, you can sometimes
+
+watch the Sun glint off the ocean.
+
+ 
+
+There are no walls as such here; instead the whole room appears to be
+
+constructed out of the finest quality glass.  Outside the windows, a
+
+small metal walkway encircles the structure, although you are unable to
+
+work out any way to gain access to it.  Even if you could, balancing on
+
+such a thin strip of metal this high up could be tricky...  Instead, why
+
+not just sit a while, and enjoy the view, letting your worries fade away?
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+Due to the complexity of advancing one's Knowledge, only one disciple may
+
+enter at any one time.  Your Guild room is to the south.
+
+~
+
+~
+
+or true Mindbenders.  The room is fairly small, with small cushions littered
+
+about the place for Psionicists to rest and meditate.
+
+The chamber lies to the south, and your training room to the north.
+
+~
+
+~
+
+~
+
+accomadate the new guilds of this Realm.  The chamber itself is square, with
+
+rounded corners.  Stone stairs lead up to Guild Square, and a small spiral
+
+staircase winds down below you.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+in this room - the ceiling included.  There are numerous broken bottles 
+
+littering the floor, and some old barrels have been left stacked against the
+
+west wall.
+
+~
+
+~
+
+A huge gleaming bar stretches across the far wall, manned by a single bartender
+
+who never appears to be over or underworked.  Stools line the bar, and the rest
+
+of the room is occupied by small and large tables, with an assortment of
+
+chairs surrounding them.  A small spiral staircase leads up.
+
+~
+
+~
+
+~
+
+Your Guild Room lies to the East.
+
+~
+
+~
+~
+
+arch over numerous huge oaken tables, most of these cluttered with strange-
+
+looking pipes and flasks.  The floor is covered with half-erased pentagrams
+
+and even weirder symbols, and a blackboard in a dark corner has only been
+
+partially cleaned, some painful-looking letters faintly visible.  
+
+Your Guild Room lies to the North.
+
+~
+
+~
+
+~
+
+Your Guild Room lies to the West.
+
+~
+
+~
+
+the wall, just above the altar which is set against the western wall.  
+
+Your Guild Room lies to the South.
+
+~
+
+~
+
+~
 S
-#1145
-On A High Up Ledge~
-This small, narrow ledge is constructed out of metal, and forms a walkway
-around the Observation Room to the East.  From here, you seem uninterested
-in the amazing view, and more worried about not falling to the ground, many
-tens of feet below you.
-~
-18452 1
-D1
+
+~
+
+~
+
+~
+
+congregate, rest and talk about any subject.  The way out is to the North.
+
+~
+
 ~
 ~
-481 1145 1144
-D5
+
+without gaining Player Killing Flags.  The way out is to the South.
+
+~
+
+~
+
+rooms.  Exits lead north, east, south and west.
+
+~
+
+~
+
 ~
 ~
-8 -1 1146
+
+~
+
+~
 S
-#1144
-The Observation Room~
-This small room is situated above the level of the Player's Rooms, and the
-adjacent Temple and buildings of Midgaard.
-Circular in shape, with a domed roof, this room offers clear views across
-Midgaard and the surrounding area.  Far off to the West, you can sometimes
-watch the Sun glint off the ocean.
- 
-There are no walls as such here; instead the whole room appears to be
-constructed out of the finest quality glass.  Outside the windows, a
-small metal walkway encircles the structure, although you are unable to
-work out any way to gain access to it.  Even if you could, balancing on
-such a thin strip of metal this high up could be tricky...  Instead, why
-not just sit a while, and enjoy the view, letting your worries fade away?
-~
-17934 11
-D3
+
+Please use them for whatever purpose you see fit.  The way out is to the East.
+
+~
+
+~
+
+Please use them for whatever purpose you see fit.  The way out is to the North.
+
+~
+
 ~
 ~
-481 1145 1145
+
+Please use them for whatever purpose you see fit.  The way out is to the West.
+
+~
+
+~
+
+Please use them for whatever purpose you see fit.  The way out is to the South.
+
+~
+
+~
+~
+
+Player's Rooms.  There are four privacy booths here, situated to the north,
+
+east, south and west.  Each room will hold a *maximum* of two players.  Stairs
+
+lead down back to the Lobby.
+
+~
+
+~
+~
+
+~
+
+~
+~
+
+~
+
+~
 S
-#1140
-A Tiny Alcove~
-You are in a tiny alcove, which is just the right size to hold a bulletin board.
-~
-8 11
-D0
+
+Guild.  You can discuss new strategies with Guild members, devise new attack
+
+methods, or even suggestions to aid your Guild.  It's also a cool place in
+
+which to hang out!  Guild Sqaure is East, the training room lies to the West.
+
+~
+
+~
+
+~
+
+Guild.  It is intended to be used as a room to discuss spells, and perhaps
+
+suggestions for new spells.  It also makes a pretty select place to hang out!
+
+Guild Square is to the North, and the training room is South.
+
+~
+
 ~
 ~
-0 -1 1116
-S
-#1136
-New room~
-No description~
-0 11
-D1
+
+~
+
+Guild.  Everything here is nailed to the floor, for some strange reason.
+
+This room can be used to discuss new tactics, ideas or just for somewhere to
+
+hangout.  Guild Square is West, and the training room is East.
+
+~
+
+~
+
+~
+
+Guild.  It can be used as an room to discuss new ideas for Cleric spells, to
+
+get information from fellow guild members, or just as somewhere to hang out.
+
+The Guild Square is to the South, and the Training room is to the North.
+
+~
+
+~
+
+~
+
+the seperate guild rooms are built round.  These rooms are only open to players
+
+of *that* guild, and may be reached by use of the GUILD command, or by simply 
+
+walking into YOUR room.  Small steps lead back upstairs, whilst some dusty
+
+stone stairs leads further down.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+cold, like a train station on an Autumn morning.  You sense a general bustle,
+
+and can hear the mumbles and giggles of other players pursuing their interests.
+
+There are small, rock steps leading down towards where most of the noise is
+
+coming from.  Wide, wooden steps lead up, whilst doors are set into the east
+
+and west walls.
+
+~
+
 ~
 ~
-0 -1 1132
-S
-#1135
-New room~
-No description~
-0 11
-D0
+
+~
+
+~
+
+~
+
+to the west.
+
+~
+
+~
+
+~
+
+provided for players to meet privately, settle disputes, or just to chat.
+
+This room is of similar construction to the Temple, but with a lower ceiling.
+
+Hidden light sources make the marble walls gleam brightly.  Exits lead east
+
+and west.
+
+~
+
 ~
 ~
-0 -1 1131
-S
-#1134
-New room~
-No description~
-0 11
-D3
+
 ~
+
+share war stories or plan their strategies.
+
+A soft light emanates from the walls and comfortable rugs and cushions
+
+abound.
+
+ 
+
 ~
-0 -1 1130
-S
-#1132
-The Templars' Guild~
-Description to come...
-~
-0 11
-D1
-A small, dusty chamber.
-~
+
 ~
-0 -1 1124
-D3
+
+a peaceful, loving look. You notice that he is surrounded by a white aura.
+
+You sense that he could destroy your mind with the slightest thought.
+
 ~
+
 ~
-0 -1 1136
-S
-#1131
-The Conjuerers' Guild~
-Description to come....
-~
-0 11
-D0
+
+with the help of some spit and a dirty cloth.  He looks just that little bit
+
+strange, ya know?  Enough for you to notice, but not enough to make you really
+
+think about it.  He flashes a quick smile at you.
+
 ~
+
 ~
-0 -1 1124
-D2
+
+across his body prove that he was using arms before you were born.  He
+
+has a calm look on his face.
+
 ~
+
 ~
-0 -1 1135
-S
-#1130
-The Rangers' Guild~
-No description~
-0 11
-D1
+
+the way of the true thief.  She is dressed in poor clothing, having
+
+the appearance of a beggar.
+
 ~
+
 ~
-0 -1 1134
-D3
-A small, dusty chamber.
-~
+
+a peaceful, loving look. You notice that he is surrounded by a white aura.
+
 ~
-0 -1 1124
-S
-#1126
-The Training Room~
-This is where disciples of the Way come to advance their skills. 
-Due to the complexity of advancing one's Knowledge, only one disciple may
-enter at any one time.  Your Guild room is to the south.
-~
-1548 11
-D2
-Your Guild room.
-~
+
 ~
-0 -1 1125
-S
-#1125
-The Psionicist's Guild~
-This is where the Psionicists gather, whether they be beginners in the Way,
-or true Mindbenders.  The room is fairly small, with small cushions littered
-about the place for Psionicists to rest and meditate.
-The chamber lies to the south, and your training room to the north.
-~
-1036 11
-D0
-The Training Room.
-~
+
+vast amount of knowledge she possesses. She is wearing fine magic clothing,
+
+and you notice that she is surrounded by a blue shimmering aura.
+
 ~
-0 -1 1126
-D2
-The Chamber.
-~
+
 ~
-0 -1 1124
-S
-#1124
-A small, dusty chamber~
-You are in a small chamber, below Guild square.  This chamber was built to
-accomadate the new guilds of this Realm.  The chamber itself is square, with
-rounded corners.  Stone stairs lead up to Guild Square, and a small spiral
-staircase winds down below you.
-~
-12 11
-D0
-The Psionicist's Guild.
-~
+
 ~
-0 -1 1125
-D1
-Rangers' Guild.
-~
+
 ~
-0 -1 1130
-D2
-Conjuerers's Guild.
-~
+
 ~
-0 -1 1131
-D3
-Templar's Guild
-~
+
 ~
-0 -1 1132
-D4
+
+~
+
+~
+
+~
+M 0 1101 1 1120       The Magic Users Guildmaster
+M 0 1102 1 1118       The Clerics Guildmaster
+M 0 1103 1 1119       The Thieves Guildmaster
+M 0 1104 1 1121       The Warrior's Guildmaster
+M 0 1106 1 1126       The Psionicist's Guildmaster  
+M 0 1105 1 1122       Al the Bartender
+G 0 1101 0            Give Al the water
+G 0 1102 0            Give Al the beer
+G 0 1103 0            Give Al the wine
+G 0 1104 0            Give Al the whisky
+G 0 1105 0            Give Al the Pepsi
+D 0 1122 5 1 
+D 0 1123 4 1 
 Guild Square.
 ~
 ~

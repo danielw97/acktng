@@ -18,167 +18,367 @@ M No bad room spells allowed.
 #3401
 Path into the Town~
 You are on a small, well-worn dirt path, which leads into the Ogre town, known
-as Giganthia.
-~
-16388 4
-D1
-The Path Continues in this Direction.
-~
+
+as Giganthia.
+
 ~
-0 -1 3402
-D3
+
 ~
 ~
-0 0 3242
+
+as Giganthia.  The path continues to the West, away from the town, whilst
+
+small stone steps lead upwards, to a path within the town.
+
+~
+
+~
+~
+
+~
+
+the lower path, outside.
+
+~
+
+~
+~
+
+~
 S
-#3402
-Path into the Town~
-You are on a small, well-worn dirt path, which leads into the Ogre town, known
-as Giganthia.  The path continues to the West, away from the town, whilst
-small stone steps lead upwards, to a path within the town.
-~
-4 4
-D3
-The Path.
-~
+
 ~
-0 -1 3401
-D4
-Some Stone Steps.
-~
+
 ~
-0 -1 3403
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+of this town.
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
 S
-#3403
-Small Stone Steps~
-You are on some small steps, connecting the upper path, within the Town, to
-the lower path, outside.
-~
-4 4
-D4
-The Path at the Top of the Steps.
-~
+
 ~
-0 -1 3404
-D5
-The Path at the Bottom of the Steps.
-~
+
 ~
-0 -1 3402
-S
-#3404
-A Path Within the Town~
-You are on a small path, which winds its way through the Town.
-~
-4 4
-D1
-A Cave.
-~
+
 ~
-0 -1 3413
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
 D2
 The Path.
-~
+
 ~
-0 -1 3405
-D5
-Steps.
-~
 ~
-0 -1 3403
-S
-#3405
-A Path Within the Town~
-You are on a small path, which winds its way through the Town.
-~
-4 4
+
+room, situated in the cave to the North.
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
 D0
 The Path.
-~
+
 ~
-0 -1 3404
-D2
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+~
+
+situated to the East.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
 The Path.
-~
+
 ~
-0 -1 3406
-D3
-A Small Cave.
-~
 ~
-0 -1 3433
-S
-#3406
-A Path Within the Town~
-You are on a small path, which winds its way through the Town.
-~
-4 4
-D0
+
+~
+
+deeply religious by nature, the founders of this town decided to build the 
+
+temple as a tribute to Midgaard, after they agreed to move out.
+
+Unlike Midgaard's, this temple is a simple affair, with a rough stone floor,
+
+and uneven walls and ceiling.
+
+~
+
+~
+
+~
+
+~
+
+altar.  Although the room is bare, apart from a square chunk of rock, it
+
+does the job.
+
+~
+
+~
+
+~
+
+~
+
+room.
+
+~
+
+~
+
+~
+~
+
+~
+
+~
+
+~
+
+town of Giganthia, although it's pretty hard, as Ogre's are pretty independent.
+
+~
+
+~
+
+itself lies to the South.
+
+~
 The Path.
-~
+
 ~
-0 -1 3405
-D1
-A Cave.
-~
 ~
-0 -1 3411
-D2
-The Path.
-~
+
 ~
-0 -1 3407
-S
-#3407
-A Path Within the Town~
-You are on a small path, which winds its way through the Town.
-~
-4 4
-D0
-The Path.
-~
+
 ~
-0 -1 3406
-D2
-The Path.
-~
+
 ~
-0 -1 3408
-D4
-Steps.
-~
+
 ~
-0 -1 3410
-S
-#3408
-A Path Within the Town~
-You are on a small path, which winds its way through the Town.
-~
-4 4
-D0
-The Path.
-~
+
 ~
-0 -1 3407
-D1
-A Small Cave.
-~
 ~
-0 -1 3409
-D3
-A Cave.
-~
+
+the corners.  The ogers, having little concern for personal finance techniquez
+
+leave their gold here, in exchange for some nebulous paper called a 'receipt.'
+
 ~
-0 -1 3436
-S
-#3409
-A Small Cave~
-You are in a small cave, which looks like it's used to train the inhabitants
-of this town.
-~
-8 11
-D3
-The Path.
+
+~
+
+second thoughts, he looks like he might be displeased if you did.
+
+,r thoughts, thought
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+on you.  He shrugs and looks elsewhere for someone to pick on.
+
+~
+
+~
+
+on you.  He shrugs and looks elsewhere for someone to pick on.
+
+~
+
+~
+
+~
+
+~
 ~
 ~
 0 -1 3408

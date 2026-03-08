@@ -1117,8 +1117,6 @@ struct area_data
    int aggro_list;
    BUILD_DATA_LIST *first_area_room;
    BUILD_DATA_LIST *last_area_room;
-   BUILD_DATA_LIST *first_area_help_text;
-   BUILD_DATA_LIST *last_area_help_text;
    BUILD_DATA_LIST *first_area_object;
    BUILD_DATA_LIST *last_area_object;
    BUILD_DATA_LIST *first_area_mobile;

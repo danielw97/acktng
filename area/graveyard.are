@@ -17,286 +17,596 @@ T You can teleport into here
 #11090
 @@NA small ledge@@N~
 @@NAs you shimmy down the pit, you are suddenly overcome by the smell of
-@@ebrimstone@@N, and you senses begin to reel!!
- 
-   Suddenly, you slip, and break your fall on a small ledge.  There seems no
-way back up, but you can hear water flowing beneath you.
-~
-24589 11
+
+@@ebrimstone@@N, and you senses begin to reel!!
+
+ 
+
+   Suddenly, you slip, and break your fall on a small ledge.  There seems no
+
+way back up, but you can hear water flowing beneath you.
+
+~
+
+seems to be visible to the north. But what creatures call it home is yet to be
+
+determined.
+
+~
+
+which they seem to be awaiting there next victim. The sounds of the howling
+
+creatures can be heard as the first glimpse of what appears to be a sacred
+
+space can be seen.
+
+~
+
+reaches far into the surrounding wood. The howl of the wolves can be heard, as
+
+the ground beneath your feet shifts with the moving of the undead.
+
+~
+
+~
+
+east, or is it to the south?
+
+~
+
+can go no farther to the west or north.
+
+~
+~
+
+There is a set of shackles hanging from the wall, encrusted with dried
+
+@@Rblood@@g. On the floor of the chamber is a body, and as you stare at it,
+
+the @@cmist@@g above it slowly coelesces into the corpse, which stands up!
+
+~
+
+~
 S
-#11088
-Lost in the woods~
-Lost now, not even sure which way is safe to turn back. A haven of some kind
-seems to be visible to the north. But what creatures call it home is yet to be
-determined.
-~
-8 8
-D2
+
+recently..
+
+ 
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+\br @@BA chilling screams abruptly destroys the silence.@@g
+
 ~
 ~
-0 -1 11087
-S
-#11087
-Deeper into the woods.~
-The path is barely visable here, as the trees ascend above you in a manner in
-which they seem to be awaiting there next victim. The sounds of the howling
-creatures can be heard as the first glimpse of what appears to be a sacred
-space can be seen.
-~
-8 8
-D0
+
+~
+
+shifting earth causing the foundation to crumble.@@N
+
 ~
 ~
-0 -1 11088
-D3
+
+~
+
+@@dA chill wind touches your spine.  You spin around, but no one is there.@@g
+
 ~
 ~
-0 -1 11060
-S
-#11060
-A familiar yet unused path~
-The ground is trodden here, as what barely seems to be a negotiatable path
-reaches far into the surrounding wood. The howl of the wolves can be heard, as
-the ground beneath your feet shifts with the moving of the undead.
-~
-9 8
-D1
+
+~
+
+of this graveyard at bay.
+
+~
+
+~
+
+north and south.@@g
+
+~
+
+~
+
+north-south path here.
+
+~
+
+~
+
+can barely see the overgrown path that leads north and south. 
+
+\br @@dA thick @@pm@@mi@@ps@@mt @@dbillows out from the wall, obscuring your vision to the east.@@N
+
 ~
 ~
-0 -1 11087
-D2
+~
+
+~
+
+~
 ~
 ~
 0 -1 11008
 S
-#11043
-The Pit~
-Below you is the deepest, darkest pit you have ever seen.
-~
-9 11
-D0
+
+~
+
+you wonder about the inhabitants in this eerie world.
+
+~
+
+~
+
+@@B A low moaning sound comes from somewhere to the southeast.@@g
+
+~
+
+~
+
+graveyard.
+
+
+@@dTo the south is a small, overgrown path.@@g
+
 ~
 ~
-0 -1 11042
-D1
+~
+
+~
+
+slowly wandering light.
+
 ~
 ~
-0 0 11046
+
+~
+
+~
+~
+~
+
+~
+
+and out of existence to the east.
+
+~
+
+ 
+
+~
+
+@@cA loud wail comes from the east.
+
+@@g
+
+~
+
+~
+
+and to the east you see many broken down gravestones.
+
+~
+
+the north.  The air is tainted with an evil smell coming from the mouldering
+
+corpses at your feet.
+
+~
+
+~
+
+~
+
+above you. While they seem to have been locked long ago, time and vandals
+
+have destroyed the mighty chains that held them closed. @@g
+
+ 
+
+ 
+
+ 
+
+\br\br@@GYou know that it will be certain death for the unwary here.
+
+Go back if you value your lives!!! Only the most powerful will live!@@N
+
+~
+~
+~
+
+~
+
+temperature drops quickly. You aren't sure you should continue down...
+
+~
+~
+
+~
+
+the Ghouls attack!!
+
+~
+
+of decay.  You can almost make out the name, but some spongy moss covers the
+
+words etched there.
+
+@@BA chilling scream pierces your soul!@@g
+
+~
+
+occupant might be...
+
+~
+
+marks. The age-blackened stone walls amaze you with detailed scenes and runic
+
+phrases.  As you peer a little closer, something strange about the crypt draws
+
+your attention.
+
+~
+
+~
 D2
 ~
 ~
-0 -1 11044
-D3
+
 ~
-~
-0 -1 11039
-E
-claw~
-@@cThe marks seem to imply that something has clawed their way out!@@g~
-E
-marks~
-@@cThe marks seem to imply that something has clawed their way out!@@g~
-E
-pit~
-@@Ryou see claw marks on the edges of the pit.@@g~
 S
-#11042
-Shadows~
-The shadows are much deeper here, and you can barely sense movement to the
-east, or is it to the south?
-~
-9 11
-D1
+
+be some sort of raised structure farther along to the south, and tombstones
+
+are shining evilly in the moonlight.
+
+@@m In the distance a yellow light slowly dims, then brightens again.@@g
+
+~
+
+~
+
+~
+
+rancid flesh littering the floor. The stench has begun to wrack your senses,
+
+and the miasma in the air affects your vision. @@g @@mA small patch of fog
+
+covers the ground@@N
+
 ~
 ~
-0 0 11045
-D2
+
+fragments of corpses lie scattered about, the bones gnawed to pieces. As you
+
+glance amongst the bodies, you notice that one of them is still moving.  In
+
+fact, it is staring at you!!@@g
+
 ~
+
+like someone has made a small home here..
+
 ~
-0 -1 11043
-D3
+
 ~
+
 ~
-0 -1 11041
-S
-#11041
-Corner of the crypt~
-Behind the cobwebs, the walls of this ancient crypt meet.  It seems that you
-can go no farther to the west or north.
-~
-9 11
-D1
+
 ~
+
+where its latest occupant might be..
+
 ~
-0 -1 11042
-D2
+
 ~
-~
-0 -1 11039
-S
-#11040
-Shadowy cell~
-@@gThis small room was obviously used as a cell, or maybe an execution chamber.
-There is a set of shackles hanging from the wall, encrusted with dried
-@@Rblood@@g. On the floor of the chamber is a body, and as you stare at it,
-the @@cmist@@g above it slowly coelesces into the corpse, which stands up!
-~
-9 11
-D1
-~
-~
-1 11008 11039
-S
-#11039
-Before the dark niche~
-You see a deep dark niche to the west..the door appears to be locked.
-~
-1 11
 D0
 ~
 ~
-0 -1 11041
-D1
+
+closer, you can see the mouldering remains of it's occupant still lying there.
+
+How wierd!
+
 ~
 ~
-0 0 11043
-D2
+
+it!@@g
+
 ~
 ~
-0 -1 11038
-D3
+~
+
+you.
+
 ~
 ~
-1 11008 11040
-S
-#11033
-Disturbed Ground~
-The ground around here looks recently marked, as if a large battle has occured
-recently..
- 
-~
-5 2
+~
+
+
+~
+
+You can almost make out a small hallway to the north, and the temperature has
+
+dropped a few degrees, seemingly colder as you approach the northern exit.
+
+~
+
+~
+
+you see that is is just a moist spot on the wall.
+
+~
+
+language.
+
+~
+
+form words, but the language is beyond you.
+
+~
+
+@@BIt is MUCH colder here.@@g
+
+~
+~
+
+@@BIt is MUCH colder here.@@g
+
+~
+~
+~
+
+In fact, a sweet, numbing feeling begins to flood your senses, making you
+
+desire sleep, ever lasting sleep...@@g .
+
+~
+
+the west.
+
+~
+~
+
+air around you lends a small amount of illumination to the corridor.
+
+~
+~
+
+shackled to the wall.
+
+~
+~
+~
+
+Oddly enough, the corpse seems much more recently dead than other occupants of
+
+the crypt behind you.
+
+ 
+
+~
+
+more dead.  Or is it?  In fact, it has just broken the shackles!!
+
+~
+
+~
+
+nothing of interest.
+
+~
+~
+
+wall attest to the fact that it's occupant is now gone.
+
+~
+~
+
+~
 D0
 ~
 ~
-0 -1 11034
-D3
+
+did you see something move? Nah, must have been your flickering torch...you
+
+think...
+
+@@cA slight breeze comes from the west.@@g
+
 ~
+
 ~
-0 -1 11002
 S
-#11018
-Western path around Graveyard.
-~
-A north-south path leads around the graveyard.
-~
-1 2
-D0
+
+~
+
+south.
+
 ~
 ~
-0 -1 11001
-D2
+
+since you could never fight crawling like this!!
+
+
+~
+
+
+~
+
+west. Are we lost yet?
+
 ~
 ~
-0 -1 11017
-S
-#11017
-South-Western corner.
-~
-@@dA darkened corner of the path around the graveyard.@@g
-~
-1 2
-D0
+~
+
+west. Are we lost yet?
+
 ~
 ~
-0 -1 11018
-D1
+~
+
+west. Are we lost yet?
+
 ~
 ~
-0 -1 11016
-S
-#11016
-Southern path.
-~
-The path continues east and west.
-\br @@BA chilling screams abruptly destroys the silence.@@g
-~
-1 2
-D0
+~
+
+west. Are we lost yet?
+
+~
+
+west. Are we lost yet?
+
+~
+
+west. Are we lost yet?
+
+~
+
+west. Are we lost yet?
+
+~
+
+west. Are we lost yet?
+
 ~
 ~
-0 -1 11028
-D1
+
+tunnel, to see, hmm... It seems that the entire tunnel has opened up into a
+
+dead end! Boulders mark where the roof of this tunnel has fallen in to
+
 ~
 ~
-0 -1 11015
-D3
+
+gloomy and dark here. To the east you think you see a large set of gates.
+
+ 
+
+@@BA chilling scream suddenly erupts out of the darkness!@@g
+
+~
+
+the outside to the east.
+
 ~
 ~
-0 -1 11017
-S
-#11015
-Rocky path south of Graveyard.
-~
-@@dThe wall to the south has caved in slightly, possibly the result of
-shifting earth causing the foundation to crumble.@@N
-~
-1 2
-D1
+~
+
+~
+
+~
+
+~
+
+you hope that nothing attacks you in this position!
+
+~
+
+this subterranean area.  What adventurer in their right mind would climb into
+
+an evil pit?
+
 ~
 ~
-0 -1 11014
-D2
-cave~
+
 ~
-449 -1 11030
-D3
+
 ~
+
 ~
-0 -1 11016
-E
-wall~
-@@mmoving the boulders, you see a small, wooden door!@@g~
-S
-#11014
-Southern edge of Graveyard.
-~
-The path runs east and west.
-@@dA chill wind touches your spine.  You spin around, but no one is there.@@g
-~
-1 2
-D1
+
 ~
 ~
-0 -1 11013
-D3
+
+~
+
 ~
 ~
-0 -1 11015
-S
-#11013
-@@dBend in Path.@@g
-~
-The path bends to the west here, following the stone wall holding the denizens
-of this graveyard at bay.
-~
-1 2
-D0
+
+~
+
+~
+
+~
+
+~
+
+~
+
+stench growls at you!@@g
+
+~
+
+~
+
+stench stares back at you!@@g
+
+~
+
+~
+
+~
+
+~
+
+~
+
 ~
 ~
-0 -1 11012
-D3
+
 ~
+
 ~
-0 -1 11014
-S
-#11012
-Overgrown Path.
-~
-@@GA mass of black and green vines covers the ground here. The path goes both
-north and south.@@g
-~
-1 2
+
+~
+
+~
+
+~
+
+~
+
+~
+
+blade lies here.
+
+~
+
+floats here.
+
+~
+
+~
+
+parts.
+
+~
+
+~
+
+~
+
+it's cap.
+
+~
+
+~
+
+~
 D0
 ~
 ~

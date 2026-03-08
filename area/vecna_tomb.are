@@ -12,458 +12,1012 @@ U @@dA @@mchill@@d runs up your spine.@@N~
 O cyberlich~
 R cyberlich~
 W cyberlich~
-#HELPS
-1 'healing light'~
-~
-1 'mana flare'~
-Mana flare causes a fountain of mana to flood the room, doubling your normal
-mana regeneration rate.
-~
-1 mana flare~
-NEW HELP.  DELETE THIS LINE FIRST!~
-1 mana drain~
-~
-1 'mana drain'~
-Mana drain is a room affect spell that causes anyone in the room to LOSE mana
-instead of gaining it like normal. Be careful casting this spell, as the
-Immortals closely monitor it's use, and punish anyone using it in a way that
-can hurt newbies.
-~
-1 leadership~
-~
-1 morale~
-As a worthy knight, you have added benefits when in a group.  Morale will add
-to the damage any of your group members can do.
-~
-1 adrenaline~
-The ability to utilize adrenaline surges enhances your damage in combat
-whenever you take a strong hit.  Multiple hits add additional affects!.
-~
-1 frenzy~
-Frenzy is a skill that let's you go into a fighting frenzy.  You will take
-some damage, but will attempt to hit every enemy in the room!
-~
-1 ethereal~
-Ethereal travel is a way to enter the Ethereal plane, a non-material realm that spans our material plane.
-~
-1 runes~
-Runes are magical effects that you can place in the room you are in.  They
-have varying affects. Experiment!  They are one use spells..once triggered,
-they dissapear.
-NOTE: Runes are triggered by the next to enter the room.
-NOTE: @@eDO NOT CAST RUNES OR BAD AREA AFFECTS IN NEWBIE AREAS!!!@@N
-~
-1 cage~
-The cage spell is similar to seal room, but things CAN enter, just not leave.
-~
-0 $~
-#ROOMS
-#20689
-The Final Crypt, Vecna's Lair~
-@@gThe construction of this room seems familiar, the only difference stabbing
-your vision being the gleam of platinum veins purifying the alabaster marble.
-It is, in reality, a simple alcove, probably that which Vecna uses to stay
-watch over his personal crypt.
-~
-24649 11
-D0
-~
-~
-0 -1 20687
-D5
-~
-~
-0 -1 1601
-S
-#20688
-The Final Crypt, Vecna's Lair~
-@@gThe white marble here is bathed in an angelic light, descending upon the
-scene from the ceiling above, which exudes the golden light.  Basking in the
-beautiful rays is the white marble, ever present here, in this Final Crypt of
-the ever-dead.
-~
-24584 11
-D1
-~
-~
-0 -1 20687
-S
-#20686
-The Final Crypt, Vecna's Lair~
-@@gThis culdesac of a room is adorned in the finest, pure with marble,
-streaked with veins of purest gold and silver.  Devoid of dust, or other
-detritus, the area purveys an aura of cleanliness.
-~
-0 11
-D3
-~
-~
-0 -1 20687
-S
-#20687
-The Final Crypt, Vecna's Lair~
-@@gLarge pillars continue to line the east and west walls, defining a
-throughway north and south.  The entire crypt is of the purest white marble,
-coursing veins of darkened blood, dark streaks through the beautiful stones.
 
-~
+your vision being the gleam of platinum veins purifying the alabaster marble.
+
+It is, in reality, a simple alcove, probably that which Vecna uses to stay
+
+watch over his personal crypt.
+
+~
+
+scene from the ceiling above, which exudes the golden light.  Basking in the
+
+beautiful rays is the white marble, ever present here, in this Final Crypt of
+
+the ever-dead.
+
+~
+
+streaked with veins of purest gold and silver.  Devoid of dust, or other
+
+detritus, the area purveys an aura of cleanliness.
+
+~
+
+throughway north and south.  The entire crypt is of the purest white marble,
+
+coursing veins of darkened blood, dark streaks through the beautiful stones.
+
+
+~
+
+of a vicious mouth, the gullet of which leads down in the vast darkness below
+
+Retched breath issues from the gaping maw.  On the south wall, more of the
+
+portentious @@mcarvings@@g.
+
+~
+
+dead, of which King Saul was culpable when he visited the witch at Endor (1
+
+Sam 28:3-25).  Since divination was closely associated with magic in all it's
+
+forms, biblical writers roundly condemned it (see Lev 19:26,31).
+
+~
+
+Thickly settled with dust, containing the ever-present smell of fear and death
+
+This certainly is the haunting place of the lesser Liches.  @@mCarvings@@g
+
+along the east wall tell more of the story.
+
+~
+
+from God to pursue the worhip of foreign gods and engage in occultic practices.
+
+They set up sacred stones and Asherah poles, they worshiped idols, imitated
+
+the nations around them, worshiped Baal; they sacrificed their sons and their
+
+daughters in the fire, and they practiced divination and sorcery.  The
+
+biblical writer interprets their actions as selling "themselves to do evil in
+
+the eyes of the Lord, provoking him to anger."  As a result, the Lord removed
+
+Israel from his presence (2 Kings 17:7-23)
+
+~
+
+as well, by the ever thick, undisturbed dust.
+
+~
+~
+~
+
+upon the west wall.  The ever present dust lies thickly undisturbed.
+
+~
+
+for breaking the occult prohibitions of the Torah.  He worshiped the Canaanite
+
+gods, practiced astrology or a form of astral religion ("bowed down to all the
+
+starry host and worshiped them"), "sacrificed his sons in the fire in the
+
+Valley of Ben Hinnom, practiced sorcery, divination, and witchcraft, and
+
+consulted mediums and spiritists" (2 Chron 33:1-6).  The chronicler concludes,
+
+"He did much evil in the eyes of the Lord provoking him to anger."
+
+~
+
+@@mcarvings@@g meant to last millenia.  About the floor lies the thick dust,
+
+undisturbed for long years.
+
+~
+~
+
+fire, who practicies divination or sorcery, interprets omens, engages in
+
+witchcraft, or casts spells, or who is a medium or spiritist or who consults
+
+the dead.  Anyone who does these things is detestable to the Lord, and because
+
+of these detestable practices the Lord your God will drive out those nations
+
+before you.  (Deut 18:10-12)
+
+~
+
+drifted up upon the walls slightly.  This time in the east wall,
+
+@@mcarvings@@g beg to be read.
+
+~
+
+prohibited from offering sacrifices to goat idols.  The law states: "They must
+
+no longer offer any of their sacrifices to the goat idols to whom they
+
+prostitute themselves." (Lev 17:7a).  Rehoboam violated this statute when he
+
+set up "high places" and "appointed his own priests for the high places and
+
+for the goat and calf idols he had made" (2 Chron 11:15).  In both of these
+
+instances demonic involvement in pagan cults is reaffirmed.
+
+~
+
+black granite, set in the floor within a block of purest white marble.  The
+
+everpresent settled dust lies blanketed over everything in sight.  Somewhere,
+
+some creature mumbles something to itself, an anticipitory tone in it's
+
+deepset voice.
+
+~
+
+words:  @@WRain, rain on my face, It hasn't stopped raining for days, My world is
+
+a flood, Slowly I become one with the mud.  But if I can't swim after forty
+
+days, and my mind is crushed by the crashing waves, Lift me up so high that I
+
+cannot fall, Lift me up - When I'm falling.  Lift me up - I'm weak and I'm
+
+dying.  Lift me up - I need you to hold me.  Lift me up - I need you to hold
+
+me.  Lift me up - Keep me from drowning again.
+
+~
+
+dust carpet, as elsewhere within the Vault.  Perhaps considered adornment,
+
+however, is the consistent smell of fear, as much a part of the Vault as the
+
+walls, the floor, the ceiling.  Here as well, lie inlaid on the west wall, are
+
+more of the everpresent @@mcarvings@@g in the wall.
+
+~
+~
+~
+
+predicts that it will become a haunt for "goat spirits" and other sorts of
+
+demons (Is 13:21).  As in Isaiah 34:14, the Greek Old Testament uses the word
+
+daimonia ("demons") to translate some of the Hebrew words here for wild
+
+animals.  These are a strong connection between wild animals and evil spirits
+
+thoughout antiquity.  The "goat demon" was thought to be in the form of a
+
+shaggy he-goat.
+
+~
+
+along the west wall.  Fear is so thick as to be an odor borne upon the stale
+
+air.  Some @@mcarvings@@g are etched into the west wall here.
+
+~
+~
+~
+
+as being inhabited by wild animals and other demonic spirits.  This passage
+
+speaks of Edom becoming a den for jackals and an enclosure for hyenas.  It
+
+then goes on to say "demons" (daimonia) "phantoms" and "goat spirirts," as
+
+well as "Lilith, will haunt this place."
+
+~
+
+perhaps trying to escape something horribly fearsome.  He lies facedown, half
+
+propped up against the west wall.
+
+~
+
+proximity.  Unsettled air, bringing noxious fumes and choking dust washes upon
+
+you from the south.
+
+~
+
+Unsettled air moves toward you from the south, bringing waves of nausiating
+
+stench, as well as thick, chocking dust.
+
+~
+
+@@lpillars@@g is here, mere feet from the wall.
+
+~
+~
+
+diagonal wall.  The dirt floor here is well trod, near to the terminus at the
+
+south end of the huge Vault.
+
+~
+~
+
+Detected to the north is a distinct movement, accompanied by a sound not
+
+unlike that of a clawed hand, digging itself up from beneath the hardpacked
+
+dirt floor.
+
+~
+
+feelings of the surrounding darkness strikes like a hammer in the pit of your
+
+bowels.  At least the @@lpillars@@g to the east and the west would provide
+
+some relief from this feeling of encroaching doom.@@g
+
+~
+
+above.  A @@lskeleton@@g lies here, propped up against the pillar for all
+
+eternity.@@g
+
+~
+
+light glistens off the smooth @@lpillar@@g to the west of here.
+
+~
+
+bones.  Once again, the intense desire to find the safety of the walls nearly
+
+overwhelms you.  You're light-source reveals @@lpillars@@g to the east and the
+
+west.  Somewhere beyond those pillars, you know, stand the walls of the crypt.
+
+~
+
+series of pillars.  Some of the @@learth@@g here has been dug up, leaving a
+
+@@lhole@@g in the floor.
+
+~
+
+thickness.  The smell of death permeates the air, bringing with it unpleasant
+
+memories of undead creatures fought in the recent past.
+
+~
+
+wits.  Nothing is revealed by your light-source, to the north, nor the east,
+
+nor the west.  A presence, however, is strongly felt...an evil presence.  With
+
+your back against the wall, you wait for it, smelling your own fear.
+
+~
+~
+
+easternmost row of @@lpillars@@g, and the eastern wall.  There are some faint
+
+@@lscratchings@@g on the wall here.
+
+~
+~
+
+the darkness...looking for whatever it is that's scratching on something made
+
+of stone, somewhere off to the south.  Choking on floating dust, you wonder if
+
+coming here was such an incredibly wise move.
+
+~
+
+empty.  To the east and the west, your light-source reflects from more of the
+
+thick pillars.  You feel the intense need to be away from this dreadful
+
+openness, desiring the (safety?) of the walls.
+
+~
+
+north and south running pillars.  Somewhere in the darkness above, you feel
+
+sure that the pillar makes contact with an unseen ceiling.
+
+~
+
+northeast to running directly south.  The darkness is immense, and the wall in
+
+close proximity is a comfort, compared to the opennes of the center of the
+
+crypt.
+
+~
+
+lost in the dust ridden blackness.  Something, you are sure, moves in the
+
+blackness around you.@@g
+
+~
+
+southwest here.  Some @@lbones@@g lie scattered in a jumble.
+
+~
+
+Thick dust motes hang uneasily in the air.
+
+~
+
+east and the west, you can barely see some of the vaulted @@lpillars@@g that
+
+support the ceiling of this massive chamber.
+
+~
+
+creating a "corner" in the overall shape of the huge crypt.  Off to the west,
+
+you're light-source barely illuminates a @@lpillar@@g in the darkness.
+
+~
+
+abandoned in it's decay.  The cottage lies on the north part of the clearing,
+
+and a @@mwoodpile@@g stacked next to it is almost as large.  A henhouse near the
+
+rear of the cottage stands open, and empty.
+
+~
+
+it's eaves.  The wood was obviously chopped several years ago, betrayed by
+
+it's grey, weathered appearance.@@g
+
+~
+
+and the scampering of squirrels and chipmunks is appearant.  The sweat scent
+
+of the outdoors puts you at ease.
+
+~
+~
+~
+
+@@gThe more @@gThe essence of foreboding steals your nerves.  Northward, through @@gThe
+
+low hanging bows, you spy a clearing, a grey @@mstructure@@g centered within.
+
+~
+~
+
+clearing ahead, with a circular tower attached to the southwest edge of the
+
+dome.@@g
+
+~
+
+of the clearing is a largish geodesic grey @@mdome@@g, with a similar colour @@mtower@@g
+
+attached, at the base, to the southwest corner of the dome.  An oppresive
+
+feeling permeates the air of the clearing, and not a sound is to be heard, not
+
+that of animal, bird, nor insect.  Standing on the south side of the strange,
+
+grey building, @@gYou see a doorway opening into the structure.  Just a @@mdoorway@@g,
+
+no door, no gate...just a black opening into the building.
+
+~
+
+gateway into the building.  However, to attempt to look inside the dome is as
+
+looking into another universe.  A stifling fear nearly overcomes you, a pit in
+
+the depth of your stomach, an unnatural tingling in your spine.  You suddenly
+
+realize that this feeling is purely childish, shrug, and smile sheepishly at
+
+yourself.@@g
+
+~
+
+diagonal intervals up the wall are slender windows, which probably double as
+
+arrow slits in times of trouble.  The space inside the windows looks
+
+absolutely, and unnaturally dark.@@g
+
+~
+
+stone.  The only break in the smooth wall is that of the entrance of the
+
+building.  Just peering at the doorway perveys a sense of foreboding and dread
+
+@@g
+
+~
+
+inside of the dome is as grey as the outside, with no windows whatsoever, and
+
+no light except that which you have brought with you.  The floor is of the
+
+same colour marble as the rounded walls, and the rounded ceiling.  No pillar
+
+or other supporting device hold the dome in place, you surmise that it must
+
+hold itself through superior architecture.
+
+~
+
+tower itself is dominated by a wide marble @@mstaircase@@g that ascends to the top
+
+of the tower, and descends somewhere into a great blackness, amid scufflings
+
+and various wanderings about.  Thin windows pierce the rounded wall of the
+
+tower, spaced evenly along the length of the upward staircase.
+
+~
+
+windows pierce the rounded walls, one in each direction, north, @@msouth@@g, east,
+
+and west.
+
+~
+~
+S
+
+small home.  A @@mfireplace@@g stands against the back wall, with an old wooden
+
+rocking @@mchair@@g in front of it.  A cooking @@mpot@@g stands in the ashes within the
+
+fireplace.
+
+~
+
+once well used.@@g
+
+~
+
+comfortably before his fire on some windy night.@@g
+
+~
+~
+
+ground level of the tower.  The grey marble here appears almost black.  To the
+
+south, a simple @@marchway@@g leads to the unknown.  That which issues from your
+
+light source does not penetrate the utter blackness under the archway.
+
+~
+
+natural world, as you have known it.  The stones of the walls have been marred
+
+with hideous @@lscratchings,@@g and disturbed dust motes drift through the air.  To
+
+the south, you sense movement, and discern shapes moving in the darkness.
+
+~
+
+light-source barely illuminates a series of @@lpillars@@g which begin their
+
+southward course to the southeast and southwest.  Your keen hearing discerns
+
+the unorganized movement of many creatures in the area.
+
+~
+
+notice the beginning of the series of @@lpillars@@g, directly to the south of
+
+here.  Do you continue on in the safety of the proximity of the wall, or dare
+
+the open area in the center of the large crypt?
+
+~
+
+southeast from here.  To the south, the easternmost series of @@lpillars@@g
+
+begins, with the northernmost pillar.
+
+~
+
+darkness.  @@lScratches@@g mark the base of the pillar, all along it's
+
+circumferance.
+
+~
+
+from above, as it does elsewhere within the crypt.  Looking east, your
+
+light-source barely illuminates the eastern wall of the crypt.
+
+~
+
+is the closest thing to comfort that can be felt here, in close proximity with
+
+the wall.  To the west, you can discern a @@lpillar@@g, just barely within the
+
+radius of your light.
+
+~
+
+proximity to something solid would help stay off the encroaching blackness,
+
+but, alas, it helps none at all.
+
+~
+
+darkness.  To the east, your illumination glistens off one of the smooth
+
+@@lpillars@@g within the crypt.@@g
+
+~
+D0
+~
+~
+
+a place where the thick dust sifts down from somewhere high overhead, in the
+
+darkness.  Strange scuffling, and scratching noises are to be heard to the
+
+north, east, and south.
+
+~
+
+Also, you notice that the dust here lies thickly on the dirt floor.  No foul
+
+undead beast has stood where you now stand, at least for quite some time.  On
+
+the wall, you notice a small @@lplaque@@g, set in bas-relief into the marble
+
+wall.
+
+~
+E
+
+overwhelming feeling of being crushed by blackness.  You feel the need to move
+
+either to the wall to the west, or to the @@lpillar@@g to the east.
+
+~
+
+high overhead.  The strong stench of death assails your nostrils from
+
+somewhere to the east.
+
+~
+
+menacing scuffles and scrapings.  To the east and the west are more of the
+
+great supporting @@lpillars@@g.  Faintly, off to the north, you detect a pair
+
+of glowing points, some six feet from the floor, phospherescant purple, their
+
+colour.
+
+~
+
+support the ceiling in the darkness.  Noting twitterings in the darkness above
+
+you inpect the area above your head, but can discern nothing in the vast
+
+gloominess.
+
+~
+~
+S
+
+wall.  To the north of you is the eastward spawning corridor, from which a
+
+cold hatred emerges.
+
+~
+
+open area.  The cold walls here in the southeast corner of the crypt offer no
+
+comfort, yet still, you struggle, bracing yourself to wander more near to the
+
+center depths of the Tombs.
+
+~
+
+wall, as the wall slopes southwest, instead of due south.  Darkness and cold
+
+beat heavily upon your senses, dulling them to points uncomfortable to men.
+
+~
+
+acquainted with the visual and audial signs of something lurking beyond the
+
+@@lpillars@@g.
+
+~
 24649 11
 D0
 ~
 ~
-0 -1 20685
-D1
+
+the predomination of grey, or even the occasional black.  Somehow, the white,
+
+found in the surrounding blackness, creates an even eerier feeling than the
+
+others.  You would prefer to see things stay just the way you have grown
+
+accostumed.
+
 ~
-~
-0 -1 20686
 D2
 ~
 ~
-0 -1 20689
-D3
+
+whatever God you mumble to, you plunge onward, noticing, briefly, a pair of
+
+glowing eyes, staring at you from the darkness to the south.  Glowing, no,
+
+smoldering in a deep @@Rcrimson@@g.
+
 ~
+
+breather, given the opportunity to at least feel that something is not
+
+stealing upon you from behind.  Sifting dust dries your nostrils, and a
+
+rotting stench floats upon the stale air.
+
 ~
-0 -1 20688
-D5
+
+you've come near to the point where the southern end of the Crypt begins to
+
+terminate.  Alas, you think to yourself, this wretched place DOES have an end!
+
+None too soon...
+
 ~
+
+and the floor vibrates, mumbling an Ode to the Dead within these walls.
+
+Something strikes you as amiss, tho you cannot quite place your finger on it.
+
 ~
-257 -1 20691
+0 -1 20642
 S
-#20673
-The Chute~
-@@gIn the center of the east wall is a gaping hole, formed into the likeness
-of a vicious mouth, the gullet of which leads down in the vast darkness below
-Retched breath issues from the gaping maw.  On the south wall, more of the
-portentious @@mcarvings@@g.
-~
-24653 11
-D0
-~
-~
-0 -1 20671
-D1
-~
-~
-0 -1 20674
-E
-carvings~
-@@gAnother well-known form of divination was necromancy, the conjuring of the
-dead, of which King Saul was culpable when he visited the witch at Endor (1
-Sam 28:3-25).  Since divination was closely associated with magic in all it's
-forms, biblical writers roundly condemned it (see Lev 19:26,31).
-~
-S
-#20672
-The Ancient Crypt~
-@@gThis southeast corner of the Ancient Crypt is much as the other parts of it
-Thickly settled with dust, containing the ever-present smell of fear and death
-This certainly is the haunting place of the lesser Liches.  @@mCarvings@@g
-along the east wall tell more of the story.
-~
-24649 11
-D0
-~
-~
-0 -1 20669
-D3
-~
-~
-0 -1 20671
-E
-carvings~
-@@gLikewise, Hoshea, the last king of the northern kingdom, led Israel away
-from God to pursue the worhip of foreign gods and engage in occultic practices.
-They set up sacred stones and Asherah poles, they worshiped idols, imitated
-the nations around them, worshiped Baal; they sacrificed their sons and their
-daughters in the fire, and they practiced divination and sorcery.  The
-biblical writer interprets their actions as selling "themselves to do evil in
-the eyes of the Lord, provoking him to anger."  As a result, the Lord removed
-Israel from his presence (2 Kings 17:7-23)
-~
-S
-#20671
-The Ancient Crypt~
-@@gThis central part along the southern end of the Ancient Crypt is blanketed,
-as well, by the ever thick, undisturbed dust.
-~
-24649 11
-D0
-~
-~
-0 -1 20668
-D1
-~
-~
-0 -1 20672
-D2
-~
-~
-0 -1 20673
-D3
-~
-~
-0 -1 20670
-S
-#20670
-The Ancient Vault~
-@@gThis southwest corner of the Ancient Vault holds more of the @@mcarvings@@g
-upon the west wall.  The ever present dust lies thickly undisturbed.
-~
-24649 11
-D0
-~
-~
-0 -1 20667
-D1
-~
-~
-0 -1 20671
-E
-carvings~
-Manasseh, one of the kings of Judah, was guilty in the eyes of the chronicler
-for breaking the occult prohibitions of the Torah.  He worshiped the Canaanite
-gods, practiced astrology or a form of astral religion ("bowed down to all the
-starry host and worshiped them"), "sacrificed his sons in the fire in the
-Valley of Ben Hinnom, practiced sorcery, divination, and witchcraft, and
-consulted mediums and spiritists" (2 Chron 33:1-6).  The chronicler concludes,
-"He did much evil in the eyes of the Lord provoking him to anger."
-~
-S
-#20666
-The Ancient Vault~
-@@gAll along the north wall, inlaid into the marble with thick gold, are
-@@mcarvings@@g meant to last millenia.  About the floor lies the thick dust,
-undisturbed for long years.
-~
-24649 11
-D2
-~
-~
-0 -1 20669
-D3
-~
-~
-0 -1 20665
-E
-carvings~
-@@gLet no one be found among you who sacrifices his son or daughter in the
-fire, who practicies divination or sorcery, interprets omens, engages in
-witchcraft, or casts spells, or who is a medium or spiritist or who consults
-the dead.  Anyone who does these things is detestable to the Lord, and because
-of these detestable practices the Lord your God will drive out those nations
-before you.  (Deut 18:10-12)
-~
-S
-#20669
-The Ancient Vault~
-@@gAnother settlement for the evil, thick dust...along the floors and even
-drifted up upon the walls slightly.  This time in the east wall,
-@@mcarvings@@g beg to be read.
-~
-24649 11
-D0
-~
-~
-0 -1 20666
-D2
-~
-~
-0 0 20672
-D3
-~
-~
-0 -1 20668
-E
-carvings~
-@@gIn the Old Testament Levitical law the goat demons also appear.  Israel was
-prohibited from offering sacrifices to goat idols.  The law states: "They must
-no longer offer any of their sacrifices to the goat idols to whom they
-prostitute themselves." (Lev 17:7a).  Rehoboam violated this statute when he
-set up "high places" and "appointed his own priests for the high places and
-for the goat and calf idols he had made" (2 Chron 11:15).  In both of these
-instances demonic involvement in pagan cults is reaffirmed.
-~
-S
-#20668
-The Ancient Vault~
-@@gMarking the center of this Ancient Crypt is a small @@mcross@@g of pure
-black granite, set in the floor within a block of purest white marble.  The
-everpresent settled dust lies blanketed over everything in sight.  Somewhere,
-some creature mumbles something to itself, an anticipitory tone in it's
-deepset voice.
-~
-24649 11
-D0
-~
-~
-0 -1 20665
-D1
-~
-~
-0 -1 20669
-D2
-~
-~
-0 0 20671
-D3
-~
-~
-0 -1 20667
-E
-cross~
-@@gEtched into the black cross, and set with white marble, are the following
-words:  @@WRain, rain on my face, It hasn't stopped raining for days, My world is
-a flood, Slowly I become one with the mud.  But if I can't swim after forty
-days, and my mind is crushed by the crashing waves, Lift me up so high that I
-cannot fall, Lift me up - When I'm falling.  Lift me up - I'm weak and I'm
-dying.  Lift me up - I need you to hold me.  Lift me up - I need you to hold
-me.  Lift me up - Keep me from drowning again.
-~
-S
-#20667
-The Ancient Vault~
-@@gNo skeletons adorn the room here, in fact, nothing but the everpresent
-dust carpet, as elsewhere within the Vault.  Perhaps considered adornment,
-however, is the consistent smell of fear, as much a part of the Vault as the
-walls, the floor, the ceiling.  Here as well, lie inlaid on the west wall, are
-more of the everpresent @@mcarvings@@g in the wall.
-~
-24649 11
-D0
-~
-~
-0 -1 20664
-D1
-~
-~
-0 -1 20668
-D2
-~
-~
-0 -1 20670
-E
-carvings~
-@@gIn a similar way the Isaianic prophecy of the desolation of Babylon
-predicts that it will become a haunt for "goat spirits" and other sorts of
-demons (Is 13:21).  As in Isaiah 34:14, the Greek Old Testament uses the word
-daimonia ("demons") to translate some of the Hebrew words here for wild
-animals.  These are a strong connection between wild animals and evil spirits
-thoughout antiquity.  The "goat demon" was thought to be in the form of a
-shaggy he-goat.
-~
-S
-#20664
-The Ancient Vault~
-@@gAgain, the thick dust coats everything, even the poor @@mchap@@g, who died
-along the west wall.  Fear is so thick as to be an odor borne upon the stale
-air.  Some @@mcarvings@@g are etched into the west wall here.
-~
-24649 11
-D1
-~
-~
-0 -1 20665
-D2
-~
-~
-0 -1 20667
-E
-carvings~
-@@gIn Isaiah 34:14, the spooky and terrifying place of desolation is portrayed
-as being inhabited by wild animals and other demonic spirits.  This passage
-speaks of Edom becoming a den for jackals and an enclosure for hyenas.  It
-then goes on to say "demons" (daimonia) "phantoms" and "goat spirirts," as
-well as "Lilith, will haunt this place."
-~
-E
-chap~
-@@gThis guy died, it appears, while gouging great scratches into the west wall
-perhaps trying to escape something horribly fearsome.  He lies facedown, half
-propped up against the west wall.
-~
-S
-#20648
+#20644
 A Pillar~
-@@gThe last @@lpillar@@g on the south end of the vast Crypt is in close
-proximity.  Unsettled air, bringing noxious fumes and choking dust washes upon
-you from the south.
-~
+@@gStanding beside a smooth, cold @@lpillar@@g, a chill runs down your spine,
+
+and hits deep in your bowels.  From hence no determination can be made, an
+
+unexplainable panic nearly overwhelms you.  Perhaps the close proximity of the
+
+cold, thick with dust air?  Or perhaps simply the presense felt within this
+
+Vault is a touch stronger here than elsewhere?
+
+~
+
+south, you detect a strong, pungent odor, and a slight breeze, carrying the
+
+dust up from the floor and into your face.
+
+~
+
+feature, made of the purest black marble.  No stirrings of the dust, as
+
+experienced to the north, can be felt here.
+
+~
+
+feature, made of the purest black marble.  No stirrings of the dust, as
+
+experienced to the north, can be felt here.
+
+~
+
+corner, where some digging has been done.  The trench, as you can see it, does
+
+not run deep, only a foot or so.  It runs from the west, and empties into a
+
+rivulet, leading down in the southeast corner.
+
+~
+~
+~
+
+Behind the altar, you see an archway, leading into desolute blackness.  A
+
+Trench has been dug here, in the marble floor, leading off to the east.
+
+~
+~
+
+the vast Crypt.  This cold little room seems to be designed simply as the
+
+resting place of the Guardian of the Crypt.
+
+~
+~
+
+east, two glistening eyes stare, disregardingly.  They change in colour, from
+
+crimson, to magenta, to firey red, to cold blue.  They await.
+
+~
+
+stench.  Utterly dark, the fear pushes in on you.  Ahead, you know, as you can
+
+see it's glistening orbs, awaits the death that walks.
+
+~
+
+suffering of your fearful soul.
+
+~
+
+creature with the glowing eyes.  It regards you casually, assessing, measuring
+
+then returns it's gaze back from hence it came.
+
+~
+
+and symbols beyond comprehension and understanding.  Unbearably hot, this
+
+place seeks only to imbed itself permanently into the soul.
+
+~
+
+creature with the glowing eyes.  It regards you casually, assessing, measuring
+
+then returns it's gaze back from hence it came.
+
+~
+~
+S
+
+rest for the meager.  The heat radiates from the marble walls, unbearable in
+
+it's own right, oppresive when combined with the terrible darkness, and the
+
+choking dust.
+
+~
+
+inches thick.  The air is heavily stale, unmoving.  Unbearably cold, a close
+
+wrapping within cloak and coat helps to fight off the chill and lonliness.
+
+Inlaid into the east wall are a set of @@mcarvings@@g.
+
+
+~
+
+life's decisions neutrally.  They are deeply affected by a set of evil,
+
+determining influences.  These influences led people on a path that is
+
+directed toward death - life apart from God.  In Ephesians 2:2-3, Paul
+
+described these influences in terms of the environment ("the age of this
+
+world"), an inner inclination toward evil ("the flesh") and a supernaturally
+
+powerful opponent ("the ruler of the kingdom of the air, the spirit").
+
+~
+
+previously undisturbed.  A long dead @@mskeleton@@g rests here, jaw propped
+
+open in a silent scream.  More of the portentious @@mcarvings@@g lie
+
+etched into the wall.
+
+~
+
+demon who will inhabit Edom after it experiences God's desolating judgement
+
+(IS 34:14).  Although this is the only time Lilith is mentioned in the Old
+
+Testament, she was a well-known evil spirit in Mesopotamia.  She also figured
+
+prominantly in later noncanonical Jewish texts, as, for example, in a Jewish
+
+targum, which records the following prayer: "May the Lord bless you in all your
+
+deeds and protect you from the demons of the night and from anything that
+
+frightens and from demons evening and morning, from evil spirits and phantoms
+
+"
+
+~
+
+agony, or pure horror.  The jaw is open in silent scream.  Death visited long
+
+ago, as evidenced by the thick layer of dust long since settled on the
+
+fellow's old bones.@@g
+
+~
+
+directions, north, south, east and west.  The dust here is heavily trampled
+
+with aimless meanderings.
+
+~
+
+directions, north, south, east and west.  The dust here is heavily trapled
+
+with aimless meanderings.
+
+~
+~
+S
+
+directions, north, south, east and west.  The dust here is heavily trampled
+
+with aimless meanderings.
+
+~
+
+directions, north, south, east and west.  The dust here is heavily trapled
+
+with aimless meanderings.
+
+~
+
+directions, north, south, east and west.  The dust here is heavily trapled
+
+with aimless meanderings.
+
+~
 24649 11
 D0
 ~
 ~
-0 -1 20644
+
+directions, north, south, east and west.  The dust here is heavily trampled
+
+with aimless meanderings.
+
+~
+~
+
+directions, north, south, east and west.  The dust here is heavily trapled
+
+with aimless meanderings.
+
+~
+~
+
+directions, north, south, east and west.  The dust here is heavily trapled
+
+with aimless meanderings.
+
+~
+~
+
+directions, north, south, east and west.  The dust here is heavily trampled
+
+with aimless meanderings.
+
+~
+
+the east.  Of pure, midnight marble, the walls glisten with your illumination.
+
+The stairs, also, are of the same purest midnight marble.  Fear, cold,
+
+desolation, and a rank stench waft up the stairs.
+
+
+~
+
+darker space.  Pure evil permeates the air here.  All are made of the purest
+
+white marble, with streaks of black marble veigned through the beautiful stone
+
+Perfectly clean, the floors, walls, and pillars glisten from your illumination.
+
+
+
+~
+24649 11
+D0
+~
+~
+
+~
 D1
 ~
 ~
-0 -1 20649
-D2
+
+~
+
+the creatures of the crypt.
+
 ~
 ~
-0 -1 20651
-D3
+
+~
+
 ~
 ~
-0 -1 20647
-E
-pillar~
-@@lThis is the last pillar to the south in the westward series of pillars.  It is unremarkable except for various gougings in the stone.@@g~
-S
-#20649
-Near the Terminus~
-@@gThis area is along the center aisle, between the series of pillars.
-Unsettled air moves toward you from the south, bringing waves of nausiating
-stench, as well as thick, chocking dust.
-~
-24649 11
-D0
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
 ~
 ~
-0 -1 20645
-D1
+
+~
+
 ~
 ~
-0 -1 20650
-D2
+
+~
+
+~
+
 ~
 ~
-0 0 20652
-D3
+
 ~
+
 ~
-0 -1 20648
-S
-#20650
-A Pillar~
-@@gThe wall here runs diagonally northeast and southwest.  One of the massive
-@@lpillars@@g is here, mere feet from the wall.
-~
-24649 11
-D0
+
 ~
+
 ~
-0 -1 20646
-D3
+
 ~
+
 ~
-0 -1 20649
-E
-pillars~
-@@lAnother of the ten foot diameter pillars.  This one is of dark grey marble, otherwise unremarkable.@@g~
-S
-#20646
-A Pillar~
-@@gThis marble @@lpillar@@g lies within mere feet of the southwest/northeast
-diagonal wall.  The dirt floor here is well trod, near to the terminus at the
-south end of the huge Vault.
-~
-24649 11
-D0
+
 ~
+
+head aglow.@@g
+
 ~
-0 -1 20640
-D2
+
 ~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
 ~
 0 -1 20650
 D3
@@ -2580,22 +3134,40 @@ Spectre~
 @@lA Spectre@@g~
 @@lA Spectre stands here, lantern in hand, guarding an open grave.@@g
 ~
+
 ~
-16419 698 0 S
-106 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 96 0 0 0 0 16
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#20604
-Ghast~
-@@lA Ghast@@g~
-@@lA Ghast lurks here, waiting for his next prey@@g.
-~
+
 ~
-278625 17024 0 S
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+majestically just beneath the guard.
+
+~
+
+~
+
+complete it's power!
+
+~
+
+~
+
+glowing brilliantly.
+
+~
 106 1
 0 0 0 0
 ! 0 0 0 7 0 0 0

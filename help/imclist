@@ -1,0 +1,27 @@
+level 0
+keywords IMCLIST
+---
+Syntax:  imclist                  - get a list of active muds on IMC
+
+         imclist direct           - get a list of directly connected muds
+
+         imclist config           - see the local IMC config
+
+
+'imclist' lists active muds on IMC. It lists all the muds which this mud knows
+
+about on the IMC network, and when they were last heard from. The 'route'
+
+section is mainly for diagnostics, and indicates the route that your mud will
+
+send packets via to get to another mud.
+
+
+'imclist direct' shows direct connections from your mud to other muds.
+
+
+'imclist config' shows the local IMC configuration and state.
+
+
+See also: IMC RQUERY
+

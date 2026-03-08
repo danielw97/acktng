@@ -1,0 +1,12 @@
+level -1
+keywords shelp_infravision
+---
+*******************************************************************************
+       Name: Infravision		
+    Classes: Mage(20)
+   Duration: 4 + ( Cast Level / 3 )
+   Modifies: N/A
+       Type: Defensive
+Description: This spell enables the target to see better in darkness, 
+             without the use of any external light source.
+*******************************************************************************

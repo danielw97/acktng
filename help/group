@@ -1,0 +1,9 @@
+level -1
+keywords group
+---
+
+			--GROUP--
+The following commands are available:
+follow          group           gtell           split     whogroup
+assist
+For more detailed help, type "HELP <command>".

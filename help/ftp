@@ -1,0 +1,11 @@
+level 1
+keywords ftp FTP
+---
+We now have our own FTP site :) It allows public read, but no write as yet.
+
+ftp to soe.nuc.net, and it will let you log in as an anonymous account, use
+
+your e-mail address as your password. Various files will appear from time to
+
+time, including a new user help file there now!
+

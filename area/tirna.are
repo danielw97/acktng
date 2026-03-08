@@ -12,32 +12,54 @@ U You hear the screams of the Dead within your head.~
 O mouse~
 R all mouse~
 W all mouse~
-#HELPS
-0 playtesting~
-Playtesting will go periodically on port 4000.  Whenever new code is installed, it will be playtested on port 4000 for a period of 1 day to 1 week.  If you would like to be a playtester, just log on to meson.atom.com port 4000.  Be sure that you get ahold of an immortal beforehand, so that they can set you to whatever code is being playtested on port 4000.
- 
-~
-0 $~
-#ROOMS
-#9099
-Path of Shadows~
-This path is made of the shadows themselves.  The path creeps through the
-forest at a leisurely pace, for the shadows of the path are moving.
- 
-~
-8 11
-D0
+
+forest at a leisurely pace, for the shadows of the path are moving.
+
+ 
+
 ~
+
+ 
+
 ~
-0 0 9094
-D1
+
+middle of this This clearing is a fountain made of living bone!
+
+ 
+
+
+ 
+
 ~
+
+see at all.  The whistling wind can be heard to the south.
+
+ 
+
 ~
-0 -1 9098
-S
-#9098
-Shadows Abund~
-Totall darkness.  The wind comes rushing in from the east.
+
+the shadows too, and all is still very dark.
+
+ 
+
+~
+
+of shadows.  The trees are shadows, the grass is shadows, EVERYTHING!!  A high
+
+whistling wind comes from the south-east.
+
+ 
+
+~
+
+neatly organized shelves in rows in the small building.  The grocer walks
+
+around helping where he can.
+
+
+~
+
+~
  
 ~
 8 11
@@ -176,159 +198,331 @@ The drive heads east and west.~
 D1
 ~
 ~
-0 -1 9071
-D3
+
+the board.
+
+ 
+
 ~
 ~
-0 -1 9069
-S
-#9069
-Izan Drive~
-The drive heads east and west~
-8 11
-D1
+
+you can find out what the clans are about and what they are up to.  Read
+
+carefully!
+
+ 
+
+~
+
+something to make things run smoother, or do you notice any problems?  If so,
+
+just post them here on the board.
+
+ 
+
 ~
 ~
-0 -1 9070
-D3
+
+discuss all kinds of clan stuff.
+
+ 
+
 ~
 ~
-0 -1 9068
-S
-#9068
-Izan Drive~
-Izan Drive leaves in all cardinal directions.~
-8 11
-D0
+
+ 
+
+~
+
+ 
+
+~
+
+feel totally connected with your god here.
+
+ 
+
 ~
 ~
-0 -1 9075
-D1
+~
+
+by the way of your religion. In this room, all are equals, and fighting is
+
+punishable by your god.
+
+ 
+
+~
+
+you are walking on the ceiling.  It is rather comfortable and seems better
+
+than sitting in a chair.  Mindwave the Guildmaster keeps it this way so that
+
+you can learn focus.
+
+ 
+
+~
+
+through the room could drop a rat dead if it entered.  Only those with great
+
+mental powers can remain in this room to socialize without becoming toast.
+
+The Psionics guild is to the south.
+
+ 
+
 ~
 ~
-0 -1 9069
+~
+
+so that spells wont misfire and cause mass destrution.  There is a large
+
+pentagram in the middle of the floor in case you have the nerve to try a
+
+summoning.  It is said that Kazmar the Guildmaster has an army of demons at
+
+his disposal by using this room.
+
+ 
+
+~
+
+many old tomes of deadly spells and simple cantrips.  There are large
+
+comfortable chairs around the room with soft light lamps to help in the
+
+studies.  There is a spell practicing room to the north, and the guildmaster
+
+there will help you with what you need.
+
+ 
+
+~
 D2
 ~
 ~
-0 -1 9087
-D3
+
+the shop.  Spell components are kept on the shelves, while the actuall potion
+
+and scrolls are made at the large mixing table at the back of the shop.
+
+ 
+
 ~
+
+all the magical monsters walking around.  The magic shop is to the west and
+
+the Magic and Psionics guilds are to the north and south.
+
+
+
 ~
-0 -1 9081
-D4
+
+Magic and Psionic Guilds.  The road is paved in multicolored bricks and bright
+
+illusions of dragons and other evil monsters walk amongst you.
+
+ 
+
 ~
-~
-0 -1 9022
-S
-#9067
-Room of Questing~
-You learn about the quests that are going to be happening here, so just read
-the board.
- 
-~
-8 11
-D2
-~
-~
-0 -1 9063
-S
-#9066
-Clan Information~
-There is information hanging all over the place about the various clans.  Here
-you can find out what the clans are about and what they are up to.  Read
-carefully!
- 
-~
 8 11
 D1
 ~
 ~
-0 -1 9063
-S
-#9065
-Idea Room~
-Do you think you have an idea that would be cool, do you think you know
-something to make things run smoother, or do you notice any problems?  If so,
-just post them here on the board.
- 
-~
-8 11
-D0
+
+giving you just enough room to fit in
+
+ 
+
 ~
+
+is to the west..
+
+ 
+
 ~
-0 -1 9063
-S
-#9064
-Clan Leader Room~
-Only the clan leaders can be in this room.  This is where they can meet to
-discuss all kinds of clan stuff.
- 
-~
+
+ There is also a park to the east.
+
+ 
+
+~
+
+where dueling can be practiced.  And around the arena are scattered practice
+
+dummies, punching bags, and weights.  This is where a warrior can truely
+
+become buff.
+
+ 
+
+~
+
+work.  There is a cabinet containing scar removal ointments and pain relievers
+
+on one wall.  The room is perfect to sit back and relax while gossiping about
+
+your many adventures.
+
+ 
+
+~
+
+are hung on the walls, but the best of them are kept in glass display cases.
+
+There is room in one of the corners in which you can try out your swing with
+
+your new weapon.
+
+ 
+
+~
+
+is a large cabinet filled with rings against one wall.  And another wall has a
+
+large hatrack with assorted hats and helmets.
+
+ 
+
+~
 8 11
 D3
 ~
 ~
-0 -1 9063
+
+weapon shop and to the east is the armor shop.
+
+~
+
+behind the counter that seperates the kitchen from the dining room.  The
+
+specialty here is a dark, hard bread, but sometimes other things can be bought
+
+to eat also.
+
+ 
+
+~
+
+guilds to the north.  Joe's Slightly Edibles is to the west and the road
+
+continues on.
+
+~
+
+ 
+
+~
+~
+
+here.
+
+ 
+
+~
+
+might donate some of his/her unused weapons to a needy person.  This room is
+
+where they will be waiting.
+
+ 
+
+~
+
+lead to the donation rooms.  Down heads to many of the boards where you can
+
+learn about the happenings in the realm. By heading up, you can go to
+
+mudschool!
+
+~
+~
+~
+
+painted in all white, from the floor to the walls to the ceiling.  There is no
+
+other decoration in the room because all attention is focused on the healing
+
+arts.
+
+~
+
+the floors to keep in the warmth.  Strange scents are being burnt throughout
+
+the temple, filling this place with a relaxing feeling.  The healer can be see
+
+to the east where he is curing the ill.  Up a stairwell is a place for the
+
+clerics to learn and study and worship.  Both north and south lead out of the
+
+temple, with the north way heading into town.
+
+~
+~
+~
+
+post.  One small window lets in light and there is a back door that is blocked
+
+preventing passage.
+
+~
+~
+
+~
+
+BANK WITHDRAW -  WITHDRAW SOME MONEY
+
+BANK DEPOSIT -  DEPOSIT SOME MONEY
+
+~
+
+There are tables set around the large room and the bar is the biggest you have
+
+ever seen, being able to sit 50 men across.  There is a small demon flying
+
+around carrying foods and drinks.  To the south you can send and pick up the
+
+post.  To the west you can keep your money safe, or else withdraw so that you
+
+can have more to drink.
+
+ 
+
+~
+
+said that in earlier times, the Monolith was erected to thank the God,  Dareth
+
+for all of his help in the realms!  To the south is the temple.  A bar is to
+
+the west, and Death's square is to the east.
+
+~
+
+executioner stands infront of large block holding a huge hammer.  It appears
+
+that instead of cutting of criminal's heads, that in Tirna n'Ogth, they are
+
+smashed into a bloody pulp. To the east lies town square and west is a large
+
+black Monolith.
+
+~
 S
-#9062
-Pkill Room~
-You can pkill your friends and foes here free of charge!
- 
-~
-136 11
-D4
+
+lies Death's Square where the executions are carried out.  Most of the shops
+
+and guilds lie north on Grunge Road.  Grunge Road can be followed south out of
+
+the city.  And to the east is the slummier parts of town down Ramgul's Alley.
+
 ~
+
+Trash is strewn about with people sleeping both in and on it. To the west is
+
+town square, and to the east is the main part of the alley.
+
 ~
-0 -1 9063
-S
-#9063
-Board Junction~
-This room leads to many of the board rooms.  Also the pkill room is downward.
- 
-~
-8 11
-D0
-~
-~
-0 -1 9067
-D1
-~
-~
-0 -1 9064
-D2
-~
-~
-0 -1 9065
-D3
-~
-~
-0 -1 9066
-D4
-~
-~
-0 -1 9039
-D5
-~
-~
-0 -1 9062
-S
-#9061
-The Room of Greater Worship~
-A bright white light totally surrounds you.  You heart becomes weak and you
-feel totally connected with your god here.
- 
-~
-1032 11
-D5
-~
-~
-0 -1 9060
-S
-#9060
-Prayer Room~
-This room is filled with cushions amongst the pews so that prayers can be sent
-by the way of your religion. In this room, all are equals, and fighting is
-punishable by your god.
  
 ~
 1036 11
@@ -866,86 +1060,157 @@ D2
 D3
 ~
 ~
-0 -1 9032
-E
+
+north.
+
 ~
 ~
-E
 ~
+
+The high walls are lined with portraits, both aged and new, of those who
+
+followed the path of darkness at one time or another. Comfortable chairs
+
+surround a large oak table. The center of the table graced with a dark glowing
+
+crimson orb that pulses with the magic of the dark side. A single chair is
+
+pulled out, signifying its constant use for those who come and go with time.
+
+The howls and whispers of memories haunt this spacious room, the reddish cast
+
+of the magic stone being all the light..both present and needed by us.
+
 ~
-S
-#9027
-Ramgul's Alley~
-This alley is pretty dark with buildings lining both sides about 5 stories high
-Trash is strewn about with people sleeping both in and on it. To the west is
-town square, and to the east is the main part of the alley.
-~
-8 11
+
+is abandoned and falling apart.  To the north there appears to be a small dark
+
+hole leading into what might just be a room.  The alley is back to the east.
+
+~
+
+for this corner of the square, perhaps a store, maybe something else.  Only
+
+time will tell.  Wander around and see what's up.
+
+~
 D1
 ~
 ~
-0 -1 9016
-D3
+
+the south and east that are about to be built on.  The buildings look like
+
+they will be of a good size and may belong to merchants.  You wonder what
+
+these buildings will sell when they are completed.  Westwards is the way to
+
+the Morgue and north heads to the east road and some more wonderful
+
+construction.
+
+~
+
+home of all vampyres.  To the north seems to be some new construction.  The
+
+square continues to the east and west.
+
+~
+
+to the south is the way towards the Morgue.  A large sign blocks your way west
+
+that reads, "This road has been temporarily closed due to a recent cave in.
+
+The road will be opened when it is again safe to travel on." You are
+
+interested about what is on the other side of the rubble.
+
+~
+D2
 ~
 ~
-0 -1 9028
-S
-#9026
-The Culdasac~
-This is the beginning of the culdasac.~
-8 11
+
+inconveniece it would be, rather than each vampire having its own coffin it
+
+only has a drawer here in the morgue.  This is the safe place for the vampires
+
+of the world.  If they get in trouble they can always <recall> back here to be
+
+safe from harm. To the north is the Crypt area, the undergroud city for the
+
+undead.  Or you can rest here to heal a little faster.
+
+~
 D0
 ~
 ~
-0 -1 9025
-D2
+
+the construction going on in this area will yield a great town for the vampire
+
+folk of the world.  It looks like an armory is going to go in to the north and
+
+perhaps a bar to the east.  South is the way to the Morgue and west leads to
+
+the exit of the crypt.
+
 ~
-~
-0 -1 9016
 S
-#9025
-The Culdasac~
-Heading north and south on the culdasac.~
-8 11
-D0
+
+lies to the north.  Going east or west will bring you deeper into the crypt
+
+into the heart of the city.  The smell of the carcuses is still strong and you
+
+notice some bones of what used to be a halfling tossed to the side of the
+
+street.  The vampyres didn't waste a bit of him.
+
 ~
 ~
-0 -1 9024
-D2
+~
+
+You feel that this is a place of the undead.  The stench of rotting flesh
+
+fills the air and makes you nauseous.  Lucky you have a light or else you
+
+wouldn't be able to see a thing.  You take a quick look around and notice the
+
+way out of the crypt is back north and you can go south to further explore the
+
+crypt.
+
+~
+
+well as if a pair of stores are going to the north and west of this spot.  The
+
+building to the west looks like it may be a weapon shop, but you cannot figure
+
+out what the store to the north could be.  Guess you'll just have to wait to
+
+see.  To the east is the way out of the crypt and heading south will take you
+
+into the middle of the city.
+
 ~
 ~
-0 -1 9026
-S
-#9024
-The Culdasac~
-The culdasac starts to turn here.~
-8 11
-D1
+
+to the south is the way towards the Morgue.  A large sign blocks your way west
+
+that reads, "This road has been blocked off due to construction that is taking
+
+place."  You wonder what lies beyond the limits of the barrier.
+
 ~
+
+the bricks are relaid once per year.  A gate to the south leads out of the
+
+city and to the north continues Grunge Road.
+
 ~
-0 -1 9023
-D2
+
+the place.
+
+ 
+
 ~
-~
-0 -1 9025
-S
-#9023
-The Culdasac~
-This is a rather large culdasac.~
-8 11
-D1
-~
-~
-0 -1 9022
-D3
-~
-~
-0 -1 9024
-S
-#9022
-The Culdasac~
-You can continue on the culdasac or else head down towards what appears a road.~
-12 11
 D2
 ~
 ~
@@ -1219,11 +1484,14 @@ D3
 ~
 ~
 0 0 9000
-D4
+
+black cross like symbol on a red background covering one wall
+
+
+
+ 
+
 ~
-~
-0 -1 9000
-D5
 ~
 ~
 0 -1 9000
@@ -1273,8 +1541,14 @@ Entrance to the Crypt~
 This is the entrance to the crypt.  It is very musty and very dark in here.
 You feel that this is a place of the undead.  The stench of rotting flesh
 fills the air and makes you nauseous.  Lucky you have a light or else you
-wouldn't be able to see a thing.  You take a quick look around and notice the
-way out of the crypt is back north and you can go south to further explore the
+
+ 
+
+~
+
+ 
+
+~
 crypt.
 ~
 137 11
@@ -1347,84 +1621,164 @@ D0
 ~
 ~
 0 -1 9029
-D2
+
+ 
+
 ~
 ~
-0 -1 9031
-S
-#9031
-South Gate~
-This is the south gate of Tirna n'Ogth~
-8 11
-D0
+
+ 
+
+~
+
+ 
+
+~
+
+ 
+
+~
+
 ~
 ~
-0 -1 9030
-S
-#9073
-Izan Drive~
-The drive heads north and south~
-8 11
-D0
+
 ~
+
+ 
+
 ~
-0 -1 9074
-D2
+
+superior in the human race.  To him, all others must die!
+
+ 
+
 ~
+
+ 
+
 ~
-0 -1 9072
-S
-#9074
-Izan Drive~
-This room is totally in ruin.  There are burnt statues and symbols all over
-the place.
- 
-~
-8 11
-D2
+
+ 
+
 ~
+
+ 
+
 ~
-0 -1 9073
-S
-#9075
-Izan Drive~
-The drive heads north and south.~
-8 11
-D0
+
+ 
+
 ~
+
 ~
-0 -1 9076
-D2
+
+ 
+
 ~
+
+ 
+
 ~
-0 -1 9068
-S
-#9076
-Izan Drive~
-The drive heads north and south.~
-8 11
-D0
+
+brown eyes.
+
+ 
+
 ~
+
+ 
+
 ~
-0 -1 9077
-D2
+
+guard the gate from unwanted visitors.
+
+ 
+
 ~
+
+ 
+
 ~
-0 -1 9075
-S
-#9077
-Izan Drive~
-The drive leads off to the west and to the south.~
-8 11
-D2
+
+overrun by them when the god, Mouse, was playing a joke.
+
+ 
+
 ~
+
+to say stay away.  She carries many daggers that are stained with blood.  You
+
+know she could kill you with a wink.  There is a rumor that she used to be one
+
+of Mouse's lovers.
+
 ~
-0 -1 9076
-D3
+
+intelligence brings death to his foes.
+
 ~
+
+shining armor and he carries a six-foot sword.  He looks mean but deep down he
+
+is a kind man.
+
 ~
-0 -1 9078
-S
+
+~
+
+~
+
+robe showing the differences in the nature of the gods.  She is eager to help
+
+in any form of worship.
+
+~
+
+~
+
+~
+
+spells at everyone.  Make sure to say thanks!
+
+~
+
+~
+
+watch your back!
+
+
+ 
+
+~
+
+~
+
+make sure no big crimes are happening.
+
+ 
+
+~
+
+ 
+
+~
+
+
+~
+
+ 
+
+~
+
+she has not eaten in days.
+
+ 
+
+~
+
+~
+
+~
 #9078
 Izan Drive~
 The drive leads to the east and the west.~
@@ -1794,11 +2148,16 @@ This guard is one of the elite of the black watchman.  His sole purpose is go
 150 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#9014
+
+ 
+
+~
+
+ 
+
+~
+
+~
 rodent~
 The rodent~
 The rodent is picking through the garbage!
@@ -1952,8 +2311,10 @@ L 0 0 0 0 0 0 0 0 0
 #9009
 Donut~
 Donut the Healer~
-Donut will heal you right up!~
-This guy is a non-stop healing machine.  He never tires, he just keeps casting
+
+~
+
+~
 spells at everyone.  Make sure to say thanks!
 ~
 8392707 0 0 S

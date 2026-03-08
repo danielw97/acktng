@@ -1,0 +1,13 @@
+level -1
+keywords shelp_cloak transcendence
+---
+*******************************************************************************
+       Name: cloak:transcendence
+    Classes: Assassin(48)
+   Duration: pseudo_level / 8 ticks
+   Modifies: N/A
+       Type: Defensive
+Description: Surrounds the caster with a transcendence cloak.  While active,
+             incoming physical attacks have a pseudo_level/15 chance of being
+             completely avoided.
+*******************************************************************************

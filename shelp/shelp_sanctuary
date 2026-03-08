@@ -1,0 +1,12 @@
+level -1
+keywords shelp_sanctuary
+---
+*******************************************************************************
+       Name: Sanctuary		
+    Classes: Cleric(12)
+   Duration: 5 + ( Cast Level / 20 )
+   Modifies: N/A
+       Type: Defensive
+Description: This spell surrounds the target with a glowing white aura,
+             which serves to protect the target from any damage sustained.
+*******************************************************************************

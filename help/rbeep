@@ -1,0 +1,17 @@
+level 0
+keywords RBEEP
+---
+Syntax:  rbeep <player@mudname>     - "beep" a player over IMC
+
+
+rbeep sends an audible beep to another player on another mud (the @mudname
+
+part indicates which mud; see 'imclist'). Note that this should only be done
+
+when you _really_ need to get their attention; abusing rbeep will usually
+
+lead to your IMC priviliges being revoked.
+
+
+See also: IMC IMCLIST
+

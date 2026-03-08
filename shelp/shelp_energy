@@ -1,0 +1,13 @@
+level -1
+keywords shelp_energy drain
+---
+*******************************************************************************
+       Name: Energy Drain 		
+    Classes: Mage(80)
+   Duration: N/A
+   Modifies: N/A
+       Type: Offensive
+Description: This spell allows the caster to drain HitPoints, Mana Points
+             and Experience Points from the target, whilst gaining in Hit
+             Points Him/Herself.
+*******************************************************************************

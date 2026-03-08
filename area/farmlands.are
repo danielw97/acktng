@@ -12,397 +12,878 @@ U @@WYou hear a @@RRooster @@Wcrow in the distance.@@N~
 O jenn~
 R all~
 W all~
-#HELPS
-1 house~
-Basic House (includes recall, 3 rooms, all indoors): 100 QP
- 
-Spouse Recall Set to House: 75 QP
-***Areas***
- 
-Slums: No extra Cost (Default)
-Rich Section: 20 QP Extra
-Non-racial City (Tarot City, Tirna O'goth, etc): 10 QP Extra
- 
-***Doors***
- 
-Locked: 85 QP
-Pick-proof: 85
-Smash-proof 85 QP
-Pass-proof: 85 QP
-Nodetect: 100 QP
- 
-***Additional Rooms***
- 
-First (total 4): 10 QP
-Second (total 5): 20 QP
-Third (total 6): 30 QP
-Fourth (total 7): 40 QP
-Fifth (total 8): 50 QP
-Sixth (total 9): 60 QP
-Seventh (total 10): 70 QP
-NOTE:NO house will be built with more than 10 rooms!
- 
-***Room Flags***
- 
-Cold: 55 QP
-Dark: 55 QP
-Hot: 55 QP
-No_magic: 60 QP
-No_mob: 70 QP
-No_recall: 55 QP
-No_teleport: 60 QP
-Pk: 70 QP
-Private: 60 QP
-Quiet: 55 QP
-Regen: 100 QP
-Safe: 80 QP
-Solitary: 50 QP
- 
-Prices for room flags are PER room.
- 
-All rooms are defaulted indoors, but rooms can be outdoors if
-requested.
-Please contact an immortal if you have questions, or wish to
-purchase a home.
-CHANGE: Locks cost 15, not 85 QP
-~
-1 soul~
+
+wonder why you can breathe here, or why you remain standing upright, instead
+
+of floating in free-fall. Distant @@ystars@@d wink both brightly and dimly at
+
+you, looking somehow more merry than you feel. Standing still for a moment,
+
+you commit the scene to memory, for it is a truly beautiful place, and a once
+
+in a lifetime experience.@@N
+
 ~
-1 apostle apostles~
-@@aApostles@@W
- 
-Apostles are traditionally the intermediaries between mortals and the elder
-Gods.
- 
-Here in the Realm you may contact an Apostle with questions you cannot get
-answered from other mortals or for reimbursements, remorting, passing along
-of messages, etc.  Simply send a tell to an Apostle and then be patient in
-case they are busy.
- 
-Do not use the pray channel.  Again, this is for emergencies only when you
-need a God and cannot see any visible ones.  If Gods are invisible it usually
-means they are coding for the mud so please contact Apostles first.
- 
-Tip - Type "who imm" to see which IMMs are on.
-~
-1 unit tactics unit_tactics~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. Standing still for a moment, you commit the
+
+scene to memory, for it is a truly beautiful place, and a once in a lifetime
+
+experience.
+
 ~
-1 ftp FTP~
-We now have our own FTP site :) It allows public read, but no write as yet.
-ftp to soe.nuc.net, and it will let you log in as an anonymous account, use
-your e-mail address as your password. Various files will appear from time to
-time, including a new user help file there now!
-~
-1 order charmies charmed~
-The number of charmed creatures you can control is set by default to 3. Those
-with intelligence or wisdom over 21 receive a 1 bonus towards it, and is given
-an additional 1 bonus if you have the unit tactics skill.
-~
-1 pkok~
-PKOK -player killing
-Once flagged as pkok the flag WILLNOT be removed
-it is a choice for life....
-What this means is that other players flagged as
-@@ePKOK@@N will not be punished if they should so happen
-to kill you....
-There are consequences.....
-One of which includes your corpse does not get returned to Moribund
-and you must go to where you were killed...
-@@eONCE PKOK ALWAYS PKOK!!!@@N
-~
-1 letter~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, very far away.@@N
+
 ~
-0 $~
-#ROOMS
-#7200
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-wonder why you can breathe here, or why you remain standing upright, instead
-of floating in free-fall. Distant @@ystars@@d wink both brightly and dimly at
-you, looking somehow more merry than you feel. Standing still for a moment,
-you commit the scene to memory, for it is a truly beautiful place, and a once
-in a lifetime experience.@@N
-~
-1 9
-D4
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, very far away.@@N
+
+~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, very far away.@@N
+
+~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, far away.@@N
+
+~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, far away.@@N
+
 ~
 ~
-0 -1 7201
-D5
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, far away.@@N
+
+~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, far away.@@N
+
+~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, far away.@@N
+
+~
+
+why you can breathe here, or why you remain upright, instead of floating in
+
+free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
+
+somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
+
+you, far away.@@N
+
+~
+
+ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
+
+and it feels as if your skin is peeling away. The @@Gplanet@@R kareem's closer
+
+threatening to turn you into a pancake.@@N
+
+~
+
+ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
+
+and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
+
+to you, threatening to turn you into a pancake.@@N
+
+~
+
+ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
+
+and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
+
+to you, threatening to turn you into a pancake.@@N
+
+~
+
+ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
+
+and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
+
+to you, threatening to turn you into a pancake.@@N
+
+~
+
+ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
+
+and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
+
+to you, threatening to turn you into a pancake.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
 ~
 ~
-0 0 3250
-S
-#7201
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. Standing still for a moment, you commit the
-scene to memory, for it is a truly beautiful place, and a once in a lifetime
-experience.
-~
-1 9
-D0
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
 ~
-0 -1 7202
-D5
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7200
-S
-#7202
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, very far away.@@N
-~
-1 9
-D0
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
 ~
-0 -1 7203
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 D2
 ~
 ~
-0 -1 7201
-S
-#7203
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, very far away.@@N
-~
-0 9
-D2
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7202
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 D3
 ~
 ~
-0 -1 7204
-S
-#7204
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, very far away.@@N
-~
-1 9
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 D0
 ~
 ~
-0 -1 7205
-D1
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7203
-S
-#7205
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, far away.@@N
-~
-1 9
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 D0
 ~
 ~
-0 -1 7206
-D2
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-~
-0 -1 7204
-S
-#7206
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, far away.@@N
-~
-1 9
+0 2
 D0
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7207
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 D2
 ~
 ~
-0 -1 7205
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 S
-#7207
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, far away.@@N
-~
-1 9
-D2
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
 ~
-0 -1 7206
-D3
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7208
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 S
-#7208
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, far away.@@N
-~
-1 9
-D1
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7207
-D3
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7209
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
+~
 S
-#7209
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, far away.@@N
-~
-1 9
-D1
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7208
-D5
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7210
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 S
-#7210
-@@dThrough the Stars@@N~
-@@dStanding on a seemingly solid trail of @@gmoondust@@d, you wonder vaguely
-why you can breathe here, or why you remain upright, instead of floating in
-free fall. Distant @@ystars@@d wink both brightly and dimly at you, looking
-somehow more merry than you feel. A @@Gplanet@@d spins @@gsilently@@d below
-you, far away.@@N
-~
-1 9
-D4
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7209
-D5
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7211
+
+three cots along the walls. a small rickety table dominates one wall, and a
+
+tiny chicken coop is in one corner, though it appears that the chickens have
+
+escaped, as two or three peck at your feet.@@N
+
+~
 S
-#7211
-@@RDescent@@N~
-@@RSpinning through the @@Gplanet's@@R atmosphere, you wonder if you could
-ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
-and it feels as if your skin is peeling away. The @@Gplanet@@R kareem's closer
-threatening to turn you into a pancake.@@N
-~
-32 9
-D4
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7210
-D5
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
 ~
-0 -1 7212
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
 S
-#7212
-@@RDescent@@N~
-@@RSpinning through the @@Gplanet's@@R atmosphere, you wonder if you could
-ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
-and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
-to you, threatening to turn you into a pancake.@@N
-~
-32 9
-D4
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+
+though they are all small, and not well cared for. Around these farms you see
+
+the occasional @@kblack@@G cow, and even a few goats.@@N
+
+~
+
 ~
 ~
-0 -1 7211
-D5
+
 ~
+
 ~
-0 -1 7213
-S
-#7213
-@@RDescent@@N~
-@@RSpinning through the @@Gplanet's@@R atmosphere, you wonder if you could
-ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
-and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
-to you, threatening to turn you into a pancake.@@N
-~
-32 9
-D4
+
+@@N
+
 ~
+
 ~
-0 -1 7212
-D5
+
 ~
+
 ~
-0 -1 7214
-S
-#7214
-@@RDescent@@N~
-@@RSpinning through the @@Gplanet's@@R atmosphere, you wonder if you could
-ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
-and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
-to you, threatening to turn you into a pancake.@@N
-~
-32 9
-D4
-~
-~
-0 -1 7213
-D5
-~
-~
-0 -1 7215
-S
-#7215
-@@RDescent@@N~
-@@RSpinning through the @@Gplanet's@@R atmosphere, you wonder if you could
-ever survive this torture. Red and @@yyellow@@R flames flicker from your pack,
-and it feels as if your skin is peeling away. The @@Gplanet@@R kareems closer
-to you, threatening to turn you into a pancake.@@N
-~
-36 9
-D4
-~
-~
-0 -1 7214
-D5
-~
-~
-0 -1 7216
-S
-#7216
-@@GFarmlands@@N~
-@@GLooking around, all you can see are fields and fields of various crops,
-corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
+corn, rice, squash, lettuce. Dotting the landscape is the occasional farmhouse
 though they are all small, and not well cared for. Around these farms you see
 the occasional @@kblack@@G cow, and even a few goats.@@N
 ~

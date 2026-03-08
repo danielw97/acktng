@@ -49,6 +49,8 @@ extern DESCRIPTOR_DATA *first_desc;
 extern DESCRIPTOR_DATA *last_desc;
 extern HELP_DATA *first_help;
 extern HELP_DATA *last_help;
+extern HELP_DATA *first_shelp;
+extern HELP_DATA *last_shelp;
 extern NOTE_DATA *first_note;
 extern NOTE_DATA *last_note;
 extern OBJ_DATA *first_obj;

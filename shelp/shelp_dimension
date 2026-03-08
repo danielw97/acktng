@@ -1,0 +1,14 @@
+level -1
+keywords shelp_dimension blade
+---
+*******************************************************************************
+       Name: Dimension Blade		
+    Classes: Psionicist(41) 
+   Duration: Permanent
+   Modifies: Object's HitRoll and DamRoll
+       Type: N/A
+Description: This spell allows the caster to make the specified weapon more
+             lethal, by switching one of it's dimensions into another phase.
+             Sometimes, the weapon may not survive the process, and will 
+             shatter into tiny pieces.
+*******************************************************************************

@@ -18,126 +18,238 @@ M No bad room spells allowed.
 #9551
 The Entrance to the Public Dungeon.~
 You are standing within the Public Dungeons of Midgaard.
-This is where Midgaard's most feared criminals are brought and left to rot,
-where all may come and look.  The whole dungeon is underground, and smells
-like all underground places do.  Above you, you see the light of Market
-Square, and to the south, further within the dungeon.
-~
-16393 11
-D2
+
+This is where Midgaard's most feared criminals are brought and left to rot,
+
+where all may come and look.  The whole dungeon is underground, and smells
+
+like all underground places do.  Above you, you see the light of Market
+
+Square, and to the south, further within the dungeon.
+
+~
+
+~
+
+~
+
+~
+
 ~
 ~
-1 -1 9552
-D4
+
+~
+
 ~
 ~
-1 -1 3014
-D5
+~
+
+~
+
 ~
 ~
-0 -1 9568
+~
+
+~
+
+To the south is a large poster.
+
+~
+~
+
+~
 S
-#9552
-Within the Public Dungeon of Midgaard.~
-You are standing within the Public Dungeon, sounds of the inmates deafen you.
-~
-1 11
-D0
+
+are stupid enough to want to look closely.
+
+~
+
+are stupid enough to want to look closely.
+
 ~
 ~
-1 -1 9551
-D1
+
+are stupid enough to want to look closely.
+
 ~
 ~
-0 -1 9567
-D2
+~
+
+are stupid enough to want to look closely.
+
+~
+~
+~
+
+are stupid enough to want to look closely.
+
+~
 ~
 ~
 0 -1 9553
 S
-#9553
-Within the Public Dungeon of Midgaard.~
-You are standing within the Public Dungeon, sounds of the inmates deafen you.
-~
-1 11
-D0
+
+are stupid enough to want to look closely.
+
+~
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground.
+
+~
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground.
+
 ~
 ~
-0 -1 9552
-D2
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground. You can see a
+
+bright light to the South, highlighting some vague figures.
+
+~
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground.
+
 ~
 ~
-0 -1 9554
-D3
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground.
+
+~
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9566
-S
-#9554
-Within the Public Dungeon of Midgaard.~
-You are standing within the Public Dungeon, sounds of the inmates deafen you.
-~
-1 11
-D0
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9553
-D1
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9565
-D2
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9555
-S
-#9555
-Within the Public Dungeon of Midgaard.~
-You are standing within the Public Dungeon, sounds of the inmates deafen you.
-~
-1 11
-D0
+
+has a clearly rank odor, a slight foul breeze making it more present.  There
+
+is little light, thankfully hiding what may be on the ground.
+
+
+~
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground.
+
+~
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9554
-D2
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9556
-S
-#9556
-Within the Public Dungeon of Midgaard.~
-You are standing within the Public Dungeon, sounds of the inmates deafen you.
-~
-1 11
-D0
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9555
-D1
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground. You can see a
+
+bright light to the South, highlighting some vague figures.
+
+~
+
+has a clearly rank odor, a slight foul breeze making it more present. There is
+
+little light, thankfully hiding what may be on the ground. You can see a
+
+bright light to the South, highlighting some vague figures.
+
+~
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9559
-D3
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9557
-S
-#9557
-Within the Public Dungeon of Midgaard.~
-You are standing within the Public Dungeon, sounds of the inmates deafen you.
-~
-1 11
-D1
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9556
-D2
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
 ~
 ~
-0 -1 9558
-S
-#9558
+
+the walls seem endless, and the omnipresent smell seems even more vivid within
+
+the cells themselves. The loudness of the prison seems inescapable.
+
+~
 Within the Public Dungeon of Midgaard.~
 You are standing within the Public Dungeon, sounds of the inmates deafen you.
 ~
@@ -583,44 +695,98 @@ S
 #9586
 The Final Level Cells~
 Within the cells of the public dungeon, very little can be seen. The cracks on
-the walls seem endless, and the omnipresent smell seems even more vivid within
-the cells themselves. The loudness of the prison seems inescapable.
-~
-0 11
-D1
+
+the barest flicker of light can be seen from above, and little can be made out
+
+
+~
+
+~
+
+killing machine at that!  She stares cross-eyed at you, whilst saying,
+
+"sickman, sickman, sickman."
+
+~
+
+~
+
+a very mean look in his eyes.  You wonder why he is in here, but then when
+
+he smiles, you know why.
+
+~
+
+~
+
+hundred murders to his name.  He looks like a nice man, who wouldn't say
+
+boo to a spider.  My! How looks can be misleading.
+
+~
+
+~
+
+round and round, screaming at all present.  Just looking at it makes you
+
+dizzy.
+
+~
+
+~
+
+many years ago, and has been locked up in the dungeons since, which can
+
+hardly have done much to improve his temper.
+
+~
+
+~
+
+the ability to bend and re-shape her body at will.  She forms into a 
+
+question mark as you look at her.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
 ~
 ~
-0 -1 9570
-S
-#9587
-The Final Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-the walls seem endless, and the omnipresent smell seems even more vivid within
-the cells themselves. The loudness of the prison seems inescapable.
-~
-0 11
-D3
+
+~
+
 ~
 ~
-0 -1 9583
-S
-#9588
-The Final Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-the walls seem endless, and the omnipresent smell seems even more vivid within
-the cells themselves. The loudness of the prison seems inescapable.
-~
-0 11
-D1
+
 ~
+
 ~
-0 -1 9583
-S
-#9589
-The Final Level Cells~
-Within the cells of the public dungeon, very little can be seen. The cracks on
-the walls seem endless, and the omnipresent smell seems even more vivid within
-the cells themselves. The loudness of the prison seems inescapable.
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+the cells themselves. The loudness of the prison seems inescapable.
 ~
 0 11
 D3
@@ -1124,15 +1290,15 @@ A
 18 15
 A
 19 15
-A
-17 -15
-A
-13 10
-L
-20
-#9550
-Elastic Aura~
-an Elastic Aura~
+M 0 9551 1 9566   load mob
+M 0 9552 1 9564   load mob
+E 0 9553 0 16     load obj
+M 0 9553 1 9563 
+E 0 9552 0 15 
+M 0 9554 1 9562 
+E 0 9551 0 1 
+M 0 9555 1 9567 
+M 0 9556 1 9565 
 An aura of some elasticity lies here~
 28 134217728 8388610 1
 0 0 0 0 0 0 0 0 0 0

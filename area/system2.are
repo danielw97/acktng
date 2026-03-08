@@ -18,54 +18,94 @@ S Title not shown on area list.
 #21
 (trialroom1) Front Hall~
 You are stanfnding in the front hall of a regular-looking two-story house. The
-are stairs here, a hallway to the north leading to the kitchen, and the
-living-room is to the west.
- 
 
-~
-155656 11
-D0
+are stairs here, a hallway to the north leading to the kitchen, and the
+
+living-room is to the west.
+
+ 
+
+
+~
+
+made.  Opoops, the potatoes bioled over...
+
+~
+
+out into the cesspool that was once a place of recreation.  Through the rubble
+
+you see a couch and TV floating almost blessedly above the muck.
+
+
 ~
 ~
-0 -1 22
-D3
+~
+
+from. there are bedrooms to the east and west, and a bathroom to the north.
+
 ~
 ~
-0 -1 23
-D4
 ~
+
+That toilet is sis totally  conered with ... STUFF! *vomit*  The is a bathtub
+
+here too... im not sure you wanna pull back the curtain.
+
+ 
+
+
 ~
-0 -1 24
 E
-stairs~
-These stairs lead up into the bedrooms.~
-E
-east~
-You hear the sounds of a TV coming from this room.~
-E
-north~
-You hear the sound of someone chopping vegetables in the next room.~
-E
-e~
+
+accessories lies stroon about the room.
+
+
 ~
-E
-n~
-You hear the sounds iof veggies being chopped in this direction.~
-S
-#22
-The Kitchen (Trialroom2)~
-You are standing in a small, hot kitchen.  Preparations for dinner are being
-made.  Opoops, the potatoes bioled over...
-~
-8 11
-D2
+
+about the room here and there.  There is a closet to the north
+
+
+~
+
+sooo dirty, they could prolly be classified as a sentient being.
+
+
+~
+
 ~
 ~
-0 -1 21
 E
-potatoes~
-what a mess!~
-E
+
+
+~
+
+
+~
+
+
+~
+
+ 
+
+
+~
+
+
+~
+
+think ear-wax was supposed to run.
+
+~
+
+~
+
+you glad you never had any of your own.
+
+
+~
+
+
+~
 kitchen~
 This place is a pig-stye.~
 E

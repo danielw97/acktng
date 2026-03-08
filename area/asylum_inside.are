@@ -16,114 +16,267 @@ W loren~
 #16002
 @@WThe Administrator's Chambers@@N~
 @@WApparently, someone was looking for something here..the room is a shambles, desk torn apart and @@gpapers@@N and @@bbooks@@N scattered everywhere.
-Off in the corner, another pile of lumber has been stacked.
-~
-8 11
-D1
-~
-~
-0 -1 16001
-E
-books~
-Many tombs of the insanities of man, and the needs of the emotionally
-disturbed lie scattered about.@@N
-~
-E
-papers~
-@@WSearching through the papers, the only thing of any interest you find is a
-@@gpage@@N torn out of an ancient book.@@N
-~
-E
-page~
-<. .. .. is summonable, but only after great preperation, and the sacrifice of..>
-<. .. ... ..#X#XX#X can bring the summoner great power, but demands the souls of many to enhance...>
-~
-S
-#16001
-@@WThe Secretary's Room@@N~
-@@WA very old and rotten wooden @@ydesk@@N has been left here, apparently abandoned by
-it's original owner. @@WA few piles of lumber have recently been placed to one
-side, apparently to rework the @@ydesk@@N into @@WA suitable work area.
-~
-8 11
-D1
-~
-~
-0 -1 16000
-D3
-~
-~
-0 -1 16002
-E
-desk~
-@@NSearching the desk, you notice nothing of any value.  However, a slight
- @@Gslime@@N appears to have been smeared all over the drawers.  It appears
-fresh.
-~
-S
-#16000
-The Entryway~
-@@gDark shadows veil deeper darkness, as you catch a glimpse of eyes peering
-at you.  While this building seems to have been forgotten, recent construction
-seems to have been performed. It appears as if the Asylum is back in business.
 
-~
-16396 11
-D0
+Off in the corner, another pile of lumber has been stacked.
+
 ~
+
+disturbed lie scattered about.@@N
+
 ~
-0 -1 16003
-D2
+
+@@gpage@@N torn out of an ancient book.@@N
+
 ~
+
+<. .. ... ..#X#XX#X can bring the summoner great power, but demands the souls of many to enhance...>
+
 ~
-0 0 3966
-D3
+
+it's original owner. @@WA few piles of lumber have recently been placed to one
+
+side, apparently to rework the @@ydesk@@N into @@WA suitable work area.
+
 ~
+
+ @@Gslime@@N appears to have been smeared all over the drawers.  It appears
+
+fresh.
+
 ~
-0 -1 16001
-S
-#16003
-A Marble Arch~
-@@NYour footsteps echo loudly down a long hallway as you step through the arch
-Many doors can be seen to the east and west, each appearing unused for quite
-some time.
- 
-@@bLayers upon layers of dust cover the marble of the floor here, disturbed only by tracks of human footsteps, and something....else.@@N
-~
-8 11
-D0
+
+at you.  While this building seems to have been forgotten, recent construction
+
+seems to have been performed. It appears as if the Asylum is back in business.
+
+
 ~
+
+Many doors can be seen to the east and west, each appearing unused for quite
+
+some time.
+
+ 
+
+@@bLayers upon layers of dust cover the marble of the floor here, disturbed only by tracks of human footsteps, and something....else.@@N
+
 ~
-0 -1 16004
-D2
-~
-~
-0 0 16000
 E
-tracks~
-@@aYou can tell that several humanoids have traversed these hallways in the
-recent past.  You also wonder what sort of creature would leave a large set of
-3-toed paw marks, every 10 feet or so.  Either something VERY large, or
-something with an unusual method of walking.
-@@N
-~
-S
-#16004
-A Hallway@@N~
-The marble is ancient and cracked in several places. The wooden frame of the
-doors around you is mostly rotted, and apparently covered with a dark
-substance in several places.
-~
+
+recent past.  You also wonder what sort of creature would leave a large set of
+
+3-toed paw marks, every 10 feet or so.  Either something VERY large, or
+
+something with an unusual method of walking.
+
+@@N
+
+~
+
+doors around you is mostly rotted, and apparently covered with a dark
+
+substance in several places.
+
+~
+
+frames of the doors, as if a large creature had carelessly brushed against
+
+them.@@N
+
+~
+
+time when the @@mAsylum@@N had many patients.@@N
+
+~
+
+~
+
+and refuse, obviously remains of decade old food for the inmates.
+
+~
+8 11
+
+on the floor. Several bowls are filled with a mush that while appearing
+
+unappetizing, would at least be nourishing.
+
+~
+
+Utensils line the walls, and cooking bowls and pots are stacked near the large
+
+oven.
+
+~
+~
+
+a somewhat less used path goes to the west.
+
+~
+
+ 
+
+~
+
+@@gPictures@@W obviously drawn by @@einmates@@N line the walls.  Several
+
+@@gbooks@@W lie scattered about.
+
+~
+
+deformed minds, they depict various strange and unusual scenes.
+
+~
+
+accross an unusual @@rpassage:@@N
+
+~
+
+The staff of this nightmarish institution are not what they seem. I dream of strange things at night:  Nurses with frog eyes, Therapists with slimy skin, and evil experiements gone insane in the bowels of this evil structure.  The Administrator MUST be stopped!@@N
+
+@@NXylanor
+
+~
+
+proud efforts of the hopelessly insane.
+
+~
+
+walls, no chairs or rugs are here.  However, you do notice a pair of shackles
+
+on the wall, with darkened @@Rstains@@W on them.
+
+~
+
+likely from ages of @@einmates@@N being led about the @@mAsylum@@N.
+
+~
+
+ 
+
+@@aYou can hear an occasional wail of a miserable @@einmate@@a from the east.@@N
+
+~
+~
+
+victims of this instiution.
+
+~
+~
+~
+
+~
+
+~
+~
+~
+
+victims of this instiution.
+
+~
+
+~
+
+~
+
+victims of this instiution.
+
+~
+
+~
+
+~
+
+Institution's remodelling.  Cots are organized into rows, medical items of all
+
+sorts are lined neatly on tables. Apparently, the heart of The Administrator's
+
+Project has something to do with medical research.
+
+~
+
+@@einmates@@W. As would be expected, restraints are attached to the cots,
+
+better to deal with insane patients.
+
+~
 8 11
 D0
 ~
 ~
-0 -1 16010
-D1
+
+them quickly, it appears as if there are at least 2 cots for each @@einmate@@W
+
+that you have seen so far, which seems rather excessive for normal health
+
+maintainence.
+
+~
+
+and various @@gtextbooks@@W on the @@bbookshelf @@Won the far wall.@@N
+
+~
+
+walls.
+
+~
+
+addition, there is also a small model of a frog.
+
+~
+
+interesting note, an ancient magical tome relating to transforming people into
+
+mythical demons, and experimenting on summoning devils is also here.
+
+~
+
+~
+
+~
+
+~
+
 ~
 ~
-0 -1 16005
-D2
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+~
+
+heap.@@N
+
+~
+
+~
+
+~
+
+~
+~
+
+closer.
+
+~
 ~
 ~
 0 -1 16003
