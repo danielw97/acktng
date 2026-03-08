@@ -484,7 +484,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
     keepChestIndex = create_keep_chest_index(pArea, vnum, ch->name);
     keepChest = create_object(keepChestIndex, ch->level);
     obj_to_room(keepChest, RoomIndex);
-    save_corpses();
+    save_chest(keepChest);
 
     ch->pcdata->keep_vnum = vnum;
     do_savearea(NULL, (char *)pArea);

@@ -1338,6 +1338,7 @@
 
 #define CLAN_FILE DATA_DIR "clandata.dat" /* stores clan diplomacy data   */
 #define CORPSE_FILE DATA_DIR "corpses.lst"
+#define CHEST_DIR   DATA_DIR "chest/"
 #define MARKS_FILE DATA_DIR "roommarks.lst"
 #define BANS_FILE DATA_DIR "bans.lst"
 #define RULERS_FILE DATA_DIR "rulers.lst"

@@ -6,6 +6,7 @@ void *hash_ref_from_vnum(int vnum);
 int vnum_from_hash_ref(void *ref);
 int resolve_persistent_container_room_vnum_for_test(int room_vnum);
 int persistent_container_where_vnum_for_save_for_test(int in_room_vnum, int in_obj);
+char *chest_file_path(int vnum, char *dest, size_t dest_size);
 
 struct room_index_data
 {
@@ -206,6 +207,40 @@ static void test_fread_corpse_unlink_before_put_free_preserves_list(void)
     assert(last == b);
 }
 
+/* The CHEST_DIR prefix expected in generated paths. */
+#define EXPECTED_CHEST_DIR "../data/chest/"
+
+static void test_chest_file_path_returns_dir_plus_vnum(void)
+{
+    char buf[256];
+    char *result = chest_file_path(311, buf, sizeof(buf));
+    assert(result == buf);
+    assert(strcmp(buf, EXPECTED_CHEST_DIR "311") == 0);
+}
+
+static void test_chest_file_path_zero_vnum(void)
+{
+    char buf[256];
+    char *result = chest_file_path(0, buf, sizeof(buf));
+    assert(result == buf);
+    assert(strcmp(buf, EXPECTED_CHEST_DIR "0") == 0);
+}
+
+static void test_chest_file_path_returns_null_when_buffer_too_small(void)
+{
+    char buf[5]; /* too small for any valid path */
+    char *result = chest_file_path(311, buf, sizeof(buf));
+    assert(result == NULL);
+}
+
+static void test_chest_file_path_different_vnums_produce_different_paths(void)
+{
+    char buf1[256], buf2[256];
+    chest_file_path(100, buf1, sizeof(buf1));
+    chest_file_path(200, buf2, sizeof(buf2));
+    assert(strcmp(buf1, buf2) != 0);
+}
+
 int main(void)
 {
     test_round_trip_positive_vnum();
@@ -219,6 +254,10 @@ int main(void)
     test_keep_chest_corpse_save_uses_default_when_room_missing();
     test_fread_corpse_put_free_without_unlink_corrupts_list();
     test_fread_corpse_unlink_before_put_free_preserves_list();
+    test_chest_file_path_returns_dir_plus_vnum();
+    test_chest_file_path_zero_vnum();
+    test_chest_file_path_returns_null_when_buffer_too_small();
+    test_chest_file_path_different_vnums_produce_different_paths();
 
     puts("test_save: all tests passed");
     return 0;

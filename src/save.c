@@ -26,10 +26,12 @@
  ***************************************************************************/
 
 #include <ctype.h>
+#include <dirent.h>
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
 #include <stdint.h>
+#include <unistd.h>
 #include "globals.h"
 #include "hash.h"
 
@@ -2299,6 +2301,10 @@ void save_corpses()
    {
       for (this_corpse = first_corpse; this_corpse != NULL; this_corpse = this_corpse->next)
       {
+         /* Keep chests are saved to their own per-vnum files in CHEST_DIR. */
+         if (this_corpse->this_corpse->item_type == ITEM_CONTAINER
+             && IS_SET(this_corpse->this_corpse->value[1], CONT_KEEP_CHEST))
+            continue;
          fwrite_corpse(this_corpse->this_corpse, fp, 0);
       }
       fprintf(fp, "#END\n\n");
@@ -2312,6 +2318,84 @@ void save_corpses()
    }
    return;
 }
+
+/*
+ * Build the file path for a keep chest save file.
+ * Path is CHEST_DIR/<vnum>  (e.g. "../data/chest/311").
+ * Returns dest on success, NULL if dest_size is too small.
+ */
+#ifdef UNIT_TEST_SAVE
+char *chest_file_path(int vnum, char *dest, size_t dest_size)
+#else
+static char *chest_file_path(int vnum, char *dest, size_t dest_size)
+#endif
+{
+   int n = snprintf(dest, dest_size, "%s%d", CHEST_DIR, vnum);
+   if (n < 0 || (size_t)n >= dest_size)
+      return NULL;
+   return dest;
+}
+
+/*
+ * Save a single keep chest (and its contents) to CHEST_DIR/<vnum>.
+ * Uses write-to-temp-then-rename for atomicity.
+ */
+void save_chest(OBJ_DATA *chest)
+{
+   FILE *fp;
+   char path[MAX_STRING_LENGTH];
+   char temp_path[MAX_STRING_LENGTH];
+   int n;
+
+   if (chest == NULL)
+      return;
+   if (chest->item_type != ITEM_CONTAINER || !IS_SET(chest->value[1], CONT_KEEP_CHEST))
+      return;
+
+   if (chest_file_path(chest->pIndexData->vnum, path, sizeof(path)) == NULL)
+   {
+      bug("save_chest: path too long for vnum %d", chest->pIndexData->vnum);
+      return;
+   }
+
+   n = snprintf(temp_path, sizeof(temp_path), "%s.temp", path);
+   if (n < 0 || (size_t)n >= sizeof(temp_path))
+   {
+      bug("save_chest: temp path too long for vnum %d", chest->pIndexData->vnum);
+      return;
+   }
+
+   if (fpReserve != NULL)
+   {
+      fclose(fpReserve);
+      fpReserve = NULL;
+   }
+
+   if ((fp = fopen(temp_path, "w")) == NULL)
+   {
+      bug("save_chest: fopen failed for %s", 0);
+      perror(temp_path);
+      return;
+   }
+
+   fwrite_corpse(chest, fp, 0);
+   fprintf(fp, "#END\n\n");
+   fflush(fp);
+   fclose(fp);
+
+   rename(temp_path, path);
+}
+
+/*
+ * Delete the save file for a keep chest (called when the chest is destroyed).
+ */
+void delete_chest_file(int vnum)
+{
+   char path[MAX_STRING_LENGTH];
+   if (chest_file_path(vnum, path, sizeof(path)) != NULL)
+      unlink(path);
+}
+
 
 void save_marks()
 {

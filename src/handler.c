@@ -2383,7 +2383,10 @@ void extract_obj(OBJ_DATA *obj)
          UNLINK(this_corpse, first_corpse, last_corpse, next, prev);
          PUT_FREE(this_corpse, corpse_free);
       }
-      save_corpses();
+      if (obj->item_type == ITEM_CORPSE_PC)
+         save_corpses();
+      else
+         delete_chest_file(obj->pIndexData->vnum);
    }
    --obj->pIndexData->count;
    PUT_FREE(obj, obj_free);

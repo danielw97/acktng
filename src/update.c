@@ -1748,21 +1748,37 @@ void check_vamp(CHAR_DATA *ch)
 /* Check for objfuns.... this is probably performance sensitive too. */
 void objfun_update(void)
 {
+   OBJ_DATA *marker;
    OBJ_DATA *obj;
 
-   for (obj = first_obj; obj != NULL; obj = obj->next)
+   /*
+    * Use the same marker pattern as obj_update() so that a callback which
+    * calls extract_obj() on the current object cannot invalidate the
+    * iterator.  We move each object to the tail before invoking its
+    * callback; the marker at the tail signals when every object has been
+    * visited.
+    */
+   GET_FREE(marker, obj_free);
+   LINK(marker, first_obj, last_obj, next, prev);
+
+   while ((obj = first_obj) != marker)
+   {
+      UNLINK(obj, first_obj, last_obj, next, prev);
+      LINK(obj, first_obj, last_obj, next, prev);
+
       if (obj->obj_fun != NULL)
       {
          if (obj->carried_by != NULL)
          {
             if (!IS_NPC(obj->carried_by) && IS_WOLF(obj->carried_by) && (IS_SHIFTED(obj->carried_by) || IS_RAGED(obj->carried_by)))
-            {
                continue;
-            }
          }
          (*obj->obj_fun)(obj, obj->carried_by);
       }
+   }
 
+   UNLINK(marker, first_obj, last_obj, next, prev);
+   PUT_FREE(marker, obj_free);
    return;
 }
 
