@@ -1063,11 +1063,6 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             SKEY("Bamfin", ch->pcdata->bamfin, fread_string(fp));
             SKEY("Bamfout", ch->pcdata->bamfout, fread_string(fp));
          }
-         if (!str_cmp(word, "BankMoney"))
-         {
-            fMatch = TRUE;
-            break;
-         }
          break;
 
       case 'C':
@@ -1225,12 +1220,6 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             KEY("Mkilled", ch->pcdata->mkilled, fread_number(fp));
             KEY("Monitor", ch->pcdata->monitor, fread_number(fp));
          }
-         if (!str_cmp(word, "Money"))
-         {
-            fMatch = TRUE;
-            break;
-         }
-
          if (!str_cmp(word, "m/c"))
          {
             switch (cur_revision)
@@ -1679,12 +1668,6 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
       case 'L':
          KEY("Level", obj->level, fread_number(fp));
          break;
-      case 'M':
-         if (!str_cmp(word, "Money"))
-         {
-            fMatch = TRUE;
-            break;
-         }
       case 'N':
          SKEY("Name", obj->name, fread_string(fp));
 
@@ -2064,12 +2047,6 @@ void fread_corpse(FILE *fp)
       case 'L':
          KEY("Level", obj->level, fread_number(fp));
          break;
-      case 'M':
-         if (!str_cmp(word, "Money"))
-         {
-            fMatch = TRUE;
-            break;
-         }
       case 'N':
          KEY("Name", obj->name, fread_string(fp));
 

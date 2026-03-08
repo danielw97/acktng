@@ -2735,12 +2735,10 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
    AFFECT_DATA *new_af;
    int new_cost;
    int looper;
-   MONEY_TYPE *money;
    sh_int cnt;
 
    (void)af;
    (void)new_af;
-   (void)money;
    (void)cnt;
 
    if (level < 0)
