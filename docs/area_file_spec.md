@@ -76,6 +76,7 @@ Color theme policy:
 
 - Every area must have a defined color theme.
 - Theme usage can be sparse or strict, but should be intentional and consistent with the area's identity.
+- Black foreground (`@@k`) must not be used as a thematic color in area-authored strings.
 - Keep control codes readable/maintainable: avoid noisy color-code churn that obscures base text.
 - Automatic tools must not add background color codes (`back_*`, codes `0`-`7`) or the flashing code (`f`).
 - Background/flashing codes are allowed only when explicitly added manually by a human author.
