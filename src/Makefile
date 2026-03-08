@@ -44,12 +44,15 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
 	  write.o
 
-.PHONY: all clean purge unit-tests
+.PHONY: all clean purge unit-tests integration-test
 
 all:
 	$(MAKE) clean
 	$(MAKE) ack
 	$(MAKE) unit-tests
+
+integration-test: ack
+	cd .. && ./integration-test.sh
 
 ifdef CYGWIN
 ack: $(O_FILES)
