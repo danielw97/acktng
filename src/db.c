@@ -1573,14 +1573,12 @@ void load_resets(FILE *fp)
             last_obj_room = pRoomIndex;
          }
          break;
-      case 'P': /* apparently these resets are no longer in use */
-         /*
-          * if ( last_obj_room )
-          * {
-          * pRoomIndex = last_obj_room;
-          * reset_ok = TRUE;
-          * }
-          */
+      case 'P':
+         if (last_obj_room && get_obj_index(Targ1) && get_obj_index(Targ3))
+         {
+            pRoomIndex = last_obj_room;
+            reset_ok = TRUE;
+         }
          break;
       case 'G':
       case 'E':
@@ -2080,11 +2078,13 @@ void check_resets(void)
    RESET_DATA *pReset;
    RESET_DATA *nextReset;
    ROOM_INDEX_DATA *last_mob_room;
+   ROOM_INDEX_DATA *last_obj_room;
    int previous_bug = 0;
 
    for (pArea = first_area; pArea; pArea = pArea->next)
    {
       last_mob_room = NULL;
+      last_obj_room = NULL;
 
       for (pReset = pArea->first_reset; pReset; pReset = nextReset)
       {
@@ -2114,12 +2114,14 @@ void check_resets(void)
          case 'O':
             if (!get_obj_index(pReset->arg1))
                ValReset = INVAL_OBJ;
-            if (!get_room_index(pReset->arg3))
+            if (!(last_obj_room = get_room_index(pReset->arg3)))
                ValReset = INVAL_ROOM;
             break;
-         case 'P': /* obsolete.. */
+         case 'P':
             if (!get_obj_index(pReset->arg1) || !get_obj_index(pReset->arg3))
                ValReset = INVAL_OBJ;
+            if (!last_obj_room)
+               ValReset = INVAL_ROOM;
             break;
          case 'G':
          case 'E':
@@ -2275,9 +2277,11 @@ void reset_area(AREA_DATA *pArea)
 {
    RESET_DATA *pReset;
    CHAR_DATA *mob;
+   OBJ_DATA *last_obj;
    char buf[MAX_STRING_LENGTH];
    bool last;
    bool just_loaded = FALSE;
+   bool just_loaded_obj = FALSE;
    int level;
    int previous_bug = 0;
 
@@ -2285,6 +2289,7 @@ void reset_area(AREA_DATA *pArea)
    monitor_chan(buf, MONITOR_AREA_UPDATE);
    area_resetting_global = TRUE;
    mob = NULL;
+   last_obj = NULL;
    last = TRUE;
    (void)last;
    level = 0;
@@ -2310,6 +2315,8 @@ void reset_area(AREA_DATA *pArea)
 
       case 'M':
          just_loaded = FALSE;
+         just_loaded_obj = FALSE;
+         last_obj = NULL;
          if ((pMobIndex = get_mob_index(pReset->arg1)) == NULL)
          {
             SHOW_AREA;
@@ -2357,6 +2364,8 @@ void reset_area(AREA_DATA *pArea)
          break;
 
       case 'O':
+         just_loaded_obj = FALSE;
+         last_obj = NULL;
          if ((pObjIndex = get_obj_index(pReset->arg1)) == NULL)
          {
             SHOW_AREA;
@@ -2392,6 +2401,8 @@ void reset_area(AREA_DATA *pArea)
          obj = create_object(pObjIndex, number_fuzzy(level));
 
          obj_to_room(obj, pRoomIndex);
+         just_loaded_obj = TRUE;
+         last_obj = obj;
 
          last = TRUE;
          break;
@@ -2411,7 +2422,17 @@ void reset_area(AREA_DATA *pArea)
             continue;
          }
 
-         if (pArea->nplayer > 0 || (obj_to = get_obj_type(pObjToIndex)) == NULL || count_obj_list(pObjIndex, obj_to->first_in_carry_list) > 0)
+         if (!just_loaded_obj || last_obj == NULL ||
+             last_obj->pIndexData == NULL ||
+             last_obj->pIndexData->vnum != pReset->arg3)
+         {
+            last = FALSE;
+            break;
+         }
+
+         obj_to = last_obj;
+
+         if (count_obj_list(pObjIndex, obj_to->first_in_carry_list) > 0)
          {
             last = FALSE;
             break;

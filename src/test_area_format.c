@@ -611,7 +611,7 @@ static void parse_resets_section(FILE *fp, char *line, int *line_number, const c
             int values[5];
             int value_count = parse_int_tokens(trimmed + 1, values, 5);
 
-            if ((cmd == 'M' || cmd == 'O' || cmd == 'P') && value_count >= 4)
+            if ((cmd == 'M' || cmd == 'O') && value_count >= 4)
             {
                 int room_vnum = values[3];
                 if (room_vnum >= area_min_vnum && room_vnum <= area_max_vnum && !vnum_set_contains(global_room_vnums, room_vnum))

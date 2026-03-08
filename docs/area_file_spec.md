@@ -746,7 +746,8 @@ Commands used by validation/editor paths:
 - `E`: equip object on previous mob (`arg1` obj vnum, `arg2` limit, `arg3` wear_loc)
 - `D`: set door state (`arg1` room vnum, `arg2` door 0..5, `arg3` state 0..2)
 - `R`: randomize exits (`arg1` room vnum, `arg2` max door)
-- `A`/`P`: obsolete; loader/checker still recognize them
+- `P`: put object into previous room-reset object/container (`arg1` object vnum, `arg2` limit, `arg3` container object vnum)
+- `A`: obsolete; loader/checker still recognize it
 
 Reset vnum validity rule:
 
