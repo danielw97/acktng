@@ -1206,6 +1206,10 @@ D2
 D0
 ~
 ~
+0 0 19906
+D4
+~
+~
 0 0 19905
 S
 #19905
@@ -1213,14 +1217,10 @@ Crumbling Ledge~
 A narrow ledge of @@gcrumbling rock@@N provides precarious footing above the main canyon floor, with loose scree shifting underfoot.
 ~
 0 4
-D2
+D5
 ~
 ~
 0 0 19904
-D0
-~
-~
-0 0 19906
 S
 #19906
 Wind-Carved Passage~
@@ -1230,7 +1230,7 @@ The wind has sculpted this section of canyon into bizarre shapes, @@Rred arches@
 D2
 ~
 ~
-0 0 19905
+0 0 19904
 D0
 ~
 ~
@@ -1248,6 +1248,10 @@ D2
 D0
 ~
 ~
+0 0 19910
+D1
+~
+~
 0 0 19908
 S
 #19908
@@ -1255,7 +1259,7 @@ Boulder Strewn Path~
 Massive @@gboulders@@N fallen from the canyon rim litter the path here, forcing travelers to climb over or squeeze between them.
 ~
 0 4
-D2
+D3
 ~
 ~
 0 0 19907
@@ -1273,10 +1277,6 @@ D2
 ~
 ~
 0 0 19908
-D0
-~
-~
-0 0 19910
 S
 #19910
 Sun-Blasted Clearing~
@@ -1286,7 +1286,7 @@ A wide @@ysun-blasted clearing@@N opens up where the arroyo forks, the relentles
 D2
 ~
 ~
-0 0 19909
+0 0 19907
 D0
 ~
 ~
@@ -2060,6 +2060,10 @@ D2
 D0
 ~
 ~
+0 0 19975
+D5
+~
+~
 0 0 19966
 S
 #19966
@@ -2067,7 +2071,7 @@ Vault Entrance~
 A @@gheavy stone door@@N hangs ajar, revealing a dark passage that descends into an underground vault beneath the ruins.
 ~
 0 11
-D2
+D4
 ~
 ~
 0 0 19965
@@ -2183,10 +2187,6 @@ D2
 ~
 ~
 0 0 19973
-D0
-~
-~
-0 0 19975
 S
 #19975
 Ruins Edge~
@@ -2196,7 +2196,7 @@ The ancient settlement ends abruptly here, the @@gcanyon floor@@N resuming its n
 D2
 ~
 ~
-0 0 19974
+0 0 19965
 D0
 ~
 ~
@@ -2228,6 +2228,10 @@ D2
 D0
 ~
 ~
+0 0 19980
+D3
+~
+~
 0 0 19978
 S
 #19978
@@ -2235,11 +2239,11 @@ Egg Chamber~
 Clusters of @@yleathery eggs@@N are tucked into sandy depressions throughout this warm, sheltered hollow in the canyon wall.
 ~
 0 10
-D2
+D1
 ~
 ~
 0 0 19977
-D0
+D3
 ~
 ~
 0 0 19979
@@ -2249,14 +2253,10 @@ Venom Pool~
 A shallow depression filled with @@Rgreenish liquid@@N gives off acrid fumes where scorpion venom has collected and concentrated.
 ~
 0 10
-D2
+D1
 ~
 ~
 0 0 19978
-D0
-~
-~
-0 0 19980
 S
 #19980
 Shed Exoskeleton Field~
@@ -2266,7 +2266,7 @@ Dozens of shed @@bexoskeletons@@N in various sizes litter the ground, creating a
 D2
 ~
 ~
-0 0 19979
+0 0 19977
 D0
 ~
 ~
@@ -2438,6 +2438,10 @@ D2
 D0
 ~
 ~
+0 0 19995
+D1
+~
+~
 0 0 19993
 S
 #19993
@@ -2445,11 +2449,11 @@ Rib Cage Thicket~
 Enormous @@grib cages@@N of long-extinct beasts jut from the earth like the frames of overturned ships.
 ~
 0 10
-D2
+D3
 ~
 ~
 0 0 19992
-D0
+D1
 ~
 ~
 0 0 19994
@@ -2459,14 +2463,10 @@ Skull Mound~
 A massive @@gmound of skulls@@N from hundreds of different creatures has been deliberately piled here by unknown hands.
 ~
 0 10
-D2
+D3
 ~
 ~
 0 0 19993
-D0
-~
-~
-0 0 19995
 S
 #19995
 Ossuary Pit~
@@ -2476,7 +2476,7 @@ A deep @@gpit@@N filled to overflowing with skeletal remains gapes in the canyon
 D2
 ~
 ~
-0 0 19994
+0 0 19992
 D0
 ~
 ~
@@ -2690,6 +2690,10 @@ D2
 D0
 ~
 ~
+0 0 20012
+D1
+~
+~
 0 0 20011
 S
 #20011
@@ -2697,14 +2701,10 @@ Crystal Grotto~
 Clusters of @@yrough crystals@@N protrude from the walls and ceiling, their facets catching and multiplying any available light.
 ~
 0 11
-D2
+D3
 ~
 ~
 0 0 20010
-D0
-~
-~
-0 0 20012
 S
 #20012
 Basalt Column Gallery~
@@ -2714,7 +2714,7 @@ Regular @@gbasalt columns@@N form a natural colonnade along the deep canyon, the
 D2
 ~
 ~
-0 0 20011
+0 0 20010
 D0
 ~
 ~
