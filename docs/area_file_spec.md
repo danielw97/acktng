@@ -258,6 +258,7 @@ Legacy keyword note from `tab_mob_flags` in `src/buildtab.c`:
 
 Builder policy for special difficulty mobs:
 
+- All mobs must be flagged `stay_area` so they do not wander out of their home area.
 - Boss mobs must be flagged `sentinel` and `boss` and must be placed only in rooms flagged `no_mob`.
 - `invasion` must never be set by builders in area files; it is set/cleared by runtime invasion systems only.
 - Strong (non-boss) mobs must be flagged `solo`.
