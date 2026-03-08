@@ -658,6 +658,244 @@ static void test_area_index_vnums_have_no_duplicates(void)
     fclose(list_fp);
 }
 
+#define VNUM_ARRAY_SIZE 65536
+
+static void collect_all_defined_vnums(int *room_defined, int *obj_defined)
+{
+    FILE *list_fp = fopen("../area/area.lst", "r");
+    char area_name[1024];
+    enum { SEC_NONE, SEC_ROOMS, SEC_OBJECTS } section = SEC_NONE;
+
+    if (list_fp == NULL)
+        list_fp = fopen("area/area.lst", "r");
+
+    assert(list_fp != NULL);
+
+    while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
+    {
+        char *nl = strpbrk(area_name, "\r\n");
+        char area_path[2048];
+        FILE *area_fp;
+        char line[4096];
+
+        if (nl != NULL)
+            *nl = '\0';
+        if (area_name[0] == '\0')
+            continue;
+        if (strcmp(area_name, "$") == 0)
+            break;
+
+        snprintf(area_path, sizeof(area_path), "../area/%s", area_name);
+        area_fp = fopen(area_path, "r");
+        if (area_fp == NULL)
+        {
+            snprintf(area_path, sizeof(area_path), "area/%s", area_name);
+            area_fp = fopen(area_path, "r");
+        }
+        assert(area_fp != NULL);
+
+        section = SEC_NONE;
+        while (fgets(line, sizeof(line), area_fp) != NULL)
+        {
+            const char *trimmed = skip_space(line);
+            int vnum;
+
+            if (trimmed[0] != '#')
+                continue;
+
+            if (sscanf(trimmed, "#%d", &vnum) == 1)
+            {
+                if (vnum == 0)
+                    section = SEC_NONE;
+                else if (vnum > 0 && vnum < VNUM_ARRAY_SIZE)
+                {
+                    if (section == SEC_ROOMS)
+                        room_defined[vnum] = 1;
+                    else if (section == SEC_OBJECTS)
+                        obj_defined[vnum] = 1;
+                }
+            }
+            else if (line_starts_with(trimmed, "#ROOMS"))
+                section = SEC_ROOMS;
+            else if (line_starts_with(trimmed, "#OBJECTS"))
+                section = SEC_OBJECTS;
+            else
+                section = SEC_NONE;
+        }
+
+        fclose(area_fp);
+    }
+
+    fclose(list_fp);
+}
+
+static void validate_rooms_exit_vnums(FILE *fp, const char *area_name, const int *room_defined)
+{
+    char line[4096];
+
+    while (read_non_empty_line(fp, line, sizeof(line)))
+    {
+        if (line_starts_with(line, "#0"))
+            return;
+
+        if (line[0] != '#')
+            continue;
+
+        while (read_non_empty_line(fp, line, sizeof(line)))
+        {
+            const char *trimmed = skip_space(line);
+
+            if (trimmed[0] == 'S')
+                break;
+
+            if (trimmed[0] == 'D' && trimmed[1] >= '0' && trimmed[1] <= '5')
+            {
+                int locks, key, to_room;
+
+                if (!consume_tilde_terminated_string(fp, 0) || !consume_tilde_terminated_string(fp, 0))
+                    return;
+                if (!read_non_blank_content_line(fp, line, sizeof(line)))
+                    return;
+                if (sscanf(skip_space(line), "%d %d %d", &locks, &key, &to_room) == 3)
+                {
+                    if (to_room > 0 && (to_room >= VNUM_ARRAY_SIZE || !room_defined[to_room]))
+                        fail_area_validation(area_name, current_area_line(fp),
+                                             "exit destination vnum %d is not a defined room", to_room);
+                }
+            }
+        }
+    }
+}
+
+static void test_exit_destination_vnums_reference_defined_rooms(void)
+{
+    static int room_defined[VNUM_ARRAY_SIZE];
+    static int obj_defined[VNUM_ARRAY_SIZE];
+    FILE *list_fp;
+    char area_name[1024];
+
+    memset(room_defined, 0, sizeof(room_defined));
+    memset(obj_defined, 0, sizeof(obj_defined));
+    collect_all_defined_vnums(room_defined, obj_defined);
+
+    list_fp = fopen("../area/area.lst", "r");
+    if (list_fp == NULL)
+        list_fp = fopen("area/area.lst", "r");
+    assert(list_fp != NULL);
+
+    while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
+    {
+        char *nl = strpbrk(area_name, "\r\n");
+        char area_path[2048];
+        FILE *area_fp;
+        char line[4096];
+
+        if (nl != NULL)
+            *nl = '\0';
+        if (area_name[0] == '\0')
+            continue;
+        if (strcmp(area_name, "$") == 0)
+            break;
+
+        snprintf(area_path, sizeof(area_path), "../area/%s", area_name);
+        area_fp = fopen(area_path, "r");
+        if (area_fp == NULL)
+        {
+            snprintf(area_path, sizeof(area_path), "area/%s", area_name);
+            area_fp = fopen(area_path, "r");
+        }
+        assert(area_fp != NULL);
+
+        while (read_non_empty_line(area_fp, line, sizeof(line)))
+        {
+            if (line_starts_with(line, "#ROOMS"))
+                validate_rooms_exit_vnums(area_fp, area_name, room_defined);
+        }
+
+        fclose(area_fp);
+    }
+
+    fclose(list_fp);
+}
+
+static void validate_resets_obj_vnums(FILE *fp, const char *area_name, const int *obj_defined)
+{
+    char line[4096];
+
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+        const char *trimmed = skip_space(line);
+        int ifflag, obj_vnum;
+
+        if (trimmed[0] == 'S' || trimmed[0] == '#')
+            return;
+
+        if (trimmed[0] == 'O' || trimmed[0] == 'E' || trimmed[0] == 'G' || trimmed[0] == 'P')
+        {
+            if (sscanf(trimmed + 1, " %d %d", &ifflag, &obj_vnum) == 2)
+            {
+                if (obj_vnum <= 0 || obj_vnum >= VNUM_ARRAY_SIZE || !obj_defined[obj_vnum])
+                    fail_area_validation(area_name, current_area_line(fp),
+                                         "reset references undefined object vnum %d", obj_vnum);
+            }
+        }
+    }
+}
+
+static void test_reset_obj_vnums_reference_defined_objects(void)
+{
+    static int room_defined[VNUM_ARRAY_SIZE];
+    static int obj_defined[VNUM_ARRAY_SIZE];
+    FILE *list_fp;
+    char area_name[1024];
+
+    memset(room_defined, 0, sizeof(room_defined));
+    memset(obj_defined, 0, sizeof(obj_defined));
+    collect_all_defined_vnums(room_defined, obj_defined);
+
+    list_fp = fopen("../area/area.lst", "r");
+    if (list_fp == NULL)
+        list_fp = fopen("area/area.lst", "r");
+    assert(list_fp != NULL);
+
+    while (fgets(area_name, sizeof(area_name), list_fp) != NULL)
+    {
+        char *nl = strpbrk(area_name, "\r\n");
+        char area_path[2048];
+        FILE *area_fp;
+        char line[4096];
+
+        if (nl != NULL)
+            *nl = '\0';
+        if (area_name[0] == '\0')
+            continue;
+        if (strcmp(area_name, "$") == 0)
+            break;
+
+        snprintf(area_path, sizeof(area_path), "../area/%s", area_name);
+        area_fp = fopen(area_path, "r");
+        if (area_fp == NULL)
+        {
+            snprintf(area_path, sizeof(area_path), "area/%s", area_name);
+            area_fp = fopen(area_path, "r");
+        }
+        assert(area_fp != NULL);
+
+        while (fgets(line, sizeof(line), area_fp) != NULL)
+        {
+            if (line_starts_with(line, "#RESETS"))
+            {
+                validate_resets_obj_vnums(area_fp, area_name, obj_defined);
+                break;
+            }
+        }
+
+        fclose(area_fp);
+    }
+
+    fclose(list_fp);
+}
+
 int main(void)
 {
     test_object_spawn_level_uses_requested_level_when_present();
@@ -667,6 +905,8 @@ int main(void)
     test_mock_load_all_areas_and_validate_formats();
     test_area_list_has_no_duplicate_entries();
     test_area_index_vnums_have_no_duplicates();
+    test_exit_destination_vnums_reference_defined_rooms();
+    test_reset_obj_vnums_reference_defined_objects();
 
     puts("test_db: all tests passed");
     return 0;
