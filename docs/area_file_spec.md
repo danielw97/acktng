@@ -493,6 +493,8 @@ Builder conventions for held equipment archetypes:
 - A **fist weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `fist`.
 - A **two-handed weapon** is an object with `item_type = ITEM_WEAPON`, wear flags including `hold`, and extra flags including `two-handed`.
 
+Area policy constraint for naming consistency: if a weapon's presented identity (`name`, `short_descr`, or `description`) clearly indicates a two-handed archetype (for example, a "great axe"), it must include the `two-handed` extra flag.
+
 Additional constraint: an item may only be set to `item_type = ITEM_WEAPON` if its wear flags include both `hold` and `take`.
 
 ### 7.4) Item `item_apply` bitvector
