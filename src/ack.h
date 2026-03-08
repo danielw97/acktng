@@ -772,6 +772,8 @@ struct pc_data
    char *ignore_list[MAX_IGNORES]; /* Ignore this person */
    sh_int recall_vnum;
    int keep_vnum;
+   int keep_healer_bought;
+   int keep_healer_vnum;
    int reincarnations[MAX_CLASS];
    int remort_reincarnations[MAX_REMORT];
    int adept_reincarnations[MAX_CLASS];
