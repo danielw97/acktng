@@ -19,7 +19,7 @@ an ash acolyte~
 An ash acolyte murmurs blasphemies here.
 ~
 A novice devotee in soot-stained robes clutches a guttering censer and whispers invocations to the dead stars.~
-167772257 512 -500 S
+33554529 512 -500 S
 8 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -33,7 +33,7 @@ a crypt usher~
 A crypt usher blocks passage here.
 ~
 This gaunt usher bears a rusted halberd and a bell of black iron, corralling intruders toward sacrificial circles.~
-167772257 512 -500 S
+33554529 512 -500 S
 9 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -47,7 +47,7 @@ a grave choir novice~
 A grave choir novice hums a dirge here.
 ~
 Their voice is thin and cracking, but the hymn carries a predatory joy that makes the candles tremble.~
-167772257 512 -500 S
+33554529 512 -500 S
 10 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -61,7 +61,7 @@ a bone scrivener~
 A bone scrivener scratches runes into femurs here.
 ~
 Ink-stained fingers guide a needle of silver through ancient bone, recording heresies for their hidden masters.~
-167772257 512 -500 S
+33554529 512 -500 S
 11 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -75,7 +75,7 @@ a gloom sentry~
 A gloom sentry scans the hall with fanatic focus.
 ~
 Layered mail creaks as this zealot watches for trespassers, jaw wired shut with vow-cords of brass.~
-167772257 512 -500 S
+33554529 512 -500 S
 12 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -89,7 +89,7 @@ a carrion templar~
 A carrion templar patrols here.
 ~
 A knight in dented plate marked by kel sigils drags a notched blade and reeks of embalming oils.~
-167772257 512 -500 S
+33554529 512 -500 S
 13 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -103,7 +103,7 @@ a violet lector~
 A violet lector recites from a chained tome.
 ~
 Their blindfolded face tilts upward while they chant in a tongue that stings the ears like frost.~
-167772257 512 -500 S
+33554529 512 -500 S
 14 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -117,7 +117,7 @@ a sepulcher hound~
 A sepulcher hound prowls in tight circles.
 ~
 Once a war-dog, now stitched with sigils and bone plates, it waits for a whispered command to tear flesh.~
-167772257 512 -500 S
+33554529 512 -500 S
 15 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -131,7 +131,7 @@ a reliquary knight~
 A reliquary knight kneels in prayer here.
 ~
 A spear rests across this armored fanatic's lap while reliquary thorns are hammered through their pauldrons.~
-167772257 512 -500 S
+33554529 512 -500 S
 16 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -145,7 +145,7 @@ an umbral cantor~
 An umbral cantor conducts unseen voices.
 ~
 Dark ribbons whirl around this liturgist as ghostly harmonies rise from cracked sarcophagi.~
-167772257 512 -500 S
+33554529 512 -500 S
 17 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -159,7 +159,7 @@ an ashen warlock~
 An ashen warlock traces glowing circles here.
 ~
 Sable robes and silver fetishes mark this adept, whose fingertips leak violet sparks and cold smoke.~
-167772257 512 -500 S
+33554529 512 -500 S
 18 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -173,7 +173,7 @@ a catacomb marshal~
 A catacomb marshal drills lesser cultists here.
 ~
 Scarred and deliberate, the marshal wears pragmatic war-gear and barks clipped orders between prayers.~
-167772257 512 -500 S
+33554529 512 -500 S
 19 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -187,7 +187,7 @@ the Dusk Prelate~
 The Dusk Prelate presides over this sanctum.
 ~
 A towering priest in layered vestments crowned with horned gold, the prelate grips a star-metal crozier and never blinks.~
-234881123 512 -500 S
+100663395 512 -500 S
 20 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -201,7 +201,7 @@ the Ossuary Champion~
 The Ossuary Champion stands like a tomb-forged idol.
 ~
 Rune-etched plate and chained relics armor this hulking champion, whose helm vents violet breath with every exhale.~
-234881123 512 -500 S
+100663395 512 -500 S
 21 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -215,7 +215,7 @@ Matriarch Velastra~
 Matriarch Velastra watches you with pitiless calm.
 ~
 High hierophant of this dungeon-cult, Velastra is robed in midnight silk and armored in living shadow.~
-234881123 512 -500 S
+100663395 512 -500 S
 22 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -229,7 +229,7 @@ a vault stalker~
 A vault stalker waits in the shadows here.
 ~
 Wrapped in black gauze and grave ash, this killer moves only when candlelight flickers.~
-167772257 512 -500 S
+33554529 512 -500 S
 16 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -243,7 +243,7 @@ a funerary warden~
 A funerary warden stands watch over the maze.
 ~
 This armored zealot bears ritual scars and a tower shield etched with saintly skulls.~
-167772257 512 -500 S
+33554529 512 -500 S
 17 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -257,7 +257,7 @@ a bone lantern bearer~
 A bone lantern bearer drifts silently here.
 ~
 A hooded servant carries a lantern made from a saint's skull, trailing violet soot.~
-167772257 512 -500 S
+33554529 512 -500 S
 15 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -271,7 +271,7 @@ a crypt interrogator~
 A crypt interrogator circles, choosing a victim.
 ~
 Tools of devotion and torture hang from their belt, polished to a surgical gleam.~
-167772257 512 -500 S
+33554529 512 -500 S
 18 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -285,7 +285,7 @@ a handmaiden of Velastra~
 A handmaiden of Velastra kneels in prayer here.
 ~
 Her veil is stitched with star-metal wire, and her whispered rites bend shadows around her.~
-167772257 512 -500 S
+33554529 512 -500 S
 19 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1415,7 +1415,7 @@ S
 #30152
 Knight Reliquary~
 Chain curtains divide the space into martial chapels, clinking softly whenever the air shifts. Devotion gives way to militarized faith in these reliquary barracks and armories. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
+12 11
 D0
 ~
 ~
@@ -1479,7 +1479,7 @@ S
 #30156
 Knight Reliquary~
 Strips of consecrated cloth are lashed to every door frame, the prayers stitched into them worn nearly blank from years of brushing hands.~
-8 11
+12 11
 D0
 ~
 ~
@@ -1543,7 +1543,7 @@ S
 #30160
 Sanguine Cloisters~
 Arcaded walkways frame shallow channels cut for sacrificial runoff, now crusted into dark glassy rivulets. Ritual bloodworks dominate this section, signaling proximity to high clergy sancta. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
+12 11
 D0
 ~
 ~
@@ -1671,7 +1671,7 @@ S
 #30168
 Sanguine Cloisters~
 A low arch connects this passage to a lateral alcove where a standing stone basin is carved with supplicants raising upturned cups.~
-8 11
+12 11
 D0
 ~
 ~
@@ -1739,7 +1739,7 @@ S
 #30172
 Inner Sepulcher~
 Star-map mosaics spiral inward toward a central axis, guiding pilgrims to the final cult chambers. Only the deepest command chambers remain beyond these sepulchral approaches. A passage returns north toward earlier chambers while another continues south into darker halls.~
-8 11
+12 11
 D0
 ~
 ~
