@@ -17,292 +17,145 @@ T You can teleport into here
 #4449
 Entrance to Hotel~
 You are standing in a covered entrance to an old, but grand-looking Hotel.
-
-Whisps of cobwebs blow in the breeze, and laughter and screams echo out of
-
-the building to your ears.
-
-~
-
-and displays an interesting patterned-tile type thingy in its centre.
-
-~
-~
-
-as "why is my bill so high?", "why has my husband turned green?" and other
-
-such trivia.
-
+Whisps of cobwebs blow in the breeze, and laughter and screams echo out of
+the building to your ears.
+~
+4 11
+D0
 ~
 ~
 0 -1 4448
-
-can see lead up, but not down...
-
+D2
 ~
 ~
-
-~
+0 0 3291
 S
-
-barmaid who usually works here is no where to be seen.
-
-~
-
-sometimes fed.  A long table stands proudly in the middle of the room, but
-
-look uncleaned, as the vomit and piles of food suggest.
-
-~
-
+#4448
+Foyer~
+You are now in the foyer of this old-looking hotel.  The floor is white stone,
+and displays an interesting patterned-tile type thingy in its centre.
+~
+9 11
+D0
 ~
 ~
-
-~
-
-~
-~
-
-~
-
-~
-
-a cracked sink.  Bet the rent is high too.
-
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-~
-
-the other guest's.
-
-~
-
-~
-
-a cracked sink.  Bet the rent is high too.
-
-~
-
-~
-
-how musty it is back in there.
-
-~
-
-~
-
-now looks strangely unused.  A strange-looking swimming pool is to the south,
-
-and appears to be very dark for *just* water.....
-
-~
-
-to realize why...
-
-~
-
-At the very bottom of the pool is a small cover.
-
-~
-~
-~
-
-~
-S
-
-You see a small cover above your head.
-
-~
-
-~
-
-~
-
-~
-
-~
-~
-
-~
+0 -1 4445
 D1
 ~
 ~
-
-~
-
-~
+0 -1 4447
+D2
 ~
 ~
-
-~
-S
-
-~
-
-~
-
-out dolls litter the room, some of which look to be missing bits.
-
-~
-
-~
-
-of puppets, dolls, etc.  A large assortment of springs and other mechanical
-
-looking pieces lie around on the desktop.
-
-~
-~
-
-~
-
-~
-~
-~
-
-~
-
-a cracked sink.  Bet the rent is high too.
-
-~
-
-~
-
-a cracked sink.  Bet the rent is high too.
-
-~
-
-~
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-a cracked sink.  Bet the rent is high too.
-
-~
-
-~
-~
-
-~
+0 -1 4449
 D3
 ~
 ~
-
-~
+0 -1 4446
 S
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
+#4447
+The Information Desk~
+You are standing before a low desk, where guests come to find out things, such
+as "why is my bill so high?", "why has my husband turned green?" and other
+such trivia.
+~
+9 11
+D3
 ~
 ~
-
-~
-D0
-
-~
-
-~
-~
-~
-
-~
+0 -1 4448
+S
+#4446
+Some Stairs~
+You are on a dusty set of stairs, that look unused.  The few footsteps you
+can see lead up, but not down...
+~
+9 11
 D1
 ~
 ~
-
+0 -1 4448
+D4
 ~
+~
+0 -1 4421
 S
-
+#4445
+Passage~
+You are in a long passage within the hotel.
+~
+1 11
+D0
 ~
-
 ~
-
+0 -1 4441
+D1
 ~
-
 ~
-
+0 -1 4444
+D2
 ~
-
 ~
-
+0 -1 4448
+D3
 ~
-
 ~
-
+0 -1 4443
+S
+#4444
+The Bar~
+You are in the hotel's bar, which seems pretty empty, due to the fact that the
+barmaid who usually works here is no where to be seen.
+~
+9 11
+D3
 ~
-
 ~
-
+0 -1 4445
+S
+#4443
+The Dining Room~
+You are a large room, which is where the guests come to be poisoned, or even
+sometimes fed.  A long table stands proudly in the middle of the room, but
+look uncleaned, as the vomit and piles of food suggest.
+~
+9 11
+D0
+A small door.
+~
 ~
-
+1 -1 4442
+D1
 ~
-
 ~
-
-to.  You notice his trousers are undone.
-
+0 -1 4445
+S
+#4442
+The Kitchen~
+You are in the hotel's kitchen - a small but workman-like affair.
+~
+9 11
+D2
+A small door.
+~
 ~
-
+1 -1 4443
+S
+#4441
+Passage~
+You are in the middle of a long passage within the hotel.
+~
+9 11
+D0
 ~
-
 ~
-
+0 -1 4439
+D1
+A small door
+~
 ~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
+1 -1 4440
+D2
 ~
 ~
 0 -1 4445

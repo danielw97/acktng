@@ -26,27 +26,15 @@ because you can hear your equipment clanking together with every motion of
 your body.@@N
 
 ~
-
-enshroud you in it's tinted @@ddarkness@@m. You can see no farther than your
-
-waist and you have lost the feeling in your feet.  You know you are walking
-
-because you can hear your equipment clanking together with every motion of
-
-your body.@@N
-
+16417 9
+D0
 ~
-
-enshroud you in it's tinted @@ddarkness@@m. You can see no farther than your
-
-waist and you have lost the feeling in your feet.  You know you are walking
-
-because you can hear your equipment clanking together with every motion of
-
-your body.@@N
-
 ~
+0 -1 8351
 S
+#8351
+@@mThe Purple Fog@@N~
+@@mYou step forward into a deep purple fog, which in seconds, seems to
 
 enshroud you in it's tinted @@ddarkness@@m. You can see no farther than your
 
@@ -57,6 +45,19 @@ because you can hear your equipment clanking together with every motion of
 your body.@@N
 
 ~
+33 9
+D0
+~
+~
+0 -1 8352
+D2
+~
+~
+0 -1 8350
+S
+#8352
+@@mThe Purple Fog@@N~
+@@mYou step forward into a deep purple fog, which in seconds, seems to
 
 enshroud you in it's tinted @@ddarkness@@m. You can see no farther than your
 
@@ -67,6 +68,65 @@ because you can hear your equipment clanking together with every motion of
 your body.@@N
 
 ~
+33 9
+D2
+~
+~
+0 -1 8351
+D3
+~
+~
+0 -1 8353
+S
+#8353
+@@mThe Purple Fog@@N~
+@@mYou step forward into a deep purple fog, which in seconds, seems to
+
+enshroud you in it's tinted @@ddarkness@@m. You can see no farther than your
+
+waist and you have lost the feeling in your feet.  You know you are walking
+
+because you can hear your equipment clanking together with every motion of
+
+your body.@@N
+
+~
+33 9
+D0
+~
+~
+0 -1 8354
+D1
+~
+~
+0 -1 8352
+S
+#8354
+@@mThe Purple Fog@@N~
+@@mYou step forward into a deep purple fog, which in seconds, seems to
+
+enshroud you in it's tinted @@ddarkness@@m. You can see no farther than your
+
+waist and you have lost the feeling in your feet.  You know you are walking
+
+because you can hear your equipment clanking together with every motion of
+
+your body.@@N
+
+~
+33 9
+D1
+~
+~
+0 -1 8355
+D2
+~
+~
+0 -1 8353
+S
+#8355
+@@mThe Purple Fog@@N~
+@@mYou step forward into a deep purple fog, which in seconds, seems to
 
 enshroud you in it's tinted @@ddarkness@@m. You can see no farther than your
 
@@ -81,6 +141,19 @@ ground. You look down to see a dark tunnel with a low coating of the same fog
 you have been walking in.@@N
 
 ~
+32801 9
+D3
+~
+~
+0 -1 8354
+D5
+~
+~
+0 -1 8356
+S
+#8356
+@@dT@@mhe @@dGuardian's P@@most@@N~
+@@mBefore you stands a large spinning @@psilent portal@@m, pulsing brilliant
 
 but dark colors of @@Bblue@@m and @@dblack@@m.  You feel the warm glow of its
 
@@ -99,10 +172,26 @@ the fog and attack, coming at you with a direct charge.@@N
 @@mThere is a small sign here..@@N
 
 ~
+139276 5
+D0
+~
+portal~
+129 8350 8357
+D4
+~
+~
+0 -1 8355
+E
+sign~
+@@pTo find your way into the portal, you must first unlock it's mystical
 
 energies with an ancient relic found somewhere within this realm...@@N
 
 ~
+S
+#8357
+@@dP@@ma@@ps@@Ws@@pa@@mg@@de of H@@ma@@pz@@de@@N~
+@@mYou stand on a small trail of haze which seems to stain the hard surface
 
 below your feet a dark @@ppurple@@m.  With every step you take, memories start
 
@@ -125,63 +214,112 @@ remorse for their actions taken.  Welcome to the purging of the mind and the
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dM@@mi@@ps@@Wt@@m...
 
 ~
-~
-
-the north.  The walkway is the only thing that looks normal when compared to
-
-everything around you. Up far ahead you see a very large hollow, about the
-
-size of your home city.  You can see a giant @@dt@@Wo@@dwe@@Wr@@m made of a
-
-dark-tinted but lustered metal. You can see small flickering lights come from
-
-the windows of the tower and wonder who could live in such conditions. The
-
-tower is crumbling and has vegitation growing up and along the base. It is
-
-very frigid here and you keep walking for fear of
-
-@@cf@@ar@@ce@@ae@@cz@@ai@@cn@@ag@@m to death.@@N
-
-~
-
-the north.  The walkway is the only thing that looks normal when compared to
-
-everything around you. Up far ahead you see a very large hollow, about the
-
-size of your home city.  You can see a giant @@dt@@Wo@@dwe@@Wr@@m made of a
-
-dark-tinted but lustered metal. You can see small flickering lights come from
-
-the windows of the tower and wonder who could live in such conditions. The
-
-tower is crumbling and has vegitation growing up and along the base. It is
-
-very frigid here and you keep walking for fear of
-
-@@cf@@ar@@ce@@ae@@cz@@ai@@cn@@ag@@m to death.@@N
-
+139272 11
+D0
 ~
 ~
-
-the north.  The walkway is the only thing that looks normal when compared to
-
-everything around you. Up far ahead you see a very large hollow, about the
-
-size of your home city.  You can see a giant @@dt@@Wo@@dwe@@Wr@@m made of a
-
-dark-tinted but lustered metal. You can see small flickering lights come from
-
-the windows of the tower and wonder who could live in such conditions. The
-
-tower is crumbling and has vegitation growing up and along the base. It is
-
-very frigid here and you keep walking for fear of
-
-@@cf@@ar@@ce@@ae@@cz@@ai@@cn@@ag@@m to death.@@N
-
+0 -1 8358
+D2
 ~
+portal~
+129 8350 8356
 S
+#8358
+@@dP@@ma@@pt@@gh @@mo@@pf @@dA@@mm@@pe@@Wt@@gh@@py@@ms@@dt@@N~
+@@mYou take step after step on a @@gpure@@m cut amethyst walkway leading to
+
+the north.  The walkway is the only thing that looks normal when compared to
+
+everything around you. Up far ahead you see a very large hollow, about the
+
+size of your home city.  You can see a giant @@dt@@Wo@@dwe@@Wr@@m made of a
+
+dark-tinted but lustered metal. You can see small flickering lights come from
+
+the windows of the tower and wonder who could live in such conditions. The
+
+tower is crumbling and has vegitation growing up and along the base. It is
+
+very frigid here and you keep walking for fear of
+
+@@cf@@ar@@ce@@ae@@cz@@ai@@cn@@ag@@m to death.@@N
+
+~
+139272 11
+D0
+~
+~
+0 -1 8359
+D2
+~
+~
+0 0 8357
+S
+#8359
+@@dP@@ma@@pt@@gh @@mo@@pf @@dA@@mm@@pe@@Wt@@gh@@py@@ms@@dt@@N~
+@@mYou take step after step on a @@gpure@@m cut amethyst walkway leading to
+
+the north.  The walkway is the only thing that looks normal when compared to
+
+everything around you. Up far ahead you see a very large hollow, about the
+
+size of your home city.  You can see a giant @@dt@@Wo@@dwe@@Wr@@m made of a
+
+dark-tinted but lustered metal. You can see small flickering lights come from
+
+the windows of the tower and wonder who could live in such conditions. The
+
+tower is crumbling and has vegitation growing up and along the base. It is
+
+very frigid here and you keep walking for fear of
+
+@@cf@@ar@@ce@@ae@@cz@@ai@@cn@@ag@@m to death.@@N
+
+~
+139272 11
+D0
+~
+~
+0 -1 8360
+D2
+~
+~
+0 -1 8358
+S
+#8360
+@@dP@@ma@@pt@@gh @@mo@@pf @@dA@@mm@@pe@@Wt@@gh@@py@@ms@@dt@@N~
+@@mYou take step after step on a @@gpure@@m cut amethyst walkway leading to
+
+the north.  The walkway is the only thing that looks normal when compared to
+
+everything around you. Up far ahead you see a very large hollow, about the
+
+size of your home city.  You can see a giant @@dt@@Wo@@dwe@@Wr@@m made of a
+
+dark-tinted but lustered metal. You can see small flickering lights come from
+
+the windows of the tower and wonder who could live in such conditions. The
+
+tower is crumbling and has vegitation growing up and along the base. It is
+
+very frigid here and you keep walking for fear of
+
+@@cf@@ar@@ce@@ae@@cz@@ai@@cn@@ag@@m to death.@@N
+
+~
+139272 11
+D0
+~
+~
+0 -1 8361
+D2
+~
+~
+0 -1 8359
+S
+#8361
+@@dS@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mPeering over the edge of a large cliff you take a step back as you see how
 
 far the drop to the bottom actually is.  Catching your breath, you gaze ahead
 
@@ -202,31 +340,19 @@ you collapse to the dirty floor.  A small wedge of rock slides open and out
 charges a giant hydra, heading for you.@@N
 
 ~
-
-shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
-
-start to roll faster and faster down the hill while swarms of bats start to
-
-surround and attack you.@@N
-
+139272 11
+D2
 ~
-
-shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
-
-start to roll faster and faster down the hill while swarms of bats start to
-
-surround and attack you.@@N
-
 ~
-
-shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
-
-start to roll faster and faster down the hill while swarms of bats start to
-
-surround and attack you.@@N
-
+0 -1 8360
+D5
 ~
+~
+0 -1 8362
 S
+#8362
+@@dFalling down the S@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mAs you strike the final blow with the @@dH@@my@@pd@@Wr@@ga@@m, you are
 
 shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
 
@@ -235,6 +361,15 @@ start to roll faster and faster down the hill while swarms of bats start to
 surround and attack you.@@N
 
 ~
+139272 11
+D5
+~
+~
+0 -1 8363
+S
+#8363
+@@dFalling down the S@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mAs you strike the final blow with the @@dH@@my@@pd@@Wr@@ga@@m, you are
 
 shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
 
@@ -243,6 +378,15 @@ start to roll faster and faster down the hill while swarms of bats start to
 surround and attack you.@@N
 
 ~
+139272 11
+D5
+~
+~
+0 -1 8364
+S
+#8364
+@@dFalling down the S@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mAs you strike the final blow with the @@dH@@my@@pd@@Wr@@ga@@m, you are
 
 shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
 
@@ -251,6 +395,15 @@ start to roll faster and faster down the hill while swarms of bats start to
 surround and attack you.@@N
 
 ~
+139272 11
+D5
+~
+~
+0 -1 8365
+S
+#8365
+@@dFalling down the S@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mAs you strike the final blow with the @@dH@@my@@pd@@Wr@@ga@@m, you are
 
 shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
 
@@ -259,7 +412,66 @@ start to roll faster and faster down the hill while swarms of bats start to
 surround and attack you.@@N
 
 ~
+139272 11
+D5
 ~
+~
+0 -1 8366
+S
+#8366
+@@dFalling down the S@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mAs you strike the final blow with the @@dH@@my@@pd@@Wr@@ga@@m, you are
+
+shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
+
+start to roll faster and faster down the hill while swarms of bats start to
+
+surround and attack you.@@N
+
+~
+139272 11
+D5
+~
+~
+0 -1 8367
+S
+#8367
+@@dFalling down the S@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mAs you strike the final blow with the @@dH@@my@@pd@@Wr@@ga@@m, you are
+
+shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
+
+start to roll faster and faster down the hill while swarms of bats start to
+
+surround and attack you.@@N
+
+~
+139272 11
+D5
+~
+~
+0 -1 8368
+S
+#8368
+@@dFalling down the S@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mAs you strike the final blow with the @@dH@@my@@pd@@Wr@@ga@@m, you are
+
+shoved over the cliff by the shuddering force of his @@Rdeath@@m cry.  You
+
+start to roll faster and faster down the hill while swarms of bats start to
+
+surround and attack you.@@N
+
+~
+139272 11
+D5
+~
+~
+0 -1 8369
+S
+#8369
+@@dThe Bottom of the @@dS@@mh@@pi@@Wy@@gz@@Wt@@pl@@ma@@dn@@N~
+@@mLanding at the bottom of the cliff, your quickly think how lucky your are
 
 to be alive.  Not everyone that falls down a cliff and is attacked by swarms
 
@@ -274,13 +486,34 @@ to it.  A small, @@fpulsing @@y@@flight@@N@@m floats here before you, enticing
 your almost to the point of total hypnotism...@@N
 
 ~
+139272 11
+D0
 ~
+~
+0 -1 8372
+D5
+~
+darkness~
+1 -1 8371
+S
+#8371
+@@dT@@mh@@pe @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@me@@pc@@Wr@@get@@N~
+@@mAs you step forth from the enchanting @@y@@fflare@@m, you find yourself in
 
 a tiny room with a low coating of @@cdew@@m covering the floor.  This room
 
 just looks like it is empty.  Or is it?..@@N
 
 ~
+141324 11
+D4
+~
+~
+1 -1 8369
+S
+#8372
+@@dP@@ma@@pt@@gh @@mt@@po @@mt@@ph@@ge @@dTower@@N~
+@@mWalking along a small path towards the tower, you notice some small figures
 
 float by the gently @@pilluminated@@m windows in the massive structure.  You
 
@@ -289,6 +522,19 @@ can barely make out any kind of a definate figure at all.  Intrigued, you
 decide to continue forward.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8373
+D2
+~
+~
+0 -1 8369
+S
+#8373
+@@dP@@ma@@pt@@gh @@mt@@po @@mt@@ph@@ge @@dTower@@N~
+@@mWalking along a small path towards the tower, you notice some small figures
 
 float by the gently @@pilluminated@@m windows in the massive structure.  You
 
@@ -297,6 +543,27 @@ can barely make out any kind of a definate figure at all.  Intrigued, you
 decide to continue forward.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8374
+D1
+~
+~
+0 -1 8395
+D2
+~
+~
+0 -1 8372
+D3
+~
+~
+0 -1 8378
+S
+#8374
+@@dP@@ma@@pt@@gh @@mt@@po @@mt@@ph@@ge @@dTower@@N~
+@@mWalking along a small path towards the tower, you notice some small figures
 
 float by the gently @@pilluminated@@m windows in the massive structure.  You
 
@@ -305,6 +572,19 @@ can barely make out any kind of a definate figure at all.  Intrigued, you
 decide to continue forward.@@N
 
 ~
+139276 11
+D0
+~
+~
+0 -1 8375
+D2
+~
+~
+0 -1 8373
+S
+#8375
+@@mUn@@pde@@grn@@pea@@mth @@dt@@mh@@pe @@dTower@@N~
+@@mYou stand in a small opening underneath the tower.  You see a pain of locked
 
 gates but you see no key.  Looking around for one, you notice many figurines
 
@@ -317,12 +597,28 @@ into their @@dmo@@mns@@pte@@gr@@m shaped bodies.
 You also notice some tiny inscriptions into the bars of the gate..@@N
 
 ~
+139272 11
+D2
+~
+~
+0 -1 8374
+D4
+~
+secrettunnel~
+1 -1 8377
+E
+inscriptions~
+@@mOne of these statues, when examined, will transfer you inside the
 
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dTower@@m, but every other one will bring forth
 
 an ancient monster from the very depths of the @@dm@@mi@@ps@@gt@@M..@@N
 
 ~
+S
+#8378
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -335,7 +631,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D1
 ~
+~
+0 -1 8373
+D3
+~
+~
+0 -1 8379
+S
+#8379
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -348,6 +656,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8380
+D1
+~
+~
+0 -1 8378
+S
+#8380
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -360,6 +681,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8381
+D2
+~
+~
+0 -1 8379
+S
+#8381
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -372,6 +706,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8382
+D2
+~
+~
+0 -1 8380
+S
+#8382
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -384,6 +731,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8383
+D2
+~
+~
+0 -1 8381
+S
+#8383
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -396,6 +756,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8384
+D2
+~
+~
+0 -1 8382
+S
+#8384
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -408,8 +781,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D1
 ~
 ~
+0 -1 8385
+D2
+~
+~
+0 -1 8383
+S
+#8385
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -422,6 +806,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D1
+~
+~
+0 -1 8386
+D3
+~
+~
+0 -1 8384
+S
+#8386
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -434,6 +831,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D1
+~
+~
+0 -1 8387
+D3
+~
+~
+0 -1 8385
+S
+#8387
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -446,6 +856,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D1
+~
+~
+0 -1 8388
+D3
+~
+~
+0 -1 8386
+S
+#8388
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -458,6 +881,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D1
+~
+~
+0 -1 8389
+D3
+~
+~
+0 -1 8387
+S
+#8389
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -470,7 +906,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D2
 ~
+~
+0 -1 8390
+D3
+~
+~
+0 -1 8388
+S
+#8390
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -483,6 +931,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8389
+D2
+~
+~
+0 -1 8391
+S
+#8391
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -495,6 +956,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8390
+D2
+~
+~
+0 -1 8393
+S
+#8393
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -507,6 +981,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8391
+D2
+~
+~
+0 -1 8392
+S
+#8392
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -519,6 +1006,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
+~
+~
+0 -1 8393
+D2
+~
+~
+0 -1 8394
+S
+#8394
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -531,7 +1031,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D0
 ~
+~
+0 -1 8392
+D3
+~
+~
+0 -1 8395
+S
+#8395
+@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
+@@mYou take the path to the side, the path that leads around the @@dtower@@m.
 
 You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
 
@@ -544,6 +1056,19 @@ take a step back to catch your breath, you notice a @@fglowing@@N
 interested and decide to continue.@@N
 
 ~
+139272 11
+D1
+~
+~
+0 -1 8394
+D3
+~
+~
+0 0 8373
+S
+#8377
+@@dC@@me@@pn@@Wt@@ger @@dof the M@@mi@@ps@@gt@@N~
+@@mAs you catch your breath from suddenly being transported, you take a gasp
 
 for air and almost gag.  Your breath drew in a large amount of the thick, damp
 
@@ -562,1387 +1087,6 @@ A low eerie tone is coming from above you.  You want to investigate but your
 very soul is telling you to stay away...@@N
 
 ~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-
-~
-
-light.  On both walls in front of you are two identical men both holding a
-
-rune of some sort, pointed towards an etching of a crab engraved into the
-
-solid stone on the floor on the great hall in front of you.@@N
-
-~
-D0
-~
-~
-
-wander but you can remember nothing you have learned about the tower.  You
-
-find vague images floating in your mind of how you got into the tower but you
-
-can not remember why you are here, where you were going, or what you have
-
-learned while inside the tower.@@N
-
-~
-S
-
-there was once a door here.  A small layer of @@dm@@mi@@ps@@gt@@m seems to
-
-pour out from the room to the north.@@N
-
-~
-
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-
-in an octagonal step design.  You see two surrounding rooms, each containing
-
-some creature of the stars...@@N
-
-~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-
-~
-
-embedded into them, making them sparkle and glitter with the smallest amount
-
-of light.  As you step back from the wall you notice the gemstones seem to
-
-form the outline a large ram, looking upwards.  On the other wall there is a
-
-figure of a bull, doing the same.@@N
-
-~
-~
-
-wander but you can remember nothing you have learned about the tower.  You
-
-find vague images floating in your mind of how you got into the tower but you
-
-can not remember why you are here, where you were going, or what you have
-
-learned while inside the tower.@@N
-
-~
-
- The frame seems to be lined with a liquid which @@pglows@@m in the dim light
-
-that fills this whole tower.@@N
-
-~
-
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-
-in an octagonal step design.  You see two surrounding rooms, each containing
-
-some creature of the stars...@@N
-
-~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-
-~
-
-seem to come from way down the eastern hall you now head into.  There is
-
-ancient writing on the walls, too worn away from the years for you to make out
-
-You do see pictures etched into the walls though.  You see a large scorpian
-
-pair of scales seeming to surround you as they stretch from wall to wall.@@N
-
-~
-
-wander but you can remember nothing you have learned about the tower.  You
-
-find vague images floating in your mind of how you got into the tower but you
-
-can not remember why you are here, where you were going, or what you have
-
-learned while inside the tower.@@N
-
-~
-
-some reason.  Should you go in?@@N
-
-~
-
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-
-in an octagonal step design.  You see two surrounding rooms, each containing
-
-some creature of the stars...@@N
-
-~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-
-~
-
-violet light glows from the end of the hall, and this light reaches you enough
-
-for you to see the paintings of a black ink on the walls glow an eerie grey.
-
-On the walls are words you can not understand, but you comprehend the outlines
-
-painted to be a nude woman with a pet lion.@@N
-
-~
-
-wander but you can remember nothing you have learned about the tower.  You
-
-find vague images floating in your mind of how you got into the tower but you
-
-can not remember why you are here, where you were going, or what you have
-
-learned while inside the tower.@@N
-
-~
-~
-
-thick @@dm@@mi@@ps@@gt@@m blocks all views into and past the door.@@N
-
-~
-
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-
-in an octagonal step design.  You see two surrounding rooms, each containing
-
-some creature of the stars...@@N
-
-~
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-139272 11
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-~
-~
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-~
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-
-surrounding you, hanging in the space like a string of @@gglittering
-
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-
-front of you.  You turn, but the alter still seems to follow you, always
-
-staying in front of your line of vision.@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-139272 11
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-S
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-D2
-~
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-~
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-~
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-~
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-S
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-139272 11
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-
-covering the wall from end to end.  This hallway seems to go on forever. After
-
-you take a deep breath you proceed down the hallway.  Torches of a
-
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-
-~
-~
-S
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-
-large fountain is here with an undisturbed liquid inside, with a calm
-
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-
-~
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-
-large fountain is here with an undisturbed liquid inside, with a calm
-
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-
-~
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-
-large fountain is here with an undisturbed liquid inside, with a calm
-
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-
-~
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-~
-
-large fountain is here with an undisturbed liquid inside, with a calm
-
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-
-~
-
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-
-the walls is eerie enough, but hearing the moaning noises and the caskets
-
-being empty is even worse.  You decide to try and find the exit, but you scan
-
-around intensely and so obvious way out.  All you see is some passages in all
-
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-
-of this room.@@N
-
-~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-~
-~
-
-you keep watch, for you feel that the very walls are out to get you. This
-
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-
-and some shut, but all empty. You start to wonder if you might come across the
-
-owners of these caskets.@@N
-
-~
-
-hundreds of torches and there are carvings dug deep into the walls around you.
-
-After witnessing the entrance and the first floor, you wonder what awaits you
-
-here...@@N
-
-~
-
-have been put into creating this so long ago.  The stones are perfectly cut.
-
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-
-your body. @@N
-
-~
-
-have been put into creating this so long ago.  The stones are perfectly cut.
-
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-
-your body. @@N
-
-~
-~
-
-have been put into creating this so long ago.  The stones are perfectly cut.
-
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-
-your body. @@N
-
-~
-S
-
-have been put into creating this so long ago.  The stones are perfectly cut.
-
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-
-your body. @@N
-
-~
-
-of the tower.  You a window looking out into the cavern below.  You can see
-
-the great cliff which you fell down, and you can see the small guards
-
-wandering around the tower.  You hear a sudden crak in the floor and you take
-
-a step back.@@N
-
-~
-
-of the tower.  You a window looking out into the cavern below.  You can see
-
-the great cliff which you fell down, and you can see the small guards
-
-wandering around the tower.  You hear a sudden crak in the floor and you take
-
-a step back.@@N
-
-~
-139272 11
-
-of the tower.  You a window looking out into the cavern below.  You can see
-
-the great cliff which you fell down, and you can see the small guards
-
-wandering around the tower.  You hear a sudden crak in the floor and you take
-
-a step back.@@N
-
-~
-~
-~
-
-of the tower.  You a window looking out into the cavern below.  You can see
-
-the great cliff which you fell down, and you can see the small guards
-
-wandering around the tower.  You hear a sudden crak in the floor and you take
-
-a step back.@@N
-
-~
-
-creature of the stars.  As you stare into the creature's eyes, you start to
-
-feel weightless, as if no gravity was pulling your body towards the ground.
-
-Soon you notice that you are hovering above the stairway, coming closer and
-
-closer to the magical beast.  You look up to notice a small ladder made of the
-
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-
-~
-
-creature of the stars.  As you stare into the creature's eyes, you start to
-
-feel weightless, as if no gravity was pulling your body towards the ground.
-
-Soon you notice that you are hovering above the stairway, coming closer and
-
-closer to the magical beast.  You look up to notice a small ladder made of the
-
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-
-~
-139272 11
-
-creature of the stars.  As you stare into the creature's eyes, you start to
-
-feel weightless, as if no gravity was pulling your body towards the ground.
-
-Soon you notice that you are hovering above the stairway, coming closer and
-
-closer to the magical beast.  You look up to notice a small ladder made of the
-
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-
-~
-~
-
-eerie calm starts to send chills down your very bones in your body.@@N
-
-~
-
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-
-come from armor clanking, weapons colliding, and death cries.@@N
-
-~
-
-~
-
-Two guards stand at attention seeming to be waiting.  A small painting of a
-
-full moon is over their heads.@@N
-
-~
-
-lets light through.  A tunnel reaches the surface is dug into the cavern
-
-ceiling and the moon completely covers the hole, shining light into the tunnel
-
-and through the window to make a complete circle on an insignia carved into
-
-the carpet below your feet.  You notice that a new doorway has appeared to the
-
-north.@@N
-
-~
-
-of the tower.  You hear the clanking of your armor and the shuffles of the
-
-gold in your wallet.@@N
-
-~
-D1
-~
-~
-
-of the tower.  You hear the clanking of your armor and the shuffles of the
-
-gold in your wallet.@@N
-
-~
-~
-
-don't even hear it.@@N
-
-~
-
-don't even hear it.@@N
-
-~
-
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-
-come from armor clanking, weapons colliding, and death cries.@@N
-
-~
-
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-
-come from armor clanking, weapons colliding, and death cries.@@N
-
-~
-
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-
-come from armor clanking, weapons colliding, and death cries.@@N
-
-~
-
-don't even hear it.@@N
-
-~
-
-don't even hear it.@@N
-
-~
-
-creature of the stars.  As you stare into the creature's eyes, you start to
-
-feel weightless, as if no gravity was pulling your body towards the ground.
-
-Soon you notice that you are hovering above the stairway, coming closer and
-
-closer to the magical beast.  You look up to notice a small ladder made of the
-
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-
-~
-~
-~
-
-Of orange, brown, hold fallen leaves..
-
-@@d  My mistress of the fridgid night..
-
-I worship, pray to on my fallen knees..@@N
-
-~
-
-Throughout these woods, ecstatic screams..
-
-I look deeply into your eyes..
-
-I smell your hair, caress your thighs..
-
-Now we'll love by the fire light..
-
-A blaze so high it lights the night..
-
-Long fingernails dug in my skin..
-
-Yourself so wet invites me in..
-
-Our lust increased feeds desire..
-
-As we combust, yeah we on fire..
-
-I feel you shake, so deep inside..
-
-Oh scream my name and squeeze me tight..@@N
-
-~
-
-and his throne are gone, but everything else that was installed in the room
-
-remains.  You put your weapon back in it's holster and investigate around the
-
-room a bit, until you come to the northern wall.  You notice a circle of
-
-bright @@yyellow@@m light shining on the marble wall, and inscribed into the
-
-wall are some small @@pinscriptions@@m.@@N
-
-~
-
-~
-
-~
-
-be formed from the @@pf@@mog itself..@@N
-
-~
-
-~
-
-be formed from the @@pf@@mog itself..@@N
-
-~
-
-~
-
-be formed from the @@pf@@mog itself..@@N
-
-~
-
-~
-
-be formed from the @@pf@@mog itself..@@N
-
-~
-
-~
-
-be formed from the @@pf@@mog itself..@@N
-
-~
-
-~
-
-orbiting slowly around and around his tall, muscular body. His stare could
-
-@@ppierce@@N into the very depths of your soul..@@N
-
-~
-
-~
-
-while another two seem to be confused as its stares blankly into the Shiyztlan
-
-@@m...@@N
-
-~
-
-~
-
-~
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-attacks you where you stand.@@N
-
-~
-
-~
-
-attacks you where you stand.@@N
-
-~
-
-~
-
-attacks you where you stand.@@N
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-perfume.  You take a longer sniff and the mist condenses into a beautiful,
-
-full-figured woman..@@N
-
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-orbiting slowly around and around his tall, muscular body. His stare could
-
-@@ppierce@@N into the very depths of your soul..@@N
-
-~
-
-~
-
-orbiting slowly around and around his tall, muscular body. His stare could
-
-@@ppierce@@N into the very depths of your soul..@@N
-
-~
-
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-~
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-@@mYou take the path to the side, the path that leads around the @@dtower@@m.
-You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
-float by you, seeming to warn you as if not to go any further.  But now as you
-take a step back to catch your breath, you notice a @@fglowing@@N
-@@pcrimson@@m light pulsing from the top of the tower.  Now you are even more
-interested and decide to continue.@@N
-~
-139272 11
-D0
-~
-~
-0 -1 8391
-D2
-~
-~
-0 -1 8392
-S
-#8392
-@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
-@@mYou take the path to the side, the path that leads around the @@dtower@@m.
-You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
-float by you, seeming to warn you as if not to go any further.  But now as you
-take a step back to catch your breath, you notice a @@fglowing@@N
-@@pcrimson@@m light pulsing from the top of the tower.  Now you are even more
-interested and decide to continue.@@N
-~
-139272 11
-D0
-~
-~
-0 -1 8393
-D2
-~
-~
-0 -1 8394
-S
-#8394
-@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
-@@mYou take the path to the side, the path that leads around the @@dtower@@m.
-You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
-float by you, seeming to warn you as if not to go any further.  But now as you
-take a step back to catch your breath, you notice a @@fglowing@@N
-@@pcrimson@@m light pulsing from the top of the tower.  Now you are even more
-interested and decide to continue.@@N
-~
-139272 11
-D0
-~
-~
-0 -1 8392
-D3
-~
-~
-0 -1 8395
-S
-#8395
-@@dA@@mr@@po@@Wu@@gnd @@dt@@mh@@pe @@dT@@mo@@pw@@We@@gr@@N~
-@@mYou take the path to the side, the path that leads around the @@dtower@@m.
-You start to walk when you see a dull patch of @@dm@@mi@@ps@@Wt@@m gently
-float by you, seeming to warn you as if not to go any further.  But now as you
-take a step back to catch your breath, you notice a @@fglowing@@N
-@@pcrimson@@m light pulsing from the top of the tower.  Now you are even more
-interested and decide to continue.@@N
-~
-139272 11
-D1
-~
-~
-0 -1 8394
-D3
-~
-~
-0 0 8373
-S
-#8377
-@@dC@@me@@pn@@Wt@@ger @@dof the M@@mi@@ps@@gt@@N~
-@@mAs you catch your breath from suddenly being transported, you take a gasp
-for air and almost gag.  Your breath drew in a large amount of the thick, damp
-@@dm@@mi@@ps@@gt@@m which covers the inside of the tower, making it almost
-immpossible to see anything around you.  You can see the ground however and
-you notice the tiny coating of a @@lblue-tinted@@m slime covering the floor.
-On all sides, you start to notice @@ddark figures@@m far and close in the mist
-start to groan and move slowly, as if they had been awaked by your presence.
-A low eerie tone is coming from above you.  You want to investigate but your
-very soul is telling you to stay away...@@N
-~
 139272 11
 D0
 ~
@@ -1972,12 +1116,18 @@ S
 #8376
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -1999,9 +1149,12 @@ S
 #8396
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou stand before a large archway, leading into a hallway with a low coating
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-~
+
+of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
+
+you can see some room that seems to sparkle like the @@gstars@@m.@@N
+
+~
 139272 11
 D0
 ~
@@ -2023,10 +1176,14 @@ S
 #8397
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dHalls@@N~
 @@dA long, narrow hallway seems to stretch far north into a purple blur of
-light.  On both walls in front of you are two identical men both holding a
-rune of some sort, pointed towards an etching of a crab engraved into the
-solid stone on the floor on the great hall in front of you.@@N
-~
+
+light.  On both walls in front of you are two identical men both holding a
+
+rune of some sort, pointed towards an etching of a crab engraved into the
+
+solid stone on the floor on the great hall in front of you.@@N
+
+~
 139272 11
 D0
 ~
@@ -2040,11 +1197,16 @@ S
 #8398
 @@dIn@@mte@@pr@@gse@@pc@@mti@@don@@m of the @@dP@@ma@@pt@@Wh@@gs@@N~
 @@mYou step into a four-way intersection.  You try to think of which way to
-wander but you can remember nothing you have learned about the tower.  You
-find vague images floating in your mind of how you got into the tower but you
-can not remember why you are here, where you were going, or what you have
-learned while inside the tower.@@N
-~
+
+wander but you can remember nothing you have learned about the tower.  You
+
+find vague images floating in your mind of how you got into the tower but you
+
+can not remember why you are here, where you were going, or what you have
+
+learned while inside the tower.@@N
+
+~
 139272 11
 D0
 ~
@@ -2066,9 +1228,12 @@ S
 #8399
 @@mA @@dS@@mm@@pa@@Wl@@gl @@dD@@mo@@po@@gr@@pw@@ma@@dy@@N~
 @@mThe archway to the north has some old, rusted hinges on its side indicating
-there was once a door here.  A small layer of @@dm@@mi@@ps@@gt@@m seems to
-pour out from the room to the north.@@N
-~
+
+there was once a door here.  A small layer of @@dm@@mi@@ps@@gt@@m seems to
+
+pour out from the room to the north.@@N
+
+~
 139272 11
 D0
 ~
@@ -2082,11 +1247,16 @@ S
 #8400
 @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy @@dof @@cA@@aq@@lu@@ca@@ama@@cr@@li@@an@@ce@@N~
 @@mAs you continue through the @@dtower@@m, you come across a small room with
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-in an octagonal step design.  You see two surrounding rooms, each containing
-some creature of the stars...@@N
-~
+
+a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
+
+cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
+
+in an octagonal step design.  You see two surrounding rooms, each containing
+
+some creature of the stars...@@N
+
+~
 139272 11
 D1
 ~
@@ -2108,12 +1278,18 @@ S
 #8401
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -2135,9 +1311,12 @@ S
 #8402
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou stand before a large archway, leading into a hallway with a low coating
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-~
+
+of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
+
+you can see some room that seems to sparkle like the @@gstars@@m.@@N
+
+~
 139272 11
 D0
 ~
@@ -2159,11 +1338,16 @@ S
 #8403
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dHalls@@N~
 @@dWalking into a dark hall, you notice the walls.  They seem to have diamonds
-embedded into them, making them sparkle and glitter with the smallest amount
-of light.  As you step back from the wall you notice the gemstones seem to
-form the outline a large ram, looking upwards.  On the other wall there is a
-figure of a bull, doing the same.@@N
-~
+
+embedded into them, making them sparkle and glitter with the smallest amount
+
+of light.  As you step back from the wall you notice the gemstones seem to
+
+form the outline a large ram, looking upwards.  On the other wall there is a
+
+figure of a bull, doing the same.@@N
+
+~
 131080 11
 D0
 ~
@@ -2177,11 +1361,16 @@ S
 #8404
 @@dIn@@mte@@pr@@gse@@pc@@mti@@don@@m of the @@dP@@ma@@pt@@Wh@@gs@@N~
 @@mYou step into a four-way intersection.  You try to think of which way to
-wander but you can remember nothing you have learned about the tower.  You
-find vague images floating in your mind of how you got into the tower but you
-can not remember why you are here, where you were going, or what you have
-learned while inside the tower.@@N
-~
+
+wander but you can remember nothing you have learned about the tower.  You
+
+find vague images floating in your mind of how you got into the tower but you
+
+can not remember why you are here, where you were going, or what you have
+
+learned while inside the tower.@@N
+
+~
 139272 11
 D0
 ~
@@ -2203,9 +1392,12 @@ S
 #8405
 @@mA @@dS@@mm@@pa@@Wl@@gl @@dD@@mo@@po@@gr@@pw@@ma@@dy@@N~
 @@mRegaining your memories you head south and come to a small, amthyst doorway
- The frame seems to be lined with a liquid which @@pglows@@m in the dim light
-that fills this whole tower.@@N
-~
+
+ The frame seems to be lined with a liquid which @@pglows@@m in the dim light
+
+that fills this whole tower.@@N
+
+~
 139272 11
 D0
 ~
@@ -2219,11 +1411,16 @@ S
 #8406
 @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy @@dof @@cA@@aq@@lu@@ca@@ama@@cr@@li@@an@@ce@@N~
 @@mAs you continue through the @@dtower@@m, you come across a small room with
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-in an octagonal step design.  You see two surrounding rooms, each containing
-some creature of the stars...@@N
-~
+
+a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
+
+cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
+
+in an octagonal step design.  You see two surrounding rooms, each containing
+
+some creature of the stars...@@N
+
+~
 139272 11
 D0
 ~
@@ -2245,12 +1442,18 @@ S
 #8407
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -2272,9 +1475,12 @@ S
 #8408
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou stand before a large archway, leading into a hallway with a low coating
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-~
+
+of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
+
+you can see some room that seems to sparkle like the @@gstars@@m.@@N
+
+~
 139272 11
 D0
 ~
@@ -2296,11 +1502,16 @@ S
 #8409
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dHalls@@N~
 @@dDepressing images of sorrow and despair start to fill your mind.  Voices
-seem to come from way down the eastern hall you now head into.  There is
-ancient writing on the walls, too worn away from the years for you to make out
-You do see pictures etched into the walls though.  You see a large scorpian
-pair of scales seeming to surround you as they stretch from wall to wall.@@N
-~
+
+seem to come from way down the eastern hall you now head into.  There is
+
+ancient writing on the walls, too worn away from the years for you to make out
+
+You do see pictures etched into the walls though.  You see a large scorpian
+
+pair of scales seeming to surround you as they stretch from wall to wall.@@N
+
+~
 139272 11
 D1
 ~
@@ -2314,11 +1525,16 @@ S
 #8410
 @@dIn@@mte@@pr@@gse@@pc@@mti@@don@@m of the @@dP@@ma@@pt@@Wh@@gs@@N~
 @@mYou step into a four-way intersection.  You try to think of which way to
-wander but you can remember nothing you have learned about the tower.  You
-find vague images floating in your mind of how you got into the tower but you
-can not remember why you are here, where you were going, or what you have
-learned while inside the tower.@@N
-~
+
+wander but you can remember nothing you have learned about the tower.  You
+
+find vague images floating in your mind of how you got into the tower but you
+
+can not remember why you are here, where you were going, or what you have
+
+learned while inside the tower.@@N
+
+~
 139272 11
 D0
 ~
@@ -2340,8 +1556,10 @@ S
 #8411
 @@mA @@dS@@mm@@pa@@Wl@@gl @@dD@@mo@@po@@gr@@pw@@ma@@dy@@N~
 @@mThere is a small doorway leading east.  You can not see whats past it for
-some reason.  Should you go in?@@N
-~
+
+some reason.  Should you go in?@@N
+
+~
 139272 11
 D1
 ~
@@ -2355,11 +1573,16 @@ S
 #8412
 @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy @@dof @@cA@@aq@@lu@@ca@@ama@@cr@@li@@an@@ce@@N~
 @@mAs you continue through the @@dtower@@m, you come across a small room with
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-in an octagonal step design.  You see two surrounding rooms, each containing
-some creature of the stars...@@N
-~
+
+a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
+
+cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
+
+in an octagonal step design.  You see two surrounding rooms, each containing
+
+some creature of the stars...@@N
+
+~
 139272 11
 D0
 ~
@@ -2381,12 +1604,18 @@ S
 #8413
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -2408,9 +1637,12 @@ S
 #8414
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou stand before a large archway, leading into a hallway with a low coating
-of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
-you can see some room that seems to sparkle like the @@gstars@@m.@@N
-~
+
+of @@dm@@mi@@ps@@gt@@m covering the floor. As you look farther down the hall,
+
+you can see some room that seems to sparkle like the @@gstars@@m.@@N
+
+~
 139272 11
 D0
 ~
@@ -2432,11 +1664,16 @@ S
 #8415
 @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dHalls@@N~
 @@dBlack cobblestone walls line this half-sphere shaped hall.  A strange
-violet light glows from the end of the hall, and this light reaches you enough
-for you to see the paintings of a black ink on the walls glow an eerie grey.
-On the walls are words you can not understand, but you comprehend the outlines
-painted to be a nude woman with a pet lion.@@N
-~
+
+violet light glows from the end of the hall, and this light reaches you enough
+
+for you to see the paintings of a black ink on the walls glow an eerie grey.
+
+On the walls are words you can not understand, but you comprehend the outlines
+
+painted to be a nude woman with a pet lion.@@N
+
+~
 139272 11
 D1
 ~
@@ -2450,11 +1687,16 @@ S
 #8416
 @@dIn@@mte@@pr@@gse@@pc@@mti@@don@@m of the @@dP@@ma@@pt@@Wh@@gs@@N~
 @@mYou step into a four-way intersection.  You try to think of which way to
-wander but you can remember nothing you have learned about the tower.  You
-find vague images floating in your mind of how you got into the tower but you
-can not remember why you are here, where you were going, or what you have
-learned while inside the tower.@@N
-~
+
+wander but you can remember nothing you have learned about the tower.  You
+
+find vague images floating in your mind of how you got into the tower but you
+
+can not remember why you are here, where you were going, or what you have
+
+learned while inside the tower.@@N
+
+~
 139272 11
 D0
 ~
@@ -2476,8 +1718,10 @@ S
 #8417
 @@mA @@dS@@mm@@pa@@Wl@@gl @@dD@@mo@@po@@gr@@pw@@ma@@dy@@N~
 @@mA doorway to your west has some ancient carvings into its amthyst frame. A
-thick @@dm@@mi@@ps@@gt@@m blocks all views into and past the door.@@N
-~
+
+thick @@dm@@mi@@ps@@gt@@m blocks all views into and past the door.@@N
+
+~
 139272 11
 D1
 ~
@@ -2491,11 +1735,16 @@ S
 #8418
 @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy @@dof @@cA@@aq@@lu@@ca@@ama@@cr@@li@@an@@ce@@N~
 @@mAs you continue through the @@dtower@@m, you come across a small room with
-a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
-cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
-in an octagonal step design.  You see two surrounding rooms, each containing
-some creature of the stars...@@N
-~
+
+a spiral staircase leading up.  The stairway seems to be made of a @@ppure@@m
+
+cut, smooth and rounded @@aaquamarine@@m.  Each gemstone step is precisely cut
+
+in an octagonal step design.  You see two surrounding rooms, each containing
+
+some creature of the stars...@@N
+
+~
 139272 11
 D0
 ~
@@ -2517,12 +1766,18 @@ S
 #8419
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D1
 ~
@@ -2532,12 +1787,18 @@ S
 #8420
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D3
 ~
@@ -2547,12 +1808,18 @@ S
 #8421
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D1
 ~
@@ -2562,12 +1829,18 @@ S
 #8422
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D3
 ~
@@ -2577,12 +1850,18 @@ S
 #8423
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D2
 ~
@@ -2592,12 +1871,18 @@ S
 #8424
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D0
 ~
@@ -2607,12 +1892,18 @@ S
 #8425
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D2
 ~
@@ -2622,12 +1913,18 @@ S
 #8426
 @@dRoom @@mo@@pf @@mt@@ph@@ge @@dS@@Wt@@ga@@Wr@@ds@@N~
 @@mYou step in this room and are taken aback by the beauty.  The room seems to
-be out in the open space and you can see nothing but beautiful @@gstars@@m
-surrounding you, hanging in the space like a string of @@gglittering
-crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
-front of you.  You turn, but the alter still seems to follow you, always
-staying in front of your line of vision.@@N
-~
+
+be out in the open space and you can see nothing but beautiful @@gstars@@m
+
+surrounding you, hanging in the space like a string of @@gglittering
+
+crystals@@m.  You see a wide alter of @@gg@@Wl@@ga@@Ws@@gs@@m, floating in
+
+front of you.  You turn, but the alter still seems to follow you, always
+
+staying in front of your line of vision.@@N
+
+~
 139272 11
 D0
 ~
@@ -2637,11 +1934,16 @@ S
 #8427
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2655,11 +1957,16 @@ S
 #8428
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2673,11 +1980,16 @@ S
 #8429
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2691,11 +2003,16 @@ S
 #8430
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2709,11 +2026,16 @@ S
 #8431
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2727,11 +2049,16 @@ S
 #8432
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2745,11 +2072,16 @@ S
 #8433
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139528 11
 D0
 ~
@@ -2763,11 +2095,16 @@ S
 #8434
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2781,11 +2118,16 @@ S
 #8435
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2799,11 +2141,16 @@ S
 #8436
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2817,11 +2164,16 @@ S
 #8437
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D2
 ~
@@ -2835,11 +2187,16 @@ S
 #8438
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2853,11 +2210,16 @@ S
 #8439
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2871,11 +2233,16 @@ S
 #8440
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2889,11 +2256,16 @@ S
 #8441
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2907,11 +2279,16 @@ S
 #8442
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2925,11 +2302,16 @@ S
 #8443
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -2943,11 +2325,16 @@ S
 #8444
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2961,11 +2348,16 @@ S
 #8446
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2979,11 +2371,16 @@ S
 #8447
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -2997,11 +2394,16 @@ S
 #8445
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -3015,11 +2417,16 @@ S
 #8448
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -3033,11 +2440,16 @@ S
 #8449
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -3051,11 +2463,16 @@ S
 #8450
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D1
 ~
@@ -3069,11 +2486,16 @@ S
 #8451
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -3087,11 +2509,16 @@ S
 #8452
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -3105,11 +2532,16 @@ S
 #8453
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -3123,11 +2555,16 @@ S
 #8454
 @@dH@@ma@@pl@@gl@@pw@@ma@@dy @@min the @@dTower@@N~
 @@mYou are in a narrow but tall hallway, decorated with carvings and statues
-covering the wall from end to end.  This hallway seems to go on forever. After
-you take a deep breath you proceed down the hallway.  Torches of a
-@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
-dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
-~
+
+covering the wall from end to end.  This hallway seems to go on forever. After
+
+you take a deep breath you proceed down the hallway.  Torches of a
+
+@@pviolet@@m flame are placed on the walls, seeming to fill the halls with a
+
+dancing light of @@dc@@mr@@pi@@Wm@@gs@@po@@mn..@@N
+
+~
 139272 11
 D0
 ~
@@ -3141,13 +2578,20 @@ S
 #8455
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D0
 ~
@@ -3165,11 +2609,16 @@ S
 #8456
 @@dT@@mh@@pe @@dCorner @@mo@@pf @@mt@@ph@@ge @@dH@@ma@@pl@@Wl@@gs@@N~
 @@mAs you enter farther into the tower, you come to the corner of the room. A
-large fountain is here with an undisturbed liquid inside, with a calm
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-~
+
+large fountain is here with an undisturbed liquid inside, with a calm
+
+stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
+
+stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
+
+the fountain burns, the unknown power upon your mind gets weaker...@@N
+
+~
 131080 11
 D1
 ~
@@ -3183,13 +2632,20 @@ S
 #8457
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D1
 ~
@@ -3207,13 +2663,20 @@ S
 #8458
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D1
 ~
@@ -3231,11 +2694,16 @@ S
 #8459
 @@dT@@mh@@pe @@dCorner @@mo@@pf @@mt@@ph@@ge @@dH@@ma@@pl@@Wl@@gs@@N~
 @@mAs you enter farther into the tower, you come to the corner of the room. A
-large fountain is here with an undisturbed liquid inside, with a calm
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-~
+
+large fountain is here with an undisturbed liquid inside, with a calm
+
+stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
+
+stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
+
+the fountain burns, the unknown power upon your mind gets weaker...@@N
+
+~
 131080 11
 D2
 ~
@@ -3249,13 +2717,20 @@ S
 #8460
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D0
 ~
@@ -3273,13 +2748,20 @@ S
 #8461
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D0
 ~
@@ -3297,11 +2779,16 @@ S
 #8462
 @@dT@@mh@@pe @@dCorner @@mo@@pf @@mt@@ph@@ge @@dH@@ma@@pl@@Wl@@gs@@N~
 @@mAs you enter farther into the tower, you come to the corner of the room. A
-large fountain is here with an undisturbed liquid inside, with a calm
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-~
+
+large fountain is here with an undisturbed liquid inside, with a calm
+
+stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
+
+stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
+
+the fountain burns, the unknown power upon your mind gets weaker...@@N
+
+~
 131080 11
 D0
 ~
@@ -3315,13 +2802,20 @@ S
 #8463
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D0
 ~
@@ -3339,13 +2833,20 @@ S
 #8464
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D0
 ~
@@ -3363,11 +2864,16 @@ S
 #8465
 @@dT@@mh@@pe @@dCorner @@mo@@pf @@mt@@ph@@ge @@dH@@ma@@pl@@Wl@@gs@@N~
 @@mAs you enter farther into the tower, you come to the corner of the room. A
-large fountain is here with an undisturbed liquid inside, with a calm
-stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
-stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
-the fountain burns, the unknown power upon your mind gets weaker...@@N
-~
+
+large fountain is here with an undisturbed liquid inside, with a calm
+
+stillness upon it.  You quickly scrape your weapon upon the @@dgranite@@m
+
+stones and the sparks ignite the liquid into a burning, @@lblue@@m flame. As
+
+the fountain burns, the unknown power upon your mind gets weaker...@@N
+
+~
 131080 11
 D0
 ~
@@ -3381,13 +2887,20 @@ S
 #8466
 @@dA@@ml@@po@@Wn@@gg @@dthe W@@ma@@pl@@gl@@N~
 @@mYou are along the wall of the giant @@dtower@@m, and you now have a very
-small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
-the walls is eerie enough, but hearing the moaning noises and the caskets
-being empty is even worse.  You decide to try and find the exit, but you scan
-around intensely and so obvious way out.  All you see is some passages in all
-directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
-of this room.@@N
-~
+
+small fear buried deep down inside you.  Seeing all these @@Wcaskets@@m lining
+
+the walls is eerie enough, but hearing the moaning noises and the caskets
+
+being empty is even worse.  You decide to try and find the exit, but you scan
+
+around intensely and so obvious way out.  All you see is some passages in all
+
+directions and a s@@pp@@mi@@pr@@ma@@pl@@m staircase leading up from the center
+
+of this room.@@N
+
+~
 139272 11
 D0
 ~
@@ -3405,12 +2918,18 @@ S
 #8467
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -3432,12 +2951,18 @@ S
 #8468
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -3459,12 +2984,18 @@ S
 #8469
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -3486,12 +3017,18 @@ S
 #8470
 @@dThe I@@mn@@ps@@Wi@@gd@@pe @@dof the H@@ma@@pl@@Wl@@go@@pw@@N~
 @@mYou wander farther and farther from where you were transfered inside, and
-you keep watch, for you feel that the very walls are out to get you. This
-@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
-around and notice the caskets lined along the @@ddark slab walls@@m. Some open
-and some shut, but all empty. You start to wonder if you might come across the
-owners of these caskets.@@N
-~
+
+you keep watch, for you feel that the very walls are out to get you. This
+
+@@dm@@mi@@ps@@gt@@m gets @@plighter@@m here and you can start to see farther
+
+around and notice the caskets lined along the @@ddark slab walls@@m. Some open
+
+and some shut, but all empty. You start to wonder if you might come across the
+
+owners of these caskets.@@N
+
+~
 139272 11
 D0
 ~
@@ -3513,10 +3050,14 @@ S
 #8471
 @@dThe S@@me@@pc@@go@@pn@@md @@dF@@ml@@po@@go@@pr @@mof the @@dTower@@N~
 @@mThe second floor of the tower looks rather odd.  Walls are lined with
-hundreds of torches and there are carvings dug deep into the walls around you.
-After witnessing the entrance and the first floor, you wonder what awaits you
-here...@@N
-~
+
+hundreds of torches and there are carvings dug deep into the walls around you.
+
+After witnessing the entrance and the first floor, you wonder what awaits you
+
+here...@@N
+
+~
 139272 11
 D0
 ~
@@ -3546,11 +3087,16 @@ S
 #8473
 @@dA @@mRoom @@don the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mWandering around this tower you notice the hard work and time that must
-have been put into creating this so long ago.  The stones are perfectly cut.
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-your body. @@N
-~
+
+have been put into creating this so long ago.  The stones are perfectly cut.
+
+The tiles on the floor are perfectly arranged.  The walls are perfectly
+
+aligned brick by brick.  You can also feel a pure @@ppower@@m running through
+
+your body. @@N
+
+~
 139272 11
 D1
 ~
@@ -3568,11 +3114,16 @@ S
 #8472
 @@dA @@mRoom @@don the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mWandering around this tower you notice the hard work and time that must
-have been put into creating this so long ago.  The stones are perfectly cut.
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-your body. @@N
-~
+
+have been put into creating this so long ago.  The stones are perfectly cut.
+
+The tiles on the floor are perfectly arranged.  The walls are perfectly
+
+aligned brick by brick.  You can also feel a pure @@ppower@@m running through
+
+your body. @@N
+
+~
 139272 11
 D0
 ~
@@ -3590,11 +3141,16 @@ S
 #8479
 @@dA @@mRoom @@don the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mWandering around this tower you notice the hard work and time that must
-have been put into creating this so long ago.  The stones are perfectly cut.
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-your body. @@N
-~
+
+have been put into creating this so long ago.  The stones are perfectly cut.
+
+The tiles on the floor are perfectly arranged.  The walls are perfectly
+
+aligned brick by brick.  You can also feel a pure @@ppower@@m running through
+
+your body. @@N
+
+~
 139272 11
 D0
 ~
@@ -3612,11 +3168,16 @@ S
 #8478
 @@dA @@mRoom @@don the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mWandering around this tower you notice the hard work and time that must
-have been put into creating this so long ago.  The stones are perfectly cut.
-The tiles on the floor are perfectly arranged.  The walls are perfectly
-aligned brick by brick.  You can also feel a pure @@ppower@@m running through
-your body. @@N
-~
+
+have been put into creating this so long ago.  The stones are perfectly cut.
+
+The tiles on the floor are perfectly arranged.  The walls are perfectly
+
+aligned brick by brick.  You can also feel a pure @@ppower@@m running through
+
+your body. @@N
+
+~
 139272 11
 D0
 ~
@@ -3634,11 +3195,16 @@ S
 #8474
 @@dA @@mCorner @@dof the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mThe corner of the second floor is very normal looking compared to the rest
-of the tower.  You a window looking out into the cavern below.  You can see
-the great cliff which you fell down, and you can see the small guards
-wandering around the tower.  You hear a sudden crak in the floor and you take
-a step back.@@N
-~
+
+of the tower.  You a window looking out into the cavern below.  You can see
+
+the great cliff which you fell down, and you can see the small guards
+
+wandering around the tower.  You hear a sudden crak in the floor and you take
+
+a step back.@@N
+
+~
 139272 11
 D1
 ~
@@ -3652,11 +3218,16 @@ S
 #8475
 @@dA @@mCorner @@dof the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mThe corner of the second floor is very normal looking compared to the rest
-of the tower.  You a window looking out into the cavern below.  You can see
-the great cliff which you fell down, and you can see the small guards
-wandering around the tower.  You hear a sudden crak in the floor and you take
-a step back.@@N
-~
+
+of the tower.  You a window looking out into the cavern below.  You can see
+
+the great cliff which you fell down, and you can see the small guards
+
+wandering around the tower.  You hear a sudden crak in the floor and you take
+
+a step back.@@N
+
+~
 139272 11
 D2
 ~
@@ -3670,11 +3241,16 @@ S
 #8476
 @@dA @@mCorner @@dof the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mThe corner of the second floor is very normal looking compared to the rest
-of the tower.  You a window looking out into the cavern below.  You can see
-the great cliff which you fell down, and you can see the small guards
-wandering around the tower.  You hear a sudden crak in the floor and you take
-a step back.@@N
-~
+
+of the tower.  You a window looking out into the cavern below.  You can see
+
+the great cliff which you fell down, and you can see the small guards
+
+wandering around the tower.  You hear a sudden crak in the floor and you take
+
+a step back.@@N
+
+~
 139272 11
 D0
 ~
@@ -3688,11 +3264,16 @@ S
 #8477
 @@dA @@mCorner @@dof the S@@me@@pc@@go@@pn@@md @@dFloor@@N~
 @@mThe corner of the second floor is very normal looking compared to the rest
-of the tower.  You a window looking out into the cavern below.  You can see
-the great cliff which you fell down, and you can see the small guards
-wandering around the tower.  You hear a sudden crak in the floor and you take
-a step back.@@N
-~
+
+of the tower.  You a window looking out into the cavern below.  You can see
+
+the great cliff which you fell down, and you can see the small guards
+
+wandering around the tower.  You hear a sudden crak in the floor and you take
+
+a step back.@@N
+
+~
 139272 11
 D0
 ~
@@ -3706,12 +3287,18 @@ S
 #8483
 @@dU@@mp @@dT@@mh@@pe @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy@@N~
 @@mProceeding up the stairway of @@aaquamarine@@m, you are confronted with a
-creature of the stars.  As you stare into the creature's eyes, you start to
-feel weightless, as if no gravity was pulling your body towards the ground.
-Soon you notice that you are hovering above the stairway, coming closer and
-closer to the magical beast.  You look up to notice a small ladder made of the
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-~
+
+creature of the stars.  As you stare into the creature's eyes, you start to
+
+feel weightless, as if no gravity was pulling your body towards the ground.
+
+Soon you notice that you are hovering above the stairway, coming closer and
+
+closer to the magical beast.  You look up to notice a small ladder made of the
+
+same @@aaquamarine@@m as the staircase, leading upwards..@@N
+
+~
 139272 11
 D5
 ~
@@ -3721,12 +3308,18 @@ S
 #8481
 @@dU@@mp @@dT@@mh@@pe @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy@@N~
 @@mProceeding up the stairway of @@aaquamarine@@m, you are confronted with a
-creature of the stars.  As you stare into the creature's eyes, you start to
-feel weightless, as if no gravity was pulling your body towards the ground.
-Soon you notice that you are hovering above the stairway, coming closer and
-closer to the magical beast.  You look up to notice a small ladder made of the
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-~
+
+creature of the stars.  As you stare into the creature's eyes, you start to
+
+feel weightless, as if no gravity was pulling your body towards the ground.
+
+Soon you notice that you are hovering above the stairway, coming closer and
+
+closer to the magical beast.  You look up to notice a small ladder made of the
+
+same @@aaquamarine@@m as the staircase, leading upwards..@@N
+
+~
 139272 11
 D5
 ~
@@ -3736,12 +3329,18 @@ S
 #8482
 @@dU@@mp @@dT@@mh@@pe @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy@@N~
 @@mProceeding up the stairway of @@aaquamarine@@m, you are confronted with a
-creature of the stars.  As you stare into the creature's eyes, you start to
-feel weightless, as if no gravity was pulling your body towards the ground.
-Soon you notice that you are hovering above the stairway, coming closer and
-closer to the magical beast.  You look up to notice a small ladder made of the
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-~
+
+creature of the stars.  As you stare into the creature's eyes, you start to
+
+feel weightless, as if no gravity was pulling your body towards the ground.
+
+Soon you notice that you are hovering above the stairway, coming closer and
+
+closer to the magical beast.  You look up to notice a small ladder made of the
+
+same @@aaquamarine@@m as the staircase, leading upwards..@@N
+
+~
 139272 11
 D4
 ~
@@ -3755,8 +3354,10 @@ S
 #8484
 @@mThe @@dT@@mh@@pi@@Wr@@gd @@mFloor of the @@dTower@@N~
 @@mYou hear nothing.  Silence falls over you as you enter the third floor. The
-eerie calm starts to send chills down your very bones in your body.@@N
-~
+
+eerie calm starts to send chills down your very bones in your body.@@N
+
+~
 139272 11
 D0
 ~
@@ -3782,9 +3383,12 @@ S
 #8485
 @@dThe T@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@mThe silence remains as you wander about this floor.  Eerie creatures start
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-come from armor clanking, weapons colliding, and death cries.@@N
-~
+
+to appear and you attack.  Nothing can seem to break the silence.  No sounds
+
+come from armor clanking, weapons colliding, and death cries.@@N
+
+~
 139272 11
 D0
 ~
@@ -3806,7 +3410,8 @@ S
 #8486
 @@dHallway of Silence@@N~
 @@d...@@N
-~
+
+~
 139528 11
 D0
 ~
@@ -3820,9 +3425,12 @@ S
 #8487
 @@dBetween @@mthe @@dGu@@ma@@pr@@gd@@pp@@mos@@dts@@N~
 @@mYou head down the halls of silence and you now walk between two guardposts.
-Two guards stand at attention seeming to be waiting.  A small painting of a
-full moon is over their heads.@@N
-~
+
+Two guards stand at attention seeming to be waiting.  A small painting of a
+
+full moon is over their heads.@@N
+
+~
 139272 11
 D0
 ~
@@ -3844,12 +3452,18 @@ S
 #8488
 @@mThe @@dGiant @@gWindow@@N~
 @@mYou stumble in to this @@ymoonlit@@m room.  A large window on the ceiling
-lets light through.  A tunnel reaches the surface is dug into the cavern
-ceiling and the moon completely covers the hole, shining light into the tunnel
-and through the window to make a complete circle on an insignia carved into
-the carpet below your feet.  You notice that a new doorway has appeared to the
-north.@@N
-~
+
+lets light through.  A tunnel reaches the surface is dug into the cavern
+
+ceiling and the moon completely covers the hole, shining light into the tunnel
+
+and through the window to make a complete circle on an insignia carved into
+
+the carpet below your feet.  You notice that a new doorway has appeared to the
+
+north.@@N
+
+~
 131072 11
 D0
 ~
@@ -3863,9 +3477,12 @@ S
 #8490
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@dGuardpost@@N~
 @@mThe silence is broken here.  You can hear all the normal sounds of life and
-of the tower.  You hear the clanking of your armor and the shuffles of the
-gold in your wallet.@@N
-~
+
+of the tower.  You hear the clanking of your armor and the shuffles of the
+
+gold in your wallet.@@N
+
+~
 139272 11
 D1
 ~
@@ -3875,9 +3492,12 @@ S
 #8491
 @@dA C@@mr@@pi@@Wm@@gs@@po@@mn @@dGuardpost@@N~
 @@mThe silence is broken here.  You can hear all the normal sounds of life and
-of the tower.  You hear the clanking of your armor and the shuffles of the
-gold in your wallet.@@N
-~
+
+of the tower.  You hear the clanking of your armor and the shuffles of the
+
+gold in your wallet.@@N
+
+~
 139272 11
 D3
 ~
@@ -3887,8 +3507,10 @@ S
 #8492
 @@mA @@dRoom@@m on the @@dT@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@dComplete and total silence...@@N @@dA pin drops from your pack and you
-don't even hear it.@@N
-~
+
+don't even hear it.@@N
+
+~
 8456 11
 D1
 ~
@@ -3902,8 +3524,10 @@ S
 #8493
 @@mA @@dRoom@@m on the @@dT@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@dComplete and total silence...@@N @@dA pin drops from your pack and you
-don't even hear it.@@N
-~
+
+don't even hear it.@@N
+
+~
 8456 11
 D2
 ~
@@ -3917,9 +3541,12 @@ S
 #8494
 @@dThe T@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@mThe silence remains as you wander about this floor.  Eerie creatures start
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-come from armor clanking, weapons colliding, and death cries.@@N
-~
+
+to appear and you attack.  Nothing can seem to break the silence.  No sounds
+
+come from armor clanking, weapons colliding, and death cries.@@N
+
+~
 139272 11
 D0
 ~
@@ -3937,9 +3564,12 @@ S
 #8495
 @@dThe T@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@mThe silence remains as you wander about this floor.  Eerie creatures start
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-come from armor clanking, weapons colliding, and death cries.@@N
-~
+
+to appear and you attack.  Nothing can seem to break the silence.  No sounds
+
+come from armor clanking, weapons colliding, and death cries.@@N
+
+~
 139272 11
 D0
 ~
@@ -3957,9 +3587,12 @@ S
 #8497
 @@dThe T@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@mThe silence remains as you wander about this floor.  Eerie creatures start
-to appear and you attack.  Nothing can seem to break the silence.  No sounds
-come from armor clanking, weapons colliding, and death cries.@@N
-~
+
+to appear and you attack.  Nothing can seem to break the silence.  No sounds
+
+come from armor clanking, weapons colliding, and death cries.@@N
+
+~
 139272 11
 D0
 ~
@@ -3977,8 +3610,10 @@ S
 #8496
 @@mA @@dRoom@@m on the @@dT@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@dComplete and total silence...@@N @@dA pin drops from your pack and you
-don't even hear it.@@N
-~
+
+don't even hear it.@@N
+
+~
 139528 11
 D0
 ~
@@ -3992,8 +3627,10 @@ S
 #8498
 @@mA @@dRoom@@m on the @@dT@@mh@@pi@@Wr@@gd @@dFloor@@N~
 @@dComplete and total silence...@@N @@dA pin drops from your pack and you
-don't even hear it.@@N
-~
+
+don't even hear it.@@N
+
+~
 8456 11
 D0
 ~
@@ -4007,12 +3644,18 @@ S
 #8480
 @@dU@@mp @@dT@@mh@@pe @@dS@@mt@@pa@@Wi@@gr@@pw@@ma@@dy@@N~
 @@mProceeding up the stairway of @@aaquamarine@@m, you are confronted with a
-creature of the stars.  As you stare into the creature's eyes, you start to
-feel weightless, as if no gravity was pulling your body towards the ground.
-Soon you notice that you are hovering above the stairway, coming closer and
-closer to the magical beast.  You look up to notice a small ladder made of the
-same @@aaquamarine@@m as the staircase, leading upwards..@@N
-~
+
+creature of the stars.  As you stare into the creature's eyes, you start to
+
+feel weightless, as if no gravity was pulling your body towards the ground.
+
+Soon you notice that you are hovering above the stairway, coming closer and
+
+closer to the magical beast.  You look up to notice a small ladder made of the
+
+same @@aaquamarine@@m as the staircase, leading upwards..@@N
+
+~
 139272 11
 D5
 ~
@@ -4022,10 +3665,14 @@ S
 #8499
 @@dA T@@mh@@pi@@Wc@@gk @@dM@@mi@@ps@@gt@@N~
 @@d  Autumn in her flaming dress..
-Of orange, brown, hold fallen leaves..
-@@d  My mistress of the fridgid night..
-I worship, pray to on my fallen knees..@@N
-~
+
+Of orange, brown, hold fallen leaves..
+
+@@d  My mistress of the fridgid night..
+
+I worship, pray to on my fallen knees..@@N
+
+~
 139276 9
 D4
 ~
@@ -4035,29 +3682,47 @@ S
 #8370
 @@dThe @@mMa@@pgic@@mal Ch@@pamb@@mer @@dof the M@@mi@@ps@@gt@@N~
 @@dAround the pyre, a circle of thirteen..
-Throughout these woods, ecstatic screams..
-I look deeply into your eyes..
-I smell your hair, caress your thighs..
-Now we'll love by the fire light..
-A blaze so high it lights the night..
-Long fingernails dug in my skin..
-Yourself so wet invites me in..
-Our lust increased feeds desire..
-As we combust, yeah we on fire..
-I feel you shake, so deep inside..
-Oh scream my name and squeeze me tight..@@N
-~
+
+Throughout these woods, ecstatic screams..
+
+I look deeply into your eyes..
+
+I smell your hair, caress your thighs..
+
+Now we'll love by the fire light..
+
+A blaze so high it lights the night..
+
+Long fingernails dug in my skin..
+
+Yourself so wet invites me in..
+
+Our lust increased feeds desire..
+
+As we combust, yeah we on fire..
+
+I feel you shake, so deep inside..
+
+Oh scream my name and squeeze me tight..@@N
+
+~
 16398 11
 S
 #8489
 @@dJ@@mu@@pz@@Wa@@gm@@p'@@ms @@gDeserted @@dDwelling@@N~
 @@mYou enter Juzam's dwelling and are shocked when you see his absence. Juzam
-and his throne are gone, but everything else that was installed in the room
-remains.  You put your weapon back in it's holster and investigate around the
-room a bit, until you come to the northern wall.  You notice a circle of
-bright @@yyellow@@m light shining on the marble wall, and inscribed into the
-wall are some small @@pinscriptions@@m.@@N
-~
+
+and his throne are gone, but everything else that was installed in the room
+
+remains.  You put your weapon back in it's holster and investigate around the
+
+room a bit, until you come to the northern wall.  You notice a circle of
+
+bright @@yyellow@@m light shining on the marble wall, and inscribed into the
+
+wall are some small @@pinscriptions@@m.@@N
+
+~
 139272 11
 D5
 ~
@@ -4066,7 +3731,8 @@ D5
 E
 inscriptions~
 @@yThe prophecy has shown true, and the full moon has opened the door..@@N
-~
+
+~
 S
 #0
 #MOBILES
@@ -4074,10 +3740,13 @@ S
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
-~
+
+~
 @@mA small figure here floats around here with an aimless stare that seems to
-be formed from the @@pf@@mog itself..@@N
-~
+
+be formed from the @@pf@@mog itself..@@N
+
+~
 105 16552 0 S
 142 0
 0 -10 0 0
@@ -4090,10 +3759,13 @@ L 0 0 0 0 0 0 0 0 0
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
-~
+
+~
 @@mA small figure here floats around here with an aimless stare that seems to
-be formed from the @@pf@@mog itself..@@N
-~
+
+be formed from the @@pf@@mog itself..@@N
+
+~
 105 16552 0 S
 139 0
 0 0 0 0
@@ -4106,10 +3778,13 @@ L 0 0 0 0 0 0 0 0 0
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
-~
+
+~
 @@mA small figure here floats around here with an aimless stare that seems to
-be formed from the @@pf@@mog itself..@@N
-~
+
+be formed from the @@pf@@mog itself..@@N
+
+~
 105 16552 0 S
 149 0
 0 0 0 0
@@ -4122,10 +3797,13 @@ L 0 0 0 0 0 0 0 0 0
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
-~
+
+~
 @@mA small figure here floats around here with an aimless stare that seems to
-be formed from the @@pf@@mog itself..@@N
-~
+
+be formed from the @@pf@@mog itself..@@N
+
+~
 105 16552 0 S
 140 0
 0 0 0 0
@@ -4138,10 +3816,13 @@ L 0 0 0 0 0 0 0 0 0
 Dweller~
 @@dF@@mog @@dD@@mweller@@N~
 @@mA dweller of the fog floats here in his own dimension..@@N
-~
+
+~
 @@mA small figure here floats around here with an aimless stare that seems to
-be formed from the @@pf@@mog itself..@@N
-~
+
+be formed from the @@pf@@mog itself..@@N
+
+~
 105 16552 0 S
 146 0
 0 0 0 0
@@ -4154,11 +3835,15 @@ L 0 0 0 0 0 0 0 0 0
 Guard guardian mist crimson~
 @@dGuard of the Crimson Mist@@N~
 @@dA G@@mu@@pard @@do@@mf @@dT@@mh@@pe @@dC@@mr@@pimson @@dM@@mi@@pst@@N
-~
+
+~
 A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
-orbiting slowly around and around his tall, muscular body. His stare could
-@@ppierce@@N into the very depths of your soul..@@N
-~
+
+orbiting slowly around and around his tall, muscular body. His stare could
+
+@@ppierce@@N into the very depths of your soul..@@N
+
+~
 36765723 18664 0 S
 147 1
 0 0 0 0
@@ -4171,11 +3856,15 @@ L 0 0 0 0 0 0 0 0 0
 Rock Hydra~
 @@dThe @@mRock Hydra@@N~
 @@mA large hydra of the @@pcrimson caverns@@m charges you when you enter@@N
-~
+
+~
 @@mA very large hydra is towering here above you, six heads growling at you
-while another two seem to be confused as its stares blankly into the Shiyztlan
-@@m...@@N
-~
+
+while another two seem to be confused as its stares blankly into the Shiyztlan
+
+@@m...@@N
+
+~
 33554435 16618 0 S
 146 0
 0 0 0 0
@@ -4188,7 +3877,8 @@ L 0 0 0 0 0 0 0 0 0
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
-~
+
+~
 @@N @@N~
 33570819 524988 0 S
 139 0
@@ -4202,7 +3892,8 @@ L 0 0 0 0 0 0 0 0 0
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
-~
+
+~
 ~
 16387 524988 0 S
 135 0
@@ -4216,7 +3907,8 @@ L 0 0 0 0 0 0 0 0 0
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
-~
+
+~
 ~
 16387 524988 0 S
 136 0
@@ -4230,25 +3922,23 @@ L 0 0 0 0 0 0 0 0 0
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
-~
+
+~
 ~
 16387 524988 0 S
 138 0
 0 0 0 0
-
-~
-
-~
-
-~
-
-~
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
 #8361
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
-~
+
+~
 ~
 16387 524988 0 S
 133 0
@@ -4262,7 +3952,8 @@ L 0 0 0 0 0 0 0 0 0
 vampyre bats~
 @@NVampyre @@pBats@@N~
 @@mA small @@dswarm of vampyre bats@@m attacks you on your way down..@@N
-~
+
+~
 ~
 16387 524988 0 S
 128 0
@@ -4276,10 +3967,13 @@ L 0 0 0 0 0 0 0 0 0
 crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
-~
+
+~
 @@mYou see nothing but a patch of @@ddark fog@@m, until it condenses and
-attacks you where you stand.@@N
-~
+
+attacks you where you stand.@@N
+
+~
 36700161 16616 0 S
 133 0
 0 0 0 0
@@ -4292,10 +3986,13 @@ L 0 0 0 0 0 0 0 0 0
 crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
-~
+
+~
 @@mYou see nothing but a patch of @@ddark fog@@m, until it condenses and
-attacks you where you stand.@@N
-~
+
+attacks you where you stand.@@N
+
+~
 36700161 16616 0 S
 149 0
 0 0 0 0
@@ -4308,10 +4005,13 @@ L 0 0 0 0 0 0 0 0 0
 crimson mist patrol~
 @@mCrimson Mist @@dPatrol@@N~
 @@dA P@@Wa@@gtr@@Wo@@dl of the m@@mi@@ps@@gt@@d guards the tower..@@N
-~
+
+~
 @@mYou see nothing but a patch of @@ddark fog@@m, until it condenses and
-attacks you where you stand.@@N
-~
+
+attacks you where you stand.@@N
+
+~
 36700161 16616 0 S
 143 0
 0 0 0 0
@@ -4324,7 +4024,8 @@ L 0 0 0 0 0 0 0 0 0
 crimson demon~
 @@mCrimson @@dDemon@@N~
 @@mA patch of @@pcrimson mist@@m gently starts to surround you..@@N
-~
+
+~
 ~
 43 526570 0 S
 122 1
@@ -4338,9 +4039,11 @@ L 0 0 0 0 0 0 0 0 0
 aries~
 @@RAries@@e, @@dThe Ram@@N~
 @@dThe Ram of the stars parades here majesticaly..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 146 0
 0 0 0 0
@@ -4353,9 +4056,11 @@ L 0 0 0 0 0 0 0 0 0
 Taurus~
 @@bTaurus@@y, @@dThe Bull@@N~
 @@dA large bull is boldly perched here on his alter..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 145 0
 0 0 0 0
@@ -4368,9 +4073,11 @@ L 0 0 0 0 0 0 0 0 0
 Gemini~
 @@BGemini@@l, @@dThe Twins@@N~
 @@dTwo men stand here, staring into your soul..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 142 0
 0 0 0 0
@@ -4383,9 +4090,11 @@ L 0 0 0 0 0 0 0 0 0
 Cancer~
 @@W@@xCancer@@N,@@d The Crab@@N~
 @@dA large crab here claws at you from it's perch..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 146 0
 0 0 0 0
@@ -4398,9 +4107,11 @@ L 0 0 0 0 0 0 0 0 0
 leo~
 @@yLeo@@W@@x, @@dThe Lion@@N~
 @@dThe proud lion majesticly parades here..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 147 0
 0 0 0 0
@@ -4413,9 +4124,11 @@ L 0 0 0 0 0 0 0 0 0
 Virgo~
 @@cVirgo@@a, @@dThe Virgin@@N~
 @@dA beautiful lady in tight, see-through clothing..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 154 2
 0 0 0 0
@@ -4428,9 +4141,11 @@ L 0 0 0 0 0 0 0 0 0
 Libra~
 @@mLibra@@p, @@dThe Scales@@N~
 @@dThe scales of the universe are perched here..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 158 0
 0 0 0 0
@@ -4443,9 +4158,11 @@ L 0 0 0 0 0 0 0 0 0
 Scorpio~
 @@RScorpio@@e, @@dThe Scorpion@@N~
 @@dA scorpion of starlight is crawling around here..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 155 0
 0 0 0 0
@@ -4458,9 +4175,11 @@ L 0 0 0 0 0 0 0 0 0
 Sagittarius~
 @@GSagittarius@@r, @@dThe Archer@@N~
 @@dA small man stands at attention, bow and arrow at ready..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 141 0
 0 0 0 0
@@ -4473,9 +4192,11 @@ L 0 0 0 0 0 0 0 0 0
 Capricorn~
 @@cCapricorn@@a,@@d The Goat@@N~
 @@dA small goat is here, and starts to charge you..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 147 0
 0 0 0 0
@@ -4488,9 +4209,11 @@ L 0 0 0 0 0 0 0 0 0
 Aquarius~
 @@BAquarius@@l, @@dThe Water Bearer@@N~
 @@dA man with a bowl of water stares right through you..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 138 0
 0 0 0 0
@@ -4503,9 +4226,11 @@ L 0 0 0 0 0 0 0 0 0
 Pisces~
 @@mPisces@@p, @@dThe Fish@@N~
 @@dTwo fish are here seeming to share one body..@@N
-~
+
+~
 @@dYou see nothing but a bunch of @@gstars@@d...@@N
-~
+
+~
 33751067 18624 0 S
 130 0
 0 0 0 0
@@ -4518,11 +4243,15 @@ L 0 0 0 0 0 0 0 0 0
 Prophet~
 @@mPrayer @@pSpeaker@@N~
 @@dA beautiful nude goddess is here, chanting words of the mist..@@N
-~
+
+~
 @@mA patch of mist floats by your face.  It has the smell of a beautiful
-perfume.  You take a longer sniff and the mist condenses into a beautiful,
-full-figured woman..@@N
-~
+
+perfume.  You take a longer sniff and the mist condenses into a beautiful,
+
+full-figured woman..@@N
+
+~
 4115 18536 1000 S
 140 1
 0 0 0 0
@@ -4535,7 +4264,8 @@ L 0 0 0 0 0 0 0 0 0
 suggestion hypnotic crimson~
 @@dA @@mCrimson @@pSuggestion@@N~
 @@dSome beautiful creature @@fentices@@N@@d you with her song...@@N
-~
+
+~
 ~
 45105153 26876 -1000 S
 158 2
@@ -4549,7 +4279,8 @@ L 0 0 0 0 0 0 0 0 0
 Crimson Crusader~
 @@dThe @@mCrimson @@lCrusader@@N~
 @@mThe crusader of the @@dm@@mi@@ps@@gt@@m patrols for the undead..@@N
-~
+
+~
 ~
 50530333 1698558 1000 S
 144 1
@@ -4576,7 +4307,8 @@ L 0 0 0 0 0 0 0 0 0
 crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
-~
+
+~
 ~
 33554433 548992 0 S
 144 0
@@ -4590,7 +4322,8 @@ L 0 0 0 0 0 0 0 0 0
 crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
-~
+
+~
 ~
 33554433 548992 0 S
 151 0
@@ -4604,7 +4337,8 @@ L 0 0 0 0 0 0 0 0 0
 crimson dark shadow~
 @@dA Crimson Shadow@@N~
 @@mA @@ddark shadow's eyes@@m keep a careful watch on you..@@N
-~
+
+~
 ~
 33554433 548992 0 S
 147 0
@@ -4618,7 +4352,8 @@ L 0 0 0 0 0 0 0 0 0
 pure crimson evil~
 @@dPure @@mCrimson @@REvil@@N~
 @@dThe @@Revil@@d of the tower wanders these halls...@@N
-~
+
+~
 ~
 16908297 24808 -1000 S
 154 1
@@ -4632,7 +4367,8 @@ L 0 0 0 0 0 0 0 0 0
 evil~
 @@dPure @@mCrimson @@REvil@@N~
 @@dThe @@Revil@@d of the tower wanders these halls...@@N
-~
+
+~
 ~
 50462729 24808 -1000 S
 151 1
@@ -4646,7 +4382,8 @@ L 0 0 0 0 0 0 0 0 0
 evil~
 @@dPure @@mCrimson @@REvil@@N~
 @@dThe @@Revil@@d of the tower wanders these halls...@@N
-~
+
+~
 ~
 50462729 24808 -1000 S
 156 1
@@ -4660,7 +4397,8 @@ L 0 0 0 0 0 0 0 0 0
 nightmare~
 @@dNig@@mhtm@@pare@@N~
 @@dA large stallion with hooves of purple flame...@@N
-~
+
+~
 ~
 167903257 576234 -1000 S
 149 1
@@ -4674,7 +4412,8 @@ L 0 0 0 0 0 0 0 0 0
 paladin~
 @@BPaladin @@lof @@aLucrezia@@N~
 @@dThe wandering paladin travels through here..@@N
-~
+
+~
 ~
 33685513 1075964 1000 S
 149 2
@@ -4688,7 +4427,8 @@ L 0 0 0 0 0 0 0 0 0
 Lord Dark~
 @@mJuzam@@p, @@dLord of the Tower@@N~
 @@dThe dark lord of the tower rests in his throne..@@N
-~
+
+~
 ~
 36700179 551144 -1000 S
 154 1
@@ -4702,11 +4442,15 @@ L 0 0 0 0 0 0 0 0 0
 Guard guardian mist crimson~
 @@dCrimson @@mMist @@pGuard@@N~
 @@dA G@@mu@@pard @@do@@mf @@dT@@mh@@pe @@dC@@mr@@pimson @@dM@@mi@@pst@@N
-~
+
+~
 A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
-orbiting slowly around and around his tall, muscular body. His stare could
-@@ppierce@@N into the very depths of your soul..@@N
-~
+
+orbiting slowly around and around his tall, muscular body. His stare could
+
+@@ppierce@@N into the very depths of your soul..@@N
+
+~
 36765723 18664 0 S
 146 1
 0 0 0 0
@@ -4719,11 +4463,15 @@ L 0 0 0 0 0 0 0 0 0
 Guard guardian mist crimson~
 @@dCrimson @@mMist @@pGuard@@N~
 @@dA G@@mu@@pard @@do@@mf @@dT@@mh@@pe @@dC@@mr@@pimson @@dM@@mi@@pst@@N
-~
+
+~
 A large, large man stands here, with a small trail of a deep @@mviolet@@N fog
-orbiting slowly around and around his tall, muscular body. His stare could
-@@ppierce@@N into the very depths of your soul..@@N
-~
+
+orbiting slowly around and around his tall, muscular body. His stare could
+
+@@ppierce@@N into the very depths of your soul..@@N
+
+~
 3211291 18664 0 S
 148 1
 0 0 0 0
@@ -4736,7 +4484,8 @@ L 0 0 0 0 0 0 0 0 0
 necromancer mage crimson~
 @@mCrimson @@dNecromancer@@N~
 @@dA necromancer of the m@@my@@ps@@gt@@d wanders here, chanting spells..@@N
-~
+
+~
 ~
 33554449 24768 0 S
 157 1
@@ -4750,7 +4499,8 @@ L 0 0 0 0 0 0 0 0 0
 necromancer mage crimson~
 @@mCrimson @@dNecromancer@@N~
 @@dA necromancer of the m@@my@@ps@@gt@@d wanders here, chanting spells..@@N
-~
+
+~
 ~
 33554449 16576 0 S
 151 1
@@ -4764,7 +4514,8 @@ L 0 0 0 0 0 0 0 0 0
 necromancer mage crimson~
 @@mCrimson @@dNecromancer@@N~
 @@dA necromancer of the m@@my@@ps@@gt@@d wanders here, chanting spells..@@N
-~
+
+~
 ~
 33554449 16576 0 S
 150 1
@@ -4778,7 +4529,8 @@ L 0 0 0 0 0 0 0 0 0
 crimson slave~
 @@dA @@mCrimson @@dSlave@@N~
 @@dA small human banished to serve the m@@mi@@ps@@gt@@d...@@N
-~
+
+~
 ~
 1 542912 0 S
 155 1
@@ -4792,7 +4544,8 @@ L 0 0 0 0 0 0 0 0 0
 crimson slave~
 @@dA @@mCrimson @@dSlave@@N~
 @@dA small human banished to serve the m@@mi@@ps@@gt@@d...@@N
-~
+
+~
 ~
 1 542912 0 S
 152 1
@@ -4806,7 +4559,8 @@ L 0 0 0 0 0 0 0 0 0
 crimson slave~
 @@dA @@mCrimson @@dSlave@@N~
 @@dA small human banished to serve the m@@mi@@ps@@gt@@d...@@N
-~
+
+~
 ~
 1 542912 0 S
 149 1
@@ -4820,7 +4574,8 @@ L 0 0 0 0 0 0 0 0 0
 thief~
 @@dA @@mCrimson @@dThief@@N~
 @@dThe thief trapped inside the tower tries to steal your gold..@@N
-~
+
+~
 ~
 196633 26856 0 S
 155 1
@@ -4834,7 +4589,8 @@ L 0 0 0 0 0 0 0 0 0
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
-~
+
+~
 ~
 65539 16616 0 S
 146 1
@@ -4848,7 +4604,8 @@ L 0 0 0 0 0 0 0 0 0
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
-~
+
+~
 ~
 65539 16616 0 S
 150 1
@@ -4862,7 +4619,8 @@ L 0 0 0 0 0 0 0 0 0
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
-~
+
+~
 ~
 33619971 16616 0 S
 152 1
@@ -4876,7 +4634,8 @@ L 0 0 0 0 0 0 0 0 0
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
-~
+
+~
 ~
 33619971 16616 0 S
 152 1
@@ -4890,7 +4649,8 @@ L 0 0 0 0 0 0 0 0 0
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
-~
+
+~
 ~
 33619971 16616 0 S
 136 1
@@ -4904,7 +4664,8 @@ L 0 0 0 0 0 0 0 0 0
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
-~
+
+~
 ~
 33619971 16616 0 S
 156 1
@@ -4918,7 +4679,8 @@ L 0 0 0 0 0 0 0 0 0
 head~
 @@mThe @@dHead @@mof the @@dHydra@@N~
 @@mThe head a hydra is here glaring at you..@@N
-~
+
+~
 ~
 65539 16616 0 S
 150 1
@@ -5080,8 +4842,9 @@ L
 s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
-~
-14 66561 0 1
+
+~
+14 66560 8388608 1
 9 3 0 0 0 0 0 0 0 0
 4
 L
@@ -5090,8 +4853,9 @@ L
 s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
-~
-14 65537 0 1
+
+~
+14 65536 8388608 1
 9 3 0 0 0 0 0 0 0 0
 4
 L
@@ -5100,8 +4864,9 @@ L
 s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
-~
-14 65537 0 1
+
+~
+14 65536 8388608 1
 9 3 0 0 0 0 0 0 0 0
 4
 L
@@ -5110,8 +4875,9 @@ L
 s\atue figurine~
 @@mA @@dC@@mr@@pi@@Wm@@gs@@po@@mn @@dS@@Wt@@gat@@Wu@@de@@N~
 @@mA @@dstatue@@m of a horrific @@db@@me@@past@@m lies here in the dirt..@@N
-~
-14 65537 0 1
+
+~
+14 65536 8388608 1
 9 0 0 0 0 0 0 0 0 0
 4
 L
@@ -5474,7 +5240,7 @@ L
 window~
 @@yThe Golden Window@@N~
 ~
-14 1 0 1
+14 0 8388608 1
 9 0 8370 0 0 0 0 0 0 0
 4
 L

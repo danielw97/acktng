@@ -22,195 +22,124 @@ more than you can bear. @@GSlime @@dcovers the walls, the floor, even the
 ceiling, and tracks can be seen wandering off into the darkness.@@N
 
 ~
+16396 11
+D0
+@@dAhead lies a narrow corridor, gloomy in it's darkness.  You think you
 
 glance a few gleaming @@Reyes@@d just above floor level far ahead.@@N
 
 ~
 ~
+1 -1 5101
+D4
+~
+~
+0 0 16030
+E
+slime~
+@@dFresher than before this @@GSlime @@dseems almost alive, as the light
 
 glimmers evilly off of the wet surfaces.@@N
 
 ~
+E
+tracks~
+@@bThe tracks also seem more fresh, and not only include the 3-toed marks
 
 spread widely apart, but also several tracks that have a long, straight
 
 depression between the alternating humanoid footsteps.@@N
 
 ~
+S
+#5101
+@@dA dark corridor@@N~
+@@dPuddles of @@GSlime @@dlie scattered about, staining the marble of the
 
 floor.  Not much can be seen around you as the darkness cloaks you.@@N
 
 ~
+9 11
+D0
 ~
+~
+0 -1 5102
+D2
+@@dPeering through the gloom, you see the bottom of an old marble staircase
 
 @@N
 
 ~
 ~
-~
-
-~
-
-floor.  Not much can be seen around you as the darkness cloaks you.@@N
-
-~
-
-floor.  Not much can be seen around you as the darkness cloaks you.@@N
-
-~
-
-floor.  Not much can be seen around you as the darkness cloaks you.@@N
-
+1 -1 5100
+D5
 ~
 ~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-~
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-~
-S
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
-
-~
-~
-
-You cannot see the walls, or even begin to suspect there are any. Left to
-
-themselves for so long, the denizens of this chamber have made it more
-
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-
-about.@@N
+0 0 66
+E
+slime~
+@@dMore large puddles of @@Gslime@@d lie about on the marble.@@N
 
 ~
 S
+#5102
+@@dA dark corridor@@N~
+@@dPuddles of @@GSlime @@dlie scattered about, staining the marble of the
+
+floor.  Not much can be seen around you as the darkness cloaks you.@@N
+
+~
+9 11
+D1
+~
+~
+0 -1 5103
+D2
+~
+~
+0 -1 5101
+D3
+~
+~
+0 -1 5104
+S
+#5103
+@@dA dark corridor@@N~
+@@dPuddles of @@GSlime @@dlie scattered about, staining the marble of the
+
+floor.  Not much can be seen around you as the darkness cloaks you.@@N
+
+~
+9 11
+D0
+~
+~
+0 -1 5115
+D3
+~
+~
+0 -1 5102
+S
+#5104
+@@dA dark corridor@@N~
+@@dPuddles of @@GSlime @@dlie scattered about, staining the marble of the
+
+floor.  Not much can be seen around you as the darkness cloaks you.@@N
+
+~
+9 11
+D0
+~
+~
+0 -1 5105
+D1
+~
+~
+0 -1 5102
+S
+#5105
+@@dThe Vast Darkness@@N~
+@@dIn every direction the humid expanse of darkness weighs upon this chamber.
 
 You cannot see the walls, or even begin to suspect there are any. Left to
 
@@ -221,6 +150,19 @@ habitable--pools of @@Gslime@@d literally envelop your feet as you meander
 about.@@N
 
 ~
+13 11
+D0
+~
+~
+0 -1 5106
+D2
+~
+~
+0 -1 5104
+S
+#5106
+@@dThe Vast Darkness@@N~
+@@dIn every direction the humid expanse of darkness weighs upon this chamber.
 
 You cannot see the walls, or even begin to suspect there are any. Left to
 
@@ -231,149 +173,38 @@ habitable--pools of @@Gslime@@d literally envelop your feet as you meander
 about.@@N
 
 ~
-~
-
-keeping this area dry. Shadows hide most of the details of the furthest wall,
-
-but it seems uninteresting, just like the rest of this bleak chamber. @@N
-
+9 11
+D0
 ~
 ~
-
-~
-
-~
-
-~
-
-low moaning draw your attention, from somewhere off to the north.@@N
-
-~
-
-@@mAsylum@@d seems to be in more use.  It is cleaner, with less dust than what
-
-you have seen previously, and give you an overall impression of recent
-
-occupancy.@@N
-
-~
-
-~
-
-small bed, covered in @@bdust@@d lies in one corner, and an ancient wooden
-
-closet fills another.@@N
-
-@@bDust @@dalso covers the floors, but not in the same amount as elsewhere throught the @@mAsylum@@N.
-
+0 -1 5119
+D2
 ~
 ~
-
-and also towards the door.@@N
-
-~
-
-inside..and you can't really make out the back wall.@@N
-
-~
-
-~
-
-Obviously, the abandoned nature of the subterranean depths of the @@mAsylum@@W
-
-was misleading.@@N
-
-~
-
-very specific reason.@@N
-
-~
-
-you, covered in @@Rstains@@W, and you immediately notice the very large
-
-@@bstraps@@W attatched to the sides.  Several dozen implements line the walls,
-
-ranging from small scalpels to a large device that appears designed to
-
-seperate skull plates.
-
-~
-
-appears to have lost a LOT of @@eblood@@N.
-
-~
-
-it from the wall.  Suddenly, a LOUD SHRIEK is heard behind you!! Spinning
-
-about, you now notice a secret trapdoor in the floor!
-
-~
-
-in the throes of extreme insanity, or @@Rpain@@b.@@N
-
-~
-
-~
-
-strapped to it makes it obvious.  Flayed from within it seems, the body cavity
-
-is obviously a disaster, organs seemingly dissolved in acid, lungs way too
-
-small for the rest of the body, and a strange 5 chambered heart perched above
-
-them. The most unusual aspect of the corpse, however, is the appearance of
-
-gills that have been grafted on the neck, and the greenish color of the skin.
-
-Even worse are the bulging eyes, seemingly ready to explode from within
-
-the sockets.
-
-~
-
-~
-
-are held prior to experimentation.@@N
-
+0 -1 5105
+D3
 ~
 ~
+0 -1 5107
+S
+#5107
+@@dThe Vast Darkness@@N~
+@@dIn every direction the humid expanse of darkness weighs upon this chamber.
 
-is immaculate, and in fact appears untouched by human hands.
+You cannot see the walls, or even begin to suspect there are any. Left to
 
-~
+themselves for so long, the denizens of this chamber have made it more
 
-west.@@N
-
-~
-
-~
-
-The body is frog-like, appearing poised to leap at any moment, and the splayed feet end in three appendages.@@N
-
-~
-
-~
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
 
 about.@@N
 
 ~
-
-
-~
-
-@@N
-
+9 11
+D1
 ~
 ~
-
- @@Rexperiments@@d.@@N
-
-~
-~
-
-~
-
-~
+0 -1 5106
 D2
 ~
 ~
@@ -386,11 +217,16 @@ S
 #5108
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -408,11 +244,16 @@ S
 #5109
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -430,11 +271,16 @@ S
 #5110
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D1
 ~
@@ -452,11 +298,16 @@ S
 #5111
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -474,11 +325,16 @@ S
 #5112
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D1
 ~
@@ -492,11 +348,16 @@ S
 #5113
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -514,11 +375,16 @@ S
 #5114
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -536,11 +402,16 @@ S
 #5115
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 13 11
 D0
 ~
@@ -558,11 +429,16 @@ S
 #5116
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -580,11 +456,16 @@ S
 #5117
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D2
 ~
@@ -598,11 +479,16 @@ S
 #5118
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -620,11 +506,16 @@ S
 #5119
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D0
 ~
@@ -638,11 +529,16 @@ S
 #5120
 @@dThe Vast Darkness@@N~
 @@dIn every direction the humid expanse of darkness weighs upon this chamber.
-You cannot see the walls, or even begin to suspect there are any. Left to
-themselves for so long, the denizens of this chamber have made it more
-habitable--pools of @@Gslime@@d literally envelop your feet as you meander
-about.@@N
-~
+
+You cannot see the walls, or even begin to suspect there are any. Left to
+
+themselves for so long, the denizens of this chamber have made it more
+
+habitable--pools of @@Gslime@@d literally envelop your feet as you meander
+
+about.@@N
+
+~
 9 11
 D1
 ~
@@ -656,9 +552,12 @@ S
 #5121
 @@dA Small Alcove@@N~
 @@dThe @@Gslime @@dis non-existent here, as if someone or something has been
-keeping this area dry. Shadows hide most of the details of the furthest wall,
-but it seems uninteresting, just like the rest of this bleak chamber. @@N
-~
+
+keeping this area dry. Shadows hide most of the details of the furthest wall,
+
+but it seems uninteresting, just like the rest of this bleak chamber. @@N
+
+~
 13 11
 D0
 ~
@@ -671,21 +570,26 @@ D2
 E
 shadows~
 @@dPeering deeper into the shadows, you notice a small tunnel.@@N
-~
+
+~
 E
 slime~
 What slime???@@N
-~
+
+~
 E
 wall~
 The furthest wall is hidden by the shadows.@@N
-~
+
+~
 S
 #5122
 @@dAnother Corridor@@N~
 @@dA small chamber branches off from the alcove to the south.  The sounds of
-low moaning draw your attention, from somewhere off to the north.@@N
-~
+
+low moaning draw your attention, from somewhere off to the north.@@N
+
+~
 13 11
 D0
 ~
@@ -699,10 +603,14 @@ S
 #5123
 @@dAnother Corridor@@N~
 @@dThe darkness seems to have lifted, and you notice that this section of the
-@@mAsylum@@d seems to be in more use.  It is cleaner, with less dust than what
-you have seen previously, and give you an overall impression of recent
-occupancy.@@N
-~
+
+@@mAsylum@@d seems to be in more use.  It is cleaner, with less dust than what
+
+you have seen previously, and give you an overall impression of recent
+
+occupancy.@@N
+
+~
 8 11
 D1
 ~
@@ -715,15 +623,20 @@ D2
 E
 asylum~
 You peer about the walls around you..yup, you're in the @@mAsylum@@N!!
-~
+
+~
 S
 #5124
 @@dAn Unused Room@@N~
 @@dThis small room seems to have once been appointed as a sleeping chamber.  A
-small bed, covered in @@bdust@@d lies in one corner, and an ancient wooden
-closet fills another.@@N
-@@bDust @@dalso covers the floors, but not in the same amount as elsewhere throught the @@mAsylum@@N.
-~
+
+small bed, covered in @@bdust@@d lies in one corner, and an ancient wooden
+
+closet fills another.@@N
+
+@@bDust @@dalso covers the floors, but not in the same amount as elsewhere throught the @@mAsylum@@N.
+
+~
 13 11
 D0
 ~
@@ -736,24 +649,32 @@ D3
 E
 dust~
 Tracks in the dust of a normal sized human lead from the bed to the closet,
-and also towards the door.@@N
-~
+
+and also towards the door.@@N
+
+~
 E
 closet~
 Peering into the darkened closet, you notice that it seems larger on the
-inside..and you can't really make out the back wall.@@N
-~
+
+inside..and you can't really make out the back wall.@@N
+
+~
 E
 bed~
 Tidily made up, it does show signs of recent use.
-~
+
+~
 S
 #5125
 @@WThe @@yBright @@WCorridor@@N~
 @@WThe bright lights here momentarily blind you, after hours of @@ddarkness@@W.
-Obviously, the abandoned nature of the subterranean depths of the @@mAsylum@@W
-was misleading.@@N
-~
+
+Obviously, the abandoned nature of the subterranean depths of the @@mAsylum@@W
+
+was misleading.@@N
+
+~
 8 11
 D0
 ~
@@ -767,8 +688,10 @@ S
 #5126
 @@WThe @@yBright @@WCorridor@@N~
 @@WThe corridor is completely clean, and obviously maintained that way for a
-very specific reason.@@N
-~
+
+very specific reason.@@N
+
+~
 8 11
 D0
 ~
@@ -790,11 +713,16 @@ S
 #5127
 @@WAn @@lExperimentation @@WChamber@@N~
 @@WIt becomes apparent why this section is kept clean.  A gurney stands before
-you, covered in @@Rstains@@W, and you immediately notice the very large
-@@bstraps@@W attatched to the sides.  Several dozen implements line the walls,
-ranging from small scalpels to a large device that appears designed to
-seperate skull plates.
-~
+
+you, covered in @@Rstains@@W, and you immediately notice the very large
+
+@@bstraps@@W attatched to the sides.  Several dozen implements line the walls,
+
+ranging from small scalpels to a large device that appears designed to
+
+seperate skull plates.
+
+~
 0 11
 D3
 ~
@@ -807,24 +735,32 @@ trapdoor~
 E
 stains~
 @@WThese stains appear very recent.  Whomever was last strapped to the gurney
-appears to have lost a LOT of @@eblood@@N.
-~
+
+appears to have lost a LOT of @@eblood@@N.
+
+~
 E
 device~
 As you peer closer at the device, your interest piqued, you attempt to remove
-it from the wall.  Suddenly, a LOUD SHRIEK is heard behind you!! Spinning
-about, you now notice a secret trapdoor in the floor!
-~
+
+it from the wall.  Suddenly, a LOUD SHRIEK is heard behind you!! Spinning
+
+about, you now notice a secret trapdoor in the floor!
+
+~
 E
 straps~
 @@bThese straps are extremely strong, obviously capable of restraining anyone
-in the throes of extreme insanity, or @@Rpain@@b.@@N
-~
+
+in the throes of extreme insanity, or @@Rpain@@b.@@N
+
+~
 S
 #5128
 @@WThe Laboratory@@N~
 @@WThis room is immense, and filled with several gurneys, in various states of use.  Some are completely fresh, some are covered in dried @@Rstains@@W, and some seem rather recently used, judging by the @@eblood@@W on them.@@N
-~
+
+~
 8 11
 D0
 ~
@@ -846,14 +782,22 @@ S
 #5129
 The Laboratory~
 @@WThis gurney seems the most recently used..actually, the fresh corpse
-strapped to it makes it obvious.  Flayed from within it seems, the body cavity
-is obviously a disaster, organs seemingly dissolved in acid, lungs way too
-small for the rest of the body, and a strange 5 chambered heart perched above
-them. The most unusual aspect of the corpse, however, is the appearance of
-gills that have been grafted on the neck, and the greenish color of the skin.
-Even worse are the bulging eyes, seemingly ready to explode from within
-the sockets.
-~
+
+strapped to it makes it obvious.  Flayed from within it seems, the body cavity
+
+is obviously a disaster, organs seemingly dissolved in acid, lungs way too
+
+small for the rest of the body, and a strange 5 chambered heart perched above
+
+them. The most unusual aspect of the corpse, however, is the appearance of
+
+gills that have been grafted on the neck, and the greenish color of the skin.
+
+Even worse are the bulging eyes, seemingly ready to explode from within
+
+the sockets.
+
+~
 8 11
 D2
 ~
@@ -863,7 +807,8 @@ S
 #5130
 The Storage Room~
 @@WHundreds of specimen jars line the walls of this small chamber, filled with various body parts.  While most appear humanoid, the strange shape of a few of the limbs and specimens appear almost @@Gamphibian@@W. 
-~
+
+~
 8 11
 D1
 ~
@@ -873,8 +818,10 @@ S
 #5132
 @@WThe Preperation Room@@N~
 @@dChains@@W on the walls make it obvious that this is where the poor victims
-are held prior to experimentation.@@N
-~
+
+are held prior to experimentation.@@N
+
+~
 8 11
 D3
 ~
@@ -884,8 +831,10 @@ S
 #5131
 @@WA Small Office@@N~
 @@WThis@@N office is unoccupied at the moment, but appears recently used. The desk
-is immaculate, and in fact appears untouched by human hands.
-~
+
+is immaculate, and in fact appears untouched by human hands.
+
+~
 0 11
 D4
 ~
@@ -895,8 +844,10 @@ S
 #5133
 @@WThe @@yBright @@WCorridor@@N~
 @@WThe corridor here grows a little darker than before, even more dark to the
-west.@@N
-~
+
+west.@@N
+
+~
 8 11
 D1
 ~
@@ -910,7 +861,8 @@ S
 #5134
 @@NThe @@dDarkened Corridor@@N~
 @@gThe gloomy feeling you had earlier overcomes your senses once again, and you suddenly yearn for escape from this evil place.
-~
+
+~
 12 11
 D1
 ~
@@ -924,8 +876,10 @@ S
 #5135
 @@dAltar of the @@GUnknown@@N~
 @@dDriving fear into your soul, a @@Rterrifying @@dsculpture overwhelms you.  A veritable monstrosity, the thing before you is both strangely humanoid, and fiendishly @@Gamphibian@@d.  @@GSlimy@@d flesh covers monstrous limbs, perverted features of a tortured soul fixate your thoughts as you glance at the human skull.
-The body is frog-like, appearing poised to leap at any moment, and the splayed feet end in three appendages.@@N
-~
+
+The body is frog-like, appearing poised to leap at any moment, and the splayed feet end in three appendages.@@N
+
+~
 9 11
 D1
 ~
@@ -941,7 +895,8 @@ S
 guardian~
 @@dAn @@mAsylum @@dGuardian@@N~
 @@dAn @@mAsylum @@dGuardian oversees security.@@N
-~
+
+~
 ~
 3145849 680 0 S
 130 1
@@ -955,8 +910,10 @@ L 0 0 0 0 0 0 0 0 0
 thing~
 @@dA @@Rhideous @@Gamphibious@@d @@dthing@@N~
 @@dA corrupted thing formed from an @@Gamphibian @@dmelded with a human hops
-about.@@N
-~
+
+about.@@N
+
+~
 ~
 3145753 680 0 S
 135 1
@@ -971,7 +928,8 @@ thing~
 @@dAn oversized @@Gfrog-like @@dthing@@N~
 @@dAn oversized @@Gfrog@@d, strangely appearing humanoid, hops towards you.@@N
 
-~
+
+~
 ~
 3407929 680 0 S
 132 1
@@ -985,8 +943,10 @@ L 0 0 0 0 0 0 0 0 0
 frog~
 @@dA huge @@Rdemonic @@GFrog@@N~
 @@dThe @@Rdemonic @@dform of a human melded with a @@GFrog@@d glares at you
-@@N
-~
+
+@@N
+
+~
 ~
 3162137 68266 0 S
 137 1
@@ -1000,8 +960,10 @@ L 0 0 0 0 0 0 0 0 0
 administrator~
 @@DThe @@mAsylum @@RAdministrator@@N~
 @@dA tiny man, looking rather harmless wanders about, observing the @@mAsylum
- @@Rexperiments@@d.@@N
-~
+
+ @@Rexperiments@@d.@@N
+
+~
 ~
 53493777 68266 0 S
 138 1
@@ -1015,7 +977,8 @@ L 0 0 0 0 0 0 0 0 0
 monstrosity~
 @@dA @@RDemonic @@dMonstrosity@@N~
 @@dA monstrosity from the depths of @@Rcorruption @@dstands before you!!!@@N
-~
+
+~
 ~
 36716593 68266 0 S
 134 1
@@ -1031,7 +994,8 @@ L 0 0 0 0 0 0 0 0 0
 key~
 @@dAn @@mAsylum @@dkey@@N~
 @@WA small figurine in the shape of a @@edemonic @@Gfrog@@W lies here.@@N
-~
+
+~
 18 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 4
@@ -1041,7 +1005,7 @@ L
 ^altar~
 @@dAltar of the @@GUnknown@@N~
 ~
-14 65536 0 1
+14 65536 8388608 1
 9 3 5105 0 0 0 0 0 0 0
 13
 E

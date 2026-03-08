@@ -1104,165 +1104,94 @@ a grave shepherd~
 A grave shepherd counts graves between the dead rows here.
 
 ~
+This gaunt herdsman carries a hooked crook and mutters numbers that never reset.
 
 ~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
+167772257 512 -500 S
+17 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
+l 100 15 17 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30176
+barrow reaper~
+a barrow reaper~
+A barrow reaper hones a rust-pitted blade in silence.
 
 ~
+Funeral linen hangs from the reaper's armor, soaked with mist and old blood.
 
 ~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
+167772257 512 -500 S
+18 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
+l 100 16 18 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30177
+thorn vicar~
+a thorn vicar~
+A thorn vicar recites a bitter litany to the hedges.
 
 ~
+Black rosaries coil around their wrists while thorn-vines twitch in answer.
 
 ~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
+167772257 512 -500 S
+19 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
+l 100 17 19 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30178
+sepulcher outrider~
+a sepulcher outrider~
+A sepulcher outrider patrols with measured, relentless strides.
 
 ~
+A rider's saddle is strapped to their back though no horse remains alive to carry it.
 
 ~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
+167772257 512 -500 S
+20 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
+l 100 18 20 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30179
+mire cantor~
+a mire cantor~
+A mire cantor intones a low dirge over the standing water.
 
 ~
+Mud cakes their vestments, but silver sigils still gleam through the filth.
 
 ~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
+167772257 512 -500 S
+21 0
+0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
+l 100 19 21 0 0 0 0 0 0 0 
+L 40 40 20 0 0 0 0 0 0 
+#30180
+gravebound pikeman~
+a gravebound pikeman~
+A gravebound pikeman bars this lane with a corroded polearm.
 
 ~
 His pike hums softly, hungry for trespass and confession alike.
-~
+
+~
 167772257 512 -500 S
 22 0
 0 0 0 0
@@ -1275,9 +1204,11 @@ L 40 40 20 0 0 0 0 0 0
 ossuary falconer~
 an ossuary falconer~
 An ossuary falconer waits beneath a hood with a bone hawk.
-~
+
+~
 The hawk's eye sockets burn violet whenever strangers draw near.
-~
+
+~
 167772257 512 -500 S
 23 0
 0 0 0 0
@@ -1290,9 +1221,11 @@ L 40 40 20 0 0 0 0 0 0
 charnel lay sister~
 a charnel lay sister~
 A charnel lay sister harvests corpse-lilies with careful hands.
-~
+
+~
 She clips pale petals into a satchel packed with wax and prayer bones.
-~
+
+~
 167772257 512 -500 S
 24 0
 0 0 0 0
@@ -1305,9 +1238,11 @@ L 40 40 20 0 0 0 0 0 0
 blacksoil warden~
 a blacksoil warden~
 A blacksoil warden drags a shield through the mire.
-~
+
+~
 Every step leaves a trench filled with oily water and drifting ash.
-~
+
+~
 167772257 512 -500 S
 25 0
 0 0 0 0
@@ -1320,9 +1255,11 @@ L 40 40 20 0 0 0 0 0 0
 dirge-thorn knight~
 a dirge-thorn knight~
 A dirge-thorn knight kneels in painful vigil.
-~
+
+~
 Thorned plate bites into their flesh, feeding on old vows and newer sins.
-~
+
+~
 167772257 512 -500 S
 26 0
 0 0 0 0
@@ -1335,9 +1272,11 @@ L 40 40 20 0 0 0 0 0 0
 dread tithe collector~
 a dread tithe collector~
 A dread tithe collector rattles chained ledgers as you approach.
-~
+
+~
 Wax-sealed tablets hang from their belt, each marked with a debtor's last prayer.
-~
+
+~
 167772257 512 -500 S
 27 0
 0 0 0 0
@@ -1350,9 +1289,11 @@ L 40 40 20 0 0 0 0 0 0
 gallows shepherd~
 a gallows shepherd~
 A gallows shepherd guides unseen livestock through dead wheat.
-~
+
+~
 Invisible shapes jostle around him, leaving fresh hoofprints in stale mud.
-~
+
+~
 167772257 512 -500 S
 28 0
 0 0 0 0
@@ -1365,9 +1306,11 @@ L 40 40 20 0 0 0 0 0 0
 ravenmask harrier~
 a ravenmask harrier~
 A ravenmask harrier circles with predatory patience.
-~
+
+~
 Its lacquered beak-mask hides a grin that never seems to close.
-~
+
+~
 167772257 512 -500 S
 29 0
 0 0 0 0
@@ -1380,9 +1323,11 @@ L 40 40 20 0 0 0 0 0 0
 sepulcher dragoon~
 a sepulcher dragoon~
 A sepulcher dragoon stands rigid beside a weathered marker.
-~
+
+~
 Rain slides from their cuirass in lines like black tears.
-~
+
+~
 167772257 512 -500 S
 30 0
 0 0 0 0
@@ -1395,9 +1340,11 @@ L 40 40 20 0 0 0 0 0 0
 hallowfield executor~
 a hallowfield executor~
 A hallowfield executor tests the edge of a broad axe.
-~
+
+~
 Pale script on the blade lists names erased from parish memory.
-~
+
+~
 167772257 512 -500 S
 31 0
 0 0 0 0
@@ -1410,9 +1357,11 @@ L 40 40 20 0 0 0 0 0 0
 grave-lantern novice~
 a grave-lantern novice~
 A grave-lantern novice trims a wavering violet flame.
-~
+
+~
 The lantern glass is fused from skull shards and weeps warm light.
-~
+
+~
 167772257 512 -500 S
 32 0
 0 0 0 0
@@ -1425,9 +1374,11 @@ L 40 40 20 0 0 0 0 0 0
 fallow inquisitor~
 a fallow inquisitor~
 A fallow inquisitor watches you from beneath a stitched hood.
-~
+
+~
 Needles and prayer nails clink softly against their chain shirt.
-~
+
+~
 167772257 512 -500 S
 17 0
 0 0 0 0
@@ -1440,9 +1391,11 @@ L 40 40 20 0 0 0 0 0 0
 boneflail penitents~
 a boneflail penitent~
 A boneflail penitent lashes the air in ritual rhythm.
-~
+
+~
 Every stroke of the flail throws off dust that smells faintly of myrrh.
-~
+
+~
 167772257 512 -500 S
 18 0
 0 0 0 0
@@ -1455,9 +1408,11 @@ L 40 40 20 0 0 0 0 0 0
 crypt houndmaster~
 a crypt houndmaster~
 A crypt houndmaster whistles for beasts that never appear.
-~
+
+~
 His gauntlet is scarred by teeth marks too large for any living hound.
-~
+
+~
 167772257 512 -500 S
 19 0
 0 0 0 0
@@ -1470,9 +1425,11 @@ L 40 40 20 0 0 0 0 0 0
 veilbound archer~
 a veilbound archer~
 A veilbound archer keeps an arrow nocked in silence.
-~
+
+~
 Black fletching drinks the lanternlight before your eyes can follow it.
-~
+
+~
 167772257 512 -500 S
 20 0
 0 0 0 0
@@ -1485,9 +1442,11 @@ L 40 40 20 0 0 0 0 0 0
 mourning templar~
 a mourning templar~
 A mourning templar plants a tower shield in the mud.
-~
+
+~
 Saintly skulls embossed on the shield seem to grin when bells toll.
-~
+
+~
 167772257 512 -500 S
 21 0
 0 0 0 0
@@ -1500,9 +1459,11 @@ L 40 40 20 0 0 0 0 0 0
 rosary breaker~
 a rosary breaker~
 A rosary breaker fingers cracked beads with bloody thumbs.
-~
+
+~
 He murmurs one absolution for every threat and none for himself.
-~
+
+~
 167772257 512 -500 S
 22 0
 0 0 0 0
@@ -1515,9 +1476,11 @@ L 40 40 20 0 0 0 0 0 0
 sepulcher standard-bearer~
 a sepulcher standard-bearer~
 A sepulcher standard-bearer braces a tattered black banner.
-~
+
+~
 The banner cloth is woven with horsehair and grave-soaked wool.
-~
+
+~
 167772257 512 -500 S
 23 0
 0 0 0 0
@@ -1530,9 +1493,11 @@ L 40 40 20 0 0 0 0 0 0
 wheatshade stalker~
 a wheatshade stalker~
 A wheatshade stalker slips between rows of dead grain.
-~
+
+~
 Only the glint of a narrow knife gives away their position.
-~
+
+~
 167772257 512 -500 S
 24 0
 0 0 0 0
@@ -1545,9 +1510,11 @@ L 40 40 20 0 0 0 0 0 0
 barrow chanter~
 a barrow chanter~
 A barrow chanter recites litanies in a cracked voice.
-~
+
+~
 Each syllable stirs the mist into shapes that bow and fade.
-~
+
+~
 167772257 512 -500 S
 25 0
 0 0 0 0
@@ -1560,9 +1527,11 @@ L 40 40 20 0 0 0 0 0 0
 censer marshal~
 a censer marshal~
 A censer marshal swings a smoking iron censer.
-~
+
+~
 The incense reeks of pitch, bitter herbs, and old burial cloth.
-~
+
+~
 167772257 512 -500 S
 26 0
 0 0 0 0
@@ -1575,9 +1544,11 @@ L 40 40 20 0 0 0 0 0 0
 grave oathbreaker~
 a grave oathbreaker~
 A grave oathbreaker hefts a dented mace in both hands.
-~
+
+~
 Vow-cords still bind his wrists, though most have been chewed through.
-~
+
+~
 167772257 512 -500 S
 27 0
 0 0 0 0
@@ -1590,9 +1561,11 @@ L 40 40 20 0 0 0 0 0 0
 mire rosarist~
 a mire rosarist~
 A mire rosarist kneels in water black as ink.
-~
+
+~
 She strings fresh beads from knucklebones and whisper-thin wire.
-~
+
+~
 167772257 512 -500 S
 28 0
 0 0 0 0
@@ -1605,9 +1578,11 @@ L 40 40 20 0 0 0 0 0 0
 thornfield bailiff~
 a thornfield bailiff~
 A thornfield bailiff patrols with legal writs nailed to a spear.
-~
+
+~
 Each writ is signed in dark wax by abbots long interred nearby.
-~
+
+~
 167772257 512 -500 S
 29 0
 0 0 0 0
@@ -1620,9 +1595,11 @@ L 40 40 20 0 0 0 0 0 0
 ashcrop skirmisher~
 an ashcrop skirmisher~
 An ashcrop skirmisher stalks around broken threshing stones.
-~
+
+~
 Their boots are wrapped in gravecloth to muffle every step.
-~
+
+~
 167772257 512 -500 S
 30 0
 0 0 0 0
@@ -1635,9 +1612,11 @@ L 40 40 20 0 0 0 0 0 0
 nightseed herald~
 a nightseed herald~
 A nightseed herald calls warnings no one heeds.
-~
+
+~
 Her brass trumpet is dented and stuffed with black thistle stems.
-~
+
+~
 167772257 512 -500 S
 31 0
 0 0 0 0
@@ -1650,9 +1629,11 @@ L 40 40 20 0 0 0 0 0 0
 blackwater confessor~
 a blackwater confessor~
 A blackwater confessor offers absolution with a serrated smile.
-~
+
+~
 Ink from his confession book runs like blood across his gloves.
-~
+
+~
 167772257 512 -500 S
 32 0
 0 0 0 0
@@ -1665,9 +1646,11 @@ L 40 40 20 0 0 0 0 0 0
 cairnbound lancer~
 a cairnbound lancer~
 A cairnbound lancer lowers a long spear and squares up.
-~
+
+~
 Cairn dust cakes their armor, and each breath rattles like stone.
-~
+
+~
 167772257 512 -500 S
 17 0
 0 0 0 0
@@ -1680,9 +1663,11 @@ L 40 40 20 0 0 0 0 0 0
 ossified warden~
 an ossified warden~
 An ossified warden keeps this stretch of pasture under harsh watch.
-~
+
+~
 Riveted plates of bone and iron creak with each deliberate movement.
-~
+
+~
 167772257 512 -500 S
 18 0
 0 0 0 0
@@ -1695,9 +1680,11 @@ L 40 40 20 0 0 0 0 0 0
 black shepherd morcant~
 Morcant, the Black Shepherd~
 Morcant, the Black Shepherd stands among the bent standards of the pasture.
-~
+
+~
 Morcant wears a crown of antlers and iron bells; each breath sounds like a crypt door closing.
-~
+
+~
 33554435 512 -500 S
 35 0
 0 0 0 0
@@ -1710,9 +1697,11 @@ L 40 40 20 0 0 0 0 0 0
 abbess of the last furrow elysse~
 Abbess Elysse of the Last Furrow~
 Abbess Elysse of the Last Furrow presides with absolute stillness.
-~
+
+~
 Her vestments are sewn from mourning banners, and her crozier leaks starless radiance into the soil.
-~
+
+~
 33554435 512 -500 S
 35 0
 0 0 0 0
@@ -1727,7 +1716,7 @@ L 40 40 20 0 0 0 0 0 0
 mourning halo~
 @@dMourning Halo@@N~
 @@dMourning Halo@@N rests here.~
-9 134217729 8388610 15
+9 134217728 8388610 15
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1736,7 +1725,7 @@ L
 penumbral aura clasp~
 @@dPenumbral Aura Clasp@@N~
 @@dPenumbral Aura Clasp@@N rests here.~
-9 134217729 8388612 16
+9 134217728 8388612 16
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1745,7 +1734,7 @@ L
 thorn diadem~
 @@dThorn Diadem@@N~
 @@dThorn Diadem@@N rests here.~
-9 134217729 8388624 17
+9 134217728 8388624 17
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -1754,7 +1743,7 @@ L
 graveglass visor~
 @@dGraveglass Visor@@N~
 @@dGraveglass Visor@@N rests here.~
-9 134217729 8388640 18
+9 134217728 8388640 18
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1763,7 +1752,7 @@ L
 ravenbone earring~
 @@dRavenbone Earring@@N~
 @@dRavenbone Earring@@N rests here.~
-9 134217729 8388736 19
+9 134217728 8388736 19
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1772,7 +1761,7 @@ L
 sepulcher prayer chain~
 @@dSepulcher Prayer Chain@@N~
 @@dSepulcher Prayer Chain@@N rests here.~
-9 134217729 8388864 20
+9 134217728 8388864 20
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1781,7 +1770,7 @@ L
 dirge-feather wings~
 @@dDirge-Feather Wings@@N~
 @@dDirge-Feather Wings@@N rests here.~
-9 134217729 8389120 21
+9 134217728 8389120 21
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1790,7 +1779,7 @@ L
 reliquary pauldrons~
 @@dReliquary Pauldrons@@N~
 @@dReliquary Pauldrons@@N rests here.~
-9 134217729 8389632 22
+9 134217728 8389632 22
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1799,7 +1788,7 @@ L
 reaper vambraces~
 @@dReaper Vambraces@@N~
 @@dReaper Vambraces@@N rests here.~
-9 134217729 8390656 23
+9 134217728 8390656 23
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -1808,7 +1797,7 @@ L
 writ-iron wristguard~
 @@dWrit-Iron Wristguard@@N~
 @@dWrit-Iron Wristguard@@N rests here.~
-9 134217729 8392704 24
+9 134217728 8392704 24
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1817,7 +1806,7 @@ L
 gravewool gloves~
 @@dGravewool Gloves@@N~
 @@dGravewool Gloves@@N rests here.~
-9 134217729 8396800 25
+9 134217728 8396800 25
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1826,7 +1815,7 @@ L
 ledger signet~
 @@dLedger Signet@@N~
 @@dLedger Signet@@N rests here.~
-9 134217729 8404992 15
+9 134217728 8404992 15
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1835,7 +1824,7 @@ L
 blackthorn talons~
 @@dBlackthorn Talons@@N~
 @@dBlackthorn Talons@@N rests here.~
-9 134217729 8421376 25
+9 134217728 8421376 25
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -1844,7 +1833,7 @@ L
 lantern of violet wake~
 @@dLantern of Violet Wake@@N~
 @@dLantern of Violet Wake@@N rests here.~
-9 134217729 8454144 22
+9 134217728 8454144 22
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1853,7 +1842,7 @@ L
 mourner cloak~
 @@dMourner Cloak@@N~
 @@dMourner Cloak@@N rests here.~
-9 134217729 8519680 20
+9 134217728 8519680 20
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1862,7 +1851,7 @@ L
 tithe girdle~
 @@dTithe Girdle@@N~
 @@dTithe Girdle@@N rests here.~
-9 134217729 8650752 21
+9 134217728 8650752 21
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1871,7 +1860,7 @@ L
 sepulcher cuirass~
 @@dSepulcher Cuirass@@N~
 @@dSepulcher Cuirass@@N rests here.~
-9 134217729 8912896 24
+9 134217728 8912896 24
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1880,7 +1869,7 @@ L
 barrowtail sash~
 @@dBarrowtail Sash@@N~
 @@dBarrowtail Sash@@N rests here.~
-9 134217729 9437184 19
+9 134217728 9437184 19
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1889,7 +1878,7 @@ L
 gloam tassets~
 @@dGloam Tassets@@N~
 @@dGloam Tassets@@N rests here.~
-9 134217729 10485760 23
+9 134217728 10485760 23
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1898,7 +1887,7 @@ L
 mire sabatons~
 @@dMire Sabatons@@N~
 @@dMire Sabatons@@N rests here.~
-9 134217729 12582912 22
+9 134217728 12582912 22
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1907,7 +1896,7 @@ L
 grim hoofguards~
 @@dGrim Hoofguards@@N~
 @@dGrim Hoofguards@@N rests here.~
-9 134217729 8388608 18
+9 134217728 8388608 18
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1916,7 +1905,7 @@ L
 violet chapel lantern~
 @@dViolet Chapel Lantern@@N~
 @@dViolet Chapel Lantern@@N rests here.~
-9 134217729 8454144 17
+9 134217728 8454144 17
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1925,7 +1914,7 @@ L
 fallow field buckler~
 @@dFallow Field Buckler@@N~
 @@dFallow Field Buckler@@N rests here.~
-9 134217729 8396800 20
+9 134217728 8396800 20
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1934,7 +1923,7 @@ L
 blackgrain faceguard~
 @@dBlackgrain Faceguard@@N~
 @@dBlackgrain Faceguard@@N rests here.~
-9 134217729 8388640 21
+9 134217728 8388640 21
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1943,7 +1932,7 @@ L
 abbess veil of last seed~
 @@dAbbess Veil of Last Seed@@N~
 @@dAbbess Veil of Last Seed@@N rests here.~
-9 134217793 8388640 30
+9 134217792 8388640 30
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1952,7 +1941,7 @@ L
 shepherd crook of black bells~
 @@dShepherd Crook of Black Bells@@N~
 @@dShepherd Crook of Black Bells@@N rests here.~
-9 134217793 8454144 30
+9 134217792 8454144 30
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -1961,7 +1950,7 @@ L
 crown of the unharvested~
 @@dCrown of the Unharvested@@N~
 @@dCrown of the Unharvested@@N rests here.~
-9 134217793 8388624 30
+9 134217792 8388624 30
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1970,7 +1959,7 @@ L
 pasture-bound oathmail~
 @@dPasture-Bound Oathmail@@N~
 @@dPasture-Bound Oathmail@@N rests here.~
-9 134217793 8912896 30
+9 134217792 8912896 30
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -1979,7 +1968,7 @@ L
 vesper wristlet~
 @@dVesper Wristlet@@N~
 @@dVesper Wristlet@@N rests here.~
-9 134217729 8392704 25
+9 134217728 8392704 25
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1988,7 +1977,7 @@ L
 nightsoil warpick~
 @@dNightsoil Warpick@@N~
 @@dNightsoil Warpick@@N rests here.~
-9 134217729 8454144 24
+9 134217728 8454144 24
 0 0 0 0 0 0 0 0 0 0
 8
 L

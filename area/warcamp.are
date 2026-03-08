@@ -16,192 +16,88 @@ W dragonrage~
 #6600
 @@GForest @@dPath@@N~
 @@dAs you walk through the dark @@Gforest@@d you notice several large
-
-@@bstumps@@d around you. The @@Gforest@@d starts to become more and more
-
-sparse. You faintly hear the sounds of hammering and sawing to the north.
-
-~
-
-@@bstumps@@d around you. The @@Gforest@@d starts to become more and more
-
-sparse. You faintly hear the sounds of hammering and sawing to the north.@@N
-
-~
-
-~
-
-~
-
-earthen wall surrounds it inhibiting your view. You hear the crackling of
-
-leaves and the sounds of something grunting coming up behind you.@@N
-
-
+@@bstumps@@d around you. The @@Gforest@@d starts to become more and more
+sparse. You faintly hear the sounds of hammering and sawing to the north.
+~
+221188 3
+D0
 ~
 ~
+0 -1 6601
+D2
 ~
-
-sounds. Could it have been you that could have startled all the creatures?
-
-Perhaps. The @@gpath @@dcontinues to the east.@@N
-
 ~
+0 0 9722
+S
+#6601
 @@GForest @@dPath@@N~
-
-sounds. Could it have been you that could have startled all the creatures?
-
-Perhaps. The @@gpath @@dcontinues to the east.@@N
-
-~
-
-through them you have a strong @@lsense@@d that you shouldnt have done that.
-
-~
-
-~
-
-in growth. @@yLight@@d is barely making it through the canopy high above your
-
-head. Something up ahead catches you eye.@@N
-
+@@dAs you walk through the dark @@Gforest@@d you notice several large
+@@bstumps@@d around you. The @@Gforest@@d starts to become more and more
+sparse. You faintly hear the sounds of hammering and sawing to the north.@@N
+~
+221184 3
+D0
 ~
 ~
+0 -1 6602
+D2
 ~
-
-strange sensation of @@Wprotective @@lmagic@@d in the cave. Perhaps this is a
-
-good place to @@grest@@d, the wrong spot could lead to an ambush of some kind.@@N
-
-@@N
-
 ~
+0 -1 6600
+E
+stump~
+@@WA large @@bstump @@Wlooks like it was recently cut.@@N
+~
+E
+stumps~
+@@WA large @@bstump @@Wlooks like it was recently cut.@@N
+~
+S
+#6602
+@@GForest @@dClearing@@N~
+@@dThe @@Gforest@@d opens up to reveal a large encampment of some kind. An
+earthen wall surrounds it inhibiting your view. You hear the crackling of
+leaves and the sounds of something grunting coming up behind you.@@N
 
-from the encampment's view of you. The path has numerous footprints and looks
-
-like it is used quite often. Several tree trunks show the signs of large ax
-
-marks on them.@@N
-
-~
-
-from the encampment's view of you. The path has numerous footprints and looks
-
-like it is used quite often. Several tree trunks show the signs of large ax
-
-marks on them.@@N
-
-~
-
-from the encampment's view of you. The path has numerous footprints and looks
-
-like it is used quite often. Several tree trunks show the signs of large ax
-
-marks on them.@@N
-
-~
-
-path splits off to the north. The noise of the @@gcamp@@d can be heard easily
-
-now. It is just a matter of time before someone or something happens across
-
-your path.@@N
-
-~
-
-following. The noise from the @@gcamp @@dfades into the distance leaving the
-
-forest quiet. You notice large fresh footprints that cross your path. You
-
-could be discovered at anytime.@@N
-
-~
-
-following. The silence in the forest makes you feel uneasy, yet you have to
-
-continue on. A strange unfamiliar smell fills the air.@@N
-
-~
+~
+221184 2
 D1
 ~
 ~
-
-The smell of some burnt meat lingers in the air. The inside of the @@gshack@@d
-
-looks no better than the outside. Trash lies everywhere and the only thing of
-
-interest lies on the @@GRanger.@@N
-
-~
-
-@@eminotaur's@@d camp. You have been spotted by several of them and your
-
-choice is to stand and @@lfight@@d them or @@yflee@@d from an almost certain
-
-death.
-
-~
-
-@@gentrance@@d lies in front of you. You could possibly get in if you had the
-
-@@ekey@@d and if you could make your way past the @@eguards.@@N
-
-~
-
-@@gbattle-axes @@dlie on a table as well as @@bwooden @@gshields.@@d Several
-
-humanoid shaped targets line the field with numerous puncture holes and slash
-
-marks on each of them.@@N
-
-~
-
-middle surrounded by several chairs. On the table are many different
-
-@@gplans@@d for an attack on @@WMidgaard!
-
+0 -1 6603
+D2
 ~
 ~
-
-Midgaard by ship in two months!
-
-~
-
-@@N
-
-~
-
-~
+0 -1 6601
 D3
 ~
 ~
-
+0 -1 6608
+S
+#6603
+@@GForest @@dPath@@N~
+@@dSilence pervades the forest as all the woodland creatures stop making
+sounds. Could it have been you that could have startled all the creatures?
+Perhaps. The @@gpath @@dcontinues to the east.@@N
+~
+221184 3
+D1
 ~
-
 ~
-
+0 -1 6604
+D3
 ~
-
 ~
-
-path.@@N
-
-~
-
-~
-
-discovered.@@N
-
-~
-
-~
-
-~
-
-~
-
-~
-
+0 -1 6602
+S
+#6604
+@@GForest @@dPath@@N~
+@@dSilence pervades the forest as all the woodland creatures stop making
+sounds. Could it have been you that could have startled all the creatures?
+Perhaps. The @@gpath @@dcontinues to the east.@@N
+~
+221184 3
+D0
 ~
 ~
 0 -1 6606

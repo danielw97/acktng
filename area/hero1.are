@@ -88,12 +88,9 @@ S
 #300
 The Preparation Room~
 You are standing in a small square room.  The walls are lined with benches and
-
-the benches are lined with gladiators waiting for their turn to fight to the
-
-death in the arena to the west.
-
-~
+the benches are lined with gladiators waiting for their turn to fight to the
+death in the arena to the west.
+~
 16384 11
 D1
 ~
@@ -133,12 +130,10 @@ S
 gladiator~
 gladiator~
 A large, well trained gladiator is preparing here.
-
-~
+~
 This guy really is a huge killing machine perhaps you should walk away.
 
-
-~
+~
 19 0 0 S
 12 1
 0 -10 0 0
@@ -151,8 +146,7 @@ L 0 0 0 0 0 0 0 0 0
 rat~
 rat~
 A large rat is scurring about here.
-
-~
+~
 ~
 1 0 -10 S
 5 0
@@ -166,11 +160,9 @@ L 0 0 0 0 0 0 0 0 0
 borg~
 Borg~
 Borg.
-
-~
+~
 The big borgy bastard.
-
-~
+~
 23 0 1000 S
 11 0
 0 0 0 0
@@ -196,8 +188,7 @@ L 0 0 0 0 0 0 0 0 0
 A harried cook~
 A harried cook~
 A cook is here, harried
-
-~
+~
 ~
 3 0 0 S
 9 1
@@ -211,8 +202,7 @@ L 0 0 0 0 0 0 0 0 0
 A hurried patron~
 A hurried patron~
 A hurried patron is here, trying to get through lunch
-
-~
+~
 ~
 3 0 0 S
 12 1
