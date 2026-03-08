@@ -50,7 +50,6 @@ all:
 	$(MAKE) clean
 	$(MAKE) ack
 	$(MAKE) unit-tests
-	$(MAKE) integration-test
 
 integration-test: ack
 	cd .. && ./integration-test.sh
@@ -368,6 +367,7 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./unit-test-quest
 	./unit-test-death
 	./unit-test-item-generation
+	$(MAKE) integration-test
 
 
 quest.unit-test.o: quest.c
