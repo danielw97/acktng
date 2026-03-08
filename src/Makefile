@@ -50,6 +50,7 @@ all:
 	$(MAKE) clean
 	$(MAKE) ack
 	$(MAKE) unit-tests
+	$(MAKE) integration-test
 
 integration-test: ack
 	cd .. && ./integration-test.sh
