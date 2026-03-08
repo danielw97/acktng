@@ -283,7 +283,7 @@ The avenue broadens here into a lived-in civic pocket where spice factors and fe
 D1
 ~
 ~
-0 -1 3017
+0 -1 3020
 D2
 ~
 ~
@@ -294,55 +294,47 @@ D3
 0 -1 3015
 S
 #3017
-@@WObsidian Crescent@@N~
-The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
+@@WThe General Donation Hall@@N~
+A modest hall set aside for the generosity of adventurers. Shelves and crates line the walls, bearing all manner of odds and ends left behind by those who have moved on. A small placard reads: @@ytake what you need, leave what you don't@@N. The smell of old leather and dust mingles with something faintly magical.~
 0 1
 D1
 ~
 ~
 0 -1 3018
-D2
+D5
 ~
 ~
-0 -1 3037
-D3
-~
-~
-0 -1 3016
+0 -1 3019
 S
 #3018
-@@WIvory Passage@@N~
-The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
+@@WThe Armor Donation Hall@@N~
+Suits of worn armor and battered shields are stacked along the walls of this hall, donated by adventurers who have outgrown them. A banner hung overhead reads @@ytake only what you can use@@N. The air smells of metal polish and old leather, and the clank of settling armor echoes softly through the room.~
 0 1
 D1
 ~
 ~
 0 -1 3019
-D2
-~
-~
-0 -1 3038
 D3
 ~
 ~
 0 -1 3017
+D4
+~
+~
+0 -1 3110
 S
 #3019
-@@WMoonlit Approach@@N~
-The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
+@@WThe Weapon Donation Hall@@N~
+Racks of donated blades, staves, and bows line this hall, left behind by those who fight with mightier arms now. A carved wooden sign reads @@ytake a weapon, leave a weapon if you can@@N. The air carries the faint tang of steel and old oil, and occasionally a blade shifts in its rack with a soft ringing sound.~
 0 1
-D1
-~
-~
-0 -1 3020
-D2
-~
-~
-0 -1 3039
 D3
 ~
 ~
 0 -1 3018
+D4
+~
+~
+0 -1 3017
 S
 #3020
 @@WLantern Promenade@@N~
@@ -355,7 +347,7 @@ D2
 D3
 ~
 ~
-0 -1 3019
+0 -1 3016
 S
 #3021
 @@WCedar Square@@N~
@@ -701,10 +693,6 @@ S
 @@WObsidian Crescent@@N~
 The avenue broadens here into a lived-in civic pocket where couriers and apothecaries repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries river wind, while wagon axles rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through sanded marble seams, and at the edge of the street stands a guard kiosk with posted warrants, giving this stretch of @@WMidgaard@@N a character all its own.~
 1 1
-D0
-~
-~
-0 -1 3017
 D1
 ~
 ~
@@ -722,10 +710,6 @@ S
 @@WIvory Passage@@N~
 The avenue broadens here into a lived-in civic pocket where apothecaries and smiths repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries orange peel and spice, while hammer-song rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through mosaic medallions, and at the edge of the street stands a tax board layered with notices, giving this stretch of @@WMidgaard@@N a character all its own.~
 1 1
-D0
-~
-~
-0 -1 3018
 D1
 ~
 ~
@@ -743,10 +727,6 @@ S
 @@WMoonlit Approach@@N~
 The avenue broadens here into a lived-in civic pocket where woodwrights and mapmakers repeatedly cross paths under strings of practical @@ylanterns@@N. The air carries ink and sealing wax, while quiet litany rises and falls between facades of stone and timber that have been repaired many times over generations. Underfoot, the paving shifts through brass drain-caps, and at the edge of the street stands a bronze map plate of the district, giving this stretch of @@WMidgaard@@N a character all its own.~
 1 1
-D0
-~
-~
-0 -1 3019
 D1
 ~
 ~
@@ -2206,6 +2186,10 @@ D4
 ~
 ~
 0 -1 3700
+D5
+~
+~
+0 -1 3018
 S
 #3111
 @@WAzure Plaza@@N~
