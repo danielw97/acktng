@@ -2367,7 +2367,7 @@ void extract_obj(OBJ_DATA *obj)
       }
    }
 
-   if (obj->item_type == ITEM_CORPSE_PC || is_keep_chest_obj(obj))
+   if (obj->item_type == ITEM_CORPSE_PC || (obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST)))
    {
       CORPSE_DATA *this_corpse;
       for (this_corpse = first_corpse; this_corpse != NULL; this_corpse = this_corpse->next)
@@ -3085,7 +3085,7 @@ bool can_sac_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 {
    if (IS_SET(obj->extra_flags, ITEM_NOSAC))
       return FALSE;
-   if (is_keep_chest_obj(obj))
+   if (obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST))
       return FALSE;
    return TRUE;
 }

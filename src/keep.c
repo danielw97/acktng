@@ -17,6 +17,7 @@ int keep_chest_max_items(void)
     return 50;
 }
 
+
 void keep_format_chest_short_descr(const char *owner_name, char *dest, size_t dest_size)
 {
     const char *safe_owner = (owner_name != NULL && owner_name[0] != '\0') ? owner_name : "Unknown";
