@@ -748,6 +748,10 @@ Commands used by validation/editor paths:
 - `R`: randomize exits (`arg1` room vnum, `arg2` max door)
 - `A`/`P`: obsolete; loader/checker still recognize them
 
+Reset vnum validity rule:
+
+- Resets must reference valid vnums for the target type required by the command (room/mobile/object as applicable).
+
 ## 13) Structural constraints enforced by tests
 
 From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
