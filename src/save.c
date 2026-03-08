@@ -2040,6 +2040,8 @@ void fread_corpse(FILE *fp)
                   if (target_room == NULL)
                   {
                      monitor_chan("Fread_corpse: limbo room missing for persistent container.", MONITOR_BAD);
+                     obj->pIndexData->count--;
+                     UNLINK(obj, first_obj, last_obj, next, prev);
                      PUT_FREE(obj, obj_free);
                      return;
                   }
