@@ -187,7 +187,7 @@ static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const
     pObjIndex->vnum = vnum;
     pObjIndex->area = pArea;
 
-    snprintf(name_buf, sizeof(name_buf), "%s keep_chest", owner_name);
+    snprintf(name_buf, sizeof(name_buf), "%s keep chest", owner_name);
     pObjIndex->name = str_dup(name_buf);
 
     keep_format_chest_short_descr(owner_name, short_buf, sizeof(short_buf));
@@ -505,7 +505,6 @@ void do_keep(CHAR_DATA *ch, char *argument)
     keepChest = create_object(keepChestIndex, ch->level);
     obj_to_room(keepChest, RoomIndex);
     add_keep_chest_reset(pArea, RoomIndex, vnum);
-    save_chest(keepChest);
 
     ch->pcdata->keep_vnum = vnum;
     do_savearea(NULL, (char *)pArea);

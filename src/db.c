@@ -2871,6 +2871,9 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
    LINK(obj, first_obj, last_obj, next, prev);
    pObjIndex->count++;
 
+   if (obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST))
+      load_chest(pObjIndex->vnum);
+
    return obj;
 }
 

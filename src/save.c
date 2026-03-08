@@ -2342,11 +2342,7 @@ static char *chest_file_path(int vnum, char *dest, size_t dest_size)
  * Unlike fwrite_corpse, no WhereVnum is written — chest contents are
  * always loaded back into their parent container, never into a room.
  */
-#ifdef UNIT_TEST_SAVE
-void fwrite_chest(OBJ_DATA *obj, FILE *fp, int iNest)
-#else
 static void fwrite_chest(OBJ_DATA *obj, FILE *fp, int iNest)
-#endif
 {
    EXTRA_DESCR_DATA *ed;
    AFFECT_DATA *paf;
@@ -2753,6 +2749,35 @@ void save_chest(OBJ_DATA *chest)
 }
 
 /*
+ * Test helper: write a minimal keep chest #OBJECT block to fp using the
+ * exact field names produced by fwrite_chest.  This lets test_save.c verify
+ * the format contract (e.g. presence of Nest, Vnum, End; absence of
+ * WhereVnum) without needing skill_table or rev_obj_fun_lookup in the link.
+ */
+#ifdef UNIT_TEST_SAVE
+void fwrite_chest_minimal_for_test(FILE *fp, int vnum, const char *name, int nest)
+{
+   fprintf(fp, "#OBJECT\n");
+   fprintf(fp, "Nest         %d\n", nest);
+   fprintf(fp, "Name         %s~\n", name);
+   fprintf(fp, "ShortDescr   %s~\n", name);
+   fprintf(fp, "Description  %s~\n", name);
+   fprintf(fp, "Vnum         %d\n", vnum);
+   fprintf(fp, "ExtraFlags   0\n");
+   fprintf(fp, "WearFlags    0\n");
+   fprintf(fp, "WearLoc      0\n");
+   fprintf(fp, "ClassFlags   0\n");
+   fprintf(fp, "ItemType     0\n");
+   fprintf(fp, "Weight       0\n");
+   fprintf(fp, "Level        0\n");
+   fprintf(fp, "Timer        0\n");
+   fprintf(fp, "Cost         0\n");
+   fprintf(fp, "Values       0 0 0 0\n");
+   fprintf(fp, "End\n\n");
+}
+#endif
+
+/*
  * Delete the save file for a keep chest (called when the chest is destroyed).
  */
 void delete_chest_file(int vnum)
@@ -2764,13 +2789,13 @@ void delete_chest_file(int vnum)
 
 /*
  * Load the contents of a keep chest from CHEST_DIR/<vnum>.
- * The chest object must already exist in the world (placed by area reset or
- * do_keep).  The first #OBJECT block describes the chest itself and is
- * silently discarded by fread_chest_item (Nest=0).  Subsequent blocks are
- * the chest's contents and are placed into the chest via obj_to_obj.
+ * The chest object must already exist in the world (placed by create_object).
+ * The first #OBJECT block describes the chest itself and is silently
+ * discarded by fread_chest_item (Nest=0).  Subsequent blocks are the
+ * chest's contents and are placed into the chest via obj_to_obj.
  *
- * Called from register_keep_chest() the first time a keep chest
- * enters a room, so the chest is populated with saved items exactly once.
+ * Called from create_object() whenever a keep chest object is created
+ * so the chest is populated with its saved contents immediately.
  */
 void load_chest(int vnum)
 {

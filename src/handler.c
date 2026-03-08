@@ -2122,11 +2122,6 @@ int count_obj_room(OBJ_INDEX_DATA *pObjIndex, OBJ_DATA *list)
    return nMatch;
 }
 
-static bool is_keep_chest_obj(const OBJ_DATA *obj)
-{
-   return (obj != NULL && obj->item_type == ITEM_CONTAINER && IS_SET(obj->value[1], CONT_KEEP_CHEST));
-}
-
 static void register_persistent_container(OBJ_DATA *obj)
 {
    CORPSE_DATA *this_corpse;
@@ -2146,26 +2141,6 @@ static void register_persistent_container(OBJ_DATA *obj)
    this_corpse->prev = NULL;
    this_corpse->this_corpse = obj;
    LINK(this_corpse, first_corpse, last_corpse, next, prev);
-}
-
-static void register_keep_chest(OBJ_DATA *obj)
-{
-   CHEST_DATA *this_chest;
-
-   if (!is_keep_chest_obj(obj))
-      return;
-
-   for (this_chest = first_chest; this_chest != NULL; this_chest = this_chest->next)
-      if (this_chest->this_chest == obj)
-         return;
-
-   GET_FREE(this_chest, chest_free);
-   this_chest->next = NULL;
-   this_chest->prev = NULL;
-   this_chest->this_chest = obj;
-   LINK(this_chest, first_chest, last_chest, next, prev);
-
-   load_chest(obj->pIndexData->vnum);
 }
 
 /*
@@ -2228,7 +2203,6 @@ void obj_to_room(OBJ_DATA *obj, ROOM_INDEX_DATA *pRoomIndex)
    obj->prev_in_carry_list = NULL;
 
    register_persistent_container(obj);
-   register_keep_chest(obj);
    return;
 }
 
