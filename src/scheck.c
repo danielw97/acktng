@@ -322,12 +322,6 @@ static void walk_char_data(CHAR_DATA *ch)
    touch(ch->old_prompt);
    touch(ch->searching);
    touch(ch->target);
-#ifdef DEBUG_MONEY
-   if (ch->money)
-      touch(ch->money->money_key);
-   if (ch->bank_money)
-      touch(ch->bank_money->money_key);
-#endif
 }
 
 static void walk_extra_descr_data(EXTRA_DESCR_DATA *ed)
@@ -369,10 +363,6 @@ static void walk_obj_data(OBJ_DATA *o)
    touch(o->name);
    touch(o->short_descr);
    touch(o->description);
-#ifdef DEBUG_MONEY
-   if (o->money)
-      touch(o->money->money_key);
-#endif
 }
 
 static void walk_exit_data(EXIT_DATA *e)
@@ -438,9 +428,6 @@ static void walk_room_index_data(ROOM_INDEX_DATA *r)
    touch(r->name);
    touch(r->description);
    touch(r->auto_message);
-#ifdef DEBUG_MONEY
-   touch(r->treasure->money_key);
-#endif
 }
 
 static void walk_social_type(struct social_type *s)

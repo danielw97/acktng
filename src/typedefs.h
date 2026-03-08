@@ -238,7 +238,7 @@ typedef struct dl_list DL_LIST;
 typedef struct brand_data BRAND_DATA;
 typedef struct str_array STR_ARRAY;
 typedef struct sysdata_type SYS_DATA_TYPE;
-typedef struct money_type MONEY_TYPE;
+
 typedef struct buf_data_struct BUF_DATA_STRUCT;
 typedef struct hash_entry_tp HASH_ENTRY;
 

@@ -116,7 +116,7 @@ INFLUENCE_LIST *influence_list_free = NULL;
 RULER_LIST *ruler_list_free = NULL;
 DL_LIST *dl_list_free = NULL;
 BRAND_DATA *brand_data_free = NULL;
-MONEY_TYPE *money_type_free = NULL;
+
 BOARD_DATA *board_free = NULL;
 MESSAGE_DATA *message_free = NULL;
 BUF_DATA_STRUCT *buf_free = NULL;
@@ -143,9 +143,6 @@ void (*influence_list_free_destructor)(INFLUENCE_LIST *ildat) = NULL;
 void (*ruler_list_free_destructor)(RULER_LIST *rldat) = NULL;
 void (*dl_list_free_destructor)(DL_LIST *dldat) = NULL;
 
-#ifndef DEBUG_MONEY
-void (*money_type_free_destructor)(MONEY_TYPE *mtdat) = NULL;
-#endif
 void (*board_free_destructor)(BOARD_DATA *bdat) = NULL;
 void (*buf_free_destructor)(BUF_DATA_STRUCT *bdat) = NULL;
 void (*hash_free_destructor)(HASH_ENTRY *hdat) = NULL;
@@ -158,13 +155,6 @@ void note_free_destructor(NOTE_DATA *ndat)
    free_string(ndat->date);
    free_string(ndat->sender);
 }
-
-#ifdef DEBUG_MONEY
-void money_type_free_destructor(MONEY_TYPE *mtdat)
-{
-   free_string(mtdat->money_key);
-}
-#endif
 
 void message_free_destructor(MESSAGE_DATA *mdat)
 {

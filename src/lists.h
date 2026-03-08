@@ -115,7 +115,7 @@ extern INFLUENCE_LIST *influence_list_free;
 extern RULER_LIST *ruler_list_free;
 extern DL_LIST *dl_list_free;
 extern BRAND_DATA *brand_data_free;
-extern MONEY_TYPE *money_type_free;
+
 extern BOARD_DATA *board_free;
 extern MESSAGE_DATA *message_free;
 extern BUF_DATA_STRUCT *buf_free;
@@ -142,18 +142,12 @@ extern void (*influence_list_free_destructor)(INFLUENCE_LIST *ildat);
 extern void (*ruler_list_free_destructor)(RULER_LIST *rldat);
 extern void (*dl_list_free_destructor)(DL_LIST *dldat);
 
-#ifndef DEBUG_MONEY
-extern void (*money_type_free_destructor)(MONEY_TYPE *mtdat);
-#endif
 extern void (*board_free_destructor)(BOARD_DATA *bdat);
 extern void (*buf_free_destructor)(BUF_DATA_STRUCT *bdat);
 extern void (*hash_free_destructor)(HASH_ENTRY *hdat);
 
 /* actual destructors */
 void note_free_destructor(NOTE_DATA *ndat);
-#ifdef DEBUG_MONEY
-void money_type_free_destructor(MONEY_TYPE *mtdat);
-#endif
 
 void message_free_destructor(MESSAGE_DATA *mdat);
 void ban_free_destructor(BAN_DATA *bdat);

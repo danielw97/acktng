@@ -700,8 +700,6 @@ struct char_data
    BRAND_DATA *current_brand;
    int stance;
    bool using_named_door;
-   MONEY_TYPE *money;
-   MONEY_TYPE *bank_money;
    NPC_GROUP_DATA *ngroup;
 };
 
@@ -949,7 +947,6 @@ struct obj_data
    sh_int timer;
    int value[10];
    sh_int condition; /* % value for condition */
-   MONEY_TYPE *money;
 };
 
 /*
@@ -1178,7 +1175,7 @@ struct room_index_data
    int affected_by;
    MARK_LIST_MEMBER *first_mark_list;
    MARK_LIST_MEMBER *last_mark_list;
-   MONEY_TYPE *treasure;
+   int gold;
 };
 
 /* Big MAG mod */
