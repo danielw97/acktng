@@ -27,278 +27,21 @@ this shouldnt be wrapped
 hmm
 
 ~
-mud is down, does not exist, or refused your mail) then you will get a note
-from the system telling you so.
-
-See also: IMC
-~
--1 'IMC IMMORTAL COMMANDS' RINFO~
-IMC Immortal commands:
-
-- RINFO       : A channel which the various hubs put status reports onto. Can
-                be spammy at times; you may want to turn off rinfo for this
-                reason.
-- RSOCKETS    : displays debugging info on the current IMC connection state.
-- RCONNECT    : force a connection to a directly connected mud.
-- RDISCONNECT : forcibly disconnect a directly connected mud.
-- RIGNORE     : ignore a player or an entire mud on IMC.
-- MAILQUEUE   : show the current queue of pending inter-mud notes.
-- IMC         : edit the IMC configuration for your mud (see 'IMC CONFIG')
-- RCHANSET    : manage access to IMC channels/rtell/rbeep for players.
-- RPING       : trace IMC connectivity
-
-See also: IMC
-~
-0 RSOCKETS~
-Syntax:  rsockets                   - display IMC socket usage
-
-rsockets displays the current connection state for the direct IMC connections
-that your mud has. The various fields are:
-
-Desc  : the system-level descriptor used for this connection
-
-Mud   : which mud this connection is for
-
-State : how far through the connection process this connection is:
-        - connecting: waiting for the other end to accept our TCP connection
-        - wait1:      waiting for the password from an incoming client
-        - wait2:      waiting for the server to respond to our password
-        - connected:  the connection is completely 'up'
-
-Inbuf : the size of data waiting in the input and output queues for this
-Outbuf: connection.
-
-Spam1 : spam-protection counters
-Spam2 :
-
-See also: IMC 'IMC IMMORTAL COMMANDS'
-~
-0 RCONNECT~
-Syntax:  rconnect <mudname>                - start an IMC connection
-
-rconnect will initiate a connection to the given mud. Note that this has to
-be a _directly_ connected mud (ie. a mud in the first section of imclist).
-Feedback on the state of the connection will be logged to 'wiznet imc', and 
-you may want to check imclist to see if it was successful.
-
-See also: IMC 'IMC IMMORTAL' RDISCONNECT
-~
-0 RDISCONNECT~
-Syntax:  rdisconnect <mudname>             - terminate an IMC connection
-
-rdisconnect reverses rconnect, severing all connections to the named mud.
-
-See also: IMC 'IMC IMMORTAL COMMANDS' RCONNECT
-~
-0 RIGNORE~
-Syntax:  rignore                           - list current rignores
-         rignore ignore  <pattern>         - ignore player(s) or mud(s)
-         rignore notrust <pattern>         - don't trust player(s) or mud(s)
-	 rignore delete  <pattern>         - remove a rignore
-
-rignore ignores or restricts the access, at a mud-wide level, everything
-coming in over IMC for a specified player or group of players. Currently
-two possible actions are possible: ignore and notrust.
-
-Ignore means:
-
-- rtells/rbeeps/rwhos will be ignored, and a rtell sent back to say that the
-  mud is ignoring them.
-- no messages from them on rchat, rcode, etc will appear on your mud.
-
-Notrust means:
-
-- any rwho/rfinger/etc requests from a mud/player matching the pattern will
-  be treated as if they were from a level 1 mortal - ie. wizi imms will never
-  be revealed on rwho, and rtells won't see them, etc.
-- any incoming channel messages from something matching the pattern are
-  stripped of wizi status - they will be visible to everyone in general.
-
-Patterns can be one of:
-
-  player@mud              - matches a specific player at a specific mud
-  *suffix                 - matches anything ending with that suffix
-                            (commonly used as *@mud)
-  prefix*                 - matches anything beginning with that prefix
-                            (for example, player@*)
-  *substring*             - matches anything containing that substring
-
-Use with care.
-
-See also: IMC 'IMC IMMORTAL COMMANDS'
-~
-0 MAILQUEUE~
-Syntax:  mailqueue                         - show current IMC mailqueue
-
-This command simply shows the current contents of the outgoing IMC mailqueue
-for inter-mud notes. Due to the internal implementation of this (static
-buffers - ick), only the first 8-9 entries will be shown.
-
-See also: IMC 'IMC IMMORTAL COMMANDS' 'IMC NOTES'
-~
-0 RCHANSET~
-Syntax:  chanset <player>             - see a players current IMC flags
-         chanset <player> +<channel>  - set 'allow' flag on a player
-         chanset <player> -<channel>  - set 'deny' flag on a player
-         chanset <player> =<channel>  - reset allow/deny flags on a player
-
-This command allows you to view or change a players IMC channel priviliges.
-In all cases <channel> can be the name of an IMC channel (rchat, rcode, etc)
-or 'rtell' or 'rbeep'.
-
-Setting the allow flag for a channel allows that player to see and use that
-channel, regardless of their level. This can be used, for example, to give
-mortals with coding experience access to rcode.
-
-Setting the deny flag for a channel prevents that player from using or
-seeing that channel, even if their level normally allows them to. This can be
-used as a penalty for players who abuse the IMC channels or rtell/rbeep.
-
-Resetting the allow/deny flags simply clears them, using only the player's
-level to determing whether they can use the channel.
-
-See also: IMC 'IMC IMMORTAL COMMANDS' RCHAT RCODE RIMM RINFO
-~
-0 'IMC CONFIG'~
-The 'imc' command is used to configure your IMC setup:
-
-Syntax:  imc add <mudname>            - add a new IMC connection entry
-         imc set <...>                - set the details of an IMC connection
-         imc delete <mudname>         - remove an IMC connection
-         imc rename <old> <new>       - rename an IMC connection
-         imc reload                   - load a new IMC config file from disk
-         imc localname <name>         - set the local IMC name
-         imc localport <port>         - set the local IMC port
-
-Add, delete, and rename should be self-explanatory. The name of an IMC
-connection MUST match the name which the other end is using.
-
-Reload destroys the version of the configuration in memory, and reloads it
-from disk. This is useful if you have hand-edited the config file and want
-to load your changes without rebooting. 'imc reload' also reloads the
-rignores file.
-
-The set command has several forms:
-
-imc set <mudname> all <data...>     - set all values for a mud
-                  host <hostname>   - set the hostname to connect to
-                  port <portnum>    - set the remote IMC port to connect to
-                  clientpw <pw>     - set the case-sensitive client password
-                  serverpw <pw>     - set the case-sensitive server password
-                  rcvstamp <value>  - set the receivestamp
-                  noforward <value> - set the noforward bitmask
-                  flags <value>     - set the connection flags
-
-The 'all' form takes a series of values:
-
-imc set <mudname> all <host> <port> <clientpw> <serverpw> <rcvstamp>
-                      <noforward> <flags>
-
-For information on the exact details of each field, see the IMC documentation.
-
-The localname and localport commands set the IMC name and port of -your- mud.
-Use with care.
-
-See also: IMC 'IMC IMMORTAL COMMANDS'
-~
--1 money coin coins currency~
-@@bcopper@@N Bit : base unit
-@@Wsilver@@N Moon:  5 bits
-@@ygold@@N Crown : 20 bits
-@@lelectrum@@N Crescent : 50 bits
-@@amithril@@N Pentacle : 100 bits
-@@mmalachite@@N Karant : 200 bits
-@@debony@@N Mark : 500 bits
-@@pRoyal Sunburst@@N : 1000 bits  
-~
--1 diku~
-.                    Original game idea, concept, and design:
-          Katja Nyboe               [Superwoman] (katz@freja.diku.dk)
-          Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
-          Hans Henrik Staerfeldt           [God] (bombman@freja.diku.dk)
-          Michael Seifert                 [Papi] (seifert@freja.diku.dk)
-          Sebastian Hammer               [Quinn] (quinn@freja.diku.dk)
-                     Additional contributions from:
-Michael Curran  - the player title collection and additional locations.
-Ragnar Loenn    - the bulletin board.
-Bill Wisner     - for being the first to successfully port the game,
-                  uncovering several old bugs, uh, inconsistencies,
-                  in the process.
-And: Mads Haar and Stephan Dahl for additional locations.
-Developed at: DIKU -- The Department of Computer Science
-                      at the University of Copenhagen.
-~
--1 ack ackmud~
-@@N-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-@@k)
-)@@N
-         Ack!Mud 2.0 is Copyright (C)1995/6 Stimpy & Thalen
-         Ack!Mud 4.3 is Copyright (C)1998 by Stephen Zepp
-@@k)@@N
-            Ack!Mud 4.3 by Zenithar, with mucho help from:
-             Ramias, Altrag, Spectrum, Flar, and Universe
-@@k)@@N
- Ack! Mud is a deriative of Merc Muds, which are deriatives of Diku Muds.
- In order to run this code, you must observe the conditions of use
- of Merc and Diku.
-@@k)@@N
- Conditions of use for Ack!Mud are as follows:
- - Must retain copyright messages in all code.
- - Stimpy, Thalen and Zenithar must be credited on greeting screen.
-@@k)@@N
- Thanks to:
- ...Maharet, Requiem and Rupert from the original Ack! for all their help.
- ...SoE for provding the official site for Ack!Mud
- ...The guys&gals at Diku and Merc for writing the original code  (:
-        To contact Zenithar, E-Mail zenithar@ackmud.nuc.net
-@@k)@@N
-                   Visit the Ack!Mud Home page at:
-                      http://ackmud.nuc.net
-@@k)@@N
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
-~
--1 ack~
-NEW HELP.  DELETE THIS LINE FIRST!~
-0 lifesteal lifestealer~
-Lifesteal is a weapon extra flag. It can be id'd.
- 
-~
-0 avoidance dodge block parry~
-Avoidance, in total, is capped to 75%. This is a value that is a combined
-value of parry, block, and dodge in that order of precedence. If you have 50%
-parry and 25% block, you are capped at 75% avoidance. If you have 50% block,
-25% block, and 25% dodge, you only get the first 75%, and do not get any dodge
-
- Note that for every 2 levels above the victim, each avoidance is reduced by
-1%.
-~
-0 extra extra_attacks extraattacks autoattack~
-In TNG, attacks are no longer gained from stats. Rather, attacks are gained
-from class levels.
- If you have levels in a physical-based remort class, that will give you one
-extra attack. If your primary class is 10 and a physical class, you will
-receive an additional extra attack. Secondary class at 20. Tertiary class at
-40. 4th class at 80.
-~
-0 prompt~
-Prompt all gives you a default prompt.
- %h for current HP. %H for maximum HP.
- %m for current mana. %M for maximum mana.
- #v for current move. #V for maximum move.
-
-%C for current combo count.
- #I for current chi.
-~
 0 $~
 #ROOMS
 #32766
 New room~
 This is a desc\brthis is only a desc
-this shouldnt be wrapped
-\brthis should
-\br
-hmm
-~
+
+this shouldnt be wrapped
+
+\brthis should
+
+\br
+
+hmm
+
+~
 262148 11
 S
 #0
