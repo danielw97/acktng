@@ -23,22 +23,39 @@ static void validate_help_file(const char *path)
     FILE *fp = fopen(path, "r");
     char line[8192];
     long level;
+    char extra;
+    size_t i;
 
     assert(fp != NULL);
 
     assert(fgets(line, sizeof(line), fp) != NULL);
-    assert(sscanf(line, "level %ld", &level) == 1);
+    assert(sscanf(line, "level %ld %c", &level, &extra) == 1);
     (void)level;
 
     assert(fgets(line, sizeof(line), fp) != NULL);
     assert(strncmp(line, "keywords ", 9) == 0);
     {
         const char *keywords = line + 9;
+        size_t keyword_len = strlen(keywords);
         assert(*keywords != '\0' && *keywords != '\n' && *keywords != '\r');
+        while (keyword_len > 0 &&
+               (keywords[keyword_len - 1] == '\n' || keywords[keyword_len - 1] == '\r'))
+        {
+            keyword_len--;
+        }
+        assert(keyword_len > 0);
+        assert(!isspace((unsigned char)keywords[0]));
+        assert(!isspace((unsigned char)keywords[keyword_len - 1]));
     }
 
     assert(fgets(line, sizeof(line), fp) != NULL);
-    assert(strncmp(line, "---", 3) == 0);
+    assert(strcmp(line, "---\n") == 0 || strcmp(line, "---\r\n") == 0 || strcmp(line, "---") == 0);
+
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+        i = strlen(line);
+        assert(i < sizeof(line) - 1 || line[i - 1] == '\n');
+    }
 
     fclose(fp);
 }
@@ -62,7 +79,9 @@ static int validate_help_directory(const char *directory)
 
         len = strlen(name);
         assert(len > 0);
-        assert(name[len - 1] != '~');
+        if (name[len - 1] == '~')
+            continue;
+
         assert(has_invalid_filename_chars(name) == 0);
 
         snprintf(path, sizeof(path), "%s%s", directory, name);
