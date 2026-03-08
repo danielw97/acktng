@@ -2609,7 +2609,16 @@ static void fread_chest_item(FILE *fp)
             }
             else
             {
-               rgObjNest[iNest] = obj;
+               /*
+                * Do NOT overwrite rgObjNest[0] — load_chest() seeds that
+                * slot with the already-instantiated chest object.  The
+                * Nest=0 record is the chest descriptor itself and is
+                * discarded; clobbering slot 0 would leave it dangling after
+                * PUT_FREE, causing obj_to_obj to write into freed memory
+                * for every Nest=1 item that follows.
+                */
+               if (iNest > 0)
+                  rgObjNest[iNest] = obj;
                fNest = TRUE;
             }
             fMatch = TRUE;
