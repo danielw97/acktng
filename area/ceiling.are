@@ -1084,15 +1084,7 @@ See also: IMC 'IMC IMMORTAL COMMANDS'
 - see ICE-POLICY for more information.
 
 See also: IMC ILIST ISETUP ICOMMAND ICHAN ICE-POLICY ICE-INTRO
-~
--1 ICE-INTRO~
-A Quick Introduction to ICE
 
-This assumes that the code for IMC and ICE is installed and running, and
-that you have an active connection to an IMC network.
-
-1. ILIST. This will give you a list of possible channels to choose from.
-
 Since the actual commands are interpreted by the channel daemon, not your
 mud, what is available may vary. To get a list of available commands, use
 icommand list <nodename> for public commands, or icommand list
@@ -1319,14 +1311,6 @@ Syntax:  rchannels                  - display your current IMC channel state
 rinvis is active (you can still hear them, though). rchannels -rinvis will
 reverse this state.
 
-Immortals may allow you access to IMC channels, or revoke your access to 
-them, as necessary.
-
-See also: IMC RCHAT RBEEP RTELL
-~
--1 'IMC NOTES'~
-Notes (boards, mail, etc) are very mud-dependent, but in general, if they
-have been connected to IMC, then you can simply write notes to player@mudname
         - connecting: waiting for the other end to accept our TCP connection
         - wait1:      waiting for the password from an incoming client
         - wait2:      waiting for the server to respond to our password
@@ -1550,13 +1534,6 @@ Syntax: isetup add <ice-channel> <localname>   - add a channel
 access it.
 
 ISetup format1 and format2 change how a channel is displayed locally.
-Each format string must have exactly two %s's within it (this is checked
-for) - the first will be replaced by the speaker's name, the second by
-whatever they say. Format1 is used for normal speech, format2 for emotes.
-See ILIST for more information.
-
-ISetup level sets the minimum level necessary on your mud to hear or use
-the channel.
 
   Format1 is the string displayed when someone speaks normally on the
   channel - the first %s is replaced by their name, the second %s by what
@@ -1780,13 +1757,6 @@ Syntax:  rignore                           - list current rignores
   stripped of wizi status - they will be visible to everyone in general.
 
 Patterns can be one of:
-
-  player@mud              - matches a specific player at a specific mud
-  *suffix                 - matches anything ending with that suffix
-                            (commonly used as *@mud)
-  prefix*                 - matches anything beginning with that prefix
-                            (for example, player@*)
-  *substring*             - matches anything containing that substring
 
 connection MUST match the name which the other end is using.
 
@@ -2020,14 +1990,7 @@ IMC (Inter-Mud Communication) provides a way for muds to connect together and
 
 IMC2 was written by Oliver Jowett <oliver@sa-search.massey.ac.nz>, aka
 Spectrum. Mail me if you're interested in connecting to the IMC network.
-The source code is available at ftp://sa-search.massey.ac.nz/pub/mud/imc2/
-The IMC2 home page is at http://sa-search.massey.ac.nz/-oliver/imc2/
-(- = tilde)
-~
-0 IMCLIST~
-Syntax:  imclist                  - get a list of active muds on IMC
-         imclist direct           - get a list of directly connected muds
-received from a player - even if that player was invisible to you.
+received from a player - even if that player was invisible to you.
 
 See also: IMC IMCLIST
 ~
@@ -2251,15 +2214,6 @@ ICE - the IMC Channel Extensions protocol
 Channels can be tuned into and out of on a player-by-player basis by
 using the ICHAN command.
 
-There are a variety of ways of controlling who can hear and use a channel
-- see ICE-POLICY for more information.
-
-See also: IMC ILIST ISETUP ICOMMAND ICHAN ICE-POLICY ICE-INTRO
-~
--1 ICE-INTRO~
-A Quick Introduction to ICE
-
-                  unexclude <channel> <name> - remove an exclusion
 
 ICommand is used to send commands to a channel daemon elsewhere on IMC.
 It directly affects the channel itself - any changes made here will
