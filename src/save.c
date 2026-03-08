@@ -1855,12 +1855,12 @@ static int resolve_persistent_container_room_vnum(int room_vnum)
 static int persistent_container_where_vnum_for_save(int in_room_vnum, bool in_obj)
 {
    if (in_obj)
-      return 3300;
+      return ROOM_VNUM_MORGUE;
 
    if (in_room_vnum > 0)
       return in_room_vnum;
 
-   return 3300;
+   return ROOM_VNUM_MORGUE;
 }
 
 #ifdef UNIT_TEST_SAVE
