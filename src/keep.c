@@ -179,7 +179,7 @@ static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const
     pObjIndex->owner = str_dup(owner_name);
     pObjIndex->level = 1;
     pObjIndex->item_type = ITEM_CONTAINER;
-    pObjIndex->extra_flags = 0;
+    pObjIndex->extra_flags = ITEM_NOSAC;
     pObjIndex->wear_flags = 0;
     pObjIndex->item_apply = 1;
 

@@ -2396,6 +2396,111 @@ void delete_chest_file(int vnum)
       unlink(path);
 }
 
+/*
+ * Skip one #OBJECT...End block without creating any objects.
+ * Used by load_chest() to skip the chest's own record (the chest already
+ * exists in the world; we only want to load its *contents*).
+ */
+static void skip_object_block(FILE *fp)
+{
+   char *word;
+
+   for (;;)
+   {
+      if (feof(fp))
+         break;
+      word = fread_word(fp);
+      if (!str_cmp(word, "End"))
+         break;
+      /* String fields: read and discard the tilde-terminated string. */
+      if (!str_cmp(word, "Name") || !str_cmp(word, "ShortDescr")
+          || !str_cmp(word, "Description") || !str_cmp(word, "Objfun"))
+      {
+         char *s = fread_string(fp);
+         free_string(s);
+      }
+      else if (!str_cmp(word, "ExtraDescr"))
+      {
+         char *s1 = fread_string(fp);
+         char *s2 = fread_string(fp);
+         free_string(s1);
+         free_string(s2);
+      }
+      else
+         fread_to_eol(fp); /* numeric / multi-value fields */
+   }
+}
+
+/*
+ * Load the contents of a keep chest from CHEST_DIR/<vnum>.
+ * The chest object must already exist in the world (placed by area reset or
+ * do_keep).  We skip the first #OBJECT block (which describes the chest
+ * itself) to avoid creating a duplicate, then read subsequent blocks as the
+ * chest's contents using the standard fread_corpse() path.
+ *
+ * Called from register_persistent_container() the first time a keep chest
+ * enters a room, so the chest is populated with saved items exactly once.
+ */
+void load_chest(int vnum)
+{
+   FILE *fp;
+   char path[MAX_STRING_LENGTH];
+   OBJ_DATA *obj;
+   int i;
+   bool first_block;
+
+   if (chest_file_path(vnum, path, sizeof(path)) == NULL)
+      return;
+   if ((fp = fopen(path, "r")) == NULL)
+      return;
+
+   /* Locate the already-created chest object in the global object list. */
+   for (obj = first_obj; obj != NULL; obj = obj->next)
+   {
+      if (obj->pIndexData != NULL && obj->pIndexData->vnum == vnum
+          && obj->item_type == ITEM_CONTAINER
+          && IS_SET(obj->value[1], CONT_KEEP_CHEST))
+         break;
+   }
+
+   /*
+    * Pre-populate the nesting array so that Nest=1 items are placed inside
+    * the existing chest rather than into a room.
+    */
+   for (i = 0; i < MAX_NEST; i++)
+      rgObjNest[i] = NULL;
+   if (obj != NULL)
+      rgObjNest[0] = obj;
+
+   first_block = TRUE;
+   for (;;)
+   {
+      char letter;
+      char *word;
+
+      letter = fread_letter(fp);
+      if (letter == '*')
+      {
+         fread_to_eol(fp);
+         continue;
+      }
+      if (letter != '#')
+         break;
+      word = fread_word(fp);
+      if (!str_cmp(word, "END"))
+         break;
+      if (str_cmp(word, "OBJECT"))
+         break;
+      if (first_block)
+         skip_object_block(fp); /* skip chest record — it already exists */
+      else
+         fread_corpse(fp);
+      first_block = FALSE;
+   }
+
+   fclose(fp);
+}
+
 
 void save_marks()
 {

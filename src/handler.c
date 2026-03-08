@@ -2146,6 +2146,9 @@ static void register_persistent_container(OBJ_DATA *obj)
    this_corpse->prev = NULL;
    this_corpse->this_corpse = obj;
    LINK(this_corpse, first_corpse, last_corpse, next, prev);
+
+   if (is_keep_chest_obj(obj))
+      load_chest(obj->pIndexData->vnum);
 }
 
 /*
@@ -3090,8 +3093,9 @@ bool can_sac_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 {
    if (IS_SET(obj->extra_flags, ITEM_NOSAC))
       return FALSE;
-   else
-      return TRUE;
+   if (is_keep_chest_obj(obj))
+      return FALSE;
+   return TRUE;
 }
 
 bool can_use(CHAR_DATA *ch, OBJ_DATA *obj)

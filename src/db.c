@@ -299,7 +299,6 @@ void load_help_files args((void));
 void load_notes args((void));
 void load_gold args((void));
 void load_corpses args((void));
-void load_chests args((void));
 void load_marks args((void));
 void load_bans args((void));
 void load_brands args((void));
@@ -661,8 +660,6 @@ void boot_db(void)
       MOBtrigger = TRUE;
       log_f("Loading corpses.");
       load_corpses();
-      log_f("Loading keep chests.");
-      load_chests();
       booting_up = TRUE;
       log_f("Loading room marks.");
       load_marks();
@@ -1017,79 +1014,6 @@ void load_corpses(void)
    fpArea = NULL;
    db_format_status(buf, sizeof(buf), "Done Loading", corpse_file_name);
    monitor_chan(buf, MONITOR_CLAN);
-}
-
-/*
- * Load all keep chest files from CHEST_DIR at startup.
- * Creates the directory if it does not yet exist.
- * Each file uses the same #OBJECT...End format as corpses.lst.
- */
-void load_chests(void)
-{
-   DIR *dir;
-   struct dirent *entry;
-   char path[MAX_STRING_LENGTH];
-   FILE *fp;
-
-   /* Create the chest directory if it does not exist. */
-   mkdir(CHEST_DIR, 0755);
-
-   if ((dir = opendir(CHEST_DIR)) == NULL)
-   {
-      log_f("load_chests: cannot open %s", CHEST_DIR);
-      return;
-   }
-
-   while ((entry = readdir(dir)) != NULL)
-   {
-      char letter;
-      char *word;
-
-      /* Skip hidden files and .temp files */
-      if (entry->d_name[0] == '.')
-         continue;
-      if (strstr(entry->d_name, ".temp") != NULL)
-         continue;
-
-      snprintf(path, sizeof(path), "%s%s", CHEST_DIR, entry->d_name);
-
-      if ((fp = fopen(path, "r")) == NULL)
-      {
-         log_f("load_chests: cannot open %s", path);
-         continue;
-      }
-
-      fpArea = fp;
-      db_set_area_name(path);
-
-      for (;;)
-      {
-         letter = fread_letter(fp);
-         if (letter == '*')
-         {
-            fread_to_eol(fp);
-            continue;
-         }
-         if (letter != '#')
-            break;
-
-         word = fread_word(fp);
-         if (!str_cmp(word, "OBJECT"))
-            fread_corpse(fp);
-         else if (!str_cmp(word, "END"))
-            break;
-         else
-         {
-            log_f("load_chests: unexpected section '%s' in %s", word, path);
-            break;
-         }
-      }
-
-      fclose(fp);
-   }
-
-   closedir(dir);
-   fpArea = NULL;
 }
 
 /*

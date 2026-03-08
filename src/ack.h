@@ -1599,6 +1599,7 @@ bool load_char_obj args((DESCRIPTOR_DATA * d, char *name, bool system_call));
 void save_corpses args((void));
 void save_chest args((OBJ_DATA * chest));
 void delete_chest_file args((int vnum));
+void load_chest args((int vnum));
 void fread_corpse args((FILE * fp));
 void save_marks args((void));
 void save_bans args((void));
