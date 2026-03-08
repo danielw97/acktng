@@ -819,6 +819,7 @@ const struct lookup_type tab_room_flags[] = {
     {"no_bloodwalk", 65536, 4000},
     {"no_portal", 131072, 1000},
     {"no_repop", BIT_19, 10},
+    {"maze", BIT_20, 10},
     {NULL, 0}};
 
 const struct lookup_type tab_sector_types[] = {
