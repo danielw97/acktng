@@ -69,7 +69,7 @@ Supported directives:
 
 Parsing stops when the next `#` section header is encountered.
 
-`V` defines the area's assigned vnum envelope. Area-owned entries should stay inside that envelope (see Structural constraints).
+`V` defines the area's assigned vnum envelope. Area-owned entries must stay inside that envelope (see Structural constraints).
 
 ## 4) `#HELPS` section
 
@@ -225,13 +225,13 @@ Builder note: set the `aggressive` flag for mobs whose intended behavior is to i
 
 Legacy keyword note from `tab_mob_flags` in `src/buildtab.c`:
 
-- `intelligent` and `mount` appear in the builder lookup table as legacy keywords, but they do not have active `ACT_*` definitions in `src/config.h` in this codebase, so they should not be used in area files.
+- `intelligent` and `mount` appear in the builder lookup table as legacy keywords, but they do not have active `ACT_*` definitions in `src/config.h` in this codebase, so they must not be used in area files.
 
 Builder policy for special difficulty mobs:
 
-- Boss mobs must be flagged `sentinel` and `boss` and should be placed only in rooms flagged `no_mob`.
-- `invasion` should never be set by builders in area files; it is set/cleared by runtime invasion systems only.
-- Strong (non-boss) mobs should be flagged `solo`.
+- Boss mobs must be flagged `sentinel` and `boss` and must be placed only in rooms flagged `no_mob`.
+- `invasion` must never be set by builders in area files; it is set/cleared by runtime invasion systems only.
+- Strong (non-boss) mobs must be flagged `solo`.
 
 ### 5.5) Mobile strong/weak/resist/suscept element flags (`|` extension)
 
@@ -365,7 +365,7 @@ Loader stops this trailing-entry loop at first unrecognized marker (which starts
 
 Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is runtime-managed by item generation systems.
 
-`ITEM_LOOT` usage policy: items intended to be spawned from a mobile's loot table (`#MOBILES` `l`/`L` extension data) should have `ITEM_LOOT` set in `extra_flags`. Items loaded onto mobiles via `#RESETS` (`G`/`E`) are normal reset equipment/inventory and should not be treated as loot-only objects unless explicitly intended.
+`ITEM_LOOT` usage policy: items intended to be spawned from a mobile's loot table (`#MOBILES` `l`/`L` extension data) must have `ITEM_LOOT` set in `extra_flags`. Items loaded onto mobiles via `#RESETS` (`G`/`E`) are normal reset equipment/inventory and must not be treated as loot-only objects unless explicitly intended.
 
 - `ITEM_GENERATED` = `1`
 - `ITEM_BIND_EQUIP` = `2`
@@ -435,7 +435,7 @@ Area policy constraints for object wear flags:
 
 - Every object **must** include `ITEM_TAKE`.
 - No object may include `ITEM_WEAR_CLAN_COLORS`.
-- Object `name`, `short_descr`, and `description` fields should be thematically consistent with the object's non-`take` wear flags (e.g., a `head` item should read as headgear, `wrist` as wristwear, `hold` as a held item).
+- Object `name`, `short_descr`, and `description` fields must be thematically consistent with the object's non-`take` wear flags (e.g., a `head` item must read as headgear, `wrist` as wristwear, `hold` as a held item).
 
 Builder conventions for held equipment archetypes:
 
@@ -494,8 +494,8 @@ Allowed `value3` values (from `tab_weapon_types` in `src/buildtab.c`):
 
 Area policy constraints for `ITEM_WEAPON`:
 
-- `value3` should be thematically consistent with the weapon's concept and presentation (`name`, `short_descr`, and `description`) so combat messaging matches builder intent.
-- `value3 = 0` (`hit`) should not be used unless the object also has the `ITEM_FIST` extra flag.
+- `value3` must be thematically consistent with the weapon's concept and presentation (`name`, `short_descr`, and `description`) so combat messaging matches builder intent.
+- `value3 = 0` (`hit`) must not be used unless the object also has the `ITEM_FIST` extra flag.
 
 - `0`: `hit`
 - `1`: `slice`
@@ -555,10 +555,12 @@ Room description content requirements:
 - Each room's main `<description>~` must not contain any newline characters (it must be a single line terminated by `~`).
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
 
-Directional traversal constraint:
+Directional traversal constraints:
 
-- Unless a vnum is part of a set of vnums designed as a maze, repeated movement in the same direction should not enter a directional loop.
-- Example (disallowed outside maze areas): repeatedly taking `east` yields `a -> b -> c -> a`.
+- Areas must use a linear room layout by default.
+- Room connections must not loop back in non-linear patterns (for example, `a -> b -> c -> d -> e -> a -> b`) unless the involved vnum set is explicitly flagged as a maze.
+- Repeated movement in the same direction must not enter a directional loop unless the involved vnum set is explicitly flagged as a maze.
+- Example (disallowed outside flagged maze vnum sets): repeatedly taking `east` yields `a -> b -> c -> a`.
 
 ### 8.1) `room_flags` bitvector
 
@@ -627,8 +629,8 @@ In room `D<door>` entries, the destination line field `<locks>` is a bitvector o
 
 Practical door behavior in area files/runtime:
 
-- Set `<locks>` bit `door` (`EX_ISDOOR`) when the exit should behave like an actual door/gate that can be opened/closed/locked.
-- `closed`/`locked` are runtime state bits (`EX_CLOSED`/`EX_LOCKED`). On save, the area writer strips these two bits from `<locks>`, so persistent initial door state should be authored through `#RESETS` command `D`, not by relying on `closed`/`locked` in the room exit line.
+- Set `<locks>` bit `door` (`EX_ISDOOR`) when the exit must behave like an actual door/gate that can be opened/closed/locked.
+- `closed`/`locked` are runtime state bits (`EX_CLOSED`/`EX_LOCKED`). On save, the area writer strips these two bits from `<locks>`, so persistent initial door state must be authored through `#RESETS` command `D`, not by relying on `closed`/`locked` in the room exit line.
 - During gameplay, opening/closing/locking/unlocking an exit updates the reverse side too when the reverse exit exists and points back to the source room.
 - Named door keywords must start with `^` (for example, `^stone hatch`) so movement messaging treats the keyword as a standalone noun phrase.
 
@@ -725,7 +727,7 @@ From `src/test_area_format.c`, `src/test_wood_area.c`, and `src/test_db.c`:
 
 ## 13.1) Vnum allocation policy
 
-For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums should be assigned in ascending sequential order.
+For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums must be assigned in ascending sequential order.
 
 - Use lower available vnums before higher ones (i.e., use `1` before `2`, `2` before `3`, and so on).
 - Do not leave gaps in vnum sequences.
