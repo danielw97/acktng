@@ -12,844 +12,14 @@ U A cold choir whispers from beneath the stones.~
 O virant~
 R zenithar~
 W zenithar~
-#MOBILES
-#21075
-crypt rat~
-a crypt rat~
-A crypt rat gnaws on old bones here.
-~
-~
-33 0 -200 S
-12 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21076
-grave skitterling~
-a grave skitterling~
-A grave skitterling darts between broken skulls.
-~
-~
-33 0 -200 S
-13 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21077
-bone porter~
-a bone porter~
-A bone porter drags a chain of femurs behind it.
-~
-~
-16417 0 -200 S
-14 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21078
-hollow acolyte~
-a hollow acolyte~
-A hollow acolyte mutters profane rites.
-~
-~
-16417 0 -200 S
-15 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21079
-ash revenant~
-an ash revenant~
-An ash revenant rises from collapsed niches.
-~
-~
-16417 0 -200 S
-16 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21080
-catacomb ghoul~
-a catacomb ghoul~
-A catacomb ghoul lurks in the shadows.
-~
-~
-16417 0 -200 S
-17 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21081
-ossuary knight~
-an ossuary knight~
-An ossuary knight patrols in rusted plate.
-~
-~
-16417 0 -200 S
-20 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21082
-bloodscribe~
-a bloodscribe~
-A bloodscribe inks curses on skin parchment.
-~
-~
-16417 0 -200 S
-22 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21083
-mourning templar~
-a mourning templar~
-A mourning templar grips a notched blade.
-~
-~
-16417 0 -200 S
-23 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21084
-carrion abbot~
-a carrion abbot~
-A carrion abbot chants under a cracked reliquary.
-~
-~
-16417 0 -200 S
-24 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21085
-wight captain~
-a wight captain~
-A wight captain commands the dead in silence.
-~
-~
-16417 0 -200 S
-26 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21086
-crypt juggernaut~
-a crypt juggernaut~
-A crypt juggernaut blocks the corridor with iron mass.
-~
-~
-16417 0 -200 S
-27 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21087
-sepulcher lich~
-the Sepulcher Lich~
-The Sepulcher Lich hovers above a rune-carved dais.
-~
-~
-67125251 0 -200 S
-28 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21088
-bone colossus~
-the Bone Colossus~
-The Bone Colossus towers over shattered sarcophagi.
-~
-~
-67125251 0 -200 S
-28 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21089
-nightveil matriarch~
-the Nightveil Matriarch~
-The Nightveil Matriarch watches with abyssal eyes.
-~
-~
-67125251 0 -200 S
-28 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21090
-marrow mite~
-a marrow mite~
-A marrow mite skitters between rib-stacked alcoves.
-~
-~
-33 0 -200 S
-12 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21091
-tomb bat~
-a tomb bat~
-A tomb bat wheels through the stale air overhead.
-~
-~
-33 0 -200 S
-13 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21092
-cinder scavenger~
-a cinder scavenger~
-A cinder scavenger claws through ash and bone splinters.
-~
-~
-33 0 -200 S
-14 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21093
-grave dust imp~
-a grave dust imp~
-A grave dust imp capers and hisses from a broken niche.
-~
-~
-33 0 -200 S
-15 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21094
-bone candle novice~
-a bone candle novice~
-A bone candle novice whispers rites beside guttering wax.
-~
-~
-16417 0 -200 S
-16 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21095
-crypt stalker~
-a crypt stalker~
-A crypt stalker prowls the corridor with hungry patience.
-~
-~
-16417 0 -200 S
-17 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21096
-chain penitent~
-a chain penitent~
-A chain penitent drags sanctified iron behind it.
-~
-~
-16417 0 -200 S
-18 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21097
-dusk embalmer~
-a dusk embalmer~
-A dusk embalmer tends jars of black balm and old organs.
-~
-~
-16417 0 -200 S
-19 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21098
-censer devotee~
-a censer devotee~
-A censer devotee swings braziers that leak violet smoke.
-~
-~
-16417 0 -200 S
-20 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21099
-black-choir adept~
-a black-choir adept~
-A black-choir adept intones hymns in a dead tongue.
-~
-~
-16417 0 -200 S
-21 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21144
-reliquary reaver~
-a reliquary reaver~
-A reliquary reaver hacks relic-cases apart for marrow shards.
-~
-~
-33570849 0 -200 S
-22 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21145
-ossified executioner~
-an ossified executioner~
-An ossified executioner hefts an edge chipped by centuries.
-~
-~
-33570849 0 -200 S
-23 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21146
-sepulchral herald~
-a sepulchral herald~
-A sepulchral herald raises a cracked banner of skin and bone.
-~
-~
-33570849 0 -200 S
-24 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21147
-grave oath knight~
-a grave oath knight~
-A grave oath knight guards these tombways without rest.
-~
-~
-33570849 0 -200 S
-25 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21148
-pallid deathspeaker~
-a pallid deathspeaker~
-A pallid deathspeaker hurls curses wrapped in grave-wind.
-~
-~
-33570849 0 -200 S
-26 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#21149
-catacomb dreadguard~
-a catacomb dreadguard~
-A catacomb dreadguard stands like a wall of ancient iron.
-~
-~
-33570849 0 -200 S
-27 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#0
-#OBJECTS
-#21100
-ember halo~
-an ember halo~
-An ember halo flickers with dying light.~
-9 0 8388609 1
-0 0 0 0 0 0 0 0 0 0
-3
-L
-12
-#21101
-veil of grave-mist~
-a veil of grave-mist~
-A veil of grave-mist hangs here, cold and damp.~
-9 0 8388624 1
-0 0 0 0 0 0 0 0 0 0
-3
-L
-13
-#21102
-cryptbone gorget~
-a cryptbone gorget~
-A cryptbone gorget lies half-buried in ash.~
-9 0 8388736 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-14
-#21103
-acolyte mantle~
-an acolyte mantle~
-An acolyte mantle is draped over a broken bier.~
-9 0 8389120 1
-0 0 0 0 0 0 0 0 0 0
-8
-L
-15
-#21104
-scriber wraps~
-scriber wraps~
-Scribe-wrapped bands stained with black ichor lie here.~
-9 0 8389632 1
-0 0 0 0 0 0 0 0 0 0
-3
-L
-16
-#21105
-sepulcher bracer~
-a sepulcher bracer~
-A sepulcher bracer rests beside a shattered urn.~
-9 0 8390656 1
-0 0 0 0 0 0 0 0 0 0
-7
-L
-17
-#21106
-ghoulclaw gauntlets~
-ghoulclaw gauntlets~
-A pair of ghoulclaw gauntlets sits in the dust.~
-9 0 8392704 1
-0 0 0 0 0 0 0 0 0 0
-8
-L
-18
-#21107
-ring of hollow vows~
-a ring of hollow vows~
-A ring of hollow vows glints from a skull.~
-9 0 8396800 1
-0 0 0 0 0 0 0 0 0 0
-2
-L
-19
-#21108
-funerary censer~
-a funerary censer~
-A funerary censer swings from a broken chain.~
-5 0 8421376 1
-0 0 0 7 0 0 0 0 0 0
-4
-L
-20
-#21109
-graveworn shroud~
-a graveworn shroud~
-A graveworn shroud lies folded in silence.~
-9 0 8454144 1
-0 0 0 0 0 0 0 0 0 0
-12
-L
-10
-#21110
-ossuary girdle~
-an ossuary girdle~
-An ossuary girdle is buckled around cracked vertebrae.~
-9 0 8519680 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-11
-#21111
-catacomb cuirass~
-a catacomb cuirass~
-A catacomb cuirass leans against a crypt wall.~
-9 0 8650752 1
-0 0 0 0 0 0 0 0 0 0
-14
-L
-20
-#21112
-march of bones greaves~
-march of bones greaves~
-March of bones greaves are lined in dust.~
-9 0 9437184 1
-0 0 0 0 0 0 0 0 0 0
-12
-L
-18
-#21113
-gravebound sabatons~
-gravebound sabatons~
-Gravebound sabatons rest near old claw marks.~
-9 0 10485760 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-16
-#21114
-lichfire circlet~
-a lichfire circlet~
-A lichfire circlet burns with violet flame.~
-9 64 8388616 1
-0 0 0 0 0 0 0 0 0 0
-3
-L
-25
-#21115
-matriarchs whisper~
-the Matriarch's Whisper~
-A jeweled whisper-mask hums with dark promise.~
-9 64 8388672 1
-0 0 0 0 0 0 0 0 0 0
-2
-L
-25
-#21116
-colossus plate~
-the Colossus Plate~
-A massive plate harness creaks with trapped souls.~
-9 64 8650752 1
-0 0 0 0 0 0 0 0 0 0
-13
-L
-25
-#21117
-nightveil blade~
-the Nightveil Blade~
-The Nightveil Blade drinks the pale torchlight.~
-5 64 8421376 1
-0 0 0 3 0 0 0 0 0 0
-7
-L
-25
-#21118
-sepulcher sigil~
-the Sepulcher Sigil~
-A rune-cut sigil throbs with arcane hunger.~
-9 64 8388610 1
-0 0 0 0 0 0 0 0 0 0
-4
-L
-25
-#21119
-bone tyrants treads~
-the Bone Tyrant's Treads~
-Heavy treads of engraved bone await a conqueror.~
-9 64 10485760 1
-0 0 0 0 0 0 0 0 0 0
-12
-L
-25
-#21120
-ashglass halo~
-an ashglass halo~
-An ashglass halo glimmers above cold dust.~
-9 0 8388609 1
-0 0 0 0 0 0 0 0 0 0
-3
-L
-12
-#21121
-grave-silk cowl~
-a grave-silk cowl~
-A grave-silk cowl lies in a folded hush.~
-9 0 8388616 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-14
-#21122
-cryptglass visor~
-a cryptglass visor~
-A cryptglass visor reflects only torchless dark.~
-9 0 8388624 1
-0 0 0 0 0 0 0 0 0 0
-7
-L
-15
-#21123
-bonewire earring~
-a bonewire earring~
-A bonewire earring hums with muted hymns.~
-9 0 8388672 1
-0 0 0 0 0 0 0 0 0 0
-2
-L
-13
-#21124
-mourner's torque~
-a mourner's torque~
-A mourner's torque is etched with names no one speaks.~
-9 0 8388736 1
-0 0 0 0 0 0 0 0 0 0
-12
-L
-18
-#21125
-candlewick mantle~
-a candlewick mantle~
-A candlewick mantle drips blackened wax.~
-9 0 8389120 1
-0 0 0 0 0 0 0 0 0 0
-8
-L
-16
-#21126
-ossuary armbinds~
-ossuary armbinds~
-Ossuary armbinds lie beside carved knucklebones.~
-9 0 8389632 1
-0 0 0 0 0 0 0 0 0 0
-4
-L
-14
-#21127
-chain-punisher bracer~
-a chain-punisher bracer~
-A chain-punisher bracer is heavy with old penance.~
-9 0 8390656 1
-0 0 0 0 0 0 0 0 0 0
-9
-L
-17
-#21128
-graveclaw gloves~
-graveclaw gloves~
-A pair of graveclaw gloves is lined with iron hooks.~
-9 0 8392704 1
-0 0 0 0 0 0 0 0 0 0
-8
-L
-17
-#21129
-sepulcher signet~
-a sepulcher signet~
-A sepulcher signet gleams with funerary lacquer.~
-9 0 8396800 1
-0 0 0 0 0 0 0 0 0 0
-3
-L
-12
-#21130
-censer of dusk smoke~
-a censer of dusk smoke~
-A censer of dusk smoke drifts along without wind.~
-5 0 8421376 1
-0 0 0 7 0 0 0 0 0 0
-4
-L
-20
-#21131
-shroud of last vows~
-a shroud of last vows~
-A shroud of last vows pools like nightwater.~
-9 0 8454144 1
-0 0 0 0 0 0 0 0 0 0
-13
-L
-19
-#21132
-bone-thread cincture~
-a bone-thread cincture~
-A bone-thread cincture is knotted with tiny fingerbones.~
-9 0 8519680 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-13
-#21133
-sepulcher harness~
-a sepulcher harness~
-A sepulcher harness creaks as if it still breathes.~
-9 0 8650752 1
-0 0 0 0 0 0 0 0 0 0
-14
-L
-20
-#21134
-funeral greaves~
-funeral greaves~
-Funeral greaves are scored by countless blows.~
-9 0 9437184 1
-0 0 0 0 0 0 0 0 0 0
-12
-L
-18
-#21135
-barrow sabatons~
-barrow sabatons~
-Barrow sabatons leave grey prints in dust.~
-9 0 10485760 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-16
-#21136
-witchlight aura~
-a witchlight aura~
-A witchlight aura flickers with violet breath.~
-9 0 8388610 1
-0 0 0 0 0 0 0 0 0 0
-3
-L
-18
-#21137
-crypt preacher's hood~
-a crypt preacher's hood~
-A crypt preacher's hood smells of incense and ash.~
-9 0 8388616 1
-0 0 0 0 0 0 0 0 0 0
-12
-L
-20
-#21138
-iron reliquary mask~
-an iron reliquary mask~
-An iron reliquary mask stares with empty sockets.~
-9 0 8388624 1
-0 0 0 0 0 0 0 0 0 0
-8
-L
-18
-#21139
-grave-lit pauldrons~
-grave-lit pauldrons~
-Grave-lit pauldrons pulse with dim runes.~
-9 0 8389120 1
-0 0 0 0 0 0 0 0 0 0
-9
-L
-19
-#21140
-deathsong band~
-a deathsong band~
-A deathsong band vibrates with choral echoes.~
-9 0 8396800 1
-0 0 0 0 0 0 0 0 0 0
-2
-L
-11
-#21141
-sepulchral falchion~
-a sepulchral falchion~
-A sepulchral falchion is dark with old stains.~
-5 0 8421376 1
-0 0 0 3 0 0 0 0 0 0
-9
-L
-20
-#21142
-ossified cuirass~
-an ossified cuirass~
-An ossified cuirass is layered with lacquered bone.~
-9 0 8650752 1
-0 0 0 0 0 0 0 0 0 0
-14
-L
-19
-#21143
-black-marrow treads~
-black-marrow treads~
-Black-marrow treads grind over broken teeth and stone.~
-9 0 10485760 1
-0 0 0 0 0 0 0 0 0 0
-12
-L
-20
-#0
 #ROOMS
 #21000
 Soot-Choked Entry Vault~
-Soot-Choked Entry Vault narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by sarcophagus lids carved with penitent kings. A low organ-note hums through the mortar and into your bones. Finger marks mar the dust at shoulder height all around.~
+Soot-Choked Entry Vault narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by sarcophagus lids carved with penitent kings.
+A low organ-note hums through the mortar and into your bones.
+Finger marks mar the dust at shoulder height all around.
+~
 13 11
 D2
 ~
@@ -862,7 +32,11 @@ D4
 S
 #21001
 Reliquary Entry Vault~
-Reliquary Entry Vault narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by frescoes of eclipsed suns peeled by moisture. A low organ-note hums through the mortar and into your bones. Several stones are warm to the touch despite the cold.~
+Reliquary Entry Vault narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+A low organ-note hums through the mortar and into your bones.
+Several stones are warm to the touch despite the cold.
+~
 9 11
 D0
 ~
@@ -875,7 +49,11 @@ D2
 S
 #21002
 Graveshade Processional~
-Graveshade Processional narrows into a solemn pocket of the Nightfall Catacombs. Dust and lampblack coat every inhale; the chamber is marked by sarcophagus lids carved with penitent kings. Somewhere ahead, a bell rings once and never fades. Fresh scratch marks score the threshold in parallel lines.~
+Graveshade Processional narrows into a solemn pocket of the Nightfall Catacombs.
+Dust and lampblack coat every inhale; the chamber is marked by sarcophagus lids carved with penitent kings.
+Somewhere ahead, a bell rings once and never fades.
+Fresh scratch marks score the threshold in parallel lines.
+~
 9 11
 D0
 ~
@@ -888,7 +66,11 @@ D2
 S
 #21003
 Mourners' Processional~
-Mourners' Processional narrows into a solemn pocket of the Nightfall Catacombs. Dust and lampblack coat every inhale; the chamber is marked by frescoes of eclipsed suns peeled by moisture. Far below, water strikes stone in a patient, funereal rhythm. Dried blood maps a path that vanishes at the far wall.~
+Mourners' Processional narrows into a solemn pocket of the Nightfall Catacombs.
+Dust and lampblack coat every inhale; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+Far below, water strikes stone in a patient, funereal rhythm.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -905,7 +87,11 @@ D2
 S
 #21004
 Saintless Skull Gallery~
-Saintless Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by shattered reliquaries spilling saint-bone splinters. A low organ-note hums through the mortar and into your bones. Dried blood maps a path that vanishes at the far wall.~
+Saintless Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by shattered reliquaries spilling saint-bone splinters.
+A low organ-note hums through the mortar and into your bones.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -918,7 +104,11 @@ D2
 S
 #21005
 Ashen Skull Gallery~
-Ashen Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by warding sigils scratched over older curses. Far below, water strikes stone in a patient, funereal rhythm. Tiny runes flare when your shadow crosses them.~
+Ashen Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by warding sigils scratched over older curses.
+Far below, water strikes stone in a patient, funereal rhythm.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -931,7 +121,11 @@ D2
 S
 #21006
 Whispering Antechamber~
-Whispering Antechamber narrows into a solemn pocket of the Nightfall Catacombs. Tallow smoke clings to your tongue; the chamber is marked by ossuary shelves stacked in geometric towers. Distant boots march in cadence, then stop the moment you listen. Dried blood maps a path that vanishes at the far wall.~
+Whispering Antechamber narrows into a solemn pocket of the Nightfall Catacombs.
+Tallow smoke clings to your tongue; the chamber is marked by ossuary shelves stacked in geometric towers.
+Distant boots march in cadence, then stop the moment you listen.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -948,7 +142,11 @@ D3
 S
 #21007
 Rotted Antechamber~
-Rotted Antechamber narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by frescoes of eclipsed suns peeled by moisture. Far below, water strikes stone in a patient, funereal rhythm. A toppled idol has been turned to face the entrance.~
+Rotted Antechamber narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+Far below, water strikes stone in a patient, funereal rhythm.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -961,7 +159,11 @@ D2
 S
 #21008
 Moonless Pilgrim Walk~
-Moonless Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by alcoves packed with jawless skulls. From the next turn comes the drag of chain over slate. A black feather drifts in a draft that should not exist.~
+Moonless Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by alcoves packed with jawless skulls.
+From the next turn comes the drag of chain over slate.
+A black feather drifts in a draft that should not exist.
+~
 9 11
 D0
 ~
@@ -978,7 +180,11 @@ D2
 S
 #21009
 Bleak Pilgrim Walk~
-Bleak Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by warding sigils scratched over older curses. Far below, water strikes stone in a patient, funereal rhythm. Tiny runes flare when your shadow crosses them.~
+Bleak Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by warding sigils scratched over older curses.
+Far below, water strikes stone in a patient, funereal rhythm.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -991,7 +197,11 @@ D2
 S
 #21010
 Hollow Crypt Lane~
-Hollow Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by warding sigils scratched over older curses. You hear brittle clicking, as if teeth chatter inside the walls. Several stones are warm to the touch despite the cold.~
+Hollow Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by warding sigils scratched over older curses.
+You hear brittle clicking, as if teeth chatter inside the walls.
+Several stones are warm to the touch despite the cold.
+~
 9 11
 D0
 ~
@@ -1004,7 +214,11 @@ D2
 S
 #21011
 Candle-Dripped Crypt Lane~
-Candle-Dripped Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by warding sigils scratched over older curses. Distant boots march in cadence, then stop the moment you listen. Tiny runes flare when your shadow crosses them.~
+Candle-Dripped Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by warding sigils scratched over older curses.
+Distant boots march in cadence, then stop the moment you listen.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -1021,7 +235,11 @@ D3
 S
 #21012
 Bone-Lit Niche Hall~
-Bone-Lit Niche Hall narrows into a solemn pocket of the Nightfall Catacombs. Dust and lampblack coat every inhale; the chamber is marked by warding sigils scratched over older curses. You hear brittle clicking, as if teeth chatter inside the walls. A toppled idol has been turned to face the entrance.~
+Bone-Lit Niche Hall narrows into a solemn pocket of the Nightfall Catacombs.
+Dust and lampblack coat every inhale; the chamber is marked by warding sigils scratched over older curses.
+You hear brittle clicking, as if teeth chatter inside the walls.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1034,7 +252,11 @@ D2
 S
 #21013
 Blackwater Niche Hall~
-Blackwater Niche Hall narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by charnel gutters etched into the floorstones. An unseen censer swings nearby, its links creaking like old rope. Wax tears bead along the walls like frozen rain.~
+Blackwater Niche Hall narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by charnel gutters etched into the floorstones.
+An unseen censer swings nearby, its links creaking like old rope.
+Wax tears bead along the walls like frozen rain.
+~
 9 11
 D0
 ~
@@ -1051,7 +273,11 @@ D2
 S
 #21014
 Gloambound Ossuary Bend~
-Gloambound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by bas-reliefs of mourners with empty faces. A low organ-note hums through the mortar and into your bones. Finger marks mar the dust at shoulder height all around.~
+Gloambound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by bas-reliefs of mourners with empty faces.
+A low organ-note hums through the mortar and into your bones.
+Finger marks mar the dust at shoulder height all around.
+~
 9 11
 D0
 ~
@@ -1064,7 +290,11 @@ D2
 S
 #21015
 Dustbound Ossuary Bend~
-Dustbound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by sarcophagus lids carved with penitent kings. An unseen censer swings nearby, its links creaking like old rope. Bone dust gathers in spiral patterns around your boots.~
+Dustbound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by sarcophagus lids carved with penitent kings.
+An unseen censer swings nearby, its links creaking like old rope.
+Bone dust gathers in spiral patterns around your boots.
+~
 9 11
 D0
 ~
@@ -1077,7 +307,11 @@ D2
 S
 #21016
 Ironbound Sarcophagus Row~
-Ironbound Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by alcoves packed with jawless skulls. You hear brittle clicking, as if teeth chatter inside the walls. Tiny runes flare when your shadow crosses them.~
+Ironbound Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by alcoves packed with jawless skulls.
+You hear brittle clicking, as if teeth chatter inside the walls.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -1094,7 +328,11 @@ D3
 S
 #21017
 Shroud-Wrapped Sarcophagus Row~
-Shroud-Wrapped Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by prayer tiles worn smooth by countless knees. Far below, water strikes stone in a patient, funereal rhythm. Several stones are warm to the touch despite the cold.~
+Shroud-Wrapped Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by prayer tiles worn smooth by countless knees.
+Far below, water strikes stone in a patient, funereal rhythm.
+Several stones are warm to the touch despite the cold.
+~
 9 11
 D0
 ~
@@ -1107,7 +345,11 @@ D2
 S
 #21018
 Mortar-Cracked Reliquary Steps~
-Mortar-Cracked Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by ossuary shelves stacked in geometric towers. Far below, water strikes stone in a patient, funereal rhythm. Dried blood maps a path that vanishes at the far wall.~
+Mortar-Cracked Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by ossuary shelves stacked in geometric towers.
+Far below, water strikes stone in a patient, funereal rhythm.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -1124,7 +366,11 @@ D2
 S
 #21019
 Sin-Etched Reliquary Steps~
-Sin-Etched Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by frescoes of eclipsed suns peeled by moisture. Far below, water strikes stone in a patient, funereal rhythm. A cracked mirror tile reflects only darkness behind you.~
+Sin-Etched Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+Far below, water strikes stone in a patient, funereal rhythm.
+A cracked mirror tile reflects only darkness behind you.
+~
 9 11
 D0
 ~
@@ -1137,7 +383,11 @@ D2
 S
 #21020
 Soot-Choked Lament Corridor~
-Soot-Choked Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by alcoves packed with jawless skulls. The corridor answers every step with a delayed, mocking echo. A toppled idol has been turned to face the entrance.~
+Soot-Choked Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by alcoves packed with jawless skulls.
+The corridor answers every step with a delayed, mocking echo.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1150,7 +400,11 @@ D2
 S
 #21021
 Reliquary Lament Corridor~
-Reliquary Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs. Dust and lampblack coat every inhale; the chamber is marked by iron braziers burning with violet witchfire. You hear brittle clicking, as if teeth chatter inside the walls. A toppled idol has been turned to face the entrance.~
+Reliquary Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs.
+Dust and lampblack coat every inhale; the chamber is marked by iron braziers burning with violet witchfire.
+You hear brittle clicking, as if teeth chatter inside the walls.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1167,7 +421,11 @@ D3
 S
 #21022
 Graveshade Catacomb Transit~
-Graveshade Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by frescoes of eclipsed suns peeled by moisture. From the next turn comes the drag of chain over slate. Dried blood maps a path that vanishes at the far wall.~
+Graveshade Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+From the next turn comes the drag of chain over slate.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -1180,7 +438,11 @@ D2
 S
 #21023
 Mourners' Catacomb Transit~
-Mourners' Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs. The air tastes of wet limestone and ash; the chamber is marked by frescoes of eclipsed suns peeled by moisture. A low organ-note hums through the mortar and into your bones. A toppled idol has been turned to face the entrance.~
+Mourners' Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs.
+The air tastes of wet limestone and ash; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+A low organ-note hums through the mortar and into your bones.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1193,7 +455,11 @@ D2
 S
 #21024
 Saintless Mire Passage~
-Saintless Mire Passage narrows into a solemn pocket of the Nightfall Catacombs. The air tastes of wet limestone and ash; the chamber is marked by prayer tiles worn smooth by countless knees. A whispering litany circles the chamber, never finding a source. A toppled idol has been turned to face the entrance.~
+Saintless Mire Passage narrows into a solemn pocket of the Nightfall Catacombs.
+The air tastes of wet limestone and ash; the chamber is marked by prayer tiles worn smooth by countless knees.
+A whispering litany circles the chamber, never finding a source.
+A toppled idol has been turned to face the entrance.
+~
 13 11
 D0
 ~
@@ -1205,12 +471,15 @@ D2
 0 -1 21025
 E
 runes~
-Runes carved in marrow-light warn that lesser undead may not tread here.
-~
+Runes carved in marrow-light warn that lesser undead may not tread here.~
 S
 #21025
 Ashen Mire Passage~
-Ashen Mire Passage narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by iron braziers burning with violet witchfire. From the next turn comes the drag of chain over slate. A black feather drifts in a draft that should not exist.~
+Ashen Mire Passage narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by iron braziers burning with violet witchfire.
+From the next turn comes the drag of chain over slate.
+A black feather drifts in a draft that should not exist.
+~
 9 11
 D0
 ~
@@ -1223,7 +492,11 @@ D2
 S
 #21026
 Whispering Cairn Hall~
-Whispering Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by bas-reliefs of mourners with empty faces. Far below, water strikes stone in a patient, funereal rhythm. A black feather drifts in a draft that should not exist.~
+Whispering Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by bas-reliefs of mourners with empty faces.
+Far below, water strikes stone in a patient, funereal rhythm.
+A black feather drifts in a draft that should not exist.
+~
 9 11
 D0
 ~
@@ -1236,7 +509,11 @@ D2
 S
 #21027
 Rotted Cairn Hall~
-Rotted Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs. Tallow smoke clings to your tongue; the chamber is marked by alcoves packed with jawless skulls. Somewhere ahead, a bell rings once and never fades. Tiny runes flare when your shadow crosses them.~
+Rotted Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs.
+Tallow smoke clings to your tongue; the chamber is marked by alcoves packed with jawless skulls.
+Somewhere ahead, a bell rings once and never fades.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -1249,7 +526,11 @@ D2
 S
 #21028
 Moonless Wardened Hall~
-Moonless Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs. A metallic chill stings your teeth; the chamber is marked by ossuary shelves stacked in geometric towers. An unseen censer swings nearby, its links creaking like old rope. Bone dust gathers in spiral patterns around your boots.~
+Moonless Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs.
+A metallic chill stings your teeth; the chamber is marked by ossuary shelves stacked in geometric towers.
+An unseen censer swings nearby, its links creaking like old rope.
+Bone dust gathers in spiral patterns around your boots.
+~
 9 11
 D0
 ~
@@ -1266,7 +547,11 @@ D2
 S
 #21029
 Bleak Wardened Hall~
-Bleak Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by alcoves packed with jawless skulls. From the next turn comes the drag of chain over slate. A toppled idol has been turned to face the entrance.~
+Bleak Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by alcoves packed with jawless skulls.
+From the next turn comes the drag of chain over slate.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1279,7 +564,11 @@ D2
 S
 #21030
 Hollow Torches' Reach~
-Hollow Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs. The smell of rusted iron dominates this chamber; the chamber is marked by alcoves packed with jawless skulls. An unseen censer swings nearby, its links creaking like old rope. Tiny runes flare when your shadow crosses them.~
+Hollow Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs.
+The smell of rusted iron dominates this chamber; the chamber is marked by alcoves packed with jawless skulls.
+An unseen censer swings nearby, its links creaking like old rope.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -1292,7 +581,11 @@ D2
 S
 #21031
 Candle-Dripped Torches' Reach~
-Candle-Dripped Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs. A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture. From the next turn comes the drag of chain over slate. A toppled idol has been turned to face the entrance.~
+Candle-Dripped Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs.
+A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+From the next turn comes the drag of chain over slate.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1309,7 +602,11 @@ D3
 S
 #21032
 Bone-Lit Silent Crossing~
-Bone-Lit Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs. A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture. From the next turn comes the drag of chain over slate. Tiny runes flare when your shadow crosses them.~
+Bone-Lit Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs.
+A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+From the next turn comes the drag of chain over slate.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -1322,7 +619,11 @@ D2
 S
 #21033
 Blackwater Silent Crossing~
-Blackwater Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by warding sigils scratched over older curses. The corridor answers every step with a delayed, mocking echo. Dried blood maps a path that vanishes at the far wall.~
+Blackwater Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by warding sigils scratched over older curses.
+The corridor answers every step with a delayed, mocking echo.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -1339,7 +640,11 @@ D2
 S
 #21034
 Gloambound Winding Aisle~
-Gloambound Winding Aisle narrows into a solemn pocket of the Nightfall Catacombs. Dust and lampblack coat every inhale; the chamber is marked by warding sigils scratched over older curses. The corridor answers every step with a delayed, mocking echo. Dried blood maps a path that vanishes at the far wall.~
+Gloambound Winding Aisle narrows into a solemn pocket of the Nightfall Catacombs.
+Dust and lampblack coat every inhale; the chamber is marked by warding sigils scratched over older curses.
+The corridor answers every step with a delayed, mocking echo.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -1352,7 +657,11 @@ D2
 S
 #21035
 Dustbound Winding Aisle~
-Dustbound Winding Aisle narrows into a solemn pocket of the Nightfall Catacombs. Tallow smoke clings to your tongue; the chamber is marked by shattered reliquaries spilling saint-bone splinters. The corridor answers every step with a delayed, mocking echo. Wax tears bead along the walls like frozen rain.~
+Dustbound Winding Aisle narrows into a solemn pocket of the Nightfall Catacombs.
+Tallow smoke clings to your tongue; the chamber is marked by shattered reliquaries spilling saint-bone splinters.
+The corridor answers every step with a delayed, mocking echo.
+Wax tears bead along the walls like frozen rain.
+~
 9 11
 D0
 ~
@@ -1365,7 +674,11 @@ D2
 S
 #21036
 Ironbound Ruin Span~
-Ironbound Ruin Span narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by sarcophagus lids carved with penitent kings. Distant boots march in cadence, then stop the moment you listen. A toppled idol has been turned to face the entrance.~
+Ironbound Ruin Span narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by sarcophagus lids carved with penitent kings.
+Distant boots march in cadence, then stop the moment you listen.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1382,7 +695,11 @@ D3
 S
 #21037
 Shroud-Wrapped Ruin Span~
-Shroud-Wrapped Ruin Span narrows into a solemn pocket of the Nightfall Catacombs. A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture. A low organ-note hums through the mortar and into your bones. Several stones are warm to the touch despite the cold.~
+Shroud-Wrapped Ruin Span narrows into a solemn pocket of the Nightfall Catacombs.
+A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+A low organ-note hums through the mortar and into your bones.
+Several stones are warm to the touch despite the cold.
+~
 9 11
 D0
 ~
@@ -1395,7 +712,11 @@ D2
 S
 #21038
 Mortar-Cracked Echo Way~
-Mortar-Cracked Echo Way narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by frescoes of eclipsed suns peeled by moisture. Far below, water strikes stone in a patient, funereal rhythm. Tiny runes flare when your shadow crosses them.~
+Mortar-Cracked Echo Way narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+Far below, water strikes stone in a patient, funereal rhythm.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -1412,7 +733,11 @@ D2
 S
 #21039
 Sin-Etched Echo Way~
-Sin-Etched Echo Way narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by collapsed niches draped in black moss. A low organ-note hums through the mortar and into your bones. Finger marks mar the dust at shoulder height all around.~
+Sin-Etched Echo Way narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by collapsed niches draped in black moss.
+A low organ-note hums through the mortar and into your bones.
+Finger marks mar the dust at shoulder height all around.
+~
 9 11
 D0
 ~
@@ -1425,7 +750,11 @@ D2
 S
 #21040
 Soot-Choked Entry Vault~
-Soot-Choked Entry Vault narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by alcoves packed with jawless skulls. A whispering litany circles the chamber, never finding a source. Fresh scratch marks score the threshold in parallel lines.~
+Soot-Choked Entry Vault narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by alcoves packed with jawless skulls.
+A whispering litany circles the chamber, never finding a source.
+Fresh scratch marks score the threshold in parallel lines.
+~
 9 11
 D0
 ~
@@ -1438,7 +767,11 @@ D2
 S
 #21041
 Reliquary Entry Vault~
-Reliquary Entry Vault narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by collapsed niches draped in black moss. Distant boots march in cadence, then stop the moment you listen. Bone dust gathers in spiral patterns around your boots.~
+Reliquary Entry Vault narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by collapsed niches draped in black moss.
+Distant boots march in cadence, then stop the moment you listen.
+Bone dust gathers in spiral patterns around your boots.
+~
 9 11
 D0
 ~
@@ -1455,7 +788,11 @@ D3
 S
 #21042
 Graveshade Processional~
-Graveshade Processional narrows into a solemn pocket of the Nightfall Catacombs. The smell of rusted iron dominates this chamber; the chamber is marked by alcoves packed with jawless skulls. From the next turn comes the drag of chain over slate. Several stones are warm to the touch despite the cold.~
+Graveshade Processional narrows into a solemn pocket of the Nightfall Catacombs.
+The smell of rusted iron dominates this chamber; the chamber is marked by alcoves packed with jawless skulls.
+From the next turn comes the drag of chain over slate.
+Several stones are warm to the touch despite the cold.
+~
 9 11
 D0
 ~
@@ -1468,7 +805,11 @@ D2
 S
 #21043
 Mourners' Processional~
-Mourners' Processional narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by sarcophagus lids carved with penitent kings. Distant boots march in cadence, then stop the moment you listen. A black feather drifts in a draft that should not exist.~
+Mourners' Processional narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by sarcophagus lids carved with penitent kings.
+Distant boots march in cadence, then stop the moment you listen.
+A black feather drifts in a draft that should not exist.
+~
 9 11
 D0
 ~
@@ -1485,7 +826,11 @@ D2
 S
 #21044
 Saintless Skull Gallery~
-Saintless Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs. The smell of rusted iron dominates this chamber; the chamber is marked by alcoves packed with jawless skulls. From the next turn comes the drag of chain over slate. Several stones are warm to the touch despite the cold.~
+Saintless Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs.
+The smell of rusted iron dominates this chamber; the chamber is marked by alcoves packed with jawless skulls.
+From the next turn comes the drag of chain over slate.
+Several stones are warm to the touch despite the cold.
+~
 9 11
 D0
 ~
@@ -1498,7 +843,11 @@ D2
 S
 #21045
 Ashen Skull Gallery~
-Ashen Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs. The air tastes of wet limestone and ash; the chamber is marked by iron braziers burning with violet witchfire. Somewhere ahead, a bell rings once and never fades. Fresh scratch marks score the threshold in parallel lines.~
+Ashen Skull Gallery narrows into a solemn pocket of the Nightfall Catacombs.
+The air tastes of wet limestone and ash; the chamber is marked by iron braziers burning with violet witchfire.
+Somewhere ahead, a bell rings once and never fades.
+Fresh scratch marks score the threshold in parallel lines.
+~
 9 11
 D0
 ~
@@ -1511,7 +860,11 @@ D2
 S
 #21046
 Whispering Antechamber~
-Whispering Antechamber narrows into a solemn pocket of the Nightfall Catacombs. A metallic chill stings your teeth; the chamber is marked by shattered reliquaries spilling saint-bone splinters. Somewhere ahead, a bell rings once and never fades. Several stones are warm to the touch despite the cold.~
+Whispering Antechamber narrows into a solemn pocket of the Nightfall Catacombs.
+A metallic chill stings your teeth; the chamber is marked by shattered reliquaries spilling saint-bone splinters.
+Somewhere ahead, a bell rings once and never fades.
+Several stones are warm to the touch despite the cold.
+~
 9 11
 D0
 ~
@@ -1528,7 +881,11 @@ D3
 S
 #21047
 Rotted Antechamber~
-Rotted Antechamber narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by chains looped through cracked memorial pillars. You hear brittle clicking, as if teeth chatter inside the walls. A cracked mirror tile reflects only darkness behind you.~
+Rotted Antechamber narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by chains looped through cracked memorial pillars.
+You hear brittle clicking, as if teeth chatter inside the walls.
+A cracked mirror tile reflects only darkness behind you.
+~
 9 11
 D0
 ~
@@ -1541,7 +898,11 @@ D2
 S
 #21048
 Moonless Pilgrim Walk~
-Moonless Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by warding sigils scratched over older curses. You hear brittle clicking, as if teeth chatter inside the walls. A toppled idol has been turned to face the entrance.~
+Moonless Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by warding sigils scratched over older curses.
+You hear brittle clicking, as if teeth chatter inside the walls.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1554,7 +915,11 @@ D2
 S
 #21049
 Bleak Pilgrim Walk~
-Bleak Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by alcoves packed with jawless skulls. The corridor answers every step with a delayed, mocking echo. Finger marks mar the dust at shoulder height all around.~
+Bleak Pilgrim Walk narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by alcoves packed with jawless skulls.
+The corridor answers every step with a delayed, mocking echo.
+Finger marks mar the dust at shoulder height all around.
+~
 13 11
 D0
 ~
@@ -1566,12 +931,15 @@ D2
 0 -1 21050
 E
 runes~
-Runes carved in marrow-light warn that lesser undead may not tread here.
-~
+Runes carved in marrow-light warn that lesser undead may not tread here.~
 S
 #21050
 Hollow Crypt Lane~
-Hollow Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by prayer tiles worn smooth by countless knees. Far below, water strikes stone in a patient, funereal rhythm. Fresh scratch marks score the threshold in parallel lines.~
+Hollow Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by prayer tiles worn smooth by countless knees.
+Far below, water strikes stone in a patient, funereal rhythm.
+Fresh scratch marks score the threshold in parallel lines.
+~
 9 11
 D0
 ~
@@ -1584,7 +952,11 @@ D2
 S
 #21051
 Candle-Dripped Crypt Lane~
-Candle-Dripped Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by bas-reliefs of mourners with empty faces. An unseen censer swings nearby, its links creaking like old rope. A black feather drifts in a draft that should not exist.~
+Candle-Dripped Crypt Lane narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by bas-reliefs of mourners with empty faces.
+An unseen censer swings nearby, its links creaking like old rope.
+A black feather drifts in a draft that should not exist.
+~
 9 11
 D0
 ~
@@ -1597,7 +969,11 @@ D2
 S
 #21052
 Bone-Lit Niche Hall~
-Bone-Lit Niche Hall narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by frescoes of eclipsed suns peeled by moisture. A low organ-note hums through the mortar and into your bones. Tiny runes flare when your shadow crosses them.~
+Bone-Lit Niche Hall narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+A low organ-note hums through the mortar and into your bones.
+Tiny runes flare when your shadow crosses them.
+~
 9 11
 D0
 ~
@@ -1610,7 +986,11 @@ D2
 S
 #21053
 Blackwater Niche Hall~
-Blackwater Niche Hall narrows into a solemn pocket of the Nightfall Catacombs. Tallow smoke clings to your tongue; the chamber is marked by prayer tiles worn smooth by countless knees. Muted chanting rises, then collapses into absolute silence. Bone dust gathers in spiral patterns around your boots.~
+Blackwater Niche Hall narrows into a solemn pocket of the Nightfall Catacombs.
+Tallow smoke clings to your tongue; the chamber is marked by prayer tiles worn smooth by countless knees.
+Muted chanting rises, then collapses into absolute silence.
+Bone dust gathers in spiral patterns around your boots.
+~
 9 11
 D0
 ~
@@ -1627,7 +1007,11 @@ D2
 S
 #21054
 Gloambound Ossuary Bend~
-Gloambound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by collapsed niches draped in black moss. Muted chanting rises, then collapses into absolute silence. A black feather drifts in a draft that should not exist.~
+Gloambound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by collapsed niches draped in black moss.
+Muted chanting rises, then collapses into absolute silence.
+A black feather drifts in a draft that should not exist.
+~
 9 11
 D0
 ~
@@ -1640,7 +1024,11 @@ D2
 S
 #21055
 Dustbound Ossuary Bend~
-Dustbound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs. The smell of rusted iron dominates this chamber; the chamber is marked by charnel gutters etched into the floorstones. Somewhere ahead, a bell rings once and never fades. Bone dust gathers in spiral patterns around your boots.~
+Dustbound Ossuary Bend narrows into a solemn pocket of the Nightfall Catacombs.
+The smell of rusted iron dominates this chamber; the chamber is marked by charnel gutters etched into the floorstones.
+Somewhere ahead, a bell rings once and never fades.
+Bone dust gathers in spiral patterns around your boots.
+~
 9 11
 D0
 ~
@@ -1653,7 +1041,11 @@ D2
 S
 #21056
 Ironbound Sarcophagus Row~
-Ironbound Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs. A metallic chill stings your teeth; the chamber is marked by shattered reliquaries spilling saint-bone splinters. Somewhere ahead, a bell rings once and never fades. Fresh scratch marks score the threshold in parallel lines.~
+Ironbound Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs.
+A metallic chill stings your teeth; the chamber is marked by shattered reliquaries spilling saint-bone splinters.
+Somewhere ahead, a bell rings once and never fades.
+Fresh scratch marks score the threshold in parallel lines.
+~
 9 11
 D0
 ~
@@ -1670,7 +1062,11 @@ D3
 S
 #21057
 Shroud-Wrapped Sarcophagus Row~
-Shroud-Wrapped Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by shattered reliquaries spilling saint-bone splinters. From the next turn comes the drag of chain over slate. Dried blood maps a path that vanishes at the far wall.~
+Shroud-Wrapped Sarcophagus Row narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by shattered reliquaries spilling saint-bone splinters.
+From the next turn comes the drag of chain over slate.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -1683,7 +1079,11 @@ D2
 S
 #21058
 Mortar-Cracked Reliquary Steps~
-Mortar-Cracked Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by collapsed niches draped in black moss. Somewhere ahead, a bell rings once and never fades. Finger marks mar the dust at shoulder height all around.~
+Mortar-Cracked Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by collapsed niches draped in black moss.
+Somewhere ahead, a bell rings once and never fades.
+Finger marks mar the dust at shoulder height all around.
+~
 9 11
 D0
 ~
@@ -1700,7 +1100,11 @@ D2
 S
 #21059
 Sin-Etched Reliquary Steps~
-Sin-Etched Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs. Dust and lampblack coat every inhale; the chamber is marked by chains looped through cracked memorial pillars. Somewhere ahead, a bell rings once and never fades. Fresh scratch marks score the threshold in parallel lines.~
+Sin-Etched Reliquary Steps narrows into a solemn pocket of the Nightfall Catacombs.
+Dust and lampblack coat every inhale; the chamber is marked by chains looped through cracked memorial pillars.
+Somewhere ahead, a bell rings once and never fades.
+Fresh scratch marks score the threshold in parallel lines.
+~
 9 11
 D0
 ~
@@ -1713,7 +1117,11 @@ D2
 S
 #21060
 Soot-Choked Lament Corridor~
-Soot-Choked Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by iron braziers burning with violet witchfire. Muted chanting rises, then collapses into absolute silence. Finger marks mar the dust at shoulder height all around.~
+Soot-Choked Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by iron braziers burning with violet witchfire.
+Muted chanting rises, then collapses into absolute silence.
+Finger marks mar the dust at shoulder height all around.
+~
 9 11
 D0
 ~
@@ -1726,7 +1134,11 @@ D2
 S
 #21061
 Reliquary Lament Corridor~
-Reliquary Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs. A sour incense settles behind your eyes; the chamber is marked by sarcophagus lids carved with penitent kings. The corridor answers every step with a delayed, mocking echo. Finger marks mar the dust at shoulder height all around.~
+Reliquary Lament Corridor narrows into a solemn pocket of the Nightfall Catacombs.
+A sour incense settles behind your eyes; the chamber is marked by sarcophagus lids carved with penitent kings.
+The corridor answers every step with a delayed, mocking echo.
+Finger marks mar the dust at shoulder height all around.
+~
 9 11
 D0
 ~
@@ -1743,7 +1155,11 @@ D3
 S
 #21062
 Graveshade Catacomb Transit~
-Graveshade Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by frescoes of eclipsed suns peeled by moisture. An unseen censer swings nearby, its links creaking like old rope. A cracked mirror tile reflects only darkness behind you.~
+Graveshade Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+An unseen censer swings nearby, its links creaking like old rope.
+A cracked mirror tile reflects only darkness behind you.
+~
 9 11
 D0
 ~
@@ -1756,7 +1172,11 @@ D2
 S
 #21063
 Mourners' Catacomb Transit~
-Mourners' Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs. The air tastes of wet limestone and ash; the chamber is marked by iron braziers burning with violet witchfire. From the next turn comes the drag of chain over slate. A toppled idol has been turned to face the entrance.~
+Mourners' Catacomb Transit narrows into a solemn pocket of the Nightfall Catacombs.
+The air tastes of wet limestone and ash; the chamber is marked by iron braziers burning with violet witchfire.
+From the next turn comes the drag of chain over slate.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1773,7 +1193,11 @@ D2
 S
 #21064
 Saintless Mire Passage~
-Saintless Mire Passage narrows into a solemn pocket of the Nightfall Catacombs. Dust and lampblack coat every inhale; the chamber is marked by collapsed niches draped in black moss. Distant boots march in cadence, then stop the moment you listen. A toppled idol has been turned to face the entrance.~
+Saintless Mire Passage narrows into a solemn pocket of the Nightfall Catacombs.
+Dust and lampblack coat every inhale; the chamber is marked by collapsed niches draped in black moss.
+Distant boots march in cadence, then stop the moment you listen.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1786,7 +1210,11 @@ D2
 S
 #21065
 Ashen Mire Passage~
-Ashen Mire Passage narrows into a solemn pocket of the Nightfall Catacombs. A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture. The corridor answers every step with a delayed, mocking echo. Finger marks mar the dust at shoulder height all around.~
+Ashen Mire Passage narrows into a solemn pocket of the Nightfall Catacombs.
+A metallic chill stings your teeth; the chamber is marked by frescoes of eclipsed suns peeled by moisture.
+The corridor answers every step with a delayed, mocking echo.
+Finger marks mar the dust at shoulder height all around.
+~
 9 11
 D0
 ~
@@ -1799,7 +1227,11 @@ D2
 S
 #21066
 Whispering Cairn Hall~
-Whispering Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs. A faint sweetness of funeral oils hangs in the dark; the chamber is marked by charnel gutters etched into the floorstones. Distant boots march in cadence, then stop the moment you listen. A toppled idol has been turned to face the entrance.~
+Whispering Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs.
+A faint sweetness of funeral oils hangs in the dark; the chamber is marked by charnel gutters etched into the floorstones.
+Distant boots march in cadence, then stop the moment you listen.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1816,7 +1248,11 @@ D3
 S
 #21067
 Rotted Cairn Hall~
-Rotted Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by prayer tiles worn smooth by countless knees. A whispering litany circles the chamber, never finding a source. A cracked mirror tile reflects only darkness behind you.~
+Rotted Cairn Hall narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by prayer tiles worn smooth by countless knees.
+A whispering litany circles the chamber, never finding a source.
+A cracked mirror tile reflects only darkness behind you.
+~
 9 11
 D0
 ~
@@ -1829,7 +1265,11 @@ D2
 S
 #21068
 Moonless Wardened Hall~
-Moonless Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs. A grave-cold damp crawls through your sleeves; the chamber is marked by prayer tiles worn smooth by countless knees. You hear brittle clicking, as if teeth chatter inside the walls. Wax tears bead along the walls like frozen rain.~
+Moonless Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs.
+A grave-cold damp crawls through your sleeves; the chamber is marked by prayer tiles worn smooth by countless knees.
+You hear brittle clicking, as if teeth chatter inside the walls.
+Wax tears bead along the walls like frozen rain.
+~
 9 11
 D0
 ~
@@ -1846,7 +1286,11 @@ D2
 S
 #21069
 Bleak Wardened Hall~
-Bleak Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by iron braziers burning with violet witchfire. A whispering litany circles the chamber, never finding a source. Bone dust gathers in spiral patterns around your boots.~
+Bleak Wardened Hall narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by iron braziers burning with violet witchfire.
+A whispering litany circles the chamber, never finding a source.
+Bone dust gathers in spiral patterns around your boots.
+~
 9 11
 D0
 ~
@@ -1859,7 +1303,11 @@ D2
 S
 #21070
 Hollow Torches' Reach~
-Hollow Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs. The air tastes of wet limestone and ash; the chamber is marked by bas-reliefs of mourners with empty faces. A low organ-note hums through the mortar and into your bones. Dried blood maps a path that vanishes at the far wall.~
+Hollow Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs.
+The air tastes of wet limestone and ash; the chamber is marked by bas-reliefs of mourners with empty faces.
+A low organ-note hums through the mortar and into your bones.
+Dried blood maps a path that vanishes at the far wall.
+~
 9 11
 D0
 ~
@@ -1872,7 +1320,11 @@ D2
 S
 #21071
 Candle-Dripped Torches' Reach~
-Candle-Dripped Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs. The smell of rusted iron dominates this chamber; the chamber is marked by charnel gutters etched into the floorstones. From the next turn comes the drag of chain over slate. Fresh scratch marks score the threshold in parallel lines.~
+Candle-Dripped Torches' Reach narrows into a solemn pocket of the Nightfall Catacombs.
+The smell of rusted iron dominates this chamber; the chamber is marked by charnel gutters etched into the floorstones.
+From the next turn comes the drag of chain over slate.
+Fresh scratch marks score the threshold in parallel lines.
+~
 9 11
 D0
 ~
@@ -1889,7 +1341,11 @@ D3
 S
 #21072
 Bone-Lit Silent Crossing~
-Bone-Lit Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs. Your breath mists in thin silver ribbons; the chamber is marked by alcoves packed with jawless skulls. Distant boots march in cadence, then stop the moment you listen. A black feather drifts in a draft that should not exist.~
+Bone-Lit Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs.
+Your breath mists in thin silver ribbons; the chamber is marked by alcoves packed with jawless skulls.
+Distant boots march in cadence, then stop the moment you listen.
+A black feather drifts in a draft that should not exist.
+~
 9 11
 D0
 ~
@@ -1902,7 +1358,11 @@ D2
 S
 #21073
 Blackwater Silent Crossing~
-Blackwater Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs. The scent of old marrow lingers here; the chamber is marked by shattered reliquaries spilling saint-bone splinters. You hear brittle clicking, as if teeth chatter inside the walls. A toppled idol has been turned to face the entrance.~
+Blackwater Silent Crossing narrows into a solemn pocket of the Nightfall Catacombs.
+The scent of old marrow lingers here; the chamber is marked by shattered reliquaries spilling saint-bone splinters.
+You hear brittle clicking, as if teeth chatter inside the walls.
+A toppled idol has been turned to face the entrance.
+~
 9 11
 D0
 ~
@@ -1915,7 +1375,11 @@ D2
 S
 #21074
 Gloambound Winding Aisle~
-Gloambound Winding Aisle narrows into a solemn pocket of the Nightfall Catacombs. Tallow smoke clings to your tongue; the chamber is marked by chains looped through cracked memorial pillars. Muted chanting rises, then collapses into absolute silence. A cracked mirror tile reflects only darkness behind you.~
+Gloambound Winding Aisle narrows into a solemn pocket of the Nightfall Catacombs.
+Tallow smoke clings to your tongue; the chamber is marked by chains looped through cracked memorial pillars.
+Muted chanting rises, then collapses into absolute silence.
+A cracked mirror tile reflects only darkness behind you.
+~
 13 11
 D0
 ~
@@ -1923,9 +1387,857 @@ D0
 0 -1 21073
 E
 runes~
-Runes carved in marrow-light warn that lesser undead may not tread here.
-~
+Runes carved in marrow-light warn that lesser undead may not tread here.~
 S
+#0
+#MOBILES
+#21075
+crypt rat~
+a crypt rat~
+A crypt rat gnaws on old bones here.
+
+~
+~
+1 0 -200 S
+12 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21076
+grave skitterling~
+a grave skitterling~
+A grave skitterling darts between broken skulls.
+
+~
+~
+1 0 -200 S
+13 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21077
+bone porter~
+a bone porter~
+A bone porter drags a chain of femurs behind it.
+
+~
+~
+1 0 -200 S
+14 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21078
+hollow acolyte~
+a hollow acolyte~
+A hollow acolyte mutters profane rites.
+
+~
+~
+1 0 -200 S
+15 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21079
+ash revenant~
+an ash revenant~
+An ash revenant rises from collapsed niches.
+
+~
+~
+1 0 -200 S
+16 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21080
+catacomb ghoul~
+a catacomb ghoul~
+A catacomb ghoul lurks in the shadows.
+
+~
+~
+1 0 -200 S
+17 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21081
+ossuary knight~
+an ossuary knight~
+An ossuary knight patrols in rusted plate.
+
+~
+~
+1 0 -200 S
+20 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21082
+bloodscribe~
+a bloodscribe~
+A bloodscribe inks curses on skin parchment.
+
+~
+~
+1 0 -200 S
+22 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21083
+mourning templar~
+a mourning templar~
+A mourning templar grips a notched blade.
+
+~
+~
+1 0 -200 S
+23 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21084
+carrion abbot~
+a carrion abbot~
+A carrion abbot chants under a cracked reliquary.
+
+~
+~
+1 0 -200 S
+24 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21085
+wight captain~
+a wight captain~
+A wight captain commands the dead in silence.
+
+~
+~
+1 0 -200 S
+26 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21086
+crypt juggernaut~
+a crypt juggernaut~
+A crypt juggernaut blocks the corridor with iron mass.
+
+~
+~
+1 0 -200 S
+27 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21087
+sepulcher lich~
+the Sepulcher Lich~
+The Sepulcher Lich hovers above a rune-carved dais.
+
+~
+~
+3 0 -200 S
+28 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21088
+bone colossus~
+the Bone Colossus~
+The Bone Colossus towers over shattered sarcophagi.
+
+~
+~
+3 0 -200 S
+28 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21089
+nightveil matriarch~
+the Nightveil Matriarch~
+The Nightveil Matriarch watches with abyssal eyes.
+
+~
+~
+3 0 -200 S
+28 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21090
+marrow mite~
+a marrow mite~
+A marrow mite skitters between rib-stacked alcoves.
+~
+~
+1 0 -200 S
+12 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21091
+tomb bat~
+a tomb bat~
+A tomb bat wheels through the stale air overhead.
+~
+~
+1 0 -200 S
+13 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21092
+cinder scavenger~
+a cinder scavenger~
+A cinder scavenger claws through ash and bone splinters.
+~
+~
+1 0 -200 S
+14 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21093
+grave dust imp~
+a grave dust imp~
+A grave dust imp capers and hisses from a broken niche.
+~
+~
+1 0 -200 S
+15 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21094
+bone candle novice~
+a bone candle novice~
+A bone candle novice whispers rites beside guttering wax.
+~
+~
+1 0 -200 S
+16 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21095
+crypt stalker~
+a crypt stalker~
+A crypt stalker prowls the corridor with hungry patience.
+~
+~
+1 0 -200 S
+17 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21096
+chain penitent~
+a chain penitent~
+A chain penitent drags sanctified iron behind it.
+~
+~
+1 0 -200 S
+18 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21097
+dusk embalmer~
+a dusk embalmer~
+A dusk embalmer tends jars of black balm and old organs.
+~
+~
+1 0 -200 S
+19 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21098
+censer devotee~
+a censer devotee~
+A censer devotee swings braziers that leak violet smoke.
+~
+~
+1 0 -200 S
+20 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21099
+black-choir adept~
+a black-choir adept~
+A black-choir adept intones hymns in a dead tongue.
+~
+~
+1 0 -200 S
+21 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21190
+reliquary reaver~
+a reliquary reaver~
+A reliquary reaver hacks relic-cases apart for marrow shards.
+~
+~
+1 0 -200 S
+22 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21191
+ossified executioner~
+an ossified executioner~
+An ossified executioner hefts an edge chipped by centuries.
+~
+~
+1 0 -200 S
+23 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21192
+sepulchral herald~
+a sepulchral herald~
+A sepulchral herald raises a cracked banner of skin and bone.
+~
+~
+1 0 -200 S
+24 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21193
+grave oath knight~
+a grave oath knight~
+A grave oath knight guards these tombways without rest.
+~
+~
+1 0 -200 S
+25 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21194
+pallid deathspeaker~
+a pallid deathspeaker~
+A pallid deathspeaker hurls curses wrapped in grave-wind.
+~
+~
+1 0 -200 S
+26 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#21195
+catacomb dreadguard~
+a catacomb dreadguard~
+A catacomb dreadguard stands like a wall of ancient iron.
+~
+~
+1 0 -200 S
+27 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
+#OBJECTS
+#21100
+ember halo~
+an ember halo~
+An ember halo flickers with dying light.~
+9 134217728 8388609 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+12
+#21101
+veil of grave-mist~
+a veil of grave-mist~
+A veil of grave-mist hangs here, cold and damp.~
+9 134217728 8388624 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+13
+#21102
+cryptbone gorget~
+a cryptbone gorget~
+A cryptbone gorget lies half-buried in ash.~
+9 134217728 8388736 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+14
+#21103
+acolyte mantle~
+an acolyte mantle~
+An acolyte mantle is draped over a broken bier.~
+9 134217728 8389120 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+15
+#21104
+scriber wraps~
+scriber wraps~
+Scribe-wrapped bands stained with black ichor lie here.~
+9 134217728 8389632 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+16
+#21105
+sepulcher bracer~
+a sepulcher bracer~
+A sepulcher bracer rests beside a shattered urn.~
+9 134217728 8390656 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+17
+#21106
+ghoulclaw gauntlets~
+ghoulclaw gauntlets~
+A pair of ghoulclaw gauntlets sits in the dust.~
+9 134217728 8392704 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+18
+#21107
+ring of hollow vows~
+a ring of hollow vows~
+A ring of hollow vows glints from a skull.~
+9 134217728 8396800 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+19
+#21108
+funerary censer~
+a funerary censer~
+A funerary censer swings from a broken chain.~
+5 134217728 8421376 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+20
+#21109
+graveworn shroud~
+a graveworn shroud~
+A graveworn shroud lies folded in silence.~
+9 134217728 8454144 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+10
+#21110
+ossuary girdle~
+an ossuary girdle~
+An ossuary girdle is buckled around cracked vertebrae.~
+9 134217728 8519680 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+11
+#21111
+catacomb cuirass~
+a catacomb cuirass~
+A catacomb cuirass leans against a crypt wall.~
+9 134217728 8650752 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+20
+#21112
+march of bones greaves~
+march of bones greaves~
+March of bones greaves are lined in dust.~
+9 134217728 9437184 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+18
+#21113
+gravebound sabatons~
+gravebound sabatons~
+Gravebound sabatons rest near old claw marks.~
+9 134217728 10485760 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+16
+#21114
+lichfire circlet~
+a lichfire circlet~
+A lichfire circlet burns with violet flame.~
+9 134217792 8388616 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+25
+#21115
+matriarchs whisper~
+the Matriarch's Whisper~
+A jeweled whisper-mask hums with dark promise.~
+9 134217792 8388672 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+25
+#21116
+colossus plate~
+the Colossus Plate~
+A massive plate harness creaks with trapped souls.~
+9 134217792 8650752 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+25
+#21117
+nightveil blade~
+the Nightveil Blade~
+The Nightveil Blade drinks the pale torchlight.~
+5 134217792 8421376 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+25
+#21118
+sepulcher sigil~
+the Sepulcher Sigil~
+A rune-cut sigil throbs with arcane hunger.~
+9 134217792 8388610 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+25
+#21119
+bone tyrants treads~
+the Bone Tyrant's Treads~
+Heavy treads of engraved bone await a conqueror.~
+9 134217792 10485760 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+25
+#21120
+ashglass halo~
+an ashglass halo~
+An ashglass halo glimmers above cold dust.~
+9 134217728 8388609 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+12
+#21121
+grave-silk cowl~
+a grave-silk cowl~
+A grave-silk cowl lies in a folded hush.~
+9 134217728 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+14
+#21122
+cryptglass visor~
+a cryptglass visor~
+A cryptglass visor reflects only torchless dark.~
+9 134217728 8388624 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+15
+#21123
+bonewire earring~
+a bonewire earring~
+A bonewire earring hums with muted hymns.~
+9 134217728 8388672 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+13
+#21124
+mourner's torque~
+a mourner's torque~
+A mourner's torque is etched with names no one speaks.~
+9 134217728 8388736 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+18
+#21125
+candlewick mantle~
+a candlewick mantle~
+A candlewick mantle drips blackened wax.~
+9 134217728 8389120 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+16
+#21126
+ossuary armbinds~
+ossuary armbinds~
+Ossuary armbinds lie beside carved knucklebones.~
+9 134217728 8389632 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+14
+#21127
+chain-punisher bracer~
+a chain-punisher bracer~
+A chain-punisher bracer is heavy with old penance.~
+9 134217728 8390656 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+17
+#21128
+graveclaw gloves~
+graveclaw gloves~
+A pair of graveclaw gloves is lined with iron hooks.~
+9 134217728 8392704 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+17
+#21129
+sepulcher signet~
+a sepulcher signet~
+A sepulcher signet gleams with funerary lacquer.~
+9 134217728 8396800 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+12
+#21130
+censer of dusk smoke~
+a censer of dusk smoke~
+A censer of dusk smoke drifts along without wind.~
+5 134217728 8421376 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+20
+#21131
+shroud of last vows~
+a shroud of last vows~
+A shroud of last vows pools like nightwater.~
+9 134217728 8454144 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+19
+#21132
+bone-thread cincture~
+a bone-thread cincture~
+A bone-thread cincture is knotted with tiny fingerbones.~
+9 134217728 8519680 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+13
+#21133
+sepulcher harness~
+a sepulcher harness~
+A sepulcher harness creaks as if it still breathes.~
+9 134217728 8650752 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+20
+#21134
+funeral greaves~
+funeral greaves~
+Funeral greaves are scored by countless blows.~
+9 134217728 9437184 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+18
+#21135
+barrow sabatons~
+barrow sabatons~
+Barrow sabatons leave grey prints in dust.~
+9 134217728 10485760 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+16
+#21136
+witchlight aura~
+a witchlight aura~
+A witchlight aura flickers with violet breath.~
+9 134217728 8388610 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+18
+#21137
+crypt preacher's hood~
+a crypt preacher's hood~
+A crypt preacher's hood smells of incense and ash.~
+9 134217728 8388616 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+20
+#21138
+iron reliquary mask~
+an iron reliquary mask~
+An iron reliquary mask stares with empty sockets.~
+9 134217728 8388624 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+18
+#21139
+grave-lit pauldrons~
+grave-lit pauldrons~
+Grave-lit pauldrons pulse with dim runes.~
+9 134217728 8389120 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+19
+#21140
+deathsong band~
+a deathsong band~
+A deathsong band vibrates with choral echoes.~
+9 134217728 8396800 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+11
+#21141
+sepulchral falchion~
+a sepulchral falchion~
+A sepulchral falchion is dark with old stains.~
+5 134217728 8421376 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+20
+#21142
+ossified cuirass~
+an ossified cuirass~
+An ossified cuirass is layered with lacquered bone.~
+9 134217728 8650752 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+19
+#21143
+black-marrow treads~
+black-marrow treads~
+Black-marrow treads grind over broken teeth and stone.~
+9 134217728 10485760 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+20
 #0
 #RESETS
 M 0 21075 1 21002 (null)
@@ -2058,7 +2370,7 @@ E 0 21140 0 17 (null)
 
 E 0 21136 0 2 (null)
 
-M 0 21144 3 21026 (null)
+M 0 21190 3 21026 (null)
 
 E 0 21141 0 20 (null)
 
@@ -2066,7 +2378,7 @@ E 0 21139 0 12 (null)
 
 E 0 21132 0 25 (null)
 
-M 0 21145 2 21031 (null)
+M 0 21191 2 21031 (null)
 
 E 0 21121 0 4 (null)
 
@@ -2074,7 +2386,7 @@ E 0 21142 0 26 (null)
 
 E 0 21135 0 29 (null)
 
-M 0 21146 2 21037 (null)
+M 0 21192 2 21037 (null)
 
 E 0 21137 0 4 (null)
 
@@ -2082,7 +2394,7 @@ E 0 21124 0 9 (null)
 
 E 0 21139 0 12 (null)
 
-M 0 21147 2 21045 (null)
+M 0 21193 2 21045 (null)
 
 E 0 21138 0 5 (null)
 
@@ -2092,7 +2404,7 @@ E 0 21134 0 28 (null)
 
 E 0 21141 0 20 (null)
 
-M 0 21148 2 21052 (null)
+M 0 21194 2 21052 (null)
 
 E 0 21136 0 2 (null)
 
@@ -2100,7 +2412,7 @@ E 0 21137 0 4 (null)
 
 E 0 21130 0 20 (null)
 
-M 0 21149 2 21060 (null)
+M 0 21195 2 21060 (null)
 
 E 0 21142 0 26 (null)
 
@@ -2128,27 +2440,27 @@ M 0 21098 3 21036 (null)
 
 M 0 21099 3 21039 (null)
 
-M 0 21144 3 21043 (null)
+M 0 21190 3 21043 (null)
 
-M 0 21145 2 21048 (null)
+M 0 21191 2 21048 (null)
 
-M 0 21146 2 21054 (null)
+M 0 21192 2 21054 (null)
 
-M 0 21147 2 21058 (null)
+M 0 21193 2 21058 (null)
 
-M 0 21148 2 21062 (null)
+M 0 21194 2 21062 (null)
 
-M 0 21149 2 21067 (null)
+M 0 21195 2 21067 (null)
 
 M 0 21095 3 21069 (null)
 
 M 0 21098 3 21070 (null)
 
-M 0 21144 3 21071 (null)
+M 0 21190 3 21071 (null)
 
-M 0 21147 2 21072 (null)
+M 0 21193 2 21072 (null)
 
-M 0 21149 2 21073 (null)
+M 0 21195 2 21073 (null)
 
 S
 #$

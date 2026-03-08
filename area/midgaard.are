@@ -5048,7 +5048,7 @@ L 0 0 0 0 0 0 0 0 0
 ladder~
 ~
 ~
-1 0 0 1
+1 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -5110,7 +5110,7 @@ L
 loren mask~
 loren's Silver Mask~
 The Mask of Loren lies here.~
-9 1 8388624 1
+9 0 8388624 1
 0 0 0 0 0 0 0 0 0 0
 4
 A
@@ -5125,7 +5125,7 @@ L
 ddagger~
 a dagger~
 A dagger lies here.~
-5 1 8421376 1
+5 0 8421376 1
 0 0 0 11 0 0 0 0 0 0
 4
 A
@@ -5142,7 +5142,7 @@ L
 dcomic~
 a Dark Horse Comic~
 A tattered, well-read edition of Dark Horse Presents... lies forgotten here.~
-1 1 8421376 1
+1 0 8421376 1
 0 0 -1 0 0 0 0 0 0 0
 4
 A
@@ -5161,7 +5161,7 @@ L
 ddhell~
 darkDemon's flaming blade named "HellsFury"~
 DarkDemon's blazing blade is here !~
-5 3 8421376 1
+5 2 8421376 1
 0 0 0 11 0 0 0 0 0 0
 4
 A
@@ -5182,7 +5182,7 @@ The lover's board is stuck to the wall with 4 arrows.
 
 
 ~
-27 0 0 1
+27 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -5191,7 +5191,7 @@ L
 notice board~
 the notice board.~
 There is a large notice board fixed to the wall.~
-27 0 0 1
+27 0 8388608 1
 10 1 1 2 0 0 0 0 0 0
 13
 L
@@ -5200,7 +5200,7 @@ L
 board notice bulletin~
 the test board.~
 There is a Test Bulletin Board here.~
-27 0 0 1
+27 0 8388608 1
 10 1 1 1 0 0 0 0 0 0
 13
 L
@@ -5218,7 +5218,7 @@ L
 banner~
 a war banner~
 A war banner is on the floor here.~
-1 134217793 8421376 1
+1 134217792 8421376 1
 0 0 -1 0 0 0 0 0 0 0
 4
 A
@@ -5521,7 +5521,7 @@ L
 notice liquidation bank~
 the bank's notice of liquidation~
 The bank's notice of liquidation is taped to the wall.~
-12 0 0 1
+12 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 13
 E
@@ -5591,7 +5591,7 @@ L
 fountain water~
 a fountain~
 A small white fountain gushes forth here.~
-25 0 0 1
+25 0 8388608 1
 15 0 0 0 0 0 0 0 0 0
 13
 E
@@ -5607,7 +5607,7 @@ L
 bench~
 the Bench~
 A white-painted wooden bench is standing here.~
-12 0 0 1
+12 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 13
 E
@@ -5649,7 +5649,7 @@ L
 safe~
 the safe~
 A safe is placed in a dark corner of the room.~
-15 0 0 1
+15 0 8388608 1
 34 15 3123 0 0 0 0 0 0 0
 13
 E
@@ -5665,7 +5665,7 @@ L
 desk drawer~
 the desk~
 A desk is set against the western wall.~
-15 0 0 1
+15 0 8388608 1
 34 15 3122 0 0 0 0 0 0 0
 13
 E
@@ -5955,7 +5955,7 @@ L
 boots~
 a pair of leather boots~
 A pair of leather boots is lying here on the ground.~
-0 9 8392704 1
+0 8 8392704 1
 2 0 0 0 0 0 0 0 0 0
 4
 L
@@ -6143,7 +6143,7 @@ The board for thought sharing is here, floating downwind slowly.
 
 
 ~
-27 0 0 1
+27 0 8388608 1
 0 0 0 3191 0 0 0 0 0 0
 4
 L
@@ -6175,7 +6175,7 @@ L
 Osiris Statue~
 @@gStatue of @@cOsiris@@N~
 @@gStatue of @@cOsiris~
-12 1 0 1
+12 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 4
 E
@@ -6195,7 +6195,7 @@ A board sits here, with post it notes attached, a single one saying if in need o
 
 
 ~
-27 0 0 1
+27 0 8388608 1
 10 0 0 3049 0 0 0 0 0 0
 4
 L
@@ -6204,7 +6204,7 @@ L
 board~
 @@WThe @@bTales @@Wof @@yHonor@@W Board@@N~
 @@WThe @@bTales @@Wof @@yHonor@@W Board @@Wfloats here quietly.@@N~
-27 0 0 1
+27 0 8388608 1
 10 0 0 3052 0 0 0 0 0 0
 13
 L
@@ -6213,7 +6213,7 @@ L
 Duel Board~
 duel Challenge Board (aka Mortal Combat)~
 A board on which to issue challenges to those deserving them~
-27 1 0 1
+27 0 8388608 1
 30 1 10 3014 0 0 0 0 0 0
 13
 L

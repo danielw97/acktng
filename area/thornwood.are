@@ -2443,7 +2443,7 @@ thorn wolf tooth fang~
 @@dA thorn wolf's fang, hooked and dark, lies here.@@N
 
 ~
-9 134217728 16777344 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -2454,7 +2454,7 @@ wight wrapping dark cloth~
 @@dA strip of dark barrow wrapping lies here, stiff as bark.@@N
 
 ~
-9 134217728 16908288 0
+9 134217728 8519680 0
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -2465,7 +2465,7 @@ specter chain shard~
 @@dA fragment of ghostly chain lies here, cold to the touch.@@N
 
 ~
-9 134217728 16777344 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -2476,7 +2476,7 @@ druid bark crown thorned~
 @@dA crown of dark thorned bark rests here.@@N
 
 ~
-9 134217728 16777232 0
+9 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -2487,7 +2487,7 @@ grave hound collar~
 @@dA spiked iron collar lies here.@@N
 
 ~
-9 134217728 16777472 0
+9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -2498,7 +2498,7 @@ cultist pendant thorned~
 @@dA pendant of black iron and thorned wire hangs here.@@N
 
 ~
-9 134217728 16777472 0
+9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -2509,7 +2509,7 @@ wraith veil estate~
 @@dA wisp of dark fabric hangs in the air, settling slowly.@@N
 
 ~
-9 134217728 16777248 0
+9 134217728 8388640 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -2520,7 +2520,7 @@ hunt rider cloak dark~
 @@dA cloak of dark horsehide lies here, reeking of pine and cold fire.@@N
 
 ~
-9 134217728 16908288 0
+9 134217728 8519680 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -2531,7 +2531,7 @@ thornwood ghoul ring bone~
 @@dA ring made of compacted and polished bone lies here.@@N
 
 ~
-9 134217728 16793600 0
+9 134217728 8404992 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -2542,7 +2542,7 @@ thornwood cultist staff bramble~
 @@dA twisted staff of thornwood bramble rests here.@@N
 
 ~
-5 134217728 16842752 0
+5 134217728 8454144 0
 3 0 5 6 0 0 0 0 0 0
 3
 L
@@ -2553,7 +2553,7 @@ hunt rider lance shadowwood~
 @@dA lance of dark lacquered shadowwood rests here.@@N
 
 ~
-5 134217728 16842752 0
+5 134217728 8454144 0
 3 0 6 3 0 0 0 0 0 0
 9
 L
@@ -2564,7 +2564,7 @@ bone weaver wire gauntlets~
 @@dA pair of gauntlets woven from fine bone wire lies here.@@N
 
 ~
-9 134217728 16785408 0
+9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -2575,7 +2575,7 @@ ghoul claw bracer~
 @@dA bracer set with thorn-shaped claws of dark iron lies here.@@N
 
 ~
-9 134217728 16781312 0
+9 134217728 8392704 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -2586,7 +2586,7 @@ bone weaver thorax plate~
 @@dA chestplate of woven bone and wire lies here, surprisingly light.@@N
 
 ~
-9 134217728 17301504 0
+9 134217728 8912896 0
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2597,7 +2597,7 @@ bone weaver tibia greaves~
 @@dA pair of greaves woven from tibia and fine wire lies here.@@N
 
 ~
-9 134217728 18874368 0
+9 134217728 10485760 0
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2608,7 +2608,7 @@ cultist robe thorn dark~
 @@dRobes of dark homespun marked with thorn-sigils lie here.@@N
 
 ~
-9 134217728 17301504 0
+9 134217728 8912896 0
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -2619,7 +2619,7 @@ cultist pouch herb dark~
 @@dA belt pouch of dark leather, smelling of strange herbs, lies here.@@N
 
 ~
-9 134217728 16908288 0
+9 134217728 8519680 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -2630,7 +2630,7 @@ cultist wand thornwood~
 @@dA slender wand of thornwood, etched with sigils, rests here.@@N
 
 ~
-5 1207959552 16842752 0
+5 1207959552 8454144 0
 3 0 4 2 0 0 0 0 0 0
 2
 L
@@ -2641,7 +2641,7 @@ crypt guardian bracer bone plate~
 @@dA bracer of thick fused bone lies here.@@N
 
 ~
-9 134217728 16781312 0
+9 134217728 8392704 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2652,7 +2652,7 @@ crypt guardian shoulder brace~
 @@dHeavy bone-plate shoulder armour lies here.@@N
 
 ~
-9 134217728 16777216 1024
+9 134217728 8388608 1024
 0 0 0 0 0 0 0 0 0 0
 13
 L
@@ -2663,7 +2663,7 @@ elder cultist pendant moonstone~
 @@dA moonstone pendant set in black iron hangs here.@@N
 
 ~
-9 134217728 16777472 0
+9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -2674,7 +2674,7 @@ blackened thorn knight shield~
 @@dA heavy kite shield bearing the estate's thorn crest lies here, briars growing from its edge.@@N
 
 ~
-9 671088640 16842752 0
+9 671088640 8454144 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2685,7 +2685,7 @@ blackened thorn knight helm~
 @@dA helm fused with flowering black briars lies here.@@N
 
 ~
-9 134217728 16777232 0
+9 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2696,7 +2696,7 @@ blackened thorn knight greaves~
 @@dGreaves of dark iron grown through with briars lie here.@@N
 
 ~
-9 134217728 18874368 0
+9 134217728 10485760 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2707,7 +2707,7 @@ hunt master lance black~
 @@dA black iron lance engraved with hunt-sigils rests here.@@N
 
 ~
-5 134217728 16842752 0
+5 134217728 8454144 0
 3 0 8 4 0 0 0 0 0 0
 9
 L
@@ -2718,7 +2718,7 @@ hunt master horn shadow~
 @@dA horn of shadow-bone carved with hunting scenes rests here.@@N
 
 ~
-8 134217728 16777216 0
+8 134217728 8388608 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -2729,7 +2729,7 @@ hunt master ring iron cold~
 @@dAn iron ring set with a black stone that holds something moving inside lies here.@@N
 
 ~
-9 134217728 16793600 0
+9 134217728 8404992 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -2740,7 +2740,7 @@ elder wight burial crown~
 @@dA bronze burial crown, green with age, lies here.@@N
 
 ~
-9 134217728 16777232 0
+9 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -2751,7 +2751,7 @@ elder wight ring burial~
 @@dA thick bronze ring, funerary-inscribed, lies here.@@N
 
 ~
-9 134217728 16793600 0
+9 134217728 8404992 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -2762,7 +2762,7 @@ elder wight burial arm guard~
 @@dA bronze arm guard, burial-worked and heavy, lies here.@@N
 
 ~
-9 134217728 16779264 0
+9 134217728 8390656 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -2773,7 +2773,7 @@ harren sword thorn dark~
 @@dLord Harren's Thornblade rests here, its edge still sharp despite the briars.@@N
 
 ~
-5 134217792 16842752 0
+5 134217792 8454144 0
 3 0 10 5 0 0 0 0 0 0
 9
 L
@@ -2784,7 +2784,7 @@ harren signet ring~
 @@dThe Thornwood estate signet ring lies here, still warm.@@N
 
 ~
-9 134217792 16793600 0
+9 134217792 8404992 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -2795,7 +2795,7 @@ harren estate cloak~
 @@dA magnificent cloak of deep purple velvet lies here, trimmed with thorned vine.@@N
 
 ~
-9 134217792 16908288 0
+9 134217792 8519680 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -2806,7 +2806,7 @@ harren plate breastplate thorn~
 @@dA breastplate of thorn-worked dark iron lies here.@@N
 
 ~
-9 134217792 17301504 0
+9 134217792 8912896 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2817,7 +2817,7 @@ bone guardian plate gauntlets~
 @@dHeavy iron gauntlets set with bone-spurs lie here.@@N
 
 ~
-9 134217728 16785408 0
+9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2828,7 +2828,7 @@ bone guardian skull helm~
 @@dA helm formed from a single oversized skull lies here.@@N
 
 ~
-9 134217728 16777232 0
+9 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2839,7 +2839,7 @@ bone guardian ribcage chest~
 @@dArmour of fused ribcage segments lies here.@@N
 
 ~
-9 134217728 17301504 0
+9 134217728 8912896 0
 0 0 0 0 0 0 0 0 0 0
 15
 L
@@ -2850,7 +2850,7 @@ shaman thorned staff~
 @@dA staff of living thornwood, still growing, rests here.@@N
 
 ~
-5 1207959552 16842752 0
+5 1207959552 8454144 0
 3 0 6 3 0 0 0 0 0 0
 3
 L
@@ -2861,7 +2861,7 @@ shaman mask bone~
 @@dA mask of carved bone, marked with thornwood sigils, rests here.@@N
 
 ~
-9 134217728 16777248 0
+9 134217728 8388640 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -2872,7 +2872,7 @@ shaman cord waist~
 @@dA waist cord of woven thorn-vine rests here.@@N
 
 ~
-9 134217728 17039360 0
+9 134217728 8650752 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -2883,7 +2883,7 @@ blackened thorn knight boots~
 @@dBoots of dark iron grown with briars lie here.@@N
 
 ~
-9 134217728 20971520 0
+9 134217728 12582912 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2894,7 +2894,7 @@ blackened thorn knight gauntlets~
 @@dGauntlets of dark iron grown through with briars lie here.@@N
 
 ~
-9 134217728 16785408 0
+9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2905,7 +2905,7 @@ blackened thorn knight bracer~
 @@dBracers of dark iron grown through with briars lie here.@@N
 
 ~
-9 134217728 16781312 0
+9 134217728 8392704 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2916,7 +2916,7 @@ harren thorn boots~
 @@dBoots of dark thorn-worked iron lie here.@@N
 
 ~
-9 134217792 20971520 0
+9 134217792 12582912 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2927,7 +2927,7 @@ harren wrist thorned vambrace~
 @@dA vambrace of dark iron and thornwork lies here.@@N
 
 ~
-9 134217792 16781312 0
+9 134217792 8392704 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2938,7 +2938,7 @@ harren legs thorn~
 @@dGreaves of dark thorn-worked iron lie here.@@N
 
 ~
-9 134217792 18874368 0
+9 134217792 10485760 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2949,7 +2949,7 @@ harren shoulder thorned pauldrons~
 @@dPauldrons of dark iron grown through with thorns lie here.@@N
 
 ~
-9 134217792 16777216 1024
+9 134217792 8388608 1024
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2960,7 +2960,7 @@ harren arms thorned vambrace arm~
 @@dArm guards of dark iron grown through with briars lie here.@@N
 
 ~
-9 134217792 16779264 0
+9 134217792 8390656 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -2971,7 +2971,7 @@ shaman ear thorn stud~
 @@dA thorn-iron ear stud lies here.@@N
 
 ~
-9 134217728 16777344 0
+9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -2982,7 +2982,7 @@ shaman waist vine cord~
 @@dA thick waist cord of thornvine lies here.@@N
 
 ~
-9 134217728 17039360 0
+9 134217728 8650752 0
 0 0 0 0 0 0 0 0 0 0
 4
 L
@@ -2993,7 +2993,7 @@ shaman neck collar bone~
 @@dA collar of bone and thorn lies here.@@N
 
 ~
-9 134217728 16777472 0
+9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -3004,7 +3004,7 @@ elder wight amulet bronze~
 @@dA heavy bronze burial amulet lies here.@@N
 
 ~
-9 134217728 16777472 0
+9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -3015,7 +3015,7 @@ elder wight burial torque~
 @@dA bronze torque of ancient burial craft lies here.@@N
 
 ~
-9 134217728 16777472 0
+9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -3026,7 +3026,7 @@ elder wight burial greaves~
 @@dBronze burial greaves of ancient make lie here.@@N
 
 ~
-9 134217728 18874368 0
+9 134217728 10485760 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -3037,7 +3037,7 @@ lich thornwood robe~
 @@dRobes of deep purple edged with living thorn-vine lie here.@@N
 
 ~
-9 134217792 17301504 0
+9 134217792 8912896 0
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -3048,7 +3048,7 @@ lich thornwood staff crystal~
 @@dA staff of thornwood topped with a crystal shard that still pulses with cold light lies here.@@N
 
 ~
-5 1207959616 16842752 0
+5 1207959616 8454144 0
 3 0 10 5 0 0 0 0 0 0
 2
 L
@@ -3059,7 +3059,7 @@ lich thornwood ring binding~
 @@dA ring of iron set with a shard of the cave crystal lies here, cold to the touch.@@N
 
 ~
-9 134217792 16793600 0
+9 134217792 8404992 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3070,7 +3070,7 @@ lich thornwood amulet seal~
 @@dAn amulet of black iron bearing the binding sigil in relief lies here.@@N
 
 ~
-9 134217792 16777472 0
+9 134217792 8388864 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3081,7 +3081,7 @@ lich thornwood crown thorn crystal~
 @@dA crown of twisted thorn-iron set with cave crystal lies here.@@N
 
 ~
-9 134217792 16777232 0
+9 134217792 8388624 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3092,7 +3092,7 @@ harren thorn helm dark~
 @@dA full helm of dark iron fused with black briars lies here.@@N
 
 ~
-9 134217792 16777232 0
+9 134217792 8388624 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -3103,7 +3103,7 @@ harren gauntlets thorn iron~
 @@dGauntlets of dark thorn-worked iron lie here.@@N
 
 ~
-9 134217792 16785408 0
+9 134217792 8396800 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -3114,7 +3114,7 @@ harren amulet bone thorn estate~
 @@dA heavy amulet of thorn-iron set with a dark estate gem lies here.@@N
 
 ~
-9 134217792 16777472 0
+9 134217792 8388864 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -3125,7 +3125,7 @@ harren waist sash dark velvet~
 @@dA sash of dark velvet threaded with iron thorns lies here.@@N
 
 ~
-9 134217792 17039360 0
+9 134217792 8650752 0
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -3136,7 +3136,7 @@ hunt master helm antler~
 @@dA helm wreathed in cold shadow and crowned with antlers lies here.@@N
 
 ~
-9 134217792 16777232 0
+9 134217792 8388624 0
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -3147,7 +3147,7 @@ hunt master gauntlets shadow~
 @@dGauntlets of shadow-leather set with bone studs lie here.@@N
 
 ~
-9 134217792 16785408 0
+9 134217792 8396800 0
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -3158,7 +3158,7 @@ hunt master boots shadow~
 @@dBoots of shadow-leather trimmed with cold fur lie here.@@N
 
 ~
-9 134217792 20971520 0
+9 134217792 12582912 0
 0 0 0 0 0 0 0 0 0 0
 9
 L
@@ -3169,7 +3169,7 @@ hunt master greaves shadow~
 @@dGreaves of shadow-worked leather and cold iron lie here.@@N
 
 ~
-9 134217792 18874368 0
+9 134217792 10485760 0
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -3180,7 +3180,7 @@ hunt master waist bone cord~
 @@dA belt of braided bone-cord hung with teeth and antler fragments lies here.@@N
 
 ~
-9 134217728 17039360 0
+9 134217728 8650752 0
 0 0 0 0 0 0 0 0 0 0
 8
 L
@@ -3191,7 +3191,7 @@ hunt master amulet cold fire~
 @@dAn amulet of shadow-iron whose inset stone glows with cold fire lies here.@@N
 
 ~
-9 134217728 16777472 0
+9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 7
 L
@@ -3202,7 +3202,7 @@ hunt master shield shadow~
 @@dA shield of shadow-bound bone and iron bearing the hunt's mark lies here.@@N
 
 ~
-9 671088704 16842752 0
+9 671088704 8454144 0
 0 0 0 0 0 0 0 0 0 0
 12
 L
@@ -3213,7 +3213,7 @@ lich thornwood gloves bone~
 @@dGloves of pale thin bone-plate etched with binding notation lie here.@@N
 
 ~
-9 134217792 16785408 0
+9 134217792 8396800 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3224,7 +3224,7 @@ lich thornwood waist sash~
 @@dA sash of deep purple silk worked with binding sigils in cold iron thread lies here.@@N
 
 ~
-9 134217792 17039360 0
+9 134217792 8650752 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3235,7 +3235,7 @@ lich thornwood shoulder mantle~
 @@dA mantle of thornwood, still breathing with cold life, rests here.@@N
 
 ~
-9 134217792 16777216 1024
+9 134217792 8388608 1024
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -3246,7 +3246,7 @@ lich thornwood boots slippered~
 @@dSlippers of blackened grave-silk reinforced with bone slivers lie here.@@N
 
 ~
-9 134217792 20971520 0
+9 134217792 12582912 0
 0 0 0 0 0 0 0 0 0 0
 2
 L
@@ -3257,7 +3257,7 @@ lich thornwood veil face~
 @@dA veil of near-transparent bone-silk embroidered entirely in binding sigils lies here.@@N
 
 ~
-9 134217728 16777248 0
+9 134217728 8388640 0
 0 0 0 0 0 0 0 0 0 0
 1
 L

@@ -19,303 +19,136 @@ M No bad room spells allowed.
 #3230
 Roc Road~
 You are standing on Roc Road, the main link between Midgaard and the lands to
-
-the west.  Tall, majestic trees line the side of the road.  The entrance to
-
-Midgaard lies to East.
-
-~
-
-~
-
-~
-~
-
-the west.  Tall, majestic trees line the side of the road.
-
-~
-
-~
-
-~
-~
-
-the west.  Tall, majestic trees line the side of the road.
-
-~
-
-~
-
-~
-
-North and South also.
-
-~
-
-~
-
-~
-S
-
-the west.  Tall, majestic trees line the side of the road.
-
-~
-
-~
-
-~
-
-the west.  Tall, majestic trees line the side of the road.
-
-~
-
-~
-
-~
-
-the west.  Tall, majestic trees line the side of the road.
-
-~
-
-~
-~
-
-~
-
-the west.  Tall, majestic trees line the side of the road.
-
-~
-Roc Road.
-
-~
-~
-
-~
-
-the west.  Tall, majestic trees line the side of the road.  The Road continues
-
-to the North, toward the town of Kiess, whilst a small path leads of to the
-
-South, into the trees.
-
-~
-
-~
-
-~
-
-~
-
-to the bend in the South.
-
-~
+the west.  Tall, majestic trees line the side of the road.  The entrance to
+Midgaard lies to East.
+~
 0 3
-
+D1
+Midgaard.
+~
 ~
+0 -1 3041
+D3
 Roc Road.
-
+~
 ~
-~
-
-to the bend in the South.
-
-~
-
-~
-
-~
-
-~
-~
-
-to the bend in the South.
-
-~
-
-~
-
-~
-
-to the bend in the South.
-
-~
-
-~
-
-~
-
-You may enter Evermeet by travelling North, or head back towards Midgaard by
-
-leaving South.
-
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-~
-
-~
-
-~
-
-bends off towards the West here.
-
-~
-
-~
-
-~
+0 -1 3231
 S
-
+#3231
+Roc Road~
+You are standing on Roc Road, the main link between Midgaard and the lands to
+the west.  Tall, majestic trees line the side of the road.
+~
+0 3
+D1
+Roc Road.
+~
 ~
-
+0 -1 3230
+D3
+Roc Road.
+~
 ~
-
+0 -1 3232
+S
+#3232
+Roc Road~
+You are standing on Roc Road, the main link between Midgaard and the lands to
+the west.  Tall, majestic trees line the side of the road.
+~
+0 3
+D1
+Roc Road.
+~
 ~
-
+0 -1 3231
+D3
+The Crossroads.
+~
 ~
-
+0 -1 3233
+S
+#3233
+CrossRoads~
+You are at a crossroads.  Roc Road runs East/West, while paths lead off to the
+North and South also.
+~
+0 3
+D1
+Roc Road.
+~
 ~
-
+0 -1 3232
+D3
+Roc Road.
+~
 ~
-~
-
-~
+0 -1 3234
+S
+#3234
+Roc Road~
+You are standing on Roc Road, the main link between Midgaard and the lands to
+the west.  Tall, majestic trees line the side of the road.
+~
+0 3
 D0
 ~
 ~
-
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-thinner here, and you hear the sounds of water to the West.
-
-~
-
-~
-
-~
-~
-
-sea inlet.  It appears that you are standing on a small cliff, which you
-
-could climb down to get to the tiny beach.
-
-~
-
-~
-
-~
-
-massive trees of the forest.  The Inlet that feeds this beach continues
-
-off to the West.
-
-~
-
-~
-
-~
-
-~
-
-back to the tiny beach to the East.  The further West you go, the deeper you
-
-notice the water becomes.
-
-~
-
-~
-~
-
-~
-
-back to the tiny beach to the East.  The further West you go, the deeper you
-
-notice the water becomes.
-
-~
-
-~
-~
-
-~
-S
-
-back to the tiny beach to the East.  The further West you go, the deeper you
-
-notice the water becomes.  The depth here appears to be *pretty* deep!
-
-~
-
-~
-
-~
-
-East you can see a small inlet heading inland, whilst the Sea continues to
-
-the West.
-
-~
+0 -1 11200
 D1
-
+The Crossroads.
+~
 ~
-
+0 -1 3233
+D3
+Roc Road.
+~
 ~
+0 -1 3235
+S
+#3235
+Roc Road~
+You are standing on Roc Road, the main link between Midgaard and the lands to
+the west.  Tall, majestic trees line the side of the road.
+~
+0 3
+D1
+Roc Road.
+~
 ~
-
-East you can see a small inlet heading inland, whilst the Sea continues to
-
-the West.
-
+0 -1 3234
+D3
+Roc Road.
+~
 ~
-
+0 -1 3236
+S
+#3236
+Roc Road~
+You are standing on Roc Road, the main link between Midgaard and the lands to
+the west.  Tall, majestic trees line the side of the road.
+~
+0 3
+D1
+Roc Road.
+~
 ~
-
+0 -1 3235
+D3
+Roc Road.
+~
 ~
-~
-
-creatures that would be unhappy to meet you, so to speak.
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-
-~
-~
-
-~
-
-North.  It looks very old....
-
-~
-D 0 3253 1 1 
-D 0 3260 3 1 
+0 -1 3237
+S
+#3237
+Roc Road~
+You are standing on Roc Road, the main link between Midgaard and the lands to
+the west.  Tall, majestic trees line the side of the road.
+~
+0 3
+D1
+Roc Road.
+~
 ~
 0 -1 3236
 D3
