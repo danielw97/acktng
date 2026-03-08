@@ -2340,7 +2340,8 @@ Syntax:          icommand <command> <channel> [<data..>]
 will refresh all channels on that daemon.
 
 icommand create creates a new channel, with you as the owner
-icommand destroy destroys a channel. You must own the channel.
+ %A  current arcane power      %P  current holy power.
+icommand destroy destroys a channel. You must own the channel.
 
 icommand policy changes the basic policy of the channel (see ICE-POLICY).
 You must be the owner.

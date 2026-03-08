@@ -47,6 +47,8 @@ void apply_necromancer_damage_debuff(CHAR_DATA *ch, CHAR_DATA *victim, int sn, i
 /* magic.c */
 int mana_cost(CHAR_DATA *ch, int sn);
 int spell_regen_base_heal(int mage_level, int sorcerer_level, int wizard_level, int spellpower);
+bool is_arcane_spell(int sn);
+bool is_holy_power_spell(int sn);
 
 #define ELE_NONE BIT_0
 #define ELE_PHYSICAL BIT_1

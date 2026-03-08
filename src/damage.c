@@ -21,6 +21,21 @@ static CHAR_DATA *short_fight_victim = NULL;
 static int short_fight_total_damage = 0;
 static int short_fight_reactive_damage = 0;
 
+
+static bool is_holy_power_spell_damage(int sn)
+{
+    if (sn < 0 || sn >= MAX_SKILL)
+        return FALSE;
+
+    if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
+        return FALSE;
+
+    return skill_table[sn].skill_level[CLASS_CLE] >= 0
+        || skill_table[sn].skill_level[CLASS_PRI] >= 0
+        || skill_table[sn].skill_level[CLASS_PAL] >= 0
+        || skill_table[sn].skill_level[CLASS_TEM] >= 0;
+}
+
 int scale_damage(CHAR_DATA *ch, CHAR_DATA *victim, int element, int dam, int dt);
 bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim);
 void dam_message(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool critical);
@@ -276,6 +291,14 @@ int calculate_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int elem
 
     if (!IS_SET(element, ELE_PHYSICAL))
     {
+        if (!IS_NPC(ch) && is_holy_power_spell_damage(dt))
+        {
+            int holy_power_bonus = UMIN(ch->holy_power * 5, 100);
+
+            dam += dam * holy_power_bonus / 100;
+            ch->holy_power = 0;
+        }
+
         crit_chance = get_spell_crit(ch);
 
         if (is_arcane_spell(dt))

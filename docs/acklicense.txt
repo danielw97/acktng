@@ -149,6 +149,7 @@ PROMPT <%*> where "<%*>" are the various variables you may set for yourself.
         %t :  Display mud-time.
         %i :  Display whether or not your are invis or visible.
         %A :  Display your current Arcane Power.
+        %P :  Display your current Holy Power.
         %s :  Display your current Stance.
         %w :  Display experience still needed in a certain class.  Follow with 
               the 2 letter class identifier used in the who output.
