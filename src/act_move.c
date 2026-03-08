@@ -1469,7 +1469,7 @@ void do_halls(CHAR_DATA *ch, char *argument)
 
    act("$n vanishes into a beam of energy!", ch, NULL, NULL, TO_ROOM);
    char_from_room(ch);
-   char_to_room(ch, get_room_index(1015));
+   char_to_room(ch, get_room_index(32544));
    act("$n steps out of the energy beam!", ch, NULL, NULL, TO_ROOM);
 
    do_look(ch, "auto");
