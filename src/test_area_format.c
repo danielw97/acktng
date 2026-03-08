@@ -304,6 +304,10 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
 
         if (strchr("QKNILVXFUORWPTBSM", trimmed[0]) == NULL)
             fail_area_test(area_path, *line_number, "invalid #AREA directive '%c'", trimmed[0]);
+
+        /* Directives K, L, O, U take tilde-terminated string values that may span multiple lines */
+        if (strchr("KLOU", trimmed[0]) != NULL && strchr(line, '~') == NULL)
+            consume_tilde_string(fp, line, line_number, area_path);
     }
 }
 
