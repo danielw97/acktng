@@ -1,0 +1,98 @@
+name: Validate Open PRs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  discover-open-prs:
+    runs-on: ubuntu-latest
+    outputs:
+      prs: ${{ steps.collect.outputs.prs }}
+      count: ${{ steps.collect.outputs.count }}
+    steps:
+      - name: Collect open pull requests
+        id: collect
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pulls = await github.paginate(github.rest.pulls.list, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+
+            const numbers = pulls.map((pull) => pull.number);
+            core.info(`Found ${numbers.length} open PR(s): ${numbers.join(', ') || 'none'}`);
+            core.setOutput('prs', JSON.stringify(numbers));
+            core.setOutput('count', String(numbers.length));
+
+  validate-open-prs:
+    needs: discover-open-prs
+    if: needs.discover-open-prs.outputs.count != '0'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        pr: ${{ fromJson(needs.discover-open-prs.outputs.prs) }}
+    steps:
+      - name: Checkout PR #${{ matrix.pr }}
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ matrix.pr }}/head
+
+      - name: Build unit tests for PR #${{ matrix.pr }}
+        id: tests
+        continue-on-error: true
+        run: make unit-tests
+        working-directory: src
+
+      - name: Approve PR #${{ matrix.pr }} if tests pass
+        if: steps.tests.outcome == 'success'
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ matrix.pr }}
+        with:
+          script: |
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: Number(process.env.PR_NUMBER),
+              event: 'APPROVE',
+              body: 'Automated approval: `make unit-tests` passed for this pull request.',
+            });
+
+      - name: Reject PR #${{ matrix.pr }} if tests fail
+        if: steps.tests.outcome == 'failure'
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ matrix.pr }}
+        with:
+          script: |
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: Number(process.env.PR_NUMBER),
+              event: 'REQUEST_CHANGES',
+              body: 'Automated rejection: `make unit-tests` failed for this pull request.',
+            });
+
+      - name: Fail workflow when tests fail
+        if: steps.tests.outcome == 'failure'
+        run: |
+          echo "Unit tests failed for PR #${{ matrix.pr }}."
+          exit 1
+
+  no-open-prs:
+    needs: discover-open-prs
+    if: needs.discover-open-prs.outputs.count == '0'
+    runs-on: ubuntu-latest
+    steps:
+      - name: No open PRs found
+        run: echo "No open pull requests to validate."
