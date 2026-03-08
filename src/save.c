@@ -2337,6 +2337,372 @@ static char *chest_file_path(int vnum, char *dest, size_t dest_size)
 }
 
 /*
+ * Write one keep chest object (and its contents recursively) to fp.
+ * Nest=0 is the chest itself; its contents are written at Nest=1+.
+ * Unlike fwrite_corpse, no WhereVnum is written — chest contents are
+ * always loaded back into their parent container, never into a room.
+ */
+#ifdef UNIT_TEST_SAVE
+void fwrite_chest(OBJ_DATA *obj, FILE *fp, int iNest)
+#else
+static void fwrite_chest(OBJ_DATA *obj, FILE *fp, int iNest)
+#endif
+{
+   EXTRA_DESCR_DATA *ed;
+   AFFECT_DATA *paf;
+
+   /* Slick recursion: write list backwards so loading restores forward order. */
+   if (obj->next_in_carry_list != NULL)
+      fwrite_chest(obj->next_in_carry_list, fp, iNest);
+
+   fprintf(fp, "#OBJECT\n");
+   fprintf(fp, "Nest         %d\n", iNest);
+   fprintf(fp, "Name         %s~\n", obj->name);
+   fprintf(fp, "ShortDescr   %s~\n", obj->short_descr);
+   fprintf(fp, "Description  %s~\n", obj->description);
+   fprintf(fp, "Vnum         %d\n", obj->pIndexData->vnum);
+   fprintf(fp, "ExtraFlags   %d\n", obj->extra_flags);
+   fprintf(fp, "WearFlags    %d\n", obj->wear_flags);
+   fprintf(fp, "WearLoc      %d\n", obj->wear_loc);
+   if (obj->obj_fun != NULL)
+      fprintf(fp, "Objfun       %s~\n", rev_obj_fun_lookup(obj->obj_fun));
+   fprintf(fp, "ClassFlags   %d\n", obj->item_apply);
+   fprintf(fp, "ItemType     %d\n", obj->item_type);
+   fprintf(fp, "Weight       %d\n", obj->weight);
+   fprintf(fp, "Level        %d\n", obj->level);
+   fprintf(fp, "Timer        %d\n", obj->timer);
+   fprintf(fp, "Cost         %d\n", obj->cost);
+   fprintf(fp, "Values       %d %d %d %d\n", obj->value[0], obj->value[1], obj->value[2], obj->value[3]);
+
+   switch (obj->item_type)
+   {
+   case ITEM_POTION:
+   case ITEM_SCROLL:
+      if (obj->value[1] > 0)
+         fprintf(fp, "Spell 1      '%s'\n", skill_table[obj->value[1]].name);
+      if (obj->value[2] > 0)
+         fprintf(fp, "Spell 2      '%s'\n", skill_table[obj->value[2]].name);
+      if (obj->value[3] > 0)
+         fprintf(fp, "Spell 3      '%s'\n", skill_table[obj->value[3]].name);
+      break;
+   case ITEM_PILL:
+   case ITEM_STAFF:
+      if (obj->value[3] > 0)
+         fprintf(fp, "Spell 3      '%s'\n", skill_table[obj->value[3]].name);
+      break;
+   }
+
+   for (paf = obj->first_apply; paf != NULL; paf = paf->next)
+      fprintf(fp, "Affect       %d %d %d %d %d\n", paf->type, paf->duration, paf->modifier, paf->location, paf->bitvector);
+
+   for (ed = obj->first_exdesc; ed != NULL; ed = ed->next)
+      fprintf(fp, "ExtraDescr   %s~ %s~\n", ed->keyword, ed->description);
+
+   fprintf(fp, "End\n\n");
+
+   if (obj->first_in_carry_list != NULL)
+      fwrite_chest(obj->first_in_carry_list, fp, iNest + 1);
+}
+
+/*
+ * Read one #OBJECT block from fp and place the item into its parent container
+ * using rgObjNest[].  rgObjNest[0] must be set to the chest before calling.
+ * Items at Nest=0 are silently skipped (the chest itself already exists).
+ */
+#ifdef UNIT_TEST_SAVE
+void fread_chest_item(FILE *fp)
+#else
+static void fread_chest_item(FILE *fp)
+#endif
+{
+   static OBJ_DATA obj_zero;
+   OBJ_DATA *obj;
+   char *word;
+   int iNest;
+   bool fMatch;
+   bool fNest;
+   bool fVnum;
+   int Temp_Obj = 0, OldVnum = 0;
+
+   GET_FREE(obj, obj_free);
+   *obj = obj_zero;
+   obj->name = str_dup("");
+   obj->short_descr = str_dup("");
+   obj->description = str_dup("");
+   fNest = FALSE;
+   fVnum = TRUE;
+   iNest = 0;
+
+   init_changed_vnum_hash();
+
+   for (;;)
+   {
+      word = feof(fp) ? "End" : fread_word(fp);
+      fMatch = FALSE;
+
+      switch (UPPER(word[0]))
+      {
+      case '*':
+         fMatch = TRUE;
+         fread_to_eol(fp);
+         break;
+
+      case 'A':
+         if (!str_cmp(word, "Affect"))
+         {
+            AFFECT_DATA *paf;
+
+            GET_FREE(paf, affect_free);
+            paf->type = fread_number(fp);
+            paf->duration = fread_number(fp);
+            paf->modifier = fread_number(fp);
+            paf->location = fread_number(fp);
+            paf->bitvector = fread_number(fp);
+            LINK(paf, obj->first_apply, obj->last_apply, next, prev);
+            fMatch = TRUE;
+            break;
+         }
+         break;
+
+      case 'C':
+         KEY("Cost", obj->cost, fread_number(fp));
+         KEY("ClassFlags", obj->item_apply, fread_number(fp));
+         break;
+
+      case 'D':
+         SKEY("Description", obj->description, fread_string(fp));
+         break;
+
+      case 'E':
+         KEY("ExtraFlags", obj->extra_flags, fread_number(fp));
+
+         if (!str_cmp(word, "ExtraDescr"))
+         {
+            EXTRA_DESCR_DATA *ed;
+
+            GET_FREE(ed, exdesc_free);
+            ed->keyword = fread_string(fp);
+            ed->description = fread_string(fp);
+            LINK(ed, obj->first_exdesc, obj->last_exdesc, next, prev);
+            fMatch = TRUE;
+         }
+
+         if (!str_cmp(word, "End"))
+         {
+            if (!fNest || !fVnum)
+            {
+               AFFECT_DATA *paf;
+               EXTRA_DESCR_DATA *ed;
+
+               monitor_chan("fread_chest_item: incomplete object.", MONITOR_BAD);
+               while ((paf = obj->first_apply) != NULL)
+               {
+                  obj->first_apply = paf->next;
+                  PUT_FREE(paf, affect_free);
+               }
+               while ((ed = obj->first_exdesc) != NULL)
+               {
+                  obj->first_exdesc = ed->next;
+                  PUT_FREE(ed, exdesc_free);
+               }
+               PUT_FREE(obj, obj_free);
+               return;
+            }
+            else
+            {
+               /* iNest == 0 means this is the chest record itself — skip it. */
+               if (iNest == 0)
+               {
+                  AFFECT_DATA *paf;
+                  EXTRA_DESCR_DATA *ed;
+
+                  while ((paf = obj->first_apply) != NULL)
+                  {
+                     obj->first_apply = paf->next;
+                     PUT_FREE(paf, affect_free);
+                  }
+                  while ((ed = obj->first_exdesc) != NULL)
+                  {
+                     obj->first_exdesc = ed->next;
+                     PUT_FREE(ed, exdesc_free);
+                  }
+                  free_string(obj->name);
+                  free_string(obj->short_descr);
+                  free_string(obj->description);
+                  PUT_FREE(obj, obj_free);
+                  return;
+               }
+
+               LINK(obj, first_obj, last_obj, next, prev);
+               obj->pIndexData->count++;
+
+               if (Temp_Obj)
+               {
+                  int newvnum;
+                  OBJ_INDEX_DATA *pObjIndex;
+                  int nMatch = 0;
+                  int vnum;
+
+                  newvnum = TEMP_VNUM;
+
+                  if (OldVnum != TEMP_VNUM)
+                  {
+                     if ((newvnum = vnum_from_hash_ref(get_hash_entry(hash_changed_vnums, OldVnum))) != 0)
+                     {
+                        obj->pIndexData = get_obj_index(newvnum);
+                        if (obj->pIndexData == NULL)
+                        {
+                           obj->pIndexData = get_obj_index(TEMP_VNUM);
+                           newvnum = TEMP_VNUM;
+                        }
+                     }
+                  }
+
+                  if (newvnum == TEMP_VNUM)
+                  {
+                     for (vnum = 0; nMatch < top_obj_index; vnum++)
+                     {
+                        if ((pObjIndex = get_obj_index(vnum)) != NULL)
+                        {
+                           nMatch++;
+                           if (!str_cmp(obj->short_descr, pObjIndex->short_descr))
+                           {
+                              obj->pIndexData = pObjIndex;
+                              break;
+                           }
+                        }
+                     }
+                  }
+               }
+
+               /* Place item into parent container using nesting array. */
+               if (rgObjNest[iNest - 1] != NULL)
+                  obj_to_obj(obj, rgObjNest[iNest - 1]);
+               else
+               {
+                  monitor_chan("fread_chest_item: missing parent container in nest.", MONITOR_BAD);
+                  obj->pIndexData->count--;
+                  UNLINK(obj, first_obj, last_obj, next, prev);
+                  free_string(obj->name);
+                  free_string(obj->short_descr);
+                  free_string(obj->description);
+                  PUT_FREE(obj, obj_free);
+               }
+               return;
+            }
+         }
+         break;
+
+      case 'I':
+         KEY("ItemType", obj->item_type, fread_number(fp));
+         break;
+
+      case 'L':
+         KEY("Level", obj->level, fread_number(fp));
+         break;
+
+      case 'N':
+         KEY("Name", obj->name, fread_string(fp));
+
+         if (!str_cmp(word, "Nest"))
+         {
+            iNest = fread_number(fp);
+            if (iNest < 0 || iNest >= MAX_NEST)
+            {
+               monitor_chan("fread_chest_item: bad nest.", MONITOR_BAD);
+            }
+            else
+            {
+               rgObjNest[iNest] = obj;
+               fNest = TRUE;
+            }
+            fMatch = TRUE;
+         }
+         break;
+
+      case 'O':
+         if (!str_cmp(word, "Objfun"))
+         {
+            char *dumpme;
+            dumpme = fread_string(fp);
+            obj->obj_fun = obj_fun_lookup(dumpme);
+            free_string(dumpme);
+            fMatch = TRUE;
+         }
+         break;
+
+      case 'S':
+         SKEY("ShortDescr", obj->short_descr, fread_string(fp));
+
+         if (!str_cmp(word, "Spell"))
+         {
+            int iValue;
+            int sn;
+
+            iValue = fread_number(fp);
+            sn = skill_lookup(fread_word(fp));
+            if (iValue < 0 || iValue > 3)
+               monitor_chan("fread_chest_item: bad iValue", MONITOR_BAD);
+            else if (sn < 0)
+               monitor_chan("fread_chest_item: unknown skill.", MONITOR_BAD);
+            else
+               obj->value[iValue] = sn;
+            fMatch = TRUE;
+            break;
+         }
+         break;
+
+      case 'T':
+         KEY("Timer", obj->timer, fread_number(fp));
+         break;
+
+      case 'V':
+         if (!str_cmp(word, "Values"))
+         {
+            obj->value[0] = fread_number(fp);
+            obj->value[1] = fread_number(fp);
+            obj->value[2] = fread_number(fp);
+            obj->value[3] = fread_number(fp);
+            fMatch = TRUE;
+            break;
+         }
+
+         if (!str_cmp(word, "Vnum"))
+         {
+            int vnum;
+
+            vnum = fread_number(fp);
+
+            if ((obj->pIndexData = get_obj_index(vnum)) == NULL || vnum == TEMP_VNUM)
+            {
+               Temp_Obj = 1;
+               OldVnum = vnum;
+               vnum = TEMP_VNUM;
+               obj->pIndexData = get_obj_index(vnum);
+            }
+            else
+               fVnum = TRUE;
+            fMatch = TRUE;
+            break;
+         }
+         break;
+
+      case 'W':
+         KEY("WearFlags", obj->wear_flags, fread_number(fp));
+         KEY("WearLoc", obj->wear_loc, fread_number(fp));
+         KEY("Weight", obj->weight, fread_number(fp));
+         break;
+      }
+
+      if (!fMatch)
+      {
+         monitor_chan("fread_chest_item: no match.", MONITOR_BAD);
+         fread_to_eol(fp);
+      }
+   }
+}
+
+/*
  * Save a single keep chest (and its contents) to CHEST_DIR/<vnum>.
  * Uses write-to-temp-then-rename for atomicity.
  */
@@ -2378,7 +2744,7 @@ void save_chest(OBJ_DATA *chest)
       return;
    }
 
-   fwrite_corpse(chest, fp, 0);
+   fwrite_chest(chest, fp, 0);
    fprintf(fp, "#END\n\n");
    fflush(fp);
    fclose(fp);
@@ -2397,48 +2763,13 @@ void delete_chest_file(int vnum)
 }
 
 /*
- * Skip one #OBJECT...End block without creating any objects.
- * Used by load_chest() to skip the chest's own record (the chest already
- * exists in the world; we only want to load its *contents*).
- */
-static void skip_object_block(FILE *fp)
-{
-   char *word;
-
-   for (;;)
-   {
-      if (feof(fp))
-         break;
-      word = fread_word(fp);
-      if (!str_cmp(word, "End"))
-         break;
-      /* String fields: read and discard the tilde-terminated string. */
-      if (!str_cmp(word, "Name") || !str_cmp(word, "ShortDescr")
-          || !str_cmp(word, "Description") || !str_cmp(word, "Objfun"))
-      {
-         char *s = fread_string(fp);
-         free_string(s);
-      }
-      else if (!str_cmp(word, "ExtraDescr"))
-      {
-         char *s1 = fread_string(fp);
-         char *s2 = fread_string(fp);
-         free_string(s1);
-         free_string(s2);
-      }
-      else
-         fread_to_eol(fp); /* numeric / multi-value fields */
-   }
-}
-
-/*
  * Load the contents of a keep chest from CHEST_DIR/<vnum>.
  * The chest object must already exist in the world (placed by area reset or
- * do_keep).  We skip the first #OBJECT block (which describes the chest
- * itself) to avoid creating a duplicate, then read subsequent blocks as the
- * chest's contents using the standard fread_corpse() path.
+ * do_keep).  The first #OBJECT block describes the chest itself and is
+ * silently discarded by fread_chest_item (Nest=0).  Subsequent blocks are
+ * the chest's contents and are placed into the chest via obj_to_obj.
  *
- * Called from register_persistent_container() the first time a keep chest
+ * Called from register_keep_chest() the first time a keep chest
  * enters a room, so the chest is populated with saved items exactly once.
  */
 void load_chest(int vnum)
@@ -2447,7 +2778,6 @@ void load_chest(int vnum)
    char path[MAX_STRING_LENGTH];
    OBJ_DATA *obj;
    int i;
-   bool first_block;
 
    if (chest_file_path(vnum, path, sizeof(path)) == NULL)
       return;
@@ -2472,7 +2802,6 @@ void load_chest(int vnum)
    if (obj != NULL)
       rgObjNest[0] = obj;
 
-   first_block = TRUE;
    for (;;)
    {
       char letter;
@@ -2491,11 +2820,7 @@ void load_chest(int vnum)
          break;
       if (str_cmp(word, "OBJECT"))
          break;
-      if (first_block)
-         skip_object_block(fp); /* skip chest record — it already exists */
-      else
-         fread_corpse(fp);
-      first_block = FALSE;
+      fread_chest_item(fp);
    }
 
    fclose(fp);

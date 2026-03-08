@@ -221,6 +221,7 @@ typedef struct council_data COUNCIL_DATA;
 typedef struct member_data MEMBER_DATA;
 typedef struct trigger_data TRIGGER_DATA;
 typedef struct corpse_data CORPSE_DATA;
+typedef struct chest_data CHEST_DATA;
 typedef struct mark_data MARK_DATA;
 typedef struct mark_list_member MARK_LIST_MEMBER;
 

@@ -194,6 +194,14 @@ struct corpse_data
    OBJ_DATA *this_corpse;
 };
 
+struct chest_data
+{
+   bool is_free; /* Ramias:for run-time checks of LINK/UNLINK */
+   CHEST_DATA *next;
+   CHEST_DATA *prev;
+   OBJ_DATA *this_chest;
+};
+
 struct member_data
 {
    bool is_free; /* Ramias:for run-time checks of LINK/UNLINK */
