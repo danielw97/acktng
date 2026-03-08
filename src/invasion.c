@@ -117,7 +117,7 @@ static CHAR_DATA *find_gertrude          (void);
 static bool       mob_is_invasion_mob    (CHAR_DATA *ch);
 static void       despawn_all_invasion   (void);
 int              invasion_boss_spawn_count_for_tick(int boss_ticks_up);
-static bool       is_midgaard_area_name(const char *area_name);
+
 static bool       invasion_should_advance_on_room_tick(void);
 int               invasion_should_advance_for_room_tick_count(int room_tick_count);
 static bool       invasion_should_boss_trash_talk_after_respawn(void);
@@ -215,24 +215,6 @@ int invasion_boss_spawn_count_for_tick(int boss_ticks_up)
     return UMIN(10, 1 + tiers);
 }
 
-static bool is_midgaard_area_name(const char *area_name)
-{
-    size_t i, len;
-    char lower_name[MAX_STRING_LENGTH];
-
-    if (area_name == NULL || area_name[0] == '\0')
-        return FALSE;
-
-    len = strlen(area_name);
-    if (len >= sizeof(lower_name))
-        len = sizeof(lower_name) - 1;
-
-    for (i = 0; i < len; i++)
-        lower_name[i] = (char)tolower((unsigned char)area_name[i]);
-    lower_name[len] = '\0';
-
-    return (strstr(lower_name, "midgaard") != NULL);
-}
 
 int invasion_should_advance_for_room_tick_count(int room_tick_count)
 {
