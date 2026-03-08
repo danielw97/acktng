@@ -7,6 +7,7 @@ int vnum_from_hash_ref(void *ref);
 int resolve_persistent_container_room_vnum_for_test(int room_vnum);
 int persistent_container_where_vnum_for_save_for_test(int in_room_vnum, int in_obj);
 char *chest_file_path(int vnum, char *dest, size_t dest_size);
+void fwrite_chest_minimal_for_test(FILE *fp, int vnum, const char *name, int nest);
 
 struct room_index_data
 {
@@ -241,6 +242,62 @@ static void test_chest_file_path_different_vnums_produce_different_paths(void)
     assert(strcmp(buf1, buf2) != 0);
 }
 
+/* Helper: write a minimal chest record to a tmpfile and read it back. */
+static size_t write_minimal_chest_to_buf(int vnum, const char *name, int nest,
+                                          char *out, size_t out_size)
+{
+    FILE *fp = tmpfile();
+    size_t n;
+
+    assert(fp != NULL);
+    fwrite_chest_minimal_for_test(fp, vnum, name, nest);
+    fflush(fp);
+    rewind(fp);
+    n = fread(out, 1, out_size - 1, fp);
+    out[n] = '\0';
+    fclose(fp);
+    return n;
+}
+
+static void test_fwrite_chest_writes_object_block(void)
+{
+    char buf[4096];
+    write_minimal_chest_to_buf(99, "sword", 0, buf, sizeof(buf));
+    assert(strstr(buf, "#OBJECT") != NULL);
+    assert(strstr(buf, "End") != NULL);
+}
+
+static void test_fwrite_chest_writes_correct_nest(void)
+{
+    char buf[4096];
+    write_minimal_chest_to_buf(99, "sword", 0, buf, sizeof(buf));
+    assert(strstr(buf, "Nest         0") != NULL);
+}
+
+static void test_fwrite_chest_writes_correct_vnum(void)
+{
+    char buf[4096];
+    write_minimal_chest_to_buf(42, "helm", 0, buf, sizeof(buf));
+    assert(strstr(buf, "Vnum         42") != NULL);
+}
+
+static void test_fwrite_chest_does_not_write_wherevnum(void)
+{
+    char buf[4096];
+    write_minimal_chest_to_buf(99, "sword", 0, buf, sizeof(buf));
+    /* Keep chest format must NOT include WhereVnum — unlike fwrite_corpse,
+     * chest contents are always loaded back into their parent container. */
+    assert(strstr(buf, "WhereVnum") == NULL);
+}
+
+static void test_fwrite_chest_content_uses_nest_one(void)
+{
+    char buf[4096];
+    /* Nest=1 in the output means this object is a chest content item. */
+    write_minimal_chest_to_buf(77, "pouch", 1, buf, sizeof(buf));
+    assert(strstr(buf, "Nest         1") != NULL);
+}
+
 int main(void)
 {
     test_round_trip_positive_vnum();
@@ -258,6 +315,11 @@ int main(void)
     test_chest_file_path_zero_vnum();
     test_chest_file_path_returns_null_when_buffer_too_small();
     test_chest_file_path_different_vnums_produce_different_paths();
+    test_fwrite_chest_writes_object_block();
+    test_fwrite_chest_writes_correct_nest();
+    test_fwrite_chest_writes_correct_vnum();
+    test_fwrite_chest_does_not_write_wherevnum();
+    test_fwrite_chest_content_uses_nest_one();
 
     puts("test_save: all tests passed");
     return 0;

@@ -153,6 +153,26 @@ static void add_keep_healer_reset(AREA_DATA *pArea, ROOM_INDEX_DATA *room, int h
     top_reset++;
 }
 
+static void add_keep_chest_reset(AREA_DATA *pArea, ROOM_INDEX_DATA *room, int chest_vnum)
+{
+    RESET_DATA *pReset;
+    BUILD_DATA_LIST *pList;
+
+    GET_FREE(pReset, reset_free);
+    pReset->command = 'O';
+    pReset->arg1 = chest_vnum;
+    pReset->arg2 = 1;
+    pReset->arg3 = room->vnum;
+
+    GET_FREE(pList, build_free);
+    pList->data = pReset;
+
+    LINK(pReset, pArea->first_reset, pArea->last_reset, next, prev);
+    LINK(pList, room->first_room_reset, room->last_room_reset, next, prev);
+
+    top_reset++;
+}
+
 static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const char *owner_name)
 {
     int iHash;
@@ -167,7 +187,7 @@ static OBJ_INDEX_DATA *create_keep_chest_index(AREA_DATA *pArea, int vnum, const
     pObjIndex->vnum = vnum;
     pObjIndex->area = pArea;
 
-    snprintf(name_buf, sizeof(name_buf), "%s keep_chest", owner_name);
+    snprintf(name_buf, sizeof(name_buf), "%s keep chest", owner_name);
     pObjIndex->name = str_dup(name_buf);
 
     keep_format_chest_short_descr(owner_name, short_buf, sizeof(short_buf));
@@ -484,7 +504,7 @@ void do_keep(CHAR_DATA *ch, char *argument)
     keepChestIndex = create_keep_chest_index(pArea, vnum, ch->name);
     keepChest = create_object(keepChestIndex, ch->level);
     obj_to_room(keepChest, RoomIndex);
-    save_chest(keepChest);
+    add_keep_chest_reset(pArea, RoomIndex, vnum);
 
     ch->pcdata->keep_vnum = vnum;
     do_savearea(NULL, (char *)pArea);
