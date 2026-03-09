@@ -1,0 +1,556 @@
+================================================================================
+  AREA PLAN: The Sands of Akh'enet
+  Level Range: 70-90 | Vnums: 2000-2149 (150 vnums)
+================================================================================
+
+1. AREA HEADER
+================================================================================
+
+  Name:       The Sands of Akh'enet
+  Keywords:   sands akhenet desert ruins
+  Level:      70 90
+  Vnums:      2000-2149
+  Area #:     (next available)
+  Reset Rate: 15 minutes
+  Reset Msg:  "@@yA blistering wind howls through the Sands of Akh'enet, scouring
+               stone and bone alike.@@N"
+  Color Theme: @@y (yellow) for deserts, @@b (brown) for ruins/underground,
+               @@R (red) for boss rooms and lava areas
+  Sector:     Mostly desert (10), inside (11) for tombs, mountain (5) for cliffs
+
+  Directives:
+    Q 16
+    K sands akhenet desert ruins~
+    L @@y70  @@R90~
+    N (next available)
+    I 70 90
+    V 2000 2149
+    F 15
+    U @@yA blistering wind howls through Akh'enet, scouring stone and bone.@@N~
+
+
+2. THEME AND LORE
+================================================================================
+
+  The Sands of Akh'enet are a cursed stretch of deep desert surrounding the
+  buried city-temple of Akh'enet, once a thriving civilization devoted to the
+  sun god Solahr. When the high priest Amenthari attempted a ritual to achieve
+  godhood, the resulting magical cataclysm scorched the land, buried the city,
+  and cursed its inhabitants to undeath. Now the ruins slowly emerge from
+  shifting dunes, drawing treasure seekers, raiders, and worse.
+
+  The area is divided into five distinct zones connected by a central hub:
+
+    (A) The Blasted Dunes       - Open desert approaches (entry zone)
+    (B) The Sunken Bazaar       - Half-buried merchant district
+    (C) The Temple of Solahr    - Above-ground temple complex
+    (D) The Buried Catacombs    - Underground tomb network
+    (E) The Sanctum of Amenthari - Deep inner sanctum (boss zone)
+
+
+3. ROOM PLAN (75 rooms)
+================================================================================
+
+  Vnum allocation for rooms: 2000-2074
+
+  --- (A) The Blasted Dunes (15 rooms: 2000-2014) ---
+  Entry zone, open desert. Sector: desert (10). Room flags: hot (32).
+
+  2000  Windswept Desert Edge         Entry point, connects to outside area
+  2001  Shifting Dune Ridge           North-south corridor
+  2002  Sand-Choked Trail             East-west path
+  2003  Bleached Bone Hollow          Scattered remains, flavor
+  2004  Crumbling Waystone            Ancient marker, crossroads
+  2005  Scorched Earth Flat           Open combat area
+  2006  Dust Devil Crossing           Elemental spawns
+  2007  Mirage Pool                   Illusory oasis, false water
+  2008  Petrified Grove               Dead trees turned to stone
+  2009  Vulture Circle                Circling carrion birds
+  2010  Sand Pit                      Trap-like depression
+  2011  Dune Crest Overlook           High point, scenic
+  2012  Wind-Carved Canyon Mouth      Transition to Bazaar
+  2013  Raider Ambush Point           Raider mob spawns
+  2014  Ancient Road Fragment         Paved road remnant, leads to Temple
+
+  --- (B) The Sunken Bazaar (15 rooms: 2015-2029) ---
+  Half-buried city district. Sector: inside (11). Room flags: indoors (8).
+
+  2015  Bazaar Entrance Ramp          Descending ramp from dunes
+  2016  Collapsed Market Stall Row    Rubble-filled passage
+  2017  Sand-Filled Merchant Hall     Large open chamber
+  2018  Cracked Fountain Square       Dry fountain centerpiece
+  2019  Jeweler's Ruin                Looted shop
+  2020  Armorer's Buried Workshop     Partially intact forge
+  2021  Alchemist's Shattered Lab     Broken vials, residue
+  2022  Spice Trader's Vault          Aromatic despite the ages
+  2023  Collapsed Upper Level         Dangerous footing
+  2024  Looter's Tunnel               Narrow passage dug by raiders
+  2025  Buried Tavern                 Ancient drinking hall
+  2026  Slave Market Ruins            Dark history, chains remain
+  2027  Caravanserai Courtyard        Open yard, stabling posts
+  2028  Hidden Cache Room             Secret room off main path
+  2029  Bazaar Back Alley             Connects to Temple approach
+
+  --- (C) The Temple of Solahr (15 rooms: 2030-2044) ---
+  Above-ground temple. Sector: inside (11). Room flags: indoors (8).
+
+  2030  Temple Forecourt              Open area before the temple
+  2031  Shattered Colonnade           Broken pillars line the path
+  2032  Hall of Sun Murals            Painted walls depicting Solahr
+  2033  Offering Alcove               Small side chamber
+  2034  Priest's Quarters             Cells for temple priests
+  2035  Reliquary of the Sun          Sacred objects (looted)
+  2036  Sanctified Pool Chamber       Ritual bathing area, dry
+  2037  Grand Nave                    Central worship hall, massive
+  2038  Choir Balcony                 Upper level overlooking nave
+  2039  Bell Tower Base               Bottom of a sand-filled tower
+  2040  Solar Observatory             Celestial instruments
+  2041  High Priest's Study           Scrolls and tablets
+  2042  Sealed Vault Door             Locked door to deeper areas
+  2043  Vestibule of Descent          Stairs leading down
+  2044  Consecrated Threshold         Transition to Catacombs
+
+  --- (D) The Buried Catacombs (20 rooms: 2045-2064) ---
+  Underground tombs. Sector: inside (11). Room flags: dark (1) + indoors (8) = 9.
+
+  2045  Catacomb Entry Hall           Wide descending corridor
+  2046  Bone-Lined Passage            Skulls set into walls
+  2047  Tomb of the Sun Warriors      Warrior sarcophagi
+  2048  Collapsed Burial Wing         Rubble blocks some paths
+  2049  Embalming Chamber             Ancient preparation room
+  2050  Ossuary of the Faithful       Massive bone collection
+  2051  Cursed Crypt Corridor         Magical traps hinted
+  2052  Fungal Growth Chamber         Bio-luminescent fungi
+  2053  Flooded Crypt                 Ankle-deep stagnant water
+  2054  Whispering Gallery            Echoing chamber
+  2055  Sarcophagus Row               Lined with stone coffins
+  2056  Guardian Alcove               Animated guardian spawn
+  2057  Dust-Choked Passage           Narrow, suffocating
+  2058  Sealed Royal Antechamber      Before the royal tombs
+  2059  Tomb of the Sun Queen         Sarcophagus of a queen
+  2060  Treasure Vault Anteroom       Before the treasure room
+  2061  Plundered Treasure Vault      Mostly empty, some remains
+  2062  Hidden Necromancer Workshop   Secret room, dark magic
+  2063  Winding Descent               Spiral stair going deeper
+  2064  Threshold of the Sanctum      Entry to final zone
+
+  --- (E) The Sanctum of Amenthari (10 rooms: 2065-2074) ---
+  Deepest area, boss zone. Sector: inside (11).
+  Room flags: dark (1) + indoors (8) + no_recall (8192) + no_teleport (16384)
+            = 24585.
+  Boss rooms additionally get no_mob (4) = 24589.
+
+  2065  Sanctum Antechamber           Guarded entry
+  2066  Hall of Eternal Flame         Magical fire pillars
+  2067  Mirror of Souls               Reflective obsidian walls
+  2068  Ritual Circle Chamber         Runic patterns on floor
+  2069  Pillar of the Sun God         Central pillar, glowing
+  2070  Chamber of the Failed         Petrified cultists
+  2071  The Burning Threshold         Lava-lit passage
+  2072  Throne of Amenthari           BOSS ROOM (no_mob flag)
+  2073  Vault of the Sun God          BOSS ROOM (no_mob flag)
+  2074  Amenthari's Secret Study      Hidden final room
+
+  Room connectivity summary:
+  - 2000 connects to an external area exit (down or a cardinal direction)
+  - Dunes flow south/east toward Bazaar (2012) and Temple (2014)
+  - Bazaar (2029) connects to Temple (2030)
+  - Temple (2043-2044) descends into Catacombs (2045)
+  - Catacombs (2063-2064) descend into Sanctum (2065)
+  - All rooms have at least 2 exits; dead ends avoided where possible
+  - Locked door at 2042 requires a key (object: Temple Vault Key)
+
+
+4. MOBILE PLAN (35 mobs)
+================================================================================
+
+  Vnum allocation for mobiles: 2000-2034
+
+  All mobs include act flags: is_npc (1) + stay_area (64) = 65 minimum.
+  Aggressive mobs add aggressive (32) = 97.
+  Undead mobs add undead (16384) = 16481 (with aggressive).
+  Boss mobs: sentinel (2) + boss (67108864) + is_npc (1) + stay_area (64)
+           = 67108931; with aggressive = 67108963.
+
+  --- Trash Mobs (levels 70-78) ---
+
+  Vnum  Name                     Lvl  Sex  Align  Notes
+  2000  sand asp                  70   0    0      Basic snake, desert
+  2001  dune beetle               71   0    0      Insect, desert
+  2002  bleached skeleton         72   0    -750   Undead, act=16481
+  2003  dust wraith               73   0    -750   Undead elemental, act=16481
+  2004  sunstruck jackal          70   0    0      Beast, desert
+  2005  wind-scoured ghoul        74   0    -750   Undead, act=16481
+  2006  bazaar phantom            75   0    -750   Undead, bazaar zone
+  2007  sand mite swarm           71   0    0      Insect swarm
+  2008  petrified sentinel        76   0    0      Construct, temple
+  2009  tomb scarab               72   0    0      Insect, catacomb
+  2010  cursed pilgrim            73   1    -500   Undead humanoid
+  2011  sun-crazed raider         75   1    -500   Human bandit
+  2012  dust devil                74   0    0      Air/earth elemental
+  2013  carrion vulture           70   0    0      Bird, scavenger
+
+  --- Mid Mobs (levels 76-82) ---
+
+  2014  sand golem                78   0    0      Construct, earth elemental
+  2015  catacomb guardian         79   0    -750   Undead warrior, act=16481
+  2016  entombed priest           77   1    -750   Undead caster, act=16481
+  2017  mummified warrior         80   1    -750   Undead melee, act=16481
+  2018  dune stalker              78   1    -500   Human assassin
+  2019  tomb spider               76   0    0      Large arachnid
+  2020  sand horror               79   0    0      Amorphous sand creature
+  2021  embalmed sorcerer         81   1    -750   Undead caster, act=16481
+  2022  scorpion broodmother      80   2    0      Large scorpion
+  2023  desert wraith lord        82   1    -750   Undead, act=16481
+
+  --- Elite Mobs (levels 82-86) ---
+
+  2024  sanctum flame guardian    84   0    0      Fire elemental, sanctum
+  2025  eternal sentinel          83   0    0      Construct, sanctum
+  2026  sun-cursed revenant       85   1    -1000  Powerful undead, act=16481
+  2027  obsidian golem            86   0    0      Construct, sanctum
+  2028  akh'enet shade            84   0    -750   Spectral undead
+
+  --- Boss Mobs (level 88-90, boss+sentinel flags, placed in no_mob rooms) ---
+
+  2029  Vizier Nephkara           88   1    -1000  Undead caster boss
+        act = 67108963 (is_npc+sentinel+aggressive+stay_area+boss)
+        Room: 2073 (Vault of the Sun God, no_mob flag)
+        hp_mod=40, ac_mod=-15, hr_mod=8, dr_mod=8
+        Has cast bitvector for offensive spells + def for heals
+        Elemental: strong_magic=fire(128), weak_magic=water(64)
+
+  2030  Sandstorm Colossus        88   0    0      Elemental boss
+        act = 67108963
+        Room: 2069 (Pillar of the Sun God, no_mob flag - add flag)
+        hp_mod=50, ac_mod=-20, hr_mod=8, dr_mod=10
+        Elemental: strong=earth(32), weak=air(16)
+
+  2031  The Devourer              89   0    -1000  Undead horror boss
+        act = 67108963
+        Room: 2070 (Chamber of the Failed, no_mob flag - add flag)
+        hp_mod=50, ac_mod=-15, hr_mod=10, dr_mod=8
+        Elemental: strong=shadow(256), weak=holy(8)
+
+  2032  High Priest Amenthari     90   1    -1000  FINAL BOSS, undead lich
+        act = 67108963
+        Room: 2072 (Throne of Amenthari, no_mob flag)
+        hp_mod=60, ac_mod=-20, hr_mod=12, dr_mod=12
+        Full cast+def bitvectors, combat modifiers via + line
+        Elemental: strong=fire(128)+holy(8)=136, weak=shadow(256)
+
+  --- Shopkeeper (non-aggressive) ---
+
+  2033  Zahra the Sand Merchant   80   2    0      Shop NPC
+        act = 67 (is_npc+sentinel+stay_area)
+        Room: 2020 (Armorer's Buried Workshop)
+        Sells armor/weapons, buys treasure
+
+  2034  Reth the Water Seller     75   1    0      Shop NPC
+        act = 67 (is_npc+sentinel+stay_area)
+        Room: 2018 (Cracked Fountain Square)
+        Sells food/drink
+
+
+5. OBJECT PLAN (40 objects)
+================================================================================
+
+  Vnum allocation for objects: 2000-2039
+
+  All objects have take flag (8388608) in wear_flags.
+  Weapons also have hold flag (32768): 8388608+32768 = 8421376.
+  Armor items have take + appropriate wear slot.
+  All objects have ITEM_MAGIC (64) in extra_flags unless noted.
+
+  Affect location codes (from reference areas):
+    17 = AC modifier
+    18 = hitroll modifier
+    19 = damroll modifier
+
+  --- Common Drops (level 70-78) ---
+
+  Vnum  Name                       Type  Wear Slot       Lvl  Notes
+  2000  sun-bleached turban        armor head(8)          70   AC -80
+  2001  cracked sandstone bracer   armor wrist(2048)      71   AC -81
+  2002  dusty linen wraps          armor body(262144)     72   AC -82
+  2003  sand-crusted boots         armor feet(2097152)    73   AC -83
+  2004  dune wanderer's cloak      armor about(65536)     74   AC -84
+  2005  scorpion tail whip         weapon (attack=4,whip) 72   HR+7,DR+7
+  2006  jagged bone knife          weapon (attack=2,stab) 70   HR+6,DR+6
+  2007  tarnished scarab pendant   armor neck(128)        75   AC -85
+  2008  sand viper fang ring       armor finger(8192)     71   AC -80
+  2009  sun-dried leather belt     armor waist(131072)    73   AC -82
+
+  --- Uncommon Drops (level 76-82) ---
+
+  2010  tomb guardian's helm       armor head(8)          78   AC -88
+  2011  mummified priest's robe    armor body(262144)     80   AC -90
+  2012  sand golem's fist          weapon (attack=7,pound)78   HR+8,DR+8
+  2013  catacomb stalker gloves    armor hands(4096)      77   AC -87
+  2014  entombed warrior's shield  armor hold(32768)      79   AC -89
+  2015  spider silk leg wraps      armor legs(1048576)    76   AC -86
+  2016  dune stalker's curved blade weapon (attack=3,slash)80  HR+9,DR+9
+  2017  revenant chain links       armor arms(1024)       81   AC -91
+  2018  obsidian earring           armor ear(64)          78   AC -88
+  2019  corroded temple mace       weapon (attack=8,crush)77   HR+8,DR+8
+
+  --- Rare/Boss Drops (level 83-90) ---
+
+  2020  crown of Vizier Nephkara   armor head(8)          88   AC -98
+        extra_flags: ITEM_MAGIC(64)+ITEM_RARE(2097152) = 2097216
+        Affects: AC -98
+        Boss drop from Vizier Nephkara (2029)
+
+  2021  sandstorm colossus core    armor hold(32768)      88   AC -98
+        extra_flags: ITEM_MAGIC(64)+ITEM_RARE(2097152) = 2097216
+        Boss drop from Sandstorm Colossus (2030)
+
+  2022  the Devourer's jawbone     weapon (attack=10,bite)89   HR+12,DR+12
+        extra_flags: ITEM_MAGIC(64)+ITEM_RARE(2097152) = 2097216
+        Boss drop from The Devourer (2031)
+
+  2023  Staff of Amenthari         weapon (attack=7,pound)90   HR+14,DR+14
+        extra_flags: ITEM_MAGIC(64)+ITEM_RARE(2097152) = 2097216
+        Boss drop from High Priest Amenthari (2032)
+
+  2024  Amenthari's sun-scorched robes  armor body(262144) 90  AC -100
+        extra_flags: ITEM_MAGIC(64)+ITEM_RARE(2097152) = 2097216
+        Boss drop from High Priest Amenthari (2032)
+
+  2025  gauntlets of eternal flame armor hands(4096)      88   AC -98
+        extra_flags: ITEM_MAGIC(64)+ITEM_RARE(2097152) = 2097216
+        Boss drop from Vizier Nephkara (2029)
+
+  --- Utility Objects ---
+
+  2026  temple vault key           key                    0    Opens door at 2042
+        item_type=18, wear_flags=8388608 (take only)
+
+  2027  cracked water flask        drink_con              0    Water container
+        item_type=17, wear_flags=8388608
+
+  2028  dried desert rations       food                   0    Food item
+        item_type=19, wear_flags=8388608
+
+  2029  ancient scroll fragment    treasure               0    Flavor/sell item
+        item_type=8, wear_flags=8388608
+
+  2030  handful of gold dust       money                  0    Currency drop
+        item_type=20, wear_flags=8388608
+
+  --- Additional Armor Drops ---
+
+  2031  sand-blasted shoulder guard  armor shoulders(512) 82   AC -92
+  2032  tomb watcher's finger ring   armor finger(8192)   84   AC -94
+  2033  akh'enet shade cowl          armor head(8)         84   AC -94
+  2034  scorpion chitin leg guards   armor legs(1048576)   80   AC -90
+  2035  flame guardian's bracers     armor wrist(2048)     85   AC -95
+  2036  eternal sentinel's belt      armor waist(131072)   83   AC -93
+  2037  obsidian golem shard blade   weapon (attack=1,slice) 86 HR+10,DR+10
+  2038  cursed pilgrim's tattered wrap  armor about(65536) 73  AC -83
+  2039  Nephkara's staff of binding  weapon (attack=7,pound) 88 HR+11,DR+11
+
+
+6. RESET PLAN
+================================================================================
+
+  Reset section places mobs in rooms and gives them equipment.
+  Format: M (load mob), G (give object to last mob).
+
+  --- Blasted Dunes (rooms 2000-2014) ---
+  M  sand asp (2000)           -> room 2000 (Windswept Desert Edge)
+  G  sand viper fang ring (2008)
+  M  dune beetle (2001)        -> room 2001 (Shifting Dune Ridge)
+  M  sunstruck jackal (2004)   -> room 2002 (Sand-Choked Trail)
+  M  bleached skeleton (2002)  -> room 2003 (Bleached Bone Hollow)
+  G  jagged bone knife (2006)
+  M  carrion vulture (2013)    -> room 2005 (Scorched Earth Flat)
+  M  dust devil (2012)         -> room 2006 (Dust Devil Crossing)
+  M  sand asp (2000)           -> room 2009 (Vulture Circle)
+  G  sand viper fang ring (2008)
+  M  dune beetle (2001)        -> room 2010 (Sand Pit)
+  M  dust wraith (2003)        -> room 2008 (Petrified Grove)
+  G  sun-bleached turban (2000)
+  M  sun-crazed raider (2011)  -> room 2013 (Raider Ambush Point)
+  G  scorpion tail whip (2005)
+  M  sunstruck jackal (2004)   -> room 2014 (Ancient Road Fragment)
+
+  --- Sunken Bazaar (rooms 2015-2029) ---
+  M  bazaar phantom (2006)     -> room 2016 (Collapsed Market Stall Row)
+  G  tarnished scarab pendant (2007)
+  M  wind-scoured ghoul (2005) -> room 2017 (Sand-Filled Merchant Hall)
+  G  cracked sandstone bracer (2001)
+  M  Reth the Water Seller (2034) -> room 2018 (Cracked Fountain Square)
+  M  Zahra the Sand Merchant (2033) -> room 2020 (Armorer's Buried Workshop)
+  M  sand mite swarm (2007)    -> room 2021 (Alchemist's Shattered Lab)
+  M  cursed pilgrim (2010)     -> room 2023 (Collapsed Upper Level)
+  G  cursed pilgrim's tattered wrap (2038)
+  M  sun-crazed raider (2011)  -> room 2024 (Looter's Tunnel)
+  G  scorpion tail whip (2005)
+  M  bazaar phantom (2006)     -> room 2025 (Buried Tavern)
+  G  tarnished scarab pendant (2007)
+  M  dune stalker (2018)       -> room 2028 (Hidden Cache Room)
+  G  dune stalker's curved blade (2016)
+
+  --- Temple of Solahr (rooms 2030-2044) ---
+  M  petrified sentinel (2008) -> room 2030 (Temple Forecourt)
+  G  corroded temple mace (2019)
+  M  tomb scarab (2009)        -> room 2031 (Shattered Colonnade)
+  M  entombed priest (2016)    -> room 2034 (Priest's Quarters)
+  G  mummified priest's robe (2011)
+  M  petrified sentinel (2008) -> room 2037 (Grand Nave)
+  G  corroded temple mace (2019)
+  M  sand golem (2014)         -> room 2040 (Solar Observatory)
+  G  sand golem's fist (2012)
+  M  entombed priest (2016)    -> room 2041 (High Priest's Study)
+  G  mummified priest's robe (2011)
+  O  temple vault key (2026)   -> room 2041 (High Priest's Study)
+  D  room 2042 door 0 state 2  (locked door, key=2026)
+
+  --- Buried Catacombs (rooms 2045-2064) ---
+  M  catacomb guardian (2015)  -> room 2045 (Catacomb Entry Hall)
+  G  tomb guardian's helm (2010)
+  M  bleached skeleton (2002)  -> room 2046 (Bone-Lined Passage)
+  G  jagged bone knife (2006)
+  M  mummified warrior (2017)  -> room 2047 (Tomb of Sun Warriors)
+  G  dusty linen wraps (2002)
+  M  tomb spider (2019)        -> room 2049 (Embalming Chamber)
+  G  spider silk leg wraps (2015)
+  M  wind-scoured ghoul (2005) -> room 2050 (Ossuary of the Faithful)
+  G  cracked sandstone bracer (2001)
+  M  dust wraith (2003)        -> room 2051 (Cursed Crypt Corridor)
+  G  sun-bleached turban (2000)
+  M  sand horror (2020)        -> room 2052 (Fungal Growth Chamber)
+  M  catacomb guardian (2015)  -> room 2056 (Guardian Alcove)
+  G  tomb guardian's helm (2010)
+  M  embalmed sorcerer (2021)  -> room 2054 (Whispering Gallery)
+  G  revenant chain links (2017)
+  M  mummified warrior (2017)  -> room 2055 (Sarcophagus Row)
+  G  dusty linen wraps (2002)
+  M  desert wraith lord (2023) -> room 2058 (Sealed Royal Antechamber)
+  G  obsidian earring (2018)
+  M  scorpion broodmother (2022) -> room 2059 (Tomb of the Sun Queen)
+  G  scorpion chitin leg guards (2034)
+  M  sand horror (2020)        -> room 2060 (Treasure Vault Anteroom)
+  M  embalmed sorcerer (2021)  -> room 2062 (Hidden Necromancer Workshop)
+  G  revenant chain links (2017)
+  M  sun-cursed revenant (2026) -> room 2063 (Winding Descent)
+  G  akh'enet shade cowl (2033)
+
+  --- Sanctum of Amenthari (rooms 2065-2074) ---
+  M  sanctum flame guardian (2024) -> room 2065 (Sanctum Antechamber)
+  G  flame guardian's bracers (2035)
+  M  eternal sentinel (2025)   -> room 2066 (Hall of Eternal Flame)
+  G  eternal sentinel's belt (2036)
+  M  obsidian golem (2027)     -> room 2067 (Mirror of Souls)
+  G  obsidian golem shard blade (2037)
+  M  akh'enet shade (2028)     -> room 2068 (Ritual Circle Chamber)
+  G  tomb watcher's finger ring (2032)
+  M  sanctum flame guardian (2024) -> room 2071 (The Burning Threshold)
+  G  flame guardian's bracers (2035)
+  M  Sandstorm Colossus (2030) -> room 2069 (Pillar of Sun God) BOSS
+  G  sandstorm colossus core (2021)
+  M  The Devourer (2031)       -> room 2070 (Chamber of the Failed) BOSS
+  G  the Devourer's jawbone (2022)
+  M  High Priest Amenthari (2032) -> room 2072 (Throne of Amenthari) BOSS
+  G  Staff of Amenthari (2023)
+  G  Amenthari's sun-scorched robes (2024)
+  M  Vizier Nephkara (2029)    -> room 2073 (Vault of the Sun God) BOSS
+  G  crown of Vizier Nephkara (2020)
+  G  gauntlets of eternal flame (2025)
+  G  Nephkara's staff of binding (2039)
+
+
+7. SHOP PLAN
+================================================================================
+
+  Two shops:
+
+  Shop 1: Zahra the Sand Merchant (mob 2033, room 2020)
+    buy_types: 9 (armor), 5 (weapon), 8 (treasure)
+    profit_buy: 120
+    profit_sell: 80
+    open: 0, close: 23
+
+  Shop 2: Reth the Water Seller (mob 2034, room 2018)
+    buy_types: 19 (food), 17 (drink_con)
+    profit_buy: 150
+    profit_sell: 50
+    open: 0, close: 23
+
+
+8. SPECIALS PLAN
+================================================================================
+
+  Bind special combat functions to boss mobs for enhanced AI:
+
+  M 2029 spec_cast_cleric      Vizier Nephkara (caster boss)
+  M 2032 spec_cast_mage        High Priest Amenthari (mage boss)
+
+  (Exact spec_fun names to be confirmed against available spec functions
+   in the codebase before implementation.)
+
+
+9. DOOR/LOCK PLAN
+================================================================================
+
+  One locked door:
+    Room 2042 (Sealed Vault Door), exit north (D0)
+    locks = door(1) + pickproof(32) + passproof(128) = 161
+    key = 2026 (temple vault key)
+    to_room = 2043 (Vestibule of Descent)
+
+  Reset:
+    D 0 2042 0 2   (set door north in room 2042 to locked state)
+
+
+10. VNUM ALLOCATION SUMMARY
+================================================================================
+
+  Type      Range        Count   Used   Remaining
+  -------   ----------   -----   ----   ---------
+  Rooms     2000-2074      75     75       0
+  Mobiles   2000-2034      35     35       0
+  Objects   2000-2039      40     40       0
+  (Unused)  2075-2149      75      0      75 (reserved for expansion)
+
+  Total vnums in range: 150 (2000-2149)
+  Cross-type overlap is allowed per spec (room 2000, mob 2000, obj 2000
+  are all distinct entities).
+
+
+11. IMPLEMENTATION CHECKLIST
+================================================================================
+
+  [ ] Create area/akhenet.are with all sections
+  [ ] Write #AREA header with all directives
+  [ ] Write #MOBILES section (35 mobs with act flags, levels, extensions)
+  [ ] Write #OBJECTS section (40 objects with types, affects, levels)
+  [ ] Write #ROOMS section (75 rooms with descriptions, exits, extra descs)
+  [ ] Write #SHOPS section (2 shops)
+  [ ] Write #SPECIALS section (boss spec functions)
+  [ ] Write #RESETS section (mob placements, object gives, door states)
+  [ ] Write #$ terminator
+  [ ] Add akhenet.are to area/area.lst
+  [ ] Run make unit-tests from src/ to validate no build breakage
+  [ ] Run integration test to confirm server boots with new area loaded
+
+
+12. DESIGN NOTES
+================================================================================
+
+  - Mob levels scale from 70 (entry dunes) to 90 (final boss), providing
+    a smooth difficulty curve across the five zones.
+  - Boss mobs all have sentinel+boss flags and are placed in no_mob rooms
+    per the area spec requirements.
+  - Equipment AC and hit/dam modifiers scale with level, following the
+    patterns established in the Scorching Sands (29900) reference area.
+  - The area has two shopkeepers for player convenience (supplies + gear).
+  - Color theming uses @@y (yellow) for desert outdoor rooms, @@b (brown)
+    for underground/ruin rooms, and @@R (red) for boss encounters.
+  - 75 unused vnums (2075-2149) are reserved for future expansion such as
+    additional quest mobs, side chambers, or event content.
+  - The locked temple vault door adds a minor key-finding objective that
+    gates access to the deeper catacomb content.
+  - Elemental strengths/weaknesses on bosses encourage varied group
+    compositions and spell choices.
