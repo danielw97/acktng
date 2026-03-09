@@ -858,6 +858,11 @@ The sunken garden rises northward to the level of the overgrown ruins above.
 ~
 ~
 0 -1 10042
+D2
+The southern slope of the sunken garden leads downward into dense, tangled underbrush.
+~
+~
+0 -1 10050
 E
 garden soil plants growth~
 The most vigorous plants in the sunken garden grow in a rough circle at its center, as if drawing on something concentrated there; they are of species not seen elsewhere in the forest, with broader leaves of a particularly dark @@Ggreen@@N and flowers that are nearly black at their centers.
@@ -876,6 +881,426 @@ The colonnade opens northward back to the ruined courtyard and the well.
 E
 colonnade oaks columns bases~
 The column bases are still intact -- square, heavily carved, slightly elevated above the ground -- and each oak grows directly from or alongside one; roots have embraced the carved stone completely, the tree and the ruin now so intertwined that neither could be removed without destroying the other.
+~
+S
+#10050
+The Dense Underbrush~
+The forest reasserts itself here with a vengeance after the ruins, the undergrowth building into a nearly impenetrable wall of @@Gtangled green@@N that must be physically forced aside with every step; the branches of a dozen competing species form an interlocking mass at shoulder height, and the going is slow, loud, and leaves dozens of small scratches on any exposed skin.
+~
+0 3
+D0
+The underbrush thins northward where the ground rises toward the sunken garden.
+~
+~
+0 -1 10048
+D2
+The underbrush gives way slightly southward, where ancient stone beneath the leaf litter makes the footing firmer.
+~
+~
+0 -1 10051
+S
+#10051
+A Lichen-Stained Path~
+Beneath the leaf litter and forest debris, the worn surface of an ancient stone road is still partially intact, its @@glichen-mottled paving@@N visible in places where tree roots have not yet buckled it entirely; the road speaks of a civilization that predates the current forest, and the trees that have grown through it treat the stonework as merely another substrate, indifferent to what it once meant.
+~
+0 3
+D0
+The old road leads northward into the underbrush, its stones disappearing under vegetation.
+~
+~
+0 -1 10050
+D2
+The lichen-stained stones continue southward, the road's original direction still legible.
+~
+~
+0 -1 10052
+S
+#10052
+Among Toppled Stones~
+Enormous cut-stone blocks lie scattered here in the attitudes of violent overthrow, some standing on end, some half-buried, all tilted away from a central area as though pushed outward by something expanding from below; @@gtrees grow through and between them@@N, their roots embracing the stonework with the patient grip of centuries, and the original structure is unguessable from the remains.
+~
+0 3
+D0
+The toppled stones thin northward toward the ancient road surface.
+~
+~
+0 -1 10051
+D2
+A narrow passage through the standing stones leads southward to an ancient boundary.
+~
+~
+0 -1 10053
+S
+#10053
+The Ancient Boundary~
+A line is visible here -- a raised stone curb, still largely intact despite the roots and centuries, running east and west as far as it can be followed through the undergrowth; on the north side, the forest is familiar in its hostility, but on the south side, the trees are categorically larger, the silence deeper, the air noticeably colder and heavier with something that is not quite a scent but presses on the sinuses like one.
+~
+0 3
+D0
+The boundary curb recedes northward among the toppled stones and old road.
+~
+~
+0 -1 10052
+D2
+The passage south crosses the ancient boundary and enters a wholly different forest.
+~
+~
+0 -1 10054
+S
+#10054
+A Passage Through the Canopy Wall~
+The canopy of the old growth forest here forms something nearly indistinguishable from a solid wall, the interlocking branches of a dozen titanic trees meeting overhead in a continuous mass of @@Gdark green@@N that extends from ground height to a vanishing point far above; a single gap through this wall, just wide enough to pass through, opens onto the deeper forest beyond, and the air coming through it is cold and carries a vibration too low to be heard.
+~
+0 3
+D0
+The passage north leads back through the canopy wall to the ancient boundary.
+~
+~
+0 -1 10053
+D2
+The gap in the canopy wall opens southward onto the vast and alien Deepwood.
+~
+~
+0 -1 10055
+S
+#10055
+The Deepwood~
+The forest changes here with a totality that precludes gradual adjustment; the trees are not merely large but architecturally alien, their trunks forming shapes that defy natural growth, their bark smooth and dark and warm to the touch, and the space between them has a quality of deliberate arrangement -- as though the forest has been designed by an intelligence that considers human movement to be something to be guided rather than permitted.
+~
+0 3
+D0
+The gap in the canopy wall leads northward back to the old growth forest.
+~
+~
+0 -1 10054
+D1
+A corridor of closely-paired trunks leads eastward into what appears to be a passage.
+~
+~
+0 -1 10056
+D2
+The forest floor descends southward between trees whose roots move.
+~
+~
+0 -1 10059
+S
+#10056
+A Living Corridor~
+The trees here have grown so close together and in such perfect alignment that the result is indistinguishable from a constructed corridor -- the trunks forming walls, the interlocked branches forming a ceiling, the packed-earth floor worn smooth; the corridor is noticeably @@gwarm@@N, and the walls, on close inspection, expand and contract in a slow, rhythmic pulse that suggests respiration.
+~
+0 3
+D1
+The living corridor continues eastward, its walls pressing slightly closer.
+~
+~
+0 -1 10057
+D3
+The living corridor opens westward back to the deepwood's vast entrance chamber.
+~
+~
+0 -1 10055
+S
+#10057
+The Breathing Grove~
+There is no wind here, but the trees sway; the branches overhead describe slow, complex arcs, and the trunk of the largest tree rocks perceptibly from side to side in a rhythm that becomes, once noticed, impossible to ignore; the @@Gmovement is continuous@@N and unhurried, as though the grove is breathing, and the sound of wood flexing and creaking provides a low, organic counterpoint to the otherwise perfect silence.
+~
+0 3
+D1
+A path eastward leads beneath a ceiling of interlocked branches.
+~
+~
+0 -1 10061
+D2
+The breathing grove deepens southward into a passage of watchful boughs.
+~
+~
+0 -1 10058
+D3
+The living corridor leads westward back toward the deepwood entrance.
+~
+~
+0 -1 10056
+S
+#10058
+Among Watchful Boughs~
+The boughs here are thick and low, hanging just above head height, and every one of them is turned toward the space below in a way that suggests observation rather than growth; @@gmovement among them ceases when one looks directly@@N, but peripheral vision registers a constant slow adjustment, a repositioning, a leaning inward that stops just short of the provable.
+~
+1 3
+D0
+The breathing grove is northward, where at least the movement is visible.
+~
+~
+0 -1 10057
+D2
+The boughs crowd lower southward, and the light fails entirely ahead.
+~
+~
+0 -1 10065
+S
+#10059
+A Floor of Writhing Roots~
+The surface roots of the Deepwood trees have become fully animate here, shifting and repositioning with the slow inevitability of geological time but at a perceptible rate; placing a foot means lifting it again within moments as the root beneath it moves, and the @@Gconstant subtle displacement@@N of the ground underfoot makes standing still an active task rather than a passive one.
+~
+0 3
+D0
+The writhing roots thin slightly northward toward the deepwood entrance.
+~
+~
+0 -1 10055
+D2
+The roots grow denser southward where the ground descends toward amber sap pools.
+~
+~
+0 -1 10060
+D3
+A narrow depression in the root-mass opens westward into a low tunnel.
+~
+~
+0 -1 10062
+S
+#10060
+The Amber Sap Pools~
+Several large depressions in the forest floor have filled over centuries with accumulated tree sap that has thickened to the consistency of honey and @@rglows a dim amber@@N from within; the pools are perfectly still and reflect the dark canopy above, and their surfaces have preserved dozens of creatures -- insects, small animals, a fragment of something with too many joints -- in perfect, suspended amber.
+~
+0 3
+D0
+The sap pools end northward where the writhing roots resume.
+~
+~
+0 -1 10059
+D2
+The pools give way southward where the forest floor rises toward a ring of petrified trees.
+~
+~
+0 -1 10063
+E
+pools sap amber preserved~
+One of the larger pools contains something near its center that is clearly too large and too complex to be any simple creature; it is deep in the sap and difficult to see clearly, but the preserved shape has too many limbs, and they are arranged in ways that suggest neither struggle nor peace.
+~
+S
+#10061
+Beneath Intertwined Canopy~
+The branches overhead have meshed so completely that they form a secondary floor above this one, a living ceiling of @@Ginterlocked wood@@N visible through occasional gaps as an impenetrable green mass; the result is a double layer of forest, one above and one below, and the light that reaches the ground has been filtered twice, arriving as a dim, sourceless, gray-green glow with no shadows.
+~
+0 3
+D2
+The path descends southward beneath the intertwined canopy toward a weeping hollow.
+~
+~
+0 -1 10066
+D3
+The intertwined branches thin westward where the breathing grove continues.
+~
+~
+0 -1 10057
+S
+#10062
+A Narrow Root Tunnel~
+The roots of an ancient tree have arched completely over a natural depression, forming a narrow tunnel barely wide enough to move through in a crouch; the tunnel floor is bare stone, cold and damp, and the northward direction descends deeper still into a cave system that predates the forest above -- a passage used by older things than the trees, connecting to some dark network far below.
+~
+1 3
+D0
+The root tunnel descends northward into the cave system below the forest.
+~
+~
+0 -1 9770
+D1
+The tunnel opens eastward back into the writhing root-floor of the Deepwood.
+~
+~
+0 -1 10059
+S
+#10063
+The Petrified Ring~
+Eight trees in a perfect ring have been fully petrified, turned from living wood to @@gdark gray stone@@N without any visible external cause; they stand as they grew, bark-textures and branch-forms preserved in mineral perfection, and the forest around them grows right up to but never inside the ring, leaving an open circle of bare earth where nothing grows and the silence has a particularly mineral quality.
+~
+0 3
+D0
+The petrified ring is behind you northward, where the sap pools gleam amber.
+~
+~
+0 -1 10060
+D1
+A path eastward passes between two of the petrified trunks toward thorned growth.
+~
+~
+0 -1 10064
+D2
+The petrified ring gives way southward where the forest begins to rot.
+~
+~
+0 -1 10068
+S
+#10064
+Among Thorned Sentinels~
+The trees here have armored themselves with thorns that project outward from the bark in dense, overlapping arrays -- not bramble-thorns but woody spines several inches long growing directly from the cambium, covering every branch and the upper portions of every trunk; the @@Rspines catch the dim light@@N like a forest of tiny blades, and the passage between them requires care that slows movement to a cautious walk.
+~
+0 3
+D2
+The thorned sentinels thin southward where a high bridge is barely visible above.
+~
+~
+0 -1 10067
+D3
+The thorned trees give way westward to the open circle of petrified trunks.
+~
+~
+0 -1 10063
+S
+#10065
+A Bioluminescent Grotto~
+The ground has collapsed here into a grotto lit entirely by the @@rbioluminescent organisms@@N that coat every surface -- fungi, algae, and creatures that cannot be named growing in layered mats that pulse in overlapping rhythms; the light they produce is sufficient to see by, cool and blue-green and otherworldly, and the grotto extends downward into chambers that descend beyond the reach of even this cold radiance.
+~
+1 3
+D0
+The grotto's light fades northward where the watchful boughs begin.
+~
+~
+0 -1 10058
+E
+glow light organisms fungi~
+Standing still in the grotto, the rhythmic pulsing of the bioluminescent organisms becomes synchronized across the entire visible surface, as if they respond to each other in waves; the effect is meditative and deeply wrong, suggesting a coordinated awareness in organisms that should have none.
+~
+S
+#10066
+The Weeping Hollow~
+Sap seeps from every wound and pore of the trees bordering this hollow, @@grunning in slow rivulets@@N down the bark and collecting in channels between the roots before draining into the dark earth; the trees are not dying -- the flow is too controlled, too purposeful -- and the sap has no smell beyond the faintest sweetness, but it leaves a faint burning sensation on any skin it contacts.
+~
+0 3
+D0
+The hollow opens northward into the intertwined canopy above.
+~
+~
+0 -1 10061
+D1
+A narrow path eastward leads toward a pale stand of unnervingly white-barked trees.
+~
+~
+0 -1 10074
+S
+#10067
+A Canopy Bridge~
+Two ancient trunks have grown horizontal at great height, their crowns meeting and fusing above the forest floor, creating a natural bridge thirty feet above the ground; the bridge itself is narrow and lacks handholds, but the wood is solid and the view from above reveals the full extent of the Deepwood's @@galien geometry@@N -- the trees arranged in patterns no natural process would produce, like a written language too large to read from the ground.
+~
+0 3
+D0
+The bridge descends northward back down to the thorned sentinel passage below.
+~
+~
+0 -1 10064
+E
+bridge view above height~
+From the highest point of the bridge, the full canopy is visible as a continuous surface with no breaks except where the trees have arranged themselves in their impossible patterns; what looked from below like random forest is revealed from here as something deeply ordered, the paths between the trunks forming shapes that the eye cannot quite resolve into meaning.
+~
+S
+#10068
+The Rotwood Stretch~
+The decay here is conspicuous and spreading, the trees in various stages of a rot that is clearly contagious -- standing trunks with their interiors hollowed by soft, @@gbrown rot@@N, fallen logs that dissolve when stepped on, branches descending from above in a slow rain of wet splinters; the forest is sick in this stretch, and the sickness feels intentional, as though something decided the living wood was less useful than the dead.
+~
+0 3
+D0
+The rotwood thins northward toward the petrified ring and firmer ground.
+~
+~
+0 -1 10063
+D2
+The rot continues southward, deepening where something dark coats the ground.
+~
+~
+0 -1 10070
+D3
+The rotwood opens westward to a dense cluster of enormous toadstools.
+~
+~
+0 -1 10069
+S
+#10069
+Among Bloated Toadstools~
+The toadstools here are architectural in scale, their caps broad and heavy enough to form a secondary canopy that blocks most of the light; some are twelve feet across, their surfaces @@Gheavy and moist@@N, their stalks thick as old trees, and between their bases the forest floor is carpeted in the smaller generations of the same species, pressing upward through the mulch in dense, overlapping clusters.
+~
+0 3
+D1
+The toadstool forest opens eastward back toward the rotting trees.
+~
+~
+0 -1 10068
+S
+#10070
+A Clearing of Black Moss~
+The forest floor here is covered entirely in a deep, uniform layer of black moss that absorbs light rather than reflecting it, giving the clearing the appearance of a hole in the world rather than ground; @@gfootprints left in the moss fill in@@N behind you in minutes, and the clearing is surrounded by trees that lean slightly inward over the black surface, as though drawn toward it.
+~
+0 3
+D0
+The black moss clearing opens northward into the rotwood and firmer ground.
+~
+~
+0 -1 10068
+D2
+The black moss continues southward into the strangler fig passage.
+~
+~
+0 -1 10071
+S
+#10071
+The Strangler Fig Passage~
+Strangler figs have consumed the support trees here completely, their latticed wooden frames standing as ghost-trees from which the original trunks have long since rotted away; the result is a passage of hollow wooden cages, their @@Gintricate latticework@@N dappling what passes for light here, and the fig-forms have taken shapes in their growing that the mind interprets as figures -- arms, faces, gestures of supplication.
+~
+0 3
+D0
+The strangler fig passage opens northward back to the black moss clearing.
+~
+~
+0 -1 10070
+D2
+The fig-trees thin southward where the roots form a dense overhead web.
+~
+~
+0 -1 10072
+S
+#10072
+Beneath a Web of Roots~
+The root systems of the trees here have grown so dense and intermingled overhead that they form a near-solid ceiling just above head height, pressing downward and forcing movement into a crouch; the @@groots are wet and cold@@N to the touch, and the spaces between them are occupied by hanging masses of dark soil and white fungal threads that brush the face and hands in the dark.
+~
+1 3
+D0
+The root web opens northward back into the strangler fig passage.
+~
+~
+0 -1 10071
+D2
+The root web thins southward toward a vast, dark opening in the forest.
+~
+~
+0 -1 10073
+S
+#10073
+The Verdant Maw~
+The forest opens here around an enormous depression in the earth, its edges marked by tree-roots that arch inward like the teeth of a jaw; the depression is too regular to be natural, too large to have been made by any creature, and its walls are @@Gliving wood@@N, smooth and warm and slightly damp -- the walls of something alive, something that has shaped itself into this invitation over centuries of patient purpose, waiting.
+~
+0 3
+D0
+The maw's entrance is behind you northward; the root-web passage continues.
+~
+~
+0 -1 10072
+E
+depression maw earth opening~
+Looking down into the depression, the walls converge toward a central point obscured by darkness and distance; the air rising from it is warm and organic, and carries a subsonic vibration that is felt in the chest rather than heard -- the same vibration, amplified many times, as the one first noticed at the edge of the old growth.
+~
+S
+#10074
+A Path of Bone-White Bark~
+The trees lining this narrow path are exceptional even by the Deepwood's alien standards -- their bark entirely devoid of color, @@gbone-white@@N and smooth as polished stone, their leafless branches reaching upward in gestures of arrested motion; nothing grows on or near them, and the path between them is eerily clean, the forest floor bare of even the persistent black moss, as though whatever these trees exude is inimical to all other life.
+~
+0 3
+D3
+The bone-white trees give way westward toward the weeping hollow.
+~
+~
+0 -1 10066
+E
+bark white pale bone trees~
+The white bark is genuinely bone-like on close inspection, smooth and slightly yielding under pressure, slightly warm; there are no growth rings visible at the cut of any fallen branch, as though these trees do not grow in annual increments but in some other rhythm entirely.
 ~
 S
 #0
