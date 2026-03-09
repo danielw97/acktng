@@ -1,0 +1,441 @@
+#AREA
+@@pThe Withered @@GDepths@@N~
+Q 16
+K withereddepths~
+L @@W(@@r80-100@@W}@@N~
+N 9
+I 80 100
+V 1000 1149
+F 15
+U @@pA @@Gfoul wind @@pstirs through the twisted canopy...@@N~
+#ROOMS
+#1000
+The Darkening Path~
+The trail here narrows and the air itself seems to curdle, thick with a reek of damp decay that no breeze ever quite disperses.  To the west the familiar confusion-mist of the outer forest still clings in pale curtains, offering a murky path back to the disorienting but comparatively wholesome woodland beyond.  Eastward the trees grow immediately more twisted, their @@bbark@@N split lengthwise by veins of @@pfungal growth@@N that pulse with a faint, cold luminescence utterly unlike natural light.  Massive root knuckles have heaved the path apart, and dark footprints of something large press the soft soil in a pattern that makes the stomach turn, each print sinking deeper than any animal's weight should allow.  The canopy knits shut above, and the already-dim daylight that filters through carries a sickly violet tint, as though the corruption that pervades this place has stained even the air between the leaves.~
+0 3
+D3
+The mist thickens to the west, and through it you can just make out the familiar disorienting woodland of the Forest of Confusion.~
+~
+0 -1 9695
+D1
+The path winds deeper into the darkening forest to the east, where the trees grow taller and more gnarled with every stride.~
+~
+0 -1 1001
+D2
+A narrow side-path curves away through a stand of blackened birches to the south.~
+~
+0 -1 1002
+S
+#1001
+Ash-Veined Trail~
+The trail threads between trunks whose @@bbark@@N has taken on a charcoal hue, each surface cross-hatched with pale veins of mineral-white ash that trace the wood's internal rot.  Clumps of grey-green lichen droop from the lower branches in long tattered streamers, brushing the shoulders of anyone who passes and leaving a faintly acrid residue.  The undergrowth on either side is dead but refuses to fall, dry stalks standing upright in a mockery of living foliage.~
+0 3
+D3
+The trail leads back west toward the threshold of the Withered Depths.~
+~
+0 -1 1000
+D1
+The path bends east through increasingly distorted woodland.~
+~
+0 -1 1003
+D2
+A rough track angles south between a pair of fallen trunks.~
+~
+0 -1 1004
+S
+#1002
+Stand of Blackened Birches~
+A cluster of birch trees stands here with their bark turned entirely black, the characteristic white peeling reduced to grey shreds that drift in the still air like flakes of dead skin.  The ground between them is carpeted with a dark, spongy mat of compressed leaves that squelch underfoot and release a sweet-rotten odour with every step.  Something has clawed deep furrows into the nearest trunk at shoulder height, the gouges still fresh enough to weep a thin amber sap.~
+0 3
+D0
+The path leads north toward the darkened trailhead.~
+~
+0 -1 1000
+D1
+A game trail of sorts cuts east through the birch stand.~
+~
+0 -1 1004
+D2
+The ground slopes gently south, the birches giving way to denser growth.~
+~
+0 -1 1005
+S
+#1003
+The Corrupted Crossroads~
+Four routes meet here in a rough clearing where a long-dead signpost still stands, its wood so consumed by @@pfungal rot@@N that the carved lettering is entirely illegible.  The post leans at an angle, a crust of purple-tinged mushrooms climbing its base in neat concentric rings.  The trees at each compass point look different — each direction seems to pull the forest into a slightly distinct character of corruption, as though the blight has found multiple vocabularies to express its single, malignant idea.~
+0 3
+D3
+The trail leads back west through the ash-veined stretch of path.~
+~
+0 -1 1001
+D1
+Dense growth presses close to the east, the path barely a gap between the crowded trunks.~
+~
+0 -1 1006
+D2
+The path descends slightly to the south through a section of knotted root-work.~
+~
+0 -1 1007
+S
+#1004
+The Splitting Path~
+The single trail here fractures into three, none of them marked, each curving away into trees that seem to lean inward to block the view.  The soil at the junction is disturbed — wide, dragging marks suggest something heavy was recently moved or moved itself through here, though toward which of the three branches is impossible to determine.  A smell of iron lingers, partially masked by the ever-present rot, and a spray of dark fluid on a low branch has dried to a rust-brown crust.~
+0 3
+D0
+The path curves north toward a tangle of ash-veined trees.~
+~
+0 -1 1001
+D3
+A game trail winds west through a birch stand.~
+~
+0 -1 1002
+D1
+The eastern branch of the trail disappears into root-choked forest.~
+~
+0 -1 1007
+D2
+The southern branch descends toward a hollow in the earth.~
+~
+0 -1 1008
+S
+#1005
+Rotting Undergrowth~
+The forest floor here is almost entirely consumed by a thick mat of @@ddecomposing plant matter@@N, the original soil invisible beneath a knee-deep accumulation of mulched leaves and collapsed fungi.  Each footstep plunges through a crispy surface layer into something cold and wet beneath, releasing gouts of musty vapour that rise about the ankles.  Saplings that tried to push through the rot have been absorbed rather than nourished, their thin grey trunks bent sideways and slowly disappearing into the mat.~
+0 3
+D0
+The undergrowth thins slightly to the north, the path rising toward the birch stand.~
+~
+0 -1 1002
+D1
+A narrow channel through the rot mat leads east, kept passable by heavy foot traffic.~
+~
+0 -1 1008
+D2
+The mat deepens to the south, but a faint trail still shows through the worst of it.~
+~
+0 -1 1009
+S
+#1006
+The Blighted Rise~
+The ground here lifts into a low ridge, giving a rare vantage over the surrounding forest canopy — or it would, if the canopy were not closed overhead in a seamless ceiling of intertwined black branches.  The ridge's crest is bare of undergrowth, the soil hard and pale grey, cracked in polygonal plates like dried mud at the bottom of a dead lake.  From this slight height, the sheer scale of the Withered Depths becomes apparent: in every direction, as far as the eye can follow between the trunks, the forest shows the same character of deep, patient, total corruption.~
+0 3
+D3
+The ridge descends west to the corrupted crossroads.~
+~
+0 -1 1003
+D2
+A steep path drops from the ridge southward into denser forest.~
+~
+0 -1 1010
+S
+#1007
+Fungus-Veined Forest Floor~
+The ground here is alive, if alive is the right word, with an interlocking network of @@pfungal mycelium@@N spreading just beneath a translucent skin of compressed leaf litter.  The threads catch the faint ambient light and glow an eerie blue-purple, making the entire forest floor shimmer with cold bioluminescence that casts no warmth.  Standing still long enough, a faint vibration can be felt through the soles of the feet, as though the mycelium network carries a pulse of its own.~
+0 3
+D0
+The fungus-laced ground slopes north toward the corrupted crossroads.~
+~
+0 -1 1003
+D3
+A wider section of the trail curves west toward the splitting path.~
+~
+0 -1 1004
+D1
+The mycelium thins to the east, replaced by a carpet of dark moss.~
+~
+0 -1 1010
+D2
+The trail descends south into a hollow where the trees grow even closer together.~
+~
+0 -1 1011
+S
+#1008
+The Hollow Trunk Clearing~
+A massive tree fell here long ago, and its hollow trunk now lies on its side, the interior colonised by a community of shelf fungi that have built a layered architecture of orange and brown brackets inside the rotting wood.  The clearing the fall created is long since overgrown, but the fallen trunk remains, slowly merging with the ground beneath it.  Dark stains streak the bark of the surrounding trees at a uniform height, as if something habitually rubs against them at that level when passing through.~
+0 3
+D0
+The path rises north toward the splitting path junction.~
+~
+0 -1 1004
+D3
+A game trail winds west through the rotting undergrowth.~
+~
+0 -1 1005
+D1
+The clearing has a rough exit east where the trees are slightly more spaced.~
+~
+0 -1 1011
+D2
+A narrow path angles south into denser, darker growth.~
+~
+0 -1 1012
+S
+#1009
+The Stagnant Pool~
+A shallow depression in the forest floor has collected a pool of standing water the colour of old tea, its surface covered in a floating mat of @@dblack algae@@N and drowned leaves.  No ripple crosses it; no insect skims it; nothing lives in it or on it.  The trees ringing the pool have sent roots directly into the water, and where the roots break the surface they are coated in a white crystalline deposit that might be salt, might be fungal spore, and is certainly something that should not be touched.~
+0 3
+D0
+The ground rises north toward the rotting undergrowth.~
+~
+0 -1 1005
+D1
+A muddy track leads east along the edge of the depression.~
+~
+0 -1 1012
+S
+#1010
+The Sentinel Pines~
+Three enormous pine trees stand in a rough triangle here, their trunks wider than a man is tall, their needles long since replaced by fine black filaments that catch the light like hair.  The space between them has a cathedral quality — the scale of the trees dwarfs the surrounding forest, and their interlocked canopy blocks out everything but a few thin columns of dim purple light.  Something has stripped the bark from each trunk at about seven feet of height, leaving raw pale wood exposed in a horizontal band that encircles all three trees like a shared scar.~
+0 3
+D0
+The path leads north toward the blighted rise.~
+~
+0 -1 1006
+D3
+A forest trail leads west toward the fungus-veined floor.~
+~
+0 -1 1007
+D1
+A clear gap between the sentinel pines opens east toward a ruined watchpost.~
+~
+0 -1 1014
+D2
+The path narrows dramatically to the south, heading toward a stone structure.~
+~
+0 -1 1013
+S
+#1011
+Mossy Stone Escarpment~
+A low shelf of exposed bedrock runs east to west here, its surface coated in an unusual @@pmoss@@N that glows faintly purple in the dim light, the same iridescent hue as the fungal veins on the nearby trees.  The moss is dry to the touch despite the pervasive damp, and it makes no sound when stepped on — a silence that seems pointed, as though the moss itself is paying attention.  Carved into the face of the rock, almost entirely obscured by the moss, are markings too regular to be natural but too worn to be read.~
+0 3
+D0
+The rock shelf drops away to the north toward the fungus-veined path.~
+~
+0 -1 1007
+D3
+A rough gap in the rock leads west toward the hollow trunk clearing.~
+~
+0 -1 1008
+D1
+The escarpment ends to the east, opening onto a path toward a crumbling structure.~
+~
+0 -1 1013
+S
+#1012
+The Shrouded Pit~
+A natural pit cuts into the forest floor here, perhaps ten feet deep and wide enough to lose a horse in, its bottom invisible beneath a thick column of grey-white mist that sits in it as though poured.  The mist doesn't flow or shift — it hangs utterly static, slightly warmer than the surrounding air, and carries a faint sweet smell that is almost pleasant and therefore deeply wrong in this place.  The trees around the pit's rim have all grown away from it, their trunks leaning outward as though recoiling over decades from whatever the pit contains.~
+0 3
+D0
+The ground rises north toward the hollow trunk clearing.~
+~
+0 -1 1008
+D3
+A muddy track leads west along the edge of the stagnant pool depression.~
+~
+0 -1 1009
+S
+#1013
+The Crumbling Archway~
+This was once the entrance to something, though what structure once rose here is lost — only the arch remains, its twin pillars of fitted stone leaning toward each other at precarious angles, the keystone above still somehow holding everything in place through blind habit.  @@pFungal colonies@@N have colonised every crack, and the stone itself has taken on the purple-grey colour of deep decay, crumbling at the edges like stale bread.  The crumbling arch frames a shaft of absolute darkness descending into the earth, from which rises a slow exhalation of cold, mineral-smelling air mixed with the unmistakable reek of deep fungus.  Scratched into the left pillar in hasty, uneven strokes is a single word: BELOW.  A corroded iron key, long since dropped and forgotten, might open whatever holds this arch closed — whoever left that warning clearly did not plan to return.~
+0 3
+D0
+The path leads north to the mossy stone escarpment.~
+~
+0 -1 1011
+D3
+A forest trail winds west toward the sentinel pines.~
+~
+0 -1 1010
+D5
+The crumbling arch gapes open above a shaft of darkness descending into the earth below.~
+^crumbling arch~
+1 1000 1015
+E
+arch crumbling~
+Twin pillars of crumbling, fungus-covered stone support a keystone arch that should by all rights have collapsed long ago.  The stone is deeply corroded, purple-grey with age and blight, and the space between the pillars gapes open above a shaft of cold darkness descending into the earth.  A crude lock-mechanism of blackened iron is set into the left pillar at waist height.~
+S
+#1014
+The Ruined Watchpost~
+The remains of a wooden watchtower cling to a massive blighted oak here, its platform rotted away but the climbing rungs still nailed to the trunk in a series of iron spikes driven straight into the heartwood.  The oak itself is enormous — easily ten feet across at the base — and its canopy, dead but intact, spreads above in a dense ceiling of interlocked black branches that would have given whoever climbed here a view of the surrounding treetops.  A carved wooden sign still hangs from one rung, swinging slightly despite the absence of wind, and while its face is mostly eaten by rot, a compass rose is still faintly visible, pointing directions that no longer seem to correspond to anything trustworthy.  Below the sign, scratched into the bark of the oak with a knife blade: 'She is awake and she knows you are here.'  The air around the post is noticeably colder than elsewhere in the forest, and the silence here has a weight to it, a quality of being listened to from above.~
+0 3
+D3
+A gap in the roots leads west toward the sentinel pines.~
+~
+0 -1 1010
+D4
+The iron rungs climb upward into the black canopy, and beyond them, into the treetop walkways above.~
+~
+0 -1 1080
+S
+#1015
+The Sunken Threshold~
+The descent through the crumbling arch ends here in a rough chamber whose ceiling is the underside of the forest floor, pierced by roots that dangle like ropes in various stages of decay.  The transition from open air to enclosed earth is abrupt and total: sound is swallowed immediately, the constant background noise of the forest above replaced by an underground silence broken only by the faint drip of moisture and the distant, barely audible sound of something vast slowly respiring.  The walls are packed earth braced by enormous root-buttresses, and every surface has been colonised by @@pfungal growth@@N in shades of purple, grey, and a deep, arterial red.  The passage back up is sealed by the crumbling arch's mechanism above.~
+0 11
+D4
+The shaft of the crumbling arch rises upward into daylight, its rough stone walls offering uncertain handholds.~
+^crumbling arch~
+1 1000 1013
+D1
+A root-braced passage leads east into the hollow interior of the fungal underground.~
+~
+0 -1 1016
+D2
+A broader tunnel opens to the south, the floor worn smooth by the passage of many feet — or something else — over a long time.~
+~
+0 -1 1019
+S
+#1016
+The Root-Threaded Passage~
+The tunnel here is entirely walled by the exposed roots of the massive trees overhead, a dense lattice of organic structure that has sorted itself, over years of slow growth, into something uncomfortably like the architecture of a deliberate building.  Smaller root-tendrils weave between the larger ones in patterns that repeat at regular intervals, and every surface glows faintly with a cold @@pbioluminescent film@@N that makes shadows unnecessary and darkness impossible.  The air tastes of copper and rich earth and something that might, at a stretch, be called mushroom.~
+0 11
+D3
+The root passage leads west back toward the sunken threshold.~
+~
+0 -1 1015
+D1
+The root lattice continues eastward, the ceiling lifting slightly as the passage widens.~
+~
+0 -1 1017
+D2
+The passage descends south, the roots growing thicker and the bioluminescence brighter.~
+~
+0 -1 1020
+S
+#1017
+The Winding Tunnel~
+This tunnel corkscrews slightly left and right as it cuts through the earth, following the path of least resistance between the overlapping territories of enormous root-systems.  In places the ceiling drops low enough to require crouching, and in others it vaults upward into a darkness that the bioluminescent glow from the walls cannot quite reach.  The floor is dry compressed earth here, unmarked by moisture, which makes the row of spaced handprints pressed into one wall — left with something darker than mud — seem all the more deliberate.~
+0 11
+D3
+The tunnel winds west back toward the root-threaded passage.~
+~
+0 -1 1016
+D1
+The passage curves east and slightly downward, the air growing heavier.~
+~
+0 -1 1018
+D2
+The tunnel splits to the south, a wider branch diverging from the main passage.~
+~
+0 -1 1021
+S
+#1018
+The Narrow Root Squeeze~
+The passage here pinches to its narrowest point, barely shoulder-width, forced by a pair of immense root-columns that have grown into each other from opposite sides and fused into a single banded pillar.  The surface of the merged root is covered in a thick coat of @@pviolet mushrooms@@N, each cap the size of a coin, densely packed and perfectly formed, their undersides releasing a continuous fine mist of spores that catches the bioluminescent light in slow purple spirals.  Breathing here tastes like eating wet soil; passing through leaves a faint stain on anything pale.~
+0 11
+D3
+The passage opens up to the west as it leads back toward the winding tunnel.~
+~
+0 -1 1017
+D2
+Below the narrow root column, the passage drops sharply south into a larger chamber.~
+~
+0 -1 1025
+S
+#1019
+The Mushroom Grotto~
+A wider chamber opens here where the ceiling has collapsed slightly, allowing a cluster of enormous mushrooms to fill the space — each one taller than a man, their caps broad enough to shelter beneath in rain.  The mushrooms are the source of much of the bioluminescence in this section of the tunnels: they glow a steady blue-green, the light pulsing very faintly in a rhythm that almost, but not quite, matches a heartbeat.  Between the mushroom stems, the ground is carpeted in a plush growth of @@Gsoft moss@@N that is startlingly green in this underground world, as if stubbornly clinging to something the blight has not yet found a way to colour purple.~
+0 11
+D0
+The path leads north back to the sunken threshold.~
+~
+0 -1 1015
+D1
+The grotto continues east between the mushroom stems.~
+~
+0 -1 1020
+D2
+A low-ceilinged passage angles south through the mushroom roots.~
+~
+0 -1 1022
+S
+#1020
+The Bioluminescent Corridor~
+This section of tunnel is wider and taller than those to either side, and its walls have been entirely colonised by a layered growth of bioluminescent organisms — fungi, slime moulds, and something that is neither, arranged in horizontal bands of different colours that run the length of the corridor.  The effect, from any distance, is of walking through a passageway lit by stained glass, all purples and blues and a sickly yellow-green.  The air is noticeably easier to breathe here — almost fresher, though the smell of underground still pervades everything — as if the organisms on the walls are processing it into something marginally less hostile.~
+0 11
+D0
+The corridor leads north back toward the root-threaded passage.~
+~
+0 -1 1016
+D3
+The corridor narrows to the west, the bioluminescence dimming near the mushroom grotto.~
+~
+0 -1 1019
+D1
+The coloured bands on the walls continue east as the corridor curves.~
+~
+0 -1 1021
+D2
+The corridor descends south through a curtain of dangling rootlets.~
+~
+0 -1 1023
+S
+#1021
+The Tangled Root Chamber~
+An enormous root-mass dominates this chamber, a tangle of roots from multiple trees above that have grown into each other in the dark and formed a solid knot the size of a carriage, suspended between floor and ceiling by their own structural tension.  The space around it is cramped and requires navigation — ducking here, stepping over a ground-level root there — but the knot itself is strangely beautiful, its surface worn smooth by whatever brushes past it, every groove and join caught by the bioluminescent glow in a play of shadow and cold light.  A faint groan issues from the knot at irregular intervals as the roots above shift their weight.~
+0 11
+D0
+The passage leads north toward the winding tunnel.~
+~
+0 -1 1017
+D3
+The chamber opens west toward the bioluminescent corridor.~
+~
+0 -1 1020
+D2
+Below the root-knot, a low passage continues south into a quieter section of the hollows.~
+~
+0 -1 1024
+S
+#1022
+The Pale Gallery~
+This passage has a different quality than those nearby — the walls are pale, almost white, the earth here packed to a chalk-like hardness and seamed with thin veins of actual mineral.  The bioluminescence is almost absent, and the lighting comes instead from a sparse scattering of small, very bright white fungi growing in evenly spaced clusters along the ceiling.  The overall effect is of a well-lit gallery or library corridor, clinical in its brightness, which makes the row of bones embedded in the far wall — arranged with evident purpose, pressed into the white earth in a long horizontal line — all the more striking.~
+0 11
+D0
+The pale passage leads north back to the mushroom grotto.~
+~
+0 -1 1019
+D1
+The pale walls continue east, the white fungi clustering more densely.~
+~
+0 -1 1023
+S
+#1023
+The Central Hollow~
+A proper chamber opens here, roughly circular, with a ceiling that vaults upward five or six times the height of a person before disappearing into darkness above.  The floor is depressed at the centre, forming a shallow bowl filled with a dried crust of ancient spores, the remnant of some mass fruiting event that occurred here when the hollows were younger.  The walls bear the highest density of @@pbioluminescent growth@@N yet encountered, multiple species competing for surface area and producing a shifting, overlapping interplay of colours.  Four passages leave this chamber in different directions, making it the main junction of the Fungal Hollows.~
+0 11
+D0
+The passage leads north toward the bioluminescent corridor.~
+~
+0 -1 1020
+D3
+The pale passage leads west toward the gallery with its white walls.~
+~
+0 -1 1022
+D1
+A lower, rougher tunnel cuts east through packed earth.~
+~
+0 -1 1024
+D2
+The passage descends south, the ceiling dropping and the bioluminescence shifting toward deeper purple.~
+~
+0 -1 1026
+S
+#1024
+The Fungal Alcove~
+A side chamber branches off the main hollow network here, its irregular shape suggesting it was formed not by excavation but by the collapse of an enormous root-system that once supported the ceiling.  The fallen root-matter has long since composted into a rich substrate, and the alcove is now packed with dozens of fungal species growing in dense, competing colonies — caps of every shape, gills of every colour, every surface dripping with slow moisture and faintly luminescent.  The @@pscent here@@N is intense and complex, simultaneously appetising and nauseating, and anyone who lingers notices their thoughts becoming slightly slower, as if the spore-laden air has a gentle sedative quality.~
+0 11
+D0
+The alcove opens north back toward the tangled root chamber.~
+~
+0 -1 1021
+D3
+The passage leads west to the central hollow.~
+~
+0 -1 1023
+D1
+A narrow crack in the east wall of the alcove leads to a spore-filled passage beyond.~
+~
+0 -1 1025
+S
+#0
+#$
