@@ -9,4 +9,425 @@ V 10000 10124
 F 15
 U @@gthe ancient trees creak and groan as the forest shifts around you@@N~
 T Teleport is allowed
+#ROOMS
+#10000
+Entrance to the Verdant Depths~
+The path west from the Forest of Confusion opens into a vast shadowed expanse where trees of impossible girth tower overhead, their @@Gbark black with age@@N and slicked with emerald moss; the air grows thick and cloying, heavy with the scent of ancient loam, and twin pillars of gnarled oak flank the trail southward, their roots woven together across the earth like clasped fingers that seem to tighten the deeper one ventures.
+~
+0 3
+D1
+The way east leads back into the familiar confusion of the outer forest.
+~
+~
+0 -1 9695
+D2
+The trail descends south into deepening shadow and the smell of old earth.
+~
+~
+0 -1 10001
+E
+oak pillars~
+Two enormous oaks flank the trail like sentinels, their exposed roots interlocked across the path as though shaking hands; the bark is coal-black and moist, inscribed with patterns of lichen that might be mistaken for runes.
+~
+S
+#10001
+A Darkening Trail~
+The path narrows here, hemmed in by undergrowth that leans inward from both sides and blots out what little light filters through the vast canopy above; every footstep releases a damp, earthy perfume from the mulch beneath, and the @@gshadows between the trunks@@N shift and breathe in ways that have nothing to do with the wind.
+~
+1 3
+D0
+The trail climbs north toward a faint pale light.
+~
+~
+0 -1 10000
+D1
+A small clearing opens to the east, carpeted in pale green moss.
+~
+~
+0 -1 10003
+D2
+The trail sinks further southward into the press of great oaks.
+~
+~
+0 -1 10002
+S
+#10002
+Beneath Towering Oaks~
+Three ancient oaks of unfathomable girth dominate this stretch of forest, their trunks wider than a house, their bark furrowed deep as canyons and crusted with @@rpale green lichens@@N; roots as thick as fallen logs buckle the earth in every direction, and their canopy forms an unbroken ceiling of dark leaves through which only rare shafts of spectral light penetrate.
+~
+0 3
+D0
+The trail narrows northward into deepening shadow.
+~
+~
+0 -1 10001
+D1
+The roots grow particularly dense and tortured to the east.
+~
+~
+0 -1 10004
+D2
+The enormous trunks thin slightly to the south, where a log bridge spans a ravine.
+~
+~
+0 -1 10007
+D3
+The sound of dripping water and a rich fungal scent drift from the west.
+~
+~
+0 -1 10005
+S
+#10003
+A Moss-Covered Clearing~
+A small open patch interrupts the forest here, ringed by slender saplings that have grown in the shadow of greater trees for centuries; every surface is thickly padded with living moss in shades of vivid @@Ggreen@@N and blue-gray, soft underfoot as a mattress, and peculiarly warm to the touch despite the chill in the air.
+~
+0 3
+D1
+The gloomy trail continues eastward through the darkening wood.
+~
+~
+0 -1 10001
+D2
+The moss grows thicker southward, and a cloud of spores drifts on the still air.
+~
+~
+0 -1 10006
+E
+moss~
+The moss here is uncannily vivid, almost luminous in the dim light; it grows in concentric rings outward from some central point, as though planted rather than grown naturally.
+~
+S
+#10004
+Among Gnarled Roots~
+The roots of the ancient oaks have buckled the earth entirely here, creating a tortured landscape of arches and crevasses through which one must scramble and stoop; the @@glight barely reaches@@N down between the enormous root-walls, leaving this place in a deep, musty twilight that smells strongly of wet wood and the dark, intimate decay of centuries.
+~
+1 3
+D2
+The root-maze continues southward and downward, if one dares crouch through it.
+~
+~
+0 -1 10008
+D3
+The great oak trunks open westward where the roots thin slightly.
+~
+~
+0 -1 10002
+S
+#10005
+A Fungal Hollow~
+In the shadow of a great tree's upturned root-ball, a bowl-shaped hollow has collected centuries of leaf litter and moisture; dozens of fungi bloom here in rings and clusters, their caps ranging from porcelain white to vivid orange, some pulsing with a faint @@rbioluminescent glow@@N that casts soft rippling patterns on the surrounding bark and makes the hollow feel alive in a slow, chemical way.
+~
+0 3
+D1
+The hollow opens eastward where the root-ball ends and the oaks resume.
+~
+~
+0 -1 10002
+E
+fungi mushrooms glow~
+Some of the larger caps are nearly a foot across, their undersides gill-streaked in iridescent @@rblue-green@@N; touching them leaves a faint luminous residue on the fingers that takes hours to fade.
+~
+S
+#10006
+The Spore Thicket~
+The undergrowth here has gone strange and dense, with enormous fungal stalks rising shoulder-high and exhaling slow plumes of @@rpale spores@@N that drift through the air like lazy smoke; the spores carry a faintly sweet, soporific scent, and the ground beneath them is thick with a spongy mat of white mycelium that gives slightly and reluctantly with each step.
+~
+0 3
+D0
+The spore clouds thin to the north where the moss clearing lies.
+~
+~
+0 -1 10003
+S
+#10007
+A Rotting Log Bridge~
+A colossal fallen trunk spans a narrow ravine here, its bark long since sloughed away, the heartwood exposed and @@ggray@@N but still solid enough to bear weight; the ravine below is a dark cleft filled with ferns and the sound of trickling water, and the far side rises into deeper shadow where the great oaks crowd together more thickly than ever.
+~
+0 3
+D0
+The path climbs north toward the great oak trunks.
+~
+~
+0 -1 10002
+D1
+A drift of fern fronds marks a passage eastward through the undergrowth.
+~
+~
+0 -1 10010
+D2
+The ground drops southward toward a dark pool shimmering with algae.
+~
+~
+0 -1 10012
+D3
+A curtain of woven vines hangs across the path to the west, rustling faintly.
+~
+^curtain of vines~
+1 -1 10009
+E
+ravine bridge~
+The log is ancient and wide; moss and shelf fungi have colonized every inch of its surface, and in the cleft below, @@Gferns@@N grow tall in the perpetual damp, swaying despite the absence of any wind.
+~
+S
+#10008
+Beneath a Canopy of Vines~
+An aggressive network of climbing vines has consumed the forest canopy here, strangling the native trees and forming a dense living roof that hangs in great @@Glooping curtains@@N of dark green; the light that filters through takes on a watery, green-tinged quality, and the vine-walls press in from all sides with a sense of gentle but relentless growth.
+~
+0 3
+D0
+The vine canopy thins northward, and the gnarled roots become visible again.
+~
+~
+0 -1 10004
+S
+#10009
+A Sunken Trail~
+The path descends into a hollow where the water table stands close enough to the surface that the trail becomes a series of stepping-stones set across black, mirror-still water; the trees here have adapted to the wet, their roots forming stilt-structures above the flood line, and the @@gshadows@@N are almost total, broken only by the @@rbioluminescent gleam@@N of submerged fungi breathing slow light up through the murk.
+~
+1 3
+D1
+The vine curtain rustles eastward, and dim light filters through its weave.
+~
+^curtain of vines~
+1 -1 10007
+S
+#10010
+The Whispering Ferns~
+A broad stretch of forest floor is carpeted from one side to the other in enormous ferns, their @@Gfronds arching@@N overhead at head height, creating a living tunnel of soft green through which the trail passes like a secret kept between the roots; the air movement here produces a constant soft rustling that sounds, just barely, like muffled voices just beyond comprehension.
+~
+0 3
+D1
+The ferns grow taller eastward, crowding still closer over the path.
+~
+~
+0 -1 10011
+D3
+The fern corridor opens westward onto the log bridge and the ravine.
+~
+~
+0 -1 10007
+S
+#10011
+A Thicket of Thorns~
+The undergrowth here has grown into a nearly impassable wall of thorn-studded briar, the canes thick as wrists and studded with hooked spines that can tear through leather; only a narrow, scratching passage threads through the mass, and the space beyond is dark, indistinct, and smells of old blood where larger things have forced entry before.
+~
+0 3
+D3
+The thorn wall opens grudgingly westward into the whispering ferns.
+~
+~
+0 -1 10010
+S
+#10012
+Beside a Stagnant Pool~
+A wide pool of still, dark water occupies the center of this depression in the forest floor, its surface coated with a film of bright @@Ggreen algae@@N and the bones of fallen leaves; the trees that ring the pool lean inward over the water as if straining to drink, their lower trunks stained dark with old waterline marks, and the reflected canopy beneath the surface film looks like a dim, reversed world.
+~
+0 3
+D0
+The path climbs northward out of the depression toward the log bridge.
+~
+~
+0 -1 10007
+D2
+The trail winds southward through thinning brush toward a narrower game trail.
+~
+~
+0 -1 10015
+D3
+The briars thicken to the west, forming a tangle that looks almost deliberate.
+~
+~
+0 -1 10013
+E
+pool water algae~
+The water is perfectly still and opaque with algae, giving no indication of depth; something large has clearly drunk here recently, the mud at the bank churned and pressed with heavy tracks now softening in the wet.
+~
+S
+#10013
+A Tangle of Briars~
+Dense briars have overrun this section of trail, climbing over fallen logs, twining up the lower branches of trees, forming an ankle-to-shoulder-height labyrinth of interlocking thorny canes; the passage through is marked by countless rents in the undergrowth where larger creatures have forced their way, and the torn vegetation leaves a sharp, @@ggreen-iron@@N smell in the air.
+~
+0 3
+D0
+The briars thin eastward where the stagnant pool reflects a faint gray light.
+~
+~
+0 -1 10012
+D2
+A narrow break in the briar wall leads southward to an ancient boundary.
+~
+~
+0 -1 10014
+S
+#10014
+The Old Growth Border~
+An invisible but palpable line runs through this place, the point at which the forest stops being merely old and becomes something else entirely; the trees on the south side are categorically different, their bark @@gpale and smooth as bone@@N, their silence deeper, their stillness charged with a sense of deliberate patience, and a faint subsonic vibration rises through the soles of the feet from somewhere far below.
+~
+0 3
+D0
+The briar tangle retreats northward, and the familiar dark forest resumes.
+~
+~
+0 -1 10013
+S
+#10015
+A Narrow Game Trail~
+Generations of large animals have kept this narrow corridor through the undergrowth open with their passing, though it is clear the traffic has dwindled; the trail is narrowing at the edges where @@Ggreedy brush@@N reclaims the margins, and the packed earth is marked with old hoofprints and claw-impressions from creatures that no longer pass in numbers, or pass by night in silence.
+~
+0 3
+D0
+The game trail climbs north toward the dark pool.
+~
+~
+0 -1 10012
+D2
+The game trail continues southward, descending slightly through fallen trunks.
+~
+~
+0 -1 10016
+S
+#10016
+Among Fallen Trunks~
+Several enormous tree trunks have collapsed across one another here, their slow decomposition creating a waist-high obstacle course of soft, crumbling wood; each trunk is a micro-ecosystem of shelf fungi, beetles, and @@rluminous slime molds@@N, and the hollows between them offer hiding places large enough for substantial predators, some of which appear to be currently in use.
+~
+0 3
+D0
+The fallen trunks give way northward to a narrowing game trail.
+~
+~
+0 -1 10015
+D1
+The ground drops eastward into a cold, wet hollow that drains darkness.
+~
+~
+0 -1 10017
+D2
+The way south leads beneath dripping boughs toward the threshold of something vast.
+~
+~
+0 -1 10018
+S
+#10017
+A Damp Hollow~
+The ground here has subsided into a wide, bowl-shaped depression that collects both water and @@gdarkness@@N with equal efficiency; the air is cold and heavy with moisture, and droplets fall from the overhead canopy with metronomic regularity onto a floor of wet moss that squelches underfoot and clings to any surface it contacts.
+~
+1 3
+D3
+The hollow's western slope leads back up to the fallen trunks and the trail.
+~
+~
+0 -1 10016
+S
+#10018
+Beneath Dripping Boughs~
+The canopy here is lower and denser than elsewhere, trapping moisture in a permanent fine drizzle that falls from saturated leaves even when the sky above is clear; the sound of water pattering on @@Gferns and broad leaves@@N creates a constant meditative rhythm, and everything here is coated in a gleaming, water-beaded skin of perpetual @@ggreen@@N.
+~
+0 3
+D0
+The dripping eases northward where fallen trunks mark the way up.
+~
+~
+0 -1 10016
+D2
+An ancient archway of intertwined roots marks the boundary of the Old Growth ahead.
+~
+^mossy archway~
+1 -1 10019
+S
+#10019
+The Edge of the Old Growth~
+The forest changes character here with sudden finality, the familiar underbrush giving way to bare earth packed hard and smooth, the trees growing enormous and widely spaced in a pattern that feels less natural than architectural; this is a threshold, and the forest beyond knows it -- a deep resonant silence emanates from the darkness ahead, vast and expectant, as though the wood is holding its breath.
+~
+0 3
+D0
+The path returns northward under dripping boughs and familiar shadow.
+~
+^mossy archway~
+1 -1 10018
+D2
+The columns of ancient trees recede southward into a vast, cathedral-like darkness.
+~
+~
+0 -1 10020
+E
+archway roots threshold~
+The archway is formed by the interlocked root-buttresses of two titanic oaks, their trunks leaning slightly inward overhead; the roots have grown over and through one another until no seam remains, forming a seamless organic gate that was never built and will never be torn down.
+~
+S
+#10020
+The Old Growth~
+The heart of the ancient forest opens in a space so vast and cathedral-like that the eye struggles to reckon the scale; trees of immeasurable age rise into darkness above, their trunks forming columns of a natural temple, and the forest floor stretches away in every direction with an invitation that feels both genuine and predatory, the paths leading deeper into something that has been watchful and patient since long before the coming of civilization.
+~
+0 3
+D0
+The archway of intertwined roots frames the path north toward the threshold.
+~
+^mossy archway~
+1 -1 10019
+D1
+A corridor of paired ancient trunks stretches eastward in near-perfect rows.
+~
+~
+0 -1 10021
+D2
+The forest floor descends slightly southward, the roots weaving into a raised causeway.
+~
+~
+0 -1 10023
+D3
+The ancient trunks grow closer together westward, their canopy merging overhead.
+~
+~
+0 -1 10022
+S
+#10021
+A Cathedral of Trees~
+The ancient trunks here are arranged in nearly perfect parallel rows that converge toward a distant vanishing point, creating an overwhelming sense of architectural intention in what is surely natural growth; the silence is immense and structural, pressing inward from every side, and the @@Ggreen light@@N filtered through the joined canopy overhead does nothing to dispel the feeling of standing inside something enormous and alive.
+~
+0 3
+D3
+The tree-corridor opens westward into the vast clearing of the Old Growth.
+~
+~
+0 -1 10020
+S
+#10022
+Among Ancient Trunks~
+These trees are beyond old in any meaningful sense, their trunks so large that the eye processes them as landscape features rather than organisms; the bark has been colonized entirely by layered ecosystems of @@Gmoss, lichen@@N, and climbing plants, each species growing atop the previous in a vertical archaeology of centuries, and between the trunks the forest floor is dim and very still and smells of something slow.
+~
+0 3
+D1
+The ancient trunks thin slightly eastward, opening onto the hub of the Old Growth.
+~
+~
+0 -1 10020
+S
+#10023
+A Root-Woven Path~
+The surface roots of the ancient trees have woven themselves into a raised, interlocking network that serves as a natural causeway above the forest floor, which here is a shallow bog of @@gdark water@@N and deep mud; walking the root-path requires balance and attention, but it is the only viable route, and the roots seem somehow deliberate in their arrangement, as though laid for a specific purpose by a patient and inhuman architect.
+~
+0 3
+D0
+The root-causeway climbs northward back toward the cathedral clearing of the Old Growth.
+~
+~
+0 -1 10020
+D2
+The root-path descends southward into a narrowing corridor of interlaced trunks.
+~
+~
+0 -1 10024
+S
+#10024
+The Verdant Corridor~
+Two parallel rows of trees have grown so close together that their intertwining branches have merged overhead into a solid living tunnel of @@Gdeep green@@N; the corridor is narrow enough that outstretched arms would brush bark on both sides, and the feeling within it is distinctly that of being inside a living organism rather than walking through a forest, the wood pressing close and attentive on every side.
+~
+0 3
+D0
+The root-woven causeway leads northward out of the corridor toward the Old Growth.
+~
+~
+0 -1 10023
+S
+#0
 #$
