@@ -9,7 +9,639 @@ V 2000 2149
 F 15
 U @@yA blistering wind howls through Akh'enet, scouring stone and bone.@@N~
 
-#ROOMS
+#MOBILES
+#2000
+sand asp~
+a sand asp~
+A sand asp coils in the sand, scales glistening in the harsh sun.
+~
+This deadly serpent has sun-bleached scales that blend perfectly with the sand. Its forked tongue flickers constantly, tasting the air for prey. Venom drips from exposed fangs.
+~
+97 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2001
+dune beetle~
+a dune beetle~
+A massive dune beetle scuttles across the sand.
+~
+This oversized insect has a carapace of burnished chitin hardened by the sun. Its mandibles click together with a sharp, threatening rhythm. It moves with surprising speed.
+~
+97 0 0 S
+71 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2002
+bleached skeleton~
+a bleached skeleton~
+A bleached skeleton stands here, jawbone creaking.
+~
+This animated corpse has been stripped of all flesh by the desert heat. Its bones are chalk-white and brittle, yet it moves with unnatural purpose. Eye sockets burn with pale light.
+~
+16481 0 -750 S
+72 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#2003
+dust wraith~
+a dust wraith~
+A dust wraith drifts through the air, trailing wisps of dust.
+~
+This spectral figure is composed of swirling sand and shadow. Its form shifts constantly, sometimes resembling a robed figure, sometimes dissolving into a formless cloud of grit.
+~
+16481 0 -750 S
+73 0
+0 0 0 0
+! 0 0 0 0 1025 2162688 4
+#2004
+sunstruck jackal~
+a sunstruck jackal~
+A mangy sunstruck jackal slinks through the shadows.
+~
+This gaunt scavenger has a spotted, dusty coat and powerful jaws. Its yellow eyes gleam with feral cunning. A low growl rumbles from its scarred throat.
+~
+97 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2005
+wind-scoured ghoul~
+a wind-scoured ghoul~
+A wind-scoured ghoul shambles forward, blackened flesh cracking.
+~
+This walking corpse has been baked to a leathery husk by the desert sun. Skin splits and charred flesh reveals bone beneath. Wisps of acrid smoke rise from its joints.
+~
+16481 0 -750 S
+74 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#2006
+bazaar phantom~
+a bazaar phantom~
+A bazaar phantom drifts through the ruins, moaning softly.
+~
+This undead merchant's spirit is bound to the place of its death. Tattered merchant's robes hang from a skeletal frame. The phantom reaches out with spectral hands seeking the goods it once sold.
+~
+16481 0 -750 S
+75 0
+0 0 0 0
+! 0 0 0 0 1025 2162688 4
+#2007
+sand mite swarm~
+a swarm of sand mites~
+A swarm of sand mites swirls in the air before you.
+~
+Thousands of tiny, insect-like creatures form a living cloud. They swirl and dance with apparent intelligence, their collective form roughly humanoid. A faint chittering sound emanates from the mass.
+~
+97 0 0 S
+71 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2008
+petrified sentinel~
+a petrified sentinel~
+A petrified sentinel stands at attention, ancient weapon raised.
+~
+This stone golem-like construct appears to have been carved from a single piece of gray stone. Its features are worn but still show signs of expert craftsmanship. It remains eternally vigilant.
+~
+97 0 0 S
+76 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2009
+tomb scarab~
+a tomb scarab~
+A tomb scarab scuttles across the floor.
+~
+This oversized beetle has a carapace decorated with hieroglyphic markings. It was clearly sacred to the ancient civilization. Its movements are methodical and purposeful.
+~
+97 0 0 S
+72 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2010
+cursed pilgrim~
+a cursed pilgrim~
+A cursed pilgrim stumbles about, muttering incoherently.
+~
+Once a devotee seeking enlightenment, this wretched figure is now trapped between life and death. Tattered robes hang from a gaunt frame. Maddened eyes dart about wildly.
+~
+16481 0 -500 S
+73 1
+0 0 0 0
+! 0 0 0 0 1025 2162688 4
+#2011
+sun-crazed raider~
+a sun-crazed raider~
+A sun-crazed raider crouches here, scanning the horizon.
+~
+Wrapped in dusty linens with a curved blade at the hip, this weathered scout serves as eyes and ears for the raider warband. A jagged scar crosses one sun-darkened cheek.
+~
+97 0 -500 S
+75 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2012
+dust devil~
+a dust devil~
+A swirling dust devil spins angrily across the ground.
+~
+This minor elemental is a tight vortex of sand and scorching wind. Tiny rocks and debris orbit its whirling form. The sound it makes is a terrible howling.
+~
+97 0 0 S
+74 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 128 64 0 0 0 128 64
+#2013
+carrion vulture~
+a carrion vulture~
+A carrion vulture circles lazily overhead.
+~
+This enormous bird has a wingspan of several feet. Its feathers are matted and filthy. The stench of death clings to its form.
+~
+97 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2014
+sand golem~
+a sand golem~
+A sand golem rises before you, shaped from compacted earth.
+~
+This elemental construct is a towering pillar of compacted sand and stone. It moves with grinding, grating sounds. Its eyes glow faintly with eldritch light.
+~
+97 0 0 S
+78 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 32 16 0 0 0 32 16
+#2015
+catacomb guardian~
+a catacomb guardian~
+A catacomb guardian stands at silent attention.
+~
+This armored undead warrior still wears the corroded remnants of ceremonial plate. Its hollow eyes glow with a cold blue fire, bound by ancient magic to protect this place eternally.
+~
+16481 0 -750 S
+79 0
+10 0 0 0
+! 0 0 0 0 1025 0 4
+#2016
+entombed priest~
+an entombed priest~
+An entombed priest shuffles slowly forward.
+~
+Wrapped in layers of stained linen, this undead cleric still carries the sacred vessels of its order. Golden amulets and protective scarabs adorn its tattered robes. Its lips move in eternal prayer.
+~
+16481 0 -750 S
+77 1
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#2017
+mummified warrior~
+a mummified warrior~
+A mummified warrior stands rigid, ancient blade raised.
+~
+This towering figure is wrapped in layers of preserved linen. Dark, leathery flesh shows where the wrappings have unraveled. Golden ornaments still gleam on its form.
+~
+16481 0 -750 S
+80 1
+10 0 0 0
+! 0 0 0 0 1025 0 4
+#2018
+dune stalker~
+a dune stalker~
+A dune stalker crouches in the shadows.
+~
+This human assassin moves with deadly grace. Desert leathers and weapons of fine make suggest professional training. Cold, calculating eyes miss nothing.
+~
+97 0 -500 S
+78 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2019
+tomb spider~
+a tomb spider~
+A tomb spider clings to the ceiling, pale body barely visible.
+~
+This oversized arachnid has a ghostly white carapace and legs spanning several feet. Its many eyes reflect light like polished onyx. Silk threads trail from its spinnerets.
+~
+97 0 0 S
+76 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2020
+sand horror~
+a sand horror~
+A sand horror writhes and shifts before you.
+~
+This amorphous creature is composed of compacted sand held together by eldritch forces. Its form is vaguely humanoid but constantly shifting. Hollow voids that might be eyes stare blankly.
+~
+97 0 0 S
+79 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2021
+embalmed sorcerer~
+an embalmed sorcerer~
+An embalmed sorcerer hovers above the ground, skeletal hands crackling.
+~
+This ancient mage transcended death through terrible magic. The body is wrapped in preservation linens and covered in occult markings. Pinpoints of violet flame burn in hollow eye sockets.
+~
+16481 0 -750 S
+81 1
+0 0 0 0
+! 0 0 0 0 1025 2162688 24
+| 260 2 0 1025 2162688 260 2
+#2022
+scorpion broodmother~
+the scorpion broodmother~
+The scorpion broodmother rears up on segmented legs.
+~
+This gargantuan scorpion is the undisputed matriarch of the desert caves. Her chitinous shell is layered in thick plates of midnight black. Her stinger pulses with sickly green venom.
+~
+97 0 -500 S
+80 2
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 512 128 0 0 0 512 128
+#2023
+desert wraith lord~
+the desert wraith lord~
+A desert wraith lord drifts through the air, trailing wisps of shadow.
+~
+This powerful undead spirit is a swirling mass of shadow and cold. Its form suggests a once-regal figure, now twisted by centuries of undeath. The temperature drops near its presence.
+~
+16481 0 -750 S
+82 1
+0 0 0 0
+! 0 0 0 0 1025 2162688 4
+#2024
+sanctum flame guardian~
+a sanctum flame guardian~
+A sanctum flame guardian hovers before you, trailing magical fire.
+~
+This fire elemental has been bound to eternal service through ancient magic. Flames dance across its form without consuming it. The heat radiates in waves.
+~
+97 0 0 S
+84 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 128 64 0 0 0 128 64
+#2025
+eternal sentinel~
+an eternal sentinel~
+An eternal sentinel stands motionless, radiating arcane power.
+~
+This construct of stone and magic has stood guard for countless ages. Its surface is covered in protective wards. Magical energy crackles around its form.
+~
+97 0 0 S
+83 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2026
+sun-cursed revenant~
+a sun-cursed revenant~
+A sun-cursed revenant shambles forward with terrible purpose.
+~
+This powerful undead creature bears the marks of the desert's curse. Its body is desiccated and cracked, yet it moves with supernatural strength. Rage burns in its hollow eyes.
+~
+16481 0 -1000 S
+85 1
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#2027
+obsidian golem~
+an obsidian golem~
+An obsidian golem stands before you, dark and massive.
+~
+This construct is carved from a single block of black obsidian stone. Its surface is smooth and reflective. Runes of binding cover its entire form.
+~
+97 0 0 S
+86 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 32 16 0 0 0 32 16
+#2028
+akh'enet shade~
+an akh'enet shade~
+An akh'enet shade materializes from the darkness.
+~
+This spectral undead creature is a remnant of the cursed civilization. Its form is vaguely humanoid but incorporeal. Shadow seems to cling to it.
+~
+16481 0 -750 S
+84 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#2029
+Vizier Nephkara~
+Vizier Nephkara~
+@@RVizier Nephkara hovers above a runic circle, skeletal hands crackling.@@N~
+Clad in ornate golden robes tarnished by millennia, this undead vizier commands a terrifying presence. A crown of blackened gold rests upon a desiccated brow. Eyes of molten amber burn with fury.
+~
+67108963 0 -1000 S
+91 1
+40 -15 8 8
+! 0 0 0 0 1650432 10240 24
+| 128 64 0 1051652 10240 162 72
++ 5 3 0 3 0 5 5 0 0
+#2030
+Sandstorm Colossus~
+the Sandstorm Colossus~
+@@RThe Sandstorm Colossus towers here, its form a pillar of churning sand.@@N~
+This powerful elemental has the torso and arms of a muscular humanoid formed from compacted sand. Its lower half is a perpetual cyclone of grit and dust. Lightning crackles between its fingers.
+~
+67108963 0 0 S
+91 0
+50 -20 8 10
+! 0 0 0 0 1051652 33554464 0
+| 32 16 0 1051652 0 34 16
+#2031
+The Devourer~
+the Devourer~
+@@RThe Devourer rears up before you, a nightmare made flesh.@@N~
+This ancient undead horror transcended death long ago. The body is a twisted amalgamation of flesh and shadow. Teeth like daggers line its grotesque maw.
+~
+67108963 0 -1000 S
+93 0
+50 -15 10 8
+! 0 0 0 0 1051652 0 0
+| 256 8 0 1025 0 256 8
++ 5 3 0 0 0 5 5 0 0
+#2032
+High Priest Amenthari~
+High Priest Amenthari~
+@@RHigh Priest Amenthari hovers above a runic circle, crackling with eldritch power.@@N~
+This ancient sorcerer transcended death long ago through terrible magic. The body is robed in shadow. Pinpoints of violet flame burn in hollow eye sockets. The air hums with power.
+~
+67108963 0 -1000 S
+95 1
+60 -20 12 12
+! 0 0 0 0 1651456 2162688 24
+| 136 256 0 1025 2162688 136 256
++ 10 3 0 5 0 3 3 0 0
+#2033
+cave viper~
+a cave viper~
+A cave viper lurks in the shadows of the tunnel.
+~
+This thick-bodied serpent has scales mottled with darker patterns. Its triangular head and heat-sensing pits mark it as a pit viper. Venom drips from hinged fangs.
+~
+97 0 0 S
+72 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2034
+tunnel scorpion~
+a tunnel scorpion~
+A tunnel scorpion burrows through the loose earth.
+~
+This massive arachnid has a carapace of burnished gold, hardened by the underground environment. Its mandibles click together with a sharp rhythm. The stinger curves over its back.
+~
+97 0 0 S
+73 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2035
+blind cave crawler~
+a blind cave crawler~
+A blind cave crawler scuttles across the stone.
+~
+This eyeless beast navigates by echolocation and tactile sensitivity. Its body is pale and elongated. Sensory tentacles wave in the air around its head.
+~
+97 0 0 S
+74 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2036
+venom-spitting cobra~
+a venom-spitting cobra~
+A venom-spitting cobra raises its head, hood flared.
+~
+This cobra is poised to strike with deadly accuracy. Its venom can be sprayed with surprising force. Scales gleam with an iridescent sheen.
+~
+97 0 0 S
+76 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 512 128 0 0 0 512 128
+#2037
+crystalline scorpion~
+a crystalline scorpion~
+A crystalline scorpion glitters in the dim light.
+~
+This scorpion's carapace is encased in mineral deposits and crystalline growths. It sparkles as it moves. The crystalline armor provides exceptional protection.
+~
+97 0 0 S
+78 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2038
+serpent cultist~
+a serpent cultist~
+A serpent cultist chants prayers to forbidden gods.
+~
+This human devotee has dedicated body and soul to serpent worship. Ritual scars crisscross exposed skin. A serpent symbol is branded on the forehead.
+~
+97 0 -500 S
+77 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2039
+giant constrictor~
+a giant constrictor~
+A giant constrictor coils around the chamber.
+~
+This massive snake is the size of a horse when fully extended. Its scales are a rich brown color. Crushing strength flows through its powerful body.
+~
+97 0 0 S
+80 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 512 128 0 0 0 512 128
+#2040
+The Serpent Queen~
+the Serpent Queen~
+@@RThe Serpent Queen rears up on segmented legs, her massive stinger poised.@@N~
+This gargantuan serpent is the undisputed matriarch of the caverns. Her chitinous shell is layered in plates of midnight black. Her stinger pulses with sickly green venom. Ancient intelligence burns in her eyes.
+~
+67108963 0 -500 S
+90 2
+45 -18 9 9
+! 0 0 0 0 1025 0 0
+| 512 128 0 1025 0 512 128
+#2041
+raider watchman~
+a raider watchman~
+A raider watchman stands guard, eyes alert.
+~
+This hardened warrior wears armor patched from many sources. Scars crisscross his bronzed skin. A sword hangs at his side, honed by constant use.
+~
+97 0 -500 S
+74 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2042
+raider archer~
+a raider archer~
+A raider archer stands with bow at ready.
+~
+This nimble fighter has the keen eyes and steady hands of a master archer. A quiver full of arrows hangs at their side. The bowstring is always taut.
+~
+97 0 -500 S
+75 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2043
+raider houndmaster~
+a raider houndmaster~
+A raider houndmaster stands with hand raised, controlling his beasts.
+~
+This warrior has made a pact with the war hounds. Scars from beast claws mark their arms. They move with an almost predatory grace.
+~
+97 0 -500 S
+76 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2044
+war hound~
+a war hound~
+A war hound snarls, revealing fangs.
+~
+This massive beast has been trained for combat. Its muscles are taut and rippling. The smell of beast musk and blood hangs around it.
+~
+97 0 0 S
+73 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2045
+raider shaman~
+a raider shaman~
+A raider shaman chants in an ancient tongue.
+~
+This mystical warrior wields magic alongside blade. Bone fetishes and talismans hang from their frame. The air around them shimmers with power.
+~
+97 0 -500 S
+78 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2046
+raider pit fighter~
+a raider pit fighter~
+A raider pit fighter stands in a ready stance.
+~
+This warrior is built for close combat. Muscles ripple across their frame. Fists are wrapped in leather, ready to crush bone.
+~
+97 0 -500 S
+80 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2047
+raider torturer~
+a raider torturer~
+A raider torturer stands with tools of agony in hand.
+~
+This sadistic warrior takes pleasure in suffering. Dark stains cover their clothing. Eyes burn with a cruel intelligence and malevolence.
+~
+97 0 -1000 S
+79 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2048
+Warchief Ghazaan~
+Warchief Ghazaan~
+@@RWarchief Ghazaan towers here in spiked armor, a massive cleaver resting on one shoulder.@@N~
+The feared leader of the desert raiders is a mountain of scarred muscle and cruelty. Heavy spiked plate armor covers a frame built for war. The warchief's cold gaze promises death.
+~
+67108963 0 -1000 S
+92 1
+55 -18 10 11
+! 0 0 0 0 1650432 0 0
+| 2 4 0 1650432 0 2 4
++ 3 5 0 0 0 8 8 3 0
+#2049
+shadow-touched crocodile~
+a shadow-touched crocodile~
+A shadow-touched crocodile lurks in dark water.
+~
+This creature has been corrupted by shadow magic. Its scales are unnaturally black. The water around it seems darker and colder.
+~
+97 0 0 S
+76 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2050
+corrupted water nymph~
+a corrupted water nymph~
+A corrupted water nymph emerges from the shadows.
+~
+This fey creature has been twisted by darkness. Once beautiful, she is now a thing of terrible power. Shadow clings to her like a second skin.
+~
+97 0 -500 S
+78 2
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#2051
+dark lotus tendril~
+a dark lotus tendril~
+A dark lotus tendril writhes in the water.
+~
+This plant creature is a writhing mass of dark vines and petals. It moves with apparent intelligence and malice. Poison drips from its thorns.
+~
+327777 0 0 S
+77 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#2052
+shade serpent~
+a shade serpent~
+A shade serpent coils from the shadows.
+~
+This snake is composed of living shadow and substance. It moves without making sound. Venom that drips from its fangs is pure void.
+~
+16481 0 -750 S
+79 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#2053
+drowned revenant~
+a drowned revenant~
+A drowned revenant rises from the dark water.
+~
+This waterlogged undead creature moves with jerky, unnatural motions. Water drips constantly from its tattered form. The smell of decay and brine hangs around it.
+~
+16481 0 -750 S
+81 1
+0 0 0 0
+! 0 0 0 0 1025 2162688 4
+#2054
+void-touched elemental~
+a void-touched elemental~
+A void-touched elemental manifests before you.
+~
+This elemental is composed of shadow and water in equal measure. Its form is unstable and shifting. Absolute cold radiates from its presence.
+~
+97 0 0 S
+83 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 320 128 0 0 0 320 128
+#2055
+Sha'ithara the Corruptor~
+Sha'ithara the Corruptor~
+@@RSha'ithara hovers above the dark water, crackling with shadow magic.@@N~
+This ancient shadow sorceress is a being of terrible power and malice. Robes of pure darkness wrap around her form. Her eyes are abysses of void. Ancient intelligence burns within her.
+~
+67108963 0 -1000 S
+93 2
+55 -20 11 10
+! 0 0 0 0 1651456 2162688 24
+| 320 136 0 1025 2162688 320 136
++ 8 3 0 5 0 3 3 0 0
+#0
+
 #2000
 @@yWindswept Desert Edge@@N~
 @@yYou stand at the edge of a vast, merciless desert that seems to stretch beyond the bounds of the world. The sand stretches endlessly in all directions beneath a scorching sun that offers no mercy, turning the sky to shades of pale orange and searing white. Ancient ruins protrude from dunes to the south, their weathered stone architecture suggesting once-grand structures now claimed by time and sand. To the north, a narrow canyon opens like the maw of some colossal beast, its sheer walls carved by millennia of wind and rare water. The air shimmers with heat in visible waves, distorting everything beyond arm's reach into a rippling mirage. Your skin feels the assault of the sun even through clothing, and each breath brings scorching air that parches mouth and throat. The wind is constant, carrying abrasive sand that stings exposed skin. Far in the distance, you can make out the faint shapes of more ruins rising from the dunes, the remnants of a once-mighty civilization now buried beneath centuries of shifting sand.@@N
