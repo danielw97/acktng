@@ -1,13 +1,13 @@
 #AREA
-The Sunscorched Wastes~
+The Scorching Sands~
 Q 16
-K sunscorch wastes desert~
+K scorching sands desert~
 L @@y65  @@R85~
 N 299
 I 65 85
 V 29900 29974
 F 15
-U @@yThe desert winds shift, reshaping the dunes of the Sunscorched Wastes.@@N~
+U @@yThe desert winds shift, reshaping the dunes of the Scorching Sands.@@N~
 #MOBILES
 #29900
 desert sidewinder~
