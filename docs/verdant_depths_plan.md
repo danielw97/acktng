@@ -236,6 +236,9 @@ All trash mobs: `act` flags include `is_npc|stay_area|aggressive`. Strong (non-b
 | 10017 | a root tendril mass | 87 | is_npc, stay_area, aggressive | Animated roots; Zone 4a |
 | 10018 | a canopy weaver | 91 | is_npc, stay_area, aggressive, solo | Giant web-spinning beast; Zone 4c |
 | 10019 | a verdant wraith | 95 | is_npc, stay_area, aggressive, solo | Forest ghost; rare spawn in Zone 3 |
+| 10020 | a creeping shadow fox | 81 | is_npc, stay_area, aggressive | Dark-furred fox stalking the threshold; Zone 1 |
+| 10021 | a tanglewood serpent | 83 | is_npc, stay_area, aggressive | Snake camouflaged in undergrowth; Zone 1-2 |
+| 10022 | a fungal tick swarm | 80 | is_npc, stay_area, aggressive, no_body | Swarm of parasitic fungal ticks; Zone 1 |
 | 10023 | a grasping bramble | 81 | is_npc, stay_area, aggressive | Animated bramble patch; Zone 1 |
 | 10024 | a hollow tree lurker | 83 | is_npc, stay_area, aggressive | Creature nesting in dead trunks; Zone 1-2 |
 | 10025 | a mosswort beetle | 80 | is_npc, stay_area, aggressive | Giant armored beetle; Zone 1 |
@@ -256,22 +259,42 @@ All trash mobs: `act` flags include `is_npc|stay_area|aggressive`. Strong (non-b
 | 10040 | a canopy strangler | 88 | is_npc, stay_area, aggressive | Vine creature that drops from above; Zone 2-3 |
 | 10041 | a withered dryad | 91 | is_npc, stay_area, aggressive, solo | Ancient decayed forest spirit; Zone 4b |
 | 10042 | a mosswort queen | 85 | is_npc, stay_area, aggressive | Larger beetle matriarch; Zone 2 |
+| 10043 | a verdant hulk | 92 | is_npc, stay_area, aggressive, solo | Massive plant-beast amalgamation; Zone 3 |
+| 10044 | a rotting stag | 83 | is_npc, stay_area, aggressive, undead | Undead deer wreathed in fungus; Zone 2 |
+| 10045 | a thorn wasp swarm | 81 | is_npc, stay_area, aggressive, no_body | Cloud of stinging thorn wasps; Zone 1-2 |
+| 10046 | a barkskin wolf | 87 | is_npc, stay_area, aggressive | Wolf with bark-hardened hide; Zone 2-3 |
+| 10047 | a deepwood centipede | 84 | is_npc, stay_area, aggressive | Giant venomous centipede; Zone 2 |
+| 10048 | a bog troll | 89 | is_npc, stay_area, aggressive | Swamp troll covered in moss; Zone 2-3 |
+| 10049 | a fungal broodmother | 93 | is_npc, stay_area, aggressive, solo | Giant fungal matriarch; Zone 4b |
+| 10050 | an ancient moss elemental | 90 | is_npc, stay_area, aggressive | Elemental of living moss and earth; Zone 3 |
+| 10051 | a twisted ent | 88 | is_npc, stay_area, aggressive | Corrupted tree creature; Zone 2-3 |
+| 10052 | a thornveil assassin | 94 | is_npc, stay_area, aggressive, solo | Stealthy plant-like predator; Zone 3 |
+| 10053 | a gloomwing moth | 82 | is_npc, stay_area, aggressive | Giant moth with toxic wing dust; Zone 1-2 |
+| 10054 | a sap ooze | 85 | is_npc, stay_area, aggressive, no_body, no_mind | Animated blob of tree sap; Zone 2 |
+| 10055 | a feral grove keeper | 91 | is_npc, stay_area, aggressive, solo | Corrupted nature guardian; Zone 3 |
+| 10056 | a corpseflower lurker | 86 | is_npc, stay_area, aggressive | Carnivorous plant that feeds on the dead; Zone 4b |
+| 10057 | a brambleback tortoise | 88 | is_npc, stay_area, aggressive | Huge tortoise with thorn-covered shell; Zone 2-3 |
+| 10058 | a sporeveil phantom | 90 | is_npc, stay_area, aggressive | Ghostly shape in the spore clouds; Zone 3 |
+| 10059 | a thornroot drake | 95 | is_npc, stay_area, aggressive, solo | Dragon-like plant creature; Zone 3 rare |
+| 10060 | a deepwood prowler | 84 | is_npc, stay_area, aggressive | Large feline predator; Zone 2 |
 
 **Mob combat extensions (`!` line):**
 - Lower trash (80-86): 2-3 attacks, basic skills (punch, kick, dodge)
 - Mid trash (87-90): 3-4 attacks, enhanced skills (headbutt, disarm, parry, dodge)
 - Upper trash (91-95) and solo: 4-5 attacks, full combat skills (trip, counter, enhanced, parry, dodge)
-- Caster mobs (blighted dryad, verdant wraith, deepwood shaman, withered dryad): cast bitvectors for nature-themed spells (flamestrike, earthquake, faerie_fire)
-- Defensive mobs (moss-covered golem, petrified sentinel, rootbound guardian): def bitvectors (fireshield, iceshield)
-- Poison mobs (rootweaver spider, fungal abomination, blightspore walker, mycelium crawler): spec_poison
+- Caster mobs (blighted dryad, verdant wraith, deepwood shaman, withered dryad, feral grove keeper): cast bitvectors for nature-themed spells (flamestrike, earthquake, faerie_fire)
+- Defensive mobs (moss-covered golem, petrified sentinel, rootbound guardian, brambleback tortoise, ancient moss elemental): def bitvectors (fireshield, iceshield)
+- Poison mobs (rootweaver spider, fungal abomination, blightspore walker, mycelium crawler, deepwood centipede, gloomwing moth, corpseflower lurker): spec_poison
 
 **Mob elemental extensions (`|` line):**
-- Plant-type mobs (treant, vine strangler, grasping bramble, living deadfall, rootwoven horror, rootbound guardian): strong earth, weak fire, resist poison, suscept fire
-- Fungal mobs (sporecap shambler, fungal abomination, mycelium crawler, blightspore walker, sporecrown drone): strong poison, weak fire, resist earth, suscept fire
-- Predator mobs (deepwood wolf, thornfang stalker/packmate/whelp, deepwood bear, spore-maddened boar, elder vine serpent): strong physical, resist physical
-- Spirit mobs (verdant wraith, blighted dryad, whispering shade, withered dryad): strong mental, weak physical
-- Insect mobs (mosswort beetle, mosswort queen, rootweaver spider, canopy weaver): strong earth, resist poison
+- Plant-type mobs (treant, vine strangler, grasping bramble, living deadfall, rootwoven horror, rootbound guardian, twisted ent, verdant hulk, thornveil assassin, corpseflower lurker): strong earth, weak fire, resist poison, suscept fire
+- Fungal mobs (sporecap shambler, fungal abomination, mycelium crawler, blightspore walker, sporecrown drone, fungal broodmother, fungal tick swarm): strong poison, weak fire, resist earth, suscept fire
+- Predator mobs (deepwood wolf, thornfang stalker/packmate/whelp, deepwood bear, spore-maddened boar, elder vine serpent, barkskin wolf, deepwood prowler, thornroot drake, creeping shadow fox, tanglewood serpent): strong physical, resist physical
+- Spirit mobs (verdant wraith, blighted dryad, whispering shade, withered dryad, sporeveil phantom): strong mental, weak physical
+- Insect mobs (mosswort beetle, mosswort queen, rootweaver spider, canopy weaver, thorn wasp swarm, deepwood centipede, gloomwing moth): strong earth, resist poison
 - Construct mobs (moss-covered golem, petrified sentinel): strong earth, strong physical, resist physical, resist earth
+- Ooze mobs (sap ooze, sap-blooded horror): strong poison, resist physical, suscept fire, no_mind
+- Troll/Ogre mobs (bog troll, bark-skinned ogre): strong physical, resist earth
 
 ### Boss Mobs (level 100)
 
@@ -279,9 +302,9 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 
 | Vnum | Name | Level | Room | Theme |
 |------|------|-------|------|-------|
-| 10043 | the Rootmother | 100 | 10101 | Growth boss -- massive living tree entity |
-| 10044 | the Blightwood Ancient | 100 | 10112 | Decay boss -- ancient rotting mega-treant |
-| 10045 | Thornfang Alpha | 100 | 10124 | Predation boss -- apex forest predator beast |
+| 10061 | the Rootmother | 100 | 10101 | Growth boss -- massive living tree entity |
+| 10062 | the Blightwood Ancient | 100 | 10112 | Decay boss -- ancient rotting mega-treant |
+| 10063 | Thornfang Alpha | 100 | 10124 | Predation boss -- apex forest predator beast |
 
 **Boss combat extensions:**
 - All bosses: 5-6 attacks, enhanced, counter, parry, dodge, nodisarm, notrip
@@ -322,6 +345,21 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 | 10017 | a canopy weaver's silk gloves | armor | hands, take | 84 | 1 | caster | hands; from canopy weavers |
 | 10018 | a verdant wraith's shroud | armor | about, take | 85 | 1 | caster | about; from verdant wraiths |
 | 10019 | a deepwood wolf's ear | treasure | take | 80 | 6 | melee | trophy/quest item |
+| 10020 | a shadow fox pelt cloak | armor | about, take | 81 | 6 | melee | about; from creeping shadow foxes |
+| 10021 | a tanglewood fang blade | weapon | hold, take | 83 | 6 | melee | stab; from tanglewood serpents |
+| 10022 | a tick-chitin armguard | armor | wrist, take | 80 | 11 | tank | wrist; from fungal tick swarms |
+| 10023 | a verdant hulk's knuckle | weapon | hold, take, fist | 85 | 11 | tank | hit (fist); from verdant hulks |
+| 10024 | a rotting stag antler | weapon | hold, take | 82 | 6 | melee | stab; from rotting stags |
+| 10025 | a thorn wasp wing mantle | armor | shoulders, take | 81 | 1 | caster | shoulders; from thorn wasp swarms |
+| 10026 | a barkskin wolf pelt | armor | about, take | 84 | 6 | melee | about; from barkskin wolves |
+| 10027 | a centipede fang earring | armor | ear, take | 82 | 1 | caster | ear; from deepwood centipedes |
+| 10028 | a bog troll's hide belt | armor | waist, take | 85 | 11 | tank | waist; from bog trolls |
+| 10029 | a broodmother's spore sac | armor | hold, take | 85 | 1 | caster | held; from fungal broodmothers |
+| 10030 | a moss elemental's core | treasure | take | 84 | 11 | tank | trophy; from ancient moss elementals |
+| 10031 | a twisted ent branch | weapon | hold, take | 84 | 6 | melee | pound; from twisted ents |
+| 10032 | a thornveil assassin's cowl | armor | head, take | 85 | 1 | caster | head; from thornveil assassins |
+| 10033 | a gloomwing dust pouch | armor | hold, take | 80 | 1 | caster | held; from gloomwing moths |
+| 10034 | a brambleback shell plate | armor | body, take | 85 | 11 | tank | body; from brambleback tortoises |
 | 10035 | a bramble-thorn dagger | weapon | hold, take | 81 | 6 | melee | stab; from grasping brambles |
 | 10036 | a beetle-shell pauldron | armor | shoulders, take | 80 | 11 | tank | shoulders; from mosswort beetles |
 | 10037 | a deepwood bear paw | weapon | hold, take, fist | 83 | 6 | melee | hit (fist); from deepwood bears |
@@ -417,15 +455,15 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 
 **Zone 4a (10090-10101):** ~6-8 trash mob spawns + 1 boss
 - root tendril masses, rootbound guardians, heartwood guardians as guards
-- M 0 10043 1 10101 -- Rootmother boss (limit 1, in no_mob room)
+- M 0 10061 1 10101 -- Rootmother boss (limit 1, in no_mob room)
 
 **Zone 4b (10102-10112):** ~6-8 trash mob spawns + 1 boss
-- rotwood shamblers, sporecrown drones, blightspore walkers, withered dryads
-- M 0 10044 1 10112 -- Blightwood Ancient boss (limit 1, in no_mob room)
+- rotwood shamblers, sporecrown drones, blightspore walkers, withered dryads, fungal broodmothers, corpseflower lurkers
+- M 0 10062 1 10112 -- Blightwood Ancient boss (limit 1, in no_mob room)
 
 **Zone 4c (10113-10124):** ~6-8 trash mob spawns + 1 boss
 - thornfang packmates, thornfang whelps, canopy weavers
-- M 0 10045 1 10124 -- Thornfang Alpha boss (limit 1, in no_mob room)
+- M 0 10063 1 10124 -- Thornfang Alpha boss (limit 1, in no_mob room)
 
 ### Equipment Resets (`E`/`G` commands)
 
@@ -460,12 +498,16 @@ This places the entrance deep within the Forest of Confusion's cave network, req
 | 10019 | spec_cast_mage | Verdant wraith -- ghostly caster |
 | 10035 | spec_cast_mage | Deepwood shaman -- corrupted caster |
 | 10041 | spec_cast_mage | Withered dryad -- decay magic caster |
-| 10043 | spec_cast_cleric | Rootmother boss -- healing/nature |
-| 10044 | spec_cast_mage | Blightwood Ancient boss -- decay magic |
+| 10055 | spec_cast_mage | Feral grove keeper -- corrupted guardian caster |
+| 10061 | spec_cast_cleric | Rootmother boss -- healing/nature |
+| 10062 | spec_cast_mage | Blightwood Ancient boss -- decay magic |
 | 10010 | spec_poison | Rootweaver spider -- venomous |
 | 10012 | spec_poison | Fungal abomination -- toxic |
 | 10031 | spec_poison | Mycelium crawler -- toxic spores |
 | 10037 | spec_poison | Blightspore walker -- fungal toxin |
+| 10047 | spec_poison | Deepwood centipede -- venomous bite |
+| 10053 | spec_poison | Gloomwing moth -- toxic wing dust |
+| 10056 | spec_poison | Corpseflower lurker -- poisonous pollen |
 
 ---
 
@@ -473,8 +515,8 @@ This places the entrance deep within the Forest of Confusion's cave network, req
 
 1. [ ] Create `area/verdant_depths.are` with all sections in canonical order
 3. [ ] Write `#AREA` header with color-themed name and directives
-4. [ ] Write `#MOBILES` section (43 trash mobs + 3 bosses = 46 mobs, vnums 10000-10045)
-5. [ ] Write `#OBJECTS` section (45 trash items + 21 boss items = 66 objects, vnums 10000-10080)
+4. [ ] Write `#MOBILES` section (61 trash mobs + 3 bosses = 64 mobs, vnums 10000-10063)
+5. [ ] Write `#OBJECTS` section (60 trash items + 21 boss items = 81 objects, vnums 10000-10080)
 6. [ ] Write `#ROOMS` section (125 rooms, vnums 10000-10124, all used)
 7. [ ] Write `#RESETS` section (~80-100 mob spawns with equipment)
 8. [ ] Write `#SPECIALS` section
