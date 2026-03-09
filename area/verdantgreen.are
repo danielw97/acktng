@@ -3529,6 +3529,226 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
+#10000
+thornback claw~
+@@Ga thornback claw@@N~
+@@GA curved thornback claw lies here, barbed and wickedly sharp.@@N
+
+~
+5 128 8421376 1
+0 5 11 3 0 0 0 0 0 0
+6
+L
+80
+#10001
+canopy lurker fang~
+@@Ga canopy lurker's fang@@N~
+@@GA long piercing fang lies here, yellowed at the root but needle-sharp at the tip.@@N
+
+~
+5 128 8421376 1
+0 5 11 2 0 0 0 0 0 0
+6
+L
+82
+#10002
+treant bark shield~
+@@Ga treant bark shield@@N~
+@@GA thick slab of treant bark, shaped into a crude shield, rests here.@@N
+
+~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+83
+#10003
+sporecap cowl~
+@@Ga sporecap cowl@@N~
+@@GA cowl woven from dried sporecap fungi lies here, still faintly luminous.@@N
+
+~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+80
+#10004
+wolf hide mantle~
+@@Ga wolf-hide mantle@@N~
+@@GA mantle of deep grey wolf hide lies here, still carrying the scent of the forest.@@N
+
+~
+9 128 8389120 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+81
+#10005
+vine woven tunic~
+@@Ga vine-woven tunic@@N~
+@@GA tunic of tightly woven living vines lies here, dense and tough.@@N
+
+~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+84
+#10006
+moss golem fist~
+@@Ga moss golem's fist@@N~
+@@GA dense mass of packed earth and moss, shaped into a fist, rests here.@@N
+
+~
+5 1073741952 8421376 1
+0 5 11 0 0 0 0 0 0 0
+6
+L
+85
+#10007
+blighted branch wand~
+@@Ga blighted branch wand@@N~
+@@gA wand carved from a blighted branch lies here, dark veins tracing its length.@@N
+
+~
+5 536871040 8421376 1
+0 5 11 6 0 0 0 0 0 0
+1
+L
+82
+#10008
+thornfang pelt~
+@@Ga thornfang pelt@@N~
+@@GA mottled thornfang pelt lies here, bristling with short grey fur.@@N
+
+~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+83
+#10009
+web silk sash~
+@@Ga web-silk sash@@N~
+@@GA sash of dense web-silk lies here, surprisingly strong for its delicate appearance.@@N
+
+~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+80
+#10010
+petrified bark bracer~
+@@Ga petrified bark bracer@@N~
+@@GA bracer of stone-hard petrified bark lies here, heavy and unyielding.@@N
+
+~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+85
+#10011
+fungal tendril whip~
+@@Ga fungal tendril whip@@N~
+@@gA long lashing tendril torn from a fungal abomination lies here, still twitching faintly.@@N
+
+~
+5 128 8421376 1
+0 5 11 4 0 0 0 0 0 0
+1
+L
+84
+#10012
+heartwood splint~
+@@Ga heartwood splint@@N~
+@@GA pair of greave-like splints carved from dense heartwood lies here.@@N
+
+~
+9 128 9437184 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+85
+#10013
+rotwood club~
+@@Ga rotwood club@@N~
+@@gA heavy club of waterlogged rotwood lies here, dense with absorbed moisture.@@N
+
+~
+5 128 8421376 1
+0 5 11 7 0 0 0 0 0 0
+6
+L
+81
+#10014
+sporecrown circlet~
+@@Ga sporecrown circlet@@N~
+@@GA circlet of interlocked sporecrown stalks lies here, faintly glowing.@@N
+
+~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+82
+#10015
+thornfang tooth necklace~
+@@Ga thornfang tooth necklace@@N~
+@@GA necklace strung with long thornfang teeth lies here, clicking softly.@@N
+
+~
+9 128 8388736 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+83
+#10016
+root tendril armband~
+@@Ga root tendril armband@@N~
+@@GA thick armband twisted from hardened root tendrils lies here.@@N
+
+~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+80
+#10017
+canopy weaver silk gloves~
+@@Ga canopy weaver's silk gloves@@N~
+@@GA pair of fine gloves woven from canopy spider-silk lies here.@@N
+
+~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+84
+#10018
+verdant wraith shroud~
+@@Ga verdant wraith's shroud@@N~
+@@gA shroud of mist-like verdant fabric lies here, barely substantial.@@N
+
+~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+85
+#10019
+deepwood wolf ear~
+@@Ga deepwood wolf's ear@@N~
+@@GA severed deepwood wolf ear lies here, still warm.@@N
+
+~
+8 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+80
 #10081
 iron gate key~
 a corroded iron key~
