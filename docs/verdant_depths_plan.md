@@ -236,19 +236,42 @@ All trash mobs: `act` flags include `is_npc|stay_area|aggressive`. Strong (non-b
 | 10017 | a root tendril mass | 87 | is_npc, stay_area, aggressive | Animated roots; Zone 4a |
 | 10018 | a canopy weaver | 91 | is_npc, stay_area, aggressive, solo | Giant web-spinning beast; Zone 4c |
 | 10019 | a verdant wraith | 95 | is_npc, stay_area, aggressive, solo | Forest ghost; rare spawn in Zone 3 |
+| 10023 | a grasping bramble | 81 | is_npc, stay_area, aggressive | Animated bramble patch; Zone 1 |
+| 10024 | a hollow tree lurker | 83 | is_npc, stay_area, aggressive | Creature nesting in dead trunks; Zone 1-2 |
+| 10025 | a mosswort beetle | 80 | is_npc, stay_area, aggressive | Giant armored beetle; Zone 1 |
+| 10026 | a deepwood bear | 88 | is_npc, stay_area, aggressive | Massive corrupted bear; Zone 2 |
+| 10027 | a sap-blooded horror | 90 | is_npc, stay_area, aggressive | Ooze-like animated tree sap; Zone 2-3 |
+| 10028 | a whispering shade | 86 | is_npc, stay_area, aggressive | Shadow creature between the trees; Zone 2 |
+| 10029 | a bark-skinned ogre | 89 | is_npc, stay_area, aggressive | Forest ogre with bark-like hide; Zone 2-3 |
+| 10030 | a thorn-crowned stag | 84 | is_npc, stay_area, aggressive | Corrupted great stag; Zone 2 |
+| 10031 | a mycelium crawler | 82 | is_npc, stay_area, aggressive | Underground fungal burrower; Zone 3 |
+| 10032 | a spore-maddened boar | 85 | is_npc, stay_area, aggressive | Infected wild boar; Zone 2-3 |
+| 10033 | an elder vine serpent | 91 | is_npc, stay_area, aggressive, solo | Giant snake-like vine predator; Zone 3 |
+| 10034 | a living deadfall | 87 | is_npc, stay_area, aggressive | Animated pile of fallen logs; Zone 3 |
+| 10035 | a deepwood shaman | 93 | is_npc, stay_area, aggressive, solo | Corrupted humanoid caster; Zone 3 |
+| 10036 | a rootwoven horror | 94 | is_npc, stay_area, aggressive, solo | Massive tangled root construct; Zone 3 |
+| 10037 | a blightspore walker | 86 | is_npc, stay_area, aggressive | Fungal shambling zombie; Zone 4b |
+| 10038 | a thornfang whelp | 82 | is_npc, stay_area, aggressive | Young predator beast; Zone 4c |
+| 10039 | a rootbound guardian | 90 | is_npc, stay_area, aggressive | Living root sentinel; Zone 4a |
+| 10040 | a canopy strangler | 88 | is_npc, stay_area, aggressive | Vine creature that drops from above; Zone 2-3 |
+| 10041 | a withered dryad | 91 | is_npc, stay_area, aggressive, solo | Ancient decayed forest spirit; Zone 4b |
+| 10042 | a mosswort queen | 85 | is_npc, stay_area, aggressive | Larger beetle matriarch; Zone 2 |
 
 **Mob combat extensions (`!` line):**
 - Lower trash (80-86): 2-3 attacks, basic skills (punch, kick, dodge)
 - Mid trash (87-90): 3-4 attacks, enhanced skills (headbutt, disarm, parry, dodge)
 - Upper trash (91-95) and solo: 4-5 attacks, full combat skills (trip, counter, enhanced, parry, dodge)
-- Caster mobs (blighted dryad, verdant wraith): cast bitvectors for nature-themed spells (flamestrike, earthquake, faerie_fire)
-- Defensive mobs (moss-covered golem, petrified sentinel): def bitvectors (fireshield, iceshield)
+- Caster mobs (blighted dryad, verdant wraith, deepwood shaman, withered dryad): cast bitvectors for nature-themed spells (flamestrike, earthquake, faerie_fire)
+- Defensive mobs (moss-covered golem, petrified sentinel, rootbound guardian): def bitvectors (fireshield, iceshield)
+- Poison mobs (rootweaver spider, fungal abomination, blightspore walker, mycelium crawler): spec_poison
 
 **Mob elemental extensions (`|` line):**
-- Plant-type mobs: strong earth, weak fire, resist poison, suscept fire
-- Fungal mobs: strong poison, weak fire, resist earth, suscept fire
-- Predator mobs: strong physical, resist physical
-- Spirit mobs (wraith, dryad): strong mental, weak physical
+- Plant-type mobs (treant, vine strangler, grasping bramble, living deadfall, rootwoven horror, rootbound guardian): strong earth, weak fire, resist poison, suscept fire
+- Fungal mobs (sporecap shambler, fungal abomination, mycelium crawler, blightspore walker, sporecrown drone): strong poison, weak fire, resist earth, suscept fire
+- Predator mobs (deepwood wolf, thornfang stalker/packmate/whelp, deepwood bear, spore-maddened boar, elder vine serpent): strong physical, resist physical
+- Spirit mobs (verdant wraith, blighted dryad, whispering shade, withered dryad): strong mental, weak physical
+- Insect mobs (mosswort beetle, mosswort queen, rootweaver spider, canopy weaver): strong earth, resist poison
+- Construct mobs (moss-covered golem, petrified sentinel): strong earth, strong physical, resist physical, resist earth
 
 ### Boss Mobs (level 100)
 
@@ -256,9 +279,9 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 
 | Vnum | Name | Level | Room | Theme |
 |------|------|-------|------|-------|
-| 10020 | the Rootmother | 100 | 10101 | Growth boss -- massive living tree entity |
-| 10021 | the Blightwood Ancient | 100 | 10112 | Decay boss -- ancient rotting mega-treant |
-| 10022 | Thornfang Alpha | 100 | 10124 | Predation boss -- apex forest predator beast |
+| 10043 | the Rootmother | 100 | 10101 | Growth boss -- massive living tree entity |
+| 10044 | the Blightwood Ancient | 100 | 10112 | Decay boss -- ancient rotting mega-treant |
+| 10045 | Thornfang Alpha | 100 | 10124 | Predation boss -- apex forest predator beast |
 
 **Boss combat extensions:**
 - All bosses: 5-6 attacks, enhanced, counter, parry, dodge, nodisarm, notrip
@@ -299,6 +322,31 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 | 10017 | a canopy weaver's silk gloves | armor | hands, take | 84 | 1 | caster | hands; from canopy weavers |
 | 10018 | a verdant wraith's shroud | armor | about, take | 85 | 1 | caster | about; from verdant wraiths |
 | 10019 | a deepwood wolf's ear | treasure | take | 80 | 6 | melee | trophy/quest item |
+| 10035 | a bramble-thorn dagger | weapon | hold, take | 81 | 6 | melee | stab; from grasping brambles |
+| 10036 | a beetle-shell pauldron | armor | shoulders, take | 80 | 11 | tank | shoulders; from mosswort beetles |
+| 10037 | a deepwood bear paw | weapon | hold, take, fist | 83 | 6 | melee | hit (fist); from deepwood bears |
+| 10038 | a shade-touched ring | armor | finger, take | 82 | 1 | caster | finger; from whispering shades |
+| 10039 | a bark-skinned armguard | armor | wrist, take | 84 | 11 | tank | wrist; from bark-skinned ogres |
+| 10040 | a crown of twisted antlers | armor | horns, take | 83 | 6 | melee | horns; from thorn-crowned stags |
+| 10041 | a mycelium-threaded robe | armor | body, take | 82 | 1 | caster | body; from mycelium crawlers |
+| 10042 | a boar-tusk earring | armor | ear, take | 80 | 6 | melee | ear; from spore-maddened boars |
+| 10043 | an elder vine lash | weapon | hold, take | 85 | 1 | caster | whip; from elder vine serpents |
+| 10044 | a deadfall bark vest | armor | body, take | 84 | 11 | tank | body; from living deadfalls |
+| 10045 | a shaman's gnarled staff | weapon (two-handed) | hold, take | 85 | 1 | caster | pound; from deepwood shamans |
+| 10046 | rootwoven greaves | armor | legs, take | 85 | 6 | melee | legs; from rootwoven horrors |
+| 10047 | a blightspore mask | armor | face, take | 81 | 1 | caster | face; from blightspore walkers |
+| 10048 | a thornfang whelp's collar | armor | neck, take | 80 | 6 | melee | neck; from thornfang whelps |
+| 10049 | a rootbound gauntlet | armor | hands, take | 84 | 11 | tank | hands; from rootbound guardians |
+| 10050 | a sap-crusted hauberk | armor | body, take | 85 | 11 | tank | body; from sap-blooded horrors |
+| 10051 | a strangler vine belt | armor | waist, take | 82 | 6 | melee | waist; from canopy stranglers |
+| 10052 | a withered dryad's circlet | armor | head, take | 84 | 1 | caster | head; from withered dryads |
+| 10053 | a mosswort queen's mandible | weapon | hold, take | 83 | 6 | melee | slash; from mosswort queens |
+| 10054 | a hollow lurker's hide boots | armor | feet, take | 81 | 6 | melee | feet; from hollow tree lurkers |
+| 10055 | a stalker's vine garrote | weapon | hold, take | 80 | 1 | caster | crush; from verdant stalkers |
+| 10056 | a beetle-shell buckler | armor (buckler) | hold, take | 83 | 11 | tank | buckler; from mosswort beetles |
+| 10057 | an ogre-hewn great club | weapon (two-handed) | hold, take | 85 | 6 | melee | crush; from bark-skinned ogres |
+| 10058 | a sap-hardened ring | armor | finger, take | 84 | 11 | tank | finger; from sap-blooded horrors |
+| 10059 | a bear-claw amulet | armor | neck, take | 82 | 6 | melee | neck; from deepwood bears |
 
 **Trash gear affects (`A` lines):**
 - Weapons: +hit and +damage appropriate for level range
@@ -312,26 +360,34 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 
 | Vnum | Name | Type | Wear | Level | Weight | Archetype | Boss Source |
 |------|------|------|------|-------|--------|-----------|-------------|
-| 10020 | the Rootmother's living staff | weapon (two-handed) | hold, take | 90 | 1 | caster | Rootmother |
-| 10021 | a crown of living thorns | armor | head, take | 90 | 1 | caster | Rootmother |
-| 10022 | the Rootmother's heartwood buckler | armor (buckler) | hold, take | 90 | 11 | tank | Rootmother |
-| 10023 | greaves of ancient bark | armor | legs, take | 90 | 11 | tank | Rootmother |
-| 10024 | a rootweave tunic | armor | body, take | 90 | 6 | melee | Rootmother |
-| 10025 | a blade of blighted wood | weapon | hold, take | 90 | 6 | melee | Blightwood Ancient |
-| 10026 | a sporecrown helm | armor | head, take | 90 | 11 | tank | Blightwood Ancient |
-| 10027 | a cloak of rotting leaves | armor | about, take | 90 | 1 | caster | Blightwood Ancient |
-| 10028 | blightwood gauntlets | armor | hands, take | 90 | 6 | melee | Blightwood Ancient |
-| 10029 | the Blightwood Ancient's fungal shield | armor | hold, take | 90 | 11 | tank | Blightwood Ancient |
-| 10030 | Thornfang Alpha's great claw | weapon (two-handed) | hold, take | 90 | 6 | melee | Thornfang Alpha |
-| 10031 | a collar of alpha fangs | armor | neck, take | 90 | 6 | melee | Thornfang Alpha |
-| 10032 | a pelt of the apex predator | armor | body, take | 90 | 11 | tank | Thornfang Alpha |
-| 10033 | the predator's eye pendant | armor | neck, take | 90 | 1 | caster | Thornfang Alpha |
-| 10034 | thornfang hide boots | armor | feet, take | 90 | 6 | melee | Thornfang Alpha |
+| 10060 | the Rootmother's living staff | weapon (two-handed) | hold, take | 90 | 1 | caster | Rootmother |
+| 10061 | a crown of living thorns | armor | head, take | 90 | 1 | caster | Rootmother |
+| 10062 | the Rootmother's heartwood buckler | armor (buckler) | hold, take | 90 | 11 | tank | Rootmother |
+| 10063 | greaves of ancient bark | armor | legs, take | 90 | 11 | tank | Rootmother |
+| 10064 | a rootweave tunic | armor | body, take | 90 | 6 | melee | Rootmother |
+| 10065 | the Rootmother's seed | armor | hold, take | 90 | 1 | caster | Rootmother; held orb-like item |
+| 10066 | living bark vambraces | armor | wrist, take | 90 | 11 | tank | Rootmother |
+| 10067 | a blade of blighted wood | weapon | hold, take | 90 | 6 | melee | Blightwood Ancient |
+| 10068 | a sporecrown helm | armor | head, take | 90 | 11 | tank | Blightwood Ancient |
+| 10069 | a cloak of rotting leaves | armor | about, take | 90 | 1 | caster | Blightwood Ancient |
+| 10070 | blightwood gauntlets | armor | hands, take | 90 | 6 | melee | Blightwood Ancient |
+| 10071 | the Blightwood Ancient's fungal shield | armor | hold, take | 90 | 11 | tank | Blightwood Ancient |
+| 10072 | a blightwood ring of decay | armor | finger, take | 90 | 1 | caster | Blightwood Ancient |
+| 10073 | a sporewoven sash | armor | waist, take | 90 | 6 | melee | Blightwood Ancient |
+| 10074 | Thornfang Alpha's great claw | weapon (two-handed) | hold, take | 90 | 6 | melee | Thornfang Alpha |
+| 10075 | a collar of alpha fangs | armor | neck, take | 90 | 6 | melee | Thornfang Alpha |
+| 10076 | a pelt of the apex predator | armor | body, take | 90 | 11 | tank | Thornfang Alpha |
+| 10077 | the predator's eye pendant | armor | neck, take | 90 | 1 | caster | Thornfang Alpha |
+| 10078 | thornfang hide boots | armor | feet, take | 90 | 6 | melee | Thornfang Alpha |
+| 10079 | the predator's maw wand | weapon (wand) | hold, take | 90 | 1 | caster | Thornfang Alpha; wand |
+| 10080 | thornfang alpha's shoulder hide | armor | shoulders, take | 90 | 11 | tank | Thornfang Alpha |
 
 **Boss gear affects (`A` lines):**
 - Boss weapons: stronger +hit and +damage than trash equivalents
 - Boss armor: stronger +ac, +hp, or +mana; some pieces with item_apply effects (e.g., enhanced, det_invis)
-- Each boss drops ~5 items distributed across archetypes (caster/melee/tank)
+- Rootmother drops 7 items (vnums 10060-10066): 2 caster, 3 tank, 2 melee
+- Blightwood Ancient drops 7 items (vnums 10067-10073): 2 caster, 2 tank, 3 melee
+- Thornfang Alpha drops 7 items (vnums 10074-10080): 2 caster, 2 tank, 3 melee
 
 ### Delivery Method
 
@@ -344,37 +400,38 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 
 ### Mob Resets (`M` commands)
 
-**Zone 1 (10000-10019):** ~8-10 trash mob spawns
-- verdant stalkers, thornback briar beasts scattered through the threshold rooms
+**Zone 1 (10000-10019):** ~12-15 trash mob spawns
+- verdant stalkers, thornback briar beasts, grasping brambles, mosswort beetles, hollow tree lurkers
+- Lower-level mobs (80-84) for zone entry
 - Limit of 1-2 per spawn point
 
-**Zone 2 (10020-10054):** ~20-25 trash mob spawns
-- Full range of mid-level trash: canopy lurkers, ancient treants, sporecap shamblers, deepwood wolves, vine stranglers
+**Zone 2 (10020-10054):** ~25-30 trash mob spawns
+- Full range of mid-level trash: canopy lurkers, ancient treants, sporecap shamblers, deepwood wolves, vine stranglers, deepwood bears, thorn-crowned stags, bark-skinned ogres, whispering shades, mosswort queens, spore-maddened boars, canopy stranglers
 - Heavier density; this is the primary farming zone
 - Limits of 1-3 per spawn point
 
-**Zone 3 (10055-10089):** ~15-20 trash mob spawns
-- Higher-level trash: thornfang stalkers, rootweaver spiders, petrified sentinels, fungal abominations
+**Zone 3 (10055-10089):** ~20-25 trash mob spawns
+- Higher-level trash: thornfang stalkers, rootweaver spiders, petrified sentinels, fungal abominations, sap-blooded horrors, elder vine serpents, living deadfalls, deepwood shamans, rootwoven horrors
 - Solo-flagged mobs more common here
 - Include verdant wraiths as rare encounters
 
-**Zone 4a (10090-10101):** ~4-5 trash mob spawns + 1 boss
-- root tendril masses, heartwood guardians as guards
-- M 0 10020 1 10101 -- Rootmother boss (limit 1, in no_mob room)
+**Zone 4a (10090-10101):** ~6-8 trash mob spawns + 1 boss
+- root tendril masses, rootbound guardians, heartwood guardians as guards
+- M 0 10043 1 10101 -- Rootmother boss (limit 1, in no_mob room)
 
-**Zone 4b (10102-10112):** ~4-5 trash mob spawns + 1 boss
-- rotwood shamblers, sporecrown drones
-- M 0 10021 1 10112 -- Blightwood Ancient boss (limit 1, in no_mob room)
+**Zone 4b (10102-10112):** ~6-8 trash mob spawns + 1 boss
+- rotwood shamblers, sporecrown drones, blightspore walkers, withered dryads
+- M 0 10044 1 10112 -- Blightwood Ancient boss (limit 1, in no_mob room)
 
-**Zone 4c (10113-10124):** ~4-5 trash mob spawns + 1 boss
-- thornfang packmates, canopy weavers
-- M 0 10022 1 10124 -- Thornfang Alpha boss (limit 1, in no_mob room)
+**Zone 4c (10113-10124):** ~6-8 trash mob spawns + 1 boss
+- thornfang packmates, thornfang whelps, canopy weavers
+- M 0 10045 1 10124 -- Thornfang Alpha boss (limit 1, in no_mob room)
 
 ### Equipment Resets (`E`/`G` commands)
 
-- Each trash mob type has 1-2 pieces of equipment via `E` resets
-- Each boss has 3-5 pieces of equipment via `E` resets (weapons wielded/held, armor equipped)
-- Remaining boss items via loot table (`l`/`L` mob extensions)
+- Each trash mob type has 1-2 pieces of thematically matched equipment via `E` resets
+- Each boss has 4-5 pieces of equipment via `E` resets (weapons wielded/held, armor equipped)
+- Remaining boss items (2-3 per boss) via loot table (`l`/`L` mob extensions) with `ITEM_LOOT` added to those items' extra_flags
 
 ### Object Resets (`O` commands)
 
@@ -401,10 +458,14 @@ This places the entrance deep within the Forest of Confusion's cave network, req
 |----------|--------------|--------|
 | 10008 | spec_cast_mage | Blighted dryad -- nature magic caster |
 | 10019 | spec_cast_mage | Verdant wraith -- ghostly caster |
-| 10020 | spec_cast_cleric | Rootmother boss -- healing/nature |
-| 10021 | spec_cast_mage | Blightwood Ancient boss -- decay magic |
+| 10035 | spec_cast_mage | Deepwood shaman -- corrupted caster |
+| 10041 | spec_cast_mage | Withered dryad -- decay magic caster |
+| 10043 | spec_cast_cleric | Rootmother boss -- healing/nature |
+| 10044 | spec_cast_mage | Blightwood Ancient boss -- decay magic |
 | 10010 | spec_poison | Rootweaver spider -- venomous |
 | 10012 | spec_poison | Fungal abomination -- toxic |
+| 10031 | spec_poison | Mycelium crawler -- toxic spores |
+| 10037 | spec_poison | Blightspore walker -- fungal toxin |
 
 ---
 
@@ -412,10 +473,10 @@ This places the entrance deep within the Forest of Confusion's cave network, req
 
 1. [ ] Create `area/verdant_depths.are` with all sections in canonical order
 3. [ ] Write `#AREA` header with color-themed name and directives
-4. [ ] Write `#MOBILES` section (20 trash mobs + 3 bosses = 23 mobs, vnums 10000-10022)
-5. [ ] Write `#OBJECTS` section (20 trash items + 15 boss items = 35 objects, vnums 10000-10034)
+4. [ ] Write `#MOBILES` section (43 trash mobs + 3 bosses = 46 mobs, vnums 10000-10045)
+5. [ ] Write `#OBJECTS` section (45 trash items + 21 boss items = 66 objects, vnums 10000-10080)
 6. [ ] Write `#ROOMS` section (125 rooms, vnums 10000-10124, all used)
-7. [ ] Write `#RESETS` section (~60-70 mob spawns with equipment)
+7. [ ] Write `#RESETS` section (~80-100 mob spawns with equipment)
 8. [ ] Write `#SPECIALS` section
 9. [ ] Add `D2` exit to room 9769 in `confusn.are` pointing to 10000
 10. [ ] Add `verdant_depths.are` to `area/area.lst`
