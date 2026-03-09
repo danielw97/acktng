@@ -345,6 +345,12 @@ Object weight ranges encode item archetype in area content policy:
 - `6`-`10`: melee item
 - `11`-`15`: tank item
 
+Item stat policy:
+
+- Area-authored items must not define fixed stats in the area file.
+- Item stats are generated at runtime from item level and other runtime parameters.
+- Author object identity/behavior data only (type/flags/wear/apply/value layout/weight/level), not handcrafted stat tuning.
+
 Per-object trailing entries:
 
 - `A` then `<location> <modifier>` on next line (object affect)
@@ -596,8 +602,14 @@ Any other token in a room body is invalid.
 Room description content requirements:
 
 - Each room's main `<description>~` must end with exactly one trailing newline immediately before the terminating `~`.
-- Each room's main `<description>~` must not contain any other newline characters.
+- Each room's main `<description>~` must contain at least 3 lines of text.
+- Important rooms must contain at least 5 lines of text in the main `<description>~`.
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
+- When a room uses a named exit (non-empty `<exit_keyword>`), that exit name must appear in at least one of:
+  - the room's main `<description>~`,
+  - an object that spawns in the room, or
+  - an `E` extra description in the room.
+- Puzzle guidance: you may chain details across multiple `E` extra descriptions; this is acceptable as long as the named exit is still discoverable through the room/object/extra-description text.
 
 Directional traversal constraints:
 
