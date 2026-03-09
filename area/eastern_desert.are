@@ -184,6 +184,10 @@ Back along the caravan road.
 ~
 ~
 0 -1 8506
+D4
+~
+~
+0 -1 22500
 S
 #8508
 @@yThe Lantern Merchant Road@@N~
@@ -802,7 +806,7 @@ Back toward the wing entrance.
 0 -1 8538
 D5
 A dark shaft descends into the sands below, carved steps leading down into ancient shadow.
-~
+~
 ~
 0 -1 31000
 S
