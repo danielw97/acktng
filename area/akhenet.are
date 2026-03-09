@@ -242,7 +242,7 @@ D2
 S
 #2015
 @@bBazaar Entrance Ramp@@N~
-@@bA long ramp of cut stone descends into shadow. The entrance to the buried city lies below, its edge worn smooth by thousands of footsteps across countless centuries. The air grows cooler as you descend, smelling of dust and age.@@N
+@@bA long ramp of precisely cut stone descends steeply into shadow and cool darkness. The entrance to the buried city lies far below, and you can feel the draw of the descent before you even commit to it. The ramp's edge is worn smooth by thousands of footsteps across countless centuries of use, each step by a merchant or pilgrim adding its wear to the eternal stone. The air grows noticeably cooler as you descend, a welcome respite from the furnace heat of the surface, smelling of deep stone dust and the irreplaceable aroma of great age. The walls alongside the ramp are carved with protective wards and inscriptions in the ancient language of Solahr—prayers for safe passage and prosperity for those who travel below. The stone beneath your feet is slightly slippery with age and mineral deposits. Darkness grows deeper with each downward step, swallowing light until you are descended into a world where the sun never reaches.@@N
 ~
 8 11
 D0
@@ -256,7 +256,7 @@ D5
 S
 #2016
 @@bCollapsed Market Stall Row@@N~
-@@bRuins of merchant stalls lie in jumbled heaps, their wooden frameworks long since rotted away. Clay jars and broken pottery are scattered everywhere. A faint smell of spices—nutmeg, cinnamon, myrrh—still lingers impossibly after all these years.@@N
+@@bRuins of what were once elegant merchant stalls lie in jumbled heaps of debris and ruin, their wooden frameworks long since rotted away to nothing. Clay jars of various sizes and broken pottery shards are scattered everywhere across the floor, fragments of an economy and way of life now utterly extinct. The pieces still bear faint marks of their original decoration—patterns of vines and fruit, merchant marks and seals of authenticity. A faint smell of spices—nutmeg, cinnamon, myrrh, cloves—still lingers impossibly after all these years, suggesting that some residual essence of the original merchandise lingers in the very stone itself. The shelves that once displayed wares are collapsed and broken, their wooden supports having surrendered to rot and the pressure of centuries. In places, you can still make out the faint outline of items that rested on shelves—impressions in the dust showing where containers once sat. This was once a place of life and commerce, animated by voices calling out wares and the negotiation of price.@@N
 ~
 8 11
 D0
@@ -270,7 +270,7 @@ D2
 S
 #2017
 @@bSand-Filled Merchant Hall@@N~
-@@bA vast chamber once echoed with the calls of merchants hawking their wares. Now sand drifts across the cracked floor in great dunes. Weathered wooden counters lean drunkenly, and shelves hang broken from the walls. The silence here is absolute.@@N
+@@bA vast chamber of impressive proportions once echoed with the competitive calls of merchants hawking their wares to eager customers. Now sand drifts across the cracked floor in great dunes and deposits, slowly burying everything beneath waves of fine grit. Weathered wooden counters lean drunkenly against remaining walls, their wood bleached white and cracking apart. Shelves hang broken from the walls, splintered wood creating hazards. The ceiling above shows signs of partial collapse in places, letting shafts of dim light penetrate the gloom. The silence here is absolute and oppressive—not even the wind carries sound into this place. The sheer emptiness is more disturbing than any noise could be. Evidence of fine craftsmanship is still visible on the remaining wood, suggesting this was a place of quality and prestige.@@N
 ~
 8 11
 D0
@@ -566,7 +566,7 @@ D2
 S
 #2037
 @@RGrand Nave@@N~
-@@RThe massive central worship hall stretches upward into shadow. The ceiling is lost to darkness above. Rows of stone benches, cracked and weathered, face toward a raised altar platform. The space is overwhelming in its emptiness.@@N
+@@RThe massive central worship hall of the temple stretches upward into shadow that swallows light, the ceiling completely lost to darkness above. The scale of the chamber is almost incomprehensible—you feel diminished to insignificance within its vastness. Rows of stone benches, cracked and weathered by centuries of disuse, face toward a raised altar platform elevated high above the floor. The altar itself is carved from a single block of pale limestone, decorated with reliefs depicting the sun god Solahr in his various aspects and dominions. The space is overwhelming in its absolute emptiness, the silence broken only by the sound of your own breathing. Echoes of footsteps—both yours and phantoms of the past—reverberate through the chamber. Faint golden paint still clings to portions of the walls, hinting at ornate frescoes that once covered every surface. The floor shows the worn paths of thousands of feet who once processed through this sacred space in formal ritual and prayer.@@N
 ~
 8 11
 D0
@@ -626,7 +626,7 @@ D1
 S
 #2041
 @@RHigh Priest's Study@@N~
-@@RScrolls and clay tablets line shelves carved into the stone. Many have crumbled to dust, but some remain legible. Hieroglyphic texts cover the walls. This was the center of the temple's knowledge and power.@@N
+@@RScrolls and clay tablets line shelves that have been carefully carved directly into the stone walls. Many have crumbled to dust and faded to illegibility, victims of time and humidity, but some remarkable pieces remain legible—their insights into ancient faith and practice still visible. Hieroglyphic texts of extraordinary complexity and precision cover every wall surface, depicting rituals, incantations, and theological treatises that speak to a profound understanding of cosmic forces. Stone tables are covered with mathematical instruments, measurement tools, and astronomical charts. Ink-stained ceramics and broken quill pens suggest the intense scholarly work that once occurred here. The air feels thick with accumulated knowledge—you can almost sense the weight of secrets still held within these walls. Personal journals reveal the struggles of past high priests—their triumphs, their doubts, and ultimately their obsessions that led to the catastrophe that sealed this place. This was indeed the center of the temple's accumulated knowledge and the source of its ultimate power and doom.@@N
 ~
 8 11
 D3
@@ -1068,7 +1068,7 @@ D2
 S
 #2072
 @@RThrone of Amenthari@@N~
-@@RA massive throne of blackened obsidian and gold dominates this chamber. The seat is empty, but the air crackles with presence. Carved into the floor are protective wards and binding circles. This is the seat of a would-be god.@@N
+@@RA massive throne of blackened obsidian and burnished gold dominates this chamber with overwhelming presence and terrible majesty. The seat itself is empty, yet the air crackles and hums with residual magical energy as if the occupant has merely stepped away for a moment. The craftsmanship is beyond mortal skill—every detail speaks to power and dominion. The throne is carved with depictions of conquest, ascension, and a figure transforming into something other than human. Carved deeply into the floor surrounding the throne are protective wards and binding circles of immense complexity, their purpose perhaps to contain rather than protect. The magic in these symbols still glows faintly with power, their binding functions still active even after ages of abandonment. The walls around the throne are scorched black as if by otherworldly fire. This is undoubtedly the seat of a being who achieved something approaching godhood, and the consequences were catastrophic. The temperature here is noticeably colder, and you feel the weight of ages pressing down.@@N
 ~
 24589 11
 D0
@@ -1324,7 +1324,7 @@ D2
 S
 #2090
 @@RSerpent Queen's Brood Pit@@N~
-@@RA vast natural cavern expanded by serpentine habitation. The walls are slick with secretions. Eggs the size of a human head lie in carefully arranged nests. The air is warm and humid, the smell primal and ancient.@@N
+@@RA vast natural cavern of staggering proportions has been expanded and shaped by countless serpents across generations of habitation. The walls are coated with secretions—a combination of venom, digestive fluids, and protective mucus that gleams in the dim light. Eggs the size of a human head, each one nearly a foot in diameter, lie in carefully arranged nests throughout the chamber. The eggs are golden-hued and warm to the touch, their shells patterned with intricate designs. The walls themselves seem to pulse with life and warmth. The air is thick, warm, and humid—almost unbearable in its intensity—carrying the scent of incubation and ancient serpentine magic. This is a place of creation and raw primal power, the beating heart of the serpent tribe's continuation and survival. The sheer fertility and vitality of this place contrasts sharply with the death and ruin found elsewhere.@@N
 ~
 24589 11
 D0
@@ -1570,7 +1570,7 @@ D0
 S
 #2107
 @@RWarchief's Pavilion@@N~
-@@RThe war tent of Ghazaan, leader of the raider warband. Rich tapestries and plundered furnishings fill the space. Maps cover every wall. This is where commands are issued that send hundreds to their deaths.@@N
+@@RThe war tent of Ghazaan, brutal leader of the raider warband, stands as a display of raw power and captured wealth. Rich tapestries of silk and wool, looted from distant cities, drape the walls in colors of purple, gold, and crimson. Plundered furnishings—chairs carved from rare wood, tables inlaid with ivory and jade, cushions stuffed with the finest materials—fill the space and speak to a life of violent accumulation. Maps of the region cover every available wall surface, annotated with military positions, supply lines, and targets for future raids. Weapons of exceptional craftsmanship hang in places of honor—spoils of conquered enemies and defeats of rival warbands. A massive war chest sits in one corner, filled with coins and jewels. This is where commands are issued that send hundreds to their deaths, where strategy is planned for raids and conquest, where the ambitions of a tyrant are mapped and executed. The air reeks of blood, leather, and masculine power.@@N
 ~
 24589 11
 D0
@@ -1806,7 +1806,7 @@ D2
 S
 #2123
 @@RSha'ithara's Dark Wellspring@@N~
-@@RA chamber of absolute power and corruption. The water here is pure void—darker than darkness. The air crackles with shadow magic. A throne of twisted shadow stone dominates the center.@@N
+@@RA chamber of absolute power and complete corruption radiates malevolence in waves that are almost tangible. The water here is pure void—darker than darkness itself—a substance that seems to absorb light and hope alike. The air crackles with shadow magic so thick it feels like fog, and the temperature is far colder than any natural cave should be. A throne of twisted shadow stone dominates the center of the chamber, its material seeming to writhe and shift in your peripheral vision. The stone itself is not a natural material but something shaped by eldritch means. Wards and symbols carved into the floor glow with a sickly purple light. The walls themselves seem to breathe, expanding and contracting as if the chamber itself is alive. Power radiates from every surface, a presence so overwhelming it threatens to suffocate you. You can feel ancient, terrible intelligence observing you from the shadows. This is a place fundamentally opposed to life and light.@@N
 ~
 24589 11
 D0
