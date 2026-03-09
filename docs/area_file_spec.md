@@ -594,6 +594,7 @@ Room entries are one of:
   <keyword>~
   <description>~
   ```
+  - Extra-description `<keyword>` names must be discoverable in-room: each keyword token must appear in either the room's main `<description>~` or in at least one other `E` extra description in the same room.
   - `<description>` must include exactly one trailing newline before the terminating `~`.
 - End of room: `S`
 
