@@ -1452,6 +1452,8 @@ char *extra_bit_name(int extra_flags)
       safe_strcat(MAX_STRING_LENGTH, buf, " lifestealer");
    if (extra_flags & ITEM_LOOT)
       safe_strcat(MAX_STRING_LENGTH, buf, " loot");
+   if (extra_flags & ITEM_BOSS)
+      safe_strcat(MAX_STRING_LENGTH, buf, " boss");
    if (extra_flags & ITEM_BUCKLER)
       safe_strcat(MAX_STRING_LENGTH, buf, " buckler");
    if (extra_flags & ITEM_EXTRA_WAND)

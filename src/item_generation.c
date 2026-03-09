@@ -498,6 +498,9 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    if (IS_SET(obj->extra_flags, ITEM_LOOT))
       ilevel *= 1.2;
 
+   if (IS_SET(obj->extra_flags, ITEM_BOSS))
+      ilevel *= 1.25;
+
    /* Jewelry */
    if (is_jewelry(obj))
    {
