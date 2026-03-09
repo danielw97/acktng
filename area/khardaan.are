@@ -1,0 +1,1364 @@
+#AREA
+@@yKhar'Daan, the Sunken Necropolis@@N~
+Q 16
+K khardaan necropolis desert dune ancient burial~
+L {60-80}~
+N 115
+I 60 80
+V 31000 31099
+X 0
+F 20
+U @@yA hot @@bdesert wind@@y scours the ancient stones of Khar'Daan.@@N~
+O virant~
+R all~
+W all~
+#MOBILES
+#31000
+desert scorpion~
+a desert scorpion~
+A desert scorpion skitters across the cracked earth here.
+~
+Its segmented shell is the color of sun-bleached bone and its barbed tail arcs high, dripping pale venom that eats into the sand.
+~
+131169 0 -350 S
+62 0
+0 0 0 0
+! 0 0 0 7 55 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31001
+sand viper~
+a sand viper~
+A sand viper coils in the hot shade here.
+~
+Its pale scales vanish against the desert floor until it strikes, revealing fangs laced with fast-acting hemotoxin and hollow-dark eyes.
+~
+131169 0 -350 S
+63 0
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31002
+dune stalker undead mummy~
+a dune stalker~
+A dune stalker shuffles forward from the shadows here.
+~
+Wrapped in yellowed linen that crumbles at its edges, this ancient corpse moves with the slow certainty of something that has forgotten the meaning of pain.
+~
+147553 0 -500 S
+64 0
+0 0 0 0
+! 0 0 0 7 23 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31003
+tomb robber thief bandit~
+a tomb robber~
+A tomb robber crouches behind a sarcophagus here.
+~
+This grizzled opportunist has dug open tombs others feared to approach, and the scars on their hands show the price of working quickly in places full of ancient traps.
+~
+131169 0 -200 S
+65 0
+0 0 0 0
+! 0 0 0 7 195 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31004
+desert nomad raider warrior~
+a desert nomad raider~
+A desert nomad raider stands watch with a curved blade at the ready here.
+~
+Wrapped in sun-bleached cloth and scarred leather, this battle-hardened nomad has survived the deep desert through cunning, brutality, and an intimate knowledge of how the sands kill.
+~
+131169 0 -300 S
+66 0
+0 0 0 0
+! 0 0 0 7 3095 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31005
+basilisk hatchling young lizard~
+a basilisk hatchling~
+A basilisk hatchling hisses from atop a broken pillar here.
+~
+Not yet full-grown, it is already dangerous, its six yellow eyes cycling through a slow blink that leaves a faint grey afterimage in the air where its gaze has passed.
+~
+131169 0 -300 S
+67 0
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31006
+giant scarab beetle~
+a giant scarab~
+A giant scarab clicks its mandibles together beneath a crack in the ceiling here.
+~
+Its oil-black carapace is broader than a shield and covered in raised hieroglyphic patterns that might be natural or might have been carved there long ago by devoted hands.
+~
+131169 0 -300 S
+68 0
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31007
+sand wraith spirit undead~
+a sand wraith~
+A sand wraith drifts just above the floor in a slow spiral here.
+~
+The shape is almost human but translucent, its edges trailing fine particles of sand that fall upward, and where its face should be there is only a pale smear of cold light.
+~
+147553 0 -600 S
+69 0
+0 0 0 0
+! 0 0 0 7 7 26 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31008
+bone servant undead skeleton~
+a bone servant~
+A bone servant stands at rigid attention near a cracked urn here.
+~
+Assembled from the bones of multiple interments, this construct is held together by dried sinew and a binding curse that keeps each joint locked in silent obedience to whoever holds its jar.
+~
+147553 0 -500 S
+70 0
+0 0 0 0
+! 0 0 0 7 23 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31009
+sandstorm djinn spirit elemental~
+a sandstorm djinn~
+A sandstorm djinn churns the air with a low howl here.
+~
+A vortex of grit and crackling static given rough humanoid form, this being regards intruders with hollow amber eyes and a voice like sand pouring over hot stone.
+~
+131169 0 -400 S
+71 0
+0 0 0 0
+! 0 0 0 7 3 4384 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31010
+canyon bandit rogue outlaw~
+a canyon bandit~
+A canyon bandit watches from the shadow of a leaning wall here.
+~
+Lean and fast-eyed, this desert outlaw has learned to fight in tight spaces and knows twelve ways to end a confrontation before the other side realizes one has begun.
+~
+131169 0 -300 S
+72 0
+0 0 0 0
+! 0 0 0 7 195 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31011
+tomb guardian construct animated~
+a tomb guardian~
+A tomb guardian blocks the passage with arms spread wide here.
+~
+Carved from a single block of black sandstone, its face is a stylized jackal mask and its chest is inscribed with ward-glyphs that pulse faint amber as it senses intrusion.
+~
+99 0 -500 S
+73 0
+0 0 0 0
+! 0 0 0 7 3847 0 4
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31012
+venomous asp snake~
+a venomous asp~
+A venomous asp glides silently across the dusty floor here.
+~
+Jet-black and deceptively slender, the asp is nonetheless large enough to rear to chest height, its hood fanning wide in a display of vivid crimson threat-markings.
+~
+131169 0 -300 S
+74 0
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31013
+oasis ghoul undead hungry~
+an oasis ghoul~
+An oasis ghoul lurks near a dry channel here.
+~
+Once a traveler who died of thirst within sight of water, this gaunt revenant now hunts the living with the obsessive fury of the desperately dehydrated, its lips cracked and its eyes burning with feverish light.
+~
+147553 0 -600 S
+75 0
+0 0 0 0
+! 0 0 0 7 55 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31014
+desert hawk raptor bird~
+a desert hawk~
+A desert hawk circles at eye level before diving here.
+~
+Its wingspan blocks a full stride's worth of sunlight when it passes, and its talons are long enough to punch through leather; it has learned that armed travelers are prey worth the risk.
+~
+131169 0 -250 S
+62 0
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31015
+khar'daan dread pharaoh ruler~
+Khar'daan the Dread Pharaoh~
+Khar'daan the Dread Pharaoh looms upon his obsidian throne here.
+~
+A towering figure in burial regalia of hammered gold and lapis lazuli, the Pharaoh's face is a porcelain death-mask fused to bone, and his crook and flail have been replaced by instruments of war that hum with captured lightning.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 3843 33560608 12
+| 128 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31016
+basilisk king great~
+the Basilisk King~
+The Basilisk King sprawls across the pit floor here.
+~
+Eight times the size of its offspring, the Basilisk King's body fills the chamber with scaled coils and its gaze is a perceptible pressure, like the weight of a heavy stone placed behind the eyes.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31017
+scorpion queen ikhet matriarch~
+the Scorpion Queen Ikhet~
+The Scorpion Queen Ikhet crouches at the center of her brood here.
+~
+Her carapace is the deep amber of old resin and her stinger is the size of a shortsword; beneath each foreleg she bears a pouch of condensed venom that she sprays with practiced accuracy.
+~
+83886147 0 -1000 S
+85 2
+0 0 0 0
+! 0 0 0 7 1576711 384 12
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31018
+desert warlord mazrak conqueror~
+Desert Warlord Mazrak~
+Desert Warlord Mazrak tests the edge of his blade here.
+~
+A broad slab of a man armored in layered desert iron and the skulls of past opponents, Mazrak carved his territory through the corpses of three rival tribes and has not yet found anyone willing to challenge the claim.
+~
+83886147 0 -800 S
+85 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31019
+eternal mummy sethnekh high priest~
+the Eternal Mummy Sethnekh~
+The Eternal Mummy Sethnekh rises from his sarcophagus here.
+~
+Sethnekh was the last high priest of Khar'daan and chose mummification before death so he could guard the necropolis forever; ten thousand years of cursed unlife have made him something far worse than he intended.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 3843 2528 12
+| 0 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#0
+#OBJECTS
+#31000
+halo of sun-fire~
+@@yHalo of Sun-Fire@@N~
+The Halo of Sun-Fire pulses with golden light here.~
+9 128 8388609 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+65
+#31001
+sand-rider aura~
+@@ySand-Rider's Aura@@N~
+The Sand-Rider's Aura shimmers with wind-blown light here.~
+9 128 8388610 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+66
+#31002
+sand-carved helm~
+@@bSand-Carved Helm@@N~
+The Sand-Carved Helm rests half-buried in dust here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+67
+#31003
+scorched face-veil~
+@@yScorched Face-Veil@@N~
+The Scorched Face-Veil lies folded in the sand here.~
+9 128 8388624 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+68
+#31004
+dune-stalker earring~
+@@yDune-Stalker's Earring@@N~
+The Dune-Stalker's Earring gleams from a bone here.~
+9 128 8388672 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+69
+#31005
+tomb-robber necklace~
+@@bTomb-Robber's Necklace@@N~
+The Tomb-Robber's Necklace hangs from a broken hook here.~
+9 128 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+70
+#31006
+scorched shoulder plates~
+@@yScorched Shoulder Plates@@N~
+The Scorched Shoulder Plates sit cracked beside the wall here.~
+9 128 8389120 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+71
+#31007
+sand-hardened arm guards~
+@@bSand-Hardened Arm Guards@@N~
+The Sand-Hardened Arm Guards lie stacked in the grit here.~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+72
+#31008
+raider wrist wraps~
+@@yRaider's Wrist Wraps@@N~
+The Raider's Wrist Wraps are coiled tight near the entry here.~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+73
+#31009
+talon-strike gloves~
+@@bTalon-Strike Gloves@@N~
+The Talon-Strike Gloves lie claw-side down in the sand here.~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+74
+#31010
+tomb-robber signet~
+@@yTomb-Robber's Signet@@N~
+The Tomb-Robber's Signet rests on a chip of black stone here.~
+9 128 8396800 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+65
+#31011
+basilisk-hide belt~
+@@bBasilisk-Hide Belt@@N~
+The Basilisk-Hide Belt is coiled in the dust here.~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+66
+#31012
+scorpion-scale cuirass~
+@@yScorpion-Scale Cuirass@@N~
+The Scorpion-Scale Cuirass stands propped against a pillar here.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+67
+#31013
+sand raider cloak~
+@@bSand Raider's Cloak@@N~
+The Sand Raider's Cloak pools in a heap near the archway here.~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+68
+#31014
+serpent-skin greaves~
+@@ySerpent-Skin Greaves@@N~
+The Serpent-Skin Greaves are propped against a cracked column here.~
+9 128 9437184 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+69
+#31015
+sun-hardened boots~
+@@bSun-Hardened Boots@@N~
+The Sun-Hardened Boots stand upright in a patch of dry sand here.~
+9 128 10485760 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+70
+#31016
+desert scimitar~
+@@yDesert Scimitar@@N~
+The Desert Scimitar gleams dully in the haze-filtered light here.~
+5 128 8421376 1
+0 0 0 3 0 0 0 0 0 0
+8
+L
+71
+#31017
+viper-fang dagger~
+@@bViper-Fang Dagger@@N~
+The Viper-Fang Dagger lies point-down in the sand here.~
+5 128 8421376 1
+0 0 0 2 0 0 0 0 0 0
+7
+L
+72
+#31018
+tombstone shield~
+@@yTombstone Shield@@N~
+The Tombstone Shield stands face-out against a burial niche here.~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+73
+#31019
+kharadaan wing-drape~
+@@bKhar'daan Wing-Drape@@N~
+The Khar'daan Wing-Drape is draped over a fallen idol here.~
+9 128 8388864 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+74
+#31020
+mummy-linen neck-wrap~
+@@yMummy-Linen Neck-Wrap@@N~
+The Mummy-Linen Neck-Wrap hangs from a protruding hook here.~
+9 128 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+75
+#31021
+nomad war-cloak~
+@@bNomad War-Cloak@@N~
+The Nomad War-Cloak lies dusty across a broken slab here.~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+65
+#31022
+crown of khar'daan~
+@@yCrown of Khar'daan@@N~
+The Crown of Khar'daan gleams with ancient authority here.~
+9 192 8388616 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+80
+#31023
+pharaoh scepter of judgment~
+@@yPharaoh's Scepter of Judgment@@N~
+The Pharaoh's Scepter of Judgment crackles with stored energy here.~
+5 192 8421376 1
+0 0 0 6 0 0 0 0 0 0
+8
+L
+80
+#31024
+burial robes of khar'daan~
+@@yBurial Robes of Khar'daan@@N~
+The Burial Robes of Khar'daan shimmer with embalming-light here.~
+9 192 8650752 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+80
+#31025
+basilisk king crest~
+@@bBasilisk King's Crest@@N~
+The Basilisk King's Crest gleams with a cold petrifying aura here.~
+9 192 8388612 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+80
+#31026
+basilisk fang-blade~
+@@bBasilisk Fang-Blade@@N~
+The Basilisk Fang-Blade oozes a slow petrifying ichor here.~
+5 192 8421376 1
+0 0 0 2 0 0 0 0 0 0
+8
+L
+80
+#31027
+petrified scale mantle~
+@@bPetrified Scale Mantle@@N~
+The Petrified Scale Mantle is draped across a throne arm here.~
+9 192 8454144 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+80
+#31028
+queen ikhet poison crown~
+@@RQueen Ikhet's Poison Crown@@N~
+The Queen Ikhet's Poison Crown weeps amber drops here.~
+9 192 8388616 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+80
+#31029
+scorpion claw grapple~
+@@RScorpion's Claw Grapple@@N~
+The Scorpion's Claw Grapple gleams with chitin-edge here.~
+5 192 8421376 1
+0 0 0 3 0 0 0 0 0 0
+8
+L
+80
+#31030
+chitin breastplate of ikhet~
+@@RChitin Breastplate of Ikhet@@N~
+The Chitin Breastplate of Ikhet radiates faint heat here.~
+9 192 8650752 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+80
+#31031
+warlord mazrak battle helm~
+@@yWarlord Mazrak's Battle Helm@@N~
+The Warlord Mazrak's Battle Helm sits dented on a war-chest here.~
+9 192 8388616 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+80
+#31032
+mazrak war-blade~
+@@yMazrak's War-Blade@@N~
+The Mazrak's War-Blade leans against the pavilion post here.~
+5 192 8421376 1
+0 0 0 3 0 0 0 0 0 0
+9
+L
+80
+#31033
+warlord desert plate~
+@@yWarlord's Desert Plate@@N~
+The Warlord's Desert Plate stands on its stand in the corner here.~
+9 192 8650752 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+80
+#31034
+sethnekh death circlet~
+@@bSethnekh's Death Circlet@@N~
+The Sethnekh's Death Circlet pulses with funerary light here.~
+9 192 8388612 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+80
+#31035
+ankh of eternal rest~
+@@bAnkh of Eternal Rest@@N~
+The Ankh of Eternal Rest rests in a cradle of old bone here.~
+5 192 8421376 1
+0 0 0 7 0 0 0 0 0 0
+7
+L
+80
+#31036
+wrappings of eternity~
+@@bWrappings of Eternity@@N~
+The Wrappings of Eternity hang from a hook in silent folds here.~
+9 192 8650752 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+80
+#31037
+sethnekh amulet of souls~
+@@bSethnekh's Amulet of Souls@@N~
+The Sethnekh's Amulet of Souls glows with pale cold fire here.~
+9 192 8388736 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+80
+#31038
+desert jackal fetish earring~
+@@yDesert Jackal Fetish Earring@@N~
+The Desert Jackal Fetish Earring hangs from a protruding nail here.~
+9 128 8388672 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+75
+#31039
+sand-spirit waist cord~
+@@bSand-Spirit Waist Cord@@N~
+The Sand-Spirit Waist Cord coils on the floor like a sleeping snake here.~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+65
+#0
+#ROOMS
+#31000
+The Sunken Threshold~
+@@yA narrow shaft cuts through compacted @@bsand and shattered clay@@y, its hewn walls still bearing ancient tool marks where hands long dead carved through to something buried far below. @@bDry air rises from the darkness ahead, carrying a faint mineral tang and the ghost of old incense@@y as you stand at the edge of the descent into Khar'Daan.@@N
+~
+0 10
+D4
+You climb back up through the sunken shaft into the open desert.
+~
+~
+0 -1 8539
+D2
+The shaft descends further south into ancient darkness.
+~
+~
+0 -1 31001
+S
+#31001
+Field of Broken Obelisks~
+@@yToppled obelisks lie at wild angles across a broad @@bsand-choked plaza@@y, their carved faces ground nearly smooth by centuries of abrasive wind. @@bA burning yellow haze smears the horizon in all directions@@y, and the heat radiating from dark stone makes the air shimmer in slow waves above each fallen monolith.@@N
+~
+0 10
+D0
+The sunken shaft rises back up to the desert surface.
+~
+~
+0 -1 31000
+D1
+The desert escarpment drops away to the east.
+~
+~
+0 -1 31010
+D2
+The promenade continues south deeper into Khar'Daan.
+~
+~
+0 -1 31002
+S
+#31002
+The Crumbled Gatehouse~
+@@yThe gatehouse that once controlled entry into Khar'Daan has largely @@bcollapsed inward@@y, leaving a tunnel of stacked rubble and leaning lintels that creak when the wind gusts through. @@bFaded ward-signs are scratched into every stone of the lintel arch@@y, and several of them have been deliberately defaced with deep gouges.@@N
+~
+0 10
+D0
+Back north through the obelisk field.
+~
+~
+0 -1 31001
+D2
+South through the gatehouse and into the promenade beyond.
+~
+~
+0 -1 31003
+S
+#31003
+Sand-Choked Promenade~
+@@yA wide ceremonial avenue runs south beneath @@bcolonnaded arches@@y half-buried in drifted sand, its paving stones buckled but still discernible beneath a knee-deep layer of grit. @@bTo the west a collapsed wall reveals the nomad ruins beyond@@y, and the broad avenue stretches ahead with the weight of ten thousand years of footsteps erased by the desert.@@N
+~
+0 10
+D0
+North back through the crumbled gatehouse.
+~
+~
+0 -1 31002
+D2
+Further south down the promenade toward the grand colonnade.
+~
+~
+0 -1 31004
+D3
+West through a collapsed section of wall into the nomad ruins.
+~
+~
+0 -1 31020
+S
+#31004
+The Grand Colonnade~
+@@yHuge columns of red sandstone rise in two parallel rows here, their capitals carved into the spread wings of desert hawks and their shafts engraved with processions of the dead. @@bThis is the crossroads of Khar'Daan@@y, where four wings of the necropolis meet beneath a partially intact ceiling that casts long slanted bars of shadow across the sand-dusted floor.@@N
+~
+0 10
+D0
+North back up the promenade.
+~
+~
+0 -1 31003
+D1
+East into the scorpion wastes wing.
+~
+~
+0 -1 31015
+D2
+South deeper into the burial halls.
+~
+~
+0 -1 31005
+D3
+West into the dusty crypt road.
+~
+~
+0 -1 31025
+S
+#31005
+Hall of the Forgotten Sun~
+@@yA vaulted hall extends south with its ceiling painted in a faded astronomical map, every star and planet carefully placed, though the paint has @@bcracked into dry flakes@@y that drift down like snow when the wall shudders. @@bThe great sun disc at the hall's apex has been slashed through with something sharp@@y, and the wound in the plaster has never been repaired.@@N
+~
+8 11
+D0
+Back north to the grand colonnade.
+~
+~
+0 -1 31004
+D2
+South into the chamber of burial masks.
+~
+~
+0 -1 31006
+S
+#31006
+Chamber of Burial Masks~
+@@yHundreds of painted burial masks line the walls from floor to ceiling on narrow shelves, each one staring outward with the same @@bblank golden expression@@y of prepared death. @@bAn east passage opens into a gallery of bones@@y, while the main corridor continues south into the ossuary beneath, and the smell of natron and dried cedar is strong enough here to taste.@@N
+~
+8 11
+D0
+North back through the hall of the forgotten sun.
+~
+~
+0 -1 31005
+D1
+East into the bone-strewn gallery.
+~
+~
+0 -1 31030
+D2
+South into the ossuary vaults.
+~
+~
+0 -1 31007
+S
+#31007
+The Ossuary Vaults~
+@@yShelves of carefully arranged bones climb the walls from floor to ceiling, every skull facing outward with eye sockets packed with @@bdried black resin@@y. @@bThe floor is a mosaic of compressed bone fragments set in bitumen@@y, and the vaulted ceiling above is painted with scenes of judgment that the torchlight makes appear to move.@@N
+~
+8 11
+D0
+North back into the chamber of burial masks.
+~
+~
+0 -1 31006
+D2
+South deeper toward the inner sanctum.
+~
+~
+0 -1 31008
+S
+#31008
+Descent to Khar'Daan~
+@@yThe passage narrows and slopes downward here, its walls pressing close as they descend beneath the original floor level of the necropolis into something older and @@bmore deliberately sealed@@y. @@bThe air is completely still and carries a charge that raises the hairs on bare skin@@y, and the hieroglyphs carved into the passage walls here are not decorative but functional, intended to keep something contained.@@N
+~
+8 11
+D0
+North back up through the ossuary vaults.
+~
+~
+0 -1 31007
+D2
+South into the innermost sanctum of Khar'Daan.
+~
+~
+0 -1 31009
+S
+#31009
+Inner Sanctum of Khar'Daan~
+@@RThe innermost chamber of the necropolis is vast and cold despite the surrounding @@ydesert heat@@R, its ceiling lost in darkness above pillars of black granite carved with the complete dynastic history of Khar'daan in letters no larger than a thumbnail. @@yAt the far end stands the obsidian throne@@R, and the Dread Pharaoh who has occupied it since before memory began watches your approach with the patient certainty of someone who has killed everyone who has ever entered this room.@@N
+~
+24588 11
+D0
+North back toward the descent passage.
+~
+~
+0 -1 31008
+S
+#31010
+The Desert Escarpment~
+@@yA ragged ledge of exposed sandstone runs east from the main ruins, its surface @@bcracked into tilted slabs@@y that catch and magnify the sun's heat. @@bBelow the ledge, the ground drops into a dry ravine choked with bleached driftwood and broken pottery@@y, and the serpent shrine ruins are visible to the south through a gap in the rock face.@@N
+~
+0 10
+D2
+South down a rough track into the serpent shrine ruins.
+~
+~
+0 -1 31011
+D3
+West back to the obelisk field.
+~
+~
+0 -1 31001
+S
+#31011
+Ruins of the Serpent Shrine~
+@@yThe serpent shrine has partially collapsed, its round central basin long since filled with @@bsand and shed scales@@y of enormous size. @@bCarved serpents wind up every remaining pillar@@y and their hollow eyes have been filled with pale blue glass that catches the light like watching pupils, while a narrow alcove opens eastward and the path continues south into the den below.@@N
+~
+0 10
+D0
+North back up to the desert escarpment.
+~
+~
+0 -1 31010
+D1
+East into a fossil-ribbed alcove.
+~
+~
+0 -1 31013
+D2
+South down into the viper den.
+~
+~
+0 -1 31012
+S
+#31012
+The Viper Den~
+@@yThe floor here is warm from below and covered in a fine layer of shed skin @@binterlocked like scales@@y, brittle underfoot. @@bNests of compressed dry grass fill every crevice in the walls@@y, and the low hissing from multiple sources tells you that whatever claimed this space is still very much in residence, with the basilisk pit lurking even deeper below.@@N
+~
+0 10
+D0
+North back up through the serpent shrine ruins.
+~
+~
+0 -1 31011
+D2
+South down into the basilisk pit.
+~
+~
+0 -1 31014
+S
+#31013
+Fossil-Ribbed Alcove~
+@@yThis small alcove is dominated by the fossilized ribs of a creature too large to have fit through any door still standing, their @@bstone arches framing compressed strata@@y of ancient bone in layers the colors of rust and cream. @@bSmall vipers nest between the fossil ribs@@y, and the heat trapped in this enclosed space is several degrees higher than the passage outside.@@N
+~
+0 10
+D3
+West back into the serpent shrine ruins.
+~
+~
+0 -1 31011
+S
+#31014
+The Basilisk Pit~
+@@RThe pit is sunken below the surrounding rock floor, its walls @@ysmooth from age@@R and polished further by the passage of a vast scaled body. @@yThe smell of musk and old blood is overwhelming@@R, and the Basilisk King at the center of this pit has had so long to grow in darkness that it now fills most of the chamber, its coils stacked three bodies high along the far wall.@@N
+~
+24580 10
+D0
+North back up through the viper den.
+~
+~
+0 -1 31012
+S
+#31015
+The Scorpion Wastes~
+@@yAn open stretch of shattered desert floor extends east from the grand colonnade, its surface cracked into interlocking plates that @@bshift and creak underfoot@@y. @@bThe gaps between the plates are wide enough to lose an arm in@@y, and from those gaps come the dry scraping sounds of carapace against stone from something large moving just beneath the surface.@@N
+~
+32 10
+D2
+South into the scorpion warren entrance.
+~
+~
+0 -1 31016
+D3
+West back to the grand colonnade.
+~
+~
+0 -1 31004
+S
+#31016
+Scorpion Warren Entrance~
+@@yA ring of boulders marks the entrance to the warren below, each stone worn smooth by the constant passage of @@barmored carapaces@@y. @@bTo the east a fossil-ribbed grotto opens in the rock face@@y, and to the south the passage descends into the brood chamber where the heat is noticeably higher and the clicking of shells on stone is much louder.@@N
+~
+32 10
+D0
+North back to the scorpion wastes.
+~
+~
+0 -1 31015
+D1
+East into a fossil-ribbed grotto.
+~
+~
+0 -1 31018
+D2
+South down into the brood chamber.
+~
+~
+0 -1 31017
+S
+#31017
+The Brood Chamber~
+@@yThe brood chamber is thick with the egg-must of a scorpion colony in its prime, its floor @@bcovered in amber cases@@y the size of fists, each one vibrating with the occupant inside. @@bAdult scorpions circle the perimeter in slow rotation@@y, and the queen's chamber lies just south, its entrance scratched raw by the passage of her vast body.@@N
+~
+32 10
+D0
+North back up to the scorpion warren entrance.
+~
+~
+0 -1 31016
+D2
+South into the lair of the scorpion queen.
+~
+~
+0 -1 31019
+S
+#31018
+Fossil-Ribbed Grotto~
+@@yA grotto in the eastern rock face contains the compressed fossils of some ancient reef, its corrugated walls studded with the outlines of @@bspiral shells and articulated fins@@y preserved in stone. @@bHeat radiates from a crack in the floor@@y where some deeper thermal source has been active long enough to cook the very rock, and dead scorpions are piled near the crack as offerings or curiosities.@@N
+~
+32 10
+D3
+West back into the scorpion warren entrance.
+~
+~
+0 -1 31016
+S
+#31019
+Lair of the Scorpion Queen~
+@@RA low-ceilinged chamber carved out of solid rock by @@yclaws@@R and time, the queen's lair smells of concentrated venom and shed chitin. @@yEvery wall surface within reach is scored by the queen's passing@@R, and the floor is covered in a deep layer of desiccated scorpion shells that crunch underfoot, the Scorpion Queen Ikhet crouching at its center with her stinger arcing in slow warning passes.@@N
+~
+24580 10
+D0
+North back into the brood chamber.
+~
+~
+0 -1 31017
+S
+#31020
+Ruins of the Nomad Camp~
+@@yThe remains of a semi-permanent nomad camp occupy this section of the ruins, its @@bgoat-hide tents long since rotted to frames@@y of bleached wood and corroded iron stakes. @@bTo the west the caravan wreckage lies exposed in the sun@@y, and to the south the encampment becomes more fortified as it approaches the territory the desert warlord has claimed for his own.@@N
+~
+0 10
+D1
+East back into the sand-choked promenade.
+~
+~
+0 -1 31003
+D2
+South into the raider's encampment.
+~
+~
+0 -1 31022
+D3
+West into the caravan wreckage.
+~
+~
+0 -1 31021
+S
+#31021
+Caravan Wreckage~
+@@yThe wreck of a large trade caravan is half-buried here, its wagon wheels cracked to rings of @@bblackened wood@@y and its iron fittings fused into the sand by some past fire. @@bBleached bones of oxen and merchants are mixed indiscriminately@@y, and the cargo has long since been picked through, though the scattered trade goods still include enough broken pottery and rusted coins to suggest the caravan's former wealth.@@N
+~
+0 10
+D1
+East back into the nomad camp ruins.
+~
+~
+0 -1 31020
+S
+#31022
+The Raider's Encampment~
+@@yA fortified camp built from salvaged stone and scavenged lumber fills this sunken section of the ruins, its defensive walls low but thick and reinforced with @@bsand-packed wicker panels@@y. @@bBandits sit at small fires behind the walls@@y, and the smell of roasting meat and woodsmoke mingles with the hot desert air, with a robber's cache visible to the west and the warlord's pavilion commanding the southern end.@@N
+~
+0 10
+D0
+North back to the nomad camp ruins.
+~
+~
+0 -1 31020
+D2
+South toward the warlord's pavilion.
+~
+~
+0 -1 31024
+D3
+West into the robber's cache.
+~
+~
+0 -1 31023
+S
+#31023
+Robber's Cache~
+@@yA cramped alcove behind a false wall, its entrance concealed behind a tilting shelf of @@bfake pottery@@y, contains the accumulated plunder of desert robbery sorted into rough piles by type and value. @@bThe bones of at least two previous cache-keepers lie beneath the piles@@y, suggesting that knowledge of this location has historically been preserved through methods more permanent than secrecy.@@N
+~
+0 10
+D1
+East back into the raider's encampment.
+~
+~
+0 -1 31022
+S
+#31024
+The Warlord's Pavilion~
+@@yA massive pavilion tent has been erected against the southern wall of the ruins, its @@bpoles planted in the ancient floor@@y and its walls made from heavy canvas dyed in the colors of dried blood and sun-bleached bone. @@bDesert Warlord Mazrak commands this space@@y with the absolute authority of someone who has killed every challenger to the title and intends to go on doing so indefinitely.@@N
+~
+24580 10
+D0
+North back to the raider's encampment.
+~
+~
+0 -1 31022
+S
+#31025
+Dusty Crypt Road~
+@@yA broad road paved with close-fitted limestone blocks runs west from the grand colonnade, its surface @@bcovered in undisturbed dust@@y thick enough to show the tracks of things that travel here often. @@bA narrow stair branches north into a collapsed chamber@@y, while the main road continues west into the mummy quarter of the necropolis, where the smell of natron and preservation resin grows steadily stronger.@@N
+~
+8 11
+D0
+North up a narrow stair into a sand-burial chamber.
+~
+~
+0 -1 31035
+D1
+East back to the grand colonnade.
+~
+~
+0 -1 31004
+D3
+West into the mummy procession way.
+~
+~
+0 -1 31026
+S
+#31026
+Mummy Procession Way~
+@@yA ceremonial corridor runs east-west with niches cut into both walls at regular intervals, each niche designed for a standing mummy dressed in @@bfull processional regalia@@y. @@bMost niches are empty@@y, their occupants long since removed or animated, but a few still contain the wrapped forms of minor nobility dressed in the finery that was supposed to guarantee their comfort in the afterlife.@@N
+~
+8 11
+D1
+East back to the dusty crypt road.
+~
+~
+0 -1 31025
+D3
+West into the burial preparation chamber.
+~
+~
+0 -1 31027
+S
+#31027
+Burial Preparation Chamber~
+@@yThe preparation chamber is tiled in @@bpolished alabaster@@y now gone grey with age, its slanted embalming tables still equipped with the bronze tools of their trade, each one corroded to uselessness but still arranged in the precise order mandated by the funerary texts painted on the ceiling. @@bThe smell of ancient preservatives@@y is strong enough here to make the eyes water.@@N
+~
+8 11
+D1
+East back into the mummy procession way.
+~
+~
+0 -1 31026
+D3
+West into the canopic shrine.
+~
+~
+0 -1 31028
+S
+#31028
+The Canopic Shrine~
+@@yFour great canopic jars stand on an altar of black granite at the center of this vaulted shrine, each one carved in the image of a different @@bjackal-headed guardian@@y. @@bThe jars are sealed with wax sigils that pulse with residual enchantment@@y, and the southern alcove beyond contains the sarcophagus chamber of the eternal high priest Sethnekh, whose duty is to ensure that none of these jars are ever disturbed.@@N
+~
+8 11
+D1
+East back into the burial preparation chamber.
+~
+~
+0 -1 31027
+D2
+South into the chamber of the eternal pharaoh.
+~
+~
+0 -1 31029
+S
+#31029
+Chamber of the Eternal Pharaoh~
+@@RA chamber of black and @@ygold@@R cut perfectly square, its walls covered in layers of hieroglyphic text that have been added to in every era since the necropolis was first sealed, recording ten thousand years of uninterrupted guardianship in diminishing margins as the space ran out. @@yThe Eternal Mummy Sethnekh rises from his sarcophagus@@R with the calm certainty of something that has had considerable time to prepare for exactly this moment.@@N
+~
+24588 11
+D0
+North back into the canopic shrine.
+~
+~
+0 -1 31028
+S
+#31030
+Bone-Strewn Gallery~
+@@yA gallery runs east from the chamber of burial masks, its floor deep in @@bbones disarticulated and sorted@@y by some prior visitor into rough piles by type, which suggests either obsessive organization or ritual purpose. @@bAn alcove opens east into a trophy room@@y, while the gallery continues south into deeper sepulcher chambers, and the bones here represent considerably more individuals than the niches in the walls could have held.@@N
+~
+8 11
+D1
+East into the trophy alcove.
+~
+~
+0 -1 31031
+D2
+South into the sand-filled sepulcher.
+~
+~
+0 -1 31032
+D3
+West back into the chamber of burial masks.
+~
+~
+0 -1 31006
+S
+#31031
+Trophy Alcove~
+@@yThe alcove has been converted into a display space for the weapons and armor of those who died attempting to @@bplunder or profane@@y the necropolis, each piece mounted on the wall with a small cartouche beneath it in a script that appears to record the date and method of the owner's death. @@bThe collection is extensive@@y, spanning enough centuries of attempted grave robbery to suggest the necropolis has been remarkably consistent in its results.@@N
+~
+8 11
+D3
+West back into the bone-strewn gallery.
+~
+~
+0 -1 31030
+S
+#31032
+The Sand-Filled Sepulcher~
+@@yDrifted sand has entered through a crack in the southern wall and @@bfilled this chamber to waist height@@y, burying whatever was once stored here beneath a smooth white dune that has been undisturbed long enough to develop a hard crust. @@bSomething beneath the sand occasionally shifts@@y, pressing upward against the crust from below, and the shifting is not random but deliberate and rhythmic, suggesting a burial that did not take properly.@@N
+~
+8 11
+D0
+North back into the bone-strewn gallery.
+~
+~
+0 -1 31030
+D2
+South deeper into the vault complex.
+~
+~
+0 -1 31033
+S
+#31033
+The Deep Vault~
+@@yAt the bottom of a short stair, the deep vault opens into a chamber where the ceiling is @@bcompletely covered in tiny carved names@@y, tens of thousands of them, each one no larger than a thumbnail, recording every individual interred in Khar'Daan across its entire history. @@bThe newest names near the eastern wall@@y are in scripts already centuries old, and the oldest names near the center have been worn to shallow grooves by the passage of the resident undead.@@N
+~
+8 11
+D0
+North back up the stair to the sand-filled sepulcher.
+~
+~
+0 -1 31032
+D2
+South into the ancient offering pit.
+~
+~
+0 -1 31034
+S
+#31034
+Ancient Offering Pit~
+@@yA deep pit occupies the center of this final chamber, its rim worn smooth by generations of offerings cast inward, and the distant bottom is @@bcompletely invisible@@y behind a rising column of warm air that carries the smell of very old combustion. @@bThe walls around the pit are packed with grave goods@@y still in their original niches, preserved by the dry air into a perfect record of what ten thousand years of burial gifts looks like when no one has come to loot them.@@N
+~
+8 11
+D0
+North back into the deep vault.
+~
+~
+0 -1 31033
+S
+#31035
+Sand-Burial Chamber~
+@@yA compact chamber at the top of a short stair contains four standing sarcophagi arranged around a central @@boffering basin@@y long since dry. @@bThe sarcophagi are sealed with lead straps@@y and the hieroglyphic text on their faces includes extensive warnings in multiple ancient scripts about the consequences of opening them, though the consequential phrasing appears directed not at tomb robbers but at whatever is inside.@@N
+~
+8 11
+D2
+South back down to the dusty crypt road.
+~
+~
+0 -1 31025
+S
+#0
+#RESETS
+M 0 31014 2 31001
+E 0 31019 0 11
+E 0 31003 0 5
+M 0 31012 2 31001
+E 0 31004 0 7
+E 0 31001 0 2
+M 0 31003 2 31002
+E 0 31005 0 9
+E 0 31010 0 17
+M 0 31004 2 31003
+E 0 31012 0 26
+E 0 31016 0 21
+M 0 31009 2 31003
+E 0 31000 0 1
+E 0 31008 0 14
+M 0 31011 2 31004
+E 0 31002 0 4
+E 0 31018 0 20
+E 0 31012 0 26
+M 0 31009 2 31004
+E 0 31000 0 1
+E 0 31008 0 14
+M 0 31003 2 31005
+E 0 31005 0 9
+E 0 31010 0 17
+M 0 31011 2 31005
+E 0 31002 0 4
+E 0 31018 0 20
+E 0 31012 0 26
+M 0 31007 2 31006
+E 0 31001 0 2
+E 0 31019 0 11
+M 0 31003 2 31006
+E 0 31005 0 9
+E 0 31010 0 17
+M 0 31008 3 31007
+E 0 31002 0 4
+E 0 31007 0 13
+M 0 31011 2 31007
+E 0 31002 0 4
+E 0 31018 0 20
+E 0 31012 0 26
+M 0 31008 3 31008
+E 0 31002 0 4
+E 0 31007 0 13
+M 0 31002 2 31008
+E 0 31020 0 9
+E 0 31038 0 7
+M 0 31015 1 31009
+E 0 31022 0 4
+E 0 31023 0 21
+E 0 31024 0 26
+M 0 31005 2 31010
+E 0 31007 0 13
+E 0 31009 0 16
+M 0 31014 2 31010
+E 0 31019 0 11
+E 0 31003 0 5
+M 0 31001 2 31011
+E 0 31014 0 28
+E 0 31015 0 29
+M 0 31005 2 31011
+E 0 31007 0 13
+E 0 31009 0 16
+M 0 31001 2 31012
+E 0 31014 0 28
+E 0 31015 0 29
+M 0 31006 2 31012
+E 0 31006 0 12
+E 0 31003 0 5
+M 0 31012 2 31013
+E 0 31004 0 7
+E 0 31001 0 2
+M 0 31016 1 31014
+E 0 31025 0 3
+E 0 31026 0 21
+E 0 31027 0 24
+M 0 31000 3 31015
+E 0 31011 0 25
+E 0 31012 0 26
+M 0 31006 2 31015
+E 0 31006 0 12
+E 0 31003 0 5
+M 0 31000 3 31016
+E 0 31011 0 25
+E 0 31012 0 26
+M 0 31006 2 31016
+E 0 31006 0 12
+E 0 31003 0 5
+M 0 31000 3 31017
+E 0 31011 0 25
+E 0 31012 0 26
+M 0 31017 1 31019
+E 0 31028 0 4
+E 0 31029 0 21
+E 0 31030 0 26
+M 0 31004 2 31020
+E 0 31012 0 26
+E 0 31016 0 21
+M 0 31003 2 31020
+E 0 31005 0 9
+E 0 31010 0 17
+M 0 31003 2 31021
+E 0 31005 0 9
+E 0 31010 0 17
+M 0 31010 2 31022
+E 0 31017 0 21
+E 0 31016 0 20
+M 0 31010 2 31023
+E 0 31017 0 21
+E 0 31016 0 20
+M 0 31018 1 31024
+E 0 31031 0 4
+E 0 31032 0 21
+E 0 31033 0 26
+M 0 31002 2 31025
+E 0 31020 0 9
+E 0 31038 0 7
+M 0 31008 3 31026
+E 0 31002 0 4
+E 0 31039 0 25
+M 0 31002 2 31026
+E 0 31020 0 9
+E 0 31038 0 7
+M 0 31008 3 31027
+E 0 31002 0 4
+E 0 31039 0 25
+M 0 31007 2 31028
+E 0 31001 0 2
+E 0 31019 0 11
+M 0 31019 1 31029
+E 0 31034 0 3
+E 0 31035 0 21
+E 0 31036 0 26
+E 0 31037 0 9
+M 0 31013 2 31030
+E 0 31021 0 24
+E 0 31020 0 9
+M 0 31013 2 31031
+E 0 31021 0 24
+E 0 31020 0 9
+M 0 31013 2 31032
+E 0 31021 0 24
+E 0 31020 0 9
+M 0 31010 2 31033
+E 0 31017 0 21
+E 0 31013 0 24
+M 0 31002 2 31035
+E 0 31020 0 9
+E 0 31038 0 7
+S
+#$
