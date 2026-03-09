@@ -437,5 +437,430 @@ A narrow crack in the east wall of the alcove leads to a spore-filled passage be
 ~
 0 -1 1025
 S
+#1025
+The Spore-Drift Passage~
+The passage beyond the alcove opens into a longer corridor where the air thickens visibly — a perpetual mist of @@pfungal spores@@N drifts in lazy eddies, too fine to see individually but collectively dense enough to colour the air faintly purple and reduce visibility to a few arm-lengths.  The spores taste of iron and bark, and a residue of them settles on every surface, building up over time into a soft iridescent deposit that muffles footsteps and coats exposed skin.  The glow from the walls here comes not from fungi but from the spores themselves, each individual particle briefly luminescent as it tumbles through the air.~
+1 11
+D0
+The passage narrows north toward the junction between the root squeeze and the alcove.~
+~
+0 -1 1018
+D3
+The spore drift thins slightly to the west, toward the fungal alcove.~
+~
+0 -1 1024
+D2
+The spore concentration increases dramatically to the south, where the passage terminates at a dark chamber.~
+~
+0 -1 1029
+S
+#1026
+The Amber Drip Chamber~
+Amber-coloured fluid seeps from dozens of points in the ceiling here, each drop falling in slow, deliberate rhythm to a corresponding hollow it has worn into the floor over years of patient dripping.  The amber smells of pine resin and something sharper — a chemical note that prickles the sinuses — and where it has dried on the walls it has hardened into a translucent crust through which trapped insects, spores, and at least one small creature of indeterminate type can be seen suspended.  The sound of the drops is hypnotic in the underground silence, an irregular tick-tock that fills the chamber and makes it difficult to listen for anything else.~
+0 11
+D0
+The passage leads north back to the central hollow.~
+~
+0 -1 1023
+D2
+The chamber narrows south, the amber drips less frequent but the smell growing stronger.~
+~
+0 -1 1027
+S
+#1027
+The Dark Spore Grotto~
+All bioluminescence drops away here, and the darkness is almost complete — almost, because the fungal colonies on the walls produce not light but a very faint anti-luminescence, a quality of darkness darker than its surroundings that resolves into shape only after long exposure.  The air is thick with spores of a larger, heavier variety than those in the upper passages, and each breath deposits them at the back of the throat in a gritty coating that is difficult to dislodge.  The spores carry a mild neurotoxin in high concentrations — prolonged exposure without protection results in a muffled quality to one's own thoughts, as though heard through walls.~
+1 11
+D0
+The passage leads north back toward the amber drip chamber, where at least some ambient light returns.~
+~
+0 -1 1026
+D1
+A low crawl-space leads east through the densest concentration of spore colonies yet encountered.~
+~
+0 -1 1028
+S
+#1028
+The Spore Colossus Chamber~
+The ceiling here has collapsed into a domed void of considerable height, and the resulting space has been entirely colonised by @@ptoxic spore-producing organisms@@N of enormous size — each individual fruiting body stands three to four feet tall, their caps grotesquely swollen, the undersides swaying gently as spore clouds billow from them in slow pulses like the exhalations of enormous lungs.  The floor is inches deep in a dry spore sediment that rises in clouds with every step.  Everything here is dark, everything is quiet, and everything in this chamber is very slowly trying to kill anyone who lingers.~
+1 11
+D3
+The crawl-space leads west back toward the dark spore grotto.~
+~
+0 -1 1027
+D0
+The spore colonies thin north toward a passage leading back to the upper hollows.~
+~
+0 -1 1029
+D2
+A rough tunnel leads south into absolute darkness, where something considerably larger than any fungus waits.~
+~
+0 -1 1030
+S
+#1029
+The Threshold of the Deep~
+This narrow passage connects the spore caverns above to the depths below, and the transition in atmosphere is sharp and unpleasant.  Where the upper passages smell of earth and fungi, this tunnel smells of nothing — a sterile, flat quality of air from which all organic notes have been stripped, as if something below has consumed every trace of anything living from it.  The bioluminescence does not reach here.  The darkness is absolute, pierced only by the traveller's own light source, and the tunnel walls are slick with a fluid that is warm to the touch and has no smell.~
+1 11
+D0
+The passage climbs north back toward the spore drift above.~
+~
+0 -1 1025
+D2
+The tunnel descends sharply south into the total darkness of the Fungal Hollows' deepest chamber.~
+~
+0 -1 1028
+S
+#1030
+The Mycelium Throne~
+The tunnel ends in a chamber of absolute, oppressive scale — the ceiling is lost in darkness above, the walls are at the extreme edge of any reasonable light source, and the floor slopes gently down to a central depression where an enormous mass of fused fungal matter has grown into the rough shape of a throne.  The throne is alive: its surface pulses slowly with deep, slow contractions, and from its base, the mycelium network spreads outward in every direction across the floor, the threads thick as rope near the throne and thinning to hair-fineness as they disappear up the walls.  The air has a quality here of being a medium for something that already occupies it, something vast and fungal and patient that has been sitting in this chair of its own flesh for longer than the forest above has existed.  Spore clouds wreathe the throne in lazy orbits, drifting on currents of their own making, and the silence is not empty but full of the enormous, quiet respiration of the organism that rules this chamber.  Nothing else grows here.  Nothing else could.~
+4 11
+D0
+The tunnel leads north back toward the threshold of the deep.~
+~
+0 -1 1028
+D1
+A root-braced passage angles east through the mycelium network, threading between the thickest tendrils.~
+~
+0 -1 1031
+S
+#1031
+The Ascending Exit Tunnel~
+The mycelium network thins rapidly as the passage runs east, transitioning within a few dozen feet from the dense root-and-fungus lattice of the deep hollows to something more recognisably earthen.  The walls here are packed soil braced by occasional root-beams, and the bioluminescence has returned, though muted — a few stubborn colonies of fungi glow from sheltered ledges in the rock.  Upward, a rough shaft rises toward daylight and the smell of the forest above, a smell that seems extraordinary and vivid after the sterile depths of the throne room.~
+0 11
+D3
+The passage leads west back toward the mycelium throne chamber.~
+~
+0 -1 1030
+D4
+The shaft ascends to the surface, emerging in the blighted forest above.~
+~
+0 -1 1055
+D1
+The exit tunnel continues east through packed earth, running parallel to the underground root network.~
+~
+0 -1 1032
+S
+#1032
+The Eastern Exit Corridor~
+This corridor has the feel of something deliberately dug rather than naturally formed — the walls are too regular, the ceiling too consistent, the floor too flat.  Someone shaped this passage with tools, though long ago enough that the bioluminescent fungi have colonised the lower walls and the ceiling has taken on the spotted texture of advanced root-penetration.  The passage smells more strongly of the upper forest here, a preview of the surface that grows stronger with every step east.~
+0 11
+D3
+The corridor leads west back toward the ascending exit shaft.~
+~
+0 -1 1031
+D1
+The dug corridor continues east, the soil smell strengthening.~
+~
+0 -1 1033
+S
+#1033
+The Threshold Passage~
+The underground passage reaches its final stretch here, the ceiling lowering slightly as the earth above grows shallower.  Root-tendrils penetrate the ceiling in dense clusters and hang down to shoulder height, requiring navigation on the way through.  The floor is slightly damp here, moisture seeping in from the soil above, and small shelf fungi have taken up residence on every root.  The passage smells unmistakably of open air — a complex, organic freshness utterly unlike the enclosed and stale underground atmosphere left behind.~
+0 11
+D3
+The passage leads west deeper into the Fungal Hollows.~
+~
+0 -1 1032
+D1
+The passage terminates to the east at a rough wall of packed earth — a crawl-space punched through brings out into the briar-choked forest beyond.~
+~
+0 -1 1034
+S
+#1034
+The Briar Threshold~
+The underground passage ends here in a chamber whose eastern wall is not earth but a dense mass of living roots and @@pthorn-laced brambles@@N — the buried root-systems of the briar maze above, which have grown downward to meet the mycelium network of the hollows in an underground tangle.  The brambles are alive and apparently aware: they shift slightly when approached, their thorns angling outward.  A gap barely wide enough for a person to pass through has been worn through the briar mass by repeated passage, the thorns along its edges polished smooth by contact with skin and armour.  The sound of wind — impossible this far underground — drifts through the gap.~
+0 11
+D3
+The underground passage leads west back toward the exit corridor.~
+~
+0 -1 1033
+D1
+The gap in the briar root-mass leads east, emerging into the labyrinth of thorns above.~
+~
+0 -1 1035
+S
+#1035
+A Thorn-Choked Trail~
+The undergrowth here has become something else entirely — not plants growing in soil but a three-dimensional lattice of thorned vines so densely interwoven that the ground beneath them is invisible, the sky above concealed, and the space between containing only more thorns, their tips catching the diffuse light from every angle.  There is no clear path, and yet there are worn channels between the vines that suggest passage is possible in several directions, if one accepts the certainty of being scratched and the impossibility of keeping one's bearings.  A sound that might be the maze breathing drifts from the west, and something small and many-legged retreats from the nearest vine-cluster.~
+524288 3
+D3
+The briar mass thins slightly to the west, a crawl-space punching through to the underground passage below.~
+~
+0 -1 1034
+D1
+A channel through the thorn lattice angles east toward a slightly wider section.~
+~
+0 -1 1036
+D2
+A broader channel opens south, the thorns here arranged in a higher canopy that allows more upright movement.~
+~
+0 -1 1040
+D0
+Unexpectedly, the thorns to the north thin for a moment, opening a channel that seems to lead somewhere unexpected — not back from where you came.~
+~
+0 -1 1054
+S
+#1036
+The Briar Canopy Path~
+The thorn-vines here have grown taller and arched overhead to form a tunnel of interlaced brambles, creating a green-dark corridor with a roof of thorns that catches occasional glimpses of the sky in tiny irregular patches.  The walls of the tunnel are in constant slow motion — individual vines shifting their growth by fractions that add up, over hours, to significant repositioning — which means the corridor's exact dimensions are never quite the same twice.  Scratched into the largest thorn-stem at head height, just legible: a single arrow pointing south, and below it, another arrow pointing in an entirely different south.~
+524288 3
+D3
+The thorn tunnel leads west toward the edge of the maze.~
+~
+0 -1 1035
+D1
+The tunnel curves east and slightly downward.~
+~
+0 -1 1037
+D2
+The bramble canopy continues south, lower here, requiring a crouch.~
+~
+0 -1 1041
+D0
+A branch in the maze leads unexpectedly north, the thorns opening on a direction that seems wrong somehow.~
+~
+0 -1 1039
+S
+#1037
+The Weeping Thorn Hollow~
+This broader space has a quality of being a room rather than a corridor — the vines here have grown outward from a central point rather than along a line, creating a roughly spherical void in the briar mass.  The thorns are covered in drops of amber fluid that never fall, caught on each thorn-tip and glinting in the diffuse light like a jewelled chandelier.  The amber smells of nothing — it has no scent, which in the context of this organic, living place is more unsettling than any smell could be.  The void in the briar feels intentional, as if maintained by something with an interest in keeping this particular space clear.~
+524288 3
+D3
+The briar opens west back toward the canopy path.~
+~
+0 -1 1036
+D1
+The void narrows east into a thorned corridor.~
+~
+0 -1 1038
+D2
+The central void has an exit south through a particularly dense section of bramble.~
+~
+0 -1 1042
+S
+#1038
+The Thorn Archway~
+A natural arch of overgrown brambles spans the path here, two vine-masses having grown up from opposite sides and met overhead in a dense knot that locks them in place.  The arch is twice person-height, impressive in scale, and its structure has accreted enough thorns over enough years that it resembles worked iron more than living plant.  @@pPurple flowers@@N — small, perfect, and appearing nowhere else in the maze — bloom from the arch's keystone tangle in a cluster, their petals slightly luminescent, casting no light anyone could read by but enough to notice.~
+524288 3
+D3
+The path leads west toward the weeping thorn hollow.~
+~
+0 -1 1037
+D1
+The path continues east beyond the arch into another section of the maze.~
+~
+0 -1 1039
+D2
+A narrow opening south threads through the base of the arch's left pillar.~
+~
+0 -1 1043
+S
+#1039
+The Blind Corner~
+The maze turns here at an angle that disorients the senses — the direction one arrived from seems immediately uncertain, and the options ahead seem more numerous than the space should permit.  The thorns here are noticeably taller and denser, pressing from both sides and overhead to reduce the passage to just enough space to stand.  A sound can be heard from the north — something between wind and breathing — and from it direction no thorn-channel is visible, which should be impossible.~
+524288 3
+D3
+The passage curves west toward the thorn archway.~
+~
+0 -1 1038
+D2
+The maze descends south toward a wider section.~
+~
+0 -1 1044
+D0
+The impossible-sounding channel to the north seems to open to a different part of the maze.~
+~
+0 -1 1036
+S
+#1040
+The Scratching Chamber~
+The sound of thorns scraping against each other fills this section of the maze — a continuous, multidirectional scratching that appears to have no specific source and does not change in response to the traveller's own movements.  The vines here move more visibly than elsewhere in the maze, not the slow growth-shift seen before but a faster, jerky repositioning as if the brambles are restless.  The floor between the vine-stems is scattered with pale objects that resolve, on closer inspection, into bone fragments — small creatures, mostly, reduced to component pieces by thorns or time or both.~
+524288 3
+D0
+The scratching sound fades slightly to the north, back toward the thorn-choked trail.~
+~
+0 -1 1035
+D1
+The vine-movement continues east, the channel between the brambles slightly wider.~
+~
+0 -1 1041
+D2
+The path descends south through the restless vine-mass.~
+~
+0 -1 1045
+S
+#1041
+The Vine Confluence~
+Several thorn-channels converge here, their meeting creating a space slightly larger than the surrounding maze — perhaps large enough to turn around in without snagging.  The vines that form each channel's walls lock into each other at the junction in elaborate interweavings, and the thorn arrangement at the interlocking points has a look of negotiation — as though each branch-line agreed to a specific crossing pattern.  There is something pinned to the nearest vine at eye height: a piece of leather, torn from something larger, bearing a burnt-in mark that might be a map of the maze — but if so, it shows neither where you are now nor any exit.~
+524288 3
+D0
+The channel leads north toward the scratching chamber.~
+~
+0 -1 1040
+D3
+Another channel curves west toward the entry of the maze.~
+~
+0 -1 1040
+D1
+A wider section of the maze opens east.~
+~
+0 -1 1042
+D2
+The confluence continues south through a section where the thorns grow particularly close.~
+~
+0 -1 1046
+S
+#1042
+The Low Canopy Section~
+The thorn-vines here have grown to an unusual height but failed to arch overhead, leaving the passage open to a sky now visible as a narrow strip — purple-grey, overcast, threaded with the shadows of the topmost vine branches.  The strip of sky does nothing for navigation and everything for despair: the Briar Maze extends as far as can be seen in every direction, an unbroken sea of brambles with no visible structure from above.  The lower vine-walls here drip a clear fluid from their thorn-tips, collecting in small pools on the path that smell of nothing but taste, apparently, of regret.~
+524288 3
+D0
+The open-sky section continues north toward the vine confluence.~
+~
+0 -1 1041
+D3
+A low tunnel of densely interlaced vines leads west.~
+~
+0 -1 1041
+D1
+The sky-strip continues east, the passage slightly brighter.~
+~
+0 -1 1043
+D2
+The canopy closes overhead south, plunging the path back into thorned darkness.~
+~
+0 -1 1047
+S
+#1043
+The Dense Thicket~
+This section of the maze is the most compressed yet — the vines here have grown so tightly that the passage through them requires turning sideways, and thorns catch clothing and skin despite care.  The density creates a near-silence: the sounds from other parts of the maze — the scraping, the wind-breath — do not penetrate here.  What can be heard instead, with the external noise blocked, is something much closer: a slow pulse, rhythmic and organic, coming from the vines themselves, as though the bramble mass has a heartbeat.~
+524288 3
+D0
+The thicket thins slightly to the north, the passage widening back toward the open-sky section.~
+~
+0 -1 1042
+D3
+The dense vines continue west, somehow thicker rather than thinner.~
+~
+0 -1 1040
+D2
+The passage continues south through the tight vine-mass.~
+~
+0 -1 1048
+S
+#1044
+The Thornweaver's Gallery~
+The thorn-vines here have been shaped — not by any tool but by the consistent efforts of multiple generations of large spiders whose webs fill the space between every vine in thick, three-dimensional sheets.  The webs are not the light silk of common spiders but something heavier, thorn-laced with debris caught over months of operation, forming impermeable screens that subdivide the passage into sub-channels.  Where the webbing is thickest, it has the structural integrity of felt, and things are caught in it — shed skins of large arthropods, desiccated prey, and at one point what appears to be a gauntlet, still with something inside it.~
+524288 3
+D0
+The web-draped passage leads north toward the blind corner.~
+~
+0 -1 1039
+D3
+Thinner webbing to the west allows a view into an adjacent channel.~
+~
+0 -1 1043
+D2
+The thornweaver gallery continues south, the webs here freshly constructed and still sticky.~
+~
+0 -1 1049
+S
+#1045
+The Low Archway Chamber~
+Two vine-arches stand in sequence here, each smaller than the last, creating a perspective-compressing corridor that seems to diminish the far end to a pinpoint.  The arches are ancient — the thorns on them are massive, some as long and thick as fingers, and their tips have developed a dark crystalline coating that suggests years of accumulated mineral deposit from the amber and clear fluids that drip throughout the maze.  Between the arches, the ground has been worn to bare earth by countless passages, and the surrounding vines are bent outward by the pressure of something that has squeezed through this bottleneck many times at a considerable size.~
+524288 3
+D0
+The arch series leads north back toward the scratching chamber.~
+~
+0 -1 1040
+D1
+Beyond the second arch, the maze opens east into a wider area.~
+~
+0 -1 1046
+D2
+The path south of the arches drops into a lower section of the maze with a different character.~
+~
+0 -1 1050
+S
+#1046
+The Thorn Parliament~
+This section of the maze is wider than any encountered so far, a roughly oval clearing where the vines have grown back from a central space and left a genuine open area — perhaps thirty feet across — with the night sky clearly visible overhead.  But the clearing is not empty: the thorn-vines that form its border are extremely tall here, and from their upper reaches hang dozens of dried shapes that were once living things.  The shapes vary in size from small creatures to something approaching human proportions.  Whatever the Briar Maze considers parliament, it appears to involve displayed trophies.~
+524288 3
+D0
+The parliament clearing is exited north toward the low archway chamber.~
+~
+0 -1 1045
+D3
+A channel leaves the parliament west toward a thorned tunnel.~
+~
+0 -1 1045
+D1
+A wide channel leads east out of the parliament, the thorn-walls here trimmed by something into parallel lines.~
+~
+0 -1 1047
+D2
+The clearest exit from the parliament leads south, a broad channel through the maze toward whatever lies at its centre.~
+~
+0 -1 1051
+S
+#1047
+The Parallel Runs~
+The vine-walls here have been shaped into deliberate parallel channels running east to west, each just wide enough for a person, separated by solid walls of compressed thorn-growth.  The effect is of a series of corridors running side by side, with no visible connection between them — but the maze being what it is, stepping sideways sometimes achieves different results than the geometry suggests.  Desiccated insects and small animals lie at regular intervals in each run, as though placed there — offerings, perhaps, or points in a game the maze is playing against itself.~
+524288 3
+D0
+The parallel runs exit north toward the open parliament.~
+~
+0 -1 1046
+D3
+The runs continue west toward the dense thicket.~
+~
+0 -1 1046
+D1
+The runs extend east, each one narrower than the one before.~
+~
+0 -1 1048
+D2
+All the parallel runs converge south at a single bottleneck exit.~
+~
+0 -1 1052
+S
+#1048
+The Convergence Point~
+The multiple channels of the maze all seem to funnel toward this point — a larger space where routes that appeared to run parallel suddenly meet, their vine-walls merging into a single mass that forces everything into one shared path before the maze decides to split again.  The junction is marked by an enormous thorn-stem, a single vine thicker than a person's torso that rises from the centre of the convergence and disappears overhead into the canopy.  The stem is covered in deep scratches that do not correspond to thorn-marks — they are too regular, too parallel, and cut too deep into living wood to be incidental.~
+524288 3
+D0
+The convergence leads north back toward the parallel runs.~
+~
+0 -1 1047
+D3
+A channel exits west from the convergence point, narrowing as it goes.~
+~
+0 -1 1047
+D1
+A wider channel leads east from the convergence, but the vines here are in active motion.~
+~
+0 -1 1049
+D2
+The merged path continues south from the convergence, the single channel running straight for an unusual distance.~
+~
+0 -1 1044
+S
+#1049
+The Terminal Tangle~
+The southernmost accessible reaches of the open maze before the sealed heart — the vine-growth here is at its densest and most chaotic, thorn-stems growing at every angle with no organising principle, the channels between them requiring constant ducking, crawling, and sideways movement.  The sound of the maze's ambient breathing is loudest here, coming from directly below as though originating underground.  Something large has broken through this tangle recently, the snapped vine-ends still weeping amber, the thorn-walls on one side pressed outward in a path twice the normal channel width.~
+524288 3
+D0
+The tangle opens north toward the convergence point.~
+~
+0 -1 1044
+D3
+A low channel threads west through the densest part of the tangle.~
+~
+0 -1 1048
+D2
+The tangle leads south toward the outermost paths of the maze, near an exit.~
+~
+0 -1 1054
+S
 #0
 #$
