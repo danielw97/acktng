@@ -401,6 +401,8 @@ Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is
 
 `ITEM_LOOT` usage policy: items intended to be spawned from a mobile's loot table (`#MOBILES` `l`/`L` extension data) must have `ITEM_LOOT` set in `extra_flags`. Items loaded onto mobiles via `#RESETS` (`G`/`E`) are normal reset equipment/inventory and must not be treated as loot-only objects unless explicitly intended.
 
+`BOSS` extra-flag usage policy: any item that can drop from a boss mob must include the `BOSS` item extra flag, regardless of how it is delivered (loot-table drop via `l`/`L` or normal equipment/inventory placed through resets).
+
 - `ITEM_GENERATED` = `1`
 - `ITEM_BIND_EQUIP` = `2`
 - `ITEM_NODISARM` = `4`
