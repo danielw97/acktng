@@ -728,7 +728,9 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
 
    if (ch->loot_amount % 100 > 0)
    {
-      if (number_percent() < ch->loot_amount)
+      int partial_drop_chance = ch->loot_amount % 100;
+
+      if (number_percent() <= partial_drop_chance)
          total++;
    }
 
@@ -749,13 +751,27 @@ bool create_loot(CHAR_DATA *ch, OBJ_DATA *corpse)
          //         bug(buf,0);
          if (ch->loot[i] > 0 && ch->loot_chance[i] > 0 && roll <= ch->loot_chance[i] + chance)
          {
-            viable = TRUE;
-            OBJ_DATA *obj = create_object(get_obj_index(ch->loot[i]), 0);
+            OBJ_DATA *obj;
 
-            if (obj != NULL)
+            viable = TRUE;
+            obj = create_object(get_obj_index(ch->loot[i]), 0);
+
+            if (obj == NULL)
             {
-               obj_to_obj(obj, corpse);
+               sprintf(buf, "%s failed to create loot object vnum %d", ch->short_descr, ch->loot[i]);
+               bug(buf, 0);
+               return FALSE;
             }
+
+            if (!IS_SET(obj->extra_flags, ITEM_LOOT))
+            {
+               sprintf(buf, "%s loot object vnum %d missing ITEM_LOOT flag", ch->short_descr, obj->pIndexData->vnum);
+               bug(buf, 0);
+               extract_obj(obj);
+               return FALSE;
+            }
+
+            obj_to_obj(obj, corpse);
             created++;
             break;
          }
