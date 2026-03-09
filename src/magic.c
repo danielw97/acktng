@@ -141,6 +141,9 @@ int mana_cost(CHAR_DATA *ch, int sn)
       cost *= 2.5;
    }
 
+   if (cost < 50)
+      cost = 50;
+
    cost -= cost * (get_curr_wis(ch) + get_curr_int(ch)) / 100;
 
    /* Mental power: 2% mana reduction per stack for psi/nec/ego/kin spells */
@@ -149,9 +152,6 @@ int mana_cost(CHAR_DATA *ch, int sn)
 
    if ((!IS_NPC(ch)) && (is_name(skill_table[sn].name, race_table[ch->race].skill)))
       cost = 10;
-
-   if (cost < 50)
-      cost = 50;
 
    return cost;
 }
