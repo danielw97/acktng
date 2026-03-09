@@ -2225,8 +2225,8 @@ D0
 0 -1 2107
 S
 #2109
-@@kShimmering Descent@@N~
-@@kAs you descend, reality seems to bend and waver. The air ripples like water. Colors shift and distort. The boundary between what is and what isn't becomes uncertain.@@N
+@@dShimmering Descent@@N~
+@@dAs you descend, reality seems to bend and waver. The air ripples like water. Colors shift and distort. The boundary between what is and what isn't becomes uncertain.@@N
 ~
 1 6
 D4
@@ -2239,8 +2239,8 @@ D2
 0 -1 2110
 S
 #2110
-@@kBlack Palm Grove@@N~
-@@kTwisted palms with bark the color of old bruises grow here. Their leaves are dark as blood, moving though there is no wind. The trees lean toward you with preternatural hunger.@@N
+@@dBlack Palm Grove@@N~
+@@dTwisted palms with bark the color of old bruises grow here. Their leaves are dark as blood, moving though there is no wind. The trees lean toward you with preternatural hunger.@@N
 ~
 1 3
 D0
@@ -2253,8 +2253,8 @@ D2
 0 -1 2111
 S
 #2111
-@@kTar-Stained Shore@@N~
-@@kViscous dark water laps at black sand. The water is thick and oily, leaving residue on stone. The smell is fetid and ancient. The shore glows faintly with bioluminescent organisms.@@N
+@@dTar-Stained Shore@@N~
+@@dViscous dark water laps at black sand. The water is thick and oily, leaving residue on stone. The smell is fetid and ancient. The shore glows faintly with bioluminescent organisms.@@N
 ~
 1 6
 D0
@@ -2271,8 +2271,8 @@ D3
 0 -1 2113
 S
 #2112
-@@kCorrupted Spring@@N~
-@@kWater wells up from the earth, but it is wrong. The water is black as tar, cold as winter. Fumes rise from the spring—the smell of death and decay. This water once brought life; now it brings only corruption.@@N
+@@dCorrupted Spring@@N~
+@@dWater wells up from the earth, but it is wrong. The water is black as tar, cold as winter. Fumes rise from the spring—the smell of death and decay. This water once brought life; now it brings only corruption.@@N
 ~
 1 11
 D3
@@ -2285,8 +2285,8 @@ D2
 0 -1 2114
 S
 #2113
-@@kRotting Reed Marsh@@N~
-@@kDecayed vegetation chokes the water. The marsh sucks at your feet. Insects of impossible colors buzz in clouds. The smell is pungent with decay and stagnation.@@N
+@@dRotting Reed Marsh@@N~
+@@dDecayed vegetation chokes the water. The marsh sucks at your feet. Insects of impossible colors buzz in clouds. The smell is pungent with decay and stagnation.@@N
 ~
 1 3
 D1
@@ -2299,8 +2299,8 @@ D2
 0 -1 2115
 S
 #2114
-@@kShadow-Dappled Pool@@N~
-@@kDark water reflects no light. The surface seems to absorb illumination. Gazing into the water is disorienting—your reflection seems to move independently of your actions.@@N
+@@dShadow-Dappled Pool@@N~
+@@dDark water reflects no light. The surface seems to absorb illumination. Gazing into the water is disorienting—your reflection seems to move independently of your actions.@@N
 ~
 1 6
 D0
@@ -2317,7 +2317,7 @@ D2
 0 -1 2116
 S
 #2115
-@@kDrowned Shrine@@N~
+@@dDrowned Shrine@@N~
 @@bA stone altar stands in shallow water, half-submerged and covered in algae. Carvings on its surface depict rituals in a tongue long dead. Whatever god was worshipped here is forgotten now.@@N
 ~
 1 6
@@ -2335,8 +2335,8 @@ D2
 0 -1 2117
 S
 #2116
-@@kLotus Garden of Whispers@@N~
-@@kBlack lotus flowers bloom impossibly, their petals the color of midnight. They hum faintly, a frequency that makes your bones ache. The flowers seem to be whispering secrets to one another.@@N
+@@dLotus Garden of Whispers@@N~
+@@dBlack lotus flowers bloom impossibly, their petals the color of midnight. They hum faintly, a frequency that makes your bones ache. The flowers seem to be whispering secrets to one another.@@N
 ~
 1 3
 D0
@@ -2349,8 +2349,8 @@ D1
 0 -1 2117
 S
 #2117
-@@kCollapsed Aqueduct@@N~
-@@kAn ancient water channel, now broken and dry. The stone channels are carved with precision. Water once flowed here in abundance; now only dust and shadows remain.@@N
+@@dCollapsed Aqueduct@@N~
+@@dAn ancient water channel, now broken and dry. The stone channels are carved with precision. Water once flowed here in abundance; now only dust and shadows remain.@@N
 ~
 1 11
 D3
@@ -2367,8 +2367,8 @@ D2
 0 -1 2118
 S
 #2118
-@@kVoid-Touched Grotto@@N~
-@@kA cave behind a waterfall of pure shadow and void-stuff. The water is not water—it is the absence of light given form. The cave beyond seems to open into infinite darkness.@@N
+@@dVoid-Touched Grotto@@N~
+@@dA cave behind a waterfall of pure shadow and void-stuff. The water is not water—it is the absence of light given form. The cave beyond seems to open into infinite darkness.@@N
 ~
 1 11
 D0
@@ -2381,8 +2381,8 @@ D2
 0 -1 2119
 S
 #2119
-@@kPetrified Mangrove Tunnel@@N~
-@@kStone roots arch overhead, forming a natural tunnel. The roots are so intertwined it is difficult to move. The ground beneath is soft despite its appearance. The roots seem to move slightly when you're not looking directly.@@N
+@@dPetrified Mangrove Tunnel@@N~
+@@dStone roots arch overhead, forming a natural tunnel. The roots are so intertwined it is difficult to move. The ground beneath is soft despite its appearance. The roots seem to move slightly when you're not looking directly.@@N
 ~
 1 11
 D0
@@ -2395,8 +2395,8 @@ D2
 0 -1 2120
 S
 #2120
-@@kBottomless Cenote Edge@@N~
-@@kYou stand at the edge of a massive vertical shaft. The drop plunges into absolute darkness. The walls are smooth stone, worn by countless years of erosion. From below comes a sound like singing—or screaming.@@N
+@@dBottomless Cenote Edge@@N~
+@@dYou stand at the edge of a massive vertical shaft. The drop plunges into absolute darkness. The walls are smooth stone, worn by countless years of erosion. From below comes a sound like singing—or screaming.@@N
 ~
 1 11
 D0
@@ -2409,7 +2409,7 @@ D2
 0 -1 2121
 S
 #2121
-@@kSubmerged Temple Steps@@N~
+@@dSubmerged Temple Steps@@N~
 @@bStairs descend into dark water. The steps are carved stone, ancient and regular. They suggest a place of worship once existed here, now drowned and forgotten beneath the shadow waters.@@N
 ~
 1 6
@@ -2423,7 +2423,7 @@ D2
 0 -1 2122
 S
 #2122
-@@kDrowned Sanctum Antechamber@@N~
+@@dDrowned Sanctum Antechamber@@N~
 @@bAnkle-deep shadow water fills this chamber. The walls are carved stone, suggesting this was once a grand entrance. Now corruption has claimed it. Shadows move in the water with purpose.@@N
 ~
 1 11
@@ -2451,8 +2451,8 @@ shadow portal~
 161 2034 2124
 S
 #2124
-@@kSealed Reliquary@@N~
-@@kA hidden chamber sealed by shadow magic. Treasures of unimaginable value lie untouched, preserved by dark preservation. This is where Sha'ithara hoards the artifacts of her power and ancient knowledge.@@N
+@@dSealed Reliquary@@N~
+@@dA hidden chamber sealed by shadow magic. Treasures of unimaginable value lie untouched, preserved by dark preservation. This is where Sha'ithara hoards the artifacts of her power and ancient knowledge.@@N
 ~
 1 11
 D2
@@ -2460,4 +2460,496 @@ D2
 ~
 0 -1 2123
 S
+
+#OBJECTS
+#2000
+sun-bleached turban~
+a sun-bleached turban~
+A turban faded pale by the relentless desert sun.
+~
+9 8388616 192 6 400 75
+! 17 -85 0 0
+S
+#2001
+cracked sandstone bracer~
+a cracked sandstone bracer~
+A bracer carved from cracked sandstone, still bearing traces of ancient inscriptions.
+~
+9 8390656 192 6 400 75
+! 17 -85 0 0
+S
+#2002
+dusty linen wraps~
+dusty linen wraps~
+Strips of linen, dust-caked from ages in the desert.
+~
+9 8650752 192 5 400 76
+! 17 -86 0 0
+S
+#2003
+sand-crusted boots~
+a pair of sand-crusted boots~
+Boots encrusted with hardened sand and salt deposits.
+~
+9 10485760 192 7 400 77
+! 17 -87 0 0
+S
+#2004
+dune wanderer's cloak~
+a dune wanderer's cloak~
+A tattered cloak that once provided shelter from the desert elements.
+~
+9 8454144 192 8 400 78
+! 17 -88 0 0
+S
+#2005
+scorpion tail whip~
+a scorpion tail whip~
+A whip fashioned from the segmented tail of a massive scorpion.
+~
+5 8421376 192 10 500 76
+! 18 7 19 7 0 0
+S
+#2006
+jagged bone knife~
+a jagged bone knife~
+A knife carved from bone, with a jagged and wicked edge.
+~
+5 8421376 192 8 500 75
+! 18 7 19 7 0 0
+S
+#2007
+tarnished scarab pendant~
+a tarnished scarab pendant~
+A pendant shaped like a scarab, tarnished but still ornate.
+~
+9 8388736 192 2 400 79
+! 17 -89 0 0
+S
+#2008
+sand viper fang ring~
+a sand viper fang ring~
+A ring set with the fang of a sand viper, gleaming despite its age.
+~
+9 8396808 192 1 400 75
+! 17 -85 0 0
+S
+#2009
+sun-dried leather belt~
+a sun-dried leather belt~
+A belt of leather hardened and blackened by the desert sun.
+~
+9 8519680 192 4 400 77
+! 17 -87 0 0
+S
+#2010
+tomb guardian's helm~
+a tomb guardian's helm~
+A helm of ancient design, meant to protect the honored dead.
+~
+9 8388616 192 8 400 82
+! 17 -92 0 0
+S
+#2011
+mummified priest's robe~
+a mummified priest's robe~
+Vestments of a priest, preserved despite millennia in a tomb.
+~
+9 8650752 192 6 400 83
+! 17 -93 0 0
+S
+#2012
+sand golem's fist~
+a sand golem's fist~
+A massive stone fist, hardened and compacted by ancient magic.
+~
+5 8421376 192 12 500 82
+! 18 9 19 9 0 0
+S
+#2013
+catacomb stalker gloves~
+a pair of catacomb stalker gloves~
+Gloves of hardened leather, designed for silent movement in dark tombs.
+~
+9 8396304 192 4 400 80
+! 17 -90 0 0
+S
+#2014
+entombed warrior's shield~
+an entombed warrior's shield~
+A shield of bronze, preserved through ages in a tomb.
+~
+9 8421376 192 10 400 83
+! 17 -93 0 0
+S
+#2015
+spider silk leg wraps~
+spider silk leg wraps~
+Wraps woven from the silk of giant spiders, surprisingly durable.
+~
+9 9437184 192 5 400 79
+! 17 -89 0 0
+S
+#2016
+dune stalker's curved blade~
+a dune stalker's curved blade~
+A curved blade designed for swift strikes under the desert sun.
+~
+5 8421376 192 9 500 83
+! 18 9 19 9 0 0
+S
+#2017
+revenant chain links~
+revenant chain links~
+Lengths of chain worn by an undead warrior, cold to the touch.
+~
+9 8389632 192 8 400 84
+! 17 -94 0 0
+S
+#2018
+obsidian earring~
+an obsidian earring~
+An earring carved from black obsidian, polished to a dark shine.
+~
+9 8388672 192 1 400 82
+! 17 -92 0 0
+S
+#2019
+corroded temple mace~
+a corroded temple mace~
+A ceremonial mace, corroded by time but still deadly.
+~
+5 8421376 192 11 500 80
+! 18 8 19 8 0 0
+S
+#2020
+crown of Vizier Nephkara~
+the crown of Vizier Nephkara~
+A crown of dark metal adorned with glowing sun symbols, radiating ancient power.
+~
+9 8388616 192 7 500 90
+! 17 -100 0 0
+S
+#2021
+sandstorm colossus core~
+the sandstorm colossus core~
+A sphere of compressed sand and earth magic, warm to the touch.
+~
+9 8421376 192 9 500 90
+! 17 -100 0 0
+S
+#2022
+the Devourer's jawbone~
+the Devourer's jawbone~
+A massive bone jaw, wickedly sharp and stained with ancient blood.
+~
+5 8421376 192 15 500 90
+! 18 14 19 14 0 0
+S
+#2023
+Staff of Amenthari~
+the Staff of Amenthari~
+A legendary staff of power, carved from petrified bone and wrapped in sun-silk.
+~
+5 8421376 192 12 500 90
+! 18 16 19 16 0 0
+S
+#2024
+Amenthari's sun-scorched robes~
+Amenthari's sun-scorched robes~
+Robes of the high priest, darkened by magical fire and age.
+~
+9 8650752 192 7 500 90
+! 17 -100 0 0
+S
+#2025
+gauntlets of eternal flame~
+gauntlets of eternal flame~
+Gauntlets that radiate heat without burning, forged in magical fire.
+~
+9 8396304 192 6 500 90
+! 17 -100 0 0
+S
+#2026
+Serpent Queen's fang blade~
+the Serpent Queen's fang blade~
+A wickedly curved blade formed from the fang of the serpent matriarch.
+~
+5 8421376 192 10 500 90
+! 18 13 19 13 0 0
+S
+#2027
+Serpent Queen's venom crown~
+the Serpent Queen's venom crown~
+A crown fashioned from the carapace of the Serpent Queen, dripping with residual venom.
+~
+9 8388616 192 6 500 90
+! 17 -100 0 0
+S
+#2028
+Ghazaan's war axe~
+Ghazaan's war axe~
+A massive war axe stained with the blood of countless foes.
+~
+5 8421376 192 14 500 90
+! 18 14 19 14 0 0
+S
+#2029
+Ghazaan's bloodied plate~
+Ghazaan's bloodied plate~
+Plate armor darkened by blood and battle, still radiating the war leader's presence.
+~
+9 8650752 192 10 500 90
+! 17 -100 0 0
+S
+#2030
+Sha'ithara's shadow staff~
+Sha'ithara's shadow staff~
+A staff of shadow magic, seeming to absorb light and hope alike.
+~
+5 8421376 192 11 500 90
+! 18 15 19 15 0 0
+S
+#2031
+Sha'ithara's dark mantle~
+Sha'ithara's dark mantle~
+A cloak that seems to writhe with shadow and corruption.
+~
+9 8454144 192 8 500 90
+! 17 -100 0 0
+S
+#2032
+temple vault key~
+a temple vault key~
+A key carved from ancient brass, etched with sun symbols.
+~
+18 8388608 128 0 0 0
+S
+#2033
+warchief's iron key~
+a warchief's iron key~
+A crude iron key, worn from heavy use.
+~
+18 8388608 128 0 0 0
+S
+#2034
+shadow-etched key~
+a shadow-etched key~
+A key wreathed in shadow magic, cold to the touch.
+~
+18 8388608 128 0 0 0
+S
+#2035
+cracked water flask~
+a cracked water flask~
+A leather flask cracked with age, but still capable of holding water.
+~
+17 8388608 128 2 50 0
+S
+#2036
+dried desert rations~
+dried desert rations~
+Hard, dried meat and grain, preserved for travel through the wastes.
+~
+19 8388608 128 1 25 0
+S
+#2037
+ancient scroll fragment~
+an ancient scroll fragment~
+A fragment of papyrus bearing faded hieroglyphs and symbols.
+~
+8 8388608 128 1 100 0
+S
+#2038
+handful of gold dust~
+a handful of gold dust~
+Fine gold dust, precious and valuable, collected from the sands.
+~
+20 8388608 128 1 200 0
+S
+#2039
+sand-blasted shoulder guard~
+a sand-blasted shoulder guard~
+A guard for the shoulder, smoothed and polished by years of sand.
+~
+9 8389120 192 5 400 82
+! 17 -92 0 0
+S
+#2040
+tomb watcher's finger ring~
+a tomb watcher's finger ring~
+A ring worn by one who guarded the dead, ornate and ancient.
+~
+9 8396808 192 2 400 84
+! 17 -94 0 0
+S
+#2041
+akh'enet shade cowl~
+an akh'enet shade cowl~
+A cowl that seems to dampen light and shadow, favored by wraiths.
+~
+9 8388616 192 4 400 84
+! 17 -94 0 0
+S
+#2042
+scorpion chitin leg guards~
+scorpion chitin leg guards~
+Guards fashioned from the chitin of scorpions, still chitinous and hard.
+~
+9 9437184 192 6 400 80
+! 17 -90 0 0
+S
+#2043
+flame guardian's bracers~
+flame guardian's bracers~
+Bracers radiating residual heat from their forge in magical flames.
+~
+9 8390656 192 5 400 85
+! 17 -95 0 0
+S
+#2044
+eternal sentinel's belt~
+an eternal sentinel's belt~
+A belt of eternal craftsmanship, unworn by time despite its age.
+~
+9 8519680 192 4 400 83
+! 17 -93 0 0
+S
+#2045
+obsidian golem shard blade~
+an obsidian golem shard blade~
+A blade of obsidian, hard as diamond and sharp as thought.
+~
+5 8421376 192 9 500 85
+! 18 10 19 10 0 0
+S
+#2046
+cursed pilgrim's tattered wrap~
+a cursed pilgrim's tattered wrap~
+A wrap of tattered cloth, cursed to cling to its wearer eternally.
+~
+9 8454144 192 3 400 77
+! 17 -87 0 0
+S
+#2047
+Nephkara's staff of binding~
+Nephkara's staff of binding~
+A staff carved with binding runes, used to command the dead.
+~
+5 8421376 192 11 500 85
+! 18 10 19 10 0 0
+S
+#2048
+viper scale gauntlets~
+viper scale gauntlets~
+Gauntlets crafted from shed viper scales, overlapping for protection.
+~
+9 8396304 192 4 400 78
+! 17 -88 0 0
+S
+#2049
+crystalline scorpion stinger~
+a crystalline scorpion stinger~
+A stinger of crystalline mineral, hard and wickedly pointed.
+~
+5 8421376 192 8 500 82
+! 18 9 19 9 0 0
+S
+#2050
+serpent cultist hood~
+a serpent cultist hood~
+A hood bearing the symbols of serpent worship, made from dark cloth.
+~
+9 8388616 192 3 400 80
+! 17 -90 0 0
+S
+#2051
+cave crawler hide boots~
+a pair of cave crawler hide boots~
+Boots of cave crawler hide, flexible and suited to narrow passages.
+~
+9 10485760 192 6 400 78
+! 17 -88 0 0
+S
+#2052
+constrictor coil belt~
+a constrictor coil belt~
+A belt formed of the shed skin of a giant constrictor, supple and strong.
+~
+9 8519680 192 5 400 83
+! 17 -93 0 0
+S
+#2053
+venom-laced ring~
+a venom-laced ring~
+A ring where traces of venom still cling, making it shimmer faintly.
+~
+9 8396808 192 1 400 79
+! 17 -89 0 0
+S
+#2054
+raider iron helm~
+a raider iron helm~
+A helm of crude iron, dented from battle but still protective.
+~
+9 8388616 192 7 400 79
+! 17 -89 0 0
+S
+#2055
+houndmaster's leather vest~
+a houndmaster's leather vest~
+Leather vest worn by one who trained war beasts, smelling of animal musk.
+~
+9 8650752 192 5 400 79
+! 17 -89 0 0
+S
+#2056
+shaman bone fetish~
+a shaman bone fetish~
+A fetish of bone and sinew, carved with tribal markings.
+~
+9 8388736 192 2 400 82
+! 17 -92 0 0
+S
+#2057
+pit fighter's spiked fist~
+a pit fighter's spiked fist~
+A iron knuckle guard studded with spikes, worn by a brutal warrior.
+~
+5 8421376 192 10 500 83
+! 18 9 19 9 0 0
+S
+#2058
+torturer's flaying knife~
+a torturer's flaying knife~
+A cruel blade, small but wicked, used for inflicting suffering.
+~
+5 8421376 192 7 500 82
+! 18 9 19 9 0 0
+S
+#2059
+shadow-touched scale mail~
+shadow-touched scale mail~
+Mail of overlapping scales, darkened by shadow magic.
+~
+9 8650752 192 9 400 82
+! 17 -92 0 0
+S
+#2060
+dark lotus petal cloak~
+a dark lotus petal cloak~
+A cloak woven from the petals of dark lotus flowers, supple and strange.
+~
+9 8454144 192 6 400 80
+! 17 -90 0 0
+S
+#2061
+drowned revenant chain~
+drowned revenant chain~
+Chain worn by one drowned and cursed, still dripping with shadow water.
+~
+9 8389632 192 8 400 84
+! 17 -94 0 0
+S
+
 #$
