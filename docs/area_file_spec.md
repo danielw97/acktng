@@ -596,7 +596,8 @@ Any other token in a room body is invalid.
 Room description content requirements:
 
 - Each room's main `<description>~` must end with exactly one trailing newline immediately before the terminating `~`.
-- Each room's main `<description>~` must not contain any other newline characters.
+- Each room's main `<description>~` must contain at least 3 lines of text.
+- Important rooms must contain at least 5 lines of text in the main `<description>~`.
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
 
 Directional traversal constraints:
