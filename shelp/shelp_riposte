@@ -14,5 +14,5 @@ Noun Damage: Riposte
 Acquisition:
    - Swordsman: level 30
 Description:
-   Riposte is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+   Riposte is a prepared finisher stance that waits for an incoming skill attack, then interrupts and reflects damage back to the attacker.
 *******************************************************************************

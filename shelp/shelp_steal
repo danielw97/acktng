@@ -14,5 +14,5 @@ Noun Damage: steal
 Acquisition:
    - Thief: level 20
 Description:
-   Steal is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+   Steal is a thieving utility skill for lifting coins or items from NPCs, with success based on dexterity, level difference, and situational risk.
 *******************************************************************************
