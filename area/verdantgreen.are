@@ -1177,6 +1177,11 @@ A narrow path eastward leads toward a pale stand of unnervingly white-barked tre
 ~
 ~
 0 -1 10074
+D2
+The sap flows southward in ever-thicker rivulets, following the slope toward what sounds like running liquid.
+~
+~
+0 -1 10079
 S
 #10067
 A Canopy Bridge~
@@ -1188,6 +1193,11 @@ The bridge descends northward back down to the thorned sentinel passage below.
 ~
 ~
 0 -1 10064
+D2
+The bridge slopes steeply southward and downward into a towering grove of enormous fungi.
+~
+~
+0 -1 10075
 E
 bridge view above height~
 From the highest point of the bridge, the full canopy is visible as a continuous surface with no breaks except where the trees have arranged themselves in their impossible patterns; what looked from below like random forest is revealed from here as something deeply ordered, the paths between the trunks forming shapes that the eye cannot quite resolve into meaning.
@@ -1283,6 +1293,11 @@ The maw's entrance is behind you northward; the root-web passage continues.
 ~
 ~
 0 -1 10072
+D2
+The depression deepens southward into the Rootmother's domain; the walls close in warmly.
+~
+~
+0 -1 10090
 E
 depression maw earth opening~
 Looking down into the depression, the walls converge toward a central point obscured by darkness and distance; the air rising from it is warm and organic, and carries a subsonic vibration that is felt in the chest rather than heard -- the same vibration, amplified many times, as the one first noticed at the edge of the old growth.
@@ -1302,6 +1317,407 @@ E
 bark white pale bone trees~
 The white bark is genuinely bone-like on close inspection, smooth and slightly yielding under pressure, slightly warm; there are no growth rings visible at the cut of any fallen branch, as though these trees do not grow in annual increments but in some other rhythm entirely.
 ~
+S
+#10075
+The Fungal Cathedral~
+Enormous fungi of a single species stand here in columns forty feet tall, their caps flat and broad and interlocked overhead in a vaulted ceiling of @@rpale bioluminescent tissue@@N; the light they produce is dim and blue and directionless, filling the space without shadows, and the silence within the fungal cathedral is absolute -- even footsteps make no sound on the thick mycelium floor.
+~
+0 3
+D0
+The fungal columns thin northward where the canopy bridge rises above.
+~
+~
+0 -1 10067
+D2
+The fungal cathedral descends southward into a passage of pulsing vines.
+~
+~
+0 -1 10076
+E
+fungi cathedral caps ceiling~
+The caps overhead have grown into one another over years or centuries, their edges fusing to create a continuous membrane of luminous tissue; looking up through them is like looking through a series of translucent floors, each glowing faintly @@rblue@@N, each occupied by the silhouettes of things that move slowly just beyond resolution.
+~
+S
+#10076
+Among Pulsing Vines~
+The vines here are not dead organic matter but @@Ractively living conduits@@N, their sap flowing in visible pulses that travel up the length of each vine in rhythmic waves, like the slow beating of a distributed heart; the vines cross and recross every surface, and they are warm to the touch, and they contract slightly when touched, the pulse briefly quickening before returning to its slow rhythm.
+~
+0 3
+D0
+The pulsing vines thin northward where the fungal cathedral begins.
+~
+~
+0 -1 10075
+D2
+The vines grow denser southward where they surround a grove of dead saplings.
+~
+~
+0 -1 10077
+S
+#10077
+A Grove of Dead Saplings~
+Every sapling in this grove died at the same moment -- the identical stage of growth, the identical posture of arrested motion, the identical @@gblackening of the bark@@N -- and the grove now stands as a kind of monument to that simultaneous death, the dead stems still upright after whatever killed them left them untouched by rot, preserved in their stillness by some quality of the ground or the air or the Deepwood's own will.
+~
+0 3
+D0
+The dead saplings give way northward to the pulsing vines.
+~
+~
+0 -1 10076
+D2
+A passage southward through the dead saplings leads toward a place of deepening rot and @@Rputrid corruption@@N.
+~
+~
+0 -1 10078
+S
+#10078
+The Decaying Threshold~
+The forest here is dying in a specific, directional way, the decay propagating northward from some source to the south; trees at the threshold are half-consumed by a @@gbrown-black rot@@N that moves visibly across their surfaces, and the air is thick with the moist, complex smell of decomposition accelerated far beyond any natural rate; the ground itself is soft and gives underfoot with a wet, sucking sound.
+~
+0 3
+D0
+The threshold gives way northward to the dead saplings and the forest beyond.
+~
+~
+0 -1 10077
+S
+#10079
+Beside a River of Sap~
+A genuine river of thick, @@rglowing amber sap@@N flows southward through this section of forest, its channel carved smooth by centuries of slow flow; the sap moves too slowly to splash but too visibly to be mistaken for anything solid, and it carries on its surface the preserved remains of everything that has fallen into it -- insects, leaves, small animals -- each one perfectly suspended and illuminated from within by the sap's bioluminescence.
+~
+0 3
+D0
+The sap river narrows northward where the weeping hollow's runoff joins it.
+~
+~
+0 -1 10066
+D2
+The sap river continues southward toward a garden of carnivorous plants fed by its flow.
+~
+~
+0 -1 10080
+E
+river sap flow amber~
+The surface of the sap preserves every fallen thing with perfect fidelity; floating past at the river's pace is a sequence of these accidental relics -- a moth with wings still spread, a frog mid-leap, something that might have been a small primate clutching a branch that is also preserved, its expression not readable but its posture suggesting it did not have time to be afraid.
+~
+S
+#10080
+A Carnivorous Garden~
+The plants here have been cultivated, if that word applies to anything so alien, by the sap river's chemistry; they are broad-leafed and brightly @@Gcolored@@N and equipped with trigger mechanisms of various designs, some snap-closing around anything that brushes them, others secreting sticky compounds, others producing vibrations that disorient; the ground between them is dotted with the digested remnants of their meals.
+~
+0 3
+D0
+The carnivorous plants thin northward beside the sap river.
+~
+~
+0 -1 10079
+D2
+The garden gives way southward to a trail worn by something very large passing repeatedly.
+~
+~
+0 -1 10081
+S
+#10081
+The Predator's Trail~
+This trail exists because something has used it repeatedly enough to wear the forest floor smooth and push the vegetation back; the scale of the passage suggests something large enough that the trees on either side bear compression marks at shoulder height, and the soil carries prints of multiple overlapping creature-types, as though this route is used by many different predators all following the same instinctive path.
+~
+0 3
+D0
+The predator's trail curves northward toward the carnivorous garden.
+~
+~
+0 -1 10080
+D1
+The trail forks eastward into a stretch of @@gamong skeletal branches@@N.
+~
+~
+0 -1 10082
+D2
+The trail continues southward toward a place where multiple trails converge.
+~
+~
+0 -1 10085
+S
+#10082
+Among Skeletal Branches~
+The trees here have been stripped entirely of their foliage by some past event, their @@gbare branches reaching upward@@N in gestures that are, in this context, impossible not to read as anguish; the wood is still sound, the trunks alive in some minimal sense, but nothing grows on them and nothing moves near them, and the shadows they cast at the angles are wrong in ways that are difficult to articulate but immediately felt.
+~
+1 3
+D3
+The skeletal branches give way westward back to the predator's trail.
+~
+~
+0 -1 10081
+S
+#10083
+The Hunter's Blind~
+Something has constructed this -- or the forest has, which amounts to the same thing -- a dense enclosure of living branches woven into walls and a partial roof, leaving only narrow slits through which the surrounding forest is visible; the interior smells @@Rstrongly of predator@@N, the musk of many large animals accumulating in the enclosed space, and the ground inside is pressed flat by the weight of something that waits here with great patience.
+~
+0 3
+D1
+The hunter's blind opens eastward to the twisted crossroads beyond.
+~
+~
+0 -1 10085
+E
+blind walls enclosure interior~
+The walls of the blind are woven too precisely to be accidental; the slits are oriented to provide overlapping fields of view, and the floor inside has been scraped clear of debris. This is not the lair of an animal following instinct but the workstation of something that plans its hunting in advance and returns to improve its tools.
+~
+S
+#10084
+A Hollow of Whispering Leaves~
+The dead leaves accumulated in this hollow number in the millions, and they whisper; there is no air movement to account for it, but the leaves rustle continuously in a sound that rises and falls in pitch and rhythm, occasionally producing sequences that sound almost like words -- almost like the same word, repeated, too low and too varied to be understood but insistent enough to be unnerving.
+~
+0 3
+D3
+The whispering hollow gives way westward back to the groaning path.
+~
+~
+0 -1 10088
+S
+#10085
+The Twisted Crossroads~
+Several trails converge here at a crossroads dominated by a tree that has grown into a shape impossible by any natural process -- its trunk bifurcating and rebifurcating until the upper portions form a lattice of interlocked wood whose pattern repeats at every scale; the @@gtree is clearly the source of the trails' convergence@@N, as though the forest arranged the paths to meet at this particular, impossible growth.
+~
+0 3
+D0
+The crossroads opens northward along the predator's trail toward the carnivorous garden.
+~
+~
+0 -1 10081
+D1
+The eastern trail leads away from the crossroads toward a reaching canopy.
+~
+~
+0 -1 10086
+D3
+The western trail leads toward the hunter's blind hidden in the undergrowth.
+~
+~
+0 -1 10083
+D2
+The southern trail drops into a depression filled with deep, soft mulch.
+~
+~
+0 -1 10087
+E
+crossroads tree twisted lattice~
+The twisted tree's trunk is warm to the touch, and the lattice pattern of its upper portions is not random -- it repeats exactly at different scales, a fractal of living wood that took decades at minimum to grow; whatever shaped it began shaping it long before the current generation of anything alive could have initiated the process.
+~
+S
+#10086
+Beneath the Reaching Canopy~
+The canopy here has developed downward extensions, lower branches growing toward the ground in slow descent over generations; the longest of these already brush the top of the undergrowth, and in another century they will reach the floor, gradually reducing the open space below to nothing; standing beneath them, the @@Gdownward-reaching branches@@N create an overwhelming sense of something descending, lowering, closing in with patience too vast to be hurried.
+~
+0 3
+D2
+The reaching canopy continues southward where the path groans underfoot.
+~
+~
+0 -1 10088
+D3
+The reaching canopy gives way westward back to the twisted crossroads.
+~
+~
+0 -1 10085
+S
+#10087
+A Sinkhole of Mulch~
+The ground here has given way into a broad, gradual sinkhole filled entirely with decomposing organic matter -- leaf litter, wood pulp, animal remains -- compressed and fermenting into a warm, yielding substrate that accepts footsteps to the ankle before offering resistance; the @@gbottom of the sinkhole@@N is not visible, and the walls are held in place only by the root networks threading through them, the whole thing suspended above whatever lies beneath.
+~
+0 3
+D0
+The sinkhole gives way northward where the crossroads and firmer ground resume.
+~
+~
+0 -1 10085
+D2
+The sinkhole continues southward where a wall of living wood rises from its far edge.
+~
+~
+0 -1 10089
+S
+#10088
+The Groaning Path~
+Every step on this path produces a sound from the wood beneath -- not the creak of settling timber but a sustained, resonant groan from something deep in the root-mass below, as though each footfall is felt and answered by something @@gvast and underground@@N; the sound is not threatening in itself, but the scale it implies, the size of whatever makes it, transforms the familiar act of walking into an imposition.
+~
+0 3
+D0
+The groaning path leads northward under the reaching canopy.
+~
+~
+0 -1 10086
+D1
+The path forks eastward into a hollow filled with whispering leaves.
+~
+~
+0 -1 10084
+S
+#10089
+A Wall of Living Wood~
+A solid wall of living wood fills the southern approach completely, the trunks packed too close together to pass between and the root-mass at ground level forming an unbroken barrier; the wall is @@Galive and growing@@N, and close inspection reveals that the gap between any two trunks is several inches smaller than it would have been a year ago -- the forest is closing this route deliberately, perhaps recently, perhaps in response to something.
+~
+0 3
+D0
+The wall of living wood is behind you; the mulch sinkhole leads northward.
+~
+~
+0 -1 10087
+S
+#10090
+The Rootmother's Approach~
+The ground underfoot has changed texture, becoming softer and more yielding, the soil replaced by a dense mat of fine root-threads that form a continuous @@Gliving carpet@@N; the trees here are different again, their bark pale gold and their trunks tapered into elegant forms that suggest something more purposeful than growth, and the air carries a warm, sweetly organic smell that is entirely unlike the damp decay of the outer forest.
+~
+0 3
+D0
+The approach leads northward back to the vast opening of the Verdant Maw.
+~
+~
+0 -1 10073
+D2
+The root-carpet deepens southward where the first prehensile roots emerge from the earth.
+~
+~
+0 -1 10091
+S
+#10091
+Among Prehensile Roots~
+The roots here are not static; they move with the slow but unmistakable deliberateness of something exploring its environment, extending and retracting, adjusting their grip on the soil, and occasionally reaching upward to a height of knee or waist before lowering again; they do not respond to the presence of living things with aggression, but they @@Gexplore by touch@@N, and being touched by dozens of them simultaneously is deeply uncomfortable.
+~
+0 3
+D0
+The prehensile roots thin northward toward the rootmother's approach.
+~
+~
+0 -1 10090
+D1
+A low opening in the root-mass to the east leads into a narrow tunnel of living wood.
+~
+~
+0 -1 10092
+D2
+The prehensile roots grow denser southward where they converge on a central mass.
+~
+~
+0 -1 10093
+S
+#10092
+A Tunnel of Living Wood~
+The tunnel is formed from a single root system that has arched over a natural hollow and grown closed, creating a passage @@gdark and close@@N and smelling intensely of fresh green wood; the walls of the tunnel press slightly inward and the ceiling presses downward, the living wood in constant slow renegotiation with the space it has created, and the far end is too dark to see.
+~
+1 3
+D3
+The tunnel opens westward back to the prehensile roots.
+~
+~
+0 -1 10091
+S
+#10093
+The Root Nexus~
+The central root-mass of the Rootmother's domain is visible here as a convergence point, hundreds of individual root-lines leading in from every direction and merging into a central structure of extraordinary complexity; the @@Rnexus pulses@@N with a rhythm that matches the prehensile roots above and is clearly the source of their movement, a central node of coordination for the entire root-network of this zone.
+~
+0 3
+D0
+The root nexus gives way northward through the prehensile roots.
+~
+~
+0 -1 10091
+D1
+A passage eastward through the root-mass leads to a coiled chamber.
+~
+~
+0 -1 10095
+D2
+The nexus deepens southward beneath the vast shadow of the mother tree above.
+~
+~
+0 -1 10094
+S
+#10094
+Beneath the Mother Tree~
+The mother tree is impossible by any rational accounting of tree biology; its trunk is wide enough to enclose a small building, its canopy blocks all light from the sky above, and its root-buttresses extend outward forty feet from the base in a @@Gvast, organic cathedral@@N of living wood; everything in the Rootmother's domain is subordinate to this tree, connected through the root network to its will and its need.
+~
+0 3
+D0
+The mother tree's root-buttresses give way northward to the root nexus.
+~
+~
+0 -1 10093
+D2
+The roots narrow southward into tendril-sized threads that cover every surface.
+~
+~
+0 -1 10097
+S
+#10095
+A Chamber of Coiled Roots~
+Enormous roots have coiled here into loops and spirals that reach the ceiling, creating a chamber like the interior of a massive mechanical device stopped mid-operation; the coils are @@Gstill but taut@@N, and placing a hand on any of them communicates a vibration that builds in intensity toward the center of the coil, as though something is wound tight here, waiting for the signal to release.
+~
+0 3
+D2
+The coiled roots thin southward into a space of arresting, alien beauty.
+~
+~
+0 -1 10096
+D3
+The chamber opens westward back to the root nexus.
+~
+~
+0 -1 10093
+S
+#10096
+The Flowering Heart~
+At the center of the Rootmother's domain, a space of extraordinary beauty has been created -- or permitted to exist -- around a cluster of flowers that bloom @@Rin colors not found elsewhere@@N in this forest; their petals are an iridescent blue-violet, their stems bright gold, and they grow directly from the root-mass itself, their roots and the Rootmother's roots indistinguishable from one another, as though the flowers are her dreaming made visible.
+~
+0 3
+D0
+The flowering heart gives way northward through the coiled root chamber.
+~
+~
+0 -1 10095
+D1
+A passage eastward through the flowering space leads to a bower of ancient growth.
+~
+~
+0 -1 10099
+S
+#10097
+Among Creeping Tendrils~
+The tendrils here are the finest extensions of the Rootmother's root-network, no thicker than a finger and covered in the short, sensitive hairs of a young root-tip; they cover every surface -- floor, walls, the trunks of the support trees -- in a continuous, slightly @@Gmoving carpet@@N that responds to pressure by pulling back momentarily before returning, inexorably, to its original position.
+~
+0 3
+D0
+The tendrils thin northward below the mother tree.
+~
+~
+0 -1 10094
+D1
+A low alcove to the east is entirely dark and filled with something that breathes.
+~
+~
+0 -1 10098
+S
+#10098
+The Nourishing Dark~
+The alcove is completely without light, and the darkness is not merely the absence of illumination but something with presence and weight; the @@gtendril-network here is denser@@N than anywhere above, and it is actively feeding -- nutrients move through the tendrils toward the root nexus, drawn from the deep soil by processes that require no light and no ceremony, the Rootmother nourishing herself in the dark as she has for longer than there has been anyone to observe it.
+~
+1 3
+D3
+The nourishing dark gives way westward back to the creeping tendrils.
+~
+~
+0 -1 10097
+S
+#10099
+A Bower of Ancient Growth~
+An ancient bower has been formed here by centuries of deliberate root and branch arrangement -- a curved, enclosing space of @@Gliving green@@N that is clearly a place of purpose rather than accident; the growth is dense overhead and open underfoot, and the air within the bower is warmer than outside it, heavy with humidity and the rich smell of photosynthesis accelerated far beyond the capacity of the surrounding dim forest.
+~
+0 3
+D3
+The bower opens westward back to the flowering heart.
+~
+~
+0 -1 10096
 S
 #0
 #$
