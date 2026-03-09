@@ -10,6 +10,638 @@ F 15
 U @@pA @@Gfoul wind @@pstirs through the twisted canopy...@@N~
 R all~
 W all~
+#OBJECTS
+#1000
+corroded iron key~
+@@da corroded iron key@@N~
+A corroded iron key lies here, its surface mottled with dark rust.~
+18 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#1001
+pulsing blight key~
+@@pa pulsing blight key@@N~
+A key of gnarled bone pulses with a faint violet light here.~
+18 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#1002
+spore encrusted helm head~
+@@pa spore-encrusted helm@@N~
+A helm crusted with grey-purple spores lies here.~
+9 201326784 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+100
+#1003
+colossus core shield~
+@@pthe Colossus Core@@N~
+A dense fungal mass compressed into a shield-like disc pulses here.~
+9 201326784 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+100
+#1004
+crown living thorns head~
+@@pa crown of living thorns@@N~
+A crown woven from still-living thorned vines rests here, the thorns still sharp.~
+9 201326784 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#1005
+briar queen scepter~
+@@pthe Briar Queen's scepter@@N~
+A scepter of twisted thorn-wood, its tip hardened to iron, lies here.~
+5 201326784 8421376 1
+0 6 12 7 0 0 0 0 0 0
+1
+L
+100
+#1006
+hydra scale hauberk body~
+@@pa hydra-scale hauberk@@N~
+A coat of overlapping hydra scales, still faintly damp, lies in a heap here.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+100
+#1007
+fang hydra~
+@@pa fang of the hydra@@N~
+One of the Bog Hydra's enormous fangs, still coated in venom residue, lies here.~
+5 201326784 8421376 1
+0 6 12 2 0 0 0 0 0 0
+6
+L
+100
+#1008
+gauntlets living bark hands~
+@@Ggauntlets of living bark@@N~
+A pair of gauntlets formed from bark that is still green and growing lies here.~
+9 201326784 8392704 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+100
+#1009
+warden gnarled staff~
+@@Gthe Warden's gnarled staff@@N~
+A massive two-handed staff of gnarled ancient wood rests against a tree here.~
+5 2348810432 8421376 1
+0 7 13 7 0 0 0 0 0 0
+6
+L
+100
+#1010
+carapace blightmother body~
+@@pa carapace of the Blightmother@@N~
+A chitinous carapace exuded by the Blightmother herself lies here, still warm.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+100
+#1011
+blightmother claw~
+@@pthe Blightmother's claw@@N~
+A massive curved claw torn from the Blightmother lies here, oozing purple ichor.~
+5 1275068608 8421376 1
+0 6 12 0 0 0 0 0 0 0
+6
+L
+100
+#1012
+mantle verdant wrath shoulders~
+@@Ga mantle of verdant wrath@@N~
+A mantle woven from the Guardian's own bark and living vines lies here.~
+9 201326784 8389120 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+100
+#1013
+guardian living blade~
+@@Gthe Guardian's living blade@@N~
+A blade grown from the living heartwood of the Verdant Guardian lies here.~
+5 201326784 8421376 1
+0 6 12 3 0 0 0 0 0 0
+1
+L
+100
+#1014
+ring fungal resilience finger~
+@@pa ring of fungal resilience@@N~
+A ring of compressed fungal matter, unexpectedly hard, lies here.~
+9 201326784 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#1015
+briar queen thorned cloak about~
+@@pthe Briar Queen's thorned cloak@@N~
+A cloak of woven thorn-vines, elegant despite its danger, lies here.~
+9 201326784 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#1016
+hydra fang necklace neck~
+@@pa hydra-fang necklace@@N~
+A necklace strung with polished hydra fangs lies coiled here.~
+9 201326784 8388736 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+100
+#1017
+blightmother eye halo~
+@@pthe Blightmother's eye@@N~
+One of the Blightmother's compound eyes, still pulsing with eerie light, lies here.~
+9 201326784 8388609 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#1018
+rotwood bark shield~
+@@pa rotwood bark shield@@N~
+A shield carved from dense rotwood bark lies here.~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+95
+#1019
+blighted wolf pelt cloak~
+@@pa blighted wolf pelt@@N~
+A pelt of darkened wolf fur, still carrying the animal's corrupted scent, lies here.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+90
+#1020
+twisted dryad circlet head~
+@@pa twisted dryad's circlet@@N~
+A circlet of twisted wood and gemstone, enchanted by the dryad's corrupted magic, lies here.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+92
+#1021
+fungal crawler carapace body~
+@@pa fungal crawler carapace@@N~
+A hollowed carapace from a fungal crawler, its surface dotted with dried spores, lies here.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
+#1022
+viper fang dagger~
+@@pa viper-fang dagger@@N~
+A dagger fashioned from a venomous viper's largest fang lies here.~
+5 67108992 8421376 1
+0 5 11 2 0 0 0 0 0 0
+6
+L
+93
+#1023
+treant bark bracer wrist~
+@@pa treant-bark bracer@@N~
+A bracer formed from a slab of corrupted treant bark, lashed with fibrous roots, lies here.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+95
+#1024
+bog lurker hide boots feet~
+@@pa bog lurker's hide boots@@N~
+A pair of boots made from swamp predator hide, waterproof and surprisingly supple, lies here.~
+9 67108992 10485760 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+92
+#1025
+thornweaver silk wrap waist~
+@@pa thornweaver silk wrap@@N~
+A sash of incredibly strong thornweaver silk, dark as dried blood, lies here.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+93
+#1026
+ghoul bone ring finger~
+@@pa ghoul-bone ring@@N~
+A ring carved from the finger-bone of a swamp ghoul lies here.~
+9 67108992 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+91
+#1027
+moss covered longsword~
+@@Ga moss-covered longsword@@N~
+A longsword thick with green moss along its blade lies here.~
+5 128 8421376 1
+0 5 11 3 0 0 0 0 0 0
+6
+L
+95
+#1028
+canopy stalker talon~
+@@Ga canopy stalker's talon@@N~
+A long curved talon from a canopy stalker lies here, still razor-sharp.~
+5 67108992 8421376 1
+0 5 11 5 0 0 0 0 0 0
+6
+L
+95
+#1029
+spore dusted cowl head~
+@@pa spore-dusted cowl@@N~
+A cowl dusted with faintly luminescent spores lies here.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#1030
+briar hound collar neck~
+@@pa briar hound collar@@N~
+A spiked collar of braided briar thorns from a fallen briar hound lies here.~
+9 67108992 8388736 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+91
+#1031
+moss horror tendril whip~
+@@pa moss horror's tendril whip@@N~
+A long tendril from a moss horror, tough as leather and still writhing faintly, lies here.~
+5 67108992 8421376 1
+0 5 11 4 0 0 0 0 0 0
+6
+L
+94
+#1032
+withered druid staff~
+@@pa withered druid's staff@@N~
+A staff of pale grey wood, carved with corrupted druidic symbols, lies here.~
+5 128 8421376 1
+0 5 12 7 0 0 0 0 0 0
+1
+L
+96
+#1033
+vine strangler cord belt waist~
+@@pa vine strangler's cord belt@@N~
+A belt of densely wound animated vine-cord lies here, still coiling slowly.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#1034
+gloomwing moth wing cloak about~
+@@pa gloomwing moth wing-cloak@@N~
+A cloak fashioned from the dark, dusty wings of a gloomwing moth lies spread here.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+92
+#1035
+heartrot spawn fang~
+@@pa heartrot spawn's fang@@N~
+An elongated fang from a heartrot spawn, black with corruption, lies here.~
+5 67108992 8421376 1
+0 5 12 11 0 0 0 0 0 0
+6
+L
+96
+#1036
+corrupted stag antler mace~
+@@pa corrupted stag's antler mace@@N~
+An antler from a corrupted stag, its bony mass weaponized by fungal growth, lies here.~
+5 67108992 8421376 1
+0 5 11 8 0 0 0 0 0 0
+6
+L
+93
+#1037
+miasma wraith shroud about~
+@@pa miasma wraith's shroud@@N~
+A tattered shroud of semi-corporeal mist-cloth lies here, cold to the touch.~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+97
+#1038
+thornweaver matriarch legs~
+@@pa thornweaver matriarch's legs@@N~
+A pair of enormous, thorn-covered spider legs, still twitching, lies here.~
+9 128 9437184 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+98
+#1039
+rotwood sentinel core shield~
+@@pa rotwood sentinel's core@@N~
+The dense woody core of a rotwood sentinel, compressed into a natural shield, lies here.~
+9 67108992 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+100
+#1040
+fungal spitter acid gland~
+@@pa fungal spitter's acid gland@@N~
+A gland from a fungal spitter, still leaking traces of acidic fluid, lies here.~
+9 67108992 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+91
+#1041
+blighted bear claws fist~
+@@pa pair of blighted bear claws@@N~
+A pair of massive bear claws, blackened by corruption, lies here.~
+5 1140850816 8421376 1
+0 5 10 0 0 0 0 0 0 0
+6
+L
+90
+#1045
+mire crocodile tooth blade~
+@@pa mire crocodile tooth blade@@N~
+A wide tooth from a mire crocodile, shaped and honed into a crude blade, lies here.~
+5 67108992 8421376 1
+0 5 11 3 0 0 0 0 0 0
+6
+L
+93
+#1046
+thorn elemental barbed arm~
+@@pa thorn elemental's barbed arm@@N~
+A limb from a thorn elemental, its surface covered in hooked barbs, lies here.~
+5 67108992 8421376 1
+0 5 11 11 0 0 0 0 0 0
+6
+L
+94
+#1047
+withered ent bark vest body~
+@@pa withered ent's bark vest@@N~
+A vest fashioned from thick plates of withered ent bark lies here.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+95
+#1048
+bramble golem plating arms~
+@@pa bramble golem's plating@@N~
+Arm plating torn from a bramble golem, still tangled with thorny branches, lies here.~
+9 67108992 8389632 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+93
+#1049
+shadow fox pelt hood head~
+@@pa shadow fox pelt hood@@N~
+A hood fashioned from the strikingly dark pelt of a shadow fox lies here.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#1050
+canopy viper fang earring ear~
+@@pa canopy viper fang earring@@N~
+A small fang from a canopy viper, pierced and strung as an earring, lies here.~
+9 67108992 8388672 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+91
+#1051
+corpse flower petal sash waist~
+@@pa corpse flower petal sash@@N~
+A sash woven from the enormous, foul-smelling petals of a corpse flower lies here.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#1052
+mycelium creeper cord wrist~
+@@pa mycelium creeper's cord@@N~
+A length of mycelium cord harvested from a mycelium creeper lies here.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+92
+#1053
+fungal zombie jaw club~
+@@pa fungal zombie's jaw club@@N~
+The oversized jaw of a fungal zombie, crusted with hardened mushroom, serves as a crude club.~
+5 67108992 8421376 1
+0 5 10 8 0 0 0 0 0 0
+6
+L
+90
+#1054
+peat wraith ghostly cowl head~
+@@pa peat wraith's ghostly cowl@@N~
+A cowl of semi-material bog-mist, cold to the touch and faintly translucent, lies here.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+93
+#1055
+corrupted boar tusk dagger~
+@@pa corrupted boar tusk dagger@@N~
+A tusk from a corrupted boar, worked into a piercing dagger, lies here.~
+5 67108992 8421376 1
+0 5 10 2 0 0 0 0 0 0
+6
+L
+92
+#1056
+thornback tortoise shell buckler~
+@@pa thornback tortoise shell buckler@@N~
+A buckler fashioned from the thorn-studded shell of a thornback tortoise lies here.~
+9 335544448 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+94
+#1057
+grove phantom spectral robe body~
+@@pa grove phantom's spectral robe@@N~
+A robe woven from spectral mist-cloth, once a druid's ceremonial garb, lies here.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+96
+#1058
+corrupted satyr horn horns~
+@@pa corrupted satyr's horn@@N~
+A curved horn from a corrupted satyr, its surface etched with blight patterns, lies here.~
+9 67108992 8388612 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+93
+#1059
+mold hulk dense mantle shoulders~
+@@pa mold hulk's dense mantle@@N~
+A dense mantle of compressed mold, heavy as stone and equally protective, lies here.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+95
+#1060
+blightwood revenant greatsword~
+@@pa blightwood revenant's greatsword@@N~
+An enormous greatsword grown from blackened heartwood, still radiating cold malice, lies here.~
+5 2147483776 8421376 1
+0 6 12 3 0 0 0 0 0 0
+6
+L
+100
+#1061
+fungal titan core shard shield~
+@@pa fungal titan's core shard@@N~
+A compressed shard of a fungal titan's dense core, shaped into a shield-disc, lies here.~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+99
+#1062
+corrupted dryad elder circlet head~
+@@pa corrupted dryad elder's circlet@@N~
+A circlet of dryad-grown branch and corrupt gemstone lies here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+98
+#1063
+bog behemoth hide greaves legs~
+@@pa bog behemoth's hide greaves@@N~
+A pair of heavy leg-armor plates crafted from bog behemoth hide lies here.~
+9 128 9437184 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+99
+#1064
+canopy horror talon gauntlets hands~
+@@pa canopy horror's talon gauntlets@@N~
+Gauntlets made from the razor talons of a canopy horror, mounted on leather backing, lie here.~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+97
+#1065
+heartrot abomination pulsing eye halo~
+@@pa heartrot abomination's pulsing eye@@N~
+One of the abomination's compound eyes, still pulsing with a nauseating purple glow, lies here.~
+9 128 8388609 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#1066
+briar lord thorned crown head~
+@@pa briar lord's thorned crown@@N~
+A crown of interlocking thorned branches worn by the briar lord lies here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+98
+#1067
+rotting wolf alpha fang necklace neck~
+@@pa rotting wolf alpha's fang necklace@@N~
+A crude necklace of wolf fangs from the pack alpha, strung on braided fur, lies here.~
+9 67108992 8388736 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+92
+#1068
+blight beetle chitin bracer wrist~
+@@pa blight beetle's chitin bracer@@N~
+A bracer fashioned from the tough chitin of a blight beetle lies here.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+90
+#1069
+heartrot tendril lash~
+@@pa heartrot tendril's lash@@N~
+A flexible tendril from a heartrot vine, tough and snapping with latent energy, lies here.~
+5 67108992 8421376 1
+0 5 11 4 0 0 0 0 0 0
+6
+L
+93
+#1070
+potion blight resistance~
+@@pa potion of blight resistance@@N~
+A small vial filled with a murky green liquid lies here.~
+10 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#1071
+glowing mushroom~
+@@Ga glowing mushroom@@N~
+A large mushroom with a softly glowing cap lies here.~
+19 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+85
+#1072
+vial purified sap~
+@@pa vial of purified sap@@N~
+A small crystal vial of clear, sweet-smelling sap lies here.~
+10 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+95
+#0
 #ROOMS
 #1000
 The Darkening Path~
