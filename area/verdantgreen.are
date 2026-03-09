@@ -3113,6 +3113,346 @@ The rootbound guardian grew from the Rootmother's root-network in response to in
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#10040
+canopy strangler~
+a canopy strangler~
+A canopy strangler descends from the canopy above, its vine-mass body uncoiling from a resting position in the branches to drop toward the forest floor.
+
+~
+The canopy strangler waits in the upper canopy for extended periods, its body perfectly still and its color matching the surrounding foliage; it has no need to hunt because it has learned that prey comes to it if it positions itself along a frequently-used path and waits.
+
+~
+97 65536 -400 S
+88 0
+400 -22 14 13
+! 0 0 0 7 1062150 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10041
+withered dryad~
+a withered dryad~
+A withered dryad stands here, her form ancient and desiccated and radiating a cold hostility that is not the hostility of the newly corrupted but of something that has had centuries to refine its grievances.
+
+~
+She was old when the corruption found her, and the corruption found in her a consciousness experienced enough to be genuinely dangerous; she has had time to understand exactly what she lost and to develop sophisticated opinions about those responsible.
+
+~
+33554529 0 -500 S
+91 2
+700 -25 15 14
+! 0 0 0 7 12294 6656 0
+| 4 2 0 0 0 0 0
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10042
+mosswort queen~
+a mosswort queen~
+A mosswort queen moves through the undergrowth, substantially larger than the standard mosswort beetles and carrying the additional weight of a reproductive apparatus that takes up most of her posterior section.
+
+~
+The mosswort queen does not need to fight well because everything in her immediate vicinity does the fighting for her; she is never encountered entirely alone, and the drones that accompany her are considerably less concerned with their own safety than with hers.
+
+~
+97 0 -300 S
+85 2
+280 -20 12 12
+! 0 0 0 7 1052802 0 0
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10043
+verdant hulk~
+a verdant hulk~
+A verdant hulk moves through the forest, its bulk so substantial that it does not navigate the undergrowth so much as relocate it, pushing through obstacles that would stop a smaller creature without registering the resistance.
+
+~
+The verdant hulk is a plant-beast amalgamation that the Verdant Depths has been building for centuries, each generation larger and denser than the last; it is the forest's answer to the question of what happens when you give something the structural integrity of old-growth timber and the aggression of everything the forest has learned to be.
+
+~
+33554529 0 -500 S
+92 0
+850 -30 18 17
+! 0 0 0 7 1619980 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10044
+rotting stag~
+a rotting stag~
+A rotting stag moves through the undergrowth, its dead flesh held together by the fungal network that has colonized its body and the antlers still intact and functional despite everything else about it that is not.
+
+~
+The fungal infection that animated this stag did so long after the animal's death, working upward from the carcass through the root-network to introduce its animating chemistry; the result is a creature that behaves like the predator the original stag never was.
+
+~
+16481 0 -400 S
+83 1
+220 -15 11 11
+! 0 0 0 7 1052802 0 0
+| 256 8 0 0 0 256 8
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10045
+thorn wasp swarm~
+a thorn wasp swarm~
+A thorn wasp swarm moves through the air as a shifting cloud of individually tiny but collectively dangerous organisms, their thorned limbs making the swarm's surface appear to bristle constantly.
+
+~
+The thorn wasp swarm has no individual intelligence but demonstrates collective behavior that serves its reproductive needs with the efficiency of a well-designed system; each individual acts on chemical signals from its neighbors, and the cloud as a whole responds to threats with the speed of a single organism.
+
+~
+65633 0 -250 S
+81 0
+160 -10 9 9
+! 0 0 0 7 1052802 0 0
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10046
+barkskin wolf~
+a barkskin wolf~
+A barkskin wolf moves through the undergrowth, its hide so thoroughly hardened by the forest's particular biology that it produces a faint sound like wood shifting when it moves quickly.
+
+~
+The barkskin wolf is a deepwood wolf variant whose hide has undergone a secondary transformation beyond the standard darkening; the bark-hardening is a defensive adaptation that the forest has been developing across multiple generations of this pack, and this individual represents the current state of that project.
+
+~
+97 0 -380 S
+87 0
+360 -22 13 13
+! 0 0 0 7 1062150 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10047
+deepwood centipede~
+a deepwood centipede~
+A deepwood centipede moves through the undergrowth with the fluid, segmented efficiency of something whose locomotive system has been optimized over millions of years for exactly this terrain.
+
+~
+The deepwood centipede is venomous in all developmental stages, but the adult's venom has been augmented by the forest's chemistry to a potency substantially beyond what the species achieves on the surface; contact with the mandibles introduces a compound that is immediately and insistently uncomfortable.
+
+~
+97 0 -300 S
+84 0
+250 -18 12 11
+! 0 0 0 7 1052802 0 0
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10048
+bog troll~
+a bog troll~
+A bog troll stands here, its body covered in a thick layer of living moss and algae that makes it appear to be a mobile section of the forest floor that has acquired an opinion about intruders.
+
+~
+The bog troll's relationship with the forest is reciprocal; the moss that covers it provides camouflage and the troll provides the moss with a mobile delivery system for its spores, an arrangement that neither party negotiated consciously but both benefit from.
+
+~
+97 0 -400 S
+89 0
+450 -22 14 14
+! 0 0 0 7 1062150 0 0
+| 2 0 0 0 0 32 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10049
+fungal broodmother~
+a fungal broodmother~
+A fungal broodmother occupies a substantial section of the blightwood's interior, her body the largest single fungal organism in this zone and her presence the source of most of the spore-density in the immediate vicinity.
+
+~
+The fungal broodmother is the Blightwood Ancient's primary reproductive instrument in this zone; she produces and places the spores that become the other fungal organisms, which means killing her reduces the blightwood's capacity to replenish its forces in ways that matter to those planning extended operations here.
+
+~
+33554529 0 -500 S
+93 2
+950 -30 18 17
+! 0 0 0 7 1619980 0 0
+| 512 128 0 0 0 32 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10050
+ancient moss elemental~
+an ancient moss elemental~
+An ancient moss elemental occupies the space before you, its form composed of living moss compressed and animated into something between a creature and a force of nature.
+
+~
+The ancient moss elemental is an elemental not in the sense of having been summoned from another plane but in the sense of having condensed from the forest itself; it is a concentration of the forest's living essence given enough density and direction to qualify as an individual, though that individuality is provisional.
+
+~
+97 0 -450 S
+90 0
+550 -27 15 14
+! 0 0 0 7 1062150 0 96
+| 34 0 0 0 0 34 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10051
+twisted ent~
+a twisted ent~
+A twisted ent moves through the forest, its form the corrupted version of the treant species -- the same fundamental architecture but distorted by a process that has replaced deliberate growth with something more urgent and less stable.
+
+~
+The twisted ent has been corrupted not by external agency but by an internal process -- the forest's will turning inward and accelerating the ent's growth beyond what the original form was designed to sustain; the result is a creature that is both more powerful and less coherent than an uncorrupted treant.
+
+~
+97 0 -350 S
+88 0
+400 -22 13 13
+! 0 0 0 7 1062150 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10052
+thornveil assassin~
+a thornveil assassin~
+A thornveil assassin moves through the deep forest in a pattern that makes it genuinely difficult to determine its position even when it is visible, the movement itself serving as a form of concealment.
+
+~
+The thornveil assassin is the forest's most evolved predatory plant-form -- mobile, patient, and capable of a degree of tactical reasoning that conventional plant biology cannot produce; it selects targets based on criteria that no other plant-form applies, which suggests a level of assessment that the forest has been working toward for a very long time.
+
+~
+33554529 65536 -600 S
+94 0
+1000 -33 20 20
+! 0 0 0 7 1619980 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10053
+gloomwing moth~
+a gloomwing moth~
+A gloomwing moth moves through the shadows near the canopy, its wing-surface releasing a continuous fall of fine particles that catch what little light reaches this deep.
+
+~
+The gloomwing moth's wing-dust is its primary survival mechanism: a chemical compound produced by modified wing-scales that causes disorientation in the respiratory and navigational systems of most creatures that breathe it, creating the window of vulnerability the moth uses to feed.
+
+~
+97 65536 -250 S
+82 0
+200 -13 10 10
+! 0 0 0 7 1052802 0 0
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10054
+sap ooze~
+a sap ooze~
+A sap ooze moves across the forest floor as a slow-spreading mass of semi-solid amber tree sap, its surface dimly luminescent and its motion the patient spread of something that is in no hurry.
+
+~
+The sap ooze is the forest's most basic animated construct -- tree sap given the minimum necessary coherence to pursue nutrition -- and it has been doing exactly this, in this exact manner, for longer than most of the other organisms in this forest have existed.
+
+~
+327777 0 -300 S
+85 0
+280 -15 10 10
+! 0 0 0 7 1052802 0 0
+| 512 0 0 0 0 2 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10055
+feral grove keeper~
+a feral grove keeper~
+A feral grove keeper stands here, its form retaining the outline of the nature guardian it once was while every detail of that form has been taken over by something with different priorities.
+
+~
+The grove keeper was created to protect a specific grove and given the intelligence to do so effectively; the corruption that took it has retained the intelligence and redirected it entirely, which means a corrupted grove keeper is not less capable than its uncorrupted equivalent -- it is equally capable in pursuit of opposite goals.
+
+~
+33554529 0 -550 S
+91 0
+750 -28 17 15
+! 0 0 0 7 12294 6656 0
+| 0 0 0 0 0 0 0
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10056
+corpseflower lurker~
+a corpseflower lurker~
+A corpseflower lurker has positioned itself in a gap in the undergrowth, its broad petals spread wide and its scent -- which approximates the smell of a fresh carcass -- carrying through the immediate area.
+
+~
+The corpseflower lurker lures prey with a scent system that mimics the specific chemical signatures of decay; it has no ability to pursue prey that does not come to it, which means it has spent the entirety of its existence developing the most efficient lure possible, and the result is convincing enough to have worked on everything in this forest.
+
+~
+97 65536 -400 S
+86 0
+300 -20 13 12
+! 0 0 0 7 1052802 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10057
+brambleback tortoise~
+a brambleback tortoise~
+A brambleback tortoise moves through the undergrowth with the unhurried confidence of something whose defensive systems make speed irrelevant as a survival strategy.
+
+~
+The brambleback tortoise's shell has been colonized by thorn-producing plants to a depth that makes conventional attack inadvisable; the thorns are not a passive defense but an active one, extending toward contact and retracting for repositioning with a speed that the rest of the tortoise's behavior does not suggest it is capable of.
+
+~
+97 0 -350 S
+88 0
+450 -30 12 12
+! 0 0 0 7 1062150 0 32
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10058
+sporeveil phantom~
+a sporeveil phantom~
+A sporeveil phantom drifts through the spore-clouds of the Deepwood, its form visible as a vaguely consistent disturbance in the spore density rather than as a solid shape.
+
+~
+The sporeveil phantom is a consciousness that has distributed itself through a spore-cloud and operates the cloud as a single organism; it is effectively invisible in its home environment and effectively impossible to fight using conventional attacks that require a definite target.
+
+~
+97 2 -450 S
+90 0
+500 -25 14 14
+! 0 0 0 7 1062150 0 0
+| 4 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10059
+thornroot drake~
+a thornroot drake~
+A thornroot drake occupies a clearing, its body the rough outline of a large reptile assembled from compressed root-and-thorn material over a framework of living wood, its eyes amber sap in sealed amber casings.
+
+~
+The thornroot drake is the forest's response to the question of what form the apex of plant-based predation would take; the answer is something with the mass and aggression of a large reptile combined with the structural properties of the Verdant Depths' densest root-material, and the answer is also capable of moving considerably faster than it appears able to.
+
+~
+33554529 0 -600 S
+95 0
+1100 -35 22 20
+! 0 0 0 7 1619980 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #10081
