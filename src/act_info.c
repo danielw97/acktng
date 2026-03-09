@@ -92,6 +92,7 @@ void show_char_to_char_1 args((CHAR_DATA * victim, CHAR_DATA *ch));
 void show_char_to_char args((CHAR_DATA * list, CHAR_DATA *ch));
 bool check_blind args((CHAR_DATA * ch));
 int find_race_index_by_name(const char *name);
+void parse_shelp_query(char *argument, char *search_term, size_t search_term_size, char *full_argument, size_t full_argument_size);
 
 int find_race_index_by_name(const char *name)
 {
@@ -125,6 +126,35 @@ int score_should_show_invasion_rewards(CHAR_DATA *ch)
       return 1;
 
    return 0;
+}
+
+void parse_shelp_query(char *argument, char *search_term, size_t search_term_size, char *full_argument, size_t full_argument_size)
+{
+   char *trimmed_argument;
+   size_t argument_length;
+
+   one_argument(argument, search_term);
+
+   trimmed_argument = argument;
+   while (isspace(*trimmed_argument))
+      trimmed_argument++;
+
+   snprintf(full_argument, full_argument_size, "%s", trimmed_argument);
+
+   argument_length = strlen(full_argument);
+   if (argument_length >= 2
+       && ((full_argument[0] == '"' && full_argument[argument_length - 1] == '"')
+           || (full_argument[0] == '\'' && full_argument[argument_length - 1] == '\'')))
+   {
+      memmove(full_argument, full_argument + 1, argument_length - 2);
+      full_argument[argument_length - 2] = '\0';
+   }
+
+   if (search_term[0] == '\0')
+   {
+      snprintf(search_term, search_term_size, "shelp");
+      snprintf(full_argument, full_argument_size, "shelp");
+   }
 }
 
 
@@ -5371,17 +5401,7 @@ void do_shelp(CHAR_DATA *ch, char *argument)
    char search_term[MAX_INPUT_LENGTH];
    char full_argument[MAX_INPUT_LENGTH];
 
-   one_argument(argument, search_term);
-   while (isspace(*argument))
-      argument++;
-
-   snprintf(full_argument, sizeof(full_argument), "%s", argument);
-
-   if (search_term[0] == '\0')
-   {
-      snprintf(search_term, sizeof(search_term), "shelp");
-      snprintf(full_argument, sizeof(full_argument), "shelp");
-   }
+   parse_shelp_query(argument, search_term, sizeof(search_term), full_argument, sizeof(full_argument));
 
    for (pHelp = first_shelp; pHelp != NULL; pHelp = pHelp->next)
    {
