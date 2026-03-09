@@ -594,6 +594,7 @@ Room entries are one of:
   <keyword>~
   <description>~
   ```
+  - Extra-description `<keyword>` names must be discoverable in-room: each keyword token must appear in either the room's main `<description>~` or in at least one other `E` extra description in the same room.
   - `<description>` must include exactly one trailing newline before the terminating `~`.
 - End of room: `S`
 
@@ -602,8 +603,8 @@ Any other token in a room body is invalid.
 Room description content requirements:
 
 - Each room's main `<description>~` must end with exactly one trailing newline immediately before the terminating `~`.
-- Each room's main `<description>~` must contain at least 3 lines of text.
-- Important rooms must contain at least 5 lines of text in the main `<description>~`.
+- Each room's main `<description>~` must contain at least 3 sentences of text.
+- Important rooms must contain at least 5 sentences of text in the main `<description>~`.
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
 - When a room uses a named exit (non-empty `<exit_keyword>`), that exit name must appear in at least one of:
   - the room's main `<description>~`,
@@ -704,6 +705,8 @@ Practical door behavior in area files/runtime:
   - If the exit is not marked as a door (`EX_ISDOOR` unset), lock/unlock/open/close door commands do not apply.
   - If `<key_vnum>` is `< 0`, players will be told the exit cannot be locked/unlocked with a key.
   - If `<key_vnum>` is set, it should match the intended key object's vnum exactly; otherwise unlock/lock attempts with the thematic key will fail.
+  - If a door is reset to `locked` via `#RESETS` command `D` state `2`, `<key_vnum>` MUST be set to a valid key object vnum (not `-1`).
+  - For every such locked-on-reset door, an object record for that exact key vnum MUST exist in `#OBJECTS` (create the key item if it does not already exist).
 
 In `#RESETS`, command `D` uses door state enum values from `tab_door_states` in `src/buildtab.c`:
 
@@ -735,6 +738,52 @@ S
 
 `*` comment lines are accepted.
 
+Allowed `<spec_fun_name>` values (from `spec_lookup()` in `src/special.c`):
+
+Builder policy: mob specials beginning with `spec_summon_` must **never** be set in area files. These are assigned at runtime by summon systems only.
+Builder policy: any mob special beginning with `spec_keep` may only be assigned manually by a human (not by automation/tools).
+
+- `spec_breath_any`
+- `spec_breath_acid`
+- `spec_breath_fire`
+- `spec_breath_frost`
+- `spec_breath_gas`
+- `spec_breath_lightning`
+- `spec_cast_adept`
+- `spec_cast_cleric`
+- `spec_cast_judge`
+- `spec_cast_mage`
+- `spec_cast_undead`
+- `spec_executioner`
+- `spec_fido`
+- `spec_guard` (alias of `spec_policeman` in lookup return)
+- `spec_janitor`
+- `spec_mayor`
+- `spec_poison`
+- `spec_thief`
+- `spec_policeman`
+- `spec_cast_cadaver`
+- `spec_undead`
+- `spec_stephen`
+- `spec_rewield`
+- `spec_sylai_priest`
+- `spec_cast_bigtime`
+- `spec_sage`
+- `spec_wizardofoz`
+- `spec_vamp_hunter`
+- `spec_mino_guard`
+- `spec_tax_man`
+- `spec_keep_physical_captain`
+- `spec_summon_water`
+- `spec_summon_fire`
+- `spec_summon_earth`
+- `spec_summon_undead`
+- `spec_summon_holy`
+- `spec_summon_shadow`
+- `spec_summon_metal`
+- `spec_summon_animate`
+- `spec_summon_thought`
+
 ## 11) `#OBJFUNS` section
 
 Terminated by `S`:
@@ -747,6 +796,19 @@ S
 ```
 
 `*` comment lines are accepted.
+
+Allowed `<obj_fun_name>` values (from `obj_fun_lookup()` in `src/obj_fun.c`):
+
+- `objfun_giggle`
+- `objfun_cast_fight`
+- `objfun_sword_aggro`
+- `objfun_soul_moan`
+- `objfun_infused_soul`
+- `objfun_flaming`
+- `objfun_healing`
+- `objfun_dispeller`
+- `objfun_regen`
+- `objfun_clan`
 
 ## 12) `#RESETS` section
 
