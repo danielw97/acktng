@@ -178,7 +178,7 @@ struct char_ref_type
 
 #define WAIT_STATE(ch, npulse) ((ch)->wait = UMAX((ch)->wait, (npulse)))
 
-#define MANA_COST(ch, sn) (IS_NPC(ch) ? 0 : UMAX(skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->class])))
+#define MANA_COST(ch, sn) (IS_NPC(ch) ? 0 : UMAX(50, skill_table[sn].min_mana))
 
 
 #define ADEPT_LEVEL(ch) (IS_NPC(ch) ? (ch)->level / 7 : (ch)->adept_level)
