@@ -25,6 +25,39 @@ The theme evokes a primeval forest grown unnaturally deep and old, where the con
 
 ---
 
+## Area Header
+
+Exact `#AREA` section content for `verdant_depths.are`:
+
+```
+#AREA
+@@rThe @@GVerdant @@gDepths@@N~
+Q 16
+K verdantdepths~
+L @@W(@@r75 95@@W)@@N~
+N 74
+I 75 95
+V 10000 10124
+F 15
+U @@gthe ancient trees creak and groan as the forest shifts around you@@N~
+T Teleport is allowed
+```
+
+**Directive notes:**
+
+- `Q 16` -- mandatory version; any other value is out of spec
+- `K verdantdepths~` -- single-word keyword, no spaces, no color codes
+- `L @@W(@@r75 95@@W)@@N~` -- white parens, light-green level numbers, white close paren, reset; matches color conventions of peer areas
+- `N 74` -- confirmed unused across all 57 loaded area files
+- `I 75 95` -- controls mob-level gating and area matching logic
+- `V 10000 10124` -- full 125-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `F 15` -- reset frequency in minutes, matching the Forest of Confusion parent area
+- `U` -- reset message uses primary gray `@@g` with `@@N` reset; no double-newlines, terminated with `~`
+- `T` -- rest of line is ignored by the loader; presence of the line enables teleport
+- `O`, `R`, `W` -- owner and ACL directives omitted here; set at implementation time by the builder
+
+---
+
 ## Narrative / Lore
 
 The Verdant Depths is what lies beneath and beyond the Forest of Confusion -- an ancient, sentient woodland where the trees are older than civilization. The confusion above is merely a symptom of the forest's true nature: a living entity that lures creatures inward and transforms them. The deeper one ventures, the more the forest asserts its will. Three ancient Heartwood Guardians -- boss creatures -- protect the forest's core, each embodying a different aspect of the woodland's power: growth, decay, and predation.
