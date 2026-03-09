@@ -1932,6 +1932,12 @@ void do_score(CHAR_DATA *ch, char *argument)
       sprintf(arcane_buf, " @@WArcane Power: @@y%-5d@@W (+%d%% spell crit)", ch->arcane_power, ch->arcane_power * 5);
       safe_strcat(MAX_STRING_LENGTH, buf, arcane_buf);
    }
+   if (ch->mental_power > 0)
+   {
+      char mental_buf[MSL];
+      sprintf(mental_buf, " @@mMental Power: @@y%-5d@@W (-%d%% psi/nec/ego/kin cost)", ch->mental_power, ch->mental_power * 2);
+      safe_strcat(MAX_STRING_LENGTH, buf, mental_buf);
+   }
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
    sprintf(buf, "@@WParry: @@y%-3d @@WDodge: @@y%-3d@@W Block: @@y%-3d@@W Counter: @@y%-3d@@W Damcap: @@y%-5d", get_parry(ch), get_dodge(ch), get_block(ch), get_counter(ch), get_damcap(ch));

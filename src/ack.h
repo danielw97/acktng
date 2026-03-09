@@ -616,7 +616,7 @@ struct char_data
    int combo[MAX_COMBO];
    int holy_power;
    int arcane_power;
-   int psionic_power;
+   int mental_power;
    int spec_behavior;
    int sentence; /* For new legal system */
    sh_int invis; /* For wizinvis imms - lvl invis to */
