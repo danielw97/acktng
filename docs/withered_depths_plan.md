@@ -167,13 +167,20 @@ All bosses spawn in `no_mob` rooms only.
 | 1004 | The Blightmother | `@@pthe Blightmother@@N` | 110 | 7 | 1135 | Source of the corruption, final boss. `act`: is_npc\|sentinel\|no_flee\|aggressive\|stay_area\|boss. Strong: poison, shadow, earth. Weak: holy, fire. Cast: suffocate, mindflame, nerve_fire. Def: heal, fireshield, iceshield. Spec: `spec_cast_bigtime`. Skills: 5_attack, enhanced, dodge, parry, counter. |
 | 1005 | The Verdant Guardian | `@@Gthe Verdant Guardian@@N` | 110 | 8 | 1145 | Maddened forest protector, optional boss. `act`: is_npc\|sentinel\|no_flee\|aggressive\|stay_area\|boss. Strong: holy, earth. Weak: shadow, poison. Cast: flamestrike, light_bolt. Def: heal, fireshield, shockshield. Spec: `spec_cast_cleric`. |
 
-### Strong Mobs (flagged `solo | stay_area`, levels 98–100)
+### Strong Mobs (flagged `solo | stay_area`, levels 97–100)
 
 | Vnum | Name | Level | Zone | Notes |
 |------|------|-------|------|-------|
 | 1006 | A rotwood sentinel | 100 | 4 | Corrupted tree guardian. aggressive, solo, stay_area. Skills: 3_attack, enhanced, parry. |
 | 1007 | A miasma wraith | 97 | 6 | Gaseous undead. aggressive, solo, stay_area, undead, no_body. Cast: mind_flail, suffocate. |
 | 1008 | A thornweaver matriarch | 98 | 3 | Giant spider queen. aggressive, solo, stay_area. Skills: 3_attack, dodge, counter. |
+| 1030 | A blightwood revenant | 100 | 7 | Undead treant horror. aggressive, solo, stay_area, undead. Skills: 4_attack, enhanced, parry, nodisarm. Cast: earthquake. Def: heal. |
+| 1031 | A fungal titan | 99 | 2 | Towering mushroom construct. aggressive, solo, stay_area, no_mind. Skills: 3_attack, enhanced, punch, notrip. |
+| 1032 | A corrupted dryad elder | 98 | 4 | Ancient fey twisted by blight. aggressive, solo, stay_area. Cast: chain_light, flamestrike, faerie_fire. Def: heal, fireshield. Spec: `spec_cast_cleric`. |
+| 1033 | A bog behemoth | 99 | 6 | Massive swamp reptile. aggressive, solo, stay_area. Skills: 4_attack, enhanced, headbutt, nodisarm. |
+| 1034 | A canopy horror | 97 | 5 | Winged predator nesting in the treetops. aggressive, solo, stay_area. Skills: 3_attack, enhanced, dodge, kick. |
+| 1035 | A heartrot abomination | 100 | 7 | Pulsating mass of corrupted flesh and bark. aggressive, solo, stay_area, no_mind. Skills: 4_attack, enhanced, counter. Def: heal. |
+| 1036 | A briar lord | 98 | 3 | Massive thorned guardian of the maze. aggressive, solo, stay_area. Skills: 3_attack, enhanced, parry, disarm. |
 
 ### Trash Mobs (flagged `stay_area | aggressive`, levels 85–96)
 
@@ -199,12 +206,47 @@ All bosses spawn in `no_mob` rooms only.
 | 1026 | A heartrot spawn | 96 | 7, 8 | Blight creature. Skills: 3_attack, enhanced, punch. |
 | 1027 | A corrupted stag | 92 | 4 | Warped forest animal. Skills: 2_attack, charge, enhanced. |
 | 1028 | A fungal spitter | 89 | 2 | Ranged fungal mob. Cast: acid_blast. |
+| 1037 | A rotting wolf alpha | 90 | 1, 4 | Pack leader of the blighted wolves. Skills: 3_attack, enhanced, dodge. |
+| 1038 | A mire crocodile | 93 | 6 | Massive swamp predator. Skills: 2_attack, enhanced, trip. |
+| 1039 | A blighted owl | 86 | 5 | Corrupted raptor with glowing eyes. Skills: 2_attack, dodge. |
+| 1040 | A thorn elemental | 94 | 3 | Animated mass of thorny vines. no_mind. Skills: 3_attack, enhanced. |
+| 1041 | A spore cloud | 85 | 2 | Floating toxic fungal mass. no_body, no_mind. Cast: suffocate. Spec: `spec_poison`. |
+| 1042 | A withered ent | 95 | 4, 7 | Dying tree creature lashing out. Skills: 3_attack, enhanced, punch. |
+| 1043 | A bog rat swarm | 86 | 6 | Swarm of corrupted rats. Skills: 2_attack, punch. |
+| 1044 | A bramble golem | 93 | 3 | Construct of tangled thorny branches. no_mind. Skills: 2_attack, enhanced, parry. |
+| 1045 | A shadow fox | 88 | 1, 4 | Dark furred predator that hunts by stealth. Skills: 2_attack, dodge, trip. |
+| 1046 | A canopy viper | 91 | 5 | Arboreal serpent with virulent toxin. Spec: `spec_poison`. Skills: 2_attack. |
+| 1047 | A corpse flower | 87 | 6, 7 | Carnivorous plant animated by corruption. no_mind. Skills: 2_attack, trip. |
+| 1048 | A mycelium creeper | 90 | 2 | Network of fungal tendrils that ambushes prey. no_mind. Skills: 2_attack, enhanced, trip. |
+| 1049 | A blighted hawk | 89 | 5 | Corrupted bird of prey circling the canopy. Skills: 2_attack, enhanced, dodge. |
+| 1050 | A fungal zombie | 88 | 2 | Reanimated corpse covered in parasitic mushrooms. undead. Skills: 2_attack, punch. |
+| 1051 | A thorn dart frog | 85 | 3, 6 | Tiny but deadly poisonous amphibian. Spec: `spec_poison`. |
+| 1052 | A withered wolf spider | 91 | 3 | Large wolf spider with rotting exoskeleton. Skills: 2_attack, dodge. |
+| 1053 | A peat wraith | 93 | 6 | Ghostly bog spirit. undead, no_body. Cast: mind_flail, ego_whip. |
+| 1054 | A blight beetle | 86 | 2, 4 | Oversized beetle infested with fungal growth. Skills: 2_attack, enhanced. |
+| 1055 | A corrupted boar | 90 | 1, 4 | Massive warped boar with fungal tusks. Skills: 2_attack, enhanced, charge. |
+| 1056 | A verdant wisp | 87 | 8 | Faded forest spirit clinging to old magic. no_body. Cast: flare, light_bolt. Def: cure_serious. Non-aggressive. |
+| 1057 | A canopy weaver | 92 | 5 | Spider that builds webs between the treetops. Skills: 2_attack, dodge, trip. |
+| 1058 | A rotwood beetle swarm | 88 | 4, 7 | Cloud of wood-boring insects. Skills: 2_attack, enhanced. |
+| 1059 | A mire leech | 85 | 6 | Giant parasitic swamp leech. Skills: 2_attack. |
+| 1060 | A fungal bat colony | 87 | 2 | Cluster of bats coated in luminous spores. Skills: 2_attack, dodge. |
+| 1061 | A blighted centipede | 89 | 2, 4 | Enormous segmented crawler oozing poison. Spec: `spec_poison`. Skills: 2_attack. |
+| 1062 | A thornback tortoise | 94 | 3 | Slow but heavily armored reptile covered in thorns. Skills: 2_attack, parry, nodisarm. |
+| 1063 | A grove phantom | 96 | 7 | Spectral remnant of a druid who fell to the blight. undead, no_body. Cast: mindflame, mind_bolt. Def: cure_critic. |
+| 1064 | A swamp adder | 88 | 6 | Thick-bodied venomous water snake. Spec: `spec_poison`. Skills: 2_attack. |
+| 1065 | A blighted raven | 85 | 1, 5 | Corrupted scavenger bird with eerie intelligence. Skills: 2_attack, dodge. |
+| 1066 | A heartrot tendril | 91 | 7 | Animated root-tentacle of the Blightmother. no_mind. Skills: 2_attack, trip. |
+| 1067 | A corrupted satyr | 93 | 4 | Warped fey creature driven mad by blight. Skills: 2_attack, enhanced, kick. Cast: faerie_fire. |
+| 1068 | A mold hulk | 95 | 2 | Shambling heap of rotting vegetation held together by mold. no_mind. Skills: 3_attack, enhanced. |
 
 ### Non-Combat / Utility Mobs
 
 | Vnum | Name | Level | Notes |
 |------|------|-------|-------|
 | 1029 | A trapped explorer | 50 | Non-aggressive, sentinel, stay_area. Found in Zone 1. Flavor NPC. |
+| 1069 | A dying forest sprite | 40 | Non-aggressive, sentinel, stay_area. Found in Zone 8. Flavor NPC, whispers lore about the Blightmother. |
+| 1070 | A lost herbalist | 55 | Non-aggressive, sentinel, stay_area. Found in Zone 4. Flavor NPC seeking rare fungi. |
+| 1071 | A feral cat | 30 | Non-aggressive, stay_area. Wanders Zone 1. Ambient wildlife. |
 
 ---
 
@@ -275,14 +317,39 @@ extra_flags for loot-table gear: ITEM_NODROP(128) + ITEM_LOOT(67108864) = 671089
 | 1039 | a rotwood sentinel's core | `@@pa rotwood sentinel's core@@N` | armor (9) | 67108992 | hold\|take | 11 | L 100 | Loot from rotwood sentinel. Shield. |
 | 1040 | a fungal spitter's acid gland | `@@pa fungal spitter's acid gland@@N` | armor (9) | 67108992 | hold\|take | 1 | L 91 | Loot from fungal spitter. |
 | 1041 | a pair of blighted bear claws | `@@pa pair of blighted bear claws@@N` | weapon (5) | 67108992 + ITEM_FIST(1073741824) = 1140850816 | hold\|take | 6 | L 90 | Loot from blighted bear. Fist. value3=0 (hit). |
+| 1045 | a mire crocodile tooth blade | `@@pa mire crocodile tooth blade@@N` | weapon (5) | 67108992 | hold\|take | 6 | L 93 | Loot from mire crocodile. value3=3 (slash). |
+| 1046 | a thorn elemental's barbed arm | `@@pa thorn elemental's barbed arm@@N` | weapon (5) | 67108992 | hold\|take | 6 | L 94 | Loot from thorn elemental. value3=11 (pierce). |
+| 1047 | a withered ent's bark vest | `@@pa withered ent's bark vest@@N` | armor (9) | 67108992 | body\|take | 11 | L 95 | Loot from withered ent |
+| 1048 | a bramble golem's plating | `@@pa bramble golem's plating@@N` | armor (9) | 67108992 | arms\|take | 11 | L 93 | Loot from bramble golem |
+| 1049 | a shadow fox pelt hood | `@@pa shadow fox pelt hood@@N` | armor (9) | 67108992 | head\|take | 1 | L 90 | Loot from shadow fox |
+| 1050 | a canopy viper fang earring | `@@pa canopy viper fang earring@@N` | armor (9) | 67108992 | ear\|take | 1 | L 91 | Loot from canopy viper |
+| 1051 | a corpse flower petal sash | `@@pa corpse flower petal sash@@N` | armor (9) | 67108992 | waist\|take | 1 | L 90 | Loot from corpse flower |
+| 1052 | a mycelium creeper's cord | `@@pa mycelium creeper's cord@@N` | armor (9) | 67108992 | wrist\|take | 1 | L 92 | Loot from mycelium creeper |
+| 1053 | a fungal zombie's jaw club | `@@pa fungal zombie's jaw club@@N` | weapon (5) | 67108992 | hold\|take | 6 | L 90 | Loot from fungal zombie. value3=8 (crush). |
+| 1054 | a peat wraith's ghostly cowl | `@@pa peat wraith's ghostly cowl@@N` | armor (9) | 67108992 | head\|take | 1 | L 93 | Loot from peat wraith |
+| 1055 | a corrupted boar tusk dagger | `@@pa corrupted boar tusk dagger@@N` | weapon (5) | 67108992 | hold\|take | 6 | L 92 | Loot from corrupted boar. value3=2 (stab). |
+| 1056 | a thornback tortoise shell buckler | `@@pa thornback tortoise shell buckler@@N` | armor (9) | 67108992 + ITEM_BUCKLER(268435456) = 335544320 | hold\|take | 11 | L 94 | Loot from thornback tortoise. Buckler. |
+| 1057 | a grove phantom's spectral robe | `@@pa grove phantom's spectral robe@@N` | armor (9) | 67108992 | body\|take | 1 | L 96 | Loot from grove phantom |
+| 1058 | a corrupted satyr's horn | `@@pa corrupted satyr's horn@@N` | armor (9) | 67108992 | horns\|take | 6 | L 93 | Loot from corrupted satyr |
+| 1059 | a mold hulk's dense mantle | `@@pa mold hulk's dense mantle@@N` | armor (9) | 67108992 | shoulders\|take | 11 | L 95 | Loot from mold hulk |
+| 1060 | a blightwood revenant's greatsword | `@@pa blightwood revenant's greatsword@@N` | weapon (5) | 128 + ITEM_TWO_HANDED(2147483648) = 2147483776 | hold\|take | 6 | L 100 | Reset (E) on blightwood revenant. Two-handed. value3=3 (slash). |
+| 1061 | a fungal titan's core shard | `@@pa fungal titan's core shard@@N` | armor (9) | 128 | hold\|take | 11 | L 99 | Reset (E) on fungal titan. Shield. |
+| 1062 | a corrupted dryad elder's circlet | `@@pa corrupted dryad elder's circlet@@N` | armor (9) | 128 | head\|take | 1 | L 98 | Reset (E) on corrupted dryad elder |
+| 1063 | a bog behemoth's hide greaves | `@@pa bog behemoth's hide greaves@@N` | armor (9) | 128 | legs\|take | 11 | L 99 | Reset (E) on bog behemoth |
+| 1064 | a canopy horror's talon gauntlets | `@@pa canopy horror's talon gauntlets@@N` | armor (9) | 128 | hands\|take | 6 | L 97 | Reset (E) on canopy horror |
+| 1065 | a heartrot abomination's pulsing eye | `@@pa heartrot abomination's pulsing eye@@N` | armor (9) | 128 | halo\|take | 1 | L 100 | Reset (E) on heartrot abomination |
+| 1066 | a briar lord's thorned crown | `@@pa briar lord's thorned crown@@N` | armor (9) | 128 | head\|take | 6 | L 98 | Reset (E) on briar lord |
+| 1067 | a rotting wolf alpha's fang necklace | `@@pa rotting wolf alpha's fang necklace@@N` | armor (9) | 67108992 | neck\|take | 6 | L 92 | Loot from rotting wolf alpha |
+| 1068 | a blight beetle's chitin bracer | `@@pa blight beetle's chitin bracer@@N` | armor (9) | 67108992 | wrist\|take | 6 | L 90 | Loot from blight beetle |
+| 1069 | a heartrot tendril's lash | `@@pa heartrot tendril's lash@@N` | weapon (5) | 67108992 | hold\|take | 6 | L 93 | Loot from heartrot tendril. value3=4 (whip). |
 
 ### Consumables / Misc (in rooms via `O` reset)
 
 | Vnum | Name | item_type | extra_flags | wear_flags | Level | Notes |
 |------|------|-----------|-------------|------------|-------|-------|
-| 1042 | a potion of blight resistance | potion (10) | 128 | take | L 90 | Spawns in select rooms. |
-| 1043 | a glowing mushroom | food (19) | 128 | take | L 85 | Spawns in Fungal Hollows rooms. |
-| 1044 | a vial of purified sap | potion (10) | 128 | take | L 95 | Spawns in Verdant Sanctum rooms. |
+| 1070 | a potion of blight resistance | potion (10) | 128 | take | L 90 | Spawns in select rooms. |
+| 1071 | a glowing mushroom | food (19) | 128 | take | L 85 | Spawns in Fungal Hollows rooms. |
+| 1072 | a vial of purified sap | potion (10) | 128 | take | L 95 | Spawns in Verdant Sanctum rooms. |
 
 ---
 
@@ -302,8 +369,15 @@ Strong mobs spawn 2–3 times each in their zones:
 - `M 0 1006 3 <room>` — Rotwood sentinels (3x in Zone 4)
 - `M 0 1007 2 <room>` — Miasma wraiths (2x in Zone 6)
 - `M 0 1008 2 <room>` — Thornweaver matriarchs (2x in Zone 3)
+- `M 0 1030 2 <room>` — Blightwood revenants (2x in Zone 7)
+- `M 0 1031 2 <room>` — Fungal titans (2x in Zone 2)
+- `M 0 1032 2 <room>` — Corrupted dryad elders (2x in Zone 4)
+- `M 0 1033 2 <room>` — Bog behemoths (2x in Zone 6)
+- `M 0 1034 2 <room>` — Canopy horrors (2x in Zone 5)
+- `M 0 1035 2 <room>` — Heartrot abominations (2x in Zone 7)
+- `M 0 1036 2 <room>` — Briar lords (2x in Zone 3)
 
-Trash mobs spawn 2–4 times each, distributed across their zones. Total approximately 60–80 mob resets to populate 150 rooms.
+Trash mobs spawn 2–4 times each, distributed across their zones. Total approximately 120–140 mob resets to populate 150 rooms.
 
 ### Equipment Resets (`E` commands, after corresponding `M`)
 
@@ -313,12 +387,19 @@ Reset equipment (non-loot, flagged ITEM_NODROP only):
 - `E 0 1032 1 <hold_loc>` — Withered druid's staff on withered druid
 - `E 0 1037 1 <about_loc>` — Miasma wraith's shroud on miasma wraith
 - `E 0 1038 1 <legs_loc>` — Thornweaver matriarch's legs on thornweaver matriarch
+- `E 0 1060 1 <hold_loc>` — Blightwood revenant's greatsword on blightwood revenant
+- `E 0 1061 1 <hold_loc>` — Fungal titan's core shard (shield) on fungal titan
+- `E 0 1062 1 <head_loc>` — Corrupted dryad elder's circlet on corrupted dryad elder
+- `E 0 1063 1 <legs_loc>` — Bog behemoth's hide greaves on bog behemoth
+- `E 0 1064 1 <hands_loc>` — Canopy horror's talon gauntlets on canopy horror
+- `E 0 1065 1 <halo_loc>` — Heartrot abomination's pulsing eye on heartrot abomination
+- `E 0 1066 1 <head_loc>` — Briar lord's thorned crown on briar lord
 
 ### Object Resets (`O` commands, items in rooms)
 
-- `O 0 1042 1 <room>` — Potions in select rooms (3-4 placements)
-- `O 0 1043 1 <room>` — Mushrooms in Fungal Hollows (3-4 placements)
-- `O 0 1044 1 <room>` — Purified sap in Verdant Sanctum (2 placements)
+- `O 0 1070 1 <room>` — Potions in select rooms (3-4 placements)
+- `O 0 1071 1 <room>` — Mushrooms in Fungal Hollows (3-4 placements)
+- `O 0 1072 1 <room>` — Purified sap in Verdant Sanctum (2 placements)
 
 ### Door Resets (`D` commands)
 
@@ -349,6 +430,14 @@ M 1010 spec_cast_cleric
 M 1012 spec_poison
 M 1022 spec_cast_undead
 M 1028 spec_cast_mage
+M 1032 spec_cast_cleric
+M 1041 spec_poison
+M 1046 spec_poison
+M 1051 spec_poison
+M 1053 spec_cast_undead
+M 1061 spec_poison
+M 1063 spec_cast_undead
+M 1064 spec_poison
 ```
 
 ---
