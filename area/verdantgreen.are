@@ -2773,6 +2773,346 @@ The verdant wraith is what remains of a consciousness that was once part of the 
 + 30 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#10020
+creeping shadow fox~
+a creeping shadow fox~
+A creeping shadow fox moves through the undergrowth, its dark-furred body following the shadows with a precision that suggests it perceives light differently than most creatures.
+
+~
+The creeping shadow fox's fur absorbs light in a way that ordinary biology cannot explain; it passes through lit areas without casting a visible shadow, and in genuine darkness it becomes effectively invisible to anything that relies on conventional sight.
+
+~
+97 65536 -250 S
+81 0
+170 -13 10 10
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10021
+tanglewood serpent~
+a tanglewood serpent~
+A tanglewood serpent lies coiled among the ground-vines, its scale pattern so precisely matching the color and texture of its surroundings that its outline registers only in peripheral vision.
+
+~
+The tanglewood serpent's camouflage is not a fixed pattern but an active process; its scales shift color in response to the immediate environment, which means it is never out of place wherever it chooses to wait, and it is patient enough to wait indefinitely.
+
+~
+97 65536 -300 S
+83 0
+220 -15 11 11
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10022
+fungal tick swarm~
+a fungal tick swarm~
+A fungal tick swarm moves through the forest floor as a living carpet of parasitic organisms, each individual barely visible but the collective presence detectable by the faint rustling of mass movement.
+
+~
+The fungal tick swarm has no individual intelligence but the swarm as a whole demonstrates coordinated behavior consistent with a hunting organism; it is drawn to warmth and carbon dioxide and responds to disruption by redistributing rather than dispersing.
+
+~
+65633 -250 0 S
+80 0
+150 -8 8 8
+! 0 0 0 7 1052802 0 0
+| 512 128 0 0 0 32 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10023
+grasping bramble~
+a grasping bramble~
+A grasping bramble has positioned itself across a gap in the undergrowth, its thorned limbs arranged to maximize contact with anything that passes through.
+
+~
+The grasping bramble was a hedge or thicket before the forest's will animated it; the transition from passive to active changed nothing about its structure and everything about its purpose -- it is now thorns in pursuit of something to use thorns on.
+
+~
+97 0 -250 S
+81 0
+160 -13 10 10
+! 0 0 0 7 1052802 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10024
+hollow tree lurker~
+a hollow tree lurker~
+A hollow tree lurker occupies the interior of a dead trunk nearby, visible only as a pair of pale eyes in the darkness of the hollow before it moves.
+
+~
+The hollow tree lurker has modified the trunk it occupies over years of habitation, widening the opening to the precise dimensions it needs to exit and adding a layer of compressed materials that insulates sound within the hollow -- it is entirely silent until it chooses not to be.
+
+~
+97 65536 -300 S
+83 0
+220 -15 11 11
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10025
+mosswort beetle~
+a mosswort beetle~
+A mosswort beetle moves through the leaf-litter, its shell-armor covered in a thick layer of living moss that has grown into the shell's surface over the creature's long life.
+
+~
+The mosswort beetle's shell is genuinely impenetrable to most conventional weapons; the moss that has colonized it adds another layer of absorption to a surface already designed for it, and the beetle itself is indifferent to most forms of attack short of fire.
+
+~
+97 0 -250 S
+80 0
+150 -15 9 8
+! 0 0 0 7 1052802 0 0
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10026
+deepwood bear~
+a deepwood bear~
+A deepwood bear stands here, its mass substantially greater than any surface bear and its fur marked with patterns that echo the forest's own color-logic of deep green and shadow-grey.
+
+~
+The deepwood bear has been in the Verdant Depths long enough that the forest's influence has altered its baseline aggression upward significantly; it does not wait to be threatened before attacking, having learned from the forest that preemption is more efficient than reaction.
+
+~
+97 0 -350 S
+88 0
+400 -22 14 14
+! 0 0 0 7 1062150 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10027
+sap-blooded horror~
+a sap-blooded horror~
+A sap-blooded horror moves through the undergrowth, its body the consistency of heavy syrup in humanoid form, constantly shedding amber droplets that hiss where they contact the forest floor.
+
+~
+What animates this body of semi-solidified tree sap is debatable; what is certain is that it pursues and attacks living creatures with singular purpose, and that its interior temperature is high enough to make contact deeply unpleasant for anything with conventional tissue.
+
+~
+262241 0 -450 S
+90 0
+500 -25 16 15
+! 0 0 0 7 1062150 0 0
+| 512 0 0 0 0 2 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10028
+whispering shade~
+a whispering shade~
+A whispering shade drifts between the trees, its form too consistent to be shadow and too diffuse to be solid, producing a low sound at the edge of audibility.
+
+~
+The whispering shade is a creature of the spaces between things -- between light and dark, between silence and sound, between the living and the dead -- and it operates in those spaces with the ease of something that has never had to navigate the inconvenience of having a definite location.
+
+~
+97 65538 -450 S
+86 0
+300 -20 13 12
+! 0 0 0 7 1062150 0 0
+| 4 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10029
+bark-skinned ogre~
+a bark-skinned ogre~
+A bark-skinned ogre moves through the undergrowth, its massive body covered in a hide that has hardened to the texture and consistency of aged oak bark over its decades in the Verdant Depths.
+
+~
+The bark-skin is not armor in the conventional sense -- it is the ogre's actual dermis, transformed by long exposure to the forest's particular biology into something that no longer responds to most forms of damage the way flesh should respond to it.
+
+~
+97 0 -400 S
+89 1
+450 -22 15 14
+! 0 0 0 7 1062150 0 0
+| 2 0 0 0 0 32 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10030
+thorn-crowned stag~
+a thorn-crowned stag~
+A thorn-crowned stag stands here, its antlers overgrown with thorned secondary growth that has fused with the original bone into a weapon system no design process would have arrived at deliberately.
+
+~
+The thorn-crown stag was once part of the forest's natural ecology; the corruption that has altered it has not changed its behavior so much as redirected its energy from flight to aggression, and the antler-thorns it now carries are a feature of its physiology that the forest finds useful.
+
+~
+97 0 -300 S
+84 1
+250 -18 12 11
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10031
+mycelium crawler~
+a mycelium crawler~
+A mycelium crawler moves just beneath the surface of the forest floor, visible as a long ripple of displaced leaf-litter before it erupts upward at close range.
+
+~
+The mycelium crawler is a primarily subterranean organism that uses the forest's root-network as both a navigation system and a prey-detection grid; it surfaces only to feed, and by the time it surfaces it already knows exactly where its target is.
+
+~
+97 0 -300 S
+82 0
+200 -15 10 10
+! 0 0 0 7 1052802 0 0
+| 512 128 0 0 0 32 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10032
+spore-maddened boar~
+a spore-maddened boar~
+A spore-maddened boar charges through the undergrowth, its eyes filmed with fungal growth and its behavior stripped of any function beyond aggressive forward motion.
+
+~
+The fungal infection that controls this boar has removed everything that might make it hesitate or retreat; what remains is a large, fast, heavily-built creature with no self-preservation instinct and the single-minded aggression of something that is no longer in control of its own decisions.
+
+~
+97 0 -350 S
+85 0
+270 -18 12 12
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10033
+elder vine serpent~
+an elder vine serpent~
+An elder vine serpent moves through the undergrowth, its body so large that it displaces the surrounding vegetation simply by existing in a space, the ground-vines parting before it without touching it.
+
+~
+The elder vine serpent has been in the Verdant Depths long enough that the forest has incorporated its body into the vine-network; the vines that grow from its scales are living extensions of the root-network, and it moves with information from the forest that ordinary predators do not have access to.
+
+~
+33554529 0 -500 S
+91 0
+700 -28 17 16
+! 0 0 0 7 1619980 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10034
+living deadfall~
+a living deadfall~
+A living deadfall occupies what appears at first to be a pile of fallen logs, the distinction between pile and creature becoming apparent only when the mass begins to move toward something.
+
+~
+The living deadfall is animated timber -- logs and branches that have been given collective purpose by the forest's will -- and it operates in environments where a pile of fallen logs is entirely unremarkable, which in the Verdant Depths is effectively everywhere.
+
+~
+97 0 -350 S
+87 0
+350 -22 13 12
+! 0 0 0 7 1052802 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10035
+deepwood shaman~
+a deepwood shaman~
+A deepwood shaman stands here, humanoid in shape but with bark-textured skin and eyes that emit a faint, cold bioluminescence, performing gestures of invocation toward the trees.
+
+~
+The deepwood shaman was once a druid, a cleric, or something similar; the forest's corruption has retained the technical knowledge while redirecting its application from protection to predation, which means the shaman commands the same forces it once would have used to defend but now uses to attack.
+
+~
+33554529 0 -500 S
+93 0
+900 -30 17 15
+! 0 0 0 7 12294 6656 0
+| 0 0 0 0 0 0 0
++ 35 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10036
+rootwoven horror~
+a rootwoven horror~
+A rootwoven horror occupies the path ahead, its body a massive tangle of living roots that has achieved a degree of coherence sufficient to give it definite form and directed movement.
+
+~
+The rootwoven horror is one of the forest's larger-scale defensive constructs, assembled from root-material when the need arises and returned to the root-network when the need passes; it exists in this form only because something the forest considers a threat is nearby.
+
+~
+33554529 0 -550 S
+94 0
+1000 -33 20 19
+! 0 0 0 7 1619980 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10037
+blightspore walker~
+a blightspore walker~
+A blightspore walker moves through the blightwood's interior zones trailing a persistent cloud of dark spores that settles on every surface it passes.
+
+~
+The blightspore walker is a fungal organism that has achieved locomotion by animating a host body; the original host is long gone in any meaningful sense, replaced by a fungal network that uses the body's motor functions while converting its remaining tissue into spore-production substrate.
+
+~
+97 0 -350 S
+86 0
+300 -18 12 12
+! 0 0 0 7 1052802 0 0
+| 512 128 0 0 0 32 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10038
+thornfang whelp~
+a thornfang whelp~
+A thornfang whelp moves through the undergrowth of the predator's den, its size smaller than the adults but its behavior identical in every relevant way.
+
+~
+The thornfang whelp has not yet reached the full size of the pack's adults but has already been trained to the pack's hunting methodology; it is smaller, faster, and less experienced in absorbing damage, which makes it dangerous in different ways than the adults.
+
+~
+97 0 -250 S
+82 0
+180 -13 10 10
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10039
+rootbound guardian~
+a rootbound guardian~
+A rootbound guardian stands at the inner boundary of the Rootmother's domain, its body a dense framework of living roots shaped into a form that serves the function of a guardian without having been designed as one.
+
+~
+The rootbound guardian grew from the Rootmother's root-network in response to intrusion; each one is a temporary extension of her will given physical form, and when it is no longer needed it will simply reintegrate with the network it came from.
+
+~
+97 0 -400 S
+90 0
+500 -25 15 14
+! 0 0 0 7 1062150 0 32
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #10081
