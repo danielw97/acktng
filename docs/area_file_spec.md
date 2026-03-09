@@ -599,6 +599,11 @@ Room description content requirements:
 - Each room's main `<description>~` must contain at least 3 lines of text.
 - Important rooms must contain at least 5 lines of text in the main `<description>~`.
 - Each room's main `<description>~` must be unique to that room (do not reuse identical room descriptions across rooms).
+- When a room uses a named exit (non-empty `<exit_keyword>`), that exit name must appear in at least one of:
+  - the room's main `<description>~`,
+  - an object that spawns in the room, or
+  - an `E` extra description in the room.
+- Puzzle guidance: you may chain details across multiple `E` extra descriptions; this is acceptable as long as the named exit is still discoverable through the room/object/extra-description text.
 
 Directional traversal constraints:
 
