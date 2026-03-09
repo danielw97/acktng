@@ -286,6 +286,163 @@ The feared leader of the desert raiders is a mountain of scarred muscle and crue
 ! 0 0 0 0 1650432 0 0
 | 2 4 0 1650432 0 2 4
 + 5 5 0 0 0 8 8 3 0
+#29924
+desert hyena~
+a desert hyena~
+A mangy desert hyena slinks through the shadows, ribs visible beneath matted fur.
+~
+This gaunt scavenger has a spotted, dusty coat and powerful jaws designed for crushing bone. Its yellow eyes gleam with feral cunning, and a low growl rumbles from its scarred throat.
+~
+97 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29925
+sand viper~
+a sand viper~
+A sand viper lies coiled in a depression, nearly invisible against the dust.
+~
+This thick-bodied serpent has sand-colored scales mottled with darker diamonds along its spine. Its triangular head and heat-sensing pits mark it as a pit viper, and venom drips from hinged fangs.
+~
+97 0 0 S
+71 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29926
+scorched zombie~
+a scorched zombie~
+A scorched zombie shambles forward, blackened flesh cracking with each step.
+~
+This walking corpse has been baked to a leathery husk by the desert sun, its skin split and charred. Wisps of acrid smoke rise from its joints, and its hollow eye sockets glow with a dull ember light.
+~
+16481 0 -750 S
+73 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#29927
+dust imp~
+a dust imp~
+A dust imp flutters in the air, cackling and throwing handfuls of grit.
+~
+This diminutive fiend has leathery wings, a pointed tail, and skin the color of dried clay. Its oversized eyes burn with malicious glee, and tiny horns curl from its wrinkled forehead.
+~
+97 0 -500 S
+72 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 128 64 0 0 0 128 64
+#29928
+bone collector~
+a bone collector~
+A bone collector crouches here, sorting through a pile of remains with skeletal fingers.
+~
+This emaciated undead creature wears a cloak stitched from dried skin and carries a sack overflowing with bones. Its long fingers end in sharpened nails, and it regards the living with hungry calculation.
+~
+16481 0 -750 S
+74 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#29929
+tomb spider~
+a tomb spider~
+A tomb spider clings to the ceiling, its pale body blending with the stone.
+~
+This oversized arachnid has a ghostly white carapace and legs spanning several feet. Its many eyes reflect light like polished onyx, and silk threads trail from its spinnerets in thin gossamer lines.
+~
+97 0 0 S
+75 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29930
+desiccated hound~
+a desiccated hound~
+A desiccated hound paces restlessly, dried tendons creaking with each stride.
+~
+This undead canine has been preserved by the arid climate, its mummified hide stretched taut over a wiry frame. Yellowed fangs jut from a lipless muzzle, and it tracks movement with empty eye sockets.
+~
+16481 0 -750 S
+71 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#29931
+sandstorm djinn~
+a sandstorm djinn~
+A sandstorm djinn hovers here, its lower body dissolving into a column of whirling sand.
+~
+This powerful elemental has the torso and arms of a muscular humanoid formed from compacted sand, while its lower half is a perpetual cyclone of grit and dust. Lightning crackles between its fingers.
+~
+97 0 0 S
+78 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 128 64 0 0 0 128 64
+#29932
+raider berserker~
+a raider berserker~
+A raider berserker paces here, covered in ritual scars and war paint.
+~
+This heavily muscled warrior has wild eyes and skin decorated with swirling patterns of ash and blood. Ritual scars crisscross bare arms thick with corded muscle, and a frothing rage simmers barely below the surface.
+~
+97 0 -500 S
+77 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29933
+ancient mummy~
+an ancient mummy~
+An ancient mummy stands rigid, tattered wrappings trailing from outstretched arms.
+~
+This towering figure is wrapped in layers of stained linen bandages, some of which have unraveled to reveal dark, preserved flesh beneath. Golden amulets and protective scarabs are woven into the wrappings.
+~
+16481 0 -750 S
+76 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#29934
+petrified sentinel~
+a petrified sentinel~
+A petrified sentinel stands motionless, its stone surface etched with arcane runes.
+~
+This humanoid figure appears carved from solid sandstone, but the faint grinding of stone joints reveals it as an animate guardian. Protective runes glow faintly across its broad chest and massive fists.
+~
+97 0 0 S
+79 0
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29935
+canyon raptor~
+a canyon raptor~
+A canyon raptor perches on a rocky ledge, its talons scraping stone.
+~
+This large predatory bird has dusty brown plumage and a wickedly hooked beak designed for tearing flesh. Its keen eyes scan the ground below, and powerful legs end in razor-sharp talons.
+~
+97 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29936
+ember scorpion~
+an ember scorpion~
+An ember scorpion glows with inner heat, its carapace pulsing orange and red.
+~
+This fearsome arachnid has a carapace that radiates heat like cooling magma, cracked with lines of glowing orange. Its stinger drips with superheated venom that sizzles when it hits the ground.
+~
+97 0 0 S
+73 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29937
+sand horror~
+a sand horror~
+A sand horror rises from the ground, a writhing mass of tentacles and grinding sand.
+~
+This aberrant creature has no fixed form, constantly shifting between a vaguely humanoid shape and a churning pillar of sand and grasping pseudopods. Multiple eye-like clusters of black glass peer out from its shifting mass.
+~
+97 0 -500 S
+80 0
+0 0 0 0
+! 0 0 0 0 3074 0 0
+| 128 64 0 0 0 128 64
 #0
 #OBJECTS
 #29900
@@ -610,11 +767,170 @@ A
 17 -95
 L
 85
+#29928
+scorched bone ring~
+a scorched bone ring~
+A ring carved from blackened bone lies in the dust.~
+9 128 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+A
+17 -83
+L
+73
+#29929
+sand-crusted anklet~
+a sand-crusted anklet~
+An anklet crusted with compacted sand rests on the ground.~
+9 128 10485760 1
+0 0 0 0 0 0 0 0 0 0
+12
+A
+17 -82
+L
+72
+#29930
+dusty linen cowl~
+a dusty linen cowl~
+A dusty linen cowl has been dropped here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+3
+A
+17 -84
+L
+74
+#29931
+dried sinew necklace~
+a dried sinew necklace~
+A necklace woven from dried sinew lies in a coil.~
+9 128 8388736 1
+0 0 0 0 0 0 0 0 0 0
+2
+A
+17 -85
+L
+75
+#29932
+bleached hide vest~
+a bleached hide vest~
+A vest of bleached animal hide lies crumpled here.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+7
+A
+17 -86
+L
+76
+#29933
+threadbare desert sash~
+a threadbare desert sash~
+A threadbare sash of sun-faded cloth lies here.~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+4
+A
+17 -83
+L
+73
+#29934
+cracked clay bracer~
+a cracked clay bracer~
+A bracer fashioned from fired clay lies on the ground.~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+13
+A
+17 -85
+L
+75
+#29935
+sand spider silk gloves~
+a pair of sand spider silk gloves~
+A pair of gloves woven from spider silk rests here.~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+9
+A
+17 -84
+L
+74
+#29936
+bone shard dagger~
+a bone shard dagger~
+A crude dagger fashioned from sharpened bone lies on the ground.~
+5 128 8421376 1
+0 0 0 2 0 0 0 0 0 0
+5
+A
+18 7
+A
+19 7
+L
+74
+#29937
+tattered sand wrap~
+a tattered sand wrap~
+A tattered wrap of sand-stained cloth lies here.~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+14
+A
+17 -84
+L
+74
+#29938
+desert hawk feather earring~
+a desert hawk feather earring~
+An earring adorned with a desert hawk feather lies in the sand.~
+9 128 8388672 1
+0 0 0 0 0 0 0 0 0 0
+2
+A
+17 -82
+L
+72
+#29939
+petrified wood shield~
+a petrified wood shield~
+A shield carved from petrified wood leans against a rock.~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+15
+A
+17 -88
+L
+78
+#29940
+tomb raider leg wraps~
+a pair of tomb raider's leg wraps~
+A pair of leg wraps made from scavenged tomb cloth sit here.~
+9 128 9437184 1
+0 0 0 0 0 0 0 0 0 0
+11
+A
+17 -86
+L
+76
+#29941
+dried scorpion tail whip~
+a dried scorpion tail whip~
+A whip fashioned from a dried scorpion tail lies coiled on the ground.~
+5 128 8421376 1
+0 0 0 3 0 0 0 0 0 0
+8
+A
+18 7
+A
+19 7
+L
+76
 #0
 #ROOMS
 #29900
 @@yWindswept Dunes@@N~
-@@yHot wind drives stinging sand across a vast expanse of rolling dunes. The sky above is a merciless white glare, and the horizon shimmers with heat haze in every direction. Faint tracks in the sand suggest that creatures pass through here, though the shifting dunes quickly erase all evidence.@@N
+@@yHot wind drives stinging sand across a vast expanse of rolling dunes. The sky above is a merciless white glare, and the horizon shimmers with heat haze in every direction. Faint tracks in the sand suggest that creatures pass through here, though the shifting dunes quickly erase all evidence.
+  The dunes rise and fall like frozen waves, their crests trailing ribbons of sand into the scalding air. Somewhere in the distance, a low moan echoes across the wasteland as the wind funnels through unseen rock formations. The heat is suffocating, pressing down like a physical weight.@@N
 ~
 32 10
 D2
@@ -624,7 +940,8 @@ D2
 S
 #29901
 @@yShifting Sand Expanse@@N~
-@@yThe sand here is fine and loose, swallowing each footstep ankle-deep. Desiccated scrub brush clings to the slopes of the dunes, rattling in the constant wind. A crumbling stone obelisk is visible to the east, while the terrain drops into sun-baked flats to the south.@@N
+@@yThe sand here is fine and loose, swallowing each footstep ankle-deep. Desiccated scrub brush clings to the slopes of the dunes, rattling in the constant wind. A crumbling stone obelisk is visible to the east, while the terrain drops into sun-baked flats to the south.
+  Heat mirages ripple across the sand, conjuring phantom lakes and ghostly towers on the horizon. The dunes stretch endlessly in every direction, their shifting surfaces erasing all sense of direction. A faint sulfurous smell rises from sun-baked mineral deposits beneath the sand.@@N
 ~
 32 10
 D0
@@ -642,7 +959,8 @@ D2
 S
 #29902
 @@yCrumbling Obelisk@@N~
-@@yA weathered stone obelisk rises from the sand, its carved hieroglyphs nearly obliterated by centuries of wind erosion. The base is surrounded by scattered rubble and half-buried stone blocks. Whatever monument once stood here has been reduced to this single defiant pillar.@@N
+@@yA weathered stone obelisk rises from the sand, its carved hieroglyphs nearly obliterated by centuries of wind erosion. The base is surrounded by scattered rubble and half-buried stone blocks. Whatever monument once stood here has been reduced to this single defiant pillar.
+  Fragments of colored tile and shattered pottery litter the ground around the obelisk's base, remnants of offerings left by long-dead pilgrims. The remaining hieroglyphs hint at warnings to trespassers, though the language is too ancient to decipher with certainty.@@N
 ~
 32 10
 D3
@@ -652,7 +970,8 @@ D3
 S
 #29903
 @@ySun-Baked Flats@@N~
-@@yThe dunes give way to a broad hardpan flat baked to cracked ceramic by the relentless sun. Thin salt deposits create white veins across the tan earth. Bleached bones of unlucky travelers and animals litter the ground in scattered clusters.@@N
+@@yThe dunes give way to a broad hardpan flat baked to cracked ceramic by the relentless sun. Thin salt deposits create white veins across the tan earth. Bleached bones of unlucky travelers and animals litter the ground in scattered clusters.
+  The flat extends in a broad sweep, its surface crackling underfoot like broken pottery. Dried salt flats shimmer blindingly where the sun catches them. The skeletal remains of a caravan wagon lie half-swallowed by the earth, its wooden ribs bleached to the same bone-white as the surrounding remains.@@N
 ~
 32 10
 D0
@@ -670,7 +989,8 @@ D2
 S
 #29904
 @@yBleached Bone Field@@N~
-@@yCountless bones protrude from the cracked earth in grotesque arrangements, a graveyard of creatures that perished crossing this merciless flat. Vultures circle overhead, patient and watchful. The bones clatter softly whenever the wind picks up.@@N
+@@yCountless bones protrude from the cracked earth in grotesque arrangements, a graveyard of creatures that perished crossing this merciless flat. Vultures circle overhead, patient and watchful. The bones clatter softly whenever the wind picks up.
+  Some of the larger skeletons are still partially articulated, frozen in their final moments of desperate crawling toward water that never came. Sun-cracked skulls grin upward at the pitiless sky. The ground between the remains is littered with rusted buckles, corroded coins, and fragments of sun-rotted leather.@@N
 ~
 32 10
 D1
@@ -684,7 +1004,8 @@ D3
 S
 #29905
 @@yVulture's Perch@@N~
-@@yA cluster of dead trees stands here, their bleached trunks stripped bare by the elements. Large vultures roost in the twisted branches, hunched and silent, occasionally spreading tattered wings to catch the thermal updrafts that rise from the scorching sand.@@N
+@@yA cluster of dead trees stands here, their bleached trunks stripped bare by the elements. Large vultures roost in the twisted branches, hunched and silent, occasionally spreading tattered wings to catch the thermal updrafts that rise from the scorching sand.
+  The ground beneath the trees is splattered with droppings and littered with regurgitated bone pellets. The vultures regard all movement below with patient, calculating interest, their bald heads swiveling in eerie unison. A pungent carrion stench hangs thick in the still air.@@N
 ~
 32 10
 D3
@@ -694,7 +1015,8 @@ D3
 S
 #29906
 @@yDry Riverbed@@N~
-@@yA wide channel of smooth stones and cracked mud marks a river that dried up long ago. The banks rise steeply on either side, creating a natural corridor through the landscape. Occasional patches of thorny scrub have taken root between the water-worn rocks.@@N
+@@yA wide channel of smooth stones and cracked mud marks a river that dried up long ago. The banks rise steeply on either side, creating a natural corridor through the landscape. Occasional patches of thorny scrub have taken root between the water-worn rocks.
+  Smooth river stones of every color carpet the channel floor, polished by centuries of rushing water that has long since vanished. Deep cracks in the dried mud have curled upward at the edges like brittle parchment. The shade from the high banks offers some relief from the sun, but the trapped air is stifling and still.@@N
 ~
 32 10
 D0
@@ -712,7 +1034,8 @@ D2
 S
 #29907
 @@yAncient Well@@N~
-@@yA circular stone well stands in a shallow depression, its rim worn smooth by countless hands over many centuries. The bucket rope has long since rotted away, and peering into the dark shaft reveals nothing but dry emptiness far below.@@N
+@@yA circular stone well stands in a shallow depression, its rim worn smooth by countless hands over many centuries. The bucket rope has long since rotted away, and peering into the dark shaft reveals nothing but dry emptiness far below.
+  Carved symbols ring the well's exterior, prayers to forgotten water gods etched by desperate hands. A faint, dry updraft rises from the shaft, carrying the dusty scent of deep stone. Several small offerings of beads and carved figurines have been left on the rim by travelers hoping the water might return.@@N
 ~
 32 10
 D2
@@ -726,7 +1049,8 @@ D3
 S
 #29908
 @@yCanyon Mouth@@N~
-@@yThe dry riverbed narrows into a steep-walled canyon, the rock faces scored with horizontal striations from ancient flood waters. A dark cave opening yawns in the southern wall, exhaling cool air that smells faintly of chitin and something worse.@@N
+@@yThe dry riverbed narrows into a steep-walled canyon, the rock faces scored with horizontal striations from ancient flood waters. A dark cave opening yawns in the southern wall, exhaling cool air that smells faintly of chitin and something worse.
+  The canyon walls tower overhead, their layered strata telling a geological story of ancient seas and vanished rivers. Loose scree crunches underfoot, and the echoes of each footstep bounce between the narrow walls. Dark stains around the cave mouth suggest something regularly drags prey inside.@@N
 ~
 32 10
 D0
@@ -740,7 +1064,8 @@ D2
 S
 #29909
 @@ySandstone Arch@@N~
-@@yA natural arch of layered sandstone spans the trail here, eroded into a graceful curve by millennia of wind. The stone is banded in shades of amber and rust, and the sheltered area beneath offers a brief respite from the punishing desert sun.@@N
+@@yA natural arch of layered sandstone spans the trail here, eroded into a graceful curve by millennia of wind. The stone is banded in shades of amber and rust, and the sheltered area beneath offers a brief respite from the punishing desert sun.
+  Travelers have scratched names and dates into the softer stone beneath the arch, some dating back centuries. A cairn of flat stones marks the junction of several trails, and small lizards bask on the sun-warmed rock, darting into crevices at the slightest disturbance.@@N
 ~
 32 10
 D0
@@ -758,7 +1083,8 @@ D2
 S
 #29910
 @@yDesert Crossroads@@N~
-@@ySeveral faint trails converge at this barren junction marked by a sun-bleached wooden signpost. The sign's painted directions have long since faded, leaving only bare splintered wood. Boot prints and cart tracks in the hard-packed sand suggest regular traffic heading east.@@N
+@@ySeveral faint trails converge at this barren junction marked by a sun-bleached wooden signpost. The sign's painted directions have long since faded, leaving only bare splintered wood. Boot prints and cart tracks in the hard-packed sand suggest regular traffic heading east.
+  A pile of discarded water skins and broken sandals marks this as a rest stop for desert travelers, though the picked-over remains suggest bandits monitor the crossroads. Scuff marks and dried bloodstains in the sand hint at ambushes past.@@N
 ~
 32 10
 D1
@@ -772,7 +1098,8 @@ D3
 S
 #29911
 @@yOasis of Shimmering Sands@@N~
-@@yA small oasis pools in a rocky basin, fed by a trickle of water seeping from cracked stone. A few stubborn palms provide dappled shade, and the air here carries a faint coolness. Animal tracks of every description crowd the muddy banks of the shallow water.@@N
+@@yA small oasis pools in a rocky basin, fed by a trickle of water seeping from cracked stone. A few stubborn palms provide dappled shade, and the air here carries a faint coolness. Animal tracks of every description crowd the muddy banks of the shallow water.
+  The water is clear but shallow, reflecting the palm fronds above in a shimmering mirror. Dragonflies hover over the surface, and the gentle plop of small frogs punctuates the relative quiet. This precious water source draws every living thing for miles, making it both a sanctuary and a hunting ground.@@N
 ~
 2 10
 D0
@@ -786,7 +1113,8 @@ D2
 S
 #29912
 @@yPalm Grove@@N~
-@@yA cluster of date palms grows from the sandy soil, their fronds providing blessed shade from the brutal sun. Fallen dates litter the ground, attracting insects and small lizards. The grove extends southward along a shallow depression in the terrain.@@N
+@@yA cluster of date palms grows from the sandy soil, their fronds providing blessed shade from the brutal sun. Fallen dates litter the ground, attracting insects and small lizards. The grove extends southward along a shallow depression in the terrain.
+  The palms sway gently in a breeze that barely reaches the ground level, their rustling fronds creating a soothing whisper. Beetle tracks wind between the trunks, and the sweet fermenting smell of overripe dates mingles with the earthy scent of rare moisture in the soil.@@N
 ~
 0 10
 D0
@@ -804,7 +1132,8 @@ D2
 S
 #29913
 @@yMerchant's Ruin@@N~
-@@yThe collapsed remains of a merchant's outpost lie scattered across the sand. Broken wagon wheels, shattered pottery, and torn fabric speak to a violent end. Scorch marks on the remaining timbers suggest raiders were responsible for the destruction.@@N
+@@yThe collapsed remains of a merchant's outpost lie scattered across the sand. Broken wagon wheels, shattered pottery, and torn fabric speak to a violent end. Scorch marks on the remaining timbers suggest raiders were responsible for the destruction.
+  A partially collapsed stone foundation is all that remains of what was once a trading post. Shards of glazed pottery from distant lands crunch underfoot, and faded scraps of silk flutter from splintered beams. The sand has already begun reclaiming the ruins.@@N
 ~
 32 10
 D3
@@ -814,7 +1143,8 @@ D3
 S
 #29914
 @@yTemple Forecourt@@N~
-@@ySmooth flagstones emerge from beneath the encroaching sand, forming a broad courtyard before an ancient structure to the south. Toppled columns line what was once a grand processional avenue, and faded carvings of desert deities adorn every stone surface.@@N
+@@ySmooth flagstones emerge from beneath the encroaching sand, forming a broad courtyard before an ancient structure to the south. Toppled columns line what was once a grand processional avenue, and faded carvings of desert deities adorn every stone surface.
+  The scale of the architecture speaks to a civilization of great power and ambition. Fallen column drums lie scattered like discarded building blocks, each taller than a person. Traces of red and blue paint cling to protected crevices in the stone, hinting at the vibrant colors that once adorned this approach.@@N
 ~
 32 10
 D0
@@ -828,7 +1158,8 @@ D2
 S
 #29915
 @@ySphinx Gate@@N~
-@@yTwo enormous sphinx statues flank a monumental gateway, their stone faces weathered but still radiating stern authority. The passage between them leads south into shadowed depths. To the east, a toppled colossus lies half-buried in the drifting sand.@@N
+@@yTwo enormous sphinx statues flank a monumental gateway, their stone faces weathered but still radiating stern authority. The passage between them leads south into shadowed depths. To the east, a toppled colossus lies half-buried in the drifting sand.
+  Each sphinx is carved from a single massive block of granite, their lion bodies crouched in eternal vigilance. Faint traces of gold leaf still cling to their headdresses, and their eyes seem to track movement with unsettling awareness. The gateway between them exhales cold, tomb-scented air.@@N
 ~
 32 10
 D0
@@ -846,7 +1177,8 @@ D2
 S
 #29916
 @@yCracked Colossus@@N~
-@@yA titanic stone statue lies broken on its side, half-consumed by the desert. The carved face still bears traces of painted features, gazing skyward with sightless eyes. Sand has drifted into the cracks and hollows of the enormous form.@@N
+@@yA titanic stone statue lies broken on its side, half-consumed by the desert. The carved face still bears traces of painted features, gazing skyward with sightless eyes. Sand has drifted into the cracks and hollows of the enormous form.
+  The colossus must have stood thirty feet tall when whole. Its outstretched stone hand lies palm-up in the sand, large enough to stand in. Chisel marks along the fracture line suggest the toppling was deliberate, perhaps by conquering invaders seeking to erase the memory of the king it depicted.@@N
 ~
 32 10
 D3
@@ -856,7 +1188,8 @@ D3
 S
 #29917
 @@yTemple Entrance@@N~
-@@yMassive stone doors stand ajar at the base of the ancient structure, revealing a dark passage descending into the earth below. Carved warnings in a dead language border the entrance, and the air rising from the depths carries the musty scent of sealed tombs.@@N
+@@yMassive stone doors stand ajar at the base of the ancient structure, revealing a dark passage descending into the earth below. Carved warnings in a dead language border the entrance, and the air rising from the depths carries the musty scent of sealed tombs.
+  The doors themselves are masterworks of carved stone, depicting the journey of the dead through the underworld. Deep grooves in the threshold show where they were forced open by tomb robbers long ago. Dried offerings and burnt-out torches litter the entrance, abandoned by those who lost their nerve.@@N
 ~
 32 10
 D0
@@ -870,7 +1203,8 @@ D5
 S
 #29918
 @@bTemple Antechamber@@N~
-@@bSteps descend into a vaulted antechamber of dressed sandstone blocks. Faded murals cover the walls, depicting scenes of ancient desert kingdoms in pigments of ochre and lapis. The air is cool and still, sealed away from the desert above for uncounted centuries.@@N
+@@bSteps descend into a vaulted antechamber of dressed sandstone blocks. Faded murals cover the walls, depicting scenes of ancient desert kingdoms in pigments of ochre and lapis. The air is cool and still, sealed away from the desert above for uncounted centuries.
+  The vaulted ceiling is supported by carved pillars shaped like bound papyrus stalks, their surfaces covered in protective hieroglyphs. A thick layer of undisturbed dust covers the floor except where recent intruders have left tracks. The temperature drop from the surface is dramatic and immediate.@@N
 ~
 8 11
 D2
@@ -884,7 +1218,8 @@ D4
 S
 #29919
 @@bPillared Hall@@N~
-@@bRows of massive stone pillars march into the gloom, each carved with spiraling hieroglyphs that once recorded the deeds of forgotten rulers. The ceiling vanishes into darkness overhead, and footsteps echo sharply off the polished stone floor.@@N
+@@bRows of massive stone pillars march into the gloom, each carved with spiraling hieroglyphs that once recorded the deeds of forgotten rulers. The ceiling vanishes into darkness overhead, and footsteps echo sharply off the polished stone floor.
+  The pillars are arranged in two parallel rows, creating a grand processional nave that speaks of ceremonies and processions long past. Faint scratching sounds emanate from the shadows between the columns, and the polished floor reflects what little light enters, creating ghostly doubles of every movement.@@N
 ~
 8 11
 D0
@@ -902,7 +1237,8 @@ D2
 S
 #29920
 @@bHieroglyph Corridor@@N~
-@@bEvery surface of this narrow corridor is covered in densely packed hieroglyphs, carved with painstaking precision into the limestone walls. The symbols seem to shift in the flickering torchlight, creating an unsettling illusion of movement.@@N
+@@bEvery surface of this narrow corridor is covered in densely packed hieroglyphs, carved with painstaking precision into the limestone walls. The symbols seem to shift in the flickering torchlight, creating an unsettling illusion of movement.
+  The hieroglyphs tell stories of divine judgment, depicting weighing of hearts and trials of the dead. Some sections have been scratched over or deliberately defaced, as if someone tried to alter the recorded history. A faint humming vibration resonates through the stone, barely perceptible but deeply unsettling.@@N
 ~
 8 11
 D1
@@ -916,7 +1252,8 @@ D3
 S
 #29921
 @@bStatue Gallery@@N~
-@@bLife-sized stone statues of warriors, priests, and nobles line both walls of this long gallery. Each figure is carved in exquisite detail, frozen in postures of devotion or martial readiness. Their stone eyes seem to follow movement through the chamber.@@N
+@@bLife-sized stone statues of warriors, priests, and nobles line both walls of this long gallery. Each figure is carved in exquisite detail, frozen in postures of devotion or martial readiness. Their stone eyes seem to follow movement through the chamber.
+  Each statue holds authentic weapons and wears carved replicas of ceremonial garments, preserved in stone for eternity. Several have been damaged, missing heads or arms, and one has been toppled entirely, shattering across the gallery floor. The intact figures maintain their vigil with eerie patience.@@N
 ~
 8 11
 D2
@@ -930,7 +1267,8 @@ D3
 S
 #29922
 @@bOffering Chamber@@N~
-@@bStone altars stand at the cardinal points of this circular chamber, their surfaces stained dark by centuries of ritual offerings. Clay vessels and ceremonial blades litter the dusty floor, and the faint scent of ancient incense still lingers in the stale air.@@N
+@@bStone altars stand at the cardinal points of this circular chamber, their surfaces stained dark by centuries of ritual offerings. Clay vessels and ceremonial blades litter the dusty floor, and the faint scent of ancient incense still lingers in the stale air.
+  The domed ceiling above is painted with a faded star map, its constellations no longer matching the night sky after millennia of stellar drift. Channels carved into the floor once directed ritual fluids from the altars to a central drain, now clogged with dust and debris.@@N
 ~
 8 11
 D0
@@ -948,7 +1286,8 @@ D2
 S
 #29923
 @@bTrapped Hallway@@N~
-@@bThis corridor's stone tiles are slightly uneven, some depressed more than others. Small holes dot the walls at regular intervals, their dark interiors hinting at hidden mechanisms. The bones of less cautious explorers lie scattered near several of the more obvious pressure plates.@@N
+@@bThis corridor's stone tiles are slightly uneven, some depressed more than others. Small holes dot the walls at regular intervals, their dark interiors hinting at hidden mechanisms. The bones of less cautious explorers lie scattered near several of the more obvious pressure plates.
+  Closer inspection reveals the remains of spring-loaded dart launchers behind the wall openings, most now corroded beyond function. A few pressure plates have been deliberately jammed with wedged stones by previous explorers. The acrid residue of ancient poison still stains the dart tips embedded in the far wall.@@N
 ~
 8 11
 D0
@@ -966,7 +1305,8 @@ D3
 S
 #29924
 @@bBurial Alcove@@N~
-@@bRecessed niches line the walls of this cramped chamber, each containing the wrapped remains of lesser servants entombed to attend their masters in the afterlife. Tattered linen and shards of funerary pottery crunch underfoot.@@N
+@@bRecessed niches line the walls of this cramped chamber, each containing the wrapped remains of lesser servants entombed to attend their masters in the afterlife. Tattered linen and shards of funerary pottery crunch underfoot.
+  Some of the burial niches have been disturbed, their occupants dragged out and stripped of valuables by looters. A few mummified faces peer out from intact wrappings, their features frozen in expressions that suggest they were not entirely willing participants in their eternal service.@@N
 ~
 8 11
 D3
@@ -976,7 +1316,8 @@ D3
 S
 #29925
 @@bSarcophagus Room@@N~
-@@bAn ornate stone sarcophagus dominates the center of this chamber, its lid carved with a serene sleeping face. Canopic jars stand in alcoves along the walls, and fine gold dust coats every surface, giving the room an otherworldly shimmer.@@N
+@@bAn ornate stone sarcophagus dominates the center of this chamber, its lid carved with a serene sleeping face. Canopic jars stand in alcoves along the walls, and fine gold dust coats every surface, giving the room an otherworldly shimmer.
+  The sarcophagus lid has been partially shifted, revealing darkness within. Elaborate protective spells are carved into the lid's underside in gold-filled hieroglyphs. The canopic jars are carved from alabaster, each topped with the head of a different guardian spirit.@@N
 ~
 8 11
 D0
@@ -990,7 +1331,8 @@ D2
 S
 #29926
 @@bGuardian Chamber@@N~
-@@bThis fortified room was clearly designed as a defensive position. Arrow slits are cut into the thick walls, and stone barricades provide cover. Racks along the walls once held weapons, though most have been claimed by rust and time.@@N
+@@bThis fortified room was clearly designed as a defensive position. Arrow slits are cut into the thick walls, and stone barricades provide cover. Racks along the walls once held weapons, though most have been claimed by rust and time.
+  The strategic placement of this chamber at a chokepoint in the tomb speaks to the builders' paranoia about intruders. Murder holes in the ceiling once allowed defenders to rain death from above. Scattered bronze arrowheads and corroded sword fragments tell of battles fought here in ages past.@@N
 ~
 8 11
 D0
@@ -1000,7 +1342,8 @@ D0
 S
 #29927
 @@bCollapsed Passage@@N~
-@@bA partial cave-in has choked this corridor with rubble, leaving only a narrow gap to squeeze through. Dust motes hang in the still air, and the cracked ceiling groans ominously. Fresh scratch marks on the stones suggest something has been clawing its way through.@@N
+@@bA partial cave-in has choked this corridor with rubble, leaving only a narrow gap to squeeze through. Dust motes hang in the still air, and the cracked ceiling groans ominously. Fresh scratch marks on the stones suggest something has been clawing its way through.
+  Massive stone blocks have shifted and cracked, creating a precarious maze of leaning walls and unstable debris. The air is thick with ancient stone dust that catches in the throat. Somewhere beyond the rubble, a faint scraping sound echoes through the gaps.@@N
 ~
 8 11
 D1
@@ -1010,7 +1353,8 @@ D1
 S
 #29928
 @@bFlooded Chamber@@N~
-@@bStagnant water covers the floor of this low-ceilinged room to knee depth, seeping from cracks in the ancient stonework. The surface is covered with a thin film of mineral deposits, and the walls are slick with moisture and pale fungal growth.@@N
+@@bStagnant water covers the floor of this low-ceilinged room to knee depth, seeping from cracks in the ancient stonework. The surface is covered with a thin film of mineral deposits, and the walls are slick with moisture and pale fungal growth.
+  The water is murky and warm, with an unpleasant metallic taste to the air above it. Submerged stone furnishings create hidden obstacles beneath the opaque surface. Pale, eyeless cave fish dart away from disturbances, and the constant dripping from the ceiling creates an irregular percussion.@@N
 ~
 8 11
 D0
@@ -1028,7 +1372,8 @@ D2
 S
 #29929
 @@bMosaic Room@@N~
-@@bThe floor of this chamber is an intricate mosaic depicting a great desert battle between rival pharaohs. Tiny colored tiles of glass and stone create a vivid scene of chariots, warriors, and raining arrows. Portions have been damaged by water and time.@@N
+@@bThe floor of this chamber is an intricate mosaic depicting a great desert battle between rival pharaohs. Tiny colored tiles of glass and stone create a vivid scene of chariots, warriors, and raining arrows. Portions have been damaged by water and time.
+  The artistry is remarkable, with individual warriors rendered in such detail that their expressions of rage and fear are clearly visible. Gold and lapis tiles highlight the victorious pharaoh's chariot at the mosaic's center. Sections where tiles have been pried loose reveal the careful mortar work beneath.@@N
 ~
 8 11
 D1
@@ -1046,7 +1391,8 @@ D3
 S
 #29930
 @@bTreasure Vault Antechamber@@N~
-@@bThis small room is dominated by a massive stone door in the eastern wall, sealed shut with heavy bronze bolts corroded green with age. Scratch marks and tool gouges around the frame suggest many failed attempts to force entry over the centuries.@@N
+@@bThis small room is dominated by a massive stone door in the eastern wall, sealed shut with heavy bronze bolts corroded green with age. Scratch marks and tool gouges around the frame suggest many failed attempts to force entry over the centuries.
+  The door is carved with images of guardian serpents intertwined around a central seal of office. Broken tools and discarded pry bars litter the floor, testament to the door's unyielding construction. A faint draft seeps through the hairline gap between door and frame, carrying the scent of old metal.@@N
 ~
 8 11
 D3
@@ -1056,7 +1402,8 @@ D3
 S
 #29931
 @@bSacred Pool@@N~
-@@bA natural spring feeds a shallow pool of surprisingly clear water in a basin carved from the living rock. Offerings of coins and small statues lie beneath the surface, and the water glows with a faint phosphorescence from minerals dissolved in its depths.@@N
+@@bA natural spring feeds a shallow pool of surprisingly clear water in a basin carved from the living rock. Offerings of coins and small statues lie beneath the surface, and the water glows with a faint phosphorescence from minerals dissolved in its depths.
+  The spring bubbles up from a fissure in the bedrock with a gentle, constant murmur. Ancient carvings around the pool's rim depict water deities receiving the prayers of the faithful. The phosphorescent glow gives the chamber an otherworldly beauty, casting rippling light patterns across the ceiling.@@N
 ~
 10 11
 D0
@@ -1066,7 +1413,8 @@ D0
 S
 #29932
 @@bInscription Hall@@N~
-@@bThis long hall serves as a record chamber, its walls covered floor to ceiling with columns of meticulously carved text. The inscriptions chronicle the reign of the entombed pharaoh, from ascension to conquest to the construction of this very tomb.@@N
+@@bThis long hall serves as a record chamber, its walls covered floor to ceiling with columns of meticulously carved text. The inscriptions chronicle the reign of the entombed pharaoh, from ascension to conquest to the construction of this very tomb.
+  The precision of the carving is extraordinary, each hieroglyph as crisp as the day it was cut. Running fingers along the text reveals the depth and confidence of the stone mason's hand. Later sections of the chronicle appear rushed, the hieroglyphs smaller and more tightly packed, as if the scribes were running out of wall space or time.@@N
 ~
 8 11
 D0
@@ -1084,7 +1432,8 @@ D3
 S
 #29933
 @@bRitual Chamber@@N~
-@@bBlackened scorch marks radiate outward from a stone circle etched into the floor of this domed chamber. Residual magical energy makes the air crackle faintly, and arcane symbols glow with a dim phosphorescence along the curved walls.@@N
+@@bBlackened scorch marks radiate outward from a stone circle etched into the floor of this domed chamber. Residual magical energy makes the air crackle faintly, and arcane symbols glow with a dim phosphorescence along the curved walls.
+  The ritual circle is deeply incised into the stone, its lines filled with a dark metalite substance that absorbs light. Hair stands on end upon entering the room, and a persistent tingling sensation crawls across exposed skin. The dome overhead amplifies even whispered words into resonant echoes.@@N
 ~
 8 11
 D2
@@ -1098,7 +1447,8 @@ D3
 S
 #29934
 @@bPharaoh's Antechamber@@N~
-@@bGold leaf still clings to the walls of this lavishly decorated room, depicting scenes of the pharaoh's divine ascension. Two stone jackals guard the passage south, their jeweled eyes gleaming with an inner light that seems almost alive.@@N
+@@bGold leaf still clings to the walls of this lavishly decorated room, depicting scenes of the pharaoh's divine ascension. Two stone jackals guard the passage south, their jeweled eyes gleaming with an inner light that seems almost alive.
+  The wealth displayed here is staggering even in its diminished state. Sheets of hammered gold cover the walls in overlapping panels, each depicting a stage of the pharaoh's journey to godhood. The jackal guardians are carved from black basalt, their ruby eyes seeming to pulse with a watchful awareness.@@N
 ~
 8 11
 D0
@@ -1112,7 +1462,8 @@ D2
 S
 #29935
 @@RPharaoh's Throne Room@@N~
-@@RA vast chamber stretches before you, its vaulted ceiling supported by columns of polished obsidian. At the far end, a golden throne sits upon a raised dais, flanked by braziers that burn with unnatural violet flame. The air thrums with ancient power.@@N
+@@RA vast chamber stretches before you, its vaulted ceiling supported by columns of polished obsidian. At the far end, a golden throne sits upon a raised dais, flanked by braziers that burn with unnatural violet flame. The air thrums with ancient power.
+  The obsidian columns reflect the violet firelight in dark, liquid ripples along their polished surfaces. The throne itself is carved from a single block of gold-veined quartz, its back shaped like a spread-winged sun disk. The atmosphere is charged with millennia of accumulated magical energy, making the air thick and difficult to breathe.@@N
 ~
 12 11
 D0
@@ -1122,7 +1473,8 @@ D0
 S
 #29936
 @@bHidden Passage@@N~
-@@bBehind a cleverly disguised section of wall lies this narrow secret corridor. The stones here are rougher and less decorated than the main tomb, suggesting this passage was built for servants or as an emergency escape route for the tomb builders.@@N
+@@bBehind a cleverly disguised section of wall lies this narrow secret corridor. The stones here are rougher and less decorated than the main tomb, suggesting this passage was built for servants or as an emergency escape route for the tomb builders.
+  The walls are unfinished limestone, still bearing the chisel marks of hurried construction. Soot stains on the ceiling mark where torches were carried in haste. A few crude graffiti scratched by ancient workers survive on the walls, simple prayers and the names of forgotten laborers.@@N
 ~
 8 11
 D1
@@ -1136,7 +1488,8 @@ D2
 S
 #29937
 @@bSecret Treasury@@N~
-@@bThis concealed vault contains stone shelves lined with dusty amphorae and sealed clay jars. A few have been broken open, revealing desiccated herbs and oils meant to preserve the dead. A dark shaft in the floor descends even deeper into the earth.@@N
+@@bThis concealed vault contains stone shelves lined with dusty amphorae and sealed clay jars. A few have been broken open, revealing desiccated herbs and oils meant to preserve the dead. A dark shaft in the floor descends even deeper into the earth.
+  The shelves are carved directly from the rock walls, each jar carefully labeled with hieratic script identifying its contents. The broken vessels have spilled their desiccated contents across the floor, filling the air with a complex fragrance of ancient spices and resinous oils. The shaft in the floor drops into absolute darkness.@@N
 ~
 8 11
 D0
@@ -1150,7 +1503,8 @@ D5
 S
 #29938
 @@bCatacomb Entrance@@N~
-@@bRough-hewn steps descend from the treasury above into a network of cramped tunnels carved from solid bedrock. The air here is thick with dust and the faint sweet odor of ancient decay. Crude torch sconces line the walls at irregular intervals.@@N
+@@bRough-hewn steps descend from the treasury above into a network of cramped tunnels carved from solid bedrock. The air here is thick with dust and the faint sweet odor of ancient decay. Crude torch sconces line the walls at irregular intervals.
+  The steps are worn concave from centuries of foot traffic, their surfaces slippery with condensation. The tunnels ahead branch and twist, clearly expanded over many generations of use. Iron brackets for long-vanished torches are corroded to brittle shells, and the sweet decay smell grows stronger deeper in.@@N
 ~
 8 11
 D2
@@ -1164,7 +1518,8 @@ D4
 S
 #29939
 @@bBone-Lined Corridor@@N~
-@@bHuman bones have been stacked with disturbing precision along both walls of this corridor, femurs and tibias forming neat rows with skulls placed at regular intervals. The macabre display stretches into the darkness ahead, creating walls of the dead.@@N
+@@bHuman bones have been stacked with disturbing precision along both walls of this corridor, femurs and tibias forming neat rows with skulls placed at regular intervals. The macabre display stretches into the darkness ahead, creating walls of the dead.
+  The bones are dry and yellowed with age, some crumbling at the slightest vibration. The skulls are arranged facing outward, their empty eye sockets creating an endless audience of the dead. Occasionally a bone shifts and clatters to the floor, the sound echoing through the tunnels with unnerving volume.@@N
 ~
 8 11
 D0
@@ -1182,7 +1537,8 @@ D2
 S
 #29940
 @@bOssuary@@N~
-@@bThis domed chamber is filled with towering piles of skeletal remains, sorted by type. Skulls form one mound, ribcages another, long bones yet another. The sheer volume of remains suggests this place served as a mass burial site for generations.@@N
+@@bThis domed chamber is filled with towering piles of skeletal remains, sorted by type. Skulls form one mound, ribcages another, long bones yet another. The sheer volume of remains suggests this place served as a mass burial site for generations.
+  The sorted piles rise nearly to the domed ceiling, thousands of individuals reduced to categorized heaps. The organizational precision is both methodical and deeply disturbing. A fine bone dust covers everything, stirred into choking clouds by any movement through the chamber.@@N
 ~
 8 11
 D1
@@ -1196,7 +1552,8 @@ D3
 S
 #29941
 @@bCrypt of the Forgotten@@N~
-@@bUnmarked stone coffins fill this low chamber, stacked three high in places. Whoever was buried here was not important enough to warrant inscriptions or decoration, their identities lost to the ages. A thick layer of dust covers everything.@@N
+@@bUnmarked stone coffins fill this low chamber, stacked three high in places. Whoever was buried here was not important enough to warrant inscriptions or decoration, their identities lost to the ages. A thick layer of dust covers everything.
+  The coffins are rough-hewn and unadorned, their plain surfaces a stark contrast to the ornate sarcophagi of the upper tomb. Many lids have been displaced, revealing empty interiors or scattered remains. The low ceiling forces a hunched posture, adding claustrophobia to the already oppressive atmosphere.@@N
 ~
 8 11
 D0
@@ -1214,7 +1571,8 @@ D2
 S
 #29942
 @@bEmbalming Chamber@@N~
-@@bStone slabs stained dark with ancient fluids stand at the center of this room, surrounded by shelves of dusty canopic jars and tarnished embalming tools. Drainage channels carved into the floor lead to a central collection basin.@@N
+@@bStone slabs stained dark with ancient fluids stand at the center of this room, surrounded by shelves of dusty canopic jars and tarnished embalming tools. Drainage channels carved into the floor lead to a central collection basin.
+  The embalming slabs are tilted slightly, with grooved channels to direct fluids into clay catch basins below. Tarnished bronze hooks, blades, and long-handled spoons hang from wall pegs, each designed for a specific step in the preservation ritual. A lingering chemical sharpness cuts through the dust.@@N
 ~
 8 11
 D3
@@ -1224,7 +1582,8 @@ D3
 S
 #29943
 @@bDust-Choked Passage@@N~
-@@bFine powdery dust fills this corridor so thickly that each step sends up choking clouds. The walls are barely visible through the haze, and breathing becomes difficult. Something has been moving through here recently, leaving disturbed trails in the deep dust.@@N
+@@bFine powdery dust fills this corridor so thickly that each step sends up choking clouds. The walls are barely visible through the haze, and breathing becomes difficult. Something has been moving through here recently, leaving disturbed trails in the deep dust.
+  The dust lies ankle-deep in places, accumulated over centuries of slow stone erosion. Each footfall produces a muffled crunch and a billowing cloud that hangs in the stagnant air. The trails left by recent passage are wide and erratic, as if whatever made them was dragging something heavy.@@N
 ~
 9 11
 D0
@@ -1242,7 +1601,8 @@ D2
 S
 #29944
 @@bChamber of Whispers@@N~
-@@bThe acoustics of this oddly shaped chamber create an unsettling effect where the faintest sound is amplified into ghostly whispers that seem to come from everywhere at once. The curved walls are carved with hundreds of small mouths, all frozen open in silent speech.@@N
+@@bThe acoustics of this oddly shaped chamber create an unsettling effect where the faintest sound is amplified into ghostly whispers that seem to come from everywhere at once. The curved walls are carved with hundreds of small mouths, all frozen open in silent speech.
+  The carved mouths range from serene to agonized, each unique in expression and positioned to channel sound in disorienting ways. A single spoken word fragments into a dozen overlapping echoes, making it impossible to distinguish real sounds from acoustic phantoms. The effect is deeply unnerving.@@N
 ~
 8 11
 D3
@@ -1252,7 +1612,8 @@ D3
 S
 #29945
 @@bCursed Vault@@N~
-@@bWarning glyphs are carved into every surface of this sealed chamber, their paint still vivid after centuries. The air is unnaturally cold, and a persistent sense of dread permeates the space. Shattered remains of protective wards litter the threshold.@@N
+@@bWarning glyphs are carved into every surface of this sealed chamber, their paint still vivid after centuries. The air is unnaturally cold, and a persistent sense of dread permeates the space. Shattered remains of protective wards litter the threshold.
+  The glyphs pulse with a sickly green luminescence, their magic still potent despite the ages. Frost crystals have formed on the stone surfaces despite the desert above, and each exhaled breath hangs as a visible cloud. The broken ward stones at the entrance crackle with residual energy, their failure having unleashed whatever was sealed within.@@N
 ~
 72 11
 D0
@@ -1266,7 +1627,8 @@ D1
 S
 #29946
 @@bNecromancer's Workshop@@N~
-@@bThis cluttered chamber served as a workspace for dark rituals. Stone tables hold fragments of bone, dusty vials of dark liquid, and crumbling scrolls covered in forbidden incantations. Chalk circles and arcane diagrams cover the floor.@@N
+@@bThis cluttered chamber served as a workspace for dark rituals. Stone tables hold fragments of bone, dusty vials of dark liquid, and crumbling scrolls covered in forbidden incantations. Chalk circles and arcane diagrams cover the floor.
+  The work tables are cluttered with the detritus of necromantic experimentation: bone fragments arranged in geometric patterns, crystallized reagents in cracked glass vials, and yellowed scrolls whose text writhes when viewed from the corner of one's eye. The chalk diagrams on the floor overlap in layers, each more complex than the last.@@N
 ~
 8 11
 D2
@@ -1280,7 +1642,8 @@ D3
 S
 #29947
 @@bLich's Antechamber@@N~
-@@bThe temperature drops sharply in this frost-rimed corridor. Ice crystals coat the walls despite the desert above, and each breath comes as a visible cloud. The oppressive weight of powerful magic presses down from all sides, growing stronger to the south.@@N
+@@bThe temperature drops sharply in this frost-rimed corridor. Ice crystals coat the walls despite the desert above, and each breath comes as a visible cloud. The oppressive weight of powerful magic presses down from all sides, growing stronger to the south.
+  Icicles hang from the ceiling in unnatural formations, some curving sideways as if grown under the influence of warped magical fields. The frost on the walls forms patterns that resemble screaming faces when viewed at certain angles. A deep thrumming vibration rises through the floor, rhythmic as a heartbeat.@@N
 ~
 72 11
 D0
@@ -1294,7 +1657,8 @@ D2
 S
 #29948
 @@RLich's Sanctum@@N~
-@@RA vast circular chamber lies at the heart of the deepest catacombs, illuminated by floating orbs of purple flame. Runic circles are etched into the obsidian floor in concentric rings, and towering bookshelves line the curved walls, filled with ancient tomes of forbidden knowledge.@@N
+@@RA vast circular chamber lies at the heart of the deepest catacombs, illuminated by floating orbs of purple flame. Runic circles are etched into the obsidian floor in concentric rings, and towering bookshelves line the curved walls, filled with ancient tomes of forbidden knowledge.
+  The purple flames cast writhing shadows that move independently of any physical source, dancing across the curved walls in hypnotic patterns. The bookshelves stretch from floor to ceiling, their contents ranging from crumbling papyrus scrolls to leather-bound grimoires that seem to breathe. The concentric runic circles pulse with alternating light, creating a mesmerizing and deeply disturbing rhythm.@@N
 ~
 12 11
 D0
@@ -1304,7 +1668,8 @@ D0
 S
 #29949
 @@bCollapsed Dead End@@N~
-@@bThe tunnel here has partially collapsed, filling the passage with rubble and broken masonry. Fragments of carved stone and shattered pottery are mixed into the debris. A few skeletal hands protrude from beneath the fallen rock.@@N
+@@bThe tunnel here has partially collapsed, filling the passage with rubble and broken masonry. Fragments of carved stone and shattered pottery are mixed into the debris. A few skeletal hands protrude from beneath the fallen rock.
+  The collapse appears ancient, the fallen stones now cemented together by mineral deposits and centuries of slow moisture seepage. The skeletal hands reaching from the rubble are frozen in desperate clawing gestures, their owners crushed during whatever catastrophe brought down the ceiling.@@N
 ~
 8 11
 D3
@@ -1314,7 +1679,8 @@ D3
 S
 #29950
 @@bCave Entrance@@N~
-@@bThe canyon narrows into a dark cave mouth, the rock walls slick with moisture from some underground source. The temperature drops noticeably as the desert sun is left behind. Claw marks score the stone floor, and the acrid smell of venom permeates the air.@@N
+@@bThe canyon narrows into a dark cave mouth, the rock walls slick with moisture from some underground source. The temperature drops noticeably as the desert sun is left behind. Claw marks score the stone floor, and the acrid smell of venom permeates the air.
+  The transition from blazing daylight to cave darkness is abrupt and disorienting. Water seeps down the walls in thin rivulets, feeding patches of pale moss that cling to the damp stone. Deep gouges in the cave floor, each several inches wide, suggest the passage of something with enormous claws or a heavy segmented body.@@N
 ~
 8 11
 D0
@@ -1328,7 +1694,8 @@ D2
 S
 #29951
 @@bNarrow Tunnel@@N~
-@@bThis cramped passage forces movement in single file, the rough stone walls pressing close on both sides. Sticky webbing clings to the ceiling, and the chittering of unseen creatures echoes from deeper within the cave system.@@N
+@@bThis cramped passage forces movement in single file, the rough stone walls pressing close on both sides. Sticky webbing clings to the ceiling, and the chittering of unseen creatures echoes from deeper within the cave system.
+  The tunnel walls are scratched with parallel grooves from countless legs and tails scraping past over the years. Desiccated insect husks and shed exoskeleton fragments crunch underfoot, and the webbing overhead trembles with the vibrations of distant movement through the connected tunnel network.@@N
 ~
 9 11
 D0
@@ -1346,7 +1713,8 @@ D3
 S
 #29952
 @@bChitinous Cavern@@N~
-@@bThe walls of this natural cavern are encrusted with shed scorpion shells and dried husks of molted exoskeletons. The floor crunches with every step, carpeted in fragments of chitin. Larger intact shells hang from the ceiling like grotesque decorations.@@N
+@@bThe walls of this natural cavern are encrusted with shed scorpion shells and dried husks of molted exoskeletons. The floor crunches with every step, carpeted in fragments of chitin. Larger intact shells hang from the ceiling like grotesque decorations.
+  Some of the shed exoskeletons are remarkably intact, hollow replicas of the creatures that wore them, split along the back where their owners crawled free. The chitinous carpet crunches and pops with a stomach-turning sound, and a dry, musty odor fills the enclosed space.@@N
 ~
 8 11
 D2
@@ -1360,7 +1728,8 @@ D3
 S
 #29953
 @@bEgg Chamber@@N~
-@@bClusters of translucent eggs the size of melons are attached to every surface of this warm, humid cavern. Some are dark and empty, while others pulse with the movement of developing larvae within. A thick resinous substance holds the clusters in place.@@N
+@@bClusters of translucent eggs the size of melons are attached to every surface of this warm, humid cavern. Some are dark and empty, while others pulse with the movement of developing larvae within. A thick resinous substance holds the clusters in place.
+  The humid air is nearly suffocating, heavy with a sweet organic smell. The viable eggs glow with a faint amber luminescence, and the developing larvae within can be seen curling and uncurling in their gelatinous sacs. Freshly hatched nymphs, pale and nearly transparent, scatter into crevices at any disturbance.@@N
 ~
 40 11
 D0
@@ -1370,7 +1739,8 @@ D0
 S
 #29954
 @@bWebbed Passage@@N~
-@@bThick strands of sticky webbing crisscross this passage, making progress difficult. Wrapped bundles hanging from the ceiling contain the desiccated remains of unfortunate creatures. The webs vibrate faintly with the movement of their creator somewhere nearby.@@N
+@@bThick strands of sticky webbing crisscross this passage, making progress difficult. Wrapped bundles hanging from the ceiling contain the desiccated remains of unfortunate creatures. The webs vibrate faintly with the movement of their creator somewhere nearby.
+  The silk is incredibly strong, requiring considerable force to break through. Several of the hanging bundles are disturbingly humanoid in shape, and one still wears the tattered remains of a leather boot protruding from its cocoon. The web strands thrum like bowstrings at the slightest touch.@@N
 ~
 8 11
 D1
@@ -1384,7 +1754,8 @@ D2
 S
 #29955
 @@bGlowing Grotto@@N~
-@@bBioluminescent fungi cling to the damp walls of this spacious grotto, casting everything in an eerie blue-green light. The soft glow reveals a cavern of surprising beauty, with mineral formations creating natural pillars and curtains of crystallized stone.@@N
+@@bBioluminescent fungi cling to the damp walls of this spacious grotto, casting everything in an eerie blue-green light. The soft glow reveals a cavern of surprising beauty, with mineral formations creating natural pillars and curtains of crystallized stone.
+  The fungi grow in overlapping shelves of luminous blue and green, pulsing gently as if breathing. Stalactites and stalagmites have fused into flowing columns of crystalline calcite that sparkle in the bioluminescent glow. Tiny cave crickets hop between the fungal colonies, their translucent bodies glowing briefly as they feed.@@N
 ~
 8 11
 D0
@@ -1402,7 +1773,8 @@ D2
 S
 #29956
 @@bMolten Crack@@N~
-@@bA fissure in the cave floor reveals a distant orange glow of magma far below. Waves of heat rise from the crack, and the surrounding stone is warm to the touch. Mineral deposits along the edges have crystallized into colorful formations.@@N
+@@bA fissure in the cave floor reveals a distant orange glow of magma far below. Waves of heat rise from the crack, and the surrounding stone is warm to the touch. Mineral deposits along the edges have crystallized into colorful formations.
+  The fissure splits the cavern floor in a jagged line, its edges lined with crystals of sulfur and iron oxide in vivid yellows and reds. The heat radiating upward creates shimmering distortions in the air, and occasional deep rumbles from below send fine vibrations through the surrounding stone.@@N
 ~
 40 11
 D1
@@ -1416,7 +1788,8 @@ D3
 S
 #29957
 @@bScorpion Nest@@N~
-@@bThis large cavern is littered with the remains of countless prey animals, bones picked clean and scattered across the sandy floor. Deep grooves in the stone show where massive scorpion tails have dragged across the surface repeatedly.@@N
+@@bThis large cavern is littered with the remains of countless prey animals, bones picked clean and scattered across the sandy floor. Deep grooves in the stone show where massive scorpion tails have dragged across the surface repeatedly.
+  The bone piles include creatures of every size, from small rodents to what appears to be a full-grown desert horse. The tail grooves are worn inches deep into solid rock, testament to the age and size of the creatures that nest here. A thick musky scent permeates the chamber, marking it as actively occupied territory.@@N
 ~
 8 11
 D0
@@ -1430,7 +1803,8 @@ D2
 S
 #29958
 @@bVenomous Lair@@N~
-@@bPools of caustic venom have collected in natural depressions across the floor of this foul-smelling cave. The liquid gives off acrid fumes that sting the eyes and throat. Corroded bones and dissolved equipment mark where victims met their end.@@N
+@@bPools of caustic venom have collected in natural depressions across the floor of this foul-smelling cave. The liquid gives off acrid fumes that sting the eyes and throat. Corroded bones and dissolved equipment mark where victims met their end.
+  The venom pools are an oily yellow-green, their surfaces occasionally bubbling as chemical reactions continue breaking down submerged material. Metal equipment has been reduced to pitted, barely recognizable lumps. The fumes are so concentrated that eyes water and the back of the throat burns with each breath.@@N
 ~
 40 11
 D0
@@ -1448,7 +1822,8 @@ D2
 S
 #29959
 @@bBrood Chamber@@N~
-@@bSmaller scorpions of various sizes scuttle across the walls and ceiling of this cramped cave. Hundreds of tiny eyes glint in the darkness, and the constant click of small pincers creates an unsettling chorus. This appears to be a nursery of sorts.@@N
+@@bSmaller scorpions of various sizes scuttle across the walls and ceiling of this cramped cave. Hundreds of tiny eyes glint in the darkness, and the constant click of small pincers creates an unsettling chorus. This appears to be a nursery of sorts.
+  The juvenile scorpions range from fingernail-sized nymphs to adolescents the size of a fist, all sharing the same aggressive territorial behavior as their enormous parents. They swarm over each other in competing clusters, occasionally erupting into brief cannibalistic skirmishes. The clicking and scraping of hundreds of tiny legs creates an unceasing white noise.@@N
 ~
 8 11
 D3
@@ -1458,7 +1833,8 @@ D3
 S
 #29960
 @@bQueen's Antechamber@@N~
-@@bThe tunnel widens dramatically here, the walls polished smooth by the passage of something enormous. Deep gouges in the stone floor and a thick coating of dried venom on every surface mark this as the threshold of a powerful creature's domain.@@N
+@@bThe tunnel widens dramatically here, the walls polished smooth by the passage of something enormous. Deep gouges in the stone floor and a thick coating of dried venom on every surface mark this as the threshold of a powerful creature's domain.
+  The polished walls reflect a distorted mirror of everything in the tunnel, smeared with a waxy residue from the creature's passage. The venom coating has calcified into a crystalline crust that crunches underfoot and releases a sharp chemical odor when broken. The scale of the gouges in the floor suggest a creature of truly terrifying proportions.@@N
 ~
 8 11
 D0
@@ -1472,7 +1848,8 @@ D2
 S
 #29961
 @@RScorpion Queen's Den@@N~
-@@RA vast natural cathedral opens up, its ceiling lost in darkness far above. The floor is a carpet of crushed bones and discarded chitin, and massive scorpion tracks crisscross every surface. The air is thick with the chemical reek of concentrated venom.@@N
+@@RA vast natural cathedral opens up, its ceiling lost in darkness far above. The floor is a carpet of crushed bones and discarded chitin, and massive scorpion tracks crisscross every surface. The air is thick with the chemical reek of concentrated venom.
+  The cavern is immense, its walls curving up and away into unseen heights. Massive stalactites hang from the darkness above like stone fangs, and the bone-littered floor crunches with every step. The concentrated venom fumes are nearly overwhelming, and the echoes of distant clicking and scraping reverberate from every direction.@@N
 ~
 12 11
 D0
@@ -1482,7 +1859,8 @@ D0
 S
 #29962
 @@bHidden Burrow@@N~
-@@bA narrow side passage leads to this small, secluded cavern partially hidden behind a curtain of mineral deposits. The floor is covered in fine sand, and claw marks suggest something uses this as a private resting place away from the larger cave system.@@N
+@@bA narrow side passage leads to this small, secluded cavern partially hidden behind a curtain of mineral deposits. The floor is covered in fine sand, and claw marks suggest something uses this as a private resting place away from the larger cave system.
+  The mineral curtain creates a natural doorway of translucent flowstone, partially concealing the burrow from the main tunnel. The sand floor shows compressed body impressions where a reptilian creature has coiled repeatedly. A small collection of gnawed bones and shed scales litters one corner.@@N
 ~
 8 11
 D3
@@ -1492,7 +1870,8 @@ D3
 S
 #29963
 @@yDesert Trail@@N~
-@@yA worn trail cuts through the sand heading east, marked by occasional cairns of stacked stones. Boot prints and the ruts of heavily laden carts have packed the sand into a firm path. The tracks all lead toward a fortified encampment visible in the distance.@@N
+@@yA worn trail cuts through the sand heading east, marked by occasional cairns of stacked stones. Boot prints and the ruts of heavily laden carts have packed the sand into a firm path. The tracks all lead toward a fortified encampment visible in the distance.
+  Discarded refuse and broken equipment litter the trail margins, dropped by passing raiders too lazy to dispose of them properly. Crude warning totems fashioned from animal skulls and feathers mark the approach at intervals, growing more frequent as the camp draws nearer. The acrid smell of smoke and unwashed bodies carries on the wind.@@N
 ~
 32 10
 D1
@@ -1506,7 +1885,8 @@ D3
 S
 #29964
 @@yLookout Post@@N~
-@@yA crude wooden platform has been erected atop a rocky outcrop, providing a commanding view of the surrounding desert. Tattered banners bearing a crossed-scimitar sigil snap in the wind, and discarded food scraps suggest a recent watch rotation.@@N
+@@yA crude wooden platform has been erected atop a rocky outcrop, providing a commanding view of the surrounding desert. Tattered banners bearing a crossed-scimitar sigil snap in the wind, and discarded food scraps suggest a recent watch rotation.
+  The platform creaks ominously in the wind, its construction crude but functional. A battered signal horn hangs from a peg, ready to sound the alarm. Empty water skins and gnawed bones scattered across the platform speak to the tedium of long watches under the merciless sun.@@N
 ~
 32 10
 D2
@@ -1520,7 +1900,8 @@ D3
 S
 #29965
 @@yPalisade Gate@@N~
-@@ySharpened wooden stakes lashed together with rope form a crude palisade wall. A gap serves as the main gate into the raider encampment beyond. Skulls mounted on poles flank the entrance as a grim warning to anyone foolish enough to approach uninvited.@@N
+@@ySharpened wooden stakes lashed together with rope form a crude palisade wall. A gap serves as the main gate into the raider encampment beyond. Skulls mounted on poles flank the entrance as a grim warning to anyone foolish enough to approach uninvited.
+  The palisade is reinforced with stolen wagon parts and scavenged timber, lashed together with a mix of rope and leather thongs. The skulls flanking the gate are sun-bleached and cracked, their jaws wired shut with copper wire. Scratch marks on the gate posts show where blades are regularly tested against the wood.@@N
 ~
 32 10
 D0
@@ -1534,7 +1915,8 @@ D2
 S
 #29966
 @@yRaider Camp Perimeter@@N~
-@@yThe outer ring of the raider camp is a disorganized sprawl of lean-tos, cooking fires, and staked-out hides. The smell of unwashed bodies and roasting meat hangs heavy in the air. Armed figures move between the shelters with the casual menace of career brigands.@@N
+@@yThe outer ring of the raider camp is a disorganized sprawl of lean-tos, cooking fires, and staked-out hides. The smell of unwashed bodies and roasting meat hangs heavy in the air. Armed figures move between the shelters with the casual menace of career brigands.
+  Scavenged tarps and stolen canvas create a patchwork of shade over rough sleeping areas. Weapons are kept close at hand everywhere, and the camp has the restless energy of barely controlled violence. Dogs gnaw on bones between the tents, and the ever-present sand has worked its way into every surface.@@N
 ~
 32 10
 D0
@@ -1556,7 +1938,8 @@ D3
 S
 #29967
 @@ySupply Tent@@N~
-@@yA large canvas tent serves as the warband's supply depot, its interior crammed with crates, barrels, and sacks of plundered goods. Stolen merchant wares are stacked haphazardly alongside weapons, armor, and provisions for the camp.@@N
+@@yA large canvas tent serves as the warband's supply depot, its interior crammed with crates, barrels, and sacks of plundered goods. Stolen merchant wares are stacked haphazardly alongside weapons, armor, and provisions for the camp.
+  Merchant guild stamps and trade house seals are still visible on many of the stolen crates, identifying their origins from caravan routes across the region. Spilled grain attracts rats and beetles in the darker corners, and the canvas walls billow gently in the desert breeze.@@N
 ~
 8 10
 D1
@@ -1566,7 +1949,8 @@ D1
 S
 #29968
 @@yWeapon Rack@@N~
-@@yRows of crude wooden racks hold an assortment of weapons in various states of repair. Notched blades, dented maces, and splintered spear shafts are sorted roughly by type. A grinding wheel and anvil nearby show signs of recent use for maintenance.@@N
+@@yRows of crude wooden racks hold an assortment of weapons in various states of repair. Notched blades, dented maces, and splintered spear shafts are sorted roughly by type. A grinding wheel and anvil nearby show signs of recent use for maintenance.
+  The weapons range from serviceable to barely functional, most showing the nicks and stains of heavy use. A whetstone sits in a bucket of murky water beside the grinding wheel, and metal filings dust the packed sand beneath the anvil. The air smells of iron filings and weapon oil.@@N
 ~
 32 10
 D3
@@ -1576,7 +1960,8 @@ D3
 S
 #29969
 @@yCampfire Ring@@N~
-@@yA large fire pit ringed with flat stones serves as the social center of the raider camp. Charred logs and glowing embers fill the pit, and crude log benches surround it. The sand is littered with bone fragments and empty drink skins from nightly revelry.@@N
+@@yA large fire pit ringed with flat stones serves as the social center of the raider camp. Charred logs and glowing embers fill the pit, and crude log benches surround it. The sand is littered with bone fragments and empty drink skins from nightly revelry.
+  Scorch marks and spilled ash extend well beyond the stone ring, evidence of fires that grew larger than intended during drunken celebrations. Carved tally marks on the log benches keep score of fights and wagers. The embers still glow hot beneath a layer of white ash, ready to be stoked for the evening meal.@@N
 ~
 32 10
 D0
@@ -1598,7 +1983,8 @@ D3
 S
 #29970
 @@ySlave Pen@@N~
-@@yA section of the camp has been fenced off with rope and stakes to form a crude holding pen. Iron shackles are bolted to heavy rocks, and the trampled sand is stained with old blood. The miserable conditions speak to the raiders' cruelty.@@N
+@@yA section of the camp has been fenced off with rope and stakes to form a crude holding pen. Iron shackles are bolted to heavy rocks, and the trampled sand is stained with old blood. The miserable conditions speak to the raiders' cruelty.
+  The shackle chains are rusted but strong, attached to boulders too heavy for any bound captive to move. A crude water trough sits empty and crusted with dried algae. The stench of suffering and fear lingers in the trampled sand, and tattered scraps of clothing caught on the rope fence flutter in the hot wind.@@N
 ~
 32 10
 D1
@@ -1608,7 +1994,8 @@ D1
 S
 #29971
 @@yFighting Pit@@N~
-@@yA circular depression has been dug into the sand and lined with flat stones to form a crude arena. Dark stains cover the pit floor, and spectator benches made from looted wagon boards ring the perimeter. This is where the raiders settle disputes.@@N
+@@yA circular depression has been dug into the sand and lined with flat stones to form a crude arena. Dark stains cover the pit floor, and spectator benches made from looted wagon boards ring the perimeter. This is where the raiders settle disputes.
+  The pit floor is stained dark with old blood that no amount of sand can fully absorb. Notches carved into the stone rim keep a grim tally of fights and their outcomes. Discarded weapons too damaged to reuse are piled in a corner, and the spectator benches are worn smooth from regular use.@@N
 ~
 32 10
 D3
@@ -1618,7 +2005,8 @@ D3
 S
 #29972
 @@yWar Tent@@N~
-@@yThis large reinforced tent serves as the command center of the raider warband. A sand table displaying a crude map of the surrounding territory dominates the interior, with carved wooden tokens marking targets and patrol routes across the region.@@N
+@@yThis large reinforced tent serves as the command center of the raider warband. A sand table displaying a crude map of the surrounding territory dominates the interior, with carved wooden tokens marking targets and patrol routes across the region.
+  The sand table is surprisingly detailed, showing trade routes, oasis locations, and the positions of rival warbands with carved tokens of different colors. Stolen maps and intercepted dispatches are pinned to the tent walls with daggers. A heavy ironbound chest serves as the warlord's field desk, its surface scarred with blade marks.@@N
 ~
 8 10
 D0
@@ -1636,7 +2024,8 @@ D2
 S
 #29973
 @@RWarlord's Pavilion@@N~
-@@RA lavish pavilion of heavy canvas and stolen silk stands apart from the rest of the camp, its entrance flanked by lit braziers. Looted tapestries hang inside, and a throne cobbled together from broken furniture sits on a raised platform of packed earth.@@N
+@@RA lavish pavilion of heavy canvas and stolen silk stands apart from the rest of the camp, its entrance flanked by lit braziers. Looted tapestries hang inside, and a throne cobbled together from broken furniture sits on a raised platform of packed earth.
+  The pavilion is the largest structure in the camp, its canvas reinforced with layers of stolen silk and leather. Trophies from conquered rivals hang from the tent poles, including weapons, banners, and less savory mementos. The cobbled throne is a grotesque masterwork of broken chair legs, smashed table tops, and hammered-flat shield bosses, padded with stolen cushions.@@N
 ~
 12 10
 D0
@@ -1646,7 +2035,8 @@ D0
 S
 #29974
 @@yTreasure Hoard@@N~
-@@yChests and strongboxes taken from merchant caravans are piled in this guarded corner of the camp. Most have been broken open, their contents sorted and divided. Coins, gemstones, and trade goods spill from overflowing containers.@@N
+@@yChests and strongboxes taken from merchant caravans are piled in this guarded corner of the camp. Most have been broken open, their contents sorted and divided. Coins, gemstones, and trade goods spill from overflowing containers.
+  The plunder represents dozens of successful raids, with goods from across the known trade routes piled in careless abundance. Bolts of fine cloth lie in the sand beside sacks of exotic spices and casks of aged wine. The broken locks and splintered lids tell stories of hasty, brutal access. Despite the wealth on display, guards watch it with the jealous vigilance of those who have killed to take it.@@N
 ~
 8 10
 D3
@@ -1794,5 +2184,33 @@ G 1 29923 1 warlord drahk war cleaver
 G 1 29927 1 warlord spiked pauldrons
 M 0 29909 2 29974 desert bandit guarding treasure hoard
 G 1 29901 1 sun-scorched leather vest
+M 0 29924 2 29903 desert hyena on sun-baked flats
+G 1 29928 1 scorched bone ring
+M 0 29925 2 29906 sand viper in dry riverbed
+G 1 29931 1 dried sinew necklace
+M 0 29926 2 29916 scorched zombie at cracked colossus
+G 1 29932 1 bleached hide vest
+M 0 29927 2 29902 dust imp at crumbling obelisk
+G 1 29933 1 threadbare desert sash
+M 0 29928 2 29904 bone collector at bleached bone field
+G 1 29930 1 dusty linen cowl
+M 0 29929 2 29954 tomb spider in webbed passage
+G 1 29935 1 pair of sand spider silk gloves
+M 0 29930 2 29900 desiccated hound in windswept dunes
+G 1 29929 1 sand-crusted anklet
+M 0 29931 2 29930 sandstorm djinn in treasure vault antechamber
+G 1 29937 1 tattered sand wrap
+M 0 29932 2 29966 raider berserker at camp perimeter
+G 1 29941 1 dried scorpion tail whip
+M 0 29933 2 29924 ancient mummy in burial alcove
+G 1 29940 1 pair of tomb raider leg wraps
+M 0 29934 2 29918 petrified sentinel in temple antechamber
+G 1 29939 1 petrified wood shield
+M 0 29935 2 29905 canyon raptor at vulture perch
+G 1 29938 1 desert hawk feather earring
+M 0 29936 2 29955 ember scorpion in glowing grotto
+G 1 29934 1 cracked clay bracer
+M 0 29937 2 29945 sand horror in cursed vault
+G 1 29936 1 bone shard dagger
 S
 #$
