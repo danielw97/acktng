@@ -15,5 +15,5 @@ Acquisition:
    - Knight: level 16
    - Swordsman: level 16
 Description:
-   Unit Tactics is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+   Unit Tactics is a command-and-control passive that increases how many charmed followers you can maintain, improving summon/charm group capacity.
 *******************************************************************************
