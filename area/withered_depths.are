@@ -2,12 +2,14 @@
 @@pThe Withered @@GDepths@@N~
 Q 16
 K withereddepths~
-L @@W(@@r80-100@@W}@@N~
+L @@W(@@r80-100@@W)@@N~
 N 9
 I 80 100
 V 1000 1149
 F 15
 U @@pA @@Gfoul wind @@pstirs through the twisted canopy...@@N~
+R all~
+W all~
 #ROOMS
 #1000
 The Darkening Path~
@@ -2107,6 +2109,418 @@ D2
 The margin gives way south toward less obstructed sections of the grove.~
 ~
 0 -1 1129
+S
+#1125
+The Descent Into Deeper Dark~
+The Heartrot Grove deepens here, and the word 'dark' takes on additional meanings — not merely the absence of light but the active presence of something that absorbs it, the bioluminescent trees' purple glow not dispersed but collected, pooling in low places and concentrating rather than spreading.  The forest floor has become entirely organic, a substrate of compressed mycelium and compressed organic matter that is neither soil nor rot but a third thing, something the grove is building toward a purpose not yet apparent.  The pulse here has an emotional quality — pressure, weight, urgency — that the outer grove did not carry.~
+1 3
+D0
+The grove continues north toward the junction rooms.~
+~
+0 -1 1120
+D1
+The darkness deepens east, the pulse growing.~
+~
+0 -1 1126
+D2
+The grove extends south into its older sections.~
+~
+0 -1 1130
+S
+#1126
+The Web of Roots~
+Above-ground root architecture dominates this section — enormous roots looping between trees in great curves, their surfaces glowing with concentrated @@pbioluminescence@@N that outlines their paths against the surrounding darkness in purple fire.  The roots form a three-dimensional maze of arches and walls that structures the space into defined chambers and passages without any of the chambers being enclosed.  Movement through this root-web requires navigation around and under the looping roots, each one too massive to step over but too high to duck under with ease.~
+1 3
+D3
+The root-web opens west toward the descent.~
+~
+0 -1 1125
+D0
+The web continues north toward the pulse junction.~
+~
+0 -1 1121
+D1
+The root-architecture continues east, the loops more complex.~
+~
+0 -1 1127
+D2
+The root-web descends south, the roots larger.~
+~
+0 -1 1131
+S
+#1127
+The Grove Heart Approach~
+The closer approach to the Heartrot Grove's centre changes the experience of the space — the pulse here is not merely felt but heard, a subsonic beat carried in the wood and stone and air simultaneously.  The trees have grown to their greatest diameter in this zone, some wider than a small house at their bases, and the space between them is reduced to narrow passages.  The @@porganic floor@@N has thickened to several feet deep and is visibly moving, minute contractions of the mycelium mass making the surface ripple slightly in synchrony with the pulse.~
+1 3
+D3
+The approach leads west through the root-web.~
+~
+0 -1 1126
+D0
+The approach connects north toward the inner glow corridor.~
+~
+0 -1 1122
+D1
+The passage narrows east, the trees pressing closer.~
+~
+0 -1 1128
+D2
+The heart approach continues south, the pulse strengthening.~
+~
+0 -1 1132
+S
+#1128
+The Blackened Bough Crossing~
+Enormous fallen boughs — too large to have fallen from the surrounding trees, suggesting they came from something bigger that is not visible — lie across the path here, their surfaces glowing with the brightest bioluminescence yet encountered, the purple so intense it presses against the dark like a physical force.  The crossing requires climbing over or under the boughs, and each one gives a faint, sustained vibration when touched — resonating with the grove's pulse at its own frequency.  The boughs have been here long enough that the organic floor has grown over their ends, partially incorporating them.~
+1 3
+D3
+The bough crossing leads west toward the grove heart approach.~
+~
+0 -1 1127
+D0
+The crossing connects north through the pulsing canopy section.~
+~
+0 -1 1123
+D1
+The boughs continue east, the largest ones blocking most movement.~
+~
+0 -1 1129
+D2
+The crossing gives way south to a more open section.~
+~
+0 -1 1133
+S
+#1129
+The Outer Sanctum Margin~
+The outermost extent of the Heartrot Grove's inner zone — beyond this, the corruption becomes too dense, the pulse too strong, and the organic floor too deep for comfortable movement.  The trees at this margin are the oldest, with bark so thoroughly colonised by the bioluminescent organism that no original bark surface is visible, only the glowing purple coating.  The margin also marks the edge of the grove's most direct corruption: standing here, anyone with sensitivity to magic can feel it — a vast, slow, utterly aware presence that fills the grove and is concentrated to the south.~
+1 3
+D3
+The margin leads west through the blackened bough crossing.~
+~
+0 -1 1128
+D0
+The margin connects north toward the northeast section.~
+~
+0 -1 1124
+D2
+The margin gives way south to the inner grove approaches.~
+~
+0 -1 1134
+S
+#1130
+The Flesh Wood~
+The organic floor reaches its maximum depth here — several feet of accumulated mycelium-and-organic-matter that has been compressed over years into something denser than soil and more structured than fungi.  It is warm to the touch.  It responds to pressure with a slight depression that fills back slowly.  Embedded in it, visible when the ambient glow allows, are the outlines of things that were incorporated into the organic mass over decades — trunks, root sections, rocks, and other shapes less easily identified.  The trees growing from this substrate have incorporated the organic floor into their own structure, their roots indistinguishable from the mass they grow from.~
+1 3
+D0
+The flesh-wood continues north toward the descent into deeper dark.~
+~
+0 -1 1125
+D1
+The organic floor extends east, the embedded shapes more frequent.~
+~
+0 -1 1131
+D2
+The floor deepens south, the consistency changing.~
+~
+0 -1 1135
+S
+#1131
+The Deep Pulse Chamber~
+A slight widening in the close-spaced trees creates a space here — not large, but large enough to stand in without touching any trunk — where the pulse is felt in all directions simultaneously.  The organic floor here has formed a concave bowl, as though regularly compacted by a great weight sitting in the centre, and the bottom of the bowl glows brighter than the surrounding surface.  The sound of the pulse is clearest here: a slow, wet, rhythmic compression.  Small creatures, reduced to silhouettes by the bioluminescence, move in the bowl's concavity in patterns that mirror the pulse.~
+1 3
+D3
+The chamber leads west through the flesh wood.~
+~
+0 -1 1130
+D0
+The chamber connects north through the root-web.~
+~
+0 -1 1126
+D1
+The chamber narrows east toward the grove's innermost approach.~
+~
+0 -1 1132
+D2
+The pulse pressure intensifies to the south.~
+~
+0 -1 1136
+S
+#1132
+The Final Approach~
+The trees here are so close and so large that the passage between them is barely single-file, the bark of adjacent trunks within arm's reach on both sides.  The passage is slightly uphill — the ground rises toward the Blightmother's location, as if everything in the grove slopes toward her.  The pulse is no longer merely felt but becomes a rhythm that the body involuntarily synchronises with, the heartbeat adjusting, the breathing adapting.  The @@pcorruption@@N is physically visible here as a slow mist that issues from the trees themselves, a purple vapour that drifts knee-high across the path.~
+1 3
+D3
+The final approach leads west through the deep pulse chamber.~
+~
+0 -1 1131
+D0
+The approach connects north through the grove's heart section.~
+~
+0 -1 1127
+D1
+The passage narrows to its minimum east, the trees almost touching.~
+~
+0 -1 1133
+D2
+The approach descends south toward the sanctum antechamber.~
+~
+0 -1 1137
+S
+#1133
+The Sanctum Antechamber~
+The tree-passage opens slightly here into a last space before the Blightmother's sanctum — large enough to hold a small group, its floor covered in a thick layer of the purple vapour-mist that obscures the feet.  The pulse here is the strongest yet encountered outside the sanctum itself, and the organic floor beneath the mist makes a faint sound with each contraction — a soft, wet exhalation.  A structure is visible ahead: not a constructed thing but a growth, a living wall of fused tree-flesh and fungal matter that seals the path to the north with a membrane of @@psoft, pulsing organic material@@N.~
+1 3
+D3
+The antechamber leads west back toward the final approach.~
+~
+0 -1 1132
+D0
+The pulsing membrane seals the path north to the Blightmother's inner sanctum.~
+^pulsing membrane~
+1 1001 1135
+D2
+The antechamber connects south toward an escape route.~
+~
+0 -1 1138
+E
+membrane pulsing~
+A wall of fused tree-flesh and fungal matter has grown across the passage, its surface covered in a regular pattern of slow contractions that make it appear to breathe.  The membrane is warm and yields slightly under pressure but does not open — it responds to force as a living thing would, pushing back, sealing any breach.  Only something with the blight-key can disrupt the membrane's coherence long enough to pass through.~
+S
+#1134
+The Outer Grove's End~
+The Heartrot Grove reaches its accessible limit here — in all directions but south, the tree-trunks are too close for passage and the organic floor too deep and too resistant.  The only forward progress is south, deeper into the grove's structure, or back the way one came.  The bioluminescence at this margin pulses at its maximum rate, the rhythm gone from slow heartbeat to something accelerated, anticipatory.  Whatever lies south, the grove approaches it with urgency.~
+1 3
+D0
+The grove margin connects north toward the outer sanctum margin.~
+~
+0 -1 1129
+D3
+The grove continues west back toward the antechamber of the sanctum.~
+~
+0 -1 1133
+D2
+The grove's end gives way south toward the inner sanctum approach.~
+~
+0 -1 1139
+S
+#1135
+The Blightmother's Sanctum~
+Within the pulsing membrane, the space is unlike anything in the grove outside.  The trees have grown into each other to form walls and a ceiling, their boughs interlocked so tightly that no sky is visible, no outside light enters, and the only illumination is the furious, pulsing glow of the bioluminescent organism that covers every surface — walls, ceiling, floor — in a skin of living light.  The floor is not floor in any normal sense: it is the Blightmother herself, or an extension of her, the organic mass covering every inch of the chamber and rising in the centre to the form she has grown for herself — vast, dark, pulsing, half-tree and half-something-without-a-name.  The air here is not air but the exhalation of a single organism that fills the room.  The pulse that pervades the entire grove has its source here, in this chamber, in this thing, which has been sitting in this room for long enough that the grove grew around it, the bog formed to its south, and the canopy above spread its shadow.  The pulsing light brightens when anything living enters.  The Blightmother is aware.~
+24580 3
+D2
+The pulsing membrane seals the passage south, back toward the antechamber.~
+^pulsing membrane~
+1 1001 1133
+S
+#1136
+The Post-Sanctum Passage~
+A narrow passage cuts through the grove structure east of the Blightmother's sanctum, clearly shaped by something moving through the organic wall at speed.  The walls of this passage are the raw interior of the grove's flesh-wood, exposed and weeping, the surfaces still adjusting to the breach.  The corruption here is at its most undisguised — there is no forest aesthetics, no fungal architecture, just the exposed interior of the blight's body, damp and warm and close.  The passage leads east and slightly upward, as if escaping from the deepest point.~
+1 3
+D3
+The passage connects west back toward the inner deep pulse chamber.~
+~
+0 -1 1131
+D1
+The escape passage continues east, the walls beginning to recover.~
+~
+0 -1 1137
+S
+#1137
+The Recovery Corridor~
+The organic walls of this escape corridor have partially closed since whatever made the breach that creates this passage — the walls are softer and less raw than the post-sanctum section to the west, and small fungal colonies have already established themselves in the exposed flesh-wood.  The corridor slopes consistently upward and eastward, and the pulse here is behind rather than surrounding — the sanctum's rhythm is still audible but diminishing with distance.  The air is breathable here in a way that the sanctum was not.~
+1 3
+D3
+The corridor leads west toward the post-sanctum passage.~
+~
+0 -1 1136
+D1
+The corridor continues east, the walls more healed.~
+~
+0 -1 1138
+S
+#1138
+The Egress Tunnel~
+The escape route reaches its penultimate section here, the organic walls having recovered enough to be recognisable as the grove's normal structure — pulsing bioluminescence, mycelium-surface floor, close-spaced but no longer fused-together trees.  The tunnel opens slightly, and the claustrophobia of the inner sanctum area gives way to a more navigable passage.  Ahead, the light changes quality — less the deep purple of the grove's core, more the cooler phosphorescence of the grove's outer zones.~
+1 3
+D3
+The egress tunnel leads west toward the recovery corridor.~
+~
+0 -1 1137
+D1
+The tunnel opens east toward the grove's southern egress.~
+~
+0 -1 1139
+S
+#1139
+The Grove's Southern Gate~
+The Heartrot Grove ends here at its southern boundary, where the organic floor and bioluminescent trees give way to a cleaner, stranger landscape — the beginning of the Verdant Sanctum, visible just to the south as a warm-toned green glow that is entirely unlike the grove's purple.  The contrast at this threshold is total: behind, a pulsing corrupt darkness; ahead, a green-gold warmth that the eyes adjust to with unexpected gratitude.  The transition is sharp enough to be disorienting, as if two different worlds pressed against each other at this exact line.~
+1 3
+D3
+The grove exit connects west toward the egress tunnel.~
+~
+0 -1 1138
+D2
+The path leads south into the Verdant Sanctum.~
+~
+0 -1 1140
+S
+#1140
+The Verdant Threshold~
+The Verdant Sanctum begins here, and the word 'verdant' proves accurate in a way that seems impossible after the corruption of the zones behind: the trees are genuinely, vividly green, their bark covered in healthy moss of deep emerald, their canopy filtering sunlight into gold-green shafts that fall on a forest floor of soft, actual grass.  The air is clean.  The smell is of living forest — earth and sap and flower and none of the rot, none of the methane, none of the fungal overload of the Withered Depths proper.  This place is a pocket of the forest as it was before the blight, preserved against all logic, and the preservation is real — the corruption visible in every direction beyond the sanctum's boundary does not enter.  Something here fights it back, at great cost, and has been doing so for a very long time.~
+2 3
+D0
+The verdant threshold connects north back to the Heartrot Grove.~
+~
+0 -1 1139
+D1
+The sanctum opens east into its wider reaches.~
+~
+0 -1 1141
+D2
+The green forest continues south through the sanctum.~
+~
+0 -1 1145
+S
+#1141
+The Moss-Carpeted Glade~
+A clearing here is entirely floored in a thick carpet of @@Gmoss@@N — not the thin, grasping moss of the outer forest, but a deep, rich growth that springs back from footsteps, that is soft enough to sleep on, and that is so green it almost hurts to look at after the grey-purple of the zones behind.  Small wildflowers grow from the moss in clusters, their colours vivid: yellow, white, a deep blue.  The clearing is sunlit — actual sunlight, warm and golden, flooding through a gap in the canopy that seems too perfectly positioned to be accidental.  The sound of birdsong is present.  It is so normal that it is initially mistaken for something sinister, and then simply accepted as one of the most relief-inducing sounds imaginable.~
+2 3
+D3
+The glade connects west toward the verdant threshold.~
+~
+0 -1 1140
+D1
+The moss carpet continues east through the sanctum.~
+~
+0 -1 1142
+D2
+The glade extends south toward a sheltered inner section.~
+~
+0 -1 1146
+S
+#1142
+The Clear Spring~
+A spring of clean water rises here, visible through the transparent shimmer of pure water over pale stone, welling up from a source deep in the earth and collecting in a small pool before flowing outward through the moss.  The water is cold and clear and tastes of minerals and nothing else — no sulphur, no iron, no fungal taint.  The pool is perhaps two feet deep and perfectly still except for the gentle welling at its centre.  Small aquatic creatures live in the pool: tiny translucent fish, water-insects, things that could not survive in any of the toxic water of the surrounding zones.  The spring's existence in the sanctum is either the cause of the corruption's inability to penetrate here, or the effect of that inability — in either case, its presence is precious.~
+2 3
+D3
+The spring connects west toward the moss-carpeted glade.~
+~
+0 -1 1141
+D1
+The sanctum continues east, the spring's water flowing outward through the moss.~
+~
+0 -1 1143
+D2
+The spring's outflow leads south through a channel of clean mossy ground.~
+~
+0 -1 1147
+S
+#1143
+The Ancient Oak~
+An oak tree of extraordinary size stands at the centre of the Verdant Sanctum's eastern section, its trunk wider than any tree encountered in the zones behind, its bark covered in the same deeply cut spiral carvings as the druid circle stones in the bog.  The oak is alive — vibrantly, almost aggressively alive, its leaves so green they generate their own light, its sap pressure so high that it can be heard moving in the wood when the ambient sound is quiet enough.  The tree's presence has a physical quality: standing within a few feet of it causes a warmth, a steadying, a sense of something benevolent that has survived everything the blight has thrown at this forest and will continue to survive.  It is the source of the sanctum's preservation, or at least one of the sources.  The carvings on its bark match those of the druid circle to the north.~
+2 3
+D3
+The ancient oak area connects west through the clear spring.~
+~
+0 -1 1142
+D1
+The eastern edge of the sanctum is near; a path continues east.~
+~
+0 -1 1144
+D2
+The oak's root system leads south through the moss.~
+~
+0 -1 1148
+S
+#1144
+The Eastern Sanctum Edge~
+The Verdant Sanctum's eastern limit is clearly marked — the green and living trees step back here at a precise boundary, and beyond it the Heartrot Grove's purple-dark begins immediately.  The boundary is maintained by something: at its line, the corruption of the grove meets resistance, the purple bioluminescence dimming at the line and going no further.  Looking along the boundary in both directions, the green-purple division holds, a straight-ish line maintained by will.  The guardian of this sanctum, whatever it is, has been holding this line for a very long time, and something about standing at the edge gives the strong impression that the guardian is aware of each breach, each approach, each threat.~
+2 3
+D3
+The eastern edge connects west back toward the ancient oak.~
+~
+0 -1 1143
+D2
+The eastern edge runs south through the boundary line toward the sanctum's deeper reaches.~
+~
+0 -1 1149
+S
+#1145
+The Heart of the Forest~
+This is the centre of the Verdant Sanctum and the centre of everything the sanctum represents: a circular clearing of perfect grass, a canopy opening directly above that admits a column of sunlight from sky to ground, a ring of the oldest trees in the entire forest standing around the perimeter with their roots forming a perfect circle.  The silence here is not the dead silence of the corrupted forest but a living silence — full of potential, full of what could grow here if the blight were lifted, full of an enormous grief for what the surrounding forest has lost.  The @@GVerdant Guardian@@N has stood at the centre of this clearing for longer than the corruption has existed, its form now indistinguishable from the living trees around it, its consciousness expanded by centuries to encompass the entire sanctum.  When the blight found nothing it could corrupt here, it tried to break in by other means, and the Guardian has fought it back every time — at cost.  The cost shows.  The Guardian that greets anything that enters this clearing is not the benevolent forest spirit it once was.  It is something that has fought too long and can no longer tell friend from threat.~
+24578 3
+D0
+The heart of the forest connects north toward the verdant threshold.~
+~
+0 -1 1140
+D1
+The heart connects east through the sanctum's southern section.~
+~
+0 -1 1146
+S
+#1146
+The Root Circle South~
+The ancient oak's root system surfaces in this southern section in a series of massive arches that divide the space into natural chambers.  The moss here is deeper than in the northern sections, and the wildflowers denser, as if the sanctum's life-force concentrates toward its core.  The spring's outflow trickles through this section in a series of small channels carved by long use, the water catching the green-tinted light and carrying it southward.  The feeling of being watched from the trees is intense here — benevolent once, now indeterminate.~
+2 3
+D0
+The root circle leads north toward the moss glade.~
+~
+0 -1 1141
+D3
+The root arch leads west to the Heart of the Forest.~
+~
+0 -1 1145
+D1
+The sanctum continues east through the root-arch chambers.~
+~
+0 -1 1147
+S
+#1147
+The Spring Outflow Channel~
+The water from the clear spring flows south through this section in an open channel it has carved through the moss over decades, the channel edges colonised by tiny aquatic plants that trail their roots in the current.  The channel is navigable on foot by stepping from one moss-bank to the other, and the sound of moving water is the dominant sound here — unusually loud in the sanctum's normal quiet, suggesting the channel amplifies or the water carries sound from its source above.  The guardian's influence is less strong here than at the clearing — the outskirts of the sanctum are less defended, as though the guardian concentrates its attention on the centre.~
+2 3
+D0
+The channel leads north toward the clear spring.~
+~
+0 -1 1142
+D3
+The channel continues west toward the root circle.~
+~
+0 -1 1146
+D1
+The outflow channel continues east toward the sanctuary's edge.~
+~
+0 -1 1148
+S
+#1148
+The Southern Oak Stand~
+A group of younger oaks — younger being relative, they are still centuries old — stands in this southern section of the sanctum, forming a loose circle of their own that echoes the ancient oak's root circle to the north.  Each oak shows the same spiral carvings on its bark, though these are shallower, more recently cut, as if added in sequence over years.  The carvings in this stand tell a story if read in sequence from tree to tree, but the language of the story is the same undecipherable script as the druid circle stones.  Whatever is recorded here was recorded in a time before the corruption, when the druids who made this place still lived.~
+2 3
+D0
+The oak stand connects north toward the ancient oak section.~
+~
+0 -1 1143
+D3
+The stand leads west through the spring outflow channel.~
+~
+0 -1 1147
+D2
+The southern boundary of the sanctum is reached at the stand's outermost trees.~
+~
+0 -1 1149
+S
+#1149
+The Hidden Egress~
+The very southern tip of the Verdant Sanctum ends here in a final cluster of trees whose roots, above ground, form a sheltered alcove.  The alcove is the most hidden point in the sanctum — invisible from any adjacent section until within a few feet, the root-walls screening it completely.  Within the alcove, the moss is undisturbed, suggesting almost nothing finds this place; the air is the cleanest in the entire Withered Depths.  On the western root-wall, scratched in the same script as the druid circle and the southern oaks but in a rough, recent hand, is a single sentence in a language that resolves, for anyone who has seen enough of the area's carving-language to recognise its patterns, into something that means approximately: The way back is always west.  A faint shimmer in the western root-wall — a thinning in the boundary of the sanctum that corresponds to the thinning of the boundary in the corrupted zone directly to the west — marks where the forest's own hidden path returns a traveller to the zone's entry.~
+2 3
+D0
+The alcove connects north back toward the southern oak stand.~
+~
+0 -1 1148
+D3
+The western root-wall's shimmer marks the hidden path back to the zone's entrance.~
+~
+0 -1 1000
 S
 #0
 #$
