@@ -3529,6 +3529,237 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
+#10060
+Rootmother living staff~
+@@Gthe Rootmother's living staff@@N~
+@@GThe Rootmother's living staff rests here, still breathing, roots curling from its base.@@N
+
+~
+5 -2013265792 8421376 1
+0 6 13 7 0 0 0 0 0 0
+1
+L
+90
+#10061
+crown living thorns~
+@@Ga crown of living thorns@@N~
+@@GA crown of living thorns rests here, its vines still slowly growing.@@N
+
+~
+9 134217856 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#10062
+Rootmother heartwood buckler~
+@@Gthe Rootmother's heartwood buckler@@N~
+@@GThe Rootmother's heartwood buckler lies here, carved from the forest's living core.@@N
+
+~
+9 402653312 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
+#10063
+greaves ancient bark~
+@@Ggreaves of ancient bark@@N~
+@@GA pair of ancient bark greaves rests here, etched with growth-rings.@@N
+
+~
+9 134217856 9437184 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
+#10064
+rootweave tunic~
+@@Ga rootweave tunic@@N~
+@@GA tunic woven from living rootweave lies here, still drawing moisture from the ground.@@N
+
+~
+9 134217856 8650752 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+90
+#10065
+Rootmother seed~
+@@Gthe Rootmother's seed@@N~
+@@GThe Rootmother's seed lies here -- warm, heavy, and faintly pulsing.@@N
+
+~
+9 134217856 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#10066
+living bark vambraces~
+@@Gliving bark vambraces@@N~
+@@GA pair of vambraces of living bark lies here, flexing slightly.@@N
+
+~
+9 134217856 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
+#10067
+blade blighted wood~
+@@Ga blade of blighted wood@@N~
+@@gA blade of blighted wood lies here, its edge blackened and unnaturally keen.@@N
+
+~
+5 134217856 8421376 1
+0 6 13 3 0 0 0 0 0 0
+6
+L
+90
+#10068
+sporecrown helm~
+@@Ga sporecrown helm@@N~
+@@gA helm crowned with sporecrown fungal stalks lies here, still faintly glowing.@@N
+
+~
+9 134217856 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
+#10069
+cloak rotting leaves~
+@@Ga cloak of rotting leaves@@N~
+@@gA cloak of layered rotting leaves lies here, surprisingly intact.@@N
+
+~
+9 134217856 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#10070
+blightwood gauntlets~
+@@Gblightwood gauntlets@@N~
+@@gA pair of blightwood gauntlets lies here, fingers still flexed.@@N
+
+~
+9 134217856 8392704 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+90
+#10071
+Blightwood Ancient fungal shield~
+@@Gthe Blightwood Ancient's fungal shield@@N~
+@@gThe Blightwood Ancient's fungal shield lies here, a great disc of compressed fungal mass.@@N
+
+~
+9 402653312 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
+#10072
+blightwood ring decay~
+@@Ga blightwood ring of decay@@N~
+@@gA ring of blighted wood, shot through with dark veins, lies here.@@N
+
+~
+9 134217856 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#10073
+sporewoven sash~
+@@Ga sporewoven sash@@N~
+@@gA sash densely woven from sporewoven fibers lies here.@@N
+
+~
+9 134217856 8519680 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+90
+#10074
+Thornfang Alpha great claw~
+@@GThornfang Alpha's great claw@@N~
+@@GThe Thornfang Alpha's great claw lies here, each edge a natural blade.@@N
+
+~
+5 -2013265792 8421376 1
+0 6 13 3 0 0 0 0 0 0
+6
+L
+90
+#10075
+collar alpha fangs~
+@@Ga collar of alpha fangs@@N~
+@@GA heavy collar strung with the Thornfang Alpha's own shed fangs lies here.@@N
+
+~
+9 134217856 8388736 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+90
+#10076
+pelt apex predator~
+@@Ga pelt of the apex predator@@N~
+@@GA magnificent pelt of the apex predator lies here, thick and undamaged.@@N
+
+~
+9 134217856 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
+#10077
+predator eye pendant~
+@@Gthe predator's eye pendant@@N~
+@@GThe predator's eye pendant lies here -- a glassy, amber orb on a sinew cord.@@N
+
+~
+9 134217856 8388736 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+90
+#10078
+thornfang hide boots~
+@@Gthornfang hide boots@@N~
+@@GA pair of boots cured from thornfang alpha hide lies here.@@N
+
+~
+9 134217856 10485760 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+90
+#10079
+predator maw wand~
+@@Gthe predator's maw wand@@N~
+@@GThe predator's maw wand rests here, carved from a thornfang jawbone.@@N
+
+~
+5 671088768 8421376 1
+0 6 13 6 0 0 0 0 0 0
+1
+L
+90
+#10080
+thornfang alpha shoulder hide~
+@@Gthornfang alpha's shoulder hide@@N~
+@@GA mantle of thornfang alpha shoulder hide lies here, massive and thick.@@N
+
+~
+9 134217856 8389120 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+90
 #10040
 crown twisted antlers~
 @@Ga crown of twisted antlers@@N~
