@@ -10,6 +10,944 @@ F 15
 U @@pA @@Gfoul wind @@pstirs through the twisted canopy...@@N~
 R all~
 W all~
+#MOBILES
+#1000
+fungal colossus~
+@@pthe Fungal Colossus@@N~
+The Fungal Colossus towers here, a colossal figure of compressed fungal matter whose every movement sends spores cascading from its bulk.~
+This monstrosity is the apex of what the blight can build from raw biological material: a body composed of fused root-matter and compressed mycelium, animated by an intelligence that operates entirely at the level of appetite. It was not made by any druid or any spell; it grew. The spores it exhales are weaponised, its fists leave craters, and everything it touches begins immediately to rot.~
+67108979 0 -500 S
+110 0
+2000 -40 25 30
+! 0 0 0 7 0 2097280 80
+| 544 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1002 1003 1014 0 0 0 0 0 0
+L 34 33 33 0 0 0 0 0 0
+#1001
+briar queen~
+@@pthe Briar Queen@@N~
+The Briar Queen stands here, her form woven entirely from living thorned vines that flex and strike with a mind of their own.~
+She was once a fey noble of significant power before the blight rewrote her; what remains wears the shape of royalty like a mask over something older and more purposeful. The thorns composing her body have fused with her nervous system and she feels no pain, because pain is simply information now, and she processes it beautifully.~
+67108979 0 -600 S
+110 2
+1800 -40 24 28
+! 0 0 0 7 0 2304 48
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1004 1005 1015 0 0 0 0 0 0
+L 34 33 33 0 0 0 0 0 0
+#1002
+bog hydra~
+@@pthe Bog Hydra@@N~
+The Bog Hydra surges here, its multiple heads weaving independently on necks too long for any natural creature.~
+Each head operates with separate, coordinated purpose, making it impossible to watch all of them simultaneously. The scales are dark green-grey and smell of deep stagnant water; the teeth in each head are recurved and designed to prevent removal. It has no fear and no capacity for mercy because it has no mind in any recognisable sense, only hunger.~
+67371123 0 -400 S
+110 0
+2200 -35 22 35
+! 0 0 0 7 32868 4224 16
+| 576 136 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1006 1007 1016 0 0 0 0 0 0
+L 34 33 33 0 0 0 0 0 0
+#1003
+canopy warden~
+@@pthe Canopy Warden@@N~
+The Canopy Warden looms here, an ancient treant whose bark is blackened with blight and whose limbs creak with terrible force.~
+It was the eldest guardian of this forest before the corruption took it, which means it knows every path, every weakness, and every secret of the Withered Depths. The blight did not reduce its intelligence; it redirected it. The Warden now guards the canopy against everything, because it can no longer distinguish friend from foe.~
+67108979 0 -600 S
+110 0
+1800 -40 24 28
+! 0 0 0 7 0 6144 144
+| 34 384 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1008 1009 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+#1004
+blightmother~
+@@pthe Blightmother@@N~
+The Blightmother pulses here at the heart of the corruption, a vast and terrible presence whose form is barely contained within physical space.~
+She is the source of this blight's current expression, the organism the corruption has built over centuries to be its most effective amplifier. Her body is part fungus, part something older and unnameable, and she is fully aware of what she is. She does not consider herself evil. She considers herself inevitable.~
+67108979 256 -900 S
+110 2
+2500 -45 28 38
+! 0 0 0 7 569352 7340032 112
+| 800 136 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1010 1011 1017 0 0 0 0 0 0
+L 34 33 33 0 0 0 0 0 0
+#1005
+verdant guardian~
+@@Gthe Verdant Guardian@@N~
+The Verdant Guardian stands here, ancient and magnificent and utterly maddened, its bark untouched by corruption but its eyes blazing with something beyond reason.~
+It has spent centuries holding the Verdant Sanctum intact against the encroaching blight, and the sustained effort has broken something in it. It no longer trusts anything that enters, because the corruption has tried every deception. Now it attacks everything, not because it is evil, but because it cannot afford to be wrong even once.~
+67108979 0 -400 S
+110 0
+1900 -38 25 30
+! 0 0 0 7 0 8390656 176
+| 40 768 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1012 1013 0 0 0 0 0 0 0
+L 50 50 0 0 0 0 0 0 0
+#1006
+rotwood sentinel~
+a rotwood sentinel~
+A rotwood sentinel stands rigid here, its bark-armored body barely distinguishable from the corrupted trees around it until it moves.~
+These tree-creatures have lived in the Blightwood long enough to absorb its properties, becoming something between animated and undead, driven by the slow intelligence of the root network with enough individual awareness to identify threats and respond with crushing, methodical force.~
+33554545 0 -300 S
+100 0
+1000 -30 20 20
+! 0 0 0 7 40962 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1039 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1007
+miasma wraith~
+a miasma wraith~
+A miasma wraith drifts here, its form a thickening of the ambient mist that occasionally resolves into something recognisable as a shape.~
+It was a person once; the blight dissolved the distinction between the living organism and the toxic gas it was breathing until nothing remained but the gas, given purpose and hunger by the remnant energy of a former mind. It is not intelligent by any meaningful standard, but it is effective at identifying and pursuing warm things.~
+33636465 2 -800 S
+97 0
+700 -26 17 17
+! 0 0 0 7 0 2105344 0
+| 256 10 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1008
+thornweaver matriarch~
+a thornweaver matriarch~
+A thornweaver matriarch crouches here, vastly larger than her offspring, her thorned legs spanning the full width of the passage.~
+The thornweaver matriarchs are the apex of their species, larger and smarter than the ordinary spiders that fill the Briar Maze. She has been building her web here for decades and knows every strand of it, knowledge she will use against anything that enters her territory.~
+33554545 0 -300 S
+98 2
+800 -26 17 17
+! 0 0 0 7 528386 0 0
+| 514 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1009
+blighted wolf~
+a blighted wolf~
+A blighted wolf prowls here, its coat matted with dark corruption and its eyes glowing with a faint violet light.~
+These wolves were ordinary predators before the blight warped them into something faster, harder to injure, and operating with better pattern recognition than any wolf should possess. The violet light in their eyes is literal: fungal growth has colonised their optic nerves and improved their night vision substantially.~
+97 0 -100 S
+85 0
+150 -12 6 6
+! 0 0 0 7 32769 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1019 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1010
+twisted dryad~
+a twisted dryad~
+A twisted dryad stands here, beautiful in outline but deeply wrong in detail, her bark-skin cracked with veins of violet blight.~
+She remembers being a forest guardian; the memories have not been erased, only repurposed. She uses her knowledge of the forest's rhythms to ambush and her knowledge of woodland magic to weaken. Everything she once was has been inverted into something that preys on the things she used to protect.~
+97 0 -200 S
+90 2
+200 -15 8 8
+! 0 0 0 7 0 1536 4
+| 32 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1020 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1011
+fungal crawler~
+a fungal crawler~
+A fungal crawler scuttles here on too many limbs, its chitinous body erupting with shelf-like fungal growths at every joint.~
+These insectoid creatures emerged from deep below the Fungal Hollows after the blight created conditions that favoured their growth. Their bite inoculates victims with fungal spores as a byproduct of feeding, not as a weapon; the fungal crawlers are entirely indifferent to the suffering this causes.~
+97 0 -100 S
+88 0
+170 -13 7 7
+! 0 0 0 7 129 0 0
+| 544 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1021 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1012
+venomous viper~
+a venomous viper~
+A venomous viper coils here, its scales marked with the dark banding of something that has absorbed corruption without being destroyed by it.~
+The viper's venom was already potent before the blight enhanced it. What it carries now blurs the line between toxin and infection; the fungal component of the bite means infection that persists even after the snake itself is dead.~
+97 0 -100 S
+92 0
+220 -16 10 10
+! 0 0 0 7 0 0 0
+| 512 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1022 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1013
+corrupted treant~
+a corrupted treant~
+A corrupted treant lurches here, a massive figure of blackened wood whose movements are driven by the corruption threading through its heartwood.~
+Unlike ancient treants that served as forest guardians, this one retains no memory of purpose. The corruption replaced everything coherent with a single imperative to destroy; its size and strength make it formidable even without sophistication, and the little intelligence the blight left it has been dedicated entirely to how to hit things harder.~
+97 0 -200 S
+95 0
+380 -20 12 12
+! 0 0 0 7 32770 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1023 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1014
+bog lurker~
+a bog lurker~
+A bog lurker waits motionless in the shallows, indistinguishable from a half-submerged log until it lunges.~
+It has refined ambush to an art form, remaining submerged for hours while breathing through pores, its camouflage actively adjusting to light conditions. The blight has given it patience that no natural predator should possess, and strength that makes its initial lunge almost impossible to survive unprepared.~
+97 65536 -100 S
+90 0
+200 -15 8 8
+! 0 0 0 7 2049 0 0
+| 64 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1024 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1015
+thornweaver spider~
+a thornweaver spider~
+A thornweaver spider crouches here, its abdomen swollen with blight-enhanced silk it uses to rebuild its webs faster than they can be destroyed.~
+The ordinary thornweaver is already dangerous; the blight has pushed its venom potency and web strength beyond what baseline biology allows. It maintains a territory and rebuilds damaged sections of web within minutes, which makes permanently clearing its territory effectively impossible.~
+97 0 -100 S
+93 0
+250 -18 11 11
+! 0 0 0 7 4097 0 0
+| 514 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1025 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1016
+swamp ghoul~
+a swamp ghoul~
+A swamp ghoul lurches here, a waterlogged undead whose tattered clothing suggests it was human not long ago.~
+The Miasma Bog preserves corpses: the anaerobic conditions of the deeper sections prevent conventional decomposition, and the blight provides the animating force. The result is ghouls that are wetter, slower, and far more durable than their drier counterparts, their flesh preserved in a state that resists most physical damage.~
+16481 0 -300 S
+91 0
+210 -16 9 9
+! 0 0 0 7 129 0 0
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1026 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1017
+blighted bear~
+a blighted bear~
+A blighted bear crashes through the undergrowth here, massive and erratic, its fur matted with dark growth and its movements driven by pain it cannot locate.~
+The blight does not always improve the creatures it takes; sometimes it simply hurts them until they attack everything in range. This bear was already formidable; the corruption has made it larger, harder to injure, and operating at a permanent aggression that precludes any possibility of retreat or negotiation.~
+97 0 -100 S
+88 0
+180 -13 7 7
+! 0 0 0 7 32769 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1041 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1018
+canopy stalker~
+a canopy stalker~
+A canopy stalker clings to the branches overhead, visible only as a distortion against the canopy until it drops.~
+This predator hunts by dropping from heights onto prey, using its talons to establish a grip it does not release until the prey stops moving. The blight has lengthened its talons, strengthened its grip, and given it the patience to wait motionless for hours in any position.~
+97 65536 -200 S
+95 0
+320 -18 12 12
+! 0 0 0 7 4098 0 0
+| 18 256 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1028 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1019
+spore shambler~
+a spore shambler~
+A spore shambler lurches here, a roughly humanoid mass of fungal growth whose every step releases a cloud of toxic spores.~
+There is no longer an organism at the centre of this creature; the spores have consumed and replaced it, using the remaining skeletal structure as a scaffold for locomotion. It does not think, does not feel, and exists only to spread. It is very good at that.~
+262241 0 -100 S
+86 0
+140 -12 6 6
+! 0 0 0 7 1 0 0
+| 544 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1029 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1020
+briar hound~
+a briar hound~
+A briar hound prowls here, its body covered in hardened thorn-growths that make even casual contact painful.~
+These canines are the result of thornweaver spider venom interacting with wolf biology over generations; the thorn-growths are not a secondary feature but a core part of their predatory strategy. They use their coated bodies as weapons, rolling onto prey and letting the thorns do significant work while they bite.~
+97 0 -100 S
+89 0
+180 -14 8 8
+! 0 0 0 7 32769 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1030 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1021
+moss horror~
+a moss horror~
+A moss horror moves here, a creeping mass of animated moss and undergrowth that has fused into something predatory.~
+The moss horror is not a single organism but a colony with emergent group behaviour that functions as a single entity for predatory purposes. Individual sections can be destroyed without stopping the whole; only dismantling the central mass ends the threat. It has no eyes, no ears, and no weakness to conventional distraction.~
+97 0 -200 S
+94 0
+300 -19 12 12
+! 0 0 0 7 32770 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1031 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1022
+withered druid~
+a withered druid~
+A withered druid stands here, the remnant of a forest guardian who fell to the blight and rose again as something that serves it.~
+In life this was a keeper of the deep forest rites; in unlife it retains enough of that knowledge to be significantly more dangerous than ordinary undead. It understands the land it moves through and uses that understanding to position itself advantageously. Somewhere in there the original person is still watching, still aware, unable to stop what it has become.~
+16481 0 -700 S
+96 0
+450 -22 14 14
+! 0 0 0 7 0 6144 16
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 20 1001 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1023
+vine strangler~
+a vine strangler~
+A vine strangler moves through the undergrowth as a mass of coiled, purposeful vine that has adopted a humanoid posture for ease of locomotion.~
+There is no brain in the vine strangler that any anatomist would recognise; its intelligence is distributed through the entire vine mass and expressed entirely in the efficiency with which it identifies and eliminates things that intrude on its territory. Its grip, once established, does not release until something gives way.~
+262241 0 -100 S
+87 0
+160 -12 7 7
+! 0 0 0 7 2049 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1033 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1024
+bog wisp~
+a bog wisp~
+A bog wisp drifts here, a pale sphere of cold light that flickers and pulses with an unsettling irregularity.~
+Will-o-wisps in a healthy bog are benign phenomena, natural electrical discharges from decaying organic matter. The blight has given this one purpose and hunger; it still produces light, but the light now functions as a lure rather than a byproduct. It has no body to injure and no mind to negotiate with, only the drive to draw things into the deepest and most dangerous sections of the bog.~
+65633 2 -100 S
+85 0
+120 -10 5 5
+! 0 0 0 7 0 1028 0
+| 16 34 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1025
+gloomwing moth~
+a gloomwing moth~
+A gloomwing moth circles here, its wingspan blotting out a significant portion of the canopy, its wing-dust falling in a fine toxic rain.~
+These enormous moths are corrupted descendants of once-harmless forest moths; the blight expanded their size, changed the chemical composition of their wing-dust from irritant to genuine toxin, and sharpened their territorial instincts into something that attacks without provocation. The wing-dust is the primary weapon; the wings themselves are secondary.~
+97 0 -100 S
+90 0
+200 -15 8 8
+! 0 0 0 7 4097 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1034 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1026
+heartrot spawn~
+a heartrot spawn~
+A heartrot spawn pulses here, a blight-creature whose body is a constant visible expression of the corruption working through it.~
+These are direct extensions of the Blightmother's influence, pieces of her distributed biological network that have developed enough independence to move and hunt on their own. They are not true individuals; destroying one diminishes the Blightmother slightly, which makes them useful barometers of how close one is getting to the source.~
+97 0 -400 S
+96 0
+420 -22 14 14
+! 0 0 0 7 32898 0 0
+| 544 136 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1035 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1027
+corrupted stag~
+a corrupted stag~
+A corrupted stag stands here, its antlers grown massive and fused with fungal growths into something between rack and weapon.~
+The stag retains the territorial aggression of its species but without any of the flight response; the blight has removed its capacity for retreat. What remains is a creature that charges anything that enters its territory with the full weight of its altered body, the antler-growths functioning as devastating forward weapons.~
+97 0 -100 S
+92 0
+240 -16 11 11
+! 0 0 0 7 294913 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1036 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1028
+fungal spitter~
+a fungal spitter~
+A fungal spitter lurches here, its swollen abdomen visibly pulsing as it builds pressure for its next discharge.~
+The spitter's ranged attack is a pressurised jet of concentrated acid derived from the same biological processes that break down wood in ordinary fungus; in this creature, the process has been weaponised. It does not approach its prey; it softens it from a distance and then feeds on whatever falls.~
+97 0 -100 S
+89 0
+170 -14 8 8
+! 0 0 0 7 0 128 0
+| 544 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1040 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1029
+trapped explorer~
+a trapped explorer~
+A battered explorer huddles here, alive but barely, too exhausted and frightened to do anything but watch.~
+Whatever brought this person into the Withered Depths is unclear; the state they are in suggests they have been here for some time and have not been able to find a way out. They are not hostile, just desperate, and they will speak to anyone who stops long enough to listen. The information they carry, fragmentary and unreliable as it is, is probably the most current map of the inner depths available.~
+67 0 100 S
+50 1
+10 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1030
+blightwood revenant~
+a blightwood revenant~
+A blightwood revenant stands here, a massive undead treant whose bark is black with necrotic energy and whose every step shakes the ground.~
+The revenants are ancient treants that died to the blight and were risen by it — not restored, but taken and made into instruments. They retain the physical scale and strength of living treants with none of the biological limitations of living things, and the necromantic energy running through their root-systems makes them functionally unkillable by anything that does not get through the bark.~
+33570929 0 -800 S
+100 0
+1000 -28 20 20
+! 0 0 0 7 40996 4096 16
+| 258 136 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1031
+fungal titan~
+a fungal titan~
+A fungal titan fills the tunnel here, a towering construct of compressed mycelium and root-matter that moves with ponderous unstoppable momentum.~
+These creatures are not intelligent in any conventional sense; they are biological machines, grown by the blight from the available organic material of the Fungal Hollows and animated by the same diffuse intelligence that runs through the fungal network beneath the earth. They do not pursue strategy; they simply advance until obstacles cease to be obstacles.~
+33816689 0 -300 S
+99 0
+950 -27 19 19
+! 0 0 0 7 32962 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1032
+corrupted dryad elder~
+a corrupted dryad elder~
+A corrupted dryad elder stands here, the centuries of her existence visible in the depth of the corruption woven through her bark-form.~
+Elder dryads are rare under any circumstances; this one has survived long enough for the blight to thoroughly integrate with her biology rather than simply overwriting it. The result is a caster of genuine power who uses the corruption's properties as fluently as she once used the forest's. She is not mindless; she is calculated and deeply dangerous.~
+33554545 0 -500 S
+98 2
+800 -26 18 18
+! 0 0 0 7 0 2816 48
+| 32 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1033
+bog behemoth~
+a bog behemoth~
+A bog behemoth moves here with the slow certainty of something that has never had a reason to hurry because nothing it has encountered has ever hurt it significantly.~
+These massive swamp reptiles were already the apex predators of the Miasma Bog before the blight enhanced them; the corruption has scaled up their already-formidable biology without meaningfully changing their behaviour. They eat, they defend territory, and they are nearly impossible to stop once they decide something should be dead.~
+33554545 0 -200 S
+99 0
+1050 -28 20 22
+! 0 0 0 7 33060 0 0
+| 66 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1034
+canopy horror~
+a canopy horror~
+A canopy horror circles overhead in the upper branches, its wingspan making a sound like a slow exhalation as it glides between the trees.~
+This winged predator has evolved for the specific ecology of the Ancient Canopy, its body perfectly adapted for ambush from above. The blight has pushed its size, reflexes, and territorial aggression beyond what any baseline member of its species could achieve. It considers the entire canopy its territory and defends it accordingly.~
+33554545 0 -300 S
+97 0
+700 -24 17 17
+! 0 0 0 7 1085442 0 0
+| 18 256 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1035
+heartrot abomination~
+a heartrot abomination~
+A heartrot abomination pulses here, a mass of corrupted flesh and bark that has fused into something that should not be able to sustain itself and does anyway.~
+These are not intentionally created; they are what happens when the blight's growth imperative operates on materials that do not combine neatly. The result is a creature of exceptional durability and strength, driven by the combined biological imperatives of all the organisms that contributed to its mass, which amounts in practice to an overwhelming drive to destroy anything that moves.~
+33816689 0 -500 S
+100 0
+950 -28 19 21
+! 0 0 0 7 557060 0 16
+| 544 136 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1036
+briar lord~
+a briar lord~
+A briar lord stands here, a massive thorned guardian whose presence fills the maze-path, its movements deliberate and supremely confident.~
+The briar lords are the dominant territorial creatures of the Briar Maze, individually powerful enough that even the thornweaver matriarchs give them wide berth. They are intelligent by the standards of corrupted creatures, capable of setting ambushes and using the maze's disorienting properties to their advantage against prey that cannot navigate it as well as they can.~
+33554545 0 -400 S
+98 0
+850 -26 18 18
+! 0 0 0 7 41986 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1037
+rotting wolf alpha~
+a rotting wolf alpha~
+A rotting wolf alpha paces here, larger than its pack, its fur almost entirely replaced by dark fungal growth, its eyes tracking everything.~
+The alpha is the pack's coordinator and primary tactician; it positions its subordinates before committing itself, and its own engagement is timed to exploit whatever disarray the pack has already created. The blight has made it larger and harder, but more importantly it has made it patient in a way that ordinary wolves are not.~
+97 0 -100 S
+90 0
+230 -15 10 10
+! 0 0 0 7 36866 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1067 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1038
+mire crocodile~
+a mire crocodile~
+A mire crocodile lies here with its eyes above the waterline, almost invisible in the dark water, motionless until it is not.~
+The mire crocodile is the conventional predator of the Miasma Bog taken to an extreme by the blight; it is larger, faster from ambush, and its bite delivers a corruption that works quickly enough to matter in a short fight. It prefers to drag prey into deeper water, and it is very good at the first step of that process.~
+97 0 -100 S
+93 0
+270 -18 11 11
+! 0 0 0 7 34817 0 0
+| 64 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1045 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1039
+blighted owl~
+a blighted owl~
+A blighted owl watches from a high branch here, its enlarged eyes glowing faintly in the dark, tracking movement below with absolute precision.~
+These raptors have been changed by the blight in ways that are primarily about enhanced predatory capability: their vision extends into spectra the original species could not perceive, their talons are longer and harder, and they hunt things significantly larger than any natural owl would attempt. They are difficult to detect before they strike.~
+97 65536 -100 S
+86 0
+145 -12 6 6
+! 0 0 0 7 4097 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1040
+thorn elemental~
+a thorn elemental~
+A thorn elemental occupies the path here, a slowly rotating mass of animated thorned vines that has achieved sufficient coherence to qualify as a creature.~
+These elementals are not summoned; they form spontaneously when the blight density in the Briar Maze reaches a threshold that causes the thorned plant matter to self-organise. They are mindless in the strict sense but have emergent behaviours that include territory defence and target prioritisation. The thorns comprising their body are continuously replaced from local plant matter.~
+262241 0 -200 S
+94 0
+300 -19 12 12
+! 0 0 0 7 32770 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1046 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1041
+spore cloud~
+a spore cloud~
+A dense spore cloud drifts here, barely visible as a thickening of the already-thick air, its passage leaving a trail of toxic residue.~
+The spore cloud is not a creature in any conventional sense; it is a mobile fungal colony that has reached a concentration sufficient to exhibit coordinated behaviour. It does not perceive in any way that would be recognisable, but it moves toward warmth and carbon dioxide sources, which means it reliably finds and overwhelms anything breathing in its vicinity.~
+327777 2 -100 S
+85 0
+100 -8 4 4
+! 0 0 0 7 0 2097152 0
+| 512 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1042
+withered ent~
+a withered ent~
+A withered ent lurches here, ancient and dying and furious about it, its bark grey and crumbling but its limbs still carrying lethal force.~
+These are old treants that the blight has not yet fully claimed; they are in the process of dying and converting, and the experience of that conversion is driving them to attack everything around them. They are perhaps the most pitiable creatures in the Withered Depths, and also among the most dangerous, because a dying treant has nothing left to lose.~
+97 0 -300 S
+95 0
+380 -20 12 12
+! 0 0 0 7 32898 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1047 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1043
+bog rat swarm~
+a bog rat swarm~
+A seething mass of corrupted rats moves here, too tightly packed to count, operating with a collective urgency that individual rats do not possess.~
+The swarm behaves as a single organism for predatory purposes; individual members are irrelevant and the colony replaces casualties from its own population. They are individually small, but collectively they can overwhelm prey that would easily defeat any individual member, and the corruption in their bites is cumulative.~
+97 0 -100 S
+86 0
+140 -12 6 6
+! 0 0 0 7 129 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1044
+bramble golem~
+a bramble golem~
+A bramble golem stands here, a construct of tangled thorny branches that has been shaped by the blight into something with rudimentary locomotion and purpose.~
+Unlike thorn elementals, which form spontaneously, bramble golems are the blight's intentional constructions, assembled from available plant material and animated to serve as territorial defenders. They are slow but essentially unkillable by anything that does not penetrate their thorny exterior to the animating core within.~
+262241 0 -200 S
+93 0
+260 -18 11 11
+! 0 0 0 7 8225 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1048 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1045
+shadow fox~
+a shadow fox~
+A shadow fox crouches here, its dark fur making it nearly invisible in the shadows until it moves, at which point it moves very fast.~
+These foxes have developed a natural shadow-affinity that predates the blight; the corruption has deepened it to the point where the shadow fox can almost literally fade into darkness. They hunt by approaching to within striking range without being detected, which they achieve with a consistency that suggests active ability rather than merely good camouflage.~
+97 65536 -100 S
+88 0
+180 -13 8 8
+! 0 0 0 7 6145 0 0
+| 2 136 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1049 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1046
+canopy viper~
+a canopy viper~
+A canopy viper hangs from a branch here, its body mimicking the texture of bark so effectively that it is invisible at rest.~
+The arboreal serpent has developed venom specifically adapted to the corrupted ecosystem of the Ancient Canopy; it is virulent, fast-acting, and carries a fungal component that the blight has engineered over generations to resist conventional antidotes. It will not pursue prey that retreats from range, but its strike is fast enough that retreat often comes too late.~
+97 65536 -100 S
+91 0
+210 -16 9 9
+! 0 0 0 7 1 0 0
+| 512 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1050 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1047
+corpse flower~
+a corpse flower~
+A corpse flower sits anchored to the ground here, its enormous mottled petals spread open and its digestive structure clearly visible at the centre.~
+The corpse flower is a fully stationary carnivore that has been given by the blight the ability to detach and move its root-system when prey is not coming to it. In its mobile phase it is slow, but its trip-vines are fast and its digestive enzymes work quickly. The smell it produces is designed to attract both prey and pollinators; in the Withered Depths it attracts only prey.~
+262241 0 -100 S
+87 0
+160 -12 7 7
+! 0 0 0 7 2049 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1051 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1048
+mycelium creeper~
+a mycelium creeper~
+A mycelium creeper moves here as a network of fungal tendrils that contracts and expands through the available space with deceptive speed.~
+The mycelium creeper does not have a body in any conventional sense; it is a section of the underground fungal network that has become locally autonomous, extruding tendrils above ground to feed. It detects prey through vibration and chemical signatures in the soil, and its ambush capability derives from the fact that its tendrils can emerge from the ground rather than needing to approach across the surface.~
+262241 0 -100 S
+90 0
+210 -15 9 9
+! 0 0 0 7 34817 0 0
+| 544 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1052 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1049
+blighted hawk~
+a blighted hawk~
+A blighted hawk circles overhead here, its wingspan larger than natural, its eyes tracking everything below with terrible intensity.~
+The hawk's corruption has made it larger, faster, and given its talons a hardness that makes conventional armour less reliable. It is an efficient aerial predator that has had its already-considerable capabilities enhanced by the blight to the point where it can take prey several times its own mass without excessive difficulty.~
+97 0 -100 S
+89 0
+175 -14 8 8
+! 0 0 0 7 32769 0 0
+| 18 256 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1050
+fungal zombie~
+a fungal zombie~
+A fungal zombie lurches here, its body hosting a dense colony of parasitic mushrooms that have taken over all motor functions from the original occupant.~
+The organism inside is dead; the mushrooms use the remaining body structure as a substrate and locomotion platform. The zombie's behaviour is driven entirely by the mushrooms' biological imperatives, which in a corrupted environment means moving toward things it can spread spores onto and attacking anything that threatens the host body.~
+16481 0 -300 S
+88 0
+180 -13 7 7
+! 0 0 0 7 129 0 0
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1053 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1051
+thorn dart frog~
+a thorn dart frog~
+A thorn dart frog sits here, its vivid coloration a clear warning to anything with sufficient experience to read it, which the creatures of the Withered Depths generally do not.~
+Its skin secretes a toxin of exceptional potency; the blight has taken what was already one of the most effective biological weapons in the forest and refined it into something that acts faster and is harder to counteract. The frog itself is small and not particularly aggressive, but it will secrete defensively when touched, which happens inevitably when anything tries to move past it in a narrow space.~
+97 0 -100 S
+85 0
+110 -10 5 5
+! 0 0 0 7 1 0 0
+| 512 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1052
+withered wolf spider~
+a withered wolf spider~
+A withered wolf spider crouches here, its exoskeleton visibly rotting but still structurally intact, its movements precise despite the decay.~
+The wolf spider's corruption has taken an unusual form: instead of enhancing its biology, the blight is slowly consuming it, and the spider's response to this is the same as its response to everything else, which is to attack. It is dying in slow motion and very aggressive about it.~
+97 0 -100 S
+91 0
+210 -16 9 9
+! 0 0 0 7 4097 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1053
+peat wraith~
+a peat wraith~
+A peat wraith drifts here, its form barely distinguishable from the bog-mist, a pale smear of cold light and psychic pressure.~
+These are the spirits of those who drowned in the Miasma Bog before the blight provided them with an alternative to oblivion. They are not grateful for that alternative; the psychic damage from the process of conversion is extensive, and what remains is anguished and deeply hostile toward anything still living enough to suffer.~
+82017 2 -600 S
+93 0
+240 -18 11 11
+! 0 0 0 7 0 270336 0
+| 256 10 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1054 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1054
+blight beetle~
+a blight beetle~
+A blight beetle trundles here, its carapace overgrown with fungal structures that make it look like a small ambulatory mushroom formation.~
+The beetle's original biology is still present beneath the fungal overgrowth, which means it retains the sensory apparatus and territorial instincts of its species. The fungi have added bulk, chemical defence capability, and a degree of aggression that the baseline beetle does not exhibit. It is not large, but it is considerably harder to damage than it looks.~
+97 0 -100 S
+86 0
+145 -12 6 6
+! 0 0 0 7 32769 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1068 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1055
+corrupted boar~
+a corrupted boar~
+A corrupted boar charges back and forth here, its tusks grown massive and fused with fungal growths, its charge pattern more like a demolition exercise than anything biological.~
+The boar's aggression has been maximised by the blight to the point where it no longer responds to any stimulus other than attack. It does not eat, does not sleep, does not retreat. It charges. The tusks have been reinforced by the fungal growth fusing with the ivory until the result is structurally equivalent to stone.~
+97 0 -100 S
+90 0
+220 -15 9 9
+! 0 0 0 7 294913 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 50 1055 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1056
+verdant wisp~
+a verdant wisp~
+A verdant wisp drifts here, a soft sphere of clean warm light that looks entirely out of place in the surrounding darkness.~
+This is a forest spirit old enough to predate the corruption, maintaining itself in the Verdant Sanctum by proximity to the pocket of living forest that the sanctum represents. It is not aggressive and will not attack unless attacked; it seems to be watching, as though assessing whether the people it encounters are something that can be reasoned with. They occasionally whisper things in a language that is mostly feeling rather than word.~
+65601 2 500 S
+87 0
+120 -12 5 5
+! 0 0 0 7 0 8389632 4
+| 8 768 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1057
+canopy weaver~
+a canopy weaver~
+A canopy weaver hangs here between two branches, suspended in the centre of a web that spans the entire gap, patient and still.~
+The canopy weaver has adapted the thornweaver's basic strategy for the upper canopy environment, building much larger webs between the massive branches and using wind to help distribute them. Its web is nearly invisible in the dim canopy light. The weaver waits at the centre and responds to vibration in the web with speed that is surprising for something that spends most of its time motionless.~
+97 0 -100 S
+92 0
+240 -16 10 10
+! 0 0 0 7 6145 0 0
+| 2 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1058
+rotwood beetle swarm~
+a rotwood beetle swarm~
+A cloud of wood-boring beetles moves through here, their mandibles audible as a collective rasping sound against every surface they touch.~
+These insects are individually tiny but collectively capable of reducing a large tree to structural failure within hours. The blight has synchronised their already-cooperative behaviour into something approaching hive intelligence, directed primarily at anything biological that enters their foraging range.~
+97 0 -100 S
+88 0
+170 -13 7 7
+! 0 0 0 7 32769 0 0
+| 34 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1059
+mire leech~
+a mire leech~
+A mire leech moves through the shallows here, its elongated body contracting and extending with the slow persistence of something that has never needed to be in a hurry.~
+The mire leech feeds by attaching and drawing off biological material over extended periods, which makes it poorly adapted to combat but capable of substantial damage against anything that does not notice it has attached. The blight has made the leeches larger and given their saliva an anticoagulant component that complicates the wound regardless of how quickly the leech is removed.~
+97 0 -100 S
+85 0
+115 -10 5 5
+! 0 0 0 7 1 0 0
+| 64 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1060
+fungal bat colony~
+a fungal bat colony~
+A fungal bat colony swirls here, a living cloud of spore-dusted wings moving as a single shifting mass.~
+These bats have been colonised by luminescent fungal spores that coat their fur and are exhaled with every echolocation pulse. Individually each bat would be insignificant, but the colony acts with coordinated instinct, flowing around obstacles and attacking from multiple angles simultaneously. The spores they shed accumulate in the air around them, making the whole mass hazardous to approach.~
+97 0 -200 S
+87 0
+130 -12 7 7
+! 0 0 0 7 4097 0 0
+| 256 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1061
+blighted centipede~
+a blighted centipede~
+A blighted centipede moves here, its many legs carrying it with unsettling speed for something so massive.~
+Each segment of this oversized arthropod has been swollen by the blight until it resembles something more akin to a log than an insect's body component. The mandibles drip with a toxic secretion that has grown more virulent with each generation of corruption; what started as natural venom has become something engineered by chance mutation toward maximum lethality.~
+97 0 -300 S
+89 0
+160 -13 8 8
+! 0 0 0 7 1 0 0
+| 32 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1062
+thornback tortoise~
+a thornback tortoise~
+A thornback tortoise moves ponderously here, its shell bristling with spines sharp enough to draw blood from incautious handling.~
+The blight has not sped the tortoise up nor given it aggressive instincts; what it has done is coat the natural shell with dense thorned protrusions and infuse the creature's blood with something toxic. This tortoise will not flee and cannot be easily disarmed because it carries no weapon but itself. Striking it is as likely to damage the attacker as the attacked.~
+97 0 -200 S
+94 0
+200 -18 9 9
+! 0 0 0 7 8225 0 0
+| 32 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1056 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1063
+grove phantom~
+a grove phantom~
+A grove phantom drifts here, its translucent form flickering between solidity and absence.~
+This is what remains of a druid who chose to stay when the blight came, believing their training would be sufficient. It was not. The body is long gone but the consciousness survived by fusing with the blight itself, which hollowed out the personality and left something that remembers being a druid while no longer being capable of any druidic intent. It attacks with the spells it remembers as reflex, not thought.~
+82017 2 -500 S
+96 0
+180 -18 10 10
+! 0 0 0 7 0 1114112 8
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1057 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1064
+swamp adder~
+a swamp adder~
+A swamp adder coils here, its thick body patterned in dark browns and blacks that render it nearly invisible against the bog floor.~
+This snake has grown to dimensions that have no precedent in natural history, its venom glands expanded by the blight to produce quantities that far exceed the biological need of any ambush predator. The venom carries components of the blight's corruption, meaning the wound continues to worsen long after the snake has released its grip.~
+97 0 -100 S
+88 0
+140 -12 7 7
+! 0 0 0 7 1 0 0
+| 64 32 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1065
+blighted raven~
+a blighted raven~
+A blighted raven watches from a nearby perch, its feathers slicked with dark ichor and its eyes a glowing unnatural amber.~
+Ravens were always associated with intelligence among the forest's natural fauna, and the blight has not reduced that intelligence; it has redirected it. These birds no longer forage, nest, or call to each other. They observe. They move in response to threat with a precision that suggests either instinct or plan, and they are impossible to misdirect because they have no needs to exploit.~
+97 0 -200 S
+85 0
+110 -10 6 6
+! 0 0 0 7 4097 0 0
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1066
+heartrot tendril~
+a heartrot tendril~
+A heartrot tendril reaches from the ground here, its woody surface slick with dark moisture as it probes for contact.~
+These tendrils extend from the deep root network of the Blightmother far below, serving as distant sensory appendages that have developed the ability to act independently when they detect prey. They carry no consciousness of their own but enough autonomous instruction to pursue, grip, and drain whatever they encounter. Severing one does not stop it; it regenerates from the stump.~
+262241 0 -400 S
+91 0
+170 -14 8 8
+! 0 0 0 7 2049 0 0
+| 32 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1069 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1067
+corrupted satyr~
+a corrupted satyr~
+A corrupted satyr lurches here, its goat-legs carrying it in erratic bursts as it struggles against impulses it cannot name.~
+The satyrs of this forest were not evil before the blight found them — merely chaotic and self-interested, which is not the same thing. The corruption has not simply made them hostile; it has removed the self. What moves and fights now is biological machinery running on blight instructions, wearing the body of something that used to have opinions. The transformation is particularly grotesque for preserving the face while emptying everything behind it.~
+97 0 -300 S
+93 0
+190 -15 9 9
+! 0 0 0 7 1081345 512 0
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1058 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1068
+mold hulk~
+a mold hulk~
+A mold hulk shambles here, its enormous bulk trailing fragments of itself with each slow step.~
+It is not clear whether the mold hulk is a creature covered in mold or a mold colony that has organised itself into a shape resembling a creature. The distinction may be irrelevant. What is certain is that the mass is large, durable, and entirely directionless except that it moves toward biological material and incorporates it. The surface constantly sheds spores and occasional larger chunks that surrounding growth immediately begins to consume.~
+262241 0 -300 S
+95 0
+220 -18 10 10
+! 0 0 0 7 32770 0 0
+| 544 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 1059 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#1069
+dying forest sprite~
+a dying forest sprite~
+A dying forest sprite sits curled beneath a cracked root here, her luminescence faded almost to nothing.~
+She was one of the forest's guardians in an age when the forest still had guardians who could do anything useful. The blight took her wings first, then her ability to travel the root network, then most of her memory. What remains is a persistent need to warn whoever is left to warn, because the training runs deep even when the training can no longer accomplish anything.~
+67 0 500 S
+40 2
+30 0 0 0
+! 0 0 0 7 0 0 0
+| 8 256 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1070
+lost herbalist~
+a lost herbalist~
+A lost herbalist crouches here examining the ground, muttering quietly about contamination and what still remains usable.~
+She came into the Withered Depths three days ago with a specific list of fungi she needed for a project she refuses to explain. She has not found any of them in the expected locations, because nothing here behaves the way the literature says it should. She is not panicking. She is managing her reactions very deliberately, which may be worse than panic.~
+67 0 800 S
+55 2
+50 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#1071
+feral cat~
+a feral cat~
+A feral cat moves here, its amber eyes tracking everything in the room with professional interest.~
+This cat has been living in the edge-zones of the Withered Depths long enough that it seems genuinely unimpressed by the corruption. It is not blighted; either it was here before the blight arrived or it found a way to resist that no one has yet identified. It eats things, hunts things, and occasionally follows travellers for several rooms before departing without explanation.~
+65 0 0 S
+30 0
+20 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#0
 #OBJECTS
 #1000
 corroded iron key~
@@ -3159,4 +4097,204 @@ The western root-wall's shimmer marks the hidden path back to the zone's entranc
 0 -1 1000
 S
 #0
+#SPECIALS
+* Bosses
+M 1000 spec_cast_mage
+M 1001 spec_cast_cleric
+M 1002 spec_breath_acid
+M 1003 spec_cast_cleric
+M 1004 spec_cast_bigtime
+M 1005 spec_cast_cleric
+* Strong mobs
+M 1007 spec_cast_undead
+M 1032 spec_cast_cleric
+* Trash mobs
+M 1010 spec_cast_cleric
+M 1012 spec_poison
+M 1022 spec_cast_undead
+M 1028 spec_cast_mage
+M 1041 spec_poison
+M 1046 spec_poison
+M 1051 spec_poison
+M 1053 spec_cast_undead
+M 1061 spec_poison
+M 1063 spec_cast_undead
+M 1064 spec_poison
+S
+#RESETS
+* Bosses (limit 1, in no_mob boss rooms)
+M 0 1000 1 1030
+M 0 1001 1 1050
+M 0 1002 1 1114
+M 0 1003 1 1089
+M 0 1004 1 1135
+M 0 1005 1 1145
+* Zone 1: The Rotting Threshold (rooms 1000-1014)
+M 0 1009 4 1003
+M 0 1009 4 1007
+M 0 1065 4 1004
+M 0 1065 4 1009
+M 0 1071 4 1002
+M 0 1071 4 1005
+* Zone 2: The Fungal Hollows (rooms 1015-1034)
+M 0 1031 2 1018
+E 0 1061 1 21
+M 0 1031 2 1025
+E 0 1061 1 21
+M 0 1011 4 1016
+M 0 1011 4 1020
+M 0 1011 4 1027
+M 0 1019 4 1017
+M 0 1019 4 1023
+M 0 1028 4 1019
+M 0 1028 4 1026
+M 0 1041 3 1025
+M 0 1041 3 1029
+M 0 1060 4 1016
+M 0 1060 4 1022
+M 0 1060 4 1028
+M 0 1061 3 1020
+M 0 1061 3 1027
+M 0 1068 3 1017
+M 0 1068 3 1024
+* Zone 3: The Briar Maze (rooms 1035-1054)
+M 0 1008 2 1038
+E 0 1038 1 28
+M 0 1008 2 1046
+E 0 1038 1 28
+M 0 1036 2 1041
+E 0 1066 1 4
+M 0 1036 2 1048
+E 0 1066 1 4
+M 0 1015 4 1036
+M 0 1015 4 1042
+M 0 1015 4 1049
+M 0 1020 4 1037
+M 0 1020 4 1044
+M 0 1023 4 1039
+M 0 1023 4 1045
+M 0 1044 3 1040
+M 0 1044 3 1047
+M 0 1052 4 1043
+M 0 1052 4 1051
+* Zone 4: The Blightwood (rooms 1055-1079)
+M 0 1006 3 1056
+E 0 1018 1 21
+M 0 1006 3 1060
+E 0 1018 1 21
+M 0 1006 3 1068
+E 0 1018 1 21
+M 0 1032 2 1062
+E 0 1062 1 4
+M 0 1032 2 1070
+E 0 1062 1 4
+M 0 1013 3 1057
+E 0 1027 1 21
+M 0 1013 3 1063
+E 0 1027 1 21
+M 0 1017 4 1058
+M 0 1017 4 1065
+M 0 1022 3 1072
+E 0 1032 1 21
+M 0 1022 3 1076
+E 0 1032 1 21
+M 0 1027 3 1059
+M 0 1027 3 1067
+M 0 1040 3 1061
+M 0 1040 3 1069
+M 0 1042 3 1064
+M 0 1042 3 1073
+M 0 1055 3 1066
+M 0 1055 3 1074
+M 0 1067 3 1071
+M 0 1067 3 1077
+M 0 1070 1 1059
+* Zone 5: The Ancient Canopy (rooms 1080-1094)
+M 0 1034 2 1083
+E 0 1064 1 16
+M 0 1034 2 1087
+E 0 1064 1 16
+M 0 1018 4 1081
+M 0 1018 4 1086
+M 0 1018 4 1090
+M 0 1025 4 1082
+M 0 1025 4 1088
+M 0 1049 4 1084
+M 0 1049 4 1091
+M 0 1056 3 1093
+M 0 1057 3 1085
+M 0 1057 3 1092
+* Zone 6: The Miasma Bog (rooms 1095-1119)
+M 0 1007 2 1100
+E 0 1037 1 24
+M 0 1007 2 1108
+E 0 1037 1 24
+M 0 1033 2 1105
+E 0 1063 1 28
+M 0 1033 2 1112
+E 0 1063 1 28
+M 0 1014 4 1097
+M 0 1014 4 1103
+M 0 1014 4 1110
+M 0 1016 3 1099
+M 0 1016 3 1107
+M 0 1038 3 1101
+M 0 1038 3 1109
+M 0 1047 3 1102
+M 0 1047 3 1113
+M 0 1051 3 1096
+M 0 1051 3 1104
+M 0 1053 3 1098
+M 0 1053 3 1106
+M 0 1059 3 1100
+M 0 1059 3 1108
+M 0 1064 3 1111
+M 0 1064 3 1115
+* Zone 7: The Heartrot Grove (rooms 1120-1139)
+M 0 1030 2 1122
+E 0 1060 1 22
+M 0 1030 2 1128
+E 0 1060 1 22
+M 0 1035 2 1126
+E 0 1065 1 1
+M 0 1035 2 1132
+E 0 1065 1 1
+M 0 1021 3 1121
+M 0 1021 3 1127
+M 0 1022 3 1123
+E 0 1032 1 21
+M 0 1022 3 1129
+E 0 1032 1 21
+M 0 1026 3 1124
+M 0 1026 3 1131
+M 0 1050 3 1125
+M 0 1050 3 1133
+M 0 1066 3 1120
+M 0 1066 3 1130
+M 0 1069 1 1136
+* Zone 8: The Verdant Sanctum (rooms 1140-1149)
+M 0 1010 3 1141
+M 0 1010 3 1144
+M 0 1024 3 1142
+M 0 1043 3 1143
+M 0 1054 3 1146
+* Object resets: consumables in rooms
+O 0 1070 1 1016
+O 0 1070 1 1022
+O 0 1070 1 1100
+O 0 1070 1 1120
+O 0 1071 1 1016
+O 0 1071 1 1020
+O 0 1071 1 1025
+O 0 1071 1 1028
+O 0 1072 1 1140
+O 0 1072 1 1144
+* Door resets
+D 0 1013 5 2
+D 0 1015 4 2
+D 0 1075 2 1
+D 0 1095 0 1
+D 0 1134 0 2
+D 0 1135 2 2
+S
 #$
