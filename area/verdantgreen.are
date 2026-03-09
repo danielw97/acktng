@@ -3529,6 +3529,226 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
+#10020
+shadow fox pelt cloak~
+@@Ga shadow fox pelt cloak@@N~
+@@gA cloak stitched from shadow fox pelts lies here, the fur still carrying a faint darkwood scent.@@N
+
+~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+81
+#10021
+tanglewood fang blade~
+@@Ga tanglewood fang blade@@N~
+@@GA long curved fang, still socketed in a root-wrapped hilt, rests here.@@N
+
+~
+5 128 8421376 1
+0 5 11 2 0 0 0 0 0 0
+6
+L
+83
+#10022
+tick chitin armguard~
+@@Ga tick-chitin armguard@@N~
+@@GA bracer fashioned from plates of dense tick chitin lies here.@@N
+
+~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+80
+#10023
+verdant hulk knuckle~
+@@Ga verdant hulk's knuckle@@N~
+@@GA massive knuckle-piece torn from a verdant hulk rests here, crusted with bark.@@N
+
+~
+5 1073741952 8421376 1
+0 5 11 0 0 0 0 0 0 0
+11
+L
+85
+#10024
+rotting stag antler~
+@@Ga rotting stag antler@@N~
+@@gA curved antler tine from a rotting stag lies here, tipped with decay.@@N
+
+~
+5 128 8421376 1
+0 5 11 2 0 0 0 0 0 0
+6
+L
+82
+#10025
+thorn wasp wing mantle~
+@@Ga thorn wasp wing mantle@@N~
+@@GA mantle of iridescent thorn wasp wings lies here, arranged with care.@@N
+
+~
+9 128 8389120 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+81
+#10026
+barkskin wolf pelt~
+@@Ga barkskin wolf pelt@@N~
+@@GA pelt of bark-hardened wolf fur lies here, unusually rigid.@@N
+
+~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+84
+#10027
+centipede fang earring~
+@@Ga centipede fang earring@@N~
+@@GA curved centipede fang, fashioned into an earring, lies here.@@N
+
+~
+9 128 8388672 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+82
+#10028
+bog troll hide belt~
+@@Ga bog troll's hide belt@@N~
+@@GA wide belt cured from bog troll's hide lies here, smelling faintly of peat.@@N
+
+~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+85
+#10029
+broodmother spore sac~
+@@Ga broodmother's spore sac@@N~
+@@gA pulsing spore sac torn from a fungal broodmother lies here.@@N
+
+~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+85
+#10030
+moss elemental core~
+@@Ga moss elemental's core@@N~
+@@GA dense core of petrified moss from an ancient moss elemental lies here.@@N
+
+~
+8 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+84
+#10031
+twisted ent branch~
+@@Ga twisted ent branch@@N~
+@@GA heavy branch torn from a twisted ent lies here, thick with rings of age.@@N
+
+~
+5 128 8421376 1
+0 5 11 7 0 0 0 0 0 0
+6
+L
+84
+#10032
+thornveil assassin cowl~
+@@Ga thornveil assassin's cowl@@N~
+@@gA close-fitting cowl of mottled thornveil hide lies here.@@N
+
+~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+85
+#10033
+gloomwing dust pouch~
+@@Ga gloomwing dust pouch@@N~
+@@gA small pouch full of shimmering gloomwing dust lies here.@@N
+
+~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+80
+#10034
+brambleback shell plate~
+@@Ga brambleback shell plate@@N~
+@@GA broad plate of brambleback tortoise shell lies here.@@N
+
+~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+85
+#10035
+bramble thorn dagger~
+@@Ga bramble-thorn dagger@@N~
+@@GA dagger carved from a massive bramble thorn lies here, still razor-edged.@@N
+
+~
+5 128 8421376 1
+0 5 11 2 0 0 0 0 0 0
+6
+L
+81
+#10036
+beetle shell pauldron~
+@@Ga beetle-shell pauldron@@N~
+@@GA pauldron fashioned from mosswort beetle shell lies here, smooth and hard.@@N
+
+~
+9 128 8389120 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+80
+#10037
+deepwood bear paw~
+@@Ga deepwood bear paw@@N~
+@@GA huge paw from a deepwood bear lies here, claws still intact.@@N
+
+~
+5 1073741952 8421376 1
+0 5 11 0 0 0 0 0 0 0
+6
+L
+83
+#10038
+shade touched ring~
+@@Ga shade-touched ring@@N~
+@@gA ring of dark wood, faintly cold to the touch, lies here.@@N
+
+~
+9 128 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+82
+#10039
+bark skinned armguard~
+@@Ga bark-skinned armguard@@N~
+@@GA broad armguard of bark-hardened skin lies here.@@N
+
+~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+84
 #10000
 thornback claw~
 @@Ga thornback claw@@N~
