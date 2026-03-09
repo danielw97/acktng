@@ -479,14 +479,42 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 
 ## Connection to Forest of Confusion
 
-The new area connects via a one-way-in/one-way-out path:
+Two bidirectional links connect the areas, giving players a surface entrance and an underground shortcut.
 
-1. **From Forest of Confusion:** Add a new exit from room **9769** (A Small Cavern -- currently a dead-end with no exits) going **south** to vnum **10000** (Entrance to the Verdant Depths)
-2. **Return path:** Room **10000** has a **north** exit back to room **9769**
+### Link 1: Surface Entrance (Primary)
 
-This places the entrance deep within the Forest of Confusion's cave network, requiring players to navigate the existing area before reaching the higher-level content. The small cavern (9769) serves as a natural transition point -- emerging from caves into the deeper forest.
+**Room 9695** ("Dense Woodland") is a dead-end in the forest's dense woodland zone with only a D3 (west) exit to 9694. This is the natural "deeper into the forest" transition point.
 
-**Note:** This requires a minor edit to `confusn.are` to add a `D2` (south) exit to room 9769 pointing to vnum 10000.
+- **confusn.are edit:** Add D1 (east) exit to room 9695, destination vnum 10000
+- **verdant_depths.are:** Room 10000 (Entrance to the Verdant Depths) has D3 (west) exit back to 9695
+
+| Direction | From | To | Description |
+|-----------|------|----|-------------|
+| east | 9695 (Dense Woodland) | 10000 (Entrance to the Verdant Depths) | Into the new area |
+| west | 10000 (Entrance to the Verdant Depths) | 9695 (Dense Woodland) | Back to Forest of Confusion |
+
+### Link 2: Underground Passage (Secondary)
+
+**Room 9770** ("In a Maze of Caves") is the deepest dead-end in the cave maze with only a D0 (north) exit to 9764. This connects to the Deepwood zone underground, providing an alternate route for players who explored the caves.
+
+- **confusn.are edit:** Add D2 (south) exit to room 9770, destination vnum 10062
+- **verdant_depths.are:** Room 10062 (A Narrow Root Tunnel) has D0 (north) exit back to 9770
+
+| Direction | From | To | Description |
+|-----------|------|----|-------------|
+| south | 9770 (In a Maze of Caves) | 10062 (A Narrow Root Tunnel) | Underground shortcut to Zone 3 |
+| north | 10062 (A Narrow Root Tunnel) | 9770 (In a Maze of Caves) | Back to cave maze |
+
+### Why These Rooms
+
+- **9695** is a surface forest dead-end deep in the woodland -- thematically perfect for "the forest gets darker and deeper." Players following the main overland path naturally discover the primary entrance.
+- **9770** is the deepest cave dead-end in the entire maze network -- a hidden underground passage rewards exploration of the caves with a shortcut directly into Zone 3 (The Deepwood), bypassing Zones 1-2.
+- **9769** (A Small Cavern) was considered but rejected: it has zero exits and is completely unreachable in the current area. It appears to be a stranded/orphaned room.
+
+### Required Edits to confusn.are
+
+1. Room 9695: Add `D1` exit block (east to 10000)
+2. Room 9770: Add `D2` exit block (south to 10062)
 
 ---
 
@@ -520,8 +548,9 @@ This places the entrance deep within the Forest of Confusion's cave network, req
 6. [ ] Write `#ROOMS` section (125 rooms, vnums 10000-10124, all used)
 7. [ ] Write `#RESETS` section (~80-100 mob spawns with equipment)
 8. [ ] Write `#SPECIALS` section
-9. [ ] Add `D2` exit to room 9769 in `confusn.are` pointing to 10000
-10. [ ] Add `verdant_depths.are` to `area/area.lst`
+9. [ ] Add `D1` (east) exit to room 9695 in `confusn.are` pointing to 10000
+10. [ ] Add `D2` (south) exit to room 9770 in `confusn.are` pointing to 10062
+11. [ ] Add `verdant_depths.are` to `area/area.lst`
 11. [ ] Run `cd src && make unit-tests` to validate
 12. [ ] Verify all vnums within 10000-10124 range
 13. [ ] Verify no vnum conflicts with existing areas
