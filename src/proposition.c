@@ -13,6 +13,7 @@ struct static_prop_template_data
 {
     int id;
     const char *title;
+    const char *lore;
     int prerequisite_static_id;
     int type;
     int num_targets;
@@ -27,9 +28,48 @@ struct static_prop_template_data
 };
 
 static const STATIC_PROP_TEMPLATE static_prop_table[] = {
-    {0, "Cull the sewer rats", -1, PROP_TYPE_KILL_COUNT, 1, {3001, 0, 0, 0, 0}, 10, 1, 3001, 500, 2, 0, 0},
-    {1, "Collect courier seals", 0, PROP_TYPE_COLLECT_ITEMS, 2, {3010, 3011, 0, 0, 0}, 0, 15, 3002, 750, 3, 3020, 1},
-    {2, "Threats to the road", 1, PROP_TYPE_KILL_VARIETY, 3, {3021, 3022, 3023, 0, 0}, 0, 30, 3003, 1000, 4, 0, 0}};
+    {0,
+     "Cull the sewer rats",
+     "The cellar keepers say rat packs are gnawing through old grain stores beneath town. Thin their numbers before the infestation spills into the streets.",
+     -1,
+     PROP_TYPE_KILL_COUNT,
+     1,
+     {3001, 0, 0, 0, 0},
+     10,
+     1,
+     3001,
+     500,
+     2,
+     0,
+     0},
+    {1,
+     "Collect courier seals",
+     "A satchel of official courier marks was scattered during an ambush. Recover the seals so the post can confirm trusted routes and reopen deliveries.",
+     0,
+     PROP_TYPE_COLLECT_ITEMS,
+     2,
+     {3010, 3011, 0, 0, 0},
+     0,
+     15,
+     3002,
+     750,
+     3,
+     3020,
+     1},
+    {2,
+     "Threats to the road",
+     "Travelers whisper of coordinated raiders shadowing the trade road. Break their hold by striking each known threat before caravans are cut off completely.",
+     1,
+     PROP_TYPE_KILL_VARIETY,
+     3,
+     {3021, 3022, 3023, 0, 0},
+     0,
+     30,
+     3003,
+     1000,
+     4,
+     0,
+     0}};
 
 #define STATIC_PROP_COUNT (sizeof(static_prop_table) / sizeof(static_prop_table[0]))
 
@@ -380,6 +420,11 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
     sprintf(buf, "@@GYou accepted static proposition [%d] in slot %d:@@N %s\n\r",
             list_number, slot + 1, tpl->title);
     send_to_char(buf, ch);
+    if (tpl->lore != NULL && tpl->lore[0] != '\0')
+    {
+        sprintf(buf, "@@WQuest lore:@@N %s\n\r", tpl->lore);
+        send_to_char(buf, ch);
+    }
     show_reward_preview(ch, prop);
     do_save(ch, "");
 }
