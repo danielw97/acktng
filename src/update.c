@@ -404,6 +404,8 @@ void round_char_update(CHAR_DATA *ch)
 
    if (!is_fighting(ch) && ch->arcane_power > 0)
       ch->arcane_power = 0;
+   if (!is_fighting(ch) && ch->mental_power > 0)
+      ch->mental_power = 0;
 }
 
 void update_cooldown(CHAR_DATA *ch)

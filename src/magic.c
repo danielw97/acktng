@@ -143,6 +143,10 @@ int mana_cost(CHAR_DATA *ch, int sn)
 
    cost -= cost * (get_curr_wis(ch) + get_curr_int(ch)) / 100;
 
+   /* Mental power: 2% mana reduction per stack for psi/nec/ego/kin spells */
+   if (!IS_NPC(ch) && is_mental_power_spell(sn) && ch->mental_power > 0)
+      cost -= cost * (ch->mental_power * 2) / 100;
+
    if ((!IS_NPC(ch)) && (is_name(skill_table[sn].name, race_table[ch->race].skill)))
       cost = 10;
 
@@ -207,6 +211,20 @@ bool is_holy_power_spell(int sn)
        || skill_table[sn].skill_level[CLASS_PAL] >= 0
        || skill_table[sn].skill_level[CLASS_TEM] >= 0;
 }
+bool is_mental_power_spell(int sn)
+{
+   if (sn < 0 || sn >= MAX_SKILL)
+      return FALSE;
+
+   if (skill_table[sn].name == NULL || skill_table[sn].spell_fun == NULL)
+      return FALSE;
+
+   /* CLASS_PSI=4 (mortal), CLASS_NEC=4 (remort), CLASS_KIN=4 (adept) share index 4.
+    * CLASS_EGO=10 (remort) has a unique index. */
+   return skill_table[sn].skill_level[CLASS_PSI] >= 0
+       || skill_table[sn].skill_level[CLASS_EGO] >= 0;
+}
+
 /*
  * Lookup a skill by slot number.
  * Used for object loading.
@@ -697,6 +715,18 @@ void do_cast(CHAR_DATA *ch, char *argument)
       mana = mana * 2 / 3;
       multi_cast = TRUE;
    }
+
+   /* Mental power overload check: 1% chance per stack to shatter the mental focus */
+   if (!IS_NPC(ch) && is_mental_power_spell(sn) && ch->mental_power > 0)
+   {
+      if (number_percent() < ch->mental_power)
+      {
+         send_to_char("@@mYour mental focus overloads and shatters! Your mental power collapses to nothing.@@N\n\r", ch);
+         ch->mental_power = 0;
+         return;
+      }
+   }
+
    if ((sn != skill_lookup("cure light")) && (sn != skill_lookup("cure serious")) && (sn != skill_lookup("cure critical")) && (sn != skill_lookup("heal")))
    {
       sprintf(log_buf, "%s typed %s, Spell %s, room %s(%d), target %s",
@@ -710,6 +740,8 @@ void do_cast(CHAR_DATA *ch, char *argument)
       if (is_arcane_spell(sn))
          ch->arcane_power++;
       gain_holy_power_from_healing_spell(ch, sn);
+      if (!IS_NPC(ch) && is_mental_power_spell(sn))
+         ch->mental_power++;
 
       if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
       {
@@ -757,6 +789,8 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (is_arcane_spell(sn))
                ch->arcane_power++;
             gain_holy_power_from_healing_spell(ch, sn);
+            if (!IS_NPC(ch) && is_mental_power_spell(sn))
+               ch->mental_power++;
 
             if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
             {
@@ -806,6 +840,8 @@ void do_cast(CHAR_DATA *ch, char *argument)
             if (is_arcane_spell(sn))
                ch->arcane_power++;
             gain_holy_power_from_healing_spell(ch, sn);
+            if (!IS_NPC(ch) && is_mental_power_spell(sn))
+               ch->mental_power++;
 
             if ((skill_table[sn].flag2 == VAMP) || (skill_table[sn].flag2 == WOLF))
             {
