@@ -1380,6 +1380,11 @@ The threshold gives way northward to the dead saplings and the forest beyond.
 ~
 ~
 0 -1 10077
+D2
+The rot deepens southward into the heart of the Blightwood Ancient's domain.
+~
+~
+0 -1 10102
 S
 #10079
 Beside a River of Sap~
@@ -1459,6 +1464,11 @@ The hunter's blind opens eastward to the twisted crossroads beyond.
 ~
 ~
 0 -1 10085
+D2
+A concealed passage southward through the blind's floor leads into the Predator's Den below.
+~
+~
+0 -1 10113
 E
 blind walls enclosure interior~
 The walls of the blind are woven too precisely to be accidental; the slits are oriented to provide overlapping fields of view, and the floor inside has been scraped clear of debris. This is not the lair of an animal following instinct but the workstation of something that plans its hunting in advance and returns to improve its tools.
@@ -1713,11 +1723,413 @@ A Bower of Ancient Growth~
 An ancient bower has been formed here by centuries of deliberate root and branch arrangement -- a curved, enclosing space of @@Gliving green@@N that is clearly a place of purpose rather than accident; the growth is dense overhead and open underfoot, and the air within the bower is warmer than outside it, heavy with humidity and the rich smell of photosynthesis accelerated far beyond the capacity of the surrounding dim forest.
 ~
 0 3
+D2
+The bower deepens southward into the most sheltered and ancient space in the Rootmother's domain.
+~
+~
+0 -1 10100
 D3
 The bower opens westward back to the flowering heart.
 ~
 ~
 0 -1 10096
+S
+#10100
+The Rootmother's Cradle~
+The innermost accessible space of the Rootmother's domain is shaped like the interior of a seed, the walls curving inward overhead to form a seamless enclosure of living @@Gwood and root@@N; the space is warm and moist and rich with oxygen, and the walls glow faintly with the same bioluminescent tissue as the flowers in the heart below, suffusing everything in a sourceless warm light that is the most welcoming illumination in the entire Deepwood, which is also why it should be trusted least.
+~
+0 3
+D0
+The cradle opens northward back into the bower of ancient growth.
+~
+~
+0 -1 10099
+D2
+The cradle's innermost wall has opened to admit passage into the sanctum beyond.
+~
+~
+0 -1 10101
+S
+#10101
+The Rootmother's Sanctum~
+The sanctum is a space that should not exist underground -- a chamber large enough to hold a forest of its own, its walls and ceiling formed from the exposed root-systems of every tree above, woven into something between architecture and anatomy; at its center, the @@GRootmother@@N herself exists as the convergence of all these roots into a single, terrible form, her body indistinguishable from the living wood around her, her attention, as old as the forest, now directed at the intruder who has found the heart of her domain.
+~
+8196 3
+D0
+The sanctum admits passage northward through its living walls toward the cradle.
+~
+~
+0 -1 10100
+E
+rootmother form wood presence~
+The Rootmother does not move in any direction that would be recognized as movement; she is the room, and the room regards you, and the distinction between the massive root-system overhead and the entity occupying the space below has ceased to be meaningful or real.
+~
+S
+#10102
+The Blightwood Approach~
+The rot that has been visible for some distance intensifies here into something approaching its source; the trees in the approach are not merely dying but actively dissolving, their wood @@gsoft and oozing@@N, their bark hanging in loose sheets where it has not yet fallen, and the forest floor is covered in a black, liquified substrate that is the end product of the Blightwood Ancient's domain and the beginning of anything that enters it.
+~
+0 3
+D0
+The approach leads northward back to the decaying threshold and the outer forest.
+~
+~
+0 -1 10078
+D2
+The decay deepens southward through a stand of rotting trunks.
+~
+~
+0 -1 10103
+S
+#10103
+Among Rotting Trunks~
+The trunks here are in the final stages of structural collapse, still standing only because their neighbors support them in mutual dissolution; @@gfungal networks@@N have replaced the wood's internal structure entirely, providing a temporary scaffolding of soft tissue that keeps the form upright while the substance dissolves, and the smell is the deep, intimate, specific odor of cellulose being reclaimed by the earth it once came from.
+~
+0 3
+D0
+The rotting trunks give way northward toward the blightwood approach.
+~
+~
+0 -1 10102
+D1
+The forest to the east is darker still, the floor entirely lost beneath fungal growth.
+~
+~
+0 -1 10104
+D2
+A path southward through the dissolving wood leads to what was once a glade.
+~
+~
+0 -1 10105
+S
+#10104
+A Carpet of Fungal Growth~
+The @@gfloor has vanished beneath an unbroken carpet of fungal tissue@@N several feet deep, its surface pale and slightly translucent, yielding underfoot to a depth that is difficult to gauge without sinking; what grows here is not any recognizable species but something evolved specifically for this environment, feeding on the dissolved wood and in turn being fed upon by the Blightwood Ancient's root-network in a closed cycle of decay and reclamation.
+~
+1 3
+D3
+The fungal carpet thins westward where the rotting trunks still provide some orientation.
+~
+~
+0 -1 10103
+S
+#10105
+The Decomposing Glade~
+What was once a clearing is now a bowl of uniform, @@gadvanced decomposition@@N -- every surface, living and dead, in the same state of active dissolution; the trees ringing the glade are alive only in the technical sense that they have not yet completely returned to their component elements, and the air above the decomposing surface shimmers with the heat of a million simultaneous microbial processes working at supernatural efficiency.
+~
+0 3
+D0
+The decomposing glade gives way northward to the rotting trunks.
+~
+~
+0 -1 10103
+D1
+A cloud of @@gspores so dense it is nearly opaque@@N fills the passage to the east.
+~
+~
+0 -1 10107
+D2
+The glade descends southward where the bark of the remaining trees is crumbling away.
+~
+~
+0 -1 10106
+S
+#10106
+Beneath Crumbling Bark~
+The trees here have lost their bark entirely on the lower portions, their exposed heartwood vulnerable and already colonized by the @@gfungal network@@N that has replaced the forest's understory; the fallen bark covers the ground in pale, curling plates, each one still alive with the spore-producing organisms that reduced it from protection to substrate, and each step releases a puff of fine, gray spores.
+~
+0 3
+D0
+The crumbling bark gives way northward to the decomposing glade above.
+~
+~
+0 -1 10105
+D2
+The bark thins further southward where a pool of festering liquid marks the lowest point.
+~
+~
+0 -1 10108
+S
+#10107
+A Miasma of Spores~
+The spore concentration here has reached a density that physically impedes vision and breathing both; the @@gcloud is @@rpalely luminescent@@N@@g@@N in the dim light, and moving through it coats every surface in a fine layer of reproductive material that cannot be brushed off and takes hours to cease producing its chemical effects; the organisms creating the cloud seem to have no purpose beyond reproduction, which has made reproduction the purpose of everything in this space.
+~
+0 3
+D3
+The miasma thins westward back toward the decomposing glade.
+~
+~
+0 -1 10105
+S
+#10108
+The Festering Pool~
+A pool of liquid too thick to be water and too mobile to be solid occupies the lowest point of the blightwood hollow; its surface is @@gactive, bubbling slowly@@N with the gases of decomposition, its color a deep, varied brown-green-black that shifts in the faint light, and its smell is the distilled essence of everything the Blightwood Ancient has ever consumed, concentrated here at the nadir of its domain.
+~
+0 3
+D0
+The festering pool gives way northward to the crumbling bark and the glade above.
+~
+~
+0 -1 10106
+D2
+A raised path of compressed fungal mat leads southward through the overhang of collapsing canopy.
+~
+~
+0 -1 10109
+D3
+A ring of enormous sporecrown fungi stands to the west, their caps nearly touching overhead.
+~
+~
+0 -1 10110
+S
+#10109
+Among Collapsing Canopy~
+The canopy here is falling -- not quickly, but in the continuous slow collapse of something that has lost its structural integrity over decades; branches descend at irregular intervals with soft, wet crashes, and the @@gcanopy overhead@@N is visibly thinner than it was at the approach, the gaps filled with the pale undersides of dying leaves that have not yet let go.
+~
+0 3
+D0
+The collapsing canopy gives way northward to the festering pool below.
+~
+~
+0 -1 10108
+S
+#10110
+The Sporecrown Ring~
+Eight enormous sporecrown fungi stand in a near-perfect ring, their caps so broad they overlap overhead to create a tent of @@rpale fungal tissue@@N enclosing the interior; within the ring, the spore concentration is lower than outside it, trapped by the overlapping caps, and the interior is dry and strangely still -- a functional structure, however unintentional, that something larger than the fungi has made use of.
+~
+0 3
+D1
+The sporecrown ring opens eastward back toward the festering pool.
+~
+~
+0 -1 10108
+D2
+The ring narrows southward toward a hollow completely consumed by black mold.
+~
+~
+0 -1 10111
+S
+#10111
+A Hollow of Black Mold~
+The @@gblack mold here covers every surface@@N without exception, floor to ceiling, every texture and irregularity smoothed into a uniform matte black that absorbs light so completely the space appears to have no depth; moving through it coats every surface it contacts, and the mold produces a chemical response to warmth -- the body heat of a living creature stimulates growth, causing the nearest colonies to extend slightly toward the source of warmth, slowly, patiently.
+~
+1 3
+D0
+The black mold thins northward toward the sporecrown ring.
+~
+~
+0 -1 10110
+D2
+The hollow deepens southward to the throne of the Blightwood Ancient.
+~
+~
+0 -1 10112
+S
+#10112
+The Blightwood Throne~
+The @@RBlightwood Ancient@@N has been here so long that the distinction between the entity and the environment has ceased to exist; what was once a mega-treant is now an ecology, its wood hollowed and re-colonized, its bark replaced by meters of living fungal tissue, its root-network merged completely with the blightwood's own decay network, and the ancient will that drives all of it focused with the cold, slow certainty of something that has decomposed everything that has ever opposed it and is prepared to decompose one more.
+~
+8196 3
+D0
+The blightwood throne gives way northward through the mold and rot toward the outer forest.
+~
+~
+0 -1 10111
+E
+ancient blightwood throne entity~
+The Blightwood Ancient's original form is still visible inside the layers of decay that constitute its current body -- the curve of a trunk, the spread of ancient branches -- like an archaeological layer in the geology of rot that has accumulated around it, evidence of something that chose to become this rather than simply having it happen.
+~
+S
+#10113
+The Predator's Approach~
+The change in the forest's character here is immediate and olfactory -- the smell of @@Rblood and active predator@@N replaces the neutral organic smell of the Deepwood, and the silence changes quality from the absence of noise to the presence of calculated stillness; every surface the trail passes shows evidence of recent use by something large and purposeful, and the undergrowth on both sides has been deliberately cleared to widen the approach.
+~
+0 3
+D0
+The approach leads northward back through the hunter's blind to the outer forest.
+~
+~
+0 -1 10083
+D2
+The approach continues southward between bones arranged with evident deliberateness.
+~
+~
+0 -1 10114
+S
+#10114
+Among Trophy Bones~
+The bones here are @@Rarranged@@N -- not scattered by scavengers but placed with evident deliberateness along the edges of the trail, stacked and positioned in ways that serve no purpose a scavenger would recognize; they represent dozens of different species over what must be decades of accumulation, and the largest of them belong to creatures that should themselves have been apex predators, their presence here evidence of a hierarchy with only one occupant.
+~
+0 3
+D0
+The trophy bones thin northward toward the approach.
+~
+~
+0 -1 10113
+D1
+A side trail eastward shows the lateral extent of the stalking grounds.
+~
+~
+0 -1 10116
+D2
+The trail continues southward, the claw marks in the trees growing deeper.
+~
+~
+0 -1 10115
+S
+#10115
+A Trail of Claw Marks~
+Every tree along this section of trail bears deep claw marks at a consistent height -- @@Rfour parallel gouges@@N cut into wood as though it were soft earth, their depth suggesting force that no organic mechanism should produce; the marks are at two different heights, suggesting the same creature marking different levels in different moods, and some of the trees have been marked so many times the overlapping gouges have produced abstract patterns.
+~
+0 3
+D0
+The claw-marked trail climbs northward toward the trophy bones.
+~
+~
+0 -1 10114
+D2
+The trail descends southward into a passage obscured by hanging webs.
+~
+~
+0 -1 10117
+S
+#10116
+The Stalking Grounds~
+The forest opens here into a broader space, its undergrowth deliberately cleared to provide @@Runobstructed lines of movement@@N; the ground is compressed and smooth where something has repeatedly crossed it from multiple angles, and the trees at the edges bear marks at the height where a large creature would brace itself to launch -- the Stalking Grounds is a workspace, and its occupant has optimized it over a long period of dedicated use.
+~
+0 3
+D2
+The stalking grounds narrow southward into a den where shed scales litter the floor.
+~
+~
+0 -1 10118
+D3
+The stalking grounds connect westward back to the trophy bone trail.
+~
+~
+0 -1 10114
+S
+#10117
+Beneath a Canopy of Webs~
+The canopy here has been entirely replaced by @@Rgiant web-sheets@@N spanning the gaps between every tree, their silk thick enough to obscure the sky above and reduce the light to a dim, filtered gray; the webs are fresh in places, older in others, and their contents include not just wrapped prey but tools of the hunter -- stabilizing anchors, trip-lines, and structural elements that serve purposes beyond simple prey-catching.
+~
+1 3
+D0
+The web-canopy thins northward where the claw-marked trail resumes.
+~
+~
+0 -1 10115
+D2
+The webs grow denser southward where something feeds beneath them.
+~
+~
+0 -1 10119
+S
+#10118
+A Den of Shed Scales~
+The ground here is deeply covered in @@Rshed scales@@N of a size and thickness that implies an armored creature of enormous dimensions; the scales are gold-brown and iridescent, their undersides still faintly warm as though recently discarded, and between them the soil has been compressed and smoothed by the weight of the creature that left them -- its resting impression still visible in the earth as a depression wide enough to fill with standing water.
+~
+0 3
+D0
+The shed scales thin northward back to the stalking grounds.
+~
+~
+0 -1 10116
+D2
+The scales deepen southward where the gnawed remnants of prey accumulate.
+~
+~
+0 -1 10120
+S
+#10119
+The Feeding Ground~
+The remains of a meal are here -- recent enough that @@Rthe blood has not fully dried@@N, the bones still connected by remnant tissue, the impression of the feeding creature still warm in the compressed earth; the scale of what was consumed and how it was consumed speaks to a predator that does not eat to live but lives to eat, that has elevated predation to the level of practice and the practice to the level of art.
+~
+0 3
+D0
+The feeding ground gives way northward through the web-canopy.
+~
+~
+0 -1 10117
+D2
+The feeding ground continues southward into a passage that narrows and darkens.
+~
+~
+0 -1 10121
+S
+#10120
+Among Gnawed Remains~
+A deep accumulation of @@Rgnawed bones@@N lines the eastern branch of the den -- not the remains of a single meal or a single year but a lifetime of hunting compressed into one space; among them are complete skeletons of creatures that were swallowed whole and the equally complete remnants of things that were taken apart methodically, the two treatment-types interleaved without apparent distinction in their ownership.
+~
+0 3
+D0
+The gnawed remains give way northward back to the den of shed scales.
+~
+~
+0 -1 10118
+S
+#10121
+The Broodmother's Passage~
+Something else lives here alongside the apex predator -- a secondary presence, @@Rsmaller but considerable@@N, its sign visible in the narrower trail that forks here and the characteristic marks of a creature guarding a nest rather than hunting prey; the broodmother's passage leads to its own deep hollow, and the trail that continues southward carries the combined weight of both presences, the air dense with their intermingled musk.
+~
+0 3
+D0
+The broodmother's passage opens northward to the feeding ground.
+~
+~
+0 -1 10119
+D1
+A side passage eastward leads into the matted, dark warmth of a nest hollow.
+~
+~
+0 -1 10122
+D2
+The passage continues southward toward the kill floor where it all converges.
+~
+~
+0 -1 10123
+S
+#10122
+A Nest of Matted Fur~
+The nest is built from materials the broodmother has collected over years -- @@Rmatted fur from a dozen prey species@@N, broken branches, compressed leaves, and bones arranged not as trophies but as structural elements; the hollow is warm and dark and smells of animal life concentrated beyond the threshold of comfortable proximity, and the impression in the center of the nest is fresh and the size of something that has not left for very long.
+~
+1 3
+D3
+The nest hollow opens westward back to the broodmother's passage.
+~
+~
+0 -1 10121
+S
+#10123
+The Kill Floor~
+The ground here has been pressed and stained by so many kills over so many years that it has taken on a different character entirely; @@Rthe soil is dark@@N and compacted to the density of fired clay, and it no longer supports plant growth of any kind, its chemistry too altered by accumulated blood and organic process to sustain anything that does not live by consuming rather than being consumed; this is the apex predator's preferred workspace, and it shows.
+~
+0 3
+D0
+The kill floor gives way northward through the broodmother's passage.
+~
+~
+0 -1 10121
+D2
+The kill floor opens southward into the Thornfang Alpha's innermost lair.
+~
+~
+0 -1 10124
+S
+#10124
+The Apex Predator's Lair~
+The @@RTornfang Alpha@@N's lair is not a burrow or a nest but a throne room, the central space of a domain that extends through every part of the predator's den; the floor is bone and compressed earth, the walls marked at every height, and the presence of the Alpha itself is a physical force in the space -- a weight of accumulated kills and absolute supremacy that presses in from every direction like the forest's own judgment rendered in predator-form.
+~
+8196 3
+D0
+The lair admits passage northward through the kill floor and back toward the outer den.
+~
+~
+0 -1 10123
+E
+alpha lair throne presence weight~
+The Alpha has been here long enough that the space has organized itself around its preferences; the sight-lines from the lair's center cover every approach, the terrain has been modified to channel prey in predictable directions, and the bones of the Alpha's kills are arranged not randomly but in a record of something that might, in an entity with a different nature, be called pride.
+~
 S
 #0
 #$
