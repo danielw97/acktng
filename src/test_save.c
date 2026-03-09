@@ -8,6 +8,7 @@ int resolve_persistent_container_room_vnum_for_test(int room_vnum);
 int persistent_container_where_vnum_for_save_for_test(int in_room_vnum, int in_obj);
 char *chest_file_path(int vnum, char *dest, size_t dest_size);
 void fwrite_chest_minimal_for_test(FILE *fp, int vnum, const char *name, int nest);
+int prop_static_done_cap_true_count_for_test(int saved_cap);
 
 struct room_index_data
 {
@@ -298,6 +299,26 @@ static void test_fwrite_chest_content_uses_nest_one(void)
     assert(strstr(buf, "Nest         1") != NULL);
 }
 
+
+static void test_prop_static_done_cap_clears_slots_above_saved_cap(void)
+{
+    int count_three = prop_static_done_cap_true_count_for_test(3);
+    int count_large = prop_static_done_cap_true_count_for_test(9999);
+    assert(count_three <= 3);
+    assert(count_three <= count_large);
+}
+
+static void test_prop_static_done_cap_clamps_negative_to_zero(void)
+{
+    assert(prop_static_done_cap_true_count_for_test(-5) == 0);
+}
+
+static void test_prop_static_done_cap_clamps_above_max(void)
+{
+    int count_large = prop_static_done_cap_true_count_for_test(9999);
+    int count_larger = prop_static_done_cap_true_count_for_test(10000);
+    assert(count_large == count_larger);
+}
 int main(void)
 {
     test_round_trip_positive_vnum();
@@ -320,6 +341,9 @@ int main(void)
     test_fwrite_chest_writes_correct_vnum();
     test_fwrite_chest_does_not_write_wherevnum();
     test_fwrite_chest_content_uses_nest_one();
+    test_prop_static_done_cap_clears_slots_above_saved_cap();
+    test_prop_static_done_cap_clamps_negative_to_zero();
+    test_prop_static_done_cap_clamps_above_max();
 
     puts("test_save: all tests passed");
     return 0;

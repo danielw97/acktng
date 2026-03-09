@@ -706,6 +706,22 @@ struct char_data
 /*
  * Data which only PC's have.
  */
+struct proposition_data
+{
+   int prop_type;                             /* PROP_TYPE_* constant; 0=none */
+   bool prop_completed;                       /* TRUE = ready to hand in      */
+   int prop_num_targets;                      /* slots in use (1-5)           */
+   int prop_target_vnum[PROP_MAX_TARGETS];    /* mob or obj vnum per slot     */
+   bool prop_target_done[PROP_MAX_TARGETS];   /* per-slot completion flag     */
+   int prop_kill_needed;                      /* type 3: kill goal            */
+   int prop_kill_count;                       /* type 3: kills so far         */
+   int prop_static_id;                        /* static proposition id or -1  */
+   int prop_reward_gold;                      /* static gold reward override  */
+   int prop_reward_qp;                        /* static qp reward override    */
+   int prop_reward_item_vnum;                 /* static item reward vnum      */
+   int prop_reward_item_count;                /* static item reward quantity  */
+};
+
 struct pc_data
 {
    bool is_free; /* Ramias:for run-time checks of LINK/UNLINK */
@@ -795,15 +811,12 @@ struct pc_data
    int invasion_points;
    int invasion_rewards[3];
    int proposition_points;
-    /* --- Proposition quest system --- */
-    int   prop_type;                          /* PROP_TYPE_* constant; 0=none */
-    bool  prop_completed;                     /* TRUE = ready to hand in      */
-    int   prop_num_targets;                   /* slots in use (1-5)           */
-    int   prop_target_vnum[PROP_MAX_TARGETS]; /* mob or obj vnum per slot     */
-    bool  prop_target_done[PROP_MAX_TARGETS]; /* per-slot completion flag     */
-    int   prop_kill_needed;                   /* type 3: kill goal            */
-    int   prop_kill_count;                    /* type 3: kills so far         */
+   int prop_dynamic_cooldown_until;        /* earliest time for new dynamic prop */
+   /* --- Proposition quest system --- */
+   PROPOSITION_DATA propositions[PROP_MAX_PROPOSITIONS];
+   bool completed_static_props[PROP_MAX_STATIC_PROPOSITIONS];
 };
+
 
 /*
  * MOBprogram block
