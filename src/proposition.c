@@ -13,7 +13,6 @@ struct static_prop_template_data
 {
     int id;
     const char *title;
-    const char *lore;
     int prerequisite_static_id;
     int type;
     int num_targets;
@@ -28,50 +27,84 @@ struct static_prop_template_data
 };
 
 static const STATIC_PROP_TEMPLATE static_prop_table[] = {
-    {0,
-     "Cull the sewer rats",
-     "The cellar keepers say rat packs are gnawing through old grain stores beneath town. Thin their numbers before the infestation spills into the streets.",
-     -1,
-     PROP_TYPE_KILL_COUNT,
-     1,
-     {3001, 0, 0, 0, 0},
-     10,
-     1,
-     3001,
-     500,
-     2,
-     0,
-     0},
-    {1,
-     "Collect courier seals",
-     "A satchel of official courier marks was scattered during an ambush. Recover the seals so the post can confirm trusted routes and reopen deliveries.",
-     0,
-     PROP_TYPE_COLLECT_ITEMS,
-     2,
-     {3010, 3011, 0, 0, 0},
-     0,
-     15,
-     3002,
-     750,
-     3,
-     3020,
-     1},
-    {2,
-     "Threats to the road",
-     "Travelers whisper of coordinated raiders shadowing the trade road. Break their hold by striking each known threat before caravans are cut off completely.",
-     1,
-     PROP_TYPE_KILL_VARIETY,
-     3,
-     {3021, 3022, 3023, 0, 0},
-     0,
-     30,
-     3003,
-     1000,
-     4,
-     0,
-     0}};
+    {
+        .id = 0,
+        .title = "Cull the sewer rats",
+        .prerequisite_static_id = -1,
+        .type = PROP_TYPE_KILL_COUNT,
+        .num_targets = 1,
+        .target_vnum = {3001, 0, 0, 0, 0},
+        .kill_needed = 10,
+        .min_level = 1,
+        .offerer_vnum = 3001,
+        .reward_gold = 500,
+        .reward_qp = 2,
+        .reward_item_vnum = 0,
+        .reward_item_count = 0,
+    },
+    {
+        .id = 1,
+        .title = "Collect courier seals",
+        .prerequisite_static_id = 0,
+        .type = PROP_TYPE_COLLECT_ITEMS,
+        .num_targets = 2,
+        .target_vnum = {3010, 3011, 0, 0, 0},
+        .kill_needed = 0,
+        .min_level = 15,
+        .offerer_vnum = 3002,
+        .reward_gold = 750,
+        .reward_qp = 3,
+        .reward_item_vnum = 3020,
+        .reward_item_count = 1,
+    },
+    {
+        .id = 2,
+        .title = "Threats to the road",
+        .prerequisite_static_id = 1,
+        .type = PROP_TYPE_KILL_VARIETY,
+        .num_targets = 3,
+        .target_vnum = {3021, 3022, 3023, 0, 0},
+        .kill_needed = 0,
+        .min_level = 30,
+        .offerer_vnum = 3003,
+        .reward_gold = 1000,
+        .reward_qp = 4,
+        .reward_item_vnum = 0,
+        .reward_item_count = 0,
+    },
+};
 
 #define STATIC_PROP_COUNT (sizeof(static_prop_table) / sizeof(static_prop_table[0]))
+
+typedef struct static_prop_lore_data STATIC_PROP_LORE;
+struct static_prop_lore_data
+{
+    int id;
+    const char *message;
+};
+
+static const STATIC_PROP_LORE static_prop_lore_table[] = {
+    {0,
+     "The cellar keepers say rat packs are gnawing through old grain stores beneath town. Thin their numbers before the infestation spills into the streets."},
+    {1,
+     "A satchel of official courier marks was scattered during an ambush. Recover the seals so the post can confirm trusted routes and reopen deliveries."},
+    {2,
+     "Travelers whisper of coordinated raiders shadowing the trade road. Break their hold by striking each known threat before caravans are cut off completely."}};
+
+#define STATIC_PROP_LORE_COUNT (sizeof(static_prop_lore_table) / sizeof(static_prop_lore_table[0]))
+
+static const char *find_static_prop_lore(int static_id)
+{
+    int i;
+
+    for (i = 0; i < (int)STATIC_PROP_LORE_COUNT; i++)
+    {
+        if (static_prop_lore_table[i].id == static_id)
+            return static_prop_lore_table[i].message;
+    }
+
+    return NULL;
+}
 
 
 static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl);
@@ -349,6 +382,7 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
 {
     int slot, i;
     const STATIC_PROP_TEMPLATE *tpl;
+    const char *lore;
     PROPOSITION_DATA *prop;
     char buf[MAX_STRING_LENGTH];
 
@@ -420,9 +454,10 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
     sprintf(buf, "@@GYou accepted static proposition [%d] in slot %d:@@N %s\n\r",
             list_number, slot + 1, tpl->title);
     send_to_char(buf, ch);
-    if (tpl->lore != NULL && tpl->lore[0] != '\0')
+    lore = find_static_prop_lore(tpl->id);
+    if (lore != NULL && lore[0] != '\0')
     {
-        sprintf(buf, "@@WQuest lore:@@N %s\n\r", tpl->lore);
+        sprintf(buf, "@@WQuest lore:@@N %s\n\r", lore);
         send_to_char(buf, ch);
     }
     show_reward_preview(ch, prop);
