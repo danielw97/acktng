@@ -3453,6 +3453,80 @@ The thornroot drake is the forest's response to the question of what form the ap
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#10060
+deepwood prowler~
+a deepwood prowler~
+A deepwood prowler moves through the undergrowth, its large feline body held low and its gait producing no sound despite its size.
+
+~
+The deepwood prowler is the forest's most conventional predator in form and the least conventional in practice; it has learned from the forest's own intelligence that patience is more reliable than speed, and it applies that lesson with a rigor that makes it dangerous in the specific, technical way that expertise makes things dangerous.
+
+~
+97 65536 -300 S
+84 0
+250 -18 12 12
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10061
+Rootmother~
+the Rootmother~
+The Rootmother is here, her form filling the sanctum -- root and branch and heartwood and flowering tendril, all of it alive, all of it her, all of it watching you with an attention that predates everything else in this forest.
+
+~
+She is not a creature that grew into this form and not a goddess that assumed it; she is the forest's own will concentrated into something dense enough to respond to what stands in front of her, and what stands in front of her has been considered and found insufficient -- not threatening, not worthy of fear, simply a problem that her domain will correct, as it has corrected everything that has entered the sanctum before you and will correct everything that comes after.
+
+Her roots extend in every direction into the living rock, drawing nourishment from depths that daylight has never reached, and the flowers that bloom from her uppermost branches produce a bioluminescence that fills the sanctum with warm, deceptive light -- the most beautiful thing in the Verdant Depths and the last thing many have seen.
+
+~
+67108979 0 -700 S
+100 2
+10000 -50 30 28
+! 0 0 0 7 1618040 6144 48
+| 32 128 0 0 0 2 128
++ 50 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10062
+Blightwood Ancient~
+the Blightwood Ancient~
+The Blightwood Ancient is here, its form occupying the decay-throne at the center of the hollow -- ancient rotting mega-treant and ecology in one, the distinction between it and the decomposing environment it inhabits having ceased to be meaningful.
+
+~
+It has been here since before the forest was called the Verdant Depths, since before there was anyone to call it anything; it has watched everything that has entered its domain decompose, and it has the patience of something that knows, with absolute certainty, that everything decomposes eventually, and that eventually it will get to this too.
+
+The spores that fall constantly from its mass carry the chemistry of centuries of accumulated decay; the air in the throne room is thick with them, and breathing here is already participating in the Ancient's process of converting everything into more of itself.
+
+~
+67108979 0 -700 S
+100 0
+10000 -50 28 26
+! 0 0 0 7 1618040 896 80
+| 512 128 0 0 0 32 128
++ 50 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10063
+Thornfang Alpha~
+Thornfang Alpha~
+Thornfang Alpha is here, occupying the center of its lair with the absolute stillness of something that has no need to signal dominance because the lair itself does that already.
+
+~
+The Alpha is the apex of the Verdant Depths' predation hierarchy -- the thing that every other predator in this forest has learned to avoid, the creature at the top of a system it did not build but has perfected over decades of competition with everything the forest produces.
+
+It is larger than the packmates, faster than the stalkers, and more patient than either; it has survived long enough in this environment to have fought and killed every category of threat this forest generates, which means it has seen something like you before, has identified the category you belong to, and has already formulated its response before you are aware that you are being assessed.
+
+~
+67108979 0 -700 S
+100 1
+12000 -50 35 33
+! 0 0 0 7 1634680 0 0
+| 2 4 0 0 0 2 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
 #0
 #OBJECTS
 #10081
