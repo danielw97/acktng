@@ -387,7 +387,8 @@
   All objects have take flag (8388608) in wear_flags.
   Weapons also have hold flag (32768): 8388608+32768 = 8421376.
   Armor items have take + appropriate wear slot.
-  All objects have ITEM_MAGIC (64) in extra_flags unless noted.
+  All objects have ITEM_MAGIC (64) + ITEM_NODROP (128) = 192 in extra_flags.
+  Utility objects (keys, food, drink, treasure, money) have ITEM_NODROP (128).
 
   Affect location codes (from reference areas):
     17 = AC modifier
@@ -425,9 +426,9 @@
   2018  obsidian earring           armor ear(64)          82   AC -92
   2019  corroded temple mace       weapon (attack=8,crush)80   HR+8,DR+8
 
-  --- Boss Drops (level 90, ITEM_RARE) ---
+  --- Boss Drops (level 90, ITEM_MAGIC + ITEM_NODROP) ---
 
-  All boss drops: extra_flags = ITEM_MAGIC(64) + ITEM_RARE(2097152) = 2097216
+  All boss drops: extra_flags = ITEM_MAGIC(64) + ITEM_NODROP(128) = 192
 
   2020  crown of Vizier Nephkara       armor head(8)          90   AC -100
         Boss drop from Vizier Nephkara (2029)
