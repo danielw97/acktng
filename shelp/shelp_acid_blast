@@ -14,5 +14,6 @@ Noun Damage: acid blast
 Acquisition:
    - Mage: level 50
 Description:
-   Acid Blast is an offensive spell that inflicts acid damage on an enemy target.
+   Acid Blast is an offensive spell that deals air elemental damage to an enemy
+   target.
 *******************************************************************************

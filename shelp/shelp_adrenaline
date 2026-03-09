@@ -12,12 +12,13 @@ keywords adrenaline
 Noun Damage: None
    Wear-Off: !ADRENALINE!
 Acquisition:
-   - Warrior: level 21
-   - Knight: level 21
-   - Pugilist: level 28
-   - Monk: level 28
-   - Cleric: level 42
    - Paladin: level 42
+   - Knight: level 21
+   - Monk: level 28
+   - Priest: level 42
+   - Swordsman: level 21
+   - Brawler: level 28
 Description:
-   Adrenaline is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Adrenaline grants bonus damroll after the character takes damage above a
+   threshold, creating a reactive damage spike effect in sustained combat.
 *******************************************************************************
