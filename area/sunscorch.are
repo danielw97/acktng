@@ -1,0 +1,1798 @@
+#AREA
+The Sunscorched Wastes~
+Q 16
+K sunscorch wastes desert~
+L @@y65  @@R85~
+N 299
+I 65 85
+V 29900 29974
+F 15
+U @@yThe desert winds shift, reshaping the dunes of the Sunscorched Wastes.@@N~
+#MOBILES
+#29900
+desert sidewinder~
+a desert sidewinder~
+A desert sidewinder coils in the sand, its scales glinting in the harsh sun.
+~
+This deadly serpent has sun-bleached scales that blend perfectly with the sand. Its forked tongue flickers as it tastes the air for prey, venom glistening on exposed fangs.
+~
+97 0 0 S
+70 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29901
+sand scarab~
+a sand scarab~
+A massive sand scarab burrows through the loose earth here.
+~
+This oversized beetle has a carapace of burnished gold, hardened by the relentless desert sun. Its mandibles click together with a sharp, threatening rhythm.
+~
+97 0 0 S
+72 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29902
+dust devil~
+a dust devil~
+A swirling dust devil spins angrily across the ground.
+~
+This minor elemental is a tight vortex of sand and scorching wind. Tiny rocks and debris orbit its whirling form, pelting anything that draws too close.
+~
+97 0 0 S
+74 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+| 128 64 0 0 0 128 64
+#29903
+sunbleached skeleton~
+a sunbleached skeleton~
+A sunbleached skeleton stands here, jawbone creaking in a silent scream.
+~
+This animated corpse has been stripped of all flesh by the desert heat. Its bones are chalk-white and brittle, yet it moves with unnatural purpose, eye sockets burning with pale light.
+~
+16481 0 -750 S
+73 0
+0 0 0 0
+! 0 0 0 0 1025 0 4
+#29904
+desert raider scout~
+a desert raider scout~
+A desert raider scout crouches here, scanning the horizon.
+~
+Wrapped in dusty linens with a curved blade at the hip, this weathered scout serves as the eyes and ears of the raider warband. A jagged scar crosses one sun-darkened cheek.
+~
+97 0 -500 S
+75 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29905
+giant scorpion~
+a giant scorpion~
+A giant scorpion scuttles across the ground, pincers raised.
+~
+This monstrous arachnid is the size of a large dog, its segmented tail curling overhead with a barbed stinger dripping caustic venom. Its chitinous armor is dark as obsidian.
+~
+97 0 0 S
+76 0
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29906
+tomb guardian~
+a tomb guardian~
+A tomb guardian stands at silent attention, ancient weapon raised.
+~
+This armored undead warrior still wears the corroded remnants of ceremonial plate. Its hollow eyes glow with a cold blue fire, bound by ancient magic to protect this place for eternity.
+~
+16481 0 -750 S
+78 0
+10 0 0 0
+! 0 0 0 0 3074 0 4
+#29907
+sand wraith~
+a sand wraith~
+A sand wraith drifts through the air, trailing wisps of dust.
+~
+This spectral figure is composed of swirling sand and shadow. Its form shifts constantly, sometimes resembling a robed figure, sometimes dissolving into a formless cloud of grit.
+~
+16481 0 -750 S
+77 0
+0 0 0 0
+! 0 0 0 0 1025 2162688 4
+| 256 128 0 0 0 256 8
+#29908
+dune stalker~
+a dune stalker~
+A dune stalker prowls the area, its tawny hide blending with the terrain.
+~
+This large predatory cat has a sandy coat covered in faint rosette markings. Its powerful legs and oversized paws carry it silently across the dunes as it hunts for prey.
+~
+97 0 0 S
+79 0
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29909
+desert bandit~
+a desert bandit~
+A desert bandit lurks here, eyeing you with open hostility.
+~
+This rough-looking brigand wears mismatched armor scavenged from previous victims. A cruel grin splits a face darkened by sun and sand, and stolen trinkets hang from a leather belt.
+~
+97 0 -500 S
+80 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29910
+mummified priest~
+a mummified priest~
+A mummified priest shuffles forward, bandaged hands outstretched.
+~
+Ancient linen wrappings cover this desiccated corpse from head to toe. Faded hieroglyphs are painted across the stained bandages, and a dull amber glow pulses from behind its empty eye sockets.
+~
+16481 0 -750 S
+82 0
+10 0 0 0
+! 0 0 0 0 1025 10240 8
+| 128 64 0 0 0 128 64
+#29911
+sandstone golem~
+a sandstone golem~
+A sandstone golem looms here, its massive fists clenched.
+~
+Carved from a single enormous block of desert sandstone, this construct towers over most creatures. Ancient runes are etched deep into its torso, pulsing with a faint amber light that animates its heavy limbs.
+~
+33554529 0 0 S
+83 0
+20 0 0 0
+! 0 0 0 0 1051652 0 0
+| 32 16 0 0 0 32 16
+#29912
+carrion vulture~
+a carrion vulture~
+A carrion vulture perches nearby, watching with beady eyes.
+~
+This enormous scavenger bird has a wingspan wider than a man is tall. Its bald head is stained with old blood, and its hooked beak can crack bone with ease.
+~
+97 0 0 S
+71 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29913
+venomous asp~
+a venomous asp~
+A venomous asp lies coiled among the rocks, hood flared.
+~
+This deadly serpent has distinctive dark bands running the length of its sinuous body. When threatened, it rears up and spreads a wide hood, displaying vivid warning patterns.
+~
+97 0 0 S
+74 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29914
+desert nomad warrior~
+a desert nomad warrior~
+A desert nomad warrior stands guard, weapon at the ready.
+~
+This hardened fighter wears layered desert robes over boiled leather armor. Years of survival in the wastes have honed a lean and dangerous physique. Cold eyes peer from beneath a wrapped headscarf.
+~
+97 0 -500 S
+81 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29915
+jackal pack leader~
+a jackal pack leader~
+A jackal pack leader snarls, baring yellowed fangs.
+~
+This large jackal is heavily scarred from countless territorial fights. Its fur is matted and coarse, and it moves with the confident swagger of a dominant predator accustomed to driving off rivals.
+~
+97 0 0 S
+76 1
+0 0 0 0
+! 0 0 0 0 3074 0 0
+#29916
+tomb beetle swarm~
+a tomb beetle swarm~
+A seething swarm of tomb beetles carpets the ground here.
+~
+Thousands of small black beetles move as a single mass, their tiny legs creating a disturbing chittering sound. They consume anything organic in their path, stripping flesh from bone in moments.
+~
+65601 0 0 S
+73 0
+0 0 0 0
+! 0 0 0 0 1025 0 0
+#29917
+cursed archaeologist~
+a cursed archaeologist~
+A cursed archaeologist stumbles about, muttering incoherently.
+~
+Once a scholar seeking ancient treasures, this wretched figure is now trapped between life and death by a tomb curse. Tattered expedition gear hangs from a gaunt frame, and maddened eyes dart about wildly.
+~
+16481 0 -500 S
+80 1
+0 0 0 0
+! 0 0 0 0 3074 2162688 4
+#29918
+sand elemental~
+a sand elemental~
+A towering sand elemental churns and roars before you.
+~
+This massive creature is a living pillar of compacted sand and grit. It shifts between a vaguely humanoid shape and a raging sandstorm, grinding anything caught within its form to dust.
+~
+33554529 0 0 S
+84 0
+20 0 0 0
+! 0 0 0 0 1051652 33554464 0
+| 32 16 0 0 0 34 16
+#29919
+desert ghoul~
+a desert ghoul~
+A desert ghoul crouches here, gnawing on old bones.
+~
+This emaciated undead creature has leathery skin pulled taut over protruding bones. Its elongated claws are caked with dried blood, and it exudes a nauseating stench of decay and hot sand.
+~
+33554529 0 -750 S
+85 0
+10 0 0 0
+! 0 0 0 0 1051652 0 8
+#29920
+Pharaoh Kha'zuul~
+Pharaoh Kha'zuul~
+@@RPharaoh Kha'zuul sits upon a crumbling throne, radiating ancient power.@@N
+~
+Clad in ornate golden armor tarnished by millennia, this undead pharaoh still commands a terrifying regal presence. A crown of blackened gold rests upon a desiccated brow, and eyes of molten amber burn with fury at any who dare intrude upon the royal tomb.
+~
+67108979 0 -1000 S
+90 1
+50 -20 10 10
+! 0 0 0 0 1650432 10240 24
+| 128 64 0 1051652 10240 162 72
++ 5 3 0 3 0 5 5 0 0
+#29921
+Scorpion Queen~
+the Scorpion Queen~
+@@RThe Scorpion Queen rears up on segmented legs, her massive stinger poised to strike.@@N
+~
+This gargantuan scorpion is the undisputed matriarch of the desert caves. Her chitinous shell is layered in thick plates of midnight black, and her stinger pulses with a sickly green venom potent enough to fell giants.
+~
+67108979 0 -500 S
+90 2
+50 -20 10 10
+! 0 0 0 0 1650432 0 0
+| 512 4 0 1051652 0 514 4
++ 5 3 0 0 0 5 5 0 0
+#29922
+Lich Lord Sethari~
+Lich Lord Sethari~
+@@RLich Lord Sethari hovers above a runic circle, skeletal hands crackling with dark energy.@@N
+~
+This ancient sorcerer transcended death long ago, and the centuries have reduced the body to little more than a robed skeleton. Pinpoints of violet flame burn in hollow eye sockets, and the air around the lich hums with barely contained magical force.
+~
+67108979 0 -1000 S
+90 1
+50 -20 10 10
+! 0 0 0 0 1650432 2162688 24
+| 260 2 0 1025 2162688 260 2
++ 10 3 0 5 0 3 3 0 0
+#29923
+Warlord Drahk~
+Warlord Drahk~
+@@RWarlord Drahk towers here in spiked armor, a massive cleaver resting on one shoulder.@@N
+~
+The feared leader of the desert raiders is a mountain of scarred muscle and cruelty. Heavy spiked plate armor covers a frame built for war, and the warlord's cold gaze promises a brutal end to all who challenge the warband's dominion over these sands.
+~
+67108979 0 -1000 S
+90 1
+50 -20 10 10
+! 0 0 0 0 1650432 0 0
+| 2 4 0 1650432 0 2 4
++ 5 5 0 0 0 8 8 3 0
+#0
+#OBJECTS
+#29900
+tattered desert turban~
+a tattered desert turban~
+A tattered desert turban has been discarded here in the sand.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+3
+A
+17 -80
+L
+70
+#29901
+sun-scorched leather vest~
+a sun-scorched leather vest~
+A sun-scorched leather vest lies crumpled on the ground.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+7
+A
+17 -82
+L
+72
+#29902
+pair of sandworn boots~
+a pair of sandworn boots~
+A pair of sandworn boots sit here, caked with dust.~
+9 128 10485760 1
+0 0 0 0 0 0 0 0 0 0
+12
+A
+17 -81
+L
+71
+#29903
+dusty nomad cloak~
+a dusty nomad's cloak~
+A dusty nomad's cloak lies draped over a rock.~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+4
+A
+17 -83
+L
+73
+#29904
+weathered bronze scimitar~
+a weathered bronze scimitar~
+A weathered bronze scimitar is half-buried in the sand.~
+5 128 8421376 1
+0 0 0 3 0 0 0 0 0 0
+8
+A
+18 7
+A
+19 7
+L
+75
+#29905
+scorpion chitin bracer~
+a scorpion chitin bracer~
+A bracer fashioned from scorpion chitin rests on the ground.~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+13
+A
+17 -84
+L
+74
+#29906
+cracked bone necklace~
+a cracked bone necklace~
+A necklace of cracked bones lies in a small heap.~
+9 128 8388736 1
+0 0 0 0 0 0 0 0 0 0
+2
+A
+17 -86
+L
+76
+#29907
+pair of tomb raider gloves~
+a pair of tomb raider's gloves~
+A pair of tomb raider's gloves have been left behind here.~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+9
+A
+17 -82
+L
+72
+#29908
+serpent fang dagger~
+a serpent fang dagger~
+A dagger fashioned from a serpent's fang lies on the ground.~
+5 128 8421376 1
+0 0 0 2 0 0 0 0 0 0
+5
+A
+18 7
+A
+19 7
+L
+73
+#29909
+sand-caked war belt~
+a sand-caked war belt~
+A sand-caked war belt has been abandoned here.~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+14
+A
+17 -87
+L
+77
+#29910
+pair of raider arm guards~
+a pair of raider's arm guards~
+A pair of raider's arm guards lie on the dusty ground.~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+6
+A
+17 -88
+L
+78
+#29911
+scarab amulet~
+a scarab amulet~
+A small scarab amulet glints in the sand.~
+9 128 8388736 1
+0 0 0 0 0 0 0 0 0 0
+1
+A
+17 -80
+L
+70
+#29912
+pair of dune strider leggings~
+a pair of dune strider's leggings~
+A pair of dune strider's leggings lie in a dusty heap.~
+9 128 9437184 1
+0 0 0 0 0 0 0 0 0 0
+11
+A
+17 -89
+L
+79
+#29913
+vulture feather shoulder drape~
+a vulture feather shoulder drape~
+A shoulder drape made of vulture feathers rests here.~
+9 128 8389120 1
+0 0 0 0 0 0 0 0 0 0
+10
+A
+17 -84
+L
+74
+#29914
+jackal hide face wrap~
+a jackal hide face wrap~
+A face wrap made from jackal hide lies on the ground.~
+9 128 8388624 1
+0 0 0 0 0 0 0 0 0 0
+3
+A
+17 -85
+L
+75
+#29915
+crumbling stone shield~
+a crumbling stone shield~
+A crumbling stone shield leans against a wall.~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+15
+A
+17 -90
+L
+80
+#29916
+desert hawk earring~
+a desert hawk earring~
+A small earring shaped like a desert hawk lies in the dust.~
+9 128 8388672 1
+0 0 0 0 0 0 0 0 0 0
+2
+A
+17 -81
+L
+71
+#29917
+corroded iron mace~
+a corroded iron mace~
+A corroded iron mace lies discarded on the ground.~
+5 128 8421376 1
+0 0 0 7 0 0 0 0 0 0
+8
+A
+18 7
+A
+19 7
+L
+76
+#29918
+sand-blasted finger ring~
+a sand-blasted finger ring~
+A sand-blasted finger ring has been dropped here.~
+9 128 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+A
+17 -88
+L
+78
+#29919
+tomb guardian halberd~
+a tomb guardian's halberd~
+A tomb guardian's halberd stands propped against the wall.~
+5 4294967424 8421376 1
+0 0 0 3 0 0 0 0 0 0
+14
+A
+18 7
+A
+19 7
+L
+80
+#29920
+crown of pharaoh kha'zuul~
+the crown of Pharaoh Kha'zuul~
+An ornate golden crown radiates ancient power from where it rests.~
+9 192 8388616 1
+0 0 0 0 0 0 0 0 0 0
+4
+A
+17 -95
+L
+85
+#29921
+scorpion queen carapace~
+the scorpion queen's carapace~
+A suit of armor crafted from the scorpion queen's carapace lies here.~
+9 192 8650752 1
+0 0 0 0 0 0 0 0 0 0
+15
+A
+17 -95
+L
+85
+#29922
+staff of lich lord sethari~
+the staff of Lich Lord Sethari~
+A gnarled staff thrumming with dark energy leans against the wall.~
+5 192 8421376 1
+0 0 0 7 0 0 0 0 0 0
+3
+A
+18 7
+A
+19 7
+L
+85
+#29923
+warlord drahk war cleaver~
+Warlord Drahk's war cleaver~
+A massive war cleaver with a notched blade rests on the ground.~
+5 4294967488 8421376 1
+0 0 0 3 0 0 0 0 0 0
+10
+A
+18 7
+A
+19 7
+L
+85
+#29924
+pharaoh golden gauntlets~
+the pharaoh's golden gauntlets~
+A pair of ornate golden gauntlets gleam softly in the dim light.~
+9 192 8392704 1
+0 0 0 0 0 0 0 0 0 0
+7
+A
+17 -95
+L
+85
+#29925
+scorpion queen stinger blade~
+the scorpion queen's stinger blade~
+A wicked blade fashioned from a giant scorpion stinger lies here.~
+5 192 8421376 1
+0 0 0 11 0 0 0 0 0 0
+9
+A
+18 7
+A
+19 7
+L
+85
+#29926
+lich shadowed robes~
+the lich's shadowed robes~
+A set of robes woven from living shadow pools on the floor.~
+9 192 8454144 1
+0 0 0 0 0 0 0 0 0 0
+2
+A
+17 -95
+L
+85
+#29927
+warlord spiked pauldrons~
+the warlord's spiked pauldrons~
+A pair of brutal spiked pauldrons sits on the ground.~
+9 192 8389120 1
+0 0 0 0 0 0 0 0 0 0
+13
+A
+17 -95
+L
+85
+#0
+#ROOMS
+#29900
+@@yWindswept Dunes@@N~
+@@yHot wind drives stinging sand across a vast expanse of rolling dunes. The sky above is a merciless white glare, and the horizon shimmers with heat haze in every direction. Faint tracks in the sand suggest that creatures pass through here, though the shifting dunes quickly erase all evidence.@@N
+~
+32 10
+D2
+~
+~
+0 0 29901
+S
+#29901
+@@yShifting Sand Expanse@@N~
+@@yThe sand here is fine and loose, swallowing each footstep ankle-deep. Desiccated scrub brush clings to the slopes of the dunes, rattling in the constant wind. A crumbling stone obelisk is visible to the east, while the terrain drops into sun-baked flats to the south.@@N
+~
+32 10
+D0
+~
+~
+0 0 29900
+D1
+~
+~
+0 0 29902
+D2
+~
+~
+0 0 29903
+S
+#29902
+@@yCrumbling Obelisk@@N~
+@@yA weathered stone obelisk rises from the sand, its carved hieroglyphs nearly obliterated by centuries of wind erosion. The base is surrounded by scattered rubble and half-buried stone blocks. Whatever monument once stood here has been reduced to this single defiant pillar.@@N
+~
+32 10
+D3
+~
+~
+0 0 29901
+S
+#29903
+@@ySun-Baked Flats@@N~
+@@yThe dunes give way to a broad hardpan flat baked to cracked ceramic by the relentless sun. Thin salt deposits create white veins across the tan earth. Bleached bones of unlucky travelers and animals litter the ground in scattered clusters.@@N
+~
+32 10
+D0
+~
+~
+0 0 29901
+D1
+~
+~
+0 0 29904
+D2
+~
+~
+0 0 29906
+S
+#29904
+@@yBleached Bone Field@@N~
+@@yCountless bones protrude from the cracked earth in grotesque arrangements, a graveyard of creatures that perished crossing this merciless flat. Vultures circle overhead, patient and watchful. The bones clatter softly whenever the wind picks up.@@N
+~
+32 10
+D1
+~
+~
+0 0 29905
+D3
+~
+~
+0 0 29903
+S
+#29905
+@@yVulture's Perch@@N~
+@@yA cluster of dead trees stands here, their bleached trunks stripped bare by the elements. Large vultures roost in the twisted branches, hunched and silent, occasionally spreading tattered wings to catch the thermal updrafts that rise from the scorching sand.@@N
+~
+32 10
+D3
+~
+~
+0 0 29904
+S
+#29906
+@@yDry Riverbed@@N~
+@@yA wide channel of smooth stones and cracked mud marks a river that dried up long ago. The banks rise steeply on either side, creating a natural corridor through the landscape. Occasional patches of thorny scrub have taken root between the water-worn rocks.@@N
+~
+32 10
+D0
+~
+~
+0 0 29903
+D1
+~
+~
+0 0 29907
+D2
+~
+~
+0 0 29908
+S
+#29907
+@@yAncient Well@@N~
+@@yA circular stone well stands in a shallow depression, its rim worn smooth by countless hands over many centuries. The bucket rope has long since rotted away, and peering into the dark shaft reveals nothing but dry emptiness far below.@@N
+~
+32 10
+D2
+~
+~
+0 0 29909
+D3
+~
+~
+0 0 29906
+S
+#29908
+@@yCanyon Mouth@@N~
+@@yThe dry riverbed narrows into a steep-walled canyon, the rock faces scored with horizontal striations from ancient flood waters. A dark cave opening yawns in the southern wall, exhaling cool air that smells faintly of chitin and something worse.@@N
+~
+32 10
+D0
+~
+~
+0 0 29906
+D2
+~
+~
+0 0 29950
+S
+#29909
+@@ySandstone Arch@@N~
+@@yA natural arch of layered sandstone spans the trail here, eroded into a graceful curve by millennia of wind. The stone is banded in shades of amber and rust, and the sheltered area beneath offers a brief respite from the punishing desert sun.@@N
+~
+32 10
+D0
+~
+~
+0 0 29907
+D1
+~
+~
+0 0 29910
+D2
+~
+~
+0 0 29911
+S
+#29910
+@@yDesert Crossroads@@N~
+@@ySeveral faint trails converge at this barren junction marked by a sun-bleached wooden signpost. The sign's painted directions have long since faded, leaving only bare splintered wood. Boot prints and cart tracks in the hard-packed sand suggest regular traffic heading east.@@N
+~
+32 10
+D1
+~
+~
+0 0 29963
+D3
+~
+~
+0 0 29909
+S
+#29911
+@@yOasis of Shimmering Sands@@N~
+@@yA small oasis pools in a rocky basin, fed by a trickle of water seeping from cracked stone. A few stubborn palms provide dappled shade, and the air here carries a faint coolness. Animal tracks of every description crowd the muddy banks of the shallow water.@@N
+~
+2 10
+D0
+~
+~
+0 0 29909
+D2
+~
+~
+0 0 29912
+S
+#29912
+@@yPalm Grove@@N~
+@@yA cluster of date palms grows from the sandy soil, their fronds providing blessed shade from the brutal sun. Fallen dates litter the ground, attracting insects and small lizards. The grove extends southward along a shallow depression in the terrain.@@N
+~
+0 10
+D0
+~
+~
+0 0 29911
+D1
+~
+~
+0 0 29913
+D2
+~
+~
+0 0 29914
+S
+#29913
+@@yMerchant's Ruin@@N~
+@@yThe collapsed remains of a merchant's outpost lie scattered across the sand. Broken wagon wheels, shattered pottery, and torn fabric speak to a violent end. Scorch marks on the remaining timbers suggest raiders were responsible for the destruction.@@N
+~
+32 10
+D3
+~
+~
+0 0 29912
+S
+#29914
+@@yTemple Forecourt@@N~
+@@ySmooth flagstones emerge from beneath the encroaching sand, forming a broad courtyard before an ancient structure to the south. Toppled columns line what was once a grand processional avenue, and faded carvings of desert deities adorn every stone surface.@@N
+~
+32 10
+D0
+~
+~
+0 0 29912
+D2
+~
+~
+0 0 29915
+S
+#29915
+@@ySphinx Gate@@N~
+@@yTwo enormous sphinx statues flank a monumental gateway, their stone faces weathered but still radiating stern authority. The passage between them leads south into shadowed depths. To the east, a toppled colossus lies half-buried in the drifting sand.@@N
+~
+32 10
+D0
+~
+~
+0 0 29914
+D1
+~
+~
+0 0 29916
+D2
+~
+~
+0 0 29917
+S
+#29916
+@@yCracked Colossus@@N~
+@@yA titanic stone statue lies broken on its side, half-consumed by the desert. The carved face still bears traces of painted features, gazing skyward with sightless eyes. Sand has drifted into the cracks and hollows of the enormous form.@@N
+~
+32 10
+D3
+~
+~
+0 0 29915
+S
+#29917
+@@yTemple Entrance@@N~
+@@yMassive stone doors stand ajar at the base of the ancient structure, revealing a dark passage descending into the earth below. Carved warnings in a dead language border the entrance, and the air rising from the depths carries the musty scent of sealed tombs.@@N
+~
+32 10
+D0
+~
+~
+0 0 29915
+D5
+~
+~
+0 0 29918
+S
+#29918
+@@bTemple Antechamber@@N~
+@@bSteps descend into a vaulted antechamber of dressed sandstone blocks. Faded murals cover the walls, depicting scenes of ancient desert kingdoms in pigments of ochre and lapis. The air is cool and still, sealed away from the desert above for uncounted centuries.@@N
+~
+8 11
+D2
+~
+~
+0 0 29919
+D4
+~
+~
+0 0 29917
+S
+#29919
+@@bPillared Hall@@N~
+@@bRows of massive stone pillars march into the gloom, each carved with spiraling hieroglyphs that once recorded the deeds of forgotten rulers. The ceiling vanishes into darkness overhead, and footsteps echo sharply off the polished stone floor.@@N
+~
+8 11
+D0
+~
+~
+0 0 29918
+D1
+~
+~
+0 0 29920
+D2
+~
+~
+0 0 29922
+S
+#29920
+@@bHieroglyph Corridor@@N~
+@@bEvery surface of this narrow corridor is covered in densely packed hieroglyphs, carved with painstaking precision into the limestone walls. The symbols seem to shift in the flickering torchlight, creating an unsettling illusion of movement.@@N
+~
+8 11
+D1
+~
+~
+0 0 29921
+D3
+~
+~
+0 0 29919
+S
+#29921
+@@bStatue Gallery@@N~
+@@bLife-sized stone statues of warriors, priests, and nobles line both walls of this long gallery. Each figure is carved in exquisite detail, frozen in postures of devotion or martial readiness. Their stone eyes seem to follow movement through the chamber.@@N
+~
+8 11
+D2
+~
+~
+0 0 29925
+D3
+~
+~
+0 0 29920
+S
+#29922
+@@bOffering Chamber@@N~
+@@bStone altars stand at the cardinal points of this circular chamber, their surfaces stained dark by centuries of ritual offerings. Clay vessels and ceremonial blades litter the dusty floor, and the faint scent of ancient incense still lingers in the stale air.@@N
+~
+8 11
+D0
+~
+~
+0 0 29919
+D1
+~
+~
+0 0 29924
+D2
+~
+~
+0 0 29923
+S
+#29923
+@@bTrapped Hallway@@N~
+@@bThis corridor's stone tiles are slightly uneven, some depressed more than others. Small holes dot the walls at regular intervals, their dark interiors hinting at hidden mechanisms. The bones of less cautious explorers lie scattered near several of the more obvious pressure plates.@@N
+~
+8 11
+D0
+~
+~
+0 0 29922
+D2
+~
+~
+0 0 29928
+D3
+~
+~
+0 0 29927
+S
+#29924
+@@bBurial Alcove@@N~
+@@bRecessed niches line the walls of this cramped chamber, each containing the wrapped remains of lesser servants entombed to attend their masters in the afterlife. Tattered linen and shards of funerary pottery crunch underfoot.@@N
+~
+8 11
+D3
+~
+~
+0 0 29922
+S
+#29925
+@@bSarcophagus Room@@N~
+@@bAn ornate stone sarcophagus dominates the center of this chamber, its lid carved with a serene sleeping face. Canopic jars stand in alcoves along the walls, and fine gold dust coats every surface, giving the room an otherworldly shimmer.@@N
+~
+8 11
+D0
+~
+~
+0 0 29921
+D2
+~
+~
+0 0 29926
+S
+#29926
+@@bGuardian Chamber@@N~
+@@bThis fortified room was clearly designed as a defensive position. Arrow slits are cut into the thick walls, and stone barricades provide cover. Racks along the walls once held weapons, though most have been claimed by rust and time.@@N
+~
+8 11
+D0
+~
+~
+0 0 29925
+S
+#29927
+@@bCollapsed Passage@@N~
+@@bA partial cave-in has choked this corridor with rubble, leaving only a narrow gap to squeeze through. Dust motes hang in the still air, and the cracked ceiling groans ominously. Fresh scratch marks on the stones suggest something has been clawing its way through.@@N
+~
+8 11
+D1
+~
+~
+0 0 29923
+S
+#29928
+@@bFlooded Chamber@@N~
+@@bStagnant water covers the floor of this low-ceilinged room to knee depth, seeping from cracks in the ancient stonework. The surface is covered with a thin film of mineral deposits, and the walls are slick with moisture and pale fungal growth.@@N
+~
+8 11
+D0
+~
+~
+0 0 29923
+D1
+~
+~
+0 0 29929
+D2
+~
+~
+0 0 29932
+S
+#29929
+@@bMosaic Room@@N~
+@@bThe floor of this chamber is an intricate mosaic depicting a great desert battle between rival pharaohs. Tiny colored tiles of glass and stone create a vivid scene of chariots, warriors, and raining arrows. Portions have been damaged by water and time.@@N
+~
+8 11
+D1
+~
+~
+0 0 29930
+D2
+~
+~
+0 0 29931
+D3
+~
+~
+0 0 29928
+S
+#29930
+@@bTreasure Vault Antechamber@@N~
+@@bThis small room is dominated by a massive stone door in the eastern wall, sealed shut with heavy bronze bolts corroded green with age. Scratch marks and tool gouges around the frame suggest many failed attempts to force entry over the centuries.@@N
+~
+8 11
+D3
+~
+~
+0 0 29929
+S
+#29931
+@@bSacred Pool@@N~
+@@bA natural spring feeds a shallow pool of surprisingly clear water in a basin carved from the living rock. Offerings of coins and small statues lie beneath the surface, and the water glows with a faint phosphorescence from minerals dissolved in its depths.@@N
+~
+10 11
+D0
+~
+~
+0 0 29929
+S
+#29932
+@@bInscription Hall@@N~
+@@bThis long hall serves as a record chamber, its walls covered floor to ceiling with columns of meticulously carved text. The inscriptions chronicle the reign of the entombed pharaoh, from ascension to conquest to the construction of this very tomb.@@N
+~
+8 11
+D0
+~
+~
+0 0 29928
+D1
+~
+~
+0 0 29933
+D3
+~
+~
+0 0 29936
+S
+#29933
+@@bRitual Chamber@@N~
+@@bBlackened scorch marks radiate outward from a stone circle etched into the floor of this domed chamber. Residual magical energy makes the air crackle faintly, and arcane symbols glow with a dim phosphorescence along the curved walls.@@N
+~
+8 11
+D2
+~
+~
+0 0 29934
+D3
+~
+~
+0 0 29932
+S
+#29934
+@@bPharaoh's Antechamber@@N~
+@@bGold leaf still clings to the walls of this lavishly decorated room, depicting scenes of the pharaoh's divine ascension. Two stone jackals guard the passage south, their jeweled eyes gleaming with an inner light that seems almost alive.@@N
+~
+8 11
+D0
+~
+~
+0 0 29933
+D2
+~
+~
+0 0 29935
+S
+#29935
+@@RPharaoh's Throne Room@@N~
+@@RA vast chamber stretches before you, its vaulted ceiling supported by columns of polished obsidian. At the far end, a golden throne sits upon a raised dais, flanked by braziers that burn with unnatural violet flame. The air thrums with ancient power.@@N
+~
+12 11
+D0
+~
+~
+0 0 29934
+S
+#29936
+@@bHidden Passage@@N~
+@@bBehind a cleverly disguised section of wall lies this narrow secret corridor. The stones here are rougher and less decorated than the main tomb, suggesting this passage was built for servants or as an emergency escape route for the tomb builders.@@N
+~
+8 11
+D1
+~
+~
+0 0 29932
+D2
+~
+~
+0 0 29937
+S
+#29937
+@@bSecret Treasury@@N~
+@@bThis concealed vault contains stone shelves lined with dusty amphorae and sealed clay jars. A few have been broken open, revealing desiccated herbs and oils meant to preserve the dead. A dark shaft in the floor descends even deeper into the earth.@@N
+~
+8 11
+D0
+~
+~
+0 0 29936
+D5
+~
+~
+0 0 29938
+S
+#29938
+@@bCatacomb Entrance@@N~
+@@bRough-hewn steps descend from the treasury above into a network of cramped tunnels carved from solid bedrock. The air here is thick with dust and the faint sweet odor of ancient decay. Crude torch sconces line the walls at irregular intervals.@@N
+~
+8 11
+D2
+~
+~
+0 0 29939
+D4
+~
+~
+0 0 29937
+S
+#29939
+@@bBone-Lined Corridor@@N~
+@@bHuman bones have been stacked with disturbing precision along both walls of this corridor, femurs and tibias forming neat rows with skulls placed at regular intervals. The macabre display stretches into the darkness ahead, creating walls of the dead.@@N
+~
+8 11
+D0
+~
+~
+0 0 29938
+D1
+~
+~
+0 0 29940
+D2
+~
+~
+0 0 29941
+S
+#29940
+@@bOssuary@@N~
+@@bThis domed chamber is filled with towering piles of skeletal remains, sorted by type. Skulls form one mound, ribcages another, long bones yet another. The sheer volume of remains suggests this place served as a mass burial site for generations.@@N
+~
+8 11
+D1
+~
+~
+0 0 29949
+D3
+~
+~
+0 0 29939
+S
+#29941
+@@bCrypt of the Forgotten@@N~
+@@bUnmarked stone coffins fill this low chamber, stacked three high in places. Whoever was buried here was not important enough to warrant inscriptions or decoration, their identities lost to the ages. A thick layer of dust covers everything.@@N
+~
+8 11
+D0
+~
+~
+0 0 29939
+D1
+~
+~
+0 0 29942
+D2
+~
+~
+0 0 29943
+S
+#29942
+@@bEmbalming Chamber@@N~
+@@bStone slabs stained dark with ancient fluids stand at the center of this room, surrounded by shelves of dusty canopic jars and tarnished embalming tools. Drainage channels carved into the floor lead to a central collection basin.@@N
+~
+8 11
+D3
+~
+~
+0 0 29941
+S
+#29943
+@@bDust-Choked Passage@@N~
+@@bFine powdery dust fills this corridor so thickly that each step sends up choking clouds. The walls are barely visible through the haze, and breathing becomes difficult. Something has been moving through here recently, leaving disturbed trails in the deep dust.@@N
+~
+9 11
+D0
+~
+~
+0 0 29941
+D1
+~
+~
+0 0 29944
+D2
+~
+~
+0 0 29945
+S
+#29944
+@@bChamber of Whispers@@N~
+@@bThe acoustics of this oddly shaped chamber create an unsettling effect where the faintest sound is amplified into ghostly whispers that seem to come from everywhere at once. The curved walls are carved with hundreds of small mouths, all frozen open in silent speech.@@N
+~
+8 11
+D3
+~
+~
+0 0 29943
+S
+#29945
+@@bCursed Vault@@N~
+@@bWarning glyphs are carved into every surface of this sealed chamber, their paint still vivid after centuries. The air is unnaturally cold, and a persistent sense of dread permeates the space. Shattered remains of protective wards litter the threshold.@@N
+~
+72 11
+D0
+~
+~
+0 0 29943
+D1
+~
+~
+0 0 29946
+S
+#29946
+@@bNecromancer's Workshop@@N~
+@@bThis cluttered chamber served as a workspace for dark rituals. Stone tables hold fragments of bone, dusty vials of dark liquid, and crumbling scrolls covered in forbidden incantations. Chalk circles and arcane diagrams cover the floor.@@N
+~
+8 11
+D2
+~
+~
+0 0 29947
+D3
+~
+~
+0 0 29945
+S
+#29947
+@@bLich's Antechamber@@N~
+@@bThe temperature drops sharply in this frost-rimed corridor. Ice crystals coat the walls despite the desert above, and each breath comes as a visible cloud. The oppressive weight of powerful magic presses down from all sides, growing stronger to the south.@@N
+~
+72 11
+D0
+~
+~
+0 0 29946
+D2
+~
+~
+0 0 29948
+S
+#29948
+@@RLich's Sanctum@@N~
+@@RA vast circular chamber lies at the heart of the deepest catacombs, illuminated by floating orbs of purple flame. Runic circles are etched into the obsidian floor in concentric rings, and towering bookshelves line the curved walls, filled with ancient tomes of forbidden knowledge.@@N
+~
+12 11
+D0
+~
+~
+0 0 29947
+S
+#29949
+@@bCollapsed Dead End@@N~
+@@bThe tunnel here has partially collapsed, filling the passage with rubble and broken masonry. Fragments of carved stone and shattered pottery are mixed into the debris. A few skeletal hands protrude from beneath the fallen rock.@@N
+~
+8 11
+D3
+~
+~
+0 0 29940
+S
+#29950
+@@bCave Entrance@@N~
+@@bThe canyon narrows into a dark cave mouth, the rock walls slick with moisture from some underground source. The temperature drops noticeably as the desert sun is left behind. Claw marks score the stone floor, and the acrid smell of venom permeates the air.@@N
+~
+8 11
+D0
+~
+~
+0 0 29908
+D2
+~
+~
+0 0 29951
+S
+#29951
+@@bNarrow Tunnel@@N~
+@@bThis cramped passage forces movement in single file, the rough stone walls pressing close on both sides. Sticky webbing clings to the ceiling, and the chittering of unseen creatures echoes from deeper within the cave system.@@N
+~
+9 11
+D0
+~
+~
+0 0 29950
+D1
+~
+~
+0 0 29952
+D3
+~
+~
+0 0 29954
+S
+#29952
+@@bChitinous Cavern@@N~
+@@bThe walls of this natural cavern are encrusted with shed scorpion shells and dried husks of molted exoskeletons. The floor crunches with every step, carpeted in fragments of chitin. Larger intact shells hang from the ceiling like grotesque decorations.@@N
+~
+8 11
+D2
+~
+~
+0 0 29953
+D3
+~
+~
+0 0 29951
+S
+#29953
+@@bEgg Chamber@@N~
+@@bClusters of translucent eggs the size of melons are attached to every surface of this warm, humid cavern. Some are dark and empty, while others pulse with the movement of developing larvae within. A thick resinous substance holds the clusters in place.@@N
+~
+40 11
+D0
+~
+~
+0 0 29952
+S
+#29954
+@@bWebbed Passage@@N~
+@@bThick strands of sticky webbing crisscross this passage, making progress difficult. Wrapped bundles hanging from the ceiling contain the desiccated remains of unfortunate creatures. The webs vibrate faintly with the movement of their creator somewhere nearby.@@N
+~
+8 11
+D1
+~
+~
+0 0 29951
+D2
+~
+~
+0 0 29955
+S
+#29955
+@@bGlowing Grotto@@N~
+@@bBioluminescent fungi cling to the damp walls of this spacious grotto, casting everything in an eerie blue-green light. The soft glow reveals a cavern of surprising beauty, with mineral formations creating natural pillars and curtains of crystallized stone.@@N
+~
+8 11
+D0
+~
+~
+0 0 29954
+D1
+~
+~
+0 0 29956
+D2
+~
+~
+0 0 29957
+S
+#29956
+@@bMolten Crack@@N~
+@@bA fissure in the cave floor reveals a distant orange glow of magma far below. Waves of heat rise from the crack, and the surrounding stone is warm to the touch. Mineral deposits along the edges have crystallized into colorful formations.@@N
+~
+40 11
+D1
+~
+~
+0 0 29962
+D3
+~
+~
+0 0 29955
+S
+#29957
+@@bScorpion Nest@@N~
+@@bThis large cavern is littered with the remains of countless prey animals, bones picked clean and scattered across the sandy floor. Deep grooves in the stone show where massive scorpion tails have dragged across the surface repeatedly.@@N
+~
+8 11
+D0
+~
+~
+0 0 29955
+D2
+~
+~
+0 0 29958
+S
+#29958
+@@bVenomous Lair@@N~
+@@bPools of caustic venom have collected in natural depressions across the floor of this foul-smelling cave. The liquid gives off acrid fumes that sting the eyes and throat. Corroded bones and dissolved equipment mark where victims met their end.@@N
+~
+40 11
+D0
+~
+~
+0 0 29957
+D1
+~
+~
+0 0 29959
+D2
+~
+~
+0 0 29960
+S
+#29959
+@@bBrood Chamber@@N~
+@@bSmaller scorpions of various sizes scuttle across the walls and ceiling of this cramped cave. Hundreds of tiny eyes glint in the darkness, and the constant click of small pincers creates an unsettling chorus. This appears to be a nursery of sorts.@@N
+~
+8 11
+D3
+~
+~
+0 0 29958
+S
+#29960
+@@bQueen's Antechamber@@N~
+@@bThe tunnel widens dramatically here, the walls polished smooth by the passage of something enormous. Deep gouges in the stone floor and a thick coating of dried venom on every surface mark this as the threshold of a powerful creature's domain.@@N
+~
+8 11
+D0
+~
+~
+0 0 29958
+D2
+~
+~
+0 0 29961
+S
+#29961
+@@RScorpion Queen's Den@@N~
+@@RA vast natural cathedral opens up, its ceiling lost in darkness far above. The floor is a carpet of crushed bones and discarded chitin, and massive scorpion tracks crisscross every surface. The air is thick with the chemical reek of concentrated venom.@@N
+~
+12 11
+D0
+~
+~
+0 0 29960
+S
+#29962
+@@bHidden Burrow@@N~
+@@bA narrow side passage leads to this small, secluded cavern partially hidden behind a curtain of mineral deposits. The floor is covered in fine sand, and claw marks suggest something uses this as a private resting place away from the larger cave system.@@N
+~
+8 11
+D3
+~
+~
+0 0 29956
+S
+#29963
+@@yDesert Trail@@N~
+@@yA worn trail cuts through the sand heading east, marked by occasional cairns of stacked stones. Boot prints and the ruts of heavily laden carts have packed the sand into a firm path. The tracks all lead toward a fortified encampment visible in the distance.@@N
+~
+32 10
+D1
+~
+~
+0 0 29964
+D3
+~
+~
+0 0 29910
+S
+#29964
+@@yLookout Post@@N~
+@@yA crude wooden platform has been erected atop a rocky outcrop, providing a commanding view of the surrounding desert. Tattered banners bearing a crossed-scimitar sigil snap in the wind, and discarded food scraps suggest a recent watch rotation.@@N
+~
+32 10
+D2
+~
+~
+0 0 29965
+D3
+~
+~
+0 0 29963
+S
+#29965
+@@yPalisade Gate@@N~
+@@ySharpened wooden stakes lashed together with rope form a crude palisade wall. A gap serves as the main gate into the raider encampment beyond. Skulls mounted on poles flank the entrance as a grim warning to anyone foolish enough to approach uninvited.@@N
+~
+32 10
+D0
+~
+~
+0 0 29964
+D2
+~
+~
+0 0 29966
+S
+#29966
+@@yRaider Camp Perimeter@@N~
+@@yThe outer ring of the raider camp is a disorganized sprawl of lean-tos, cooking fires, and staked-out hides. The smell of unwashed bodies and roasting meat hangs heavy in the air. Armed figures move between the shelters with the casual menace of career brigands.@@N
+~
+32 10
+D0
+~
+~
+0 0 29965
+D1
+~
+~
+0 0 29968
+D2
+~
+~
+0 0 29969
+D3
+~
+~
+0 0 29967
+S
+#29967
+@@ySupply Tent@@N~
+@@yA large canvas tent serves as the warband's supply depot, its interior crammed with crates, barrels, and sacks of plundered goods. Stolen merchant wares are stacked haphazardly alongside weapons, armor, and provisions for the camp.@@N
+~
+8 10
+D1
+~
+~
+0 0 29966
+S
+#29968
+@@yWeapon Rack@@N~
+@@yRows of crude wooden racks hold an assortment of weapons in various states of repair. Notched blades, dented maces, and splintered spear shafts are sorted roughly by type. A grinding wheel and anvil nearby show signs of recent use for maintenance.@@N
+~
+32 10
+D3
+~
+~
+0 0 29966
+S
+#29969
+@@yCampfire Ring@@N~
+@@yA large fire pit ringed with flat stones serves as the social center of the raider camp. Charred logs and glowing embers fill the pit, and crude log benches surround it. The sand is littered with bone fragments and empty drink skins from nightly revelry.@@N
+~
+32 10
+D0
+~
+~
+0 0 29966
+D1
+~
+~
+0 0 29971
+D2
+~
+~
+0 0 29972
+D3
+~
+~
+0 0 29970
+S
+#29970
+@@ySlave Pen@@N~
+@@yA section of the camp has been fenced off with rope and stakes to form a crude holding pen. Iron shackles are bolted to heavy rocks, and the trampled sand is stained with old blood. The miserable conditions speak to the raiders' cruelty.@@N
+~
+32 10
+D1
+~
+~
+0 0 29969
+S
+#29971
+@@yFighting Pit@@N~
+@@yA circular depression has been dug into the sand and lined with flat stones to form a crude arena. Dark stains cover the pit floor, and spectator benches made from looted wagon boards ring the perimeter. This is where the raiders settle disputes.@@N
+~
+32 10
+D3
+~
+~
+0 0 29969
+S
+#29972
+@@yWar Tent@@N~
+@@yThis large reinforced tent serves as the command center of the raider warband. A sand table displaying a crude map of the surrounding territory dominates the interior, with carved wooden tokens marking targets and patrol routes across the region.@@N
+~
+8 10
+D0
+~
+~
+0 0 29969
+D1
+~
+~
+0 0 29974
+D2
+~
+~
+0 0 29973
+S
+#29973
+@@RWarlord's Pavilion@@N~
+@@RA lavish pavilion of heavy canvas and stolen silk stands apart from the rest of the camp, its entrance flanked by lit braziers. Looted tapestries hang inside, and a throne cobbled together from broken furniture sits on a raised platform of packed earth.@@N
+~
+12 10
+D0
+~
+~
+0 0 29972
+S
+#29974
+@@yTreasure Hoard@@N~
+@@yChests and strongboxes taken from merchant caravans are piled in this guarded corner of the camp. Most have been broken open, their contents sorted and divided. Coins, gemstones, and trade goods spill from overflowing containers.@@N
+~
+8 10
+D3
+~
+~
+0 0 29972
+S
+#0
+#RESETS
+M 0 29900 2 29900 desert sidewinder in windswept dunes
+G 1 29911 1 scarab amulet
+M 0 29912 2 29901 carrion vulture in shifting sand expanse
+G 1 29916 1 desert hawk earring
+M 0 29901 2 29902 sand scarab at crumbling obelisk
+M 0 29903 2 29903 sunbleached skeleton on sun-baked flats
+G 1 29904 1 weathered bronze scimitar
+M 0 29904 2 29904 desert raider scout at bleached bone field
+G 1 29908 1 serpent fang dagger
+M 0 29912 2 29905 carrion vulture at vulture perch
+M 0 29902 2 29906 dust devil in dry riverbed
+M 0 29913 2 29907 venomous asp at ancient well
+G 1 29918 1 sand-blasted finger ring
+M 0 29905 2 29908 giant scorpion at canyon mouth
+G 1 29905 1 scorpion chitin bracer
+M 0 29915 2 29909 jackal pack leader at sandstone arch
+G 1 29900 1 tattered desert turban
+M 0 29909 2 29910 desert bandit at desert crossroads
+G 1 29901 1 sun-scorched leather vest
+M 0 29900 2 29911 desert sidewinder at oasis
+M 0 29916 2 29912 tomb beetle swarm in palm grove
+M 0 29917 2 29913 cursed archaeologist at merchant ruin
+G 1 29902 1 pair of sandworn boots
+M 0 29906 2 29914 tomb guardian at temple forecourt
+G 1 29915 1 crumbling stone shield
+M 0 29907 2 29915 sand wraith at sphinx gate
+G 1 29906 1 cracked bone necklace
+M 0 29903 2 29916 sunbleached skeleton at cracked colossus
+G 1 29904 1 weathered bronze scimitar
+M 0 29906 3 29918 tomb guardian in temple antechamber
+G 1 29915 1 crumbling stone shield
+M 0 29910 2 29919 mummified priest in pillared hall
+G 1 29903 1 dusty nomad cloak
+M 0 29916 2 29920 tomb beetle swarm in hieroglyph corridor
+M 0 29911 2 29921 sandstone golem in statue gallery
+G 1 29910 1 pair of raider arm guards
+M 0 29906 3 29922 tomb guardian in offering chamber
+G 1 29915 1 crumbling stone shield
+M 0 29907 2 29923 sand wraith in trapped hallway
+G 1 29906 1 cracked bone necklace
+M 0 29910 2 29924 mummified priest in burial alcove
+G 1 29903 1 dusty nomad cloak
+M 0 29911 2 29925 sandstone golem in sarcophagus room
+G 1 29910 1 pair of raider arm guards
+M 0 29918 2 29926 sand elemental in guardian chamber
+G 1 29909 1 sand-caked war belt
+M 0 29917 2 29927 cursed archaeologist in collapsed passage
+G 1 29902 1 pair of sandworn boots
+M 0 29916 2 29928 tomb beetle swarm in flooded chamber
+M 0 29906 3 29929 tomb guardian in mosaic room
+G 1 29915 1 crumbling stone shield
+M 0 29918 2 29930 sand elemental in treasure vault antechamber
+G 1 29909 1 sand-caked war belt
+M 0 29907 2 29931 sand wraith at sacred pool
+G 1 29906 1 cracked bone necklace
+M 0 29910 2 29932 mummified priest in inscription hall
+G 1 29903 1 dusty nomad cloak
+M 0 29906 3 29933 tomb guardian in ritual chamber
+G 1 29915 1 crumbling stone shield
+M 0 29919 2 29934 desert ghoul in pharaoh antechamber
+G 1 29919 1 tomb guardian halberd
+M 0 29920 1 29935 Pharaoh Kha'zuul in throne room
+G 1 29920 1 crown of pharaoh kha'zuul
+G 1 29924 1 pharaoh golden gauntlets
+M 0 29919 2 29938 desert ghoul at catacomb entrance
+G 1 29919 1 tomb guardian halberd
+M 0 29903 2 29939 sunbleached skeleton in bone-lined corridor
+G 1 29904 1 weathered bronze scimitar
+M 0 29916 2 29940 tomb beetle swarm in ossuary
+M 0 29910 2 29941 mummified priest in crypt of the forgotten
+G 1 29903 1 dusty nomad cloak
+M 0 29907 2 29942 sand wraith in embalming chamber
+G 1 29906 1 cracked bone necklace
+M 0 29919 2 29943 desert ghoul in dust-choked passage
+G 1 29919 1 tomb guardian halberd
+M 0 29917 2 29944 cursed archaeologist in chamber of whispers
+G 1 29902 1 pair of sandworn boots
+M 0 29918 2 29945 sand elemental in cursed vault
+G 1 29909 1 sand-caked war belt
+M 0 29919 2 29946 desert ghoul in necromancer workshop
+G 1 29919 1 tomb guardian halberd
+M 0 29911 2 29947 sandstone golem in lich antechamber
+G 1 29910 1 pair of raider arm guards
+M 0 29922 1 29948 Lich Lord Sethari in lich sanctum
+G 1 29922 1 staff of lich lord sethari
+G 1 29926 1 lich shadowed robes
+M 0 29916 2 29949 tomb beetle swarm at collapsed dead end
+M 0 29905 2 29950 giant scorpion at cave entrance
+G 1 29905 1 scorpion chitin bracer
+M 0 29913 2 29951 venomous asp in narrow tunnel
+G 1 29918 1 sand-blasted finger ring
+M 0 29905 2 29952 giant scorpion in chitinous cavern
+G 1 29905 1 scorpion chitin bracer
+M 0 29916 2 29953 tomb beetle swarm in egg chamber
+M 0 29913 2 29954 venomous asp in webbed passage
+G 1 29918 1 sand-blasted finger ring
+M 0 29905 2 29955 giant scorpion in glowing grotto
+G 1 29905 1 scorpion chitin bracer
+M 0 29908 2 29956 dune stalker at molten crack
+G 1 29914 1 jackal hide face wrap
+M 0 29905 2 29957 giant scorpion in scorpion nest
+G 1 29905 1 scorpion chitin bracer
+M 0 29908 2 29958 dune stalker in venomous lair
+G 1 29914 1 jackal hide face wrap
+M 0 29905 2 29959 giant scorpion in brood chamber
+G 1 29905 1 scorpion chitin bracer
+M 0 29918 2 29960 sand elemental in queen antechamber
+G 1 29909 1 sand-caked war belt
+M 0 29921 1 29961 Scorpion Queen in her den
+G 1 29921 1 scorpion queen carapace
+G 1 29925 1 scorpion queen stinger blade
+M 0 29913 2 29962 venomous asp in hidden burrow
+G 1 29918 1 sand-blasted finger ring
+M 0 29904 2 29963 desert raider scout on desert trail
+G 1 29908 1 serpent fang dagger
+M 0 29904 2 29964 desert raider scout at lookout post
+G 1 29908 1 serpent fang dagger
+M 0 29909 2 29965 desert bandit at palisade gate
+G 1 29901 1 sun-scorched leather vest
+M 0 29914 2 29966 desert nomad warrior at camp perimeter
+G 1 29917 1 corroded iron mace
+M 0 29909 2 29967 desert bandit in supply tent
+G 1 29901 1 sun-scorched leather vest
+M 0 29914 2 29968 desert nomad warrior at weapon rack
+G 1 29917 1 corroded iron mace
+M 0 29904 2 29969 desert raider scout at campfire ring
+G 1 29908 1 serpent fang dagger
+M 0 29909 2 29970 desert bandit in slave pen
+G 1 29901 1 sun-scorched leather vest
+M 0 29914 2 29971 desert nomad warrior in fighting pit
+G 1 29917 1 corroded iron mace
+M 0 29914 2 29972 desert nomad warrior in war tent
+G 1 29917 1 corroded iron mace
+M 0 29923 1 29973 Warlord Drahk in his pavilion
+G 1 29923 1 warlord drahk war cleaver
+G 1 29927 1 warlord spiked pauldrons
+M 0 29909 2 29974 desert bandit guarding treasure hoard
+G 1 29901 1 sun-scorched leather vest
+S
+#$
