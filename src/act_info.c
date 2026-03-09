@@ -5368,16 +5368,48 @@ void do_whois(CHAR_DATA *ch, char *argument)
 void do_shelp(CHAR_DATA *ch, char *argument)
 {
    HELP_DATA *pHelp;
+   char search_term[MAX_INPUT_LENGTH];
+   char full_argument[MAX_INPUT_LENGTH];
 
-   if (argument[0] == '\0')
-      argument = "shelp";
+   one_argument(argument, search_term);
+   while (isspace(*argument))
+      argument++;
+
+   snprintf(full_argument, sizeof(full_argument), "%s", argument);
+
+   if (search_term[0] == '\0')
+   {
+      snprintf(search_term, sizeof(search_term), "shelp");
+      snprintf(full_argument, sizeof(full_argument), "shelp");
+   }
 
    for (pHelp = first_shelp; pHelp != NULL; pHelp = pHelp->next)
    {
       if (pHelp->level > get_trust(ch))
          continue;
 
-      if (is_name(argument, pHelp->keyword))
+      if (full_argument[0] != '\0' && !str_cmp(full_argument, pHelp->keyword))
+      {
+         if (pHelp->level >= 0)
+         {
+            send_to_char(pHelp->keyword, ch);
+            send_to_char("\n\r", ch);
+         }
+
+         if (pHelp->text[0] == '.')
+            send_to_char(pHelp->text + 1, ch);
+         else
+            send_to_char(pHelp->text, ch);
+         return;
+      }
+   }
+
+   for (pHelp = first_shelp; pHelp != NULL; pHelp = pHelp->next)
+   {
+      if (pHelp->level > get_trust(ch))
+         continue;
+
+      if (is_name(search_term, pHelp->keyword))
       {
          if (pHelp->level >= 0)
          {
