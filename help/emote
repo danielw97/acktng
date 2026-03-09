@@ -1,0 +1,6 @@
+level 0
+keywords emote
+---
+Syntax: emote <action>
+
+Performs a custom social/action message.

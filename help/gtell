@@ -1,0 +1,6 @@
+level 0
+keywords gtell
+---
+Syntax: gtell <message>
+
+Sends a message to your current group.

@@ -1,0 +1,6 @@
+level 0
+keywords kill
+---
+Syntax: kill <target>
+
+Starts combat against a target.

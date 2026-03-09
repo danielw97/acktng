@@ -1,0 +1,6 @@
+level 0
+keywords ignore
+---
+Syntax: ignore <player>
+
+Toggles ignoring communication from a player.

@@ -1,0 +1,8 @@
+level -2
+keywords ctoggle
+---
+Syntax: ctoggle <player> <armourer|diplomat|treasurer|leader>
+
+Clan-boss command used to toggle a clan job flag on or off for a clan member.
+
+Only clan bosses can use this command.

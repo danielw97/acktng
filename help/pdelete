@@ -1,0 +1,7 @@
+level 2
+keywords pdelete
+---
+Syntax: pdelete <password>
+
+Deletes your own player character after password confirmation.
+This command is available from level 2.
