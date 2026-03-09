@@ -1,5 +1,5 @@
 level 0
-keywords REMORT
+keywords REMORT ADEPT
 ---
 @@aREMORT@@W
 Your @@yfirst@@W remort class requires the matching mortal
@@ -23,3 +23,16 @@ Remort classes and mortal pre-requisites are:
         -@@mEgomancer@@W (Psionicist)
         -@@gMonk@@W (Pugilist)
         -@@gBrawler@@W (Pugilist)
+
+@@aADEPT@@W
+Adept classes are a third tier of progression beyond remort. To unlock
+adepts, you must have at least @@y2@@W remort classes at level @@y100@@W.
+Each adept class requires both of its matching remort classes at @@y100@@W.
+When you are ready to adept, type gain <first three letters of adept class>.
+Adept classes and their remort pre-requisites are:
+        -@@pGrand Magi@@W (Sorcerer + Wizard)
+        -@@aTemplar@@W (Paladin + Priest)
+        -@@dNightblade@@W (Assassin + Warlock)
+        -@@cCrusader@@W (Knight + Swordsman)
+        -@@GKinetimancer@@W (Necromancer + Egomancer)
+        -@@gMartial Artist@@W (Monk + Brawler)
