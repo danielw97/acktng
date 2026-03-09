@@ -1695,5 +1695,418 @@ The wisps lead deeper south into the bog.~
 ~
 0 -1 1104
 S
+#1100
+The Deep Bog Approach~
+The shallow northern reaches of the Miasma Bog give way here to deeper water — waist-high in the channels between the protruding bog-island hummocks, and deeper between those islands in undefined pits that the silt has concealed.  The hummocks are the only solid-ish ground, small elevated mats of compressed dead vegetation and root that give a few inches of clearance above the waterline.  Movement through this section is slow and requires constant attention to depth, and the methane haze is dense enough here to give the middle distance a blurred, indistinct quality.~
+0 6
+D0
+The bog shallows lead north back toward the northern shore.~
+~
+0 -1 1095
+D1
+The deeper section continues east, the channel between hummocks narrowing.~
+~
+0 -1 1101
+D2
+The bog deepens south, the hummocks fewer and the channels between them wider.~
+~
+0 -1 1105
+S
+#1101
+The Hummock Crossing~
+Hummocks here are large enough to stand on comfortably, creating stepping-stone paths through the deeper bog sections.  The crossing is not entirely safe — some hummocks are more stable than others, and pressure-testing before full weight is advisable — but it is the best footing available in this section of the bog.  Between the hummocks, the bog-water is deep and very dark, and something about the depth here suggests the bog floor is considerably further down than it should be, as if the ground has subsided below the swamp.~
+0 6
+D3
+The hummock crossing leads west toward the deep bog approach.~
+~
+0 -1 1100
+D1
+The crossing extends east, the hummocks slightly smaller but more frequent.~
+~
+0 -1 1102
+D2
+The hummocks give way south to open water sections with no clear stepping-stone path.~
+~
+0 -1 1106
+S
+#1102
+The Open Water~
+No hummocks here — just open, dark bog-water at chest depth, the bottom invisible, the surface covered in the ubiquitous floating mat that parts and closes around passage.  The sound of the bog is amplified in this open section, the methane bubbles, the distant wisp-movement, the slow creaking of dead wood on the perimeter all carrying clearly across the flat water.  Something very large passed through here recently — the floating mat is disrupted in a wide path, and the disturbance has not yet fully closed.~
+0 6
+D3
+The open water continues west toward the hummock crossing.~
+~
+0 -1 1101
+D1
+The open section extends east, the mat thicker.~
+~
+0 -1 1103
+D2
+The water deepens south, the floating mat disappearing.~
+~
+0 -1 1107
+S
+#1103
+The Ruin Shallows~
+The water shallows here against a submerged obstruction — the top courses of a stone wall, still mortared but deeply encrusted with bog-growth, projecting six inches above the waterline.  More stonework is visible below the surface at varying depths, suggesting a more extensive structure beneath.  The stone is unlike any rock that occurs naturally nearby, cut and dressed in a style that predates the current forest by at least several generations.  Whatever was built here was built before the bog, when this was dry ground and someone had a reason to be here.~
+0 6
+D3
+The ruin shallows lead west toward open water.~
+~
+0 -1 1102
+D1
+The ruins extend east, more wall sections visible above the surface.~
+~
+0 -1 1104
+D2
+The submerged ruins become more distinct south, the walls higher out of the water.~
+~
+0 -1 1108
+S
+#1104
+The Sunken Terrace~
+A section of what was clearly an elevated terrace or platform projects from the bog here, its original surface now just at the waterline — walkable, barely, with careful footing on the slippery stone.  The terrace is carved from a single piece of pale stone, and carved into it is an intricate pattern of interlocking circles that covers the entire surface.  The circles are partially obscured by algae and @@dbog deposit@@N, but their regularity is clear, and the centre of the pattern — now below the waterline — glows faintly with an @@pthin phosphorescence@@N that has nothing to do with the normal bog-bioluminescence.~
+0 6
+D3
+The terrace leads west toward the ruin shallows.~
+~
+0 -1 1103
+D2
+The terrace's eastern edge drops back into bog water heading south.~
+~
+0 -1 1109
+S
+#1105
+The Druid Circle Foundation~
+The outline of a circular structure is visible here, its foundation stones arranged in a ring thirty feet across, some still upright and others toppled but in place.  This is clearly the outer boundary of the druid circle that once occupied this ground before the bog consumed it.  The standing stones are covered in carvings: spirals, tree-forms, beast-shapes, and beneath them all a script that appears in no living language.  The carvings are sharp despite the age and moisture, as though the stone resists weathering in this one respect.  The water within the circle is shallower than outside it.~
+0 6
+D0
+The bog leads north toward the deep bog approach.~
+~
+0 -1 1100
+D1
+The circle foundation continues east, more stones visible.~
+~
+0 -1 1106
+D2
+The circle's interior is accessible to the south, the water level dropping.~
+~
+0 -1 1110
+S
+#1106
+The Submerged Altar Approach~
+The path through the bog leads here toward the submerged altar at the druid circle's heart — visible now as a dark rectangular shape below the waterline, its surface still flat and level despite the age and the water pressure.  The closer approach to the altar changes the atmosphere: the methane smell here is replaced by a different chemical note, something older and more organic, and the bog-water temperature rises noticeably.  The carvings on the altar are visible even below water, glowing faintly.~
+0 6
+D3
+The approach leads west toward the druid circle foundation.~
+~
+0 -1 1105
+D1
+The altar approach continues east along the circle's inner edge.~
+~
+0 -1 1107
+D2
+The altar is accessible to the south, the water shallowing over its surface.~
+~
+0 -1 1111
+S
+#1107
+The Circle's East Quadrant~
+The eastern quarter of the ancient druid circle retains the most intact stonework — several of the standing stones here are still vertical, their tops above the waterline, and the sections of carved floor between them are visible just below the surface.  The carved floor-patterns in this quadrant are different from the terrace to the north: instead of circles, they show long parallel lines radiating from a central point, the lines too regular and too deep to be decorative.  Something at the radial centre, below the current water level, pulses with the same faint phosphorescence as the terrace carving.~
+0 6
+D3
+The circle continues west back toward the altar approach area.~
+~
+0 -1 1106
+D1
+The circle wall leads east toward a partially collapsed section.~
+~
+0 -1 1108
+D2
+The east quadrant opens south toward a deeper section of the circle's interior.~
+~
+0 -1 1112
+S
+#1108
+The Fallen Wall~
+A section of the circle's outer wall has collapsed outward, the stones toppled into the bog and now half-submerged in a heap that forms an irregular crossing point between the circle's interior and the bog proper.  The collapsed stones are covered in the same @@dencrusting bog growth@@N as everything else here, but where they broke, the fresh stone surfaces beneath are pale and uncorroded.  Creatures that prefer submerged shelter have colonised the spaces between the fallen stones, and movement through this section disturbs several at once.~
+0 6
+D3
+The fallen wall section leads west toward the circle's east quadrant.~
+~
+0 -1 1107
+D1
+The broken stone extends east into the bog beyond the circle boundary.~
+~
+0 -1 1109
+D2
+The collapsed wall continues south, the stones sinking deeper.~
+~
+0 -1 1113
+S
+#1109
+The Outer Bog Extension~
+Beyond the druid circle's eastern boundary, the bog extends in a featureless expanse of dark water and floating mat, no structure visible in any direction.  The transition from the circle's defined space back to open swamp is disorienting — the psychic weight of the ancient structure disappears immediately, replaced by the bog's own ambient sensation of being observed from below.  The methane is thicker here, and the wisp-lights visible to the south are moving in a direction that is not consistent with the prevailing wind.~
+0 6
+D3
+The outer bog leads west back toward the fallen wall.~
+~
+0 -1 1108
+D2
+The open bog extends south, the wisp-lights growing larger.~
+~
+0 -1 1114
+S
+#1110
+The Circle Interior~
+The actual interior of the ancient druid circle is accessible here, the shallow water over the carved floor giving ankle-deep crossing and clear views of the carvings beneath.  The combined pattern of the floor-carvings from all quadrants is visible from the interior: they form a single unified image of a vast tree, its roots below and its branches above, the trunk running through the centre where the altar stands submerged.  The image was not carved to be viewed from any single point — it only coalesces into the full image when standing in the centre.  The tree-image glows with that thin phosphorescence, and standing in its centre, a faint vibration can be felt through the feet.~
+0 6
+D0
+The circle interior connects north back to the circle's foundation stones.~
+~
+0 -1 1105
+D1
+The interior extends east toward the altar area.~
+~
+0 -1 1111
+D2
+The interior continues south toward a deeper section of the circle.~
+~
+0 -1 1115
+S
+#1111
+The Altar~
+The altar stone of the ancient druid circle is here, its surface just above the waterline — a rectangular slab of pale stone four feet long and two feet wide, its surface covered edge to edge in carvings too complex and too dense to absorb in a single viewing.  The carvings are fresh-looking despite their obvious age, the lines sharp, the depths clear, and they glow with a steady cold @@pphosphorescence@@N that intensifies when anything living approaches.  The altar smells of iron and deep earth and something floral, incongruous and clean and entirely out of place in the toxic bog.  Whatever rites were performed here, the stone absorbed enough of them to retain an echo.~
+0 6
+D3
+The altar is accessible from the west through the circle interior.~
+~
+0 -1 1110
+D1
+The altar connects east to the circle's east quadrant approach.~
+~
+0 -1 1107
+D2
+South of the altar, the circle's interior continues toward a deeper section.~
+~
+0 -1 1116
+S
+#1112
+The Circle's Southern Quadrant~
+The southern section of the druid circle is in the worst condition — the outer wall here has not merely fallen but been destroyed, the stones shattered in an outward pattern that suggests an explosion from within.  The force that destroyed this section of the wall was considerable, and the bog has partially filled the resulting gap with a tongue of open water that extends into the circle's interior.  Chunks of the shattered wall project from the water at random angles, some balanced on others, and the floor-carvings in this quadrant have been obliterated — the floor surface ground to rough stone by whatever happened here.~
+0 6
+D0
+The southern quadrant leads north toward the circle's eastern section.~
+~
+0 -1 1107
+D1
+The shattered wall section extends east toward the outer bog.~
+~
+0 -1 1113
+D2
+The circle opens south through its destroyed southern wall into the deep bog beyond.~
+~
+0 -1 1117
+S
+#1113
+The Outer South Reaches~
+The bog south and east of the druid circle is undifferentiated and deep — the floor invisible, the floating mat thin, the methane haze at its densest.  This section of the bog feels watched in a way that is distinct from the ambient observation of the shallows: more focused, more patient, more specifically interested in whatever it perceives moving through.  Several large shapes are visible below the water surface in this section, moving slowly along the bottom in circles that occasionally bring them close enough to the surface to cause the water above to dome slightly.~
+0 6
+D3
+The outer reaches lead west back toward the circle's shattered southern section.~
+~
+0 -1 1112
+D1
+The deep bog continues east toward a convergence.~
+~
+0 -1 1114
+D2
+The shapes below the water converge south toward whatever they centre on.~
+~
+0 -1 1118
+S
+#1114
+The Drowning Hollow~
+A wide, naturally formed depression in the bog floor creates a chamber of deeper water here, a hollow where the depth increases to a point where the bottom is genuinely unreachable and the surface pressure of the water above can be felt as a weight.  The hollow is surrounded by a ring of very old, very dead trees whose trunks project from the water — dead for long enough that their bark has fallen away and the naked wood has blackened and hardened to something like stone.  The @@pwater here is warmer@@N than the surrounding bog by several degrees, and the methane gas production is entirely absent — whatever biological process creates the gas elsewhere has been suppressed here by the presence of something that makes different use of the organic matter.  From the hollow's centre, all bog sounds are reduced to a distant murmur, as if the hollow is acoustically isolated.~
+4 6
+D3
+The hollow's edge leads west toward the outer bog reaches.~
+~
+0 -1 1113
+D2
+The depression deepens south toward the hollow's lowest point before connecting to the bog's outer circuit.~
+~
+0 -1 1119
+S
+#1115
+The Bog's Southern Margin~
+The southern edge of the Miasma Bog proper is reached here, the open water giving way to a saturated margin where the ground is between land and bog — walkable if one accepts constant ankle-depth wading, the surface sinking with each step but not giving way entirely.  The air here carries less methane than the open bog and more of the smell of the Heartrot Grove to the east — a thick, sweet corruption that is entirely different in character from the bog's chemical decay.  The ground to the south rises toward the forest.~
+0 6
+D0
+The margin continues north back into the circle's interior.~
+~
+0 -1 1110
+D1
+The margin runs east along the bog's southern edge.~
+~
+0 -1 1116
+D2
+The ground rises south toward the forest of the Heartrot Grove.~
+~
+0 -1 1115
+S
+#1116
+The Mire Crossing~
+The saturated ground here has been made semi-passable by a series of flat stones placed at intervals — not natural, placed deliberately, though long enough ago that the bog has settled around each one and they now provide only slightly elevated footing rather than the dry crossing they once offered.  Between the stepping stones, the ground is deep enough to submerge a person if they fall through, the bog-soil having no true bottom at this section.  The stones were placed by someone who needed regular passage across this spot, and whoever that was, they placed them with considerable foresight for the crossing's long-term function.~
+0 6
+D3
+The mire crossing continues west toward the bog's southern margin.~
+~
+0 -1 1115
+D1
+The stepping stones continue east toward the Drowning Hollow approach.~
+~
+0 -1 1117
+D2
+The stones lead south out of the bog proper onto firmer ground.~
+~
+0 -1 1116
+S
+#1117
+The Bog-Forest Interface~
+Here the Miasma Bog and the Heartrot Grove meet in a confused, toxic interzone where neither fully governs.  The trees that grow here are half-submerged, their lower trunks in standing water, their upper sections in open air.  The @@pcorruption@@N of the grove mixes with the chemical toxicity of the bog to produce an atmosphere unlike either — not methane, not organic decay, but something else, a third type of wrongness with its own specific and unpleasant character.  The ground is neither bog floor nor forest floor but a compacted mat of both, and it supports weight grudgingly.~
+0 6
+D3
+The interface zone leads west through the mire crossing.~
+~
+0 -1 1116
+D1
+The interzone extends east toward a firmer section.~
+~
+0 -1 1118
+D2
+The bog-forest mix gives way south to more clearly forest character.~
+~
+0 -1 1117
+S
+#1118
+The Outer Grove Approach~
+The bog character fades here, the standing water replaced by saturated ground that is wet but walkable.  The trees transition from the stunted, half-drowned specimens of the interface zone to the beginning of the Heartrot Grove's character — tall, close-spaced, and pulsing with the slow @@ppurple bioluminescence@@N that defines the zone.  The light here is dim but not absent, the grove's ambient glow providing just enough to navigate by.  The smell of the bog fades behind; ahead, the Heartrot Grove's thick, sweet corruption fills the air completely.~
+1 6
+D3
+The outer approach leads west through the bog-forest interzone.~
+~
+0 -1 1117
+D1
+The approach continues east toward the full grove border.~
+~
+0 -1 1119
+D2
+The saturated ground transitions south to the forest floor of the Heartrot Grove.~
+~
+0 -1 1118
+S
+#1119
+The Grove Border~
+The border of the Heartrot Grove is marked by a change in the trees — the stunted, blight-killed specimens of the bog's edge give way to enormous, entirely living but deeply corrupted trees whose bark glows with a soft purple bioluminescence from within, as though the wood itself has become phosphorescent.  The light is beautiful in the way that poison berries are beautiful: completely, compellingly, and in service of something that means to do harm.  To the east, the Heartrot Grove opens in all its light-and-corruption.  To the west, the bog's toxic haze recedes.~
+1 6
+D3
+The grove border leads west toward the outer approach.~
+~
+0 -1 1118
+D1
+The border gives way east to the full interior of the Heartrot Grove.~
+~
+0 -1 1121
+S
+#1120
+The Grove's Western Gateway~
+The Heartrot Grove begins here where the last of the Blightwood's character ends — the trees here are taller than the Blightwood trees, more closely spaced, and every surface of every trunk and branch and root glows with a slow, pulsing @@ppurple bioluminescence@@N that is entirely internal, produced by an organism that has fully colonised the wood itself.  The glow pulses in synchrony across all trees in view, a single slow heartbeat shared by the entire grove, and the rhythm is identical to a human heart at rest — which is the most deeply unsettling thing about it.  The forest floor here is not leaf-litter or root-mat but something organic and structured, as if the grove's floor has become part of a single unified living system.  From the west, two paths converge here — one from the Blightwood, one descending from the canopy above — and from the east the grove deepens and the pulse grows stronger.~
+1 3
+D3
+The path leads west toward the Blightwood's edge.~
+~
+0 -1 1079
+D4
+The descent rope from the Ancient Canopy above ends here.~
+~
+0 -1 1094
+D1
+The grove opens east into the pulsing forest.~
+~
+0 -1 1121
+D2
+The grove extends south through the uniformly glowing trees.~
+~
+0 -1 1125
+S
+#1121
+The Pulse Network Junction~
+The connection of paths here — from the bog's eastern border to the west, from the grove's entry, and deeper into the grove to east and south — creates a junction that is somehow apparent despite no visible landmark marking it.  The grove's pulse seems to radiate from this direction, and standing here, the pulse can be felt in the chest as a sympathetic vibration.  The ground underfoot has a faint but perceptible give to it — not the spongy soil of the forest but a structural give, as if the ground here is alive and yielding slightly with each pulse.  The light from the trees paints everything in cold purple.~
+1 3
+D3
+The junction connects west toward the bog's eastern border and the grove's entry.~
+~
+0 -1 1119
+D0
+The junction leads north toward the grove's western gateway.~
+~
+0 -1 1120
+D1
+The pulse grows stronger to the east.~
+~
+0 -1 1122
+D2
+The grove extends south, the trees more tightly spaced.~
+~
+0 -1 1126
+S
+#1122
+The Inner Glow Corridor~
+A corridor of uniformly spaced trees creates a straight-line passage through this section of the grove, their bioluminescence painting the ground in overlapping circles of cold purple light.  The straightness of the corridor is unusual in this forest of organic complexity — the trees are almost perfectly equidistant, almost perfectly aligned, as if arranged rather than grown.  Moving through the corridor, the pulse becomes a rhythm that matches steps if one allows it — the forest keeps time.~
+1 3
+D3
+The corridor leads west toward the pulse network junction.~
+~
+0 -1 1121
+D1
+The corridor continues east, the alignment perfect.~
+~
+0 -1 1123
+D2
+The corridor opens south into a wider section.~
+~
+0 -1 1127
+S
+#1123
+The Pulsing Canopy~
+The grove's canopy here is lower than the surrounding Heartrot and it reaches downward as if feeling for the ground — the lowest branches are at head-height, and some have grown downward enough to root at their tips, creating loops of living wood from branch to ground.  The @@pcanopy-loops@@N glow brighter than the surrounding wood, the pulse in them more visible, and walking through this section requires navigation around the hanging-and-rerooted branch-arches.  The light through the looped canopy is filtered and complex, the shadows moving with the pulse.~
+1 3
+D3
+The pulsing canopy opens west toward the inner glow corridor.~
+~
+0 -1 1122
+D1
+The canopy-loop section continues east.~
+~
+0 -1 1124
+D2
+The low-canopy zone gives way south to a more open section.~
+~
+0 -1 1128
+S
+#1124
+The Northeast Margin~
+The northeastern margin of the Heartrot Grove's accessible zone — the grove continues further east and north, but the corruption becomes too dense for movement beyond this point without considerable resistance.  The trees here are the closest-spaced in the accessible grove, their trunks nearly touching, their root systems interlocked in an impassable mat above ground.  The pulse is strongest at this margin, as if the grove's centre is directly beyond — nearby, but separated by the grove's own structure.  The light here is almost sufficient to read by.~
+1 3
+D3
+The margin connects west through the pulsing canopy section.~
+~
+0 -1 1123
+D2
+The margin gives way south toward less obstructed sections of the grove.~
+~
+0 -1 1129
+S
 #0
 #$
