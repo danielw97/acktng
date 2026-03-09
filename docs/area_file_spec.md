@@ -704,6 +704,8 @@ Practical door behavior in area files/runtime:
   - If the exit is not marked as a door (`EX_ISDOOR` unset), lock/unlock/open/close door commands do not apply.
   - If `<key_vnum>` is `< 0`, players will be told the exit cannot be locked/unlocked with a key.
   - If `<key_vnum>` is set, it should match the intended key object's vnum exactly; otherwise unlock/lock attempts with the thematic key will fail.
+  - If a door is reset to `locked` via `#RESETS` command `D` state `2`, `<key_vnum>` MUST be set to a valid key object vnum (not `-1`).
+  - For every such locked-on-reset door, an object record for that exact key vnum MUST exist in `#OBJECTS` (create the key item if it does not already exist).
 
 In `#RESETS`, command `D` uses door state enum values from `tab_door_states` in `src/buildtab.c`:
 
