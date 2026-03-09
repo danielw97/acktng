@@ -13,6 +13,7 @@ struct static_prop_template_data
 {
     int id;
     const char *title;
+    int prerequisite_static_id;
     int type;
     int num_targets;
     int target_vnum[PROP_MAX_TARGETS];
@@ -26,11 +27,14 @@ struct static_prop_template_data
 };
 
 static const STATIC_PROP_TEMPLATE static_prop_table[] = {
-    {0, "Cull the sewer rats", PROP_TYPE_KILL_COUNT, 1, {3001, 0, 0, 0, 0}, 10, 1, 3001, 500, 2, 0, 0},
-    {1, "Collect courier seals", PROP_TYPE_COLLECT_ITEMS, 2, {3010, 3011, 0, 0, 0}, 0, 15, 3002, 750, 3, 3020, 1},
-    {2, "Threats to the road", PROP_TYPE_KILL_VARIETY, 3, {3021, 3022, 3023, 0, 0}, 0, 30, 3003, 1000, 4, 0, 0}};
+    {0, "Cull the sewer rats", -1, PROP_TYPE_KILL_COUNT, 1, {3001, 0, 0, 0, 0}, 10, 1, 3001, 500, 2, 0, 0},
+    {1, "Collect courier seals", 0, PROP_TYPE_COLLECT_ITEMS, 2, {3010, 3011, 0, 0, 0}, 0, 15, 3002, 750, 3, 3020, 1},
+    {2, "Threats to the road", 1, PROP_TYPE_KILL_VARIETY, 3, {3021, 3022, 3023, 0, 0}, 0, 30, 3003, 1000, 4, 0, 0}};
 
 #define STATIC_PROP_COUNT (sizeof(static_prop_table) / sizeof(static_prop_table[0]))
+
+
+static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl);
 
 static PROPOSITION_DATA *get_prop_slot(CHAR_DATA *ch, int slot)
 {
@@ -265,6 +269,8 @@ static void proposition_list_static(CHAR_DATA *ch, CHAR_DATA *postman)
         if (postman != NULL && postman->pIndexData != NULL &&
             tpl->offerer_vnum != postman->pIndexData->vnum)
             continue;
+        if (!static_prop_prerequisite_met(ch, tpl))
+            continue;
 
         if (ps_lvl < tpl->min_level)
             sprintf(buf, "@@W%2d)@@N %s @@r[requires pseudo-level %d]@@N\n\r", i + 1, tpl->title, tpl->min_level);
@@ -286,6 +292,17 @@ static bool static_prop_already_active(CHAR_DATA *ch, int static_id)
     }
 
     return FALSE;
+}
+
+static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl)
+{
+    if (tpl->prerequisite_static_id < 0)
+        return TRUE;
+
+    if (tpl->prerequisite_static_id >= PROP_MAX_STATIC_PROPOSITIONS)
+        return FALSE;
+
+    return ch->pcdata->completed_static_props[tpl->prerequisite_static_id];
 }
 
 static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int list_number)
@@ -314,6 +331,12 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
         ch->pcdata->completed_static_props[tpl->id])
     {
         send_to_char("You have already completed that static proposition.\n\r", ch);
+        return;
+    }
+
+    if (!static_prop_prerequisite_met(ch, tpl))
+    {
+        send_to_char("You have not unlocked that static proposition yet.\n\r", ch);
         return;
     }
 
