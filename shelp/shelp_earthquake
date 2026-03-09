@@ -1,12 +1,18 @@
 level -1
-keywords shelp_earthquake
+keywords earthquake
 ---
 *******************************************************************************
-       Name: Earthquake		
-    Classes: Cleric(78)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell summons a mini-earthquake to strike the caster's
-             location, causing damage to all those affected.
+       Name: Earthquake
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: earthquake
+   Wear-Off: !Earthquake!
+Acquisition:
+   - Cleric: level 78
+Description:
+   Earthquake is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

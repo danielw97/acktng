@@ -1,0 +1,21 @@
+level -1
+keywords retributive strike
+---
+*******************************************************************************
+       Name: Retributive Strike
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 800
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Retributive strike
+   Wear-Off: !Retributive Strike!
+Acquisition:
+   - Sorcerer: level 72
+   - Wizard: level 72
+   - Necromancer: level 78
+   - Egomancer: level 78
+Description:
+   Retributive Strike is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

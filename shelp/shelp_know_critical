@@ -1,12 +1,18 @@
 level -1
-keywords shelp_know_critical
+keywords know critical
 ---
 *******************************************************************************
-       Name: Know Critical		
-    Classes: Psionicist(28)
-   Duration: 2-5 (Cast Level baded)
-   Modifies: Damroll
-       Type: Defensive - Self
-Description: This spell allows the caster to know the points on his/her
-             enemy's that will inflicy greater damage.
+       Name: Know Critical
+       Kind: Spell
+     Target: TAR_CHAR_SELF
+   Position: POS_STANDING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You are less aware of critical damage points.
+Acquisition:
+   - Psionicist: level 28
+Description:
+   Know Critical is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

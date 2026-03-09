@@ -1,0 +1,18 @@
+level -1
+keywords appraise
+---
+*******************************************************************************
+       Name: Appraise
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Appraise!
+Acquisition:
+   - Thief: level 12
+Description:
+   Appraise is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

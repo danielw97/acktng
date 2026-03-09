@@ -1,0 +1,18 @@
+level -1
+keywords spell critical damage
+---
+*******************************************************************************
+       Name: Spell Critical Damage
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Spell Critical Damage!
+Acquisition:
+   - Cleric: level 20
+Description:
+   Spell Critical Damage is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

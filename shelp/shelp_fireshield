@@ -1,0 +1,19 @@
+level -1
+keywords fireshield
+---
+*******************************************************************************
+       Name: Fireshield
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 400
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Sorcerer: level 80
+   - Wizard: level 80
+Description:
+   Fireshield is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

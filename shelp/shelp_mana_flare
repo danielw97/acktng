@@ -1,0 +1,19 @@
+level -1
+keywords mana flare
+---
+*******************************************************************************
+       Name: Mana Flare
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 80
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: @@NThe @@eMana Flare@@N dissipates.
+Acquisition:
+   - Sorcerer: level 18
+   - Wizard: level 18
+Description:
+   Mana Flare is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

@@ -1,0 +1,18 @@
+level -1
+keywords cloak:mental
+---
+*******************************************************************************
+       Name: Cloak:mental
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
+   Min Mana: 550
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: @@NThe @@mcloak@@N around your body fades.
+Acquisition:
+   - Monk: level 48
+Description:
+   Cloak:mental is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

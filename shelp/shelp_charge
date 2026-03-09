@@ -1,0 +1,21 @@
+level -1
+keywords charge
+---
+*******************************************************************************
+       Name: Charge
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 1
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Charge
+   Wear-Off: !Charge
+Acquisition:
+   - Knight: level 30
+   - Swordsman: level 30
+   - Paladin: level 89
+   - Priest: level 89
+Description:
+   Charge is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

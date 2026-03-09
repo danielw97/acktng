@@ -1,0 +1,18 @@
+level -1
+keywords mass invis
+---
+*******************************************************************************
+       Name: Mass Invis
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 20
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Mass Invis!
+Acquisition:
+   - Mage: level 60
+Description:
+   Mass Invis is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

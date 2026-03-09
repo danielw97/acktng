@@ -1,0 +1,19 @@
+level -1
+keywords earth elemental
+---
+*******************************************************************************
+       Name: Earth Elemental
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 500
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !EARTH ELEMENTAL!
+Acquisition:
+   - Sorcerer: level 52
+   - Wizard: level 52
+Description:
+   Earth Elemental is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

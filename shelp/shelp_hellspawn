@@ -1,12 +1,18 @@
 level -1
-keywords shelp_hellspawn
+keywords hellspawn
 ---
 *******************************************************************************
-       Name: HellSpawn		
-    Classes: Mage(43)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell allows the caster to invoke demonic powers to
-             strike the target.
+       Name: Hellspawn
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 50
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: HellSpawn
+   Wear-Off: !Hellspawn!
+Acquisition:
+   - Mage: level 43
+Description:
+   Hellspawn is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

@@ -1,0 +1,18 @@
+level -1
+keywords backstab
+---
+*******************************************************************************
+       Name: Backstab
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 1
+ Wait Beats: 18
+ Can Learn: TRUE
+Noun Damage: backstab
+   Wear-Off: !Backstab!
+Acquisition:
+   - Thief: level 10
+Description:
+   Backstab is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

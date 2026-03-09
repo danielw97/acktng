@@ -1,0 +1,19 @@
+level -1
+keywords withering shadow
+---
+*******************************************************************************
+       Name: Withering Shadow
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 150
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: @@NThe @@dWithering Shadow@@N dissipates.
+Acquisition:
+   - Knight: level 17
+   - Swordsman: level 17
+Description:
+   Withering Shadow is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

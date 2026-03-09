@@ -1,0 +1,18 @@
+level -1
+keywords night vision
+---
+*******************************************************************************
+       Name: Night Vision
+       Kind: Spell
+     Target: TAR_CHAR_SELF
+   Position: POS_STANDING
+   Min Mana: 17
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: Your eyes feel weaker.
+Acquisition:
+   - Psionicist: level 19
+Description:
+   Night Vision is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

@@ -1,0 +1,21 @@
+level -1
+keywords room dispel
+---
+*******************************************************************************
+       Name: Room Dispel
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 120
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Sorcerer: level 22
+   - Wizard: level 22
+   - Necromancer: level 34
+   - Egomancer: level 34
+Description:
+   Room Dispel is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

@@ -1,0 +1,23 @@
+level -1
+keywords blood leach
+---
+*******************************************************************************
+       Name: Blood Leach
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 6
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: Your body feels stronger again.
+Acquisition:
+   - Thief: level 3
+   - Cleric: level 4
+   - Warrior: level 4
+   - Psionicist: level 4
+   - Pugilist: level 5
+   - Mage: level 8
+Description:
+   Blood Leach is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

@@ -1,0 +1,18 @@
+level -1
+keywords knee
+---
+*******************************************************************************
+       Name: Knee
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 1
+ Wait Beats: 18
+ Can Learn: TRUE
+Noun Damage: knee
+   Wear-Off: !Knee
+Acquisition:
+   - Warrior: level 8
+Description:
+   Knee is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

@@ -1,0 +1,23 @@
+level -1
+keywords cloak:darkness
+---
+*******************************************************************************
+       Name: Cloak:darkness
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
+   Min Mana: 45
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: The @@dcloak@@N around your body fades.
+Acquisition:
+   - Cleric: level 13
+   - Thief: level 14
+   - Warrior: level 14
+   - Pugilist: level 15
+   - Psionicist: level 16
+   - Mage: level 18
+Description:
+   Cloak:darkness is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

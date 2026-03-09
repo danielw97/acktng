@@ -1,0 +1,18 @@
+level -1
+keywords enhanced critical
+---
+*******************************************************************************
+       Name: Enhanced Critical
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Enhanced Crit!
+Acquisition:
+   - Thief: level 20
+Description:
+   Enhanced Critical is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

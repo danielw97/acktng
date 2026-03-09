@@ -1,12 +1,18 @@
 level -1
-keywords shelp_detection
+keywords detection
 ---
 *******************************************************************************
-       Name: Detection		
-    Classes: Psionicist(22)
-   Duration: N/A
-   Modifies: N/A
-       Type: N/A
-Description: This spell, when invoked with an object the caster wishes to
-             find, provides him/her with the locations of the object.
+       Name: Detection
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 12
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Detection!
+Acquisition:
+   - Psionicist: level 22
+Description:
+   Detection is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -1,12 +1,18 @@
 level -1
-keywords shelp_blindness
+keywords blindness
 ---
 *******************************************************************************
-       Name: Blindness		
-    Classes: Mage(16)
-   Duration: 1 + ( Cast Level / 4 )
-   Modifies: HitRoll
-       Type: Offensive
-Description: This spell causes blindness in the recipient, affecting their
-             ability to strike their foes.
+       Name: Blindness
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: None
+   Wear-Off: You can see again.
+Acquisition:
+   - Mage: level 16
+Description:
+   Blindness is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

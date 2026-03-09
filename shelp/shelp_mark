@@ -1,0 +1,23 @@
+level -1
+keywords mark
+---
+*******************************************************************************
+       Name: Mark
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Cleric: level 5
+   - Thief: level 5
+   - Warrior: level 5
+   - Psionicist: level 5
+   - Pugilist: level 5
+   - Mage: level 10
+Description:
+   Mark is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

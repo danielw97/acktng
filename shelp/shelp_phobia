@@ -1,14 +1,18 @@
 level -1
-keywords shelp_phobia
+keywords phobia
 ---
 *******************************************************************************
-       Name: Phobia		
-    Classes: Psionicist(10)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell enables the caster to produces horrific nightmare
-             images into the victim's mind.  This sudden mental attack may
-             either just cause damage due to the shock, or cause the victim
-             to attempt to flee in wild panic.
+       Name: Phobia
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 32
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: phobia attack
+   Wear-Off: !phobia!
+Acquisition:
+   - Psionicist: level 10
+Description:
+   Phobia is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

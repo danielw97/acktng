@@ -1,0 +1,18 @@
+level -1
+keywords martial arts
+---
+*******************************************************************************
+       Name: Martial Arts
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Martial Arts!
+Acquisition:
+   - Pugilist: level 10
+Description:
+   Martial Arts is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

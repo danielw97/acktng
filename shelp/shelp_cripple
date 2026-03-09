@@ -1,0 +1,19 @@
+level -1
+keywords cripple
+---
+*******************************************************************************
+       Name: Cripple
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Cripple
+   Wear-Off: You are no longer crippled!
+Acquisition:
+   - Assassin: level 89
+   - Warlock: level 92
+Description:
+   Cripple is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

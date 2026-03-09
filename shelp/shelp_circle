@@ -1,0 +1,18 @@
+level -1
+keywords circle
+---
+*******************************************************************************
+       Name: Circle
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 1
+ Wait Beats: 18
+ Can Learn: TRUE
+Noun Damage: circle
+   Wear-Off: !circle!
+Acquisition:
+   - Thief: level 19
+Description:
+   Circle is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

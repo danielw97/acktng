@@ -1,0 +1,18 @@
+level -1
+keywords call lightning
+---
+*******************************************************************************
+       Name: Call Lightning
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: lightning bolt
+   Wear-Off: !Call Lightning!
+Acquisition:
+   - Cleric: level 36
+Description:
+   Call Lightning is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

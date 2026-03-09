@@ -1,13 +1,18 @@
 level -1
-keywords shelp_bless
+keywords bless
 ---
 *******************************************************************************
-       Name: Bless		
-    Classes: Cleric(8)
-   Duration: 6 + ( Cast Level / 6 )
-   Modifies: HitRoll & Saving Spell
-     Damage: N/A
-       Type: Defensive
-Description: This spell allows the caster to raise the morale of the 
-             recipient, giving a bonus to their combat abilities.
+       Name: Bless
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You feel less righteous.
+Acquisition:
+   - Cleric: level 8
+Description:
+   Bless is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

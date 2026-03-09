@@ -1,0 +1,19 @@
+level -1
+keywords parry
+---
+*******************************************************************************
+       Name: Parry
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Parry!
+Acquisition:
+   - Warrior: level 10
+   - Thief: level 52
+Description:
+   Parry is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

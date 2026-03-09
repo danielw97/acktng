@@ -1,0 +1,18 @@
+level -1
+keywords cause serious
+---
+*******************************************************************************
+       Name: Cause Serious
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 17
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: spell
+   Wear-Off: !Cause Serious!
+Acquisition:
+   - Cleric: level 40
+Description:
+   Cause Serious is an offensive spell used to damage an enemy target with direct magic.
+*******************************************************************************

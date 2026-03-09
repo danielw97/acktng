@@ -1,0 +1,18 @@
+level -1
+keywords palmstrike
+---
+*******************************************************************************
+       Name: Palmstrike
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: TRUE
+Noun Damage: Palmstrike
+   Wear-Off: !Palm Strike!
+Acquisition:
+   - Brawler: level 19
+Description:
+   Palmstrike is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

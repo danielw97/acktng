@@ -1,0 +1,18 @@
+level -1
+keywords burning hands
+---
+*******************************************************************************
+       Name: Burning Hands
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: burning hands
+   Wear-Off: !Burning Hands!
+Acquisition:
+   - Mage: level 6
+Description:
+   Burning Hands is an offensive spell that inflicts fire damage on an enemy target.
+*******************************************************************************

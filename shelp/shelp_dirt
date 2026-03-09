@@ -1,0 +1,20 @@
+level -1
+keywords dirt
+---
+*******************************************************************************
+       Name: Dirt
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 1
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: None
+   Wear-Off: !dirt!
+Acquisition:
+   - Warrior: level 35
+   - Thief: level 36
+   - Pugilist: level 47
+Description:
+   Dirt is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

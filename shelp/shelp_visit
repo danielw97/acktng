@@ -1,13 +1,18 @@
 level -1
-keywords shelp_visit
+keywords visit
 ---
 *******************************************************************************
-       Name: Visit		
-    Classes: Psionicist(32)
-   Duration: N/A
-   Modifies: N/A
-       Type: N/A
-Description: This spell allows the caster to attempt to transfer him/herself
-             to the target.  Note that this spell only works for fellow
-             characters, and not NPCs.
+       Name: Visit
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 50
+ Wait Beats: 48
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !visit!
+Acquisition:
+   - Psionicist: level 32
+Description:
+   Visit is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

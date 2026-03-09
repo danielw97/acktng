@@ -1,0 +1,18 @@
+level -1
+keywords see magic
+---
+*******************************************************************************
+       Name: See Magic
+       Kind: Spell
+     Target: TAR_CHAR_SELF
+   Position: POS_STANDING
+   Min Mana: 8
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You no longer see magical auras.
+Acquisition:
+   - Psionicist: level 7
+Description:
+   See Magic is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

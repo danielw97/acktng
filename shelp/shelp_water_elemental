@@ -1,0 +1,19 @@
+level -1
+keywords water elemental
+---
+*******************************************************************************
+       Name: Water Elemental
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 80
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Stalker!
+Acquisition:
+   - Sorcerer: level 6
+   - Wizard: level 6
+Description:
+   Water Elemental is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

@@ -1,0 +1,18 @@
+level -1
+keywords faerie fog
+---
+*******************************************************************************
+       Name: Faerie Fog
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 12
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: faerie fog
+   Wear-Off: !Faerie Fog!
+Acquisition:
+   - Cleric: level 14
+Description:
+   Faerie Fog is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

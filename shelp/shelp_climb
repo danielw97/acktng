@@ -1,0 +1,18 @@
+level -1
+keywords climb
+---
+*******************************************************************************
+       Name: Climb
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Climb!
+Acquisition:
+   - Thief: level 25
+Description:
+   Climb is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

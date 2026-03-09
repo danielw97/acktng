@@ -1,12 +1,18 @@
 level -1
-keywords shelp_summon
+keywords summon
 ---
 *******************************************************************************
-       Name: Summon		
-    Classes: Mage(35)
-   Duration: N/A
-   Modifies: N/A
-       Type: N/A
-Description: This spell allows the caster to attempt to summon a specified
-             character to the current location.  Range is unimportant.
+       Name: Summon
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 50
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Summon!
+Acquisition:
+   - Mage: level 35
+Description:
+   Summon is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

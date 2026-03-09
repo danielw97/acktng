@@ -1,14 +1,19 @@
 level -1
-keywords shelp_curse
+keywords curse
 ---
 *******************************************************************************
-       Name: Curse		
-    Classes: Mage(35), Cleric(26)
-   Duration: 2 * ( Cast Level / 8 )
-   Modifies: HitRoll, Saving Roll
-       Type: Offensive
-Description: This spell casts a curse upon the victim, reducing their chances
-             of the victim striking thier enemies, whilst making it easy for
-             them to be attacked.  Cursed players may not recall to their
-             temple.
+       Name: Curse
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 20
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: curse
+   Wear-Off: The curse wears off.
+Acquisition:
+   - Cleric: level 26
+   - Mage: level 35
+Description:
+   Curse is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

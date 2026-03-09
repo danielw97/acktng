@@ -1,0 +1,18 @@
+level -1
+keywords sense evil
+---
+*******************************************************************************
+       Name: Sense Evil
+       Kind: Spell
+     Target: TAR_CHAR_SELF
+   Position: POS_STANDING
+   Min Mana: 12
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You no longer sense evil.
+Acquisition:
+   - Psionicist: level 10
+Description:
+   Sense Evil is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

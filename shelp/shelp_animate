@@ -1,14 +1,19 @@
 level -1
-keywords shelp_animate
+keywords animate
 ---
 *******************************************************************************
-       Name: Animate		
-    Classes: Cleric(46)
-   Duration: Perment
-   Modifies: N/A
-       Type: N/A
-Description: This spell allows the caster to attempt to animate a corpse.
-             The zombie created will have no knowledge of it's past life, 
-             or similar characteristics, but will retain any equipment or
-             other items it was carrying.
+       Name: Animate
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 50
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Animate!
+Acquisition:
+   - Necromancer: level 70
+   - Egomancer: level 70
+Description:
+   Animate is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

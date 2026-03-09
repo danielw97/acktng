@@ -1,0 +1,22 @@
+level -1
+keywords equip wand
+---
+*******************************************************************************
+       Name: Equip Wand
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Equip Wand!
+Acquisition:
+   - Sorcerer: level 1
+   - Necromancer: level 1
+   - Wizard: level 1
+   - Priest: level 1
+   - Egomancer: level 1
+Description:
+   Equip Wand is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

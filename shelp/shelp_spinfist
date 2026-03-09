@@ -1,0 +1,18 @@
+level -1
+keywords spinfist
+---
+*******************************************************************************
+       Name: Spinfist
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Spinfist
+   Wear-Off: !!SPINFIST!!
+Acquisition:
+   - Brawler: level 66
+Description:
+   Spinfist is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

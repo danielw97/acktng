@@ -1,0 +1,19 @@
+level -1
+keywords iron golem
+---
+*******************************************************************************
+       Name: Iron Golem
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 800
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !IRON GOLEM!
+Acquisition:
+   - Sorcerer: level 63
+   - Wizard: level 63
+Description:
+   Iron Golem is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

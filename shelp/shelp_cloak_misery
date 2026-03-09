@@ -1,0 +1,21 @@
+level -1
+keywords cloak:misery
+---
+*******************************************************************************
+       Name: Cloak:misery
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
+   Min Mana: 550
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: @@NThe @@Rcloak@@N around your body fades.
+Acquisition:
+   - Necromancer: level 73
+   - Egomancer: level 73
+   - Assassin: level 80
+   - Warlock: level 80
+Description:
+   Cloak:misery is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

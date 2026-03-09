@@ -1,0 +1,18 @@
+level -1
+keywords pick lock
+---
+*******************************************************************************
+       Name: Pick Lock
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 0
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Pick!
+Acquisition:
+   - Thief: level 25
+Description:
+   Pick Lock is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

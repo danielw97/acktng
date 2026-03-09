@@ -1,0 +1,23 @@
+level -1
+keywords bloodsense
+---
+*******************************************************************************
+       Name: Bloodsense
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 1
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Cleric: level 3
+   - Thief: level 3
+   - Warrior: level 3
+   - Psionicist: level 3
+   - Pugilist: level 3
+   - Mage: level 10
+Description:
+   Bloodsense is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

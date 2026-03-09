@@ -1,0 +1,19 @@
+level -1
+keywords dispel magic
+---
+*******************************************************************************
+       Name: Dispel Magic
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: None
+   Wear-Off: !Dispel Magic!
+Acquisition:
+   - Mage: level 68
+   - Cleric: level 89
+Description:
+   Dispel Magic is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

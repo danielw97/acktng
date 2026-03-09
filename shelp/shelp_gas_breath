@@ -1,0 +1,18 @@
+level -1
+keywords gas breath
+---
+*******************************************************************************
+       Name: Gas Breath
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 4
+ Can Learn: FALSE
+Noun Damage: blast of gas
+   Wear-Off: !Gas Breath!
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Gas Breath is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

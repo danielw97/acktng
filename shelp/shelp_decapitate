@@ -1,0 +1,19 @@
+level -1
+keywords decapitate
+---
+*******************************************************************************
+       Name: Decapitate
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !decapitate!
+Acquisition:
+   - Cleric: level 45
+   - Warrior: level 60
+Description:
+   Decapitate is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

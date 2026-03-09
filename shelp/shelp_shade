@@ -1,0 +1,23 @@
+level -1
+keywords shade
+---
+*******************************************************************************
+       Name: Shade
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: The room gets lighter.
+Acquisition:
+   - Thief: level 6
+   - Cleric: level 7
+   - Psionicist: level 7
+   - Warrior: level 8
+   - Mage: level 12
+   - Pugilist: level 13
+Description:
+   Shade is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

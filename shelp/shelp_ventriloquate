@@ -1,13 +1,18 @@
 level -1
-keywords shelp_ventriloquate
+keywords ventriloquate
 ---
 *******************************************************************************
-       Name: Ventriloquate		
-    Classes: Mage(3)
-   Duration: N/A
-   Modifies: N/A
-       Type: N/A
-Description: This spell allows the caster to throw his/her voice onto a
-             being in the same room.  To use the spell correctly, the caster
-             must specify a target, and the message to be given.
+       Name: Ventriloquate
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Ventriloquate!
+Acquisition:
+   - Mage: level 3
+Description:
+   Ventriloquate is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

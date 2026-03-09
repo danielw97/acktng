@@ -1,0 +1,18 @@
+level -1
+keywords faerie fire
+---
+*******************************************************************************
+       Name: Faerie Fire
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: faerie fire
+   Wear-Off: The pink aura around you fades away.
+Acquisition:
+   - Mage: level 3
+Description:
+   Faerie Fire is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

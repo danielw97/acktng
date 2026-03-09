@@ -1,0 +1,18 @@
+level -1
+keywords punch
+---
+*******************************************************************************
+       Name: Punch
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 1
+ Wait Beats: 18
+ Can Learn: TRUE
+Noun Damage: punch
+   Wear-Off: !Punch!
+Acquisition:
+   - Warrior: level 5
+Description:
+   Punch is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

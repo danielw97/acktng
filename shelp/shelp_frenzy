@@ -1,0 +1,20 @@
+level -1
+keywords frenzy
+---
+*******************************************************************************
+       Name: Frenzy
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: frenzy
+   Wear-Off: !FRENZY!
+Acquisition:
+   - Knight: level 27
+   - Swordsman: level 28
+   - Priest: level 41
+Description:
+   Frenzy is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

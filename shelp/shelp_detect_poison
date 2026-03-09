@@ -1,0 +1,18 @@
+level -1
+keywords detect poison
+---
+*******************************************************************************
+       Name: Detect Poison
+       Kind: Spell
+     Target: TAR_OBJ_INV
+   Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Detect Poison!
+Acquisition:
+   - Cleric: level 10
+Description:
+   Detect Poison is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

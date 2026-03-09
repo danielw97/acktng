@@ -1,0 +1,18 @@
+level -1
+keywords warcry
+---
+*******************************************************************************
+       Name: Warcry
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: warcry
+   Wear-Off: !Warcry!
+Acquisition:
+   - Warrior: level 10
+Description:
+   Warcry is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

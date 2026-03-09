@@ -1,12 +1,18 @@
 level -1
-keywords shelp_ego_whip
+keywords ego whip
 ---
 *******************************************************************************
-       Name: Ego Whip 		
-    Classes: Psionicist(25)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell allows the caster to mentally assualt the victim's
-             ego, thus causing damage.
+       Name: Ego Whip
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 35
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: ego whip
+   Wear-Off: !Ego Whip!
+Acquisition:
+   - Psionicist: level 25
+Description:
+   Ego Whip is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

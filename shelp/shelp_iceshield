@@ -1,0 +1,19 @@
+level -1
+keywords iceshield
+---
+*******************************************************************************
+       Name: Iceshield
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 350
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Sorcerer: level 65
+   - Wizard: level 65
+Description:
+   Iceshield is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

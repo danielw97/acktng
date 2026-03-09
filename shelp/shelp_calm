@@ -1,13 +1,18 @@
 level -1
-keywords shelp_calm
+keywords calm
 ---
 *******************************************************************************
-       Name: Calm		
-    Classes: Psionicist(52)
-   Duration: Permanent
-   Modifies: N/A
-       Type: Defensive
-Description: This spell allows the caster to produce a calm feeling in all
-             enemies present, causing them to stop fighting.  Of course,
-             this won't stop them attacking again should they wish!
+       Name: Calm
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 30
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Calm!
+Acquisition:
+   - Psionicist: level 52
+Description:
+   Calm is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

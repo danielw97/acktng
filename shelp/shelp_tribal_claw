@@ -1,0 +1,22 @@
+level -1
+keywords tribal claw
+---
+*******************************************************************************
+       Name: Tribal Claw
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
+   Min Mana: 50
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Cleric: level 15
+   - Thief: level 15
+   - Warrior: level 15
+   - Psionicist: level 15
+   - Pugilist: level 15
+Description:
+   Tribal Claw is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

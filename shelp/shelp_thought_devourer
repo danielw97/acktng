@@ -1,0 +1,18 @@
+level -1
+keywords thought devourer
+---
+*******************************************************************************
+       Name: Thought Devourer
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 1200
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Egomancer: level 65
+Description:
+   Thought Devourer is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

@@ -1,0 +1,18 @@
+level -1
+keywords cloak:elements
+---
+*******************************************************************************
+       Name: Cloak:elements
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
+   Min Mana: 750
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: @@NThe @@lcloak@@N around your body fades.
+Acquisition:
+   - Wizard: level 48
+Description:
+   Cloak:elements is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

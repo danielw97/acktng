@@ -1,0 +1,23 @@
+level -1
+keywords bloodsign
+---
+*******************************************************************************
+       Name: Bloodsign
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Psionicist: level 7
+   - Cleric: level 8
+   - Pugilist: level 8
+   - Warrior: level 9
+   - Thief: level 10
+   - Mage: level 12
+Description:
+   Bloodsign is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

@@ -1,0 +1,19 @@
+level -1
+keywords morale
+---
+*******************************************************************************
+       Name: Morale
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 75
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Morale
+   Wear-Off: !Morale!
+Acquisition:
+   - Knight: level 10
+   - Paladin: level 21
+Description:
+   Morale is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

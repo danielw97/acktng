@@ -1,0 +1,18 @@
+level -1
+keywords chakra
+---
+*******************************************************************************
+       Name: Chakra
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Chakra
+   Wear-Off: None
+Acquisition:
+   - Monk: level 55
+Description:
+   Chakra is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

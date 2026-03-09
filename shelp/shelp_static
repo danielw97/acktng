@@ -1,13 +1,18 @@
 level -1
-keywords shelp_static
+keywords static
 ---
 *******************************************************************************
-       Name: Static		
-    Classes: Psionicist(20)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spells allows the caster to transfer kinetic (movement)
-             energy to static electricity, which is then directed towards
-             the victim, to cause damage.
+       Name: Static
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 40
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: discharge
+   Wear-Off: !static!
+Acquisition:
+   - Psionicist: level 20
+Description:
+   Static is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

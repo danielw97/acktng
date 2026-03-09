@@ -1,0 +1,18 @@
+level -1
+keywords enhanced sword damage
+---
+*******************************************************************************
+       Name: Enhanced Sword Damage
+       Kind: Skill
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Enhanced Sword!
+Acquisition:
+   - Swordsman: level 20
+Description:
+   Enhanced Sword Damage is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+*******************************************************************************

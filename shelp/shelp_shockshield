@@ -1,0 +1,19 @@
+level -1
+keywords shockshield
+---
+*******************************************************************************
+       Name: Shockshield
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 400
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: None
+Acquisition:
+   - Sorcerer: level 55
+   - Wizard: level 55
+Description:
+   Shockshield is a protective/support spell that strengthens, restores, or safeguards the target.
+*******************************************************************************

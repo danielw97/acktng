@@ -1,0 +1,18 @@
+level -1
+keywords flurry
+---
+*******************************************************************************
+       Name: Flurry
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Flurry
+   Wear-Off: None
+Acquisition:
+   - Pugilist: level 45
+Description:
+   Flurry is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

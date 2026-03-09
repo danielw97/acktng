@@ -1,0 +1,18 @@
+level -1
+keywords fleche
+---
+*******************************************************************************
+       Name: Fleche
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Fleche
+   Wear-Off: !Fleche!
+Acquisition:
+   - Swordsman: level 45
+Description:
+   Fleche is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

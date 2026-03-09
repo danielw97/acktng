@@ -1,0 +1,18 @@
+level -1
+keywords emotion control
+---
+*******************************************************************************
+       Name: Emotion Control
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: emotion control
+   Wear-Off: !EMOTION CONTROL!
+Acquisition:
+   - Psionicist: level 75
+Description:
+   Emotion Control is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+*******************************************************************************

@@ -1,0 +1,19 @@
+level -1
+keywords acid blast
+---
+*******************************************************************************
+       Name: Acid Blast
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 20
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: acid blast
+   Wear-Off: !Acid Blast!
+Acquisition:
+   - Mage: level 50
+Description:
+   Acid Blast is an offensive spell that deals air elemental damage to an enemy
+   target.
+*******************************************************************************

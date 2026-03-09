@@ -1,12 +1,18 @@
 level -1
-keywords shelp_identify
+keywords identify
 ---
 *******************************************************************************
-       Name: Identify		
-    Classes: Mage(9)
-   Duration: N/A
-   Modifies: N/A
-       Type: N/A
-Description: This spell, when cast upon an object reveals the the caster it's
-             characteristics - object type, and other information.
+       Name: Identify
+       Kind: Spell
+     Target: TAR_OBJ_INV
+   Position: POS_STANDING
+   Min Mana: 12
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Identify!
+Acquisition:
+   - Mage: level 9
+Description:
+   Identify is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

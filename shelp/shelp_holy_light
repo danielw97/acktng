@@ -1,0 +1,20 @@
+level -1
+keywords holy light
+---
+*******************************************************************************
+       Name: Holy Light
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_STANDING
+   Min Mana: 75
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: Holy Light
+   Wear-Off: !Holy Light!
+Acquisition:
+   - Priest: level 14
+   - Paladin: level 43
+   - Wizard: level 82
+Description:
+   Holy Light is a utility spell used for control, movement, detection, or other tactical magic effects.
+*******************************************************************************

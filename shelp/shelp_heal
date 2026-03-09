@@ -1,12 +1,18 @@
 level -1
-keywords shelp_heal
+keywords heal
 ---
 *******************************************************************************
-       Name: Heal		
-    Classes: Cleric(75)
-   Duration: Permanent
-   Modifies: N/A
-       Type: Defensive
-Description: This spells results in the target's Hit Points being virtually
-             restored, as well as healing any diseases or posions.
+       Name: Heal
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 50
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: None
+   Wear-Off: !Heal!
+Acquisition:
+   - Cleric: level 5
+Description:
+   Heal is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

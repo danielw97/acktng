@@ -1,11 +1,18 @@
 level -1
-keywords shelp_gate
+keywords gate
 ---
 *******************************************************************************
-       Name: Gate		
-    Classes: None at Present!
-   Duration: Permanent
-   Modifies: N/A
-       Type: N/A
-Description: To Be Decided.
+       Name: Gate
+       Kind: Spell
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 50
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Gate!
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Gate is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

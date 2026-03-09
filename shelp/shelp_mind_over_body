@@ -1,0 +1,18 @@
+level -1
+keywords mind over body
+---
+*******************************************************************************
+       Name: Mind Over Body
+       Kind: Skill
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Mind Over Body
+   Wear-Off: You lose your focus on your mind over your body
+Acquisition:
+   - Pugilist: level 21
+Description:
+   Mind Over Body is a combat skill that attacks an enemy and deals psychic-type physical or energy damage.
+*******************************************************************************

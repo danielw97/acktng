@@ -1,13 +1,18 @@
 level -1
-keywords shelp_mindflame
+keywords mindflame
 ---
 *******************************************************************************
-       Name: Mindflame		
-    Classes: Psionicist(35)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell causes the caster to emit a blast of searing mental
-             energy, which cause all those present to suffer the effects of
-             having their very minds burnt.
+       Name: Mindflame
+       Kind: Spell
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
+   Min Mana: 40
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Mind Flame
+   Wear-Off: !mindflame!
+Acquisition:
+   - Psionicist: level 35
+Description:
+   Mindflame is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

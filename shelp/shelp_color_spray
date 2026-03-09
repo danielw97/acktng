@@ -1,0 +1,18 @@
+level -1
+keywords color spray
+---
+*******************************************************************************
+       Name: Color Spray
+       Kind: Spell
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: color spray
+   Wear-Off: !color Spray!
+Acquisition:
+   - Mage: level 7
+Description:
+   Color Spray is an offensive spell used to damage an enemy target with direct magic.
+*******************************************************************************
