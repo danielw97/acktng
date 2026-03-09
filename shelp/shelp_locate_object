@@ -15,5 +15,5 @@ Acquisition:
    - Mage: level 16
    - Cleric: level 30
 Description:
-   Locate Object is a utility spell used for control, movement, detection, or other tactical magic effects.
+   Locate Object Searches for a named object and reveals where it can be found if it is within the spell's reach.
 *******************************************************************************

@@ -17,5 +17,5 @@ Acquisition:
    - Necromancer: level 34
    - Egomancer: level 34
 Description:
-   Room Dispel is a utility spell used for control, movement, detection, or other tactical magic effects.
+   Room Dispel Disrupts active room-wide magical effects in the current room, such as persistent field spells.
 *******************************************************************************
