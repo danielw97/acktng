@@ -12,8 +12,8 @@ keywords holy wrath
 Noun Damage: Holy Wrath
    Wear-Off: !Holy Wrath!
 Acquisition:
-   - Paladin: level 40
-   - Cleric: level 80
+   - Priest: level 40
+   - Paladin: level 80
 Description:
    Holy Wrath is an offensive spell that inflicts holy damage on an enemy target.
 *******************************************************************************

@@ -12,8 +12,8 @@ keywords iceshield
 Noun Damage: None
    Wear-Off: None
 Acquisition:
-   - Mage: level 65
    - Sorcerer: level 65
+   - Wizard: level 65
 Description:
    Iceshield is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

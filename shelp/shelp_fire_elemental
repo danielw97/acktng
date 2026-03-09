@@ -12,8 +12,8 @@ keywords fire elemental
 Noun Damage: None
    Wear-Off: !FIRE ELEMENTAL!
 Acquisition:
-   - Mage: level 11
    - Sorcerer: level 11
+   - Wizard: level 11
 Description:
    Fire Elemental is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

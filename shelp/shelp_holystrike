@@ -12,8 +12,8 @@ keywords holystrike
 Noun Damage: Holystrike
    Wear-Off: !Holystrike!
 Acquisition:
-   - Warrior: level 29
-   - Cleric: level 44
+   - Knight: level 29
+   - Paladin: level 44
 Description:
    Holystrike is a combat skill that attacks an enemy and deals holy-type physical or energy damage.
 *******************************************************************************

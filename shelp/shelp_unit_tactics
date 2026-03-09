@@ -12,8 +12,8 @@ keywords unit tactics
 Noun Damage: Unit Tactics
    Wear-Off: !Unit Tactics!
 Acquisition:
-   - Warrior: level 16
    - Knight: level 16
+   - Swordsman: level 16
 Description:
    Unit Tactics is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

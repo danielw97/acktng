@@ -12,8 +12,8 @@ keywords fire blast
 Noun Damage: Fire Blast
    Wear-Off: !Fire Blast!
 Acquisition:
-   - Mage: level 34
-   - Psionicist: level 55
+   - Sorcerer: level 34
+   - Necromancer: level 55
 Description:
    Fire Blast is an offensive spell that inflicts fire damage on an enemy target.
 *******************************************************************************

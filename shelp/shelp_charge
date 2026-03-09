@@ -12,10 +12,10 @@ keywords charge
 Noun Damage: Charge
    Wear-Off: !Charge
 Acquisition:
-   - Warrior: level 30
    - Knight: level 30
-   - Cleric: level 89
+   - Swordsman: level 30
    - Paladin: level 89
+   - Priest: level 89
 Description:
    Charge is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

@@ -12,7 +12,7 @@ keywords riposte
 Noun Damage: Riposte
    Wear-Off: You are no longer in a position to riposte!
 Acquisition:
-   - Knight: level 30
+   - Swordsman: level 30
 Description:
    Riposte is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

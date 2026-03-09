@@ -12,8 +12,8 @@ keywords soul net
 Noun Damage: None
    Wear-Off: @@NThe @@dSoul Net@@N dissipates.
 Acquisition:
-   - Psionicist: level 58
    - Necromancer: level 58
+   - Egomancer: level 58
 Description:
    Soul Net is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -12,8 +12,8 @@ keywords dual fist
 Noun Damage: None
    Wear-Off: !Dual Fist!
 Acquisition:
-   - Pugilist: level 35
    - Monk: level 35
+   - Brawler: level 35
 Description:
    Dual Fist is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

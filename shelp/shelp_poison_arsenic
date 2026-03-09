@@ -12,8 +12,8 @@ keywords poison:arsenic
 Noun Damage: Poison Arsenic
    Wear-Off: @@N$nFeels much better!
 Acquisition:
-   - Assassin: level 28
-   - Thief: level 66
+   - Warlock: level 28
+   - Assassin: level 66
 Description:
    Poison:arsenic is a combat skill that attacks an enemy and deals poison-type physical or energy damage.
 *******************************************************************************

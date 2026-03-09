@@ -12,8 +12,8 @@ keywords lava burst
 Noun Damage: Lava Burst
    Wear-Off: !Lava Burst!
 Acquisition:
-   - Mage: level 40
    - Sorcerer: level 40
+   - Wizard: level 40
 Description:
    Lava Burst is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

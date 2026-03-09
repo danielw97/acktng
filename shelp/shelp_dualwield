@@ -12,8 +12,8 @@ keywords dualwield
 Noun Damage: None
    Wear-Off: !DualWield!
 Acquisition:
-   - Thief: level 5
    - Assassin: level 5
+   - Warlock: level 5
 Description:
    Dualwield is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

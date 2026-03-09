@@ -12,8 +12,8 @@ keywords leadership
 Noun Damage: Leadership
    Wear-Off: !Leadership!
 Acquisition:
-   - Warrior: level 12
-   - Cleric: level 24
+   - Knight: level 12
+   - Paladin: level 24
 Description:
    Leadership is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

@@ -12,14 +12,14 @@ keywords scout
 Noun Damage: None
    Wear-Off: None
 Acquisition:
-   - Thief: level 26
    - Assassin: level 26
-   - Warrior: level 30
+   - Warlock: level 26
    - Knight: level 30
-   - Pugilist: level 43
+   - Swordsman: level 30
    - Monk: level 43
-   - Cleric: level 45
+   - Brawler: level 43
    - Paladin: level 45
+   - Priest: level 45
 Description:
    Scout is a tactical skill focused on stealth, positioning, or information advantage.
 *******************************************************************************

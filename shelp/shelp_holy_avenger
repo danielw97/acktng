@@ -12,8 +12,8 @@ keywords holy avenger
 Noun Damage: None
    Wear-Off: !HOLY AVENGER!
 Acquisition:
-   - Cleric: level 76
    - Paladin: level 76
+   - Priest: level 76
 Description:
    Holy Avenger is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

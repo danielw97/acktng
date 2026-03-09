@@ -12,8 +12,8 @@ keywords withering shadow
 Noun Damage: None
    Wear-Off: @@NThe @@dWithering Shadow@@N dissipates.
 Acquisition:
-   - Warrior: level 17
    - Knight: level 17
+   - Swordsman: level 17
 Description:
    Withering Shadow is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -12,10 +12,10 @@ keywords room dispel
 Noun Damage: None
    Wear-Off: None
 Acquisition:
-   - Mage: level 22
    - Sorcerer: level 22
-   - Psionicist: level 34
+   - Wizard: level 22
    - Necromancer: level 34
+   - Egomancer: level 34
 Description:
    Room Dispel is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

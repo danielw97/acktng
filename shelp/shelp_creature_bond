@@ -12,9 +12,9 @@ keywords creature bond
 Noun Damage: None
    Wear-Off: None
 Acquisition:
-   - Psionicist: level 55
-   - Sorcerer: level 60
-   - Mage: level 77
+   - Necromancer: level 55
+   - Wizard: level 60
+   - Sorcerer: level 77
 Description:
    Creature Bond is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

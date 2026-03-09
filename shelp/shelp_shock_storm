@@ -12,9 +12,9 @@ keywords shock storm
 Noun Damage: Shock Storm
    Wear-Off: !Shock Storm!
 Acquisition:
-   - Mage: level 42
-   - Psionicist: level 68
+   - Sorcerer: level 42
    - Necromancer: level 68
+   - Egomancer: level 68
 Description:
    Shock Storm is an offensive spell that inflicts lightning damage on an enemy target.
 *******************************************************************************

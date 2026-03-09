@@ -12,12 +12,12 @@ keywords adrenaline
 Noun Damage: None
    Wear-Off: !ADRENALINE!
 Acquisition:
-   - Paladin: level 42
    - Knight: level 21
-   - Monk: level 28
-   - Priest: level 42
    - Swordsman: level 21
+   - Monk: level 28
    - Brawler: level 28
+   - Paladin: level 42
+   - Priest: level 42
 Description:
    Adrenaline grants bonus damroll after the character takes damage above a
    threshold, creating a reactive damage spike effect in sustained combat.

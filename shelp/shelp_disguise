@@ -12,8 +12,8 @@ keywords disguise
 Noun Damage: None
    Wear-Off: !Disguise!
 Acquisition:
-   - Thief: level 25
    - Assassin: level 25
+   - Warlock: level 25
 Description:
    Disguise is a tactical skill focused on stealth, positioning, or information advantage.
 *******************************************************************************

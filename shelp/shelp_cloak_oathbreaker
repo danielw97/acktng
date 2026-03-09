@@ -12,7 +12,7 @@ keywords cloak:oathbreaker
 Noun Damage: None
    Wear-Off: @@NThe @@dcloak@@N around your body fades.
 Acquisition:
-   - Assassin: level 48
+   - Warlock: level 48
 Description:
    Cloak:oathbreaker is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

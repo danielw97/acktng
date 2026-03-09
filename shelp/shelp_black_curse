@@ -12,8 +12,8 @@ keywords black curse
 Noun Damage: Black Curse
    Wear-Off: !Black Curse!
 Acquisition:
-   - Psionicist: level 65
    - Necromancer: level 65
+   - Egomancer: level 65
 Description:
    Black Curse is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

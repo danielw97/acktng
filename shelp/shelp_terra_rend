@@ -12,7 +12,7 @@ keywords terra rend
 Noun Damage: terra rend
    Wear-Off: !terra rend!
 Acquisition:
-   - Sorcerer: level 40
+   - Wizard: level 40
 Description:
    Terra Rend is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

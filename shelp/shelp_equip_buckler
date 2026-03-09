@@ -12,9 +12,9 @@ keywords equip buckler
 Noun Damage: None
    Wear-Off: !Equip Buckler!
 Acquisition:
-   - Cleric: level 1
-   - Warrior: level 1
+   - Paladin: level 1
    - Knight: level 1
+   - Swordsman: level 1
 Description:
    Equip Buckler is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

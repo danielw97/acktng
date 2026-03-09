@@ -12,9 +12,9 @@ keywords two handed
 Noun Damage: None
    Wear-Off: !Two Handed!
 Acquisition:
-   - Warrior: level 6
    - Knight: level 6
-   - Cleric: level 8
+   - Swordsman: level 6
+   - Paladin: level 8
 Description:
    Two Handed is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

@@ -12,9 +12,9 @@ keywords rune:poison
 Noun Damage: None
    Wear-Off: The rune dissipates.
 Acquisition:
-   - Assassin: level 8
-   - Thief: level 38
-   - Psionicist: level 40
+   - Warlock: level 8
+   - Assassin: level 38
+   - Necromancer: level 40
 Description:
    Rune:poison is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

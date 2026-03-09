@@ -12,8 +12,8 @@ keywords healing light
 Noun Damage: None
    Wear-Off: @@NThe @@mHealing Light@@N dissipates.
 Acquisition:
-   - Paladin: level 11
-   - Cleric: level 42
+   - Priest: level 11
+   - Paladin: level 42
 Description:
    Healing Light is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

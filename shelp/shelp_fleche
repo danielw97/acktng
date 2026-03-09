@@ -12,7 +12,7 @@ keywords fleche
 Noun Damage: Fleche
    Wear-Off: !Fleche!
 Acquisition:
-   - Knight: level 45
+   - Swordsman: level 45
 Description:
    Fleche is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

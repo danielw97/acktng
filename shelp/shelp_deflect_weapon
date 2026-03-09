@@ -12,8 +12,8 @@ keywords deflect weapon
 Noun Damage: None
    Wear-Off: Your mind shield melts away.
 Acquisition:
-   - Psionicist: level 22
    - Necromancer: level 22
+   - Egomancer: level 22
 Description:
    Deflect Weapon is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

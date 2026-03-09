@@ -12,10 +12,10 @@ keywords heat armor
 Noun Damage: Heat Armor
    Wear-Off: !Heat Armor!
 Acquisition:
-   - Mage: level 57
    - Sorcerer: level 57
-   - Psionicist: level 78
+   - Wizard: level 57
    - Necromancer: level 78
+   - Egomancer: level 78
 Description:
    Heat Armor is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

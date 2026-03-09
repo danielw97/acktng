@@ -12,10 +12,10 @@ keywords mana drain
 Noun Damage: None
    Wear-Off: @@NThe @@dMana Drain@@N dissipates.
 Acquisition:
-   - Mage: level 11
    - Sorcerer: level 11
-   - Psionicist: level 15
+   - Wizard: level 11
    - Necromancer: level 15
+   - Egomancer: level 15
 Description:
    Mana Drain is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

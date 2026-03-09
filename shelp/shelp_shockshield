@@ -12,8 +12,8 @@ keywords shockshield
 Noun Damage: None
    Wear-Off: None
 Acquisition:
-   - Mage: level 55
    - Sorcerer: level 55
+   - Wizard: level 55
 Description:
    Shockshield is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

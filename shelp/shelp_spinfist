@@ -12,7 +12,7 @@ keywords spinfist
 Noun Damage: Spinfist
    Wear-Off: !!SPINFIST!!
 Acquisition:
-   - Monk: level 66
+   - Brawler: level 66
 Description:
    Spinfist is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

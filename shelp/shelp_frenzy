@@ -12,9 +12,9 @@ keywords frenzy
 Noun Damage: frenzy
    Wear-Off: !FRENZY!
 Acquisition:
-   - Warrior: level 27
-   - Knight: level 28
-   - Paladin: level 41
+   - Knight: level 27
+   - Swordsman: level 28
+   - Priest: level 41
 Description:
    Frenzy is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

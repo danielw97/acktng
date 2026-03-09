@@ -12,8 +12,8 @@ keywords water elemental
 Noun Damage: None
    Wear-Off: !Stalker!
 Acquisition:
-   - Mage: level 6
    - Sorcerer: level 6
+   - Wizard: level 6
 Description:
    Water Elemental is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

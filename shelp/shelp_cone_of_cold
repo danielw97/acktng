@@ -12,7 +12,7 @@ keywords cone of cold
 Noun Damage: Cone of Cold
    Wear-Off: !Cone of Cold!
 Acquisition:
-   - Mage: level 56
+   - Sorcerer: level 56
 Description:
    Cone Of Cold is an offensive spell that inflicts cold damage on an enemy target.
 *******************************************************************************

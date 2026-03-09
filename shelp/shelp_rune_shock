@@ -12,10 +12,10 @@ keywords rune:shock
 Noun Damage: None
    Wear-Off: The rune dissipates.
 Acquisition:
-   - Psionicist: level 15
    - Necromancer: level 15
-   - Mage: level 56
+   - Egomancer: level 15
    - Sorcerer: level 56
+   - Wizard: level 56
 Description:
    Rune:shock is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

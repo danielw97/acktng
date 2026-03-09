@@ -12,7 +12,7 @@ keywords cloak:elements
 Noun Damage: None
    Wear-Off: @@NThe @@lcloak@@N around your body fades.
 Acquisition:
-   - Sorcerer: level 48
+   - Wizard: level 48
 Description:
    Cloak:elements is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

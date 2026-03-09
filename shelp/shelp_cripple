@@ -12,8 +12,8 @@ keywords cripple
 Noun Damage: Cripple
    Wear-Off: You are no longer crippled!
 Acquisition:
-   - Thief: level 89
-   - Assassin: level 92
+   - Assassin: level 89
+   - Warlock: level 92
 Description:
    Cripple is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

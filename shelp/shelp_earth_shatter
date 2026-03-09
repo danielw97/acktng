@@ -12,7 +12,7 @@ keywords earth shatter
 Noun Damage: Earth Shatter
    Wear-Off: !Earth Shatter!
 Acquisition:
-   - Mage: level 60
+   - Sorcerer: level 60
 Description:
    Earth Shatter is an offensive spell that inflicts earth damage on an enemy target.
 *******************************************************************************

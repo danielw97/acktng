@@ -12,7 +12,7 @@ keywords arc lightning
 Noun Damage: arc lightning
    Wear-Off: !arc lightning!
 Acquisition:
-   - Sorcerer: level 30
+   - Wizard: level 30
 Description:
-   Arc Lightning is an offensive spell that inflicts lightning damage on an enemy target.
+   Arc Lightning is an offensive spell that deals air elemental damage to an enemy target.
 *******************************************************************************

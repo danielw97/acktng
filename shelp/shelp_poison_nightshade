@@ -12,7 +12,7 @@ keywords poison:nightshade
 Noun Damage: Poison Nightshade
    Wear-Off: @@N$nFeels much better!
 Acquisition:
-   - Thief: level 2
+   - Nightblade: level 2
 Description:
    Poison:nightshade is a combat skill that attacks an enemy and deals poison-type physical or energy damage.
 *******************************************************************************

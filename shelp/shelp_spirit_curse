@@ -12,8 +12,8 @@ keywords spirit curse
 Noun Damage: Spirit Curse
    Wear-Off: !Spirit Curse!
 Acquisition:
-   - Psionicist: level 77
    - Necromancer: level 77
+   - Egomancer: level 77
 Description:
    Spirit Curse is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

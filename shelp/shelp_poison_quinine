@@ -12,8 +12,8 @@ keywords poison:quinine
 Noun Damage: Poison Quinine
    Wear-Off: @@N$n feels much better!
 Acquisition:
-   - Assassin: level 21
-   - Thief: level 56
+   - Warlock: level 21
+   - Assassin: level 56
 Description:
    Poison:quinine is a combat skill that attacks an enemy and deals poison-type physical or energy damage.
 *******************************************************************************

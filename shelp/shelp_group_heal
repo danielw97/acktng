@@ -12,8 +12,8 @@ keywords group heal
 Noun Damage: None
    Wear-Off: !Group Heal!
 Acquisition:
-   - Cleric: level 5
-   - Paladin: level 25
+   - Paladin: level 5
+   - Priest: level 25
 Description:
    Group Heal is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

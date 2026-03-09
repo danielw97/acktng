@@ -12,8 +12,8 @@ keywords aurabolt
 Noun Damage: Aurabolt
    Wear-Off: !!Aurabolt!!
 Acquisition:
-   - Pugilist: level 34
-   - Monk: level 41
+   - Monk: level 34
+   - Brawler: level 41
 Description:
-   Aurabolt is a combat skill used to attack or pressure an enemy in melee or tactical combat.
+   Aurabolt is a combo skill that deals direct damage to an enemy target.
 *******************************************************************************

@@ -12,8 +12,8 @@ keywords bare hand
 Noun Damage: None
    Wear-Off: !Enhanced Sword!
 Acquisition:
-   - Pugilist: level 6
    - Monk: level 6
+   - Brawler: level 6
 Description:
    Bare Hand is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

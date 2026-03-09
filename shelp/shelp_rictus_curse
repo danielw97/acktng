@@ -12,8 +12,8 @@ keywords rictus curse
 Noun Damage: Rictus Curse
    Wear-Off: !Rictus Curse!
 Acquisition:
-   - Psionicist: level 100
    - Necromancer: level 100
+   - Egomancer: level 100
 Description:
    Rictus Curse is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

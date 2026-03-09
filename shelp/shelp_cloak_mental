@@ -12,7 +12,7 @@ keywords cloak:mental
 Noun Damage: None
    Wear-Off: @@NThe @@mcloak@@N around your body fades.
 Acquisition:
-   - Pugilist: level 48
+   - Monk: level 48
 Description:
    Cloak:mental is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

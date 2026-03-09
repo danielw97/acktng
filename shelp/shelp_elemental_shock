@@ -12,7 +12,7 @@ keywords elemental shock
 Noun Damage: elemental shock
    Wear-Off: !elemental shock!
 Acquisition:
-   - Mage: level 5
+   - Grand Magi: level 5
 Description:
    Elemental Shock is an offensive spell that inflicts lightning damage on an enemy target.
 *******************************************************************************

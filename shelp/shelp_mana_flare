@@ -12,8 +12,8 @@ keywords mana flare
 Noun Damage: None
    Wear-Off: @@NThe @@eMana Flare@@N dissipates.
 Acquisition:
-   - Mage: level 18
    - Sorcerer: level 18
+   - Wizard: level 18
 Description:
    Mana Flare is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -12,8 +12,8 @@ keywords refuge
 Noun Damage: None
    Wear-Off: The rainbow aura around your body fades.
 Acquisition:
-   - Cleric: level 32
    - Paladin: level 32
+   - Priest: level 32
 Description:
    Refuge is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

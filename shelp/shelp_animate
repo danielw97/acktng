@@ -12,8 +12,8 @@ keywords animate
 Noun Damage: None
    Wear-Off: !Animate!
 Acquisition:
-   - Psionicist: level 70
    - Necromancer: level 70
+   - Egomancer: level 70
 Description:
    Animate is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

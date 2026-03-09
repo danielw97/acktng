@@ -12,11 +12,7 @@ keywords dispel evil
 Noun Damage: None
    Wear-Off: !Dispel Object!
 Acquisition:
-   - Warlock: level 12
-   - Priest: level 15
-   - Paladin: level 63
-   - Class23: level 70
-   - Class26: level 80
+   - Not learnable by player classes.
 Description:
    Dispel Evil is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

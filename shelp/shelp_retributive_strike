@@ -12,10 +12,10 @@ keywords retributive strike
 Noun Damage: Retributive strike
    Wear-Off: !Retributive Strike!
 Acquisition:
-   - Mage: level 72
    - Sorcerer: level 72
-   - Psionicist: level 78
+   - Wizard: level 72
    - Necromancer: level 78
+   - Egomancer: level 78
 Description:
    Retributive Strike is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

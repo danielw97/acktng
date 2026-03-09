@@ -12,8 +12,8 @@ keywords equip fist
 Noun Damage: None
    Wear-Off: !Equip Fist!
 Acquisition:
-   - Pugilist: level 1
    - Monk: level 1
+   - Brawler: level 1
 Description:
    Equip Fist is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

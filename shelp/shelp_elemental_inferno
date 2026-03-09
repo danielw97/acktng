@@ -12,7 +12,7 @@ keywords elemental inferno
 Noun Damage: elemental inferno
    Wear-Off: !elemental inferno!
 Acquisition:
-   - Mage: level 1
+   - Grand Magi: level 1
 Description:
    Elemental Inferno is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

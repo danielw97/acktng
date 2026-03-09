@@ -12,7 +12,7 @@ keywords ice bolt
 Noun Damage: Ice Bolt
    Wear-Off: !Ice Bolt!
 Acquisition:
-   - Mage: level 3
+   - Sorcerer: level 3
 Description:
    Ice Bolt is an offensive spell that inflicts ice damage on an enemy target.
 *******************************************************************************

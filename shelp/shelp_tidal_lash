@@ -12,7 +12,7 @@ keywords tidal lash
 Noun Damage: tidal lash
    Wear-Off: !tidal lash!
 Acquisition:
-   - Sorcerer: level 50
+   - Wizard: level 50
 Description:
    Tidal Lash is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

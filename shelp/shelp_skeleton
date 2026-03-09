@@ -12,8 +12,8 @@ keywords skeleton
 Noun Damage: None
    Wear-Off: !Stalker!
 Acquisition:
-   - Psionicist: level 9
    - Necromancer: level 9
+   - Egomancer: level 9
 Description:
    Skeleton is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

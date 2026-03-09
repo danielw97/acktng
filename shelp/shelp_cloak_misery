@@ -12,10 +12,10 @@ keywords cloak:misery
 Noun Damage: None
    Wear-Off: @@NThe @@Rcloak@@N around your body fades.
 Acquisition:
-   - Psionicist: level 73
    - Necromancer: level 73
-   - Thief: level 80
+   - Egomancer: level 73
    - Assassin: level 80
+   - Warlock: level 80
 Description:
    Cloak:misery is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

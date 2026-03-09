@@ -12,16 +12,16 @@ keywords cage
 Noun Damage: None
    Wear-Off: @@NThe @@rCage@@N dissipates.
 Acquisition:
-   - Psionicist: level 13
    - Necromancer: level 13
-   - Mage: level 18
+   - Egomancer: level 13
    - Sorcerer: level 18
-   - Warrior: level 19
+   - Wizard: level 18
    - Knight: level 19
-   - Cleric: level 31
+   - Swordsman: level 19
    - Paladin: level 31
-   - Thief: level 40
+   - Priest: level 31
    - Assassin: level 40
+   - Warlock: level 40
 Description:
    Cage is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

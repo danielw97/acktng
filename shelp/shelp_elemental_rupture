@@ -12,7 +12,7 @@ keywords elemental rupture
 Noun Damage: elemental rupture
    Wear-Off: !elemental rupture!
 Acquisition:
-   - Mage: level 15
+   - Grand Magi: level 15
 Description:
    Elemental Rupture is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

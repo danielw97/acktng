@@ -12,7 +12,7 @@ keywords cloak:iron
 Noun Damage: None
    Wear-Off: @@NThe @@Wcloak@@N around your body fades.
 Acquisition:
-   - Warrior: level 48
+   - Knight: level 48
 Description:
    Cloak:iron is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

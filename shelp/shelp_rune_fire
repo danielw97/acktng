@@ -12,8 +12,8 @@ keywords rune:fire
 Noun Damage: None
    Wear-Off: The rune dissipates.
 Acquisition:
-   - Mage: level 40
    - Sorcerer: level 40
+   - Wizard: level 40
 Description:
    Rune:fire is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -12,7 +12,7 @@ keywords elemental deluge
 Noun Damage: elemental deluge
    Wear-Off: !elemental deluge!
 Acquisition:
-   - Mage: level 10
+   - Grand Magi: level 10
 Description:
    Elemental Deluge is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

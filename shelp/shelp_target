@@ -12,12 +12,12 @@ keywords target
 Noun Damage: target
    Wear-Off: !target
 Acquisition:
-   - Pugilist: level 18
    - Monk: level 18
-   - Warrior: level 20
+   - Brawler: level 18
    - Knight: level 20
-   - Cleric: level 32
+   - Swordsman: level 20
    - Paladin: level 32
+   - Priest: level 32
 Description:
    Target is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

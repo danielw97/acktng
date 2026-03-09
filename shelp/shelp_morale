@@ -12,8 +12,8 @@ keywords morale
 Noun Damage: Morale
    Wear-Off: !Morale!
 Acquisition:
-   - Warrior: level 10
-   - Cleric: level 21
+   - Knight: level 10
+   - Paladin: level 21
 Description:
    Morale is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

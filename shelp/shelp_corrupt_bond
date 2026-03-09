@@ -12,8 +12,8 @@ keywords corrupt bond
 Noun Damage: None
    Wear-Off: None
 Acquisition:
-   - Psionicist: level 33
-   - Necromancer: level 50
+   - Necromancer: level 33
+   - Egomancer: level 50
 Description:
    Corrupt Bond is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

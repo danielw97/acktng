@@ -12,8 +12,8 @@ keywords diamond golem
 Noun Damage: None
    Wear-Off: !DIAMOND GOLEM!
 Acquisition:
-   - Mage: level 77
    - Sorcerer: level 77
+   - Wizard: level 77
 Description:
    Diamond Golem is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

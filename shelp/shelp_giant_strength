@@ -12,8 +12,8 @@ keywords giant strength
 Noun Damage: None
    Wear-Off: You feel weaker.
 Acquisition:
-   - Mage: level 18
    - Sorcerer: level 18
+   - Wizard: level 18
 Description:
    Giant Strength is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

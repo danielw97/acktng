@@ -12,8 +12,8 @@ keywords fireshield
 Noun Damage: None
    Wear-Off: None
 Acquisition:
-   - Mage: level 80
    - Sorcerer: level 80
+   - Wizard: level 80
 Description:
    Fireshield is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

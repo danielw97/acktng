@@ -12,8 +12,8 @@ keywords shieldblock
 Noun Damage: Shieldblock
    Wear-Off: You are no longer ready to shield block!
 Acquisition:
-   - Warrior: level 57
-   - Cleric: level 83
+   - Knight: level 57
+   - Paladin: level 83
 Description:
    Shieldblock is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

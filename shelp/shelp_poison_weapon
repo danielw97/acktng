@@ -12,8 +12,8 @@ keywords poison weapon
 Noun Damage: None
    Wear-Off: !Enchant Weapon!
 Acquisition:
-   - Assassin: level 5
-   - Thief: level 25
+   - Warlock: level 5
+   - Assassin: level 25
 Description:
    Poison Weapon is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

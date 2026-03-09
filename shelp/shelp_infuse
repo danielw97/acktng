@@ -12,8 +12,8 @@ keywords infuse
 Noun Damage: None
    Wear-Off: !Infuse Soul!
 Acquisition:
-   - Psionicist: level 71
    - Necromancer: level 71
+   - Egomancer: level 71
 Description:
    Infuse is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

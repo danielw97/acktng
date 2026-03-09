@@ -12,8 +12,8 @@ keywords condense soul
 Noun Damage: None
    Wear-Off: !Soul Potion!
 Acquisition:
-   - Psionicist: level 78
    - Necromancer: level 78
+   - Egomancer: level 78
 Description:
    Condense Soul is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

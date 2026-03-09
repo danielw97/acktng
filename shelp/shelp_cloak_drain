@@ -12,7 +12,7 @@ keywords cloak:drain
 Noun Damage: None
    Wear-Off: @@NThe @@rcloak@@N around your body fades.
 Acquisition:
-   - Psionicist: level 48
+   - Necromancer: level 48
 Description:
    Cloak:drain is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

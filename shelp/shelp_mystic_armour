@@ -13,9 +13,6 @@ Noun Damage: nerve fire
    Wear-Off: !Nerve Fire!
 Acquisition:
    - Mage: level 10
-   - Monk: level 18
-   - Wizard: level 24
-   - Class23: level 60
 Description:
    Mystic Armour is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************
