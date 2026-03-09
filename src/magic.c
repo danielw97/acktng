@@ -150,6 +150,9 @@ int mana_cost(CHAR_DATA *ch, int sn)
    if ((!IS_NPC(ch)) && (is_name(skill_table[sn].name, race_table[ch->race].skill)))
       cost = 10;
 
+   if (cost < 50)
+      cost = 50;
+
    return cost;
 }
 

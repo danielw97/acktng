@@ -525,6 +525,9 @@ int get_energy_cost(CHAR_DATA *ch, int gsn)
 
    base_cost -= base_cost * (get_curr_str(ch) + get_curr_dex(ch)) / 100;
 
+   if (base_cost < 50)
+      base_cost = 50;
+
    return base_cost;
 }
 
