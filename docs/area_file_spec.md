@@ -579,7 +579,9 @@ Room entries are one of:
   ```
   - `door` must be 0..5.
   - destination line must be exactly 3 integers.
-  - Named doors must be prefixed with `^` in `<exit_keyword>` (for example, `^iron gate`).
+  - Named exits are allowed by setting a non-empty `<exit_keyword>` when it improves room flavor/clarity.
+  - For door-style named exits, prefix the keyword with `^` (for example, `^iron gate`).
+  - `<key_vnum>` must be the vnum of a key object that unlocks this exit. Use `-1` when no key exists for the exit.
 - Extra description:
   ```text
   E
@@ -680,9 +682,16 @@ In room `D<door>` entries, the destination line field `<locks>` is a bitvector o
 Practical door behavior in area files/runtime:
 
 - Set `<locks>` bit `door` (`EX_ISDOOR`) when the exit must behave like an actual door/gate that can be opened/closed/locked.
+- Exit keywords and doors are independent:
+  - A named exit can exist without a door by setting `<exit_keyword>` and leaving `door` (`EX_ISDOOR`) unset.
+  - A door can be unnamed by leaving `<exit_keyword>` empty.
+  - When a named door is used, start the keyword with `^` (for example, `^stone hatch`) so movement messaging treats it as a standalone noun phrase.
 - `closed`/`locked` are runtime state bits (`EX_CLOSED`/`EX_LOCKED`). On save, the area writer strips these two bits from `<locks>`, so persistent initial door state must be authored through `#RESETS` command `D`, not by relying on `closed`/`locked` in the room exit line.
 - During gameplay, opening/closing/locking/unlocking an exit updates the reverse side too when the reverse exit exists and points back to the source room.
-- Named door keywords must start with `^` (for example, `^stone hatch`) so movement messaging treats the keyword as a standalone noun phrase.
+- Locking rules depend on both `<locks>` and `<key_vnum>`:
+  - If the exit is not marked as a door (`EX_ISDOOR` unset), lock/unlock/open/close door commands do not apply.
+  - If `<key_vnum>` is `< 0`, players will be told the exit cannot be locked/unlocked with a key.
+  - If `<key_vnum>` is set, it should match the intended key object's vnum exactly; otherwise unlock/lock attempts with the thematic key will fail.
 
 In `#RESETS`, command `D` uses door state enum values from `tab_door_states` in `src/buildtab.c`:
 
