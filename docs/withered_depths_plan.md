@@ -6,7 +6,7 @@
 **Keyword:** `withereddepths`
 **Vnum Range:** 1000–1149 (150 vnums)
 **Target Level:** 80–100 (bosses at 110)
-**Connection:** Linked from the Forest of Confusion (room 9601 west edge or a deeper room)
+**Connection:** Bidirectional link with Forest of Confusion room **9695** (Dense Woodland)
 **Sector Type:** `forest` (3) for most rooms; `water_swim` (6) for bog rooms; `inside` (11) for underground fungal caves
 **Color Theme:** `@@p` (purple) and `@@G` (green) — purple represents creeping corruption/blight, green represents the underlying forest. `@@b` (brown) accent for earth/wood, `@@d` (dark grey) for decay.
 **Reset Rate:** 15
@@ -26,14 +26,14 @@ Deep within the Forest of Confusion, past the disorienting mists, lies a region 
 ### Zone 1: The Rotting Threshold (Rooms 1000–1014, 15 rooms)
 Entry zone connecting to the Forest of Confusion. The mist thickens and the trees grow darker. This is the transition from the lvl 10-60 Forest of Confusion into the high-level Withered Depths.
 
-- **Room 1000:** The Darkening Path — entry room, exit west to Forest of Confusion (room 9602 or suitable confusn room), exit east deeper in.
+- **Room 1000:** The Darkening Path — entry room, exit west to Forest of Confusion room 9695 (Dense Woodland), exit east deeper in.
 - **Rooms 1001–1008:** Winding trail through increasingly twisted forest. Linear path with some branches.
 - **Rooms 1009–1012:** A clearing where corrupted animals prowl. Wider area with multiple connections.
 - **Room 1013:** A collapsed stone archway — named exit `^crumbling arch` (door, closed, locked) leading down to Zone 2 (Fungal Hollows). Key required (key object at vnum 1000).
 - **Room 1014:** A watchpost ruin overlooking the canopy, exit up to Zone 6 (Ancient Canopy).
 
 **Connectivity:**
-- West from 1000 → Forest of Confusion
+- West from 1000 → Forest of Confusion room 9695 (Dense Woodland)
 - East/south progression through 1001–1012
 - Down from 1013 → Zone 2 (room 1015) via locked door
 - Up from 1014 → Zone 6 (room 1080)
@@ -462,7 +462,12 @@ All 150 vnums (1000–1149) are used as rooms.
 
 ## Connection to Forest of Confusion
 
-The entry point (room 1000) connects westward to a room in the Forest of Confusion area (suggested: room 9602 or another suitable interior forest room). This requires a corresponding exit to be added in `confusn.are` pointing east to room 1000. The connection represents traveling deeper into the forest past the confusion mists into the corrupted depths beyond.
+**Bidirectional link between room 1000 (The Darkening Path) and room 9695 (Dense Woodland) in `confusn.are`.**
+
+- **In `withered_depths.are`:** Room 1000 has exit **west (D3)** → room 9695.
+- **In `confusn.are`:** Room 9695 gains a new exit **east (D1)** → room 1000.
+
+Room 9695 is a dead-end deep in the Forest of Confusion's dense woodland interior. It currently has only a single west exit (to 9694). Adding an east exit to room 1000 creates a natural transition: players traveling east from the withered depths of the confusion forest pass through increasingly corrupted woodland into The Withered Depths. The room's existing description — "very dense woodland, full of withered, stunted trees" — thematically bridges the two areas without modification.
 
 ---
 
