@@ -2,19 +2,8 @@
  * proposition.h
  *
  * Defines for the proposition quest system.
- * All proposition state lives directly inside PC_DATA (ack.h).
- * No separate PROPOSITION_DATA structure exists.
- *
- * Fields to add to struct pc_data in ack.h:
- *
- *   -- Proposition quest system --
- *   int   prop_type;                        // 0 = none active
- *   bool  prop_completed;                   // ready to hand in
- *   int   prop_num_targets;                 // how many entries in arrays
- *   int   prop_target_vnum[PROP_MAX_TARGETS]; // mob or obj vnum per slot
- *   bool  prop_target_done[PROP_MAX_TARGETS]; // per-slot completion flag
- *   int   prop_kill_needed;                 // type 3: how many to kill
- *   int   prop_kill_count;                  // type 3: how many killed so far
+ * Proposition state is stored in PROPOSITION_DATA entries that live in
+ * PC_DATA (ack.h). Each PC can store up to PROP_MAX_PROPOSITIONS entries.
  *
  ***************************************************************************/
 
@@ -32,6 +21,10 @@
 /* Maximum number of distinct targets (largest type uses 5 slots) */
 #define PROP_MAX_TARGETS        5
 
+/* Maximum simultaneous propositions on a player */
+#define PROP_MAX_PROPOSITIONS   3
+#define PROP_MAX_STATIC_PROPOSITIONS 16
+
 /* ------------------------------------------------------------------
  * Function prototypes
  * ------------------------------------------------------------------ */
@@ -41,6 +34,7 @@ void proposition_status      args((CHAR_DATA *ch));
 void proposition_complete    args((CHAR_DATA *ch, CHAR_DATA *postman));
 void proposition_kill_notify args((CHAR_DATA *ch, CHAR_DATA *victim));
 void proposition_obj_notify  args((CHAR_DATA *ch, OBJ_DATA  *obj));
+void proposition_cancel      args((CHAR_DATA *ch, int slot));
 void clear_proposition       args((CHAR_DATA *ch));
 
 #endif /* PROPOSITION_H */
