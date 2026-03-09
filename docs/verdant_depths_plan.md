@@ -411,7 +411,7 @@ All boss mobs: `act` flags include `is_npc|sentinel|stay_area|boss|no_flee`. Pla
 
 `extra_flags` for all boss gear: `ITEM_NODROP` (128) | `ITEM_BOSS` -- note: ITEM_BOSS does not exist as a named constant in the spec; use the `boss` bit if available, otherwise this needs to be verified against `extra_flags` definitions. Per the spec, `boss` is an `act` flag on mobs (67108864). For items, the user's intent is that boss drops are distinctly flagged. **Resolution:** Use `ITEM_UNIQUE` (33554432) combined with `ITEM_NODROP` (128) for boss items unless a dedicated ITEM_BOSS extra flag is confirmed. The user specified "flagged as boss" -- if `boss` maps to a valid item extra flag, use it; otherwise, clarify with the user.
 
-**Confirmed from source:** `ITEM_BOSS` = `BIT_28` = `134217728` (defined in `src/config.h:1175`). `ITEM_NODROP` = `128`. Boss gear `extra_flags` = `ITEM_NODROP | ITEM_BOSS` = `134217856`.
+**Confirmed from spec and source:** `ITEM_BOSS` = `134217728`, `ITEM_NODROP` = `128`, `ITEM_LOOT` = `67108864`. Boss gear `extra_flags` = `ITEM_NODROP | ITEM_BOSS` = `134217856`. Loot-table items additionally need `ITEM_LOOT` = `134217984` total.
 
 | Vnum | Name | Type | Wear | Level | Weight | Archetype | Boss Source |
 |------|------|------|------|-------|--------|-----------|-------------|

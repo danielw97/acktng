@@ -149,24 +149,26 @@ Optional extension blocks (detected by leading marker):
 
 `skills` in the `!` extension line is a bitvector. Known flags (from builder lookup tables) are:
 
+Note: this table intentionally uses the historical non-sequential bit assignments from `tab_mob_skill`/`MOB_*`; do not renumber by position.
+
 - `2_attack` = `1`
 - `3_attack` = `2`
 - `4_attack` = `4`
-- `punch` = `8`
-- `headbutt` = `16`
-- `knee` = `32`
-- `disarm` = `64`
-- `trip` = `128`
-- `nodisarm` = `256`
-- `notrip` = `512`
-- `dodge` = `1024`
-- `parry` = `2048`
-- `martial` = `4096`
-- `enhanced` = `8192`
-- `dualwield` = `16384`
-- `dirt` = `32768`
-- `5_attack` = `65536`
-- `6_attack` = `131072`
+- `punch` = `128`
+- `headbutt` = `256`
+- `knee` = `512`
+- `disarm` = `1024`
+- `trip` = `2048`
+- `nodisarm` = `32`
+- `notrip` = `64`
+- `dodge` = `4096`
+- `parry` = `8192`
+- `martial` = `16384`
+- `enhanced` = `32768`
+- `dualwield` = `65536`
+- `dirt` = `131072`
+- `5_attack` = `8`
+- `6_attack` = `16`
 - `charge` = `262144`
 - `counter` = `524288`
 - `kick` = `1048576`
@@ -207,14 +209,14 @@ Optional extension blocks (detected by leading marker):
 
 `def` in the `!` extension line is a bitvector of defensive spells/abilities:
 
-- `nada` = `0`
-- `cure_light` = `1`
-- `cure_serious` = `2`
-- `cure_critic` = `4`
-- `heal` = `8`
-- `fireshield` = `16`
-- `iceshield` = `32`
-- `shockshield` = `64`
+- `nada` = `1`
+- `cure_light` = `2`
+- `cure_serious` = `4`
+- `cure_critic` = `8`
+- `heal` = `16`
+- `fireshield` = `32`
+- `iceshield` = `64`
+- `shockshield` = `128`
 
 ### 5.4) Mobile `act` flags bitvector
 
@@ -421,19 +423,20 @@ Area-authored object definitions must **not** set `ITEM_GENERATED`; that flag is
 - `ITEM_CLAN_EQ` = `32768`
 - `ITEM_TRIG_DESTROY` = `65536`
 - `ITEM_NO_AUCTION` = `131072`
-- `ITEM_MYTHIC` = `524288`
-- `ITEM_LEGENDARY` = `1048576`
-- `ITEM_RARE` = `2097152`
-- `ITEM_VAMP` = `4194304`
-- `ITEM_NOLOOT` = `8388608`
-- `ITEM_NOSAC` = `16777216`
-- `ITEM_UNIQUE` = `33554432`
-- `ITEM_LIFESTEALER` = `67108864`
-- `ITEM_LOOT` = `134217728`
-- `ITEM_BUCKLER` = `536870912`
-- `ITEM_EXTRA_WAND` = `1073741824`
-- `ITEM_FIST` = `2147483648`
-- `ITEM_TWO_HANDED` = `4294967296`
+- `ITEM_MYTHIC` = `262144`
+- `ITEM_LEGENDARY` = `524288`
+- `ITEM_RARE` = `1048576`
+- `ITEM_VAMP` = `2097152`
+- `ITEM_NOLOOT` = `4194304`
+- `ITEM_NOSAC` = `8388608`
+- `ITEM_UNIQUE` = `16777216`
+- `ITEM_LIFESTEALER` = `33554432`
+- `ITEM_LOOT` = `67108864`
+- `ITEM_BOSS` = `134217728`
+- `ITEM_BUCKLER` = `268435456`
+- `ITEM_EXTRA_WAND` = `536870912`
+- `ITEM_FIST` = `1073741824`
+- `ITEM_TWO_HANDED` = `2147483648`
 
 ### 7.3) Item `wear_flags` bitvector
 
@@ -625,8 +628,8 @@ Directional traversal constraints:
 - `hunt_hunt` = `32768`
 - `no_bloodwalk` = `65536`
 - `no_portal` = `131072`
-- `no_repop` = `524288`
-- `maze` = `1048576` (`ROOM_MAZE`)
+- `no_repop` = `262144`
+- `maze` = `524288` (`ROOM_MAZE`)
 
 Maze flag requirements:
 
