@@ -1295,5 +1295,405 @@ The arch frames a path south toward the deeper forest and the swamp beyond.~
 ~
 0 -1 1079
 S
+#1075
+The Gnarled Root Gate~
+The forest floor levels here at the top of a slope that descends abruptly into a different landscape — the bog visible beyond smells of sulphur and methane, and the air above it is visibly different in colour and consistency from the blighted but essentially terrestrial Blightwood.  Between the forest and the bog's edge stands the gnarled root gate: two massive roots from adjacent trees, each as thick as a horse's body, which have arched over the path and grown together overhead in a living portcullis of wood.  The gate's roots are covered in thorns the length of fingers, and thin tendrils of vine connect the arch to the ground on both sides, completing the barrier.  The root gate can be forced open — the tendrils must be broken, the weight of the arch pushed through — but it presses closed again on its own within minutes, a slow, organic insistence on remaining shut.~
+0 3
+D0
+The blighted forest opens north toward the pale fungus stand.~
+~
+0 -1 1070
+D1
+The forest continues east along the bog's edge, the trees becoming shorter and more gnarled.~
+~
+0 -1 1076
+D2
+The gnarled root gate marks the transition south into the Miasma Bog.~
+^gnarled root gate~
+1 -1 1095
+E
+gate root gnarled~
+Two enormous root-arches have grown together overhead, creating a living portcullis of heavy root-wood covered in long thorns.  Thin vine-tendrils connect the arch to the ground, completing the barrier and pulling it shut after any passage.  The gate has the feel of something the forest grew deliberately, a last attempt to contain what lies to the south.~
+S
+#1076
+The Bog Margin Forest~
+The trees here show the effect of proximity to the Miasma Bog's toxic atmosphere — their lower bark is blackened by the accumulated condensation of bog-gas, their lower branches have died and the roots nearest the bog's edge have withdrawn upward from the saturated soil.  The ground is still forest floor here, but it is wet and unstable, each step producing a sucking sound and leaving a footprint that fills with dark water.  The transition zone between forest and bog is not a clean boundary but a gradual poisoning, the forest losing coherence as the bog wins.~
+1 3
+D3
+The forest margin leads west toward the gnarled root gate.~
+~
+0 -1 1075
+D1
+The margin continues east, the trees growing shorter and more affected by the bog.~
+~
+0 -1 1077
+D2
+The forest gives way south to an area where bog and forest are thoroughly intermixed.~
+~
+0 -1 1076
+S
+#1077
+The Drowned Stand~
+Several trees have died standing here, their roots overwhelmed by the rising water table of the adjacent bog, their trunks still upright but their bark gone silver-grey with moisture and their wood gone soft.  The standing dead trees lean against each other and against still-living but struggling neighbours in a network of mutual support that will fail, tree by tree, as each loses the structural integrity to hold its own weight.  Between them, pools of standing black water have formed that are deeper than they look — the forest floor has subsided, and what appears to be a few inches of water is in places three or four feet deep.~
+1 3
+D3
+The drowned stand continues west toward the bog margin.~
+~
+0 -1 1076
+D1
+The standing dead trees extend east, the pools deeper.~
+~
+0 -1 1078
+D2
+The path south through the drowned stand leads to a section where the trees have fully surrendered to the bog.~
+~
+0 -1 1077
+S
+#1078
+The Root Tangle Crossing~
+The roots of multiple collapsed trees have woven together here to create an irregular elevated crossing above standing water — a natural bridge of root and fallen timber that is the only reasonably dry path through this section of the Blightwood's southern edge.  The crossing is precarious in places: individual roots give way underfoot with a crack and a dip, and the overall structure shifts slightly when weight is applied.  The water beneath is dark and still and deep, and from beneath the root-tangle, something occasionally applies upward pressure from below — gentle, exploratory, testing.~
+1 3
+D3
+The root tangle crossing leads west through the drowned stand.~
+~
+0 -1 1077
+D1
+The crossing extends east, ending where the root network meets the bog's true margin.~
+~
+0 -1 1079
+D2
+The root-bridge dips south toward open water, becoming less reliable.~
+~
+0 -1 1078
+S
+#1079
+The Blightwood's Edge~
+The Blightwood ends here at a sharp demarcation where the last living trees stand with their roots at the water's edge and the bog begins.  The trees at this boundary are twisted and low, bent by decades of toxic wind off the bog, their shapes suggesting permanent flinching.  To the east, beyond a final screen of deformed willows, the Heartrot Grove's distant glow is visible — a pulsing purple light that pulses at the same rate as a slow heartbeat.  Whatever lies to the east is the culmination of everything the Withered Depths has been building toward.~
+1 3
+D3
+The path leads west through the root tangle crossing.~
+~
+0 -1 1078
+D1
+Beyond the deformed willows, a path leads east toward the Heartrot Grove.~
+~
+0 -1 1120
+S
+#1080
+The Watchpost Canopy Platform~
+The rope-ladder from the ruined watchpost below terminates here, at a broad platform of ancient planking lashed to the confluence of four massive branches, sixty feet above the forest floor.  The platform is rotted but structurally sound — the wood has hardened with age into something denser and darker than the original timber, and the lashings holding it to the branches are so old they have partially grown into the bark.  From here, the Withered Depths spreads in every direction below, a solid dark canopy broken only by the faint bioluminescent glow of zones below.  The air up here is cleaner and colder than below, carrying wind that brings the smell of open sky mixed with the inevitable corruption.  Several rope bridges and vine-walkways lead outward from this platform into the canopy proper.~
+0 3
+D5
+The rope-ladder descends back to the ruined watchpost below.~
+~
+0 -1 1014
+D1
+A rope bridge swings east toward an adjacent platform.~
+~
+0 -1 1081
+D2
+A vine-walkway angles south and slightly down, following a massive bough.~
+~
+0 -1 1085
+S
+#1081
+The Hanging Bridge~
+A long rope bridge spans the gap between two major branch-junctions here, its planking spaced widely and its handropes frayed to a concerning degree at several points.  Crossing requires care and an acceptance that occasional plank-gaps will require longer steps.  Below the bridge, the forest floor is invisible beneath the closed canopy, and a fall from this height would not be survivable.  The bridge sways in the wind that moves through the upper canopy, and the sound of the planking and ropes under stress creates a constant background percussion.~
+0 3
+D3
+The bridge leads west back toward the watchpost platform.~
+~
+0 -1 1080
+D1
+The bridge continues east, the sway increasing toward the far end.~
+~
+0 -1 1082
+D2
+A side rope descends from the bridge's midpoint to a lower bough-platform.~
+~
+0 -1 1086
+S
+#1082
+The Double-Bough Junction~
+Two enormous branches from different trees have grown into each other here, creating a solid, stable platform of living wood wide enough to camp on.  The living quality of this junction is more apparent than in the artificial platforms elsewhere in the canopy: the bark is rough and growing, covered in small organisms that have colonised it from below and birds' nests — empty now, their former occupants long since driven out by the blight — from above.  Iron spikes and old rope-work indicate this junction was used as an anchor point for the canopy bridge network long ago.  A rope descends straight down from this junction, far below, to where the Blightwood's forest floor is dimly visible.~
+0 3
+D3
+The hanging bridge leads west toward the watchpost platform.~
+~
+0 -1 1081
+D1
+A vine-walkway continues east from the double-bough junction.~
+~
+0 -1 1083
+D5
+The rope descends straight down from this junction to the forest floor below.~
+~
+0 -1 1064
+D2
+A branch-path leads south along a descending bough.~
+~
+0 -1 1087
+S
+#1083
+The Canopy Lookout~
+A natural alcove formed by the convergence of three branches creates a sheltered platform with views in three directions — south across the bog below, east toward the pulsing purple glow of the Heartrot Grove, and north across the cleaner treetops of the outer forest.  Each view tells a different story about this forest.  The platform is carpeted with a thick growth of @@Gmoss@@N that is green — genuinely, defiantly green — and soft, the only comfortable surface in the entire canopy network.  Something about this alcove resists the purple corruption, or at least has so far.~
+0 3
+D3
+The branch leads west back toward the double-bough junction.~
+~
+0 -1 1082
+D1
+The canopy continues east along a high bough.~
+~
+0 -1 1084
+D2
+A vine-ladder descends south along the tree trunk toward a lower canopy level.~
+~
+0 -1 1088
+S
+#1084
+The Eastern Canopy Arm~
+This outermost arm of the Ancient Canopy extends eastward on a branch that has grown longer than any structural logic should permit, the wood dense enough to hold despite the span.  The branch is wide enough to walk along with arms spread for balance, and the end of it is visible — a sharp drop where the wood terminates.  From the end, the Heartrot Grove below is clearly visible, pulsing its slow purple light through the closed canopy, and the distance to the nearest canopy access in that direction is clear — this is as far as the treetop network extends.~
+0 3
+D3
+The extended arm leads west back toward the canopy lookout.~
+~
+0 -1 1083
+D2
+A rope allows descent from the end of the arm toward the forest below.~
+~
+0 -1 1089
+S
+#1085
+The Bough Platform~
+A solid secondary platform has been built from cut planks wedged into the main bough at a lower level than the watchpost platform above — lower and more sheltered, with the upper canopy providing a ceiling and blocking the wind.  The planking here is more recently maintained than the upper platforms: new lashings have replaced old, and several planks have been replaced, though whoever maintained it has not been here in some time.  Something has nested beneath the platform, pushing up through a gap in the planking — a growth of @@pfungal tendrils@@N that has consumed the nesting material and is now slowly working on the underside of the planks themselves.~
+0 3
+D0
+The bough platform is exited north back up toward the watchpost canopy.~
+~
+0 -1 1080
+D1
+A vine-rope bridge leads east at this lower level.~
+~
+0 -1 1086
+D2
+The bough descends south, becoming narrower and less stable.~
+~
+0 -1 1086
+S
+#1086
+The Lower Bridge Walkway~
+A lower, more sheltered walkway runs between platforms here, built along a large lower branch and screened from the upper canopy by a ceiling of smaller branches.  The walkway is enclosed enough to make direction less certain — each turn of the walkway brings a slightly different view of the same dark canopy overhead.  The wood of the walkway is stained purple from the drip of fluid from the @@pfungal colonies@@N above, and each plank has a faint luminescent quality that makes the walkway itself glow.  The lower altitude brings the forest floor into view through gaps in the canopy, and from here, the scale of the root systems below is appreciable.~
+0 3
+D0
+The walkway climbs north back toward the lower bough platform.~
+~
+0 -1 1085
+D3
+The walkway leads west back toward the lower bridge.~
+~
+0 -1 1085
+D1
+The lower walkway continues east toward an inner platform.~
+~
+0 -1 1087
+D2
+A vine-rope descends south from this section of walkway.~
+~
+0 -1 1091
+S
+#1087
+The Inner Canopy Chamber~
+Where several large branches converge, they create an enclosed space — an inner chamber in the canopy entirely surrounded by living wood.  The sound here is muffled in all directions, and the chamber is warmer than the open canopy outside.  The @@pcorruption@@N has settled more deeply here than in the outer canopy: the living wood of the surrounding branches has darkened to nearly black, and the fungi on every surface are larger and more varied.  A hole in the chamber floor gives access downward; a rope descends from the chamber ceiling to a height reachable from the adjacent bough.~
+0 3
+D3
+The inner chamber exits west toward the lower bridge walkway.~
+~
+0 -1 1086
+D0
+The chamber connects north to the double-bough junction via a climbing rope.~
+~
+0 -1 1082
+D2
+The hole in the chamber floor leads south and downward.~
+~
+0 -1 1090
+S
+#1088
+The Warden's Approach~
+The canopy narrows here to a single wide bough leading toward the Warden's Perch, the approach to the boss territory of the Ancient Canopy.  The bough is clear of normal canopy clutter — no vines, no smaller branches, nothing growing between here and the Perch.  The reason is not comfortable to determine: whatever occupies the Perch has cleared this approach, and the method of clearing is implied by the state of the cleared area — everything removed has left scars.  The bough surface here is the healthiest wood in the canopy, dense and living, as if the Warden's presence stimulates growth rather than blight.  The air carries the smell of fresh-cut wood and something older.~
+0 3
+D3
+The approach leads west back toward the canopy lookout.~
+~
+0 -1 1083
+D1
+The approach continues east toward the Warden's Perch.~
+~
+0 -1 1089
+S
+#1089
+The Warden's Perch~
+This is the highest point of the Ancient Canopy network — a massive natural platform of fused living wood at the confluence of the oldest branches, wide enough for a combat formation and open to the sky above in a small circular gap in the canopy that admits a shaft of actual daylight.  The daylight, filtered through layers of corrupted air, arrives tinted purple and cold, and falls on a platform surface worn to unnatural smoothness by the long occupancy of something very large.  The @@Gtreetops@@N spread in every direction at and below this level, and from here the full extent of the Withered Depths is visible — an ocean of corruption extending to a haze-blurred horizon.  Great furrows have been scored into the branch-wood of the platform's edges, gouge marks the depth of a fist, arranged in the pattern of fingers gripping the rim.  Whatever the Canopy Warden is, it has gripped this platform so long and so hard that the wood shaped itself around the grip.~
+4 3
+D3
+The approach bough leads west back into the canopy network.~
+~
+0 -1 1088
+D2
+A descent-rope connects downward to the canopy network below.~
+~
+0 -1 1084
+S
+#1090
+The Descending Bough~
+This bough arcs downward from the inner canopy to a lower junction, the angle steep enough to require holding on during descent and careful footing during ascent.  The bough is alive but blight-affected — its bark is purple-grey and the smaller branches that used to sprout from it have been sheared away, leaving knobbed stumps at regular intervals that serve as handholds.  At the bottom of the bough, the forest floor becomes visible through the canopy below, and the descent route continues toward ground level.~
+0 3
+D0
+The bough leads north and upward back toward the inner canopy chamber.~
+~
+0 -1 1087
+D1
+The bough connects east at its lower end to a descending walkway.~
+~
+0 -1 1091
+S
+#1091
+The Lower Canopy Junction~
+A junction of multiple lower boughs creates a broad space here, accessible from the descending sections of the canopy network and offering connections to the multiple descent routes that lead back to the forest floor.  The wood at this lower altitude is more blight-affected than the upper canopy — the corruption rises from the ground, and here at the meeting of the two zones, the wood has turned from dark grey to deep purple and the fungi are the largest and most varied in the entire network.  A clear view downward through a gap in the branches shows the Blightwood below, uncomfortably far away.~
+0 3
+D3
+The junction connects west toward the descending bough.~
+~
+0 -1 1090
+D0
+A rope bridge leads north back to the lower bridge walkway.~
+~
+0 -1 1086
+D1
+The lower canopy continues east along a broad bough.~
+~
+0 -1 1092
+S
+#1092
+The Darkening Descent~
+The canopy thins here as the route descends toward the transition zone — below canopy level but above the ground, caught between the treetop world and the forest floor.  The @@pcorruption@@N is densest in this in-between space, where the blight that rises from the ground meets the corruption that descends from the occupied canopy.  The branches here are black and dead, though still structurally sound, and no fungi grow on them — even the opportunistic bioluminescent species have found this zone too saturated with competing blight-chemistry.  The descent from here reaches the ground.~
+0 3
+D3
+The descent route leads west toward the lower canopy junction.~
+~
+0 -1 1091
+D1
+The darkening descent continues east along a final section of canopy.~
+~
+0 -1 1093
+S
+#1093
+The Final Bough~
+The last structural bough before the ground is reached — a massive, nearly horizontal branch that extends over the forest floor, accessible from above and providing a natural platform before the final drop to ground level.  From here, the ground of the Blightwood is directly below, and the scale of the trees becomes fully apparent: even this 'final bough' is thirty feet above the forest floor.  A knotted rope descends from the bough's end, terminating at a point close enough to the ground that the remaining drop is manageable.  Beyond the rope, the path south leads toward the Heartrot Grove.~
+0 3
+D3
+The bough connects west toward the darkening descent section.~
+~
+0 -1 1092
+D1
+The bough end provides access east to descending connections.~
+~
+0 -1 1094
+S
+#1094
+The Canopy Base~
+The treetop network ends here at a knotted rope that descends to the forest floor, anchored to a massive bough above and ending within jumping distance of the ground below.  The descent is the final transition from the elevated world of the Ancient Canopy to the deep, dark forest of the corrupted ground.  Below, the Heartrot Grove begins — the pulsing purple glow that was visible from above is now tangible, a warmth and a pressure that the air carries.  The ground level here is covered in the same dark matter as the rest of the Blightwood, but the organic character of it is different: it feels less like decay and more like growth.~
+0 3
+D3
+The rope and bough lead west and back up into the canopy network.~
+~
+0 -1 1093
+D5
+The rope descends from the bough to the forest floor of the Heartrot Grove below.~
+~
+0 -1 1120
+S
+#1095
+The Bog's Northern Shore~
+The Miasma Bog begins here where the last corrupted forest trees stand with their roots at the waterline, their bark blackened by decades of toxic gas rising from the bog surface.  The transition from forest to swamp is abrupt: one step is on forest floor, the next is in ankle-deep water the colour and consistency of old coffee, warm from the methane processes below and carrying a sulphur smell that is immediately and permanently present in the sinuses.  A rough structure of vine and branch — the remnant of the gnarled root gate above — marks the northern boundary.  The bog stretches south and east for as far as the toxic haze allows visibility.~
+0 6
+D0
+The bog's edge leads back north through the gnarled root gate and into the Blightwood above.~
+^gnarled root gate~
+1 -1 1075
+D1
+The bog shore extends east along the treeline, the water deepening quickly.~
+~
+0 -1 1096
+D2
+The bog opens south into deeper water and thicker haze.~
+~
+0 -1 1100
+S
+#1096
+The Methane Shallows~
+The bog floor here is close to the surface — in most places only knee-deep — and visible through the dark water as a pale, pale grey substrate that is disturbingly regular in texture.  Gas bubbles rise continuously from the substrate in trails that surface in small bursts, each one carrying a fresh pulse of sulphur that thickens the air another fraction.  The water surface is covered in a floating mat of @@ddead organic material@@N that breaks apart when pushed through and closes back together behind, leaving no trace of passage.  Will-o-wisps are visible in the distance to the south, drifting lights that move with apparent purpose.~
+0 6
+D3
+The shallows continue west toward the bog's northern shore.~
+~
+0 -1 1095
+D1
+The shallows extend east, the gas-bubble trails thickening.~
+~
+0 -1 1097
+D2
+The shallow section deepens rapidly to the south.~
+~
+0 -1 1101
+S
+#1097
+The Bubbling Flats~
+A broad flat section of the bog where the methane generation is at its most active — the water here is in constant motion from rising gas, the surface churning in slow, thick rolls like a very viscous liquid brought barely to a boil.  The sound is a continuous low churn, biological and deep, and it obscures any other sounds from the surrounding bog.  The gas concentration above the churning section is high enough to cause light-headedness in a few minutes of exposure, and the churning itself occasionally releases larger gas pockets that surface with enough force to disturb the floating mat dramatically.~
+0 6
+D3
+The bubbling flats thin to the west toward the methane shallows.~
+~
+0 -1 1096
+D1
+The active churning continues east, the gas bubbles larger.~
+~
+0 -1 1098
+D2
+The flat section continues south, the churning consistent.~
+~
+0 -1 1102
+S
+#1098
+The Floating Mat Plain~
+The organic floating mat that covers much of the bog surface is thickest here — a solid-seeming platform of compressed dead vegetation that extends across the water and might support light weight.  The mat is deceptive: it looks firm from a distance and holds for two or three steps before giving way with a sudden drop, depositing one into the knee-to-waist-deep water beneath.  Across the mat's surface, @@pstrange fungi@@N have taken root, their fine white threads radiating from central points in patterns that are too regular for chance.~
+0 6
+D3
+The mat plain continues west toward the bubbling flats.~
+~
+0 -1 1097
+D1
+The mat continues east, the surface appearing firmer.~
+~
+0 -1 1099
+D2
+The mat gives way south to open water sections.~
+~
+0 -1 1103
+S
+#1099
+The Wisp Congregation~
+Will-o-wisps cluster here in significant numbers — a dozen or more hovering lights of varying size and brightness, their movement patterns too complex to be random and too inconsistent to be mechanically repetitive.  They maintain distance from anything that approaches, but they approach things that are still.  Up close, each wisp reveals itself to be a sphere of cold pale light with a dark centre, and the dark centres appear to track movement with something that could generously be interpreted as awareness.  The water beneath the congregation is noticeably warmer than elsewhere in the bog, suggesting the wisps' presence generates heat, or their congregation marks a heat source below.~
+0 6
+D3
+The wisp congregation thins to the west, the water darker.~
+~
+0 -1 1098
+D2
+The wisps lead deeper south into the bog.~
+~
+0 -1 1104
+S
 #0
 #$
