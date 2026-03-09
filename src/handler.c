@@ -1441,6 +1441,10 @@ void affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
 {
    AFFECT_DATA *paf_new;
 
+   /* Boss mobs are immune to blindness */
+   if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS) && (paf->bitvector & AFF_BLIND))
+      return;
+
    GET_FREE(paf_new, affect_free);
    /* Ramias... Don't copy uninitialized fields: next, prev, is_free */
    /*
@@ -2990,7 +2994,7 @@ bool room_is_private(ROOM_INDEX_DATA *pRoomIndex)
 bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 
-   if (IS_AFFECTED(ch, AFF_BLIND))
+   if (IS_AFFECTED(ch, AFF_BLIND) && !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS)))
       return FALSE;
 
    if (ch == victim)
@@ -3022,10 +3026,10 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
    if (!IS_NPC(victim) && IS_SET(stance_app[victim->stance].specials, STANCE_NINJA))
       return FALSE;
 
-   if ((IS_AFFECTED(victim, AFF_INVISIBLE) || item_has_apply(victim, ITEM_APPLY_INV)) && (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)))
+   if ((IS_AFFECTED(victim, AFF_INVISIBLE) || item_has_apply(victim, ITEM_APPLY_INV)) && (!IS_AFFECTED(ch, AFF_DETECT_INVIS) && !item_has_apply(ch, ITEM_APPLY_DET_INV)) && !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS)))
       return FALSE;
 
-   if (IS_AFFECTED(victim, AFF_INVISIBLE) && (IS_AFFECTED(ch, AFF_DETECT_INVIS) || item_has_apply(ch, ITEM_APPLY_DET_INV)) && get_psuedo_level(victim) - 10 > get_psuedo_level(ch))
+   if (IS_AFFECTED(victim, AFF_INVISIBLE) && (IS_AFFECTED(ch, AFF_DETECT_INVIS) || item_has_apply(ch, ITEM_APPLY_DET_INV) || (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) && get_psuedo_level(victim) - 10 > get_psuedo_level(ch))
       return FALSE;
 
    /*
@@ -3034,7 +3038,7 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
     * return FALSE;
     */
 
-   if ((IS_AFFECTED(victim, AFF_HIDE) || item_has_apply(victim, ITEM_APPLY_HIDE)) && (!IS_AFFECTED(ch, AFF_DETECT_HIDDEN) && !item_has_apply(ch, ITEM_APPLY_DET_HID)) && victim->fighting == NULL && (IS_NPC(ch) ? !IS_NPC(victim) : IS_NPC(victim)))
+   if ((IS_AFFECTED(victim, AFF_HIDE) || item_has_apply(victim, ITEM_APPLY_HIDE)) && (!IS_AFFECTED(ch, AFF_DETECT_HIDDEN) && !item_has_apply(ch, ITEM_APPLY_DET_HID) && !(IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))) && victim->fighting == NULL && (IS_NPC(ch) ? !IS_NPC(victim) : IS_NPC(victim)))
       return FALSE;
 
    return TRUE;
