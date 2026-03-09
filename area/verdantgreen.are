@@ -385,6 +385,11 @@ A Cathedral of Trees~
 The ancient trunks here are arranged in nearly perfect parallel rows that converge toward a distant vanishing point, creating an overwhelming sense of architectural intention in what is surely natural growth; the silence is immense and structural, pressing inward from every side, and the @@Ggreen light@@N filtered through the joined canopy overhead does nothing to dispel the feeling of standing inside something enormous and alive.
 ~
 0 3
+D1
+The rows of ancient trunks continue eastward toward a sentinel grove.
+~
+~
+0 -1 10025
 D3
 The tree-corridor opens westward into the vast clearing of the Old Growth.
 ~
@@ -401,6 +406,11 @@ The ancient trunks thin slightly eastward, opening onto the hub of the Old Growt
 ~
 ~
 0 -1 10020
+D3
+Between the massive trunks to the west, a sheltered, leaf-filled depression is barely visible.
+~
+~
+0 -1 10031
 S
 #10023
 A Root-Woven Path~
@@ -428,6 +438,445 @@ The root-woven causeway leads northward out of the corridor toward the Old Growt
 ~
 ~
 0 -1 10023
+D2
+The living corridor continues southward, the canopy thickening as it descends toward creeping ivy.
+~
+~
+0 -1 10037
+S
+#10025
+A Grove of Sentinel Oaks~
+Five enormous oaks stand here in a near-perfect ring, their girth suggesting an age measured in millennia rather than centuries; their exposed roots form a low wall around the interior of the grove, and the space between them is hushed and protected, the air noticeably stiller than the forest beyond, as though the trees are exhaling careful, measured breaths.
+~
+0 3
+D1
+The sentinel oaks thin eastward, and the hollow interior of a vast dead tree is visible.
+~
+~
+0 -1 10026
+D2
+A carpet of dead leaves covers the ground southward, thick and rustling underfoot.
+~
+~
+0 -1 10027
+D3
+The parallel rows of ancient trunks resume westward, fading into the cathedral dark.
+~
+~
+0 -1 10021
+E
+oaks sentinel ring~
+The five oaks are spaced so evenly that the arrangement cannot be accidental; their lowest branches interlock overhead to form a natural vault, and the bark of each is carved with the same repeating groove-pattern by forces unknown.
+~
+S
+#10026
+Beneath a Hollow Giant~
+The dead giant is the largest tree visible in the Old Growth, its interior completely hollow and wide enough to hold a small building; the wood of its interior has petrified over the centuries, smooth and @@gstone-gray@@N, and the fungal colonies that cover every surface fill the darkness with a soft @@rbioluminescent pulse@@N that ebbs and flows like slow breathing.
+~
+1 3
+D3
+The hollow giant's opening faces west toward the sentinel oak grove.
+~
+~
+0 -1 10025
+E
+hollow interior rot decay~
+The inside of the hollow trunk rises thirty feet to an opening overhead; the walls are covered in shelf fungi that glow @@rblue-green@@N, and the floor is a deep mattress of crumbling wood-dust centuries old that releases a sweet, dry scent when disturbed.
+~
+S
+#10027
+A Carpet of Dead Leaves~
+The forest floor here is buried under a deep, unbroken carpet of dead leaves, the accumulated fall of centuries compressed into a springy, rustling substrate that swallows footsteps almost silently; the leaves are mostly brown and @@gblack with age@@N, but here and there a more recent layer shows brief flashes of orange and gold, like embers banked deep under ash.
+~
+0 3
+D0
+The dead-leaf carpet thins northward as the sentinel oaks take shape through the trees.
+~
+~
+0 -1 10025
+D2
+The leaves deepen southward where the ground slopes gently toward the emerald glade.
+~
+~
+0 -1 10028
+S
+#10028
+The Emerald Glade~
+An open clearing interrupts the canopy here, admitting a column of diffuse gray light that falls on a floor of vivid @@Gemerald moss@@N growing in long, soft ropes between the tree-roots; the moss is healthy and aggressive, climbing the lower trunks and creeping outward, and the clearing carries a noticeably fresher scent than the oppressive fungal weight of the surrounding wood.
+~
+0 3
+D0
+Dead leaves and fading light mark the way northward back toward the sentinel oaks.
+~
+~
+0 -1 10027
+D2
+The light fades southward as the vine-choked passage begins.
+~
+~
+0 -1 10029
+E
+moss clearing light~
+A single shaft of pale sky is visible directly overhead through the break in the canopy, wavering slightly as the uppermost branches sway in some wind too high to feel; the @@Gemerald moss@@N below it is brightest here, as if it has grown toward that distant light for centuries.
+~
+S
+#10029
+A Vine-Choked Passage~
+Climbing vines have colonized every surface of the trees along this section of path, their @@Gtendrils looping@@N from trunk to trunk at head height and drooping in dense curtains that must be pushed aside with every step; the passage smells of green sap and something animal, and the vines are disturbed in places as though something large and heavy has pushed through recently.
+~
+0 3
+D0
+The vine curtains thin northward toward the emerald glade's open light.
+~
+~
+0 -1 10028
+D2
+The vines grow thicker and the light fails entirely southward; something beneath glows faintly.
+~
+~
+0 -1 10030
+S
+#10030
+Among Luminous Fungi~
+The @@rdim glow@@N emanating from the vast colonies of bioluminescent fungi here is enough to see by, painting everything in shifting patterns of teal and amber light; the fungi themselves stand thigh-high, their caps broad and smooth, and the air is thick with their exhalations -- a spore-laden sweetness that catches in the throat and makes thought feel slow and pleasant.
+~
+1 3
+D0
+The fungal glow dims northward as the vine-choked passage begins.
+~
+~
+0 -1 10029
+S
+#10031
+A Sheltered Dell~
+This natural hollow between the roots of three enormous trees is sheltered from the perpetual movement of the forest on all sides, creating a pocket of unusual stillness; the floor is deep with dry leaves and the skeletal remains of small animals, and several fallen branches have been dragged here from elsewhere, suggesting something uses this place for purposes of its own.
+~
+0 3
+D1
+The ancient trunks open eastward toward the great cluster of immovable boles.
+~
+~
+0 -1 10022
+D2
+A worn path heads south through the undergrowth where something has passed many times.
+~
+~
+0 -1 10032
+S
+#10032
+The Heartwood Trail~
+A clear, well-worn trail cuts through the old growth here, its surface packed harder than the surrounding earth and marked by the mingled tracks of many different creatures; the trail is flanked by @@Gdense fern-walls@@N on both sides that make it a natural corridor, and the trees overhanging it are gnarled in ways that suggest deliberate shaping rather than natural growth.
+~
+0 3
+D0
+The heartwood trail climbs northward toward the sheltered dell.
+~
+~
+0 -1 10031
+D1
+The sound of trickling water drifts from the east where the ferns grow wetter.
+~
+~
+0 -1 10033
+D2
+The trail descends southward into a fern-covered slope.
+~
+~
+0 -1 10034
+S
+#10033
+Beside a Trickling Stream~
+A thin stream issues from beneath the root-mass of an ancient tree and trickles eastward through a shallow bed of smooth, dark stones; the water is cold and perfectly clear, faintly @@rtinged green@@N by the minerals of the deep forest, and the bank on either side is thick with watercress and broad-leafed plants that lean over the stream from both sides to nearly meet in the middle.
+~
+0 3
+D3
+The stream's source disappears to the west beneath the ancient roots; the trail resumes.
+~
+~
+0 -1 10032
+E
+stream water stones~
+The water runs over stones the color of old iron, tumbling in miniature cascades between them with a sound like distant whispered conversation; something has made a small dam of sticks further downstream, though whatever built it is long gone.
+~
+S
+#10034
+A Fern-Covered Slope~
+The trail descends here down a gentle slope entirely carpeted in ferns, their fronds reaching knee-height and making the path difficult to follow except by the slight depression where generations of feet have pressed them flat; the soil under the fern cover is loose and dark, smelling of rain and deep root-work, and the slope is studded with half-buried stones worn smooth.
+~
+0 3
+D0
+The fern slope rises northward back toward the heartwood trail.
+~
+~
+0 -1 10032
+D2
+The ferns thin at the bottom of the slope where a natural tree arch spans the trail.
+~
+~
+0 -1 10035
+S
+#10035
+The Twisted Arch~
+Two ancient oaks fell toward each other centuries ago and fused where they met, their trunks intergrowing over decades into a single continuous arch of living wood that spans the trail; the arch is covered in a thick pelt of @@rmoss and small ferns@@N, and passing beneath it carries the distinct physical sensation of crossing a threshold, though into or out of what is unclear.
+~
+0 3
+D0
+The slope rises northward back up through the ferns to the heartwood trail.
+~
+~
+0 -1 10034
+D2
+A clearing of old stumps opens southward beneath the arch.
+~
+~
+0 -1 10036
+E
+arch oaks fused wood~
+Where the two trunks merged, the wood has swirled into complex grain patterns that spiral around each other in a helix; in certain light, the patterns look almost like faces peering out from the bark, though never when looked at directly.
+~
+S
+#10036
+A Clearing of Stumps~
+The stumps here are the remains of trees cut down so long ago that they have been reclaimed entirely by the forest -- moss-covered, spongy, and colonized by ferns from within; whatever cleared this space is long forgotten, and the @@Gyoung trees@@N growing between the old stumps are already substantial, the clearing already losing its openness to the patient expansion of the wood.
+~
+0 3
+D0
+The stumps give way northward to the living arch and the fern slope beyond.
+~
+~
+0 -1 10035
+S
+#10037
+Among Creeping Ivy~
+Dense ivy has conquered this section of forest entirely, blanketing the ground, climbing the trunks, hanging from the lower branches in drapes; walking through it requires lifting each foot high and placing it carefully, as the ivy conceals obstacles -- roots, fallen branches, and once, the depression of something like a large pit that one wrong step would find.
+~
+0 3
+D0
+The ivy thins northward and the two-columned living corridor comes back into view.
+~
+~
+0 -1 10024
+D2
+The ivy continues southward, growing denser and darker at the wood's edge where the briar labyrinth begins.
+~
+~
+0 -1 10038
+S
+#10038
+The Briar Labyrinth Edge~
+The forest undergrowth has developed here into a wall of mixed briar and thorn that stretches to the left and right as far as can be seen, presenting an apparently solid obstacle; a single narrow gap in the wall provides access southward, and the scratching, scraping passage through it has been used -- the torn canes and pressed earth tell of many forced passages by creatures too large to have found it comfortable.
+~
+0 3
+D0
+The briar wall is behind you to the north; the ivy-covered forest continues.
+~
+~
+0 -1 10037
+D2
+The narrow gap through the briar wall opens into a gloomy thicket beyond.
+~
+~
+0 -1 10039
+S
+#10039
+A Gloomy Thicket~
+The canopy here is so dense and layered that it might as well be a cave roof; whatever light reaches this place is a @@gdim, sourceless gray@@N that reveals the crowded trunks and clutching undergrowth without illuminating any of them, leaving the edges of vision in perpetual, uncertain dark; the silence is heavier here than elsewhere, as though absorbed into the thick air itself.
+~
+1 3
+D0
+The gloomy thicket opens northward where the briar wall marks the boundary.
+~
+~
+0 -1 10038
+D2
+The thicket deepens southward where a great willow's trailing fronds are barely visible.
+~
+~
+0 -1 10040
+S
+#10040
+Beneath the Great Willow~
+A willow of monstrous size dominates this place, its canopy spreading outward a hundred feet in every direction, its trailing fronds reaching the ground and enclosing the area in a living curtain of @@Gpale green@@N; the light within is tinted and peaceful, deeply at odds with the sense that the fronds close behind anyone who enters, and the floor beneath is bare earth, smooth and pressed, as though something sleeps here regularly.
+~
+0 3
+D0
+The willow's fronds part northward to the gloomy thicket beyond.
+~
+~
+0 -1 10039
+D2
+Stepping stones of flat gray rock lead southward across boggy ground toward the ruined structures ahead.
+~
+~
+0 -1 10041
+E
+willow fronds curtain~
+Pushing through the trailing fronds releases a wave of the willow's distinctive bitter-green scent; the fronds themselves are noticeably warm to the touch, and there is a low, barely perceptible vibration in the wood that might be mistaken for the sound of something very large breathing slowly nearby.
+~
+S
+#10041
+A Path of Stepping Stones~
+Flat stones of gray granite have been laid across what is otherwise a shallow, treacherous bog, forming an intentional causeway leading southward toward the half-buried structures visible through the mist; the stones are old enough that @@gmoss has grown over their edges@@N, softening their outlines into the surrounding muck, and between them the bog water is dark and gives no indication of depth.
+~
+0 3
+D0
+The stepping stones end northward where firmer ground resumes beneath the great willow.
+~
+~
+0 -1 10040
+D2
+The causeway ends at the edge of the overgrown ruins ahead.
+~
+~
+0 -1 10042
+S
+#10042
+The Overgrown Ruins~
+Stone walls of considerable age emerge from the earth here, their dressed-stone surfaces cracked and separated by tree roots that have inserted themselves into every joint over the centuries; the ruins are extensive, spreading in multiple directions, and the @@gancient stonework@@N is visible in fragments -- a carved lintel here, a column base there -- beneath thick layers of @@Gmoss and vine@@N.
+~
+524288 3
+D0
+The stepping stones lead northward across the bog toward the forest proper.
+~
+~
+0 -1 10041
+D1
+A gap in the eastern wall opens onto more ruined structures.
+~
+~
+0 -1 10043
+D2
+The southern wing of the ruins opens onto what was once a large courtyard.
+~
+~
+0 -1 10048
+D3
+A root-split arch in the western wall leads to an older section of the ruins.
+~
+~
+0 -1 10046
+S
+#10043
+Among Crumbling Walls~
+The walls here still stand to head height in places, forming a maze of interconnected chambers where trees have grown through floors and ceilings alike, their trunks serving now as the primary structural support for masonry that has lost its integrity entirely; @@gcarved inscriptions@@N on some interior faces are still legible in places, though the language is unknown.
+~
+524288 3
+D1
+The eastern portion of the ruins extends further, though the walls grow lower.
+~
+~
+0 -1 10045
+D2
+An iron gate, corroded but still solid, bars the way into the inner courtyard to the south.
+~
+^iron gate~
+1 10081 10044
+D3
+The gap in the western wall leads back to the central ruins.
+~
+~
+0 -1 10042
+E
+inscriptions carvings writing~
+The inscriptions are regular and deeply cut, suggesting they were meant to last; they run in horizontal bands around the walls at eye level, and whatever they record, the frequency of a particular repeating glyph suggests a name -- or a warning -- used many times in the same text.
+~
+S
+#10044
+A Ruined Courtyard~
+This was once an open-air space of considerable size and apparent formality -- the remains of a paved floor are still visible beneath encroaching tree-roots, and the stumps of ornamental pillars line the sides; now the forest has filled it entirely, the @@Gcanopy overhead thick and dark@@N, and the stone underfoot is buckled and cracked and hot with the pressure of the roots forcing it upward from below.
+~
+524288 3
+D0
+The iron gate bars the way northward back into the crumbling chambers.
+~
+^iron gate~
+1 10081 10043
+D1
+A moss-covered well stands at the eastern edge of the ruined courtyard.
+~
+~
+0 -1 10047
+D2
+The southern edge of the courtyard drops away into a sunken garden below.
+~
+~
+0 -1 10049
+D3
+The western end of the courtyard returns through a broken arch to the central ruins.
+~
+~
+0 -1 10042
+S
+#10045
+The Broken Tower Base~
+Only the lowest two meters of the tower remain standing, the upper portions collapsed inward in a rubble heap that has been entirely consumed by @@Gcreeping plants@@N; the rubble forms an irregular mound at the center of the tower base, and the remaining stone walls form a low protective ring around it that once sheltered whatever rose here, now sheltering only the undergrowth that has replaced it.
+~
+524288 3
+D3
+The broken walls open westward back into the crumbling inner chambers.
+~
+~
+0 -1 10043
+E
+tower rubble collapsed~
+Among the rubble, fragments of what might have been elaborate stonework -- a carved face, a section of decorative border, a hinge for a door far taller than any human -- lie half-buried and reclaimed by roots; the fallen tower makes the forest seem deliberately patient by comparison.
+~
+S
+#10046
+A Root-Split Foundation~
+The foundation stones here have been lifted and separated by the root system of an enormous tree that grew directly through the structure's base, each stone now angled outward from its original position and covered in @@grust-colored lichen@@N; the original floor plan is partially visible in the arrangement of the displaced stones, suggesting a large rectangular chamber that no longer exists in any meaningful sense.
+~
+524288 3
+D1
+The root-split foundation connects eastward back through the arch to the central ruins.
+~
+~
+0 -1 10042
+S
+#10047
+Beside a Moss-Covered Well~
+The well is choked with debris and partially collapsed, its original depth impossible to determine; the stones of its rim are covered entirely in @@Gthick moss@@N so that the circular opening looks more like a natural formation than something built, and the air rising from the opening carries a faint mineral cold and the smell of very deep water.
+~
+524288 3
+D3
+The courtyard floor continues westward under its covering of roots and fractured stone.
+~
+~
+0 -1 10044
+E
+well stones opening depth~
+Dropping a stone into the well produces a delayed, resonant splash; the depth implied by the timing is considerable, and the sound that follows is not quite the expected silence but a faint, low moan of displaced air escaping from somewhere even deeper still.
+~
+S
+#10048
+The Sunken Garden~
+The ground here has subsided below the level of the surrounding ruins, creating a natural bowl in which centuries of leaf litter and soil have accumulated to form an unlikely garden; @@Gplants thrive@@N here with unusual vigor, their colors more saturated than the surrounding forest, their growth denser and more purposeful, as though whatever this place was once used for left something in the earth that persists.
+~
+524288 3
+D0
+The sunken garden rises northward to the level of the overgrown ruins above.
+~
+~
+0 -1 10042
+E
+garden soil plants growth~
+The most vigorous plants in the sunken garden grow in a rough circle at its center, as if drawing on something concentrated there; they are of species not seen elsewhere in the forest, with broader leaves of a particularly dark @@Ggreen@@N and flowers that are nearly black at their centers.
+~
+S
+#10049
+A Colonnade of Oaks~
+Oaks have grown here where columns once stood, each tree planted or seeded in the precise socket of an original column base; the result is a natural colonnade that mirrors the architectural intention of the original, the trees' rounded trunks substituting for the carved stone they replaced, their canopy forming a vaulted roof of @@Gleaves@@N that achieves, unintentionally, the grandeur the builders sought.
+~
+524288 3
+D0
+The colonnade opens northward back to the ruined courtyard and the well.
+~
+~
+0 -1 10044
+E
+colonnade oaks columns bases~
+The column bases are still intact -- square, heavily carved, slightly elevated above the ground -- and each oak grows directly from or alongside one; roots have embraced the carved stone completely, the tree and the ruin now so intertwined that neither could be removed without destroying the other.
+~
 S
 #0
 #$
