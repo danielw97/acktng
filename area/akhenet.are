@@ -9,7 +9,7 @@ V 2000 2149
 X 0
 F 15
 U @@yA blistering wind howls through Akh'enet, scouring stone and bone.@@N~
-O ~
+O virant~
 R all~
 W all~
 #ROOMS
@@ -30,6 +30,10 @@ D3
 ~
 ~
 0 -1 2004
+D5
+~
+~
+0 0 8508
 S
 #2001
 @@yShifting Dune Ridge@@N~
@@ -3505,6 +3509,7 @@ G 0 2012 1
 M 0 2016 1 2041 
 
 G 0 2032 0 (null)
+
 G 0 2011 1 
 
 D 0 2042 0 2 
