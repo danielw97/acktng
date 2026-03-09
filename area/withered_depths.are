@@ -862,5 +862,438 @@ The tangle leads south toward the outermost paths of the maze, near an exit.~
 ~
 0 -1 1054
 S
+#1050
+The Thorn Nexus~
+The maze opens here into its dark heart — a space where the thorn-vines draw back from a central dais of compressed and hardened briar-matter, the surface worn smooth by something that sits here with regularity.  The dais is not natural: the vines have been trained and trimmed and killed and regrown in deliberate cycles over years until the resulting structure is as solid and as precisely shaped as worked stone.  @@pSerpentine patterns@@N run across its surface, cut into the hardened briar by something sharp and patient, and the purple-tinged air above the dais is noticeably thicker than the surrounding maze atmosphere — a visible column of slower air, as if the nexus creates its own weather.  From the dais, every channel in the surrounding maze can be felt, a proprioceptive awareness of all the briar's paths at once, which is not a comfortable thing to feel unless one belongs here.  The Briar Queen's seat radiates old power and older malice in the silence.~
+524292 3
+D0
+The maze opens north toward the lower archway chambers.~
+~
+0 -1 1045
+D1
+A broad channel leads east from the nexus, the thorn-walls here pulled back as if in deference.~
+~
+0 -1 1051
+S
+#1051
+The Maze Exit Channel~
+This channel is broader than most in the maze — wide enough to walk side by side — and it leads with unusual directness toward a thinning in the briar mass and, beyond it, open forest.  The vine-walls here have been bent outward deliberately, held in place by thick straps of woven bramble, creating a permanent egress that cannot be allowed to close.  It is difficult to say from inside the maze whether this exit was created by something leaving or something entering, but the direction of the bent vines — bowing outward — suggests the force came from within.~
+524288 3
+D3
+The exit channel leads west back toward the thorn nexus.~
+~
+0 -1 1050
+D1
+The channel opens east into a thorned passage leading to another part of the maze.~
+~
+0 -1 1052
+D0
+The exit thins to the north, the briar mass giving way to open, corrupted forest beyond.~
+~
+0 -1 1055
+S
+#1052
+The Lateral Shunt~
+The maze performs one of its more disorienting tricks here: a passage that appears to run east-west actually deposits the traveller somewhere other than the obvious destination, the vine-walls subtly curved over a long distance to redirect without the curve being perceptible at any single point.  The floor of this passage is scattered with small objects — buttons, bone fragments, a corroded coin, a strip of leather — the accumulated droppings of travellers who never noticed the direction change until too late.  The thorn-walls on both sides are the tallest in the maze, providing no landmark reference beyond themselves.~
+524288 3
+D3
+The passage leads west back toward the maze exit channel.~
+~
+0 -1 1051
+D0
+A cross-passage leads north toward a converging section.~
+~
+0 -1 1047
+D1
+The shunted passage continues east, the misdirection continuing.~
+~
+0 -1 1053
+D2
+The passage leads south, apparently reversing the northward journey but depositing one somewhere different.~
+~
+0 -1 1049
+S
+#1053
+The Southern Thorn Corridor~
+A long, relatively straight corridor runs through the southern portion of the maze, its walls unusually parallel, its floor worn to bare, packed earth.  The corridor is clearly well-used — the thorn-wall surfaces at shoulder height are polished by contact, the lower vine-stems bent by repeated brushing from something large that does not worry about the thorns.  The corridor connects sections of the maze that feel far apart, creating a hidden throughway that shortcuts the labyrinthine paths above.~
+524288 3
+D3
+The corridor leads west toward the lateral shunt.~
+~
+0 -1 1052
+D0
+A branch leads north into the inner maze from the southern corridor.~
+~
+0 -1 1048
+D1
+The southern corridor continues east, the vine-walls drawing slightly closer.~
+~
+0 -1 1054
+S
+#1054
+The Southern Exit~
+The maze reaches its southern terminus here, the vine-mass thinning perceptibly before ending abruptly at a clear boundary — past which the thorns give way to a different landscape entirely, a fetid, open bog that stretches south in a haze of methane and decay.  The transition is jarring: from the oppressive enclosure of the briar labyrinth to the wide, flat, toxic openness of the swamp below.  The thorn-walls at the maze's edge have been stained dark by the bog's miasma, and the lowest vine-stems have died, their blackened ends pointing south like accusing fingers.  The eastern vine-wall at this point appears to loop back inward, offering a maddening route back into the heart of the maze for those who are not yet ready to leave.~
+524288 3
+D3
+The vine-mass leads west back into the depths of the maze.~
+~
+0 -1 1053
+D0
+The southern terminus opens north back into the maze's inner passages.~
+~
+0 -1 1049
+D2
+The maze ends here; the path south descends into the open bog below.~
+~
+0 -1 1095
+D1
+The eastern vine-wall curves inward here, the thorn channel looping back toward the entrance of the maze.~
+~
+0 -1 1035
+S
+#1055
+The Blightwood Margin~
+The transition from below ground to open corrupted forest happens here, where the shaft from the Fungal Hollows breaks the surface in a ring of disturbed earth and lifted root-slab.  The surrounding trees — enormous, ancient, entirely black — close overhead within a dozen feet of the emergence point, their canopy blocking all direct light.  What illumination exists comes from the same @@pfungal bioluminescence@@N that pervades the hollows below, here distributed across the forest floor in scattered patches where surface mycelium networks have broken through.  The air above ground carries a weight and humidity entirely different from the underground, but not more pleasant — the decay here is aerobic and rich and pervasive.~
+1 3
+D5
+The shaft descends back into the Fungal Hollows below.~
+~
+0 -1 1031
+D1
+The blighted forest opens east between closely-spaced black trunks.~
+~
+0 -1 1056
+D0
+The corrupted forest extends north through a section of slightly lower canopy.~
+~
+0 -1 1056
+S
+#1056
+Corrupted Hardwood Stand~
+Enormous hardwood trees dominate this section of the Blightwood — oaks and elms whose trunks are wider than rooms, whose branches start thirty feet from the ground and spread a canopy so dense that the forest floor beneath them is in permanent night.  The bark of each tree is coated in a uniform layer of @@pdark fungal crust@@N that has calcified over decades into a material harder than the wood beneath it, making the trunks feel like stone when struck.  Between the trees, the undergrowth is absent — nothing grows here but the mycelium network on the ground, which glows its cold faint blue in perfect silence.~
+1 3
+D2
+The hardwood stand continues south toward the blightwood margin.~
+~
+0 -1 1055
+D1
+The forest extends east between the massive trunks, a passage barely wide enough to navigate.~
+~
+0 -1 1057
+D0
+The trees grow slightly less massive to the north, offering marginally more space between them.~
+~
+0 -1 1056
+S
+#1057
+The Black Leaf Carpet~
+The ground here is invisible beneath a layer of fallen leaves that have compressed and fused over years into a carpet of @@dblack organic matter@@N, uniformly dark, uniformly thick, uniformly unpleasant to move through.  The surface of the carpet is dry and crisp, but the layers beneath are wet and cold, and it is impossible to determine depth before stepping — each footfall is either a half-inch onto crust or a plunge to the knee.  Somewhere in the leaf-mass below the current level, something moves in response to footsteps, tracking the vibration with a patience that suggests it has never needed to be in a hurry.~
+1 3
+D3
+The leaf carpet thins slightly to the west, the ground firmer there.~
+~
+0 -1 1056
+D1
+The carpet extends east, the movement below becoming less responsive as the distance from the main mass grows.~
+~
+0 -1 1058
+D0
+A clear path runs north through the leaf-carpet toward a less obstructed section.~
+~
+0 -1 1057
+S
+#1058
+The Groaning Boles~
+The trunks of the trees in this section make sound — a slow, continuous groan of wood under stress, the kind of sound a tree makes in strong wind but here occurring in complete stillness.  Each trunk groans on its own schedule, creating an overlapping pattern of wooden complaint that is too irregular to habituate to.  The bark on these trees has cracked vertically from ground to canopy, and the cracks weep a translucent fluid that has dried on the bark surface in long @@bbrown streaks@@N, hardening into ridges that give the trunks a fluted appearance.  The source of the stress is visible at the base of each trunk: the roots have been invaded by a thick mycelium cord that wraps them like a tourniquet, slowly, year by year, strangling the tree it feeds from.~
+1 3
+D3
+The groaning boles continue west toward the black leaf carpet.~
+~
+0 -1 1057
+D1
+The groaning trees extend east, the fluid-weeping bark thickening.~
+~
+0 -1 1059
+D0
+The tree-sound carries north into a section where the trunks grow closer.~
+~
+0 -1 1058
+S
+#1059
+The Strangled Grove~
+Here the mycelium-cord strangulation of the trees has reached its terminal stage — the roots of every tree in view are completely encased in the fungal rope-structure, and the trunks above have swollen grotesquely at their base where the strangulation prevents normal growth.  The trees are dying, but slowly — the process is measured in decades, and the dying trees produce chemicals that feed the mycelium that is killing them, a closed loop of mutual destruction that the blight apparently finds pleasing.  The @@dpurple glow@@N from the mycelium cord here is brighter than the floor-level bioluminescence elsewhere, visible even in daylight if any reached this deep in the canopy.~
+1 3
+D3
+The strangled grove extends west back toward the groaning trees.~
+~
+0 -1 1058
+D2
+The swollen tree-bases crowd close to the south, reducing the path to a narrow squeeze.~
+~
+0 -1 1064
+S
+#1060
+The Root Labyrinth~
+The root systems of the massive trees here have surfaced in dense, chaotic profusion, creating a landscape of knee-to-head-high root arches and root-walls that subdivides the forest floor into a natural maze of chambers and corridors.  Navigation is three-dimensional — climbing over, ducking under, and squeezing between roots is all required to cross this section.  The @@bexposed root-wood@@N is smooth where it has been walked on and rough where it has not, and the smooth-worn paths trace routes that make sense only to whatever primarily uses them.~
+1 3
+D0
+The root labyrinth opens north toward the blightwood margin.~
+~
+0 -1 1055
+D1
+A worn path through the root-tangle leads east.~
+~
+0 -1 1061
+D2
+The root-network descends south, the arches growing lower.~
+~
+0 -1 1065
+S
+#1061
+The Hollow Ground~
+The forest floor sounds different here — each step produces a hollow resonance beneath the compressed leaf-matter, suggesting that the ground is undermined to significant depth by the same root-and-mycelium network that dominates the Fungal Hollows below.  The undermining has caused the surface to settle unevenly: the ground here undulates in shallow bowls and ridges, as if the forest floor is breathing slowly.  Small subsidence holes appear regularly, their edges crumbling, their depths invisible, and something about their placement suggests they were not random.~
+1 3
+D0
+The hollow ground gives way to firmer footing north.~
+~
+0 -1 1056
+D3
+The unevenness continues west through the root labyrinth.~
+~
+0 -1 1060
+D1
+The hollow resonance follows eastward, the subsidence holes more frequent.~
+~
+0 -1 1062
+D2
+The settlement deepens to the south, the ground noticeably lower there.~
+~
+0 -1 1066
+S
+#1062
+The Subsidence Field~
+The ground has settled dramatically here, dropping several feet below the surrounding forest floor level in an irregular depression that has collected standing dark water in its lowest points.  The trees growing from the depression floor are tilted at varying angles, their roots exposed by the slippage, and several have fallen — their trunks now serving as bridges or walls, colonised by the inevitable fungi.  The water in the lowest pools is cold and smells of old iron.~
+1 3
+D3
+The depression levels off to the west, the ground rising back toward firmer footing.~
+~
+0 -1 1061
+D1
+The subsidence field continues east, the depression deepening.~
+~
+0 -1 1063
+D2
+The fallen trees provide an irregular path south through the water-pooled section.~
+~
+0 -1 1067
+S
+#1063
+The Tilted Forest~
+Every tree in this section leans to the northeast at the same angle — not dramatically, not noticeably at a glance, but measurably, consistently, as though some force has been applied equally to all of them over a long period.  The lean creates a claustrophobic effect: the canopy above is angled, the trunks around form a slanted grid, and perspective is subtly warped by the consistency of the tilt.  The roots on the southwest side of each tree are exposed and stressed, while those on the northeast side have thickened to compensate, creating a lopsided root-architecture that forces movement in winding paths.~
+1 3
+D3
+The tilted trees thin to the west, the angle of lean decreasing.~
+~
+0 -1 1062
+D1
+The tilt is most pronounced to the east, the trees almost leaning against each other.~
+~
+0 -1 1064
+D2
+The tilted forest continues south, the lean remaining consistent.~
+~
+0 -1 1068
+S
+#1064
+The Canopy Access Grove~
+A slightly wider clearing in the dense Blightwood marks the base of one of the oldest trees in this section — its trunk wider than three people could link arms around, its bark entirely dead but preserved by the fungal crust that coats it, its root-system surfacing in a ring of massive arches that create a natural enclosure.  From the branches above, far overhead, something that might be a crude rope ladder descends within arm's reach — its lower rungs rotted, but higher rungs still holding.  The canopy above is accessible from here, the massive branches of the ancient tree forming a highway into the elevated realm of the Ancient Canopy.~
+1 3
+D0
+The clearing is exited north toward the tilted forest section.~
+~
+0 -1 1059
+D3
+The root-ring enclosure opens west toward the subsidence field.~
+~
+0 -1 1063
+D4
+The rope-ladder and the ancient tree's branches climb upward into the Ancient Canopy above.~
+~
+0 -1 1082
+S
+#1065
+The Oozing Bark Corridor~
+The trees lining this forest corridor are in an advanced state of corruption — their bark has separated from the wood beneath and hangs in long, curling strips, each one coated on the underside with a thick layer of @@pfungal matter@@N that oozes a slow, dark fluid.  The fluid drips from each strip in long pendant drops, and the forest floor beneath is black and slick with accumulated drip.  Navigation requires avoiding the drip-points, which is difficult given their density — a few minutes of standing still results in coverage of exposed skin.  The fluid is not immediately painful.  It is, however, persistent.~
+1 3
+D0
+The oozing corridor leads north back toward the root labyrinth.~
+~
+0 -1 1060
+D1
+The bark-strip trees continue east, the drip-points thickening.~
+~
+0 -1 1066
+D2
+The corridor descends south, the bark strips growing longer and more frequent.~
+~
+0 -1 1070
+S
+#1066
+The Crooked Cathedral~
+The trees here have grown so tall and so close together that their upper branches have intertwined far overhead in a vault of black wood — an accidental gothic cathedral roofed in dead interlocking timber.  The scale is genuine: the vault is sixty feet up, and the sound within the cathedral-space is different from the open forest, absorbed by the wood above into a deep, attentive silence.  The @@pcorruption@@N has given the wood a slight phosphorescent quality, and the vault above glows very faintly purple, casting a light that is more felt than seen.  Standing here at the intersection of several paths, it is easy to understand why something large might have chosen this spot as its territory.~
+1 3
+D0
+The cathedral space opens north toward the hollow ground.~
+~
+0 -1 1061
+D3
+The forest thins to the west, away from the cathedral interior.~
+~
+0 -1 1065
+D1
+The cathedral continues east, the vault shifting in structure.~
+~
+0 -1 1067
+D2
+The forest becomes denser to the south, the cathedral effect diminishing.~
+~
+0 -1 1071
+S
+#1067
+The Blackened Understory~
+The understory plants here — those that grow in the shadow of the main canopy — have all died and blackened but not fallen, creating a secondary layer of dark dead vegetation below the tree canopy.  The dead understory makes movement through this section difficult, the dry blackened stalks snapping loudly and showering black dust on anything that disturbs them.  The dust is mildly irritating to eyes and throat, and it settles on everything that passes through in a layer that takes hours to brush off.  Something has beaten a clear path through the understory that is wide enough for two — the stalks here are crushed, not snapped, pressed flat by considerable weight.~
+1 3
+D3
+The understory thins to the west, the dead plants less dense.~
+~
+0 -1 1066
+D1
+The crushed path through the understory continues east.~
+~
+0 -1 1068
+D2
+The understory grows deeper south, the dead vegetation thicker.~
+~
+0 -1 1072
+S
+#1068
+The Frozen Moment~
+Something violent happened here long ago, and the forest has preserved the evidence with perfect fidelity in the deep-blight manner of this place.  Three trees are shattered at mid-height, their upper sections gone, their fractured bases splayed outward in a pattern consistent with a single enormous outward force.  Whatever caused it left no tracks, no debris, and no heat — the shattering happened in cold, and the cold of it lingers.  The @@dfractured wood@@N at each break has been colonised by a grey-white fungus that has rendered the surfaces sterile, and nothing grows within twenty feet of the largest shattered trunk.~
+1 3
+D3
+The path leads west back through the understory.~
+~
+0 -1 1067
+D1
+The forest recovers to the east, the trees intact again.~
+~
+0 -1 1069
+D2
+The frozen moment gives way to corrupted but undamaged forest to the south.~
+~
+0 -1 1073
+S
+#1069
+The Amber Forest Floor~
+The same amber fluid that drips through sections of the Fungal Hollows below surfaces here — pooling in shallow depressions of the forest floor and coating the roots of trees where they meet the ground.  The amber has hardened in exposed areas into a glassy surface that catches and distorts light, and the pooled liquid areas are deep enough to submerge a boot.  Preserved in the hardened sections, visible through the amber like specimens in a museum, are several generations of fallen leaves, dead insects, and at one point an entire small creature frozen in mid-motion.  The tree roots coated in amber have swollen around it over time, incorporating the coating into their structure.~
+1 3
+D3
+The amber forest floor continues west toward the frozen moment.~
+~
+0 -1 1068
+D2
+The amber pools deepen to the south, the footing treacherous.~
+~
+0 -1 1074
+S
+#1070
+The Spongy Ground~
+The forest floor here is deeply soft — not the crunch-then-sink of the leaf-carpet sections above but a genuine sponginess, the soil beneath the thin surface layer permeated with water and fungal matter to a depth that swallows boot-heels and resists withdrawal with a gentle sucking.  Progress is slow here, each step requiring effort to extract, and the ground makes quiet, wet sounds with each footfall.  The trees growing from this substrate have compensated with extraordinarily elaborate above-ground root structures, their roots forming buttresses that keep the trunks upright despite the unstable ground beneath.~
+1 3
+D0
+The ground firms slightly to the north, toward the oozing bark corridor.~
+~
+0 -1 1065
+D1
+The spongy ground continues east, equally soft.~
+~
+0 -1 1071
+D2
+The ground becomes wetter to the south, approaching the character of a bog.~
+~
+0 -1 1075
+S
+#1071
+The Pale Fungus Stand~
+An unusual clustering of pale, non-bioluminescent fungi occupies the forest floor here — each specimen large, white-capped, and growing from a shared underground network that makes them sway in synchrony when the ground is disturbed nearby.  The fungi are enormous by surface standards: the largest cap spans six feet, and the cluster extends for fifty feet in all directions.  They are the only organisms in this section of the Blightwood that are not purple-grey-black in colour, and the white of them against the dark surroundings has an uncanny quality, as if they belong in a different forest.~
+1 3
+D0
+The pale fungus stand opens north toward the crooked cathedral.~
+~
+0 -1 1066
+D3
+The pale fungi thin to the west, the spongy ground beginning there.~
+~
+0 -1 1070
+D2
+The pale stand continues south, the fungi denser and the caps lower to the ground.~
+~
+0 -1 1076
+S
+#1072
+The Woven Root Barrier~
+A natural barrier of above-ground roots has grown across this section of the forest over years, creating a wall chest-height and several feet thick that forces passage to specific gaps where the root-weave is thinner.  The barrier runs roughly east to west as far as can be seen in either direction, and the gaps through it show signs of heavy use — the root-surfaces around them are worn smooth.  Beyond the barrier to the south, the forest character changes: the trees are more densely spaced and the darkness more complete, hinting at the deeper corruption of the Blightwood's interior.~
+1 3
+D3
+The root barrier recedes to the west, the wall thinning.~
+~
+0 -1 1071
+D1
+The barrier wall continues east, another gap visible in the distance.~
+~
+0 -1 1073
+D2
+One of the larger gaps in the root barrier opens south into the darker forest beyond.~
+~
+0 -1 1077
+S
+#1073
+The Resin Pools~
+Pools of hardened and semi-liquid tree resin have accumulated on the forest floor here, leaking from trees whose cortex layers have been compromised by the fungal network within.  The hardened pools create irregular stepping-stone paths through the semi-liquid sections, and the semi-liquid resin is amber-coloured, sweet-smelling, and sticky enough to catch small creatures that wander in.  Several have been caught — visible at various depths in the hardening resin, preserved in exactly the posture of their final moment.  The trees above leak continuously, replenishing the pools on a timescale of days.~
+1 3
+D3
+The resin pools thin to the west toward the frozen moment clearing.~
+~
+0 -1 1068
+D0
+The path leads north through a section of firmer ground.~
+~
+0 -1 1068
+D1
+The resin pools extend east, the liquid sections deeper.~
+~
+0 -1 1074
+D2
+The path south through the resin pools leads to a deeper section of corrupted forest.~
+~
+0 -1 1078
+S
+#1074
+The Dark Archway Trees~
+Two enormous trees here have grown into each other at their mid-sections, their trunks fusing over decades into a single unit that spans the path like an arch.  The arch is large enough to walk beneath without crouching, and the passage through it is clearly designated — the forest on both sides of the arch-path is impassably dense, routing everything through the living gate.  The bark of the fused section is entirely different from the surrounding trees: smooth, dark purple rather than the usual grey-black, and warm to the touch in a manner that suggests internal biological activity rather than absorbed heat.~
+1 3
+D3
+The archway trees recede west toward the amber forest floor.~
+~
+0 -1 1069
+D0
+A path leads north through the arch, toward the tilted forest section.~
+~
+0 -1 1069
+D2
+The arch frames a path south toward the deeper forest and the swamp beyond.~
+~
+0 -1 1079
+S
 #0
 #$
