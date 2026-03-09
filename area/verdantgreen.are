@@ -2432,6 +2432,348 @@ The Alpha has been here long enough that the space has organized itself around i
 ~
 S
 #0
+#MOBILES
+#10000
+verdant stalker~
+a verdant stalker~
+A verdant stalker crouches motionless here, its body indistinguishable from the undergrowth until it moves.
+
+~
+This predator has evolved camouflage so perfect that its outline dissolves into leaf and shadow; the only warning of its presence is the faint displacement of the undergrowth as it repositions, and by then it is too late.
+
+~
+97 65536 -300 S
+80 0
+150 -15 10 10
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10001
+thornback briar beast~
+a thornback briar beast~
+A thornback briar beast moves through the undergrowth, its body a dense mass of animated wood and iron-hard thorns.
+
+~
+Whatever this creature was before the forest's will took it, it is now armored in interlocked thorn and hardened bark that no conventional weapon finds easy purchase in; it attacks with indiscriminate force and no apparent awareness of damage taken.
+
+~
+97 0 -300 S
+82 0
+200 -15 11 11
+! 0 0 0 7 1052802 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10002
+canopy lurker~
+a canopy lurker~
+A canopy lurker hangs motionless among the branches above, its long body folded into a shape that reads as shadow.
+
+~
+The canopy lurker does not move until something passes beneath it, at which point it drops with a speed that its size makes impossible to anticipate; its grip, once established, applies mechanical force that does not waver.
+
+~
+97 65536 -350 S
+84 0
+250 -18 12 12
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10003
+ancient treant~
+an ancient treant~
+An ancient treant stands here, its trunk wide enough to shelter a company and its limbs moving with the terrible slowness of things that have never needed to hurry.
+
+~
+This is one of the original inhabitants of the Verdant Depths; its bark has fused with centuries of accumulated growth and the passage of smaller creatures has worn its surface smooth in patterns that almost resemble deliberate carving. It has outlasted everything that has tried to stop it.
+
+~
+97 0 -350 S
+86 0
+300 -20 13 13
+! 0 0 0 7 1062150 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10004
+sporecap shambler~
+a sporecap shambler~
+A sporecap shambler lurches through the undergrowth, its body a humanoid framework overgrown with broad shelf fungus and trailing spore-curtains.
+
+~
+Whatever this creature was before the fungal infection completed its work, it is now entirely substrate -- the original body a scaffold for a fungal colony that moves it through the forest to spread spores and gather nutrients from whatever it encounters along the way.
+
+~
+97 0 -300 S
+83 0
+200 -16 11 11
+! 0 0 0 7 1052802 0 0
+| 512 128 0 0 0 32 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10005
+deepwood wolf~
+a deepwood wolf~
+A deepwood wolf paces here, its bulk twice that of any surface wolf and its coat a dark green-grey that vanishes entirely in the forest's shadows.
+
+~
+The deepwood wolf has lived in this place long enough that the forest's particular intelligence has become part of its nature; it hunts with a patience and tactical awareness that no ordinary predator should possess, and wherever its pack is, it is aware of everything this individual's eyes see.
+
+~
+97 0 -350 S
+85 0
+250 -18 12 12
+! 0 0 0 7 1052802 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10006
+vine strangler~
+a vine strangler~
+A vine strangler moves through the undergrowth as a mass of coiled, purposeful vine that has adopted a humanoid posture for the convenience of locomotion.
+
+~
+There is no brain in the vine strangler that a conventional anatomist would recognize; its intelligence is distributed through the entire vine mass and expressed entirely in the efficiency with which it identifies, pursues, and eliminates anything that intrudes on its territory.
+
+~
+97 0 -400 S
+87 0
+350 -22 14 14
+! 0 0 0 7 1062150 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10007
+moss-covered golem~
+a moss-covered golem~
+A moss-covered golem stands here, its stone body so thoroughly colonized by living moss that the original material is visible only as a darker texture beneath the green.
+
+~
+This construct was built by hands now centuries gone to serve a purpose that has been forgotten even longer than those hands have been dust; what remains is the imperative to guard without any remaining memory of what it was built to guard against, which has made it hostile to everything.
+
+~
+97 0 -350 S
+88 0
+400 -25 14 12
+! 0 0 0 7 1062150 0 96
+| 34 0 0 0 0 34 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10008
+blighted dryad~
+a blighted dryad~
+A blighted dryad stands here, beautiful from a distance and deeply wrong at any closer approach, her skin the color of diseased bark and her eyes replaced by solid black.
+
+~
+She was once a guardian of the forest's living heart; the corruption that took her was gradual and she was not entirely unwilling, which makes her more dangerous than one who fought it -- she understands what she used to protect and knows exactly where it is vulnerable.
+
+~
+97 0 -400 S
+85 2
+200 -15 10 10
+! 0 0 0 7 4098 6656 0
+| 4 2 0 0 0 0 0
++ 20 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10009
+thornfang stalker~
+a thornfang stalker~
+A thornfang stalker moves through the shadows with the mechanical precision of a creature whose entire existence has been dedicated to the elimination of a single category of problem.
+
+~
+The thornfang stalker is a pack hunter operating alone only because the pack has divided to cover multiple approaches; it communicates the location of its current target by subsonic vocalization, and the rest of the pack, wherever it is, is listening.
+
+~
+97 0 -450 S
+90 0
+500 -25 16 16
+! 0 0 0 7 1062150 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10010
+rootweaver spider~
+a rootweaver spider~
+A rootweaver spider occupies the intersection of several root-lines, its body a mottled brown-green and its web woven not from silk but from repurposed root-fiber.
+
+~
+The rootweaver spider has evolved alongside the forest's root network to the point where its prey-capture system uses the root-network itself as a detection grid; the web it weaves is an extension of the root-mass, and the root-mass tells it everything that moves.
+
+~
+97 0 -400 S
+88 0
+350 -22 13 13
+! 0 0 0 7 1052802 0 0
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10011
+petrified sentinel~
+a petrified sentinel~
+A petrified sentinel stands here in absolute stillness, indistinguishable from a stone formation until it moves, at which point the illusion shatters completely.
+
+~
+This construct was once a treant; the petrification process preserved the structure of the original living tree in stone so dense it rings like metal when struck, with none of the original wood's structural weakness remaining and none of its need for light or water.
+
+~
+33554529 0 -500 S
+92 0
+800 -30 18 16
+! 0 0 0 7 1619980 0 96
+| 34 0 0 0 0 34 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10012
+fungal abomination~
+a fungal abomination~
+A fungal abomination fills the available space with its bulk, a mass of fused fungal tissue that has grown far beyond what any individual organism should achieve.
+
+~
+Multiple fungal species have merged here into a single colony that has achieved something it cannot have achieved by any ordinary biological process; the merger has produced a form of distributed intelligence expressed entirely through the unified pursuit of nutrition.
+
+~
+97 0 -450 S
+90 0
+500 -25 16 15
+! 0 0 0 7 1062150 0 0
+| 512 128 0 0 0 32 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10013
+heartwood guardian~
+a heartwood guardian~
+A heartwood guardian stands at the boundary of the inner forest, its body constructed from the densest heartwood of the oldest trees and animated by a will that is not its own.
+
+~
+The heartwood guardians were not made in any conventional sense -- they grew, over centuries, in response to the need for protection; the forest itself shaped them from its own material, which means striking one is striking the forest, and the forest notices.
+
+~
+33554529 0 -500 S
+93 0
+900 -32 19 18
+! 0 0 0 7 1619980 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10014
+rotwood shambler~
+a rotwood shambler~
+A rotwood shambler lurches through the blightwood's outer zones, its body a column of advanced rot that has achieved ambulatory capability through mechanisms that do not bear close examination.
+
+~
+The rotwood shambler is what results when the Blightwood Ancient's decay network animates a sufficiently large accumulation of decomposing material; it is not precisely alive and not precisely a construct, but something between the two that its creator finds useful.
+
+~
+97 0 -400 S
+86 0
+300 -20 13 12
+! 0 0 0 7 1052802 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10015
+sporecrown drone~
+a sporecrown drone~
+A sporecrown drone moves through the blightwood's outer zones on a patrol route that has been chemically encoded into its fungal nervous system.
+
+~
+The sporecrown drone is a purpose-built extension of the Blightwood Ancient's sensory apparatus; it perceives through chemical gradients and reports back through the spore-network, which means the Blightwood Ancient knows about this intrusion before the drone itself has fully registered it.
+
+~
+97 0 -300 S
+84 0
+250 -18 11 11
+! 0 0 0 7 1052802 0 0
+| 512 128 0 0 0 32 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10016
+thornfang packmate~
+a thornfang packmate~
+A thornfang packmate moves with the specific efficiency of a creature that knows exactly where every other member of its pack is at any given moment.
+
+~
+The packmate operates in a distributed hunting pattern coordinated through subsonic channels; it is never truly alone, and the pack's response time to distress signals in this territory has been refined over generations to something approaching instantaneous.
+
+~
+97 0 -400 S
+89 0
+400 -22 14 14
+! 0 0 0 7 1062150 0 0
+| 2 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10017
+root tendril mass~
+a root tendril mass~
+A root tendril mass moves through the Rootmother's domain, its thousands of individual rootlets coordinated into a unified organism by the intelligence that governs the root-network.
+
+~
+Each tendril in this mass is a separate organism that has surrendered individual function to collective purpose; the mass acts as a single entity because the Rootmother's root-network provides the coordination that makes individual decision-making unnecessary.
+
+~
+97 0 -350 S
+87 0
+350 -22 13 13
+! 0 0 0 7 1052802 0 0
+| 32 128 0 0 0 512 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10018
+canopy weaver~
+a canopy weaver~
+A canopy weaver moves through the web-infrastructure of the predator den's upper level, its eight legs navigating the silk-and-root network with the confidence of something that built the entire system.
+
+~
+The canopy weaver's web spans the entire zone's canopy and serves simultaneously as territory marker, prey-capture system, and long-range communication network; disturbances propagate back to the weaver at the speed of silk tension.
+
+~
+33554529 0 -500 S
+91 0
+700 -28 17 16
+! 0 0 0 7 1619980 0 0
+| 32 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#10019
+verdant wraith~
+a verdant wraith~
+A verdant wraith drifts between the trees, its form composed of condensed forest-memory given a shape that approximates the living thing it no longer is.
+
+~
+The verdant wraith is what remains of a consciousness that was once part of the forest's living network; death separated it from the root-communion it had been part of, and what remains is the grief of that separation expressed as hostility toward everything still alive.
+
+~
+33554529 2 -600 S
+95 0
+1000 -35 20 18
+! 0 0 0 7 4098 6656 0
+| 4 2 0 0 0 0 0
++ 30 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#0
 #OBJECTS
 #10081
 iron gate key~
