@@ -1,0 +1,19 @@
+level -1
+keywords thought devourer
+---
+*******************************************************************************
+       Name: thought devourer
+       Kind: Spell
+ Availability Flags: REMORT / NORM
+ Class Levels: 65
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 1200
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: 
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

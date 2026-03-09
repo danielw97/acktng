@@ -1,0 +1,19 @@
+level -1
+keywords fire elemental
+---
+*******************************************************************************
+       Name: fire elemental
+       Kind: Spell
+ Availability Flags: REMORT / NORM
+ Class Levels: 11 11
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 120
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !FIRE ELEMENTAL!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

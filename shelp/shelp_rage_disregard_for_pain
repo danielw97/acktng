@@ -1,0 +1,19 @@
+level -1
+keywords rage:disregard for pain
+---
+*******************************************************************************
+       Name: Rage:disregard for pain
+       Kind: Skill
+ Availability Flags: REMORT / WOLF
+ Class Levels: None
+     Targets: TAR_IGNORE
+    Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: 
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

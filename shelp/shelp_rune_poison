@@ -1,0 +1,19 @@
+level -1
+keywords rune:poison
+---
+*******************************************************************************
+       Name: rune:poison
+       Kind: Spell
+ Availability Flags: REMORT / NORM
+ Class Levels: 38 40 8
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 80
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: The rune dissipates.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

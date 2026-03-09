@@ -1,12 +1,19 @@
 level -1
-keywords shelp_know_weakness
+keywords know weakness
 ---
 *******************************************************************************
-       Name: Know Weakness		
-    Classes: Psionicist(18)
-   Duration: 2-5 (Cast Level based)
-   Modifies: HitRoll
-       Type: Defensive - Self
-Description: This spell allows the caster to know his/her enemy's weaknesses,
-             thus providing a greater chance of striking it.
+       Name: know weakness
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 18
+     Targets: TAR_CHAR_SELF
+    Position: POS_STANDING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You are less aware of your enemy's weaknesses.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

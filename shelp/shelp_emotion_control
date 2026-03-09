@@ -1,0 +1,19 @@
+level -1
+keywords emotion control
+---
+*******************************************************************************
+       Name: emotion control
+       Kind: Skill
+ Availability Flags: MORTAL / NORM
+ Class Levels: 75
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: emotion control
+   Wear-Off: !EMOTION CONTROL!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

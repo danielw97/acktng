@@ -1,0 +1,19 @@
+level -1
+keywords black hand
+---
+*******************************************************************************
+       Name: black hand
+       Kind: Spell
+ Availability Flags: REMORT / NORM
+ Class Levels: 7 7
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 50
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Black Hand
+   Wear-Off: The hand dissolves from around your throat into nothingness.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

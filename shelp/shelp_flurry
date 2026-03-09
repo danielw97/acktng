@@ -1,0 +1,19 @@
+level -1
+keywords flurry
+---
+*******************************************************************************
+       Name: Flurry
+       Kind: Skill
+ Availability Flags: MORTAL / NORM
+ Class Levels: 45
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Flurry
+   Wear-Off: 
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

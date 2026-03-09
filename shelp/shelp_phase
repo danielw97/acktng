@@ -1,13 +1,19 @@
 level -1
-keywords shelp_phase
+keywords phase
 ---
 *******************************************************************************
-       Name: Phase		
-    Classes: Psionicist(45)
-   Duration: 3 + ( Cast Level / 20 )
-   Modifies: Armor Class
-       Type: Defensive - Self
-Description: This spell switches part of the caster's body into a different
-             plane of existence, allowing him/her to pass through closed
-             doors, as well as providing an Armor Class bonus.
+       Name: phase
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 45
+     Targets: TAR_CHAR_SELF
+    Position: POS_STANDING
+   Min Mana: 20
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You feel solid again.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

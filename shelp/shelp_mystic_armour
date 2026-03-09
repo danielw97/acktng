@@ -1,0 +1,19 @@
+level -1
+keywords mystic armour
+---
+*******************************************************************************
+       Name: mystic armour
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 10 NO_USE} spell_mystic_armor TAR_CHAR_DEFENSIVE POS_STANDING NULL SLOT( 590 ) 18 24 FALSE "" "Your Mystic Armour fades away" "The Mystic Armour around someone in the room fades away."} {     MORTAL NORM "nerve fire" {NO_USE 60
+     Targets: TAR_IGNORE
+    Position: POS_FIGHTING
+   Min Mana: 50
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: nerve fire
+   Wear-Off: !Nerve Fire!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

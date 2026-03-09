@@ -5370,7 +5370,7 @@ void do_shelp(CHAR_DATA *ch, char *argument)
    HELP_DATA *pHelp;
 
    if (argument[0] == '\0')
-      argument = "shelp_summary";
+      argument = "shelp";
 
    for (pHelp = first_shelp; pHelp != NULL; pHelp = pHelp->next)
    {

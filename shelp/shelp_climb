@@ -1,0 +1,19 @@
+level -1
+keywords climb
+---
+*******************************************************************************
+       Name: climb
+       Kind: Skill
+ Availability Flags: MORTAL / NORM
+ Class Levels: 25
+     Targets: TAR_IGNORE
+    Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Climb!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

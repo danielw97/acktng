@@ -1,0 +1,19 @@
+level -1
+keywords poison:nightshade
+---
+*******************************************************************************
+       Name: poison:nightshade
+       Kind: Skill
+ Availability Flags: ADEPT / NORM
+ Class Levels: 2
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Poison Nightshade
+   Wear-Off: @@N$nFeels much better!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

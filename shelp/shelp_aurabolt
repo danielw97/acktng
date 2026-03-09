@@ -1,0 +1,19 @@
+level -1
+keywords aurabolt
+---
+*******************************************************************************
+       Name: aurabolt
+       Kind: Skill
+ Availability Flags: REMORT / NORM
+ Class Levels: 34 41
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Aurabolt
+   Wear-Off: !!Aurabolt!!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

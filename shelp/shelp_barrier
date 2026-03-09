@@ -1,13 +1,19 @@
 level -1
-keywords shelp_barrier
+keywords barrier
 ---
 *******************************************************************************
-       Name: Barrier		
-    Classes: Psionicist(8)
-   Duration: 4 + ( Cast Level / 20 )
-   Modifies: Armor Class
-       Type: Defensive - Self
-Description: This spell allows the caster to magically produce a mental
-             barrier around him/her, which gives limited protection from
-             attacks.
+       Name: barrier
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 8
+     Targets: TAR_CHAR_SELF
+    Position: POS_STANDING
+   Min Mana: 30
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: Your barrier slowly fades.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

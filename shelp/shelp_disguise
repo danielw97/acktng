@@ -1,0 +1,19 @@
+level -1
+keywords disguise
+---
+*******************************************************************************
+       Name: disguise
+       Kind: Skill
+ Availability Flags: REMORT / NORM
+ Class Levels: 25 25
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 0
+ Wait Beats: 0
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Disguise!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

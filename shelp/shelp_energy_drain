@@ -1,0 +1,19 @@
+level -1
+keywords energy drain
+---
+*******************************************************************************
+       Name: energy drain
+       Kind: Spell
+ Availability Flags: MORTAL / VAMP
+ Class Levels: 15 7 8 11 9 13
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 12
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: energy drain
+   Wear-Off: !Energy Drain!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

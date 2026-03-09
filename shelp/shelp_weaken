@@ -1,12 +1,19 @@
 level -1
-keywords shelp_weaken
+keywords weaken
 ---
 *******************************************************************************
-       Name: Weaken		
-    Classes: Cleric(20)
-   Duration: 1 + ( Cast Level / 16 )
-   Modifies: Strength
-       Type: Offensive
-Description: This spell causes the caster to force the target to feel very
-             weak, suffering a Strength penalty as a result.
+       Name: weaken
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 20
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 20
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: spell
+   Wear-Off: You feel stronger.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

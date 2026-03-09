@@ -1,0 +1,19 @@
+level -1
+keywords knee
+---
+*******************************************************************************
+       Name: knee
+       Kind: Skill
+ Availability Flags: MORTAL / NORM
+ Class Levels: 8
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 1
+ Wait Beats: 18
+ Can Learn: TRUE
+Noun Damage: knee
+   Wear-Off: !Knee
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

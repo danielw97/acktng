@@ -1,0 +1,19 @@
+level -1
+keywords terra rend
+---
+*******************************************************************************
+       Name: terra rend
+       Kind: Spell
+ Availability Flags: REMORT / NORM
+ Class Levels: 40
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 120
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: terra rend
+   Wear-Off: !terra rend!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

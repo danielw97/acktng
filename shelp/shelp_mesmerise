@@ -1,0 +1,19 @@
+level -1
+keywords mesmerise
+---
+*******************************************************************************
+       Name: mesmerise
+       Kind: Spell
+ Availability Flags: MORTAL / VAMP
+ Class Levels: 5 2 2 2 2 2
+     Targets: TAR_CHAR_DEFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 4
+ Wait Beats: 8
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !MESMERISE!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

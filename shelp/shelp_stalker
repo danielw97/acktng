@@ -1,0 +1,19 @@
+level -1
+keywords stalker
+---
+*******************************************************************************
+       Name: stalker
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: None
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 100
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Stalker!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

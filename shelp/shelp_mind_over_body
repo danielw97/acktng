@@ -1,0 +1,19 @@
+level -1
+keywords mind over body
+---
+*******************************************************************************
+       Name: Mind Over Body
+       Kind: Skill
+ Availability Flags: MORTAL / NORM
+ Class Levels: 21
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 80
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: Mind Over Body
+   Wear-Off: You lose your focus on your mind over your body
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

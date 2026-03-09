@@ -1,0 +1,19 @@
+level -1
+keywords mana drain
+---
+*******************************************************************************
+       Name: mana drain
+       Kind: Spell
+ Availability Flags: REMORT / NORM
+ Class Levels: 11 15 11 15
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 150
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: @@NThe @@dMana Drain@@N dissipates.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

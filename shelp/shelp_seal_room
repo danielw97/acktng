@@ -1,0 +1,19 @@
+level -1
+keywords seal room
+---
+*******************************************************************************
+       Name: seal room
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 70 50 50
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 75
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: The Energy web around this room fades.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

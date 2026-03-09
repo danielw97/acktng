@@ -1,12 +1,19 @@
 level -1
-keywords shelp_flamestrike
+keywords flamestrike
 ---
 *******************************************************************************
-       Name: Flamestrike		
-    Classes: Cleric(54)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell allows the caster to call forth a vertically-moving
-             jet of flame to briefly engulf the target.
+       Name: flamestrike
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 54
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 20
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: flamestrike
+   Wear-Off: !Flamestrike!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

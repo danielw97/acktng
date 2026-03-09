@@ -1,12 +1,19 @@
 level -1
-keywords shelp_fireball
+keywords fireball
 ---
 *******************************************************************************
-       Name: Fireball		
-    Classes: Mage(28)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell allows the caster to project a ball of flame from
-             their hand, to strike down the target.
+       Name: fireball
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 28
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: fireball
+   Wear-Off: !Fireball!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

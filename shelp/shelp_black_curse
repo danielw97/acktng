@@ -1,0 +1,19 @@
+level -1
+keywords black curse
+---
+*******************************************************************************
+       Name: black curse
+       Kind: Spell
+ Availability Flags: REMORT / NORM
+ Class Levels: 65 65
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 120
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: Black Curse
+   Wear-Off: !Black Curse!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

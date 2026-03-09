@@ -1,13 +1,19 @@
 level -1
-keywords shelp_teleport
+keywords teleport
 ---
 *******************************************************************************
-       Name: Teleport		
-    Classes: Mage(40)
-   Duration: N/A
-   Modifies: N/A
-       Type: N/A
-Description: This spell causes the caster to randomly teleport to a new
-             location somewhere in the realms.  The caster has no control
-             other where he/she ends up!
+       Name: teleport
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 40
+     Targets: TAR_CHAR_SELF
+    Position: POS_FIGHTING
+   Min Mana: 35
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Teleport!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

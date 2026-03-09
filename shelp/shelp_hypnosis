@@ -1,12 +1,19 @@
 level -1
-keywords shelp_hypnosis
+keywords hypnosis
 ---
 *******************************************************************************
-       Name: Hypnosis 		
-    Classes: Psionicist(17)
-   Duration: 3 + ( Cast Level / 8 )
-   Modifies: N/A
-       Type: Offensive
-Description: This spell allows the caster to attempt to hypnotise his/her
-             victim, who will then follow all orders given.
+       Name: hypnosis
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 14
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_STANDING
+   Min Mana: 30
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Hypnosis!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

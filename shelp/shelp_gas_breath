@@ -1,0 +1,19 @@
+level -1
+keywords gas breath
+---
+*******************************************************************************
+       Name: gas breath
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: None
+     Targets: TAR_IGNORE
+    Position: POS_FIGHTING
+   Min Mana: 0
+ Wait Beats: 4
+ Can Learn: FALSE
+Noun Damage: blast of gas
+   Wear-Off: !Gas Breath!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

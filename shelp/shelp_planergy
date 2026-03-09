@@ -1,24 +1,19 @@
 level -1
-keywords shelp_planergy
+keywords planergy
 ---
 *******************************************************************************
-       Name: Planergy		
-    Classes: Psionicist(5)
-   Duration: N/A
-   Modifies: N/A
-       Type: Offensive
-Description: This spell allows the caster to summon alien energy to come
-             forth, and engulf the victim.  The energy summoned is determined
-             by the level of the caster:
-             Level:		Plane:		Energy:
-              <  8 		Fire            Flames
-              9-17		Sun             Heat Ray
-             18-26		Magma 		Lava
-	     27-35		Radiance	Light
-             36-44		Lightning	Lightning
-	     34-53		Salt		Dehydration
-	     54-62		Ash		Cold
-	     63-71		Positive	Energy
-	      > 72		Negative	Energy
-             NOTE: The damage increases with each new Plane.
+       Name: planergy
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 5
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 25
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: energy
+   Wear-Off: !planergy!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

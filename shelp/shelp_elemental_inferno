@@ -1,0 +1,19 @@
+level -1
+keywords elemental inferno
+---
+*******************************************************************************
+       Name: elemental inferno
+       Kind: Spell
+ Availability Flags: ADEPT / NORM
+ Class Levels: 1
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_FIGHTING
+   Min Mana: 120
+ Wait Beats: 12
+ Can Learn: TRUE
+Noun Damage: elemental inferno
+   Wear-Off: !elemental inferno!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

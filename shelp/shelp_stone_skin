@@ -1,0 +1,19 @@
+level -1
+keywords stone skin
+---
+*******************************************************************************
+       Name: stone skin
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 36
+     Targets: TAR_CHAR_SELF
+    Position: POS_STANDING
+   Min Mana: 12
+ Wait Beats: 18
+ Can Learn: TRUE
+Noun Damage: None
+   Wear-Off: Your skin feels soft again.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

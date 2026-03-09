@@ -1,0 +1,19 @@
+level -1
+keywords detect invis
+---
+*******************************************************************************
+       Name: detect invis
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 19
+     Targets: TAR_CHAR_SELF
+    Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You no longer see invisible objects.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

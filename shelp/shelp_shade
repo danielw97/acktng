@@ -1,0 +1,19 @@
+level -1
+keywords shade
+---
+*******************************************************************************
+       Name: shade
+       Kind: Spell
+ Availability Flags: MORTAL / VAMP
+ Class Levels: 12 7 6 8 7 13
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 5
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: The room gets lighter.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

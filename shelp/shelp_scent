@@ -1,0 +1,19 @@
+level -1
+keywords scent
+---
+*******************************************************************************
+       Name: scent
+       Kind: Skill
+ Availability Flags: MORTAL / WOLF
+ Class Levels: 5 1 1 1 1 1
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 0
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: 
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

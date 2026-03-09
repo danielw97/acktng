@@ -1,0 +1,19 @@
+level -1
+keywords mass invis
+---
+*******************************************************************************
+       Name: mass invis
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 60
+     Targets: TAR_IGNORE
+    Position: POS_STANDING
+   Min Mana: 20
+ Wait Beats: 24
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: !Mass Invis!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************

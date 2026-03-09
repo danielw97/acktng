@@ -1,14 +1,19 @@
 level -1
-keywords shelp_sleep
+keywords sleep
 ---
 *******************************************************************************
-       Name: Sleep		
-    Classes: Mage(9)
-   Duration: 4 + ( Cast Level / 15 )
-   Modifies: N/A
-       Type: Offensive
-Description: If successfully cast, this spell allows the caster to force
-             the victim into a deep, trance-like sleep.  The victim may not
-             be woken by normal means, save for combat, or the spell running
-             it's duration.
+       Name: sleep
+       Kind: Spell
+ Availability Flags: MORTAL / NORM
+ Class Levels: 9
+     Targets: TAR_CHAR_OFFENSIVE
+    Position: POS_STANDING
+   Min Mana: 15
+ Wait Beats: 12
+ Can Learn: FALSE
+Noun Damage: None
+   Wear-Off: You feel less tired.
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
 *******************************************************************************

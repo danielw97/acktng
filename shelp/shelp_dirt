@@ -1,0 +1,19 @@
+level -1
+keywords dirt
+---
+*******************************************************************************
+       Name: dirt
+       Kind: Skill
+ Availability Flags: MORTAL / NORM
+ Class Levels: 36 35 47
+     Targets: TAR_IGNORE
+    Position: POS_FIGHTING
+   Min Mana: 1
+ Wait Beats: 24
+ Can Learn: TRUE
+Noun Damage: None
+   Wear-Off: !dirt!
+Description: This entry documents what this spell/skill does in game terms from
+             the skill table: who can learn it, what it targets, required
+             position, resource cost, and recovery timing.
+*******************************************************************************
