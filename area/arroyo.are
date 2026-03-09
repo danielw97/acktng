@@ -1315,7 +1315,7 @@ D2
 ~
 ~
 0 0 19911
-D0
+D1
 ~
 ~
 0 0 19913
@@ -1325,7 +1325,7 @@ Petrified Driftwood~
 Enormous logs of @@gpetrified wood@@N lie scattered across the riverbed, turned to stone by millennia of mineral-rich water that no longer flows.
 ~
 0 10
-D2
+D3
 ~
 ~
 0 0 19912
@@ -1385,7 +1385,7 @@ D2
 ~
 ~
 0 0 19916
-D0
+D1
 ~
 ~
 0 0 19918
@@ -1395,7 +1395,7 @@ Bleached Stone Crossing~
 Flat @@ystones bleached white@@N by the sun form a natural stepping-stone path across the widest section of the dry riverbed.
 ~
 0 10
-D2
+D3
 ~
 ~
 0 0 19917
@@ -1567,7 +1567,7 @@ D2
 ~
 ~
 0 0 19929
-D0
+D3
 ~
 ~
 0 0 19931
@@ -1577,7 +1577,7 @@ Blistered Hardpan~
 The @@bhardpan earth@@N has blistered and buckled under relentless sun, forming treacherous bumps and hollows across the terrain.
 ~
 0 10
-D2
+D1
 ~
 ~
 0 0 19930
@@ -1651,7 +1651,7 @@ D2
 ~
 ~
 0 0 19935
-D0
+D1
 ~
 ~
 0 0 19937
@@ -1661,7 +1661,7 @@ Ember Wash~
 Streaks of @@Rred and orange minerals@@N wash down the canyon wall here, creating the illusion that the stone itself is burning.
 ~
 0 10
-D2
+D3
 ~
 ~
 0 0 19936
@@ -1763,7 +1763,7 @@ D2
 ~
 ~
 0 0 19943
-D0
+D3
 ~
 ~
 0 0 19945
@@ -1773,7 +1773,7 @@ Choke Point~
 Fallen @@bboulders@@N partially block the gorge here, creating a natural choke point that funnels all passage through a single gap.
 ~
 0 5
-D2
+D1
 ~
 ~
 0 0 19944
@@ -1959,7 +1959,7 @@ D2
 ~
 ~
 0 0 19957
-D0
+D1
 ~
 ~
 0 0 19959
@@ -1969,7 +1969,7 @@ Eroded Stairway~
 Worn @@bstone steps@@N climb along the canyon wall, their edges rounded by centuries of wind until they are barely recognizable.
 ~
 0 4
-D2
+D3
 ~
 ~
 0 0 19958
@@ -2001,7 +2001,7 @@ D2
 ~
 ~
 0 0 19960
-D0
+D3
 ~
 ~
 0 0 19962
@@ -2011,7 +2011,7 @@ Sand-Choked Hall~
 @@bDrifted sand@@N fills this ruined hall nearly to the ceiling, leaving only a narrow crawl space along one crumbling wall.
 ~
 0 11
-D2
+D1
 ~
 ~
 0 0 19961
@@ -2295,7 +2295,7 @@ D2
 ~
 ~
 0 0 19981
-D0
+D1
 ~
 ~
 0 0 19983
@@ -2305,7 +2305,7 @@ Stinger Grove~
 Discarded @@Rstingers@@N the length of short swords jut from the sand where molting scorpions have shed their old weapons.
 ~
 0 10
-D2
+D3
 ~
 ~
 0 0 19982
@@ -2351,7 +2351,7 @@ D2
 ~
 ~
 0 0 19985
-D0
+D5
 ~
 ~
 0 0 19987
@@ -2361,7 +2361,7 @@ Resin Tunnel~
 The walls of this tunnel are coated in @@bhardened resin@@N secreted by the scorpion colony, giving them a glossy amber sheen.
 ~
 0 11
-D2
+D4
 ~
 ~
 0 0 19986
@@ -2519,7 +2519,7 @@ D2
 ~
 ~
 0 0 19997
-D0
+D1
 ~
 ~
 0 0 19999
@@ -2529,7 +2529,7 @@ Gnawed Passage~
 The bones lining this passage bear @@gteeth marks@@N from something that has been systematically gnawing them for marrow.
 ~
 0 10
-D2
+D3
 ~
 ~
 0 0 19998
@@ -2575,7 +2575,7 @@ D2
 ~
 ~
 0 0 20001
-D0
+D5
 ~
 ~
 0 0 20003
@@ -2585,7 +2585,7 @@ Calcified Pool~
 A pool of @@ystained water@@N has calcified everything it touches, coating nearby bones in a chalky white mineral crust.
 ~
 0 10
-D2
+D4
 ~
 ~
 0 0 20002
@@ -2631,7 +2631,7 @@ D2
 ~
 ~
 0 0 20005
-D0
+D5
 ~
 ~
 0 0 20007
@@ -2641,7 +2641,7 @@ Sunless Trench~
 So deep is the canyon here that @@gsunlight never reaches@@N the floor, leaving the passage in perpetual cool shadow.
 ~
 0 5
-D2
+D4
 ~
 ~
 0 0 20006
@@ -2729,7 +2729,7 @@ D2
 ~
 ~
 0 0 20012
-D0
+D1
 ~
 ~
 0 0 20014
@@ -2739,7 +2739,7 @@ Obsidian Flow~
 A frozen flow of @@gobsidian@@N covers the canyon floor here, its glassy black surface treacherous and razor-sharp at the edges.
 ~
 0 5
-D2
+D3
 ~
 ~
 0 0 20013
@@ -2771,7 +2771,7 @@ D2
 ~
 ~
 0 0 20015
-D0
+D5
 ~
 ~
 0 0 20017
@@ -2781,7 +2781,7 @@ Petrified Forest~
 The @@gstumps of petrified trees@@N stand in silent rows here, a fossilized forest entombed deep within the canyon walls.
 ~
 0 5
-D2
+D4
 ~
 ~
 0 0 20016
