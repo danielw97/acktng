@@ -3,7 +3,7 @@
 ## Overview
 
 **Area Name:** `@@rThe @@GVerdant @@gDepths@@N`
-**File Name:** `verdant_depths.are`
+**File Name:** `verdantgreen.are`
 **Keyword:** `verdantdepths`
 **Level Range:** 75-95 (I directive: `I 75 95`)
 **Level Label:** `@@W(@@r75 95@@W)@@N`
@@ -27,34 +27,18 @@ The theme evokes a primeval forest grown unnaturally deep and old, where the con
 
 ## Area Header
 
-Exact `#AREA` section content for `verdant_depths.are`:
-
-```
-#AREA
-@@rThe @@GVerdant @@gDepths@@N~
-Q 16
-K verdantdepths~
-L @@W(@@r75 95@@W)@@N~
-N 74
-I 75 95
-V 10000 10124
-F 15
-U @@gthe ancient trees creak and groan as the forest shifts around you@@N~
-T Teleport is allowed
-```
-
-**Directive notes:**
+The `#AREA` section lives in `area/verdantgreen.are`. Directive notes:
 
 - `Q 16` -- mandatory version; any other value is out of spec
 - `K verdantdepths~` -- single-word keyword, no spaces, no color codes
-- `L @@W(@@r75 95@@W)@@N~` -- white parens, light-green level numbers, white close paren, reset; matches color conventions of peer areas
+- `L @@W(@@r75 95@@W)@@N~` -- white parens, light-green level numbers, white close paren, reset
 - `N 74` -- confirmed unused across all 57 loaded area files
 - `I 75 95` -- controls mob-level gating and area matching logic
 - `V 10000 10124` -- full 125-vnum envelope; all rooms, mobs, and objects must stay within this range
 - `F 15` -- reset frequency in minutes, matching the Forest of Confusion parent area
 - `U` -- reset message uses primary gray `@@g` with `@@N` reset; no double-newlines, terminated with `~`
 - `T` -- rest of line is ignored by the loader; presence of the line enables teleport
-- `O`, `R`, `W` -- owner and ACL directives omitted here; set at implementation time by the builder
+- `O`, `R`, `W` -- owner and ACL directives omitted; set at implementation time by the builder
 
 ---
 
@@ -574,8 +558,8 @@ Two bidirectional links connect the areas, giving players a surface entrance and
 
 ## Implementation Checklist
 
-1. [ ] Create `area/verdant_depths.are` with all sections in canonical order
-3. [ ] Write `#AREA` header with color-themed name and directives
+1. [x] Create `area/verdantgreen.are` -- file exists with `#AREA` header and `#$`
+3. [ ] Write `#MOBILES` section into `verdantgreen.are`
 4. [ ] Write `#MOBILES` section (61 trash mobs + 3 bosses = 64 mobs, vnums 10000-10063)
 5. [ ] Write `#OBJECTS` section (60 trash items + 21 boss items = 81 objects, vnums 10000-10080)
 6. [ ] Write `#ROOMS` section (125 rooms, vnums 10000-10124, all used)
