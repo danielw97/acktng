@@ -2,18 +2,17 @@ level -1
 keywords change sex
 ---
 *******************************************************************************
-       Name: change sex
+       Name: Change Sex
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 66
-     Targets: TAR_CHAR_DEFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 15
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: Your body feels familiar again.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 66
+Description:
+   Change Sex is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

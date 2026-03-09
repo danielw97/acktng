@@ -2,18 +2,17 @@ level -1
 keywords berserk
 ---
 *******************************************************************************
-       Name: berserk
+       Name: Berserk
        Kind: Skill
- Availability Flags: MORTAL / NORM
- Class Levels: 34
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 24
  Can Learn: TRUE
 Noun Damage: berserk
    Wear-Off: You calm down!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 34
+Description:
+   Berserk is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

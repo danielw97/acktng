@@ -2,18 +2,19 @@ level -1
 keywords frenzy
 ---
 *******************************************************************************
-       Name: frenzy
+       Name: Frenzy
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 27 41 28
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: frenzy
    Wear-Off: !FRENZY!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 27
+   - Knight: level 28
+   - Paladin: level 41
+Description:
+   Frenzy is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

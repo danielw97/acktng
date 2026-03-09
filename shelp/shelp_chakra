@@ -2,18 +2,17 @@ level -1
 keywords chakra
 ---
 *******************************************************************************
-       Name: chakra
+       Name: Chakra
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 55
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 80
  Wait Beats: 24
  Can Learn: TRUE
 Noun Damage: Chakra
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Pugilist: level 55
+Description:
+   Chakra is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

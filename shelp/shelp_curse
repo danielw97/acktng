@@ -2,18 +2,18 @@ level -1
 keywords curse
 ---
 *******************************************************************************
-       Name: curse
+       Name: Curse
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 35 26
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 20
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: curse
    Wear-Off: The curse wears off.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 26
+   - Mage: level 35
+Description:
+   Curse is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

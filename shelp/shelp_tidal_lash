@@ -2,18 +2,17 @@ level -1
 keywords tidal lash
 ---
 *******************************************************************************
-       Name: tidal lash
+       Name: Tidal Lash
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 50
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 120
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: tidal lash
    Wear-Off: !tidal lash!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Sorcerer: level 50
+Description:
+   Tidal Lash is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

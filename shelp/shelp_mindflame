@@ -2,18 +2,17 @@ level -1
 keywords mindflame
 ---
 *******************************************************************************
-       Name: mindflame
+       Name: Mindflame
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 35
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 40
  Wait Beats: 24
  Can Learn: TRUE
 Noun Damage: Mind Flame
    Wear-Off: !mindflame!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 35
+Description:
+   Mindflame is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

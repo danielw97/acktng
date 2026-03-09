@@ -2,18 +2,18 @@ level -1
 keywords iron golem
 ---
 *******************************************************************************
-       Name: iron golem
+       Name: Iron Golem
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 63 63
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 800
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !IRON GOLEM!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 63
+   - Sorcerer: level 63
+Description:
+   Iron Golem is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -2,18 +2,17 @@ level -1
 keywords identify
 ---
 *******************************************************************************
-       Name: identify
+       Name: Identify
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 9
-     Targets: TAR_OBJ_INV
-    Position: POS_STANDING
+     Target: TAR_OBJ_INV
+   Position: POS_STANDING
    Min Mana: 12
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Identify!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 9
+Description:
+   Identify is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

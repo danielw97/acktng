@@ -2,18 +2,17 @@ level -1
 keywords produce food
 ---
 *******************************************************************************
-       Name: produce food
+       Name: Produce Food
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 24
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 16
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Produce Food!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 24
+Description:
+   Produce Food is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -2,18 +2,22 @@ level -1
 keywords bloodsign
 ---
 *******************************************************************************
-       Name: bloodsign
+       Name: Bloodsign
        Kind: Spell
- Availability Flags: MORTAL / VAMP
- Class Levels: 12 8 10 9 7 8
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 5
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Psionicist: level 7
+   - Cleric: level 8
+   - Pugilist: level 8
+   - Warrior: level 9
+   - Thief: level 10
+   - Mage: level 12
+Description:
+   Bloodsign is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

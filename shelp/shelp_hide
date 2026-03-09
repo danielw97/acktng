@@ -2,18 +2,17 @@ level -1
 keywords hide
 ---
 *******************************************************************************
-       Name: hide
+       Name: Hide
        Kind: Skill
- Availability Flags: MORTAL / NORM
- Class Levels: 12
-     Targets: TAR_IGNORE
-    Position: POS_RESTING
+     Target: TAR_IGNORE
+   Position: POS_RESTING
    Min Mana: 0
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Hide!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Thief: level 12
+Description:
+   Hide is a tactical skill focused on stealth, positioning, or information advantage.
 *******************************************************************************

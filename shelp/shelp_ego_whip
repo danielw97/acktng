@@ -2,18 +2,17 @@ level -1
 keywords ego whip
 ---
 *******************************************************************************
-       Name: ego whip
+       Name: Ego Whip
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 25
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 35
  Wait Beats: 24
  Can Learn: TRUE
 Noun Damage: ego whip
    Wear-Off: !Ego Whip!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 25
+Description:
+   Ego Whip is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

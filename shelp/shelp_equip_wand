@@ -2,18 +2,21 @@ level -1
 keywords equip wand
 ---
 *******************************************************************************
-       Name: equip wand
+       Name: Equip Wand
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 1 1 1 1 1
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Equip Wand!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 1
+   - Psionicist: level 1
+   - Sorcerer: level 1
+   - Paladin: level 1
+   - Necromancer: level 1
+Description:
+   Equip Wand is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

@@ -2,18 +2,22 @@ level -1
 keywords blood walk
 ---
 *******************************************************************************
-       Name: blood walk
+       Name: Blood Walk
        Kind: Spell
- Availability Flags: MORTAL / VAMP
- Class Levels: 20 19 20 18 19 20
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 40
  Wait Beats: 48
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !blood walk!!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 18
+   - Cleric: level 19
+   - Psionicist: level 19
+   - Mage: level 20
+   - Thief: level 20
+   - Pugilist: level 20
+Description:
+   Blood Walk is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

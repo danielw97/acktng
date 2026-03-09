@@ -2,18 +2,17 @@ level -1
 keywords sonic blast
 ---
 *******************************************************************************
-       Name: sonic blast
+       Name: Sonic Blast
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 67
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 140
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Sonic Blast
    Wear-Off: @@N$nFeels much better!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Necromancer: level 67
+Description:
+   Sonic Blast is an offensive spell that inflicts sonic damage on an enemy target.
 *******************************************************************************

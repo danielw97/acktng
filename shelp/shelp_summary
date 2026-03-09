@@ -2,6 +2,6 @@ level -1
 keywords shelp
 ---
 *******************************************************************************
-sHelp lists spell and skill documentation entries generated from the skill
-table. Use `shelp <name>` to view a specific entry.
+Use `shelp <spell or skill name>` to read a specific spell/skill entry.
+Each entry shows class acquisition levels and a plain-language effect summary.
 *******************************************************************************

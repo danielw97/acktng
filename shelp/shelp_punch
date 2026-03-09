@@ -2,18 +2,17 @@ level -1
 keywords punch
 ---
 *******************************************************************************
-       Name: punch
+       Name: Punch
        Kind: Skill
- Availability Flags: MORTAL / NORM
- Class Levels: 5
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 1
  Wait Beats: 18
  Can Learn: TRUE
 Noun Damage: punch
    Wear-Off: !Punch!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 5
+Description:
+   Punch is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

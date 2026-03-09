@@ -2,18 +2,18 @@ level -1
 keywords leadership
 ---
 *******************************************************************************
-       Name: leadership
+       Name: Leadership
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 24 12
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 75
  Wait Beats: 24
  Can Learn: TRUE
 Noun Damage: Leadership
    Wear-Off: !Leadership!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 12
+   - Cleric: level 24
+Description:
+   Leadership is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

@@ -4,16 +4,15 @@ keywords enraged
 *******************************************************************************
        Name: Enraged
        Kind: Skill
- Availability Flags: REMORT / WOLF
- Class Levels: None
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Enraged is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

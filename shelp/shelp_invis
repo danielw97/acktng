@@ -2,18 +2,17 @@ level -1
 keywords invis
 ---
 *******************************************************************************
-       Name: invis
+       Name: Invis
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 17
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 5
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: You are no longer invisible.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 17
+Description:
+   Invis is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

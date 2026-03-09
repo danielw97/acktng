@@ -2,18 +2,18 @@ level -1
 keywords condense soul
 ---
 *******************************************************************************
-       Name: condense soul
+       Name: Condense Soul
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 78 78
-     Targets: TAR_OBJ_INV
-    Position: POS_STANDING
+     Target: TAR_OBJ_INV
+   Position: POS_STANDING
    Min Mana: 800
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Soul Potion!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 78
+   - Necromancer: level 78
+Description:
+   Condense Soul is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

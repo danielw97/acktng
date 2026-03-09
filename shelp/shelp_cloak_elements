@@ -2,18 +2,17 @@ level -1
 keywords cloak:elements
 ---
 *******************************************************************************
-       Name: cloak:elements
+       Name: Cloak:elements
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 48
-     Targets: TAR_CHAR_DEFENSIVE
-    Position: POS_STANDING
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
    Min Mana: 750
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: @@NThe @@lcloak@@N around your body fades.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Sorcerer: level 48
+Description:
+   Cloak:elements is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

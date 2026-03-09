@@ -2,18 +2,18 @@ level -1
 keywords bare hand
 ---
 *******************************************************************************
-       Name: bare hand
+       Name: Bare Hand
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 6 6
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Enhanced Sword!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Pugilist: level 6
+   - Monk: level 6
+Description:
+   Bare Hand is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

@@ -4,16 +4,16 @@ keywords lava burst
 *******************************************************************************
        Name: Lava Burst
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 40 40
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 350
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Lava Burst
    Wear-Off: !Lava Burst!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 40
+   - Sorcerer: level 40
+Description:
+   Lava Burst is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

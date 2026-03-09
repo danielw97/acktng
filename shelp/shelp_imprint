@@ -2,18 +2,22 @@ level -1
 keywords imprint
 ---
 *******************************************************************************
-       Name: imprint
+       Name: Imprint
        Kind: Skill
- Availability Flags: MORTAL / WOLF
- Class Levels: 20 10 10 10 10 10
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !INSTRUCT!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 10
+   - Thief: level 10
+   - Warrior: level 10
+   - Psionicist: level 10
+   - Pugilist: level 10
+   - Mage: level 20
+Description:
+   Imprint is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

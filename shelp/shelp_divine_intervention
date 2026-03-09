@@ -2,18 +2,18 @@ level -1
 keywords divine intervention
 ---
 *******************************************************************************
-       Name: divine intervention
+       Name: Divine Intervention
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 67 12
-     Targets: TAR_CHAR_DEFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 150
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: None
    Wear-Off: !Intervention!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Paladin: level 12
+   - Cleric: level 67
+Description:
+   Divine Intervention is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

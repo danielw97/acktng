@@ -2,18 +2,17 @@ level -1
 keywords cure serious
 ---
 *******************************************************************************
-       Name: cure serious
+       Name: Cure Serious
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: None
-     Targets: TAR_CHAR_DEFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 15
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: None
    Wear-Off: !Cure Serious!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Cure Serious is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

@@ -2,18 +2,17 @@ level -1
 keywords stun
 ---
 *******************************************************************************
-       Name: stun
+       Name: Stun
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: None
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Stun is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

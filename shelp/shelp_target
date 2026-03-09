@@ -2,18 +2,22 @@ level -1
 keywords target
 ---
 *******************************************************************************
-       Name: target
+       Name: Target
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 32 20 18 32 20 18
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: target
    Wear-Off: !target
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Pugilist: level 18
+   - Monk: level 18
+   - Warrior: level 20
+   - Knight: level 20
+   - Cleric: level 32
+   - Paladin: level 32
+Description:
+   Target is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

@@ -2,18 +2,18 @@ level -1
 keywords know alignment
 ---
 *******************************************************************************
-       Name: know alignment
+       Name: Know Alignment
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 13 22
-     Targets: TAR_CHAR_DEFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 9
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Know Alignment!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 13
+   - Cleric: level 22
+Description:
+   Know Alignment is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

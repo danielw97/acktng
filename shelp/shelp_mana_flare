@@ -2,18 +2,18 @@ level -1
 keywords mana flare
 ---
 *******************************************************************************
-       Name: mana flare
+       Name: Mana Flare
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 18 18
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 80
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: @@NThe @@eMana Flare@@N dissipates.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 18
+   - Sorcerer: level 18
+Description:
+   Mana Flare is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

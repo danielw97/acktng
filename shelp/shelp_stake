@@ -2,18 +2,18 @@ level -1
 keywords stake
 ---
 *******************************************************************************
-       Name: stake
+       Name: Stake
        Kind: Skill
- Availability Flags: MORTAL / NORM
- Class Levels: 45 60
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 0
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: None
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 45
+   - Warrior: level 60
+Description:
+   Stake is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

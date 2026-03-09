@@ -2,18 +2,24 @@ level -1
 keywords scout
 ---
 *******************************************************************************
-       Name: scout
+       Name: Scout
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 45 26 30 43 45 26 30 43
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Thief: level 26
+   - Assassin: level 26
+   - Warrior: level 30
+   - Knight: level 30
+   - Pugilist: level 43
+   - Monk: level 43
+   - Cleric: level 45
+   - Paladin: level 45
+Description:
+   Scout is a tactical skill focused on stealth, positioning, or information advantage.
 *******************************************************************************

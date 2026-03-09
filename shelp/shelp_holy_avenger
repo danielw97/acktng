@@ -2,18 +2,18 @@ level -1
 keywords holy avenger
 ---
 *******************************************************************************
-       Name: holy avenger
+       Name: Holy Avenger
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 76 76
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 1200
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !HOLY AVENGER!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 76
+   - Paladin: level 76
+Description:
+   Holy Avenger is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

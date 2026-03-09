@@ -2,18 +2,17 @@ level -1
 keywords hellspawn
 ---
 *******************************************************************************
-       Name: hellspawn
+       Name: Hellspawn
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 43
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 50
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: HellSpawn
    Wear-Off: !Hellspawn!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 43
+Description:
+   Hellspawn is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

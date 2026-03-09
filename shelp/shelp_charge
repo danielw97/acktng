@@ -2,18 +2,20 @@ level -1
 keywords charge
 ---
 *******************************************************************************
-       Name: charge
+       Name: Charge
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 89 30 89 30
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 1
  Wait Beats: 24
  Can Learn: TRUE
 Noun Damage: Charge
    Wear-Off: !Charge
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 30
+   - Knight: level 30
+   - Cleric: level 89
+   - Paladin: level 89
+Description:
+   Charge is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

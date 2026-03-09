@@ -2,18 +2,19 @@ level -1
 keywords holy light
 ---
 *******************************************************************************
-       Name: holy light
+       Name: Holy Light
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 43 82 14
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 75
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: Holy Light
    Wear-Off: !Holy Light!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Paladin: level 14
+   - Cleric: level 43
+   - Sorcerer: level 82
+Description:
+   Holy Light is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

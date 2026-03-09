@@ -2,18 +2,17 @@ level -1
 keywords pass door
 ---
 *******************************************************************************
-       Name: pass door
+       Name: Pass Door
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 46
-     Targets: TAR_CHAR_SELF
-    Position: POS_STANDING
+     Target: TAR_CHAR_SELF
+   Position: POS_STANDING
    Min Mana: 20
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: You feel solid again.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 46
+Description:
+   Pass Door is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

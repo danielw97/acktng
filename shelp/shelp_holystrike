@@ -2,18 +2,18 @@ level -1
 keywords holystrike
 ---
 *******************************************************************************
-       Name: holystrike
+       Name: Holystrike
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 44 29
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 80
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Holystrike
    Wear-Off: !Holystrike!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 29
+   - Cleric: level 44
+Description:
+   Holystrike is a combat skill that attacks an enemy and deals holy-type physical or energy damage.
 *******************************************************************************

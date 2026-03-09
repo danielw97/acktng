@@ -2,18 +2,18 @@ level -1
 keywords poison:arsenic
 ---
 *******************************************************************************
-       Name: poison:arsenic
+       Name: Poison:arsenic
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 66 28
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 80
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Poison Arsenic
    Wear-Off: @@N$nFeels much better!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Assassin: level 28
+   - Thief: level 66
+Description:
+   Poison:arsenic is a combat skill that attacks an enemy and deals poison-type physical or energy damage.
 *******************************************************************************

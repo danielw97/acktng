@@ -4,16 +4,15 @@ keywords thought vise
 *******************************************************************************
        Name: Thought Vise
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 70
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 200
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Thought Vise
    Wear-Off: !Thought Vise!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Necromancer: level 70
+Description:
+   Thought Vise is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

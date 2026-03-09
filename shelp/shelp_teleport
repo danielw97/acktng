@@ -2,18 +2,17 @@ level -1
 keywords teleport
 ---
 *******************************************************************************
-       Name: teleport
+       Name: Teleport
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 40
-     Targets: TAR_CHAR_SELF
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_SELF
+   Position: POS_FIGHTING
    Min Mana: 35
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Teleport!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 40
+Description:
+   Teleport is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

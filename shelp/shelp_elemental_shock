@@ -2,18 +2,17 @@ level -1
 keywords elemental shock
 ---
 *******************************************************************************
-       Name: elemental shock
+       Name: Elemental Shock
        Kind: Spell
- Availability Flags: ADEPT / NORM
- Class Levels: 5
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 120
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: elemental shock
    Wear-Off: !elemental shock!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 5
+Description:
+   Elemental Shock is an offensive spell that inflicts lightning damage on an enemy target.
 *******************************************************************************

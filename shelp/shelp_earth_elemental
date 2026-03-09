@@ -2,18 +2,18 @@ level -1
 keywords earth elemental
 ---
 *******************************************************************************
-       Name: earth elemental
+       Name: Earth Elemental
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 52 52
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 500
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !EARTH ELEMENTAL!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 52
+   - Sorcerer: level 52
+Description:
+   Earth Elemental is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

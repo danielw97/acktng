@@ -2,18 +2,21 @@ level -1
 keywords dispel evil
 ---
 *******************************************************************************
-       Name: dispel evil
+       Name: Dispel Evil
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: NO_USE} /* was 82 63 ... */     spell_dispel_evil TAR_CHAR_OFFENSIVE POS_FIGHTING NULL SLOT( 22 ) 15 12 FALSE "dispel evil" "!Dispel Evil!" ""} {     MORTAL NORM "dispel object" {60 70 80
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 15
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Dispel Object!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warlock: level 12
+   - Priest: level 15
+   - Paladin: level 63
+   - Class23: level 70
+   - Class26: level 80
+Description:
+   Dispel Evil is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

@@ -2,18 +2,20 @@ level -1
 keywords ethereal travel
 ---
 *******************************************************************************
-       Name: ethereal travel
+       Name: Ethereal Travel
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 30 24 30 24
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 250
  Wait Beats: 48
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: ETHEREAL TRAVEL!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 24
+   - Necromancer: level 24
+   - Mage: level 30
+   - Sorcerer: level 30
+Description:
+   Ethereal Travel is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

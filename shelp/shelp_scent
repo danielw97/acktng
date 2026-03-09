@@ -2,18 +2,22 @@ level -1
 keywords scent
 ---
 *******************************************************************************
-       Name: scent
+       Name: Scent
        Kind: Skill
- Availability Flags: MORTAL / WOLF
- Class Levels: 5 1 1 1 1 1
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 0
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Cleric: level 1
+   - Thief: level 1
+   - Warrior: level 1
+   - Psionicist: level 1
+   - Pugilist: level 1
+   - Mage: level 5
+Description:
+   Scent is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

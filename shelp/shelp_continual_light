@@ -2,18 +2,18 @@ level -1
 keywords continual light
 ---
 *******************************************************************************
-       Name: continual light
+       Name: Continual Light
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 11 27
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 7
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Continual Light!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 11
+   - Cleric: level 27
+Description:
+   Continual Light is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

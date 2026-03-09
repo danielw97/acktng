@@ -2,18 +2,17 @@ level -1
 keywords palmstrike
 ---
 *******************************************************************************
-       Name: palmstrike
+       Name: Palmstrike
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 19
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: TRUE
 Noun Damage: Palmstrike
    Wear-Off: !Palm Strike!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Monk: level 19
+Description:
+   Palmstrike is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

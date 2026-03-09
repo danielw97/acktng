@@ -2,18 +2,17 @@ level -1
 keywords anti magic shell
 ---
 *******************************************************************************
-       Name: anti magic shell
+       Name: Anti Magic Shell
        Kind: Skill
- Availability Flags: ADEPT / NORM
- Class Levels: 2
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 80
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Anti Magic Shell
    Wear-Off: You are no longer surrounded by an anti-magic shell!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Warrior: level 2
+Description:
+   Anti Magic Shell is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

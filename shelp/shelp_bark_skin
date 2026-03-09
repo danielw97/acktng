@@ -2,18 +2,17 @@ level -1
 keywords bark skin
 ---
 *******************************************************************************
-       Name: bark skin
+       Name: Bark Skin
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 20
-     Targets: TAR_CHAR_SELF
-    Position: POS_STANDING
+     Target: TAR_CHAR_SELF
+   Position: POS_STANDING
    Min Mana: 20
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: Your skin feels softer.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 20
+Description:
+   Bark Skin is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

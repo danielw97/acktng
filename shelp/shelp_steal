@@ -2,18 +2,17 @@ level -1
 keywords steal
 ---
 *******************************************************************************
-       Name: steal
+       Name: Steal
        Kind: Skill
- Availability Flags: MORTAL / NORM
- Class Levels: 20
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 1
  Wait Beats: 18
  Can Learn: TRUE
 Noun Damage: steal
    Wear-Off: !steal!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Thief: level 20
+Description:
+   Steal is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

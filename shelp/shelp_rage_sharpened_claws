@@ -2,18 +2,17 @@ level -1
 keywords rage:sharpened claws
 ---
 *******************************************************************************
-       Name: Rage:sharpened claws
+       Name: Rage:sharpened Claws
        Kind: Skill
- Availability Flags: REMORT / WOLF
- Class Levels: None
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Rage:sharpened Claws is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

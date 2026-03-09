@@ -2,18 +2,22 @@ level -1
 keywords instruct
 ---
 *******************************************************************************
-       Name: instruct
+       Name: Instruct
        Kind: Skill
- Availability Flags: MORTAL / VAMP
- Class Levels: 10 5 5 5 5 5
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !INSTRUCT!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 5
+   - Thief: level 5
+   - Warrior: level 5
+   - Psionicist: level 5
+   - Pugilist: level 5
+   - Mage: level 10
+Description:
+   Instruct is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

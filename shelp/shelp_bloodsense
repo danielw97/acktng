@@ -2,18 +2,22 @@ level -1
 keywords bloodsense
 ---
 *******************************************************************************
-       Name: bloodsense
+       Name: Bloodsense
        Kind: Spell
- Availability Flags: MORTAL / VAMP
- Class Levels: 10 3 3 3 3 3
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 1
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Cleric: level 3
+   - Thief: level 3
+   - Warrior: level 3
+   - Psionicist: level 3
+   - Pugilist: level 3
+   - Mage: level 10
+Description:
+   Bloodsense is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

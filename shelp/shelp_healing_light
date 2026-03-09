@@ -2,18 +2,18 @@ level -1
 keywords healing light
 ---
 *******************************************************************************
-       Name: healing light
+       Name: Healing Light
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 42 11
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 150
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: @@NThe @@mHealing Light@@N dissipates.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Paladin: level 11
+   - Cleric: level 42
+Description:
+   Healing Light is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

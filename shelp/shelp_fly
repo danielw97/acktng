@@ -2,18 +2,17 @@ level -1
 keywords fly
 ---
 *******************************************************************************
-       Name: fly
+       Name: Fly
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 24
-     Targets: TAR_CHAR_DEFENSIVE
-    Position: POS_STANDING
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_STANDING
    Min Mana: 10
  Wait Beats: 18
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: You slowly float to the ground.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 24
+Description:
+   Fly is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

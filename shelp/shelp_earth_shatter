@@ -4,16 +4,15 @@ keywords earth shatter
 *******************************************************************************
        Name: Earth Shatter
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 60
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 100
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Earth Shatter
    Wear-Off: !Earth Shatter!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 60
+Description:
+   Earth Shatter is an offensive spell that inflicts earth damage on an enemy target.
 *******************************************************************************

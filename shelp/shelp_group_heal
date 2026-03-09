@@ -2,18 +2,18 @@ level -1
 keywords group heal
 ---
 *******************************************************************************
-       Name: group heal
+       Name: Group Heal
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 5 25
-     Targets: TAR_CHAR_DEFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_DEFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 50
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: None
    Wear-Off: !Group Heal!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 5
+   - Paladin: level 25
+Description:
+   Group Heal is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

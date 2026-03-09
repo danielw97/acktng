@@ -2,18 +2,18 @@ level -1
 keywords detect evil
 ---
 *******************************************************************************
-       Name: detect evil
+       Name: Detect Evil
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 12 8
-     Targets: TAR_CHAR_SELF
-    Position: POS_STANDING
+     Target: TAR_CHAR_SELF
+   Position: POS_STANDING
    Min Mana: 5
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: The red in your vision disappears.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Cleric: level 8
+   - Mage: level 12
+Description:
+   Detect Evil is a protective/support spell that strengthens, restores, or safeguards the target.
 *******************************************************************************

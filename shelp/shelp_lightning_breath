@@ -2,18 +2,17 @@ level -1
 keywords lightning breath
 ---
 *******************************************************************************
-       Name: lightning breath
+       Name: Lightning Breath
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: None
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 4
  Can Learn: FALSE
 Noun Damage: blast of lightning
    Wear-Off: !Lightning Breath!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Lightning Breath is an offensive spell that inflicts lightning damage on an enemy target.
 *******************************************************************************

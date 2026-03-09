@@ -2,18 +2,17 @@ level -1
 keywords calm
 ---
 *******************************************************************************
-       Name: calm
+       Name: Calm
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 52
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 30
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Calm!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 52
+Description:
+   Calm is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************

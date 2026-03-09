@@ -4,16 +4,15 @@ keywords kinetic reversion
 *******************************************************************************
        Name: Kinetic Reversion
        Kind: Spell
- Availability Flags: ADEPT / NORM
- Class Levels: 2
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 120
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Kinetic Reversion
    Wear-Off: !Kinetic Reversion!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 2
+Description:
+   Kinetic Reversion is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

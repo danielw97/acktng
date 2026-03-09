@@ -2,18 +2,18 @@ level -1
 keywords spirit curse
 ---
 *******************************************************************************
-       Name: spirit curse
+       Name: Spirit Curse
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: 77 77
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 120
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Spirit Curse
    Wear-Off: !Spirit Curse!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Psionicist: level 77
+   - Necromancer: level 77
+Description:
+   Spirit Curse is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

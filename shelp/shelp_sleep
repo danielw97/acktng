@@ -2,18 +2,17 @@ level -1
 keywords sleep
 ---
 *******************************************************************************
-       Name: sleep
+       Name: Sleep
        Kind: Spell
- Availability Flags: MORTAL / NORM
- Class Levels: 9
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_STANDING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_STANDING
    Min Mana: 15
  Wait Beats: 12
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: You feel less tired.
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Mage: level 9
+Description:
+   Sleep is an offensive spell used to damage an enemy target with direct magic.
 *******************************************************************************

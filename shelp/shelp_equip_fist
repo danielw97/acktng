@@ -2,18 +2,18 @@ level -1
 keywords equip fist
 ---
 *******************************************************************************
-       Name: equip fist
+       Name: Equip Fist
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 1 1
-     Targets: TAR_IGNORE
-    Position: POS_FIGHTING
+     Target: TAR_IGNORE
+   Position: POS_FIGHTING
    Min Mana: 0
  Wait Beats: 0
  Can Learn: FALSE
 Noun Damage: None
    Wear-Off: !Equip Fist!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Pugilist: level 1
+   - Monk: level 1
+Description:
+   Equip Fist is a utility skill that improves overall effectiveness through non-direct-combat techniques.
 *******************************************************************************

@@ -2,18 +2,18 @@ level -1
 keywords cripple
 ---
 *******************************************************************************
-       Name: cripple
+       Name: Cripple
        Kind: Skill
- Availability Flags: REMORT / NORM
- Class Levels: 89 92
-     Targets: TAR_CHAR_OFFENSIVE
-    Position: POS_FIGHTING
+     Target: TAR_CHAR_OFFENSIVE
+   Position: POS_FIGHTING
    Min Mana: 80
  Wait Beats: 12
  Can Learn: TRUE
 Noun Damage: Cripple
    Wear-Off: You are no longer crippled!
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+Acquisition:
+   - Thief: level 89
+   - Assassin: level 92
+Description:
+   Cripple is a combat skill used to attack or pressure an enemy in melee or tactical combat.
 *******************************************************************************

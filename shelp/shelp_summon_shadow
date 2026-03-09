@@ -2,18 +2,17 @@ level -1
 keywords summon shadow
 ---
 *******************************************************************************
-       Name: summon shadow
+       Name: Summon Shadow
        Kind: Spell
- Availability Flags: REMORT / NORM
- Class Levels: None
-     Targets: TAR_IGNORE
-    Position: POS_STANDING
+     Target: TAR_IGNORE
+   Position: POS_STANDING
    Min Mana: 1200
  Wait Beats: 24
  Can Learn: FALSE
 Noun Damage: None
-   Wear-Off: 
-Description: This entry documents what this spell/skill does in game terms from
-             the skill table: who can learn it, what it targets, required
-             position, resource cost, and recovery timing.
+   Wear-Off: None
+Acquisition:
+   - Not learnable by player classes.
+Description:
+   Summon Shadow is a utility spell used for control, movement, detection, or other tactical magic effects.
 *******************************************************************************
