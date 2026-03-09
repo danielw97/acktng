@@ -738,6 +738,52 @@ S
 
 `*` comment lines are accepted.
 
+Allowed `<spec_fun_name>` values (from `spec_lookup()` in `src/special.c`):
+
+Builder policy: mob specials beginning with `spec_summon_` must **never** be set in area files. These are assigned at runtime by summon systems only.
+Builder policy: any mob special beginning with `spec_keep` may only be assigned manually by a human (not by automation/tools).
+
+- `spec_breath_any`
+- `spec_breath_acid`
+- `spec_breath_fire`
+- `spec_breath_frost`
+- `spec_breath_gas`
+- `spec_breath_lightning`
+- `spec_cast_adept`
+- `spec_cast_cleric`
+- `spec_cast_judge`
+- `spec_cast_mage`
+- `spec_cast_undead`
+- `spec_executioner`
+- `spec_fido`
+- `spec_guard` (alias of `spec_policeman` in lookup return)
+- `spec_janitor`
+- `spec_mayor`
+- `spec_poison`
+- `spec_thief`
+- `spec_policeman`
+- `spec_cast_cadaver`
+- `spec_undead`
+- `spec_stephen`
+- `spec_rewield`
+- `spec_sylai_priest`
+- `spec_cast_bigtime`
+- `spec_sage`
+- `spec_wizardofoz`
+- `spec_vamp_hunter`
+- `spec_mino_guard`
+- `spec_tax_man`
+- `spec_keep_physical_captain`
+- `spec_summon_water`
+- `spec_summon_fire`
+- `spec_summon_earth`
+- `spec_summon_undead`
+- `spec_summon_holy`
+- `spec_summon_shadow`
+- `spec_summon_metal`
+- `spec_summon_animate`
+- `spec_summon_thought`
+
 ## 11) `#OBJFUNS` section
 
 Terminated by `S`:
@@ -750,6 +796,19 @@ S
 ```
 
 `*` comment lines are accepted.
+
+Allowed `<obj_fun_name>` values (from `obj_fun_lookup()` in `src/obj_fun.c`):
+
+- `objfun_giggle`
+- `objfun_cast_fight`
+- `objfun_sword_aggro`
+- `objfun_soul_moan`
+- `objfun_infused_soul`
+- `objfun_flaming`
+- `objfun_healing`
+- `objfun_dispeller`
+- `objfun_regen`
+- `objfun_clan`
 
 ## 12) `#RESETS` section
 
