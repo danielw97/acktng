@@ -145,6 +145,14 @@ Optional extension blocks (detected by leading marker):
 - `l <loot_amount> <loot[0..MAX_LOOT-1]>`
 - `L <loot_chance[0..MAX_LOOT-1]>`
 
+Loot table semantics:
+- `loot_amount` must be greater than 0 for loot drops to be attempted.
+- `loot_amount` is percent-based with overflow in 100-point chunks: `50` = 50% chance to drop one item, `100` = exactly one item, `150` = one guaranteed + 50% chance for a second, `300` = exactly three items.
+- `loot[x]` contains the object vnum for each loot slot.
+- `loot_chance[x]` contains each slot's weight in integer percent points for selection.
+- The sum of all `loot_chance[x]` values on an `L` line must be `<= 100`.
+- Items referenced by loot tables should have `ITEM_LOOT` set in `extra_flags`.
+
 ### 4.1) Mobile `skills` bitvector (`!` extension)
 
 `skills` in the `!` extension line is a bitvector. Known flags (from builder lookup tables) are:
