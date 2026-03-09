@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Cleric: level 65
 Description:
-   Create Spring is a utility spell used for control, movement, detection, or other tactical magic effects.
+   Create Spring Creates a magical spring in the room, providing a renewable local water source.
 *******************************************************************************

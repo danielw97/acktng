@@ -15,5 +15,5 @@ Acquisition:
    - Mage: level 68
    - Cleric: level 89
 Description:
-   Dispel Magic is a utility spell used for control, movement, detection, or other tactical magic effects.
+   Dispel Magic Attempts to strip magical effects from a target, removing beneficial buffs or harmful debuffs based on dispel strength.
 *******************************************************************************

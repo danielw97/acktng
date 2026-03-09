@@ -14,5 +14,5 @@ Noun Damage: lightening bolt
 Acquisition:
    - Mage: level 65
 Description:
-   Chain Lightning is a utility spell used for control, movement, detection, or other tactical magic effects.
+   Chain Lightning Launches lightning that arcs between multiple enemies, damaging each jump target.
 *******************************************************************************
