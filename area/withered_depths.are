@@ -4022,7 +4022,7 @@ S
 #1145
 The Heart of the Forest~
 This is the centre of the Verdant Sanctum and the centre of everything the sanctum represents: a circular clearing of perfect grass, a canopy opening directly above that admits a column of sunlight from sky to ground, a ring of the oldest trees in the entire forest standing around the perimeter with their roots forming a perfect circle.  The silence here is not the dead silence of the corrupted forest but a living silence — full of potential, full of what could grow here if the blight were lifted, full of an enormous grief for what the surrounding forest has lost.  The @@GVerdant Guardian@@N has stood at the centre of this clearing for longer than the corruption has existed, its form now indistinguishable from the living trees around it, its consciousness expanded by centuries to encompass the entire sanctum.  When the blight found nothing it could corrupt here, it tried to break in by other means, and the Guardian has fought it back every time — at cost.  The cost shows.  The Guardian that greets anything that enters this clearing is not the benevolent forest spirit it once was.  It is something that has fought too long and can no longer tell friend from threat.~
-24578 3
+24582 3
 D0
 The heart of the forest connects north toward the verdant threshold.~
 ~
@@ -4294,7 +4294,7 @@ D 0 1013 5 2
 D 0 1015 4 2
 D 0 1075 2 1
 D 0 1095 0 1
-D 0 1134 0 2
+D 0 1133 0 2
 D 0 1135 2 2
 S
 #$
