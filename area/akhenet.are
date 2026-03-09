@@ -12,7 +12,7 @@ U @@yA blistering wind howls through Akh'enet, scouring stone and bone.@@N~
 #ROOMS
 #2000
 @@yWindswept Desert Edge@@N~
-@@yYou stand at the edge of a vast, merciless desert. The sand stretches endlessly in all directions beneath a scorching sun. Ancient ruins protrude from dunes to the south, and a narrow canyon opens to the north. The air shimmers with heat, distorting vision.@@N
+@@yYou stand at the edge of a vast, merciless desert that seems to stretch beyond the bounds of the world. The sand stretches endlessly in all directions beneath a scorching sun that offers no mercy, turning the sky to shades of pale orange and searing white. Ancient ruins protrude from dunes to the south, their weathered stone architecture suggesting once-grand structures now claimed by time and sand. To the north, a narrow canyon opens like the maw of some colossal beast, its sheer walls carved by millennia of wind and rare water. The air shimmers with heat in visible waves, distorting everything beyond arm's reach into a rippling mirage. Your skin feels the assault of the sun even through clothing, and each breath brings scorching air that parches mouth and throat. The wind is constant, carrying abrasive sand that stings exposed skin. Far in the distance, you can make out the faint shapes of more ruins rising from the dunes, the remnants of a once-mighty civilization now buried beneath centuries of shifting sand.@@N
 ~
 32 10
 D0
@@ -30,7 +30,7 @@ D3
 S
 #2001
 @@yShifting Dune Ridge@@N~
-@@yTowering sand dunes rise and fall like the frozen waves of an ancient sea. The ridge winds northward, with loose sand constantly shifting beneath your feet. The horizon wavers in the heat, revealing and concealing distant shapes.@@N
+@@yTowering sand dunes rise and fall like the frozen waves of an ancient sea locked in a moment of eternal motion. The ridge winds northward in a serpentine path, constantly changing as sand shifts in the ever-present wind. Loose sand beneath your feet gives way treacherously with each step, making progress difficult and exhausting. The slope of the dunes suggests ages of wind erosion, sculpting the sand into shapes of impossible beauty and terrible desolation. The horizon wavers and dances in the heat, revealing and concealing distant shapes that might be ruins, mirages, or delusions brought on by the punishing sun. When you look behind, your footprints are already being erased by the wind, as if your very presence is being denied by the desert itself. The dunes stretch on endlessly, each crest revealing only more dunes beyond, an infinity of sand and heat.@@N
 ~
 32 10
 D0
@@ -44,7 +44,7 @@ D2
 S
 #2002
 @@ySand-Choked Trail@@N~
-@@yAn old trail runs east-west, choked with centuries of desert sand. Faint wagon ruts are barely visible beneath the dunes. The path appears to have connected distant oases once, now buried and forgotten.@@N
+@@yAn ancient trade route runs east-west through the desert, now choked with centuries of accumulated sand. The original paving stones, once arranged in a careful mosaic pattern, are barely visible beneath deep drifts of fine golden sand. Faint wagon ruts mark the path, worn deep by countless merchants and their caravans before the desert claimed this land. In places where the wind has scoured the sand away, you can see the skilled stonework beneath—a testament to the craftsmen who built this road in an age when Akh'enet was not a tomb but a thriving center of civilization. The path appears to have connected distant oases once, navigating a route through the worst of the desert heat. Those oases are now buried and forgotten, if they ever truly existed at all. The trail itself is still relatively passable for those determined enough to follow it, though the sand constantly threatens to completely obscure the ancient way. Occasionally, half-buried artifacts emerge from the sand—broken pottery, corroded coins, and stranger objects of unknown purpose.@@N
 ~
 32 10
 D1
@@ -62,7 +62,7 @@ D2
 S
 #2003
 @@yBleached Bone Hollow@@N~
-@@yA depression in the dunes reveals a graveyard of sorts. Bleached bones of unknown creatures lie scattered across the sand, sun-whitened and brittle. The skulls of large beasts stare blindly at the sky, weathered beyond recognition.@@N
+@@yA depression in the dunes forms a natural hollow, and within it lies a graveyard of ancient creatures. Bleached bones of unknown creatures lie scattered across the sand in no particular pattern, each one sun-whitened to the color of chalk and brittle as dried reeds. The skulls of large beasts—some as wide as a man is tall—stare blindly at the merciless sky with empty sockets, weathered beyond any recognition of what they once were. Some bones are articulated, suggesting the creatures died where they fell. Others are scattered as if scattered by scavengers or storms. The oldest bones have begun to fuse with the sand itself, becoming part of the desert's geological record. The scale of the bones suggests creatures that would have been fearsome in life—perhaps they were driven here to die of thirst and exposure. Or perhaps they simply passed through and fell victim to the desert's relentless hunger. The hollow itself seems to collect the remains of those who venture too far from water and safety.@@N
 ~
 32 10
 D3
@@ -76,7 +76,7 @@ D2
 S
 #2004
 @@yCrumbling Waystone@@N~
-@@yAn ancient stone marker juts from the sand, its surface carved with worn glyphs. The monument stands at a crossroads of sorts, with dunes sloping away in all directions. Time and wind have nearly erased whatever message it once bore.@@N
+@@yAn ancient stone marker of black granite juts from the sand like a broken tooth, its surface covered in worn glyphs that spiral from base to top. The monument stands at a crossroads of sorts, with dunes sloping away in all directions, suggesting this was once an important landmark for travelers. The carvings suggest three cardinal directions, though the weathering makes it difficult to determine which is which. Time and millennia of wind-driven sand have nearly erased whatever message it once conveyed, though you can still make out fragments of words in a script that predates any modern language. Deep scratches and pitting mark the stone where countless travelers once touched it, leaving marks of their passage. The base of the waystone is surrounded by a depression worn into the sand by the feet of thousands of pilgrims, merchants, and adventurers who paused here seeking guidance. Small offerings—coins, tokens, fragments of cloth—have been left by countless visitors over the centuries, though time has rendered most unidentifiable.@@N
 ~
 32 10
 D0
@@ -94,7 +94,7 @@ D2
 S
 #2005
 @@yScorched Earth Flat@@N~
-@@yThis barren expanse offers little cover. The ground is cracked and broken, stained dark by unknown substances. The heat is almost visible here, shimmering and rippling across the blackened earth like a mirage made manifest.@@N
+@@yThis barren expanse of blackened earth stretches endlessly in all directions, offering little cover or shelter from the relentless sun. The ground is deeply cracked and broken into irregular polygonal patterns, as if the very earth has been baked hard enough to split and fracture. Dark stains cover the cracked surface—perhaps from ancient fires, perhaps from substances better left unidentified—creating a surface that looks diseased and wronged. The heat here is almost visible, shimmering and rippling across the blackened earth in waves so intense they make the air itself shimmer like liquid glass. The effect is mesmerizing and deadly—the illusion of water where there is only infinite desolation. The temperature is noticeably higher here than in surrounding areas, as if the dark earth absorbs and radiates the sun's punishment back toward the sky. No vegetation grows here, no creature ventures here willingly. Even the wind seems reluctant to blow across this forsaken place.@@N
 ~
 32 10
 D0
@@ -108,7 +108,7 @@ D3
 S
 #2006
 @@yDust Devil Crossing@@N~
-@@yA natural crossroads where dust devils frequently form. The ground is scoured smooth by countless small tornadoes, and the air crackles with static. Fine sand swirls even in the stillness, never quite settling.@@N
+@@yA natural crossroads where dust devils frequently form in violent spirals that seem almost sentient. The ground is scoured smooth by countless small tornadoes that pass through this region with terrible regularity, creating distinct swirling patterns in the sand. The very air crackles with static electricity in a way that makes your skin prickle and the hair on your arms stand on end. Fine sand swirls constantly, moving with hypnotic precision even in moments between storms, never quite settling or coming to rest. The dust here moves with an intelligence and purpose that seems almost malevolent, as if the desert itself is breathing and calculating. The raw power of these natural phenomena is both awe-inspiring and deeply terrifying. You can feel the faint pressure of building charge in the air, and occasionally you glimpse a dust devil forming right before your eyes—a spinning column of air and sand rising hundreds of feet skyward.@@N
 ~
 32 10
 D0
@@ -126,7 +126,7 @@ D2
 S
 #2007
 @@yMirage Pool@@N~
-@@yA shimmer on the horizon resolves into what appears to be water, surrounded by gnarled palm trees. But as you approach, the illusion wavers. The trees are petrified, the pool is dry, and the "water" is merely the heat's distortion.@@N
+@@yA shimmering expanse on the horizon resolves into what appears to be water surrounded by a grove of gnarled palms—a traveler's most desperate hope. As you approach, the vision wavers and distorts, becoming less and less certain with each painful step forward. The trees are petrified, turned to stone by some ancient process that strips away all life, their forms frozen in tortured gestures as if crying out in despair. The 'water' you saw is merely the intense refraction of light through superheated air rising from the blackened earth—a mirage born from the desert's cruel mockery of mercy. Dry stone basins, long since emptied of precious water, remain as silent testimony to what once was, perhaps real oases that have been sealed by some curse. The very sight of this place is an instrument of psychological torture, offering false hope before revealing the terrible truth of the wasteland. No water has flowed here in living memory.@@N
 ~
 32 10
 D0
@@ -144,7 +144,7 @@ D5
 S
 #2008
 @@yPetrified Grove@@N~
-@@yOnce, trees grew here. Now only the stone remains—a forest of petrified timber, gray and brittle as bone. The wood has been hollowed by time, leaving intricate patterns. Some trunks still stand, others lie scattered like fallen giants.@@N
+@@yOnce, a verdant forest grew here, providing shelter and life to countless creatures. Now only the stone remains—a silent testament to time's merciless passage. The petrified timber stands like ghostly sentinels, gray and brittle as bone, stretching upward in a desperate gesture frozen forever. The wood has been hollowed by countless centuries of transformation, leaving intricate crystalline patterns where once was living wood. Some massive trunks still stand upright, reaching toward a sky that never rains, their forms contorted as if in eternal agony. Others lie scattered like fallen giants across the petrified forest floor, broken and worn by wind and time beyond measure. The petrification is so complete and thorough that the trees have become harder than any bedrock, almost indestructible. Between the stone trees, sand drifts in carefully sculpted forms that almost seem intentional, as if the desert is creating monuments to the forest it destroyed.@@N
 ~
 32 10
 D0
@@ -158,7 +158,7 @@ D1
 S
 #2009
 @@yVulture Circle@@N~
-@@yCircling above, a dozen vultures ride the thermals endlessly. Their shadows cross the cracked earth in patterns as old as death itself. Occasionally one descends, but they always return to their sky-paths, never landing for long.@@N
+@@yCircling above in an endless and hypnotic pattern, a dozen or more vultures ride the thermals of rising hot air with mechanical precision and absolute certainty. Their shadows cross the cracked earth in patterns as old as death itself, ancient, inevitable, and utterly impersonal. The birds seem to have been circling this same place forever, waiting with infinite patience for the next meal. Occasionally one descends, wings folded close to its powerful body, dropping rapidly through the air toward some prey, real or imagined. But they always return to their sky-paths, never landing for long, never allowing themselves the comfort of rest. The sight is simultaneously natural and profoundly unsettling—these are nature's undertakers, organized and patient. The constant circling creates an almost hypnotic and dizzying effect, as if you're watching the very clockwork of death itself turning in the sky above. The knowledge that they're waiting for you to weaken is inescapable.@@N
 ~
 32 10
 D3
@@ -172,7 +172,7 @@ D2
 S
 #2010
 @@ySand Pit@@N~
-@@yA large depression in the dunes forms a natural pit, its sides steep and unstable. At the bottom, the sand appears darker, more compact. Strange markings in the sand suggest recent disturbances—or perhaps the entrance to something deeper.@@N
+@@yA large depression in the dunes forms a natural pit, its sides steep and alarmingly unstable. The walls shift and slide when touched, threatening to collapse inward with the slightest provocation. The pit extends downward perhaps twenty feet or more, creating a dangerous funnel that seems to draw your eye ever deeper. At the bottom, the sand appears noticeably darker and more compact than the surrounding dunes, compressed and hardened by ages of weight and pressure. Strange markings crisscross the pit's floor—perhaps the recent passage of large creatures, or perhaps evidence of ancient excavations and digging by those seeking whatever lies below. The pit feels alive somehow, possessed of a watchful quality, as if something beneath the surface is waiting and watching, anticipating the precise moment when you lose your footing and descend into its hungry depths. The air rising from the pit seems slightly cooler, hinting at deeper chambers or caves below.@@N
 ~
 32 10
 D0
@@ -186,7 +186,7 @@ D5
 S
 #2011
 @@yDune Crest Overlook@@N~
-@@yFrom the highest dune in this region, you can see for miles. To the south, more ruins emerge from the sand. To the east, a canyon cuts through distant dunes. To the west, a vast expanse of trackless desert stretches to the horizon.@@N
+@@yFrom the highest dune in this entire region, you can see for seemingly endless miles across the desert landscape. Your vantage point provides a commanding view of the world below. To the south, more ruins emerge from the sand in stages of decay and burial, their shapes gradually becoming more distinct as they rise higher from the dunes. To the east, a canyon of impressive proportions cuts through distant dunes, its walls creating sharp shadows that mark its depth and danger. To the west, a vast and unbroken expanse of trackless desert stretches to the horizon where sky and sand blur into one another beyond distinction. The wind at this height is stronger and more relentless than below, whistling past with mournful sound. The view is simultaneously beautiful and absolutely soul-crushing in its immensity. You are tiny in the presence of such scale, a mere speck of consciousness lost in an ocean of sand.@@N
 ~
 32 10
 D2
@@ -196,7 +196,7 @@ D2
 S
 #2012
 @@yWind-Carved Canyon Mouth@@N~
-@@yA canyon entrance carved by millenia of wind erosion. The walls stand like the jaws of some colossal beast, casting deep shadows across the sand floor. Weathered stone formations suggest this was once a vital trade route.@@N
+@@yA canyon entrance has been carved by millennia of relentless wind erosion and rare but violent water flows. The walls stand like the massive jaws of some colossal sleeping beast, each face of stone towering hundreds of feet overhead. Deep shadows cast by the stone walls create an almost tangible darkness across the canyon floor, a welcome relief from the merciless sun above. The stone itself tells stories of ages past—layered sediments in shades of rust, gold, and deep crimson create natural striations that speak of geological epochs. Weathered stone formations and natural sculptures suggest this was once a vital trade route, a crucial artery through the desert where merchants moved their caravans laden with goods. The canyon walls show clear evidence of water wear—smooth channels and rounded boulders bear testimony to flash floods in the distant past. The canyon mouth itself is the width of a small city block, narrowing as you venture deeper into shadow.@@N
 ~
 32 10
 D0
@@ -214,7 +214,7 @@ D2
 S
 #2013
 @@yRaider Ambush Point@@N~
-@@yScattered bones and broken weapons litter this sandy area. The remains of past victims and fallen bandits lie half-buried. The smell of dried blood still lingers faintly, despite years of exposure.@@N
+@@yScattered bones and broken weapons litter this sandy area in testimony to the violence that has unfolded here repeatedly. The remains of past victims and fallen bandits lie half-buried beneath shifting sand, their original arrangement lost to time. Some bones are old and bleached white, others newer and still bearing dried tissue and sinew. Weapons lie broken and twisted—swords shattered from violent impact, shields cracked and splintered, spears bent at agonizing angles. The sand itself seems darker in places, stained by the dried blood of countless conflicts that have occurred at this cursed location. The smell of death still lingers faintly despite years and decades of exposure to wind and sun, a perfume of decay that warns of danger. The area shows clear signs of regular use as an ambush site—scattered rocks form crude hiding places, and the depression of the terrain provides natural defensive positions. This is ground soaked in violence and suffering.@@N
 ~
 32 10
 D3
@@ -228,7 +228,7 @@ D1
 S
 #2014
 @@yAncient Road Fragment@@N~
-@@yRemnants of an old stone road push through the sand. The paving stones are massive and fitted with precision that speaks of a lost civilization. The path leads toward distant ruins visible in the heat-shimmer to the south.@@N
+@@yRemnants of an old stone road push persistently through the sand despite millennia of burial and erosion. The paving stones are massive and fitted together with extraordinary precision that speaks eloquently of a civilization now lost to time. Each stone is cut from black granite and marble, fitted so tightly that a blade cannot pass between them. The scale of the construction is impressive—each individual stone weighs many tons, yet they remain aligned and level after ages of exposure to the desert's harshness. The path leads toward distant ruins visible in the heat-shimmer to the south, rising gradually from the sand as if climbing toward the sky. Alongside the road, the faint outline of what once were pillars or markers suggests a grand processional way. Carved into some of the visible stones are decorative grooves and patterns—geometric designs and occasional pictographs depicting scenes of triumph and civilization. This was once a route of prestige and power.@@N
 ~
 32 10
 D0
