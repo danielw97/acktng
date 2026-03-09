@@ -222,6 +222,8 @@ Optional extension blocks (detected by leading marker):
 
 Builder note: set the `aggressive` flag for mobs whose intended behavior is to initiate combat on sight (for example, feral beasts in dangerous wilds, hostile undead in cursed ruins, or demonic sentries in enemy strongholds), and leave it unset for neutral/civilian roles (for example, townsfolk, merchants, quest givers, and guards meant to react only when provoked).
 
+Builder note: mobs that should remain in place and not wander (for example, gate guards) should be flagged with `act sentinel`.
+
 - `is_npc` = `1`
 - `sentinel` = `2`
 - `scavenger` = `4`
