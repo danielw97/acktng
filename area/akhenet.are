@@ -1,0 +1,1831 @@
+#AREA
+The Sands of Akh'enet~
+Q 16
+K sands akhenet desert ruins~
+L @@y70  @@R90~
+N 52
+I 70 90
+V 2000 2149
+F 15
+U @@yA blistering wind howls through Akh'enet, scouring stone and bone.@@N~
+
+#ROOMS
+#2000
+@@yWindswept Desert Edge@@N~
+@@yYou stand at the edge of a vast, merciless desert. The sand stretches endlessly in all directions beneath a scorching sun. Ancient ruins protrude from dunes to the south, and a narrow canyon opens to the north. The air shimmers with heat, distorting vision.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2001
+D2
+~
+~
+0 -1 2012
+D3
+~
+~
+0 -1 2004
+S
+#2001
+@@yShifting Dune Ridge@@N~
+@@yTowering sand dunes rise and fall like the frozen waves of an ancient sea. The ridge winds northward, with loose sand constantly shifting beneath your feet. The horizon wavers in the heat, revealing and concealing distant shapes.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2002
+D2
+~
+~
+0 -1 2000
+S
+#2002
+@@ySand-Choked Trail@@N~
+@@yAn old trail runs east-west, choked with centuries of desert sand. Faint wagon ruts are barely visible beneath the dunes. The path appears to have connected distant oases once, now buried and forgotten.@@N
+~
+32 10
+D1
+~
+~
+0 -1 2003
+D3
+~
+~
+0 -1 2001
+D2
+~
+~
+0 -1 2005
+S
+#2003
+@@yBleached Bone Hollow@@N~
+@@yA depression in the dunes reveals a graveyard of sorts. Bleached bones of unknown creatures lie scattered across the sand, sun-whitened and brittle. The skulls of large beasts stare blindly at the sky, weathered beyond recognition.@@N
+~
+32 10
+D3
+~
+~
+0 -1 2002
+D2
+~
+~
+0 -1 2004
+S
+#2004
+@@yCrumbling Waystone@@N~
+@@yAn ancient stone marker juts from the sand, its surface carved with worn glyphs. The monument stands at a crossroads of sorts, with dunes sloping away in all directions. Time and wind have nearly erased whatever message it once bore.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2000
+D1
+~
+~
+0 -1 2003
+D2
+~
+~
+0 -1 2006
+S
+#2005
+@@yScorched Earth Flat@@N~
+@@yThis barren expanse offers little cover. The ground is cracked and broken, stained dark by unknown substances. The heat is almost visible here, shimmering and rippling across the blackened earth like a mirage made manifest.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2002
+D3
+~
+~
+0 -1 2007
+S
+#2006
+@@yDust Devil Crossing@@N~
+@@yA natural crossroads where dust devils frequently form. The ground is scoured smooth by countless small tornadoes, and the air crackles with static. Fine sand swirls even in the stillness, never quite settling.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2004
+D1
+~
+~
+0 -1 2007
+D2
+~
+~
+0 -1 2008
+S
+#2007
+@@yMirage Pool@@N~
+@@yA shimmer on the horizon resolves into what appears to be water, surrounded by gnarled palm trees. But as you approach, the illusion wavers. The trees are petrified, the pool is dry, and the "water" is merely the heat's distortion.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2005
+D3
+~
+~
+0 -1 2006
+D5
+~
+~
+0 -1 2109
+S
+#2008
+@@yPetrified Grove@@N~
+@@yOnce, trees grew here. Now only the stone remains—a forest of petrified timber, gray and brittle as bone. The wood has been hollowed by time, leaving intricate patterns. Some trunks still stand, others lie scattered like fallen giants.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2006
+D1
+~
+~
+0 -1 2009
+S
+#2009
+@@yVulture Circle@@N~
+@@yCircling above, a dozen vultures ride the thermals endlessly. Their shadows cross the cracked earth in patterns as old as death itself. Occasionally one descends, but they always return to their sky-paths, never landing for long.@@N
+~
+32 10
+D3
+~
+~
+0 -1 2008
+D2
+~
+~
+0 -1 2010
+S
+#2010
+@@ySand Pit@@N~
+@@yA large depression in the dunes forms a natural pit, its sides steep and unstable. At the bottom, the sand appears darker, more compact. Strange markings in the sand suggest recent disturbances—or perhaps the entrance to something deeper.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2009
+D5
+~
+~
+0 -1 2075
+S
+#2011
+@@yDune Crest Overlook@@N~
+@@yFrom the highest dune in this region, you can see for miles. To the south, more ruins emerge from the sand. To the east, a canyon cuts through distant dunes. To the west, a vast expanse of trackless desert stretches to the horizon.@@N
+~
+32 10
+D2
+~
+~
+0 -1 2004
+S
+#2012
+@@yWind-Carved Canyon Mouth@@N~
+@@yA canyon entrance carved by millenia of wind erosion. The walls stand like the jaws of some colossal beast, casting deep shadows across the sand floor. Weathered stone formations suggest this was once a vital trade route.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2000
+D1
+~
+~
+0 -1 2013
+D2
+~
+~
+0 -1 2014
+S
+#2013
+@@yRaider Ambush Point@@N~
+@@yScattered bones and broken weapons litter this sandy area. The remains of past victims and fallen bandits lie half-buried. The smell of dried blood still lingers faintly, despite years of exposure.@@N
+~
+32 10
+D3
+~
+~
+0 -1 2012
+D1
+~
+~
+0 -1 2092
+S
+#2014
+@@yAncient Road Fragment@@N~
+@@yRemnants of an old stone road push through the sand. The paving stones are massive and fitted with precision that speaks of a lost civilization. The path leads toward distant ruins visible in the heat-shimmer to the south.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2012
+D2
+~
+~
+0 -1 2030
+S
+#2015
+@@bBazaar Entrance Ramp@@N~
+@@bA long ramp of cut stone descends into shadow. The entrance to the buried city lies below, its edge worn smooth by thousands of footsteps across countless centuries. The air grows cooler as you descend, smelling of dust and age.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2029
+D5
+~
+~
+0 -1 2016
+S
+#2016
+@@bCollapsed Market Stall Row@@N~
+@@bRuins of merchant stalls lie in jumbled heaps, their wooden frameworks long since rotted away. Clay jars and broken pottery are scattered everywhere. A faint smell of spices—nutmeg, cinnamon, myrrh—still lingers impossibly after all these years.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2015
+D2
+~
+~
+0 -1 2017
+S
+#2017
+@@bSand-Filled Merchant Hall@@N~
+@@bA vast chamber once echoed with the calls of merchants hawking their wares. Now sand drifts across the cracked floor in great dunes. Weathered wooden counters lean drunkenly, and shelves hang broken from the walls. The silence here is absolute.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2016
+D1
+~
+~
+0 -1 2018
+D3
+~
+~
+0 -1 2019
+D2
+~
+~
+0 -1 2021
+S
+#2018
+@@bCracked Fountain Square@@N~
+@@bOnce, water flowed here—a central fountain in the bazaar's heart. Now only cracks remain. The marble basin is fractured beyond repair, its bottom exposed to the open air above. Faint echoes sound from the chamber whenever wind moves through the ruins.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2017
+D1
+~
+~
+0 -1 2020
+D2
+~
+~
+0 -1 2022
+S
+#2019
+@@bJeweler's Ruin@@N~
+@@bThe shop of some ancient jeweler, now looted and empty. Dust covers every surface. Thieves long ago took everything of value, leaving only stone counters and the memory of wealth. A few worthless pebbles lie forgotten in corners.@@N
+~
+8 11
+D1
+~
+~
+0 -1 2017
+S
+#2020
+@@bArmorer's Buried Workshop@@N~
+@@bA forge stands cold and dark, its anvil cracked with age. Tools hang on the walls in organized rows, rusted beyond use. The walls are scorched black from centuries of fire that will never burn again. The very air tastes of metal and ash.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2018
+S
+#2021
+@@bAlchemist's Shattered Lab@@N~
+@@bBroken glass vessels litter every surface. Strange bottles, once containing potions and essences, now hold only dust and dead insects. Faint chemical stains mark the stone floor in complex patterns. The smell is acrid and ancient.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2017
+D2
+~
+~
+0 -1 2023
+S
+#2022
+@@bSpice Trader's Vault@@N~
+@@bDespite centuries of decay, the scent of spices still permeates this chamber. Shelves line the walls, now empty save for the ghosts of their contents. The sweet aroma of cardamom and saffron clings to the very stone itself.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2018
+D3
+~
+~
+0 -1 2025
+S
+#2023
+@@bCollapsed Upper Level@@N~
+@@bThe floor here is unstable, riddled with holes. Below, darkness waits. Above, fallen stone blocks partially cover the room. Walking carefully is essential; a wrong step could send you crashing into chambers below.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2021
+D1
+~
+~
+0 -1 2024
+D3
+~
+~
+0 -1 2025
+S
+#2024
+@@bLooter's Tunnel@@N~
+@@bA narrow passage, crudely carved by ancient tomb-robbers or modern grave-diggers. The walls are rough stone, and the ceiling is low. This tunnel was dug with picks and desperation, not craftsmanship.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2023
+D2
+~
+~
+0 -1 2028
+S
+#2025
+@@bBuried Tavern@@N~
+@@bOnce, merchants and travelers gathered here to share drink and gossip. Now the wooden tables have rotted away, and the bar stands empty. The air still carries faint echoes of laughter that will never sound again.@@N
+~
+8 11
+D1
+~
+~
+0 -1 2022
+D0
+~
+~
+0 -1 2023
+D3
+~
+~
+0 -1 2026
+S
+#2026
+@@bSlave Market Ruins@@N~
+@@bChains still hang from stone rings set into the floor and walls. The air here feels heavy with the weight of centuries of suffering. No sound echoes in this place—even sound seems to avoid it, as if cursed.@@N
+~
+8 11
+D1
+~
+~
+0 -1 2025
+D2
+~
+~
+0 -1 2027
+S
+#2027
+@@bCaravanserai Courtyard@@N~
+@@bAn open yard surrounded by stone pillars. Hitching posts still stand, empty of beasts. The courtyard's floor is paved with precise stonework, barely weathered despite the passing ages. This was a place of transit and commerce.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2026
+D1
+~
+~
+0 -1 2028
+S
+#2028
+@@bHidden Cache Room@@N~
+@@bA small chamber off the main bazaar routes. Dust lies thick everywhere. Ancient pottery shards and the remains of cloth once fine are scattered about. Someone hid supplies here long ago—perhaps for a journey that never came.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2024
+D0
+~
+~
+0 -1 2027
+S
+#2029
+@@bBazaar Back Alley@@N~
+@@bNarrow passages between collapsed buildings. Sunlight filters down through cracks in upper levels, creating strange patterns. The air is stale and heavy. This is where the bazaar's secrets were kept.@@N
+~
+8 11
+D2
+~
+~
+0 -1 2015
+D0
+~
+~
+0 -1 2030
+S
+#2030
+@@RTemple Forecourt@@N~
+@@RA vast plaza spreads before a massive temple structure. The forecourt is paved with marble in intricate geometric patterns, now cracked and worn. Colossal statues of gods line the approach, their faces weathered beyond recognition.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2014
+D2
+~
+~
+0 -1 2031
+D3
+~
+~
+0 -1 2029
+S
+#2031
+@@RShattered Colonnade@@N~
+@@ROnce, a double row of marble columns supported the temple's outer structure. Now many lie broken, toppled by ages and earthquakes. Those still standing are scarred and worn, their capitals crumbled to dust.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2030
+D2
+~
+~
+0 -1 2032
+S
+#2032
+@@RHall of Sun Murals@@N~
+@@RThe walls are covered with painted murals depicting scenes of the sun god Solahr in triumph. Despite the damage, colors still shine through in places—golds, reds, and blues. The artwork is masterful, even in ruin.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2031
+D1
+~
+~
+0 -1 2033
+D2
+~
+~
+0 -1 2037
+S
+#2033
+@@ROffering Alcove@@N~
+@@RA small side chamber where worshippers once left offerings. Stone shelves line the walls, empty save for dust. A carved statue of a hand reaching upward dominates the center—a symbol of supplication frozen in stone.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2032
+S
+#2034
+@@RPriest's Quarters@@N~
+@@RSmall cells line the walls—dormitories for the temple priesthood. Stone benches and sleeping platforms are visible, worn smooth by countless bodies. Personal effects—hairpins, rings, fragments of cloth—still lie abandoned on the floors.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2037
+D2
+~
+~
+0 -1 2035
+S
+#2035
+@@RReliquary of the Sun@@N~
+@@RA chamber designed to hold the temple's most sacred objects. Stone pedestals stand empty, their surfaces perfectly preserved despite the missing treasures. The marks in the dust reveal the shapes of objects long since stolen.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2034
+D1
+~
+~
+0 -1 2036
+S
+#2036
+@@RSanctified Pool Chamber@@N~
+@@RA large stone pool for ritual bathing, now dry as bone. The bottom is stained with mineral deposits from ancient waters. The walls are inscribed with prayers in a script that crumbles as you read it.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2035
+D2
+~
+~
+0 -1 2040
+S
+#2037
+@@RGrand Nave@@N~
+@@RThe massive central worship hall stretches upward into shadow. The ceiling is lost to darkness above. Rows of stone benches, cracked and weathered, face toward a raised altar platform. The space is overwhelming in its emptiness.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2032
+D3
+~
+~
+0 -1 2034
+D1
+~
+~
+0 -1 2038
+D2
+~
+~
+0 -1 2041
+S
+#2038
+@@RChoir Balcony@@N~
+@@RFrom this upper level, voices once soared to fill the nave below. Stone benches in concentric rows suggest coordinated singing. The balcony overlooks the altar with perfect acoustics—even whispers carry strangely.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2037
+D0
+~
+~
+0 -1 2039
+S
+#2039
+@@RBell Tower Base@@N~
+@@RA circular chamber at the base of a tower that extends upward into darkness. Thick sand fills the floor. A massive bell rope hangs overhead, frayed and useless. The tower would have held the temple's largest bells.@@N
+~
+8 11
+D2
+~
+~
+0 -1 2038
+S
+#2040
+@@RSolar Observatory@@N~
+@@RA domed chamber with precise holes cut through the ceiling to track the sun's movements. Elaborate mathematical carvings cover the floor—stellar charts and astronomical calculations. The craftsmanship is extraordinary.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2036
+D1
+~
+~
+0 -1 2041
+S
+#2041
+@@RHigh Priest's Study@@N~
+@@RScrolls and clay tablets line shelves carved into the stone. Many have crumbled to dust, but some remain legible. Hieroglyphic texts cover the walls. This was the center of the temple's knowledge and power.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2040
+D0
+~
+~
+0 -1 2037
+D1
+~
+~
+0 -1 2042
+S
+#2042
+@@RSealed Vault Door@@N~
+@@RA massive stone door stands sealed before you. Carved into it are warnings in ancient script—threats of divine punishment for those who desecrate this place. Stone bolts and locks secure it firmly, and dust suggests it has been sealed for ages.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2041
+D0
+portal door~
+~
+161 2026 2043
+S
+#2043
+@@RVestibule of Descent@@N~
+@@RA transitional chamber before the catacomb descent. Stairs spiral downward into shadow. The air grows noticeably colder. Carved into the walls are prayers—desperate pleas and benedictions for the souls of the buried below.@@N
+~
+8 11
+D2
+~
+~
+0 -1 2042
+D5
+~
+~
+0 -1 2044
+S
+#2044
+@@RConsecrated Threshold@@N~
+@@RThis chamber marks the boundary between the world of the living and the tombs below. The air is tomb-cold, and the stone itself seems to breathe ancient magic. A final staircase descends into absolute darkness.@@N
+~
+9 11
+D4
+~
+~
+0 -1 2043
+D5
+~
+~
+0 -1 2045
+S
+#2045
+@@bCatacomb Entry Hall@@N~
+@@bA wide corridor descends into the earth. The walls are smooth stone, cut with precision. Hundreds of alcoves line the passage, each sized for a human body. The darkness is absolute save for any light you bring. The air smells of stone and ancient dust.@@N
+~
+9 11
+D4
+~
+~
+0 -1 2044
+D2
+~
+~
+0 -1 2046
+S
+#2046
+@@bBone-Lined Passage@@N~
+@@bSkulls have been pressed into the stone walls, arranged in patterns. The hollow eye sockets seem to watch your passage. The floor is smooth but stained dark—countless bodies have been carried this way. The passage feels alive with presence despite the silence.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2045
+D2
+~
+~
+0 -1 2047
+S
+#2047
+@@bTomb of the Sun Warriors@@N~
+@@bStone sarcophagi line the walls, each carved with the relief of a warrior in battle garb. Weapons are etched into the stone lids. Faint carvings tell stories of ancient victories now utterly forgotten by the world above.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2046
+D1
+~
+~
+0 -1 2048
+D2
+~
+~
+0 -1 2049
+S
+#2048
+@@bCollapsed Burial Wing@@N~
+@@bThis section of the catacombs has suffered structural failure. Stone blocks and rubble choke the passage. The ceiling has partially caved in, and sharp stones jut from walls and floor alike. This path was not meant to be traversed.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2047
+S
+#2049
+@@bEmbalming Chamber@@N~
+@@bStone tables with channels carved into them line this chamber. The tables were once used to prepare the dead. Clay jars containing preservative oils remain on shelves, their seals long broken. The smell of myrrh and natron lingers faintly.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2047
+D2
+~
+~
+0 -1 2050
+S
+#2050
+@@bOssuary of the Faithful@@N~
+@@bBone upon bone—the collected remains of thousands are stacked in this vast chamber. Skulls are arranged in geometric patterns. Femurs and fibias fill entire walls. The accumulation of mortality is overwhelming and macabre.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2049
+D1
+~
+~
+0 -1 2051
+D2
+~
+~
+0 -1 2055
+S
+#2051
+@@bCursed Crypt Corridor@@N~
+@@bThe air crackles with faint magical energy. Carved into the walls are protective runes, their purpose to bind souls and prevent their escape. Some runes glow faintly with residual power. This passage was sealed with ancient magic.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2050
+D2
+~
+~
+0 -1 2052
+S
+#2052
+@@bFungal Growth Chamber@@N~
+@@bLuminescent fungi of impossible colors coat the walls and ceiling. Delicate, hair-like growths hang from the stone. The light is faint and eerie, casting everything in sickly greens and purples. The smell is earthy and wrong.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2051
+D1
+~
+~
+0 -1 2053
+S
+#2053
+@@bFlooded Crypt@@N~
+@@bWater—ankle-deep and stagnant—covers the floor. The source is unclear. The water is cold and tastes of minerals when sampled. Bones poke through the surface, and ripples suggest movement in the depths.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2052
+D2
+~
+~
+0 -1 2054
+S
+#2054
+@@bWhispering Gallery@@N~
+@@bThe acoustics in this chamber are extraordinary. Whispers echo back as if the chamber itself is speaking. Voices from passages nearby carry with impossible clarity. The walls amplify sound until it becomes a cacophony of ghostly voices.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2053
+D2
+~
+~
+0 -1 2055
+S
+#2055
+@@bSarcophagus Row@@N~
+@@bDozens of stone coffins are arranged in precise rows. Each is carved with the name and status of its occupant. The craftsmanship is sublime, each sarcophagus a masterwork. Yet they are tombs now, nothing more.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2050
+D1
+~
+~
+0 -1 2054
+D2
+~
+~
+0 -1 2056
+S
+#2056
+@@bGuardian Alcove@@N~
+@@bA small chamber off the main passage contains a stone statue—an armored figure with sword raised. The craftsmanship is expert, and strange—the statue seems to shift in your peripheral vision. Perhaps it was magic once.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2055
+D2
+~
+~
+0 -1 2057
+S
+#2057
+@@bDust-Choked Passage@@N~
+@@bAn ancient wind-blocked passage, now only accessible to the truly determined. Dust drifts from the ceiling in fine cascades. The walls are so narrow that you must turn sideways to progress. Everything tastes and feels like centuries of accumulated dryness.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2056
+D2
+~
+~
+0 -1 2058
+S
+#2058
+@@bSealed Royal Antechamber@@N~
+@@bThe grandeur of this chamber speaks of royalty. Golden paint still clings to the walls in places. Reliefs depicting a queen in majesty adorn the stone. Beyond lies something greater still—you can sense it.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2057
+D2
+~
+~
+0 -1 2059
+S
+#2059
+@@bTomb of the Sun Queen@@N~
+@@bA single massive sarcophagus dominates this chamber. Carved from a single block of obsidian-black stone, it is a masterpiece of funerary art. The queen's name is written in gold leaf, though the individual letters are worn nearly invisible by time.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2058
+D3
+~
+~
+0 -1 2060
+S
+#2060
+@@bTreasure Vault Anteroom@@N~
+@@bThe entrance to a sealed chamber lies beyond. Guards would have stood here once, protecting wealth beyond measure. Now only dust remains. The silence is so complete it has weight.@@N
+~
+9 11
+D1
+~
+~
+0 -1 2059
+D2
+~
+~
+0 -1 2061
+S
+#2061
+@@bPlundered Treasure Vault@@N~
+@@bThis chamber once held wealth that could purchase kingdoms. Now it is nearly empty. A few scattered coins remain, too corroded to identify. Scratch marks on the floor suggest large containers were dragged away centuries ago.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2060
+D1
+~
+~
+0 -1 2062
+S
+#2062
+@@bHidden Necromancer Workshop@@N~
+@@bThis secret chamber was a place of dark magic. Symbols of binding and control cover the floor in dried blood and strange substances. Stone basins hold unidentifiable residue. The very air feels corrupted by whatever rituals occurred here.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2061
+D2
+~
+~
+0 -1 2063
+S
+#2063
+@@bWinding Descent@@N~
+@@bA spiral staircase descends into shadow. The walls are carved smooth in a spiral pattern. Each step is worn smooth by countless footsteps. The descent seems to go on forever, spiraling deeper into the earth with each turn.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2062
+D5
+~
+~
+0 -1 2064
+S
+#2064
+@@bThreshold of the Sanctum@@N~
+@@bThe final stairs lead to an open archway. Beyond lies absolute power or absolute damnation—you cannot yet tell which. The magic here is so thick it is almost tangible. This is the boundary between the mortal and the divine.@@N
+~
+9 11
+D4
+~
+~
+0 -1 2063
+D5
+~
+~
+0 -1 2065
+S
+#2065
+@@RSanctum Antechamber@@N~
+@@RGuards once stood eternal here, binding souls to stone. Their shadows remain visible on the walls. Wards carved into the floor glow faintly with power. The temperature drops sharply; your breath becomes visible.@@N
+~
+9 11
+D4
+~
+~
+0 -1 2064
+D2
+~
+~
+0 -1 2066
+S
+#2066
+@@RHall of Eternal Flame@@N~
+@@RMagical pillars of fire burn without consuming—they have burned for millennia without fuel. The flames are cold to approach yet give off intense heat. The light dances and flickers with a will of its own, casting impossible shadows.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2065
+D1
+~
+~
+0 -1 2067
+D2
+~
+~
+0 -1 2071
+S
+#2067
+@@RMirror of Souls@@N~
+@@RWalls of polished obsidian reflect your image perfectly, but the reflections seem subtly wrong. The shadows are deeper, the eyes older. Looking too long is unsettling—you might see yourself as you truly are, unbuffered by illusion.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2066
+D2
+~
+~
+0 -1 2068
+S
+#2068
+@@RRitual Circle Chamber@@N~
+@@RRunic patterns cover the floor, forming a massive circle. The symbols glow with eldritch light. At the center stands something that was never meant to be invoked lightly. The very air tastes of ancient power.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2067
+D1
+~
+~
+0 -1 2069
+S
+#2069
+@@RPillar of the Sun God@@N~
+@@RA massive column extends from floor to ceiling, carved with the image of Solahr in divine form. Golden inlays catch the magical light. The pillar radiates warmth and power—this is the heart of the temple's original faith.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2068
+S
+#2070
+@@RChamber of the Failed@@N~
+@@RStatues of cultists line this chamber, carved in realistic detail. But as you approach, you realize with horror that these are not statues at all—they are people, petrified in place. Their faces contort in agony. This was Amenthari's failure made manifest.@@N
+~
+9 11
+D2
+~
+~
+0 -1 2066
+S
+#2071
+@@RThe Burning Threshold@@N~
+@@RA passage of intense heat and light. The ground glows with lava-stained stone. The walls shimmer with residual fire-magic. This passage was meant to be impassable to the unworthy, a final test before the sanctum.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2066
+D2
+~
+~
+0 -1 2072
+S
+#2072
+@@RThrone of Amenthari@@N~
+@@RA massive throne of blackened obsidian and gold dominates this chamber. The seat is empty, but the air crackles with presence. Carved into the floor are protective wards and binding circles. This is the seat of a would-be god.@@N
+~
+24589 11
+D0
+~
+~
+0 -1 2071
+D1
+~
+~
+0 -1 2073
+S
+#2073
+@@RVault of the Sun God@@N~
+@@RA chamber radiating holy and unholy power simultaneously. Treasures of unimaginable worth line the walls, untouched and pristine. Magic preserves all here. This is where a god would store its most precious possessions.@@N
+~
+24589 11
+D3
+~
+~
+0 -1 2072
+D2
+~
+~
+0 -1 2074
+S
+#2074
+@@RAmenthari's Secret Study@@N~
+@@RA hidden chamber accessible only from the vault. Scrolls and tablets cover every surface—the accumulated knowledge of Amenthari's studies into godhood. Personal journals reveal obsession and madness in equal measure.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2073
+S
+#2075
+@@bCavern Mouth@@N~
+@@bRocks jut from the sand pit above as you descend into the earth. The walls become stone, natural formations rather than worked. The air is cool and damp. Water drips somewhere in the darkness ahead.@@N
+~
+9 11
+D4
+~
+~
+0 -1 2010
+D2
+~
+~
+0 -1 2076
+S
+#2076
+@@bNarrow Fissure@@N~
+@@bThe passage becomes a tight squeeze between walls of natural stone. One must turn sideways to progress. The stone is smooth, worn by countless creatures passing through. Strange scratches suggest claws and scales.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2075
+D2
+~
+~
+0 -1 2077
+S
+#2077
+@@bViper Nesting Chamber@@N~
+@@bThe chamber is alive with slithering movement. Vipers coil in corners and hang from the ceiling. The smell is acrid and reptilian. The sound is the constant hiss of hundreds of serpents, a living nest.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2076
+D1
+~
+~
+0 -1 2078
+D2
+~
+~
+0 -1 2079
+S
+#2078
+@@bDripping Stalactite Gallery@@N~
+@@bWater seeps from above, forming stalactites that drip steadily. The floor is slick with moisture. Stalactites and stalagmites form a forest of stone. The sound of water echoes strangely, creating an alien acoustic environment.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2077
+D2
+~
+~
+0 -1 2080
+S
+#2079
+@@bScorpion Burrow@@N~
+@@bEarth and stone have been burrowed away by countless scorpions. The walls show tunnel networks, some large enough to traverse. Chitin shells and molted carapaces litter the floor. The smell is sharp and unpleasant.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2077
+D1
+~
+~
+0 -1 2080
+S
+#2080
+@@bUnderground River Crossing@@N~
+@@bA dark river flows through the cavern, swift and cold. Stones create a precarious path across. The water is utterly black—you cannot see the bottom. Strange sounds echo from the water, as if something massive moves within.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2078
+D0
+~
+~
+0 -1 2079
+D2
+~
+~
+0 -1 2081
+S
+#2081
+@@bSerpent Cult Shrine@@N~
+@@bA crude altar of stacked stones dominates this chamber. Snake carvings, primitive but deliberate, cover the walls. Sacrificial stains darken the altar. This is a place of worship, though not to any god a sane being would recognize.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2080
+D2
+~
+~
+0 -1 2082
+S
+#2082
+@@bCrystal-Veined Tunnel@@N~
+@@bThe stone walls are shot through with veins of crystal that glow with faint internal light. The crystals are beautiful but brittle, shattering at a touch. The light they give is pale and cold, illuminating nothing clearly.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2081
+D2
+~
+~
+0 -1 2083
+S
+#2083
+@@bVenom Pool Grotto@@N~
+@@bA pool of stagnant, green-stained water bubbles faintly. Toxic fumes rise from its surface. The smell is nauseating and acrid. The water itself seems to move without cause, as if something beneath churns it constantly.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2082
+D1
+~
+~
+0 -1 2084
+S
+#2084
+@@bCollapsed Mine Shaft@@N~
+@@bAn ancient excavation, its supports long since failed. Stone blocks lie in chaotic heaps. This is dangerous ground; the ceiling could collapse again at any moment. The accumulated dust suggests no one has disturbed this place in centuries.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2083
+D2
+~
+~
+0 -1 2085
+S
+#2085
+@@bConstrictor's Lair@@N~
+@@bBones—many of them—are scattered here, crushed flat by enormous constriction. The bones are massive, the largest perhaps as large as a man. The lair smells of death and decay. Scales the size of dinner plates cling to the stone.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2084
+D1
+~
+~
+0 -1 2086
+S
+#2086
+@@bFungal Ledge@@N~
+@@bA narrow stone shelf overlooks a vast chasm. The drop is tremendous—darkness waits below. Fungal growth drapes the walls like diseased curtains. Your footing is precarious here; one slip means a fall into infinity.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2085
+D2
+~
+~
+0 -1 2087
+S
+#2087
+@@bEchoing Sinkhole@@N~
+@@bA massive vertical shaft descends into darkness. The wind howls up from below, creating an eerie symphony. Your voice echoes back changed and distorted. The sinkhole seems to open into something vast and unknowable.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2086
+D2
+~
+~
+0 -1 2088
+S
+#2088
+@@bCultist Barracks@@N~
+@@bSleeping mats lie in rows. Crude weapons—clubs and spears—lean against the walls. Bones and rotted cloth suggest this place was abandoned in haste. Occult symbols cover the walls and floor.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2087
+D2
+~
+~
+0 -1 2089
+S
+#2089
+@@bSerpent Idol Chamber@@N~
+@@bA massive carved snake idol dominates this chamber. The carving is ancient and skilled, depicting a serpent of impossible size and malevolence. The idol's eyes seem to follow you. The chamber smells of incense and blood.@@N
+~
+9 11
+D0
+~
+~
+0 -1 2088
+D2
+~
+~
+0 -1 2090
+S
+#2090
+@@RSerpent Queen's Brood Pit@@N~
+@@RA vast natural cavern expanded by serpentine habitation. The walls are slick with secretions. Eggs the size of a human head lie in carefully arranged nests. The air is warm and humid, the smell primal and ancient.@@N
+~
+24589 11
+D0
+~
+~
+0 -1 2089
+D1
+~
+~
+0 -1 2091
+S
+#2091
+@@bHidden Egg Vault@@N~
+@@bA dead end chamber where the most precious eggs are kept. Warmth radiates from cracks in the floor. Stone basins of warm water surround the eggs, keeping them at perfect temperature. This is the heart of the serpent tribe's continuation.@@N
+~
+9 11
+D3
+~
+~
+0 -1 2090
+S
+#2092
+@@yDesert Trail Approach@@N~
+@@yA worn path through the dunes leads toward a distant camp. Footprints in the sand—some fresh, some old—mark regular passage. The smell of smoke and humanity grows stronger as you approach.@@N
+~
+32 10
+D3
+~
+~
+0 -1 2013
+D0
+~
+~
+0 -1 2093
+S
+#2093
+@@yLookout Ridge@@N~
+@@yAn elevated position overlooking the surrounding dunes. From here, a guard could see for miles in any direction. Charred remains of old fires suggest this has been used as a watchtower for years.@@N
+~
+32 10
+D2
+~
+~
+0 -1 2092
+D0
+~
+~
+0 -1 2094
+S
+#2094
+@@yPalisade Gate@@N~
+@@ySharpened stakes form a crude wall, marking the boundary of the warcamp. A gate fashioned from hardened wood and iron stands open—but always ready to be closed. Guards once stood constant watch here.@@N
+~
+32 10
+D2
+~
+~
+0 -1 2093
+D0
+~
+~
+0 -1 2095
+S
+#2095
+@@yOuter Camp Perimeter@@N~
+@@yA clear path around the camp's outer edge. Worn grass and dirt mark the guard patrol route. Here and there, crude shelters and watch posts have been erected. This is the first line of defense for the camp.@@N
+~
+32 10
+D2
+~
+~
+0 -1 2094
+D0
+~
+~
+0 -1 2096
+D1
+~
+~
+0 -1 2097
+S
+#2096
+@@yCampfire Circle@@N~
+@@yA central gathering place where the warband eats and socializes. Fire pits ring the area. The ground is scorched black from countless fires. The air smells of smoke, meat, and leather.@@N
+~
+32 10
+D2
+~
+~
+0 -1 2095
+D1
+~
+~
+0 -1 2098
+D3
+~
+~
+0 -1 2099
+S
+#2097
+@@yWeapon Rack Row@@N~
+@@yBlades and spears stand in displays, organized by type and condition. Some glint with care, others rust with neglect. The racks are crude but functional, designed to hold hundreds of weapons.@@N
+~
+32 10
+D3
+~
+~
+0 -1 2095
+D2
+~
+~
+0 -1 2098
+S
+#2098
+@@ySparring Pit@@N~
+@@yA depression in the ground forms a natural arena. The sand is stained dark with blood. Weapons lie scattered about. This is where warriors test their skills and resolve against one another.@@N
+~
+32 10
+D0
+~
+~
+0 -1 2097
+D3
+~
+~
+0 -1 2096
+D2
+~
+~
+0 -1 2099
+S
+#2099
+@@yHoundmaster's Kennel@@N~
+@@yLarge cages hold enormous war hounds, snarling and testing their bonds. The smell is pungent with animal musk. Fresh meat hangs from hooks, feeding the constant hunger of the beasts.@@N
+~
+32 10
+D1
+~
+~
+0 -1 2096
+D0
+~
+~
+0 -1 2098
+D2
+~
+~
+0 -1 2100
+S
+#2100
+@@ySupply Tent@@N~
+@@yA massive canvas structure filled with stolen goods. Bolts of fine cloth, sealed amphoras, sacks of grain—all organized haphazardly but thoroughly. This is the wealth of the warband's raids.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2099
+D2
+~
+~
+0 -1 2101
+S
+#2101
+@@yShaman's Ritual Tent@@N~
+@@yBone charms hang from every surface. Incense smoke fills the space. Occult symbols are drawn in ash on the ground. This is where the shaman conducts rituals for luck and victory in battle.@@N
+~
+8 11
+D2
+~
+~
+0 -1 2100
+D1
+~
+~
+0 -1 2103
+S
+#2102
+@@ySlave Cage Area@@N~
+@@yIron cages hold captives destined for market or ransom. The prisoners are thin and desperate. The smell is appalling. Guard posts surround the cages constantly.@@N
+~
+8 11
+D2
+~
+~
+0 -1 2103
+S
+#2103
+@@yRaider Mess Hall@@N~
+@@yLong tables serve as dining and gathering space. Rancid food scraps cover the surfaces. The smell is a mixture of spoiled meat and spilled mead. This is where the warband consumes the fruits of their violence.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2101
+D3
+~
+~
+0 -1 2102
+D2
+~
+~
+0 -1 2104
+S
+#2104
+@@yWar Planning Tent@@N~
+@@yMaps and crude figurines represent battlefields and troop positions. This is where the warchief plots raids and strategy. Scrolls containing targets and supply lists cover a table.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2103
+D1
+~
+~
+0 -1 2105
+D2
+~
+~
+0 -1 2107
+S
+#2105
+@@yTorture Chamber@@N~
+@@yRacks and implements of agony hang from walls and rest on tables. Stains—blood and worse—cover the floor. The smell of pain has soaked into the stone. This is where information is extracted.@@N
+~
+8 11
+D3
+~
+~
+0 -1 2104
+S
+#2106
+@@yTrophy Hall@@N~
+@@bSkulls and banners line the walls—trophies of conquered enemies and fallen rivals. Some skulls are ancient, others fresh. Weapons of legendary enemies hang in places of honor. The trophies tell stories of victory and cruelty.@@N
+~
+8 11
+D0
+~
+~
+0 -1 2104
+S
+#2107
+@@RWarchief's Pavilion@@N~
+@@RThe war tent of Ghazaan, leader of the raider warband. Rich tapestries and plundered furnishings fill the space. Maps cover every wall. This is where commands are issued that send hundreds to their deaths.@@N
+~
+24589 11
+D0
+~
+~
+0 -1 2104
+D2
+warchief vault~
+~
+33 2033 2108
+S
+#2108
+@@RWarchief's Treasure Hoard@@N~
+@@RPersonal wealth accumulated through years of violence and theft. Gold, gems, and artifacts of unknown origin fill this sealed chamber. The treasure is immense—a fortune beyond measure.@@N
+~
+24589 11
+D0
+~
+~
+0 -1 2107
+S
+#2109
+@@kShimmering Descent@@N~
+@@kAs you descend, reality seems to bend and waver. The air ripples like water. Colors shift and distort. The boundary between what is and what isn't becomes uncertain.@@N
+~
+1 6
+D4
+~
+~
+0 -1 2007
+D2
+~
+~
+0 -1 2110
+S
+#2110
+@@kBlack Palm Grove@@N~
+@@kTwisted palms with bark the color of old bruises grow here. Their leaves are dark as blood, moving though there is no wind. The trees lean toward you with preternatural hunger.@@N
+~
+1 3
+D0
+~
+~
+0 -1 2109
+D2
+~
+~
+0 -1 2111
+S
+#2111
+@@kTar-Stained Shore@@N~
+@@kViscous dark water laps at black sand. The water is thick and oily, leaving residue on stone. The smell is fetid and ancient. The shore glows faintly with bioluminescent organisms.@@N
+~
+1 6
+D0
+~
+~
+0 -1 2110
+D1
+~
+~
+0 -1 2112
+D3
+~
+~
+0 -1 2113
+S
+#2112
+@@kCorrupted Spring@@N~
+@@kWater wells up from the earth, but it is wrong. The water is black as tar, cold as winter. Fumes rise from the spring—the smell of death and decay. This water once brought life; now it brings only corruption.@@N
+~
+1 11
+D3
+~
+~
+0 -1 2111
+D2
+~
+~
+0 -1 2114
+S
+#2113
+@@kRotting Reed Marsh@@N~
+@@kDecayed vegetation chokes the water. The marsh sucks at your feet. Insects of impossible colors buzz in clouds. The smell is pungent with decay and stagnation.@@N
+~
+1 3
+D1
+~
+~
+0 -1 2111
+D2
+~
+~
+0 -1 2115
+S
+#2114
+@@kShadow-Dappled Pool@@N~
+@@kDark water reflects no light. The surface seems to absorb illumination. Gazing into the water is disorienting—your reflection seems to move independently of your actions.@@N
+~
+1 6
+D0
+~
+~
+0 -1 2112
+D3
+~
+~
+0 -1 2115
+D2
+~
+~
+0 -1 2116
+S
+#2115
+@@kDrowned Shrine@@N~
+@@bA stone altar stands in shallow water, half-submerged and covered in algae. Carvings on its surface depict rituals in a tongue long dead. Whatever god was worshipped here is forgotten now.@@N
+~
+1 6
+D0
+~
+~
+0 -1 2113
+D1
+~
+~
+0 -1 2114
+D2
+~
+~
+0 -1 2117
+S
+#2116
+@@kLotus Garden of Whispers@@N~
+@@kBlack lotus flowers bloom impossibly, their petals the color of midnight. They hum faintly, a frequency that makes your bones ache. The flowers seem to be whispering secrets to one another.@@N
+~
+1 3
+D0
+~
+~
+0 -1 2114
+D1
+~
+~
+0 -1 2117
+S
+#2117
+@@kCollapsed Aqueduct@@N~
+@@kAn ancient water channel, now broken and dry. The stone channels are carved with precision. Water once flowed here in abundance; now only dust and shadows remain.@@N
+~
+1 11
+D3
+~
+~
+0 -1 2115
+D0
+~
+~
+0 -1 2116
+D2
+~
+~
+0 -1 2118
+S
+#2118
+@@kVoid-Touched Grotto@@N~
+@@kA cave behind a waterfall of pure shadow and void-stuff. The water is not water—it is the absence of light given form. The cave beyond seems to open into infinite darkness.@@N
+~
+1 11
+D0
+~
+~
+0 -1 2117
+D2
+~
+~
+0 -1 2119
+S
+#2119
+@@kPetrified Mangrove Tunnel@@N~
+@@kStone roots arch overhead, forming a natural tunnel. The roots are so intertwined it is difficult to move. The ground beneath is soft despite its appearance. The roots seem to move slightly when you're not looking directly.@@N
+~
+1 11
+D0
+~
+~
+0 -1 2118
+D2
+~
+~
+0 -1 2120
+S
+#2120
+@@kBottomless Cenote Edge@@N~
+@@kYou stand at the edge of a massive vertical shaft. The drop plunges into absolute darkness. The walls are smooth stone, worn by countless years of erosion. From below comes a sound like singing—or screaming.@@N
+~
+1 11
+D0
+~
+~
+0 -1 2119
+D2
+~
+~
+0 -1 2121
+S
+#2121
+@@kSubmerged Temple Steps@@N~
+@@bStairs descend into dark water. The steps are carved stone, ancient and regular. They suggest a place of worship once existed here, now drowned and forgotten beneath the shadow waters.@@N
+~
+1 6
+D0
+~
+~
+0 -1 2120
+D2
+~
+~
+0 -1 2122
+S
+#2122
+@@kDrowned Sanctum Antechamber@@N~
+@@bAnkle-deep shadow water fills this chamber. The walls are carved stone, suggesting this was once a grand entrance. Now corruption has claimed it. Shadows move in the water with purpose.@@N
+~
+1 11
+D0
+~
+~
+0 -1 2121
+D2
+~
+~
+0 -1 2123
+S
+#2123
+@@RSha'ithara's Dark Wellspring@@N~
+@@RA chamber of absolute power and corruption. The water here is pure void—darker than darkness. The air crackles with shadow magic. A throne of twisted shadow stone dominates the center.@@N
+~
+24589 11
+D0
+~
+~
+0 -1 2122
+D0
+shadow portal~
+~
+161 2034 2124
+S
+#2124
+@@kSealed Reliquary@@N~
+@@kA hidden chamber sealed by shadow magic. Treasures of unimaginable value lie untouched, preserved by dark preservation. This is where Sha'ithara hoards the artifacts of her power and ancient knowledge.@@N
+~
+1 11
+D2
+~
+~
+0 -1 2123
+S
+#$
