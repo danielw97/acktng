@@ -1,0 +1,6 @@
+level 0
+keywords appraise
+---
+Syntax: appraise <item>
+
+Estimates an item's qualities and usefulness.

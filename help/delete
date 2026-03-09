@@ -1,0 +1,6 @@
+level 0
+keywords delete
+---
+Syntax: delete
+
+Deletes your character (with confirmation flow).

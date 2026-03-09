@@ -1,0 +1,7 @@
+level -3
+keywords vamp
+---
+Syntax: vamp <message>
+
+Vampyre communication channel.
+Only vampyres (or appropriate admin trust) may use this command.
