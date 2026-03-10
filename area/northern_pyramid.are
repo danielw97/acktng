@@ -411,6 +411,206 @@ still intact and the articulated claw-tip retracted to allow the hand to open.~
 11
 L
 110
+#10165
+ghostly tomb shroud about~
+@@ya Ghostly Tomb Shroud@@N~
+A translucent @@bfunerary cloth@@N that billows despite absent wind, its surface faintly
+luminescent with @@yresidual gold dust@@N from the tomb it once covered.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+106
+#10166
+jackal-hide belt waist~
+@@ya Jackal-Hide Belt@@N~
+A belt of @@btanned jackal hide@@N riveted with @@ybrass@@N studs in a repeating eye-of-Ra
+pattern, the buckle a jackal-head cast in @@bbronze@@N still sharp with detail.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+112
+#10167
+granite guardian fist weapon~
+@@yGranite Guardian Fist@@N~
+A fist-weapon carved from a single block of @@bgranite@@N, its knuckle-spurs worn from
+repeated contact with stone corridor walls. Strapped tight to the hand with @@bbronze@@N wire.~
+5 1073741952 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+115
+#10168
+canopic horror mandible weapon bite~
+@@yCanopic Horror Mandible@@N~
+The lower jaw of a canopic horror, its @@bbrown bone@@N mandibles still serrated and
+the hinge joint fitted with an @@yivory@@N handle so it may be wielded as a weapon.~
+5 67108992 8421376 1
+0 0 0 10 0 0 0 0 0 0
+6
+L
+109
+#10169
+asp-fang earring ear~
+@@yan Asp-Fang Earring@@N~
+A single hollow @@bwhite asp fang@@N capped with @@yyellow gold@@N wire and hung on a
+loop of gold thread, the fang's residual venom long dried but still @@Rominous@@N.~
+9 67108992 8388672 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+113
+#10170
+desert hawk wing-cloak about~
+@@yDesert Hawk Wing-Cloak@@N~
+Two large @@bdesert hawk wings@@N mounted on a leather harness, the feathers streaked
+@@yyellow and brown@@N and still retaining the oils that kept them desert-worthy.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+116
+#10171
+sand golem core shard shield hold~
+@@ya Sand Golem's Core Shard@@N~
+A flat disc of compressed @@bsandstone@@N that once was the golem's animating core, its
+surface dense enough to deflect blows. @@yGold veins@@N run through it like circuitry.~
+9 67108992 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+110
+#10172
+acolyte cursed headwrap head~
+@@yAcolyte's Cursed Headwrap@@N~
+A @@bbrown linen@@N headwrap embroidered with @@ycurse-glyphs@@N in gold thread, woven
+by acolytes of the pyramid's inner cult to focus ritual power through the wearer's mind.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10173
+desert wight bone ring finger~
+@@yDesert Wight's Bone Ring@@N~
+A ring carved from @@bvery old bone@@N, its surface etched with the wight's binding marks
+in a hand so precise it could only have been done in life. @@yOcre residue@@N fills the lines.~
+9 67108992 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+114
+#10174
+scarab guardian shell plate body~
+@@yScarab Guardian Shell Plate@@N~
+A chestplate assembled from fitted stone scarab shells, each @@bblue-black carapace@@N
+segment overlapping the next in the way the guardian's outer body was naturally armored.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+117
+#10175
+cobra-scale bracer wrist pyramid~
+@@ya Cobra-Scale Bracer@@N~
+A bracer of overlapping @@bpyramid cobra scales@@N fixed to a @@bbronze@@N backing, the
+inner surface padded with @@yyellow-tanned@@N hide. The scales are still supple.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+111
+#10176
+mummified archer bow wrap arms~
+@@ya Mummified Archer's Bow Wrap@@N~
+Tight @@blinen wrappings@@N reinforced at the forearm with @@bbronze@@N scale insets,
+designed to take the snap of a draw-string thousands of times without tearing.~
+9 67108992 8389632 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+119
+#10177
+vulture-feather mantle shoulders~
+@@yVulture-Feather Mantle@@N~
+A mantle of overlapping @@bblack-brown vulture feathers@@N, their quills lashed to a
+woven @@ybronze-wire@@N backing. It falls from the shoulders to the elbows in a dark sweep.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+120
+#10178
+face guardian stone buckler shield hold~
+@@yFace Guardian Stone Buckler@@N~
+A round shield carved from @@bblack granite@@N, its face a perfect reproduction of the
+ancient face guardian's carved stone visage. @@yGold-inlaid eyes@@N stare outward.~
+9 268435584 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+116
+#10179
+desert shadow cowl head~
+@@yDesert Shadow Cowl@@N~
+A @@bdark grey linen@@N cowl cut with eyeholes and tied at the nape of the neck with
+@@bblack cord@@N, soaked in a @@yshadow-binding oil@@N that makes the wearer harder to see.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+112
+#10180
+assassin sand-silk hood head~
+@@yan Assassin's Sand-Silk Hood@@N~
+A hood of @@bsand-colored silk@@N so finely woven it is effectively weightless, its
+inner lining threaded with @@ytrace amounts of gold@@N that scatter light oddly.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10181
+pillar golem knuckle-spike weapon fist~
+@@ya Pillar Golem's Knuckle-Spike@@N~
+A @@bsandstone@@N spike worn over the knuckle, taken from the living pillar golem's
+striking face. Even severed, the @@yyellow-veined stone@@N carries crushing force.~
+5 1073741952 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10182
+sacred cobra fang pendant neck~
+@@ya Sacred Cobra Fang Pendant@@N~
+A golden cobra fang capped in @@yyellow gold@@N and set with a single @@ccarnelian eye@@N,
+hung on a twisted gold wire chain. It is the mark of the pyramid's sacred serpent cult.~
+9 67108992 8388736 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+115
+#10183
+cultist obsidian dagger weapon~
+@@ya Cultist's Obsidian Dagger@@N~
+A slender @@bblack obsidian@@N blade knapped to a razor edge and hafted in wrapped @@blinen@@N,
+its flat side inscribed with a pyramid cultist's personal vow of service to the Sovereign.~
+5 67108992 8421376 1
+0 0 0 2 0 0 0 0 0 0
+6
+L
+117
+#10184
+death hawk talons weapon claw~
+@@yDeath Hawk Talons@@N~
+The curved talons of a death hawk, three to a set, fitted in a @@bbone@@N knuckle-brace
+wrapped with @@bblack linen@@N. Each talon is hollow and delivers a paralytic venom.~
+5 67108992 8421376 1
+0 0 0 5 0 0 0 0 0 0
+6
+L
+119
 #0
 #ROOMS
 #10125
