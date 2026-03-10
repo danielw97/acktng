@@ -10,938 +10,6 @@ X 0
 F 20
 U @@ythe ancient pyramid groans as hot desert winds sweep its stone passages@@N~
 T
-#OBJECTS
-#10125
-fragment crown pharaoh first I~
-@@ya Fragment of the Pharaoh's Crown (I)@@N~
-A shard of @@yyellow gold@@N inlaid with @@clapis lazuli@@N chips, shaped to fit precisely
-into a larger whole. @@bAncient hieroglyphs@@N mark its inner face.~
-29 201326784 8388608 1
-0 10126 10132 0 0 0 0 0 0 0
-5
-L
-120
-#10126
-fragment crown pharaoh second II~
-@@ya Fragment of the Pharaoh's Crown (II)@@N~
-A wedge of hammered @@yyellow gold@@N, its surface engraved with dynastic cartouches
-worn smooth by the ages. One edge is beveled to lock against another fragment.~
-29 201326784 8388608 1
-10125 0 10132 0 0 0 0 0 0 0
-5
-L
-120
-#10127
-fragment crown pharaoh third III~
-@@ya Fragment of the Pharaoh's Crown (III)@@N~
-A curved plate of @@yyellow gold@@N set with @@cchips of lapis@@N, one edge serrated
-where it broke from a larger piece. @@bHieroglyphic inscriptions@@N run its length.~
-29 201326784 8388608 1
-10132 0 10133 0 0 0 0 0 0 0
-5
-L
-120
-#10128
-fragment crown pharaoh fourth IV~
-@@ya Fragment of the Pharaoh's Crown (IV)@@N~
-A flat panel of @@yyellow beaten gold@@N, its surface a dense field of @@chiroglyphs@@N
-recording the covenant between the Pharaoh and the desert gods of the deep sands.~
-29 201326784 8388608 1
-10133 0 10134 0 0 0 0 0 0 0
-5
-L
-120
-#10129
-fragment crown pharaoh fifth V~
-@@ya Fragment of the Pharaoh's Crown (V)@@N~
-A tapered spike of @@yyellow gold@@N that once formed the front crest of a royal burial
-crown, its tip set with a @@cblue-green sapphire@@N the color of deep desert sky.~
-29 201326784 8388608 1
-10134 0 10135 0 0 0 0 0 0 0
-5
-L
-120
-#10130
-fragment crown pharaoh sixth VI~
-@@ya Fragment of the Pharaoh's Crown (VI)@@N~
-An ornate side-panel of @@yyellow gold@@N, hollow-cast with papyrus-scroll decoration,
-its edges designed to lock cleanly against the assembled crown fragments.~
-29 201326784 8388608 1
-10135 0 10136 0 0 0 0 0 0 0
-5
-L
-120
-#10131
-fragment crown pharaoh seventh VII~
-@@ya Fragment of the Pharaoh's Crown (VII)@@N~
-The final fragment: a wide rear piece of @@yyellow gold@@N shaped like spread falcon wings,
-engraved with the Sovereign's name in the most formal @@bhieratic script@@N.~
-29 201326784 8388608 1
-10136 0 10137 0 0 0 0 0 0 0
-5
-L
-120
-#10132
-partial crown pharaoh assembly I-II~
-@@ya Partial Crown of the Pharaoh (I-II)@@N~
-Two @@yyellow gold@@N fragments fitted together form an incomplete crown arc,
-@@chiroglyphs@@N aligning across the join into a continuous inscription.~
-29 134217920 8388608 1
-0 10127 10133 0 0 0 0 0 0 0
-5
-L
-120
-#10133
-partial crown pharaoh assembly I-III~
-@@ya Partial Crown of the Pharaoh (I-III)@@N~
-Three pieces of @@yyellow gold@@N joined at precise seams form a recognizable crown arc,
-the @@clapis lazuli@@N inlay beginning to show its full intended pattern.~
-29 134217920 8388608 1
-0 10128 10134 0 0 0 0 0 0 0
-5
-L
-120
-#10134
-partial crown pharaoh assembly I-IV~
-@@ya Partial Crown of the Pharaoh (I-IV)@@N~
-Four @@yyellow gold@@N sections assembled into the lower half of an ancient crown, its
-@@bsandstone-worn@@N seams fitting with unmistakable artisan precision.~
-29 134217920 8388608 1
-0 10129 10135 0 0 0 0 0 0 0
-5
-L
-120
-#10135
-partial crown pharaoh assembly I-V~
-@@ya Partial Crown of the Pharaoh (I-V)@@N~
-Five @@yyellow gold@@N crown segments combined into a mostly-complete form, three-quarters
-assembled; a @@cblue sapphire@@N catches light at the front crest.~
-29 134217920 8388608 1
-0 10130 10136 0 0 0 0 0 0 0
-5
-L
-120
-#10136
-partial crown pharaoh assembly I-VI~
-@@ya Partial Crown of the Pharaoh (I-VI)@@N~
-Six segments of @@yyellow beaten gold@@N nearly completing a burial crown, one gap
-remaining at the rear where the @@bfalcon-wing piece@@N belongs.~
-29 134217920 8388608 1
-0 10131 10137 0 0 0 0 0 0 0
-5
-L
-120
-#10137
-burial crown sand sovereign~
-@@ythe Burial Crown of the Sand Sovereign@@N~
-The assembled crown blazes with @@yyellow gold@@N and @@clapis lazuli@@N, its hieroglyphs
-completing the Sand Sovereign's covenant inscription in full. Power radiates from every join.~
-9 202375360 8388616 1
-0 0 0 0 0 0 0 0 0 0
-5
-L
-120
-#10138
-corroded bronze trapdoor key~
-@@ya Corroded Bronze Trapdoor Key@@N~
-A heavy @@bbronze@@N key eaten green with verdigris, its bow cast in the shape of a scarab.
-Despite its age it turns smoothly in the @@bheavy trapdoor's@@N lock.~
-18 128 8388608 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-100
-#10139
-carved stone sentinel key~
-@@ya Carved Stone Sentinel Key@@N~
-A key of polished @@bblack granite@@N carved in one piece, its bow shaped like the pyramid's
-capstone. It fits the @@bstone sentinel gate@@N at the apex approach perfectly.~
-18 67108992 8388608 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10140
-crypt pharaoh death mask~
-@@ythe Crypt Pharaoh's Death Mask@@N~
-A @@yyellow gold@@N funerary mask cast in the image of the Crypt Pharaoh at the height of
-power, its eye-sockets set with @@cpale turquoise@@N that still holds a cold inner light.~
-9 201326784 8388624 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10141
-cloak undying shadow burial~
-@@ya Cloak of Undying Shadow@@N~
-A broad @@bblack-brown@@N burial shroud that billows of its own accord, its inner surface
-woven with @@yglowing gold threads@@N spelling out rites of eternal endurance.~
-9 201326784 8454144 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10142
-crypt pharaoh burial wrappings~
-@@ythe Crypt Pharaoh's Burial Wrappings@@N~
-Thick @@blinen wrappings@@N steeped in ancient preservation oils and @@yyellow gold@@N dust,
-worn in overlapping layers as both armor and the mark of divine undeath.~
-9 201326784 8650752 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10143
-gauntlet stone guardian desert~
-@@ya Gauntlet of the Stone Guardian@@N~
-A single @@bsandstone@@N gauntlet fused at the joints with @@yyellow gold@@N rivets,
-its knuckle-plates carved with the guardian face motif that marks the pyramid's outer walls.~
-9 201326784 8392704 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10144
-guardian sandstone maul weapon~
-@@ythe Guardian's Sandstone Maul@@N~
-An enormous @@bsandstone@@N war-hammer faced with @@yyellow gold@@N plate, its handle wrapped
-in @@bdried linen@@N. Each blow carries the weight of the pyramid's stone heart.~
-5 201326784 8421376 1
-0 0 0 7 0 0 0 0 0 0
-6
-L
-120
-#10145
-sash desert gate guardian waist~
-@@ya Sash of the Desert Gate@@N~
-A broad @@yyellow gold@@N-threaded sash of @@bbrown woven linen@@N, its surface embossed
-with the sigil of the desert gate in raised relief. It carries the guardian's authority.~
-9 201326784 8519680 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-120
-#10146
-chitinous scarab breastplate body~
-@@ya Chitinous Scarab Breastplate@@N~
-Overlapping plates of @@bblue-black scarab chitin@@N riveted onto a @@bbronze@@N frame,
-the surface iridescent even in the pyramid's darkness. Almost impervious to blades.~
-9 201326784 8650752 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10147
-scarab-shell buckler shield hold~
-@@ya Scarab-Shell Buckler@@N~
-A round buckler fashioned from a single enormous scarab carapace, its @@bblue-black@@N
-surface lacquered hard as stone, rimmed in @@yyellow gold@@N and still bearing the beast's sigil.~
-9 469762240 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10148
-claw scarab colossus weapon fist~
-@@ya Claw of the Scarab Colossus@@N~
-A severed forelimb of the Scarab Colossus, sharpened to a talon and fitted with @@bbronze@@N
-straps so it may be worn over the fist. Its @@bchitin@@N edges cut without warning.~
-5 1275068608 8421376 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-120
-#10149
-high priest golden circlet head~
-@@ythe High Priest's Golden Circlet@@N~
-A delicate band of @@yyellow gold@@N set with alternating chips of @@ccarnelian and lapis@@N,
-marking the wearer as the highest ritual authority of the pyramid's sanctified floors.~
-9 201326784 8388616 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10150
-robe ancient rites body~
-@@ya Robe of the Ancient Rites@@N~
-Fine @@bwhite linen@@N embroidered with @@yyellow-gold@@N hieroglyphs that glow faintly,
-the formal vestment worn by the High Priest when performing the rites of eternal preservation.~
-9 201326784 8650752 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10151
-high priest sacrificial blade weapon~
-@@ythe High Priest's Sacrificial Blade@@N~
-A curved @@bbronze@@N blade with a @@yyellow gold@@N-inlaid hilt, its fuller engraved with
-the names of all those sacrificed in the pyramid's founding rituals. Razor sharp.~
-5 201326784 8421376 1
-0 0 0 2 0 0 0 0 0 0
-6
-L
-120
-#10152
-greaves eternal mummy legs~
-@@yGreaves of the Eternal Mummy@@N~
-Thick @@blinen greaves@@N wrapped in preservation resin, stiff as @@bsandstone@@N and
-marked with the Mummy Lord's binding glyphs that hold the wearer upright in undeath.~
-9 201326784 9437184 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10153
-mummy lord cursed flail weapon~
-@@ythe Mummy Lord's Cursed Flail@@N~
-Three weighted @@bbone@@N balls wrapped in preservation linen hang from an @@bironwood@@N
-handle, each ball branded with a curse-glyph that pulses @@Rred@@N in the dark.~
-5 201326784 8421376 1
-0 0 0 7 0 0 0 0 0 0
-6
-L
-120
-#10154
-wrappings ancient preservation arms~
-@@yWrappings of Ancient Preservation@@N~
-Layered @@blinen wrappings@@N soaked in @@yyellow-tinged@@N natron and resin, wound tight
-around the arms. They carry the mummification magic that defies time and blade alike.~
-9 201326784 8389632 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10155
-scale-mail vest drake body~
-@@ya Scale-Mail Vest of the Drake@@N~
-Overlapping scales of @@bburnt-orange sandstone@@N the size of palms, each scale backed
-in @@yyellow gold@@N mesh. The drake's body heat lingers in the stone, warm to the touch.~
-9 201326784 8650752 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10156
-drake ember-fang weapon fist claw~
-@@ythe Drake's Ember-Fang@@N~
-A curved ivory fang from the Pyramid Drake, its root fitted with @@bbronze@@N straps to
-wear over the hand. The tip glows with residual heat and drips @@Rember-tinged@@N venom.~
-5 1275068608 8421376 1
-0 0 0 5 0 0 0 0 0 0
-6
-L
-120
-#10157
-crest desert fire horns~
-@@ya Crest of Desert Fire@@N~
-A swept @@bsandstone@@N crest split by a vein of @@yyellow-orange@@N mineral that glows
-in heat, taken from the Pyramid Drake's brow and worn as a martial diadem.~
-9 201326784 8388612 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-120
-#10158
-sand sovereign great scepter weapon two-handed~
-@@ythe Sand Sovereign's Great Scepter@@N~
-A two-handed @@yyellow gold@@N scepter as tall as a man, topped with a sun-disc of solid
-gold and @@clapis@@N. The Sovereign's covenant with the desert gods runs its full length in relief.~
-5 2348810432 8421376 1
-0 0 0 7 0 0 0 0 0 0
-1
-L
-120
-#10159
-robes eternal sovereign body~
-@@yRobes of the Eternal Sovereign@@N~
-Layers of the finest @@bbleached linen@@N trimmed with @@yyellow gold@@N wire, worn by the
-Sand Sovereign in life and in undeath; they still carry the sacred oils of coronation.~
-9 201326784 8650752 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10160
-sovereign amulet dominion neck~
-@@ythe Sovereign's Amulet of Dominion@@N~
-A heavy @@yyellow gold@@N pectoral bearing the Sovereign's cartouche in full, flanked by
-cobra heads with @@cturquoise@@N eyes. It radiates authority over the living and the dead.~
-9 201326784 8388736 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10161
-sandals desert throne feet~
-@@ySandals of the Desert Throne@@N~
-Flat @@bsandstone@@N soles inlaid with @@yyellow gold@@N wire forming a map of the
-pyramid's outer face, the straps woven from the same linen used in the Sovereign's burial.~
-9 201326784 10485760 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-120
-#10162
-skeleton warrior blade sword weapon~
-@@ya Skeleton Warrior's Blade@@N~
-A pitted @@bironwood@@N shortsword fitted with a yellowed bone handle, still sharp
-despite its age. The skeleton warrior maintained it with the last habit of living soldiers.~
-5 128 8421376 1
-0 0 0 3 0 0 0 0 0 0
-6
-L
-107
-#10163
-mummy wrapping sash waist~
-@@ya Mummy's Wrapping Sash@@N~
-A length of @@bpreservation-stiffened linen@@N wound around the middle, its surface marked
-with the @@yocre-yellow@@N dye that identifies the mummy's original tomb and caste.~
-9 67108992 8519680 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-108
-#10164
-scorpion-claw gauntlet hands~
-@@ya Scorpion-Claw Gauntlet@@N~
-A gauntlet fashioned from the jointed claw of a giant desert scorpion, its @@bbrown chitin@@N
-still intact and the articulated claw-tip retracted to allow the hand to open.~
-9 67108992 8392704 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-110
-#10165
-ghostly tomb shroud about~
-@@ya Ghostly Tomb Shroud@@N~
-A translucent @@bfunerary cloth@@N that billows despite absent wind, its surface faintly
-luminescent with @@yresidual gold dust@@N from the tomb it once covered.~
-9 67108992 8454144 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-106
-#10166
-jackal-hide belt waist~
-@@ya Jackal-Hide Belt@@N~
-A belt of @@btanned jackal hide@@N riveted with @@ybrass@@N studs in a repeating eye-of-Ra
-pattern, the buckle a jackal-head cast in @@bbronze@@N still sharp with detail.~
-9 67108992 8519680 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-112
-#10167
-granite guardian fist weapon~
-@@yGranite Guardian Fist@@N~
-A fist-weapon carved from a single block of @@bgranite@@N, its knuckle-spurs worn from
-repeated contact with stone corridor walls. Strapped tight to the hand with @@bbronze@@N wire.~
-5 1073741952 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-115
-#10168
-canopic horror mandible weapon bite~
-@@yCanopic Horror Mandible@@N~
-The lower jaw of a canopic horror, its @@bbrown bone@@N mandibles still serrated and
-the hinge joint fitted with an @@yivory@@N handle so it may be wielded as a weapon.~
-5 67108992 8421376 1
-0 0 0 10 0 0 0 0 0 0
-6
-L
-109
-#10169
-asp-fang earring ear~
-@@yan Asp-Fang Earring@@N~
-A single hollow @@bwhite asp fang@@N capped with @@yyellow gold@@N wire and hung on a
-loop of gold thread, the fang's residual venom long dried but still @@Rominous@@N.~
-9 67108992 8388672 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-113
-#10170
-desert hawk wing-cloak about~
-@@yDesert Hawk Wing-Cloak@@N~
-Two large @@bdesert hawk wings@@N mounted on a leather harness, the feathers streaked
-@@yyellow and brown@@N and still retaining the oils that kept them desert-worthy.~
-9 67108992 8454144 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-116
-#10171
-sand golem core shard shield hold~
-@@ya Sand Golem's Core Shard@@N~
-A flat disc of compressed @@bsandstone@@N that once was the golem's animating core, its
-surface dense enough to deflect blows. @@yGold veins@@N run through it like circuitry.~
-9 67108992 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-110
-#10172
-acolyte cursed headwrap head~
-@@yAcolyte's Cursed Headwrap@@N~
-A @@bbrown linen@@N headwrap embroidered with @@ycurse-glyphs@@N in gold thread, woven
-by acolytes of the pyramid's inner cult to focus ritual power through the wearer's mind.~
-9 128 8388616 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-118
-#10173
-desert wight bone ring finger~
-@@yDesert Wight's Bone Ring@@N~
-A ring carved from @@bvery old bone@@N, its surface etched with the wight's binding marks
-in a hand so precise it could only have been done in life. @@yOcre residue@@N fills the lines.~
-9 67108992 8396800 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-114
-#10174
-scarab guardian shell plate body~
-@@yScarab Guardian Shell Plate@@N~
-A chestplate assembled from fitted stone scarab shells, each @@bblue-black carapace@@N
-segment overlapping the next in the way the guardian's outer body was naturally armored.~
-9 128 8650752 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-117
-#10175
-cobra-scale bracer wrist pyramid~
-@@ya Cobra-Scale Bracer@@N~
-A bracer of overlapping @@bpyramid cobra scales@@N fixed to a @@bbronze@@N backing, the
-inner surface padded with @@yyellow-tanned@@N hide. The scales are still supple.~
-9 67108992 8390656 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-111
-#10176
-mummified archer bow wrap arms~
-@@ya Mummified Archer's Bow Wrap@@N~
-Tight @@blinen wrappings@@N reinforced at the forearm with @@bbronze@@N scale insets,
-designed to take the snap of a draw-string thousands of times without tearing.~
-9 67108992 8389632 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-119
-#10177
-vulture-feather mantle shoulders~
-@@yVulture-Feather Mantle@@N~
-A mantle of overlapping @@bblack-brown vulture feathers@@N, their quills lashed to a
-woven @@ybronze-wire@@N backing. It falls from the shoulders to the elbows in a dark sweep.~
-9 67108992 8389120 1
-0 0 0 0 0 0 0 0 0 0
-6
-L
-120
-#10178
-face guardian stone buckler shield hold~
-@@yFace Guardian Stone Buckler@@N~
-A round shield carved from @@bblack granite@@N, its face a perfect reproduction of the
-ancient face guardian's carved stone visage. @@yGold-inlaid eyes@@N stare outward.~
-9 268435584 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-116
-#10179
-desert shadow cowl head~
-@@yDesert Shadow Cowl@@N~
-A @@bdark grey linen@@N cowl cut with eyeholes and tied at the nape of the neck with
-@@bblack cord@@N, soaked in a @@yshadow-binding oil@@N that makes the wearer harder to see.~
-9 67108992 8388616 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-112
-#10180
-assassin sand-silk hood head~
-@@yan Assassin's Sand-Silk Hood@@N~
-A hood of @@bsand-colored silk@@N so finely woven it is effectively weightless, its
-inner lining threaded with @@ytrace amounts of gold@@N that scatter light oddly.~
-9 67108992 8388616 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-118
-#10181
-pillar golem knuckle-spike weapon fist~
-@@ya Pillar Golem's Knuckle-Spike@@N~
-A @@bsandstone@@N spike worn over the knuckle, taken from the living pillar golem's
-striking face. Even severed, the @@yyellow-veined stone@@N carries crushing force.~
-5 1073741952 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10182
-sacred cobra fang pendant neck~
-@@ya Sacred Cobra Fang Pendant@@N~
-A golden cobra fang capped in @@yyellow gold@@N and set with a single @@ccarnelian eye@@N,
-hung on a twisted gold wire chain. It is the mark of the pyramid's sacred serpent cult.~
-9 67108992 8388736 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-115
-#10183
-cultist obsidian dagger weapon~
-@@ya Cultist's Obsidian Dagger@@N~
-A slender @@bblack obsidian@@N blade knapped to a razor edge and hafted in wrapped @@blinen@@N,
-its flat side inscribed with a pyramid cultist's personal vow of service to the Sovereign.~
-5 67108992 8421376 1
-0 0 0 2 0 0 0 0 0 0
-6
-L
-117
-#10184
-death hawk talons weapon claw~
-@@yDeath Hawk Talons@@N~
-The curved talons of a death hawk, three to a set, fitted in a @@bbone@@N knuckle-brace
-wrapped with @@bblack linen@@N. Each talon is hollow and delivers a paralytic venom.~
-5 67108992 8421376 1
-0 0 0 5 0 0 0 0 0 0
-6
-L
-119
-#10185
-sand revenant burial ring finger~
-@@ya Sand Revenant's Burial Ring@@N~
-A heavy @@yyellow gold@@N signet ring bearing the revenant's burial cartouche, its stone
-worn smooth where the finger-bone pressed against it for uncounted centuries.~
-9 67108992 8396800 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-113
-#10186
-spectre-touched robes body~
-@@ySpectre-Touched Robes@@N~
-Linen robes of @@bfaded brown@@N that have been partially phased through by a pyramid
-spectre, leaving them partially translucent in patches and @@yglowing faintly@@N at the hems.~
-9 128 8650752 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-116
-#10187
-cursed pharaoh shade halo~
-@@ythe Cursed Pharaoh Shade's Halo@@N~
-A floating ring of @@yyellow-gold@@N light that can be taken and worn, the residual
-corona of a cursed pharaoh's shade, still holding its form even separated from its source.~
-9 128 8388609 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-120
-#10188
-desert titan stone bracer wrist~
-@@ya Desert Titan's Stone Bracer@@N~
-A bracer cut from a single block of @@bsandstone@@N and worn by a desert stone titan,
-its @@yyellow-veined surface@@N polished smooth on the inside from decades of wear.~
-9 128 8390656 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-122
-#10189
-death knight greatsword weapon two-handed~
-@@ya Death Knight's Greatsword@@N~
-A two-handed @@bironwood-hafted@@N greatsword with a blade of hammered @@bgrey iron@@N
-inlaid with @@ycurse-runes@@N along its fuller, the blade too heavy for a single hand.~
-5 2147483776 8421376 1
-0 0 0 3 0 0 0 0 0 0
-6
-L
-121
-#10190
-sand drake scale boots feet~
-@@ySand Drake Scale Boots@@N~
-Boots fashioned from the foot-scales of a sand drake, each scale @@byellow-brown@@N and
-hard as ceramic, the soles stitched with @@bbronze@@N wire to a flat @@bsandstone@@N bed.~
-9 128 10485760 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10191
-sphinx-carved shoulder plate shoulders~
-@@ya Sphinx-Carved Shoulder Plate@@N~
-A broad @@bsandstone@@N shoulder plate carved in the shape of a reclining sphinx, its
-surface detailed with the precision of the pyramid's best artisans and @@yyellow-gilded@@N.~
-9 128 8389120 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-122
-#10192
-scarab swarm chitin ring finger~
-@@ya Scarab Swarm Chitin Ring@@N~
-A ring woven from tiny fragments of @@bblue-black scarab chitin@@N bound with @@yyellow
-gold@@N wire, the material sourced from a swarm of sand scarabs crushed underfoot.~
-9 67108992 8396800 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-105
-#10193
-tomb fly carapace brooch finger~
-@@ya Tomb Fly Carapace Brooch@@N~
-A finger-brooch made from the iridescent @@bgreen-black carapace@@N of a tomb fly,
-pinned with a @@yyellow gold@@N thorn and still faintly warm from the swarm's mass.~
-9 67108992 8396800 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-105
-#10194
-desiccated rat-tail lash weapon whip~
-@@ya Desiccated Rat-Tail Lash@@N~
-A desiccated desert rat's tail cured hard as @@bbone@@N and used as a short whip, its
-tip weighted with a @@yyellow brass@@N pellet and the handle wrapped in @@blinen@@N.~
-5 67108992 8421376 1
-0 0 0 1 0 0 0 0 0 0
-6
-L
-105
-#10195
-bone crawler chitin pauldrons shoulders~
-@@yBone Crawler Chitin Pauldrons@@N~
-Paired shoulder-guards of @@bwhite bone crawler chitin@@N, each segment fitted over the
-next like natural armor. They creak faintly but hold firm under blows.~
-9 67108992 8389120 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-107
-#10196
-ghoul tattered girdle waist~
-@@ya Ghoul's Tattered Girdle@@N~
-A length of @@bgrey-brown linen@@N knotted with desert sand packed into the weave,
-worn as a body-girdle by a sand-choked ghoul. @@yOcre markings@@N on its surface.~
-9 67108992 8519680 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-109
-#10197
-animated obelisk shard buckler shield hold~
-@@yan Animated Obelisk Shard Buckler@@N~
-A flat obelisk-shard of @@bsandstone@@N covered in @@chiroglyphs@@N that still glow
-@@cblue@@N, the buckler shape clearly not original but perfectly functional as a shield.~
-9 335544448 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-112
-#10198
-cursed builder stone trowel weapon~
-@@ya Cursed Builder's Stone Trowel@@N~
-A @@bsandstone@@N trowel used by the pyramid's original builders, still bearing the curse
-that animated its last wielder. @@yHard edges@@N on both sides make it surprisingly lethal.~
-5 67108992 8421376 1
-0 0 0 7 0 0 0 0 0 0
-6
-L
-110
-#10199
-desert sand adder fang ear~
-@@ya Desert Sand Adder Fang@@N~
-A @@bwhite sand adder@@N fang still wet at the hollow tip, capped with @@yyellow gold@@N
-wire and worn as an earring. The venom gland was removed but the fang still carries a trace.~
-9 67108992 8388672 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-108
-#10200
-ancient sentinel faceplate face~
-@@yan Ancient Sentinel's Faceplate@@N~
-The stone faceplate of an ancient sentinel construct, a @@bsmooth granite@@N oval with
-eye-slots and @@ygold-inlaid@@N ritual lines that map the sentinel's protective gaze.~
-9 128 8388624 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-114
-#10201
-hieroglyph guardian stone slab buckler shield hold~
-@@ya Hieroglyph Guardian Stone Slab@@N~
-A thin @@bsandstone slab@@N covered in still-glowing @@chiroglyphs@@N, taken from the
-guardian's own body. Used as a buckler, it radiates the same protective magic.~
-9 335544448 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-115
-#10202
-animated canopic jar lid head~
-@@yan Animated Canopic Jar Lid@@N~
-The @@byellow-painted@@N stopper from an animated canopic jar, its animal-headed top
-hollow inside and worn over the head like a helmet. @@yGold-leafed@@N around the collar.~
-9 67108992 8388616 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-112
-#10203
-scribe cursed inkpot hold~
-@@ya Scribe's Cursed Inkpot@@N~
-A @@bfaience@@N inkpot still containing @@cglowing blue@@N ink that has been cursed by
-a scribal revenant; wearing it channels the scribe's residual enchantment of clarity.~
-9 67108992 8421376 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-116
-#10204
-linen wraps mummy servant wrist~
-@@yLinen Wraps of the Mummy Servant@@N~
-Thin @@bpreservation linen@@N wound in precise overlapping layers around the wrist,
-taken from a sand-wrapped mummy servant and still carrying the embalmer's binding.~
-9 67108992 8390656 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-113
-#10205
-high priest thrall robe body~
-@@ya High Priest Thrall's Robe@@N~
-A formal @@blinen@@N robe marked at the collar with the priest-thrall's service glyph in
-@@yyellow gold@@N embroidery, indicating permanent subservience to the pyramid's inner cult.~
-9 128 8650752 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-118
-#10206
-sand wraith wisp veil about~
-@@ya Sand Wraith's Wisp Veil@@N~
-A barely-visible @@bsmoke-grey@@N veil that billows independently of air movement, torn
-from a sand wraith's drifting form. @@yGold particles@@N are suspended in its weave.~
-9 67108992 8454144 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-117
-#10207
-curse-bound warrior iron pauldron shoulders~
-@@ya Curse-Bound Warrior's Iron Pauldron@@N~
-A single @@biron@@N shoulder plate from a curse-bound warrior, its surface etched with
-the binding inscription that prevented the warrior from leaving service in death.~
-9 67108992 8389120 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-119
-#10208
-entombed warlord war crown head~
-@@yan Entombed Warlord's War Crown@@N~
-A @@bblack iron@@N war crown fitted with @@yyellow gold@@N panels between the prongs,
-the combined weight substantial. Taken from the warlord after centuries of continued use.~
-9 128 8388616 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-118
-#10209
-flesh golem riveted knuckle weapon fist~
-@@ya Flesh Golem's Riveted Knuckle@@N~
-A @@bwhite iron@@N knuckle-spike riveted directly through the flesh golem's fist, removed
-with difficulty. It still twitches with residual animation; gripping it is uncomfortable.~
-5 1140850816 8421376 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10210
-tomb stalker shadow wrapping about~
-@@ya Tomb Stalker's Shadow Wrapping@@N~
-A @@bblack linen@@N outer wrap saturated with tomb-shadow essence, allowing its wearer
-to move through the pyramid's dark corridors with the stalker's unsettling quiet ease.~
-9 67108992 8454144 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-116
-#10211
-ember lizard scale vest body~
-@@yEmber Lizard Scale Vest@@N~
-A vest of @@borange-yellow@@N ember lizard scales, each scale heat-hardened and still
-faintly warm, fitted on a @@bbronze@@N backing. Surprisingly light for its protection.~
-9 67108992 8650752 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-117
-#10212
-charred husk smoldering bracers wrist~
-@@yCharred Husk Smoldering Bracers@@N~
-Bracers of @@bblack-charred bone@@N still smoldering at the edges, taken from a charred
-husk. @@yEmbers@@N drift off the surface and extinguish before hitting the floor.~
-9 67108992 8390656 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-119
-#10213
-apex sentinel stone gauntlets hands~
-@@yan Apex Sentinel's Stone Gauntlets@@N~
-Paired gauntlets of @@bfine-grained granite@@N articulated at the knuckles with @@yyellow
-gold@@N hinges, worn by the apex sentinel to protect the pyramid's innermost passages.~
-9 128 8392704 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#10214
-gilded warrior shade helm head~
-@@ya Gilded Warrior Shade's Helm@@N~
-A @@yyellow gold@@N-plated helmet worn by a gilded warrior shade, its surface hammered
-to a mirror finish that still reflects light despite the shade's intangible nature.~
-9 67108992 8388616 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-118
-#10215
-sandstorm elemental howling band wrist~
-@@ya Sandstorm Elemental's Howling Band@@N~
-A ring of compressed @@bsand@@N held together by the elemental's own @@yelectrical charge@@N,
-worn as a bracer; the sand circulates in a slow ring even when not on a moving wrist.~
-9 128 8390656 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-121
-#10216
-obsidian guardian plate arm arms~
-@@yan Obsidian Guardian's Plate Arm@@N~
-A full arm-plate of @@bblack obsidian@@N articulated with @@yyellow gold@@N joints, taken
-from the ancient obsidian guardian. Cold to the touch and nearly frictionless on the surface.~
-9 128 8389632 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-122
-#10217
-mummy overlord burial circlet head~
-@@ya Mummy Overlord's Burial Circlet@@N~
-A wide @@bbronze@@N circlet set with alternating chips of @@yyellow carnelian@@N and
-@@cblue lapis@@N, the formal headwear of the greater mummy overlord's burial rank.~
-9 128 8388616 1
-0 0 0 0 0 0 0 0 0 0
-11
-L
-120
-#0
 #MOBILES
 #10125
 crypt pharaoh~
@@ -2021,6 +1089,938 @@ battle-directives it has used for centuries. It still expects obedience.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#0
+#OBJECTS
+#10125
+fragment crown pharaoh first I~
+@@ya Fragment of the Pharaoh's Crown (I)@@N~
+A shard of @@yyellow gold@@N inlaid with @@clapis lazuli@@N chips, shaped to fit precisely
+into a larger whole. @@bAncient hieroglyphs@@N mark its inner face.~
+29 201326784 8388608 1
+0 10126 10132 0 0 0 0 0 0 0
+5
+L
+120
+#10126
+fragment crown pharaoh second II~
+@@ya Fragment of the Pharaoh's Crown (II)@@N~
+A wedge of hammered @@yyellow gold@@N, its surface engraved with dynastic cartouches
+worn smooth by the ages. One edge is beveled to lock against another fragment.~
+29 201326784 8388608 1
+10125 0 10132 0 0 0 0 0 0 0
+5
+L
+120
+#10127
+fragment crown pharaoh third III~
+@@ya Fragment of the Pharaoh's Crown (III)@@N~
+A curved plate of @@yyellow gold@@N set with @@cchips of lapis@@N, one edge serrated
+where it broke from a larger piece. @@bHieroglyphic inscriptions@@N run its length.~
+29 201326784 8388608 1
+10132 0 10133 0 0 0 0 0 0 0
+5
+L
+120
+#10128
+fragment crown pharaoh fourth IV~
+@@ya Fragment of the Pharaoh's Crown (IV)@@N~
+A flat panel of @@yyellow beaten gold@@N, its surface a dense field of @@chiroglyphs@@N
+recording the covenant between the Pharaoh and the desert gods of the deep sands.~
+29 201326784 8388608 1
+10133 0 10134 0 0 0 0 0 0 0
+5
+L
+120
+#10129
+fragment crown pharaoh fifth V~
+@@ya Fragment of the Pharaoh's Crown (V)@@N~
+A tapered spike of @@yyellow gold@@N that once formed the front crest of a royal burial
+crown, its tip set with a @@cblue-green sapphire@@N the color of deep desert sky.~
+29 201326784 8388608 1
+10134 0 10135 0 0 0 0 0 0 0
+5
+L
+120
+#10130
+fragment crown pharaoh sixth VI~
+@@ya Fragment of the Pharaoh's Crown (VI)@@N~
+An ornate side-panel of @@yyellow gold@@N, hollow-cast with papyrus-scroll decoration,
+its edges designed to lock cleanly against the assembled crown fragments.~
+29 201326784 8388608 1
+10135 0 10136 0 0 0 0 0 0 0
+5
+L
+120
+#10131
+fragment crown pharaoh seventh VII~
+@@ya Fragment of the Pharaoh's Crown (VII)@@N~
+The final fragment: a wide rear piece of @@yyellow gold@@N shaped like spread falcon wings,
+engraved with the Sovereign's name in the most formal @@bhieratic script@@N.~
+29 201326784 8388608 1
+10136 0 10137 0 0 0 0 0 0 0
+5
+L
+120
+#10132
+partial crown pharaoh assembly I-II~
+@@ya Partial Crown of the Pharaoh (I-II)@@N~
+Two @@yyellow gold@@N fragments fitted together form an incomplete crown arc,
+@@chiroglyphs@@N aligning across the join into a continuous inscription.~
+29 134217920 8388608 1
+0 10127 10133 0 0 0 0 0 0 0
+5
+L
+120
+#10133
+partial crown pharaoh assembly I-III~
+@@ya Partial Crown of the Pharaoh (I-III)@@N~
+Three pieces of @@yyellow gold@@N joined at precise seams form a recognizable crown arc,
+the @@clapis lazuli@@N inlay beginning to show its full intended pattern.~
+29 134217920 8388608 1
+0 10128 10134 0 0 0 0 0 0 0
+5
+L
+120
+#10134
+partial crown pharaoh assembly I-IV~
+@@ya Partial Crown of the Pharaoh (I-IV)@@N~
+Four @@yyellow gold@@N sections assembled into the lower half of an ancient crown, its
+@@bsandstone-worn@@N seams fitting with unmistakable artisan precision.~
+29 134217920 8388608 1
+0 10129 10135 0 0 0 0 0 0 0
+5
+L
+120
+#10135
+partial crown pharaoh assembly I-V~
+@@ya Partial Crown of the Pharaoh (I-V)@@N~
+Five @@yyellow gold@@N crown segments combined into a mostly-complete form, three-quarters
+assembled; a @@cblue sapphire@@N catches light at the front crest.~
+29 134217920 8388608 1
+0 10130 10136 0 0 0 0 0 0 0
+5
+L
+120
+#10136
+partial crown pharaoh assembly I-VI~
+@@ya Partial Crown of the Pharaoh (I-VI)@@N~
+Six segments of @@yyellow beaten gold@@N nearly completing a burial crown, one gap
+remaining at the rear where the @@bfalcon-wing piece@@N belongs.~
+29 134217920 8388608 1
+0 10131 10137 0 0 0 0 0 0 0
+5
+L
+120
+#10137
+burial crown sand sovereign~
+@@ythe Burial Crown of the Sand Sovereign@@N~
+The assembled crown blazes with @@yyellow gold@@N and @@clapis lazuli@@N, its hieroglyphs
+completing the Sand Sovereign's covenant inscription in full. Power radiates from every join.~
+9 202375360 8388616 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+120
+#10138
+corroded bronze trapdoor key~
+@@ya Corroded Bronze Trapdoor Key@@N~
+A heavy @@bbronze@@N key eaten green with verdigris, its bow cast in the shape of a scarab.
+Despite its age it turns smoothly in the @@bheavy trapdoor's@@N lock.~
+18 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#10139
+carved stone sentinel key~
+@@ya Carved Stone Sentinel Key@@N~
+A key of polished @@bblack granite@@N carved in one piece, its bow shaped like the pyramid's
+capstone. It fits the @@bstone sentinel gate@@N at the apex approach perfectly.~
+18 67108992 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10140
+crypt pharaoh death mask~
+@@ythe Crypt Pharaoh's Death Mask@@N~
+A @@yyellow gold@@N funerary mask cast in the image of the Crypt Pharaoh at the height of
+power, its eye-sockets set with @@cpale turquoise@@N that still holds a cold inner light.~
+9 201326784 8388624 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10141
+cloak undying shadow burial~
+@@ya Cloak of Undying Shadow@@N~
+A broad @@bblack-brown@@N burial shroud that billows of its own accord, its inner surface
+woven with @@yglowing gold threads@@N spelling out rites of eternal endurance.~
+9 201326784 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10142
+crypt pharaoh burial wrappings~
+@@ythe Crypt Pharaoh's Burial Wrappings@@N~
+Thick @@blinen wrappings@@N steeped in ancient preservation oils and @@yyellow gold@@N dust,
+worn in overlapping layers as both armor and the mark of divine undeath.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10143
+gauntlet stone guardian desert~
+@@ya Gauntlet of the Stone Guardian@@N~
+A single @@bsandstone@@N gauntlet fused at the joints with @@yyellow gold@@N rivets,
+its knuckle-plates carved with the guardian face motif that marks the pyramid's outer walls.~
+9 201326784 8392704 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10144
+guardian sandstone maul weapon~
+@@ythe Guardian's Sandstone Maul@@N~
+An enormous @@bsandstone@@N war-hammer faced with @@yyellow gold@@N plate, its handle wrapped
+in @@bdried linen@@N. Each blow carries the weight of the pyramid's stone heart.~
+5 201326784 8421376 1
+0 0 0 7 0 0 0 0 0 0
+6
+L
+120
+#10145
+sash desert gate guardian waist~
+@@ya Sash of the Desert Gate@@N~
+A broad @@yyellow gold@@N-threaded sash of @@bbrown woven linen@@N, its surface embossed
+with the sigil of the desert gate in raised relief. It carries the guardian's authority.~
+9 201326784 8519680 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+120
+#10146
+chitinous scarab breastplate body~
+@@ya Chitinous Scarab Breastplate@@N~
+Overlapping plates of @@bblue-black scarab chitin@@N riveted onto a @@bbronze@@N frame,
+the surface iridescent even in the pyramid's darkness. Almost impervious to blades.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10147
+scarab-shell buckler shield hold~
+@@ya Scarab-Shell Buckler@@N~
+A round buckler fashioned from a single enormous scarab carapace, its @@bblue-black@@N
+surface lacquered hard as stone, rimmed in @@yyellow gold@@N and still bearing the beast's sigil.~
+9 469762240 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10148
+claw scarab colossus weapon fist~
+@@ya Claw of the Scarab Colossus@@N~
+A severed forelimb of the Scarab Colossus, sharpened to a talon and fitted with @@bbronze@@N
+straps so it may be worn over the fist. Its @@bchitin@@N edges cut without warning.~
+5 1275068608 8421376 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+120
+#10149
+high priest golden circlet head~
+@@ythe High Priest's Golden Circlet@@N~
+A delicate band of @@yyellow gold@@N set with alternating chips of @@ccarnelian and lapis@@N,
+marking the wearer as the highest ritual authority of the pyramid's sanctified floors.~
+9 201326784 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10150
+robe ancient rites body~
+@@ya Robe of the Ancient Rites@@N~
+Fine @@bwhite linen@@N embroidered with @@yyellow-gold@@N hieroglyphs that glow faintly,
+the formal vestment worn by the High Priest when performing the rites of eternal preservation.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10151
+high priest sacrificial blade weapon~
+@@ythe High Priest's Sacrificial Blade@@N~
+A curved @@bbronze@@N blade with a @@yyellow gold@@N-inlaid hilt, its fuller engraved with
+the names of all those sacrificed in the pyramid's founding rituals. Razor sharp.~
+5 201326784 8421376 1
+0 0 0 2 0 0 0 0 0 0
+6
+L
+120
+#10152
+greaves eternal mummy legs~
+@@yGreaves of the Eternal Mummy@@N~
+Thick @@blinen greaves@@N wrapped in preservation resin, stiff as @@bsandstone@@N and
+marked with the Mummy Lord's binding glyphs that hold the wearer upright in undeath.~
+9 201326784 9437184 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10153
+mummy lord cursed flail weapon~
+@@ythe Mummy Lord's Cursed Flail@@N~
+Three weighted @@bbone@@N balls wrapped in preservation linen hang from an @@bironwood@@N
+handle, each ball branded with a curse-glyph that pulses @@Rred@@N in the dark.~
+5 201326784 8421376 1
+0 0 0 7 0 0 0 0 0 0
+6
+L
+120
+#10154
+wrappings ancient preservation arms~
+@@yWrappings of Ancient Preservation@@N~
+Layered @@blinen wrappings@@N soaked in @@yyellow-tinged@@N natron and resin, wound tight
+around the arms. They carry the mummification magic that defies time and blade alike.~
+9 201326784 8389632 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10155
+scale-mail vest drake body~
+@@ya Scale-Mail Vest of the Drake@@N~
+Overlapping scales of @@bburnt-orange sandstone@@N the size of palms, each scale backed
+in @@yyellow gold@@N mesh. The drake's body heat lingers in the stone, warm to the touch.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10156
+drake ember-fang weapon fist claw~
+@@ythe Drake's Ember-Fang@@N~
+A curved ivory fang from the Pyramid Drake, its root fitted with @@bbronze@@N straps to
+wear over the hand. The tip glows with residual heat and drips @@Rember-tinged@@N venom.~
+5 1275068608 8421376 1
+0 0 0 5 0 0 0 0 0 0
+6
+L
+120
+#10157
+crest desert fire horns~
+@@ya Crest of Desert Fire@@N~
+A swept @@bsandstone@@N crest split by a vein of @@yyellow-orange@@N mineral that glows
+in heat, taken from the Pyramid Drake's brow and worn as a martial diadem.~
+9 201326784 8388612 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+120
+#10158
+sand sovereign great scepter weapon two-handed~
+@@ythe Sand Sovereign's Great Scepter@@N~
+A two-handed @@yyellow gold@@N scepter as tall as a man, topped with a sun-disc of solid
+gold and @@clapis@@N. The Sovereign's covenant with the desert gods runs its full length in relief.~
+5 2348810432 8421376 1
+0 0 0 7 0 0 0 0 0 0
+1
+L
+120
+#10159
+robes eternal sovereign body~
+@@yRobes of the Eternal Sovereign@@N~
+Layers of the finest @@bbleached linen@@N trimmed with @@yyellow gold@@N wire, worn by the
+Sand Sovereign in life and in undeath; they still carry the sacred oils of coronation.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10160
+sovereign amulet dominion neck~
+@@ythe Sovereign's Amulet of Dominion@@N~
+A heavy @@yyellow gold@@N pectoral bearing the Sovereign's cartouche in full, flanked by
+cobra heads with @@cturquoise@@N eyes. It radiates authority over the living and the dead.~
+9 201326784 8388736 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10161
+sandals desert throne feet~
+@@ySandals of the Desert Throne@@N~
+Flat @@bsandstone@@N soles inlaid with @@yyellow gold@@N wire forming a map of the
+pyramid's outer face, the straps woven from the same linen used in the Sovereign's burial.~
+9 201326784 10485760 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+120
+#10162
+skeleton warrior blade sword weapon~
+@@ya Skeleton Warrior's Blade@@N~
+A pitted @@bironwood@@N shortsword fitted with a yellowed bone handle, still sharp
+despite its age. The skeleton warrior maintained it with the last habit of living soldiers.~
+5 128 8421376 1
+0 0 0 3 0 0 0 0 0 0
+6
+L
+107
+#10163
+mummy wrapping sash waist~
+@@ya Mummy's Wrapping Sash@@N~
+A length of @@bpreservation-stiffened linen@@N wound around the middle, its surface marked
+with the @@yocre-yellow@@N dye that identifies the mummy's original tomb and caste.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+108
+#10164
+scorpion-claw gauntlet hands~
+@@ya Scorpion-Claw Gauntlet@@N~
+A gauntlet fashioned from the jointed claw of a giant desert scorpion, its @@bbrown chitin@@N
+still intact and the articulated claw-tip retracted to allow the hand to open.~
+9 67108992 8392704 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+110
+#10165
+ghostly tomb shroud about~
+@@ya Ghostly Tomb Shroud@@N~
+A translucent @@bfunerary cloth@@N that billows despite absent wind, its surface faintly
+luminescent with @@yresidual gold dust@@N from the tomb it once covered.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+106
+#10166
+jackal-hide belt waist~
+@@ya Jackal-Hide Belt@@N~
+A belt of @@btanned jackal hide@@N riveted with @@ybrass@@N studs in a repeating eye-of-Ra
+pattern, the buckle a jackal-head cast in @@bbronze@@N still sharp with detail.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+112
+#10167
+granite guardian fist weapon~
+@@yGranite Guardian Fist@@N~
+A fist-weapon carved from a single block of @@bgranite@@N, its knuckle-spurs worn from
+repeated contact with stone corridor walls. Strapped tight to the hand with @@bbronze@@N wire.~
+5 1073741952 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+115
+#10168
+canopic horror mandible weapon bite~
+@@yCanopic Horror Mandible@@N~
+The lower jaw of a canopic horror, its @@bbrown bone@@N mandibles still serrated and
+the hinge joint fitted with an @@yivory@@N handle so it may be wielded as a weapon.~
+5 67108992 8421376 1
+0 0 0 10 0 0 0 0 0 0
+6
+L
+109
+#10169
+asp-fang earring ear~
+@@yan Asp-Fang Earring@@N~
+A single hollow @@bwhite asp fang@@N capped with @@yyellow gold@@N wire and hung on a
+loop of gold thread, the fang's residual venom long dried but still @@Rominous@@N.~
+9 67108992 8388672 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+113
+#10170
+desert hawk wing-cloak about~
+@@yDesert Hawk Wing-Cloak@@N~
+Two large @@bdesert hawk wings@@N mounted on a leather harness, the feathers streaked
+@@yyellow and brown@@N and still retaining the oils that kept them desert-worthy.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+116
+#10171
+sand golem core shard shield hold~
+@@ya Sand Golem's Core Shard@@N~
+A flat disc of compressed @@bsandstone@@N that once was the golem's animating core, its
+surface dense enough to deflect blows. @@yGold veins@@N run through it like circuitry.~
+9 67108992 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+110
+#10172
+acolyte cursed headwrap head~
+@@yAcolyte's Cursed Headwrap@@N~
+A @@bbrown linen@@N headwrap embroidered with @@ycurse-glyphs@@N in gold thread, woven
+by acolytes of the pyramid's inner cult to focus ritual power through the wearer's mind.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10173
+desert wight bone ring finger~
+@@yDesert Wight's Bone Ring@@N~
+A ring carved from @@bvery old bone@@N, its surface etched with the wight's binding marks
+in a hand so precise it could only have been done in life. @@yOcre residue@@N fills the lines.~
+9 67108992 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+114
+#10174
+scarab guardian shell plate body~
+@@yScarab Guardian Shell Plate@@N~
+A chestplate assembled from fitted stone scarab shells, each @@bblue-black carapace@@N
+segment overlapping the next in the way the guardian's outer body was naturally armored.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+117
+#10175
+cobra-scale bracer wrist pyramid~
+@@ya Cobra-Scale Bracer@@N~
+A bracer of overlapping @@bpyramid cobra scales@@N fixed to a @@bbronze@@N backing, the
+inner surface padded with @@yyellow-tanned@@N hide. The scales are still supple.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+111
+#10176
+mummified archer bow wrap arms~
+@@ya Mummified Archer's Bow Wrap@@N~
+Tight @@blinen wrappings@@N reinforced at the forearm with @@bbronze@@N scale insets,
+designed to take the snap of a draw-string thousands of times without tearing.~
+9 67108992 8389632 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+119
+#10177
+vulture-feather mantle shoulders~
+@@yVulture-Feather Mantle@@N~
+A mantle of overlapping @@bblack-brown vulture feathers@@N, their quills lashed to a
+woven @@ybronze-wire@@N backing. It falls from the shoulders to the elbows in a dark sweep.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+120
+#10178
+face guardian stone buckler shield hold~
+@@yFace Guardian Stone Buckler@@N~
+A round shield carved from @@bblack granite@@N, its face a perfect reproduction of the
+ancient face guardian's carved stone visage. @@yGold-inlaid eyes@@N stare outward.~
+9 268435584 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+116
+#10179
+desert shadow cowl head~
+@@yDesert Shadow Cowl@@N~
+A @@bdark grey linen@@N cowl cut with eyeholes and tied at the nape of the neck with
+@@bblack cord@@N, soaked in a @@yshadow-binding oil@@N that makes the wearer harder to see.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+112
+#10180
+assassin sand-silk hood head~
+@@yan Assassin's Sand-Silk Hood@@N~
+A hood of @@bsand-colored silk@@N so finely woven it is effectively weightless, its
+inner lining threaded with @@ytrace amounts of gold@@N that scatter light oddly.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10181
+pillar golem knuckle-spike weapon fist~
+@@ya Pillar Golem's Knuckle-Spike@@N~
+A @@bsandstone@@N spike worn over the knuckle, taken from the living pillar golem's
+striking face. Even severed, the @@yyellow-veined stone@@N carries crushing force.~
+5 1073741952 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10182
+sacred cobra fang pendant neck~
+@@ya Sacred Cobra Fang Pendant@@N~
+A golden cobra fang capped in @@yyellow gold@@N and set with a single @@ccarnelian eye@@N,
+hung on a twisted gold wire chain. It is the mark of the pyramid's sacred serpent cult.~
+9 67108992 8388736 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+115
+#10183
+cultist obsidian dagger weapon~
+@@ya Cultist's Obsidian Dagger@@N~
+A slender @@bblack obsidian@@N blade knapped to a razor edge and hafted in wrapped @@blinen@@N,
+its flat side inscribed with a pyramid cultist's personal vow of service to the Sovereign.~
+5 67108992 8421376 1
+0 0 0 2 0 0 0 0 0 0
+6
+L
+117
+#10184
+death hawk talons weapon claw~
+@@yDeath Hawk Talons@@N~
+The curved talons of a death hawk, three to a set, fitted in a @@bbone@@N knuckle-brace
+wrapped with @@bblack linen@@N. Each talon is hollow and delivers a paralytic venom.~
+5 67108992 8421376 1
+0 0 0 5 0 0 0 0 0 0
+6
+L
+119
+#10185
+sand revenant burial ring finger~
+@@ya Sand Revenant's Burial Ring@@N~
+A heavy @@yyellow gold@@N signet ring bearing the revenant's burial cartouche, its stone
+worn smooth where the finger-bone pressed against it for uncounted centuries.~
+9 67108992 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+113
+#10186
+spectre-touched robes body~
+@@ySpectre-Touched Robes@@N~
+Linen robes of @@bfaded brown@@N that have been partially phased through by a pyramid
+spectre, leaving them partially translucent in patches and @@yglowing faintly@@N at the hems.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+116
+#10187
+cursed pharaoh shade halo~
+@@ythe Cursed Pharaoh Shade's Halo@@N~
+A floating ring of @@yyellow-gold@@N light that can be taken and worn, the residual
+corona of a cursed pharaoh's shade, still holding its form even separated from its source.~
+9 128 8388609 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10188
+desert titan stone bracer wrist~
+@@ya Desert Titan's Stone Bracer@@N~
+A bracer cut from a single block of @@bsandstone@@N and worn by a desert stone titan,
+its @@yyellow-veined surface@@N polished smooth on the inside from decades of wear.~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+122
+#10189
+death knight greatsword weapon two-handed~
+@@ya Death Knight's Greatsword@@N~
+A two-handed @@bironwood-hafted@@N greatsword with a blade of hammered @@bgrey iron@@N
+inlaid with @@ycurse-runes@@N along its fuller, the blade too heavy for a single hand.~
+5 2147483776 8421376 1
+0 0 0 3 0 0 0 0 0 0
+6
+L
+121
+#10190
+sand drake scale boots feet~
+@@ySand Drake Scale Boots@@N~
+Boots fashioned from the foot-scales of a sand drake, each scale @@byellow-brown@@N and
+hard as ceramic, the soles stitched with @@bbronze@@N wire to a flat @@bsandstone@@N bed.~
+9 128 10485760 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10191
+sphinx-carved shoulder plate shoulders~
+@@ya Sphinx-Carved Shoulder Plate@@N~
+A broad @@bsandstone@@N shoulder plate carved in the shape of a reclining sphinx, its
+surface detailed with the precision of the pyramid's best artisans and @@yyellow-gilded@@N.~
+9 128 8389120 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+122
+#10192
+scarab swarm chitin ring finger~
+@@ya Scarab Swarm Chitin Ring@@N~
+A ring woven from tiny fragments of @@bblue-black scarab chitin@@N bound with @@yyellow
+gold@@N wire, the material sourced from a swarm of sand scarabs crushed underfoot.~
+9 67108992 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+105
+#10193
+tomb fly carapace brooch finger~
+@@ya Tomb Fly Carapace Brooch@@N~
+A finger-brooch made from the iridescent @@bgreen-black carapace@@N of a tomb fly,
+pinned with a @@yyellow gold@@N thorn and still faintly warm from the swarm's mass.~
+9 67108992 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+105
+#10194
+desiccated rat-tail lash weapon whip~
+@@ya Desiccated Rat-Tail Lash@@N~
+A desiccated desert rat's tail cured hard as @@bbone@@N and used as a short whip, its
+tip weighted with a @@yyellow brass@@N pellet and the handle wrapped in @@blinen@@N.~
+5 67108992 8421376 1
+0 0 0 1 0 0 0 0 0 0
+6
+L
+105
+#10195
+bone crawler chitin pauldrons shoulders~
+@@yBone Crawler Chitin Pauldrons@@N~
+Paired shoulder-guards of @@bwhite bone crawler chitin@@N, each segment fitted over the
+next like natural armor. They creak faintly but hold firm under blows.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+107
+#10196
+ghoul tattered girdle waist~
+@@ya Ghoul's Tattered Girdle@@N~
+A length of @@bgrey-brown linen@@N knotted with desert sand packed into the weave,
+worn as a body-girdle by a sand-choked ghoul. @@yOcre markings@@N on its surface.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+109
+#10197
+animated obelisk shard buckler shield hold~
+@@yan Animated Obelisk Shard Buckler@@N~
+A flat obelisk-shard of @@bsandstone@@N covered in @@chiroglyphs@@N that still glow
+@@cblue@@N, the buckler shape clearly not original but perfectly functional as a shield.~
+9 335544448 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+112
+#10198
+cursed builder stone trowel weapon~
+@@ya Cursed Builder's Stone Trowel@@N~
+A @@bsandstone@@N trowel used by the pyramid's original builders, still bearing the curse
+that animated its last wielder. @@yHard edges@@N on both sides make it surprisingly lethal.~
+5 67108992 8421376 1
+0 0 0 7 0 0 0 0 0 0
+6
+L
+110
+#10199
+desert sand adder fang ear~
+@@ya Desert Sand Adder Fang@@N~
+A @@bwhite sand adder@@N fang still wet at the hollow tip, capped with @@yyellow gold@@N
+wire and worn as an earring. The venom gland was removed but the fang still carries a trace.~
+9 67108992 8388672 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+108
+#10200
+ancient sentinel faceplate face~
+@@yan Ancient Sentinel's Faceplate@@N~
+The stone faceplate of an ancient sentinel construct, a @@bsmooth granite@@N oval with
+eye-slots and @@ygold-inlaid@@N ritual lines that map the sentinel's protective gaze.~
+9 128 8388624 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+114
+#10201
+hieroglyph guardian stone slab buckler shield hold~
+@@ya Hieroglyph Guardian Stone Slab@@N~
+A thin @@bsandstone slab@@N covered in still-glowing @@chiroglyphs@@N, taken from the
+guardian's own body. Used as a buckler, it radiates the same protective magic.~
+9 335544448 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+115
+#10202
+animated canopic jar lid head~
+@@yan Animated Canopic Jar Lid@@N~
+The @@byellow-painted@@N stopper from an animated canopic jar, its animal-headed top
+hollow inside and worn over the head like a helmet. @@yGold-leafed@@N around the collar.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+112
+#10203
+scribe cursed inkpot hold~
+@@ya Scribe's Cursed Inkpot@@N~
+A @@bfaience@@N inkpot still containing @@cglowing blue@@N ink that has been cursed by
+a scribal revenant; wearing it channels the scribe's residual enchantment of clarity.~
+9 67108992 8421376 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+116
+#10204
+linen wraps mummy servant wrist~
+@@yLinen Wraps of the Mummy Servant@@N~
+Thin @@bpreservation linen@@N wound in precise overlapping layers around the wrist,
+taken from a sand-wrapped mummy servant and still carrying the embalmer's binding.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+113
+#10205
+high priest thrall robe body~
+@@ya High Priest Thrall's Robe@@N~
+A formal @@blinen@@N robe marked at the collar with the priest-thrall's service glyph in
+@@yyellow gold@@N embroidery, indicating permanent subservience to the pyramid's inner cult.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10206
+sand wraith wisp veil about~
+@@ya Sand Wraith's Wisp Veil@@N~
+A barely-visible @@bsmoke-grey@@N veil that billows independently of air movement, torn
+from a sand wraith's drifting form. @@yGold particles@@N are suspended in its weave.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+117
+#10207
+curse-bound warrior iron pauldron shoulders~
+@@ya Curse-Bound Warrior's Iron Pauldron@@N~
+A single @@biron@@N shoulder plate from a curse-bound warrior, its surface etched with
+the binding inscription that prevented the warrior from leaving service in death.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+119
+#10208
+entombed warlord war crown head~
+@@yan Entombed Warlord's War Crown@@N~
+A @@bblack iron@@N war crown fitted with @@yyellow gold@@N panels between the prongs,
+the combined weight substantial. Taken from the warlord after centuries of continued use.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+118
+#10209
+flesh golem riveted knuckle weapon fist~
+@@ya Flesh Golem's Riveted Knuckle@@N~
+A @@bwhite iron@@N knuckle-spike riveted directly through the flesh golem's fist, removed
+with difficulty. It still twitches with residual animation; gripping it is uncomfortable.~
+5 1140850816 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10210
+tomb stalker shadow wrapping about~
+@@ya Tomb Stalker's Shadow Wrapping@@N~
+A @@bblack linen@@N outer wrap saturated with tomb-shadow essence, allowing its wearer
+to move through the pyramid's dark corridors with the stalker's unsettling quiet ease.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+116
+#10211
+ember lizard scale vest body~
+@@yEmber Lizard Scale Vest@@N~
+A vest of @@borange-yellow@@N ember lizard scales, each scale heat-hardened and still
+faintly warm, fitted on a @@bbronze@@N backing. Surprisingly light for its protection.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+117
+#10212
+charred husk smoldering bracers wrist~
+@@yCharred Husk Smoldering Bracers@@N~
+Bracers of @@bblack-charred bone@@N still smoldering at the edges, taken from a charred
+husk. @@yEmbers@@N drift off the surface and extinguish before hitting the floor.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+119
+#10213
+apex sentinel stone gauntlets hands~
+@@yan Apex Sentinel's Stone Gauntlets@@N~
+Paired gauntlets of @@bfine-grained granite@@N articulated at the knuckles with @@yyellow
+gold@@N hinges, worn by the apex sentinel to protect the pyramid's innermost passages.~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10214
+gilded warrior shade helm head~
+@@ya Gilded Warrior Shade's Helm@@N~
+A @@yyellow gold@@N-plated helmet worn by a gilded warrior shade, its surface hammered
+to a mirror finish that still reflects light despite the shade's intangible nature.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10215
+sandstorm elemental howling band wrist~
+@@ya Sandstorm Elemental's Howling Band@@N~
+A ring of compressed @@bsand@@N held together by the elemental's own @@yelectrical charge@@N,
+worn as a bracer; the sand circulates in a slow ring even when not on a moving wrist.~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+121
+#10216
+obsidian guardian plate arm arms~
+@@yan Obsidian Guardian's Plate Arm@@N~
+A full arm-plate of @@bblack obsidian@@N articulated with @@yyellow gold@@N joints, taken
+from the ancient obsidian guardian. Cold to the touch and nearly frictionless on the surface.~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+122
+#10217
+mummy overlord burial circlet head~
+@@ya Mummy Overlord's Burial Circlet@@N~
+A wide @@bbronze@@N circlet set with alternating chips of @@yyellow carnelian@@N and
+@@cblue lapis@@N, the formal headwear of the greater mummy overlord's burial rank.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
 #0
 #ROOMS
 #10125
