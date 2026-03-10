@@ -465,6 +465,9 @@ All strong mobs: `act` = `is_npc(1) | aggressive(32) | stay_area(64) | solo(3355
 | 10134 | a pyramid death knight | 121 | Floors 2–4 | Armored undead warrior. 4_attack, enhanced, parry, counter. |
 | 10135 | a sand drake | 120 | Floors 3–5 | Lesser drake. 4_attack, enhanced, parry, dodge. Spec: spec_breath_fire. |
 | 10136 | a golden sphinx | 122 | Floors 4–5 | Construct guardian. 3_attack, enhanced, parry, dodge. Cast: earthquake, light_bolt. |
+| 10185 | a sandstorm elemental | 121 | Ground, Floor 1 | Air/sand elemental construct. no_mind. 3_attack, enhanced, dodge. Cast: col_spray, stun. Spec: spec_cast_mage. |
+| 10186 | an ancient obsidian guardian | 122 | Floor 2, Floor 3 | Massive black-stone construct. no_mind, sentinel. 4_attack, enhanced, parry, nodisarm, notrip. |
+| 10187 | a greater mummy overlord | 120 | Floor 3, Floor 4 | Towering ancient warlord-spirit. undead. 3_attack, enhanced, parry, counter. Cast: suffocate, ego_whip. Spec: spec_cast_undead. |
 
 ---
 
@@ -500,8 +503,30 @@ All trash: `act` = `is_npc(1) | aggressive(32) | stay_area(64)` = **97**
 | 10160 | a death hawk | 119 | Floor 4, Floor 5 | 2_attack, dodge, kick. |
 | 10161 | a sand revenant | 113 | Floor 4 | undead. 2_attack, enhanced, parry. Def: cure_critic. |
 | 10162 | a pyramid specter | 116 | Floor 5 | undead, no_body. Cast: mindflame, mind_bolt. Def: cure_critic. |
+| 10163 | a tomb fly swarm | 105 | Undercroft | Clouds of carrion flies. no_body, no_mind. 2_attack. Spec: spec_disease. |
+| 10164 | a desiccated desert rat | 105 | Undercroft, Ground | Dessicated undead vermin. no_mind. 2_attack, trip. Spec: spec_disease. |
+| 10165 | a bone crawler | 107 | Undercroft | Animated skeletal mass. undead, no_mind. 3_attack, enhanced. |
+| 10166 | a sand-choked ghoul | 109 | Undercroft, Ground | Ghoul packed with sand. undead. 2_attack, enhanced, drain. |
+| 10167 | an animated obelisk shard | 112 | Ground | Fragment of a shattered obelisk come alive. no_mind, sentinel. 3_attack, enhanced, nodisarm. |
+| 10168 | a cursed pyramid builder | 110 | Ground, Floor 1 | Ghost of a slave forced to build the pyramid. undead. 2_attack, enhanced. Cast: weaken, blindness. |
+| 10169 | a desert sand adder | 108 | Ground | A fat, heat-seeking snake. 2_attack, dodge. Spec: spec_poison. |
+| 10170 | an ancient sentinel construct | 114 | Ground, Floor 1 | Hulking guardian golem, still functional. no_mind. 3_attack, enhanced, parry, nodisarm. |
+| 10171 | a hieroglyph guardian | 115 | Floor 1 | Living inscription carved into stone, peeled free. no_mind, sentinel. 3_attack, enhanced. |
+| 10172 | an animated canopic jar | 112 | Floor 1, Floor 2 | A sealed burial jar walking on spindly carved legs. undead, no_body. 2_attack, punch. Cast: poison, col_spray. |
+| 10173 | a scribal revenant | 116 | Floor 1 | The ghost of a scribe whose knowledge was sealed in the pyramid. undead. 2_attack. Cast: flare, mag_missile. Def: cure_light. |
+| 10174 | a sand-wrapped mummy servant | 113 | Floor 1, Floor 2 | A lesser mummy bound in sand-crusted linen. undead. 2_attack, enhanced. |
+| 10175 | a high priest's thrall | 118 | Floor 2 | Undead acolyte enslaved by the High Priest's will. undead. 2_attack, enhanced, parry. Cast: faerie_fire. |
+| 10176 | a sand wraith | 117 | Floor 2, Floor 3 | A translucent desert spirit wreathed in swirling sand. undead, no_body. Cast: ego_whip, cold_grasp. Def: cure_serious. |
+| 10177 | a curse-bound warrior | 119 | Floor 2, Floor 3 | An ancient soldier held together by curse alone. undead. 3_attack, enhanced, counter. |
+| 10178 | an entombed warlord | 118 | Floor 3 | A general buried standing upright, still battle-ready. undead. 3_attack, enhanced, parry, dodge. |
+| 10179 | a flesh golem | 120 | Floor 3, Floor 4 | A construct of stitched mummy flesh. no_mind. 4_attack, enhanced, nodisarm, notrip. |
+| 10180 | a tomb stalker | 116 | Floor 3 | A beast that hunts intruders in the dark. 2_attack, dodge, trip. |
+| 10181 | an ember lizard | 117 | Floor 4 | A long-tailed reptile that absorbs heat from the scorched stone. 2_attack, dodge. Resist: fire. |
+| 10182 | a charred husk | 119 | Floor 4 | An undead burned to blackened bone and sinew. undead. 3_attack, enhanced. Strong: fire. Weak: water. |
+| 10183 | an apex sentinel | 120 | Floor 5 | The last stone guardian before the throne. no_mind, sentinel. 3_attack, enhanced, parry, nodisarm. |
+| 10184 | a gilded warrior shade | 118 | Floor 5 | The ghost of a royal bodyguard, still adorned in ceremonial gold. undead. 2_attack, enhanced. Cast: mind_bolt. |
 
-**Note on vnum reuse:** Mob vnums 10137–10162 overlap numerically with object vnums 10137–10162. Cross-type vnum overlap is permitted by the spec; each is unique within its own type index.
+**Note on vnum reuse:** Mob vnums 10137–10187 overlap numerically with object vnums in the same range. Cross-type vnum overlap is permitted by the spec; each is unique within its own type index.
 
 ---
 
@@ -672,8 +697,33 @@ All items include `take(8388608)` in wear_flags.
 | 10190 | sand drake scale boots | armor (9) | feet\|take | 11 | L 120 | Reset (E) | sand drake |
 | 10191 | a sphinx-carved shoulder plate | armor (9) | shoulders\|take | 11 | L 122 | Reset (E) | golden sphinx |
 | 10192 | scarab swarm chitin ring | armor (9) | finger\|take | 1 | L 105 | Loot | sand scarab swarm |
+| 10193 | a tomb fly carapace brooch | armor (9) | finger\|take | 1 | L 105 | Loot | tomb fly swarm |
+| 10194 | a desiccated rat-tail lash | weapon (5) | hold\|take | 6 | L 105 | Loot | desiccated desert rat; value3=1 (whip) |
+| 10195 | bone crawler chitin pauldrons | armor (9) | shoulders\|take | 11 | L 107 | Loot | bone crawler |
+| 10196 | a ghoul's tattered girdle | armor (9) | waist\|take | 11 | L 109 | Loot | sand-choked ghoul |
+| 10197 | an animated obelisk shard buckler | armor (9) | hold\|take | 11 | L 112 | Loot | animated obelisk shard; ITEM_BUCKLER |
+| 10198 | a cursed builder's stone trowel | weapon (5) | hold\|take | 6 | L 110 | Loot | cursed pyramid builder; value3=7 (pound) |
+| 10199 | a desert sand adder fang | armor (9) | ear\|take | 1 | L 108 | Loot | desert sand adder |
+| 10200 | an ancient sentinel's faceplate | armor (9) | face\|take | 11 | L 114 | Reset (E) | ancient sentinel construct |
+| 10201 | a hieroglyph guardian stone slab | armor (9) | hold\|take | 11 | L 115 | Loot | hieroglyph guardian; ITEM_BUCKLER |
+| 10202 | an animated canopic jar lid | armor (9) | head\|take | 1 | L 112 | Loot | animated canopic jar |
+| 10203 | a scribe's cursed inkpot | armor (9) | hold\|take | 1 | L 116 | Loot | scribal revenant |
+| 10204 | linen wraps of the mummy servant | armor (9) | wrist\|take | 11 | L 113 | Loot | sand-wrapped mummy servant |
+| 10205 | a high priest thrall's robe | armor (9) | body\|take | 1 | L 118 | Reset (E) | high priest's thrall |
+| 10206 | a sand wraith's wisp veil | armor (9) | about\|take | 1 | L 117 | Loot | sand wraith |
+| 10207 | a curse-bound warrior's iron pauldron | armor (9) | shoulders\|take | 11 | L 119 | Loot | curse-bound warrior |
+| 10208 | an entombed warlord's war crown | armor (9) | head\|take | 11 | L 118 | Reset (E) | entombed warlord |
+| 10209 | a flesh golem's riveted knuckle | weapon (5) | hold\|take | 11 | L 120 | Loot | flesh golem; ITEM_FIST; value3=0; extra_flags = NODROP+LOOT+FIST = 1140850816 |
+| 10210 | a tomb stalker's shadow wrapping | armor (9) | about\|take | 1 | L 116 | Loot | tomb stalker |
+| 10211 | ember lizard scale vest | armor (9) | body\|take | 11 | L 117 | Loot | ember lizard |
+| 10212 | charred husk smoldering bracers | armor (9) | wrist\|take | 11 | L 119 | Loot | charred husk |
+| 10213 | an apex sentinel's stone gauntlets | armor (9) | hands\|take | 11 | L 120 | Reset (E) | apex sentinel |
+| 10214 | a gilded warrior shade's helm | armor (9) | head\|take | 1 | L 118 | Loot | gilded warrior shade |
+| 10215 | a sandstorm elemental's howling band | armor (9) | wrist\|take | 1 | L 121 | Reset (E) | sandstorm elemental |
+| 10216 | an obsidian guardian's plate arm | armor (9) | arms\|take | 11 | L 122 | Reset (E) | ancient obsidian guardian |
+| 10217 | a mummy overlord's burial circlet | armor (9) | head\|take | 11 | L 120 | Reset (E) | greater mummy overlord |
 
-**Note:** Object vnums 10162–10192 overlap with mob vnums used above. Cross-type overlap is permitted; each is unique within its type index.
+**Note:** Object vnums 10162–10217 overlap with mob vnums in the same range. Cross-type overlap is permitted; each is unique within its type index.
 
 ---
 
@@ -716,18 +766,24 @@ M 0 10135 2 10282  sand drake
 M 0 10135 2 10293  sand drake
 M 0 10136 2 10313  golden sphinx
 M 0 10136 2 10319  golden sphinx
+M 0 10185 2 10170  sandstorm elemental
+M 0 10185 2 10203  sandstorm elemental
+M 0 10186 2 10249  ancient obsidian guardian
+M 0 10186 2 10270  ancient obsidian guardian
+M 0 10187 2 10282  greater mummy overlord
+M 0 10187 2 10296  greater mummy overlord
 ```
 
 ### Trash Mob Resets (representative sample, ~60–80 total resets)
 
 Distributed across zones by level:
-- **Undercroft (10126–10154):** Skeleton warriors, cursed mummies, sand scarab swarms, giant scorpions, tomb robber's ghosts, canopic horrors (~12 resets)
-- **Ground Level (10156–10199):** Sand jackals, tomb robber's ghosts, granite guardian statues, canopic horrors (~20 resets)
-- **Floor 1 (10201–10234):** Golden asps, desert hawks, sand golems, granite statues (~14 resets)
-- **Floor 2 (10236–10264):** Cursed acolytes, desert wights, stone scarab guardians, pyramid cobras (~12 resets)
-- **Floor 3 (10266–10289):** Mummified archers, great desert vultures, ancient face guardians, desert shadows, shadow assassins (~10 resets)
-- **Floor 4 (10291–10309):** Living pillar golems, sacred golden cobras, pyramid cultists, death hawks, sand revenants (~8 resets)
-- **Floor 5 (10311–10323):** Pyramid specters, death knights (strong), cursed pharaoh shades (strong) (~5 resets)
+- **Undercroft (10126–10154):** Skeleton warriors, cursed mummies, sand scarab swarms, giant scorpions, tomb robber's ghosts, canopic horrors, tomb fly swarms, desiccated desert rats, bone crawlers, sand-choked ghouls (~18 resets)
+- **Ground Level (10156–10199):** Sand jackals, tomb robber's ghosts, granite guardian statues, canopic horrors, animated obelisk shards, cursed pyramid builders, desert sand adders, ancient sentinel constructs, sand-choked ghouls (~28 resets)
+- **Floor 1 (10201–10234):** Golden asps, desert hawks, sand golems, granite statues, cursed pyramid builders, ancient sentinel constructs, hieroglyph guardians, animated canopic jars, scribal revenants, sand-wrapped mummy servants (~20 resets)
+- **Floor 2 (10236–10264):** Cursed acolytes, desert wights, stone scarab guardians, pyramid cobras, animated canopic jars, sand-wrapped mummy servants, high priest thralls, sand wraiths, curse-bound warriors (~16 resets)
+- **Floor 3 (10266–10289):** Mummified archers, great desert vultures, ancient face guardians, desert shadows, shadow assassins, sand wraiths, curse-bound warriors, entombed warlords, flesh golems, tomb stalkers (~14 resets)
+- **Floor 4 (10291–10309):** Living pillar golems, sacred golden cobras, pyramid cultists, death hawks, sand revenants, flesh golems, ember lizards, charred husks (~12 resets)
+- **Floor 5 (10311–10323):** Pyramid specters, apex sentinels, gilded warrior shades, death knights (strong), cursed pharaoh shades (strong) (~8 resets)
 
 ### Equipment Resets (E/G after mob M)
 
@@ -792,6 +848,15 @@ M 10155 spec_cast_undead    desert shadow
 M 10158 spec_poison         sacred golden cobra
 M 10159 spec_cast_mage      pyramid cultist
 M 10162 spec_cast_undead    pyramid specter
+M 10163 spec_disease        tomb fly swarm
+M 10164 spec_disease        desiccated desert rat
+M 10169 spec_poison         desert sand adder
+M 10172 spec_cast_undead    animated canopic jar
+M 10173 spec_cast_mage      scribal revenant
+M 10175 spec_cast_mage      high priest's thrall
+M 10176 spec_cast_undead    sand wraith
+M 10185 spec_cast_mage      sandstorm elemental
+M 10187 spec_cast_undead    greater mummy overlord
 S
 ```
 
@@ -815,6 +880,9 @@ S
 | Stone face guardian buckler (trash reset) | NODROP+BUCKLER | 268435584 |
 | Pillar golem fist (trash reset) | NODROP+FIST | 1073741952 |
 | Death knight greatsword (trash reset) | NODROP+TWO_HANDED | 2147483776 |
+| Animated obelisk buckler (trash loot) | NODROP+LOOT+BUCKLER | 335544320 |
+| Hieroglyph guardian buckler (trash loot) | NODROP+LOOT+BUCKLER | 335544320 |
+| Flesh golem knuckle (trash loot) | NODROP+LOOT+FIST | 1140850816 |
 
 ---
 
@@ -835,8 +903,8 @@ S
 
 1. [ ] Create branch `claude/northern-pyramid-area-design-TnN2N`
 2. [ ] Create `area/northern_pyramid.are` with `#AREA` header and `#$`
-3. [ ] Write `#MOBILES` section — 7 bosses (10125–10131) + 5 strong mobs (10132–10136) + 26 trash (10137–10162)
-4. [ ] Write `#OBJECTS` section — 13 piece chain (10125–10137) + 2 keys (10138–10139) + 22 boss gear (10140–10161) + 31 trash gear (10162–10192)
+3. [ ] Write `#MOBILES` section — 7 bosses (10125–10131) + 8 strong mobs (10132–10136, 10185–10187) + 48 trash (10137–10184)
+4. [ ] Write `#OBJECTS` section — 13 piece chain (10125–10137) + 2 keys (10138–10139) + 22 boss gear (10140–10161) + 56 trash gear (10162–10217)
 5. [ ] Write `#ROOMS` section — 200 rooms (10125–10324), all vnums used, all descriptions unique with 3+ sentences (5+ for important rooms), named exits mentioned in room text
 6. [ ] Write `#RESETS` section — boss M resets, loot table structure, strong/trash M resets, E equipment resets, O object reset (key in 10148), D door resets
 7. [ ] Write `#SPECIALS` section
