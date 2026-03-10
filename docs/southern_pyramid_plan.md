@@ -621,28 +621,28 @@ All eight boss fragment pieces are delivered via boss loot tables and carry `ITE
 
 **Assembly extra_flags (created by combining, not looted):** `ITEM_NODROP(128) | ITEM_BOSS(134217728) | ITEM_MAGIC(64)` = **134217920**
 
-**Final Circlet extra_flags:** `ITEM_RARE(1048576) | ITEM_NODROP(128) | ITEM_BOSS(134217728) | ITEM_MAGIC(64) | ITEM_LOOT(67108864)` = **202375360**
+**Final Lantern extra_flags:** `ITEM_RARE(1048576) | ITEM_NODROP(128) | ITEM_BOSS(134217728) | ITEM_MAGIC(64) | ITEM_LOOT(67108864)` = **202375360**
 
 All piece and assembly items: `item_type = 29` (ITEM_PIECE), `wear_flags = take(8388608)`.
-Final Circlet: `item_type = 9` (ITEM_ARMOR), `wear_flags = head(8) | take(8388608) = 8388616`.
+Final Lantern: `item_type = 1` (ITEM_LIGHT), `wear_flags = hold(32768) | take(8388608) = 8421376`, `value[2] = -1` (infinite light).
 
 | Obj Vnum | Name | Type | value0 | value1 | value2 | Source |
 |----------|------|------|--------|--------|--------|--------|
-| 11450 | a shard of the moon sovereign's circlet (I) | piece | 0 | 11451 | 11458 | Moon Gate Guardian loot |
-| 11451 | a shard of the moon sovereign's circlet (II) | piece | 11450 | 0 | 11458 | Silent Warden loot |
-| 11452 | a shard of the moon sovereign's circlet (III) | piece | 11458 | 0 | 11459 | Rot Warden loot |
-| 11453 | a shard of the moon sovereign's circlet (IV) | piece | 11459 | 0 | 11460 | Shadow Warden loot |
-| 11454 | a shard of the moon sovereign's circlet (V) | piece | 11460 | 0 | 11461 | Bone Warden loot |
-| 11455 | a shard of the moon sovereign's circlet (VI) | piece | 11461 | 0 | 11462 | Venom Warden loot |
-| 11456 | a shard of the moon sovereign's circlet (VII) | piece | 11462 | 0 | 11463 (obj) | Fire Warden loot |
-| 11457 | a shard of the moon sovereign's circlet (VIII) | piece | 11463 (obj) | 0 | 11464 (obj) | Moon Sovereign loot |
-| 11458 | a partial circlet of the moon sovereign (I-II) | piece | 0 | 11452 | 11459 | Created from I+II |
-| 11459 | a partial circlet of the moon sovereign (I-III) | piece | 0 | 11453 | 11460 | Created from (I-II)+III |
-| 11460 | a partial circlet of the moon sovereign (I-IV) | piece | 0 | 11454 | 11461 | Created from (I-III)+IV |
-| 11461 | a partial circlet of the moon sovereign (I-V) | piece | 0 | 11455 | 11462 | Created from (I-IV)+V |
-| 11462 | a partial circlet of the moon sovereign (I-VI) | piece | 0 | 11456 | 11463 (obj) | Created from (I-V)+VI |
-| 11463 (obj) | a partial circlet of the moon sovereign (I-VII) | piece | 0 | 11457 | 11464 (obj) | Created from (I-VI)+VII |
-| 11464 (obj) | the Void Circlet of the Moon Sovereign | armor (head) | — | — | — | **Final combined item** |
+| 11450 | a shard of the moon sovereign's lantern (I) | piece | 0 | 11451 | 11458 | Moon Gate Guardian loot |
+| 11451 | a shard of the moon sovereign's lantern (II) | piece | 11450 | 0 | 11458 | Silent Warden loot |
+| 11452 | a shard of the moon sovereign's lantern (III) | piece | 11458 | 0 | 11459 | Rot Warden loot |
+| 11453 | a shard of the moon sovereign's lantern (IV) | piece | 11459 | 0 | 11460 | Shadow Warden loot |
+| 11454 | a shard of the moon sovereign's lantern (V) | piece | 11460 | 0 | 11461 | Bone Warden loot |
+| 11455 | a shard of the moon sovereign's lantern (VI) | piece | 11461 | 0 | 11462 | Venom Warden loot |
+| 11456 | a shard of the moon sovereign's lantern (VII) | piece | 11462 | 0 | 11463 (obj) | Fire Warden loot |
+| 11457 | a shard of the moon sovereign's lantern (VIII) | piece | 11463 (obj) | 0 | 11464 (obj) | Moon Sovereign loot |
+| 11458 | a partial lantern of the moon sovereign (I-II) | piece | 0 | 11452 | 11459 | Created from I+II |
+| 11459 | a partial lantern of the moon sovereign (I-III) | piece | 0 | 11453 | 11460 | Created from (I-II)+III |
+| 11460 | a partial lantern of the moon sovereign (I-IV) | piece | 0 | 11454 | 11461 | Created from (I-III)+IV |
+| 11461 | a partial lantern of the moon sovereign (I-V) | piece | 0 | 11455 | 11462 | Created from (I-IV)+V |
+| 11462 | a partial lantern of the moon sovereign (I-VI) | piece | 0 | 11456 | 11463 (obj) | Created from (I-V)+VI |
+| 11463 (obj) | a partial lantern of the moon sovereign (I-VII) | piece | 0 | 11457 | 11464 (obj) | Created from (I-VI)+VII |
+| 11464 (obj) | the Void Lantern of the Moon Sovereign | light (1) | 0 | 0 | -1 | **Final combined item** |
 
 **Combining sequence:**
 1. Shard I (11450) + Shard II (11451) → Assembly I-II (11458)
@@ -651,7 +651,7 @@ Final Circlet: `item_type = 9` (ITEM_ARMOR), `wear_flags = head(8) | take(838860
 4. Assembly I-IV (11460) + Shard V (11454) → Assembly I-V (11461)
 5. Assembly I-V (11461) + Shard VI (11455) → Assembly I-VI (11462)
 6. Assembly I-VI (11462) + Shard VII (11456) → Assembly I-VII (11463 obj)
-7. Assembly I-VII (11463 obj) + Shard VIII (11457) → **the Void Circlet of the Moon Sovereign (11464 obj)**
+7. Assembly I-VII (11463 obj) + Shard VIII (11457) → **the Void Lantern of the Moon Sovereign (11464 obj)**
 
 The `connect` command checks: `pieceA.value0 == pieceB.vnum` OR `pieceA.value1 == pieceB.vnum`. In each step above, one piece's `value1` equals the other piece's vnum, satisfying the check. On success, both are consumed and `pieceA.value2` is created.
 
@@ -684,24 +684,24 @@ Weight key: 1-5 = caster, 6-10 = melee, 11-15 = tank.
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
-| 11516 | a gauntlet of the obsidian guardian | armor (9) | hands(4096)\|take | 11 | tank |
-| 11517 | the guardian's basalt maul | weapon (5) | hold(32768)\|take | 6 | melee; value3=7 (pound) |
-| 11518 | a sash of the moon gate | armor (9) | waist(131072)\|take | 6 | melee |
+| 11516 | a gauntlet of the obsidian guardian | armor (9) | hands(4096)\|take | 13 | tank |
+| 11517 | the guardian's basalt maul | weapon (5) | hold(32768)\|take | 8 | melee; value3=7 (pound) |
+| 11518 | a sash of the moon gate | armor (9) | waist(131072)\|take | 7 | melee |
 
 **Silent Warden (mob 11451) — gear vnums 11519–11521:**
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
-| 11519 | the Silent Warden's death mask | armor (9) | face(16)\|take | 1 | caster |
-| 11520 | a shroud of eternal silence | armor (9) | about(65536)\|take | 1 | caster |
-| 11521 | the Silent Warden's muffled wrappings | armor (9) | body(262144)\|take | 11 | tank |
+| 11519 | the Silent Warden's death mask | armor (9) | face(16)\|take | 2 | caster |
+| 11520 | a shroud of eternal silence | armor (9) | about(65536)\|take | 3 | caster |
+| 11521 | the Silent Warden's muffled wrappings | armor (9) | body(262144)\|take | 14 | tank |
 
 **Rot Warden (mob 11452) — gear vnums 11522–11524:**
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
-| 11522 | a moss-grown breastplate of decay | armor (9) | body(262144)\|take | 11 | tank |
-| 11523 | the Rot Warden's fungal staff | weapon (5) | hold(32768)\|take | 1 | caster; ITEM_TWO_HANDED; value3=7 (pound) |
+| 11522 | a moss-grown breastplate of decay | armor (9) | body(262144)\|take | 15 | tank |
+| 11523 | the Rot Warden's fungal staff | weapon (5) | hold(32768)\|take | 4 | caster; ITEM_TWO_HANDED; value3=7 (pound) |
 | 11524 | a ring of creeping rot | armor (9) | finger(8192)\|take | 1 | caster |
 
 Note for 11523: extra_flags = 201326784 | ITEM_TWO_HANDED(2147483648) = 2348810432
@@ -710,25 +710,25 @@ Note for 11523: extra_flags = 201326784 | ITEM_TWO_HANDED(2147483648) = 23488104
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
-| 11525 | the Shadow Warden's eclipse circlet | armor (9) | head(8)\|take | 1 | caster |
-| 11526 | robes of living shadow | armor (9) | body(262144)\|take | 1 | caster |
-| 11527 | the Shadow Warden's umbral blade | weapon (5) | hold(32768)\|take | 6 | melee; value3=2 (stab) |
+| 11525 | the Shadow Warden's eclipse circlet | armor (9) | head(8)\|take | 5 | caster |
+| 11526 | robes of living shadow | armor (9) | body(262144)\|take | 2 | caster |
+| 11527 | the Shadow Warden's umbral blade | weapon (5) | hold(32768)\|take | 9 | melee; value3=2 (stab) |
 
 **Bone Warden (mob 11454) — gear vnums 11528–11530:**
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
 | 11528 | greaves of the bone warden | armor (9) | legs(1048576)\|take | 11 | tank |
-| 11529 | the Bone Warden's skull flail | weapon (5) | hold(32768)\|take | 6 | melee; value3=7 (pound) |
-| 11530 | pauldrons of fused bone | armor (9) | shoulders(512)\|take | 11 | tank |
+| 11529 | the Bone Warden's skull flail | weapon (5) | hold(32768)\|take | 10 | melee; value3=7 (pound) |
+| 11530 | pauldrons of fused bone | armor (9) | shoulders(512)\|take | 12 | tank |
 
 **Venom Warden (mob 11455) — gear vnums 11531–11533:**
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
-| 11531 | a scale-mail hauberk of venom | armor (9) | body(262144)\|take | 11 | tank |
+| 11531 | a scale-mail hauberk of venom | armor (9) | body(262144)\|take | 13 | tank |
 | 11532 | the Venom Warden's fang-blade | weapon (5) | hold(32768)\|take | 6 | melee; ITEM_FIST; value3=5 (claw) |
-| 11533 | a serpent-coil armlet | armor (9) | wrist(2048)\|take | 1 | caster |
+| 11533 | a serpent-coil armlet | armor (9) | wrist(2048)\|take | 3 | caster |
 
 Note for 11532: extra_flags = 201326784 | ITEM_FIST(1073741824) = 1275068608
 
@@ -736,9 +736,9 @@ Note for 11532: extra_flags = 201326784 | ITEM_FIST(1073741824) = 1275068608
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
-| 11534 | a magma-forged breastplate | armor (9) | body(262144)\|take | 11 | tank |
-| 11535 | the Fire Warden's ember-claw | weapon (5) | hold(32768)\|take | 6 | melee; ITEM_FIST; value3=5 (claw) |
-| 11536 | a crest of volcanic stone | armor (9) | horns(4)\|take | 6 | melee |
+| 11534 | a magma-forged breastplate | armor (9) | body(262144)\|take | 14 | tank |
+| 11535 | the Fire Warden's ember-claw | weapon (5) | hold(32768)\|take | 7 | melee; ITEM_FIST; value3=5 (claw) |
+| 11536 | a crest of volcanic stone | armor (9) | horns(4)\|take | 8 | melee |
 
 Note for 11535: extra_flags = 201326784 | ITEM_FIST(1073741824) = 1275068608
 
@@ -746,10 +746,10 @@ Note for 11535: extra_flags = 201326784 | ITEM_FIST(1073741824) = 1275068608
 
 | Obj Vnum | Name | item_type | wear_flags | weight | Archetype |
 |----------|------|-----------|------------|--------|-----------|
-| 11537 | the Moon Sovereign's void scepter | weapon (5) | hold(32768)\|take | 1 | caster; ITEM_TWO_HANDED; value3=7 (pound) |
-| 11538 | robes of the eternal moon | armor (9) | body(262144)\|take | 1 | caster |
+| 11537 | the Moon Sovereign's void scepter | weapon (5) | hold(32768)\|take | 4 | caster; ITEM_TWO_HANDED; value3=7 (pound) |
+| 11538 | robes of the eternal moon | armor (9) | body(262144)\|take | 5 | caster |
 | 11539 | the sovereign's amulet of the void | armor (9) | neck(128)\|take | 1 | caster |
-| 11540 | boots of the underworld throne | armor (9) | feet(2097152)\|take | 6 | melee |
+| 11540 | boots of the underworld throne | armor (9) | feet(2097152)\|take | 9 | melee |
 
 Note for 11537: extra_flags = 201326784 | ITEM_TWO_HANDED(2147483648) = 2348810432
 
@@ -765,93 +765,93 @@ All items include `take(8388608)` in wear_flags.
 | Obj Vnum | Name | item_type | wear_flags | weight | Level | Delivery | Source |
 |----------|------|-----------|------------|--------|-------|----------|--------|
 | 11541 | a moon skeleton's blade | weapon (5) | hold\|take | 6 | L 127 | Reset (E) | moon-cursed skeleton |
-| 11542 | a mummy's decay sash | armor (9) | waist\|take | 11 | L 128 | Loot | desiccated mummy |
-| 11543 | a scorpion-sting gauntlet | armor (9) | hands\|take | 11 | L 130 | Loot | venomous desert scorpion |
-| 11544 | a ghostly grave shroud | armor (9) | about\|take | 1 | L 126 | Loot | grave robber's specter |
-| 11545 | a hyena-hide belt | armor (9) | waist\|take | 6 | L 132 | Loot | sand hyena |
-| 11546 | basalt guardian fist | weapon (5) | hold\|take | 11 | L 135 | Reset (E) | basalt guardian statue; ITEM_FIST; value3=0 |
-| 11547 | canopic abomination mandible | weapon (5) | hold\|take | 6 | L 129 | Loot | canopic abomination; value3=10 (bite) |
-| 11548 | a jade asp-fang earring | armor (9) | ear\|take | 1 | L 133 | Loot | jade asp |
-| 11549 | desert vulture wing-cloak | armor (9) | about\|take | 1 | L 136 | Loot | desert vulture |
-| 11550 | an obsidian golem's core shard | armor (9) | hold\|take | 11 | L 130 | Loot | obsidian golem; shield |
-| 11551 | decay acolyte's cursed headwrap | armor (9) | head\|take | 1 | L 138 | Reset (E) | decay acolyte |
+| 11542 | a mummy's decay sash | armor (9) | waist\|take | 12 | L 128 | Loot | desiccated mummy |
+| 11543 | a scorpion-sting gauntlet | armor (9) | hands\|take | 13 | L 130 | Loot | venomous desert scorpion |
+| 11544 | a ghostly grave shroud | armor (9) | about\|take | 2 | L 126 | Loot | grave robber's specter |
+| 11545 | a hyena-hide belt | armor (9) | waist\|take | 7 | L 132 | Loot | sand hyena |
+| 11546 | basalt guardian fist | weapon (5) | hold\|take | 14 | L 135 | Reset (E) | basalt guardian statue; ITEM_FIST; value3=0 |
+| 11547 | canopic abomination mandible | weapon (5) | hold\|take | 8 | L 129 | Loot | canopic abomination; value3=10 (bite) |
+| 11548 | a jade asp-fang earring | armor (9) | ear\|take | 3 | L 133 | Loot | jade asp |
+| 11549 | desert vulture wing-cloak | armor (9) | about\|take | 4 | L 136 | Loot | desert vulture |
+| 11550 | an obsidian golem's core shard | armor (9) | hold\|take | 15 | L 130 | Loot | obsidian golem; shield |
+| 11551 | decay acolyte's cursed headwrap | armor (9) | head\|take | 5 | L 138 | Reset (E) | decay acolyte |
 | 11552 | rot wight's bone ring | armor (9) | finger\|take | 1 | L 134 | Loot | rot wight |
 | 11553 | stone scarab sentinel shell plate | armor (9) | body\|take | 11 | L 137 | Reset (E) | stone scarab sentinel |
-| 11554 | a cobra-scale bracer | armor (9) | wrist\|take | 11 | L 131 | Loot | tomb cobra |
-| 11555 | a shadow archer's bow wrap | armor (9) | arms\|take | 6 | L 139 | Loot | shadow archer |
-| 11556 | shadow vulture-feather mantle | armor (9) | shoulders\|take | 6 | L 140 | Loot | great shadow vulture |
-| 11557 | shadow face guardian stone buckler | armor (9) | hold\|take | 11 | L 136 | Reset (E) | shadow face guardian; ITEM_BUCKLER |
-| 11558 | creeping shadow cowl | armor (9) | head\|take | 1 | L 132 | Loot | creeping shadow |
-| 11559 | a shadow assassin's sand-silk hood | armor (9) | head\|take | 1 | L 138 | Loot | shadow assassin |
-| 11560 | an animated bone pillar's knuckle-spike | weapon (5) | hold\|take | 11 | L 140 | Reset (E) | animated bone pillar; ITEM_FIST; value3=0 |
-| 11561 | venomous cobra fang pendant | armor (9) | neck\|take | 1 | L 135 | Loot | venomous golden cobra |
+| 11554 | a cobra-scale bracer | armor (9) | wrist\|take | 12 | L 131 | Loot | tomb cobra |
+| 11555 | a shadow archer's bow wrap | armor (9) | arms\|take | 9 | L 139 | Loot | shadow archer |
+| 11556 | shadow vulture-feather mantle | armor (9) | shoulders\|take | 10 | L 140 | Loot | great shadow vulture |
+| 11557 | shadow face guardian stone buckler | armor (9) | hold\|take | 13 | L 136 | Reset (E) | shadow face guardian; ITEM_BUCKLER |
+| 11558 | creeping shadow cowl | armor (9) | head\|take | 2 | L 132 | Loot | creeping shadow |
+| 11559 | a shadow assassin's sand-silk hood | armor (9) | head\|take | 3 | L 138 | Loot | shadow assassin |
+| 11560 | an animated bone pillar's knuckle-spike | weapon (5) | hold\|take | 14 | L 140 | Reset (E) | animated bone pillar; ITEM_FIST; value3=0 |
+| 11561 | venomous cobra fang pendant | armor (9) | neck\|take | 4 | L 135 | Loot | venomous golden cobra |
 | 11562 | bone cultist's obsidian dagger | weapon (5) | hold\|take | 6 | L 137 | Loot | bone cultist; value3=2 (stab) |
-| 11563 | death hawk talons | weapon (5) | hold\|take | 6 | L 139 | Loot | death hawk; value3=5 (claw) |
-| 11564 | bone revenant's burial ring | armor (9) | finger\|take | 1 | L 133 | Loot | bone revenant |
+| 11563 | death hawk talons | weapon (5) | hold\|take | 7 | L 139 | Loot | death hawk; value3=5 (claw) |
+| 11564 | bone revenant's burial ring | armor (9) | finger\|take | 5 | L 133 | Loot | bone revenant |
 | 11565 | void specter-touched robes | armor (9) | body\|take | 1 | L 136 | Reset (E) | void specter |
-| 11566 | cursed moon shade's halo | armor (9) | halo\|take | 1 | L 138 | Reset (E) | cursed moon shade |
-| 11567 | obsidian colossus's stone bracer | armor (9) | wrist\|take | 11 | L 142 | Reset (E) | obsidian colossus |
-| 11568 | a death-sworn knight's greatsword | weapon (5) | hold\|take | 6 | L 140 | Reset (E) | death-sworn knight; ITEM_TWO_HANDED; value3=3 (slash) |
+| 11566 | cursed moon shade's halo | armor (9) | halo\|take | 2 | L 138 | Reset (E) | cursed moon shade |
+| 11567 | obsidian colossus's stone bracer | armor (9) | wrist\|take | 15 | L 142 | Reset (E) | obsidian colossus |
+| 11568 | a death-sworn knight's greatsword | weapon (5) | hold\|take | 8 | L 140 | Reset (E) | death-sworn knight; ITEM_TWO_HANDED; value3=3 (slash) |
 | 11569 | magma drake scale boots | armor (9) | feet\|take | 11 | L 140 | Reset (E) | magma drake |
-| 11570 | a jade sphinx shoulder plate | armor (9) | shoulders\|take | 11 | L 142 | Reset (E) | jade sphinx |
-| 11571 | scarab swarm chitin ring | armor (9) | finger\|take | 1 | L 125 | Loot | desert tomb scarab swarm |
-| 11572 | a carrion fly carapace brooch | armor (9) | finger\|take | 1 | L 125 | Loot | carrion fly swarm |
-| 11573 | a skeletal rat-tail lash | weapon (5) | hold\|take | 6 | L 125 | Loot | skeletal desert rat; value3=1 (whip) |
-| 11574 | bone crawler chitin pauldrons | armor (9) | shoulders\|take | 11 | L 127 | Loot | bone crawler |
-| 11575 | a revenant's tattered girdle | armor (9) | waist\|take | 11 | L 129 | Loot | sand-choked revenant |
-| 11576 | an animated obelisk buckler | armor (9) | hold\|take | 11 | L 132 | Loot | animated obelisk shard; ITEM_BUCKLER |
-| 11577 | a cursed laborer's stone trowel | weapon (5) | hold\|take | 6 | L 130 | Loot | cursed pyramid laborer; value3=7 (pound) |
-| 11578 | a desert pit viper fang | armor (9) | ear\|take | 1 | L 128 | Loot | desert pit viper |
+| 11570 | a jade sphinx shoulder plate | armor (9) | shoulders\|take | 12 | L 142 | Reset (E) | jade sphinx |
+| 11571 | scarab swarm chitin ring | armor (9) | finger\|take | 3 | L 125 | Loot | desert tomb scarab swarm |
+| 11572 | a carrion fly carapace brooch | armor (9) | finger\|take | 4 | L 125 | Loot | carrion fly swarm |
+| 11573 | a skeletal rat-tail lash | weapon (5) | hold\|take | 9 | L 125 | Loot | skeletal desert rat; value3=1 (whip) |
+| 11574 | bone crawler chitin pauldrons | armor (9) | shoulders\|take | 13 | L 127 | Loot | bone crawler |
+| 11575 | a revenant's tattered girdle | armor (9) | waist\|take | 14 | L 129 | Loot | sand-choked revenant |
+| 11576 | an animated obelisk buckler | armor (9) | hold\|take | 15 | L 132 | Loot | animated obelisk shard; ITEM_BUCKLER |
+| 11577 | a cursed laborer's stone trowel | weapon (5) | hold\|take | 10 | L 130 | Loot | cursed pyramid laborer; value3=7 (pound) |
+| 11578 | a desert pit viper fang | armor (9) | ear\|take | 5 | L 128 | Loot | desert pit viper |
 | 11579 | an obsidian sentinel's faceplate | armor (9) | face\|take | 11 | L 134 | Reset (E) | obsidian sentinel construct |
-| 11580 | a moon glyph guardian stone slab | armor (9) | hold\|take | 11 | L 135 | Loot | moon glyph guardian; ITEM_BUCKLER |
+| 11580 | a moon glyph guardian stone slab | armor (9) | hold\|take | 12 | L 135 | Loot | moon glyph guardian; ITEM_BUCKLER |
 | 11581 | an animated burial jar lid | armor (9) | head\|take | 1 | L 132 | Loot | animated burial jar |
-| 11582 | a scribal phantom's cursed inkpot | armor (9) | hold\|take | 1 | L 136 | Loot | scribal phantom |
-| 11583 | linen wraps of the mummy thrall | armor (9) | wrist\|take | 11 | L 133 | Loot | sand-bound mummy thrall |
-| 11584 | a rot priest thrall's robe | armor (9) | body\|take | 1 | L 138 | Reset (E) | rot priest's thrall |
-| 11585 | a fungal wraith's wisp veil | armor (9) | about\|take | 1 | L 137 | Loot | fungal wraith |
-| 11586 | a curse-bound sentinel's iron pauldron | armor (9) | shoulders\|take | 11 | L 139 | Loot | curse-bound sentinel |
-| 11587 | an entombed general's war crown | armor (9) | head\|take | 11 | L 138 | Reset (E) | entombed general |
+| 11582 | a scribal phantom's cursed inkpot | armor (9) | hold\|take | 2 | L 136 | Loot | scribal phantom |
+| 11583 | linen wraps of the mummy thrall | armor (9) | wrist\|take | 13 | L 133 | Loot | sand-bound mummy thrall |
+| 11584 | a rot priest thrall's robe | armor (9) | body\|take | 3 | L 138 | Reset (E) | rot priest's thrall |
+| 11585 | a fungal wraith's wisp veil | armor (9) | about\|take | 4 | L 137 | Loot | fungal wraith |
+| 11586 | a curse-bound sentinel's iron pauldron | armor (9) | shoulders\|take | 14 | L 139 | Loot | curse-bound sentinel |
+| 11587 | an entombed general's war crown | armor (9) | head\|take | 15 | L 138 | Reset (E) | entombed general |
 | 11588 | a bone golem's riveted knuckle | weapon (5) | hold\|take | 11 | L 140 | Loot | bone golem; ITEM_FIST; value3=0; extra_flags = NODROP+LOOT+FIST = 1140850816 |
-| 11589 | a crypt stalker's shadow wrapping | armor (9) | about\|take | 1 | L 136 | Loot | crypt stalker |
-| 11590 | magma lizard scale vest | armor (9) | body\|take | 11 | L 137 | Loot | magma lizard |
-| 11591 | charred bone husk smoldering bracers | armor (9) | wrist\|take | 11 | L 139 | Loot | charred bone husk |
-| 11592 | a void sentinel's stone gauntlets | armor (9) | hands\|take | 11 | L 140 | Reset (E) | void sentinel |
+| 11589 | a crypt stalker's shadow wrapping | armor (9) | about\|take | 5 | L 136 | Loot | crypt stalker |
+| 11590 | magma lizard scale vest | armor (9) | body\|take | 12 | L 137 | Loot | magma lizard |
+| 11591 | charred bone husk smoldering bracers | armor (9) | wrist\|take | 13 | L 139 | Loot | charred bone husk |
+| 11592 | a void sentinel's stone gauntlets | armor (9) | hands\|take | 14 | L 140 | Reset (E) | void sentinel |
 | 11593 | a gilded moon shade's helm | armor (9) | head\|take | 1 | L 138 | Loot | gilded moon shade |
-| 11594 | a toxic sand elemental's howling band | armor (9) | wrist\|take | 1 | L 139 | Reset (E) | toxic sand elemental |
-| 11595 | an ancient basalt guardian's plate arm | armor (9) | arms\|take | 11 | L 142 | Reset (E) | ancient basalt guardian |
+| 11594 | a toxic sand elemental's howling band | armor (9) | wrist\|take | 2 | L 139 | Reset (E) | toxic sand elemental |
+| 11595 | an ancient basalt guardian's plate arm | armor (9) | arms\|take | 15 | L 142 | Reset (E) | ancient basalt guardian |
 | 11596 | a bone overlord's burial circlet | armor (9) | head\|take | 11 | L 140 | Reset (E) | greater bone overlord |
 | 11597 | a petrified sand wurm's calcified fang | weapon (5) | hold\|take | 6 | L 134 | Loot | petrified sand wurm; value3=10 (bite) |
-| 11598 | a tomb jackal's obsidian collar | armor (9) | neck\|take | 11 | L 130 | Loot | tomb guardian jackal |
-| 11599 | embalmed crocodile scale greaves | armor (9) | legs\|take | 11 | L 133 | Loot | embalmed crocodile |
-| 11600 | a dust devil's swirling band | armor (9) | finger\|take | 1 | L 127 | Loot | dust devil spirit |
-| 11601 (obj) | a whispering wraith's torn veil | armor (9) | face\|take | 1 | L 131 | Loot | whispering wraith |
-| 11602 (obj) | calcified serpent scale pauldrons | armor (9) | shoulders\|take | 11 | L 129 | Loot | calcified serpent |
-| 11603 (obj) | tomb beetle mandible gauntlets | armor (9) | hands\|take | 11 | L 136 | Loot | tomb beetle colossus |
-| 11604 (obj) | a mold-ridden ghoul's festering girdle | armor (9) | waist\|take | 1 | L 135 | Loot | mold-ridden ghoul |
+| 11598 | a tomb jackal's obsidian collar | armor (9) | neck\|take | 12 | L 130 | Loot | tomb guardian jackal |
+| 11599 | embalmed crocodile scale greaves | armor (9) | legs\|take | 13 | L 133 | Loot | embalmed crocodile |
+| 11600 | a dust devil's swirling band | armor (9) | finger\|take | 3 | L 127 | Loot | dust devil spirit |
+| 11601 (obj) | a whispering wraith's torn veil | armor (9) | face\|take | 4 | L 131 | Loot | whispering wraith |
+| 11602 (obj) | calcified serpent scale pauldrons | armor (9) | shoulders\|take | 14 | L 129 | Loot | calcified serpent |
+| 11603 (obj) | tomb beetle mandible gauntlets | armor (9) | hands\|take | 15 | L 136 | Loot | tomb beetle colossus |
+| 11604 (obj) | a mold-ridden ghoul's festering girdle | armor (9) | waist\|take | 5 | L 135 | Loot | mold-ridden ghoul |
 | 11605 (obj) | a bloated corpse walker's burst vest | armor (9) | body\|take | 11 | L 132 | Loot | bloated corpse walker |
 | 11606 (obj) | decay spider silk wraps | armor (9) | wrist\|take | 1 | L 128 | Loot | decay spider |
-| 11607 (obj) | a mildew phantom's dripping cowl | armor (9) | head\|take | 1 | L 134 | Loot | mildew phantom |
-| 11608 (obj) | shadow hound fang necklace | armor (9) | neck\|take | 6 | L 137 | Loot | shadow hound |
-| 11609 (obj) | a nightmare sentinel's black iron helm | armor (9) | head\|take | 11 | L 139 | Reset (E) | nightmare sentinel |
-| 11610 (obj) | shade dancer's flickering sash | armor (9) | waist\|take | 1 | L 133 | Loot | shade dancer |
-| 11611 (obj) | a darkfire wisp's ember cinder | armor (9) | hold\|take | 1 | L 126 | Loot | darkfire wisp; light source |
-| 11612 (obj) | an ossuary spider's bone-silk bracer | armor (9) | wrist\|take | 1 | L 131 | Loot | ossuary spider |
-| 11613 (obj) | a marrow elemental's slick boots | armor (9) | feet\|take | 11 | L 138 | Loot | marrow elemental |
-| 11614 (obj) | a skeletal war drummer's bone drumstick | weapon (5) | hold\|take | 6 | L 134 | Loot | skeletal war drummer; value3=7 (pound) |
-| 11615 (obj) | calcite horror shard plate | armor (9) | body\|take | 11 | L 140 | Loot | calcite horror |
+| 11607 (obj) | a mildew phantom's dripping cowl | armor (9) | head\|take | 2 | L 134 | Loot | mildew phantom |
+| 11608 (obj) | shadow hound fang necklace | armor (9) | neck\|take | 7 | L 137 | Loot | shadow hound |
+| 11609 (obj) | a nightmare sentinel's black iron helm | armor (9) | head\|take | 12 | L 139 | Reset (E) | nightmare sentinel |
+| 11610 (obj) | shade dancer's flickering sash | armor (9) | waist\|take | 3 | L 133 | Loot | shade dancer |
+| 11611 (obj) | a darkfire wisp's ember cinder | armor (9) | hold\|take | 4 | L 126 | Loot | darkfire wisp; light source |
+| 11612 (obj) | an ossuary spider's bone-silk bracer | armor (9) | wrist\|take | 5 | L 131 | Loot | ossuary spider |
+| 11613 (obj) | a marrow elemental's slick boots | armor (9) | feet\|take | 13 | L 138 | Loot | marrow elemental |
+| 11614 (obj) | a skeletal war drummer's bone drumstick | weapon (5) | hold\|take | 8 | L 134 | Loot | skeletal war drummer; value3=7 (pound) |
+| 11615 (obj) | calcite horror shard plate | armor (9) | body\|take | 14 | L 140 | Loot | calcite horror |
 | 11616 (obj) | a venom puddle ooze's corroded ring | armor (9) | finger\|take | 1 | L 127 | Loot | venom puddle ooze |
-| 11617 (obj) | cistern lurker scale leggings | armor (9) | legs\|take | 11 | L 136 | Loot | cistern lurker |
-| 11618 (obj) | a jade dart frog's golden eye | armor (9) | ear\|take | 1 | L 130 | Loot | poison dart frog construct |
-| 11619 (obj) | toxic gas wraith's acrid shroud | armor (9) | about\|take | 1 | L 135 | Loot | toxic gas wraith |
+| 11617 (obj) | cistern lurker scale leggings | armor (9) | legs\|take | 15 | L 136 | Loot | cistern lurker |
+| 11618 (obj) | a jade dart frog's golden eye | armor (9) | ear\|take | 2 | L 130 | Loot | poison dart frog construct |
+| 11619 (obj) | toxic gas wraith's acrid shroud | armor (9) | about\|take | 3 | L 135 | Loot | toxic gas wraith |
 | 11620 (obj) | lava crawler's igneous hide vest | armor (9) | body\|take | 11 | L 137 | Loot | lava crawler |
-| 11621 (obj) | an ember revenant's smoldering blade | weapon (5) | hold\|take | 6 | L 139 | Loot | ember revenant; value3=3 (slash) |
-| 11622 (obj) | a slag golem's cooled-iron fist | weapon (5) | hold\|take | 11 | L 140 | Reset (E) | slag golem; ITEM_FIST; value3=0 |
-| 11623 (obj) | obsidian gargoyle wing-plate pauldrons | armor (9) | shoulders\|take | 11 | L 138 | Loot | obsidian gargoyle |
-| 11624 (obj) | a void acolyte's dark prayer beads | armor (9) | neck\|take | 1 | L 137 | Loot | void acolyte |
-| 11625 (obj) | sovereign tomb guardian's obsidian greaves | armor (9) | legs\|take | 11 | L 140 | Reset (E) | sovereign's tomb guardian |
-| 11626 (obj) | moon-touched scorpion tail barb | weapon (5) | hold\|take | 6 | L 135 | Loot | moon-touched scorpion; value3=2 (stab); spec_poison |
-| 11627 (obj) | void-touched juggernaut's core plate | armor (9) | body\|take | 11 | L 142 | Reset (E) | void-touched juggernaut |
-| 11628 (obj) | cistern matriarch's venom-drip crown | armor (9) | head\|take | 1 | L 140 | Reset (E) | cistern matriarch |
+| 11621 (obj) | an ember revenant's smoldering blade | weapon (5) | hold\|take | 9 | L 139 | Loot | ember revenant; value3=3 (slash) |
+| 11622 (obj) | a slag golem's cooled-iron fist | weapon (5) | hold\|take | 12 | L 140 | Reset (E) | slag golem; ITEM_FIST; value3=0 |
+| 11623 (obj) | obsidian gargoyle wing-plate pauldrons | armor (9) | shoulders\|take | 13 | L 138 | Loot | obsidian gargoyle |
+| 11624 (obj) | a void acolyte's dark prayer beads | armor (9) | neck\|take | 4 | L 137 | Loot | void acolyte |
+| 11625 (obj) | sovereign tomb guardian's obsidian greaves | armor (9) | legs\|take | 14 | L 140 | Reset (E) | sovereign's tomb guardian |
+| 11626 (obj) | moon-touched scorpion tail barb | weapon (5) | hold\|take | 10 | L 135 | Loot | moon-touched scorpion; value3=2 (stab); spec_poison |
+| 11627 (obj) | void-touched juggernaut's core plate | armor (9) | body\|take | 15 | L 142 | Reset (E) | void-touched juggernaut |
+| 11628 (obj) | cistern matriarch's venom-drip crown | armor (9) | head\|take | 5 | L 140 | Reset (E) | cistern matriarch |
 | 11629 (obj) | petrified desert titan's stone fist | weapon (5) | hold\|take | 11 | L 142 | Reset (E) | petrified desert titan; ITEM_FIST; value3=0 |
 | 11630 (obj) | fungal colossus spore-cap helm | armor (9) | head\|take | 1 | L 138 | Reset (E) | fungal colossus |
 | 11631 (obj) | nightmare stalker's shadowed claws | weapon (5) | hold\|take | 6 | L 140 | Reset (E) | nightmare stalker; value3=5 (claw) |
@@ -1039,7 +1039,7 @@ S
 |----------|-----------------------|---------------|
 | Boss piece shards (loot) | NODROP+BOSS+MAGIC+LOOT | 201326784 |
 | Assembly pieces (created) | NODROP+BOSS+MAGIC | 134217920 |
-| Final Circlet | RARE+NODROP+BOSS+MAGIC+LOOT | 202375360 |
+| Final Lantern | RARE+NODROP+BOSS+MAGIC+LOOT | 202375360 |
 | Boss gear via loot table | NODROP+BOSS+MAGIC+LOOT | 201326784 |
 | Boss gear via reset (E) | NODROP+BOSS+MAGIC | 134217920 |
 | Trash gear via loot table | NODROP+LOOT | 67108992 |
