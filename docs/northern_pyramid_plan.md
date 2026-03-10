@@ -105,6 +105,17 @@ The ancient road curves west through the dunes, back toward the cool shade of th
 
 ## Room Layout (200 rooms)
 
+### Room Flag Policy
+
+- **`no_teleport`**: Applied to **all 200 rooms**. Players and mobs cannot be teleported into any room in the pyramid.
+- **`no_recall`**: Applied to **all rooms except** inter-level stairwell/transit rooms and the final boss room (10324). Stairwells and 10324 allow recall so players can escape between floors and exit after defeating the final boss.
+
+Inter-level rooms that are **exempt from `no_recall`** (have only `no_mob, no_teleport, indoors`): 10126, 10177, 10184, 10185, 10201, 10202, 10215, 10216, 10236, 10237, 10260, 10266, 10278, 10291, 10304, 10311, 10324.
+
+All other rooms (including boss rooms 10155, 10200, 10235, 10265, 10290, 10310) carry `no_recall`.
+
+---
+
 ### Zone 0: The Stone Trap Chamber (1 room: 10125)
 
 This special room exists outside the pyramid's normal vertical progression. Hidden pressure plates and disguised pit covers scattered throughout the pyramid all funnel into this one chamber. It has **no exit except D5 (down) to 10134** in the Undercroft. Players who fall in must navigate the Undercroft to escape.
@@ -135,36 +146,36 @@ The subterranean foundations of the pyramid: flooded burial chambers, root-tangl
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10126 | The Undercroft Entry | inside | no_mob, indoors | Entry via trapdoor from ground level (10177 ↓) |
-| 10127 | A Flooded Antechamber | inside | indoors, dark | Ankle-deep black water |
-| 10128 | The Root-Split Corridor | inside | indoors, dark | Ancient roots have fractured the stone |
-| 10129 | A Collapsed Burial Niche | inside | indoors, dark | Rubble-filled alcove |
-| 10130 | The Drain Tunnel | inside | indoors, dark | Carries overflow from flooded chambers |
-| 10131 | A Crypt of Unnamed Dead | inside | indoors | Row of sealed sarcophagi |
-| 10132 | The Embalming Chamber | inside | indoors | Ancient tools and canopic tables |
-| 10133 | A Stone-Floored Passage | inside | indoors, dark | |
-| 10134 | The Sunken Trap-Fall | inside | indoors, dark | Landing point for the Stone Trap (10125 ↓ arrives here) |
-| 10135 | A Narrow Root Tunnel | inside | indoors, dark | |
-| 10136 | The Ossuary | inside | indoors, dark | Bones stacked floor to ceiling |
-| 10137 | A Sunken Gallery | inside | indoors | Faded reliefs on the walls |
-| 10138 | The Underground Cistern | inside | indoors | Water still pools here |
-| 10139 | A Crumbling Side Passage | inside | indoors, dark | |
-| 10140 | The Fungal Grotto | inside | indoors, dark | Pale mushrooms glow faintly |
-| 10141 | An Ancient Prayer Hall | inside | indoors | Defaced altar at center |
-| 10142 | A Rotted Timber Walkway | inside | indoors, dark | Bridge over a flooded pit |
-| 10143 | The Deep Vault | inside | indoors | Wide chamber, multiple exits |
-| 10144 | A Hidden Side Chamber | inside | indoors, dark | |
-| 10145 | The Sealed Crypt Wing | inside | indoors | Three burial niches sealed with glyphs |
-| 10146 | A Stone Drainage Arch | inside | indoors, dark | |
-| 10147 | The Putrid Pool | inside | indoors, dark | Stagnant black water, noxious fumes |
-| 10148 | A Forgotten Workshop | inside | indoors | Abandoned tools of the pyramid builders |
-| 10149 | The Underground Crossroads | inside | indoors | Four-way junction, central hub |
-| 10150 | A Pit of Rubble | inside | indoors, dark | Partial collapse |
-| 10151 | The Inner Undercroft Hall | inside | indoors | Grand chamber, cracked columns |
-| 10152 | A Burial Antechamber | inside | indoors, dark | |
-| 10153 | The Threshold of the Crypt Pharaoh | inside | indoors | Approach room; carvings warn of the guardian within |
-| 10154 | The Crypt Pharaoh's Approach | inside | indoors | Immediately before boss room; carvings of the guardian's deeds |
-| 10155 | The Pharaoh's Tomb Chamber | inside | no_mob, indoors | **BOSS ROOM** — The Crypt Pharaoh |
+| 10126 | The Undercroft Entry | inside | no_mob, no_teleport, indoors | Entry via trapdoor from ground level (10177 ↓) |
+| 10127 | A Flooded Antechamber | inside | no_recall, no_teleport, indoors, dark | Ankle-deep black water |
+| 10128 | The Root-Split Corridor | inside | no_recall, no_teleport, indoors, dark | Ancient roots have fractured the stone |
+| 10129 | A Collapsed Burial Niche | inside | no_recall, no_teleport, indoors, dark | Rubble-filled alcove |
+| 10130 | The Drain Tunnel | inside | no_recall, no_teleport, indoors, dark | Carries overflow from flooded chambers |
+| 10131 | A Crypt of Unnamed Dead | inside | no_recall, no_teleport, indoors | Row of sealed sarcophagi |
+| 10132 | The Embalming Chamber | inside | no_recall, no_teleport, indoors | Ancient tools and canopic tables |
+| 10133 | A Stone-Floored Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10134 | The Sunken Trap-Fall | inside | no_recall, no_teleport, indoors, dark | Landing point for the Stone Trap (10125 ↓ arrives here) |
+| 10135 | A Narrow Root Tunnel | inside | no_recall, no_teleport, indoors, dark | |
+| 10136 | The Ossuary | inside | no_recall, no_teleport, indoors, dark | Bones stacked floor to ceiling |
+| 10137 | A Sunken Gallery | inside | no_recall, no_teleport, indoors | Faded reliefs on the walls |
+| 10138 | The Underground Cistern | inside | no_recall, no_teleport, indoors | Water still pools here |
+| 10139 | A Crumbling Side Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10140 | The Fungal Grotto | inside | no_recall, no_teleport, indoors, dark | Pale mushrooms glow faintly |
+| 10141 | An Ancient Prayer Hall | inside | no_recall, no_teleport, indoors | Defaced altar at center |
+| 10142 | A Rotted Timber Walkway | inside | no_recall, no_teleport, indoors, dark | Bridge over a flooded pit |
+| 10143 | The Deep Vault | inside | no_recall, no_teleport, indoors | Wide chamber, multiple exits |
+| 10144 | A Hidden Side Chamber | inside | no_recall, no_teleport, indoors, dark | |
+| 10145 | The Sealed Crypt Wing | inside | no_recall, no_teleport, indoors | Three burial niches sealed with glyphs |
+| 10146 | A Stone Drainage Arch | inside | no_recall, no_teleport, indoors, dark | |
+| 10147 | The Putrid Pool | inside | no_recall, no_teleport, indoors, dark | Stagnant black water, noxious fumes |
+| 10148 | A Forgotten Workshop | inside | no_recall, no_teleport, indoors | Abandoned tools of the pyramid builders |
+| 10149 | The Underground Crossroads | inside | no_recall, no_teleport, indoors | Four-way junction, central hub |
+| 10150 | A Pit of Rubble | inside | no_recall, no_teleport, indoors, dark | Partial collapse |
+| 10151 | The Inner Undercroft Hall | inside | no_recall, no_teleport, indoors | Grand chamber, cracked columns |
+| 10152 | A Burial Antechamber | inside | no_recall, no_teleport, indoors, dark | |
+| 10153 | The Threshold of the Crypt Pharaoh | inside | no_recall, no_teleport, indoors | Approach room; carvings warn of the guardian within |
+| 10154 | The Crypt Pharaoh's Approach | inside | no_recall, no_teleport, indoors | Immediately before boss room; carvings of the guardian's deeds |
+| 10155 | The Pharaoh's Tomb Chamber | inside | no_mob, no_recall, no_teleport, indoors | **BOSS ROOM** — The Crypt Pharaoh |
 
 **Undercroft connectivity:** Entry from ground level (10177 down, locked trapdoor). The key to that trapdoor spawns via `O` reset in room 10148 so trapped players can find it and escape. 10134 (trap-fall landing) connects into the undercroft network but has NO up exit back to 10125. The undercroft hub is 10149; boss approached via 10153→10154→10155.
 
@@ -176,51 +187,51 @@ The base of the pyramid and surrounding desert approach. Exterior rooms use `des
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10156 | Before the Northern Pyramid | desert | 0 | **Entry from Northern Oasis** (D3 west → 8879) |
-| 10157 | The Ancient Road East | desert | 0 | Approach causeway |
-| 10158 | The Outer Dune Ring | desert | 0 | Sand dunes surround the pyramid base |
-| 10159 | The Southern Approach | desert | 0 | Direct path to main entrance |
-| 10160 | The Pyramid's Western Face | desert | 0 | Sheer sandstone wall |
-| 10161 | The Pyramid's Eastern Face | desert | 0 | Hieroglyphs carved into stone |
-| 10162 | The Outer Courtyard | desert | 0 | Wide plaza before the entrance |
-| 10163 | The Courtyard Garden Ruin | desert | 0 | Dried irrigation channels, dead palms |
-| 10164 | The Obelisk Circle | desert | 0 | Ring of cracked obelisks |
-| 10165 | The Guard Post Ruin | desert | 0 | Collapsed stone gatehouse |
-| 10166 | The Pyramid's Main Gate | desert | 0 | Massive carved entrance arch; `^stone gate` (closed door, key -1) |
-| 10167 | The Grand Entrance Hall | inside | indoors | First interior room; massive pillared hall |
-| 10168 | East Entrance Corridor | inside | indoors | |
-| 10169 | West Entrance Corridor | inside | indoors | |
-| 10170 | The Pillar Forest | inside | indoors | Dense colonnade of cracked columns |
-| 10171 | A Collapsed Side Wing | inside | indoors | Rubble blocks most of the room |
-| 10172 | The Trophy Chamber | inside | indoors | Niches once held offerings |
-| 10173 | The Inscription Gallery | inside | indoors | Floor-to-ceiling hieroglyphs |
-| 10174 | A Guard Barracks Ruin | inside | indoors, dark | |
-| 10175 | The Armory Vault | inside | indoors | Empty weapon racks |
-| 10176 | The East Wing Hall | inside | indoors | |
-| 10177 | The Lower Vault | inside | no_mob, indoors | Contains trapdoor to undercroft (D5 down → 10126, locked) |
-| 10178 | The False Floor Gallery | inside | indoors | Contains trap exit D5 → 10125 (hidden pit, one-way) |
-| 10179 | A Side Alcove | inside | indoors, dark | |
-| 10180 | The West Wing Hall | inside | indoors | |
-| 10181 | The Stone Library | inside | indoors | Collapsed shelves, crumbled tablets |
-| 10182 | The Map Chamber | inside | indoors | Floor mosaic of the surrounding desert |
-| 10183 | The Central Hall | inside | indoors | Wide hub room, stairwells rise from here |
-| 10184 | The East Stairwell Landing | inside | no_mob, indoors | D4 (up) → Floor 1 entry (10201) |
-| 10185 | The West Stairwell Landing | inside | no_mob, indoors | Alternate D4 (up) → 10202 |
-| 10186 | A Guard Chamber | inside | indoors, dark | |
-| 10187 | The Offering Hall | inside | indoors | Ceremonial tables; empty basins |
-| 10188 | The North Inner Wing | inside | indoors | |
-| 10189 | The South Inner Wing | inside | indoors | |
-| 10190 | A Ceremonial Passage | inside | indoors | |
-| 10191 | The Root-Cracked Chamber | inside | indoors, dark | Ancient roots push through the floor |
-| 10192 | The Throne Antechamber | inside | indoors | Approach to ground-floor boss zone |
-| 10193 | The Lower Throne Room | inside | indoors | Grand dais, cracked royal chair |
-| 10194 | The Sanctum Approach | inside | indoors | |
-| 10195 | A Preparation Chamber | inside | indoors, dark | |
-| 10196 | The Sentinel's Passage | inside | indoors | |
-| 10197 | The Inner Sanctum Entrance | inside | indoors | `^ancient stone door` (closed, no lock) leads to 10198 |
-| 10198 | The Waiting Hall | inside | indoors | |
-| 10199 | The Final Approach | inside | indoors | |
-| 10200 | The Pyramid's Heart Chamber | inside | no_mob, indoors | **BOSS ROOM** — The Desert Gate Guardian |
+| 10156 | Before the Northern Pyramid | desert | no_recall, no_teleport | **Entry from Northern Oasis** (D3 west → 8879) |
+| 10157 | The Ancient Road East | desert | no_recall, no_teleport | Approach causeway |
+| 10158 | The Outer Dune Ring | desert | no_recall, no_teleport | Sand dunes surround the pyramid base |
+| 10159 | The Southern Approach | desert | no_recall, no_teleport | Direct path to main entrance |
+| 10160 | The Pyramid's Western Face | desert | no_recall, no_teleport | Sheer sandstone wall |
+| 10161 | The Pyramid's Eastern Face | desert | no_recall, no_teleport | Hieroglyphs carved into stone |
+| 10162 | The Outer Courtyard | desert | no_recall, no_teleport | Wide plaza before the entrance |
+| 10163 | The Courtyard Garden Ruin | desert | no_recall, no_teleport | Dried irrigation channels, dead palms |
+| 10164 | The Obelisk Circle | desert | no_recall, no_teleport | Ring of cracked obelisks |
+| 10165 | The Guard Post Ruin | desert | no_recall, no_teleport | Collapsed stone gatehouse |
+| 10166 | The Pyramid's Main Gate | desert | no_recall, no_teleport | Massive carved entrance arch; `^stone gate` (closed door, key -1) |
+| 10167 | The Grand Entrance Hall | inside | no_recall, no_teleport, indoors | First interior room; massive pillared hall |
+| 10168 | East Entrance Corridor | inside | no_recall, no_teleport, indoors | |
+| 10169 | West Entrance Corridor | inside | no_recall, no_teleport, indoors | |
+| 10170 | The Pillar Forest | inside | no_recall, no_teleport, indoors | Dense colonnade of cracked columns |
+| 10171 | A Collapsed Side Wing | inside | no_recall, no_teleport, indoors | Rubble blocks most of the room |
+| 10172 | The Trophy Chamber | inside | no_recall, no_teleport, indoors | Niches once held offerings |
+| 10173 | The Inscription Gallery | inside | no_recall, no_teleport, indoors | Floor-to-ceiling hieroglyphs |
+| 10174 | A Guard Barracks Ruin | inside | no_recall, no_teleport, indoors, dark | |
+| 10175 | The Armory Vault | inside | no_recall, no_teleport, indoors | Empty weapon racks |
+| 10176 | The East Wing Hall | inside | no_recall, no_teleport, indoors | |
+| 10177 | The Lower Vault | inside | no_mob, no_teleport, indoors | Contains trapdoor to undercroft (D5 down → 10126, locked) |
+| 10178 | The False Floor Gallery | inside | no_recall, no_teleport, indoors | Contains trap exit D5 → 10125 (hidden pit, one-way) |
+| 10179 | A Side Alcove | inside | no_recall, no_teleport, indoors, dark | |
+| 10180 | The West Wing Hall | inside | no_recall, no_teleport, indoors | |
+| 10181 | The Stone Library | inside | no_recall, no_teleport, indoors | Collapsed shelves, crumbled tablets |
+| 10182 | The Map Chamber | inside | no_recall, no_teleport, indoors | Floor mosaic of the surrounding desert |
+| 10183 | The Central Hall | inside | no_recall, no_teleport, indoors | Wide hub room, stairwells rise from here |
+| 10184 | The East Stairwell Landing | inside | no_mob, no_teleport, indoors | D4 (up) → Floor 1 entry (10201) |
+| 10185 | The West Stairwell Landing | inside | no_mob, no_teleport, indoors | Alternate D4 (up) → 10202 |
+| 10186 | A Guard Chamber | inside | no_recall, no_teleport, indoors, dark | |
+| 10187 | The Offering Hall | inside | no_recall, no_teleport, indoors | Ceremonial tables; empty basins |
+| 10188 | The North Inner Wing | inside | no_recall, no_teleport, indoors | |
+| 10189 | The South Inner Wing | inside | no_recall, no_teleport, indoors | |
+| 10190 | A Ceremonial Passage | inside | no_recall, no_teleport, indoors | |
+| 10191 | The Root-Cracked Chamber | inside | no_recall, no_teleport, indoors, dark | Ancient roots push through the floor |
+| 10192 | The Throne Antechamber | inside | no_recall, no_teleport, indoors | Approach to ground-floor boss zone |
+| 10193 | The Lower Throne Room | inside | no_recall, no_teleport, indoors | Grand dais, cracked royal chair |
+| 10194 | The Sanctum Approach | inside | no_recall, no_teleport, indoors | |
+| 10195 | A Preparation Chamber | inside | no_recall, no_teleport, indoors, dark | |
+| 10196 | The Sentinel's Passage | inside | no_recall, no_teleport, indoors | |
+| 10197 | The Inner Sanctum Entrance | inside | no_recall, no_teleport, indoors | `^ancient stone door` (closed, no lock) leads to 10198 |
+| 10198 | The Waiting Hall | inside | no_recall, no_teleport, indoors | |
+| 10199 | The Final Approach | inside | no_recall, no_teleport, indoors | |
+| 10200 | The Pyramid's Heart Chamber | inside | no_mob, no_recall, no_teleport, indoors | **BOSS ROOM** — The Desert Gate Guardian |
 
 ---
 
@@ -230,41 +241,41 @@ First ascending floor. Slightly narrower than the ground level. Scarab imagery d
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10201 | The First Ascent | inside | no_mob, indoors | Entry from ground D4 (10184 ↑) |
-| 10202 | The Upper Landing | inside | no_mob, indoors | Entry from alternate ground D4 (10185 ↑) |
-| 10203 | The Scarab Hall | inside | indoors | Giant scarab reliefs on every wall |
-| 10204 | The Beetle Colonnade | inside | indoors | Stone scarabs atop every column |
-| 10205 | An Alcove of Offerings | inside | indoors, dark | |
-| 10206 | The East Passage | inside | indoors | |
-| 10207 | The West Passage | inside | indoors | |
-| 10208 | The Ritual Basin Room | inside | indoors | Dried ceremonial pools |
-| 10209 | A Collapsed Side Chamber | inside | indoors, dark | |
-| 10210 | The Cartouche Gallery | inside | indoors | Names of the ancient priests carved in stone |
-| 10211 | The Scribes' Chamber | inside | indoors | Broken styluses and dried inkpots |
-| 10212 | A Guard Room | inside | indoors, dark | |
-| 10213 | The Mosaic Floor Room | inside | indoors | Floor is one enormous scarab mosaic |
-| 10214 | The Inner Colonnade | inside | indoors | |
-| 10215 | The East Stair Landing | inside | no_mob, indoors | D4 (up) → Floor 2 (10236) |
-| 10216 | The West Stair Landing | inside | no_mob, indoors | D4 (up) → Floor 2 (10237) |
-| 10217 | A Shrine Alcove | inside | indoors, dark | |
-| 10218 | The Embalming Gallery | inside | indoors | Carved depictions of funerary rites |
-| 10219 | The Priests' Corridor | inside | indoors | |
-| 10220 | The Illusory Corridor | inside | indoors | Contains trap exit D4 → 10125 (appears to go higher, one-way) |
-| 10221 | A Torch-Bracket Hall | inside | indoors, dark | |
-| 10222 | The Scarab Shrine | inside | indoors | Central shrine, offerings intact |
-| 10223 | A Guardians' Niche | inside | indoors, dark | |
-| 10224 | The Ritual Cleansing Room | inside | indoors | |
-| 10225 | The Inner Priest Chamber | inside | indoors | |
-| 10226 | A Narrow Side Passage | inside | indoors, dark | |
-| 10227 | The Hall of Prayers | inside | indoors | |
-| 10228 | The Side Archive | inside | indoors, dark | |
-| 10229 | A Ventilation Shaft Landing | inside | indoors | |
-| 10230 | The Preparation Hall | inside | indoors | |
-| 10231 | The Warden's Approach | inside | indoors | |
-| 10232 | The Outer Guardian Chamber | inside | indoors | |
-| 10233 | A Final Corridor | inside | indoors, dark | |
-| 10234 | The Scarab Colossus Approach | inside | indoors | `^stone scarab door` (closed, no lock) leads to 10235 |
-| 10235 | The Scarab Colossus Chamber | inside | no_mob, indoors | **BOSS ROOM** — The Scarab Colossus |
+| 10201 | The First Ascent | inside | no_mob, no_teleport, indoors | Entry from ground D4 (10184 ↑) |
+| 10202 | The Upper Landing | inside | no_mob, no_teleport, indoors | Entry from alternate ground D4 (10185 ↑) |
+| 10203 | The Scarab Hall | inside | no_recall, no_teleport, indoors | Giant scarab reliefs on every wall |
+| 10204 | The Beetle Colonnade | inside | no_recall, no_teleport, indoors | Stone scarabs atop every column |
+| 10205 | An Alcove of Offerings | inside | no_recall, no_teleport, indoors, dark | |
+| 10206 | The East Passage | inside | no_recall, no_teleport, indoors | |
+| 10207 | The West Passage | inside | no_recall, no_teleport, indoors | |
+| 10208 | The Ritual Basin Room | inside | no_recall, no_teleport, indoors | Dried ceremonial pools |
+| 10209 | A Collapsed Side Chamber | inside | no_recall, no_teleport, indoors, dark | |
+| 10210 | The Cartouche Gallery | inside | no_recall, no_teleport, indoors | Names of the ancient priests carved in stone |
+| 10211 | The Scribes' Chamber | inside | no_recall, no_teleport, indoors | Broken styluses and dried inkpots |
+| 10212 | A Guard Room | inside | no_recall, no_teleport, indoors, dark | |
+| 10213 | The Mosaic Floor Room | inside | no_recall, no_teleport, indoors | Floor is one enormous scarab mosaic |
+| 10214 | The Inner Colonnade | inside | no_recall, no_teleport, indoors | |
+| 10215 | The East Stair Landing | inside | no_mob, no_teleport, indoors | D4 (up) → Floor 2 (10236) |
+| 10216 | The West Stair Landing | inside | no_mob, no_teleport, indoors | D4 (up) → Floor 2 (10237) |
+| 10217 | A Shrine Alcove | inside | no_recall, no_teleport, indoors, dark | |
+| 10218 | The Embalming Gallery | inside | no_recall, no_teleport, indoors | Carved depictions of funerary rites |
+| 10219 | The Priests' Corridor | inside | no_recall, no_teleport, indoors | |
+| 10220 | The Illusory Corridor | inside | no_recall, no_teleport, indoors | Contains trap exit D4 → 10125 (appears to go higher, one-way) |
+| 10221 | A Torch-Bracket Hall | inside | no_recall, no_teleport, indoors, dark | |
+| 10222 | The Scarab Shrine | inside | no_recall, no_teleport, indoors | Central shrine, offerings intact |
+| 10223 | A Guardians' Niche | inside | no_recall, no_teleport, indoors, dark | |
+| 10224 | The Ritual Cleansing Room | inside | no_recall, no_teleport, indoors | |
+| 10225 | The Inner Priest Chamber | inside | no_recall, no_teleport, indoors | |
+| 10226 | A Narrow Side Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10227 | The Hall of Prayers | inside | no_recall, no_teleport, indoors | |
+| 10228 | The Side Archive | inside | no_recall, no_teleport, indoors, dark | |
+| 10229 | A Ventilation Shaft Landing | inside | no_recall, no_teleport, indoors | |
+| 10230 | The Preparation Hall | inside | no_recall, no_teleport, indoors | |
+| 10231 | The Warden's Approach | inside | no_recall, no_teleport, indoors | |
+| 10232 | The Outer Guardian Chamber | inside | no_recall, no_teleport, indoors | |
+| 10233 | A Final Corridor | inside | no_recall, no_teleport, indoors, dark | |
+| 10234 | The Scarab Colossus Approach | inside | no_recall, no_teleport, indoors | `^stone scarab door` (closed, no lock) leads to 10235 |
+| 10235 | The Scarab Colossus Chamber | inside | no_mob, no_recall, no_teleport, indoors | **BOSS ROOM** — The Scarab Colossus |
 
 ---
 
@@ -274,36 +285,36 @@ Second floor. Narrower than Floor 1. Sacred priestly quarters and ritual chamber
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10236 | The Second Ascent | inside | no_mob, indoors | Entry from Floor 1 D4 (10215 ↑) |
-| 10237 | The Priests' Landing | inside | no_mob, indoors | Entry from alternate Floor 1 D4 (10216 ↑) |
-| 10238 | The High Priests' Hall | inside | indoors | |
-| 10239 | The Anointing Chamber | inside | indoors | |
-| 10240 | A Ritual Side Room | inside | indoors, dark | |
-| 10241 | The Sacred Scroll Room | inside | indoors | Crumbled papyrus fragments |
-| 10242 | The Altar of the Four Winds | inside | indoors | Ceremonial altar; compass points carved in floor |
-| 10243 | A Candlelit Niche | inside | indoors, dark | |
-| 10244 | The Priests' Sleeping Quarters | inside | indoors | Stone cots along the walls |
-| 10245 | The Inner Prayer Hall | inside | indoors | |
-| 10246 | A Secret Passage | inside | indoors, dark | Hidden behind a loose block |
-| 10247 | The Ritual Fire Pit | inside | indoors | Ash-filled depression in floor center |
-| 10248 | The Vestment Chamber | inside | indoors | Empty robing alcoves |
-| 10249 | A Corridor of Wards | inside | indoors | Protective glyphs cover every surface |
-| 10250 | The Marked Flagstones | inside | indoors | Contains trap exit D5 → 10125 (pressure plate, one-way) |
-| 10251 | The Chanting Hall | inside | indoors | Acoustic chamber; voices echo strangely |
-| 10252 | A Side Shrine | inside | indoors, dark | |
-| 10253 | The Vaulted Passage | inside | indoors | |
-| 10254 | The East Ceremonial Wing | inside | indoors | |
-| 10255 | The West Ceremonial Wing | inside | indoors | |
-| 10256 | A Preparation Alcove | inside | indoors, dark | |
-| 10257 | The Hall of the Sacred Asp | inside | indoors | Cobra carvings on every surface |
-| 10258 | The Archpriest's Study | inside | indoors | |
-| 10259 | A Collapsed Vault | inside | indoors, dark | |
-| 10260 | The Upper Stair Landing | inside | no_mob, indoors | D4 (up) → Floor 3 (10266), through `^iron-banded archway` (closed, no lock) |
-| 10261 | The Inner Sanctum Antechamber | inside | indoors | |
-| 10262 | The Outer Chamber | inside | indoors | |
-| 10263 | A Final Hall | inside | indoors, dark | |
-| 10264 | The High Priest's Approach | inside | indoors | `^carved stone threshold` (closed, no lock) leads to 10265 |
-| 10265 | The High Priest's Sanctum | inside | no_mob, indoors | **BOSS ROOM** — The High Priest of the Ancient Sands |
+| 10236 | The Second Ascent | inside | no_mob, no_teleport, indoors | Entry from Floor 1 D4 (10215 ↑) |
+| 10237 | The Priests' Landing | inside | no_mob, no_teleport, indoors | Entry from alternate Floor 1 D4 (10216 ↑) |
+| 10238 | The High Priests' Hall | inside | no_recall, no_teleport, indoors | |
+| 10239 | The Anointing Chamber | inside | no_recall, no_teleport, indoors | |
+| 10240 | A Ritual Side Room | inside | no_recall, no_teleport, indoors, dark | |
+| 10241 | The Sacred Scroll Room | inside | no_recall, no_teleport, indoors | Crumbled papyrus fragments |
+| 10242 | The Altar of the Four Winds | inside | no_recall, no_teleport, indoors | Ceremonial altar; compass points carved in floor |
+| 10243 | A Candlelit Niche | inside | no_recall, no_teleport, indoors, dark | |
+| 10244 | The Priests' Sleeping Quarters | inside | no_recall, no_teleport, indoors | Stone cots along the walls |
+| 10245 | The Inner Prayer Hall | inside | no_recall, no_teleport, indoors | |
+| 10246 | A Secret Passage | inside | no_recall, no_teleport, indoors, dark | Hidden behind a loose block |
+| 10247 | The Ritual Fire Pit | inside | no_recall, no_teleport, indoors | Ash-filled depression in floor center |
+| 10248 | The Vestment Chamber | inside | no_recall, no_teleport, indoors | Empty robing alcoves |
+| 10249 | A Corridor of Wards | inside | no_recall, no_teleport, indoors | Protective glyphs cover every surface |
+| 10250 | The Marked Flagstones | inside | no_recall, no_teleport, indoors | Contains trap exit D5 → 10125 (pressure plate, one-way) |
+| 10251 | The Chanting Hall | inside | no_recall, no_teleport, indoors | Acoustic chamber; voices echo strangely |
+| 10252 | A Side Shrine | inside | no_recall, no_teleport, indoors, dark | |
+| 10253 | The Vaulted Passage | inside | no_recall, no_teleport, indoors | |
+| 10254 | The East Ceremonial Wing | inside | no_recall, no_teleport, indoors | |
+| 10255 | The West Ceremonial Wing | inside | no_recall, no_teleport, indoors | |
+| 10256 | A Preparation Alcove | inside | no_recall, no_teleport, indoors, dark | |
+| 10257 | The Hall of the Sacred Asp | inside | no_recall, no_teleport, indoors | Cobra carvings on every surface |
+| 10258 | The Archpriest's Study | inside | no_recall, no_teleport, indoors | |
+| 10259 | A Collapsed Vault | inside | no_recall, no_teleport, indoors, dark | |
+| 10260 | The Upper Stair Landing | inside | no_mob, no_teleport, indoors | D4 (up) → Floor 3 (10266), through `^iron-banded archway` (closed, no lock) |
+| 10261 | The Inner Sanctum Antechamber | inside | no_recall, no_teleport, indoors | |
+| 10262 | The Outer Chamber | inside | no_recall, no_teleport, indoors | |
+| 10263 | A Final Hall | inside | no_recall, no_teleport, indoors, dark | |
+| 10264 | The High Priest's Approach | inside | no_recall, no_teleport, indoors | `^carved stone threshold` (closed, no lock) leads to 10265 |
+| 10265 | The High Priest's Sanctum | inside | no_mob, no_recall, no_teleport, indoors | **BOSS ROOM** — The High Priest of the Ancient Sands |
 
 ---
 
@@ -313,31 +324,31 @@ Third floor. Further narrowed. The eternal vault where powerful undead are inter
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10266 | The Third Ascent | inside | no_mob, indoors | Entry via `^iron-banded archway` from 10260 |
-| 10267 | The Vault Antechamber | inside | indoors | |
-| 10268 | A Sealed Side Chamber | inside | indoors, dark | |
-| 10269 | The Hall of Eternal Rest | inside | indoors | Sealed sarcophagi in wall recesses |
-| 10270 | The Embalmer's Gallery | inside | indoors | Illustrated burial rites |
-| 10271 | The Soul Weighing Chamber | inside | indoors | Giant carved scale dominates the room |
-| 10272 | A Dark Corridor | inside | indoors, dark | |
-| 10273 | The Mummy Lords' Wing | inside | indoors | |
-| 10274 | A Burial Alcove | inside | indoors, dark | |
-| 10275 | The Preserved Archives | inside | indoors | Sealed jars of records; all unreadable |
-| 10276 | The Ritual Unguent Room | inside | indoors | |
-| 10277 | The Treacherous Overhang | inside | indoors, dark | Contains trap exit D4 → 10125 (false ceiling hatch, one-way) |
-| 10278 | The East Vault Passage | inside | no_mob, indoors | D4 (up) → Floor 4 entry (10291) |
-| 10279 | The West Vault Passage | inside | indoors | |
-| 10280 | The Canopic Shrine | inside | indoors | Four canopic jars on stone pedestals |
-| 10281 | A Collapsed Crypt Wing | inside | indoors, dark | |
-| 10282 | The Inner Vault Hall | inside | indoors | |
-| 10283 | A Final Preparation Room | inside | indoors, dark | |
-| 10284 | The Warded Threshold | inside | indoors | Glyphs of warning on every stone |
-| 10285 | The Mummy Lord's Antechamber | inside | indoors | |
-| 10286 | A Side Passage | inside | indoors, dark | |
-| 10287 | The Guard Station | inside | indoors | |
-| 10288 | The Inner Hall | inside | indoors | |
-| 10289 | The Mummy Lord's Approach | inside | indoors | `^glowing stone arch` (closed, no lock) leads to 10290 |
-| 10290 | The Eternal Vault Chamber | inside | no_mob, indoors | **BOSS ROOM** — The Eternal Mummy Lord |
+| 10266 | The Third Ascent | inside | no_mob, no_teleport, indoors | Entry via `^iron-banded archway` from 10260 |
+| 10267 | The Vault Antechamber | inside | no_recall, no_teleport, indoors | |
+| 10268 | A Sealed Side Chamber | inside | no_recall, no_teleport, indoors, dark | |
+| 10269 | The Hall of Eternal Rest | inside | no_recall, no_teleport, indoors | Sealed sarcophagi in wall recesses |
+| 10270 | The Embalmer's Gallery | inside | no_recall, no_teleport, indoors | Illustrated burial rites |
+| 10271 | The Soul Weighing Chamber | inside | no_recall, no_teleport, indoors | Giant carved scale dominates the room |
+| 10272 | A Dark Corridor | inside | no_recall, no_teleport, indoors, dark | |
+| 10273 | The Mummy Lords' Wing | inside | no_recall, no_teleport, indoors | |
+| 10274 | A Burial Alcove | inside | no_recall, no_teleport, indoors, dark | |
+| 10275 | The Preserved Archives | inside | no_recall, no_teleport, indoors | Sealed jars of records; all unreadable |
+| 10276 | The Ritual Unguent Room | inside | no_recall, no_teleport, indoors | |
+| 10277 | The Treacherous Overhang | inside | no_recall, no_teleport, indoors, dark | Contains trap exit D4 → 10125 (false ceiling hatch, one-way) |
+| 10278 | The East Vault Passage | inside | no_mob, no_teleport, indoors | D4 (up) → Floor 4 entry (10291) |
+| 10279 | The West Vault Passage | inside | no_recall, no_teleport, indoors | |
+| 10280 | The Canopic Shrine | inside | no_recall, no_teleport, indoors | Four canopic jars on stone pedestals |
+| 10281 | A Collapsed Crypt Wing | inside | no_recall, no_teleport, indoors, dark | |
+| 10282 | The Inner Vault Hall | inside | no_recall, no_teleport, indoors | |
+| 10283 | A Final Preparation Room | inside | no_recall, no_teleport, indoors, dark | |
+| 10284 | The Warded Threshold | inside | no_recall, no_teleport, indoors | Glyphs of warning on every stone |
+| 10285 | The Mummy Lord's Antechamber | inside | no_recall, no_teleport, indoors | |
+| 10286 | A Side Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10287 | The Guard Station | inside | no_recall, no_teleport, indoors | |
+| 10288 | The Inner Hall | inside | no_recall, no_teleport, indoors | |
+| 10289 | The Mummy Lord's Approach | inside | no_recall, no_teleport, indoors | `^glowing stone arch` (closed, no lock) leads to 10290 |
+| 10290 | The Eternal Vault Chamber | inside | no_mob, no_recall, no_teleport, indoors | **BOSS ROOM** — The Eternal Mummy Lord |
 
 ---
 
@@ -347,26 +358,26 @@ Fourth floor. Narrow passages. The lair of a beast that has claimed the upper py
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10291 | The Fourth Ascent | inside | no_mob, indoors | Entry from Floor 3 D4 (10278 ↑) |
-| 10292 | The Drake's Outer Hall | inside | indoors | Scorched stone; heat lingers |
-| 10293 | A Scorch-Marked Passage | inside | indoors, dark | |
-| 10294 | The Ash-Filled Chamber | inside | indoors | Deep drifts of ash from ancient fires |
-| 10295 | The Claw-Marked Corridor | inside | indoors, dark | Deep gouges in the stone walls |
-| 10296 | The Bone-Strewn Hall | inside | indoors | |
-| 10297 | The Char-Pit Room | inside | indoors, dark | Blackened floor pit at center |
-| 10298 | The Trophy Hall | inside | indoors | Skulls mounted on iron spikes |
-| 10299 | A Narrow Scorched Passage | inside | indoors, dark | |
-| 10300 | The Upper Drake Hall | inside | indoors | |
-| 10301 | A Heat-Shimmering Corridor | inside | indoors | Waves of heat emanate from cracks in the wall |
-| 10302 | The Nest Antechamber | inside | indoors, dark | |
-| 10303 | The Feeding Ground | inside | indoors | Gnawed bones carpet the floor |
-| 10304 | An Ascending Shaft | inside | no_mob, indoors | D4 (up) → Floor 5, through `^stone sentinel gate` (locked, key 10139) |
-| 10305 | A Side Passage | inside | indoors, dark | |
-| 10306 | The Inner Drake Hall | inside | indoors | |
-| 10307 | A Scorched Archive | inside | indoors, dark | Burned shelves, ash-covered tablets |
-| 10308 | The Pre-Lair Corridor | inside | indoors | |
-| 10309 | The Drake's Approach | inside | indoors | `^bone-adorned gate` (closed, no lock) leads to 10310 |
-| 10310 | The Pyramid Drake's Nest | inside | no_mob, indoors | **BOSS ROOM** — The Pyramid Drake |
+| 10291 | The Fourth Ascent | inside | no_mob, no_teleport, indoors | Entry from Floor 3 D4 (10278 ↑) |
+| 10292 | The Drake's Outer Hall | inside | no_recall, no_teleport, indoors | Scorched stone; heat lingers |
+| 10293 | A Scorch-Marked Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10294 | The Ash-Filled Chamber | inside | no_recall, no_teleport, indoors | Deep drifts of ash from ancient fires |
+| 10295 | The Claw-Marked Corridor | inside | no_recall, no_teleport, indoors, dark | Deep gouges in the stone walls |
+| 10296 | The Bone-Strewn Hall | inside | no_recall, no_teleport, indoors | |
+| 10297 | The Char-Pit Room | inside | no_recall, no_teleport, indoors, dark | Blackened floor pit at center |
+| 10298 | The Trophy Hall | inside | no_recall, no_teleport, indoors | Skulls mounted on iron spikes |
+| 10299 | A Narrow Scorched Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10300 | The Upper Drake Hall | inside | no_recall, no_teleport, indoors | |
+| 10301 | A Heat-Shimmering Corridor | inside | no_recall, no_teleport, indoors | Waves of heat emanate from cracks in the wall |
+| 10302 | The Nest Antechamber | inside | no_recall, no_teleport, indoors, dark | |
+| 10303 | The Feeding Ground | inside | no_recall, no_teleport, indoors | Gnawed bones carpet the floor |
+| 10304 | An Ascending Shaft | inside | no_mob, no_teleport, indoors | D4 (up) → Floor 5, through `^stone sentinel gate` (locked, key 10139) |
+| 10305 | A Side Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10306 | The Inner Drake Hall | inside | no_recall, no_teleport, indoors | |
+| 10307 | A Scorched Archive | inside | no_recall, no_teleport, indoors, dark | Burned shelves, ash-covered tablets |
+| 10308 | The Pre-Lair Corridor | inside | no_recall, no_teleport, indoors | |
+| 10309 | The Drake's Approach | inside | no_recall, no_teleport, indoors | `^bone-adorned gate` (closed, no lock) leads to 10310 |
+| 10310 | The Pyramid Drake's Nest | inside | no_mob, no_recall, no_teleport, indoors | **BOSS ROOM** — The Pyramid Drake |
 
 ---
 
@@ -376,20 +387,20 @@ The topmost and smallest floor. The apex of the pyramid. The final pharaoh-spiri
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10311 | The Summit Entry | inside | no_mob, indoors | Entry via `^stone sentinel gate` from 10304 |
-| 10312 | The Apex Corridor | inside | indoors | |
-| 10313 | The Wind-Scoured Chamber | inside | indoors | Cracks in the ceiling let in hot desert air |
-| 10314 | The Golden Hall | inside | indoors | Gold leaf lines every surface |
-| 10315 | The Relic Chamber | inside | indoors | Empty pedestals where artifacts once rested |
-| 10316 | A Side Niche | inside | indoors, dark | |
-| 10317 | The Hall of Judgment | inside | indoors | Final carvings depict the afterlife |
-| 10318 | The Pharaoh's Antechamber | inside | indoors | |
-| 10319 | The Inner Apex Hall | inside | indoors | |
-| 10320 | A Narrow Final Passage | inside | indoors, dark | |
-| 10321 | The Throne Room Approach | inside | indoors | |
-| 10322 | The Pre-Throne Hall | inside | indoors | |
-| 10323 | The Sand Sovereign's Approach | inside | indoors | `^summit chamber door` (closed, no lock) leads to 10324 |
-| 10324 | The Summit Throne Room | inside | no_mob, indoors | **BOSS ROOM** — The Sand Sovereign |
+| 10311 | The Summit Entry | inside | no_mob, no_teleport, indoors | Entry via `^stone sentinel gate` from 10304 |
+| 10312 | The Apex Corridor | inside | no_recall, no_teleport, indoors | |
+| 10313 | The Wind-Scoured Chamber | inside | no_recall, no_teleport, indoors | Cracks in the ceiling let in hot desert air |
+| 10314 | The Golden Hall | inside | no_recall, no_teleport, indoors | Gold leaf lines every surface |
+| 10315 | The Relic Chamber | inside | no_recall, no_teleport, indoors | Empty pedestals where artifacts once rested |
+| 10316 | A Side Niche | inside | no_recall, no_teleport, indoors, dark | |
+| 10317 | The Hall of Judgment | inside | no_recall, no_teleport, indoors | Final carvings depict the afterlife |
+| 10318 | The Pharaoh's Antechamber | inside | no_recall, no_teleport, indoors | |
+| 10319 | The Inner Apex Hall | inside | no_recall, no_teleport, indoors | |
+| 10320 | A Narrow Final Passage | inside | no_recall, no_teleport, indoors, dark | |
+| 10321 | The Throne Room Approach | inside | no_recall, no_teleport, indoors | |
+| 10322 | The Pre-Throne Hall | inside | no_recall, no_teleport, indoors | |
+| 10323 | The Sand Sovereign's Approach | inside | no_recall, no_teleport, indoors | `^summit chamber door` (closed, no lock) leads to 10324 |
+| 10324 | The Summit Throne Room | inside | no_mob, no_teleport, indoors | **BOSS ROOM** — The Sand Sovereign |
 
 ---
 
