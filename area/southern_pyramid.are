@@ -5845,6 +5845,295 @@ elite warrior. Its translucent blade still gleams with deadly purpose.
 + 0 0 0 0 0 0 0 0 0
 l 100 11593 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+#11597
+petrified sand wurm~
+@@ya petrified sand wurm@@N~
+@@yA petrified sand wurm@@N rears here, its fossilized body cracking as it moves.
+~
+A burrowing worm fossilized mid-strike, the sand wurm's @@bstone-like body@@N has been
+reanimated by the pyramid's magic despite its petrification. Cracks spider across its
+surface as it moves, shedding flakes of mineralized hide.
+~
+262241 0 0 S
+134 0
+0 0 0 0
+! 2 7 0 7 32834 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11594 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11598
+tomb guardian jackal~
+@@ya tomb guardian jackal@@N~
+@@yA tomb guardian jackal@@N prowls here, its undead eyes burning with @@yyellow fire@@N.
+~
+An undead jackal bound to patrol the pyramid's corridors, the guardian's @@bmangy hide@@N
+is stretched over visible bones, and its eyes burn with @@yunnatural yellow light@@N.
+Its teeth are still razor-sharp despite centuries of death.
+~
+16481 0 -500 S
+130 0
+0 0 0 0
+! 2 7 5 7 6145 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11595 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11599
+embalmed crocodile~
+@@yan embalmed crocodile@@N~
+@@yAn embalmed crocodile@@N drags itself forward, its preserved hide cracking.
+~
+A massive reptile preserved by ancient embalming magic, the crocodile's @@bhide@@N has
+been treated with resins that keep it intact despite millennia of death. Its jaws still
+close with bone-crushing force, animated by the pyramid's ambient curse.
+~
+278625 0 -500 S
+133 0
+0 0 0 0
+! 2 7 5 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11596 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11600
+dust devil spirit~
+@@ya dust devil spirit@@N~
+@@yA dust devil spirit@@N whirls here, a miniature sandstorm in vaguely humanoid form.
+~
+A whirling sand elemental fragment barely three feet tall, the dust devil's @@yswirling
+form@@N picks up loose debris and flings it outward in a constant barrage. Its insubstantial
+body makes it difficult to strike.
+~
+327777 0 0 S
+127 0
+0 0 0 0
+! 2 7 0 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11565 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11601
+whispering wraith~
+@@ya whispering wraith@@N~
+@@yA whispering wraith@@N hovers here, its translucent lips mouthing silent curses.
+~
+A translucent shade that mouths silent curses in a language lost to time, the wraith's
+ghostly form flickers between visibility and nothingness. Its attacks manifest as waves
+of debilitating weakness that sap the strength of the living.
+~
+82017 0 -500 S
+131 0
+0 0 0 0
+! 2 7 5 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11566 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11602
+calcified serpent~
+@@ya calcified serpent@@N~
+@@yA calcified serpent@@N coils here, its mineralized scales clinking like stone.
+~
+A serpent whose body has been partially mineralized by the pyramid's mineral-rich seepage,
+the calcified serpent's @@bstone-like scales@@N provide natural armor. Despite its
+petrification, it still strikes with surprising speed.
+~
+262241 0 0 S
+129 0
+0 0 0 0
+! 2 7 0 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11567 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11603
+tomb beetle colossus~
+@@ya tomb beetle colossus@@N~
+@@yA tomb beetle colossus@@N clicks forward, its iron mandibles gaping.
+~
+A man-sized scarab with @@biron mandibles@@N capable of shearing through plate armor, the
+tomb beetle colossus is the apex predator of the pyramid's insect ecosystem. Its @@bchitin
+carapace@@N is nearly impervious to slashing weapons.
+~
+262241 0 0 S
+136 0
+0 0 0 0
+! 2 7 0 7 40962 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11568 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11604
+mold-ridden ghoul~
+@@ya mold-ridden ghoul@@N~
+@@yA mold-ridden ghoul@@N lurches here, @@bfungal growths@@N erupting from its rotting flesh.
+~
+A ghoul whose rotting body has become a host for parasitic @@bfungal growth@@N that erupts
+from every wound and orifice. The mold spreads disease with each contact, and the ghoul's
+enhanced decay makes its claws particularly virulent.
+~
+16481 0 -500 S
+135 0
+0 0 0 0
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11569 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11605
+bloated corpse walker~
+@@ya bloated corpse walker@@N~
+@@yA bloated corpse walker@@N staggers here, its swollen body leaking toxic gas.
+~
+A swollen cadaver distended by the gases of decomposition, the corpse walker's @@bpurplish
+skin@@N is stretched taut and weeping fluid. Each step it takes releases small gouts of
+@@etoxic gas@@N from ruptures in its distended flesh.
+~
+16481 0 -500 S
+132 0
+0 0 0 0
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11570 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11606
+decay spider~
+@@ya decay spider@@N~
+@@yA decay spider@@N skitters across the wall, its legs of @@brotting sinew@@N clicking.
+~
+An eight-legged creature woven from @@brotting sinew@@N and held together by the same
+decay magic that permeates this tier. Its web is made not of silk but of fungal filaments,
+and its bite delivers both venom and infection.
+~
+97 0 0 S
+128 0
+0 0 0 0
+! 2 7 0 7 6145 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11546 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11607
+mildew phantom~
+@@ya mildew phantom@@N~
+@@yA mildew phantom@@N drifts here, its ghostly outline dripping condensation.
+~
+A ghostly outline dripping with spectral condensation, the mildew phantom's translucent
+form leaves a trail of @@bwet footprints@@N that evaporate slowly. Its chill touch saps
+warmth and will from the living.
+~
+82017 0 -500 S
+134 0
+0 0 0 0
+! 2 7 5 7 1 0 2
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11547 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11608
+shadow hound~
+@@ya shadow hound@@N~
+@@yA shadow hound@@N slinks from the darkness, its eyes burning like @@Rred coals@@N.
+~
+A pack hunter perfectly adapted to the shadow tier's perpetual darkness, the hound's
+@@bblack coat@@N absorbs all light, making it nearly invisible. Only its @@Rburning red
+eyes@@N betray its position before it strikes.
+~
+97 0 0 S
+137 0
+0 0 0 0
+! 2 7 0 7 38913 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11550 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11609
+nightmare sentinel~
+@@ya nightmare sentinel@@N~
+@@yA nightmare sentinel@@N stands guard here, its @@bblack iron armor@@N absorbing all light.
+~
+An animated suit of @@bblack iron armor@@N that moves without any visible occupant, the
+nightmare sentinel's joints hiss with dark energy as it patrols. Its hollow helm turns
+to track intruders with mechanical precision.
+~
+262241 0 0 S
+139 0
+0 0 0 0
+! 2 7 0 7 40994 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11610
+shade dancer~
+@@ya shade dancer@@N~
+@@yA shade dancer@@N flickers in and out of visibility, striking from blind spots.
+~
+A flickering silhouette that attacks from blind spots, the shade dancer moves with an
+eerie, rhythmic grace that makes its strikes nearly impossible to predict. It phases
+between visibility and shadow, appearing solid only at the moment of impact.
+~
+97 0 -200 S
+133 0
+0 0 0 0
+! 2 7 0 7 6145 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11551 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11611
+darkfire wisp~
+@@ya darkfire wisp@@N~
+@@yA darkfire wisp@@N bobs here, a small sphere of @@Rblack flame@@N.
+~
+A small sphere of @@Rblack flame@@N that hovers at chest height, the darkfire wisp is a
+fragment of the shadow tier's concentrated dark energy given semi-sentient form. Its touch
+burns with a cold that is the opposite of fire.
+~
+327777 0 0 S
+126 0
+0 0 0 0
+! 2 7 0 7 1 1032 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11553 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11612
+ossuary spider~
+@@yan ossuary spider@@N~
+@@yAn ossuary spider@@N clicks across the bone floor on legs of fused finger bones.
+~
+A spider constructed from @@bfinger bones@@N, each leg a chain of interlocking phalanges
+that clicks with mechanical precision across the ossuary's bone floors. Its web is spun
+from calcium-white filaments, and its bite injects liquefied marrow.
+~
+262241 0 0 S
+131 0
+0 0 0 0
+! 2 7 0 7 6145 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11557 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11613
+marrow elemental~
+@@ya marrow elemental@@N~
+@@yA marrow elemental@@N oozes here, its viscous mass shifting and pulsing.
+~
+An oozing mass of @@bliquefied bone marrow@@N animated by necromantic energy, the marrow
+elemental's viscous body shifts and reforms constantly. It engulfs prey in its caustic
+mass, dissolving flesh and bone with horrifying efficiency.
+~
+262241 0 0 S
+138 0
+0 0 0 0
+! 2 7 0 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11560 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
 #0
 #$
 
