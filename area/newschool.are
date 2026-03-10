@@ -403,7 +403,7 @@ S
 Lesson VIII: Shopping~
 @@NYou enter a cozy shop with goods displayed on shelves behind a counter.
 The academy shopkeeper stands here, ready to serve you.  A sign on the
-wall explains how to buy and sell.  Exits lead @@ysouth@@N and @@ywest@@N.
+wall explains how to buy items.  Exits lead @@ysouth@@N and @@ywest@@N.
 ~
 8 11
 D2
@@ -420,20 +420,12 @@ E
 sign~
 @@WLesson VIII: Shopping@@N
 
-When you are in a shop, you can buy and sell items:
+When you are in a shop, you can buy items:
 
   @@yLIST@@N           -- See what the shopkeeper has for sale
   @@yBUY <item>@@N     -- Purchase an item
-  @@ySELL <item>@@N    -- Sell an item to the shopkeeper
-  @@yVALUE <item>@@N   -- See how much the shopkeeper will pay for your item
 
-Try '@@yLIST@@N' to see what is available, then '@@yBUY BREAD@@N' and
-'@@yBUY FLASK@@N'.
-
-To eat and drink:
-
-  @@yEAT <food>@@N     -- Eat something to satisfy hunger
-  @@yDRINK <drink>@@N  -- Drink something to quench thirst
+Try '@@yLIST@@N' to see what is available, then '@@yBUY BREAD@@N'.
 
 When ready, go @@ySOUTH@@N.
 
@@ -513,14 +505,14 @@ S
 #20213
 Trial Hall~
 @@NYou stand in a grand hall with vaulted ceilings.  Seven heavy doors line
-the walls, each marked with a different symbol.  Beyond each door waits
-a guardian carrying equipment you will need.  A large sign dominates the
+the walls.  Beyond each door waits a creature or object carrying
+equipment you will need.  A large sign dominates the
 center of the hall.  The combat arena is @@yeast@@N.
 Corridors branch @@ynorth@@N, @@ysouth@@N, @@ywest@@N, @@yup@@N, and @@ydown@@N.
 ~
 8 11
 D0
-You see a chamber marked with a crown symbol.
+You see a room full of hats.
 ~
 ~
 0 0 20214
@@ -530,17 +522,17 @@ You see the combat arena.
 ~
 0 0 20211
 D2
-You see a chamber marked with a mantle symbol.
+You see a room full of cloaks.
 ~
 ~
 0 0 20215
 D3
-You see a chamber marked with a fortress symbol.
+You see a dusty armor closet.
 ~
 ~
 0 0 20216
 D4
-You see a chamber marked with a gauntlet symbol.
+You see a room full of gloves.
 ~
 ~
 0 0 20217
@@ -553,8 +545,8 @@ E
 sign~
 @@WThe Trial Hall@@N
 
-Beyond each passage is a guardian monster carrying equipment.  Kill each
-guardian and take their gear!
+Beyond each passage is a creature or training target with equipment.
+Kill each one and take their gear!
 
 After killing a monster:
 
@@ -568,15 +560,15 @@ Between fights, you may need to recover:
   @@ySLEEP@@N  -- Fall asleep and recover HP quickly (but less aware!)
   @@yWAKE@@N   -- Wake up or stand up when done resting
 
-Kill all seven guardians and collect their gear, then go @@yDOWN@@N.
+Kill all seven targets and collect their gear, then go @@yDOWN@@N.
 
 ~
 S
 #20214
-Trial Chamber of the Crown~
-@@NYou enter a chamber decorated with portraits of crowned rulers.  A
-guardian stands here, wearing gleaming headgear.  The only exit is
-@@ysouth@@N back to the trial hall.
+The Hat Room~
+@@NYou enter a small chamber with hooks on the walls for hanging hats.  A
+straw training dummy stands here, dressed in headgear.  The only exit
+is @@ysouth@@N back to the trial hall.
 ~
 8 11
 D2
@@ -586,15 +578,15 @@ You see the trial hall.
 0 0 20213
 E
 sign~
-This guardian carries equipment for your head, face, and ears.
+This dummy is wearing equipment for your head, face, and ears.
 Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
 #20215
-Trial Chamber of the Mantle~
-@@NYou enter a chamber hung with rich tapestries and cloaks.  A guardian
-stands here, draped in various garments.  The only exit is @@ynorth@@N
-back to the trial hall.
+The Cloak Room~
+@@NYou enter a chamber with old cloaks hanging from pegs on the walls.  A
+rickety scarecrow stands here, draped in old clothes.  The only exit is
+@@ynorth@@N back to the trial hall.
 ~
 8 11
 D0
@@ -604,14 +596,14 @@ You see the trial hall.
 0 0 20213
 E
 sign~
-This guardian carries equipment for your neck, shoulders, and back.
+This scarecrow is wearing gear for your neck, shoulders, and back.
 Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
 #20216
-Trial Chamber of the Fortress~
-@@NYou enter a heavily fortified chamber with thick stone walls.  A
-guardian stands here in full body armor.  The only exit is @@yeast@@N
+The Armor Closet~
+@@NYou enter a dusty closet crammed with old armor pieces.  A rusty suit
+of armor stands in the middle, creaking.  The only exit is @@yeast@@N
 back to the trial hall.
 ~
 8 11
@@ -622,14 +614,14 @@ You see the trial hall.
 0 0 20213
 E
 sign~
-This guardian carries body armor, belt, leggings, and boots.
+This rusty suit of armor is wearing a vest, belt, leggings, and boots.
 Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
 #20217
-Trial Chamber of the Gauntlet~
-@@NYou enter a chamber filled with training dummies wearing arm guards.
-A guardian stands here, arms covered in protective gear.  The only exit
+The Glove Box~
+@@NYou enter a small room lined with shelves of old gloves and bracers.
+A wooden mannequin stands here with arms outstretched.  The only exit
 is @@ydown@@N back to the trial hall.
 ~
 8 11
@@ -640,15 +632,15 @@ You see the trial hall.
 0 0 20213
 E
 sign~
-This guardian carries sleeves, bracelets, and gauntlets.
+This mannequin is wearing sleeves, bracelets, and gauntlets.
 Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
 #20218
-Trial Chamber of Trinkets~
-@@NYou enter a chamber that glitters with small treasures displayed in
-glass cases.  A guardian stands here, adorned with rings and baubles.
-The only exit is @@ysouth@@N back to the lower trial hall.
+The Shiny Nest~
+@@NYou enter a chamber littered with shiny objects and bits of tinsel.
+A greedy magpie hops around here, clutching trinkets.  The only exit
+is @@ysouth@@N back to the lower trial hall.
 ~
 8 11
 D2
@@ -658,15 +650,15 @@ You see the lower trial hall.
 0 0 20223
 E
 sign~
-This guardian carries rings and items to hold in your hands.
+This magpie has collected rings and other shiny things to hold.
 Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
 #20219
-Trial Chamber of the Mystic~
-@@NYou enter a chamber bathed in an eerie supernatural glow.  Strange
-energies shimmer in the air.  A guardian floats here, surrounded by
-magical auras.  The only exit is @@ynorth@@N back to the lower trial hall.
+The Dusty Attic~
+@@NYou enter a cobwebbed attic full of strange knick-knacks and curiosities.
+A flickering wisp drifts around here, trailing bits of light.  The only
+exit is @@ynorth@@N back to the lower trial hall.
 ~
 8 11
 D0
@@ -676,17 +668,16 @@ You see the lower trial hall.
 0 0 20223
 E
 sign~
-This guardian carries mystical items: halos, auras, and wings.
+This wisp has collected mystical oddities: halos, auras, and wings.
 These are special equipment slots for certain races.
 Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
 #20220
-Trial Chamber of the Exotic~
-@@NYou enter a strange chamber shaped like a cave.  The walls are carved
-with images of fantastical creatures -- dracons, lamia, minotaurs.  A
-guardian lurks here, equipped with unusual gear.  The only exit is
-@@yup@@N back to the lower trial hall.
+The Odd Corner~
+@@NYou enter a cluttered corner full of strange contraptions and odd gear.
+An odd little critter scurries around here wearing mismatched equipment.
+The only exit is @@yup@@N back to the lower trial hall.
 ~
 8 11
 D4
@@ -696,8 +687,8 @@ You see the lower trial hall.
 0 0 20223
 E
 sign~
-This guardian carries exotic equipment: beak guards, claws, tail wraps,
-and hooves.  These are special slots for non-humanoid races.
+This critter has exotic gear: beak guards, claws, tail wraps, and hooves.
+These are special slots for non-humanoid races.
 Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
@@ -780,17 +771,17 @@ S
 #20223
 Lower Trial Hall~
 @@NYou descend into a lower section of the trial hall.  More chamber doors
-line the walls here, marked with mystical symbols.  The upper trial hall
+line the walls here.  The upper trial hall
 is @@yup@@N.  Corridors lead @@ynorth@@N, @@ysouth@@N, and @@ywest@@N.
 ~
 8 11
 D0
-You see a chamber marked with a trinket symbol.
+You see a nest of shiny things.
 ~
 ~
 0 0 20218
 D2
-You see a chamber marked with a mystic symbol.
+You see a dusty attic.
 ~
 ~
 0 0 20219
@@ -805,7 +796,7 @@ You see the upper trial hall.
 ~
 0 0 20213
 D5
-You see a chamber marked with exotic symbols.
+You see a cluttered odd corner.
 ~
 ~
 0 0 20220
@@ -924,11 +915,12 @@ tough for you to kill -- you should practice fleeing from it!
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #20202
-guardian crown~
-the Guardian of the Crown~
-The Guardian of the Crown stands here, wearing gleaming headgear.
+dummy straw~
+a straw training dummy~
+A straw training dummy stands here, dressed up in headgear.
 ~
-A spectral warrior clad in shining helm and ornate earrings.
+This floppy dummy has a helmet jammed on its head and earrings
+pinned to the sides.  It does not look very threatening.
 ~
 3 0 0 S
 1 0
@@ -939,11 +931,12 @@ A spectral warrior clad in shining helm and ornate earrings.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #20203
-guardian mantle~
-the Guardian of the Mantle~
-The Guardian of the Mantle stands here, draped in rich garments.
+scarecrow~
+a rickety scarecrow~
+A rickety scarecrow stands here, draped in old clothes.
 ~
-A spectral warrior wearing a fine cloak and shoulder armor.
+This scarecrow is dressed in a threadbare cloak with a necklace
+of bottle caps around its neck.  It sways gently.
 ~
 3 0 0 S
 1 0
@@ -954,11 +947,12 @@ A spectral warrior wearing a fine cloak and shoulder armor.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #20204
-guardian fortress~
-the Guardian of the Fortress~
-The Guardian of the Fortress stands here in full body armor.
+suit armor rusty~
+a rusty suit of armor~
+A rusty suit of armor stands here, creaking in the breeze.
 ~
-A spectral warrior clad from head to toe in heavy iron armor.
+This old suit of armor has been cobbled together from mismatched
+pieces.  It rattles when you get close.
 ~
 3 0 0 S
 1 0
@@ -969,11 +963,12 @@ A spectral warrior clad from head to toe in heavy iron armor.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #20205
-guardian gauntlet~
-the Guardian of the Gauntlet~
-The Guardian of the Gauntlet stands here, arms encased in armor.
+mannequin wooden~
+a wooden mannequin~
+A wooden mannequin stands here with arms outstretched.
 ~
-A spectral warrior with heavily armored arms and wrists.
+This jointed wooden figure has bracelets dangling from its wrists
+and oversized gloves on its hands.  It looks easy to knock over.
 ~
 3 0 0 S
 1 0
@@ -984,11 +979,12 @@ A spectral warrior with heavily armored arms and wrists.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #20206
-guardian trinkets~
-the Guardian of Trinkets~
-The Guardian of Trinkets stands here, adorned with rings and baubles.
+magpie~
+a greedy magpie~
+A greedy magpie hops around here, clutching shiny trinkets.
 ~
-A spectral warrior glittering with jewelry and held items.
+This plump bird has collected all sorts of shiny things -- rings
+on its toes and glittering objects in its claws.
 ~
 3 0 0 S
 1 0
@@ -999,11 +995,12 @@ A spectral warrior glittering with jewelry and held items.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #20207
-guardian mystic~
-the Guardian of the Mystic~
-The Guardian of the Mystic floats here, surrounded by magical auras.
+wisp ghost~
+a flickering wisp~
+A flickering wisp drifts here, trailing wisps of light.
 ~
-A spectral being wreathed in supernatural energy, with ethereal wings.
+This harmless-looking ball of light has all sorts of magical oddities
+clinging to it -- a tiny halo, shimmering aura, and feathery wings.
 ~
 3 0 0 S
 1 0
@@ -1014,11 +1011,12 @@ A spectral being wreathed in supernatural energy, with ethereal wings.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #20208
-guardian exotic~
-the Guardian of the Exotic~
-The Guardian of the Exotic lurks here, equipped with strange gear.
+critter odd~
+an odd critter~
+An odd little critter scurries around here wearing mismatched gear.
 ~
-A spectral creature with a beaked helm, iron claws, and a tail wrap.
+This bizarre creature seems to be part bird, part lizard, and part
+something else entirely.  It has gear strapped to every appendage.
 ~
 3 0 0 S
 1 0
@@ -1486,37 +1484,37 @@ M 0 20200 1 20210            shopkeeper
 G 0 20290 999
 G 0 20291 999
 M 0 20201 1 20212            training blob
-M 0 20202 1 20214            guardian of the crown
+M 0 20202 1 20214            straw dummy
 E 0 20260 99 4
 E 0 20261 99 5
 E 0 20262 99 7
 E 0 20263 99 8
-M 0 20203 1 20215            guardian of the mantle
+M 0 20203 1 20215            scarecrow
 E 0 20264 99 9
 E 0 20265 99 10
 E 0 20266 99 12
 E 0 20267 99 24
-M 0 20204 1 20216            guardian of the fortress
+M 0 20204 1 20216            rusty armor
 E 0 20268 99 26
 E 0 20269 99 25
 E 0 20270 99 28
 E 0 20271 99 29
-M 0 20205 1 20217            guardian of the gauntlet
+M 0 20205 1 20217            wooden mannequin
 E 0 20272 99 13
 E 0 20273 99 14
 E 0 20274 99 15
 E 0 20275 99 16
-M 0 20206 1 20218            guardian of trinkets
+M 0 20206 1 20218            magpie
 E 0 20276 99 17
 E 0 20277 99 18
 E 0 20278 99 20
 E 0 20279 99 21
-M 0 20207 1 20219            guardian of the mystic
+M 0 20207 1 20219            wisp
 E 0 20280 99 1
 E 0 20281 99 2
 E 0 20282 99 3
 E 0 20283 99 11
-M 0 20208 1 20220            guardian of the exotic
+M 0 20208 1 20220            odd critter
 E 0 20284 99 6
 E 0 20285 99 19
 E 0 20286 99 27
