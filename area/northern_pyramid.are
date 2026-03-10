@@ -1284,6 +1284,348 @@ carved in an animal face that bears an expression of eternal @@Rpain@@N.
 + 0 0 0 0 0 0 0 0 0
 l 100 10168 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+#10145
+golden asp~
+@@ya Golden Asp@@N~
+@@ya Golden Asp@@N coils here, its @@yyellow-gold@@N scales catching the light.
+~
+A large desert asp with @@yyellow-gold@@N scales that give it its name and make
+it highly visible — a warning in nature that carries real weight. Its venom
+acts quickly on the nervous system, and it knows it has no need to hide.
+~
+97 0 0 S
+113 0
+0 0 3 3
+! 2 7 3 7 1 0 1
+| 0 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10169 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10146
+desert hawk~
+@@ya Desert Hawk@@N~
+@@ya Desert Hawk@@N circles here, tracking your movement with cold amber eyes.
+~
+A large raptor adapted to the pyramid's updrafts, its @@byellow-brown@@N plumage
+patchy from years of nesting in heated upper passages. Its beak and talons are
+honed by years of use on the small creatures that also inhabit these corridors.
+~
+97 0 0 S
+116 0
+0 0 3 3
+! 2 7 3 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10170 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10147
+sand golem~
+@@ya Sand Golem@@N~
+@@ya Sand Golem@@N lurches here, @@bsand@@N streaming from its compact form.
+~
+A @@bsand-colored@@N golem densely packed from compressed desert sand, the core
+shard in its chest radiating the animating magic that keeps it coherent. Without
+that core it is just a pile of sand; with it, it is a methodical problem.
+~
+262241 0 0 S
+110 0
+0 0 2 2
+! 2 7 0 7 4098 0 1
+| 34 64 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10171 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10148
+cursed acolyte~
+@@ya Cursed Acolyte@@N~
+@@ya Cursed Acolyte@@N stands here, @@Rcurse-glyphs@@N burning in its skin.
+~
+An acolyte of the pyramid's inner cult whose initiation ritual went wrong,
+leaving the @@Rcurse-glyphs@@N burned into its flesh permanently. Its
+training remains intact; the curse just adds additional potency to everything it channels.
+~
+97 0 -300 S
+118 0
+0 0 5 5
+! 2 7 3 7 32769 518 4
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10149
+desert wight~
+@@ya Desert Wight@@N~
+@@ya Desert Wight@@N lurks here, its @@bbone-ring@@N fingers twitching with hunger.
+~
+A wight preserved by the pyramid's arid heat into something denser and more
+persistent than simple undeath normally produces. Its @@byellow-brown skin@@N
+has been turned to near-leather by the desert; it is harder to damage than it appears.
+~
+16481 0 -300 S
+114 0
+0 0 3 3
+! 2 7 5 7 32769 0 1
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10173 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10150
+stone scarab guardian~
+@@ya Stone Scarab Guardian@@N~
+@@ya Stone Scarab Guardian@@N scuttles here, its @@bstone shell@@N grinding against the floor.
+~
+A scarab construct half the size of the Scarab Colossus, built from @@bblue-black
+stone@@N fused into an insectile form. It is one of many manufactured to guard the
+pyramid's middle floors, each individually less threatening than its progenitor.
+~
+262241 0 0 S
+117 0
+0 0 4 4
+! 2 7 0 7 32930 0 1
+| 34 68 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10151
+pyramid cobra~
+@@ya Pyramid Cobra@@N~
+@@ya Pyramid Cobra@@N raises its hood here, @@bscales@@N flaring in warning.
+~
+A large hooded cobra whose @@bdark banded@@N scales absorb the pyramid's ambient
+heat with particular efficiency, making it more active and more aggressive than
+its surface cousins. Its hood-spread is wide enough to be difficult to look away from.
+~
+97 0 0 S
+111 0
+0 0 2 2
+! 2 7 3 7 1 0 1
+| 0 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10175 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10152
+mummified archer~
+@@ya Mummified Archer@@N~
+@@ya Mummified Archer@@N stands here, drawing a @@bbone-tipped@@N arrow.
+~
+A mummified soldier whose preservation was oriented around maintaining a drawn
+bow posture, enabling its continued service as a ranged combatant in undeath.
+Its @@blinen wrappings@@N are reinforced at the forearm to survive continuous bow-draw.
+~
+16481 0 -200 S
+119 0
+0 0 4 4
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10176 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10153
+great desert vulture~
+@@ya Great Desert Vulture@@N~
+@@ya Great Desert Vulture@@N hunches here, its @@bbare red neck@@N swaying.
+~
+An enormous vulture whose wingspan fills a corridor, its @@bblack-brown
+feathers@@N stained with the residue of centuries of carrion. In the pyramid's
+enclosed environment it has grown massive and aggressive, now preying as much as scavenging.
+~
+97 0 0 S
+120 0
+0 0 4 4
+! 2 7 3 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10177 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10154
+ancient face guardian~
+@@yan Ancient Face Guardian@@N~
+@@yan Ancient Face Guardian@@N stands here, its carved @@bstone visage@@N turning slowly.
+~
+A stone-slab construct shaped like a floating face, the carved features of
+an ancient pharaoh's war-mask given independent mobile life by the pyramid's
+defensive ward systems. It parries with its flat stone body.
+~
+262243 0 0 S
+116 0
+0 0 3 3
+! 2 7 0 7 8225 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10155
+desert shadow~
+@@ya Desert Shadow@@N~
+@@ya Desert Shadow@@N drifts here, its @@bblack form@@N absorbing the surrounding light.
+~
+An undead spirit formed from the shadow cast by a dying man in the desert heat,
+given independent existence by the pyramid's ambient necromantic energy. It has
+no body to strike and no weight to resist; contact with it drains rather than bleeds.
+~
+82017 0 -400 S
+112 0
+0 0 3 3
+! 2 7 5 7 0 65664 1
+| 256 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10179 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10156
+desert shadow assassin~
+@@ya Desert Shadow Assassin@@N~
+@@ya Desert Shadow Assassin@@N stands here, barely visible against the @@bstone@@N wall.
+~
+A @@bshadow-garbed@@N human operative trained in the pyramid's defensive traditions,
+wearing shadow-binding oil that makes them difficult to track even in the same room.
+Their combination of mundane skill and shadow-cult training is particularly efficient.
+~
+97 0 -300 S
+118 0
+0 0 4 4
+! 2 7 3 7 36865 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10180 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10157
+living pillar golem~
+@@ya Living Pillar Golem@@N~
+@@ya Living Pillar Golem@@N blocks passage here, immovable as the pyramid itself.
+~
+A full architectural column that has been animated and detached from its original
+load-bearing position, this @@bsandstone@@N pillar moves by falling, rising, and
+swinging in ways that no living creature could survive at close range.
+~
+262243 0 0 S
+120 0
+0 0 5 5
+! 2 7 0 7 32900 0 1
+| 34 4 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10158
+sacred golden cobra~
+@@ya Sacred Golden Cobra@@N~
+@@ya Sacred Golden Cobra@@N rears here, its @@yyellow-gold@@N hood spread wide.
+~
+The pyramid's innermost sanctum hosts these massive cobras, bred over centuries
+for extreme size and venom potency. Their @@yyellow-gold@@N coloration marks them
+as cult animals; their size marks them as something that has outgrown that role.
+~
+97 0 0 S
+115 0
+0 0 3 3
+! 2 7 3 7 1 0 1
+| 0 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10182 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10159
+pyramid cultist~
+@@ya Pyramid Cultist@@N~
+@@ya Pyramid Cultist@@N kneels here, @@bblack-robed@@N and muttering.
+~
+A living devotee of the Sand Sovereign's immortality cult, maintaining the
+pyramid's ritual continuity from within. Their @@bblack robes@@N are stained
+with @@yocre@@N and they carry consecrated implements for every ceremony required.
+~
+97 0 -300 S
+117 0
+0 0 4 4
+! 2 7 3 7 32769 10 4
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10183 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10160
+death hawk~
+@@ya Death Hawk@@N~
+@@ya Death Hawk@@N circles here, its wingspan filling the upper corridor.
+~
+A raptor infused with the pyramid's death-energy through generations of nesting
+in the upper floors, its @@bblack plumage@@N absorbing light and its talons
+carrying the same paralytic quality that marks the upper floor's most dangerous creatures.
+~
+97 0 -200 S
+119 0
+0 0 4 4
+! 2 7 3 7 4097 0 1
+| 256 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10184 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10161
+sand revenant~
+@@ya Sand Revenant@@N~
+@@ya Sand Revenant@@N rises here from the floor in a column of @@yyellow@@N dust.
+~
+A revenant formed when a person was buried alive in the sand rather than
+properly interred, its @@bsand-packed@@N form preserving the body well enough
+for the spirit to persist in it. It remembers exactly how it died and is motivated accordingly.
+~
+16481 0 -300 S
+113 0
+0 0 3 3
+! 2 7 5 7 32801 0 8
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10185 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10162
+pyramid specter~
+@@ya Pyramid Specter@@N~
+@@ya Pyramid Specter@@N flickers here, its form @@bsmoke-grey@@N against the wall.
+~
+A spectral undead formed from the residual consciousness of a pyramid guardian
+whose body was destroyed but whose watch-duty binding persisted. It continues
+to patrol even though it can no longer physically bar passage.
+~
+82017 0 -400 S
+116 0
+0 0 3 3
+! 2 7 5 7 0 1049600 8
+| 256 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10163
+tomb fly swarm~
+@@ya Tomb Fly Swarm@@N~
+@@ya Tomb Fly Swarm@@N clouds here in a humming mass of @@bblack@@N bodies.
+~
+A dense swarm of carrion-feeding flies that have colonized the pyramid's middle
+passages, drawn by the preserved organic material in every room. Individually harmless;
+collectively capable of stripping flesh in the same way their ancestors stripped
+the corpse-meat from burial offerings left too long.
+~
+327777 0 0 S
+105 0
+0 0 0 0
+! 2 7 0 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10193 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10164
+desiccated desert rat~
+@@ya Desiccated Desert Rat@@N~
+@@ya Desiccated Desert Rat@@N skitters here, trailing @@bdry sinew@@N.
+~
+A desert rat whose body was partially mummified by the pyramid's ambient
+embalming energy, leaving it somewhere between living and undead: fast,
+persistent, and carrying the same decomposition-accelerating contact that
+full undead possess.
+~
+278625 0 0 S
+105 0
+0 0 0 0
+! 2 7 0 7 2049 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10194 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
 #0
 #ROOMS
 #10125
