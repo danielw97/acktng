@@ -7334,6 +7334,226 @@ the face is smooth and supernaturally resistant to impacts.~
 12
 L
 135
+#11581
+animated burial jar lid head~
+@@yan Animated Burial Jar Lid@@N~
+The ceramic lid of an ancient burial jar, shaped like a jackal's head and glazed
+in @@yfaded gold@@N and @@bochre@@N. The lid was animated by residual magic and now serves
+as a crude but effective helm, its hollow interior lined with @@bpadded linen@@N.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+132
+#11582
+scribal phantom cursed inkpot~
+@@ya Scribal Phantom's Cursed Inkpot@@N~
+A small vessel of @@bblack ceramic@@N sealed with wax and inscribed with @@yglyphs of
+binding@@N. The ink within sloshes with unnatural heaviness, and the pot radiates
+a chill that numbs the fingers of anyone who holds it.~
+9 67108992 8421376 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+136
+#11583
+linen wraps mummy thrall wrist~
+@@yLinen Wraps of the Mummy Thrall@@N~
+Strips of @@btightly wound funerary linen@@N soaked in @@epreservative resin@@N, designed to
+be wrapped around the forearms. The wrappings are rigid but flexible at the joints,
+and faintly glow with the necromantic energy that once animated their wearer.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+133
+#11584
+rot priest thrall robe body~
+@@ya Rot Priest Thrall's Robe@@N~
+A heavy robe of @@bcoarse linen@@N stained with @@esickly green fungal secretions@@N and
+dried unguents. The garment smells of decay and preservative spices in equal measure,
+and its hem is weighted with small @@bbone charms@@N that rattle softly.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+138
+#11585
+fungal wraith wisp veil about~
+@@ya Fungal Wraith's Wisp Veil@@N~
+A gossamer shroud of @@espore-laced ectoplasm@@N that drapes over the shoulders like
+a translucent cape. The veil drifts on unfelt currents and emits a faint
+bioluminescent glow, smelling of damp earth and mushroom.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+137
+#11586
+curse-bound sentinel iron pauldron shoulders~
+@@ya Curse-bound Sentinel's Iron Pauldron@@N~
+A heavy shoulder plate of @@bblack iron@@N etched with @@ycurse-binding runes@@N that glow
+faintly red when struck. The pauldron is a single piece shaped to cover shoulder
+and upper arm, and it hums with restless energy.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+139
+#11587
+entombed general war crown head~
+@@yan Entombed General's War Crown@@N~
+A heavy circlet of @@yblack iron@@N and @@bbronze@@N forged in the shape of a fortified
+battlement, with tiny towers at each cardinal point. The crown was buried with
+a general whose campaigns are recorded in @@bhieratic script@@N along the inner band.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+138
+#11588
+bone golem riveted knuckle weapon~
+@@ya Bone Golem's Riveted Knuckle@@N~
+A set of @@bfused finger-bones@@N from a bone golem, riveted together with iron pins
+and strapped across the hand. Each knuckle plate is dense as stone and strikes
+with the full mass of the golem's undead construction.~
+5 1140850816 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+140
+#11589
+crypt stalker shadow wrapping about~
+@@ya Crypt Stalker's Shadow Wrapping@@N~
+A length of @@bshadow-infused cloth@@N that was once part of a crypt stalker's binding
+shroud. The fabric clings to the shoulders and back, darkening the silhouette
+and muffling sound with its supernatural weave.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+136
+#11590
+magma lizard scale vest body~
+@@yMagma Lizard Scale Vest@@N~
+A sleeveless torso covering assembled from the @@boverapping scales@@N of a magma lizard,
+each scale tinged @@Rdull red@@N with residual volcanic heat. The vest is surprisingly
+light and radiates a steady warmth even in the coldest depths.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+137
+#11591
+charred bone husk smoldering bracers wrist~
+@@yCharred Bone Husk Smoldering Bracers@@N~
+Forearm guards fashioned from @@bcharred bone segments@@N still glowing faintly @@Rred@@N along
+their fracture lines. The bracers are warm to the touch and leave faint scorch marks
+on anything they rest against for too long.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+139
+#11592
+void sentinel stone gauntlets hands~
+@@ya Void Sentinel's Stone Gauntlets@@N~
+Heavy gauntlets of @@bcarved obsidian@@N fitted over frames of @@yblack iron@@N, each finger
+articulated with tiny stone joints. The palms are inscribed with @@evoid glyphs@@N
+that absorb ambient light and leave dark afterimages.~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+140
+#11593
+gilded moon shade helm head~
+@@ya Gilded Moon Shade's Helm@@N~
+A close-fitting helm of @@ythin gold plate@@N over a frame of @@bblack iron@@N, shaped to
+resemble the featureless face of a moon shade. The gold surface catches and reflects
+light in eerie patterns, and the visor slit glows faintly.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+138
+#11594
+toxic sand elemental howling band wrist~
+@@ya Toxic Sand Elemental's Howling Band@@N~
+A bracelet of @@bcompressed sand@@N held together by @@evenomous binding magic@@N, its surface
+rough and constantly shedding fine grit. A faint howling sound emanates from within,
+as though a tiny sandstorm rages inside the band.~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+139
+#11595
+ancient basalt guardian plate arm arms~
+@@yan Ancient Basalt Guardian's Plate Arm@@N~
+A massive arm guard of @@bsolid basalt@@N carved with @@yprotective ward-glyphs@@N, originally
+part of an ancient guardian construct. The stone is supernaturally light for its
+size and absorbs impacts with barely a mark.~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+142
+#11596
+bone overlord burial circlet head~
+@@ya Bone Overlord's Burial Circlet@@N~
+A crown of interlocking @@bfinger bones@@N woven into a circle and capped with a central
+@@yvoid-stone@@N that pulses with faint necromantic light. The circlet was torn from
+a greater bone overlord and still radiates commanding authority.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+140
+#11597
+petrified sand wurm calcified fang weapon~
+@@ya Petrified Sand Wurm's Calcified Fang@@N~
+An enormous @@bcalcite fang@@N ripped from the jaw of a petrified sand wurm, its base
+wrapped in @@bsun-dried leather@@N for a grip. The fang is curved and wickedly sharp,
+designed by nature to pierce and tear.~
+5 67108992 8421376 1
+0 0 0 10 0 0 0 0 0 0
+6
+L
+134
+#11598
+tomb jackal obsidian collar neck~
+@@ya Tomb Jackal's Obsidian Collar@@N~
+A rigid collar of @@bpolished obsidian@@N segments linked with @@yiron rings@@N, originally
+fitted around the neck of a guardian jackal. The collar is surprisingly comfortable
+and sits flat against the throat, deflecting blows to the neck.~
+9 67108992 8388736 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+130
+#11599
+embalmed crocodile scale greaves legs~
+@@yEmbalmed Crocodile Scale Greaves@@N~
+Shin guards fashioned from the @@bpreserved scales@@N of a massive embalmed crocodile,
+each scale as large as a hand and rigid as iron. The greaves are laced with @@bsinew@@N
+and reinforced at the knee with plates of @@ytarnished bronze@@N.~
+9 67108992 9437184 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+133
+#11600
+dust devil swirling band finger~
+@@ya Dust Devil's Swirling Band@@N~
+A ring of @@bcompressed desert sand@@N held in a perpetual slow spiral by trapped elemental
+magic. Tiny grains orbit the band in a miniature cyclone visible only in direct
+light, and the ring hums faintly with wind energy.~
+9 67108992 8396800 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+127
 #0
 
 #$
