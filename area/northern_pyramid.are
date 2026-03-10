@@ -1969,6 +1969,58 @@ It guards the throne approach with the same professionalism it maintained in lif
 + 0 0 0 0 0 0 0 0 0
 l 100 10214 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+#10185
+sandstorm elemental~
+@@ya Sandstorm Elemental@@N~
+@@ya Sandstorm Elemental@@N rages here, a compact vortex of @@yyellow@@N and @@bsand@@N.
+~
+A convergence of desert air and sand given autonomous existence by the pyramid's
+atmospheric magic, this elemental manifests as a self-sustaining whirlwind packed
+with abrasive @@bsand@@N. It does not think; it simply strips whatever enters its radius.
+~
+33816673 0 0 S
+121 0
+5 5 10 10
+! 2 7 0 7 36866 16 1
+| 16 128 0 0 0 16 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10186
+ancient obsidian guardian~
+@@yan Ancient Obsidian Guardian@@N~
+@@yan Ancient Obsidian Guardian@@N blocks passage here, @@bblack stone@@N gleaming.
+~
+A massive construct of @@bpure black obsidian@@N polished to a mirror finish,
+this guardian is considerably more dangerous than the sandstone models on the
+lower floors. It does not need to see — light passes over it in ways that make
+its position uncertain, and it strikes first regardless.
+~
+33816675 0 0 S
+122 0
+5 5 10 10
+! 2 7 0 7 41060 0 1
+| 34 4 0 0 0 2 4
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10187
+greater mummy overlord~
+@@ya Greater Mummy Overlord@@N~
+@@ya Greater Mummy Overlord@@N rises here, its burial regalia still intact.
+~
+A towering mummy general whose preservation magic maintained its command
+authority alongside its body, this overlord @@bsweeps@@N its arms in the specific
+battle-directives it has used for centuries. It still expects obedience.
+~
+33570913 0 -500 S
+120 0
+5 5 10 10
+! 2 7 5 7 565250 2105344 1
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #ROOMS
 #10125
