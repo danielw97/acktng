@@ -1,0 +1,27 @@
+level 0
+keywords thief
+---
+@@dTHIEF@@W
+
+Thieves are opportunists of motion and timing, winning through angles,
+misdirection, and surgical violence. They strike where armor and awareness are
+weakest.
+
+@@dPassive class abilities@@W
+  * @@wThief precision scaling@@W: backstab and circle gain
+    @@w+1% damage per Thief level@@W.
+  * @@wEnhanced Critical@@W (unlocked at mortal level 20):
+    - Adds extra critical chance based on Dexterity.
+    - Adds extra critical multiplier based on Dexterity.
+
+@@dUnique Thief mechanics@@W
+  * Prime mortal attribute is @@wDexterity@@W.
+  * Strong synergy with critical-hit focused combat and precision burst windows.
+
+@@dThief reincarnation bonuses@@W
+  * Every @@w2 Thief reincarnations@@W (rounded up) increases max
+    @@wDexterity@@W by 1.
+  * At @@w1+ Thief reincarnation@@W, @@wEnhanced Critical@@W is permanently
+    unlocked for all future class paths.
+
+See also: @@mreincarnate remort assassin warlock@@W

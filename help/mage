@@ -1,0 +1,27 @@
+level 0
+keywords mage
+---
+@@pMAGE@@W
+
+Mages are arcanists who study the raw architecture of power. Where others pray,
+bargain, or brawl, a Mage bends elemental law through discipline, theory, and
+precision.
+
+@@pPassive class abilities@@W
+  * @@wMage lifesteal chance scaling@@W: lifesteal trigger chance gains
+    @@w+0.05% per Mage level@@W.
+  * @@wMystical Potency@@W (unlocked at mortal level 20): increases your
+    non-physical damage by @@w2% per point of Intelligence@@W.
+
+@@pUnique Mage mechanics@@W
+  * Prime mortal attribute is @@wIntelligence@@W.
+  * Naturally synergizes with spellpower scaling, making Mage one of the best
+    mortal foundations for sustained arcane damage builds.
+
+@@pMage reincarnation bonuses@@W
+  * Every @@w2 Mage reincarnations@@W (rounded up) increases max
+    @@wIntelligence@@W by 1.
+  * At @@w1+ Mage reincarnation@@W, @@wMystical Potency@@W is permanently
+    unlocked for all future class paths.
+
+See also: @@mreincarnate remort wizard sorcerer@@W
