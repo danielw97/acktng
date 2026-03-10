@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Warrior: level 20
 Description:
-   Enhanced Damage is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Enhanced Damage passively increases your physical damage, scaling with Strength.
 *******************************************************************************

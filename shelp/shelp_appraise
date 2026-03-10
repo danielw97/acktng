@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Thief: level 12
 Description:
-   Appraise is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Appraise identifies an item and reveals its magical properties, similar to an Identify cast.
 *******************************************************************************

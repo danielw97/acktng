@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Not learnable by player classes.
 Description:
-   Enraged is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Enraged is the active rage state from do_rage, enabling multiple temporary Rage buffs at once.
 *******************************************************************************

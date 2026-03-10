@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Warrior: level 15
 Description:
-   Rescue is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Rescue pulls an ally out of combat, forcing their attacker to switch targets to you.
 *******************************************************************************

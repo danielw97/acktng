@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Thief: level 16
 Description:
-   Find Doors is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Find Doors reveals hidden closed exits (without door keywords) when you look at room exits.
 *******************************************************************************
