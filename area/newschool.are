@@ -755,7 +755,7 @@ D2
 You see the world beyond the academy.
 ~
 ~
-0 -1 3001
+0 -1 3110
 E
 sign~
 @@W*** Congratulations, Graduate! ***@@N
@@ -1442,7 +1442,7 @@ diploma academy~
 an academy diploma~
 You see an academy diploma here, rolled up with a ribbon.~
 1 67108928 8421376 1
-0 0 0 0 0 0 0 0 0 0
+0 0 0 -1 0 0 0 0 0 0
 8
 A
 5 1
@@ -1454,7 +1454,7 @@ This document certifies that you have graduated from the Academy of
 Adventure.  It has magical effects on your abilities if you hold it!
 ~
 L
-1
+5
 #20290
 bread loaf~
 a loaf of bread~
