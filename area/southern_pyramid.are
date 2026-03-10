@@ -1311,6 +1311,11 @@ D3
 ~
 ~
 0 -1 11504
+D2
+@@yThe passage continues south past rows of sarcophagi toward a crossroads.@@N
+~
+~
+0 -1 11510
 S
 #11506
 @@yThe Prayer Alcove@@N~
@@ -1329,6 +1334,11 @@ D1
 ~
 ~
 0 -1 11507
+D2
+@@yThe passage continues south into a flooded burial chamber.@@N
+~
+~
+0 -1 11511
 S
 #11507
 @@yA Narrow Root Tunnel@@N~
@@ -1352,6 +1362,11 @@ D3
 ~
 ~
 0 -1 11506
+D2
+@@yThe tunnel continues south into a fungal alcove.@@N
+~
+~
+0 -1 11512
 S
 #11508
 @@yThe Ossuary Antechamber@@N~
@@ -1375,6 +1390,11 @@ D3
 ~
 ~
 0 -1 11507
+D2
+@@yThe passage continues south into the inner crypt hall.@@N
+~
+~
+0 -1 11513
 S
 #11509
 @@yThe Trap-Fall Landing@@N~
@@ -1394,8 +1414,520 @@ D3
 ~
 ~
 0 -1 11508
+D1
+@@yA corridor opens east toward the crypt crossroads.@@N
+~
+~
+0 -1 11510
+D2
+@@yThe passage leads south to a burial preparation room.@@N
+~
+~
+0 -1 11514
+S
+#11510
+@@yThe Crypt Crossroads@@N~
+@@yFour broad corridors converge at this central junction, the @@bsandstone@@y floor worn into shallow grooves by the passage of funeral processions that once moved through the crypts in solemn rotation.@@N
+@@bA massive iron ring@@y hangs from the ceiling at the junction's center, its purpose unclear but its weight sufficient to anchor something heavy.@@N
+@@yCorridors lead north toward the sarcophagus row, west to the trap-fall landing, and south to the false stairwell.@@N
+@@ySet into the floor is a heavy @@ycorroded iron hatch@@y leading downward, its surface spotted with verdigris and age.@@N
+~
+16396 11
+D0
+@@yThe corridor leads north toward rows of sarcophagi.@@N
+~
+~
+0 -1 11505
+D2
+@@yThe passage continues south toward a suspicious stairwell.@@N
+~
+~
+0 -1 11515
+D3
+@@yThe corridor leads west to the trap-fall landing.@@N
+~
+~
+0 -1 11509
+S
+#11511
+@@yA Flooded Burial Chamber@@N~
+@@yAnkle-deep stagnant water fills this burial chamber, its surface coated with a thin @@bfilm of grey silt@@y that breaks into sluggish ripples with each step.@@N
+@@bSubmerged stone sarcophagi@@y lurk beneath the murky water, their outlines just visible as darker shapes beneath the surface.@@N
+@@yThe prayer alcove lies to the north, a fungal alcove to the east, and a deep alcove to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the prayer alcove.@@N
+~
+~
+0 -1 11506
+D1
+@@yA corridor opens east into a fungal alcove.@@N
+~
+~
+0 -1 11512
+D2
+@@yThe passage continues south into a deep alcove.@@N
+~
+~
+0 -1 11516
+S
+#11512
+@@yThe Fungal Alcove@@N~
+@@yPale fungi sprout from every crack and seam in the @@bsandstone@@y walls, their caps faintly luminescent with a cold, bluish glow that provides just enough light to see by.@@N
+@@bThe fungal growth has consumed the burial wrappings@@y of several corpses stacked in wall niches, reducing them to shapeless masses of mycelium.@@N
+@@yPassages lead north to the root tunnel, west to the flooded chamber, east into the inner crypt hall, and south to a sealed side chamber.@@N
+~
+24585 11
+D0
+@@yA passage leads north toward tangled roots.@@N
+~
+~
+0 -1 11507
+D1
+@@yA corridor opens east into the inner crypt hall.@@N
+~
+~
+0 -1 11513
+D2
+@@yThe passage continues south to a sealed chamber.@@N
+~
+~
+0 -1 11517
+D3
+@@yThe passage leads west into the flooded burial chamber.@@N
+~
+~
+0 -1 11511
+S
+#11513
+@@yThe Inner Crypt Hall@@N~
+@@yGrand pillars of @@bcracked sandstone@@y support the ceiling of this large chamber, their surfaces bearing the faded remnants of gold-painted hieroglyphs.@@N
+@@bSeveral pillars have shifted@@y on their bases, tilting at alarming angles that suggest the chamber's foundations have settled unevenly over the centuries.@@N
+@@yThe hall connects north to the ossuary antechamber, west to the fungal alcove, east to the burial preparation room, and south to the inscription corridor.@@N
+@@eFaint green mold@@y creeps along the base of each pillar, feeding on minerals that leach from the cracked stone.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the ossuary antechamber.@@N
+~
+~
+0 -1 11508
+D1
+@@yA corridor leads east to the burial preparation room.@@N
+~
+~
+0 -1 11514
+D2
+@@yThe hall continues south to the inscription corridor.@@N
+~
+~
+0 -1 11518
+D3
+@@yThe passage leads west into the fungal alcove.@@N
+~
+~
+0 -1 11512
+S
+#11514
+@@yA Burial Preparation Room@@N~
+@@yA long @@bstone slab@@y dominates this chamber, its surface grooved for the drainage of embalming fluids into clay channels that run to sealed floor drains.@@N
+@@bNeatly arranged shelves@@y hold rows of empty canopic jars, their lids fashioned into the likenesses of sacred animals.@@N
+@@yThe room connects north to the trap-fall landing, west to the inner crypt hall, east to the false stairwell, and south to the ventilation shaft landing.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the trap-fall landing.@@N
+~
+~
+0 -1 11509
+D1
+@@yA corridor continues east toward a stairwell.@@N
+~
+~
+0 -1 11515
+D2
+@@yThe passage leads south to the ventilation shaft landing.@@N
+~
+~
+0 -1 11519
+D3
+@@yA corridor leads west to the inner crypt hall.@@N
+~
+~
+0 -1 11513
+S
+#11515
+@@yThe False Stairwell@@N~
+@@yA broad stairway of @@bfitted sandstone@@y descends from this landing, its steps worn smooth and inviting, suggesting a well-traveled route to deeper levels.@@N
+@@bThe stairs are wide enough for four abreast@@y, their risers low and comfortable, unlike the cramped service passages elsewhere in the crypts.@@N
+@@yThe stairwell appears to lead downward to deeper chambers, but something about the construction feels wrong: the angle is too steep, the walls too smooth.@@N
+@@yThe crossroads lies to the north, the preparation room to the west, and a guard post is visible to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the crypt crossroads.@@N
+~
+~
+0 -1 11510
+D2
+@@yThe passage continues south toward a guard post ruin.@@N
+~
+~
+0 -1 11520
+D3
+@@yA corridor leads west to the preparation room.@@N
+~
+~
+0 -1 11514
+D5
+@@yThe broad stairway descends invitingly into the depths below.@@N
+~
+~
+0 -1 11450
+S
+#11516
+@@yThe Deep Alcove@@N~
+@@yThis alcove is carved deeper into the bedrock than the surrounding chambers, its @@brough-hewn walls@@y showing the raw stone beneath the usual sandstone facing.@@N
+@@bA collapsed shelf@@y has spilled its contents across the floor: fragments of painted pottery, corroded bronze fittings, and a scattering of desiccated beads.@@N
+@@yThe flooded chamber lies to the north, a sealed chamber to the east, and the silent shrine to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the flooded burial chamber.@@N
+~
+~
+0 -1 11511
+D1
+@@yA corridor opens east to a sealed chamber.@@N
+~
+~
+0 -1 11517
+D2
+@@yThe passage continues south toward the silent shrine.@@N
+~
+~
+0 -1 11521
+S
+#11517
+@@yA Sealed Side Chamber@@N~
+@@yThe entrance to this chamber was once bricked shut, but the @@bmudbrick seal@@y has crumbled enough to permit entry through a ragged gap.@@N
+@@bInside, the air is even more stale@@y than the crypts outside, thick with the smell of ancient dust and the chemical tang of preserving compounds.@@N
+@@yGaps in the brickwork lead north to the fungal alcove, west to the deep alcove, east to the inscription corridor, and south to the east crypt passage.@@N
+~
+24585 11
+D0
+@@yA gap leads north toward the fungal alcove.@@N
+~
+~
+0 -1 11512
+D1
+@@yA passage opens east to the inscription corridor.@@N
+~
+~
+0 -1 11518
+D2
+@@yThe passage continues south to the east crypt passage.@@N
+~
+~
+0 -1 11522
+D3
+@@yA gap leads west into the deep alcove.@@N
+~
+~
+0 -1 11516
+S
+#11518
+@@yThe Inscription Corridor@@N~
+@@yWarnings in an ancient script cover both walls of this corridor from floor to ceiling, the @@bcarved glyphs@@y growing more urgent and elaborate the further south they progress.@@N
+@@bSome of the inscriptions@@y have been defaced with chisel marks, as though someone tried to obliterate specific warnings while leaving others intact.@@N
+@@yThe inner crypt hall lies to the north, sealed chambers to the west, the ventilation shaft landing to the east, and the west crypt passage to the south.@@N
+~
+24584 11
+D0
+@@yThe corridor leads north to the inner crypt hall.@@N
+~
+~
+0 -1 11513
+D1
+@@yA passage opens east to the ventilation shaft landing.@@N
+~
+~
+0 -1 11519
+D2
+@@yThe corridor continues south toward the west crypt passage.@@N
+~
+~
+0 -1 11523
+D3
+@@yA passage leads west through a gap in the brickwork.@@N
+~
+~
+0 -1 11517
+S
+#11519
+@@yThe Ventilation Shaft Landing@@N~
+@@yA vertical shaft pierces the ceiling here, its @@bsmooth-bored walls@@y rising beyond sight into the darkness above and admitting a thin thread of fresh air.@@N
+@@bFaint scratches@@y on the shaft walls suggest that someone once attempted to climb it, but the marks end abruptly ten feet up.@@N
+@@yThe preparation room lies to the north, the inscription corridor to the west, a guard post to the east, and a crumbling passage to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the preparation room.@@N
+~
+~
+0 -1 11514
+D1
+@@yA corridor opens east toward a ruined guard post.@@N
+~
+~
+0 -1 11520
+D2
+@@yThe passage continues south into a crumbling corridor.@@N
+~
+~
+0 -1 11524
+D3
+@@yThe corridor leads west to the inscription corridor.@@N
+~
+~
+0 -1 11518
+S
+#11520
+@@yA Guard Post Ruin@@N~
+@@yThe remains of a guard station occupy this chamber, its @@bstone weapon rack@@y still bolted to the wall though every weapon has long since been taken or rusted to nothing.@@N
+@@bA low stone bench@@y served as the guard's seat, its surface worn to a shallow depression by the weight of untold watchmen over the centuries.@@N
+@@yThe false stairwell lies to the north, the ventilation landing to the west, and the inner vault to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north toward the stairwell.@@N
+~
+~
+0 -1 11515
+D2
+@@yThe passage continues south toward the inner vault.@@N
+~
+~
+0 -1 11525
+D3
+@@yA corridor opens west to the ventilation landing.@@N
+~
+~
+0 -1 11519
+S
+#11521
+@@yThe Silent Shrine@@N~
+@@yThis chamber has been left untouched by even the most determined tomb robbers, its central altar of polished @@bobsidian@@y still bearing ritual implements arranged with meticulous care.@@N
+@@bSilver censers@@y and @@bcrescent-bladed daggers@@y rest on the altar's surface, their tarnish the only sign of the ages that have passed since they were last used.@@N
+@@yThe deep alcove lies to the north, the east crypt passage to the east, and the warden's approach to the south.@@N
+@@yThe silence here is absolute, so complete that the beating of one's own heart becomes audible.@@N
+~
+24584 11
+D0
+@@yThe passage leads north into the deep alcove.@@N
+~
+~
+0 -1 11516
+D1
+@@yA corridor opens east to the east crypt passage.@@N
+~
+~
+0 -1 11522
+D2
+@@yThe passage continues south toward the warden's approach.@@N
+~
+~
+0 -1 11526
+S
+#11522
+@@yThe East Crypt Passage@@N~
+@@yA broad passage runs east through the lower crypts, its @@bsandstone@@y walls bearing carved cartouches that name the honored dead interred in the surrounding chambers.@@N
+@@bThe floor is paved with alternating light and dark stone tiles@@y in a checkerboard pattern that stretches the length of the corridor.@@N
+@@yThe silent shrine lies to the west, the sealed chamber to the north, the west crypt passage to the east, and the outer warden chamber to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the sealed side chamber.@@N
+~
+~
+0 -1 11517
+D1
+@@yA corridor continues east to the west crypt passage.@@N
+~
+~
+0 -1 11523
+D2
+@@yThe passage continues south toward the warden's chambers.@@N
+~
+~
+0 -1 11527
+D3
+@@yThe passage leads west to the silent shrine.@@N
+~
+~
+0 -1 11521
+S
+#11523
+@@yThe West Crypt Passage@@N~
+@@yThis passage mirrors the eastern crypt corridor, its @@bsandstone@@y walls bearing a continuation of the carved cartouches that record the names of the interred.@@N
+@@bThe checkerboard floor tiles@@y are cracked and heaved in several places where moisture has seeped beneath them and frozen during cold desert nights.@@N
+@@yThe inscription corridor lies to the north, the east passage to the west, a crumbling corridor to the east, and a final corridor to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the inscription corridor.@@N
+~
+~
+0 -1 11518
+D1
+@@yA corridor continues east toward a crumbling passage.@@N
+~
+~
+0 -1 11524
+D2
+@@yThe passage continues south into a dark final corridor.@@N
+~
+~
+0 -1 11528
+D3
+@@yThe passage leads west to the east crypt passage.@@N
+~
+~
+0 -1 11522
+S
+#11524
+@@yA Crumbling Side Passage@@N~
+@@yThe walls of this passage are in poor repair, the @@bsandstone facing@@y having separated from the underlying bedrock in several places and collapsed into heaps of rubble.@@N
+@@bExposed bedrock@@y gleams wetly in the darkness, seepage from the desert above finding its way through countless hairline fractures.@@N
+@@yThe ventilation landing lies to the north, the west passage to the west, the inner vault to the east, and the warden's approach to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the ventilation landing.@@N
+~
+~
+0 -1 11519
+D1
+@@yA corridor opens east to the inner vault.@@N
+~
+~
+0 -1 11525
+D2
+@@yThe passage continues south toward the warden's approach.@@N
+~
+~
+0 -1 11529
+D3
+@@yThe passage leads west to the west crypt corridor.@@N
+~
+~
+0 -1 11523
+S
+#11525
+@@yThe Inner Vault@@N~
+@@yThis vault served as the final repository for the most valued possessions of the entombed priests, its @@bsandstone@@y walls fitted with iron-barred alcoves now standing empty.@@N
+@@bHeavy iron hasps@@y dangle from the alcove bars, their locks long since picked or rusted away, every item of value removed centuries ago.@@N
+@@yThe guard post lies to the north and the crumbling passage to the west, with no further path beyond this chamber.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the guard post ruin.@@N
+~
+~
+0 -1 11520
+D3
+@@yA corridor leads west into the crumbling passage.@@N
+~
+~
+0 -1 11524
+S
+#11526
+@@yThe Warden's Approach@@N~
+@@yThe corridor narrows here, the @@bsandstone@@y walls pressing closer as the passage leads toward the Silent Warden's domain.@@N
+@@bCarved ward-glyphs@@y cover every surface, their angular shapes designed to bind and contain whatever power guards the tomb beyond.@@N
+@@yThe silent shrine lies to the north and the outer warden chamber to the east.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the silent shrine.@@N
+~
+~
+0 -1 11521
+D1
+@@yThe corridor opens east into the outer warden chamber.@@N
+~
+~
+0 -1 11527
+S
+#11527
+@@yThe Outer Warden Chamber@@N~
+@@yA large anteroom precedes the warden's sanctum, its @@bsandstone@@y floor inscribed with a massive protective circle of interlocking glyphs.@@N
+@@bThe ceiling is vaulted@@y and painted with a scene of the moon descending into the earth, the pigments still vivid despite the passage of centuries.@@N
+@@yThe warden's approach lies to the west, the east crypt passage to the north, and a dark final corridor opens to the east.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the east crypt passage.@@N
+~
+~
+0 -1 11522
+D1
+@@yA dark corridor stretches east toward the warden's approach.@@N
+~
+~
+0 -1 11528
+D3
+@@yThe corridor leads west to the warden's approach.@@N
+~
+~
+0 -1 11526
+S
+#11528
+@@yA Final Corridor@@N~
+@@yThis is the last corridor before the Silent Warden's tomb, its @@bsandstone@@y walls bare of any carving or decoration as though even the artisans feared to linger here.@@N
+@@bThe silence is absolute@@y, so profound that even the sound of breathing seems to be swallowed before it can travel more than inches.@@N
+@@yThe outer warden chamber lies to the west, the west crypt passage to the north, and the warden's approach continues east.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the west crypt passage.@@N
+~
+~
+0 -1 11523
+D1
+@@yThe corridor continues east toward the warden's door.@@N
+~
+~
+0 -1 11529
+D3
+@@yThe passage leads west to the outer warden chamber.@@N
+~
+~
+0 -1 11527
+S
+#11529
+@@yThe Silent Warden's Approach@@N~
+@@yThe air grows heavy and resistant here, as though an invisible force pushes back against any who dare approach the warden's tomb.@@N
+@@bThe @@bsandstone@@y walls are inscribed with a final set of ward-glyphs, these ones deeper and more elaborate than any encountered before.@@N
+@@yThe crumbling passage lies to the north and the final corridor to the west.@@N
+@@yTo the south, a heavy @@yglyph-sealed door@@y covered in protective sigils bars the way into the warden's tomb.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the crumbling passage.@@N
+~
+~
+0 -1 11524
+D3
+@@yThe corridor leads west into the final corridor.@@N
+~
+~
+0 -1 11528
 S
 #0
+#$
+
 #$
 
 
