@@ -264,8 +264,10 @@ static OBJ_DATA *create_quartermaster_emblem(CHAR_DATA *ch, const QUARTERMASTER_
    obj->weight = option->weight;
    obj->cost = 0;
 
+   /* Quartermaster emblems should persist and should not bind on first equip. */
+   REMOVE_BIT(obj->extra_flags, ITEM_NOSAVE);
+   REMOVE_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
    SET_BIT(obj->extra_flags, ITEM_NODROP);
-   SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
 
    if (option->tier_extra_flag != 0)
       SET_BIT(obj->extra_flags, option->tier_extra_flag);
