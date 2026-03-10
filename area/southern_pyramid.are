@@ -5096,6 +5096,346 @@ each stone fist capable of shattering bone.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#11470
+canopic abomination~
+@@ya canopic abomination@@N~
+@@yA canopic abomination@@N lurches here, its misshapen body leaking embalming fluid.
+~
+A grotesque undead construct assembled from the contents of shattered canopic jars, the
+abomination's body is a patchwork of preserved organs, wrapping cloth, and @@bpetrified
+resin@@N, lurching forward on limbs that were never meant to bear weight.
+~
+278625 0 -500 S
+129 0
+0 0 0 0
+! 2 7 5 7 129 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11471
+jade asp~
+@@ya jade asp@@N~
+@@yA jade asp@@N coils here, its @@egreen scales@@N gleaming in the dim light.
+~
+A serpent whose scales shimmer with the distinctive @@egreen of polished jade@@N, its body
+thick as a man's thigh and marked with darker @@bband patterns@@N. Its fangs drip with
+a venom potent enough to fell warriors twice its size.
+~
+97 0 0 S
+133 0
+0 0 0 0
+! 2 7 0 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11548 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11472
+desert vulture~
+@@ya desert vulture@@N~
+@@yA desert vulture@@N perches here, its bald head swiveling to track movement.
+~
+A massive carrion bird that has adapted to the pyramid's interior, the vulture's @@bblack
+wings@@N span wider than a man is tall. Its bald head and hooked beak are stained with
+the residue of its last meal.
+~
+97 0 0 S
+136 0
+0 0 0 0
+! 2 7 0 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11549 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11473
+obsidian golem~
+@@yan obsidian golem@@N~
+@@yAn obsidian golem@@N stands here, its glossy black surface reflecting the dim light.
+~
+A humanoid construct carved from solid @@bobsidian@@N, its body a seamless mass of volcanic
+glass polished to a mirror finish. Its movements produce a grinding sound, and its fists
+can shatter stone.
+~
+262241 0 0 S
+130 0
+0 0 0 0
+! 2 7 0 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11474
+decay acolyte~
+@@ya decay acolyte@@N~
+@@yA decay acolyte@@N stands here, @@bfungal growths@@N erupting from its robes.
+~
+A robed figure whose garments are more fungus than fabric, the decay acolyte's body has
+been partially consumed by the parasitic growths it worships. Its hands crackle with
+the @@egreen energy@@N of decomposition magic.
+~
+97 0 -200 S
+138 0
+0 0 0 0
+! 2 7 0 7 1 1552 4
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11475
+rot wight~
+@@ya rot wight@@N~
+@@yA rot wight@@N shambles here, its decaying form oozing with each step.
+~
+An undead warrior whose flesh has been consumed by accelerated decay, the rot wight's body
+is a mass of @@brotting tissue@@N held together by the sheer force of necromantic animation.
+Its grip is crushing despite its apparent fragility.
+~
+16481 0 -500 S
+134 0
+0 0 0 0
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11552 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11476
+stone scarab sentinel~
+@@ya stone scarab sentinel@@N~
+@@yA stone scarab sentinel@@N clicks here, its @@bstone mandibles@@N grinding ominously.
+~
+A man-sized beetle carved from living stone, the scarab sentinel's @@bbasalt carapace@@N
+is etched with @@yprotective glyphs@@N that flare with light when threatened. Its stone
+mandibles can shear through iron.
+~
+262241 0 0 S
+137 0
+0 0 0 0
+! 2 7 0 7 40962 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11477
+tomb cobra~
+@@ya tomb cobra@@N~
+@@yA tomb cobra@@N rears here, its hood flared wide in threat display.
+~
+A massive cobra that has made the pyramid's interior its domain, its @@bscaled body@@N is
+as thick as a man's leg and marked with @@ygolden bands@@N that mimic the pyramid's
+decorative motifs. Venom glistens on its fangs.
+~
+97 0 0 S
+131 0
+0 0 0 0
+! 2 7 0 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11554 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11478
+shadow archer~
+@@ya shadow archer@@N~
+@@yA shadow archer@@N crouches here in the darkness, bow drawn and ready.
+~
+An undead archer wrapped in @@bshadow-dark cloth@@N, its skeletal fingers grip a @@ybone
+bow@@N with unerring steadiness. The arrows it fires are tipped with @@bblackened iron@@N
+and seem to fly with preternatural accuracy in the dark.
+~
+16481 0 -500 S
+139 0
+0 0 0 0
+! 2 7 5 7 36865 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11555 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11479
+great shadow vulture~
+@@ya great shadow vulture@@N~
+@@yA great shadow vulture@@N perches here, its massive black wings half-spread.
+~
+An enormous carrion bird adapted to the shadow tier's perpetual darkness, the shadow
+vulture's @@bblack plumage@@N absorbs light like a void. Its talons are the length of
+daggers, and its beak can crack bone with a single snap.
+~
+97 0 0 S
+140 0
+0 0 0 0
+! 2 7 0 7 1052673 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11556 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11480
+shadow face guardian~
+@@ya shadow face guardian@@N~
+@@yA shadow face guardian@@N stands here, its featureless stone face tracking movement.
+~
+A sentinel construct carved from @@bblack stone@@N, the shadow face guardian's body is
+featureless except for a single carved face on its chest that seems to follow movement
+with an unsettling, eyeless awareness. Its stone shield is raised in perpetual readiness.
+~
+262243 0 0 S
+136 0
+0 0 0 0
+! 2 7 0 7 8225 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11481
+creeping shadow~
+@@ya creeping shadow@@N~
+@@yA creeping shadow@@N slides across the walls, its form shifting and formless.
+~
+An undead manifestation of pure shadow, the creeping shadow has no fixed form, flowing
+across walls and floors like spilled ink. When it attacks, tendrils of darkness lash out
+with surprising force, striking at the mind as much as the body.
+~
+82017 0 -500 S
+132 0
+0 0 0 0
+! 2 7 5 7 1 327680 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11558 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11482
+shadow assassin~
+@@ya shadow assassin@@N~
+@@yA shadow assassin@@N emerges from the darkness, blades gleaming.
+~
+A lithe, darkly clad figure that moves with fluid grace through the shadow tier's
+perpetual darkness, the assassin's @@bblack leather armor@@N is studded with @@bobsidian
+rivets@@N. Twin blades catch the faintest light as it strikes from concealment.
+~
+97 0 -200 S
+138 0
+0 0 0 0
+! 2 7 0 7 38913 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11559 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11483
+animated bone pillar~
+@@yan animated bone pillar@@N~
+@@yAn animated bone pillar@@N grinds here, its skeletal mass shifting to strike.
+~
+A sentinel construct assembled from hundreds of fused @@bbones@@N arranged in a thick
+pillar formation. The bones shift and rearrange when threatened, extending bony
+protrusions as crude but devastating weapons. It cannot be moved from its post.
+~
+262243 0 0 S
+140 0
+0 0 0 0
+! 2 7 0 7 32868 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11484
+venomous golden cobra~
+@@ya venomous golden cobra@@N~
+@@yA venomous golden cobra@@N coils here, @@ygolden scales@@N gleaming with toxic sheen.
+~
+A massive cobra whose scales shimmer with a distinctive @@ygolden hue@@N, its hood marked
+with @@bblack eye-spots@@N that mimic a skull's gaze. Its venom is more potent than its
+jade-scaled cousins, capable of bringing down armored warriors.
+~
+97 0 0 S
+135 0
+0 0 0 0
+! 2 7 0 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11561 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11485
+bone cultist~
+@@ya bone cultist@@N~
+@@yA bone cultist@@N chants here, @@bbony fingers@@N tracing sigils in the air.
+~
+A living devotee of the death cult that built the Ossuary Depths, the bone cultist's robes
+are decorated with @@bsewn-on finger bones@@N and vertebrae. Its whispered incantations
+channel crude destructive magic through gestures of skeletal precision.
+~
+97 0 -200 S
+137 0
+0 0 0 0
+! 2 7 0 7 1 10 4
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11562 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11486
+death hawk~
+@@ya death hawk@@N~
+@@yA death hawk@@N circles overhead, its piercing cry echoing through the chamber.
+~
+A large raptor with @@bblack plumage@@N and @@ygolden-tipped feathers@@N, the death hawk has
+adapted to hunting in the pyramid's enclosed spaces. Its talons are wickedly curved, and
+it strikes with devastating speed from above.
+~
+97 0 0 S
+139 0
+0 0 0 0
+! 2 7 0 7 1052673 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11563 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11487
+bone revenant~
+@@ya bone revenant@@N~
+@@yA bone revenant@@N stands here, its skeletal form wreathed in faint necromantic energy.
+~
+An undead warrior whose flesh has long since decomposed, leaving only @@bbones@@N held
+together by threads of @@ynecromantic energy@@N. Despite its skeletal frame, the revenant
+fights with the skill and discipline it possessed in life.
+~
+16481 0 -500 S
+133 0
+0 0 0 0
+! 2 7 5 7 40961 0 8
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11564 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11488
+void specter~
+@@ya void specter@@N~
+@@yA void specter@@N hovers here, its translucent form crackling with dark energy.
+~
+An undead spirit touched by the void energy that saturates the pyramid's deepest levels,
+the specter's translucent form is outlined in @@Rarcs of dark lightning@@N. Its attacks
+target the mind as much as the body, projecting waves of psychic anguish.
+~
+82017 0 -500 S
+136 0
+0 0 0 0
+! 2 7 5 7 1 1114112 8
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11489
+carrion fly swarm~
+@@ya carrion fly swarm@@N~
+@@yA carrion fly swarm@@N buzzes here in a thick, nauseating cloud.
+~
+Clouds of oversized carrion flies buzzing in a dense formation, their iridescent @@bblack
+bodies@@N catching the light as they swirl. The swarm carries disease on its countless
+legs and mandibles.
+~
+327777 0 0 S
+125 0
+0 0 0 0
+! 2 7 0 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11572 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
 #0
 #$
 
