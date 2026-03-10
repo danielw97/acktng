@@ -942,6 +942,349 @@ A wide @@bbronze@@N circlet set with alternating chips of @@yyellow carnelian@@N
 L
 120
 #0
+#MOBILES
+#10125
+crypt pharaoh~
+@@ythe Crypt Pharaoh@@N~
+@@yThe Crypt Pharaoh@@N stands here, its hollow crown pulsing with necrotic power.
+~
+A towering undead monarch wreathed in @@brotting burial linens@@N and @@yyellow-gold@@N
+funeral regalia, the Crypt Pharaoh's hollow eye-sockets glow with a cold @@Rblood-red@@N
+light that marks its absolute sovereignty over this tomb's deeper levels.
+~
+1140850803 0 -500 S
+130 0
+10 10 15 15
+! 2 7 5 7 569448 6299648 80
+| 260 136 0 0 0 0 0
++ 5 5 5 5 5 10 10 5 0
+l 400 10125 10140 10141 10142 0 0 0 0 0
+L 25 25 25 25 0 0 0 0 0
+#10126
+desert gate guardian~
+@@ythe Desert Gate Guardian@@N~
+@@yThe Desert Gate Guardian@@N stands here, its stone limbs grinding as it prepares to crush intruders.
+~
+A colossal humanoid carved from @@bdark sandstone@@N stands twelve feet tall, its body
+reinforced with @@yyellow-gold@@N rivets the size of a man's fist. The guardian's faceted
+eyes glow @@Rred@@N as ancient sealing-magic activates at the intrusion of the living.
+~
+1140850803 0 -500 S
+130 0
+10 10 15 15
+! 2 7 0 7 569456 6144 144
+| 34 4 0 0 0 0 0
++ 5 5 5 5 5 10 10 5 0
+l 400 10126 10143 10144 10145 0 0 0 0 0
+L 25 25 25 25 0 0 0 0 0
+#10127
+scarab colossus~
+@@ythe Scarab Colossus@@N~
+@@yThe Scarab Colossus@@N looms here, its mandibles clicking with the sound of grinding stone.
+~
+An animated construct the size of a room, built from countless @@bblue-black scarab
+shells@@N fused into a single enormous form, the Scarab Colossus's jointed limbs
+move with terrible precision, its hollow carapace venting @@Rheat@@N with each motion.
+~
+1140850803 0 -500 S
+130 0
+10 10 15 15
+! 2 7 0 7 569448 33554560 96
+| 34 68 0 0 0 0 0
++ 5 5 5 5 5 10 10 5 0
+l 400 10127 10146 10147 10148 0 0 0 0 0
+L 25 25 25 25 0 0 0 0 0
+#10128
+high priest ancient sands~
+@@ythe High Priest of the Ancient Sands@@N~
+@@yThe High Priest of the Ancient Sands@@N stands here, golden power crackling at the tips of its fingers.
+~
+Preserved beyond its years by the pyramid's deepest embalming magic, the High
+Priest wears the formal @@yyellow-gold@@N vestments of the innermost cult, its skin
+stitched with @@cblue hieroglyphs@@N that channel the desert-gods' wrath directly.
+~
+1140850803 0 -500 S
+130 0
+10 10 15 15
+! 2 7 5 7 569448 1573120 112
+| 260 8 0 0 0 0 0
++ 5 5 5 5 5 10 10 5 0
+l 400 10128 10149 10150 10151 0 0 0 0 0
+L 25 25 25 25 0 0 0 0 0
+#10129
+eternal mummy lord~
+@@ythe Eternal Mummy Lord@@N~
+@@yThe Eternal Mummy Lord@@N shambles here, its curse-runes blazing @@Rred@@N.
+~
+Swathed in @@bblackened preservation wrappings@@N that never fully decay, the Mummy
+Lord's silhouette is familiar and terrible in equal measure — a warlord buried upright,
+still wearing its @@yyellow-gold@@N battle regalia, still able to command the pyramid's dead.
+~
+1140850803 0 -500 S
+130 0
+10 10 15 15
+! 2 7 5 7 569448 2424832 24
+| 256 136 0 0 0 0 0
++ 5 5 5 5 5 10 10 5 0
+l 400 10129 10152 10153 10154 0 0 0 0 0
+L 25 25 25 25 0 0 0 0 0
+#10130
+pyramid drake~
+@@ythe Pyramid Drake@@N~
+@@yThe Pyramid Drake@@N coils here, its breath heating the stone around it to a dull glow.
+~
+Ancient desert dragon-kin the length of a great hall, its scales the color of
+@@b sun-baked sandstone@@N shot through with veins of @@yorange gold@@N. Heat
+shimmers from its body continuously; it breathes @@Rembers@@N, not air.
+~
+1140850803 0 -500 S
+130 0
+10 10 15 15
+! 2 7 3 7 569448 50331656 32
+| 130 80 0 0 0 0 0
++ 5 5 5 5 5 10 10 5 0
+l 500 10130 10155 10156 10157 10139 0 0 0 0
+L 20 20 20 20 20 0 0 0 0
+#10131
+sand sovereign~
+@@ythe Sand Sovereign@@N~
+@@yThe Sand Sovereign@@N sits here upon its throne, and the pyramid shudders at its gaze.
+~
+The immortal architect of the pyramid has not aged since sealing itself in this apex
+chamber: a figure of @@yyellow-gold@@N and @@bblack sandstone@@N, its form radiating
+absolute authority, the @@Rblood-red@@N covenant-glyphs on its throne arm confirming
+its dominion over desert, death, and the assembled pyramid entire.
+~
+1140850803 0 -1000 S
+130 0
+15 15 20 20
+! 2 7 5 7 569448 49283072 240
+| 164 8 0 0 0 0 0
++ 10 10 10 10 10 15 15 10 0
+l 500 10131 10158 10159 10160 10161 0 0 0 0
+L 20 20 20 20 20 0 0 0 0
+#10132
+cursed pharaoh shade~
+@@ya Cursed Pharaoh's Shade@@N~
+@@yA cursed pharaoh's shade@@N floats here, its @@yglowing outline@@N marking a desecrated royal.
+~
+A translucent silhouette in the shape of a crowned pharaoh, its form @@yglowing@@N
+at the edges with the residual power of royal burial magic. The curse that keeps
+it from rest also keeps it hostile to any who enter these passages uninvited.
+~
+33570913 0 -500 S
+120 0
+5 5 10 10
+! 2 7 5 7 40961 2105344 16
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10133
+desert stone titan~
+@@ya Desert Stone Titan@@N~
+@@ya Desert Stone Titan@@N towers here, its every step resonating through the floor.
+~
+A @@bsandstone@@N construct standing twice the height of a man, its body assembled
+from the largest blocks in the pyramid's construction — the animated product of the
+same magic that raised these walls, turned toward combat with mechanical inevitability.
+~
+33554529 0 0 S
+122 0
+5 5 10 10
+! 2 7 0 7 32868 0 1
+| 34 4 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10134
+pyramid death knight~
+@@ya Pyramid Death Knight@@N~
+@@ya Pyramid Death Knight@@N stands here, black iron armor clattering with its each step.
+~
+The armored undead soldier in @@bblack iron@@N inscribed with @@yyellow-gold@@N curse-runes
+was a general in life; it has not forgotten its training. Each blow it delivers is
+precise, measured, and aimed at permanent incapacitation.
+~
+33570913 0 -500 S
+121 0
+5 5 10 10
+! 2 7 5 7 565252 0 1
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10135
+sand drake~
+@@ya Sand Drake@@N~
+@@ya Sand Drake@@N crouches here, its desert-camouflaged scales perfect for ambush.
+~
+A lesser drake whose scales are the exact color of @@bsun-baked sandstone@@N, its
+body compact and powerful where its greater kin are vast and imposing. It breathes
+not full fire but @@Rglowing cinders@@N — enough to scorch stone.
+~
+33554529 0 -200 S
+120 0
+5 5 10 10
+! 2 7 3 7 45060 0 1
+| 128 80 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10136
+golden sphinx~
+@@ya Golden Sphinx@@N~
+@@ya Golden Sphinx@@N reclines here, its gaze fixing you with ancient evaluating scrutiny.
+~
+A leonine construct of @@yyellow gold@@N and @@bpolished marble@@N, its human face
+serene and merciless. The sphinx has sat at this crossing for millennia, and in that
+time has developed an absolute understanding of when an intruder is not worthy of passage.
+~
+33554529 0 0 S
+122 0
+5 5 10 10
+! 2 7 0 7 45058 8392704 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10137
+sand scarab swarm~
+@@ya Sand Scarab Swarm@@N~
+@@yA sand scarab swarm@@N surges across the floor in a clicking, @@bshell-black@@N tide.
+~
+Hundreds of scarab beetles pouring from cracks in the ancient @@bsandstone@@N walls,
+their clicking carapaces a continuous percussion. The swarm moves with coordinated
+purpose that no individual beetle possesses.
+~
+327777 0 0 S
+105 0
+0 0 0 0
+! 2 7 0 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10192 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10138
+skeleton warrior~
+@@ya Skeleton Warrior@@N~
+@@ya Skeleton Warrior@@N clatters here, its ancient blade still raised for battle.
+~
+A @@bbleached skeleton@@N in the remnants of military harness, its bones rattling
+in dry armor. The preservation magic that keeps its weapon arm moving has stripped
+everything else from it — only the trained combat reflex survives.
+~
+16481 0 -200 S
+107 0
+0 0 2 2
+! 2 7 5 7 129 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10139
+cursed mummy~
+@@ya Cursed Mummy@@N~
+@@ya Cursed Mummy@@N lurches here, trailing @@bdesiccated linen@@N and @@Rcurse-marks@@N.
+~
+A @@blinen-wrapped@@N form animated by a curse carved directly into its burial
+bandages, its movements stiff but inexorable. @@yOcre-yellow@@N dye marks its
+wrappings to identify the original interment — but the name beneath has long since been consumed.
+~
+16481 0 -200 S
+108 0
+0 0 2 2
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10163 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10140
+giant desert scorpion~
+@@ya Giant Desert Scorpion@@N~
+@@ya Giant Desert Scorpion@@N stands here, its stinger raised and trembling.
+~
+A scorpion the size of a cart, its @@bchestnut-brown exoskeleton@@N thick enough to
+deflect blades. Its stinger delivers a venom that does not kill quickly — it
+immobilizes, then lets the desert's heat finish what the sting began.
+~
+97 0 0 S
+110 0
+0 0 2 2
+! 2 7 3 7 1 0 1
+| 0 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10164 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10141
+tomb robber ghost~
+@@ya Tomb Robber's Ghost@@N~
+@@yA tomb robber's ghost@@N hovers here, its hollow eyes still wide with greed.
+~
+The @@btranslucent@@N form of a failed tomb robber, condemned to haunt these passages
+in the exact moment of its fatal discovery. It carries nothing — what it stole was
+taken, and what it is condemned to is the memory of having stolen it.
+~
+82017 0 -100 S
+106 0
+0 0 1 1
+! 2 7 5 7 0 1028 1
+| 256 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10165 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10142
+sand jackal~
+@@ya Sand Jackal@@N~
+@@ya Sand Jackal@@N paces here, its @@byellow-brown@@N coat blending with the sand.
+~
+A lean canid with @@byellow-brown@@N fur and black-tipped ears, the sand jackal is
+perfectly adapted for the pyramid's interior heat and the narrow corridors that favor
+an ambush predator over a direct combatant.
+~
+97 0 -50 S
+112 0
+0 0 3 3
+! 2 7 3 7 6145 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10166 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10143
+granite guardian statue~
+@@ya Granite Guardian Statue@@N~
+@@ya Granite Guardian Statue@@N stirs here, its carved @@bstone joints@@N grinding to life.
+~
+A ceremonial guardian statue of @@bgranite@@N, carved with meticulous precision and
+animated by a ward placed when the pyramid was sealed. Its carved face shows a
+composite of every pharaoh who ever ruled, chosen to represent total authority.
+~
+262241 0 0 S
+115 0
+0 0 3 3
+! 2 7 0 7 32802 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10144
+canopic horror~
+@@ya Canopic Horror@@N~
+@@ya Canopic Horror@@N writhes here, its burial-jar body pulsing with necrotic motion.
+~
+A swollen undead mass that has outgrown its canopic jar origin, trailing @@bpreservation
+linen@@N and leaking the embalming fluid that animates it. The lid is still on its head,
+carved in an animal face that bears an expression of eternal @@Rpain@@N.
+~
+278625 0 -200 S
+109 0
+0 0 2 2
+! 2 7 5 7 129 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10168 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#0
 #ROOMS
 #10125
 @@yThe Stone Trap Chamber@@N~
