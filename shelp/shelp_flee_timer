@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Not learnable by player classes.
 Description:
-   Flee Timer is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Flee Timer is the temporary cooldown effect applied after fleeing, preventing immediate repeated flee attempts.
 *******************************************************************************

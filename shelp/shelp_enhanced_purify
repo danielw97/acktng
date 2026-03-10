@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Egomancer: level 44
 Description:
-   Enhanced Purify is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Enhanced Purify upgrades Purify so it also attempts to cure blindness and remove curses in addition to clearing poison.
 *******************************************************************************

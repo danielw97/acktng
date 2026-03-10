@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Not learnable by player classes.
 Description:
-   Stun is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Stun slams your current target and leaves them stunned for several rounds, interrupting their actions.
 *******************************************************************************

@@ -14,5 +14,5 @@ Noun Damage: None
 Acquisition:
    - Mage: level 20
 Description:
-   Mystical Potency is a utility skill that improves overall effectiveness through non-direct-combat techniques.
+   Mystical Potency passively increases non-physical damage based on Intelligence.
 *******************************************************************************
