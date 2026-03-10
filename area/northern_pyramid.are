@@ -811,6 +811,136 @@ taken from a sand-wrapped mummy servant and still carrying the embalmer's bindin
 11
 L
 113
+#10205
+high priest thrall robe body~
+@@ya High Priest Thrall's Robe@@N~
+A formal @@blinen@@N robe marked at the collar with the priest-thrall's service glyph in
+@@yyellow gold@@N embroidery, indicating permanent subservience to the pyramid's inner cult.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10206
+sand wraith wisp veil about~
+@@ya Sand Wraith's Wisp Veil@@N~
+A barely-visible @@bsmoke-grey@@N veil that billows independently of air movement, torn
+from a sand wraith's drifting form. @@yGold particles@@N are suspended in its weave.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+117
+#10207
+curse-bound warrior iron pauldron shoulders~
+@@ya Curse-Bound Warrior's Iron Pauldron@@N~
+A single @@biron@@N shoulder plate from a curse-bound warrior, its surface etched with
+the binding inscription that prevented the warrior from leaving service in death.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+119
+#10208
+entombed warlord war crown head~
+@@yan Entombed Warlord's War Crown@@N~
+A @@bblack iron@@N war crown fitted with @@yyellow gold@@N panels between the prongs,
+the combined weight substantial. Taken from the warlord after centuries of continued use.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+118
+#10209
+flesh golem riveted knuckle weapon fist~
+@@ya Flesh Golem's Riveted Knuckle@@N~
+A @@bwhite iron@@N knuckle-spike riveted directly through the flesh golem's fist, removed
+with difficulty. It still twitches with residual animation; gripping it is uncomfortable.~
+5 1140850816 8421376 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10210
+tomb stalker shadow wrapping about~
+@@ya Tomb Stalker's Shadow Wrapping@@N~
+A @@bblack linen@@N outer wrap saturated with tomb-shadow essence, allowing its wearer
+to move through the pyramid's dark corridors with the stalker's unsettling quiet ease.~
+9 67108992 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+116
+#10211
+ember lizard scale vest body~
+@@yEmber Lizard Scale Vest@@N~
+A vest of @@borange-yellow@@N ember lizard scales, each scale heat-hardened and still
+faintly warm, fitted on a @@bbronze@@N backing. Surprisingly light for its protection.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+117
+#10212
+charred husk smoldering bracers wrist~
+@@yCharred Husk Smoldering Bracers@@N~
+Bracers of @@bblack-charred bone@@N still smoldering at the edges, taken from a charred
+husk. @@yEmbers@@N drift off the surface and extinguish before hitting the floor.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+119
+#10213
+apex sentinel stone gauntlets hands~
+@@yan Apex Sentinel's Stone Gauntlets@@N~
+Paired gauntlets of @@bfine-grained granite@@N articulated at the knuckles with @@yyellow
+gold@@N hinges, worn by the apex sentinel to protect the pyramid's innermost passages.~
+9 128 8392704 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10214
+gilded warrior shade helm head~
+@@ya Gilded Warrior Shade's Helm@@N~
+A @@yyellow gold@@N-plated helmet worn by a gilded warrior shade, its surface hammered
+to a mirror finish that still reflects light despite the shade's intangible nature.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+118
+#10215
+sandstorm elemental howling band wrist~
+@@ya Sandstorm Elemental's Howling Band@@N~
+A ring of compressed @@bsand@@N held together by the elemental's own @@yelectrical charge@@N,
+worn as a bracer; the sand circulates in a slow ring even when not on a moving wrist.~
+9 128 8390656 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+121
+#10216
+obsidian guardian plate arm arms~
+@@yan Obsidian Guardian's Plate Arm@@N~
+A full arm-plate of @@bblack obsidian@@N articulated with @@yyellow gold@@N joints, taken
+from the ancient obsidian guardian. Cold to the touch and nearly frictionless on the surface.~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+122
+#10217
+mummy overlord burial circlet head~
+@@ya Mummy Overlord's Burial Circlet@@N~
+A wide @@bbronze@@N circlet set with alternating chips of @@yyellow carnelian@@N and
+@@cblue lapis@@N, the formal headwear of the greater mummy overlord's burial rank.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
 #0
 #ROOMS
 #10125
