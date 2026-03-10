@@ -10,6 +10,208 @@ X 0
 F 20
 U @@ythe ancient pyramid groans as hot desert winds sweep its stone passages@@N~
 T
+#OBJECTS
+#10125
+fragment crown pharaoh first I~
+@@ya Fragment of the Pharaoh's Crown (I)@@N~
+A shard of @@yyellow gold@@N inlaid with @@clapis lazuli@@N chips, shaped to fit precisely
+into a larger whole. @@bAncient hieroglyphs@@N mark its inner face.~
+29 201326784 8388608 1
+0 10126 10132 0 0 0 0 0 0 0
+5
+L
+120
+#10126
+fragment crown pharaoh second II~
+@@ya Fragment of the Pharaoh's Crown (II)@@N~
+A wedge of hammered @@yyellow gold@@N, its surface engraved with dynastic cartouches
+worn smooth by the ages. One edge is beveled to lock against another fragment.~
+29 201326784 8388608 1
+10125 0 10132 0 0 0 0 0 0 0
+5
+L
+120
+#10127
+fragment crown pharaoh third III~
+@@ya Fragment of the Pharaoh's Crown (III)@@N~
+A curved plate of @@yyellow gold@@N set with @@cchips of lapis@@N, one edge serrated
+where it broke from a larger piece. @@bHieroglyphic inscriptions@@N run its length.~
+29 201326784 8388608 1
+10132 0 10133 0 0 0 0 0 0 0
+5
+L
+120
+#10128
+fragment crown pharaoh fourth IV~
+@@ya Fragment of the Pharaoh's Crown (IV)@@N~
+A flat panel of @@yyellow beaten gold@@N, its surface a dense field of @@chiroglyphs@@N
+recording the covenant between the Pharaoh and the desert gods of the deep sands.~
+29 201326784 8388608 1
+10133 0 10134 0 0 0 0 0 0 0
+5
+L
+120
+#10129
+fragment crown pharaoh fifth V~
+@@ya Fragment of the Pharaoh's Crown (V)@@N~
+A tapered spike of @@yyellow gold@@N that once formed the front crest of a royal burial
+crown, its tip set with a @@cblue-green sapphire@@N the color of deep desert sky.~
+29 201326784 8388608 1
+10134 0 10135 0 0 0 0 0 0 0
+5
+L
+120
+#10130
+fragment crown pharaoh sixth VI~
+@@ya Fragment of the Pharaoh's Crown (VI)@@N~
+An ornate side-panel of @@yyellow gold@@N, hollow-cast with papyrus-scroll decoration,
+its edges designed to lock cleanly against the assembled crown fragments.~
+29 201326784 8388608 1
+10135 0 10136 0 0 0 0 0 0 0
+5
+L
+120
+#10131
+fragment crown pharaoh seventh VII~
+@@ya Fragment of the Pharaoh's Crown (VII)@@N~
+The final fragment: a wide rear piece of @@yyellow gold@@N shaped like spread falcon wings,
+engraved with the Sovereign's name in the most formal @@bhieratic script@@N.~
+29 201326784 8388608 1
+10136 0 10137 0 0 0 0 0 0 0
+5
+L
+120
+#10132
+partial crown pharaoh assembly I-II~
+@@ya Partial Crown of the Pharaoh (I-II)@@N~
+Two @@yyellow gold@@N fragments fitted together form an incomplete crown arc,
+@@chiroglyphs@@N aligning across the join into a continuous inscription.~
+29 134217920 8388608 1
+0 10127 10133 0 0 0 0 0 0 0
+5
+L
+120
+#10133
+partial crown pharaoh assembly I-III~
+@@ya Partial Crown of the Pharaoh (I-III)@@N~
+Three pieces of @@yyellow gold@@N joined at precise seams form a recognizable crown arc,
+the @@clapis lazuli@@N inlay beginning to show its full intended pattern.~
+29 134217920 8388608 1
+0 10128 10134 0 0 0 0 0 0 0
+5
+L
+120
+#10134
+partial crown pharaoh assembly I-IV~
+@@ya Partial Crown of the Pharaoh (I-IV)@@N~
+Four @@yyellow gold@@N sections assembled into the lower half of an ancient crown, its
+@@bsandstone-worn@@N seams fitting with unmistakable artisan precision.~
+29 134217920 8388608 1
+0 10129 10135 0 0 0 0 0 0 0
+5
+L
+120
+#10135
+partial crown pharaoh assembly I-V~
+@@ya Partial Crown of the Pharaoh (I-V)@@N~
+Five @@yyellow gold@@N crown segments combined into a mostly-complete form, three-quarters
+assembled; a @@cblue sapphire@@N catches light at the front crest.~
+29 134217920 8388608 1
+0 10130 10136 0 0 0 0 0 0 0
+5
+L
+120
+#10136
+partial crown pharaoh assembly I-VI~
+@@ya Partial Crown of the Pharaoh (I-VI)@@N~
+Six segments of @@yyellow beaten gold@@N nearly completing a burial crown, one gap
+remaining at the rear where the @@bfalcon-wing piece@@N belongs.~
+29 134217920 8388608 1
+0 10131 10137 0 0 0 0 0 0 0
+5
+L
+120
+#10137
+burial crown sand sovereign~
+@@ythe Burial Crown of the Sand Sovereign@@N~
+The assembled crown blazes with @@yyellow gold@@N and @@clapis lazuli@@N, its hieroglyphs
+completing the Sand Sovereign's covenant inscription in full. Power radiates from every join.~
+9 202375360 8388616 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+120
+#10138
+corroded bronze trapdoor key~
+@@ya Corroded Bronze Trapdoor Key@@N~
+A heavy @@bbronze@@N key eaten green with verdigris, its bow cast in the shape of a scarab.
+Despite its age it turns smoothly in the @@bheavy trapdoor's@@N lock.~
+18 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+100
+#10139
+carved stone sentinel key~
+@@ya Carved Stone Sentinel Key@@N~
+A key of polished @@bblack granite@@N carved in one piece, its bow shaped like the pyramid's
+capstone. It fits the @@bstone sentinel gate@@N at the apex approach perfectly.~
+18 67108992 8388608 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10140
+crypt pharaoh death mask~
+@@ythe Crypt Pharaoh's Death Mask@@N~
+A @@yyellow gold@@N funerary mask cast in the image of the Crypt Pharaoh at the height of
+power, its eye-sockets set with @@cpale turquoise@@N that still holds a cold inner light.~
+9 201326784 8388624 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10141
+cloak undying shadow burial~
+@@ya Cloak of Undying Shadow@@N~
+A broad @@bblack-brown@@N burial shroud that billows of its own accord, its inner surface
+woven with @@yglowing gold threads@@N spelling out rites of eternal endurance.~
+9 201326784 8454144 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+120
+#10142
+crypt pharaoh burial wrappings~
+@@ythe Crypt Pharaoh's Burial Wrappings@@N~
+Thick @@blinen wrappings@@N steeped in ancient preservation oils and @@yyellow gold@@N dust,
+worn in overlapping layers as both armor and the mark of divine undeath.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10143
+gauntlet stone guardian desert~
+@@ya Gauntlet of the Stone Guardian@@N~
+A single @@bsandstone@@N gauntlet fused at the joints with @@yyellow gold@@N rivets,
+its knuckle-plates carved with the guardian face motif that marks the pyramid's outer walls.~
+9 201326784 8392704 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+120
+#10144
+guardian sandstone maul weapon~
+@@ythe Guardian's Sandstone Maul@@N~
+An enormous @@bsandstone@@N war-hammer faced with @@yyellow gold@@N plate, its handle wrapped
+in @@bdried linen@@N. Each blow carries the weight of the pyramid's stone heart.~
+5 201326784 8421376 1
+0 0 0 7 0 0 0 0 0 0
+6
+L
+120
+#0
 #ROOMS
 #10125
 @@yThe Stone Trap Chamber@@N~
