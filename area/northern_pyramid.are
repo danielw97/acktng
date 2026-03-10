@@ -2917,4 +2917,399 @@ The north passage continues toward the upper Drake's Ascent.~
 ~
 0 -1 10301
 S
+#10300
+@@yThe Upper Drake Hall@@N~
+The upper hall of the Drake's Ascent is where the floor's resident creature spends most of its active time: the claw marks here are deepest, the scorch marks most recent, and the accumulated heat highest. The @@bsandstone@@N walls have been physically altered by the Drake's presence — surfaces polished smooth by repeated contact with scales, corners rounded by the passage of something large, and sections of carving entirely obliterated by fire and mechanical abrasion. What was once an elaborately decorated hall is now primarily a record of a single creature's occupation.
+~
+24584 11
+D2
+The south passage leads back toward the bone-strewn hall.~
+~
+0 -1 10296
+D1
+The east passage continues toward the heat-shimmering corridor.~
+~
+0 -1 10301
+D0
+The north passage leads toward the nest area.~
+~
+0 -1 10302
+S
+#10301
+@@yA Heat-Shimmering Corridor@@N~
+Waves of heat emanate from cracks in the walls of this corridor, visible distortions in the air above each crack that make the passage appear to be in motion. The cracks run along the mortar joints between @@bsandstone@@N blocks where thermal expansion and contraction over centuries have worked the joints open to narrow gaps that communicate with whatever heat source lies within the pyramid's structural core at this level. The corridor is significantly warmer than adjacent passages, and the air carries the dry mineral smell of very hot stone.
+~
+24584 11
+D3
+The passage west leads back to the upper drake hall.~
+~
+0 -1 10300
+D0
+The north passage continues toward the nest approach.~
+~
+0 -1 10303
+D1
+The east passage continues toward the side passages.~
+~
+0 -1 10305
+S
+#10302
+@@yThe Nest Antechamber@@N~
+A dark anteroom immediately before the Pyramid Drake's actual nest, the air here is significantly hotter than anywhere else in the ascent, and the walls carry a dark gloss from the accumulated exhalations of a large warm creature in a confined space over many centuries. @@bScorch marks@@N on the threshold stones show where the Drake has entered and exited, and the floor at the threshold is worn to a smooth depression from the passage of its body. The nest itself lies immediately north, its chamber hotter still.
+~
+24585 11
+D2
+The south passage leads back toward the upper drake hall.~
+~
+0 -1 10300
+D0
+The north passage enters the feeding ground.~
+~
+0 -1 10303
+S
+#10303
+@@yThe Feeding Ground@@N~
+Gnawed bones carpet this chamber's floor in a density that makes navigation difficult, accumulated from the Drake's feeding activities over centuries. The bones are in every state from fresh-gnawed clean to ancient powdered fragments; the floor surface is essentially made of bone material at every point. @@yThe smell@@N is powerful: old fat, dry marrow, mineral bone dust, and the persistent background heat-smell of the Drake's presence. The chamber connects north toward the ascending shaft and south back to the nest antechamber.
+~
+24584 11
+D2
+The south passage leads back toward the nest antechamber.~
+~
+0 -1 10302
+D0
+The north passage leads toward the ascending shaft.~
+~
+0 -1 10304
+S
+#10304
+@@yAn Ascending Shaft@@N~
+A vertical transit shaft cuts through the pyramid's structural core here, rising to the apex floor above through a narrow chimney of dressed @@bsandstone@@N. A @@bstone sentinel gate@@N of heavy construction spans the shaft's top opening, fitted with a lock mechanism that shows no corrosion — it is maintained by some force operating on it even now. The key that fits this lock was bound to the Pyramid Drake below when the floor was sealed, ensuring that only those who defeated the guardian would have access to the apex. Recall is possible from this shaft landing.
+~
+16396 11
+D2
+The south passage leads back toward the feeding ground.~
+~
+0 -1 10303
+D4
+The ascending shaft rises toward the apex floor above; a @@bstone sentinel gate@@N bars the way.~
+^stone sentinel gate~
+5 10139 10311
+E
+stone sentinel gate~
+The @@bstone sentinel gate@@N is a heavy carved slab set in the shaft's upper frame. Its lock shows none of the corrosion present on every other metal fitting in the pyramid — it is maintained by an active force.
+~
+S
+#10305
+@@yA Side Passage@@N~
+A connecting passage running along the eastern side of the Drake's Ascent, its walls showing the same scorch damage as the main halls but at lower intensity — this passage is away from the Drake's primary circuit and receives indirect fire damage rather than direct exposure. The floor shows lighter claw marks, also secondary rather than primary territory-marking. The passage provides an alternate route through the ascent's upper sections.
+~
+24585 11
+D3
+The passage west leads back toward the heat-shimmering corridor.~
+~
+0 -1 10301
+D0
+The north passage leads toward the upper sections.~
+~
+0 -1 10306
+S
+#10306
+@@yThe Inner Drake Hall@@N~
+The inner hall of the Drake's Ascent is the secondary hub of the floor, connecting the side passage to the main path and providing access to the archive and pre-lair areas. @@bScorch marks@@N cover the walls here in patterns that suggest something large spitting fire down all four approaches simultaneously, and the ceiling carries a uniform blackening with none of the variation visible in the more distant parts of the floor. The walls' original decorative content has been entirely consumed by the heat damage.
+~
+24584 11
+D2
+The south passage connects toward the side passage.~
+~
+0 -1 10305
+D1
+The east passage continues toward the scorched archive.~
+~
+0 -1 10307
+D0
+The north passage leads toward the pre-lair corridor.~
+~
+0 -1 10308
+S
+#10307
+@@yA Scorched Archive@@N~
+What was once an archive chamber is now a room of burned shelves and ash-covered @@bsandstone@@N tablets. The shelves burned completely except for the stone mounting brackets, which project from the wall like bare bones. The tablets on the lowest shelf, protected from the worst of the fire by the shelves above, survive in fragments. A few complete tablets in the back of the lowest shelf preserve legible text: administrative records from the Drake's first years in occupation, apparently written by whoever last tried to maintain documentation of the floor's ongoing situation before abandoning the effort.
+~
+24585 11
+D3
+The passage west leads back toward the inner drake hall.~
+~
+0 -1 10306
+D0
+The north passage continues toward the pre-lair corridor.~
+~
+0 -1 10308
+S
+#10308
+@@yThe Pre-Lair Corridor@@N~
+The final connecting corridor before the Drake's approach chamber is distinguished by its temperature, which is higher than anywhere else in the ascent except the nest antechamber itself. The @@bsandstone@@N walls glow faintly @@yorange@@N in the deepest temperature zones, the stone itself barely below threshold of visible thermal emission. The floor is warm enough to feel through boot leather. The corridor leads north to the Drake's approach chamber, which leads to the nest beyond.
+~
+24584 11
+D2
+The south passage leads back toward the inner drake hall and scorched archive.~
+~
+0 -1 10306
+D0
+The north passage enters the Drake's approach chamber.~
+~
+0 -1 10309
+S
+#10309
+@@yThe Drake's Approach@@N~
+A @@bbone-adorned gate@@N of heavy iron construction stands in the north wall of this approach chamber, its bars threaded with the larger bones of the Drake's prey in a decorative arrangement that is simultaneously territorial marking and the result of years of casual accumulation. @@RScorch marks@@N blacken the gate and its frame, evidence of fire breathed through the bars from the other side, and the air through the gate is several degrees hotter than this chamber. The gate stands between those approaching and the Drake's nest, and the sounds of the nest are audible through it.
+~
+24584 11
+D2
+The south passage leads back toward the pre-lair corridor.~
+~
+0 -1 10308
+D0
+The @@bbone-adorned gate@@N in the north wall is threaded with the bones of the drake's prey.~
+^bone-adorned gate~
+1 -1 10310
+E
+bone-adorned gate~
+The @@bbone-adorned gate@@N is constructed of corroded iron bars threaded with the larger bones of the Drake's prey in an arrangement that has grown more elaborate with each passing decade of occupancy.
+~
+S
+#10310
+@@yThe Pyramid Drake's Nest@@N~
+The Drake's nest occupies the entire chamber: a deep depression of accumulated hot stone fragments, compressed ash, and the remnants of previous nesting material sits at the center, radiating heat that makes the air shimmer visibly. The walls are blackened from floor to ceiling and the original stonework of the chamber is visible only at the corners where the Drake's reach did not extend. @@RScorch patterns@@N on the ceiling record centuries of upward fire-breathing. The @@bbone-adorned gate@@N in the south wall leads back to the approach chamber; the only other exit is south.
+~
+24588 11
+D2
+The @@bbone-adorned gate@@N in the south wall leads back to the approach chamber.~
+^bone-adorned gate~
+1 -1 10309
+S
+#10311
+@@ySummit Entry@@N~
+The @@bstone sentinel gate@@N opens onto the apex floor of the Northern Pyramid, the Summit Sanctum. The air here is noticeably different from every floor below: cooler than the Drake's level, but warmer than the vault, with a dry quality unique to this elevation and a faint, constant movement from the cracks in the ceiling above that let in thin threads of desert air. @@yGold leaf@@N on the walls here is thicker and better-preserved than anywhere in the pyramid below — the apex was the most sacred and most protected level, sealed last and opened least. Recall is possible from this entry.
+~
+16396 11
+D5
+The @@bstone sentinel gate@@N leads back down to the ascending shaft on the fourth floor.~
+^stone sentinel gate~
+5 10139 10304
+D1
+The passage east enters the apex corridor.~
+~
+0 -1 10312
+S
+#10312
+@@yThe Apex Corridor@@N~
+The main connecting corridor of the Summit Sanctum is lined with @@yyellow gold@@N in every carved surface, the accumulation of paint and leaf applied over the full active life of the pyramid rather than in a single decorating campaign. The result is a depth and richness to the @@yyellow@@N color that no other part of the pyramid approaches. The inscriptions here cover the apex's cosmological significance: this is the point at which the pyramid's material form meets the divine, the geometric point toward which all the pyramid's structure ultimately directs the eye and the spirit.
+~
+24584 11
+D3
+The west passage leads back to the summit entry.~
+~
+0 -1 10311
+D1
+The east passage continues into the apex's inner halls.~
+~
+0 -1 10313
+D0
+The north passage connects toward the golden hall area.~
+~
+0 -1 10314
+S
+#10313
+@@yThe Wind-Scoured Chamber@@N~
+Cracks in the ceiling of this chamber let in thin columns of @@yhot desert air@@N and, on windy days, narrow shafts of direct sunlight that move across the floor in slow arcs as the sun passes. The effect of the light column on the carved @@yyellow@@N surfaces is dramatic: the gold leaf seems to generate the light rather than reflect it for the duration of the shaft's passage. The crack pattern in the ceiling follows the stress lines of the pyramid's settling, and @@bsand@@N has accumulated in small drifts below each crack, importing the desert directly into the apex.
+~
+24584 11
+D3
+The west passage leads back toward the apex corridor.~
+~
+0 -1 10312
+D1
+The east passage continues into the golden hall.~
+~
+0 -1 10314
+D0
+The north passage leads toward the relic chamber.~
+~
+0 -1 10315
+S
+#10314
+@@yThe Golden Hall@@N~
+Gold leaf lines every surface of this chamber: ceiling, walls, floor borders, column shafts, every carved element. The @@yyellow@@N coverage is complete enough that the underlying @@bsandstone@@N is invisible; the room is entirely constructed, perceptually, from gold. The carved reliefs visible in the gold-covered surfaces depict the pyramid's divine patron in every aspect — creative, destructive, judging, blessing — the full range of divine authority expressed through a single medium at its maximum density. The room is simultaneously the most ornate and the most restrained in the pyramid, all variation subsumed into the single color of absolute divine authority.
+~
+24584 11
+D2
+The south passage leads back toward the wind-scoured chamber.~
+~
+0 -1 10313
+D1
+The east passage continues toward the inner chambers.~
+~
+0 -1 10318
+D0
+The north passage continues toward the relic chamber.~
+~
+0 -1 10315
+S
+#10315
+@@yThe Relic Chamber@@N~
+Empty pedestals stand throughout this chamber in careful spacing, their surfaces bearing the mounting marks of whatever artifacts once rested on them. The pedestals are of exceptional quality — carved @@bsandstone@@N with @@ygold-leaf@@N facing still intact on every surface — but what they held is gone, removed before the sealing or taken in some earlier intrusion. @@cLapis lazuli@@N chips are scattered across the floor near the easternmost pedestals, suggesting a display object with lapis inlay was broken here at some point. The chamber connects in multiple directions through the apex's network of short passages.
+~
+24584 11
+D2
+The south passage leads back toward the golden hall.~
+~
+0 -1 10314
+D1
+The east passage leads toward the side niche.~
+~
+0 -1 10316
+D0
+The north passage leads toward the hall of judgment.~
+~
+0 -1 10317
+S
+#10316
+@@yA Side Niche@@N~
+A small dark recess at the junction of two apex corridors, its interior walls carrying the densest concentration of @@yyellow@@N paint on the floor — the gold color here has been applied so many times that it has built up to a texture visible to the touch. The niche held something specific; the mounting hardware is still present, sized for an object roughly the dimensions of a modest sculpture. Whatever it held was removed, but the accumulation of devotional gold paint records how important the object was to whoever tended this space.
+~
+24585 11
+D3
+The passage west leads back toward the relic chamber.~
+~
+0 -1 10315
+D0
+The north passage connects toward the hall of judgment.~
+~
+0 -1 10317
+S
+#10317
+@@yThe Hall of Judgment@@N~
+The final carvings depicting the afterlife journey cover both walls of this hall from floor to ceiling: the soul's arrival before the divine court, the weighing of the heart, the declaration of worthiness, and the final passage into the eternal field that awaits the righteous. The sequence is the most narrative and most visually complex carving in the entire pyramid, rendered with an intimacy and detail that suggests the artists were working from genuine belief rather than contractual obligation. @@yGold@@N fills the divine court, @@cblue@@N fills the eternal field, and @@bochre@@N fills the mortal figures making their passage between them.
+~
+24584 11
+D2
+The south passage leads back toward the relic chamber.~
+~
+0 -1 10315
+D1
+The east passage leads toward the pharaoh's antechamber.~
+~
+0 -1 10318
+D0
+The north passage leads toward the inner apex hall.~
+~
+0 -1 10319
+S
+#10318
+@@yThe Pharaoh's Antechamber@@N~
+A formal antechamber immediately before the apex's inner halls, its walls carrying the portrait of the Sand Sovereign in its living form: an architect, shown with tools of measurement and construction, surrounded by the implements of the pyramid's design. The portrait is unlike any other in the pyramid — the subject is shown working rather than receiving, creating rather than commanding. @@yGold@@N fills every surface of the work's background, and the Sovereign's figure is the only element rendered in natural pigment colors: brown skin, @@cblue@@N headdress, @@yyellow@@N regalia. The portrait's intent appears to be pride rather than authority.
+~
+24584 11
+D3
+The west passage leads back toward the hall of judgment.~
+~
+0 -1 10317
+D1
+The east passage leads toward the inner apex hall.~
+~
+0 -1 10319
+D2
+The south passage leads back toward the golden hall.~
+~
+0 -1 10314
+S
+#10319
+@@yThe Inner Apex Hall@@N~
+The innermost connecting hall of the Summit Sanctum is where the pyramid's entire architectural program reaches its final expression: every design element present in the floors below is represented here in its most refined form, as though the hall were a summary and culmination. The @@yyellow@@N gold is deepest here, the @@cblue@@N lapis most concentrated, and the @@bsandstone@@N itself seems lighter in color, as though even the raw material has participated in the apex's refining process. The approach to the Sand Sovereign begins from this hall.
+~
+24584 11
+D2
+The south passage leads back toward the pharaoh's antechamber.~
+~
+0 -1 10318
+D1
+The east passage continues toward the final passages.~
+~
+0 -1 10320
+D0
+The north passage leads toward the throne room approach.~
+~
+0 -1 10321
+S
+#10320
+@@yA Narrow Final Passage@@N~
+The narrowest passage in the apex, deliberately compressed to single-file width, forces a reduction of scale before the throne room approach. @@yGold leaf@@N on the walls presses in from both sides, and the ceiling is lower than anywhere else on this floor, creating an almost physical sense of approach through a gateway. The passage extends a short distance; at its end, the passage broadens back to full height and the throne room approach becomes visible ahead.
+~
+24585 11
+D3
+The passage west leads back toward the inner apex hall.~
+~
+0 -1 10319
+D0
+The narrow passage continues north toward the throne room approach.~
+~
+0 -1 10321
+S
+#10321
+@@yThe Throne Room Approach@@N~
+The approach to the Sand Sovereign's throne room is a hall of unprecedented @@yyellow@@N richness: every carving is gilded, every joint is sealed with @@yyellow@@N painted resin, and the ceiling carries a full program of @@ysun-disc carving@@N that emits the pyramid's sourceless light at its maximum intensity — this is the brightest room in the entire pyramid. The inscriptions here record the Sand Sovereign's covenant with the gods, the terms of its immortality, and the specific form of its authority over the pyramid and the desert that surrounds it. The @@bsandstone@@N underneath all of this is almost entirely invisible.
+~
+24584 11
+D2
+The south passage leads back through the narrow final passage.~
+~
+0 -1 10320
+D0
+The north passage leads into the pre-throne hall.~
+~
+0 -1 10322
+S
+#10322
+@@yThe Pre-Throne Hall@@N~
+The final hall before the Sand Sovereign's throne room carries carvings of the Sovereign's most significant achievements: the pyramid's founding, its consecration, the binding of the seven pharaoh-spirits, and the Sovereign's own transformation from mortal architect to immortal entity. The binding scene shows all seven spirits simultaneously, rendered in @@Rblood-red@@N against the @@yyellow@@N gold background, the contrast deliberately violent. The transformation scene shows the Sovereign receiving the immortality covenant, its figure outlined in @@cblue lapis@@N against the golden background as though the divine is entering from outside the material realm.
+~
+24584 11
+D2
+The south passage leads back toward the throne room approach.~
+~
+0 -1 10321
+D0
+The north passage leads to the Sand Sovereign's approach chamber.~
+~
+0 -1 10323
+S
+#10323
+@@yThe Sand Sovereign's Approach@@N~
+The final approach chamber to the apex throne room carries a quality of absolute authority that exceeds anything in the pyramid below. A @@bsummit chamber door@@N stands in the north wall, its surface carved with the Sovereign's name and titles in characters that fill the entire door face in a single enormous inscription. @@yGold leaf@@N covers the name completely; the door is a surface of solid gold interrupted only by the deep carved channels of the letterforms. @@RBlood-red@@N glyphs below the door record the names of every being that reached this point and was destroyed before the door opened. The list is long and recent entries appear to have been added by something that did not use a human hand.
+~
+24584 11
+D2
+The south passage leads back through the pre-throne hall.~
+~
+0 -1 10322
+D0
+The @@bsummit chamber door@@N stands in the north wall, its face a single enormous @@ygolden inscription@@N of the Sand Sovereign's name.~
+^summit chamber door~
+1 -1 10324
+E
+summit chamber door~
+The @@bsummit chamber door@@N is a single carved slab whose entire face is covered in the Sand Sovereign's name and titles in @@yyellow@@N gold leaf, the letterform channels cut deep into the @@bsandstone@@N below.
+~
+S
+#10324
+@@yThe Summit Throne Room@@N~
+The apex of the Northern Pyramid is a chamber of absolute, terrible beauty: a throne of @@bblack sandstone@@N shot through with veins of @@yyellow@@N gold occupies the northern wall, its back rising to the ceiling in a single carved panel depicting the Sovereign's covenant with the desert gods in the most refined carving in the pyramid. @@yGold leaf@@N covers every surface of the room completely; the walls, the ceiling, the floor. @@cBlue lapis lazuli@@N in the ceiling's central boss marks the pyramid's geometric apex — the mathematical point where all of the pyramid's lines converge. @@RBlood-red@@N glyphs in the throne's armrest carvings are the only interruption in the @@yyellow@@N expanse: the specific terms of the Sovereign's immortality, written in the Sovereign's own authority rather than in any external divine's hand. The @@bsummit chamber door@@N in the south wall leads back to the approach chamber; those who have defeated the Sand Sovereign and wish to leave may recall from this sacred space.
+~
+24584 11
+D2
+The @@bsummit chamber door@@N in the south wall leads back to the approach chamber.~
+^summit chamber door~
+1 -1 10323
+S
+#0
 #$
