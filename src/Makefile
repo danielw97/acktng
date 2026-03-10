@@ -28,7 +28,7 @@ O_FILES = act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o \
 	  act_wiz.o ai.o areachk.o areasave.o board.o build.o buildare.o \
 	  buildtab.o cloak.o clutch.o comm.o const.o damage.o db.o death.o \
 	  email.o enchant.o fight.o handler.o hash.o hunt.o interp.o invasion.o \
-	  item_generation.o keep.o lists.o macros.o magic.o magic2.o magic3.o \
+	  item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o magic2.o magic3.o \
 	  magic4.o mapper.o mob_commands.o mob_prog.o obj_fun.o \
 	  pdelete.o proposition.o quest.o reincarnate.o rulers.o save.o \
 	  scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o \
@@ -38,7 +38,7 @@ O_FILES = act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o \
 O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o clutch.o comm.o \
 	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
-	  interp.o invasion.o item_generation.o keep.o lists.o macros.o magic.o magic2.o magic3.o magic4.o mapper.o \
+	  interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o magic2.o magic3.o magic4.o mapper.o \
 	  mob_commands.o mob_prog.o obj_fun.o pdelete.o proposition.o quest.o reincarnate.o rulers.o \
 	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
@@ -314,9 +314,9 @@ unit-test-special: test_special.o special.unit-test.o test_is_fighting.o
 item_generation.unit-test.o: item_generation.c
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ITEM_GENERATION -ffunction-sections -fdata-sections -o item_generation.unit-test.o item_generation.c
 
-unit-test-item-generation: test_item_generation.o item_generation.unit-test.o test_is_fighting.o
+unit-test-item-generation: test_item_generation.o item_generation.unit-test.o item_generation_tables.o test_is_fighting.o
 	rm -f unit-test-item-generation
-	$(CC) -Wl,--gc-sections -o unit-test-item-generation test_item_generation.o item_generation.unit-test.o test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o unit-test-item-generation test_item_generation.o item_generation.unit-test.o item_generation_tables.o test_is_fighting.o $(L_FLAGS)
 
 unit-test-act-flags: test_act_flags.o
 	rm -f unit-test-act-flags
