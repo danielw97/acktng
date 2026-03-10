@@ -5436,6 +5436,415 @@ legs and mandibles.
 + 0 0 0 0 0 0 0 0 0
 l 100 11572 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+#11490
+skeletal desert rat~
+@@ya skeletal desert rat@@N~
+@@yA skeletal desert rat@@N skitters here, its bony claws clicking on stone.
+~
+A reanimated rodent skeleton the size of a dog, the desert rat's @@bbones@@N are held
+together by threads of dark magic. It moves with twitchy, unpredictable speed, its bony
+tail lashing as it seeks to trip larger prey.
+~
+262241 0 0 S
+125 0
+0 0 0 0
+! 2 7 0 7 2049 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11573 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11491
+bone crawler~
+@@ya bone crawler@@N~
+@@yA bone crawler@@N scuttles here, its mass of animated bones shifting and clicking.
+~
+An animated mass of fused skeletal remains that moves like a centipede, the bone crawler's
+body is a chain of @@binterlocking vertebrae@@N and @@brib cages@@N that undulates forward
+with disturbing speed, crushing anything in its path.
+~
+278625 0 -500 S
+127 0
+0 0 0 0
+! 2 7 5 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11574 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11492
+sand-choked revenant~
+@@ya sand-choked revenant@@N~
+@@yA sand-choked revenant@@N lurches here, sand pouring from its joints with each step.
+~
+A revenant whose body has been packed with @@ydry desert sand@@N, the creature's every
+movement produces cascades of grit from its joints and orifices. Its grip is made
+stronger by the compacted sand within, and its blows land with crushing weight.
+~
+16481 0 -500 S
+129 0
+0 0 0 0
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11575 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11493
+animated obelisk shard~
+@@yan animated obelisk shard@@N~
+@@yAn animated obelisk shard@@N hovers here, its inscribed surface crackling with energy.
+~
+A fragment of a shattered obelisk animated by the pyramid's ambient magic, the shard
+floats at chest height, its @@yinscribed surface@@N crackling with residual enchantment.
+It strikes with surprising force, spinning edge-on to slash at intruders.
+~
+262243 0 0 S
+132 0
+0 0 0 0
+! 2 7 0 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11576 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11494
+cursed pyramid laborer~
+@@ya cursed pyramid laborer@@N~
+@@yA cursed pyramid laborer@@N staggers here, its ghostly form still bearing the marks of servitude.
+~
+The ghost of a slave who died building the pyramid, the laborer's translucent form still
+bears the @@bshackle marks@@N and @@ywhip scars@@N of its mortal bondage. Its curse drives
+it to attack the living with the same tools it was forced to wield in life.
+~
+16481 0 -500 S
+130 0
+0 0 0 0
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11577 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11495
+desert pit viper~
+@@ya desert pit viper@@N~
+@@yA desert pit viper@@N coils here, its heat-sensing pits tracking your warmth.
+~
+A coiled serpent whose @@bsandy-brown scales@@N provide perfect camouflage against the
+pyramid's stone floors. Its heat-sensing pits allow it to strike with perfect accuracy
+even in total darkness, and its venom induces rapid paralysis.
+~
+97 0 0 S
+128 0
+0 0 0 0
+! 2 7 0 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11578 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11496
+obsidian sentinel construct~
+@@yan obsidian sentinel construct@@N~
+@@yAn obsidian sentinel construct@@N stands guard here, its polished surface reflecting dim light.
+~
+A hulking guardian golem carved from @@bobsidian@@N, the sentinel construct's body is
+reinforced with @@ygolden bands@@N at each joint. Its movements are mechanical but
+powerful, and its stone fists strike with devastating force.
+~
+262241 0 0 S
+134 0
+0 0 0 0
+! 2 7 0 7 40834 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11497
+moon glyph guardian~
+@@ya moon glyph guardian@@N~
+@@yA moon glyph guardian@@N stands here, its stone surface blazing with @@ylunar inscriptions@@N.
+~
+A living inscription in stone, the moon glyph guardian's @@bbasalt body@@N is covered
+entirely in @@ygolden glyphs@@N that pulse with power. The guardian was carved from the
+pyramid wall itself and defends its tier with mindless, absolute devotion.
+~
+262243 0 0 S
+135 0
+0 0 0 0
+! 2 7 0 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11580 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11498
+animated burial jar~
+@@yan animated burial jar@@N~
+@@yAn animated burial jar@@N hops toward you, its ceramic body rattling.
+~
+A canopic jar the size of a man's torso, animated by the pyramid's ambient death magic
+into a walking container of preserved organs. Its @@bpainted lid@@N depicts a jackal-headed
+deity, and it attacks by flinging itself bodily at intruders.
+~
+82017 0 -500 S
+132 0
+0 0 0 0
+! 2 7 5 7 129 144 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11581 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11499
+scribal phantom~
+@@ya scribal phantom@@N~
+@@yA scribal phantom@@N hovers here, ghostly quill still scratching at invisible parchment.
+~
+The ghost of a pyramid scribe, the phantom's translucent form still clutches a @@ygolden
+quill@@N and gestures as though writing on invisible parchment. When threatened, it
+turns its scholarly knowledge to destructive magical attacks.
+~
+16481 0 -500 S
+136 0
+0 0 0 0
+! 2 7 5 7 1 1026 2
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11582 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11500
+sand-bound mummy thrall~
+@@ya sand-bound mummy thrall@@N~
+@@yA sand-bound mummy thrall@@N lurches forward, @@bsand cascading@@N from its wrappings.
+~
+A lesser mummy bound to serve the pyramid's wardens, the thrall's @@bpreservation wrappings@@N
+are caked with @@ydry sand@@N that falls away in sheets with each movement. Despite its
+crude animation, it strikes with relentless, mindless persistence.
+~
+16481 0 -500 S
+133 0
+0 0 0 0
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11583 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11501
+rot priest thrall~
+@@ya rot priest's thrall@@N~
+@@yA rot priest's thrall@@N stands here, its undead body draped in @@bfungal vestments@@N.
+~
+An undead acolyte who served the Rot Warden in life and continues in death, the thrall's
+body is draped in @@bfungal vestments@@N that have grown directly from its decomposing
+flesh. Its movements are more purposeful than a simple zombie's.
+~
+16481 0 -500 S
+138 0
+0 0 0 0
+! 2 7 5 7 40961 512 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11502
+fungal wraith~
+@@ya fungal wraith@@N~
+@@yA fungal wraith@@N drifts here, its translucent form trailing spores.
+~
+A translucent fungal spirit whose @@eshimmering green form@@N trails clouds of toxic
+spores that settle on every surface it passes. The wraith's attacks target both body
+and mind with psychic projections of suffocating decay.
+~
+82017 0 -500 S
+137 0
+0 0 0 0
+! 2 7 5 7 1 2359296 4
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11585 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11503
+curse-bound sentinel~
+@@ya curse-bound sentinel@@N~
+@@yA curse-bound sentinel@@N stands here, ancient armor creaking with each breath.
+~
+An ancient soldier held in undeath by a curse inscribed on the @@biron collar@@N welded
+around its neck. The sentinel's @@bcorroded armor@@N still bears the insignia of the Moon
+Sovereign's personal guard, and it fights with disciplined, relentless precision.
+~
+16481 0 -500 S
+139 0
+0 0 0 0
+! 2 7 5 7 565250 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11586 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11504
+entombed general~
+@@yan entombed general@@N~
+@@yAn entombed general@@N stands here in full battle regalia, its ancient blade at the ready.
+~
+Buried standing and still armed with @@yceremonial weapons@@N that remain sharp after
+millennia, the entombed general is an undead commander whose tactical instincts survived
+death. Its @@bbattered bronze armor@@N bears the scars of battles fought before the
+pyramid was sealed.
+~
+16481 0 -500 S
+138 0
+0 0 0 0
+! 2 7 5 7 45061 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11505
+bone golem~
+@@ya bone golem@@N~
+@@yA bone golem@@N lumbers here, its fused skeletal frame grinding with each step.
+~
+A construct assembled from the fused skeletal remains of dozens of warriors, the bone
+golem's @@bmassive frame@@N towers over the corridor. Its limbs are thick columns of
+compressed bone, and its fists strike with the weight of an avalanche.
+~
+262241 0 0 S
+140 0
+0 0 0 0
+! 2 7 0 7 32868 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11588 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11506
+crypt stalker~
+@@ya crypt stalker@@N~
+@@yA crypt stalker@@N slinks through the shadows, its feral eyes gleaming.
+~
+A beast that hunts in the pyramid's darkest corridors, the crypt stalker's @@blithe body@@N
+is built for speed and stealth. Its claws are long and curved, designed for grappling
+prey in the narrow passages, and its eyes reflect light with predatory intensity.
+~
+97 0 0 S
+136 0
+0 0 0 0
+! 2 7 0 7 6145 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11589 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11507
+magma lizard~
+@@ya magma lizard@@N~
+@@yA magma lizard@@N crouches here, @@Rheat shimmering@@N from its scales.
+~
+A long-tailed reptile whose @@bscales@@N absorb volcanic heat, the magma lizard's body
+radiates warmth that makes the surrounding air shimmer. Its hide is nearly impervious
+to flame, and its bite delivers a dose of scalding venom.
+~
+97 0 0 S
+137 0
+0 0 0 0
+! 2 7 0 7 4097 0 1
+| 0 0 0 128 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11590 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11508
+charred bone husk~
+@@ya charred bone husk@@N~
+@@yA charred bone husk@@N lurches here, @@Rsmoldering embers@@N glowing in its ribcage.
+~
+An undead warrior burned to blackened bone, the husk's skeletal frame is charred and
+cracked but still animated by stubborn necromantic energy. @@RSmoldering embers@@N glow
+within its ribcage, and its touch leaves scorch marks on stone.
+~
+16481 0 -500 S
+139 0
+0 0 0 0
+! 2 7 5 7 32770 0 1
+| 128 64 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11591 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11509
+void sentinel~
+@@ya void sentinel@@N~
+@@yA void sentinel@@N stands guard here, its stone form radiating cold menace.
+~
+The last stone guardian before the Void Throne, the sentinel's @@bblack stone body@@N is
+carved with precision that borders on the impossible. Its surface absorbs all light, and
+its movements are so smooth they seem to ignore the friction of stone on stone.
+~
+262243 0 0 S
+140 0
+0 0 0 0
+! 2 7 0 7 40834 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11510
+toxic sand elemental~
+@@ya toxic sand elemental@@N~
+@@yA toxic sand elemental@@N swirls here, @@epoisonous particles@@N streaming from its form.
+~
+A whirling column of @@ypoisonous sand@@N animated by elemental magic, the toxic sand
+elemental's form shifts constantly between vaguely humanoid and a spinning vortex.
+@@eGreen-tinged particles@@N stream from its body, corroding anything they touch.
+~
+33816673 0 0 S
+139 0
+5 5 10 10
+! 2 7 0 7 36866 144 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11511
+ancient basalt guardian~
+@@yan ancient basalt guardian@@N~
+@@yAn ancient basalt guardian@@N stands here, its massive stone form blocking the passage.
+~
+A colossal construct of @@bdark basalt@@N standing fifteen feet tall, the ancient guardian
+predates the pyramid itself — a remnant of an older structure that the Moon Sovereign
+incorporated into the design. Its stone body is nearly indestructible.
+~
+33816675 0 0 S
+142 0
+5 5 10 10
+! 2 7 0 7 41060 0 1
+| 34 4 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11512
+greater bone overlord~
+@@ya greater bone overlord@@N~
+@@yA greater bone overlord@@N looms here, its towering skeletal form wreathed in dark energy.
+~
+A towering skeletal warlord-spirit that commands the lesser undead of the ossuary through
+sheer necromantic authority. Its @@bbone frame@@N is reinforced with @@eiron bands@@N, and
+@@Rdark energy@@N crackles between its outstretched fingertips.
+~
+33570913 0 -500 S
+140 0
+5 5 10 10
+! 2 7 5 7 565250 2359296 1
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11513
+gilded moon shade~
+@@ya gilded moon shade@@N~
+@@yA gilded moon shade@@N drifts here, its spectral form glinting with @@ygolden light@@N.
+~
+The ghost of a royal bodyguard in ceremonial @@bobsidian armor@@N chased with @@ygolden
+filigree@@N, the gilded moon shade's spectral form retains the imposing bearing of an
+elite warrior. Its translucent blade still gleams with deadly purpose.
+~
+16481 0 -500 S
+138 0
+0 0 0 0
+! 2 7 5 7 32769 65536 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11593 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
 #0
 #$
 
