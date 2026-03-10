@@ -648,6 +648,9 @@ void set_aff_to_obj(OBJ_DATA *obj, int location, int modifier)
 
 bool is_jewelry(OBJ_DATA *obj)
 {
+   if (obj->item_type == ITEM_LIGHT)
+      return TRUE;
+
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HALO) || IS_SET(obj->wear_flags, ITEM_WEAR_AURA) ||
        IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER) ||
        IS_SET(obj->wear_flags, ITEM_WEAR_EAR))
