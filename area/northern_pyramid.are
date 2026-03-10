@@ -2032,6 +2032,18 @@ D5
 The shaft descends into the deep foundation levels far below.~
 ~
 0 -1 10134
+D4
+~
+~
+0 -1 10250
+D2
+~
+~
+0 -1 10178
+D0
+~
+~
+0 -1 10220
 S
 #10126
 @@yThe Undercroft Entry@@N~
@@ -2194,6 +2206,10 @@ D2
 The south passage continues deeper into the undercroft.~
 ~
 0 -1 10139
+D4
+~
+~
+0 -1 10125
 S
 #10135
 @@yA Narrow Root Tunnel@@N~
@@ -2239,11 +2255,11 @@ The floor of this gallery has settled a full step lower than the surrounding pas
 D0
 The passage north leads back into the ossuary.~
 ~
-0 -1 10136
+0 -1 10132
 D3
 The corridor west enters the embalming chamber.~
 ~
-0 -1 10132
+0 -1 10136
 D1
 The passage east continues toward the underground cistern.~
 ~
@@ -2288,6 +2304,10 @@ D1
 The crumbling corridor continues east toward the fungal grotto.~
 ~
 0 -1 10140
+D0
+~
+~
+0 -1 10134
 S
 #10140
 @@yThe Fungal Grotto@@N~
@@ -2594,8 +2614,12 @@ D0
 The dune ring curves north along the pyramid's base.~
 ~
 0 -1 10159
-D2
-The dune ring curves south along the pyramid's base.~
+D5
+~
+~
+0 -1 10163
+D4
+~
 ~
 0 -1 10163
 S
@@ -2611,21 +2635,21 @@ The path continues north toward the outer courtyard.~
 D2
 The southern approach continues south along the pyramid's base.~
 ~
-0 -1 10164
+0 -1 10158
 S
 #10160
 @@yThe Pyramid's Western Face@@N~
 The western face of the Northern Pyramid rises here in an unbroken wall of @@bsandstone@@N that extends far beyond the scale the mind can easily hold: the base course stones are each taller than a person, and they repeat in precise rows until they vanish into glare hundreds of feet above. The surface is marked with long diagonal @@yweathering grooves@@N where the prevailing west wind has scoured the stone for millennia, and the lowest course shows the salt crust of ancient flooding. No entrance exists on this face; the pyramid's only public access is its northern front.
 ~
 24584 10
-D0
-The western face of the pyramid extends north toward the guard post ruin.~
-~
-0 -1 10165
 D2
 The western face continues south toward the outer dune ring.~
 ~
 0 -1 10163
+D1
+~
+~
+0 -1 10165
 S
 #10161
 @@yThe Pyramid's Eastern Face@@N~
@@ -2639,6 +2663,14 @@ The eastern face continues north toward the obelisk circle.~
 D2
 The eastern face extends south along the pyramid's base.~
 ~
+0 -1 10164
+D3
+~
+~
+0 -1 10162
+D1
+~
+~
 0 -1 10163
 S
 #10162
@@ -2649,7 +2681,7 @@ A wide plaza of cracked @@bsandstone@@N paving stretches before the pyramid's ma
 D0
 The main gate of the pyramid is visible to the north.~
 ~
-0 -1 10166
+0 -1 10165
 D1
 The eastern face of the pyramid extends along the courtyard's edge.~
 ~
@@ -2662,6 +2694,10 @@ D3
 The courtyard extends west toward the outer dune ring.~
 ~
 0 -1 10158
+D4
+~
+~
+0 -1 10166
 S
 #10163
 @@yThe Courtyard Garden Ruin@@N~
@@ -2679,6 +2715,14 @@ The eastern passage crosses to the southern approach path.~
 D3
 The courtyard ruins continue west toward the outer dune ring.~
 ~
+0 -1 10161
+D5
+~
+~
+0 -1 10158
+D4
+~
+~
 0 -1 10158
 S
 #10164
@@ -2694,6 +2738,10 @@ D3
 The path west leads toward the courtyard garden ruin.~
 ~
 0 -1 10163
+D2
+~
+~
+0 -1 10161
 S
 #10165
 @@yThe Guard Post Ruin@@N~
@@ -2708,6 +2756,10 @@ D2
 The path south descends into the outer courtyard.~
 ~
 0 -1 10162
+D3
+~
+~
+0 -1 10160
 S
 #10166
 @@yThe Pyramid's Main Gate@@N~
@@ -2726,6 +2778,10 @@ E
 stone gate~
 The @@bstone gate@@N of the pyramid's main entrance is a single massive carved slab set in the arch opening, its surface worked with a continuous frieze of guardian figures and protective inscriptions.
 ~
+D5
+~
+~
+0 -1 10162
 S
 #10167
 @@yThe Grand Entrance Hall@@N~
@@ -2758,14 +2814,14 @@ D3
 The west passage enters the grand entrance hall.~
 ~
 0 -1 10167
-D0
-The corridor continues north along the entrance hall's eastern side.~
-~
-0 -1 10170
 D1
 The passage east leads deeper into the pyramid's interior.~
 ~
 0 -1 10173
+D4
+~
+~
+0 -1 10170
 S
 #10169
 @@yWest Entrance Corridor@@N~
@@ -2779,11 +2835,19 @@ The east passage enters the grand entrance hall.~
 D0
 The corridor continues north.~
 ~
-0 -1 10170
-D3
-The passage west leads deeper into the pyramid's interior.~
+0 -1 10175
+D5
+~
+~
+0 -1 10174
+D4
+~
 ~
 0 -1 10175
+D2
+~
+~
+0 -1 10170
 S
 #10170
 @@yThe Pillar Forest@@N~
@@ -2797,7 +2861,7 @@ The south passage threads back through the pillar forest toward the entrance hal
 D0
 The north passage continues deeper into the pyramid interior.~
 ~
-0 -1 10183
+0 -1 10169
 D1
 The east passage threads through the columns.~
 ~
@@ -2806,6 +2870,14 @@ D3
 The west passage threads through the columns.~
 ~
 0 -1 10175
+D5
+~
+~
+0 -1 10168
+D4
+~
+~
+0 -1 10183
 S
 #10171
 @@yA Collapsed Side Wing@@N~
@@ -2830,8 +2902,12 @@ D3
 The passage west leads back through the collapsed side wing.~
 ~
 0 -1 10171
-D0
-The north passage continues into the pyramid's central interior.~
+D2
+~
+~
+0 -1 10176
+D1
+~
 ~
 0 -1 10176
 S
@@ -2854,12 +2930,12 @@ S
 The guard barracks of the pyramid's ground floor is a long, dark room whose stone sleeping platforms along the walls are the only furnishings that survived the centuries intact. @@bSandstone@@N benches for sitting and stone pillow-blocks for sleeping are arranged in a militarily precise layout that has not changed since the guards last slept here. The platform surfaces retain faint outlines of reed mats, long rotted away. @@yA faded roster@@N of some kind is scratched into the south wall beside the entrance, too worn to read, recording duty assignments for a watch that never ended.
 ~
 24585 11
-D3
-The passage west enters the west entrance corridor.~
+D4
+~
 ~
 0 -1 10169
-D0
-The north passage continues into the pyramid's interior.~
+D1
+~
 ~
 0 -1 10180
 S
@@ -2880,6 +2956,10 @@ D1
 The east passage connects to the pillar forest.~
 ~
 0 -1 10170
+D5
+~
+~
+0 -1 10169
 S
 #10176
 @@yThe East Wing Hall@@N~
@@ -2897,6 +2977,10 @@ The west passage connects to the trophy chamber area.~
 D0
 The north passage continues toward the central hall.~
 ~
+0 -1 10172
+D5
+~
+~
 0 -1 10183
 S
 #10177
@@ -2904,14 +2988,14 @@ S
 A secure chamber beneath the ground floor level, its walls of dressed @@bsandstone@@N fitted with iron tie-bars that have rusted through in several places without causing structural failure. The room's original purpose was the secure storage of ceremonial implements; the empty mounting pedestals around the walls still have the bolt-holes where sacred items were anchored against theft. In the center of the floor, a @@bheavy trapdoor@@N of iron-banded timber is set flush with the stone, its @@bbronze@@N lock mechanism corroded to a uniform green but still functional. The trapdoor leads down into the undercroft; without the key, the descent is sealed.
 ~
 16396 11
-D2
-The passage south leads back into the pyramid's west wing.~
-~
-0 -1 10180
 D5
 The @@bheavy trapdoor@@N is set flush into the floor, its iron bands gone dark with age.~
 ^heavy trapdoor~
 1 10138 10126
+D4
+~
+~
+0 -1 10180
 S
 #10178
 @@yThe False Floor Gallery@@N~
@@ -2926,8 +3010,8 @@ D1
 The east passage continues into the pyramid's interior.~
 ~
 0 -1 10179
-D5
-The hollow floor gives way without warning, dropping down through a shaft.~
+D0
+~
 ~
 0 -1 10125
 S
@@ -2940,8 +3024,16 @@ D3
 The passage west exits back into the false floor gallery.~
 ~
 0 -1 10178
-D0
-The north passage continues deeper into the pyramid's interior.~
+D5
+~
+~
+0 -1 10181
+D4
+~
+~
+0 -1 10182
+D1
+~
 ~
 0 -1 10182
 S
@@ -2965,21 +3057,29 @@ The east passage crosses toward the false floor gallery.~
 D2
 The south passage leads toward the lower vault.~
 ~
+0 -1 10175
+D5
+~
+~
 0 -1 10177
+D3
+~
+~
+0 -1 10174
 S
 #10181
 @@yThe Stone Library@@N~
 What was once a library of carved stone tablets occupies this chamber, its shelves still intact but the tablets themselves reduced to fragments and dust by the collapse of a section of the eastern wall. @@bSandstone@@N shelf-blocks line both long walls in regular tiers, each shelf carved with subject labels at its front edge that can still be read: religious texts, astronomical records, engineering specifications for the pyramid's construction. The contents they once held are almost entirely destroyed; only the organizational framework of the library survives.
 ~
 24584 11
-D3
-The west passage connects to the side alcove.~
-~
-0 -1 10179
 D0
 The north passage continues toward the map chamber.~
 ~
 0 -1 10182
+D4
+~
+~
+0 -1 10179
 S
 #10182
 @@yThe Map Chamber@@N~
@@ -2998,6 +3098,10 @@ D3
 The west passage returns to the side alcove area.~
 ~
 0 -1 10179
+D5
+~
+~
+0 -1 10179
 S
 #10183
 @@yThe Central Hall@@N~
@@ -3011,7 +3115,7 @@ The south passage connects back toward the map chamber and the pillar forest.~
 D3
 The west passage leads toward the west wing hall.~
 ~
-0 -1 10176
+0 -1 10185
 D1
 The east stairwell landing is accessible to the east.~
 ~
@@ -3020,6 +3124,14 @@ D0
 The north passage continues toward the inner hall.~
 ~
 0 -1 10187
+D5
+~
+~
+0 -1 10170
+D4
+~
+~
+0 -1 10176
 S
 #10184
 @@yThe East Stairwell Landing@@N~
@@ -3034,6 +3146,10 @@ D4
 The carved stairwell ascends to the Hall of the Scarab on the first floor.~
 ~
 0 -1 10201
+D1
+~
+~
+0 -1 10189
 S
 #10185
 @@yThe West Stairwell Landing@@N~
@@ -3062,8 +3178,8 @@ D2
 The south passage leads back into the west wing hall.~
 ~
 0 -1 10180
-D0
-The north passage continues into the inner pyramid.~
+D4
+~
 ~
 0 -1 10188
 S
@@ -3094,14 +3210,18 @@ D3
 The west passage leads toward the offering hall.~
 ~
 0 -1 10187
-D1
-The east passage connects to the south inner wing.~
-~
-0 -1 10189
 D0
 The north passage continues toward the ceremonial passage.~
 ~
 0 -1 10190
+D5
+~
+~
+0 -1 10186
+D4
+~
+~
+0 -1 10189
 S
 #10189
 @@yThe South Inner Wing@@N~
@@ -3112,14 +3232,14 @@ D3
 The west passage connects toward the east stairwell landing.~
 ~
 0 -1 10184
-D1
-The east passage continues into the ceremonial passage.~
+D5
 ~
-0 -1 10190
-D0
-The north passage connects to the north inner wing.~
 ~
 0 -1 10188
+D4
+~
+~
+0 -1 10190
 S
 #10190
 @@yA Ceremonial Passage@@N~
@@ -3129,13 +3249,17 @@ A passage of noticeably higher finish quality than the surrounding corridors, it
 D2
 The south passage connects back toward the south inner wing.~
 ~
-0 -1 10189
+0 -1 10188
 D0
 The north passage leads toward the root-cracked chamber.~
 ~
 0 -1 10191
-D1
-The east passage connects to the throne antechamber.~
+D5
+~
+~
+0 -1 10189
+D3
+~
 ~
 0 -1 10192
 S
@@ -3152,6 +3276,10 @@ D1
 The east passage continues into the throne antechamber.~
 ~
 0 -1 10192
+D5
+~
+~
+0 -1 10193
 S
 #10192
 @@yThe Throne Antechamber@@N~
@@ -3166,6 +3294,10 @@ D0
 The north passage leads into the lower throne room.~
 ~
 0 -1 10193
+D1
+~
+~
+0 -1 10190
 S
 #10193
 @@yThe Lower Throne Room@@N~
@@ -3180,8 +3312,8 @@ D1
 The east passage continues toward the sanctum approach.~
 ~
 0 -1 10194
-D3
-The west passage leads back toward the ceremonial areas.~
+D4
+~
 ~
 0 -1 10191
 S
@@ -3198,10 +3330,14 @@ D0
 The north passage continues toward the preparation chamber.~
 ~
 0 -1 10195
-D1
-The east passage leads toward the sentinel's passage.~
+D4
+~
 ~
 0 -1 10196
+D2
+~
+~
+0 -1 10195
 S
 #10195
 @@yA Preparation Chamber@@N~
@@ -3216,16 +3352,20 @@ D1
 The east passage connects to the sentinel's passage.~
 ~
 0 -1 10196
+D3
+~
+~
+0 -1 10196
+D2
+~
+~
+0 -1 10194
 S
 #10196
 @@yThe Sentinel's Passage@@N~
 A straight corridor running north toward the inner sanctum, its walls carved with repeating images of the sentinel deity assigned to guard the pyramid's most sacred interior spaces: a figure with a @@yyellow@@N solar disc head and a staff ending in a serpent, repeated in alternating orientations down both walls. The figure's posture is aggressive rather than welcoming, each iteration slightly more threatening than the last as the corridor progresses north. The floor here carries the deepest wear marks of any corridor in the pyramid, evidence of the constant ceremonial foot traffic this passage once saw.
 ~
 24584 11
-D2
-The south passage connects back toward the preparation chamber.~
-~
-0 -1 10195
 D3
 The west passage connects toward the preparation chamber western entry.~
 ~
@@ -3234,6 +3374,14 @@ D0
 The north passage leads to the inner sanctum entrance.~
 ~
 0 -1 10197
+D5
+~
+~
+0 -1 10194
+D1
+~
+~
+0 -1 10195
 S
 #10197
 @@yThe Inner Sanctum Entrance@@N~
@@ -3308,6 +3456,10 @@ D0
 The passage north leads into the beetle colonnade.~
 ~
 0 -1 10204
+D2
+~
+~
+0 -1 10204
 S
 #10202
 @@yThe Upper Landing@@N~
@@ -3321,11 +3473,11 @@ The stairwell descends back to the west stairwell landing on the ground floor.~
 D1
 The passage east connects to the scarab hall.~
 ~
-0 -1 10203
-D0
-The north passage leads into the hall's interior.~
-~
 0 -1 10207
+D2
+~
+~
+0 -1 10203
 S
 #10203
 @@yThe Scarab Hall@@N~
@@ -3336,14 +3488,22 @@ D3
 The west passage leads back to the first ascent and upper landing areas.~
 ~
 0 -1 10201
-D1
-The east passage continues into the beetle colonnade.~
-~
-0 -1 10204
 D2
 The south passage connects toward the floor's inner chambers.~
 ~
 0 -1 10208
+D5
+~
+~
+0 -1 10207
+D4
+~
+~
+0 -1 10204
+D0
+~
+~
+0 -1 10202
 S
 #10204
 @@yThe Beetle Colonnade@@N~
@@ -3353,7 +3513,7 @@ A colonnade of eight columns runs east-west through this chamber, each capital c
 D3
 The passage west leads back to the first ascent.~
 ~
-0 -1 10201
+0 -1 10205
 D1
 The east passage continues deeper into the scarab floor.~
 ~
@@ -3361,7 +3521,19 @@ The east passage continues deeper into the scarab floor.~
 D2
 The south passage connects toward the hall's interior.~
 ~
+0 -1 10201
+D5
+~
+~
+0 -1 10203
+D4
+~
+~
 0 -1 10208
+D0
+~
+~
+0 -1 10201
 S
 #10205
 @@yAn Alcove of Offerings@@N~
@@ -3372,8 +3544,8 @@ D1
 The passage east returns to the beetle colonnade.~
 ~
 0 -1 10204
-D0
-The north passage continues into the floor's corridors.~
+D2
+~
 ~
 0 -1 10207
 S
@@ -3403,15 +3575,27 @@ A north-south connecting corridor through the western side of the first floor, m
 D2
 The south passage connects toward the inner halls.~
 ~
-0 -1 10208
+0 -1 10215
 D0
 The north passage connects toward the west stair landing area.~
 ~
-0 -1 10215
+0 -1 10205
 D1
 The east passage connects to the scarab hall.~
 ~
+0 -1 10208
+D5
+~
+~
+0 -1 10208
+D4
+~
+~
 0 -1 10203
+D3
+~
+~
+0 -1 10202
 S
 #10208
 @@yThe Ritual Basin Room@@N~
@@ -3428,6 +3612,14 @@ The east passage leads toward the floor's inner chambers.~
 0 -1 10209
 D3
 The west passage leads toward the west passage corridor.~
+~
+0 -1 10207
+D5
+~
+~
+0 -1 10204
+D4
+~
 ~
 0 -1 10207
 S
@@ -3526,12 +3718,16 @@ D3
 The west passage connects toward the mosaic floor room.~
 ~
 0 -1 10213
-D1
-The east passage leads into the floor's further inner halls.~
-~
-0 -1 10219
 D0
 The north passage leads toward the stair landings.~
+~
+0 -1 10219
+D5
+~
+~
+0 -1 10219
+D4
+~
 ~
 0 -1 10216
 S
@@ -3552,6 +3748,14 @@ D4
 The stairwell ascends to the Chamber of the High Priests on the second floor.~
 ~
 0 -1 10236
+D1
+~
+~
+0 -1 10217
+D0
+~
+~
+0 -1 10207
 S
 #10216
 @@yThe West Stair Landing (Floor 1)@@N~
@@ -3570,6 +3774,10 @@ D4
 The stairwell ascends to the alternate landing on the second floor.~
 ~
 0 -1 10237
+D5
+~
+~
+0 -1 10214
 S
 #10217
 @@yA Shrine Alcove@@N~
@@ -3580,8 +3788,8 @@ D1
 The passage east returns to the floor's connecting corridors.~
 ~
 0 -1 10218
-D0
-The north passage connects toward the stair landing area.~
+D3
+~
 ~
 0 -1 10215
 S
@@ -3616,6 +3824,14 @@ D2
 The south passage connects toward the inner colonnade.~
 ~
 0 -1 10214
+D4
+~
+~
+0 -1 10214
+D0
+~
+~
+0 -1 10226
 S
 #10220
 @@yThe Illusory Corridor@@N~
@@ -3630,8 +3846,8 @@ D1
 The passage east continues into the floor's inner chambers.~
 ~
 0 -1 10221
-D4
-The apparent ascent above is not what it seems — the hatch drops rather than rises.~
+D2
+~
 ~
 0 -1 10125
 S
@@ -3658,10 +3874,18 @@ D2
 The south passage connects toward the torch-bracket hall.~
 ~
 0 -1 10221
-D1
-The east passage leads into the floor's inner halls.~
+D4
+~
 ~
 0 -1 10224
+D3
+~
+~
+0 -1 10224
+D0
+~
+~
+0 -1 10223
 S
 #10223
 @@yA Guardians' Niche@@N~
@@ -3672,8 +3896,8 @@ D1
 The passage east returns to the corridor system.~
 ~
 0 -1 10224
-D0
-The north passage leads toward the floor's outer chambers.~
+D2
+~
 ~
 0 -1 10222
 S
@@ -3690,8 +3914,12 @@ D0
 The north passage leads toward the inner priest chamber.~
 ~
 0 -1 10225
-D2
-The south passage connects toward the scarab shrine.~
+D5
+~
+~
+0 -1 10222
+D1
+~
 ~
 0 -1 10222
 S
@@ -3718,14 +3946,14 @@ S
 A service corridor cut at the minimum necessary width, its walls undecorated @@bsandstone@@N with only functional tool marks from its construction. The passage provides a shortcut between two areas of the floor that would otherwise require a longer route through the ceremonial halls. The ceiling is low enough to require ducking at one point where a fallen block has reduced clearance.
 ~
 24585 11
-D1
-The passage east connects back to the ceremonial halls.~
-~
-0 -1 10227
 D2
 The passage south connects toward the priests' corridor.~
 ~
 0 -1 10219
+D0
+~
+~
+0 -1 10227
 S
 #10227
 @@yThe Hall of Prayers@@N~
@@ -3744,6 +3972,10 @@ D0
 The north passage leads toward the floor's further inner chambers.~
 ~
 0 -1 10229
+D2
+~
+~
+0 -1 10226
 S
 #10228
 @@yThe Side Archive@@N~
@@ -3874,14 +4106,14 @@ D5
 The stairwell descends back to the east stair landing on the first floor.~
 ~
 0 -1 10215
-D1
-The passage east enters the high priests' hall.~
-~
-0 -1 10238
 D0
 The passage north leads deeper into the second floor.~
 ~
 0 -1 10239
+D4
+~
+~
+0 -1 10238
 S
 #10237
 @@yThe Priests' Landing@@N~
@@ -3896,8 +4128,8 @@ D1
 The passage east connects to the high priests' hall.~
 ~
 0 -1 10238
-D0
-The north passage leads into the floor's chambers.~
+D4
+~
 ~
 0 -1 10239
 S
@@ -3918,6 +4150,14 @@ D0
 The north passage leads deeper into the second floor.~
 ~
 0 -1 10242
+D5
+~
+~
+0 -1 10236
+D2
+~
+~
+0 -1 10239
 S
 #10239
 @@yThe Anointing Chamber@@N~
@@ -3936,6 +4176,14 @@ D1
 The east passage leads toward a ritual side room.~
 ~
 0 -1 10240
+D5
+~
+~
+0 -1 10237
+D4
+~
+~
+0 -1 10243
 S
 #10240
 @@yA Ritual Side Room@@N~
@@ -3946,8 +4194,8 @@ D3
 The passage west returns toward the anointing chamber.~
 ~
 0 -1 10239
-D0
-The north passage connects toward the altar of the four winds.~
+D4
+~
 ~
 0 -1 10242
 S
@@ -3960,12 +4208,8 @@ D3
 The west passage leads back toward the high priests' hall.~
 ~
 0 -1 10238
-D1
-The east passage connects toward the floor's inner chambers.~
+D5
 ~
-0 -1 10244
-D0
-The north passage leads toward the altar room.~
 ~
 0 -1 10242
 S
@@ -3981,7 +4225,7 @@ The south passage returns toward the high priests' hall.~
 D3
 The west passage connects toward the ritual side room.~
 ~
-0 -1 10240
+0 -1 10243
 D1
 The east passage leads into the floor's inner halls.~
 ~
@@ -3990,6 +4234,14 @@ D0
 The north passage continues deeper into the second floor.~
 ~
 0 -1 10245
+D5
+~
+~
+0 -1 10240
+D4
+~
+~
+0 -1 10241
 S
 #10243
 @@yA Candlelit Niche@@N~
@@ -4000,8 +4252,8 @@ D1
 The passage east returns to the altar area.~
 ~
 0 -1 10242
-D2
-The passage south connects toward the anointing chamber.~
+D5
+~
 ~
 0 -1 10239
 S
@@ -4013,13 +4265,17 @@ The resident clergy of the second floor had their quarters here, their stone sle
 D3
 The west passage connects back toward the sacred scroll room.~
 ~
-0 -1 10241
-D1
-The east passage leads further into the floor's inner chambers.~
-~
-0 -1 10248
+0 -1 10242
 D0
 The north passage leads toward the inner prayer hall.~
+~
+0 -1 10248
+D5
+~
+~
+0 -1 10247
+D4
+~
 ~
 0 -1 10245
 S
@@ -4039,6 +4295,18 @@ The east passage leads toward the floor's further inner chambers.~
 D0
 The north passage connects toward the floor's approach sections.~
 ~
+0 -1 10251
+D5
+~
+~
+0 -1 10244
+D4
+~
+~
+0 -1 10246
+D3
+~
+~
 0 -1 10253
 S
 #10246
@@ -4050,8 +4318,8 @@ D1
 The concealed passage opens east into the floor's ceremonial corridors.~
 ~
 0 -1 10247
-D0
-The north passage connects toward the inner prayer hall.~
+D5
+~
 ~
 0 -1 10245
 S
@@ -4064,14 +4332,14 @@ D3
 The passage west connects toward the secret passage.~
 ~
 0 -1 10246
-D1
-The east passage leads toward the priests' sleeping quarters area.~
-~
-0 -1 10244
 D0
 The north passage connects to the corridor of wards.~
 ~
 0 -1 10249
+D4
+~
+~
+0 -1 10244
 S
 #10248
 @@yThe Vestment Chamber@@N~
@@ -4086,6 +4354,10 @@ D1
 The east passage leads toward the floor's approach sections.~
 ~
 0 -1 10249
+D2
+~
+~
+0 -1 10244
 S
 #10249
 @@yA Corridor of Wards@@N~
@@ -4099,21 +4371,21 @@ The west passage leads back toward the vestment chamber.~
 D0
 The north passage leads toward the upper stair landing.~
 ~
-0 -1 10260
+0 -1 10250
 D2
 The south passage connects toward the ritual fire pit.~
 ~
 0 -1 10247
+D1
+~
+~
+0 -1 10260
 S
 #10250
 @@yThe Marked Flagstones@@N~
 The floor of this chamber is paved with @@bsandstone@@N flags bearing individual carved symbols — small, precise marks at the center of each flag that form a pattern only legible from above. The pattern, viewed from the correct height, describes a protective ward that was presumably intended to deter supernatural rather than physical intrusion. The flags are set at slightly different depths, creating a subtly uneven surface underfoot. Certain flags produce a hollow sound; the pressure on them releases a mechanism that drops the stepping priest through a shaft without warning. The @@bmarked flags@@N are an ancient security measure that functions perfectly after millennia.
 ~
 24584 11
-D3
-The west passage connects toward the corridor of wards.~
-~
-0 -1 10249
 D0
 The north passage leads toward the floor's upper sections.~
 ~
@@ -4122,6 +4394,10 @@ D5
 A marked flagstone gives way, dropping down through a hidden shaft.~
 ~
 0 -1 10125
+D2
+~
+~
+0 -1 10249
 S
 #10251
 @@yThe Chanting Hall@@N~
@@ -4131,15 +4407,15 @@ This chamber's acoustic properties were deliberately engineered for group recita
 D3
 The west passage connects toward the inner prayer hall.~
 ~
-0 -1 10245
+0 -1 10252
 D1
 The east passage leads into the floor's further chambers.~
 ~
 0 -1 10254
-D0
-The north passage continues into the floor's upper sections.~
+D2
 ~
-0 -1 10253
+~
+0 -1 10245
 S
 #10252
 @@yA Side Shrine@@N~
@@ -4150,8 +4426,8 @@ D1
 The passage east returns to the chanting hall.~
 ~
 0 -1 10251
-D0
-The north passage leads toward the vaulted passage.~
+D2
+~
 ~
 0 -1 10253
 S
@@ -4163,15 +4439,23 @@ A connecting corridor with an exceptionally high corbelled vault ceiling that gi
 D2
 The south passage descends toward the chanting hall and marked flagstones.~
 ~
-0 -1 10251
-D3
-The west passage connects toward the side shrine.~
-~
-0 -1 10252
+0 -1 10250
 D0
 The north passage continues toward the upper stair landing area.~
 ~
+0 -1 10252
+D5
+~
+~
+0 -1 10255
+D4
+~
+~
 0 -1 10260
+D1
+~
+~
+0 -1 10245
 S
 #10254
 @@yThe East Ceremonial Wing@@N~
@@ -4190,6 +4474,10 @@ D1
 The east passage connects toward the west ceremonial wing via a cross corridor.~
 ~
 0 -1 10255
+D4
+~
+~
+0 -1 10255
 S
 #10255
 @@yThe West Ceremonial Wing@@N~
@@ -4199,29 +4487,33 @@ The western ceremonial wing mirrors the eastern in layout while carrying differe
 D3
 The passage west connects back toward the vaulted passage.~
 ~
-0 -1 10253
+0 -1 10254
 D0
 The north passage connects toward the approach sections.~
 ~
 0 -1 10261
-D1
-The east passage connects toward the east ceremonial wing.~
+D5
+~
 ~
 0 -1 10254
+D4
+~
+~
+0 -1 10253
 S
 #10256
 @@yA Preparation Alcove@@N~
 A small dark anteroom immediately before the floor's approach section, used for the final pre-entry preparations by priests ascending toward the high priest's inner chambers. The basin for ritual washing here is smaller than in the main preparation areas, a last-minute cleansing rather than a full ceremony. The stone rod for hanging the final vestment before entry is still in place, its iron bracket corroded but structurally intact.
 ~
 24585 11
-D1
-The passage east connects toward the inner sanctum antechamber.~
-~
-0 -1 10261
 D0
 The north passage leads toward the hall of the sacred asp.~
 ~
 0 -1 10257
+D5
+~
+~
+0 -1 10261
 S
 #10257
 @@yThe Hall of the Sacred Asp@@N~
@@ -4236,8 +4528,8 @@ D1
 The east passage leads toward the archpriest's study.~
 ~
 0 -1 10258
-D0
-The north passage continues toward the floor's innermost chambers.~
+D4
+~
 ~
 0 -1 10261
 S
@@ -4253,6 +4545,10 @@ The west passage leads toward the hall of the sacred asp.~
 D1
 The east passage continues toward the floor's final chambers.~
 ~
+0 -1 10259
+D0
+~
+~
 0 -1 10262
 S
 #10259
@@ -4264,8 +4560,8 @@ D3
 The passage west connects toward the archpriest's study.~
 ~
 0 -1 10258
-D0
-The north passage continues toward the floor's final approach section.~
+D4
+~
 ~
 0 -1 10262
 S
@@ -4277,7 +4573,7 @@ The stairwell landing on the second floor's upper side connects the Chamber of t
 D3
 The south passage leads back into the floor's ceremonial corridor.~
 ~
-0 -1 10253
+0 -1 10249
 D2
 The south passage connects toward the east ceremonial wing.~
 ~
@@ -4290,6 +4586,10 @@ E
 iron-banded archway~
 The @@biron-banded archway@@N is a dressed @@bsandstone@@N frame reinforced with wide iron bands that have rusted to brown without failing. Its carved lintel names the floor above as the Eternal Vault.
 ~
+D5
+~
+~
+0 -1 10253
 S
 #10261
 @@yThe Inner Sanctum Antechamber@@N~
@@ -4304,8 +4604,16 @@ D1
 The east passage continues toward the outer chamber.~
 ~
 0 -1 10262
-D0
-The north passage leads toward the final hall.~
+D5
+~
+~
+0 -1 10257
+D4
+~
+~
+0 -1 10256
+D3
+~
 ~
 0 -1 10263
 S
@@ -4317,15 +4625,19 @@ The outer chamber of the second floor's boss approach is wide and well-lit by th
 D3
 The west passage leads back toward the archpriest's study and collapsed vault area.~
 ~
-0 -1 10259
-D1
-The east passage connects toward the inner sanctum antechamber.~
-~
 0 -1 10261
 D0
 The north passage leads toward the final hall.~
 ~
 0 -1 10263
+D5
+~
+~
+0 -1 10259
+D2
+~
+~
+0 -1 10258
 S
 #10263
 @@yA Final Hall@@N~
@@ -4340,6 +4652,10 @@ D0
 The north passage enters the high priest's approach chamber.~
 ~
 0 -1 10264
+D1
+~
+~
+0 -1 10261
 S
 #10264
 @@yThe High Priest's Approach@@N~
@@ -4414,8 +4730,12 @@ D3
 The passage west returns toward the vault antechamber.~
 ~
 0 -1 10267
-D0
-The north passage continues into the vault's main chambers.~
+D2
+~
+~
+0 -1 10266
+D1
+~
 ~
 0 -1 10269
 S
@@ -4436,6 +4756,10 @@ D0
 The north passage continues into the vault interior.~
 ~
 0 -1 10271
+D3
+~
+~
+0 -1 10268
 S
 #10270
 @@yThe Embalmer's Gallery@@N~
@@ -4450,8 +4774,8 @@ D1
 The east passage leads toward the soul weighing chamber.~
 ~
 0 -1 10271
-D0
-The north passage continues deeper into the vault.~
+D4
+~
 ~
 0 -1 10273
 S
@@ -4471,21 +4795,33 @@ The east passage continues into the vault's mummy lords' wing.~
 D0
 The north passage leads toward the further vault chambers.~
 ~
+0 -1 10273
+D5
+~
+~
+0 -1 10272
+D4
+~
+~
 0 -1 10275
+D2
+~
+~
+0 -1 10269
 S
 #10272
 @@yA Dark Corridor@@N~
 A connecting corridor cutting diagonally through the vault's interior, its walls undecorated except for a continuous @@Rred border@@N at floor level — the danger indicator color that appears on this floor more frequently than on those below. The darkness here is thorough, resisting the peripheral light of adjacent rooms, as though the corridor itself maintains an active darkness rather than a passive absence of light.
 ~
 24585 11
-D3
-The passage west connects back toward the soul weighing chamber.~
+D5
 ~
-0 -1 10271
-D0
-The north passage continues toward the mummy lords' wing.~
 ~
 0 -1 10273
+D4
+~
+~
+0 -1 10271
 S
 #10273
 @@yThe Mummy Lords' Wing@@N~
@@ -4504,6 +4840,18 @@ D0
 The north passage continues toward the preserved archives.~
 ~
 0 -1 10275
+D5
+~
+~
+0 -1 10270
+D4
+~
+~
+0 -1 10272
+D3
+~
+~
+0 -1 10271
 S
 #10274
 @@yA Burial Alcove@@N~
@@ -4514,8 +4862,8 @@ D3
 The passage west leads back toward the mummy lords' wing.~
 ~
 0 -1 10273
-D0
-The north passage continues deeper into the vault.~
+D1
+~
 ~
 0 -1 10275
 S
@@ -4527,7 +4875,7 @@ A secondary archive chamber for this floor's records, its contents sealed in sto
 D2
 The south passage leads back toward the burial alcove area.~
 ~
-0 -1 10274
+0 -1 10273
 D1
 The east passage leads toward the ritual unguent room.~
 ~
@@ -4536,6 +4884,14 @@ D0
 The north passage continues deeper into the vault.~
 ~
 0 -1 10279
+D5
+~
+~
+0 -1 10271
+D3
+~
+~
+0 -1 10274
 S
 #10276
 @@yThe Ritual Unguent Room@@N~
@@ -4553,6 +4909,10 @@ The east passage leads toward the treacherous overhang.~
 D0
 The north passage continues deeper into the vault.~
 ~
+0 -1 10278
+D4
+~
+~
 0 -1 10279
 S
 #10277
@@ -4568,10 +4928,6 @@ D1
 The east passage continues toward the east vault passage.~
 ~
 0 -1 10278
-D4
-The apparent ceiling hatch is not what it appears to be — the drop from above is down, not up.~
-~
-0 -1 10125
 S
 #10278
 @@yThe East Vault Passage@@N~
@@ -4590,6 +4946,10 @@ D2
 The south passage leads back deeper into the Eternal Vault.~
 ~
 0 -1 10276
+D1
+~
+~
+0 -1 10279
 S
 #10279
 @@yThe West Vault Passage@@N~
@@ -4600,14 +4960,18 @@ D2
 The south passage leads back toward the preserved archives area.~
 ~
 0 -1 10275
-D1
-The east passage connects toward the east vault passage.~
-~
-0 -1 10278
 D0
 The north passage leads toward the canopic shrine.~
 ~
 0 -1 10280
+D5
+~
+~
+0 -1 10276
+D3
+~
+~
+0 -1 10278
 S
 #10280
 @@yThe Canopic Shrine@@N~
@@ -4621,11 +4985,15 @@ The south passage leads back toward the west vault passage.~
 D1
 The east passage leads toward the inner vault hall.~
 ~
-0 -1 10282
+0 -1 10285
 D0
 The north passage continues toward the final approach section.~
 ~
-0 -1 10285
+0 -1 10282
+D4
+~
+~
+0 -1 10282
 S
 #10281
 @@yA Collapsed Crypt Wing@@N~
@@ -4636,8 +5004,8 @@ D1
 The narrow gap east squeezes through the rubble toward the inner vault hall.~
 ~
 0 -1 10282
-D0
-The north passage continues toward the further vault chambers.~
+D4
+~
 ~
 0 -1 10285
 S
@@ -4650,18 +5018,18 @@ D3
 The west passage connects toward the collapsed crypt wing.~
 ~
 0 -1 10281
-D1
-The east passage continues toward the warded threshold.~
-~
-0 -1 10284
 D2
 The south passage connects toward the canopic shrine.~
 ~
 0 -1 10280
-D0
-The north passage leads toward the mummy lord's antechamber.~
+D5
 ~
-0 -1 10285
+~
+0 -1 10280
+D4
+~
+~
+0 -1 10284
 S
 #10283
 @@yA Final Preparation Room@@N~
@@ -4672,8 +5040,8 @@ D1
 The passage east leads toward the warded threshold.~
 ~
 0 -1 10284
-D0
-The north passage continues toward the mummy lord's antechamber.~
+D5
+~
 ~
 0 -1 10285
 S
@@ -4690,6 +5058,10 @@ D0
 The north passage leads into the mummy lord's antechamber.~
 ~
 0 -1 10285
+D5
+~
+~
+0 -1 10282
 S
 #10285
 @@yThe Mummy Lord's Antechamber@@N~
@@ -4704,22 +5076,26 @@ D1
 The east passage leads toward the guard station.~
 ~
 0 -1 10287
-D0
-The north passage leads deeper toward the boss approach.~
+D5
 ~
-0 -1 10288
+~
+0 -1 10281
+D4
+~
+~
+0 -1 10283
+D3
+~
+~
+0 -1 10280
 S
 #10286
 @@yA Side Passage@@N~
 A narrow connecting passage on the eastern side of the vault's inner approach section, cutting between two of the main chambers and providing an alternate route through the approach sequence. The walls here are plain @@bsandstone@@N with only occasional @@RRed@@N border stripes at floor level — the warning color, carried even into this utilitarian space.
 ~
 24585 11
-D3
-The passage west connects toward the mummy lord's antechamber.~
+D1
 ~
-0 -1 10285
-D0
-The north passage connects toward the inner hall.~
 ~
 0 -1 10288
 S
@@ -4750,6 +5126,10 @@ D0
 The north passage leads into the mummy lord's approach.~
 ~
 0 -1 10289
+D3
+~
+~
+0 -1 10286
 S
 #10289
 @@yThe Mummy Lord's Approach@@N~
@@ -4869,7 +5249,7 @@ The south passage leads back toward the drake's outer hall.~
 D1
 The east passage continues into the upper drake hall.~
 ~
-0 -1 10300
+0 -1 10297
 D0
 The north passage leads toward the upper sections.~
 ~
@@ -4878,6 +5258,10 @@ D3
 The west passage connects toward the claw-marked corridor.~
 ~
 0 -1 10295
+D4
+~
+~
+0 -1 10300
 S
 #10297
 @@yThe Char-Pit Room@@N~
@@ -4913,6 +5297,10 @@ The east passage continues toward the upper sections.~
 D0
 The north passage continues deeper into the Drake's Ascent.~
 ~
+0 -1 10299
+D4
+~
+~
 0 -1 10301
 S
 #10299
@@ -4920,14 +5308,14 @@ S
 A dark connecting passage scoured clean of every detail by repeated fire exposure at extremely close range. The walls are smooth where the @@bsandstone@@N surface has been melted and re-resolidified, and the floor shows the imprint of something heavy that walked through the soft stone during a cooling event and left permanent impressions. The passage is warm to the touch throughout its length.
 ~
 24585 11
-D3
-The passage west connects back toward the trophy hall.~
-~
-0 -1 10298
 D0
 The north passage continues toward the upper Drake's Ascent.~
 ~
 0 -1 10301
+D2
+~
+~
+0 -1 10298
 S
 #10300
 @@yThe Upper Drake Hall@@N~
@@ -4946,6 +5334,14 @@ D0
 The north passage leads toward the nest area.~
 ~
 0 -1 10302
+D5
+~
+~
+0 -1 10296
+D3
+~
+~
+0 -1 10298
 S
 #10301
 @@yA Heat-Shimmering Corridor@@N~
@@ -4956,14 +5352,22 @@ D3
 The passage west leads back to the upper drake hall.~
 ~
 0 -1 10300
-D0
-The north passage continues toward the nest approach.~
-~
-0 -1 10303
 D1
 The east passage continues toward the side passages.~
 ~
 0 -1 10305
+D5
+~
+~
+0 -1 10298
+D4
+~
+~
+0 -1 10303
+D2
+~
+~
+0 -1 10299
 S
 #10302
 @@yThe Nest Antechamber@@N~
@@ -4992,6 +5396,10 @@ D0
 The north passage leads toward the ascending shaft.~
 ~
 0 -1 10304
+D5
+~
+~
+0 -1 10301
 S
 #10304
 @@yAn Ascending Shaft@@N~
@@ -5052,8 +5460,8 @@ D3
 The passage west leads back toward the inner drake hall.~
 ~
 0 -1 10306
-D0
-The north passage continues toward the pre-lair corridor.~
+D1
+~
 ~
 0 -1 10308
 S
@@ -5070,6 +5478,10 @@ D0
 The north passage enters the Drake's approach chamber.~
 ~
 0 -1 10309
+D3
+~
+~
+0 -1 10307
 S
 #10309
 @@yThe Drake's Approach@@N~
@@ -5144,8 +5556,8 @@ D1
 The east passage continues into the golden hall.~
 ~
 0 -1 10314
-D0
-The north passage leads toward the relic chamber.~
+D4
+~
 ~
 0 -1 10315
 S
@@ -5157,15 +5569,23 @@ Gold leaf lines every surface of this chamber: ceiling, walls, floor borders, co
 D2
 The south passage leads back toward the wind-scoured chamber.~
 ~
-0 -1 10313
-D1
-The east passage continues toward the inner chambers.~
-~
-0 -1 10318
+0 -1 10312
 D0
 The north passage continues toward the relic chamber.~
 ~
 0 -1 10315
+D5
+~
+~
+0 -1 10318
+D4
+~
+~
+0 -1 10318
+D3
+~
+~
+0 -1 10313
 S
 #10315
 @@yThe Relic Chamber@@N~
@@ -5184,6 +5604,10 @@ D0
 The north passage leads toward the hall of judgment.~
 ~
 0 -1 10317
+D5
+~
+~
+0 -1 10313
 S
 #10316
 @@yA Side Niche@@N~
@@ -5194,8 +5618,8 @@ D3
 The passage west leads back toward the relic chamber.~
 ~
 0 -1 10315
-D0
-The north passage connects toward the hall of judgment.~
+D1
+~
 ~
 0 -1 10317
 S
@@ -5212,10 +5636,14 @@ D1
 The east passage leads toward the pharaoh's antechamber.~
 ~
 0 -1 10318
-D0
-The north passage leads toward the inner apex hall.~
+D4
+~
 ~
 0 -1 10319
+D3
+~
+~
+0 -1 10316
 S
 #10318
 @@yThe Pharaoh's Antechamber@@N~
@@ -5226,14 +5654,22 @@ D3
 The west passage leads back toward the hall of judgment.~
 ~
 0 -1 10317
-D1
-The east passage leads toward the inner apex hall.~
-~
-0 -1 10319
 D2
 The south passage leads back toward the golden hall.~
 ~
+0 -1 10319
+D5
+~
+~
 0 -1 10314
+D4
+~
+~
+0 -1 10314
+D0
+~
+~
+0 -1 10319
 S
 #10319
 @@yThe Inner Apex Hall@@N~
@@ -5250,6 +5686,14 @@ The east passage continues toward the final passages.~
 0 -1 10320
 D0
 The north passage leads toward the throne room approach.~
+~
+0 -1 10318
+D5
+~
+~
+0 -1 10317
+D3
+~
 ~
 0 -1 10321
 S
@@ -5280,6 +5724,10 @@ D0
 The north passage leads into the pre-throne hall.~
 ~
 0 -1 10322
+D1
+~
+~
+0 -1 10319
 S
 #10322
 @@yThe Pre-Throne Hall@@N~
