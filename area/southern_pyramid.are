@@ -1,0 +1,23 @@
+#AREA
+@@ySouthern @@bPyramid@@N~
+Q 16
+K southernpyramid~
+L @@W(@@y120 140@@W)@@N~
+N 76
+I 120 140
+V 11450 11649
+X 0
+F 20
+U @@yancient sand cascades through the Southern Pyramid as sealed chambers exhale stale air@@N~
+T
+#ROOMS
+#11450
+@@yThe Crushing Hall@@N~
+@@yA narrow corridor of @@bsandstone@@N @@ypresses inward from all sides, the walls scored with deep gouges as though massive stone blocks once slid through here.@@N
+@@bDried mortar@@N @@ycrumbles from the joints between @@bhuge limestone slabs@@N @@ythat form the ceiling, each one hanging at a barely perceptible angle.@@N
+@@yThe floor is covered in a fine layer of @@bgritty dust@@N@@y, and the air tastes of old stone and stale, sealed chambers.@@N
+~
+13 11
+S
+#0
+#$
