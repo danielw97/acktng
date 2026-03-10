@@ -2507,4 +2507,414 @@ The north passage continues deeper into the vault.~
 ~
 0 -1 10275
 S
+#10275
+@@yThe Preserved Archives@@N~
+A secondary archive chamber for this floor's records, its contents sealed in stone cylinders similar to those in the floor below but here treated with additional preservation measures — the cylinders are immersed in a dry mineral pack that has maintained extremely stable conditions. @@bStone jar lids@@N of unusual size are stacked against the west wall; the largest of them would require two people to lift. The content labels on the visible cylinders reference administrative records specific to the vault's management: maintenance schedules, interment dates, the specific rituals required at each date of the ritual calendar for each interred lord.
+~
+24584 11
+D2
+The south passage leads back toward the burial alcove area.~
+~
+0 -1 10274
+D1
+The east passage leads toward the ritual unguent room.~
+~
+0 -1 10276
+D0
+The north passage continues deeper into the vault.~
+~
+0 -1 10279
+S
+#10276
+@@yThe Ritual Unguent Room@@N~
+Rows of sealed stone vessels stand on carved shelves along both walls of this chamber, each one sealed with wax plugs that have hardened to stone consistency. The vessels held the ritual unguents used in the ongoing maintenance of the interred mummy lords — annual applications required by the specific terms of the interment contracts. The seals are intact; the unguents inside may still be chemically active, preserved in the same sealed conditions that have maintained everything else in the vault. @@cBlue@@N text on the vessel sides records each formulation, its purpose, and the lord whose maintenance it served.
+~
+24584 11
+D3
+The west passage connects toward the preserved archives.~
+~
+0 -1 10275
+D1
+The east passage leads toward the treacherous overhang.~
+~
+0 -1 10277
+D0
+The north passage continues deeper into the vault.~
+~
+0 -1 10279
+S
+#10277
+@@yThe Treacherous Overhang@@N~
+The ceiling of this chamber has been undermined by water infiltration, leaving a long section of stone overhang that juts into the room's upper space and appears to be a continuation of the ceiling above. @@bThe overhang@@N is actually a false ceiling section, hollow above and connected to a shaft through the pyramid's interior. What appears to be a way up through the ceiling hatch above is not what it seems — the hatch opens outward rather than inward, and the shaft beyond drops rather than rises. The chamber's @@bsandstone@@N floor is solid, but any attempt to use the apparent ceiling hatch leads to a rude surprise.
+~
+24585 11
+D3
+The passage west connects toward the ritual unguent room.~
+~
+0 -1 10276
+D1
+The east passage continues toward the east vault passage.~
+~
+0 -1 10278
+D4
+The apparent ceiling hatch is not what it appears to be — the drop from above is down, not up.~
+~
+0 -1 10125
+S
+#10278
+@@yThe East Vault Passage@@N~
+The eastern passage of the Eternal Vault serves as the main vertical transit point between the third and fourth floors, its stairwell ascending through the pyramid's structural core to the Drake's Ascent above. The walls of the passage carry transitional imagery: the vault's cool preservation theme gives way to the scorched, aggressive imagery of the floor above, the shift visible as a literal change in decoration style at a specific point in the stairwell. The air moving down from above carries warmth and the faint chemical signature of old combustion. Recall is possible from this passage.
+~
+16396 11
+D3
+The west passage returns toward the treacherous overhang.~
+~
+0 -1 10277
+D4
+The stairwell ascends to the Drake's Ascent on the fourth floor.~
+~
+0 -1 10291
+D2
+The south passage leads back deeper into the Eternal Vault.~
+~
+0 -1 10276
+S
+#10279
+@@yThe West Vault Passage@@N~
+A secondary connecting corridor on the western side of the vault's interior, this passage carries the same dense inscription program as the rest of the floor but in a more compressed form — smaller glyphs, tighter spacing, as though the carvers were working against a deadline. @@yGold paint@@N in the borders is spotty here, applied in sections as though running out of material. The passage connects the vault's interior hall to the canopic shrine and the outer chambers.
+~
+24584 11
+D2
+The south passage leads back toward the preserved archives area.~
+~
+0 -1 10275
+D1
+The east passage connects toward the east vault passage.~
+~
+0 -1 10278
+D0
+The north passage leads toward the canopic shrine.~
+~
+0 -1 10280
+S
+#10280
+@@yThe Canopic Shrine@@N~
+Four stone pedestals stand at the cardinal points of this chamber's center, each one bearing a large canopic jar of @@bsandstone@@N carved with the specific animal-head appropriate to each direction and each organ. The jars are sealed and intact, their contents — the preserved viscera of the secondary pharaoh-lords — still in place after millennia. @@cLapis lazuli@@N collar decorations circle the neck of each jar, and @@yyellow gold@@N borders frame the carved directional symbols. The chamber smells of preservation chemicals more intensely than any other room in the vault, the concentration of sealed organic material making the air noticeably thick.
+~
+24584 11
+D2
+The south passage leads back toward the west vault passage.~
+~
+0 -1 10279
+D1
+The east passage leads toward the inner vault hall.~
+~
+0 -1 10282
+D0
+The north passage continues toward the final approach section.~
+~
+0 -1 10285
+S
+#10281
+@@yA Collapsed Crypt Wing@@N~
+A crypt wing that has entirely collapsed, its ceiling down and its walls cracked through in multiple places. @@bSandstone@@N rubble fills most of the floor space, and sarcophagi visible beneath the fallen stone are crushed and displaced, their contents either destroyed or dispersed through the rubble. The structural failure here is more complete than in the partial collapses elsewhere; this wing is essentially inaccessible except as a squeeze through a narrow gap in the rubble.
+~
+24585 11
+D1
+The narrow gap east squeezes through the rubble toward the inner vault hall.~
+~
+0 -1 10282
+D0
+The north passage continues toward the further vault chambers.~
+~
+0 -1 10285
+S
+#10282
+@@yThe Inner Vault Hall@@N~
+The innermost general hall of the Eternal Vault, distinguished from the outer halls by the increasing concentration of @@RRed@@N in the decorative scheme: where the vault's outer sections used red as an accent, the inner halls use it as the dominant color, creating an atmosphere of graduated threat. @@yGold cartouches@@N still identify the pharaoh-lords whose sealed recesses occupy the walls, but they sit in @@Rred-bordered@@N frames rather than the @@yyellow@@N borders of the floor's entrance section. The transition is deliberate and effective.
+~
+24584 11
+D3
+The west passage connects toward the collapsed crypt wing.~
+~
+0 -1 10281
+D1
+The east passage continues toward the warded threshold.~
+~
+0 -1 10284
+D2
+The south passage connects toward the canopic shrine.~
+~
+0 -1 10280
+D0
+The north passage leads toward the mummy lord's antechamber.~
+~
+0 -1 10285
+S
+#10283
+@@yA Final Preparation Room@@N~
+A dark anteroom in the vault's boss approach section, this preparation chamber is stripped of the elaborate decoration visible elsewhere in the vault: its walls are plain @@bsandstone@@N, the surfaces marked only with functional tool patterns from their cutting. The simplicity feels deliberate rather than unfinished — as though the approach to the Eternal Mummy Lord was intended to be unadorned as a final test of seriousness for those who proceed.
+~
+24585 11
+D1
+The passage east leads toward the warded threshold.~
+~
+0 -1 10284
+D0
+The north passage continues toward the mummy lord's antechamber.~
+~
+0 -1 10285
+S
+#10284
+@@yThe Warded Threshold@@N~
+Glyphs of warning cover every stone of this chamber from floor to ceiling without gap: every protective formula in the vault's inscription program is represented here, compressed and repeated across every available surface. @@cLapis lazuli@@N fills the most critical protective words, @@yyellow gold@@N covers the divine authority invocations, and @@RRed@@N paint fills the specific curse formulas that activate against unauthorized entry. The cumulative effect is of a room that is trying, with considerable emphasis, to communicate a single message through every means available to it.
+~
+24584 11
+D3
+The west passage leads back through the final preparation room.~
+~
+0 -1 10283
+D0
+The north passage leads into the mummy lord's antechamber.~
+~
+0 -1 10285
+S
+#10285
+@@yThe Mummy Lord's Antechamber@@N~
+The outer antechamber of the Eternal Mummy Lord is at the same high ceiling height as the canopic shrine, and its walls carry the only individualized portrait on this floor: the Mummy Lord in life, shown in a painting that preserves specific facial features and a posture of considerable authority. The figure in the portrait carries a flail and a crook, but the crook is oversized and the expression is explicitly aggressive in a way that formal portraiture normally avoids. @@RBlood-red@@N borders frame the entire portrait space, and the @@yyellow@@N of the figure's ceremonial regalia seems to have been chosen to maximize contrast with the surrounding red.
+~
+24584 11
+D2
+The south passage leads back toward the warded threshold.~
+~
+0 -1 10284
+D1
+The east passage leads toward the guard station.~
+~
+0 -1 10287
+D0
+The north passage leads deeper toward the boss approach.~
+~
+0 -1 10288
+S
+#10286
+@@yA Side Passage@@N~
+A narrow connecting passage on the eastern side of the vault's inner approach section, cutting between two of the main chambers and providing an alternate route through the approach sequence. The walls here are plain @@bsandstone@@N with only occasional @@RRed@@N border stripes at floor level — the warning color, carried even into this utilitarian space.
+~
+24585 11
+D3
+The passage west connects toward the mummy lord's antechamber.~
+~
+0 -1 10285
+D0
+The north passage connects toward the inner hall.~
+~
+0 -1 10288
+S
+#10287
+@@yThe Guard Station@@N~
+A dedicated guard post in the vault's inner approach section, larger than the guard rooms in the floors below and equipped with a second stone seat opposite the first, suggesting a two-person watch assignment in this location. The sight-line from here covers the approach to the inner hall, which was presumably the value of this specific position. The walls carry brief instructional text: the correct challenge, the acceptable response, and the action to take if the response is incorrect.
+~
+24584 11
+D3
+The west passage leads back toward the mummy lord's antechamber.~
+~
+0 -1 10285
+D0
+The north passage connects toward the inner hall.~
+~
+0 -1 10288
+S
+#10288
+@@yThe Inner Hall@@N~
+The innermost connecting hall before the Mummy Lord's Approach, its walls now carrying only @@Rred@@N inscription without any other color: all the @@yyellow@@N gold and @@cblue@@N lapis that characterize the vault's outer sections have been replaced by the danger indicator throughout this space. The inscriptions themselves have shifted from mixed historical and protective content to purely threatening: explicit descriptions of the Mummy Lord's capabilities, preferences, and the specific manner of deaths it has administered to previous intruders.
+~
+24584 11
+D2
+The south passage leads back toward the guard station and side passage.~
+~
+0 -1 10287
+D0
+The north passage leads into the mummy lord's approach.~
+~
+0 -1 10289
+S
+#10289
+@@yThe Mummy Lord's Approach@@N~
+The final approach chamber to the Eternal Mummy Lord is a tall, oppressive space where every design decision was made to emphasize the being beyond as an absolute authority. A @@bglowing stone arch@@N stands in the north wall, its @@cblue@@N and @@yyellow@@N inlaid stones emitting the vault's sourceless light from within the stone itself rather than from carvings in the ceiling — the arch is alive with contained power. @@RBlood-red@@N curse inscriptions below the arch are the most densely written in the pyramid, packed into every available space. The air through the arch is several degrees colder than this chamber.
+~
+24584 11
+D2
+The south passage leads back through the inner hall.~
+~
+0 -1 10288
+D0
+The @@bglowing stone arch@@N stands in the north wall, its carved stones warm with contained @@cblue@@N light.~
+^glowing stone arch~
+1 -1 10290
+E
+glowing stone arch~
+The @@bglowing stone arch@@N emits @@cblue@@N light from within the stone itself, its inlaid @@cblue@@N and @@yyellow@@N elements alive with an energy that has persisted without visible source since the vault's sealing.
+~
+S
+#10290
+@@yThe Eternal Vault Chamber@@N~
+The tomb chamber of the Eternal Mummy Lord is the cold heart of the third floor, a space where the temperature drops several degrees below the surrounding vault and the air carries the maximum concentration of mummification preservatives in the entire pyramid. @@cBlue light@@N from the @@bglowing stone arch@@N behind filters into the chamber, casting long shadows across the floor that do not quite correspond to the room's physical objects. A massive stone sarcophagus stands open at the chamber's center, its lid removed and resting against the north wall, the wrappings inside disturbed — the Mummy Lord does not recline here but patrols, keeping its eternal watch in active motion. The only exit leads south through the @@bglowing stone arch@@N.
+~
+24588 11
+D2
+The @@bglowing stone arch@@N in the south wall leads back to the approach chamber.~
+^glowing stone arch~
+1 -1 10289
+S
+#10291
+@@yThe Fourth Ascent@@N~
+The stairwell from the Eternal Vault opens onto this landing at the start of the Drake's Ascent, the pyramid's fourth floor. The temperature change is immediate and significant: where the vault below was cold and still, this level is warm with a dry, residual heat absorbed into the @@bsandstone@@N from years of the Pyramid Drake's presence. The walls of the landing bear the marks of the floor's transition: the vault's precise carved inscriptions give way to rough scorch marks and claw gouges that cover the original decorative program. Recall is possible from this landing.
+~
+16396 11
+D5
+The stairwell descends back to the east vault passage on the third floor.~
+~
+0 -1 10278
+D1
+The passage east enters the drake's outer hall.~
+~
+0 -1 10292
+S
+#10292
+@@yThe Drake's Outer Hall@@N~
+The outer hall of the Drake's Ascent is the first room to show the full physical impact of a large creature's permanent occupation: the @@bsandstone@@N floor is scored with the claw-mark patterns of something massive that has paced this space repeatedly over centuries, each pass deepening the same tracks until they are carved an inch into the stone. The walls carry ancient hieroglyphs half-obscured by @@Rblackened scorch marks@@N from fire that burned hot enough to fuse the surface stone to a glassy finish in patches. The heat here is constant and dry, absorbed into the stone itself rather than generated by any active flame.
+~
+24584 11
+D3
+The west passage leads back to the fourth ascent landing.~
+~
+0 -1 10291
+D1
+The east passage continues into the drake's territory.~
+~
+0 -1 10293
+D0
+The north passage leads deeper into the Drake's Ascent.~
+~
+0 -1 10296
+S
+#10293
+@@yA Scorch-Marked Passage@@N~
+A dark connecting corridor where the walls, floor, and ceiling are all blackened by fire damage that occurred at close range — the scorch pattern suggests something large breathing fire in a confined space rather than a fire burning in open air. The @@bsandstone@@N has absorbed the heat and stored it; pressing a hand against the wall in this passage produces a warmth that comes from within the stone rather than from the air. Fine @@yochre@@N particles have been fused into the scorch pattern in irregular patches, creating a strange, permanent @@yorange-yellow@@N discoloration on the blackened surface.
+~
+24585 11
+D3
+The passage west leads back toward the drake's outer hall.~
+~
+0 -1 10292
+D1
+The passage east continues into the ash-filled chamber.~
+~
+0 -1 10294
+S
+#10294
+@@yThe Ash-Filled Chamber@@N~
+Deep drifts of pale grey ash fill this chamber from previous fires, accumulated over centuries until the ash level in the corners reaches knee height and the center is a compacted mass that has settled to a firm surface underfoot. The ash is cold — no active fire here — but the room carries the mineral smell of combusted @@bsandstone@@N and whatever organic matter was available to burn at the time of the fires. Items carried in here acquire an immediate coating of fine ash that obscures surfaces and irritates eyes.
+~
+24584 11
+D3
+The passage west returns to the scorch-marked passage.~
+~
+0 -1 10293
+D1
+The east passage continues into the claw-marked corridor.~
+~
+0 -1 10295
+D0
+The north passage leads toward the upper sections of the Drake's Ascent.~
+~
+0 -1 10298
+S
+#10295
+@@yThe Claw-Marked Corridor@@N~
+Deep parallel gouges run along both walls of this dark corridor at a consistent height — the mark of the Pyramid Drake's claws dragged along the stone during its territorial circuit. The gouges are as wide as a human hand and deep enough to catch a finger to the first knuckle, cut through the @@bsandstone@@N with a force that implies casual rather than deliberate destruction. @@yyellow@@N scratch-marks in the stone at the gouge termini show where the claws pulled free of the surface, leaving residual color from the stone mineral. The corridor smells strongly of something reptilian and warm.
+~
+24585 11
+D3
+The passage west leads back to the ash-filled chamber.~
+~
+0 -1 10294
+D1
+The passage east continues toward the bone-strewn hall.~
+~
+0 -1 10296
+S
+#10296
+@@yThe Bone-Strewn Hall@@N~
+The remains of the Drake's prey are distributed across the floor of this hall in various states of processing: complete skeletons pushed to the walls, partial skeletons in the open floor space, individual bones scattered throughout by the casual movement of a large body that no longer attaches significance to the debris of old meals. The bones are from multiple species, including at least one set of human dimensions. @@yYellow heat-bleaching@@N has turned most of the exposed bone surfaces to the same pale cream as the @@bsandstone@@N around them, making the floor difficult to read at a glance.
+~
+24584 11
+D2
+The south passage leads back toward the drake's outer hall.~
+~
+0 -1 10292
+D1
+The east passage continues into the upper drake hall.~
+~
+0 -1 10300
+D0
+The north passage leads toward the upper sections.~
+~
+0 -1 10300
+D3
+The west passage connects toward the claw-marked corridor.~
+~
+0 -1 10295
+S
+#10297
+@@yThe Char-Pit Room@@N~
+The center of this chamber is occupied by a large blackened depression in the floor — a natural hollow that the Pyramid Drake has used as a fire-breathing point for so long that the stone at its center has been reduced to a slag-like fusion of minerals. The depression is cold now but visually striking: the fused stone is dark grey with an iridescent surface that shifts @@yorange@@N and @@Rred@@N in even minimal light. Scorch marks radiate outward from the pit in every direction, and the ceiling directly above it has been blackened to the same glassy finish as the pit itself.
+~
+24585 11
+D3
+The passage west connects back toward the bone-strewn hall.~
+~
+0 -1 10296
+D1
+The east passage continues into the trophy hall.~
+~
+0 -1 10298
+S
+#10298
+@@yThe Trophy Hall@@N~
+Skulls mounted on iron spikes line both walls of this chamber at regular intervals, an arrangement too deliberate and too precisely spaced to be accidental accumulation. The skulls represent many different creatures, and they have been sorted: smaller skulls at one height, larger at another, humanoid skulls in a specific section separate from the rest. The mounting spikes are corroded iron driven directly into the @@bsandstone@@N blocks with considerable force. Whether the arrangement represents territory-marking, accumulated trophies, or something else entirely is impossible to determine from the evidence.
+~
+24584 11
+D2
+The south passage leads back toward the ash-filled chamber.~
+~
+0 -1 10294
+D3
+The west passage leads toward the char-pit room.~
+~
+0 -1 10297
+D1
+The east passage continues toward the upper sections.~
+~
+0 -1 10300
+D0
+The north passage continues deeper into the Drake's Ascent.~
+~
+0 -1 10301
+S
+#10299
+@@yA Narrow Scorched Passage@@N~
+A dark connecting passage scoured clean of every detail by repeated fire exposure at extremely close range. The walls are smooth where the @@bsandstone@@N surface has been melted and re-resolidified, and the floor shows the imprint of something heavy that walked through the soft stone during a cooling event and left permanent impressions. The passage is warm to the touch throughout its length.
+~
+24585 11
+D3
+The passage west connects back toward the trophy hall.~
+~
+0 -1 10298
+D0
+The north passage continues toward the upper Drake's Ascent.~
+~
+0 -1 10301
+S
 #$
