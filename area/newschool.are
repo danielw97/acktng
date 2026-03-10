@@ -140,7 +140,7 @@ After you have tried all six directions, go @@yWEST@@N to continue.
 ~
 S
 #20203
-Lesson I: Doors and Locks~
+Lesson II: Doors and Locks~
 @@NYou are in a stone chamber with iron-banded doors set into the walls.
 One heavy door leads @@ydown@@N, and it appears to be closed.  A sign is
 bolted to the wall next to it.  The corridor continues @@ysouth@@N.
@@ -158,7 +158,7 @@ door~
 1 -1 20204
 E
 sign~
-@@WLesson I: Doors and Locks@@N
+@@WLesson II: Doors and Locks@@N
 
 Sometimes exits are blocked by doors.  You can interact with doors using:
 
@@ -203,7 +203,7 @@ Finally, go @@yNORTH@@N to continue.
 ~
 S
 #20205
-Lesson II: Configuration~
+Lesson III: Configuration~
 @@NYou emerge into a bright room decorated with colorful banners.  Each
 banner displays different text in vivid hues.  A sign hangs prominently
 on the wall.  Exits lead @@yeast@@N and @@ysouth@@N.
@@ -221,7 +221,7 @@ door~
 5 20250 20204
 E
 sign~
-@@WLesson II: Configuration@@N
+@@WLesson III: Configuration@@N
 
 You can customize how the game looks and behaves with these commands:
 
@@ -238,7 +238,7 @@ When ready, go @@yEAST@@N.
 ~
 S
 #20206
-Lesson III: Communication~
+Lesson IV: Communication~
 @@NYou enter a room shaped like a small amphitheater, with stone benches
 arranged in a semicircle.  The acoustics here are remarkable -- even a
 whisper carries.  A sign is posted at the front.  Exits lead @@ysouth@@N
@@ -257,7 +257,7 @@ You see the configuration room.
 0 0 20205
 E
 sign~
-@@WLesson III: Communication@@N
+@@WLesson IV: Communication@@N
 
 You can talk to other players using channels:
 
@@ -278,7 +278,7 @@ When ready, go @@ySOUTH@@N.
 ~
 S
 #20207
-Lesson IV: Items and Equipment~
+Lesson V: Items and Equipment~
 @@NYou enter a well-lit supply room.  Wooden crates and barrels are stacked
 along the walls.  On the floor you see a bag and a lantern that someone
 has left behind.  A sign on the wall describes how to handle items.
@@ -297,7 +297,7 @@ You see the equipment room.
 0 0 20208
 E
 sign~
-@@WLesson IV: Items and Equipment (Part 1)@@N
+@@WLesson V: Items and Equipment (Part 1)@@N
 
 You can interact with items on the ground and in your inventory:
 
@@ -318,7 +318,7 @@ When ready, go @@yWEST@@N.
 ~
 S
 #20208
-Lesson IV: Wearing Equipment~
+Lesson VI: Wearing Equipment~
 @@NYou enter an armory with weapon racks and armor stands lining the walls.
 A training sword and a small buckler rest on a table, free for the taking.
 A sign on the wall explains how to use equipment.  Exits lead @@yeast@@N
@@ -337,7 +337,7 @@ You see the supply room.
 0 0 20207
 E
 sign~
-@@WLesson IV: Items and Equipment (Part 2)@@N
+@@WLesson VI: Items and Equipment (Part 2)@@N
 
 To use equipment, you wear or wield it:
 
@@ -359,7 +359,7 @@ When ready, go @@yNORTH@@N.
 ~
 S
 #20209
-Lesson V: Score and Worth~
+Lesson VII: Score and Worth~
 @@NYou enter a scholarly chamber filled with charts and records.  A large
 scoreboard dominates one wall, listing the achievements of past students.
 A sign provides guidance on checking your progress.  Exits lead @@yeast@@N
@@ -378,7 +378,7 @@ You see the armory.
 0 0 20208
 E
 sign~
-@@WLesson V: Score, Worth, and Leveling@@N
+@@WLesson VII: Score, Worth, and Leveling@@N
 
 Keep track of your character's progress with these commands:
 
@@ -391,8 +391,7 @@ Keep track of your character's progress with these commands:
 
 @@WTraining and Practicing:@@N
   @@yTRAIN@@N     -- Spend training sessions to raise attributes (STR, INT, etc.)
-  @@yPRACTICE@@N  -- Spend practice sessions to learn spells and skills
-  You must be at a trainer or practice mob to use these commands.
+  @@yLEARN@@N     -- See your learned spells and skills
 
 Try '@@ySCORE@@N' and '@@yWORTH@@N' now to see your current stats.
 
@@ -401,7 +400,7 @@ When ready, go @@yEAST@@N.
 ~
 S
 #20210
-Lesson VI: Shopping~
+Lesson VIII: Shopping~
 @@NYou enter a cozy shop with goods displayed on shelves behind a counter.
 The academy shopkeeper stands here, ready to serve you.  A sign on the
 wall explains how to buy and sell.  Exits lead @@ysouth@@N and @@ywest@@N.
@@ -419,7 +418,7 @@ You see the score room.
 0 0 20209
 E
 sign~
-@@WLesson VI: Shopping@@N
+@@WLesson VIII: Shopping@@N
 
 When you are in a shop, you can buy and sell items:
 
@@ -441,7 +440,7 @@ When ready, go @@ySOUTH@@N.
 ~
 S
 #20211
-Lesson VII: Combat Introduction~
+Lesson IX: Combat Introduction~
 @@NYou enter a stone arena ringed with low walls.  Scorch marks and gouges
 in the floor tell of many practice bouts.  A heavy two-handed practice
 sword leans against the wall.  A sign explains the basics of combat.
@@ -465,7 +464,7 @@ You see a cage below.
 0 0 20212
 E
 sign~
-@@WLesson VII: Combat@@N
+@@WLesson IX: Combat@@N
 
 Before fighting, always check how tough a monster is:
 
@@ -703,7 +702,7 @@ Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
 ~
 S
 #20221
-Lesson VIII: Rules and Etiquette~
+Lesson X: Rules and Etiquette~
 @@NYou enter a solemn chamber with the academy's code of conduct carved
 into the stone walls in golden letters.  A sign provides a summary of
 the most important rules.  Exits lead @@yeast@@N and @@ysouth@@N.
@@ -721,7 +720,7 @@ You see the graduation hall.
 0 0 20222
 E
 sign~
-@@WLesson VIII: Rules and Etiquette@@N
+@@WLesson X: Rules and Etiquette@@N
 
 @@RRULE I:@@N   No swearing or offensive language on public channels.
 @@RRULE II:@@N  No player killing without consent.  Respect the PK system.
