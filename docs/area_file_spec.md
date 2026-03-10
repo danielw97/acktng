@@ -157,6 +157,101 @@ Loot table semantics:
 
 `skills` in the `!` extension line is a bitvector. Known flags (from builder lookup tables) are:
 
+### 4.1.a) Mobile skill level policy (floors and ceilings)
+
+For generated mobs (AI-generated skill loadouts), combat-skill assignment uses two level gates per skill:
+
+- **chance floor**: minimum level where the skill can start rolling randomly.
+- **guaranteed floor**: level where the skill is always set.
+
+The floor policy now depends on AI archetype:
+
+- **Melee profile** (`generate_phys` only): earlier physical-skill access and stronger guaranteed combat baseline.
+- **Hybrid profile** (`generate_phys` + casting): mid/late physical-skill access, preserving mixed-role identity.
+- **Caster profile** (physical policy defined for completeness): very late physical-skill access, prioritizing spell identity.
+
+Current policy (mobs can scale to level 170):
+
+#### Melee profile
+
+| Skill | Chance floor | Guaranteed floor |
+|---|---:|---:|
+| `2_attack` | 20 | 70 |
+| `3_attack` | 40 | 85 |
+| `4_attack` | 80 | 105 |
+| `5_attack` | 110 | 130 |
+| `6_attack` | 150 | 155 |
+| `nodisarm` | 35 | 85 |
+| `notrip` | 35 | 85 |
+| `punch` | 15 | 60 |
+| `headbutt` | 20 | 70 |
+| `knee` | 35 | 90 |
+| `disarm` | 45 | 100 |
+| `trip` | 45 | 100 |
+| `dodge` | 30 | 80 |
+| `parry` | 55 | 110 |
+| `martial` | 65 | 120 |
+| `enhanced` | 40 | 95 |
+| `dualwield` | 75 | 125 |
+| `dirt` | 50 | 105 |
+| `counter` | 60 | 115 |
+| `kick` | 25 | 75 |
+| `charge` | 80 | 135 |
+
+#### Hybrid profile
+
+| Skill | Chance floor | Guaranteed floor |
+|---|---:|---:|
+| `2_attack` | 35 | 85 |
+| `3_attack` | 45 | 95 |
+| `4_attack` | 90 | 120 |
+| `5_attack` | 120 | 145 |
+| `6_attack` | 160 | 170 |
+| `nodisarm` | 45 | 95 |
+| `notrip` | 45 | 95 |
+| `punch` | 25 | 70 |
+| `headbutt` | 30 | 80 |
+| `knee` | 45 | 100 |
+| `disarm` | 55 | 110 |
+| `trip` | 55 | 110 |
+| `dodge` | 40 | 90 |
+| `parry` | 70 | 125 |
+| `martial` | 80 | 135 |
+| `enhanced` | 55 | 105 |
+| `dualwield` | 95 | 145 |
+| `dirt` | 65 | 115 |
+| `counter` | 80 | 130 |
+| `kick` | 35 | 85 |
+| `charge` | 100 | 150 |
+
+#### Caster profile
+
+| Skill | Chance floor | Guaranteed floor |
+|---|---:|---:|
+| `2_attack` | 45 | 95 |
+| `3_attack` | 55 | 105 |
+| `4_attack` | 100 | 130 |
+| `5_attack` | 130 | 155 |
+| `6_attack` | 165 | 170 |
+| `nodisarm` | 55 | 105 |
+| `notrip` | 55 | 105 |
+| `punch` | 35 | 80 |
+| `headbutt` | 40 | 90 |
+| `knee` | 55 | 110 |
+| `disarm` | 65 | 120 |
+| `trip` | 65 | 120 |
+| `dodge` | 50 | 100 |
+| `parry` | 80 | 135 |
+| `martial` | 90 | 145 |
+| `enhanced` | 65 | 115 |
+| `dualwield` | 105 | 155 |
+| `dirt` | 75 | 125 |
+| `counter` | 90 | 140 |
+| `kick` | 45 | 95 |
+| `charge` | 110 | 160 |
+
+This prevents low-level mobs from rolling late-game skills and guarantees baseline skill sets for high-level mobs.
+
 Note: this table intentionally uses the historical non-sequential bit assignments from `tab_mob_skill`/`MOB_*`; do not renumber by position.
 
 - `2_attack` = `1`

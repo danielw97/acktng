@@ -260,6 +260,27 @@ static void parse_mobile_loot_extension(const char *line, int line_number, const
     }
 }
 
+static void validate_mobile_skill_level_bounds(int mob_level, int mob_skills, int line_number, const char *area_path)
+{
+    struct skill_floor_rule
+    {
+        int bit;
+        int min_level;
+        const char *name;
+    };
+    static const struct skill_floor_rule floor_rules[] = {
+        {1 << 4, 50, "6_attack"},
+    };
+
+    for (size_t i = 0; i < sizeof(floor_rules) / sizeof(floor_rules[0]); i++)
+        if ((mob_skills & floor_rules[i].bit) != 0 && mob_level < floor_rules[i].min_level)
+            fail_area_test(area_path, line_number, "mobile level %d is below minimum level %d for skill '%s'",
+                           mob_level, floor_rules[i].min_level, floor_rules[i].name);
+
+    if (mob_level < 50 && (mob_skills & (1 << 4)) != 0)
+        fail_area_test(area_path, line_number, "mobile level %d exceeds attack-pass ceiling (6_attack requires level 50+)", mob_level);
+}
+
 static void require_inline_tilde_terminated_string(FILE *fp, char *line, int *line_number, const char *area_path,
                                                  const char *field_name)
 {
@@ -316,6 +337,9 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
     for (;;)
     {
         const char *trimmed;
+        int mob_level = 0;
+        int mob_skills = 0;
+        int skill_line_number = 0;
 
         if (!read_line(fp, line, line_number))
             fail_area_test(area_path, *line_number, "unexpected EOF inside #MOBILES");
@@ -338,6 +362,7 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
             fail_area_test(area_path, *line_number, "mobile stats header missing trailing 'S'");
         if (!read_line(fp, line, line_number) || !parse_exact_n_ints(line, 2))
             fail_area_test(area_path, *line_number, "mobile level/sex line must contain 2 integers");
+        mob_level = atoi(skip_space(line));
         if (!read_line(fp, line, line_number) || !parse_exact_n_ints(line, 4))
             fail_area_test(area_path, *line_number, "mobile modifier line must contain 4 integers");
 
@@ -356,11 +381,25 @@ static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const 
                 if (fseek(fp, -(long)strlen(line), SEEK_CUR) != 0)
                     fail_area_test(area_path, *line_number, "unable to rewind while parsing mobiles");
                 (*line_number)--;
+                validate_mobile_skill_level_bounds(mob_level, mob_skills,
+                                                   skill_line_number > 0 ? skill_line_number : *line_number,
+                                                   area_path);
                 break;
             }
 
             if (marker == '!' || marker == '|' || marker == '+')
+            {
+                if (marker == '!')
+                {
+                    int values[7];
+                    if (parse_int_tokens(trimmed + 1, values, 7) == 7)
+                    {
+                        mob_skills = values[4];
+                        skill_line_number = *line_number;
+                    }
+                }
                 continue;
+            }
 
             if (marker == 'l' || marker == 'L')
             {

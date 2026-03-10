@@ -4,7 +4,14 @@
 bool check_skills(CHAR_DATA *ch);
 bool check_cast(CHAR_DATA *ch);
 bool round_ai_update(CHAR_DATA *ch);
-bool generate_phys(CHAR_DATA *ch);
+typedef enum
+{
+   MOB_SKILL_PROFILE_MELEE,
+   MOB_SKILL_PROFILE_HYBRID,
+   MOB_SKILL_PROFILE_CASTER,
+} MOB_SKILL_PROFILE;
+
+bool generate_phys(CHAR_DATA *ch, MOB_SKILL_PROFILE profile);
 bool generate_offensive_cast(CHAR_DATA *ch);
 bool generate_defensive_cast(CHAR_DATA *ch);
 
@@ -251,11 +258,11 @@ bool generate_ai_spawn(CHAR_DATA *ch)
    {
    case 1:
       // Pure phys
-      generate_phys(ch);
+      generate_phys(ch, MOB_SKILL_PROFILE_MELEE);
       break;
    case 2:
       // Mixed phys and defensive spells
-      generate_phys(ch);
+      generate_phys(ch, MOB_SKILL_PROFILE_HYBRID);
       generate_defensive_cast(ch);
       break;
    case 3:
@@ -264,7 +271,7 @@ bool generate_ai_spawn(CHAR_DATA *ch)
       break;
    case 4:
       // Mixed phys and offensive spells
-      generate_phys(ch);
+      generate_phys(ch, MOB_SKILL_PROFILE_HYBRID);
       generate_offensive_cast(ch);
       break;
    case 5:
@@ -276,7 +283,7 @@ bool generate_ai_spawn(CHAR_DATA *ch)
       generate_defensive_cast(ch);
       break;
    case 7:
-      generate_phys(ch);
+      generate_phys(ch, MOB_SKILL_PROFILE_HYBRID);
       generate_offensive_cast(ch);
       generate_defensive_cast(ch);
    default:
@@ -287,84 +294,130 @@ bool generate_ai_spawn(CHAR_DATA *ch)
    return TRUE;
 }
 
-bool generate_phys(CHAR_DATA *ch)
+typedef struct mob_skill_generation_rule MOB_SKILL_GENERATION_RULE;
+
+struct mob_skill_generation_rule
 {
-   int max_skills = get_psuedo_level(ch) / 30;
-   if (get_psuedo_level(ch) > 150)
-      max_skills += number_range(0, 5);
+   int bit;
+   int chance_level;
+   int guaranteed_level;
+   int chance_percent;
+};
 
-   ch->hr_mod += number_range(get_psuedo_level(ch), get_psuedo_level(ch)*2);
-   ch->dr_mod += number_range(0, get_psuedo_level(ch)*2);
-   ch->ac_mod -= number_range(0, get_psuedo_level(ch)*2);
-   ch->hp_mod += number_range(0, get_psuedo_level(ch)*5);
+static const MOB_SKILL_GENERATION_RULE mob_skill_generation_rules_melee[] = {
+   {MOB_SECOND, 20, 70, 85},
+   {MOB_THIRD, 40, 85, 70},
+   {MOB_FOURTH, 80, 105, 55},
+   {MOB_FIFTH, 110, 130, 40},
+   {MOB_SIXTH, 150, 155, 30},
+   {MOB_NODISARM, 35, 85, 45},
+   {MOB_NOTRIP, 35, 85, 45},
+   {MOB_PUNCH, 15, 60, 70},
+   {MOB_HEADBUTT, 20, 70, 65},
+   {MOB_KNEE, 35, 90, 55},
+   {MOB_DISARM, 45, 100, 45},
+   {MOB_TRIP, 45, 100, 45},
+   {MOB_DODGE, 30, 80, 60},
+   {MOB_PARRY, 55, 110, 45},
+   {MOB_MARTIAL, 65, 120, 40},
+   {MOB_ENHANCED, 40, 95, 50},
+   {MOB_DUALWIELD, 75, 125, 35},
+   {MOB_DIRT, 50, 105, 40},
+   {MOB_COUNTER, 60, 115, 35},
+   {MOB_KICK, 25, 75, 60},
+   {MOB_CHARGE, 80, 135, 35},
+};
 
-   int total_skills = number_range(0, max_skills);
+static const MOB_SKILL_GENERATION_RULE mob_skill_generation_rules_hybrid[] = {
+   {MOB_SECOND, 35, 85, 75},
+   {MOB_THIRD, 45, 95, 60},
+   {MOB_FOURTH, 90, 120, 45},
+   {MOB_FIFTH, 120, 145, 30},
+   {MOB_SIXTH, 160, 170, 20},
+   {MOB_NODISARM, 45, 95, 35},
+   {MOB_NOTRIP, 45, 95, 35},
+   {MOB_PUNCH, 25, 70, 55},
+   {MOB_HEADBUTT, 30, 80, 50},
+   {MOB_KNEE, 45, 100, 45},
+   {MOB_DISARM, 55, 110, 35},
+   {MOB_TRIP, 55, 110, 35},
+   {MOB_DODGE, 40, 90, 45},
+   {MOB_PARRY, 70, 125, 30},
+   {MOB_MARTIAL, 80, 135, 25},
+   {MOB_ENHANCED, 55, 105, 35},
+   {MOB_DUALWIELD, 95, 145, 25},
+   {MOB_DIRT, 65, 115, 30},
+   {MOB_COUNTER, 80, 130, 25},
+   {MOB_KICK, 35, 85, 50},
+   {MOB_CHARGE, 100, 150, 25},
+};
 
-   for (int i = 0; i < total_skills; i++)
+static const MOB_SKILL_GENERATION_RULE mob_skill_generation_rules_caster[] = {
+   {MOB_SECOND, 45, 95, 45},
+   {MOB_THIRD, 55, 105, 40},
+   {MOB_FOURTH, 100, 130, 30},
+   {MOB_FIFTH, 130, 155, 20},
+   {MOB_SIXTH, 165, 170, 10},
+   {MOB_NODISARM, 55, 105, 20},
+   {MOB_NOTRIP, 55, 105, 20},
+   {MOB_PUNCH, 35, 80, 35},
+   {MOB_HEADBUTT, 40, 90, 30},
+   {MOB_KNEE, 55, 110, 25},
+   {MOB_DISARM, 65, 120, 20},
+   {MOB_TRIP, 65, 120, 20},
+   {MOB_DODGE, 50, 100, 25},
+   {MOB_PARRY, 80, 135, 20},
+   {MOB_MARTIAL, 90, 145, 15},
+   {MOB_ENHANCED, 65, 115, 20},
+   {MOB_DUALWIELD, 105, 155, 15},
+   {MOB_DIRT, 75, 125, 15},
+   {MOB_COUNTER, 90, 140, 15},
+   {MOB_KICK, 45, 95, 25},
+   {MOB_CHARGE, 110, 160, 12},
+};
+
+static void apply_physical_skill_floors_and_chances(CHAR_DATA *ch, MOB_SKILL_PROFILE profile)
+{
+   int level = get_psuedo_level(ch);
+   const MOB_SKILL_GENERATION_RULE *rules = mob_skill_generation_rules_melee;
+   size_t rule_count = sizeof(mob_skill_generation_rules_melee) / sizeof(mob_skill_generation_rules_melee[0]);
+
+   if (profile == MOB_SKILL_PROFILE_HYBRID)
    {
-      int skill_pool;
-
-      if (get_psuedo_level(ch) > 120)
-         skill_pool = number_range(1, 17);
-      else
-         skill_pool = number_range(1, 14);
-
-      switch (skill_pool)
-      {
-      case 1:
-         SET_BIT(ch->skills, MOB_SECOND);
-         break;
-      case 2:
-         SET_BIT(ch->skills, MOB_THIRD);
-         break;
-      case 3:
-         SET_BIT(ch->skills, MOB_FOURTH);
-         break;
-      case 4:
-         SET_BIT(ch->skills, MOB_PUNCH);
-         break;
-      case 5:
-         SET_BIT(ch->skills, MOB_HEADBUTT);
-         break;
-      case 6:
-         SET_BIT(ch->skills, MOB_KNEE);
-         break;
-      case 7:
-         if (number_percent() < 25)
-            SET_BIT(ch->skills, MOB_DISARM);
-         break;
-      case 8:
-         SET_BIT(ch->skills, MOB_DODGE);
-         break;
-      case 9:
-         SET_BIT(ch->skills, MOB_PARRY);
-         break;
-      case 10:
-         SET_BIT(ch->skills, MOB_MARTIAL);
-         break;
-      case 11:
-         SET_BIT(ch->skills, MOB_ENHANCED);
-         break;
-      case 12:
-         SET_BIT(ch->skills, MOB_DIRT);
-         break;
-      case 13:
-         SET_BIT(ch->skills, MOB_COUNTER);
-         break;
-      case 14:
-         SET_BIT(ch->skills, MOB_KICK);
-         break;
-      case 15:
-         SET_BIT(ch->skills, MOB_FIFTH);
-         break;
-      case 16:
-         SET_BIT(ch->skills, MOB_SIXTH);
-         break;
-      case 17:
-         SET_BIT(ch->skills, MOB_CHARGE);
-         break;
-      }
+      rules = mob_skill_generation_rules_hybrid;
+      rule_count = sizeof(mob_skill_generation_rules_hybrid) / sizeof(mob_skill_generation_rules_hybrid[0]);
    }
+   else if (profile == MOB_SKILL_PROFILE_CASTER)
+   {
+      rules = mob_skill_generation_rules_caster;
+      rule_count = sizeof(mob_skill_generation_rules_caster) / sizeof(mob_skill_generation_rules_caster[0]);
+   }
+
+   for (size_t i = 0; i < rule_count; i++)
+   {
+      const MOB_SKILL_GENERATION_RULE *rule = &rules[i];
+
+      if (level >= rule->guaranteed_level)
+      {
+         SET_BIT(ch->skills, rule->bit);
+         continue;
+      }
+
+      if (level >= rule->chance_level && number_percent() <= rule->chance_percent)
+         SET_BIT(ch->skills, rule->bit);
+   }
+}
+
+bool generate_phys(CHAR_DATA *ch, MOB_SKILL_PROFILE profile)
+{
+   int level = get_psuedo_level(ch);
+
+   ch->hr_mod += number_range(level, level * 2);
+   ch->dr_mod += number_range(0, level * 2);
+   ch->ac_mod -= number_range(0, level * 2);
+   ch->hp_mod += number_range(0, level * 5);
+
+   apply_physical_skill_floors_and_chances(ch, profile);
 
    return TRUE;
 }
