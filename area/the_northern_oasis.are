@@ -6969,6 +6969,8 @@ From this square, @@bbrown@@N dust streams low across your boots, and every mark
 
 Fresh sandal tracks cross older hoof marks and vanish at the next bend.@@N
 
+To the east, an @@bancient sandstone road@@N stretches toward the unmistakable silhouette of the Northern Pyramid, its sharp geometric outline cutting the @@yhorizon@@N against the pale desert sky.@@N
+
 ~
 0 10
 D0
@@ -6977,6 +6979,12 @@ A narrow ramp climbs toward another survey-marked square.
 ~
 ~
 0 -1 8859
+D1
+An ancient @@bsandstone@@N road stretches east toward the looming Northern Pyramid.
+
+~
+^ancient road east~
+1 -1 10156
 D2
 Footprints descend where the route steps into the next grid lane.
 
@@ -10347,5 +10355,6 @@ M 0 8784 1 8899 boss guardian
 
 E 0 8894 1 18 boss relic
 
+D 0 8879 1 1
 S
 #$
