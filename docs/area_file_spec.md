@@ -717,6 +717,8 @@ Room description content requirements:
 
 Directional traversal constraints:
 
+- Except in mazes, exits are expected to be bi-directional: if room `A` connects to room `B` through direction `X`, room `B` should provide the opposite-direction exit back to room `A`.
+- Mazes are explicitly exempt from the bi-directional expectation and may use one-way, asymmetric, or otherwise non-reciprocal exits.
 - Room connections must not loop back in non-linear patterns (for example, `a -> b -> c -> d -> e -> a -> b`) unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
 - Repeated movement in the same direction must not enter a directional loop unless the involved vnum set is a maze and every room in that set has `ROOM_MAZE` set.
 - Example (disallowed outside `ROOM_MAZE`-flagged maze vnum sets): repeatedly taking `east` yields `a -> b -> c -> a`.
