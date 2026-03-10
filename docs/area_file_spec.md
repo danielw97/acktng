@@ -806,6 +806,7 @@ Practical door behavior in area files/runtime:
   - A door can be unnamed by leaving `<exit_keyword>` empty.
   - When a named door is used, start the keyword with `^` (for example, `^stone hatch`) so movement messaging treats it as a standalone noun phrase.
 - `closed`/`locked` are runtime state bits (`EX_CLOSED`/`EX_LOCKED`). On save, the area writer strips these two bits from `<locks>`, so persistent initial door state must be authored through `#RESETS` command `D`, not by relying on `closed`/`locked` in the room exit line.
+- Any exit that is set to `closed` or `locked` on area reset via `#RESETS` command `D` MUST also have `<locks>` bit `door` (`EX_ISDOOR`) set in its room `D<door>` definition.
 - During gameplay, opening/closing/locking/unlocking an exit updates the reverse side too when the reverse exit exists and points back to the source room.
 - Locking rules depend on both `<locks>` and `<key_vnum>`:
   - If the exit is not marked as a door (`EX_ISDOOR` unset), lock/unlock/open/close door commands do not apply.
