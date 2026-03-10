@@ -10,4 +10,451 @@ X 0
 F 20
 U @@ythe ancient pyramid groans as hot desert winds sweep its stone passages@@N~
 T
+#ROOMS
+#10125
+@@yThe Stone Trap Chamber@@N~
+The pyramid keeps its secrets with @@bsandstone@@N walls that press close on all sides, perfectly dressed blocks offering no crack for fingers and no purchase for climbing. @@yDust@@N sifts constantly through the shaft overhead, a pale golden fall of particulate that catches what little light exists and vanishes before it reaches the floor. The ceiling above is smooth and sheer, the shaft that delivered you here rising beyond any reasonable reach; whatever mechanism released that floor has sealed itself behind you. The @@bstone floor@@N slopes toward the center, worn smooth by the passage of countless others who triggered the same hidden plate or disguised cover. A shaft in the center of the floor descends into deeper darkness, carrying the cold exhalation of the @@bfoundation chambers@@N far below.
+~
+24588 11
+D5
+The shaft descends into the deep foundation levels far below.~
+~
+0 -1 10134
+S
+#10126
+@@yThe Undercroft Entry@@N~
+The entry chamber to the pyramid's undercroft is hewn from living bedrock, its ceiling reinforced with @@bsandstone@@N beams that have bowed but not yet broken under millennia of weight. @@yGold-leaf hieroglyphs@@N, long since reduced to faint outlines, mark the upper walls above empty torch brackets still aligned with the precision of original construction. The chamber was a controlled point of descent once; fitted grooves in the floor show where barriers were meant to stand. Overhead, a @@bheavy trapdoor@@N of iron-banded timber is set flush into the stone ceiling, its surface dark with age and sealed with a @@bbronze@@N lock mechanism corroded to a deep verdigris. Passages lead east into the flooded antechamber and south into the deeper levels of the undercroft.
+~
+16396 11
+D1
+The passage east descends slightly into the flooded antechamber.~
+~
+0 -1 10127
+D2
+The southern passage drops into the older, darker portions of the undercroft.~
+~
+0 -1 10131
+D4
+The @@bheavy trapdoor@@N is set flush into the stone ceiling, its iron-banded timber gone almost black with age.~
+^heavy trapdoor~
+1 10138 10177
+S
+#10127
+@@yA Flooded Antechamber@@N~
+Black water stands ankle-deep across the entire floor, fed by seepage through hairline cracks in the @@bsandstone@@N walls that weep a slow, constant mineral damp. The ceiling is lower here than in the adjacent passages, pressing the air down to a stale intimacy thick with the smell of iron and old stone. @@cFaint blue-green lines@@N of mineral deposit mark the high-water stains on the walls, recording past floods at intervals that tell a history of seasonal catastrophe. The western passage leads back toward the entry chamber; corridors continue east and south into the undercroft's deeper reaches.
+~
+24585 11
+D3
+The passage west rises back toward the entry chamber and the trapdoor above.~
+~
+0 -1 10126
+D1
+A low arch opens east into a corridor where pale dead roots have split the stone.~
+~
+0 -1 10128
+D2
+The south passage drops further into the darkness below the pyramid.~
+~
+0 -1 10132
+S
+#10128
+@@yThe Root-Split Corridor@@N~
+Ancient tree roots from the desert surface have found their way deep into the pyramid's foundations here, cracking the @@bsandstone@@N blocks apart in a slow catastrophe of arrested growth. The roots themselves are long dead, their fibrous trunks pale and desiccated, yet they have pried the corridor walls open by several hand-widths. Thin curtains of @@yfine sand@@N perpetually sift through the gaps in the stone, accumulating in pale drifts along both walls. Underfoot, shattered stone fragments make every step uncertain.
+~
+24585 11
+D3
+The passage west passes through the flooded antechamber.~
+~
+0 -1 10127
+D1
+The corridor continues east past a narrowing where two blocks have nearly met.~
+~
+0 -1 10129
+S
+#10129
+@@yA Collapsed Burial Niche@@N~
+What was once a burial niche has collapsed entirely, filling the alcove with a jumble of @@bsandstone@@N rubble from floor to ceiling. A narrow ledge of intact floor passes along the north wall, barely enough for single-file movement, and the dust here is thick with the @@yyellow-grey@@N powder of pulverized stone. Whatever was interred in the niche is buried beneath tons of rubble, its identity and all its offerings lost. The passage continues west toward the root-cracked corridor; south leads to the sunken level below.
+~
+24585 11
+D3
+The corridor winds west through root-split stone.~
+~
+0 -1 10128
+D1
+The passage continues east to the drain tunnel.~
+~
+0 -1 10130
+D2
+A low opening in the south wall leads down to the sunken trap-fall chamber below.~
+~
+0 -1 10134
+S
+#10130
+@@yThe Drain Tunnel@@N~
+This tunnel was carved specifically to channel water away from the burial chambers above, its floor cut to a consistent downward angle that directs all overflow toward the lower undercroft. @@bSandstone@@N channels line both sides at floor level, still carrying a slow black trickle that vanishes into a grate set into the southern wall. The smell of mineral decay is sharp here, and the moisture in the air is palpable against bare skin. Toolmarks on the walls record the original builders' labors in long, parallel gouges worn smooth by subsequent water flow.
+~
+24585 11
+D3
+The passage west leads back toward the burial niche.~
+~
+0 -1 10129
+D2
+The drain channel descends south into the deeper undercroft levels.~
+~
+0 -1 10135
+S
+#10131
+@@yA Crypt of Unnamed Dead@@N~
+Rows of @@bsandstone@@N sarcophagi line both walls of this chamber, each lid sealed with a thick bead of dried resin impressed with sigils worn beyond recognition. The dead within were presumably of some rank, but no cartouche names any of them; whoever interred them preferred anonymity. @@yFaded gold leaf@@N still clings in patches to the hieroglyphs above the uppermost tier, recording honors that can no longer be read. The air carries the dry sweetness of preserved linen and old cedar that has persisted here for uncounted centuries.
+~
+24584 11
+D0
+The passage north leads back toward the undercroft entry.~
+~
+0 -1 10126
+D1
+The passage east opens into a chamber that smells of mineral chemicals.~
+~
+0 -1 10132
+D2
+The southern passage deepens into the older burial levels.~
+~
+0 -1 10136
+S
+#10132
+@@yThe Embalming Chamber@@N~
+Stone tables occupy the center of this chamber, their surfaces grooved to channel fluids into recessed troughs that ring the room at floor level. @@bCanopic tables@@N along the east wall hold the lids of broken burial jars, their carved animal-headed stoppers split or missing. The tools of the embalmers have long since crumbled or rusted to powder, but the @@yochre stains@@N on the table surfaces are permanent, sunk deep into the @@bsandstone@@N by centuries of saturation. The smell of chemical preservation has faded to a dry, acrid ghost that still catches at the back of the throat.
+~
+24584 11
+D0
+The passage north leads back into the flooded antechamber.~
+~
+0 -1 10127
+D3
+The corridor west leads toward the crypt of unnamed dead.~
+~
+0 -1 10131
+D1
+The passage east continues into a stone-floored corridor.~
+~
+0 -1 10133
+D2
+The floor descends south into the gallery below.~
+~
+0 -1 10137
+S
+#10133
+@@yA Stone-Floored Passage@@N~
+A utilitarian corridor of precisely fitted @@bsandstone@@N block, its floor smooth and carefully dressed, suggesting that this passage saw regular organized traffic during the pyramid's active period. Small recessed niches at knee height in both walls once held oil lamps; their blackened interiors still carry a faint carbon smudge. The air here is drier than in the flooded chambers to the north, carried by some invisible current from deeper in the undercroft. Worn ruts in the floor speak of heavy loads hauled through here on sledges.
+~
+24585 11
+D3
+The passage west enters the embalming chamber.~
+~
+0 -1 10132
+D1
+The corridor continues east toward the sunken trap-fall landing.~
+~
+0 -1 10134
+D2
+The south passage descends into the underground cistern chamber.~
+~
+0 -1 10138
+S
+#10134
+@@yThe Sunken Trap-Fall@@N~
+The floor of this chamber is lower than any of the surrounding passages, reached by a short drop from the shaft above that terminates in a rough heap of accumulated @@bsand@@N and rubble that has cushioned countless falls over the centuries. The shaft visible in the ceiling rises smooth and sheer, offering no purchase for climbing; whatever mechanism released it seals permanently from above. @@yPale dust@@N hangs perpetually in the air here, disturbed by every impact and too fine to settle quickly. Passages continue in three directions: west, east, and south into the deeper levels of the undercroft.
+~
+24585 11
+D0
+The passage north leads up to the collapsed burial niche above.~
+~
+0 -1 10129
+D3
+The corridor west leads into the stone-floored passage.~
+~
+0 -1 10133
+D1
+The passage east enters the narrow root tunnel.~
+~
+0 -1 10135
+D2
+The south passage continues deeper into the undercroft.~
+~
+0 -1 10139
+S
+#10135
+@@yA Narrow Root Tunnel@@N~
+The same relentless root systems that fractured the upper corridors have consumed this tunnel, reducing it to a narrow squeeze between thickened masses of pale, long-dead fibrous wood. @@bSandstone@@N blocks have been displaced sideways by root pressure, some jutting inward enough to require ducking or turning sideways to pass. Thin films of mineral sediment coat every surface, deposited by water that followed the roots down over centuries and slowly evaporated. The dead wood feels hollow when pressed, as though the roots themselves are crumbling from within.
+~
+24585 11
+D0
+The passage north leads back up into the drain tunnel.~
+~
+0 -1 10130
+D3
+The narrow corridor squeezes west into the trap-fall chamber.~
+~
+0 -1 10134
+D2
+The tunnel south opens into a chamber choked with fungal growth.~
+~
+0 -1 10140
+S
+#10136
+@@yThe Ossuary@@N~
+Bones fill every surface of this chamber from floor to ceiling: long bones stacked in even tiers along the walls, skulls arranged in regular rows at shoulder height, smaller bones filling every gap in a careful taxonomy of death. The @@bsandstone@@N is entirely invisible behind the stacked remains, each bone placed with deliberate precision that speaks of centuries of unhurried organization. A narrow aisle runs through the center, its floor the only bone-free surface, polished smooth by generations of passage. The bones themselves have taken on the @@ydeep amber@@N of extreme age, their surfaces bone-dry and dense as fired clay.
+~
+24585 11
+D0
+The passage north leads toward the crypt of unnamed dead.~
+~
+0 -1 10131
+D1
+The passage east opens into a gallery with faded wall reliefs.~
+~
+0 -1 10137
+D2
+The southern corridor descends into the prayer hall below.~
+~
+0 -1 10141
+S
+#10137
+@@yA Sunken Gallery@@N~
+The floor of this gallery has settled a full step lower than the surrounding passages, a subsidence that has left the lower portions of the wall reliefs cut off at an awkward angle. @@yFaded hieroglyphic paintings@@N still cling to the upper sections, depicting a procession of robed figures bearing offerings toward a stylized pyramid, their colors reduced to @@bochre@@N and a ghost of faded pigment. @@cLapis lazuli inlay@@N in geometric border patterns runs along the tops of the walls, still vivid against the bleached @@bsandstone@@N. The sunken floor has collected a thin layer of standing water that reflects the ceiling in dark, still pools.
+~
+24584 11
+D0
+The passage north leads back into the ossuary.~
+~
+0 -1 10136
+D3
+The corridor west enters the embalming chamber.~
+~
+0 -1 10132
+D1
+The passage east continues toward the underground cistern.~
+~
+0 -1 10138
+D2
+The south passage descends into the rotted timber crossing.~
+~
+0 -1 10142
+S
+#10138
+@@yThe Underground Cistern@@N~
+A large circular chamber dominated by a basin cut directly into the bedrock, still holding dark water that reflects the ceiling in perfect, unbroken stillness. @@cThe water@@N persists here without any visible source or outlet, fed by subterranean seepage too slow to observe directly. The walls are coated in thick layered mineral deposits left by centuries of evaporation, their ridges forming abstract patterns in @@yyellow@@N and @@bochre@@N that record each flood cycle like pages of a geological record. The stone lip of the cistern is worn smooth by the hands of countless workers who drew water from it during the pyramid's construction and operation.
+~
+24584 11
+D0
+The passage north enters the stone-floored corridor.~
+~
+0 -1 10133
+D3
+The corridor west returns to the sunken gallery.~
+~
+0 -1 10137
+D1
+The passage east leads into a crumbling side passage.~
+~
+0 -1 10139
+D2
+The south corridor descends into the deep vault below.~
+~
+0 -1 10143
+S
+#10139
+@@yA Crumbling Side Passage@@N~
+This passage is in active deterioration: cracks run floor to ceiling through the @@bsandstone@@N blocks, and a section of the upper wall has already collapsed inward, leaving a mound of rubble that narrows the passage to a crawl. @@yFine grit@@N rains in a constant, whispering stream from the ceiling, and the air carries the sharp mineral taste of freshly fractured stone. Large blocks above show fresh fracture lines that have not yet opened into catastrophic failure, though the structural collapse seems to be progressing slowly but inevitably.
+~
+24585 11
+D3
+The passage west leads back toward the underground cistern.~
+~
+0 -1 10138
+D1
+The crumbling corridor continues east toward the fungal grotto.~
+~
+0 -1 10140
+S
+#10140
+@@yThe Fungal Grotto@@N~
+@@cPale mushrooms@@N cover every surface of this chamber: the walls, the ceiling, the floor, even the tunnel openings, their soft luminescence casting an eerie @@ccyan@@N glow that reveals outlines without providing true light. The mushrooms range from thumb-sized to knee-height, their caps a sickly translucent white that shows the dark spore mass within. @@bMoisture@@N beads on every surface, fed by the fungal network that has colonised this chamber, and the smell is earthy and sweet in a way that is not quite natural. The north passage leads back toward the narrow root tunnel; south continues to the deeper undercroft.
+~
+24585 11
+D0
+The passage north squeezes back into the narrow root tunnel.~
+~
+0 -1 10135
+D3
+The corridor west continues into the crumbling side passage.~
+~
+0 -1 10139
+D2
+The south passage leads deeper into the sealed crypt wing below.~
+~
+0 -1 10145
+S
+#10141
+@@yAn Ancient Prayer Hall@@N~
+A rectangular chamber with a deliberate formality to its construction: the @@bsandstone@@N blocks here are more finely dressed than in the surrounding corridors, the joints tight and precise. A defaced altar occupies the center of the northern wall, its carved face hammered flat at some point in the distant past, the reason now as lost as its features. Faint ghost-marks in the @@yyellow@@N stone around the altar speak of offerings placed regularly over generations, circular stains from incense vessels and shallow grooves worn by frequent kneeling. The ceiling is higher than elsewhere in the undercroft, giving the room an unexpectedly solemn presence even in ruin.
+~
+24584 11
+D0
+The passage north returns toward the ossuary and the deeper chambers.~
+~
+0 -1 10136
+D1
+The east passage opens into a chamber where a rotted walkway crosses a dark pit.~
+~
+0 -1 10142
+D2
+The south corridor drops toward the stone drainage arch below.~
+~
+0 -1 10146
+S
+#10142
+@@yA Rotted Timber Walkway@@N~
+A narrow timber walkway bridges a flooded pit occupying the center of this chamber, its boards so rotten that each step produces a sickening flex and a groan of stressed fibers threatening to give way entirely. Below the walkway, dark water of uncertain depth reflects nothing at all. The timber supports have sunk at the northern end, giving the walkway a slight downward lean toward its center. Iron brackets that once held safety ropes remain fixed in the @@bsandstone@@N walls, but the ropes rotted away long ago, leaving only frayed, mineral-encrusted ends.
+~
+24585 11
+D0
+The passage north leads back into the sunken gallery.~
+~
+0 -1 10137
+D3
+The corridor west returns to the ancient prayer hall.~
+~
+0 -1 10141
+D1
+The passage east continues into the deep vault.~
+~
+0 -1 10143
+S
+#10143
+@@yThe Deep Vault@@N~
+This wide chamber stands at the intersection of several passages and has the feel of a deliberate waypoint: the ceiling is higher than the surrounding tunnels, the floor is smooth, and several iron rings set into the walls at chest height suggest it was used as a staging area for heavy materials. @@yHieroglyphic inscriptions@@N run in a continuous band around the walls at eye level, their subject the organization and maintenance of the pyramid's lower levels. @@cLapis lazuli@@N chips still occupy some of the inlaid border work, their deep blue a stark contrast to the pale @@yyellow@@N sandstone surrounding them. Passages extend in all four directions, making this one of the undercroft's main navigation points.
+~
+24584 11
+D0
+The passage north leads back into the underground cistern chamber.~
+~
+0 -1 10138
+D3
+The corridor west passes the rotted timber walkway.~
+~
+0 -1 10142
+D1
+The east passage opens into a hidden side chamber.~
+~
+0 -1 10144
+D2
+The south corridor descends toward the forgotten workshop below.~
+~
+0 -1 10148
+S
+#10144
+@@yA Hidden Side Chamber@@N~
+A narrow chamber accessible through a low opening in the wall, its entrance partially concealed by a section of @@bsandstone@@N block that has shifted forward on its base. The room beyond is small and close, its purpose unclear: no altar, no storage platform, no obvious function beyond the concealment afforded by its disguised entrance. @@yFaint scratch marks@@N on the floor record the comings and goings of those who discovered and used this space over the centuries; this was a known secret rather than a forgotten one. Passages continue west back to the deep vault and east toward the sealed crypt wing; south descends to the underground crossroads.
+~
+24585 11
+D3
+The concealed opening leads west back into the deep vault.~
+~
+0 -1 10143
+D1
+The passage east continues to the sealed crypt wing.~
+~
+0 -1 10145
+D2
+The south corridor drops toward the underground crossroads.~
+~
+0 -1 10149
+S
+#10145
+@@yThe Sealed Crypt Wing@@N~
+Three burial niches are cut into the west wall of this chamber, each sealed with a slab of @@bsandstone@@N inscribed with protective glyphs of unusual elaboration. The carved lines are deep and precise, their quality far above the utilitarian work elsewhere in the undercroft. @@ySun-discs@@N and serpent-figures repeat in interlocking patterns covering every surface of the sealed slabs, and the gaps between the stones have been filled with a dark sealant hardened to near-stone over the millennia. Whatever rests within the three niches has not stirred in all the centuries since this wing was sealed.
+~
+24584 11
+D0
+The passage north leads back into the fungal grotto.~
+~
+0 -1 10140
+D3
+The corridor west enters the hidden side chamber.~
+~
+0 -1 10144
+D2
+The south passage descends toward the putrid pool below.~
+~
+0 -1 10150
+S
+#10146
+@@yA Stone Drainage Arch@@N~
+A low arch of dressed @@bsandstone@@N spans the length of this passage, built to direct water downward rather than across the floor. A carved channel runs beneath the arch along the center of the floor, still carrying a thin black trickle toward the deeper undercroft. The arch is structurally sound, its keystone wedged tight by original construction, though water has worked its way into the mortar joints and left long mineral stains in @@yyellow@@N and pale grey along the blocks. The passage connects the prayer hall above to the putrid pool further east.
+~
+24585 11
+D0
+The passage north rises back into the ancient prayer hall.~
+~
+0 -1 10141
+D1
+The drainage channel runs east under a low stone arch toward the putrid pool.~
+~
+0 -1 10147
+S
+#10147
+@@yThe Putrid Pool@@N~
+A broad, shallow pool of @@bblack water@@N occupies most of this chamber's floor, stagnant enough to have developed its own internal chemistry across centuries of stillness. The surface is filmed with a dark, iridescent membrane that shifts slowly in patterns suggesting some deep convection below. The smell is aggressively noxious — sulfur and organic rot and mineral acid — and the @@bsandstone@@N surrounding the pool has been eaten to a rough, pitted texture by the corrosive water. Noxious vapor rises in thin wisps that sting the eyes and catch at the lungs.
+~
+24585 11
+D3
+The passage west follows the drain channel back toward the stone arch.~
+~
+0 -1 10146
+D1
+The east passage passes the edge of the pool and continues toward the forgotten workshop.~
+~
+0 -1 10148
+S
+#10148
+@@yA Forgotten Workshop@@N~
+The tools of the pyramid's original builders still occupy this chamber: stone mallets, copper chisels corroded to brittle rods, wooden wedges reduced to dense fibers, and grinding blocks used to shape and dress the sandstone. The @@bworkbenches@@N are cut directly into the bedrock and still stand solid, their wood surfaces long rotted away. @@yYellow@@N dust covers everything in a thick layer undisturbed for centuries, and among the scattered debris, @@bbronze@@N implements and corroded metal objects suggest items of value were abandoned when the pyramid was sealed. Something of use may still be found among the old tools.
+~
+24584 11
+D0
+The passage north ascends back into the deep vault.~
+~
+0 -1 10143
+D3
+The corridor west circles back past the putrid pool.~
+~
+0 -1 10147
+D1
+The east passage leads to the underground crossroads.~
+~
+0 -1 10149
+S
+#10149
+@@yThe Underground Crossroads@@N~
+Four passages meet in this deliberate junction chamber, its floor marked with a worn @@yyellow@@N compass rose carved into the @@bsandstone@@N during the pyramid's original construction. The ceiling is higher than the surrounding tunnels, and four niches cut into the walls at the cardinal points once held directional markers; only the mounting sockets remain. This was the navigation center of the entire undercroft, the room by which all other locations were oriented during the pyramid's active operation. To the south, the passages descend toward the inner tombs; to the north, the upper undercroft levels and the entry shaft can be reached. The crossroads still feels purposeful, the worn floor recording the passage of countless feet that once moved through here with direction and intention.
+~
+24584 11
+D0
+The passage north leads back toward the hidden side chamber and the deep vault.~
+~
+0 -1 10144
+D3
+The west corridor returns through the forgotten workshop.~
+~
+0 -1 10148
+D1
+The east passage leads toward the deeper burial chambers.~
+~
+0 -1 10150
+D2
+The south passage descends toward the inner undercroft hall.~
+~
+0 -1 10151
+S
 #$
