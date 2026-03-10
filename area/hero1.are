@@ -8,172 +8,79 @@ I 1 10
 V 300 309
 X 0
 F 15
-U You hear the screams of the Dead within your head.~
+U You hear the screams of the dead within your head.~
 O hero~
 R hero~
 W hero~
 B Currently building area.
 M No bad room spells allowed.
-#ROOMS
-#307
-In a cell~
-No description~
-4 11
-D3
+A large, well-trained gladiator is preparing here.
 ~
+This gladiator is a huge killing machine; perhaps you should walk away.
 ~
-0 -1 302
-S
-#306
-Kitchen~
-No description~
-0 11
-D2
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+A large rat is scurrying about here.
 ~
+A mangy arena rat watches you with beady, suspicious eyes.
 ~
-0 -1 305
-S
-#305
-Mess Hall~
-No description~
-4 11
-D0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+Borg stands here, cold and implacable.
 ~
+The big borgy bastard towers over everything in the room.
 ~
-0 -1 306
-D3
-~
-~
-0 -1 304
-S
-#304
-Combat Ground~
-No description~
-0 11
-D1
-~
-~
-0 -1 305
-D3
-~
-~
-0 -1 303
-S
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #303
-Training Camp~
-No description~
-0 11
-D0
+arena trainee~
+arena trainee~
+A grim arena trainee paces here.
 ~
+A scarred trainee mutters through combat drills while eyeing the arena doors.
 ~
-0 -1 301
-D1
-~
-~
-0 -1 304
-S
-#302
-Cells~
-No description~
-0 11
-D1
-~
-~
-0 -1 307
-D2
-~
-~
-0 -1 301
-S
-#300
-The Preparation Room~
-You are standing in a small square room.  The walls are lined with benches and
-the benches are lined with gladiators waiting for their turn to fight to the
-death in the arena to the west.
-~
-16384 11
-D1
-~
-~
-0 0 301
-D3
-~
-~
-0 0 3726
-E
-benches~
-The benches are strongly constructed from oak.~
-E
-~
-~
-S
-#301
-Training Camp~
-No description~
-0 11
-D0
-~
-~
-0 -1 302
-D2
-~
-~
-0 -1 303
-D3
-~
-~
-0 0 300
-S
-#0
-#MOBILES
-#300
-gladiator~
-gladiator~
-A large, well trained gladiator is preparing here.
-~
-This guy really is a huge killing machine perhaps you should walk away.
-
-~
-19 0 0 S
-12 1
-0 -10 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#301
-rat~
-rat~
-A large rat is scurring about here.
-~
-~
-1 0 -10 S
-5 0
+3 0 0 S
+7 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#302
-borg~
-Borg~
-Borg.
-~
-The big borgy bastard.
-~
-23 0 1000 S
-11 0
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+A filthy gladiator stands here.
+~
+Sweat and grime cake this battered gladiator from head to toe.
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#304
-A dirty gladiator~
-A dirty gladiator~
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+A cook hurries here, buried in kitchen work.
+~
+Pots, pans, and shouted orders follow this exhausted kitchen veteran.
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+A hurried patron is trying to get through lunch here.
+~
+This patron clutches a tray and scans for danger between every bite.
+~
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+L
+10
+#301
+shield~
+shield~
+A large flaming shield~
+9 134217728 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+17 -20
+A
+18 6
+A
+19 6
+A
+13 10
 A filthy gladiator stands here~
 ~
 3 0 0 S
@@ -272,20 +179,129 @@ L
 10
 #303
 a Cook's White Hat~
-a Cook's White Hat~
-A cook's white hat lies here~
-9 134217728 8388616 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-17 -20
-A
-18 4
-A
-19 4
-A
-13 25
-L
+#ROOMS
+#300
+The Preparation Room~
+You are standing in a small square room. The walls are lined with benches, and
+those benches are lined with gladiators waiting for their turn to fight to the
+death in the arena to the east.
+~
+16384 11
+D1
+~
+~
+0 0 301
+D3
+~
+~
+0 0 3726
+E
+benches~
+The benches are strongly constructed from oak.~
+S
+#301
+Training Camp~
+Weapon racks and scarred practice dummies crowd this dusty training yard.
+Boot prints churn the earth, and the bark of drill sergeants echoes between
+the surrounding arena walls.
+~
+0 11
+D0
+~
+~
+0 -1 302
+D2
+~
+~
+0 -1 303
+D3
+~
+~
+0 0 300
+S
+#302
+Cells~
+A row of iron-barred cells lines this narrow corridor.
+The air is stale with fear, old blood, and the scrape of restless prisoners.
+~
+0 11
+D1
+~
+~
+0 -1 307
+D2
+~
+~
+0 -1 301
+S
+#303
+Training Camp~
+A second training lane stretches along the edge of the combat grounds.
+Sandbags hang from timber posts, and spent practice weapons litter the dirt.
+~
+0 11
+D0
+~
+~
+0 -1 301
+D1
+~
+~
+0 -1 304
+S
+#304
+Combat Ground~
+This is the arena's combat ground, a broad pit of trampled sand and old stains.
+Crude wooden barriers ring the edges while spectators roar from beyond.
+~
+0 11
+D1
+~
+~
+0 -1 305
+D3
+~
+~
+0 -1 303
+S
+#305
+Mess Hall~
+Long tables fill the mess hall, crowded with dented cups and chipped bowls.
+The smell of broth, sweat, and smoke hangs heavy in the warm air.
+~
+4 11
+D0
+~
+~
+0 -1 306
+D3
+~
+~
+0 -1 304
+S
+#306
+Kitchen~
+Heat rolls from brick ovens and blackened cookfires in this cramped kitchen.
+Knives clatter on butcher blocks while cauldrons simmer over open flame.
+~
+0 11
+D2
+~
+~
+0 -1 305
+S
+#307
+In a cell~
+Cold stone walls and rusted bars make this cell feel smaller by the minute.
+Straw is scattered across the floor, and distant screams seep in from outside.
+~
+4 11
+D3
+~
+~
+0 -1 302
+S
+#0
 10
 #304
 A patron's Ring~
