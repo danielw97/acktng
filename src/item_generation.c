@@ -9,100 +9,76 @@ char *get_prefix(OBJ_DATA *obj);
 int get_obj_stat_weight_index(const OBJ_DATA *obj);
 
 
-//  hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
+//  hr, dr, spellpower, ac, hp, move, mana, hrdrb, acb, statb
 const struct obj_stat_type weapon_table[16] = 
 {
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
 
-   { 15, 15, 30, 20, 20, 10,  4, 10, -5, 5}, /* 1 */
-   { 10, 10, 25, 10, 20,  5,  5, 10, -5, 5 }, /* 2 */
-   {  5, 10, 20, 10, 20, 10, 10,  8, -5, 5 }, /* 3 */
-   {  5,  5, 20, 10, 20, 15, 15, 12, -5, 5 }, /* 4 */
-   {  5, 5, 10, 10, 10, 10, 20, 12, -5, 5 }, /* 5 */
+   { 6, 6, 6.0, 24, 24, 28, 24, 10, -5, 5 }, /* 1 */
+   { 7, 7, 8.0, 22, 20, 24, 20, 10, -5, 5 }, /* 2 */
+   { 8, 8, 10.0, 20, 17, 20, 17, 10, -5, 5 }, /* 3 */
+   { 9, 9, 12.0, 18, 14, 17, 14, 10, -5, 5 }, /* 4 */
+   { 10, 10, 14.0, 16, 12, 14, 12, 10, -5, 5 }, /* 5 */
 
-   { 6, 6, 10,  4, 25, 25, 0, 10, -5, 5 }, /* 6 */
-   { 4, 4, 15,  5, 20, 20, 0, 10, -5, 5 }, /* 7 */
-   { 4, 4, 20, 10, 10, 10, 0, 10, -5, 5 }, /* 8 */
-   { 3, 3, 30, 15, 20, 20, 0, 10, -5, 5 }, /* 9 */
-   { 2, 2, 40, 25, 25, 25, 0, 10, -5, 5 }, /* 10 */
+   { 2.5, 2.5, 0, 26, 24, 24, 24, 10, -5, 5 }, /* 6 */
+   { 3.0, 3.0, 0, 24, 20, 20, 20, 10, -5, 5 }, /* 7 */
+   { 3.5, 3.5, 0, 22, 17, 17, 17, 10, -5, 5 }, /* 8 */
+   { 4.0, 4.0, 0, 20, 14, 14, 14, 10, -5, 5 }, /* 9 */
+   { 4.5, 4.5, 0, 18, 12, 12, 12, 10, -5, 5 }, /* 10 */
 
-   { 7, 7,  7,  3, 35, 35, 0, 10, -5, 5 }, /* 11 */
-   { 5, 5, 10,  4, 30, 30, 0, 10, -5, 5 }, /* 12 */
-   { 5, 5, 15,  5, 20, 20, 0, 10, -5, 5 }, /* 13 */
-   { 4, 4, 20, 10, 20, 20, 0, 10, -5, 5 }, /* 14 */
-   { 3, 3, 25, 15, 20, 20, 0, 10, -5, 5 }  /* 15 */
+   { 4.5, 4.5, 0, 12.0, 8, 20, 20, 10, -5, 5 }, /* 11 */
+   { 5.0, 5.0, 0, 11.0, 7, 18, 18, 10, -5, 5 }, /* 12 */
+   { 5.5, 5.5, 0, 10.0, 6, 16, 16, 10, -5, 5 }, /* 13 */
+   { 6.0, 6.0, 0, 9.0, 5, 14, 14, 10, -5, 5 }, /* 14 */
+   { 6.5, 6.5, 0, 8.0, 4, 12, 12, 10, -5, 5 }  /* 15 */
 };
 
-// hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
+// hr, dr, spellpower, ac, hp, move, mana, hrdrb, acb, statb
 const struct obj_stat_type armor_table[16] = 
 {
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
 
-   { 25, 25, 3.00,10, 10,  4, 8,  1, -10, 5 }, /* 1 */
-   { 20, 20, 2.50, 5, 10,  5, 10, 1, -10, 5 }, /* 2, max spellpower */
-   { 10, 20, 2.25, 5, 10, 10, 15, 1, -10, 5 }, /* 3, mid spellpower */
-   { 10, 10, 2.00, 5, 10, 10, 20, 1, -10, 5 }, /* 4, min spellpower */
-   {  8,  8, 1.75, 5, 10, 10, 25, 1, -10, 5 }, /* 5 */
+   { 10, 10, 18.0, 2.6, 18, 22, 18, 1, -10, 5 }, /* 1 */
+   { 11, 11, 20.0, 2.4, 15, 20, 15, 1, -10, 5 }, /* 2 */
+   { 12, 12, 22.0, 2.2, 12, 18, 12, 1, -10, 5 }, /* 3 */
+   { 13, 13, 24.0, 2.0, 10, 16, 10, 1, -10, 5 }, /* 4 */
+   { 14, 14, 26.0, 1.8, 9, 14, 9, 1, -10, 5 }, /* 5 */
 
-   { 9, 9, 1.75,  4, 10, 10, 0, 1, -10, 5 }, /* 6 */
-   { 8, 8, 2.00,  5, 10, 10, 0, 1, -10, 5 }, /* 7, max defense */
-   { 8, 8, 2.50,  5,  5,  5, 0, 1, -10, 5 }, /* 8, average */
-   { 6, 6, 3.00, 10, 10, 10, 0, 1, -10, 5 }, /* 9, max damage */
-   { 5, 5, 3.50, 15, 15, 15, 0, 1, -10, 5 }, /* 10 */
+   { 4.5, 4.5, 0, 2.2, 15, 18, 18, 1, -10, 5 }, /* 6 */
+   { 5.0, 5.0, 0, 2.0, 13, 16, 16, 1, -10, 5 }, /* 7 */
+   { 5.5, 5.5, 0, 1.8, 11, 14, 14, 1, -10, 5 }, /* 8 */
+   { 6.0, 6.0, 0, 1.6, 10, 12, 12, 1, -10, 5 }, /* 9 */
+   { 6.5, 6.5, 0, 1.4, 9, 10, 10, 1, -10, 5 }, /* 10 */
 
-   { 14, 14, 1.25, 1.5, 25, 25, 0, 1, -10, 5 }, /* 11 */
-   { 12, 12, 1.50, 2.0, 20, 20, 0, 1, -10, 5 }, /* 12, max defense */
-   { 10, 10, 1.75, 5.0, 15, 15, 0, 1, -10, 5 }, /* 13, average */
-   {  8,  8, 2.00, 7.5, 10, 10, 0, 1, -10, 5 }, /* 14, max damage */
-   {  7,  7, 2.25, 9.5, 10, 10, 0, 1, -10, 5 }  /* 15 */
+   { 7.0, 7.0, 0, 1.2, 3.5, 14, 14, 1, -10, 5 }, /* 11 */
+   { 7.5, 7.5, 0, 1.1, 3.0, 13, 13, 1, -10, 5 }, /* 12 */
+   { 8.0, 8.0, 0, 1.0, 2.5, 12, 12, 1, -10, 5 }, /* 13 */
+   { 8.5, 8.5, 0, 0.9, 2.2, 11, 11, 1, -10, 5 }, /* 14 */
+   { 9.0, 9.0, 0, 0.8, 2.0, 10, 10, 1, -10, 5 }  /* 15 */
 };
 
-// hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
+// hr, dr, spellpower, ac, hp, move, mana, hrdrb, acb, statb
 const struct obj_stat_type jewelry_table[16] = 
-{
-   {  0,  0,  0, 0, 0, 0,  0, 0,  0, 0 }, /* 0 */
-
-   {  0,  0,  0, 0, 0, 0,  0, 0,  0, 0 }, /* 1 */
-   { 25, 25, 30, 2, 4, 4, 10, 1, -5, 5 }, /* 2 max spellpower */
-   { 15, 25, 25, 2, 4, 4, 15, 1, -5, 5 }, /* 3 avg spellpower */
-   { 15, 15, 20, 2, 6, 4, 20, 1, -5, 5 }, /* 4 min spellpower */
-   {  0,  0,  0, 0, 0, 0,  0, 0,  0, 0 }, /* 5 */
-
-   { 13, 13, 7.5, 1.5, 2, 2,  0, 1, -5, 5 }, /* 6 */
-   { 12, 12,  10, 2.0, 3, 3,  0, 1, -5, 5 }, /* 7 max defense */
-   { 11, 11,  20, 2.5, 4, 4,  0, 1, -5, 5 }, /* 8 average */
-   {  9,  9,  40, 4.0, 5, 5,  0, 1, -5, 5 }, /* 9 max damage */
-   {  8,  8,  50, 4.5, 6, 6,  0, 1, -5, 5 }, /* 10 */
-
-   { 15, 15,   4,   1,  4,  4,  0, 1, -5, 5 }, /* 11 */
-   { 14, 14,   5, 1.5,  6,  6,  0, 1, -5, 5 }, /* 12 max defense */
-   { 13, 13, 7.5,   2,  8,  8,  0, 1, -5, 5 }, /* 13 average */
-   { 11, 11,  10, 2.5, 10, 10,  0, 1, -5, 5 }, /* 14 max damage */
-   { 10, 10,  15, 3.5, 13, 13,  0, 1, -5, 5 }  /* 15 */
-};
-
-// hr, dr, ac, hp, move, mana, spellpower, hrdrb, acb, statb
-const struct obj_stat_type misc_table[16] = 
 {
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
 
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 1 */
-   { 30, 30, 20, 10, 20, 20, 10, 1, -5, 5 }, /* 2 */
-   { 15, 30, 20, 10, 20, 10, 15, 1, -5, 5 }, /* 3 */
-   { 15, 15, 20, 10, 20, 15, 20, 1, -5, 5 }, /* 4 */
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 5 */
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 6 */
+   { 14, 14, 12.5, 20.0, 12, 10, 10, 1, -5, 5 }, /* 1 */
+   { 15, 15, 10.0, 18.0, 10, 9, 9, 1, -5, 5 }, /* 2 */
+   { 16, 16, 6.67, 16.0, 9, 8, 8, 1, -5, 5 }, /* 3 */
+   { 17, 17, 5.0, 14.0, 8, 7, 7, 1, -5, 5 }, /* 4 */
+   { 18, 18, 4.0, 12.0, 7, 6, 6, 1, -5, 5 }, /* 5 */
 
-   { 15, 15, 15, 5, 15, 15, 0, 1, -5, 5 }, /* 7 */
-   { 15, 15, 20, 10, 10, 10, 0, 1, -5, 5 }, /* 8 */
-   { 12, 12, 25, 10, 15, 15, 0, 1, -5, 5 }, /* 9 */
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 10 */
+   { 6.0, 6.0, 0, 24.0, 10, 9, 9, 1, -5, 5 }, /* 6 */
+   { 6.5, 6.5, 0, 22.0, 9, 8, 8, 1, -5, 5 }, /* 7 */
+   { 7.0, 7.0, 0, 20.0, 8, 7, 7, 1, -5, 5 }, /* 8 */
+   { 7.5, 7.5, 0, 18.0, 7, 6, 6, 1, -5, 5 }, /* 9 */
+   { 8.0, 8.0, 0, 16.0, 6, 5, 5, 1, -5, 5 }, /* 10 */
 
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 11 */
-   { 15, 15, 10, 4, 30, 30, 0, 1, -5, 5 }, /* 12 */
-   { 15, 15, 15, 5, 20, 20, 0, 1, -5, 5 }, /* 13 */
-   { 12, 12, 20, 5, 30, 30, 0, 1, -5, 5 }, /* 14 */
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }  /* 15 */
+   { 10.0, 10.0, 0, 30.0, 4.0, 8, 8, 1, -5, 5 }, /* 11 */
+   { 10.5, 10.5, 0, 28.0, 3.6, 7, 7, 1, -5, 5 }, /* 12 */
+   { 11.0, 11.0, 0, 26.0, 3.2, 6, 6, 1, -5, 5 }, /* 13 */
+   { 11.5, 11.5, 0, 24.0, 2.8, 5, 5, 1, -5, 5 }, /* 14 */
+   { 12.0, 12.0, 0, 22.0, 2.4, 4, 4, 1, -5, 5 }  /* 15 */
 };
 
 OBJ_DATA *generate_item(int level)
@@ -442,13 +418,13 @@ void set_obj_stat_auto(OBJ_DATA *obj)
 {
    int ilevel = obj->level;
    int stat_weight = get_obj_stat_weight_index(obj);
-   int hr_div = 0;
-   int dr_div = 0;
-   int ac_div = 0;
-   int hp_div = 0;
-   int move_div = 0;
-   int mana_div = 0;
-   int spellpower_div = 0;
+   float hr_div = 0;
+   float dr_div = 0;
+   float ac_div = 0;
+   float hp_div = 0;
+   float move_div = 0;
+   float mana_div = 0;
+   float spellpower_div = 0;
    int hrdr_bonus = 0;
    int ac_bonus = 0;
    int stat_bonus = 0;
@@ -471,9 +447,6 @@ void set_obj_stat_auto(OBJ_DATA *obj)
    {
       ilevel += 50;
    }
-
-   if (IS_SET(obj->extra_flags, ITEM_GENERATED))
-      ilevel *= 0.8;
 
    if (IS_SET(obj->extra_flags, ITEM_MAGIC))
    {
@@ -500,6 +473,10 @@ void set_obj_stat_auto(OBJ_DATA *obj)
 
    if (IS_SET(obj->extra_flags, ITEM_BOSS))
       ilevel *= 1.25;
+
+   if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_WRIST) ||
+       IS_SET(obj->wear_flags, ITEM_WEAR_EAR) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
+      ilevel *= 0.8;
 
    /* Jewelry */
    if (is_jewelry(obj))
@@ -566,53 +543,40 @@ void set_obj_stat_auto(OBJ_DATA *obj)
          spellpower_div *= 2;
       }
    }
-   else
-   {
-      hr_div = misc_table[stat_weight].hr_div;
-      dr_div = misc_table[stat_weight].dr_div;
-      ac_div = misc_table[stat_weight].ac_div;
-      hp_div = misc_table[stat_weight].hp_div;
-      move_div = misc_table[stat_weight].move_div;
-      mana_div = misc_table[stat_weight].mana_div;
-      spellpower_div = misc_table[stat_weight].spellpower_div;
-      hrdr_bonus = misc_table[stat_weight].hrdr_bonus;
-      ac_bonus = misc_table[stat_weight].ac_bonus;
-      stat_bonus = misc_table[stat_weight].stat_bonus;
-   }
 
    int ac_val = ac_bonus;
    if (ac_div != 0)
-      ac_val -= (ilevel / ac_div);
+      ac_val -= (int)(ilevel / ac_div);
    if (ac_val == -88)
       ac_val = -87;
    int hr_val = hrdr_bonus;
    if (hr_div != 0)
-      hr_val += (ilevel / hr_div);
+      hr_val += (int)(ilevel / hr_div);
    if (hr_val == 88)
       hr_val = 87;
    int dr_val = hrdr_bonus;
    if (dr_div != 0)
-      dr_val += (ilevel / dr_div);
+      dr_val += (int)(ilevel / dr_div);
    if (dr_val == 88)
       dr_val = 87;
    int hp_val = stat_bonus;
    if (hp_div != 0)
-      hp_val += (ilevel / hp_div);
+      hp_val += (int)(ilevel / hp_div);
    if (hp_val == 88)
       hp_val = 87;
    int mana_val = stat_bonus;
    if (mana_div != 0)
-      mana_val += (ilevel / mana_div);
+      mana_val += (int)(ilevel / mana_div);
    if (mana_val == 88)
       mana_val = 87;
    int move_val = stat_bonus;
    if (move_div != 0)
-      move_val += (ilevel / move_div);
+      move_val += (int)(ilevel / move_div);
    if (move_val == 88)
       move_val = 87;
    int spellpower_val = 0;
    if (spellpower_div > 0)
-      spellpower_val = (ilevel / spellpower_div);
+      spellpower_val = (int)(ilevel / spellpower_div);
    if (spellpower_val == 88)
       spellpower_val = 87;
 
