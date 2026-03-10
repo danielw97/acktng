@@ -1,4 +1,5 @@
 #include "globals.h"
+#include "item_generation_tables.h"
 
 char *get_wear_name(OBJ_DATA *obj);
 void set_obj_stat_auto(OBJ_DATA *obj);
@@ -8,78 +9,6 @@ bool is_jewelry(OBJ_DATA *obj);
 char *get_prefix(OBJ_DATA *obj);
 int get_obj_stat_weight_index(const OBJ_DATA *obj);
 
-
-//  hr, dr, spellpower, ac, hp, move, mana, hrdrb, acb, statb
-const struct obj_stat_type weapon_table[16] = 
-{
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
-
-   { 6, 6, 6.0, 24, 24, 28, 24, 10, -5, 5 }, /* 1 */
-   { 7, 7, 8.0, 22, 20, 24, 20, 10, -5, 5 }, /* 2 */
-   { 8, 8, 10.0, 20, 17, 20, 17, 10, -5, 5 }, /* 3 */
-   { 9, 9, 12.0, 18, 14, 17, 14, 10, -5, 5 }, /* 4 */
-   { 10, 10, 14.0, 16, 12, 14, 12, 10, -5, 5 }, /* 5 */
-
-   { 2.5, 2.5, 0, 26, 24, 24, 24, 10, -5, 5 }, /* 6 */
-   { 3.0, 3.0, 0, 24, 20, 20, 20, 10, -5, 5 }, /* 7 */
-   { 3.5, 3.5, 0, 22, 17, 17, 17, 10, -5, 5 }, /* 8 */
-   { 4.0, 4.0, 0, 20, 14, 14, 14, 10, -5, 5 }, /* 9 */
-   { 4.5, 4.5, 0, 18, 12, 12, 12, 10, -5, 5 }, /* 10 */
-
-   { 4.5, 4.5, 0, 12.0, 8, 20, 20, 10, -5, 5 }, /* 11 */
-   { 5.0, 5.0, 0, 11.0, 7, 18, 18, 10, -5, 5 }, /* 12 */
-   { 5.5, 5.5, 0, 10.0, 6, 16, 16, 10, -5, 5 }, /* 13 */
-   { 6.0, 6.0, 0, 9.0, 5, 14, 14, 10, -5, 5 }, /* 14 */
-   { 6.5, 6.5, 0, 8.0, 4, 12, 12, 10, -5, 5 }  /* 15 */
-};
-
-// hr, dr, spellpower, ac, hp, move, mana, hrdrb, acb, statb
-const struct obj_stat_type armor_table[16] = 
-{
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
-
-   { 10, 10, 18.0, 2.6, 18, 22, 18, 1, -10, 5 }, /* 1 */
-   { 11, 11, 20.0, 2.4, 15, 20, 15, 1, -10, 5 }, /* 2 */
-   { 12, 12, 22.0, 2.2, 12, 18, 12, 1, -10, 5 }, /* 3 */
-   { 13, 13, 24.0, 2.0, 10, 16, 10, 1, -10, 5 }, /* 4 */
-   { 14, 14, 26.0, 1.8, 9, 14, 9, 1, -10, 5 }, /* 5 */
-
-   { 4.5, 4.5, 0, 2.2, 15, 18, 18, 1, -10, 5 }, /* 6 */
-   { 5.0, 5.0, 0, 2.0, 13, 16, 16, 1, -10, 5 }, /* 7 */
-   { 5.5, 5.5, 0, 1.8, 11, 14, 14, 1, -10, 5 }, /* 8 */
-   { 6.0, 6.0, 0, 1.6, 10, 12, 12, 1, -10, 5 }, /* 9 */
-   { 6.5, 6.5, 0, 1.4, 9, 10, 10, 1, -10, 5 }, /* 10 */
-
-   { 7.0, 7.0, 0, 1.2, 3.5, 14, 14, 1, -10, 5 }, /* 11 */
-   { 7.5, 7.5, 0, 1.1, 3.0, 13, 13, 1, -10, 5 }, /* 12 */
-   { 8.0, 8.0, 0, 1.0, 2.5, 12, 12, 1, -10, 5 }, /* 13 */
-   { 8.5, 8.5, 0, 0.9, 2.2, 11, 11, 1, -10, 5 }, /* 14 */
-   { 9.0, 9.0, 0, 0.8, 2.0, 10, 10, 1, -10, 5 }  /* 15 */
-};
-
-// hr, dr, spellpower, ac, hp, move, mana, hrdrb, acb, statb
-const struct obj_stat_type jewelry_table[16] = 
-{
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, /* 0 */
-
-   { 14, 14, 12.5, 20.0, 12, 10, 10, 1, -5, 5 }, /* 1 */
-   { 15, 15, 10.0, 18.0, 10, 9, 9, 1, -5, 5 }, /* 2 */
-   { 16, 16, 6.67, 16.0, 9, 8, 8, 1, -5, 5 }, /* 3 */
-   { 17, 17, 5.0, 14.0, 8, 7, 7, 1, -5, 5 }, /* 4 */
-   { 18, 18, 4.0, 12.0, 7, 6, 6, 1, -5, 5 }, /* 5 */
-
-   { 6.0, 6.0, 0, 24.0, 10, 9, 9, 1, -5, 5 }, /* 6 */
-   { 6.5, 6.5, 0, 22.0, 9, 8, 8, 1, -5, 5 }, /* 7 */
-   { 7.0, 7.0, 0, 20.0, 8, 7, 7, 1, -5, 5 }, /* 8 */
-   { 7.5, 7.5, 0, 18.0, 7, 6, 6, 1, -5, 5 }, /* 9 */
-   { 8.0, 8.0, 0, 16.0, 6, 5, 5, 1, -5, 5 }, /* 10 */
-
-   { 10.0, 10.0, 0, 30.0, 4.0, 8, 8, 1, -5, 5 }, /* 11 */
-   { 10.5, 10.5, 0, 28.0, 3.6, 7, 7, 1, -5, 5 }, /* 12 */
-   { 11.0, 11.0, 0, 26.0, 3.2, 6, 6, 1, -5, 5 }, /* 13 */
-   { 11.5, 11.5, 0, 24.0, 2.8, 5, 5, 1, -5, 5 }, /* 14 */
-   { 12.0, 12.0, 0, 22.0, 2.4, 4, 4, 1, -5, 5 }  /* 15 */
-};
 
 OBJ_DATA *generate_item(int level)
 {
@@ -190,10 +119,13 @@ OBJ_DATA *generate_item(int level)
          obj->item_type = ITEM_WEAPON;
          obj->value[1] = obj->level / 10 + 1;
          obj->value[2] = obj->level / 5 + 2;
-         obj->value[3] = number_range(1, 13);
+         obj->value[3] = number_range(1, 12);
       }
       break;
    }
+
+   if (obj->item_type == ITEM_WEAPON && obj->value[3] == 0)
+      SET_BIT(obj->extra_flags, ITEM_FIST);
 
    sprintf(buf, "%s%s %s", get_prefix(obj), get_wear_name(obj), get_suffix(obj));
    obj->name = str_dup(buf);
@@ -250,10 +182,50 @@ char *get_prefix(OBJ_DATA *obj)
    }
 }
 
+static const char *get_weapon_name_from_attack_type(int attack_type)
+{
+   switch (attack_type)
+   {
+   case 0:
+      return "Cudgel";
+   case 1:
+      return "Blade";
+   case 2:
+      return "Dagger";
+   case 3:
+      return "Sword";
+   case 4:
+      return "Whip";
+   case 5:
+      return "Claws";
+   case 6:
+      return "Blaster";
+   case 7:
+      return "Mace";
+   case 8:
+      return "Hammer";
+   case 9:
+      return "Hook";
+   case 10:
+      return "Fangs";
+   case 11:
+      return "Spear";
+   case 12:
+      return "Siphon";
+   default:
+      return "Weapon";
+   }
+}
+
 char *get_wear_name(OBJ_DATA *obj)
 {
    if (obj->item_type == ITEM_WEAPON)
-      return "Weapon";
+   {
+      if (IS_SET(obj->extra_flags, ITEM_FIST) && obj->value[3] == 0)
+         return "Fists";
+
+      return (char *)get_weapon_name_from_attack_type(obj->value[3]);
+   }
 
    if (obj->item_type == ITEM_LIGHT)
    {
