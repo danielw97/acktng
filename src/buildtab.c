@@ -482,6 +482,7 @@ const struct lookup_type tab_mob_flags[] = {
     {"solo", ACT_SOLO, 5000}, /*  mob is designed to fight solo */
     {"no_blood", ACT_NOBLOOD, 4000},
     {"boss", ACT_BOSS, NO_USE},
+    {"quartermaster", ACT_QUARTERMASTER, NO_USE},
     {"invasion", ACT_INVASION, NO_USE},
     {"noassist", ACT_NOASSIST, 5000}, /*  mob is designed to not assist no matter what*/
     {NULL, 0}};
@@ -712,6 +713,7 @@ const struct lookup_type tab_wear_flags[] = {
     {"hooves", BIT_23, 100},
     {"take", BIT_24, 900},
     {"clan_colors", BIT_25, 900},
+    {"invasion_emblem", BIT_26, 900},
     {NULL, 0}};
 
 /* This not used at present.  Thought i'd bung details in though :) */
@@ -767,6 +769,7 @@ const struct lookup_type tab_wear_loc[] = {
     {"feet", 29, 40},
     {"hooves", 30, 80},
     {"clan_colors", 31, 80},
+    {"invasion_emblem", 32, 80},
     {"max_wear", MAX_WEAR, 0},
     {NULL, 0}};
 

@@ -38,10 +38,258 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace);
 CHAR_DATA *find_keeper(CHAR_DATA *ch);
 int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj);
 void check_guards(CHAR_DATA *ch);
+void set_obj_stat_auto(OBJ_DATA *obj);
 
 char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort);
 
 
+
+
+typedef struct quartermaster_emblem_option_type
+{
+   const char *tier_name;
+   const char *style_name;
+   int weight;
+   int invasion_points;
+   int commendations;
+   int ribbons;
+   int medals;
+   int tier_extra_flag;
+} QUARTERMASTER_EMBLEM_OPTION_TYPE;
+
+static const QUARTERMASTER_EMBLEM_OPTION_TYPE quartermaster_emblem_options[] = {
+   {"common", "caster", 3, 1, 5, 0, 0, 0},
+   {"common", "melee", 8, 1, 5, 0, 0, 0},
+   {"common", "tank", 13, 1, 5, 0, 0, 0},
+   {"magic", "caster", 3, 10, 50, 5, 0, ITEM_MAGIC},
+   {"magic", "melee", 8, 10, 50, 5, 0, ITEM_MAGIC},
+   {"magic", "tank", 13, 10, 50, 5, 0, ITEM_MAGIC},
+   {"rare", "caster", 3, 100, 500, 50, 5, ITEM_RARE},
+   {"rare", "melee", 8, 100, 500, 50, 5, ITEM_RARE},
+   {"rare", "tank", 13, 100, 500, 50, 5, ITEM_RARE},
+   {NULL, NULL, 0, 0, 0, 0, 0, 0}
+};
+
+static CHAR_DATA *find_quartermaster(CHAR_DATA *ch)
+{
+   CHAR_DATA *keeper;
+
+   if (ch == NULL || ch->in_room == NULL)
+      return NULL;
+
+   for (keeper = ch->in_room->first_person; keeper != NULL; keeper = keeper->next_in_room)
+   {
+      if (IS_NPC(keeper) && IS_SET(keeper->act, ACT_QUARTERMASTER) && !IS_AFFECTED(keeper, AFF_CHARM) && can_see(ch, keeper))
+         return keeper;
+   }
+
+   return NULL;
+}
+
+static const QUARTERMASTER_EMBLEM_OPTION_TYPE *find_quartermaster_emblem_option(const char *tier_name, const char *style_name)
+{
+   int i;
+
+   if (tier_name == NULL || style_name == NULL)
+      return NULL;
+
+   for (i = 0; quartermaster_emblem_options[i].tier_name != NULL; i++)
+   {
+      if (!str_cmp(quartermaster_emblem_options[i].tier_name, tier_name) &&
+          !str_cmp(quartermaster_emblem_options[i].style_name, style_name))
+         return &quartermaster_emblem_options[i];
+   }
+
+   return NULL;
+}
+
+static int quartermaster_emblem_has_tokens(const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
+{
+   if (option == NULL)
+      return FALSE;
+
+   return (option->commendations > 0 || option->ribbons > 0 || option->medals > 0);
+}
+
+static void append_quartermaster_emblem_cost(char *dest, size_t dest_size, const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
+{
+   char token_buf[MSL];
+
+   if (dest == NULL || option == NULL)
+      return;
+
+   snprintf(dest, dest_size, "%d invasion point%s", option->invasion_points, option->invasion_points == 1 ? "" : "s");
+
+   if (!quartermaster_emblem_has_tokens(option))
+      return;
+
+   snprintf(token_buf, sizeof(token_buf), " (");
+
+   if (option->commendations > 0)
+      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), "%d commendation%s", option->commendations, option->commendations == 1 ? "" : "s");
+
+   if (option->ribbons > 0)
+      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), "%s%d ribbon%s", option->commendations > 0 ? ", " : "", option->ribbons, option->ribbons == 1 ? "" : "s");
+
+   if (option->medals > 0)
+      snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), "%s%d medal%s", (option->commendations > 0 || option->ribbons > 0) ? ", " : "", option->medals, option->medals == 1 ? "" : "s");
+
+   snprintf(token_buf + strlen(token_buf), sizeof(token_buf) - strlen(token_buf), ")");
+   safe_strcat(dest_size, dest, token_buf);
+}
+
+static int quartermaster_can_afford_option(const CHAR_DATA *ch, const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
+{
+   if (ch == NULL || option == NULL || IS_NPC(ch) || ch->pcdata == NULL)
+      return FALSE;
+
+   if (ch->pcdata->invasion_points < option->invasion_points)
+      return FALSE;
+
+   if (ch->pcdata->invasion_rewards[0] < option->commendations)
+      return FALSE;
+
+   if (ch->pcdata->invasion_rewards[1] < option->ribbons)
+      return FALSE;
+
+   if (ch->pcdata->invasion_rewards[2] < option->medals)
+      return FALSE;
+
+   return TRUE;
+}
+
+static void quartermaster_capitalize_word(const char *src, char *dest, size_t dest_size)
+{
+   if (dest == NULL || dest_size == 0)
+      return;
+
+   if (src == NULL)
+   {
+      dest[0] = '\0';
+      return;
+   }
+
+   snprintf(dest, dest_size, "%s", src);
+   if (dest[0] >= 'a' && dest[0] <= 'z')
+      dest[0] = (char)(dest[0] - 'a' + 'A');
+}
+
+static const char *quartermaster_tier_color(const char *tier_name)
+{
+   if (tier_name == NULL)
+      return "@@N";
+
+   if (!str_cmp(tier_name, "magic"))
+      return "@@r";
+
+   if (!str_cmp(tier_name, "rare"))
+      return "@@l";
+
+   return "@@N";
+}
+
+static const char *quartermaster_style_color(const char *style_name)
+{
+   if (style_name == NULL)
+      return "@@N";
+
+   if (!str_cmp(style_name, "caster"))
+      return "@@c";
+
+   if (!str_cmp(style_name, "melee"))
+      return "@@r";
+
+   if (!str_cmp(style_name, "tank"))
+      return "@@g";
+
+   return "@@N";
+}
+
+static void show_quartermaster_list(CHAR_DATA *ch)
+{
+   char buf[MSL];
+   char cost_summary[MSL];
+   char tier_display[32];
+   char style_display[32];
+   const char *tier_color;
+   const char *style_color;
+   int i;
+
+   if (ch == NULL)
+      return;
+
+   send_to_char("\n\r@@g[@@yTier@@g]   @@yStyle@@g   @@yWeight@@g   @@yCost@@N\n\r", ch);
+
+   for (i = 0; quartermaster_emblem_options[i].tier_name != NULL; i++)
+   {
+      append_quartermaster_emblem_cost(cost_summary, sizeof(cost_summary), &quartermaster_emblem_options[i]);
+      quartermaster_capitalize_word(quartermaster_emblem_options[i].tier_name, tier_display, sizeof(tier_display));
+      quartermaster_capitalize_word(quartermaster_emblem_options[i].style_name, style_display, sizeof(style_display));
+      tier_color = quartermaster_tier_color(quartermaster_emblem_options[i].tier_name);
+      style_color = quartermaster_style_color(quartermaster_emblem_options[i].style_name);
+      snprintf(buf, sizeof(buf), "@@g[@@a%s%-6s@@g] %s%-6s@@g  @@W%3d@@g      @@W%-.120s@@N\n\r",
+               tier_color,
+               tier_display,
+               style_color,
+               style_display,
+               quartermaster_emblem_options[i].weight,
+               cost_summary);
+      send_to_char(buf, ch);
+   }
+
+   send_to_char("\n\rBuy syntax: @@Wbuy <tier> <style>@@N (styles: caster/melee/tank).\n\r", ch);
+}
+
+static OBJ_DATA *create_quartermaster_emblem(CHAR_DATA *ch, const QUARTERMASTER_EMBLEM_OPTION_TYPE *option)
+{
+   char buf[MSL];
+   char tier_display[32];
+   char style_display[32];
+   OBJ_DATA *obj;
+   int pseudo_level;
+
+   if (ch == NULL || option == NULL)
+      return NULL;
+
+   pseudo_level = get_psuedo_level(ch);
+
+   obj = create_object(get_obj_index(OBJ_VNUM_MUSHROOM), 0);
+   if (obj == NULL)
+      return NULL;
+
+   obj->item_type = ITEM_ARMOR;
+   /* Set level from buyer before set_obj_stat_auto() so allocation scales correctly. */
+   obj->level = pseudo_level;
+   obj->wear_flags = ITEM_TAKE | ITEM_WEAR_INVASION_EMBLEM;
+   obj->weight = option->weight;
+   obj->cost = 0;
+
+   SET_BIT(obj->extra_flags, ITEM_NODROP);
+   SET_BIT(obj->extra_flags, ITEM_BIND_EQUIP);
+
+   if (option->tier_extra_flag != 0)
+      SET_BIT(obj->extra_flags, option->tier_extra_flag);
+
+   snprintf(buf, sizeof(buf), "%s %s invasion emblem", option->tier_name, option->style_name);
+   free_string(obj->name);
+   obj->name = str_dup(buf);
+
+   quartermaster_capitalize_word(option->tier_name, tier_display, sizeof(tier_display));
+   quartermaster_capitalize_word(option->style_name, style_display, sizeof(style_display));
+   snprintf(buf, sizeof(buf), "%s%s@@N %s%s@@N Invasion Emblem", quartermaster_tier_color(option->tier_name), tier_display,
+            quartermaster_style_color(option->style_name), style_display);
+   free_string(obj->short_descr);
+   obj->short_descr = str_dup(buf);
+
+   snprintf(buf, sizeof(buf), "A %s%s@@N %s%s@@N invasion emblem is here.", quartermaster_tier_color(option->tier_name), option->tier_name,
+            quartermaster_style_color(option->style_name), option->style_name);
+   free_string(obj->description);
+   obj->description = str_dup(buf);
+
+   set_obj_stat_auto(obj);
+
+   return obj;
+}
 
 bool should_enforce_equip_restrictions(const CHAR_DATA *ch)
 {
@@ -1297,6 +1545,9 @@ bool can_wear_at(CHAR_DATA *ch, OBJ_DATA *obj, int location)
    case WEAR_CLAN_COLORS:
       loc_flag = ITEM_WEAR_CLAN_COLORS;
       break;
+   case WEAR_INVASION_EMBLEM:
+      loc_flag = ITEM_WEAR_INVASION_EMBLEM;
+      break;
    case WEAR_HOLD_HAND_L:
    case WEAR_HOLD_HAND_R:
       loc_flag = ITEM_WEAR_HOLD_HAND;
@@ -1715,6 +1966,17 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
       act("$n begins using $p as $s clan colors.", ch, obj, NULL, TO_ROOM);
       act("You begin using $p as your clan colors.", ch, obj, NULL, TO_CHAR);
       equip_char(ch, obj, WEAR_CLAN_COLORS);
+      return;
+   }
+
+   if ((CAN_WEAR(obj, ITEM_WEAR_INVASION_EMBLEM)) && (can_wear_at(ch, obj, WEAR_INVASION_EMBLEM)))
+   {
+      if (!remove_obj(ch, WEAR_INVASION_EMBLEM, fReplace))
+         return;
+
+      act("$n wears $p as an invasion emblem.", ch, obj, NULL, TO_ROOM);
+      act("You wear $p as an invasion emblem.", ch, obj, NULL, TO_CHAR);
+      equip_char(ch, obj, WEAR_INVASION_EMBLEM);
       return;
    }
 
@@ -2728,7 +2990,68 @@ int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj)
 void do_buy(CHAR_DATA *ch, char *argument)
 {
    char arg[MAX_INPUT_LENGTH];
+   char arg2[MAX_INPUT_LENGTH];
    CHAR_DATA *keeper;
+
+   keeper = find_quartermaster(ch);
+   if (keeper != NULL)
+   {
+      const QUARTERMASTER_EMBLEM_OPTION_TYPE *option;
+      OBJ_DATA *obj;
+
+      argument = one_argument(argument, arg);
+      argument = one_argument(argument, arg2);
+
+      if (arg[0] == '\0' || arg2[0] == '\0')
+      {
+         send_to_char("Buy what? Syntax: buy <tier> <style>.\n\r", ch);
+         return;
+      }
+
+      option = find_quartermaster_emblem_option(arg, arg2);
+      if (option == NULL)
+      {
+         send_to_char("Quartermaster offers: common/magic/rare with caster/melee/tank styles.\n\r", ch);
+         return;
+      }
+
+      if (!quartermaster_can_afford_option(ch, option))
+      {
+         send_to_char("You do not have enough invasion points or invasion rewards for that emblem.\n\r", ch);
+         return;
+      }
+
+      if (ch->carry_number + 1 > can_carry_n(ch))
+      {
+         send_to_char("You can't carry that many items.\n\r", ch);
+         return;
+      }
+
+      obj = create_quartermaster_emblem(ch, option);
+      if (obj == NULL)
+      {
+         send_to_char("The quartermaster frowns and says: 'I cannot prepare that emblem right now.'\n\r", ch);
+         return;
+      }
+
+      if (ch->carry_weight + get_obj_weight(obj) > can_carry_w(ch))
+      {
+         extract_obj(obj);
+         send_to_char("You can't carry that much weight.\n\r", ch);
+         return;
+      }
+
+      ch->pcdata->invasion_points -= option->invasion_points;
+      ch->pcdata->invasion_rewards[0] -= option->commendations;
+      ch->pcdata->invasion_rewards[1] -= option->ribbons;
+      ch->pcdata->invasion_rewards[2] -= option->medals;
+
+      obj_to_char(obj, ch);
+      act("$n purchases $p from the quartermaster.", ch, obj, NULL, TO_ROOM);
+      act("You purchase $p.", ch, obj, NULL, TO_CHAR);
+      return;
+   }
+
    argument = one_argument(argument, arg);
    if (arg[0] == '\0')
    {
@@ -2887,6 +3210,14 @@ void do_list(CHAR_DATA *ch, char *argument)
    CHAR_DATA *keeper;
    int cost;
    buf1[0] = '\0';
+
+   keeper = find_quartermaster(ch);
+   if (keeper != NULL)
+   {
+      show_quartermaster_list(ch);
+      return;
+   }
+
    if ((keeper = find_keeper(ch)) == NULL)
       return;
    found = FALSE;

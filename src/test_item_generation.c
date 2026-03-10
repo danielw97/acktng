@@ -11,6 +11,7 @@ char *get_suffix(OBJ_DATA *obj);
 char *get_prefix(OBJ_DATA *obj);
 char *get_wear_name(OBJ_DATA *obj);
 bool is_jewelry(OBJ_DATA *obj);
+int item_generation_apply_item_level_modifiers(const OBJ_DATA *obj, int ilevel);
 
 
 
@@ -166,6 +167,31 @@ static void test_get_wear_name_handles_weapon_light_and_jewelry(void)
 }
 
 
+
+static void test_invasion_emblem_doubles_allocated_item_points(void)
+{
+    OBJ_DATA obj;
+    int baseline;
+
+    memset(&obj, 0, sizeof(obj));
+    obj.item_type = ITEM_ARMOR;
+
+    baseline = item_generation_apply_item_level_modifiers(&obj, 100);
+
+    SET_BIT(obj.wear_flags, ITEM_WEAR_INVASION_EMBLEM);
+    assert(item_generation_apply_item_level_modifiers(&obj, 100) == baseline * 2);
+}
+
+
+static void test_get_wear_name_handles_invasion_emblem(void)
+{
+    OBJ_DATA obj;
+    memset(&obj, 0, sizeof(obj));
+
+    SET_BIT(obj.wear_flags, ITEM_WEAR_INVASION_EMBLEM);
+    assert(strcmp(get_wear_name(&obj), "Emblem") == 0);
+}
+
 static void test_weapon_names_match_attack_types(void)
 {
     OBJ_DATA obj;
@@ -213,6 +239,8 @@ int main(void)
     test_item_strings_follow_weight_thresholds();
     test_get_wear_name_varies_with_weight();
     test_get_wear_name_handles_weapon_light_and_jewelry();
+    test_invasion_emblem_doubles_allocated_item_points();
+    test_get_wear_name_handles_invasion_emblem();
     test_weapon_names_match_attack_types();
     return 0;
 }

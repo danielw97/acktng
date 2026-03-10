@@ -151,6 +151,13 @@ static void test_no_blood_flag_does_not_overlap_invasion_act_bit(void)
    assert(PLR_NOBLOOD == ACT_INVASION);
 }
 
+static void test_quartermaster_flag_uses_unique_act_bit(void)
+{
+   assert(ACT_QUARTERMASTER != ACT_BOSS);
+   assert(ACT_QUARTERMASTER != ACT_NOBLOOD);
+   assert(ACT_QUARTERMASTER != ACT_INVASION);
+}
+
 int main(void)
 {
    test_range_for_normal_mob_level();
@@ -163,6 +170,7 @@ int main(void)
    test_effective_range_helper();
    test_crusade_mobile_validation_excludes_invaders();
    test_no_blood_flag_does_not_overlap_invasion_act_bit();
+   test_quartermaster_flag_uses_unique_act_bit();
 
    puts("test_quest: all tests passed");
    return 0;
