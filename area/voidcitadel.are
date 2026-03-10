@@ -3286,7 +3286,7 @@ D3
 D4
 ~
 ~
-0 0 3238
+0 -1 3238
 E
 gate~
 The iron gate bears countless ancient runes. You recognize some as
@@ -3313,11 +3313,11 @@ D1
 ~
 ~
 0 -1 613
-D2
+D3
 ~
 ~
 0 -1 610
-D3
+D5
 ~
 ~
 0 -1 617
@@ -3467,11 +3467,11 @@ Candles of black wax burn in skull-shaped holders, their flames producing
 no warmth whatsoever.
 ~
 8201 11
-D0
+D5
 ~
 ~
 0 -1 618
-D1
+D4
 ~
 ~
 0 -1 611
@@ -3499,7 +3499,7 @@ D0
 ~
 ~
 0 -1 622
-D1
+D4
 ~
 ~
 0 -1 617
@@ -3592,6 +3592,10 @@ The most recent plaque has a blank space where the name should be - the
 date upon it is contemporary. Whoever was meant to be remembered here
 either has not yet failed, or their failure is too recent to be chronicled.
 ~
+D1
+~
+~
+0 -1 627
 S
 #622
 @@mThe Frost Sanctum@@n~
@@ -3619,6 +3623,10 @@ carved with void runes. If you could thaw the ice without shattering the key...
 The puzzle: the temperature runes on the walls suggest the ice responds to
 heat runes arranged in the correct order. Examine the walls for guidance.
 ~
+D3
+~
+~
+0 -1 700
 S
 #623
 @@mThe Labyrinth Entrance@@n~
@@ -3728,7 +3736,7 @@ D0
 ~
 ~
 0 -1 628
-D2
+D3
 ~
 ~
 0 -1 621
@@ -3749,11 +3757,11 @@ black tips, a signaling horn whose sound you suspect would carry through
 the entire keep. A ladder leads back down to the south passage.
 ~
 8201 11
-D2
+D3
 ~
 ~
 0 -1 620
-D3
+D2
 ~
 ~
 0 -1 627
@@ -3862,7 +3870,7 @@ D0
 ~
 ~
 0 -1 644
-D1
+D5
 ~
 ~
 0 -1 660
@@ -4157,7 +4165,7 @@ D1
 ~
 ~
 0 -1 659
-D2
+D4
 ~
 ~
 0 -1 660
@@ -4191,11 +4199,11 @@ D0
 ~
 ~
 0 -1 665
-D2
+D5
 ~
 ~
 0 -1 658
-D3
+D4
 ~
 ~
 0 -1 642
@@ -4278,7 +4286,7 @@ D0
 ~
 ~
 0 -1 672
-D1
+D5
 ~
 ~
 0 -1 675
@@ -4317,6 +4325,10 @@ your visible emotional state. The writing is precise and clinical, lacking
 any judgment. Disturbingly, it also describes the thoughts it believes you
 are currently thinking. It is more accurate than it should be.
 ~
+D1
+~
+~
+0 -1 701
 S
 #673
 @@mThe Chamber of the Dark Puzzle@@n~
@@ -4380,15 +4392,15 @@ this post are gone, but the mechanisms they operated - iron gates
 that can drop to seal the passage - remain functional.
 ~
 8205 11
-D0
+D5
 ~
 ~
 0 -1 680
-D1
+D0
 ~
 ~
 0 -1 674
-D2
+D4
 ~
 ~
 0 -1 671
@@ -4504,15 +4516,15 @@ dark matter stand in rows. Several of the dummies appear to have been
 recently used - their surfaces bear fresh damage.
 ~
 8201 11
-D1
+D3
 ~
 ~
 0 -1 750
-D2
+D4
 ~
 ~
 0 -1 675
-D3
+D1
 ~
 ~
 0 -1 678
@@ -4537,7 +4549,7 @@ D0
 ~
 ~
 0 -1 682
-D2
+D3
 ~
 ~
 0 -1 685
@@ -4597,6 +4609,10 @@ intense. The circle was designed to hold the entity indefinitely, but
 'indefinitely' is a relative term when measured against the patience of
 a void entity.
 ~
+D3
+~
+~
+0 -1 684
 S
 #684
 @@yThe Ritual Antechamber@@n~
@@ -4607,11 +4623,11 @@ maintaining the binding. The instructions assume the reader has ten
 to fifteen years of void-magic training as a baseline.
 ~
 8205 11
-D2
+D1
 ~
 ~
 0 -1 683
-D3
+D5
 ~
 ~
 0 -1 685
@@ -4636,11 +4652,11 @@ D0
 ~
 ~
 0 -1 683
-D1
+D4
 ~
 ~
 0 -1 684
-D2
+D1
 ~
 ~
 0 -1 681
@@ -4727,6 +4743,10 @@ shifts and moves, displaying weapons and abilities chosen specifically to
 counter what it has observed of your fighting style during your journey
 through the citadel. It has been watching since you entered the gate.
 ~
+D3
+~
+~
+0 -1 803
 S
 #700
 @@pThe Chamber of Reflection@@n~
@@ -4737,7 +4757,7 @@ brazier, illuminating items left by previous challengers who did not
 survive their attempt on Kel'Shadra.
 ~
 8201 11
-D2
+D1
 ~
 ~
 0 -1 622
@@ -4780,7 +4800,7 @@ may be difficult to interpret. The pool has one cost: a small portion
 of the drinker's life force, permanently given.
 ~
 8201 11
-D1
+D3
 ~
 ~
 0 -1 625
@@ -5096,6 +5116,10 @@ D2
 ~
 ~
 0 -1 718
+D3
+~
+~
+0 -1 860
 S
 #716
 @@yThe Trophy Hall@@n~
@@ -5122,6 +5146,10 @@ weapons have a will of their own. A wise voice in the back of your
 mind notes that taking a displayed trophy from a dedicated collection
 in an active citadel would provoke a response.
 ~
+D3
+~
+~
+0 -1 850
 S
 #717
 @@dThe Catacomb Lord's Antechamber@@n~
@@ -5158,7 +5186,7 @@ service, their death, and the state of their preservation. The files
 are meticulously maintained, updated as recently as last week.
 ~
 8201 11
-D2
+D0
 ~
 ~
 0 -1 715
@@ -5229,6 +5257,10 @@ D4
 ~
 ~
 0 -1 731
+D1
+~
+~
+0 -1 616
 S
 #731
 @@aThe Spire Base@@n~
@@ -5244,11 +5276,11 @@ D0
 ~
 ~
 0 -1 735
-D4
+D5
 ~
 ~
 0 -1 730
-D5
+D3
 ~
 ~
 0 -1 732
@@ -5272,7 +5304,7 @@ volumes survived in sealed containers and still rest on the shelves,
 their contents intact.
 ~
 8201 11
-D4
+D1
 ~
 ~
 0 -1 731
@@ -5340,6 +5372,10 @@ flowers from some distant garden, a set of children's toys kept by
 someone who missed their family, annotated books in a dozen languages.
 These were people with lives before they became servants of void magic.
 ~
+D1
+~
+~
+0 -1 851
 S
 #735
 @@aThe Spire Antechamber@@n~
@@ -5480,6 +5516,10 @@ D0
 ~
 ~
 0 -1 751
+D1
+~
+~
+0 -1 680
 S
 #751
 @@cEternal Corridor - First Loop@@n~
@@ -5611,11 +5651,11 @@ the reflection begins. More than one traveler has walked into a wall
 while staring at the ceiling.
 ~
 8201 11
-D0
+D5
 ~
 ~
 0 -1 761
-D1
+D0
 ~
 ~
 0 -1 755
@@ -5634,7 +5674,7 @@ who enters from one end exits from the same end, having somehow
 traversed the full length without going anywhere.
 ~
 8201 11
-D1
+D3
 ~
 ~
 0 -1 753
@@ -5723,7 +5763,7 @@ things dropped by travelers trying to lighten their load or leave
 markers. A ring, a boot, a child's drawing, a letter never sent.
 ~
 8201 11
-D2
+D4
 ~
 ~
 0 -1 756
@@ -5816,6 +5856,10 @@ them. The Warden's Key, obtained from the Warden itself, resonates
 with these runes. To have the key means to have faced and defeated
 what guards the corridors.
 ~
+D1
+~
+~
+0 -1 766
 S
 #765
 @@cEternal Corridor - The Observation Point@@n~
@@ -5849,7 +5893,7 @@ a small loaf of bread on the bench, both still fresh despite the
 impossible logistics of their presence.
 ~
 8201 11
-D0
+D3
 ~
 ~
 0 -1 764
@@ -5889,6 +5933,10 @@ as both home and weapon. Fighting here means adapting to a battlefield
 that is actively being modified by your opponent. Speed and flexibility
 will matter as much as raw power.
 ~
+D3
+~
+~
+0 -1 852
 S
 #800
 @@pThe Void Herald's Antechamber@@n~
@@ -5904,7 +5952,7 @@ D0
 ~
 ~
 0 -1 801
-D2
+D3
 ~
 ~
 0 -1 691
@@ -5980,7 +6028,7 @@ The passage is short and straight: no more tests, no more puzzles.
 Only what waits at the end.
 ~
 8201 11
-D0
+D1
 ~
 ~
 0 -1 695
@@ -5998,7 +6046,7 @@ life as a scholar of void magic. The material here is priceless for
 understanding the history of Kel'Shadra.
 ~
 8201 11
-D0
+D1
 ~
 ~
 0 -1 716
@@ -6066,7 +6114,7 @@ the gradual corruption of the original guardians, and the centuries
 of undead service that followed.
 ~
 8201 11
-D0
+D1
 ~
 ~
 0 -1 715
@@ -6102,6 +6150,10 @@ of the plane entirely if the entity broke free. They never used it.
 The seals are intact. The gate is functional. Where it leads, no one
 currently alive can say.
 ~
+D3
+~
+~
+0 -1 901
 S
 #901
 @@bThe Chamber of First Contact@@n~
@@ -6113,7 +6165,7 @@ from multiple angles as if filmed: the contact, the compact, and the
 first signs of what was really happening.
 ~
 8201 11
-D0
+D1
 ~
 ~
 0 -1 900
@@ -6126,6 +6178,10 @@ on an entity of its power. The compact gave it exactly what it wanted:
 a way to remain in the material plane. The sorcerers celebrated while
 the entity waited.
 ~
+D3
+~
+~
+0 -1 902
 S
 #902
 @@bThe Observation Gallery@@n~
@@ -6136,7 +6192,7 @@ with the mechanisms used to control it. Several of those mechanisms
 are broken. Several appear to have been deliberately sabotaged.
 ~
 8201 11
-D2
+D1
 ~
 ~
 0 -1 901
@@ -6159,7 +6215,7 @@ It contains the physical remains of the original sorcerers - not dead,
 exactly, but suspended in the moment of their ultimate failure.
 ~
 8201 11
-D0
+D2
 ~
 ~
 0 -1 695
@@ -6174,6 +6230,10 @@ They do not speak, but the expressions on their preserved faces change
 as you enter: from the frozen rictus of horror to something approaching
 relief.
 ~
+D3
+~
+~
+0 -1 951
 S
 #951
 @@bThe Resolution Hall@@n~
@@ -6184,7 +6244,7 @@ are bare, the architecture plain. No void-stone, no dark enchantments,
 no screaming faces on the sconces. Just a way out, open at last.
 ~
 8201 11
-D0
+D1
 ~
 ~
 0 -1 950
