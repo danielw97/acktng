@@ -1626,6 +1626,349 @@ full undead possess.
 + 0 0 0 0 0 0 0 0 0
 l 100 10194 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+#10165
+bone crawler~
+@@ya Bone Crawler@@N~
+@@ya Bone Crawler@@N drags itself here on @@bpale jointed legs@@N.
+~
+An animated mass of @@bbleached bones@@N from multiple sources, fused by the
+pyramid's ambient necromancy into a single compound organism. It has more limbs
+than any creature originally possessed and uses all of them simultaneously.
+~
+278625 0 -200 S
+107 0
+0 0 2 2
+! 2 7 5 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10195 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10166
+sand-choked ghoul~
+@@ya Sand-Choked Ghoul@@N~
+@@ya Sand-Choked Ghoul@@N stumbles here, @@bsand@@N pouring from its mouth.
+~
+A ghoul whose burial in a shallow desert grave meant it ingested sand before
+it fully reanimated. The sand did not kill it. It moves slowly because of the
+weight of it, and smells of baked mineral dust rather than the usual rot.
+~
+16481 0 -300 S
+109 0
+0 0 2 2
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10196 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10167
+animated obelisk shard~
+@@yan Animated Obelisk Shard@@N~
+@@yan Animated Obelisk Shard@@N stands here, @@chiroglyphs@@N pulsing with @@cblue@@N light.
+~
+A tall fragment of shattered @@bsandstone@@N obelisk that was imbued with
+protective magic before the obelisk broke. The shard maintains the ward's
+active state, making it effectively a slow but nearly impervious guardian.
+~
+262243 0 0 S
+112 0
+0 0 3 3
+! 2 7 0 7 32802 0 1
+| 34 4 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10197 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10168
+cursed pyramid builder~
+@@ya Cursed Pyramid Builder@@N~
+@@ya Cursed Pyramid Builder@@N haunts here, still clutching its @@bstone trowel@@N.
+~
+The ghost of one of the thousands of workers who built the pyramid and were
+cursed into service within it upon completion. Its @@bblue-grey translucent@@N form
+still mimics laying blocks, and it attacks those who witness its eternal labor.
+~
+16481 0 -200 S
+110 0
+0 0 2 2
+! 2 7 5 7 32769 514 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10198 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10169
+desert sand adder~
+@@ya Desert Sand Adder@@N~
+@@ya Desert Sand Adder@@N erupts here from beneath a drift of @@bsand@@N.
+~
+A @@bsand-colored@@N viper that buries itself completely and strikes upward
+with its heat-sensing pit organs. In the pyramid's sand-drifted corridors it
+has found perfect hunting ground, and has grown accordingly large and patient.
+~
+97 0 0 S
+108 0
+0 0 2 2
+! 2 7 3 7 4097 0 1
+| 0 0 0 0 0 512 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10199 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10170
+ancient sentinel construct~
+@@yan Ancient Sentinel Construct@@N~
+@@yan Ancient Sentinel Construct@@N stands here, golden eyes tracking your position.
+~
+One of the original guardian constructs placed when the pyramid was sealed,
+still functional after millennia. Its @@bsandstone@@N body has been repaired
+repeatedly by smaller maintenance constructs; it is @@yyellow-gold@@N-streaked
+where the repairs used different stone.
+~
+262241 0 0 S
+114 0
+0 0 3 3
+! 2 7 0 7 32930 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10171
+hieroglyph guardian~
+@@ya Hieroglyph Guardian@@N~
+@@ya Hieroglyph Guardian@@N peels from the wall here, @@chiroglyphs@@N still legible on its form.
+~
+A living inscription carved into @@bsandstone@@N that has peeled free of the wall,
+maintaining the flat two-dimensional silhouette of its origin while achieving
+three-dimensional movement. Its hieroglyph surface still reads as coherent text.
+~
+262243 0 0 S
+115 0
+0 0 3 3
+! 2 7 0 7 32770 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10201 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10172
+animated canopic jar~
+@@yan Animated Canopic Jar@@N~
+@@yan Animated Canopic Jar@@N walks here on @@bcarved stone legs@@N.
+~
+A sealed burial jar walking on four articulated carved legs, its animal-headed
+stopper swiveling to track targets. The organic material inside still animates
+the jar; cracking it open would stop it but would also unleash what is inside.
+~
+82017 0 -200 S
+112 0
+0 0 2 2
+! 2 7 5 7 129 516 1
+| 0 0 0 0 0 0 512
++ 0 0 0 0 0 0 0 0 0
+l 100 10202 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10173
+scribal revenant~
+@@ya Scribal Revenant@@N~
+@@ya Scribal Revenant@@N drifts here, trailing @@yfaint golden writing@@N.
+~
+The ghost of a scribe whose knowledge was sealed into the pyramid at their
+death, making them an undead librarian of forbidden texts. The @@yyellow-gold@@N
+writing that follows them is the content of what they knew — none of it is safe to read.
+~
+16481 0 -300 S
+116 0
+0 0 3 3
+! 2 7 5 7 1 1026 2
+| 256 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10203 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10174
+sand-wrapped mummy servant~
+@@ya Sand-Wrapped Mummy Servant@@N~
+@@ya Sand-Wrapped Mummy Servant@@N shuffles here in @@bsand-crusted linen@@N.
+~
+A lesser mummy bound into perpetual household service, its @@blinen wrappings@@N
+encrusted with the sand that settled into them over centuries of movement through
+undrained desert passages. It carries tools for service it can never complete.
+~
+16481 0 -200 S
+113 0
+0 0 2 2
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10204 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10175
+high priest thrall~
+@@ya High Priest's Thrall@@N~
+@@ya High Priest's Thrall@@N stands here, empty-eyed and waiting for commands.
+~
+An undead acolyte enslaved to the High Priest's will through a binding
+ceremony that replaced the thrall's own motivations with the High Priest's
+directives. Its @@bformal robes@@N are still maintained, the binding not affecting
+its ritual function.
+~
+16481 0 -400 S
+118 0
+0 0 4 4
+! 2 7 5 7 32801 512 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10176
+sand wraith~
+@@ya Sand Wraith@@N~
+@@ya Sand Wraith@@N drifts here, a @@bsmoke-pale@@N form in the swirling air.
+~
+A desert spirit wreathed in perpetually swirling @@bsand@@N, its form translucent
+and its voice the sound of @@yyellow-gold@@N dust against stone. It attacks with
+confusion and disorientation rather than direct physical contact.
+~
+82017 0 -300 S
+117 0
+0 0 4 4
+! 2 7 5 7 0 262272 4
+| 256 2 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10206 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10177
+curse-bound warrior~
+@@ya Curse-Bound Warrior@@N~
+@@ya Curse-Bound Warrior@@N stalks here, its @@yyellow-cursed@@N bones visible through its skin.
+~
+An ancient soldier held together by curse-binding rather than preserved flesh,
+its skeleton visible through gaps in its @@brotting@@N uniform where the binding
+has not maintained the tissue. The curse keeps it fighting long past any rational point.
+~
+16481 0 -300 S
+119 0
+0 0 5 5
+! 2 7 5 7 524290 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10207 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10178
+entombed warlord~
+@@yan Entombed Warlord@@N~
+@@yan Entombed Warlord@@N stands here in full @@bbattle regalia@@N, still ready to fight.
+~
+A general who requested burial in standing battle posture as a statement of
+eternal military preparedness, and whose preservation magic honored that request.
+It has stood upright for centuries and has not forgotten a single military discipline.
+~
+16481 0 -300 S
+118 0
+0 0 5 5
+! 2 7 5 7 524290 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10179
+flesh golem~
+@@ya Flesh Golem@@N~
+@@ya Flesh Golem@@N lurches here, its @@briveted seams@@N oozing.
+~
+A construct assembled from preserved mummy tissue and @@biron rivets@@N, walking
+with the mechanical certainty of something that cannot feel pain and does not tire.
+The rivets keep it from coming apart; the magic keeps the tissue from rotting.
+~
+262241 0 0 S
+120 0
+0 0 5 5
+! 2 7 0 7 32900 0 1
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10209 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10180
+tomb stalker~
+@@ya Tomb Stalker@@N~
+@@ya Tomb Stalker@@N presses against the @@bshadowed wall@@N, watching.
+~
+A large predatory beast that hunts by following the heat-trails left by warm
+bodies through the pyramid's passages, its @@bsable fur@@N absorbing the residual
+heat and making it near-invisible in the dark. It prefers to attack from behind.
+~
+97 0 -100 S
+116 0
+0 0 3 3
+! 2 7 3 7 6145 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10210 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10181
+ember lizard~
+@@yan Ember Lizard@@N~
+@@yan Ember Lizard@@N basks here, @@yyellow-orange@@N scales absorbing heat.
+~
+A long-tailed lizard that absorbs the pyramid's ambient heat through its
+@@yyellow-orange@@N scales, storing it in a thermal organ behind its skull.
+Contact with its skin is uncomfortably hot; contact with its bite is worse.
+~
+97 0 0 S
+117 0
+0 0 3 3
+! 2 7 3 7 4097 0 1
+| 128 64 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10211 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10182
+charred husk~
+@@ya Charred Husk@@N~
+@@ya Charred Husk@@N lurches here, @@bembers@@N drifting from its blackened form.
+~
+An undead burned to black bone and crisp sinew, @@Rembers@@N perpetually drifting
+off its body without the fire being present to generate them. It is hot to the touch;
+the embers do not ignite anything but they are quite hot against skin.
+~
+16481 0 -200 S
+119 0
+0 0 4 4
+! 2 7 5 7 32770 0 1
+| 128 64 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10212 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#10183
+apex sentinel~
+@@yan Apex Sentinel@@N~
+@@yan Apex Sentinel@@N stands here, its @@bstone gaze@@N fixed on the approach.
+~
+The final guardian construct before the throne room approach, the Apex Sentinel
+is the most refined version of the pyramid's guardian design: @@bfine-grained
+granite@@N, @@yyellow-gold@@N joints, and defensive capabilities tuned to handle
+any type of intruder that the lower sentinels might have failed to stop.
+~
+262243 0 0 S
+120 0
+0 0 5 5
+! 2 7 0 7 32930 0 1
+| 34 4 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#10184
+gilded warrior shade~
+@@ya Gilded Warrior Shade@@N~
+@@ya Gilded Warrior Shade@@N stands here, @@yyellow-gold@@N armor still gleaming.
+~
+The ghost of a royal bodyguard still wearing its ceremonial @@yyellow-gold@@N
+armor, which has persisted into the afterlife as part of the shade's identity.
+It guards the throne approach with the same professionalism it maintained in life.
+~
+16481 0 -400 S
+118 0
+0 0 4 4
+! 2 7 5 7 32769 65536 1
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 10214 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
 #0
 #ROOMS
 #10125
