@@ -17,9 +17,9 @@ W all~
 Forest Preserve Trailhead~
 A cedar sign marks the start of the Whispering Forest Preserve. Packed earth paths
 
-lead deeper north and east beneath whispering pines.
+lead deeper north and east beneath whispering pines.
 
-~
+~
 8193 3
 D0
 ~
@@ -32,13 +32,13 @@ D1
 D5
 ~
 ~
-0 0 3700
+0 0 20200
 S
 #20801
 Creekside Path~
 A narrow path follows a clear creek. Flat stones and marsh grasses line the banks.
 
-~
+~
 8193 3
 D0
 ~
@@ -57,7 +57,7 @@ S
 Wildflower Glade~
 Sunlight spills into a broad glade packed with wildflowers and humming bees.
 
-~
+~
 8193 3
 D0
 ~
@@ -76,7 +76,7 @@ S
 Old Ranger Post~
 A weathered ranger post stands here beside an old habitat map board.
 
-~
+~
 8193 3
 D0
 ~
@@ -95,7 +95,7 @@ S
 Ancient Cedar Circle~
 Massive cedar trunks ring this quiet clearing and muffle distant trail sounds.
 
-~
+~
 8193 3
 D0
 ~
@@ -114,7 +114,7 @@ S
 Stepping Stone Crossing~
 Smooth stones span a shallow branch of the creek while reeds sway in the current.
 
-~
+~
 8193 3
 D0
 ~
@@ -133,7 +133,7 @@ S
 Mossy Overlook~
 A moss-covered rise provides a view over lower trails and wetland edges.
 
-~
+~
 8193 3
 D0
 ~
@@ -152,7 +152,7 @@ S
 Fern Hollow~
 Thick ferns blanket the ground and fresh animal tracks crisscross damp soil.
 
-~
+~
 8193 3
 D0
 ~
@@ -171,7 +171,7 @@ S
 Protected Wetland Edge~
 Boardwalk planks mark the preserve boundary around a protected wetland basin.
 
-~
+~
 8193 3
 D0
 ~
@@ -190,7 +190,7 @@ S
 Heart of the Preserve~
 An ancient grove forms the spiritual center of the preserve, calm and watchful.
 
-~
+~
 8193 3
 D1
 ~
@@ -209,7 +209,7 @@ S
 Pine Needle Run~
 Soft needles cushion this side trail beneath young pines and cedar saplings.
 
-~
+~
 8193 3
 D0
 ~
@@ -228,7 +228,7 @@ S
 Maple Spur~
 Scarlet maples arch over a gentle bend where small birds nest in low branches.
 
-~
+~
 8193 3
 D0
 ~
@@ -251,7 +251,7 @@ S
 Pebble Ford~
 A pebble-lined ford crosses a narrow stream and reconnects to preserve footpaths.
 
-~
+~
 8193 3
 D0
 ~
@@ -274,7 +274,7 @@ S
 Rillbank Shade~
 Tall grasses and willow shade surround a clear rill feeding the wetland.
 
-~
+~
 8193 3
 D0
 ~
@@ -297,7 +297,7 @@ S
 Boulder Turn~
 A broad granite boulder marks this turn where trails split through conifers.
 
-~
+~
 8193 3
 D0
 ~
@@ -320,7 +320,7 @@ S
 Squirrel Rise~
 This slight rise overlooks lower branches where squirrels chatter and leap.
 
-~
+~
 8193 3
 D0
 ~
@@ -343,7 +343,7 @@ S
 Songbird Canopy Walk~
 A narrow catwalk threads between pines near active preserve nesting zones.
 
-~
+~
 8193 3
 D0
 ~
@@ -366,7 +366,7 @@ S
 Beaver Pond Spur~
 A muddy spur ends near a beaver pond dammed with carefully stacked branches.
 
-~
+~
 8193 3
 D0
 ~
@@ -389,7 +389,7 @@ S
 Willow Shade Bend~
 Slender willows dip into a slow stream that glints in filtered sunlight.
 
-~
+~
 8193 3
 D0
 ~
@@ -412,7 +412,7 @@ S
 High Pine Outlook~
 A high platform overlooks winding preserve trails and distant marsh grass.
 
-~
+~
 8193 3
 D1
 ~
@@ -431,7 +431,7 @@ S
 Mushroom Ring~
 Pale mushrooms form a ring under old logs where moisture lingers all day.
 
-~
+~
 8193 3
 D0
 ~
@@ -450,7 +450,7 @@ S
 Lichen Wall~
 A stone wall cloaked in green lichen marks an old preserve boundary.
 
-~
+~
 8193 3
 D0
 ~
@@ -473,7 +473,7 @@ S
 Driftwood Flat~
 Sun-bleached driftwood rests here after seasonal floods reshape the bank.
 
-~
+~
 8193 3
 D0
 ~
@@ -496,7 +496,7 @@ S
 Needle Carpet~
 A thick carpet of pine needles muffles every footstep in this stand of fir.
 
-~
+~
 8193 3
 D0
 ~
@@ -519,7 +519,7 @@ S
 Bluebird Perch~
 Bluebirds gather on low branches above a fork in the preserve path.
 
-~
+~
 8193 3
 D0
 ~
@@ -542,7 +542,7 @@ S
 Creekstone Shelf~
 Flat creekstones form a natural shelf beside a gently flowing side channel.
 
-~
+~
 8193 3
 D0
 ~
@@ -565,7 +565,7 @@ S
 Birch Stand~
 White birch trunks rise closely together, their bark rustling in wind.
 
-~
+~
 8193 3
 D0
 ~
@@ -588,7 +588,7 @@ S
 Hidden Nook~
 Ferns conceal a small nook used by rangers to observe wildlife quietly.
 
-~
+~
 8193 3
 D0
 ~
@@ -611,7 +611,7 @@ S
 Cattail Reach~
 Cattails sway in the breeze where shallow water spreads over soft earth.
 
-~
+~
 8193 3
 D0
 ~
@@ -634,7 +634,7 @@ S
 Ranger Cache Nook~
 A weatherproof ranger cache holds rope, markers, and emergency supplies.
 
-~
+~
 8193 3
 D1
 ~
@@ -653,7 +653,7 @@ S
 Owl Roost Trail~
 Scattered pellets and claw marks show that owls hunt from nearby limbs.
 
-~
+~
 8193 3
 D0
 ~
@@ -672,7 +672,7 @@ S
 Acorn Path~
 Acorns crunch underfoot where oaks thicken along a drier trail segment.
 
-~
+~
 8193 3
 D0
 ~
@@ -695,7 +695,7 @@ S
 Fox Run~
 A narrow run between brushy mounds shows repeated fox tracks and scent marks.
 
-~
+~
 8193 3
 D0
 ~
@@ -718,7 +718,7 @@ S
 Thornless Bramble~
 A rare patch of thornless bramble bears sweet berries for birds and deer.
 
-~
+~
 8193 3
 D0
 ~
@@ -741,7 +741,7 @@ S
 Old Footbridge~
 An old footbridge crosses shallow water and creaks with every careful step.
 
-~
+~
 8193 3
 D0
 ~
@@ -764,7 +764,7 @@ S
 Cedar Shade~
 Fragrant cedar shade cools this quiet turn where hikers often rest.
 
-~
+~
 8193 3
 D0
 ~
@@ -787,7 +787,7 @@ S
 Springhead~
 Clear spring water bubbles from rock here and feeds channels below.
 
-~
+~
 8193 3
 D0
 ~
@@ -810,7 +810,7 @@ S
 Reed Whisper Way~
 Reeds whisper around a narrow boardwalk that stays dry above soft mud.
 
-~
+~
 8193 3
 D0
 ~
@@ -833,7 +833,7 @@ S
 Heron Watch~
 A still pool attracts herons that stand motionless before striking fish.
 
-~
+~
 8193 3
 D0
 ~
@@ -856,7 +856,7 @@ S
 Sunset Boardwalk~
 Long boardwalk planks glow amber at dusk where the preserve opens west.
 
-~
+~
 8193 3
 D1
 ~
@@ -875,7 +875,7 @@ S
 Granite Rest~
 A granite slab offers a natural resting place beneath tall spruce.
 
-~
+~
 8193 3
 D0
 ~
@@ -890,7 +890,7 @@ S
 Spruce Screen~
 Dense spruce needles screen this lane from the busier preserve corridors.
 
-~
+~
 8193 3
 D0
 ~
@@ -909,7 +909,7 @@ S
 Misty Dip~
 Morning mist gathers in this low dip where moss clings to every stone.
 
-~
+~
 8193 3
 D0
 ~
@@ -928,7 +928,7 @@ S
 Juniper Pass~
 Juniper shrubs line a narrow pass that bends toward deeper preserve trails.
 
-~
+~
 8193 3
 D0
 ~
@@ -947,7 +947,7 @@ S
 Crownfall Turn~
 Fallen branches form a natural arch at this turn where trails converge.
 
-~
+~
 8193 3
 D0
 ~
@@ -966,7 +966,7 @@ S
 Deer Track Corner~
 Fresh deer tracks stamp this corner in soft earth near a seep line.
 
-~
+~
 8193 3
 D0
 ~
@@ -985,7 +985,7 @@ S
 Root Arch~
 Interlaced roots form a natural arch over this damp corridor.
 
-~
+~
 8193 3
 D0
 ~
@@ -1004,7 +1004,7 @@ S
 Stone Marker Lane~
 Small carved markers identify protected habitats along this lane.
 
-~
+~
 8193 3
 D0
 ~
@@ -1023,7 +1023,7 @@ S
 Warden's Approach~
 This quiet approach leads toward the preserve's inner guardian post.
 
-~
+~
 8193 3
 D0
 ~
@@ -1042,7 +1042,7 @@ S
 Rootbridge Descent~
 Woven roots descend from the sacred grove into older preserve tunnels.
 
-~
+~
 8193 3
 D0
 ~
@@ -1064,10 +1064,10 @@ young preserve fox~
 a young preserve fox~
 A young preserve fox watches from the brush.
 
-~
+~
 A small red fox with bright eyes and muddy paws sits alertly in the undergrowth.
 
-~
+~
 99 0 0 S
 2 0
 20 0 0 0
@@ -1081,10 +1081,10 @@ preserve owl guide~
 a preserve owl guide~
 A preserve owl guide perches here quietly.
 
-~
+~
 This broad-winged owl watches the paths and keeps perfectly still for long stretches.
 
-~
+~
 99 0 0 S
 4 0
 28 0 0 5
@@ -1098,10 +1098,10 @@ junior preserve ranger~
 a junior preserve ranger~
 A junior preserve ranger stands on trail duty.
 
-~
+~
 Wearing practical field gear, this ranger scans visitors and wildlife routes.
 
-~
+~
 99 0 0 S
 6 0
 45 5 5 5
@@ -1115,10 +1115,10 @@ preserve herbalist~
 a preserve herbalist~
 A preserve herbalist arranges drying herbs.
 
-~
+~
 The herbalist keeps organized pouches and a practiced eye for medicinal plants.
 
-~
+~
 99 0 0 S
 8 2
 35 0 0 10
@@ -1132,10 +1132,10 @@ ancient bark guardian~
 an ancient bark guardian~
 An ancient bark guardian stands sentinel here.
 
-~
+~
 Shaped from cedar and stone, this patient guardian barely moves as it watches.
 
-~
+~
 99 0 0 S
 10 0
 80 10 10 0
@@ -1149,10 +1149,10 @@ warden of the whispering preserve~
 the warden of the whispering preserve~
 The Warden of the Whispering Preserve stands watch over the grove.
 
-~
+~
 A veteran protector in handcrafted preserve gear, the warden surveys every trail.
 
-~
+~
 99 0 0 S
 12 2
 120 15 15 20
@@ -1166,10 +1166,10 @@ preserve beaver~
 a preserve beaver~
 A preserve beaver waits near the waterline.
 
-~
+~
 This stocky beaver keeps to its dam and chewed branch piles.
 
-~
+~
 99 0 0 S
 5 0
 30 0 0 0
@@ -1183,10 +1183,10 @@ preserve tracker~
 a preserve tracker~
 A preserve tracker studies tracks in the mud.
 
-~
+~
 A quiet tracker stands still while reading signs left by passing animals.
 
-~
+~
 99 0 0 S
 7 0
 40 5 5 5
@@ -1200,10 +1200,10 @@ preserve falconer~
 a preserve falconer~
 A preserve falconer keeps station here.
 
-~
+~
 A leather-gloved falconer remains motionless while observing open sky corridors.
 
-~
+~
 99 0 0 S
 9 0
 55 5 5 5
@@ -1217,10 +1217,10 @@ bog sentinel~
 a bog sentinel~
 A bog sentinel watches from the boardwalk.
 
-~
+~
 Coated in mud-hardened bark plates, this sentinel guards wetland approaches.
 
-~
+~
 99 0 0 S
 11 0
 90 10 10 0
@@ -1234,10 +1234,10 @@ trailhead squirrel~
 a trailhead squirrel~
 A trailhead squirrel sits on a stump, watching quietly.
 
-~
+~
 This gray squirrel clutches an acorn and remains still unless startled by loud steps.
 
-~
+~
 99 0 0 S
 3 0
 18 0 0 0
@@ -1251,10 +1251,10 @@ moss rabbit~
 a moss rabbit~
 A moss rabbit crouches near the roots.
 
-~
+~
 Its mottled fur blends with damp moss, and it stays frozen in place for long stretches.
 
-~
+~
 99 0 0 S
 4 0
 24 0 0 0
@@ -1268,10 +1268,10 @@ junior trail ranger~
 a junior trail ranger~
 A junior trail ranger stands guard by the path.
 
-~
+~
 Leather-clad and attentive, this ranger keeps a calm, unmoving watch over hikers.
 
-~
+~
 99 0 0 S
 5 0
 38 5 5 5
@@ -1285,10 +1285,10 @@ wetland observer~
 a wetland observer~
 A wetland observer notes movement among the reeds.
 
-~
+~
 This preserve watcher remains near the boardwalk, eyes fixed on the marsh channels.
 
-~
+~
 99 0 0 S
 7 2
 50 0 0 10
@@ -1302,10 +1302,10 @@ grove sentry~
 a grove sentry~
 A grove sentry stands at attention here.
 
-~
+~
 Armored in layered bark and hide, this sentry does not move from its assigned post.
 
-~
+~
 99 0 0 S
 9 0
 70 10 10 0
@@ -1321,7 +1321,7 @@ firefly lantern~
 a firefly lantern~
 A firefly lantern glows softly here.
 
-~
+~
 1 134217728 8421376 0
 4 0 -1 0 0 0 0 0 0 0
 3
@@ -1332,7 +1332,7 @@ birch halo ring~
 a birch halo ring~
 A ring of pale birch twigs rests here.
 
-~
+~
 9 0 8388609 0
 0 0 0 0 0 0 0 0 0 0
 7
@@ -1343,7 +1343,7 @@ willow aura veil~
 a willow aura veil~
 A floating willow-thread veil hovers here.
 
-~
+~
 9 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
 7
@@ -1354,7 +1354,7 @@ antler crown~
 an antler crown~
 A polished antler crown has been set here.
 
-~
+~
 9 134217728 8388612 0
 0 0 0 0 0 0 0 0 0 0
 8
@@ -1365,7 +1365,7 @@ cedar circlet~
 a cedar circlet~
 A braided cedar circlet lies here.
 
-~
+~
 9 134217728 8388616 0
 0 0 0 0 0 0 0 0 0 0
 4
@@ -1376,7 +1376,7 @@ woven leaf veil~
 a woven leaf veil~
 A thin veil of woven leaves rests here.
 
-~
+~
 9 134217728 8388624 0
 0 0 0 0 0 0 0 0 0 0
 3
@@ -1387,7 +1387,7 @@ carved beak mask~
 a carved beak mask~
 A carved beak-shaped mask waits here.
 
-~
+~
 9 134217728 8388640 0
 0 0 0 0 0 0 0 0 0 0
 7
@@ -1398,7 +1398,7 @@ oak ear cuff~
 an oak ear cuff~
 An oak ear cuff carved with tiny acorns lies here.
 
-~
+~
 9 134217728 8388672 0
 0 0 0 0 0 0 0 0 0 0
 2
@@ -1409,7 +1409,7 @@ creekstone pendant~
 a creekstone pendant~
 A smooth creekstone pendant hangs from vine cord here.
 
-~
+~
 9 134217728 8388736 0
 0 0 0 0 0 0 0 0 0 0
 4
@@ -1420,7 +1420,7 @@ wader wings mantle~
 a wader wings mantle~
 A mantle of preserved feathered pinions is here.
 
-~
+~
 9 134217728 8388864 0
 0 0 0 0 0 0 0 0 0 0
 6
@@ -1431,7 +1431,7 @@ bark pauldrons~
 bark pauldrons~
 Heavy bark pauldrons have been stacked here.
 
-~
+~
 9 134217728 8389120 0
 0 0 0 0 0 0 0 0 0 0
 12
@@ -1442,7 +1442,7 @@ cedar branch sleeves~
 cedar branch sleeves~
 A pair of cedar branch sleeves lies here.
 
-~
+~
 9 134217728 8389632 0
 0 0 0 0 0 0 0 0 0 0
 6
@@ -1453,7 +1453,7 @@ trailwatch bracers~
 trailwatch bracers~
 Trailwatch bracers made of layered bark are here.
 
-~
+~
 9 134217728 8390656 0
 0 0 0 0 0 0 0 0 0 0
 8
@@ -1464,7 +1464,7 @@ ranger gloves~
 supple ranger gloves~
 A pair of supple ranger gloves rests here.
 
-~
+~
 9 134217728 8392704 0
 0 0 0 0 0 0 0 0 0 0
 7
@@ -1475,7 +1475,7 @@ claw wraps~
 claw wraps~
 A set of leather claw wraps has been left here.
 
-~
+~
 9 134217728 8404992 0
 0 0 0 0 0 0 0 0 0 0
 9
@@ -1486,7 +1486,7 @@ wildflower ring~
 a wildflower ring~
 A ring set with pressed wildflowers lies here.
 
-~
+~
 9 134217728 8396800 0
 0 0 0 0 0 0 0 0 0 0
 1
@@ -1497,7 +1497,7 @@ ashwood staff~
 an ashwood preserve staff~
 An ashwood preserve staff leans against a stump.
 
-~
+~
 5 671088640 8421376 0
 3 0 4 7 0 0 0 0 0 0
 4
@@ -1508,7 +1508,7 @@ cedar bark cloak~
 a cedar bark cloak~
 A cedar bark cloak has been left here.
 
-~
+~
 9 134217728 8454144 0
 0 0 0 0 0 0 0 0 0 0
 7
@@ -1519,7 +1519,7 @@ vinebraid belt~
 a vinebraid belt~
 A sturdy vinebraid belt lies here.
 
-~
+~
 9 134217728 8519680 0
 0 0 0 0 0 0 0 0 0 0
 9
@@ -1530,7 +1530,7 @@ mossweave tunic~
 a mossweave tunic~
 A mossweave tunic is folded neatly here.
 
-~
+~
 9 134217728 8650752 0
 0 0 0 0 0 0 0 0 0 0
 7
@@ -1541,7 +1541,7 @@ tailguard tassel~
 a tailguard tassel~
 A braided tassel for tail armor is here.
 
-~
+~
 9 134217728 8912896 0
 0 0 0 0 0 0 0 0 0 0
 6
@@ -1552,7 +1552,7 @@ trail leggings~
 trail leggings~
 A pair of trail leggings lies in the grass.
 
-~
+~
 9 134217728 9437184 0
 0 0 0 0 0 0 0 0 0 0
 8
@@ -1563,7 +1563,7 @@ marshwalker boots~
 marshwalker boots~
 A pair of marshwalker boots waits here.
 
-~
+~
 9 134217728 10485760 0
 0 0 0 0 0 0 0 0 0 0
 10
@@ -1574,7 +1574,7 @@ riverhoof guards~
 riverhoof guards~
 A pair of reinforced hoof guards lies here.
 
-~
+~
 9 134217728 12582912 0
 0 0 0 0 0 0 0 0 0 0
 11
@@ -1585,7 +1585,7 @@ heartseed of the old grove~
 the Heartseed of the Old Grove~
 A luminous seed of ancient wood pulses with quiet magic.
 
-~
+~
 9 134217792 8421376 0
 13 20 2 0 0 0 0 0 0 0
 7
@@ -1596,7 +1596,7 @@ ranger shortsword~
 a preserve ranger shortsword~
 A preserve ranger shortsword has been set here.
 
-~
+~
 5 134217728 8421376 0
 3 0 5 3 0 0 0 0 0 0
 9
@@ -1607,7 +1607,7 @@ cedarbark buckler~
 a cedarbark buckler~
 A cedarbark buckler lies here.
 
-~
+~
 9 402653184 8421376 0
 0 0 0 0 0 0 0 0 0 0
 11
@@ -1618,7 +1618,7 @@ warden's great maul~
 the warden's great maul~
 A heavy maul of knotwood and stone rests here.
 
-~
+~
 5 -2013265920 8421376 0
 3 0 6 7 0 0 0 0 0 0
 6
@@ -1629,7 +1629,7 @@ clanleaf sash~
 a clanleaf sash~
 A ceremonial sash in preserve colors hangs here.
 
-~
+~
 9 134217728 42074112 0
 0 0 0 0 0 0 0 0 0 0
 5
@@ -1640,7 +1640,7 @@ glimmering trail sigil~
 a glimmering trail sigil~
 A tiny sigil of moving light hovers above the ground.
 
-~
+~
 9 134217792 8388610 0
 3 10 1 0 0 0 0 0 0 0
 2
