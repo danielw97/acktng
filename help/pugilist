@@ -1,0 +1,26 @@
+level 0
+keywords pugilist
+---
+@@gPUGILIST@@W
+
+Pugilists are close-quarters specialists who trust stamina, timing, and body
+control over steel. They outlast opponents, then punish every opening.
+
+@@gPassive class abilities@@W
+  * @@wPugilist technique scaling@@W: palmstrike/pummel/aurabolt gain
+    @@w+0.5% damage per Pugilist level@@W.
+  * @@wCounter@@W (unlocked at mortal level 20): enables counterattacks when
+    enemies miss and your counter chance succeeds.
+
+@@gUnique Pugilist mechanics@@W
+  * Prime mortal attribute is @@wConstitution@@W.
+  * Builds toward reactive melee defense through counterplay and sustained
+    unarmed pressure.
+
+@@gPugilist reincarnation bonuses@@W
+  * Every @@w2 Pugilist reincarnations@@W (rounded up) increases max
+    @@wConstitution@@W by 1.
+  * At @@w1+ Pugilist reincarnation@@W, @@wCounter@@W is permanently unlocked
+    for all future class paths.
+
+See also: @@mreincarnate remort monk brawler@@W

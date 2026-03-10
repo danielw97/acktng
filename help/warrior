@@ -1,0 +1,26 @@
+level 0
+keywords warrior
+---
+@@cWARRIOR@@W
+
+Warriors are masters of direct force: relentless front-line fighters trained to
+break defenses, absorb pressure, and end conflicts in steel and momentum.
+
+@@cPassive class abilities@@W
+  * @@wWarrior combat-technique scaling@@W: kick/punch/knee/headbutt/charge
+    style attacks gain @@w+1% damage per Warrior level@@W.
+  * @@wEnhanced Damage@@W (unlocked at mortal level 20): increases physical
+    damage by @@w3% per point of Strength@@W.
+
+@@cUnique Warrior mechanics@@W
+  * Prime mortal attribute is @@wStrength@@W.
+  * Delivers reliable scaling for weapon and physical-skill damage, making
+    Warrior a premier chassis for melee progression.
+
+@@cWarrior reincarnation bonuses@@W
+  * Every @@w2 Warrior reincarnations@@W (rounded up) increases max
+    @@wStrength@@W by 1.
+  * At @@w1+ Warrior reincarnation@@W, @@wEnhanced Damage@@W is permanently
+    unlocked for all future class paths.
+
+See also: @@mreincarnate remort knight swordsman@@W

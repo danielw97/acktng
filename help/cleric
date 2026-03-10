@@ -1,0 +1,24 @@
+level 0
+keywords cleric
+---
+@@aCLERIC@@W
+
+Clerics are keepers of sacred covenant, shaping divine force through faith and
+rite. They stand between ruin and renewal, turning conviction into miracles.
+
+@@aPassive class abilities@@W
+  * @@wSpell Critical Damage@@W (unlocked at mortal level 20): increases
+    spell critical multiplier by @@w2 x Wisdom@@W.
+
+@@aUnique Cleric mechanics@@W
+  * Prime mortal attribute is @@wWisdom@@W.
+  * Excels at high-impact spell spikes when criticals land, making Cleric a
+    strong base for holy and support-caster progressions.
+
+@@aCleric reincarnation bonuses@@W
+  * Every @@w2 Cleric reincarnations@@W (rounded up) increases max
+    @@wWisdom@@W by 1.
+  * At @@w1+ Cleric reincarnation@@W, @@wSpell Critical Damage@@W is
+    permanently unlocked for all future class paths.
+
+See also: @@mreincarnate remort paladin priest@@W
