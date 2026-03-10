@@ -1,0 +1,26 @@
+level 0
+keywords paladin
+---
+@@aPALADIN@@W
+
+Paladins are oathbound vanguards who turn faith into forward pressure. Their
+style is direct: close distance, hold formation, and punish evil with sanctified
+steel.
+
+@@aPassive class advantages@@W
+  * @@wExtra attack round@@W while Paladin remort is active.
+  * @@wPhysical damage@@W bonus from Paladin levels
+    (+0.4% per level, up to +40% at 100).
+  * @@wHealing throughput@@W bonus
+    (+1.5% per level, up to +150% at 100).
+
+@@aUnique Paladin mechanics@@W
+  * Access to @@wPaladin stance@@W (melee + survivability + healing posture).
+  * Hybrid holy/melee kit with strong support crossover into Templar path.
+  * Uses @@wWisdom@@W as prime remort attribute.
+
+@@aPaladin reincarnation bonuses@@W
+  * @@wPaladin + Priest remort reincarnations >= 20@@W unlocks:
+    @@wTwo-Handed@@W, @@wEquip Buckler@@W, and @@wEquip Wand@@W permanently.
+
+See also: @@mremort stance priest templar reincarnate@@W

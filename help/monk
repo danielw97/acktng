@@ -1,0 +1,23 @@
+level 0
+keywords monk
+---
+@@gMONK@@W
+
+Monks are disciplined impact-fighters who convert breath control and posture
+mastery into relentless unarmed pressure.
+
+@@gPassive class advantages@@W
+  * @@wBare-hand direct-hit damage@@W bonus (+1% per level, up to +100% at 100).
+  * @@wMartial strike damage@@W bonus for palmstrike/pummel/aurabolt family
+    (+0.5% per level, up to +50% at 100).
+
+@@gUnique Monk mechanics@@W
+  * Access to @@wMonk stance@@W.
+  * High unarmed scaling and strong chi-path synergy into Martial Artist.
+  * Uses @@wConstitution@@W as prime remort attribute.
+
+@@gMonk reincarnation bonuses@@W
+  * @@wBrawler + Monk remort reincarnations >= 20@@W unlocks
+    @@wEquip Fist@@W and @@wDual Fist@@W permanently.
+
+See also: @@mremort stance brawler martial_artist chi reincarnate@@W

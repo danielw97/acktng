@@ -1,0 +1,24 @@
+level 0
+keywords priest
+---
+@@CPRIEST@@W
+
+Priests are ward-keepers and miracle-callers, trained to outlast chaos through
+restoration, sanctification, and relentless holy attrition.
+
+@@CPassive class advantages@@W
+  * @@wHoly damage@@W bonus from Priest levels
+    (+1% per level, up to +100% at 100).
+  * @@wHealing throughput@@W bonus
+    (+2% per level, up to +200% at 100).
+
+@@CUnique Priest mechanics@@W
+  * Access to @@wPriest stance@@W (high healing posture).
+  * Strongest remort-side baseline scaling for sustained holy healing play.
+  * Uses @@wWisdom@@W as prime remort attribute.
+
+@@CPriest reincarnation bonuses@@W
+  * @@wPaladin + Priest remort reincarnations >= 20@@W unlocks:
+    @@wTwo-Handed@@W, @@wEquip Buckler@@W, and @@wEquip Wand@@W permanently.
+
+See also: @@mremort stance paladin templar reincarnate@@W
