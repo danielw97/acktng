@@ -2093,4 +2093,418 @@ The south passage connects toward the ritual fire pit.~
 ~
 0 -1 10247
 S
+#10250
+@@yThe Marked Flagstones@@N~
+The floor of this chamber is paved with @@bsandstone@@N flags bearing individual carved symbols — small, precise marks at the center of each flag that form a pattern only legible from above. The pattern, viewed from the correct height, describes a protective ward that was presumably intended to deter supernatural rather than physical intrusion. The flags are set at slightly different depths, creating a subtly uneven surface underfoot. Certain flags produce a hollow sound; the pressure on them releases a mechanism that drops the stepping priest through a shaft without warning. The @@bmarked flags@@N are an ancient security measure that functions perfectly after millennia.
+~
+24584 11
+D3
+The west passage connects toward the corridor of wards.~
+~
+0 -1 10249
+D0
+The north passage leads toward the floor's upper sections.~
+~
+0 -1 10253
+D5
+A marked flagstone gives way, dropping down through a hidden shaft.~
+~
+0 -1 10125
+S
+#10251
+@@yThe Chanting Hall@@N~
+This chamber's acoustic properties were deliberately engineered for group recitation: the ceiling height, the room width, and the curvature of the upper walls create a resonance that amplifies and sustains a chanted note for several seconds after it is produced. @@yOchre@@N geometric patterns cover the ceiling in the frequency-nodes where resonance peaks, marking the optimal positions for different vocal registers. The result is a room where whispered words become audible and quiet voices become impressive, an effect that presumably served considerable ceremonial purpose.
+~
+24584 11
+D3
+The west passage connects toward the inner prayer hall.~
+~
+0 -1 10245
+D1
+The east passage leads into the floor's further chambers.~
+~
+0 -1 10254
+D0
+The north passage continues into the floor's upper sections.~
+~
+0 -1 10253
+S
+#10252
+@@yA Side Shrine@@N~
+A dark alcove-shrine dedicated to a subordinate deity of the high priests' cult, its carved image set in a niche at the rear of the space: a seated figure with @@cblue@@N headdress and @@yyellow@@N solar disc whose specific identity is marked in cartouches that are worn beyond the point of legibility. The shrine's offering ledge is carved with the residue of wax seals from offerings that were placed and sealed here at the pyramid's closing, the physical impression of their shapes still visible in the hardened wax.
+~
+24585 11
+D1
+The passage east returns to the chanting hall.~
+~
+0 -1 10251
+D0
+The north passage leads toward the vaulted passage.~
+~
+0 -1 10253
+S
+#10253
+@@yThe Vaulted Passage@@N~
+A connecting corridor with an exceptionally high corbelled vault ceiling that gives it a grandeur disproportionate to its function as a connecting link between the floor's interior sections. The vault's individual stones are carved with @@yyellow@@N star-points radiating from a central @@bsandstone@@N boss, and the overall effect is of a night sky rendered in stone. The passage connects three directions including north toward the floor's upper approach sections.
+~
+24584 11
+D2
+The south passage descends toward the chanting hall and marked flagstones.~
+~
+0 -1 10251
+D3
+The west passage connects toward the side shrine.~
+~
+0 -1 10252
+D0
+The north passage continues toward the upper stair landing area.~
+~
+0 -1 10260
+S
+#10254
+@@yThe East Ceremonial Wing@@N~
+The eastern ceremonial wing of the second floor extends beyond the main hall complex, its chambers dedicated to the more specialized aspects of the high priests' ritual calendar. The walls here carry inscriptions that reference specific festival days, lunar cycles, and solar events — the liturgical calendar of the floor's sacred year rendered in carved stone for reference. @@cLapis lazuli@@N markers in the text highlight the high days, their blue color still distinguishing the sacred from the administrative.
+~
+24584 11
+D3
+The west passage connects toward the chanting hall.~
+~
+0 -1 10251
+D0
+The north passage connects toward the upper stair landing area.~
+~
+0 -1 10260
+D1
+The east passage connects toward the west ceremonial wing via a cross corridor.~
+~
+0 -1 10255
+S
+#10255
+@@yThe West Ceremonial Wing@@N~
+The western ceremonial wing mirrors the eastern in layout while carrying different content on its walls: where the east wing records the ceremonial calendar, the west records the theological basis for the ceremonies — the underlying divine authority that makes each ritual act valid and necessary. The theology is dense and the arguments are complex; the priests who worked in this wing were scholars as well as officiants. @@yGold-bordered@@N key passages are marked throughout with decorative emphasis, suggesting active study rather than passive decoration.
+~
+24584 11
+D3
+The passage west connects back toward the vaulted passage.~
+~
+0 -1 10253
+D0
+The north passage connects toward the approach sections.~
+~
+0 -1 10261
+D1
+The east passage connects toward the east ceremonial wing.~
+~
+0 -1 10254
+S
+#10256
+@@yA Preparation Alcove@@N~
+A small dark anteroom immediately before the floor's approach section, used for the final pre-entry preparations by priests ascending toward the high priest's inner chambers. The basin for ritual washing here is smaller than in the main preparation areas, a last-minute cleansing rather than a full ceremony. The stone rod for hanging the final vestment before entry is still in place, its iron bracket corroded but structurally intact.
+~
+24585 11
+D1
+The passage east connects toward the inner sanctum antechamber.~
+~
+0 -1 10261
+D0
+The north passage leads toward the hall of the sacred asp.~
+~
+0 -1 10257
+S
+#10257
+@@yThe Hall of the Sacred Asp@@N~
+Cobra carvings cover every surface of this chamber: in the walls, the columns, the ceiling, the floor borders, and carved free-standing cobra figures in wall niches every few feet. The cobras are the protective @@ysacred asp@@N of the high priests' tradition, shown in the erect, spread-hood posture of active threat. @@cBlue faience@@N fills the hood markings on every figure, and the eyes are set with @@yyellow@@N calcite that catches light and holds it. The cumulative effect of hundreds of cobra figures in a confined space, all oriented outward as though in collective defense, is deliberately intimidating.
+~
+24584 11
+D2
+The south passage leads back toward the preparation alcove.~
+~
+0 -1 10256
+D1
+The east passage leads toward the archpriest's study.~
+~
+0 -1 10258
+D0
+The north passage continues toward the floor's innermost chambers.~
+~
+0 -1 10261
+S
+#10258
+@@yThe Archpriest's Study@@N~
+The private study of the second floor's archpriest is distinguished from other chambers by its size — deliberately modest — and by the extraordinary density and quality of its inscribed walls. Every surface carries text in multiple registers: official inscriptions in formal hieroglyphs above, and informal notes in a cursive script below, the personal annotations of a scholar working actively with the material. @@yGold-bordered@@N passages mark sections the archpriest considered particularly important, and the frequency of these marks suggests a mind that found most things important.
+~
+24584 11
+D3
+The west passage leads toward the hall of the sacred asp.~
+~
+0 -1 10257
+D1
+The east passage continues toward the floor's final chambers.~
+~
+0 -1 10262
+S
+#10259
+@@yA Collapsed Vault@@N~
+The vault of this chamber has partially collapsed, dropping several large @@bsandstone@@N blocks onto the floor and leaving an irregular opening in the ceiling through which the underside of the floor above is visible. The blocks are too large and too awkwardly positioned to move without substantial effort; the passage squeezes between them and requires care. @@yDust@@N still sifts slowly from the ceiling fracture above, the collapse an ongoing process that has not yet fully resolved itself.
+~
+24585 11
+D3
+The passage west connects toward the archpriest's study.~
+~
+0 -1 10258
+D0
+The north passage continues toward the floor's final approach section.~
+~
+0 -1 10262
+S
+#10260
+@@yThe Upper Stair Landing (Floor 2)@@N~
+The stairwell landing on the second floor's upper side connects the Chamber of the High Priests to the Eternal Vault above. An @@biron-banded archway@@N of dressed stone is set in the north wall above the stairwell opening, its iron bands tarnished to red-brown but structurally sound. The archway's carved lintel records the name and nature of the floor above: the Eternal Vault, where the pyramid's strongest undead have rested since the sealing. Recall is possible from this landing.
+~
+16396 11
+D3
+The south passage leads back into the floor's ceremonial corridor.~
+~
+0 -1 10253
+D2
+The south passage connects toward the east ceremonial wing.~
+~
+0 -1 10254
+D4
+The @@biron-banded archway@@N frames the ascending stairwell above.~
+^iron-banded archway~
+1 -1 10266
+E
+iron-banded archway~
+The @@biron-banded archway@@N is a dressed @@bsandstone@@N frame reinforced with wide iron bands that have rusted to brown without failing. Its carved lintel names the floor above as the Eternal Vault.
+~
+S
+#10261
+@@yThe Inner Sanctum Antechamber@@N~
+The transitional space before the High Priest's inner domain is decorated with the full portrait gallery of the second floor's pharaoh-spirit in its living form: the High Priest as a living person, in every formal context from public ceremony to private study. The quality of the portraiture suggests either great artistic skill or genuine attachment — the face carved here has specific features rather than the idealized regularity of official art. @@yGold leaf@@N covers the cartouche names throughout, and the colors in the painted plaster sections are the most intact on the floor.
+~
+24584 11
+D2
+The south passage leads back toward the ceremonial wing area.~
+~
+0 -1 10255
+D1
+The east passage continues toward the outer chamber.~
+~
+0 -1 10262
+D0
+The north passage leads toward the final hall.~
+~
+0 -1 10263
+S
+#10262
+@@yThe Outer Chamber@@N~
+The outer chamber of the second floor's boss approach is wide and well-lit by the @@yyellow@@N residual luminescence of the carved @@ysun-discs@@N in the ceiling, a feature appearing here for the first time on this floor. The walls carry carvings of the High Priest's divine authorities — the specific magical competencies and protective powers that made the Priest formidable in life and more formidable in undeath. @@RRed-bordered warning glyphs@@N ring the northern arch, their message explicit: the being beyond this point operates under a curse that cannot be satisfied, lifted, or negotiated.
+~
+24584 11
+D3
+The west passage leads back toward the archpriest's study and collapsed vault area.~
+~
+0 -1 10259
+D1
+The east passage connects toward the inner sanctum antechamber.~
+~
+0 -1 10261
+D0
+The north passage leads toward the final hall.~
+~
+0 -1 10263
+S
+#10263
+@@yA Final Hall@@N~
+A dark connecting hall that serves as the final transition point before the High Priest's approach chamber — narrow enough that the boss approach ahead feels deliberate, a forcing of single-file movement that creates psychological focus. @@bSandstone@@N walls carry the last of the floor's narrative carvings, which end here mid-scene as though the carvers stopped work at this point and never returned.
+~
+24585 11
+D2
+The south passage leads back toward the outer chamber.~
+~
+0 -1 10262
+D0
+The north passage enters the high priest's approach chamber.~
+~
+0 -1 10264
+S
+#10264
+@@yThe High Priest's Approach@@N~
+The approach chamber to the High Priest of the Ancient Sands is built at the full height of the second floor, its walls carrying the most elaborate inscription program in the pyramid: every protective formula, every curse, every invocation of divine authority that could be assembled is carved here in a continuous text that covers all available wall space including the floor borders and the ceiling. A @@bcarved stone threshold@@N stands in the north wall, its lintel carved with the specific curse binding the High Priest to eternal service. The @@bsandstone@@N of the threshold frame is carved with @@Rblood-red@@N warning patterns that still carry their original pigment.
+~
+24584 11
+D2
+The south passage leads back through the final hall.~
+~
+0 -1 10263
+D0
+The @@bcarved stone threshold@@N stands in the north wall, its frame carved with @@Rcurse-marks@@N of the high priest's binding.~
+^carved stone threshold~
+1 -1 10265
+E
+carved stone threshold~
+The @@bcarved stone threshold@@N is a single carved slab set in a recessed frame, its surface covered in the binding curse that keeps the High Priest of the Ancient Sands eternal.
+~
+S
+#10265
+@@yThe High Priest's Sanctum@@N~
+The sanctum of the High Priest of the Ancient Sands is a chamber of concentrated sacred authority: every surface carries text, every text carries power, and the accumulated weight of the inscriptions creates a palpable pressure in the air. @@RBlood-red@@N hieroglyphs in the highest registers record the terms of the High Priest's binding and the divine authority that maintains it across the centuries. @@cLapis lazuli@@N fills every accent inscription, and the @@yyellow@@N gold of the cartouches still burns in the persistent luminescence that emanates from the carved @@ysun-discs@@N in the ceiling. The @@bcarved stone threshold@@N in the south wall leads back to the approach chamber.
+~
+24588 11
+D2
+The @@bcarved stone threshold@@N in the south wall leads back to the approach chamber.~
+^carved stone threshold~
+1 -1 10264
+S
+#10266
+@@yThe Third Ascent@@N~
+The @@biron-banded archway@@N opens onto the Eternal Vault's entry landing, the third ascending floor. The air changes immediately above the threshold: colder, drier, and carrying the distinct chemical signature of mummification preservation — natron and cedar and resins that have stabilized in this environment for millennia. @@yhieroglyphic inscriptions@@N above the arch name this level and list what it contains: the eternal resting places of the pyramid's secondary pharaoh-lords, the vault where the most powerful undead await those who intrude. Recall is possible from this landing.
+~
+16396 11
+D5
+The @@biron-banded archway@@N leads back down to the second floor stair landing.~
+^iron-banded archway~
+1 -1 10260
+D1
+The passage east enters the vault antechamber.~
+~
+0 -1 10267
+D0
+The north passage leads deeper into the Eternal Vault.~
+~
+0 -1 10268
+S
+#10267
+@@yThe Vault Antechamber@@N~
+The first proper room of the Eternal Vault has a formal quality that exceeds the floors below: the @@bsandstone@@N block-work is more precise, the inscriptions denser, and the @@yyellow@@N gold paint in the cartouche borders is the most intact of any on the ascending floors. The antechamber records the vault's creation, its purpose, and the names of all the beings interred within it — a complete roster of the pyramid's secondary pharaoh-lords arranged in order of their binding date. The list is long.
+~
+24584 11
+D3
+The west passage leads back toward the third ascent.~
+~
+0 -1 10266
+D1
+The east passage leads toward a sealed side chamber.~
+~
+0 -1 10268
+D0
+The north passage continues deeper into the vault.~
+~
+0 -1 10269
+S
+#10268
+@@yA Sealed Side Chamber@@N~
+A side chamber whose entrance is sealed with a @@bsandstone@@N block set in a mortared frame, the mortar cracked and partially fallen out, leaving a narrow gap at the block's lower right corner through which cold air sighs steadily outward. What lies within cannot be seen from the entrance, but the air carries the smell of old preservatives and something else — the faint residue of whatever spiritual presence occupied this space at the sealing.
+~
+24585 11
+D3
+The passage west returns toward the vault antechamber.~
+~
+0 -1 10267
+D0
+The north passage continues into the vault's main chambers.~
+~
+0 -1 10269
+S
+#10269
+@@yThe Hall of Eternal Rest@@N~
+Sealed sarcophagi occupy wall recesses the length of this hall on both sides, each one sealed with a mortared stone panel carved with the occupant's name, titles, and a brief protective formula. The sarcophagi are intact, their seals unbroken, their contents — if still present — immovable. @@yyellow@@N paint on the name cartouches has faded to a warm cream against the @@bsandstone@@N, and @@cblue@@N faience border tiles run below each recess in a continuous course that is remarkably well-preserved. The smell of mummification chemistry is strongest here of any room in the vault.
+~
+24584 11
+D2
+The south passage leads back toward the vault antechamber.~
+~
+0 -1 10267
+D1
+The east passage connects toward the embalmer's gallery.~
+~
+0 -1 10270
+D0
+The north passage continues into the vault interior.~
+~
+0 -1 10271
+S
+#10270
+@@yThe Embalmer's Gallery@@N~
+Illustrated burial rites cover both walls of this gallery in a procedural sequence depicting the specific embalming methods used for the secondary pharaoh-lords interred on this floor. The illustrations are detailed to the point of technical instruction: the chemical concentrations, the tool types, the specific prayers at each stage, and the quality of linen for each wrapping phase. @@yGold-highlighted@@N key steps mark the most critical interventions in the process, and the @@cblue@@N borders separate the illustrations from the accompanying text in a clean visual hierarchy.
+~
+24584 11
+D3
+The west passage returns toward the hall of eternal rest.~
+~
+0 -1 10269
+D1
+The east passage leads toward the soul weighing chamber.~
+~
+0 -1 10271
+D0
+The north passage continues deeper into the vault.~
+~
+0 -1 10273
+S
+#10271
+@@yThe Soul Weighing Chamber@@N~
+A giant carved scale dominates the center of this chamber, its arms still in balance after millennia, its carved pans holding carved hearts on one side and a carved feather on the other. The scale is the divine judgment mechanism of the pyramid's faith, shown here at the moment of perfect equilibrium that represents successful judgment. @@cLapis lazuli@@N inlay covers the feather in dense blue that makes it visually dominant despite its notional weightlessness, and @@yyellow gold@@N fills the carved hearts with a warmth that seems deliberate — the emphasis of value over righteousness. The chamber smells of the same dry, ancient chemistry as the rest of the vault.
+~
+24584 11
+D3
+The west passage returns toward the embalmer's gallery.~
+~
+0 -1 10270
+D1
+The east passage continues into the vault's mummy lords' wing.~
+~
+0 -1 10273
+D0
+The north passage leads toward the further vault chambers.~
+~
+0 -1 10275
+S
+#10272
+@@yA Dark Corridor@@N~
+A connecting corridor cutting diagonally through the vault's interior, its walls undecorated except for a continuous @@Rred border@@N at floor level — the danger indicator color that appears on this floor more frequently than on those below. The darkness here is thorough, resisting the peripheral light of adjacent rooms, as though the corridor itself maintains an active darkness rather than a passive absence of light.
+~
+24585 11
+D3
+The passage west connects back toward the soul weighing chamber.~
+~
+0 -1 10271
+D0
+The north passage continues toward the mummy lords' wing.~
+~
+0 -1 10273
+S
+#10273
+@@yThe Mummy Lords' Wing@@N~
+The primary hall of the secondary pharaoh-lords' section of the Eternal Vault, its walls carrying the full hieratic portraits of the mummy lords interred in the vault recesses throughout this floor. Each portrait shows its subject in full ceremonial regalia: crown, crook, flail, and the specific divine attributes of their individual authority. The quality of carving varies; the lords depicted earlier in the hall have finer portraits than those toward the north, suggesting the workmanship was declining as the vault neared capacity. @@RBlood-red@@N threat indicators now appear regularly in the border decorations.
+~
+24584 11
+D2
+The south passage leads back toward the soul weighing chamber.~
+~
+0 -1 10271
+D1
+The east passage continues into the vault's burial alcoves.~
+~
+0 -1 10274
+D0
+The north passage continues toward the preserved archives.~
+~
+0 -1 10275
+S
+#10274
+@@yA Burial Alcove@@N~
+A deep alcove containing a single sealed sarcophagus of slightly larger dimensions than those in the Hall of Eternal Rest — a minor lord rather than a major one, given its placement here rather than in the main hall, but clearly of sufficient standing to merit individualized burial rather than communal interment. The sarcophagus's cartouche names have been deliberately erased, the name removed by someone at some point in the pyramid's active life. The reasons for the erasure are not recorded.
+~
+24585 11
+D3
+The passage west leads back toward the mummy lords' wing.~
+~
+0 -1 10273
+D0
+The north passage continues deeper into the vault.~
+~
+0 -1 10275
+S
 #$
