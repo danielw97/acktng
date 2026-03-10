@@ -1,0 +1,47 @@
+level 0
+keywords martial artist martialartist
+---
+@@gMARTIAL ARTIST@@W
+
+Martial Artists are the perfected union of @@gMonk@@W discipline and @@gBrawler@@W
+ferocity. They weaponize breath, balance, and impact timing, turning every
+exchange into a rhythm of pressure, recovery, and sudden burst.
+
+To become a Martial Artist, you follow the adept path tied to @@gMonk@@W and
+@@gBrawler@@W remort progression.
+
+@@gPassive class advantages@@W
+Martial Artist grants several always-on combat bonuses as adept levels rise:
+
+  1) @@wChi-technique damage bonus@@W
+     - Chi attacks in the palmstrike/pummel/aurabolt family gain extra damage.
+     - Scaling: +2.5% damage per Martial Artist adept level (up to +50% at 20).
+
+  2) @@wBare-hand strike damage bonus@@W
+     - Unarmed direct-hit damage is increased while using bare-hand combat.
+     - Scaling: +2% damage per Martial Artist adept level (up to +40% at 20).
+
+  3) @@wExtra attack round@@W
+     - Having any Martial Artist adept level grants an additional melee hit in
+       the multi-hit calculation.
+
+@@gUnique Martial Artist mechanics@@W
+  * @@wMartial stance@@W becomes available with the adept path.
+  * While Martial Artist adept is active, your maximum chi pool is raised to
+    @@w25@@W (supporting longer chi-combo windows).
+  * Martial Artist uses @@wConstitution@@W as its adept prime attribute and
+    follows a durable, sustained-melee growth profile.
+
+@@gMartial Artist reincarnation bonuses@@W
+Each Martial Artist adept reincarnation grants passive advantages:
+
+  * @@wDirect-hit damage@@W: +2% per Martial Artist adept reincarnation.
+  * At @@w20+ Martial Artist adept reincarnations@@W, your chi cap remains at
+    @@w25@@W even without active Martial adept levels.
+  * At @@w20+ Martial Artist adept reincarnations@@W, combo capacity gains
+    +1 slot when combo progression is active.
+
+In short: Martial Artist is the chi-pressure adept, excelling at sustained
+unarmed aggression with strong burst conversion when resources are spent well.
+
+See also: @@mremort chi combo palmstrike pummel aurabolt chakra chiblock stance@@W

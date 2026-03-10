@@ -748,7 +748,7 @@ int get_max_combo(CHAR_DATA *ch)
 
     if (ch->adept[CLASS_CRU] > 0 && max > 0)
         max++;
-    else if (!IS_NPC(ch) && ch->pcdata->adept_reincarnations[CLASS_MAR] >= 20 && max > 0)
+    else if (!IS_NPC(ch) && (ch->pcdata->adept_reincarnations[CLASS_CRU] >= 20 || ch->pcdata->adept_reincarnations[CLASS_MAR] >= 20) && max > 0)
         max++;
 
     if ((ch->remort[CLASS_KNI] > 0 || ch->remort[CLASS_SWO] > 0) && max > 0)
