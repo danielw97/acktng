@@ -4289,6 +4289,11 @@ D3
 ~
 ~
 0 -1 11626
+D2
+@@yThe passage continues south to the magma pool room.@@N
+~
+~
+0 -1 11630
 S
 #11628
 @@yThe Lava Seep Chamber@@N~
@@ -4307,6 +4312,11 @@ D3
 ~
 ~
 0 -1 11627
+D2
+@@yThe passage leads south to a heat-shimmering alcove.@@N
+~
+~
+0 -1 11632
 S
 #11629
 @@yA Basalt Passage@@N~
@@ -4320,6 +4330,425 @@ D3
 ~
 ~
 0 -1 11628
+D2
+@@yThe passage leads south to the obsidian gallery.@@N
+~
+~
+0 -1 11631
+S
+#11630
+@@yThe Magma Pool Room@@N~
+@@yA pool of @@Rglowing magma@@y dominates the center of this chamber, its molten surface shifting in slow, hypnotic patterns as convection currents draw bright orange veins across the darker crust.@@N
+@@bThe heat radiating from the pool@@y is so intense that the air above it shimmers violently, and the surrounding stone floor has been glazed to a glassy finish by centuries of radiant heat.@@N
+@@yOccasional bubbles break the magma's surface with soft, heavy sounds, releasing brief gouts of superheated gas and showers of tiny incandescent droplets.@@N
+@@yThe scorched corridor lies to the north, the obsidian gallery to the east, and the inner sanctum passage to the south.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the scorched corridor.@@N
+~
+~
+0 -1 11627
+D1
+@@yA corridor opens east to the obsidian gallery.@@N
+~
+~
+0 -1 11631
+D2
+@@yThe passage continues south to the inner sanctum passage.@@N
+~
+~
+0 -1 11634
+S
+#11631
+@@yThe Obsidian Gallery@@N~
+@@yThe walls of this gallery are natural @@bvolcanic glass@@y, formed when molten lava flowed into this chamber and cooled against the surrounding stone, creating surfaces of perfect black that reflect the @@Rfiery glow@@y from deeper within.@@N
+@@bThe obsidian surfaces@@y are so smooth they serve as dark mirrors, reflecting distorted images of the fire-lit corridor in endless repetition.@@N
+@@yFragments of obsidian litter the floor where thermal stress has caused pieces to crack and fall, their edges razor-sharp and glinting @@Rorange@@y in the volcanic light.@@N
+@@yThe basalt passage lies to the north, the magma pool room to the west, the forge of the dead to the east, and the ember throne room to the south.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the basalt passage.@@N
+~
+~
+0 -1 11629
+D1
+@@yThe corridor continues east to the forge of the dead.@@N
+~
+~
+0 -1 11633
+D2
+@@yA passage leads south to the ember throne room.@@N
+~
+~
+0 -1 11635
+D3
+@@yThe gallery opens west to the magma pool room.@@N
+~
+~
+0 -1 11630
+S
+#11632
+@@yA Heat-Shimmering Alcove@@N~
+@@yThis small alcove is so @@Rscorchingly hot@@y that the air itself becomes visible, shimmering in constant waves that make the walls appear to ripple and flow like the lava seeping through cracks nearby.@@N
+@@bThe stone surfaces@@y are glazed with a thin layer of volcanic glass where molten droplets have splashed and cooled, creating a lumpy, irregular texture.@@N
+@@yThe lava seep chamber lies to the north, and the forge of the dead opens to the south.@@N
+~
+24617 11
+D0
+@@yThe passage leads north to the lava seep chamber.@@N
+~
+~
+0 -1 11628
+D2
+@@yA passage leads south to the forge of the dead.@@N
+~
+~
+0 -1 11633
+S
+#11633
+@@yThe Forge of the Dead@@N~
+@@yAn ancient forge powered by a @@Rvolcanic vent@@y occupies the center of this chamber, its massive stone anvil still bearing the marks of the last weapon struck upon it millennia ago.@@N
+@@bThe forge's fire channel@@y draws directly from a fissure in the floor, providing an eternal source of heat that keeps the anvil's surface warm and the surrounding air at furnace temperature.@@N
+@@yTools of the forge-master — @@btongs, hammers, and quenching troughs@@y — lie scattered about, some partially melted by exposure to temperatures even they were not designed to withstand.@@N
+@@yThe obsidian gallery lies to the west, the heat-shimmering alcove to the north, and the fire warden's outer hall to the south.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the heat-shimmering alcove.@@N
+~
+~
+0 -1 11632
+D2
+@@yThe corridor continues south to the fire warden's outer hall.@@N
+~
+~
+0 -1 11636
+D3
+@@yThe passage leads west to the obsidian gallery.@@N
+~
+~
+0 -1 11631
+S
+#11634
+@@yThe Inner Sanctum Passage@@N~
+@@yThis corridor marks the deepest horizontal passage of the Molten Sanctum, its @@bwalls streaked with veins of cooling lava@@y that pulse with a dull @@Rorange glow@@y like the slow heartbeat of the earth itself.@@N
+@@bThe floor is treacherous@@y, warped and buckled by thermal expansion, with gaps between flagstones that reveal @@Rglowing magma@@y flowing sluggishly beneath.@@N
+@@yThe heat is nearly unbearable, each breath scorching the throat and lungs.@@N
+@@yThe magma pool room lies to the north, and the ember throne room lies to the east.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the magma pool room.@@N
+~
+~
+0 -1 11630
+D1
+@@yThe corridor opens east to the ember throne room.@@N
+~
+~
+0 -1 11635
+D5
+@@yA shaft descends into the absolute darkness of the deepest tier. An @@Robsidian sentinel gate@@y bars the way.@@N
+~
+^obsidian sentinel gate~
+2 11515 11640
+S
+#11635
+@@yThe Ember Throne Room@@N~
+@@yA massive throne of @@Rcharred obsidian@@y dominates this vaulted chamber, its surface still radiating heat from the volcanic forces that shaped it, tiny embers glowing in the cracks of its dark surface.@@N
+@@bThe throne sits upon a dais of fused basalt@@y, surrounded by a ring of @@Rsmoldering coals@@y that have somehow remained alight for centuries, fed by volcanic gases seeping up through the floor.@@N
+@@yThe walls are covered in relief carvings depicting the Fire Warden's dominion over flame and molten earth, each panel bordered with @@ecopper inlay@@y that has turned green where the heat has not kept it polished.@@N
+@@yThe obsidian gallery lies to the north, the inner sanctum passage to the west, and the fire warden's outer hall to the east.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the obsidian gallery.@@N
+~
+~
+0 -1 11631
+D1
+@@yA corridor leads east to the fire warden's outer hall.@@N
+~
+~
+0 -1 11636
+D3
+@@yThe passage leads west to the inner sanctum passage.@@N
+~
+~
+0 -1 11634
+S
+#11636
+@@yThe Fire Warden's Outer Hall@@N~
+@@yThis hall serves as the outermost boundary of the Fire Warden's domain, its @@bwalls reinforced with thick slabs of heat-resistant basalt@@y that have nonetheless cracked and warped under the extreme temperatures.@@N
+@@RLava flows@@y in narrow channels carved into the floor on either side of a central walkway, providing both illumination and a molten barrier against intruders.@@N
+@@yThe ember throne room lies to the west, the forge of the dead to the north, and the fire warden's antechamber continues to the south.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the forge of the dead.@@N
+~
+~
+0 -1 11633
+D2
+@@yThe corridor continues south to the fire warden's antechamber.@@N
+~
+~
+0 -1 11637
+D3
+@@yThe hall opens west to the ember throne room.@@N
+~
+~
+0 -1 11635
+S
+#11637
+@@yThe Fire Warden's Antechamber@@N~
+@@yThe antechamber to the Fire Warden's crucible is a circular room where the @@Rheat reaches its apex@@y, the stone floor glowing a dull cherry red and the air so hot that metal armor becomes painfully hot to the touch.@@N
+@@bThe walls are carved with fire sigils@@y that pulse with @@Ractive volcanic energy@@y, each one a binding ward that channels and contains the immense thermal forces flowing through this tier.@@N
+@@yThe fire warden's outer hall lies to the north, and the fire warden's approach continues to the south.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the fire warden's outer hall.@@N
+~
+~
+0 -1 11636
+D2
+@@yThe corridor continues south to the fire warden's approach.@@N
+~
+~
+0 -1 11638
+S
+#11638
+@@yThe Fire Warden's Approach@@N~
+@@yThe final corridor before the Fire Warden's crucible is lined with @@bbasalt pillars@@y that glow from within, cracks in their surfaces revealing @@Rveins of molten stone@@y running through the columns like fiery blood.@@N
+@@RHeat shimmers@@y make the corridor's length impossible to judge, and the air crackles with superheated energy that raises blisters on exposed skin.@@N
+@@yAt the corridor's end, a @@Rmolten-iron gate@@y bars passage south, its bars glowing a dull red-orange and radiating waves of scorching heat.@@N
+@@yThe fire warden's antechamber lies to the north. A @@Rmolten-iron gate@@y blocks passage to the south.@@N
+~
+24616 11
+D0
+@@yThe passage leads north to the fire warden's antechamber.@@N
+~
+~
+0 -1 11637
+D2
+@@yBeyond the @@Rmolten-iron gate@@y lies the Fire Warden's crucible.@@N
+~
+^molten-iron gate~
+1 -1 11639
+S
+#11639
+@@yThe Fire Warden's Crucible@@N~
+@@yThe Fire Warden's sanctum is a vast, dome-shaped chamber suspended above a @@Rlake of molten lava@@y, connected to the surrounding stone only by a narrow bridge of heat-blackened basalt.@@N
+@@bThe dome above is natural volcanic rock@@y, its underside coated with @@Rdripping formations of semi-molten stone@@y that stretch downward like burning stalactites, each one glowing with inner fire.@@N
+@@yAt the chamber's center, a massive @@Relegmental construct@@y of living magma stands upon a raised platform of fused volcanic glass, its body flowing and reforming in constant motion, veins of liquid fire coursing through a framework of cooling stone.@@N
+@@RThe heat is nearly lethal@@y, the air itself seeming to burn with every breath, and the @@Rlava lake below@@y casts hellish reflections across every surface in constantly shifting patterns of red, orange, and white.@@N
+@@yA @@Rmolten-iron gate@@y leads north, the only exit from this volcanic crucible.@@N
+~
+24588 11
+D0
+@@yThe @@Rmolten-iron gate@@y leads north out of the crucible.@@N
+~
+^molten-iron gate~
+1 -1 11638
+S
+#11640
+@@yThe Final Descent@@N~
+@@yBeyond the obsidian sentinel gate, a shaft plunges into absolute darkness — the @@Rheat of the Molten Sanctum@@y above giving way to a profound, unnatural cold that seeps into the bones.@@N
+@@bThe walls of the shaft are smooth volcanic glass@@y, polished to a mirror finish that reflects nothing — as though the surface absorbs light rather than redirecting it.@@N
+@@yThe air is perfectly still and carries no scent, no temperature, no humidity — a complete absence of sensation that is more disturbing than any environmental extreme encountered above.@@N
+@@yAn @@Robsidian sentinel gate@@y leads up to the Molten Sanctum above, and the void corridor extends to the east.@@N
+~
+16396 11
+D1
+@@yThe passage leads east to the void corridor.@@N
+~
+~
+0 -1 11641
+D4
+@@yBeyond the @@Robsidian sentinel gate@@y, the shaft ascends to the inner sanctum passage in the Molten Sanctum above.@@N
+~
+^obsidian sentinel gate~
+2 11515 11634
+S
+#11641
+@@yThe Void Corridor@@N~
+@@yThis corridor exists in a state of absolute darkness that no light source can penetrate — torches gutter and die, magical illumination fades to nothing, and even darkvision fails to reveal the passage's extent.@@N
+@@bThe walls are smooth and ice-cold@@y to the touch despite the volcanic inferno just one tier above, as though the void that consecrates this final level has stripped away even the memory of heat.@@N
+@@ySound behaves strangely here — footsteps produce no echo, voices seem to come from wrong directions, and silence itself has a weight and pressure that pushes against the eardrums.@@N
+@@yThe final descent lies to the west, the glass antechamber to the east, and the reflection hall opens to the south.@@N
+~
+24585 11
+D1
+@@yThe passage leads east to the glass antechamber.@@N
+~
+~
+0 -1 11642
+D2
+@@yA corridor leads south to the reflection hall.@@N
+~
+~
+0 -1 11643
+D3
+@@yThe corridor leads west to the final descent.@@N
+~
+~
+0 -1 11640
+S
+#11642
+@@yThe Glass Antechamber@@N~
+@@yThe walls of this chamber are polished @@bvolcanic glass@@y of such perfect clarity that they create the illusion of standing in an infinite void, every surface reflecting darkness into darkness.@@N
+@@bFaint veins of silver run through the obsidian@@y, catching what little ambient energy exists at this depth and throwing back dim, ghostly gleams that are the only visual stimulation in the chamber.@@N
+@@yThe floor is a single unbroken sheet of black glass, so smooth that it offers no traction, and so dark it appears to be a bottomless pit.@@N
+@@yThe void corridor lies to the west, and a void-touched alcove opens to the south.@@N
+~
+24585 11
+D2
+@@yA passage leads south to a void-touched alcove.@@N
+~
+~
+0 -1 11644
+D3
+@@yThe passage leads west to the void corridor.@@N
+~
+~
+0 -1 11641
+S
+#11643
+@@yThe Reflection Hall@@N~
+@@yInfinite reflections cascade through this hall of @@bobsidian mirrors@@y, each polished surface angled to catch and multiply any source of light or movement into an endless regression of ghostly images.@@N
+@@bThe mirrors are set at precise angles@@y calculated by ancient architects to create the illusion that the hall extends forever in every direction, a disorienting effect that makes navigation treacherous.@@N
+@@yIn the deepest reflections, figures seem to move independently of their sources — shadows that turn when the viewer stands still, reflections that blink out of sequence.@@N
+@@yThe void corridor lies to the north, a void-touched alcove to the east, and the inner void passage opens to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the void corridor.@@N
+~
+~
+0 -1 11641
+D1
+@@yA corridor opens east to a void-touched alcove.@@N
+~
+~
+0 -1 11644
+D2
+@@yThe hall continues south to the inner void passage.@@N
+~
+~
+0 -1 11645
+S
+#11644
+@@yA Void-Touched Alcove@@N~
+@@yThis small chamber exists in a state of sensory deprivation so complete that the boundary between the physical world and the void seems paper-thin.@@N
+@@bThe walls pulse with a slow, rhythmic energy@@y that can be felt rather than seen, as though the heartbeat of some vast, slumbering presence resonates through the stone at frequencies below hearing.@@N
+@@yTime seems uncertain here — moments stretch and compress without pattern, and the mind struggles to maintain a coherent sense of duration.@@N
+@@yThe glass antechamber lies to the north, and the reflection hall to the west.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the glass antechamber.@@N
+~
+~
+0 -1 11642
+D3
+@@yThe alcove opens west to the reflection hall.@@N
+~
+~
+0 -1 11643
+S
+#11645
+@@yThe Inner Void Passage@@N~
+@@yThe deepest horizontal passage of the entire pyramid, this corridor runs through the heart of the void tier where reality itself seems to thin, the @@bblack stone walls@@y occasionally flickering as though struggling to maintain their solidity.@@N
+@@bThe floor vibrates with a subsonic hum@@y that rises from somewhere far below — perhaps the same molten lake that feeds the Molten Sanctum, separated from this level by only a thin shell of enchanted stone.@@N
+@@yThe reflection hall lies to the north, and the Moon Sovereign's antechamber opens to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the reflection hall.@@N
+~
+~
+0 -1 11643
+D2
+@@yThe corridor continues south to the Moon Sovereign's antechamber.@@N
+~
+~
+0 -1 11646
+S
+#11646
+@@yThe Moon Sovereign's Antechamber@@N~
+@@yThe antechamber to the Moon Sovereign's throne is a grand hall where the @@bwalls are carved with an unbroken narrative@@y depicting the Sovereign's conquest of death — scenes of battles won, rivals destroyed, and the construction of this inverted pyramid.@@N
+@@bThe carvings are rendered in obsidian relief@@y against a background of @@ejade inlay@@y, the green stone providing the only color in the void tier's monochrome darkness.@@N
+@@yThe narrative culminates at the far wall with an image of the Moon Sovereign seated upon a throne suspended above a lake of fire, arms raised in triumph over mortality itself.@@N
+@@yThe inner void passage lies to the north, and the pre-throne hall extends to the east.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the inner void passage.@@N
+~
+~
+0 -1 11645
+D1
+@@yThe corridor continues east to the pre-throne hall.@@N
+~
+~
+0 -1 11647
+S
+#11647
+@@yThe Pre-Throne Hall@@N~
+@@yThis final hall before the Void Throne is a soaring chamber where the ceiling vanishes into darkness so complete it could be infinite, and the @@bwalls narrow gradually@@y to funnel all attention toward the passage south.@@N
+@@bVoid energy crackles visibly@@y here, arcs of @@Rdark lightning@@y leaping between the walls in brief, silent flashes that illuminate the chamber in stuttering instants of negative light.@@N
+@@yThe air throbs with concentrated power, and the very stones seem to hum with the accumulated necromantic energy of seven descending tiers.@@N
+@@yThe Moon Sovereign's antechamber lies to the west, and the Moon Sovereign's approach continues to the south.@@N
+~
+24585 11
+D2
+@@yThe hall continues south to the Moon Sovereign's approach.@@N
+~
+~
+0 -1 11648
+D3
+@@yThe passage leads west to the Moon Sovereign's antechamber.@@N
+~
+~
+0 -1 11646
+S
+#11648
+@@yThe Moon Sovereign's Approach@@N~
+@@yThe final corridor before the Void Throne is a processional passage of @@bpolished obsidian@@y so dark it seems to drink in existence itself, the walls carved with the names and titles of the Moon Sovereign in scripts that span a dozen dead languages.@@N
+@@bThe floor tiles alternate between jet obsidian and @@edeep jade@@y, forming a path that draws the eye inexorably toward a massive @@Rvoid chamber door@@y set into the southern wall.@@N
+@@RDark energy pulses@@y around the door's frame in visible waves, and the temperature drops to near freezing, breath misting in the air despite the volcanic heat that should penetrate from the tier above.@@N
+@@yThe pre-throne hall lies to the north. A @@Rvoid chamber door@@y blocks passage to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the pre-throne hall.@@N
+~
+~
+0 -1 11647
+D2
+@@yBeyond the @@Rvoid chamber door@@y lies the Void Throne Room.@@N
+~
+^void chamber door~
+1 -1 11649
+S
+#11649
+@@yThe Void Throne Room@@N~
+@@yThe nadir of the Southern Pyramid — the deepest point of the inverted structure — is a vast chamber of @@bvolcanic glass@@y suspended above a @@Rlake of molten stone@@y visible through the translucent floor.@@N
+@@bThe throne itself floats@@y at the chamber's center, a massive construction of @@bfused obsidian and jade@@y held aloft by columns of void energy that crackle and pulse with @@Rdark lightning@@y, defying gravity through pure necromantic will.@@N
+@@yUpon the throne sits the @@RMoon Sovereign@@y — immortal architect of this inverted pyramid, twin and rival of the Sand Sovereign — preserved across millennia by the death magic that grows strongest at the world's roots.@@N
+@@bThe chamber walls curve upward into a dome@@y whose interior surface is a perfect mirror of volcanic glass, reflecting the @@Rmolten lake below@@y so that the throne appears suspended between two infinite planes of fire.@@N
+@@RVoid energy saturates every atom of air@@y in this chamber, and the power here is so concentrated it manifests as a visible darkness that writhes and coils around the throne like a living thing.@@N
+@@yA @@Rvoid chamber door@@y leads north, the only exit from this throne of eternal darkness.@@N
+~
+16396 11
+D0
+@@yThe @@Rvoid chamber door@@y leads north out of the throne room.@@N
+~
+^void chamber door~
+1 -1 11648
 S
 #0
 #$
