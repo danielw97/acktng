@@ -8,6 +8,7 @@ char *get_suffix(OBJ_DATA *obj);
 bool is_jewelry(OBJ_DATA *obj);
 char *get_prefix(OBJ_DATA *obj);
 int get_obj_stat_weight_index(const OBJ_DATA *obj);
+int item_generation_apply_item_level_modifiers(const OBJ_DATA *obj, int ilevel);
 
 
 OBJ_DATA *generate_item(int level)
@@ -375,6 +376,9 @@ char *get_wear_name(OBJ_DATA *obj)
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HOOVES))
       return "Hooves";
 
+   if (IS_SET(obj->wear_flags, ITEM_WEAR_INVASION_EMBLEM))
+      return "Emblem";
+
    if (IS_SET(obj->wear_flags, ITEM_WEAR_HOLD_HAND))
    {
       if (IS_SET(obj->extra_flags, ITEM_BUCKLER))
@@ -384,6 +388,40 @@ char *get_wear_name(OBJ_DATA *obj)
    }
 
    return "null";
+}
+
+
+int item_generation_apply_item_level_modifiers(const OBJ_DATA *obj, int ilevel)
+{
+   if (obj == NULL)
+      return ilevel;
+
+   if (IS_SET(obj->extra_flags, ITEM_MAGIC))
+      ilevel *= 1.2;
+   else if (IS_SET(obj->extra_flags, ITEM_RARE))
+      ilevel *= 1.5;
+   else if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
+      ilevel *= 1.75;
+   else if (IS_SET(obj->extra_flags, ITEM_LEGENDARY))
+      ilevel *= 2;
+
+   if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED) && obj->item_type == ITEM_WEAPON)
+      ilevel *= 1.25;
+
+   if (IS_SET(obj->extra_flags, ITEM_LOOT))
+      ilevel *= 1.2;
+
+   if (IS_SET(obj->extra_flags, ITEM_BOSS))
+      ilevel *= 1.25;
+
+   if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_WRIST) ||
+       IS_SET(obj->wear_flags, ITEM_WEAR_EAR) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
+      ilevel *= 0.8;
+
+   if (IS_SET(obj->wear_flags, ITEM_WEAR_INVASION_EMBLEM))
+      ilevel *= 2;
+
+   return ilevel;
 }
 
 void set_obj_stat_auto(OBJ_DATA *obj)
@@ -420,35 +458,7 @@ void set_obj_stat_auto(OBJ_DATA *obj)
       ilevel += 50;
    }
 
-   if (IS_SET(obj->extra_flags, ITEM_MAGIC))
-   {
-      ilevel *= 1.2;
-   }
-   else if (IS_SET(obj->extra_flags, ITEM_RARE))
-   {
-      ilevel *= 1.5;
-   }
-   else if (IS_SET(obj->extra_flags, ITEM_MYTHIC))
-   {
-      ilevel *= 1.75;
-   }
-   else if (IS_SET(obj->extra_flags, ITEM_LEGENDARY))
-   {
-      ilevel *= 2;
-   }
-
-   if (IS_SET(obj->extra_flags, ITEM_TWO_HANDED) && obj->item_type == ITEM_WEAPON)
-      ilevel *= 1.25;
-
-   if (IS_SET(obj->extra_flags, ITEM_LOOT))
-      ilevel *= 1.2;
-
-   if (IS_SET(obj->extra_flags, ITEM_BOSS))
-      ilevel *= 1.25;
-
-   if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK) || IS_SET(obj->wear_flags, ITEM_WEAR_WRIST) ||
-       IS_SET(obj->wear_flags, ITEM_WEAR_EAR) || IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
-      ilevel *= 0.8;
+   ilevel = item_generation_apply_item_level_modifiers(obj, ilevel);
 
    /* Jewelry */
    if (is_jewelry(obj))

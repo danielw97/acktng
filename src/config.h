@@ -632,8 +632,9 @@
 #define WEAR_FEET 29
 #define WEAR_HOOVES 30
 #define WEAR_CLAN_COLORS 31
+#define WEAR_INVASION_EMBLEM 32
 
-#define MAX_WEAR 32
+#define MAX_WEAR 33
 
 /***************************************************************************
  *                                                                         *
@@ -973,6 +974,7 @@
 #define ACT_NO_HUNT 16777216                             /* Mob can breed        */
 #define ACT_SOLO 33554432                                /* Mob is buffed for solo combat */
 #define ACT_BOSS BIT_27                                  /* Mob is buffed for boss combat */
+#define ACT_QUARTERMASTER BIT_28                         /* Sells invasion rewards */
 #define ACT_NOBLOOD BIT_29
 #define ACT_INVASION BIT_30
 #define ACT_NOASSIST BIT_31
@@ -1229,7 +1231,8 @@
 #define ITEM_WEAR_HOOVES BIT_23
 #define ITEM_TAKE BIT_24
 #define ITEM_WEAR_CLAN_COLORS BIT_25
-#define MAX_ITEM_BIT 25
+#define ITEM_WEAR_INVASION_EMBLEM BIT_26
+#define MAX_ITEM_BIT 26
 /*
  * Apply types (for affects).
  * Used in #OBJECTS.

@@ -79,7 +79,8 @@ char *const where_name[] = {
     "-*worn on legs*-      ",
     "-*worn on feet*-      ",
     "-*worn on hooves*-    ", /* 30 */
-    "-*clan colors*-       "
+    "-*clan colors*-       ",
+    "-*invasion emblem*-   "
 };
 
 /*
