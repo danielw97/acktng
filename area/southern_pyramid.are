@@ -13,11 +13,416 @@ T
 #ROOMS
 #11450
 @@yThe Crushing Hall@@N~
-@@yA narrow corridor of @@bsandstone@@N @@ypresses inward from all sides, the walls scored with deep gouges as though massive stone blocks once slid through here.@@N
-@@bDried mortar@@N @@ycrumbles from the joints between @@bhuge limestone slabs@@N @@ythat form the ceiling, each one hanging at a barely perceptible angle.@@N
-@@yThe floor is covered in a fine layer of @@bgritty dust@@N@@y, and the air tastes of old stone and stale, sealed chambers.@@N
+@@yA narrow corridor of @@bsandstone@@y presses inward from all sides, the walls scored with deep gouges where massive stone blocks once slid along hidden tracks.@@N
+@@bDried mortar@@y crumbles from the joints between the @@blimestone slabs@@y that form the ceiling, each one hanging at a barely perceptible downward angle.@@N
+@@yThe floor is covered in a fine layer of @@bgritty dust@@y, and the air tastes of old stone and sealed chambers.@@N
+@@yA ragged shaft opens upward through the ceiling, offering the only way out of this suffocating space.@@N
 ~
-13 11
+24588 11
+S
+#11451
+@@yBefore the Southern Pyramid@@N~
+@@yThe ancient road ends at the foot of a massive @@bsandstone@@y capstone that rises from the desert floor like a broken tooth against the pale sky.@@N
+@@bWeathered blocks@@y of limestone form a broad plaza, half-buried beneath centuries of wind-driven sand.@@N
+@@yThe pyramid's visible peak is deceptively small, a @@bsun-bleached@@y triangle hinting at the vast structure that descends beneath the earth.@@N
+@@yTo the north, the road curves back toward the shade and water of the oasis, while southward the sunken approach leads deeper toward the pyramid's base.@@N
+~
+16396 10
+D0
+@@yThe ancient road curves north through the dunes toward the Southern Oasis.@@N
+~
+~
+0 -1 9819
+D2
+@@yThe sunken road continues south toward the base of the @@bsandstone@@y capstone.@@N
+~
+~
+0 -1 11452
+S
+#11452
+@@yThe Ancient Road South@@N~
+@@yA sunken road of fitted @@bsandstone@@y stretches toward the pyramid, its edges eroded by centuries of desert wind.@@N
+@@bBroken clay pots@@y and scattered ceramic beads litter the margins, remnants of pilgrimages long abandoned.@@N
+@@yThe road widens here, branching west and east around the dune ring that circles the capstone, while a broad forecourt opens to the south.@@N
+~
+24576 10
+D0
+@@yThe road leads north toward the edge of the desert and the distant oasis.@@N
+~
+~
+0 -1 11451
+D1
+@@yA sandy trail curves east around the dune ring.@@N
+~
+~
+0 -1 11455
+D2
+@@yThe road opens into a broad @@bsandstone@@y forecourt before the pyramid.@@N
+~
+~
+0 -1 11456
+D3
+@@yA sandy trail curves west around the dune ring.@@N
+~
+~
+0 -1 11453
+S
+#11453
+@@yThe Outer Dune Ring@@N~
+@@yA crescent of wind-sculpted dunes encircles the western side of the pyramid, their crests shifting with each gust.@@N
+@@bHalf-buried stone markers@@y jut from the sand at irregular intervals, their inscriptions scoured to nothing by centuries of abrasion.@@N
+@@yThe dune ring curves from the approach road to the east toward the western face of the pyramid to the south.@@N
+~
+24576 10
+D1
+@@yA sandy trail curves east toward the approach road.@@N
+~
+~
+0 -1 11452
+D2
+@@yThe dune ring continues south along the pyramid's western face.@@N
+~
+~
+0 -1 11454
+S
+#11454
+@@yThe Western Approach@@N~
+@@ySheer @@bweathered stone@@y rises to the east, the pyramid's western face a featureless wall of fitted blocks worn smooth by millennia of wind.@@N
+@@bPetrified timber@@y beams protrude from the sand at the wall's base, remnants of ancient scaffolding that once clung to the structure.@@N
+@@yThe ground slopes gently eastward toward a wide forecourt visible beyond the corner of the pyramid.@@N
+~
+24576 10
+D0
+@@yThe dune ring curves north along the pyramid's western face.@@N
+~
+~
+0 -1 11453
+D1
+@@yThe ground opens eastward into a broad @@bsandstone@@y forecourt.@@N
+~
+~
+0 -1 11456
+S
+#11455
+@@yThe Eastern Approach@@N~
+@@yThe pyramid's eastern face looms overhead, its @@bsandstone@@y blocks covered in faded hieroglyphs etched deep enough to survive millennia of wind erosion.@@N
+@@bCracked clay@@y offerings lie shattered at the wall's base, their shapes too worn to identify.@@N
+@@yA sandy trail curves west toward the approach road, while southward the ground slopes toward a row of broken obelisks.@@N
+~
+24576 10
+D2
+@@yThe trail slopes south toward a row of @@bbroken obelisks@@y.@@N
+~
+~
+0 -1 11457
+D3
+@@yA sandy trail curves west toward the approach road.@@N
+~
+~
+0 -1 11452
+S
+#11456
+@@yThe Capstone Forecourt@@N~
+@@yA wide plaza of fitted @@bsandstone@@y spreads before the pyramid's entrance, its surface cracked and heaved by the roots of long-dead desert trees.@@N
+@@bSun-bleached bones@@y of pack animals lie scattered near a collapsed watering trough, testament to the last expedition that camped here.@@N
+@@yThe road arrives from the north, while the western and eastern approaches curve around the pyramid's flanks.@@N
+@@yTo the south, the forecourt narrows toward the massive carved entrance of the capstone.@@N
+~
+24576 10
+D0
+@@yThe road leads north toward the approach from the desert.@@N
+~
+~
+0 -1 11452
+D1
+@@yA worn path leads east along the pyramid's base toward a row of @@bbroken obelisks@@y.@@N
+~
+~
+0 -1 11457
+D2
+@@yThe forecourt narrows southward toward the pyramid's carved entrance arch.@@N
+~
+~
+0 -1 11459
+D3
+@@yA worn path leads west along the pyramid's @@bsandstone@@y face.@@N
+~
+~
+0 -1 11454
+S
+#11457
+@@yThe Obelisk Avenue@@N~
+@@yA double row of @@bbroken obelisks@@y lines a sunken road between the eastern approach and the sentinel post, their tops sheared off and lost to the sand.@@N
+@@bHieroglyphic fragments@@y cling to the obelisk bases, depicting the phases of the moon in a language no scholar has yet deciphered.@@N
+@@yThe forecourt opens to the west, while the eastern approach climbs northward and a ruined structure is visible to the south.@@N
+~
+24576 10
+D0
+@@yThe trail climbs north toward the eastern face of the pyramid.@@N
+~
+~
+0 -1 11455
+D2
+@@yA path leads south toward a collapsed structure among the dunes.@@N
+~
+~
+0 -1 11458
+D3
+@@yThe sunken road opens west into the broad forecourt.@@N
+~
+~
+0 -1 11456
+S
+#11458
+@@yThe Sentinel Ruin@@N~
+@@yThe collapsed remains of an ancient guard station squat among the dunes, its @@bmudbrick walls@@y reduced to waist-high stumps.@@N
+@@bScattered iron fittings@@y and a corroded spearhead lie half-buried in the sand, relics of the sentinels who once watched the pyramid's eastern flank.@@N
+@@yThe obelisk avenue stretches north, while westward the ground leads toward the capstone entrance.@@N
+~
+24576 10
+D0
+@@yThe obelisk avenue stretches northward between @@bbroken pillars@@y.@@N
+~
+~
+0 -1 11457
+D3
+@@yA sandy path leads west toward the capstone entrance.@@N
+~
+~
+0 -1 11459
+S
+#11459
+@@yThe Capstone Gate@@N~
+@@yA massive arch of @@bcarved sandstone@@y frames the pyramid's entrance, its keystone engraved with a crescent moon that catches the last light of day.@@N
+@@bWeathered lion-headed guardians@@y flank the threshold, their features softened by centuries of sand-blast into smooth, eyeless masks.@@N
+@@yBeyond the arch, the ancient @@ymoon gate@@y stands closed, a slab of dark stone fitted so precisely into the archway that no gap is visible around its edges.@@N
+@@yThe forecourt opens to the north, and the sentinel ruin is visible to the east.@@N
+~
+24576 10
+D0
+@@yThe forecourt opens northward before the pyramid.@@N
+~
+~
+0 -1 11456
+D1
+@@yA sandy path leads east toward the sentinel ruin.@@N
+~
+~
+0 -1 11458
+D2
+@@yThe @@ymoon gate@@y blocks the way south into the pyramid's interior.@@N
+~
+^moon gate~
+1 -1 11460
+S
+#11460
+@@yThe Descending Vestibule@@N~
+@@yBeyond the @@ymoon gate@@y, the air changes immediately from dry desert heat to a cool, still dampness that clings to the skin.@@N
+@@bSandstone walls@@y close in on either side, carved with repeating crescent motifs that march downward into the gloom.@@N
+@@yThe vestibule descends at a shallow angle, with corridors branching east and west while the main passage continues south into a pillared hall.@@N
+@@bTorch sconces@@y line the walls at regular intervals, their iron brackets rusted but intact, though no flame has burned here in centuries.@@N
+~
+24584 11
+D0
+@@yThe @@ymoon gate@@y leads north back out to the capstone entrance.@@N
+~
+^moon gate~
+1 -1 11459
+D1
+@@yA corridor branches east into the pyramid's interior.@@N
+~
+~
+0 -1 11461
+D2
+@@yThe main passage descends south into a @@bpillared hall@@y.@@N
+~
+~
+0 -1 11463
+D3
+@@yA corridor branches west into the pyramid's interior.@@N
+~
+~
+0 -1 11462
+S
+#11461
+@@yThe East Entry Corridor@@N~
+@@yA straight corridor of @@bfitted sandstone@@y runs parallel to the pyramid's outer wall, its ceiling low enough to brush the head of a tall warrior.@@N
+@@bDust motes@@y hang motionless in the stale air, undisturbed by any breeze from the sealed entrance behind.@@N
+@@yThe passage connects back west to the main vestibule, while a narrower opening leads south into a rubble-choked wing.@@N
+~
+24584 11
+D2
+@@yA narrow opening leads south into a debris-strewn area.@@N
+~
+~
+0 -1 11464
+D3
+@@yThe corridor leads west back to the main vestibule.@@N
+~
+~
+0 -1 11460
+S
+#11462
+@@yThe West Entry Corridor@@N~
+@@yThis corridor mirrors its eastern counterpart, running along the pyramid's western interior wall beneath a ceiling of massive @@bsandstone@@y lintels.@@N
+@@bFaded pigment@@y clings to the walls in patches, the remnants of murals depicting processions of robed figures bearing offerings toward the depths.@@N
+@@yThe passage leads east back to the vestibule, while southward a carved alcove is visible in the flickering darkness.@@N
+~
+24584 11
+D1
+@@yThe corridor leads east back to the main vestibule.@@N
+~
+~
+0 -1 11460
+D2
+@@yThe passage opens south into a carved alcove.@@N
+~
+~
+0 -1 11465
+S
+#11463
+@@yThe Pillar Hall@@N~
+@@yThick @@bsandstone columns@@y march in double rows through this broad chamber, supporting a ceiling of interlocking stone beams that have held for millennia.@@N
+@@bChisel marks@@y are still visible on the pillar surfaces, each column carved with a different phase of the moon from new to full and back again.@@N
+@@yThe vestibule opens to the north, while corridors branch east and west between the pillars.@@N
+@@yThe main passage continues south, descending further into the pyramid through a gallery of inscriptions.@@N
+@@eFaint traces of jade inlay@@y glint in the cracks between the floor stones, remnants of a decorative pattern long since pried loose by tomb robbers.@@N
+~
+24584 11
+D0
+@@yThe main passage ascends north toward the vestibule.@@N
+~
+~
+0 -1 11460
+D1
+@@yA corridor branches east between the pillars.@@N
+~
+~
+0 -1 11464
+D2
+@@yThe passage descends south into a gallery of @@ylunar inscriptions@@N.@@N
+~
+~
+0 -1 11466
+D3
+@@yA corridor branches west between the pillars.@@N
+~
+~
+0 -1 11465
+S
+#11464
+@@yA Rubble-Choked Wing@@N~
+@@yThe ceiling has partially collapsed here, dropping @@bhuge sandstone blocks@@y across the corridor and reducing the passage to a cramped crawl between debris.@@N
+@@bCrushed pottery@@y and splintered wooden beams litter the floor, mingled with fragments of plaster that once bore painted scenes.@@N
+@@yA narrow gap permits passage north to the entry corridor, while westward the pillar hall remains intact and a side passage winds south.@@N
+~
+24584 11
+D0
+@@yA narrow gap leads north to the entry corridor.@@N
+~
+~
+0 -1 11461
+D2
+@@yA side passage winds south through the rubble.@@N
+~
+~
+0 -1 11469
+D3
+@@yWestward, the intact pillar hall is visible through the dust.@@N
+~
+~
+0 -1 11463
+S
+#11465
+@@yThe Offering Alcove@@N~
+@@yCarved niches line both walls of this recessed chamber, each sized to hold a clay vessel or bundled tribute.@@N
+@@bMost niches are empty@@y, their contents long since looted, but a few still hold @@bcracked ceramic jars@@y sealed with wax that has yellowed and split with age.@@N
+@@yThe pillar hall opens to the east, and the entry corridor is accessible to the north, while a wider passage continues south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the west entry corridor.@@N
+~
+~
+0 -1 11462
+D1
+@@yThe broad pillar hall opens to the east.@@N
+~
+~
+0 -1 11463
+S
+#11466
+@@yThe Moon Inscription Gallery@@N~
+@@yEvery surface of this long gallery is carved with depictions of the lunar cycle, the crescent and full moon repeating in bands that spiral from floor to ceiling.@@N
+@@bThe stone has been polished smooth@@y by the hands of ancient worshippers who traced the carvings as part of their devotions.@@N
+@@yThe pillar hall lies to the north, while passages branch east and west deeper into the pyramid's interior.@@N
+@@eThin veins of green copper oxide@@y streak the ceiling where moisture has seeped through hairline fractures over the centuries.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the pillar hall.@@N
+~
+~
+0 -1 11463
+D1
+@@yA passage branches east deeper into the pyramid.@@N
+~
+~
+0 -1 11469
+S
+#11467
+@@yA Guard Barracks Ruin@@N~
+@@yThis cramped chamber served as quarters for the pyramid's interior guards, its @@bstone sleeping platforms@@y still arranged in rows along the walls.@@N
+@@bRusted iron hooks@@y protrude from the ceiling where equipment once hung, and a collapsed weapon rack spills corroded blades across the dusty floor.@@N
+@@yThe only exit leads west through a narrow doorway back into the passage.@@N
+~
+24585 11
+D3
+@@yA narrow doorway leads west into the passage.@@N
+~
+~
+0 -1 11469
+S
+#11468
+@@yThe Sealed Vault Wing@@N~
+@@yA row of heavy @@bstone doors@@y lines the eastern wall of this corridor, each one sealed with bronze pins that have fused solid with age.@@N
+@@bEmpty iron torch brackets@@y hang at intervals along the opposite wall, their surfaces thick with a crust of orange corrosion.@@N
+@@yThe passage leads north back toward the main interior corridors, and the air here is noticeably colder than in the rooms above.@@N
+~
+24584 11
+D0
+@@yThe passage leads north toward the main corridors.@@N
+~
+~
+0 -1 11469
+S
+#11469
+@@yThe East Wing Passage@@N~
+@@yThis broad corridor serves as the main thoroughfare for the pyramid's eastern interior, its @@bsandstone@@y walls carved with processions of jackal-headed figures bearing crescent staves.@@N
+@@bWorn flagstones@@y dip slightly at the center of the passage where centuries of foot traffic once polished them smooth.@@N
+@@yPassages branch in every direction from this well-trafficked junction: north into a rubble-strewn wing, south into a sealed vault corridor, east into a darkened barracks, and west toward the inscription gallery.@@N
+~
+24584 11
+D0
+@@yThe passage leads north through scattered rubble.@@N
+~
+~
+0 -1 11464
+D1
+@@yA narrow doorway opens east into a dark chamber.@@N
+~
+~
+0 -1 11467
+D2
+@@yThe corridor continues south toward sealed vaults.@@N
+~
+~
+0 -1 11468
+D3
+@@yThe passage leads west toward the inscription gallery.@@N
+~
+~
+0 -1 11466
 S
 #0
 #$
