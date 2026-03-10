@@ -498,6 +498,12 @@ The marked caravan lane continues beneath fluttering oasis cloth.
 ~
 ~
 0 -1 9818
+D2
+An ancient road stretches south toward the crumbling entrance of a vast pyramid half-buried
+in the desert sands. The path is paved with worn sandstone blocks.
+~
+^ancient road south~
+1 -1 11451
 E
 route line~
 Carved arrows preserve a linear route with deliberate side links for rapid patrol rotation.~
