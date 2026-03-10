@@ -273,6 +273,279 @@ Sethnekh was the last high priest of Khar'daan and chose mummification before de
 ! 0 0 0 7 3843 2528 12
 | 0 0 0 0 0 2 64
 + 0 0 0 0 0 0 0 0 0
+#31020
+burial acolyte undead priest~
+a burial acolyte~
+A burial acolyte kneels beside a cracked reliquary here.
+~
+Its bandaged form is painted with fresh ritual glyphs in dark resin, and its fingers move in silent mudras that stir faint motes of corpse-light in the stale air.
+~
+147553 0 -550 S
+76 0
+0 0 0 0
+! 0 0 0 7 3843 0 4
+| 0 0 0 0 0 0 64
++ 0 0 0 0 0 0 0 0 0
+#31021
+cistern lurker ooze sludge~
+a cistern lurker~
+A cistern lurker ripples beneath the foul water here.
+~
+What first appears to be stagnant runoff suddenly bulges into a low predatory mass, carrying bone fragments and rusted ornaments suspended in its gelatinous body.
+~
+131169 0 -450 S
+77 0
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31022
+ankhbound sentinel construct guardian~
+an ankhbound sentinel~
+An ankhbound sentinel stands motionless beside a sealed gate here.
+~
+Built from interlocking sandstone plates engraved with nested ankh sigils, the sentinel hums with restrained force and tracks every movement with jewel-bright eyes set into its mask.
+~
+147553 0 -650 S
+78 0
+0 0 0 0
+! 0 0 0 7 3847 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31023
+sunken archivist wraith scribe~
+the Sunken Archivist~
+The Sunken Archivist drifts over a collapsed lectern here.
+~
+Wrapped in ragged scrolls that orbit like torn wings, this ancient record-keeper whispers catalog numbers in a dead tongue while ink-black tears trail from its empty sockets.
+~
+83886147 0 -900 S
+84 0
+0 0 0 0
+! 0 0 0 7 3843 33689600 12
+| 128 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31024
+obelisk revenant shardforged titan~
+the Obelisk Revenant~
+The Obelisk Revenant rises from a ring of fractured stone here.
+~
+A towering mass of floating obelisk shards held together by a core of caged sunlight, the revenant grinds and realigns as it moves, spraying sparks and powdered granite.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31025
+salt mummifier embalmer undead~
+a salt mummifier~
+A salt mummifier drags a tray of mineral powders through the dust here.
+~
+Crusted in thick bands of natron and ash, this tireless embalmer works with stained bronze tools and a methodical patience that feels more predatory than devotional.
+~
+147553 0 -650 S
+79 0
+0 0 0 0
+! 0 0 0 7 3843 0 4
+| 0 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31026
+glass scarab swarm vermin~
+a glass scarab swarm~
+A glass scarab swarm flows over the flagstones in a clicking tide here.
+~
+Hundreds of translucent scarabs spill from cracks in the masonry, each shell reflecting torchlight in razor flashes as the colony moves with shared intent.
+~
+131169 0 -500 S
+78 0
+0 0 0 0
+! 0 0 0 7 55 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31027
+dune oathbreaker revenant knight~
+a dune oathbreaker~
+A dune oathbreaker stands in rusted ceremonial armor here.
+~
+Once sworn to guard the funerary road, this revenant now stalks it with a notched khopesh and a hatred sharpened by centuries of unending duty.
+~
+147553 0 -800 S
+82 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31028
+canopic leech parasite sludge~
+a canopic leech~
+A canopic leech clings to the wall and pulses wetly here.
+~
+Its translucent body is threaded with dark fluid and bits of funerary resin, and every flex of its ringed mouth leaves a smoking smear on the stone.
+~
+131169 0 -600 S
+80 0
+0 0 0 0
+! 0 0 0 7 55 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31029
+sunken hierophant lich priest~
+the Sunken Hierophant~
+The Sunken Hierophant chants from within a halo of drifting glyphs here.
+~
+The lich's desiccated frame is draped in ceremonial linen and copper script-plates, and every word it speaks brands a brief line of fire into the damp air.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 3843 33689600 12
+| 128 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31030
+necropolis colossus shardbound golem~
+the Necropolis Colossus~
+The Necropolis Colossus grinds forward in a storm of stone splinters here.
+~
+A giant war-form of fitted sarcophagus plates and obelisk shards, it advances with inexorable force while old ward-runes flare across its chest.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31031
+ashen embalmer adept undead~
+an ashen embalmer adept~
+An ashen embalmer adept traces warding sigils in salt here.
+~
+Its wrappings are dusted white with natron ash, and its iron stylus scratches prayer-glyphs into the stone with unnerving precision.
+~
+147553 0 -700 S
+81 0
+0 0 0 0
+! 0 0 0 7 3843 0 4
+| 0 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31032
+sepulcher skirmisher revenant~
+a sepulcher skirmisher~
+A sepulcher skirmisher prowls between toppled bier-stones here.
+~
+Lean and quick despite centuries in the dark, this revenant fights with abrupt lunges and never blinks behind its tarnished mask.
+~
+147553 0 -750 S
+82 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31033
+resin hulk construct~
+a resin hulk~
+A resin hulk lumbers forward with grinding joints here.
+~
+Thick preservative resin has sealed this construct into a brutal silhouette of plates and straps, and each step leaves glossy prints.
+~
+147553 0 -780 S
+83 0
+0 0 0 0
+! 0 0 0 7 3847 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31034
+drowned annalist wraith~
+a drowned annalist~
+A drowned annalist drifts above a mound of ruined tablets here.
+~
+Papyrus ribbons orbit the spirit like pale kelp in still water, and every whisper it utters sounds like pages turning underwater.
+~
+147553 0 -800 S
+83 0
+0 0 0 0
+! 0 0 0 7 3843 33562656 12
+| 128 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31035
+canal stalker ghoul undead~
+a canal stalker~
+A canal stalker crouches low beside the black runoff here.
+~
+Its hide is stretched tight over angular bone, and it moves with the hungry patience of something that has learned every echo in the drains.
+~
+147553 0 -760 S
+82 0
+0 0 0 0
+! 0 0 0 7 55 0 0
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31036
+obelisk shardling swarm~
+an obelisk shardling swarm~
+An obelisk shardling swarm rattles in spiraling arcs here.
+~
+Knife-edged fragments etched with dead dynastic marks rotate as a single predatory cloud, chipping sparks from the walls.
+~
+131169 0 -650 S
+80 0
+0 0 0 0
+! 0 0 0 7 55 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+#31037
+hieratic war-priest lich~
+the Hieratic War-Priest~
+The Hieratic War-Priest raises a censer of burning script here.
+~
+Bronze prayer-plates ring its neck and shoulders, and each invocation brands bright signs into the air before they collapse into cinder.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 3843 33689600 12
+| 128 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31038
+sarcophagus breaker titan construct~
+the Sarcophagus Breaker~
+The Sarcophagus Breaker hammers both fists together with a thunderous crack here.
+~
+Built from nested coffin-lids and chained keystones, this titan advances behind a wall of splinters and pulverized masonry.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
+#31039
+keeper of sealed tides undead overseer~
+the Keeper of Sealed Tides~
+The Keeper of Sealed Tides stands upon a flooded dais here.
+~
+Its lacquered mask is carved with wave-lines and funerary vows, and the water around its feet rises and falls in time with its breathing.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 3843 2528 12
+| 128 0 0 0 0 2 64
++ 0 0 0 0 0 0 0 0 0
+#31040
+phylactery sentinel colossus~
+the Phylactery Sentinel~
+The Phylactery Sentinel towers over the sanctum threshold here.
+~
+A colossal guardian of chained black stone and gold ward-rings, it watches in absolute silence until the slightest intrusion stirs it to violence.
+~
+83886147 0 -1000 S
+85 0
+0 0 0 0
+! 0 0 0 7 1777471 0 4
+| 0 0 0 0 0 2 0
++ 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #31000
@@ -635,6 +908,285 @@ The Sand-Spirit Waist Cord coils on the floor like a sleeping snake here.~
 4
 L
 65
+#31040
+sunken reliquary hood~
+@@ySunken Reliquary Hood@@N~
+The Sunken Reliquary Hood rests atop a split funerary chest here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+76
+#31041
+cistern-slick girdle~
+@@bCistern-Slick Girdle@@N~
+The Cistern-Slick Girdle lies half-submerged in stale water here.~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+77
+#31042
+ankhbound bulwark~
+@@yAnkhbound Bulwark@@N~
+The Ankhbound Bulwark hums with warded force here.~
+9 128 8421376 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+78
+#31043
+catalogue of the drowned dead~
+@@bCatalogue of the Drowned Dead@@N~
+The Catalogue of the Drowned Dead lies open on a cracked lectern here.~
+12 128 0 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+80
+#31044
+core-shard of the obelisk revenant~
+@@RCore-Shard of the Obelisk Revenant@@N~
+A Core-Shard of the Obelisk Revenant crackles with trapped sunlight here.~
+5 192 8421376 1
+0 0 0 8 0 0 0 0 0 0
+8
+L
+80
+#31045
+natron-caked hood~
+@@yNatron-Caked Hood@@N~
+The Natron-Caked Hood lies beside a tray of drying salts here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+79
+#31046
+scarab-glass visor~
+@@bScarab-Glass Visor@@N~
+The Scarab-Glass Visor glints among broken chitin here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+78
+#31047
+embalmer's resin mantle~
+@@yEmbalmer's Resin Mantle@@N~
+The Embalmer's Resin Mantle hangs stiffly from a rusted hook here.~
+9 128 8454144 1
+0 0 0 0 0 0 0 0 0 0
+10
+L
+80
+#31048
+shardbound khopesh~
+@@yShardbound Khopesh@@N~
+A Shardbound Khopesh rests against a cracked funerary slab here.~
+5 128 8421376 1
+0 0 0 4 0 0 0 0 0 0
+8
+L
+82
+#31049
+oathbreaker ring~
+@@bOathbreaker's Ring@@N~
+An Oathbreaker's Ring lies half-sunk in powdered stone here.~
+9 128 8396800 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+82
+#31050
+leech-slick bracers~
+@@bLeech-Slick Bracers@@N~
+The Leech-Slick Bracers twitch faintly where they were dropped here.~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+80
+#31051
+hierophant's copper gorget~
+@@RHierophant's Copper Gorget@@N~
+The Hierophant's Copper Gorget hums with trapped liturgy here.~
+9 192 8388736 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+85
+#31052
+scrollfire rod~
+@@RScrollfire Rod@@N~
+A Scrollfire Rod burns with a line of hovering script here.~
+5 192 8421376 1
+0 0 0 7 0 0 0 0 0 0
+7
+L
+85
+#31053
+glyphwoven vestments~
+@@RGlyphwoven Vestments@@N~
+Glyphwoven Vestments are folded with impossible precision here.~
+9 192 8650752 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+85
+#31054
+colossus shoulder bastions~
+@@yColossus Shoulder Bastions@@N~
+The Colossus Shoulder Bastions rest beside a shattered pillar here.~
+9 192 8389120 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+85
+#31055
+sunken warplate girdle~
+@@ySunken Warplate Girdle@@N~
+A Sunken Warplate Girdle is wedged between broken tiles here.~
+9 192 8519680 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+85
+#31056
+sarcophagus coreblade~
+@@ySarcophagus Coreblade@@N~
+The Sarcophagus Coreblade thrums with restrained impact here.~
+5 192 8421376 1
+0 0 0 8 0 0 0 0 0 0
+10
+L
+85
+#31057
+ashscribe hood~
+@@yAshscribe Hood@@N~
+The Ashscribe Hood rests beside a basin of white dust here.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+81
+#31058
+sepulcher runner's sash~
+@@bSepulcher Runner's Sash@@N~
+The Sepulcher Runner's Sash lies coiled near the wall here.~
+9 128 8519680 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+82
+#31059
+resinbound cuirass~
+@@yResinbound Cuirass@@N~
+The Resinbound Cuirass hangs from an iron frame here.~
+9 128 8650752 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+83
+#31060
+annalist's whisper-ring~
+@@bAnnalist's Whisper-Ring@@N~
+An Annalist's Whisper-Ring glints among broken tablets here.~
+9 128 8396800 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+83
+#31061
+canal stalker greaves~
+@@yCanal Stalker Greaves@@N~
+The Canal Stalker Greaves rest beside a blackened grate here.~
+9 128 9437184 1
+0 0 0 0 0 0 0 0 0 0
+10
+L
+82
+#31062
+shardstorm bracers~
+@@bShardstorm Bracers@@N~
+The Shardstorm Bracers hum softly in the dust here.~
+9 128 8389632 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+80
+#31063
+war-priest censer~
+@@RWar-Priest Censer@@N~
+A War-Priest Censer swings on its chain without any wind here.~
+5 192 8421376 1
+0 0 0 7 0 0 0 0 0 0
+7
+L
+85
+#31064
+hieratic plate mantle~
+@@RHieratic Plate Mantle@@N~
+The Hieratic Plate Mantle is draped across a cracked altar here.~
+9 192 8454144 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+85
+#31065
+breaker gauntlets~
+@@yBreaker Gauntlets@@N~
+The Breaker Gauntlets lie in a crater of stone chips here.~
+9 192 8392704 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+85
+#31066
+breaker core-maul~
+@@yBreaker Core-Maul@@N~
+The Breaker Core-Maul vibrates with suppressed force here.~
+5 192 8421376 1
+0 0 0 8 0 0 0 0 0 0
+10
+L
+85
+#31067
+tidekeeper gorget~
+@@RTidekeeper Gorget@@N~
+The Tidekeeper Gorget rests above a pool of mirrored water here.~
+9 192 8388736 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+85
+#31068
+tidekeeper wrap~
+@@RTidekeeper Wrap@@N~
+The Tidekeeper Wrap hangs in heavy damp folds here.~
+9 192 8454144 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+85
+#31069
+sentinel bastion-plate~
+@@RSentinel Bastion-Plate@@N~
+The Sentinel Bastion-Plate leans against a wardstone here.~
+9 192 8650752 1
+0 0 0 0 0 0 0 0 0 0
+16
+L
+85
+#31070
+phylactery edgeblade~
+@@RPhylactery Edgeblade@@N~
+The Phylactery Edgeblade gleams with restrained radiance here.~
+5 192 8421376 1
+0 0 0 9 0 0 0 0 0 0
+10
+L
+85
 #0
 #ROOMS
 #31000
@@ -1030,6 +1582,11 @@ East back into the raider's encampment.
 ~
 ~
 0 -1 31022
+D2
+South through a narrow breach toward a flooded cistern hall.
+~
+~
+0 -1 31036
 S
 #31024
 The Warlord's Pavilion~
@@ -1196,6 +1753,11 @@ North back into the deep vault.
 ~
 ~
 0 -1 31033
+D2
+South down a spiral cut toward the drowned archive.
+~
+~
+0 -1 31038
 S
 #31035
 Sand-Burial Chamber~
@@ -1207,6 +1769,1095 @@ South back down to the dusty crypt road.
 ~
 ~
 0 -1 31025
+S
+#31036
+Flooded Cistern Hall~
+@@yA broad hall has sunk below the surrounding ruin and now holds a stagnant sheet of @@bblack-green water@@y that reflects broken ceiling beams like fractured spears. @@bCollapsed channels in the walls still carry a slow trickle@@y, feeding the pool and keeping the air damp enough that every breath tastes of mineral decay.@@N
+~
+8 11
+D0
+North back into the robber's cache.
+~
+~
+0 -1 31023
+D1
+East across raised stones to the warded floodgate.
+~
+~
+0 -1 31037
+S
+#31037
+The Warded Floodgate~
+@@yA monumental bronze floodgate blocks the eastern wall, its surface engraved with repeating @@bankh sigils@@y packed so densely they shimmer when viewed from the corner of the eye. @@bAn emergency stair descends south@@y toward a vault where the old records of Khar'Daan were kept dry and secure for millennia.@@N
+~
+8 11
+D3
+West back into the flooded cistern hall.
+~
+~
+0 -1 31036
+D2
+South down the emergency stair into the drowned archive.
+~
+~
+0 -1 31038
+S
+#31038
+The Drowned Archive~
+@@RA sunken archive stretches away in drowned aisles, where shelves of clay tablets slump under @@ywaterlogged weight@@R and bundles of papyrus drift like dead fish through the dark. @@yFaint corpse-lights bob between the stacks@@R, and a collapsed records pit gapes to the south where the oldest chronicles were stored.@@N
+~
+24588 11
+D0
+North up toward the ancient offering pit.
+~
+~
+0 -1 31034
+D1
+East up the stair to the warded floodgate.
+~
+~
+0 -1 31037
+D2
+South into the collapsed records pit.
+~
+~
+0 -1 31039
+S
+#31039
+Collapsed Records Pit~
+@@yThis circular pit was once a climate vault for royal ledgers, but the floor has @@bfallen away into jagged tiers@@y of stone and shattered shelving. @@bEvery ledge is crusted in salt and brittle scroll-pulp@@y, and the whispering wind rising from below carries snippets of names spoken in old ceremonial cadence.@@N
+~
+8 11
+D0
+North back into the drowned archive.
+~
+~
+0 -1 31038
+D2
+South onto a ring of fractured obelisks.
+~
+~
+0 -1 31040
+S
+#31040
+Ring of Fractured Obelisks~
+@@RObelisk fragments orbit a central plinth here, each shard suspended by @@ycaged sunlight@@R that spits sparks into the dust. @@yThe stone ring hums with unstable force@@R, and the Obelisk Revenant assembles itself from the spinning debris whenever intruders step too close to the core.@@N
+~
+24580 10
+D0
+North back up into the collapsed records pit.
+~
+~
+0 -1 31039
+D1
+East through a faulted arch into an older mortuary quarter.
+~
+~
+0 -1 31041
+S
+#31041
+Mortuary Faultline~
+@@yA jagged fracture has split this mortuary corridor from ceiling to floor, exposing layers of @@bsealed burial stone@@y and old reinforcing braces now bent like reeds. @@bDust drifts from the crack in slow curtains@@y, and narrow passages branch east and south into chambers long hidden behind the wall.@@N
+~
+8 11
+D1
+East into a chamber of drying salts.
+~
+~
+0 -1 31042
+D2
+South down a broken ramp toward the canopic drains.
+~
+~
+0 -1 31043
+D3
+West back to the ring of fractured obelisks.
+~
+~
+0 -1 31040
+S
+#31042
+Chamber of Drying Salts~
+@@yRows of cracked stone basins fill this chamber, each one still holding layers of @@bmineral salts@@y gone hard as ceramic over centuries of desiccation. @@bBronze hooks and embalming frames line the walls@@y, and the air is painfully dry despite the damp halls beyond.@@N
+~
+8 11
+D3
+West back into the mortuary faultline.
+~
+~
+0 -1 31041
+D2
+South into the glass scarab trench.
+~
+~
+0 -1 31044
+S
+#31043
+Canopic Drainworks~
+@@yNarrow channels carved into the floor carry a slow crawl of dark runoff toward grated sinks, while the walls are coated in @@bstreaks of black resin@@y that never fully harden. @@bFaint bubbling sounds rise from beneath the grates@@y, and a low tunnel opens south into the reliquary cistern.@@N
+~
+8 11
+D0
+North up the broken ramp to the mortuary faultline.
+~
+~
+0 -1 31041
+D2
+South into the reliquary cistern.
+~
+~
+0 -1 31045
+S
+#31044
+Glass Scarab Trench~
+@@yA long trench cuts across this hall where the floor has caved into a bed of @@bshattered translucent chitin@@y that crunches like thin ice under every step. @@bThe eastern wall has been polished smooth by countless tiny legs@@y, and the corridor narrows toward a warded sanctum to the south.@@N
+~
+8 11
+D0
+North back into the chamber of drying salts.
+~
+~
+0 -1 31042
+D2
+South toward the warded sanctum.
+~
+~
+0 -1 31046
+S
+#31045
+Reliquary Cistern~
+@@RA circular cistern sinks deep into the floor, filled not with water but with @@ythick preservative fluid@@R that swirls around submerged reliquary jars chained in place. @@yCopper prayer plates ring the rim@@R, each etched with warnings that the contents below must never be disturbed again.@@N
+~
+24588 11
+D0
+North back into the canopic drainworks.
+~
+~
+0 -1 31043
+D1
+East into the warded sanctum.
+~
+~
+0 -1 31046
+S
+#31046
+Sanctum of Sealed Names~
+@@RA high-domed sanctum rises above a floor inlaid with concentric circles of @@ygilded script@@R, every ring listing names of the dead in descending age. @@yAt the center stands a fractured altar@@R where ancient wardstones still pulse, and the air vibrates with the weight of vows that were never released.@@N
+~
+24580 11
+D0
+North back up into the glass scarab trench.
+~
+~
+0 -1 31044
+D3
+West back into the reliquary cistern.
+~
+~
+0 -1 31045
+S
+#31047
+Gallery of Salted Spears~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward the sanctum of sealed names.
+~
+~
+0 -1 31046
+D2
+South deeper through gallery of salted spears.
+~
+~
+0 -1 31048
+S
+#31048
+Collapsed Barracks Hall~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward gallery of salted spears.
+~
+~
+0 -1 31047
+D2
+South deeper through collapsed barracks hall.
+~
+~
+0 -1 31049
+S
+#31049
+Ration Vault of Dust~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward collapsed barracks hall.
+~
+~
+0 -1 31048
+D2
+South deeper through ration vault of dust.
+~
+~
+0 -1 31050
+S
+#31050
+Antechamber of Dry Hooks~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward ration vault of dust.
+~
+~
+0 -1 31049
+D2
+South deeper through antechamber of dry hooks.
+~
+~
+0 -1 31051
+S
+#31051
+Hall of Cindered Linen~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward antechamber of dry hooks.
+~
+~
+0 -1 31050
+D2
+South deeper through hall of cindered linen.
+~
+~
+0 -1 31052
+S
+#31052
+Procession Turn of Chains~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward hall of cindered linen.
+~
+~
+0 -1 31051
+D1
+East into a short side niche of cracked stone.
+~
+~
+0 -1 31054
+D2
+South deeper through procession turn of chains.
+~
+~
+0 -1 31053
+S
+#31053
+Vaulted Scriptorium Reach~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward procession turn of chains.
+~
+~
+0 -1 31052
+D2
+South deeper through vaulted scriptorium reach.
+~
+~
+0 -1 31054
+S
+#31054
+Tablet-Strewn Catwalk~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward vaulted scriptorium reach.
+~
+~
+0 -1 31053
+D3
+West into a narrow return passage.
+~
+~
+0 -1 31052
+D2
+South deeper through tablet-strewn catwalk.
+~
+~
+0 -1 31055
+S
+#31055
+Crypt of Quiet Drums~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward tablet-strewn catwalk.
+~
+~
+0 -1 31054
+D2
+South deeper through crypt of quiet drums.
+~
+~
+0 -1 31056
+S
+#31056
+Sunken Muster Court~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward crypt of quiet drums.
+~
+~
+0 -1 31055
+D2
+South deeper through sunken muster court.
+~
+~
+0 -1 31057
+S
+#31057
+Lintel of Broken Oaths~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward sunken muster court.
+~
+~
+0 -1 31056
+D2
+South deeper through lintel of broken oaths.
+~
+~
+0 -1 31058
+S
+#31058
+Scoured Guard Niche~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward lintel of broken oaths.
+~
+~
+0 -1 31057
+D2
+South deeper through scoured guard niche.
+~
+~
+0 -1 31059
+S
+#31059
+Sarcophagus Loading Bay~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward scoured guard niche.
+~
+~
+0 -1 31058
+D2
+South deeper through sarcophagus loading bay.
+~
+~
+0 -1 31060
+S
+#31060
+Canal of Bitter Resin~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward sarcophagus loading bay.
+~
+~
+0 -1 31059
+D1
+East into a short side niche of cracked stone.
+~
+~
+0 -1 31062
+D2
+South deeper through canal of bitter resin.
+~
+~
+0 -1 31061
+S
+#31061
+Lampblack Ossuary~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward canal of bitter resin.
+~
+~
+0 -1 31060
+D2
+South deeper through lampblack ossuary.
+~
+~
+0 -1 31062
+S
+#31062
+Hall of Broken Censers~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward lampblack ossuary.
+~
+~
+0 -1 31061
+D3
+West into a narrow return passage.
+~
+~
+0 -1 31060
+D2
+South deeper through hall of broken censers.
+~
+~
+0 -1 31063
+S
+#31063
+Pilgrim's Dry Well~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward hall of broken censers.
+~
+~
+0 -1 31062
+D2
+South deeper through pilgrim's dry well.
+~
+~
+0 -1 31064
+S
+#31064
+Ribbed Mortuary Tunnel~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward pilgrim's dry well.
+~
+~
+0 -1 31063
+D2
+South deeper through ribbed mortuary tunnel.
+~
+~
+0 -1 31065
+S
+#31065
+Shale-Step Causeway~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward ribbed mortuary tunnel.
+~
+~
+0 -1 31064
+D2
+South deeper through shale-step causeway.
+~
+~
+0 -1 31066
+S
+#31066
+Repository of Ash Jars~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward shale-step causeway.
+~
+~
+0 -1 31065
+D2
+South deeper through repository of ash jars.
+~
+~
+0 -1 31067
+S
+#31067
+Gallery of Chipped Icons~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward repository of ash jars.
+~
+~
+0 -1 31066
+D2
+South deeper through gallery of chipped icons.
+~
+~
+0 -1 31068
+S
+#31068
+Bierwright Workshop~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward gallery of chipped icons.
+~
+~
+0 -1 31067
+D1
+East into a short side niche of cracked stone.
+~
+~
+0 -1 31070
+D2
+South deeper through bierwright workshop.
+~
+~
+0 -1 31069
+S
+#31069
+Narrow Hall of Sealants~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward bierwright workshop.
+~
+~
+0 -1 31068
+D2
+South deeper through narrow hall of sealants.
+~
+~
+0 -1 31070
+S
+#31070
+Crownbearer Vestibule~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward narrow hall of sealants.
+~
+~
+0 -1 31069
+D3
+West into a narrow return passage.
+~
+~
+0 -1 31068
+D2
+South deeper through crownbearer vestibule.
+~
+~
+0 -1 31071
+S
+#31071
+Archive of Salt Ledgers~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward crownbearer vestibule.
+~
+~
+0 -1 31070
+D2
+South deeper through archive of salt ledgers.
+~
+~
+0 -1 31072
+S
+#31072
+Splintered Reliquary Walk~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward archive of salt ledgers.
+~
+~
+0 -1 31071
+D2
+South deeper through splintered reliquary walk.
+~
+~
+0 -1 31073
+S
+#31073
+Pit of Gilded Nails~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward splintered reliquary walk.
+~
+~
+0 -1 31072
+D2
+South deeper through pit of gilded nails.
+~
+~
+0 -1 31074
+S
+#31074
+Conduit of Funeral Smoke~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward pit of gilded nails.
+~
+~
+0 -1 31073
+D2
+South deeper through conduit of funeral smoke.
+~
+~
+0 -1 31075
+S
+#31075
+Anointing Terrace~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward conduit of funeral smoke.
+~
+~
+0 -1 31074
+D2
+South deeper through anointing terrace.
+~
+~
+0 -1 31076
+S
+#31076
+Stair of Hollow Brass~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward anointing terrace.
+~
+~
+0 -1 31075
+D1
+East into a short side niche of cracked stone.
+~
+~
+0 -1 31078
+D2
+South deeper through stair of hollow brass.
+~
+~
+0 -1 31077
+S
+#31077
+Ankh-Cut Threshold~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward stair of hollow brass.
+~
+~
+0 -1 31076
+D2
+South deeper through ankh-cut threshold.
+~
+~
+0 -1 31078
+S
+#31078
+Shrine of Sealed Wax~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward ankh-cut threshold.
+~
+~
+0 -1 31077
+D3
+West into a narrow return passage.
+~
+~
+0 -1 31076
+D2
+South deeper through shrine of sealed wax.
+~
+~
+0 -1 31079
+S
+#31079
+Cracked Cenotaph Court~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward shrine of sealed wax.
+~
+~
+0 -1 31078
+D2
+South deeper through cracked cenotaph court.
+~
+~
+0 -1 31080
+S
+#31080
+Runed Flood Sluice~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward cracked cenotaph court.
+~
+~
+0 -1 31079
+D2
+South deeper through runed flood sluice.
+~
+~
+0 -1 31081
+S
+#31081
+Coffer Hall of Night Sand~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward runed flood sluice.
+~
+~
+0 -1 31080
+D2
+South deeper through coffer hall of night sand.
+~
+~
+0 -1 31082
+S
+#31082
+Vowkeeper Portico~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward coffer hall of night sand.
+~
+~
+0 -1 31081
+D2
+South deeper through vowkeeper portico.
+~
+~
+0 -1 31083
+S
+#31083
+Basin of Stilled Echoes~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward vowkeeper portico.
+~
+~
+0 -1 31082
+D2
+South deeper through basin of stilled echoes.
+~
+~
+0 -1 31084
+S
+#31084
+Hanging Gallery of Masks~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward basin of stilled echoes.
+~
+~
+0 -1 31083
+D1
+East into a short side niche of cracked stone.
+~
+~
+0 -1 31086
+D2
+South deeper through hanging gallery of masks.
+~
+~
+0 -1 31085
+S
+#31085
+Vault of Sundered Cartouches~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward hanging gallery of masks.
+~
+~
+0 -1 31084
+D2
+South deeper through vault of sundered cartouches.
+~
+~
+0 -1 31086
+S
+#31086
+Corridor of Blackened Reeds~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward vault of sundered cartouches.
+~
+~
+0 -1 31085
+D3
+West into a narrow return passage.
+~
+~
+0 -1 31084
+D2
+South deeper through corridor of blackened reeds.
+~
+~
+0 -1 31087
+S
+#31087
+The Third Reliquary Ring~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward corridor of blackened reeds.
+~
+~
+0 -1 31086
+D2
+South deeper through the third reliquary ring.
+~
+~
+0 -1 31088
+S
+#31088
+Annalist's Spiral~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward the third reliquary ring.
+~
+~
+0 -1 31087
+D2
+South deeper through annalist's spiral.
+~
+~
+0 -1 31089
+S
+#31089
+Lower Ward Concourse~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward annalist's spiral.
+~
+~
+0 -1 31088
+D2
+South deeper through lower ward concourse.
+~
+~
+0 -1 31090
+S
+#31090
+Catacomb of Bent Obelisks~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+8 11
+D0
+North back toward lower ward concourse.
+~
+~
+0 -1 31089
+D2
+South deeper through catacomb of bent obelisks.
+~
+~
+0 -1 31091
+S
+#31091
+Reliquary Verge~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward catacomb of bent obelisks.
+~
+~
+0 -1 31090
+D2
+South deeper through reliquary verge.
+~
+~
+0 -1 31092
+S
+#31092
+Sealed Tide Rotunda~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward reliquary verge.
+~
+~
+0 -1 31091
+D1
+East into a short side niche of cracked stone.
+~
+~
+0 -1 31094
+D2
+South deeper through sealed tide rotunda.
+~
+~
+0 -1 31093
+S
+#31093
+Chamber of Iron Papyrus~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+8 11
+D0
+North back toward sealed tide rotunda.
+~
+~
+0 -1 31092
+D2
+South deeper through chamber of iron papyrus.
+~
+~
+0 -1 31094
+S
+#31094
+Sanctified Intake~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+8 11
+D0
+North back toward chamber of iron papyrus.
+~
+~
+0 -1 31093
+D3
+West into a narrow return passage.
+~
+~
+0 -1 31092
+D2
+South deeper through sanctified intake.
+~
+~
+0 -1 31095
+S
+#31095
+Reliquary Crown~
+@@yIron hooks descend from the ceiling in orderly ranks, swaying by fractions whenever distant stone settles, while the floor beneath is white with @@bsalt flakes@@y. @@bNarrow side niches hold broken preparation tools@@y wrapped in brittle linen.@@N
+~
+24580 11
+D0
+North back toward sanctified intake.
+~
+~
+0 -1 31094
+D2
+South deeper through reliquary crown.
+~
+~
+0 -1 31096
+S
+#31096
+Hall of Immured Names~
+@@yCharred strips of funerary linen cling to the walls like black lichen, and every step sends up a faint cloud of @@bcindered cloth@@y. @@bA line of scorched braziers marks the corridor's center@@y where rites once burned day and night.@@N
+~
+8 11
+D0
+North back toward reliquary crown.
+~
+~
+0 -1 31095
+D2
+South deeper through hall of immured names.
+~
+~
+0 -1 31097
+S
+#31097
+Bridge of Gilded Dust~
+@@yStone racks line this long gallery where @@bspear shafts@@y once stood in strict funerary order, and the floor is carpeted in drifting grit from a ceiling that never stops shedding age. @@bOld drill marks score the walls@@y, a reminder that even death here was organized with military precision.@@N
+~
+8 11
+D0
+North back toward hall of immured names.
+~
+~
+0 -1 31096
+D2
+South deeper through bridge of gilded dust.
+~
+~
+0 -1 31098
+S
+#31098
+Tomb of the Seventh Seal~
+@@yThis barracks chamber has partially caved in, leaving toppled bunks and fractured columns tangled under @@bpowdery stonefall@@y. @@bAncient drill-glyphs still repeat along the lintels@@y in faded paint, commanding discipline to soldiers long reduced to dust.@@N
+~
+24580 11
+D0
+North back toward bridge of gilded dust.
+~
+~
+0 -1 31097
+D2
+South deeper through tomb of the seventh seal.
+~
+~
+0 -1 31099
+S
+#31099
+Phylactery Apex~
+@@yRows of sealed clay jars crowd this vault from wall to wall, each stamped with sigils for grain, salt, and water that have all long since turned to @@bdry residue@@y. @@bThe air smells faintly of old parchment and mineral decay@@y.@@N
+~
+24580 11
+D0
+North back toward tomb of the seventh seal.
+~
+~
+0 -1 31098
 S
 #0
 #RESETS
@@ -1360,5 +3011,176 @@ E 0 31013 0 24
 M 0 31002 2 31035
 E 0 31020 0 9
 E 0 31038 0 7
+M 0 31020 2 31036
+E 0 31040 0 4
+E 0 31020 0 9
+M 0 31021 2 31036
+E 0 31041 0 25
+M 0 31022 2 31037
+E 0 31042 0 20
+E 0 31011 0 25
+M 0 31023 1 31038
+E 0 31043 0 9
+E 0 31037 0 2
+M 0 31021 2 31039
+E 0 31041 0 25
+M 0 31024 1 31040
+E 0 31044 0 16
+E 0 31027 0 24
+M 0 31025 2 31042
+E 0 31045 0 4
+E 0 31047 0 24
+M 0 31026 3 31044
+E 0 31046 0 4
+M 0 31026 3 31042
+E 0 31050 0 8
+M 0 31028 2 31043
+E 0 31050 0 8
+M 0 31027 2 31041
+E 0 31048 0 16
+E 0 31049 0 9
+M 0 31028 2 31045
+E 0 31041 0 25
+M 0 31029 1 31045
+E 0 31051 0 9
+E 0 31052 0 16
+E 0 31053 0 24
+M 0 31030 1 31046
+E 0 31054 0 20
+E 0 31055 0 25
+E 0 31056 0 16
+M 0 31031 2 31047
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31048
+E 0 31058 0 25
+M 0 31033 2 31049
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31050
+E 0 31060 0 9
+M 0 31035 2 31051
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31052
+E 0 31062 0 8
+M 0 31031 2 31053
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31054
+E 0 31058 0 25
+M 0 31033 2 31055
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31056
+E 0 31060 0 9
+M 0 31035 2 31057
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31058
+E 0 31062 0 8
+M 0 31031 2 31059
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31060
+E 0 31058 0 25
+M 0 31033 2 31061
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31062
+E 0 31060 0 9
+M 0 31035 2 31063
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31064
+E 0 31062 0 8
+M 0 31031 2 31065
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31066
+E 0 31058 0 25
+M 0 31033 2 31067
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31068
+E 0 31060 0 9
+M 0 31035 2 31069
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31070
+E 0 31062 0 8
+M 0 31031 2 31071
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31072
+E 0 31058 0 25
+M 0 31033 2 31073
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31074
+E 0 31060 0 9
+M 0 31035 2 31075
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31076
+E 0 31062 0 8
+M 0 31031 2 31077
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31078
+E 0 31058 0 25
+M 0 31033 2 31079
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31080
+E 0 31060 0 9
+M 0 31035 2 31081
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31082
+E 0 31062 0 8
+M 0 31031 2 31083
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31084
+E 0 31058 0 25
+M 0 31033 2 31085
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31086
+E 0 31060 0 9
+M 0 31035 2 31087
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31088
+E 0 31062 0 8
+M 0 31031 2 31089
+E 0 31057 0 4
+E 0 31059 0 26
+M 0 31032 2 31090
+E 0 31058 0 25
+M 0 31033 2 31091
+E 0 31059 0 26
+E 0 31061 0 28
+M 0 31034 2 31092
+E 0 31060 0 9
+M 0 31035 2 31093
+E 0 31061 0 28
+E 0 31057 0 4
+M 0 31036 2 31094
+E 0 31062 0 8
+M 0 31037 1 31095
+E 0 31063 0 16
+E 0 31064 0 24
+M 0 31038 1 31098
+E 0 31065 0 13
+E 0 31066 0 16
+E 0 31069 0 26
+M 0 31039 1 31099
+E 0 31067 0 9
+E 0 31068 0 24
+M 0 31040 1 31099
+E 0 31070 0 16
+E 0 31069 0 26
 S
 #$
