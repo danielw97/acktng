@@ -6441,9 +6441,218 @@ impossible angles with claws that leave wounds of frozen shadow.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #0
-#$
-
-#$
+#OBJECTS
+#11450
+shard lantern moon sovereign first I~
+@@ya Shard of the Moon Sovereign's Lantern (I)@@N~
+A curved sliver of @@ypale gold@@N shaped like a crescent moon, its surface etched with
+@@bluna glyphs@@N that pulse faintly in darkness. One edge is beveled to interlock with
+another fragment.~
+29 201326784 8388608 1
+0 11451 11458 0 0 0 0 0 0 0
+5
+L
+120
+#11451
+shard lantern moon sovereign second II~
+@@ya Shard of the Moon Sovereign's Lantern (II)@@N~
+A flat wedge of @@ypale gold@@N inscribed with @@bcelestial cartouches@@N depicting the phases
+of the underworld moon. Its fractured edge aligns precisely against a matching piece.~
+29 201326784 8388608 1
+11450 0 11458 0 0 0 0 0 0 0
+5
+L
+120
+#11452
+shard lantern moon sovereign third III~
+@@ya Shard of the Moon Sovereign's Lantern (III)@@N~
+A tapered arc of @@ypale gold@@N set with tiny chips of @@emoonstone@@N along its rim. @@bHieratic
+inscriptions@@N flow across its inner face in a script only the dead can read.~
+29 201326784 8388608 1
+11458 0 11459 0 0 0 0 0 0 0
+5
+L
+120
+#11453
+shard lantern moon sovereign fourth IV~
+@@ya Shard of the Moon Sovereign's Lantern (IV)@@N~
+A broad panel of @@ypale gold@@N bearing a relief of the moon descending into the earth.
+The @@bunderworld script@@N engraved along its border records a covenant between the sovereign
+and the void beneath the sands.~
+29 201326784 8388608 1
+11459 0 11460 0 0 0 0 0 0 0
+5
+L
+120
+#11454
+shard lantern moon sovereign fifth V~
+@@ya Shard of the Moon Sovereign's Lantern (V)@@N~
+A spike-shaped fragment of @@ypale gold@@N that once formed the crown finial of a great
+lantern, its tip capped with a @@emilky gemstone@@N the color of a desert moon at zenith.~
+29 201326784 8388608 1
+11460 0 11461 0 0 0 0 0 0 0
+5
+L
+120
+#11455
+shard lantern moon sovereign sixth VI~
+@@ya Shard of the Moon Sovereign's Lantern (VI)@@N~
+An ornate side-panel of @@ypale gold@@N, hollow-cast with lotus-scroll decoration and inlaid
+with @@bmoon-silver wire@@N. Its edges are designed to lock against the assembled fragments.~
+29 201326784 8388608 1
+11461 0 11462 0 0 0 0 0 0 0
+5
+L
+120
+#11456
+shard lantern moon sovereign seventh VII~
+@@ya Shard of the Moon Sovereign's Lantern (VII)@@N~
+A wide rear piece of @@ypale gold@@N shaped like spread ibis wings, engraved with the
+sovereign's name in the most formal @@bhieratic script@@N. It radiates a faint warmth.~
+29 201326784 8388608 1
+11462 0 11463 0 0 0 0 0 0 0
+5
+L
+120
+#11457
+shard lantern moon sovereign eighth VIII~
+@@ya Shard of the Moon Sovereign's Lantern (VIII)@@N~
+The final fragment: a circular base plate of @@ypale gold@@N with a recessed socket at its
+center where a flame once burned eternally. @@bGlyphs of binding@@N spiral outward from
+the socket in concentric rings.~
+29 201326784 8388608 1
+11463 0 11464 0 0 0 0 0 0 0
+5
+L
+120
+#11458
+partial lantern moon sovereign assembly I-II~
+@@ya Partial Lantern of the Moon Sovereign (I-II)@@N~
+Two @@ypale gold@@N fragments fitted together form an incomplete lantern arc, the
+@@bluna glyphs@@N aligning across the join into a continuous inscription that hums softly.~
+29 134217920 8388608 1
+0 11452 11459 0 0 0 0 0 0 0
+5
+L
+120
+#11459
+partial lantern moon sovereign assembly I-III~
+@@ya Partial Lantern of the Moon Sovereign (I-III)@@N~
+Three pieces of @@ypale gold@@N joined at precise seams form a recognizable lantern cage,
+the @@emoonstone@@N inlay beginning to show its full intended pattern of lunar phases.~
+29 134217920 8388608 1
+0 11453 11460 0 0 0 0 0 0 0
+5
+L
+120
+#11460
+partial lantern moon sovereign assembly I-IV~
+@@ya Partial Lantern of the Moon Sovereign (I-IV)@@N~
+Four @@ypale gold@@N sections assembled into the lower half of an ancient lantern, its
+@@bsand-worn@@N seams fitting with unmistakable artisan precision. Light flickers within.~
+29 134217920 8388608 1
+0 11454 11461 0 0 0 0 0 0 0
+5
+L
+120
+#11461
+partial lantern moon sovereign assembly I-V~
+@@ya Partial Lantern of the Moon Sovereign (I-V)@@N~
+Five fragments now form the majority of a lantern cage of @@ypale gold@@N, its frame nearly
+complete. The @@bluna glyphs@@N across its surface glow with increasing intensity.~
+29 134217920 8388608 1
+0 11455 11462 0 0 0 0 0 0 0
+5
+L
+120
+#11462
+partial lantern moon sovereign assembly I-VI~
+@@ya Partial Lantern of the Moon Sovereign (I-VI)@@N~
+Six pieces of @@ypale gold@@N joined into a nearly whole lantern, missing only its wings
+and base. The assembled @@emoonstone@@N inlay casts pale light across its golden surface.~
+29 134217920 8388608 1
+0 11456 11463 0 0 0 0 0 0 0
+5
+L
+120
+#11463
+partial lantern moon sovereign assembly I-VII~
+@@ya Partial Lantern of the Moon Sovereign (I-VII)@@N~
+Seven fragments assembled into an almost complete lantern of @@ypale gold@@N, lacking only
+its base plate. The @@bhieratic inscriptions@@N across its surface blaze with silver light,
+and a phantom flame gutters within the empty socket.~
+29 134217920 8388608 1
+0 11457 11464 0 0 0 0 0 0 0
+5
+L
+120
+#11464
+void lantern moon sovereign final~
+@@ythe Void Lantern of the Moon Sovereign@@N~
+A magnificent lantern of @@ypale gold@@N and @@emoonstone@@N, fully assembled and blazing with
+cold silver light that illuminates even the deepest darkness. @@bLuna glyphs@@N orbit its
+surface like captive stars, and the eternal flame within burns with the light of a
+moon that set beneath the sands ten thousand years ago.~
+1 202375360 8421376 1
+0 0 -1 0 0 0 0 0 0 0
+5
+L
+150
+#11514
+corroded bone-barred key~
+@@ya Corroded Bone-barred Key@@N~
+A heavy @@bkey@@N forged from corroded iron and laced with splinters of ancient bone. Its
+teeth are filed into the shape of interlocking ribs, designed to turn the lock of
+a gate sealed with the bones of the dead.~
+18 128 8388608 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+120
+#11515
+volcanic glass sentinel key~
+@@ya Volcanic Glass Sentinel Key@@N~
+A key carved from a single piece of @@Rvolcanic obsidian@@N, its surface smooth and
+slightly warm to the touch. @@bFire glyphs@@N are etched along its shaft, and its teeth
+are shaped like the fangs of a sentinel construct.~
+18 67108992 8388608 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+140
+#11516
+gauntlet obsidian guardian hands~
+@@ya Gauntlet of the Obsidian Guardian@@N~
+A massive @@bbasalt-plated gauntlet@@N reinforced with bands of @@yblack iron@@N. Each knuckle
+is capped with a faceted piece of volcanic glass, and the palm is scored with grip
+channels designed to hold a weapon through the hardest impacts.~
+9 201326784 8392704 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+140
+#11517
+guardian basalt maul weapon~
+@@ythe Guardian's Basalt Maul@@N~
+An enormous @@bbasalt@@N war-hammer faced with @@yblack iron@@N plate, its handle wrapped in
+@@bdried funerary linen@@N. Each blow carries the weight of the pyramid's sealed gates.~
+5 201326784 8421376 1
+0 0 0 7 0 0 0 0 0 0
+8
+L
+140
+#11518
+sash moon gate guardian waist~
+@@ya Sash of the Moon Gate@@N~
+A broad @@ygold@@N-threaded sash of @@bbrown woven linen@@N embossed with the sigil of the
+moon gate in raised relief. It carries the weight of a guardian's eternal duty and
+radiates a faint protective warmth against the pyramid's curses.~
+9 201326784 8519680 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+140
+#0
 
 #$
 
