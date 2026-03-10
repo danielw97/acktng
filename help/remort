@@ -9,30 +9,30 @@ Your @@ysecond@@W remort class requires:
   - all mortal classes at @@y100@@W, and
   - the matching mortal pre-requisite class for that second remort
     at @@y100@@W.
-When you are ready to remort, type gain <first three letters of new class>.
+When you are ready to remort, type gain <class shorthand shown below>.
 Remort classes and mortal pre-requisites are:
-        -@@pSorcerer@@W (Mage)
-        -@@WWizard@@W (Mage)
-        -@@aPaladin@@W (Cleric)
-        -@@CPriest@@W (Cleric)
-        -@@dAssassin@@W (Thief)
-        -@@dWarlock@@W (Thief)
-        -@@cKnight@@W (Warrior)
-        -@@cSwordsman@@W (Warrior)
-        -@@GNecromancer@@W (Psionicist)
-        -@@mEgomancer@@W (Psionicist)
-        -@@gMonk@@W (Pugilist)
-        -@@gBrawler@@W (Pugilist)
+        -@@pSorcerer@@W [@@ySor@@W] (Mage)
+        -@@WWizard@@W [@@yWiz@@W] (Mage)
+        -@@aPaladin@@W [@@yPal@@W] (Cleric)
+        -@@CPriest@@W [@@yPri@@W] (Cleric)
+        -@@dAssassin@@W [@@yAss@@W] (Thief)
+        -@@dWarlock@@W [@@yWlk@@W] (Thief)
+        -@@cKnight@@W [@@yKni@@W] (Warrior)
+        -@@cSwordsman@@W [@@ySwo@@W] (Warrior)
+        -@@GNecromancer@@W [@@yNec@@W] (Psionicist)
+        -@@mEgomancer@@W [@@yEgo@@W] (Psionicist)
+        -@@gMonk@@W [@@yMon@@W] (Pugilist)
+        -@@gBrawler@@W [@@yBra@@W] (Pugilist)
 
 @@aADEPT@@W
 Adept classes are a third tier of progression beyond remort. To unlock
 adepts, you must have at least @@y2@@W remort classes at level @@y100@@W.
-Each adept class requires both of its matching remort classes at @@y100@@W.
-When you are ready to adept, type gain <first three letters of adept class>.
+Each adept class requires one of its matching remort classes at @@y100@@W.
+When you are ready to adept, type gain <class shorthand shown below>.
 Adept classes and their remort pre-requisites are:
-        -@@pGrand Magi@@W (Sorcerer + Wizard)
-        -@@aTemplar@@W (Paladin + Priest)
-        -@@dNightblade@@W (Assassin + Warlock)
-        -@@cCrusader@@W (Knight + Swordsman)
-        -@@GKinetimancer@@W (Necromancer + Egomancer)
-        -@@gMartial Artist@@W (Monk + Brawler)
+        -@@pGrand Magi@@W [@@yGma@@W] (Sorcerer + Wizard)
+        -@@aTemplar@@W [@@yTem@@W] (Paladin + Priest)
+        -@@dNightblade@@W [@@yNig@@W] (Assassin + Warlock)
+        -@@cCrusader@@W [@@yCru@@W] (Knight + Swordsman)
+        -@@GKinetimancer@@W [@@yKin@@W] (Necromancer + Egomancer)
+        -@@gMartial Artist@@W [@@yMar@@W] (Monk + Brawler)
