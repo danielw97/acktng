@@ -851,4 +851,422 @@ The north passage continues into the pyramid's interior.~
 ~
 0 -1 10180
 S
+#10175
+@@yThe Armory Vault@@N~
+Empty weapon racks of @@bsandstone@@N and corroded iron fill the walls of this chamber, their mounting hooks still in place though the weapons they held are long since removed — taken by scavengers, or stripped by the pyramid's own garrison in the final hours before sealing. The racks were sized for spears, short swords, and recurved bows; the spacing and hook patterns speak clearly to military rather than ceremonial arms. A stone-cut ammunition locker along the north wall held arrows; its interior still carries the faint impression of bundled shafts in the @@yyellow@@N dust on its floor.
+~
+24584 11
+D2
+The passage south leads back toward the west entrance corridor.~
+~
+0 -1 10169
+D0
+The north passage opens into the west wing hall.~
+~
+0 -1 10180
+D1
+The east passage connects to the pillar forest.~
+~
+0 -1 10170
+S
+#10176
+@@yThe East Wing Hall@@N~
+A long connecting hall running east-west through the pyramid's inner ground floor, its ceiling ribbed with @@bsandstone@@N vaulting that has remained intact despite several large cracks visible in the keystone courses. @@yMural painting@@N along the upper walls depicts a continuous landscape of the surrounding desert at the time of the pyramid's construction, showing the oasis, the caravan routes, and the pyramid itself mid-construction — all rendered in @@bochre@@N and @@yyellow@@N with precise geographic intent. The hall connects to the inscription gallery to the east and the trophy chamber to the west; north, the central hall is accessible.
+~
+24584 11
+D2
+The south passage connects to the inscription gallery below.~
+~
+0 -1 10173
+D3
+The west passage connects to the trophy chamber area.~
+~
+0 -1 10172
+D0
+The north passage continues toward the central hall.~
+~
+0 -1 10183
+S
+#10177
+@@yThe Lower Vault@@N~
+A secure chamber beneath the ground floor level, its walls of dressed @@bsandstone@@N fitted with iron tie-bars that have rusted through in several places without causing structural failure. The room's original purpose was the secure storage of ceremonial implements; the empty mounting pedestals around the walls still have the bolt-holes where sacred items were anchored against theft. In the center of the floor, a @@bheavy trapdoor@@N of iron-banded timber is set flush with the stone, its @@bbronze@@N lock mechanism corroded to a uniform green but still functional. The trapdoor leads down into the undercroft; without the key, the descent is sealed.
+~
+16396 11
+D2
+The passage south leads back into the pyramid's west wing.~
+~
+0 -1 10180
+D5
+The @@bheavy trapdoor@@N is set flush into the floor, its iron bands gone dark with age.~
+^heavy trapdoor~
+1 10138 10126
+S
+#10178
+@@yThe False Floor Gallery@@N~
+A broad gallery whose @@bsandstone@@N floor has an unsettling quality to it: certain sections produce a hollow sound underfoot, and the paving stones in the center of the room are a slightly different color than those around them — replaced at some point in the pyramid's construction for reasons that are not obvious until too late. The gallery walls carry painted scenes of the afterlife, @@yyellow@@N figures walking between fields of reeds and standing before divine courts. The @@bfloor@@N itself is the gallery's true feature; those who step on the wrong stones discover this fact rather suddenly and irrevocably.
+~
+24584 11
+D3
+The west passage returns toward the west wing area.~
+~
+0 -1 10180
+D1
+The east passage continues into the pyramid's interior.~
+~
+0 -1 10179
+D5
+The hollow floor gives way without warning, dropping down through a shaft.~
+~
+0 -1 10125
+S
+#10179
+@@yA Side Alcove@@N~
+A small dark alcove cut into the wall of the inner corridor, its purpose probably a guard post or storage niche given its size and position. The interior is absolutely dark and smells of old stone and the faint residue of torch smoke absorbed into the @@bsandstone@@N over centuries. Empty iron brackets that once held a torch or oil lamp are still visible on the back wall.
+~
+24585 11
+D3
+The passage west exits back into the false floor gallery.~
+~
+0 -1 10178
+D0
+The north passage continues deeper into the pyramid's interior.~
+~
+0 -1 10182
+S
+#10180
+@@yThe West Wing Hall@@N~
+The west wing's main connecting corridor runs north-south through the pyramid's interior, its walls decorated with registers of @@yhieroglyphs@@N recording the inventory and management procedures of the pyramid's administrative operation. The inscriptions are unusually practical in content for what is nominally a monument to divine kingship: lists of workers, rations, material deliveries, and duty assignments fill the carved panels in dense, precise columns. @@bSandstone@@N debris from a partially fallen vault section is swept to one side, suggesting that someone tidied the passage after the collapse.
+~
+24584 11
+D2
+The south passage exits toward the armory vault and west entrance.~
+~
+0 -1 10175
+D0
+The north passage continues deeper into the west wing.~
+~
+0 -1 10186
+D1
+The east passage crosses toward the false floor gallery.~
+~
+0 -1 10178
+D2
+The south passage leads toward the lower vault.~
+~
+0 -1 10177
+S
+#10181
+@@yThe Stone Library@@N~
+What was once a library of carved stone tablets occupies this chamber, its shelves still intact but the tablets themselves reduced to fragments and dust by the collapse of a section of the eastern wall. @@bSandstone@@N shelf-blocks line both long walls in regular tiers, each shelf carved with subject labels at its front edge that can still be read: religious texts, astronomical records, engineering specifications for the pyramid's construction. The contents they once held are almost entirely destroyed; only the organizational framework of the library survives.
+~
+24584 11
+D3
+The west passage connects to the side alcove.~
+~
+0 -1 10179
+D0
+The north passage continues toward the map chamber.~
+~
+0 -1 10182
+S
+#10182
+@@yThe Map Chamber@@N~
+The entire floor of this chamber is occupied by a large mosaic map of the surrounding desert, its @@yyellow@@N and @@bochre@@N tesserae depicting the oasis, the river, the caravan routes, and the mountain ranges to the north and east. The pyramid itself is shown at the map's center in a slightly larger scale than topographically accurate, emphasizing its significance as the map's organizing principle. @@cLapis lazuli@@N tiles mark the major water sources, still vivid against the muted @@bsandstone@@N tones of the surrounding desert. Several sections of the mosaic have been damaged by water seepage or foot traffic, but the overall image remains legible.
+~
+24584 11
+D2
+The south passage leads back toward the stone library.~
+~
+0 -1 10181
+D0
+The north passage continues toward the central hall.~
+~
+0 -1 10183
+D3
+The west passage returns to the side alcove area.~
+~
+0 -1 10179
+S
+#10183
+@@yThe Central Hall@@N~
+The central hub of the pyramid's ground floor is a wide, high-ceilinged hall where several major corridors converge and two stairwells rise toward the upper levels. @@ySun-disc carvings@@N in the ceiling catch and amplify even minimal light, giving the room a faint luminescence compared to the surrounding passages. The stairwell openings are marked by carved guardian-figures flanking each arch, their expressions worn smooth but still radiating the original stern authority of the design. Passages extend in multiple directions; east and west, the stairwell landings rise toward the floors above.
+~
+24584 11
+D2
+The south passage connects back toward the map chamber and the pillar forest.~
+~
+0 -1 10182
+D3
+The west passage leads toward the west wing hall.~
+~
+0 -1 10176
+D1
+The east stairwell landing is accessible to the east.~
+~
+0 -1 10184
+D0
+The north passage continues toward the inner hall.~
+~
+0 -1 10187
+S
+#10184
+@@yThe East Stairwell Landing@@N~
+The eastern stairwell of the pyramid's ground floor ascends from this landing, its @@bsandstone@@N treads worn to a smooth curve in their centers by generations of foot traffic. @@yHieroglyphic inscriptions@@N carved into the stairwell's side walls record the floors above and their purposes, serving as a directory for anyone ascending: the Hall of the Scarab, the Chamber of the High Priests, and so on. The stairwell rises without interruption to the first floor above; recall here is possible, making this a safe waypoint between levels.
+~
+16396 11
+D3
+The passage west enters the central hall.~
+~
+0 -1 10183
+D4
+The carved stairwell ascends to the Hall of the Scarab on the first floor.~
+~
+0 -1 10201
+S
+#10185
+@@yThe West Stairwell Landing@@N~
+The western stairwell ascends from this landing in a broad, shallow-treaded flight carved from the living @@bsandstone@@N of the pyramid's interior core. The walls of the stairwell carry different inscriptions than the eastern flight: here the subject is the cosmological function of each ascending floor, its relationship to the heavens, and the names of the pharaoh-spirits bound to each level. @@yGold-painted borders@@N once framed the inscriptions; fragments of the gilt survive in protected hollows. Players seeking a safe passage between levels can recall from this landing.
+~
+16396 11
+D1
+The passage east connects to the central hall.~
+~
+0 -1 10183
+D0
+The north passage leads deeper into the pyramid interior.~
+~
+0 -1 10188
+D4
+The western stairwell ascends to the alternate upper landing.~
+~
+0 -1 10202
+S
+#10186
+@@yA Guard Chamber@@N~
+A dark guard post cut into the wall at a junction of several internal corridors, positioned to give a view of multiple passages from a single point. The @@bsandstone@@N seat cut into the western wall is worn smooth, and the floor in front of it is polished by the shifting of feet over many years of watch-duty. An iron hook for hanging a lantern is set into the ceiling at the optimal angle; the lantern is gone. The guard who sat here last was either recalled or stationed permanently, and no record remains of which.
+~
+24585 11
+D2
+The south passage leads back into the west wing hall.~
+~
+0 -1 10180
+D0
+The north passage continues into the inner pyramid.~
+~
+0 -1 10188
+S
+#10187
+@@yThe Offering Hall@@N~
+Ceremonial offering tables of carved @@bsandstone@@N stand in two rows through this chamber, their surfaces hollowed to contain libations that were poured here during the pyramid's active ritual life. The hollows are bone-dry now, but stained with the @@bochre@@N residue of offerings — oils, wine, grain — that soaked into the stone over decades of use before the pyramid was sealed. Empty basins along the walls once held more elaborate offerings. @@yGold-inlaid hieroglyphs@@N around the basins record the names and requirements of the deities who were meant to receive these gifts.
+~
+24584 11
+D2
+The south passage returns toward the central hall.~
+~
+0 -1 10183
+D1
+The east passage connects to the north inner wing.~
+~
+0 -1 10188
+S
+#10188
+@@yThe North Inner Wing@@N~
+The northern interior section of the ground floor connects several of the pyramid's functional chambers in a broad corridor decorated with @@yyellow@@N and @@bochre@@N painted scenes of the divine court and its emissaries. The paint quality here is noticeably higher than in the entrance level corridors, suggesting that this area was considered more sacred or more important to impress. A carved false window in the east wall was apparently a standard architectural element of this style, its painted view showing the Nile rather than the desert that actually surrounds the pyramid.
+~
+24584 11
+D2
+The south passage connects toward the west stairwell landing.~
+~
+0 -1 10185
+D3
+The west passage leads toward the offering hall.~
+~
+0 -1 10187
+D1
+The east passage connects to the south inner wing.~
+~
+0 -1 10189
+D0
+The north passage continues toward the ceremonial passage.~
+~
+0 -1 10190
+S
+#10189
+@@yThe South Inner Wing@@N~
+This connecting corridor occupies the interior southern portion of the pyramid's upper ground floor, linking the eastern and western halves of the inner hall complex. Carved cartouches run along both walls at eye level, each one naming a member of the pyramid's founding religious hierarchy in descending order of importance from west to east. The @@yochre@@N paint filling the name hieroglyphs has preserved better here than elsewhere, protected from air movement by the corridor's sheltered position. The east and west passages both lead to stairwell and access points; north connects to the north inner wing.
+~
+24584 11
+D3
+The west passage connects toward the east stairwell landing.~
+~
+0 -1 10184
+D1
+The east passage continues into the ceremonial passage.~
+~
+0 -1 10190
+D0
+The north passage connects to the north inner wing.~
+~
+0 -1 10188
+S
+#10190
+@@yA Ceremonial Passage@@N~
+A passage of noticeably higher finish quality than the surrounding corridors, its @@bsandstone@@N blocks fitted with exceptional precision and its ceiling a shallow corbelled vault rather than a flat lintel. @@yGold leaf@@N was applied to the joints between the ceiling blocks, creating a grid of gold lines across the vault surface; much of it survives, giving the ceiling an unexpected richness. The passage connects the inner wing chambers and provides a route toward the pyramid's deepest ground-floor sections.
+~
+24584 11
+D2
+The south passage connects back toward the south inner wing.~
+~
+0 -1 10189
+D0
+The north passage leads toward the root-cracked chamber.~
+~
+0 -1 10191
+D1
+The east passage connects to the throne antechamber.~
+~
+0 -1 10192
+S
+#10191
+@@yThe Root-Cracked Chamber@@N~
+Ancient tree roots from the surface have penetrated even to this depth of the pyramid, cracking the @@bsandstone@@N floor in a network of deep fissures and pushing up blocks in tilted angles that make the floor treacherous to cross quickly. The roots themselves are pale and dead but enormous in girth, their woody mass wedged so tightly into the stone that removing them would require demolishing the surrounding blocks. @@yFine sand@@N sifts perpetually through the root-made gaps in the ceiling, and in the fissures between the floor blocks, something pale and fungal grows in the darkness.
+~
+24585 11
+D2
+The south passage returns toward the ceremonial passage.~
+~
+0 -1 10190
+D1
+The east passage continues into the throne antechamber.~
+~
+0 -1 10192
+S
+#10192
+@@yThe Throne Antechamber@@N~
+This antechamber was designed to impress visitors approaching the ground floor's seat of authority: the ceiling is raised a full course higher than in the connecting passages, and the walls carry the highest-quality carved reliefs in the entire ground level, depicting the pharaoh-lord in formal regalia receiving tribute from subjugated peoples. The @@yochre@@N and @@bblue-grey@@N paint filling these reliefs has fared better than elsewhere, protected by the room's sheltered position. The carved throne-scene on the north wall still retains its original gold leaf in the crown and throne details, vivid against the pale @@bsandstone@@N.
+~
+24584 11
+D3
+The west passage connects back toward the root-cracked chamber.~
+~
+0 -1 10191
+D0
+The north passage leads into the lower throne room.~
+~
+0 -1 10193
+S
+#10193
+@@yThe Lower Throne Room@@N~
+A grand dais of polished @@bsandstone@@N rises from the floor at the northern end of this chamber, and the remains of a cracked royal chair — massive in scale, carved with @@ysun-disc finials@@N on its posts — still occupies the dais platform. The chair's back panel shows the full hieratic program: the pharaoh receiving divine authority, dispensing justice, directing the cosmic order. The @@bsandstone@@N is cracked through the throne back diagonally, whether from age, from the violent departure of the pharaoh-spirit, or from deliberate desecration is unclear. The hall is wide enough to hold an assembly; the empty floor space implies one.
+~
+24584 11
+D2
+The south passage returns to the throne antechamber.~
+~
+0 -1 10192
+D1
+The east passage continues toward the sanctum approach.~
+~
+0 -1 10194
+D3
+The west passage leads back toward the ceremonial areas.~
+~
+0 -1 10191
+S
+#10194
+@@yThe Sanctum Approach@@N~
+A transitional corridor between the throne room and the pyramid's inner sanctum, its walls carved with @@yyellow@@N guardian figures facing inward from both sides as though creating a gauntlet of divine scrutiny. The figures' carved eyes are inlaid with @@cblue faience@@N that still holds its color, giving them an unsettling vitality in the dim interior light. The corridor narrows toward the north, a deliberate architectural device to create psychological compression before the sanctum entrance.
+~
+24584 11
+D3
+The west passage returns to the lower throne room.~
+~
+0 -1 10193
+D0
+The north passage continues toward the preparation chamber.~
+~
+0 -1 10195
+D1
+The east passage leads toward the sentinel's passage.~
+~
+0 -1 10196
+S
+#10195
+@@yA Preparation Chamber@@N~
+A small, dark anteroom where officiants prepared themselves before entering the inner sanctum: stone basins for ritual washing are cut into both walls, their drains still functional though dry. @@bIncense burner@@N sockets in the floor mark where fumigation braziers stood, and the ceiling above them is blackened with accumulated smoke that has seeped permanently into the @@bsandstone@@N. The room smells faintly of something resinous — cedar or juniper from incense burned here long ago — despite centuries of air circulation.
+~
+24585 11
+D0
+The north passage exits back toward the sanctum approach.~
+~
+0 -1 10194
+D1
+The east passage connects to the sentinel's passage.~
+~
+0 -1 10196
+S
+#10196
+@@yThe Sentinel's Passage@@N~
+A straight corridor running north toward the inner sanctum, its walls carved with repeating images of the sentinel deity assigned to guard the pyramid's most sacred interior spaces: a figure with a @@yyellow@@N solar disc head and a staff ending in a serpent, repeated in alternating orientations down both walls. The figure's posture is aggressive rather than welcoming, each iteration slightly more threatening than the last as the corridor progresses north. The floor here carries the deepest wear marks of any corridor in the pyramid, evidence of the constant ceremonial foot traffic this passage once saw.
+~
+24584 11
+D2
+The south passage connects back toward the preparation chamber.~
+~
+0 -1 10195
+D3
+The west passage connects toward the preparation chamber western entry.~
+~
+0 -1 10195
+D0
+The north passage leads to the inner sanctum entrance.~
+~
+0 -1 10197
+S
+#10197
+@@yThe Inner Sanctum Entrance@@N~
+The final approach to the pyramid's inner sanctum is marked by an @@bancient stone door@@N set in the north wall, its surface carved with an unbroken register of @@Rcurse-inscriptions@@N warning away the uninvited. The door's frame is recessed a full hand-width into the wall, the surrounding @@bsandstone@@N carved with a double row of protective serpents whose @@yochre@@N and @@cblue@@N paint still retains remarkable vibrancy. The sentinel's passage leads south; beyond the ancient stone door to the north, the waiting hall lies in waiting darkness.
+~
+24584 11
+D2
+The sentinel's passage runs south toward the preparation areas.~
+~
+0 -1 10196
+D0
+The @@bancient stone door@@N stands in the north wall, its carved @@Rcurse-inscriptions@@N still legible.~
+^ancient stone door~
+1 -1 10198
+E
+ancient stone door~
+The @@bancient stone door@@N is carved from a single @@bsandstone@@N block and set in a recessed frame worked with protective serpent figures. @@RCurse-inscriptions@@N cover its face in tight, precise columns.
+~
+S
+#10198
+@@yThe Waiting Hall@@N~
+A hall whose name is written in @@yhieroglyphs@@N above the southern doorway: the Waiting Hall, where supplicants once waited for an audience with the pyramid's divine-appointed administrator. Stone benches run the length of both walls, their surfaces polished smooth by years of waiting people. The room has an uncanny stillness despite the passages connecting to it from multiple directions, as though the architecture itself is still performing the function of making occupants patient and quiet. The @@bancient stone door@@N to the south leads back to the inner sanctum entrance.
+~
+24584 11
+D2
+The @@bancient stone door@@N in the south wall leads back to the inner sanctum entrance.~
+^ancient stone door~
+1 -1 10197
+D0
+The north passage leads toward the final approach.~
+~
+0 -1 10199
+S
+#10199
+@@yThe Final Approach@@N~
+The last corridor before the pyramid's heart chamber is lined with the carved images of every pharaoh-spirit bound within the pyramid, their names in cartouches above their heads, their poses formal and identical save for the unique symbols of their individual divine authority. @@yGold leaf@@N covers the cartouches in a continuous band of gilt that runs the full length of both walls, and the inlaid @@cblue@@N eyes of each figure still hold their faience. The air here carries a definite pressure, a weight that seems to come from within the stone rather than from any atmospheric source. The heart chamber is north.
+~
+24584 11
+D2
+The south passage leads back through the waiting hall.~
+~
+0 -1 10198
+D0
+The passage north leads into the Pyramid's Heart Chamber.~
+~
+0 -1 10200
+S
 #$
