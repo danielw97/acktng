@@ -6652,6 +6652,248 @@ radiates a faint protective warmth against the pyramid's curses.~
 7
 L
 140
+#11519
+silent warden death mask face~
+@@ythe Silent Warden's Death Mask@@N~
+A smooth mask of @@ypale bone@@N shaped to fit over the face, its eyeholes sealed with
+discs of @@bpolished obsidian@@N. @@eGlyphs of silence@@N are carved into the forehead, and
+wearing it dampens all sound to a whisper.~
+9 201326784 8388624 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+140
+#11520
+shroud eternal silence about~
+@@ya Shroud of Eternal Silence@@N~
+A flowing cloak of @@bfunerary linen@@N dyed the color of midnight, its hem weighted with
+tiny @@ypale gold@@N bells that make no sound. The fabric absorbs noise and muffles the
+wearer's movements to near-invisibility.~
+9 201326784 8454144 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+140
+#11521
+silent warden muffled wrappings body~
+@@ythe Silent Warden's Muffled Wrappings@@N~
+Layer upon layer of @@bdensely woven funerary linen@@N treated with preservative resins,
+forming a rigid torso covering. @@ePale stitching@@N reinforces the wrappings at every
+joint, providing both protection and unnerving silence.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+140
+#11522
+moss-grown breastplate decay body~
+@@ya Moss-grown Breastplate of Decay@@N~
+A @@bcracked stone breastplate@@N overgrown with @@elivid green moss@@N and pale fungal threads.
+Despite its apparent ruin, the armor is supernaturally tough, held together by the
+same rotting magic that preserves its wearer.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+140
+#11523
+rot warden fungal staff weapon~
+@@ythe Rot Warden's Fungal Staff@@N~
+A gnarled staff of @@bpetrified wood@@N wrapped in @@ecreeping fungal tendrils@@N that pulse
+with sickly bioluminescence. Its head is a mass of calcified mushroom caps fused
+into a heavy striking surface that spreads decay on contact.~
+5 2348810432 8421376 1
+0 0 0 7 0 0 0 0 0 0
+4
+L
+140
+#11524
+ring creeping rot finger~
+@@ya Ring of Creeping Rot@@N~
+A narrow band of @@bcorroded copper@@N set with a cabochon of @@eputrid green stone@@N that
+weeps a faint moisture. Wearing it numbs the finger but sharpens the mind with
+visions of entropy and decay.~
+9 201326784 8396800 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+140
+#11525
+shadow warden eclipse circlet head~
+@@ythe Shadow Warden's Eclipse Circlet@@N~
+A slim circlet of @@ydarkened silver@@N shaped like a solar eclipse, with rays of @@bblack
+iron@@N radiating from a central void stone. It crowns the wearer in living shadow
+that bends light around the face.~
+9 201326784 8388616 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+140
+#11526
+robes living shadow body~
+@@yRobes of Living Shadow@@N~
+A garment of @@bshifting darkness@@N that clings to the body like a second skin, its
+surface rippling with half-seen shapes. The fabric is not cloth but condensed shadow,
+weightless and cold, offering protection through concealment rather than armor.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+140
+#11527
+shadow warden umbral blade weapon~
+@@ythe Shadow Warden's Umbral Blade@@N~
+A long, thin @@bdagger@@N forged from condensed shadow-metal, its edge visible only as a
+distortion in the air. The hilt is wrapped in @@bblack silk@@N, and the blade drinks light
+from its surroundings as it moves.~
+5 201326784 8421376 1
+0 0 0 2 0 0 0 0 0 0
+9
+L
+140
+#11528
+greaves bone warden legs~
+@@yGreaves of the Bone Warden@@N~
+Massive shin guards assembled from interlocking @@bfemur bones@@N reinforced with bands
+of @@yblack iron@@N. The joints are articulated with sinew that still flexes despite
+centuries of desiccation, and each knee plate is a polished human skull cap.~
+9 201326784 9437184 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+140
+#11529
+bone warden skull flail weapon~
+@@ythe Bone Warden's Skull Flail@@N~
+A heavy chain of @@bblack iron@@N links terminating in a cluster of three fused skulls,
+each reinforced with @@ymetal plates@@N riveted directly into the bone. The weapon whistles
+with a hollow moan when swung.~
+5 201326784 8421376 1
+0 0 0 7 0 0 0 0 0 0
+10
+L
+140
+#11530
+pauldrons fused bone shoulders~
+@@yPauldrons of Fused Bone@@N~
+Shoulder plates carved from massive @@bsingle bones@@N — perhaps a giant's scapulae —
+shaped and reinforced with rivets of @@yblack iron@@N. Rows of teeth from unknown
+creatures line the upper ridges like decorative spikes.~
+9 201326784 8389120 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+140
+#11531
+scale-mail hauberk venom body~
+@@ya Scale-mail Hauberk of Venom@@N~
+A torso covering of overlapping @@escales@@N harvested from enormous venomous serpents,
+each scale still glistening with a faint toxic sheen. The hauberk is laced together
+with @@bsinew@@N and reinforced at the shoulders with @@ybrass@@N studs.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+140
+#11532
+venom warden fang-blade weapon~
+@@ythe Venom Warden's Fang-blade@@N~
+A wicked curved blade forged from a single enormous @@edesert cobra fang@@N, its hollow
+interior still dripping with residual venom. The grip is wrapped in @@bsnakeskin@@N, and
+the weapon is worn strapped across the knuckles like a claw.~
+5 1275068608 8421376 1
+0 0 0 5 0 0 0 0 0 0
+6
+L
+140
+#11533
+serpent-coil armlet wrist~
+@@ya Serpent-coil Armlet@@N~
+A tightly wound bracelet of @@eliving metal@@N shaped like a coiled asp, its tiny ruby
+eyes glinting with malice. The serpent's head clasps its own tail, and the entire
+piece pulses faintly with @@bvenomous magic@@N.~
+9 201326784 8390656 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+140
+#11534
+magma-forged breastplate body~
+@@ya Magma-forged Breastplate@@N~
+A massive @@bchest plate@@N forged from volcanic basalt and @@Rglowing iron@@N, its surface
+still radiating heat. Channels of molten metal run through its surface like veins,
+pulsing with the heartbeat of the magma chambers far below.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+140
+#11535
+fire warden ember-claw weapon~
+@@ythe Fire Warden's Ember-claw@@N~
+A set of four curved @@Rblack iron talons@@N mounted on a knuckle harness of heat-treated
+@@bvolcanic stone@@N. Each claw glows cherry-red at the tip and leaves trails of embers
+in the air when swiped.~
+5 1275068608 8421376 1
+0 0 0 5 0 0 0 0 0 0
+7
+L
+140
+#11536
+crest volcanic stone horns~
+@@ya Crest of Volcanic Stone@@N~
+A @@bjagged crown@@N of fused volcanic rock shaped into horn-like protrusions, each tip
+@@Rglowing faintly@@N with trapped heat. The piece sits atop the skull like a natural
+crest, radiating authority and searing warmth.~
+9 201326784 8388612 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+140
+#11537
+moon sovereign void scepter weapon~
+@@ythe Moon Sovereign's Void Scepter@@N~
+A tall staff of @@ypale gold@@N and @@bblack iron@@N topped with a sphere of absolute darkness
+that swallows all light. @@eLunar runes@@N spiral down its shaft, and the weapon hums with
+the resonance of the void between stars.~
+5 2348810432 8421376 1
+0 0 0 7 0 0 0 0 0 0
+4
+L
+140
+#11538
+robes eternal moon body~
+@@yRobes of the Eternal Moon@@N~
+Flowing vestments of @@ysilver-white silk@@N that shimmer with captured moonlight, their
+hems embroidered with @@bluna glyphs@@N in thread that glows softly in darkness. The robes
+shift between transparency and opacity with the wearer's will.~
+9 201326784 8650752 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+140
+#11539
+sovereign amulet void neck~
+@@ythe Sovereign's Amulet of the Void@@N~
+A heavy medallion of @@ypale gold@@N centered with a perfect sphere of void-stone that
+reflects no light. @@bAncient cartouches@@N ring its rim, naming the sovereign who ruled
+the pyramid when the moon still rose above the desert.~
+9 201326784 8388736 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+140
+#11540
+boots underworld throne feet~
+@@yBoots of the Underworld Throne@@N~
+Tall @@bblack leather@@N boots reinforced with plates of @@ypale gold@@N, their soles inscribed
+with @@eluna glyphs@@N that leave faintly glowing footprints. The boots are perfectly
+preserved, untouched by the centuries of dust and decay.~
+9 201326784 10485760 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+140
 #0
 
 #$
