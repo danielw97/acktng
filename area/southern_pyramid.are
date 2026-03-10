@@ -2331,6 +2331,11 @@ D5
 ~
 ~
 0 -1 11450
+D2
+@@yThe passage continues south into the inner decay hall.@@N
+~
+~
+0 -1 11550
 S
 #11546
 @@yThe East Rot Wing@@N~
@@ -2349,6 +2354,16 @@ D1
 ~
 ~
 0 -1 11547
+D2
+@@yThe passage continues south to a flooded crypt alcove.@@N
+~
+~
+0 -1 11551
+D5
+@@yA worn stairway descends into the shadow-cloaked tier below.@@N
+~
+~
+0 -1 11562
 S
 #11547
 @@yThe West Rot Wing@@N~
@@ -2372,6 +2387,11 @@ D3
 ~
 ~
 0 -1 11546
+D2
+@@yThe passage continues south to the compost chamber.@@N
+~
+~
+0 -1 11552
 S
 #11548
 @@yA Mushroom-Choked Corridor@@N~
@@ -2395,6 +2415,11 @@ D3
 ~
 ~
 0 -1 11547
+D2
+@@yThe passage continues south to the verdigris corridor.@@N
+~
+~
+0 -1 11553
 S
 #11549
 @@yThe Descent Shaft Landing@@N~
@@ -2414,8 +2439,458 @@ D3
 ~
 ~
 0 -1 11548
+D2
+@@yThe passage continues south to a crumbling vault.@@N
+~
+~
+0 -1 11554
+D5
+@@yThe heavy @@yrusted grate@@y in the floor opens downward into the shadow-shrouded tier below.@@N
+~
+^rusted grate~
+1 -1 11561
+S
+#11550
+@@yThe Inner Decay Hall@@N~
+@@yThis hall marks the deepest reach of the Rotting Galleries, its @@bsandstone walls@@y so saturated with moisture that they weep constantly, creating rivulets that pool on the uneven floor.@@N
+@@bThe ceiling sags visibly@@y in several places, the stone weakened by centuries of water infiltration until it bows under its own weight.@@N
+@@yThe unstable gallery lies to the north, the descent shaft to the west, and the east gallery end to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the unstable gallery.@@N
+~
+~
+0 -1 11545
+D2
+@@yThe passage continues south to the east gallery end.@@N
+~
+~
+0 -1 11555
+D3
+@@yA corridor leads west toward the descent shaft landing.@@N
+~
+~
+0 -1 11549
+S
+#11551
+@@yA Flooded Crypt Alcove@@N~
+@@yAnkle-deep dark water fills this alcove, fed by a steady trickle from a crack in the ceiling that has been flowing for so long it has carved a smooth channel in the @@bsandstone@@y above.@@N
+@@bSubmerged debris@@y shifts underfoot with each step, hidden beneath the opaque water.@@N
+@@yThe east rot wing lies to the north, and the compost chamber opens to the east.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the east rot wing.@@N
+~
+~
+0 -1 11546
+D1
+@@yA corridor opens east to the compost chamber.@@N
+~
+~
+0 -1 11552
+S
+#11552
+@@yThe Compost Chamber@@N~
+@@yAncient food stores have been reduced to a thick, black compost that fills the @@bstone storage bins@@y lining both walls of this chamber.@@N
+@@bThe organic matter has compressed@@y under its own weight over the centuries, becoming a dense, soil-like substance that sprouts pale, threadlike fungi.@@N
+@@yThe west rot wing lies to the north, the flooded alcove to the west, the verdigris passage to the east, and the outer warden chamber to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the west rot wing.@@N
+~
+~
+0 -1 11547
+D1
+@@yA corridor opens east to the verdigris passage.@@N
+~
+~
+0 -1 11553
+D2
+@@yThe passage continues south toward the warden's chambers.@@N
+~
+~
+0 -1 11556
+D3
+@@yThe passage leads west to the flooded crypt alcove.@@N
+~
+~
+0 -1 11551
+S
+#11553
+@@yThe Verdigris Passage@@N~
+@@yGreen @@ecopper stains@@y cover every surface of this passage, where centuries of moisture have reacted with @@bcopper fittings@@y embedded in the walls, producing a vivid green patina.@@N
+@@bThe effect is striking@@y: walls, floor, and ceiling all bear the same green discoloration, as though the passage were carved from solid malachite.@@N
+@@yThe mushroom corridor lies to the north, the compost chamber to the west, a crumbling vault to the east, and the pre-chamber corridor to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north through the mushroom growth.@@N
+~
+~
+0 -1 11548
+D1
+@@yA passage continues east into a crumbling vault.@@N
+~
+~
+0 -1 11554
+D2
+@@yThe corridor continues south toward the warden's corridors.@@N
+~
+~
+0 -1 11557
+D3
+@@yThe passage leads west to the compost chamber.@@N
+~
+~
+0 -1 11552
+S
+#11554
+@@yA Crumbling Vault@@N~
+@@yThe walls of this vault are disintegrating, large sections of @@bsandstone facing@@y having separated from the bedrock and collapsed into rubble piles that partially block the passages.@@N
+@@bFine grit sifts constantly@@y from the ceiling, a steady rain of particles that suggests the vault may collapse entirely in the not-too-distant future.@@N
+@@yThe descent shaft lies to the north, the verdigris passage to the west, the east gallery end to the east, and the rot warden's antechamber to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north toward the descent shaft landing.@@N
+~
+~
+0 -1 11549
+D1
+@@yA corridor opens east to the gallery end.@@N
+~
+~
+0 -1 11555
+D2
+@@yThe passage continues south toward the warden's antechamber.@@N
+~
+~
+0 -1 11558
+D3
+@@yThe passage leads west through the verdigris corridor.@@N
+~
+~
+0 -1 11553
+S
+#11555
+@@yThe East Gallery End@@N~
+@@yThe gallery terminates here at a dead-end wall of @@bsolid sandstone@@y, its surface carved with a massive relief depicting the Rot Warden consuming the offerings of the faithful.@@N
+@@bThe carving is remarkably well-preserved@@y, protected from the worst moisture by the dead-end's sheltered position.@@N
+@@yThe inner decay hall lies to the north, and the crumbling vault opens to the west.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the inner decay hall.@@N
+~
+~
+0 -1 11550
+D3
+@@yA corridor leads west into the crumbling vault.@@N
+~
+~
+0 -1 11554
+S
+#11556
+@@yThe Outer Warden Chamber@@N~
+@@yA large anteroom precedes the Rot Warden's domain, its @@bsandstone floor@@y inlaid with a protective circle of interlocking glyphs rendered in corroded copper wire.@@N
+@@bMoisture has turned the wire green@@y, making the protective circle a vivid @@emerald design@@y against the dark, wet stone.@@N
+@@yThe compost chamber lies to the north, a dark corridor opens to the east, and the passage continues south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the compost chamber.@@N
+~
+~
+0 -1 11552
+D1
+@@yA dark corridor stretches east.@@N
+~
+~
+0 -1 11557
+D2
+@@yThe passage continues south toward the warden's antechamber.@@N
+~
+~
+0 -1 11558
+S
+#11557
+@@yThe Pre-Chamber Corridor@@N~
+@@yThis dark corridor serves as the final approach to the Rot Warden's chamber, its @@bsandstone walls@@y bare of any decoration, the moisture here so heavy it drips audibly from every surface.@@N
+@@bThe floor is treacherously slick@@y with a film of algae that has colonized the perpetually wet stone.@@N
+@@yThe verdigris passage lies to the north, the outer chamber to the west, and the antechamber to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north through the verdigris corridor.@@N
+~
+~
+0 -1 11553
+D2
+@@yThe corridor continues south toward the antechamber.@@N
+~
+~
+0 -1 11558
+D3
+@@yA passage leads west to the outer warden chamber.@@N
+~
+~
+0 -1 11556
+S
+#11558
+@@yThe Rot Warden's Antechamber@@N~
+@@yThe passage widens into a formal antechamber, every surface thick with the same @@edark green mold@@y that pervades the galleries, but here it grows in deliberate patterns that suggest cultivation rather than natural spread.@@N
+@@bThe mold forms spiraling designs@@y on the walls, concentric rings and branching patterns that resemble an alien script written in living fungus.@@N
+@@yThe outer warden chamber lies to the north, the pre-chamber corridor above, the crumbling vault to the north-east, and the warden's approach to the south.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the outer warden chamber.@@N
+~
+~
+0 -1 11556
+D1
+@@yA corridor leads east to the crumbling vault.@@N
+~
+~
+0 -1 11554
+D2
+@@yThe corridor continues south toward the warden's door.@@N
+~
+~
+0 -1 11559
+S
+#11559
+@@yThe Rot Warden's Approach@@N~
+@@yThe air grows thick and cloying here, saturated with the spores of the mold that covers every surface in a living carpet of @@edark green growth@@y.@@N
+@@bThe @@bsandstone@@y beneath the mold is soft and crumbling, weakened by centuries of fungal digestion until the walls feel spongy to the touch.@@N
+@@yThe antechamber lies to the north, and to the south a heavy @@ymoss-covered stone door@@y bars the way to the warden's chamber.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the antechamber.@@N
+~
+~
+0 -1 11558
+D2
+@@yA heavy @@ymoss-covered stone door@@y blocks the passage south.@@N
+~
+^moss-covered stone door~
+1 -1 11560
+S
+#11560
+@@yThe Rot Warden's Chamber@@N~
+@@yA vast, dripping chamber stretches beyond the @@ymoss-covered stone door@@y, its ceiling lost in shadow and its floor knee-deep in a carpet of @@edark green fungal growth@@y.@@N
+@@bMassive mushroom columns@@y rise from the living carpet to the unseen ceiling, their trunks as thick as ancient oaks and their caps spreading wide enough to shelter a dozen warriors.@@N
+@@yAt the chamber's center, a raised mound of compacted organic matter serves as both throne and nest for the chamber's guardian.@@N
+@@yThe @@ymoss-covered stone door@@y leads north back to the approach corridor.@@N
+@@yThe stench of decay is overwhelming, a physical force that presses against the senses and makes breathing difficult.@@N
+~
+24588 11
+D0
+@@yThe @@ymoss-covered stone door@@y leads north back to the approach.@@N
+~
+^moss-covered stone door~
+1 -1 11559
+S
+#11561
+@@yThe Third Descent@@N~
+@@yA steep stairway descends through the @@yrusted grate@@y from the Rotting Galleries above into the Shadow Nave, the temperature dropping sharply and the humid air giving way to a dry, oppressive stillness.@@N
+@@bThe walls transition from moisture-stained sandstone@@y to smooth, dark stone that seems to drink in any available light.@@N
+@@yThe grate opens upward to the galleries above, while corridors stretch east and south into absolute darkness.@@N
+@@yDarkness presses in from every direction, thick and almost tangible, resisting the reach of any light source.@@N
+~
+16396 11
+D1
+@@yA corridor stretches east into the consuming darkness.@@N
+~
+~
+0 -1 11562
+D2
+@@yThe passage descends south into the shadow-cloaked tier.@@N
+~
+~
+0 -1 11566
+D4
+@@yThe @@yrusted grate@@y opens upward to the Rotting Galleries above.@@N
+~
+^rusted grate~
+1 -1 11549
+S
+#11562
+@@yThe Shadow Landing@@N~
+@@yA second stairway arrives from the Rotting Galleries above, depositing visitors onto a landing of dark @@bpolished stone@@y that reflects no light despite its smooth surface.@@N
+@@bThe air is utterly still@@y here, without the faintest current or draft, as though sealed in a vacuum.@@N
+@@yStairs climb to the galleries above, while corridors lead west, east, and south into the Shadow Nave.@@N
+~
+16396 11
+D1
+@@yA corridor stretches east into the shadow hall.@@N
+~
+~
+0 -1 11563
+D2
+@@yThe passage continues south deeper into the shadows.@@N
+~
+~
+0 -1 11567
+D3
+@@yThe corridor leads west to the third descent.@@N
+~
+~
+0 -1 11561
+D4
+@@yThe stairway climbs back up to the Rotting Galleries.@@N
+~
+~
+0 -1 11546
+S
+#11563
+@@yThe Shadow Hall@@N~
+@@yDarkness presses like a physical weight in this broad corridor, resisting all light sources and reducing even magical illumination to a feeble, guttering glow.@@N
+@@bThe walls are carved from a stone so dark@@y it appears to absorb light rather than reflect it, their surfaces smooth and featureless.@@N
+@@yThe shadow landing lies to the west, a lightless corridor stretches east, and a passage descends south.@@N
+~
+24585 11
+D1
+@@yA lightless corridor stretches east into deeper darkness.@@N
+~
+~
+0 -1 11564
+D2
+@@yThe passage descends south into the shadow-cloaked nave.@@N
+~
+~
+0 -1 11568
+D3
+@@yThe corridor leads west toward the shadow landing.@@N
+~
+~
+0 -1 11562
+S
+#11564
+@@yA Lightless Corridor@@N~
+@@yNo light penetrates this corridor; torches gutter and die, magical light dims to nothing within paces.@@N
+@@bThe walls are smooth and featureless@@y to the touch, carved from the same @@blight-absorbing stone@@y that characterizes the Shadow Nave.@@N
+@@yThe shadow hall lies to the west, the umbral shrine to the east, and a passage leads south.@@N
+~
+24585 11
+D1
+@@yThe corridor continues east toward a shrine.@@N
+~
+~
+0 -1 11565
+D2
+@@yA passage leads south into the inner shadow hall.@@N
+~
+~
+0 -1 11569
+D3
+@@yThe corridor leads west to the shadow hall.@@N
+~
+~
+0 -1 11563
+S
+#11565
+@@yThe Umbral Shrine@@N~
+@@yA black altar of polished obsidian dominates this chamber, its surface so dark it seems to open into a void rather than rest as solid stone.@@N
+@@bOfferings placed centuries ago@@y have been consumed by the darkness itself, leaving only faint impressions in the @@bdust@@y where objects once rested.@@N
+@@yThe lightless corridor lies to the west, and the darkness seems even more oppressive here than in the surrounding passages.@@N
+~
+24585 11
+D3
+@@yThe corridor leads west into lightless darkness.@@N
+~
+~
+0 -1 11564
+S
+#11566
+@@yThe Eclipse Chamber@@N~
+@@yCarved depictions of a sunless sky cover the walls of this chamber, showing the moon consuming the sun in an eternal eclipse rendered in @@bdark stone@@y inlaid with @@bpale marble@@y crescents.@@N
+@@bThe carvings are masterful@@y, each phase of the eclipse captured with astronomical precision that speaks of deep knowledge and darker purpose.@@N
+@@yThe third descent lies to the north, and a dark side passage opens to the east.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the third descent.@@N
+~
+~
+0 -1 11561
+D1
+@@yA dark side passage opens east.@@N
+~
+~
+0 -1 11567
+S
+#11567
+@@yA Dark Side Passage@@N~
+@@yThis narrow passage winds through the Shadow Nave's interior, the @@bdark stone@@y walls pressing close enough to touch on both sides.@@N
+@@bThe floor slopes imperceptibly downward@@y, leading deeper into the earth with each step.@@N
+@@yThe eclipse chamber lies to the west, the shadow landing to the north, the shadowmancer's study to the east, and the passage continues south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the shadow landing.@@N
+~
+~
+0 -1 11562
+D1
+@@yThe passage continues east to the shadowmancer's study.@@N
+~
+~
+0 -1 11568
+D3
+@@yThe passage leads west to the eclipse chamber.@@N
+~
+~
+0 -1 11566
+S
+#11568
+@@yThe Shadowmancer's Study@@N~
+@@yThis chamber once served as the workspace of the Shadow Nave's resident sorcerer, its @@bstone desk@@y still bearing the shattered remains of ink bottles and crumbled tablets.@@N
+@@bDark stains@@y on the desk and floor suggest that the shadowmancer's work involved more than mere scholarship.@@N
+@@yThe dark side passage lies to the west, the shadow hall to the north, the inner shadow hall to the east, and passages continue south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the shadow hall.@@N
+~
+~
+0 -1 11563
+D1
+@@yA corridor opens east to the inner shadow hall.@@N
+~
+~
+0 -1 11569
+D3
+@@yThe passage leads west through the dark side passage.@@N
+~
+~
+0 -1 11567
+S
+#11569
+@@yThe Inner Shadow Hall@@N~
+@@yThe inner reaches of the Shadow Nave are wrapped in a darkness so complete that even the faintest sounds are swallowed, as though shadow and silence are the same force here.@@N
+@@bThe stone walls are ice-cold@@y to the touch despite the absence of any natural chill, their temperature drawn down by whatever dark energy permeates this tier.@@N
+@@yThe lightless corridor lies to the north, and the shadowmancer's study to the west.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the lightless corridor.@@N
+~
+~
+0 -1 11564
+D3
+@@yThe passage leads west to the shadowmancer's study.@@N
+~
+~
+0 -1 11568
 S
 #0
+#$
+
 #$
 
 #$
