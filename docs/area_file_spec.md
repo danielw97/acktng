@@ -602,7 +602,7 @@ Room entries are one of:
   <keyword>~
   <description>~
   ```
-  - Extra-description `<keyword>` names must be discoverable in-room: each keyword token must appear in either the room's main `<description>~` or in at least one other `E` extra description in the same room.
+  - Extra-description `<keyword>` names must be discoverable in-room. Chained `E` references are allowed (for example, extra 1 keyword appears in the room description, extra 1 text mentions extra 2 keyword, extra 2 text mentions extra 3 keyword), but each chain must be anchored: at least one keyword in the chain must appear in the room's main `<description>~`.
   - `<description>` must include exactly one trailing newline before the terminating `~`.
 - End of room: `S`
 
@@ -618,7 +618,7 @@ Room description content requirements:
   - the room's main `<description>~`,
   - an object that spawns in the room, or
   - an `E` extra description in the room.
-- Puzzle guidance: you may chain details across multiple `E` extra descriptions; this is acceptable as long as the named exit is still discoverable through the room/object/extra-description text.
+- Puzzle guidance: you may chain details across multiple `E` extra descriptions; this is acceptable as long as each extra-description chain is anchored in the room's main `<description>~` and any named exit remains discoverable through the room/object/extra-description text.
 
 Directional traversal constraints:
 
