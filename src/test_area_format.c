@@ -778,6 +778,11 @@ int main(void)
     VNUM_NODE *global_room_vnums = NULL;
     VNUM_NODE *global_mobile_vnums = NULL;
     VNUM_NODE *global_object_vnums = NULL;
+    int prev_min_vnum = -1;
+    int prev_max_vnum = -1;
+    char prev_area_name[1024];
+
+    prev_area_name[0] = '\0';
 
     if (list_fp == NULL)
         list_fp = fopen("area/area.lst", "r");
@@ -799,6 +804,8 @@ int main(void)
             break;
 
         FILE *area_fp;
+        int area_min_vnum;
+        int area_max_vnum;
 
         snprintf(area_path, sizeof(area_path), "../area/%s", area_name);
         area_fp = fopen(area_path, "r");
@@ -810,6 +817,27 @@ int main(void)
         if (area_fp == NULL)
             fail_area_test(area_name, 0, "listed area file could not be opened");
         fclose(area_fp);
+
+        read_area_vnum_range(area_path, &area_min_vnum, &area_max_vnum);
+        if (prev_min_vnum >= 0)
+        {
+            if (area_min_vnum < prev_min_vnum ||
+                (area_min_vnum == prev_min_vnum && area_max_vnum < prev_max_vnum))
+            {
+                fail_area_test("area.lst", 0,
+                               "area list out of ascending vnum order: %s (%d-%d) appears after %s (%d-%d)",
+                               area_name,
+                               area_min_vnum,
+                               area_max_vnum,
+                               prev_area_name,
+                               prev_min_vnum,
+                               prev_max_vnum);
+            }
+        }
+
+        prev_min_vnum = area_min_vnum;
+        prev_max_vnum = area_max_vnum;
+        snprintf(prev_area_name, sizeof(prev_area_name), "%s", area_name);
 
         scan_area_indexes(area_path, &global_room_vnums, &global_mobile_vnums, &global_object_vnums);
     }
