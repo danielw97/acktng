@@ -137,6 +137,7 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 ```
 
 `<long_descr>` and `<description>` must each include exactly one trailing newline before the terminating `~`.
+In particular, every mob `<long_descr>` must be written as text ending with a newline, followed by a line containing only `~`.
 
 Optional extension blocks (detected by leading marker):
 
