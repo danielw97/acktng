@@ -1,0 +1,40 @@
+level 0
+keywords kinetimancer
+---
+@@GKINETIMANCER@@W
+
+Kinetimancers are the union of @@GNecromancer@@W entropy and @@mEgomancer@@W will,
+engineers of unseen force who bend shadow, poison, and mind-pressure into a
+single predictive combat style. They do not simply cast spells—they re-route
+momentum and collapse enemy plans before impact.
+
+To become a Kinetimancer, you follow the adept path tied to @@GNecromancer@@W
+and @@mEgomancer@@W remort progression.
+
+@@GPassive class advantages@@W
+Kinetimancer gains passive scaling through adept levels:
+
+  1) @@wRemort/Adept non-physical spell damage bonus@@W
+     - Non-physical remort/adept damage effects gain a passive Kinetimancer
+       multiplier.
+     - Scaling: +2% damage per Kinetimancer adept level (up to +40% at 20).
+
+@@GUnique Kinetimancer mechanics@@W
+  * @@wMagi stance@@W is available on the adept path (shared caster stance with
+    either-class access, multi-cast support, dual-cast support, and no-hit
+    casting posture).
+  * @@wKinetic Reversion@@W is learned at Kinetimancer level 2.
+  * Kinetimancer contributes to the @@wMental Power@@W progression family.
+  * Kinetimancer uses @@wIntelligence@@W as its adept prime attribute and follows
+    a high-mana caster growth profile.
+
+@@GKinetimancer reincarnation bonuses@@W
+Each Kinetimancer adept reincarnation grants additional passive scaling:
+
+  * @@wShadow / poison / mental damage@@W: +2% per Kinetimancer adept
+    reincarnation.
+
+In short: Kinetimancer is the control-burst adept for dark and psychic realms,
+rewarding players who maintain pressure through layered non-physical damage.
+
+See also: @@mremort stance kinetic reversion mental-power@@W

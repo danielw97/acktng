@@ -1,0 +1,43 @@
+level 0
+keywords grand magi grandmagi
+---
+@@pGRAND MAGI@@W
+
+Grand Magi are the apex synthesis of @@pSorcerer@@W breadth and @@WWizard@@W
+precision: arcane generals who command fire, storm, tide, and stone as a
+single disciplined doctrine. Where lesser casters specialize, Grand Magi
+layer elemental pressure to dominate long fights.
+
+To become a Grand Magi, you follow the adept path tied to @@pSorcerer@@W and
+@@WWizard@@W remort progression.
+
+@@pPassive class advantages@@W
+Grand Magi gains passive scaling through adept levels:
+
+  1) @@wRemort/Adept non-physical spell damage bonus@@W
+     - Non-physical remort/adept damage effects gain a passive Grand Magi
+       multiplier.
+     - Scaling: +2% damage per Grand Magi adept level (up to +40% at 20).
+
+@@pUnique Grand Magi mechanics@@W
+  * @@wMagi stance@@W is available on the adept path and carries caster-focused
+    stance flags (either-class access, multi-cast support, dual-cast support,
+    and no-hit casting posture).
+  * Grand Magi gains a dedicated elemental spell ladder:
+      - @@wElemental Inferno@@W (level 1)
+      - @@wElemental Shock@@W (level 5)
+      - @@wElemental Deluge@@W (level 10)
+      - @@wElemental Rupture@@W (level 15)
+  * Grand Magi uses @@wIntelligence@@W as its adept prime attribute and follows
+    a high-mana caster growth profile.
+
+@@pGrand Magi reincarnation bonuses@@W
+Each Grand Magi adept reincarnation grants additional passive scaling:
+
+  * @@wElemental realm damage@@W (fire/air/water/earth): +2% per Grand Magi
+    adept reincarnation.
+
+In short: Grand Magi is the sustained elemental adept, turning advanced arcane
+progression into consistent, scaling spell pressure across elemental domains.
+
+See also: @@mremort stance elemental inferno elemental shock elemental deluge elemental rupture@@W

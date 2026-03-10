@@ -1,0 +1,43 @@
+level 0
+keywords crusader
+---
+@@cCRUSADER@@W
+
+Crusaders are battlefield zealots forged from @@cKnight@@W discipline and
+@@cSwordsman@@W momentum. Where others fight to survive, Crusaders fight to
+overwhelm: chaining relentless martial pressure into decisive finishing blows.
+
+To become a Crusader, you follow the adept path tied to @@cKnight@@W and
+@@cSwordsman@@W remort progression.
+
+@@cPassive class advantages@@W
+Crusader grants always-on combat scaling as adept levels rise:
+
+  1) @@wCombo-skill damage bonus@@W
+     - Crusader increases damage for Crusader-relevant remort/adept combo
+       attacks (notably @@wholystrike@@W and @@wfleche@@W, plus other remort/adept
+       entries in that family).
+     - Scaling: +5% damage per Crusader adept level (up to +100% at 20).
+
+  2) @@wExtra attack round@@W
+     - Having any Crusader adept level grants an additional melee hit in the
+       multi-hit calculation.
+
+@@cUnique Crusader mechanics@@W
+  * @@wCrusader stance@@W is available once the adept path is active.
+  * @@wAnti Magic Shell@@W is learned at Crusader level 2.
+  * Crusader uses @@wStrength@@W as its adept prime attribute and follows a
+    heavy melee-oriented adept growth profile.
+
+@@cCrusader reincarnation bonus@@W
+Each Crusader adept reincarnation grants an additional passive bonus:
+
+  * @@wCombo-family strike damage@@W: +2% per Crusader adept reincarnation for
+    punch, kick, knee, headbutt, charge, holystrike, and fleche.
+  * At @@w20+ Crusader adept reincarnations@@W, combo capacity gains +1 slot
+    when combo progression is active.
+
+In short: Crusader is the pressure-and-finisher adept, rewarding players who
+chain weapon and body-strike sequences into explosive melee bursts.
+
+See also: @@mremort combo stance anti magic shell holystrike fleche charge@@W
