@@ -34,7 +34,8 @@ Implications:
 - Single-line and multi-line strings are allowed, but a terminating `~` is required.
 - Strings must not contain back-to-back newlines (no blank lines represented by `\n\n`).
 - A missing `~` causes parse failure.
-- For mobile `long_descr` and mobile `description`, the string must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`, with no extra trailing blank lines).
+- Mobile `long_descr` has a strict format: exactly one text line, then a newline, then a line containing only `~`. No other `long_descr` format is valid, and multi-line `long_descr` text is never allowed.
+- Mobile `description` must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`, with no extra trailing blank lines).
 - Vnums must never be mentioned in in-world description text. This includes room descriptions, mobile descriptions (`long_descr`/`description`), object descriptions, extra descriptions, and exit descriptions.
 
 ### 2.1) In-string color codes (`colist`)
@@ -136,8 +137,9 @@ A list of mobile records, each introduced by `#<vnum>`, terminated by `#0`:
 #0
 ```
 
-`<long_descr>` and `<description>` must each include exactly one trailing newline before the terminating `~`.
-In particular, every mob `<long_descr>` must be written as text ending with a newline, followed by a line containing only `~`.
+`<description>` must include exactly one trailing newline before the terminating `~`.
+`<long_descr>` is stricter: it must be exactly one text line, followed by a newline, followed by a line containing only `~`.
+There is no valid multi-line alternative for mob `<long_descr>`; under no circumstances may `<long_descr>` text span multiple lines.
 
 Optional extension blocks (detected by leading marker):
 
