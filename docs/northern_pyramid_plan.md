@@ -135,7 +135,7 @@ The subterranean foundations of the pyramid: flooded burial chambers, root-tangl
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10126 | The Undercroft Entry | inside | indoors | Entry via trapdoor from ground level (10177 ↓) |
+| 10126 | The Undercroft Entry | inside | no_mob, indoors | Entry via trapdoor from ground level (10177 ↓) |
 | 10127 | A Flooded Antechamber | inside | indoors, dark | Ankle-deep black water |
 | 10128 | The Root-Split Corridor | inside | indoors, dark | Ancient roots have fractured the stone |
 | 10129 | A Collapsed Burial Niche | inside | indoors, dark | Rubble-filled alcove |
@@ -197,15 +197,15 @@ The base of the pyramid and surrounding desert approach. Exterior rooms use `des
 | 10174 | A Guard Barracks Ruin | inside | indoors, dark | |
 | 10175 | The Armory Vault | inside | indoors | Empty weapon racks |
 | 10176 | The East Wing Hall | inside | indoors | |
-| 10177 | The Lower Vault | inside | indoors | Contains trapdoor to undercroft (D5 down → 10126, locked) |
+| 10177 | The Lower Vault | inside | no_mob, indoors | Contains trapdoor to undercroft (D5 down → 10126, locked) |
 | 10178 | The False Floor Gallery | inside | indoors | Contains trap exit D5 → 10125 (hidden pit, one-way) |
 | 10179 | A Side Alcove | inside | indoors, dark | |
 | 10180 | The West Wing Hall | inside | indoors | |
 | 10181 | The Stone Library | inside | indoors | Collapsed shelves, crumbled tablets |
 | 10182 | The Map Chamber | inside | indoors | Floor mosaic of the surrounding desert |
 | 10183 | The Central Hall | inside | indoors | Wide hub room, stairwells rise from here |
-| 10184 | The East Stairwell Landing | inside | indoors | D4 (up) → Floor 1 entry (10201) |
-| 10185 | The West Stairwell Landing | inside | indoors | Alternate D4 (up) → 10202 |
+| 10184 | The East Stairwell Landing | inside | no_mob, indoors | D4 (up) → Floor 1 entry (10201) |
+| 10185 | The West Stairwell Landing | inside | no_mob, indoors | Alternate D4 (up) → 10202 |
 | 10186 | A Guard Chamber | inside | indoors, dark | |
 | 10187 | The Offering Hall | inside | indoors | Ceremonial tables; empty basins |
 | 10188 | The North Inner Wing | inside | indoors | |
@@ -230,8 +230,8 @@ First ascending floor. Slightly narrower than the ground level. Scarab imagery d
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10201 | The First Ascent | inside | indoors | Entry from ground D4 (10184 ↑) |
-| 10202 | The Upper Landing | inside | indoors | Entry from alternate ground D4 (10185 ↑) |
+| 10201 | The First Ascent | inside | no_mob, indoors | Entry from ground D4 (10184 ↑) |
+| 10202 | The Upper Landing | inside | no_mob, indoors | Entry from alternate ground D4 (10185 ↑) |
 | 10203 | The Scarab Hall | inside | indoors | Giant scarab reliefs on every wall |
 | 10204 | The Beetle Colonnade | inside | indoors | Stone scarabs atop every column |
 | 10205 | An Alcove of Offerings | inside | indoors, dark | |
@@ -244,8 +244,8 @@ First ascending floor. Slightly narrower than the ground level. Scarab imagery d
 | 10212 | A Guard Room | inside | indoors, dark | |
 | 10213 | The Mosaic Floor Room | inside | indoors | Floor is one enormous scarab mosaic |
 | 10214 | The Inner Colonnade | inside | indoors | |
-| 10215 | The East Stair Landing | inside | indoors | D4 (up) → Floor 2 (10236) |
-| 10216 | The West Stair Landing | inside | indoors | D4 (up) → Floor 2 (10237) |
+| 10215 | The East Stair Landing | inside | no_mob, indoors | D4 (up) → Floor 2 (10236) |
+| 10216 | The West Stair Landing | inside | no_mob, indoors | D4 (up) → Floor 2 (10237) |
 | 10217 | A Shrine Alcove | inside | indoors, dark | |
 | 10218 | The Embalming Gallery | inside | indoors | Carved depictions of funerary rites |
 | 10219 | The Priests' Corridor | inside | indoors | |
@@ -274,8 +274,8 @@ Second floor. Narrower than Floor 1. Sacred priestly quarters and ritual chamber
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10236 | The Second Ascent | inside | indoors | Entry from Floor 1 D4 (10215 ↑) |
-| 10237 | The Priests' Landing | inside | indoors | Entry from alternate Floor 1 D4 (10216 ↑) |
+| 10236 | The Second Ascent | inside | no_mob, indoors | Entry from Floor 1 D4 (10215 ↑) |
+| 10237 | The Priests' Landing | inside | no_mob, indoors | Entry from alternate Floor 1 D4 (10216 ↑) |
 | 10238 | The High Priests' Hall | inside | indoors | |
 | 10239 | The Anointing Chamber | inside | indoors | |
 | 10240 | A Ritual Side Room | inside | indoors, dark | |
@@ -298,7 +298,7 @@ Second floor. Narrower than Floor 1. Sacred priestly quarters and ritual chamber
 | 10257 | The Hall of the Sacred Asp | inside | indoors | Cobra carvings on every surface |
 | 10258 | The Archpriest's Study | inside | indoors | |
 | 10259 | A Collapsed Vault | inside | indoors, dark | |
-| 10260 | The Upper Stair Landing | inside | indoors | D4 (up) → Floor 3 (10266), through `^iron-banded archway` (closed, no lock) |
+| 10260 | The Upper Stair Landing | inside | no_mob, indoors | D4 (up) → Floor 3 (10266), through `^iron-banded archway` (closed, no lock) |
 | 10261 | The Inner Sanctum Antechamber | inside | indoors | |
 | 10262 | The Outer Chamber | inside | indoors | |
 | 10263 | A Final Hall | inside | indoors, dark | |
@@ -313,7 +313,7 @@ Third floor. Further narrowed. The eternal vault where powerful undead are inter
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10266 | The Third Ascent | inside | indoors | Entry via `^iron-banded archway` from 10260 |
+| 10266 | The Third Ascent | inside | no_mob, indoors | Entry via `^iron-banded archway` from 10260 |
 | 10267 | The Vault Antechamber | inside | indoors | |
 | 10268 | A Sealed Side Chamber | inside | indoors, dark | |
 | 10269 | The Hall of Eternal Rest | inside | indoors | Sealed sarcophagi in wall recesses |
@@ -325,7 +325,7 @@ Third floor. Further narrowed. The eternal vault where powerful undead are inter
 | 10275 | The Preserved Archives | inside | indoors | Sealed jars of records; all unreadable |
 | 10276 | The Ritual Unguent Room | inside | indoors | |
 | 10277 | The Treacherous Overhang | inside | indoors, dark | Contains trap exit D4 → 10125 (false ceiling hatch, one-way) |
-| 10278 | The East Vault Passage | inside | indoors | D4 (up) → Floor 4 entry (10291) |
+| 10278 | The East Vault Passage | inside | no_mob, indoors | D4 (up) → Floor 4 entry (10291) |
 | 10279 | The West Vault Passage | inside | indoors | |
 | 10280 | The Canopic Shrine | inside | indoors | Four canopic jars on stone pedestals |
 | 10281 | A Collapsed Crypt Wing | inside | indoors, dark | |
@@ -347,7 +347,7 @@ Fourth floor. Narrow passages. The lair of a beast that has claimed the upper py
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10291 | The Fourth Ascent | inside | indoors | Entry from Floor 3 D4 (10278 ↑) |
+| 10291 | The Fourth Ascent | inside | no_mob, indoors | Entry from Floor 3 D4 (10278 ↑) |
 | 10292 | The Drake's Outer Hall | inside | indoors | Scorched stone; heat lingers |
 | 10293 | A Scorch-Marked Passage | inside | indoors, dark | |
 | 10294 | The Ash-Filled Chamber | inside | indoors | Deep drifts of ash from ancient fires |
@@ -360,7 +360,7 @@ Fourth floor. Narrow passages. The lair of a beast that has claimed the upper py
 | 10301 | A Heat-Shimmering Corridor | inside | indoors | Waves of heat emanate from cracks in the wall |
 | 10302 | The Nest Antechamber | inside | indoors, dark | |
 | 10303 | The Feeding Ground | inside | indoors | Gnawed bones carpet the floor |
-| 10304 | An Ascending Shaft | inside | indoors | D4 (up) → Floor 5, through `^stone sentinel gate` (locked, key 10139) |
+| 10304 | An Ascending Shaft | inside | no_mob, indoors | D4 (up) → Floor 5, through `^stone sentinel gate` (locked, key 10139) |
 | 10305 | A Side Passage | inside | indoors, dark | |
 | 10306 | The Inner Drake Hall | inside | indoors | |
 | 10307 | A Scorched Archive | inside | indoors, dark | Burned shelves, ash-covered tablets |
@@ -376,7 +376,7 @@ The topmost and smallest floor. The apex of the pyramid. The final pharaoh-spiri
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10311 | The Summit Entry | inside | indoors | Entry via `^stone sentinel gate` from 10304 |
+| 10311 | The Summit Entry | inside | no_mob, indoors | Entry via `^stone sentinel gate` from 10304 |
 | 10312 | The Apex Corridor | inside | indoors | |
 | 10313 | The Wind-Scoured Chamber | inside | indoors | Cracks in the ceiling let in hot desert air |
 | 10314 | The Golden Hall | inside | indoors | Gold leaf lines every surface |
@@ -540,7 +540,7 @@ All seven boss fragment pieces are delivered via boss loot tables and carry `ITE
 
 **Assembly extra_flags (created by combining, not looted):** `ITEM_NODROP(128) | ITEM_BOSS(134217728) | ITEM_MAGIC(64)` = **134217920**
 
-**Final Crown extra_flags:** `ITEM_RARE(1048576) | ITEM_NODROP(128) | ITEM_BOSS(134217728) | ITEM_MAGIC(64)` = **135266496**
+**Final Crown extra_flags:** `ITEM_RARE(1048576) | ITEM_NODROP(128) | ITEM_BOSS(134217728) | ITEM_MAGIC(64) | ITEM_LOOT(67108864)` = **202375360**
 
 All piece and assembly items: `item_type = 29` (ITEM_PIECE), `wear_flags = take(8388608)`.
 Final Crown: `item_type = 9` (ITEM_ARMOR), `wear_flags = head(8) | take(8388608) = 8388616`.
@@ -868,7 +868,7 @@ S
 |----------|-----------------------|---------------|
 | Boss piece fragments (loot) | NODROP+BOSS+MAGIC+LOOT | 201326784 |
 | Assembly pieces (created) | NODROP+BOSS+MAGIC | 134217920 |
-| Final Crown | RARE+NODROP+BOSS+MAGIC | 135266496 |
+| Final Crown | RARE+NODROP+BOSS+MAGIC+LOOT | 202375360 |
 | Boss gear via loot table | NODROP+BOSS+MAGIC+LOOT | 201326784 |
 | Boss gear via reset (E) | NODROP+BOSS+MAGIC | 134217920 |
 | Trash gear via loot table | NODROP+LOOT | 67108992 |
