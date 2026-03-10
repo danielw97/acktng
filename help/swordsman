@@ -1,0 +1,25 @@
+level 0
+keywords swordsman
+---
+@@cSWORDSMAN@@W
+
+Swordsmen are technical duelists who optimize edge control, timing, and clean
+follow-through. They convert disciplined fundamentals into repeatable burst.
+
+@@cPassive class advantages@@W
+  * @@wExtra attack round@@W while Swordsman remort is active.
+  * @@wCombo-family strike damage@@W for remort/adept combo attacks
+    (+2% per level, up to +200% at 100).
+  * Additional sword-specific critical and damage interactions when using
+    sword-enhancement skills.
+
+@@cUnique Swordsman mechanics@@W
+  * Access to @@wSwordsman stance@@W.
+  * High synergy with weapon-based crit chains and Crusader progression.
+  * Uses @@wStrength@@W as prime remort attribute.
+
+@@cSwordsman reincarnation bonuses@@W
+  * @@wKnight + Swordsman remort reincarnations >= 20@@W unlocks
+    @@wTwo-Handed@@W and @@wEquip Buckler@@W permanently.
+
+See also: @@mremort stance knight crusader combo reincarnate@@W

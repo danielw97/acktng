@@ -1,0 +1,22 @@
+level 0
+keywords necromancer
+---
+@@GNECROMANCER@@W
+
+Necromancers are entropy architects who weaponize decay, shadow, and attrition.
+Their power grows as enemies lose tempo and control.
+
+@@GPassive class advantages@@W
+  * @@wRemort non-physical damage@@W bonus
+    (+0.5% per level, up to +50% at 100).
+
+@@GUnique Necromancer mechanics@@W
+  * Access to @@wNecromancer stance@@W (dual-cast / no-hit caster posture).
+  * Strong dark-magic summon and drain interactions throughout remort spell kits.
+  * Uses @@wIntelligence@@W as prime remort attribute.
+
+@@GNecromancer reincarnation bonuses@@W
+  * @@wNecromancer + Egomancer remort reincarnations >= 20@@W unlocks
+    @@wEquip Wand@@W permanently.
+
+See also: @@mremort stance egomancer kinetimancer reincarnate@@W

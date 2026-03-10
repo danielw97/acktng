@@ -1,0 +1,27 @@
+level 0
+keywords wizard
+---
+@@WWIZARD@@W
+
+Wizards are precision arcanists: patient theoreticians who break combat into
+angles, timing windows, and controlled spell sequencing. If Sorcerers are
+wildfire, Wizards are the scalpel.
+
+@@WPassive class advantages@@W
+  * @@wSpell critical chance@@W increases with Wizard levels
+    (+0.1% per level, up to +10% at 100).
+  * @@wRemort non-physical damage@@W gains Wizard scaling
+    (+0.5% per level, up to +50% at 100).
+  * @@wArcane healing throughput@@W improves for INT-based arcane healing
+    (+2% per Wizard level, up to +200% at 100).
+
+@@WUnique Wizard mechanics@@W
+  * Access to @@wWizard stance@@W (dual-cast / no-hit caster posture).
+  * Shares high-end arcane synergy with Sorcerer and Grand Magi progression.
+  * Uses @@wIntelligence@@W as prime remort attribute.
+
+@@WWizard reincarnation bonuses@@W
+  * @@wWizard + Sorcerer remort reincarnations >= 20@@W unlocks
+    @@wEquip Wand@@W permanently.
+
+See also: @@mremort stance sorcerer grand_magi reincarnate@@W
