@@ -2805,6 +2805,11 @@ D3
 ~
 ~
 0 -1 11564
+D2
+@@yA passage descends south into a pitch-black alcove.@@N
+~
+~
+0 -1 11570
 S
 #11566
 @@yThe Eclipse Chamber@@N~
@@ -2823,6 +2828,11 @@ D1
 ~
 ~
 0 -1 11567
+D2
+@@yThe passage continues south into the blind gallery.@@N
+~
+~
+0 -1 11571
 S
 #11567
 @@yA Dark Side Passage@@N~
@@ -2846,6 +2856,11 @@ D3
 ~
 ~
 0 -1 11566
+D2
+@@yA passage leads south toward a crumbling ledge where the darkness seems to swallow even the faintest light.@@N
+~
+~
+0 -1 11572
 S
 #11568
 @@yThe Shadowmancer's Study@@N~
@@ -2869,6 +2884,11 @@ D3
 ~
 ~
 0 -1 11567
+D2
+@@yThe corridor extends south into the eastern shadow wing.@@N
+~
+~
+0 -1 11573
 S
 #11569
 @@yThe Inner Shadow Hall@@N~
@@ -2887,6 +2907,493 @@ D3
 ~
 ~
 0 -1 11568
+D1
+@@yThe hall opens east into a pitch-black alcove where the walls close in.@@N
+~
+~
+0 -1 11570
+D2
+@@yA passage leads south to the western shadow wing.@@N
+~
+~
+0 -1 11574
+S
+#11570
+@@yA Pitch-Black Alcove@@N~
+@@yThis cramped alcove is swallowed in absolute darkness, the @@bsandstone walls@@y pressing close on every side like the interior of a closed fist.@@N
+@@bThe ceiling hangs low enough to brush the top of a tall warrior's helm@@y, and the floor is littered with fragments of shattered obsidian that crunch underfoot.@@N
+@@yThe umbral shrine lies to the north, and the inner shadow hall opens to the west.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the umbral shrine.@@N
+~
+~
+0 -1 11565
+D3
+@@yThe hall opens west to the inner shadow hall.@@N
+~
+~
+0 -1 11569
+D2
+@@yA narrow gap leads south to the obsidian colonnade.@@N
+~
+~
+0 -1 11575
+S
+#11571
+@@yThe Blind Gallery@@N~
+@@yThis long gallery was carved for those who navigate by touch alone, its @@bwalls covered in deeply incised reliefs@@y that form patterns recognizable only by running fingers along their grooves.@@N
+@@bThe stone carvings depict scenes of the Moon Sovereign's descent@@y, each panel telling a chapter of the story through raised figures and recessed symbols.@@N
+@@yNo paint or color was ever applied here, for this gallery was meant to be experienced in total darkness by the pyramid's sightless guardians.@@N
+@@yThe eclipse chamber lies to the north, the treacherous ledge to the east, and the descent shaft to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the eclipse chamber.@@N
+~
+~
+0 -1 11566
+D1
+@@yThe gallery opens east to a crumbling ledge.@@N
+~
+~
+0 -1 11572
+D2
+@@yA passage descends south toward the descent shaft.@@N
+~
+~
+0 -1 11576
+S
+#11572
+@@yThe Treacherous Ledge@@N~
+@@yA narrow ledge of @@bcrumbling sandstone@@y runs along the edge of a yawning chasm that drops into impenetrable blackness below.@@N
+@@bThe stone underfoot is cracked and unstable@@y, webbed with fissures that widen with each footfall, and patches of the floor have already given way entirely.@@N
+@@yA faint updraft carries the scent of ancient dust from far below, and the @@Rdarkness beneath the ledge seems to pull at the unwary@@y with an almost physical force.@@N
+@@yThe dark side passage lies to the north, the east shadow wing to the east, the blind gallery to the west, and a shadow-flooded crypt to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the dark side passage.@@N
+~
+~
+0 -1 11567
+D1
+@@yThe ledge continues east to the east shadow wing.@@N
+~
+~
+0 -1 11573
+D2
+@@yA passage leads south to a shadow-flooded crypt.@@N
+~
+~
+0 -1 11577
+D3
+@@yThe gallery opens west to the blind gallery.@@N
+~
+~
+0 -1 11571
+D5
+@@yThe @@Rcracked floor shifts treacherously@@y beneath your weight, chunks of stone falling away into the void below.@@N
+~
+~
+0 -1 11450
+S
+#11573
+@@yThe East Shadow Wing@@N~
+@@yThis broad corridor forms the eastern arm of the Shadow Nave, its @@bwalls carved with elongated shadow-figures@@y that seem to writhe in the periphery of vision.@@N
+@@bBlack stone pillars@@y line both sides of the passage, each one inscribed with spiraling glyphs that absorb what little light reaches them.@@N
+@@yThe shadowmancer's study lies to the north, the west shadow wing to the east, the treacherous ledge to the west, and the darkened archive to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the shadowmancer's study.@@N
+~
+~
+0 -1 11568
+D1
+@@yThe corridor continues east to the west shadow wing.@@N
+~
+~
+0 -1 11574
+D2
+@@yA passage leads south to the darkened archive.@@N
+~
+~
+0 -1 11578
+D3
+@@yThe passage leads west to the treacherous ledge.@@N
+~
+~
+0 -1 11572
+D5
+@@yA concealed shaft drops downward through the floor into the bone-lined depths far below.@@N
+~
+~
+0 -1 11587
+S
+#11574
+@@yThe West Shadow Wing@@N~
+@@yThe western arm of the Shadow Nave stretches into a corridor where the darkness takes on an almost liquid quality, pooling in corners and flowing along the @@bsandstone floor@@y like spilled ink.@@N
+@@bAncient torch sconces@@y line the walls at regular intervals, but whatever fuel they once held has long since been consumed, leaving only @@ecorroded copper brackets@@y green with verdigris.@@N
+@@yThe inner shadow hall lies to the north, the obsidian colonnade to the east, the east shadow wing to the west, and the warden's outer guard to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the inner shadow hall.@@N
+~
+~
+0 -1 11569
+D1
+@@yThe corridor opens east to the obsidian colonnade.@@N
+~
+~
+0 -1 11575
+D2
+@@yA passage leads south to the warden's outer guard.@@N
+~
+~
+0 -1 11579
+D3
+@@yThe passage leads west to the east shadow wing.@@N
+~
+~
+0 -1 11573
+S
+#11575
+@@yThe Obsidian Colonnade@@N~
+@@yTall columns of polished @@bobsidian@@y rise from floor to ceiling in two perfect rows, their surfaces so smooth they reflect distorted shadows of anyone who passes between them.@@N
+@@bThe black volcanic glass@@y was quarried from somewhere far below and dragged up to this tier, each pillar a monument to the Moon Sovereign's obsession with shadow and reflection.@@N
+@@yBetween the columns, the floor is laid with alternating tiles of @@bblack and dark grey stone@@y that create a dizzying geometric pattern in the gloom.@@N
+@@yThe pitch-black alcove lies to the north, the west shadow wing to the west, and a narrow dark passage to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the pitch-black alcove.@@N
+~
+~
+0 -1 11570
+D2
+@@yA passage leads south to a narrow dark passage.@@N
+~
+~
+0 -1 11580
+D3
+@@yThe colonnade opens west to the west shadow wing.@@N
+~
+~
+0 -1 11574
+S
+#11576
+@@yThe Descent Shaft@@N~
+@@yA vertical shaft plunges downward through the floor of this chamber, its @@bstone-cut walls@@y fitted with iron rungs that descend into a darkness even deeper than the Shadow Nave's perpetual gloom.@@N
+@@bThe rungs are cold to the touch@@y and slick with condensation, and the air rising from below carries a dry, chalky scent utterly unlike the shadow tier's chill.@@N
+@@yThe blind gallery lies to the north, a shadow-flooded crypt to the east, and the pre-chamber hall to the south.@@N
+~
+16396 11
+D0
+@@yThe passage leads north to the blind gallery.@@N
+~
+~
+0 -1 11571
+D1
+@@yA passage leads east to a shadow-flooded crypt.@@N
+~
+~
+0 -1 11577
+D2
+@@yThe corridor continues south to the pre-chamber hall.@@N
+~
+~
+0 -1 11581
+D5
+@@yIron rungs descend into the bone-lined depths of the Ossuary below.@@N
+~
+~
+0 -1 11586
+S
+#11577
+@@yA Shadow-Flooded Crypt@@N~
+@@yThis burial chamber has been entirely consumed by shadow, the darkness here so thick it seems to resist physical passage like wading through deep water.@@N
+@@bStone sarcophagi@@y line the walls in recessed alcoves, their lids carved with the faces of forgotten priests, each expression frozen in an attitude of serene acceptance.@@N
+@@yThe air is perfectly still and carries no scent, as though even the processes of decay have been suspended by the shadow's embrace.@@N
+@@yThe treacherous ledge lies to the north, the darkened archive to the east, the descent shaft to the west, and the inner nave to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the treacherous ledge.@@N
+~
+~
+0 -1 11572
+D1
+@@yA passage leads east to the darkened archive.@@N
+~
+~
+0 -1 11578
+D2
+@@yThe corridor continues south to the inner nave.@@N
+~
+~
+0 -1 11582
+D3
+@@yThe passage leads west to the descent shaft.@@N
+~
+~
+0 -1 11576
+S
+#11578
+@@yThe Darkened Archive@@N~
+@@yRow upon row of @@bstone shelving@@y lines this chamber, each shelf holding the crumbled remains of what were once scrolls and bound codices, now reduced to brittle fragments and dust.@@N
+@@bThe shelves themselves are carved directly from the living rock@@y, integral to the walls rather than freestanding, and many still bear faded labels in a script no living scholar can decipher.@@N
+@@yA reading lectern of @@bpetrified wood@@y stands at the chamber's center, its surface worn smooth by centuries of use before the archive fell silent.@@N
+@@yThe east shadow wing lies to the north, the warden's outer guard to the east, the shadow-flooded crypt to the west, and the shadow warden's antechamber to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the east shadow wing.@@N
+~
+~
+0 -1 11573
+D1
+@@yA corridor opens east to the warden's outer guard.@@N
+~
+~
+0 -1 11579
+D2
+@@yThe passage leads south to the shadow warden's antechamber.@@N
+~
+~
+0 -1 11583
+D3
+@@yThe passage leads west to the shadow-flooded crypt.@@N
+~
+~
+0 -1 11577
+S
+#11579
+@@yThe Warden's Outer Guard@@N~
+@@yThis chamber served as the outer guard post for the Shadow Warden's sanctum, its @@bwalls still bearing the mounting brackets@@y where weapons and shields once hung in readiness.@@N
+@@bA long stone bench@@y runs along the eastern wall, its surface worn smooth by the weight of countless sentinels who sat here through endless watches in the dark.@@N
+@@yThe floor is scored with the parallel scratches of armored boots pacing the same patrol route for centuries.@@N
+@@yThe west shadow wing lies to the north, a narrow dark passage to the east, the darkened archive to the west, and the shadow warden's approach to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the west shadow wing.@@N
+~
+~
+0 -1 11574
+D1
+@@yA narrow passage leads east to a dark passage.@@N
+~
+~
+0 -1 11580
+D2
+@@yThe corridor continues south to the shadow warden's approach.@@N
+~
+~
+0 -1 11584
+D3
+@@yThe passage leads west to the darkened archive.@@N
+~
+~
+0 -1 11578
+S
+#11580
+@@yA Narrow Dark Passage@@N~
+@@yThis cramped corridor squeezes between thick @@bsandstone walls@@y that have shifted inward over the millennia, narrowing what was once a serviceable passage to a gap barely wide enough for an armored warrior to pass through sideways.@@N
+@@bScratch marks@@y on both walls at shoulder height testify to the countless bodies that have scraped through this bottleneck over the ages.@@N
+@@yThe obsidian colonnade lies to the north, and the warden's outer guard to the west.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the obsidian colonnade.@@N
+~
+~
+0 -1 11575
+D3
+@@yThe passage opens west to the warden's outer guard.@@N
+~
+~
+0 -1 11579
+S
+#11581
+@@yThe Pre-Chamber Hall@@N~
+@@yThis wide hall marks the transition from the Shadow Nave's general corridors to the restricted sanctum beyond, its @@bwalls lined with tall obsidian panels@@y that have been carved with warnings in three ancient scripts.@@N
+@@bThe floor changes here from rough-hewn sandstone to polished black marble@@y, slick and cold, reflecting the faintest hints of movement like a dark mirror.@@N
+@@yThe descent shaft lies to the north, and the inner nave opens to the east.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the descent shaft.@@N
+~
+~
+0 -1 11576
+D1
+@@yA broad corridor leads east to the inner nave.@@N
+~
+~
+0 -1 11582
+S
+#11582
+@@yThe Inner Nave@@N~
+@@yThe central nave of the Shadow Nave's deepest corridor is a soaring chamber where the ceiling vanishes into darkness above and the @@bwalls are carved with enormous bas-relief figures@@y depicting shadow-priests performing rites of binding.@@N
+@@bBlack iron chains@@y hang from unseen anchor points overhead, swaying gently in a breeze that has no source, their links clinking softly in the otherwise absolute silence.@@N
+@@yThe shadow-flooded crypt lies to the north, the shadow warden's antechamber to the east, and the pre-chamber hall to the west.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the shadow-flooded crypt.@@N
+~
+~
+0 -1 11577
+D1
+@@yThe nave continues east to the shadow warden's antechamber.@@N
+~
+~
+0 -1 11583
+D3
+@@yThe corridor opens west to the pre-chamber hall.@@N
+~
+~
+0 -1 11581
+S
+#11583
+@@yThe Shadow Warden's Antechamber@@N~
+@@yThis formal antechamber was built to impress and intimidate all who sought audience with the Shadow Warden, its @@bwalls paneled with slabs of polished obsidian@@y that create infinite dark reflections of anyone standing within.@@N
+@@bThe ceiling is vaulted in a pointed arch@@y, and from its apex hangs a massive iron chandelier that holds no candles, its empty arms reaching downward like skeletal fingers.@@N
+@@yEvery surface absorbs light with hungry efficiency, and the few sounds that penetrate this chamber are swallowed before they can produce an echo.@@N
+@@yThe darkened archive lies to the north, the shadow warden's approach to the east, and the inner nave to the west.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the darkened archive.@@N
+~
+~
+0 -1 11578
+D1
+@@yThe corridor continues east to the shadow warden's approach.@@N
+~
+~
+0 -1 11584
+D3
+@@yThe passage leads west to the inner nave.@@N
+~
+~
+0 -1 11582
+S
+#11584
+@@yThe Shadow Warden's Approach@@N~
+@@yThe final corridor before the Shadow Warden's sanctum narrows to a processional width, its @@bwalls carved with a continuous frieze@@y depicting the binding of the Shadow Warden to this tier for all eternity.@@N
+@@bThe floor tiles alternate between jet-black obsidian and deep grey granite@@y, forming a path that leads inexorably toward a @@Rshadow-wreathed portal@@y set into the southern wall.@@N
+@@yDark energy pulses visibly around the portal's frame, tendrils of shadow reaching outward as if testing for intruders.@@N
+@@yThe warden's outer guard lies to the north, and the shadow warden's antechamber to the west. A @@Rshadow-wreathed portal@@y blocks passage to the south.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the warden's outer guard.@@N
+~
+~
+0 -1 11579
+D2
+@@yBeyond the @@Rshadow-wreathed portal@@y lies the Shadow Warden's sanctum.@@N
+~
+^shadow-wreathed portal~
+1 -1 11585
+D3
+@@yThe corridor opens west to the shadow warden's antechamber.@@N
+~
+~
+0 -1 11583
+S
+#11585
+@@yThe Shadow Warden's Sanctum@@N~
+@@yThe sanctum of the Shadow Warden is a vast circular chamber carved from a single block of @@bobsidian@@y, its walls curving upward into a dome that swallows all light.@@N
+@@bThe floor is inscribed with a massive ritual circle@@y, its lines filled with @@etarnished silver inlay@@y that still glimmers faintly despite the all-consuming darkness.@@N
+@@yAt the chamber's center stands a raised dais of @@bblack marble@@y, and the air here vibrates with a subsonic hum that resonates in the chest of anyone who enters.@@N
+@@RShadow energy crackles along the walls in arcs of dark lightning@@y, and the temperature drops sharply, as though the very concept of warmth has been banished from this place.@@N
+@@yA @@Rshadow-wreathed portal@@y leads north, the only exit from this sanctum of eternal darkness.@@N
+~
+24588 11
+D0
+@@yThe @@Rshadow-wreathed portal@@y leads north out of the sanctum.@@N
+~
+^shadow-wreathed portal~
+1 -1 11584
+S
+#11586
+@@yThe Fourth Descent@@N~
+@@yThe descent shaft opens into a chamber where the walls are no longer built from @@bsandstone blocks@@y but from something far more disturbing — interlocking @@bbones@@y pressed together so tightly they form a seamless surface.@@N
+@@bSkulls stare from every direction@@y, their empty eye sockets creating an unsettling pattern that seems to track movement across the chamber.@@N
+@@yThe air is dry and carries a chalky, mineral taste that coats the tongue and throat with every breath.@@N
+@@yIron rungs lead up through the shaft to the Shadow Nave above, and the ossuary hall opens to the east.@@N
+~
+16396 11
+D1
+@@yThe passage leads east to the bone landing.@@N
+~
+~
+0 -1 11587
+D4
+@@yIron rungs lead up through the shaft to the descent shaft in the Shadow Nave above.@@N
+~
+~
+0 -1 11576
+S
+#11587
+@@yThe Bone Landing@@N~
+@@yThis secondary entry point to the Ossuary Depths is marked by a towering arch constructed entirely from @@bfused femur bones@@y, their surfaces polished smooth by centuries of contact with the dry, abrasive air.@@N
+@@bThe landing platform is paved with compressed bone-meal@@y that crunches softly underfoot, and the walls display elaborate mosaics made from fragments of @@bshattered skulls@@y arranged in geometric patterns.@@N
+@@yA shaft leads up to the east shadow wing in the tier above, the fourth descent lies to the west, and the ossuary hall continues to the east.@@N
+~
+16396 11
+D1
+@@yThe passage leads east to the ossuary hall.@@N
+~
+~
+0 -1 11588
+D3
+@@yThe corridor opens west to the fourth descent.@@N
+~
+~
+0 -1 11586
+D4
+@@yA shaft leads up to the east shadow wing in the Shadow Nave above.@@N
+~
+~
+0 -1 11573
+S
+#11588
+@@yThe Ossuary Hall@@N~
+@@yThe main hall of the Ossuary Depths stretches in both directions, its @@bwalls constructed from interlocking skulls@@y arranged in perfectly symmetrical rows that extend from floor to ceiling.@@N
+@@bEach skull faces outward@@y into the corridor, and in the dim light their hollow eye sockets create an unsettling illusion of thousands of silent witnesses observing every movement.@@N
+@@yThe ceiling is vaulted with @@brib-like arches@@y of fused bone that curve overhead in repeating Gothic patterns, and the floor is smooth with compacted bone dust.@@N
+@@yThe bone landing lies to the west, and a bone-paved corridor extends to the east.@@N
+~
+24584 11
+D1
+@@yThe corridor continues east to a bone-paved corridor.@@N
+~
+~
+0 -1 11589
+D3
+@@yThe passage leads west to the bone landing.@@N
+~
+~
+0 -1 11587
+S
+#11589
+@@yA Bone-Paved Corridor@@N~
+@@yThis dark corridor is paved with @@bflat bones@@y laid edge-to-edge like flagstones, their surfaces worn smooth by the passage of countless feet — or perhaps by the slow grinding of the pyramid's own restless architecture.@@N
+@@bThe walls are studded with protruding vertebrae@@y that serve as natural hooks, some still bearing the tattered remnants of ancient ceremonial banners reduced to grey threads.@@N
+@@yThe ossuary hall lies to the west.@@N
+~
+24585 11
+D3
+@@yThe passage leads west to the ossuary hall.@@N
+~
+~
+0 -1 11588
 S
 #0
 #$
