@@ -1,0 +1,13 @@
+#AREA
+@@yNorthern @@bPyramid@@N~
+Q 16
+K northernpyramid~
+L @@W(@@y100 120@@W)@@N~
+N 75
+I 100 120
+V 10125 10324
+X 0
+F 20
+U @@ythe ancient pyramid groans as hot desert winds sweep its stone passages@@N~
+T
+#$
