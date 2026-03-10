@@ -345,11 +345,11 @@ struct obj_stat_type
 {
    float hr_div;
    float dr_div;
+   float spellpower_div;
    float ac_div;
    float hp_div;
    float move_div;
    float mana_div;
-   float spellpower_div;
    float hrdr_bonus;
    float ac_bonus;
    float stat_bonus;
