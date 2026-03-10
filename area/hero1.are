@@ -14,22 +14,50 @@ R hero~
 W hero~
 B Currently building area.
 M No bad room spells allowed.
+#MOBILES
+#300
+gladiator~
+a gladiator~
 A large, well-trained gladiator is preparing here.
 ~
 This gladiator is a huge killing machine; perhaps you should walk away.
 ~
+3 0 0 S
+15 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#301
+rat~
+a large rat~
 A large rat is scurrying about here.
 ~
 A mangy arena rat watches you with beady, suspicious eyes.
 ~
+3 0 0 S
+5 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#302
+borg~
+Borg~
 Borg stands here, cold and implacable.
 ~
 The big borgy bastard towers over everything in the room.
 ~
+3 0 0 S
+20 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #303
@@ -47,41 +75,12 @@ A scarred trainee mutters through combat drills while eyeing the arena doors.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#304
+gladiator filthy~
+a filthy gladiator~
 A filthy gladiator stands here.
 ~
 Sweat and grime cake this battered gladiator from head to toe.
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0
-L 0 0 0 0 0 0 0 0 0
-A cook hurries here, buried in kitchen work.
-~
-Pots, pans, and shouted orders follow this exhausted kitchen veteran.
-l 0 0 0 0 0 0 0 0 0 0
-L 0 0 0 0 0 0 0 0 0
-A hurried patron is trying to get through lunch here.
-~
-This patron clutches a tray and scans for danger between every bite.
-~
-l 0 0 0 0 0 0 0 0 0 0
-L 0 0 0 0 0 0 0 0 0
-L
-10
-#301
-shield~
-shield~
-A large flaming shield~
-9 134217728 8421376 1
-0 0 0 0 0 0 0 0 0 0
-8
-A
-17 -20
-A
-18 6
-A
-19 6
-A
-13 10
-A filthy gladiator stands here~
 ~
 3 0 0 S
 8 1
@@ -89,13 +88,13 @@ A filthy gladiator stands here~
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #305
 A harried cook~
 A harried cook~
 A cook is here, harried
-~
+~
 ~
 3 0 0 S
 9 1
@@ -103,13 +102,13 @@ A cook is here, harried
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #306
 A hurried patron~
 A hurried patron~
 A hurried patron is here, trying to get through lunch
-~
+~
 ~
 3 0 0 S
 12 1
@@ -117,27 +116,10 @@ A hurried patron is here, trying to get through lunch
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
-#301
-shield~
-shield~
-A large flaming shield~
-9 134217728 8421376 1
-0 0 0 0 0 0 0 0 0 0
-8
-A
-17 -20
-A
-18 6
-A
-19 6
-A
-13 10
-L
-10
 #300
 breast plate~
 breastplate~
@@ -164,6 +146,23 @@ E
 ~
 L
 10
+#301
+shield~
+shield~
+A large flaming shield~
+9 134217728 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+17 -20
+A
+18 6
+A
+19 6
+A
+13 10
+L
+10
 #302
 a Borg's Compliance Enhancer~
 a Borg's Compliance Enhancer~
@@ -179,6 +178,33 @@ L
 10
 #303
 a Cook's White Hat~
+a Cook's White Hat~
+A cook's white hat lies here~
+9 134217728 8388616 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+10
+#304
+A patron's Ring~
+a Patron's Ring~
+A patron's ring lies here in the dust~
+8 134217728 8396800 1
+0 0 0 0 0 0 0 0 0 0
+4
+A
+13 40
+A
+12 40
+A
+14 20
+A
+18 1
+A
+19 1
+L
+10
+#0
 #ROOMS
 #300
 The Preparation Room~
@@ -301,27 +327,6 @@ D3
 ~
 0 -1 302
 S
-#0
-10
-#304
-A patron's Ring~
-a Patron's Ring~
-A patron's ring lies here in the dust~
-8 134217728 8396800 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-13 40
-A
-12 40
-A
-14 20
-A
-18 1
-A
-19 1
-L
-10
 #0
 #RESETS
 M 0 300 10 300 (null)
