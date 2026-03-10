@@ -123,14 +123,14 @@ All other rooms (including boss rooms 11495, 11530, 11560, 11585, 11605, 11625, 
 
 ### Zone 0: The Crushing Hall (1 room: 11450)
 
-This special room exists outside the pyramid's normal vertical progression. Hidden pressure plates, collapsing floors, and disguised pit covers scattered throughout the pyramid all funnel into this one chamber. It has **no exit except D5 (down) to 11509** in the Silent Crypts. Players who fall in must navigate the Silent Crypts to escape.
+This special room exists outside the pyramid's normal vertical progression. Hidden pressure plates, collapsing floors, and disguised pit covers scattered throughout the pyramid all funnel into this one chamber. It has **no exit except D4 (up) to 11509** in the Silent Crypts. Players who fall in must navigate the Silent Crypts to escape.
 
 | Vnum | Name | Sector | Flags |
 |------|------|--------|-------|
 | 11450 | The Crushing Hall | inside | no_mob, indoors, no_recall, no_teleport |
 
 **Exits:**
-- D5 (down) → 11509 (The Trap-Fall Landing in Silent Crypts); no keyword; no door
+- D4 (up) → 11509 (The Trap-Fall Landing in Silent Crypts); no keyword; no door
 
 **One-way trap exits leading IN to 11450 from across the pyramid (these rooms have exits pointing to 11450; 11450 has no reciprocal exit back to them):**
 
