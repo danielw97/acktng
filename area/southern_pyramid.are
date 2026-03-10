@@ -6134,6 +6134,312 @@ mass, dissolving flesh and bone with horrifying efficiency.
 + 0 0 0 0 0 0 0 0 0
 l 100 11560 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0
+#11614
+skeletal war drummer~
+@@ya skeletal war drummer@@N~
+@@yA skeletal war drummer@@N beats a relentless cadence on @@bbone drums@@N.
+~
+An undead percussionist whose @@bbone drums@@N are stretched with preserved skin, the war
+drummer beats a relentless cadence that rallies nearby dead. Its rhythm carries enchantment
+that strengthens its undead allies.
+~
+16481 0 -500 S
+134 0
+0 0 0 0
+! 2 7 5 7 32769 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11615
+calcite horror~
+@@ya calcite horror@@N~
+@@yA calcite horror@@N grinds forward, crystallized bone growth cracking with each step.
+~
+A crystallized bone growth animate with malice, the calcite horror's body is a mass of
+@@bmineralized bone@@N that has been fused into jagged, angular shapes by centuries of
+mineral deposition. Its strikes shatter stone.
+~
+262241 0 0 S
+140 0
+0 0 0 0
+! 2 7 0 7 41026 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11616
+venom puddle ooze~
+@@ya venom puddle ooze@@N~
+@@yA venom puddle ooze@@N spreads across the floor, its @@ecorrosive surface@@N hissing.
+~
+A corrosive toxic slime that flows across the floor like sentient liquid, the venom puddle
+ooze's @@egreen-tinged mass@@N dissolves organic matter on contact. It has no fixed form,
+simply engulfing and dissolving whatever it encounters.
+~
+327777 0 0 S
+127 0
+0 0 0 0
+! 2 7 0 7 1 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11500 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11617
+cistern lurker~
+@@ya cistern lurker@@N~
+@@yA cistern lurker@@N rises from the toxic pool, @@egreen slime@@N dripping from its hide.
+~
+An amphibious predator that hides in the Venomous Cisterns' toxic pools, the lurker's
+@@bscaled hide@@N is immune to the venom that saturates its habitat. It ambushes from
+concealment, dragging prey into the toxic waters.
+~
+97 0 0 S
+136 0
+0 0 0 0
+! 2 7 0 7 38913 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11501 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11618
+poison dart frog construct~
+@@ya poison dart frog construct@@N~
+@@yA poison dart frog construct@@N hops here, its @@ejade-and-gold@@N body gleaming.
+~
+A mechanical frog constructed from @@ejade@@N and @@ygold@@N, its articulated limbs move
+with clockwork precision. Its back secretes a potent contact poison, and it attacks by
+leaping bodily at targets.
+~
+262241 0 0 S
+130 0
+0 0 0 0
+! 2 7 0 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11502 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11619
+toxic gas wraith~
+@@ya toxic gas wraith@@N~
+@@yA toxic gas wraith@@N swirls here, a ghostly cloud of concentrated @@efumes@@N.
+~
+A ghostly cloud of concentrated toxic fumes given semi-sentient form, the wraith's
+@@etranslucent green mass@@N drifts through the corridors leaving a trail of corrosion.
+Its attacks suffocate and burn simultaneously.
+~
+82017 0 -500 S
+135 0
+0 0 0 0
+! 2 7 5 7 1 2097280 4
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11503 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11620
+lava crawler~
+@@ya lava crawler@@N~
+@@yA lava crawler@@N slithers here, its @@Rmolten body@@N leaving scorch marks.
+~
+A salamander-like beast that swims through molten stone as easily as a fish through water,
+the lava crawler's @@Rglowing body@@N radiates intense heat. Cooling patches of stone
+form and break away from its hide as it moves through cooler air.
+~
+97 0 0 S
+137 0
+0 0 0 0
+! 2 7 0 7 36865 0 1
+| 0 0 0 128 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11504 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11621
+ember revenant~
+@@yan ember revenant@@N~
+@@yAn ember revenant@@N stands here, @@Rdying flames@@N wreathing its charred armor.
+~
+A charred undead warrior wreathed in dying flames that never quite extinguish, the ember
+revenant's @@bcorroded armor@@N glows cherry-red at the joints. Its attacks combine the
+brute force of a skilled warrior with searing heat.
+~
+16481 0 -500 S
+139 0
+0 0 0 0
+! 2 7 5 7 40962 16779264 1
+| 128 64 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11505 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11622
+slag golem~
+@@ya slag golem@@N~
+@@yA slag golem@@N lumbers here, its body of cooled volcanic slag grinding and cracking.
+~
+A construct assembled from cooled volcanic slag, the golem's @@bdark grey body@@N is rough
+and pitted, studded with @@Rglowing embers@@N trapped in its surface. Its massive fists
+are clubs of solidified lava that strike with crushing force.
+~
+262241 0 0 S
+140 0
+0 0 0 0
+! 2 7 0 7 32868 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11623
+obsidian gargoyle~
+@@yan obsidian gargoyle@@N~
+@@yAn obsidian gargoyle@@N crouches here, its @@bvolcanic glass wings@@N half-spread.
+~
+A winged figure carved from @@bvolcanic glass@@N, the obsidian gargoyle's razor-edged wings
+and claws can shred armor. Its polished surface reflects the @@Rfiery glow@@N of the
+sanctum, and it strikes from above with devastating speed.
+~
+262241 0 0 S
+138 0
+0 0 0 0
+! 2 7 0 7 45058 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11624
+void acolyte~
+@@ya void acolyte@@N~
+@@yA void acolyte@@N chants here, @@Rdark energy@@N crackling between its outstretched hands.
+~
+A living cultist sustained by void magic across millennia, the acolyte's body is
+preserved in a state between life and death. Its robes are @@bblack as the void@@N, and
+@@Rdark lightning@@N plays between its fingertips as it channels destructive energy.
+~
+97 0 -500 S
+137 0
+0 0 0 0
+! 2 7 0 7 40961 1310720 16
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11506 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11625
+sovereign tomb guardian~
+@@ya sovereign's tomb guardian@@N~
+@@yA sovereign's tomb guardian@@N stands here, @@bobsidian plate armor@@N gleaming.
+~
+An elite construct clad in @@bobsidian plate@@N, the sovereign's tomb guardian is the most
+formidable of the pyramid's non-boss defenders. Its @@ygolden visor@@N tracks movement with
+mechanical precision, and its massive halberd cleaves through armor like parchment.
+~
+262243 0 0 S
+140 0
+0 0 0 0
+! 2 7 0 7 565284 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11626
+moon-touched scorpion~
+@@ya moon-touched scorpion@@N~
+@@yA moon-touched scorpion@@N clicks forward, its carapace glowing faintly @@ysilver@@N.
+~
+An oversized scorpion whose @@bchitin@@N glows faintly @@ysilver@@N with lunar enchantment,
+the moon-touched scorpion is larger and more aggressive than its mundane cousins. Its
+stinger drips with a venom enhanced by the pyramid's magic.
+~
+97 0 0 S
+135 0
+0 0 0 0
+! 2 7 0 7 4097 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 100 11507 0 0 0 0 0 0 0 0
+L 100 0 0 0 0 0 0 0 0
+#11627
+void-touched juggernaut~
+@@ya void-touched juggernaut@@N~
+@@yA void-touched juggernaut@@N looms here, @@Rdark energy@@N crackling across its massive form.
+~
+A massive construct infused with void energy, the juggernaut's @@bblack stone body@@N
+crackles with @@Rarcs of dark lightning@@N that leap between its joints. Its movements are
+slow but unstoppable, each strike carrying the weight of an avalanche.
+~
+33816673 0 0 S
+142 0
+5 5 10 10
+! 2 7 0 7 565348 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11628
+cistern matriarch~
+@@ya cistern matriarch@@N~
+@@yA cistern matriarch@@N coils in the toxic pool, its massive body dominating the chamber.
+~
+A giant serpentine predator ruling the toxic pools, the cistern matriarch's enormous
+@@escaled body@@N is immune to the venom that suffuses its domain. Its jaws can swallow
+a man whole, and its coils crush with the force of a siege engine.
+~
+33554529 0 -200 S
+140 0
+5 5 10 10
+! 2 7 0 7 45060 0 1
+| 576 144 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11629
+petrified desert titan~
+@@ya petrified desert titan@@N~
+@@yA petrified desert titan@@N towers here, its fossilized body grinding as it moves.
+~
+An enormous fossilized humanoid animated by the pyramid's magic, the desert titan stands
+twenty feet tall, its @@bstone body@@N bearing the geometric patterns of ancient @@ysand
+erosion@@N. Each step shakes the floor.
+~
+33816673 0 0 S
+142 0
+5 5 10 10
+! 2 7 0 7 41060 0 1
+| 34 4 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11630
+fungal colossus~
+@@ya fungal colossus@@N~
+@@yA fungal colossus@@N towers here, its mushroom-body trailing @@etoxic spores@@N.
+~
+A towering mushroom-creature whose @@bcap@@N brushes the ceiling, the fungal colossus's
+body is a mass of interwoven fungal tissue that trails clouds of @@etoxic spores@@N. Its
+trunk-like limbs swing with surprising speed for its bulk.
+~
+33554529 0 -200 S
+138 0
+5 5 10 10
+! 2 7 0 7 40962 0 1
+| 512 128 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#11631
+nightmare stalker~
+@@ya nightmare stalker@@N~
+@@yA nightmare stalker@@N emerges from the shadows, its form barely visible.
+~
+The apex predator of the shadow tier, the nightmare stalker is a creature of pure darkness
+whose form shifts and reforms with each movement. It hunts by instinct, striking from
+impossible angles with claws that leave wounds of frozen shadow.
+~
+33554529 0 -200 S
+140 0
+5 5 10 10
+! 2 7 0 7 563204 0 1
+| 256 8 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #$
 
