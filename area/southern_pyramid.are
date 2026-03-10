@@ -19,6 +19,11 @@ T
 @@yA ragged shaft opens upward through the ceiling, offering the only way out of this suffocating space.@@N
 ~
 24588 11
+D4
+@@yA ragged shaft climbs upward through the @@bsandstone@@y ceiling into darkness.@@N
+~
+~
+0 -1 11509
 S
 #11451
 @@yBefore the Southern Pyramid@@N~
@@ -518,6 +523,11 @@ D3
 ~
 ~
 0 -1 11468
+D5
+@@yA worn stairway descends into the silent darkness below.@@N
+~
+~
+0 -1 11496
 S
 #11473
 @@yThe Cracked Flagstone Hall@@N~
@@ -709,6 +719,11 @@ D2
 ~
 ~
 0 -1 11480
+D5
+@@yA worn stairway descends into the still air below.@@N
+~
+~
+0 -1 11497
 S
 #11480
 @@yThe Tomb Robber's Camp@@N~
@@ -924,6 +939,11 @@ D3
 ~
 ~
 0 -1 11487
+D2
+@@yThe corridor narrows further south toward the sentinel's passage.@@N
+~
+~
+0 -1 11490
 S
 #11489
 @@yA Preparation Chamber@@N~
@@ -943,6 +963,439 @@ D1
 ~
 0 -1 11486
 S
+#11490
+@@yThe Sentinel's Passage@@N~
+@@yThe corridor tightens to a single-file passage between @@bsandstone@@y walls that bear deep scratch marks from the armored shoulders of ancient sentinels.@@N
+@@bIron staples@@y driven into the walls at intervals once held chains or barrier ropes, their surfaces corroded to brittle orange stubs.@@N
+@@yThe sanctum approach lies to the north, while the passage continues south toward an entrance guarded by an imposing door.@@N
+~
+24584 11
+D0
+@@yThe passage opens north into the sanctum approach.@@N
+~
+~
+0 -1 11488
+D2
+@@yThe corridor continues south toward an imposing entrance.@@N
+~
+~
+0 -1 11491
+S
+#11491
+@@yThe Inner Sanctum Entrance@@N~
+@@yA pair of massive @@bobsidian pillars@@y frame the entrance to the pyramid's inner sanctum, their surfaces carved with spiraling lunar text that seems to writhe in the flickering torchlight.@@N
+@@bThe floor changes from fitted sandstone to smooth obsidian slabs@@y, polished to a mirror sheen by centuries of ceremonial processions.@@N
+@@yThe sentinel's passage retreats to the north, while to the south a heavy @@yobsidian door@@y blocks further progress into the sanctum.@@N
+@@eFaint traces of jade dust@@y are ground into the seams between the obsidian floor tiles, remnants of crushed ceremonial offerings.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the sentinel's corridor.@@N
+~
+~
+0 -1 11490
+D2
+@@yA heavy @@yobsidian door@@y blocks the passage south into the sanctum.@@N
+~
+^obsidian door~
+1 -1 11492
+S
+#11492
+@@yThe Waiting Hall@@N~
+@@yBeyond the @@yobsidian door@@y, a long hall stretches southward, its walls lined with @@bstone benches@@y worn smooth by the weight of countless supplicants who once waited here for audience with the Moon Sovereign's representatives.@@N
+@@bFaded tapestry hooks@@y protrude from the upper walls, the fabrics they held long since crumbled to threads.@@N
+@@yThe obsidian door stands to the north, while the hall continues south toward the final approach.@@N
+~
+24584 11
+D0
+@@yThe @@yobsidian door@@y leads north back to the sanctum entrance.@@N
+~
+^obsidian door~
+1 -1 11491
+D2
+@@yThe hall stretches south toward the final approach.@@N
+~
+~
+0 -1 11493
+S
+#11493
+@@yThe Final Approach@@N~
+@@yThe walls close in as the passage drives toward the heart of the ground level, every surface carved with increasingly elaborate scenes of the Moon Sovereign's triumph over death.@@N
+@@bGold leaf@@y still clings to the carved figures in protected crevices, catching any available light in bright flashes.@@N
+@@yThe waiting hall lies to the north, while the passage continues south toward the guardian's antechamber.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the waiting hall.@@N
+~
+~
+0 -1 11492
+D2
+@@yThe corridor continues south toward the guardian's antechamber.@@N
+~
+~
+0 -1 11494
+S
+#11494
+@@yThe Moon Guardian's Antechamber@@N~
+@@yThis formal chamber serves as the last threshold before the Moon Gate Chamber itself, its @@bsandstone@@y walls bearing life-sized carvings of armored guardians frozen in eternal vigil.@@N
+@@bPolished obsidian mirrors@@y are mounted between the carved sentinels, reflecting light in disorienting patterns that make the room seem larger than it is.@@N
+@@yThe final approach lies to the north, while to the south a massive @@ylunar vault door@@y of dark stone bars the way to the guardian's chamber.@@N
+@@eJade-studded crescent moons@@y crown each carved sentinel, marking this as sacred ground consecrated to the Moon Sovereign.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the final approach.@@N
+~
+~
+0 -1 11493
+D2
+@@yA massive @@ylunar vault door@@y of dark stone bars the passage south.@@N
+~
+^lunar vault door~
+1 -1 11495
+S
+#11495
+@@yThe Moon Gate Chamber@@N~
+@@yA vast circular chamber opens beyond the @@ylunar vault door@@y, its domed ceiling painted with a star-map so detailed that individual constellations are recognizable even through centuries of grime.@@N
+@@bThe floor is a single mosaic@@y of the full moon rendered in thousands of pale stone chips, its surface cracked but still luminous in any light.@@N
+@@yThe chamber's acoustics amplify every sound to a booming echo, the scrape of a boot sole reverberating like distant thunder.@@N
+@@eMassive jade pillars@@y ring the chamber's perimeter, their surfaces carved with the names of every priest and guardian who served the Moon Sovereign in life.@@N
+@@yThe @@ylunar vault door@@y stands to the north, the only exit from this imposing chamber.@@N
+~
+24588 11
+D0
+@@yThe @@ylunar vault door@@y leads north back to the antechamber.@@N
+~
+^lunar vault door~
+1 -1 11494
+S
+#11496
+@@yThe First Descent@@N~
+@@yA steep stairway of worn @@bsandstone@@y descends from the ground level into the Silent Crypts, the temperature dropping noticeably with each step.@@N
+@@bThe walls are lined with niches@@y containing the wrapped remains of lesser priests, their bindings yellowed and brittle with extreme age.@@N
+@@yThe stairway climbs back up to the east descent landing above, while the crypt corridor stretches east and south into oppressive silence.@@N
+@@ySound fades here as though the air itself refuses to carry it, each footfall dying the instant it is made.@@N
+~
+16396 11
+D1
+@@yThe corridor stretches east into the silent crypts.@@N
+~
+~
+0 -1 11497
+D2
+@@yThe crypt passage continues south into the whispering gallery.@@N
+~
+~
+0 -1 11501
+D4
+@@yThe stairway climbs back up to the ground level.@@N
+~
+~
+0 -1 11472
+S
+#11497
+@@yThe Lower Landing@@N~
+@@yA second stairway arrives from the ground level above, depositing visitors onto a landing of cracked @@bsandstone@@y that has settled unevenly over the centuries.@@N
+@@bA crude map@@y has been scratched into the wall at eye height, its lines depicting the crypt layout with surprising accuracy, though several passages are marked with skull symbols.@@N
+@@yStairs climb to the west descent landing above, while corridors lead west, east, and south into the crypts.@@N
+~
+16396 11
+D1
+@@yA corridor stretches east into the silent hall.@@N
+~
+~
+0 -1 11498
+D2
+@@yThe passage continues south into a collapsed crypt wing.@@N
+~
+~
+0 -1 11502
+D3
+@@yThe corridor leads west to the first descent landing.@@N
+~
+~
+0 -1 11496
+D4
+@@yThe stairway climbs back up to the ground level.@@N
+~
+~
+0 -1 11479
+S
+#11498
+@@yThe Silent Hall@@N~
+@@yThis broad corridor earns its name: sound dies within paces, swallowed by the thick @@bsandstone@@y walls and the oppressive weight of stone overhead.@@N
+@@bDust hangs motionless@@y in the air, undisturbed by any current, forming a faint grey haze that obscures vision beyond a few body lengths.@@N
+@@yThe hall connects west to the lower landing, east to a dust-choked corridor, and south to the embalmer's workshop.@@N
+~
+24584 11
+D1
+@@yA corridor continues east, choked with undisturbed dust.@@N
+~
+~
+0 -1 11499
+D2
+@@yThe passage leads south to the embalmer's workshop.@@N
+~
+~
+0 -1 11503
+D3
+@@yThe hall leads west toward the lower landing.@@N
+~
+~
+0 -1 11497
+S
+#11499
+@@yThe Dust-Choked Corridor@@N~
+@@yUndisturbed dust lies inches thick across the floor of this corridor, so deep that each step raises a silent plume that hangs in the air and refuses to settle.@@N
+@@bThe walls are rough-hewn @@bsandstone@@y here, less carefully finished than the main corridors, suggesting this passage was carved in haste or by lesser craftsmen.@@N
+@@yThe corridor connects west to the silent hall and east to a sealed burial niche, with a narrow passage leading south.@@N
+~
+24585 11
+D1
+@@yThe corridor continues east toward a sealed alcove.@@N
+~
+~
+0 -1 11500
+D2
+@@yA narrow passage leads south into darkness.@@N
+~
+~
+0 -1 11504
+D3
+@@yThe corridor leads west toward the silent hall.@@N
+~
+~
+0 -1 11498
+S
+#11500
+@@yA Sealed Burial Niche@@N~
+@@yA heavy @@bstone slab@@y has been dragged partially aside from the mouth of this burial niche, revealing a cramped interior lined with wrapped remains stacked three high.@@N
+@@bThe wrappings have dried to a papery brittleness@@y, and the faintest touch would crumble them to powder, exposing the dark bones beneath.@@N
+@@yThe only exit leads west back to the dust-choked corridor, and the air here carries the sharp scent of ancient preserving salts.@@N
+~
+24585 11
+D2
+@@yA narrow passage leads south past rows of sarcophagi.@@N
+~
+~
+0 -1 11505
+D3
+@@yThe passage leads west into the dust-choked corridor.@@N
+~
+~
+0 -1 11499
+S
+#11501
+@@yThe Whispering Gallery@@N~
+@@yDespite the pervasive silence of the crypts, this gallery carries the faintest sounds in eerie, distorted echoes that seem to come from everywhere and nowhere at once.@@N
+@@bThe curved ceiling@@y is shaped like the inside of a bell, its @@bsandstone@@y surface smooth and uncarved, designed by ancient acousticians for some ritual purpose now forgotten.@@N
+@@yThe first descent lies to the north, while passages continue east into the collapsed crypt wing and south to the prayer alcove.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the first descent.@@N
+~
+~
+0 -1 11496
+D1
+@@yA corridor continues east into a partially collapsed wing.@@N
+~
+~
+0 -1 11502
+D2
+@@yThe passage leads south to the prayer alcove.@@N
+~
+~
+0 -1 11506
+S
+#11502
+@@yA Collapsed Crypt Wing@@N~
+@@yThe ceiling has given way here, dropping @@bhuge sandstone blocks@@y across the passage and sealing off what was once a larger crypt complex to the east.@@N
+@@bCrushed burial jars@@y and scattered bone fragments litter the rubble, disturbed from their resting places by the collapse.@@N
+@@yRubble-choked gaps permit passage north to the lower landing, west to the whispering gallery, east to the workshop, and south through a narrow root tunnel.@@N
+~
+24585 11
+D0
+@@yA gap in the rubble leads north toward the landing.@@N
+~
+~
+0 -1 11497
+D1
+@@yA narrow gap opens east toward the workshop.@@N
+~
+~
+0 -1 11503
+D2
+@@yA narrow tunnel leads south through tangled roots.@@N
+~
+~
+0 -1 11507
+D3
+@@yThe passage leads west to the whispering gallery.@@N
+~
+~
+0 -1 11501
+S
+#11503
+@@yThe Embalmer's Workshop@@N~
+@@yStone shelves line every wall of this chamber, filled with rows of @@bcanopic jars@@y in various states of preservation, their lids shaped like jackal and falcon heads.@@N
+@@bA long stone table@@y occupies the center of the room, its surface channeled with grooves that directed fluids into collection basins at each corner.@@N
+@@yThe workshop connects north to the silent hall, west to the collapsed wing, east through a stone-floored passage, and south to the ossuary antechamber.@@N
+@@eA faint greenish residue@@y stains the collection basins, the chemical remnants of preserving compounds that have outlasted everything they were meant to preserve.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the silent hall.@@N
+~
+~
+0 -1 11498
+D1
+@@yA stone-floored passage continues east.@@N
+~
+~
+0 -1 11504
+D2
+@@yThe passage leads south toward the ossuary antechamber.@@N
+~
+~
+0 -1 11508
+D3
+@@yA narrow gap opens west toward the collapsed wing.@@N
+~
+~
+0 -1 11502
+S
+#11504
+@@yA Stone-Floored Passage@@N~
+@@yThe floor of this passage is a single unbroken slab of grey @@bsandstone@@y, polished so smooth that it reflects faint light like still water.@@N
+@@bThe ceiling is low@@y and oppressive, barely head height, and the walls press close on either side without decoration or carving.@@N
+@@yThe passage connects north to the dust-choked corridor, west to the embalmer's workshop, east to the sarcophagus row, and south to the trap-fall landing.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the dust-choked corridor.@@N
+~
+~
+0 -1 11499
+D1
+@@yThe passage continues east toward rows of sarcophagi.@@N
+~
+~
+0 -1 11505
+D2
+@@yThe passage leads south to a landing area.@@N
+~
+~
+0 -1 11509
+D3
+@@yThe passage opens west to the embalmer's workshop.@@N
+~
+~
+0 -1 11503
+S
+#11505
+@@yThe Sarcophagus Row@@N~
+@@yFour massive stone sarcophagi stand in a precise row across this chamber, their lids carved with the likenesses of armored warriors in eternal repose.@@N
+@@bThe sarcophagi are sealed@@y with @@bleaden bands@@y that have oxidized to a dull grey, their surfaces inscribed with protective wards against grave robbers.@@N
+@@yThe chamber opens north toward a sealed burial niche and west to the stone-floored passage.@@N
+~
+24584 11
+D0
+@@yThe passage leads north toward the sealed niche.@@N
+~
+~
+0 -1 11500
+D3
+@@yThe passage leads west through a stone-floored corridor.@@N
+~
+~
+0 -1 11504
+S
+#11506
+@@yThe Prayer Alcove@@N~
+@@yA defaced altar of @@bcracked sandstone@@y stands at the center of this alcove, its surface gouged and chipped by someone who methodically destroyed the lunar carvings that once adorned it.@@N
+@@bScattered stone chips@@y litter the floor around the altar's base, the debris of the desecration left where it fell.@@N
+@@yThe whispering gallery lies to the north, and a narrow root tunnel opens to the east.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the whispering gallery.@@N
+~
+~
+0 -1 11501
+D1
+@@yA narrow tunnel opens east through tangled roots.@@N
+~
+~
+0 -1 11507
+S
+#11507
+@@yA Narrow Root Tunnel@@N~
+@@yAncient roots have pushed through the ceiling and walls of this tunnel, creating a claustrophobic maze of @@bpetrified tendrils@@y that must be ducked under and squeezed past.@@N
+@@bThe roots are stone-hard@@y and smooth, their surfaces darkened to near-black by millennia of mineral absorption from the surrounding rock.@@N
+@@yThe tunnel connects west to the prayer alcove, north to the collapsed wing, and east to the ossuary antechamber.@@N
+~
+24585 11
+D0
+@@yA gap leads north through rubble to the collapsed wing.@@N
+~
+~
+0 -1 11502
+D1
+@@yThe tunnel opens east into a larger chamber.@@N
+~
+~
+0 -1 11508
+D3
+@@yThe tunnel winds west to the prayer alcove.@@N
+~
+~
+0 -1 11506
+S
+#11508
+@@yThe Ossuary Antechamber@@N~
+@@yBones are stacked in neat rows along every wall of this chamber, sorted by type: skulls on the highest shelf, femurs below, then ribs, then the smaller bones in @@bwoven baskets@@y at floor level.@@N
+@@bThe organization is meticulous@@y, the work of devoted priests who tended these remains for generations.@@N
+@@yThe embalmer's workshop lies to the north, a narrow root tunnel to the west, and corridors continue east and south deeper into the crypts.@@N
+~
+24584 11
+D0
+@@yThe passage leads north to the embalmer's workshop.@@N
+~
+~
+0 -1 11503
+D1
+@@yA corridor leads east to the trap-fall landing.@@N
+~
+~
+0 -1 11509
+D3
+@@yA narrow tunnel winds west through tangled roots.@@N
+~
+~
+0 -1 11507
+S
+#11509
+@@yThe Trap-Fall Landing@@N~
+@@yThis chamber marks the bottom of a vertical shaft that drops from somewhere far above, its @@bsandstone@@y walls scarred with the desperate claw-marks of those who fell here.@@N
+@@bShattered bones and rusted equipment@@y litter the floor beneath the shaft opening, grim evidence that the fall has claimed many victims over the centuries.@@N
+@@yThe landing connects west to the ossuary antechamber and north to the stone-floored passage, while corridors continue deeper into the crypts.@@N
+@@yA faint draft descends from the shaft above, carrying the scent of dust from the upper levels.@@N
+~
+24585 11
+D0
+@@yThe passage leads north to the stone-floored corridor.@@N
+~
+~
+0 -1 11504
+D3
+@@yThe passage leads west to the ossuary antechamber.@@N
+~
+~
+0 -1 11508
+S
 #0
 #$
+
 
