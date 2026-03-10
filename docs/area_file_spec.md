@@ -35,6 +35,7 @@ Implications:
 - Strings must not contain back-to-back newlines (no blank lines represented by `\n\n`).
 - A missing `~` causes parse failure.
 - For mobile `long_descr` and mobile `description`, the string must end with exactly one newline immediately before the terminating `~` (i.e., the final line is just `~`, with no extra trailing blank lines).
+- Vnums must never be mentioned in in-world description text. This includes room descriptions, mobile descriptions (`long_descr`/`description`), object descriptions, extra descriptions, and exit descriptions.
 
 ### 2.1) In-string color codes (`colist`)
 
