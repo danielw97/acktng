@@ -303,6 +303,8 @@ static void consume_tilde_string(FILE *fp, char *line, int *line_number, const c
 static void parse_area_section(FILE *fp, char *line, int *line_number, const char *area_path)
 {
     const char *trimmed;
+    int saw_required_q16 = 0;
+    int saw_v_directive = 0;
 
     consume_tilde_string(fp, line, line_number, area_path);
 
@@ -314,7 +316,7 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
             if (fseek(fp, -(long)strlen(line), SEEK_CUR) != 0)
                 fail_area_test(area_path, *line_number, "unable to rewind while parsing #AREA");
             (*line_number)--;
-            return;
+            break;
         }
 
         if (trimmed[0] == '\0' || trimmed[0] == '\r' || trimmed[0] == '\n')
@@ -326,10 +328,55 @@ static void parse_area_section(FILE *fp, char *line, int *line_number, const cha
         if (strchr("QKNILVXFUORWPTBSM", trimmed[0]) == NULL)
             fail_area_test(area_path, *line_number, "invalid #AREA directive '%c'", trimmed[0]);
 
+        if (trimmed[0] == 'Q')
+        {
+            int values[1];
+
+            if (parse_int_tokens(trimmed + 1, values, 1) != 1 || !parse_exact_n_ints(trimmed + 1, 1))
+                fail_area_test(area_path, *line_number, "#AREA 'Q' directive must be formatted as: Q <revision>");
+
+            if (values[0] != 16)
+                fail_area_test(area_path, *line_number, "#AREA 'Q' directive must use revision 16");
+
+            if (saw_required_q16)
+                fail_area_test(area_path, *line_number, "#AREA must contain exactly one 'Q 16' directive");
+
+            saw_required_q16 = 1;
+        }
+        else if (trimmed[0] == 'I' || trimmed[0] == 'V')
+        {
+            if (!parse_exact_n_ints(trimmed + 1, 2))
+                fail_area_test(area_path, *line_number, "#AREA '%c' directive must contain exactly 2 integers", trimmed[0]);
+
+            if (trimmed[0] == 'V')
+            {
+                int values[2];
+
+                if (saw_v_directive)
+                    fail_area_test(area_path, *line_number, "#AREA must contain exactly one 'V <min> <max>' directive");
+
+                parse_int_tokens(trimmed + 1, values, 2);
+                if (values[0] > values[1])
+                    fail_area_test(area_path, *line_number, "#AREA 'V' directive min vnum must be <= max vnum");
+
+                saw_v_directive = 1;
+            }
+        }
+        else if (trimmed[0] == 'N' || trimmed[0] == 'X' || trimmed[0] == 'F')
+        {
+            if (!parse_exact_n_ints(trimmed + 1, 1))
+                fail_area_test(area_path, *line_number, "#AREA '%c' directive must contain exactly 1 integer", trimmed[0]);
+        }
+
         /* Directives K, L, O, U take tilde-terminated string values that may span multiple lines */
         if (strchr("KLOU", trimmed[0]) != NULL && strchr(line, '~') == NULL)
             consume_tilde_string(fp, line, line_number, area_path);
     }
+
+    if (!saw_required_q16)
+        fail_area_test(area_path, *line_number, "missing required #AREA directive 'Q 16'");
+    if (!saw_v_directive)
+        fail_area_test(area_path, *line_number, "missing required #AREA directive 'V <min> <max>'");
 }
 
 static void parse_mobiles_section(FILE *fp, char *line, int *line_number, const char *area_path)
