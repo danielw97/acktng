@@ -514,6 +514,11 @@ All strong mobs: `act` = `is_npc(1) | aggressive(32) | stay_area(64) | solo(3355
 | 11510 | a toxic sand elemental | 139 | Ground, Tier 1 | Poisonous sand elemental. no_mind. 3_attack, enhanced, dodge. Cast: acid_blast, col_spray. Spec: spec_cast_mage. |
 | 11511 | an ancient basalt guardian | 142 | Tier 2, Tier 3 | Massive black-stone construct. no_mind, sentinel. 4_attack, enhanced, parry, nodisarm, notrip. |
 | 11512 | a greater bone overlord | 140 | Tier 3, Tier 4 | Towering skeletal warlord-spirit. undead. 3_attack, enhanced, parry, counter. Cast: suffocate, ego_whip. Spec: spec_cast_undead. |
+| 11627 (mob) | a void-touched juggernaut | 142 | Tier 6, Tier 7 | Massive construct infused with void energy. no_mind. 4_attack, enhanced, parry, counter, nodisarm, notrip. |
+| 11628 (mob) | a cistern matriarch | 140 | Tier 5 | Giant serpentine predator ruling the toxic pools. 4_attack, enhanced, parry, dodge. Spec: spec_poison. |
+| 11629 (mob) | a petrified desert titan | 142 | Ground, Tier 1 | Enormous fossilized humanoid animated by pyramid magic. no_mind. 4_attack, enhanced, parry, nodisarm, notrip. Spec: spec_cast_mage. |
+| 11630 (mob) | a fungal colossus | 138 | Tier 2 | Towering mushroom-creature trailing toxic spores. 3_attack, enhanced, parry. Spec: spec_disease. |
+| 11631 (mob) | a nightmare stalker | 140 | Tier 3, Tier 4 | Apex predator of the shadow tier. 4_attack, enhanced, dodge, trip, counter. |
 
 ---
 
@@ -571,6 +576,36 @@ All trash: `act` = `is_npc(1) | aggressive(32) | stay_area(64)` = **97**
 | 11508 | a charred bone husk | 139 | Tier 5, Tier 6 | Undead burned to blackened bone. undead. 3_attack, enhanced. Strong: fire. Weak: water. |
 | 11509 | a void sentinel | 140 | Tier 7 | The last stone guardian before the throne. no_mind, sentinel. 3_attack, enhanced, parry, nodisarm. |
 | 11513 | a gilded moon shade | 138 | Tier 7 | Ghost of a royal bodyguard in ceremonial obsidian. undead. 2_attack, enhanced. Cast: mind_bolt. |
+| 11597 (mob) | a petrified sand wurm | 134 | Ground, Tier 1 | Burrowing worm fossilized mid-strike. no_mind. 3_attack, enhanced, notrip. |
+| 11598 (mob) | a tomb guardian jackal | 130 | Ground | Undead jackal bound to patrol. undead. 2_attack, dodge, trip. |
+| 11599 (mob) | an embalmed crocodile | 133 | Ground, Tier 1 | Preserved reptile animated by curse. undead, no_mind. 3_attack, enhanced. |
+| 11600 (mob) | a dust devil spirit | 127 | Ground | Whirling sand elemental fragment. no_body, no_mind. 2_attack, dodge. |
+| 11601 (mob) | a whispering wraith | 131 | Tier 1 | Translucent shade that mouths silent curses. undead, no_body. Cast: weaken, blindness, chill_touch. |
+| 11602 (mob) | a calcified serpent | 129 | Tier 1, Tier 2 | Mineralized snake, still strikes. no_mind. 2_attack, dodge. Spec: spec_poison. |
+| 11603 (mob) | a tomb beetle colossus | 136 | Tier 1, Tier 2 | Man-sized scarab with iron mandibles. no_mind. 3_attack, enhanced, parry. |
+| 11604 (mob) | a mold-ridden ghoul | 135 | Tier 2 | Fungal growth erupts from rotting flesh. undead. 2_attack, enhanced, drain. Spec: spec_disease. |
+| 11605 (mob) | a bloated corpse walker | 132 | Tier 2 | Swollen cadaver leaking toxic gas. undead. 2_attack, enhanced. |
+| 11606 (mob) | a decay spider | 128 | Tier 2 | Eight-legged creature woven from rotting sinew. 2_attack, dodge, trip. Spec: spec_poison. |
+| 11607 (mob) | a mildew phantom | 134 | Tier 2, Tier 3 | Ghostly outline dripping condensation. undead, no_body. Cast: chill_touch, weaken. Def: cure_light. |
+| 11608 (mob) | a shadow hound | 137 | Tier 3 | Pack hunter from the dark. 2_attack, enhanced, dodge, trip. |
+| 11609 (mob) | a nightmare sentinel | 139 | Tier 3 | Animated suit of black iron armor. no_mind. 3_attack, enhanced, parry, nodisarm. |
+| 11610 (mob) | a shade dancer | 133 | Tier 3 | Flickering silhouette that attacks from blind spots. 2_attack, dodge, trip. |
+| 11611 (mob) | a darkfire wisp | 126 | Tier 3, Tier 4 | Small sphere of black flame. no_body, no_mind. 2_attack. Cast: burn_hands, flare. |
+| 11612 (mob) | an ossuary spider | 131 | Tier 4 | Spider constructed from finger bones. no_mind. 2_attack, dodge, trip. Spec: spec_poison. |
+| 11613 (mob) | a marrow elemental | 138 | Tier 4, Tier 5 | Oozing mass of liquefied bone marrow. no_mind. 3_attack, enhanced. |
+| 11614 (mob) | a skeletal war drummer | 134 | Tier 4 | Undead percussionist that rallies nearby dead. undead. 2_attack, enhanced. Cast: haste, armor. |
+| 11615 (mob) | a calcite horror | 140 | Tier 4, Tier 5 | Crystallized bone growth animate with malice. no_mind. 3_attack, enhanced, parry, notrip. |
+| 11616 (mob) | a venom puddle ooze | 127 | Tier 5 | Corrosive toxic slime. no_body, no_mind. 2_attack. Spec: spec_poison. |
+| 11617 (mob) | a cistern lurker | 136 | Tier 5 | Amphibious predator that hides in toxic pools. 2_attack, enhanced, dodge, trip. |
+| 11618 (mob) | a poison dart frog construct | 130 | Tier 5 | Jade-and-gold mechanical frog. no_mind. 2_attack, dodge. Spec: spec_poison. |
+| 11619 (mob) | a toxic gas wraith | 135 | Tier 5, Tier 6 | Ghostly cloud of concentrated fumes. undead, no_body. Cast: acid_blast, suffocate. Def: cure_serious. |
+| 11620 (mob) | a lava crawler | 137 | Tier 6 | Salamander-like beast that swims through molten stone. 2_attack, enhanced, dodge. Resist: fire. |
+| 11621 (mob) | an ember revenant | 139 | Tier 6 | Charred undead warrior wreathed in dying flames. undead. 3_attack, enhanced, parry. Cast: heat_armor, flamestrike. |
+| 11622 (mob) | a slag golem | 140 | Tier 6 | Construct of cooled volcanic slag. no_mind. 4_attack, enhanced, nodisarm, notrip. |
+| 11623 (mob) | an obsidian gargoyle | 138 | Tier 6, Tier 7 | Winged figure carved from volcanic glass. no_mind. 3_attack, enhanced, dodge, parry. |
+| 11624 (mob) | a void acolyte | 137 | Tier 7 | Living cultist sustained by void magic across millennia. 2_attack, enhanced, parry. Cast: mindflame, ego_whip. Def: heal. |
+| 11625 (mob) | a sovereign's tomb guardian | 140 | Tier 7 | Elite construct clad in obsidian plate. no_mind, sentinel. 4_attack, enhanced, parry, counter, nodisarm. |
+| 11626 (mob) | a moon-touched scorpion | 135 | Tier 5, Tier 6 | Oversized scorpion glowing faintly silver. 2_attack, dodge. Spec: spec_poison. |
 
 **Note on vnum reuse:** Mob vnums 11463–11513 overlap numerically with object vnums in the same range. Cross-type vnum overlap is permitted by the spec; each is unique within its own type index.
 
@@ -785,8 +820,43 @@ All items include `take(8388608)` in wear_flags.
 | 11594 | a toxic sand elemental's howling band | armor (9) | wrist\|take | 1 | L 139 | Reset (E) | toxic sand elemental |
 | 11595 | an ancient basalt guardian's plate arm | armor (9) | arms\|take | 11 | L 142 | Reset (E) | ancient basalt guardian |
 | 11596 | a bone overlord's burial circlet | armor (9) | head\|take | 11 | L 140 | Reset (E) | greater bone overlord |
+| 11597 | a petrified sand wurm's calcified fang | weapon (5) | hold\|take | 6 | L 134 | Loot | petrified sand wurm; value3=10 (bite) |
+| 11598 | a tomb jackal's obsidian collar | armor (9) | neck\|take | 11 | L 130 | Loot | tomb guardian jackal |
+| 11599 | embalmed crocodile scale greaves | armor (9) | legs\|take | 11 | L 133 | Loot | embalmed crocodile |
+| 11600 | a dust devil's swirling band | armor (9) | finger\|take | 1 | L 127 | Loot | dust devil spirit |
+| 11601 (obj) | a whispering wraith's torn veil | armor (9) | face\|take | 1 | L 131 | Loot | whispering wraith |
+| 11602 (obj) | calcified serpent scale pauldrons | armor (9) | shoulders\|take | 11 | L 129 | Loot | calcified serpent |
+| 11603 (obj) | tomb beetle mandible gauntlets | armor (9) | hands\|take | 11 | L 136 | Loot | tomb beetle colossus |
+| 11604 (obj) | a mold-ridden ghoul's festering girdle | armor (9) | waist\|take | 1 | L 135 | Loot | mold-ridden ghoul |
+| 11605 (obj) | a bloated corpse walker's burst vest | armor (9) | body\|take | 11 | L 132 | Loot | bloated corpse walker |
+| 11606 (obj) | decay spider silk wraps | armor (9) | wrist\|take | 1 | L 128 | Loot | decay spider |
+| 11607 (obj) | a mildew phantom's dripping cowl | armor (9) | head\|take | 1 | L 134 | Loot | mildew phantom |
+| 11608 (obj) | shadow hound fang necklace | armor (9) | neck\|take | 6 | L 137 | Loot | shadow hound |
+| 11609 (obj) | a nightmare sentinel's black iron helm | armor (9) | head\|take | 11 | L 139 | Reset (E) | nightmare sentinel |
+| 11610 (obj) | shade dancer's flickering sash | armor (9) | waist\|take | 1 | L 133 | Loot | shade dancer |
+| 11611 (obj) | a darkfire wisp's ember cinder | armor (9) | hold\|take | 1 | L 126 | Loot | darkfire wisp; light source |
+| 11612 (obj) | an ossuary spider's bone-silk bracer | armor (9) | wrist\|take | 1 | L 131 | Loot | ossuary spider |
+| 11613 (obj) | a marrow elemental's slick boots | armor (9) | feet\|take | 11 | L 138 | Loot | marrow elemental |
+| 11614 (obj) | a skeletal war drummer's bone drumstick | weapon (5) | hold\|take | 6 | L 134 | Loot | skeletal war drummer; value3=7 (pound) |
+| 11615 (obj) | calcite horror shard plate | armor (9) | body\|take | 11 | L 140 | Loot | calcite horror |
+| 11616 (obj) | a venom puddle ooze's corroded ring | armor (9) | finger\|take | 1 | L 127 | Loot | venom puddle ooze |
+| 11617 (obj) | cistern lurker scale leggings | armor (9) | legs\|take | 11 | L 136 | Loot | cistern lurker |
+| 11618 (obj) | a jade dart frog's golden eye | armor (9) | ear\|take | 1 | L 130 | Loot | poison dart frog construct |
+| 11619 (obj) | toxic gas wraith's acrid shroud | armor (9) | about\|take | 1 | L 135 | Loot | toxic gas wraith |
+| 11620 (obj) | lava crawler's igneous hide vest | armor (9) | body\|take | 11 | L 137 | Loot | lava crawler |
+| 11621 (obj) | an ember revenant's smoldering blade | weapon (5) | hold\|take | 6 | L 139 | Loot | ember revenant; value3=3 (slash) |
+| 11622 (obj) | a slag golem's cooled-iron fist | weapon (5) | hold\|take | 11 | L 140 | Reset (E) | slag golem; ITEM_FIST; value3=0 |
+| 11623 (obj) | obsidian gargoyle wing-plate pauldrons | armor (9) | shoulders\|take | 11 | L 138 | Loot | obsidian gargoyle |
+| 11624 (obj) | a void acolyte's dark prayer beads | armor (9) | neck\|take | 1 | L 137 | Loot | void acolyte |
+| 11625 (obj) | sovereign tomb guardian's obsidian greaves | armor (9) | legs\|take | 11 | L 140 | Reset (E) | sovereign's tomb guardian |
+| 11626 (obj) | moon-touched scorpion tail barb | weapon (5) | hold\|take | 6 | L 135 | Loot | moon-touched scorpion; value3=2 (stab); spec_poison |
+| 11627 (obj) | void-touched juggernaut's core plate | armor (9) | body\|take | 11 | L 142 | Reset (E) | void-touched juggernaut |
+| 11628 (obj) | cistern matriarch's venom-drip crown | armor (9) | head\|take | 1 | L 140 | Reset (E) | cistern matriarch |
+| 11629 (obj) | petrified desert titan's stone fist | weapon (5) | hold\|take | 11 | L 142 | Reset (E) | petrified desert titan; ITEM_FIST; value3=0 |
+| 11630 (obj) | fungal colossus spore-cap helm | armor (9) | head\|take | 1 | L 138 | Reset (E) | fungal colossus |
+| 11631 (obj) | nightmare stalker's shadowed claws | weapon (5) | hold\|take | 6 | L 140 | Reset (E) | nightmare stalker; value3=5 (claw) |
 
-**Note:** Object vnums 11541–11596 overlap with mob vnums in the same range. Cross-type overlap is permitted; each is unique within its type index.
+**Note:** Object vnums 11541–11631 overlap with mob vnums in the same range. Cross-type overlap is permitted; each is unique within its type index.
 
 ---
 
@@ -836,19 +906,29 @@ M 0 11511 2 11546  ancient basalt guardian
 M 0 11511 2 11563  ancient basalt guardian
 M 0 11512 2 11569  greater bone overlord
 M 0 11512 2 11588  greater bone overlord
+M 0 11627 2 11635  void-touched juggernaut
+M 0 11627 2 11641  void-touched juggernaut
+M 0 11628 2 11610  cistern matriarch
+M 0 11628 2 11616  cistern matriarch
+M 0 11629 2 11457  petrified desert titan
+M 0 11629 2 11475  petrified desert titan
+M 0 11630 2 11535  fungal colossus
+M 0 11630 2 11541  fungal colossus
+M 0 11631 2 11571  nightmare stalker
+M 0 11631 2 11582  nightmare stalker
 ```
 
 ### Trash Mob Resets (representative sample, ~60–80 total resets)
 
 Distributed across zones by level:
-- **Ground Level (11451–11494):** Desert tomb scarab swarms, moon-cursed skeletons, desiccated mummies, venomous scorpions, grave robber's specters, sand hyenas, basalt guardian statues, canopic abominations, animated obelisk shards, cursed pyramid laborers, desert pit vipers, obsidian sentinel constructs, carrion fly swarms, skeletal desert rats, bone crawlers, sand-choked revenants (~28 resets)
-- **Tier 1 — Silent Crypts (11496–11529):** Jade asps, desert vultures, obsidian golems, basalt statues, cursed laborers, sentinel constructs, moon glyph guardians, animated burial jars, scribal phantoms, sand-bound mummy thralls, scarab swarms, desiccated mummies (~20 resets)
-- **Tier 2 — Rotting Galleries (11531–11559):** Decay acolytes, rot wights, stone scarab sentinels, tomb cobras, animated burial jars, mummy thralls, rot priest thralls, fungal wraiths, curse-bound sentinels (~16 resets)
-- **Tier 3 — Shadow Nave (11561–11584):** Shadow archers, great shadow vultures, shadow face guardians, creeping shadows, shadow assassins, fungal wraiths, curse-bound sentinels, entombed generals, bone golems, crypt stalkers (~14 resets)
-- **Tier 4 — Ossuary Depths (11586–11604):** Animated bone pillars, venomous golden cobras, bone cultists, death hawks, bone revenants, bone golems (~12 resets)
-- **Tier 5 — Venomous Cisterns (11606–11624):** Void specters, venomous golden cobras, death hawks, magma lizards, charred bone husks (~8 resets)
-- **Tier 6 — Molten Sanctum (11626–11638):** Magma lizards, charred bone husks, void specters (~6 resets)
-- **Tier 7 — Void Throne (11640–11648):** Void sentinels, gilded moon shades (~4 resets)
+- **Ground Level (11451–11494):** Desert tomb scarab swarms, moon-cursed skeletons, desiccated mummies, venomous scorpions, grave robber's specters, sand hyenas, basalt guardian statues, canopic abominations, animated obelisk shards, cursed pyramid laborers, desert pit vipers, obsidian sentinel constructs, carrion fly swarms, skeletal desert rats, bone crawlers, sand-choked revenants, tomb guardian jackals, dust devil spirits, embalmed crocodiles, petrified sand wurms (~36 resets)
+- **Tier 1 — Silent Crypts (11496–11529):** Jade asps, desert vultures, obsidian golems, basalt statues, cursed laborers, sentinel constructs, moon glyph guardians, animated burial jars, scribal phantoms, sand-bound mummy thralls, scarab swarms, desiccated mummies, whispering wraiths, calcified serpents, tomb beetle colossi, petrified sand wurms, embalmed crocodiles (~26 resets)
+- **Tier 2 — Rotting Galleries (11531–11559):** Decay acolytes, rot wights, stone scarab sentinels, tomb cobras, animated burial jars, mummy thralls, rot priest thralls, fungal wraiths, curse-bound sentinels, mold-ridden ghouls, bloated corpse walkers, decay spiders, mildew phantoms, calcified serpents, tomb beetle colossi (~22 resets)
+- **Tier 3 — Shadow Nave (11561–11584):** Shadow archers, great shadow vultures, shadow face guardians, creeping shadows, shadow assassins, fungal wraiths, curse-bound sentinels, entombed generals, bone golems, crypt stalkers, shadow hounds, nightmare sentinels, shade dancers, darkfire wisps, mildew phantoms (~20 resets)
+- **Tier 4 — Ossuary Depths (11586–11604):** Animated bone pillars, venomous golden cobras, bone cultists, death hawks, bone revenants, bone golems, ossuary spiders, marrow elementals, skeletal war drummers, calcite horrors, darkfire wisps, shadow assassins, creeping shadows (~18 resets)
+- **Tier 5 — Venomous Cisterns (11606–11624):** Void specters, venomous golden cobras, death hawks, magma lizards, charred bone husks, venom puddle oozes, cistern lurkers, poison dart frog constructs, toxic gas wraiths, moon-touched scorpions, marrow elementals, calcite horrors (~14 resets)
+- **Tier 6 — Molten Sanctum (11626–11638):** Magma lizards, charred bone husks, void specters, lava crawlers, ember revenants, slag golems, obsidian gargoyles, moon-touched scorpions, toxic gas wraiths (~12 resets)
+- **Tier 7 — Void Throne (11640–11648):** Void sentinels, gilded moon shades, void acolytes, sovereign's tomb guardians, obsidian gargoyles (~8 resets)
 
 ### Equipment Resets (E/G after mob M)
 
@@ -931,6 +1011,23 @@ M 11501 spec_cast_mage       rot priest's thrall
 M 11502 spec_cast_undead     fungal wraith
 M 11510 spec_cast_mage       toxic sand elemental
 M 11512 spec_cast_undead     greater bone overlord
+M 11601 spec_cast_undead     whispering wraith
+M 11602 spec_poison          calcified serpent
+M 11604 spec_disease         mold-ridden ghoul
+M 11606 spec_poison          decay spider
+M 11607 spec_cast_undead     mildew phantom
+M 11611 spec_cast_mage       darkfire wisp
+M 11612 spec_poison          ossuary spider
+M 11614 spec_cast_mage       skeletal war drummer
+M 11616 spec_poison          venom puddle ooze
+M 11618 spec_poison          poison dart frog construct
+M 11619 spec_cast_undead     toxic gas wraith
+M 11621 spec_cast_mage       ember revenant
+M 11624 spec_cast_bigtime    void acolyte
+M 11626 spec_poison          moon-touched scorpion
+M 11628 spec_poison          cistern matriarch
+M 11629 spec_cast_mage       petrified desert titan
+M 11630 spec_disease         fungal colossus
 S
 ```
 
