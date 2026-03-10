@@ -457,4 +457,398 @@ The south passage descends toward the inner undercroft hall.~
 ~
 0 -1 10151
 S
+#10150
+@@yA Pit of Rubble@@N~
+A partial collapse has deposited a broad mound of @@bsandstone@@N rubble across the southern half of this chamber, reducing what was once a passage to a scramble over broken blocks. The rubble is settled and stable; whatever gave way did so long ago. @@yFine dust@@N still sifts slowly from the ceiling above the collapse point, suggesting that the failure continues to progress incrementally. The passage leads north toward the sealed crypt wing and west back to the underground crossroads.
+~
+24585 11
+D0
+The passage north climbs back into the sealed crypt wing.~
+~
+0 -1 10145
+D3
+The corridor west leads back to the underground crossroads.~
+~
+0 -1 10149
+S
+#10151
+@@yThe Inner Undercroft Hall@@N~
+A grand chamber whose scale announces its importance: cracked columns of dressed @@bsandstone@@N rise to a vaulted ceiling high enough that the upper portions are lost in darkness. The columns were carved with procession scenes, but subsidence has tilted several off plumb and cracked others lengthwise, toppling their carved panels to the floor below. @@yGold leaf@@N once covered the column capitals; fragments still catch what little light reaches here. The hall connects north back to the crossroads and east toward the burial antechamber and the inner tomb beyond.
+~
+24584 11
+D0
+The passage north leads back to the underground crossroads.~
+~
+0 -1 10149
+D1
+The east passage opens into the burial antechamber.~
+~
+0 -1 10152
+S
+#10152
+@@yA Burial Antechamber@@N~
+A transitional chamber positioned between the undercroft's general passages and the sealed tomb approach beyond, its walls decorated with carved @@yyellow@@N and @@bochre@@N funeral imagery: the weighing of hearts, the passage through gates of judgment, the presentation before the divine court. The imagery grows more elaborate toward the eastern doorway, as though the artists increased their effort with proximity to whatever lies beyond. The air here is noticeably drier and more still than in the undercroft's water-touched passages, and carries a faint scent of very old incense.
+~
+24585 11
+D3
+The passage west returns to the inner undercroft hall.~
+~
+0 -1 10151
+D1
+The eastern passage leads toward the threshold of the crypt pharaoh.~
+~
+0 -1 10153
+S
+#10153
+@@yThe Threshold of the Crypt Pharaoh@@N~
+Carvings covering every surface of this chamber serve as explicit warnings: the carved figure of a @@Rpharaoh-spirit@@N raises its arms in a gesture of curse, and the hieroglyphs around it record the punishments awaiting those who disturb the eternal rest beyond. @@yGold-inlaid eyes@@N on the carved guardian figures at each side of the eastern doorway still gleam in the darkness, their lapis corneas intact and vivid. The room smells of something dry and ancient and faintly sweet — the unmistakable scent of mummification chemistry that has persisted for uncounted centuries. The passage beyond leads to the crypt pharaoh's own approach chamber, and the air there is colder than anything in the undercroft above.
+~
+24584 11
+D3
+The passage west retreats to the burial antechamber.~
+~
+0 -1 10152
+D1
+The east passage enters the crypt pharaoh's approach chamber.~
+~
+0 -1 10154
+S
+#10154
+@@yThe Crypt Pharaoh's Approach@@N~
+This chamber was built for ceremony: the floor is inlaid with a @@yyellow@@N and @@bochre@@N geometric pattern still visible beneath the dust, and the walls carry carved reliefs depicting the pharaoh's deeds in life — armies defeated, monuments erected, divine favor received. @@cLapis lazuli@@N fills the carved hieroglyphs in the borders, their color undimmed. To the north, a @@broot-sealed vault door@@N stands in the wall, its frame packed with dark sealant that has hardened over the centuries; what lies beyond it radiates an ancient, heavy cold. This chamber's western passage returns to the threshold; the only way forward is through that sealed door.
+~
+24584 11
+D3
+The passage west returns to the threshold chamber.~
+~
+0 -1 10153
+D0
+The @@broot-sealed vault door@@N stands here, its frame sealed with hardened resin and carved with @@Rcurse-marks@@N that warn the living away.~
+^root-sealed vault door~
+1 -1 10155
+S
+#10155
+@@yThe Pharaoh's Tomb Chamber@@N~
+The tomb chamber of the first of the pyramid's seven bound guardians: a high-ceilinged room of polished @@bsandstone@@N lit by an sourceless @@yyellow@@N light that seems to emanate from the carved @@Rsun-discs@@N pressed into the ceiling. A stone sarcophagus occupies the chamber's center, its lid shattered outward as though the occupant departed at force rather than rose with patience. @@RBlood-red hieroglyphs@@N spiral down from the ceiling over every surface, recording the pharaoh's binding and the terms of its eternal watch. The presence of something old and deeply wrong fills the room like pressure, and the cold here is not the cold of stone — it is the cold of a spirit that has spent millennia in focused, contained fury. The only exit leads south back through the @@broot-sealed vault door@@N.
+~
+24588 11
+D2
+The @@broot-sealed vault door@@N stands in the south wall, sealed with ancient resin and @@Rcurse-marks@@N.~
+^root-sealed vault door~
+1 -1 10154
+S
+#10156
+@@yBefore the Northern Pyramid@@N~
+The ancient @@bsandstone@@N peak of the Northern Pyramid dominates the eastern sky from here, its apex sharp against the bleached desert blue, its base buried in the accumulated sand of an age beyond counting. The approach road — little more than a compacted ridge of @@yyellow@@N rock worn flat by centuries of feet and hooves — runs east from the oasis toward the pyramid's western face, still distinguishable from the surrounding dunes though the desert has done its patient work of erasure. The heat here is ferocious; the pyramid acts as a reflector, doubling the sun's force against everything in the open approach. Far to the west, the shade of the Northern Oasis is visible as a dark smear on the horizon, and the ancient road curves that way through the dunes.
+~
+24584 10
+D1
+The ancient road continues east toward the base of the pyramid.~
+~
+0 -1 10157
+D3
+The ancient road curves west through the dunes, back toward the cool shade of the Northern Oasis.~
+~
+0 -1 8879
+S
+#10157
+@@yThe Ancient Road East@@N~
+The old causeway road runs straight east here, its @@bsandstone@@N paving cracked and pushed apart by centuries of thermal expansion and contraction but still recognizable as intentional construction. @@yYellow dunes@@N crowd the road from both sides, and the wind perpetually fills the gaps between the paving stones with fresh sand that must be ground underfoot with every step. The pyramid's western face is fully visible ahead, its surface catching the direct sun and radiating heat in visible waves. Behind to the west, the oasis approach fades; east, the outer dune ring of the pyramid's base draws nearer.
+~
+24584 10
+D3
+The ancient road runs west back toward the pyramid's approach.~
+~
+0 -1 10156
+D1
+The causeway continues east toward the dune ring surrounding the pyramid base.~
+~
+0 -1 10158
+S
+#10158
+@@yThe Outer Dune Ring@@N~
+The base of the Northern Pyramid is ringed by a crescent of wind-shaped dunes that the desert has constructed over the centuries from material weathered off the pyramid's own surface. @@yyellow@@N sand rises in smooth, perfect curves to the north and south, and the pyramid itself looms ahead with an immediacy that makes it impossible to appreciate its full scale — from this close it simply becomes a wall of @@bsandstone@@N that extends upward beyond comfortable vision. The approach road arrives here from the west and continues east toward the outer courtyard.
+~
+24584 10
+D3
+The ancient road leads west away from the pyramid base.~
+~
+0 -1 10157
+D1
+The road continues east through the outer dune ring toward the courtyard.~
+~
+0 -1 10162
+D0
+The dune ring curves north along the pyramid's base.~
+~
+0 -1 10159
+D2
+The dune ring curves south along the pyramid's base.~
+~
+0 -1 10163
+S
+#10159
+@@yThe Southern Approach@@N~
+A direct path to the pyramid's main entrance runs from the south, carved through the dune ring by centuries of foot traffic that kept the sand pushed back. The @@bsandstone@@N of the pyramid's southern face is marked with @@yyellow@@N weathering lines where wind and sand have scoured the stone in long diagonal grooves. Hieroglyphs carved into the base course near the ground have been half-buried by sand accumulation, and only their upper portions remain legible — dedications and warnings, their messages split between what is visible and what lies beneath the sand. The outer courtyard is visible to the north.
+~
+24584 10
+D0
+The path continues north toward the outer courtyard.~
+~
+0 -1 10162
+D2
+The southern approach continues south along the pyramid's base.~
+~
+0 -1 10164
+S
+#10160
+@@yThe Pyramid's Western Face@@N~
+The western face of the Northern Pyramid rises here in an unbroken wall of @@bsandstone@@N that extends far beyond the scale the mind can easily hold: the base course stones are each taller than a person, and they repeat in precise rows until they vanish into glare hundreds of feet above. The surface is marked with long diagonal @@yweathering grooves@@N where the prevailing west wind has scoured the stone for millennia, and the lowest course shows the salt crust of ancient flooding. No entrance exists on this face; the pyramid's only public access is its northern front.
+~
+24584 10
+D0
+The western face of the pyramid extends north toward the guard post ruin.~
+~
+0 -1 10165
+D2
+The western face continues south toward the outer dune ring.~
+~
+0 -1 10163
+S
+#10161
+@@yThe Pyramid's Eastern Face@@N~
+The eastern face of the Northern Pyramid is covered in @@yhieroglyphs@@N carved at a scale meant to be read by the gods rather than by people standing at the base: each glyph is several feet tall, pressed deep into the @@bsandstone@@N with a precision that centuries of wind have not meaningfully eroded. The subject matter is the pyramid's construction, its cosmological purpose, and the identity of those interred within — though the lowermost lines are buried under sand and the uppermost have been abraded smooth by airborne grit. An auxiliary entrance, long since sealed by sand accumulation, is suggested by a differently-textured section of stone several dozen feet above ground level.
+~
+24584 10
+D0
+The eastern face continues north toward the obelisk circle.~
+~
+0 -1 10164
+D2
+The eastern face extends south along the pyramid's base.~
+~
+0 -1 10163
+S
+#10162
+@@yThe Outer Courtyard@@N~
+A wide plaza of cracked @@bsandstone@@N paving stretches before the pyramid's main entrance, its surface broken by the roots of long-dead trees that once grew here in planned rows. The drainage channels cut into the courtyard floor to carry off winter rains still function, though they now carry sand rather than water. The scale of the courtyard was designed to create a processional approach, forcing visitors to cross a significant open space before reaching the entrance and feel the pyramid's full mass bearing down from directly above. To the north, the main gate is visible; passages extend east, south, and west along the pyramid's exterior.
+~
+24584 10
+D0
+The main gate of the pyramid is visible to the north.~
+~
+0 -1 10166
+D1
+The eastern face of the pyramid extends along the courtyard's edge.~
+~
+0 -1 10161
+D2
+The outer courtyard continues south toward the southern approach path.~
+~
+0 -1 10159
+D3
+The courtyard extends west toward the outer dune ring.~
+~
+0 -1 10158
+S
+#10163
+@@yThe Courtyard Garden Ruin@@N~
+Dried irrigation channels cut precisely into the @@bsandstone@@N pavement here record where a formal garden once stood, its planting beds bordered by stone kerbs still in their original positions though the beds themselves are nothing but packed @@ysand@@N. The stumps of dead palms, reduced to dense black cylinders by decades of desiccation, still occupy their original spacing in the planting grid. A broken stone basin that once held water for birds or ornamental fish sits cracked in the center, its interior stained with the @@bochre@@N of mineral deposits left by water that has not been present for centuries.
+~
+24584 10
+D0
+The path north leads along the pyramid's western base toward the guard post ruin.~
+~
+0 -1 10160
+D1
+The eastern passage crosses to the southern approach path.~
+~
+0 -1 10164
+D3
+The courtyard ruins continue west toward the outer dune ring.~
+~
+0 -1 10158
+S
+#10164
+@@yThe Southern Approach (East)@@N~
+The southeastern corner of the pyramid's base is marked by the foundation casing stones, each one precisely angled to form the pyramid's corner edge, which rises overhead in a perfect arris line. @@ySand@@N has accumulated against the base course to half the height of the lowest tier, and embedded in the sand-face are the visible tops of carved stones that were once part of a paved processional circuit around the pyramid's perimeter. The smell of hot stone and dry desert air is intense here in the afternoon sun.
+~
+24584 10
+D0
+The path north leads along the pyramid's eastern base toward the obelisk circle.~
+~
+0 -1 10161
+D3
+The path west leads toward the courtyard garden ruin.~
+~
+0 -1 10163
+S
+#10165
+@@yThe Guard Post Ruin@@N~
+A collapsed stone gatehouse marks the northern approach to the pyramid's main entrance, its @@bsandstone@@N walls toppled inward in a heap that preserves the rough outline of a rectangular building. @@yChipped hieroglyphs@@N on the surviving threshold stone record the guards' authority in the name of the Pharaoh-Lord, though which pharaoh is no longer determinable. Iron fittings for a heavy gate remain embedded in the doorposts, the metal itself rusted to red granules that stain the stone. The outer courtyard lies to the south; north, the stone gate marks the pyramid's actual entrance.
+~
+24584 10
+D0
+The path north leads to the pyramid's massive main gate.~
+~
+0 -1 10166
+D2
+The path south descends into the outer courtyard.~
+~
+0 -1 10162
+S
+#10166
+@@yThe Pyramid's Main Gate@@N~
+The main gate of the Northern Pyramid is a massive carved entrance arch that frames a darkness within: two courses of @@bsandstone@@N blocks form the reveals, each block carved with the repeating image of a guardian figure with @@yopen hands@@N raised in a gesture that might be welcome or warning. The arch itself is intact, and a @@bstone gate@@N of heavy construction is set in the opening, its surface carved with a continuous frieze of divine protection symbols. The desert spreads south; north, the gate opens into the pyramid's grand entrance hall. The outer courtyard is to the south.
+~
+24584 10
+D0
+A @@bstone gate@@N fills the archway, its carved surface worn but intact.~
+^stone gate~
+1 -1 10167
+D2
+The path south leads back through the guard post ruin and into the outer courtyard.~
+~
+0 -1 10165
+E
+stone gate~
+The @@bstone gate@@N of the pyramid's main entrance is a single massive carved slab set in the arch opening, its surface worked with a continuous frieze of guardian figures and protective inscriptions.
+~
+S
+#10167
+@@yThe Grand Entrance Hall@@N~
+The interior of the Northern Pyramid begins with this pillared hall of staggering scale: columns of @@bsandstone@@N as thick as ancient trees rise in two rows toward a ceiling lost in shadow, each shaft carved with spiral registers of @@yhieroglyphs@@N that record the pyramid's founding and purpose. The floor is polished to a reflective finish that still holds its sheen despite the sand blown in over centuries, and the footworn path down the center is visible as a slightly duller track through the polish. The @@bstone gate@@N behind to the south opens onto the desert approach; corridors extend east and west along the hall's flanks, and the hall continues north into the deeper interior.
+~
+24584 11
+D2
+The south exit through the @@bstone gate@@N opens onto the desert approach.~
+^stone gate~
+1 -1 10166
+D1
+The east corridor runs along the entrance hall's flank.~
+~
+0 -1 10168
+D3
+The west corridor runs along the entrance hall's flank.~
+~
+0 -1 10169
+D0
+The grand entrance hall continues north into the pillar forest.~
+~
+0 -1 10170
+S
+#10168
+@@yEast Entrance Corridor@@N~
+A long corridor running parallel to the entrance hall's eastern flank, its walls covered with painted plaster in @@yochre@@N and @@bblue-grey@@N that has peeled and fallen in long strips to accumulate as colored fragments on the floor. The outlines of the painted scenes remain on the wall surface as ghost images, the pigment absorbed into the @@bsandstone@@N even after the surface plaster departed. Arrow-shaped paint stripes along the floor baseboards once guided processions; their direction still points north. The entrance hall is to the west; passages lead north and further east.
+~
+24584 11
+D3
+The west passage enters the grand entrance hall.~
+~
+0 -1 10167
+D0
+The corridor continues north along the entrance hall's eastern side.~
+~
+0 -1 10170
+D1
+The passage east leads deeper into the pyramid's interior.~
+~
+0 -1 10173
+S
+#10169
+@@yWest Entrance Corridor@@N~
+The western flank corridor of the entrance hall, its ceiling lower than the main hall, carries a series of painted niches where small deity statuettes once stood. The statuettes are gone — removed by thieves, or perhaps by the pyramid's own attendants in some final act before the sealing. The empty niches still show the paint patterns that framed them, their @@yochre@@N and red edges faded to pale outlines. Sand has drifted deeply into this corridor from a crack in the western wall, filling the floor to ankle depth. The entrance hall is to the east; passages lead north and further west.
+~
+24584 11
+D1
+The east passage enters the grand entrance hall.~
+~
+0 -1 10167
+D0
+The corridor continues north.~
+~
+0 -1 10170
+D3
+The passage west leads deeper into the pyramid's interior.~
+~
+0 -1 10175
+S
+#10170
+@@yThe Pillar Forest@@N~
+Columns crowd so densely here that navigation requires threading between them, each shaft a @@bsandstone@@N cylinder carved with registers of @@yhieroglyphs@@N that spiral from base to capital in continuous narrative. The columns are in different states of preservation: some intact and upright, others cracked lengthwise with their carved surfaces split apart, a few toppled entirely and lying across their neighbors in a tangle that has blocked some paths through the forest. The room is dark even by the pyramid's interior standards, the columns blocking what little light filters from the distant entrance. Passages connect north, east, west, and south through the column array.
+~
+24584 11
+D2
+The south passage threads back through the pillar forest toward the entrance hall.~
+~
+0 -1 10167
+D0
+The north passage continues deeper into the pyramid interior.~
+~
+0 -1 10183
+D1
+The east passage threads through the columns.~
+~
+0 -1 10171
+D3
+The west passage threads through the columns.~
+~
+0 -1 10175
+S
+#10171
+@@yA Collapsed Side Wing@@N~
+A side wing of the entrance level has collapsed here, its ceiling down and its walls pushed inward by whatever structural failure made this room uninhabitable. @@bSandstone@@N rubble fills most of the floor space, leaving only a narrow route along the northern wall that allows passage. Some of the fallen blocks are enormous, requiring careful navigation around their edges. @@yGold-painted plaster fragments@@N visible in the rubble face show that this wing was once elaborately decorated, now reduced to a puzzle of colored shards. The passage east through the rubble connects to the trophy chamber.
+~
+24584 11
+D3
+The narrow route west leads back through the pillar forest.~
+~
+0 -1 10170
+D1
+The route east through the rubble reaches the trophy chamber.~
+~
+0 -1 10172
+S
+#10172
+@@yThe Trophy Chamber@@N~
+Deep niches cut into every wall of this chamber once held offerings and trophies from the pyramid's active period: the niches are empty now, their display surfaces worn smooth by the removal of whatever they held. @@yOchre paint@@N in angular geometric frames still decorates the spaces between the niches, and the floor has a slightly raised central dais that suggests a central offering platform once stood here. The room smells of dust and very old cedar, the ghost of boxes and caskets long since crumbled to powder.
+~
+24584 11
+D3
+The passage west leads back through the collapsed side wing.~
+~
+0 -1 10171
+D0
+The north passage continues into the pyramid's central interior.~
+~
+0 -1 10176
+S
+#10173
+@@yThe Inscription Gallery@@N~
+Floor-to-ceiling @@yhieroglyphs@@N cover every surface of this gallery in a density that leaves no @@bsandstone@@N exposed: the inscriptions record the founding, the construction, the rites of dedication, the names of the architect and the pharaohs interred within, and the cosmic significance of every decision made during the pyramid's construction. The individual glyphs are sharply carved and deeply detailed, their original pigment almost entirely gone but their form perfectly preserved. Scholars who entered and survived reported that the inscriptions take months to read fully, and that no two sections cover the same material.
+~
+24584 11
+D3
+The passage west enters the east entrance corridor.~
+~
+0 -1 10168
+D0
+The north passage continues into the pyramid's central interior.~
+~
+0 -1 10176
+S
+#10174
+@@yA Guard Barracks Ruin@@N~
+The guard barracks of the pyramid's ground floor is a long, dark room whose stone sleeping platforms along the walls are the only furnishings that survived the centuries intact. @@bSandstone@@N benches for sitting and stone pillow-blocks for sleeping are arranged in a militarily precise layout that has not changed since the guards last slept here. The platform surfaces retain faint outlines of reed mats, long rotted away. @@yA faded roster@@N of some kind is scratched into the south wall beside the entrance, too worn to read, recording duty assignments for a watch that never ended.
+~
+24585 11
+D3
+The passage west enters the west entrance corridor.~
+~
+0 -1 10169
+D0
+The north passage continues into the pyramid's interior.~
+~
+0 -1 10180
+S
 #$
