@@ -8185,6 +8185,55 @@ D 0 11640 4 2
 D 0 11648 2 1
 D 0 11649 0 1
 S
+#SPECIALS
+M 11450 spec_cast_mage
+M 11451 spec_cast_undead
+M 11452 spec_cast_mage
+M 11453 spec_cast_bigtime
+M 11454 spec_cast_mage
+M 11455 spec_poison
+M 11456 spec_breath_fire
+M 11457 spec_cast_bigtime
+M 11461 spec_breath_fire
+M 11466 spec_poison
+M 11467 spec_cast_undead
+M 11471 spec_poison
+M 11474 spec_cast_mage
+M 11475 spec_cast_undead
+M 11477 spec_poison
+M 11481 spec_cast_undead
+M 11484 spec_poison
+M 11485 spec_cast_mage
+M 11488 spec_cast_undead
+M 11489 spec_disease
+M 11490 spec_disease
+M 11492 spec_cast_undead
+M 11494 spec_cast_undead
+M 11495 spec_poison
+M 11498 spec_cast_undead
+M 11499 spec_cast_mage
+M 11501 spec_cast_mage
+M 11502 spec_cast_undead
+M 11510 spec_cast_mage
+M 11512 spec_cast_undead
+M 11601 spec_cast_undead
+M 11602 spec_poison
+M 11604 spec_disease
+M 11606 spec_poison
+M 11607 spec_cast_undead
+M 11611 spec_cast_mage
+M 11612 spec_poison
+M 11614 spec_cast_mage
+M 11616 spec_poison
+M 11618 spec_poison
+M 11619 spec_cast_undead
+M 11621 spec_cast_mage
+M 11624 spec_cast_bigtime
+M 11626 spec_poison
+M 11628 spec_poison
+M 11629 spec_cast_mage
+M 11630 spec_disease
+S
 
 #$
 
