@@ -1269,4 +1269,418 @@ The passage north leads into the Pyramid's Heart Chamber.~
 ~
 0 -1 10200
 S
+#10200
+@@yThe Pyramid's Heart Chamber@@N~
+The ground floor's innermost sanctum is a tall, corbelled chamber lit by a sourceless @@yyellow@@N radiance that seeps from the carved @@ysun-discs@@N pressed into every block of the ceiling. The walls carry the most elaborate relief program in the entire pyramid: scenes of cosmic creation, divine authority, the binding of the seven pharaoh-spirits to their eternal watches, and the Sand Sovereign's original covenant with the gods carved in characters so fine they require close examination to resolve into legible form. @@RBlood-red hieroglyphs@@N in the highest register record the punishment awaiting any living being who reaches this chamber without authorization — a punishment the Desert Gate Guardian was bound here for eternity to administer. The chamber's center holds a raised dais of @@bpolished black sandstone@@N, its surface worn flat by the weight of something massive that stood here continuously for millennia. The only exit leads south back toward the final approach.
+~
+24588 11
+D2
+The passage south returns through the final approach toward the waiting hall.~
+~
+0 -1 10199
+S
+#10201
+@@yThe First Ascent@@N~
+The upper landing of the eastern stairwell opens here onto the first ascending floor of the pyramid, designated in @@yhieroglyphs@@N above the stairwell arch as the Hall of the Scarab. The landing is a transitional space between the climb and the floor proper: the ceiling is slightly higher than in the stairwell, and the air carries a distinct quality of dust-filtered quiet that separates the floors acoustically. @@yScarab imagery@@N appears here for the first time, carved into the landing's side walls as an introduction to the floor's dominant symbol. Recall is possible from this waypoint between levels.
+~
+16396 11
+D5
+The stairwell descends back to the east stairwell landing on the ground floor.~
+~
+0 -1 10184
+D1
+The passage east enters the scarab hall.~
+~
+0 -1 10203
+D0
+The passage north leads into the beetle colonnade.~
+~
+0 -1 10204
+S
+#10202
+@@yThe Upper Landing@@N~
+The alternate stairwell from the ground floor opens onto this secondary landing, its @@bsandstone@@N walls carrying inscriptions in a slightly different hand than the main eastern stair — perhaps a different scribe was assigned to this secondary approach. The passage introduces the scarab motif in a more abbreviated form, concentrating on the scarab's cosmological role as a pusher of the solar disc through the underworld. Recall is possible from this landing. The floor's main hall and the beetle colonnade are accessible from here.
+~
+16396 11
+D5
+The stairwell descends back to the west stairwell landing on the ground floor.~
+~
+0 -1 10185
+D1
+The passage east connects to the scarab hall.~
+~
+0 -1 10203
+D0
+The north passage leads into the hall's interior.~
+~
+0 -1 10207
+S
+#10203
+@@yThe Scarab Hall@@N~
+Giant @@yscarab reliefs@@N dominate every wall of this hall, each one carved at a scale that reduces a standing person to a figure smaller than the scarab's individual claw-segment. The scarabs face east in a continuous procession, their carved bodies inlaid with @@bochre@@N that gives them the appearance of mummified insects preserved at impossible scale. The hall smells of @@bdried resin@@N and old @@bcedar@@N, the ghost of the preservation chemicals used in rituals conducted here centuries ago. Passages connect in multiple directions through the carved stone.
+~
+24584 11
+D3
+The west passage leads back to the first ascent and upper landing areas.~
+~
+0 -1 10201
+D1
+The east passage continues into the beetle colonnade.~
+~
+0 -1 10204
+D2
+The south passage connects toward the floor's inner chambers.~
+~
+0 -1 10208
+S
+#10204
+@@yThe Beetle Colonnade@@N~
+A colonnade of eight columns runs east-west through this chamber, each capital carved with a fully three-dimensional @@yscarab beetle@@N rearing up with its wings half-spread, the solar disc it carries carved separately and pinned to the wing surface in @@bgold-washed copper@@N that has survived here better than in more exposed areas. The scarabs' faceted compound eyes are inlaid with @@cblue faience@@N that catches any light and seems to track movement. The colonnade gives the room a forest-like quality, and several of the columns carry ancient graffiti scratched by previous intruders at heights suggesting they stood on the column bases to reach.
+~
+24584 11
+D3
+The passage west leads back to the first ascent.~
+~
+0 -1 10201
+D1
+The east passage continues deeper into the scarab floor.~
+~
+0 -1 10206
+D2
+The south passage connects toward the hall's interior.~
+~
+0 -1 10208
+S
+#10205
+@@yAn Alcove of Offerings@@N~
+A small dark alcove set into the wall at a junction of two corridors, its purpose a stopping point for ritual offerings carried through the floor's ceremonial circuit. Stone offering shelves still line the alcove's inner walls, their surfaces bearing the circular stains and wax drips of centuries of use. The alcove is deeply dark compared to the adjacent passages, its ceiling lower and its walls absorbing what little light exists rather than reflecting it.
+~
+24585 11
+D1
+The passage east returns to the beetle colonnade.~
+~
+0 -1 10204
+D0
+The north passage continues into the floor's corridors.~
+~
+0 -1 10207
+S
+#10206
+@@yThe East Passage@@N~
+A connecting corridor running north-south through the eastern portion of the first floor, its walls carrying register carvings that continue the scarab motif: the beetle in its divine role as the self-created, the bringer of morning, the renewer of the solar cycle. The @@yochre@@N in the carved borders is vivid here, preserved by the corridor's sheltered airflow. The passage links the beetle colonnade to the inner halls.
+~
+24584 11
+D3
+The passage west connects back to the beetle colonnade.~
+~
+0 -1 10204
+D2
+The south passage descends toward the cartouche gallery.~
+~
+0 -1 10210
+D0
+The north passage connects toward the east stair landing area.~
+~
+0 -1 10215
+S
+#10207
+@@yThe West Passage@@N~
+A north-south connecting corridor through the western side of the first floor, mirroring the east passage in layout but carrying different inscription content: where the east records the scarab's cosmological roles, the west records the ritual procedures for this floor's ceremonies, including the specific prayers, incense formulas, and offering sequences conducted here. The practical information sits oddly in such an elaborately sacred setting, but the priests who used these passages apparently wanted procedures immediately at hand.
+~
+24584 11
+D2
+The south passage connects toward the inner halls.~
+~
+0 -1 10208
+D0
+The north passage connects toward the west stair landing area.~
+~
+0 -1 10215
+D1
+The east passage connects to the scarab hall.~
+~
+0 -1 10203
+S
+#10208
+@@yThe Ritual Basin Room@@N~
+Three large stone basins occupy the center of this chamber, each carved from a single @@bsandstone@@N block and connected by carved channels that once allowed libations poured in the first to flow through the second and into the third in a controlled ritual sequence. The basins are bone-dry now, their interiors stained with the @@bochre@@N of long-evaporated oils and the crystalline residue of preserved wine. @@yGold-leaf lotus flowers@@N still decorate the basin lips in segments where the gilt was protected from foot traffic.
+~
+24584 11
+D0
+The north passage connects back to the scarab hall.~
+~
+0 -1 10203
+D1
+The east passage leads toward the floor's inner chambers.~
+~
+0 -1 10209
+D3
+The west passage leads toward the west passage corridor.~
+~
+0 -1 10207
+S
+#10209
+@@yA Collapsed Side Chamber@@N~
+A side chamber whose ceiling has come down in a controlled collapse — the blocks fell together rather than scattering, suggesting the structure failed along a designed joint. The result is a chamber divided by a low barrier of fallen stone, passable by climbing but not walkable without effort. @@yPainted plaster fragments@@N visible in the rubble's exposed faces show that the chamber's walls were once elaborately decorated.
+~
+24585 11
+D3
+The passage west connects back to the ritual basin room.~
+~
+0 -1 10208
+D0
+The north passage leads toward the cartouche gallery.~
+~
+0 -1 10210
+S
+#10210
+@@yThe Cartouche Gallery@@N~
+The names of every priest who served on this floor are carved into the walls of this gallery in formal cartouches, each one framed in a @@yyellow@@N painted border and accompanied by the priest's title, years of service, and a brief notation of their role. The cartouches are arranged chronologically from the pyramid's founding, and they fill both walls from floor to ceiling in dense, orderly rows. The total number suggests a clerical institution of considerable size maintained continuous service here for several centuries before the pyramid was sealed.
+~
+24584 11
+D0
+The north passage leads toward the east passage corridor.~
+~
+0 -1 10206
+D2
+The south passage connects toward the collapsed side chamber.~
+~
+0 -1 10209
+D1
+The east passage leads toward the scribes' chamber.~
+~
+0 -1 10211
+S
+#10211
+@@yThe Scribes' Chamber@@N~
+Broken styluses of reed and bronze, dried inkpots of @@bfired clay@@N, and crumbled papyrus fragments that dissolve into @@yyellow-brown@@N dust at a touch fill this chamber's floor. The scribes who worked here produced the texts carved throughout this floor, working from papyrus originals they then translated into stone carving. The inkpots still carry residue of the mineral pigments used — black for hieroglyphs, @@bochre@@N for borders, @@cblue@@N for accent colors — each dried to a hard deposit in the base of its vessel.
+~
+24584 11
+D3
+The passage west returns to the cartouche gallery.~
+~
+0 -1 10210
+D0
+The north passage continues into the floor's inner halls.~
+~
+0 -1 10214
+D1
+The east passage leads toward the guard room.~
+~
+0 -1 10212
+S
+#10212
+@@yA Guard Room@@N~
+A dark guard post at the junction of two corridors, equipped with the usual stone seat, iron lamp hook, and direct sight-lines to the approaches. The room differs from the ground floor equivalent in one detail: a row of four additional iron hooks on the south wall, each one sized for a weapon rack. The racks themselves are gone; what weapons they held and where those weapons went is a mystery the room holds without comment.
+~
+24585 11
+D3
+The passage west connects back to the scribes' chamber.~
+~
+0 -1 10211
+D0
+The north passage leads toward the mosaic floor room.~
+~
+0 -1 10213
+S
+#10213
+@@yThe Mosaic Floor Room@@N~
+The entire floor of this chamber is occupied by a single enormous @@yscarab mosaic@@N worked in @@yyellow@@N, @@bochre@@N, and @@cblue@@N tesserae: the beetle shown from above, its carapace wings spread to fill the chamber exactly, its solar disc rendered in gilt tesserae at the room's center. The mosaic is undamaged, every tiny tile in its original position, protected from foot traffic by its slightly recessed setting below the surrounding floor level. Walking across it feels deliberately sacrilegious in a way that no other room in the pyramid quite achieves.
+~
+24584 11
+D2
+The south passage connects toward the guard room.~
+~
+0 -1 10212
+D1
+The east passage leads toward the inner colonnade.~
+~
+0 -1 10214
+D0
+The north passage continues toward the floor's stair landings.~
+~
+0 -1 10216
+S
+#10214
+@@yThe Inner Colonnade@@N~
+A secondary colonnade of six columns marks the inner threshold of this floor's most sacred spaces, each column shaft carved with spiral registers depicting the scarab's mythological biography from cosmic egg through solar apotheosis. The column capitals here are simpler than in the beetle colonnade — plain palmette forms rather than sculptural scarabs — but their upper surfaces are covered in @@yyellow@@N gold wash that has persisted here protected by the inner room's stillness. Passages extend in all four directions through the columned space.
+~
+24584 11
+D2
+The south passage connects to the scribes' chamber.~
+~
+0 -1 10211
+D3
+The west passage connects toward the mosaic floor room.~
+~
+0 -1 10213
+D1
+The east passage leads into the floor's further inner halls.~
+~
+0 -1 10219
+D0
+The north passage leads toward the stair landings.~
+~
+0 -1 10216
+S
+#10215
+@@yThe East Stair Landing (Floor 1)@@N~
+The eastern stairwell landing on the first floor serves as the connection point between the Hall of the Scarab and the Chamber of the High Priests above. @@yScarab carvings@@N line the stairwell walls down to this landing, transitioning to the priestly imagery of the floor above. The landing is a safe waypoint where recall is possible; beyond the stairwell, the Hall of the Scarab extends south and west.
+~
+16396 11
+D2
+The south passage leads into the first floor's east passage corridor.~
+~
+0 -1 10206
+D3
+The west passage connects toward the west stair landing.~
+~
+0 -1 10216
+D4
+The stairwell ascends to the Chamber of the High Priests on the second floor.~
+~
+0 -1 10236
+S
+#10216
+@@yThe West Stair Landing (Floor 1)@@N~
+The western stairwell landing of the first floor connects the Hall of the Scarab to the floor above. The stairwell walls here carry a different program than the eastern flight: instead of scarab imagery, the ascent is illustrated with the souls of deceased priests rising floor by floor toward the apex. Recall is possible from this landing. The floor's inner halls extend south from here.
+~
+16396 11
+D2
+The south passage leads into the mosaic floor room area.~
+~
+0 -1 10213
+D1
+The east passage connects to the east stair landing.~
+~
+0 -1 10215
+D4
+The stairwell ascends to the alternate landing on the second floor.~
+~
+0 -1 10237
+S
+#10217
+@@yA Shrine Alcove@@N~
+A deep alcove cut into the inner wall of the first floor's corridor, dedicated to a minor deity of the scarab cult whose specific identity has been lost along with the plaque that named them. The deity's carved image — a seated figure with the scarab's disc-head — still occupies the alcove's rear wall, its @@yochre@@N and @@cblue@@N paint remarkably intact in the sheltered interior. Incense ash still coats the small offering ledge below the image, compressed to a firm layer by the weight of centuries.
+~
+24585 11
+D1
+The passage east returns to the floor's connecting corridors.~
+~
+0 -1 10218
+D0
+The north passage connects toward the stair landing area.~
+~
+0 -1 10215
+S
+#10218
+@@yThe Embalming Gallery@@N~
+Carved stone reliefs along both walls of this gallery depict funerary rites in procedural sequence: the washing, the application of natron, the wrapping, the recitation of specific prayers at each stage of preparation. The detail is extraordinary, including carved images of the specific tools used at each step, and the scene continues without interruption from one end of the gallery to the other. These depictions were probably meant as a guide or memory aid for the priests who conducted the rites in the chambers below rather than as narrative decoration.
+~
+24584 11
+D3
+The west passage connects toward the shrine alcove.~
+~
+0 -1 10217
+D1
+The east passage continues into the floor's inner halls.~
+~
+0 -1 10219
+S
+#10219
+@@yThe Priests' Corridor@@N~
+A long connecting corridor running through the inner portion of the first floor, linking the ceremonial and working spaces on either side. The walls carry instructional inscriptions rather than narrative reliefs: procedures for entering sacred spaces, the correct ritual postures for different locations in the pyramid, the words to be spoken at each threshold. @@yGold paint@@N picks out the most important passages in the instruction sequence, marking the critical moments with emphasis that still reads clearly through the patina of centuries.
+~
+24584 11
+D3
+The west passage connects toward the embalming gallery.~
+~
+0 -1 10218
+D1
+The east passage leads toward the illusory corridor.~
+~
+0 -1 10220
+D2
+The south passage connects toward the inner colonnade.~
+~
+0 -1 10214
+S
+#10220
+@@yThe Illusory Corridor@@N~
+This corridor appears to ascend at a slight upward angle, its ceiling rising in a way that suggests progress toward a higher level, and @@yyellow light@@N filters from above as though an opening to the next floor lies just ahead. The effect is convincing, carefully engineered into the corridor's geometry: the rising angle, the filtered light, the gradual widening of the passage all suggest ascent. In reality, the @@bstone ceiling above has a hidden hatch@@N that drops onto a shaft plunging downward rather than opening upward, and the light is reflected through an angled duct rather than admitted from above. Those who take the apparent upward route discover the deception rather abruptly.
+~
+24584 11
+D3
+The passage west returns to the priests' corridor.~
+~
+0 -1 10219
+D1
+The passage east continues into the floor's inner chambers.~
+~
+0 -1 10221
+D4
+The apparent ascent above is not what it seems — the hatch drops rather than rises.~
+~
+0 -1 10125
+S
+#10221
+@@yA Torch-Bracket Hall@@N~
+A dark connecting hall whose primary feature is an unusually dense array of iron torch brackets set into the walls at regular intervals, suggesting this was a well-lit ceremonial approach route rather than a utilitarian passage. The brackets are corroded but intact, and in the original construction period this hall would have been blazing with firelight. @@bCarbon stains@@N from the ancient torches have permanently darkened the @@bsandstone@@N above each bracket in black halos that record where the flames once burned.
+~
+24585 11
+D3
+The passage west connects toward the illusory corridor.~
+~
+0 -1 10220
+D0
+The north passage continues toward the scarab shrine.~
+~
+0 -1 10222
+S
+#10222
+@@yThe Scarab Shrine@@N~
+The primary shrine of this floor occupies a dedicated chamber of carefully proportioned dimensions, its walls carrying the most finely executed scarab relief on the entire level: a single scene depicting the solar beetle in its cosmic moment of sunrise, rendered in a combination of carved relief and painted detail that achieves the closest approximation to three-dimensional quality possible in the medium. @@yGold leaf@@N covers the solar disc completely; this section has been carefully protected and remains brilliant. Central offerings on a carved stone pedestal are still intact, sealed under a thick layer of resin applied when the pyramid was closed.
+~
+24584 11
+D2
+The south passage connects toward the torch-bracket hall.~
+~
+0 -1 10221
+D1
+The east passage leads into the floor's inner halls.~
+~
+0 -1 10224
+S
+#10223
+@@yA Guardians' Niche@@N~
+A deep niche cut into the inner wall of the floor's corridor system, once housing a pair of guardian statues that were removed at some point — their mounting points are visible as regular bolt holes in the niche floor. The niche's walls retain their painted imagery: two @@yyellow@@N sentinel figures flanking the location where the statues stood, their raised arms completing the gesture the absent statues presumably made. In the deep dark of the niche's interior, the paint is vivid.
+~
+24585 11
+D1
+The passage east returns to the corridor system.~
+~
+0 -1 10224
+D0
+The north passage leads toward the floor's outer chambers.~
+~
+0 -1 10222
+S
+#10224
+@@yThe Ritual Cleansing Room@@N~
+A ceremonial cleansing room used by priests before entering the inner sections of this floor: stone basins line both walls, their drain channels still clear, their surfaces worn smooth by the hands and feet of generations of officiants. A carved instruction panel above the northern doorway lists the specific ritual requirements for purity before continuing inward, its text still legible in the @@bsandstone@@N. The smell of natron — the desiccant salt used in Egyptian ritual purification — is still faintly detectable, absorbed permanently into the stone.
+~
+24584 11
+D3
+The west passage connects toward the guardians' niche.~
+~
+0 -1 10223
+D0
+The north passage leads toward the inner priest chamber.~
+~
+0 -1 10225
+D2
+The south passage connects toward the scarab shrine.~
+~
+0 -1 10222
+S
 #$
