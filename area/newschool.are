@@ -1,0 +1,1531 @@
+#AREA
+@@lS@@do@@eE@@N @@aAcademy of Adventure@@N~
+Q 16
+K soeacademy~
+L {@@G 1 10@@N}~
+N 29
+I 1 10
+V 20200 20299
+X 0
+F 5
+U The sound of clashing practice swords echoes through the halls.~
+O aliaser~
+R aliaser~
+W aliaser~
+M No bad room spells allowed.
+#ROOMS
+#20200
+Academy Entrance~
+@@NYou stand in the grand entrance hall of the @@WAcademy of Adventure@@N.
+Tall stone pillars rise to a vaulted ceiling above.  Torchlight flickers
+across carved murals depicting heroes in battle, explorers navigating
+dungeons, and merchants haggling over goods.  A large sign hangs on the
+wall, welcoming new adventurers.
+The path continues @@ynorth@@N deeper into the academy.
+~
+1032 11
+D0
+You see a long hallway stretching into the academy.
+~
+~
+0 0 20201
+D2
+You see the familiar glow of the temple.
+~
+~
+0 -1 3001
+E
+sign~
+@@W*** Welcome to the Academy of Adventure! ***@@N
+
+This academy will teach you everything you need to survive in the world.
+Read the @@Wsigns@@N in each room carefully -- they contain vital lessons.
+
+To read a sign, type '@@yLOOK SIGN@@N'.
+
+When you are ready, go @@yNORTH@@N to begin your training.
+
+~
+S
+#20201
+Lesson I: Movement~
+@@NYou are in a wide corridor with smooth stone walls.  Faded tapestries
+depicting maps of the world hang on either side.  A large sign is mounted
+on the wall here.  Exits lead @@ynorth@@N, @@yeast@@N, and @@ysouth@@N.
+~
+8 11
+D0
+You see the door and lock training area ahead.
+~
+~
+0 0 20203
+D1
+You see the direction practice room.
+~
+~
+0 0 20202
+D2
+You see the academy entrance.
+~
+~
+0 0 20200
+E
+sign~
+@@WLesson I: Movement@@N
+
+You move around the world by typing directions:
+
+  @@yNORTH@@N (or just @@yN@@N)    @@ySOUTH@@N (or just @@yS@@N)
+  @@yEAST@@N  (or just @@yE@@N)    @@yWEST@@N  (or just @@yW@@N)
+  @@yUP@@N    (or just @@yU@@N)    @@yDOWN@@N  (or just @@yD@@N)
+
+To see the obvious exits in your current room, type '@@yEXITS@@N'.
+
+To look around and read the room description again, type '@@yLOOK@@N'.
+
+Go @@yEAST@@N now to practice moving in all six directions.
+When you are done practicing, come back here and go @@yNORTH@@N.
+
+~
+S
+#20202
+Direction Practice Room~
+@@NYou are in a large circular chamber with six passages leading away from
+the center.  Colored arrows are painted on the floor pointing in each
+direction.  A sign on the central pillar explains what to do.
+~
+8 11
+D0
+You see a small alcove to the north.
+~
+~
+0 0 20230
+D1
+You see a small alcove to the east.
+~
+~
+0 0 20232
+D2
+You see a small alcove to the south.
+~
+~
+0 0 20231
+D3
+You see the corridor back to the lessons.
+~
+~
+0 0 20201
+D4
+You see a small alcove above you.
+~
+~
+0 0 20234
+D5
+You see a small alcove below you.
+~
+~
+0 0 20235
+E
+sign~
+@@WDirection Practice@@N
+
+Try going in each direction from here!  Each passage leads to a small
+room.  Follow the signs to come back here.
+
+  @@yNORTH@@N, @@ySOUTH@@N, @@yEAST@@N, @@yUP@@N, and @@yDOWN@@N lead to practice alcoves.
+  @@yWEST@@N takes you back to the lesson corridor.
+
+After you have tried all six directions, go @@yWEST@@N to continue.
+
+~
+S
+#20203
+Lesson I: Doors and Locks~
+@@NYou are in a stone chamber with iron-banded doors set into the walls.
+One heavy door leads @@ydown@@N, and it appears to be closed.  A sign is
+bolted to the wall next to it.  The corridor continues @@ysouth@@N.
+~
+8 11
+D2
+You see the movement lesson corridor.
+~
+~
+0 0 20201
+D5
+A heavy wooden door blocks the way.
+~
+door~
+1 -1 20204
+E
+sign~
+@@WLesson I: Doors and Locks@@N
+
+Sometimes exits are blocked by doors.  You can interact with doors using:
+
+  @@yOPEN <direction>@@N   -- Open a closed door (e.g. '@@yOPEN DOWN@@N')
+  @@yCLOSE <direction>@@N  -- Close an open door
+  @@yUNLOCK <direction>@@N -- Unlock a locked door (you need the right key!)
+  @@yLOCK <direction>@@N   -- Lock a door with a key
+
+The door leading @@yDOWN@@N is closed.  Type '@@yOPEN DOWN@@N' to open it,
+then go @@yDOWN@@N.
+
+~
+S
+#20204
+The Key Room~
+@@NYou are in a small stone vault.  A heavy iron door to the @@ynorth@@N is
+locked tight.  There is something shiny on the floor.  A sign on the
+wall gives instructions.  The way back @@yup@@N is open.
+~
+8 11
+D0
+A locked iron door blocks the way north.
+~
+door~
+5 20250 20205
+D4
+You see the door training room above.
+~
+~
+0 0 20203
+E
+sign~
+@@WKeys and Locked Doors@@N
+
+The door to the @@yNORTH@@N is locked!  You need a key to open it.
+
+Pick up the key on the floor by typing '@@yGET KEY@@N'.
+Then type '@@yUNLOCK NORTH@@N' to unlock the door.
+Then type '@@yOPEN NORTH@@N' to open it.
+Finally, go @@yNORTH@@N to continue.
+
+~
+S
+#20205
+Lesson II: Configuration~
+@@NYou emerge into a bright room decorated with colorful banners.  Each
+banner displays different text in vivid hues.  A sign hangs prominently
+on the wall.  Exits lead @@yeast@@N and @@ysouth@@N.
+~
+8 11
+D1
+You see the communication lesson room.
+~
+~
+0 0 20206
+D2
+You see the key room below.
+~
+door~
+5 20250 20204
+E
+sign~
+@@WLesson II: Configuration@@N
+
+You can customize how the game looks and behaves with these commands:
+
+  @@yCONFIG@@N          -- See your current settings
+  @@yCONFIG +COLOUR@@N  -- Turn on color (makes things pretty!)
+  @@yCONFIG +AUTOEXIT@@N -- Automatically show exits in each room
+  @@yCOLOUR@@N          -- See available colour themes
+  @@yPROMPT ALL@@N      -- Show HP, mana, and movement in your prompt
+
+Try typing '@@yCONFIG@@N' now to see your settings.
+
+When ready, go @@yEAST@@N.
+
+~
+S
+#20206
+Lesson III: Communication~
+@@NYou enter a room shaped like a small amphitheater, with stone benches
+arranged in a semicircle.  The acoustics here are remarkable -- even a
+whisper carries.  A sign is posted at the front.  Exits lead @@ysouth@@N
+and @@ywest@@N.
+~
+8 11
+D2
+You see the items and equipment room.
+~
+~
+0 0 20207
+D3
+You see the configuration room.
+~
+~
+0 0 20205
+E
+sign~
+@@WLesson III: Communication@@N
+
+You can talk to other players using channels:
+
+  @@yGOSSIP <message>@@N  -- Talk to everyone on the gossip channel
+  @@yNEWBIE <message>@@N  -- Ask questions on the newbie channel
+  @@yQUESTION <msg>@@N    -- Ask a question publicly
+  @@yTELL <name> <msg>@@N -- Send a private message to someone
+  @@yPRAY <message>@@N    -- Send a message to the immortals (staff)
+  @@ySAY <message>@@N     -- Speak to everyone in your room
+
+To see available channels, type '@@yCHANNELS@@N'.
+To turn a channel on or off: '@@yCHAN +GOSSIP@@N' or '@@yCHAN -GOSSIP@@N'.
+
+Other channels include: @@yAUCTION@@N, @@ySHOUT@@N, @@yYELL@@N, @@yRACE@@N, and @@yCLAN@@N.
+
+When ready, go @@ySOUTH@@N.
+
+~
+S
+#20207
+Lesson IV: Items and Equipment~
+@@NYou enter a well-lit supply room.  Wooden crates and barrels are stacked
+along the walls.  On the floor you see a bag and a lantern that someone
+has left behind.  A sign on the wall describes how to handle items.
+Exits lead @@ynorth@@N and @@ywest@@N.
+~
+8 11
+D0
+You see the communication room.
+~
+~
+0 0 20206
+D3
+You see the equipment room.
+~
+~
+0 0 20208
+E
+sign~
+@@WLesson IV: Items and Equipment (Part 1)@@N
+
+You can interact with items on the ground and in your inventory:
+
+  @@yGET <item>@@N       -- Pick up an item from the ground
+  @@yDROP <item>@@N      -- Drop an item from your inventory
+  @@yINVENTORY@@N (or @@yI@@N) -- See what you are carrying
+  @@yHOLD <item>@@N      -- Hold an item (like a light source)
+  @@yPUT <item> <container>@@N -- Put an item into a bag or chest
+  @@yGET <item> <container>@@N -- Take an item out of a container
+
+Try it now!  Pick up the @@ybag@@N and @@ylantern@@N on the floor:
+
+  Type '@@yGET BAG@@N' then '@@yGET LANTERN@@N' then '@@yHOLD LANTERN@@N'.
+  You can also type '@@yGET ALL@@N' to pick up everything at once.
+
+When ready, go @@yWEST@@N.
+
+~
+S
+#20208
+Lesson IV: Wearing Equipment~
+@@NYou enter an armory with weapon racks and armor stands lining the walls.
+A training sword and a small buckler rest on a table, free for the taking.
+A sign on the wall explains how to use equipment.  Exits lead @@yeast@@N
+and @@ynorth@@N.
+~
+8 11
+D0
+You see the score and worth room.
+~
+~
+0 0 20209
+D1
+You see the supply room.
+~
+~
+0 0 20207
+E
+sign~
+@@WLesson IV: Items and Equipment (Part 2)@@N
+
+To use equipment, you wear or wield it:
+
+  @@yWEAR <item>@@N      -- Wear a piece of armor
+  @@yWIELD <item>@@N     -- Wield a weapon in your hand
+  @@yREMOVE <item>@@N    -- Stop using a piece of equipment
+  @@yEQUIPMENT@@N (or @@yEQ@@N) -- See what you are currently wearing
+  @@yWEAR ALL@@N         -- Wear everything you can from your inventory
+
+Pick up the @@ysword@@N and @@ybuckler@@N from the table:
+
+  Type '@@yGET ALL@@N', then '@@yWIELD SWORD@@N', then '@@yWEAR BUCKLER@@N'.
+  Or just '@@yWEAR ALL@@N' after picking things up.
+
+Check your equipment with '@@yEQUIPMENT@@N'.
+
+When ready, go @@yNORTH@@N.
+
+~
+S
+#20209
+Lesson V: Score and Worth~
+@@NYou enter a scholarly chamber filled with charts and records.  A large
+scoreboard dominates one wall, listing the achievements of past students.
+A sign provides guidance on checking your progress.  Exits lead @@yeast@@N
+and @@ysouth@@N.
+~
+8 11
+D1
+You see the shopping room.
+~
+~
+0 0 20210
+D2
+You see the armory.
+~
+~
+0 0 20208
+E
+sign~
+@@WLesson V: Score, Worth, and Leveling@@N
+
+Keep track of your character's progress with these commands:
+
+  @@ySCORE@@N   -- See your stats, level, HP, mana, and more
+  @@yWORTH@@N   -- See your experience and gold
+
+@@WLeveling Up:@@N
+  When you earn enough experience, type '@@yGAIN@@N' to advance a level.
+  You can gain levels in multiple classes!  This is called @@Wmulti-classing@@N.
+
+@@WTraining and Practicing:@@N
+  @@yTRAIN@@N     -- Spend training sessions to raise attributes (STR, INT, etc.)
+  @@yPRACTICE@@N  -- Spend practice sessions to learn spells and skills
+  You must be at a trainer or practice mob to use these commands.
+
+Try '@@ySCORE@@N' and '@@yWORTH@@N' now to see your current stats.
+
+When ready, go @@yEAST@@N.
+
+~
+S
+#20210
+Lesson VI: Shopping~
+@@NYou enter a cozy shop with goods displayed on shelves behind a counter.
+The academy shopkeeper stands here, ready to serve you.  A sign on the
+wall explains how to buy and sell.  Exits lead @@ysouth@@N and @@ywest@@N.
+~
+8 11
+D2
+You see the combat training room.
+~
+~
+0 0 20211
+D3
+You see the score room.
+~
+~
+0 0 20209
+E
+sign~
+@@WLesson VI: Shopping@@N
+
+When you are in a shop, you can buy and sell items:
+
+  @@yLIST@@N           -- See what the shopkeeper has for sale
+  @@yBUY <item>@@N     -- Purchase an item
+  @@ySELL <item>@@N    -- Sell an item to the shopkeeper
+  @@yVALUE <item>@@N   -- See how much the shopkeeper will pay for your item
+
+Try '@@yLIST@@N' to see what is available, then '@@yBUY BREAD@@N' and
+'@@yBUY FLASK@@N'.
+
+To eat and drink:
+
+  @@yEAT <food>@@N     -- Eat something to satisfy hunger
+  @@yDRINK <drink>@@N  -- Drink something to quench thirst
+
+When ready, go @@ySOUTH@@N.
+
+~
+S
+#20211
+Lesson VII: Combat Introduction~
+@@NYou enter a stone arena ringed with low walls.  Scorch marks and gouges
+in the floor tell of many practice bouts.  A heavy two-handed practice
+sword leans against the wall.  A sign explains the basics of combat.
+Exits lead @@ynorth@@N, @@ywest@@N, and @@ydown@@N.
+~
+8 11
+D0
+You see the shop.
+~
+~
+0 0 20210
+D3
+You see the trial hall.
+~
+~
+0 0 20213
+D5
+You see a cage below.
+~
+~
+0 0 20212
+E
+sign~
+@@WLesson VII: Combat@@N
+
+Before fighting, always check how tough a monster is:
+
+  @@yCONSIDER <mob>@@N  -- Compare your strength to a monster
+
+To fight:
+
+  @@yKILL <mob>@@N      -- Attack a monster
+  @@yFLEE@@N            -- Try to escape from combat
+  @@yWIMPY <number>@@N  -- Auto-flee when your HP drops below this number
+
+@@RIMPORTANT:@@N Below this room is a @@RTOUGH@@N monster in a cage.  Go @@yDOWN@@N
+to practice fighting and fleeing.  Type '@@yCONSIDER BLOB@@N' first, then
+'@@yKILL BLOB@@N', then '@@yFLEE@@N' when your health gets low!
+
+After practicing fleeing, come back here and go @@yWEST@@N to the trials.
+
+~
+S
+#20212
+The Practice Cage~
+@@NYou drop into a smelly cage with iron bars on all sides.  A disgusting
+blob of ooze fills much of the room, pulsing and quivering.  The only
+way out is @@yup@@N.  There is a sign on the wall.
+~
+8 11
+D4
+You see safety above.
+~
+~
+0 0 20211
+E
+sign~
+@@RFLEE PRACTICE@@N
+
+This blob is too strong for you to kill!  Practice your combat skills:
+
+  1. Type '@@yCONSIDER BLOB@@N' to see how tough it is
+  2. Type '@@yKILL BLOB@@N' to start fighting
+  3. Type '@@yFLEE@@N' to escape before you die!
+
+After fleeing, go back @@yUP@@N.
+
+~
+S
+#20213
+Trial Hall~
+@@NYou stand in a grand hall with vaulted ceilings.  Seven heavy doors line
+the walls, each marked with a different symbol.  Beyond each door waits
+a guardian carrying equipment you will need.  A large sign dominates the
+center of the hall.  The combat arena is @@yeast@@N.
+Corridors branch @@ynorth@@N, @@ysouth@@N, @@ywest@@N, @@yup@@N, and @@ydown@@N.
+~
+8 11
+D0
+You see a chamber marked with a crown symbol.
+~
+~
+0 0 20214
+D1
+You see the combat arena.
+~
+~
+0 0 20211
+D2
+You see a chamber marked with a mantle symbol.
+~
+~
+0 0 20215
+D3
+You see a chamber marked with a fortress symbol.
+~
+~
+0 0 20216
+D4
+You see a chamber marked with a gauntlet symbol.
+~
+~
+0 0 20217
+D5
+You see more trial chambers below.
+~
+~
+0 0 20223
+E
+sign~
+@@WThe Trial Hall@@N
+
+Beyond each passage is a guardian monster carrying equipment.  Kill each
+guardian and take their gear!
+
+After killing a monster:
+
+  @@yGET ALL CORPSE@@N    -- Loot all items from the corpse
+  @@yWEAR ALL@@N          -- Put on your new equipment
+  @@ySACRIFICE CORPSE@@N  -- Offer the corpse to the gods for a reward
+
+Between fights, you may need to recover:
+
+  @@yREST@@N   -- Sit down and recover HP slowly
+  @@ySLEEP@@N  -- Fall asleep and recover HP quickly (but less aware!)
+  @@yWAKE@@N   -- Wake up or stand up when done resting
+
+Kill all seven guardians and collect their gear, then go @@yDOWN@@N.
+
+~
+S
+#20214
+Trial Chamber of the Crown~
+@@NYou enter a chamber decorated with portraits of crowned rulers.  A
+guardian stands here, wearing gleaming headgear.  The only exit is
+@@ysouth@@N back to the trial hall.
+~
+8 11
+D2
+You see the trial hall.
+~
+~
+0 0 20213
+E
+sign~
+This guardian carries equipment for your head, face, and ears.
+Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
+~
+S
+#20215
+Trial Chamber of the Mantle~
+@@NYou enter a chamber hung with rich tapestries and cloaks.  A guardian
+stands here, draped in various garments.  The only exit is @@ynorth@@N
+back to the trial hall.
+~
+8 11
+D0
+You see the trial hall.
+~
+~
+0 0 20213
+E
+sign~
+This guardian carries equipment for your neck, shoulders, and back.
+Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
+~
+S
+#20216
+Trial Chamber of the Fortress~
+@@NYou enter a heavily fortified chamber with thick stone walls.  A
+guardian stands here in full body armor.  The only exit is @@yeast@@N
+back to the trial hall.
+~
+8 11
+D1
+You see the trial hall.
+~
+~
+0 0 20213
+E
+sign~
+This guardian carries body armor, belt, leggings, and boots.
+Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
+~
+S
+#20217
+Trial Chamber of the Gauntlet~
+@@NYou enter a chamber filled with training dummies wearing arm guards.
+A guardian stands here, arms covered in protective gear.  The only exit
+is @@ydown@@N back to the trial hall.
+~
+8 11
+D5
+You see the trial hall.
+~
+~
+0 0 20213
+E
+sign~
+This guardian carries sleeves, bracelets, and gauntlets.
+Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
+~
+S
+#20218
+Trial Chamber of Trinkets~
+@@NYou enter a chamber that glitters with small treasures displayed in
+glass cases.  A guardian stands here, adorned with rings and baubles.
+The only exit is @@ysouth@@N back to the lower trial hall.
+~
+8 11
+D2
+You see the lower trial hall.
+~
+~
+0 0 20223
+E
+sign~
+This guardian carries rings and items to hold in your hands.
+Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
+~
+S
+#20219
+Trial Chamber of the Mystic~
+@@NYou enter a chamber bathed in an eerie supernatural glow.  Strange
+energies shimmer in the air.  A guardian floats here, surrounded by
+magical auras.  The only exit is @@ynorth@@N back to the lower trial hall.
+~
+8 11
+D0
+You see the lower trial hall.
+~
+~
+0 0 20223
+E
+sign~
+This guardian carries mystical items: halos, auras, and wings.
+These are special equipment slots for certain races.
+Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
+~
+S
+#20220
+Trial Chamber of the Exotic~
+@@NYou enter a strange chamber shaped like a cave.  The walls are carved
+with images of fantastical creatures -- dracons, lamia, minotaurs.  A
+guardian lurks here, equipped with unusual gear.  The only exit is
+@@yup@@N back to the lower trial hall.
+~
+8 11
+D4
+You see the lower trial hall.
+~
+~
+0 0 20223
+E
+sign~
+This guardian carries exotic equipment: beak guards, claws, tail wraps,
+and hooves.  These are special slots for non-humanoid races.
+Kill it and '@@yGET ALL CORPSE@@N' to claim the gear!
+~
+S
+#20221
+Lesson VIII: Rules and Etiquette~
+@@NYou enter a solemn chamber with the academy's code of conduct carved
+into the stone walls in golden letters.  A sign provides a summary of
+the most important rules.  Exits lead @@yeast@@N and @@ysouth@@N.
+~
+8 11
+D1
+You see the lower trial hall.
+~
+~
+0 0 20223
+D2
+You see the graduation hall.
+~
+~
+0 0 20222
+E
+sign~
+@@WLesson VIII: Rules and Etiquette@@N
+
+@@RRULE I:@@N   No swearing or offensive language on public channels.
+@@RRULE II:@@N  No player killing without consent.  Respect the PK system.
+@@RRULE III:@@N No kill-stealing -- do not attack monsters others are fighting.
+@@RRULE IV:@@N  Respect the Immortals (staff).  They volunteer their time.
+@@RRULE V:@@N   Ask questions!  Use '@@yNEWBIE@@N' or '@@yPRAY@@N' channels for help.
+
+@@WUseful commands:@@N
+  @@yBUG <message>@@N   -- Report a bug you found
+  @@yIDEA <message>@@N  -- Suggest an idea for the game
+  @@yTYPO <message>@@N  -- Report a typo
+  @@yHELP@@N            -- Browse the help system
+  @@yHELP <topic>@@N    -- Get help on a specific topic
+
+When ready, go @@ySOUTH@@N to graduate!
+
+~
+S
+#20222
+Graduation Hall~
+@@NYou enter a magnificent hall with a marble floor and crystal chandeliers.
+A wise old sage stands behind a pedestal, holding a diploma.  Colorful
+banners hang from the rafters, celebrating your achievement.  A sign
+contains your final instructions.
+The exit @@ysouth@@N leads out into the world.
+~
+8 11
+D0
+You see the rules room.
+~
+~
+0 0 20221
+D2
+You see the world beyond the academy.
+~
+~
+0 -1 3001
+E
+sign~
+@@W*** Congratulations, Graduate! ***@@N
+
+You have completed the Academy of Adventure!
+
+Kill the sage to claim your @@Wdiploma@@N -- it has magical properties!
+
+@@WRemember:@@N
+  @@yRECALL@@N  -- Teleport back to the temple at any time
+  @@ySAVE@@N    -- Save your character (auto-saves every few minutes)
+  @@yHELP@@N    -- Get help on any topic
+  @@yWHO@@N     -- See who else is playing
+  @@yQUIT@@N    -- Leave the game (your character is saved)
+
+May your adventures be legendary!
+
+~
+S
+#20223
+Lower Trial Hall~
+@@NYou descend into a lower section of the trial hall.  More chamber doors
+line the walls here, marked with mystical symbols.  The upper trial hall
+is @@yup@@N.  Corridors lead @@ynorth@@N, @@ysouth@@N, and @@ywest@@N.
+~
+8 11
+D0
+You see a chamber marked with a trinket symbol.
+~
+~
+0 0 20218
+D2
+You see a chamber marked with a mystic symbol.
+~
+~
+0 0 20219
+D3
+You see the rules room.
+~
+~
+0 0 20221
+D4
+You see the upper trial hall.
+~
+~
+0 0 20213
+D5
+You see a chamber marked with exotic symbols.
+~
+~
+0 0 20220
+S
+#20230
+North Alcove~
+@@NYou are in a small stone alcove.  The word '@@ySOUTH@@N' is carved into
+the wall with an arrow pointing back the way you came.
+~
+8 11
+D2
+You see the practice room.
+~
+~
+0 0 20202
+E
+sign~
+You went @@yNORTH@@N to get here.  Now go @@ySOUTH@@N to return!
+~
+S
+#20231
+South Alcove~
+@@NYou are in a small stone alcove.  The word '@@yNORTH@@N' is carved into
+the wall with an arrow pointing back the way you came.
+~
+8 11
+D0
+You see the practice room.
+~
+~
+0 0 20202
+E
+sign~
+You went @@ySOUTH@@N to get here.  Now go @@yNORTH@@N to return!
+~
+S
+#20232
+East Alcove~
+@@NYou are in a small stone alcove.  The word '@@yWEST@@N' is carved into
+the wall with an arrow pointing back the way you came.
+~
+8 11
+D3
+You see the practice room.
+~
+~
+0 0 20202
+E
+sign~
+You went @@yEAST@@N to get here.  Now go @@yWEST@@N to return!
+~
+S
+#20234
+Upper Alcove~
+@@NYou are in a small stone alcove high above the practice room.  The word
+'@@yDOWN@@N' is carved into the wall with an arrow pointing back.
+~
+8 11
+D5
+You see the practice room.
+~
+~
+0 0 20202
+E
+sign~
+You went @@yUP@@N to get here.  Now go @@yDOWN@@N to return!
+~
+S
+#20235
+Lower Alcove~
+@@NYou are in a small stone alcove beneath the practice room.  The word
+'@@yUP@@N' is carved into the wall with an arrow pointing back.
+~
+8 11
+D4
+You see the practice room.
+~
+~
+0 0 20202
+E
+sign~
+You went @@yDOWN@@N to get here.  Now go @@yUP@@N to return!
+~
+S
+#0
+#MOBILES
+#20200
+shopkeeper adept~
+the academy shopkeeper~
+The academy shopkeeper stands behind the counter, ready to serve you.
+~
+A portly fellow in a clean apron, he smiles warmly at you.
+~
+67 136 1000 S
+70 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20201
+blob ooze~
+a training blob~
+A massive blob of ooze quivers and pulsates here.
+~
+This disgusting mass of slime fills much of the room.  It looks far too
+tough for you to kill -- you should practice fleeing from it!
+~
+67 8 0 S
+3 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20202
+guardian crown~
+the Guardian of the Crown~
+The Guardian of the Crown stands here, wearing gleaming headgear.
+~
+A spectral warrior clad in shining helm and ornate earrings.
+~
+3 0 0 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20203
+guardian mantle~
+the Guardian of the Mantle~
+The Guardian of the Mantle stands here, draped in rich garments.
+~
+A spectral warrior wearing a fine cloak and shoulder armor.
+~
+3 0 0 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20204
+guardian fortress~
+the Guardian of the Fortress~
+The Guardian of the Fortress stands here in full body armor.
+~
+A spectral warrior clad from head to toe in heavy iron armor.
+~
+3 0 0 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20205
+guardian gauntlet~
+the Guardian of the Gauntlet~
+The Guardian of the Gauntlet stands here, arms encased in armor.
+~
+A spectral warrior with heavily armored arms and wrists.
+~
+3 0 0 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20206
+guardian trinkets~
+the Guardian of Trinkets~
+The Guardian of Trinkets stands here, adorned with rings and baubles.
+~
+A spectral warrior glittering with jewelry and held items.
+~
+3 0 0 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20207
+guardian mystic~
+the Guardian of the Mystic~
+The Guardian of the Mystic floats here, surrounded by magical auras.
+~
+A spectral being wreathed in supernatural energy, with ethereal wings.
+~
+3 0 0 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20208
+guardian exotic~
+the Guardian of the Exotic~
+The Guardian of the Exotic lurks here, equipped with strange gear.
+~
+A spectral creature with a beaked helm, iron claws, and a tail wrap.
+~
+3 0 0 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#20209
+sage wise~
+a wise old sage~
+A wise old sage stands here, holding a rolled-up diploma.
+~
+This ancient scholar has been waiting to congratulate the next graduate.
+~
+3 0 1000 S
+1 0
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#0
+#OBJECTS
+#20250
+key academy~
+an academy key~
+A shiny brass key lies on the floor here.~
+18 0 8388608 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+1
+#20251
+bag adventurer~
+an adventurer's bag~
+A sturdy leather bag has been left on the floor here.~
+15 0 8388608 1
+100 1 0 0 0 0 0 0 0 0
+8
+L
+1
+#20252
+lantern academy~
+an academy lantern~
+A brass lantern flickers softly on the floor here.~
+1 0 8388608 1
+0 0 100 0 0 0 0 0 0 0
+8
+L
+1
+#20253
+sword training~
+a training sword~
+A well-balanced training sword rests here.~
+5 0 8421376 1
+0 2 3 3 0 0 0 0 0 0
+8
+A
+18 1
+A
+19 1
+L
+1
+#20254
+buckler training~
+a training buckler~
+A small round buckler leans against the wall here.~
+9 268435456 8421376 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -5
+L
+1
+#20255
+sword great training two-handed~
+a great training sword~
+A massive two-handed practice sword leans against the wall here.~
+5 2147483648 8421376 1
+0 3 4 3 0 0 0 0 0 0
+8
+A
+18 1
+A
+19 2
+L
+1
+#20260
+helm iron~
+an iron helm~
+An iron helm has been dropped here.~
+9 0 8388616 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -5
+L
+1
+#20261
+faceguard iron~
+an iron faceguard~
+An iron faceguard lies on the ground here.~
+9 0 8388624 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20262
+earring jade~
+a jade earring~
+A delicate jade earring glints on the ground here.~
+8 0 8388672 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+4 1
+L
+1
+#20263
+earring ruby~
+a ruby earring~
+A brilliant ruby earring lies here.~
+8 0 8388672 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+3 1
+L
+1
+#20264
+chain silver necklace~
+a silver chain~
+A gleaming silver chain necklace lies here.~
+8 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+1 1
+L
+1
+#20265
+amulet amber~
+an amber amulet~
+A warm amber amulet on a cord lies here.~
+8 0 8388736 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+5 1
+L
+1
+#20266
+shoulderpads leather~
+a pair of leather shoulderpads~
+A pair of leather shoulderpads has been left here.~
+9 0 8389120 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20267
+cloak tattered~
+a tattered cloak~
+A tattered but still serviceable cloak lies here.~
+9 0 8454144 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20268
+vest chainmail~
+a chainmail vest~
+A chainmail vest lies in a heap on the ground here.~
+9 0 8650752 1
+3 0 0 0 0 0 0 0 0 0
+8
+A
+17 -5
+L
+1
+#20269
+belt studded~
+a studded belt~
+A sturdy studded leather belt lies here.~
+9 0 8519680 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -2
+L
+1
+#20270
+leggings iron~
+a pair of iron leggings~
+A pair of iron leggings lies here.~
+9 0 9437184 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -5
+L
+1
+#20271
+boots iron~
+a pair of iron boots~
+A pair of iron boots sits here.~
+9 0 10485760 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20272
+sleeves padded~
+a pair of padded sleeves~
+A pair of padded arm sleeves lies here.~
+9 0 8389632 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20273
+bracelet copper~
+a copper bracelet~
+A tarnished copper bracelet lies here.~
+8 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+2 1
+L
+1
+#20274
+bracelet silver~
+a silver bracelet~
+A polished silver bracelet lies here.~
+8 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+1 1
+L
+1
+#20275
+gauntlets leather~
+a pair of leather gauntlets~
+A pair of leather gauntlets lies here.~
+9 0 8392704 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20276
+ring copper~
+a copper ring~
+A simple copper ring lies here.~
+8 0 8396800 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+13 5
+L
+1
+#20277
+ring silver~
+a silver ring~
+A polished silver ring lies here.~
+8 0 8396800 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+12 5
+L
+1
+#20278
+orb crystal~
+a crystal orb~
+A small crystal orb pulses with inner light here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+3 1
+A
+4 1
+L
+1
+#20279
+pennant war~
+a war pennant~
+A small triangular war pennant lies here.~
+8 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+18 1
+A
+19 1
+L
+1
+#20280
+halo glowing~
+a glowing halo~
+A softly glowing golden halo floats here.~
+8 0 8388609 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+4 1
+L
+1
+#20281
+aura shimmering~
+a shimmering aura~
+A bottle of shimmering aura essence lies here.~
+8 0 8388610 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+3 1
+L
+1
+#20282
+crown horned~
+a horned crown~
+A crown with small iron horns lies here.~
+9 0 8388612 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20283
+wings feathered~
+a pair of feathered wings~
+A pair of feathered wings lies here.~
+9 0 8388864 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20284
+guard beak~
+a beak guard~
+An iron beak guard lies here.~
+9 0 8388640 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -2
+L
+1
+#20285
+claws iron~
+a pair of iron claws~
+A set of iron claw sheaths lies here.~
+9 0 8404992 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+19 1
+L
+1
+#20286
+wrap tail~
+a tail wrap~
+A leather tail wrap lies coiled here.~
+9 0 8912896 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -2
+L
+1
+#20287
+hooves iron~
+a set of iron hooves~
+A set of iron horseshoe-like hooves lies here.~
+9 0 12582912 1
+2 0 0 0 0 0 0 0 0 0
+8
+A
+17 -3
+L
+1
+#20288
+pennant clan~
+a clan pennant~
+A colorful clan pennant lies here.~
+8 0 25165824 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+1 1
+L
+1
+#20289
+diploma academy~
+an academy diploma~
+You see an academy diploma here, rolled up with a ribbon.~
+8 64 8421376 1
+0 0 0 0 0 0 0 0 0 0
+8
+A
+5 1
+A
+4 1
+E
+diploma~
+This document certifies that you have graduated from the Academy of
+Adventure.  It has magical effects on your abilities if you hold it!
+~
+L
+1
+#20290
+bread loaf~
+a loaf of bread~
+A fresh loaf of bread lies here.~
+19 8192 8388608 1
+40 0 0 0 0 0 0 0 0 0
+8
+L
+1
+#20291
+flask water~
+a flask of water~
+A leather flask of water sits here.~
+17 8192 8388608 1
+100 100 0 0 0 0 0 0 0 0
+8
+L
+1
+#0
+#SHOPS
+20200 19 17 0 0 0 100 100 0 23
+0
+#RESETS
+D 0 20203 5 1
+D 0 20204 0 2
+D 0 20205 2 2
+O 0 20250 1 20204            academy key
+O 0 20251 1 20207            adventurer's bag
+O 0 20252 1 20207            academy lantern
+O 0 20253 1 20208            training sword
+O 0 20254 1 20208            training buckler
+O 0 20255 1 20211            great training sword
+M 0 20200 1 20210            shopkeeper
+G 0 20290 999
+G 0 20291 999
+M 0 20201 1 20212            training blob
+M 0 20202 1 20214            guardian of the crown
+E 0 20260 99 4
+E 0 20261 99 5
+E 0 20262 99 7
+E 0 20263 99 8
+M 0 20203 1 20215            guardian of the mantle
+E 0 20264 99 9
+E 0 20265 99 10
+E 0 20266 99 12
+E 0 20267 99 24
+M 0 20204 1 20216            guardian of the fortress
+E 0 20268 99 26
+E 0 20269 99 25
+E 0 20270 99 28
+E 0 20271 99 29
+M 0 20205 1 20217            guardian of the gauntlet
+E 0 20272 99 13
+E 0 20273 99 14
+E 0 20274 99 15
+E 0 20275 99 16
+M 0 20206 1 20218            guardian of trinkets
+E 0 20276 99 17
+E 0 20277 99 18
+E 0 20278 99 20
+E 0 20279 99 21
+M 0 20207 1 20219            guardian of the mystic
+E 0 20280 99 1
+E 0 20281 99 2
+E 0 20282 99 3
+E 0 20283 99 11
+M 0 20208 1 20220            guardian of the exotic
+E 0 20284 99 6
+E 0 20285 99 19
+E 0 20286 99 27
+E 0 20287 99 30
+E 0 20288 99 31
+M 0 20209 1 20222            academy sage
+E 0 20289 99 20
+S
+#SPECIALS
+S
+#$
