@@ -159,6 +159,10 @@ static void test_get_wear_name_handles_weapon_light_and_jewelry(void)
     assert(!is_jewelry(&obj));
     SET_BIT(obj.wear_flags, ITEM_WEAR_NECK);
     assert(is_jewelry(&obj));
+
+    memset(&obj, 0, sizeof(obj));
+    obj.item_type = ITEM_LIGHT;
+    assert(is_jewelry(&obj));
 }
 
 
