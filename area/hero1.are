@@ -1,5 +1,5 @@
 #AREA
-The Arena~
+@@GThe Arena@@N~
 Q 16
 K arena~
 L {@@G 5 15@@N}~
@@ -14,22 +14,50 @@ R hero~
 W hero~
 B Currently building area.
 M No bad room spells allowed.
+#MOBILES
+#300
+gladiator~
+a gladiator~
 A large, well-trained gladiator is preparing here.
 ~
 This gladiator is a huge killing machine; perhaps you should walk away.
 ~
+99 0 0 S
+15 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#301
+rat~
+a large rat~
 A large rat is scurrying about here.
 ~
 A mangy arena rat watches you with beady, suspicious eyes.
 ~
+99 0 0 S
+5 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#302
+borg~
+Borg~
 Borg stands here, cold and implacable.
 ~
 The big borgy bastard towers over everything in the room.
 ~
+33554531 0 0 S
+20 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #303
@@ -39,152 +67,115 @@ A grim arena trainee paces here.
 ~
 A scarred trainee mutters through combat drills while eyeing the arena doors.
 ~
-3 0 0 S
+67 0 0 S
 7 1
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 0 0 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#304
+gladiator filthy~
+a filthy gladiator~
 A filthy gladiator stands here.
 ~
 Sweat and grime cake this battered gladiator from head to toe.
+~
+99 0 0 S
+8 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-A cook hurries here, buried in kitchen work.
+#305
+cook harried~
+a harried cook~
+A harried cook rushes about, buried in kitchen work.
 ~
-Pots, pans, and shouted orders follow this exhausted kitchen veteran.
+This overworked cook has burns on both arms and a permanently furrowed brow.
+~
+67 0 0 S
+9 1
+0 0 0 0
+! 0 0 0 0 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
-A hurried patron is trying to get through lunch here.
+#306
+patron hurried~
+a hurried patron~
+A hurried patron is here, trying to get through lunch.
 ~
 This patron clutches a tray and scans for danger between every bite.
 ~
-l 0 0 0 0 0 0 0 0 0 0
-L 0 0 0 0 0 0 0 0 0
-L
-10
-#301
-shield~
-shield~
-A large flaming shield~
-9 134217728 8421376 1
-0 0 0 0 0 0 0 0 0 0
-8
-A
-17 -20
-A
-18 6
-A
-19 6
-A
-13 10
-A filthy gladiator stands here~
-~
-3 0 0 S
-8 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#305
-A harried cook~
-A harried cook~
-A cook is here, harried
-~
-~
-3 0 0 S
-9 1
-0 0 0 0
-! 0 0 0 7 0 0 0
-| 0 0 0 0 0 0 0
-+ 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
-#306
-A hurried patron~
-A hurried patron~
-A hurried patron is here, trying to get through lunch
-~
-~
-3 0 0 S
+67 0 0 S
 12 1
 0 0 0 0
-! 0 0 0 7 0 0 0
+! 0 0 0 0 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
-#301
-shield~
-shield~
-A large flaming shield~
-9 134217728 8421376 1
-0 0 0 0 0 0 0 0 0 0
-8
-A
-17 -20
-A
-18 6
-A
-19 6
-A
-13 10
-L
-10
 #300
 breast plate~
-breastplate~
-A breast plate~
-9 134217728 8650752 1
-500 10 10 10 0 0 0 0 0 0
-4
-A
-19 3
-A
-18 3
-A
-17 -25
-A
-13 15
-E
-~
-~
-E
-~
-~
-E
-~
-~
+a breast plate~
+A sturdy breast plate rests here~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+10
+#301
+flaming shield~
+a flaming shield~
+A large flaming shield rests here~
+9 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+12
 L
 10
 #302
-a Borg's Compliance Enhancer~
+compliance enhancer borg~
 a Borg's Compliance Enhancer~
 A compliance enhancer lies here~
-5 134217728 8421376 1
+5 0 8421376 1
 0 0 0 4 0 0 0 0 0 0
-4
-A
-18 10
-A
-19 10
+7
 L
 10
 #303
-a Cook's White Hat~
+cook white hat~
+a cook's white hat~
+A cook's white hat lies here~
+9 0 8388616 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+10
+#304
+patron ring~
+a patron's ring~
+A patron's ring lies here in the dust~
+8 0 8396800 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+10
+#0
 #ROOMS
 #300
-The Preparation Room~
-You are standing in a small square room. The walls are lined with benches, and
-those benches are lined with gladiators waiting for their turn to fight to the
-death in the arena to the east.
+@@GThe Preparation Room@@N~
+You are standing in a small square room with rough stone walls. The walls are
+lined with sturdy oak @@Gbenches@@N, and those benches are crowded with gladiators
+waiting for their turn to fight to the death in the arena. The air is thick
+with sweat and nervous energy. To the east, a narrow passage leads deeper into
+the arena grounds. A heavy iron gate to the west opens onto the road beyond.
 ~
 16384 11
 D1
@@ -197,13 +188,17 @@ D3
 0 0 3726
 E
 benches~
-The benches are strongly constructed from oak.~
+The benches are strongly constructed from oak, their surfaces worn smooth by
+years of anxious gladiators. Deep gouges mark the armrests where fighters
+gripped them before entering the arena.
+~
 S
 #301
-Training Camp~
-Weapon racks and scarred practice dummies crowd this dusty training yard.
-Boot prints churn the earth, and the bark of drill sergeants echoes between
-the surrounding arena walls.
+@@GTraining Camp@@N~
+Weapon racks and scarred practice dummies crowd this dusty training yard. Boot
+prints churn the packed earth in every direction, and the bark of drill
+sergeants echoes off the surrounding arena walls. Battered wooden posts bear
+the marks of countless strikes, their surfaces splintered and gouged.
 ~
 0 11
 D0
@@ -220,9 +215,11 @@ D3
 0 0 300
 S
 #302
-Cells~
-A row of iron-barred cells lines this narrow corridor.
-The air is stale with fear, old blood, and the scrape of restless prisoners.
+@@GCells@@N~
+A row of iron-barred cells lines this narrow corridor beneath the arena. The
+air is stale with fear, old blood, and the scrape of restless prisoners. A
+single torch gutters in a wall sconce, throwing long shadows across the cold
+stone floor.
 ~
 0 11
 D1
@@ -235,9 +232,10 @@ D2
 0 -1 301
 S
 #303
-Training Camp~
-A second training lane stretches along the edge of the combat grounds.
-Sandbags hang from timber posts, and spent practice weapons litter the dirt.
+@@GTraining Lane@@N~
+A second training lane stretches along the edge of the combat grounds. Sandbags
+hang from timber posts, and spent practice weapons litter the hard-packed dirt.
+The walls here are scarred with blade marks from years of relentless drilling.
 ~
 0 11
 D0
@@ -250,9 +248,13 @@ D1
 0 -1 304
 S
 #304
-Combat Ground~
-This is the arena's combat ground, a broad pit of trampled sand and old stains.
-Crude wooden barriers ring the edges while spectators roar from beyond.
+@@GCombat Ground@@N~
+This is the arena's combat ground, a broad pit of trampled sand stained dark
+with old blood. Crude wooden barriers ring the fighting pit while spectators
+roar from weathered stands beyond. The sand crunches underfoot, hiding
+fragments of broken weapons and shattered shields. A heavy gate to the west
+leads back toward the training lanes. The eastern passage opens toward the mess
+hall where survivors take their meals.
 ~
 0 11
 D1
@@ -265,9 +267,11 @@ D3
 0 -1 303
 S
 #305
-Mess Hall~
-Long tables fill the mess hall, crowded with dented cups and chipped bowls.
-The smell of broth, sweat, and smoke hangs heavy in the warm air.
+@@GMess Hall@@N~
+Long tables fill the mess hall, crowded with dented cups and chipped wooden
+bowls. The smell of broth, sweat, and smoke hangs heavy in the warm air.
+Fighters crowd the benches shoulder to shoulder, eating quickly with one eye
+always watching the door.
 ~
 4 11
 D0
@@ -280,77 +284,80 @@ D3
 0 -1 304
 S
 #306
-Kitchen~
+@@GKitchen@@N~
 Heat rolls from brick ovens and blackened cookfires in this cramped kitchen.
-Knives clatter on butcher blocks while cauldrons simmer over open flame.
+Knives clatter on worn butcher blocks while cauldrons of stew simmer over open
+flame. Soot coats the low ceiling and grease spatters mark the stone walls on
+every side.
 ~
 0 11
+D1
+~
+~
+0 -1 308
 D2
 ~
 ~
 0 -1 305
 S
 #307
-In a cell~
-Cold stone walls and rusted bars make this cell feel smaller by the minute.
-Straw is scattered across the floor, and distant screams seep in from outside.
+@@GIn a Cell@@N~
+Cold stone walls and rusted iron bars make this cell feel smaller by the
+minute. Straw is scattered across the damp floor, and distant screams seep in
+from the arena outside. Scratched tally marks cover the wall near a thin
+sleeping pallet in the corner.
 ~
 4 11
+D1
+~
+~
+0 -1 309
 D3
 ~
 ~
 0 -1 302
 S
-#0
-10
-#304
-A patron's Ring~
-a Patron's Ring~
-A patron's ring lies here in the dust~
-8 134217728 8396800 1
-0 0 0 0 0 0 0 0 0 0
-4
-A
-13 40
-A
-12 40
-A
-14 20
-A
-18 1
-A
-19 1
-L
-10
+#308
+@@GSupply Room@@N~
+Shelves of clay pots, dried herbs, and sacks of grain line the walls of this
+cramped supply room. Barrels of salted meat and casks of cheap ale are stacked
+haphazardly in the corners. The air smells of dust, dried thyme, and old wood
+that has seen better days.
+~
+0 11
+D3
+~
+~
+0 -1 306
+S
+#309
+@@GGuard Alcove@@N~
+A small stone alcove serves as a guard post overlooking the cell block. A
+wooden stool and a battered lantern sit beside the narrow doorway. The walls
+are bare except for a ring of iron keys hanging from a bent nail driven into
+the mortar.
+~
+4 11
+D3
+~
+~
+0 -1 307
+S
 #0
 #RESETS
-M 0 300 10 300 (null)
-
-G 0 300 0 (null)
-
-M 0 302 30 301 (null)
-
-E 0 302 0 0 (null)
-
-M 0 304 1 307 (null)
-
-E 0 301 0 0 (null)
-
-M 0 305 5 306 (null)
-
-E 0 303 0 0 (null)
-
-M 0 305 5 306 (null)
-
-M 0 306 10 305 (null)
-
-E 0 304 0 0 (null)
-
-M 0 306 10 305 (null)
-
-M 0 306 10 305 (null)
-
-M 0 301 7 301 (null)
-
+M 0 300 10 300 gladiator in preparation room
+G 0 300 0 breast plate for gladiator
+M 0 302 30 301 Borg in training camp
+E 0 302 0 0 compliance enhancer on Borg
+M 0 304 1 307 filthy gladiator in cell
+E 0 301 0 0 flaming shield on filthy gladiator
+M 0 305 5 306 cook in kitchen
+E 0 303 0 0 cook's hat on cook
+M 0 305 5 306 cook in kitchen
+M 0 306 10 305 patron in mess hall
+E 0 304 0 0 patron's ring on patron
+M 0 306 10 305 patron in mess hall
+M 0 306 10 305 patron in mess hall
+M 0 301 7 301 rat in training camp
 S
 #$
