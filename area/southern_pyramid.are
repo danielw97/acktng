@@ -7554,6 +7554,171 @@ light, and the ring hums faintly with wind energy.~
 3
 L
 127
+#11601
+whispering wraith torn veil face~
+@@ya Whispering Wraith's Torn Veil@@N~
+A ragged strip of @@bectoplasmic gauze@@N that drapes across the face like a mourning
+veil, its edges dissolving into wisps of pale mist. The veil whispers constantly
+in a language just beyond comprehension, and it chills the skin.~
+9 67108992 8388624 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+131
+#11602
+calcified serpent scale pauldrons shoulders~
+@@yCalcified Serpent Scale Pauldrons@@N~
+Shoulder guards assembled from the @@bpetrified scales@@N of a calcified serpent, each
+scale thick as a thumb and hard as marble. The pauldrons are heavy but distribute
+weight evenly across @@yiron-reinforced@@N leather straps.~
+9 67108992 8389120 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+129
+#11603
+tomb beetle mandible gauntlets hands~
+@@yTomb Beetle Mandible Gauntlets@@N~
+Gauntlets fashioned from the oversized @@bmandibles@@N of a tomb beetle colossus, their
+serrated inner edges facing outward as defensive ridges. The chitin is layered
+over @@bpadded linen@@N and clasped with @@ybronze@@N fittings.~
+9 67108992 8392704 1
+0 0 0 0 0 0 0 0 0 0
+15
+L
+136
+#11604
+mold-ridden ghoul festering girdle waist~
+@@ya Mold-ridden Ghoul's Festering Girdle@@N~
+A wide belt of @@bmatted leather@@N covered in patches of @@eliving mold@@N that refuses to
+die. The girdle reeks of damp earth and decomposition, but its fungal growth
+actually reinforces the leather into rigid armor plating.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+135
+#11605
+bloated corpse walker burst vest body~
+@@ya Bloated Corpse Walker's Burst Vest@@N~
+A torso covering of @@bstretched and hardened skin@@N taken from a bloated corpse walker,
+tanned with harsh @@echemical salts@@N. The vest is stiff and slightly distended, but
+provides solid coverage against blows and bites.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+132
+#11606
+decay spider silk wraps wrist~
+@@yDecay Spider Silk Wraps@@N~
+Forearm wrappings of @@bspider silk@@N harvested from a decay spider's web, the strands
+unnaturally strong despite their gossamer appearance. The silk has a faint @@egreenish
+tint@@N and sticks slightly to the skin when applied.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+1
+L
+128
+#11607
+mildew phantom dripping cowl head~
+@@ya Mildew Phantom's Dripping Cowl@@N~
+A soggy hood of @@bwaterlogged cloth@@N that perpetually drips with condensation, its
+surface spotted with @@epale mildew@@N. Despite its unpleasant dampness, the cowl is
+thick and padded, offering protection against impacts to the skull.~
+9 67108992 8388616 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+134
+#11608
+shadow hound fang necklace neck~
+@@yShadow Hound Fang Necklace@@N~
+A string of @@bblack fangs@@N taken from a shadow hound, each tooth as long as a finger
+and polished to a glossy sheen. The fangs are threaded on a cord of @@bshadow-woven
+sinew@@N and click together with each movement.~
+9 67108992 8388736 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+137
+#11609
+nightmare sentinel black iron helm head~
+@@ya Nightmare Sentinel's Black Iron Helm@@N~
+A full-faced helm of @@bblack iron@@N forged in the likeness of a screaming skull, its
+eye sockets set with chips of @@Rred garnet@@N that catch the light. The helm is heavy
+but perfectly balanced, and the visor amplifies the wearer's breathing.~
+9 128 8388616 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+139
+#11610
+shade dancer flickering sash waist~
+@@yShade Dancer's Flickering Sash@@N~
+A length of @@bshadow-woven silk@@N that shimmers between visibility and transparency as
+it moves, creating a disorienting flickering effect. The sash wraps around the waist
+and trails loose ends that dissolve into wisps of darkness.~
+9 67108992 8519680 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+133
+#11611
+darkfire wisp ember cinder light~
+@@ya Darkfire Wisp's Ember Cinder@@N~
+A small sphere of @@Rsmoldering coal@@N that hovers faintly above the palm when held,
+casting a dim reddish glow. The cinder was torn from the heart of a darkfire wisp
+and still burns with a cold fire that gives light but no warmth.~
+9 67108992 8421376 1
+0 0 0 0 0 0 0 0 0 0
+4
+L
+126
+#11612
+ossuary spider bone-silk bracer wrist~
+@@yan Ossuary Spider's Bone-silk Bracer@@N~
+A forearm guard woven from @@bbone-colored spider silk@@N layered over thin strips of
+carved @@bfinger bone@@N. The bracer is rigid and light, its surface patterned with the
+natural geometric weave of the ossuary spider's web.~
+9 67108992 8390656 1
+0 0 0 0 0 0 0 0 0 0
+5
+L
+131
+#11613
+marrow elemental slick boots feet~
+@@ya Marrow Elemental's Slick Boots@@N~
+Tall boots of @@bhardened marrow@@N shaped and polished into rigid shin-guards with
+flexible ankle joints. The boots have a faintly @@egreasy sheen@@N and are slippery to
+the touch, but grip the ground with supernatural adhesion.~
+9 67108992 10485760 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+138
+#11614
+skeletal war drummer bone drumstick weapon~
+@@ya Skeletal War Drummer's Bone Drumstick@@N~
+An oversized drumstick carved from a single @@bthighbone@@N, its striking end wrapped in
+layers of @@bdried sinew@@N for added weight. The weapon is crude but devastating, designed
+to pound rhythm and skulls with equal vigor.~
+5 67108992 8421376 1
+0 0 0 7 0 0 0 0 0 0
+8
+L
+134
+#11615
+calcite horror shard plate body~
+@@yCalcite Horror Shard Plate@@N~
+A breastplate assembled from dozens of jagged @@bcalcite shards@@N fused together by
+crystalline growth, forming a rigid but brittle-looking chest covering. The crystal
+facets catch light and scatter it in prismatic bursts of @@ypale gold@@N.~
+9 67108992 8650752 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+140
 #0
 
 #$
