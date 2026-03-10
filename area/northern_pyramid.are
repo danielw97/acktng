@@ -1683,4 +1683,414 @@ The south passage connects toward the scarab shrine.~
 ~
 0 -1 10222
 S
+#10225
+@@yThe Inner Priest Chamber@@N~
+The resident priests of this floor occupied this chamber, their sleeping platforms cut from the @@bsandstone@@N walls and their personal storage niches marked with individual name-cartouches above each sleeping space. The name-cartouches include titles: lector-priest, wab-priest, sem-priest — the full hierarchy of the scarab floor's clerical establishment represented in a single room. @@yA small private altar@@N at the room's eastern end still holds a residue of wax and a fragment of @@bcedar@@N incense, the last offering placed here when the floor was sealed.
+~
+24584 11
+D2
+The south passage leads back toward the ritual cleansing room.~
+~
+0 -1 10224
+D1
+The east passage leads toward the hall of prayers.~
+~
+0 -1 10227
+D0
+The north passage connects toward the side archive.~
+~
+0 -1 10228
+S
+#10226
+@@yA Narrow Side Passage@@N~
+A service corridor cut at the minimum necessary width, its walls undecorated @@bsandstone@@N with only functional tool marks from its construction. The passage provides a shortcut between two areas of the floor that would otherwise require a longer route through the ceremonial halls. The ceiling is low enough to require ducking at one point where a fallen block has reduced clearance.
+~
+24585 11
+D1
+The passage east connects back to the ceremonial halls.~
+~
+0 -1 10227
+D2
+The passage south connects toward the priests' corridor.~
+~
+0 -1 10219
+S
+#10227
+@@yThe Hall of Prayers@@N~
+The communal prayer hall of the first floor where the resident priesthood gathered at prescribed hours for communal recitation. The hall's acoustic properties were carefully designed: the low corbelled ceiling creates a resonance that amplifies and blends voices in a way that must have been dramatically effective during mass recitations. @@yOchre paint@@N in repeating geometric patterns covers the ceiling, its pattern keyed to the acoustic nodes. Stone kneeling blocks are still spaced precisely across the floor in the arrangement for formal recitation.
+~
+24584 11
+D3
+The west passage returns toward the inner priest chamber.~
+~
+0 -1 10225
+D1
+The east passage continues toward the preparation hall.~
+~
+0 -1 10230
+D0
+The north passage leads toward the floor's further inner chambers.~
+~
+0 -1 10229
+S
+#10228
+@@yThe Side Archive@@N~
+A dark secondary archive chamber used for administrative records rather than sacred texts: here the priests kept inventories, maintenance logs, expenditure records, and correspondence. The @@bsandstone@@N shelves that held the papyrus documents are intact; the documents themselves are mostly powder, reduced by humidity and insect damage to @@yyellow-brown@@N dust that fills the shelf interiors like displaced sand. Several inscribed stone tablets in the lowest shelf survive intact, their content a roster of supplies delivered to this floor over a fifty-year period.
+~
+24585 11
+D2
+The south passage leads back toward the inner priest chamber.~
+~
+0 -1 10225
+D1
+The passage east connects back to the floor's ceremonial halls.~
+~
+0 -1 10229
+S
+#10229
+@@yA Ventilation Shaft Landing@@N~
+A wider section of corridor where a vertical shaft was cut through the pyramid's core to provide air movement to the deeper interior levels. The shaft is a narrow rectangle in the ceiling, rising through the upper floors to some distant point where desert air enters. The current moving through it is dry and carries the faint mineral scent of sun-baked @@bsandstone@@N from far above. The movement of air here has kept this corridor slightly cleaner than adjacent passages — the constant flow preventing the deepest accumulations of settled dust.
+~
+24584 11
+D2
+The south passage connects toward the hall of prayers.~
+~
+0 -1 10227
+D3
+The west passage connects toward the side archive.~
+~
+0 -1 10228
+D0
+The north passage leads toward the preparation hall.~
+~
+0 -1 10230
+S
+#10230
+@@yThe Preparation Hall@@N~
+The final preparation area before the floor's inner boss approach — a wide, well-appointed hall where priests underwent their last purification before entering the sanctified spaces ahead. @@yHieroglyphic inscriptions@@N covering both walls give the exact sequence of required ritual actions: prayer, aspersion, fumigation, and the formal declaration of purity that was required for entry. The stone basins for aspersion at the hall's entrance are larger than those in the cleansing room, suggesting this was a more elaborate ceremony. The hall's north end is marked by a passage into the warden's approach.
+~
+24584 11
+D2
+The south passage connects toward the ventilation shaft landing.~
+~
+0 -1 10229
+D0
+The north passage leads into the warden's approach.~
+~
+0 -1 10231
+D3
+The west passage connects toward the hall of prayers.~
+~
+0 -1 10227
+S
+#10231
+@@yThe Warden's Approach@@N~
+An intermediate chamber between the preparation hall and the outer guardian space beyond, its walls carrying carved images of the specific guardian entity for this floor — the Scarab Colossus — in its expected forms: the colossal carapace, the solar disc, the crushing force that awaits those who proceed improperly. The inscriptions are direct rather than symbolic in tone, describing the consequences of the guardian's displeasure in detailed procedural terms. The @@yyellow sandstone@@N here seems to absorb rather than reflect available light, giving the chamber a quality of weight.
+~
+24584 11
+D2
+The south passage returns to the preparation hall.~
+~
+0 -1 10230
+D0
+The north passage leads into the outer guardian chamber.~
+~
+0 -1 10232
+S
+#10232
+@@yThe Outer Guardian Chamber@@N~
+The antechamber before the Scarab Colossus's domain is designed to make visitors feel small: the ceiling rises to its maximum height here, and the columns flanking the northern passage are the largest free-standing stone members on the entire floor. @@RRed-inked warning glyphs@@N in the borders above the northern arch are the most explicitly threatening on the floor: "Turn back. The @@Rcolossus sees@@N you. Your bones are already known to it." The carved scarab imagery here has shifted from reverent to aggressive — the beetles' mandibles are open and their postures combative.
+~
+24584 11
+D2
+The south passage leads back toward the warden's approach.~
+~
+0 -1 10231
+D0
+The north passage continues toward the final corridor.~
+~
+0 -1 10233
+S
+#10233
+@@yA Final Corridor@@N~
+A dark connecting corridor immediately before the scarab colossus approach chamber, its walls stripped of all decorative content except for a continuous @@Rred border@@N at floor level that extends from the entrance of this corridor to the approach chamber door. The red border is the only color in an otherwise bare @@bsandstone@@N passage, drawing the eye toward whatever lies ahead.
+~
+24585 11
+D2
+The south passage leads back through the outer guardian chamber.~
+~
+0 -1 10232
+D0
+The north passage enters the scarab colossus approach chamber.~
+~
+0 -1 10234
+S
+#10234
+@@yThe Scarab Colossus Approach@@N~
+The approach chamber to the Scarab Colossus stands at the full height of the first floor, its walls covered in every remaining depiction of the colossus's power and the cosmic authority that animates it. A @@bstone scarab door@@N is set in the north wall, its surface carved with a single enormous scarab figure whose solar disc is the door's handle. @@RBlood-red glyphs@@N below the door record the number of intruders the colossus has destroyed; the tally is carved in a different, later hand than the surrounding work, added at some point during the colossus's active watch. The door stands between the approach and the colossus's chamber.
+~
+24584 11
+D2
+The south passage leads back through the final corridor.~
+~
+0 -1 10233
+D0
+The @@bstone scarab door@@N stands in the north wall, its carved face set with @@cblue faience@@N eyes.~
+^stone scarab door~
+1 -1 10235
+E
+stone scarab door~
+The @@bstone scarab door@@N is a single carved @@bsandstone@@N slab set in a dressed frame, its surface a single enormous scarab in high relief whose solar disc forms the door handle.
+~
+S
+#10235
+@@yThe Scarab Colossus Chamber@@N~
+The Scarab Colossus's chamber is the largest room on the first floor, its ceiling rising to the full height permitted by the pyramid's structure at this level, its walls covered entirely in the golden mosaic carapace pattern of the colossus itself rendered at full scale. @@RBlood-red sun-disc carvings@@N ring the ceiling at the highest course, each one representing a completed cycle of the colossus's unending vigil. The floor is polished @@bblack sandstone@@N from which the colossus's footsteps have left permanent depressions over millennia of circular patrol. The @@bstone scarab door@@N in the south wall leads back to the approach chamber.
+~
+24588 11
+D2
+The @@bstone scarab door@@N in the south wall leads back to the approach chamber.~
+^stone scarab door~
+1 -1 10234
+S
+#10236
+@@yThe Second Ascent@@N~
+The upper landing of the eastern stairwell on the second floor, designated in @@yhieroglyphs@@N above the arch as the Chamber of the High Priests. The inscriptions here shift register from the scarab's cosmic biology to the priestly hierarchy's administrative authority: this floor belongs to the administrators of the sacred rites rather than to the rites themselves. @@yGold@@N paint on the landing's side panels is still vivid, and the air carries a distinct quality — drier and cooler than the floor below, as though the pyramid's interior climate changes with each ascending level. Recall is possible from this landing.
+~
+16396 11
+D5
+The stairwell descends back to the east stair landing on the first floor.~
+~
+0 -1 10215
+D1
+The passage east enters the high priests' hall.~
+~
+0 -1 10238
+D0
+The passage north leads deeper into the second floor.~
+~
+0 -1 10239
+S
+#10237
+@@yThe Priests' Landing@@N~
+The alternate stairwell entrance to the second floor opens onto this landing with a different decorative program than the eastern flight: the walls here show the second floor's resident pharaoh-spirit in its living form as High Priest rather than in its bound undead form, the pre-death personality emphasized to remind ascending visitors of what they approach and what it was before the pyramid's curse transformed it. Recall is possible from this landing.
+~
+16396 11
+D5
+The stairwell descends back to the west stair landing on the first floor.~
+~
+0 -1 10216
+D1
+The passage east connects to the high priests' hall.~
+~
+0 -1 10238
+D0
+The north passage leads into the floor's chambers.~
+~
+0 -1 10239
+S
+#10238
+@@yThe High Priests' Hall@@N~
+The principal chamber of the second floor is a formal hall of authority: two rows of columns support a high ceiling, and the walls carry carved portraits of the pyramid's high priests in chronological order, each one shown in full regalia with specific attributes that distinguished their office. The portraiture is individualized enough to suggest real likenesses rather than idealized types. @@yGold-leaf@@N cartouches above each portrait contain names and titles that can still be read in full. The hall connects to the landings behind and to the floor's ceremonial chambers ahead.
+~
+24584 11
+D3
+The west passage leads back toward the stair landings.~
+~
+0 -1 10237
+D1
+The east passage continues into the floor's inner chambers.~
+~
+0 -1 10241
+D0
+The north passage leads deeper into the second floor.~
+~
+0 -1 10242
+S
+#10239
+@@yThe Anointing Chamber@@N~
+Tall stone vessels for sacred oils still stand in their carved floor sockets along both walls of this chamber, their contents long since evaporated to leave only a crystalline residue in the vessel bases that carries the ghost of their fragrance — cedar, myrrh, and something floral and unidentifiable. The vessels are inlaid with @@cblue faience@@N collar patterns around their necks and @@yyellow@@N geometric borders at their bases. A carved instruction panel above the chamber's north doorway specifies the oils' correct sequence of application and the prayers accompanying each anointing.
+~
+24584 11
+D2
+The south passage leads back toward the second ascent landing.~
+~
+0 -1 10236
+D0
+The north passage leads toward the high priests' hall.~
+~
+0 -1 10238
+D1
+The east passage leads toward a ritual side room.~
+~
+0 -1 10240
+S
+#10240
+@@yA Ritual Side Room@@N~
+A dark side chamber used for preparation activities too minor for the main ceremonial spaces but too sacred for the common corridors. The walls are painted rather than carved, their @@yochre@@N and @@bbrown@@N decorative scheme simpler than the elaborate relief work in the main chambers. A stone table for laying out ritual implements is the only furnishing; its surface bears the stain patterns of many years of use. The chamber connects east to the anointing chamber and north to the altar of the four winds.
+~
+24585 11
+D3
+The passage west returns toward the anointing chamber.~
+~
+0 -1 10239
+D0
+The north passage connects toward the altar of the four winds.~
+~
+0 -1 10242
+S
+#10241
+@@yThe Sacred Scroll Room@@N~
+A specialized archive for the second floor's most important documents, its shelves designed to hold papyrus scrolls in sealed stone tubes rather than open storage. The scroll tubes are still present — dozens of them, sealed with wax plugs that have hardened to stone — but the papyrus inside has almost certainly deteriorated to unreadable powder despite the sealed storage. A few tubes that were opened by previous intruders reveal only @@yyellow-brown@@N dust. The seals on the unopened tubes carry the titles of the texts they purportedly contain: liturgical manuals, administrative codes, and one labeled simply "The List" with no further description.
+~
+24584 11
+D3
+The west passage leads back toward the high priests' hall.~
+~
+0 -1 10238
+D1
+The east passage connects toward the floor's inner chambers.~
+~
+0 -1 10244
+D0
+The north passage leads toward the altar room.~
+~
+0 -1 10242
+S
+#10242
+@@yThe Altar of the Four Winds@@N~
+A ceremonial altar occupies the precise center of this chamber, its carved surface showing a compass rose worked in @@cblue lapis lazuli@@N inlay with the four cardinal directions labeled in @@yyellow gold@@N characters. The altar's four faces carry relief scenes corresponding to each direction: the eastern face shows sunrise, the southern face midday, the western face sunset, and the northern face the stars of midnight. The chamber's corners hold carved wind-deity figures, each appropriate to its direction, and the ventilation design of the room creates actual air movement across the altar from each corner in turn. The effect during ritual use must have been considered genuinely sacred.
+~
+24584 11
+D2
+The south passage returns toward the high priests' hall.~
+~
+0 -1 10238
+D3
+The west passage connects toward the ritual side room.~
+~
+0 -1 10240
+D1
+The east passage leads into the floor's inner halls.~
+~
+0 -1 10244
+D0
+The north passage continues deeper into the second floor.~
+~
+0 -1 10245
+S
+#10243
+@@yA Candlelit Niche@@N~
+A small niche lit by a single oil lamp socket whose wick housing of twisted copper is still present and tarnished to deep green. The niche's interior is deeply blackened by smoke absorbed from decades of lamplight and incense, and the soot ceiling above the lamp socket preserves a perfect record of every flame that burned here. A small carved @@yyellow@@N deity figure stands in the niche's rear wall recess, its paint worn smooth by centuries of being touched by passing priests who made small acknowledgments of the deity's presence as they moved through this junction.
+~
+24585 11
+D1
+The passage east returns to the altar area.~
+~
+0 -1 10242
+D2
+The passage south connects toward the anointing chamber.~
+~
+0 -1 10239
+S
+#10244
+@@yThe Priests' Sleeping Quarters@@N~
+The resident clergy of the second floor had their quarters here, their stone sleeping platforms built with more care than those of the first floor: the surfaces are carved with a gentle curved profile to accommodate the human spine, and each platform is separated from its neighbors by a @@bsandstone@@N partition at shoulder height for privacy. The name-cartouches above each sleeping space record not just names and titles but years of service, an addition not found on the first floor — suggesting that tenure length was a point of pride among the high priests' establishment. Twenty platforms are present; counting them establishes the size of the second floor's clerical community.
+~
+24584 11
+D3
+The west passage connects back toward the sacred scroll room.~
+~
+0 -1 10241
+D1
+The east passage leads further into the floor's inner chambers.~
+~
+0 -1 10248
+D0
+The north passage leads toward the inner prayer hall.~
+~
+0 -1 10245
+S
+#10245
+@@yThe Inner Prayer Hall@@N~
+The second floor's communal prayer space is smaller and more intimate than the first floor equivalent, designed for a smaller resident priesthood but decorated to a higher standard: the acoustic ceiling here is painted with @@yyellow@@N stars on a dark ground representing the night sky visible from the pyramid's apex, and the kneeling blocks are carved from a darker @@bsandstone@@N that creates a visual emphasis separate from the surrounding floor. The formal arrangement implies a specific liturgy whose exact form is now unknown.
+~
+24584 11
+D2
+The south passage returns to the altar of the four winds.~
+~
+0 -1 10242
+D1
+The east passage leads toward the floor's further inner chambers.~
+~
+0 -1 10248
+D0
+The north passage connects toward the floor's approach sections.~
+~
+0 -1 10253
+S
+#10246
+@@yA Secret Passage@@N~
+A narrow passage concealed behind a @@bsandstone@@N block that pivots on a central pin, its existence visible only when the block is rotated to expose the opening behind. The passage beyond is bare @@bsandstone@@N, undecorated and approximately wide enough for one person; it was clearly a private route rather than a ceremonial one. @@yTorch soot@@N on the ceiling shows that this passage was used with some regularity, suggesting that whoever used it had business they conducted privately rather than through the floor's main corridors.
+~
+24585 11
+D1
+The concealed passage opens east into the floor's ceremonial corridors.~
+~
+0 -1 10247
+D0
+The north passage connects toward the inner prayer hall.~
+~
+0 -1 10245
+S
+#10247
+@@yThe Ritual Fire Pit@@N~
+An ash-filled depression occupies the center of this chamber's floor, its stone rim carved with @@yyellow fire-disc symbols@@N in a repeating band around the circumference. The pit is deep — perhaps a meter — and its interior is packed solid with compressed ash that has compacted over centuries to the texture of soft @@bstone@@N. A chemical smell still rises from the ash: some of the burned material was not organic, and the mineral residue of whatever was incinerated here persists in the compacted layers.
+~
+24584 11
+D3
+The passage west connects toward the secret passage.~
+~
+0 -1 10246
+D1
+The east passage leads toward the priests' sleeping quarters area.~
+~
+0 -1 10244
+D0
+The north passage connects to the corridor of wards.~
+~
+0 -1 10249
+S
+#10248
+@@yThe Vestment Chamber@@N~
+Empty robing alcoves line the walls of this chamber, their arched openings sized for tall figures in full ceremonial regalia, each one fronted by a stone rod for hanging garments and a lower shelf for accessories. The vestments are gone — fabric would not survive the centuries even here — but the organizational system of the alcoves reveals the hierarchy they served: alcoves increase in size from the entrance toward the north wall, with the largest reserved for the highest-ranking priests. @@yGold paint@@N marks the owner's cartouche above each alcove, the names still legible for anyone who can read the script.
+~
+24584 11
+D3
+The west passage connects toward the inner prayer hall.~
+~
+0 -1 10245
+D1
+The east passage leads toward the floor's approach sections.~
+~
+0 -1 10249
+S
+#10249
+@@yA Corridor of Wards@@N~
+Every surface of this corridor — floor, ceiling, both walls, and the lintels above each doorway — is carved with protective glyphs from multiple different warding traditions: @@cblue lapis lazuli@@N inlay fills the most important protective inscriptions, @@yyellow gold@@N paint marks the solar protection formulas, and @@bochre@@N red covers the apotropaic boundary-setting glyphs. The accumulated protection is physically impressive; whether it was adequate is a different question. The air in this corridor carries a persistent charged quality, dry and slightly electric, that the extreme density of carved protective formulas seems to maintain even now.
+~
+24584 11
+D3
+The west passage leads back toward the vestment chamber.~
+~
+0 -1 10248
+D0
+The north passage leads toward the upper stair landing.~
+~
+0 -1 10260
+D2
+The south passage connects toward the ritual fire pit.~
+~
+0 -1 10247
+S
 #$
