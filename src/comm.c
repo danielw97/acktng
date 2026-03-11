@@ -503,7 +503,7 @@ void queue_login_greeting(DESCRIPTOR_DATA *d)
       return;
 
    d->greeting_sent = TRUE;
-   sprintf(buf, "greeting%d", 0);
+   sprintf(buf, "greeting%d", number_range(1, 6));
 
    for (pHelp = first_help; pHelp != NULL; pHelp = pHelp->next)
       if (!str_cmp(pHelp->keyword, buf))
