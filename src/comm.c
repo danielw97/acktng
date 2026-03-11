@@ -273,6 +273,46 @@ static int count_playing_players(void)
    return playing_players;
 }
 
+void list_who_to_output(void)
+{
+   DESCRIPTOR_DATA *d;
+   FILE *who_html;
+   FILE *who_count;
+   int online_count = 0;
+
+   who_html = fopen(WHO_HTML_FILE, "w");
+   if (who_html == NULL)
+      return;
+
+   fprintf(who_html, "<h2>Players Online</h2>\n");
+   fprintf(who_html, "<ul>\n");
+
+   for (d = first_desc; d != NULL; d = d->next)
+   {
+      CHAR_DATA *who_ch;
+
+      if (d->connected != CON_PLAYING)
+         continue;
+
+      who_ch = (d->original != NULL) ? d->original : d->character;
+      if (who_ch == NULL || IS_NPC(who_ch))
+         continue;
+
+      fprintf(who_html, "<li>%s</li>\n", who_ch->name);
+      online_count++;
+   }
+
+   fprintf(who_html, "</ul>\n");
+   fclose(who_html);
+
+   who_count = fopen(WHO_COUNT_FILE, "w");
+   if (who_count == NULL)
+      return;
+
+   fprintf(who_count, "<p>Players online: %d</p>\n", online_count);
+   fclose(who_count);
+}
+
 /* -S- Mod: Some Globals for auctioning an item */
 OBJ_DATA *auction_item;    /* Item being sold      */
 CHAR_DATA *auction_owner;  /* Item's owner         */
@@ -994,6 +1034,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
    PUT_FREE(dclose, desc_free);
 
    cur_players--;
+   list_who_to_output();
    return;
 }
 
@@ -2698,6 +2739,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
       LINK(ch, first_char, last_char, next, prev);
       d->connected = CON_PLAYING;
+      list_who_to_output();
 
       if (IS_SET(ch->config, CONFIG_FULL_ANSI))
       {
@@ -3016,6 +3058,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
          }
       }
       d->connected = CON_PLAYING;
+      list_who_to_output();
 
       do_look(ch, "auto");
 
@@ -3083,6 +3126,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
             log_string(log_buf);
             monitor_chan(log_buf, MONITOR_CONNECT);
             d->connected = CON_PLAYING;
+            list_who_to_output();
 
             /*
              * Contributed by Gene Choi
@@ -3805,6 +3849,7 @@ void copyover_recover()
             }
          }
          d->connected = CON_PLAYING;
+         list_who_to_output();
       }
    }
 

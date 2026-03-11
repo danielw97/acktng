@@ -6,7 +6,7 @@ from __future__ import annotations
 from html import escape
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import parse_qs, unquote, urlparse
 
 HOST = "0.0.0.0"
 PORT = 80
@@ -19,18 +19,35 @@ SHELP_DIR = ROOT_DIR / "shelp"
 
 class WhoRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:  # noqa: N802 (BaseHTTPRequestHandler interface)
-        route = unquote(self.path.split("?", 1)[0])
+        parsed_url = urlparse(self.path)
+        route = unquote(parsed_url.path)
+        query = parse_qs(parsed_url.query)
+        help_query = query.get("q", [""])[0].strip()
 
-        if route in ("/", "/players", "/players/"):
+        if route in ("/home", "/home/"):
+            self._redirect_to("/")
+            return
+
+        if route in ("/", "/players", "/players/", "/who", "/who/"):
             self._send_html(self._build_players_page(), title="ACK! Player List")
             return
 
+        if route in ("/help", "/help/"):
+            self._send_html(_build_topic_index_page("Help Topics", "helps", HELP_DIR, help_query), title="Help Topics")
+            return
+
+        if route in ("/shelp", "/shelp/"):
+            self._send_html(
+                _build_topic_index_page("Spell Help Topics", "shelps", SHELP_DIR, help_query), title="Spell Help Topics"
+            )
+            return
+
         if route in ("/helps", "/helps/"):
-            self._send_html(_build_topic_index_page("Help Topics", "helps", HELP_DIR), title="Help Topics")
+            self._redirect_to("/help/")
             return
 
         if route in ("/shelps", "/shelps/"):
-            self._send_html(_build_topic_index_page("Spell Help Topics", "shelps", SHELP_DIR), title="Spell Help Topics")
+            self._redirect_to("/shelp/")
             return
 
         if route.startswith("/helps/"):
@@ -44,6 +61,11 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             return
 
         self.send_error(404, "Not Found")
+
+    def _redirect_to(self, location: str) -> None:
+        self.send_response(302)
+        self.send_header("Location", location)
+        self.end_headers()
 
     def _send_topic_page(self, page_name: str, base_dir: Path, topic: str, base_route: str) -> None:
         topic_path = _safe_topic_path(base_dir, topic)
@@ -59,10 +81,42 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         self._send_html(body, title=f"{page_name}: {topic_path.name}")
 
     def _send_html(self, body: str, title: str) -> None:
+        nav = (
+            "<nav>"
+            "<a href='/'>home</a>"
+            "<a href='/who/'>who</a>"
+            "<a href='/help/'>help</a>"
+            "<a href='/shelp/'>shelp</a>"
+            "</nav>"
+        )
+        help_forms = (
+            "<section class='help-forms'>"
+            "<form method='get' action='/help/'>"
+            "<label for='help-q'>help:</label>"
+            "<input id='help-q' name='q' placeholder='topic'>"
+            "<button type='submit'>open help</button>"
+            "</form>"
+            "<form method='get' action='/shelp/'>"
+            "<label for='shelp-q'>shelp:</label>"
+            "<input id='shelp-q' name='q' placeholder='spell/skill'>"
+            "<button type='submit'>open shelp</button>"
+            "</form>"
+            "</section>"
+        )
         page = (
             "<html><head>"
             f"<title>{escape(title)}</title>"
+            "<style>"
+            "body{font-family:sans-serif;max-width:980px;margin:1rem auto;padding:0 1rem;}"
+            "nav{display:flex;gap:0.8rem;margin-bottom:1rem;}"
+            "nav a{padding:0.35rem 0.6rem;background:#efefef;border-radius:4px;text-decoration:none;color:#111;}"
+            ".help-forms{display:flex;flex-wrap:wrap;gap:1rem;margin:0 0 1rem;}"
+            ".help-forms form{display:flex;gap:0.5rem;align-items:center;}"
+            "pre{white-space:pre-wrap;background:#f7f7f7;padding:0.8rem;border-radius:4px;}"
+            "</style>"
             "</head><body>"
+            f"{nav}"
+            f"{help_forms}"
             f"{body}"
             "</body></html>"
         )
@@ -114,20 +168,27 @@ def _safe_topic_path(base_dir: Path, topic: str) -> Path | None:
     return candidate
 
 
-def _build_topic_index_page(title: str, route_base: str, base_dir: Path) -> str:
+def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: str = "") -> str:
     if not base_dir.exists() or not base_dir.is_dir():
         return f"<h1>{escape(title)}</h1><p>No topics available.</p>"
 
+    normalized_query = query.strip().lower()
     links = [
         f"<li><a href='/{escape(route_base)}/{escape(path.name)}'>{escape(path.name)}</a></li>"
         for path in sorted(base_dir.iterdir(), key=lambda p: p.name)
-        if path.is_file()
+        if path.is_file() and (not normalized_query or normalized_query in path.name.lower())
     ]
 
     if not links:
+        if normalized_query:
+            return f"<h1>{escape(title)}</h1><p>No topics match <strong>{escape(query)}</strong>.</p>"
         return f"<h1>{escape(title)}</h1><p>No topics available.</p>"
 
-    return f"<h1>{escape(title)}</h1><ul>{''.join(links)}</ul>"
+    query_blurb = ""
+    if normalized_query:
+        query_blurb = f"<p>Filtered by <strong>{escape(query)}</strong>.</p>"
+
+    return f"<h1>{escape(title)}</h1>{query_blurb}<ul>{''.join(links)}</ul>"
 
 
 def main() -> None:
