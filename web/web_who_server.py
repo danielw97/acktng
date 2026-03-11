@@ -199,7 +199,7 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             "<a href='/shelp/'>SHelp</a>"
             "<a href='/mud/'>MUD Client</a>"
             "<a href='https://discord.gg/T24UQV8h' target='_blank' rel='noopener noreferrer'>Discord</a>"
-            "<a href='https://github.com/ackmudhistoricalarchive/acktng/tree/main/area' target='_blank' rel='noopener noreferrer'>Github</a>"
+            "<a href='https://github.com/ackmudhistoricalarchive' target='_blank' rel='noopener noreferrer'>Github</a>"
             "</nav>"
         )
         help_forms = (
@@ -532,15 +532,15 @@ def _build_mud_client_page() -> str:
       const response = await fetch(`/mud/poll?session=${{encodeURIComponent(session)}}`);
       const data = await response.json();
       if (!data.ok) {{
-        appendOutput(`\n[Error] ${{data.error}}\n`);
+        appendOutput(`\\n[Error] ${{data.error}}\\n`);
         stopPolling();
         session = null;
         return;
       }}
       if (data.output) appendOutput(data.output);
       if (!data.connected) {{
-        if (data.error) appendOutput(`\n[Disconnected] ${{data.error}}\n`);
-        else appendOutput('\n[Disconnected]\n');
+        if (data.error) appendOutput(`\\n[Disconnected] ${{data.error}}\\n`);
+        else appendOutput('\\n[Disconnected]\\n');
         stopPolling();
         session = null;
       }}
@@ -549,7 +549,7 @@ def _build_mud_client_page() -> str:
 
   connectBtn.addEventListener('click', async () => {{
     if (session) {{
-      appendOutput('\n[Info] Already connected.\n');
+      appendOutput('\\n[Info] Already connected.\\n');
       return;
     }}
     output.textContent = '';
@@ -560,11 +560,11 @@ def _build_mud_client_page() -> str:
     }});
     const data = await response.json();
     if (!data.ok) {{
-      appendOutput(`[Error] ${{data.error}}\n`);
+      appendOutput(`[Error] ${{data.error}}\\n`);
       return;
     }}
     session = data.session;
-    appendOutput(`[Connected] ${{data.world}}\n`);
+    appendOutput(`[Connected] ${{data.world}}\\n`);
     startPolling();
     commandInput.focus();
   }});
@@ -576,7 +576,7 @@ def _build_mud_client_page() -> str:
       headers: {{ 'Content-Type': 'application/json' }},
       body: JSON.stringify({{ session }}),
     }});
-    appendOutput('\n[Disconnected]\n');
+    appendOutput('\\n[Disconnected]\\n');
     stopPolling();
     session = null;
   }});
@@ -589,7 +589,7 @@ def _build_mud_client_page() -> str:
       headers: {{ 'Content-Type': 'application/json' }},
       body: JSON.stringify({{ session, command }}),
     }});
-    appendOutput(`\n> ${{command}}\n`);
+    appendOutput(`\\n> ${{command}}\\n`);
     commandInput.value = '';
   }};
 
