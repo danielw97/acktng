@@ -1597,7 +1597,7 @@ OBJ_DATA *get_light_char(CHAR_DATA *ch)
 
    for (obj = ch->first_carry; obj != NULL; obj = obj->next_in_carry_list)
    {
-      if ((obj->wear_loc != -1) && (obj->item_type == ITEM_LIGHT) && (obj->value[2] != 0))
+      if ((obj->wear_loc != -1) && (obj->item_type == ITEM_LIGHT))
          return obj;
    }
 
@@ -1944,7 +1944,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear)
    /*
     * spec: light bugfix
     */
-   if ((IS_NPC(ch) || !ch->desc || ch->desc->connected != CON_SETTING_STATS) && obj->item_type == ITEM_LIGHT && obj->value[2] != 0 && ch->in_room != NULL)
+   if ((IS_NPC(ch) || !ch->desc || ch->desc->connected != CON_SETTING_STATS) && obj->item_type == ITEM_LIGHT && ch->in_room != NULL)
       ++ch->in_room->light;
 
    /*
@@ -2028,7 +2028,7 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj)
    for (paf = obj->first_apply; paf != NULL; paf = paf->next)
       affect_modify(ch, paf, FALSE);
 
-   if (obj->item_type == ITEM_LIGHT && obj->value[2] != 0 && ch->in_room != NULL && ch->in_room->light > 0)
+   if (obj->item_type == ITEM_LIGHT && ch->in_room != NULL && ch->in_room->light > 0)
       --ch->in_room->light;
 
    /*
@@ -3059,7 +3059,7 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
    if (IS_AFFECTED(ch, AFF_BLIND))
       return FALSE;
 
-   if (obj->item_type == ITEM_LIGHT && obj->value[2] != 0)
+   if (obj->item_type == ITEM_LIGHT)
       return TRUE;
 
    if (room_is_dark(ch->in_room) && (!IS_AFFECTED(ch, AFF_INFRARED)) && !item_has_apply(ch, ITEM_APPLY_INFRA))
