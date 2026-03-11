@@ -10,6 +10,20 @@ port=8890
 cd ../reports
 if [ -f shutdown.txt ]; then rm -f shutdown.txt; fi
 
+mkdir -p /home/ftp/pub/webpage
+
+../src/web_who_server.py >>../log/webserver.log 2>&1 &
+webserver_pid=$!
+
+cleanup_webserver()
+{
+  if kill -0 "$webserver_pid" 2>/dev/null; then
+    kill "$webserver_pid"
+  fi
+}
+
+trap cleanup_webserver EXIT
+
 cd ../area
 
 # allow cores
