@@ -191,7 +191,7 @@ def _build_home_page() -> str:
 def _build_mud_client_page() -> str:
     world_options = "".join(
         (
-            f"<option value='{world['id']}' data-host='{world['host']}' data-port='{world['port']}' data-ws='ws://{world['host']}:{world['port']}/'>{world['name']} ({world['host']}:{world['port']})</option>"
+            f"<option value='{world['id']}' data-host='{world['host']}' data-port='{world['port']}'>{world['name']} ({world['host']}:{world['port']})</option>"
         )
         for world in WORLD_TARGETS
     )
