@@ -160,26 +160,30 @@ S
 #3238
 Roc Road~
 You are standing on Roc Road, the main link between Midgaard and the lands to
-the west.  Tall, majestic trees line the side of the road.  The Road continues
-to the North, toward the town of Kiess, whilst a small path leads of to the
-South, into the trees.
-~
+the west.  The road continues North toward the town of Kiess, stretches West
+into the frontier wilderness, and a small path leads off South into the trees.
+~
 4 3
 D0
 Roc Road.
-~
+~
 ~
 0 -1 3239
 D1
 Roc Road.
-~
+~
 ~
 0 -1 3237
 D2
 A Small Path.
-~
+~
 ~
 0 -1 3244
+D3
+Roc Road.
+~
+~
+0 -1 3292
 D5
 ~
 ~
@@ -620,6 +624,1193 @@ D2
 ~
 ~
 0 -1 3290
+S
+#3292
+Roc Road~
+The road bends here, continuing west after passing the junction.  The trees
+of the forest stand tall on both sides, their branches arching overhead to
+form a natural canopy.  Wheel ruts and hoofprints in the earth show that
+this road still sees occasional use.
+~
+0 3
+D1
+Roc Road.
+~
+~
+0 -1 3238
+D3
+Roc Road.
+~
+~
+0 -1 3293
+S
+#3293
+Roc Road~
+You are on Roc Road heading west.  The canopy of ancient trees filters the
+sunlight into dappled patterns on the packed earth below.  A cool breeze
+carries the scent of pine and damp earth through the forest.
+~
+0 3
+D1
+Roc Road.
+~
+~
+0 -1 3292
+D3
+Roc Road.
+~
+~
+0 -1 3294
+S
+#3294
+Roc Road~
+The road passes through a small clearing where a moss-covered stone bridge
+spans a narrow stream.  You can hear the gentle murmur of water below.  Wild
+flowers grow along the roadside in bright splashes of colour.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3293
+D3
+Roc Road.
+~
+~
+0 -1 3295
+S
+#3295
+Roc Road~
+The road continues west, the trees thinning as the terrain begins to rise.
+Rocky outcroppings appear along the roadside, and the ground underfoot is
+firmer here as the road climbs toward the hills ahead.
+~
+0 3
+D1
+Roc Road.
+~
+~
+0 -1 3294
+D3
+Roc Road.
+~
+~
+0 -1 3296
+S
+#3296
+Roc Road~
+The road climbs steadily toward a line of low hills in the distance.  The
+forest thins, replaced by scrubby bushes and tall grass that ripples in the
+breeze.  The air carries the clean scent of open country.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3295
+D3
+Roc Road.
+~
+~
+0 -1 3297
+S
+#3297
+Roc Road on the Hillside~
+The road winds through the low hills, offering views back toward the forest
+and Midgaard in the far distance to the east.  The packed earth of the lower
+road gives way to gravel and loose stone underfoot.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3296
+D3
+Roc Road.
+~
+~
+0 -1 3298
+S
+#3298
+Roc Road, Hilltop~
+You stand near the crest of the first range of hills.  To the east, the dark
+line of the forest stretches to the horizon.  To the west, the road descends
+into a broad valley, and beyond it the distant glint of a river catches the
+light.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3297
+D3
+Roc Road.
+~
+~
+0 -1 3299
+S
+#3299
+Hilltop Overlook~
+You stand at the highest point of the road for many miles.  A commanding view
+rewards those who have made the climb.  The great eastern forest lies behind
+you.  To the west, the land descends into a broad valley fed by a winding
+river, and beyond that the mountains loom on the far horizon.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3298
+D3
+Roc Road.
+~
+~
+0 -1 3201
+S
+#3201
+Roc Road, Descending to the Valley~
+The road begins its descent down the western face of the hills, following
+lazy switchbacks toward the valley floor below.  Wild hawks circle on the
+thermals overhead, and small mammals dart between the roadside rocks.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3299
+D3
+Roc Road.
+~
+~
+0 -1 3202
+S
+#3202
+Roc Road, Lower Hillside~
+The gradient eases here as the road nears the valley floor.  Occasional stone
+distance markers stand at the roadside, their carved lettering worn almost
+smooth by centuries of wind and rain.  The valley farmland spreads out below.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3201
+D3
+Roc Road.
+~
+~
+0 -1 3203
+S
+#3203
+Roc Road, Valley Floor~
+The road levels out as it reaches the valley floor.  Rich farmland stretches
+to the north and south, with distant farmsteads visible across the fields.
+The smell of fresh-turned earth and crops is strong on the gentle breeze.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3202
+D3
+Roc Road.
+~
+~
+0 -1 3204
+S
+#3204
+Roc Road, Valley Farmlands~
+Wooden fences line both sides of the well-kept road.  A farmer can be seen
+in the distance, ploughing a field with a heavy draft horse.  The deep wheel
+ruts in the packed earth show regular wagon traffic along this route.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3203
+D3
+Roc Road.
+~
+~
+0 -1 3205
+S
+#3205
+Roc Road, Valley Farmlands~
+The road runs straight through the heart of the valley farmland.  An old
+apple orchard sprawls to the north, and cattle graze contentedly in pastures
+to the south.  The mountains to the west appear much closer now.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3204
+D3
+Roc Road.
+~
+~
+0 -1 3206
+S
+#3206
+Roc Road, Near the River~
+The farmland gives way to rougher ground as the road approaches the river.
+You can see the glint of water ahead and hear the rush of a current.  A
+crude sign by the roadside reads "River Crossing Ahead."
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3205
+D3
+Roc Road.
+~
+~
+0 -1 3207
+S
+#3207
+The River Ford~
+You stand at a wide, shallow ford where ancient flagstones have been laid
+across the riverbed to form a stable crossing.  The water rushes cold and
+clear over the stones, rising no more than ankle-deep.  The far bank is
+easily visible ahead.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3206
+D3
+Roc Road.
+~
+~
+0 -1 3208
+S
+#3208
+Roc Road, Western Bank~
+You stand on the western bank of the river, your boots still damp from the
+ford.  The road here is muddied by the passage of many travellers.  A
+milestone beside the road bears faded markings pointing west.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3207
+D3
+Roc Road.
+~
+~
+0 -1 3209
+S
+#3209
+Roc Road, Western Valley~
+The road continues west through the valley, with the mountains growing larger
+with every step.  The farmland gives way to rougher, wilder terrain as you
+leave the settled lands behind.  The wind carries a chill from the peaks
+ahead.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3208
+D3
+Roc Road.
+~
+~
+0 -1 3210
+S
+#3210
+Roc Road, Entering the Foothills~
+The terrain becomes more rugged as the road begins its climb toward the
+western mountains.  Boulders and rocky ground replace the valley fields, and
+hardy mountain shrubs cling to the hillsides on either side.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3209
+D3
+Roc Road.
+~
+~
+0 -1 3211
+S
+#3211
+Roc Road, Western Foothills~
+You are among the foothills of the great western mountain range.  The road
+is carved into the hillside here, with sheer drops on one side and rocky
+cliffs on the other.  The views down into the valley behind you are
+breathtaking.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3210
+D3
+Roc Road.
+~
+~
+0 -1 3212
+S
+#3212
+Roc Road, Western Foothills~
+A treacherous stretch of road clings to the mountainside.  The path is
+narrow here, barely wide enough for a single wagon.  Ancient dry-stone
+retaining walls keep the road from crumbling into the ravine below.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3211
+D3
+Roc Road.
+~
+~
+0 -1 3213
+S
+#3213
+Roc Road, Mountain Approach~
+The road climbs steeply, and the air has grown noticeably colder.  Mountain
+pines and ancient cedars crowd in close on both sides.  Somewhere high above
+you can hear the distant rumble of loose rock tumbling down a slope.
+~
+0 5
+D1
+Roc Road.
+~
+~
+0 -1 3212
+D3
+Roc Road.
+~
+~
+0 -1 3214
+S
+#3214
+Roc Road, Mountain Approach~
+Ice-cold winds sweep down from the peaks above.  The road is strewn with
+gravel and small stones that have tumbled from the cliffs.  The footing is
+treacherous, and you pick your steps with care.
+~
+0 5
+D1
+Roc Road.
+~
+~
+0 -1 3213
+D3
+Roc Road.
+~
+~
+0 -1 3215
+S
+#3215
+Roc Road, High Mountain Path~
+The air is thin here and the cold bites deep.  The road is a narrow ledge
+cut into the living rock of the mountainside.  Rusted iron rings hammered
+into the cliff face serve as handholds on the steepest sections.  Only the
+bravest travellers venture this high.
+~
+0 5
+D1
+Roc Road.
+~
+~
+0 -1 3214
+D3
+Roc Road.
+~
+~
+0 -1 3216
+S
+#3216
+The Mountain Pass~
+You have reached the crest of the mountain pass, the highest point on all
+of Roc Road.  A crude stone wayfarers shelter stands to one side, offering
+minimal protection from the howling gales.  The road descends steeply into
+the misty western lands far below.
+~
+0 5
+D1
+Roc Road.
+~
+~
+0 -1 3215
+D3
+Roc Road.
+~
+~
+0 -1 3217
+S
+#3217
+The Mountain Pass, Western Slope~
+The road begins its descent down the western face of the mountains.  The
+western lands below are shrouded in cloud and mist, and only the broad
+shapes of forests and rivers are visible far beneath you.
+~
+0 5
+D1
+Roc Road.
+~
+~
+0 -1 3216
+D3
+Roc Road.
+~
+~
+0 -1 3218
+S
+#3218
+Roc Road, Western Descent~
+Steep switchbacks carry the road down the western face of the mountains.
+The fog is thick in places, and strange colourful birds flit between the
+rocks uttering cries you have never heard before.  This truly feels like
+a world apart from Midgaard.
+~
+0 5
+D1
+Roc Road.
+~
+~
+0 -1 3217
+D3
+Roc Road.
+~
+~
+0 -1 3219
+S
+#3219
+Roc Road, Western Descent~
+The gradient eases as you descend.  Waterfalls cascade down the cliffs
+nearby, fed by snowmelt from the high peaks.  The roar of the water fills
+the air, and the rocks are slick with spray.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3218
+D3
+Roc Road.
+~
+~
+0 -1 3220
+S
+#3220
+Roc Road, Western Foothills~
+The steepest terrain lies behind you.  You are descending the western
+foothills, with the great mountain range rearing up behind you.  The mist
+is clearing to reveal a vast, open plain stretching to the western horizon.
+~
+0 4
+D1
+Roc Road.
+~
+~
+0 -1 3219
+D3
+Roc Road.
+~
+~
+0 -1 3221
+S
+#3221
+Roc Road, Edge of the Plains~
+The foothills give way to a vast, flat plain.  The road here is ancient,
+paved with cracked and uneven flagstones that have borne countless feet and
+hooves over the centuries.  The mountains behind you seem impossibly tall.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3220
+D3
+Roc Road.
+~
+~
+0 -1 3222
+S
+#3222
+Roc Road, The Western Plains~
+You are on the great western plains.  The sky is enormous here, unbroken by
+trees or hills, and a steady wind blows from the west.  The old flagstone
+road stretches to the horizon in both directions, ancient and enduring.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3221
+D3
+Roc Road.
+~
+~
+0 -1 3223
+S
+#3223
+Roc Road, The Western Plains~
+Tall grass ripples in the constant wind, and distant herds of wild horses
+raise hazy clouds of dust to the north.  The road is unobstructed here,
+and travel across the flat ground is swift and easy.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3222
+D3
+Roc Road.
+~
+~
+0 -1 3224
+S
+#3224
+Roc Road, The Western Plains~
+A tall waymarker stone stands at the side of the road, carved with weathered
+runes that are too worn to read.  A hollow in its base shelters a family of
+foxes, who watch you pass with calm, unblinking eyes.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3223
+D3
+Roc Road.
+~
+~
+0 -1 3225
+S
+#3225
+Roc Road, The Western Plains~
+A small stand of trees breaks the monotony of the plain, clustered around a
+natural spring that bubbles up from the earth.  The ground around the spring
+is worn smooth by generations of travellers pausing to rest and water their
+mounts here.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3224
+D3
+Roc Road.
+~
+~
+0 -1 3226
+S
+#3226
+Roc Road, The Western Plains~
+The ancient flagstones of the road are increasingly cracked and uneven here,
+with weeds growing through every crevice.  This road is clearly little used
+this far west.  Large paw prints in the dust suggest the presence of sizable
+predators in the area.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3225
+D3
+Roc Road.
+~
+~
+0 -1 3227
+S
+#3227
+Roc Road, Far Western Plains~
+You are now in seldom-travelled territory, far to the west.  The road is
+barely visible, the ancient flagstones buried under centuries of windblown
+soil.  Only the occasional stone poking through the earth guides you onward.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3226
+D3
+Roc Road.
+~
+~
+0 -1 3228
+S
+#3228
+Roc Road, Far Western Plains~
+The road is all but vanished here, swallowed by the relentless plain.  You
+navigate by instinct and the rare exposed flagstone.  The western horizon
+shimmers with heat haze, and the air carries strange, unfamiliar scents that
+you cannot place.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3227
+D3
+Roc Road.
+~
+~
+0 -1 3229
+S
+#3229
+Roc Road, Far Western Plains~
+The road is all but vanished here, swallowed by the relentless plain.  You
+navigate by instinct and the rare exposed flagstone.  The western horizon
+shimmers with heat haze, and the air carries strange, unfamiliar scents that
+you cannot place.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3228
+D3
+Roc Road.
+~
+~
+0 -1 3262
+S
+#3262
+Roc Road, The Dusty Wastes~
+The fertile plains give way to a dry, dusty wasteland.  The ancient road
+is visible only as a faint depression in the cracked earth.  The air
+shimmers with heat, and there is no shade anywhere in sight.
+~
+0 9
+D1
+Roc Road.
+~
+~
+0 -1 3229
+D3
+Roc Road.
+~
+~
+0 -1 3263
+S
+#3263
+Roc Road, The Dusty Wastes~
+You trudge west through featureless, sun-baked wasteland.  The horizon
+wavers in the heat.  Bleached bones of large animals lie scattered beside
+the faint road, silent warnings to those who travel unprepared.
+~
+0 9
+D1
+Roc Road.
+~
+~
+0 -1 3262
+D3
+Roc Road.
+~
+~
+0 -1 3264
+S
+#3264
+Roc Road, The Dusty Wastes~
+A dried river bed cuts across the road here.  Once this must have been a
+mighty waterway, but now only dust and polished stones fill the channel.
+The road crosses the empty bed on an ancient stone bridge, still intact.
+~
+0 9
+D1
+Roc Road.
+~
+~
+0 -1 3263
+D3
+Roc Road.
+~
+~
+0 -1 3265
+S
+#3265
+Roc Road, The Dusty Wastes~
+Strange rock formations jut from the flat wasteland, carved by ages of wind
+into eerie spires and arches.  The road weaves between them.  Strange
+markings are carved into some of the rocks, their meaning long forgotten.
+~
+0 9
+D1
+Roc Road.
+~
+~
+0 -1 3264
+D3
+Roc Road.
+~
+~
+0 -1 3266
+S
+#3266
+Roc Road, The Dusty Wastes~
+The wasteland stretches on without end.  A lone buzzard circles slowly
+overhead, riding the thermals.  The road here is marked by crumbling cairns
+of stone, placed by unknown hands at regular intervals.
+~
+0 9
+D1
+Roc Road.
+~
+~
+0 -1 3265
+D3
+Roc Road.
+~
+~
+0 -1 3267
+S
+#3267
+Roc Road, Edge of the Wastes~
+The ground becomes less arid here, and sparse tufts of tough grass begin to
+appear.  In the distance to the west you can make out what appears to be
+the ruins of a large structure.  The road leads directly toward it.
+~
+0 9
+D1
+Roc Road.
+~
+~
+0 -1 3266
+D3
+Roc Road.
+~
+~
+0 -1 3268
+S
+#3268
+Roc Road, Approaching the Ruins~
+The ruins grow larger as you approach.  Massive stone blocks, each taller
+than a man, lie tumbled and scattered across the landscape.  Whatever stood
+here was once enormous.  The road passes directly through the rubble.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3267
+D3
+Roc Road.
+~
+~
+0 -1 3269
+S
+#3269
+The Ancient Ruins~
+You are standing among the ruins of a vast, ancient city.  Broken columns
+and shattered walls rise on all sides.  The stones are carved with intricate
+patterns and script in a language no living tongue still speaks.  This place
+radiates a profound sense of age.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3268
+D3
+Roc Road.
+~
+~
+0 -1 3270
+S
+#3270
+The Ancient Ruins~
+A broad avenue paved with great slabs of stone runs east to west through the
+heart of the ruins.  On either side stand the remnants of grand buildings,
+their roofs long collapsed but their walls still standing several stories
+high.  Creeping vines have reclaimed much of the stonework.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3269
+D3
+Roc Road.
+~
+~
+0 -1 3271
+S
+#3271
+The Ancient Ruins~
+You stand before the ruins of what must have been a great temple or palace.
+The facade is still largely intact, carved with larger-than-life figures
+engaged in scenes of battle, worship, and celebration.  Time has blurred
+their features but not their power.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3270
+D3
+Roc Road.
+~
+~
+0 -1 3272
+S
+#3272
+The Ancient Ruins, Western Quarter~
+The western end of the ancient city lies in greater ruin than the east.
+Here the buildings are almost entirely collapsed, leaving only low ridges
+of rubble to mark where streets and structures once stood.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3271
+D3
+Roc Road.
+~
+~
+0 -1 3273
+S
+#3273
+Beyond the Ruins~
+You have left the ruins behind.  The road re-emerges onto open terrain, the
+earth here dark and loamy compared to the wastes to the east.  The smell
+of salt is faint but unmistakable on the westerly breeze.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3272
+D3
+Roc Road.
+~
+~
+0 -1 3274
+S
+#3274
+Roc Road, Coastal Approach~
+The road descends gently toward the west.  The salt smell grows stronger,
+and you can see a silvery haze on the horizon that can only be the sea.
+Seabirds wheel overhead, their cries carrying on the wind.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3273
+D3
+Roc Road.
+~
+~
+0 -1 3275
+S
+#3275
+Roc Road, Coastal Approach~
+Coarse grass and salt-hardy shrubs line the road as you near the coast.
+The sound of waves reaches you now, a deep rhythmic booming from beyond
+the rise ahead.  The air is thick with salt spray.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3274
+D3
+Roc Road.
+~
+~
+0 -1 3276
+S
+#3276
+Roc Road, Coastal Approach~
+You climb a low rise, and the Great Western Sea comes into view ahead.  It
+fills the horizon from north to south, a vast expanse of deep blue-grey
+water.  The road descends directly toward the shore.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3275
+D3
+Roc Road.
+~
+~
+0 -1 3277
+S
+#3277
+Roc Road, Descending to the Shore~
+The road drops steeply toward the shore.  Wind-sculpted cliffs border the
+road on the north side, while the ground to the south gives way to sandy
+dunes.  The roar of the surf below is deafening.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3276
+D3
+Roc Road.
+~
+~
+0 -1 3278
+S
+#3278
+Roc Road, Sea Road~
+The road now runs along the clifftop, parallel to the coast.  Spectacular
+views of the sea open to the west and south.  Below the cliffs, waves crash
+against dark rocks, sending plumes of white spray skyward.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3277
+D3
+Roc Road.
+~
+~
+0 -1 3279
+S
+#3279
+Roc Road, Sea Road~
+The clifftop road continues west.  Colonies of seabirds nest in the cliff
+face below, and their raucous cries fill the air.  Far out to sea you can
+just make out the shapes of distant islands on the horizon.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3278
+D3
+Roc Road.
+~
+~
+0 -1 3280
+S
+#3280
+Roc Road, Sea Road~
+The cliffs here are lower, and a rough path switchbacks down to a narrow
+shingle beach below.  The road continues west along the clifftop.  Looking
+back east you can trace the long line of road all the way to the distant
+mountains.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3279
+D3
+Roc Road.
+~
+~
+0 -1 3281
+S
+#3281
+Roc Road, Western Cliffs~
+The clifftop widens here, forming a broad headland.  A few stunted trees,
+permanently bent by the prevailing wind, cling to the headland.  The road
+rounds the headland and continues west.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3280
+D3
+Roc Road.
+~
+~
+0 -1 3282
+S
+#3282
+Roc Road, Western Cliffs~
+The road narrows as the cliffs close in on the north side.  To the south the
+land drops away to a small sheltered cove.  A ruined stone watchtower stands
+at the clifftop, its upper stories long since tumbled into the sea below.
+~
+0 2
+D1
+Roc Road.
+~
+~
+0 -1 3281
+D3
+Roc Road.
+~
+~
+0 -1 3283
+S
+#3283
+Roc Road, Descending to the Beach~
+The road leaves the clifftops and winds down to sea level.  A broad sandy
+beach stretches ahead, with the waves washing gently up the shore.  Driftwood
+and tangles of seaweed mark the high tide line.
+~
+0 10
+D1
+Roc Road.
+~
+~
+0 -1 3282
+D3
+The Beach.
+~
+~
+0 -1 3284
+S
+#3284
+The Western Shore~
+You are on a long, windswept beach at the western edge of the known world.
+The sand is pale gold, the water a deep cold blue.  The road ends here at a
+simple stone quay, where once ships may have docked.  Now it stands empty,
+seabirds its only visitors.
+~
+0 10
+D1
+The Road.
+~
+~
+0 -1 3283
+D3
+The Beach.
+~
+~
+0 -1 3285
+S
+#3285
+The Western Shore~
+The beach stretches on to the west.  Low dunes back the shore, held together
+by tough marram grass.  The wind is constant here, carrying spindrift from
+the wave tops.  Footprints in the wet sand suggest others have walked this
+shore, though not recently.
+~
+0 10
+D1
+The Beach.
+~
+~
+0 -1 3284
+D3
+The Beach.
+~
+~
+0 -1 3286
+S
+#3286
+The Western Shore~
+The beach curves gently around a small headland.  Rock pools dot the base
+of the low cliffs to the north, filled with small crabs and anemones.  A
+sea cave mouth yawns darkly at the base of the nearest cliff.
+~
+0 10
+D1
+The Beach.
+~
+~
+0 -1 3285
+D3
+The Beach.
+~
+~
+0 -1 3287
+S
+#3287
+The Western Shore~
+The beach here is covered in smooth, round pebbles that crunch underfoot.
+The waves break with a hollow rattling sound as they drag the pebbles back
+and forth.  A rusted iron anchor half-buried in the beach hints at old
+seafaring activity.
+~
+0 10
+D1
+The Beach.
+~
+~
+0 -1 3286
+D3
+The Beach.
+~
+~
+0 -1 3288
+S
+#3288
+The Western Shore~
+The beach narrows to a thin strip of shingle wedged between sea and cliff.
+At high tide this passage would be impassable.  The cliffs here are dramatic,
+streaked with red and orange iron deposits, their bases hollowed by the sea.
+~
+0 10
+D1
+The Beach.
+~
+~
+0 -1 3287
+D3
+The Beach.
+~
+~
+0 -1 3289
+S
+#3289
+The Far Western Shore~
+You have reached the uttermost west that the road of Roc Road travels.  The
+beach ends at a great promontory of black rock that juts far out into the
+sea.  Beyond it, to the west, there is nothing but open ocean stretching to
+the edge of the world.  The wind howls, the waves crash, and the world feels
+very large and very old.
+~
+0 10
+D1
+The Beach.
+~
+~
+0 -1 3288
 S
 #0
 #RESETS
