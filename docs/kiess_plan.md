@@ -31,7 +31,8 @@
 - `F 15` — reset frequency in minutes
 - `U @@Wthe bells of @@BKiess@@W ring across the avenues@@N~` — reset message; white text with blue city name, reset; no double-newlines, terminated with `~`
 - `T` — teleport flag line (rest ignored by loader); presence enables teleport into the area
-- `O`, `R`, `W` — owner and ACL directives omitted; set at implementation time by the builder
+- `O Virant~` — area owner must always be Virant
+- `R`, `W` — ACL directives omitted; set at implementation time by the builder
 
 
 ## Lore

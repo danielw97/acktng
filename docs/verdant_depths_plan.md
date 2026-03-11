@@ -38,7 +38,8 @@ The `#AREA` section lives in `area/verdantgreen.are`. Directive notes:
 - `F 15` -- reset frequency in minutes, matching the Forest of Confusion parent area
 - `U` -- reset message uses primary gray `@@g` with `@@N` reset; no double-newlines, terminated with `~`
 - `T` -- rest of line is ignored by the loader; presence of the line enables teleport
-- `O`, `R`, `W` -- owner and ACL directives omitted; set at implementation time by the builder
+- `O Virant~` -- area owner must always be Virant
+- `R`, `W` -- ACL directives omitted; set at implementation time by the builder
 
 ---
 

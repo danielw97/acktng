@@ -43,6 +43,7 @@ The pyramid's interior is a labyrinth of traps, false floors, and curse-sealed p
 - `V 10125 10324` — full 200-vnum envelope; all rooms, mobs, and objects stay within this range
 - `F 20` — 20-minute reset frequency
 - `U` — reset message as above; no double-newlines, terminated with `~`
+- `O Virant~` — area owner must always be Virant
 - `T` — teleport flag line (rest ignored by loader)
 
 ---
