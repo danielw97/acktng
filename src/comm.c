@@ -583,6 +583,45 @@ bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
    return TRUE;
 }
 
+static size_t sanitize_websocket_text_payload(const unsigned char *src, size_t src_len,
+                                              unsigned char *dst, size_t dst_cap)
+{
+   size_t i = 0, j = 0;
+
+   if (src == NULL || dst == NULL || dst_cap == 0)
+      return 0;
+
+   while (i < src_len && j < dst_cap)
+   {
+      if (src[i] == (unsigned char)IAC)
+      {
+         if (i + 1 >= src_len)
+         {
+            i++;
+            continue;
+         }
+
+         if (src[i + 1] == (unsigned char)GA)
+         {
+            i += 2;
+            continue;
+         }
+
+         if ((src[i + 1] == (unsigned char)WILL || src[i + 1] == (unsigned char)WONT ||
+              src[i + 1] == (unsigned char)DO || src[i + 1] == (unsigned char)DONT) &&
+             i + 2 < src_len)
+         {
+            i += 3;
+            continue;
+         }
+      }
+
+      dst[j++] = src[i++];
+   }
+
+   return j;
+}
+
 bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload, size_t payload_len)
 {
    unsigned char header[4];
@@ -1579,8 +1618,31 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
    /*
     * OS-dependent output.
     */
-   if ((d->websocket_active && !write_websocket_frame(d, 0x1, (const unsigned char *)d->outbuf, (size_t)d->outtop)) ||
-       (!d->websocket_active && !write_to_descriptor(d->descriptor, d->outbuf, d->outtop)))
+   if (d->websocket_active)
+   {
+      unsigned char *payload;
+      size_t payload_len;
+
+      payload = (unsigned char *)malloc((size_t)d->outtop + 1);
+      if (payload == NULL)
+      {
+         d->outtop = 0;
+         return FALSE;
+      }
+
+      payload_len = sanitize_websocket_text_payload((const unsigned char *)d->outbuf, (size_t)d->outtop,
+                                                    payload, (size_t)d->outtop + 1);
+      if (!write_websocket_frame(d, 0x1, payload, payload_len))
+      {
+         free(payload);
+         d->outtop = 0;
+         return FALSE;
+      }
+      free(payload);
+      d->outtop = 0;
+      return TRUE;
+   }
+   else if (!write_to_descriptor(d->descriptor, d->outbuf, d->outtop))
    {
       d->outtop = 0;
       return FALSE;
