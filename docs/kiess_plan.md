@@ -36,17 +36,15 @@
 
 ## Lore
 
-### Evermeet's Decline and the Founding of Kiess
+### The Fall of Evermeet and the Founding of Kiess
 
-Evermeet did not fall in a single night. Over generations, its sprawling luxury districts grew inward-looking, its outer wards neglected. Monster pressure from the surrounding wildlands intensified each season while civic attention turned to comfort rather than defense. Districts became isolated as bridges and crossings deteriorated. Supply houses burned during successive crises with no coordinated response. The wealthy core — its jeweled parlors and honeymoon suites — survived longest, but the working quarters that kept Evermeet fed, armed, and connected to the frontier slowly hollowed out.
+Evermeet did not fall in a single night. Over generations, its sprawling districts grew inward-looking, its outer wards neglected. Monster pressure from the surrounding wildlands intensified each season while civic attention turned to comfort rather than defense. Districts became isolated as bridges and crossings deteriorated. Supply houses burned during successive crises with no coordinated response. The wealthy core survived longest, but the working quarters that kept Evermeet fed, armed, and connected to the frontier slowly hollowed out. Eventually the last defenders withdrew, and Evermeet was abandoned to the wildlands — its gilded parlors left to rot, its gates standing open to whatever wandered in.
 
-Evermeet still stands today: a diminished enclave of its former self, home to those who preferred gilded nostalgia over practical reform. But the merchants, soldiers, and temple orders who once kept the city functional recognized that Evermeet could no longer serve as a frontier hub. They petitioned the crown for a charter to build a new city nearby — not a replacement, but a successor with a different philosophy.
-
-**Kiess** rises a short distance from Evermeet along **Roc Road**, the ancient trade artery linking the western territories to Midgaard. Where Evermeet grew by accident and indulgence, Kiess was built by design. The crown-chartered guilds and the temple compact laid it out as a fortified civic grid: a walled rectangle with predictable streets, centralized services, and controlled gates. Locals describe the difference simply: "Evermeet remembered, but finally made defensible."
+**Kiess** rises where Evermeet once stood, built on its foundations along **Roc Road**, the ancient trade artery linking the western territories to Midgaard. The merchants, soldiers, and temple orders who had fled Evermeet's collapse returned not to restore the old city but to replace it entirely. Where Evermeet grew by accident and indulgence, Kiess was built by design. The crown-chartered guilds and the temple compact laid it out as a fortified civic grid: a walled rectangle with predictable streets, centralized services, and controlled gates. Locals describe the difference simply: "Evermeet remembered, but finally made defensible."
 
 ### The Central Prism
 
-The city was planned around a luminous civic keystone known as the **Central Prism** (room `13055`), a continuity anchor salvaged from Evermeet's last functioning civic hall. The Prism is both memorial and practical center: public law, messaging, provisioning, and magical logistics are all positioned within steps of it, so travelers can recover, orient, and re-enter the frontier quickly. The Executioner stationed at the Prism is the visible instrument of the compact's uncompromising enforcement of peace inside city limits — disputes are mediated in the square, but violent breach of city law is answered immediately and publicly.
+The city was planned around a luminous civic keystone known as the **Central Prism** (room `13055`), a continuity anchor recovered from the ruins of Evermeet's civic hall. The Prism is both memorial and practical center: public law, messaging, provisioning, and magical logistics are all positioned within steps of it, so travelers can recover, orient, and re-enter the frontier quickly. The Executioner stationed at the Prism is the visible instrument of the compact's uncompromising enforcement of peace inside city limits — disputes are mediated in the square, but violent breach of city law is answered immediately and publicly.
 
 ### Three-Power Governance
 
@@ -60,7 +58,7 @@ No single faction dominates. The Executioner post at the Central Prism is the le
 
 ### Roc Road and the Southern Approach
 
-Kiess's primary connection to the wider world runs south through the **South Gate** (room `13095`) onto Roc Road. This ancient highway connects to Midgaard and passes near the old gates of Evermeet, making Kiess a natural waypoint for caravans, adventurers, and military expeditions traveling between the civilized heartlands and the western frontier. The north, west, and east gates currently face walled borderlands awaiting future development.
+Kiess's primary connection to the wider world runs south through the **South Gate** (room `13095`) onto Roc Road. This ancient highway connects to Midgaard, making Kiess the western terminus for caravans, adventurers, and military expeditions traveling between the civilized heartlands and the frontier. The north, west, and east gates currently face walled borderlands awaiting future development.
 
 ### The Forest of Confusion
 
