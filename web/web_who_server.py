@@ -92,6 +92,8 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             "<a href='/who/'>Who</a>"
             "<a href='/help/'>Help</a>"
             "<a href='/shelp/'>SHelp</a>"
+            "<a href='https://discord.gg/T24UQV8h' target='_blank' rel='noopener noreferrer'>Discord</a>"
+            "<a href='https://github.com/ackmudhistoricalarchive/acktng/tree/main/area' target='_blank' rel='noopener noreferrer'>Github</a>"
             "</nav>"
         )
         help_forms = (
@@ -222,6 +224,15 @@ def _build_home_page() -> str:
   it is a curated record of worldbuilding decisions, game-system evolution, social history, and technical craft spanning
   years of iterative development.
 </p>
+
+
+<h2>Active ACK! Worlds</h2>
+<ul>
+  <li><strong>ACK!TNG (The Next Generation):</strong> Running at <code>ackmud.com 8890</code>.</li>
+  <li><strong>ACK! 4.3.1:</strong> Running at <code>ackmud.com 8891</code>.</li>
+  <li><strong>ACK! 4.2:</strong> Running at <code>ackmud.com 8892</code>.</li>
+</ul>
+
 <div class='grid'>
   <section class='card'>
     <h2>Mission</h2>
@@ -263,8 +274,8 @@ def _build_home_page() -> str:
   <li><strong>Who:</strong> A dedicated, live player activity view separated from archival content for cleaner discovery paths.</li>
   <li><strong>Help / SHelp:</strong> Searchable indexes into game documentation and spell/skill references for historians,
       implementers, and returning players.</li>
+  <li><strong>Community / Source:</strong> Quick links to the Discord server and the canonical GitHub area-file tree.</li>
 </ul>
-
 <h2>Preservation Principles</h2>
 <ul>
   <li><strong>Fidelity first:</strong> Source materials are retained as primary artifacts.</li>
