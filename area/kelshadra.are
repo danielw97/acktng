@@ -4,7 +4,7 @@ Q 16
 K kelshadra crypts shadow dark~
 L {150-170}~
 N 0
-I 150 150
+I 150 170
 V 9400 9549
 X 0
 F 20
@@ -23,7 +23,7 @@ broken from the archway overhead. A faint, sickly phosphorescence clings to
 the walls, just enough to reveal the horror of what lies ahead. The path
 south leads deeper into the crypts.
 ~
-4100 11
+8201 11
 D0
 ~
 ~
@@ -52,7 +52,7 @@ dark rituals. Iron sconces still hold black candles that burn with cold blue
 flame, though no mortal lit them. Exits lead north back to the gate, east
 into a nave, west toward a vestibule, and south deeper into the complex.
 ~
-4096 11
+8201 11
 D0
 ~
 ~
@@ -88,7 +88,7 @@ symbol: a spiral, a broken circle, and an eye. The doors are sealed with
 mechanisms of ancient brass and bone. The floor here is inscribed with a
 warning in an archaic script. The exit east returns to the entry hall.
 ~
-4096 11
+8201 11
 D1
 ~
 ~
@@ -123,7 +123,7 @@ a ritual seal that radiates a faint warmth, as though it still functions
 after all this time. The exit west returns to the entry hall, and a door
 leads north.
 ~
-4096 11
+8201 11
 D2
 ~
 ~
@@ -154,7 +154,7 @@ slightly to one side, suggesting something crawled out long ago. Heavy chains
 are secured to the sarcophagus but they too have been broken. The path south
 leads back to the nave, and a passage descends down.
 ~
-4100 11
+8201 11
 D2
 ~
 ~
@@ -189,7 +189,7 @@ seem to track your movement. The floor is treacherous -- certain flagstones
 are pressure plates that trigger mechanisms in the walls. The corridor
 continues south and branches east.
 ~
-4096 11
+8201 11
 D0
 ~
 ~
@@ -223,7 +223,7 @@ center of the far wall is a large skull set into an iron frame. Its eye
 sockets glow with sickly green light. Beneath the skull is a recessed
 compartment. The exit west returns to the southern corridor.
 ~
-4100 11
+8201 11
 D3
 ~
 ~
@@ -249,7 +249,7 @@ victorious over a heap of bones, one consumed by shadow, one simply absent,
 the mirror showing only an empty room. The floor is marked with four symbols.
 You may exit north back to the corridor or south.
 ~
-4096 11
+8201 11
 D0
 ~
 ~
@@ -280,7 +280,7 @@ burned, as if by dark energy from within. At the center of the chamber is a
 stone pedestal with an indentation shaped like a hand. The exits are north
 and south, and a sealed door to the east.
 ~
-4100 11
+8201 11
 D0
 ~
 ~
@@ -288,7 +288,7 @@ D0
 D1
 ~
 door~
-1 9425 9409
+1 9420 9409
 D2
 ~
 ~
@@ -316,7 +316,7 @@ massive stone door covered in combination locks. An inscription above it reads
 'Only the one who understands corruption may pass.' The exit south returns to
 the chamber of whispers.
 ~
-4100 11
+8201 11
 D0
 ~
 ~
@@ -350,7 +350,7 @@ has partially given way, and crossing it requires care -- some boards are
 missing, revealing a darkness below that produces sounds of breathing. A
 door stands at the far south end, and the exit north returns to the antechamber.
 ~
-4096 11
+8201 11
 D0
 ~
 ~
@@ -380,7 +380,7 @@ material that is not quite rock and not quite bone. The railing along the
 staircase is carved from a single piece of shadow-iron, depicting writhing
 figures. The exit north returns to the gallery, and the stairs descend.
 ~
-4100 11
+8201 11
 D0
 ~
 ~
@@ -399,7 +399,7 @@ close and the ceiling is very high, lost in shadow. You can feel things
 watching you from beyond the torch-light. Exits lead up to the threshold,
 north into the labyrinth, east and west.
 ~
-4100 11
+8201 11
 D0
 ~
 ~
@@ -432,7 +432,7 @@ designed to confuse. Above the entrance arch, a warning is carved: 'The
 labyrinth remembers all who enter. Not all of what it remembers is friendly.'
 Exits lead south back to the antechamber and into the labyrinth north.
 ~
-4100 11
+532489 11
 D0
 ~
 ~
@@ -450,7 +450,7 @@ to lead in circles. The stone overhead is carved with a repeating motif of
 eyes. This section of the maze has a faint sound of dripping water coming
 from somewhere to the east. Passages lead south, east, and west.
 ~
-4100 11
+532489 11
 D1
 ~
 ~
@@ -471,7 +471,7 @@ wall is lined with iron spikes, some of which bear scraps of clothing.
 The floor here is damp and the footing uncertain. The passage continues
 east and returns west.
 ~
-4100 11
+532489 11
 D1
 ~
 ~
@@ -489,7 +489,7 @@ and the mortar shows signs of hasty application. Something was walled in
 here. Faint scratching can be heard from the other side. The only exit
 is east.
 ~
-4100 11
+532489 11
 D1
 ~
 ~
@@ -510,7 +510,7 @@ carved in relief, but the cardinal directions are wrong: North is marked
 rotates very slowly under its own power. Passages lead north, south, east,
 and west.
 ~
-4100 11
+532489 11
 D0
 ~
 ~
@@ -544,7 +544,7 @@ A small alcove in the wall here contains a dusty skeleton whose hands are
 still pressed flat against the wall, as though it died pushing futilely
 against solid stone. The exit south returns to the crossroads.
 ~
-4100 11
+532489 11
 D2
 ~
 ~
@@ -569,11 +569,11 @@ not even light touches its surface. Looking into it too long causes visual
 distortion and a sensation of vertigo. The exit west returns to the crossroads,
 and a narrow ledge circles the pool to a door on the far side.
 ~
-4100 11
+532489 11
 D1
 ~
 door~
-1 9426 9421
+1 9421 9426
 D3
 ~
 ~
@@ -594,7 +594,7 @@ traps were never reset after previous victims triggered them, or this is
 meant to make you feel safe. The passage continues west and east back to
 the crossroads.
 ~
-4100 11
+532489 11
 D1
 ~
 ~
@@ -614,11 +614,11 @@ One construct, in the far corner, may not be entirely inert -- its head
 moves very slightly when you are not watching it directly. A door leads north
 and the exit east returns to the trap corridor.
 ~
-4100 11
+532489 11
 D0
 ~
 door~
-1 9426 9422
+1 9421 9422
 D1
 ~
 ~
@@ -635,9 +635,14 @@ The Labyrinth - The Lower Junction~
 The passage descends and opens into a junction room where the floors are
 covered in a thin layer of grey dust, unmarked -- meaning nothing has passed
 here recently. The junction connects several passages and a stairway leading
-further down. The exits are south back toward the sentinels, west, and down.
+further down. The exits are south back toward the sentinels, east toward the
+pool chamber, west, and down.
 ~
-4100 11
+532489 11
+D1
+~
+~
+0 -1 9426
 D2
 ~
 ~
@@ -660,7 +665,7 @@ other voices that were here long before you. The chamber has no purpose
 that is immediately apparent, but the echoes themselves seem to contain
 information. The exit east returns to the junction.
 ~
-4100 11
+532489 11
 D1
 ~
 ~
@@ -682,7 +687,7 @@ an ancient tome sealed with seven locks. The power in this room is palpable
 and crushing. The air shimmers slightly, as though reality itself is under
 strain here. The exit north returns to the antechamber below.
 ~
-4100 11
+8205 11
 D0
 ~
 ~
@@ -715,11 +720,11 @@ for centuries. This is the personal collection of the order's archivist, and
 it contains knowledge that was meant to die here with them. The exit west
 returns to the chamber of whispers.
 ~
-4100 11
+8201 11
 D3
 ~
 door~
-1 9425 9408
+1 9420 9408
 E
 shelves tomes scrolls tablets~
 The collection covers the history of the order, the ritual of binding, the
@@ -737,15 +742,15 @@ floor. Adjusting them might change the pool's nature. The chamber also contains
 a locked iron chest. The exit west returns across the pool, and a door leads
 north from here through the labyrinth.
 ~
-4100 11
-D2
+532489 11
+D0
 ~
-door~
-1 9426 9419
+~
+0 -1 9422
 D3
 ~
 door~
-1 9426 9421
+1 9421 9419
 E
 mechanism wheels levers~
 The mechanism seems designed to either purify the pool or to corrupt it
@@ -766,7 +771,7 @@ against entities from beyond the veil. The warden's effigy atop the lid
 depicts a figure of great authority, one hand raised in command, the other
 pressed to its own chest as though in pain. The chamber exits south.
 ~
-4100 11
+8205 11
 D2
 ~
 ~
@@ -787,7 +792,7 @@ seated in chairs as though presiding over an eternal meeting. At the end of the
 hall, a great set of doors stands sealed with nine separate mechanisms. North
 leads to the first warden's crypt, south leads to the final sanctum.
 ~
-4100 11
+8205 11
 D0
 ~
 ~
@@ -819,7 +824,7 @@ is the entity that the entire crypt was built to contain: an ancient darkness
 that has waited here for centuries, patient beyond mortal understanding.
 It is aware of you. It has always been aware of you. The exit north returns.
 ~
-4100 11
+8205 11
 D0
 ~
 ~
@@ -847,7 +852,7 @@ the stone in both directions. Some of the wrappings have been disturbed --
 pulled open, the remains scattered, as though something searched through them.
 The exit west returns to the antechamber.
 ~
-4100 11
+8201 11
 D3
 ~
 ~
@@ -868,7 +873,7 @@ the order's alchemist are still legible, detailing experiments in containing
 and stabilizing dark energy. One formula is circled in red ink. The exit east
 returns to the antechamber, and a stair descends to a lower level.
 ~
-4100 11
+8201 11
 D1
 ~
 ~
@@ -899,7 +904,7 @@ nothing -- but the outline of something large was placed there for a long
 time, the stone worn smooth around it. Passages lead up through the labyrinth
 above and east.
 ~
-4100 11
+8201 11
 D0
 ~
 ~
@@ -933,7 +938,7 @@ These are the spirits of those who died in the crypt's construction, bound
 here by the ritual. They are not hostile but they are deeply distressed.
 The exit west returns to the deep ossuary.
 ~
-4100 11
+8201 11
 D3
 ~
 ~
@@ -957,7 +962,7 @@ This pale, eyeless creature moves on too many legs, its translucent skin
 revealing dark organs beneath. It was once a person. Now it seeks only to
 consume and infect.
 ~
-167772225 512 -500 S
+33554529 512 -500 S
 150 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -974,14 +979,14 @@ This creature appears as a tattered silhouette with no distinct form, its edges
 fraying into darkness. Its presence causes an unnatural chill and a feeling of
 profound despair. It feeds on fear and memory.
 ~
-167903297 524800 -750 S
+33685601 524800 -750 S
 152 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9400 9401 0 0 0 0 0 0 0
-L 50 30 0 0 0 0 0 0 0
+l 100 9400 9401 9415 0 0 0 0 0 0
+L 40 40 20 0 0 0 0 0 0
 #9402
 bone guardian skeleton~
 a bone guardian~
@@ -992,7 +997,7 @@ sorcery, this construct carries two blades of shadow-iron and wears armor
 fashioned from its own ribs. Its skull bears an eternal grin of menace.
 It exists only to destroy the living.
 ~
-167772257 512 -1000 S
+33570913 512 -1000 S
 155 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1010,7 +1015,7 @@ necrotic flesh and fractured bone, barely holding together, driven by a rage
 that transcends death. Its wounds are too numerous to count, yet it does not
 fall. It simply endures and attacks.
 ~
-167772257 512 -750 S
+33570913 512 -750 S
 155 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1028,14 +1033,14 @@ member of the order of Kel'Shadra. Centuries of the crypt's influence have
 not made them sane. They clutch a blade in one hand and a tome in the other,
 muttering a continuous prayer to something that does not love them.
 ~
-167772257 512 -500 S
+33554529 512 -500 S
 155 2
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9404 9405 0 0 0 0 0 0 0
-L 30 50 0 0 0 0 0 0 0
+l 100 9404 9405 9414 9417 0 0 0 0 0
+L 25 35 20 20 0 0 0 0 0
 #9405
 maze runner lost soul~
 a maze runner~
@@ -1046,14 +1051,14 @@ this creature has been trapped here so long it has become part of the maze.
 It knows every passage by memory but can no longer comprehend escape. It
 attacks anything it encounters out of mindless territorial aggression.
 ~
-167772257 512 -250 S
+33554529 512 -250 S
 153 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9400 9401 0 0 0 0 0 0 0
-L 50 30 0 0 0 0 0 0 0
+l 100 9400 9401 9419 0 0 0 0 0 0
+L 35 40 25 0 0 0 0 0 0
 #9406
 void stalker shadow predator~
 a void stalker~
@@ -1064,14 +1069,14 @@ between existence and absence. It hunts by sensing fear, tracking its prey
 through the emotional resonance of panic. Its touch causes temporary blindness
 and a profound sense of isolation. It appears to enjoy the hunt.
 ~
-167903313 524800 -1000 S
+33685617 524800 -1000 S
 157 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9402 9403 0 0 0 0 0 0 0
-L 30 50 0 0 0 0 0 0 0
+l 100 9402 9403 9411 0 0 0 0 0 0
+L 30 40 30 0 0 0 0 0 0
 #9407
 death knight warden eternal~
 a death knight~
@@ -1083,7 +1088,7 @@ its form, the sword it wields absorbs light, and its eyes burn with a cold
 hatred for all living things. It remembers the warmth of life and despises
 you for still possessing it.
 ~
-167772257 131584 -1000 S
+67125363 131584 -1000 S
 160 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1102,14 +1107,14 @@ structures and its presence warps light in a visible radius around it. It
 has been assigned to prevent any from reaching the depths of the crypt, and
 it takes its assignment with absolute seriousness.
 ~
-167903313 524800 -1000 S
+67108979 524800 -1000 S
 162 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9406 9407 0 0 0 0 0 0 0
-L 20 50 30 0 0 0 0 0 0
+l 100 9406 9407 9410 9418 0 0 0 0 0
+L 20 30 30 20 0 0 0 0 0
 #9409
 bone colossus construct ancient~
 a bone colossus~
@@ -1121,14 +1126,14 @@ carries no weapon -- it uses its body as a weapon, crushing and sweeping
 with limbs composed of fused femurs and spinal columns. It is not intelligent.
 It is relentless.
 ~
-167772257 512 -1000 S
+67125363 512 -1000 S
 165 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9404 9405 9406 0 0 0 0 0 0
-L 25 40 35 0 0 0 0 0 0
+l 100 9404 9405 9406 9409 0 0 0 0 0
+L 25 30 25 20 0 0 0 0 0
 #9410
 lich undead necromancer ancient~
 the Lich of Kel'Shadra~
@@ -1141,14 +1146,14 @@ robes threaded with light-absorbing material. Its mind is vast, cold, and
 utterly alien in its perspective. It views the living with academic interest
 and combative enthusiasm. It is extremely dangerous.
 ~
-167772257 131584 -1000 S
+67125363 131584 -1000 S
 170 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9406 9407 9408 0 0 0 0 0 0
-L 15 35 35 15 0 0 0 0 0
+l 100 9406 9407 9408 9412 9413 0 0 0 0
+L 15 20 30 20 15 0 0 0 0
 #9411
 nightmare steed dark horse~
 a nightmare steed~
@@ -1159,7 +1164,7 @@ Its body is formed of solidified darkness, its mane and tail of cold flame.
 Its eyes are blank white voids. It serves as a mount for the death knight
 and attacks independently with terrible hooves and teeth of shadow-iron.
 ~
-167772257 512 -750 S
+33554529 512 -750 S
 158 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1178,14 +1183,14 @@ merged with the stone around it. Tendrils of dark energy connect it to the
 wall. It appears inert but this is by design: it waits until you are within
 striking range to reveal that it is very much active.
 ~
-167772257 512 -750 S
+33570913 512 -750 S
 160 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 100 9404 9405 0 0 0 0 0 0 0
-L 30 50 0 0 0 0 0 0 0
+l 100 9404 9405 9416 0 0 0 0 0 0
+L 30 40 30 0 0 0 0 0 0
 #9413
 shadow spawn creature darkness~
 a shadow spawn~
@@ -1197,7 +1202,7 @@ physical world. It forms briefly into something almost solid when it attacks,
 then dissipates back into shadow. Conventional attacks pass through it;
 magic and silver affect it normally.
 ~
-167903297 524800 -750 S
+33685601 524800 -750 S
 155 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1216,7 +1221,7 @@ from preserved flesh bound together by dark energy, stitched with thread
 made from dried veins. It has no will of its own and follows its last
 standing order: kill intruders. It is disturbingly effective at this task.
 ~
-167772257 512 -500 S
+33554529 512 -500 S
 157 0
 0 0 0 0
 ! 0 0 0 7 0 0 0
@@ -1276,7 +1281,7 @@ L
 shadow iron boots~
 @@dShadow-Iron@@N Boots~
 A pair of shadow-iron boots lies here.~
-9 201326720 10485760 536870913
+9 201326720 10485760 1
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -1295,7 +1300,7 @@ L
 shadow iron buckler shield~
 @@NA @@dShadow-Iron@@N Buckler~
 A shadow-iron buckler lies here.~
-9 1006633088 8421376 8388608
+9 469762176 8421376 1
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -1304,7 +1309,7 @@ L
 void blade longsword~
 @@NA Void@@d Blade@@N~
 A void blade lies here, absorbing the light around it.~
-5 134217856 8421376 0
+5 201326720 8421376 0
 0 0 0 3 0 0 0 0 0 0
 8
 L
@@ -1313,7 +1318,7 @@ L
 bone scythe weapon~
 @@NA Bone @@dScythe@@N~
 A scythe carved from enormous bones lies here.~
-5 201326720 8421376 0
+5 2348810368 8421376 0
 0 0 0 1 0 0 0 0 0 0
 10
 L
@@ -1322,7 +1327,7 @@ L
 shadow weave cloak~
 @@NA @@dShadow-Weave@@N Cloak~
 A cloak that seems to absorb shadow lies here.~
-9 201326720 8454144 16777216
+9 201326720 8454144 1
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -1331,7 +1336,7 @@ L
 ring shadow bound~
 @@NA Ring of @@dShadow-Binding@@N~
 A dark ring etched with binding runes lies here.~
-8 201326720 8396800 0
+8 67108992 8396800 0
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -1349,7 +1354,7 @@ L
 lich robes vestments~
 @@NLich @@dVestments@@N~
 Ancient lich vestments lie here, radiating cold energy.~
-9 201326720 8650752 33554433
+9 201326720 8650752 1
 0 0 0 0 0 0 0 0 0 0
 3
 L
@@ -1358,7 +1363,7 @@ L
 shadow iron sword short~
 @@NA @@dShadow-Iron@@N Short Sword~
 A short shadow-iron sword lies here.~
-5 134217856 8421376 0
+5 67108992 8421376 0
 0 0 0 3 0 0 0 0 0 0
 14
 L
@@ -1367,7 +1372,7 @@ L
 void touched earring~
 @@NA Void-Touched @@dEarring@@N~
 A void-touched earring lies here.~
-8 201326720 8388672 384
+8 67108992 8388672 384
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -1377,7 +1382,7 @@ shadow iron wristguards~
 @@dShadow-Iron@@N Wristguards~
 Shadow-iron wristguards lie here.
 ~
-9 201326720 8390656 49152
+9 67108992 8390656 49152
 0 0 0 0 0 0 0 0 0 0
 14
 L
@@ -1386,7 +1391,7 @@ L
 darkbone staff weapon~
 @@NA Darkbone @@dStaff@@N~
 A staff carved from darkbone lies here.~
-5 134217856 8421376 0
+5 67108992 8421376 0
 0 0 0 6 0 0 0 0 0 0
 7
 L
@@ -1404,7 +1409,7 @@ L
 shadow iron dagger~
 @@NA @@dShadow-Iron@@N Dagger~
 A shadow-iron dagger lies here.~
-5 201326720 8421376 0
+5 67108992 8421376 0
 0 0 0 11 0 0 0 0 0 0
 9
 L
@@ -1413,7 +1418,7 @@ L
 kelshadra crypt key old~
 an old crypt key~
 An old crypt key lies here.~
-18 268435456 8421376 0
+18 128 8421376 0
 0 9425 0 0 0 0 0 0 0 0
 1
 L
@@ -1422,7 +1427,7 @@ L
 void pool key~
 a void pool key~
 A strange key that seems made of solidified shadow lies here.~
-18 268435456 8421376 0
+18 128 8421376 0
 0 9426 0 0 0 0 0 0 0 0
 1
 L

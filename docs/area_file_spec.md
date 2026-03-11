@@ -376,6 +376,40 @@ Builder policy for special difficulty mobs:
 - `invasion` must never be set by builders in area files; it is set/cleared by runtime invasion systems only.
 - Strong (non-boss) mobs must be flagged `solo`.
 
+### 5.4a) Mobile `affected_by` bitvector
+
+`affected_by` on the main mobile data line (`<act> <affected_by> <alignment> S`) is a bitvector. Flags are defined in `src/config.h` as `AFF_*`:
+
+- `blind` = `1` (`AFF_BLIND`)
+- `invisible` = `2` (`AFF_INVISIBLE`)
+- `detect_evil` = `4` (`AFF_DETECT_EVIL`)
+- `detect_invis` = `8` (`AFF_DETECT_INVIS`)
+- `detect_magic` = `16` (`AFF_DETECT_MAGIC`)
+- `detect_hidden` = `32` (`AFF_DETECT_HIDDEN`)
+- `cloak_reflection` = `64` (`AFF_CLOAK_REFLECTION`)
+- `sanctuary` = `128` (`AFF_SANCTUARY`)
+- `faerie_fire` = `256` (`AFF_FAERIE_FIRE`)
+- `infrared` = `512` (`AFF_INFRARED`)
+- `curse` = `1024` (`AFF_CURSE`)
+- `cloak_flaming` = `2048` (`AFF_CLOAK_FLAMING`)
+- `poison` = `4096` (`AFF_POISON`)
+- `protect` = `8192` (`AFF_PROTECT`)
+- `cloak_absorption` = `16384` (`AFF_CLOAK_ABSORPTION`)
+- `sneak` = `32768` (`AFF_SNEAK`)
+- `hide` = `65536` (`AFF_HIDE`)
+- `sleep` = `131072` (`AFF_SLEEP`)
+- `charm` = `262144` (`AFF_CHARM`)
+- `flying` = `524288` (`AFF_FLYING`)
+- `pass_door` = `1048576` (`AFF_PASS_DOOR`)
+- `anti_magic` = `2097152` (`AFF_ANTI_MAGIC`)
+- `blasted` = `4194304` (`AFF_BLASTED`)
+- `remort_curse` = `8388608` (`AFF_REMORT_CURSE`)
+- `confused` = `16777216` (`AFF_CONFUSED`)
+- `vamp_healing` = `33554432` (`AFF_VAMP_HEALING`) — **do not set in area files**
+- `hold` = `67108864` (`AFF_HOLD`)
+- `paralysis` = `134217728` (`AFF_PARALYSIS`)
+- `cloak_adept` = `268435456` (`AFF_CLOAK_ADEPT`)
+
 ### 5.5) Mobile strong/weak/resist/suscept element flags (`|` extension)
 
 The `|` extension fields `strong_magic`, `weak_magic`, `resist`, and `suscept` are all bitvectors over the element definitions in `src/magic.h` (`ELE_*` / `ELEMENT_*`):
