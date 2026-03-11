@@ -124,19 +124,10 @@ Coordinates: west->east `x=0..9`, north->south `y=0..9`.
 ## Door Plan (explicit doors)
 City streets remain open-grid except for controlled access points below.
 
-1. **North Main Gate doors**
-   - `13005 <-> external north-link`
-   - Door: north side, heavy gate, closed by reset, unlockable.
-2. **South Main Gate doors**
-   - `13095 <-> external south-link`
+1. **South Main Gate doors**
+   - `13095 <-> 3243`
    - Door: south side, heavy gate, closed by reset, unlockable.
-3. **West Trade Gate doors**
-   - `13050 <-> external west-link`
-   - Door: west side, closed/open cycle by guards.
-4. **East Scholar Gate doors**
-   - `13059 <-> external east-link`
-   - Door: east side, closed by night reset, unlockable.
-5. **Bank Vault antechamber**
+2. **Bank Vault antechamber**
    - `13044 east -> 13047`
    - Door: locked iron door (bank staff access/event use).
 6. **Quartermaster stockroom**
@@ -569,10 +560,7 @@ Notes:
 
 | Command | Room Vnum | Door | State | Notes |
 |---------|-----------|------|-------|-------|
-| D 0 | 13005 | 0 | 1 | North Gate — closed on reset |
 | D 0 | 13095 | 2 | 1 | South Gate — closed on reset |
-| D 0 | 13050 | 3 | 1 | West Gate — closed on reset |
-| D 0 | 13059 | 1 | 1 | East Gate — closed on reset |
 | D 0 | 13044 | 1 | 2 | Bank vault door — locked on reset (key: 13000) |
 | D 0 | 13056 | 2 | 1 | Quartermaster stockroom — closed on reset |
 
@@ -618,37 +606,17 @@ Notes:
 
 ## Connection Plan (External Links)
 
-Kiess has four gates connecting to surrounding areas. Exact destination vnums depend on adjacent area planning, but the intended connections are:
-
-### North Gate (13005)
-- **Direction:** north from 13005
-- **Destination:** Forest of Confusion (likely a room on the forest's southern edge)
-- **Door:** `EX_ISDOOR`, reset closed (state 1), unlockable
-- **Rationale:** Primary connection to the Forest of Confusion, the main frontier zone. Caravans and scouts use this gate.
+Only the south gate has an active external connection. The north, west, and east gates are internal city boundaries with no external exits defined at this time.
 
 ### South Gate (13095)
-- **Direction:** south from 13095
-- **Destination:** TBD — southern overland route, desert approach, or road to other settlements
+- **Direction:** south from 13095 → vnum `3243`; north from 3243 → vnum `13095`
 - **Door:** `EX_ISDOOR`, reset closed (state 1), unlockable
-- **Rationale:** Outbound military and trade expeditions depart south.
-
-### West Gate (13050)
-- **Direction:** west from 13050
-- **Destination:** TBD — western frontier or farmland approach
-- **Door:** `EX_ISDOOR`, reset closed (state 1), unlockable
-- **Rationale:** Trade caravans and resource shipments arrive from the west.
-
-### East Gate (13059)
-- **Direction:** east from 13059
-- **Destination:** TBD — eastern scholastic routes or arcane wilderness
-- **Door:** `EX_ISDOOR`, reset closed (state 1), unlockable
-- **Rationale:** Scholars, mages, and research expeditions use this gate.
+- **Rationale:** Outbound military and trade expeditions depart south. Bidirectional link ensures players can return through the gate.
 
 ### Connection Implementation Notes
-- All four gates use `EX_ISDOOR` with `D` resets to state `closed` (1), not `locked` (2), so players can freely open them.
-- Reverse exits from destination rooms back into Kiess should point to the corresponding gate room.
-- Until adjacent areas are built, gate exits can point to placeholder vnums or remain defined without destinations.
-- The Forest of Confusion connection (north gate) is the highest-priority link given the lore's emphasis on Kiess as the Forest's staging hub.
+- The south gate uses `EX_ISDOOR` with a `D` reset to state `closed` (1), not `locked` (2), so players can freely open it.
+- The reverse exit (north from `3243` back to `13095`) must be added to the area file that owns vnum `3243`.
+- North (`13005`), west (`13050`), and east (`13059`) gates remain walled city exits with no external destination. They may be connected to future areas later.
 
 ---
 
@@ -662,7 +630,7 @@ Kiess has four gates connecting to surrounding areas. Exact destination vnums de
 6. [ ] Write `#RESETS` section (~13 service mob spawns + ~25 ambient mob spawns + 6 door resets)
 7. [ ] Write `#SPECIALS` section (2 entries: executioner, janitor)
 8. [ ] Add `kiess.are` to `area/area.lst`
-9. [ ] Add north gate exit to Forest of Confusion area file (once destination vnum is determined)
+9. [ ] Add north exit from vnum `3243` back to `13095` in the area file that owns vnum 3243
 10. [ ] Run `cd src && make unit-tests` to validate
 11. [ ] Verify all vnums within 13000-13099 range
 12. [ ] Verify no vnum conflicts with existing areas (confirmed: minokeep uses 1300-1399, no overlap)
