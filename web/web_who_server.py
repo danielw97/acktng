@@ -325,6 +325,7 @@ def _build_mud_client_page() -> str:
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
+  <input id='ws-endpoint' placeholder='Optional WebSocket URL override (ws:// or wss://)' style='flex:1;min-width:280px;'>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
 </div>
@@ -337,6 +338,7 @@ def _build_mud_client_page() -> str:
 (() => {{
   const worldSelect = document.getElementById('world-select');
   const connectBtn = document.getElementById('connect-btn');
+  const endpointInput = document.getElementById('ws-endpoint');
   const disconnectBtn = document.getElementById('disconnect-btn');
   const sendBtn = document.getElementById('send-btn');
   const output = document.getElementById('mud-output');
