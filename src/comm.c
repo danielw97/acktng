@@ -49,6 +49,7 @@
 #include <strings.h>
 #include <time.h>
 #include <signal.h>
+#include <stdint.h>
 #if defined(__CYGWIN__)
 #include <crypt.h>
 #endif
@@ -349,6 +350,10 @@ void new_descriptor(int control);
 bool read_from_descriptor(DESCRIPTOR_DATA *d);
 bool write_to_descriptor(int desc, char *txt, int length);
 void init_descriptor(DESCRIPTOR_DATA *dnew, int desc);
+void queue_login_greeting(DESCRIPTOR_DATA *d);
+bool handle_websocket_handshake(DESCRIPTOR_DATA *d);
+bool process_websocket_input(DESCRIPTOR_DATA *d);
+bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload, size_t payload_len);
 
 /*
  * Other local functions (OS-independent).
@@ -365,6 +370,324 @@ void bust_a_prompt args((DESCRIPTOR_DATA * d));
 void free_desc args((DESCRIPTOR_DATA * d));
 
 int global_port;
+
+static const char websocket_guid[] = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+
+static void sha1_transform(uint32_t state[5], const unsigned char block[64])
+{
+   uint32_t w[80], a, b, c, d, e, t;
+   int i;
+
+   for (i = 0; i < 16; i++)
+      w[i] = ((uint32_t)block[i * 4] << 24) | ((uint32_t)block[i * 4 + 1] << 16) |
+             ((uint32_t)block[i * 4 + 2] << 8) | (uint32_t)block[i * 4 + 3];
+   for (i = 16; i < 80; i++)
+   {
+      uint32_t v = w[i - 3] ^ w[i - 8] ^ w[i - 14] ^ w[i - 16];
+      w[i] = (v << 1) | (v >> 31);
+   }
+
+   a = state[0];
+   b = state[1];
+   c = state[2];
+   d = state[3];
+   e = state[4];
+
+   for (i = 0; i < 80; i++)
+   {
+      uint32_t f, k;
+
+      if (i < 20)
+      {
+         f = (b & c) | ((~b) & d);
+         k = 0x5A827999;
+      }
+      else if (i < 40)
+      {
+         f = b ^ c ^ d;
+         k = 0x6ED9EBA1;
+      }
+      else if (i < 60)
+      {
+         f = (b & c) | (b & d) | (c & d);
+         k = 0x8F1BBCDC;
+      }
+      else
+      {
+         f = b ^ c ^ d;
+         k = 0xCA62C1D6;
+      }
+
+      t = ((a << 5) | (a >> 27)) + f + e + k + w[i];
+      e = d;
+      d = c;
+      c = (b << 30) | (b >> 2);
+      b = a;
+      a = t;
+   }
+
+   state[0] += a;
+   state[1] += b;
+   state[2] += c;
+   state[3] += d;
+   state[4] += e;
+}
+
+static void sha1_digest(const unsigned char *data, size_t len, unsigned char out[20])
+{
+   uint32_t state[5] = {0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0};
+   unsigned char block[64];
+   uint64_t bit_len = (uint64_t)len * 8;
+   size_t i, rem;
+
+   for (i = 0; i + 64 <= len; i += 64)
+      sha1_transform(state, data + i);
+
+   rem = len - i;
+   memset(block, 0, sizeof(block));
+   if (rem > 0)
+      memcpy(block, data + i, rem);
+   block[rem] = 0x80;
+
+   if (rem >= 56)
+   {
+      sha1_transform(state, block);
+      memset(block, 0, sizeof(block));
+   }
+
+   for (i = 0; i < 8; i++)
+      block[56 + i] = (unsigned char)(bit_len >> ((7 - i) * 8));
+
+   sha1_transform(state, block);
+
+   for (i = 0; i < 5; i++)
+   {
+      out[i * 4] = (unsigned char)(state[i] >> 24);
+      out[i * 4 + 1] = (unsigned char)(state[i] >> 16);
+      out[i * 4 + 2] = (unsigned char)(state[i] >> 8);
+      out[i * 4 + 3] = (unsigned char)state[i];
+   }
+}
+
+static void base64_encode(const unsigned char *in, size_t in_len, char *out, size_t out_size)
+{
+   static const char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+   size_t i, j = 0;
+
+   if (out_size == 0)
+      return;
+
+   for (i = 0; i < in_len && j + 4 < out_size; i += 3)
+   {
+      uint32_t octet_a = in[i];
+      uint32_t octet_b = (i + 1 < in_len) ? in[i + 1] : 0;
+      uint32_t octet_c = (i + 2 < in_len) ? in[i + 2] : 0;
+      uint32_t triple = (octet_a << 16) | (octet_b << 8) | octet_c;
+
+      out[j++] = table[(triple >> 18) & 0x3F];
+      out[j++] = table[(triple >> 12) & 0x3F];
+      out[j++] = (i + 1 < in_len) ? table[(triple >> 6) & 0x3F] : '=';
+      out[j++] = (i + 2 < in_len) ? table[triple & 0x3F] : '=';
+   }
+
+   out[j] = '\0';
+}
+
+void queue_login_greeting(DESCRIPTOR_DATA *d)
+{
+   char buf[MAX_STRING_LENGTH];
+   HELP_DATA *pHelp;
+   extern HELP_DATA *first_help;
+
+   if (d == NULL || d->greeting_sent)
+      return;
+
+   d->greeting_sent = TRUE;
+   sprintf(buf, "greeting%d", 0);
+
+   for (pHelp = first_help; pHelp != NULL; pHelp = pHelp->next)
+      if (!str_cmp(pHelp->keyword, buf))
+      {
+         if (pHelp->text[0] == '.')
+            write_to_buffer(d, pHelp->text + 1, 0);
+         else
+            write_to_buffer(d, pHelp->text, 0);
+         break;
+      }
+}
+
+bool handle_websocket_handshake(DESCRIPTOR_DATA *d)
+{
+   char *end_headers;
+   char *key_line;
+   char *key_start;
+   char key[256], challenge[512], accept_key[64], response[512];
+   unsigned char digest[20];
+   size_t key_len;
+
+   if (d == NULL || d->websocket_handshake_complete || d->inbuf_len <= 0)
+      return TRUE;
+
+   d->inbuf[d->inbuf_len] = '\0';
+   if (strncmp(d->inbuf, "GET ", 4) != 0)
+   {
+      d->websocket_handshake_complete = TRUE;
+      queue_login_greeting(d);
+      return TRUE;
+   }
+
+   end_headers = strstr(d->inbuf, "\r\n\r\n");
+   if (end_headers == NULL)
+      return TRUE;
+
+   if (strstr(d->inbuf, "Upgrade: websocket") == NULL && strstr(d->inbuf, "upgrade: websocket") == NULL)
+      return FALSE;
+
+   key_line = strstr(d->inbuf, "Sec-WebSocket-Key:");
+   if (key_line == NULL)
+      return FALSE;
+
+   key_start = key_line + strlen("Sec-WebSocket-Key:");
+   while (*key_start == ' ' || *key_start == '\t')
+      key_start++;
+
+   key_len = strcspn(key_start, "\r\n");
+   if (key_len == 0 || key_len >= sizeof(key))
+      return FALSE;
+
+   memcpy(key, key_start, key_len);
+   key[key_len] = '\0';
+
+   snprintf(challenge, sizeof(challenge), "%s%s", key, websocket_guid);
+   sha1_digest((const unsigned char *)challenge, strlen(challenge), digest);
+   base64_encode(digest, sizeof(digest), accept_key, sizeof(accept_key));
+
+   snprintf(response, sizeof(response),
+            "HTTP/1.1 101 Switching Protocols\r\n"
+            "Upgrade: websocket\r\n"
+            "Connection: Upgrade\r\n"
+            "Sec-WebSocket-Accept: %s\r\n\r\n",
+            accept_key);
+
+   if (!write_to_descriptor(d->descriptor, response, 0))
+      return FALSE;
+
+   d->websocket_active = TRUE;
+   d->websocket_handshake_complete = TRUE;
+
+   d->inbuf_len -= (int)((end_headers + 4) - d->inbuf);
+   memmove(d->inbuf, end_headers + 4, d->inbuf_len);
+   d->inbuf[d->inbuf_len] = '\0';
+
+   queue_login_greeting(d);
+   return TRUE;
+}
+
+bool write_websocket_frame(DESCRIPTOR_DATA *d, unsigned char opcode, const unsigned char *payload, size_t payload_len)
+{
+   unsigned char header[4];
+   size_t hlen;
+
+   if (payload_len > 65535)
+      return FALSE;
+
+   header[0] = 0x80 | (opcode & 0x0F);
+   if (payload_len < 126)
+   {
+      header[1] = (unsigned char)payload_len;
+      hlen = 2;
+   }
+   else
+   {
+      header[1] = 126;
+      header[2] = (unsigned char)(payload_len >> 8);
+      header[3] = (unsigned char)(payload_len & 0xFF);
+      hlen = 4;
+   }
+
+   if (!write_to_descriptor(d->descriptor, (char *)header, (int)hlen))
+      return FALSE;
+   if (payload_len > 0 && !write_to_descriptor(d->descriptor, (char *)payload, (int)payload_len))
+      return FALSE;
+
+   return TRUE;
+}
+
+bool process_websocket_input(DESCRIPTOR_DATA *d)
+{
+   unsigned char *buf = (unsigned char *)d->inbuf;
+
+   if (d == NULL || d->incomm[0] != '\0')
+      return TRUE;
+
+   while (d->inbuf_len >= 2)
+   {
+      size_t pos = 2, payload_len, frame_len;
+      unsigned char opcode;
+      unsigned char mask[4];
+      int i, k = 0;
+
+      buf = (unsigned char *)d->inbuf;
+      opcode = buf[0] & 0x0F;
+      payload_len = buf[1] & 0x7F;
+
+      if (payload_len == 126)
+      {
+         if (d->inbuf_len < 4)
+            return TRUE;
+         payload_len = ((size_t)buf[2] << 8) | buf[3];
+         pos = 4;
+      }
+      else if (payload_len == 127 || (buf[1] & 0x80) == 0)
+         return FALSE;
+
+      if ((size_t)d->inbuf_len < pos + 4 + payload_len)
+         return TRUE;
+
+      memcpy(mask, buf + pos, 4);
+      pos += 4;
+      frame_len = pos + payload_len;
+
+      for (i = 0; i < (int)payload_len; i++)
+         buf[pos + i] ^= mask[i % 4];
+
+      if (opcode == 0x8)
+         return FALSE;
+      if (opcode == 0x9)
+      {
+         if (!write_websocket_frame(d, 0xA, buf + pos, payload_len))
+            return FALSE;
+      }
+      else if (opcode == 0x1 || opcode == 0x0 || opcode == 0x2)
+      {
+         if (payload_len >= MAX_INPUT_LENGTH - 1)
+            write_to_descriptor(d->descriptor, "Line too long.\n\r", 0);
+         else
+         {
+            for (i = 0; i < (int)payload_len; i++)
+            {
+               unsigned char c = buf[pos + i];
+               if (c == '\b' && k > 0)
+                  --k;
+               else if (isprint(c))
+                  d->incomm[k++] = (char)c;
+            }
+            if (k == 0)
+               d->incomm[k++] = ' ';
+            d->incomm[k] = '\0';
+         }
+      }
+
+      d->inbuf_len -= (int)frame_len;
+      memmove(d->inbuf, d->inbuf + frame_len, d->inbuf_len);
+      d->inbuf[d->inbuf_len] = '\0';
+
+      if (d->incomm[0] != '\0')
+         return TRUE;
+   }
+
+   return TRUE;
+}
 
 static void normalize_login_class(CHAR_DATA *ch)
 {
@@ -712,7 +1035,11 @@ void game_loop(int control)
           */
          if (d->connected < 0 && d->timeout < current_time)
          {
-            write_to_descriptor(d->descriptor, "Login timeout (180s)\n\r", 0);
+            if (d->websocket_active)
+               write_websocket_frame(d, 0x1, (const unsigned char *)"Login timeout (180s)\n\r",
+                                     strlen("Login timeout (180s)\n\r"));
+            else
+               write_to_descriptor(d->descriptor, "Login timeout (180s)\n\r", 0);
             close_socket(d);
             continue;
          }
@@ -932,26 +1259,7 @@ void new_descriptor(int control)
     */
    dnew->timeout = current_time + 180;
 
-   /*
-    * Send the greeting.
-    */
-   {
-      char buf[MAX_STRING_LENGTH];
-      HELP_DATA *pHelp;
-      extern HELP_DATA *first_help;
-
-      sprintf(buf, "greeting%d", 0 /* number_range( 0, 4 ) */);
-
-      for (pHelp = first_help; pHelp != NULL; pHelp = pHelp->next)
-         if (!str_cmp(pHelp->keyword, buf))
-         {
-            if (pHelp->text[0] == '.')
-               write_to_buffer(dnew, pHelp->text + 1, 0);
-            else
-               write_to_buffer(dnew, pHelp->text, 0);
-            break; /* so no more found through multiple copies */
-         }
-   }
+   queue_login_greeting(dnew);
 
    cur_players++;
 
@@ -970,6 +1278,10 @@ void init_descriptor(DESCRIPTOR_DATA *dnew, int desc)
    dnew->outbuf = getmem(dnew->outsize);
    dnew->flags = 0;
    dnew->childpid = 0;
+   dnew->inbuf_len = 0;
+   dnew->websocket_active = FALSE;
+   dnew->websocket_handshake_complete = FALSE;
+   dnew->greeting_sent = FALSE;
 }
 
 void close_socket(DESCRIPTOR_DATA *dclose)
@@ -1055,7 +1367,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
    /*
     * Check for overflow.
     */
-   iStart = strlen(d->inbuf);
+   iStart = d->inbuf_len;
    if (iStart >= sizeof(d->inbuf) - 10)
    {
       sprintf(log_buf, "%s input overflow!", d->host);
@@ -1077,6 +1389,8 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
       if (nRead > 0)
       {
          iStart += nRead;
+         if (d->websocket_active)
+            break;
          if (d->inbuf[iStart - 1] == '\n' || d->inbuf[iStart - 1] == '\r')
             break;
       }
@@ -1093,7 +1407,17 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
          return FALSE;
       }
    }
+   d->inbuf_len = iStart;
    d->inbuf[iStart] = '\0';
+
+   if (!d->websocket_handshake_complete)
+   {
+      if (!handle_websocket_handshake(d))
+         return FALSE;
+      if (!d->websocket_active && d->websocket_handshake_complete)
+         queue_login_greeting(d);
+   }
+
    return TRUE;
 }
 
@@ -1110,19 +1434,24 @@ void read_from_buffer(DESCRIPTOR_DATA *d)
    if (d->incomm[0] != '\0')
       return;
 
+   if (d->websocket_active)
+   {
+      process_websocket_input(d);
+      return;
+   }
+
    /*
     * Look for at least one new line.
     */
-   for (i = 0; d->inbuf[i] != '\n' && d->inbuf[i] != '\r'; i++)
-   {
-      if (d->inbuf[i] == '\0')
-         return;
-   }
+   for (i = 0; i < d->inbuf_len && d->inbuf[i] != '\n' && d->inbuf[i] != '\r'; i++)
+      ;
+   if (i >= d->inbuf_len)
+      return;
 
    /*
     * Canonical input processing.
     */
-   for (i = 0, k = 0; d->inbuf[i] != '\n' && d->inbuf[i] != '\r'; i++)
+   for (i = 0, k = 0; i < d->inbuf_len && d->inbuf[i] != '\n' && d->inbuf[i] != '\r'; i++)
    {
       if (k >= MAX_INPUT_LENGTH - 2)
       {
@@ -1131,13 +1460,11 @@ void read_from_buffer(DESCRIPTOR_DATA *d)
          /*
           * skip the rest of the line
           */
-         for (; d->inbuf[i] != '\0'; i++)
+         for (; i < d->inbuf_len; i++)
          {
             if (d->inbuf[i] == '\n' || d->inbuf[i] == '\r')
                break;
          }
-         d->inbuf[i] = '\n';
-         d->inbuf[i + 1] = '\0';
          break;
       }
 
@@ -1193,10 +1520,12 @@ void read_from_buffer(DESCRIPTOR_DATA *d)
    /*
     * Shift the input buffer.
     */
-   while (d->inbuf[i] == '\n' || d->inbuf[i] == '\r')
+   while (i < d->inbuf_len && (d->inbuf[i] == '\n' || d->inbuf[i] == '\r'))
       i++;
-   for (j = 0; (d->inbuf[j] = d->inbuf[i + j]) != '\0'; j++)
-      ;
+   for (j = 0; i + j < d->inbuf_len; j++)
+      d->inbuf[j] = d->inbuf[i + j];
+   d->inbuf_len = j;
+   d->inbuf[d->inbuf_len] = '\0';
    return;
 }
 
@@ -1250,7 +1579,8 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
    /*
     * OS-dependent output.
     */
-   if (!write_to_descriptor(d->descriptor, d->outbuf, d->outtop))
+   if ((d->websocket_active && !write_websocket_frame(d, 0x1, (const unsigned char *)d->outbuf, (size_t)d->outtop)) ||
+       (!d->websocket_active && !write_to_descriptor(d->descriptor, d->outbuf, d->outtop)))
    {
       d->outtop = 0;
       return FALSE;

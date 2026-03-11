@@ -18,9 +18,9 @@ WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
 WORLD_TARGETS = [
-    {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890, "websocket": "wss://ackmud.com:8890"},
-    {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891, "websocket": "wss://ackmud.com:8891"},
-    {"id": "ack42", "name": "ACK! 4.2", "host": "ackmud.com", "port": 8892, "websocket": "wss://ackmud.com:8892"},
+    {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890},
+    {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
+    {"id": "ack42", "name": "ACK! 4.2", "host": "ackmud.com", "port": 8892},
 ]
 
 
@@ -314,7 +314,7 @@ def _build_home_page() -> str:
 def _build_mud_client_page() -> str:
     world_options = "".join(
         (
-            f"<option value='{world['id']}' data-ws='{world['websocket']}'>{world['name']} ({world['host']}:{world['port']})</option>"
+            f"<option value='{world['id']}' data-host='{world['host']}' data-port='{world['port']}'>{world['name']} ({world['host']}:{world['port']})</option>"
         )
         for world in WORLD_TARGETS
     )
@@ -325,28 +325,23 @@ def _build_mud_client_page() -> str:
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
+  <input id='ws-endpoint' placeholder='Optional WebSocket URL override (ws:// or wss://)' style='flex:1;min-width:280px;'>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
 </div>
 <pre id='mud-output' class='mud-output'>Ready.</pre>
 <div class='mud-controls'>
-  <input id='mud-command' placeholder='Type command and press Enter' style='flex:1;min-width:280px;'>
-  <button id='send-btn' type='button'>Send</button>
+  <input id='mud-command' placeholder='Send is disabled here (use your telnet/MUD client)' style='flex:1;min-width:280px;' disabled>
+  <button id='send-btn' type='button' disabled>Send</button>
 </div>
 <script>
 (() => {{
   const worldSelect = document.getElementById('world-select');
   const connectBtn = document.getElementById('connect-btn');
+  const endpointInput = document.getElementById('ws-endpoint');
   const disconnectBtn = document.getElementById('disconnect-btn');
   const sendBtn = document.getElementById('send-btn');
-  const commandInput = document.getElementById('mud-command');
   const output = document.getElementById('mud-output');
-  let socket = null;
-
-  const ANSI_COLORS = {{
-    30: '#1b1b1b', 31: '#d95c5c', 32: '#7ec77e', 33: '#d3b96a', 34: '#6f9df6', 35: '#bd7df0', 36: '#64c4cf', 37: '#d6d6d6',
-    90: '#686868', 91: '#ff8080', 92: '#9be79b', 93: '#ffe089', 94: '#8bb5ff', 95: '#d7a2ff', 96: '#88e7ef', 97: '#ffffff',
-  }};
 
   const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
   const ansiToHtml = (text) => {{
@@ -376,7 +371,7 @@ def _build_mud_client_page() -> str:
   }};
 
   const appendOutput = (text) => {{
-    output.insertAdjacentHTML('beforeend', ansiToHtml(text));
+    output.insertAdjacentHTML('beforeend', `<span>${{escapeHtml(text)}}</span>`);
     output.scrollTop = output.scrollHeight;
   }};
 
