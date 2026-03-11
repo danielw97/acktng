@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Simple web server for exposing WHO, help, and shelp webpages."""
+"""Simple web server for exposing ACKMUD project and game reference webpages."""
 
 from __future__ import annotations
 
@@ -29,8 +29,12 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             self._redirect_to("/")
             return
 
-        if route in ("/", "/players", "/players/", "/who", "/who/"):
-            self._send_html(self._build_players_page(), title="ACK! Player List")
+        if route in ("/",):
+            self._send_html(_build_home_page(), title="ACKMUD Historical Archive")
+            return
+
+        if route in ("/players", "/players/", "/who", "/who/"):
+            self._send_html(self._build_players_page(), title="ACKMUD Player List")
             return
 
         if route in ("/help", "/help/"):
@@ -84,41 +88,57 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
     def _send_html(self, body: str, title: str) -> None:
         nav = (
             "<nav>"
-            "<a href='/'>home</a>"
-            "<a href='/who/'>who</a>"
-            "<a href='/help/'>help</a>"
-            "<a href='/shelp/'>shelp</a>"
+            "<a href='/'>Home</a>"
+            "<a href='/who/'>Who</a>"
+            "<a href='/help/'>Help</a>"
+            "<a href='/shelp/'>SHelp</a>"
             "</nav>"
         )
         help_forms = (
             "<section class='help-forms'>"
             "<form method='get' action='/help/'>"
-            "<label for='help-q'>help:</label>"
+            "<label for='help-q'>Help:</label>"
             "<input id='help-q' name='q' placeholder='topic'>"
-            "<button type='submit'>open help</button>"
+            "<button type='submit'>Open help</button>"
             "</form>"
             "<form method='get' action='/shelp/'>"
-            "<label for='shelp-q'>shelp:</label>"
+            "<label for='shelp-q'>SHelp:</label>"
             "<input id='shelp-q' name='q' placeholder='spell/skill'>"
-            "<button type='submit'>open shelp</button>"
+            "<button type='submit'>Open shelp</button>"
             "</form>"
             "</section>"
         )
         page = (
-            "<html><head>"
+            "<!doctype html><html><head>"
             f"<title>{escape(title)}</title>"
+            "<meta name='viewport' content='width=device-width, initial-scale=1'>"
             "<style>"
-            "body{font-family:sans-serif;max-width:980px;margin:1rem auto;padding:0 1rem;}"
-            "nav{display:flex;gap:0.8rem;margin-bottom:1rem;}"
-            "nav a{padding:0.35rem 0.6rem;background:#efefef;border-radius:4px;text-decoration:none;color:#111;}"
-            ".help-forms{display:flex;flex-wrap:wrap;gap:1rem;margin:0 0 1rem;}"
-            ".help-forms form{display:flex;gap:0.5rem;align-items:center;}"
-            "pre{white-space:pre-wrap;background:#f7f7f7;padding:0.8rem;border-radius:4px;}"
+            ":root{color-scheme:dark;--bg:#05080f;--bg-soft:#0f1729;--card:#121c31;--line:#253457;--text:#e5ecff;--muted:#9eb0df;--accent:#79b7ff;--accent-soft:#163866;}"
+            "*{box-sizing:border-box;}"
+            "body{font-family:Inter,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at top,#18284a,#05080f 55%);color:var(--text);max-width:1080px;margin:0 auto;padding:1.4rem 1rem 2rem;line-height:1.6;}"
+            "nav{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1rem;}"
+            "nav a{padding:.5rem .85rem;background:rgba(121,183,255,.12);border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);font-weight:600;letter-spacing:.02em;}"
+            "nav a:hover{background:rgba(121,183,255,.25);border-color:#4d72b8;}"
+            ".help-forms{display:flex;flex-wrap:wrap;gap:.8rem;margin:0 0 1.2rem;padding:1rem;background:rgba(18,28,49,.72);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(4px);}"
+            ".help-forms form{display:flex;gap:.55rem;align-items:center;flex-wrap:wrap;}"
+            "label{color:var(--muted);font-weight:600;}"
+            "input{background:var(--bg-soft);border:1px solid var(--line);color:var(--text);padding:.45rem .65rem;border-radius:10px;min-width:190px;}"
+            "button{background:linear-gradient(135deg,#5ea8ff,#72cbff);color:#061126;border:none;padding:.5rem .85rem;border-radius:10px;font-weight:700;cursor:pointer;}"
+            "button:hover{filter:brightness(1.05);}"
+            "main{background:rgba(18,28,49,.78);border:1px solid var(--line);padding:1.1rem 1.15rem;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.32);}"
+            "h1,h2,h3{line-height:1.2;margin-top:0;color:#f4f7ff;}"
+            "a{color:var(--accent);}"
+            "p,li{color:var(--text);}"
+            ".muted{color:var(--muted);}"
+            "pre{white-space:pre-wrap;background:#0a1222;padding:0.9rem;border-radius:12px;border:1px solid var(--line);overflow:auto;}"
+            "ul{padding-left:1.2rem;}"
+            ".grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem;margin:.8rem 0 1rem;}"
+            ".card{background:rgba(8,15,29,.72);border:1px solid var(--line);padding:.8rem .9rem;border-radius:12px;}"
             "</style>"
             "</head><body>"
             f"{nav}"
             f"{help_forms}"
-            f"{body}"
+            f"<main>{body}</main>"
             "</body></html>"
         )
         body_bytes = page.encode("utf-8")
@@ -135,7 +155,7 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         who_html = _read_file_if_present(WHO_HTML_FILE)
         who_count = _read_file_if_present(WHO_COUNT_FILE)
 
-        content = ["<h1>ACK! Player List</h1>"]
+        content = ["<h1>ACKMUD Player Activity</h1>", "<p class='muted'>Live snapshot from in-game WHO output.</p>"]
         if who_count is not None:
             content.append(who_count)
         else:
@@ -191,6 +211,73 @@ def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: 
         query_blurb = f"<p>Filtered by <strong>{escape(query)}</strong>.</p>"
 
     return f"<h1>{escape(title)}</h1>{query_blurb}<ul>{''.join(links)}</ul>"
+
+
+def _build_home_page() -> str:
+    return """
+<h1>ACKMUD Historical Archive Project</h1>
+<p>
+  The ACKMUD Historical Archive is a long-horizon preservation and interpretation effort for one of the enduring
+  text-world traditions: the ACK code lineage and the living worlds that grew from it. This project is not just a file dump;
+  it is a curated record of worldbuilding decisions, game-system evolution, social history, and technical craft spanning
+  years of iterative development.
+</p>
+<div class='grid'>
+  <section class='card'>
+    <h2>Mission</h2>
+    <p>
+      Preserve game assets, system logic, and reference text in a format that remains readable and useful to future builders,
+      maintainers, and players. The archive balances authenticity with accessibility: original content is retained while
+      navigational surfaces (help/shelp indexes and web pages) make discovery practical.
+    </p>
+  </section>
+  <section class='card'>
+    <h2>Scope</h2>
+    <p>
+      The collection spans areas, NPC definitions, help libraries, spell references, logs, and supporting data files that
+      describe both gameplay and operational culture. Together these materials document how classes, encounters, and
+      progression loops changed over time, including both polished systems and historically significant rough edges.
+    </p>
+  </section>
+  <section class='card'>
+    <h2>Research Value</h2>
+    <p>
+      Beyond gameplay nostalgia, the archive is useful for software archaeology. It captures architecture decisions in
+      long-lived C/C++ MUD codebases, balancing performance constraints, maintainability, and community-driven feature growth.
+      For designers, it offers a practical catalog of pacing, reward, and social-system patterns proven in persistent worlds.
+    </p>
+  </section>
+</div>
+
+<h2>Historical Context</h2>
+<p>
+  ACK-based MUDs embody a period where online worlds were built collaboratively and operated continuously, often by small teams
+  with deep domain knowledge. Every command, help topic, and area file becomes part of a running chronicle: player behavior
+  informs balance updates; builder style informs narrative texture; operational incidents inform infrastructure hardening.
+  The archive preserves these strata as evidence of how live service design emerged from grassroots craftsmanship.
+</p>
+
+<h2>What This Web Interface Provides</h2>
+<ul>
+  <li><strong>Home:</strong> A narrative overview of the archive's purpose and historical significance.</li>
+  <li><strong>Who:</strong> A dedicated, live player activity view separated from archival content for cleaner discovery paths.</li>
+  <li><strong>Help / SHelp:</strong> Searchable indexes into game documentation and spell/skill references for historians,
+      implementers, and returning players.</li>
+</ul>
+
+<h2>Preservation Principles</h2>
+<ul>
+  <li><strong>Fidelity first:</strong> Source materials are retained as primary artifacts.</li>
+  <li><strong>Interpretation second:</strong> Supplemental explanations are additive and clearly separated from originals.</li>
+  <li><strong>Traceability:</strong> Structural changes are made so future maintainers can map web output back to canonical files.</li>
+  <li><strong>Longevity:</strong> Lightweight tooling and minimal dependencies reduce maintenance risk over time.</li>
+</ul>
+
+<p class='muted'>
+  This archive is intended to remain useful decades from now: to support restoration, scholarly study, emulator efforts,
+  and renewed play. It treats ACKMUD not only as software, but as a cultural artifact shaped by its builders and community.
+</p>
+"""
 
 
 def main() -> None:
