@@ -1534,38 +1534,9 @@ void char_update(void)
 
          OBJ_DATA *obj;
 
-         if ((obj = get_eq_char(ch, WEAR_LIGHT)) != NULL && obj->item_type == ITEM_LIGHT && obj->value[2] > 0)
+         if ((obj = get_eq_char(ch, WEAR_LIGHT)) != NULL && obj->item_type == ITEM_LIGHT)
          {
-            if (--obj->value[2] == 0 && ch->in_room != NULL)
-            {
-               --ch->in_room->light;
-               act("$p goes out.", ch, obj, NULL, TO_ROOM);
-               act("$p goes out.", ch, obj, NULL, TO_CHAR);
-               if (obj->value[7] > 0)
-               {
-                  OBJ_INDEX_DATA *new_index;
-                  OBJ_DATA *replacer;
-                  if ((new_index = get_obj_index(obj->value[6])) == NULL)
-                  {
-                     sprintf(bug_buf,
-                             "ERROR in expiring item %s(%s %d): item has a replace vnum set (%d), but that is not a valid item.",
-                             obj->name, obj->pIndexData->area->keyword, obj->pIndexData->vnum, obj->value[6]);
-                     monitor_chan(bug_buf, MONITOR_OBJ);
-                     log_f("%s", bug_buf);
-                  }
-                  else
-                  {
-                     replacer = create_object(new_index, obj->level);
-                     if (obj->carried_by != NULL)
-                        obj_to_char(replacer, obj->carried_by);
-                     else if (obj->in_room != NULL)
-                        obj_to_room(replacer, obj->in_room);
-                     else if (obj->in_obj != NULL)
-                        obj_to_obj(replacer, obj->in_obj);
-                  }
-               }
-               extract_obj(obj);
-            }
+            /* Worn lights now remain lit indefinitely. */
          }
 
          if (++ch->timer >= 12)

@@ -3087,7 +3087,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
             /*
              * Contributed by Gene Choi
              */
-            if ((obj = get_eq_char(ch, WEAR_LIGHT)) != NULL && obj->item_type == ITEM_LIGHT && obj->value[2] != 0 && ch->in_room != NULL)
+            if ((obj = get_eq_char(ch, WEAR_LIGHT)) != NULL && obj->item_type == ITEM_LIGHT && ch->in_room != NULL)
                ++ch->in_room->light;
          }
          return TRUE;
