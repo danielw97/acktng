@@ -106,6 +106,7 @@ Supported directives:
 - `F <int>`: reset rate
 - `U <string>~`: reset message
 - `O <string>~`: owner
+  - Owner policy: area headers must use `O Virant~`.
 - `R <string>~`: can_read ACL
 - `W <string>~`: can_write ACL
 - `P ...`: pay-area flag (rest of line ignored)
