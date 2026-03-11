@@ -247,6 +247,7 @@ struct descriptor_data
    sh_int connected;
    bool fcommand;
    char inbuf[4 * MAX_INPUT_LENGTH];
+   int inbuf_len;
    char incomm[MAX_INPUT_LENGTH];
    char inlast[MAX_INPUT_LENGTH];
    int repeat;
@@ -260,6 +261,9 @@ struct descriptor_data
    int flags;
    int childpid; /* Child process id */
    time_t timeout;
+   bool websocket_active;
+   bool websocket_handshake_complete;
+   bool greeting_sent;
 };
 
 #define DESC_FLAG_PASSTHROUGH 1 /* Used when data is being passed to */
