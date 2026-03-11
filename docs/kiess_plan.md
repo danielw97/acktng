@@ -28,6 +28,7 @@
 - `N 77` — confirmed unused across all loaded area files
 - `I 1 170` — all-level city hub; controls mob-level gating and area matching logic
 - `V 13000 13099` — full 100-vnum envelope; all rooms, mobs, and objects must stay within this range
+- `X 0` — map offset; no offset needed for this area
 - `F 15` — reset frequency in minutes
 - `U @@Wthe bells of @@BKiess@@W ring across the avenues@@N~` — reset message; white text with blue city name, reset; no double-newlines, terminated with `~`
 - `T` — teleport flag line (rest ignored by loader); presence enables teleport into the area
@@ -146,23 +147,21 @@ City streets remain open-grid except for controlled access points below.
    - Door: south side, heavy gate, closed by reset, unlockable.
 2. **Bank Vault antechamber**
    - `13044 east -> 13047`
-   - Door: locked iron door (bank staff access/event use).
-6. **Quartermaster stockroom**
+   - Door: locked iron door (bank staff access/event use), key vnum `13000`.
+   - **Note:** This is a non-grid interior passage. On the 10x10 grid, 13044 (x=4) and 13047 (x=7) are not adjacent; the east exit from 13044 bypasses grid rooms 13045-13046 to reach the vault directly. This is an intentional interior building passage — the bank's east exit leads into the vault rather than onto the street. The standard grid exit from 13044 east to 13045 is replaced by this vault passage, so players reach the Grand Market Exchange (13045) via other routes (e.g., from 13035 south, or from 13055 west through 13054).
+3. **Quartermaster stockroom**
    - `13056 south -> 13066`
    - Door: reinforced, closed, unlockable by quartermaster key.
-7. **Execution dais lockout**
-   - `13055 up -> 13055 (platform sub-flag/virtual internal)`
-   - Door/exit behavior: staff-only blocked climb except by scripted event.
 
 ## Street Connectivity Rules
-- Every interior grid room connects cardinally to valid neighbors (N/E/S/W) unless boundary edge.
+- Every interior grid room connects cardinally to valid neighbors (N/E/S/W) unless boundary edge, with one exception: the bank vault passage (13044 east → 13047) replaces the standard grid east exit from 13044 to 13045. Room 13045 remains reachable via adjacent grid connections from 13035 (south), 13055 (west via 13054), and 13046 (west).
 - Boundary rooms are wall-line rooms: they connect inward, and connect outward only at the four designated gate exits.
 - Central avenues are full straight lines:
   - North-south spine: `13005 -> 13095`
   - West-east spine: `13050 -> 13059`
 - Four quadrant loops ensure navigation without dead ends:
   - NW loop around 13033/13034/13043/13044
-  - NE loop around 13036/13037/13046/13047
+  - NE loop around 13036/13037/13046/13047 (**Note:** 13047 is the Bank Vault Antechamber. Its locked door from 13044 restricts bank-side access, but standard grid connections from 13037 south and 13046 east remain open. If the vault should be fully restricted, remove its grid connections and route the NE loop through alternate rooms.)
   - SW loop around 13063/13064/13073/13074
   - SE loop around 13066/13067/13076/13077
 
@@ -322,10 +321,12 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 
 ### Room Flag Summary
 
-- **`recall_set` sector:** 13055 only (Central Prism)
-- **`safe` rooms (34 total):** All `inside`-sector rooms (shops, offices, temples, barracks, etc.)
-- **Unflagged `city` streets (66 total):** All exterior roads, plazas, wall walks, and gate approaches
-- **No `dark`, `no_mob`, or `no_magic` flags** are planned for any Kiess room (city hub should be fully accessible and lit)
+- **`recall_set` sector (8):** 13055 only (Central Prism); room_flags = `1024` (ROOM_SAFE)
+- **`inside` sector (11), `safe` rooms (34 total):** All enclosed buildings — room_flags = `1024` (ROOM_SAFE)
+- **`city` sector (1), unflagged streets (66 total):** All exterior roads, plazas, wall walks, gate approaches — room_flags = `0`
+- **No `dark` (1), `no_mob` (4), or `no_magic` (16) flags** are planned for any Kiess room (city hub should be fully accessible and lit)
+
+**Area file format reference:** In the `#ROOMS` section, each room's header line is `<room_flags> <sector_type>`. For example, the Central Prism would be `1024 8` (safe + recall_set), an inside shop would be `1024 11` (safe + inside), and a city street would be `0 1` (no flags + city).
 
 
 ## Shop Inventory Plan (thematic items for sale)
@@ -457,6 +458,8 @@ All listed shop items are planned at levels **75-125**, and every level is a **m
 
 All service NPCs are level 150 and fixed in place. Sex assignments alternate for variety.
 
+**Act flag reference values:** `is_npc`=1, `sentinel`=2, `boss`=67108864, `no_flee`=16, `bank`=32768, `heal`=4096, `postman`=524288, `practice`=1024, `stay_area`=64. Combine by addition (e.g., `is_npc|sentinel` = 3).
+
 | Vnum | Name | Level | Room | Act Flags | Service Role | Notes |
 |------|------|-------|------|-----------|-------------|-------|
 | 13000 | the Executioner of Kiess | 150 | 13055 | is_npc, sentinel, boss, no_flee | Executioner | `spec_executioner`; city law enforcement |
@@ -480,15 +483,15 @@ These populate the streets and give the city life. None are aggressive; they are
 | Vnum | Name | Level | Act Flags | Notes |
 |------|------|-------|-----------|-------|
 | 13013 | a Kiess citizen | 40 | is_npc, stay_area | Generic townsperson; roams streets |
-| 13014 | a Kiess guardsman | 45 | is_npc, stay_area, sentinel | Stationary patrol guard |
-| 13015 | a Wall Command sentry | 42 | is_npc, stay_area, sentinel | Wall and gate sentry |
+| 13014 | a Kiess guardsman | 45 | is_npc, sentinel | Stationary patrol guard |
+| 13015 | a Wall Command sentry | 42 | is_npc, sentinel | Wall and gate sentry |
 | 13016 | a Kiess street sweeper | 38 | is_npc, stay_area | Civic janitor; `spec_janitor` |
 | 13017 | a Syndic trade courier | 40 | is_npc, stay_area | Running messages between shops |
 | 13018 | a Temple Concord acolyte | 39 | is_npc, stay_area | Junior temple attendant |
 | 13019 | a caravan drover | 41 | is_npc, stay_area | Wagon handler in north ring |
 | 13020 | a Kiess lamplighter | 38 | is_npc, stay_area | Maintains city lamps |
 | 13021 | a Forest Confusion scout | 43 | is_npc, stay_area | Returning from forest patrol |
-| 13022 | a Wall Command sergeant | 44 | is_npc, stay_area, sentinel | Senior guard; patrols military ring |
+| 13022 | a Wall Command sergeant | 44 | is_npc, sentinel | Senior guard; stationed in military ring |
 | 13023 | a Prism Square orator | 40 | is_npc, stay_area | Public speaker near recall |
 | 13024 | a Kiess merchant's apprentice | 38 | is_npc, stay_area | Errand runner for shops |
 | 13025 | a Kiess stablehand | 39 | is_npc, stay_area | Works at the stables |
@@ -500,17 +503,26 @@ These populate the streets and give the city life. None are aggressive; they are
 **Mob elemental extensions (`|` line):**
 - No elemental extensions planned for city NPCs (neutral city environment, no elemental theme)
 
+**Mob implementation notes (to be resolved during area file construction):**
+- **Sex:** Alternate male/female across service NPCs for variety. Ambient mobs should also vary.
+- **Alignment:** Service NPCs should be good-aligned (positive alignment, ~750). Ambient citizens neutral (~0), guards mildly good (~350).
+- **Race/Class:** Use `human` race and `melee` class for all city NPCs unless a specific role warrants otherwise (e.g., Temple priest could be `cleric` class, Arcane Studies mobs could be `mage` class).
+- **Executioner equipment:** The Executioner (mob 13000) engages in combat via `spec_executioner`. It should have equipment resets (E commands) for weapon and armor to be effective at level 150. Define appropriate weapon/armor objects within the 13068-13099 object vnum range (currently unallocated) and add E resets after the Executioner's M reset.
+- **Short/long descriptions:** Each mob needs `short_descr` (used in combat/action messages, e.g., "the Executioner of Kiess") and `long_descr` (shown in room, e.g., "The Executioner of Kiess stands here, watching for lawbreakers."). These should be written during implementation per area file spec conventions.
+
 ---
 
 ## Shops Plan
 
-| Keeper Vnum | Shop Vnum | Buy Types | Profit Buy | Profit Sell | Open | Close | Notes |
-|-------------|-----------|-----------|-----------|------------|------|-------|-------|
-| 13003 | 13045 | 0 0 0 0 0 | 120 | 80 | 0 | 23 | General shop — buys anything |
-| 13004 | 13043 | 5 0 0 0 0 | 120 | 80 | 0 | 23 | Weapon shop — buys weapons (type 5) |
-| 13005 | 13053 | 9 0 0 0 0 | 120 | 80 | 0 | 23 | Armor shop — buys armor (type 9) |
+| Keeper Vnum | Room | Buy Types | Profit Buy | Profit Sell | Open | Close | Notes |
+|-------------|------|-----------|-----------|------------|------|-------|-------|
+| 13003 | 13045 | 0 0 0 0 0 | 120 | 80 | 0 | 23 | General shop — buys anything (all buy_type slots 0) |
+| 13004 | 13043 | 5 0 0 0 0 | 120 | 80 | 0 | 23 | Weapon shop — buys weapons (ITEM_WEAPON=5) |
+| 13005 | 13053 | 9 0 0 0 0 | 120 | 80 | 0 | 23 | Armor shop — buys armor (ITEM_ARMOR=9) |
 | 13006 | 13057 | 2 4 10 0 0 | 130 | 70 | 0 | 23 | Magic shop — buys scrolls (2), staves (4), potions (10) |
-| 13010 | 13066 | 0 0 0 0 0 | 110 | 90 | 0 | 23 | Scribe/maps — buys anything |
+| 13010 | 13066 | 0 0 0 0 0 | 110 | 90 | 0 | 23 | Scribe/maps — buys anything (all buy_type slots 0) |
+
+Note: The "Room" column is for reference only — it is not part of the `#SHOPS` file format. The shop format line is: `<keeper_vnum> <buy_type[0..4]> <profit_buy> <profit_sell> <open_hour> <close_hour>`. The keeper mob is placed in the room via `M` resets in `#RESETS`.
 
 Notes:
 - All shops open 24 hours (hour 0 to hour 23)
@@ -540,6 +552,12 @@ Notes:
 | M 0 | 13010 | 1 | 13066 | Cartographer/Scribe |
 | M 0 | 13011 | 1 | 13085 | Guild Registrar |
 | M 0 | 13012 | 1 | 13035 | Temple priest |
+
+**Equip/Give Resets (following service mob M commands):**
+
+| Command | Obj Vnum | Limit | Notes |
+|---------|----------|-------|-------|
+| G 0 | 13000 | 1 | Bank vault key given to Banker (mob 13007); must follow Banker's M reset |
 
 **Ambient City Mobs (~25-30 total spawns across city streets):**
 
@@ -606,6 +624,10 @@ Shop inventory items use vnums 13001-13067 (67 items total across 4 shops). Each
 
 Full item definitions (item_type, extra_flags, wear_flags, item_apply, value fields, weight) to be determined during implementation per the area file spec. All shop items follow the level and weight conventions specified in the Shop Inventory Plan above.
 
+### Reserved Object Vnums
+
+- **13068-13099:** Unallocated. Reserved for Executioner equipment (weapon, armor), quest items, or other non-shop objects added during implementation. 32 vnums available within the area's V range.
+
 ---
 
 ## Specials Plan
@@ -644,10 +666,10 @@ Only the south gate has an active external connection. The north, west, and east
 3. [ ] Write `#MOBILES` section (13 service NPCs + 13 ambient mobs = 26 mobs, vnums 13000-13025)
 4. [ ] Write `#OBJECTS` section (1 key + 67 shop items = 68 objects, vnums 13000-13067)
 5. [ ] Write `#SHOPS` section (5 shops: general, weapon, armor, magic, scribe)
-6. [ ] Write `#RESETS` section (~13 service mob spawns + ~25 ambient mob spawns + 6 door resets)
+6. [ ] Write `#RESETS` section (~13 service mob spawns + 1 G give reset for bank key + ~25 ambient mob spawns + 3 door resets)
 7. [ ] Write `#SPECIALS` section (2 entries: executioner, janitor)
 8. [ ] Add `kiess.are` to `area/area.lst`
-9. [ ] Add north exit from vnum `3243` back to `13095` in the area file that owns vnum 3243
+9. [ ] Add north exit from vnum `3243` back to `13095` in `area/rocroad.are` (which owns vnum 3243, "Roc Road")
 10. [ ] Run `cd src && make unit-tests` to validate
 11. [ ] Verify all vnums within 13000-13099 range
 12. [ ] Verify no vnum conflicts with existing areas (confirmed: minokeep uses 1300-1399, no overlap)
