@@ -391,6 +391,12 @@ def _build_mud_client_page() -> str:
   }};
 
   const selectedWorld = () => worldSelect.options[worldSelect.selectedIndex];
+  const defaultWsUrlForWorld = () => {{
+    const world = selectedWorld();
+    if (!world) return '';
+    const scheme = window.location.protocol === 'https:' ? 'wss' : 'ws';
+    return `${{scheme}}://${{world.dataset.host}}:${{world.dataset.port}}/`;
+  }};
   const closeSocket = () => {{
     if (!socket) return;
     try {{ socket.close(); }} catch (err) {{}}
@@ -406,7 +412,7 @@ def _build_mud_client_page() -> str:
       return;
     }}
 
-    const wsUrl = (endpointInput.value || '').trim() || selectedWorld().dataset.ws || '';
+    const wsUrl = (endpointInput.value || '').trim() || defaultWsUrlForWorld();
     if (!wsUrl) {{
       appendOutput('[Error] Selected world has no WebSocket endpoint.\\n');
       return;
