@@ -320,8 +320,8 @@ def _build_mud_client_page() -> str:
     )
     return f"""
 <h1>ACKMUD Web Client</h1>
-<p class='muted'>Browser-side WebSocket client: connections originate from the user browser instead of this web server.</p>
-<p class='muted'>Use a world endpoint that supports WebSocket transport so ANSI output can stream directly to this page.</p>
+<p class='muted'>These ACK worlds are telnet services. Browsers cannot open raw telnet sockets directly.</p>
+<p class='muted'>Use Connect to launch your local telnet handler (if registered), or copy host/port into your preferred MUD client.</p>
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
@@ -331,8 +331,8 @@ def _build_mud_client_page() -> str:
 </div>
 <pre id='mud-output' class='mud-output'>Ready.</pre>
 <div class='mud-controls'>
-  <input id='mud-command' placeholder='Type command and press Enter' style='flex:1;min-width:280px;'>
-  <button id='send-btn' type='button'>Send</button>
+  <input id='mud-command' placeholder='Send is disabled here (use your telnet/MUD client)' style='flex:1;min-width:280px;' disabled>
+  <button id='send-btn' type='button' disabled>Send</button>
 </div>
 <script>
 (() => {{
@@ -341,164 +341,47 @@ def _build_mud_client_page() -> str:
   const endpointInput = document.getElementById('ws-endpoint');
   const disconnectBtn = document.getElementById('disconnect-btn');
   const sendBtn = document.getElementById('send-btn');
-  const commandInput = document.getElementById('mud-command');
   const output = document.getElementById('mud-output');
-  let socket = null;
-
-  const ANSI_COLORS = {{
-    30: '#1b1b1b', 31: '#d95c5c', 32: '#7ec77e', 33: '#d3b96a', 34: '#6f9df6', 35: '#bd7df0', 36: '#64c4cf', 37: '#d6d6d6',
-    90: '#686868', 91: '#ff8080', 92: '#9be79b', 93: '#ffe089', 94: '#8bb5ff', 95: '#d7a2ff', 96: '#88e7ef', 97: '#ffffff',
-  }};
 
   const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-
-  const ansiToHtml = (text) => {{
-    const chunks = text.split(/(\x1b\[[0-9;]*m)/g);
-    let styles = [];
-    let html = '';
-
-    const styleText = () => styles.length ? ` style="${{styles.join(';')}}"` : '';
-
-    for (const chunk of chunks) {{
-      const match = chunk.match(/^\x1b\[([0-9;]*)m$/);
-      if (!match) {{
-        if (chunk.length) html += `<span${{styleText()}}>${{escapeHtml(chunk)}}</span>`;
-        continue;
-      }}
-
-      const codes = match[1] ? match[1].split(';').map(Number) : [0];
-      for (const code of codes) {{
-        if (code === 0) styles = [];
-        else if (code === 1) styles = styles.filter((s) => !s.startsWith('font-weight:')).concat('font-weight:700');
-        else if (code === 4) styles = styles.filter((s) => !s.startsWith('text-decoration:')).concat('text-decoration:underline');
-        else if (code === 39) styles = styles.filter((s) => !s.startsWith('color:'));
-        else if (code === 49) styles = styles.filter((s) => !s.startsWith('background:'));
-        else if (ANSI_COLORS[code]) styles = styles.filter((s) => !s.startsWith('color:')).concat(`color:${{ANSI_COLORS[code]}}`);
-        else if (ANSI_COLORS[code - 10]) styles = styles.filter((s) => !s.startsWith('background:')).concat(`background:${{ANSI_COLORS[code - 10]}}`);
-      }}
-    }}
-
-    return html;
-  }};
-
   const appendOutput = (text) => {{
-    output.insertAdjacentHTML('beforeend', ansiToHtml(text));
+    output.insertAdjacentHTML('beforeend', `<span>${{escapeHtml(text)}}</span>`);
     output.scrollTop = output.scrollHeight;
   }};
 
-  const closeSocket = () => {{
-    if (!socket) return;
-    try {{ socket.close(); }} catch (err) {{}}
-  }};
-
   const selectedWorld = () => worldSelect.options[worldSelect.selectedIndex];
-
-  const buildCandidateUrls = () => {{
+  const selectedAddress = () => {{
     const selected = selectedWorld();
-    const host = selected.dataset.host || '';
-    const port = selected.dataset.port || '';
-    const manual = (endpointInput.value || '').trim();
-    if (manual) return [manual];
-
-    const preferred = window.location.protocol === 'https:' ? 'wss' : 'ws';
-    const alternate = preferred === 'wss' ? 'ws' : 'wss';
-    return [`${{preferred}}://${{host}}:${{port}}`, `${{alternate}}://${{host}}:${{port}}`];
+    return {{
+      name: selected.textContent,
+      host: selected.dataset.host || '',
+      port: selected.dataset.port || '',
+    }};
   }};
 
-  const applyWorldSelection = () => {{
-    const selected = selectedWorld();
-    endpointInput.value = '';
-    appendOutput(`
-[World] ${{selected.textContent}}
-`);
+  const showWorld = () => {{
+    const world = selectedAddress();
+    appendOutput(`\n[World] ${{world.name}}\n`);
+    appendOutput(`[Address] ${{world.host}}:${{world.port}}\n`);
   }};
 
-  worldSelect.addEventListener('change', applyWorldSelection);
-  applyWorldSelection();
+  worldSelect.addEventListener('change', showWorld);
+  showWorld();
 
   connectBtn.addEventListener('click', () => {{
-    if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {{
-      appendOutput('\\n[Info] Already connected.\\n');
-      return;
-    }}
-
-    const candidates = buildCandidateUrls();
-    if (!candidates.length) {{
-      appendOutput('[Error] No WebSocket endpoint could be derived for the selected world.\\n');
-      return;
-    }}
-
-    output.textContent = '';
-    let attempt = 0;
-
-    const connectNext = () => {{
-      if (attempt >= candidates.length) {{
-        appendOutput('\\n[Error] All connection attempts failed. If this world is telnet-only, use a WebSocket relay URL in the override field.\\n');
-        socket = null;
-        return;
-      }}
-
-      const wsUrl = candidates[attempt++];
-      let opened = false;
-      appendOutput(`[Connecting] ${{wsUrl}}\n`);
-
-      try {{
-        socket = new WebSocket(wsUrl);
-      }} catch (err) {{
-        appendOutput(`[Error] Could not create WebSocket: ${{err.message}}\n`);
-        connectNext();
-        return;
-      }}
-
-      socket.addEventListener('open', () => {{
-        opened = true;
-        appendOutput(`[Connected] ${{worldSelect.options[worldSelect.selectedIndex].textContent}} via ${{wsUrl}}\n`);
-        commandInput.focus();
-      }});
-
-      socket.addEventListener('message', (event) => {{
-        appendOutput(typeof event.data === 'string' ? event.data : '[Binary message received]\\n');
-      }});
-
-      socket.addEventListener('close', (event) => {{
-        if (!opened) {{
-          appendOutput(`[Retry] Connection closed before open (code ${{event.code}}). Trying next endpoint...\n`);
-          connectNext();
-          return;
-        }}
-        appendOutput(`\n[Disconnected] code=${{event.code}} reason=${{event.reason || 'none'}}\n`);
-        socket = null;
-      }});
-
-      socket.addEventListener('error', () => {{
-        if (!opened) appendOutput('[Error] WebSocket handshake failed for this endpoint.\\n');
-      }});
-    }};
-
-    connectNext();
+    const world = selectedAddress();
+    const telnetUrl = `telnet://${{world.host}}:${{world.port}}`;
+    appendOutput(`\n[Connect] Opening ${{telnetUrl}}\n`);
+    appendOutput('[Info] If nothing opens, launch your local MUD/telnet client and connect manually using the address above.\\n');
+    window.location.href = telnetUrl;
   }});
 
   disconnectBtn.addEventListener('click', () => {{
-    if (!socket || (socket.readyState !== WebSocket.OPEN && socket.readyState !== WebSocket.CONNECTING)) {{
-      appendOutput('\\n[Info] No active connection.\\n');
-      socket = null;
-      return;
-    }}
-    closeSocket();
-    appendOutput('\\n[Disconnected by user]\\n');
+    appendOutput('\\n[Info] Browser session is not directly connected. Close your local telnet client to disconnect.\\n');
   }});
 
-  const sendCommand = () => {{
-    const command = commandInput.value;
-    if (!socket || socket.readyState !== WebSocket.OPEN || !command.trim()) return;
-    socket.send(`${{command}}\n`);
-    appendOutput(`\n> ${{command}}\n`);
-    commandInput.value = '';
-  }};
-
-  sendBtn.addEventListener('click', sendCommand);
-  commandInput.addEventListener('keydown', (event) => {{
-    if (event.key === 'Enter') sendCommand();
+  sendBtn.addEventListener('click', () => {{
+    appendOutput('\\n[Info] Send is disabled in-browser for telnet-only worlds.\\n');
   }});
 }})();
 </script>
