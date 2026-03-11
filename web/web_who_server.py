@@ -320,8 +320,8 @@ def _build_mud_client_page() -> str:
     )
     return f"""
 <h1>ACKMUD Web Client</h1>
-<p class='muted'>Browser-side WebSocket client: connections originate from the user browser instead of this web server.</p>
-<p class='muted'>Use a world endpoint that supports WebSocket transport so ANSI output can stream directly to this page.</p>
+<p class='muted'>Browser-side WebSocket client: connections stay in this page (no external telnet app launch).</p>
+<p class='muted'>Select a world and press Connect.</p>
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
@@ -349,33 +349,29 @@ def _build_mud_client_page() -> str:
   }};
 
   const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-
   const ansiToHtml = (text) => {{
-    const chunks = text.split(/(\x1b\[[0-9;]*m)/g);
+    const chunks = text.split(/(\[[0-9;]*m)/g);
     let styles = [];
     let html = '';
-
     const styleText = () => styles.length ? ` style="${{styles.join(';')}}"` : '';
 
     for (const chunk of chunks) {{
-      const match = chunk.match(/^\x1b\[([0-9;]*)m$/);
+      const match = chunk.match(/^\[([0-9;]*)m$/);
       if (!match) {{
         if (chunk.length) html += `<span${{styleText()}}>${{escapeHtml(chunk)}}</span>`;
         continue;
       }}
-
       const codes = match[1] ? match[1].split(';').map(Number) : [0];
       for (const code of codes) {{
         if (code === 0) styles = [];
-        else if (code === 1) styles = styles.filter((s) => !s.startsWith('font-weight:')).concat('font-weight:700');
-        else if (code === 4) styles = styles.filter((s) => !s.startsWith('text-decoration:')).concat('text-decoration:underline');
-        else if (code === 39) styles = styles.filter((s) => !s.startsWith('color:'));
-        else if (code === 49) styles = styles.filter((s) => !s.startsWith('background:'));
-        else if (ANSI_COLORS[code]) styles = styles.filter((s) => !s.startsWith('color:')).concat(`color:${{ANSI_COLORS[code]}}`);
-        else if (ANSI_COLORS[code - 10]) styles = styles.filter((s) => !s.startsWith('background:')).concat(`background:${{ANSI_COLORS[code - 10]}}`);
+        else if (code === 1) styles = styles.filter((x) => !x.startsWith('font-weight:')).concat('font-weight:700');
+        else if (code === 4) styles = styles.filter((x) => !x.startsWith('text-decoration:')).concat('text-decoration:underline');
+        else if (code === 39) styles = styles.filter((x) => !x.startsWith('color:'));
+        else if (code === 49) styles = styles.filter((x) => !x.startsWith('background:'));
+        else if (ANSI_COLORS[code]) styles = styles.filter((x) => !x.startsWith('color:')).concat(`color:${{ANSI_COLORS[code]}}`);
+        else if (ANSI_COLORS[code - 10]) styles = styles.filter((x) => !x.startsWith('background:')).concat(`background:${{ANSI_COLORS[code - 10]}}`);
       }}
     }}
-
     return html;
   }};
 
@@ -384,71 +380,69 @@ def _build_mud_client_page() -> str:
     output.scrollTop = output.scrollHeight;
   }};
 
+  const selectedWorld = () => worldSelect.options[worldSelect.selectedIndex];
   const closeSocket = () => {{
     if (!socket) return;
     try {{ socket.close(); }} catch (err) {{}}
   }};
 
-  const selectedWorld = () => worldSelect.options[worldSelect.selectedIndex];
-
-  const applyWorldSelection = () => {{
-    const selected = worldSelect.options[worldSelect.selectedIndex];
-    appendOutput(`\n[World] ${{selected.textContent}}\n`);
-  }};
-
-  worldSelect.addEventListener('change', applyWorldSelection);
-  applyWorldSelection();
+  const showWorld = () => appendOutput(`\n[World] ${{selectedWorld().textContent}}\n`);
+  worldSelect.addEventListener('change', showWorld);
+  showWorld();
 
   connectBtn.addEventListener('click', () => {{
     if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {{
-      appendOutput('\n[Info] Already connected.\n');
+      appendOutput('\\n[Info] Already connected.\\n');
       return;
     }}
 
     const wsUrl = selectedWorld().dataset.ws || '';
     if (!wsUrl) {{
-      appendOutput('[Error] Selected world has no WebSocket endpoint.\n');
+      appendOutput('[Error] Selected world has no WebSocket endpoint.\\n');
       return;
     }}
 
     output.textContent = '';
     appendOutput(`[Connecting] ${{wsUrl}}\n`);
-    socket = new WebSocket(wsUrl);
+    try {{
+      socket = new WebSocket(wsUrl);
+    }} catch (err) {{
+      appendOutput(`[Error] Could not create WebSocket: ${{err.message}}\n`);
+      socket = null;
+      return;
+    }}
 
     socket.addEventListener('open', () => {{
-      appendOutput(`[Connected] ${{worldSelect.options[worldSelect.selectedIndex].textContent}}\n`);
+      appendOutput(`[Connected] ${{selectedWorld().textContent}}\n`);
+      commandInput.focus();
     }});
-
     socket.addEventListener('message', (event) => {{
-      appendOutput(typeof event.data === 'string' ? event.data : '[Binary message received]\n');
+      appendOutput(typeof event.data === 'string' ? event.data : '[Binary message received]\\n');
     }});
-
-    socket.addEventListener('close', () => {{
-      appendOutput('\n[Disconnected]\n');
+    socket.addEventListener('close', (event) => {{
+      appendOutput(`\n[Disconnected] code=${{event.code}} reason=${{event.reason || 'none'}}\n`);
       socket = null;
     }});
-
     socket.addEventListener('error', () => {{
-      appendOutput('\n[Error] WebSocket connection failed. Confirm the endpoint supports WebSocket MUD traffic.\n');
+      appendOutput('\\n[Error] WebSocket handshake failed for this endpoint.\\n');
     }});
-
-    commandInput.focus();
   }});
 
   disconnectBtn.addEventListener('click', () => {{
     if (!socket || (socket.readyState !== WebSocket.OPEN && socket.readyState !== WebSocket.CONNECTING)) {{
-      appendOutput('\n[Info] No active connection.\n');
+      appendOutput('\\n[Info] No active connection.\\n');
       socket = null;
       return;
     }}
     closeSocket();
-    appendOutput('\n[Disconnected by user]\n');
+    appendOutput('\\n[Disconnected by user]\\n');
   }});
 
   const sendCommand = () => {{
     const command = commandInput.value;
     if (!socket || socket.readyState !== WebSocket.OPEN || !command.trim()) return;
-    socket.send(`${{command}}\n`);
+    socket.send(`${{command}}
+`);
     appendOutput(`\n> ${{command}}\n`);
     commandInput.value = '';
   }};
