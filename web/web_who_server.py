@@ -314,7 +314,7 @@ def _build_home_page() -> str:
 def _build_mud_client_page() -> str:
     world_options = "".join(
         (
-            f"<option value='{world['id']}' data-host='{world['host']}' data-port='{world['port']}'>{world['name']} ({world['host']}:{world['port']})</option>"
+            f"<option value='{world['id']}' data-host='{world['host']}' data-port='{world['port']}' data-ws='ws://{world['host']}:{world['port']}/'>{world['name']} ({world['host']}:{world['port']})</option>"
         )
         for world in WORLD_TARGETS
     )
@@ -324,7 +324,6 @@ def _build_mud_client_page() -> str:
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
-  <input id='ws-endpoint' placeholder='Optional WebSocket URL override (ws:// or wss://)' style='flex:1;min-width:280px;'>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
 </div>
@@ -337,7 +336,6 @@ def _build_mud_client_page() -> str:
 (() => {{
   const worldSelect = document.getElementById('world-select');
   const connectBtn = document.getElementById('connect-btn');
-  const endpointInput = document.getElementById('ws-endpoint');
   const disconnectBtn = document.getElementById('disconnect-btn');
   const commandInput = document.getElementById('mud-command');
   const sendBtn = document.getElementById('send-btn');
