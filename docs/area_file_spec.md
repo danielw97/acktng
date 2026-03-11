@@ -6,14 +6,15 @@ This document specifies the on-disk area format currently accepted by the loader
 
 An area file is a sequence of named sections. Each section starts with `#<NAME>` and is parsed by `boot_db()`.
 
-Recognized section names:
+Recognized section names (saver order shown):
 
 - `#AREA`
+- `#ROOMS`
 - `#MOBILES`
 - `#MOBPROGS`
 - `#OBJECTS`
-- `#ROOMS`
 - `#SHOPS`
+- `#RESETS`
 - `#SPECIALS`
 - `#OBJFUNS`
 - `#$` (end-of-file marker)
@@ -995,14 +996,14 @@ For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums must be assi
 `areasave.c` writes sections in this order when present:
 
 1. `#AREA`
-2. `#MOBILES`
-3. `#MOBPROGS`
-4. `#OBJECTS`
-5. `#ROOMS`
+2. `#ROOMS`
+3. `#MOBILES`
+4. `#MOBPROGS`
+5. `#OBJECTS`
 6. `#SHOPS`
-7. `#SPECIALS`
-8. `#OBJFUNS`
-9. `#RESETS`
+7. `#RESETS`
+8. `#SPECIALS`
+9. `#OBJFUNS`
 10. `#$`
 
 Using this order is recommended for consistency, even though the loader dispatch is name-based.
