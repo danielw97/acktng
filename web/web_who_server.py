@@ -482,24 +482,28 @@ def _build_home_page() -> str:
 
 
 def _build_mud_client_page() -> str:
-    worlds_json = json.dumps(WORLD_TARGETS)
+    world_options = "".join(
+        (
+            f"<option value='{world['id']}'>{world['name']} ({world['host']}:{world['port']})</option>"
+        )
+        for world in WORLD_TARGETS
+    )
     return f"""
 <h1>ACKMUD Web Client</h1>
 <p class='muted'>Select a world and connect directly from your browser. Add future worlds in <code>WORLD_TARGETS</code>.</p>
 <div class='mud-controls'>
   <label for='world-select'>World</label>
-  <select id='world-select'></select>
+  <select id='world-select'>{world_options}</select>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
 </div>
+<pre id='mud-output' class='mud-output'>Ready.</pre>
 <div class='mud-controls'>
   <input id='mud-command' placeholder='Type command and press Enter' style='flex:1;min-width:280px;'>
   <button id='send-btn' type='button'>Send</button>
 </div>
-<pre id='mud-output' class='mud-output'>Ready.</pre>
 <script>
 (() => {{
-  const worlds = {worlds_json};
   const worldSelect = document.getElementById('world-select');
   const connectBtn = document.getElementById('connect-btn');
   const disconnectBtn = document.getElementById('disconnect-btn');
@@ -508,13 +512,6 @@ def _build_mud_client_page() -> str:
   const output = document.getElementById('mud-output');
   let session = null;
   let pollTimer = null;
-
-  worlds.forEach((world) => {{
-    const option = document.createElement('option');
-    option.value = world.id;
-    option.textContent = `${{world.name}} (${{world.host}}:${{world.port}})`;
-    worldSelect.appendChild(option);
-  }});
 
   const appendOutput = (text) => {{
     output.textContent += text;
