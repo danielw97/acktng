@@ -325,7 +325,6 @@ def _build_mud_client_page() -> str:
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
-  <input id='mud-ws-url' placeholder='wss://mud-host:port' style='min-width:280px;flex:1;'>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
 </div>
@@ -340,7 +339,6 @@ def _build_mud_client_page() -> str:
   const connectBtn = document.getElementById('connect-btn');
   const disconnectBtn = document.getElementById('disconnect-btn');
   const sendBtn = document.getElementById('send-btn');
-  const wsUrlInput = document.getElementById('mud-ws-url');
   const commandInput = document.getElementById('mud-command');
   const output = document.getElementById('mud-output');
   let socket = null;
@@ -389,26 +387,27 @@ def _build_mud_client_page() -> str:
   const closeSocket = () => {{
     if (!socket) return;
     try {{ socket.close(); }} catch (err) {{}}
-    socket = null;
   }};
+
+  const selectedWorld = () => worldSelect.options[worldSelect.selectedIndex];
 
   const applyWorldSelection = () => {{
     const selected = worldSelect.options[worldSelect.selectedIndex];
-    wsUrlInput.value = selected.dataset.ws || '';
+    appendOutput(`\n[World] ${{selected.textContent}}\n`);
   }};
 
   worldSelect.addEventListener('change', applyWorldSelection);
   applyWorldSelection();
 
   connectBtn.addEventListener('click', () => {{
-    if (socket) {{
+    if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {{
       appendOutput('\n[Info] Already connected.\n');
       return;
     }}
 
-    const wsUrl = wsUrlInput.value.trim();
+    const wsUrl = selectedWorld().dataset.ws || '';
     if (!wsUrl) {{
-      appendOutput('[Error] Enter a WebSocket URL first.\n');
+      appendOutput('[Error] Selected world has no WebSocket endpoint.\n');
       return;
     }}
 
@@ -437,7 +436,11 @@ def _build_mud_client_page() -> str:
   }});
 
   disconnectBtn.addEventListener('click', () => {{
-    if (!socket) return;
+    if (!socket || (socket.readyState !== WebSocket.OPEN && socket.readyState !== WebSocket.CONNECTING)) {{
+      appendOutput('\n[Info] No active connection.\n');
+      socket = null;
+      return;
+    }}
     closeSocket();
     appendOutput('\n[Disconnected by user]\n');
   }});
