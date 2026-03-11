@@ -95,7 +95,7 @@ declarations. Merchants who skip this step find their wagons held at the
 yard until the matter is resolved. The doorway to the west opens onto the
 wall walk.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -184,7 +184,7 @@ is open to today's date, already bearing three entries. The room smells
 of boot wax and strong tea. The door to the west opens to the wall walk
 approach; the gatehouse arch is accessible to the east.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -329,7 +329,7 @@ offers a stamped entry record and a brief orientation for first-time
 visitors. Two wide-eyed newcomers study the boards with the focused
 attention of people determined not to look lost.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -350,7 +350,7 @@ behind the main counter can package a basic travel kit in under a minute.
 Trail rations, rope, bandages, and lamp oil are the staples here. The room
 smells of dried meat and pine pitch.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -428,7 +428,7 @@ move in and out with a brisk efficiency that leaves little room for
 conversation. The smell of sealing wax and ink is persistent. An access
 door to the west opens toward the arrival plaza.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -476,7 +476,7 @@ most depicting unusual flora or architecture rather than monsters.
 A duty officer takes notes from a weathered scout who describes the
 eastern path conditions in precise, quiet detail.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -546,7 +546,7 @@ of someone doing three things at once. The work here leans practical:
 reinforced seams, weather-treated stitching, and functional cuts rather
 than court fashion. A notice advertises mending services by appointment.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -715,7 +715,7 @@ patterns. Clients may hire research time by the hour; the rate is posted
 on a small placard by the door. A dedicated section on the east wall
 holds recent expedition reports from the Forest of Confusion scouts.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -814,7 +814,7 @@ contracts, import permits, or trade dispute claims are handled here.
 The atmosphere is professional and slightly harried. Manifests and
 correspondence fill every flat surface that isn't actively in use.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -836,7 +836,7 @@ strong. A small queue of citizens waits for service with the resigned
 patience of people who have been here before. Two junior clerks process
 property transfer documents at standing desks along the west wall.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -918,7 +918,7 @@ with individual compact oaths. Concord tablets on marble pedestals near
 the entrance display the founding pact text in full. A ceremonial font
 near the south wall holds scented water for cleansing rites.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -948,7 +948,7 @@ Citizens may inspect public records at a reading desk near the entrance.
 The system is built to be transparent; the Wall Command, the Syndics,
 and the Temple each hold a seat on the tribunal.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -999,7 +999,7 @@ of miscast effects. The duty mage signs in researchers by name and
 tracks which texts are currently in use. The smell of ozone is a
 constant low presence in the air.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -1067,7 +1067,7 @@ a date. The tinker is a compact figure who works with unusual speed and
 precision. Services cover clockwork mechanisms, equipment buckles,
 lock repairs, and custom fittings of most kinds.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1120,7 +1120,7 @@ the counter hold smaller items: knives, daggers, and specialized
 tools. A wall of current stock pricing is written in clear charcoal
 on a framed slate behind the counter.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1142,7 +1142,7 @@ to the right is used for notarizing transactions. The east wall has a
 heavy iron door that leads to the vault antechamber; a notice beside
 it clarifies that access is by arrangement only.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ^iron door
@@ -1171,7 +1171,7 @@ the Forest of Confusion is mounted on the east wall. The Exchange
 maintains its inventory through a network of supply contacts along
 Roc Road. The buying and selling counter runs the full south wall.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1193,7 +1193,7 @@ professionally reassuring. Injured citizens and returning expedition
 members are the primary clients; the healer treats both with equal
 attention and without judgment regarding how the injuries occurred.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1215,7 +1215,7 @@ boxes bearing numbered tags. A second iron door to the east leads to
 the vault itself; access through it requires the head banker's personal
 authorization. The silence here is complete.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1239,7 +1239,7 @@ mixing implements fill the side shelves. The smell is aggressively
 chemical but not unpleasant — mostly mineral and citrus, with an
 undertone of something sulfurous from the back room.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -1372,7 +1372,7 @@ mounts along the east wall hold a rotating display of bucklers, tower
 shields, and round shields. The floor is swept stone; the air smells
 of metal polish and tallow.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1395,7 +1395,7 @@ from a standing desk near the center, processing incoming batches with
 quick, practiced hands. A small queue of citizens waits to send
 messages or collect incoming correspondence.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1426,7 +1426,7 @@ braziers burn at the cardinal points of the plaza. The @@WExecutioner@@N
 stands at the foot of the dais in polished dark armor, a visible
 instrument of the compact peace — disputes end here, one way or another.@@N
 ~
-1024 8
+1028 8
 D0
 ~
 ~
@@ -1473,7 +1473,7 @@ ready for pickup. The Quartermaster stands at a central planning table,
 reviewing a supply manifest with calm efficiency. A reinforced door
 to the south leads to the locked stockroom.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1507,7 +1507,7 @@ insulating wards that prevent magical items from resonating with each
 other. A testing alcove near the back allows safe activation of
 purchased goods before leaving the shop.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1608,7 +1608,7 @@ order list and directs stock handlers with brief, efficient gestures.
 The space is organized but full; every aisle has just enough clearance
 to pass with a loaded hand cart.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1690,7 +1690,7 @@ room with warm steady light. The innkeeper operates from a carved
 wood desk with a professional calm that handles everything from room
 assignments to route advice with equal ease.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1751,7 +1751,7 @@ correctly positioned. Survey tripods line the east wall. Rolled
 charts fill pigeonholes on every available wall surface. An inkstone
 cabinet near the entrance holds labeled pigments.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -1810,7 +1810,7 @@ A holding case near the entrance allows clients to leave items for
 overnight processing. The walls are covered in printed charts listing
 spell resonances and material compatibility notes.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -1877,7 +1877,7 @@ assignments by name and shift. The common room off the entrance holds
 a table and two benches where off-duty guards are playing a dice game
 with focused disinterest.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -2074,7 +2074,7 @@ is quieter than at the west barracks: most of the east rotation is
 currently on the wall. A pair of off-duty sentries repairs equipment
 at the table with the focused quiet of experienced soldiers.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -2140,7 +2140,7 @@ experienced fighters, scouts with forest experience, and caravan
 guards between assignments. Several people study the board with the
 focused attention of professionals assessing viable options.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -2192,7 +2192,7 @@ are required to file a route plan before departing through the south
 gate. Copies of approved plans are kept here; the Wall Command
 receives a duplicate. The atmosphere is brisk and businesslike.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -2243,7 +2243,7 @@ desk. Reference texts on class traditions and training requirements
 line a reading shelf accessible to visitors. The registrar's calm
 expertise makes even complicated questions feel answerable.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -2266,7 +2266,7 @@ high-level travelers seeking to register a destination or verify
 portal stability. The warden handles inquiries with a careful precision
 that reflects the consequences of teleportation errors.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -2310,7 +2310,7 @@ this building. The atmosphere is controlled and professional. Staff
 move with the contained urgency of people managing a complex
 operational picture.@@N
 ~
-1024 11
+1028 11
 D3
 ~
 ~
@@ -2425,7 +2425,7 @@ from completed inspections are stacked outside. The process is
 efficient rather than adversarial; most experienced caravan masters
 have their paperwork ready before they reach the door.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -2511,7 +2511,7 @@ attendant, leave with supplies. No extended consultation or catalog
 browsing — the system is built for speed. A water purification kit
 is available on loan.@@N
 ~
-1024 11
+1028 11
 D1
 ~
 ~
@@ -2978,7 +2978,7 @@ wariness and information that Kiess specifically needs. This one
 is making their way toward the debriefing post but is not in a rush
 that suggests urgency.
 ~
-65 0 0 S
+67 0 0 S
 43 0
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -3013,7 +3013,7 @@ The orator's tone is civic rather than political, informative rather
 than inflammatory. Public speaking at the Prism plaza is a long
 tradition in Kiess.
 ~
-65 0 0 S
+67 0 0 S
 40 0
 0 0 0 0
 ! 0 0 0 7 131 0 1
