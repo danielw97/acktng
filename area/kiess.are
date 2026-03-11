@@ -6,9 +6,11 @@ L @@W(@@a1 170@@W)@@N~
 N 77
 I 1 170
 V 13000 13099
+X 0
 F 15
 U @@Wthe bells of @@BKiess@@W ring across the avenues@@N~
-T teleport
+T
+O Virant~
 
 
 #ROOMS
@@ -85,17 +87,17 @@ D3
 S
 
 #13003
-@@WNorth Gate Customs Office@@N~
-@@WA low-ceilinged room built into the gatehouse wall serves as the
-screening station for arriving caravans. Clerks at battered oak desks
-leaf through manifests and stamp import seals with mechanical efficiency.
-Shelves of rolled records line the east wall, organized by month and
-caravan house. A posted notice lists prohibited goods and required
-declarations. Merchants who skip this step find their wagons held at the
-yard until the matter is resolved. The doorway to the west opens onto the
-wall walk.@@N
+@@WNorth Gate Customs Yard@@N~
+@@WThe open-air customs area occupies a broad stretch of the @@Wnorth wall
+walk@@N between the gate approach and the battlement corridor to the west.
+Arriving caravans are directed here for manifest inspection before they
+are cleared into the city proper. Clerks with portable writing desks work
+from a covered awning along the inner parapet edge, checking inventory
+declarations against posted tariff schedules. Chalk guide-lines on the
+stone direct wagon teams into parallel lanes. The gate arch is visible
+to the east; the wall walk continues west.@@N
 ~
-1028 11
+0 1
 D1
 ~
 ~
@@ -175,16 +177,21 @@ Confusion and note the estimated travel time in good weather.@@N
 S
 
 #13006
-@@WNorth Gate Guard Post@@N~
-@@WA compact guard office fills this inside-wall room adjacent to the
-gatehouse. A heavy map table in the center holds a current patrol
-rotation chart weighted down by two empty tin cups. Pegs along the wall
-hold cloaks, tool belts, and a spare gate key. A duty log on the desk
-is open to today's date, already bearing three entries. The room smells
-of boot wax and strong tea. The door to the west opens to the wall walk
-approach; the gatehouse arch is accessible to the east.@@N
+@@WNorth Gate Guard Platform@@N~
+@@WA broad open platform built over the east side of the @@WNorth Gate@@N
+serves as the primary mustering point for gate-shift guards. Tool racks
+along the inner wall hold replacement patrol equipment: spears, signal
+whistles, and duty rosters in weatherproof cases. A raised watch post
+at the outer parapet edge gives a clear view over the approach road.
+The platform sees constant foot traffic during shift changes, with
+outgoing guards passing their duty notes to arrivals. The wall walk
+continues east and west at platform level.@@N
 ~
-1028 11
+0 1
+D1
+~
+~
+0 -1 13007
 D3
 ~
 ~
@@ -308,10 +315,6 @@ D1
 ~
 ~
 0 -1 13012
-D2
-~
-~
-0 -1 13021
 D3
 ~
 ~
@@ -330,10 +333,6 @@ visitors. Two wide-eyed newcomers study the boards with the focused
 attention of people determined not to look lost.@@N
 ~
 1028 11
-D1
-~
-~
-0 -1 13013
 D3
 ~
 ~
@@ -351,10 +350,10 @@ Trail rations, rope, bandages, and lamp oil are the staples here. The room
 smells of dried meat and pine pitch.@@N
 ~
 1028 11
-D3
+D1
 ~
 ~
-0 -1 13012
+0 -1 13014
 S
 
 #13014
@@ -455,14 +454,6 @@ D1
 ~
 ~
 0 -1 13018
-D2
-~
-~
-0 -1 13027
-D3
-~
-~
-0 -1 13016
 S
 
 #13018
@@ -503,10 +494,6 @@ D2
 ~
 ~
 0 -1 13029
-D3
-~
-~
-0 -1 13018
 S
 
 #13020
@@ -551,10 +538,6 @@ D1
 ~
 ~
 0 -1 13022
-D3
-~
-~
-0 -1 13020
 S
 
 #13022
@@ -573,10 +556,6 @@ D1
 ~
 ~
 0 -1 13023
-D2
-~
-~
-0 -1 13032
 D3
 ~
 ~
@@ -595,10 +574,6 @@ here is consistent and energetic. All four cardinal streets open from
 this point into their respective district sections.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13013
 D1
 ~
 ~
@@ -664,10 +639,6 @@ D1
 ~
 ~
 0 -1 13026
-D2
-~
-~
-0 -1 13035
 D3
 ~
 ~
@@ -686,10 +657,6 @@ The competition between vendors is polite but constant. The scholastic
 colonnade lies to the east; the notice square is to the west.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13016
 D1
 ~
 ~
@@ -734,22 +701,10 @@ the old layout of Evermeet as it was in its final years, the districts
 color-coded by their date of abandonment.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13018
 D1
 ~
 ~
 0 -1 13029
-D2
-~
-~
-0 -1 13038
-D3
-~
-~
-0 -1 13027
 S
 
 #13029
@@ -815,10 +770,6 @@ The atmosphere is professional and slightly harried. Manifests and
 correspondence fill every flat surface that isn't actively in use.@@N
 ~
 1028 11
-D1
-~
-~
-0 -1 13032
 D3
 ~
 ~
@@ -841,10 +792,6 @@ D1
 ~
 ~
 0 -1 13033
-D3
-~
-~
-0 -1 13031
 S
 
 #13033
@@ -866,10 +813,6 @@ D1
 ~
 ~
 0 -1 13034
-D2
-~
-~
-0 -1 13043
 D3
 ~
 ~
@@ -919,10 +862,6 @@ the entrance display the founding pact text in full. A ceremonial font
 near the south wall holds scented water for cleansing rites.@@N
 ~
 1028 11
-D1
-~
-~
-0 -1 13036
 D3
 ~
 ~
@@ -937,26 +876,26 @@ through the collapse and carried here by the founding priests.@@N
 S
 
 #13036
-@@WJudicial Archive@@N~
-@@WLegal records and arbitration documentation fill this sober interior
-room. Shelved case files are organized by year and type, accessible by
-a librarian clerk who enforces silence with brief, effective glances.
-The arbitration chamber at the back is separated by a heavy curtain; the
-muffled voices of an ongoing mediation can sometimes be heard from the
-main archive room. A posted schedule lists available arbitration slots.
-Citizens may inspect public records at a reading desk near the entrance.
-The system is built to be transparent; the Wall Command, the Syndics,
-and the Temple each hold a seat on the tribunal.@@N
+@@WJudicial Colonnade@@N~
+@@WA colonnaded walkway of white stone carries the route between the
+@@Wapothecary district to the north and the east cross street to the
+south. The columns are faced with inset tablets listing arbitration
+precedents and public compact rulings, each sealed under a strip of
+clear resin to protect the carved text from weather. The colonnade
+serves as both a practical through-route and an unofficial reading
+reference for citizens preparing for tribunal proceedings. A ward clerk
+with a portable writing stand sometimes posts newly filed judgments at
+the southern end before the permanent tablets are cut.@@N
 ~
-1028 11
+0 1
+D0
+~
+~
+0 -1 13026
 D1
 ~
 ~
 0 -1 13037
-D3
-~
-~
-0 -1 13035
 S
 
 #13037
@@ -970,10 +909,6 @@ street surface is clean and well-lit. The sound of bells from the temple
 district carries from the west on quiet mornings.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13027
 D1
 ~
 ~
@@ -1025,10 +960,6 @@ D2
 ~
 ~
 0 -1 13049
-D3
-~
-~
-0 -1 13038
 S
 
 #13040
@@ -1046,10 +977,6 @@ D0
 ~
 ~
 0 -1 13030
-D1
-~
-~
-0 -1 13041
 D2
 ~
 ~
@@ -1072,10 +999,6 @@ D1
 ~
 ~
 0 -1 13042
-D3
-~
-~
-0 -1 13040
 S
 
 #13042
@@ -1090,10 +1013,6 @@ goods being handled, and the occasional sharp bell of a completed sale.
 The arcade connects the market interior to the central trade band.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13032
 D1
 ~
 ~
@@ -1121,10 +1040,6 @@ tools. A wall of current stock pricing is written in clear charcoal
 on a framed slate behind the counter.@@N
 ~
 1028 11
-D1
-~
-~
-0 -1 13044
 D3
 ~
 ~
@@ -1138,26 +1053,14 @@ on the civic cross. Gilded ledger pedestals along the main counter
 hold the active account books, their spines embossed with the bank's
 seal. An oath-chest of iron-bound oak sits on a low platform behind
 the counter, used for sealed deposit agreements. A seal press altar
-to the right is used for notarizing transactions. The east wall has a
-heavy iron door that leads to the vault antechamber; a notice beside
-it clarifies that access is by arrangement only.@@N
+to the right is used for notarizing transactions. Columns of account
+records line the back wall, each volume indexed by year and depositor.@@N
 ~
 1028 11
-D1
-~
-^iron door
-~
-1 13000 13047
-D3
+D0
 ~
 ~
-0 -1 13043
-E
-iron door vault~
-@@WThe heavy iron door to the vault antechamber is firmly closed.
-Access through it requires arrangement with the Bank's senior staff
-or the appropriate key.@@N
-~
+0 -1 13034
 S
 
 #13045
@@ -1172,14 +1075,10 @@ maintains its inventory through a network of supply contacts along
 Roc Road. The buying and selling counter runs the full south wall.@@N
 ~
 1028 11
-D1
+D2
 ~
 ~
-0 -1 13046
-D3
-~
-~
-0 -1 13044
+0 -1 13055
 S
 
 #13046
@@ -1198,33 +1097,33 @@ D1
 ~
 ~
 0 -1 13047
-D3
-~
-~
-0 -1 13045
 S
 
 #13047
-@@WBank Vault Antechamber@@N~
-@@WA narrow stone room serves as the secure antechamber between the
-bank's public area and the vault proper. The walls are reinforced
-with iron banding and the floor is a single slab of dressed granite
-without joints. No windows. The room is lit by a single ceiling lamp
-that burns low and steady. Shelves along one wall hold sealed deposit
-boxes bearing numbered tags. A second iron door to the east leads to
-the vault itself; access through it requires the head banker's personal
-authorization. The silence here is complete.@@N
+@@WEast Arcane Walk@@N~
+@@WA paved street runs through the eastern trade band where the arcane
+services district meets the civic cross. The buildings flanking this
+stretch house magical specialists: the @@WHall of Restoration@@N opens
+to the west and the @@WAlchemist's Gallery@@N to the east. Blue-glass
+lantern panels set into the building faces cast a faint colored light
+at night, a practical aesthetic that also marks the district type for
+arriving travelers. The street connects the north cross road to the
+civic interior and carries a steady flow of scholars, healers, and
+expedition members between services.@@N
 ~
-1028 11
+0 1
+D0
+~
+~
+0 -1 13037
 D1
 ~
 ~
 0 -1 13048
 D3
 ~
-^iron door
 ~
-1 13000 13044
+0 -1 13046
 S
 
 #13048
@@ -1265,10 +1164,6 @@ D2
 ~
 ~
 0 -1 13059
-D3
-~
-~
-0 -1 13048
 S
 
 #13050
@@ -1283,6 +1178,10 @@ is kept in ready condition. Heraldic shields of the Wall Command and the
 Compact are mounted at eye height on each statue base.@@N
 ~
 0 1
+D0
+~
+~
+0 -1 13040
 D1
 ~
 ~
@@ -1316,10 +1215,6 @@ D1
 ~
 ~
 0 -1 13052
-D2
-~
-~
-0 -1 13061
 D3
 ~
 ~
@@ -1339,6 +1234,10 @@ benches and children cross back and forth through the spray when
 summer heat makes it appealing.@@N
 ~
 0 1
+D0
+~
+~
+0 -1 13042
 D1
 ~
 ~
@@ -1373,10 +1272,6 @@ shields, and round shields. The floor is swept stone; the air smells
 of metal polish and tallow.@@N
 ~
 1028 11
-D1
-~
-~
-0 -1 13054
 D3
 ~
 ~
@@ -1400,10 +1295,6 @@ D1
 ~
 ~
 0 -1 13055
-D3
-~
-~
-0 -1 13053
 E
 dispatch board routes~
 @@WThe dispatch board lists current courier routes, their frequency,
@@ -1426,7 +1317,7 @@ braziers burn at the cardinal points of the plaza. The @@WExecutioner@@N
 stands at the foot of the dais in polished dark armor, a visible
 instrument of the compact peace — disputes end here, one way or another.@@N
 ~
-1028 8
+1024 8
 D0
 ~
 ~
@@ -1470,29 +1361,13 @@ assessments. Requisition crates are stacked in organized rows by
 category — rations, rope, medical supplies, and weapons maintenance
 gear. Stamped supply racks along the south wall hold outbound orders
 ready for pickup. The Quartermaster stands at a central planning table,
-reviewing a supply manifest with calm efficiency. A reinforced door
-to the south leads to the locked stockroom.@@N
+reviewing a supply manifest with calm efficiency.@@N
 ~
 1028 11
-D1
-~
-~
-0 -1 13057
-D2
-~
-^reinforced door
-~
-1 -1 13066
 D3
 ~
 ~
 0 -1 13055
-E
-reinforced door stockroom~
-@@WThe reinforced door to the stockroom is solid iron-banded oak.
-A notice beside it states that access to the stockroom requires
-authorization from the Quartermaster or a Wall Command officer.@@N
-~
 S
 
 #13057
@@ -1512,10 +1387,6 @@ D1
 ~
 ~
 0 -1 13058
-D3
-~
-~
-0 -1 13056
 S
 
 #13058
@@ -1533,10 +1404,6 @@ D1
 ~
 ~
 0 -1 13059
-D2
-~
-~
-0 -1 13068
 D3
 ~
 ~
@@ -1555,6 +1422,10 @@ counterparts. Gate chains and a warning gong are mounted in identical
 fashion to the west gate, maintained to the same standard.@@N
 ~
 0 1
+D0
+~
+~
+0 -1 13049
 D2
 ~
 ~
@@ -1587,10 +1458,6 @@ D0
 ~
 ~
 0 -1 13050
-D1
-~
-~
-0 -1 13061
 D2
 ~
 ~
@@ -1613,10 +1480,6 @@ D1
 ~
 ~
 0 -1 13062
-D3
-~
-~
-0 -1 13060
 S
 
 #13062
@@ -1660,14 +1523,6 @@ the east, and citizens moving between the civic cross and the
 southern military ring.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13053
-D1
-~
-~
-0 -1 13064
 D2
 ~
 ~
@@ -1695,10 +1550,6 @@ D1
 ~
 ~
 0 -1 13065
-D3
-~
-~
-0 -1 13063
 E
 map mural city~
 @@WThe city map mural is detailed enough to use for genuine navigation.
@@ -1752,10 +1603,6 @@ charts fill pigeonholes on every available wall surface. An inkstone
 cabinet near the entrance holds labeled pigments.@@N
 ~
 1028 11
-D1
-~
-~
-0 -1 13067
 D3
 ~
 ~
@@ -1781,10 +1628,6 @@ this section suggest residents who take some pride in their immediate
 surroundings.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13057
 D1
 ~
 ~
@@ -1793,10 +1636,6 @@ D2
 ~
 ~
 0 -1 13077
-D3
-~
-~
-0 -1 13066
 S
 
 #13068
@@ -1836,10 +1675,6 @@ D2
 ~
 ~
 0 -1 13079
-D3
-~
-~
-0 -1 13068
 S
 
 #13070
@@ -1856,10 +1691,6 @@ D0
 ~
 ~
 0 -1 13060
-D1
-~
-~
-0 -1 13071
 D2
 ~
 ~
@@ -1882,10 +1713,6 @@ D1
 ~
 ~
 0 -1 13072
-D3
-~
-~
-0 -1 13070
 S
 
 #13072
@@ -1958,10 +1785,6 @@ follow automatically. A citizen resting on a curb stone is the only
 non-military presence at the moment.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13064
 D1
 ~
 ~
@@ -2016,10 +1839,6 @@ for new arrivals who have not yet memorized the supply route. Wall
 Command markings on the road surface indicate designated cart lanes.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13066
 D1
 ~
 ~
@@ -2099,10 +1918,6 @@ D2
 ~
 ~
 0 -1 13089
-D3
-~
-~
-0 -1 13078
 S
 
 #13080
@@ -2119,10 +1934,6 @@ D0
 ~
 ~
 0 -1 13070
-D1
-~
-~
-0 -1 13081
 D2
 ~
 ~
@@ -2145,10 +1956,6 @@ D1
 ~
 ~
 0 -1 13082
-D3
-~
-~
-0 -1 13080
 S
 
 #13082
@@ -2167,10 +1974,6 @@ D0
 ~
 ~
 0 -1 13072
-D1
-~
-~
-0 -1 13083
 D2
 ~
 ~
@@ -2193,14 +1996,10 @@ gate. Copies of approved plans are kept here; the Wall Command
 receives a duplicate. The atmosphere is brisk and businesslike.@@N
 ~
 1028 11
-D1
+D0
 ~
 ~
-0 -1 13084
-D3
-~
-~
-0 -1 13082
+0 -1 13073
 S
 
 #13084
@@ -2218,18 +2017,10 @@ D0
 ~
 ~
 0 -1 13074
-D1
-~
-~
-0 -1 13085
 D2
 ~
 ~
 0 -1 13094
-D3
-~
-~
-0 -1 13083
 S
 
 #13085
@@ -2244,14 +2035,10 @@ line a reading shelf accessible to visitors. The registrar's calm
 expertise makes even complicated questions feel answerable.@@N
 ~
 1028 11
-D1
+D0
 ~
 ~
-0 -1 13086
-D3
-~
-~
-0 -1 13084
+0 -1 13075
 S
 
 #13086
@@ -2267,10 +2054,10 @@ portal stability. The warden handles inquiries with a careful precision
 that reflects the consequences of teleportation errors.@@N
 ~
 1028 11
-D3
+D0
 ~
 ~
-0 -1 13085
+0 -1 13076
 S
 
 #13087
@@ -2288,14 +2075,14 @@ D0
 ~
 ~
 0 -1 13077
+D1
+~
+~
+0 -1 13088
 D2
 ~
 ~
 0 -1 13097
-D3
-~
-~
-0 -1 13086
 S
 
 #13088
@@ -2336,10 +2123,6 @@ D2
 ~
 ~
 0 -1 13099
-D3
-~
-~
-0 -1 13088
 S
 
 #13090
@@ -2380,10 +2163,6 @@ D1
 ~
 ~
 0 -1 13092
-D0
-~
-~
-0 -1 13081
 D3
 ~
 ~
@@ -2415,17 +2194,19 @@ D3
 S
 
 #13093
-@@WSouth Gate Inspection Post@@N~
-@@WA formal inspection room for outbound cargo is set into the south
-gatehouse. Outgoing caravans with commercial cargo are required to
-pass through here for customs recording. The inspection clerks work
-methodically, checking quantities against declared manifests and
-flagging discrepancies for the duty guard to resolve. Empty crates
-from completed inspections are stacked outside. The process is
-efficient rather than adversarial; most experienced caravan masters
-have their paperwork ready before they reach the door.@@N
+@@WSouth Gate Inspection Yard@@N~
+@@WThe open-air customs inspection yard at the south gate approach is
+a cobblestoned space with chalk guide-lines directing cart teams into
+parallel inspection lanes. Outgoing caravans with commercial cargo are
+recorded here before passing the gate. Inspection clerks with portable
+writing stands work the lanes, checking quantities against declared
+manifests and flagging discrepancies. Empty crates from completed
+inspections are stacked at the north wall. Most experienced caravan
+masters have their paperwork ready before reaching the yard. The south
+wall walk provides an elevated vantage above; the gate mustering yard
+lies to the east.@@N
 ~
-1028 11
+0 1
 D1
 ~
 ~
@@ -2474,10 +2255,6 @@ doors, when closed, are heavy timber reinforced with iron banding.
 A toll bell post flanks the west side of the arch.@@N
 ~
 0 1
-D0
-~
-~
-0 -1 13085
 D2
 ~
 ^south gate~
@@ -2501,17 +2278,17 @@ total.@@N
 S
 
 #13096
-@@WSouth Gate Quartermaster Annex@@N~
-@@WA supply distribution point specifically for outbound expeditions
-operates from this interior room adjacent to the south gate. Rations,
-rope, light medical supplies, and basic climbing gear are stocked for
-same-day distribution to departing parties. The annex operates on a
-simplified requisition system: fill out the form, hand it to the
-attendant, leave with supplies. No extended consultation or catalog
-browsing — the system is built for speed. A water purification kit
-is available on loan.@@N
+@@WSouth Gate Supply Yard@@N~
+@@WAn open-air supply distribution yard adjacent to the south gate
+serves outbound expeditions with rapid equipment handoff. Stacked
+ration crates, rope coils, and equipment bundles fill the near section
+of the yard. A supply attendant marks out orders from a portable folding
+desk; the system is simplified for speed — fill out the form and leave
+with supplies. Chalk lines on the cobblestones mark the pickup lanes.
+The south wall walk runs above the north edge; the gate itself is
+accessible to the west.@@N
 ~
-1028 11
+0 1
 D1
 ~
 ~
@@ -2562,10 +2339,6 @@ D1
 ~
 ~
 0 -1 13099
-D0
-~
-~
-0 -1 13088
 D3
 ~
 ~
@@ -2612,7 +2385,7 @@ hands folded on the pommel. The eyes behind the visor observe everything
 in the plaza without moving. Violators of city law will find this
 figure's attention is the last warning before consequence.
 ~
-67108931 0 0 S
+67108883 0 0 S
 150 1
 0 0 0 0
 ! 0 0 0 7 390 0 2
@@ -2857,7 +2630,7 @@ training designed to project authority without provoking confrontation.
 He watches arrivals and departures with professional attention, noting
 anything that doesn't fit the normal pattern of city traffic.
 ~
-67 0 0 S
+3 0 0 S
 45 1
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -2874,7 +2647,7 @@ wandering, the product of genuine discipline rather than performed
 alertness. She will direct travelers with brief, accurate information
 if asked.
 ~
-67 0 0 S
+3 0 0 S
 42 0
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -2978,7 +2751,7 @@ wariness and information that Kiess specifically needs. This one
 is making their way toward the debriefing post but is not in a rush
 that suggests urgency.
 ~
-67 0 0 S
+65 0 0 S
 43 0
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -2995,7 +2768,7 @@ doing a patrol inspection rather than a guard post stint. She notes
 everything in her sector and documents anything that deviates from
 the expected pattern in a small field notebook.
 ~
-67 0 0 S
+3 0 0 S
 44 1
 0 0 0 0
 ! 0 0 0 7 387 0 1
@@ -3013,7 +2786,7 @@ The orator's tone is civic rather than political, informative rather
 than inflammatory. Public speaking at the Prism plaza is a long
 tradition in Kiess.
 ~
-67 0 0 S
+65 0 0 S
 40 0
 0 0 0 0
 ! 0 0 0 7 131 0 1
@@ -3056,17 +2829,6 @@ without looking up from the current task.
 #0
 
 #OBJECTS
-#13000
-kiess bank vault key~
-a Kiess bank vault key~
-@@WA small iron key with the Bank of Ledgers seal stamped on its bow rests here.@@N
-~
-18 128 8388608 1
-0 0 0 0 0 0 0 0 0 0
-1
-L
-75
-
 #13001
 prism-waxed travel pack~
 a prism-waxed travel pack~
@@ -3852,14 +3614,12 @@ M 0 13017 2 13051 Trade courier on boulevard
 M 0 13018 2 13034 Acolyte near temple approach
 M 0 13019 2 13011 Drover in caravan rest yard
 M 0 13020 2 13062 Lamplighter on their lane
-M 0 13021 2 13018 Scout at debriefing post area
+M 0 13021 2 13017 Scout at debriefing post area
 M 0 13022 2 13075 Sergeant on south promenade
 M 0 13023 2 13055 Orator at prism square
 M 0 13024 2 13042 Apprentice in market arcade
 M 0 13025 2 13082 Stablehand at compound
 D 0 13095 2 1 South Gate closed on reset
-D 0 13044 1 2 Bank vault door locked on reset
-D 0 13056 2 1 Quartermaster stockroom closed on reset
 S
 
 
