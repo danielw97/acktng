@@ -18,9 +18,9 @@ WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
 WORLD_TARGETS = [
-    {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890, "websocket": "wss://ackmud.com:8890"},
-    {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891, "websocket": "wss://ackmud.com:8891"},
-    {"id": "ack42", "name": "ACK! 4.2", "host": "ackmud.com", "port": 8892, "websocket": "wss://ackmud.com:8892"},
+    {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890},
+    {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
+    {"id": "ack42", "name": "ACK! 4.2", "host": "ackmud.com", "port": 8892},
 ]
 
 
@@ -314,7 +314,7 @@ def _build_home_page() -> str:
 def _build_mud_client_page() -> str:
     world_options = "".join(
         (
-            f"<option value='{world['id']}' data-ws='{world['websocket']}'>{world['name']} ({world['host']}:{world['port']})</option>"
+            f"<option value='{world['id']}' data-host='{world['host']}' data-port='{world['port']}'>{world['name']} ({world['host']}:{world['port']})</option>"
         )
         for world in WORLD_TARGETS
     )
@@ -325,6 +325,7 @@ def _build_mud_client_page() -> str:
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
+  <input id='ws-endpoint' placeholder='Optional WebSocket URL override (ws:// or wss://)' style='flex:1;min-width:280px;'>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
 </div>
@@ -337,6 +338,7 @@ def _build_mud_client_page() -> str:
 (() => {{
   const worldSelect = document.getElementById('world-select');
   const connectBtn = document.getElementById('connect-btn');
+  const endpointInput = document.getElementById('ws-endpoint');
   const disconnectBtn = document.getElementById('disconnect-btn');
   const sendBtn = document.getElementById('send-btn');
   const commandInput = document.getElementById('mud-command');
@@ -391,9 +393,24 @@ def _build_mud_client_page() -> str:
 
   const selectedWorld = () => worldSelect.options[worldSelect.selectedIndex];
 
+  const buildCandidateUrls = () => {{
+    const selected = selectedWorld();
+    const host = selected.dataset.host || '';
+    const port = selected.dataset.port || '';
+    const manual = (endpointInput.value || '').trim();
+    if (manual) return [manual];
+
+    const preferred = window.location.protocol === 'https:' ? 'wss' : 'ws';
+    const alternate = preferred === 'wss' ? 'ws' : 'wss';
+    return [`${{preferred}}://${{host}}:${{port}}`, `${{alternate}}://${{host}}:${{port}}`];
+  }};
+
   const applyWorldSelection = () => {{
-    const selected = worldSelect.options[worldSelect.selectedIndex];
-    appendOutput(`\n[World] ${{selected.textContent}}\n`);
+    const selected = selectedWorld();
+    endpointInput.value = '';
+    appendOutput(`
+[World] ${{selected.textContent}}
+`);
   }};
 
   worldSelect.addEventListener('change', applyWorldSelection);
@@ -401,48 +418,74 @@ def _build_mud_client_page() -> str:
 
   connectBtn.addEventListener('click', () => {{
     if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {{
-      appendOutput('\n[Info] Already connected.\n');
+      appendOutput('\\n[Info] Already connected.\\n');
       return;
     }}
 
-    const wsUrl = selectedWorld().dataset.ws || '';
-    if (!wsUrl) {{
-      appendOutput('[Error] Selected world has no WebSocket endpoint.\n');
+    const candidates = buildCandidateUrls();
+    if (!candidates.length) {{
+      appendOutput('[Error] No WebSocket endpoint could be derived for the selected world.\\n');
       return;
     }}
 
     output.textContent = '';
-    appendOutput(`[Connecting] ${{wsUrl}}\n`);
-    socket = new WebSocket(wsUrl);
+    let attempt = 0;
 
-    socket.addEventListener('open', () => {{
-      appendOutput(`[Connected] ${{worldSelect.options[worldSelect.selectedIndex].textContent}}\n`);
-    }});
+    const connectNext = () => {{
+      if (attempt >= candidates.length) {{
+        appendOutput('\\n[Error] All connection attempts failed. If this world is telnet-only, use a WebSocket relay URL in the override field.\\n');
+        socket = null;
+        return;
+      }}
 
-    socket.addEventListener('message', (event) => {{
-      appendOutput(typeof event.data === 'string' ? event.data : '[Binary message received]\n');
-    }});
+      const wsUrl = candidates[attempt++];
+      let opened = false;
+      appendOutput(`[Connecting] ${{wsUrl}}\n`);
 
-    socket.addEventListener('close', () => {{
-      appendOutput('\n[Disconnected]\n');
-      socket = null;
-    }});
+      try {{
+        socket = new WebSocket(wsUrl);
+      }} catch (err) {{
+        appendOutput(`[Error] Could not create WebSocket: ${{err.message}}\n`);
+        connectNext();
+        return;
+      }}
 
-    socket.addEventListener('error', () => {{
-      appendOutput('\n[Error] WebSocket connection failed. Confirm the endpoint supports WebSocket MUD traffic.\n');
-    }});
+      socket.addEventListener('open', () => {{
+        opened = true;
+        appendOutput(`[Connected] ${{worldSelect.options[worldSelect.selectedIndex].textContent}} via ${{wsUrl}}\n`);
+        commandInput.focus();
+      }});
 
-    commandInput.focus();
+      socket.addEventListener('message', (event) => {{
+        appendOutput(typeof event.data === 'string' ? event.data : '[Binary message received]\\n');
+      }});
+
+      socket.addEventListener('close', (event) => {{
+        if (!opened) {{
+          appendOutput(`[Retry] Connection closed before open (code ${{event.code}}). Trying next endpoint...\n`);
+          connectNext();
+          return;
+        }}
+        appendOutput(`\n[Disconnected] code=${{event.code}} reason=${{event.reason || 'none'}}\n`);
+        socket = null;
+      }});
+
+      socket.addEventListener('error', () => {{
+        if (!opened) appendOutput('[Error] WebSocket handshake failed for this endpoint.\\n');
+      }});
+    }};
+
+    connectNext();
   }});
 
   disconnectBtn.addEventListener('click', () => {{
     if (!socket || (socket.readyState !== WebSocket.OPEN && socket.readyState !== WebSocket.CONNECTING)) {{
-      appendOutput('\n[Info] No active connection.\n');
+      appendOutput('\\n[Info] No active connection.\\n');
       socket = null;
       return;
     }}
     closeSocket();
-    appendOutput('\n[Disconnected by user]\n');
+    appendOutput('\\n[Disconnected by user]\\n');
   }});
 
   const sendCommand = () => {{
