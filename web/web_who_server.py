@@ -412,7 +412,7 @@ def _build_mud_client_page() -> str:
       return;
     }}
 
-    const wsUrl = (endpointInput.value || '').trim() || defaultWsUrlForWorld();
+    const wsUrl = defaultWsUrlForWorld();
     if (!wsUrl) {{
       appendOutput('[Error] Selected world has no WebSocket endpoint.\\n');
       return;
