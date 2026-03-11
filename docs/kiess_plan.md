@@ -127,6 +127,64 @@ Coordinates: west->east `x=0..9`, north->south `y=0..9`.
   - Temple and other enclosed civic service spaces
 - Exterior streets/plazas are not automatically safe unless explicitly designated later for gameplay flow.
 
+## Building Entrance Policy (dead-end interiors)
+
+**All `inside`-sector rooms are dead-end rooms** with exactly **one bi-directional entrance/exit** back to an adjacent city street room. Each building connects to the city grid through a single cardinal exit. No other rooms have exits leading into the building — building walls block passage from all other directions.
+
+This means buildings do NOT participate in grid traversal. Adjacent street rooms that would normally connect to a building's grid position have no exit in that direction. Players enter a building from the street, use its services, and leave the same way.
+
+**Connectivity note:** With all 35 buildings as dead-ends, the outdoor street grid (64 rooms) carries all traversal. The north-south and east-west spines are interrupted by building footprints; players navigate via the perimeter wall avenues and connecting streets. Room 13038 was converted from inside (Arcane Studies Hall) to city (Arcane Studies Terrace) to prevent rooms 13037 and 13047 from becoming an isolated pocket.
+
+### Building Entrance Table (all 35 inside rooms)
+
+| Vnum | Building Name | Exit Dir | To Room | Street/Room Name |
+|------|--------------|----------|---------|-----------------|
+| **Row 0** | | | | |
+| 13003 | North Gate Customs Office | east | 13004 | North Gate Staging Yard |
+| 13006 | North Gate Guard Post | west | 13005 | The North Gate of Kiess |
+| **Row 1** | | | | |
+| 13012 | Traveler's Registry | west | 13011 | Caravan Rest Yard |
+| 13013 | Arrival Provisioner | east | 13014 | North Promenade, Upper |
+| 13016 | Courier Dispatch Hall | west | 13015 | Central Arrival Plaza |
+| 13018 | Scout Debriefing Post | west | 13017 | Wagonwright's Yard |
+| **Row 2** | | | | |
+| 13021 | Clothier's Row | east | 13022 | Foodmonger's Lane |
+| 13027 | Sage's Alcove | west | 13026 | Apothecary Lane |
+| **Row 3** | | | | |
+| 13031 | Syndic Council Annex | west | 13030 | Western Wall Avenue, Mid-West |
+| 13032 | Civic Registry Office | east | 13033 | West Cross Street, North |
+| 13035 | Temple of Concord | west | 13034 | Temple Approach |
+| 13036 | Judicial Archive | east | 13037 | East Cross Street, North |
+| **Row 4** | | | | |
+| 13041 | Tinker's Workshop | east | 13042 | Market Arcade, West |
+| 13043 | Steel and Edge Atelier | west | 13042 | Market Arcade, West |
+| 13044 | Kiess Bank of Ledgers | north | 13034 | Temple Approach |
+| 13045 | Grand Market Exchange | south | 13055 | The Central Prism |
+| 13046 | Hall of Restoration | east | 13047 | East Arcane Walk |
+| 13048 | Alchemist's Gallery | west | 13047 | East Arcane Walk |
+| **Row 5** | | | | |
+| 13053 | Bastion Armory | west | 13052 | Memorial Fountain Plaza |
+| 13054 | Postmaster of Kiess | east | 13055 | The Central Prism |
+| 13056 | Quartermaster's Depot | west | 13055 | The Central Prism |
+| 13057 | Argent Arcana | east | 13058 | Boulevard of Syndics, East |
+| **Row 6** | | | | |
+| 13061 | Provision Warehouse | east | 13062 | Lamplighter's Lane |
+| 13064 | Wayfarer's Inn | east | 13065 | South Promenade, Upper |
+| 13066 | Cartographer and Scribe | west | 13065 | South Promenade, Upper |
+| 13068 | Enchanter's Parlor | west | 13067 | East Commerce Lane |
+| **Row 7** | | | | |
+| 13071 | Patrol Barracks, West | east | 13072 | Drill Yard, West |
+| 13078 | Patrol Barracks, East | west | 13077 | Signal Tower Base |
+| **Row 8** | | | | |
+| 13081 | Mercenary Board Hall | east | 13082 | Stablemaster's Compound |
+| 13083 | Travel Administration Office | north | 13073 | Military Supply Road, West |
+| 13085 | Guild Registrar Hall | north | 13075 | South Promenade, Mid-Lower |
+| 13086 | Portal Warden's Office | north | 13076 | Military Supply Road, East |
+| 13088 | Wall Command Headquarters | west | 13087 | Arena Observation Deck |
+| **Row 9** | | | | |
+| 13093 | South Gate Inspection Post | east | 13094 | South Gate Mustering Yard |
+| 13096 | South Gate Quartermaster Annex | west | 13095 | The South Gate of Kiess |
+
 
 ## City Wall and Perimeter Plan
 - Kiess is fully enclosed by a continuous **city wall** around the outer rectangle (`x=0`, `x=9`, `y=0`, `y=9`).
@@ -140,30 +198,22 @@ Coordinates: west->east `x=0..9`, north->south `y=0..9`.
 - Suggested room flags for wall/gatehouse rooms: defensive flavor flags as applicable, with gate doors reset closed for city security.
 
 ## Door Plan (explicit doors)
-City streets remain open-grid except for controlled access points below.
+City streets remain open-grid except for controlled access points below. Shop rooms are closed-off dead-ends (see Shop Entrance Policy) and do not have doors — they simply have one exit.
 
 1. **South Main Gate doors**
    - `13095 <-> 3243`
    - Door: south side, heavy gate, closed by reset, unlockable.
-2. **Bank Vault antechamber**
-   - `13044 east -> 13047`
-   - Door: locked iron door (bank staff access/event use), key vnum `13000`.
-   - **Note:** This is a non-grid interior passage. On the 10x10 grid, 13044 (x=4) and 13047 (x=7) are not adjacent; the east exit from 13044 bypasses grid rooms 13045-13046 to reach the vault directly. This is an intentional interior building passage — the bank's east exit leads into the vault rather than onto the street. The standard grid exit from 13044 east to 13045 is replaced by this vault passage, so players reach the Grand Market Exchange (13045) via other routes (e.g., from 13035 south, or from 13055 west through 13054).
-3. **Quartermaster stockroom**
-   - `13056 south -> 13066`
-   - Door: reinforced, closed, unlockable by quartermaster key.
 
 ## Street Connectivity Rules
-- Every interior grid room connects cardinally to valid neighbors (N/E/S/W) unless boundary edge, with one exception: the bank vault passage (13044 east → 13047) replaces the standard grid east exit from 13044 to 13045. Room 13045 remains reachable via adjacent grid connections from 13035 (south), 13055 (west via 13054), and 13046 (west).
+- All city-sector rooms connect cardinally to adjacent city-sector (or recall_set) rooms unless at the boundary edge.
+- **All inside-sector rooms are dead-ends** (see Building Entrance Policy). They have exactly one exit and no other rooms connect into them except through that single entrance. Adjacent street rooms that border a building have no exit in the building's direction (building wall blocks passage).
 - Boundary rooms are wall-line rooms: they connect inward, and connect outward only at the four designated gate exits.
-- Central avenues are full straight lines:
-  - North-south spine: `13005 -> 13095`
-  - West-east spine: `13050 -> 13059`
-- Four quadrant loops ensure navigation without dead ends:
-  - NW loop around 13033/13034/13043/13044
-  - NE loop around 13036/13037/13046/13047 (**Note:** 13047 is the Bank Vault Antechamber. Its locked door from 13044 restricts bank-side access, but standard grid connections from 13037 south and 13046 east remain open. If the vault should be fully restricted, remove its grid connections and route the NE loop through alternate rooms.)
-  - SW loop around 13063/13064/13073/13074
-  - SE loop around 13066/13067/13076/13077
+- **Navigation pattern:** With 35 buildings as dead-ends, the outdoor street grid (64 rooms) forms an irregular network. The north-south and east-west spines are interrupted by building footprints in the central rows. Primary traversal uses:
+  - **Perimeter wall avenues** (x=0 and x=9 columns): fully connected north-south corridors along both walls
+  - **Row 7 band** (y=7, vnums 13070-13079): nearly complete east-west corridor through the military ring
+  - **Row 2 band** (y=2, vnums 13020-13029): partial east-west corridor through the scholastic district
+  - Buildings are accessed by stepping off these corridors into dead-end interiors
+- Some street rooms become dead-end pockets (e.g., 13042 connects only south to 13052; 13017 connects only north to 13007). This is intentional — they serve as quiet alcoves adjacent to building entrances.
 
 ## Room Assignment Plan (all 100 rooms, detailed)
 
@@ -176,10 +226,10 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | 13000 | Northwest Watchtower | city | 0 | Corner fortification; The Watcher of Storms statue; beacon brazier |
 | 13001 | North Wall Walk, West End | city | 0 | Battlement walkway along north wall |
 | 13002 | North Wall Walk, West Approach | city | 0 | Wall walk nearing the gate |
-| 13003 | North Gate Customs Office | inside | safe | Screening station for arriving caravans |
+| 13003 | North Gate Customs Office | inside | safe | Screening station for arriving caravans; dead-end, entrance east from 13004 |
 | 13004 | North Gate Staging Yard | city | 0 | Wagon marshalling area outside the gate proper |
 | 13005 | The North Gate of Kiess | city | 0 | Primary north entry; Warden's Arch monument; external link north |
-| 13006 | North Gate Guard Post | inside | safe | Guard office and patrol mustering room |
+| 13006 | North Gate Guard Post | inside | safe | Guard office and patrol mustering room; dead-end, entrance west from 13005 |
 | 13007 | North Wall Walk, East Approach | city | 0 | Wall walk east of the gate |
 | 13008 | North Wall Walk, East End | city | 0 | Battlement walkway continuing east |
 | 13009 | Northeast Watchtower | city | 0 | Corner fortification; The Watcher of Daybreak statue; beacon brazier |
@@ -190,13 +240,13 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 |------|-----------|--------|-------|-------|
 | 13010 | Western Wall Avenue, North | city | 0 | Inner avenue along west wall |
 | 13011 | Caravan Rest Yard | city | 0 | Open-air resting area for arriving traders |
-| 13012 | Traveler's Registry | inside | safe | Sign-in and public notices for newcomers |
-| 13013 | Arrival Provisioner | inside | safe | Basic supplies for new arrivals |
+| 13012 | Traveler's Registry | inside | safe | Sign-in and public notices; dead-end, entrance west from 13011 |
+| 13013 | Arrival Provisioner | inside | safe | Basic supplies for new arrivals; dead-end, entrance east from 13014 |
 | 13014 | North Promenade, Upper | city | 0 | North-south spine road, north end |
 | 13015 | Central Arrival Plaza | city | 0 | Wide plaza just south of the gate |
-| 13016 | Courier Dispatch Hall | inside | safe | Message runners and dispatch coordination |
+| 13016 | Courier Dispatch Hall | inside | safe | Message runners and dispatch coordination; dead-end, entrance west from 13015 |
 | 13017 | Wagonwright's Yard | city | 0 | Wagon repair and livery stable |
-| 13018 | Scout Debriefing Post | inside | safe | Forest scouts report here |
+| 13018 | Scout Debriefing Post | inside | safe | Forest scouts report here; dead-end, entrance west from 13017 |
 | 13019 | Eastern Wall Avenue, North | city | 0 | Inner avenue along east wall |
 
 ### Row 2: North Commerce & Scholastic Streets (y=2, vnums 13020-13029)
@@ -204,13 +254,13 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
 | 13020 | Western Wall Avenue, Upper Market | city | 0 | West wall avenue, market district begins |
-| 13021 | Clothier's Row | inside | safe | Tailoring and garment services |
+| 13021 | Clothier's Row | inside | safe | Tailoring and garment services; dead-end, entrance east from 13022 |
 | 13022 | Foodmonger's Lane | city | 0 | Open-air food stalls and bakeries |
 | 13023 | Commerce Crossing, North | city | 0 | Intersection of market lanes |
 | 13024 | North Promenade, Mid-Upper | city | 0 | North-south spine continuing south |
 | 13025 | Civic Notice Square | city | 0 | Public announcement boards and waystones |
 | 13026 | Apothecary Lane | city | 0 | Herbalists and potion-makers |
-| 13027 | Sage's Alcove | inside | safe | Lore consultation and historical archives |
+| 13027 | Sage's Alcove | inside | safe | Lore consultation and historical archives; dead-end, entrance west from 13026 |
 | 13028 | Scholastic Colonnade | city | 0 | Covered walkway with memorial carvings |
 | 13029 | Eastern Wall Avenue, Upper Scholastic | city | 0 | East wall avenue, scholastic district begins |
 
@@ -219,14 +269,14 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
 | 13030 | Western Wall Avenue, Mid-West | city | 0 | West wall avenue continuing south |
-| 13031 | Syndic Council Annex | inside | safe | Trade syndic administrative offices |
-| 13032 | Civic Registry Office | inside | safe | Birth, death, property records |
+| 13031 | Syndic Council Annex | inside | safe | Trade syndic administrative offices; dead-end, entrance west from 13030 |
+| 13032 | Civic Registry Office | inside | safe | Birth, death, property records; dead-end, entrance east from 13033 |
 | 13033 | West Cross Street, North | city | 0 | NW quadrant loop road |
 | 13034 | Temple Approach | city | 0 | Processional avenue to the temple |
-| 13035 | Temple of Concord | inside | safe | Compact Flame shrine; donation/recall support |
-| 13036 | Judicial Archive | inside | safe | Legal records and arbitration chambers |
+| 13035 | Temple of Concord | inside | safe | Compact Flame shrine; donation/recall support; dead-end, entrance west from 13034 |
+| 13036 | Judicial Archive | inside | safe | Legal records and arbitration chambers; dead-end, entrance east from 13037 |
 | 13037 | East Cross Street, North | city | 0 | NE quadrant loop road |
-| 13038 | Arcane Studies Hall | inside | safe | Magical research and training |
+| 13038 | Arcane Studies Terrace | city | 0 | Open-air courtyard for arcane studies; connects 13037 to east grid (prevents isolation) |
 | 13039 | Eastern Wall Avenue, Mid-East | city | 0 | East wall avenue continuing south |
 
 ### Row 4: Core Trade Band (y=4, vnums 13040-13049)
@@ -234,14 +284,14 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
 | 13040 | Western Wall Avenue, Trade Quarter | city | 0 | West wall avenue at trade band level |
-| 13041 | Tinker's Workshop | inside | safe | Repair and crafting services |
+| 13041 | Tinker's Workshop | inside | safe | Repair and crafting services; dead-end, entrance east from 13042 |
 | 13042 | Market Arcade, West | city | 0 | Covered market walkway |
-| 13043 | Steel and Edge Atelier | inside | safe | **Weapon shop** |
-| 13044 | Kiess Bank of Ledgers | inside | safe | **Banker**; locked vault door east to 13047 |
-| 13045 | Grand Market Exchange | inside | safe | **General shop** |
-| 13046 | Hall of Restoration | inside | safe | **Healer** |
-| 13047 | Bank Vault Antechamber | inside | safe | Locked access from bank; event/staff use |
-| 13048 | Alchemist's Gallery | inside | safe | Potion identification and alchemical supplies |
+| 13043 | Steel and Edge Atelier | inside | safe | **Weapon shop**; dead-end, entrance west from 13042 |
+| 13044 | Kiess Bank of Ledgers | inside | safe | **Banker**; dead-end, entrance north from 13034 |
+| 13045 | Grand Market Exchange | inside | safe | **General shop**; dead-end, entrance south from 13055 |
+| 13046 | Hall of Restoration | inside | safe | **Healer**; dead-end, entrance east from 13047 |
+| 13047 | East Arcane Walk | city | 0 | Street connecting east cross street to arcane trade band |
+| 13048 | Alchemist's Gallery | inside | safe | Potion identification and alchemical supplies; dead-end, entrance west from 13047 |
 | 13049 | Eastern Wall Avenue, Trade Quarter | city | 0 | East wall avenue at trade band level |
 
 ### Row 5: Main Civic Boulevard (y=5, vnums 13050-13059)
@@ -251,11 +301,11 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | 13050 | The West Gate of Kiess | city | 0 | West entry; Gatekeeper Sentinel statue; external link west |
 | 13051 | Boulevard of Syndics, West | city | 0 | East-west spine road, west segment |
 | 13052 | Memorial Fountain Plaza | city | 0 | Public fountain with carved Evermeet district names |
-| 13053 | Bastion Armory | inside | safe | **Armor shop** |
-| 13054 | Postmaster of Kiess | inside | safe | **Postmaster**; mail services |
+| 13053 | Bastion Armory | inside | safe | **Armor shop**; dead-end, entrance west from 13052 |
+| 13054 | Postmaster of Kiess | inside | safe | **Postmaster**; mail services; dead-end, entrance east from 13055 |
 | 13055 | The Central Prism | recall_set | safe | **Recall room**; Executioner stationed; Prism of Continuance |
-| 13056 | Quartermaster's Depot | inside | safe | **Quartermaster**; supplies; locked stockroom south to 13066 |
-| 13057 | Argent Arcana | inside | safe | **Magic shop** |
+| 13056 | Quartermaster's Depot | inside | safe | **Quartermaster**; supplies and logistical gear; dead-end, entrance west from 13055 |
+| 13057 | Argent Arcana | inside | safe | **Magic shop**; dead-end, entrance east from 13058 |
 | 13058 | Boulevard of Syndics, East | city | 0 | East-west spine road, east segment |
 | 13059 | The East Gate of Kiess | city | 0 | East entry; Gatekeeper Sentinel statue; external link east |
 
@@ -264,14 +314,14 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
 | 13060 | Western Wall Avenue, Lower Market | city | 0 | West wall avenue, south of trade band |
-| 13061 | Provision Warehouse | inside | safe | Bulk goods storage |
+| 13061 | Provision Warehouse | inside | safe | Bulk goods storage; dead-end, entrance east from 13062 |
 | 13062 | Lamplighter's Lane | city | 0 | Street maintenance and lamp services |
 | 13063 | South Market Crossing | city | 0 | SW quadrant loop intersection |
-| 13064 | Wayfarer's Inn | inside | safe | **Innkeeper**; rent services |
+| 13064 | Wayfarer's Inn | inside | safe | **Innkeeper**; rent services; dead-end, entrance east from 13065 |
 | 13065 | South Promenade, Upper | city | 0 | North-south spine, south of center |
-| 13066 | Cartographer and Scribe | inside | safe | **Maps/utility items**; Atlas Pedestal monument |
+| 13066 | Cartographer and Scribe | inside | safe | **Maps/utility items**; dead-end, entrance west from 13065; Atlas Pedestal monument |
 | 13067 | East Commerce Lane | city | 0 | SE quadrant loop road |
-| 13068 | Enchanter's Parlor | inside | safe | Enchantment and identification services |
+| 13068 | Enchanter's Parlor | inside | safe | Enchantment and identification services; dead-end, entrance west from 13067 |
 | 13069 | Eastern Wall Avenue, Lower Scholastic | city | 0 | East wall avenue south of trade band |
 
 ### Row 7: Military Support Ring (y=7, vnums 13070-13079)
@@ -279,14 +329,14 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
 | 13070 | Western Wall Avenue, Lower | city | 0 | West wall avenue nearing south ring |
-| 13071 | Patrol Barracks, West | inside | safe | Guard quarters and armory |
+| 13071 | Patrol Barracks, West | inside | safe | Guard quarters and armory; dead-end, entrance east from 13072 |
 | 13072 | Drill Yard, West | city | 0 | Open training space |
 | 13073 | Military Supply Road, West | city | 0 | SW quadrant loop road continuing |
 | 13074 | Logistics Crossing | city | 0 | Intersection of supply routes |
 | 13075 | South Promenade, Mid-Lower | city | 0 | North-south spine continuing south |
 | 13076 | Military Supply Road, East | city | 0 | SE quadrant loop road continuing |
 | 13077 | Signal Tower Base | city | 0 | Base of beacon communication tower |
-| 13078 | Patrol Barracks, East | inside | safe | Eastern guard quarters |
+| 13078 | Patrol Barracks, East | inside | safe | Eastern guard quarters; dead-end, entrance west from 13077 |
 | 13079 | Eastern Wall Avenue, Lower | city | 0 | East wall avenue nearing south ring |
 
 ### Row 8: Southern Guild Annexes & Travel Admin (y=8, vnums 13080-13089)
@@ -294,14 +344,14 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
 | 13080 | Western Wall Avenue, South | city | 0 | West wall avenue, south segment |
-| 13081 | Mercenary Board Hall | inside | safe | Job postings and bounty contracts |
+| 13081 | Mercenary Board Hall | inside | safe | Job postings and bounty contracts; dead-end, entrance east from 13082 |
 | 13082 | Stablemaster's Compound | city | 0 | Mount stabling and travel prep |
-| 13083 | Travel Administration Office | inside | safe | Permits, passes, and caravan scheduling |
+| 13083 | Travel Administration Office | inside | safe | Permits, passes, and caravan scheduling; dead-end, entrance north from 13073 |
 | 13084 | South Promenade, Lower | city | 0 | North-south spine, approaching south gate |
-| 13085 | Guild Registrar Hall | inside | safe | **Class guidance/training hooks** |
-| 13086 | Portal Warden's Office | inside | safe | Teleportation and portal administration |
+| 13085 | Guild Registrar Hall | inside | safe | **Class guidance/training hooks**; dead-end, entrance north from 13075 |
+| 13086 | Portal Warden's Office | inside | safe | Teleportation and portal administration; dead-end, entrance north from 13076 |
 | 13087 | Arena Observation Deck | city | 0 | Overlook for training yard matches |
-| 13088 | Wall Command Headquarters | inside | safe | Military leadership offices |
+| 13088 | Wall Command Headquarters | inside | safe | Military leadership offices; dead-end, entrance west from 13087 |
 | 13089 | Eastern Wall Avenue, South | city | 0 | East wall avenue, south segment |
 
 ### Row 9: South Wall & Gate (y=9, vnums 13090-13099)
@@ -311,10 +361,10 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | 13090 | Southwest Watchtower | city | 0 | Corner fortification; The Watcher of Storms statue |
 | 13091 | South Wall Walk, West End | city | 0 | Battlement walkway along south wall |
 | 13092 | South Wall Walk, West Approach | city | 0 | Wall walk nearing the south gate |
-| 13093 | South Gate Inspection Post | inside | safe | Outbound cargo inspection |
+| 13093 | South Gate Inspection Post | inside | safe | Outbound cargo inspection; dead-end, entrance east from 13094 |
 | 13094 | South Gate Mustering Yard | city | 0 | Assembly area for outbound expeditions |
 | 13095 | The South Gate of Kiess | city | 0 | Primary south entry; Pillar of Returning Caravans; external link south |
-| 13096 | South Gate Quartermaster Annex | inside | safe | Outbound supply distribution |
+| 13096 | South Gate Quartermaster Annex | inside | safe | Outbound supply distribution; dead-end, entrance west from 13095 |
 | 13097 | South Wall Walk, East Approach | city | 0 | Wall walk east of the south gate |
 | 13098 | South Wall Walk, East End | city | 0 | Battlement walkway continuing east |
 | 13099 | Southeast Watchtower | city | 0 | Corner fortification; The Watcher of Dusk statue |
@@ -322,8 +372,8 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 ### Room Flag Summary
 
 - **`recall_set` sector (8):** 13055 only (Central Prism); room_flags = `1024` (ROOM_SAFE)
-- **`inside` sector (11), `safe` rooms (34 total):** All enclosed buildings — room_flags = `1024` (ROOM_SAFE)
-- **`city` sector (1), unflagged streets (66 total):** All exterior roads, plazas, wall walks, gate approaches — room_flags = `0`
+- **`inside` sector (11), `safe` rooms (35 total):** All enclosed buildings — room_flags = `1024` (ROOM_SAFE). All are dead-end rooms with one exit (see Building Entrance Policy).
+- **`city` sector (1), unflagged streets (64 total):** All exterior roads, plazas, wall walks, gate approaches — room_flags = `0`
 - **No `dark` (1), `no_mob` (4), or `no_magic` (16) flags** are planned for any Kiess room (city hub should be fully accessible and lit)
 
 **Area file format reference:** In the `#ROOMS` section, each room's header line is `<room_flags> <sector_type>`. For example, the Central Prism would be `1024 8` (safe + recall_set), an inside shop would be `1024 11` (safe + inside), and a city street would be `0 1` (no flags + city).
@@ -424,7 +474,7 @@ All listed shop items are planned at levels **75-125**, and every level is a **m
   - Monument: **Shrine of the Compact Flame** (symbolizes guild-temple civic pact)
   - Flavor objects: votive racks, concord tablets, ceremonial font
 - **13044 - Bank of Ledgers:**
-  - Flavor objects: gilded ledger pedestals, oath-chest, seal press altar
+  - Flavor objects: gilded ledger pedestals, oath-chest, seal press altar, iron strongbox display
 - **13054 - Postmaster of Kiess:**
   - Flavor objects: dispatch board, courier satchel wall, route clock
 - **13056 - Quartermaster's Depot:**
@@ -553,12 +603,6 @@ Notes:
 | M 0 | 13011 | 1 | 13085 | Guild Registrar |
 | M 0 | 13012 | 1 | 13035 | Temple priest |
 
-**Equip/Give Resets (following service mob M commands):**
-
-| Command | Obj Vnum | Limit | Notes |
-|---------|----------|-------|-------|
-| G 0 | 13000 | 1 | Bank vault key given to Banker (mob 13007); must follow Banker's M reset |
-
 **Ambient City Mobs (~25-30 total spawns across city streets):**
 
 | Command | Mob Vnum | Limit | Room Vnum | Notes |
@@ -585,7 +629,7 @@ Notes:
 | M 0 | 13018 | 2 | 13034 | Acolyte near temple |
 | M 0 | 13019 | 2 | 13011 | Drover in caravan rest yard |
 | M 0 | 13020 | 2 | 13062 | Lamplighter on their lane |
-| M 0 | 13021 | 2 | 13018 | Scout at debriefing post exterior |
+| M 0 | 13021 | 2 | 13017 | Scout near debriefing post (Wagonwright's Yard) |
 | M 0 | 13022 | 2 | 13075 | Sergeant on south promenade |
 | M 0 | 13023 | 2 | 13055 | Orator at prism square |
 | M 0 | 13024 | 2 | 13042 | Apprentice in market arcade |
@@ -596,8 +640,6 @@ Notes:
 | Command | Room Vnum | Door | State | Notes |
 |---------|-----------|------|-------|-------|
 | D 0 | 13095 | 2 | 1 | South Gate — closed on reset |
-| D 0 | 13044 | 1 | 2 | Bank vault door — locked on reset (key: 13000) |
-| D 0 | 13056 | 2 | 1 | Quartermaster stockroom — closed on reset |
 
 ### Object Resets (`O` commands)
 
@@ -607,11 +649,7 @@ No standalone room object spawns planned initially. Shop inventory is defined th
 
 ## Object Definitions (Non-Shop)
 
-### Key Objects
-
-| Vnum | Name | Type | Extra Flags | Notes |
-|------|------|------|-------------|-------|
-| 13000 | a Kiess bank vault key | key (18) | ITEM_NODROP (128) | Key for bank vault door (13044 east); held by banker NPC |
+No non-shop objects are currently defined. Object vnum 13000 is available.
 
 ### Shop Object Vnum Assignments
 
@@ -626,7 +664,7 @@ Full item definitions (item_type, extra_flags, wear_flags, item_apply, value fie
 
 ### Reserved Object Vnums
 
-- **13068-13099:** Unallocated. Reserved for Executioner equipment (weapon, armor), quest items, or other non-shop objects added during implementation. 32 vnums available within the area's V range.
+- **13000, 13068-13099:** Unallocated (33 vnums). Reserved for Executioner equipment (weapon, armor), quest items, or other non-shop objects added during implementation.
 
 ---
 
@@ -664,9 +702,9 @@ Only the south gate has an active external connection. The north, west, and east
 1. [ ] Create `area/kiess.are` with `#AREA` header and `#$`
 2. [ ] Write `#ROOMS` section (100 rooms, vnums 13000-13099, all used)
 3. [ ] Write `#MOBILES` section (13 service NPCs + 13 ambient mobs = 26 mobs, vnums 13000-13025)
-4. [ ] Write `#OBJECTS` section (1 key + 67 shop items = 68 objects, vnums 13000-13067)
+4. [ ] Write `#OBJECTS` section (67 shop items, vnums 13001-13067; plus Executioner equipment from reserved range)
 5. [ ] Write `#SHOPS` section (5 shops: general, weapon, armor, magic, scribe)
-6. [ ] Write `#RESETS` section (~13 service mob spawns + 1 G give reset for bank key + ~25 ambient mob spawns + 3 door resets)
+6. [ ] Write `#RESETS` section (~13 service mob spawns + ~25 ambient mob spawns + 1 door reset)
 7. [ ] Write `#SPECIALS` section (2 entries: executioner, janitor)
 8. [ ] Add `kiess.are` to `area/area.lst`
 9. [ ] Add north exit from vnum `3243` back to `13095` in `area/rocroad.are` (which owns vnum 3243, "Roc Road")
