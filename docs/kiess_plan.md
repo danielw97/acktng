@@ -133,7 +133,7 @@ Coordinates: west->east `x=0..9`, north->south `y=0..9`.
 
 This means buildings do NOT participate in grid traversal. Adjacent street rooms that would normally connect to a building's grid position have no exit in that direction. Players enter a building from the street, use its services, and leave the same way.
 
-**Connectivity note:** With all 35 buildings as dead-ends, the outdoor street grid (64 rooms) carries all traversal. The north-south and east-west spines are interrupted by building footprints; players navigate via the perimeter wall avenues and connecting streets. Room 13038 was converted from inside (Arcane Studies Hall) to city (Arcane Studies Terrace) to prevent rooms 13037 and 13047 from becoming an isolated pocket.
+**Connectivity note:** With all 35 buildings as dead-ends, the outdoor street grid (64 rooms) carries all traversal. The north-south and east-west spines are interrupted by building footprints; players navigate via the perimeter wall avenues and connecting streets. Room 13036 was converted from inside (Judicial Archive) to city (Judicial Colonnade) to prevent rooms 13037 and 13047 from becoming an isolated pocket.
 
 ### Building Entrance Table (all 35 inside rooms)
 
@@ -154,7 +154,7 @@ This means buildings do NOT participate in grid traversal. Adjacent street rooms
 | 13031 | Syndic Council Annex | west | 13030 | Western Wall Avenue, Mid-West |
 | 13032 | Civic Registry Office | east | 13033 | West Cross Street, North |
 | 13035 | Temple of Concord | west | 13034 | Temple Approach |
-| 13036 | Judicial Archive | east | 13037 | East Cross Street, North |
+| 13038 | Arcane Studies Hall | west | 13037 | East Cross Street, North |
 | **Row 4** | | | | |
 | 13041 | Tinker's Workshop | east | 13042 | Market Arcade, West |
 | 13043 | Steel and Edge Atelier | west | 13042 | Market Arcade, West |
@@ -198,7 +198,7 @@ This means buildings do NOT participate in grid traversal. Adjacent street rooms
 - Suggested room flags for wall/gatehouse rooms: defensive flavor flags as applicable, with gate doors reset closed for city security.
 
 ## Door Plan (explicit doors)
-City streets remain open-grid except for controlled access points below. Shop rooms are closed-off dead-ends (see Shop Entrance Policy) and do not have doors — they simply have one exit.
+City streets remain open-grid except for controlled access points below. Building rooms are closed-off dead-ends (see Building Entrance Policy) and do not have doors — they simply have one exit.
 
 1. **South Main Gate doors**
    - `13095 <-> 3243`
@@ -274,9 +274,9 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | 13033 | West Cross Street, North | city | 0 | NW quadrant loop road |
 | 13034 | Temple Approach | city | 0 | Processional avenue to the temple |
 | 13035 | Temple of Concord | inside | safe | Compact Flame shrine; donation/recall support; dead-end, entrance west from 13034 |
-| 13036 | Judicial Archive | inside | safe | Legal records and arbitration chambers; dead-end, entrance east from 13037 |
+| 13036 | Judicial Colonnade | city | 0 | Open-air covered walkway with arbitration tablets; connects 13037 to 13026 (prevents isolation) |
 | 13037 | East Cross Street, North | city | 0 | NE quadrant loop road |
-| 13038 | Arcane Studies Terrace | city | 0 | Open-air courtyard for arcane studies; connects 13037 to east grid (prevents isolation) |
+| 13038 | Arcane Studies Hall | inside | safe | Magical research and training; dead-end, entrance west from 13037 |
 | 13039 | Eastern Wall Avenue, Mid-East | city | 0 | East wall avenue continuing south |
 
 ### Row 4: Core Trade Band (y=4, vnums 13040-13049)
