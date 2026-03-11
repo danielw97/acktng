@@ -1,0 +1,53 @@
+<!doctype html><html><head>
+<title>__TITLE__</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+:root{color-scheme:dark;--bg:#05080f;--bg-soft:#0f1729;--card:#121c31;--line:#253457;--text:#e5ecff;--muted:#9eb0df;--accent:#79b7ff;--accent-soft:#163866;}
+*{box-sizing:border-box;}
+body{font-family:Inter,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at top,#18284a,#05080f 55%);color:var(--text);max-width:1080px;margin:0 auto;padding:1.4rem 1rem 2rem;line-height:1.6;}
+nav{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1rem;}
+nav a{padding:.5rem .85rem;background:rgba(121,183,255,.12);border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);font-weight:600;letter-spacing:.02em;}
+nav a:hover{background:rgba(121,183,255,.25);border-color:#4d72b8;}
+.help-forms{display:flex;flex-wrap:wrap;gap:.8rem;margin:0 0 1.2rem;padding:1rem;background:rgba(18,28,49,.72);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(4px);}
+.help-forms form{display:flex;gap:.55rem;align-items:center;flex-wrap:wrap;}
+label{color:var(--muted);font-weight:600;}
+input{background:var(--bg-soft);border:1px solid var(--line);color:var(--text);padding:.45rem .65rem;border-radius:10px;min-width:190px;}
+button{background:linear-gradient(135deg,#5ea8ff,#72cbff);color:#061126;border:none;padding:.5rem .85rem;border-radius:10px;font-weight:700;cursor:pointer;}
+button:hover{filter:brightness(1.05);}
+main{background:rgba(18,28,49,.78);border:1px solid var(--line);padding:1.1rem 1.15rem;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.32);}
+h1,h2,h3{line-height:1.2;margin-top:0;color:#f4f7ff;}
+a{color:var(--accent);}
+p,li{color:var(--text);}
+.muted{color:var(--muted);}
+pre{white-space:pre-wrap;background:#0a1222;padding:0.9rem;border-radius:12px;border:1px solid var(--line);overflow:auto;}
+.mud-output{height:52vh;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}
+.mud-controls{display:flex;flex-wrap:wrap;gap:.55rem;margin:.75rem 0;}
+.mud-controls select{background:var(--bg-soft);border:1px solid var(--line);color:var(--text);padding:.45rem .65rem;border-radius:10px;}
+ul{padding-left:1.2rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem;margin:.8rem 0 1rem;}
+.card{background:rgba(8,15,29,.72);border:1px solid var(--line);padding:.8rem .9rem;border-radius:12px;}
+</style>
+</head><body>
+<nav>
+<a href='/'>Home</a>
+<a href='/who/'>Who</a>
+<a href='/help/'>Help</a>
+<a href='/shelp/'>SHelp</a>
+<a href='/mud/'>MUD Client</a>
+<a href='https://discord.gg/T24UQV8h' target='_blank' rel='noopener noreferrer'>Discord</a>
+<a href='https://github.com/ackmudhistoricalarchive' target='_blank' rel='noopener noreferrer'>Github</a>
+</nav>
+<section class='help-forms'>
+<form method='get' action='/help/'>
+<label for='help-q'>Help:</label>
+<input id='help-q' name='q' placeholder='topic'>
+<button type='submit'>Open help</button>
+</form>
+<form method='get' action='/shelp/'>
+<label for='shelp-q'>SHelp:</label>
+<input id='shelp-q' name='q' placeholder='spell/skill'>
+<button type='submit'>Open shelp</button>
+</form>
+</section>
+<main>__BODY__</main>
+</body></html>
