@@ -320,8 +320,8 @@ def _build_mud_client_page() -> str:
     )
     return f"""
 <h1>ACKMUD Web Client</h1>
-<p class='muted'>These ACK worlds are telnet services. Browsers cannot open raw telnet sockets directly.</p>
-<p class='muted'>Use Connect to launch your local telnet handler (if registered), or copy host/port into your preferred MUD client.</p>
+<p class='muted'>Browser-side WebSocket client: connections stay in this page (no external telnet app launch).</p>
+<p class='muted'>Select a world and press Connect.</p>
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
@@ -344,44 +344,107 @@ def _build_mud_client_page() -> str:
   const output = document.getElementById('mud-output');
 
   const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+  const ansiToHtml = (text) => {{
+    const chunks = text.split(/(\[[0-9;]*m)/g);
+    let styles = [];
+    let html = '';
+    const styleText = () => styles.length ? ` style="${{styles.join(';')}}"` : '';
+
+    for (const chunk of chunks) {{
+      const match = chunk.match(/^\[([0-9;]*)m$/);
+      if (!match) {{
+        if (chunk.length) html += `<span${{styleText()}}>${{escapeHtml(chunk)}}</span>`;
+        continue;
+      }}
+      const codes = match[1] ? match[1].split(';').map(Number) : [0];
+      for (const code of codes) {{
+        if (code === 0) styles = [];
+        else if (code === 1) styles = styles.filter((x) => !x.startsWith('font-weight:')).concat('font-weight:700');
+        else if (code === 4) styles = styles.filter((x) => !x.startsWith('text-decoration:')).concat('text-decoration:underline');
+        else if (code === 39) styles = styles.filter((x) => !x.startsWith('color:'));
+        else if (code === 49) styles = styles.filter((x) => !x.startsWith('background:'));
+        else if (ANSI_COLORS[code]) styles = styles.filter((x) => !x.startsWith('color:')).concat(`color:${{ANSI_COLORS[code]}}`);
+        else if (ANSI_COLORS[code - 10]) styles = styles.filter((x) => !x.startsWith('background:')).concat(`background:${{ANSI_COLORS[code - 10]}}`);
+      }}
+    }}
+    return html;
+  }};
+
   const appendOutput = (text) => {{
     output.insertAdjacentHTML('beforeend', `<span>${{escapeHtml(text)}}</span>`);
     output.scrollTop = output.scrollHeight;
   }};
 
   const selectedWorld = () => worldSelect.options[worldSelect.selectedIndex];
-  const selectedAddress = () => {{
-    const selected = selectedWorld();
-    return {{
-      name: selected.textContent,
-      host: selected.dataset.host || '',
-      port: selected.dataset.port || '',
-    }};
+  const closeSocket = () => {{
+    if (!socket) return;
+    try {{ socket.close(); }} catch (err) {{}}
   }};
 
-  const showWorld = () => {{
-    const world = selectedAddress();
-    appendOutput(`\n[World] ${{world.name}}\n`);
-    appendOutput(`[Address] ${{world.host}}:${{world.port}}\n`);
-  }};
-
+  const showWorld = () => appendOutput(`\n[World] ${{selectedWorld().textContent}}\n`);
   worldSelect.addEventListener('change', showWorld);
   showWorld();
 
   connectBtn.addEventListener('click', () => {{
-    const world = selectedAddress();
-    const telnetUrl = `telnet://${{world.host}}:${{world.port}}`;
-    appendOutput(`\n[Connect] Opening ${{telnetUrl}}\n`);
-    appendOutput('[Info] If nothing opens, launch your local MUD/telnet client and connect manually using the address above.\\n');
-    window.location.href = telnetUrl;
+    if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) {{
+      appendOutput('\\n[Info] Already connected.\\n');
+      return;
+    }}
+
+    const wsUrl = selectedWorld().dataset.ws || '';
+    if (!wsUrl) {{
+      appendOutput('[Error] Selected world has no WebSocket endpoint.\\n');
+      return;
+    }}
+
+    output.textContent = '';
+    appendOutput(`[Connecting] ${{wsUrl}}\n`);
+    try {{
+      socket = new WebSocket(wsUrl);
+    }} catch (err) {{
+      appendOutput(`[Error] Could not create WebSocket: ${{err.message}}\n`);
+      socket = null;
+      return;
+    }}
+
+    socket.addEventListener('open', () => {{
+      appendOutput(`[Connected] ${{selectedWorld().textContent}}\n`);
+      commandInput.focus();
+    }});
+    socket.addEventListener('message', (event) => {{
+      appendOutput(typeof event.data === 'string' ? event.data : '[Binary message received]\\n');
+    }});
+    socket.addEventListener('close', (event) => {{
+      appendOutput(`\n[Disconnected] code=${{event.code}} reason=${{event.reason || 'none'}}\n`);
+      socket = null;
+    }});
+    socket.addEventListener('error', () => {{
+      appendOutput('\\n[Error] WebSocket handshake failed for this endpoint.\\n');
+    }});
   }});
 
   disconnectBtn.addEventListener('click', () => {{
-    appendOutput('\\n[Info] Browser session is not directly connected. Close your local telnet client to disconnect.\\n');
+    if (!socket || (socket.readyState !== WebSocket.OPEN && socket.readyState !== WebSocket.CONNECTING)) {{
+      appendOutput('\\n[Info] No active connection.\\n');
+      socket = null;
+      return;
+    }}
+    closeSocket();
+    appendOutput('\\n[Disconnected by user]\\n');
   }});
 
-  sendBtn.addEventListener('click', () => {{
-    appendOutput('\\n[Info] Send is disabled in-browser for telnet-only worlds.\\n');
+  const sendCommand = () => {{
+    const command = commandInput.value;
+    if (!socket || socket.readyState !== WebSocket.OPEN || !command.trim()) return;
+    socket.send(`${{command}}
+`);
+    appendOutput(`\n> ${{command}}\n`);
+    commandInput.value = '';
+  }};
+
+  sendBtn.addEventListener('click', sendCommand);
+  commandInput.addEventListener('keydown', (event) => {{
+    if (event.key === 'Enter') sendCommand();
   }});
 }})();
 </script>
