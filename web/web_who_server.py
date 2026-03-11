@@ -10,9 +10,10 @@ from urllib.parse import parse_qs, unquote, urlparse
 
 HOST = "0.0.0.0"
 PORT = 80
-WHO_HTML_FILE = Path("/home/ftp/pub/webpage/soewholist.html")
-WHO_COUNT_FILE = Path("/home/ftp/pub/webpage/whocount.html")
-ROOT_DIR = Path(__file__).resolve().parent.parent
+WEB_DIR = Path(__file__).resolve().parent
+ROOT_DIR = WEB_DIR.parent
+WHO_HTML_FILE = WEB_DIR / "soewholist.html"
+WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
 
@@ -134,16 +135,17 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         who_html = _read_file_if_present(WHO_HTML_FILE)
         who_count = _read_file_if_present(WHO_COUNT_FILE)
 
-        if who_html is None:
-            return (
-                "<h1>ACK! Player List</h1>"
-                "<p>The WHO webpage output has not been generated yet.</p>"
-            )
-
         content = ["<h1>ACK! Player List</h1>"]
         if who_count is not None:
             content.append(who_count)
-        content.append(who_html)
+        else:
+            content.append("<p>Players online: 0</p>")
+
+        if who_html is not None:
+            content.append(who_html)
+        else:
+            content.append("<h2>Players Online</h2>\n<ul>\n</ul>")
+
         return "\n".join(content)
 
 

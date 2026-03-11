@@ -1352,12 +1352,12 @@
 #define SYSDAT_FILE DATA_DIR "system.dat"
 
 #if defined(SOE) && !defined(SOETEST) && !defined(SOEBLD)
-#define WHO_HTML_FILE "/home/ftp/pub/webpage/soewholist.html" /* for ftping who list to html web page :) */
-#define WHO_COUNT_FILE "/home/ftp/pub/webpage/whocount.html"
+#define WHO_HTML_FILE "../web/soewholist.html" /* for ftping who list to html web page :) */
+#define WHO_COUNT_FILE "../web/whocount.html"
 #endif
 #if !defined(WHO_HTML_FILE)
-#define WHO_HTML_FILE DATA_DIR "whofile" /* for ftping who list to html web page :) */
-#define WHO_COUNT_FILE DATA_DIR "whocountfile"
+#define WHO_HTML_FILE "../web/soewholist.html" /* for ftping who list to html web page :) */
+#define WHO_COUNT_FILE "../web/whocount.html"
 #endif
 /* Other Stuff - Flar */
 #define COPYOVER_FILE "COPYOVER.TXT" /* Temp data file used for copyover */
