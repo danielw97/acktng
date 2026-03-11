@@ -394,6 +394,7 @@ def _build_mud_client_page() -> str:
   const defaultWsUrlForWorld = () => {{
     const world = selectedWorld();
     if (!world) return '';
+    if (world.dataset.ws) return world.dataset.ws;
     const scheme = window.location.protocol === 'https:' ? 'wss' : 'ws';
     return `${{scheme}}://${{world.dataset.host}}:${{world.dataset.port}}/`;
   }};
