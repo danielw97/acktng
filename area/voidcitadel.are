@@ -15,12 +15,14 @@ W all~
 #MOBILES
 #610
 shade wraith spectral~
-@@ma spectral shade@@n~
-A spectral shade drifts here, moaning softly.~
+@@ma spectral shade@@N~
+A spectral shade drifts here, moaning softly.
+~
 This translucent figure is the remnant of a soul trapped within Kel'Shadra.
 Its hollow eyes glow with pale violet light, and wisps of shadow spiral
-from its incorporeal form. It reaches toward you with clawed hands of pure darkness.~
-16435 66 -500 S
+from its incorporeal form. It reaches toward you with clawed hands of pure darkness.
+~
+16499 66 -500 S
 150 0
 1000 -50 15 15
 ! 0 0 0 7 24578 0 0
@@ -30,12 +32,14 @@ l 100 610 611 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #611
 void stalker dark~
-@@ma void stalker@@n~
-A void stalker crouches here, waiting to strike.~
+@@ma void stalker@@N~
+A void stalker crouches here, waiting to strike.
+~
 Born of the pure nothingness between planes, this creature resembles a
 gaunt humanoid stitched together from living shadow. Its joints creak with
-an unnatural wrongness, and its face is a featureless smear of dark energy.~
-16417 0 -500 S
+an unnatural wrongness, and its face is a featureless smear of dark energy.
+~
+16481 0 -500 S
 150 0
 1000 -55 18 18
 ! 0 0 0 7 2102018 0 0
@@ -45,12 +49,14 @@ l 100 612 613 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #612
 crumbling golem stone broken~
-@@ca crumbling golem@@n~
-A crumbling golem lumbers aimlessly through here.~
+@@ca crumbling golem@@N~
+A crumbling golem lumbers aimlessly through here.
+~
 Once a guardian of Kel'Shadra, this stone construct has partially collapsed.
 Cracks run across its massive chest from which dark energy bleeds. Despite
-its broken state, its remaining fist can still smash stone into powder.~
-16417 0 -500 S
+its broken state, its remaining fist can still smash stone into powder.
+~
+16481 0 -500 S
 150 0
 1000 -55 15 20
 ! 0 0 0 7 450 0 0
@@ -60,11 +66,13 @@ l 100 614 615 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #613
 corrupted cultist robed~
-@@Ra corrupted cultist@@n~
-A corrupted cultist chants feverishly here.~
+@@Ra corrupted cultist@@N~
+A corrupted cultist chants feverishly here.
+~
 Dressed in tattered robes bearing the sigil of Kel'Shadra, this once-human
 follower has been twisted beyond recognition. Their eyes have been replaced
-by swirling voids, and dark runes have been carved into their flesh.~
+by swirling voids, and dark runes have been carved into their flesh.
+~
 16449 512 -500 S
 152 0
 1500 -55 18 20
@@ -75,13 +83,15 @@ l 100 616 617 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #614
 shadow hound beast prowling~
-@@ma shadow hound@@n~
-A shadow hound paces back and forth here, growling.~
+@@ma shadow hound@@N~
+A shadow hound paces back and forth here, growling.
+~
 This creature resembles a massive hound, but its body is composed entirely
 of condensed shadow. When it breathes, frozen mist pours from between
 serrated teeth of solidified darkness. Its paws leave scorched marks on the
-stone wherever it walks.~
-16417 0 -500 S
+stone wherever it walks.
+~
+16481 0 -500 S
 153 0
 2000 -57 20 22
 ! 0 0 0 7 2363398 0 0
@@ -91,12 +101,14 @@ l 100 618 619 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #615
 bone guardian skeletal warrior~
-@@da bone guardian@@n~
-A bone guardian stands watch here, armor gleaming darkly.~
+@@da bone guardian@@N~
+A bone guardian stands watch here, armor gleaming darkly.
+~
 The skeleton of a warrior who fell defending Kel'Shadra has been reanimated
 with dark energy. Enchanted black armor still clings to its frame, and it
-grips an ancient blade with a grip that requires no living muscle to maintain.~
-16401 16 -500 S
+grips an ancient blade with a grip that requires no living muscle to maintain.
+~
+16465 16 -500 S
 154 0
 2500 -58 20 22
 ! 0 0 0 7 16582 0 0
@@ -106,13 +118,15 @@ l 100 620 621 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #616
 obsidian knight warrior dark~
-@@yan obsidian knight@@n~
-@@yAn obsidian knight stands motionless here.@@n~
+@@yan obsidian knight@@N~
+@@yAn obsidian knight stands motionless here.@@N
+~
 Encased entirely in black glass-like armor, this knight serves Kel'Shadra
 directly. No flesh exists beneath the enchanted shell - only a shard of
 crystallized void energy powers its terrifying martial skill. The armor
-screams when struck, and feeds on the wounds it inflicts.~
-16419 0 -600 S
+screams when struck, and feeds on the wounds it inflicts.
+~
+33570915 0 -600 S
 157 1
 5000 -62 25 28
 ! 0 0 0 7 26702 0 0
@@ -122,12 +136,14 @@ l 100 622 623 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #617
 void priest caster robed dark~
-@@Ra void priest@@n~
-A void priest kneels in dark supplication here.~
+@@Ra void priest@@N~
+A void priest kneels in dark supplication here.
+~
 This hollow-eyed figure has given themselves wholly to the void. Their flesh
 has become pale as chalk, and sigils of dark power pulse beneath the skin.
 They chant in a language that makes the air vibrate painfully, channeling
-magic from the emptiness between worlds.~
+magic from the emptiness between worlds.
+~
 16449 512 -600 S
 158 0
 6500 -62 23 25
@@ -138,13 +154,15 @@ l 100 624 625 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #618
 umbral wraith greater spectral~
-@@ma greater umbral wraith@@n~
-A greater umbral wraith hovers ominously here.~
+@@ma greater umbral wraith@@N~
+A greater umbral wraith hovers ominously here.
+~
 Far more powerful than a common shade, this ancient wraith has persisted
 for centuries within Kel'Shadra's walls. It can solidify its shadowy form
 into devastating strikes, yet pass through solid matter at will. The cold
-it emanates is enough to cause visible frost to form on nearby surfaces.~
-16401 66 -700 S
+it emanates is enough to cause visible frost to form on nearby surfaces.
+~
+33570897 66 -700 S
 160 0
 10000 -65 27 28
 ! 0 0 0 7 0 581632 0
@@ -154,13 +172,15 @@ l 100 626 627 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #619
 razorclaw demon shadow beast~
-@@ma razorclaw demon@@n~
-A razorclaw demon crouches on the ceiling above.~
+@@ma razorclaw demon@@N~
+A razorclaw demon crouches on the ceiling above.
+~
 This winged horror has emerged from a tear in the boundary between the
 material plane and the void. Its four arms end in razor-sharp claws that
 drip a paralytic venom. The creature moves with terrifying speed, able to
-strike from unexpected angles before its prey can react.~
-16417 524288 -700 S
+strike from unexpected angles before its prey can react.
+~
+33570913 524288 -700 S
 163 0
 20000 -68 32 34
 ! 0 0 0 7 1639198 0 0
@@ -170,13 +190,15 @@ l 100 628 629 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #620
 voidcaller sorcerer dark mage~
-@@Ra voidcaller@@n~
-A voidcaller draws patterns in the air with crackling dark energy.~
+@@Ra voidcaller@@N~
+A voidcaller draws patterns in the air with crackling dark energy.
+~
 These masters of void magic have studied the dark arts for decades within
 Kel'Shadra. Their bodies have warped from prolonged exposure - fingers have
 elongated into claws, and their eyes constantly shift between forms as they
-perceive multiple planes simultaneously. They can tear rifts in reality itself.~
-16449 512 -700 S
+perceive multiple planes simultaneously. They can tear rifts in reality itself.
+~
+33570881 512 -700 S
 165 0
 31500 -70 28 30
 ! 0 0 0 7 0 7343520 0
@@ -186,13 +208,15 @@ l 100 630 631 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #621
 shadowlord commander undead~
-@@ythe Shadowlord Commander@@n~
-@@yThe Shadowlord Commander stands in grim authority here.@@n~
+@@ythe Shadowlord Commander@@N~
+@@yThe Shadowlord Commander stands in grim authority here.@@N
+~
 Clad in black armor fused to what was once a powerful warlord, this undead
 commander has served Kel'Shadra for centuries. Discipline and dark power have
 rendered it virtually indestructible in open combat. A crown of void energy
-floats above its visored helm, marking it as one of Kel'Shadra's chosen.~
-16403 16 -800 S
+floats above its visored helm, marking it as one of Kel'Shadra's chosen.
+~
+67125331 16 -800 S
 167 1
 50000 -75 38 42
 ! 0 0 0 7 1699838 0 0
@@ -202,14 +226,16 @@ l 100 632 633 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #622
 kel shadra avatar void incarnate~
-@@eKel'Shadra the Void Incarnate@@n~
-@@eKel'Shadra the Void Incarnate manifests here in terrible glory.@@n~
+@@eKel'Shadra the Void Incarnate@@N~
+@@eKel'Shadra the Void Incarnate manifests here in terrible glory.@@N
+~
 This is the imprisoned consciousness of the ancient void entity itself,
 given temporary physical form. Its presence alone distorts reality; walls
 crack, light bends away, and the very air around it screams. Those who
 gaze upon it directly feel their minds begin to unravel. This is the
-ultimate challenge within the Citadel - few who face it live to tell the tale.~
-16417 16 -1000 S
+ultimate challenge within the Citadel - few who face it live to tell the tale.
+~
+67125347 16 -1000 S
 170 0
 100000 -90 50 55
 ! 0 0 0 7 4194302 40901088 0
@@ -219,13 +245,15 @@ l 100 634 635 636 637 0 0 0 0 0
 L 30 25 25 20 0 0 0 0 0 
 #623
 hollow revenant warrior undead~
-@@da hollow revenant@@n~
-A hollow revenant stalks here, its armor clanking emptily.~
+@@da hollow revenant@@N~
+A hollow revenant stalks here, its armor clanking emptily.
+~
 A warrior whose soul was consumed entirely by Kel'Shadra, leaving only
 the body to animate. Its chest cavity is literally hollow - the void
 energy that moves it can be seen pulsing in the gap where its heart once
-was. Despite having no eyes, it tracks targets with unerring precision.~
-16401 16 -500 S
+was. Despite having no eyes, it tracks targets with unerring precision.
+~
+16465 16 -500 S
 151 0
 1800 -52 17 19
 ! 0 0 0 7 16582 0 0
@@ -235,13 +263,15 @@ l 100 641 642 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #624
 catacomb crawler worm void~
-@@ca catacomb crawler@@n~
-A catacomb crawler writhes here, leaving black slime in its wake.~
+@@ca catacomb crawler@@N~
+A catacomb crawler writhes here, leaving black slime in its wake.
+~
 A massive worm-like creature spawned from the void-tainted soil beneath
 Kel'Shadra. Its segmented body is ten feet long and armored with plates
 of natural obsidian that have grown from its skin. Its mouth is a spiral
-of teeth that rotate when it feeds, capable of boring through stone.~
-16417 0 -500 S
+of teeth that rotate when it feeds, capable of boring through stone.
+~
+16481 0 -500 S
 152 0
 2200 -54 16 18
 ! 0 0 0 7 2097152 0 0
@@ -251,14 +281,16 @@ l 100 643 644 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #625
 tomb warden ancient guardian~
-@@da tomb warden@@n~
-A tomb warden stands at rigid attention here.~
+@@da tomb warden@@N~
+A tomb warden stands at rigid attention here.
+~
 The ancient guardians of the Void Catacombs, these skeletal warriors
 have been reinforced over the centuries by the ambient void energy of
 the tomb complex. Their bones are now shot through with crystallized
 darkness, making them harder than stone and able to regenerate damage
-at a visible rate during combat.~
-16401 16 -550 S
+at a visible rate during combat.
+~
+16465 16 -550 S
 153 0
 3000 -57 20 22
 ! 0 0 0 7 450 0 0
@@ -268,13 +300,15 @@ l 100 645 646 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #626
 void leech parasite drain~
-@@da void leech@@n~
-A void leech clings to the ceiling, sensing your warmth.~
+@@da void leech@@N~
+A void leech clings to the ceiling, sensing your warmth.
+~
 Parasitic creatures that feed on life energy rather than blood, these
 pale, slug-like entities can drain the very essence of a living being
 through touch alone. They reproduce rapidly in areas of high void
-concentration, and the catacombs beneath Kel'Shadra are thick with them.~
-16417 0 -500 S
+concentration, and the catacombs beneath Kel'Shadra are thick with them.
+~
+16481 0 -500 S
 151 0
 1500 -50 14 16
 ! 0 0 0 7 4194304 0 0
@@ -284,12 +318,14 @@ l 100 647 648 691 0 0 0 0 0 0
 L 50 50 35 0 0 0 0 0 0 
 #627
 spire phantom mage ghost arcane~
-@@aa spire phantom@@n~
-A spire phantom drifts here, trailing fading light.~
+@@aa spire phantom@@N~
+A spire phantom drifts here, trailing fading light.
+~
 The ghost of one of the mages who originally built the Shattered Spire,
 this entity is trapped in a loop of its final moments - endlessly repeating
 the ritual that destroyed it. The magic it channels is dangerous not through
-intent but through sheer uncontrolled energy hemorrhaging from its form.~
+intent but through sheer uncontrolled energy hemorrhaging from its form.
+~
 16449 66 -600 S
 155 0
 4500 -60 22 24
@@ -300,14 +336,16 @@ l 100 649 650 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #628
 void elemental air storm spire~
-@@aa void-storm elemental@@n~
-A void-storm elemental crackles with dark lightning here.~
+@@aa void-storm elemental@@N~
+A void-storm elemental crackles with dark lightning here.
+~
 The collision of void energy with the raw arcane forces of the Shattered
 Spire has created these hybrid entities: elemental beings of pure void-
 lightning. They move at terrifying speed, can pass through the bars of
 cages, and their touch leaves behind patches of numbing cold alongside
-the electrical burn.~
-16417 524288 -650 S
+the electrical burn.
+~
+16481 524288 -650 S
 157 0
 7000 -63 25 27
 ! 0 0 0 7 2363392 0 0
@@ -317,14 +355,16 @@ l 100 651 652 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #629
 rune golem arcane construct spire~
-@@ca rune-bound golem@@n~
-@@yA rune-bound golem thunders through here.@@n~
+@@ca rune-bound golem@@N~
+@@yA rune-bound golem thunders through here.@@N
+~
 Created to serve the mages of the Shattered Spire, these massive constructs
 have been corrupted by the void energy that now saturates the structure.
 Their bodies bear the original arcane runes of their creation overlaid with
 void-runes that have spontaneously formed, creating a chaotic magical hybrid
-that even their creators could not have predicted or controlled.~
-16419 0 -650 S
+that even their creators could not have predicted or controlled.
+~
+33570915 0 -650 S
 158 1
 9000 -65 28 30
 ! 0 0 0 7 450 0 0
@@ -334,14 +374,16 @@ l 100 653 654 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #630
 eternal wanderer lost corridor~
-@@can eternal wanderer@@n~
-An eternal wanderer paces the same route here, endlessly.~
+@@can eternal wanderer@@N~
+An eternal wanderer paces the same route here, endlessly.
+~
 Those who entered the Eternal Corridors and could not find their way out
 eventually became something other than mortal. The wanderers have lost all
 memory of who they were; they simply walk, forever, in patterns determined
 by the corridor's geometry. They react to intruders with mindless aggression,
-as if defending their endless route from interruption.~
-16401 0 -600 S
+as if defending their endless route from interruption.
+~
+16465 0 -600 S
 156 0
 5500 -61 22 24
 ! 0 0 0 7 0 0 0
@@ -351,15 +393,17 @@ l 100 655 656 755 0 0 0 0 0 0
 L 50 50 18 0 0 0 0 0 0 
 #631
 void architect builder dark ancient~
-@@aa void architect@@n~
-A void architect studies the walls here with cold scrutiny.~
+@@aa void architect@@N~
+A void architect studies the walls here with cold scrutiny.
+~
 Ancient servants of Kel'Shadra who designed and maintain the Eternal
 Corridors, these gaunt humanoids have been altered by centuries of void
 exposure until they are barely recognizable as the scholars they once were.
 They can reshape the corridor geometry with a gesture, adding new passages
 or sealing old ones. In combat they use this ability to trap and confuse
-enemies.~
-16449 512 -700 S
+enemies.
+~
+33570881 512 -700 S
 160 0
 12000 -67 28 30
 ! 0 0 0 7 0 2097152 0
@@ -369,14 +413,16 @@ l 100 657 658 709 0 0 0 0 0 0
 L 50 50 15 0 0 0 0 0 0 
 #632
 catacomb lord necromancer undead boss~
-@@ythe Catacomb Lord@@n~
-@@yThe Catacomb Lord enthroned on bones watches your approach.@@n~
+@@ythe Catacomb Lord@@N~
+@@yThe Catacomb Lord enthroned on bones watches your approach.@@N
+~
 The ruler of the Void Catacombs, this ancient undead necromancer served
 Kel'Shadra in life and continues that service in death. Its body has
 been preserved for centuries by void energy, and it has spent that time
 mastering every nuance of death magic. It commands all undead within
-the catacombs and can raise fallen enemies as servants mid-combat.~
-16451 16 -850 S
+the catacombs and can raise fallen enemies as servants mid-combat.
+~
+67125315 16 -850 S
 163 1
 60000 -100 40 45
 ! 0 0 0 7 0 9437184 0
@@ -386,14 +432,16 @@ l 100 659 660 661 720 0 0 0 0 0
 L 40 35 25 23 0 0 0 0 0 
 #633
 spire architect construct boss arcane~
-@@ythe Spire Architect@@n~
-@@yThe Spire Architect assembles and disassembles itself here continuously.@@n~
+@@ythe Spire Architect@@N~
+@@yThe Spire Architect assembles and disassembles itself here continuously.@@N
+~
 The master construct of the Shattered Spire, this entity was created by
 the spire's chief mage to maintain and defend the tower. It is now a
 fusion of arcane construct and void entity, able to reconfigure its body
 to counter virtually any form of attack. It has killed over forty
-challengers by adapting to their methods in real time.~
-16419 16 -850 S
+challengers by adapting to their methods in real time.
+~
+67125347 16 -850 S
 165 1
 75000 -80 42 46
 ! 0 0 0 7 4194302 40894464 0
@@ -403,15 +451,17 @@ l 100 662 663 664 0 0 0 0 0 0
 L 40 35 25 0 0 0 0 0 0 
 #634
 corridor warden eternal final guardian~
-@@ythe Corridor Warden@@n~
-@@yThe Corridor Warden stands at the far end of the passage, unmoving.@@n~
+@@ythe Corridor Warden@@N~
+@@yThe Corridor Warden stands at the far end of the passage, unmoving.@@N
+~
 The ultimate guardian of the Eternal Corridors, this entity is the
 physical manifestation of the labyrinthine magic itself. It exists
 simultaneously in every corridor, present everywhere at once. When it
 chooses to manifest in a single location for combat, it focuses power
 that has been diffused across hundreds of rooms into one devastating form.
-Defeating it requires both strength and understanding of the maze.~
-16419 16 -900 S
+Defeating it requires both strength and understanding of the maze.
+~
+67125347 16 -900 S
 168 1
 85000 -100 45 50
 ! 0 0 0 7 4194302 40894464 0
@@ -421,15 +471,17 @@ l 100 665 666 667 668 710 711 0 0 0
 L 35 30 25 10 22 22 0 0 0 
 #635
 void herald messenger darkness servant~
-@@ythe Void Herald@@n~
-@@yThe Void Herald kneels in reverence, awaiting your challenge.@@n~
+@@ythe Void Herald@@N~
+@@yThe Void Herald kneels in reverence, awaiting your challenge.@@N
+~
 Kel'Shadra's chosen champion and herald, this entity exists to test
 worthy challengers before they reach the Void Incarnate itself. Created
 from the essence of the ten greatest warriors who ever fell within the
 citadel, it possesses the memories and skills of each. It will fight
 you with absolute mastery, reading your techniques and adapting in ways
-that seem impossible. This is your last test before the final confrontation.~
-16419 16 -950 S
+that seem impossible. This is your last test before the final confrontation.
+~
+67125347 16 -950 S
 169 1
 90000 -87 48 53
 ! 0 0 0 7 4194302 40901088 0
@@ -439,14 +491,16 @@ l 100 669 670 671 672 714 715 0 0 0
 L 35 30 25 10 19 18 0 0 0 
 #636
 drowned spirit waterlogged ghost~
-@@ma drowned spirit@@n~
-A drowned spirit drifts here, still choking on phantom water.~
+@@ma drowned spirit@@N~
+A drowned spirit drifts here, still choking on phantom water.
+~
 This spectral remnant met its end in the flooded lower vaults of
 Kel'Shadra. It still enacts the moment of drowning endlessly, its
 translucent form convulsing with silent screams. The water it once
 inhaled now pours from its mouth as black void-tainted liquid that
-corrodes anything it touches.~
-16401 66 -500 S
+corrodes anything it touches.
+~
+16465 66 -500 S
 150 0
 800 -48 13 14
 ! 0 0 0 7 24578 0 0
@@ -456,13 +510,15 @@ l 100 673 674 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #637
 charred husk burned animated~
-@@ea charred husk@@n~
-A charred husk shambles here, smelling of old fire.~
+@@ea charred husk@@N~
+A charred husk shambles here, smelling of old fire.
+~
 Whatever this creature was in life, it burned. The void energies of
 Kel'Shadra reanimated it without cooling it: its bones glow orange
 within the blackened shell of its body, and anything it touches chars
-slightly. It lumbers with terrible patience toward heat and movement.~
-16401 0 -500 S
+slightly. It lumbers with terrible patience toward heat and movement.
+~
+16465 0 -500 S
 150 0
 900 -50 14 15
 ! 0 0 0 7 2097152 0 0
@@ -472,13 +528,15 @@ l 100 675 676 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #638
 void rat vermin pest~
-@@ma void rat@@n~
-A void rat skitters here, its eyes pools of black nothing.~
+@@ma void rat@@N~
+A void rat skitters here, its eyes pools of black nothing.
+~
 An ordinary rat twisted by prolonged exposure to void energy. Its fur
 has fallen out in patches revealing skin that shifts between solid and
 slightly transparent. It travels in packs and its bite carries a mild
-void-corruption that stacks with each successive wound.~
-16417 0 -450 S
+void-corruption that stacks with each successive wound.
+~
+16481 0 -450 S
 150 0
 300 -40 10 10
 ! 0 0 0 7 0 0 0
@@ -488,14 +546,16 @@ l 100 677 673 676 785 786 678 0 0 0
 L 100 32 17 33 28 16 0 0 0 
 #639
 shadow wisp minor incorporeal~
-@@ma shadow wisp@@n~
-A shadow wisp bobs here, barely visible in the dim light.~
+@@ma shadow wisp@@N~
+A shadow wisp bobs here, barely visible in the dim light.
+~
 The smallest and weakest manifestation of void energy in Kel'Shadra,
 these drifting sparks of darkness are barely sentient. They cluster
 around concentrations of dark magic and can deliver a painful cold
 sting to those who disturb them. Individually harmless, they are
-rarely found alone.~
-16401 66 -450 S
+rarely found alone.
+~
+16465 66 -450 S
 150 0
 250 -38 8 9
 ! 0 0 0 7 24578 0 0
@@ -505,13 +565,15 @@ l 100 678 681 0 0 0 0 0 0 0
 L 100 15 0 0 0 0 0 0 0 
 #640
 scuttling horror spider arachnid void~
-@@ra scuttling horror@@n~
-A scuttling horror drops from the ceiling on thread-thin shadow strands.~
+@@ra scuttling horror@@N~
+A scuttling horror drops from the ceiling on thread-thin shadow strands.
+~
 Eight-legged and the size of a large dog, this creature is what results
 when a spider colony nests too long in void-tainted stone. The carapace
 has fused with crystallized darkness, and its web-spinning glands now
-produce strands of solidified shadow that anchor to any surface.~
-16417 0 -500 S
+produce strands of solidified shadow that anchor to any surface.
+~
+16481 0 -500 S
 151 0
 1200 -52 15 16
 ! 0 0 0 7 2363392 0 0
@@ -521,14 +583,16 @@ l 100 679 680 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #641
 animated armor empty construct sentinel~
-@@can animated armor@@n~
-An animated armor clanks here with methodical vigilance.~
+@@can animated armor@@N~
+An animated armor clanks here with methodical vigilance.
+~
 A full suit of black iron plate animated by a sliver of void energy
 embedded in the breastplate. There is nothing inside - lift the visor
 and find only shadow. It follows patrol patterns established centuries
 ago with mechanical precision and will attack anything that deviates
-from authorized behavior.~
-16417 16 -500 S
+from authorized behavior.
+~
+16481 16 -500 S
 151 0
 1400 -52 16 18
 ! 0 0 0 7 450 0 0
@@ -538,14 +602,16 @@ l 100 681 682 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #642
 flayed servant skinless undead~
-@@da flayed servant@@n~
-A flayed servant moves here in constant agony.~
+@@da flayed servant@@N~
+A flayed servant moves here in constant agony.
+~
 An example of Kel'Shadra's cruelty: a mortal servant whose skin was
 removed as punishment and preserved separately so they could never
 fully die. The flayed body continues to serve; the preserved skin is
 displayed somewhere in the citadel as a warning. Attacking one calls
-out to others of its kind.~
-16401 0 -550 S
+out to others of its kind.
+~
+16465 0 -550 S
 152 0
 1600 -54 17 19
 ! 0 0 0 7 0 0 0
@@ -555,14 +621,16 @@ l 100 683 684 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #643
 void beetle swarm insect~
-@@ra void beetle@@n~
-A void beetle the size of a fist scuttles here.~
+@@ra void beetle@@N~
+A void beetle the size of a fist scuttles here.
+~
 Insects drawn to void energy have mutated over generations into creatures
 of considerable power. The void beetle's carapace is harder than iron,
 and its mandibles can bite through most metals given time. They are
 aggressive and territorial, swarming anything that enters their nesting
-area.~
-16417 0 -450 S
+area.
+~
+16481 0 -450 S
 150 0
 600 -45 12 13
 ! 0 0 0 7 2097152 0 0
@@ -572,14 +640,16 @@ l 100 685 639 0 0 0 0 0 0 0
 L 100 17 0 0 0 0 0 0 0 
 #644
 wailing banshee undead spirit scream~
-@@ma wailing banshee@@n~
-A wailing banshee shrieks somewhere nearby, then falls silent.~
+@@ma wailing banshee@@N~
+A wailing banshee shrieks somewhere nearby, then falls silent.
+~
 The preserved emotional anguish of someone who died in absolute torment
 within Kel'Shadra. The banshee has no physical form but is intensely
 real in its effects: its cry causes confusion and temporary blindness,
 and its touch - should it choose to manifest - drains courage as
-surely as cold drains heat.~
-16401 66 -550 S
+surely as cold drains heat.
+~
+16465 66 -550 S
 152 0
 2000 -55 17 19
 ! 0 0 0 7 24578 0 0
@@ -589,14 +659,16 @@ l 100 686 675 0 0 0 0 0 0 0
 L 100 21 0 0 0 0 0 0 0 
 #645
 crypt bat swarm flying undead~
-@@da crypt bat@@n~
-A crypt bat hangs from the ceiling, unmoving but aware.~
+@@da crypt bat@@N~
+A crypt bat hangs from the ceiling, unmoving but aware.
+~
 Ordinary bats transformed by centuries of habitation in Kel'Shadra's
 void-saturated stone. They are blind in normal ways but can perceive
 life force directly, tracking targets through walls. Their guano is
 mildly toxic and has accumulated in drifts in the deeper catacomb
-passages.~
-16417 524288 -450 S
+passages.
+~
+16481 524288 -450 S
 150 0
 400 -42 10 11
 ! 0 0 0 7 524288 0 0
@@ -606,14 +678,16 @@ l 100 687 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #646
 ossified giant skeleton large~
-@@dan ossified giant@@n~
-An ossified giant blocks the passage, its bones like white stone.~
+@@dan ossified giant@@N~
+An ossified giant blocks the passage, its bones like white stone.
+~
 The reanimated skeleton of a giant creature - species unidentifiable
 after centuries of void exposure - that fell within the catacombs.
 Its bones have been fossilized by the ambient magic into something
 harder than marble. It does not move quickly, but what it hits stays
-hit. The ground shakes with each step.~
-16401 16 -600 S
+hit. The ground shakes with each step.
+~
+16465 16 -600 S
 155 0
 4000 -60 24 26
 ! 0 0 0 7 450 0 0
@@ -623,13 +697,15 @@ l 100 688 689 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #647
 necromantic apprentice student undead mage~
-@@Ra necromantic apprentice@@n~
-A necromantic apprentice kneels over a body, muttering.~
+@@Ra necromantic apprentice@@N~
+A necromantic apprentice kneels over a body, muttering.
+~
 A junior practitioner of the Catacomb Lord's dark arts, these half-
 corrupted scholars maintain the lower levels of the catacomb complex.
 They have enough power to animate the recently dead and cast basic
 void-corruption spells, but lack the discipline of their master. They
-panic under pressure and make mistakes - dangerous ones.~
+panic under pressure and make mistakes - dangerous ones.
+~
 16449 512 -550 S
 152 0
 1800 -53 17 19
@@ -640,15 +716,17 @@ l 100 690 691 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #648
 preserved champion ancient warrior catacomb~
-@@da preserved champion@@n~
-A preserved champion stirs here, centuries of readiness waking.~
+@@da preserved champion@@N~
+A preserved champion stirs here, centuries of readiness waking.
+~
 One of the honored dead of the Vault of Champions, this warrior's
 preservation is so perfect that it still moves with the grace of the
 living. Its void-preserved muscles function as they did in life.
 Fighting it is like fighting a master warrior who cannot feel pain,
 does not tire, and has been rehearsing combat in its mind for two
-hundred years.~
-16401 16 -600 S
+hundred years.
+~
+16465 16 -600 S
 155 0
 3500 -59 22 24
 ! 0 0 0 7 16582 0 0
@@ -658,14 +736,16 @@ l 100 692 693 686 687 0 0 0 0 0
 L 50 50 22 31 0 0 0 0 0 
 #649
 void-tainted rat king alpha swarm~
-@@ythe Rat King of Kel'Shadra@@n~
-@@yThe Rat King of Kel'Shadra crouches here, surrounded by its court.@@n~
+@@ythe Rat King of Kel'Shadra@@N~
+@@yThe Rat King of Kel'Shadra crouches here, surrounded by its court.@@N
+~
 An alpha void rat grown enormous through decades of feeding on void
 energy. The size of a large dog and hideously intelligent, the Rat
 King has organized the entire rat population of the catacombs into a
 functioning hierarchy. It is the only rat in Kel'Shadra that can
-speak, and it will negotiate before fighting - briefly.~
-16451 0 -600 S
+speak, and it will negotiate before fighting - briefly.
+~
+67125315 0 -600 S
 155 1
 4500 -59 20 22
 ! 0 0 0 7 0 0 0
@@ -675,14 +755,16 @@ l 100 694 695 688 689 0 0 0 0 0
 L 50 50 34 15 0 0 0 0 0 
 #650
 shadow serpent snake void dark~
-@@ma shadow serpent@@n~
-A shadow serpent coils here, tongue flickering darkly.~
+@@ma shadow serpent@@N~
+A shadow serpent coils here, tongue flickering darkly.
+~
 A serpent of pure condensed shadow, this creature has no actual mass
 but can still constrict and bite as if solid. Its fangs inject a
 venom of distilled void energy that numbs sensation progressively.
 Highly territorial, shadow serpents mark their ranges with patches of
-supercooled floor that never warm.~
-16417 0 -550 S
+supercooled floor that never warm.
+~
+16481 0 -550 S
 153 0
 2200 -55 18 20
 ! 0 0 0 7 2363392 0 0
@@ -692,15 +774,17 @@ l 100 696 697 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #651
 ancient lich sorcerer undead arch-mage~
-@@pan ancient lich@@n~
-An ancient lich levitates here, studying you with cold interest.~
+@@pan ancient lich@@N~
+An ancient lich levitates here, studying you with cold interest.
+~
 A sorcerer who achieved lichdom long before Kel'Shadra took its current
 form, this entity predates the void entity's arrival. It negotiated a
 position of relative independence within the citadel in exchange for
 its expertise. It is dangerous, unpredictable, and fundamentally
 uninterested in Kel'Shadra's goals - which makes it both threat and
-potential resource.~
-16449 66 -750 S
+potential resource.
+~
+33570881 66 -750 S
 162 0
 25000 -72 33 35
 ! 0 0 0 7 0 9437184 0
@@ -711,14 +795,16 @@ L 45 35 20 32 21 35 0 0 0
 #652
 void-merged twin duplicate mirror~
 a void-merged twin~
-A void-merged twin stands here, moving exactly as you move.~
+A void-merged twin stands here, moving exactly as you move.
+~
 An unfortunate soul who walked too deeply into a void-mirror's reflection
 and merged with their own duplicate. The resulting entity is two people
 occupying one body, their individual wills constantly fighting for
 control. In combat this instability makes them unpredictable: attacks
 coming from angles that defy normal body mechanics as each half
-independently chooses its own method.~
-16401 0 -600 S
+independently chooses its own method.
+~
+16465 0 -600 S
 153 0
 2800 -56 20 22
 ! 0 0 0 7 0 0 0
@@ -728,14 +814,16 @@ l 100 701 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #653
 arcane revenant mage spire ghost~
-@@Ran arcane revenant@@n~
-An arcane revenant channels crackling energy here.~
+@@Ran arcane revenant@@N~
+An arcane revenant channels crackling energy here.
+~
 One of the Shattered Spire's original mages, returned as an undead
 bound to the spire by unfinished magical work. Unlike most undead, the
 arcane revenant retains full intelligence and memory. It is furious
 about its condition, deeply knowledgeable about the spire's workings,
 and will attack anyone it considers insufficiently respectful of
-its research.~
+its research.
+~
 16449 66 -650 S
 157 0
 5500 -61 24 26
@@ -746,14 +834,16 @@ l 100 702 703 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #654
 crystalline horror construct spire arcane~
-@@ca crystalline horror@@n~
-A crystalline horror refracts light in disturbing patterns here.~
+@@ca crystalline horror@@N~
+A crystalline horror refracts light in disturbing patterns here.
+~
 A construct made entirely of void-crystal that has grown spontaneously
 within the Shattered Spire's walls over centuries. It has no builder
 and no purpose - it simply grew until it became mobile. Its body
 scatters the light-bending magic of the spire in concentrated beams
-that disorient, blind temporarily, and at high intensity, burn.~
-16417 0 -650 S
+that disorient, blind temporarily, and at high intensity, burn.
+~
+16481 0 -650 S
 157 0
 6000 -62 24 27
 ! 0 0 0 7 450 0 0
@@ -763,15 +853,17 @@ l 100 704 705 699 700 0 0 0 0 0
 L 50 50 32 28 0 0 0 0 0 
 #655
 spire guardian sentinel construct magical~
-@@ca spire guardian@@n~
-@@yA spire guardian patrols here with measured mechanical steps.@@n~
+@@ca spire guardian@@N~
+@@yA spire guardian patrols here with measured mechanical steps.@@N
+~
 Purpose-built by the original mages to protect the spire's research,
 these constructs are more sophisticated than the crumbling golems in the
 main citadel. They can assess magical threats and select appropriate
 countermeasures from a library of defensive enchantments stored in their
 crystalline cores. They have been assessing threats for four centuries
-without new instructions.~
-16419 16 -650 S
+without new instructions.
+~
+33570915 16 -650 S
 158 1
 8000 -63 26 28
 ! 0 0 0 7 26702 0 0
@@ -781,14 +873,16 @@ l 100 706 707 701 749 0 0 0 0 0
 L 50 50 22 29 0 0 0 0 0 
 #656
 living spell autonomous arcane construct~
-@@Ra living spell@@n~
-A living spell traces hypnotic patterns in the air here.~
+@@Ra living spell@@N~
+A living spell traces hypnotic patterns in the air here.
+~
 When a complex spell is cast in an area saturated with void energy,
 occasionally the spell becomes self-sustaining - feeding on the ambient
 magic rather than dissipating. This particular living spell has been
 running in the Shattered Spire for decades. It attacks anything that
 disrupts its pattern, because disruption threatens its continued
-existence.~
+existence.
+~
 16449 66 -600 S
 155 0
 3500 -58 20 22
@@ -799,14 +893,16 @@ l 100 708 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #657
 mirror wraith reflection obsidian~
-@@aa mirror wraith@@n~
-A mirror wraith lurks within the obsidian surface here.~
+@@aa mirror wraith@@N~
+A mirror wraith lurks within the obsidian surface here.
+~
 Something that developed inside a void-mirror after centuries of
 reflecting scenes of death and suffering. It has absorbed so many
 images that it has become capable of manifesting physically by stepping
 out of the reflective surface. It resembles a distorted, flickering
-version of whoever last looked into its mirror.~
-16401 66 -600 S
+version of whoever last looked into its mirror.
+~
+16465 66 -600 S
 155 0
 3000 -58 20 22
 ! 0 0 0 7 24578 0 0
@@ -816,14 +912,16 @@ l 100 709 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #658
 void conduit channel energy pulsing~
-@@Ra void conduit@@n~
-A void conduit drifts here, attached to the wall by energy tendrils.~
+@@Ra void conduit@@N~
+A void conduit drifts here, attached to the wall by energy tendrils.
+~
 A semi-organic entity that grew along the magical conduit in the Spire's
 lower levels, feeding on the flow of void energy. It is essentially a
 living channel: energy enters at one end and exits at the other in
 intensified form. In combat it can redirect its internal energy as
-destructive bursts. Killing it disrupts the conduit briefly.~
-16417 0 -650 S
+destructive bursts. Killing it disrupts the conduit briefly.
+~
+16481 0 -650 S
 157 0
 5000 -60 22 24
 ! 0 0 0 7 4194304 0 0
@@ -833,14 +931,16 @@ l 100 710 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #659
 corridor echo autonomous sound entity~
-@@ca corridor echo@@n~
-A corridor echo resonates here, mimicking sounds from elsewhere.~
+@@ca corridor echo@@N~
+A corridor echo resonates here, mimicking sounds from elsewhere.
+~
 A consequence of the Eternal Corridors' spatial anomalies: sound
 travels through folded space in ways that occasionally create standing
 waves with enough energy to develop semi-sentience. Corridor echoes
 are the auditory equivalent of mirror wraiths - entities born of
-accumulated reflection. They attack using sound itself as a weapon.~
-16401 66 -550 S
+accumulated reflection. They attack using sound itself as a weapon.
+~
+16465 66 -550 S
 153 0
 2000 -54 17 19
 ! 0 0 0 7 24578 0 0
@@ -850,14 +950,16 @@ l 100 711 706 753 754 0 0 0 0 0
 L 100 33 23 15 0 0 0 0 0 
 #660
 lost scholar eternal corridor wanderer~
-@@Ra lost scholar@@n~
-A lost scholar wanders here, muttering about navigation.~
+@@Ra lost scholar@@N~
+A lost scholar wanders here, muttering about navigation.
+~
 An academic who entered the Eternal Corridors to study them and was
 never able to leave. Years of wandering have not broken their mind
 entirely - they still carry extensive notes and will trade information
 for help. However, years of void exposure have made them erratic, and
 they may attack without clear provocation if they perceive a threat
-to their notebooks.~
+to their notebooks.
+~
 16449 512 -550 S
 153 0
 2400 -54 18 20
@@ -868,14 +970,16 @@ l 100 712 713 707 708 0 0 0 0 0
 L 50 50 20 28 0 0 0 0 0 
 #661
 spatial fold living anomaly corridor~
-@@ca spatial fold@@n~
-A spatial fold shimmers here, edges fraying into nothing.~
+@@ca spatial fold@@N~
+A spatial fold shimmers here, edges fraying into nothing.
+~
 The Eternal Corridors' most dangerous autonomous phenomenon: a region
 of folded space that has become mobile. Walking into one without
 preparation teleports the victim to a random point in the corridor
 system. The spatial fold is not malicious - it simply exists and
-moves, and contact is always unpleasant.~
-16417 0 -550 S
+moves, and contact is always unpleasant.
+~
+16481 0 -550 S
 153 0
 2000 -54 18 19
 ! 0 0 0 7 0 0 0
@@ -885,14 +989,16 @@ l 100 714 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #662
 maze guardian warden servant corridor~
-@@ca maze guardian@@n~
-A maze guardian blocks the passage here, unmoving.~
+@@ca maze guardian@@N~
+A maze guardian blocks the passage here, unmoving.
+~
 Lesser versions of the Corridor Warden, these constructs maintain
 specific junctions in the Eternal Corridors. They cannot reshape
 the maze like the Warden can, but they are physically powerful and
 will not yield their post regardless of the circumstances. They
-communicate only in spatial distortions that hurt to perceive.~
-16417 16 -600 S
+communicate only in spatial distortions that hurt to perceive.
+~
+16481 16 -600 S
 156 0
 5000 -60 22 24
 ! 0 0 0 7 450 0 0
@@ -903,13 +1009,15 @@ L 50 50 0 0 0 0 0 0 0
 #663
 herald aspirant trainee warrior dark~
 a herald aspirant~
-A herald aspirant runs forms here, practicing in perfect solitude.~
+A herald aspirant runs forms here, practicing in perfect solitude.
+~
 Mortal warriors who have volunteered to serve as future components of
 the Void Herald, training within the Herald's domain until they are
 deemed worthy of absorption. They do not seem to object to their
 eventual fate. Their skill is extraordinary; they have been coached
-directly by the ten masters whose essences form the Herald.~
-16417 16 -700 S
+directly by the ten masters whose essences form the Herald.
+~
+33570913 16 -700 S
 160 0
 8000 -65 28 30
 ! 0 0 0 7 26702 0 0
@@ -919,14 +1027,16 @@ l 100 717 718 703 712 713 0 0 0 0
 L 50 50 25 23 19 0 0 0 0 
 #664
 void echo kel'shadra projection minor~
-@@ma void echo@@n~
-A void echo watches you with borrowed patience.~
+@@ma void echo@@N~
+A void echo watches you with borrowed patience.
+~
 A fragment of Kel'Shadra's consciousness given temporary physical form
 to test, observe, or discourage visitors. Not powerful enough to
 represent a serious threat to anyone who has reached this point, but
 capable of reporting observations back to the entity. Fighting one
-always feels slightly like being assessed.~
-16417 0 -700 S
+always feels slightly like being assessed.
+~
+16481 0 -700 S
 160 0
 7000 -63 25 27
 ! 0 0 0 7 0 0 0
@@ -936,14 +1046,16 @@ l 100 719 720 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #665
 binding seal guardian circle void~
-@@Ba binding seal guardian@@n~
-A binding seal guardian orbits the inscribed circle slowly.~
+@@Ba binding seal guardian@@N~
+A binding seal guardian orbits the inscribed circle slowly.
+~
 Created by the original sorcerers to maintain the binding circle's
 integrity, these entities are entirely purpose-built: they exist only
 to detect and report damage to the sealing runes and to temporarily
 reinforce any compromised section. They have been performing this
-function without rest for three hundred years.~
-16417 16 -700 S
+function without rest for three hundred years.
+~
+33570913 16 -700 S
 160 0
 9000 -64 26 28
 ! 0 0 0 7 450 0 0
@@ -953,14 +1065,16 @@ l 100 721 722 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #666
 catacomb priest ceremony death dark~
-@@Ra catacomb priest@@n~
-A catacomb priest performs rites here over a fresh burial.~
+@@Ra catacomb priest@@N~
+A catacomb priest performs rites here over a fresh burial.
+~
 The religious caste of the catacomb complex, these robed figures
 conduct the ceremonies that maintain the void-preservation of the
 honored dead. They are not fighters by inclination but are formidably
 powerful when forced to defend the sacred space. They carry the
 authority of the Catacomb Lord and will invoke its name before
-invoking their magic.~
+invoking their magic.
+~
 16449 512 -600 S
 155 0
 4000 -59 22 24
@@ -971,14 +1085,16 @@ l 100 723 724 677 680 718 729 789 792 719
 L 50 50 21 25 18 17 27 18 26 
 #667
 void leviathan massive creature water deep~
-@@da void leviathan@@n~
-A void leviathan surfaces briefly from the seeping pool here.~
+@@da void leviathan@@N~
+A void leviathan surfaces briefly from the seeping pool here.
+~
 Something vast that lives in - or is - the black pool in the Seeping
 Chamber. Whether it is a creature or a manifestation of the pool itself
 is unclear. What emerges during an attack is a portion of its bulk: a
 pseudopod of black fluid that strikes with tremendous force. The main
-body never surfaces fully.~
-16417 0 -700 S
+body never surfaces fully.
+~
+16481 0 -700 S
 160 0
 15000 -66 30 32
 ! 0 0 0 7 4194304 0 0
@@ -988,15 +1104,17 @@ l 100 725 726 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #668
 trophy collector animated void obsessed~
-@@ythe Trophy Collector@@n~
-@@yThe Trophy Collector paces its gallery, cataloguing its prizes.@@n~
+@@ythe Trophy Collector@@N~
+@@yThe Trophy Collector paces its gallery, cataloguing its prizes.@@N
+~
 An undead entity obsessed with collecting and categorizing trophies
 from defeated adventurers. Unlike the passive trophy display in the
 Hall, the Collector actively hunts for new acquisitions. It is
 intelligent enough to select its approach and negotiate briefly, and
 prefers to take specific items rather than kill indiscriminately -
-though it will kill if the item it wants cannot otherwise be obtained.~
-16403 16 -650 S
+though it will kill if the item it wants cannot otherwise be obtained.
+~
+67125331 16 -650 S
 158 1
 10000 -65 28 30
 ! 0 0 0 7 16582 0 0
@@ -1006,14 +1124,16 @@ l 100 727 728 722 723 726 744 745 0 0
 L 50 50 26 34 23 16 29 0 0 
 #669
 spire echo ghost observation~
-@@aa spire echo@@n~
-A spire echo replays a fragment of ancient memory here.~
+@@aa spire echo@@N~
+A spire echo replays a fragment of ancient memory here.
+~
 A lesser form of the arcane revenant, a spire echo is not fully
 conscious - it simply replays the last major event it witnessed on
 an endless loop. Disrupting the loop is painful for it and causes
 an instinctual defensive reaction. Several spire echoes replay
 the same event: Archmage Voss's attempt to warn the other mages.
-From different angles.~
+From different angles.
+~
 16449 66 -600 S
 154 0
 3000 -57 20 22
@@ -1024,14 +1144,16 @@ l 100 729 685 698 797 0 0 0 0 0
 L 100 32 18 27 0 0 0 0 0 
 #670
 void spawn newborn creature minor~
-@@ma void spawn@@n~
-A void spawn writhes here, newly formed and ravenous.~
+@@ma void spawn@@N~
+A void spawn writhes here, newly formed and ravenous.
+~
 Freshly born manifestations of void energy that have not yet developed
 into any specific creature type. They are in a state of constant flux,
 their forms cycling rapidly through possible shapes. Despite this
 instability, they are dangerous: their hunger drives them to consume
-any life energy they encounter, and they learn from every attack.~
-16417 0 -550 S
+any life energy they encounter, and they learn from every attack.
+~
+16481 0 -550 S
 153 0
 2500 -55 19 21
 ! 0 0 0 7 2363392 0 0
@@ -1041,14 +1163,16 @@ l 100 730 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #671
 dusk shade twilight form~
-@@ma dusk shade@@n~
-A dusk shade ripples through the half-light here.~
+@@ma dusk shade@@N~
+A dusk shade ripples through the half-light here.
+~
 A variety of shade that exists specifically in transitional light
 conditions - neither fully in darkness nor fully illuminated. It is
 harder to see than other shades and harder to target, flickering
 between perceptibility at the edges of torchlight. It prefers to
-wait until a light source gutters before attacking.~
-16401 66 -500 S
+wait until a light source gutters before attacking.
+~
+16465 66 -500 S
 152 0
 1800 -53 16 18
 ! 0 0 0 7 24578 0 0
@@ -1058,15 +1182,17 @@ l 100 731 674 683 791 0 0 0 0 0
 L 100 17 32 24 0 0 0 0 0 
 #672
 forgotten prisoner undead starved~
-@@da forgotten prisoner@@n~
-A forgotten prisoner rattles its chains weakly here.~
+@@da forgotten prisoner@@N~
+A forgotten prisoner rattles its chains weakly here.
+~
 Something that has been chained in the void-suspension of the Hall of
 Chains for so long that it is no longer quite what it was. The
 void-energy meant to preserve it has instead slowly transformed it.
 The face still shows human features; the rest is something else. It
 does not know it has changed. It still asks, in a barely audible
-voice, for water.~
-16401 0 -500 S
+voice, for water.
+~
+16465 0 -500 S
 151 0
 1200 -50 14 16
 ! 0 0 0 7 0 0 0
@@ -1076,14 +1202,16 @@ l 100 732 795 796 0 0 0 0 0 0
 L 100 35 34 0 0 0 0 0 0 
 #673
 void crab crustacean armored carapace~
-@@ra void crab@@n~
-A void crab side-steps here, claws raised defensively.~
+@@ra void crab@@N~
+A void crab side-steps here, claws raised defensively.
+~
 A crustacean from some planar depth, dragged into Kel'Shadra through
 one of the void-tears in the deeper chambers. Its carapace is made
 of fused void-crystal that absorbs magical damage. The claws are
 disproportionately large and strong; the creature uses them for
-both offense and to close its shell into an impenetrable defense posture.~
-16417 0 -550 S
+both offense and to close its shell into an impenetrable defense posture.
+~
+16481 0 -550 S
 153 0
 2800 -56 20 22
 ! 0 0 0 7 450 0 0
@@ -1093,14 +1221,16 @@ l 100 733 734 721 0 0 0 0 0 0
 L 50 50 26 0 0 0 0 0 0 
 #674
 void moth large insect drain~
-@@ra void moth@@n~
-A void moth circles a light source here, drawn compulsively.~
+@@ra void moth@@N~
+A void moth circles a light source here, drawn compulsively.
+~
 A moth the size of a small bird, its wings dusted with scales of
 crystallized void energy. The wing-dust causes numbness on contact
 and the moth seeks light with single-minded intensity, which means
 it also seeks the life energy of living creatures, which burns
-brighter than any torch in its perception.~
-16417 524288 -500 S
+brighter than any torch in its perception.
+~
+16481 524288 -500 S
 151 0
 1000 -50 13 15
 ! 0 0 0 7 524288 0 0
@@ -1110,15 +1240,17 @@ l 100 735 679 736 0 0 0 0 0 0
 L 100 33 21 0 0 0 0 0 0 
 #675
 dark sentinel construct tower permanent~
-@@ca dark sentinel@@n~
-A dark sentinel stands absolutely still here, attention total.~
+@@ca dark sentinel@@N~
+A dark sentinel stands absolutely still here, attention total.
+~
 The standard permanent guardian construct of Kel'Shadra, these
 featureless pillars of void-stone animate when any unauthorized entity
 enters their defined patrol zone. They cannot be negotiated with,
 do not tire, and return to their stations if driven off rather than
 pursuing. The citadel has hundreds. Many have been active for
-over two centuries without maintenance.~
-16417 0 -550 S
+over two centuries without maintenance.
+~
+16481 0 -550 S
 152 0
 2000 -54 17 19
 ! 0 0 0 7 450 0 0
@@ -1128,14 +1260,16 @@ l 100 736 793 794 0 0 0 0 0 0
 L 100 17 16 0 0 0 0 0 0 
 #676
 void eel serpentine water dark~
-@@ra void eel@@n~
-A void eel slithers across the wet floor here.~
+@@ra void eel@@N~
+A void eel slithers across the wet floor here.
+~
 A long, eel-like creature that moves through void-saturated liquid as
 easily as through air. Found primarily in the Seeping Chamber's
 outflows, it can navigate the thin film of dark fluid on the catacomb
 floors. Its electrical discharge is replaced by a void-energy pulse
-that disrupts the target's connection to normal space briefly.~
-16417 0 -500 S
+that disrupts the target's connection to normal space briefly.
+~
+16481 0 -500 S
 151 0
 1100 -51 14 16
 ! 0 0 0 7 2097152 0 0
@@ -1145,15 +1279,17 @@ l 100 737 690 0 0 0 0 0 0 0
 L 100 22 0 0 0 0 0 0 0 
 #677
 runed knight advanced warrior elite~
-@@ya runed knight@@n~
-@@yA runed knight stands at ready, runes blazing across its armor.@@n~
+@@ya runed knight@@N~
+@@yA runed knight stands at ready, runes blazing across its armor.@@N
+~
 An elite variant of the obsidian knight, the runed knight has been
 further enchanted with active ward-runes that both protect it and
 store offensive power. The runes cycle through colors as they charge
 and discharge. A knight with all runes blazing bright is about to
 release stored energy. A knight with all runes dark has just done so
-and is momentarily more vulnerable.~
-16419 16 -700 S
+and is momentarily more vulnerable.
+~
+33570915 16 -700 S
 160 1
 12000 -66 30 33
 ! 0 0 0 7 26702 0 0
@@ -1163,15 +1299,17 @@ l 100 738 739 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #678
 void oracle seer prophet blind~
-@@pthe Void Oracle@@n~
-The Void Oracle sits here, seeing nothing and everything.~
+@@pthe Void Oracle@@N~
+The Void Oracle sits here, seeing nothing and everything.
+~
 A mortal seer who sought enlightenment within Kel'Shadra and found it,
 at terrible cost. The Oracle perceives all possible futures and presents
 simultaneously, which has rendered it cataleptic - but it will answer
 questions, spoken aloud, with truths pulled from across time. Its
 answers are accurate but expressed in terms of what will happen rather
-than what should be done. It is not evil. It is simply outside time.~
-16449 512 -750 S
+than what should be done. It is not evil. It is simply outside time.
+~
+67125315 512 -750 S
 163 0
 20000 -70 28 30
 ! 0 0 0 7 0 40894464 0
@@ -1181,14 +1319,16 @@ l 100 740 741 742 638 640 695 784 788 798
 L 40 35 25 24 17 22 18 27 23 
 #679
 memory eater psychic horror void~
-@@Ba memory eater@@n~
-A memory eater approaches with a sound like rustling paper.~
+@@Ba memory eater@@N~
+A memory eater approaches with a sound like rustling paper.
+~
 An entity that feeds specifically on memories rather than life force.
 Victims of a memory eater's attack do not feel pain - they feel the
 specific absence of something they cannot name, and only realize what
 was taken when they reach for a memory and find nothing there. The
-creature finds recent, vivid memories most nutritious.~
-16401 66 -700 S
+creature finds recent, vivid memories most nutritious.
+~
+16465 66 -700 S
 160 0
 9000 -64 26 28
 ! 0 0 0 7 24578 0 0
@@ -1198,14 +1338,16 @@ l 100 743 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #680
 bone sculptor artisan undead artist~
-@@ythe Bone Sculptor@@n~
-@@yThe Bone Sculptor works here, assembling something from remains.@@n~
+@@ythe Bone Sculptor@@N~
+@@yThe Bone Sculptor works here, assembling something from remains.@@N
+~
 An undead artisan who has been crafting sculptures from the bones of
 the catacomb's occupants for longer than anyone can accurately determine.
 The sculptures are extraordinary works of dark art. The Sculptor resents
 interruption to its work and will defend the pieces it considers
-complete with fierce protectiveness. It has no other values or concerns.~
-16403 16 -650 S
+complete with fierce protectiveness. It has no other values or concerns.
+~
+67125331 16 -650 S
 158 1
 12000 -65 28 30
 ! 0 0 0 7 16582 0 0
@@ -1215,15 +1357,17 @@ l 100 744 745 725 0 0 0 0 0 0
 L 50 50 29 0 0 0 0 0 0 
 #681
 void monk ascetic meditating dark~
-@@Ba void monk@@n~
-A void monk sits in motionless meditation here.~
+@@Ba void monk@@N~
+A void monk sits in motionless meditation here.
+~
 A practitioner of a martial philosophy that seeks enlightenment through
 mastery of void energy rather than through more conventional paths.
 Void monks are not affiliated with Kel'Shadra in the way its servants
 are; they simply find the citadel's ambient void concentration useful
 for their practice. They will fight any intruder without hesitation but
-do so with detached professionalism.~
-16417 16 -650 S
+do so with detached professionalism.
+~
+16481 16 -650 S
 157 0
 7000 -62 26 28
 ! 0 0 0 7 26702 0 0
@@ -1233,14 +1377,16 @@ l 100 746 747 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #682
 voidfire elemental flame dark cold~
-@@ea voidfire elemental@@n~
-A voidfire elemental burns here, its flame radiating cold.~
+@@ea voidfire elemental@@N~
+A voidfire elemental burns here, its flame radiating cold.
+~
 The void's inversion of natural fire: a flame that generates intense
 cold rather than heat. Voidfire can burn through most materials but
 does not spread by normal means. It can only ignite other void-infused
 substances. The elemental maintains itself by consuming the void energy
-saturating the citadel's walls, of which there is essentially no limit.~
-16417 0 -650 S
+saturating the citadel's walls, of which there is essentially no limit.
+~
+16481 0 -650 S
 158 0
 6500 -62 24 26
 ! 0 0 0 7 2363392 0 0
@@ -1250,14 +1396,16 @@ l 100 748 749 705 730 0 0 0 0 0
 L 50 50 35 26 0 0 0 0 0 
 #683
 echo knight duplicate replica warrior~
-@@can echo knight@@n~
-An echo knight steps from the wall here, a perfect copy.~
+@@can echo knight@@N~
+An echo knight steps from the wall here, a perfect copy.
+~
 An echo of a warrior who fought in this corridor recorded by the void-
 mirrors and given autonomous form. The echo knight has all the skill of
 the original fighter but none of their personality, values, or hesitation.
 It is a combat subroutine made flesh, endlessly repeating the fight that
-created it, adapted to its current opponent.~
-16417 16 -650 S
+created it, adapted to its current opponent.
+~
+16481 16 -650 S
 157 0
 6000 -61 24 26
 ! 0 0 0 7 26702 0 0
@@ -1268,13 +1416,15 @@ L 50 50 20 26 26 21 23 0 0
 #684
 dark familiar bound small servant~
 a dark familiar~
-A dark familiar perches here, waiting for its master.~
+A dark familiar perches here, waiting for its master.
+~
 A small void-entity bound to serve a mortal practitioner of dark magic.
 The familiar is separated from its master - either the master is dead
 or the bond has frayed from disuse. Unbound familiars are dangerous
 because they retain their intelligence and void capabilities but have
-no moderating influence. This one is hungry and resentful.~
-16417 0 -500 S
+no moderating influence. This one is hungry and resentful.
+~
+16481 0 -500 S
 151 0
 1500 -52 15 17
 ! 0 0 0 7 2363392 0 0
@@ -1284,15 +1434,17 @@ l 100 752 787 0 0 0 0 0 0 0
 L 100 35 0 0 0 0 0 0 0 
 #685
 void strider long-legged hunter~
-@@ma void strider@@n~
-A void strider picks its way through here on impossibly long legs.~
+@@ma void strider@@N~
+A void strider picks its way through here on impossibly long legs.
+~
 A predator from the void planes, accidentally drawn through during
 one of the spire's earlier experiments. Resembling a spider's body
 mounted on the legs of a heron, six feet tall with a reach of fifteen,
 the void strider hunts by ambush, preferring to strike from above or
 from around corners. Its body is minimally substantial - attacks that
-should connect sometimes pass through.~
-16417 0 -600 S
+should connect sometimes pass through.
+~
+16481 0 -600 S
 155 0
 3500 -58 21 23
 ! 0 0 0 7 2363392 0 0
@@ -1302,13 +1454,15 @@ l 100 753 754 684 696 697 799 702 0 0
 L 50 50 17 34 35 20 32 0 0 
 #686
 whisper entity autonomous sound corridor~
-@@ca whisper entity@@n~
-A whisper entity surrounds you with voices that mean something almost.~
+@@ca whisper entity@@N~
+A whisper entity surrounds you with voices that mean something almost.
+~
 A being made entirely of sound: specifically of the half-heard whispers
 that fill the Eternal Corridors. It is dozens of voices that have coalesced
 into a single entity over the centuries. It communicates in overlapping
 fragments of many conversations and attacks by overwhelming the target's
-perception with direct sound that bypasses the ears entirely.~
+perception with direct sound that bypasses the ears entirely.
+~
 16449 66 -600 S
 155 0
 3500 -58 20 22
@@ -1319,15 +1473,17 @@ l 100 755 0 0 0 0 0 0 0 0
 L 100 0 0 0 0 0 0 0 0 
 #687
 void stag beast creature dark~
-@@ma void stag@@n~
-A void stag stands motionless here, antlers crackling darkly.~
+@@ma void stag@@N~
+A void stag stands motionless here, antlers crackling darkly.
+~
 A stag whose form has been completely overtaken by void energy,
 transforming it from an ordinary animal into something magnificent
 and terrible. Its antlers are solid void-crystal and can conduct
 immense magical force. When threatened it charges with the full mass
 of a large deer amplified by void energy - most obstacles simply cease
-to be obstacles.~
-16417 524288 -600 S
+to be obstacles.
+~
+16481 524288 -600 S
 155 0
 4000 -59 22 24
 ! 0 0 0 7 2363398 0 0
@@ -1337,14 +1493,16 @@ l 100 756 757 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #688
 night horror predator hunting dark~
-@@da night horror@@n~
-A night horror moves here, body absorbing all light.~
+@@da night horror@@N~
+A night horror moves here, body absorbing all light.
+~
 A predator evolved in absolute void-darkness, its body biologically
 designed to suppress all light in its immediate vicinity. Being near
 a night horror is like being suddenly and completely blind. It navigates
 by senses other than vision and uses the darkness it creates as both
-camouflage and psychological weapon.~
-16417 0 -700 S
+camouflage and psychological weapon.
+~
+16481 0 -700 S
 159 0
 11000 -65 28 30
 ! 0 0 0 7 2363392 0 0
@@ -1354,15 +1512,17 @@ l 100 758 759 727 728 746 747 724 743 0
 L 50 50 22 20 29 27 23 35 0 
 #689
 void cultist fanatic zealot extreme~
-@@Ra void zealot@@n~
-A void zealot charges forward, screaming devotion.~
+@@Ra void zealot@@N~
+A void zealot charges forward, screaming devotion.
+~
 Unlike the corrupted cultists who serve out of twisted obligation,
 the void zealot has embraced their transformation entirely and pursues
 it willingly. Their corruption is more advanced and self-directed;
 they actively accelerate their own consumption by void energy because
 they find it ecstatic. They feel no pain and welcome damage as
-proof of their devotion.~
-16417 512 -650 S
+proof of their devotion.
+~
+16481 512 -650 S
 157 0
 7000 -62 25 27
 ! 0 0 0 7 0 26 0
@@ -1372,15 +1532,17 @@ l 100 760 761 738 739 0 0 0 0 0
 L 50 50 32 22 0 0 0 0 0 
 #690
 time-locked guardian stasis preserved ancient~
-@@ca time-locked guardian@@n~
-A time-locked guardian moves here in stuttering, frozen intervals.~
+@@ca time-locked guardian@@N~
+A time-locked guardian moves here in stuttering, frozen intervals.
+~
 A guardian that was caught in a time-stasis effect during one of the
 spire's experiments and never fully released. It moves in discrete
 frames, jumping from one position to the next with no visible
 transition. The effect makes it nearly impossible to predict or
 track. Each frame it occupies it is fully present and fully capable
-of acting.~
-16417 16 -700 S
+of acting.
+~
+16481 16 -700 S
 160 0
 11000 -65 28 30
 ! 0 0 0 7 450 0 0
@@ -1390,14 +1552,16 @@ l 100 762 763 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #691
 sanctum templar defender elite dark~
-@@ya sanctum templar@@n~
-@@yA sanctum templar stands at immaculate attention here.@@n~
+@@ya sanctum templar@@N~
+@@yA sanctum templar stands at immaculate attention here.@@N
+~
 The elite guard of Kel'Shadra's inner sanctum, templars are selected
 from the best warriors the entity has consumed and rebuilt. They retain
 their martial personality and skill but serve the entity with absolute
 loyalty that was not present in their original character. Fighting a
-templar is fighting someone's excellence extracted and weaponized.~
-16419 16 -800 S
+templar is fighting someone's excellence extracted and weaponized.
+~
+33570915 16 -800 S
 165 1
 18000 -70 35 38
 ! 0 0 0 7 26702 0 0
@@ -1407,15 +1571,17 @@ l 100 764 765 716 717 783 790 0 0 0
 L 50 50 25 16 22 16 0 0 0 
 #692
 void conjurer summoner dark mage high~
-@@Ra void conjurer@@n~
-A void conjurer opens rifts in the air with casual expertise.~
+@@Ra void conjurer@@N~
+A void conjurer opens rifts in the air with casual expertise.
+~
 A step above the voidcaller in mastery and ambition, the void conjurer
 can open stable rifts to the void plane and pull entities through at
 will. The rifts are small and the entities relatively minor, but the
 conjurer can maintain several simultaneously, making combat a many-
 front engagement. Their void-warped form shows a skeleton partially
-made of crystallized darkness.~
-16449 512 -800 S
+made of crystallized darkness.
+~
+33570881 512 -800 S
 165 0
 22000 -72 32 34
 ! 0 0 0 7 0 7343520 0
@@ -1425,15 +1591,17 @@ l 100 766 767 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #693
 revenant commander warlord dark undead~
-@@ya revenant commander@@n~
-@@yA revenant commander marshals invisible forces here.@@n~
+@@ya revenant commander@@N~
+@@yA revenant commander marshals invisible forces here.@@N
+~
 The rank between the hollow revenant and the Shadowlord Commander: a
 dead warlord reanimated with enough void energy to retain their
 strategic mind. It treats combat as a campaign problem rather than a
 personal contest - it will retreat, reposition, and call for support
 rather than stand and trade blows. It has a warlord's understanding
-of attrition.~
-16403 16 -750 S
+of attrition.
+~
+67125331 16 -750 S
 163 1
 16000 -68 32 35
 ! 0 0 0 7 1699838 0 0
@@ -1443,16 +1611,18 @@ l 100 768 769 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #694
 deep guardian massive ancient immovable~
-@@ya deep guardian@@n~
-@@yA deep guardian looms here, nearly filling the passage.@@n~
+@@ya deep guardian@@N~
+@@yA deep guardian looms here, nearly filling the passage.@@N
+~
 The oldest and largest of Kel'Shadra's guardian constructs, the deep
 guardians were placed in the lowest accessible passages when the
 citadel was first established. They have not been maintained; the
 void energy that powers them has warped them into something more
 organic and more terrible than what they began as. They have developed
 rudimentary self-will. They have decided they want to stay exactly
-where they are.~
-16419 0 -850 S
+where they are.
+~
+67125347 0 -850 S
 167 1
 35000 -100 40 44
 ! 0 0 0 7 450 0 0
@@ -1462,15 +1632,17 @@ l 100 770 771 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #695
 void harbinger herald dark powerful~
-@@ma void harbinger@@n~
-A void harbinger walks here, reality flinching from its passage.~
+@@ma void harbinger@@N~
+A void harbinger walks here, reality flinching from its passage.
+~
 A being of such concentrated void essence that its presence alone
 causes measurable physical effects: temperature drops, light dims,
 surfaces vibrate at subsonic frequencies. The harbinger is not quite
 alive in any recognizable sense - it is void energy in a form just
 stable enough to act. What little will it possesses points entirely
-toward returning all things to void.~
-16417 0 -850 S
+toward returning all things to void.
+~
+16481 0 -850 S
 167 0
 30000 -74 38 42
 ! 0 0 0 7 4194302 0 0
@@ -1480,15 +1652,17 @@ l 100 772 773 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #696
 essence devourer soul drain undead~
-@@man essence devourer@@n~
-An essence devourer drifts here, pulling toward life.~
+@@man essence devourer@@N~
+An essence devourer drifts here, pulling toward life.
+~
 An undead entity that has evolved beyond its original state through
 centuries of soul-consumption within Kel'Shadra. Where lesser undead
 drain small amounts of life force, the essence devourer can strip a
 soul in moments. Its victims do not die - they simply stop being
 anyone. The empty body continues to function biologically for a short
-time before failing.~
-16401 66 -800 S
+time before failing.
+~
+16465 66 -800 S
 165 0
 25000 -72 35 38
 ! 0 0 0 7 0 581632 0
@@ -1498,15 +1672,17 @@ l 100 774 775 764 765 0 0 0 0 0
 L 50 50 25 27 0 0 0 0 0 
 #697
 grand overseer supervisor administrator void~
-@@ythe Grand Overseer@@n~
-@@yThe Grand Overseer reviews scrolls here with meticulous attention.@@n~
+@@ythe Grand Overseer@@N~
+@@yThe Grand Overseer reviews scrolls here with meticulous attention.@@N
+~
 The administrative entity responsible for the day-to-day operation of
 the entire citadel complex - managing the undead workforce, scheduling
 maintenance rituals, tracking prisoner status, and reporting to the
 entity itself. It is not a fighter but can summon any guardian or
 servant in the citadel with a command word. Practically speaking, it
-can make the entire citadel respond to an intrusion simultaneously.~
-16451 512 -800 S
+can make the entire citadel respond to an intrusion simultaneously.
+~
+67125315 512 -800 S
 166 1
 28000 -73 32 35
 ! 0 0 0 7 0 9437184 0
@@ -1516,15 +1692,17 @@ l 100 776 777 778 766 767 0 0 0 0
 L 40 35 25 23 17 0 0 0 0 
 #698
 shattered construct broken autonomous~
-@@ca shattered construct@@n~
-A shattered construct drags itself here on mismatched limbs.~
+@@ca shattered construct@@N~
+A shattered construct drags itself here on mismatched limbs.
+~
 A guardian that has been partially destroyed at some point and
 continues to function despite missing critical components. Its
 behavior is erratic from the damaged control matrix: it still
 follows old patrol routes but adds unpredictable detours. The
 damage has also removed whatever safety limiters it originally
-had, making its attacks more extreme.~
-16417 0 -600 S
+had, making its attacks more extreme.
+~
+16481 0 -600 S
 155 0
 4000 -58 22 24
 ! 0 0 0 7 450 0 0
@@ -1534,15 +1712,17 @@ l 100 779 780 0 0 0 0 0 0 0
 L 50 50 0 0 0 0 0 0 0 
 #699
 void incarnate fragment shard kel'shadra projection~
-@@pa fragment of the Void Incarnate@@n~
-A fragment of the Void Incarnate drifts here in distorted space.~
+@@pa fragment of the Void Incarnate@@N~
+A fragment of the Void Incarnate drifts here in distorted space.
+~
 A minor manifestation of the entity's consciousness, shed through
 one of the cracks in the binding circle. Not remotely comparable to
 the entity itself, but carrying a fraction of its power and something
 of its personality. It is curious rather than aggressive, studying
 you as its parent studies you - but will defend itself with
-disproportionate force if threatened.~
-16417 0 -900 S
+disproportionate force if threatened.
+~
+16481 0 -900 S
 168 0
 40000 -80 42 46
 ! 0 0 0 7 4194302 40894464 0
@@ -1554,7 +1734,7 @@ L 50 50 0 0 0 0 0 0 0
 #OBJECTS
 #610
 void shard orb~
-@@ca shard of void@@n~
+@@ca shard of void@@N~
 A shard of pure void energy rests here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -1563,7 +1743,7 @@ L
 150
 #611
 shadowed amulet void~
-@@ca shadowed amulet@@n~
+@@ca shadowed amulet@@N~
 A shadowed amulet lies here, pulsing faintly.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -1572,7 +1752,7 @@ L
 150
 #612
 crackling wand void energy~
-@@ea crackling void wand@@n~
+@@ea crackling void wand@@N~
 A crackling wand of void energy lies here.~
 5 738197504 8421376 0
 0 5 10 4 0 0 0 0 0 0
@@ -1581,7 +1761,7 @@ L
 150
 #613
 void-touched pauldrons shoulders~
-@@cvoid-touched pauldrons@@n~
+@@cvoid-touched pauldrons@@N~
 A pair of void-touched pauldrons lie here.~
 9 201326592 8389120 0
 0 0 0 0 0 0 0 0 0 0
@@ -1590,7 +1770,7 @@ L
 150
 #614
 dark runestone pendant~
-@@ca dark runestone pendant@@n~
+@@ca dark runestone pendant@@N~
 A dark runestone pendant rests here, humming softly.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -1599,7 +1779,7 @@ L
 150
 #615
 void-touched bracer wrist~
-@@ca void-touched bracer@@n~
+@@ca void-touched bracer@@N~
 A void-touched bracer lies here.~
 9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
@@ -1608,7 +1788,7 @@ L
 150
 #616
 obsidian blade sword dark~
-@@ean obsidian blade@@n~
+@@ean obsidian blade@@N~
 An obsidian blade rests here, edge unnaturally sharp.~
 5 201326592 8421376 0
 0 8 14 2 0 0 0 0 0 0
@@ -1617,7 +1797,7 @@ L
 150
 #617
 shadowbound mace crush~
-@@ea shadowbound mace@@n~
+@@ea shadowbound mace@@N~
 A shadowbound mace lies here, radiating cold.~
 5 201326592 8421376 0
 0 8 14 1 0 0 0 0 0 0
@@ -1626,7 +1806,7 @@ L
 150
 #618
 void-forged chainmail body armor~
-@@cvoid-forged chainmail@@n~
+@@cvoid-forged chainmail@@N~
 A set of void-forged chainmail lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -1635,7 +1815,7 @@ L
 150
 #619
 serrated void-dagger dagger pierce~
-@@ea serrated void-dagger@@n~
+@@ea serrated void-dagger@@N~
 A serrated void-dagger lies here, gleaming darkly.~
 5 201326592 8421376 0
 0 7 12 3 0 0 0 0 0 0
@@ -1644,7 +1824,7 @@ L
 150
 #620
 shadowsteel vambraces arms armor~
-@@cshadowsteel vambraces@@n~
+@@cshadowsteel vambraces@@N~
 A pair of shadowsteel vambraces lies here.~
 9 201326592 8389632 0
 0 0 0 0 0 0 0 0 0 0
@@ -1653,7 +1833,7 @@ L
 150
 #621
 greatblade two-handed dark sword~
-@@ea dark greatblade@@n~
+@@ea dark greatblade@@N~
 A dark greatblade lies here, humming with menace.~
 5 -1946157056 8454144 0
 0 10 18 2 0 0 0 0 0 0
@@ -1662,7 +1842,7 @@ L
 150
 #622
 shadowforged gauntlets hands armor~
-@@cshadowforged gauntlets@@n~
+@@cshadowforged gauntlets@@N~
 A pair of shadowforged gauntlets lies here.~
 9 201326592 8392704 0
 0 0 0 0 0 0 0 0 0 0
@@ -1671,7 +1851,7 @@ L
 150
 #623
 black iron platemail body armor~
-@@cblack iron platemail@@n~
+@@cblack iron platemail@@N~
 A suit of black iron platemail lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -1680,7 +1860,7 @@ L
 150
 #624
 void sentinel helm helmet head~
-@@ca void sentinel helm@@n~
+@@ca void sentinel helm@@N~
 A void sentinel helm lies here.~
 9 201326592 8388616 0
 0 0 0 0 0 0 0 0 0 0
@@ -1689,7 +1869,7 @@ L
 150
 #625
 dusksteel buckler shield~
-@@ca dusksteel buckler@@n~
+@@ca dusksteel buckler@@N~
 A dusksteel buckler lies here.~
 9 469762048 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -1698,7 +1878,7 @@ L
 150
 #626
 void-forged greaves legs armor~
-@@cvoid-forged greaves@@n~
+@@cvoid-forged greaves@@N~
 A pair of void-forged greaves lies here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -1707,7 +1887,7 @@ L
 150
 #627
 cloak void shadow about~
-@@ca cloak of shadows@@n~
+@@ca cloak of shadows@@N~
 A cloak of shadows lies here, darkness swirling within it.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -1716,7 +1896,7 @@ L
 150
 #628
 abyssal sabatons boots feet armor~
-@@cabyssal sabatons@@n~
+@@cabyssal sabatons@@N~
 A pair of abyssal sabatons lies here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -1725,7 +1905,7 @@ L
 150
 #629
 obsidian girdle waist armor~
-@@can obsidian girdle@@n~
+@@can obsidian girdle@@N~
 An obsidian girdle lies here.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -1734,7 +1914,7 @@ L
 150
 #630
 nightshade kite shield buckler~
-@@ca nightshade kite shield@@n~
+@@ca nightshade kite shield@@N~
 A nightshade kite shield lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -1743,7 +1923,7 @@ L
 150
 #631
 voidcleaver axe chop~
-@@ea voidcleaver axe@@n~
+@@ea voidcleaver axe@@N~
 A massive voidcleaver axe lies here.~
 5 -1946157056 8454144 0
 0 12 20 3 0 0 0 0 0 0
@@ -1752,7 +1932,7 @@ L
 150
 #632
 shadow-etched ring signet void finger~
-@@ca shadow-etched signet ring@@n~
+@@ca shadow-etched signet ring@@N~
 A shadow-etched signet ring lies here.~
 9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
@@ -1761,7 +1941,7 @@ L
 150
 #633
 void-touched earring ear dark~
-@@ca void-touched earring@@n~
+@@ca void-touched earring@@N~
 A void-touched earring rests here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -1770,7 +1950,7 @@ L
 150
 #634
 black plate vambraces arms armor~
-@@cblack plate vambraces@@n~
+@@cblack plate vambraces@@N~
 A pair of black plate vambraces lies here.~
 9 201326592 8389632 0
 0 0 0 0 0 0 0 0 0 0
@@ -1779,7 +1959,7 @@ L
 150
 #635
 faceguard dark visor face void~
-@@ca dark faceguard@@n~
+@@ca dark faceguard@@N~
 A dark faceguard lies here.~
 9 201326592 8388624 0
 0 0 0 0 0 0 0 0 0 0
@@ -1788,7 +1968,7 @@ L
 150
 #636
 shadow-chain leggings legs armor~
-@@cshade-chain leggings@@n~
+@@cshade-chain leggings@@N~
 Shadow-chain leggings lie here.~
 9 201326592 9437184 0
 0 0 0 0 0 0 0 0 0 0
@@ -1797,7 +1977,7 @@ L
 150
 #637
 abyssal chain coif head helm~
-@@can abyssal chain coif@@n~
+@@can abyssal chain coif@@N~
 An abyssal chain coif lies here.~
 9 201326592 8388616 0
 0 0 0 0 0 0 0 0 0 0
@@ -1806,7 +1986,7 @@ L
 150
 #638
 void-steel pauldrons shoulders dark~
-@@cvoid-steel pauldrons@@n~
+@@cvoid-steel pauldrons@@N~
 Void-steel pauldrons lie here.~
 9 201326592 8389120 0
 0 0 0 0 0 0 0 0 0 0
@@ -1815,7 +1995,7 @@ L
 150
 #639
 shadowsteel greaves feet boots~
-@@cshadowsteel greaves@@n~
+@@cshadowsteel greaves@@N~
 Shadowsteel greaves lie here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -1824,7 +2004,7 @@ L
 150
 #640
 void chain hauberk body armor~
-@@ca void chain hauberk@@n~
+@@ca void chain hauberk@@N~
 A void chain hauberk lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -1833,7 +2013,7 @@ L
 150
 #641
 night girdle waist void leather~
-@@ca night girdle@@n~
+@@ca night girdle@@N~
 A night girdle lies here.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -1842,7 +2022,7 @@ L
 150
 #642
 shadow cloak billowing about dark~
-@@ca billowing shadow cloak@@n~
+@@ca billowing shadow cloak@@N~
 A billowing shadow cloak lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -1851,7 +2031,7 @@ L
 150
 #643
 void-crystal wristguard wrist brace~
-@@ca void-crystal wristguard@@n~
+@@ca void-crystal wristguard@@N~
 A void-crystal wristguard lies here.~
 9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
@@ -1860,7 +2040,7 @@ L
 150
 #644
 abyssal gauntlets hands void armor~
-@@cabyssal gauntlets@@n~
+@@cabyssal gauntlets@@N~
 Abyssal gauntlets lie here.~
 9 201326592 8392704 0
 0 0 0 0 0 0 0 0 0 0
@@ -1869,7 +2049,7 @@ L
 150
 #645
 dark pendant void power neck~
-@@ca dark void pendant@@n~
+@@ca dark void pendant@@N~
 A dark void pendant hangs here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -1878,7 +2058,7 @@ L
 150
 #646
 void-flail heavy weapon mace~
-@@ca heavy void flail@@n~
+@@ca heavy void flail@@N~
 A heavy void flail lies here.~
 5 201326592 8421376 0
 0 9 16 7 0 0 0 0 0 0
@@ -1887,7 +2067,7 @@ L
 150
 #647
 shadow lance spear void pierce~
-@@ca shadow lance@@n~
+@@ca shadow lance@@N~
 A shadow lance lies here.~
 5 201326592 8421376 0
 0 10 18 11 0 0 0 0 0 0
@@ -1896,7 +2076,7 @@ L
 150
 #648
 voidsteel shortsword stab pierce~
-@@ca voidsteel shortsword@@n~
+@@ca voidsteel shortsword@@N~
 A voidsteel shortsword lies here.~
 5 201326592 8421376 0
 0 8 14 2 0 0 0 0 0 0
@@ -1905,7 +2085,7 @@ L
 150
 #649
 nightsteel buckler shield hold~
-@@ca nightsteel buckler@@n~
+@@ca nightsteel buckler@@N~
 A nightsteel buckler lies here.~
 9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -1914,7 +2094,7 @@ L
 150
 #650
 shadow-infused ring void dark~
-@@ca shadow-infused ring@@n~
+@@ca shadow-infused ring@@N~
 A shadow-infused ring rests here.~
 9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
@@ -1923,7 +2103,7 @@ L
 150
 #651
 dark wand sorcery void caster~
-@@ea dark void wand@@n~
+@@ea dark void wand@@N~
 A dark void wand lies here.~
 5 738197504 8421376 0
 0 6 12 6 0 0 0 0 0 0
@@ -1932,7 +2112,7 @@ L
 150
 #652
 storm-wracked shoulders pauldrons armor~
-@@cstorm-wracked pauldrons@@n~
+@@cstorm-wracked pauldrons@@N~
 Storm-wracked pauldrons lie here, crackling faintly.~
 9 201326592 8389120 0
 0 0 0 0 0 0 0 0 0 0
@@ -1941,7 +2121,7 @@ L
 150
 #653
 golem-core energy sphere orb~
-@@ca golem core@@n~
+@@ca golem core@@N~
 A pulsing golem core lies here, still active.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -1950,7 +2130,7 @@ L
 150
 #654
 rune-etched tower shield buckler~
-@@ca rune-etched tower shield@@n~
+@@ca rune-etched tower shield@@N~
 A rune-etched tower shield lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -1959,7 +2139,7 @@ L
 150
 #655
 wanderer's medallion pendant neck~
-@@ca wanderer's medallion@@n~
+@@ca wanderer's medallion@@N~
 A worn medallion lies here, its face worn smooth.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -1968,7 +2148,7 @@ L
 150
 #656
 corridor-dust boots feet leather~
-@@ccorridor-dust boots@@n~
+@@ccorridor-dust boots@@N~
 A pair of boots caked in pale dust lie here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -1977,7 +2157,7 @@ L
 150
 #657
 architect's measuring rod staff weapon~
-@@ythe Architect's Rod@@n~
+@@ythe Architect's Rod@@N~
 A slender measuring rod of void-metal lies here.~
 5 738197504 8421376 0
 0 7 13 1 0 0 0 0 0 0
@@ -1986,7 +2166,7 @@ L
 150
 #658
 shifting belt waist armor corridor~
-@@ca shifting belt@@n~
+@@ca shifting belt@@N~
 A belt that seems to change shape lies here.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -1995,7 +2175,7 @@ L
 150
 #659
 necromancer's skull head trophy~
-@@ca necromancer's skull@@n~
+@@ca necromancer's skull@@N~
 A skull crackling with dark energy lies here.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
@@ -2004,7 +2184,7 @@ L
 150
 #660
 tome death void dark book~
-@@ca tome of the void dead@@n~
+@@ca tome of the void dead@@N~
 A dread tome lies here, its pages moving without wind.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
@@ -2013,7 +2193,7 @@ L
 150
 #661
 catacomb lord crown helm head boss~
-@@ythe Crown of the Catacomb Lord@@n~
+@@ythe Crown of the Catacomb Lord@@N~
 The Crown of the Catacomb Lord lies here, radiating death.~
 9 201326592 8388616 0
 0 0 0 0 0 0 0 0 0 0
@@ -2022,7 +2202,7 @@ L
 150
 #662
 spire architect core orb boss~
-@@ythe Spire Architect's Core@@n~
+@@ythe Spire Architect's Core@@N~
 The Spire Architect's Core lies here, pulsing erratically.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
@@ -2031,7 +2211,7 @@ L
 150
 #663
 arcane-void staff boss weapon~
-@@ethe Staff of Shattered Arcana@@n~
+@@ethe Staff of Shattered Arcana@@N~
 The Staff of Shattered Arcana lies here.~
 5 738197504 8421376 0
 0 12 20 1 0 0 0 0 0 0
@@ -2040,7 +2220,7 @@ L
 150
 #664
 architect robe boss body armor~
-@@ythe Architect's Robe@@n~
+@@ythe Architect's Robe@@N~
 The Architect's Robe lies here, runes shifting across its surface.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2049,7 +2229,7 @@ L
 150
 #665
 warden key eternal corridor~
-@@ythe Warden's Key@@n~
+@@ythe Warden's Key@@N~
 A massive iron key pulses with contained void energy here.~
 18 0 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -2058,7 +2238,7 @@ L
 1
 #666
 corridor warden sword boss weapon~
-@@ythe Warden's Blade@@n~
+@@ythe Warden's Blade@@N~
 The Warden's Blade lies here, impossibly long.~
 5 201326592 8421376 0
 0 13 22 2 0 0 0 0 0 0
@@ -2067,7 +2247,7 @@ L
 150
 #667
 warden armor body boss plate~
-@@ythe Warden's Plate@@n~
+@@ythe Warden's Plate@@N~
 The Warden's Plate lies here, still warm from battle.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2076,7 +2256,7 @@ L
 150
 #668
 warden shield boss buckler~
-@@ythe Warden's Shield@@n~
+@@ythe Warden's Shield@@N~
 The Warden's Shield lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2085,7 +2265,7 @@ L
 1
 #669
 herald sword void keen boss~
-@@ythe Herald's Void-Keen Sword@@n~
+@@ythe Herald's Void-Keen Sword@@N~
 The Herald's Void-Keen Sword lies here, still humming.~
 5 201326592 8421376 0
 0 14 22 2 0 0 0 0 0 0
@@ -2094,7 +2274,7 @@ L
 150
 #670
 herald armor boss plate dark~
-@@ythe Herald's Dark Plate@@n~
+@@ythe Herald's Dark Plate@@N~
 The Herald's Dark Plate lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2103,7 +2283,7 @@ L
 150
 #671
 herald ring boss finger void~
-@@ythe Herald's Signet Ring@@n~
+@@ythe Herald's Signet Ring@@N~
 The Herald's Signet Ring lies here.~
 9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
@@ -2112,7 +2292,7 @@ L
 150
 #672
 herald cloak about boss shadow~
-@@ythe Herald's Shadow Cloak@@n~
+@@ythe Herald's Shadow Cloak@@N~
 The Herald's Shadow Cloak lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -2121,7 +2301,7 @@ L
 150
 #673
 drowned spirit essence flask~
-@@ca flask of drowned essence@@n~
+@@ca flask of drowned essence@@N~
 A flask of dark, weeping liquid rests here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2130,7 +2310,7 @@ L
 150
 #674
 charred bone fragment relic~
-@@ca charred bone fragment@@n~
+@@ca charred bone fragment@@N~
 A charred bone fragment lies here, still warm.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -2139,7 +2319,7 @@ L
 150
 #675
 shadow-silk wristband bracer wrist~
-@@ca shadow-silk wristband@@n~
+@@ca shadow-silk wristband@@N~
 A delicate shadow-silk wristband lies here.~
 9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
@@ -2148,7 +2328,7 @@ L
 150
 #676
 void-rat fang trophy tooth~
-@@ca void-rat fang@@n~
+@@ca void-rat fang@@N~
 A curved void-rat fang lies here.~
 9 201326592 8388640 0
 0 0 0 0 0 0 0 0 0 0
@@ -2157,7 +2337,7 @@ L
 150
 #677
 wisp-core lantern light magic~
-@@ca wisp-core lantern@@n~
+@@ca wisp-core lantern@@N~
 A wisp-core lantern glows with cold shadow-light.~
 1 0 8421376 0
 0 0 -1 0 0 0 0 0 0 0
@@ -2166,7 +2346,7 @@ L
 150
 #678
 shadow-weave vest body light armor~
-@@ca shadow-weave vest@@n~
+@@ca shadow-weave vest@@N~
 A shadow-weave vest lies here, barely visible.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2175,7 +2355,7 @@ L
 150
 #679
 spider-silk sash waist dark~
-@@ca spider-silk sash@@n~
+@@ca spider-silk sash@@N~
 A spider-silk sash lies here, faintly adhesive.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -2184,7 +2364,7 @@ L
 150
 #680
 flayed-skin pouch container bag~
-@@ba flayed-skin pouch@@n~
+@@ba flayed-skin pouch@@N~
 A pouch of unsettling material lies here.~
 15 67108864 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -2193,7 +2373,7 @@ L
 150
 #681
 beetle-chitin buckler shield~
-@@ca beetle-chitin buckler@@n~
+@@ca beetle-chitin buckler@@N~
 A buckler made of fused void-beetle chitin lies here.~
 9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2202,7 +2382,7 @@ L
 150
 #682
 banshee-wail vial potion scream~
-@@ca vial of banshee wail@@n~
+@@ca vial of banshee wail@@N~
 A stoppered vial from which thin screams escape lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2220,7 +2400,7 @@ L
 150
 #684
 fossil-knuckles fist weapon punch~
-@@efossil knuckledusters@@n~
+@@efossil knuckledusters@@N~
 A pair of fossil-hard knuckledusters lies here.~
 5 201326592 8421376 0
 0 6 10 0 0 0 0 0 0 0
@@ -2229,7 +2409,7 @@ L
 150
 #685
 apprentice staff void mage weapon~
-@@ean apprentice's staff@@n~
+@@ean apprentice's staff@@N~
 A hastily-carved apprentice staff lies here.~
 5 738197504 8421376 0
 0 5 9 4 0 0 0 0 0 0
@@ -2238,7 +2418,7 @@ L
 150
 #686
 preserved champion bracers arms wrist~
-@@cpreserved champion's bracers@@n~
+@@cpreserved champion's bracers@@N~
 Champion's bracers still bearing void preservation lie here.~
 9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
@@ -2247,7 +2427,7 @@ L
 150
 #687
 champion gauntlets hands preserved~
-@@cpreserved gauntlets@@n~
+@@cpreserved gauntlets@@N~
 A set of preserved gauntlets lies here, fingers still curled.~
 9 201326592 8392704 0
 0 0 0 0 0 0 0 0 0 0
@@ -2256,7 +2436,7 @@ L
 150
 #688
 rat king crown helm title~
-@@ythe Rat King's Crown@@n~
+@@ythe Rat King's Crown@@N~
 A tiny crown of twisted wire and bone rests here.~
 9 201326592 8388616 0
 0 0 0 0 0 0 0 0 0 0
@@ -2265,7 +2445,7 @@ L
 150
 #689
 rat king tail trophy disgusting~
-@@ythe Rat King's tail@@n~
+@@ythe Rat King's tail@@N~
 The severed tail of the Rat King lies here, still twitching.~
 9 201326592 8912896 0
 0 0 0 0 0 0 0 0 0 0
@@ -2274,7 +2454,7 @@ L
 150
 #690
 serpent-scale boots feet void~
-@@cvoid-serpent scale boots@@n~
+@@cvoid-serpent scale boots@@N~
 Boots of overlapping void-serpent scales lie here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -2283,7 +2463,7 @@ L
 150
 #691
 serpent fang dagger poison~
-@@ea shadow serpent's fang dagger@@n~
+@@ea shadow serpent's fang dagger@@N~
 A hollow fang filed to a blade edge lies here.~
 5 201326592 8421376 0
 0 7 11 11 0 0 0 0 0 0
@@ -2292,7 +2472,7 @@ L
 150
 #692
 ancient lich phylactery soul gem~
-@@ythe lich's phylactery@@n~
+@@ythe lich's phylactery@@N~
 A gem pulsing with contained soul-force lies here.~
 9 201326592 8388610 0
 0 0 0 0 0 0 0 0 0 0
@@ -2301,7 +2481,7 @@ L
 150
 #693
 lich-bone staff necromancy arcane~
-@@ya lich-bone staff@@n~
+@@ya lich-bone staff@@N~
 A staff of fused bone and void-metal lies here.~
 5 738197504 8421376 0
 0 9 15 1 0 0 0 0 0 0
@@ -2310,7 +2490,7 @@ L
 150
 #694
 lich-wrapped robes body armor ancient~
-@@ylich-wrapped robes@@n~
+@@ylich-wrapped robes@@N~
 Robes wrapped in thin phylactery-chains lie here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2319,7 +2499,7 @@ L
 150
 #695
 twin-mirror shard fragment unique~
-@@ca void-twin shard@@n~
+@@ca void-twin shard@@N~
 A shard that reflects two versions of you simultaneously lies here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -2328,7 +2508,7 @@ L
 150
 #696
 arcane revenant core scroll spellbook~
-@@can arcane revenant's spellbook@@n~
+@@can arcane revenant's spellbook@@N~
 A spellbook of crackling arcane script lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2337,7 +2517,7 @@ L
 150
 #697
 revenant robe body arcane spire~
-@@can arcane revenant's robe@@n~
+@@can arcane revenant's robe@@N~
 Robes charged with residual arcane energy lie here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2346,7 +2526,7 @@ L
 150
 #698
 crystal focus gem arcane core~
-@@ca crystalline focus gem@@n~
+@@ca crystalline focus gem@@N~
 A fractured focus gem trails arcane light here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2355,7 +2535,7 @@ L
 150
 #699
 crystal horror shard weapon dagger~
-@@ea crystal horror shard@@n~
+@@ea crystal horror shard@@N~
 A razor-edged crystal shard lies here.~
 9 201326592 8388672 0
 0 6 10 2 0 0 0 0 0 0
@@ -2364,7 +2544,7 @@ L
 150
 #700
 crystal horror plating body armor~
-@@ccrystal horror plating@@n~
+@@ccrystal horror plating@@N~
 Articulated crystal plating lies here, edges still sharp.~
 9 201326592 8912896 0
 0 0 0 0 0 0 0 0 0 0
@@ -2373,7 +2553,7 @@ L
 150
 #701
 spire guardian core orb construct~
-@@ca spire guardian's core@@n~
+@@ca spire guardian's core@@N~
 An orb containing a guardian's control-matrix lies here.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
@@ -2382,7 +2562,7 @@ L
 150
 #702
 guardian shield construct armor~
-@@ca construct's reinforced shield@@n~
+@@ca construct's reinforced shield@@N~
 A shield of layered guardian-plating lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2391,7 +2571,7 @@ L
 150
 #703
 living spell weave cloth~
-@@ca weave of living spell@@n~
+@@ca weave of living spell@@N~
 A tightly wound weave of condensed spell-matter lies here.~
 9 201326592 8388610 0
 0 0 0 0 0 0 0 0 0 0
@@ -2400,7 +2580,7 @@ L
 150
 #704
 mirror wraith reflection ring~
-@@ca mirror-wraith ring@@n~
+@@ca mirror-wraith ring@@N~
 A ring bearing a reflection that moves independently lies here.~
 9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
@@ -2409,7 +2589,7 @@ L
 150
 #705
 conduit shard energy weapon~
-@@ea void-conduit shard@@n~
+@@ea void-conduit shard@@N~
 A shard still humming with channeled energy lies here.~
 5 201326592 8454144 0
 0 7 11 2 0 0 0 0 0 0
@@ -2418,7 +2598,7 @@ L
 150
 #706
 corridor echo resonance amulet~
-@@ca corridor-echo amulet@@n~
+@@ca corridor-echo amulet@@N~
 An amulet containing a sustained whisper lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2427,7 +2607,7 @@ L
 150
 #707
 scholar notebook notes corridor~
-@@ca lost scholar's notebook@@n~
+@@ca lost scholar's notebook@@N~
 A water-stained notebook crammed with navigation notes lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2436,7 +2616,7 @@ L
 150
 #708
 scholar pen quill writing tool~
-@@ca scholar's void-ink pen@@n~
+@@ca scholar's void-ink pen@@N~
 A pen that writes in void-ink lies here.~
 5 738197504 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2445,7 +2625,7 @@ L
 150
 #709
 spatial fold lens glass optic~
-@@ca spatial fold lens@@n~
+@@ca spatial fold lens@@N~
 A lens that bends space slightly when looked through lies here.~
 9 201326592 8388624 0
 0 0 0 0 0 0 0 0 0 0
@@ -2454,7 +2634,7 @@ L
 150
 #710
 maze guardian barrier ward~
-@@ca maze guardian's ward-stone@@n~
+@@ca maze guardian's ward-stone@@N~
 A ward-stone from a guardian's chest cavity lies here.~
 9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2463,7 +2643,7 @@ L
 150
 #711
 guardian wrist stone bracer~
-@@ca guardian's stone bracer@@n~
+@@ca guardian's stone bracer@@N~
 A bracer of shaped void-stone lies here.~
 9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
@@ -2472,7 +2652,7 @@ L
 150
 #712
 herald aspirant training blade~
-@@ean aspirant's practice blade@@n~
+@@ean aspirant's practice blade@@N~
 A balanced practice blade lies here, slightly notched.~
 5 201326592 8421376 0
 0 8 13 2 0 0 0 0 0 0
@@ -2481,7 +2661,7 @@ L
 150
 #713
 aspirant training armor body~
-@@caspirant's training armor@@n~
+@@caspirant's training armor@@N~
 A set of well-worn training armor lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2490,7 +2670,7 @@ L
 150
 #714
 void echo crystalline shard~
-@@ca void echo shard@@n~
+@@ca void echo shard@@N~
 A crystallized fragment of echo-form lies here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -2499,7 +2679,7 @@ L
 150
 #715
 echo projection cloak shadow about~
-@@can echo projection cloak@@n~
+@@can echo projection cloak@@N~
 A cloak that makes the wearer appear to lag slightly lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -2508,7 +2688,7 @@ L
 150
 #716
 binding guardian seal plate body~
-@@ca seal guardian's plate@@n~
+@@ca seal guardian's plate@@N~
 A plate of binding-circle alloy lies here.~
 9 201326592 8912896 0
 0 0 0 0 0 0 0 0 0 0
@@ -2517,7 +2697,7 @@ L
 150
 #717
 guardian seal ring rune ward~
-@@ca seal guardian's ring@@n~
+@@ca seal guardian's ring@@N~
 A ring bearing a binding rune lies here.~
 9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
@@ -2526,7 +2706,7 @@ L
 150
 #718
 catacomb priest vestment robe body~
-@@ccatacomb priest vestments@@n~
+@@ccatacomb priest vestments@@N~
 Dark vestments still carrying a faint death-magic charge lie here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2535,7 +2715,7 @@ L
 150
 #719
 catacomb priest skull implement ceremony~
-@@ca ceremony skull@@n~
+@@ca ceremony skull@@N~
 A lacquered skull used in catacomb ceremonies lies here.~
 1 201326592 8421376 0
 0 0 -1 0 0 0 0 0 0 0
@@ -2544,7 +2724,7 @@ L
 150
 #720
 leviathan scale plate body armor~
-@@cvoid leviathan scale@@n~
+@@cvoid leviathan scale@@N~
 A scale the size of a buckler from the void leviathan lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2553,7 +2733,7 @@ L
 150
 #721
 leviathan fluid flask vial dark~
-@@ca flask of void leviathan fluid@@n~
+@@ca flask of void leviathan fluid@@N~
 A sealed flask of black fluid from the leviathan lies here.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
@@ -2562,7 +2742,7 @@ L
 150
 #722
 trophy collector bag container trophy~
-@@ythe Trophy Collector's sack@@n~
+@@ythe Trophy Collector's sack@@N~
 A sack stuffed with unidentifiable trophies lies here.~
 15 201326592 8388608 0
 1000 0 0 0 0 0 0 0 0 0
@@ -2571,7 +2751,7 @@ L
 150
 #723
 trophy collector cloak about shroud~
-@@ythe Trophy Collector's cloak@@n~
+@@ythe Trophy Collector's cloak@@N~
 A cloak hung with small trophies lies here, jingling faintly.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -2580,7 +2760,7 @@ L
 150
 #724
 memory eater vessel container brain~
-@@ca memory eater's vessel@@n~
+@@ca memory eater's vessel@@N~
 A vessel containing captured memories floats here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2589,7 +2769,7 @@ L
 150
 #725
 bone sculptor chisel tool weapon~
-@@ythe Bone Sculptor's chisel@@n~
+@@ythe Bone Sculptor's chisel@@N~
 An obsidian chisel ground to surgical sharpness lies here.~
 5 201326592 8421376 0
 0 7 11 11 0 0 0 0 0 0
@@ -2598,7 +2778,7 @@ L
 1
 #726
 bone sculpture decorative art~
-@@ca finished bone sculpture@@n~
+@@ca finished bone sculpture@@N~
 A disturbing but exquisite bone sculpture rests here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -2607,7 +2787,7 @@ L
 150
 #727
 void monk sash belt waist~
-@@ca void monk's training sash@@n~
+@@ca void monk's training sash@@N~
 A coiled void-silk training sash lies here.~
 9 201326592 8388624 0
 0 0 0 0 0 0 0 0 0 0
@@ -2616,7 +2796,7 @@ L
 150
 #728
 void monk wraps gloves fist~
-@@cvoid monk's hand wraps@@n~
+@@cvoid monk's hand wraps@@N~
 Tightly bound void-fiber hand wraps lie here.~
 9 201326592 8392704 0
 0 0 0 0 0 0 0 0 0 0
@@ -2625,7 +2805,7 @@ L
 150
 #729
 voidfire torch light item dark~
-@@ca voidfire torch@@n~
+@@ca voidfire torch@@N~
 A torch burning with cold black flame stands here.~
 1 201326592 8421376 0
 0 0 -1 0 0 0 0 0 0 0
@@ -2634,7 +2814,7 @@ L
 150
 #730
 voidfire essence vial flask cold~
-@@ca vial of voidfire essence@@n~
+@@ca vial of voidfire essence@@N~
 A vial containing a sliver of cold flame lies here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -2643,7 +2823,7 @@ L
 150
 #731
 echo knight duplicate sword blade~
-@@ean echo knight's mirror blade@@n~
+@@ean echo knight's mirror blade@@N~
 A blade that shows battles in its reflection lies here.~
 5 201326592 8421376 0
 0 9 14 3 0 0 0 0 0 0
@@ -2652,7 +2832,7 @@ L
 150
 #732
 echo knight duplicate helm head~
-@@can echo knight's helm@@n~
+@@can echo knight's helm@@N~
 A helm in which another face can be glimpsed lies here.~
 9 201326592 8388616 0
 0 0 0 0 0 0 0 0 0 0
@@ -2661,7 +2841,7 @@ L
 150
 #733
 void crab claw weapon melee natural~
-@@ea void crab claw@@n~
+@@ea void crab claw@@N~
 A severed void crab claw, crystal-hard, lies here.~
 9 201326592 8404992 0
 0 8 12 1 0 0 0 0 0 0
@@ -2670,7 +2850,7 @@ L
 150
 #734
 void crab shell buckler shield~
-@@ca void crab shell buckler@@n~
+@@ca void crab shell buckler@@N~
 A section of crab carapace shaped into a buckler lies here.~
 9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2679,7 +2859,7 @@ L
 150
 #735
 moth wing dust pouch reagent~
-@@ca pouch of moth wing dust@@n~
+@@ca pouch of moth wing dust@@N~
 A pouch leaking faint numbness lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2688,7 +2868,7 @@ L
 150
 #736
 sentinel shard core construct~
-@@ca sentinel shard@@n~
+@@ca sentinel shard@@N~
 A shard from a dark sentinel's core lies here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -2697,7 +2877,7 @@ L
 150
 #737
 void eel skin belt waist~
-@@ca void eel skin belt@@n~
+@@ca void eel skin belt@@N~
 A belt of iridescent void eel skin lies here.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -2706,7 +2886,7 @@ L
 150
 #738
 runed knight armor body plate~
-@@cruned plate armor@@n~
+@@cruned plate armor@@N~
 A suit of plate armor covered in active runes lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2715,7 +2895,7 @@ L
 150
 #739
 runed knight sword weapon~
-@@ea runed knight's sword@@n~
+@@ea runed knight's sword@@N~
 A sword covered in active runes lies here.~
 5 201326592 8421376 0
 0 10 15 3 0 0 0 0 0 0
@@ -2724,7 +2904,7 @@ L
 150
 #740
 oracle robe robes body seeing~
-@@ythe Oracle's Robe@@n~
+@@ythe Oracle's Robe@@N~
 A robe patterned with scenes of possible futures lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2733,7 +2913,7 @@ L
 150
 #741
 oracle pendant sight foresight~
-@@ythe Oracle's Pendant@@n~
+@@ythe Oracle's Pendant@@N~
 A pendant that shows a different face each time it is looked at lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2742,7 +2922,7 @@ L
 150
 #742
 oracle staff walking implement~
-@@ythe Oracle's Walking Staff@@n~
+@@ythe Oracle's Walking Staff@@N~
 A staff engraved with scenes of prophecy lies here.~
 5 738197504 8454144 0
 0 7 11 7 0 0 0 0 0 0
@@ -2751,7 +2931,7 @@ L
 150
 #743
 memory eater shroud cloak about~
-@@ca memory eater's shroud@@n~
+@@ca memory eater's shroud@@N~
 A cloak that seems to make observers forget having seen it lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -2760,7 +2940,7 @@ L
 150
 #744
 bone sculptor tools set workshop~
-@@ya bone sculptor's tool set@@n~
+@@ya bone sculptor's tool set@@N~
 A set of bone-shaping tools lies here in a leather roll.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -2769,7 +2949,7 @@ L
 150
 #745
 bone sculptor masterwork trophy art~
-@@ya bone sculptor's masterwork@@n~
+@@ya bone sculptor's masterwork@@N~
 A sculpture of extraordinary quality lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2778,7 +2958,7 @@ L
 150
 #746
 void monk boots feet travel~
-@@cvoid monk travel boots@@n~
+@@cvoid monk travel boots@@N~
 Worn but precisely maintained travel boots lie here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -2787,7 +2967,7 @@ L
 150
 #747
 void monk belt training waist~
-@@ca void monk's discipline belt@@n~
+@@ca void monk's discipline belt@@N~
 A knotted rope belt carrying small test-stones lies here.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -2796,7 +2976,7 @@ L
 140
 #748
 voidfire elemental ember core~
-@@ca voidfire ember@@n~
+@@ca voidfire ember@@N~
 An ember of persistent voidfire sits cold in a stone cup here.~
 1 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2805,7 +2985,7 @@ L
 140
 #749
 voidfire mantle shoulders cold~
-@@ca voidfire mantle@@n~
+@@ca voidfire mantle@@N~
 A mantle radiating cold flame lies here.~
 9 201326592 8389120 0
 0 0 0 0 0 0 0 0 0 0
@@ -2814,7 +2994,7 @@ L
 150
 #750
 echo knight greaves legs armor~
-@@cecho knight's greaves@@n~
+@@cecho knight's greaves@@N~
 Greaves bearing the ghost of a previous wearer lie here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -2823,7 +3003,7 @@ L
 150
 #751
 echo knight cuirass body armor~
-@@can echo knight's cuirass@@n~
+@@can echo knight's cuirass@@N~
 A cuirass with a second warrior's outline visible in it lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2832,7 +3012,7 @@ L
 150
 #752
 familiar harness binding collar~
-@@ca familiar's binding collar@@n~
+@@ca familiar's binding collar@@N~
 A dark collar for a void familiar lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2841,7 +3021,7 @@ L
 150
 #753
 void strider leg talisman speed~
-@@ca void strider's speed talisman@@n~
+@@ca void strider's speed talisman@@N~
 A talisman carved from a void strider's leg-joint lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2850,7 +3030,7 @@ L
 150
 #754
 void strider carapace shield~
-@@ca void strider carapace shield@@n~
+@@ca void strider carapace shield@@N~
 A section of void strider carapace formed into a buckler lies here.~
 9 469762048 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -2859,7 +3039,7 @@ L
 150
 #755
 whisper entity resonance amulet sound~
-@@ca whisper entity's resonance amulet@@n~
+@@ca whisper entity's resonance amulet@@N~
 An amulet containing a trapped whisper lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -2868,7 +3048,7 @@ L
 150
 #756
 void stag antler weapon trophy~
-@@ea void stag antler tine@@n~
+@@ea void stag antler tine@@N~
 A tine broken from a void stag's antler lies here, crackling.~
 9 201326592 8388612 0
 0 7 10 2 0 0 0 0 0 0
@@ -2877,7 +3057,7 @@ L
 150
 #757
 void stag hide cloak trophy~
-@@ca void stag hide cloak@@n~
+@@ca void stag hide cloak@@N~
 A cloak of supple void-stag hide lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -2886,7 +3066,7 @@ L
 150
 #758
 night horror darkness flask vessel~
-@@ca flask of concentrated darkness@@n~
+@@ca flask of concentrated darkness@@N~
 A flask containing absolute light absence lies here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -2895,7 +3075,7 @@ L
 150
 #759
 night horror hide body armor stealth~
-@@cnight horror hide armor@@n~
+@@cnight horror hide armor@@N~
 Armor of night horror hide that dampens light around it lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2904,7 +3084,7 @@ L
 150
 #760
 void zealot brand ring finger~
-@@ca void zealot's brand ring@@n~
+@@ca void zealot's brand ring@@N~
 A ring branded into its own metal with devotion marks lies here.~
 9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
@@ -2913,7 +3093,7 @@ L
 150
 #761
 void zealot torn cloak about~
-@@ca void zealot's torn cloak@@n~
+@@ca void zealot's torn cloak@@N~
 Devotion-rune-marked cloak with burned-away sections lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -2922,7 +3102,7 @@ L
 150
 #762
 time-locked guardian fragments pauldrons~
-@@ctime-locked pauldrons@@n~
+@@ctime-locked pauldrons@@N~
 Pauldrons that exist in two moments simultaneously lie here.~
 9 201326592 8389120 0
 0 0 0 0 0 0 0 0 0 0
@@ -2931,7 +3111,7 @@ L
 150
 #763
 time-locked guardian sabatons feet~
-@@ctime-locked sabatons@@n~
+@@ctime-locked sabatons@@N~
 Boots that step before and after simultaneously lie here.~
 9 201326592 10485760 0
 0 0 0 0 0 0 0 0 0 0
@@ -2940,7 +3120,7 @@ L
 150
 #764
 sanctum templar sword blade weapon~
-@@ea sanctum templar's sword@@n~
+@@ea sanctum templar's sword@@N~
 A sword bearing the sanctum seal lies here.~
 5 201326592 8421376 0
 0 11 18 2 0 0 0 0 0 0
@@ -2949,7 +3129,7 @@ L
 150
 #765
 sanctum templar shield buckler defense~
-@@ca sanctum templar's shield@@n~
+@@ca sanctum templar's shield@@N~
 A shield bearing Kel'Shadra's eye lies here.~
 9 469762048 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -2958,7 +3138,7 @@ L
 150
 #766
 void conjurer robe body magic~
-@@ca void conjurer's robe@@n~
+@@ca void conjurer's robe@@N~
 Robes marked with rift-sigils lie here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -2967,7 +3147,7 @@ L
 150
 #767
 void conjurer focus orb wand~
-@@ea void conjurer's rift-focus@@n~
+@@ea void conjurer's rift-focus@@N~
 A focus that trails threads of open void lies here.~
 9 738197504 8388609 0
 0 8 13 4 0 0 0 0 0 0
@@ -2976,7 +3156,7 @@ L
 1
 #768
 revenant commander pauldrons shoulders~
-@@ya revenant commander's pauldrons@@n~
+@@ya revenant commander's pauldrons@@N~
 Battle-worn pauldrons bearing a commander's rank lie here.~
 9 201326592 8389120 0
 0 0 0 0 0 0 0 0 0 0
@@ -2985,7 +3165,7 @@ L
 150
 #769
 revenant commander greatsword weapon~
-@@ya revenant commander's greatsword@@n~
+@@ya revenant commander's greatsword@@N~
 A heavy greatsword marked with campaign tallies lies here.~
 5 -1946157056 8421376 0
 0 11 17 3 0 0 0 0 0 0
@@ -2994,7 +3174,7 @@ L
 150
 #770
 deep guardian core plate body~
-@@ydeep guardian core plating@@n~
+@@ydeep guardian core plating@@N~
 Plating harvested from a deep guardian's chest lies here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -3003,7 +3183,7 @@ L
 150
 #771
 deep guardian limb weapon club~
-@@ya deep guardian's limb-club@@n~
+@@ya deep guardian's limb-club@@N~
 A massive broken limb from a deep guardian lies here.~
 5 201326592 8421376 0
 0 13 18 7 0 0 0 0 0 0
@@ -3012,7 +3192,7 @@ L
 150
 #772
 void harbinger shard weapon dagger~
-@@ea void harbinger shard@@n~
+@@ea void harbinger shard@@N~
 A condensed shard of harbinger-form lies here, distorting air.~
 5 201326592 8388672 0
 0 10 14 3 0 0 0 0 0 0
@@ -3021,7 +3201,7 @@ L
 150
 #773
 void harbinger resonance amulet dark~
-@@ca void harbinger resonance amulet@@n~
+@@ca void harbinger resonance amulet@@N~
 An amulet radiating a faint void-presence lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -3030,7 +3210,7 @@ L
 150
 #774
 essence devourer vessel pendant~
-@@can essence devourer's soul-vessel@@n~
+@@can essence devourer's soul-vessel@@N~
 A pendant containing a captured soul-fragment lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -3039,7 +3219,7 @@ L
 150
 #775
 essence devourer shroud cloak~
-@@can essence devourer's shroud@@n~
+@@can essence devourer's shroud@@N~
 A cloak that feels faintly hollow to touch lies here.~
 9 201326592 8454144 0
 0 0 0 0 0 0 0 0 0 0
@@ -3048,7 +3228,7 @@ L
 150
 #776
 grand overseer ledger book admin~
-@@ythe Grand Overseer's ledger@@n~
+@@ythe Grand Overseer's ledger@@N~
 A ledger cataloguing the entire citadel's inhabitants lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -3057,7 +3237,7 @@ L
 150
 #777
 grand overseer robe administrative~
-@@ythe Grand Overseer's robe@@n~
+@@ythe Grand Overseer's robe@@N~
 Administrative robes bearing rank-marks of every citadel division lie here.~
 9 201326592 8650752 0
 0 0 0 0 0 0 0 0 0 0
@@ -3066,7 +3246,7 @@ L
 150
 #778
 grand overseer pendant seal authority~
-@@ythe Grand Overseer's seal@@n~
+@@ythe Grand Overseer's seal@@N~
 A pendant-seal that carries administrative authority over all constructs lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -3075,7 +3255,7 @@ L
 150
 #779
 shattered construct arm weapon club~
-@@ea shattered construct arm@@n~
+@@ea shattered construct arm@@N~
 A broken limb from a shattered construct lies here.~
 5 201326592 8421376 0
 0 9 13 7 0 0 0 0 0 0
@@ -3084,7 +3264,7 @@ L
 150
 #780
 shattered construct shard plate body~
-@@cshattered construct plating@@n~
+@@cshattered construct plating@@N~
 Cracked but still solid construct plating lies here.~
 9 201326592 8912896 0
 0 0 0 0 0 0 0 0 0 0
@@ -3093,7 +3273,7 @@ L
 150
 #781
 void incarnate fragment shard crystal~
-@@ya fragment of void incarnate@@n~
+@@ya fragment of void incarnate@@N~
 A crystal of distilled void entity essence lies here.~
 9 201326592 8388609 0
 0 0 0 0 0 0 0 0 0 0
@@ -3102,7 +3282,7 @@ L
 150
 #782
 void incarnate fragment pendant essence~
-@@yan incarnate fragment pendant@@n~
+@@yan incarnate fragment pendant@@N~
 A pendant containing a sliver of Kel'Shadra's essence lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -3111,7 +3291,7 @@ L
 150
 #783
 void rune tablet stone inscription~
-@@ca void rune tablet@@n~
+@@ca void rune tablet@@N~
 A stone tablet carved with active void runes lies here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3120,7 +3300,7 @@ L
 150
 #784
 cursed coin gold dark money~
-@@ca cursed void coin@@n~
+@@ca cursed void coin@@N~
 A black gold coin that spends its value in ways other than money lies here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3129,7 +3309,7 @@ L
 150
 #785
 dark essence vial potion consumable~
-@@ca vial of dark essence@@n~
+@@ca vial of dark essence@@N~
 A vial of raw void energy carefully contained lies here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3138,7 +3318,7 @@ L
 150
 #786
 void-touched ring minor finger enchanted~
-@@ca void-touched ring@@n~
+@@ca void-touched ring@@N~
 A simple ring humming with minor enchantment lies here.~
 9 201326592 8396800 0
 0 0 0 0 0 0 0 0 0 0
@@ -3147,7 +3327,7 @@ L
 150
 #787
 dark focus gem minor mage~
-@@ca minor void focus gem@@n~
+@@ca minor void focus gem@@N~
 A small gem holding a thread of void energy lies here.~
 9 201326592 8388672 0
 0 0 0 0 0 0 0 0 0 0
@@ -3156,7 +3336,7 @@ L
 150
 #788
 shadow-ink bottle writing dark~
-@@ca bottle of shadow ink@@n~
+@@ca bottle of shadow ink@@N~
 A bottle of ink that writes in darkness lies here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3165,7 +3345,7 @@ L
 150
 #789
 void-salt pouch mineral preserve~
-@@ca pouch of void-salt@@n~
+@@ca pouch of void-salt@@N~
 A pouch of mineral used to preserve void-infused material lies here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3174,7 +3354,7 @@ L
 150
 #790
 broken seal fragment rune piece~
-@@ca fragment of a binding seal@@n~
+@@ca fragment of a binding seal@@N~
 A piece of a broken binding seal lies here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3183,7 +3363,7 @@ L
 150
 #791
 void-prayer beads religion necklace~
-@@cvoid-prayer beads@@n~
+@@cvoid-prayer beads@@N~
 A string of bone beads used in void rites lies here.~
 9 201326592 8388736 0
 0 0 0 0 0 0 0 0 0 0
@@ -3192,7 +3372,7 @@ L
 150
 #792
 dark lantern hooded light item~
-@@ca hooded dark lantern@@n~
+@@ca hooded dark lantern@@N~
 A lantern that emits shadow rather than light lies here.~
 1 0 8421376 0
 0 0 -1 0 0 0 0 0 0 0
@@ -3201,7 +3381,7 @@ L
 150
 #793
 void-compass navigation direction~
-@@ca void compass@@n~
+@@ca void compass@@N~
 A compass that points toward sources of void energy lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -3210,7 +3390,7 @@ L
 150
 #794
 citadel map parchment navigation~
-@@ca partial citadel map@@n~
+@@ca partial citadel map@@N~
 A partial map of Kel'Shadra's known passages lies here.~
 9 201326592 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3219,7 +3399,7 @@ L
 150
 #795
 void-treated rope binding utility~
-@@cvoid-treated rope@@n~
+@@cvoid-treated rope@@N~
 A length of rope treated to hold against void-entity strength lies here.~
 9 201326592 8519680 0
 0 0 0 0 0 0 0 0 0 0
@@ -3228,7 +3408,7 @@ L
 150
 #796
 sorcerer binding shackle chain restraint~
-@@ca sorcerer's binding shackle@@n~
+@@ca sorcerer's binding shackle@@N~
 A shackle of void-alloy designed to suppress magic lies here.~
 9 201326592 8390656 0
 0 0 0 0 0 0 0 0 0 0
@@ -3237,7 +3417,7 @@ L
 150
 #797
 dark research journal log academic~
-@@ca dark research journal@@n~
+@@ca dark research journal@@N~
 A journal filled with dangerous knowledge lies here.~
 9 201326592 8421376 0
 0 0 0 0 0 0 0 0 0 0
@@ -3246,7 +3426,7 @@ L
 150
 #798
 catacomb gate key iron unlock~
-@@ya catacomb gate key@@n~
+@@ya catacomb gate key@@N~
 An iron key to the lower catacomb gate lies here.~
 18 0 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3255,7 +3435,7 @@ L
 150
 #799
 spire access key arcane gate unlock~
-@@ya spire access key@@n~
+@@ya spire access key@@N~
 An arcane key to the Shattered Spire entrance lies here.~
 18 0 8388608 0
 0 0 0 0 0 0 0 0 0 0
@@ -3265,7 +3445,7 @@ L
 #0
 #ROOMS
 #610
-@@mThe Blighted Gateway@@n~
+@@mThe Blighted Gateway@@N~
 The massive iron gates of Kel'Shadra loom before you, twisted and
 blackened as if scorched by some unimaginable flame. Beyond them,
 a path of crushed obsidian winds into darkness. The air here carries
@@ -3296,7 +3476,7 @@ several of the wards from the inside.
 ~
 S
 #611
-@@mThe Obsidian Courtyard@@n~
+@@mThe Obsidian Courtyard@@N~
 This courtyard was once an assembly area for Kel'Shadra's forces. Cracked
 black flagstones line the ground, each one engraved with a name in a dead
 language. The walls rise sharply on three sides, their surfaces studded
@@ -3330,7 +3510,7 @@ very unwise.
 ~
 S
 #612
-@@mThe Northern Hall@@n~
+@@mThe Northern Hall@@N~
 A long corridor stretches before you, its ceiling lost in shadow far
 above. Tattered black banners hang motionless from the walls despite
 a constant cold draft, as if the wind itself fears to disturb them.
@@ -3358,7 +3538,7 @@ seems to absorb light rather than merely blocking it.
 ~
 S
 #613
-@@mThe Eastern Alcove@@n~
+@@mThe Eastern Alcove@@N~
 A small alcove has been carved into the eastern wall of the courtyard.
 Within it stands a stone pedestal bearing a strange puzzle device: a set
 of interlocking obsidian rings that can be rotated independently. Each
@@ -3383,7 +3563,7 @@ attempt to align the rings. (Hint: full, crescent, new)
 ~
 S
 #614
-@@mThe Hidden Vault@@n~
+@@mThe Hidden Vault@@N~
 A narrow chamber revealed by the correct manipulation of the eastern
 puzzle. The walls are lined with obsidian shelves bearing ancient
 tomes and strange artifacts. A faint glow emanates from a gem embedded
@@ -3402,7 +3582,7 @@ shattering it. It pulses with a slow, rhythmic light - almost like breathing.
 ~
 S
 #615
-@@mThe Western Passage@@n~
+@@mThe Western Passage@@N~
 This passage runs parallel to the main entrance but curves away into
 deeper darkness. The floor here is noticeably colder than the courtyard,
 and frost crystals have formed along the base of the walls. Ahead, the
@@ -3426,7 +3606,7 @@ the exit. Whatever was dragged came from deeper within.
 ~
 S
 #616
-@@mThe Hall of Broken Thrones@@n~
+@@mThe Hall of Broken Thrones@@N~
 Three massive thrones of black stone have been overturned and shattered
 in this chamber. The walls bear the scars of ancient battle - sword and
 spell marks that must be centuries old. In the rubble between the thrones,
@@ -3458,7 +3638,7 @@ no face at all. The faceless figure's throne is the one least damaged.
 ~
 S
 #617
-@@mThe Corrupted Chapel@@n~
+@@mThe Corrupted Chapel@@N~
 What was once a place of dark worship has been further defiled. Pews of
 black wood have been smashed and thrown against the walls. At the far end,
 an altar of void-stone still stands, but something is wrong with it - the
@@ -3487,7 +3667,7 @@ someone has scratched in more recent script: 'I was willing. Do not follow.'
 ~
 S
 #618
-@@mThe Ice-Rimed Passage@@n~
+@@mThe Ice-Rimed Passage@@N~
 This passage connects the western approach with the chapel. Ice has
 formed on every surface, thick enough that the original stone is invisible
 beneath it. The ice appears dark, as if something is trapped within.
@@ -3515,7 +3695,7 @@ near the floor has eyes that seem to follow you as you move.
 ~
 S
 #619
-@@mThe Chamber of Whispers@@n~
+@@mThe Chamber of Whispers@@N~
 Every sound made in this small chamber is amplified and reflected in strange
 ways. Your own footsteps sound like the tread of armies. Your breathing
 becomes a crowd of whispered words in a language you almost understand.
@@ -3541,7 +3721,7 @@ whatever was doing the carving stopped.
 ~
 S
 #620
-@@mThe Armory of Ashes@@n~
+@@mThe Armory of Ashes@@N~
 This chamber once served as an armory, but most of its contents have been
 reduced to cinders. Charred weapon racks and melted armor stands line the
 walls. A few items remain intact, protected by some enchantment that also
@@ -3569,7 +3749,7 @@ disrupted. Circles within circles, over and over again, endlessly.
 ~
 S
 #621
-@@mThe Gallery of Failures@@n~
+@@mThe Gallery of Failures@@N~
 Lining the walls of this grim gallery are portrait frames - but the
 paintings have been deliberately destroyed, leaving only scraps of canvas
 and flecks of dark paint. Beneath each ruined portrait is a plaque bearing
@@ -3598,7 +3778,7 @@ D1
 0 -1 627
 S
 #622
-@@mThe Frost Sanctum@@n~
+@@mThe Frost Sanctum@@N~
 Cold beyond reason fills this chamber. Your breath hangs in clouds before
 you and the floor is sheeted with black ice. In the center of the room,
 a frozen figure stands within a block of void-ice - a tall humanoid whose
@@ -3629,7 +3809,7 @@ D3
 0 -1 700
 S
 #623
-@@mThe Labyrinth Entrance@@n~
+@@mThe Labyrinth Entrance@@N~
 The passage here opens into the beginning of the famous Labyrinth of Lost
 Voices - a maze of corridors built to confuse and disorient intruders. The
 walls here are lined with mirrors of polished obsidian, but the reflections
@@ -3657,7 +3837,7 @@ of something behind you, though nothing is there when you turn.
 ~
 S
 #624
-@@mThe Scorched Corridor@@n~
+@@mThe Scorched Corridor@@N~
 A passage leading north from the armory of ashes. The walls here are
 scorched in patterns that suggest tremendous heat was released in a single
 instant - as if something exploded outward from the armory. The scorch
@@ -3678,7 +3858,7 @@ was built before the void entity arrived, by the original mortal builders.
 ~
 S
 #625
-@@mThe Hall of Echoes@@n~
+@@mThe Hall of Echoes@@N~
 A long corridor whose walls are pocked with small alcoves, each containing
 a different object: a cracked bell, a fractured mirror, a dried flower, a
 child's toy. Each object produces a faint echo when the room is entered, as
@@ -3703,7 +3883,7 @@ since faded. These are memories made physical.
 ~
 S
 #626
-@@mThe Chamber of Frozen Tears@@n~
+@@mThe Chamber of Frozen Tears@@N~
 North of the frost sanctum, the cold persists but diminishes slightly.
 The floor here is wet from meltwater that seeps south from the sanctum.
 Strange crystalline formations grow from the walls - not quite ice, but
@@ -3724,7 +3904,7 @@ when touched, then fading back to their dim glow.
 ~
 S
 #627
-@@mThe Passage of Whispered Names@@n~
+@@mThe Passage of Whispered Names@@N~
 A narrow corridor connecting the inner halls. The walls here are covered
 floor to ceiling in tiny inscribed names - thousands upon thousands of them,
 written in a hand so small that a lens would be needed to read most of them.
@@ -3749,7 +3929,7 @@ a category or fate. Most symbols repeat, suggesting they have meaning.
 ~
 S
 #628
-@@mThe Watchman's Post@@n~
+@@mThe Watchman's Post@@N~
 An elevated platform that must once have served as a guard post, now
 abandoned. Arrow slits look out over corridors you have passed through.
 The post is still stocked with equipment: quivers of arrows with void-
@@ -3773,7 +3953,7 @@ material that resists tarnish. You suspect blowing it would be unwise.
 ~
 S
 #629
-@@mThe Sorcerer's Laboratory@@n~
+@@mThe Sorcerer's Laboratory@@N~
 A side chamber filled with the remnants of magical research: shattered
 glassware, burned parchment, overturned tables. One table remains upright,
 bearing an intact experiment - a crystal orb connected to several smaller
@@ -3793,7 +3973,7 @@ is either beautiful mathematics or someone's attempt to hear the void.
 ~
 S
 #630
-@@mThe Mirror Corridor@@n~
+@@mThe Mirror Corridor@@N~
 A passage connecting the labyrinth entrance to the inner halls. Every
 surface here is polished obsidian, creating infinite reflections that
 recede into apparent darkness. The effect is deeply disorienting - it is
@@ -3818,7 +3998,7 @@ that makes extended gazing uncomfortable. Best to navigate by touch.
 ~
 S
 #640
-@@mMaze - The First Fork@@n~
+@@mMaze - The First Fork@@N~
 The labyrinth begins here in earnest. Identical-looking passages branch
 in three directions. The obsidian walls murmur with half-heard voices.
 The floor is dusty but you can see multiple sets of footprints, many of
@@ -3843,7 +4023,7 @@ D3
 0 -1 645
 S
 #641
-@@mMaze - Long Corridor@@n~
+@@mMaze - Long Corridor@@N~
 A straight passage runs north. The walls here are marked with scratches
 at regular intervals - someone's attempt to track their passage. Several
 of the marks have been scoured away, as if deliberately sabotaged.
@@ -3859,7 +4039,7 @@ D2
 0 -1 640
 S
 #642
-@@mMaze - The Mirror Chamber@@n~
+@@mMaze - The Mirror Chamber@@N~
 A small chamber where every wall is covered in obsidian mirrors. The
 reflections multiply infinitely, creating dizzying vistas of repeated
 images. In the reflection, you can see passages that don't exist in
@@ -3880,7 +4060,7 @@ D2
 0 -1 641
 S
 #643
-@@mMaze - Dead End (east branch)@@n~
+@@mMaze - Dead End (east branch)@@N~
 The eastern passage dead-ends at a wall covered in frenzied carvings.
 Someone spent a great deal of time here, judging by the depth and
 repetition of the marks. The carvings appear to be a person slowly
@@ -3900,7 +4080,7 @@ This may be a clue to navigating the labyrinth.
 ~
 S
 #644
-@@mMaze - The Whispering Alcove@@n~
+@@mMaze - The Whispering Alcove@@N~
 A small side alcove where the whispers are louder than anywhere else.
 If you stand here for a moment and focus, you can begin to make out
 distinct voices giving directions. Unfortunately, several of the voices
@@ -3914,7 +4094,7 @@ D2
 0 -1 642
 S
 #645
-@@mMaze - Western Branch@@n~
+@@mMaze - Western Branch@@N~
 The western passage splits here. A faint smell of something burned - but
 strangely sweet - comes from the north. From the south, a rhythmic
 scratching sound can be heard. Both passages look identical in every
@@ -3935,7 +4115,7 @@ D2
 0 -1 648
 S
 #646
-@@mMaze - The Scorched Room@@n~
+@@mMaze - The Scorched Room@@N~
 The source of the burned smell: a chamber where some magical explosion
 took place long ago. The walls are blasted smooth and the floor is
 fused glass. Charred remnants of what might have been furniture or
@@ -3952,7 +4132,7 @@ D2
 0 -1 645
 S
 #647
-@@mMaze - Dead End (north of scorched)@@n~
+@@mMaze - Dead End (north of scorched)@@N~
 The passage ends abruptly here at a sealed door. The door bears no
 handle, no keyhole, and no visible means of opening. It is simply
 a wall of featureless black metal. Knocking on it produces no sound -
@@ -3965,7 +4145,7 @@ D2
 0 -1 646
 S
 #648
-@@mMaze - The Clawed Crossing@@n~
+@@mMaze - The Clawed Crossing@@N~
 The floor here is covered in parallel scratch marks, as if something
 massive and clawed paced back and forth across this point repeatedly.
 The grooves are deep enough to catch your foot. Passages lead north,
@@ -3990,7 +4170,7 @@ D3
 0 -1 650
 S
 #649
-@@mMaze - Dead End (blood scent)@@n~
+@@mMaze - Dead End (blood scent)@@N~
 The blood scent leads here, to a chamber that clearly served as a lair
 for something predatory. Bones of various creatures - some of them
 humanoid - are scattered across the floor. Whatever lived here has moved
@@ -4003,7 +4183,7 @@ D3
 0 -1 648
 S
 #650
-@@mMaze - The Doubled Passage@@n~
+@@mMaze - The Doubled Passage@@N~
 This passage appears identical to one you've seen before, but subtle
 differences hint that it is not. The scratches on the wall are in
 slightly different positions. The dust has been recently disturbed in
@@ -4016,7 +4196,7 @@ D1
 0 -1 648
 S
 #651
-@@mMaze - The Heart of the Labyrinth@@n~
+@@mMaze - The Heart of the Labyrinth@@N~
 You have reached what feels like the center of the maze. The whispers
 here are almost loud enough to be speech. A single phrase repeats:
 'Remember why you came.' The walls here are clean, unmarked - as if
@@ -4042,7 +4222,7 @@ D3
 0 -1 653
 S
 #652
-@@mMaze - The False Exit@@n~
+@@mMaze - The False Exit@@N~
 This passage seems to lead upward and the air freshens slightly, giving
 false hope of escape. But the passage curves and descends again, eventually
 rejoining the maze at a point you've already visited. Several sets of
@@ -4060,7 +4240,7 @@ D3
 0 -1 651
 S
 #653
-@@mMaze - Dead End (the pit)@@n~
+@@mMaze - Dead End (the pit)@@N~
 The western passage ends at a pit in the floor, roughly circular and
 about two meters across. Looking down, you cannot see the bottom. Faint
 light - greenish and cold - rises from below. The pit makes a sound like
@@ -4079,7 +4259,7 @@ old sleeping fitfully. You decide not to jump in.
 ~
 S
 #654
-@@mMaze - The Second False Hope@@n~
+@@mMaze - The Second False Hope@@N~
 The air freshens even more here, and for a moment the whispers stop entirely.
 Then they return louder than ever, and the passage dead-ends at a blank wall
 bearing a single message: 'There is no shortcut. Only through.'
@@ -4091,7 +4271,7 @@ D2
 0 -1 652
 S
 #655
-@@mMaze - The Narrowing@@n~
+@@mMaze - The Narrowing@@N~
 The passage narrows here until you must turn sideways to pass. The walls
 press close and the whispering becomes intense - dozens of voices all speaking
 simultaneously in your ears. The floor is covered in handprints, as if
@@ -4108,7 +4288,7 @@ D2
 0 -1 656
 S
 #656
-@@mMaze - After the Narrowing@@n~
+@@mMaze - After the Narrowing@@N~
 Beyond the narrow passage, the corridor opens again. The air is colder
 and the obsidian walls here seem different - slightly transparent, and
 within them you can see vague shapes moving. Whether they are reflections
@@ -4129,7 +4309,7 @@ D2
 0 -1 658
 S
 #657
-@@mMaze - Dead End (the visions)@@n~
+@@mMaze - Dead End (the visions)@@N~
 The passage ends at a wall that is completely transparent - a window into
 another place. Beyond it, you see a vast hall filled with the shades of an
 army, standing at attention before an empty throne. They face the throne
@@ -4150,7 +4330,7 @@ might be a warning gesture.
 ~
 S
 #658
-@@mMaze - The Crossroads@@n~
+@@mMaze - The Crossroads@@N~
 A four-way junction in the deepest part of the labyrinth. Marks on the
 floor indicate that hundreds of travelers have stood here before, most
 of them choosing the same directions. The north passage looks fresher,
@@ -4175,7 +4355,7 @@ D3
 0 -1 661
 S
 #659
-@@mMaze - Dead End (the most traveled)@@n~
+@@mMaze - Dead End (the most traveled)@@N~
 The most-traveled path leads here. A chamber full of desperate graffiti
 - names, pleas, curses, prayers. In the center of the room stands a
 mirror that shows not the room itself but instead shows the crossroads
@@ -4188,7 +4368,7 @@ D3
 0 -1 658
 S
 #660
-@@mMaze - The Fresh Passage@@n~
+@@mMaze - The Fresh Passage@@N~
 The less-traveled northern path. The air here is slightly less stale
 and there are fewer footprints. Whether this indicates it leads somewhere
 new or simply that fewer reached this far is unclear. A faint light can
@@ -4209,7 +4389,7 @@ D4
 0 -1 642
 S
 #661
-@@mMaze - Dead End (the western spiral)@@n~
+@@mMaze - Dead End (the western spiral)@@N~
 The western passage spirals inward in a tight coil, bringing you back
 to a point you cannot connect to anywhere else. The spiral itself is
 a puzzle of sorts - standing at its center and looking outward, you
@@ -4223,7 +4403,7 @@ D1
 0 -1 658
 S
 #665
-@@mMaze - The Light at the End@@n~
+@@mMaze - The Light at the End@@N~
 The source of the faint light: a door of black iron, set with a single
 luminous stone of pale blue. The door is locked, but the keyhole is
 shaped like an obsidian shard - as if made for a very specific key.
@@ -4248,7 +4428,7 @@ right key will work.
 ~
 S
 #670
-@@mThe Threshold of the Sanctum@@n~
+@@mThe Threshold of the Sanctum@@N~
 Passing through the iron door, you find yourself in a vast antechamber
 of polished black marble. Your reflection looks back at you from every
 surface, but each reflection is slightly different - showing you with
@@ -4274,7 +4454,7 @@ who you are.
 ~
 S
 #671
-@@mThe Corridor of Souls@@n~
+@@mThe Corridor of Souls@@N~
 This corridor is lined with niches, each containing a crystalline container
 the size of a fist. Inside each container floats a faint light - a
 captured soul. The containers number in the hundreds, perhaps thousands.
@@ -4302,7 +4482,7 @@ and dark. Perhaps their owners escaped. Perhaps something else happened.
 ~
 S
 #672
-@@mThe Hall of Void Studies@@n~
+@@mThe Hall of Void Studies@@N~
 Bookshelves of blackened metal line this circular chamber, bearing
 volumes bound in material you prefer not to identify. Many are chained
 to their shelves. In the center, a lectern holds an open book in which
@@ -4331,7 +4511,7 @@ D1
 0 -1 701
 S
 #673
-@@mThe Chamber of the Dark Puzzle@@n~
+@@mThe Chamber of the Dark Puzzle@@N~
 A large chamber with a complex mechanical device in its center - a three-
 dimensional puzzle of interlocking void-stone rings, each engraved with
 symbols. The rings must be aligned in the correct configuration to open
@@ -4358,7 +4538,7 @@ earlier bears symbols that match the alignment needed.
 ~
 S
 #674
-@@mThe Overseer's Balcony@@n~
+@@mThe Overseer's Balcony@@N~
 A balcony of black stone overlooking an impossibly large chamber below.
 From here, the full scale of the inner sanctum becomes apparent - it
 is several stories tall and wide, its ceiling lost in shadow. Below, you
@@ -4384,7 +4564,7 @@ be an improvement.
 ~
 S
 #675
-@@yThe Guard Post@@n~
+@@yThe Guard Post@@N~
 A fortified position carved into the corridor wall where it widens.
 Arrow slits pierce the outer wall, and the narrow bottleneck forces
 visitors to pass through a chokepoint. The guards that once manned
@@ -4406,7 +4586,7 @@ D4
 0 -1 671
 S
 #676
-@@mThe Inner Sanctum Gate@@n~
+@@mThe Inner Sanctum Gate@@N~
 A wide landing before the innermost doors of Kel'Shadra. The doors
 themselves are not locked - they stand open, as if inviting entry.
 Or as if something beyond them is not concerned with keeping you out.
@@ -4424,7 +4604,7 @@ D2
 1 640 673
 S
 #677
-@@yThe Throne Room Approach@@n~
+@@yThe Throne Room Approach@@N~
 A grand processional corridor leading to the throne room. The floor
 here is a mosaic of black and deep purple tiles depicting a battle:
 mortal forces being consumed by a vast darkness that the tile-work
@@ -4450,7 +4630,7 @@ artist made sure to capture that moment in great detail.
 ~
 S
 #678
-@@mThe Throne Room of Void@@n~
+@@mThe Throne Room of Void@@N~
 The throne room of Kel'Shadra is vast and terrible. A throne of solid
 darkness sits upon a dais at the room's far end - not a throne of dark
 stone or metal, but a throne made of crystallized void itself. Floating
@@ -4484,7 +4664,7 @@ every choice you make.
 ~
 S
 #679
-@@mThe Sanctum Archive@@n~
+@@mThe Sanctum Archive@@N~
 A side chamber off the throne room housing the most dangerous knowledge
 in Kel'Shadra. Texts sealed within barriers of void-light, accessible
 only to those who understand the nature of the void. Several barriers
@@ -4509,7 +4689,7 @@ attempting to break a barrier would attract significant attention.
 ~
 S
 #680
-@@mThe Preparation Hall@@n~
+@@mThe Preparation Hall@@N~
 A chamber where Kel'Shadra's chosen prepare for battle. Weapon racks of
 void-stone line the walls, and training dummies made from crystallized
 dark matter stand in rows. Several of the dummies appear to have been
@@ -4537,7 +4717,7 @@ from whatever attack left them broken.
 ~
 S
 #681
-@@yThe Chamber Below@@n~
+@@yThe Chamber Below@@N~
 The vast chamber visible from the balcony above. From ground level, the
 scale is even more intimidating. The void priests' ritual patterns become
 clear: they are tracing lines of power that converge on a single point
@@ -4567,7 +4747,7 @@ it, Kel'Shadra would not be contained to this citadel.
 ~
 S
 #682
-@@mThe Sanctum Gallery@@n~
+@@mThe Sanctum Gallery@@N~
 A long gallery connecting the archive to the chamber below. The walls
 here are bare stone that has been burned smooth by incredible heat or
 cold at some point in the past. Abstract shapes have formed in the
@@ -4585,7 +4765,7 @@ D3
 0 -1 679
 S
 #683
-@@pThe Binding Circle@@n~
+@@pThe Binding Circle@@N~
 At the absolute center of Kel'Shadra's power. The sigil here is fully
 visible - a circle of void-runes forty feet across, glowing with restrained
 power. The air inside the circle shimmers and distorts, and through the
@@ -4615,7 +4795,7 @@ D3
 0 -1 684
 S
 #684
-@@yThe Ritual Antechamber@@n~
+@@yThe Ritual Antechamber@@N~
 Directly adjacent to the binding circle, this room serves as a staging
 area for the maintenance rituals. Spell components of dark power are
 stored here, along with detailed instructions in several languages for
@@ -4641,7 +4821,7 @@ maintain the schedule could allow partial manifestation.
 ~
 S
 #685
-@@yThe Path of Manifestation@@n~
+@@yThe Path of Manifestation@@N~
 A corridor leading to the binding circle that vibrates with contained
 energy. The floor here glows faintly with the overflow of power from
 the sigil. Walking this corridor, you feel the entity's consciousness
@@ -4669,7 +4849,7 @@ not the first. You will not be the last.
 ~
 S
 #690
-@@pThe Presence Chamber@@n~
+@@pThe Presence Chamber@@N~
 This is as close as you can come to the direct presence of Kel'Shadra
 without entering the binding circle itself. The entity is aware of you
 here - the walls pulse with its attention, and the shadows cast no
@@ -4694,7 +4874,7 @@ It has been waiting a long time for a worthy challenge.
 ~
 S
 #691
-@@yThe Final Approach@@n~
+@@yThe Final Approach@@N~
 The last passage before confronting Kel'Shadra's physical manifestation.
 The air here tears at your clothing and weapons and flesh, not from wind
 but from the sheer reality-distortion caused by the entity's proximity.
@@ -4716,7 +4896,7 @@ D2
 0 -1 690
 S
 #695
-@@eThe Void Sanctum@@n~
+@@eThe Void Sanctum@@N~
 The ultimate chamber of Kel'Shadra - a space that exists at the
 intersection of material reality and the void. The floor is solid but
 the walls and ceiling are pure darkness from which forms constantly
@@ -4749,7 +4929,7 @@ D3
 0 -1 803
 S
 #700
-@@pThe Chamber of Reflection@@n~
+@@pThe Chamber of Reflection@@N~
 A hidden chamber accessible only to those who correctly solved the
 frozen puzzle in the Frost Sanctum. The chamber is perfectly circular
 and perfectly silent. At its center, a void-fire burns in a stone
@@ -4770,7 +4950,7 @@ as offerings or warnings. A note in several languages reads:
 ~
 S
 #701
-@@mThe Sorcerer's Refuge@@n~
+@@mThe Sorcerer's Refuge@@N~
 A hidden room that can only be found by those who paid attention to
 all the environmental clues throughout the citadel. Once a private
 study of a sorcerer who served Kel'Shadra before realizing his mistake,
@@ -4792,7 +4972,7 @@ The notes also mention that the sorcerer hid his best weapons here.
 ~
 S
 #702
-@@mThe Memory Pool@@n~
+@@mThe Memory Pool@@N~
 A perfectly circular pool of dark water in a hidden alcove. Those who
 drink from it experience a vivid vision - not of the past, but of the
 most important moment in their own future. The vision is accurate but
@@ -4814,7 +4994,7 @@ entirely on what you do with the knowledge.
 ~
 S
 #703
-@@dThe Catacomb Descent@@n~
+@@dThe Catacomb Descent@@N~
 A staircase of cracked black stone descends steeply from the northern
 hall into the earth below Kel'Shadra. The walls narrow as you go deeper,
 and the air grows heavy with the smell of ancient death. Phosphorescent
@@ -4832,7 +5012,7 @@ D5
 0 -1 704
 S
 #704
-@@dThe Upper Catacomb Hall@@n~
+@@dThe Upper Catacomb Hall@@N~
 The catacombs open into a wide vaulted hall whose ceiling is lost in
 darkness. Niches carved into every wall hold the remains of Kel'Shadra's
 earliest servants - not merely their bones, but their preserved bodies
@@ -4865,7 +5045,7 @@ you look away. The oldest are nearly unrecognizable as humanoid.
 ~
 S
 #705
-@@dThe Bone Road@@n~
+@@dThe Bone Road@@N~
 A long passage running deeper into the catacomb complex. The floor here
 is made not of stone but of compressed bones - countless remains that
 have been ground flat and fused together by decades of foot traffic and
@@ -4883,7 +5063,7 @@ D5
 0 -1 707
 S
 #706
-@@dThe Preparation Chamber@@n~
+@@dThe Preparation Chamber@@N~
 Here the dead were prepared before being placed in their niches. Stone
 tables still bear dark stains, and the tools used in preservation
 rituals hang on the walls in neat rows. The tools are sized for
@@ -4905,7 +5085,7 @@ body rather than allowing full departure.
 ~
 S
 #707
-@@dThe Vault of the Honored Dead@@n~
+@@dThe Vault of the Honored Dead@@N~
 The most prestigious section of the catacombs - those who served
 Kel'Shadra with the greatest distinction rest here in ornate stone
 sarcophagi. Each sarcophagus is carved with detailed images of the
@@ -4936,7 +5116,7 @@ extraordinary evil with complete devotion.
 ~
 S
 #708
-@@dThe Deep Catacomb@@n~
+@@dThe Deep Catacomb@@N~
 The air here is almost liquid with void energy. Every breath feels
 contaminated. The walls weep a dark fluid that pools in channels along
 the floor and flows south toward something you cannot yet see. The
@@ -4954,7 +5134,7 @@ D5
 0 -1 711
 S
 #709
-@@dThe Western Crypt@@n~
+@@dThe Western Crypt@@N~
 A large crypt extending westward from the upper hall. The ceiling here
 is supported by pillars of bone - actual bones, stacked and mortared
 together with precision and artistry. Between the pillars, the floor
@@ -4979,7 +5159,7 @@ long-dead, following patterns laid down when they were first interred.
 ~
 S
 #710
-@@dThe Crypt of Champions@@n~
+@@dThe Crypt of Champions@@N~
 An antechamber adjacent to the vault of honored dead, containing the
 remains of warriors who fell in Kel'Shadra's greatest battles. Their
 weapons are still in their hands. The void energy here has preserved
@@ -5004,7 +5184,7 @@ tactics. Death has not diminished their formation one iota.
 ~
 S
 #711
-@@dThe Seeping Chamber@@n~
+@@dThe Seeping Chamber@@N~
 The dark fluid that seeped from the walls above collects here in a
 pool of considerable size. The pool is perfectly still and perfectly
 black; nothing is reflected in its surface. Wading in it would not
@@ -5029,7 +5209,7 @@ something else entirely that happens to occupy this space.
 ~
 S
 #712
-@@yThe Lower Western Crypt@@n~
+@@yThe Lower Western Crypt@@N~
 Reached by stairs from the western crypt above, this lower level is
 older and less organized. The dead here were placed in rough-cut
 niches with little ceremony. Many of the niches are empty, their
@@ -5046,7 +5226,7 @@ D2
 0 -1 715
 S
 #713
-@@yThe Hall of Last Battles@@n~
+@@yThe Hall of Last Battles@@N~
 This hall commemorates defeats as much as victories - murals on the
 walls depict the moments when Kel'Shadra's champions fell, rendered
 in meticulous detail. The artist captured the exact instant of death
@@ -5073,7 +5253,7 @@ years ago.
 ~
 S
 #714
-@@yThe Root Chamber@@n~
+@@yThe Root Chamber@@N~
 The deepest accessible point of the catacombs before the inner sanctum.
 Enormous roots of black stone descend from the ceiling - not natural
 formations but deliberate constructions, the roots of the citadel
@@ -5100,7 +5280,7 @@ would certainly attract significant attention.
 ~
 S
 #715
-@@dThe Long Undercroft@@n~
+@@dThe Long Undercroft@@N~
 A passage running east-west at the lowest accessible level of the
 catacombs. The undercroft is entirely featureless: perfectly smooth
 walls, floor, and ceiling of black stone with no niches, no carvings,
@@ -5122,7 +5302,7 @@ D3
 0 -1 860
 S
 #716
-@@yThe Trophy Hall@@n~
+@@yThe Trophy Hall@@N~
 Kel'Shadra's collection of trophies from defeated champions: weapons,
 armor, and in some cases entire skeletons mounted on the wall behind
 plaques with names and brief accounts of the battles. The collection
@@ -5152,7 +5332,7 @@ D3
 0 -1 850
 S
 #717
-@@dThe Catacomb Lord's Antechamber@@n~
+@@dThe Catacomb Lord's Antechamber@@N~
 A formal antechamber outside the Catacomb Lord's throne room. The
 decor here is precise: symmetrical arrangements of bones, carefully
 placed void-candles, and a carpet of dark fabric that muffles sound
@@ -5178,7 +5358,7 @@ dominance directed at any who approach.
 ~
 S
 #718
-@@dThe Undercroft Archive@@n~
+@@dThe Undercroft Archive@@N~
 The eastern end of the long undercroft opens into an archive of sorts:
 shelves of preserved documents, all relating to the dead interred in
 the catacombs. Each occupant has a file detailing their life, their
@@ -5200,7 +5380,7 @@ to read.
 ~
 S
 #719
-@@dThe Hall of Chains@@n~
+@@dThe Hall of Chains@@N~
 The catacomb level equivalent of a dungeon: prisoners of Kel'Shadra
 who are being preserved rather than killed, kept in states of magical
 suspension between life and death. Dozens of forms hang in chains,
@@ -5222,7 +5402,7 @@ presence for future reference.
 ~
 S
 #720
-@@yThe Throne of Bones@@n~
+@@yThe Throne of Bones@@N~
 The Catacomb Lord's throne room is exactly as the title suggests: a
 throne constructed entirely from the bones of the entity's most
 powerful defeated enemies. The throne rises twelve feet high and
@@ -5244,7 +5424,7 @@ prominent positions, like a hierarchy made permanent in death.
 ~
 S
 #730
-@@aThe Spire Entrance@@n~
+@@aThe Spire Entrance@@N~
 A doorway in the eastern wall of the upper catacombs connects via
 a sealed passage to the base of the Shattered Spire - the tower
 that was added to Kel'Shadra by the mages who originally served the
@@ -5263,7 +5443,7 @@ D1
 0 -1 616
 S
 #731
-@@aThe Spire Base@@n~
+@@aThe Spire Base@@N~
 The lowest floor of the Shattered Spire is a circular room occupied
 by the remains of the original magical laboratory. Workbenches of
 acid-burned stone, shattered apparatus, and the outlines of complex
@@ -5295,7 +5475,7 @@ completed.
 ~
 S
 #732
-@@aSpire Level Two@@n~
+@@aSpire Level Two@@N~
 The second floor of the tower is a library, though most of its
 contents have been destroyed by the magical explosion that
 'shattered' the spire and gave it its name. Scorched shelves bear
@@ -5322,7 +5502,7 @@ that had begun to 'respond' in ways they had not anticipated.
 ~
 S
 #733
-@@aSpire Level Three@@n~
+@@aSpire Level Three@@N~
 The third floor is intact enough to reveal its original purpose: an
 observatory for studying magical phenomena. The ceiling is a dome of
 polished obsidian rather than glass, and the instruments here are
@@ -5349,7 +5529,7 @@ has not ended.
 ~
 S
 #734
-@@aSpire Level Four@@n~
+@@aSpire Level Four@@N~
 The midpoint of the tower, this floor was used as living quarters
 for the mages who inhabited the spire. The rooms are arranged in
 a circle around a central staircase. Each has been abandoned in
@@ -5378,7 +5558,7 @@ D1
 0 -1 851
 S
 #735
-@@aThe Spire Antechamber@@n~
+@@aThe Spire Antechamber@@N~
 A ground-level antechamber connecting the spire base to a lower
 annex built into the spire's foundation. The walls here are covered
 in warning signs in multiple languages, all variations of the same
@@ -5405,7 +5585,7 @@ add the single word 'Run.'
 ~
 S
 #736
-@@aThe Conduit Chamber@@n~
+@@aThe Conduit Chamber@@N~
 The experimental void-energy conduit is still here and still active.
 A column of pure void energy rises from floor to ceiling through the
 center of the room, crackling with barely-contained power. The mages
@@ -5426,7 +5606,7 @@ There is no obvious off switch. Touching it would be extremely unwise.
 ~
 S
 #737
-@@aSpire Level Five@@n~
+@@aSpire Level Five@@N~
 Above the living quarters, this floor shows the most damage from the
 explosion that shattered the upper spire. Cracks run through every
 surface, and sky is visible in several places through the broken stone.
@@ -5453,7 +5633,7 @@ designated destination - but no one living knows where that is.
 ~
 S
 #738
-@@aSpire Level Six@@n~
+@@aSpire Level Six@@N~
 The near-summit of the spire, this floor is exposed to the outside on
 three sides where the explosion blew out the walls. The remaining wall
 bears a massive painting that survived through magical protection: a
@@ -5480,7 +5660,7 @@ as the last journal entries in the library below.
 ~
 S
 #739
-@@yThe Spire Summit@@n~
+@@yThe Spire Summit@@N~
 The very top of the Shattered Spire, open to the sky. From here, the
 full extent of Kel'Shadra is visible: the citadel complex stretching
 in all directions, and beyond it, a wasteland where the entity's
@@ -5503,7 +5683,7 @@ enough time, the entire region would become void.
 ~
 S
 #750
-@@cThe Eternal Corridors Entrance@@n~
+@@cThe Eternal Corridors Entrance@@N~
 A passage that branches from the main citadel's upper level leads to
 the Eternal Corridors - a section of Kel'Shadra built according to
 different geometric rules than the rest. The corridors here loop and
@@ -5522,7 +5702,7 @@ D1
 0 -1 680
 S
 #751
-@@cEternal Corridor - First Loop@@n~
+@@cEternal Corridor - First Loop@@N~
 The corridor curves gently to the right and keeps curving, eventually
 returning to where it started despite never having turned more than
 slightly at any point. The mathematics of this are unclear. The walls
@@ -5545,7 +5725,7 @@ D2
 0 -1 750
 S
 #752
-@@cEternal Corridor - The Doubled Way@@n~
+@@cEternal Corridor - The Doubled Way@@N~
 Two identical passages that run parallel. Walking either passage for
 long enough brings you to the same destination. The passages are truly
 identical: the same cracks in the same places, the same dust patterns,
@@ -5567,7 +5747,7 @@ D2
 0 -1 751
 S
 #753
-@@cEternal Corridor - The Junction@@n~
+@@cEternal Corridor - The Junction@@N~
 A junction where five passages meet, though the space is only large
 enough for three. The extra passages occupy the same physical space
 as the existing ones, overlapping without intersection. Choosing
@@ -5593,7 +5773,7 @@ D3
 0 -1 758
 S
 #754
-@@cEternal Corridor - The Long Walk@@n~
+@@cEternal Corridor - The Long Walk@@N~
 A straight passage that runs for what feels like miles, though the
 citadel's exterior dimensions could not accommodate such length.
 The passage does not curve or branch. Markers left by earlier travelers
@@ -5611,7 +5791,7 @@ D2
 0 -1 753
 S
 #755
-@@cEternal Corridor - The Wide Hall@@n~
+@@cEternal Corridor - The Wide Hall@@N~
 An anomaly in the corridor system: a wide, high-ceilinged hall where
 multiple paths converge. The space feels stable compared to the
 passages around it. Several travel-worn campsites from various
@@ -5643,7 +5823,7 @@ not where you entered.
 ~
 S
 #756
-@@cEternal Corridor - The Mirrored Stretch@@n~
+@@cEternal Corridor - The Mirrored Stretch@@N~
 Both walls of this passage are polished to mirror-brightness, and the
 ceiling is angled to create an infinite regression of reflections. The
 effect makes it impossible to judge where the actual passage ends and
@@ -5665,7 +5845,7 @@ D3
 0 -1 752
 S
 #757
-@@cEternal Corridor - The Ascending Descent@@n~
+@@cEternal Corridor - The Ascending Descent@@N~
 A corridor that slopes both upward and downward simultaneously - an
 impossibility that the Eternal Corridors accomplish through folded
 space. Walking it in either direction produces the sensation of going
@@ -5687,7 +5867,7 @@ Those without such sensitivity simply find it exhausting.
 ~
 S
 #758
-@@cEternal Corridor - The Eastern Reach@@n~
+@@cEternal Corridor - The Eastern Reach@@N~
 The easternmost passage in the corridors, where the spatial distortion
 is most extreme. The walls seem further apart than they were a step ago,
 and the ceiling seems lower. A faint sound permeates the passage: not
@@ -5712,7 +5892,7 @@ functioning is impossible to determine without more information.
 ~
 S
 #759
-@@cEternal Corridor - The Endless Straight@@n~
+@@cEternal Corridor - The Endless Straight@@N~
 Continuation of the long walk, in territory where no markers were
 left by previous travelers. Whether this is because they turned back
 before reaching here, or because they never left to tell others about
@@ -5730,7 +5910,7 @@ D2
 0 -1 754
 S
 #760
-@@cEternal Corridor - The Convergence@@n~
+@@cEternal Corridor - The Convergence@@N~
 A chamber where many of the corridor's paths eventually lead regardless
 of which route is taken. The convergence is not on any map because its
 location changes - but every sufficiently persistent traveler in the
@@ -5755,7 +5935,7 @@ and directs them here, whether they choose this path or not.
 ~
 S
 #761
-@@cEternal Corridor - The Residue Chamber@@n~
+@@cEternal Corridor - The Residue Chamber@@N~
 A chamber where the residue of centuries of traveler anxiety has
 accumulated. The walls are covered in desperate handwriting, names,
 prayers, and crude maps. The floor is littered with discarded items -
@@ -5777,7 +5957,7 @@ entry is from three days ago.
 ~
 S
 #762
-@@cEternal Corridor - The Watching Room@@n~
+@@cEternal Corridor - The Watching Room@@N~
 A chamber where the walls are set with obsidian panels that reflect
 not the room's current state but scenes from elsewhere in the citadel -
 other rooms, other moments. The panels do not show the same scenes
@@ -5804,7 +5984,7 @@ at the same panels.
 ~
 S
 #763
-@@cEternal Corridor - The Terminal@@n~
+@@cEternal Corridor - The Terminal@@N~
 The end of the long straight passage, which deposits travelers into
 a chamber that bears marks of having been visited many times. A
 comfortable-looking chair in the corner bears the imprint of long
@@ -5830,7 +6010,7 @@ You can't kill the maze. You can only find the door.'
 ~
 S
 #764
-@@cThe Warden's Threshold@@n~
+@@cThe Warden's Threshold@@N~
 Beyond the convergence door, the Eternal Corridors resolve into a
 conventional corridor - straight, unambiguous, and leading clearly
 forward. The spatial madness of the maze falls away here like a
@@ -5862,7 +6042,7 @@ D1
 0 -1 766
 S
 #765
-@@cEternal Corridor - The Observation Point@@n~
+@@cEternal Corridor - The Observation Point@@N~
 A room whose floor is transparent - you stand on what appears to be
 nothing above a vast darkness extending downward without limit. Other
 passages of the Eternal Corridors are visible below, their lights
@@ -5884,7 +6064,7 @@ understand why maps of this place are always wrong.
 ~
 S
 #766
-@@cEternal Corridor - The Rest Chamber@@n~
+@@cEternal Corridor - The Rest Chamber@@N~
 A chamber that exists, the notes suggested, as a gift from the Warden
 to those who are close to understanding the maze. It is simply a quiet
 room. No distortions. No spatial impossibilities. No whispers. A stone
@@ -5912,7 +6092,7 @@ killed hundreds.
 ~
 S
 #767
-@@yThe Warden's Hall@@n~
+@@yThe Warden's Hall@@N~
 The Corridor Warden's domain proper: a vast hall of impossible geometry
 where all the spatial laws of the Eternal Corridors apply simultaneously.
 Multiple floors exist at different angles; passages open onto ceilings;
@@ -5939,7 +6119,7 @@ D3
 0 -1 852
 S
 #800
-@@pThe Void Herald's Antechamber@@n~
+@@pThe Void Herald's Antechamber@@N~
 A transitional space between the main sanctum areas and the Herald's
 domain. The decor here is deliberately minimal - bare void-stone walls,
 a single void-candle that burns without melting, and a floor of
@@ -5966,7 +6146,7 @@ opens. Fail and you will join the honored dead in service to the Citadel.'
 ~
 S
 #801
-@@pThe Hall of the Ten@@n~
+@@pThe Hall of the Ten@@N~
 Ten alcoves line this hall, each containing the armored remains of a
 great warrior - the ten whose essences form the Void Herald. Plaques
 identify them by name, culture, and fighting style. Each came from a
@@ -5992,7 +6172,7 @@ permission to become part of it. This is worth remembering.
 ~
 S
 #802
-@@eThe Herald's Proving Ground@@n~
+@@eThe Herald's Proving Ground@@N~
 The chamber where the Void Herald waits. It is a perfect circle of
 void-stone with a raised dais at the far end. The Herald stands
 motionless on the dais, a composite figure that shifts in aspect
@@ -6020,7 +6200,7 @@ to them, retained their honor.
 ~
 S
 #803
-@@pThe Path Beyond the Herald@@n~
+@@pThe Path Beyond the Herald@@N~
 Beyond the Herald's domain, a final passage leads directly to the
 Void Incarnate's sanctum. The air here is almost unbearable - thick
 with void energy that presses against the mind as much as the body.
@@ -6038,7 +6218,7 @@ D2
 1 635 802
 S
 #850
-@@dThe Secret of the Catacombs@@n~
+@@dThe Secret of the Catacombs@@N~
 A hidden chamber accessible only through a mechanism in the Trophy Hall.
 The chamber contains the personal records of the Catacomb Lord from before
 its death - diaries, correspondence, and research notes from its mortal
@@ -6060,7 +6240,7 @@ served for two hundred years and has forgotten most of his mortal life.
 ~
 S
 #851
-@@aThe Spire's Hidden Room@@n~
+@@aThe Spire's Hidden Room@@N~
 Accessible via a mechanism on the fourth floor of the Shattered Spire,
 this room was Archmage Serafina Voss's private study - hidden from her
 colleagues. The room is intact, preserved by her own wards. Her personal
@@ -6082,7 +6262,7 @@ four centuries later, waiting for someone to read it and act on it.
 ~
 S
 #852
-@@cThe Corridor's Memory@@n~
+@@cThe Corridor's Memory@@N~
 A chamber accessible only to those who fully understand the Eternal
 Corridors' navigation - requiring knowledge gathered from multiple
 scattered sources throughout the maze. The chamber contains the Corridor
@@ -6105,7 +6285,7 @@ patience, observation, and a willingness to admit when they are wrong.
 ~
 S
 #860
-@@dThe Void Catacombs Lower Archive@@n~
+@@dThe Void Catacombs Lower Archive@@N~
 A collection of records maintained beneath the catacomb complex,
 accessible from the undercroft. The archive tracks the full history
 of Kel'Shadra from the perspective of those who served it: how the
@@ -6129,7 +6309,7 @@ compromise at a time.
 ~
 S
 #900
-@@bThe Void-Gate Chamber@@n~
+@@bThe Void-Gate Chamber@@N~
 A chamber accessible only to those who have completed all of the
 citadel's major challenges: the catacombs, the spire, the eternal
 corridors, the binding circle. A void-gate occupies the center of
@@ -6156,7 +6336,7 @@ D3
 0 -1 901
 S
 #901
-@@bThe Chamber of First Contact@@n~
+@@bThe Chamber of First Contact@@N~
 A historical chamber that is both museum and memorial. The exact spot
 where the sorcerers first made contact with Kel'Shadra is preserved
 here, marked by a circle of void-glass that formed when the entity
@@ -6184,7 +6364,7 @@ D3
 0 -1 902
 S
 #902
-@@bThe Observation Gallery@@n~
+@@bThe Observation Gallery@@N~
 A gallery overlooking the void-gate chamber from above. Arrow slits
 allowed the original sorcerers to observe the gate without being in
 the room. From here, the full apparatus of the gate is visible, along
@@ -6207,7 +6387,7 @@ to protect future users.
 ~
 S
 #950
-@@bThe Aftermath Chamber@@n~
+@@bThe Aftermath Chamber@@N~
 A room accessible only after defeating Kel'Shadra's physical manifestation
 in the Void Sanctum. With the entity's focus broken, certain areas of
 the citadel have changed: this chamber, formerly inaccessible, has opened.
@@ -6236,7 +6416,7 @@ D3
 0 -1 951
 S
 #951
-@@bThe Resolution Hall@@n~
+@@bThe Resolution Hall@@N~
 The final room of the citadel - the one that only exists after the
 entity's defeat. The hall is simply an exit: a passage that leads
 through the citadel's walls to the outside world. The walls here
