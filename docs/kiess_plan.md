@@ -133,15 +133,12 @@ Coordinates: west->east `x=0..9`, north->south `y=0..9`.
 
 This means buildings do NOT participate in grid traversal. Adjacent street rooms that would normally connect to a building's grid position have no exit in that direction. Players enter a building from the street, use its services, and leave the same way.
 
-**Connectivity note:** With all 35 buildings as dead-ends, the outdoor street grid (64 rooms) carries all traversal. The north-south and east-west spines are interrupted by building footprints; players navigate via the perimeter wall avenues and connecting streets. Room 13036 was converted from inside (Judicial Archive) to city (Judicial Colonnade) to prevent rooms 13037 and 13047 from becoming an isolated pocket.
+**Connectivity note:** With all 31 buildings as dead-ends, the outdoor street grid (68 rooms) carries all traversal. The north-south and east-west spines are interrupted by building footprints; players navigate via the perimeter wall avenues and connecting streets. Room 13036 was converted from inside (Judicial Archive) to city (Judicial Colonnade) to prevent rooms 13037 and 13047 from becoming an isolated pocket. The full perimeter (rows 0 and 9, columns 0 and 9) is uninterrupted city-sector rooms, allowing a continuous wall walk around the entire city.
 
-### Building Entrance Table (all 35 inside rooms)
+### Building Entrance Table (all 31 inside rooms)
 
 | Vnum | Building Name | Exit Dir | To Room | Street/Room Name |
 |------|--------------|----------|---------|-----------------|
-| **Row 0** | | | | |
-| 13003 | North Gate Customs Office | east | 13004 | North Gate Staging Yard |
-| 13006 | North Gate Guard Post | west | 13005 | The North Gate of Kiess |
 | **Row 1** | | | | |
 | 13012 | Traveler's Registry | west | 13011 | Caravan Rest Yard |
 | 13013 | Arrival Provisioner | east | 13014 | North Promenade, Upper |
@@ -181,9 +178,6 @@ This means buildings do NOT participate in grid traversal. Adjacent street rooms
 | 13085 | Guild Registrar Hall | north | 13075 | South Promenade, Mid-Lower |
 | 13086 | Portal Warden's Office | north | 13076 | Military Supply Road, East |
 | 13088 | Wall Command Headquarters | west | 13087 | Arena Observation Deck |
-| **Row 9** | | | | |
-| 13093 | South Gate Inspection Post | east | 13094 | South Gate Mustering Yard |
-| 13096 | South Gate Quartermaster Annex | west | 13095 | The South Gate of Kiess |
 
 
 ## City Wall and Perimeter Plan
@@ -226,10 +220,10 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | 13000 | Northwest Watchtower | city | 0 | Corner fortification; The Watcher of Storms statue; beacon brazier |
 | 13001 | North Wall Walk, West End | city | 0 | Battlement walkway along north wall |
 | 13002 | North Wall Walk, West Approach | city | 0 | Wall walk nearing the gate |
-| 13003 | North Gate Customs Office | inside | safe | Screening station for arriving caravans; dead-end, entrance east from 13004 |
+| 13003 | North Gate Customs Yard | city | 0 | Open-air screening area for arriving caravans; part of continuous wall walk |
 | 13004 | North Gate Staging Yard | city | 0 | Wagon marshalling area outside the gate proper |
 | 13005 | The North Gate of Kiess | city | 0 | Primary north entry; Warden's Arch monument; external link north |
-| 13006 | North Gate Guard Post | inside | safe | Guard office and patrol mustering room; dead-end, entrance west from 13005 |
+| 13006 | North Gate Guard Platform | city | 0 | Open guard platform and patrol mustering area; part of continuous wall walk |
 | 13007 | North Wall Walk, East Approach | city | 0 | Wall walk east of the gate |
 | 13008 | North Wall Walk, East End | city | 0 | Battlement walkway continuing east |
 | 13009 | Northeast Watchtower | city | 0 | Corner fortification; The Watcher of Daybreak statue; beacon brazier |
@@ -361,10 +355,10 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 | 13090 | Southwest Watchtower | city | 0 | Corner fortification; The Watcher of Storms statue |
 | 13091 | South Wall Walk, West End | city | 0 | Battlement walkway along south wall |
 | 13092 | South Wall Walk, West Approach | city | 0 | Wall walk nearing the south gate |
-| 13093 | South Gate Inspection Post | inside | safe | Outbound cargo inspection; dead-end, entrance east from 13094 |
+| 13093 | South Gate Inspection Yard | city | 0 | Open-air outbound cargo inspection area; part of continuous wall walk |
 | 13094 | South Gate Mustering Yard | city | 0 | Assembly area for outbound expeditions |
 | 13095 | The South Gate of Kiess | city | 0 | Primary south entry; Pillar of Returning Caravans; external link south |
-| 13096 | South Gate Quartermaster Annex | inside | safe | Outbound supply distribution; dead-end, entrance west from 13095 |
+| 13096 | South Gate Supply Yard | city | 0 | Open-air outbound supply distribution area; part of continuous wall walk |
 | 13097 | South Wall Walk, East Approach | city | 0 | Wall walk east of the south gate |
 | 13098 | South Wall Walk, East End | city | 0 | Battlement walkway continuing east |
 | 13099 | Southeast Watchtower | city | 0 | Corner fortification; The Watcher of Dusk statue |
@@ -372,8 +366,8 @@ Sector types: `city` (1) for outdoor streets/plazas, `inside` (11) for enclosed 
 ### Room Flag Summary
 
 - **`recall_set` sector (8):** 13055 only (Central Prism); room_flags = `1024` (ROOM_SAFE)
-- **`inside` sector (11), `safe` rooms (35 total):** All enclosed buildings — room_flags = `1024` (ROOM_SAFE). All are dead-end rooms with one exit (see Building Entrance Policy).
-- **`city` sector (1), unflagged streets (64 total):** All exterior roads, plazas, wall walks, gate approaches — room_flags = `0`
+- **`inside` sector (11), `safe` rooms (31 total):** All enclosed buildings — room_flags = `1024` (ROOM_SAFE). All are dead-end rooms with one exit (see Building Entrance Policy).
+- **`city` sector (1), unflagged streets (68 total):** All exterior roads, plazas, wall walks, gate approaches — room_flags = `0`. The full perimeter (rows 0/9, columns 0/9) is uninterrupted city-sector rooms.
 - **No `dark` (1), `no_mob` (4), or `no_magic` (16) flags** are planned for any Kiess room (city hub should be fully accessible and lit)
 
 **Area file format reference:** In the `#ROOMS` section, each room's header line is `<room_flags> <sector_type>`. For example, the Central Prism would be `1024 8` (safe + recall_set), an inside shop would be `1024 11` (safe + inside), and a city street would be `0 1` (no flags + city).
