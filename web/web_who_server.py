@@ -3,19 +3,97 @@
 
 from __future__ import annotations
 
+import json
+import os
+import socket
+import threading
+import uuid
 from html import escape
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 
 HOST = "0.0.0.0"
-PORT = 80
+PORT = int(os.environ.get("ACK_WEB_PORT", "80"))
 WEB_DIR = Path(__file__).resolve().parent
 ROOT_DIR = WEB_DIR.parent
 WHO_HTML_FILE = WEB_DIR / "soewholist.html"
 WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
+WORLD_TARGETS = [
+    {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890},
+    {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
+    {"id": "ack42", "name": "ACK! 4.2", "host": "ackmud.com", "port": 8892},
+]
+
+
+class MudSession:
+    def __init__(self, host: str, port: int):
+        self.host = host
+        self.port = port
+        self.socket = socket.create_connection((host, port), timeout=10)
+        self.socket.settimeout(0.5)
+        self._chunks: list[str] = []
+        self._chunks_lock = threading.Lock()
+        self.connected = True
+        self.error = ""
+        self._reader = threading.Thread(target=self._reader_loop, daemon=True)
+        self._reader.start()
+
+    def _reader_loop(self) -> None:
+        while self.connected:
+            try:
+                data = self.socket.recv(4096)
+            except socket.timeout:
+                continue
+            except OSError as exc:
+                self.error = f"Connection error: {exc}"
+                break
+
+            if not data:
+                break
+
+            decoded = data.decode("utf-8", errors="replace")
+            with self._chunks_lock:
+                self._chunks.append(decoded)
+
+        self.connected = False
+        self.close()
+
+    def drain_output(self) -> str:
+        with self._chunks_lock:
+            output = "".join(self._chunks)
+            self._chunks.clear()
+        return output
+
+    def send_line(self, line: str) -> None:
+        if not self.connected:
+            return
+        payload = f"{line}\n".encode("utf-8")
+        self.socket.sendall(payload)
+
+    def close(self) -> None:
+        if not self.connected:
+            try:
+                self.socket.close()
+            except OSError:
+                return
+            return
+
+        self.connected = False
+        try:
+            self.socket.shutdown(socket.SHUT_RDWR)
+        except OSError:
+            pass
+        try:
+            self.socket.close()
+        except OSError:
+            pass
+
+
+MUD_SESSIONS: dict[str, MudSession] = {}
+MUD_SESSIONS_LOCK = threading.Lock()
 
 
 class WhoRequestHandler(BaseHTTPRequestHandler):
@@ -35,6 +113,10 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
 
         if route in ("/players", "/players/", "/who", "/who/"):
             self._send_html(self._build_players_page(), title="ACKMUD Player List")
+            return
+
+        if route in ("/mud", "/mud/"):
+            self._send_html(_build_mud_client_page(), title="ACKMUD Web Client")
             return
 
         if route in ("/help", "/help/"):
@@ -65,6 +147,29 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             self._send_topic_page("Spell Help", SHELP_DIR, topic, "shelps")
             return
 
+        if route in ("/mud/poll",):
+            self._handle_mud_poll(query)
+            return
+
+        self.send_error(404, "Not Found")
+
+    def do_POST(self) -> None:  # noqa: N802 (BaseHTTPRequestHandler interface)
+        parsed_url = urlparse(self.path)
+        route = unquote(parsed_url.path)
+        payload = self._parse_json_body()
+
+        if route == "/mud/connect":
+            self._handle_mud_connect(payload)
+            return
+
+        if route == "/mud/send":
+            self._handle_mud_send(payload)
+            return
+
+        if route == "/mud/disconnect":
+            self._handle_mud_disconnect(payload)
+            return
+
         self.send_error(404, "Not Found")
 
     def _redirect_to(self, location: str) -> None:
@@ -92,6 +197,7 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             "<a href='/who/'>Who</a>"
             "<a href='/help/'>Help</a>"
             "<a href='/shelp/'>SHelp</a>"
+            "<a href='/mud/'>MUD Client</a>"
             "<a href='https://discord.gg/T24UQV8h' target='_blank' rel='noopener noreferrer'>Discord</a>"
             "<a href='https://github.com/ackmudhistoricalarchive/acktng/tree/main/area' target='_blank' rel='noopener noreferrer'>Github</a>"
             "</nav>"
@@ -133,6 +239,9 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             "p,li{color:var(--text);}"
             ".muted{color:var(--muted);}"
             "pre{white-space:pre-wrap;background:#0a1222;padding:0.9rem;border-radius:12px;border:1px solid var(--line);overflow:auto;}"
+            ".mud-output{height:52vh;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}"
+            ".mud-controls{display:flex;flex-wrap:wrap;gap:.55rem;margin:.75rem 0;}"
+            ".mud-controls select{background:var(--bg-soft);border:1px solid var(--line);color:var(--text);padding:.45rem .65rem;border-radius:10px;}"
             "ul{padding-left:1.2rem;}"
             ".grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem;margin:.8rem 0 1rem;}"
             ".card{background:rgba(8,15,29,.72);border:1px solid var(--line);padding:.8rem .9rem;border-radius:12px;}"
@@ -169,6 +278,83 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
             content.append("<h2>Players Online</h2>\n<ul>\n</ul>")
 
         return "\n".join(content)
+
+    def _parse_json_body(self) -> dict[str, object]:
+        content_length = int(self.headers.get("Content-Length", "0"))
+        raw_payload = self.rfile.read(content_length) if content_length > 0 else b"{}"
+        try:
+            parsed = json.loads(raw_payload.decode("utf-8"))
+        except json.JSONDecodeError:
+            return {}
+        return parsed if isinstance(parsed, dict) else {}
+
+    def _send_json(self, payload: dict[str, object], status: int = 200) -> None:
+        response = json.dumps(payload).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(response)))
+        self.end_headers()
+        self.wfile.write(response)
+
+    def _handle_mud_connect(self, payload: dict[str, object]) -> None:
+        world_id = str(payload.get("world", "")).strip()
+        world = next((item for item in WORLD_TARGETS if item["id"] == world_id), None)
+        if world is None:
+            self._send_json({"ok": False, "error": "Unknown world."}, status=400)
+            return
+
+        try:
+            session = MudSession(host=world["host"], port=world["port"])
+        except OSError as exc:
+            self._send_json({"ok": False, "error": f"Unable to connect: {exc}"}, status=502)
+            return
+
+        session_id = uuid.uuid4().hex
+        with MUD_SESSIONS_LOCK:
+            MUD_SESSIONS[session_id] = session
+
+        self._send_json({"ok": True, "session": session_id, "world": world["name"]})
+
+    def _handle_mud_send(self, payload: dict[str, object]) -> None:
+        session_id = str(payload.get("session", ""))
+        command = str(payload.get("command", ""))
+        with MUD_SESSIONS_LOCK:
+            session = MUD_SESSIONS.get(session_id)
+
+        if session is None:
+            self._send_json({"ok": False, "error": "Session not found."}, status=404)
+            return
+
+        session.send_line(command)
+        self._send_json({"ok": True})
+
+    def _handle_mud_poll(self, query: dict[str, list[str]]) -> None:
+        session_id = query.get("session", [""])[0]
+        with MUD_SESSIONS_LOCK:
+            session = MUD_SESSIONS.get(session_id)
+
+        if session is None:
+            self._send_json({"ok": False, "error": "Session not found."}, status=404)
+            return
+
+        output = session.drain_output()
+        payload = {"ok": True, "output": output, "connected": session.connected, "error": session.error}
+
+        if not session.connected:
+            with MUD_SESSIONS_LOCK:
+                MUD_SESSIONS.pop(session_id, None)
+
+        self._send_json(payload)
+
+    def _handle_mud_disconnect(self, payload: dict[str, object]) -> None:
+        session_id = str(payload.get("session", ""))
+        with MUD_SESSIONS_LOCK:
+            session = MUD_SESSIONS.pop(session_id, None)
+
+        if session is not None:
+            session.close()
+
+        self._send_json({"ok": True})
 
 
 def _read_file_if_present(path: Path) -> str | None:
@@ -288,6 +474,134 @@ def _build_home_page() -> str:
   This archive is intended to remain useful decades from now: to support restoration, scholarly study, emulator efforts,
   and renewed play. It treats ACKMUD not only as software, but as a cultural artifact shaped by its builders and community.
 </p>
+
+<p>
+  Want to connect immediately from your browser? Use the <a href="/mud/">MUD Client</a> page and select a world.
+</p>
+"""
+
+
+def _build_mud_client_page() -> str:
+    worlds_json = json.dumps(WORLD_TARGETS)
+    return f"""
+<h1>ACKMUD Web Client</h1>
+<p class='muted'>Select a world and connect directly from your browser. Add future worlds in <code>WORLD_TARGETS</code>.</p>
+<div class='mud-controls'>
+  <label for='world-select'>World</label>
+  <select id='world-select'></select>
+  <button id='connect-btn' type='button'>Connect</button>
+  <button id='disconnect-btn' type='button'>Disconnect</button>
+</div>
+<div class='mud-controls'>
+  <input id='mud-command' placeholder='Type command and press Enter' style='flex:1;min-width:280px;'>
+  <button id='send-btn' type='button'>Send</button>
+</div>
+<pre id='mud-output' class='mud-output'>Ready.</pre>
+<script>
+(() => {{
+  const worlds = {worlds_json};
+  const worldSelect = document.getElementById('world-select');
+  const connectBtn = document.getElementById('connect-btn');
+  const disconnectBtn = document.getElementById('disconnect-btn');
+  const sendBtn = document.getElementById('send-btn');
+  const commandInput = document.getElementById('mud-command');
+  const output = document.getElementById('mud-output');
+  let session = null;
+  let pollTimer = null;
+
+  worlds.forEach((world) => {{
+    const option = document.createElement('option');
+    option.value = world.id;
+    option.textContent = `${{world.name}} (${{world.host}}:${{world.port}})`;
+    worldSelect.appendChild(option);
+  }});
+
+  const appendOutput = (text) => {{
+    output.textContent += text;
+    output.scrollTop = output.scrollHeight;
+  }};
+
+  const stopPolling = () => {{
+    if (pollTimer) {{
+      clearInterval(pollTimer);
+      pollTimer = null;
+    }}
+  }};
+
+  const startPolling = () => {{
+    stopPolling();
+    pollTimer = setInterval(async () => {{
+      if (!session) return;
+      const response = await fetch(`/mud/poll?session=${{encodeURIComponent(session)}}`);
+      const data = await response.json();
+      if (!data.ok) {{
+        appendOutput(`\n[Error] ${{data.error}}\n`);
+        stopPolling();
+        session = null;
+        return;
+      }}
+      if (data.output) appendOutput(data.output);
+      if (!data.connected) {{
+        if (data.error) appendOutput(`\n[Disconnected] ${{data.error}}\n`);
+        else appendOutput('\n[Disconnected]\n');
+        stopPolling();
+        session = null;
+      }}
+    }}, 350);
+  }};
+
+  connectBtn.addEventListener('click', async () => {{
+    if (session) {{
+      appendOutput('\n[Info] Already connected.\n');
+      return;
+    }}
+    output.textContent = '';
+    const response = await fetch('/mud/connect', {{
+      method: 'POST',
+      headers: {{ 'Content-Type': 'application/json' }},
+      body: JSON.stringify({{ world: worldSelect.value }}),
+    }});
+    const data = await response.json();
+    if (!data.ok) {{
+      appendOutput(`[Error] ${{data.error}}\n`);
+      return;
+    }}
+    session = data.session;
+    appendOutput(`[Connected] ${{data.world}}\n`);
+    startPolling();
+    commandInput.focus();
+  }});
+
+  disconnectBtn.addEventListener('click', async () => {{
+    if (!session) return;
+    await fetch('/mud/disconnect', {{
+      method: 'POST',
+      headers: {{ 'Content-Type': 'application/json' }},
+      body: JSON.stringify({{ session }}),
+    }});
+    appendOutput('\n[Disconnected]\n');
+    stopPolling();
+    session = null;
+  }});
+
+  const sendCommand = async () => {{
+    const command = commandInput.value;
+    if (!session || !command.trim()) return;
+    await fetch('/mud/send', {{
+      method: 'POST',
+      headers: {{ 'Content-Type': 'application/json' }},
+      body: JSON.stringify({{ session, command }}),
+    }});
+    appendOutput(`\n> ${{command}}\n`);
+    commandInput.value = '';
+  }};
+
+  sendBtn.addEventListener('click', sendCommand);
+  commandInput.addEventListener('keydown', (event) => {{
+    if (event.key === 'Enter') sendCommand();
+  }});
+}})();
+</script>
 """
 
 
