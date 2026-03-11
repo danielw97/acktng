@@ -325,7 +325,6 @@ def _build_mud_client_page() -> str:
 <div class='mud-controls'>
   <label for='world-select'>World</label>
   <select id='world-select'>{world_options}</select>
-  <input id='ws-endpoint' placeholder='Optional WebSocket URL override (ws:// or wss://)' style='flex:1;min-width:280px;'>
   <button id='connect-btn' type='button'>Connect</button>
   <button id='disconnect-btn' type='button'>Disconnect</button>
 </div>
@@ -338,37 +337,13 @@ def _build_mud_client_page() -> str:
 (() => {{
   const worldSelect = document.getElementById('world-select');
   const connectBtn = document.getElementById('connect-btn');
-  const endpointInput = document.getElementById('ws-endpoint');
   const disconnectBtn = document.getElementById('disconnect-btn');
+  const commandInput = document.getElementById('mud-command');
   const sendBtn = document.getElementById('send-btn');
   const output = document.getElementById('mud-output');
+  let socket = null;
 
   const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-  const ansiToHtml = (text) => {{
-    const chunks = text.split(/(\[[0-9;]*m)/g);
-    let styles = [];
-    let html = '';
-    const styleText = () => styles.length ? ` style="${{styles.join(';')}}"` : '';
-
-    for (const chunk of chunks) {{
-      const match = chunk.match(/^\[([0-9;]*)m$/);
-      if (!match) {{
-        if (chunk.length) html += `<span${{styleText()}}>${{escapeHtml(chunk)}}</span>`;
-        continue;
-      }}
-      const codes = match[1] ? match[1].split(';').map(Number) : [0];
-      for (const code of codes) {{
-        if (code === 0) styles = [];
-        else if (code === 1) styles = styles.filter((x) => !x.startsWith('font-weight:')).concat('font-weight:700');
-        else if (code === 4) styles = styles.filter((x) => !x.startsWith('text-decoration:')).concat('text-decoration:underline');
-        else if (code === 39) styles = styles.filter((x) => !x.startsWith('color:'));
-        else if (code === 49) styles = styles.filter((x) => !x.startsWith('background:'));
-        else if (ANSI_COLORS[code]) styles = styles.filter((x) => !x.startsWith('color:')).concat(`color:${{ANSI_COLORS[code]}}`);
-        else if (ANSI_COLORS[code - 10]) styles = styles.filter((x) => !x.startsWith('background:')).concat(`background:${{ANSI_COLORS[code - 10]}}`);
-      }}
-    }}
-    return html;
-  }};
 
   const appendOutput = (text) => {{
     output.insertAdjacentHTML('beforeend', `<span>${{escapeHtml(text)}}</span>`);
@@ -391,7 +366,9 @@ def _build_mud_client_page() -> str:
       return;
     }}
 
-    const wsUrl = selectedWorld().dataset.ws || '';
+    const host = selectedWorld().dataset.host || '';
+    const port = selectedWorld().dataset.port || '';
+    const wsUrl = host && port ? `ws://${{host}}:${{port}}` : '';
     if (!wsUrl) {{
       appendOutput('[Error] Selected world has no WebSocket endpoint.\\n');
       return;
