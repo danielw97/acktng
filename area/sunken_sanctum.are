@@ -2,27 +2,20 @@
 @@BThe Sunken Sanctum@@N~
 Q 16
 K sunken sanctum~
-L {150 170}~
+L high level sanctuary~
 N 99
 I 150 150
 V 9500 9599
 X 0
 F 15
 U You hear the distant tolling of a sunken bell, resonating through the stone.~
-O virant~
+O Virant~
 R all~
 W Builder~
 #ROOMS
 #9500
 The Collapsed Entrance~
-You stand at the edge of a massive collapse, where the mountainside has crumbled
-
-inward to reveal a dark tunnel descending into the earth.  Broken timbers and
-
-shattered stone litter the path leading down.  A faint cold wind rises from
-
-below, carrying the smell of old dust and something faintly magical.
-
+You stand at the edge of a massive collapse, where the mountainside has crumbled inward to reveal a dark tunnel descending into the earth.  Broken timbers and shattered stone litter the path leading down.  A faint cold wind rises from below, carrying the smell of old dust and something faintly magical.
 ~
 0 8
 D2
@@ -45,14 +38,7 @@ stones -- a warning, perhaps.
 S
 #9501
 The Outer Corridor~
-A long corridor stretches before you, its arched ceiling blackened by old fire.
-
-The walls are carved stone, etched with the remains of murals depicting a great
-
-order of mages at the height of their power.  Most of the murals are defaced
-
-or worn beyond recognition, but a few fragments remain.
-
+A long corridor stretches before you, its arched ceiling blackened by old fire. The walls are carved stone, etched with the remains of murals depicting a great order of mages at the height of their power.  Most of the murals are defaced or worn beyond recognition, but a few fragments remain.
 ~
 0 2
 D0
@@ -65,24 +51,12 @@ D2
 0 -1 9502
 E
 murals carvings~
-What little can be made out shows robed figures performing elaborate rituals.
-
-One mural near the floor shows a creature that looks disturbingly like an
-
-Ashwalker being created from a living person.
-
+What little can be made out shows robed figures performing elaborate rituals. One mural near the floor shows a creature that looks disturbingly like an Ashwalker being created from a living person.
 ~
 S
 #9502
 The Hall of Shattered Pillars~
-The hall was once grand, supported by enormous pillars of carved marble.
-
-Most of them have toppled, and their fragments create a maze of obstacles
-
-across the floor.  Ash drifts in lazy spirals from above.  Something moved
-
-behind one of the fallen columns just a moment ago.
-
+The hall was once grand, supported by enormous pillars of carved marble. Most of them have toppled, and their fragments create a maze of obstacles across the floor.  Ash drifts in lazy spirals from above.  Something moved behind one of the fallen columns just a moment ago.
 ~
 0 2
 D0
@@ -100,14 +74,7 @@ D2
 S
 #9503
 The Charred Armoury~
-This was once the sanctum's armoury.  Fire has gutted it completely, leaving
-
-only blackened racks and melted weapon frames behind.  The heat here is still
-
-faintly detectable even after all these years.  A few Flamebound Sentinels
-
-appear to have been created here, and never left.
-
+This was once the sanctum's armoury.  Fire has gutted it completely, leaving only blackened racks and melted weapon frames behind.  The heat here is still faintly detectable even after all these years.  A few Flamebound Sentinels appear to have been created here, and never left.
 ~
 4096 2
 D0
@@ -121,14 +88,7 @@ D2
 S
 #9504
 The Sentinels' Watch~
-A wide chamber that once served as a guard post.  Recessed alcoves line the
-
-walls where the Flamebound Sentinels presumably stood at rest.  The floor is
-
-cracked and warped from decades of intense magical heat.  The door to the
-
-south is massive, reinforced iron -- and locked.
-
+A wide chamber that once served as a guard post.  Recessed alcoves line the walls where the Flamebound Sentinels presumably stood at rest.  The floor is cracked and warped from decades of intense magical heat.  The door to the south is massive, reinforced iron -- and locked.
 ~
 4100 2
 D0
@@ -144,14 +104,7 @@ vault door~
 S
 #9505
 The Gallery of Experiments~
-This side chamber is lined with glass cases, most of them shattered.  Where
-
-the cases remain intact, you can see unsettling preserved specimens -- twisted
-
-creatures that appear to be failed experiments.  A few Shadow Stalkers patrol
-
-this area, drawn to the residual magical energy.
-
+This side chamber is lined with glass cases, most of them shattered.  Where the cases remain intact, you can see unsettling preserved specimens -- twisted creatures that appear to be failed experiments.  A few Shadow Stalkers patrol this area, drawn to the residual magical energy.
 ~
 1 2
 D1
@@ -164,22 +117,12 @@ D2
 0 -1 9506
 E
 cases specimens~
-Most specimens are too disfigured to identify.  One case near the back holds
-
-what appears to be a half-formed Ashwalker, frozen mid-creation in grey resin.
-
+Most specimens are too disfigured to identify.  One case near the back holds what appears to be a half-formed Ashwalker, frozen mid-creation in grey resin.
 ~
 S
 #9506
 The Forgotten Alcove~
-A narrow side passage leads to a small alcove that has been overlooked for
-
-centuries.  Dust lies thick on every surface, undisturbed.  Someone -- or
-
-something -- carved a small crevice into the wall and wedged something inside
-
-it long ago.
-
+A narrow side passage leads to a small alcove that has been overlooked for centuries.  Dust lies thick on every surface, undisturbed.  Someone -- or something -- carved a small crevice into the wall and wedged something inside it long ago.
 ~
 1 2
 D0
@@ -188,24 +131,12 @@ D0
 0 -1 9505
 E
 crevice wall crack~
-Wedged deep in the crevice is a small object.  It takes a moment to work
-
-it free, but the obsidian idol inside has been waiting here for a very
-
-long time.
-
+Wedged deep in the crevice is a small object.  It takes a moment to work it free, but the obsidian idol inside has been waiting here for a very long time.
 ~
 S
 #9507
 The Crystal Laboratory~
-Towering crystalline formations grow from the floor and ceiling alike, some
-
-of them pulsing with cold inner light.  The Crystalweavers have made this
-
-place their own, and it shows -- the air itself crackles with static, and
-
-every surface is coated in fine crystal dust.
-
+Towering crystalline formations grow from the floor and ceiling alike, some of them pulsing with cold inner light.  The Crystalweavers have made this place their own, and it shows -- the air itself crackles with static, and every surface is coated in fine crystal dust.
 ~
 0 2
 D0
@@ -219,14 +150,7 @@ D3
 S
 #9508
 The Eastern Corridor~
-A wide passage running east to west connects the laboratory to the deeper
-
-sanctum.  The walls here are carved with equations and arcane formulae,
-
-inscribed by the mages who once worked here.  Some of them glow faintly,
-
-suggesting they still hold residual power.
-
+A wide passage running east to west connects the laboratory to the deeper sanctum.  The walls here are carved with equations and arcane formulae, inscribed by the mages who once worked here.  Some of them glow faintly, suggesting they still hold residual power.
 ~
 0 2
 D1
@@ -240,21 +164,11 @@ D3
 S
 #9509
 The Riddlegolem's Chamber~
-A perfectly square room, its floor inlaid with concentric rings of carved
-
-runes.  At the centre sits the Riddlegolem, an ancient construct whose purpose
-
-was to test would-be entrants to the inner sanctum.  The northern exit is
-
-sealed by a magical barrier that shimmers and wavers like heat haze.
-
+A perfectly square room, its floor inlaid with concentric rings of carved runes.  At the centre sits the Riddlegolem, an ancient construct whose purpose was to test would-be entrants to the inner sanctum.  The northern exit is sealed by a magical barrier that shimmers and wavers like heat haze.
 ~
 1 2
 D0
-The shimmering barrier blocks the way north.  Perhaps the golem knows how to
-
-open it.
-
+The shimmering barrier blocks the way north.  Perhaps the golem knows how to open it.
 ~
 barrier magical~
 33 9531 9510
@@ -264,12 +178,7 @@ D1
 0 -1 9507
 E
 runes floor~
-The runes on the floor form a complex pattern.  At the outermost ring, you
-
-can make out words in an ancient tongue: "Speak what has roots as nobody sees,
-
-is taller than trees, up, up, up it goes, and yet never grows."
-
+The runes on the floor form a complex pattern.  At the outermost ring, you can make out words in an ancient tongue: "Speak what has roots as nobody sees, is taller than trees, up, up, up it goes, and yet never grows."
 ~
 E
 golem riddle~
@@ -279,16 +188,7 @@ The Riddlegolem's carved mouth reads: "Answer correctly and the way shall open."
 S
 #9510
 The Riddlegolem's Secret Passage~
-A narrow passage hidden behind the magical barrier leads north.  The walls
-
-here are different -- rougher, natural stone rather than carved masonry.
-
-It seems this passage was not part of the original construction, but was
-
-added later -- perhaps by someone who knew the answer and wanted a private
-
-route.
-
+A narrow passage hidden behind the magical barrier leads north.  The walls here are different -- rougher, natural stone rather than carved masonry.  It seems this passage was not part of the original construction, but was added later -- perhaps by someone who knew the answer and wanted a private route.
 ~
 0 2
 D0
@@ -301,24 +201,12 @@ D2
 0 -1 9509
 E
 walls stone~
-Scratched into the wall at head height, barely visible: "The mountain is the
-
-answer.  It was here before any of us."
-
+Scratched into the wall at head height, barely visible: "The mountain is the answer.  It was here before any of us."
 ~
 S
 #9511
 The Spirit Archives~
-Tall shelves of crumbling books and scrolls line every wall of this circular
-
-chamber.  Most of the texts are too damaged to read, but a few remain intact.
-
-Spirit Mages drift between the shelves, endlessly consulting texts that
-
-dissolved into dust long ago.  A pale blue light fills the room from no
-
-visible source.
-
+Tall shelves of crumbling books and scrolls line every wall of this circular chamber.  Most of the texts are too damaged to read, but a few remain intact.  Spirit Mages drift between the shelves, endlessly consulting texts that dissolved into dust long ago.  A pale blue light fills the room from no visible source.
 ~
 0 2
 D1
@@ -331,31 +219,16 @@ D2
 0 -1 9510
 E
 books scrolls texts~
-Most are illegible.  One scroll near the top shelf is in better condition --
-
-it describes the creation of the Vaultkeeper and notes that the key to the
-
-vault is kept "beyond the golem's test."
-
+Most are illegible.  One scroll near the top shelf is in better condition -- it describes the creation of the Vaultkeeper and notes that the key to the vault is kept "beyond the golem's test."
 ~
 S
 #9512
 The Antechamber of the Vault~
-A grand antechamber, its ceiling thirty feet above.  Faded tapestries hang
-
-from iron rings, depicting the order's sigil -- a spire above a flame.
-
-The northern wall is dominated by an enormous iron door set with rune-carved
-
-panels.  This is the entrance to the inner vault.
-
+A grand antechamber, its ceiling thirty feet above.  Faded tapestries hang from iron rings, depicting the order's sigil -- a spire above a flame.  The northern wall is dominated by an enormous iron door set with rune-carved panels.  This is the entrance to the inner vault.
 ~
 0 2
 D2
-The great vault door stands before you.  It is sealed with rune-locks and
-
-shows no sign of forced entry in all the centuries it has stood here.
-
+The great vault door stands before you.  It is sealed with rune-locks and shows no sign of forced entry in all the centuries it has stood here.
 ~
 vault door~
 1 9531 9550
@@ -366,41 +239,21 @@ D3
 S
 #9550
 The Inner Vault~
-The inner vault is vast and dimly lit by crystals set into the ceiling.  The
-
-walls are lined with sealed alcoves, most of them stripped bare by whatever
-
-disaster befell the sanctum.  In the centre of the room stands the Vaultkeeper,
-
-and behind it, a raised dais bearing a single ornate chest -- still locked,
-
-still waiting.
-
+The inner vault is vast and dimly lit by crystals set into the ceiling.  The walls are lined with sealed alcoves, most of them stripped bare by whatever disaster befell the sanctum.  In the centre of the room stands the Vaultkeeper, and behind it, a raised dais bearing a single ornate chest -- still locked, still waiting.
 ~
 0 2
 D0
 The vault door stands open, locked from the outside by rune-locks.
-
 ~
 vault door~
 1 9531 9512
 E
 chest dais~
-The chest is made of some dark metal that does not tarnish.  Carved into
-
-the lid is the order's sigil.  It is locked, and there is no keyhole -- only
-
-a small depression the size of a fist, shaped like the outline of an idol.
-
+The chest is made of some dark metal that does not tarnish.  Carved into the lid is the order's sigil.  It is locked, and there is no keyhole -- only a small depression the size of a fist, shaped like the outline of an idol.
 ~
 E
 alcoves walls~
-Most of the alcoves are empty.  A few still hold fragments of equipment
-
-too damaged to be useful, and one holds the desiccated remains of a mage
-
-who apparently spent their last hours in here.
-
+Most of the alcoves are empty.  A few still hold fragments of equipment too damaged to be useful, and one holds the desiccated remains of a mage who apparently spent their last hours in here.
 ~
 S
 #0
@@ -409,10 +262,8 @@ S
 ruinwarden ruin warden~
 @@Ya Ruin Warden@@N~
 A hulking stone guardian stands here, its eyes glowing with dim magical light.
-
 ~
 A Ruin Warden looms here, ancient runes carved into its rocky hide.
-
 ~
 33 0 0 S
 160 0
@@ -424,12 +275,10 @@ l 100 9510 0 0 0 0 0 0 0 0
 L 70 0 0 0 0 0 0 0 0 
 #9501
 ashwalker ash walker~
-@@Dan Ashwalker@@N~
+@@dan Ashwalker@@N~
 A humanoid figure wreathed in pale smoke drifts here, searching for prey.
-
 ~
 An Ashwalker floats inches above the ground, trailing wisps of grey ash.
-
 ~
 33 0 -500 S
 155 0
@@ -443,10 +292,8 @@ L 60 40 0 0 0 0 0 0 0
 flamebound sentinel~
 @@Ra Flamebound Sentinel@@N~
 A soldier encased in fire-laced armour patrols here, leaving scorch marks behind.
-
 ~
 A Flamebound Sentinel stands watch, crackling flames dancing across its armour.
-
 ~
 35 0 -250 S
 165 1
@@ -458,12 +305,10 @@ l 100 9513 9514 0 0 0 0 0 0 0
 L 55 45 0 0 0 0 0 0 0 
 #9503
 crystalweaver weaver crystal~
-@@Ca Crystalweaver@@N~
+@@ca Crystalweaver@@N~
 A robed figure crackling with crystalline energy hovers here, weaving spells.
-
 ~
 A Crystalweaver floats amid spiralling crystal shards, its eyes blank and cold.
-
 ~
 33 0 -750 S
 158 2
@@ -477,10 +322,8 @@ L 50 50 0 0 0 0 0 0 0
 vaultkeeper vault keeper~
 @@WThe Vaultkeeper@@N~
 A towering construct of iron and bone stands before the vault door.
-
 ~
 The Vaultkeeper blocks the entrance to the inner vault, utterly motionless.
-
 ~
 49 0 0 S
 170 0
@@ -494,10 +337,8 @@ L 40 35 25 0 0 0 0 0 0
 riddlegolem riddle golem~
 @@GThe Riddlegolem@@N~
 An ancient construct of carved stone sits here, its mouth frozen open.
-
 ~
 The Riddlegolem waits in silence, strange glyphs shifting across its surface.
-
 ~
 3 0 0 S
 155 0
@@ -509,12 +350,10 @@ l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0 
 #9506
 shadowstalker shadow stalker~
-@@BShadow Stalker@@N~
+@@bShadow Stalker@@N~
 A creature made of living darkness slips between the shadows here.
-
 ~
 A Shadow Stalker lurks near the walls, barely visible against the darkness.
-
 ~
 33 65536 -200 S
 162 0
@@ -528,10 +367,8 @@ L 65 35 0 0 0 0 0 0 0
 gravelurker lurker grave~
 @@ma Gravelurker@@N~
 A pale, skeletal beast drags itself along the floor here, claws scraping stone.
-
 ~
 A Gravelurker hauls its bony body along the floor, searching with blind sockets.
-
 ~
 16417 0 -100 S
 153 0
@@ -543,12 +380,10 @@ l 100 9510 9521 0 0 0 0 0 0 0
 L 55 45 0 0 0 0 0 0 0 
 #9508
 spiritmage spirit mage~
-@@eA Spirit Mage@@N~
+@@ea Spirit Mage@@N~
 A translucent figure in archaic robes stands here, mouthing silent words.
-
 ~
 A Spirit Mage drifts listlessly, the remnant of a scholar bound to this place.
-
 ~
 33 2 -400 S
 168 2
@@ -562,31 +397,28 @@ L 40 40 20 0 0 0 0 0 0
 #OBJECTS
 #9510
 ruinwarden fragment stone fragment~
-@@Ya Fragment of the Warden@@N~
+@@ya Fragment of the Warden@@N~
 A jagged piece of magically hardened stone lies here.
-
 ~
-9 201326592 8388624 1
+9 201326592 8388608 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
 150
 #9511
 ashwalker cloak smoky~
-@@DAn Ashwalker's Cloak@@N~
+@@dan Ashwalker's Cloak@@N~
 A cloak of perpetual smoke swirls gently here.
-
 ~
-9 201326592 8486912 1
+9 201326592 8454144 1
 0 0 0 0 0 0 0 0 0 0
 5
 L
 150
 #9512
 ashwalker bracers grey~
-@@DGrey Ashwalker Bracers@@N~
+@@dGrey Ashwalker Bracers@@N~
 A pair of pale grey bracers lies here, trailing faint wisps of smoke.
-
 ~
 9 201326592 8390656 1
 0 0 0 0 0 0 0 0 0 0
@@ -595,9 +427,8 @@ L
 150
 #9513
 flamebound gauntlets fire~
-@@RFlamebound Gauntlets@@N~
+@@rFlamebound Gauntlets@@N~
 Gauntlets of fire-etched steel glow faintly here on the ground.
-
 ~
 9 201326592 8392704 1
 0 0 0 0 0 0 0 0 0 0
@@ -606,9 +437,8 @@ L
 150
 #9514
 flamebound helm blazing~
-@@RThe Flamebound Helm@@N~
+@@rThe Flamebound Helm@@N~
 A helm adorned with flame runes rests here, still radiating heat.
-
 ~
 9 201326592 8388616 1
 0 0 0 0 0 0 0 0 0 0
@@ -617,9 +447,8 @@ L
 150
 #9515
 crystalline ring band~
-@@CA Crystalline Ring@@N~
+@@ca Crystalline Ring@@N~
 A ring of clear faceted crystal catches what little light there is.
-
 ~
 9 201326592 8396800 1
 0 0 0 0 0 0 0 0 0 0
@@ -628,9 +457,8 @@ L
 150
 #9516
 crystalweaver robes arcane~
-@@CCrystalweaver's Robes@@N~
+@@cCrystalweaver's Robes@@N~
 Shimmering robes encrusted with tiny crystal shards lie here.
-
 ~
 9 201326592 8454144 1
 0 0 0 0 0 0 0 0 0 0
@@ -639,9 +467,8 @@ L
 150
 #9517
 vaultkeeper plate~
-@@WThe Vaultkeeper's Breastplate@@N~
+@@wThe Vaultkeeper's Breastplate@@N~
 An enormous plate of layered iron and enchanted bone rests here.
-
 ~
 9 134217728 8650752 1
 0 0 0 0 0 0 0 0 0 0
@@ -650,9 +477,8 @@ L
 150
 #9518
 vaultkeeper leggings~
-@@WThe Vaultkeeper's Leggings@@N~
+@@wThe Vaultkeeper's Leggings@@N~
 Massive greaves of iron and bound bone lie here.
-
 ~
 9 201326592 9437184 1
 0 0 0 0 0 0 0 0 0 0
@@ -661,9 +487,8 @@ L
 150
 #9519
 vaultkeeper helm~
-@@WThe Vaultkeeper's Helm@@N~
+@@wThe Vaultkeeper's Helm@@N~
 A fearsome helm of iron and pale rune-carved bone rests here.
-
 ~
 9 201326592 8388616 1
 0 0 0 0 0 0 0 0 0 0
@@ -672,9 +497,8 @@ L
 150
 #9520
 shadowstalker cloak dark~
-@@BA Shadow Stalker's Shroud@@N~
+@@ba Shadow Stalker's Shroud@@N~
 A cloak of solidified shadow lies here, oddly weightless.
-
 ~
 9 201326592 8389120 1
 0 0 0 0 0 0 0 0 0 0
@@ -683,9 +507,8 @@ L
 150
 #9521
 gravelurker fang claw~
-@@mA Gravelurker's Fang@@N~
+@@ma Gravelurker's Fang@@N~
 A wickedly curved fang pulled from a Gravelurker rests here.
-
 ~
 5 201326592 8421376 1
 0 5 9 5 0 0 0 0 0 0
@@ -694,9 +517,8 @@ L
 150
 #9522
 spiritmage vestment robe~
-@@eA Spirit Mage's Vestment@@N~
+@@ea Spirit Mage's Vestment@@N~
 Ghostly white robes that seem to shift between solid and translucent lie here.
-
 ~
 9 201326592 8650752 1
 0 0 0 0 0 0 0 0 0 0
@@ -705,9 +527,8 @@ L
 150
 #9523
 spiritmage medallion amulet~
-@@eA Spirit Mage's Medallion@@N~
+@@ea Spirit Mage's Medallion@@N~
 A silver medallion etched with arcane symbols floats an inch off the ground.
-
 ~
 9 201326592 8388736 1
 0 0 0 0 0 0 0 0 0 0
@@ -716,9 +537,8 @@ L
 150
 #9530
 puzzle glyph stone shard~
-@@GA Glowing Glyph-Stone@@N~
+@@ga Glowing Glyph-Stone@@N~
 A smooth stone covered in glowing runes rests here.
-
 ~
 8 64 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -727,9 +547,8 @@ L
 1
 #9531
 ancient key vault iron~
-@@WAn Ancient Iron Key@@N~
+@@wan Ancient Iron Key@@N~
 A heavy iron key etched with vault runes rests here.
-
 ~
 18 64 8388608 1
 0 9550 0 0 0 0 0 0 0 0
@@ -738,9 +557,8 @@ L
 1
 #9532
 hidden shrine idol obsidian~
-@@BA Small Obsidian Idol@@N~
+@@ba Small Obsidian Idol@@N~
 A small idol of black obsidian has been hidden here in a crevice.
-
 ~
 8 64 8388608 1
 0 0 0 0 0 0 0 0 0 0
@@ -750,46 +568,25 @@ L
 #0
 #RESETS
 M 0 9501 3 9501 Ashwalker
-
 M 0 9501 3 9502 Ashwalker
-
 M 0 9501 2 9502 Ashwalker
-
 M 0 9507 3 9502 Gravelurker
-
 M 0 9502 2 9503 Flamebound Sentinel
-
 M 0 9502 2 9504 Flamebound Sentinel
-
 M 0 9506 3 9505 Shadow Stalker
-
 M 0 9506 2 9505 Shadow Stalker
-
 M 0 9503 3 9507 Crystalweaver
-
 M 0 9503 2 9508 Crystalweaver
-
 M 0 9505 1 9509 Riddlegolem
-
 M 0 9508 3 9511 Spirit Mage
-
 M 0 9508 2 9511 Spirit Mage
-
 M 0 9500 2 9512 Ruin Warden
-
 M 0 9504 1 9550 Vaultkeeper
-
-O 0 9530 0 9509 
-
-O 0 9532 0 9506 
-
-O 0 9531 0 9510 
-
-D 0 9504 2 2 
-
-D 0 9512 2 2 
-
-D 0 9509 0 2 
-
+O 0 9530 0 9509
+O 0 9532 0 9506
+O 0 9531 0 9510
+D 0 9504 2 2
+D 0 9512 2 2
+D 0 9509 0 2
 S
 #$
