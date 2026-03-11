@@ -2717,6 +2717,9 @@ void do_credits(CHAR_DATA *ch, char *argument)
 {
    do_help(ch, "diku");
    do_help(ch, "ack");
+   send_to_char("\n\rAck!Mud 2.2, Modified Merc2.2 by: Stimpy, Thalen\n\r", ch);
+   send_to_char("Ack!Mud 4.3 by Zenithar, with help from\n\r", ch);
+   send_to_char("Spectrum, Altrag, Ramias, Universe, and others\n\r", ch);
    return;
 }
 
