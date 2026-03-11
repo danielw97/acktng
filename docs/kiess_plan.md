@@ -35,23 +35,40 @@
 
 
 ## Lore
-Kiess rises where **Evermeet once stood**, built after the old city fell to repeated planar stress, trade-route collapse, and monster pressure spilling in from surrounding wildlands. Rather than rebuild Evermeet in its former fragmented pattern, the crown-chartered guilds and the temple compact founded Kiess as a fortified civic grid designed for resilience, rapid response, and uninterrupted commerce.
 
-The city was planned around a luminous civic keystone known as the **Central Prism** (room `13055`), a memorial and continuity anchor carried from the final days of Evermeet. Public law, messaging, provisioning, and magical logistics were all positioned around this center so travelers can recover, orient, and re-enter the frontier quickly. The Executioner at the Prism symbolizes the compact's uncompromising enforcement of peace inside city limits.
+### The Fall of Evermeet and the Founding of Kiess
 
-Kiess keeps **close operational ties to the Forest of Confusion**: scouts, wardens, and quartermaster routes run daily between the city gates and forest-edge staging trails. Caravans arriving from the forest are screened at the north approach, healers and scribes process reports in the central wards, and supply trains cycle from the quartermaster ring back to expedition parties. This makes Kiess the primary stabilizing hub between civilization and the shifting deep-forest frontier.
+Evermeet did not fall in a single night. Over generations, its sprawling districts grew inward-looking, its outer wards neglected. Monster pressure from the surrounding wildlands intensified each season while civic attention turned to comfort rather than defense. Districts became isolated as bridges and crossings deteriorated. Supply houses burned during successive crises with no coordinated response. The wealthy core survived longest, but the working quarters that kept Evermeet fed, armed, and connected to the frontier slowly hollowed out. Eventually the last defenders withdrew, and Evermeet was abandoned to the wildlands — its gilded parlors left to rot, its gates standing open to whatever wandered in.
 
-Architecturally, Kiess is identified by white civic stone, blue-and-gold banners, and prismatic glasswork over canals and plazas. The mood is disciplined rather than decadent: every district is intended to read as lived-in, guarded, and connected to frontier support. In-world, locals describe Kiess as "Evermeet remembered, but finally made defensible."
+**Kiess** rises where Evermeet once stood, built on its foundations along **Roc Road**, the ancient trade artery linking the western territories to Midgaard. The merchants, soldiers, and temple orders who had fled Evermeet's collapse returned not to restore the old city but to replace it entirely. Where Evermeet grew by accident and indulgence, Kiess was built by design. The crown-chartered guilds and the temple compact laid it out as a fortified civic grid: a walled rectangle with predictable streets, centralized services, and controlled gates. Locals describe the difference simply: "Evermeet remembered, but finally made defensible."
 
-The fall of Evermeet did not happen in a single night. Records describe a long unraveling: civic districts isolated by unstable crossings, supply houses burned during successive crises, and outer wards abandoned as wilderness pressure increased each season. Kiess was commissioned specifically to end that cycle by replacing improvised growth with deliberate urban geometry, allowing defenders, couriers, and quartermaster crews to predict movement and recover from attacks without paralyzing the whole city.
+### The Central Prism
 
-Founding charters divide Kiess governance among three powers held in tension: the Compact Temples, the Trade Syndics, and the Wall Command. The temples maintain sanctuary law and civic rites, the syndics maintain market continuity and caravan contracts, and Wall Command maintains gate discipline and patrol rotation. The Executioner post at the Central Prism is the legal instrument that binds those factions to a common peace code: disputes are mediated in the square, but violent breach of city law is answered immediately and publicly.
+The city was planned around a luminous civic keystone known as the **Central Prism** (room `13055`), a continuity anchor recovered from the ruins of Evermeet's civic hall. The Prism is both memorial and practical center: public law, messaging, provisioning, and magical logistics are all positioned within steps of it, so travelers can recover, orient, and re-enter the frontier quickly. The Executioner stationed at the Prism is the visible instrument of the compact's uncompromising enforcement of peace inside city limits — disputes are mediated in the square, but violent breach of city law is answered immediately and publicly.
 
-Kiess also inherited Evermeet's memory culture. Names of the lost districts are carved into waystones along the main avenues, and annual processions move from the north gate to the Prism to mark the first reconstruction oath. Monuments across the city are not decorative excess; they are navigational memory points for residents and returning expeditions, reminding players that Kiess is both a functioning fortress-city and a living memorial.
+### Three-Power Governance
 
-Beyond the walls, the Forest of Confusion remains both threat and necessity. Herbal reagents, rare timbers, and relic fragments still flow through forest routes, and Kiess survives by organizing that risk rather than pretending it is gone. This is why gatehouses are strict, quartermaster halls are central, and messenger lines are overbuilt: the city is designed as a permanent interface between civilized order and an unpredictable frontier.
+Founding charters divide Kiess governance among three factions held in deliberate tension:
 
-In present-day play, Kiess should feel like a city that has chosen preparedness over nostalgia. Its bright colors and civic glasswork signal renewal, while statues, decrees, and tower beacons signal vigilance. The intended atmosphere is "rebuilt, resolute, and always watching."
+- **The Compact Temples** maintain sanctuary law, civic rites, and the Prism's memorial functions. The Temple of Concord (room `13035`) is their seat, housing the Shrine of the Compact Flame that symbolizes the original founding pact.
+- **The Trade Syndics** maintain market continuity, caravan contracts, and commerce infrastructure. Their administrative annex (room `13031`) coordinates the flow of goods along Roc Road from Midgaard and the frontier.
+- **Wall Command** maintains gate discipline, patrol rotation, and the city's four watchtowers. Their headquarters (room `13088`) oversees the sentries, scouts, and military supply lines that keep the walls staffed.
+
+No single faction dominates. The Executioner post at the Central Prism is the legal mechanism that binds all three to a common peace code: each faction holds a seat on the tribunal, and each can invoke the Executioner's authority against the others if the compact is breached.
+
+### Roc Road and the Southern Approach
+
+Kiess's primary connection to the wider world runs south through the **South Gate** (room `13095`) onto Roc Road. This ancient highway connects to Midgaard, making Kiess the western terminus for caravans, adventurers, and military expeditions traveling between the civilized heartlands and the frontier. The north, west, and east gates currently face walled borderlands awaiting future development.
+
+### The Forest of Confusion
+
+The **Forest of Confusion** lies within reach of Kiess via Roc Road, and the city serves as a staging base for expeditions into its disorienting depths. Scouts report at debriefing posts inside the north ring, healers process the wounded in central wards, and quartermaster supply trains cycle between the depot and forest-edge staging trails. Herbal reagents, rare timbers, and relic fragments still flow through forest routes into Kiess's markets, while the deeper reaches — the ancient Verdant Depths and the blighted Withered Depths beyond — remain sources of both wealth and persistent danger. Kiess survives by organizing that risk rather than ignoring it.
+
+### Architecture and Atmosphere
+
+Kiess is identified by white civic stone, blue-and-gold banners, and prismatic glasswork set into canal bridges and plaza arches. The aesthetic is deliberate: bright enough to signal renewal and civic pride, ordered enough to signal discipline. Every district reads as lived-in and guarded rather than ornamental.
+
+Names of Evermeet's lost outer districts are carved into waystones along the main avenues. Annual processions move from the north gate to the Prism to mark the first reconstruction oath. Monuments throughout the city serve double duty as navigational landmarks for returning expeditions and as memorial points honoring what was lost. The atmosphere is not nostalgic grief but forward-looking resolve — a city that chose preparedness over sentimentality, and keeps watch because it remembers what happens when a city stops watching.
 
 ## Rectangular Room Layout (10x10)
 
