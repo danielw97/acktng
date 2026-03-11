@@ -260,6 +260,165 @@ Coordinates: row `y=0..9` top-to-bottom, column `x=0..9` left-to-right.
 - All exits are bi-directional (no one-way connections); this is not a maze area and no rooms use `ROOM_MAZE`.
 - Directional loops are prohibited per spec (no repeated same-direction movement returning to a visited room).
 
+## Safe-Room + Building Policy
+- All indoor service rooms listed in **Shop + Service Requirements** are flagged `safe` and remain single-exit dead-ends.
+- Outdoor roads, plazas, and gate approaches remain non-safe by default to preserve ambient city danger and law-enforcement relevance.
+- `14055` (recall square) is **not** flagged `safe`; safety is enforced socially and by law NPC presence rather than room-level immunity.
+- No interior room is used as a transit shortcut; each interior is entered for purpose (trade, healing, banking, lodging, training) and exited back to the same street node.
+
+## NPC Level Targets (service vs ambient)
+- **Service/legal NPCs:** level `150` baseline so city services are resilient and do not die to stray pulls.
+- **Executioner (`14055`):** level `150` to match service-level parity while retaining legal enforcement authority.
+- **Ambient civilians/workers:** level band `32-55` (`stay_area`, non-sentinel unless stationary worker).
+- **District guards/patrols:** level band `85-120`, with stronger gate captains at `130-145`.
+- **No boss-class city mobs** in initial pass; if later added, they must obey `boss` + `no_mob` placement policy in spec notes.
+
+## Building Entrance Table (all current inside rooms)
+
+| Inside Room | Name (working) | Entrance Street | Direction from street |
+|---|---|---|---|
+| 14021 | Kowloon Postmaster Hall | 14022 | west |
+| 14042 | Green Banner General Goods | 14052 | south |
+| 14043 | Ironhands Weapon Forge | 14053 | south |
+| 14044 | Red Ledger Armory | 14054 | south |
+| 14046 | Temple of the Unbroken Lamp | 14045 | east |
+| 14047 | Azure Reagent Archive | 14057 | south |
+| 14056 | Quartermaster Depot | 14055 | west |
+| 14061 | Bank of Kowloon | 14062 | east |
+| 14063 | Pawn and Curio Counter | 14062 | west |
+| 14064 | Salt-Rice Provisioner | 14065 | east |
+| 14066 | Iron Bit Stable Office | 14065 | west |
+| 14067 | Rainline Fletcher | 14077 | south |
+| 14068 | Pearl and Wire Jeweler | 14078 | south |
+| 14073 | Ohn-Sek Training Hall | 14072 | west |
+| 14074 | Harbor Chandlery Desk | 14075 | east |
+| 14081 | Inn of Lantern Rain | 14071 | north |
+
+## District Layout (by rectangle)
+- **North Wall + Arrival Ring (`y=0..1`)**: gate processing, customs traffic, first-impression civic control.
+- **Northern Market Belt (`y=2..4`, `x=1..8`)**: dense commerce, supply chain, legal-adjacent storefronts.
+- **Civic Core (`x=4..6`, `y=4..6`)**: recall square, magistracy frontage, quartermaster, oath and punishment spaces.
+- **Harbor/Logistics Side (`x=6..9`, `y=5..8`)**: chandlery, freight routing, dock administration, shipbound commerce.
+- **Residential + Guild Support (`x=1..4`, `y=6..8`)**: inn, training hall, bank/pawn pairing, trades support.
+- **South Wall Caravan Ring (`y=9`)**: outbound road staging and controlled gate egress.
+
+## Shop Inventory Plan (thematic stock targets)
+- **14042 General Goods:** torches, lantern oil, rope, waterskins, trail rations, bedrolls, lockpicks, writing kits.
+- **14043 Weapon Forge:** blades, polearms, cudgels, compact sidearms favored by alley patrols.
+- **14044 Armory:** layered coats, scale vests, shield variants, reinforced travel wear.
+- **14047 Mage Reagents:** low-mid spell components, runic inks, ritual chalks, charm bases.
+- **14064 Provisioner:** prepared meals, dry staples, tea, low-alcohol street drink.
+- **14067 Fletcher:** arrows/bolts bundles and maintenance supplies.
+- **14068 Jeweler:** trinkets, charms, signet rings, lightweight enchanted accessories.
+
+All shop objects must remain within area vnum envelope policy for owned entries, use spec-compliant string termination, and avoid embedding vnums in description text.
+
+
+### 14043 - Ironhands Weapon Forge (level 75-125 stock, 16 items)
+- Riverguard Falchion (Lv 75)
+- Lanternhook Cutlass (Lv 80)
+- Covenant Spear (Lv 80)
+- Brass-Knuckle Baton (Lv 85)
+- Ohn-Sek War Mace (Lv 85)
+- Tidepiercer Trident (Lv 90)
+- Magistrate Execution Axe (Lv 90)
+- Stormbell Halberd (Lv 95)
+- Smuggler's Splitblade (Lv 100)
+- Black-Rain Greatsword (Lv 100)
+- Harbor Chain Whip (Lv 105)
+- Six-House Glaive (Lv 110)
+- Dragon-Mask Reaver (Lv 115)
+- Coppersalt Pike (Lv 120)
+- Covenant Oathblade (Lv 125)
+- Neon Verdict Poleaxe (Lv 125)
+
+### 14044 - Red Ledger Armory (level 75-125 stock, 16 items)
+- Tar-Sealed Leather Coat (Lv 75)
+- Riveted Street Brigandine (Lv 80)
+- Lanternglass Buckler (Lv 80)
+- Syndic Scale Vest (Lv 85)
+- Floodline Greaves (Lv 85)
+- Harborwatch Helm (Lv 90)
+- Rainwarden Vambraces (Lv 90)
+- Jade-Marked Kite Shield (Lv 95)
+- Ohn-Sek Plate Skirt (Lv 100)
+- Gatehouse Half-Plate (Lv 100)
+- Coppersalt Tower Shield (Lv 105)
+- Ashfall Proof Cloak (Lv 110)
+- Magistracy Full Cuirass (Lv 115)
+- Dragon-Ridge Greatshield (Lv 120)
+- Covenant Guard Panoply (Lv 125)
+- Execution Square Bulwark (Lv 125)
+
+### 14068 - Pearl and Wire Jeweler (level 75-125 stock, 16 items)
+- Wirebound River Pearl Ring (Lv 75)
+- Lampkeeper Copper Torque (Lv 80)
+- Harbor Seal Signet (Lv 80)
+- Rainchime Silver Pendant (Lv 85)
+- Jade Ledger Charm (Lv 85)
+- Temple Ember Brooch (Lv 90)
+- Lanternrunner Wrist Chain (Lv 90)
+- Coppersalt Moon Earrings (Lv 95)
+- Covenant Knot Necklace (Lv 100)
+- Stormglass Focus Ring (Lv 100)
+- Magistrate Seal Locket (Lv 105)
+- Tidewire Sapphire Circlet (Lv 110)
+- Dragon Pearl Choker (Lv 115)
+- Ashfall Memory Torque (Lv 120)
+- Five-Seats Diadem (Lv 125)
+- Neon Covenant Crownlet (Lv 125)
+
+## Mobile Definitions (planning set)
+- **Service core (sentinel):** executioner, postmaster, healer, banker, trainer, practice master, and all shopkeepers.
+- **Law layer:** gate sergeants (4), wall patrol pairs (8), plaza inspectors (2).
+- **Ambient layer:** dockhands, lantern-runners, scribes, food vendors, shrine keepers, caravan callers.
+- **Hostile/pressure layer (light):** pickpocket crews and smuggler lookouts in non-safe alleys to keep city traversal active.
+
+Planned implementation split:
+- `14000-14039` mostly civic/arrival/law ambient mobs.
+- `14040-14069` core service population and magistracy-facing law presence.
+- `14070-14099` logistics, traveler, and gateward populations.
+
+## Resets Plan
+### Mob resets (`M`)
+- One persistent reset for every service NPC room.
+- Gate rooms get at least one guard reset each; major gates get captain + guard pairing.
+- Ambient mobs distributed with low saturation to prevent crowding in narrow streets.
+
+### Door resets (`D`)
+- Exactly four door resets, one for each perimeter gate as specified in **Door Plan**.
+- All reset state values set to `1` (closed), never `2` (locked), consistent with no-key gate policy.
+
+### Object resets (`O`/`G`/`E`)
+- Place civic flavor objects in plaza/wall rooms (`O`).
+- Equip sentinel guards with thematic but controlled gear (`G`/`E`) without exceeding intended level power.
+- Reserve object resets for atmosphere first; avoid cluttering service interiors where NPC utility is primary.
+
+## Specials Plan
+- `spec_executioner` assigned to central law NPC in `14055`.
+- Optional future specs (only if needed after playtest): gate shout/call specs for captains, dock-crier behavior for harbor announcer.
+- No combat gimmick specs on shop/service NPCs; keep services stable and predictable.
+
+## Connection Plan (external links)
+- **North (14005):** into northern overland/wilderness approach.
+- **South (14095):** into caravan/trade road approach.
+- **West (14050):** into inland district connector.
+- **East (14059):** into harbor/coastal connector.
+
+Connection constraints:
+- Each gate is the **only** outward link on its wall segment.
+- Reverse links must exist and must carry matching door semantics.
+- Corner towers (`14000`, `14009`, `14090`, `14099`) remain internal fortification nodes with no wilderness bypass exits.
+
+## Implementation Checklist
+- Finalize all 100 room names + unique descriptions (3+ sentences each, 5+ for key hubs).
+- Build exits with strict rectangular logic and dead-end interiors.
+- Create service mobiles with required `act` bits (`is_npc`, `stay_area`, role-specific flags).
+- Author shop inventories and assign buy types per shop role.
+- Add four gate door resets and validate close-state behavior.
+- Validate area header directives (`Q 16`, `O Virant~`, vnum bounds, level band).
+- Run format lint pass for string terminators and mobile description constraints.
+
 ## Room Description Requirements (spec compliance)
 - Every room `<description>~` must contain at least 3 sentences.
 - Important rooms (recall square, gate rooms, major service hubs) must contain at least 5 sentences.
