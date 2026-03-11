@@ -456,6 +456,10 @@ int main(int argc, char **argv)
       copyover_recover();
       disable_timer_abort = FALSE;
    }
+
+   /* Seed WHO web output immediately on boot/copyover recovery. */
+   list_who_to_output();
+
    game_loop(control);
    close(control);
 
