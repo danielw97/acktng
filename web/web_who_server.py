@@ -5,8 +5,9 @@ from __future__ import annotations
 
 import os
 from html import escape
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from threading import Lock
 from urllib.parse import parse_qs, unquote, urlparse
 
 HOST = "0.0.0.0"
@@ -23,6 +24,15 @@ WORLD_TARGETS = [
     {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
     {"id": "ack42", "name": "ACK! 4.2", "host": "ackmud.com", "port": 8892},
 ]
+
+_template_cache: dict[str, tuple[int, str]] = {}
+_template_lock = Lock()
+
+_topic_names_cache: dict[Path, tuple[int, list[str]]] = {}
+_topic_names_lock = Lock()
+
+_topic_content_cache: dict[Path, tuple[int, str]] = {}
+_topic_content_lock = Lock()
 
 
 class WhoRequestHandler(BaseHTTPRequestHandler):
@@ -95,7 +105,7 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         body = (
             f"<h1>{escape(page_name)}: {escape(topic_path.name)}</h1>"
             f"<p><a href='/{escape(base_route)}/'>Back to {escape(page_name)} index</a></p>"
-            f"<pre>{escape(topic_path.read_text(encoding='utf-8', errors='replace'))}</pre>"
+            f"<pre>{escape(_read_cached_topic(topic_path))}</pre>"
         )
         self._send_html(body, title=f"{page_name}: {topic_path.name}")
 
@@ -155,10 +165,11 @@ def _build_topic_index_page(title: str, route_base: str, base_dir: Path, query: 
         return f"<h1>{escape(title)}</h1><p>No topics available.</p>"
 
     normalized_query = query.strip().lower()
+    topic_names = _get_topic_names(base_dir)
     links = [
-        f"<li><a href='/{escape(route_base)}/{escape(path.name)}'>{escape(path.name)}</a></li>"
-        for path in sorted(base_dir.iterdir(), key=lambda p: p.name)
-        if path.is_file() and (not normalized_query or normalized_query in path.name.lower())
+        f"<li><a href='/{escape(route_base)}/{escape(name)}'>{escape(name)}</a></li>"
+        for name in topic_names
+        if not normalized_query or normalized_query in name.lower()
     ]
 
     if not links:
@@ -188,7 +199,45 @@ def _build_mud_client_page() -> str:
 
 
 def _load_template(name: str) -> str:
-    return (TEMPLATE_DIR / name).read_text(encoding="utf-8", errors="replace")
+    template_path = TEMPLATE_DIR / name
+    mtime_ns = template_path.stat().st_mtime_ns
+
+    with _template_lock:
+        cached = _template_cache.get(name)
+        if cached is not None and cached[0] == mtime_ns:
+            return cached[1]
+
+        content = template_path.read_text(encoding="utf-8", errors="replace")
+        _template_cache[name] = (mtime_ns, content)
+        return content
+
+
+def _get_topic_names(base_dir: Path) -> list[str]:
+    resolved_dir = base_dir.resolve()
+    mtime_ns = resolved_dir.stat().st_mtime_ns
+
+    with _topic_names_lock:
+        cached = _topic_names_cache.get(resolved_dir)
+        if cached is not None and cached[0] == mtime_ns:
+            return cached[1]
+
+        topic_names = sorted(path.name for path in resolved_dir.iterdir() if path.is_file())
+        _topic_names_cache[resolved_dir] = (mtime_ns, topic_names)
+        return topic_names
+
+
+def _read_cached_topic(path: Path) -> str:
+    resolved_path = path.resolve()
+    mtime_ns = resolved_path.stat().st_mtime_ns
+
+    with _topic_content_lock:
+        cached = _topic_content_cache.get(resolved_path)
+        if cached is not None and cached[0] == mtime_ns:
+            return cached[1]
+
+        content = resolved_path.read_text(encoding="utf-8", errors="replace")
+        _topic_content_cache[resolved_path] = (mtime_ns, content)
+        return content
 
 
 def _build_full_page(title: str, body: str) -> str:
@@ -197,7 +246,7 @@ def _build_full_page(title: str, body: str) -> str:
 
 
 def main() -> None:
-    HTTPServer((HOST, PORT), WhoRequestHandler).serve_forever()
+    ThreadingHTTPServer((HOST, PORT), WhoRequestHandler).serve_forever()
 
 
 if __name__ == "__main__":
