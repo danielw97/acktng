@@ -12,7 +12,7 @@ if [ -f shutdown.txt ]; then rm -f shutdown.txt; fi
 
 mkdir -p /home/ftp/pub/webpage
 
-../src/web_who_server.py >>../log/webserver.log 2>&1 &
+../web/web_who_server.py >>../log/webserver.log 2>&1 &
 webserver_pid=$!
 
 cleanup_webserver()

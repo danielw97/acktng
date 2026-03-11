@@ -44,15 +44,19 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
 	  write.o
 
-.PHONY: all clean purge unit-tests integration-test
+.PHONY: all clean purge unit-tests integration-test web
 
 all:
 	$(MAKE) clean
+	$(MAKE) web
 	$(MAKE) ack
 	$(MAKE) unit-tests
 
 integration-test: ack
 	cd .. && ./integration-test.sh
+
+web:
+	$(MAKE) -C ../web
 
 ifdef CYGWIN
 ack: $(O_FILES)
@@ -72,9 +76,11 @@ endif
 
 clean:
 	rm -f *.o ack ack.exe ../area/core *~
+	$(MAKE) -C ../web clean
 
 purge:
 	rm -f *.o ack ack.exe ../area/core *~
+	$(MAKE) -C ../web clean
 
 %.o: %.c ack.h
 	$(CC) -c $(C_FLAGS) $<
