@@ -608,6 +608,311 @@ Notes:
 
 ---
 
+## Propositions Plan
+
+Roc Road propositions are static quests offered by the postmasters of the three connected cities. They reflect the road's role as a contested corridor: Midgaard issues law-enforcement and infrastructure-protection tasks; Kiess issues commerce-protection and frontier-intelligence tasks; Kowloon issues supply-chain and diplomatic tasks that depend on the road remaining open.
+
+**Postman vnums:**
+- Midgaard: `3015`
+- Kiess: `13001`
+- Kowloon: `14001`
+
+**File location:** `/propositions/N.prop` (N = proposition ID)
+
+**Existing propositions:** IDs 1-5 are already allocated. Roc Road propositions use IDs **6-14**.
+
+**Static proposition file format (5 lines):**
+1. `<title>`
+2. `<prerequisite_static_id> <prop_type> <num_targets> <kill_needed> <min_level> <offerer_vnum> <reward_gold> <reward_qp> <reward_item_vnum> <reward_item_count>`
+3. `<target_vnum_1> [target_vnum_2] ...`
+4. `<accept_message>`
+5. `<completion_message>`
+
+**Prop types:** `1` = kill variety (kill N different mob types), `2` = collect items (collect N different items), `3` = kill count (kill N of one mob type)
+
+---
+
+### Proposition 6: Road Predator Cull (Midgaard, non-chain)
+
+**File:** `6.prop`
+
+| Field | Value |
+|---|---|
+| Title | Road predator cull: Banner Hills to Dustward |
+| Prerequisite | `-1` (none) |
+| Type | `1` (kill variety) |
+| Num targets | `3` |
+| Kill needed | `0` |
+| Min level | `15` |
+| Offerer vnum | `3015` (Midgaard postman) |
+| Reward gold | `800` |
+| Reward QP | `2` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3214` (ridge wolf), `3215` (ridge cat), `3217` (dust scavenger bird) |
+
+**Line 2:** `-1 1 3 0 15 3015 800 2 0 0`
+**Line 3:** `3214 3215 3217`
+
+**Accept text:** Road warden command has documented predator incursions along the Banner Hills and Dustward Verge that are delaying courier rotations and forcing convoy escorts to double their watch. Cull one of each primary threat species — ridge wolves, ridge cats, and dust scavenger birds — and report your engagement positions so patrol routes can be adjusted. The postmaster needs confirmation before the next warden shift rotation can be authorized.
+
+**Completion text:** Patrol command has updated the threat map using your engagement data. Warden shift rotations are proceeding on revised schedules, and convoy escorts report the predator pressure has dropped enough to resume single-watch departures through the hills. The postmaster has logged your cull as a standing reference for the next quarterly road-safety assessment.
+
+---
+
+### Proposition 7: Tollbreak Crew Interdiction (Midgaard, chain start)
+
+**File:** `7.prop`
+
+| Field | Value |
+|---|---|
+| Title | Tollbreak crew interdiction: River Crossing |
+| Prerequisite | `-1` (none) |
+| Type | `3` (kill count) |
+| Num targets | `1` |
+| Kill needed | `6` |
+| Min level | `30` |
+| Offerer vnum | `3015` (Midgaard postman) |
+| Reward gold | `2000` |
+| Reward QP | `3` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3225` (tollbreak enforcer) |
+
+**Line 2:** `-1 3 1 6 30 3015 2000 3 0 0`
+**Line 3:** `3225`
+
+**Accept text:** Tollbreak crews have seized the River Ledger Crossing approaches and are extracting violent tolls from merchants who lack armed escort. Midgaard's charter authority over the crossing is being openly defied. Eliminate at least six tollbreak enforcers to break their grip on the ford and restore safe passage for bonded traffic. The postmaster requires a body count sufficient to justify redeploying wardens from the Banner Hills garrison.
+
+**Completion text:** The tollbreak presence at the River Crossing has collapsed. Surviving crew members have scattered into the downstream brush, and bonded merchants are crossing without extortion for the first time in weeks. The postmaster has authorized warden redeployment from the Banner Hills garrison to establish a permanent checkpoint at the ford approach. Your interdiction report has been forwarded to the Magistrate Ledgerhouse as evidence for the next road-security appropriation hearing.
+
+---
+
+### Proposition 8: Shadow Trade Disruption (Midgaard, chains from 7)
+
+**File:** `8.prop`
+
+| Field | Value |
+|---|---|
+| Title | Shadow trade disruption: Crossroads to Greenveil |
+| Prerequisite | `7` (requires Prop 7 — Tollbreak Crew Interdiction) |
+| Type | `1` (kill variety) |
+| Num targets | `3` |
+| Kill needed | `0` |
+| Min level | `40` |
+| Offerer vnum | `3015` (Midgaard postman) |
+| Reward gold | `3500` |
+| Reward QP | `4` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3226` (contraband runner), `3227` (forged-seal courier), `3228` (cave squatter) |
+
+**Line 2:** `7 1 3 0 40 3015 3500 4 0 0`
+**Line 3:** `3226 3227 3228`
+
+**Accept text:** With the tollbreak crews broken at the crossing, Reckoning clerks have intercepted forged-seal documents suggesting a deeper shadow network operating between the Crossroads and the inlet caves. Contraband runners, forged-seal couriers, and cave squatters form an interconnected supply chain moving falsified legal instruments and untaxed goods. Disrupt each node of this network before they can reroute through the Greenveil Spur. The postmaster wants evidence that all three cell types have been hit.
+
+**Completion text:** The shadow trade network between the Crossroads and the caves has been fragmented. Reckoning clerks recovered forged-seal dies and falsified convoy manifests from the bodies, confirming that the network was moving documents far more dangerous than contraband. The postmaster has forwarded your intelligence to the Magistrate Ledgerhouse, where it will be used to build the case for extending warden jurisdiction into the inlet subzone — a jurisdictional expansion that Kiess's Trade Syndics have resisted for years.
+
+---
+
+### Proposition 9: Convoy Route Security Assessment (Kiess, non-chain)
+
+**File:** `9.prop`
+
+| Field | Value |
+|---|---|
+| Title | Convoy route security: Dustward predator sweep |
+| Prerequisite | `-1` (none) |
+| Type | `3` (kill count) |
+| Num targets | `1` |
+| Kill needed | `8` |
+| Min level | `20` |
+| Offerer vnum | `13001` (Kiess postman) |
+| Reward gold | `1000` |
+| Reward QP | `2` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3217` (dust scavenger bird) |
+
+**Line 2:** `-1 3 1 8 20 13001 1000 2 0 0`
+**Line 3:** `3217`
+
+**Accept text:** Trade Syndic quartermasters report that dust scavenger birds are harassing mule trains and tearing into unsecured cargo along the Dustward Verge. Convoy insurance claims have spiked, and two scheduled departures have been postponed pending threat reassessment. Thin the scavenger bird population until convoy marshals can certify the route as insurable again. The postmaster needs your kill tally to file with the Syndic Council's risk-adjustment office.
+
+**Completion text:** Scavenger bird pressure along the Dustward Verge has dropped below the threshold that triggers convoy insurance surcharges. Trade Syndic quartermasters have cleared the postponed departures, and mule train drivers report intact cargo for the first time in weeks. The postmaster has filed your tally with the Syndic Council and noted that your work saved the convoy compact more in avoided claims than the posted reward cost.
+
+---
+
+### Proposition 10: Greenveil Spur Reconnaissance (Kiess, chain start)
+
+**File:** `10.prop`
+
+| Field | Value |
+|---|---|
+| Title | Greenveil Spur reconnaissance: spirit clearance |
+| Prerequisite | `-1` (none) |
+| Type | `1` (kill variety) |
+| Num targets | `2` |
+| Kill needed | `0` |
+| Min level | `35` |
+| Offerer vnum | `13001` (Kiess postman) |
+| Reward gold | `1800` |
+| Reward QP | `3` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3224` (displaced forest spirit), `3226` (contraband runner) |
+
+**Line 2:** `-1 1 2 0 35 13001 1800 3 0 0`
+**Line 3:** `3224 3226`
+
+**Accept text:** Wall Command scouts report that the Greenveil Spur — the convoy reroute used when the main road is compromised — has become impassable. Displaced forest spirits are attacking anything that enters the canopy, and contraband runners have established camps along the path to intercept diverted traffic. Clear both threats so the spur can be recertified as an emergency bypass. The postmaster needs confirmation before convoy marshals can add the spur back to their contingency routing tables.
+
+**Completion text:** The Greenveil Spur has been cleared of hostile spirits and contraband camps. Convoy marshals have recertified the path as an emergency bypass route, and Wall Command scouts have resumed periodic patrols. The postmaster notes that this is the first time in two seasons that Kiess has had a functional reroute option — your clearance work restores a critical piece of the convoy compact's redundancy planning.
+
+---
+
+### Proposition 11: Inlet Smuggler Crackdown (Kiess, chains from 10)
+
+**File:** `11.prop`
+
+| Field | Value |
+|---|---|
+| Title | Inlet smuggler crackdown: cave network purge |
+| Prerequisite | `10` (requires Prop 10 — Greenveil Spur Reconnaissance) |
+| Type | `3` (kill count) |
+| Num targets | `1` |
+| Kill needed | `10` |
+| Min level | `50` |
+| Offerer vnum | `13001` (Kiess postman) |
+| Reward gold | `4000` |
+| Reward QP | `5` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3228` (cave squatter) |
+
+**Line 2:** `10 3 1 10 50 13001 4000 5 0 0`
+**Line 3:** `3228`
+
+**Accept text:** With the Greenveil Spur secured, Wall Command has turned attention to the inlet cave network where the Chainmaster's crew operates a private toll system that undercuts legitimate convoy compact fees. The cave squatters are former laborers and deserters — dangerous not because of individual skill but because they know the road's blind spots from years of service. Purge the cave network of at least ten squatters to collapse the Chainmaster's labor base. The postmaster wants this done before the next convoy scheduling cycle so the Syndic Council can close the insurance loophole that smuggler routes create.
+
+**Completion text:** The cave squatter workforce has been gutted. Without laborers to maintain chains, watch positions, and cargo transfers, the Chainmaster's private toll operation is crippled. Wall Command scouts report that the cave network is effectively abandoned, and the Syndic Council has closed the insurance loophole that allowed shippers to claim smuggler-route losses against legitimate convoy compact pools. The postmaster has noted that this cleanup may force the Chainmaster himself out of his stronghold — a problem for another day, but a day that is now closer.
+
+---
+
+### Proposition 12: Ruin Custodian Suppression (Midgaard, non-chain)
+
+**File:** `12.prop`
+
+| Field | Value |
+|---|---|
+| Title | Ruin custodian suppression: Weathered Causeway |
+| Prerequisite | `-1` (none) |
+| Type | `1` (kill variety) |
+| Num targets | `4` |
+| Kill needed | `0` |
+| Min level | `50` |
+| Offerer vnum | `3015` (Midgaard postman) |
+| Reward gold | `4500` |
+| Reward QP | `5` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3220` (cairn lurker), `3221` (script-blind revenant), `3222` (relic zealot), `3223` (ruin custodian shade) |
+
+**Line 2:** `-1 1 4 0 50 3015 4500 5 0 0`
+**Line 3:** `3220 3221 3222 3223`
+
+**Accept text:** Reckoning archivists need the Ruin Run corridor cleared for a documentation expedition. The ruin-touched hostiles — cairn lurkers, script-blind revenants, relic zealots, and ruin custodian shades — have made the causeway impassable to unarmed scholars. Eliminate one of each threat type to create a safe transit window. The postmaster emphasizes that this is a civic-academic priority: the tablets in those ruins may contain evidence relevant to ongoing Continuity-Reckoning legal proceedings.
+
+**Completion text:** The Ruin Run corridor is clear enough for the documentation expedition to proceed under warden escort. Reckoning archivists have already dispatched a survey team to photograph and transcribe the exposed tablets before weather or further hostile activity degrades them. The postmaster has logged this as a joint security-academic operation — the first of its kind on the western road — and forwarded your engagement report to both the Magistrate Ledgerhouse and the Granite Arcade archive office.
+
+---
+
+### Proposition 13: Coastal Hazard Survey (Kowloon, non-chain)
+
+**File:** `13.prop`
+
+| Field | Value |
+|---|---|
+| Title | Coastal hazard survey: Western Shore predators |
+| Prerequisite | `-1` (none) |
+| Type | `1` (kill variety) |
+| Num targets | `3` |
+| Kill needed | `0` |
+| Min level | `40` |
+| Offerer vnum | `14001` (Kowloon postman) |
+| Reward gold | `2500` |
+| Reward QP | `3` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3218` (coastal carrion gull), `3219` (plains stalker), `3235` (road-weary pilgrim) |
+
+**Line 2:** `-1 1 3 0 40 14001 2500 3 0 0`
+**Line 3:** `3218 3219 3235`
+
+**Accept text:** Kowloon's shipping agents report that the western shore terminus of Roc Road has become too dangerous for the small-boat relay crews who transfer sealed diplomatic pouches between overland couriers and coastal vessels. Carrion gulls harass the landing sites, plains stalkers hunt the approach roads, and stranded pilgrims clog the terminus creating confusion that predators exploit. Survey the full threat spectrum — engage one of each — and report conditions so Kowloon's courier office can determine whether to reroute diplomatic traffic through Kiess's harbor instead.
+
+**Completion text:** Your threat survey confirms that the western shore terminus remains viable for small-boat relay operations if escort protocols are tightened. Kowloon's courier office has decided to maintain the overland-to-coastal transfer at the current terminus rather than rerouting through Kiess — a decision that keeps Kowloon's diplomatic pouch schedule independent of Kiess harbor fees. The postmaster has forwarded your survey data to the covenant registrar for inclusion in the next quarterly route-risk assessment.
+
+**Note:** Target `3235` (road-weary pilgrim) is a non-aggressive mob; the proposition framing is about surveying the threat environment the pilgrims are part of (they are not the target to kill — but mechanically, the system requires killing the target mob). Consider swapping to `3216` (river ambusher snake) if killing a non-hostile mob is undesirable. *Implementation decision: replace `3235` with a hostile mob vnum if playtesting reveals player discomfort.*
+
+---
+
+### Proposition 14: Transcontinental Corridor Assessment (Kowloon, chains from 13)
+
+**File:** `14.prop`
+
+| Field | Value |
+|---|---|
+| Title | Transcontinental corridor assessment: full-road interdiction |
+| Prerequisite | `13` (requires Prop 13 — Coastal Hazard Survey) |
+| Type | `1` (kill variety) |
+| Num targets | `5` |
+| Kill needed | `0` |
+| Min level | `60` |
+| Offerer vnum | `14001` (Kowloon postman) |
+| Reward gold | `6000` |
+| Reward QP | `6` |
+| Reward item vnum | `0` |
+| Reward item count | `0` |
+| Target vnums | `3214` (ridge wolf), `3225` (tollbreak enforcer), `3220` (cairn lurker), `3228` (cave squatter), `3219` (plains stalker) |
+
+**Line 2:** `13 1 5 0 60 14001 6000 6 0 0`
+**Line 3:** `3214 3225 3220 3228 3219`
+
+**Accept text:** Kowloon's covenant registrar has commissioned a full corridor threat assessment spanning the entire length of Roc Road. Diplomatic and commercial traffic flowing from Kowloon through Midgaard and westward to Kiess depends on every segment of this road remaining traversable. Engage one representative threat from each major zone — hills predators, river tollbreak crews, ruin hostiles, cave smugglers, and coastal stalkers — and report the engagement conditions. This is the most comprehensive road survey Kowloon has commissioned since the post-Evermeet reconstruction, and the registrar wants field data from every band.
+
+**Completion text:** The full-road assessment is complete and Kowloon's covenant registrar now has field-verified threat data for every major segment of Roc Road. This is the first end-to-end corridor survey since the Ash-and-Iron Decades, and it confirms that the road is traversable but requires sustained investment in escort infrastructure. The registrar has forwarded copies to both Midgaard's Magistrate Ledgerhouse and Kiess's Syndic Council, recommending a three-city maintenance compact — the first formal acknowledgment that Kowloon considers Roc Road part of its own supply chain rather than merely a Midgaard-Kiess bilateral concern.
+
+---
+
+### Proposition Summary Table
+
+| ID | Title | Type | Offerer | Prereq | Min Lvl | Chain |
+|----|-------|------|---------|--------|---------|-------|
+| 6 | Road predator cull | Kill variety (3) | Midgaard (3015) | None | 15 | — |
+| 7 | Tollbreak crew interdiction | Kill count (6) | Midgaard (3015) | None | 30 | Chain start |
+| 8 | Shadow trade disruption | Kill variety (3) | Midgaard (3015) | Prop 7 | 40 | Chains from 7 |
+| 9 | Convoy route security | Kill count (8) | Kiess (13001) | None | 20 | — |
+| 10 | Greenveil Spur reconnaissance | Kill variety (2) | Kiess (13001) | None | 35 | Chain start |
+| 11 | Inlet smuggler crackdown | Kill count (10) | Kiess (13001) | Prop 10 | 50 | Chains from 10 |
+| 12 | Ruin custodian suppression | Kill variety (4) | Midgaard (3015) | None | 50 | — |
+| 13 | Coastal hazard survey | Kill variety (3) | Kowloon (14001) | None | 40 | Chain start |
+| 14 | Transcontinental corridor assessment | Kill variety (5) | Kowloon (14001) | Prop 13 | 60 | Chains from 13 |
+
+**Chain structure:**
+- **Midgaard chain:** 7 (Tollbreak Crew) → 8 (Shadow Trade Disruption)
+- **Kiess chain:** 10 (Greenveil Recon) → 11 (Inlet Crackdown)
+- **Kowloon chain:** 13 (Coastal Survey) → 14 (Full-Road Assessment)
+- **Standalone:** 6 (Predator Cull), 9 (Convoy Route Security), 12 (Ruin Suppression)
+
+**Thematic distribution:**
+- Midgaard propositions focus on law enforcement, infrastructure protection, and Reckoning-faction academic access
+- Kiess propositions focus on convoy commerce, route redundancy, and syndic insurance logistics
+- Kowloon propositions focus on diplomatic courier routes, full-corridor visibility, and transcontinental supply chain integrity
+
+---
+
 ## Deliverables for Build Phase
 1. Rewrite `#ROOMS` entries for all vnums `3201-3299` in ascending sequential order.
 2. Add complete `#MOBILES` roster with faction tagging and level bands (vnums `3201-3236`).
@@ -622,4 +927,5 @@ Notes:
 11. Verify all vnums within `3201-3299` range.
 12. Verify all external links preserved (see External Link Inventory).
 13. Verify no vnum mentions in any description text.
-14. Run `cd src && make unit-tests` to validate.
+14. Create static proposition files `6.prop` through `14.prop` in `propositions/` directory per the Propositions Plan.
+15. Run `cd src && make unit-tests` to validate.
