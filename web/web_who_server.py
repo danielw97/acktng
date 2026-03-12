@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import os
+import base64
 import mimetypes
 from html import escape
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -35,6 +36,9 @@ _topic_names_lock = Lock()
 
 _topic_content_cache: dict[Path, tuple[int, str]] = {}
 _topic_content_lock = Lock()
+
+_logo_data_uri_cache: tuple[int, str] | None = None
+_logo_data_uri_lock = Lock()
 
 
 class WhoRequestHandler(BaseHTTPRequestHandler):
@@ -263,7 +267,29 @@ def _read_cached_topic(path: Path) -> str:
 
 def _build_full_page(title: str, body: str) -> str:
     template = _load_template("base.html")
-    return template.replace("__TITLE__", escape(title)).replace("__BODY__", body)
+    return (
+        template.replace("__TITLE__", escape(title))
+        .replace("__BODY__", body)
+        .replace("__SITE_LOGO_SRC__", _site_logo_src())
+    )
+
+
+def _site_logo_src() -> str:
+    logo_path = IMG_DIR / "ackmud_logo_transparent.png"
+    if not logo_path.exists() or not logo_path.is_file():
+        return ""
+
+    mtime_ns = logo_path.stat().st_mtime_ns
+
+    global _logo_data_uri_cache
+    with _logo_data_uri_lock:
+        if _logo_data_uri_cache is not None and _logo_data_uri_cache[0] == mtime_ns:
+            return _logo_data_uri_cache[1]
+
+        encoded = base64.b64encode(logo_path.read_bytes()).decode("ascii")
+        data_uri = f"data:image/png;base64,{encoded}"
+        _logo_data_uri_cache = (mtime_ns, data_uri)
+        return data_uri
 
 
 def main() -> None:
