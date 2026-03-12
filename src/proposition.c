@@ -80,27 +80,31 @@ typedef struct static_prop_lore_data STATIC_PROP_LORE;
 struct static_prop_lore_data
 {
     int id;
-    const char *message;
+    const char *accept_message;
+    const char *completion_message;
 };
 
 static const STATIC_PROP_LORE static_prop_lore_table[] = {
     {0,
-     "The cellar keepers say rat packs are gnawing through old grain stores beneath town. Thin their numbers before the infestation spills into the streets."},
+     "The cellar keepers say rat packs are gnawing through old grain stores beneath town. Thin their numbers before the infestation spills into the streets.",
+     "The cellar keepers can finally secure their grain stores again. Your work in the tunnels spared the streets from a full infestation."},
     {1,
-     "A satchel of official courier marks was scattered during an ambush. Recover the seals so the post can confirm trusted routes and reopen deliveries."},
+     "A satchel of official courier marks was scattered during an ambush. Recover the seals so the post can confirm trusted routes and reopen deliveries.",
+     "With the courier seals recovered, the post can authenticate routes again and dispatches are moving without fear of forged marks."},
     {2,
-     "Travelers whisper of coordinated raiders shadowing the trade road. Break their hold by striking each known threat before caravans are cut off completely."}};
+     "Travelers whisper of coordinated raiders shadowing the trade road. Break their hold by striking each known threat before caravans are cut off completely.",
+     "Word spreads quickly: the raider ring is broken and caravans are crossing the road under steadier guard thanks to your strikes."}};
 
 #define STATIC_PROP_LORE_COUNT (sizeof(static_prop_lore_table) / sizeof(static_prop_lore_table[0]))
 
-static const char *find_static_prop_lore(int static_id)
+static const STATIC_PROP_LORE *find_static_prop_lore(int static_id)
 {
     int i;
 
     for (i = 0; i < (int)STATIC_PROP_LORE_COUNT; i++)
     {
         if (static_prop_lore_table[i].id == static_id)
-            return static_prop_lore_table[i].message;
+            return &static_prop_lore_table[i];
     }
 
     return NULL;
@@ -382,7 +386,7 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
 {
     int slot, i;
     const STATIC_PROP_TEMPLATE *tpl;
-    const char *lore;
+    const STATIC_PROP_LORE *lore;
     PROPOSITION_DATA *prop;
     char buf[MAX_STRING_LENGTH];
 
@@ -455,9 +459,9 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
             list_number, slot + 1, tpl->title);
     send_to_char(buf, ch);
     lore = find_static_prop_lore(tpl->id);
-    if (lore != NULL && lore[0] != '\0')
+    if (lore != NULL && lore->accept_message != NULL && lore->accept_message[0] != '\0')
     {
-        sprintf(buf, "@@WQuest lore:@@N %s\n\r", lore);
+        sprintf(buf, "@@WQuest briefing:@@N %s\n\r", lore->accept_message);
         send_to_char(buf, ch);
     }
     show_reward_preview(ch, prop);
@@ -754,6 +758,7 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
     for (slot = 0; slot < PROP_MAX_PROPOSITIONS; slot++)
     {
         PROPOSITION_DATA *prop = &ch->pcdata->propositions[slot];
+        const STATIC_PROP_LORE *lore;
         int gold_reward;
         int qp_reward;
         int i;
@@ -773,6 +778,16 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
         sprintf(buf, "  @@Y%d@@N quest point%s\n\r", qp_reward, qp_reward == 1 ? "" : "s");
         send_to_char(buf, ch);
         send_to_char("  @@Y1@@N proposition point\n\r", ch);
+
+        if (prop->prop_static_id >= 0)
+        {
+            lore = find_static_prop_lore(prop->prop_static_id);
+            if (lore != NULL && lore->completion_message != NULL && lore->completion_message[0] != '\0')
+            {
+                sprintf(buf, "@@WCompletion report:@@N %s\n\r", lore->completion_message);
+                send_to_char(buf, ch);
+            }
+        }
 
         ch->gold += gold_reward;
         ch->quest_points += qp_reward;
