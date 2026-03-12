@@ -3165,3 +3165,1647 @@ D2
 ~
 0 -1 15679
 S
+#15700
+Western Ridge Foot~
+The @@gwestern slope@@N of the Ironpine Rise begins here, the ground climbing steeply through @@Gdense ironpines@@N whose dark trunks crowd the hillside. The soil is thin over bedrock, and @@lexposed granite@@N breaks through in places, its grey surface scored by ancient glacial scratches. The ironpines here are younger than those deeper in the rise, their bark a dark brown rather than the near-black of the oldest specimens.
+~
+0 5
+D1
+~
+~
+0 -1 15701
+D2
+~
+~
+0 -1 15680
+D0
+~
+~
+0 -1 15720
+S
+#15701
+Switchback Trail~
+A @@gsteep trail@@N switchbacks up the hillside here, cutting back and forth across the slope to manage the grade. The trail surface is @@lbare rock@@N in places where the thin soil has been worn away by traffic. @@GIronpine roots@@N grip the trail edges, and their exposed root-arches create natural steps on the steepest pitches. The wind @@lhowls through the ridge corridors@@N above.
+~
+0 5
+D1
+~
+~
+0 -1 15702
+D3
+~
+~
+0 -1 15700
+S
+#15702
+Granite Ledge~
+A @@gbroad ledge@@N of exposed granite juts from the hillside here, its flat surface providing a natural resting point on the climb. The ledge faces south, offering a view back over the @@lMosswater Bends@@N spread out below in a patchwork of green and silver. @@GWind-stunted ironpines@@N frame the view on either side, their branches shaped by the prevailing wind into @@lpermanent leeward curves@@N.
+~
+0 5
+D1
+~
+~
+0 -1 15703
+D3
+~
+~
+0 -1 15701
+D2
+~
+~
+0 -1 15682
+S
+#15703
+Ridge Trail Junction~
+A @@gjunction@@N of several trails marks this point on the Ironpine Rise, where a ridge-top path crosses a trail climbing from the fen below. The junction is marked by a @@Wcairn of stacked stones@@N topped with a weathered wooden sign whose carved directions have faded but remain legible. @@GIronpines@@N press close on all sides, their canopy meeting high above in a @@ldark vault@@N.
+~
+0 5
+D1
+~
+~
+0 -1 15704
+D3
+~
+~
+0 -1 15702
+D2
+~
+~
+0 -1 15683
+D0
+~
+~
+0 -1 15723
+S
+#15704
+Wind Funnel~
+The ridge narrows here, and the rock walls on either side channel the wind into a @@ghowling funnel@@N that tears at clothing and makes conversation impossible. The ironpines on the ridge crest lean uniformly to one side, permanently shaped by the constant blast. @@GDriven pine needles@@N sting exposed skin, and the wind noise masks all other sounds. @@lIce@@N forms on the rock surfaces in cold weather.
+~
+0 5
+D1
+~
+~
+0 -1 15705
+D3
+~
+~
+0 -1 15703
+S
+#15705
+Stalker Cat Ledge~
+A @@gnarrow ledge@@N of rock runs along a cliff face here, barely wide enough for single-file passage. The drop on one side is sheer, and the rock wall on the other offers @@lno handholds@@N. The ledge is @@Gsmooth and sun-warmed@@N, exactly the kind of terrain that mountain stalker cats favor for ambush. @@RClaw marks@@N score the rock at each end of the ledge, and tufts of tawny fur cling to cracks in the stone.
+~
+0 5
+D1
+~
+~
+0 -1 15706
+D3
+~
+~
+0 -1 15704
+S
+#15706
+Ironpine Grove, South~
+@@GEnormous ironpines@@N dominate this section of the rise, their trunks so thick that three people could not link arms around the largest. The bark has turned the @@lcharacteristic near-black@@N of ancient specimens, and the canopy is so high above that the space beneath feels like a @@gdark cathedral@@N. The forest floor is bare except for needles, the shade too deep for undergrowth.
+~
+0 3
+D1
+~
+~
+0 -1 15707
+D3
+~
+~
+0 -1 15705
+D0
+~
+~
+0 -1 15726
+S
+#15707
+Ashfang Outpost~
+A @@gcrude camp@@N occupies a defensible position between two massive boulders, its approach screened by @@Gdense ironpine@@N growth. @@bBlackened fire stones@@N and @@lash-stained earth@@N mark this as an Ashfang warband outpost, one of the forward positions from which they observe road traffic and plan raids. Strips of @@Rtorn cloth@@N tied to branches serve as signal markers. The camp is rough but functional.
+~
+4 3
+D1
+~
+~
+0 -1 15708
+D3
+~
+~
+0 -1 15706
+S
+#15708
+Root Hollow, North~
+@@GMassive ironpine roots@@N have created a network of @@gdark hollows@@N beneath a raised root plate here, the spaces large enough to crawl into and deep enough to hide in. @@lPale fungi@@N grow on the root surfaces in the perpetual shade, and the @@Rskittering of spiders@@N echoes from the deeper recesses. The hollows are connected by narrow passages that wind through the root mass.
+~
+1 3
+D1
+~
+~
+0 -1 15709
+D3
+~
+~
+0 -1 15707
+S
+#15709
+Fen-Ridge Transition~
+The @@gtransition@@N from fen to ridge is complete here, the last traces of wet ground giving way to @@lrocky, pine-covered hillside@@N. The ironpines are spaced wider on this eastern slope, allowing more light to reach the forest floor and encouraging a thin layer of @@Gmoss and heather@@N. The air is dry and cold compared to the fen below, carrying the sharp scent of pine resin.
+~
+0 3
+D3
+~
+~
+0 -1 15708
+D2
+~
+~
+0 -1 15689
+D0
+~
+~
+0 -1 15729
+S
+#15710
+Lantern Road, First Switchback~
+The @@lLantern Road@@N begins its @@gswitchback climb@@N through the Ironpine Rise here, the road cutting across the hillside at a manageable grade before turning back at the next ridge point. The road surface is packed gravel held in place by @@Glog retaining walls@@N on the downhill side. The ironpines crowd close, their dark trunks forming @@lwalls@@N on either side. Fresh @@gaxe marks@@N on overhanging branches show the wardens keep the road clear.
+~
+0 3
+D0
+~
+~
+0 -1 15730
+D2
+~
+~
+0 -1 15690
+D1
+~
+~
+0 -1 15711
+S
+#15711
+Ironpine Road Camp~
+A @@groad camp@@N built of @@ldark ironpine logs@@N sits beside the switchback, its construction sturdy enough to weather the worst mountain storms. The camp has a covered fire pit, a wood store, and sleeping platforms raised off the ground. @@WCarved patrol markers@@N on the doorpost record the names and dates of wardens who have manned this station. @@GDried herbs@@N hang from the rafters, filling the shelter with a medicinal scent.
+~
+4 3
+D3
+~
+~
+0 -1 15710
+D1
+~
+~
+0 -1 15712
+S
+#15712
+Lantern Road, Ridge Turn~
+The @@lLantern Road@@N makes a sharp turn here at the ridge point, switching back to continue its westward climb across the next face of the hill. A @@gstone marker@@N at the turn records the @@Wdistance to the Ironpine waystation@@N and warns of steep grades ahead. The view at the turn is dramatic: the @@GMosswater Bends@@N are visible far below, and the road already climbed is a @@lpale ribbon@@N against the dark hillside.
+~
+0 3
+D0
+~
+~
+0 -1 15732
+D3
+~
+~
+0 -1 15711
+D2
+~
+~
+0 -1 15692
+S
+#15713
+Lantern Road, Rise Ascent~
+The @@lLantern Road@@N climbs through a @@gdense corridor@@N of ironpines here, the grade steep enough that the road builders have cut crude steps into the worst sections. The retaining wall on the downhill side is higher here, holding back the roadbed from sliding down the hillside. @@GThe dark trunks@@N close in on either side, and the canopy far above blocks most of the sky. @@lWaystones@@N are carved into the cliff face rather than standing free.
+~
+0 3
+D0
+~
+~
+0 -1 15733
+D2
+~
+~
+0 -1 15693
+D3
+~
+~
+0 -1 15712
+S
+#15714
+Ashfang Lookout~
+A @@gcamouflaged observation post@@N has been built in the branches of a large ironpine here, its platform of @@blashed poles@@N hidden by woven branch screens. The post overlooks a stretch of the Lantern Road below, giving the Ashfang scouts a clear view of traffic while remaining @@linvisible from the road@@N. @@GSignal flags@@N and a coil of rope are stored on the platform.
+~
+0 3
+D3
+~
+~
+0 -1 15713
+D1
+~
+~
+0 -1 15715
+D0
+~
+~
+0 -1 15734
+S
+#15715
+Everkeeper Ring, Overgrown~
+An @@Wovergrown planting-ring@@N lies half-hidden in the undergrowth here, its stones nearly buried by @@Gdecades of leaf litter and moss@@N. The ring's outline is still visible to a careful eye, and the central ironpine it surrounds has grown enormous, its trunk splitting the circle of stones as it expanded. @@gFading carvings@@N on the stones show the Everkeeper seven-fold planting ritual. @@lSmall offerings@@N of pine cones and feathers sit on the most visible stone.
+~
+0 3
+D3
+~
+~
+0 -1 15714
+D2
+~
+~
+0 -1 15695
+S
+#15716
+Wolf Den Ridge~
+A @@gcave-like gap@@N between fallen boulders serves as a @@Rwolf den@@N here, the entrance worn smooth by years of paws passing in and out. @@GBones@@N and fur are scattered around the entrance, and the musky smell of wolves is @@loverpowering@@N. The den faces south for warmth, and the ridge above provides shelter from the prevailing north wind. Multiple trails radiate from the den toward hunting territory.
+~
+0 3
+D1
+~
+~
+0 -1 15717
+D3
+~
+~
+0 -1 15715
+D2
+~
+~
+0 -1 15696
+S
+#15717
+Cliff Nest~
+A @@gnarrow shelf@@N partway up a cliff face has been colonized by birds of prey, their nest a massive accumulation of sticks, bones, and fur perched on the @@ledge@@N. @@GWhitewash streaks@@N mark the cliff below the nest, and @@Rtalon-scarred bones@@N of small animals litter the ground at the cliff's base. The shelf is accessible only by a dangerous scramble up the rock face. Hawks circle above, crying territorial warnings.
+~
+0 5
+D3
+~
+~
+0 -1 15716
+D2
+~
+~
+0 -1 15697
+D0
+~
+~
+0 -1 15737
+S
+#15718
+Wolverine Trail~
+A @@gtrail@@N through the dense ironpines bears the unmistakable signs of wolverine activity: @@Rscent-marked boulders@@N, deep claw scores in tree bark, and the remains of cached kills buried in shallow @@bscrapes@@N. The trail itself is narrow and winding, following the wolverine's preference for cover and concealment. @@GThe ironpine canopy@@N is dense overhead, and the trail is dim even at midday.
+~
+0 3
+D1
+~
+~
+0 -1 15719
+D3
+~
+~
+0 -1 15717
+S
+#15719
+Eastern Rise, Lower Slope~
+The @@geastern slope@@N of the Ironpine Rise descends here toward a valley, the ground steep and rocky beneath a thin covering of @@Gpine needles@@N. The ironpines are smaller on this slope, getting less of the prevailing rainfall, and the spaces between them are wider. @@lExposed rock@@N shows through everywhere, the granite bedrock close to the surface. The valley below is visible through gaps in the trees.
+~
+0 5
+D3
+~
+~
+0 -1 15718
+D0
+~
+~
+0 -1 15739
+S
+#15720
+Western Ridge Summit~
+The @@gwestern ridge@@N crests here at a windswept summit of @@lbare granite@@N and @@Gstunted ironpines@@N. The trees at this elevation are ancient but small, their growth checked by constant wind and thin soil. The summit offers panoramic views: the Mosswater Bends spread out to the south, and higher ridges of the Ironpine Rise march northward. @@lIce crystals@@N form on the exposed rock even in mild weather.
+~
+0 5
+D1
+~
+~
+0 -1 15721
+D2
+~
+~
+0 -1 15700
+S
+#15721
+Ridge Saddle~
+A @@gsaddle@@N between two ridge peaks provides a sheltered passage point, the ground dipping below the prevailing wind. The saddle is @@Gcarpeted with tough mountain grass@@N and a few @@lhardy wildflowers@@N that bloom briefly in summer. @@gStone cairns@@N at each end of the saddle mark the passage route, and the compressed grass shows heavy animal traffic through this natural gap.
+~
+0 5
+D1
+~
+~
+0 -1 15722
+D3
+~
+~
+0 -1 15720
+S
+#15722
+Rock Slide~
+A @@grelatively recent rockslide@@N has tumbled down the hillside here, leaving a scar of @@lbare earth and exposed stone@@N. The slide debris covers a wide area, the boulders still angular and unweathered. @@GPioneer plants@@N have begun colonizing the debris, but the surface is mostly bare. The slide has created @@gnew paths@@N through previously impassable terrain, though the footing on the loose rock is uncertain.
+~
+0 5
+D1
+~
+~
+0 -1 15723
+D3
+~
+~
+0 -1 15721
+D0
+~
+~
+0 -1 15742
+S
+#15723
+Ridge Patrol Crossing~
+A @@gtrail crossing@@N on the ridge serves as a patrol checkpoint, marked by @@WIronpine Rise warden blazes@@N cut into the bark of trees at each trail entrance. The clearing at the crossing is small but @@lfirm-footed@@N, with a @@Gstone seat@@N carved from a convenient boulder for resting wardens. The patrol routes radiate in several directions along and across the ridge system.
+~
+4 3
+D1
+~
+~
+0 -1 15724
+D3
+~
+~
+0 -1 15722
+D2
+~
+~
+0 -1 15703
+D0
+~
+~
+0 -1 15743
+S
+#15724
+Trap Line~
+@@GConcealed snares@@N and @@gdeadfall traps@@N are set along this trail, their mechanisms hidden beneath piles of leaves and pine needles. The traps are Ashfang work, designed to slow and injure travelers rather than to hunt game. @@lBroken trip-wires@@N show that some traps have been sprung and not reset, but others are undoubtedly still active. The trail itself narrows suspiciously.
+~
+0 3
+D1
+~
+~
+0 -1 15725
+D3
+~
+~
+0 -1 15723
+S
+#15725
+Ashfang Ritual Clearing~
+A @@gclearing@@N among the ironpines shows signs of @@RAshfang ritual use@@N: a crude fire circle of blackened stones, @@bash-painted symbols@@N on the surrounding tree trunks, and the smell of burnt offerings lingering in the still air. The Ashfang are named for their practice of blackening their teeth with ash, and this clearing appears to be where they perform the rite. @@gScattered tooth-marks@@N in ash-coated bark confirm the practice.
+~
+0 3
+D3
+~
+~
+0 -1 15724
+D0
+~
+~
+0 -1 15745
+S
+#15726
+Ironpine Cathedral~
+The @@Gmost ancient ironpines@@N in this section of the rise grow here, their @@ldark trunks@@N so massive that the spaces between them feel like the aisles of a cathedral. The canopy is hundreds of feet above, and the @@gforest floor@@N is a silent carpet of needles untouched by wind. The scale of these trees is humbling, each one centuries old. @@lShafts of light@@N pierce the canopy in rare spots, illuminating columns of dust motes.
+~
+0 3
+D1
+~
+~
+0 -1 15727
+D3
+~
+~
+0 -1 15725
+D2
+~
+~
+0 -1 15706
+D0
+~
+~
+0 -1 15746
+S
+#15727
+Megalith Approach~
+The forest opens slightly here near one of the ancient @@Wmegalith sites@@N maintained by the stone-antler circles. @@GStanding stones@@N are visible through the trees ahead, their grey forms stark against the dark ironpines. The approach is marked by @@gsmall cairns@@N placed at intervals along the trail, and the air has a @@lcold, still quality@@N that feels deliberate rather than natural. Something about this place demands quiet.
+~
+4 3
+D1
+~
+~
+0 -1 15728
+D3
+~
+~
+0 -1 15726
+S
+#15728
+Outer Megalith Ring~
+The @@Wouter ring@@N of a megalith site surrounds this clearing, its @@gstanding stones@@N arranged in a circle roughly twenty paces across. The stones are tall and rough-hewn, their surfaces carved with spirals and @@lcup marks@@N that predate both cities. @@GGrass@@N grows thick within the circle, greener and healthier than the surrounding forest floor. The stone-antler circle guards this site fiercely, and @@Rwarning tokens@@N hang from the nearest trees.
+~
+4 3
+D3
+~
+~
+0 -1 15727
+D0
+~
+~
+0 -1 15748
+S
+#15729
+Eastern Rise, Mid-slope~
+The @@geastern slope@@N of the Ironpine Rise continues its @@lrocky descent@@N here, the ironpines giving way to mixed forest as the elevation drops. @@GBirch and oak@@N appear among the conifers, their lighter foliage creating patches of brightness in the dark pine canopy. The ground is steep and covered with @@loose stone@@N and pine needles, making the footing treacherous.
+~
+0 5
+D3
+~
+~
+0 -1 15728
+D2
+~
+~
+0 -1 15709
+D0
+~
+~
+0 -1 15749
+S
+#15730
+Lantern Road, Upper Switchback~
+The @@lLantern Road@@N reaches the upper sections of its switchback climb here, the grade easing slightly as the road approaches the ridge crest. The retaining walls are massive stone constructions at this height, and the road surface is @@gcrushed granite@@N that provides better grip on the steep grade. @@GThe ironpines@@N on either side are among the largest on the rise, their @@ldark canopy@@N blocking most of the sky.
+~
+0 3
+D0
+~
+~
+0 -1 15750
+D2
+~
+~
+0 -1 15710
+D1
+~
+~
+0 -1 15731
+S
+#15731
+Ironpine Watch Cairn~
+A @@gwatch cairn@@N of stacked stone stands at a high point beside the road, its purpose both landmark and signal station. The cairn is topped with a @@lflat stone@@N that could serve as a small platform, and @@bsoot marks@@N show that signal fires have been burned on top. @@GThe view@@N from the cairn extends over the road in both directions and across a wide stretch of the surrounding forest. Fresh warden @@gblaze marks@@N on nearby trees indicate this station is still active.
+~
+4 3
+D3
+~
+~
+0 -1 15730
+D1
+~
+~
+0 -1 15732
+S
+#15732
+Lantern Road, Ridge Crest~
+The @@lLantern Road@@N reaches the crest of the main ridge here, and the sense of accomplishment is palpable after the long switchback climb. The road levels out briefly at the summit, passing between @@Gmonumental ironpines@@N that frame the passage like living gateposts. A @@Wlarge waystone@@N records the midpoint of the journey between Midgaard and Kowloon. The view north reveals more forest stretching to the horizon. The road begins to @@ldescend@@N gently on the other side.
+~
+0 3
+D0
+~
+~
+0 -1 15752
+D3
+~
+~
+0 -1 15731
+D2
+~
+~
+0 -1 15712
+S
+#15733
+Ridge Camp, North~
+A @@gcamp@@N has been established on the north side of the ridge crest, sheltered from the south wind by the ridge itself. The camp is @@lsturdily built@@N of ironpine logs, with a covered fire pit and a wood store. @@GJoint-commission patrol flags@@N fly from a pole, indicating this camp is shared by both Midgaard and Kowloon wardens. A @@gnotice board@@N lists current patrol assignments and threat reports.
+~
+4 3
+D3
+~
+~
+0 -1 15732
+D2
+~
+~
+0 -1 15713
+D1
+~
+~
+0 -1 15734
+S
+#15734
+Ashfang Camp, Ridge~
+A @@gmore permanent Ashfang camp@@N occupies a defensible hollow in the ridge, its approaches screened by @@Gdense ironpine@@N and boulder fields. The camp has @@bmultiple fire pits@@N, crude shelters of hide and bark, and weapon racks made from lashed poles. @@RAsh-painted clan symbols@@N mark the trunks of surrounding trees, and the smell of smoke and meat hangs in the air. This is a staging camp, not a temporary outpost.
+~
+0 3
+D3
+~
+~
+0 -1 15733
+D2
+~
+~
+0 -1 15714
+D0
+~
+~
+0 -1 15754
+S
+#15735
+Wolverine Burrow~
+A @@gdeep burrow@@N has been dug into the hillside beneath a tumble of boulders, its entrance @@lwide enough for a large animal@@N and surrounded by @@Rclaw-marked earth@@N. The burrow extends back into darkness, and a @@Rpowerful musky stench@@N emanates from the opening. @@GScattered bones@@N and partially buried food caches surround the entrance, evidence of the wolverine's fearsome territorial behavior. The occupant does not welcome visitors.
+~
+0 3
+D1
+~
+~
+0 -1 15736
+D3
+~
+~
+0 -1 15734
+S
+#15736
+Rocky Pinnacle~
+A @@gnarrow rock pinnacle@@N rises above the forest canopy here, accessible only by scrambling up its rough-hewn surface. The pinnacle is a natural formation of erosion-resistant granite, and its flat top provides a @@l360-degree vantage@@N over the surrounding forest. @@GIronpines@@N crowd its base, their branches reaching toward but not quite touching the rock. Wind-scoured @@lichen@@N covers every surface.
+~
+0 5
+D3
+~
+~
+0 -1 15735
+D1
+~
+~
+0 -1 15737
+S
+#15737
+Hawk's Roost~
+A @@gsheer cliff@@N drops away here, and the prevailing updrafts make it a favored launching point for the @@lridge-hunter hawks@@N that patrol the Ironpine Rise. @@GNest debris@@N, feathers, and whitewash mark the cliff's upper edge, and the hawks can often be seen riding the thermals in graceful spirals. The cliff face is studded with @@gstubbly shrubs@@N growing from cracks.
+~
+0 5
+D3
+~
+~
+0 -1 15736
+D2
+~
+~
+0 -1 15717
+D0
+~
+~
+0 -1 15757
+S
+#15738
+Ridge Viper Den~
+@@gSun-warmed boulders@@N create a sheltered microhabitat here where @@Rironpine rock vipers@@N coil in the gaps between stones. The snakes are well-camouflaged against the grey granite and @@Gdry lichen@@N, their presence betrayed only by a @@lfaint dry rustle@@N when they shift position. The den site is south-facing, catching the maximum amount of sun. @@gShed skins@@N curl in the deepest crevices.
+~
+0 5
+D1
+~
+~
+0 -1 15739
+D3
+~
+~
+0 -1 15737
+S
+#15739
+Eastern Rise, Upper Slope~
+The @@geastern slope@@N of the Ironpine Rise is steep and rocky here, the terrain challenging even for experienced climbers. @@GIronpines@@N grow at angles on the slope, their trunks curved toward the light in @@lsweeping arcs@@N. The ground is a mix of exposed bedrock and thin soil covered in loose needles that slide underfoot. The valley below is visible through breaks in the canopy, a @@ldistant green carpet@@N.
+~
+0 5
+D3
+~
+~
+0 -1 15738
+D2
+~
+~
+0 -1 15719
+S
+#15740
+Western Ridge, North Face~
+The @@gnorth face@@N of the western ridge descends steeply here through @@Gdark ironpines@@N that crowd the slope. The sun rarely reaches this north-facing hillside, and the ground is permanently damp, covered in @@lthick moss@@N that cushions every step. The air is noticeably colder here than on the southern slopes, and @@gbreath steams@@N even in mild weather.
+~
+0 3
+D1
+~
+~
+0 -1 15741
+D2
+~
+~
+0 -1 15720
+D0
+~
+~
+0 -1 15760
+S
+#15741
+Treant Grove~
+@@GEnormous ironpines@@N of incredible age stand in this grove, their trunks so wide and their bark so deeply furrowed that the trees seem to have @@gfaces@@N carved by centuries of weather. The grove has a primeval quality, untouched and undisturbed. @@lThe silence@@N is profound, broken only by the distant creak of massive branches shifting in the wind far above. @@gMoss@@N drapes from every branch in long curtains.
+~
+0 3
+D1
+~
+~
+0 -1 15742
+D3
+~
+~
+0 -1 15740
+S
+#15742
+Abandoned Watch Cairn~
+A @@gwatch cairn@@N stands here, similar to those still in active use but clearly @@labandoned@@N long ago. The stacked stones have shifted and settled, and @@Gvines@@N have wound through the gaps. The flat signal stone on top is cracked, and no soot marks suggest a fire has burned here in many years. The surrounding ironpines have grown in close, their branches reaching over the cairn as if reclaiming it.
+~
+0 3
+D1
+~
+~
+0 -1 15743
+D3
+~
+~
+0 -1 15741
+D2
+~
+~
+0 -1 15722
+D0
+~
+~
+0 -1 15762
+S
+#15743
+Ridge Trail, Narrow~
+The @@gridge trail@@N narrows dangerously here where the ridge itself pinches to a knife-edge of @@lbare rock@@N. The drop on both sides is significant, and the footing is uncertain on the @@bweathered granite@@N. @@GIronpines@@N cling to the ridge flanks on either side but do not reach the crest, leaving the passage exposed to wind and weather. This pinch point is a natural chokepoint for any traffic crossing the ridge.
+~
+0 5
+D1
+~
+~
+0 -1 15744
+D3
+~
+~
+0 -1 15742
+D2
+~
+~
+0 -1 15723
+D0
+~
+~
+0 -1 15763
+S
+#15744
+Ironpine Hollow~
+A @@gnatural hollow@@N in the ridge provides shelter from the wind, its bowl shape collecting @@Gfallen needles@@N to a deep, soft carpet. The hollow is ringed by @@lmassive ironpines@@N whose roots create a raised rim that keeps the hollow's floor relatively dry. The space is cozy and protected, clearly used by wildlife as a resting spot. @@gDeer prints@@N and flattened grass show where animals bed down.
+~
+0 3
+D1
+~
+~
+0 -1 15745
+D3
+~
+~
+0 -1 15743
+S
+#15745
+Ashfang Shrine~
+A @@gcrude shrine@@N occupies a small clearing here, its centerpiece a @@Rblackened skull@@N mounted on a pole above a fire circle of @@bash-stained stones@@N. The surrounding trees are painted with @@RAshfang clan marks@@N in ash and blood, and strips of tanned leather hung with bone charms dangle from the branches. The shrine has an oppressive atmosphere, the air heavy with old smoke and the @@lfaint smell of charred offerings@@N.
+~
+0 3
+D3
+~
+~
+0 -1 15744
+D2
+~
+~
+0 -1 15725
+D0
+~
+~
+0 -1 15765
+S
+#15746
+Deep Ironpine Stand~
+The @@Gironpines@@N here are among the oldest in the entire forest, their trunks reaching diameters that defy belief. The @@ldark bark@@N is so deeply furrowed that hands can be inserted into the cracks, and the wood is so dense that striking it produces a @@gmetallic ring@@N. The canopy is so high above that the scale feels wrong, as if the trees belong to a larger world. @@gThe forest floor@@N is bare and dark.
+~
+0 3
+D1
+~
+~
+0 -1 15747
+D3
+~
+~
+0 -1 15745
+D2
+~
+~
+0 -1 15726
+D0
+~
+~
+0 -1 15766
+S
+#15747
+Stone-Antler Territory Marker~
+A @@Wterritorial marker@@N of the stone-antler circle stands here: a @@gstacked cairn@@N topped with a pair of weathered antlers and hung with strips of hide bearing @@Rpainted warnings@@N. The marker defines the boundary of sacred megalith territory, and the stone-antler guards enforce this boundary with deadly seriousness. Beyond this point, trespassers proceed at their own risk.
+~
+4 3
+D1
+~
+~
+0 -1 15748
+D3
+~
+~
+0 -1 15746
+S
+#15748
+Inner Megalith Ring~
+The @@Winner ring@@N of the megalith site is reached here, a tighter circle of @@gtaller, more carefully shaped stones@@N within the outer ring. These stones are carved with deeper, more intricate patterns: @@lspiral labyrinths@@N, sun wheels, and figure groups that may represent the Cairn-Keepers' ancestor communion rites. The grass within this inner ring is @@Gpreternaturally green@@N, and the air has a @@lcold, electric quality@@N that raises the hair on the skin.
+~
+4 3
+D3
+~
+~
+0 -1 15747
+D2
+~
+~
+0 -1 15728
+D0
+~
+~
+0 -1 15768
+S
+#15749
+Eastern Rise, Ridge Crest~
+The @@geastern ridge@@N crests here at a narrow summit of @@lwindswept rock@@N and stunted ironpines. The view extends east over the forested valley below and west across the main body of the Ironpine Rise. @@GThe ironpines@@N at this elevation are gnarled and ancient, their shapes sculpted by decades of wind into dramatic forms. A @@gcold breeze@@N blows steadily from the north.
+~
+0 5
+D3
+~
+~
+0 -1 15748
+D2
+~
+~
+0 -1 15729
+D0
+~
+~
+0 -1 15769
+S
+#15750
+Lantern Road, Descent~
+The @@lLantern Road@@N begins its @@ggradual descent@@N from the ridge crest here, winding down the northern face of the Ironpine Rise toward the Ancestor Deeps beyond. The road surface is @@lwell-maintained gravel@@N, and the retaining walls switch to the uphill side as the road drops. @@GThe ironpines@@N on the north face are larger and darker than those on the south, receiving more rainfall and less sun.
+~
+0 3
+D0
+~
+~
+0 -1 15770
+D2
+~
+~
+0 -1 15730
+D1
+~
+~
+0 -1 15751
+S
+#15751
+Bent Mile Clearing~
+A @@gwide clearing@@N beside the Lantern Road marks the site of @@WIlren Voss's Bent Mile monument@@N. The clearing is maintained by wardens and kept free of undergrowth, its importance to the road's history recognized by both cities. @@GBenches of stacked stone@@N line the edges for resting travelers, and the @@llantern brackets@@N here are always kept lit. The clearing has a solemn, commemorative quality.
+~
+4 3
+D3
+~
+~
+0 -1 15750
+D1
+~
+~
+0 -1 15752
+S
+#15752
+Ilren's Bent Mile Marker~
+@@WA limestone obelisk@@N stands at the center of the road here, its surface @@ginscribed with the Bent Mile Principle@@N in both @@lMidgaard script@@N and northern knot-notation. This is @@WIlren Voss's monument@@N, marking the midpoint of the Lantern Road and honoring the quartermaster who built the road by bending it around flood, den, and sacred grove rather than forcing a straight line through living forest. The @@Gsplit-pine motif@@N, Voss's personal seal, crowns the obelisk. Fresh flowers and small offerings at the base show that travelers still pay their respects.
+~
+4 3
+D0
+~
+~
+0 -1 15772
+D3
+~
+~
+0 -1 15751
+D1
+~
+~
+0 -1 15753
+E
+obelisk monument bent mile~
+The limestone obelisk rises to roughly twice a person's height, its surface weathered but carefully maintained. The inscription reads: 'If a straight road costs ten lives a season, the wiser road is the one that bends around flood, den, and sacred grove.' Below the text, distances to both Midgaard and Kowloon are carved in matching numerals. The split-pine motif at the top is deeply incised and filled with dark resin that makes it visible from a distance.
+~
+S
+#15753
+Lantern Road, Eastward Swing~
+The @@lLantern Road@@N swings eastward here as it continues its @@gdescent from the ridge@@N, following a natural shelf in the hillside that provides level footing. The road passes through a corridor of @@Gmature ironpines@@N whose root systems have been carefully preserved by the road builders, the road bed routing around the largest roots rather than cutting through them. @@lWaystones@@N record the descent in measured intervals.
+~
+0 3
+D0
+~
+~
+0 -1 15773
+D3
+~
+~
+0 -1 15752
+D1
+~
+~
+0 -1 15754
+S
+#15754
+Ashfang Territory~
+The @@gforest@@N bears the unmistakable marks of @@RAshfang occupation@@N here: @@bash-painted symbols@@N on tree trunks, concealed snare lines across minor trails, and the acrid smell of old campfires. This is contested ground, deep enough in the rise that road patrols come infrequently, and the Ashfang warbands have established a degree of control. @@GThe ironpines@@N are scarred with territorial marks.
+~
+0 3
+D3
+~
+~
+0 -1 15753
+D2
+~
+~
+0 -1 15734
+D0
+~
+~
+0 -1 15774
+S
+#15755
+Shadow Lynx Territory~
+The @@gforest@@N is dim and quiet here, the ironpine canopy creating a @@lperpetual twilight@@N at ground level. This is prime territory for the shadow lynx, a medium-sized cat whose mottled coat blends perfectly with the dappled light. @@GTuft-eared tracks@@N mark the soft ground, and @@lscuff marks@@N on tree trunks show where the cats climb to survey their territory from above. The @@gsilence@@N is watchful rather than peaceful.
+~
+0 3
+D1
+~
+~
+0 -1 15756
+D3
+~
+~
+0 -1 15754
+S
+#15756
+Ironpine Trap-Door Hollow~
+A @@gsection of forest floor@@N here is riddled with the burrows of ironpine trap-door spiders, each hole concealed by a @@lcunning lid@@N of silk, pine needles, and bark that is nearly invisible until disturbed. The burrows are circular and deep, dropping straight down into silk-lined tubes. @@GScattered insect remains@@N around the holes show the spiders' preferred prey, though the larger species can take @@Rsmall mammals@@N.
+~
+1 3
+D3
+~
+~
+0 -1 15755
+D1
+~
+~
+0 -1 15757
+S
+#15757
+Ridge Spur~
+A @@gnarrow spur@@N of rock extends from the main ridge here, dropping away steeply on three sides. The spur's tip offers a @@ldramatic viewpoint@@N over the forested slopes below, and the wind at this exposed point is fierce. @@GHardy grasses@@N and low shrubs are the only vegetation that can survive on the spur itself, though ironpines crowd its base. @@gFalcon feathers@@N drift on the updrafts.
+~
+0 5
+D3
+~
+~
+0 -1 15756
+D2
+~
+~
+0 -1 15737
+S
+#15758
+Ridge Boar Wallow~
+A @@gmuddy depression@@N on the ridge shows signs of heavy use by @@Gtusked ridge boars@@N, the soil churned to muck by their rooting. The wallow is larger and muddier than the verge wallows to the south, reflecting the ridge boars' greater size and strength. @@RDeep tusk-gouges@@N score the bark of nearby trees, and @@bthick bristly fur@@N caught on thorns suggests animals of considerable bulk.
+~
+0 3
+D1
+~
+~
+0 -1 15759
+D3
+~
+~
+0 -1 15757
+S
+#15759
+Eastern Valley Head~
+A @@gvalley@@N opens eastward here between two ridge arms, its head a steep-walled cirque of @@lexposed granite@@N. A small @@lstream@@N emerges from the rock face at the valley head, the beginning of a waterway that flows east toward the lowlands. @@GIronpines@@N cling to the valley walls, their roots finding purchase in cracks. The valley head is sheltered and quiet, a natural amphitheater of stone and green.
+~
+0 5
+D3
+~
+~
+0 -1 15758
+D2
+~
+~
+0 -1 15739
+S
+#15760
+Ironpine North Face Hollow~
+A @@ghollowed depression@@N cuts into the north face of the ridge here, sheltered from wind by the steep slope above and the @@Gcrowding ironpines@@N on every side. The hollow's floor is thick with decomposing needles and @@lsmall pools of standing water@@N that reflect the meager light filtering through the canopy. Animal tracks crisscross the damp ground, converging on the water. The air is still and cold, carrying the sharp scent of pine resin.
+~
+0 3
+D1
+~
+~
+0 -1 15761
+D2
+~
+~
+0 -1 15740
+D0
+~
+~
+0 -1 15780
+S
+#15761
+Wolf Den Approach~
+The ground is @@gpocked with shallow digging@@N here, and @@Gscattered bones@@N and tufts of grey fur mark this as the outer approach to a @@gwolf den@@N. The ironpines grow close together, forcing any large creature to weave between the trunks. @@RClaw marks@@N score the bark at various heights, and the musky smell of wolf is strong. A low growl occasionally carries from somewhere deeper to the east.
+~
+0 3
+D1
+~
+~
+0 -1 15762
+D3
+~
+~
+0 -1 15760
+S
+#15762
+Wolf Pack Territory~
+This stretch of forest is @@Rheavily marked@@N as wolf territory, with scent posts on nearly every tree and @@gwell-worn trails@@N threading between the trunks. The wolves that hold this ground are larger and bolder than the southern verge packs, @@Gmountain-bred@@N and accustomed to hunting the ridge corridors. Bones of past kills lie scattered beneath the bracken, and a @@lflattened area@@N of packed earth suggests a communal resting ground.
+~
+0 3
+D1
+~
+~
+0 -1 15763
+D3
+~
+~
+0 -1 15761
+D2
+~
+~
+0 -1 15742
+S
+#15763
+Overgrown Planting Ring~
+One of the @@WEverkeeper planting-rings@@N occupies this clearing, its seven-pace circle of @@gstacked stones@@N nearly invisible beneath decades of @@Gmoss and fern growth@@N. The ironpines that were planted here have grown to considerable size, their roots splitting the ancient stones apart from below. A faint sense of sanctity lingers despite the neglect, and the clearing is unnaturally quiet. @@lBird calls@@N that fill the surrounding forest stop at the ring's edge.
+~
+0 3
+D1
+~
+~
+0 -1 15764
+D3
+~
+~
+0 -1 15762
+D2
+~
+~
+0 -1 15743
+S
+#15764
+Shattered Ridgetop~
+The ridge narrows to a @@gbroken spine@@N here, where some ancient geological upheaval shattered the granite into a field of @@ltilted slabs@@N and wedged boulders. @@GHardy ironpines@@N have rooted in the cracks between slabs, growing at odd angles with twisted trunks. The footing is treacherous, requiring careful navigation between loose stones. Wind funnels through the gaps with an eerie whistling sound.
+~
+0 5
+D1
+~
+~
+0 -1 15765
+D3
+~
+~
+0 -1 15763
+S
+#15765
+Ironpine Windbreak~
+A line of @@Gmassive ironpines@@N grows along the ridge crest here, their dense trunks forming a natural @@gwindbreak@@N that creates a calm pocket on the leeward side. The contrast is striking: fierce wind howls on the exposed side while the sheltered side is almost still, with @@lsettled leaf litter@@N and undisturbed spider webs between the lower branches. The windbreak extends east and west along the ridge.
+~
+0 3
+D1
+~
+~
+0 -1 15766
+D3
+~
+~
+0 -1 15764
+D2
+~
+~
+0 -1 15745
+S
+#15766
+Stone-Antler Boundary Marker~
+A @@gtall cairn@@N topped with a bleached @@Wstag antler@@N marks the boundary of @@gstone-antler circle territory@@N here. Beyond this point, the forest belongs to the descendants of the ancient Cairn-Keepers, and trespassers proceed at their own risk. The cairn stones are precisely fitted and maintained, unlike the crumbling structures elsewhere on the ridge. @@RFresh paint@@N on the antler suggests regular upkeep.
+~
+0 3
+D1
+~
+~
+0 -1 15767
+D3
+~
+~
+0 -1 15765
+D2
+~
+~
+0 -1 15746
+D0
+~
+~
+0 -1 15786
+S
+#15767
+Ridge Saddle~
+The @@gridge dips@@N into a natural saddle here, the ground leveling briefly between two higher points. The saddle is a natural corridor, channeling wind and wildlife and travelers alike through its narrow passage. @@GIronpines@@N frame the saddle on both sides, their branches meeting overhead to form a dark tunnel of green. @@lA thin stream@@N trickles through the lowest point of the saddle, fed by seepage from the higher ground.
+~
+0 4
+D1
+~
+~
+0 -1 15768
+D3
+~
+~
+0 -1 15766
+S
+#15768
+Wolverine Hollow~
+A @@gdark hollow@@N beneath an overhanging rock ledge shows signs of @@Rwolverine habitation@@N: deep scratching on the rock face, musky scent markings, and the scattered remains of prey animals dragged back to the shelter. The wolverine that claims this hollow is clearly a large and aggressive specimen. @@GFern growth@@N around the entrance is trampled flat by the animal's comings and goings. The hollow connects to the wider ridge through gaps in the surrounding rocks.
+~
+0 3
+D1
+~
+~
+0 -1 15769
+D3
+~
+~
+0 -1 15767
+D2
+~
+~
+0 -1 15748
+S
+#15769
+Hawk Nesting Cliffs~
+The ridge rises steeply to the east here, presenting a face of @@lexposed granite@@N pocked with ledges and shallow caves. @@GHawks@@N circle overhead in lazy spirals, riding the thermals that rise along the cliff face. Their nests are visible on the higher ledges, untidy platforms of sticks and dried grass. The ground below the cliffs is littered with @@gpellets and whitewash@@N, and the sharp cries of the hawks echo off the stone.
+~
+0 5
+D1
+~
+~
+0 -1 15770
+D3
+~
+~
+0 -1 15768
+D2
+~
+~
+0 -1 15749
+D0
+~
+~
+0 -1 15789
+S
+#15770
+Ironpine Cathedral~
+The @@Gironpines@@N reach their most impressive proportions here, growing so tall and straight that their canopy forms a vast @@gnatural cathedral@@N high above. The trunks are spaced like pillars, their bark nearly @@lblack with age@@N, and the ground between them is clean and open, carpeted only with a thin layer of brown needles. Shafts of light pierce the canopy at intervals, illuminating motes of dust and pollen. The silence and scale of the place inspire an involuntary reverence.
+~
+0 3
+D1
+~
+~
+0 -1 15771
+D3
+~
+~
+0 -1 15769
+D2
+~
+~
+0 -1 15750
+S
+#15771
+Warden Signal Post~
+A @@gwooden signal post@@N stands at this junction in the ridge trail, its @@lcolored flags@@N indicating safe passage conditions on the approaches in each direction. The post is maintained by the joint-commission wardens who patrol the upper Ironpine Rise, and a @@gsmall locked chest@@N at the base holds emergency supplies. The view from this elevated point extends across the treetops to the south, where the canopy ripples in green waves toward the distant lowlands.
+~
+4 4
+D1
+~
+~
+0 -1 15772
+D3
+~
+~
+0 -1 15770
+S
+#15772
+Road Approach, Ridge Crest~
+The trail from the ridge meets the @@lLantern Road@@N here at the top of the rise, where the road crests before beginning its descent into the northern valleys. @@GIronpines@@N line both sides of the road, their ancient trunks forming a dark corridor. @@gWaystones@@N mark the transition from the ridge section to the descent, and a carved marker indicates distances to the Bent Mile and the northern checkpoints. The air is thinner and colder at this elevation.
+~
+0 3
+D0
+~
+~
+0 -1 15792
+D1
+~
+~
+0 -1 15773
+D3
+~
+~
+0 -1 15771
+D2
+~
+~
+0 -1 15752
+S
+#15773
+Lantern Road, Ridge Descent~
+The @@lLantern Road@@N begins its descent from the @@gIronpine Rise@@N here, curving eastward as it follows the contour of the ridge down toward the lower forest. The road builders chose this line carefully, maintaining a gentle grade that laden pack animals can manage without risk of slipping on the @@Gneedle-covered surface@@N. @@gLantern posts@@N mark the outer edge of each switchback turn, their iron frames weathered but sound. To the west the road climbs toward the ridge crest, and to the east it continues its descent through dense ironpine stands. The road surface is well-maintained here, with fresh gravel packed into ruts from recent cart traffic.
+~
+0 3
+D1
+~
+~
+0 -1 15774
+D3
+~
+~
+0 -1 15772
+D2
+~
+~
+0 -1 15753
+S
+#15774
+Lantern Road, Ironpine Corridor~
+The @@lLantern Road@@N passes through a long straight corridor of @@Gironpines@@N here, one of the few places where the road runs true for any distance. The trees on both sides are ancient and enormous, their canopy meeting overhead to create a @@gdark green tunnel@@N that blocks most of the sky. @@lWaystones@@N at regular intervals mark the distance, and the road surface is packed hard by generations of traffic. Ashfang territorial marks are visible on trees to the south, a reminder that hostile elements operate disturbingly close to the road in this stretch. The corridor continues west and curves north ahead.
+~
+0 3
+D0
+~
+~
+0 -1 15794
+D3
+~
+~
+0 -1 15773
+D1
+~
+~
+0 -1 15775
+D2
+~
+~
+0 -1 15754
+S
+#15775
+Eastern Ridge Descent~
+The @@gridge descends@@N steadily eastward here, the ironpines thinning as the soil becomes rockier and less hospitable. @@lExposed granite@@N breaks through the thin topsoil in long bands, creating natural terraces that step down the hillside. The view east opens up between the sparser trees, revealing more forested ridges marching toward the horizon. @@GHardy shrubs@@N and mountain grasses fill the gaps between rock outcrops.
+~
+0 4
+D1
+~
+~
+0 -1 15776
+D3
+~
+~
+0 -1 15774
+S
+#15776
+Viper Boulder Field~
+A tumble of @@glichen-crusted boulders@@N fills a depression on the ridge slope here, their crevices and gaps providing ideal shelter for the @@Rironpine rock vipers@@N that hunt in this area. The boulders are warm in sunlight, and the snakes bask on their surfaces during the day before retreating into the gaps to ambush prey. @@GFern tufts@@N sprout between the rocks where enough soil has accumulated.
+~
+0 4
+D1
+~
+~
+0 -1 15777
+D3
+~
+~
+0 -1 15775
+S
+#15777
+Lynx Hunting Ground~
+The forest is @@Gdense and shadowed@@N here, the ironpine canopy so thick that the understory is reduced to scattered ferns and pale @@gmushrooms@@N. This is prime territory for the @@gironpine shadow lynx@@N, whose mottled fur blends perfectly with the dappled light. Claw-sharpening marks on several tree trunks confirm the predator's presence, and the @@labsence of smaller wildlife@@N suggests that everything in the area knows to avoid this ground.
+~
+0 3
+D1
+~
+~
+0 -1 15778
+D3
+~
+~
+0 -1 15776
+S
+#15778
+Ashfang Scout Camp~
+A concealed @@gcamp@@N is tucked into a fold in the ridge here, partially hidden by @@Gfallen ironpine branches@@N dragged into position as crude walls. The @@Rashfang scouts@@N who use this camp have left clear signs of recent occupation: a stone fire ring with fresh ash, stripped bark used as bedding, and scout markers scratched into nearby tree trunks. The camp commands a view of the road corridor to the west through a gap in the trees.
+~
+0 3
+D1
+~
+~
+0 -1 15779
+D3
+~
+~
+0 -1 15777
+S
+#15779
+Eastern Ridge Terminus~
+The ridge ends abruptly here at the edge of a steep @@ldrop-off@@N where the land falls away into a deep valley. The @@Glast ironpines@@N on the ridge cling to the edge, their roots exposed where erosion has undercut the lip. The view from the terminus is dramatic, looking out over the @@grolling canopy@@N of the lower forest stretching east and north. A cold wind rises from the valley below, carrying the scent of distant water.
+~
+0 5
+D3
+~
+~
+0 -1 15778
+S
+#15780
+Deep Ironpine Basin~
+The land drops into a @@gbroad basin@@N here, its floor carpeted in @@Gthick ferns@@N and ringed by ironpines whose roots form an interlocking wall at the basin's edges. The basin is sheltered from wind and unusually warm, a microclimate that supports growth not found elsewhere on the ridge. @@lFungal brackets@@N the size of plates grow on the lower trunks, and the air has a rich, earthy heaviness. The @@gdamp leaf litter@@N muffles every sound.
+~
+0 3
+D1
+~
+~
+0 -1 15781
+D2
+~
+~
+0 -1 15760
+S
+#15781
+Spider Root Hollow~
+@@GGnarled ironpine roots@@N have grown over and around a cluster of boulders here, creating a webwork of @@gdark hollows@@N and narrow passages. Thick silk webbing stretches between the root arches, glistening with moisture. The @@Rtrap-door spiders@@N that inhabit these hollows are patient hunters, and the scattered husks of their prey litter the ground beneath the webs. The air is still and carries a faintly sour smell.
+~
+0 3
+D1
+~
+~
+0 -1 15782
+D3
+~
+~
+0 -1 15780
+S
+#15782
+Deadfall Barrier~
+A massive @@gfallen ironpine@@N lies across the forest floor here, its root plate torn from the earth to expose a @@lwall of soil and stone@@N beneath. The fallen tree blocks easy passage to the south and east, creating a natural barrier that channels movement around it. @@GYoung saplings@@N are already growing in the light gap created by the fall, racing upward toward the sky. The trunk itself is slowly being consumed by bracket fungi and boring insects.
+~
+0 3
+D1
+~
+~
+0 -1 15783
+D3
+~
+~
+0 -1 15781
+S
+#15783
+Stone-Antler Watch Post~
+A crude @@gplatform@@N has been constructed in the branches of a broad ironpine here, accessible by @@lnotched log steps@@N lashed to the trunk. This is a @@gstone-antler circle watch post@@N, used to monitor the approaches to their sacred territories. Bone charms and antler fragments dangle from the platform's edge, clicking in the wind. The surrounding ground shows signs of regular foot traffic.
+~
+0 3
+D1
+~
+~
+0 -1 15784
+D3
+~
+~
+0 -1 15782
+D2
+~
+~
+0 -1 15763
+S
+#15784
+Ironpine Root Maze~
+The @@Groot systems@@N of several ancient ironpines have grown together here, creating a labyrinth of @@gharched root passages@@N above the forest floor. Some passages are tall enough to walk through upright; others require crawling. The root maze provides shelter and concealment, and the ground beneath the arches is dry and relatively warm. @@lPale fungi@@N line the undersides of the larger roots, providing a dim glow.
+~
+0 3
+D1
+~
+~
+0 -1 15785
+D3
+~
+~
+0 -1 15783
+S
+#15785
+Everkeeper Shrine Ruins~
+The @@gbroken walls@@N of what was once an @@WEverkeeper shrine@@N rise from the forest floor here, their dressed stone surfaces still showing traces of carved @@Gfloral patterns@@N. The shrine's roof collapsed long ago, and ironpines have grown up through the interior, but the altar stone remains intact, a flat slab of @@lwhite granite@@N that catches what little light reaches this deep. @@gOfferings of bark and seedlings@@N have been placed on the altar, suggesting someone still remembers.
+~
+0 3
+D1
+~
+~
+0 -1 15786
+D3
+~
+~
+0 -1 15784
+E
+altar shrine everkeeper~
+The altar stone is a rectangular slab of white granite, its surface worn smooth by centuries of hands and weather. Faint carvings are still visible along its edges: the seven-circle motif of the Everkeeper planting-ring, repeated in a continuous band. Fresh bark strips and tiny ironpine seedlings have been laid across it in a deliberate pattern.
+~
+S
+#15786
+Stone-Antler Territory, South Gate~
+Two @@gtall cairns@@N flank a narrow gap in the ridge here, marking the formal @@gsouthern entrance@@N to @@Wstone-antler circle territory@@N. The cairns are topped with bleached @@Wstag antlers@@N woven with colored cords that identify clan affiliations to those who can read them. The ground between the cairns is hard-packed from regular use, and @@Gthe ironpines@@N beyond the gate grow in deliberate rows, evidence of ancient planting.
+~
+0 3
+D1
+~
+~
+0 -1 15787
+D3
+~
+~
+0 -1 15785
+D2
+~
+~
+0 -1 15766
+S
+#15787
+Stone-Antler Patrol Path~
+A @@gwell-maintained trail@@N winds through deliberately planted @@Gironpines@@N here, their trunks spaced with an orderly regularity that contrasts with the wild growth elsewhere on the ridge. This is a @@gstone-antler patrol path@@N, kept clear of deadfall and undergrowth by the circle's guardians. @@lSmall cairn markers@@N at intervals indicate direction and distance to key sites within the territory.
+~
+0 3
+D1
+~
+~
+0 -1 15788
+D3
+~
+~
+0 -1 15786
+S
+#15788
+Megalith Approach, Outer Ring~
+The first of the @@gstanding stones@@N becomes visible here, a @@Wsingle megalith@@N rising above the ironpine canopy like a grey finger pointing at the sky. The stone is rough-hewn but clearly shaped by hands, and its surface bears @@gweathered carvings@@N of spirals and antler motifs. The forest around it has been kept clear in a wide circle, and the @@Gground is carpeted with undisturbed moss@@N.
+~
+0 3
+D1
+~
+~
+0 -1 15789
+D3
+~
+~
+0 -1 15787
+D0
+~
+~
+0 -1 15808
+S
+#15789
+Megalith Ring, Western Arc~
+Three @@Wstanding stones@@N are visible from this point on the western arc of the @@gmegalith ring@@N, their surfaces carved with interlocking patterns of spirals, antlers, and @@lstylized bird figures@@N. The stones are spaced at precise intervals, and the ground between them is bare earth kept free of vegetation by the stone-antler circle guardians. The air within the ring feels different, charged with a quiet intensity that raises the hairs on the neck.
+~
+4 3
+D1
+~
+~
+0 -1 15790
+D3
+~
+~
+0 -1 15788
+D2
+~
+~
+0 -1 15769
+S
+#15790
+Megalith Ring, Center~
+The @@Wcenter of the megalith ring@@N is dominated by a @@gflat altar stone@@N surrounded by the full circle of standing megaliths. Each stone bears carvings unique to it, and the altar's surface is @@lpolished smooth@@N by centuries of ritual use. The Cairn-Keeper descendants who maintain this site consider it the most sacred ground on the Ironpine Rise. @@gBone offerings@@N and antler crowns are arranged on the altar with deliberate care. The sky above the ring is perfectly framed by the surrounding stones.
+~
+4 3
+D1
+~
+~
+0 -1 15791
+D3
+~
+~
+0 -1 15789
+S
+#15791
+Megalith Ring, Eastern Arc~
+The eastern arc of the @@gmegalith ring@@N faces the @@lrising sun@@N, and the standing stones on this side are more deeply carved than those on the west, their surfaces bearing elaborate scenes of @@Ghunts, harvests, and celestial events@@N. Morning light strikes these carvings first, and the stone-antler circle holds that the eastern stones carry the most potent spiritual energy. The ground here is marked with @@gsmall ritual circles@@N scratched into the bare earth.
+~
+4 3
+D1
+~
+~
+0 -1 15792
+D3
+~
+~
+0 -1 15790
+S
+#15792
+Megalith Ring, Road Approach~
+The trail from the @@gmegalith ring@@N descends through planted ironpines to rejoin the @@lLantern Road@@N here. A @@gstone marker@@N at the junction warns travelers that the megalith ring to the west is sacred ground under stone-antler circle protection, and uninvited visitors may be met with force. The road itself is visible to the east, a familiar ribbon of packed earth running north through the trees.
+~
+0 3
+D1
+~
+~
+0 -1 15793
+D3
+~
+~
+0 -1 15791
+D2
+~
+~
+0 -1 15772
+S
+#15793
+Lantern Road, Northern Rise Bend~
+The @@lLantern Road@@N curves here around a @@gjutting rock outcrop@@N that the road builders chose to route around rather than blast through. The @@Gsplit-pine motif@@N is carved into the rock face, a testament to Ilren Voss's founding principle. Ironpines crowd both sides of the road, their branches forming a canopy that keeps the surface shaded and cool. A @@glamp post@@N stands at the outer edge of the curve.
+~
+0 3
+D1
+~
+~
+0 -1 15794
+D3
+~
+~
+0 -1 15792
+S
+#15794
+Ridge Pass Road~
+The @@lLantern Road@@N passes through a @@gnarrow cut@@N in the ridge here, where the rock walls rise on both sides to create a natural choke point. A @@gwooden barricade@@N has been built across the eastern approach, staffed by ridge patrol wardens who check manifests and inspect cargoes heading north. The @@Glantern-and-scale motif@@N is painted on the barricade's face, asserting the joint authority of both cities over this checkpoint. To the west the road curves around the ridge outcrop, and to the east the @@gridge pass barricade@@N opens onto the continuing road.
+~
+0 3
+D0
+~
+~
+0 -1 15814
+D3
+~
+~
+0 -1 15793
+D1
+~
+^ridge pass barricade~
+1 -1 15795
+E
+barricade ridge pass~
+The ridge pass barricade is a stout wooden construction braced against the rock walls on either side. Its timbers are ironpine, nearly as hard as the stone they brace against. The lantern-and-scale motif is painted prominently on the west-facing surface, and a manifest window allows wardens to inspect documents without opening the gate fully. When closed, the barricade blocks passage through the narrow cut.
+~
+S
+#15795
+Ridge Pass, Eastern Face~
+The eastern side of the @@gridge pass@@N opens onto a view of the @@lnorthern forest@@N stretching below, a vast and darkening @@Gcanopy@@N that extends to the horizon. The road descends from the pass through a series of switchbacks cut into the ridge's northern face. Behind to the west, the @@gridge pass barricade@@N controls access through the narrow cut. The air on this side of the pass is noticeably colder, carrying the scent of the deeper forest below.
+~
+0 4
+D3
+~
+^ridge pass barricade~
+1 -1 15794
+D1
+~
+~
+0 -1 15796
+E
+barricade ridge pass~
+From this side, the ridge pass barricade shows its reinforced structure: cross-braced ironpine timbers backed by stacked stone. A narrow guard platform behind the barricade allows wardens to observe approaching traffic before deciding whether to open the gate.
+~
+S
+#15796
+Northern Switchback, Upper~
+The @@lLantern Road@@N descends the northern face of the ridge in a tight @@gswitchback@@N here, the path doubling back on itself as it drops elevation. The switchback is buttressed with @@Gdry-stacked stone walls@@N that prevent the road edge from crumbling away. Ironpines grow right up to the road's edge, their roots helping anchor the soil. The view from the upper switchback looks out over the treetops of the lower forest.
+~
+0 4
+D1
+~
+~
+0 -1 15797
+D3
+~
+~
+0 -1 15795
+S
+#15797
+Ashfang Ambush Defile~
+A narrow @@gdefile@@N cuts through the ridge rock here, creating a perfect ambush point that the @@RAshfang warbands@@N have used repeatedly against road traffic. @@GScorch marks@@N on the rock walls and broken arrow shafts wedged in cracks testify to past attacks. The defile is too narrow for carts to pass each other, forcing caravans into single file. Warden patrols sweep this point frequently, but the Ashfang keep returning.
+~
+0 5
+D1
+~
+~
+0 -1 15798
+D3
+~
+~
+0 -1 15796
+S
+#15798
+Ashfang Rally Point~
+A concealed @@gcircular clearing@@N in the dense ridge forest serves as an @@RAshfang rally point@@N, where warbands gather before launching raids on the road. The clearing shows signs of heavy use: @@bmultiple fire pits@@N, weapons-sharpening grooves worn into flat rocks, and @@gash-painted war symbols@@N on surrounding trees. Crude shelters of bark and branches ring the clearing's edge. The camp is positioned to allow rapid deployment to the ambush defile to the west.
+~
+0 3
+D1
+~
+~
+0 -1 15799
+D3
+~
+~
+0 -1 15797
+S
+#15799
+Eastern Ridge Overlook~
+The ridge's eastern edge provides a @@gdramatic overlook@@N here, where the land drops away into a @@ldeep forested valley@@N. The last ironpines on the ridge crest are bent by prevailing winds, growing nearly horizontally away from the edge. On clear days, the view extends far enough to see the @@Gdark mass@@N of the deeper forest to the north, where the Ancestor Deeps begin. The overlook is exposed and windswept, with scant cover.
+~
+0 5
+D3
+~
+~
+0 -1 15798
+D0
+~
+~
+0 -1 15819
+S
