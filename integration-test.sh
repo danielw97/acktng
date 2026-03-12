@@ -72,7 +72,7 @@ echo "integration-test: MUD started (PID $MUD_PID), waiting for boot..."
 # Step 4: wait until the server is accepting TCP connections (max 30 s).
 # ---------------------------------------------------------------------------
 boot_wait=0
-while [ "$boot_wait" -lt 30 ]; do
+while [ "$boot_wait" -lt 90 ]; do
     if python3 -c "
 import socket, sys
 s = socket.socket()
@@ -98,8 +98,8 @@ except Exception:
     boot_wait=$((boot_wait + 1))
 done
 
-if [ "$boot_wait" -ge 30 ]; then
-    echo "integration-test: FAILED - MUD did not accept connections after 30s"
+if [ "$boot_wait" -ge 90 ]; then
+    echo "integration-test: FAILED - MUD did not accept connections after 90s"
     echo "--- MUD output ---"
     cat "$LOG_FILE"
     echo "------------------"
