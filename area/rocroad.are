@@ -527,6 +527,11 @@ The road continues west toward the @@WCrossroads@@N.
 ~
 ~
 0 -1 3229
+D2
+A @@pbranch road@@N leads south into the sun-baked @@pwastes@@N.
+~
+~
+0 -1 3262
 S
 #3229
 @@WRoc Road, Approach to the Crossroads@@N~
@@ -1139,8 +1144,8 @@ S
 The road enters a stretch of sun-baked wasteland where the ancient @@ppaving stones@@N are visible only as a faint depression in the cracked earth.  The air shimmers with heat, and there is no shade anywhere in sight.  @@pBroken fragments@@N of carved stone lie scattered beside the road — remnants of a civilization older than either Midgaard or Kiess, whose ruins dot the landscape ahead.  Dust devils spin across the flat terrain, carrying fine grit that stings exposed skin.
 ~
 0 10
-D1
-The road leads east toward @@Wgreener country@@N.
+D0
+The road leads north toward @@Wgreener country@@N.
 ~
 ~
 0 -1 3228
@@ -1631,6 +1636,11 @@ S
 The beach gives way to a stretch of @@asalt marsh@@N where tidal channels snake between hummocks of salt-tolerant grass.  The footing is treacherous, the ground soft and waterlogged beneath a thin crust of dried salt.  Crabs scuttle between the channels, and the air is heavy with the smell of decomposing seaweed.  The shore becomes rocky again to the west.
 ~
 0 10
+D0
+A @@Wcovered entrance@@N to an old @@bhotel@@N is visible to the north.
+~
+~
+0 -1 4449
 D1
 The @@abeach@@N stretches east.
 ~
