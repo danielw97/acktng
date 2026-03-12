@@ -205,8 +205,9 @@ Proposed additions focus on lore delivery and district function:
 4. **Supply Sergeant of the Reserve** (requisition chain quests)
 5. **Night Lamplighter-Captain** (patrol and city rumor delivery)
 6. **Temple Memorist** (names of dead, continuity-vs-reckoning arc)
-7. **Road Warden Liaison** (links to northern forest traffic)
-8. **Contract Notary of Granite Arcade** (trade/legal missions)
+7. **Road Warden Liaison** (links to northern forest traffic; delivers Kiessward dispatch intelligence and Lantern Road status)
+8. **Contract Notary of Granite Arcade** (trade/legal missions; custodian of the Granite Arcade trade ledger including the Conclave transfer entry)
+9. **Desert Relic Appraiser** (eastern trade authentication; delivers oasis-pyramid corridor lore and Measure Script misinterpretation hooks)
 
 ### Mob Spec Compliance and Placement Principles
 
@@ -246,8 +247,14 @@ Proposed additions focus on lore delivery and district function:
 1. **Civic documents:** stamped writs, tariff forms, sealed warrants, pardon requests.
 2. **Wayfinding assets:** district maps, milestone slates, lantern registry tags.
 3. **Ritual/ward items:** chalk sigils, ward tethers, reliquary tokens.
-4. **Memory artifacts:** memorial ribbons, ledger fragments, old oath medallions.
+4. **Memory artifacts:** memorial ribbons, ledger fragments, old oath medallions, Watchers' Cairn eye-motif fragments (connect to pre-founding mythology and Verdant Depths/Sepulchur Pasture parallels).
 5. **Boundary markers:** gate advisories tied to each external route.
+6. **Cross-area lore objects (key items to embed in archive/temple/market rooms):**
+   - Granite Arcade trade ledger page (the "forty iron bars and six condemned debtors" entry — Conclave smoking-gun document).
+   - Measure Script transliteration folio (technically accurate, functionally meaningless pyramid-era rubbings).
+   - Kiessward dispatch tablet (western frontier intelligence bulletin from Wall Command).
+   - Desert relic authentication certificate (Midgaard-stamped provenance document for oasis-sourced artifacts).
+   - Ilren Voss survey notes (Bent Mile Principle field observations from the legendary ranger).
 
 ### Object Spec Compliance
 
