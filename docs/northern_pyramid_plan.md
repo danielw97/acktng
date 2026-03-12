@@ -537,7 +537,7 @@ All trash: `act` = `is_npc(1) | aggressive(32) | stay_area(64)` = **97**
 | 10149 | a desert wight | 114 | Floor 2 | undead. 2_attack, enhanced, drain. |
 | 10150 | a stone scarab guardian | 117 | Floor 2, Floor 3 | no_mind. 3_attack, enhanced, parry. |
 | 10151 | a pyramid cobra | 111 | Floor 2 | Spec: spec_poison. 2_attack. |
-| 10152 | a mummified archer | 119 | Floor 3 | undead. 2_attack, enhanced, dodge. |
+| 10152 | a mummified archer | 119 | Floor 3 | undead. 2_attack, enhanced, dodge. Cast: chill_touch. Spec: spec_cast_undead. |
 | 10153 (mob) | a great desert vulture | 120 | Floor 3 | 2_attack, dodge, kick. |
 | 10154 (mob) | an ancient face guardian | 116 | Floor 3 | no_mind, sentinel. 2_attack, parry, nodisarm. |
 | 10155 (mob) | a desert shadow | 112 | Floor 3, Floor 4 | undead, no_body. Cast: mind_bolt, ego_whip. |
@@ -548,8 +548,8 @@ All trash: `act` = `is_npc(1) | aggressive(32) | stay_area(64)` = **97**
 | 10160 | a death hawk | 119 | Floor 4, Floor 5 | 2_attack, dodge, kick. |
 | 10161 | a sand revenant | 113 | Floor 4 | undead. 2_attack, enhanced, parry. Def: cure_critic. |
 | 10162 | a pyramid specter | 116 | Floor 5 | undead, no_body. Cast: mindflame, mind_bolt. Def: cure_critic. |
-| 10163 | a tomb fly swarm | 105 | Undercroft | Clouds of carrion flies. no_body, no_mind. 2_attack. Spec: spec_disease. |
-| 10164 | a desiccated desert rat | 105 | Undercroft, Ground | Dessicated undead vermin. no_mind. 2_attack, trip. Spec: spec_disease. |
+| 10163 | a tomb fly swarm | 105 | Undercroft | Clouds of carrion flies. no_body, no_mind. 2_attack. Spec: spec_poison. |
+| 10164 | a desiccated desert rat | 105 | Undercroft, Ground | Dessicated undead vermin. no_mind. 2_attack, trip. Spec: spec_poison. |
 | 10165 | a bone crawler | 107 | Undercroft | Animated skeletal mass. undead, no_mind. 3_attack, enhanced. |
 | 10166 | a sand-choked ghoul | 109 | Undercroft, Ground | Ghoul packed with sand. undead. 2_attack, enhanced, drain. |
 | 10167 | an animated obelisk shard | 112 | Ground | Fragment of a shattered obelisk come alive. no_mind, sentinel. 3_attack, enhanced, nodisarm. |
@@ -893,8 +893,8 @@ M 10155 spec_cast_undead    desert shadow
 M 10158 spec_poison         sacred golden cobra
 M 10159 spec_cast_mage      pyramid cultist
 M 10162 spec_cast_undead    pyramid specter
-M 10163 spec_disease        tomb fly swarm
-M 10164 spec_disease        desiccated desert rat
+M 10163 spec_poison         tomb fly swarm
+M 10164 spec_poison         desiccated desert rat
 M 10169 spec_poison         desert sand adder
 M 10172 spec_cast_undead    animated canopic jar
 M 10173 spec_cast_mage      scribal revenant
@@ -904,6 +904,8 @@ M 10185 spec_cast_mage      sandstorm elemental
 M 10187 spec_cast_undead    greater mummy overlord
 S
 ```
+
+**Spec compliance note:** `spec_disease` does not appear in the allowed `spec_fun_name` list in `area_file_spec.md` (section 10). Tomb fly swarm (10163) and desiccated desert rat (10164) were originally assigned `spec_disease` but have been corrected to `spec_poison`, which is the closest valid behavior for disease-vector mobs. The poison spec delivers a similar debilitation effect through the game's existing poison mechanics.
 
 ---
 
