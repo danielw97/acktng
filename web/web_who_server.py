@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import os
+import mimetypes
 from html import escape
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -19,6 +20,7 @@ WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
 TEMPLATE_DIR = WEB_DIR / "templates"
+IMG_DIR = WEB_DIR / "img"
 WORLD_TARGETS = [
     {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890},
     {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
@@ -48,6 +50,11 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
 
         if route in ("/",):
             self._send_html(_build_home_page(), title="ACKMUD Historical Archive")
+            return
+
+        if route.startswith("/img/"):
+            image_name = route[len("/img/") :]
+            self._send_static_image(image_name)
             return
 
         if route in ("/players", "/players/", "/who", "/who/"):
@@ -117,6 +124,20 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body_bytes)))
         self.end_headers()
         self.wfile.write(body_bytes)
+
+    def _send_static_image(self, image_name: str) -> None:
+        image_path = _safe_topic_path(IMG_DIR, image_name)
+        if image_path is None:
+            self.send_error(404, "Not Found")
+            return
+
+        image_bytes = image_path.read_bytes()
+        content_type, _ = mimetypes.guess_type(str(image_path))
+        self.send_response(200)
+        self.send_header("Content-Type", content_type or "application/octet-stream")
+        self.send_header("Content-Length", str(len(image_bytes)))
+        self.end_headers()
+        self.wfile.write(image_bytes)
 
     def log_message(self, fmt: str, *args: object) -> None:
         return
