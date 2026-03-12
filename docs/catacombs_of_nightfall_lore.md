@@ -15,11 +15,31 @@ The catacombs therefore inherited two incompatible worldviews:
 
 The long tragedy of Nightfall is the conversion of these doctrines from partnership to predation.
 
+### Geographic Position and Access
+
+The Catacombs of Nightfall lie beneath the southern chapel quarter of Midgaard, accessible from the city's civic core through the Ossuary Transport Court. This positions Nightfall at the intersection of Midgaard's two most sensitive institutional corridors: the Violet Reliquary Arch (which controls access to the Gloamvault of Kel'Shadra) and the Dungeon Intake Yard (which processes condemned persons). The proximity is not accidental. During the Violet Compact era, all three subterranean complexes were managed through a shared administrative apparatus: the same registry system that documented arcane materials entering the Gloamvault also catalogued remains entering Nightfall, and the same sealed warrants that authorized prisoner transfers to the Dungeon also authorized the reclassification of unclaimed bodies as "civic remainder."
+
+This geographic clustering means that Nightfall's corruption did not develop in isolation. It grew in a bureaucratic ecosystem where the institutional habits of containment, classification, and controlled secrecy were already normalized. The Violet Compact's principle of "containment over destruction" -- originally meant to protect dangerous knowledge -- became Nightfall's justification for retaining the dead rather than releasing them to family or forest claimants.
+
+### Institutional Parallels in the World
+
+Nightfall is not the only institution in the world that began with honorable intent and devolved into extractive self-preservation. The pattern recurs:
+
+- The **Gloamvault of Kel'Shadra** began as the Vault of Last Witness, where testimony and burial were bound together so that memory could not rot. Under Matriarch Velastra, it became a system where "Last Witness" was quietly replaced by "Last Authority." The Gloamvault's Bell Synod, Ash Scriptorium, and Reliquary Host mirror Nightfall's own registrar/warden/clergy caste structure with unsettling precision -- both institutions discovered independently that memory custody becomes power custody when oversight fails.
+
+- The **Spirebound Conclave** in the Cinderteeth Mountains began as a sanctioned academy tasked with preserving dangerous magical knowledge. When border wars severed supply lines, it reframed its charter from scholarly preservation into survival engineering, converting volunteers into experiments and then replacing volunteers with condemned prisoners transferred under sealed warrants. Midgaard's magistrates signed those warrants through the same Violet Compact registry apparatus that processed Nightfall's intake records.
+
+- **Kowloon's Black Ledger**, sealed in an undercity cistern, contains the original unredacted census of persons transferred to the Conclave from Kowloon's delta settlements. Both cities' Reckoning factions seek to expose these records; both cities' Continuity factions seek to keep them sealed. Nightfall's own sealed registries are a local instance of the same continental pattern of institutional guilt.
+
+The common thread is not evil intent but procedural drift: each institution built systems of classification, containment, and authority that outlived their original purpose and became self-sustaining engines of control. Nightfall's specific tragedy is that its raw material was not dangerous knowledge or arcane energy but grief itself.
+
 ---
 
 ## Founding Era: The Accord Beneath Stone
 
 In the generations after Midgaard's First Stone Accord, overland caravans and patrol companies repeatedly lost members in forest-border conflicts, winter ambushes, and creature incursions. Early burial practices were chaotic: bodies were burned without records, kin claims were disputed, and militia pay-chests were contested by rival captains.
+
+The First Stone Accord itself was not a constitution but a mutual-defense pact between three founding groups: the River Factors (grain merchants), the Upland Syndicate (ore and timber traders from the northern forest routes), and the Temple Compact (pilgrim-route chaplains who provided neutral arbitration). All three groups contributed dead to the frontier. When caravans returned from the Great Northern Forest with bodies instead of cargo, the question of what to do with the dead threatened to fracture the Accord itself. River Factor families accused Upland Syndicate captains of abandoning wounded men to save ore shipments. Temple Compact chaplains insisted that last rites required physical remains, not merely a marked cairn left somewhere in the forest. Upland Syndicate quartermasters demanded proof of death before releasing militia wages to widows, creating situations where families could not grieve until a bureaucratic audit confirmed their loss.
 
 To stabilize this, Midgaard magistrates and chapel authorities created the **Nightfall Registry Rite**:
 
@@ -28,35 +48,65 @@ To stabilize this, Midgaard magistrates and chapel authorities created the **Nig
 - their belongings would be tagged for claimant adjudication,
 - and their remains would be laid in processional crypts according to legal status.
 
-At this stage, Nightfall was grim but honorable. It was a machine built to prevent social collapse after violent frontier loss.
+The site chosen for the burial complex was a natural limestone shelf beneath the southern chapel quarter, where an older network of cisterns and drainage channels had been cut during Midgaard's earliest construction. The stone was soft enough to carve but dense enough to bear weight, and the natural drainage kept the lower chambers dry. Early builders noted that the limestone carried sound in unusual ways -- whispers traveled through the vault ceilings, and a bell struck in the intake hall could be heard three chambers away. The chapel architects treated this as a sign of sanctity. Later generations would discover it was merely geology, but by then the acoustic properties had been woven into ritual design: the bell cycle, the processional chants, and the choir recitations all exploited the limestone's resonance to create an atmosphere of solemn authority.
+
+The original Registry Rite was designed by **Magistrate Oren Halv**, a legal architect from Midgaard's earliest tribunal system. Halv was not a cleric or a mystic; he was a pragmatist who understood that social order required verifiable death records. His surviving protocols, carved into the intake hall walls, are precise and humane: the dead must be named before they are interred, witnesses must be recorded, belongings must be held for claimant review for no fewer than three market cycles, and remains must be accessible to family visits until the first anniversary of interment. These protocols would be cited by Nightfall administrators for generations as proof of institutional legitimacy -- even long after the protocols themselves had been gutted.
+
+At this stage, Nightfall was grim but honorable. It was a machine built to prevent social collapse after violent frontier loss. The Oath of Stone that Midgaard's magistrates still recite -- "No judgment hidden, no sentence unrecorded" -- was carved above the first intake gate. It remains there today, legible beneath soot and crypt dust, a monument to intentions that did not survive the institution they created.
 
 ---
 
 ## Forest Concord Era: The Split-Pine Compacts
 
-As Midgaard's northern roads pushed into the Great Northern Forest margins, city authorities negotiated passage and recovery rights with ranger bands, cairn-keepers, and oath circles tied to forest traditions. These agreements, later called the **Split-Pine Compacts**, required that:
+As Midgaard's northern roads pushed into the Great Northern Forest margins, city authorities negotiated passage and recovery rights with ranger bands, cairn-keepers, and oath circles tied to forest traditions. The Lantern Road -- Ilren Voss's negotiated route that bent around flood, den, and sacred grove rather than forcing a straight line through living forest -- brought Midgaard's civic machinery into direct contact with peoples who had mapped territory by stories, not borders, for generations before either Midgaard or Kowloon existed.
+
+Three groups in particular shaped the compact negotiations:
+
+- **The Cairn-Keepers** held the high ridges and maintained the megalith sites in what is now called the Ancestor Deeps. They practiced ancestor communion at standing stones, believing the honored dead could advise the living through patterns in birdsong, weather shifts, and deer herd behavior. Their burial custom placed the dead upright in stone niches facing north, toward what they called the Cold Throne -- a spiritual seat of final judgment. When Midgaard patrols began recovering Cairn-Keeper dead from ambush sites along the forest road, the question of who controlled burial became a treaty issue. The Cairn-Keepers did not dispute Midgaard's right to recover bodies; they disputed the city's right to process those bodies through a system that stripped the dead of their northward orientation, their clan cairn marks, and their relational identity.
+
+- **The Mire-Speakers** inhabited the fenlands of the Mosswater Bends, living on woven reed platforms. Their herbal knowledge informed preservation practices within Nightfall's reliquary -- techniques for treating bone with bog compounds to resist decay were quietly adopted by Nightfall archivists who never credited the source. Mire-Speaker negotiators demanded that water-rites for fen-drowned dead be performed before interment, a practice that Nightfall initially honored and later discontinued as "operationally inefficient."
+
+- **The Everkeepers** were a druidic order who tended the ironpine groves of the mid-forest. They believed the ironpines were pillars holding the sky above the earth, and their planting-rings -- seven-pace stone circles -- marked sacred growth sites. Everkeeper dead were traditionally buried within planting-rings, their bodies returned to the root cycle. The idea that a body might be kept indefinitely in stone, preserved against decay, was theologically offensive to the Everkeepers. Their representatives signed the compacts reluctantly and with explicit reservations about the duration of interment.
+
+These agreements, later called the **Split-Pine Compacts**, required that:
 
 - forest dead recovered by Midgaard patrols be recorded without title erasure,
 - cairn marks and clan symbols remain intact in burial halls,
 - pyre relics and memory tokens not be destroyed as contraband,
-- and spirit-disturbing rites be prohibited below the third bell.
+- spirit-disturbing rites be prohibited below the third bell,
+- northward-facing burial niches be maintained for Cairn-Keeper dead,
+- water-rites be performed for fen-recovered remains before interment,
+- and no body be retained longer than seven seasons without active family or clan claim.
 
-For a brief period, Nightfall held this balance. Some galleries carried Midgaard legal tablets beside green-stained forest oath stones. Choir chapels read both civic names and lineage epithets. The dead were treated as citizens, allies, and kin rather than interchangeable assets.
+The compacts were signed by **Ranger-Matron Ilse Thornwake**, a figure who appears in both Midgaard's Granite Arcade archives and forest oral tradition. Thornwake was neither a city diplomat nor a forest elder but a road-warden veteran who had spent decades mediating between caravan quartermasters and forest patrol captains. She understood that the compact would only hold if both sides believed the other was acting in good faith. Her personal seal -- a split pine with roots exposed -- became the symbol of the agreement and is still found stamped into the oldest burial records in Nightfall's register catacombs.
+
+For a brief period, Nightfall held this balance. Some galleries carried Midgaard legal tablets beside green-stained forest oath stones. Choir chapels read both civic names and lineage epithets. The dead were treated as citizens, allies, and kin rather than interchangeable assets. Nightfall wardens assigned to the Forest Dead Reliquary learned to recognize cairn marks from the major northern clans and could distinguish Cairn-Keeper burial orientation from Mire-Speaker water-rite preparation. A handful of forest-born wardens even served on Nightfall's staff during this era, providing translation services and ensuring compact compliance.
+
+This was the institution at its best: grim, careful, and respectful of the two traditions it served. The architecture of this period survives in the middle catacombs, where visitors can still find dual-tradition galleries with Midgaard legal tablets mounted on one wall and forest oath stones mounted opposite, each facing the other as equals across the corridor.
 
 ---
 
 ## Lantern Reform Influence: Bureaucracy Deepens
 
-Midgaard's Lantern Reforms introduced standardized roads, patrol schedules, district registries, and public posting systems. Nightfall absorbed these methods and expanded aggressively:
+Midgaard's Lantern Reforms introduced standardized roads, patrol schedules, district registries, and public posting systems. The reforms were Midgaard's answer to the growing chaos of a city that had outgrown ad hoc ward captains: standardized paving marks, posted tariffs, fixed public notice points, and rotating night patrol routes tied to lantern lines. The city became legible to strangers on purpose -- merchants needed predictable navigation, and magistrates needed predictable enforcement.
 
-- intake gates were formalized,
-- processional routes were segmented by status and cause of death,
-- reliquaries were indexed by district and campaign,
-- and wardens were stationed in dedicated bellcrypt barracks.
+Nightfall absorbed these methods and expanded aggressively:
 
-This made Nightfall efficient, and efficiency brought trust from magistrates, quartermasters, and caravan houses. The catacombs became the official memory-bank for deaths that occurred far from family witnesses.
+- intake gates were formalized with posted processing schedules and stamped entry permits,
+- processional routes were segmented by status and cause of death (militia dead in one corridor, civilian casualties in another, unidentified remains in a third),
+- reliquaries were indexed by district and campaign using the same notation system that Midgaard's Lantern Registry clerks applied to tariff records,
+- wardens were stationed in dedicated bellcrypt barracks with shift rotations mirroring the city's seven-watch cycle,
+- and a new position -- the **Precentor** -- was created to oversee the choir chapels and ensure that name recitations followed standardized liturgical order.
 
-But efficiency also shifted authority away from mourners and toward registrars. Families began receiving written verdicts instead of personal rites. Forest envoys complained that oath names were being translated into Midgaard legal forms that stripped their meaning.
+The key figure of this expansion was **Precentor Malreth Voss**, who may or may not have been a distant relative of Ilren Voss, the Lantern Road's original quartermaster. Malreth Voss applied the same logic to burial that Ilren had applied to road-building: efficiency saves lives, and standardization prevents disputes. Under his reforms, Nightfall could process the dead from a major caravan ambush -- sometimes thirty or forty bodies at once -- within a single bell cycle. Families received stamped notification writs within days instead of weeks. Quartermasters received certified death inventories that allowed wage settlements to proceed without months of litigation.
+
+This made Nightfall efficient, and efficiency brought trust from magistrates, quartermasters, and caravan houses. The catacombs became the official memory-bank for deaths that occurred far from family witnesses. Midgaard's Magistrate Ledgerhouse began routing all frontier death certifications through Nightfall. The Guard Command adopted Nightfall's intake forms as the standard template for battlefield casualty reporting. Even the Temple of the Resounding Heart -- which maintained its own memorial traditions -- acknowledged Nightfall's records as the definitive civic register of the dead.
+
+But efficiency also shifted authority away from mourners and toward registrars. Families began receiving written verdicts instead of personal rites. The three-market-cycle claimant review period that Magistrate Oren Halv had mandated in the founding protocols was quietly shortened to one cycle, then to a fixed number of days, then to a deadline that only applied if a claimant actively presented themselves at the intake gate. Forest envoys complained that oath names were being translated into Midgaard legal forms that stripped their meaning -- a Cairn-Keeper name that encoded clan lineage, deed history, and spiritual orientation was reduced to a single entry in a ledger column labeled "Foreign Identification."
+
+The Lantern Reform era also introduced a practice that would later prove devastating: the **indexed reliquary**. Under the old system, a dead person's belongings were stored with their remains. Under the new system, belongings were catalogued, tagged, and stored separately in indexed reliquary shelves, grouped by district of origin and cause of death. This was more space-efficient and allowed faster claimant processing, but it also meant that a body and its identity markers were no longer physically united. A registrar who wanted to reassign a body's identity -- or erase it -- needed only to refile the reliquary tags. The body itself, stripped of markers, became anonymous material.
+
+No one designed this vulnerability intentionally. It was a side effect of optimization. But it would become the administrative foundation on which the Sealed Names doctrine was built.
 
 ---
 
