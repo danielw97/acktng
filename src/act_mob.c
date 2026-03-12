@@ -874,108 +874,69 @@ void select_target(CHAR_DATA *ch)
    char buf[MAX_STRING_LENGTH];
    int force_index = 0;
    bool alone = TRUE;
-   bool mob_is_leader = FALSE;
    sh_int attempts;
 
    /*
-    * mobs were doing ethereal travel too much... i've now lowered it to
-    * * 15% of the time and only if they are not hunting
+    * keeps checking until you've found a valid target
     */
-
-   mob_is_leader = is_group_leader(ch);
-   if ((number_percent() < 15) && (ch->hunting == NULL) && (ch->in_room->vnum != ROOM_VNUM_ETHEREAL_PLANE))
-
-   /* was victim == NULL, that's always true at this point.. Zen */
-
+   attempts = 0;
+   while ((victim == NULL) && (attempts < 15))
    {
-      if (mob_is_leader == TRUE)
+      // ZEN FIX set average level based on level of ngroup
+      attempts++;
+      average_level = get_psuedo_level(ch);
+
+      force_index = number_range(1, 1200);
+      /* we currently have about 1300 mobs..this should get a random enough sample */
+
+      for (vch = first_char; vch != NULL; vch = vch->next)
       {
-         for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
+         if (victim != NULL)
+            break;
+         force_index--;
+         if (force_index > 0)
+            continue;
+
+         if (valid_target(ch, vch, average_level))
          {
-            if ((is_same_group(ch, vch)) == TRUE)
+            /*
+             * Trick used in  something else...
+             */
+            if (number_range(0, 1) == 0)
             {
-               if (vch->mana < mana_cost(vch, skill_lookup("ethereal travel")))
-               {
-                  return;
-               }
+               victim = vch;
             }
-         }
-      }
-      if (ch->mana < mana_cost(ch, skill_lookup("ethereal travel")))
-         return;
-
-      do_say(ch, "This place is boring! I am gonna go somewhere else!");
-      for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
-      {
-         if ((is_same_group(vch, ch)) && (ch != vch))
-         {
-            do_say(vch, "Yeah, it is--we're outta here!");
-            do_cast(vch, "ethereal");
-         }
-      }
-      do_cast(ch, "ethereal");
-   }
-   else
-   {
-      /*
-       * keeps checking until you've found a valid target
-       */
-      attempts = 0;
-      while ((victim == NULL) && (attempts < 15))
-      {
-         // ZEN FIX set average level based on level of ngroup
-         attempts++;
-         average_level = get_psuedo_level(ch);
-
-         force_index = number_range(1, 1200);
-         /* we currently have about 1300 mobs..this should get a random enough sample */
-
-         for (vch = first_char; vch != NULL; vch = vch->next)
-         {
-            if (victim != NULL)
-               break;
-            force_index--;
-            if (force_index > 0)
+            if (victim == NULL) /* screwed up somehow */
+            {
                continue;
-
-            if (valid_target(ch, vch, average_level))
+            }
+            if (!IS_NPC(victim))
             {
-               /*
-                * Trick used in  something else...
-                */
-               if (number_range(0, 1) == 0)
+               for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
                {
-                  victim = vch;
+                  if (is_same_group(ch, vch))
+                  {
+                     alone = FALSE;
+                     break;
+                  }
                }
-               if (victim == NULL) /* screwed up somehow */
+               if (alone == FALSE)
                {
-                  continue;
+                  sprintf(buf, "%s We're coming for you!", victim->name);
+                  do_tell(ch, buf);
                }
-               if (!IS_NPC(victim))
+               else
                {
-                  for (vch = ch->in_room->first_person; vch != NULL; vch = vch->next_in_room)
-                  {
-                     if (is_same_group(ch, vch))
-                     {
-                        alone = FALSE;
-                        break;
-                     }
-                  }
-                  if (alone == FALSE)
-                  {
-                     sprintf(buf, "%s We're coming for you!", victim->name);
-                     do_tell(ch, buf);
-                  }
-                  else
-                  {
-                     sprintf(buf, "%s I'm coming for you!", victim->name);
-                     do_tell(ch, buf);
-                  }
+                  sprintf(buf, "%s I'm coming for you!", victim->name);
+                  do_tell(ch, buf);
                }
             }
          }
       }
+   }
 
+   if (victim != NULL)
+   {
       if (set_hunt(ch, NULL, victim, NULL, HUNT_WORLD | HUNT_PICKDOOR | HUNT_CR, HUNT_MERC))
       {
          sprintf(buf, "Right!  %s is our new target!!", victim->short_descr);

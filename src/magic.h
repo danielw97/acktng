@@ -255,7 +255,6 @@ DECLARE_SPELL_FUN(spell_skeleton);            /* slot 607 */
 DECLARE_SPELL_FUN(spell_poison_weapon);       /* slot 608 */
 DECLARE_SPELL_FUN(spell_embrace);             /* slot 609 */
 DECLARE_SPELL_FUN(spell_mesmerise);           /* slot 610 */
-DECLARE_SPELL_FUN(spell_ethereal);            /* slot 611 */
 DECLARE_SPELL_FUN(spell_fireelem);            /* slot 612 */
 DECLARE_SPELL_FUN(spell_rune_fire);           /* slot 613 */
 DECLARE_SPELL_FUN(spell_rune_shock);          /* slot 614 */
