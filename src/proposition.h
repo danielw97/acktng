@@ -23,7 +23,7 @@
 
 /* Maximum simultaneous propositions on a player */
 #define PROP_MAX_PROPOSITIONS   3
-#define PROP_MAX_STATIC_PROPOSITIONS 16
+#define PROP_MAX_STATIC_PROPOSITIONS 48
 
 /* ------------------------------------------------------------------
  * Function prototypes
