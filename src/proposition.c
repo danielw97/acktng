@@ -231,6 +231,29 @@ static const STATIC_PROP_TEMPLATE *find_static_prop_template(int static_id)
     return NULL;
 }
 
+static int canonical_postmaster_vnum(int vnum)
+{
+    switch (vnum)
+    {
+    case 13021:
+        return 13001; /* legacy Kiess postmaster vnum */
+    case 14021:
+    case 0:
+        return 14001; /* legacy/placeholder Kowloon postmaster vnum */
+    default:
+        return vnum;
+    }
+}
+
+static bool static_prop_offered_by_postman(const STATIC_PROP_TEMPLATE *tpl, CHAR_DATA *postman)
+{
+    if (tpl == NULL || postman == NULL || postman->pIndexData == NULL)
+        return FALSE;
+
+    return canonical_postmaster_vnum(tpl->offerer_vnum)
+        == canonical_postmaster_vnum(postman->pIndexData->vnum);
+}
+
 
 #ifdef UNIT_TEST_PROPOSITION
 int proposition_unit_static_count(void)
@@ -260,6 +283,11 @@ int proposition_unit_static_max_level(int static_id)
 {
     const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
     return tpl != NULL ? tpl->max_level : -1;
+}
+
+int proposition_unit_canonical_postmaster_vnum(int vnum)
+{
+    return canonical_postmaster_vnum(vnum);
 }
 #endif
 
@@ -495,8 +523,7 @@ static void proposition_list_static(CHAR_DATA *ch, CHAR_DATA *postman)
         if (tpl->id >= 0 && tpl->id < PROP_MAX_STATIC_PROPOSITIONS &&
             ch->pcdata->completed_static_props[tpl->id])
             continue;
-        if (postman != NULL && postman->pIndexData != NULL &&
-            tpl->offerer_vnum != postman->pIndexData->vnum)
+        if (!static_prop_offered_by_postman(tpl, postman))
             continue;
         if (!static_prop_prerequisite_met(ch, tpl))
             continue;
@@ -549,8 +576,7 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
 
     tpl = &static_prop_table[list_number - 1];
 
-    if (postman == NULL || postman->pIndexData == NULL ||
-        tpl->offerer_vnum != postman->pIndexData->vnum)
+    if (!static_prop_offered_by_postman(tpl, postman))
     {
         send_to_char("That postmaster does not offer that static proposition.\n\r", ch);
         return;
