@@ -1,0 +1,1571 @@
+#AREA
+@@GThe @@lGreat @@gNorthern @@rForest@@N~
+Q 16
+K greatnorthernforest~
+L @@W(@@r1 170@@W)@@N~
+N 1500
+I 1 170
+V 15500 15999
+X 0
+F 15
+U @@gmist settles between the old pines as the Great Northern Forest stirs@@N~
+O Virant~
+R all~
+W all~
+#ROOMS
+#15500
+Tangled Verge Thicket~
+@@GThick undergrowth@@N closes in on all sides here, where @@gthorn bushes@@N and young saplings compete for the thin shafts of sunlight that pierce the canopy above. The soil is dark and loamy, churned by the hooves of deer and the rooting of wild boar. @@gFallen branches@@N lie half-buried in leaf litter, and a faint @@lgame trail@@N threads eastward through the bracken toward what sounds like a road.
+~
+0 3
+D1
+~
+~
+0 -1 15501
+S
+#15501
+Mossy Verge Trail~
+A @@gnarrow trail@@N winds through a stand of young oaks draped in pale @@Glichen@@N. The ground is soft underfoot, cushioned by seasons of fallen leaves that have compressed into a spongy carpet. To the west, the trail disappears into dense thicket, while to the east it opens onto the @@lbroad packed earth@@N of a well-traveled road. Birdsong fills the canopy above, and the air carries the scent of damp bark.
+~
+0 3
+D1
+~
+~
+0 -1 15502
+D3
+~
+~
+0 -1 15500
+S
+#15502
+Verge Clearing~
+@@lSunlight@@N breaks through the canopy into a small natural clearing where the undergrowth has been trampled flat by passing wildlife. A ring of @@Gyoung birch trees@@N marks the perimeter, their white bark bright against the darker forest behind them. The clearing offers good visibility in most directions, and @@gold campfire stones@@N suggest travelers have rested here before. The road lies to the east and forest trails lead in several directions.
+~
+0 3
+D1
+~
+~
+0 -1 15503
+D3
+~
+~
+0 -1 15501
+D0
+~
+~
+0 -1 15522
+S
+#15503
+Southern Verge Path~
+@@GOak and ash trees@@N line this earthen path, their branches interlocking overhead to form a @@ggreen tunnel@@N that filters the daylight into a soft emerald glow. The path is wide enough for two abreast but shows signs of recent animal traffic: @@Gclawed tracks@@N in the mud and tufts of grey fur caught on low thorns. A @@lfaint breeze@@N carries the scent of pine from the north.
+~
+0 3
+D1
+~
+~
+0 -1 15504
+D3
+~
+~
+0 -1 15502
+D0
+~
+~
+0 -1 15523
+S
+#15504
+Hunter's Blind~
+Someone has built a crude @@ghunting blind@@N here from stacked deadfall and woven branches, creating a low shelter overlooking a natural @@ldepression@@N where rainwater collects. Animal tracks converge on the shallow pool from multiple directions. The blind itself is old but maintained, with @@Gfresh-cut branches@@N woven into the frame and a worn leather strap hanging from one post. The trail continues east and west through the southern verge.
+~
+0 3
+D1
+~
+~
+0 -1 15505
+D3
+~
+~
+0 -1 15503
+S
+#15505
+Boar Wallow~
+The forest floor drops into a @@gmuddy depression@@N here, churned and rooted by generations of wild boar. Thick @@Gferns@@N crowd the edges of the wallow, their fronds torn and trampled where the animals push through. The mud is dark and pungent, and @@Rfresh tracks@@N of varying sizes suggest a sounder still frequents this spot. The trees above are scratched and scarred at shoulder height from boar rubbing.
+~
+0 3
+D1
+~
+~
+0 -1 15506
+D3
+~
+~
+0 -1 15504
+D0
+~
+~
+0 -1 15525
+S
+#15506
+Spider Hollow~
+Ancient @@goaks@@N grow close together here, their gnarled roots creating dark hollows and sheltered spaces beneath raised root-balls. @@gThick webs@@N stretch between the trunks at head height, their strands catching the light with an oily sheen. The air is still and heavy, and the forest floor is unusually bare of leaf litter, as if something has cleared the space beneath the canopy. A @@lfaint clicking@@N echoes from the shadows.
+~
+1 3
+D1
+~
+~
+0 -1 15507
+D3
+~
+~
+0 -1 15505
+S
+#15507
+Copperhead Den~
+@@gBoulders@@N jut from the forest floor here, their surfaces covered in @@Gdry moss@@N and lichen. The rocks create a maze of narrow gaps and sun-warmed ledges that are ideal basking spots for serpents. The ground between the stones is @@bsandy@@N and loose, and @@Rshed skins@@N curl in the crevices like parchment scrolls. The air is warm and dry compared to the surrounding forest.
+~
+0 3
+D3
+~
+~
+0 -1 15506
+D0
+~
+~
+0 -1 15527
+S
+#15508
+Wolf Run~
+A @@gwide game trail@@N cuts through dense pine here, the ground packed hard by countless paws. Claw marks score the bark of @@Gborder trees@@N at regular intervals, and the sharp musk of wolf territory hangs in the air. The trail follows a natural drainage that channels rainwater during storms, leaving the path @@lbare and clean@@N between uses. @@GDark pines@@N press close on either side.
+~
+0 3
+D1
+~
+~
+0 -1 15509
+D3
+~
+~
+0 -1 15507
+D0
+~
+~
+0 -1 15528
+S
+#15509
+Bandit Hollow~
+A @@gfallen oak@@N has created a natural shelter here, its massive trunk bridging a shallow ravine to form a crude roof over the space below. @@Rscattered debris@@N, old fire-ash, and the remains of stripped packs suggest this hollow serves as an ambush camp for those who prey on road travelers. The approach from the road is obscured by dense hazel, while a @@lnarrow escape route@@N drops down the ravine to the south.
+~
+0 3
+D3
+~
+~
+0 -1 15508
+D2
+~
+~
+0 -1 15529
+S
+#15510
+Deer Glade~
+A @@lpatch of sunlight@@N falls through a gap in the canopy onto a gentle slope of @@Gclover and wild grass@@N. This natural glade draws deer from the surrounding forest, and the ground is patterned with their delicate hoofprints. A @@glichen-covered log@@N lies across one edge of the clearing, and small wildflowers grow in its lee. The air is sweet with the scent of crushed grass and clover.
+~
+0 3
+D1
+~
+~
+0 -1 15511
+D0
+~
+~
+0 -1 15530
+S
+#15511
+Lantern Road, Southern Approach~
+The @@lLantern Road@@N begins its long northward journey here, the packed earth wide enough for a loaded cart and bordered by @@gweathered waystones@@N at regular intervals. Each waystone bears a @@lsmall iron lantern bracket@@N, some still holding the stubs of old tallow candles. The road surface is well-maintained, with drainage ditches cut along both sides and gravel packed into the worst ruts. To the west, a @@Gdeer glade@@N opens off the road. To the south, the road continues toward a fortified gate.
+~
+0 3
+D2
+~
+~
+0 -1 15512
+D3
+~
+~
+0 -1 15510
+D0
+~
+~
+0 -1 15531
+S
+#15512
+South Lantern Gate~
+@@WTwin iron-banded lamp posts@@N flank the @@lLantern Road@@N here, their bases carved with @@gMidgaard runes@@N and the @@Gsplit-pine motif@@N of Ilren Voss. This is the formal boundary where Midgaard's cleared approaches end and the @@Gforest canopy@@N begins, arching overhead like the roof of a green cathedral. A @@gstone arch@@N spans the road between the posts, its keystone engraved with the words of the Passage Tithe in both Midgaard script and northern knot-notation. The road stretches north into the forest's green depths, while to the south it leads back toward the @@lcity@@N. A @@gnotice board@@N is mounted on the eastern lamp post, covered in ranger writs and guild contract postings.
+~
+4 3
+D0
+~
+~
+0 -1 15511
+D2
+~
+^south lantern gate~
+1 -1 3009
+D1
+~
+~
+0 -1 15513
+E
+notice board~
+The notice board is thick with overlapping parchments pinned by iron tacks. Ranger writs from the Granite Arcade list current road conditions, escort rates, and warnings about wolf packs near the southern verge. A Woodwrights Guild posting advertises seasonal timber survey positions, and several smudged bounty notices offer coin for bandit pelts.
+~
+S
+#15513
+Road Warden's Post~
+A @@gsmall wooden shelter@@N stands beside the road here, its roof thatched with pine boughs and its walls open on the road-facing side. A @@lfire ring@@N of blackened stones sits before it, and a @@Grack of signal torches@@N leans against one post. This is a warden's watch station, positioned to monitor traffic entering and leaving through the South Lantern Gate. A @@gchalkboard@@N nailed to the shelter post lists patrol schedules in careful handwriting.
+~
+4 3
+D3
+~
+~
+0 -1 15512
+D1
+~
+~
+0 -1 15514
+D0
+~
+~
+0 -1 15533
+S
+#15514
+Timber Survey Marker~
+A @@GWoodwrights Guild survey marker@@N stands here, a stout oak post driven into the ground and capped with the Guild's @@rgreen chalk seal@@N. The surrounding trees have been assessed and tagged with small brass plates indicating their species, age estimate, and harvest status. Most are marked with a single vertical line meaning protected, though a few bear the crossed-lines that permit seasonal cutting. The forest is relatively open here, the undergrowth cleared by road wardens for visibility.
+~
+0 3
+D3
+~
+~
+0 -1 15513
+D1
+~
+~
+0 -1 15515
+D0
+~
+~
+0 -1 15534
+S
+#15515
+Verge Trapper's Camp~
+A @@gsmall camp@@N occupies a sheltered spot beneath a spreading cedar. A rack of @@bstretched hides@@N stands beside a cold fire pit, and @@Gbundles of dried herbs@@N hang from the lowest branches. The trapper who works this patch has left snare-line markers along the surrounding trails, thin @@lcord tied to saplings@@N at knee height. The camp is neat and well-organized, with tools hanging from pegs driven into the cedar's trunk.
+~
+0 3
+D3
+~
+~
+0 -1 15514
+D0
+~
+~
+0 -1 15535
+S
+#15516
+Fox Undergrowth~
+@@GDense bracken@@N and low-growing holly create a tangled maze of narrow passages close to the ground. This is prime territory for foxes and other small predators, with @@Rmultiple burrow entrances@@N visible among the root systems of nearby trees. The soil is @@gsandy and light@@N here, easy to dig, and the undergrowth provides excellent cover from larger predators above. Faint @@lrusset fur@@N clings to the thorns at several passage points.
+~
+0 3
+D1
+~
+~
+0 -1 15517
+D0
+~
+~
+0 -1 15536
+S
+#15517
+Badger Set~
+The forest floor is torn up here around a @@glarge burrow entrance@@N dug into a slight rise. The excavated earth forms a wide apron of pale @@bcite clay@@N and gravel before the hole, marked with deep claw tracks and scattered with old bones and beetle casings. The burrow entrance is broad enough to admit a large animal, and @@Gfresh digging@@N around the edges shows it is actively maintained. The air carries a sharp, musky scent.
+~
+0 3
+D3
+~
+~
+0 -1 15516
+D0
+~
+~
+0 -1 15537
+S
+#15518
+Owl Roost~
+@@GTall pines@@N dominate this stretch of forest, their straight trunks rising like pillars into a high canopy that blocks most of the sky. @@gPellets@@N of compressed fur and bone litter the ground beneath one particularly large tree, and deep @@ltalon scars@@N mark its bark where a great bird perches nightly. The undergrowth is sparse here, suppressed by the heavy needle-fall, and the forest floor is a soft carpet of brown needles.
+~
+0 3
+D1
+~
+~
+0 -1 15519
+D3
+~
+~
+0 -1 15517
+S
+#15519
+Eastern Verge Edge~
+The forest thins slightly here along an @@gancient drainage@@N that has carved a shallow channel through the verge. @@lWater trickles@@N along the bottom during wet seasons, but now the channel is dry and filled with @@bdead leaves@@N. The eastern edge of the area's tree cover is visible through gaps in the canopy, where open sky meets the wall of green. @@GYoung alders@@N crowd the channel banks, their roots exposed by seasonal flooding.
+~
+0 3
+D3
+~
+~
+0 -1 15518
+D0
+~
+~
+0 -1 15539
+S
+#15520
+Verge Hollow~
+A shallow @@ghollowed depression@@N lies between the roots of a massive fallen pine. The trunk itself is slowly returning to the earth, covered in @@Gbright moss@@N and sprouting shelf mushrooms along its length. Small animals have burrowed into the rotting heartwood, and @@lchittering sounds@@N echo from inside when anything approaches. The hollow provides decent shelter from wind and rain.
+~
+0 3
+D1
+~
+~
+0 -1 15521
+D2
+~
+~
+0 -1 15500
+S
+#15521
+Pine Break~
+The dense forest opens slightly here where a @@lstorm@@N felled several large pines years ago. The fallen trunks have been colonized by @@Gmoss and ferns@@N, creating a raised walkway of sorts above the damp forest floor. @@gStumps@@N stand like sentinels around the break, their cut surfaces silver with age. New growth is already filling the gap, with saplings racing upward toward the light.
+~
+0 3
+D1
+~
+~
+0 -1 15522
+D3
+~
+~
+0 -1 15520
+S
+#15522
+Western Verge Fringe~
+@@GOld broadleaf trees@@N give way to younger growth here along the western fringe of the southern verge. The canopy is patchy, letting @@ldappled sunlight@@N reach the forest floor and encouraging thick undergrowth. A @@gnarrow animal trail@@N leads south toward a clearing, while the forest continues in other directions. The western trees show signs of @@bwind damage@@N from storms that sweep across the open ground beyond.
+~
+0 3
+D1
+~
+~
+0 -1 15523
+D2
+~
+~
+0 -1 15502
+S
+#15523
+Mushroom Ring~
+A perfect circle of @@Gpale toadstools@@N grows in the leaf litter here, each cap the size of a dinner plate. The ring is ancient, the mycelium network beneath having spread through decades of undisturbed forest floor. @@gLocal superstition@@N holds that sleeping within such a ring invites strange dreams. The surrounding trees are @@lhung with catkins@@N in season, and the air smells faintly of earth and decay.
+~
+0 3
+D1
+~
+~
+0 -1 15524
+D2
+~
+~
+0 -1 15503
+D0
+~
+~
+0 -1 15543
+S
+#15524
+Wild Herb Patch~
+@@GSeveral varieties of wild herbs@@N grow in profusion here, their aromatic leaves bruised by passing animals and releasing a complex scent of mint, thyme, and something sharper. A @@gknowledgeable herbalist@@N has marked certain plants with small stakes and twine, indicating cultivation or at least regular harvesting. The soil is rich and dark, enriched by the @@brotting leaves@@N of a nearby stand of maple.
+~
+0 3
+D1
+~
+~
+0 -1 15525
+D3
+~
+~
+0 -1 15523
+S
+#15525
+Boar Trail~
+@@GDeep ruts@@N and torn undergrowth mark a well-used @@gboar trail@@N that cuts through the forest at an angle. The animals have pushed through here so often that the vegetation has given up trying to reclaim the path, leaving bare earth flanked by walls of @@Rtrampled fern@@N. Mud wallows dot the trail at low points, and the sharp smell of boar musk hangs in the still air.
+~
+0 3
+D1
+~
+~
+0 -1 15526
+D3
+~
+~
+0 -1 15524
+D2
+~
+~
+0 -1 15505
+S
+#15526
+Thornbrake~
+@@RDense thorns@@N close in from all sides here, a natural barrier of blackthorn and wild rose that tears at clothing and skin. The passage through is barely wide enough for a single person, and @@Gdropped feathers@@N and tufts of fur show that even animals struggle with the crossing. Beyond the thorns, the forest opens up, but getting there requires careful navigation through the @@gscraping branches@@N.
+~
+0 3
+D1
+~
+~
+0 -1 15527
+D3
+~
+~
+0 -1 15525
+S
+#15527
+Rocky Outcrop~
+A @@glow ridge of exposed stone@@N breaks through the forest floor here, its surface worn smooth by weather and covered in patches of @@Gyellow lichen@@N. The outcrop creates a natural vantage point, offering a slightly elevated view of the surrounding woodland. @@lSmall pools@@N of rainwater collect in depressions on the rock surface, and @@gsun-warmed ledges@@N provide basking spots for the snakes that inhabit this area.
+~
+0 3
+D3
+~
+~
+0 -1 15526
+D2
+~
+~
+0 -1 15507
+S
+#15528
+Wolf Territory, Southern Edge~
+The character of the forest changes here. Trees are @@gspaced wider@@N, the undergrowth cropped short by regular patrol traffic. @@GClaw marks@@N score the bark of boundary trees at consistent height, and the ground shows the overlapping prints of many wolves. This is the southern edge of an active pack territory, and the @@Rsharp scent of marking@@N is impossible to miss. The @@lpacked trails@@N between trees are worn smooth.
+~
+0 3
+D1
+~
+~
+0 -1 15529
+D2
+~
+~
+0 -1 15508
+D0
+~
+~
+0 -1 15548
+S
+#15529
+Ravine Edge~
+The forest floor drops away sharply here into a @@gnarrow ravine@@N cut by seasonal water flow. The far side is only a stone's throw away, but the drop is steep enough to be dangerous. @@GExposed roots@@N dangle from the cut earth of the near edge, and @@ltrickling water@@N can be heard at the bottom during wet weather. The ravine runs roughly east-west, creating a natural barrier in the forest.
+~
+0 3
+D3
+~
+~
+0 -1 15528
+D0
+~
+~
+0 -1 15549
+D2
+~
+~
+0 -1 15509
+S
+#15530
+Lantern Road, First Bend~
+The @@lLantern Road@@N makes its first deliberate turn here, bending from its initial westward run to head northward into deeper forest. A @@gweathered waystone@@N marks the bend, its face carved with a directional arrow and the distance to the next waystation. The road surface is well-packed and graded, with @@Gdrainage gutters@@N cut into the verge on the downhill side. @@lIron lantern brackets@@N stand at both approaches to the bend.
+~
+0 3
+D0
+~
+~
+0 -1 15550
+D1
+~
+~
+0 -1 15531
+S
+#15531
+Lantern Road, Southern Straight~
+The @@lLantern Road@@N runs straight here between rows of @@Gmature oaks@@N whose canopy meets overhead in a living arch. Waystone markers line the route at regular intervals, their carved faces showing distances to both the South Lantern Gate and the next road bend. The surface is firm and well-drained, showing the careful maintenance of generations of road wardens. @@gRut marks@@N from cart wheels trace parallel lines in the packed earth.
+~
+0 3
+D2
+~
+~
+0 -1 15511
+D3
+~
+~
+0 -1 15530
+D1
+~
+~
+0 -1 15532
+S
+#15532
+Road Warden's Clearing~
+A @@gcleared space@@N beside the Lantern Road serves as a rest stop and patrol staging area. A @@lstone fire ring@@N occupies the center, its interior blackened by countless signal fires. @@GStacked firewood@@N sits under a lean-to shelter, kept dry for emergency use. Carved into a flat stone near the ring is the @@Wsplit-pine motif@@N of Ilren Voss, a reminder that even rest stops are part of the road's negotiated passage through living forest.
+~
+4 3
+D3
+~
+~
+0 -1 15531
+D1
+~
+~
+0 -1 15533
+D0
+~
+~
+0 -1 15552
+S
+#15533
+Road Shoulder, East~
+The @@lLantern Road@@N passes just to the west here, and this shoulder area shows signs of frequent use by travelers stepping off the main path. @@GFlattened grass@@N and scattered @@gfire ash@@N mark informal camp spots, though no permanent structures stand here. The forest presses close on the eastern side, and the contrast between the maintained road corridor and the wild verge is sharp.
+~
+0 3
+D3
+~
+~
+0 -1 15532
+D2
+~
+~
+0 -1 15513
+S
+#15534
+Survey Line, East~
+@@GMarker stakes@@N with the Woodwrights Guild seal extend in a line through the trees here, defining the eastern boundary of the approved timber survey zone. Beyond this line, trees are considered protected under the forest charter. The stakes are painted @@rgreen@@N at the top and driven deep enough to resist casual removal. The forest on both sides of the line looks identical, but the political boundary is absolute.
+~
+0 3
+D3
+~
+~
+0 -1 15533
+D2
+~
+~
+0 -1 15514
+D0
+~
+~
+0 -1 15554
+S
+#15535
+Cedar Stand~
+@@GTall cedars@@N grow in a dense cluster here, their aromatic wood filling the air with a sharp, clean scent. The trees are old enough that their lower branches have died and fallen away, leaving clear space beneath a high canopy of @@gfeathery foliage@@N. The ground is covered in a thick layer of @@bred bark shreds@@N and fallen scales. The cedars' natural oils discourage most insects, making this a comfortable spot.
+~
+0 3
+D3
+~
+~
+0 -1 15534
+D2
+~
+~
+0 -1 15515
+D0
+~
+~
+0 -1 15555
+S
+#15536
+Bramble Maze~
+@@RBlackberry brambles@@N have colonized a wide swath of forest here, creating an almost impenetrable wall of thorny canes. A few @@gnarrow gaps@@N allow passage, but the routes shift as the brambles grow and die back seasonally. @@GPurple-stained droppings@@N on nearby stones show that birds and foxes feast here when the berries ripen. The bramble wall effectively blocks casual movement north-south.
+~
+0 3
+D1
+~
+~
+0 -1 15537
+D2
+~
+~
+0 -1 15516
+S
+#15537
+Deadfall Tangle~
+A @@gwindstorm@@N has toppled several trees here, creating a chaotic tangle of trunks, branches, and torn root-plates. The fallen timber has been colonized by @@Gmoss and shelf fungi@@N, and the gaps between trunks form dark @@lcave-like spaces@@N where small animals shelter. Navigating through requires climbing over and ducking under obstacles. The deadfall stretches in a rough band east-west.
+~
+0 3
+D3
+~
+~
+0 -1 15536
+D2
+~
+~
+0 -1 15517
+D0
+~
+~
+0 -1 15557
+S
+#15538
+Canopy Gap~
+A @@llarge gap@@N in the forest canopy lets full sunlight pour down onto a patch of @@Glush ground cover@@N. The opening was created when a massive tree fell years ago, and the resulting light well has encouraged a burst of competitive growth. @@gSaplings@@N strain upward, ferns spread their fronds wide, and wildflowers bloom in a riot of color that is rare this deep in the verge. The gap will close in a few more seasons as the fastest-growing trees win the race.
+~
+0 3
+D1
+~
+~
+0 -1 15539
+D3
+~
+~
+0 -1 15537
+S
+#15539
+Eastern Verge, Upper~
+The forest continues in its rough, unmanaged character here at the upper reach of the eastern verge. @@GYoung alders@@N and willows grow along a @@ldry seasonal channel@@N that carries water only during the heaviest rains. The @@gground is uneven@@N, pocked with animal burrows and crossed by exposed roots. To the south, the channel continues toward the verge edge, while the forest deepens to the west.
+~
+0 3
+D3
+~
+~
+0 -1 15538
+D2
+~
+~
+0 -1 15519
+D0
+~
+~
+0 -1 15559
+S
+#15540
+Western Forest Fringe~
+The forest's western boundary is marked by @@gstunted, wind-bent trees@@N that lean away from the prevailing weather. The undergrowth is sparse here, scoured by seasonal gales that drive across the open ground to the west. @@GHardy grasses@@N and low juniper have colonized the thin soil between exposed root systems. The @@lsky is more visible@@N here than deeper in the forest.
+~
+0 3
+D1
+~
+~
+0 -1 15541
+S
+#15541
+Fern Gully~
+A @@Gdense carpet of ferns@@N fills a shallow gully here, their fronds so thick that the forest floor beneath is invisible. The gully channels @@lrainwater@@N during storms, keeping the ferns lush even in dry seasons. @@gMossy stones@@N line the bottom of the gully, and the air is cool and damp compared to the surrounding forest. Small creatures rustle unseen beneath the fern canopy.
+~
+0 3
+D1
+~
+~
+0 -1 15542
+D3
+~
+~
+0 -1 15540
+S
+#15542
+Ivy-Wrapped Ruins~
+@@GThick ivy@@N covers the remains of what was once a small stone structure, perhaps an old boundary marker or a long-abandoned shepherd's shelter. Only the outline of foundation stones is visible beneath the climbing vegetation, and a @@gsingle archway@@N still stands, held together more by ivy than by mortar. @@lBroken pottery shards@@N crunch underfoot in the leaf litter around the ruin.
+~
+0 3
+D1
+~
+~
+0 -1 15543
+D3
+~
+~
+0 -1 15541
+S
+#15543
+Crossroads Clearing~
+Several @@ggame trails@@N converge in this natural clearing, creating a crossroads of sorts beneath the canopy. The ground is trampled hard by the passage of many animals, and @@Gdroppings of various species@@N are scattered around the edges. A @@lmoss-covered boulder@@N sits at the center like a crude milestone. Trails lead in several directions through the surrounding forest.
+~
+0 3
+D1
+~
+~
+0 -1 15544
+D3
+~
+~
+0 -1 15542
+D2
+~
+~
+0 -1 15523
+D0
+~
+~
+0 -1 15563
+S
+#15544
+Patrol Camp Remains~
+The @@gremnants of a patrol camp@@N linger here: a collapsed lean-to frame, a @@lfire ring@@N half-buried in leaves, and the stumps of saplings that were cut for tent poles seasons ago. @@GNew growth@@N is already reclaiming the site, with grass pushing through the ash of the old fire and vines climbing the lean-to frame. Whoever camped here has not returned in some time.
+~
+0 3
+D1
+~
+~
+0 -1 15545
+D3
+~
+~
+0 -1 15543
+S
+#15545
+Birch Stand~
+A cluster of @@Wwhite birch trees@@N stands in elegant contrast to the darker conifers around them. Their @@lpapery bark@@N peels in long curls, and their leaves catch the light with a silvery shimmer. The ground beneath the birches is cleaner than the surrounding forest, carpeted with their small @@gleaves@@N rather than heavy needles. The stand creates a natural landmark visible from some distance through the trees.
+~
+0 3
+D1
+~
+~
+0 -1 15546
+D3
+~
+~
+0 -1 15544
+S
+#15546
+Stag Run~
+@@GBroad hoofprints@@N and the marks of antlers scraped against bark identify this as an active @@gstag run@@N, a corridor used by male deer during the rutting season. The trees along the run are scarred and stripped of bark at shoulder height, and the ground between them is worn into a smooth track. @@lTufts of coarse fur@@N cling to the roughest patches of bark.
+~
+0 3
+D1
+~
+~
+0 -1 15547
+D3
+~
+~
+0 -1 15545
+S
+#15547
+Ancient Stump Clearing~
+A @@gmassive stump@@N dominates this clearing, its diameter so great that four people could stand on its surface. The tree it came from must have been ancient when it fell, and the stump itself is now a miniature ecosystem of @@Gmoss, lichen, and small ferns@@N growing from its decaying heartwood. @@lInsect galleries@@N pattern the exposed wood in intricate whorls.
+~
+0 3
+D1
+~
+~
+0 -1 15548
+D3
+~
+~
+0 -1 15546
+S
+#15548
+Wolf Territory, Central Run~
+This is the @@gheart of a wolf pack's territory@@N, where multiple patrol routes converge at a well-worn @@Rmeeting point@@N. The ground is compacted and bare in a wide circle, and the scent of wolf musk is overpowering. @@GBones@@N from past kills litter the edges, some old and weathered, others disturbingly fresh. The @@lpacked trails@@N radiate outward like spokes from this central hub.
+~
+0 3
+D1
+~
+~
+0 -1 15549
+D3
+~
+~
+0 -1 15547
+D2
+~
+~
+0 -1 15528
+S
+#15549
+Ravine Crossing~
+A @@gfallen tree@@N spans the ravine here, its trunk worn smooth by the passage of animals that use it as a natural bridge. The crossing is narrow and requires careful balance, with a @@ldrop of several body-lengths@@N to the rocky streambed below. @@GMoss@@N makes the bark treacherous in wet weather, and claw marks from desperate grips score the wood at regular intervals.
+~
+0 3
+D3
+~
+~
+0 -1 15548
+D2
+~
+~
+0 -1 15529
+D0
+~
+~
+0 -1 15569
+S
+#15550
+Lantern Road, Northward Turn~
+The @@lLantern Road@@N resumes its northward course here after the first bend, the packed earth climbing gently as the terrain begins its slow rise toward the mid-forest. @@gWaystones@@N continue to mark the route, and a @@Gline of mature pines@@N borders the eastern side of the road like a planted windbreak. The road surface shows @@lcart ruts@@N and hoofprints overlaying boot prints, evidence of steady traffic.
+~
+0 3
+D0
+~
+~
+0 -1 15570
+D1
+~
+~
+0 -1 15551
+D2
+~
+~
+0 -1 15530
+S
+#15551
+Lantern Road, Eastward Jog~
+The @@lLantern Road@@N makes a brief eastward jog here, following a @@gnatural ridgeline@@N rather than cutting straight through. This is the @@WBent Mile Principle@@N in practice: the road yields to the land's contour rather than forcing a direct path. The surface remains well-maintained, and a @@Gsmall drainage culvert@@N of fitted stones crosses beneath the road where a seasonal stream intersects.
+~
+0 3
+D3
+~
+~
+0 -1 15550
+D0
+~
+~
+0 -1 15571
+D1
+~
+~
+0 -1 15552
+S
+#15552
+Service Clearing~
+A @@groad service clearing@@N sits just off the Lantern Road here, marked by a @@lstone-lined fire ring@@N and a wooden rack for hanging lanterns during maintenance. Road wardens use this site as a supply cache and meeting point, and @@Gstacked timbers@@N for bridge repair are stored under an oilskin tarp. The @@Wsplit-pine seal@@N is branded into the timber stack.
+~
+4 3
+D3
+~
+~
+0 -1 15551
+D2
+~
+~
+0 -1 15532
+D1
+~
+~
+0 -1 15553
+S
+#15553
+Pine Cathedral~
+@@GTowering pines@@N grow so close and so tall here that their canopy forms an unbroken roof far overhead, creating a vast @@ggreen vault@@N that swallows sound and filters light to a dim, cathedral-like glow. The trunks rise straight and bare for many body-lengths before the first branches appear, and the forest floor is a soft, silent carpet of needles. The @@lstillness@@N here is profound.
+~
+0 3
+D3
+~
+~
+0 -1 15552
+D1
+~
+~
+0 -1 15554
+S
+#15554
+Woodcutter's Clearing~
+@@gOld stumps@@N of varying sizes dot this clearing, their cut surfaces long since weathered to silver grey. This was once a sanctioned cutting site, but the Woodwrights Guild markers show it was @@Rdecommissioned@@N seasons ago and is now in a regrowth period. @@GYoung saplings@@N have been planted in careful rows between the stumps, each protected by a cage of woven twigs against browsing deer.
+~
+0 3
+D3
+~
+~
+0 -1 15553
+D2
+~
+~
+0 -1 15534
+D0
+~
+~
+0 -1 15574
+S
+#15555
+Cedar Cathedral~
+@@GAnother stand of tall cedars@@N creates an aromatic sanctuary here, their @@rshaggy bark@@N and spreading branches filling the air with a sharp, resinous perfume. The trees are old enough that their lower reaches are a lattice of @@gdead silver branches@@N, while the living canopy far above filters the light to a warm amber glow. @@lSoft duff@@N underfoot muffles every footstep.
+~
+0 3
+D3
+~
+~
+0 -1 15554
+D2
+~
+~
+0 -1 15535
+D0
+~
+~
+0 -1 15575
+S
+#15556
+Abandoned Camp~
+The remains of a @@gcold campsite@@N sit in a sheltered hollow between two large boulders. @@bScattered ash@@N, a few bent tent pegs, and the ring of @@gblackened stones@@N from a fire pit are all that remain. Someone left in haste: a torn @@lsaddle bag@@N lies half-buried in the leaves, its contents long since looted or scattered by animals. The camp has not been used in some time.
+~
+0 3
+D1
+~
+~
+0 -1 15557
+D3
+~
+~
+0 -1 15555
+S
+#15557
+Root Tangle~
+@@GMassive tree roots@@N have erupted from the ground here where erosion has washed away the topsoil, creating a labyrinth of @@gtwisted wooden arches@@N and dark hollows. The roots are thick as a person's torso and intertwined so densely that passage requires climbing and squeezing. @@lPale fungi@@N grow in the perpetual shade beneath the root mass, and @@Rskittering sounds@@N suggest the hollows are inhabited.
+~
+0 3
+D3
+~
+~
+0 -1 15556
+D2
+~
+~
+0 -1 15537
+D0
+~
+~
+0 -1 15577
+S
+#15558
+Canopy Walk~
+A @@gnatural platform@@N of interlocking branches spans the gap between several large trees here at roughly twice a person's height above the ground. The branches have grown together over decades, creating a surprisingly solid surface @@Gcarpeted with moss@@N and bird nests. @@lThe view@@N from this elevated position extends further through the forest than ground-level line of sight allows.
+~
+0 3
+D1
+~
+~
+0 -1 15559
+D3
+~
+~
+0 -1 15557
+S
+#15559
+Eastern Verge, Transition~
+The southern verge begins to transition here, the broadleaf trees gradually giving way to more @@Gconifers@@N as the ground rises slightly toward the north. The change is subtle but noticeable: the light grows dimmer, the undergrowth thinner, and the air cooler. @@gPine needles@@N begin to dominate the forest floor instead of broadleaf litter. A @@lseasonal drainage@@N channel continues northward.
+~
+0 3
+D3
+~
+~
+0 -1 15558
+D2
+~
+~
+0 -1 15539
+D0
+~
+~
+0 -1 15579
+S
+#15560
+Far Western Verge~
+The forest is thin and windswept at its @@gwestern extreme@@N, where the trees are few and stunted. @@GHardy shrubs@@N and coarse grass have taken hold between patches of @@bbare rock@@N, and the wind sighs through the sparse canopy with nothing to block it. The interior forest lies eastward, @@ldark and sheltering@@N compared to this exposed fringe.
+~
+0 3
+D1
+~
+~
+0 -1 15561
+S
+#15561
+Lichen Ridge~
+A @@glow ridge of stone@@N pushes through the forest floor here, its surface painted in patches of @@Gyellow, grey, and orange lichen@@N. The ridge runs roughly east-west and creates a minor obstacle to north-south travel. Small trees have found purchase in the cracks, their roots splitting the stone slowly. The @@lair is crisp@@N at this slight elevation.
+~
+0 3
+D1
+~
+~
+0 -1 15562
+D3
+~
+~
+0 -1 15560
+S
+#15562
+Mossy Hollow~
+A @@Gdeep carpet of moss@@N covers everything in this sheltered hollow: the ground, the lower trunks of trees, and the surface of every fallen branch. The moss is so thick and soft that footsteps make no sound, and the hollow has an eerie, @@lmuffled quality@@N. Water seeps from the hillside above, keeping the moss permanently damp. @@gTiny mushrooms@@N sprout from the greenest patches.
+~
+0 3
+D1
+~
+~
+0 -1 15563
+D3
+~
+~
+0 -1 15561
+S
+#15563
+Trail Fork~
+Two @@ggame trails@@N meet and diverge here at the base of a @@Glarge oak@@N whose trunk is scarred by lightning. The blackened wound runs from crown to root, splitting the bark but not killing the tree, which continues to leaf out in defiant green. The trails are well-worn by animal traffic and offer clear passage in multiple directions through the otherwise dense forest.
+~
+0 3
+D1
+~
+~
+0 -1 15564
+D3
+~
+~
+0 -1 15562
+D2
+~
+~
+0 -1 15543
+D0
+~
+~
+0 -1 15583
+S
+#15564
+Windbreak Stand~
+A @@gdense stand of young pines@@N has been planted or encouraged to grow here in a tight row, forming a natural windbreak. The trees are uniform in size and spacing, suggesting deliberate cultivation, though @@Gwild growth@@N has since filled the gaps. On the lee side, the air is noticeably calmer, and a @@lsmall herb garden@@N has gone feral, its medicinal plants spreading beyond their original beds.
+~
+0 3
+D1
+~
+~
+0 -1 15565
+D3
+~
+~
+0 -1 15563
+S
+#15565
+Rock Garden~
+@@gBoulders@@N of varying sizes are scattered across a flat area here as if dropped by a giant hand. Some are @@lsmooth and rounded@@N by ancient water action, others sharp and angular where they split from larger formations. @@GMoss and small ferns@@N grow in the sheltered spaces between them, and the rocks hold the day's warmth well into evening, making this a favored basking spot for reptiles.
+~
+0 3
+D1
+~
+~
+0 -1 15566
+D3
+~
+~
+0 -1 15564
+S
+#15566
+Quiet Pool~
+A @@lsmall natural pool@@N of clear water occupies a depression in the forest floor here, fed by an underground seep that keeps the water level constant. The pool's surface is mirror-still, reflecting the canopy above with startling clarity. @@GWatercress@@N grows around the edges, and the @@gmuddy bank@@N bears the tracks of every species in the area coming to drink. Dragon and damselflies hover above the water.
+~
+0 3
+D1
+~
+~
+0 -1 15567
+D3
+~
+~
+0 -1 15565
+S
+#15567
+Fallen Monarch~
+An @@gimmense tree@@N has fallen here, its trunk so large that it forms a wall of bark and wood nearly as tall as a person. The root plate stands vertical at one end, a dramatic fan of earth, stone, and @@Gtorn roots@@N. The tree's fall has created an open corridor in the canopy, and vigorous new growth fills the @@llight well@@N with a tangle of competing saplings and ferns.
+~
+0 3
+D1
+~
+~
+0 -1 15568
+D3
+~
+~
+0 -1 15566
+S
+#15568
+Bear Scratch Tree~
+@@GDeep claw marks@@N score the bark of an enormous pine here from ground level to well above head height. The scratches are layered, old ones weathered pale beneath newer @@Rfresh gouges@@N, recording years of territorial marking by bears. Tufts of @@bbrown and black fur@@N cling to the roughest bark. The tree itself is healthy despite the abuse, its resinous scent strong in the still air.
+~
+0 3
+D1
+~
+~
+0 -1 15569
+D3
+~
+~
+0 -1 15567
+S
+#15569
+Ravine Head~
+The @@gravine@@N that cuts through the lower verge begins here, at a point where the ground drops away between two large @@lrock outcroppings@@N. Water has carved the initial channel over centuries, and the exposed earth shows layers of @@bclay and gravel@@N beneath the topsoil. @@GFerns and trailing vines@@N hang over the edge, partially concealing the drop. The ravine deepens as it runs southward.
+~
+0 3
+D3
+~
+~
+0 -1 15568
+D2
+~
+~
+0 -1 15549
+D0
+~
+~
+0 -1 15589
+S
+#15570
+Lantern Road, Pine Corridor~
+The @@lLantern Road@@N passes through a corridor of @@Gmature pines@@N here, their tall straight trunks forming natural pillars on either side of the packed earth path. The road climbs gently as the terrain rises toward the northern forest interior. @@gWaystones@@N continue their steady march along the road's edge, and fresh @@llamp oil stains@@N on the nearest bracket show the lamp-keepers have been through recently.
+~
+0 3
+D0
+~
+~
+0 -1 15590
+D2
+~
+~
+0 -1 15550
+S
+#15571
+Lantern Road, Western Bend~
+The @@lLantern Road@@N bends westward here, following a @@gcontour line@@N along a low ridge rather than climbing directly over it. A @@Wwaystone@@N at the bend is larger than most, carved with additional information: distances to both Midgaard and the northern approach, and a small @@Glantern-and-scale motif@@N. The road surface is firm and @@lwell-drained@@N, with gravel packed into the outer edge of the curve.
+~
+0 3
+D0
+~
+~
+0 -1 15591
+D2
+~
+~
+0 -1 15551
+D1
+~
+~
+0 -1 15572
+S
+#15572
+Lantern Road, Eastern Resume~
+The @@lLantern Road@@N turns eastward again after its western bend, resuming its general northward progress through a brief eastward jog. The road passes between @@Gtall oaks@@N that have clearly been allowed to grow here as a deliberate landmark, their girth marking them as older than the road itself. A @@gsmall milestone@@N set into the ground records distances carved in both @@lMidgaard script@@N and northern knot-notation.
+~
+0 3
+D0
+~
+~
+0 -1 15592
+D3
+~
+~
+0 -1 15571
+D1
+~
+~
+0 -1 15573
+S
+#15573
+Road Shoulder, Inner~
+A @@gshort path@@N leads from the Lantern Road to a sheltered spot beneath an overhanging rock ledge. The space has been used as an informal rest stop, with @@lscattered charcoal@@N and a few carved initials on the rock face recording past visitors. @@GFerns@@N grow thickly around the base of the ledge, and a @@bthin trickle@@N of water seeps down the rock face, enough to fill a waterskin slowly.
+~
+0 3
+D3
+~
+~
+0 -1 15572
+D1
+~
+~
+0 -1 15574
+S
+#15574
+Grove Margin~
+The forest transitions here between the relatively open road corridor and a @@Gdenser grove@@N to the east. The trees close in noticeably, their branches interlocking to form a @@glow, dark canopy@@N that blocks most of the sky. The ground cover shifts from grasses and herbs to shade-tolerant @@lmoss and ivy@@N. The change marks the beginning of deeper forest territory.
+~
+0 3
+D3
+~
+~
+0 -1 15573
+D2
+~
+~
+0 -1 15554
+D0
+~
+~
+0 -1 15594
+S
+#15575
+Deep Cedar Hollow~
+@@GTall cedars@@N enclose a @@gdim hollow@@N here, their aromatic branches meeting overhead in a fragrant canopy that sheds rain in all but the heaviest downpours. The hollow floor is deep in @@bred bark@@N and fallen needles, soft and dry. Cedar waxwings flit between the branches, and the air is thick with the clean, sharp scent of cedar oil. The hollow feels ancient and undisturbed.
+~
+0 3
+D3
+~
+~
+0 -1 15574
+D2
+~
+~
+0 -1 15555
+D0
+~
+~
+0 -1 15595
+S
+#15576
+Bracken Slope~
+A @@gsteep slope@@N clothed in @@Gwaist-high bracken@@N descends eastward here, the ferns growing so thick that the ground beneath is invisible. The slope is treacherous footing, with hidden roots and @@lslippery leaf mold@@N beneath the bracken fronds. At the bottom of the slope, the land levels out into a flatter area of forest. The bracken yellows in autumn, creating brief golden views.
+~
+0 3
+D1
+~
+~
+0 -1 15577
+D3
+~
+~
+0 -1 15575
+S
+#15577
+Hollow Log~
+A @@gmassive fallen log@@N lies across the forest floor here, its interior hollowed by decay into a tunnel large enough to shelter in. The opening faces south, and the interior is surprisingly dry, lined with @@bred fungal growth@@N that gives it a faint warm glow in deep darkness. @@GSmall animals@@N have clearly used it for shelter, judging by the nest materials and droppings inside. The log stretches several body-lengths.
+~
+0 3
+D3
+~
+~
+0 -1 15576
+D2
+~
+~
+0 -1 15557
+D0
+~
+~
+0 -1 15597
+S
+#15578
+Owl Pellet Mound~
+Beneath a @@Ggreat spreading oak@@N, years of @@gowl pellets@@N have accumulated into a noticeable mound of compressed fur, bones, and insect chitin. The tree above is clearly a favored roost, with whitewash streaks down the trunk and @@ldeep talon scars@@N in the bark of the main perch branch. The surrounding ground is bare of undergrowth, possibly suppressed by the chemistry of the decomposing pellets.
+~
+0 3
+D1
+~
+~
+0 -1 15579
+D3
+~
+~
+0 -1 15577
+S
+#15579
+Eastern Verge, Upper Transition~
+The @@geastern edge@@N of the verge continues its gradual transition here, with more @@Gconifers@@N replacing the broadleaf trees and the ground becoming rockier and less fertile. The undergrowth is sparse, dominated by hardy @@lground-hugging shrubs@@N and occasional patches of heather. The change in terrain signals the approaching end of the gentle southern verge and the beginning of rougher forest country.
+~
+0 3
+D3
+~
+~
+0 -1 15578
+D2
+~
+~
+0 -1 15559
+S
+#15580
+Western Verge End~
+The @@gwestern fringe@@N of the forest reaches its most exposed point here, where only a few scattered @@Gjunipers@@N and wind-bent pines mark the transition from forest to open ground. The soil is thin and rocky, and @@lgrassland species@@N have colonized the gaps between trees. The interior forest lies solidly to the east, dark and inviting compared to this wind-scoured margin.
+~
+0 3
+D1
+~
+~
+0 -1 15581
+S
+#15581
+Stone Tumble~
+@@gBoulders@@N and loose stone have accumulated at the base of a low bluff here, creating a jumbled @@lrockfield@@N that is difficult to navigate. The stones range from fist-sized to larger than a person, and @@Gmoss and small ferns@@N grow in the gaps between them. The bluff face shows the striations of the underlying bedrock, layers of @@blimestone and shale@@N exposed by erosion.
+~
+0 3
+D1
+~
+~
+0 -1 15582
+D3
+~
+~
+0 -1 15580
+S
+#15582
+Bluebell Dell~
+A @@lshallow dell@@N between two low rises is carpeted in season with @@Gbluebells@@N whose color echoes the sky glimpsed through gaps in the canopy above. Even when the flowers are dormant, the dell retains a gentle, sheltered character, with @@gsoft grass@@N and the quiet trickle of a small spring that surfaces briefly before sinking back into the earth. The dell connects the surrounding forest trails naturally.
+~
+0 3
+D1
+~
+~
+0 -1 15583
+D3
+~
+~
+0 -1 15581
+S
+#15583
+Trail Junction~
+Three @@ggame trails@@N converge at this point in the forest, marked by a @@Glarge moss-covered stone@@N that sits at the intersection like a crude milestone. The trails are worn deep into the forest floor by the passage of deer, boar, and smaller animals. Each trail leads into a different character of forest, from @@lopen broadleaf@@N to dense conifer to mixed undergrowth.
+~
+0 3
+D1
+~
+~
+0 -1 15584
+D3
+~
+~
+0 -1 15582
+D2
+~
+~
+0 -1 15563
+D0
+~
+~
+0 -1 15603
+S
+#15584
+Warden Signal Point~
+A @@gcleared rise@@N in the forest offers a good vantage point, and road wardens have taken advantage of it by erecting a simple @@lsignal post@@N: a tall pole with a @@Gmetal basket@@N at the top for burning signal fires. The clearing around the pole is kept trimmed to prevent the signal from being obscured. Charred wood in the basket shows it has been used recently.
+~
+4 3
+D1
+~
+~
+0 -1 15585
+D3
+~
+~
+0 -1 15583
+S
+#15585
+Patrol Waypoint~
+A @@gsmall patrol waypoint@@N marks this intersection of a warden's patrol route and a game trail. A @@lstout oak post@@N driven into the ground bears the warden's identification mark and a simple directional carving. A @@Gstone-lined drain@@N channels rainwater away from the path junction, keeping the crossing passable in wet weather.
+~
+4 3
+D1
+~
+~
+0 -1 15586
+D3
+~
+~
+0 -1 15584
+S
+#15586
+Ivy Curtain~
+@@GThick curtains of ivy@@N hang from the canopy here, creating a @@ggreen wall@@N that obscures the view in all directions and forces travelers to push through trailing fronds. The ivy is mature and heavy, its main stems as thick as rope where they climb the host trees. @@lFiltered light@@N gives the space behind the curtain a submarine quality, green and dim and strangely quiet.
+~
+0 3
+D1
+~
+~
+0 -1 15587
+D3
+~
+~
+0 -1 15585
+S
+#15587
+Charcoal Flat~
+The ground is @@gdark with old charcoal@@N here, the remnant of a forest fire that burned this patch years ago. The fire-killed trees have long since been colonized by @@Gpioneer species@@N, birch and aspen growing fast in the open light. The @@bblack soil@@N is exceptionally fertile, enriched by ash, and the undergrowth is lush and competitive. @@lNew growth@@N contrasts sharply with the charred stumps that remain.
+~
+0 3
+D1
+~
+~
+0 -1 15588
+D3
+~
+~
+0 -1 15586
+S
+#15588
+Songbird Thicket~
+@@GDense hawthorn@@N and elderberry create a @@gthick wall of fruiting shrubs@@N that hums with birdsong from dawn to dusk. The thicket provides nesting sites, food, and protection from predators, making it a magnet for songbirds of every species in the forest. @@lThe chorus@@N is almost overwhelming at peak times. Navigating through requires finding gaps between the thorny stems.
+~
+0 3
+D1
+~
+~
+0 -1 15589
+D3
+~
+~
+0 -1 15587
+S
+#15589
+Deep Ravine Upper~
+The ravine deepens here as it cuts northward, its walls steeper and @@gdarker@@N with exposed earth and root systems. The bottom is @@lshadowed@@N even at midday, and the sound of water trickling over stone echoes upward. @@GHanging ferns@@N and trailing roots create a curtain over the ravine's lip. The drop is significant enough to be dangerous, and the edges are soft and crumbling.
+~
+0 3
+D3
+~
+~
+0 -1 15588
+D2
+~
+~
+0 -1 15569
+D0
+~
+~
+0 -1 15609
+S
+#15590
+Lantern Road, Forest Deepening~
+The @@lLantern Road@@N continues its measured northward course, and the character of the surrounding forest has noticeably changed. The trees are taller, their trunks thicker, and the canopy higher and more complete. @@GUndergrowth@@N is sparser in the deeper shade, replaced by @@gmoss and ground-hugging ivy@@N. The waystones here bear older carvings, some with @@lnorthern knot-signs@@N more prominent than Midgaard script.
+~
+0 3
+D0
+~
+~
+0 -1 15610
+D2
+~
+~
+0 -1 15570
+S
+#15591
+Lantern Road, Road Camp~
+A @@gpermanent road camp@@N occupies a widened section of the Lantern Road here, with a @@lstone fire ring@@N large enough for a patrol to gather around and a @@Gwooden lean-to@@N that provides shelter from rain. Carved into the lean-to's central post is a duty roster, its names and dates refreshed each season. @@WThe split-pine motif@@N is branded into the post above the roster. This camp marks the northern edge of the Southern Verge patrol circuit.
+~
+4 3
+D2
+~
+~
+0 -1 15571
+D1
+~
+~
+0 -1 15592
+S
+#15592
+Lantern Road, Verge-Bend Transition~
+The @@lLantern Road@@N passes through a transitional stretch here where the Southern Verge's broadleaf character begins yielding to the wetter, lower-lying ground of the Mosswater Bends ahead. The road surface has been reinforced with @@ggravel and cordwood@@N laid in the worst soft spots. @@GWillow saplings@@N appear along the drainage ditches, their roots seeking the increased moisture. The air carries a @@lfaint marshy tang@@N.
+~
+0 3
+D0
+~
+~
+0 -1 15612
+D3
+~
+~
+0 -1 15591
+D1
+~
+~
+0 -1 15593
+S
+#15593
+Damp Clearing~
+The ground is noticeably @@gsofter@@N here, and standing water collects in the lowest spots after rain. @@GMosses@@N and moisture-loving plants are more abundant than in the verge, and the trees show the beginnings of the transition to @@lfen species@@N: willows, alders, and water-tolerant oaks with swollen bases. The air is heavier and damper, and @@ginsects@@N are more numerous.
+~
+0 3
+D3
+~
+~
+0 -1 15592
+D1
+~
+~
+0 -1 15594
+S
+#15594
+Willow Fringe~
+@@GWeeping willows@@N line a @@lshallow depression@@N here, their trailing branches creating a screen of green that sways in even the lightest breeze. The willows' roots have stabilized the wet ground somewhat, creating firm footing along their trunks while the open spaces between remain @@gsoggy@@N. The transition from dry verge to wet fenland is nearly complete here.
+~
+0 3
+D3
+~
+~
+0 -1 15593
+D2
+~
+~
+0 -1 15574
+S
+#15595
+Alder Copse~
+A @@Gstand of mature alders@@N grows in the damp soil here, their @@gdark bark@@N and catkins characteristic of the wetter conditions that prevail northward. The ground between the alders is soft and spongy, covered in a layer of @@ldecaying leaves@@N that have not fully composted in the perpetual dampness. Small streams trickle between the roots, finding their way toward the larger waterways of the Mosswater Bends.
+~
+0 3
+D3
+~
+~
+0 -1 15594
+D2
+~
+~
+0 -1 15575
+S
+#15596
+Moss Bank~
+A @@Gthick bank of sphagnum moss@@N has colonized a raised area between two shallow streams here, creating a spongy green mound that squelches underfoot. The moss retains water like a sponge, and stepping on it produces a @@lgush of dark water@@N from every footprint. @@gCarnivorous sundew plants@@N grow on the moss surface, their sticky tentacles glistening with captured insects.
+~
+0 3
+D1
+~
+~
+0 -1 15597
+D3
+~
+~
+0 -1 15595
+S
+#15597
+Waterlogged Trail~
+A @@gtrail@@N attempts to cross the increasingly wet ground here, but the route is @@lwaterlogged@@N for much of its length. @@GRushed reed bundles@@N have been laid across the worst sections as crude walkways, but many have sunk into the mud and require wading through ankle-deep water. The mud is dark and @@bclinging@@N, releasing a methane-like smell when disturbed.
+~
+0 3
+D3
+~
+~
+0 -1 15596
+D2
+~
+~
+0 -1 15577
+D0
+~
+~
+0 -1 15617
+S
+#15598
+Cattail Marsh Edge~
+@@GTall cattails@@N and sedge grass mark the edge of open marshland here, their brown seed heads bobbing above the @@gstanding water@@N that fills the low ground. The water is shallow enough to wade but deep enough to fill boots, and the bottom is uncertain, alternating between @@lfirm clay@@N and treacherous quickmud. Red-winged blackbirds call from the cattail heads.
+~
+0 3
+D1
+~
+~
+0 -1 15599
+D3
+~
+~
+0 -1 15597
+S
+#15599
+Reed Stand~
+@@GDense reeds@@N grow taller than a person here, their feathery tops swaying in the breeze above a floor of @@lshallow water@@N and @@bmud@@N. The reeds are so thick that visibility is limited to arm's length in any direction, and the rustling of the stems masks other sounds. Narrow channels of open water wind between the reed stands, used by @@gfen wildlife@@N as travel corridors.
+~
+0 3
+D3
+~
+~
+0 -1 15598
+D0
+~
+~
+0 -1 15619
+S
