@@ -85,6 +85,8 @@ static bool load_static_prop_file(const char *path, int id)
     if (!read_prop_line(fp, line, sizeof(line)))
     {
         bugf("load_static_prop_file: missing title in %s", path);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
         fclose(fp);
         return FALSE;
     }
@@ -105,6 +107,8 @@ static bool load_static_prop_file(const char *path, int id)
     {
         bugf("load_static_prop_file: bad numeric line in %s", path);
         free_string(tpl.title);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
         fclose(fp);
         return FALSE;
     }
@@ -113,6 +117,8 @@ static bool load_static_prop_file(const char *path, int id)
     {
         bugf("load_static_prop_file: missing target line in %s", path);
         free_string(tpl.title);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
         fclose(fp);
         return FALSE;
     }
@@ -128,6 +134,8 @@ static bool load_static_prop_file(const char *path, int id)
     {
         bugf("load_static_prop_file: invalid target count in %s", path);
         free_string(tpl.title);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
         fclose(fp);
         return FALSE;
     }
@@ -197,6 +205,32 @@ static const STATIC_PROP_TEMPLATE *find_static_prop_template(int static_id)
 
     return NULL;
 }
+
+
+#ifdef UNIT_TEST_PROPOSITION
+int proposition_unit_static_count(void)
+{
+    return static_prop_count;
+}
+
+const char *proposition_unit_static_title(int static_id)
+{
+    const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
+    return tpl != NULL ? tpl->title : NULL;
+}
+
+const char *proposition_unit_static_accept_message(int static_id)
+{
+    const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
+    return tpl != NULL ? tpl->accept_message : NULL;
+}
+
+const char *proposition_unit_static_completion_message(int static_id)
+{
+    const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
+    return tpl != NULL ? tpl->completion_message : NULL;
+}
+#endif
 
 static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl);
 

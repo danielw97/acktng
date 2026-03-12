@@ -1,6 +1,8 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
 #include <string.h>
 #include "globals.h"
 
@@ -10,6 +12,48 @@ void proposition_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj);
 void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim);
 void clear_proposition(CHAR_DATA *ch);
 void proposition_cancel(CHAR_DATA *ch, int slot);
+void proposition_load_static_templates(void);
+int proposition_unit_static_count(void);
+const char *proposition_unit_static_title(int static_id);
+const char *proposition_unit_static_accept_message(int static_id);
+const char *proposition_unit_static_completion_message(int static_id);
+
+
+char *_str_dup(const char *str, const char *func)
+{
+    (void)func;
+    if (str == NULL)
+        return NULL;
+    {
+        size_t len = strlen(str) + 1;
+        char *out = malloc(len);
+        assert(out != NULL);
+        memcpy(out, str, len);
+        return out;
+    }
+}
+
+void _free_string(char *pstr, const char *func)
+{
+    (void)func;
+    free(pstr);
+}
+
+void log_string(const char *str)
+{
+    (void)str;
+}
+
+void bug(const char *str, int param)
+{
+    (void)str;
+    (void)param;
+}
+
+void bugf(char *fmt, ...)
+{
+    (void)fmt;
+}
 
 static int extracted_calls;
 static int save_calls;
@@ -255,6 +299,31 @@ static void test_cancel_static_does_not_set_cooldown(void)
     assert(ch.pcdata->prop_dynamic_cooldown_until == 0);
     assert(save_calls == 1);
 }
+
+static void test_loads_static_propositions_with_messages_from_files(void)
+{
+    const char *title;
+    const char *accept_message;
+    const char *completion_message;
+
+    proposition_load_static_templates();
+
+    assert(proposition_unit_static_count() >= 5);
+
+    title = proposition_unit_static_title(0);
+    accept_message = proposition_unit_static_accept_message(0);
+    completion_message = proposition_unit_static_completion_message(0);
+
+    assert(title != NULL);
+    assert(strcmp(title, "Route reconnaissance: Forest of Confusion") == 0);
+
+    assert(accept_message != NULL);
+    assert(strstr(accept_message, "Kiess route clerks") != NULL);
+
+    assert(completion_message != NULL);
+    assert(strstr(completion_message, "dispatchers") != NULL);
+}
+
 int main(void)
 {
     test_extracts_and_saves_when_target_matches();
@@ -266,6 +335,7 @@ int main(void)
     test_clear_proposition_resets_all_slots();
     test_cancel_dynamic_sets_cooldown_and_clears_slot();
     test_cancel_static_does_not_set_cooldown();
+    test_loads_static_propositions_with_messages_from_files();
 
     puts("test_proposition: all tests passed");
     return 0;
