@@ -6438,6 +6438,10 @@ D3
 ~
 ~
 0 -1 15905
+D0
+~
+~
+0 -1 15926
 S
 #15907
 Northern Ashfang Territory~
@@ -6498,6 +6502,10 @@ D2
 ~
 ~
 0 -1 15890
+D0
+~
+~
+0 -1 15930
 S
 #15911
 Courier Lantern Relay~
@@ -6594,6 +6602,10 @@ D2
 ~
 ~
 0 -1 15896
+D0
+~
+~
+0 -1 15936
 S
 #15917
 Frost-Wolf Valley~
@@ -6633,3 +6645,1196 @@ D3
 ~
 0 -1 15918
 S
+#15920
+Crown of Antlers, South Approach~
+The @@gapproach@@N to the @@WCrown of Antlers@@N begins here, the trail rising through @@Gsparse alpine forest@@N toward the highest point in the Great Northern Forest. @@WBleached antler fragments@@N are embedded in rock cracks along the trail, placed by the stone-antler circle as markers of sacred ground. The @@lair is thin@@N and cold, and the wind carries the scent of snow from the higher elevations. Every step takes the traveler further from the road and deeper into primeval wilderness.
+~
+0 5
+D1
+~
+~
+0 -1 15921
+S
+#15921
+Crown of Antlers, Western Ridge~
+The western ridge of the @@WCrown of Antlers@@N rises steeply here, its @@gbare rock slopes@@N broken only by scattered patches of @@Galpine grass@@N and wind-stunted shrubs. The ridge offers a @@ldramatic view@@N westward over the forest canopy, and on clear days the edge of the world seems visible. The stone-antler circle considers this ridge sacred, and @@Wbone offerings@@N are wedged into every crack in the rock.
+~
+0 5
+D1
+~
+~
+0 -1 15922
+D3
+~
+~
+0 -1 15920
+S
+#15922
+Crown of Antlers, Spirit Stones~
+A cluster of @@Wnatural standing stones@@N crowns a knoll here, their shapes so suggestive of antlered figures that they may have been partially carved by ancient hands. The stone-antler circle holds that these are @@gpetrified spirits@@N of the ancient forest, frozen in stone at the moment of some primordial catastrophe. @@rFaint luminescence@@N plays on the stone surfaces at night, and the @@lcold@@N around the stones is more intense than the elevation alone can explain.
+~
+4 5
+D1
+~
+~
+0 -1 15923
+D3
+~
+~
+0 -1 15921
+S
+#15923
+Crown of Antlers, Alpine Meadow~
+A small @@galpine meadow@@N occupies a sheltered saddle near the Crown's summit, its grass starred with @@Gmountain wildflowers@@N of unusual beauty. The meadow is said to be where the @@Wwhite stag@@N grazes, the legendary creature whose sighting portends either blessing or warning. @@lA small spring@@N feeds the meadow from the rocks above, and the water is @@gclear and impossibly cold@@N. Antler fragments and stone offerings ring the meadow's edge.
+~
+0 2
+D1
+~
+~
+0 -1 15924
+D3
+~
+~
+0 -1 15922
+S
+#15924
+Crown of Antlers, Bear Lord's Domain~
+The @@ghighest forested area@@N of the Crown is claimed by the @@RPrimal Bear Lord@@N, a creature of legendary size and ferocity that has held this territory for longer than anyone can remember. @@GScored trees@@N and scattered bones mark the Bear Lord's domain, and the @@Rrubbing posts@@N where the beast has left its scent reek with musky power. Even the stone-antler circle's boldest hunters give this domain a wide berth. The ground trembles with what might be footsteps from deeper in the woods.
+~
+4 3
+D1
+~
+~
+0 -1 15925
+D3
+~
+~
+0 -1 15923
+S
+#15925
+Crown of Antlers, Summit~
+The @@Whighest point@@N in the Great Northern Forest stands here, marked by a @@gnatural rock formation@@N that resembles a crown of antlers against the sky. The summit offers a @@l360-degree view@@N of the surrounding landscape: the entire forest canopy stretching south toward Midgaard, the Northern Crown's ridges marching east and west, and Kowloon's walls visible to the north. @@WBone and antler offerings@@N from generations of stone-antler circle pilgrimages cover every flat surface. The wind is constant and fierce, and the cold is absolute.
+~
+4 5
+D3
+~
+~
+0 -1 15924
+S
+#15926
+Briar Knight Patrol~
+A @@gpatrol route@@N used by the @@RRootbound briar knights@@N runs through this area, the trail marked by @@Rthorn-woven markers@@N that only cult members can read. The briar knights are the Thornmother's elite warriors, and their presence this far north indicates the cult's ambition to control territory beyond the Ancestor Deeps. @@gFresh tracks@@N in the mud show heavy armored boots have passed recently.
+~
+0 3
+D1
+~
+~
+0 -1 15927
+D2
+~
+~
+0 -1 15906
+D0
+~
+~
+0 -1 15946
+S
+#15927
+Northern Standing Stone~
+A @@Wlone standing stone@@N marks a spiritual boundary here, its surface carved with the @@gcold throne motif@@N that the Cairn-Keepers associated with death and judgment. The stone faces north, and its shadow at noon points directly toward where the Cairn-Keepers believed the Cold Throne stood. @@rLuminescent moss@@N still grows on this stone despite being far from the Ancestor Deeps, a sign of the stone's @@lspiritual significance@@N.
+~
+0 3
+D1
+~
+~
+0 -1 15928
+D3
+~
+~
+0 -1 15926
+S
+#15928
+Elder Stone-Antler Camp~
+The @@gelder stone-antler sentinel@@N maintains a permanent camp here, guarding the approaches to the Northern Crown's most sacred sites. The camp is austere but well-organized: a @@lstone-ringed fire pit@@N, a rack of weapons, and a simple shelter of @@Gpine boughs@@N. The sentinel who holds this camp is one of the most formidable warriors in the forest, chosen by the stone-antler circle for strength, skill, and devotion to the old ways.
+~
+0 3
+D1
+~
+~
+0 -1 15929
+D3
+~
+~
+0 -1 15927
+S
+#15929
+Cold Ancestor Grove~
+A grove of @@lghost birch@@N here is perpetually cold, frost clinging to the bark even in the height of summer. The @@Wcold ancestor spirits@@N that haunt the Northern Crown are concentrated in groves like this, their presence dropping the temperature to unnatural levels. @@gIce crystals@@N form in the air itself, catching the @@llight@@N in brief prismatic flashes. The silence is profound and watchful.
+~
+1 3
+D1
+~
+~
+0 -1 15930
+D3
+~
+~
+0 -1 15928
+S
+#15930
+Northern Crown, Central Path~
+A @@gcentral path@@N through the Northern Crown connects the road approaches to the deep interior, maintained by warden patrols and stone-antler circle guides working in uneasy cooperation. The path is wider than a game trail but narrower than a proper road, suitable for foot traffic and pack animals but not carts. @@GIronpines@@N and @@lnorthern spruce@@N line the path, and @@gcairn markers@@N at intervals show the way.
+~
+0 3
+D1
+~
+~
+0 -1 15931
+D3
+~
+~
+0 -1 15929
+D2
+~
+~
+0 -1 15910
+D0
+~
+~
+0 -1 15950
+S
+#15931
+North Warden Camp Approach~
+The trail widens here as it approaches the @@gNorth Warden Camp@@N, the joint-commission outpost that serves as the primary base of operations for wardens assigned to the Northern Crown. @@GPatrol signs@@N and @@lsecurity markers@@N become more frequent, and the forest has been cleared back from the trail to provide defensive sight lines. The camp's @@gsmoke@@N is visible through the trees to the east.
+~
+0 3
+D1
+~
+~
+0 -1 15932
+D3
+~
+~
+0 -1 15930
+S
+#15932
+North Warden Camp~
+The @@gNorth Warden Camp@@N is a substantial outpost of @@Gstone and ironpine timber@@N, built to withstand both the Northern Crown's harsh weather and the hostile forces that operate in the surrounding forest. The camp includes a @@lbarracks for rotating warden patrols@@N, a @@gsupply depot@@N, a manifest office with @@lKowloon-style chalkboards@@N, and a small armory. The camp flies both Midgaard and Kowloon colors, and the warden captain who commands it answers to the joint commission. A @@gnotice board@@N beside the main entrance posts current patrol assignments, threat assessments, and bounty notices.
+~
+4 3
+D0
+~
+~
+0 -1 15952
+D1
+~
+~
+0 -1 15933
+D3
+~
+~
+0 -1 15931
+E
+notice board bounty~
+The notice board is thick with official postings: current patrol routes marked on a pinned map, threat assessment levels for each section of the Northern Crown, bounty notices for Ashfang war-leaders and Rootbound cult figures, and supply requisition forms waiting for the next courier runner. A Kowloon-standard inspection checklist is posted prominently, every box ticked in precise ink.
+~
+S
+#15933
+Warden Training Ground~
+A @@gcleared area@@N beside the North Warden Camp serves as a @@ltraining ground@@N where wardens practice combat drills and patrol formations. Wooden training dummies and @@Gstraw archery targets@@N line one edge, and a raked sand pit in the center is used for sparring. The training ground reflects the mixed martial traditions of the joint commission: Midgaard-style weapon drills alongside Kowloon's more formal @@gcombat protocols@@N.
+~
+0 3
+D1
+~
+~
+0 -1 15934
+D3
+~
+~
+0 -1 15932
+S
+#15934
+Messenger Shrine~
+A small @@gstone shrine@@N beside the road serves as a messenger drop point, where @@lcourier runners@@N can leave dispatches in a sealed compartment for collection by the next patrol. The shrine includes a @@Wcovenant plaque@@N naming the neutral protections that apply to messenger services, and a @@lsmall lantern@@N that is kept lit to indicate the drop point is active. The shrine's design combines Midgaard practicality with Kowloon's insistence on written protocol.
+~
+0 3
+D1
+~
+~
+0 -1 15935
+D3
+~
+~
+0 -1 15933
+E
+covenant plaque~
+The covenant plaque reads: 'By joint charter, this messenger shrine is neutral ground. Interference with dispatches placed or collected here is a violation of the forest road compact and subject to warden tribunal judgment at the Oath-Crossing stones.' The plaque bears both the Midgaard wax seal and the Kowloon thread-knot mark.
+~
+S
+#15935
+Northern Dispute Circle~
+A @@gdispute circle@@N has been established here in the Kowloon tradition, a flat area of @@lsmooth stones@@N arranged in a ring where witnesses gather to hear and judge disputes. The circle follows the same hybrid design as the Oath-Crossing tribunal: @@WKowloon-style witness stones@@N for recording verdicts combined with the old forest custom of @@gcommunal judgment@@N. The circle is used by wardens, merchants, and forest peoples alike.
+~
+0 3
+D1
+~
+~
+0 -1 15936
+D3
+~
+~
+0 -1 15934
+S
+#15936
+Northern Crown, Eastern Path~
+The @@geastern path@@N through the Northern Crown runs here, connecting the road and camp complex to the eastern wilderness. The path shows signs of regular Kowloon patrol activity: @@linspection markers@@N, cleared sight lines, and @@Gstandardized distance posts@@N. The forest on both sides is managed to prevent ambush, with the lower branches trimmed and the undergrowth cleared. The Wardens of Iron take security in this sector seriously.
+~
+0 3
+D1
+~
+~
+0 -1 15937
+D3
+~
+~
+0 -1 15935
+D2
+~
+~
+0 -1 15916
+D0
+~
+~
+0 -1 15956
+S
+#15937
+Oathbreaker Ruin~
+The @@gruins@@N of a small stone structure stand here, its walls crumbling and its @@lroof long collapsed@@N. @@WCarved symbols@@N on the remaining stonework identify this as another oathbreaker punishment site, where those who violated the forest charter were @@gimprisoned and left to the mercy@@N of the forest. The @@Rruins are haunted@@N, according to local tradition, and the oathbreaker wraiths that roam the Northern Crown are strongest near these sites.
+~
+1 3
+D1
+~
+~
+0 -1 15938
+D3
+~
+~
+0 -1 15936
+S
+#15938
+Ghost Boar Thicket~
+A @@Gdense thicket@@N of northern brush harbors the @@gwhite ghost boars@@N that roam the Northern Crown, their pale hides giving them a spectral appearance in the @@lmist and cold@@N. The thicket shows heavy rooting activity, the soil churned by the boars' powerful tusks as they dig for roots and tubers. @@gAlbino bristles@@N caught on thorns confirm the presence of these unusual animals. The ghost boars are large and aggressive when provoked.
+~
+0 3
+D1
+~
+~
+0 -1 15939
+D3
+~
+~
+0 -1 15937
+S
+#15939
+Eastern Crown Wilderness~
+The @@geastern wilderness@@N of the Northern Crown extends here into @@lremote and unpatrolled territory@@N, far from both the road and the warden camp. The forest is dense and cold, with @@Gnorthern spruce@@N replacing the ironpines and ghost birch of the deeper interior. @@gAnimal tracks@@N are the only signs of movement, and the silence is broken only by wind and the occasional crack of a branch under the weight of accumulated frost.
+~
+0 3
+D3
+~
+~
+0 -1 15938
+S
+#15940
+Crown Approach, Far West~
+The @@gfar western approach@@N to the Northern Crown is wild and @@lunpatrolled@@N, a route used only by the stone-antler circle's most experienced guides and the occasional @@Gdesperate fugitive@@N. The terrain is rough, with steep scrambles over bare rock alternating with dense thickets of northern brush. The wind howls through gaps in the ridgeline, and @@gcold mist@@N fills every depression.
+~
+0 5
+D1
+~
+~
+0 -1 15941
+S
+#15941
+Ironpine Mother Bear Den~
+A @@Glarge den@@N has been dug into the hillside here, its entrance partially screened by @@gdense brush@@N and a fallen ironpine trunk. The den belongs to an @@Rironpine mother bear@@N, and the protective fury of a mother bear with cubs makes this one of the most dangerous sites in the Northern Crown. @@lCub tracks@@N surround the den entrance alongside the massive prints of the mother, and @@gwarning scratches@@N on nearby trees are deep and fresh.
+~
+0 3
+D1
+~
+~
+0 -1 15942
+D3
+~
+~
+0 -1 15940
+S
+#15942
+Northern Spruce Forest~
+@@GDense northern spruce@@N replaces the ironpines and ghost birch here, their dark pyramidal shapes creating a @@gsomber, cathedral-like atmosphere@@N. The spruce canopy is thick enough to shelter the ground from snow and rain, and the @@lneedle-covered floor@@N is dry and springy underfoot. The forest here smells of spruce resin rather than the pine and birch of the southern regions, a fresh, sharp scent that marks the transition to the far north.
+~
+0 3
+D1
+~
+~
+0 -1 15943
+D3
+~
+~
+0 -1 15941
+S
+#15943
+Cold Mist Pocket~
+A natural @@gpocket@@N in the terrain traps @@lcold mist@@N here, creating a permanent fog bank that reduces visibility to a few arm-lengths. The mist is dense and clinging, depositing droplets on every surface and muffling sound to nothing. @@GThe trees@@N within the pocket are dripping and @@gcold@@N, their branches appearing and disappearing in the shifting fog. Navigation within the pocket is disorienting and dangerous, and the mist-shadow cats that hunt here are nearly impossible to detect.
+~
+1 3
+D1
+~
+~
+0 -1 15944
+D3
+~
+~
+0 -1 15942
+S
+#15944
+Kowloon Approach Marker~
+A @@gstone marker@@N in the Kowloon administrative style stands here, its surface carved with @@ltariff information@@N, inspection protocols, and contact details for the northern customs office. The marker signals that Kowloon's administrative sphere of influence begins here, though the forest is still several miles from the city walls. @@GThe surrounding trees@@N are tagged with Wardens of Iron patrol signs, and the @@gunderbrush has been cleared@@N for visibility.
+~
+0 3
+D1
+~
+~
+0 -1 15945
+D3
+~
+~
+0 -1 15943
+S
+#15945
+Wardens of Iron Patrol Post~
+A @@gsmall patrol post@@N manned by the @@lWardens of Iron@@N stands here, its stone construction built to Kowloon's precise engineering standards. The post is compact but functional: a @@Gsheltered watch platform@@N, a secured supply cache, and a signal lantern for relay communication. The wardens stationed here rotate on the same seasonal schedule used at Kowloon's city gates, and their @@gdisciplined bearing@@N contrasts with the more informal style of the joint-commission wardens.
+~
+4 3
+D1
+~
+~
+0 -1 15946
+D3
+~
+~
+0 -1 15944
+S
+#15946
+Northern Crown, Cult Fringe~
+The @@gfringe@@N of Rootbound cult influence extends this far north, marked by @@Rvine charms@@N and knotted symbols tied to tree branches. The cult's presence here is surveillance rather than occupation, with hidden observation posts monitoring the movements of Kowloon patrols and road traffic. @@GThe trees@@N show occasional signs of cult activity: symbols scratched into bark, @@gsmall offerings@@N left in root hollows, and the faint traces of ritual fires.
+~
+0 3
+D1
+~
+~
+0 -1 15947
+D3
+~
+~
+0 -1 15945
+D2
+~
+~
+0 -1 15926
+D0
+~
+~
+0 -1 15966
+S
+#15947
+Northern Ashfang Hideout~
+A well-concealed @@gAshfang hideout@@N occupies a hollow in the forest here, its entrance masked by @@Gfallen brush@@N and positioned to avoid the Kowloon patrol routes. The @@RAshfang fighters@@N who use this hideout are the warband's forward scouts, operating deep in Kowloon's claimed territory to gather intelligence and plan raids. The hideout is small but equipped for extended stays: @@gcached supplies@@N, spare weapons, and a concealed escape route.
+~
+0 3
+D1
+~
+~
+0 -1 15948
+D3
+~
+~
+0 -1 15946
+S
+#15948
+Tariff Chalkboard Post~
+A @@gKowloon-standard chalkboard post@@N stands beside the trail here, its @@lwhite chalk text@@N listing current tariff rates for various categories of goods passing through the northern checkpoint. The chalkboard is updated regularly by customs officials, and its precise formatting reflects Kowloon's bureaucratic @@gthoroughness@@N. A sealed suggestion box beside the post invites feedback on tariff rates, though whether anyone actually reads the suggestions is unclear. @@GThe surrounding area@@N is kept clear and orderly.
+~
+0 3
+D1
+~
+~
+0 -1 15949
+D3
+~
+~
+0 -1 15947
+S
+#15949
+Inspection Staging Area~
+A @@gcleared area@@N beside the road serves as a staging ground where caravans wait for @@lcustoms inspection@@N before proceeding through the northern checkpoint. @@GFlat stones@@N provide surfaces for unloading and examining cargo, and @@giron rings@@N set in the ground allow pack animals to be tethered during the inspection process. The staging area can accommodate several caravans simultaneously, reflecting the volume of trade that passes through the forest route.
+~
+0 3
+D1
+~
+~
+0 -1 15950
+D3
+~
+~
+0 -1 15948
+S
+#15950
+Northern Crown, Road Junction~
+The @@gcentral path@@N through the Northern Crown meets the @@lLantern Road@@N here at a formal junction marked by @@Wstone posts@@N bearing both cities' insignia. The junction is a gathering point for wardens, merchants, and travelers, and the ground shows heavy foot traffic. @@GThe road@@N continues east toward the customs checkpoint, while the @@gpath@@N leads west and south into the forest interior.
+~
+0 3
+D1
+~
+~
+0 -1 15951
+D3
+~
+~
+0 -1 15949
+D2
+~
+~
+0 -1 15930
+D0
+~
+~
+0 -1 15970
+S
+#15951
+Lantern Road, Customs Approach~
+The @@lLantern Road@@N approaches the @@gNorthern Customs Post@@N here, its surface upgraded to the @@Gdressed stone@@N standard that Kowloon maintains on all roads within its administrative reach. @@lInspection protocols@@N are posted on stone markers at regular intervals, and the lantern posts bear Kowloon's @@gWardens of Iron insignia@@N alongside the traditional lantern-and-scale motif. The road widens to accommodate queuing traffic. A @@gcustoms checkpoint@@N lies ahead to the east.
+~
+0 3
+D1
+~
+~
+0 -1 15952
+D3
+~
+~
+0 -1 15950
+S
+#15952
+Northern Customs Post~
+The @@gNorthern Customs Post@@N is a substantial stone structure built by @@lKowloon's engineers@@N, its architecture reflecting the city's @@gprecise administrative style@@N. The post straddles the @@lLantern Road@@N, with a @@gcustoms checkpoint gate@@N controlling eastbound passage. Inside, customs officials maintain @@linventory chalkboards@@N, sealed ration lockers, and @@gduplicate ledgers@@N for recording manifests. Every caravan passing through must present @@Wdual-marked manifests@@N bearing both Midgaard wax and Kowloon thread-knot seals. The post operates on the same seasonal rotation as Kowloon's city gates, ensuring no single commander holds authority for more than one season.
+~
+4 3
+D0
+~
+~
+0 -1 15972
+D3
+~
+~
+0 -1 15951
+D1
+~
+^customs checkpoint gate~
+1 -1 15953
+E
+customs checkpoint gate~
+The customs checkpoint gate is a heavy ironpine-and-iron construction designed to block the road entirely when closed. Its mechanism is simple but effective: a counterweighted beam that can be raised or lowered by a single officer. When closed, the gate forces all traffic to present documents at the inspection window before proceeding. The gate bears Kowloon's Wardens of Iron insignia and a plaque listing the penalties for smuggling.
+~
+S
+#15953
+Northern Customs, Eastern Gate~
+The eastern side of the @@gNorthern Customs Post@@N opens onto the road leading toward Kowloon's @@lclear approaches@@N. The @@gcustoms checkpoint gate@@N stands behind to the west, and ahead the forest begins to thin as Kowloon's cleared zone takes effect. The road continues northward toward the North Lantern Gate, and the @@GWardens of Iron@@N presence becomes dominant. @@lKowloon-standard road markers@@N replace the joint-commission signs.
+~
+0 3
+D3
+~
+^customs checkpoint gate~
+1 -1 15952
+D1
+~
+~
+0 -1 15954
+E
+customs checkpoint gate~
+From the eastern side, the customs checkpoint gate shows its inspection window and document-processing shelf. A small bell pull summons the duty officer when the gate is closed. The penalties plaque is readable from this side as well, a reminder that Kowloon takes trade regulation seriously.
+~
+S
+#15954
+Kowloon Road, Northern Forest~
+The road takes on a distinctly @@gKowloon character@@N here, its surface maintained to the city's high standards and its @@lmarkers bearing serial numbers@@N and inspection dates in precise administrative script. The forest on both sides has been cleared back to standard defensive width, and the @@GWardens of Iron@@N patrol this section with military regularity. The road is within Kowloon's claimed administrative zone, though the forest itself remains technically neutral under the charter.
+~
+0 3
+D1
+~
+~
+0 -1 15955
+D3
+~
+~
+0 -1 15953
+S
+#15955
+Kowloon Warden Barracks~
+A small @@gbarracks@@N for the @@lWardens of Iron@@N stands beside the road here, its stone walls and iron-banded door reflecting Kowloon's military architecture. The barracks houses the patrol squads that secure the northern approach, and its discipline is evident: @@Gweapons racked in order@@N, bedding folded to standard, and a @@gduty roster@@N posted by the door. The wardens who serve here consider this posting an honor, protecting Kowloon's most important trade route.
+~
+4 3
+D1
+~
+~
+0 -1 15956
+D3
+~
+~
+0 -1 15954
+S
+#15956
+Kowloon Patrol, Eastern Reach~
+The @@gKowloon patrol route@@N extends eastward here, connecting the road security network to the @@lfar eastern reaches@@N of the Northern Crown. The patrol route is maintained to Kowloon standards: @@Gcleared sight lines@@N, standardized markers, and @@gsupply caches@@N at regular intervals. The Wardens of Iron who patrol this route are vigilant against Ashfang incursions from the south and east.
+~
+0 3
+D1
+~
+~
+0 -1 15957
+D3
+~
+~
+0 -1 15955
+D2
+~
+~
+0 -1 15936
+S
+#15957
+Northern Ashfang Berserker Camp~
+An @@RAshfang berserker camp@@N has been established in defiance of @@gKowloon's patrol coverage@@N, its presence a deliberate provocation. The camp is crude and temporary, designed for rapid abandonment if patrols approach. The @@Rberserkers@@N who use this camp are the warband's shock troops, sent to create chaos and test the Wardens' response times. @@bAsh-blackened weapons@@N and @@gwar paint supplies@@N litter the ground.
+~
+0 3
+D1
+~
+~
+0 -1 15958
+D3
+~
+~
+0 -1 15956
+S
+#15958
+Frozen Stream Bed~
+A @@lstream bed@@N here is frozen year-round, its water locked beneath a layer of ice that never fully melts. The ice is thick enough to walk on, though it @@gcreaks and groans@@N under weight. The @@Gstreamside trees@@N are coated in ice spray, their branches encased in glittering crystalline sheaths. The @@lfrozen stream@@N leads north toward the higher elevations and south toward warmer ground where it presumably thaws.
+~
+0 6
+D1
+~
+~
+0 -1 15959
+D3
+~
+~
+0 -1 15957
+S
+#15959
+Far Eastern Crown~
+The @@gfar eastern reach@@N of the Northern Crown is one of the most remote points in the Great Northern Forest, accessible only through the @@lpatrol routes@@N and game trails that thread the eastern ridgeline. The forest here is dense @@Gnorthern spruce@@N, and the ground is rocky and uneven. The elevation provides a @@gdistant view@@N of the lower forest stretching eastward, but the view offers no landmarks or signs of civilization.
+~
+0 3
+D3
+~
+~
+0 -1 15958
+S
+#15960
+Crown of Antlers, North Face~
+The @@gnorth face@@N of the Crown of Antlers drops steeply here through @@lbare scree@@N and scattered @@Gwind-stunted trees@@N. The face is exposed to the full force of northern weather, and @@gice clings@@N to the rock even in summer. The view northward encompasses the cleared approaches of Kowloon, visible as a bright gap in the forest canopy. The descent from the Crown to the lower terrain is treacherous and unmarked.
+~
+0 5
+D1
+~
+~
+0 -1 15961
+S
+#15961
+Northern Crown Ravine~
+A @@gdeep ravine@@N cuts through the Northern Crown here, its walls too steep to descend without rope. @@lA stream@@N runs along the ravine bottom, audible but invisible in the dark depths. The ravine forces all east-west travel to detour around it, creating a natural barrier that divides the Crown's interior. @@GBridge-like root spans@@N cross the ravine at a few points, but they are narrow and treacherous.
+~
+0 5
+D1
+~
+~
+0 -1 15962
+D3
+~
+~
+0 -1 15960
+S
+#15962
+Apex Predator Territory~
+The forest here is the exclusive domain of the @@gNorthern Crown's apex predators@@N, and the signs of their presence are unmistakable: @@Rmassive claw marks@@N at twice head height on tree trunks, @@gbones of large prey@@N scattered among the roots, and a @@lpervasive musk@@N that saturates the cold air. Only the most powerful creatures survive in this territory, and anything smaller gives the area wide berth. @@GThe trees@@N are ancient and enormous, their canopy admitting little light.
+~
+0 3
+D1
+~
+~
+0 -1 15963
+D3
+~
+~
+0 -1 15961
+S
+#15963
+Hidden Thornmother Cache~
+A @@gconcealed cache@@N of @@RRootbound cult supplies@@N has been hidden here in a hollow beneath a massive root system, camouflaged with @@Gmoss and brush@@N. The cache contains ritual materials, preserved food, and @@rthorn-woven weapons@@N, suggesting the Thornmother's forces can resupply far from their Ancestor Deeps territory. The cache is trapped with @@gconcealed thorn snares@@N that would alert nearby cult members to any disturbance.
+~
+0 3
+D1
+~
+~
+0 -1 15964
+D3
+~
+~
+0 -1 15962
+S
+#15964
+Ancestral Wind Gap~
+A @@gnatural gap@@N in the ridge channels the @@lnorthern wind@@N through with constant force, creating a permanent howl that drowns out all other sound. The wind gap has been sacred to the forest peoples since before either city existed, and @@Wsmall offerings@@N of bone and feather are wedged into cracks on both sides. The gap provides passage through the ridge but the @@gwind makes conversation impossible@@N and the cold is cutting.
+~
+0 5
+D1
+~
+~
+0 -1 15965
+D3
+~
+~
+0 -1 15963
+S
+#15965
+Northern Crown, Deep Interior~
+The @@gdeep interior@@N of the Northern Crown is a place of @@lprimeval wilderness@@N that has never been managed, claimed, or regularly traveled by anyone from either city. The @@Gtrees@@N here are among the oldest in the forest, and the undergrowth is thick and wild. The @@gsounds@@N of the deep interior are purely natural: wind, birdsong, animal calls, and the creak of ancient wood. Human influence has left no mark here.
+~
+0 3
+D1
+~
+~
+0 -1 15966
+D3
+~
+~
+0 -1 15964
+S
+#15966
+Cult Observation Post~
+A concealed @@gRootbound observation post@@N occupies a @@Gnatural platform@@N in the branches of a massive northern spruce. The post provides a view of the road approaches through a gap in the canopy, and @@rvine ladders@@N provide access from the ground. The post is well-stocked with @@gdried food@@N and signal equipment, suggesting it is manned for extended periods. @@RCult symbols@@N are carved into the platform's supports.
+~
+0 3
+D1
+~
+~
+0 -1 15967
+D3
+~
+~
+0 -1 15965
+D2
+~
+~
+0 -1 15946
+D0
+~
+~
+0 -1 15986
+S
+#15967
+Northern Ashfang Forward Post~
+An @@RAshfang forward post@@N has been pushed to the very edge of Kowloon's patrol coverage, its position chosen for the gap in warden routes that exists between patrol cycles. The post is minimal: a concealed @@gfire pit@@N, a cache of @@bweapons@@N, and a lookout point that provides early warning of approaching patrols. The Ashfang who man this post are the warband's most @@ldisciplined fighters@@N, capable of remaining concealed for days.
+~
+0 3
+D1
+~
+~
+0 -1 15968
+D3
+~
+~
+0 -1 15966
+S
+#15968
+Kowloon Approach, Deep Forest~
+The @@gKowloon approach zone@@N extends into the deep forest here, marked by @@lsystematic tree-tagging@@N and cleared undergrowth in the Wardens of Iron style. The forest is being gradually managed toward Kowloon's standards of visibility and @@gsecurity@@N, with lower branches trimmed and sight lines maintained. @@GThe transition@@N from wild forest to managed zone is gradual but unmistakable.
+~
+0 3
+D1
+~
+~
+0 -1 15969
+D3
+~
+~
+0 -1 15967
+S
+#15969
+Signal Relay, Northern~
+The northernmost @@gCourier Lantern relay station@@N in the forest stands here, its stone tower the last point in the signal chain before the @@lKowloon city relay@@N network takes over. The station is maintained to Kowloon standards, its equipment precise and well-maintained. @@GA signal lamp@@N at the tower's peak can communicate with both the southern relay and Kowloon's wall-mounted receiver stations. The relay operators know they are the @@glink@@N between the forest and the city.
+~
+4 4
+D1
+~
+~
+0 -1 15970
+D3
+~
+~
+0 -1 15968
+S
+#15970
+Lantern Road, Northern Forest Straight~
+The @@lLantern Road@@N runs straight and well-maintained through the @@gNorthern Crown's managed zone@@N here, its surface dressed stone in the Kowloon style. The road is wider than the southern sections, designed to accommodate the @@Glarger trade caravans@@N that operate between Kowloon's markets and the forest route. @@lDistance markers@@N show Kowloon growing near, and the road's character becomes increasingly urban: @@gcurbed edges@@N, drainage channels, and paving stones.
+~
+0 3
+D1
+~
+~
+0 -1 15971
+D3
+~
+~
+0 -1 15969
+D2
+~
+~
+0 -1 15950
+S
+#15971
+Lantern Road, Caravan Rest~
+A @@gcaravan rest area@@N has been built beside the road here, its stone @@lbenches and watering troughs@@N providing amenities for travelers and their animals. The rest area is maintained by the Wardens of Iron and funded by Kowloon's civic treasury, a testament to the @@Gcommercial importance@@N of the forest route. @@gNotice boards@@N post current road conditions, customs requirements, and tariff schedules.
+~
+4 3
+D1
+~
+~
+0 -1 15972
+D3
+~
+~
+0 -1 15970
+S
+#15972
+Lantern Road, Northern Approach~
+The @@lLantern Road@@N approaches its northern terminus here, the road surface at its best and the @@glantern posts@@N at their most frequent. The road passes through managed forest that grows progressively thinner as Kowloon's cleared zone approaches. @@GDistance markers@@N count down the remaining distance to the @@lNorth Lantern Gate@@N, and the road traffic increases noticeably with merchants, couriers, and warden patrols all converging on the northern exit.
+~
+0 3
+D0
+~
+~
+0 -1 15992
+D1
+~
+~
+0 -1 15973
+D3
+~
+~
+0 -1 15971
+D2
+~
+~
+0 -1 15952
+S
+#15973
+Lantern Road, Final Eastward Bend~
+The @@lLantern Road@@N makes its final eastward bend here before the @@gstraight approach@@N to the North Lantern Gate. The bend follows the last natural contour of the forest ridge, and the road builders marked it with the @@Gsplit-pine motif@@N on a carved stone, echoing the markers at the southern gate and honoring the principle that has governed the road's construction from the beginning. The forest is thin here, @@land the sky is visible@@N through the sparse canopy.
+~
+0 3
+D1
+~
+~
+0 -1 15974
+D3
+~
+~
+0 -1 15972
+S
+#15974
+Lantern Road, Gate Approach~
+The @@lLantern Road@@N stretches straight and wide toward the @@gNorth Lantern Gate@@N visible ahead to the north, its @@Glamp posts@@N and dressed stone surface gleaming in the light that floods through the thinning canopy. The road is at its most formal here, maintained to standards that match Kowloon's city streets. @@gWarden patrols@@N are frequent, and the traffic includes well-equipped merchant caravans, Kowloon customs officials, and @@lCourier Lantern runners@@N on urgent business.
+~
+0 3
+D0
+~
+~
+0 -1 15994
+D3
+~
+~
+0 -1 15973
+D1
+~
+~
+0 -1 15975
+S
+#15975
+Kowloon Cleared Approach, East~
+The @@gKowloon cleared approach@@N extends eastward from the road here, a zone where all trees have been felled to provide @@lclear fields of fire@@N and unobstructed sight lines for the city's defensive positions. The cleared zone is @@Ggrassy and well-maintained@@N, dotted with distance markers and patrol posts. The transition from forest to cleared ground is abrupt and deliberate, a statement of Kowloon's military architecture.
+~
+0 2
+D1
+~
+~
+0 -1 15976
+D3
+~
+~
+0 -1 15974
+S
+#15976
+Kowloon Warden of Iron Post~
+A permanent @@gWardens of Iron post@@N stands at the eastern edge of the cleared approach, its @@lstone construction@@N and iron-banded shutters built to withstand assault. The post houses a squad of Kowloon's finest, and their @@Gprecise military bearing@@N contrasts with the more relaxed style of the forest's joint-commission wardens. The post commands a clear view of the eastern forest edge and the road approach.
+~
+4 3
+D1
+~
+~
+0 -1 15977
+D3
+~
+~
+0 -1 15975
+S
+#15977
+Northern Crown, Far East~
+The @@gfar eastern reach@@N of the managed zone extends here, the forest cleared and maintained by Kowloon's forestry teams. The ground is @@lflat and open@@N, with scattered stumps showing where the original forest stood before Kowloon's engineers created the defensive buffer. @@GGrass and wildflowers@@N have colonized the cleared ground, creating an unexpectedly pleasant landscape that belies its military purpose.
+~
+0 2
+D1
+~
+~
+0 -1 15978
+D3
+~
+~
+0 -1 15976
+S
+#15978
+Eastern Perimeter~
+The @@geastern perimeter@@N of the Northern Crown's managed zone ends here, where the cleared ground meets the @@Guntouched forest@@N beyond. The boundary is marked by @@lstaked posts@@N bearing Kowloon patrol signs, and a narrow patrol path follows the perimeter line. Beyond the posts, the forest returns to its natural state: dense, dark, and @@gunmanaged@@N. The contrast between the two zones is stark.
+~
+0 3
+D1
+~
+~
+0 -1 15979
+D3
+~
+~
+0 -1 15977
+S
+#15979
+Far Eastern Crown Edge~
+The @@gfar eastern edge@@N of the Northern Crown is @@lundeveloped and wild@@N, a remnant of the original forest that neither city's management has reached. The @@Gtrees@@N here are large and old, growing in the natural patterns of an untouched forest. The ground rises toward @@geastern ridges@@N that mark the edge of the Great Northern Forest's influence, beyond which the landscape transitions to a different character entirely.
+~
+0 5
+D3
+~
+~
+0 -1 15978
+S
+#15980
+Northern Crown, Final Ridge West~
+The @@gfinal ridge@@N of the Northern Crown's western arm drops steeply here toward the @@lclear ground@@N that marks Kowloon's defensive perimeter. The ridge provides one last @@Gelevated vantage@@N before the forest gives way entirely. The trees here are scattered and @@gwind-beaten@@N, their stunted forms marking the transition from forest to open approach. The view north shows Kowloon's walls clearly, a pale line against the horizon.
+~
+0 5
+D1
+~
+~
+0 -1 15981
+S
+#15981
+Crown Elk Winter Range~
+The @@gnorthern slopes@@N of the final ridge serve as @@Gwinter range@@N for the crown elk herds, who descend from the higher elevations when snow makes the alpine meadows impassable. The ground shows heavy @@ltrampling@@N and grazing, and shed antlers of the massive crown bulls lie among the rocks. The elk share this range uneasily with the frost-touched wolves, and @@Rthe evidence of predator-prey conflict@@N is everywhere: wolf tracks circling elk bedding areas, blood-stained snow patches, torn tufts of elk hair.
+~
+0 2
+D1
+~
+~
+0 -1 15982
+D3
+~
+~
+0 -1 15980
+S
+#15982
+Frost-Wolf Pack Den~
+A @@gpackrat den@@N of the @@lfrost-touched wolves@@N occupies a sheltered hollow on the north slope here, the den entrance screened by @@Gdense brush@@N and positioned to catch the last warmth of the day's sun. The pack that holds this den is one of the largest in the Northern Crown, and their @@Rterritorial markers@@N extend far down the slope. The den is a complex of interconnected tunnels dug into the hillside, large enough to shelter a dozen wolves.
+~
+0 3
+D1
+~
+~
+0 -1 15983
+D3
+~
+~
+0 -1 15981
+S
+#15983
+Ghost Birch Cathedral, North~
+A final stand of @@lghost birch@@N grows here in a natural @@gcathedral formation@@N, their pale white trunks rising like pillars to support a thin, translucent canopy that filters the light to a soft @@Wsilver glow@@N. This northern ghost birch cathedral echoes the ironpine cathedral of the Ironpine Rise, a bookend to the forest's grandeur. @@GFallen birch leaves@@N create a silver carpet on the forest floor, and the air is cool and still.
+~
+0 3
+D1
+~
+~
+0 -1 15984
+D3
+~
+~
+0 -1 15982
+S
+#15984
+Northern Crown, Kowloon Sight~
+The forest thins enough here to provide a @@gclear view@@N of @@lKowloon's walls and towers@@N to the north, rising above the cleared approach zone like a second horizon. The sight of the city is a landmark for every traveler who has crossed the Great Northern Forest from the south, the first sign that the journey's northern terminus is within reach. @@GThe last trees@@N frame the view like a natural gateway.
+~
+0 3
+D1
+~
+~
+0 -1 15985
+D3
+~
+~
+0 -1 15983
+S
+#15985
+Kowloon Cleared Approach, West~
+The @@gKowloon cleared approach@@N extends westward from the road here, its @@lflat grassy ground@@N maintained by Kowloon's forestry teams. The cleared zone provides @@Gunobstructed sight lines@@N for Kowloon's defensive positions, and the absence of trees feels strange after the long miles of forest cover. @@gPatrol posts@@N dot the cleared ground at regular intervals, manned by Wardens of Iron sentries.
+~
+0 2
+D1
+~
+~
+0 -1 15986
+D3
+~
+~
+0 -1 15984
+S
+#15986
+Northern Crown, Last Forest~
+The @@glast patch@@N of true forest stands here before the trees give way entirely to Kowloon's cleared zone. The @@Gtrees@@N are relatively young, having grown back after earlier clearing operations, and they form a thin screen between the @@ldeep forest@@N to the south and the open ground to the north. This transitional strip of forest is heavily patrolled by both Kowloon's Wardens and the joint commission, and @@gsecurity signs@@N are everywhere.
+~
+0 3
+D1
+~
+~
+0 -1 15987
+D3
+~
+~
+0 -1 15985
+D2
+~
+~
+0 -1 15966
+S
+#15987
+Forest Edge, Kowloon View~
+The @@gforest edge@@N provides a final view both south into the @@lGreat Northern Forest@@N and north toward @@GKowloon's approaching walls@@N. This boundary between wilderness and civilization is sharp and intentional, maintained by Kowloon's engineers to prevent the forest from reclaiming the cleared zone. @@gStumps from the original clearing@@N still dot the ground, slowly being consumed by grass and time.
+~
+0 3
+D1
+~
+~
+0 -1 15988
+D3
+~
+~
+0 -1 15986
+S
+#15988
+Kowloon Inspection Lane~
+An @@ginspection lane@@N runs parallel to the road here, used by Kowloon customs officials to conduct thorough examinations of large @@lcaravans@@N that cannot be processed quickly at the main checkpoint. The lane includes @@Gcovered inspection bays@@N, a weighing platform, and a @@gsecured impound area@@N for detained goods. The lane's operation is governed by the same seasonal rotation protocol used at the customs post.
+~
+0 3
+D1
+~
+~
+0 -1 15989
+D3
+~
+~
+0 -1 15987
+S
+#15989
+Road Junction, North Gate~
+A @@gjunction@@N where several paths converge on the @@lNorth Lantern Gate@@N approach. The junction handles traffic from the road, the patrol corridors, and the inspection lanes, funneling everything toward the gate. @@GDirection markers@@N in the Kowloon administrative style point the way, and @@gKowloon-standard bollards@@N separate foot traffic from cart traffic. The gate itself is visible to the east, its lamp posts flanking the road.
+~
+0 3
+D1
+~
+~
+0 -1 15990
+D3
+~
+~
+0 -1 15988
+S
+#15990
+Northern Crown, Wild Fringe~
+A thin strip of @@gwild forest@@N persists here at the very edge of Kowloon's cleared zone, too insignificant for the Wardens to bother clearing but large enough to harbor @@Gsmall wildlife@@N and provide cover for the occasional bold @@RAshfang scout@@N. The strip is monitored but not managed, a concession to the forest charter's restrictions on unnecessary clearing. @@lGame trails@@N thread through the undergrowth.
+~
+0 3
+D1
+~
+~
+0 -1 15991
+D3
+~
+~
+0 -1 15989
+S
+#15991
+Northern Crown, Last Trees~
+The @@gvery last trees@@N of the Great Northern Forest stand here, a small grove of @@Gnorthern spruce@@N that has survived on a rocky outcrop too difficult for Kowloon's forestry teams to clear. The grove is considered @@lsacred by forest peoples@@N, who maintain it as a living reminder that the forest once extended to Kowloon's very walls. @@gSmall offerings@@N are left at the base of the largest tree, placed by travelers completing or beginning the long journey through the forest.
+~
+0 3
+D1
+~
+~
+0 -1 15992
+D3
+~
+~
+0 -1 15990
+S
+#15992
+Lantern Road, North Gate Approach~
+The @@lLantern Road@@N makes its final approach to the @@gNorth Lantern Gate@@N here, the road surface at its finest and the lantern posts at their most polished. The road is wide enough for @@Gtwo carts@@N to pass abreast, and the curbed edges channel rain water into stone drainage channels. @@gKowloon's architecture@@N dominates the landscape: dressed stone walls, iron-banded posts, and administrative plaques at every turn. The @@lNorth Lantern Gate@@N stands ahead to the east.
+~
+0 3
+D1
+~
+~
+0 -1 15993
+D3
+~
+~
+0 -1 15991
+D2
+~
+~
+0 -1 15972
+S
+#15993
+North Lantern Gate Plaza~
+A small @@gplaza@@N opens before the @@lNorth Lantern Gate@@N, providing space for @@Gqueuing traffic@@N and the formalities of border crossing. The plaza is paved with @@ldressed stone@@N in the Kowloon style, and its center features a @@Wstone monument@@N bearing the text of the forest road charter's final amendment: all northern-bound manifests must carry dual marks. @@gBenches@@N line the plaza's edges for waiting travelers, and a @@lcovered kiosk@@N sells supplies and travel documents.
+~
+0 3
+D1
+~
+~
+0 -1 15994
+D3
+~
+~
+0 -1 15992
+S
+#15994
+North Lantern Gate~
+@@WTwin ironpine gate posts@@N flank the @@lLantern Road@@N here, their surfaces carved with both the @@Glantern-and-scale motif@@N of the forest road charter and the @@gWardens of Iron insignia@@N of Kowloon. This is the @@WNorth Lantern Gate@@N, the formal boundary where the Great Northern Forest ends and Kowloon's jurisdiction begins. A @@gKowloon-standard chalkboard@@N lists current tariff rates and caravan inspection hours. The gate posts bear both the @@Gsplit-pine motif@@N of Ilren Voss, honoring the road's founding, and Kowloon's @@liron gate seal@@N, acknowledging the city's role in maintaining the northern approach. To the south the Lantern Road stretches back through the forest's green depths, and to the north it leads toward @@lKowloon's Iron Gate@@N.
+~
+4 3
+D0
+~
+^north lantern gate~
+1 -1 14095
+D3
+~
+~
+0 -1 15993
+D2
+~
+~
+0 -1 15974
+E
+chalkboard tariff~
+The Kowloon-standard chalkboard is updated weekly by customs officials. It lists tariff rates by cargo category: raw timber, processed goods, luxury items, livestock, and sealed diplomatic pouches. A separate column shows current inspection wait times and the name of the duty officer. The formatting is precise and standardized, every letter chalked in the same careful hand.
+~
+E
+north lantern gate~
+The North Lantern Gate is constructed from massive ironpine timbers banded with iron, built to the same specifications as Kowloon's city gates but incorporating forest motifs alongside the city's standard designs. When closed, the gate blocks passage on the Lantern Road entirely. The gate mechanism is a counterweighted beam system that allows a single officer to open or close the gate.
+~
+S
+#15995
+Kowloon Approach, Gate East~
+The road beyond the North Lantern Gate enters @@gKowloon's cleared approach@@N fully, the @@lLantern Road@@N transitioning seamlessly into the city's road network. The cleared zone is wide and well-maintained, its @@Ggrass cropped short@@N and its sight lines unobstructed. @@gWardens of Iron@@N patrol posts are visible at regular intervals, and the traffic increases as the road approaches the city. The forest is behind, and civilization lies ahead.
+~
+0 2
+D1
+~
+~
+0 -1 15996
+D3
+~
+~
+0 -1 15994
+S
+#15996
+Northern Cleared Zone, East~
+The @@gKowloon cleared zone@@N extends eastward here, a broad expanse of @@lmanaged grassland@@N dotted with patrol posts and @@Gdistance markers@@N. The zone provides Kowloon's defenders with clear fields of observation and fire, a practical expression of the city's military philosophy. The grass ripples in the northern wind, and @@gthe city walls@@N are clearly visible to the north.
+~
+0 2
+D3
+~
+~
+0 -1 15995
+D1
+~
+~
+0 -1 15997
+S
+#15997
+Crown of Antlers, Northeast Spur~
+A @@grocky spur@@N extends from the Northern Crown here, the last significant @@lelevation@@N before the land levels toward Kowloon's approach zone. The spur is @@Gbarren and windswept@@N, its exposed rock offering no shelter from the elements. The view from the spur's tip encompasses both the forest stretching south and the cleared zone extending north, a boundary between two worlds. @@WBleached antler offerings@@N mark the spur as sacred ground.
+~
+0 5
+D1
+~
+~
+0 -1 15998
+D3
+~
+~
+0 -1 15996
+S
+#15998
+Northern Wilderness, Far Reach~
+The @@gfarthest northeast reach@@N of the Great Northern Forest is a @@ldesolate and windswept place@@N where the forest's influence fades to nothing. Scattered @@Gstunted trees@@N grow from cracks in the exposed bedrock, and the ground is bare stone and lichen. The wind is relentless, and the cold penetrates to the bone. Only the most determined travelers or the most dangerous @@gpredators@@N venture this far from the forest's sheltered interior.
+~
+0 5
+D1
+~
+~
+0 -1 15999
+D3
+~
+~
+0 -1 15997
+S
+#15999
+Northern Crown, Eastern Extremity~
+The @@geastern extremity@@N of the Northern Crown and the Great Northern Forest terminates here at a @@lwindswept ridge@@N overlooking the lands beyond. The forest is a @@Gdistant green memory@@N to the southwest, and the cleared approaches of Kowloon lie to the northwest. This is one of the most remote and @@gisolated points@@N in the entire forest, reached only by those who have crossed the full breadth of the Northern Crown. The wind howls across the bare rock, and the solitude is absolute.
+~
+0 5
+D3
+~
+~
+0 -1 15998
+S
+#0
