@@ -99,7 +99,7 @@ The southern exit leads toward the Southern Oasis. The two oases were historical
 
 ### Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
 
-The northern exits (currently connecting to vnums 8880-8889, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records contain the earliest known reference to the Northern Pyramid site. The Sand Sovereign used oasis-trained engineers for the pyramid's construction.
+The northern exits (currently connecting to vnums 8880-8888, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records contain the earliest known reference to the Northern Pyramid site. The Sand Sovereign used oasis-trained engineers for the pyramid's construction.
 
 ### Connection to Midgaard (vnums 3001-3200)
 
@@ -176,7 +176,7 @@ Per `area_file_spec.md` section 13.1:
 - Includes toll barricades, ambush gullies, charter stone ruins, reaver camps, and the first distant views of the palm ring.
 - Key rooms:
   - **8600** Western Gate — entry from the Eastern Desert (vnum 8519 west). Important room, 5+ sentence description. First view of the distant oasis shimmer. Preserves external connection.
-  - **8601-8608** Northern approach exits — connect north to vnums 8880-8889 (future construction). Preserves all eight external connections from the current area.
+  - **8601-8609** Northern approach exits — connect north to vnums 8880-8888 (future construction). Preserves all nine northern external connections from the current area (with 8609 as both connector and bend waypoint).
   - **8609** Southeastern bend — preserved from current layout as a structural waypoint linking the northern connectors to the southern approach.
   - **8610** Reaver Toll Barricade — first hostile chokepoint. Important room, 5+ sentence description. Salvaged timber walls, seized trade goods, armed sentries.
   - **8614** Burned Convoy Basin — evidence of recent reaver violence. Overturned wagons, scattered cargo, bloodstained sand.
@@ -247,7 +247,7 @@ Per `area_file_spec.md` section 8 directional traversal constraints:
 - **Multiple traversal options between macro-zones**: at least 2 branching paths connect each pair of adjacent zones, providing route variety without circular loops.
 - **External exits preserved** at all current connection points:
   - Room 8600 west to vnum 8519 (Eastern Desert)
-  - Rooms 8601-8608 north to vnums 8881-8888 (future construction). Note: current room 8600 connects north to 8880; this is reassigned to 8601 to free 8600 for the primary western entry role.
+  - Rooms 8601-8609 north to vnums 8880-8888 (future construction). This preserves the full existing northern connector count while keeping 8600 focused on the primary western entry role.
   - Room 8699 south to vnum 9800 (Southern Oasis)
 - **Door usage** limited to the Hierophant's sanctum and the east cistern access. Every door exit must have `EX_ISDOOR` (`1`) set in `<locks>`. Door initial state authored through `#RESETS` `D` command. Any locked door (`D` state `2`) must have `<key_vnum>` set to a valid key object vnum.
 - **Named exits** use `^` prefix on keywords (e.g., `^colonnade~`, `^cistern gate~`) so movement messaging treats them as standalone noun phrases. Each named exit keyword must appear in the room's `<description>~`, an object in the room, or an `E` extra description.
@@ -616,7 +616,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 - [ ] Ensure all extra-description keyword chains are anchored in the room's main `<description>~`.
 - [ ] Preserve all required worldgraph external connectors:
   - 8600 west to 8519 (Eastern Desert)
-  - 8601-8608 north to 8880-8888 (future construction)
+  - 8601-8609 north to 8880-8888 (future construction)
   - 8699 south to 9800 (Southern Oasis)
 
 ### Mobiles
