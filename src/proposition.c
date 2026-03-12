@@ -6,13 +6,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <errno.h>
 #include "globals.h"
 
 typedef struct static_prop_template_data STATIC_PROP_TEMPLATE;
 struct static_prop_template_data
 {
     int id;
-    const char *title;
+    char *title;
     int prerequisite_static_id;
     int type;
     int num_targets;
@@ -24,128 +25,212 @@ struct static_prop_template_data
     int reward_qp;
     int reward_item_vnum;
     int reward_item_count;
+    char *accept_message;
+    char *completion_message;
 };
 
-static const STATIC_PROP_TEMPLATE static_prop_table[] = {
-    {
-        .id = 0,
-        .title = "Route reconnaissance: Forest of Confusion",
-        .prerequisite_static_id = -1,
-        .type = PROP_TYPE_KILL_VARIETY,
-        .num_targets = 3,
-        .target_vnum = {9601, 9602, 9603, 0, 0},
-        .kill_needed = 0,
-        .min_level = 20,
-        .offerer_vnum = 13001,
-        .reward_gold = 1200,
-        .reward_qp = 2,
-        .reward_item_vnum = 0,
-        .reward_item_count = 0,
-    },
-    {
-        .id = 1,
-        .title = "Conclave residue containment",
-        .prerequisite_static_id = 0,
-        .type = PROP_TYPE_KILL_COUNT,
-        .num_targets = 1,
-        .target_vnum = {1011, 0, 0, 0, 0},
-        .kill_needed = 8,
-        .min_level = 40,
-        .offerer_vnum = 13001,
-        .reward_gold = 2200,
-        .reward_qp = 3,
-        .reward_item_vnum = 0,
-        .reward_item_count = 0,
-    },
-    {
-        .id = 2,
-        .title = "Eastern trade road interdiction",
-        .prerequisite_static_id = 1,
-        .type = PROP_TYPE_KILL_VARIETY,
-        .num_targets = 3,
-        .target_vnum = {29904, 29909, 29932, 0, 0},
-        .kill_needed = 0,
-        .min_level = 55,
-        .offerer_vnum = 3015,
-        .reward_gold = 3600,
-        .reward_qp = 4,
-        .reward_item_vnum = 0,
-        .reward_item_count = 0,
-    },
-    {
-        .id = 3,
-        .title = "Sealed-warrant courier disruption",
-        .prerequisite_static_id = 2,
-        .type = PROP_TYPE_KILL_VARIETY,
-        .num_targets = 3,
-        .target_vnum = {8500, 10159, 11485, 0, 0},
-        .kill_needed = 0,
-        .min_level = 70,
-        .offerer_vnum = 3015,
-        .reward_gold = 5000,
-        .reward_qp = 5,
-        .reward_item_vnum = 0,
-        .reward_item_count = 0,
-    },
-    {
-        .id = 4,
-        .title = "Blightfront quarantine sweep",
-        .prerequisite_static_id = 3,
-        .type = PROP_TYPE_KILL_VARIETY,
-        .num_targets = 3,
-        .target_vnum = {10012, 1030, 1050, 0, 0},
-        .kill_needed = 0,
-        .min_level = 85,
-        .offerer_vnum = 3015,
-        .reward_gold = 7000,
-        .reward_qp = 6,
-        .reward_item_vnum = 0,
-        .reward_item_count = 0,
-    },
-};
+#define PROP_STATIC_DIR "../propositions"
 
-#define STATIC_PROP_COUNT (sizeof(static_prop_table) / sizeof(static_prop_table[0]))
+static STATIC_PROP_TEMPLATE *static_prop_table = NULL;
+static int static_prop_count = 0;
 
-typedef struct static_prop_lore_data STATIC_PROP_LORE;
-struct static_prop_lore_data
+static bool read_prop_line(FILE *fp, char *buf, size_t size)
 {
-    int id;
-    const char *accept_message;
-    const char *completion_message;
-};
+    while (fgets(buf, (int)size, fp) != NULL)
+    {
+        char *p;
+        size_t len;
 
-static const STATIC_PROP_LORE static_prop_lore_table[] = {
-    {0,
-     "Kiess route clerks need fresh threat marks from the Forest of Confusion approaches, and the courier lantern office wants your field notes attached to each kill report. Verify the catrat packs currently disrupting waypoint runners so dispatch can stop guessing at which trails are still safe. Mark where you engaged them so Wall Command can update the next road watch rotation.",
-     "Your report confirms the catrat pattern and gives Kiess dispatchers a safer outbound schedule along Roc Road staging routes. Couriers are already re-timing lantern relays using your notes, and the post has reopened two suspended handoff points. For now, caravan messages are moving without the blind delays that had begun to stack up at the gate offices."},
-    {1,
-     "Compact archives flagged new fungal migration near former Conclave transfer trails, and quartermasters fear the bloom is following old prisoner routes toward active supply lines. Thin the crawler spread before it reaches Kiess convoy camps and contaminates bandage, ration, and reagent stores. Temple wardens will compare your kill tallies against archive maps to locate the next containment burn line.",
-     "Containment teams now have room to burn out the bloom edge, and Kiess quartermasters can move healers and rations without fungal overruns. Archive clerks logged your sweep against sealed transfer maps, confirming the worst pockets were on the same legacy corridor. The city is treating this as proof that Conclave-era routes are still a living hazard, not just a historical stain."},
-    {2,
-     "Midgaard's post office is prioritizing eastern manifests after repeated raids on caravans carrying civic cargo, legal packets, and temple-certified inventories. Interdict the known raider cells striking desert-linked commerce before the lane is written off as uninsurable. Bring back enough confirmation that convoy masters can justify reopening regular departures under escort instead of emergency-only runs.",
-     "The raid pattern has been broken long enough for convoy masters to reopen regular eastern departures under guarded schedules. Posted manifest queues are moving again, and bonded couriers have stopped requesting double hazard surcharges for every desert consignment. Midgaard's ledgerhouse has already issued a revised risk bulletin citing your interdiction work as the turning point."},
-    {3,
-     "Reckoning clerks suspect old sealed-warrant networks survive through cult and courier intermediaries who still move testimony, names, and transfer records off-book. Disrupt each linked courier faction before they can purge caches or reroute through shrine safehouses. The postmaster wants this handled quickly: once they realize the chain is mapped, they'll burn evidence rather than defend it.",
-     "The courier chain is fractured and several hidden routes are now exposed, including relay points thought lost since the Unindexed Years. Midgaard archivists finally have time to cross-reference recovered testimony before handlers can falsify replacement ledgers. For the first time in years, Reckoning clerks believe they can prove custody lines instead of arguing from rumor."},
-    {4,
-     "Scouts report blight pressure advancing along routes shared by Midgaard and Kiess caravans, with outbreak vectors converging on the same logistical choke points. Cull the identified vectors before the fronts merge into a single corridor-wide quarantine event. If this line breaks, both cities lose clean movement for medicine, grain, and reinforcement traffic.",
-     "Blightfront pressure has eased and the quarantine cordon is holding across the shared trade corridor. Route wardens report clean transit windows long enough to rotate supplies and rebuild burned checkpoints. Trade can move again while containment crews reinforce the line, and both post offices have shifted from crisis dispatches back to scheduled service."}};
+        while (*buf != '\0' && isspace(*buf))
+            memmove(buf, buf + 1, strlen(buf));
+        if (buf[0] == '\0' || buf[0] == '\n' || buf[0] == '#')
+            continue;
 
-#define STATIC_PROP_LORE_COUNT (sizeof(static_prop_lore_table) / sizeof(static_prop_lore_table[0]))
+        len = strlen(buf);
+        while (len > 0 && (buf[len - 1] == '\n' || buf[len - 1] == '\r'))
+            buf[--len] = '\0';
 
-static const STATIC_PROP_LORE *find_static_prop_lore(int static_id)
+        p = buf + strlen(buf);
+        while (p > buf && isspace(*(p - 1)))
+            *(--p) = '\0';
+
+        if (buf[0] == '\0')
+            continue;
+
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static bool load_static_prop_file(const char *path, int id)
+{
+    FILE *fp;
+    char line[MAX_STRING_LENGTH];
+    STATIC_PROP_TEMPLATE tpl;
+    STATIC_PROP_TEMPLATE *grown;
+    int i;
+    char *token;
+
+    fp = fopen(path, "r");
+    if (fp == NULL)
+        return FALSE;
+
+    memset(&tpl, 0, sizeof(tpl));
+    tpl.id = id;
+    tpl.prerequisite_static_id = -1;
+    tpl.accept_message = str_dup("");
+    tpl.completion_message = str_dup("");
+
+    if (!read_prop_line(fp, line, sizeof(line)))
+    {
+        bugf("load_static_prop_file: missing title in %s", path);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
+        fclose(fp);
+        return FALSE;
+    }
+    tpl.title = str_dup(line);
+
+    if (!read_prop_line(fp, line, sizeof(line)) ||
+        sscanf(line, "%d %d %d %d %d %d %d %d %d %d",
+               &tpl.prerequisite_static_id,
+               &tpl.type,
+               &tpl.num_targets,
+               &tpl.kill_needed,
+               &tpl.min_level,
+               &tpl.offerer_vnum,
+               &tpl.reward_gold,
+               &tpl.reward_qp,
+               &tpl.reward_item_vnum,
+               &tpl.reward_item_count) != 10)
+    {
+        bugf("load_static_prop_file: bad numeric line in %s", path);
+        free_string(tpl.title);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
+        fclose(fp);
+        return FALSE;
+    }
+
+    if (!read_prop_line(fp, line, sizeof(line)))
+    {
+        bugf("load_static_prop_file: missing target line in %s", path);
+        free_string(tpl.title);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
+        fclose(fp);
+        return FALSE;
+    }
+
+    token = strtok(line, " \t");
+    for (i = 0; i < PROP_MAX_TARGETS && token != NULL; i++)
+    {
+        tpl.target_vnum[i] = atoi(token);
+        token = strtok(NULL, " \t");
+    }
+
+    if (tpl.num_targets < 0 || tpl.num_targets > PROP_MAX_TARGETS)
+    {
+        bugf("load_static_prop_file: invalid target count in %s", path);
+        free_string(tpl.title);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
+        fclose(fp);
+        return FALSE;
+    }
+
+    if (read_prop_line(fp, line, sizeof(line)))
+        tpl.accept_message = str_dup(line);
+
+    if (read_prop_line(fp, line, sizeof(line)))
+        tpl.completion_message = str_dup(line);
+
+    grown = realloc(static_prop_table, sizeof(*grown) * (static_prop_count + 1));
+    if (grown == NULL)
+    {
+        bug("load_static_prop_file: out of memory growing static proposition table", 0);
+        free_string(tpl.title);
+        free_string(tpl.accept_message);
+        free_string(tpl.completion_message);
+        fclose(fp);
+        return FALSE;
+    }
+
+    static_prop_table = grown;
+    static_prop_table[static_prop_count++] = tpl;
+    fclose(fp);
+    return TRUE;
+}
+
+void proposition_load_static_templates(void)
+{
+    char path[MAX_STRING_LENGTH];
+    char buf[MAX_STRING_LENGTH];
+    int i;
+
+    if (static_prop_table != NULL)
+    {
+        for (i = 0; i < static_prop_count; i++)
+        {
+            free_string(static_prop_table[i].title);
+            free_string(static_prop_table[i].accept_message);
+            free_string(static_prop_table[i].completion_message);
+        }
+        free(static_prop_table);
+        static_prop_table = NULL;
+        static_prop_count = 0;
+    }
+
+    for (i = 1; i <= PROP_MAX_STATIC_PROPOSITIONS; i++)
+    {
+        snprintf(path, sizeof(path), "%s/%d.prop", PROP_STATIC_DIR, i);
+        load_static_prop_file(path, i - 1);
+    }
+
+    snprintf(buf, sizeof(buf), "Loaded %d static proposition template%s from %s.",
+             static_prop_count,
+             static_prop_count == 1 ? "" : "s",
+             PROP_STATIC_DIR);
+    log_string(buf);
+}
+
+static const STATIC_PROP_TEMPLATE *find_static_prop_template(int static_id)
 {
     int i;
 
-    for (i = 0; i < (int)STATIC_PROP_LORE_COUNT; i++)
-    {
-        if (static_prop_lore_table[i].id == static_id)
-            return &static_prop_lore_table[i];
-    }
+    for (i = 0; i < static_prop_count; i++)
+        if (static_prop_table[i].id == static_id)
+            return &static_prop_table[i];
 
     return NULL;
 }
 
+
+#ifdef UNIT_TEST_PROPOSITION
+int proposition_unit_static_count(void)
+{
+    return static_prop_count;
+}
+
+const char *proposition_unit_static_title(int static_id)
+{
+    const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
+    return tpl != NULL ? tpl->title : NULL;
+}
+
+const char *proposition_unit_static_accept_message(int static_id)
+{
+    const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
+    return tpl != NULL ? tpl->accept_message : NULL;
+}
+
+const char *proposition_unit_static_completion_message(int static_id)
+{
+    const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
+    return tpl != NULL ? tpl->completion_message : NULL;
+}
+#endif
 
 static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl);
 
@@ -373,7 +458,7 @@ static void proposition_list_static(CHAR_DATA *ch, CHAR_DATA *postman)
     ps_lvl = get_psuedo_level(ch);
     send_to_char("@@Y=== Available Static Propositions ===@@N\n\r", ch);
 
-    for (i = 0; i < (int)STATIC_PROP_COUNT; i++)
+    for (i = 0; i < static_prop_count; i++)
     {
         const STATIC_PROP_TEMPLATE *tpl = &static_prop_table[i];
         if (tpl->id >= 0 && tpl->id < PROP_MAX_STATIC_PROPOSITIONS &&
@@ -422,11 +507,10 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
 {
     int slot, i;
     const STATIC_PROP_TEMPLATE *tpl;
-    const STATIC_PROP_LORE *lore;
     PROPOSITION_DATA *prop;
     char buf[MAX_STRING_LENGTH];
 
-    if (list_number < 1 || list_number > (int)STATIC_PROP_COUNT)
+    if (list_number < 1 || list_number > static_prop_count)
     {
         send_to_char("That proposition number is not valid.\n\r", ch);
         return;
@@ -494,10 +578,9 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
     sprintf(buf, "@@GYou accepted static proposition [%d] in slot %d:@@N %s\n\r",
             list_number, slot + 1, tpl->title);
     send_to_char(buf, ch);
-    lore = find_static_prop_lore(tpl->id);
-    if (lore != NULL && lore->accept_message != NULL && lore->accept_message[0] != '\0')
+    if (tpl->accept_message != NULL && tpl->accept_message[0] != '\0')
     {
-        sprintf(buf, "@@WQuest briefing:@@N %s\n\r", lore->accept_message);
+        sprintf(buf, "@@WQuest briefing:@@N %s\n\r", tpl->accept_message);
         send_to_char(buf, ch);
     }
     show_reward_preview(ch, prop);
@@ -794,10 +877,10 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
     for (slot = 0; slot < PROP_MAX_PROPOSITIONS; slot++)
     {
         PROPOSITION_DATA *prop = &ch->pcdata->propositions[slot];
-        const STATIC_PROP_LORE *lore;
-        int gold_reward;
+            int gold_reward;
         int qp_reward;
         int i;
+        const STATIC_PROP_TEMPLATE *tpl;
 
         if (prop->prop_type == PROP_TYPE_NONE || !prop->prop_completed)
             continue;
@@ -817,10 +900,10 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
 
         if (prop->prop_static_id >= 0)
         {
-            lore = find_static_prop_lore(prop->prop_static_id);
-            if (lore != NULL && lore->completion_message != NULL && lore->completion_message[0] != '\0')
+            tpl = find_static_prop_template(prop->prop_static_id);
+            if (tpl != NULL && tpl->completion_message != NULL && tpl->completion_message[0] != '\0')
             {
-                sprintf(buf, "@@WCompletion report:@@N %s\n\r", lore->completion_message);
+                sprintf(buf, "@@WCompletion report:@@N %s\n\r", tpl->completion_message);
                 send_to_char(buf, ch);
             }
         }

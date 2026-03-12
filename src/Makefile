@@ -291,7 +291,7 @@ unit-test-act-obj: test_act_obj.o act_obj.unit-test.o test_is_fighting.o
 	$(CC) -Wl,--gc-sections -o unit-test-act-obj test_act_obj.o act_obj.unit-test.o test_is_fighting.o $(L_FLAGS)
 
 proposition.unit-test.o: proposition.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o proposition.unit-test.o proposition.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_PROPOSITION -ffunction-sections -fdata-sections -o proposition.unit-test.o proposition.c
 
 unit-test-proposition: test_proposition.o proposition.unit-test.o test_is_fighting.o
 	rm -f unit-test-proposition

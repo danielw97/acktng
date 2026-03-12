@@ -36,5 +36,6 @@ void proposition_kill_notify args((CHAR_DATA *ch, CHAR_DATA *victim));
 void proposition_obj_notify  args((CHAR_DATA *ch, OBJ_DATA  *obj));
 void proposition_cancel      args((CHAR_DATA *ch, int slot));
 void clear_proposition       args((CHAR_DATA *ch));
+void proposition_load_static_templates args((void));
 
 #endif /* PROPOSITION_H */
