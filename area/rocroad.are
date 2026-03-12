@@ -806,16 +806,15 @@ S
 The road reaches its western terminus at the threshold of @@yKiess's East Gate@@N, the fortified entrance to the trade city that anchors the western end of Roc Road.  Kiess's walls rise high and strong, built on the foundations of old Evermeet and improved with the hard-won engineering of a city that learned from its predecessor's fall.  A @@pweathered stone@@N set into the road's edge bears two names: the older @@p"Evermeet"@@N carved deep in the stone, and the newer @@y"Kiess"@@N painted boldly over it.  The road that began at Midgaard's civic formality ends here at Kiess's commercial pragmatism — two cities linked by a single contested artery.
 ~
 0 3
-D0
-The great @@ygate@@N of Kiess opens to the north.
-~
-~
-0 -1 13095
 D1
 The road leads east toward the @@Wgate approach@@N.
 ~
 ~
 0 -1 3242
+D3
+~
+~
+0 -1 13059
 E
 weathered stone~
 The @@pweathered stone@@N is a flat slab of dark granite set into the road's edge at ground level.  The name @@p"Evermeet"@@N is carved deep into the stone in a formal script, its letters still crisp despite centuries of wear.  Over this, the name @@y"Kiess"@@N has been painted in bold trade notation, renewed regularly.  The layering tells the road's western history: a fortified city fell, a trade city rose on its foundations, and the road that connected both to the east endured through the change.
