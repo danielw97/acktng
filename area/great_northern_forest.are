@@ -5780,6 +5780,10 @@ D3
 ~
 ~
 0 -1 15862
+D0
+~
+~
+0 -1 15883
 D2
 ~
 ~
@@ -5882,6 +5886,10 @@ D3
 ~
 ~
 0 -1 15869
+D0
+~
+~
+0 -1 15890
 D2
 ~
 ~
@@ -5982,6 +5990,10 @@ D3
 ~
 ~
 0 -1 15875
+D0
+~
+~
+0 -1 15896
 S
 #15877
 Northern Ashfang Outpost~
@@ -6024,4 +6036,600 @@ D2
 ~
 ~
 0 -1 15859
+S
+#15880
+Far Western Deeps~
+The @@gwesternmost@@N reach of the Ancestor Deeps is a place of utter isolation, where the @@Gancient trees@@N grow so close together that movement is restricted to narrow gaps between trunks. @@rLuminescent moss@@N provides the only light, and the @@lcold@@N is bone-deep. No trails reach this far west, and the only signs of passage are animal tracks and the occasional @@gdisturbed patch@@N of forest floor where something large has bedded down.
+~
+1 3
+D1
+~
+~
+0 -1 15881
+S
+#15881
+Ironpine Treant's Domain~
+The @@Gdeepest ironpine grove@@N extends into this area, where the trees are of such incredible age that their growth patterns have become almost geological. @@gBark has petrified@@N on the lower trunks, turning to stone while the upper reaches remain living wood. The ancient @@Gtreant@@N that dwells in these groves could be any one of these enormous trees, indistinguishable until it chooses to move. @@rLuminescent moss@@N creates patterns on the bark that might be natural or might be the treant's slow communication.
+~
+0 3
+D1
+~
+~
+0 -1 15882
+D3
+~
+~
+0 -1 15880
+S
+#15882
+Root Serpent Nest~
+A @@Gtangle of massive roots@@N creates a natural nest here, the spaces between the roots packed with @@gdried leaves and shed skins@@N from the @@Rcoiled root serpents@@N that breed in this area. The nest is deep and complex, extending well beneath the forest floor through @@lroot tunnels@@N that the serpents use for hunting and retreat. The air carries the dry, musky smell of snakes, and the rustle of scales is audible from within the root mass.
+~
+1 3
+D1
+~
+~
+0 -1 15883
+D3
+~
+~
+0 -1 15881
+S
+#15883
+Northern Spirit Passage~
+Another of the deep forest's @@gspirit passages@@N runs through the roots here, narrower and colder than the one to the south. The @@Wwhispering@@N is louder here, almost intelligible, and the @@rluminescent moss@@N on the root walls flickers rapidly as if agitated. The passage connects the @@Gburial sites@@N and standing stone circles that form the spiritual infrastructure of the Ancestor Deeps. The Cairn-Keeper descendants say the dead use these passages on moonless nights.
+~
+1 3
+D1
+~
+~
+0 -1 15884
+D3
+~
+~
+0 -1 15882
+D2
+~
+~
+0 -1 15863
+S
+#15884
+Cairn-Keeper Standing Stones~
+A @@Wcircle of tall standing stones@@N occupies this clearing, their surfaces carved with the most elaborate patterns yet seen: spirals within spirals, antler figures @@ginterlocked with celestial symbols@@N, and text in the ancient pre-city language. These are the @@WCairn-Keeper standing stones@@N, the most sacred site in the Ancestor Deeps and the place where ancestor communion was once practiced. The @@rluminescent moss@@N on the stones pulses in synchrony with a @@lrhythm@@N that matches the human heartbeat.
+~
+4 3
+D1
+~
+~
+0 -1 15885
+D3
+~
+~
+0 -1 15883
+S
+#15885
+Witness Judgment Circle~
+A @@gflat stone circle@@N lies at the center of the standing stones, its surface @@lpolished smooth@@N by centuries of use as a @@Wwitness judgment seat@@N. This is where the old forest custom of communal justice was practiced: disputants presented their cases before assembled witnesses, and the verdict was carved into the surrounding stones. The tradition later influenced the modern warden tribunal system used at the Oath-Crossing. @@gCarved verdicts@@N are still visible on the inner faces of the standing stones.
+~
+4 3
+D1
+~
+~
+0 -1 15886
+D3
+~
+~
+0 -1 15884
+S
+#15886
+Ghost Moth Swarm~
+@@gPale ghost moths@@N fill the air here in dense swarms, their wings creating a constant @@lshimmering curtain@@N of reflected luminescent light. The moths are thicker here than anywhere else in the Ancestor Deeps, drawn to whatever spiritual or biological force concentrates in this area. Moving through the swarm requires pushing through a cloud of soft, fluttering wings. The moths' @@rdust@@N coats every surface in a fine, faintly glowing powder.
+~
+0 3
+D1
+~
+~
+0 -1 15887
+D3
+~
+~
+0 -1 15885
+S
+#15887
+Deep Rootbound Territory~
+The @@RRootbound cult's influence@@N is strongest here in the deep interior, where the boundary between natural forest and @@gcultivated chaos@@N has dissolved entirely. Trees grow in impossible shapes, their branches forming @@Gliving structures@@N that suggest doors, windows, and hallways. @@rCrimson moss@@N coats everything, and the @@lground pulses@@N with a deep vibration that seems to emanate from the earth itself. The cult believes this is where the sleeping forest deity's heartbeat is strongest.
+~
+0 3
+D1
+~
+~
+0 -1 15888
+D3
+~
+~
+0 -1 15886
+S
+#15888
+Rootbound Cult Shrine~
+The @@Rlargest Rootbound shrine@@N outside the Thornmother's grove stands here, a @@gmonolithic structure@@N grown entirely from living wood. The shrine is shaped like an enormous eye, its pupil a @@ldark opening@@N that leads into the hollow interior where the cult performs its most dangerous rites. @@rCrimson tendrils@@N of corrupted moss creep outward from the shrine in all directions, and the air hums with concentrated @@genergy@@N.
+~
+0 3
+D1
+~
+~
+0 -1 15889
+D3
+~
+~
+0 -1 15887
+S
+#15889
+Deep Forest, Northern Approach~
+The Ancestor Deeps begin to thin here as the land rises gradually toward the @@gnorthern ridges@@N. The @@Gancient trees@@N are still enormous, but the canopy is slightly less oppressive, and the @@rluminescent moss@@N yields to patches of normal forest floor. The transition from the Deeps to the Northern Crown is gradual but unmistakable: the air is colder, the wind returns, and the @@llight grows marginally brighter@@N. The deep forest's @@gsupernaturally still atmosphere@@N gives way to natural mountain chill.
+~
+0 3
+D1
+~
+~
+0 -1 15890
+D3
+~
+~
+0 -1 15888
+S
+#15890
+Northern Cairn Row~
+A second row of @@gancient cairns@@N lines the ridge north of the Ancestor Deeps, these ones facing the approaching traveler with their @@Wnorth-facing burial niches@@N visible. The cairns here are older than the southern row, their stones so weathered they have rounded to mere @@lmounds@@N. @@rLuminescent moss@@N still marks them faintly, the last signature of the deep forest reaching up into the transitional zone. @@GSmall shrubs@@N have taken root in the cairn stones.
+~
+0 3
+D1
+~
+~
+0 -1 15891
+D3
+~
+~
+0 -1 15889
+D2
+~
+~
+0 -1 15870
+D0
+~
+~
+0 -1 15910
+S
+#15891
+Ancestor Deeps Trail, North End~
+The @@gancient trail@@N through the Ancestor Deeps reaches its northern terminus here, marked by a @@lfinal stack of directional stones@@N that points south toward the standing stone circles and north toward the @@Gnorthern approaches@@N. The trail has served as the primary route through the Deeps for longer than either city has existed, and the directional stones at this end bear both the oldest @@gcairn-keeper marks@@N and newer warden symbols.
+~
+0 3
+D1
+~
+~
+0 -1 15892
+D3
+~
+~
+0 -1 15890
+S
+#15892
+Road Approach, Oath-Crossing~
+The trail from the deep forest converges with the @@lLantern Road@@N here as both approach the @@WOath-Crossing@@N from the south. The road is at its most formal in this stretch, its surface dressed stone and its @@glantern posts@@N freshly maintained. A @@Wstone marker@@N announces the Oath-Crossing precinct and reminds travelers that the site is neutral ground under the joint protection of both cities. The surrounding forest is old but well-managed, the trees trimmed back from the road.
+~
+0 3
+D1
+~
+~
+0 -1 15893
+D3
+~
+~
+0 -1 15891
+S
+#15893
+The Oath-Crossing~
+@@WThe Oath-Crossing@@N is the most sacred secular site in the Great Northern Forest, a @@gclearing@@N where envoys from Midgaard and Kowloon first signed the forest road charter that turned the Lantern Road from a contested track into a protected diplomatic corridor. @@WFour witness stones@@N stand at the clearing's corners, each carved with the full text of the original charter in both Midgaard script and Kowloon thread-knot cipher. A @@lcentral covenant stone@@N bears the signatures of every warden-captain who has served since the signing. The clearing is maintained to immaculate condition by wardens from both cities, the grass trimmed short and the stones cleaned of moss. An @@gancestor ring ward gate@@N controls the eastern approach, a reminder that this site predates both cities' claims and remains under the protection of the old forest customs.
+~
+4 2
+D0
+~
+~
+0 -1 15913
+D3
+~
+~
+0 -1 15892
+D1
+~
+^ancestor ring ward gate~
+1 -1 15894
+E
+witness stones covenant charter~
+The four witness stones are massive slabs of pale granite, each taller than a person and inscribed on all faces. The charter text begins with: 'No army may march the Lantern Road in war formation.' The remaining articles establish timbering restrictions, shrine grove protections, dual-city warden authority, and the later amendment requiring dual-marked manifests. Carved at each stone's base is the date of the original signing and the names of the first envoys from both cities.
+~
+E
+ancestor ring ward gate~
+The ancestor ring ward gate is a heavy construction of ironpine timber and dressed stone, built in the hybrid style that combines Midgaard's practical engineering with the old forest's ceremonial aesthetic. Antler motifs crown the gate posts, and the lantern-and-scale motif marks the lintel. When closed, the gate blocks the eastern approach to the Oath-Crossing, a checkpoint that predates the modern warden system.
+~
+S
+#15894
+Oath-Crossing, Eastern Approach~
+The @@geastern approach@@N to the @@WOath-Crossing@@N passes through an area of @@Gmanaged forest@@N where the trees have been thinned to provide clear sight lines. The @@gancestor ring ward gate@@N stands to the west, controlling access to the sacred clearing. On this side of the gate, the forest returns to its natural density, and the @@lLantern Road@@N continues northward through increasingly cold and misty terrain. @@rFaint luminescent moss@@N still marks the north-facing tree trunks.
+~
+0 3
+D3
+~
+^ancestor ring ward gate~
+1 -1 15893
+D1
+~
+~
+0 -1 15895
+E
+ancestor ring ward gate~
+From the eastern side, the ward gate shows its age: the ironpine timbers are darkened by centuries of weather, and the stone footings have been repaired and reinforced many times. Despite its age, the gate remains functional and imposing, a physical reminder of the old forest customs that still govern the Oath-Crossing site.
+~
+S
+#15895
+Northern Deeps Transition~
+The forest shifts character here as the @@gAncestor Deeps@@N give way to the rising terrain of the @@lNorthern Crown@@N approaches. The ground becomes rockier and the trees transition from @@Gghost birch@@N to a mix of cold-hardy ironpine and northern spruce. The @@rluminescent moss@@N disappears entirely, replaced by normal lichens and ground cover. @@gMist pools@@N in the low points between ridges, reducing visibility even in daylight.
+~
+0 3
+D1
+~
+~
+0 -1 15896
+D3
+~
+~
+0 -1 15894
+S
+#15896
+Northern Ridge, Elk Grazing~
+A @@gbroad alpine meadow@@N opens on the ridge here, its grasses cropped short by the @@Gcrown elk herds@@N that graze these northern slopes. The meadow is bounded by forest on three sides and a steep drop on the fourth, creating a natural @@ggrazing enclosure@@N that the elk return to seasonally. @@lBull elk tracks@@N of impressive size cross the meadow, and the grass is dotted with the @@gdroppings@@N of a large herd.
+~
+0 2
+D1
+~
+~
+0 -1 15897
+D3
+~
+~
+0 -1 15895
+D2
+~
+~
+0 -1 15876
+D0
+~
+~
+0 -1 15916
+S
+#15897
+Frost-Touched Hollow~
+A @@ldeep hollow@@N between ridges is permanently cold here, frost clinging to the @@ggrass and ferns@@N even when temperatures above are mild. The hollow channels cold air from the northern heights, creating a microclimate where @@Gfrost-adapted plants@@N thrive and ice forms on standing water year-round. The @@gfrost-touched wolves@@N that hunt the Northern Crown are drawn to hollows like this, their thick pelts adapted to the perpetual chill.
+~
+0 3
+D1
+~
+~
+0 -1 15898
+D3
+~
+~
+0 -1 15896
+S
+#15898
+Mist-Shadow Valley~
+A narrow @@gvalley@@N between steep-sided ridges is perpetually filled with @@lcold mist@@N that reduces visibility to a few arm-lengths. The mist is dense and clinging, depositing moisture on every surface and muffling all sound. @@GMist-shadow cats@@N hunt in valleys like this, using the reduced visibility to approach prey undetected. Movement through the mist is disorienting, and the valley walls prevent navigation by landmarks.
+~
+1 3
+D1
+~
+~
+0 -1 15899
+D3
+~
+~
+0 -1 15897
+S
+#15899
+Eastern Mist Ridge~
+The @@geastern ridge@@N of the Ancestor Deeps rises here above the mist-filled valleys below, offering a view of @@lwhite cloud banks@@N settling between the forested ridges like a river of fog. The ridge itself is above the mist line, @@Gwindswept and clear@@N, with scattered ironpines and exposed granite. To the north, the Northern Crown's higher peaks are visible above the mist, their summits dusted with early snow even in @@gsummer@@N.
+~
+0 5
+D3
+~
+~
+0 -1 15898
+S
+#15900
+Northern Crown, Western Rim~
+The @@gwestern rim@@N of the Northern Crown rises steeply here, the forested slope giving way to @@lbare rock and scree@@N at the highest points. The trees that survive at this elevation are stunted and wind-bent, their @@Gbranches all pointing east@@N away from the prevailing gales. @@gCold mist@@N boils up from the valleys below, rolling over the rim in slow waves. The isolation is extreme, and no trails or markers reach this far.
+~
+0 5
+D1
+~
+~
+0 -1 15901
+S
+#15901
+Crown Bull Elk Range~
+The @@Gnorthern ridgeline@@N here is part of the @@gcrown bull elk@@N migration route, a corridor the massive animals follow between seasonal grazing grounds. The ground is heavily trampled and marked with @@ldeep hoofprints@@N and antler-scored trees where the bulls spar during rut season. Shed antlers of impressive size lie among the rocks. The elk that use this range are the largest in the forest, their crowns spanning wider than a person's outstretched arms.
+~
+0 2
+D1
+~
+~
+0 -1 15902
+D3
+~
+~
+0 -1 15900
+S
+#15902
+Bone-Crowned Hawk Aerie~
+A @@gcluster of hawk nests@@N occupies the high rocks here, their platforms constructed with unusual materials: @@lbones, antler fragments@@N, and strips of leather alongside the usual sticks and grass. The @@Gbone-crowned hawks@@N of the Northern Crown are larger and more aggressive than their southern cousins, and they @@gdecorating their nests with trophies@@N taken from prey and from raids on traveler camps. The hawks circle overhead with menacing intent.
+~
+0 5
+D1
+~
+~
+0 -1 15903
+D3
+~
+~
+0 -1 15901
+S
+#15903
+Cold Stream Ford~
+A @@lcold stream@@N cuts across the trail here, its waters running fast and @@gclear over a bed@@N of smooth stones. The stream descends from the northern heights and is fed by snowmelt even in summer, making it painfully cold to ford. The crossing is shallow enough to wade but the current is strong, and the @@Gslippery stones@@N make footing treacherous. @@gIce serpents@@N are said to hunt in streams like this.
+~
+0 6
+D1
+~
+~
+0 -1 15904
+D3
+~
+~
+0 -1 15902
+S
+#15904
+Northern Ghost Birch Stand~
+A stand of @@lghost birch@@N grows here in the Northern Crown, their trunks even paler than the Ancestor Deeps specimens, nearly @@Wpure white@@N in the cold mountain light. The birch are the last remnant of the deep forest's character this far north, and their presence marks the boundary between the Deeps' domain and the Crown's colder, sparser ecology. @@gPale fungi@@N grow on the birch trunks, and the @@Gleaf canopy@@N is thin enough to show the sky.
+~
+0 3
+D1
+~
+~
+0 -1 15905
+D3
+~
+~
+0 -1 15903
+S
+#15905
+Mist Viper Den~
+A @@grocky den@@N beneath an overhang of stone harbors a nest of @@Rnorthern mist vipers@@N, their venomous coils visible among the @@lcold stones@@N. The vipers are well-adapted to the Northern Crown's chill, remaining active at temperatures that would slow their southern relatives to torpor. The den entrance is marked by shed skins and the @@gmusty smell@@N of concentrated snake musk. @@GHardy mountain ferns@@N frame the den mouth.
+~
+0 3
+D1
+~
+~
+0 -1 15906
+D3
+~
+~
+0 -1 15904
+S
+#15906
+Rootbound Northern Camp~
+A @@RRootbound cult camp@@N has been established in the Northern Crown, far from the cult's primary territory in the Ancestor Deeps. The camp is small and well-concealed, its shelters @@gwoven into the living brush@@N and nearly invisible from more than a few paces. The @@GCrown Rootbound cultists@@N who operate from this camp are the cult's northern arm, tasked with extending the Thornmother's influence toward Kowloon's approaches.
+~
+0 3
+D1
+~
+~
+0 -1 15907
+D3
+~
+~
+0 -1 15905
+S
+#15907
+Northern Ashfang Territory~
+@@RAshfang territorial markers@@N appear on the trees here, their @@bash-blackened paint@@N stark against the pale bark of northern birch. The Ashfang warbands that operate in the Northern Crown are testing Kowloon's southern defenses, probing the gaps in patrol coverage. The markers here are more aggressive than the southern ones: @@gskull motifs@@N and weapon symbols replacing the simpler clan signs used in the Ironpine Rise.
+~
+0 3
+D1
+~
+~
+0 -1 15908
+D3
+~
+~
+0 -1 15906
+S
+#15908
+Ashfang Northern Warmaster's Camp~
+The @@Rmost dangerous Ashfang camp@@N in the forest stands here, commanded by the @@gnorthern warmaster@@N who directs raids against Kowloon's southern approaches. The camp is better fortified than any other Ashfang position: @@gstone walls@@N supplement the usual stake perimeters, and dedicated watch platforms provide early warning of approaching patrols. The warmaster's shelter is distinguished by a standard bearing @@bash-painted war trophies@@N of captured Kowloon warden equipment.
+~
+4 3
+D1
+~
+~
+0 -1 15909
+D3
+~
+~
+0 -1 15907
+S
+#15909
+Crown of Antlers Approach, West~
+The trail here begins the approach to the @@WCrown of Antlers@@N, the highest and most remote point in the Great Northern Forest. The trees thin to scattered wind-bent sentinels, and the @@gground is mostly bare rock@@N with patches of @@Galpine grass@@N and @@lmoss@@N. The air is noticeably thinner and colder, and breath clouds heavily even in summer. @@WBleached antler fragments@@N are wedged into rock cracks along the trail, placed there by the stone-antler circle as markers of sacred ground.
+~
+0 5
+D1
+~
+~
+0 -1 15910
+D3
+~
+~
+0 -1 15908
+S
+#15910
+Northern Crown Trail Junction~
+A @@gjunction@@N of trails in the Northern Crown offers routes north toward the Kowloon approaches and west toward the Crown of Antlers. The junction is marked by a @@lstacked stone cairn@@N bearing both warden symbols and stone-antler circle markers. The @@Gview from this point@@N encompasses the northern forest stretching toward the distant cleared approaches of Kowloon, visible as a thin bright line on the horizon on clear days.
+~
+0 4
+D1
+~
+~
+0 -1 15911
+D3
+~
+~
+0 -1 15909
+D2
+~
+~
+0 -1 15890
+S
+#15911
+Courier Lantern Relay~
+A @@gCourier Lantern relay station@@N stands here, one of the signal points maintained by Kowloon's Courier Lantern Office for communication between the city and its southern outposts. The station is a simple stone @@ltower@@N topped with a shuttered lantern mechanism, staffed in rotation by @@Gcourier runners@@N who relay messages using a coded flash system. The relay provides a view of both the next station northward and the forest approaches to the south.
+~
+4 4
+D1
+~
+~
+0 -1 15912
+D3
+~
+~
+0 -1 15910
+S
+#15912
+Lantern Road, Westward Crown Bend~
+The @@lLantern Road@@N bends westward here in the Northern Crown, following the contour of the highest ridge before descending toward Kowloon's cleared approaches. The road is well-maintained in this section, reflecting Kowloon's investment in securing the northern approach. @@gInspection markers@@N on the @@lwaystones@@N show the influence of Kowloon's administrative culture: serial numbers, dates, and @@Ginspector initials@@N in the precise Kowloon style.
+~
+0 3
+D0
+~
+~
+0 -1 15932
+D1
+~
+~
+0 -1 15913
+D3
+~
+~
+0 -1 15911
+S
+#15913
+Lantern Road, Eastern Crown Stretch~
+The @@lLantern Road@@N stretches eastward through the @@gNorthern Crown@@N here, the road surface upgraded to dressed stone in the Kowloon style. Lantern posts are @@Guniformly maintained@@N and spaced at precise intervals, reflecting the Wardens of Iron's systematic approach to road security. Distance markers show Kowloon drawing near, and the @@gcaravan inspection protocols@@N posted at each marker grow more detailed and formal. The forest on both sides is managed rather than wild, with @@ltrimmed sight lines@@N and cleared patrol corridors.
+~
+0 3
+D3
+~
+~
+0 -1 15912
+D2
+~
+~
+0 -1 15893
+D1
+~
+~
+0 -1 15914
+S
+#15914
+Kowloon Patrol Corridor~
+A @@gpatrol corridor@@N has been cleared through the forest here, its @@ltrimmed width@@N maintained by the Wardens of Iron to provide clear lines of sight and prevent ambush. The corridor runs parallel to the road, a second route for military patrols that allows wardens to flank threats on the main road. @@GThe trees@@N at the corridor's edges are marked with Kowloon patrol signs at regular intervals.
+~
+0 3
+D1
+~
+~
+0 -1 15915
+D3
+~
+~
+0 -1 15913
+S
+#15915
+Warden Signal Fire~
+A @@gsignal fire platform@@N stands at the highest point of the Northern Crown road section, its @@liron brazier@@N ready to be lit at the first sign of large-scale threat. The platform provides a @@Gcommanding view@@N of the surrounding forest and road approaches, and is connected to Kowloon's defensive alert system. The brazier is kept loaded with oil-soaked kindling year-round, and @@gwardens check it daily@@N.
+~
+4 4
+D1
+~
+~
+0 -1 15916
+D3
+~
+~
+0 -1 15914
+S
+#15916
+Northern Ridge, Elk Country~
+The @@gridge@@N widens here into a broad @@Galpine plateau@@N where the crown elk herds gather in summer. The plateau is bounded by forest on three sides and a steep @@ldrop@@N on the fourth, creating a natural amphitheater. @@gElk tracks@@N and grazing signs are everywhere, and the grass is cropped to a uniform height by the herd's constant feeding. @@GWild flowers@@N bloom in patches among the grass.
+~
+0 2
+D1
+~
+~
+0 -1 15917
+D3
+~
+~
+0 -1 15915
+D2
+~
+~
+0 -1 15896
+S
+#15917
+Frost-Wolf Valley~
+A @@lcold valley@@N between ridges harbors a pack of @@gfrost-touched wolves@@N, their territory marked by scent posts and @@Rclaw-scored trees@@N along the valley rim. The wolves in this valley are adapted to the Northern Crown's perpetual chill, their thick grey-white pelts blending with the frost and mist that fills the valley. The @@Gvalley floor@@N is littered with bones from the pack's kills.
+~
+0 3
+D1
+~
+~
+0 -1 15918
+D3
+~
+~
+0 -1 15916
+S
+#15918
+Mist-Shadow Cat Territory~
+The @@Gdense northern forest@@N is prime hunting ground for the @@gmist-shadow cats@@N here, the perpetual mist providing perfect cover for their ambush tactics. The cats leave @@Rfew traces@@N of their presence: only the occasional claw mark on a tree trunk and the @@labsence of prey animals@@N suggest a predator is operating in the area. The mist is thick enough to muffle sound, making the cats' approach nearly impossible to detect.
+~
+1 3
+D1
+~
+~
+0 -1 15919
+D3
+~
+~
+0 -1 15917
+S
+#15919
+Eastern Crown Overlook~
+The @@geastern edge@@N of the Northern Crown offers a final @@loverlook@@N before the land descends toward the eastern lowlands. The view extends across the @@Grolling canopy@@N of the entire forest, from the distant southern verge to the peaks of the Crown itself. On clear days, Kowloon's walls are visible as a faint @@gline@@N on the northern horizon. The overlook is exposed to wind from every direction, and the cold is fierce.
+~
+0 5
+D3
+~
+~
+0 -1 15918
 S
