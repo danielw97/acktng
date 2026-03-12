@@ -615,7 +615,7 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 **Postman vnums:**
 - Midgaard: `3015`
 - Kiess: `13001`
-- Kowloon: `14001`
+- Kowloon: TBD (area not yet implemented; mob vnum will be in the `14040-14069` service range per `kowloon_plan.md`). Propositions below use placeholder `0` for the offerer vnum until the Kowloon postmaster mob is created.
 
 **File location:** `/propositions/N.prop` (N = proposition ID)
 
@@ -840,21 +840,19 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 | Num targets | `3` |
 | Kill needed | `0` |
 | Min level | `40` |
-| Offerer vnum | `14001` (Kowloon postman) |
+| Offerer vnum | `0` (Kowloon postman — TBD, see note above) |
 | Reward gold | `2500` |
 | Reward QP | `3` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
-| Target vnums | `3218` (coastal carrion gull), `3219` (plains stalker), `3235` (road-weary pilgrim) |
+| Target vnums | `3218` (coastal carrion gull), `3219` (plains stalker), `3216` (river ambusher snake) |
 
-**Line 2:** `-1 1 3 0 40 14001 2500 3 0 0`
-**Line 3:** `3218 3219 3235`
+**Line 2:** `-1 1 3 0 40 0 2500 3 0 0`
+**Line 3:** `3218 3219 3216`
 
-**Accept text:** Kowloon's shipping agents report that the western shore terminus of Roc Road has become too dangerous for the small-boat relay crews who transfer sealed diplomatic pouches between overland couriers and coastal vessels. Carrion gulls harass the landing sites, plains stalkers hunt the approach roads, and stranded pilgrims clog the terminus creating confusion that predators exploit. Survey the full threat spectrum — engage one of each — and report conditions so Kowloon's courier office can determine whether to reroute diplomatic traffic through Kiess's harbor instead.
+**Accept text:** Kowloon's shipping agents report that the western shore terminus of Roc Road has become too dangerous for the small-boat relay crews who transfer sealed diplomatic pouches between overland couriers and coastal vessels. Carrion gulls harass the landing sites, plains stalkers hunt the approach roads, and river ambushers threaten the waterside transfer points. Survey the full threat spectrum — engage one of each — and report conditions so Kowloon's courier office can determine whether to reroute diplomatic traffic through Kiess's harbor instead.
 
 **Completion text:** Your threat survey confirms that the western shore terminus remains viable for small-boat relay operations if escort protocols are tightened. Kowloon's courier office has decided to maintain the overland-to-coastal transfer at the current terminus rather than rerouting through Kiess — a decision that keeps Kowloon's diplomatic pouch schedule independent of Kiess harbor fees. The postmaster has forwarded your survey data to the covenant registrar for inclusion in the next quarterly route-risk assessment.
-
-**Note:** Target `3235` (road-weary pilgrim) is a non-aggressive mob; the proposition framing is about surveying the threat environment the pilgrims are part of (they are not the target to kill — but mechanically, the system requires killing the target mob). Consider swapping to `3216` (river ambusher snake) if killing a non-hostile mob is undesirable. *Implementation decision: replace `3235` with a hostile mob vnum if playtesting reveals player discomfort.*
 
 ---
 
@@ -870,14 +868,14 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 | Num targets | `5` |
 | Kill needed | `0` |
 | Min level | `60` |
-| Offerer vnum | `14001` (Kowloon postman) |
+| Offerer vnum | `0` (Kowloon postman — TBD, see note above) |
 | Reward gold | `6000` |
 | Reward QP | `6` |
 | Reward item vnum | `0` |
 | Reward item count | `0` |
 | Target vnums | `3214` (ridge wolf), `3225` (tollbreak enforcer), `3220` (cairn lurker), `3228` (cave squatter), `3219` (plains stalker) |
 
-**Line 2:** `13 1 5 0 60 14001 6000 6 0 0`
+**Line 2:** `13 1 5 0 60 0 6000 6 0 0`
 **Line 3:** `3214 3225 3220 3228 3219`
 
 **Accept text:** Kowloon's covenant registrar has commissioned a full corridor threat assessment spanning the entire length of Roc Road. Diplomatic and commercial traffic flowing from Kowloon through Midgaard and westward to Kiess depends on every segment of this road remaining traversable. Engage one representative threat from each major zone — hills predators, river tollbreak crews, ruin hostiles, cave smugglers, and coastal stalkers — and report the engagement conditions. This is the most comprehensive road survey Kowloon has commissioned since the post-Evermeet reconstruction, and the registrar wants field data from every band.
@@ -897,8 +895,8 @@ Roc Road propositions are static quests offered by the postmasters of the three 
 | 10 | Greenveil Spur reconnaissance | Kill variety (2) | Kiess (13001) | None | 35 | Chain start |
 | 11 | Inlet smuggler crackdown | Kill count (10) | Kiess (13001) | Prop 10 | 50 | Chains from 10 |
 | 12 | Ruin custodian suppression | Kill variety (4) | Midgaard (3015) | None | 50 | — |
-| 13 | Coastal hazard survey | Kill variety (3) | Kowloon (14001) | None | 40 | Chain start |
-| 14 | Transcontinental corridor assessment | Kill variety (5) | Kowloon (14001) | Prop 13 | 60 | Chains from 13 |
+| 13 | Coastal hazard survey | Kill variety (3) | Kowloon (TBD) | None | 40 | Chain start |
+| 14 | Transcontinental corridor assessment | Kill variety (5) | Kowloon (TBD) | Prop 13 | 60 | Chains from 13 |
 
 **Chain structure:**
 - **Midgaard chain:** 7 (Tollbreak Crew) → 8 (Shadow Trade Disruption)
