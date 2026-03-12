@@ -3849,6 +3849,30 @@ void log_f(char *fmt, ...)
 }
 
 /*
+ * Count the line number at the current position in an area file.
+ * Seeks to the start, counts newlines up to the saved position,
+ * and restores the file pointer. Returns the 0-based line number.
+ */
+int count_file_line(FILE *fp)
+{
+   int iLine;
+   int iChar;
+
+   iChar = ftell(fp);
+   fseek(fp, 0, 0);
+   for (iLine = 0; ftell(fp) < iChar; iLine++)
+   {
+      int ch;
+      while ((ch = getc(fp)) != '\n' && ch != EOF)
+         ;
+      if (ch == EOF)
+         break;
+   }
+   fseek(fp, iChar, 0);
+   return iLine;
+}
+
+/*
  * Reports a bug.
  */
 void bug(const char *str, int param)
@@ -3859,23 +3883,8 @@ void bug(const char *str, int param)
    if (fpArea != NULL)
    {
       int iLine;
-      int iChar;
 
-      if (fpArea == stdin)
-      {
-         iLine = 0;
-      }
-      else
-      {
-         iChar = ftell(fpArea);
-         fseek(fpArea, 0, 0);
-         for (iLine = 0; ftell(fpArea) < iChar; iLine++)
-         {
-            while (getc(fpArea) != '\n')
-               ;
-         }
-         fseek(fpArea, iChar, 0);
-      }
+      iLine = (fpArea == stdin) ? 0 : count_file_line(fpArea);
 
       sprintf(buf, "[*****] FILE: %s LINE: %d", strArea, iLine);
       log_string(buf);
@@ -3918,23 +3927,8 @@ void bug_string(const char *str, const char *str2)
    if (fpArea != NULL)
    {
       int iLine;
-      int iChar;
 
-      if (fpArea == stdin)
-      {
-         iLine = 0;
-      }
-      else
-      {
-         iChar = ftell(fpArea);
-         fseek(fpArea, 0, 0);
-         for (iLine = 0; ftell(fpArea) < iChar; iLine++)
-         {
-            while (getc(fpArea) != '\n')
-               ;
-         }
-         fseek(fpArea, iChar, 0);
-      }
+      iLine = (fpArea == stdin) ? 0 : count_file_line(fpArea);
 
       sprintf(buf, "[*****] FILE: %s LINE: %d", strArea, iLine);
       log_string(buf);

@@ -12,6 +12,7 @@ void db_test_format_status(char *dest, size_t dest_size, const char *prefix, con
 void db_test_set_area_name(const char *file_name);
 const char *db_test_get_area_name(void);
 int object_spawn_level(int prototype_level, int requested_level);
+int count_file_line(FILE *fp);
 
 
 static void test_object_spawn_level_uses_requested_level_when_present(void)
@@ -896,6 +897,64 @@ static void test_reset_obj_vnums_reference_defined_objects(void)
     fclose(list_fp);
 }
 
+static FILE *create_temp_file(const char *content, size_t len)
+{
+    FILE *fp = tmpfile();
+    assert(fp != NULL);
+    fwrite(content, 1, len, fp);
+    return fp;
+}
+
+static void test_count_file_line_normal_file(void)
+{
+    /* 3 lines with trailing newline */
+    const char *content = "line1\nline2\nline3\n";
+    FILE *fp = create_temp_file(content, strlen(content));
+
+    /* Seek to start of line 3 (offset 12) */
+    fseek(fp, 12, SEEK_SET);
+    assert(count_file_line(fp) == 2);
+
+    /* Seek to start of line 2 (offset 6) */
+    fseek(fp, 6, SEEK_SET);
+    assert(count_file_line(fp) == 1);
+
+    /* Seek to start of file */
+    fseek(fp, 0, SEEK_SET);
+    assert(count_file_line(fp) == 0);
+
+    fclose(fp);
+}
+
+static void test_count_file_line_no_trailing_newline(void)
+{
+    /* File with no trailing newline — the bug that caused an infinite loop */
+    const char *content = "line1\nline2\n#$";
+    FILE *fp = create_temp_file(content, strlen(content));
+
+    /* Seek to the '#' of '#$' (offset 12) */
+    fseek(fp, 12, SEEK_SET);
+    assert(count_file_line(fp) == 2);
+
+    /* Seek to end of file */
+    fseek(fp, (long)strlen(content), SEEK_SET);
+    /* Must terminate, not hang */
+    count_file_line(fp);
+
+    fclose(fp);
+}
+
+static void test_count_file_line_single_line_no_newline(void)
+{
+    const char *content = "#$";
+    FILE *fp = create_temp_file(content, strlen(content));
+
+    fseek(fp, 1, SEEK_SET);
+    assert(count_file_line(fp) == 0);
+
+    fclose(fp);
+}
+
 int main(void)
 {
     test_object_spawn_level_uses_requested_level_when_present();
@@ -907,6 +966,9 @@ int main(void)
     test_area_index_vnums_have_no_duplicates();
     test_exit_destination_vnums_reference_defined_rooms();
     test_reset_obj_vnums_reference_defined_objects();
+    test_count_file_line_normal_file();
+    test_count_file_line_no_trailing_newline();
+    test_count_file_line_single_line_no_newline();
 
     puts("test_db: all tests passed");
     return 0;
