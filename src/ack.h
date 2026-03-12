@@ -1655,6 +1655,7 @@ void gain_exp args((CHAR_DATA * ch, int gain));
 void gain_bloodlust args((CHAR_DATA * ch, int value));
 void gain_condition args((CHAR_DATA * ch, int iCond, int value));
 void update_handler args((void));
+void caravan_update args((void));
 bool check_rewield args((CHAR_DATA * ch));
 bool check_re_equip args((CHAR_DATA * ch));
 void auction_update args((void));

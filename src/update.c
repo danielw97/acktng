@@ -68,7 +68,6 @@ void update_heat_armor(CHAR_DATA *ch);
 void update_buff_duration(CHAR_DATA *ch, int duration_type);
 void round_update_hot(CHAR_DATA *ch);
 void round_update_dot(CHAR_DATA *ch);
-
 int abort_threshold = BOOT_DB_ABORT_THRESHOLD;
 bool disable_timer_abort = FALSE;
 int last_checkpoint;
@@ -2159,6 +2158,7 @@ void update_handler(void)
       obj_update();
       quest_update();
       invasion_update();
+      caravan_update();
 
       /*
        * This will log the number of perms being used...
