@@ -116,20 +116,20 @@ struct static_prop_lore_data
 
 static const STATIC_PROP_LORE static_prop_lore_table[] = {
     {0,
-     "Kiess route clerks need fresh threat marks from the Forest of Confusion approaches. Verify the catrat packs currently disrupting courier waypoints.",
-     "Your report confirms the catrat pattern and gives Kiess dispatchers a safer outbound schedule along Roc Road staging routes."},
+     "Kiess route clerks need fresh threat marks from the Forest of Confusion approaches, and the courier lantern office wants your field notes attached to each kill report. Verify the catrat packs currently disrupting waypoint runners so dispatch can stop guessing at which trails are still safe. Mark where you engaged them so Wall Command can update the next road watch rotation.",
+     "Your report confirms the catrat pattern and gives Kiess dispatchers a safer outbound schedule along Roc Road staging routes. Couriers are already re-timing lantern relays using your notes, and the post has reopened two suspended handoff points. For now, caravan messages are moving without the blind delays that had begun to stack up at the gate offices."},
     {1,
-     "Compact archives flagged new fungal migration near former Conclave transfer trails. Thin the crawler bloom before it reaches Kiess supply caravans.",
-     "Containment teams now have room to burn out the bloom edge. Kiess quartermasters can move healers and rations without fungal overruns."},
+     "Compact archives flagged new fungal migration near former Conclave transfer trails, and quartermasters fear the bloom is following old prisoner routes toward active supply lines. Thin the crawler spread before it reaches Kiess convoy camps and contaminates bandage, ration, and reagent stores. Temple wardens will compare your kill tallies against archive maps to locate the next containment burn line.",
+     "Containment teams now have room to burn out the bloom edge, and Kiess quartermasters can move healers and rations without fungal overruns. Archive clerks logged your sweep against sealed transfer maps, confirming the worst pockets were on the same legacy corridor. The city is treating this as proof that Conclave-era routes are still a living hazard, not just a historical stain."},
     {2,
-     "Midgaard's post office is prioritizing eastern manifests after repeated raids. Interdict the known raider cells hitting desert-linked commerce.",
-     "The raid pattern has been broken long enough for convoy masters to reopen regular eastern departures under guarded schedules."},
+     "Midgaard's post office is prioritizing eastern manifests after repeated raids on caravans carrying civic cargo, legal packets, and temple-certified inventories. Interdict the known raider cells striking desert-linked commerce before the lane is written off as uninsurable. Bring back enough confirmation that convoy masters can justify reopening regular departures under escort instead of emergency-only runs.",
+     "The raid pattern has been broken long enough for convoy masters to reopen regular eastern departures under guarded schedules. Posted manifest queues are moving again, and bonded couriers have stopped requesting double hazard surcharges for every desert consignment. Midgaard's ledgerhouse has already issued a revised risk bulletin citing your interdiction work as the turning point."},
     {3,
-     "Reckoning clerks suspect old sealed-warrant networks survive through cult couriers. Disrupt each linked courier faction before records vanish again.",
-     "The courier chain is fractured and several hidden routes are now exposed. Midgaard archivists finally have time to cross-reference recovered testimony."},
+     "Reckoning clerks suspect old sealed-warrant networks survive through cult and courier intermediaries who still move testimony, names, and transfer records off-book. Disrupt each linked courier faction before they can purge caches or reroute through shrine safehouses. The postmaster wants this handled quickly: once they realize the chain is mapped, they'll burn evidence rather than defend it.",
+     "The courier chain is fractured and several hidden routes are now exposed, including relay points thought lost since the Unindexed Years. Midgaard archivists finally have time to cross-reference recovered testimony before handlers can falsify replacement ledgers. For the first time in years, Reckoning clerks believe they can prove custody lines instead of arguing from rumor."},
     {4,
-     "Scouts report blight pressure advancing along routes shared by Midgaard and Kiess caravans. Cull the identified outbreak vectors before they merge.",
-     "Blightfront pressure has eased and the quarantine cordon is holding. Trade routes can move again while ward crews reinforce the line."}};
+     "Scouts report blight pressure advancing along routes shared by Midgaard and Kiess caravans, with outbreak vectors converging on the same logistical choke points. Cull the identified vectors before the fronts merge into a single corridor-wide quarantine event. If this line breaks, both cities lose clean movement for medicine, grain, and reinforcement traffic.",
+     "Blightfront pressure has eased and the quarantine cordon is holding across the shared trade corridor. Route wardens report clean transit windows long enough to rotate supplies and rebuild burned checkpoints. Trade can move again while containment crews reinforce the line, and both post offices have shifted from crisis dispatches back to scheduled service."}};
 
 #define STATIC_PROP_LORE_COUNT (sizeof(static_prop_lore_table) / sizeof(static_prop_lore_table[0]))
 
