@@ -328,6 +328,26 @@ static void test_loads_static_propositions_with_messages_from_files(void)
     assert(max_level == 39);
 }
 
+static void test_loads_umbra_heartspire_static_chain(void)
+{
+    proposition_load_static_templates();
+
+    assert(strcmp(proposition_unit_static_title(40), "Violet archive stabilization sweep") == 0);
+    assert(strstr(proposition_unit_static_accept_message(40), "Violet Compact clerks") != NULL);
+
+    assert(strcmp(proposition_unit_static_title(41), "Evermeet reliquary quieting") == 0);
+    assert(strstr(proposition_unit_static_completion_message(41), "Kiess heralds") != NULL);
+
+    assert(strcmp(proposition_unit_static_title(42), "Lantern syndic penumbra audit") == 0);
+    assert(strstr(proposition_unit_static_accept_message(42), "Kowloon courier syndics") != NULL);
+
+    assert(strcmp(proposition_unit_static_title(43), "Mirror-Queen injunction service") == 0);
+    assert(strstr(proposition_unit_static_completion_message(43), "injunction targets") != NULL);
+
+    assert(strcmp(proposition_unit_static_title(44), "Noctivar deposition writ") == 0);
+    assert(strstr(proposition_unit_static_accept_message(44), "Abbot Noctivar") != NULL);
+}
+
 int main(void)
 {
     test_extracts_and_saves_when_target_matches();
@@ -340,6 +360,7 @@ int main(void)
     test_cancel_dynamic_sets_cooldown_and_clears_slot();
     test_cancel_static_does_not_set_cooldown();
     test_loads_static_propositions_with_messages_from_files();
+    test_loads_umbra_heartspire_static_chain();
 
     puts("test_proposition: all tests passed");
     return 0;
