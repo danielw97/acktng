@@ -119,9 +119,9 @@ The current `rocroad.are` has the following external exits that **must be preser
 | Current Vnum | Direction | Destination Vnum | Destination Area | Notes |
 |---|---|---|---|---|
 | 3230 | east | 3041 | Midgaard | **East terminus** — Midgaard West Gate link |
-| 3234 | north | 11200 | External area | Branch link north |
+| 3234 | north | 11200 | Umbra Heartspire | Branch link north (close to Midgaard) |
 | 3238 | down | 610 | External area | Vertical link (sub-road access) |
-| 3240 | east | 9601 | Forest of Confusion | Branch to Forest of Confusion |
+| 3240 | east | 9601 | *(removed — Forest of Confusion connects via Kiess north gate, not Roc Road)* | ~~Branch to Forest of Confusion~~ |
 | 3242 | east | 3401 | External area | Branch link east |
 | 3243 | north | 13095 | Kiess | **West terminus** — Kiess South Gate link |
 | 3249 | north | 3290 | Roc Road (internal) | Stone path branch |
@@ -129,7 +129,13 @@ The current `rocroad.are` has the following external exits that **must be preser
 | 3259 | north | 5083 | External sea area | Sea route link |
 | 3291 | north | 4449 | External area | Building/structure link |
 
-**Rebuild rule:** Every external link above must appear in the rebuilt area file, mapped to the new sequential vnum that replaces the original room. If a connection requires a reciprocal exit in the destination area, coordinate with that area's file.
+### New External Links (added in rebuild)
+
+| New Room | Direction | Destination Vnum | Destination Area | Notes |
+|---|---|---|---|---|
+| *(Band A)* | north | 30250 | Cathedral of the Violet Eclipse | Branch link north (very close to Midgaard) |
+
+**Rebuild rule:** Every preserved external link above must appear in the rebuilt area file, mapped to the new sequential vnum that replaces the original room. New links must also be implemented. If a connection requires a reciprocal exit in the destination area, coordinate with that area's file.
 
 ---
 
@@ -152,7 +158,9 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Stone-set roadway under Midgaard charter markers.
 - Guard relays, tax cairns, and old civic inscriptions.
 - Encounter emphasis: patrols, petitioners, minor bandit scouts, courier traffic.
-- **External link:** Room 3201 connects east to `3041` (Midgaard West Gate). This is the canonical east terminus of Roc Road.
+- **External links:**
+  - Room 3201 connects east to `3041` (Midgaard West Gate). This is the canonical east terminus of Roc Road.
+  - One room in this band connects north to `30250` (Cathedral of the Violet Eclipse). Very close to Midgaard — a shadow-liturgical cathedral visible from the road's first stretch.
 
 ### Band B — Banner Hills and Switchbacks (3212-3219, 8 rooms)
 - **Sector types:** `hills` (4) for hill-climb rooms; `mountain` (5) for the high pass and switchback rooms.
@@ -174,6 +182,7 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Drier transition where road maintenance degrades.
 - Old milestone liturgy from pre-Kiess polities resurfaces.
 - Encounter emphasis: scavengers, relic pickers, heat-maddened fauna.
+- **External link:** Room at end of this band connects north to `11200` (Umbra Heartspire). The cathedral-fortress is visible from the road as a dark silhouette against the hills — close enough to Midgaard's jurisdiction that its original charter came from Midgaard's archive system.
 
 ### Band E — Crossroads Compact (3235-3243, 9 rooms)
 - **Sector types:** `field` (2) for road rooms; `forest` (3) for rooms near the forest branch.
@@ -182,11 +191,11 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Rebuilt as a political pressure node with evidence of overlapping jurisdiction.
 - Encounter emphasis: diplomatic envoys, mercenary escorts, opportunist thieves.
 - **External links preserved from this band:**
-  - North to `11200` (branch link north, from former 3234)
+  - North to `11200` (Umbra Heartspire, from former 3234)
   - Down to `610` (vertical sub-road access, from former 3238)
-  - East to `9601` (Forest of Confusion, from former 3240)
   - East to `3401` (branch link east, from former 3242)
   - North to `13095` (Kiess South Gate, from former 3243) — this is the **canonical west terminus** of Roc Road.
+- **Note:** The former `3240 east → 9601` (Forest of Confusion) link is **removed** in the rebuild. The Forest of Confusion connects via Kiess's north gate, not directly from Roc Road.
 
 ### Band F — Greenveil Spur (3244-3252, 9 rooms)
 - **Sector types:** `forest` (3) for all rooms in the forest spur.
@@ -229,7 +238,7 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Existing legacy external links are retained unless world owners request remap:
   - Midgaard West Gate linkage at the east terminus
   - Kiess East Gate linkage at the west terminus
-  - Crossroad/forest branch connectors
+  - Crossroad branch connectors
   - Sea and legacy side-area hooks
 
 ## Mobile Redesign (new full roster)
