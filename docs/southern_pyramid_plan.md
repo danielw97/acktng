@@ -17,7 +17,7 @@
 
 - **Primary:** `@@y` (yellow) — sun-scorched sandstone, golden sarcophagi, amber torch-glow
 - **Secondary:** `@@b` (brown) — cracked clay walls, petrified timber beams, dried mud mortar
-- **Accent:** `@@e` (dark green) — jade inlay, verdigris-stained copper, poisonous lichen
+- **Accent:** `@@G` (green) — jade inlay, verdigris-stained copper, poisonous lichen
 - **Danger:** `@@R` (red) — cursed blood sigils, volcanic vents, boss threat indicators
 - **Text reset:** `@@N` after all color sequences
 
@@ -547,7 +547,7 @@ All strong mobs: `act` = `is_npc(1) | aggressive(32) | stay_area(64) | solo(3355
 | 11627 (mob) | a void-touched juggernaut | 142 | Tier 6, Tier 7 | Massive construct infused with void energy. no_mind. 4_attack, enhanced, parry, counter, nodisarm, notrip. |
 | 11628 (mob) | a cistern matriarch | 140 | Tier 5 | Giant serpentine predator ruling the toxic pools. 4_attack, enhanced, parry, dodge. Spec: spec_poison. |
 | 11629 (mob) | a petrified desert titan | 142 | Ground, Tier 1 | Enormous fossilized humanoid animated by pyramid magic. no_mind. 4_attack, enhanced, parry, nodisarm, notrip. Spec: spec_cast_mage. |
-| 11630 (mob) | a fungal colossus | 138 | Tier 2 | Towering mushroom-creature trailing toxic spores. 3_attack, enhanced, parry. Spec: spec_disease. |
+| 11630 (mob) | a fungal colossus | 138 | Tier 2 | Towering mushroom-creature trailing toxic spores. 3_attack, enhanced, parry. Spec: spec_poison. |
 | 11631 (mob) | a nightmare stalker | 140 | Tier 3, Tier 4 | Apex predator of the shadow tier. 4_attack, enhanced, dodge, trip, counter. |
 
 ---
@@ -584,8 +584,8 @@ All trash: `act` = `is_npc(1) | aggressive(32) | stay_area(64)` = **97**
 | 11486 | a death hawk | 139 | Tier 4, Tier 5 | 2_attack, dodge, kick. |
 | 11487 | a bone revenant | 133 | Tier 4 | undead. 2_attack, enhanced, parry. Def: cure_critic. |
 | 11488 | a void specter | 136 | Tier 5, Tier 6 | undead, no_body. Cast: mindflame, mind_bolt. Def: cure_critic. |
-| 11489 | a carrion fly swarm | 125 | Ground, Tier 1 | Clouds of carrion flies. no_body, no_mind. 2_attack. Spec: spec_disease. |
-| 11490 | a skeletal desert rat | 125 | Ground, Tier 1 | Skeletal undead vermin. no_mind. 2_attack, trip. Spec: spec_disease. |
+| 11489 | a carrion fly swarm | 125 | Ground, Tier 1 | Clouds of carrion flies. no_body, no_mind. 2_attack. Spec: spec_poison. |
+| 11490 | a skeletal desert rat | 125 | Ground, Tier 1 | Skeletal undead vermin. no_mind. 2_attack, trip. Spec: spec_poison. |
 | 11491 | a bone crawler | 127 | Ground, Tier 1 | Animated skeletal mass. undead, no_mind. 3_attack, enhanced. |
 | 11492 | a sand-choked revenant | 129 | Ground, Tier 1 | Revenant packed with sand. undead. 2_attack, enhanced, drain. |
 | 11493 | an animated obelisk shard | 132 | Ground | Fragment of a shattered obelisk. no_mind, sentinel. 3_attack, enhanced, nodisarm. |
@@ -613,7 +613,7 @@ All trash: `act` = `is_npc(1) | aggressive(32) | stay_area(64)` = **97**
 | 11601 (mob) | a whispering wraith | 131 | Tier 1 | Translucent shade that mouths silent curses. undead, no_body. Cast: weaken, blindness, chill_touch. |
 | 11602 (mob) | a calcified serpent | 129 | Tier 1, Tier 2 | Mineralized snake, still strikes. no_mind. 2_attack, dodge. Spec: spec_poison. |
 | 11603 (mob) | a tomb beetle colossus | 136 | Tier 1, Tier 2 | Man-sized scarab with iron mandibles. no_mind. 3_attack, enhanced, parry. |
-| 11604 (mob) | a mold-ridden ghoul | 135 | Tier 2 | Fungal growth erupts from rotting flesh. undead. 2_attack, enhanced, drain. Spec: spec_disease. |
+| 11604 (mob) | a mold-ridden ghoul | 135 | Tier 2 | Fungal growth erupts from rotting flesh. undead. 2_attack, enhanced, drain. Spec: spec_poison. |
 | 11605 (mob) | a bloated corpse walker | 132 | Tier 2 | Swollen cadaver leaking toxic gas. undead. 2_attack, enhanced. |
 | 11606 (mob) | a decay spider | 128 | Tier 2 | Eight-legged creature woven from rotting sinew. 2_attack, dodge, trip. Spec: spec_poison. |
 | 11607 (mob) | a mildew phantom | 134 | Tier 2, Tier 3 | Ghostly outline dripping condensation. undead, no_body. Cast: chill_touch, weaken. Def: cure_light. |
@@ -1030,8 +1030,8 @@ M 11481 spec_cast_undead     creeping shadow
 M 11484 spec_poison          venomous golden cobra
 M 11485 spec_cast_mage       bone cultist
 M 11488 spec_cast_undead     void specter
-M 11489 spec_disease         carrion fly swarm
-M 11490 spec_disease         skeletal desert rat
+M 11489 spec_poison          carrion fly swarm
+M 11490 spec_poison          skeletal desert rat
 M 11492 spec_cast_undead     sand-choked revenant
 M 11494 spec_cast_undead     cursed pyramid laborer
 M 11495 spec_poison          desert pit viper
@@ -1043,7 +1043,7 @@ M 11510 spec_cast_mage       toxic sand elemental
 M 11512 spec_cast_undead     greater bone overlord
 M 11601 spec_cast_undead     whispering wraith
 M 11602 spec_poison          calcified serpent
-M 11604 spec_disease         mold-ridden ghoul
+M 11604 spec_poison          mold-ridden ghoul
 M 11606 spec_poison          decay spider
 M 11607 spec_cast_undead     mildew phantom
 M 11611 spec_cast_mage       darkfire wisp
@@ -1057,9 +1057,13 @@ M 11624 spec_cast_bigtime    void acolyte
 M 11626 spec_poison          moon-touched scorpion
 M 11628 spec_poison          cistern matriarch
 M 11629 spec_cast_mage       petrified desert titan
-M 11630 spec_disease         fungal colossus
+M 11630 spec_poison          fungal colossus
 S
 ```
+
+**Spec compliance notes:**
+- `spec_disease` does not appear in the allowed `spec_fun_name` list in `area_file_spec.md` (section 10). Carrion fly swarm (11489), skeletal desert rat (11490), mold-ridden ghoul (11604), and fungal colossus (11630) were originally assigned `spec_disease` but have been corrected to `spec_poison`, which is the closest valid behavior for disease-vector mobs.
+- Color theme accent was originally `@@e` (described as "dark green") but `@@e` in the colist is `light_red`, not green. Corrected to `@@G` (green) to match the thematic intent of jade inlay, verdigris, and poisonous lichen.
 
 ---
 
