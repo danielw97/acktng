@@ -64,42 +64,77 @@ Seven descending tiers plus a trap room. Unlike the Northern Pyramid which ascen
 
 ---
 
-## Connection to the Southern Oasis
+## Connection to the Great Oasis (Southern Basin Route)
 
-The Southern Pyramid connects bidirectionally to **room 9800** ("Sunforged Causeway of Lantern") in `the_southern_oasis.are`. Room 9800 already describes "a precise triangular rise foreshadows a future pyramid road" to the south and has a D2 (south) exit to room 9810. The pyramid connection will use a **new D2 exit** from a room that currently lacks one, or add the pyramid as a branching path.
+To match current setting canon, the Southern Pyramid is reached through the **Great Oasis southern basin corridor** (historically associated with the Twin Basin Compact), not as isolated "Southern Oasis" lore. The practical room linkage remains unchanged while terminology and narrative framing are updated.
 
-Since room 9800's D2 is already used (→ 9810), we will connect via room 9819 ("Reedbound Span of Lantern"), which also mentions the pyramid to the south. Room 9819 currently has exits D0→9809, D3→9818. Its D2 (south) is **free**.
+The Southern Pyramid connects bidirectionally via **room 9819** ("Reedbound Span of Lantern"), the southbound charter road emerging from the Great Oasis-linked basin settlements. This preserves existing movement flow while aligning with Great Oasis/Eastern Desert continuity.
 
 | Direction | From | To | Notes |
 |-----------|------|----|-------|
-| south (D2) | 9819 (Reedbound Span of Lantern, Southern Oasis) | 11451 (Before the Southern Pyramid) | Players leave the oasis heading south |
-| north (D0) | 11451 (Before the Southern Pyramid) | 9819 (Reedbound Span of Lantern, Southern Oasis) | Return path to the oasis |
+| south (D2) | 9819 (Reedbound Span of Lantern, Great Oasis southern basin route) | 11451 (Before the Southern Pyramid) | Players leave the oasis corridor heading south |
+| north (D0) | 11451 (Before the Southern Pyramid) | 9819 (Reedbound Span of Lantern, Great Oasis southern basin route) | Return path to the basin road network |
 
-### Required Edit to `the_southern_oasis.are`
+### Required Edit to oasis connector area
 
 Room 9819 currently has exits D0→9809, D3→9818. Add a D2 (south) exit:
 
 ```
 D2
-The ancient road continues south through the dunes, where a @@bsandstone@@N capstone rises against the sky.
+The charter road continues south through the dunes, where a @@bsandstone@@N capstone rises above the heat-haze.
 
 ~
-^ancient road south~
+^charter road south~
 0 -1 11451
 ```
 
-The room description of 9819 already mentions the pyramid ("To the south, a precise triangular rise foreshadows a future pyramid road") so the named exit is discoverable.
+Room 9819's description should explicitly reference basin traffic from the Great Oasis and occasional Midgaard archive expeditions hiring local escorts before descending toward the Moon Sovereign's domain.
 
 Room 11451 (the pyramid entry room) receives a D0 (north) exit back to 9819:
 
 ```
 D0
-The ancient road curves north through the dunes, back toward the shade of the Southern Oasis.
+The charter road bends north through the dunes, returning toward the Great Oasis basin lights and water courts.
 
 ~
 ~
 0 -1 9819
 ```
+
+---
+
+## Lore Integration Requirements (Great Oasis / Eastern Desert / Midgaard)
+These requirements expand implementation-facing lore guidance so builders can keep the Southern Pyramid consistent with regional canon while preserving existing mechanical and vnum structure.
+
+### Canon Positioning
+
+- Treat the Southern Pyramid as the **Moon Sovereign counter-monument** to northern ascendant doctrine.
+- Preserve the Great Oasis basin linkage through charter-road language and Twin Basin legacy references on approach routes.
+- Frame descent as jurisdictional progression (tiered death functions), not merely depth-based danger scaling.
+
+### Great Oasis Basin Alignment Rules
+
+- Surface and connector text should reference basin-era permits, witness phrases, ration contracts, and caravan legal rituals.
+- Route flavor should suggest that expeditions are still organized through inherited oasis logistics, even in partial institutional collapse.
+- Keep naming and signage coherent with charter-road terminology used in connector exits and door/reset labels.
+
+### Eastern Desert Alignment Rules
+
+- Reinforce continuity with eclipse-era failures, synod schisms, and repurposed funerary rites.
+- Tier text should acknowledge that many southern ritual forms were later copied (often incorrectly) by desert factions.
+- Use contradiction intentionally: inscriptions may conflict because they represent doctrinal compromise attempts rather than unified theology.
+
+### Midgaard Alignment Rules
+
+- Include evidence of archive extraction culture: incomplete translation notes, catalog stamps, missing fragment sockets, expedition graffiti in scholarly shorthand.
+- Preserve uncertainty: Midgaard records can be useful but should not flatten tier-specific meanings into generic summaries.
+- Use western scholarship as tension, not truth-source supremacy.
+
+### Tone and Content Guardrails
+
+- Keep Southern Pyramid voice **subterranean-jurisdictional**: sealed procedure, enforced silence, ritualized penalties, controlled descent.
+- Emphasize that hazards are institutional tools (containment, correction, elimination), not random environmental accidents.
+- Escalate from procedural dread in upper tiers to metaphysical sovereignty at the nadir.
 
 ---
 
@@ -146,7 +181,7 @@ The capstone structure visible above the desert and the first underground tier. 
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 11451 | Before the Southern Pyramid | desert | no_mob, no_teleport, indoors | **Entry from Southern Oasis** (D0 north → 9819) |
+| 11451 | Before the Southern Pyramid | desert | no_mob, no_teleport, indoors | **Entry from Great Oasis southern basin route** (D0 north → 9819) |
 | 11452 | The Ancient Road South | desert | no_recall, no_teleport | Approach causeway |
 | 11453 | The Outer Dune Ring | desert | no_recall, no_teleport | Sand dunes circle the capstone |
 | 11454 | The Western Approach | desert | no_recall, no_teleport | Sheer weathered stone face |
@@ -939,7 +974,7 @@ O 0 11514 1 11599  Bone-barred key in The Reliquary (Ossuary Depths)
 
 Per the Doors Summary table above:
 ```
-D 0 9819  2 1   ancient road south (Southern Oasis side, closed)
+D 0 9819  2 1   charter road south (Great Oasis basin side, closed)
 D 0 11459 2 1   moon gate (closed)
 D 0 11460 0 1   moon gate reverse (closed)
 D 0 11491 2 1   obsidian door (closed)

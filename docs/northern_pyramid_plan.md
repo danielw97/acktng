@@ -63,40 +63,77 @@ Seven levels with the trap room as a special single room:
 
 ---
 
-## Connection to the Northern Oasis
+## Connection to the Great Oasis (Northern Approach)
 
-The Northern Pyramid connects bidirectionally to **room 8879** ("Golden Dust Walk") in `the_northern_oasis.are`. Room 8879 is in the northern section of the oasis grid and is currently missing its D1 (east) exit. The caravan road that winds through the oasis once continued east toward the ancient pyramid, a route now reclaimed by the desert.
+To align with current regional canon, the Northern Pyramid route is treated as a **Great Oasis frontier road** rather than a standalone "Northern Oasis" settlement route. The immediate gameplay connector remains the same vnum link, but its lore context is now the Great Oasis northern caravan approach and Measuring House survey network.
+
+The Northern Pyramid connects bidirectionally to **room 8879** ("Golden Dust Walk") as the eastern caravan spur from the Great Oasis water-court domain. This keeps the established traversal path while aligning with Great Oasis lore that frames pyramid access as a chartered survey road inherited from Keeper-era astronomy and taxation infrastructure.
 
 | Direction | From | To | Notes |
 |-----------|------|----|-------|
-| east (D1) | 8879 (Golden Dust Walk, Northern Oasis) | 10156 (Before the Northern Pyramid) | Players leave the oasis heading east |
-| west (D3) | 10156 (Before the Northern Pyramid) | 8879 (Golden Dust Walk, Northern Oasis) | Return path to the oasis |
+| east (D1) | 8879 (Golden Dust Walk, Great Oasis northern approach) | 10156 (Before the Northern Pyramid) | Players leave the oasis road network heading east |
+| west (D3) | 10156 (Before the Northern Pyramid) | 8879 (Golden Dust Walk, Great Oasis northern approach) | Return path to the Great Oasis approach charter road |
 
-### Required Edit to `the_northern_oasis.are`
+### Required Edit to oasis connector area
 
 Room 8879 currently has exits D0→8859 (north), D2→8899 (south), D3→8878 (west). Add a D1 (east) exit:
 
 ```
 D1
-The ancient road continues east through the dunes, where a @@bsandstone@@N peak rises against the sky.
+The charter road continues east through the dunes, where a @@bsandstone@@N pyramid shoulder rises against the horizon.
 
 ~
-^ancient road east~
+^charter road east~
 0 -1 10156
 ```
 
-The room description of 8879 must be updated to mention the ancient road and the pyramid silhouette on the eastern horizon so the named exit `^ancient road east` is discoverable in room text.
+The room description for 8879 should mention that this is a **Keeper-surveyed charter spur** from the Great Oasis basin and that Midgaard-sponsored scholars occasionally mark the stones with catalog glyphs before turning toward the pyramid.
 
 Room 10156 (the pyramid entry room) receives a D3 (west) exit back to 8879:
 
 ```
 D3
-The ancient road curves west through the dunes, back toward the cool shade of the Northern Oasis.
+The charter road curves west through the dunes, returning toward the Great Oasis basin and its water-court lanterns.
 
 ~
 ~
 0 -1 8879
 ```
+
+---
+
+## Lore Integration Requirements (Great Oasis / Eastern Desert / Midgaard)
+These requirements expand implementation-facing lore guidance so builders can keep room text, mobiles, objects, and scripted flavor aligned with regional canon while preserving the existing mechanical layout.
+
+### Canon Positioning
+
+- Treat the Northern Pyramid as a **Sand Sovereign state monument** downstream from Great Oasis Keeper science and charter-law traditions.
+- Emphasize that the route is a **charter survey spur** of the oasis basin network, not an isolated wilderness path.
+- Preserve the historical throughline: integrated road/cistern governance → drought-era fracture → modern ruin expeditions.
+
+### Great Oasis Alignment Rules
+
+- Approach-room text should reference water-court legal language, Measuring House calibration marks, and legacy charter waystones.
+- Environmental details on the western connector should imply maintained institutional memory (engraved distances, witness glyphs, toll notches), even when partially eroded.
+- Avoid presenting the pyramid as culturally independent from oasis engineering lineages.
+
+### Eastern Desert Alignment Rules
+
+- Inscriptions and relic flavor should acknowledge shared vocabulary with Eastern Desert obelisk, cistern, and funerary traditions.
+- When possible, link hazard design to governance collapse (sealed archives, ration tallies, redirected levy marks) rather than "random ancient curse" language.
+- Maintain continuity with desert schism themes: official doctrine vs. cult reinterpretation vs. practical caravan survival.
+
+### Midgaard Alignment Rules
+
+- Include occasional signs of archive contact: catalog marks, copied rubbings, survey tags, or disputable translation plaques left by prior expeditions.
+- Distinguish in-situ meaning from western reinterpretation: local inscriptions should feel authoritative, while imported labels may be incomplete or wrong.
+- Keep Midgaard references atmospheric and diegetic, not expository lore dumps in every room.
+
+### Tone and Content Guardrails
+
+- Keep Northern Pyramid voice **administrative-celestial**: law, measure, procession, calibration, sanctioned ascent.
+- Trap and ward language should imply procedural enforcement of doctrine (trespass correction, purification sequence, restricted witness access).
+- Reserve overt apocalyptic rhetoric for high-tier or boss-adjacent spaces; lower tiers should feel bureaucratic before they feel mythic.
 
 ---
 
@@ -184,7 +221,7 @@ The base of the pyramid and surrounding desert approach. Exterior rooms use `des
 
 | Vnum | Room Name | Sector | Flags | Notes |
 |------|-----------|--------|-------|-------|
-| 10156 | Before the Northern Pyramid | desert | no_recall, no_teleport | **Entry from Northern Oasis** (D3 west → 8879) |
+| 10156 | Before the Northern Pyramid | desert | no_recall, no_teleport | **Entry from Great Oasis northern approach** (D3 west → 8879) |
 | 10157 | The Ancient Road East | desert | no_recall, no_teleport | Approach causeway |
 | 10158 | The Outer Dune Ring | desert | no_recall, no_teleport | Sand dunes surround the pyramid base |
 | 10159 | The Southern Approach | desert | no_recall, no_teleport | Direct path to main entrance |
@@ -807,7 +844,7 @@ O 0 10138 1 10148  Trapdoor key in Forgotten Workshop (Undercroft)
 
 Per the Doors Summary table above:
 ```
-D 0 8879  1 1   ancient road east (Northern Oasis side, closed)
+D 0 8879  1 1   charter road east (Great Oasis side, closed)
 D 0 10166 0 1   stone gate (closed)
 D 0 10167 2 1   stone gate reverse (closed)
 D 0 10177 5 2   heavy trapdoor (locked)
