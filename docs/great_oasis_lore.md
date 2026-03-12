@@ -179,7 +179,7 @@ Kowloon's Jade Magistracy maintains a branch office in the oasis caravan yards (
 
 ### 8f) Connection to Kiess (vnums 13000-13099)
 
-Kiess sits on Roc Road, the western trade artery, and the Great Oasis sits at the eastern end of the connecting route. Trade goods that originate in Kiess pass through the oasis on their way to the Eastern Desert and beyond. The Temple of Concord in Kiess preserves a version of the Charter of Passage prayer that has been adapted into a civic benediction for departing merchants — evidence of how oasis legal-religious traditions diffused westward through the trade network.
+Kiess sits on Roc Road west of Midgaard, at the far western end of the continental trade network. The Great Oasis sits in the east, connected to Kiess through Midgaard and the eastern caravan routes. Trade goods that originate in Kiess pass through Midgaard and then eastward to the oasis and the Eastern Desert beyond. The Temple of Concord in Kiess preserves a version of the Charter of Passage prayer that has been adapted into a civic benediction for departing merchants — evidence of how oasis legal-religious traditions diffused westward through the trade network.
 
 ---
 

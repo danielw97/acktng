@@ -16,7 +16,7 @@ Use this timeline backbone when authoring room text, NPC dialogue, and object lo
 Every major room cluster should visibly reflect at least two eras (e.g., old stone + new signage), reinforcing Midgaard as an accreted civic system rather than a single-age city build.
 
 ### 0. Geographic Context: The Crossroads Position
-Midgaard occupies a strategic position at the convergence of the continent’s primary trade corridors. To the north, the Great Northern Forest (and beyond it, Kowloon) provides timber, ore, and overland access to the delta ports. To the south and east, the Roc Road connects to Kiess, itself built on the ruins of fallen Evermeet. To the west, desert caravan routes reach the oasis settlements near the ancient pyramids. Below and around the city, sealed passages connect to the Gloamvault, the Dungeon, and other subterranean spaces that Midgaard’s civic order has never fully controlled.
+Midgaard occupies a strategic position at the convergence of the continent’s primary trade corridors. To the north, the Great Northern Forest (and beyond it, Kowloon) provides timber, ore, and overland access to the delta ports. To the west, the Roc Road connects to Kiess, itself built on the ruins of fallen Evermeet. To the east, desert caravan routes reach the oasis settlements near the ancient pyramids. Below and around the city, sealed passages connect to the Gloamvault, the Dungeon, and other subterranean spaces that Midgaard’s civic order has never fully controlled.
 
 This crossroads position is not accidental—it is the reason Midgaard exists. The city was never founded on ideology or conquest; it grew from the practical necessity of managing traffic, resolving disputes, and securing overnight shelter at the point where multiple dangerous routes converged. Every subsequent layer of governance, from the First Stone Accord to the modern Requisition offices, is an institutional response to the pressures created by geographic centrality.
 
@@ -60,7 +60,7 @@ The Compact also created the institutional framework that the Spirebound Conclav
 ### IV. The Ash-and-Iron Decades
 Regional instability pushed Midgaard toward militarized provisioning. The specific crises were multiple and overlapping:
 - **The Ashfall Monsoon:** Three years of black volcanic rain from the Cinderteeth eruptions darkened skies across the continent. Kowloon’s predecessor settlement was devastated (600 souls drowned in one night). Midgaard’s agricultural hinterland failed. Ash deposits contaminated wells. The Temple of the Resounding Heart still maintains memorial rolls from “the years the sun dimmed.”
-- **The Evermeet Collapse:** The fortified city of Evermeet, Midgaard’s primary southern trade partner on the Roc Road, fell during the border wars. Refugees and displaced merchants flooded Midgaard’s intake systems. The modern city of Kiess was later built on Evermeet’s ruins, but for a generation, the Roc Road was a corridor of displacement rather than commerce.
+- **The Evermeet Collapse:** The fortified city of Evermeet, Midgaard’s primary western trade partner on the Roc Road, fell during the border wars. Refugees and displaced merchants flooded Midgaard’s intake systems. The modern city of Kiess was later built on Evermeet’s ruins, but for a generation, the Roc Road was a corridor of displacement rather than commerce.
 - **Northern supply disruptions:** Ashfang warbands and other hostile groups seized control of forest road segments, cutting Midgaard’s access to northern ore and timber. The road warden system was formalized during this period as a military response to trade-route interdiction.
 - **Conclave escalation:** With supply lines cut, the Spirebound Conclave in the Cinderteeth Mountains turned to coercion, demanding prisoner transfers from frontier cities in exchange for arcane defensive support. Midgaard’s sealed warrants from this period authorized the transfer of condemned debtors—a transaction that the modern Reckoning faction considers the city’s gravest institutional crime.
 
@@ -249,8 +249,8 @@ Tie Midgaard’s updated narrative to the established world plans without changi
 - **Wardens of Iron:** Kowloon’s Wardens of Iron maintain the Iron Gate and frontier patrols. Midgaard’s Guard Command cooperates with them through dispatches carried by road wardens.
 
 ### Kiess (vnums 13000–13099)
-- **Roc Road:** The primary overland trade route connecting Kiess and Midgaard. Kiess’s south gate opens onto the Roc Road. Market rooms and trade-corridor descriptions should reference Roc Road commerce, caravan schedules, and trade-agreement treaties.
-- **Evermeet legacy:** Kiess was built on the ruins of Evermeet, which fell during the same frontier chaos that shaped Midgaard’s Ash-and-Iron era. Midgaard’s archives may contain pre-collapse correspondence with Evermeet administrators—now of antiquarian interest and political sensitivity.
+- **Roc Road:** The primary overland trade route connecting Kiess and Midgaard. Kiess’s east gate opens onto the Roc Road. Market rooms and trade-corridor descriptions should reference Roc Road commerce, caravan schedules, and trade-agreement treaties.
+- **Evermeet legacy:** Kiess was built on the ruins of Evermeet to the west, which fell during the same frontier chaos that shaped Midgaard’s Ash-and-Iron era. Midgaard’s archives may contain pre-collapse correspondence with Evermeet administrators—now of antiquarian interest and political sensitivity.
 - **Military doctrine exchange:** Kiess’s Wall Command and Midgaard’s Guard Command share provisioning doctrine and emergency charter frameworks developed during the border wars. Requisition rooms should reference "Kiessward supply protocol" or similar cross-city military coordination.
 - **Central Prism:** Kiess’s central plaza houses a recovered Evermeet artifact. Midgaard’s temple or archivist NPCs could reference rumors about the Prism’s origin and power.
 - **Shared three-power governance:** Kiess is governed by Compact Temples, Trade Syndics, and Wall Command—a tripartite structure that mirrors Midgaard’s own civic/temple/military institutional balance.
@@ -266,13 +266,48 @@ Tie Midgaard’s updated narrative to the established world plans without changi
 - **Indirect connection:** Both areas are accessible via the Forest of Confusion, itself connected to the Great Northern Forest network. Midgaard has no direct physical link but is affected by the ecological consequences.
 - **Conclave blight theory:** The Withered Depths’ corruption may originate from orphaned Conclave field-trial sites where implanted crystals mutated into aggressive fungal networks. Midgaard’s arcanist registry should contain reports of "anomalous decay patterns" forwarded by forest scouts.
 - **Supply chain impact:** Blight spreading from the Withered Depths affects timber and herb quality along forest trade routes. Market NPCs could reference "tainted northern timber" or "short herbalist shipments" as ambient economic flavor.
-- **Kiess scout reports:** Kiess scouts have reported both Verdant Depths and Withered Depths accessible via the Roc Road and Forest of Confusion. These reports would be forwarded to Midgaard’s road warden command as intelligence bulletins.
+- **Kiess scout reports:** Kiess scouts have reported both Verdant Depths and Withered Depths accessible via the western frontier and Forest of Confusion. These reports would be forwarded to Midgaard’s road warden command as intelligence bulletins.
 
 ### Northern Pyramid (vnums 10125–10324) and Southern Pyramid (vnums 11450–11649)
 - **Pre-civilization mysteries:** Both pyramids predate all living civilizations. The Northern Pyramid (built by the Sand Sovereign) rises into the sky; the Southern Pyramid (built by the Moon Sovereign) descends into the earth. These structures are beyond Midgaard’s institutional memory but exist as myths and traveler tales.
 - **Scholar interest:** Midgaard’s archivist and temple NPCs could reference "the twin monuments of the deep desert" as subjects of academic curiosity—structures that no living civilization claims credit for building.
-- **Desert trade rumors:** Traders arriving from the southern oasis routes bring stories of the pyramids. Market-district NPCs could relay fragmented accounts of "a tower that reaches the sun" and "a pit that swallows the moon."
+- **Desert trade rumors:** Traders arriving from the eastern oasis routes bring stories of the pyramids. Market-district NPCs could relay fragmented accounts of "a tower that reaches the sun" and "a pit that swallows the moon."
 - **Ashfall connection:** The Cinderteeth volcanic range that caused the Ashfall Monsoon is geologically connected to the desert regions where the pyramids stand. Temple scholars might speculate about whether the Sand Sovereign and Moon Sovereign understood volcanic forces that modern civilizations still fear.
+
+### Gloamvault (vnums 30100+)
+- **Physical link:** Room 3005 (Violet Reliquary Arch) connects to Gloamvault room 30100. This is Midgaard's primary subterranean threshold.
+- **Institutional origin:** The Gloamvault houses the Kel'Shadra Order's oath archive beneath Midgaard. Founded as an unrecorded-oath correction mechanism, the Order transitioned from honor-keeping to extraction. The Sealed Names doctrine—suppressing identities from civic record—originated here and was later adopted by the Violet Compact's registry apparatus.
+- **Nightveil Matriarch:** The Gloamvault's current authority figure, the Nightveil Matriarch, enforces oath-debt collection that Midgaard's magistrates tacitly permit but never officially acknowledge. The Matriarch's agents operate in Midgaard's service corridors and intake-adjacent districts.
+- **Sepulcher Lich:** The Last Auditor of the Kel'Shadra Order persists as an undead remnant still processing oath-debts from centuries past. Midgaard's archive rooms may contain sealed warrants cross-referencing Gloamvault case numbers.
+
+### Catacombs of Nightfall
+- **Institutional parallel:** The Nightfall Registry Rite—converting burial honor into posthumous labor—mirrors Midgaard's own institutional tendency to bureaucratize the dead. The Split-Pine Compacts that governed early burial customs in the forest were overwritten by Midgaard's Lantern Reform-era standardization.
+- **Violet Compact extension:** The Compact's Sealed Names doctrine reached the Catacombs through the same administrative channels that connected Midgaard to the Gloamvault. The Nightveil Matriarch's influence extends to Nightfall's burial registries.
+- **Memory war:** The Great Northern Forest's oral tradition calls both the Catacombs and Sepulchur Pasture "the stone throat that swallowed names"—a phrase that implicates Midgaard's civic order in the erasure of non-city dead.
+
+### Sepulchur Pasture (vnums 30175+)
+- **Physical link:** Midgaard room 3030 connects to The Withered Gate (30175). This is Midgaard's primary funerary egress—the route taken by death-carts, mourning processions, and Compact adjudicators.
+- **Origin as Ninth Acre:** The land south of Midgaard's watched roads was simple working ground before it became a civic burial overflow. The name "Ninth Acre" refers to its position beyond the city's ninth milestone and the grim ratio of one death-cart per nine arrivals during hard winters.
+- **Last Burden Tithe:** The pasture's tithe system—requiring the living to contribute labor, goods, or coin for the maintenance of the dead—is administered through Midgaard's civic apparatus. The Deferred Names system, which delays inscription of the dead until tithe obligations are settled, is a direct product of Midgaard's bureaucratic culture.
+- **Western and eastern dead:** Caravan dead from the western Roc Road (connecting to Kiess) and the eastern desert trade routes were routed to the pasture when other facilities were overwhelmed—particularly during the Evermeet Collapse and the Ash-and-Iron Decades.
+
+### Forest of Confusion (vnums 9600+)
+- **Geographic position:** The Forest of Confusion lies in the western frontier above Kiess, far west of Midgaard. It is accessible via the Roc Road and serves as a transitional zone between civilized western routes and the deeper forest myth-space.
+- **Intelligence pipeline:** Kiess scouts file reports at debriefing posts inside the city's north ring, which are forwarded to Midgaard's road warden command as intelligence bulletins. Market NPCs in Midgaard could reference "western frontier dispatches" about confusion mist activity.
+- **Three-force overlap:** The forest represents the collision of Kiess civic order, Verdant Depths ecological intelligence, and Withered Conclave residue. Midgaard's arcanist registry should contain reports forwarded from Kiess about anomalous forest behavior.
+- **Creature intelligence:** Centaurs, Ymmas, manscorpians, and neogi inhabit the Forest of Confusion. Midgaard bounty boards could reference these creatures as threats to western trade routes.
+
+### Great Pyramid (vnums 8500+)
+- **Physical link:** Room 3060 connects to Great Pyramid room 8500, providing direct access from Midgaard to the pyramid complex.
+- **Solar Court legacy:** The Great Pyramid was built by the Solar Court as a monumental assertion of sovereignty over water, trade, death rites, and timekeeping. Midgaard's scholars have studied its architecture extensively, though much of what the city "knows" comes from partial copies and mistranslated rubbings.
+- **Black Sun Shard:** The pyramid's primary containment—the Black Sun Shard—is a subject of academic debate in Midgaard's temple and archivist circles. The Shard's nature and the consequences of its potential release are discussed in hushed tones.
+- **Week of Impossible Dawns:** Midgaard's historical records reference this catastrophic event at the Great Pyramid. Temple memorial rooms should include references to disrupted solar patterns observed from the city during the event.
+
+### Great Oasis and Eastern Desert Oases
+- **Trade corridor:** The eastern desert caravan routes terminate at the Great Oasis, which served as the desert's primary water and supply node. Midgaard's market districts process goods that travel the full eastern route: desert salt, oasis herbs, pyramid relics, and astrolabe glass.
+- **Archival connection:** Midgaard's city archives preserve late-era expedition charters and salvage law tablets from the Eastern Desert. The city's pragmatic trade culture treated the collapsed desert road network as a resource extraction opportunity.
+- **Keeper-of-Measure legacy:** The Eastern Desert's ancient Keeper-of-Measure legal tradition left fingerprints on Midgaard's own archival methods. Midgaard archivists transliterated the Measure Script obelisk inscriptions into their own alphabetic system, preserving the shapes but losing the combinatorial semantics.
+- **Northern and Southern Oases:** These oasis settlements serve as waypoints for Midgaard-bound trade caravans. The Northern Oasis's Reedline Wardens and the Southern Oasis's Bastion Wardens maintain the supply chain that feeds Midgaard's eastern trade. Reports of Reaver pressure on the northern approaches and pyramid expedition casualties processed at the southern approach reach Midgaard through trade manifests and intelligence bulletins.
 
 ### Integration Methods
 Embed cross-area references through:

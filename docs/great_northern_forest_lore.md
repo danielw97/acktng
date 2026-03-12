@@ -5,7 +5,7 @@ Extracted from `great_northern_forest_plan.md`.
 ## Extensive Lore
 
 ### The First Treeline
-Before Midgaard raised permanent stone beyond its southern rivers, the northern horizon was spoken of as a single dark wall: an endless crown of pine, cedar, and winter oak called simply **the Great Northern Forest**. Early Midgaard caravans called it a border. The elder hunters of the north called it a living nation.
+Before Midgaard raised permanent stone beyond its nearest rivers, the northern horizon was spoken of as a single dark wall: an endless crown of pine, cedar, and winter oak called simply **the Great Northern Forest**. Early Midgaard caravans called it a border. The elder hunters of the north called it a living nation.
 
 The oldest songs say the forest grew from the graves of giants slain in the wars before named kingdoms. Their bones became limestone ridges, their blood became iron-rich springs, and their breath became the white mists that still pool beneath the boughs at dawn. Whether true or not, the forest has always defied easy conquest: roads sink, paths shift, and clearings vanish under root and fern in a single season.
 
