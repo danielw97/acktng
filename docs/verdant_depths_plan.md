@@ -25,6 +25,10 @@ The theme evokes a primeval forest grown unnaturally deep and old, where the con
 
 ---
 
+
+## Lore
+See `verdant_depths_lore.md` for extracted lore.
+
 ## Area Header
 
 The `#AREA` section lives in `area/verdantgreen.are`. Directive notes:
@@ -40,12 +44,6 @@ The `#AREA` section lives in `area/verdantgreen.are`. Directive notes:
 - `T` -- rest of line is ignored by the loader; presence of the line enables teleport
 - `O Virant~` -- area owner must always be Virant
 - `R`, `W` -- ACL directives omitted; set at implementation time by the builder
-
----
-
-## Narrative / Lore
-
-The Verdant Depths is what lies beneath and beyond the Forest of Confusion -- an ancient, sentient woodland where the trees are older than civilization. The confusion above is merely a symptom of the forest's true nature: a living entity that lures creatures inward and transforms them. The deeper one ventures, the more the forest asserts its will. Three ancient Heartwood Guardians -- boss creatures -- protect the forest's core, each embodying a different aspect of the woodland's power: growth, decay, and predation.
 
 ---
 
