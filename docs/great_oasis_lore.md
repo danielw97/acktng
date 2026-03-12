@@ -163,7 +163,7 @@ The compact failed during the post-Ninth Meridian drought when both oases experi
 
 ### 8c) Connection to the Northern Pyramid (vnums 10125-10324, levels 100-120)
 
-The northern exits from the Great Oasis (currently connecting to vnums 8880-8889, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records — fragments of which survive in the north cistern archives — contain the earliest known reference to the site where the Northern Pyramid would later be built. The Keepers identified it as an optimal astronomical observation point, but they never built there because it lacked water access.
+The northern exits from the Great Oasis (currently connecting to vnums 8880-8888, reserved for future construction) point toward territory between the oasis and the Northern Pyramid. The oasis's Measuring House astronomical records — fragments of which survive in the north cistern archives — contain the earliest known reference to the site where the Northern Pyramid would later be built. The Keepers identified it as an optimal astronomical observation point, but they never built there because it lacked water access.
 
 The Sand Sovereign who later commissioned the Northern Pyramid used oasis-trained engineers and oasis-calibrated instruments for the pyramid's construction. In a real sense, the Northern Pyramid is a child of the Great Oasis's intellectual tradition — its astronomical precision descends directly from the Measuring House's calibration methodology.
 
@@ -389,7 +389,7 @@ Each of the twelve waystones in the waystone circle pointed to a different carav
 4. **The South-Southeastern Stone** — points toward a mining settlement that no longer exists. Inscription references copper and tin trade.
 5. **The Eastern Stone** — points toward the Northern Pyramid approach. Inscription references "the sovereign's commission."
 6. **The East-Northeastern Stone** — points toward highland grazing territories. Route abandoned after the Iseth Reach dried.
-7. **The Northern Stone** — points toward territories reserved for future area construction (vnums 8880-8889). Inscription references a "salt lake beyond the seventh ridge."
+7. **The Northern Stone** — points toward territories reserved for future area construction (vnums 8880-8888). Inscription references a "salt lake beyond the seventh ridge."
 8. **The Northwestward Stone** — points toward Kowloon's trade territory. Inscription references Jade Clerk trade missions.
 9. **The West-Northwestward Stone** — points toward an intermediate waystation (now buried).
 10. **The West-Southwestward Stone** — points toward a second Eastern Desert approach (seasonal alternate route).
@@ -407,3 +407,40 @@ One figure from the lore deserves special attention as a potential NPC: the **La
 The Reed Tender is politically neutral (sworn to no faction), historically knowledgeable (the caste preserved oral traditions spanning centuries), and practically useful (the garden produces medicinal herbs that the wardens depend on). As an NPC, the Reed Tender can deliver deep lore through in-character dialogue, provide quest hooks related to garden restoration or medicinal supply, and serve as an emotional anchor — a living reminder that the oasis was once a place of beauty and cultivation, not just survival and conflict.
 
 The Reed Tender's unique perspective: alone among the oasis factions, the Reed Tender remembers (through inherited oral tradition) what the oasis looked like when all four cisterns functioned, the garden terraces were fully planted, and the basin was three times its current size. This memory makes the Reed Tender simultaneously the area's most hopeful character (proof that better times existed) and its most tragic (proof of how much has been lost).
+
+---
+
+## 21) World-Lore Weave: Great Oasis in the Wider Setting
+
+To ensure the Great Oasis remains fully consistent with the broader setting canon, this section explicitly braids in themes, institutions, and narrative echoes from every other lore document in `docs/`.
+
+### 21a) Eastern Desert Continuity (Road, Charter, Synod)
+The oasis remains the destination-node of the Eastern Desert road spine: caravan law, charter stones, and salt-ledger administration all culminate here. The Jackal Synod presence at the oasis should preserve the Eastern Desert's schism logic: shared ritual vocabulary and symbols, but regional doctrinal divergence (Wellmouth Creed versus Ninth Meridian legacy factions).
+
+### 21b) Great Pyramid / Northern Pyramid / Southern Pyramid Triad
+Desert civilization around the oasis should acknowledge the three-pyramid argument as one prolonged struggle over authority, death, and cosmology. Keeper precision culture at the oasis prefigures later pyramid engineering traditions, while oasis inscriptions can preserve the practical administrative voice that pyramid regimes later monumentalized. Where possible, mention the Sand Sovereign / Moon Sovereign split and the Great Pyramid's legacy as downstream consequences of the same water-tax and charter systems once coordinated at the oasis.
+
+### 21c) Midgaard Archive-State Link
+Midgaard's civic-archive culture should appear in oasis rumor traffic via scholars, rubric copies, and catalog tags on recovered tablets. This supports a recurring setting truth: Midgaard does not merely trade goods; it curates records and repackages frontier history as civic knowledge.
+
+### 21d) Kowloon Ledger and Ritual Urbanism Link
+Kowloon's Neon Covenant legalism and factional seat politics mirror oasis-era charter formalism in a modernized, urban key. Oasis text can reference jade-sealed contracts, courier route codices, or imported adjudication phrases to imply long-range legal memory stretching from desert waystone law to delta megacity governance.
+
+### 21e) Kiess Compact Governance Link
+Kiess's three-power balance (Temple, Syndic, Wall Command) should be contrasted with the oasis's failed tripartite equilibrium (Water Court, charter merchants, ritual authorities). The oasis can preserve cautionary evidence that procedural balance alone does not prevent capture, reinforcing Kiess's ongoing anxiety about institutional drift.
+
+### 21f) Great Northern Forest / Verdant Depths / Withered Depths Ecological Mirror
+The Great Oasis and northern forest complexes are ecological foils: one is scarcity managed by law and engineering, the other is excess and sentient overgrowth that defies management. The Verdant Depths and Withered Depths duality (growth and blight) should be echoed in oasis symbolism through life-giving springs versus mineral-sickness contamination, preserving a world pattern where survival systems always carry a corruption risk.
+
+### 21g) Sunken Sanctum and Gloamvault Institutional-Collapse Echo
+The oasis's broken Water Court should be written with the same institutional-horror cadence seen in the Sunken Sanctum and Gloamvault: archives weaponized, doctrine proceduralized, and stewardship converted into coercion. Flavor writing can emphasize that collapse is rarely sudden; it is administrative, layered, and justified in its own paperwork until violence makes the failure visible.
+
+### 21h) Global Motif Alignment Checklist for Authors
+When writing room text, mob dialogue, and lore objects in this area, prefer recurring motifs that keep world continuity tight:
+- **Ledger/charter language** (Eastern Desert, Midgaard, Kowloon, Kiess)
+- **Ritual bureaucracy** (Great Pyramid lineages, Synod branches, Gloamvault)
+- **Ecological precarity** (oasis springs, Iseth Reach failure, forest blight/growth cycles)
+- **Institutional memory artifacts** (tablets, seals, registries, witness records, engineered markings)
+- **Moral ambiguity in stewardship** (Spring Wardens, oasis wyrm dilemma, sanctum-style preservation ethics)
+
+These links should stay atmospheric and diegetic rather than encyclopedic. The goal is to let attentive players feel that the Great Oasis is not an isolated dungeon but a pressure point where the setting's legal, ecological, and theological histories intersect.
