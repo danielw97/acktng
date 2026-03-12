@@ -5,6 +5,9 @@
 :root{color-scheme:dark;--bg:#05080f;--bg-soft:#0f1729;--card:#121c31;--line:#253457;--text:#e5ecff;--muted:#9eb0df;--accent:#79b7ff;--accent-soft:#163866;}
 *{box-sizing:border-box;}
 body{font-family:Inter,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at top,#18284a,#05080f 55%);color:var(--text);max-width:1080px;margin:0 auto;padding:1.4rem 1rem 2rem;line-height:1.6;}
+.site-brand{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;padding:.8rem 1rem;background:rgba(18,28,49,.72);border:1px solid var(--line);border-radius:14px;}
+.site-brand img{width:min(360px,100%);height:auto;}
+.site-brand p{margin:0;color:var(--muted);}
 nav{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1rem;}
 nav a{padding:.5rem .85rem;background:rgba(121,183,255,.12);border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);font-weight:600;letter-spacing:.02em;}
 nav a:hover{background:rgba(121,183,255,.25);border-color:#4d72b8;}
@@ -28,6 +31,10 @@ ul{padding-left:1.2rem;}
 .card{background:rgba(8,15,29,.72);border:1px solid var(--line);padding:.8rem .9rem;border-radius:12px;}
 </style>
 </head><body>
+<header class='site-brand'>
+<img src='/img/ackmud_logo_transparent.png' alt='ACKMUD logo'>
+<p>Historical Archive and live world references.</p>
+</header>
 <nav>
 <a href='/'>Home</a>
 <a href='/who/'>Who</a>
