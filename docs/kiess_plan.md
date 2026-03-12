@@ -646,17 +646,18 @@ Notes:
 
 ## Connection Plan (External Links)
 
-Only the south gate has an active external connection. The north, west, and east gates are internal city boundaries with no external exits defined at this time.
+Only the east gate has an active external connection (Roc Road to Midgaard). The north, west, and south gates are internal city boundaries with no external exits defined at this time.
 
-### South Gate (13095)
+### East Gate (13095)
 - **Direction:** south from 13095 → vnum `3243`; north from 3243 → vnum `13095`
 - **Door:** `EX_ISDOOR`, reset closed (state 1), unlockable
-- **Rationale:** Outbound military and trade expeditions depart south. Bidirectional link ensures players can return through the gate.
+- **Rationale:** Outbound military and trade expeditions depart east toward Midgaard via Roc Road. Bidirectional link ensures players can return through the gate. Note: the in-game exit direction (south/north) is a legacy of the area's grid layout and does not change the canonical lore direction (east toward Midgaard).
+- **Lore direction:** Kiess is west of Midgaard. Roc Road runs east from Kiess to Midgaard. The gate facing the Roc Road is canonically the "East Gate" in lore, regardless of the in-game exit direction used for the room connection.
 
 ### Connection Implementation Notes
-- The south gate uses `EX_ISDOOR` with a `D` reset to state `closed` (1), not `locked` (2), so players can freely open it.
+- The east gate uses `EX_ISDOOR` with a `D` reset to state `closed` (1), not `locked` (2), so players can freely open it.
 - The reverse exit (north from `3243` back to `13095`) must be added to the area file that owns vnum `3243`.
-- North (`13005`), west (`13050`), and east (`13059`) gates remain walled city exits with no external destination. They may be connected to future areas later.
+- North (`13005`), west (`13050`), and south (`13059`) gates remain walled city exits with no external destination. They may be connected to future areas later.
 
 ---
 

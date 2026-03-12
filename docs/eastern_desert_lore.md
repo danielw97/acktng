@@ -85,7 +85,7 @@ Specific connections:
 
 ### Connection to Kiess (vnums 13000-13099)
 
-Kiess sits on Roc Road, the ancient western trade artery. While geographically distant from the Eastern Desert, Kiess's Trade Syndics maintain commercial intelligence about desert route conditions, and the Temple of Concord preserves religious texts that include fragments of Keeper-of-Measure survey prayers — repurposed as civic benedictions.
+Kiess sits on Roc Road west of Midgaard, on the far western end of the continental trade network. While geographically distant from the Eastern Desert, Kiess's Trade Syndics maintain commercial intelligence about desert route conditions relayed through Midgaard's markets, and the Temple of Concord preserves religious texts that include fragments of Keeper-of-Measure survey prayers — repurposed as civic benedictions.
 
 ### Connection to the Great Northern Forest (vnums 15500-15999)
 

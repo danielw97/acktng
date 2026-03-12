@@ -224,7 +224,7 @@ Players who have visited Kowloon and then encounter the Northern Pyramid's Inscr
 
 ### Kiess and the Trade Syndics
 
-Kiess sits on Roc Road, the western trade artery, and maintains commercial intelligence about desert route conditions. The Temple of Concord preserves religious texts that include fragments of Keeper-of-Measure survey prayers, repurposed as civic benedictions. These prayers were originally calibration formulae — precise instructions for setting shadow rods and measuring angles — that the Temple's priests inherited without understanding their practical origins.
+Kiess sits on Roc Road west of Midgaard, far from the eastern desert, but maintains commercial intelligence about desert route conditions relayed through Midgaard's markets. The Temple of Concord preserves religious texts that include fragments of Keeper-of-Measure survey prayers, repurposed as civic benedictions. These prayers were originally calibration formulae — precise instructions for setting shadow rods and measuring angles — that the Temple's priests inherited without understanding their practical origins.
 
 The Northern Pyramid's Floor 1 Scarab Shrine (10222) contains inscriptions that would be familiar to a Kiess Temple of Concord priest, though the Kiess version has been softened into vague blessing language. The original pyramid text is harder and more specific: not "may the road be kind" but "at sixteen shadow-marks, departure is authorized; deviance from bearing incurs water-fine."
 
