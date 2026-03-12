@@ -20,6 +20,7 @@ struct static_prop_template_data
     int target_vnum[PROP_MAX_TARGETS];
     int kill_needed;
     int min_level;
+    int max_level;
     int offerer_vnum;
     int reward_gold;
     int reward_qp;
@@ -92,25 +93,49 @@ static bool load_static_prop_file(const char *path, int id)
     }
     tpl.title = str_dup(line);
 
-    if (!read_prop_line(fp, line, sizeof(line)) ||
-        sscanf(line, "%d %d %d %d %d %d %d %d %d %d",
-               &tpl.prerequisite_static_id,
-               &tpl.type,
-               &tpl.num_targets,
-               &tpl.kill_needed,
-               &tpl.min_level,
-               &tpl.offerer_vnum,
-               &tpl.reward_gold,
-               &tpl.reward_qp,
-               &tpl.reward_item_vnum,
-               &tpl.reward_item_count) != 10)
+    if (!read_prop_line(fp, line, sizeof(line)))
     {
-        bugf("load_static_prop_file: bad numeric line in %s", path);
+        bugf("load_static_prop_file: missing numeric line in %s", path);
         free_string(tpl.title);
         free_string(tpl.accept_message);
         free_string(tpl.completion_message);
         fclose(fp);
         return FALSE;
+    }
+
+    tpl.max_level = 170;
+    if (sscanf(line, "%d %d %d %d %d %d %d %d %d %d %d",
+               &tpl.prerequisite_static_id,
+               &tpl.type,
+               &tpl.num_targets,
+               &tpl.kill_needed,
+               &tpl.min_level,
+               &tpl.max_level,
+               &tpl.offerer_vnum,
+               &tpl.reward_gold,
+               &tpl.reward_qp,
+               &tpl.reward_item_vnum,
+               &tpl.reward_item_count) != 11)
+    {
+        if (sscanf(line, "%d %d %d %d %d %d %d %d %d %d",
+                   &tpl.prerequisite_static_id,
+                   &tpl.type,
+                   &tpl.num_targets,
+                   &tpl.kill_needed,
+                   &tpl.min_level,
+                   &tpl.offerer_vnum,
+                   &tpl.reward_gold,
+                   &tpl.reward_qp,
+                   &tpl.reward_item_vnum,
+                   &tpl.reward_item_count) != 10)
+        {
+            bugf("load_static_prop_file: bad numeric line in %s", path);
+            free_string(tpl.title);
+            free_string(tpl.accept_message);
+            free_string(tpl.completion_message);
+            fclose(fp);
+            return FALSE;
+        }
     }
 
     if (!read_prop_line(fp, line, sizeof(line)))
@@ -229,6 +254,12 @@ const char *proposition_unit_static_completion_message(int static_id)
 {
     const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
     return tpl != NULL ? tpl->completion_message : NULL;
+}
+
+int proposition_unit_static_max_level(int static_id)
+{
+    const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
+    return tpl != NULL ? tpl->max_level : -1;
 }
 #endif
 
@@ -470,10 +501,10 @@ static void proposition_list_static(CHAR_DATA *ch, CHAR_DATA *postman)
         if (!static_prop_prerequisite_met(ch, tpl))
             continue;
 
-        if (ps_lvl < tpl->min_level)
-            sprintf(buf, "@@W%2d)@@N %s @@r[requires pseudo-level %d]@@N\n\r", i + 1, tpl->title, tpl->min_level);
+        if (ps_lvl < tpl->min_level || (tpl->max_level > 0 && ps_lvl > tpl->max_level))
+            sprintf(buf, "@@W%2d)@@N %s @@r[requires pseudo-level %d-%d]@@N\n\r", i + 1, tpl->title, tpl->min_level, tpl->max_level);
         else
-            sprintf(buf, "@@W%2d)@@N %s @@g[min pseudo-level %d]@@N\n\r", i + 1, tpl->title, tpl->min_level);
+            sprintf(buf, "@@W%2d)@@N %s @@g[pseudo-level %d-%d]@@N\n\r", i + 1, tpl->title, tpl->min_level, tpl->max_level);
         send_to_char(buf, ch);
     }
 }
@@ -547,6 +578,13 @@ static void proposition_accept_static(CHAR_DATA *ch, CHAR_DATA *postman, int lis
     if (get_psuedo_level(ch) < tpl->min_level)
     {
         sprintf(buf, "You must be at least pseudo-level %d for that static proposition.\n\r", tpl->min_level);
+        send_to_char(buf, ch);
+        return;
+    }
+
+    if (tpl->max_level > 0 && get_psuedo_level(ch) > tpl->max_level)
+    {
+        sprintf(buf, "You must be pseudo-level %d or lower for that static proposition.\n\r", tpl->max_level);
         send_to_char(buf, ch);
         return;
     }

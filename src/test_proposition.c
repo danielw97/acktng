@@ -17,6 +17,7 @@ int proposition_unit_static_count(void);
 const char *proposition_unit_static_title(int static_id);
 const char *proposition_unit_static_accept_message(int static_id);
 const char *proposition_unit_static_completion_message(int static_id);
+int proposition_unit_static_max_level(int static_id);
 
 
 char *_str_dup(const char *str, const char *func)
@@ -305,6 +306,7 @@ static void test_loads_static_propositions_with_messages_from_files(void)
     const char *title;
     const char *accept_message;
     const char *completion_message;
+    int max_level;
 
     proposition_load_static_templates();
 
@@ -313,6 +315,7 @@ static void test_loads_static_propositions_with_messages_from_files(void)
     title = proposition_unit_static_title(0);
     accept_message = proposition_unit_static_accept_message(0);
     completion_message = proposition_unit_static_completion_message(0);
+    max_level = proposition_unit_static_max_level(0);
 
     assert(title != NULL);
     assert(strcmp(title, "Route reconnaissance: Forest of Confusion") == 0);
@@ -322,6 +325,7 @@ static void test_loads_static_propositions_with_messages_from_files(void)
 
     assert(completion_message != NULL);
     assert(strstr(completion_message, "dispatchers") != NULL);
+    assert(max_level == 39);
 }
 
 int main(void)
