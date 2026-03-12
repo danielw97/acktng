@@ -570,51 +570,6 @@ bool spell_thoughtshield(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *o
    return TRUE;
 }
 
-bool spell_ethereal(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
-{
-   /*
-    * Ethereal travel :)
-    * *
-    * * Zenithar
-    */
-
-   if (deathmatch)
-   {
-      send_to_char("Not during a @@eDeath Match@@N!!\n\r", ch);
-      return FALSE;
-   }
-   if ((IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL)) && (!IS_NPC(ch)))
-   {
-      send_to_char("You failed.\n\r", ch);
-      return FALSE;
-   }
-
-   /*
-    * Check is ch screws up, and ends up in limbo... <grin>
-    */
-
-   if ((number_percent() < 15) && (!IS_NPC(ch))) /* 15% chance */
-   {
-      send_to_char("@@NYou get distracted, and appear in the middle of @@dnowhere@@N!\n\r", ch);
-      act("@@N$n begins to disperse into @@lghostly @@Nparticles, then disappears!!", ch, NULL, NULL, TO_ROOM);
-      char_from_room(ch);
-      char_to_room(ch, get_room_index(ROOM_VNUM_LIMBO));
-
-      act("@@N$n coelesces from a @@lghostly@@N image into the room.", ch, NULL, NULL, TO_ROOM);
-      do_look(ch, "auto");
-      return TRUE;
-   }
-
-   act("@@N$n begins to disperse into @@lghostly @@Nparticles, then disappears!!", ch, NULL, NULL, TO_ROOM);
-   char_from_room(ch);
-   char_to_room(ch, get_room_index(ROOM_VNUM_ETHEREAL_PLANE));
-
-   act("@@N$n coelesces from a @@lghostly@@N image into the room.", ch, NULL, NULL, TO_ROOM);
-   send_to_char("@@NYou enter the @@lEthereal Plane@@N!\n\r", ch);
-   do_look(ch, "auto");
-   return TRUE;
-}
-
 bool spell_fireelem(int sn, int level, CHAR_DATA *ch, void *vo, OBJ_DATA *obj)
 {
    CHAR_DATA *summoned = player_summon(ch, 100 + ch->remort[CLASS_SOR] / 4, FIRE_ELEMENTAL);

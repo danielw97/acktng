@@ -2590,17 +2590,6 @@ const struct skill_type skill_table[MAX_SKILL] = {
 
    {
     REMORT, NORM,
-    "ethereal travel", {30, NO_USE, NO_USE, NO_USE, 24, NO_USE,
-                30, NO_USE, NO_USE, NO_USE, 24, NO_USE},
-    spell_ethereal, TAR_IGNORE, POS_STANDING,
-    NULL, SLOT( 611 ), 250, 48, FALSE,
-    "", "ETHEREAL TRAVEL!",
-    ""},
-
-
-
-   {
-    REMORT, NORM,
     "adrenaline", {NO_USE, 42, NO_USE, 21, NO_USE, 28,
                 NO_USE, 42, NO_USE, 21, NO_USE, 28},
     spell_null, TAR_IGNORE, POS_FIGHTING,
