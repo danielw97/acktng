@@ -18,6 +18,7 @@ const char *proposition_unit_static_title(int static_id);
 const char *proposition_unit_static_accept_message(int static_id);
 const char *proposition_unit_static_completion_message(int static_id);
 int proposition_unit_static_max_level(int static_id);
+int proposition_unit_canonical_postmaster_vnum(int vnum);
 
 
 char *_str_dup(const char *str, const char *func)
@@ -348,6 +349,16 @@ static void test_loads_umbra_heartspire_static_chain(void)
     assert(strstr(proposition_unit_static_accept_message(44), "Abbot Noctivar") != NULL);
 }
 
+static void test_postmaster_aliases_map_to_active_city_vnums(void)
+{
+    assert(proposition_unit_canonical_postmaster_vnum(13001) == 13001);
+    assert(proposition_unit_canonical_postmaster_vnum(13021) == 13001);
+    assert(proposition_unit_canonical_postmaster_vnum(14001) == 14001);
+    assert(proposition_unit_canonical_postmaster_vnum(14021) == 14001);
+    assert(proposition_unit_canonical_postmaster_vnum(0) == 14001);
+    assert(proposition_unit_canonical_postmaster_vnum(3015) == 3015);
+}
+
 int main(void)
 {
     test_extracts_and_saves_when_target_matches();
@@ -361,6 +372,7 @@ int main(void)
     test_cancel_static_does_not_set_cooldown();
     test_loads_static_propositions_with_messages_from_files();
     test_loads_umbra_heartspire_static_chain();
+    test_postmaster_aliases_map_to_active_city_vnums();
 
     puts("test_proposition: all tests passed");
     return 0;
