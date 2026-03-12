@@ -17,7 +17,74 @@
 
 
 ## Lore
-See `withered_depths_lore.md` for extracted lore.
+See `withered_depths_lore.md` for full extracted lore.
+
+### Lore Summary (for implementation reference)
+
+The Withered Depths' corruption originates from abandoned **Spirebound Conclave** field trials (see `sunken_sanctum_lore.md`). The Conclave's **Prism Thesis** faction implanted resonance crystals in the forest's root systems, attempting to bind nature spirits as custodial anchors. When the Conclave collapsed, the crystals were never retrieved and mutated the surrounding ecology over centuries: root systems fused into subterranean networks, fungal colonies gained semi-sentient growth patterns, and the boundary between living and dead matter blurred.
+
+The old druids created the **confusion mists** as a quarantine barrier. When the druids died out (their undead remnants are the withered druids in Zone 7), the quarantine failed and the corruption began spreading.
+
+### Lore-to-Zone Mapping
+
+Each zone corresponds to a layer of the corruption's expression:
+
+| Zone | Corruption Layer | Lore Source |
+|------|-----------------|-------------|
+| 1: Rotting Threshold | Corruption's edge — visibly stressed but recognizable forest | Quarantine boundary failure |
+| 2: Fungal Hollows | Underground crystal-mutated root networks; semi-sentient mycelium | Conclave crystal implantation |
+| 3: Briar Maze | Druidic counter-magic vs. Conclave resonance interference zone | Competing magical fields |
+| 4: Blightwood | Surface corruption at full strength — animate decay, arrested decomposition | Preservation magic without calibration |
+| 5: Ancient Canopy | Vertical corruption — rapid growth-decay cycling in upper forest | Crystal resonance + sunlight interaction |
+| 6: Miasma Bog | Liquid corruption — preservation medium in groundwater | Crystal-contaminated drainage |
+| 7: Heartrot Grove | Corruption source — highest crystal concentration; Blightmother's nexus | Original Conclave implant sites |
+| 8: Verdant Sanctum | Natural magical dead zone — pristine pocket resisting corruption | Forest's immune response |
+
+### Boss Lore Context
+
+| Boss | Lore Role | Conclave Parallel |
+|------|-----------|-------------------|
+| Fungal Colossus (1000) | Crystal-organized fungal construct | Crystal conduit system expressed biologically |
+| Briar Queen (1001) | Interference-zone adaptation — incorporates both magical frequencies | Druidic/Conclave hybrid creature |
+| Bog Hydra (1002) | Preservation-medium apex predator | Creature sustained by contaminated waters |
+| Canopy Warden (1003) | Possibly an original Conclave-bound nature spirit, now corrupted | Conclave spirit-binding protocols |
+| Blightmother (1004) | Orphaned custodial entity — equivalent to the Conclave's Vaultkeeper | Prism Thesis binding without oversight |
+| Verdant Guardian (1005) | Forest's immune response — last defender of uncorrupted ground | Natural system opposing Conclave contamination |
+
+### Cross-Area Lore Integration
+
+Embed cross-area references through room descriptions, mob barks, object flavor text, and extra descriptions:
+
+**Conclave signature motifs** (embed in Zones 2, 4, 7):
+- Crystal fragments in root systems (faintly luminous blue-white)
+- Geometric growth patterns in fungal matter (lattice structures, hexagonal spore formations)
+- Fire scarring on the oldest trees near crystal implant sites
+- Preservation runes absorbed into fungal surface growth
+
+**Druidic remnant motifs** (embed in Zones 1, 3, 6):
+- Stone circle fragments (most visible in Zone 6 druid-circle ruins, rooms 1105–1113)
+- Weathered ward-signs on standing stones
+- Seven-pace planting rings matching Everkeeper tradition (see `great_northern_forest_lore.md`)
+
+**Institutional connection threads** (for NPC dialogue and object flavor):
+- Midgaard's sealed warrants → Conclave subjects → crystal research → forest trials → blight (see `midgaard_lore.md`, section V)
+- Kowloon's Black Ledger containing names of transferred condemned (see `kowloon_lore.md`)
+- Kiess's obsidian disc with Conclave triune seal (see `kiess_lore.md`)
+- Forest scouts reporting "anomalous decay patterns" to Midgaard (see `midgaard_lore.md`)
+- Great Northern Forest's Rootbound cult seeking communion with the Blightmother (see `great_northern_forest_lore.md`)
+
+**Ambient economy effects** (for connected-area NPC flavor):
+- "Tainted northern timber" in Midgaard markets
+- "Short herbalist shipments" affecting Midgaard and Kiess trade
+- Kiess Wall Command posting blight-zone warnings on north-gate bulletin boards
+
+### Material Culture Quick Reference
+
+**Sounds:** dripping sap, spore releases (wet pop), root-system groaning, crystal resonance hum (deep zones only), metallic insect overtones, squelching ground.
+
+**Smells:** sweet rot, methane, sulfur compounds, metallic crystal discharge tang, stagnant water, preservation-medium chemical sharpness.
+
+**Visual textures:** blackened bark with luminous cracks, geometric fungal shelves, crystal-veined root-tunnel walls, purple-tinged ground mist, spiral-and-lattice vine growth, oily iridescent water.
 
 ## Zone Layout (8 Zones, 150 Rooms)
 

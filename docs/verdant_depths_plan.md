@@ -27,7 +27,88 @@ The theme evokes a primeval forest grown unnaturally deep and old, where the con
 
 
 ## Lore
-See `verdant_depths_lore.md` for extracted lore.
+See `verdant_depths_lore.md` for full extracted lore.
+
+### Lore Summary (for implementation reference)
+
+The Verdant Depths is the ancient core of the northern forest system — an ur-forest where the trees predate all known civilizations. The forest operates as a **distributed intelligence**: a decision-making system that emerges from billions of root connections, fungal networks, and chemical exchanges. It does not think — it responds. Its responses, refined over millennia, are sophisticated enough to look intentional.
+
+The forest's intelligence expresses itself through **three aspects**:
+1. **Growth** (Rootmother): expansion, colonization, biomass production
+2. **Decay** (Blightwood Ancient): decomposition, nutrient recycling, waste processing
+3. **Predation** (Thornfang Alpha): defense, territorial enforcement, intruder elimination
+
+These three aspects form an integrated system: growth produces biomass, decay recycles it, predation defends the cycle. The three Heartwood Guardians are focal points where each aspect concentrates into a single entity.
+
+The **Forest of Confusion** is the woodland's outermost defense — a zone of deliberate disorientation maintained by both the root network's chemical signaling and the residual druidic quarantine wards from the Withered Depths containment (see `withered_depths_lore.md`).
+
+### Lore-to-Zone Mapping
+
+| Zone | Forest Aspect | Lore Context |
+|------|--------------|--------------|
+| 1: The Threshold | Outer defense — testing zone | Forest probes intruders with low-level threats; chemical signaling evaluates |
+| 2: The Old Growth | Core territory — coordinated response | Creatures respond to root-network signals; ruins of pre-civilizational observatory |
+| 3: The Deepwood | Active impediment — the forest reshapes itself | Trees shift, paths close, canopy tracks movement; branches to three boss zones |
+| 4a: Rootmother's Sanctum | Growth aspect at maximum intensity | Root systems reshape terrain in real time |
+| 4b: Blightwood Hollow | Decay aspect — waste processing | Accelerated decomposition; processes corrupted matter from Withered Depths boundary |
+| 4c: Predator's Den | Predation aspect — apex killing ground | Forest's most dangerous creatures concentrated |
+
+### Boss Lore Context
+
+| Boss | Aspect | Ecological Role |
+|------|--------|----------------|
+| Rootmother (10061) | Growth | Barrier-builder — generates biomass wall against corruption; does not move, she grows |
+| Blightwood Ancient (10062) | Decay | Waste-processor — breaks down corrupted matter, neutralizes crystal resonance |
+| Thornfang Alpha (10063) | Predation | Last resort — strikes only when root network identifies threats lesser predators cannot handle |
+
+### The Overgrown Ruins (Rooms 10042–10049)
+
+The ruins in Zone 2 are the only evidence of permanent human habitation in the Verdant Depths. Likely built by predecessors of the **Everkeepers** (see `great_northern_forest_lore.md`) as a seasonal observatory. Key archaeological details for room/object writing:
+
+- **Lantern-and-scale motif** on a broken lintel (room 10043) — same symbol found on Lantern Road waystones, but apparently older than both cities. Lore hook: is the symbol pre-civilizational?
+- **Seven-pace planting rings** around the perimeter — matching Everkeeper tradition.
+- **Single eye motif** on the well capstone (room 10047) — matches Midgaard's Watchers' Cairn fragments (see `midgaard_lore.md`, section 0a). Key cross-area connection.
+- Trees growing in original column spacing (room 10049) — the forest has incorporated the ruins into its root network.
+
+### Cross-Area Lore Integration
+
+Embed cross-area references through room descriptions, mob barks, object flavor text, and extra descriptions:
+
+**Withered Depths conflict** (embed in boundary zones and Zone 4b):
+- Evidence of corrupted organisms being processed by the decay aspect
+- Thickened bark and intensified growth at the corruption boundary
+- Predator patrols redirected toward Withered Depths incursions
+- The Blightwood Ancient actively neutralizing crystal-contaminated matter
+
+**Great Northern Forest connections** (embed in Zones 1–2):
+- Everkeeper planting-ring remnants establishing shared tradition
+- Red moss bloom warnings echoing the northern forest's corruption indicators
+- Root-network signaling detectable at the northern forest's fringes (volatile compounds)
+- White-stag omen sightings in outer zones
+
+**Pre-civilizational archaeology** (embed in ruins, rooms 10042–10049):
+- Eye motif linking to Midgaard's Watchers' Cairn
+- Lantern-and-scale symbol predating both cities
+- Stone construction techniques matching Cairn-Keeper megalith traditions
+- Connection to the continent-spanning mystery of pre-civilizational peoples
+
+**Kiess staging base** (for connected-area NPC flavor):
+- Scout debriefing reports describing coordinated predator behavior
+- Wall Command warnings about deep-forest zones on north-gate bulletin boards
+- Herbal reagents and rare timbers flowing through forest routes into Kiess markets
+- Temple of Concord sermons drawing parallels between Conclave failure and institutional overreach
+
+### Material Culture Quick Reference
+
+**Natural motifs:** knotted root systems forming walls and corridors, canopy filtering light into green-gold columns, amber sap pooling in natural depressions, fungal shelves in concentric rings, moss carpeting below knee height, animal territorial signs.
+
+**Ruin motifs:** dry-stacked stone split by roots, column bases converted to root supports, functional deep wells, carved symbols half-obscured by lichen, courtyard spaces converted to tree groves.
+
+**Sounds:** deep wood creaking, leaf rustle without wind, predator calls, underground root movement, sap dripping, rhythmic insect chorus, the occupied silence of a space fully alive.
+
+**Smells:** rich mulch, green sap, thick pollen, productive decomposition (healthy compost, not rot), animal musk, deep well-water minerals, faint chemical sharpness of root signaling.
+
+**Visual textures:** bark from silver to near-black, root surfaces worn smooth by water, bioluminescent moss in sheltered hollows, geometric spider silk, visible vine redirection in response to disturbance.
 
 ## Area Header
 
