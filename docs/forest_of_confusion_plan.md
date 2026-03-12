@@ -490,6 +490,243 @@ Replace legacy generic drops with forest-specific equipment and utility objects.
 - Named exits must be discoverable in room descriptions or extra descriptions.
 - Extra descriptions chain from room description anchors (no orphan keywords).
 
+## Propositions
+
+Static propositions for Forest of Confusion content using IDs `25-34` (files `26.prop` through `35.prop`). These propositions are distributed across Midgaard, Kiess, and Kowloon postmasters and align with courier, customs, and containment priorities tied to the forest's confusion-mist frontier.
+
+Postmaster vnums:
+- **Midgaard:** `3015`
+- **Kiess:** `13001`
+- **Kowloon:** `14021`
+
+### Non-Chain Propositions
+
+#### Proposition 25 — Bell-Post Line Reopening (Kiess)
+
+| Field | Value |
+|---|---|
+| **File** | `26.prop` |
+| **Static ID** | 25 |
+| **Title** | Bell-Post Line Reopening |
+| **prerequisite_static_id** | -1 |
+| **type** | 3 (KILL_COUNT) |
+| **num_targets** | 1 |
+| **kill_needed** | 8 |
+| **min_level** | 18 |
+| **max_level** | 38 |
+| **offerer_vnum** | 13001 |
+| **reward_gold** | 1700 |
+| **reward_qp** | 2 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9604` (young catrat) |
+| **Accept message** | Kiess signal keepers cannot keep the southern bell-post line active while catrat packs keep denning under the posts and attacking runners at rope anchors. Thin the young packs around the fringe so repair crews can re-string the warning cords before the next mist surge. |
+| **Completion message** | The bell-post crews report stable footing and fewer attacks while working the line. Kiess dispatch has resumed timed bell checks on the southern verge, restoring the first layer of early warning for patrol routes entering the forest. |
+
+#### Proposition 26 — Mirrorbark Predator Census (Midgaard)
+
+| Field | Value |
+|---|---|
+| **File** | `27.prop` |
+| **Static ID** | 26 |
+| **Title** | Mirrorbark Predator Census |
+| **prerequisite_static_id** | -1 |
+| **type** | 1 (KILL_VARIETY) |
+| **num_targets** | 3 |
+| **kill_needed** | 0 |
+| **min_level** | 28 |
+| **max_level** | 49 |
+| **offerer_vnum** | 3015 |
+| **reward_gold** | 2400 |
+| **reward_qp** | 3 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9607 9608 9610` (mirror stag, rootcat, whisper-owl) |
+| **Accept message** | Midgaard's caravan insurers need current hazard records from the Mistroute Thickets after conflicting reports about predator migration under the confusion mists. Confirm contact with each major threat type so the Granite Arcade can update courier indemnity rates and route advisories. |
+| **Completion message** | Your field confirmations let Midgaard revise its hazard tables with current data instead of old speculation. Courier contracts through Kiess can now price risk by actual predator distribution rather than blanket high-danger penalties. |
+
+#### Proposition 27 — Conclave Survey Slate Recovery (Kowloon)
+
+| Field | Value |
+|---|---|
+| **File** | `28.prop` |
+| **Static ID** | 27 |
+| **Title** | Conclave Survey Slate Recovery |
+| **prerequisite_static_id** | -1 |
+| **type** | 2 (ACQUIRE_OBJECT) |
+| **num_targets** | 1 |
+| **kill_needed** | 0 |
+| **min_level** | 34 |
+| **max_level** | 58 |
+| **offerer_vnum** | 14021 |
+| **reward_gold** | 2800 |
+| **reward_qp** | 3 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9633` (damaged Conclave survey slate) |
+| **Accept message** | Kowloon's magistrate-couriers are assembling a legal archive of abandoned Conclave claims that still affect northern customs rulings. Retrieve a readable survey slate from the Forest of Confusion so the city can challenge lingering paper rights tied to dead field stations. |
+| **Completion message** | The recovered slate has been transferred to Kowloon's archive clerks for transcription and seal verification. Magistrate aides confirm it contains route geometry that supports nullifying several obsolete Conclave-era toll assertions. |
+
+#### Proposition 28 — Neogi Warrant Service (Kiess)
+
+| Field | Value |
+|---|---|
+| **File** | `29.prop` |
+| **Static ID** | 28 |
+| **Title** | Neogi Warrant Service |
+| **prerequisite_static_id** | -1 |
+| **type** | 3 (KILL_COUNT) |
+| **num_targets** | 1 |
+| **kill_needed** | 1 |
+| **min_level** | 35 |
+| **max_level** | 60 |
+| **offerer_vnum** | 13001 |
+| **reward_gold** | 3200 |
+| **reward_qp** | 4 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9628` (Neogi ruler) |
+| **Accept message** | Kiess has authorized a direct warrant against the Neogi ruler coordinating kidnappings from rope-line detachments and salvage crews. Serve the warrant in the warrens and end the command node directing those raids. |
+| **Completion message** | With the Neogi ruler eliminated, Kiess scouts report fragmented slave-taking bands rather than organized raids. Missing-person alerts from the southern camps have already dropped, and warren pressure on channel crossings is easing. |
+
+#### Proposition 29 — Ashen Lattice Containment Sweep (Midgaard)
+
+| Field | Value |
+|---|---|
+| **File** | `30.prop` |
+| **Static ID** | 29 |
+| **Title** | Ashen Lattice Containment Sweep |
+| **prerequisite_static_id** | -1 |
+| **type** | 1 (KILL_VARIETY) |
+| **num_targets** | 3 |
+| **kill_needed** | 0 |
+| **min_level** | 42 |
+| **max_level** | 68 |
+| **offerer_vnum** | 3015 |
+| **reward_gold** | 3900 |
+| **reward_qp** | 4 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9620 9621 9623` (spore husk, mist-wolf, prism-leech swarm) |
+| **Accept message** | Midgaard's herbal and timber consignments are being rejected as contaminated after passing near the Ashen Lattice scars. Clear representative blight carriers in the scar band so inspectors can certify outbound cargo again. |
+| **Completion message** | Quarantine clerks confirm lower active spore density along inspected routes through the scar band. Midgaard's receiving houses have resumed normal intake for stamped Kiess manifests instead of automatic rejection. |
+
+### Chain Propositions
+
+#### Kiess Wardline Restoration Chain (30-32)
+
+##### Proposition 30 — Wardline Reconsolidation
+
+| Field | Value |
+|---|---|
+| **File** | `31.prop` |
+| **Static ID** | 30 |
+| **Title** | Wardline Reconsolidation |
+| **prerequisite_static_id** | -1 |
+| **type** | 1 (KILL_VARIETY) |
+| **num_targets** | 2 |
+| **kill_needed** | 0 |
+| **min_level** | 48 |
+| **max_level** | 74 |
+| **offerer_vnum** | 13001 |
+| **reward_gold** | 4300 |
+| **reward_qp** | 4 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9622 9619` (bark revenant, greater broken one) |
+| **Accept message** | Kiess ward engineers cannot reset the old druidic marker ring while revenants and greater broken ones keep overrunning the scar perimeter at dusk. Break both threat groups so a repair team can hold position long enough to re-ink the ward lattice. |
+| **Completion message** | Engineers held the perimeter through a full mist cycle and re-established the first wardline interval. The forest still shifts, but the repaired markers now give patrol captains a reliable baseline for route triangulation. |
+
+##### Proposition 31 — Yugoloth Contract Severance
+
+| Field | Value |
+|---|---|
+| **File** | `32.prop` |
+| **Static ID** | 31 |
+| **Title** | Yugoloth Contract Severance |
+| **prerequisite_static_id** | 30 |
+| **type** | 3 (KILL_COUNT) |
+| **num_targets** | 1 |
+| **kill_needed** | 1 |
+| **min_level** | 56 |
+| **max_level** | 82 |
+| **offerer_vnum** | 13001 |
+| **reward_gold** | 5200 |
+| **reward_qp** | 5 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9641` (guardian yugoloth) |
+| **Accept message** | Intercepted tablets indicate Ymmas hired extraplanar muscle to hold his cabin approaches while he continues experiments in the inner rooms. Eliminate the guardian yugoloth and collapse that contract line before Kiess commits a full strike team. |
+| **Completion message** | The yugoloth's presence has ended, and the cabin perimeter no longer shows coordinated outsider tactics. Kiess command has authorized the final assault window on Ymmas's sanctum while his defenses are still destabilized. |
+
+##### Proposition 32 — Ymmas Lair Strike
+
+| Field | Value |
+|---|---|
+| **File** | `33.prop` |
+| **Static ID** | 32 |
+| **Title** | Ymmas Lair Strike |
+| **prerequisite_static_id** | 31 |
+| **type** | 3 (KILL_COUNT) |
+| **num_targets** | 1 |
+| **kill_needed** | 1 |
+| **min_level** | 60 |
+| **max_level** | 90 |
+| **offerer_vnum** | 13001 |
+| **reward_gold** | 7000 |
+| **reward_qp** | 6 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9642` (the evil Ymmas) |
+| **Accept message** | With the outer contract broken, Kiess issues a direct kill order on Ymmas, whose Conclave salvage rites are amplifying confusion-mist surges across active patrol bands. Enter the sanctum and end his operation before another bell-line collapses. |
+| **Completion message** | Ymmas is dead, and mist-pressure readings around the central cabin complex have dropped below emergency thresholds. Kiess dispatch has reopened suspended patrol loops and logged the strike as a major stabilization event for the entire southern frontier. |
+
+#### Kowloon Deep-Courier Security Chain (33-34)
+
+##### Proposition 33 — Cave Route Pacification
+
+| Field | Value |
+|---|---|
+| **File** | `34.prop` |
+| **Static ID** | 33 |
+| **Title** | Cave Route Pacification |
+| **prerequisite_static_id** | -1 |
+| **type** | 1 (KILL_VARIETY) |
+| **num_targets** | 2 |
+| **kill_needed** | 0 |
+| **min_level** | 44 |
+| **max_level** | 70 |
+| **offerer_vnum** | 14021 |
+| **reward_gold** | 4200 |
+| **reward_qp** | 4 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9636 9640` (manscorpian scout, manscorpian hybrid) |
+| **Accept message** | Kowloon courier lantern crews are testing a cave-linked relay route to bypass surface fog banks, but manscorpian patrols are collapsing marker lines before runners can map safe intervals. Remove both common patrol castes so survey crews can complete their relay chart. |
+| **Completion message** | The cave relay team completed a full marker pass with only routine resistance. Kowloon has approved provisional use of the subterranean courier segment for high-priority winter dispatches. |
+
+##### Proposition 34 — Chitin Crown Decapitation
+
+| Field | Value |
+|---|---|
+| **File** | `35.prop` |
+| **Static ID** | 34 |
+| **Title** | Chitin Crown Decapitation |
+| **prerequisite_static_id** | 33 |
+| **type** | 3 (KILL_COUNT) |
+| **num_targets** | 1 |
+| **kill_needed** | 1 |
+| **min_level** | 52 |
+| **max_level** | 80 |
+| **offerer_vnum** | 14021 |
+| **reward_gold** | 6100 |
+| **reward_qp** | 5 |
+| **reward_item_vnum** | 0 |
+| **reward_item_count** | 0 |
+| **Target vnums** | `9638` (manscorpian king) |
+| **Accept message** | Initial pacification proved the cave route viable, but the manscorpian king still commands concentrated strikes from the deepest chamber and can rebuild losses faster than patrols can clear them. Eliminate the king to collapse centralized resistance and secure the relay corridor for Kowloon's long-haul post. |
+| **Completion message** | With the manscorpian king removed, coordinated cave ambushes have stopped and remaining packs are splintering into disorganized scavenger cells. Kowloon's courier office has formally designated the route as a protected contingency lane during heavy fog seasons. |
+
 ## Implementation Checklist
 1. Rebuild `#ROOMS` so vnums 9600-9799 are fully populated and connected per zone plan.
 2. Replace room text set with unique, lore-consistent descriptions following the color theme.
