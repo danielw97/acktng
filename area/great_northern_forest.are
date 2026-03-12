@@ -1569,3 +1569,1599 @@ D0
 ~
 0 -1 15619
 S
+#15600
+Western Fen Approach~
+The ground grows @@gsofter@@N and wetter here as the forest transitions fully into the Mosswater Bends. @@GWillows and alders@@N replace the broadleaf trees of the southern verge, their roots standing in @@lshallow water@@N that seeps across the forest floor. The air is thick with the smell of decaying vegetation, and clouds of gnats hover in the still spaces between trees. Every step produces a wet squelch.
+~
+0 3
+D1
+~
+~
+0 -1 15601
+D0
+~
+~
+0 -1 15620
+S
+#15601
+Fen Channel~
+A @@lnarrow channel@@N of dark water winds between hummocks of @@Gsedge and rush@@N, its surface broken only by the occasional bubble rising from the organic muck below. The channel is too deep to wade in places, forcing movement along the hummock edges where footing is uncertain. @@gWater striders@@N skate across the surface, and the plop of unseen creatures entering the water is a constant background sound.
+~
+0 6
+D1
+~
+~
+0 -1 15602
+D3
+~
+~
+0 -1 15600
+S
+#15602
+Hummock Stand~
+A @@Graised hummock@@N of firm ground stands above the surrounding @@lfen water@@N here, crowned by a cluster of mature alders whose roots hold the soil together. The hummock is large enough for several people to stand on dry ground, and the alders provide some shelter from rain. @@gDried mud@@N on the trunks at varying heights records past water levels.
+~
+0 6
+D1
+~
+~
+0 -1 15603
+D3
+~
+~
+0 -1 15601
+D0
+~
+~
+0 -1 15622
+S
+#15603
+Fen Crossroads~
+Several @@gfen channels@@N converge here at a slightly elevated patch of ground where travelers and animals alike pause to choose their route. The ground is firmer than the surrounding fen, reinforced by the @@Ginterlocking roots@@N of a stand of water oaks. @@lMuddy boot prints@@N and animal tracks overlay each other in the clay, evidence that this natural crossroads sees regular traffic.
+~
+0 3
+D1
+~
+~
+0 -1 15604
+D3
+~
+~
+0 -1 15602
+D2
+~
+~
+0 -1 15583
+D0
+~
+~
+0 -1 15623
+S
+#15604
+Flooded Copse~
+@@GStanding water@@N surrounds the trunks of trees here, flooding the copse to knee depth and turning the forest floor into a @@lmurky lake@@N. The trees themselves seem untroubled, their water-adapted roots thriving in the saturated soil. @@gDead branches@@N and floating debris create a maze on the water's surface, and the reflections of the canopy above give the flooded copse an unsettling doubled quality.
+~
+0 6
+D1
+~
+~
+0 -1 15605
+D3
+~
+~
+0 -1 15603
+S
+#15605
+Leech Pool~
+A @@gstagnant pool@@N of @@ldark water@@N fills a depression here, its surface oily and still. The water looks shallow but the bottom is deceptive, dropping sharply in places. @@RLeeches@@N can be seen moving just beneath the surface, their dark bodies undulating through the murk. The surrounding vegetation is @@Gdense and rank@@N, and the smell of decay is strong.
+~
+0 6
+D1
+~
+~
+0 -1 15606
+D3
+~
+~
+0 -1 15604
+S
+#15606
+Sedge Meadow~
+A broad, flat expanse of @@Gsedge grass@@N stretches across the low ground here, interrupted only by scattered pools of @@lstanding water@@N and the occasional @@galder hummock@@N. The sedge grows waist-high, obscuring the uneven ground beneath and making travel slow and uncertain. Herons stalk through the grass on long legs, and the buzz of dragonflies fills the warm air.
+~
+0 2
+D1
+~
+~
+0 -1 15607
+D3
+~
+~
+0 -1 15605
+D0
+~
+~
+0 -1 15626
+S
+#15607
+Boggy Depression~
+The ground sinks into a @@gsoggy depression@@N here where the water table sits at the surface. Every step pushes @@ldark water@@N up around boots, and the footing is treacherous on the hidden roots and soft organic muck below. @@GSphagnum moss@@N grows in thick cushions on the slightly raised spots, and the air smells of peat and methane. @@gBubbles@@N occasionally break the surface with quiet pops.
+~
+0 6
+D1
+~
+~
+0 -1 15608
+D3
+~
+~
+0 -1 15606
+S
+#15608
+Fen Island~
+A @@Gsmall island@@N of solid ground rises above the surrounding @@lfen water@@N, crowned by a single enormous willow whose trailing branches reach the water's surface on all sides. The island is barely large enough for the tree and a ring of firm ground around its base. @@gOtter slides@@N mark the muddy banks where the animals enter and exit the water, and a @@bwoven nest@@N sits in a hollow of the tree's roots.
+~
+0 3
+D1
+~
+~
+0 -1 15609
+D3
+~
+~
+0 -1 15607
+S
+#15609
+Deep Fen, Ravine Outflow~
+The ravine that cuts through the southern verge ends here, its seasonal water draining into the @@lbroad expanse@@N of the Mosswater Bends. The ground is permanently wet, with @@Gstanding water@@N reflecting the canopy above in dark mirrors. @@gFloating debris@@N marks the flow pattern where ravine water spreads into the fen system, and the vegetation is lush with the double supply of nutrients.
+~
+0 6
+D1
+~
+~
+0 -1 15610
+D3
+~
+~
+0 -1 15608
+D2
+~
+~
+0 -1 15589
+S
+#15610
+Lantern Road, Mosswater Approach~
+The @@lLantern Road@@N enters the Mosswater Bends proper here, and the road engineering changes noticeably. The packed earth gives way to a @@gcorduroy road@@N of split logs laid crosswise over the soft ground, their surfaces worn smooth by years of traffic. @@GWillow wattle fencing@@N lines both sides, keeping the road bed from spreading into the fen. @@lIron lantern brackets@@N are mounted on taller posts here, raised above the seasonal flood line.
+~
+0 3
+D0
+~
+~
+0 -1 15630
+D2
+~
+~
+0 -1 15590
+D3
+~
+~
+0 -1 15609
+S
+#15611
+Fen Edge Camp~
+A @@gcamp@@N has been established on one of the firmer hummocks at the fen's edge, with @@la raised platform@@N of lashed logs providing a dry surface above the wet ground. A @@Gsmoke-blackened fire circle@@N of stacked stones sits at the platform's center, and a simple @@grack@@N holds fishing nets and eel traps. This appears to be a semi-permanent camp used by fen workers.
+~
+0 3
+D1
+~
+~
+0 -1 15612
+D3
+~
+~
+0 -1 15610
+D0
+~
+~
+0 -1 15631
+S
+#15612
+Lantern Road, Fen Crossing~
+The @@lLantern Road@@N crosses a broad stretch of fenland here on a well-maintained @@gcauseway@@N of packed earth and gravel, raised above the waterline by generations of wardens piling material on top of the original corduroy base. @@GWillow pilings@@N driven into the fen on either side mark the road's edge and prevent the causeway from eroding. The @@llantern brackets@@N are closely spaced here, as the fen fog can reduce visibility to nothing.
+~
+0 3
+D0
+~
+~
+0 -1 15632
+D2
+~
+~
+0 -1 15592
+D1
+~
+~
+0 -1 15613
+S
+#15613
+Lantern Road, Fen Eastward Turn~
+The @@lLantern Road@@N turns eastward here along the edge of a @@Gfirm ridge@@N that provides natural support for the road bed. The turn is well-marked with @@gwaystones@@N and a pair of @@liron lanterns@@N that are kept lit through the night to guide travelers through the fen section. A @@Wsmall plaque@@N on the nearest waystone credits the Mire-Speaker guides who originally identified this firm-ground route.
+~
+0 3
+D0
+~
+~
+0 -1 15633
+D3
+~
+~
+0 -1 15612
+D1
+~
+~
+0 -1 15614
+S
+#15614
+Reed Village Approach~
+A @@gnarrow path@@N of laid wattle and packed clay leads from the Lantern Road toward the @@linterior of the Mosswater Bends@@N. Signs of habitation appear: @@Gwoven reed screens@@N set up as windbreaks, bundles of drying fish hung from poles, and the faint smell of smoke from cooking fires. This path leads to one of the mire-clan's reed-platform settlements.
+~
+0 3
+D3
+~
+~
+0 -1 15613
+D1
+~
+~
+0 -1 15615
+D0
+~
+~
+0 -1 15634
+S
+#15615
+Eel Trap Line~
+A @@gline of woven eel traps@@N stretches across a @@lslow-moving channel@@N here, each trap a cylinder of plaited willow staked into the mud at the channel's edge. The traps are well-made and regularly tended, with fresh bait visible in the newest ones. @@GFishbones@@N and scales litter the bank where catches are cleaned, and a @@bsmall sorting basket@@N sits nearby.
+~
+0 6
+D3
+~
+~
+0 -1 15614
+D0
+~
+~
+0 -1 15635
+S
+#15616
+Stagnant Backwater~
+A @@gdead-end channel@@N of @@lstagnant water@@N sits here, cut off from the main flow by accumulated mud and debris. The water is dark and still, its surface broken only by the occasional bubble of decomposition gas. @@GAlgae@@N forms a green film on the surface, and the smell is unpleasant. @@RDead fish@@N float belly-up near the edges, and the bankside vegetation is rank and overgrown.
+~
+0 6
+D1
+~
+~
+0 -1 15617
+D0
+~
+~
+0 -1 15636
+S
+#15617
+Waterlogged Thicket~
+@@GWater-tolerant shrubs@@N form a dense thicket here in the @@lshallow standing water@@N that covers the ground. The shrubs are thick with @@gbright berries@@N that attract birds and small mammals, creating a pocket of noisy activity amid the quieter fen. Navigation through requires pushing between springy branches while wading through ankle-deep water. The berries stain everything they touch a deep purple.
+~
+0 6
+D3
+~
+~
+0 -1 15616
+D2
+~
+~
+0 -1 15597
+D0
+~
+~
+0 -1 15637
+S
+#15618
+Snake Channel~
+A @@lnarrow, winding channel@@N of dark water cuts through the fen here, its banks low and muddy. The channel is ideal habitat for water snakes, and their @@gsinuous tracks@@N mark the mud at every point where the bank rises above the water line. @@GOverhanging vegetation@@N provides cover, and the still water makes it easy to spot the V-shaped wakes of @@Rswimming serpents@@N.
+~
+0 6
+D1
+~
+~
+0 -1 15619
+D3
+~
+~
+0 -1 15617
+D0
+~
+~
+0 -1 15638
+S
+#15619
+Eastern Reed Marsh~
+The @@lfar eastern extent@@N of the Mosswater Bends is a vast expanse of @@Greeds and sedge@@N growing in @@lshallow water@@N that stretches as far as the eye can see. The reeds grow so densely that they form walls of green, broken only by narrow channels where the water flows between stands. The sound of @@gwind through the reeds@@N is a constant low rushing, and the air smells of water, mud, and growing things.
+~
+0 6
+D3
+~
+~
+0 -1 15618
+D2
+~
+~
+0 -1 15599
+S
+#15620
+Western Fen Basin~
+The @@gwestern fen@@N is deeper here, with @@lstanding water@@N covering the ground to mid-calf. @@GRushes and bulrushes@@N grow in thick stands, their seed heads heavy and nodding. The bottom is soft organic muck that sucks at every step, and the water is stained dark by tannins from decomposing plant matter. The western edge of the fen is marked by a low bluff of @@bclay@@N.
+~
+0 6
+D1
+~
+~
+0 -1 15621
+D2
+~
+~
+0 -1 15600
+S
+#15621
+Frog Hollow~
+A @@lshallow basin@@N of warm water is alive with frogs of every size, from tiny bright-green tree frogs to enormous @@Gbull frogs@@N whose bass croaking reverberates through the fen. The water is thick with @@gspawning jelly@@N in season and alive with tadpoles the rest of the year. Lily pads carpet the surface in places, and @@Rheron tracks@@N in the mud show that predators know this spot well.
+~
+0 6
+D1
+~
+~
+0 -1 15622
+D3
+~
+~
+0 -1 15620
+S
+#15622
+Hummock Bridge~
+A series of @@Graised hummocks@@N creates a natural stepping-stone path across an otherwise impassable stretch of @@ldeep fen water@@N. The hummocks are close enough to leap between, their surfaces crowned with @@gsedge and tough grass@@N that provides uncertain footing. Missing a jump means plunging into waist-deep water with a soft, sucking bottom. The route is clearly used by fen dwellers who know the safe spots.
+~
+0 3
+D1
+~
+~
+0 -1 15623
+D3
+~
+~
+0 -1 15621
+D2
+~
+~
+0 -1 15602
+S
+#15623
+Fen Trail Hub~
+A @@grelatively firm@@N area of ground serves as a junction point for several fen trails, each marked by a @@lstake topped with a different colored rag@@N: the mire-clan's informal trail-marking system. The trails lead in multiple directions through the fen, connecting the scattered settlements, fishing grounds, and trade routes. @@GBaskets of drying fish@@N sit beside the trail junction, left by a fisher who has not yet returned.
+~
+0 3
+D1
+~
+~
+0 -1 15624
+D3
+~
+~
+0 -1 15622
+D2
+~
+~
+0 -1 15603
+D0
+~
+~
+0 -1 15643
+S
+#15624
+Crocodile Bank~
+A @@gmuddy bank@@N slopes down to a @@ldark, deep channel@@N that is suspiciously quiet. The mud is scored with @@Rlong parallel drag marks@@N characteristic of large reptiles hauling themselves in and out of the water. @@GBroken reeds@@N line the bank where heavy bodies have crushed them flat, and a @@bfoul smell@@N rises from a pile of bones and rotting fish half-buried in the mud.
+~
+0 6
+D1
+~
+~
+0 -1 15625
+D3
+~
+~
+0 -1 15623
+S
+#15625
+Deep Channel~
+The fen opens into a @@ldark, slow-moving channel@@N too deep to wade, its water opaque with suspended sediment. The channel is several body-lengths wide and stretches east and west as far as the eye can see through the reeds. @@GOverhanging willows@@N trail their branches in the current, and @@glogs@@N float lazily on the surface, some of which may not be logs at all.
+~
+0 7
+D1
+~
+~
+0 -1 15626
+D3
+~
+~
+0 -1 15624
+S
+#15626
+Heron Rookery~
+@@GTall dead trees@@N standing in @@lshallow water@@N have been colonized by a massive colony of great herons, their @@gnests@@N crowding every available fork and branch. The noise is tremendous: a cacophony of croaking, bill-clacking, and the shrieks of young demanding food. White droppings coat every surface below, and the smell is eye-watering. The herons are enormous, standing nearly as tall as a person.
+~
+0 6
+D1
+~
+~
+0 -1 15627
+D3
+~
+~
+0 -1 15625
+D2
+~
+~
+0 -1 15606
+S
+#15627
+Quickmud Flat~
+The fen floor is treacherously flat here, a @@gdeceptive expanse@@N of what appears to be solid ground but is in fact a thin crust over @@Rdeep quickmud@@N. @@GReed tufts@@N mark the safe spots where the ground is genuinely solid, but the spaces between are lethal traps for the unwary. @@lAnimal bones@@N protrude from the mud in places, testament to creatures that stepped wrong.
+~
+0 6
+D1
+~
+~
+0 -1 15628
+D3
+~
+~
+0 -1 15626
+S
+#15628
+Smuggler's Blind~
+A @@gclever hide@@N has been constructed in the reeds here, woven from living vegetation so that it blends perfectly with the surrounding fen. The interior is dry and spacious enough for several people, with @@lstorage niches@@N cut into the wattle walls and a @@Gcovered fire pit@@N whose smoke is dispersed through a reed chimney. @@bDiscarded contraband wrappers@@N litter the floor.
+~
+0 3
+D1
+~
+~
+0 -1 15629
+D3
+~
+~
+0 -1 15627
+S
+#15629
+Fen Fog Pool~
+@@gThick fog@@N pools in this low-lying section of the fen, reducing visibility to @@larm's length@@N even on clear days. The moisture in the air is so heavy it beads on every surface, and sounds are muffled and distorted, seeming to come from wrong directions. @@GPhosphorescent algae@@N in the water creates faint @@rgreen glows@@N that drift through the fog like will-o-wisps.
+~
+1 6
+D3
+~
+~
+0 -1 15628
+D0
+~
+~
+0 -1 15649
+S
+#15630
+Lantern Road, Fen Bridge~
+The @@lLantern Road@@N crosses a wide fen channel here on a @@gstout timber bridge@@N built on driven willow pilings. The bridge follows the ancient principle of the road charter: its construction allows full water flow beneath, with no damming of the natural waterway. The timbers are worn smooth by traffic, and @@Giron lanterns@@N hang from posts at both ends. A @@Wplaque@@N commemorates the original Mire-Speaker guides who identified this crossing point.
+~
+0 3
+D0
+~
+~
+0 -1 15650
+D2
+~
+~
+0 -1 15610
+D1
+~
+~
+0 -1 15631
+S
+#15631
+Reed Platform Village~
+A @@gmire-clan settlement@@N occupies a cluster of @@lraised reed platforms@@N here, each platform large enough for a small dwelling and connected to its neighbors by woven walkways that sway underfoot. The platforms rise and fall with the seasonal water level, anchored by poles driven deep into the fen bed. @@GSmoke rises@@N from cooking fires, and the smell of grilling fish mingles with the fen's marshy scent.
+~
+0 3
+D3
+~
+~
+0 -1 15630
+D2
+~
+~
+0 -1 15611
+D1
+~
+~
+0 -1 15632
+S
+#15632
+Fen Village Center~
+The @@gheart of the reed-platform village@@N is a larger central platform that serves as a communal gathering space. @@GWoven mats@@N cover the floor, and a @@lcentral fire pit@@N is surrounded by low seating made from bundled reeds. Drying racks hold @@bfish, herbs, and resin@@N, and carved wooden posts at the platform's edges bear symbols of the old Mire-Speaker tradition. The bustle of daily life surrounds this gathering point.
+~
+0 3
+D3
+~
+~
+0 -1 15631
+D2
+~
+~
+0 -1 15612
+D1
+~
+~
+0 -1 15633
+S
+#15633
+Lantern Road, Mosswater Straight~
+The @@lLantern Road@@N follows a firm natural ridge through the heart of the Mosswater Bends here, one of the few stretches where the road can run straight for any distance. The @@gcorduroy surface@@N is in good repair, and @@Gwillow wattle fencing@@N lines both sides. The fen stretches away on either side, its @@lwater glinting@@N through gaps in the roadside vegetation. Waystone distances here record the approach to the Ironpine Rise.
+~
+0 3
+D0
+~
+~
+0 -1 15653
+D3
+~
+~
+0 -1 15632
+D1
+~
+~
+0 -1 15634
+S
+#15634
+Herbalist's Garden~
+A @@Gcultivated patch@@N of medicinal plants grows on a raised hummock near the fen village, tended by the mire-clan herbalist. The beds are organized by use: @@gfever-reducing willowbark@@N in one section, wound-cleaning mosses in another, and pain-dulling poppy heads in a carefully fenced corner. @@lLabels@@N written on birch-bark strips identify each plant in the Mire-Speaker's own notation.
+~
+0 3
+D3
+~
+~
+0 -1 15633
+D2
+~
+~
+0 -1 15614
+D0
+~
+~
+0 -1 15654
+S
+#15635
+Fish Drying Rack~
+@@GRacks of drying fish@@N stand in orderly rows on a @@gfirm hummock@@N, each rack a framework of willow poles strung with cord from which split fish hang in the breeze. The fish are at various stages of drying, from @@lfresh pink@@N to hard amber. The smell is powerful but not unpleasant, a signature of the mire-clan's primary trade good. A @@bsmoking kiln@@N of stacked stones sits at one end.
+~
+0 3
+D3
+~
+~
+0 -1 15634
+D2
+~
+~
+0 -1 15615
+S
+#15636
+Bog Iron Seep~
+The @@lwater here has a distinctive orange-red tint@@N, the result of @@Rbog iron@@N seeping from the peat below. The iron-rich water deposits a @@grustly crust@@N on every surface it touches, staining rocks, roots, and reed stems with bands of ochre. @@GLichen@@N grows prolifically on the iron-crusted surfaces, and the water tastes sharply metallic. The mire-clans collect this iron-rich mud for trade.
+~
+0 6
+D1
+~
+~
+0 -1 15637
+D2
+~
+~
+0 -1 15616
+S
+#15637
+Peat Cutting~
+A section of fen has been @@gcleaned down to bare peat@@N here, the sphagnum moss stripped away to expose the dark, compressed plant matter beneath. @@GNeat blocks of peat@@N have been cut and stacked to dry, their surfaces fibrous and dark brown. The cutting exposes @@llayered history@@N in the peat wall: compressed leaves, ancient branches, and the occasional glint of preserved insect wings. The smell is earthy and rich.
+~
+0 3
+D3
+~
+~
+0 -1 15636
+D2
+~
+~
+0 -1 15617
+D0
+~
+~
+0 -1 15657
+S
+#15638
+Asp Mudbank~
+A @@gsunny mudbank@@N rises from the fen water here, its surface baked firm in the sun and @@Rcrisscrossed with serpentine tracks@@N. This is a favored basking spot for the venomous mud asps that inhabit the fen, and several @@gcoiled forms@@N are usually visible on the warm mud. The bank drops steeply into @@ldeep water@@N on one side, making it an effective ambush point for the resident snakes.
+~
+0 6
+D1
+~
+~
+0 -1 15639
+D3
+~
+~
+0 -1 15637
+D2
+~
+~
+0 -1 15618
+S
+#15639
+Fen Eastern Deep~
+The @@leastern reaches@@N of the Mosswater Bends are among the deepest and least explored, where the fen water is @@gdark and impenetrable@@N and the @@Greeds grow to enormous height@@N. Navigation here requires intimate knowledge of the hidden channels and firm-ground paths that the mire-clans guard carefully. The silence is broken only by the @@lsplash of unseen creatures@@N and the rustle of reeds in the wind.
+~
+0 6
+D3
+~
+~
+0 -1 15638
+D2
+~
+~
+0 -1 15619
+S
+#15640
+Western Fen Heights~
+The @@gground rises@@N slightly here along the western edge of the fen, providing a narrow strip of @@lfirmer footing@@N above the waterline. @@GScrubby willows@@N and tough marsh grass grow on the slope, their roots holding the thin soil against erosion. The view from this slight elevation extends across the flat expanse of the @@lMosswater Bends@@N, a sea of green reeds and glinting water.
+~
+0 3
+D1
+~
+~
+0 -1 15641
+D0
+~
+~
+0 -1 15660
+D2
+~
+~
+0 -1 15620
+S
+#15641
+Turtle Nesting Bank~
+A @@gsandy bank@@N above the fen waterline is pocked with @@gnest holes@@N where snapping turtles bury their eggs each season. The sand is @@lcoarse and warm@@N, ideal incubation material. @@GShell fragments@@N from hatched clutches litter the surface, and the heavy drag marks of adult turtles track between the bank and the water. The bank is exposed and sunny, with little shade.
+~
+0 3
+D1
+~
+~
+0 -1 15642
+D3
+~
+~
+0 -1 15640
+S
+#15642
+Wading Ford~
+A @@lshallow stretch@@N of fen channel can be forded here where a natural bar of gravel and clay creates a crossing barely knee-deep. The ford is marked by @@gworn stakes@@N on either side, their tops cut to indicate the water depth at normal levels. @@GAlgae-slicked stones@@N make the footing treacherous, and the current, though gentle, pushes steadily at the legs of anyone crossing.
+~
+0 6
+D1
+~
+~
+0 -1 15643
+D3
+~
+~
+0 -1 15641
+S
+#15643
+Fen Waystation~
+A @@gpermanent waystation@@N has been built here on a reinforced platform of log pilings and packed clay, raised well above the fen's highest flood line. A @@lsimple shelter@@N with a reed-thatch roof provides protection from rain, and a stone-lined fire ring sits at its center. @@GCarved distance markers@@N on the shelter posts show directions and distances to both the Lantern Road and the nearest mire-clan village. @@gDried rations@@N are stored in a sealed clay pot.
+~
+4 3
+D1
+~
+~
+0 -1 15644
+D3
+~
+~
+0 -1 15642
+D2
+~
+~
+0 -1 15623
+D0
+~
+~
+0 -1 15663
+S
+#15644
+Eel Channel~
+A @@llong, straight channel@@N of deep dark water runs through the fen here, its banks lined with @@Goverhanging vegetation@@N that trails in the slow current. The channel is a prime habitat for @@geels@@N, and the water occasionally roils as the creatures move in the depths. Mire-clan eel traps are visible at intervals, their woven funnels submerged and anchored to bankside stakes.
+~
+0 6
+D1
+~
+~
+0 -1 15645
+D3
+~
+~
+0 -1 15643
+S
+#15645
+Marsh Rat Colony~
+@@GDense waterside vegetation@@N conceals a colony of large marsh rats, their @@gnest mounds@@N visible as raised humps of woven grass and mud rising from the shallow water. The rats are bold and numerous, their eyes gleaming from entry holes as they watch intruders with calculating attention. @@lGnawed stems@@N and scattered food debris mark the colony's boundaries.
+~
+0 6
+D1
+~
+~
+0 -1 15646
+D3
+~
+~
+0 -1 15644
+S
+#15646
+Sunken Log Crossing~
+A series of @@gsunken logs@@N lies just below the water's surface here, their positions betrayed only by the @@lripples@@N they create in the otherwise still fen water. A careful traveler can cross by stepping on the logs, but the waterlogged wood is slippery and treacherous. @@GMoss@@N and aquatic plants have colonized the logs, and small fish dart between them in the sheltered water.
+~
+0 6
+D1
+~
+~
+0 -1 15647
+D3
+~
+~
+0 -1 15645
+S
+#15647
+Smuggler's Cache~
+A @@ghidden storage site@@N has been carved into the base of a hollow tree standing in the fen, accessible only by wading through @@lknee-deep water@@N. The cache is cunningly concealed by a removable panel of bark, and inside, the hollow is lined with @@Goiled cloth@@N to keep the contents dry. @@bEmpty crates@@N and rope coils suggest recent use, and boot prints in the mud lead away toward deeper fen.
+~
+0 3
+D3
+~
+~
+0 -1 15646
+D0
+~
+~
+0 -1 15667
+S
+#15648
+Wisp Fog~
+@@gDense fog@@N hangs over the fen here, so thick that the water below is invisible. Strange @@rlights@@N flicker and drift through the murk, bobbing and weaving in patterns that seem almost purposeful. The lights are the @@rmarsh will-o-wisps@@N that haunt the deepest fen, their cold glow casting no warmth and illuminating nothing but the swirling fog itself. @@lThe silence@@N is complete and unnatural.
+~
+1 6
+D1
+~
+~
+0 -1 15649
+D3
+~
+~
+0 -1 15647
+S
+#15649
+Deep Fog Hollow~
+The @@gfog is even thicker@@N here in this low-lying hollow, where the fen water pools in a stagnant basin. @@rGreenish lights@@N pulse in the murk, casting shifting shadows that suggest shapes not quite there. The water is @@ldark and still@@N, and the silence is broken only by an occasional distant splash. The air is cold and clammy, and orientation is nearly impossible.
+~
+1 6
+D3
+~
+~
+0 -1 15648
+D2
+~
+~
+0 -1 15629
+D0
+~
+~
+0 -1 15669
+S
+#15650
+Lantern Road, Bridge Approach~
+The @@lLantern Road@@N approaches another fen bridge here, the road surface firm and well-maintained as it climbs slightly to meet the bridge level. @@gWaystone markers@@N indicate the distance to the Ironpine Rise ahead and the Mosswater Toll Bridge checkpoint. @@GWillow trees@@N line the approach, their branches arching over the road to form a @@lgreen tunnel@@N. The air is fresher here, with a hint of pine from the rising ground to the north.
+~
+0 3
+D0
+~
+~
+0 -1 15670
+D2
+~
+~
+0 -1 15630
+D1
+~
+~
+0 -1 15651
+S
+#15651
+Toll House Clearing~
+A @@gsmall clearing@@N beside the Lantern Road serves as the site of a @@lruined toll house@@N, its walls reduced to crumbling foundations overgrown with ivy. This was one of the original Passage Tithe collection points, where caravans paid in grain and lamp oil for safe passage. A @@Wrelic ledger stone@@N near the door frame still shows carved tallies of long-ago transactions. The clearing is maintained by wardens as a rest stop.
+~
+4 3
+D3
+~
+~
+0 -1 15650
+D1
+~
+~
+0 -1 15652
+S
+#15652
+Lantern Road, Westward Jog~
+The @@lLantern Road@@N jogs westward here, curving around a @@gbog that proved impossible to bridge@@N. The detour follows firm ground along a natural ridge, and the road builders have reinforced the outer edge with @@Gstacked fieldstone@@N to prevent erosion. The swampy ground to the south is visible through gaps in the roadside brush, its dark water reflecting the sky.
+~
+0 3
+D0
+~
+~
+0 -1 15672
+D1
+~
+~
+0 -1 15653
+D3
+~
+~
+0 -1 15651
+S
+#15653
+Lantern Road, Mosswater Northbound~
+The @@lLantern Road@@N resumes its northward course here as the fen terrain begins to give way to @@gfirmer, higher ground@@N. The corduroy road surface transitions back to packed earth, and the drainage ditches on either side are shallower, carrying less water. @@GThe first pines@@N of the approaching Ironpine Rise are visible on the horizon, their dark silhouettes rising above the fen's willow canopy. @@lWaystones@@N mark the transition zone.
+~
+0 3
+D0
+~
+~
+0 -1 15673
+D2
+~
+~
+0 -1 15633
+D1
+~
+~
+0 -1 15654
+S
+#15654
+Fen Herb Meadow~
+A @@Gnaturally drained meadow@@N on slightly higher ground supports a profusion of @@gwild herbs@@N and medicinal plants that thrive in the rich, moist soil at the fen's edge. The meadow is bright with flowers in season, attracting butterflies and bees in clouds. @@lHerbalists@@N from both the mire-clans and the road wardens harvest here, their @@gcutting marks@@N visible on the older plants.
+~
+0 2
+D3
+~
+~
+0 -1 15653
+D2
+~
+~
+0 -1 15634
+S
+#15655
+Otter Slide~
+A @@lmuddy bank@@N has been worn smooth by generations of @@Gotters@@N sliding into the deep channel below. The slide is polished to a slippery sheen, and @@gfish scales@@N and shell fragments litter the landing area at the water's edge. The otters themselves can often be heard @@lchirping and splashing@@N in the reeds nearby, their playful energy at odds with the fen's generally somber character.
+~
+0 6
+D1
+~
+~
+0 -1 15656
+D3
+~
+~
+0 -1 15654
+S
+#15656
+Mire-Clan Fish Camp~
+A @@gsmall fish camp@@N sits on a raised platform of packed clay and logs, its purpose evident from the @@lnets, lines, and baskets@@N stacked neatly beside a cleaning table. @@GFresh fish scales@@N glitter on the table surface, and a pot of rendered fish oil sits warming on a @@bsmall fire@@N. The camp is a working site, used daily by mire-clan fishers who work the surrounding channels.
+~
+0 3
+D3
+~
+~
+0 -1 15655
+D1
+~
+~
+0 -1 15657
+S
+#15657
+Peat Bog Edge~
+The fen deepens into true @@gpeat bog@@N here, the ground a sodden mass of @@Gcompressed sphagnum@@N that quivers underfoot. The water is @@ltea-dark@@N, stained almost black by the organic acids leaching from the peat. Nothing tall grows in the bog itself, only low @@gcranberry vines@@N and sundew rosettes. The horizon is flat and featureless, broken only by the distant line of trees to the north.
+~
+0 6
+D3
+~
+~
+0 -1 15656
+D2
+~
+~
+0 -1 15637
+S
+#15658
+Drowned Timber~
+@@GDead trees@@N stand in the @@lfen water@@N here, their bark stripped and their branches bare, killed by the rising water table years ago. The ghostly trunks create an eerie landscape of grey @@gvertical lines@@N reflected in the dark water below. Woodpeckers have riddled the trunks with holes, and @@lswallows@@N nest in the cavities. The place feels like a graveyard for trees.
+~
+0 6
+D1
+~
+~
+0 -1 15659
+D3
+~
+~
+0 -1 15657
+S
+#15659
+Eastern Fen Arm~
+A @@llong arm@@N of the fen extends eastward here, narrowing as the ground rises on either side. The water is shallower than in the fen's core but still present everywhere, @@gseeping through the soft ground@@N and collecting in every low spot. @@GReeds and cattails@@N line the arm's edges, and the channel that runs down its center is deep enough for small boats. The eastern forest wall is visible through the vegetation.
+~
+0 6
+D3
+~
+~
+0 -1 15658
+D2
+~
+~
+0 -1 15639
+S
+#15660
+Western Fen Bluff~
+A @@glow bluff@@N of exposed clay marks the western edge of the fen here, its face streaked with @@lmineral deposits@@N in bands of ochre and grey. @@GHardy shrubs@@N cling to the bluff's top, their roots exposed where erosion has undercut the edge. The bluff provides a dry vantage point over the @@lflooded landscape@@N stretching eastward, and a narrow trail runs along its crest.
+~
+0 4
+D1
+~
+~
+0 -1 15661
+D2
+~
+~
+0 -1 15640
+D0
+~
+~
+0 -1 15680
+S
+#15661
+Mud Flat~
+A @@gbroad expanse of exposed mud@@N stretches here during low water, its surface cracked into a mosaic pattern of dried plates. When the water is high, this flat is submerged; when low, it becomes a feeding ground for @@Gwading birds@@N that probe the mud for invertebrates. @@lShorebird tracks@@N cover every surface, and the smell of rich organic mud is pervasive.
+~
+0 6
+D1
+~
+~
+0 -1 15662
+D3
+~
+~
+0 -1 15660
+S
+#15662
+Black Water Pool~
+A @@ldark, deep pool@@N of motionless water occupies a natural basin here, its surface so still that it reflects the canopy above with mirror perfection. The water is @@gblack with dissolved tannins@@N and completely opaque, concealing whatever lies beneath. @@GWater lilies@@N float on the surface near the edges, their white flowers startlingly bright against the dark water. The pool's depth is impossible to judge.
+~
+0 6
+D1
+~
+~
+0 -1 15663
+D3
+~
+~
+0 -1 15661
+S
+#15663
+Raised Causeway~
+A @@gcauseway@@N of packed earth and gravel, built up above the fen waterline, provides a relatively dry route through this section of the bends. The causeway is narrow but firm, its edges reinforced with @@Gwoven wattle@@N and driven stakes. The water on either side is @@ldark and still@@N, and the causeway itself shows @@gboot prints@@N and cart ruts from regular traffic between the fen settlements and the Lantern Road.
+~
+0 3
+D1
+~
+~
+0 -1 15664
+D3
+~
+~
+0 -1 15662
+D2
+~
+~
+0 -1 15643
+D0
+~
+~
+0 -1 15683
+S
+#15664
+Fish Weir~
+A @@gcunning weir@@N of woven willow has been built across a fen channel here, its V-shaped funnel directing fish into a @@lcollection basket@@N at the narrow end. The weir is a masterwork of mire-clan engineering, strong enough to withstand the current yet allowing water to flow freely through. @@GFish scales@@N glitter on the weir's surface, and the basket shows signs of recent emptying.
+~
+0 6
+D1
+~
+~
+0 -1 15665
+D3
+~
+~
+0 -1 15663
+S
+#15665
+Fen Lily Pond~
+@@GWhite water lilies@@N cover the surface of a @@lbroad, shallow pond@@N here, their flat green pads forming a living carpet. The flowers are luminous in the dim light, and @@gdragonflies@@N perch on the pads in jeweled rows. The water beneath is surprisingly clear compared to the surrounding fen, filtered by the lily roots into a @@ltranslucent amber@@N. The pond has a peaceful, contemplative quality.
+~
+0 6
+D1
+~
+~
+0 -1 15666
+D3
+~
+~
+0 -1 15664
+S
+#15666
+Fen Deadwood~
+@@gDead and dying trees@@N stand in the @@lflooded ground@@N here, their trunks stripped bare and bleached silver by exposure. The deadwood creates a skeletal landscape, all sharp angles and bare branches against the sky. @@GWoodpecker holes@@N riddle the trunks, and @@lowl pellets@@N accumulate beneath the largest trees. The standing dead wood is slowly returning to the fen, leaning at increasingly precarious angles.
+~
+0 6
+D1
+~
+~
+0 -1 15667
+D3
+~
+~
+0 -1 15665
+S
+#15667
+Smuggler's Deep Camp~
+A @@gmore substantial smuggler camp@@N occupies a hidden hummock deep in the fen, screened by @@Gdense reeds@@N on all sides. The camp has a @@lpermanent fire pit@@N, storage platforms raised on stilts, and even a crude dock for flat-bottomed boats. @@bContraband crates@@N bearing falsified seals are stacked under an oilskin tarp. This is clearly the operational hub of the fen smuggling ring.
+~
+4 3
+D3
+~
+~
+0 -1 15666
+D2
+~
+~
+0 -1 15647
+S
+#15668
+Fen Snag~
+A @@gmassive tree@@N has fallen across the fen here, its trunk forming a bridge of sorts over @@ldark, deep water@@N. The tree is old and partially submerged, its bark colonized by @@Gaquatic moss@@N and small ferns that grow in the permanent dampness. Crossing requires walking along the slimy trunk, and the @@Rdark shapes@@N moving in the water below provide strong motivation not to fall.
+~
+0 6
+D1
+~
+~
+0 -1 15669
+D3
+~
+~
+0 -1 15667
+S
+#15669
+Deep Fen Maze~
+The fen becomes a @@gconfusing maze@@N of channels, hummocks, and reed stands here, with no clear path in any direction. The channels wind and double back, and the hummocks all look alike, @@lcovered in identical sedge@@N and bordered by identical reeds. Without intimate knowledge of the fen's geography, a traveler could wander here for hours. @@GThe water@@N varies from ankle-deep to chest-deep with no warning.
+~
+0 6
+D3
+~
+~
+0 -1 15668
+D2
+~
+~
+0 -1 15649
+D0
+~
+~
+0 -1 15689
+S
+#15670
+Lantern Road, Mosswater Rise~
+The @@lLantern Road@@N climbs noticeably here as the terrain transitions from the flat Mosswater Bends toward the rising ground of the Ironpine Rise. The road surface is packed earth again, firm and dry, and the @@gdrainage ditches@@N are cut deeper to handle the water running down from higher ground. @@GThe first ironpines@@N appear among the usual forest trees, their distinctive @@ldark bark@@N standing out against the lighter species.
+~
+0 3
+D0
+~
+~
+0 -1 15690
+D2
+~
+~
+0 -1 15650
+D1
+~
+~
+0 -1 15671
+S
+#15671
+Guard Hut Ruin~
+The @@grumbled remains@@N of an old guard hut stand beside the road here, its walls collapsed into a heap of @@gmoss-covered stone@@N and rotting timber. This was once a Passage Tithe collection point, and @@Wrelic toll ledgers@@N still lie among the rubble, their entries recording payments in grain, salt, and lamp oil from centuries past. A @@lsingle wall@@N still stands, its doorframe empty and vine-choked.
+~
+0 3
+D3
+~
+~
+0 -1 15670
+D1
+~
+~
+0 -1 15672
+S
+#15672
+Lantern Road, Toll Bridge Approach~
+The @@lLantern Road@@N approaches the @@gMosswater Toll Bridge@@N here, and the road widens into a small staging area where caravans queue for inspection. The staging area is paved with @@lfieldstone@@N and equipped with @@Ghitching posts@@N and water troughs. A @@Wchalkboard@@N displays current toll rates and inspection hours, maintained by the fen toll collector. The bridge itself is visible to the east.
+~
+4 3
+D0
+~
+~
+0 -1 15692
+D2
+~
+~
+0 -1 15652
+D1
+~
+~
+0 -1 15673
+S
+#15673
+Mosswater Toll Bridge~
+The @@gMosswater Toll Bridge@@N spans the widest channel in the Bends, a @@lstout timber structure@@N built on massive driven pilings that allow full water flow beneath. The bridge deck is wide enough for carts to pass and @@Grailed on both sides@@N. A @@Wtoll booth@@N of stacked stone and timber sits at the eastern end, manned by the fen toll collector. @@lIron lanterns@@N hang from the rail posts, and @@Wthe lantern-and-scale motif@@N is carved into the booth's lintel.
+~
+4 3
+D3
+~
+~
+0 -1 15672
+D0
+~
+~
+0 -1 15693
+D1
+~
+^fen toll gate~
+1 -1 15674
+E
+fen toll gate~
+The fen toll gate is a heavy wooden barrier that swings across the eastern end of the bridge, controlling passage. Its timber frame is banded with iron and hung on massive hinges bolted to the bridge's stone pier. The gate shows signs of regular use, its lower edge worn smooth by years of opening and closing.
+~
+S
+#15674
+Eastern Toll Landing~
+The @@geastern end@@N of the Mosswater Toll Bridge opens onto a @@lfirm landing@@N of packed gravel and fieldstone. The landing serves as a turnaround point for traffic that cannot or does not wish to proceed further east into the fen interior. @@GEmpty crates@@N and barrel hoops suggest the landing doubles as a trade point where mire-clan goods change hands. A @@gpath@@N leads east into the reeds.
+~
+0 3
+D3
+~
+^fen toll gate~
+1 -1 15673
+D1
+~
+~
+0 -1 15675
+S
+#15675
+Fen Trade Post~
+A @@gpermanent trade post@@N occupies this firm hummock, its @@lraised platform@@N larger and better-constructed than the surrounding mire-clan dwellings. @@GGoods from both the road and the fen@@N are displayed here: dried fish, resin jars, and medicinal bark alongside iron nails, lamp oil, and woven cloth. The post operates on a combination of barter and coin, reflecting the hybrid economy of the Mosswater Bends.
+~
+0 3
+D3
+~
+~
+0 -1 15674
+D1
+~
+~
+0 -1 15676
+S
+#15676
+Crane Marsh~
+@@GTall, elegant cranes@@N wade through the @@lshallow water@@N here, their long legs lifting and placing with deliberate grace as they hunt for fish and frogs. The marsh is open enough to provide clear views across the water, and the cranes' @@gwhite plumage@@N is striking against the dark fen water and green reeds. Their harsh calls echo across the flat landscape, and their nests, massive structures of piled sticks, sit atop the tallest dead trees.
+~
+0 6
+D3
+~
+~
+0 -1 15675
+D1
+~
+~
+0 -1 15677
+S
+#15677
+Electric Eel Run~
+A @@ldeep, slow-moving channel@@N cuts through the fen here, its dark waters home to the @@Relectric eels@@N that make this stretch of fen dangerous for the unwary. The channel banks are @@gslick with mud@@N, and the water is too deep and murky to see the bottom. @@GOccasional flashes@@N of light below the surface betray the eels' presence, their electrical discharges stunning fish that float, twitching, to the surface.
+~
+0 7
+D3
+~
+~
+0 -1 15676
+D0
+~
+~
+0 -1 15697
+S
+#15678
+Fen Mist Hollow~
+A @@glow-lying hollow@@N in the fen traps @@lmist and fog@@N here even when the rest of the bends are clear. The trapped moisture creates a perpetually damp, dim environment where @@Gmosses and ferns@@N grow to unusual size. Visibility is poor, and the muffled sounds of the fen are distorted by the fog. @@rFaint phosphorescent glows@@N drift through the murk, their source unclear.
+~
+1 6
+D1
+~
+~
+0 -1 15679
+D3
+~
+~
+0 -1 15677
+S
+#15679
+Eastern Fen, Deep~
+The @@lfar eastern fen@@N is wild and unmanaged here, beyond the reach of the mire-clan settlements and the road wardens' patrols. The @@Greeds are ancient and enormous@@N, and the water channels between them are dark, deep, and @@gslow-moving@@N. The silence is complete, broken only by the occasional splash of an unseen creature. This is territory that belongs to the fen itself, not to any human inhabitant.
+~
+0 6
+D3
+~
+~
+0 -1 15678
+D2
+~
+~
+0 -1 15659
+D0
+~
+~
+0 -1 15699
+S
+#15680
+Western Fen Crest~
+The @@gwestern bluff@@N reaches its highest point here, offering a commanding view across the @@lMosswater Bends@@N to the east and the beginning of the Ironpine Rise to the north. The soil is thin and dry on the crest, supporting only @@Gcoarse grass@@N and wind-stunted shrubs. @@gCairn stones@@N have been piled here by travelers as a landmark, the stack visible from a considerable distance across the flat fen.
+~
+0 4
+D1
+~
+~
+0 -1 15681
+D2
+~
+~
+0 -1 15660
+D0
+~
+~
+0 -1 15700
+S
+#15681
+Flint Scatter~
+@@gBroken flint@@N litters the ground here, the remains of an ancient knapping site where someone fashioned tools from the @@lstone nodules@@N exposed in the clay. The flakes are @@bsharp-edged@@N and range from tiny chips to palm-sized blanks. This site predates both cities by unknown centuries, a reminder that the forest has been inhabited far longer than any written record shows. @@GGrass@@N grows between the scattered flakes.
+~
+0 3
+D1
+~
+~
+0 -1 15682
+D3
+~
+~
+0 -1 15680
+S
+#15682
+Fen-Rise Transition~
+The ground @@grises noticeably@@N here as the Mosswater Bends yield to the firmer terrain of the approaching Ironpine Rise. The soil transitions from @@lsoggy peat@@N to @@brocky clay@@N, and the vegetation shifts from fen species to more typical forest. @@GThe first ironpines@@N appear at the northern edge of view, their dark bark distinctive. The air is drier and carries the scent of pine rather than marsh.
+~
+0 3
+D1
+~
+~
+0 -1 15683
+D3
+~
+~
+0 -1 15681
+D0
+~
+~
+0 -1 15702
+S
+#15683
+Fen-Road Junction~
+A @@gwell-worn junction@@N marks where a major fen trail meets the approach to the Lantern Road. @@GDirection markers@@N of carved wood indicate the way to the reed-platform village, the toll bridge, and the road north. The ground is firm here, reinforced by decades of traffic packing the soil. @@lMud-stained boot prints@@N from fen workers heading to and from the road are everywhere.
+~
+0 3
+D1
+~
+~
+0 -1 15684
+D3
+~
+~
+0 -1 15682
+D2
+~
+~
+0 -1 15663
+D0
+~
+~
+0 -1 15703
+S
+#15684
+Alder Swamp~
+@@GMature alders@@N grow in dense ranks in the saturated ground here, their roots creating a @@gtangled lattice@@N above the black water that fills every low spot. The air beneath the alders is dim and damp, heavy with the @@lscent of rotting wood@@N and leaf mold. The swamp is a transition zone between the open fen and the drier forest to the north, and both ecologies compete for dominance.
+~
+0 6
+D1
+~
+~
+0 -1 15685
+D3
+~
+~
+0 -1 15683
+S
+#15685
+Mire-Clan Boundary Marker~
+A @@gcurious marker@@N stands here: a tall pole topped with a @@Wwoven reed sphere@@N and hung with strips of dried fish skin that flutter in the breeze. This is a mire-clan territory marker, defining the boundary between settled fen and wild fen. @@GBeyond this point@@N, the mire-clans claim no responsibility for travelers' safety. The marker's base is @@lsurrounded by offerings@@N: small stones, dried herbs, and carved bone tokens.
+~
+0 3
+D1
+~
+~
+0 -1 15686
+D3
+~
+~
+0 -1 15684
+S
+#15686
+Fen Wildlife Corridor~
+A @@gnatural corridor@@N of firm ground runs through the fen here, bordered by @@ldeep water@@N on both sides. The corridor is used by every species in the fen as a transit route, and the ground is packed hard by constant animal traffic. @@GDeer tracks@@N overlay wolf prints, which overlay the delicate marks of herons and the belly-slide tracks of snakes. The corridor connects the fen interior to the drier ground to the north.
+~
+0 3
+D1
+~
+~
+0 -1 15687
+D3
+~
+~
+0 -1 15685
+S
+#15687
+Bogbean Marsh~
+@@GBogbean plants@@N grow in profusion in the @@lshallow water@@N here, their distinctive three-part leaves and fringed white flowers creating a carpet of green and white over the fen surface. The bogbean is a medicinal plant valued by the mire-clan herbalists, and careful @@gcutting marks@@N show regular harvesting. The water beneath the plants is clear and surprisingly clean, filtered by the bogbean's root system.
+~
+0 6
+D1
+~
+~
+0 -1 15688
+D3
+~
+~
+0 -1 15686
+S
+#15688
+Fen Lookout~
+A @@gplatform@@N of lashed logs has been built in the crown of a tall dead tree here, providing a @@llookout point@@N over the surrounding fen. The platform is reached by a series of wooden pegs driven into the trunk as a crude ladder. From above, the @@GMosswater Bends@@N spread out in all directions, a vast expanse of green reeds, dark water, and scattered hummocks. The @@lIronpine Rise@@N is visible to the north.
+~
+0 3
+D1
+~
+~
+0 -1 15689
+D3
+~
+~
+0 -1 15687
+S
+#15689
+Deep Fen, Northern Edge~
+The fen begins to @@gshallow and firm up@@N here at its northern edge, the water table dropping as the ground rises toward the Ironpine Rise. @@GThe reeds are shorter@@N and the channels narrower, and patches of @@ldry ground@@N appear between the wet areas. The transition from fen to forest is gradual, with fen species and forest species overlapping in a mixed band of vegetation.
+~
+0 3
+D3
+~
+~
+0 -1 15688
+D2
+~
+~
+0 -1 15669
+D0
+~
+~
+0 -1 15709
+S
+#15690
+Lantern Road, Ironpine Approach~
+The @@lLantern Road@@N climbs steadily here as it leaves the Mosswater Bends behind and enters the foothills of the Ironpine Rise. The road surface is firm packed earth with @@ggravel reinforcement@@N on the steeper grades. The trees flanking the road are taller and darker now, the first true @@Gironpines@@N with their characteristic @@ldark bark@@N and dense needles. The air is cooler and carries the sharp scent of conifer resin.
+~
+0 3
+D0
+~
+~
+0 -1 15710
+D2
+~
+~
+0 -1 15670
+D1
+~
+~
+0 -1 15691
+S
+#15691
+Ironpine Waystation~
+A @@gpermanent waystation@@N marks the boundary between the Mosswater Bends and the Ironpine Rise, built of @@lstacked ironpine logs@@N whose dark wood has weathered to near-black. The station includes a covered shelter, a fire ring, and a @@Wmessage board@@N where wardens leave status reports. @@GCarved distance markers@@N show the way to both Midgaard and Kowloon. Fresh boot prints and horse droppings suggest recent patrol activity.
+~
+4 3
+D3
+~
+~
+0 -1 15690
+D1
+~
+~
+0 -1 15692
+S
+#15692
+Ironpine Road Shoulder~
+The road shoulder here is @@gwide and firm@@N, offering space for caravans to pull off the Lantern Road for rest or repairs. The ground has been cleared and leveled, and @@Gstacked cordwood@@N sits under a rain shelter for emergency use. The surrounding ironpines are enormous, their @@ldark trunks@@N rising like pillars. The air smells strongly of pine resin, and the ground is carpeted in needles.
+~
+0 3
+D3
+~
+~
+0 -1 15691
+D2
+~
+~
+0 -1 15672
+D0
+~
+~
+0 -1 15712
+S
+#15693
+Lantern Road, Rise Entry~
+The @@lLantern Road@@N enters the Ironpine Rise proper here, the terrain climbing more steeply as the road begins its @@gswitchback ascent@@N through the ridge system. The road builders have cut the path into the hillside, creating a shelf of packed earth with a @@gstone retaining wall@@N on the downhill side. @@GIronpines@@N tower on both sides, their canopy high enough that the road feels like a narrow corridor between dark walls. @@lWaystones@@N are more closely spaced on the climb.
+~
+0 3
+D0
+~
+~
+0 -1 15713
+D2
+~
+~
+0 -1 15673
+D1
+~
+~
+0 -1 15694
+S
+#15694
+Planting-Ring Approach~
+A @@gnarrow trail@@N leads from the road toward one of the ancient Everkeeper @@Wplanting-rings@@N, stone circles seven paces across where the old druids planted ironpine seedlings as a sacred duty. The trail passes through @@Gdense undergrowth@@N that has reclaimed the path since the Everkeepers' dissolution. @@lMoss-covered stones@@N line the trail edges, their surfaces carved with symbols too weathered to read.
+~
+0 3
+D3
+~
+~
+0 -1 15693
+D1
+~
+~
+0 -1 15695
+S
+#15695
+Everkeeper Planting-Ring~
+A @@Wcircle of standing stones@@N, each the height of a person and spaced at regular intervals, marks one of the ancient @@GEverkeeper planting-rings@@N. The circle is exactly seven paces across, and at its center grows an @@ironpine@@N of enormous girth, clearly the descendant of whatever seedling was planted here centuries ago. @@gMoss and lichen@@N cover the stones, and the ground within the circle is bare and dark, as if the soil itself rejects ordinary growth.
+~
+0 3
+D3
+~
+~
+0 -1 15694
+D0
+~
+~
+0 -1 15715
+S
+#15696
+Ridge Wolf Run~
+A @@gpacked trail@@N climbs along a @@lridgeline@@N here, the ground worn bare by the passage of wolf packs that use the high ground as a travel corridor between hunting territories. The trail is bordered by @@Gdense pine@@N that funnels the wind into a steady howl. @@RClaw marks@@N on the ridge-top pines mark territorial boundaries, and the scent of wolf musk is strong.
+~
+0 3
+D1
+~
+~
+0 -1 15697
+D3
+~
+~
+0 -1 15695
+D0
+~
+~
+0 -1 15716
+S
+#15697
+Cliff Edge~
+The ground drops away @@gsheer@@N here at the edge of a limestone cliff, its face streaked with @@lmineral stains@@N and crusted with hardy @@Gferns@@N growing from cracks. The cliff overlooks a forested valley below, and the view extends for miles on clear days. The wind is strong at this exposed point, and the @@ldistant sound@@N of water from a stream in the valley bottom drifts upward.
+~
+0 5
+D3
+~
+~
+0 -1 15696
+D2
+~
+~
+0 -1 15677
+D0
+~
+~
+0 -1 15717
+S
+#15698
+Boulder Field~
+@@gMassive boulders@@N litter the ground here, @@ltumbled from the cliff face@@N above in some ancient rockfall. The boulders create a maze of narrow passages and hidden spaces, their surfaces covered in @@Glichen@@N and dry moss. The spaces between the boulders are sheltered from wind and weather, creating microclimates that support unexpected plant growth. @@RShed snake skins@@N curl in the warmest crevices.
+~
+0 5
+D1
+~
+~
+0 -1 15699
+D3
+~
+~
+0 -1 15697
+S
+#15699
+Eastern Rise Foot~
+The @@geastern base@@N of the Ironpine Rise meets the upper reaches of the fen here in a @@ltumbled slope@@N of rocky debris and tough grass. The transition is abrupt: wet fen gives way to dry, rocky hillside within a few steps. @@GIronpines@@N cling to the slope above, their roots gripping the thin soil over bedrock. The view @@leastward@@N shows the fen stretching to the horizon, its green expanse broken by the silver glint of open water.
+~
+0 4
+D3
+~
+~
+0 -1 15698
+D2
+~
+~
+0 -1 15679
+S
