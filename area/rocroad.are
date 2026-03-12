@@ -1636,6 +1636,11 @@ S
 The beach gives way to a stretch of @@asalt marsh@@N where tidal channels snake between hummocks of salt-tolerant grass.  The footing is treacherous, the ground soft and waterlogged beneath a thin crust of dried salt.  Crabs scuttle between the channels, and the air is heavy with the smell of decomposing seaweed.  The shore becomes rocky again to the west.
 ~
 0 10
+D0
+A @@Wcovered entrance@@N to an old @@bhotel@@N is visible to the north.
+~
+~
+0 -1 4449
 D1
 The @@abeach@@N stretches east.
 ~
