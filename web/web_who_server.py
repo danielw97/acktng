@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import os
+import base64
+import mimetypes
 from html import escape
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -19,6 +21,7 @@ WHO_COUNT_FILE = WEB_DIR / "whocount.html"
 HELP_DIR = ROOT_DIR / "help"
 SHELP_DIR = ROOT_DIR / "shelp"
 TEMPLATE_DIR = WEB_DIR / "templates"
+IMG_DIR = WEB_DIR / "img"
 WORLD_TARGETS = [
     {"id": "acktng", "name": "ACK!TNG", "host": "ackmud.com", "port": 8890},
     {"id": "ack431", "name": "ACK! 4.3.1", "host": "ackmud.com", "port": 8891},
@@ -34,6 +37,9 @@ _topic_names_lock = Lock()
 _topic_content_cache: dict[Path, tuple[int, str]] = {}
 _topic_content_lock = Lock()
 
+_logo_data_uri_cache: tuple[int, str] | None = None
+_logo_data_uri_lock = Lock()
+
 
 class WhoRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:  # noqa: N802 (BaseHTTPRequestHandler interface)
@@ -48,6 +54,11 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
 
         if route in ("/",):
             self._send_html(_build_home_page(), title="ACKMUD Historical Archive")
+            return
+
+        if route.startswith("/img/"):
+            image_name = route[len("/img/") :]
+            self._send_static_image(image_name)
             return
 
         if route in ("/players", "/players/", "/who", "/who/"):
@@ -117,6 +128,20 @@ class WhoRequestHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body_bytes)))
         self.end_headers()
         self.wfile.write(body_bytes)
+
+    def _send_static_image(self, image_name: str) -> None:
+        image_path = _safe_topic_path(IMG_DIR, image_name)
+        if image_path is None:
+            self.send_error(404, "Not Found")
+            return
+
+        image_bytes = image_path.read_bytes()
+        content_type, _ = mimetypes.guess_type(str(image_path))
+        self.send_response(200)
+        self.send_header("Content-Type", content_type or "application/octet-stream")
+        self.send_header("Content-Length", str(len(image_bytes)))
+        self.end_headers()
+        self.wfile.write(image_bytes)
 
     def log_message(self, fmt: str, *args: object) -> None:
         return
@@ -242,7 +267,29 @@ def _read_cached_topic(path: Path) -> str:
 
 def _build_full_page(title: str, body: str) -> str:
     template = _load_template("base.html")
-    return template.replace("__TITLE__", escape(title)).replace("__BODY__", body)
+    return (
+        template.replace("__TITLE__", escape(title))
+        .replace("__BODY__", body)
+        .replace("__SITE_LOGO_SRC__", _site_logo_src())
+    )
+
+
+def _site_logo_src() -> str:
+    logo_path = IMG_DIR / "ackmud_logo_transparent.png"
+    if not logo_path.exists() or not logo_path.is_file():
+        return ""
+
+    mtime_ns = logo_path.stat().st_mtime_ns
+
+    global _logo_data_uri_cache
+    with _logo_data_uri_lock:
+        if _logo_data_uri_cache is not None and _logo_data_uri_cache[0] == mtime_ns:
+            return _logo_data_uri_cache[1]
+
+        encoded = base64.b64encode(logo_path.read_bytes()).decode("ascii")
+        data_uri = f"data:image/png;base64,{encoded}"
+        _logo_data_uri_cache = (mtime_ns, data_uri)
+        return data_uri
 
 
 def main() -> None:
