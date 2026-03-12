@@ -4809,3 +4809,1219 @@ D0
 ~
 0 -1 15819
 S
+#15800
+Deep Western Ironpine~
+The forest grows @@Gdark and ancient@@N here in the deep western reaches of the Ironpine Rise. The trunks are enormous, their bark nearly @@lblack@@N, and the canopy overhead is so dense that only the faintest grey light reaches the forest floor. The ground is bare except for a carpet of brown needles and the occasional @@gpale mushroom cluster@@N. The silence is heavy and oppressive, broken only by the distant creak of branches.
+~
+1 3
+D1
+~
+~
+0 -1 15801
+S
+#15801
+Root Cavern Entrance~
+A gap between massive @@Gironpine roots@@N opens into a @@gdark space@@N beneath the forest floor here, where the root systems of several ancient trees have grown together to create a @@lnatural cavern@@N. Cool air flows from the opening, carrying the smell of damp earth and something faintly metallic. The entrance is large enough for a person to enter crouching, and the roots form a stable arch overhead.
+~
+1 3
+D1
+~
+~
+0 -1 15802
+D3
+~
+~
+0 -1 15800
+D5
+~
+~
+0 -1 15801
+S
+#15802
+Ironpine Boneyard~
+@@GDead ironpines@@N stand among the living here, their trunks stripped of bark and bleached to a pale @@lgrey-white@@N that contrasts starkly with the dark living trees around them. The dead trees died standing, their root systems still anchoring them despite decades of decay. @@gWoodpecker holes@@N riddle the dead trunks, and the ground is littered with fallen branches and strips of loose bark. The mix of living and dead creates an eerie twilight atmosphere.
+~
+0 3
+D1
+~
+~
+0 -1 15803
+D3
+~
+~
+0 -1 15801
+S
+#15803
+Wolverine Den~
+A @@gdeep burrow@@N has been excavated beneath a tangle of @@Gfallen ironpines@@N here, the entrance marked by a mound of excavated earth and a strong musky odor. The burrow belongs to a large @@Rwolverine@@N, and the defensive scratches on nearby trees and scattered prey remains make it clear that the animal tolerates no intrusion. The surrounding forest is notably quiet, as smaller animals give the den a wide berth.
+~
+0 3
+D1
+~
+~
+0 -1 15804
+D3
+~
+~
+0 -1 15802
+S
+#15804
+Ancient Planting Ring~
+A @@WPerfectly preserved Everkeeper planting-ring@@N stands in this clearing, its seven-pace circle of fitted stones unbroken and free of moss. Unlike the overgrown rings elsewhere, this one has been @@gmaintained by unknown hands@@N, the stones kept clean and the interior swept bare. Seven @@Gyoung ironpines@@N grow at precise intervals around the ring's perimeter, their placement matching the original Everkeeper planting pattern exactly. Someone continues the old rites here in secret.
+~
+0 3
+D1
+~
+~
+0 -1 15805
+D3
+~
+~
+0 -1 15803
+S
+#15805
+Shade-Haunted Grove~
+A @@gchill@@N hangs in the air here that has nothing to do with altitude or wind. The ironpines in this grove have a @@lsilvery pallor@@N to their needles, and faint wisps of @@gmist@@N curl among the trunks even in full daylight. This is one of the places where the @@WEverkeeper shades@@N are said to walk, the restless spirits of the druidic order that once tended these groves. The silence here is absolute and watchful.
+~
+1 3
+D1
+~
+~
+0 -1 15806
+D3
+~
+~
+0 -1 15804
+S
+#15806
+Twisted Ironpine Glade~
+The @@Gironpines@@N in this glade have grown in @@gspiral patterns@@N, their trunks twisted into corkscrew shapes that suggest some deep disturbance in the soil or the influence of forces beyond normal growth. The effect is disorienting, making it difficult to judge distance or direction. @@lFaint luminescence@@N appears on some trunks at night, according to the wardens who patrol this far, the first sign of the deeper forest's strange light.
+~
+0 3
+D1
+~
+~
+0 -1 15807
+D3
+~
+~
+0 -1 15805
+S
+#15807
+Stone-Antler Outer Shrine~
+A simple @@gstone shrine@@N stands beneath an ancient ironpine here, its flat offering stone surrounded by a ring of @@Wsmaller standing stones@@N carved with antler motifs. The shrine marks the outer boundary of the stone-antler circle's @@gsacred territory@@N, and offerings of bone, antler, and dried herbs are regularly placed on the stone. The ironpine above the shrine has been carved with protective symbols along its entire trunk.
+~
+0 3
+D1
+~
+~
+0 -1 15808
+D3
+~
+~
+0 -1 15806
+S
+#15808
+Megalith Approach, Northern Path~
+The trail continues northward from the @@gmegalith ring@@N toward the deeper forest, passing through increasingly @@Gancient ironpines@@N whose trunks bear @@gfaded carvings@@N left by the Cairn-Keepers of ages past. The path is barely maintained here, narrowing to a thread between the massive trees. @@lThe air grows colder@@N with each step northward, and the first traces of @@rluminescent moss@@N appear on the north-facing rock surfaces.
+~
+0 3
+D1
+~
+~
+0 -1 15809
+D3
+~
+~
+0 -1 15807
+D2
+~
+~
+0 -1 15788
+D0
+~
+~
+0 -1 15828
+S
+#15809
+Cold Spring~
+A @@lspring@@N emerges from the base of a @@ggranite outcrop@@N here, its water so cold that mist rises from its surface. The spring feeds a small pool before overflowing into a stream that winds north through the forest. @@GFerns and mosses@@N crowd the pool's edges, thriving in the constant moisture. The water is crystal clear, and the rocks beneath the surface are coated in pale @@lmineral deposits@@N that give the pool an ethereal glow.
+~
+0 3
+D1
+~
+~
+0 -1 15810
+D3
+~
+~
+0 -1 15808
+S
+#15810
+Northern Ironpine Stand~
+The ironpines here are among the @@glargest on the ridge@@N, their trunks exceeding the span of two outstretched arms and their @@Gbark deeply furrowed@@N with age. The stand has a primeval quality, untouched by any tool or management. @@lFallen giants@@N lie where they toppled, slowly returning to the earth over centuries while younger trees rise from the nurse logs. The transition from managed forest to true wilderness is palpable here.
+~
+0 3
+D1
+~
+~
+0 -1 15811
+D3
+~
+~
+0 -1 15809
+S
+#15811
+Bear Trail Crossing~
+Well-worn @@gbear trails@@N cross here, their paths beaten into deep grooves by generations of heavy animals following the same routes between @@lfeeding grounds@@N and @@gdenning sites@@N. The trails are marked with claw-scored trees and rubbing posts where the bears have left scent and fur. @@GThe ironpines@@N along the trails show damage from bears stripping bark to reach the cambium layer beneath. This is clearly the territory of large and well-established predators.
+~
+0 3
+D1
+~
+~
+0 -1 15812
+D3
+~
+~
+0 -1 15810
+S
+#15812
+Ridge Trail Junction~
+A @@gjunction@@N in the ridge trail offers paths in multiple directions here, marked by a @@lstacked stone cairn@@N that has been supplemented with carved direction markers added by both wardens and stone-antler circle guides. The junction sits on relatively level ground between the ridge's higher points, shaded by tall @@Gironpines@@N. The different paths show varying degrees of use, from the well-trampled road approach to the east to the faint animal tracks heading west.
+~
+0 3
+D1
+~
+~
+0 -1 15813
+D3
+~
+~
+0 -1 15811
+S
+#15813
+Lantern Road, Westward Bend~
+The @@lLantern Road@@N bends sharply westward here, following the contour of the ridge as it descends toward a @@gforested saddle@@N. @@GLantern posts@@N mark the outer curve, and the road surface shows the characteristic gravel packing and drainage ditches that identify maintained road sections. The bend provides a brief view northward through a gap in the trees, revealing the @@gdarkening canopy@@N of the deeper forest that lies ahead. The air carries a distinct chill from the north.
+~
+0 3
+D0
+~
+~
+0 -1 15833
+D1
+~
+~
+0 -1 15814
+D3
+~
+~
+0 -1 15812
+S
+#15814
+Lantern Road, Northern Descent~
+The @@lLantern Road@@N continues its descent from the Ironpine Rise here, the grade steepening as the land drops away toward the @@glower forest@@N. The road builders have reinforced this section with @@Gstone retaining walls@@N on the downslope side, preventing the road bed from sliding into the valley below. @@lWaystones@@N mark the descent in measured intervals, and a carved distance marker shows the miles remaining to the Oath-Crossing and the northern checkpoints. The ironpines give way gradually to a mix of @@Golder growth@@N as the road enters the transition zone between the Rise and the deeper forest.
+~
+0 3
+D3
+~
+~
+0 -1 15813
+D2
+~
+~
+0 -1 15794
+D0
+~
+~
+0 -1 15834
+S
+#15815
+Northern Switchback, Lower~
+The @@groad switchback@@N completes its lower turn here before the trail continues eastward along the ridge's northern face. The @@Gretaining walls@@N on this section are older and less well-maintained than those on the upper road, with roots pushing through joints and @@lstones displaced@@N by frost heave. The view northward from the switchback reveals the first hints of @@gluminescent moss glow@@N on distant tree trunks.
+~
+0 4
+D1
+~
+~
+0 -1 15816
+D3
+~
+~
+0 -1 15814
+S
+#15816
+Ironpine Trap Line~
+Concealed @@Rsnares and deadfalls@@N are set throughout this stretch of forest, carefully hidden beneath @@Gleaf litter@@N and positioned along natural game trails. These are @@gAshfang trap lines@@N, set to catch game and unwary travelers alike. The traps are well-made and regularly maintained, suggesting that the trappers who set them return frequently. @@lThin cord@@N stretched between trees at ankle height connects to alarm mechanisms deeper in the woods.
+~
+0 3
+D1
+~
+~
+0 -1 15817
+D3
+~
+~
+0 -1 15815
+S
+#15817
+Ashfang Ritual Site~
+A @@gclearing@@N in the dense ironpines has been deliberately created here by @@Rgirdling trees@@N until they died and fell. The clearing is marked with @@bash-painted symbols@@N on stakes driven into the ground, and a central fire pit holds the cold remains of a large blaze. This is an @@RAshfang ritual site@@N where the warbands perform their ash-tooth ceremony, blackening their teeth with charcoal in a deliberate inversion of the forest's old survival traditions. @@gBone and feather offerings@@N ring the fire pit.
+~
+0 3
+D1
+~
+~
+0 -1 15818
+D3
+~
+~
+0 -1 15816
+S
+#15818
+Ridge's End, North Slope~
+The @@gIronpine Rise@@N comes to its northern end here, the ridge descending into the @@Gdeep valleys@@N that mark the beginning of the Ancestor Deeps. The transition is dramatic: the ironpines thin and give way to @@lghost birch@@N and ancient trees of species not found on the higher ridge. The air temperature drops noticeably, and the @@gfirst patches of luminescent moss@@N glow faintly on the north-facing tree trunks. Everything ahead is older, colder, and darker.
+~
+0 3
+D1
+~
+~
+0 -1 15819
+D3
+~
+~
+0 -1 15817
+D0
+~
+~
+0 -1 15838
+S
+#15819
+Eastern Ridge, Northern Lookout~
+The @@geastern ridge@@N offers one final @@llookout@@N here before it descends into the deeper forest. The view encompasses the northern canopy stretching to the horizon, a @@Gdark and unbroken sea of green@@N that gradually shifts in character from the ironpine heights to the ancient lowland forest below. On misty mornings, the canopy is invisible beneath a white blanket, and only the highest treetops pierce through like dark islands. The wind is cold and steady, carrying scents from the deep forest below.
+~
+0 5
+D3
+~
+~
+0 -1 15818
+D2
+~
+~
+0 -1 15799
+S
+#15820
+Ancestor Deeps, Western Threshold~
+The forest changes character abruptly here as the land descends into the @@gAncestor Deeps@@N. @@GGhost birch@@N replaces ironpine as the dominant tree, their pale @@lwhite trunks@@N glowing faintly in the perpetual twilight beneath the ancient canopy. The ground is soft with centuries of accumulated leaf mold, and @@rluminescent moss@@N coats every north-facing surface, casting an eerie green-white glow. The air is still, cold, and heavy with the scent of decay and ancient growth.
+~
+1 3
+D1
+~
+~
+0 -1 15821
+S
+#15821
+Ghost Birch Corridor~
+A natural corridor of @@lghost birch@@N trees runs north-south here, their slender white trunks standing in rows so regular they might have been planted. The corridor floor is carpeted with fallen birch leaves that have turned to @@ga pale silver-white carpet@@N, and the @@rluminescent moss@@N on the trunks provides enough light to navigate by. The effect is dreamlike, a path through a forest of frozen moonlight. @@GThe canopy above@@N is thin birch foliage that rustles constantly.
+~
+0 3
+D1
+~
+~
+0 -1 15822
+D3
+~
+~
+0 -1 15820
+S
+#15822
+Root Serpent Hollow~
+A @@gdepression@@N in the forest floor is choked with exposed roots that have grown into @@Gsnake-like coils@@N, their surfaces dark and slick with moisture. The hollow is home to the @@Rcoiled root serpents@@N that inhabit the Ancestor Deeps, large constrictors that can be nearly impossible to distinguish from the roots they hide among. @@lSmall bones@@N are scattered among the root tangles, remnants of past meals.
+~
+1 3
+D1
+~
+~
+0 -1 15823
+D3
+~
+~
+0 -1 15821
+D0
+~
+~
+0 -1 15842
+S
+#15823
+Cairn-Keeper Burial Niche~
+A @@gstone niche@@N has been carved into a rock face here, its opening facing @@lnorth toward the Cold Throne@@N of the Cairn-Keeper spiritual tradition. The niche once held a burial, though the remains have long since been removed or crumbled to dust. @@WCarved symbols@@N on the niche's lintel depict the journey of the dead toward judgment. The stone around the niche is @@gcold to the touch@@N regardless of the season, and @@rluminescent moss@@N avoids the area immediately around the carving.
+~
+1 3
+D1
+~
+~
+0 -1 15824
+D3
+~
+~
+0 -1 15822
+E
+niche burial symbols~
+The burial niche is carved with precise geometric patterns: concentric circles representing the stages of spiritual judgment, topped by a stylized throne made of crossed antlers. The craftsmanship is remarkable for its age, the lines still sharp and clean despite centuries of exposure. Small notches in the lintel suggest that offerings were once hung here.
+~
+S
+#15824
+Luminescent Grotto~
+A natural @@ggrotto@@N opens in the hillside here, its interior walls and ceiling entirely covered in @@rluminescent moss@@N that pulses with a slow, rhythmic glow. The effect is breathtaking: the grotto looks as if it is lined with living light, the green-white radiance strong enough to read by. @@lWater seeps@@N through the ceiling and runs down the mossy walls in thin streams. The grotto is warm compared to the surrounding forest, heated by the metabolic activity of the dense moss growth.
+~
+1 3
+D1
+~
+~
+0 -1 15825
+D3
+~
+~
+0 -1 15823
+S
+#15825
+Corrupted Ironpine Stand~
+A stand of @@Gironpines@@N has succumbed to something here, their needles turned from dark green to @@Ra dull rust-red@@N and their bark splitting to reveal @@gblackened wood@@N beneath. The @@Rred moss bloom@@N that signals deep-forest corruption covers the ground in thick mats, and the air has a sickly sweet smell that makes the eyes water. Whatever force is killing these trees is spreading outward from a source deeper in the forest. Even the ground cover is discolored and withered.
+~
+0 3
+D1
+~
+~
+0 -1 15826
+D3
+~
+~
+0 -1 15824
+S
+#15826
+Rootbound Perimeter Ward~
+@@GVine-woven totems@@N mark the boundary of @@RRootbound cult territory@@N here, their wooden frames wrapped in living creepers that seem to grow and shift even as you watch. Each totem is carved with the cult's symbols: a tree with roots reaching into an @@leye-shaped void@@N. The totems are arranged in a line running east-west, and the forest beyond them has a @@gdisturbed, watchful quality@@N that suggests the boundary is more than symbolic.
+~
+0 3
+D1
+~
+~
+0 -1 15827
+D3
+~
+~
+0 -1 15825
+D0
+~
+~
+0 -1 15846
+S
+#15827
+Rootbound Outer Grove~
+Beyond the perimeter wards, the forest takes on a @@Gwild, tangled character@@N that speaks of deliberate cultivation toward chaos. Trees have been trained to grow in unnatural shapes, their branches woven into @@gliving archways@@N and walls. @@RRed moss@@N covers every surface, and the luminescent glow here has shifted from the natural green-white to a @@Rsickly crimson@@N. The Rootbound cult treats this grove as sacred ground, and the air thrums with a low vibration that might be the wind or might be something else entirely.
+~
+0 3
+D1
+~
+~
+0 -1 15828
+D3
+~
+~
+0 -1 15826
+S
+#15828
+Ancient Standing Stone~
+A @@Wsingle massive standing stone@@N rises from the forest floor here, its surface covered in @@gcarvings so old@@N that they have been worn almost smooth by time. The stone predates the ironpines that now surround it, and its base is ringed by a circle of @@rluminescent moss@@N that glows with particular intensity. The Cairn-Keeper descendants consider this a @@gminor spirit-anchor@@N, a place where the barrier between the living and the dead is thin.
+~
+0 3
+D1
+~
+~
+0 -1 15829
+D3
+~
+~
+0 -1 15827
+D2
+~
+~
+0 -1 15808
+S
+#15829
+Dire Wolf Territory~
+The @@Gancestor dire wolves@@N claim this stretch of deep forest, and their territorial markers are unmistakable: @@Rmassive claw gouges@@N on tree trunks at head height, @@gscent posts@@N that reek with pungent musk, and the bones of prey animals that would be large game anywhere else but are routine meals for these enormous predators. The wolves here are remnants of a bloodline that stretches back to before the Ash Winters, @@llarge enough to look a mounted rider in the eye@@N.
+~
+0 3
+D1
+~
+~
+0 -1 15830
+D3
+~
+~
+0 -1 15828
+S
+#15830
+Cavern Mouth, Western~
+A @@gdark opening@@N in the hillside leads into a @@lnatural cavern@@N beneath the forest, its entrance framed by the exposed roots of ancient trees and draped with curtains of @@rluminescent moss@@N. The cavern exhales cold air that smells of wet stone and mineral deposits. @@GBear tracks@@N of enormous size lead into the darkness, and deep @@Rscratches@@N on the rock walls around the entrance suggest the cavern is home to one of the ancient cave bears that inhabit the deepest parts of the forest.
+~
+1 3
+D1
+~
+~
+0 -1 15831
+D3
+~
+~
+0 -1 15829
+S
+#15831
+Ancient Forest Floor~
+The forest floor here is a @@gdeep layer@@N of accumulated organic matter stretching back centuries, soft enough that footsteps sink ankle-deep. @@GFallen trees@@N in various states of decay create a complex landscape of nurse logs, root mounds, and hollow trunks. @@rLuminescent moss@@N covers everything in a faint green-white glow, and @@gpale ghost moths@@N drift silently between the tree trunks, their wings reflecting the moss light. The air is thick and still, laden with the scent of slow decomposition.
+~
+0 3
+D1
+~
+~
+0 -1 15832
+D3
+~
+~
+0 -1 15830
+S
+#15832
+Ancestor Deeps Trail~
+A @@gfaint trail@@N threads through the ancient forest here, maintained not by wardens but by the passage of @@Gforest creatures@@N and the occasional deep-woods traveler. The trail follows the path of least resistance between the massive tree trunks, winding around nurse logs and over root bridges. @@lSmall cairns@@N at irregular intervals mark the way, placed by stone-antler circle guides who know these depths. The forest is darker here, the canopy so thick that time of day is difficult to judge.
+~
+0 3
+D1
+~
+~
+0 -1 15833
+D3
+~
+~
+0 -1 15831
+S
+#15833
+Lantern Road, Ancestor Deeps Approach~
+The @@lLantern Road@@N enters the @@gAncestor Deeps@@N here, and the change is immediately apparent. The @@llantern posts@@N are spaced closer together in this section, their light a welcome defiance of the deep canopy darkness. The road surface has been reinforced with gravel and @@Gflag stones@@N in places where the soft forest floor threatened to swallow the road entirely. @@gWarden patrol marks@@N on the lantern posts are more frequent here, reflecting the increased danger of this section. The trees on both sides are ancient ghost birch and ironpine of tremendous age, and @@rluminescent moss@@N provides an eerie underglow beneath the road's edge.
+~
+0 3
+D0
+~
+~
+0 -1 15853
+D1
+~
+~
+0 -1 15834
+D2
+~
+~
+0 -1 15813
+D3
+~
+~
+0 -1 15832
+S
+#15834
+Lantern Road, Deep Forest Straight~
+The @@lLantern Road@@N runs straight for an unusual distance here, cutting through the @@gdeep forest@@N along a natural ridge of harder ground that resists the sinking that plagues the road elsewhere in the Deeps. The road builders reinforced this section heavily, and the @@Gflagstone surface@@N is among the best-maintained in the entire forest, reflecting the importance of keeping this lifeline open. Lantern posts flicker at regular intervals, their @@llight pushing back@@N the luminescent green gloom of the surrounding forest. Distance markers show the Oath-Crossing approaching from the north.
+~
+0 3
+D0
+~
+~
+0 -1 15854
+D3
+~
+~
+0 -1 15833
+D2
+~
+~
+0 -1 15814
+D1
+~
+~
+0 -1 15835
+S
+#15835
+Ashfang Deep Camp~
+A @@Rfortified camp@@N has been established in the deep forest here, its perimeter marked by @@gsharpened stake walls@@N and crude watch platforms in the surrounding trees. This is an @@RAshfang deep camp@@N, far enough from the road that patrols rarely reach it but close enough to launch raids. The camp shows signs of extended occupation: permanent fire pits, drying racks for preserved meat, and @@bash-marked war standards@@N driven into the earth.
+~
+0 3
+D1
+~
+~
+0 -1 15836
+D3
+~
+~
+0 -1 15834
+S
+#15836
+Ashfang War-Chief's Ground~
+The @@glargest shelter@@N in the deep Ashfang camp stands here, distinguished by @@Rtrophies of war@@N hanging from its entrance posts: broken weapons, torn patrol badges, and @@gbits of warden equipment@@N. This is the war-chief's personal ground, and the surrounding area is kept clear by the deference of lesser warriors. A massive fire pit dominates the center, its ashes still warm. The war-chief's @@bash-tooth standard@@N, taller than the others, stands at the camp's highest point.
+~
+4 3
+D1
+~
+~
+0 -1 15837
+D3
+~
+~
+0 -1 15835
+S
+#15837
+Deep Berserker Grounds~
+The @@RAshfang berserkers@@N maintain their own section of the deep camp here, set apart from the regular warriors. The ground is @@gchurned to mud@@N by their constant weapon drills, and training dummies made from ironpine trunks are hacked to splinters. The berserkers are the war-chief's elite, @@Glarger and more scarred@@N than their fellows, and their quarters reflect their status: better shelters, more food stores, and a prominent @@bash fire@@N that burns perpetually.
+~
+0 3
+D3
+~
+~
+0 -1 15836
+D1
+~
+~
+0 -1 15838
+S
+#15838
+Deep Forest, Ashfang Fringe~
+The @@gfringe@@N of Ashfang territory meets the wild forest here, where the camp's influence fades into the @@Guntamed Ancestor Deeps@@N. @@RAshfang markers@@N are posted on trees, claiming territory, but the deep-forest creatures that inhabit this area pay no attention to human boundaries. The forest is dark and ancient, and the @@rluminescent moss@@N casts its glow across the Ashfang paint and the wild growth alike.
+~
+0 3
+D3
+~
+~
+0 -1 15837
+D2
+~
+~
+0 -1 15818
+D0
+~
+~
+0 -1 15858
+D1
+~
+~
+0 -1 15839
+S
+#15839
+Eastern Ancestor Deeps~
+The @@geastern reaches@@N of the Ancestor Deeps are characterized by steep-sided @@lvalleys@@N between ridges of exposed granite. The trees here are a mix of ancient @@Gghost birch@@N and gnarled ironpines, their roots gripping the thin soil with tenacious determination. @@rLuminescent moss@@N coats the valley walls, and the streams that flow through the valley bottoms are @@lcold and dark@@N, their surfaces reflecting the moss glow. The isolation is profound.
+~
+0 3
+D3
+~
+~
+0 -1 15838
+D0
+~
+~
+0 -1 15859
+S
+#15840
+Deep Western Hollow~
+The land drops into a @@gdark hollow@@N at the western extreme of the Ancestor Deeps, where even the @@rluminescent moss@@N grows sparse and the only light is a faint grey filtering through the canopy far above. The @@Gghost birch@@N here are stunted and twisted, their growth inhibited by the permanent shadow. @@lFungal growths@@N of unusual size and shape sprout from every surface, and the air is thick with spores. The silence is broken only by the occasional drip of condensation from the canopy.
+~
+1 3
+D1
+~
+~
+0 -1 15841
+S
+#15841
+Treant's Ancient Grove~
+The @@gdeepest ironpine grove@@N in the Ancestor Deeps stands here, its trees of such immense age and size that they seem to belong to a different era entirely. The largest trunk in the grove exceeds @@lfour arm-spans@@N in diameter, and its bark is so deeply furrowed that the crevices could conceal a person. This is the grove where the @@Gancient ironpine treant@@N makes its home, a being so old and still that it is indistinguishable from the surrounding trees until it moves. The air vibrates with a deep, almost subsonic hum.
+~
+4 3
+D1
+~
+~
+0 -1 15842
+D3
+~
+~
+0 -1 15840
+S
+#15842
+Spirit-Haunted Passage~
+A narrow @@gpassage@@N runs between two walls of living tree root here, the roots so densely interwoven that they form solid barriers on either side. The passage has a @@Wsupernatural quality@@N: the temperature drops sharply, @@rluminescent moss@@N flares to unusual brightness on the root walls, and a faint sound like @@lwhispering voices@@N echoes from both ends. The Cairn-Keeper descendants say the spirits of the ancient dead use passages like this to move between their burial sites.
+~
+1 3
+D1
+~
+~
+0 -1 15843
+D3
+~
+~
+0 -1 15841
+D2
+~
+~
+0 -1 15822
+S
+#15843
+Megalith Ring, Ancestor Deeps~
+A @@Wcircle of standing stones@@N occupies a clearing in the deep forest, smaller than the Ironpine Rise ring but far older. These @@gmegaliths@@N are rough-hewn and weathered beyond recognition of their original carvings, and the @@rluminescent moss@@N that covers their surfaces has grown into the carved channels to create @@gglowing patterns@@N that shift as the moss pulses. The ground within the ring is bare earth, perfectly level, maintained by generations of stone-antler circle guardians. The air within the ring is @@lcold and perfectly still@@N.
+~
+4 3
+D1
+~
+~
+0 -1 15844
+D3
+~
+~
+0 -1 15842
+D0
+~
+~
+0 -1 15863
+S
+#15844
+Megalith Spirit Nexus~
+The @@Wcenter of the deep megalith ring@@N is a place of concentrated spiritual energy, where the @@gstanding stones@@N focus and amplify the forces that permeate the Ancestor Deeps. The @@rluminescent moss@@N on the stones pulses in synchrony here, creating a rhythmic glow that seems to breathe. A flat @@laltar stone@@N at the center bears offerings that appear and disappear between visits, placed by the circle guardians or, some say, by the spirits themselves. The cold is intense and penetrating.
+~
+4 3
+D1
+~
+~
+0 -1 15845
+D3
+~
+~
+0 -1 15843
+S
+#15845
+Ghost Moth Clearing~
+@@gPale ghost moths@@N drift through this clearing in silent swarms, their wings catching the @@rluminescent moss glow@@N and reflecting it in shifting patterns of green-white light. The moths are attracted to something in this clearing, perhaps the unusually bright moss or some nectar source invisible to human senses. Their presence creates an @@lethereal, dreamlike atmosphere@@N, the clearing filled with slowly moving points of light. @@GThe trees around the clearing@@N are draped in moth silk and old cocoons.
+~
+0 3
+D1
+~
+~
+0 -1 15846
+D3
+~
+~
+0 -1 15844
+S
+#15846
+Rootbound Ritual Clearing~
+A @@gdeliberately cleared space@@N in the deep forest serves as a @@RRootbound ritual clearing@@N, where the cult's most potent ceremonies are performed. The trees around the clearing have been shaped into a @@Gliving wall@@N, their branches woven together so tightly that they form an impenetrable barrier. At the center stands a @@gcarved wooden idol@@N depicting a figure half-human and half-tree, its roots reaching into the earth and its branches reaching toward the sky. @@RRed moss@@N radiates outward from the idol's base.
+~
+0 3
+D1
+~
+~
+0 -1 15847
+D3
+~
+~
+0 -1 15845
+D2
+~
+~
+0 -1 15826
+S
+#15847
+Rootbound Inner Ward~
+The @@RRootbound cult's inner defenses@@N are concentrated here, where @@Gvine-woven barriers@@N and @@gliving thorn walls@@N create a maze of narrow passages leading toward the cult's innermost sanctum. The barriers are not merely physical: the vines pulse with an @@runnatural vitality@@N that suggests they would resist cutting. @@WBone charms@@N and @@gknotted root symbols@@N hang from the thorns at every turn, and the air hums with the same low vibration found throughout Rootbound territory.
+~
+0 3
+D1
+~
+~
+0 -1 15848
+D3
+~
+~
+0 -1 15846
+S
+#15848
+Thornmother's Approach~
+The path to the @@RThornmother's hidden grove@@N passes through this @@gdark corridor@@N of ancient trees whose branches have been woven into a solid canopy overhead. The @@Gliving walls@@N on either side pulse with @@rcrimson moss@@N, and the ground is covered in a carpet of fallen thorns that crunch underfoot. The air is thick with the scent of rot and green growth, and a @@ldistant sound@@N like a heartbeat echoes from somewhere ahead. The cult's most devoted guardians, the briar knights, patrol this approach.
+~
+0 3
+D1
+~
+~
+0 -1 15849
+D3
+~
+~
+0 -1 15847
+S
+#15849
+Thornmother's Hidden Grove~
+This is the @@Rinner sanctum@@N of the Rootbound cult, a grove where the largest tree in the entire Ancestor Deeps stands surrounded by a ring of @@Gliving thorn walls@@N. The @@WThornmother herself@@N is said to commune with this ancient tree, which the cult believes is a manifestation of the sleeping forest deity. @@rCrimson luminescent moss@@N coats every surface in pulsing waves of red light, and the ground trembles faintly with a deep, rhythmic vibration. The tree's roots extend in every direction, some as thick as a person's waist, and its canopy blots out the sky entirely.
+~
+5 3
+D3
+~
+~
+0 -1 15848
+S
+#15850
+Red Moss Bloom Valley~
+A @@Rvalley@@N between ancient tree roots is consumed by a massive @@Rred moss bloom@@N, the luminescent moss having shifted from its natural green-white to a deep crimson that signals @@gcorruption in the deep forest@@N. The red light gives the valley an infernal appearance, turning every surface into a hellish landscape of bloody shadows. The moss is warm to the touch, and @@lsmall tendrils@@N of crimson light creep along the ground like living things.
+~
+0 3
+D1
+~
+~
+0 -1 15851
+D0
+~
+~
+0 -1 15870
+S
+#15851
+Corrupted Stream Bed~
+A @@lstream@@N that once flowed clear through the deep forest has been @@Rtainted@@N here, its water running dark and thick with dissolved minerals from the corrupted soil. The @@Rred moss bloom@@N has spread to the stream banks, and dead fish lie in the shallows, their bodies @@gcoated in a thin film@@N of red-tinged growth. The stream continues flowing, carrying the corruption downstream. @@GThe trees@@N along the banks show the same rust-red needle discoloration found in the corrupted ironpine stand.
+~
+0 6
+D1
+~
+~
+0 -1 15852
+D3
+~
+~
+0 -1 15850
+S
+#15852
+Deep Forest Crossroads~
+Several @@gancient trails@@N converge at this crossroads in the deep forest, their paths marked by @@lstacked stone cairns@@N of different ages and styles. The oldest cairns are so weathered that their stones have nearly dissolved back into the soil. The crossroads is a @@Grare open space@@N in the dense canopy, and @@rluminescent moss@@N on the surrounding trees provides enough light to examine the cairn markers. The trails lead in every direction, connecting the various pockets of activity in the Ancestor Deeps.
+~
+0 3
+D1
+~
+~
+0 -1 15853
+D3
+~
+~
+0 -1 15851
+S
+#15853
+Warden Waystation, Ancestor Deeps~
+A small @@gwaystation@@N has been established beside the @@lLantern Road@@N here, its sturdy stone walls providing shelter and security for road wardens posted to the deepest and most dangerous section of the route. The waystation is modest but well-maintained: a single room with @@Ga stone hearth@@N, cots, a locked supply chest, and a @@gmanifest board@@N for recording patrol observations. The surrounding forest presses close, and the @@rluminescent moss glow@@N provides an eerie nightlight.
+~
+4 3
+D1
+~
+~
+0 -1 15854
+D3
+~
+~
+0 -1 15852
+D2
+~
+~
+0 -1 15833
+D0
+~
+~
+0 -1 15873
+S
+#15854
+Lantern Road, Ancestor Deeps Heart~
+The @@lLantern Road@@N passes through the @@gheart of the Ancestor Deeps@@N here, and the lantern posts are spaced at their closest interval, barely twenty paces apart. The road is flanked by @@Gancient ghost birch@@N whose pale trunks gleam in the lantern light, and @@rluminescent moss@@N on every surface creates a continuous underglow that makes the road feel like a tunnel through a glowing cave. Distance markers on the waystones show the Oath-Crossing drawing near to the north. @@gWarden patrol marks@@N are fresh, suggesting recent passage. The road surface here is the best-maintained in the entire Deeps, evidence of both cities' investment in keeping this lifeline open.
+~
+0 3
+D0
+~
+~
+0 -1 15874
+D3
+~
+~
+0 -1 15853
+D2
+~
+~
+0 -1 15834
+D1
+~
+~
+0 -1 15855
+S
+#15855
+Standing Stone, Road East~
+A @@Wlone standing stone@@N rises beside the road here, its surface carved with the @@glantern-and-scale motif@@N that marks jointly maintained sites. The stone serves as both a spiritual marker and a practical boundary post, indicating the point where the road enters the @@lAncestor Deeps proper@@N as opposed to the transition zone from the Ironpine Rise. @@rLuminescent moss@@N grows in the carving channels, making the motif glow. @@GFern growth@@N at the stone's base has been kept trimmed by warden patrols.
+~
+0 3
+D1
+~
+~
+0 -1 15856
+D3
+~
+~
+0 -1 15854
+S
+#15856
+Deep Ashfang Territory~
+The forest here is deep @@RAshfang territory@@N, far from the road and far from any regular patrol route. The trees bear @@gash-painted clan marks@@N at head height, and @@Gconcealed pit traps@@N and trip-wire alarms have been set along the approaches. The Ashfang who operate this deep in the forest are the most committed and dangerous members of the warband, having rejected even the loose structure of the main camp in favor of @@gsemi-feral existence@@N among the ancient trees.
+~
+0 3
+D1
+~
+~
+0 -1 15857
+D3
+~
+~
+0 -1 15855
+S
+#15857
+Root Cavern, Deep~
+A @@gdeep cavern@@N opens beneath the forest here, far larger than the western entrance. The cavern's ceiling is formed by the interlocking @@Groot systems@@N of ancient trees, and its walls are @@lbare rock@@N coated in thick layers of @@rluminescent moss@@N that provides enough light to see by. The cavern extends in multiple directions, and the air is cool and damp, carrying the deep-earth smell of @@gstone and mineral water@@N. The @@Rancient cave bears@@N that inhabit the Ancestor Deeps use caverns like this as denning sites.
+~
+1 3
+D1
+~
+~
+0 -1 15858
+D3
+~
+~
+0 -1 15856
+S
+#15858
+Cave Bear Den~
+The @@gcavern@@N narrows here into a @@Rlarge alcove@@N that serves as the primary den of one of the Ancestor Deeps' @@Gancient cave bears@@N. The den floor is carpeted with shed fur, gnawed bones, and the crushed remains of @@lprey animals@@N. Claw marks score the rock walls from floor to ceiling, and the musky smell is overwhelming. The bear that claims this den is an @@gancient and enormous specimen@@N, its territory extending through the surrounding cavern system.
+~
+1 3
+D3
+~
+~
+0 -1 15857
+D2
+~
+~
+0 -1 15838
+S
+#15859
+Eastern Deep Valley~
+A @@gnarrow valley@@N cuts deep into the eastern edge of the Ancestor Deeps, its walls rising steeply on both sides. The valley floor is a tangle of @@Gfallen trees@@N and exposed root systems, with a @@lcold stream@@N threading through the debris. @@rLuminescent moss@@N coats the valley walls in thick mats, providing an eerie @@lunderlit glow@@N that makes the valley feel subterranean despite being open to the sky. The isolation here is absolute, and the silence is broken only by the stream's quiet flow.
+~
+0 3
+D3
+~
+~
+0 -1 15858
+D2
+~
+~
+0 -1 15839
+D0
+~
+~
+0 -1 15879
+S
+#15860
+Western Ancestor Depths~
+The forest descends into its @@gdarkest and most ancient reaches@@N here, where the canopy is so thick that no sunlight reaches the floor. The only illumination comes from the @@rluminescent moss@@N that coats every surface in a ghostly glow. @@GGhost birch@@N and ironpine grow together in massive tangles, their root systems so intertwined that individual trees are impossible to distinguish. The air is cold and perfectly still, untouched by wind.
+~
+1 3
+D1
+~
+~
+0 -1 15861
+S
+#15861
+Ancestor Bone Pit~
+A natural depression in the @@gforest floor@@N has collected bones over centuries, creating a @@leerie ossuary@@N of animal and possibly human remains. The bones are ancient, @@gpale and fragmented@@N, partially dissolved by the acidic soil and overgrown with @@rluminescent moss@@N. Whether this is a natural accumulation from predator kills or a deliberate burial site is unclear. The Cairn-Keeper descendants avoid this place, which suggests the latter. @@GFerns@@N grow thickly around the depression's rim.
+~
+1 3
+D1
+~
+~
+0 -1 15862
+D3
+~
+~
+0 -1 15860
+S
+#15862
+Oathbreaker's Rest~
+A @@gcollapsed stone structure@@N lies half-buried in the forest floor here, its broken walls revealing the outline of what was once a small building or vault. The structure predates the current forest growth, and the @@Wtrees have grown through@@N its foundations. @@WCarved symbols@@N on the remaining stonework depict scales and broken chains, marking this as a place where @@goathbreakers were punished@@N under the old forest custom. The air is oppressively cold, and the @@rluminescent moss@@N avoids the stone entirely.
+~
+1 3
+D1
+~
+~
+0 -1 15863
+D3
+~
+~
+0 -1 15861
+S
+#15863
+Spirit Convergence~
+The @@Wspiritual energy@@N of the Ancestor Deeps is concentrated here, where multiple @@gley lines@@N or spirit paths intersect. The @@rluminescent moss@@N on the surrounding trees pulses in complex, synchronized patterns, and the @@lcold is intense@@N even by the Deeps' standards. @@GGhost birch@@N stand in a perfect circle around the convergence point, their bark glowing with an inner light. The stone-antler circle considers this one of the most sacred and dangerous sites in the deep forest.
+~
+4 3
+D1
+~
+~
+0 -1 15864
+D3
+~
+~
+0 -1 15862
+D2
+~
+~
+0 -1 15843
+S
+#15864
+Ancient Root Bridge~
+A massive @@gnatural bridge@@N of intertwined tree roots spans a @@ldark ravine@@N here, the roots having grown together over centuries to form a solid crossing wide enough for two people abreast. The bridge is covered in @@rluminescent moss@@N that lights the crossing, and @@Gpale ferns@@N grow from the root tangles. The ravine below is lost in darkness, and a @@lcold updraft@@N carries the sound of running water from deep below.
+~
+0 3
+D1
+~
+~
+0 -1 15865
+D3
+~
+~
+0 -1 15863
+S
+#15865
+Rootbound Thorn Maze~
+A @@Rlabyrinth of living thorns@@N has been grown here by the Rootbound cult, creating a defensive maze that protects the approaches to their sacred sites. The thorns are not natural growth but have been @@gcultivated and directed@@N by cult rituals, forming walls ten feet high that channel intruders through predetermined paths. @@rCrimson moss@@N coats the thorn walls, and the air carries the coppery scent of old blood where the thorns have claimed victims.
+~
+0 3
+D1
+~
+~
+0 -1 15866
+D3
+~
+~
+0 -1 15864
+S
+#15866
+Rootbound Acolyte Camp~
+A @@gcrude camp@@N occupies a space between the @@Rthorn walls@@N here, where @@GRootbound acolytes@@N rest and perform their devotional rites. The camp is primitive but functional: sleeping mats woven from forest materials, a cold fire pit, and a @@gsmall wooden shrine@@N to the sleeping forest deity. @@rVine charms@@N and @@gknotted symbols@@N hang from every available surface. The acolytes' @@Rpersonal effects@@N suggest lives fully devoted to the cult.
+~
+0 3
+D1
+~
+~
+0 -1 15867
+D3
+~
+~
+0 -1 15865
+S
+#15867
+Deep Forest, Ancestor Path~
+An @@gancient path@@N threads through the deep forest here, its course marked by @@lstones placed at intervals@@N by hands so old that the stones have sunk half into the earth. The path connects the sacred sites of the Ancestor Deeps, threading between @@Gstanding stone circles@@N, burial niches, and spirit convergence points. @@rLuminescent moss@@N lights the way, growing brighter near the path's stones as if drawn to them.
+~
+0 3
+D1
+~
+~
+0 -1 15868
+D3
+~
+~
+0 -1 15866
+S
+#15868
+Ruined Oath-Stele~
+A @@Wtall stone stele@@N stands at a crossroads of ancient paths, its surface carved with the text of an @@gold oath@@N in a language that predates both cities. The stele is cracked and listing, damaged by age and by @@Rdeliberate vandalism@@N, the scratched defacements of those who broke the oath it records. @@gOathbreaker wraiths@@N are said to haunt these steles, bound to the sites of their broken promises. @@rLuminescent moss@@N creeps up the stele's base but stops at the carved text.
+~
+0 3
+D1
+~
+~
+0 -1 15869
+D3
+~
+~
+0 -1 15867
+S
+#15869
+Oath-Stele Graveyard~
+Multiple @@gruined oath-steles@@N stand together in this clearing, a graveyard of broken promises and shattered oaths. The @@Wsteles@@N range from intact but cracked to completely toppled and overgrown. The concentration of spiritual energy here is palpable: the air is @@lcold and heavy@@N, @@rluminescent moss@@N glows with unusual intensity, and shadows seem to move at the edge of vision. The @@goathbreaker wraiths@@N that haunt these sites are among the most dangerous spirits in the Ancestor Deeps.
+~
+1 3
+D1
+~
+~
+0 -1 15870
+D3
+~
+~
+0 -1 15868
+S
+#15870
+Red Moss Corruption Source~
+The @@Rsource of the red moss bloom@@N is somewhere very near here, the corruption radiating outward from this point with visible intensity. Every surface is coated in @@Rpulsing crimson moss@@N, and the trees are twisted and dying, their bark splitting and their needles turning rust-red. The @@gground is hot@@N to the touch, and the air carries a @@lsickly sweet stench@@N that makes breathing difficult. Whatever force drives the corruption, it is powerful and deeply rooted in the earth beneath.
+~
+0 3
+D1
+~
+~
+0 -1 15871
+D3
+~
+~
+0 -1 15869
+D2
+~
+~
+0 -1 15850
+S
+#15871
+Ancestor Cairn Row~
+A row of @@gancient cairns@@N lines a ridge here, their @@lstacked stones@@N weathered to soft shapes by centuries of wind and rain. Each cairn marks a burial, the old Cairn-Keeper tradition of placing the honored dead on high ground facing north toward the @@WCold Throne@@N. The cairns are maintained by the stone-antler circle, who leave fresh offerings of bone and dried herbs at each one during their seasonal visits. @@rLuminescent moss@@N grows in patterns on the cairn stones.
+~
+0 3
+D1
+~
+~
+0 -1 15872
+D3
+~
+~
+0 -1 15870
+S
+#15872
+Deep Forest Junction~
+A @@gjunction@@N of trails in the deep forest offers routes in multiple directions, marked by a @@lstack of directional stones@@N placed by forest guides. The junction sits in a rare gap in the canopy where a massive tree once fell, and @@Gyoung growth@@N is racing to fill the light gap. The trails leading from here show varying degrees of use, from the well-worn path toward the road to the faint threads heading into the deepest wilderness.
+~
+0 3
+D1
+~
+~
+0 -1 15873
+D3
+~
+~
+0 -1 15871
+S
+#15873
+Lantern Road, Oath-Crossing Approach~
+The @@lLantern Road@@N curves westward here as it approaches the @@WOath-Crossing@@N, one of the most significant sites on the entire route. The road widens and the @@glantern posts@@N are freshly painted, their maintenance reflecting the site's diplomatic importance. @@GDistance markers@@N count down the remaining steps to the Oath-Crossing stones. The air carries the faint sound of @@lrunning water@@N from a nearby stream that feeds the sacred grove where the two cities first swore mutual obligation.
+~
+0 3
+D0
+~
+~
+0 -1 15893
+D1
+~
+~
+0 -1 15874
+D3
+~
+~
+0 -1 15872
+D2
+~
+~
+0 -1 15853
+S
+#15874
+Lantern Road, Eastern Deeps Stretch~
+The @@lLantern Road@@N stretches eastward here through the @@gheart of the Ancestor Deeps@@N, its lantern posts casting pools of warm light against the cool @@rgreen glow@@N of the surrounding luminescent moss. The road surface is flagstone in this section, the packed earth replaced by dressed stone to prevent the soft forest floor from swallowing the road. @@GGhost birch@@N and ancient ironpines flank both sides, their canopy forming an unbroken tunnel of living green. The forest is quiet, respectful of the road's passage.
+~
+0 3
+D3
+~
+~
+0 -1 15873
+D2
+~
+~
+0 -1 15854
+D1
+~
+~
+0 -1 15875
+S
+#15875
+Standing Stone, Road South~
+A @@Wstanding stone@@N beside the road marks the southern boundary of the @@gOath-Crossing precinct@@N, the area surrounding the original covenant site that both cities consider neutral and sacred ground. The stone bears the @@llantern-and-scale motif@@N on its south face and the text of the fourth article of the forest charter on its north: 'Both cities maintain wardens, but neither claims the forest as sole territory.' @@rLuminescent moss@@N in the carving channels makes the text readable even in the deep forest gloom.
+~
+0 3
+D1
+~
+~
+0 -1 15876
+D3
+~
+~
+0 -1 15874
+S
+#15876
+Ancestor Deeps, East Fringe~
+The @@geastern fringe@@N of the Ancestor Deeps thins here as the land begins a gradual rise toward the @@lnorthern ridges@@N. The trees transition from the massive ancient specimens of the deep interior to a mix of large but younger @@Gghost birch@@N and ironpine. The @@rluminescent moss@@N becomes patchy and less intense, yielding to normal forest floor cover. The air warms slightly and wind returns, stirring the canopy for the first time in the deep miles.
+~
+0 3
+D1
+~
+~
+0 -1 15877
+D3
+~
+~
+0 -1 15875
+S
+#15877
+Northern Ashfang Outpost~
+An @@RAshfang outpost@@N has been established on the rising ground east of the road, positioned to monitor traffic heading toward the @@gnorthern checkpoints@@N. The outpost is more permanent than the typical Ashfang camp, with @@gstonework foundations@@N supporting the usual bark-and-branch shelters. The @@RAshfang@@N who man this outpost are testing Kowloon's southern defenses, probing for weaknesses in the patrol coverage.
+~
+0 3
+D1
+~
+~
+0 -1 15878
+D3
+~
+~
+0 -1 15876
+S
+#15878
+Venomous Hollow~
+A @@gdamp hollow@@N between tree roots harbors a concentration of @@Rvenomous serpents@@N, their coils visible among the @@lluminescent moss@@N that lines the depression. The hollow is warm compared to the surrounding forest, heated by decomposing organic material beneath the surface, and the snakes are drawn to this warmth. @@GFern fronds@@N drape over the hollow's edges, partially concealing the den from above. The sound of scales sliding over moss is constant.
+~
+0 3
+D1
+~
+~
+0 -1 15879
+D3
+~
+~
+0 -1 15877
+S
+#15879
+Eastern Ancestor Ridge~
+The land rises to a @@gmodest ridge@@N at the eastern edge of the Ancestor Deeps, offering a rare @@lelevated viewpoint@@N over the deep canopy stretching westward. From here, the @@Rluminescent moss glow@@N of the Deeps is visible as a faint green shimmer beneath the forest canopy, a sea of ghostlight that extends to the horizon. The ridge itself is @@Gwindswept and exposed@@N, with sparse tree cover and thin soil over granite.
+~
+0 5
+D3
+~
+~
+0 -1 15878
+D2
+~
+~
+0 -1 15859
+S
