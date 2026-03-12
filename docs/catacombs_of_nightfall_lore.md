@@ -386,37 +386,58 @@ These figures let builders place inscriptions, echoes, mob titles, and relic tag
 
 ## Lore Integration Guidance for the Redesign
 
-## Room Lore
-- Gateworks and processional halls show initial civic legitimacy and ritual order.
-- Register vaults and compact halls show legal capture of grief.
-- Forest reliquary/rootglass sectors show covenant fracture and memory resistance.
-- Final sanctum shows institutional doctrine personified.
+### Room Lore
 
-## Mob Lore
-- Trash mobs represent neglected consequence (vermin, scavengers, failed rites).
-- Core mobs represent functioning offices (registrars, wardens, reclaim clergy).
-- Elites represent doctrine enforcement (inquisitors, dreadguard, auditors).
-- Bosses represent institution-level claims over identity and death.
+Each zone of the catacombs should tell a story through its environment, progressing from order to corruption as players descend.
 
-## Object Lore
-- Common gear should carry office provenance (intake, barracks, registry, choir).
-- Mid-tier relics should expose cross-area ties (Midgaard districts, forest cairn marks).
-- Signature relics should embody ideological struggle (seal vs oath, ledger vs memory, order vs consent).
+- **Gateworks and processional halls** show initial civic legitimacy and ritual order. Room descriptions should emphasize carved stone, intact name tablets, the remnants of bell mechanisms, and the architectural grandeur of a space designed to impress mourners with institutional authority. The damage here is physical (collapse, scavenger activity) rather than spiritual. Color palette: white and grey stone, lamp-black ash, the faded metallic gleam of name-tablet inlays.
+
+- **Register vaults and compact halls** show legal capture of grief. Room descriptions should emphasize the bureaucratic apparatus: intake desks, ledger shelves, reliquary cabinets with indexed drawers, warden checkpoint stations with posted regulations. The damage here is institutional -- the machinery still functions, but it serves no legitimate purpose. Dual-tradition galleries should be described with Midgaard legal tablets on one wall and forest oath stones on the opposite wall, their texts contradicting each other. Color palette: grey stone deepening to violet-tinged shadows where Sealed Name repositories are located.
+
+- **Forest reliquary/rootglass sectors** show covenant fracture and memory resistance. Room descriptions should emphasize the intrusion of organic material into institutional stone: rootglass formations growing through cracks, green luminescence competing with lamp-light, the audible hum of rootglass testimony layered over fading bell-tones. The damage here is transformative -- the forest is actively reclaiming the space. Color palette: pale green-gold rootglass light against dark stone, with cyan undertones where active root growth presses through walls.
+
+- **Final sanctum** shows institutional doctrine personified. Room descriptions should emphasize the Matriarchal apparatus at its most refined: polished stone, intact ward-circles, the Midnight Census archive, and the Last Auditor's compliance station. This space is not ruined; it is maintained by undead custodians who continue the institution's work. The horror here is not decay but persistence -- a system that continues to function long after every justification for its existence has evaporated. Color palette: deep violet and magenta ward-light, cold grey stone, the unnatural stillness of maintained-but-abandoned space.
+
+### Mob Lore
+
+Mobs should reflect Nightfall's institutional hierarchy, with each tier representing a different relationship to the institution's corrupted purpose.
+
+- **Trash mobs** represent neglected consequence -- the byproducts of institutional failure. Vermin that feed on funerary materials, scavenger undead that were never bound or whose bindings degraded, and opportunistic creatures that colonized abandoned chambers. These mobs have no institutional awareness; they are ecological. Their presence tells players that this part of the catacomb has been abandoned by the institution but not by the organisms that thrive on institutional waste. Examples: bone-dust beetles, ash crawlers, crypt rats, wandering skeletal fragments with no binding rite.
+
+- **Core mobs** represent functioning offices -- institutional undead that still perform their assigned duties. Registrar undead that sit at intake desks and attempt to process anyone who approaches. Warden undead that patrol corridors and challenge unauthorized persons. Reclaim clergy undead that perform degraded binding rites in the lower workshops. These mobs are dangerous because they enforce institutional rules that no longer have legitimate authority. Their dialogue (if any) should be bureaucratic: "Present your intake permit," "This sector is restricted," "Remain in the processional." Examples: bound registrar, bellcrypt warden, reclaim acolyte, processional escort.
+
+- **Elites** represent doctrine enforcement -- specialized institutional agents tasked with maintaining the system against internal and external threats. Dreadguard cadres that combine living officer authority with bound-dead combat capability. Inquisitors that investigate identity reassertion and rootglass contamination. Compliance auditors that perform suppression rites on bound dead showing signs of selfhood. These mobs are aware that the system they serve is under threat and respond accordingly. Examples: dreadguard sentinel, name inquisitor, compliance auditor, choir enforcer.
+
+- **Bosses** represent institution-level claims over identity and death. Each boss should embody a specific ideological position within Nightfall's doctrinal framework. The Nightveil Matriarch (or her undead remnant) embodies administrative sovereignty over the dead. The Sepulcher Lich embodies procedural compliance as an end in itself. A rootglass-corrupted registrar might embody the conflict between institutional loyalty and recovered conscience. Each boss fight should feel like a confrontation with a system, not merely a powerful individual.
+
+### Object Lore
+
+Items found in the catacombs should carry the institutional history of their origin, allowing players to piece together Nightfall's trajectory through the objects they collect.
+
+- **Common gear** should carry office provenance. Warden armor should be stamped with bellcrypt sector assignments. Registrar equipment should include ink-stained implements, seal stamps, and filing tools. Choir vestments should carry liturgical notations. Reclaim clergy gear should show signs of ritual use: residue marks, binding circle wear, and the distinctive grey-violet discoloration caused by prolonged exposure to reclamation energies. Each piece of common gear tells players which caste operated in the area where it was found.
+
+- **Mid-tier relics** should expose cross-area ties. Items that connect Nightfall to Midgaard's civic institutions (Guard Command commission stamps, Magistrate Ledgerhouse routing slips, Violet Compact warrant numbers) and to forest traditions (Cairn-Keeper orientation markers, Mire-Speaker preservation compounds, Everkeeper planting-ring tokens). These relics are the documentary evidence of Nightfall's relationships with the wider world. A relic that carries both a Midgaard district seal and a forest clan mark is an artifact of the compact era, when both traditions coexisted.
+
+- **Signature relics** should embody ideological struggle. A ledger fragment from Nhal Sereth's hidden archive, written in oath-meter cipher, represents resistance within the system. A Matriarchal Midnight Census stamp represents doctrinal authority at its peak. A rootglass shard that whispers a name represents the forest's counter-archive. A warden key with the Doorkeeper's mark represents quiet sabotage. Each signature relic should carry enough lore weight that players who examine it closely learn something about Nightfall's history that room descriptions alone do not reveal.
 
 ---
 
 ## Thematic Pillars for Writers
 
 1. **Institutional Horror Over Random Gore**
-   - Fear comes from systems that process people into categories.
+   - Fear comes from systems that process people into categories. The scariest thing in Nightfall is not a monster but a ledger entry that reduces a person to a work-order number. Room descriptions should emphasize the banality of institutional machinery: desks, forms, filing systems, processing queues. Violence in Nightfall is administrative before it is physical -- a body is reclassified before it is reanimated. Writers should resist the temptation to add gratuitous gore or shock imagery; the horror of Nightfall is procedural, and it is more disturbing for being mundane.
+
 2. **Competing Truth Sources**
-   - Official tablet, hidden ledger, spirit echo, and relic mark should not always agree.
+   - Official tablet, hidden ledger, spirit echo, and relic mark should not always agree. Players who pay attention to environmental text should find contradictions between what Nightfall's official records claim and what rootglass testimony, hidden ledger fragments, and forest relic marks reveal. A room might contain an official plaque stating "This chamber honors the unnamed civic dead" while a rootglass node in the corner whispers specific names. These contradictions are not errors; they are the thematic core of the area. The truth about any given dead person is distributed across multiple sources, and no single source is complete.
+
 3. **Cross-Area Continuity**
-   - Midgaard provides civic context; Great Northern Forest provides covenant counter-memory.
+   - Midgaard provides civic context; Great Northern Forest provides covenant counter-memory. Nightfall does not exist in isolation. References to Midgaard's civic institutions (the Magistrate Ledgerhouse, the Guard Command, the Granite Arcade, the Temple of the Resounding Heart) ground the catacombs in a functioning city's political landscape. References to forest traditions (Cairn-Keeper burial orientation, Mire-Speaker water-rites, Everkeeper planting-rings) connect the catacombs to a living cultural tradition that predates and will outlast Midgaard's institutional apparatus. Players should sense that what happened in Nightfall has consequences beyond its walls -- that the forest is reaching in, and the city is looking away.
+
 4. **Tragedy With Agency**
-   - Include evidence of resistance, sabotage, and attempted restoration.
+   - Include evidence of resistance, sabotage, and attempted restoration. Nightfall's history is not a one-directional descent into evil. At every stage of corruption, individuals within the institution pushed back: Nhal Sereth encoded true names, the Doorkeeper left niches unsealed, chapel choirs hid restoration directions in liturgical meter, Captain Thorne Vel filed his protest. These acts of resistance did not stop Nightfall's corruption, but they preserved the evidence and created the conditions for eventual restoration. Players should encounter these traces and understand that the institution's victims were not passive -- some of them fought back, and their work survives in fragments for players to discover.
+
 5. **Color-Lit Semiotics**
-   - Purple/magenta for coercive doctrine; cyan/green for memory return; white/grey for legal stone.
+   - Purple/magenta for coercive doctrine; cyan/green for memory return; white/grey for legal stone. The ACK!MUD color code system (`@@e` for purple/magenta, `@@c` for cyan, `@@g` for green, `@@W` for white, `@@w` for grey) should be used consistently to reinforce thematic associations. When players see purple-tinged light or magenta ward-glow, they should associate it with institutional authority and binding rites. When they see cyan or green luminescence, they should associate it with rootglass and forest memory. When they see white or grey stone, they should associate it with the original civic architecture before corruption. Consistent color usage trains players to read the environment thematically, not just aesthetically.
 
 ---
 
@@ -424,4 +445,12 @@ These figures let builders place inscriptions, echoes, mob titles, and relic tag
 
 When players finish the redesigned Catacombs of Nightfall, they should understand that they did not merely clear undead from a tomb complex. They intervened in an ongoing war over who controls memory after death: city, chapel, forest, or the dead themselves.
 
-That recognition is the area's true reward and the bridge to future Midgaard and Great Northern Forest story arcs.
+The area's narrative arc moves through three emotional phases:
+
+1. **Discovery** (upper halls): Players encounter ruins and piece together that this was once a legitimate civic institution. The environmental storytelling here should evoke the dignity of the founding era -- carved name tablets, bell mechanisms, processional architecture -- and the sadness of its collapse. Players should feel that something valuable was lost.
+
+2. **Comprehension** (middle vaults): Players encounter the functioning institutional machinery and begin to understand what Nightfall became. The bureaucratic horror intensifies as players realize that the bound-dead registrars, wardens, and clergy are not random undead but employees -- still performing jobs that no longer serve anyone. The contradictions between official records and rootglass testimony should become impossible to ignore. Players should feel that something was corrupted.
+
+3. **Confrontation** (lower sanctums): Players face the doctrinal heart of the institution. The Matriarchal apparatus, the Last Auditor, the Sealed Name repositories, and the rootglass memory storms converge in a space where institutional erasure and forest restoration are in active conflict. Defeating the bosses does not merely remove powerful enemies; it disrupts the system that sustained identity theft on an institutional scale. Players should feel that they have intervened in something larger than a dungeon.
+
+That recognition is the area's true reward and the bridge to future Midgaard and Great Northern Forest story arcs. The questions that Nightfall raises -- who owns the dead? who controls memory? what do institutions owe the people they process? -- are not resolved by clearing the dungeon. They persist in the world, and players who have experienced Nightfall should encounter echoes of those questions in Midgaard's civic quarter, the Great Northern Forest's cairn sites, and any future content that touches on institutional authority and its limits.
