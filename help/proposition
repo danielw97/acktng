@@ -11,7 +11,7 @@ rewards. You can hold up to @@Y3@@N propositions at once.
 
   proposition list
     While with a postman, view all available static propositions and
-    their minimum pseudo-level requirement.
+    their pseudo-level range requirements.
 
   proposition accept <number>
     While with a postman, accept the numbered static proposition from
@@ -40,7 +40,7 @@ rewards. You can hold up to @@Y3@@N propositions at once.
 @@WStatic proposition behavior@@N
 - Static propositions are predefined templates offered by postmen.
 - Each static proposition is tied to a specific postmaster NPC vnum.
-- Each static proposition has a minimum pseudo-level requirement.
+- Each static proposition has minimum and maximum pseudo-level requirements.
 - After a static proposition is completed and turned in, it is marked complete
   for that character.
 - Completed static propositions no longer appear in @@Yproposition list@@N and
