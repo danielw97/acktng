@@ -51,34 +51,74 @@ Roc Road currently functions through overlapping institutions that do not fully 
 The route is stable enough to be indispensable, unstable enough to remain dangerous, and politically valuable enough that no faction can afford to let it fail outright.
 
 ## Midgaard Influence on Roc Road
-Midgaard's imprint appears in three durable systems:
 
-1. **Material Standardization**
-   - Stone bed layering, drainage cuts, and slope management in eastern and central segments.
-   - Surviving legal inscriptions that tie maintenance to legitimacy.
+Midgaard's imprint appears in three durable systems and runs deeper than civic infrastructure into the city's self-mythology.
 
-2. **Institutional Rituals**
-   - Patrol relays, checkpoint oath recitations, and registrar marks on goods.
-   - Execution of road crimes as public governance theater to deter convoy panic.
+### 1. Material Standardization
+- Stone bed layering, drainage cuts, and slope management in eastern and central segments.
+- Surviving legal inscriptions that tie maintenance to legitimacy.
+- The eastern approaches of Roc Road bear the heaviest evidence of Midgaard engineering doctrine. The **Lantern Reforms** — Midgaard's standardization era — extended beyond the city walls to formalize road construction along the first miles of every outbound route. On Roc Road this meant: paving marks cut at measured intervals, water-channel grading to prevent seasonal washout, and the installation of the original milestone series whose fragments survive even in the plan's Dustward Verge band.
+- The road-bed material itself tells a story. Near the Midgaard gate, the stone is characteristic gray-purple **ash mortar** — the same volcanic aggregate mortar used in Midgaard's older buildings, imported during the Ash-and-Iron Decades from Cinderteeth-adjacent quarries. This places the road's last major eastern rebuild firmly in the post-crisis fortification period.
 
-3. **Narrative Framing**
-   - Midgaard texts portray Roc Road as a civilizing spine extending order westward.
-   - This framing often downplays local adaptation and non-state labor that kept the road alive when state resources were absent.
+### 2. Institutional Rituals
+- Patrol relays, checkpoint oath recitations, and registrar marks on goods.
+- Execution of road crimes as public governance theater to deter convoy panic.
+- Midgaard's **Three Civic Oaths** — "No ward unlit, no traveler uncounted" (Oath of Light), "No judgment hidden, no sentence unrecorded" (Oath of Stone), and "No levy taken that cannot be borne" (Oath of Bread) — are recited by road wardens at every shift change along the road's eastern half. Wardens repaint boundary sigils even when manpower shortages prevent full road repairs, because the Oath of Stone requires visible evidence of maintained jurisdiction.
+- The **Seven Watches of Midgaard** extend their shadow along the road: Kindling Watch couriers depart the city gate at dawn; Bell Watch checkpoint reports are read aloud at relay stations as far west as the River Ledger Crossing; Lantern Watch increases patrol density through the Banner Hills. This daily rhythm fades as distance from Midgaard increases — by the Crossroads, Midgaard's watch cadence is a memory rather than a schedule.
+
+### 3. Narrative Framing and the Continuity-Reckoning Split
+- Midgaard texts portray Roc Road as a civilizing spine extending order westward.
+- This framing often downplays local adaptation and non-state labor that kept the road alive when state resources were absent.
+- The city's modern **Continuity-Reckoning political tension** has direct road implications:
+  - **Continuity faction** road wardens emphasize unbroken charter lineage — they maintain that the road has been under continuous Midgaard charter authority since the Stone Law Period, that maintenance gaps were temporary crises rather than abandonments, and that Kiess convoy syndics operate as licensed subcontractors within Midgaard's legal framework.
+  - **Reckoning faction** critics point to the **Unindexed Years** — missing ledger pages from the late Containment Era and early Ash-and-Iron period — as evidence that Midgaard's road charter was not merely "interrupted" but actively abandoned during the Evermeet Collapse, allowing the road to be seized by military requisitioners who used it to transport condemned prisoners westward along the same route caravans traveled. The sealed warrants that authorized Conclave prisoner transfers may have been processed through road-checkpoint infrastructure originally built for tariff collection.
+- The **Granite Arcade trade ledger** in Midgaard's northernmost civic spine contains the entry "forty iron bars and six condemned debtors" transferred to "the mountain academy" — a smoking-gun document that the Reckoning faction argues proves Roc Road was used as a prisoner-transport corridor. This entry has a parallel in Kiess's obsidian disc bearing the Conclave's triune seal.
+
+### 4. The Evermeet Collapse and the Refugee Road
+- During the fall of Evermeet, Roc Road became a corridor of displacement rather than commerce. Refugees and displaced merchants flooded eastward toward Midgaard's intake systems. The road's existing tax cairns and toll stations were repurposed as emergency checkpoint and rationing points. The **Ash-and-Iron Decades** saw the road militarized under emergency charter law: Midgaard's Guard Command assumed direct control of all eastern road segments, suspending normal toll collection and replacing civilian road wardens with militia patrols.
+- This period left physical scars on the road that the current rebuild must acknowledge: hastily-repaired bridge abutments in the River Ledger Crossing band, military-grade retaining walls in the Banner Hills (overbuilt for civilian traffic), and abandoned requisition depots in the Dustward Verge whose foundations are still visible as rectangular depressions in the roadside.
+- The western dead — casualties of the Evermeet Collapse, caravan ambushes, and refugee exposure — were routed to Midgaard's **Sepulchur Pasture** when other facilities were overwhelmed. Memorial markers along the eastern road bands originally served as collection points for bodies being transported back to the city.
+
+### 5. Intelligence Pipeline
+- Midgaard's **Guard Command** and Kiess's **Wall Command** share a complementary intelligence system through the road. Midgaard provides eastern and northern intelligence (desert trade conditions, Ashfang warband activity in the Great Northern Forest, northern route status from the Lantern Road). Kiess provides western frontier intelligence (Forest of Confusion mist activity, Withered Depths blight progression, creature movements). Dispatch tablets flow in both directions along Roc Road.
+- The **Road Warden Liaison** NPC in Midgaard (planned for the city rebuild) delivers Kiessward dispatch intelligence and Lantern Road status reports. These documents reference Roc Road conditions as a matter of routine — road wardens are the connective tissue between both cities' security apparatus.
 
 ## Kiess Influence on Roc Road
-Kiess contributes the systems that kept the corridor economically alive during weak-state periods:
 
-1. **Convoy Pragmatism**
-   - Dynamic route schedules, redundancy planning, and hazard pooling.
-   - Negotiated security pacts with local militias and neutral shrine custodians.
+Kiess contributes the systems that kept the corridor economically alive during weak-state periods and that now define the road's western half.
 
-2. **Cross-Cultural Route Speech**
-   - Mixed legal-commercial vocabulary used by merchants, guards, and clerks.
-   - Symbol-heavy marking systems readable across language barriers.
+### 1. Convoy Pragmatism
+- Dynamic route schedules, redundancy planning, and hazard pooling.
+- Negotiated security pacts with local militias and neutral shrine custodians.
+- Kiess's **Trade Syndics** fund and manage the road's western infrastructure through a system of **convoy compacts** — contracts that bind caravan operators, hired guards, and waystation custodians into shared liability pools. When a convoy suffers losses, the compact distributes costs across all participants. When a bridge fails, the compact funds emergency repair from pooled reserves. This is not charity; it is actuarial pragmatism, and the route ledgers that track these obligations are among the most important documents on the road.
+- The **convoy marshal** — a Kiess-appointed authority — controls actual traffic flow west of the Crossroads. A marshal can delay departures during threat spikes, reroute convoys through the Greenveil Spur when the main road is compromised, and authorize emergency payments to independent wayfolk for guide services. Midgaard charter law does not recognize the marshal's authority as sovereign; Kiess practice treats it as the only authority that matters when wagons are burning.
 
-3. **Flexible Authority**
-   - Kiess actors often prioritize throughput over legal purity.
-   - In crisis, they will reroute, pay off, or temporarily legitimize irregular actors if this keeps caravans moving.
+### 2. The Evermeet Legacy and Kiess's Founding Identity
+- Kiess was **built on the ruins of Evermeet**, the fortified city that once served as the road's western anchor. Evermeet's collapse during the border wars left the western terminus without a stable partner for a generation. When Kiess rose on Evermeet's foundations, its founders explicitly designed the new city as everything Evermeet was not: fortified, planned, and awake to external threats.
+- The **founding charter of Kiess** includes the clause: "no sealed warrant issued by a predecessor authority shall bind a Kiess citizen." This was not abstract legal principle but a direct response to the discovery that Evermeet had issued sealed warrants transferring condemned debtors to the Spirebound Conclave — the same apparatus that Midgaard's Reckoning faction seeks to expose. Kiess thus carries an unusual distinction among road-connected cities: it formally repudiated the Conclave transfer practice by name, making the road's western terminus a legal refutation of crimes committed along the road's eastern half.
+- The existing area file preserves a trace of this history: room 3243 (the current Kiess-end room) still references "Evermeet" in its description text. The rebuild replaces "Evermeet" with "Kiess" but must preserve this historical layering — perhaps through extra descriptions on road markers that bear the older name beneath the newer one.
+
+### 3. Three-Power Governance and the Road
+- Kiess's **three-power governance** — Compact Temples, Trade Syndics, and Wall Command — each interact with Roc Road differently:
+  - **The Compact Temples** maintain that the road carries religious significance as a pilgrimage route connecting the **Temple of Concord's** compact-flame theology with Midgaard's **Temple of the Resounding Heart**. Compact priests occasionally walk the full route as a devotional exercise, and their reports on road conditions are filed alongside spiritual observations. The Temple of Concord preserves religious texts that include fragments of **Keeper-of-Measure** survey prayers — originally calibration formulae for shadow rods and angle measurements, inherited from the eastern pyramid traditions without understanding their practical origins.
+  - **The Trade Syndics** treat the road as their primary economic asset. The **Syndic Council Annex** in Kiess (room 13031) coordinates the flow of goods along Roc Road from Midgaard and the frontier. Their commercial intelligence covers the full **Oasis-Pyramid Corridor** — route conditions, caravan schedules, relic market prices, and Reaver activity reports — all sourced through Midgaard's eastern trade network. Goods from the eastern desert's oasis settlements and pyramid frontier pass through Midgaard before reaching Kiess's markets.
+  - **Wall Command** treats the road as a military supply line and intelligence pipeline. Their headquarters (room 13088) oversees the sentries, scouts, and military supply lines. Wall Command dispatch tablets — filed with route notation and threat assessments — are forwarded to Midgaard's road warden command as intelligence bulletins. Wall Command's **Forest Confusion scouts** return from patrol via the Roc Road's Crossroads band, making the intersection a live intelligence handoff point.
+
+### 4. Cross-Cultural Route Speech
+- Mixed legal-commercial vocabulary used by merchants, guards, and clerks.
+- Symbol-heavy marking systems readable across language barriers.
+- Kiess's route-speech tradition has deep roots in the **Passage Tithe** system developed during the Ash Winters era of the Great Northern Forest trade. When northern supply disruptions cut Midgaard's access to timber and ore, the caravan culture that survived on the Lantern Road developed specialized communication systems — tally marks, bell codes, and seal language — that were later adopted by Roc Road convoys. This cross-pollination means a Roc Road convoy marshal uses vocabulary and symbols descended from Great Northern Forest warden traditions filtered through Kiess's adaptive culture.
+- Route marks on the road's western half use Kiess's **compass-and-wall crest** alongside older Midgaard charter sigils. Where both appear on the same milestone, the visual layering tells a jurisdictional story: Midgaard's mark is usually carved into the stone (permanent, institutional), while Kiess's is painted or chalked (practical, renewable, adapted to changing conditions).
+
+### 5. Flexible Authority
+- Kiess actors often prioritize throughput over legal purity.
+- In crisis, they will reroute, pay off, or temporarily legitimize irregular actors if this keeps caravans moving.
+- This flexibility has a dark corollary: Kiess convoy syndics have been known to negotiate temporary truces with tollbreak crews and shadow trade cells when the alternative is complete trade halt. Midgaard road wardens view such negotiations as corruption; Kiess convoy marshals view them as survival. The Crossroads Compact band — where both jurisdictions overlap — is where these competing ethics produce the most visible friction.
+
+### 6. The Obsidian Disc and the Conclave Connection
+- The **obsidian disc** in Kiess's Syndic Council archives, bearing the Spirebound Conclave's **triune seal** (Ember, Prism, Pale), confirms that the Conclave's reach extended to Evermeet before its fall. This artifact was recovered during foundation excavations when Kiess was built on Evermeet's ruins. It is held under Compact Temple seal — not displayed, not destroyed, not explained.
+- The disc links Kiess to the same institutional guilt that haunts Midgaard: both cities participated in the Conclave's condemned-labor transfer apparatus, and both cities' archives contain financial records of payment received. The road between them was the physical corridor along which condemned persons were transported from eastern checkpoint to western laboratory. Every milestone, every relay station, every customs post on Roc Road was potentially complicit in this traffic.
+- This gives certain ruin-band room descriptions a specific political charge: when players find old tax and labor records in the Ruin Run band, they are finding fragments of the same documentary chain that the Reckoning faction in both cities seeks to reconstruct. Relic hunters on Roc Road are not merely treasure seekers but accidental archivists of institutional crime.
 
 Where Midgaard asks "Who has lawful right to command?", Kiess asks "What keeps goods and people alive to arrive tomorrow?" Roc Road's identity is built from that unresolved argument.
 
@@ -121,6 +161,45 @@ The western shore terminus has contradictory meanings:
 
 The road "ending" at the coast is therefore rhetorical. Economically and culturally it transforms rather than terminates, feeding ship channels, fishing settlements, and littoral relay networks.
 
+## Cross-Area Lore Integration
+
+### Connection to the Great Northern Forest and the Lantern Road
+Roc Road and the **Lantern Road** through the Great Northern Forest are Midgaard's two primary overland arteries — one running west to Kiess, the other running north toward Kowloon. They share more than a common origin point:
+
+- **The Bent Mile Principle:** The Lantern Road was surveyed by **Ilren Voss**, whose field journals — preserved in Midgaard's **Granite Arcade** archives — describe a doctrine of following terrain rather than forcing straight lines. This same pragmatic survey philosophy was applied to Roc Road's eastern approaches. Many of Roc Road's seemingly arbitrary bends in the Banner Hills and River Ledger Crossing bands follow geological features that Voss-era surveyors identified as optimal drainage and slope positions. Players who have explored the Lantern Road and recognize the survey style will understand that both roads share a common engineering tradition.
+- **Passage Tithe inheritance:** The **Passage Tithe** system — caravans paying in grain, salt, lamp oil, and iron nails rather than coin alone — was developed on the Lantern Road during the Ash Winters. This system was later adopted on Roc Road when coin-based toll collection collapsed during the Evermeet crisis. Several of Roc Road's mid-band waystone inscriptions reference "nails and oil" as acceptable road-toll payment, an echo of the northern tradition.
+- **Supply chain interdependence:** Disruptions on the Lantern Road (Ashfang blockades, Rootbound cult activity) ripple through Midgaard's markets and reach Kiess as supply shortages and price increases within days, all traveling along Roc Road as adjusted convoy manifests. The two roads function as a single economic circuit: northern timber and ore flow south through Midgaard, then west along Roc Road to Kiess; western grain, frontier contracts, and military intelligence flow east along Roc Road through Midgaard, then north to the forest waystations. Breaking either road disrupts the entire system.
+- **Shared warden culture:** Road wardens on both routes answer to Midgaard's joint commission, carry dual-city identification, and use compatible patrol protocols. A warden transferred from Lantern Road service to Roc Road would recognize the milestone conventions, relay station procedures, and checkpoint oath recitations. This cultural continuity is deliberate — Midgaard's Guard Command designed the warden system as a single institution spanning both routes.
+
+### Connection to the Forest of Confusion
+The **Forest of Confusion** lies north of Kiess, accessible via Roc Road's western terminus, and the intersection between road and forest is more than geographic:
+
+- **The Crossroads-Forest link:** One of Roc Road's existing external exits connects to the Forest of Confusion (vnum 9601, from the Crossroads band). This is not accidental — the Crossroads has historically been the departure point for forest expeditions. Kiess's **Wall Command** scouts return from forest patrol to the Crossroads, making it a live intelligence handoff point where western frontier reports enter the road's information stream.
+- **Druidic traces on the Greenveil Spur:** The Greenveil Spur (Band F) preserves druidic traces that connect to the Forest of Confusion's history. The druids who created the **confusion mists** — the deliberately engineered quarantine around the Conclave's abandoned crystal matrices — maintained their outermost monitoring circles in the same ecological zone that the Greenveil Spur occupies. The "displaced forest spirits" that haunt the spur may be remnants of the same ward magic that the druids used to contain the Conclave's corruption.
+- **Mire-Speaker pharmacological chain:** The **Mire-Speakers** of the Great Northern Forest fenlands harvested medicinal plants nourished by the ancient root network. Their pharmacological knowledge was adopted by Midgaard's quartermasters and eventually reached Kiess's healers, who still use deep-forest preparations to treat spore burns and mist-fever. The herb satchels and bark-charms found in the Greenveil Spur are descended from this same pharmacological tradition — practical forest medicine that predates both cities.
+- **The three-force collision:** The Forest of Confusion represents the overlap of Kiess civic order, Verdant Depths ecological intelligence, and Withered Conclave residue. Roc Road's Crossroads band is where this three-force collision first becomes visible to travelers: the road's ordered infrastructure begins to contest with forest encroachment and unexplained disorientation effects reported by scouts returning from the north.
+
+### Connection to the Spirebound Conclave and the Withered Depths
+The Conclave connection runs through Roc Road like a buried vein of institutional poison:
+
+- **The transfer corridor:** During the Ash-and-Iron Decades, condemned persons were transferred from Midgaard's intake systems westward along Roc Road to the Spirebound Conclave's mountain laboratories. The road's checkpoint infrastructure — originally built for tariff collection — was repurposed for prisoner processing. The sealed warrants that authorized these transfers used the same documentary chain as cargo manifests: names replaced by numbers, persons reclassified as "material."
+- **The ruin strata as evidence:** The Ruin Run band (Band H) preserves remains of polities older than both present powers, but some of the "ancient" ruins may be Conclave-adjacent. The Conclave's supply routes passed through what is now the western road, and waystation caches from the Conclave era may survive among the older ruin strata. The "cursed" legal tablets found in this band — rumored to bring misfortune to their readers — may simply be old tax and labor records documenting confiscations, oath violations, and erased lineages that current elites prefer mythologized rather than legible.
+- **The Withered Depths blight trail:** The Conclave's field-trial sites — where crystals were implanted in forest root systems — produced the corruption that became the Withered Depths. This blight originated in the forests north and west of Kiess and has been spreading outward. Wall Command's blight-progression reports, forwarded along Roc Road to Midgaard, are the primary intelligence source for tracking whether the corruption will eventually reach road-adjacent territory. If the blight crosses into the Greenveil Spur, Roc Road's optional forest path becomes a contamination zone.
+
+### Connection to the Eastern Desert Trade Chain
+Roc Road is the western leg of a transcontinental trade chain that extends east through Midgaard to the desert oasis settlements and pyramids:
+
+- **End-to-end goods flow:** Authenticated desert artifacts, oasis herbs, and pyramid relics pass through Southern Oasis provenance certification, then through Midgaard's authentication apparatus, then west along Roc Road to Kiess's markets. The Trade Syndics' commercial intelligence covers the full **Oasis-Pyramid Corridor**, making Kiess a western consumer of goods that traverse the entire corridor. A merchant examining cargo at the Crossroads may be handling objects that originated in a pyramid antechamber and passed through five authentication checkpoints across two thousand miles.
+- **Keeper-of-Measure echoes:** The Temple of Concord in Kiess preserves religious texts containing fragments of **Keeper-of-Measure** survey prayers — originally calibration formulae for shadow rods and angle measurements from the eastern pyramid traditions. These prayers traveled west along Roc Road as liturgical text, divorced from their practical origins. Inscriptions matching these prayer fragments have been found on Northern Pyramid threshold stones, confirming that Roc Road has served as a cultural transmission corridor for millennia, carrying not just goods but language, ritual, and mathematical knowledge between civilizations that never directly communicated.
+
+### Connection to Kowloon (indirect, via Midgaard and the Lantern Road)
+Roc Road has no direct connection to Kowloon, but the road's economic function depends on the Lantern Road remaining open:
+
+- **Kowloon's covenant culture** — precise contractual traditions, public-judgment ethics, and sealed inventory management — has influenced Midgaard's warden system, which in turn shapes Roc Road patrol protocols. The **Oath-Crossing** negotiations that established the Great Northern Forest road charter created a hybrid governance model (combining Kowloon's written-record tradition with forest-people's communal witness custom) that later informed how Midgaard and Kiess manage their competing jurisdictions on Roc Road.
+- **Material flow dependency:** Kowloon's delta ports export goods (refined metals, covenant-certified contracts, diplomatic correspondence) that flow south through the Lantern Road, through Midgaard's markets, and then west along Roc Road. Kiess receives Kowloon-origin goods as part of this extended supply chain. A blockade on the Lantern Road does not merely affect the Great Northern Forest — it disrupts commerce along Roc Road within days.
+
+---
+
 ## Current Conflict Actors
 1. **Roadwardens (Midgaard-aligned):** lawful but under-resourced.
 2. **Convoy Syndics (Kiess-aligned):** effective but politically suspect to purists.
@@ -142,7 +221,112 @@ The road "ending" at the coast is therefore rhetorical. Economically and cultura
 - Objects should encode documentary residue (ledgers, seals, warrants, convoy tags, drift-relics).
 - Elite encounters should personify institutional failures (unpaid legal reavers, oath-corrupted wardens, sanctum-break smugglers).
 
-## Canon Outcome Statement
-Roc Road survives because generations of rivals kept rebuilding the same corridor for different reasons. Midgaard called it law. Kiess called it necessity. The wayfolk called it tomorrow.
+## Per-Band Lore Detail
 
-The rebuild should make players feel that every mile is argued, paid for, defended, exploited, and remembered.
+### Band A — Midgaard Gate March
+The first miles west of Midgaard's West Gate are the most heavily inscribed section of any road on the continent. Every surface carries a mark: charter boundary sigils repainted by road wardens on regular rotation, toll-rate plaques from three different eras nailed to the same posts, census tally-boards at relay stations where the Ledger Watch closes out daily traffic counts, and the deep-cut drainage channels that are the Lantern Reforms' most practical surviving legacy.
+
+The road here is wide enough for two wagons to pass — a deliberate design from the Fortification Era, when military supply columns needed to flow west without blocking returning refugee traffic. The ash-mortar road surface, gray-purple and durable, bears the tread marks of centuries. Guard relays operate on the Seven Watches cycle: a fresh pair of road wardens arrives at dawn with the Kindling Watch couriers and returns at Bell Watch. By Lantern Watch the patrol density doubles, because the Banner Hills ahead produce the road's first significant threat zone.
+
+Travelers departing Midgaard's gate pass through a corridor of civic authority so dense that it feels almost ceremonial. Stone marker slabs at regular intervals declare jurisdiction in three eras of script — the oldest barely legible, the newest crisp Midgaard charter-hand. Tax cairns mark positions where toll collection once occurred; most are now symbolic rather than functional, but road clerks still make notation marks on them as a record-keeping ritual. A petition board stands at the first relay station, where travelers can lodge formal complaints about road conditions — a practice dating to the Lantern Reforms era, when the Magistrate Ledgerhouse required documented evidence before authorizing maintenance expenditure.
+
+### Band B — Banner Hills and Switchbacks
+The terrain rises sharply west of the settled farmland, and the road's character changes with the altitude. The Banner Hills mark the transition from Midgaard's civic engineering to frontier necessity. Retaining walls here are military-grade — overbuilt for civilian traffic, because they were constructed during the Ash-and-Iron Decades when supply columns needed to move heavy ordnance westward. Signal poles rise at switchback crests, their original semaphore flags long rotted but the iron brackets still mounted and sometimes used by road wardens as improvised lamp-hangers.
+
+The hills themselves are named after the military banner standards that once marked rally points during the border wars. **Three Pennant Rise**, **Iron Drum Shoulder**, and **Courier's Grief** (where a dispatch rider was ambushed during the Evermeet Collapse) survive as local names that road wardens use but that appear on no official Midgaard map. The terrain is exposed to weather — snow in winter, scouring wind in spring, baking heat in summer — and the road surface degrades from engineered ash-mortar to gravel and loose stone. Ridge wolves and hill cats hunt these slopes, ambushing from rock outcrops that provide natural cover above the switchbacks.
+
+The hills also mark the approximate boundary of reliable Midgaard patrol coverage. West of the Banner Hills crest, warden density drops sharply. Patrol relays become irregular. The civic oaths are still recited, but the next relay station may not answer.
+
+### Band C — River Ledger Crossing
+The river crossing is where the road's economic function becomes physically tangible. The ford itself — ancient flagstones laid across a shallow riverbed — dates to the Stone Law Period, possibly to the pre-charter Ridge Track era. The stone bridge abutments show at least three layers of repair: original dry-stone from the first road canon, hasty military reinforcement from the border wars (identifiable by iron clamp-marks), and Kiess-funded reconstruction from the Convoy Compact era (identifiable by the Trade Syndic's compass-and-wall mark).
+
+The crossing has been a customs point for as long as records survive. **River Ledger** is not a geographic name but an economic one: every crossing generated a ledger entry, and the accumulated documentation created an economic archive that both cities now reference in trade disputes. The ferry infrastructure (seasonal, maintained by independent wayfolk) dates to periods when the ford was too deep for wagon crossings. Toll ghosts — restless spirits of customs officers who died at their posts during the border wars — are reported by travelers, though whether they are genuine hauntings or the psychological effect of crossing between jurisdictions in deteriorating light is debated.
+
+Smuggling has always shadowed the legitimate crossing. The river's banks offer concealed approaches, and the thick vegetation downstream provides cover for contraband runners who bypass the ford entirely. The presence of **tollbreak crews** — violent extraction groups who exploit the jurisdictional handoff between Midgaard wardens and Kiess convoy guards — makes the crossing the road's first genuinely dangerous zone for travelers without escort.
+
+### Band D — Dustward Verge
+West of the river, the road enters a drier, harder landscape where maintenance visibly degrades. The Dustward Verge marks the historical boundary of consistent road upkeep: east of this line, someone always funded repairs; west of it, infrastructure survived through selective neglect and incremental decay.
+
+The milestones here are the oldest intact markers on the road — not because they were better built, but because the dry climate preserved them while eastern markers were eroded by rain and river flooding. Their inscriptions reference pre-Kiess polities and jurisdictions that no longer exist, in script that even Midgaard archivists struggle to fully translate. These milestones are the physical evidence of the road's deepest historical strata — the Ridge Track era formalized into the first road canon, before either present city existed.
+
+Scavengers and relic pickers work these stretches, collecting fragments of old roadwork — bronze fittings, inscribed boundary stones, corroded toll collection hardware — that have value in Midgaard's Granite Arcade antiquities market. The heat and exposure make travel uncomfortable; water sources become scarce, and the dust that gives the verge its name coats everything. Travelers who arrive at the Crossroads from the east look weathered and grateful; those heading east look apprehensive.
+
+### Band E — Crossroads Compact
+The Crossroads is the road's political heart and its most complex spatial node. Multiple branch routes diverge here: north toward external areas, south toward the Greenveil Spur, east toward Midgaard, west toward Kiess. The Forest of Confusion is accessible from this band, making it a live intelligence handoff point where Wall Command scouts returning from forest patrol meet road-bound convoy traffic.
+
+Historically, violence spikes whenever one side attempts unilateral control of the Crossroads. The Midgaard charter claims formal legal authority; Kiess convoy insurance clauses begin to dominate actual behavior; independent and illicit actors arbitrage the disagreement. Shared governance periods reduce bloodshed but increase corruption opportunities. The physical infrastructure reflects this contested history: Midgaard-chartered milestones stand beside Kiess-painted route markers; a road warden relay station faces a convoy marshal's dispatch post across the same clearing; and the remnants of at least two previous "neutral arbitration circles" — stone-ringed clearings modeled on the Oath-Crossing tradition from the Great Northern Forest — show evidence of abandonment after failed truces.
+
+The **Toll-Reeve Without Crown** — the Crossroads boss encounter — is the personification of this institutional failure. In life, the Toll-Reeve was a Midgaard-chartered legal officer who attempted to enforce exclusive toll authority over the Crossroads during a period of Kiess convoy expansion. His jurisdiction was challenged, his authority revoked by Midgaard's own magistrates under pressure from Kiess trade negotiators, and his post was abolished without acknowledgment. He died at his station, refusing to abandon a legal position that no institution would defend. His revenant form still demands toll documents from travelers, applying obsolete legal standards with mechanical precision, unable to comprehend that the charter he upheld was annulled by the same institution that issued it.
+
+### Band F — Greenveil Spur
+The forest-side spur carries memories omitted from official ledgers. This was the hidden movement route: civilians fleeing war columns, dissident clerks preserving records outside state archives, druid-adjacent custodians maintaining concealed food caches and water points during the border wars. The path is narrower than the main road, shaded by canopy, and smells of damp earth and growing things — a sensory contrast to the dusty verge and exposed crossroads.
+
+Some shrines in this spur were originally practical waystations later sanctified by survivor communities. Their current spirit-lore encodes collective trauma rather than purely ancient woodland theology. The hostile "forest spirits" reported by travelers may represent layers of abandoned vows, violated sanctuaries, and ritually reinforced grief — druidic ward magic that outlived its creators and now operates without purpose or restraint.
+
+The **Greenveil Antler-Warden** — the spur's boss encounter — was once a forest custodian of the druidic tradition that maintained the confusion mist quarantine around the Conclave's abandoned crystal matrices. When the last druids died, their ward magic did not simply dissipate — it bonded to the most compatible living vessel in the area: a territorial forest guardian that had served as the druids' sentinel. The Antler-Warden is neither fully animal nor fully spirit; it is a druidic defense system that lost its operators and now attacks anything that enters its patrol territory, unable to distinguish between legitimate travelers and the Conclave agents its creators designed it to repel.
+
+### Band G — Inlet, Cave, and Sinkline
+The inlet subzone grew as a pressure valve for overregulated checkpoints. When the main road's toll system became too expensive or too corrupt, traders diverted to the coast: small boats carrying compact high-value cargo (medicines, sealed correspondence, jeweler's stock) could bypass inland checkpoints entirely. The caves provided storage, the beach provided landing sites, and the tidal patterns provided natural schedules that regular patrols could not easily intercept.
+
+Not all smuggling here was predatory. During the Evermeet Collapse, the inlet route carried refugees who could not afford toll passage on the main road. Fugitive officials used cave caches to hide seal dies and debt records. Shore traders developed informal rescue protocols for wrecked convoy skiffs. Over time, however, practical shadow routes were captured by coercive crews who imposed extortion tolls — replacing the official toll system with a more violent private version.
+
+The **Inlet Chainmaster** — the subzone's boss encounter — is the culmination of this trajectory. A former convoy guard who deserted during a dispute over unpaid wages, the Chainmaster seized control of the cave network and established a private toll system enforced by the iron chains that give him his name. He blocks the cave entrance with physical chains and demands payment for passage, mimicking the legitimate toll system he once served but with none of its accountability. His crew of **cave squatters** are former laborers, deserters, and displaced persons — a workforce that the legitimate road economy failed to employ.
+
+### Band H — Ruin Run and Weathered Causeway
+The ruin bands preserve remains of a civilization older than both present powers — possibly older than any surviving polity on the continent. The ruins are integrated into the roadbed itself: ancient flagstone avenues serve as the road surface, broken columns stand beside modern retaining walls, and carved facades of buildings whose purpose is lost still display larger-than-life figures engaged in scenes of battle, worship, and celebration.
+
+The script found on these ruins recurs in altered form on modern seals of both Midgaard and Kiess, implying deliberate appropriation by later administrations seeking antique legitimacy. Neither city acknowledges borrowing from the ruin civilization; both cities' archivists classify the similarity as "convergent evolution of administrative symbolism." Scholars who challenge this classification find their research defunded.
+
+The "cursed" legal tablets found in this band are dangerous not because of supernatural contamination but because they document institutional behavior that current elites prefer mythologized. Tax records, labor requisitions, oath violations, and erased lineages — the same categories of document that the Reckoning faction in both cities seeks from their own archives — survive here in a foreign script that may be translatable. If translated, these tablets could establish that the practice of condemned-labor transfers predates both Midgaard and Kiess by centuries, implying that the Conclave did not invent the practice but inherited it from a much older institutional tradition.
+
+### Band I — Western Shore Reach
+The western terminus has contradictory meanings depending on who approaches it. For Midgaard chroniclers, the shore represents the edge of mandate — where formal order thins to nothing. For Kiess traders, it represents the start of maritime opportunity and secondary market routes. For pilgrims and refugees, it is a symbolic threshold between known obligation and uncertain reinvention.
+
+The road "ending" at the coast is rhetorical. Economically and culturally it transforms rather than terminates, feeding ship channels, fishing settlements, and littoral relay networks. The ancient stone quay at the shore terminus — too large for the current fishing traffic — suggests that major sea trade once departed from here. The **Promontory Harrower** — the coastal boss encounter — is an apex predator that has claimed the headland as its territory, exploiting the concentration of desperate, exhausted travelers at the road's end.
+
+The shore also carries evidence of the oldest road stratum: carved marker stones along the beach use the same unknown script found in the Ruin Run band, suggesting that the pre-charter civilization's road extended to the coast and that sea connections were integral to its function. If this road was always a transcontinental corridor, then Roc Road's current form — linking two inland cities across a contested wilderness — is a degraded version of something much larger and older.
+
+---
+
+## Boss Encounter Backstories (expanded)
+
+### The Toll-Reeve Without Crown (Band E, level 90)
+**In life:** Aldric Vossmark, a Midgaard-chartered toll reeve who served the Crossroads station for twenty-three years. His jurisdiction was clear: collect tariffs according to charter schedule, maintain ledger accuracy, and refuse all unauthorized exemptions. He was efficient, honest, and inflexible — the ideal bureaucrat for a system that required predictable revenue.
+
+**The betrayal:** When Kiess's Trade Syndics negotiated a bulk transit agreement that undercut the Crossroads toll schedule, Midgaard's magistrates — under pressure from both commercial lobbies and Kiess diplomatic envoys — revoked Vossmark's charter without notice. His post was abolished, his toll authority nullified, and his twenty-three years of service reduced to a line item in a magistrate's compromise ledger. No formal acknowledgment was issued. No pension was authorized. No letter was sent.
+
+**The death:** Vossmark refused to leave his station. He continued collecting tolls under an annulled charter, citing legal precedents that his superiors had already abandoned. Travelers bypassed him. His relief never arrived. He died at his post — of exposure, starvation, or despair; the records do not specify.
+
+**The revenance:** The Toll-Reeve Without Crown is an undead bureaucrat: a legal revenant whose existence is sustained by the unresolved contradiction between legitimate authority and institutional abandonment. He still demands toll documents from travelers, applies obsolete legal standards with mechanical precision, and cannot comprehend that the charter he upheld was annulled by the same institution that issued it. His combat behavior reflects his nature: procedural, relentless, and incapable of negotiation. He fights not out of malice but out of contractual obligation to a contract no one honors.
+
+His title — "Without Crown" — refers to the physical toll crown (a circlet of office that charter officers wore at their posts) that was confiscated when his jurisdiction was revoked. He was stripped of his symbol of authority but not of the obligation that authority represented.
+
+### The Greenveil Antler-Warden (Band F, level 85)
+**Origins:** The Antler-Warden is not a single creature but a composite entity — a forest territorial guardian that absorbed the ward magic of the last druidic order when they died without successors. The druids who maintained the confusion mist quarantine (see Forest of Confusion lore) kept sentinel animals at their monitoring circles: large cervids conditioned through ritual bonding to patrol the quarantine perimeter and drive away intruders.
+
+**The merging:** When the last druid fell, the ward magic that sustained the quarantine diffused outward — but the bonded sentinel animals, already partially saturated with druidic energy, absorbed a disproportionate share. One sentinel, larger and more deeply bonded than the others, became the vessel for the quarantine's remaining coherent purpose. It did not gain intelligence in a human sense; it gained **operational persistence** — the ward magic's imperative to patrol, detect intrusion, and repel unauthorized entry, now expressed through the body and instincts of a territorial forest predator.
+
+**Current behavior:** The Antler-Warden patrols the Greenveil Spur with mechanical regularity, following patrol routes that correspond to the druids' former monitoring circuits. It attacks anything that enters its territory, unable to distinguish between legitimate travelers and the Conclave agents its creators designed it to repel. Its antlers are threaded with bark-encrusted ward filaments — the physical remnants of the druidic bond — and its movements produce a low subsonic hum that disrupts compasses and causes spatial disorientation similar to (but milder than) the Forest of Confusion's mist effects.
+
+### The Inlet Chainmaster (Band G, level 80)
+**In life:** Torven Grael, a Kiess convoy guard who served eight years protecting caravans along the road's western half. Competent, experienced, and increasingly bitter about the gap between the risks he bore and the wages he received. The convoy compact system — which distributed losses across all participants — functioned well for merchants and syndics but consistently underpaid the guards who took physical danger.
+
+**The desertion:** After a dispute over wages owed for a convoy ambush in which Grael was wounded, the Kiess Trade Syndics invoked a contract clause that reduced his payout by the cost of the medical supplies used to treat him. Grael deserted, taking his weapons, his knowledge of the road's security gaps, and three other guards with him.
+
+**The establishment:** Grael found the inlet cave network — already known to smugglers as a bypass route — and seized it. He installed iron chains across the cave entrance, blocking the passage, and established a private toll system. His pricing was lower than the official crossroads toll but was enforced with the threat of violence rather than the backing of institutional authority. His crew of cave squatters are former laborers, deserters, and displaced persons recruited from the road's margins — people the legitimate economy failed to absorb.
+
+**Current behavior:** The Chainmaster is not undead or magically altered; he is simply a violent, intelligent man who has built a small criminal enterprise in a geographic dead zone. His combat style reflects his professional training: disciplined, efficient, and aware of terrain advantages. The chains that give him his name are both his toll-collection mechanism and his primary weapon.
+
+### The Promontory Harrower (Band I, level 95)
+**Nature:** The Harrower is a coastal apex predator of a species not catalogued by either Midgaard's naturalists or Kiess's Wall Command scouts. It is large, partially amphibious, and possesses enough cunning to exploit the road's terminus as a hunting ground. Exhausted travelers arriving at the shore after the long road journey are concentrated in a small geographic area with limited retreat options — ideal conditions for an ambush predator.
+
+**Ecological speculation:** The Harrower may be descended from the same marine predator lineage that produces the deep-water threats in the inlet subzone. Its adaptation to the shore — partial terrestrial mobility, tolerance of air, and preference for exhausted land-based prey — suggests a creature exploiting an ecological niche created by the road itself. Before Roc Road existed, there was no regular concentration of land animals at this shore point. The road created the prey pattern; the Harrower evolved (or migrated) to exploit it.
+
+**Behavioral pattern:** The Harrower is patient. It claims the promontory headland as its territory and waits for travelers to reach the road's end before attacking. Its position at the western terminus gives it a symbolic weight that exceeds its biological threat: it is the final obstacle on a road defined by obstacles, a predator whose existence proves that the road's promise of connectivity was always conditional.
+
+---
+
+## Canon Outcome Statement
+Roc Road survives because generations of rivals kept rebuilding the same corridor for different reasons. Midgaard called it law. Kiess called it necessity. The wayfolk called it tomorrow. The road itself is older than any of them and will outlast all their arguments.
+
+The rebuild should make players feel that every mile is argued, paid for, defended, exploited, and remembered. The road between two cities is not empty space — it is the physical record of everything those cities have done to and for each other, written in stone, blood, ash, and commerce.
