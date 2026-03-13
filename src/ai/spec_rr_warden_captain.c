@@ -165,8 +165,8 @@ bool spec_rr_warden_captain(CHAR_DATA *ch)
    if (tgt_idx < 0)
       return FALSE;
 
-   /* Slow patrol: skip movement half the time so wardens walk at a measured pace */
-   if (number_bits(1) != 0)
+   /* Slow patrol: move on average once every 16 seconds (1/8 ticks at 2s each) */
+   if (number_bits(3) != 0)
       return TRUE;
 
    /* Determine next room along the route */
