@@ -141,20 +141,17 @@ bool spec_gnf_road_warden(CHAR_DATA *ch)
    if (cur_idx < 0)
       return FALSE; /* Not on patrol route, allow normal behavior */
 
-   /* Initialize or flip patrol target when arriving at an endpoint */
-   if (ch->hunt_home == NULL || ch->hunt_home->vnum == cur_vnum)
-   {
-      int new_target = (cur_vnum == endpoint_b) ? endpoint_a : endpoint_b;
-      ch->hunt_home = get_room_index(new_target);
-      if (ch->hunt_home == NULL)
-         return FALSE;
-   }
+   /* Initialize or flip patrol target when arriving at an endpoint.
+    * Uses spec_behavior (not hunt_home) to avoid triggering the hunt system
+    * in violence_update, which would move the mob every PULSE_VIOLENCE. */
+   if (ch->spec_behavior == 0 || ch->spec_behavior == cur_vnum)
+      ch->spec_behavior = (cur_vnum == endpoint_b) ? endpoint_a : endpoint_b;
 
    /* Find target position in route */
    tgt_idx = -1;
    for (i = 0; i < route_len; i++)
    {
-      if (route[i] == ch->hunt_home->vnum)
+      if (route[i] == ch->spec_behavior)
       {
          tgt_idx = i;
          break;
