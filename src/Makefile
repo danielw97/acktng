@@ -24,18 +24,11 @@ PROF    =
 C_FLAGS = -O -g2 -Wall -DACK_43 $(PROF) $(SOLARIS_FLAG)
 L_FLAGS = -O -g2 -lcrypt $(PROF) $(SOLARIS_LINK)
 
-O_FILES = act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o \
-	  act_wiz.o ai.o areachk.o areasave.o board.o build.o buildare.o \
-	  buildtab.o cloak.o clutch.o comm.o const.o damage.o db.o death.o \
-	  email.o enchant.o fight.o handler.o hash.o hunt.o interp.o invasion.o \
-	  item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o magic2.o magic3.o \
-	  magic4.o mapper.o mob_commands.o mob_prog.o obj_fun.o \
-	  pdelete.o quest.o crusade.o reincarnate.o rulers.o save.o \
-	  scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o \
-	  skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
-	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o \
-	  werewolf.o wizutil.o write.o
-AI_SPEC_OBJS = \
+OBJDIR = build/obj
+MAIN_OBJS = $(addprefix $(OBJDIR)/,$(O_FILES))
+AI_SUMMON_OBJS = $(addprefix $(OBJDIR)/,$(AI_SUMMON_SRCS))
+
+AI_SPEC_SRCS = \
 	  ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
 	  ai/spec_summon_metal.o ai/spec_summon_animate.o ai/spec_summon_thought.o \
@@ -73,7 +66,7 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  mob_commands.o mob_prog.o obj_fun.o pdelete.o quest.o crusade.o reincarnate.o rulers.o \
 	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
-	  write.o $(AI_SPEC_OBJS)
+	  write.o $(AI_SPEC_SRCS)
 
 .PHONY: all clean purge unit-tests integration-test integration-test-telnet web
 
@@ -93,303 +86,306 @@ web:
 	$(MAKE) -C ../web
 
 ifdef CYGWIN
-ack: $(O_FILES)
+ack: $(MAIN_OBJS)
 	rm -f ack.exe
-	$(CC) -o ack.exe $(O_FILES) $(L_FLAGS)
+	$(CC) -o ack.exe $(MAIN_OBJS) $(L_FLAGS)
 	chmod g+w ack.exe
 	chmod a+x ack.exe
-	chmod g+w $(O_FILES)
+	chmod g+w $(MAIN_OBJS)
 else
-ack: $(O_FILES)
+ack: $(MAIN_OBJS)
 	rm -f ack
-	$(CC) -o ack $(O_FILES) $(L_FLAGS)
+	$(CC) -o ack $(MAIN_OBJS) $(L_FLAGS)
 	chmod g+w ack
 	chmod a+x ack
-	chmod g+w $(O_FILES)
+	chmod g+w $(MAIN_OBJS)
 endif
 
 clean:
-	rm -f *.o ai/*.o tests/*.o tests/unit-test-* ack ack.exe ../area/core *~
+	rm -rf $(OBJDIR) tests/unit-test-* ack ack.exe ../area/core *~
 	$(MAKE) -C ../web clean
 
 purge:
-	rm -f *.o ai/*.o tests/*.o tests/unit-test-* ack ack.exe ../area/core *~
+	rm -rf $(OBJDIR) tests/unit-test-* ack ack.exe ../area/core *~
 	$(MAKE) -C ../web clean
 
-%.o: %.c ack.h
-	$(CC) -c $(C_FLAGS) $<
+$(OBJDIR)/%.o: %.c ack.h
+	@mkdir -p $(dir $@)
+	$(CC) -c $(C_FLAGS) -o $@ $<
 
-ai/%.o: ai/%.c ack.h
+$(OBJDIR)/ai/%.o: ai/%.c ack.h
+	@mkdir -p $(dir $@)
 	$(CC) -c $(C_FLAGS) -I. -o $@ $<
 
-tests/%.o: tests/%.c ack.h
+$(OBJDIR)/tests/%.o: tests/%.c ack.h
+	@mkdir -p $(dir $@)
 	$(CC) -c $(C_FLAGS) -I. -o $@ $<
 
-scan: scan.o
+scan: $(OBJDIR)/scan.o
 	rm -f scan
-	$(CC) $(L_FLAGS) -o scan scan.o
+	$(CC) $(L_FLAGS) -o scan $(OBJDIR)/scan.o
 
 
-unit-test-sha256: tests/test_sha256.o sha256.o tests/test_is_fighting.o
+unit-test-sha256: $(OBJDIR)/tests/test_sha256.o $(OBJDIR)/sha256.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-sha256
-	$(CC) -o tests/unit-test-sha256 tests/test_sha256.o sha256.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-sha256 $(OBJDIR)/tests/test_sha256.o $(OBJDIR)/sha256.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-update.unit-test.o: update.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_UPDATE -o update.unit-test.o update.c
+$(OBJDIR)/update.unit-test.o: update.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_UPDATE -o $(OBJDIR)/update.unit-test.o update.c
 
-unit-test-update: tests/test_update.o update.unit-test.o tests/test_is_fighting.o
+unit-test-update: $(OBJDIR)/tests/test_update.o $(OBJDIR)/update.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-update
-	$(CC) -o tests/unit-test-update tests/test_update.o update.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-update $(OBJDIR)/tests/test_update.o $(OBJDIR)/update.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-comm.unit-test.o: comm.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_COMM -o comm.unit-test.o comm.c
+$(OBJDIR)/comm.unit-test.o: comm.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_COMM -o $(OBJDIR)/comm.unit-test.o comm.c
 
-unit-test-comm: tests/test_comm.o comm.unit-test.o tests/test_is_fighting.o
+unit-test-comm: $(OBJDIR)/tests/test_comm.o $(OBJDIR)/comm.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-comm
-	$(CC) -o tests/unit-test-comm tests/test_comm.o comm.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-comm $(OBJDIR)/tests/test_comm.o $(OBJDIR)/comm.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-test-websocket-validation: tests/test_websocket_validation.o
+unit-test-websocket-validation: $(OBJDIR)/tests/test_websocket_validation.o
 	rm -f tests/unit-test-websocket-validation
-	$(CC) -o tests/unit-test-websocket-validation tests/test_websocket_validation.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-websocket-validation $(OBJDIR)/tests/test_websocket_validation.o $(L_FLAGS)
 
-fight.unit-test.o: fight.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o fight.unit-test.o fight.c
+$(OBJDIR)/fight.unit-test.o: fight.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/fight.unit-test.o fight.c
 
-unit-test-fight: tests/test_fight.o fight.unit-test.o cloak.unit-test.o tests/test_is_fighting.o
+unit-test-fight: $(OBJDIR)/tests/test_fight.o $(OBJDIR)/fight.unit-test.o $(OBJDIR)/cloak.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-fight
-	$(CC) -Wl,--gc-sections -o tests/unit-test-fight tests/test_fight.o fight.unit-test.o cloak.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-fight $(OBJDIR)/tests/test_fight.o $(OBJDIR)/fight.unit-test.o $(OBJDIR)/cloak.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-act_info.unit-test.o: act_info.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o act_info.unit-test.o act_info.c
+$(OBJDIR)/act_info.unit-test.o: act_info.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/act_info.unit-test.o act_info.c
 
-unit-test-act-info: tests/test_act_info.o act_info.unit-test.o tests/test_is_fighting.o
+unit-test-act-info: $(OBJDIR)/tests/test_act_info.o $(OBJDIR)/act_info.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-act-info
-	$(CC) -Wl,--gc-sections -o tests/unit-test-act-info tests/test_act_info.o act_info.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-act-info $(OBJDIR)/tests/test_act_info.o $(OBJDIR)/act_info.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-act_move.unit-test.o: act_move.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o act_move.unit-test.o act_move.c
+$(OBJDIR)/act_move.unit-test.o: act_move.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/act_move.unit-test.o act_move.c
 
-unit-test-act-move: tests/test_act_move.o act_move.unit-test.o tests/test_is_fighting.o
+unit-test-act-move: $(OBJDIR)/tests/test_act_move.o $(OBJDIR)/act_move.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-act-move
-	$(CC) -Wl,--gc-sections -o tests/unit-test-act-move tests/test_act_move.o act_move.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-act-move $(OBJDIR)/tests/test_act_move.o $(OBJDIR)/act_move.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-cloak.unit-test.o: cloak.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_CLOAK -o cloak.unit-test.o cloak.c
+$(OBJDIR)/cloak.unit-test.o: cloak.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_CLOAK -o $(OBJDIR)/cloak.unit-test.o cloak.c
 
-unit-test-cloak: tests/test_cloak.o cloak.unit-test.o tests/test_is_fighting.o
+unit-test-cloak: $(OBJDIR)/tests/test_cloak.o $(OBJDIR)/cloak.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-cloak
-	$(CC) -o tests/unit-test-cloak tests/test_cloak.o cloak.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-cloak $(OBJDIR)/tests/test_cloak.o $(OBJDIR)/cloak.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-spendqp.unit-test.o: spendqp.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SPENDQP -o spendqp.unit-test.o spendqp.c
+$(OBJDIR)/spendqp.unit-test.o: spendqp.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SPENDQP -o $(OBJDIR)/spendqp.unit-test.o spendqp.c
 
-unit-test-spendqp: tests/test_spendqp.o spendqp.unit-test.o tests/test_is_fighting.o
+unit-test-spendqp: $(OBJDIR)/tests/test_spendqp.o $(OBJDIR)/spendqp.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-spendqp
-	$(CC) -o tests/unit-test-spendqp tests/test_spendqp.o spendqp.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-spendqp $(OBJDIR)/tests/test_spendqp.o $(OBJDIR)/spendqp.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-skills_chi.unit-test.o: skills_chi.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o skills_chi.unit-test.o skills_chi.c
+$(OBJDIR)/skills_chi.unit-test.o: skills_chi.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/skills_chi.unit-test.o skills_chi.c
 
-unit-test-skills-chi: tests/test_skills_chi.o skills_chi.unit-test.o tests/test_is_fighting.o
+unit-test-skills-chi: $(OBJDIR)/tests/test_skills_chi.o $(OBJDIR)/skills_chi.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-skills-chi
-	$(CC) -Wl,--gc-sections -o tests/unit-test-skills-chi tests/test_skills_chi.o skills_chi.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-skills-chi $(OBJDIR)/tests/test_skills_chi.o $(OBJDIR)/skills_chi.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-spell_dam.unit-test.o: spell_dam.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o spell_dam.unit-test.o spell_dam.c
+$(OBJDIR)/spell_dam.unit-test.o: spell_dam.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/spell_dam.unit-test.o spell_dam.c
 
-unit-test-spell-dam: tests/test_spell_dam.o spell_dam.unit-test.o tests/test_is_fighting.o
+unit-test-spell-dam: $(OBJDIR)/tests/test_spell_dam.o $(OBJDIR)/spell_dam.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-spell-dam
-	$(CC) -Wl,--gc-sections -o tests/unit-test-spell-dam tests/test_spell_dam.o spell_dam.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-spell-dam $(OBJDIR)/tests/test_spell_dam.o $(OBJDIR)/spell_dam.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-pdelete.unit-test.o: pdelete.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o pdelete.unit-test.o pdelete.c
+$(OBJDIR)/pdelete.unit-test.o: pdelete.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/pdelete.unit-test.o pdelete.c
 
-unit-test-pdelete: tests/test_pdelete.o pdelete.unit-test.o tests/test_is_fighting.o
+unit-test-pdelete: $(OBJDIR)/tests/test_pdelete.o $(OBJDIR)/pdelete.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-pdelete
-	$(CC) -Wl,--gc-sections -o tests/unit-test-pdelete tests/test_pdelete.o pdelete.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-pdelete $(OBJDIR)/tests/test_pdelete.o $(OBJDIR)/pdelete.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-email.unit-test.o: email.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_EMAIL -o email.unit-test.o email.c
+$(OBJDIR)/email.unit-test.o: email.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_EMAIL -o $(OBJDIR)/email.unit-test.o email.c
 
-unit-test-email: tests/test_email.o email.unit-test.o tests/test_is_fighting.o
+unit-test-email: $(OBJDIR)/tests/test_email.o $(OBJDIR)/email.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-email
-	$(CC) -o tests/unit-test-email tests/test_email.o email.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-email $(OBJDIR)/tests/test_email.o $(OBJDIR)/email.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-rulers.unit-test.o: rulers.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_RULERS -o rulers.unit-test.o rulers.c
+$(OBJDIR)/rulers.unit-test.o: rulers.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_RULERS -o $(OBJDIR)/rulers.unit-test.o rulers.c
 
-unit-test-rulers: tests/test_rulers.o rulers.unit-test.o tests/test_is_fighting.o
+unit-test-rulers: $(OBJDIR)/tests/test_rulers.o $(OBJDIR)/rulers.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-rulers
-	$(CC) -o tests/unit-test-rulers tests/test_rulers.o rulers.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-rulers $(OBJDIR)/tests/test_rulers.o $(OBJDIR)/rulers.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-save.unit-test.o: save.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o save.unit-test.o save.c
+$(OBJDIR)/save.unit-test.o: save.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SAVE -ffunction-sections -fdata-sections -o $(OBJDIR)/save.unit-test.o save.c
 
-unit-test-save: tests/test_save.o save.unit-test.o tests/test_is_fighting.o
+unit-test-save: $(OBJDIR)/tests/test_save.o $(OBJDIR)/save.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-save
-	$(CC) -Wl,--gc-sections -o tests/unit-test-save tests/test_save.o save.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-save $(OBJDIR)/tests/test_save.o $(OBJDIR)/save.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-skills_obj.unit-test.o: skills_obj.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o skills_obj.unit-test.o skills_obj.c
+$(OBJDIR)/skills_obj.unit-test.o: skills_obj.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/skills_obj.unit-test.o skills_obj.c
 
-unit-test-skills-obj: tests/test_skills_obj.o skills_obj.unit-test.o tests/test_is_fighting.o
+unit-test-skills-obj: $(OBJDIR)/tests/test_skills_obj.o $(OBJDIR)/skills_obj.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-skills-obj
-	$(CC) -Wl,--gc-sections -o tests/unit-test-skills-obj tests/test_skills_obj.o skills_obj.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-skills-obj $(OBJDIR)/tests/test_skills_obj.o $(OBJDIR)/skills_obj.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-skills_combo.unit-test.o: skills_combo.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o skills_combo.unit-test.o skills_combo.c
+$(OBJDIR)/skills_combo.unit-test.o: skills_combo.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/skills_combo.unit-test.o skills_combo.c
 
-unit-test-skills-combo: tests/test_skills_combo.o skills_combo.unit-test.o tests/test_is_fighting.o
+unit-test-skills-combo: $(OBJDIR)/tests/test_skills_combo.o $(OBJDIR)/skills_combo.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-skills-combo
-	$(CC) -Wl,--gc-sections -o tests/unit-test-skills-combo tests/test_skills_combo.o skills_combo.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-skills-combo $(OBJDIR)/tests/test_skills_combo.o $(OBJDIR)/skills_combo.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-reincarnate.unit-test.o: reincarnate.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o reincarnate.unit-test.o reincarnate.c
+$(OBJDIR)/reincarnate.unit-test.o: reincarnate.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/reincarnate.unit-test.o reincarnate.c
 
-unit-test-reincarnate: tests/test_reincarnate.o reincarnate.unit-test.o tests/test_is_fighting.o
+unit-test-reincarnate: $(OBJDIR)/tests/test_reincarnate.o $(OBJDIR)/reincarnate.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-reincarnate
-	$(CC) -Wl,--gc-sections -o tests/unit-test-reincarnate tests/test_reincarnate.o reincarnate.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-reincarnate $(OBJDIR)/tests/test_reincarnate.o $(OBJDIR)/reincarnate.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-mob_commands.unit-test.o: mob_commands.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o mob_commands.unit-test.o mob_commands.c
+$(OBJDIR)/mob_commands.unit-test.o: mob_commands.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/mob_commands.unit-test.o mob_commands.c
 
-unit-test-mob-commands: tests/test_mob_commands.o mob_commands.unit-test.o tests/test_is_fighting.o
+unit-test-mob-commands: $(OBJDIR)/tests/test_mob_commands.o $(OBJDIR)/mob_commands.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-mob-commands
-	$(CC) -Wl,--gc-sections -o tests/unit-test-mob-commands tests/test_mob_commands.o mob_commands.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-mob-commands $(OBJDIR)/tests/test_mob_commands.o $(OBJDIR)/mob_commands.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
 
 
-ssm.unit-test.o: ssm.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SSM -o ssm.unit-test.o ssm.c
+$(OBJDIR)/ssm.unit-test.o: ssm.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SSM -o $(OBJDIR)/ssm.unit-test.o ssm.c
 
-unit-test-ssm: tests/test_ssm.o ssm.unit-test.o tests/test_is_fighting.o
+unit-test-ssm: $(OBJDIR)/tests/test_ssm.o $(OBJDIR)/ssm.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-ssm
-	$(CC) -o tests/unit-test-ssm tests/test_ssm.o ssm.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-ssm $(OBJDIR)/tests/test_ssm.o $(OBJDIR)/ssm.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-db.unit-test.o: db.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_DB -ffunction-sections -fdata-sections -o db.unit-test.o db.c
+$(OBJDIR)/db.unit-test.o: db.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_DB -ffunction-sections -fdata-sections -o $(OBJDIR)/db.unit-test.o db.c
 
-unit-test-db: tests/test_db.o db.unit-test.o tests/test_is_fighting.o
+unit-test-db: $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-db
-	$(CC) -Wl,--gc-sections -o tests/unit-test-db tests/test_db.o db.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-db $(OBJDIR)/tests/test_db.o $(OBJDIR)/db.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-magic.unit-test.o: magic.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC -ffunction-sections -fdata-sections -o magic.unit-test.o magic.c
+$(OBJDIR)/magic.unit-test.o: magic.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAGIC -ffunction-sections -fdata-sections -o $(OBJDIR)/magic.unit-test.o magic.c
 
-unit-test-magic: tests/test_magic.o magic.unit-test.o tests/test_is_fighting.o
+unit-test-magic: $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-magic
-	$(CC) -Wl,--gc-sections -o tests/unit-test-magic tests/test_magic.o magic.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-magic $(OBJDIR)/tests/test_magic.o $(OBJDIR)/magic.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-magic4.unit-test.o: magic4.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o magic4.unit-test.o magic4.c
+$(OBJDIR)/magic4.unit-test.o: magic4.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/magic4.unit-test.o magic4.c
 
-unit-test-magic4: tests/test_magic4.o magic4.unit-test.o tests/test_is_fighting.o
+unit-test-magic4: $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic4.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-magic4
-	$(CC) -Wl,--gc-sections -o tests/unit-test-magic4 tests/test_magic4.o magic4.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-magic4 $(OBJDIR)/tests/test_magic4.o $(OBJDIR)/magic4.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-mapper.unit-test.o: mapper.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAPPER -ffunction-sections -fdata-sections -o mapper.unit-test.o mapper.c
+$(OBJDIR)/mapper.unit-test.o: mapper.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_MAPPER -ffunction-sections -fdata-sections -o $(OBJDIR)/mapper.unit-test.o mapper.c
 
-unit-test-mapper: tests/test_mapper.o mapper.unit-test.o tests/test_is_fighting.o
+unit-test-mapper: $(OBJDIR)/tests/test_mapper.o $(OBJDIR)/mapper.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-mapper
-	$(CC) -Wl,--gc-sections -o tests/unit-test-mapper tests/test_mapper.o mapper.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-mapper $(OBJDIR)/tests/test_mapper.o $(OBJDIR)/mapper.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-damage.unit-test.o: damage.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_DAMAGE -ffunction-sections -fdata-sections -o damage.unit-test.o damage.c
+$(OBJDIR)/damage.unit-test.o: damage.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_DAMAGE -ffunction-sections -fdata-sections -o $(OBJDIR)/damage.unit-test.o damage.c
 
-unit-test-damage: tests/test_damage.o damage.unit-test.o tests/test_is_fighting.o
+unit-test-damage: $(OBJDIR)/tests/test_damage.o $(OBJDIR)/damage.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-damage
-	$(CC) -Wl,--gc-sections -o tests/unit-test-damage tests/test_damage.o damage.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-damage $(OBJDIR)/tests/test_damage.o $(OBJDIR)/damage.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-buildare.unit-test.o: buildare.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILDARE -ffunction-sections -fdata-sections -o buildare.unit-test.o buildare.c
+$(OBJDIR)/buildare.unit-test.o: buildare.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILDARE -ffunction-sections -fdata-sections -o $(OBJDIR)/buildare.unit-test.o buildare.c
 
-unit-test-buildare: tests/test_buildare.o buildare.unit-test.o tests/test_is_fighting.o
+unit-test-buildare: $(OBJDIR)/tests/test_buildare.o $(OBJDIR)/buildare.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-buildare
-	$(CC) -Wl,--gc-sections -o tests/unit-test-buildare tests/test_buildare.o buildare.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-buildare $(OBJDIR)/tests/test_buildare.o $(OBJDIR)/buildare.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-keep.unit-test.o: keep.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_KEEP -ffunction-sections -fdata-sections -o keep.unit-test.o keep.c
+$(OBJDIR)/keep.unit-test.o: keep.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_KEEP -ffunction-sections -fdata-sections -o $(OBJDIR)/keep.unit-test.o keep.c
 
-unit-test-keep: tests/test_keep.o keep.unit-test.o tests/test_is_fighting.o
+unit-test-keep: $(OBJDIR)/tests/test_keep.o $(OBJDIR)/keep.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-keep
-	$(CC) -Wl,--gc-sections -o tests/unit-test-keep tests/test_keep.o keep.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-keep $(OBJDIR)/tests/test_keep.o $(OBJDIR)/keep.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-act_obj.unit-test.o: act_obj.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ACT_OBJ -ffunction-sections -fdata-sections -o act_obj.unit-test.o act_obj.c
+$(OBJDIR)/act_obj.unit-test.o: act_obj.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ACT_OBJ -ffunction-sections -fdata-sections -o $(OBJDIR)/act_obj.unit-test.o act_obj.c
 
-unit-test-act-obj: tests/test_act_obj.o act_obj.unit-test.o tests/test_is_fighting.o
+unit-test-act-obj: $(OBJDIR)/tests/test_act_obj.o $(OBJDIR)/act_obj.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-act-obj
-	$(CC) -Wl,--gc-sections -o tests/unit-test-act-obj tests/test_act_obj.o act_obj.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-act-obj $(OBJDIR)/tests/test_act_obj.o $(OBJDIR)/act_obj.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-quest.unit-test.o: quest.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_QUEST -ffunction-sections -fdata-sections -o quest.unit-test.o quest.c
+$(OBJDIR)/quest.unit-test.o: quest.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_QUEST -ffunction-sections -fdata-sections -o $(OBJDIR)/quest.unit-test.o quest.c
 
-unit-test-quest: tests/test_quest.o quest.unit-test.o tests/test_is_fighting.o
+unit-test-quest: $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-quest
-	$(CC) -Wl,--gc-sections -o tests/unit-test-quest tests/test_quest.o quest.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-quest $(OBJDIR)/tests/test_quest.o $(OBJDIR)/quest.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-build.unit-test.o: build.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILD -ffunction-sections -fdata-sections -o build.unit-test.o build.c
+$(OBJDIR)/build.unit-test.o: build.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_BUILD -ffunction-sections -fdata-sections -o $(OBJDIR)/build.unit-test.o build.c
 
-unit-test-build: tests/test_build.o build.unit-test.o tests/test_is_fighting.o
+unit-test-build: $(OBJDIR)/tests/test_build.o $(OBJDIR)/build.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-build
-	$(CC) -Wl,--gc-sections -o tests/unit-test-build tests/test_build.o build.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-build $(OBJDIR)/tests/test_build.o $(OBJDIR)/build.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
-invasion.unit-test.o: invasion.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_INVASION -ffunction-sections -fdata-sections -o invasion.unit-test.o invasion.c
+$(OBJDIR)/invasion.unit-test.o: invasion.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_INVASION -ffunction-sections -fdata-sections -o $(OBJDIR)/invasion.unit-test.o invasion.c
 
-unit-test-invasion: tests/test_invasion.o invasion.unit-test.o tests/test_is_fighting.o
+unit-test-invasion: $(OBJDIR)/tests/test_invasion.o $(OBJDIR)/invasion.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-invasion
-	$(CC) -Wl,--gc-sections -o tests/unit-test-invasion tests/test_invasion.o invasion.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-invasion $(OBJDIR)/tests/test_invasion.o $(OBJDIR)/invasion.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-AI_SUMMON_OBJS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
+AI_SUMMON_SRCS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
 	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
 	  ai/spec_summon_metal.o ai/spec_summon_animate.o ai/spec_summon_thought.o
 
-special.unit-test.o: special.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SPECIAL -ffunction-sections -fdata-sections -o special.unit-test.o special.c
+$(OBJDIR)/special.unit-test.o: special.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SPECIAL -ffunction-sections -fdata-sections -o $(OBJDIR)/special.unit-test.o special.c
 
-unit-test-special: tests/test_special.o special.unit-test.o $(AI_SUMMON_OBJS) tests/test_is_fighting.o
+unit-test-special: $(OBJDIR)/tests/test_special.o $(OBJDIR)/special.unit-test.o $(AI_SUMMON_OBJS) $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-special
-	$(CC) -Wl,--gc-sections -o tests/unit-test-special tests/test_special.o special.unit-test.o $(AI_SUMMON_OBJS) tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-special $(OBJDIR)/tests/test_special.o $(OBJDIR)/special.unit-test.o $(AI_SUMMON_OBJS) $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
 
 
-item_generation.unit-test.o: item_generation.c
-	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ITEM_GENERATION -ffunction-sections -fdata-sections -o item_generation.unit-test.o item_generation.c
+$(OBJDIR)/item_generation.unit-test.o: item_generation.c
+	$(CC) -c $(C_FLAGS) -DUNIT_TEST_ITEM_GENERATION -ffunction-sections -fdata-sections -o $(OBJDIR)/item_generation.unit-test.o item_generation.c
 
-unit-test-item-generation: tests/test_item_generation.o item_generation.unit-test.o item_generation_tables.o tests/test_is_fighting.o
+unit-test-item-generation: $(OBJDIR)/tests/test_item_generation.o $(OBJDIR)/item_generation.unit-test.o $(OBJDIR)/item_generation_tables.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-item-generation
-	$(CC) -Wl,--gc-sections -o tests/unit-test-item-generation tests/test_item_generation.o item_generation.unit-test.o item_generation_tables.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-item-generation $(OBJDIR)/tests/test_item_generation.o $(OBJDIR)/item_generation.unit-test.o $(OBJDIR)/item_generation_tables.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-unit-test-act-flags: tests/test_act_flags.o
+unit-test-act-flags: $(OBJDIR)/tests/test_act_flags.o
 	rm -f tests/unit-test-act-flags
-	$(CC) -o tests/unit-test-act-flags tests/test_act_flags.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-act-flags $(OBJDIR)/tests/test_act_flags.o $(L_FLAGS)
 
-unit-test-area-format: tests/test_area_format.o
+unit-test-area-format: $(OBJDIR)/tests/test_area_format.o
 	rm -f tests/unit-test-area-format
-	$(CC) -o tests/unit-test-area-format tests/test_area_format.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-area-format $(OBJDIR)/tests/test_area_format.o $(L_FLAGS)
 
-unit-test-help-format: tests/test_help_format.o
+unit-test-help-format: $(OBJDIR)/tests/test_help_format.o
 	rm -f tests/unit-test-help-format
-	$(CC) -o tests/unit-test-help-format tests/test_help_format.o $(L_FLAGS)
+	$(CC) -o tests/unit-test-help-format $(OBJDIR)/tests/test_help_format.o $(L_FLAGS)
 
-interp.unit-test.o: interp.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o interp.unit-test.o interp.c
+$(OBJDIR)/interp.unit-test.o: interp.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/interp.unit-test.o interp.c
 
-unit-test-interp: tests/test_interp.o interp.unit-test.o
+unit-test-interp: $(OBJDIR)/tests/test_interp.o $(OBJDIR)/interp.unit-test.o
 	rm -f tests/unit-test-interp
-	$(CC) -Wl,--gc-sections -Wl,--unresolved-symbols=ignore-all -o tests/unit-test-interp tests/test_interp.o interp.unit-test.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -Wl,--unresolved-symbols=ignore-all -o tests/unit-test-interp $(OBJDIR)/tests/test_interp.o $(OBJDIR)/interp.unit-test.o $(L_FLAGS)
 
 unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp
 	./tests/unit-test-act-flags
@@ -434,16 +430,16 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	$(MAKE) integration-test-telnet
 
 
-crusade.unit-test.o: crusade.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o crusade.unit-test.o crusade.c
+$(OBJDIR)/crusade.unit-test.o: crusade.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/crusade.unit-test.o crusade.c
 
-unit-test-crusade: tests/test_crusade.o crusade.unit-test.o tests/test_is_fighting.o
+unit-test-crusade: $(OBJDIR)/tests/test_crusade.o $(OBJDIR)/crusade.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-crusade
-	$(CC) -Wl,--gc-sections -o tests/unit-test-crusade tests/test_crusade.o crusade.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-crusade $(OBJDIR)/tests/test_crusade.o $(OBJDIR)/crusade.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-death.unit-test.o: death.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o death.unit-test.o death.c
+$(OBJDIR)/death.unit-test.o: death.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/death.unit-test.o death.c
 
-unit-test-death: tests/test_death.o death.unit-test.o tests/test_is_fighting.o
+unit-test-death: $(OBJDIR)/tests/test_death.o $(OBJDIR)/death.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
 	rm -f tests/unit-test-death
-	$(CC) -Wl,--gc-sections -o tests/unit-test-death tests/test_death.o death.unit-test.o tests/test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o tests/unit-test-death $(OBJDIR)/tests/test_death.o $(OBJDIR)/death.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
