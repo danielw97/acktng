@@ -24,7 +24,7 @@
 
 /* Maximum simultaneous quests on a player */
 #define QUEST_MAX_QUESTS         3
-#define QUEST_MAX_STATIC_QUESTS  66
+#define QUEST_MAX_STATIC_QUESTS  70
 #define QUEST_CARTOGRAPHY_MAX_ROOMS 2048
 #define QUEST_CARTOGRAPHY_BYTES  (QUEST_CARTOGRAPHY_MAX_ROOMS / 8)
 

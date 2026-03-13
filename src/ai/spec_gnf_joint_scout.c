@@ -11,14 +11,18 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
       "$n scans the treeline with alert, resting eyes — the watchfulness of someone in field-recovery.",
       "$n checks $s commission writ, confirming the dual-city seal is still intact.",
       "$n counts boot-prints on the soft shoulder of the road with careful attention.",
-      "$n exchanges a quiet hand-signal with a fellow patrol as they pass."
+      "$n exchanges a quiet hand-signal with a fellow patrol as they pass.",
+      "$n adjusts the dual-city insignia on $s shoulder and resumes scanning the forest margin.",
+      "$n reads a field notation from the last patrol and marks it filed with a precise initial."
    };
    static char *says[] = {
       "Joint commission patrol means dual authority. I write to Midgaard's rangers and Kowloon's wardens both. One incident, two ledgers.",
       "Ashfang sign in the Ironpine Rise. Prints were a day old. We've notified both city commands. Standard protocol.",
       "The road's safe if you stay on it. The moment you step off to investigate something interesting, the risk calculates differently.",
       "Three patrol pairs cover the road from gate to gate on stagger. You'll see wardens every few hours if the rotation holds.",
-      "Forest charter says no army may march this road in war formation. One patrol at a time. That rule has held for two generations."
+      "Forest charter says no army may march this road in war formation. One patrol at a time. That rule has held for two generations.",
+      "Ironpine Rise is showing Ashfang activity again. Commission has an open task order if you're at that level of field capability — both cities want threat confirmation.",
+      "Rootbound creatures have been pressing toward the forest's eastern edge. The commission needs a perimeter probe from someone who can handle contact. Not for the inexperienced."
    };
    /* Great Northern Forest main road from Midgaard (south) to Kowloon (north) */
    static const int route[] = {
@@ -33,17 +37,77 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
 
    int cur_vnum, cur_idx, tgt_idx, next_vnum, door, i;
    EXIT_DATA *pexit;
+   CHAR_DATA *plr;
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;
 
-   /* Occasional flavor */
+   /* Occasional flavor — with quest-reactive and level-hint priority */
    if (number_bits(3) == 0)
    {
+      /* Quest-completion reactions */
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+      {
+         if (IS_NPC(plr) || plr->pcdata == NULL)
+            continue;
+
+         /* Quest 19 (id 18): Ironpine Rise Ashfang suppression */
+         if (plr->pcdata->completed_static_quests[18])
+         {
+            act("$n pauses $s route scan and gives $N a scout's brief acknowledgment nod.", ch, NULL, plr, TO_NOTVICT);
+            act("$n pauses $s route scan and gives you a scout's brief acknowledgment nod.", ch, NULL, plr, TO_VICT);
+            do_say(ch, "Ironpine Rise sign has cleared. Commission updated the threat assessment — Ashfang pattern moved back to the deep north. Both city commands filed acknowledgment. Good work in there.");
+            return FALSE;
+         }
+
+         /* Quest 20 (id 19): Rootbound perimeter probe */
+         if (plr->pcdata->completed_static_quests[19])
+         {
+            act("$n stops $s patrol motion and acknowledges $N with the careful attention of someone who's read the after-action notes.", ch, NULL, plr, TO_NOTVICT);
+            act("$n stops $s patrol motion and acknowledges you with the careful attention of someone who's read the after-action notes.", ch, NULL, plr, TO_VICT);
+            do_say(ch, "Rootbound perimeter probe is filed. Commission adjusted the eastern patrol boundary based on your contact data. Blight markers are moving slower than last assessment — your count helps explain why.");
+            return FALSE;
+         }
+
+         /* Quest 27 (id 26): Mirrorbark Predator Census */
+         if (plr->pcdata->completed_static_quests[26])
+         {
+            act("$n glances at $N with the practiced recognition of someone comparing a face to a field report.", ch, NULL, plr, TO_NOTVICT);
+            act("$n glances at you with the practiced recognition of someone comparing a face to a field report.", ch, NULL, plr, TO_VICT);
+            do_say(ch, "Mirrorbark census came through both ledgers. Commission updated the predator corridor map for that section — three species confirmed, behavior consistent with your report. Reliable data.");
+            return FALSE;
+         }
+      }
+
+      /* Level-based area hints */
+      for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+      {
+         if (IS_NPC(plr) || plr->pcdata == NULL)
+            continue;
+
+         /* Gloamvault hint for low-level players */
+         if (plr->level >= 5 && plr->level <= 20
+            && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
+            && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+         {
+            do_say(ch, "Not ready for the forest yet? The Gloamvault northwest of Kiess is where commission scouts calibrate before rotating into the main patrol area. Cult structure, limited footprint — good orientation ground.");
+            return FALSE;
+         }
+
+         /* Sepulcher Pasture hint for mid-level players */
+         if (plr->level >= 15 && plr->level <= 30
+            && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+         {
+            do_say(ch, "Sepulcher Pasture sits east of the crossroads — outside the forest commission jurisdiction, but we cross-file threat data. Bone-remnant activity, burial cult. Good field experience if you're in that range.");
+            return FALSE;
+         }
+      }
+
+      /* Normal random dialogue */
       if (number_bits(1) == 0)
-         act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+         act(acts[number_range(0, 6)], ch, NULL, NULL, TO_ROOM);
       else
-         do_say(ch, says[number_range(0, 4)]);
+         do_say(ch, says[number_range(0, 6)]);
    }
 
    /* Patrol movement: find current position on route */

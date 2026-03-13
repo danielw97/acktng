@@ -11,15 +11,21 @@ bool spec_kowloon_courier(CHAR_DATA *ch)
       "$n consults a route card, noting a shortcut through the registry quarter with a quick finger-trace.",
       "$n polishes the brass lantern badge on $s vest, the mark of Courier Lantern Office passage rights.",
       "$n records a delivery confirmation in a small field ledger, then stows it without pausing stride.",
-      "$n scans a bulletin board at the junction corner, checking for priority rerouting notices."
+      "$n scans a bulletin board at the junction corner, checking for priority rerouting notices.",
+      "$n updates a relay station log from memory, filling in the handoff times without consulting notes.",
+      "$n reroutes a dispatch through the Jade Gate after checking the Iron Gate's current queue length."
    };
    static char *says[] = {
       "The badge gets you through any gate at any hour. You'd be surprised how useful that is at second bell.",
       "CLO runs the census, the post, the recall registry, and the relay stations. We count everyone inside these walls.",
       "I know every shortcut between here and the Jade Gate. You need fast delivery anywhere in this city, come to us.",
       "Sealed dispatch means sealed. I don't read them, I don't hold them. I deliver, I confirm, I move.",
-      "Last week I ran the Iron Gate route four times before Bell Watch. That's corsair intel — frequent updates."
+      "Last week I ran the Iron Gate route four times before Bell Watch. That's corsair intel — frequent updates.",
+      "Mosswater route has been showing contraband traffic. If someone cleared those smugglers out, relay times would improve considerably on the northern circuit.",
+      "The Gloamvault runs northwest off the Kiess circuit — our field couriers bypass it. Something worth checking if you're operating at that capability level."
    };
+
+   CHAR_DATA *plr;
 
    if (!IS_AWAKE(ch) || is_fighting(ch))
       return FALSE;
@@ -27,10 +33,69 @@ bool spec_kowloon_courier(CHAR_DATA *ch)
    if (number_bits(3) != 0)
       return FALSE;
 
+   /* Quest-completion reactions */
+   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   {
+      if (IS_NPC(plr) || plr->pcdata == NULL)
+         continue;
+
+      /* Quest 17 (id 16): Mosswater smuggler interdiction — offerer 13033 (Kowloon) */
+      if (plr->pcdata->completed_static_quests[16])
+      {
+         act("$n glances toward $N and touches the brim of $s cap in a courier's brief salute.", ch, NULL, plr, TO_NOTVICT);
+         act("$n glances toward you and touches the brim of $s cap in a courier's brief salute.", ch, NULL, plr, TO_VICT);
+         do_say(ch, "Mosswater route is running clean now. Relay times on the northern circuit came down half a bell after those smugglers were cleared. That's operationally significant for the CLO schedule.");
+         return FALSE;
+      }
+
+      /* Quest 18 (id 17): Northern Crown predator survey — offerer 14021 (Kowloon) */
+      if (plr->pcdata->completed_static_quests[17])
+      {
+         act("$n pauses $s route card work and acknowledges $N with a brief nod.", ch, NULL, plr, TO_NOTVICT);
+         act("$n pauses $s route card work and acknowledges you with a brief nod.", ch, NULL, plr, TO_VICT);
+         do_say(ch, "Northern Crown zone assessment is in the registry now. We updated the field courier routing to avoid the predator corridors your survey confirmed. The map is more accurate for it.");
+         return FALSE;
+      }
+
+      /* Quest 1 (id 0): Route reconnaissance — Kiess-area quest, relevant to courier routes */
+      if (plr->pcdata->completed_static_quests[0])
+      {
+         act("$n catches $N's eye with the quick recognition of someone who reads the route reports.", ch, NULL, plr, TO_NOTVICT);
+         act("$n catches your eye with the quick recognition of someone who reads the route reports.", ch, NULL, plr, TO_VICT);
+         do_say(ch, "Forest of Confusion approach data you filed came through the CLO relay. Courier dispatch rescheduled two northern handoffs based on your threat marks. Good data.");
+         return FALSE;
+      }
+   }
+
+   /* Level-based area hints */
+   for (plr = ch->in_room->first_person; plr != NULL; plr = plr->next_in_room)
+   {
+      if (IS_NPC(plr) || plr->pcdata == NULL)
+         continue;
+
+      /* Gloamvault hint for low-level players */
+      if (plr->level >= 5 && plr->level <= 20
+         && !plr->pcdata->completed_static_quests[54]  /* Quest 55: Gloamvault threshold audit */
+         && !plr->pcdata->completed_static_quests[66]) /* Quest 67: Gloamvault cartography */
+      {
+         do_say(ch, "If you're still building your field experience, the Gloamvault northwest of Kiess runs on our secondary circuit. Cult structure — CLO doesn't post couriers inside, but we know the perimeter. Worth your time at that level.");
+         return FALSE;
+      }
+
+      /* Sepulcher Pasture hint for mid-level players */
+      if (plr->level >= 15 && plr->level <= 30
+         && !plr->pcdata->completed_static_quests[68]) /* Quest 69: Sepulcher Pasture cartography */
+      {
+         do_say(ch, "Sepulcher Pasture is east of the crossroads, on the far side of the banner hills. CLO routes couriers around it — burial cult territory, bone-remnant activity. Worth charting if you're capable of handling what's in there.");
+         return FALSE;
+      }
+   }
+
+   /* Normal random dialogue */
    if (number_bits(1) == 0)
-      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+      act(acts[number_range(0, 6)], ch, NULL, NULL, TO_ROOM);
    else
-      do_say(ch, says[number_range(0, 4)]);
+      do_say(ch, says[number_range(0, 6)]);
 
    return FALSE;
 }
