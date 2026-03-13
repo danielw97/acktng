@@ -296,7 +296,7 @@ const struct cmd_type cmd_table[] = {
     /* one or more of the poses crash us  */
     {"pray", do_pray, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_COMM, C_SHOW_ALWAYS},
-    {"quest", do_quest2, POS_RESTING, 0, LOG_NORMAL,
+    {"invasion", do_quest2, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_COMM, C_SHOW_ALWAYS},
     {"question", do_question, POS_SLEEPING, 0, LOG_NORMAL,
      C_TYPE_COMM, C_SHOW_ALWAYS},

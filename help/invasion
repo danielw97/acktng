@@ -31,7 +31,7 @@ Invader behavior
 
 Gertrude pressure system
 - Each tick where invaders detonate at Gertrude increments invasion pressure.
-- Gertrude issues warning quest messages at 10, 15, and 19 hits.
+- Gertrude issues warning invasion channel messages at 10, 15, and 19 hits.
 - At 20 hits, Gertrude falls and the invasion is lost.
 
 Rewards

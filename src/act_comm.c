@@ -791,7 +791,7 @@ void do_music(CHAR_DATA *ch, char *argument)
 
 void do_quest2(CHAR_DATA *ch, char *argument)
 {
-   talk_channel(ch, argument, CHANNEL_QUEST, "@@a[@@cQUEST@@a]@@W");
+   talk_channel(ch, argument, CHANNEL_QUEST, "@@a[@@cINVASION@@a]@@W");
    return;
 }
 void do_game(CHAR_DATA *ch, char *argument)
