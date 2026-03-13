@@ -78,6 +78,11 @@ DECLARE_SPEC_FUN(spec_summon_shadow);
 DECLARE_SPEC_FUN(spec_summon_metal);
 DECLARE_SPEC_FUN(spec_summon_animate);
 DECLARE_SPEC_FUN(spec_summon_thought);
+DECLARE_SPEC_FUN(spec_lamplighter);
+DECLARE_SPEC_FUN(spec_warden);
+DECLARE_SPEC_FUN(spec_vendor);
+DECLARE_SPEC_FUN(spec_lay_sister);
+DECLARE_SPEC_FUN(spec_laborer);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -167,6 +172,16 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_summon_animate;
    if (!str_cmp(name, "spec_summon_thought"))
       return spec_summon_thought;
+   if (!str_cmp(name, "spec_lamplighter"))
+      return spec_lamplighter;
+   if (!str_cmp(name, "spec_warden"))
+      return spec_warden;
+   if (!str_cmp(name, "spec_vendor"))
+      return spec_vendor;
+   if (!str_cmp(name, "spec_lay_sister"))
+      return spec_lay_sister;
+   if (!str_cmp(name, "spec_laborer"))
+      return spec_laborer;
 
    return 0;
 }
@@ -255,6 +270,16 @@ char *rev_spec_lookup(void *func)
       return "spec_summon_animate";
    if (func == spec_summon_thought)
       return "spec_summon_thought";
+   if (func == spec_lamplighter)
+      return "spec_lamplighter";
+   if (func == spec_warden)
+      return "spec_warden";
+   if (func == spec_vendor)
+      return "spec_vendor";
+   if (func == spec_lay_sister)
+      return "spec_lay_sister";
+   if (func == spec_laborer)
+      return "spec_laborer";
 
    return 0;
 }
@@ -298,6 +323,11 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_summon_metal        \n\r");
    strcat(buf, "       spec_summon_animate      \n\r");
    strcat(buf, "       spec_summon_thought      \n\r");
+   strcat(buf, "       spec_lamplighter         \n\r");
+   strcat(buf, "       spec_warden              \n\r");
+   strcat(buf, "       spec_vendor              \n\r");
+   strcat(buf, "       spec_lay_sister          \n\r");
+   strcat(buf, "       spec_laborer             \n\r");
 
    return;
 }
@@ -1151,13 +1181,11 @@ bool spec_mayor(CHAR_DATA *ch)
       break;
 
    case 'e':
-      /*	do_yell( ch, "I hereby declare the city of Midgaard open!" ); */
-      do_yell(ch, "It's the Groovy Guru of ACK! ZenDude!");
+      do_yell(ch, "I hereby declare the city of Midgaard open!");
       break;
 
    case 'E':
-      /*	do_yell( ch, "I hereby declare the city of Midgaard closed!" );*/
-      do_yell(ch, "See my wiggle? My twist? My FORBIDDEN DANCE?");
+      do_yell(ch, "I hereby declare the city of Midgaard closed!");
       break;
 
    case 'O':
@@ -2062,6 +2090,167 @@ bool spec_tax_man(CHAR_DATA *ch)
 
    do_save(victim, "");
    return TRUE;
+}
+
+/*
+ * Midgaard ambient citizen specials — Lantern Reforms, Violet Compact,
+ * crossroads market, Temple of the Resounding Heart, and day-mark labor.
+ */
+
+bool spec_lamplighter(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n trims a lamp wick with practiced hands, a small curl of smoke rising as the flame steadies.",
+      "$n checks the oil level in a street lantern, tilting the reservoir with a careful eye.",
+      "$n adjusts the reflector on a wall-mounted lamp, angling it outward toward the street.",
+      "$n taps a lamp bracket with $s hook pole, testing the iron fitting for rust.",
+      "$n consults a worn route card from $s coat pocket, muttering a count of posts.",
+      "$n refills a lamp from one of the oil flasks on $s shoulder satchel."
+   };
+   static const char *says[] = {
+      "No ward unlit, no traveler uncounted — that's the Oath, and that's the work.",
+      "Kindling Watch runs till the Ledger bells. All posts on this lamp-line are checked.",
+      "You see a dark corner in this city, report it to the Lantern Registry. I'll have it lit by Ash Watch.",
+      "Ash Watch runs long when the wind comes off the western road. Outer posts need double oil.",
+      "The Registry lists every lamp-post in the city. Every one. I've walked them all."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 5)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_warden(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n traces a finger along the ward sigils carved above the archway, checking for any that have faded.",
+      "$n consults $s bound registry ledger, running a finger down the day's approved manifests.",
+      "$n adjusts $s violet-banded sash, the mark of a licensed Compact warden.",
+      "$n glances at a passing figure, then makes a brief notation in $s ledger.",
+      "$n taps the checkpoint placard with one finger: 'Arcane materials — registry notation required.'"
+   };
+   static const char *says[] = {
+      "All arcane goods require registry notation before this threshold. The Compact is clear.",
+      "If you carry unregistered materials, declare them now. The ledger is open.",
+      "The Compact protects you as much as the city, traveler. Documentation is not the enemy.",
+      "Containment over destruction — that is the Compact's doctrine. We seal; we do not burn.",
+      "Every passage to the below is a civic jurisdiction. Remember that before you descend."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_vendor(CHAR_DATA *ch)
+{
+   static const char *calls[] = {
+      "$n calls out, 'Timber carvings off the northern routes — finest grain in the city!'",
+      "$n holds up a small jar: 'Eastern spice, fresh off the desert caravan — smell that!'",
+      "$n gestures at $s table: 'Day-mark stamped, tariff-cleared — everything here paid its Ledgerhouse due!'",
+      "$n calls out, 'Good leather out of the armorer quarter — don't pay shop prices for off-cuts!'",
+      "$n waves at a passing pedestrian: 'Fair price, honest weight, Registry-notated goods, citizen!'"
+   };
+   static const char *says[] = {
+      "Tariff board raised the western-goods levy again. Prices have to reflect it, nothing personal.",
+      "The Guild Concordat sets minimums, but we independent vendors set our own ceiling. Fair is fair.",
+      "You want the Roc Road goods, you pay Roc Road prices. Simple arithmetic.",
+      "Northern shipment was late — ashfang trouble on the forest roads, the warden said.",
+      "Come back at Bell Watch — I knock a tenth off anything left. No point carrying it home."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(calls[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_lay_sister(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n pauses at a memorial marker, adjusting a small oil lamp at its base.",
+      "$n opens $s worn civic liturgy booklet to a marked page, lips moving silently.",
+      "$n traces a carved name on the memorial wall with one careful finger.",
+      "$n sets a fresh tallow stub beside the others at the base of the memorial stone.",
+      "$n folds $s hands and stands in quiet observance before the carved dedication."
+   };
+   static const char *says[] = {
+      "No ward unlit, no traveler uncounted. First Oath. Spoken at every memorial by the book.",
+      "No judgment hidden, no sentence unrecorded. Second Oath. The Temple holds to it even when the courts do not.",
+      "No levy taken that cannot be borne. Third Oath. The hardest to keep, in my experience.",
+      "The Temple maintains rolls of the uncounted. Those removed from the ledgers are still remembered here.",
+      "Two bells after midnight are not alarm. They are memorial. The city remembers, even when it pretends not to."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_laborer(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n flexes $s hands, cracked and calloused, then readjusts $s grip on a heavy load.",
+      "$n pauses to check $s day-token against the stamp mark on $s wrist, then sighs.",
+      "$n sets down $s load for a moment, rolling $s shoulders before picking it back up.",
+      "$n wipes sweat from $s face with a cloth that is not much cleaner than $s hands.",
+      "$n studies the route board on the corner wall, tracing the chalk marks with a finger."
+   };
+   static const char *says[] = {
+      "Token came late today. One bell late means shadow-class by the Registry clock. Makes no sense.",
+      "Levy goes up, day-rate stays flat. Cinder debt, they call it — compounds whether you pay or not.",
+      "Work-broker docked two coppers off my token for 'route variance.' I don't even know what that means.",
+      "You can be legal here your whole life and one missing stamp makes you undocumented. One stamp.",
+      "The Oath says no levy taken that cannot be borne. I'd like to see them try carrying this load."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
 }
 
 bool spec_keep_physical_captain(CHAR_DATA *ch)
