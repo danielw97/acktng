@@ -83,6 +83,11 @@ DECLARE_SPEC_FUN(spec_warden);
 DECLARE_SPEC_FUN(spec_vendor);
 DECLARE_SPEC_FUN(spec_lay_sister);
 DECLARE_SPEC_FUN(spec_laborer);
+DECLARE_SPEC_FUN(spec_kiess_shopkeeper);
+DECLARE_SPEC_FUN(spec_kiess_innkeeper);
+DECLARE_SPEC_FUN(spec_kiess_scout);
+DECLARE_SPEC_FUN(spec_kiess_orator);
+DECLARE_SPEC_FUN(spec_kiess_wall_officer);
 
 void do_massivestrike(CHAR_DATA *ch);
 
@@ -182,6 +187,16 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_lay_sister;
    if (!str_cmp(name, "spec_laborer"))
       return spec_laborer;
+   if (!str_cmp(name, "spec_kiess_shopkeeper"))
+      return spec_kiess_shopkeeper;
+   if (!str_cmp(name, "spec_kiess_innkeeper"))
+      return spec_kiess_innkeeper;
+   if (!str_cmp(name, "spec_kiess_scout"))
+      return spec_kiess_scout;
+   if (!str_cmp(name, "spec_kiess_orator"))
+      return spec_kiess_orator;
+   if (!str_cmp(name, "spec_kiess_wall_officer"))
+      return spec_kiess_wall_officer;
 
    return 0;
 }
@@ -280,6 +295,16 @@ char *rev_spec_lookup(void *func)
       return "spec_lay_sister";
    if (func == spec_laborer)
       return "spec_laborer";
+   if (func == spec_kiess_shopkeeper)
+      return "spec_kiess_shopkeeper";
+   if (func == spec_kiess_innkeeper)
+      return "spec_kiess_innkeeper";
+   if (func == spec_kiess_scout)
+      return "spec_kiess_scout";
+   if (func == spec_kiess_orator)
+      return "spec_kiess_orator";
+   if (func == spec_kiess_wall_officer)
+      return "spec_kiess_wall_officer";
 
    return 0;
 }
@@ -328,6 +353,11 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_vendor              \n\r");
    strcat(buf, "       spec_lay_sister          \n\r");
    strcat(buf, "       spec_laborer             \n\r");
+   strcat(buf, "       spec_kiess_shopkeeper   \n\r");
+   strcat(buf, "       spec_kiess_innkeeper    \n\r");
+   strcat(buf, "       spec_kiess_scout        \n\r");
+   strcat(buf, "       spec_kiess_orator       \n\r");
+   strcat(buf, "       spec_kiess_wall_officer \n\r");
 
    return;
 }
@@ -2301,4 +2331,156 @@ void do_massivestrike(CHAR_DATA *ch)
      int dam = number_range(9000,11000);
 
      calculate_damage(ch, ch->fighting, dam, gsn_holystrike, ELEMENT_PHYSICAL | ELEMENT_HOLY, TRUE);
+}
+
+/*
+ * Kiess ambient NPC specials — shopkeepers, inn staff, scouts,
+ * civic orators, and Wall Command officers.
+ */
+
+bool spec_kiess_shopkeeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n straightens the display counter, making sure the best pieces are visible from the door.",
+      "$n polishes a displayed item with a soft cloth, holding it briefly to the light.",
+      "$n glances up as you enter and offers a practiced nod of professional welcome.",
+      "$n checks the day's inventory list against the stock behind the counter.",
+      "$n sets a fresh lamp on the counter for the afternoon trade hours."
+   };
+   static const char *says[] = {
+      "Most of what you need for the frontier is right here. We stock for the road, not the shelf.",
+      "Supply shipment came in yesterday — good selection at the moment. Won't last the week.",
+      "The Exchange backs the quality of everything on this counter. Kiess doesn't traffic in inferior goods.",
+      "If you're heading north into the Forest, talk to the cartographer first. Know what you're walking into.",
+      "Roc Road caravans bring good stock from Midgaard. Come back in a few days if I'm short on something."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kiess_innkeeper(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n checks the room ledger, running a finger down the current guest list.",
+      "$n tops off a traveler's cup from a clay pitcher without being asked.",
+      "$n straightens the traveler memorial plaque by the door, tracing a name quietly.",
+      "$n glances at the city map mural and points out a route to a newly arrived guest.",
+      "$n sets a fresh lamp on the counter, adjusting the wick for the evening hours."
+   };
+   static const char *says[] = {
+      "First night in Kiess? The memorial plaque by the door has names — not to alarm you, but to remind you to come back.",
+      "Roc Road is steady right now. Caravans in both directions. Good time to be traveling.",
+      "The inn keeps a posted watch. You'll sleep undisturbed. City compact law holds inside these walls.",
+      "If you're heading into the Forest of Confusion, check the cartographer's office east of the promenade first.",
+      "Leave a forwarding note at the Postmaster's if you'll be away more than three days. Standard practice here."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kiess_scout(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n marks notations on a field map with practiced efficiency, cross-referencing route cards.",
+      "$n checks the rope markers on $s belt, counting the knots against $s field notes.",
+      "$n scans the room with the alert wariness of someone who hasn't fully decompressed from the forest.",
+      "$n consults a compass bearing against $s posted route notes, making a small correction.",
+      "$n oils the edge of $s blade with a cloth, eyes distant, working from ingrained habit."
+   };
+   static const char *says[] = {
+      "The mist line's moved another three hundred paces north since last week. That's fast for this season.",
+      "Bell-post seven is down. Wall Command's rerouting the southern approach until it's back up.",
+      "Saw centaur sign at the forest edge. Prints were fresh — probably overnight. Command's been told.",
+      "The confusion doesn't hit immediately. You get maybe two hundred paces before the mist starts working. Stay on the rope lines.",
+      "Bring samples from the mist-boundary if you go in. The healers want the spore data. Sealed container, waxed shut."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
+}
+
+bool spec_kiess_orator(CHAR_DATA *ch)
+{
+   static const char *speeches[] = {
+      "Evermeet was not destroyed in a single night. It was abandoned in a thousand small decisions. Kiess was built so those decisions cannot be made quietly.",
+      "The Compact Flame has burned without interruption since the first foundation stone was laid. That continuity is deliberate. Watch it — it is doing something.",
+      "Three factions, one peace code. Not because they agree — they rarely agree — but because the alternative is Evermeet. We have seen the alternative.",
+      "The Pillar of Returning Caravans adds a mark for every safe return from the frontier. Count them sometime. That count is what this city is actually defending.",
+      "Roc Road connects us east. The Forest of Confusion lies north. Wall Command holds the perimeter. The Compact holds the center. This is not accidental — this is the design.",
+      "Every waystone on these avenues marks a district that once existed in Evermeet. Every one of those districts fell silent. We read those names so we know what we are protecting against."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   act("$n addresses the assembled listeners with the measured cadence of a prepared civic speaker.", ch, NULL, NULL, TO_ROOM);
+   do_say(ch, speeches[number_range(0, 5)]);
+
+   return FALSE;
+}
+
+bool spec_kiess_wall_officer(CHAR_DATA *ch)
+{
+   static const char *acts[] = {
+      "$n reviews the duty roster on the briefing board, making a notation in the margin.",
+      "$n traces a patrol route on the tactical map with one finger, checking times against the duty log.",
+      "$n steps to the window and scans the wall walk before returning to the desk.",
+      "$n initials the bottom of a stack of patrol reports and files them in the duty log.",
+      "$n sends a courier off with a sealed dispatch, watching until they clear the corridor."
+   };
+   static const char *says[] = {
+      "East gate rotation is covered through Dusk Watch. North gate I want two sentries until the mist-line report comes in.",
+      "Any scout returning from the northern verge reports to this office directly before the general debrief. Standing order.",
+      "Wall Command doesn't guess at threat levels. We assess, we document, we act on evidence. That is the doctrine.",
+      "The Withered Depths blight is moving. Slowly — but moving. Scouts returning with blight-edge data get full debrief priority.",
+      "Kiess survives because its walls are manned and its gates have discipline. Everything else this city does depends on that foundation."
+   };
+
+   if (!IS_AWAKE(ch) || is_fighting(ch))
+      return FALSE;
+
+   if (number_bits(3) != 0)
+      return FALSE;
+
+   if (number_bits(1) == 0)
+      act(acts[number_range(0, 4)], ch, NULL, NULL, TO_ROOM);
+   else
+      do_say(ch, says[number_range(0, 4)]);
+
+   return FALSE;
 }
