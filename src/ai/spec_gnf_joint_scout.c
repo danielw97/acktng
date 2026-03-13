@@ -163,6 +163,10 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
    if (tgt_idx < 0)
       return FALSE;
 
+   /* Slow patrol: move on average once every 16 seconds (1/8 ticks at 2s each) */
+   if (number_bits(3) != 0)
+      return TRUE;
+
    /* Determine next room along the route */
    next_vnum = (cur_idx < tgt_idx) ? route[cur_idx + 1] : route[cur_idx - 1];
 
