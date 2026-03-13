@@ -5,7 +5,7 @@ K pyramid ancient egypt pharaoh~
 L @@y[ Levels 90 - 100 ]@@N~
 N 304
 I 90 100
-V 30480 30684
+V 30480 30699
 X 0
 F 15
 U @@yThe stones of the pyramid tremble as ancient mechanisms reset.@@N~
@@ -1529,6 +1529,28 @@ every spirit and monster that ever entered its domain and simply became more.
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0 
 L 0 0 0 0 0 0 0 0 0 
+#30685
+black_sun_shard shard black sun~
+@@DThe Black Sun Shard@@N~
+@@DThe Black Sun Shard@@N rotates here, a disc of void-darkness that drinks in all light.
+~
+Older than the pyramid above it, older perhaps than the desert itself, the Black
+Sun Shard is what remains of the sun god's corrupted dark aspect after it was
+severed and sealed beneath the bedrock before the first foundation stone was laid.
+It is an inversion of solar fire: cold, consuming, and utterly patient.  Every
+oasis within a day's travel sickens where its influence seeps upward through the
+rock, the water tasting of ash, the palms leaning away from the sky as though
+ashamed of the light.  It does not hate.  Hatred requires recognition.  It simply
+unmakes.
+~
+67108931 0 -1000 S
+170 0
+15 15 22 22
+! 2 3 5 7 3073 49154 7
+| 0 320 160 0 0 256 128
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #30516
@@ -2441,6 +2463,78 @@ radiates the cold authority of something that has been sovereign of death for mi
 5
 L
 100
+#30686
+void_sun_blade blade void sun~
+@@DThe Void Sun Blade@@N~
+A blade of compressed anti-solar fire rests here, cold as an eclipse.
+A weapon shaped from crystallised void-fire, the antithesis of Ra's radiance,
+its edge defined by the boundary between light and its absolute negation.
+When held it siphons warmth from the wielder's surroundings into the blow.~
+5 202375360 8421376 0
+0 0 0 3 0 0 0 0 0 0
+9
+L
+160
+#30687
+eclipse_mantle mantle eclipse~
+@@DThe Eclipse Mantle@@N~
+A mantle of lightless silk lies here, pooled like a shadow given weight.
+Woven from the threads of an eclipse at its totality, this heavy mantle absorbs
+light that falls on it, the wearer casting no shadow because the mantle has
+consumed it, the fabric faintly warm despite its cold appearance.~
+9 202375360 8454144 0
+0 0 0 0 0 0 0 0 0 0
+5
+L
+160
+#30688
+shard_crown crown shard head~
+@@DThe Shard's Corona@@N~
+A crown of frozen void-light rests here, its spines refracting darkness.
+The corona shed by the Black Sun Shard during one of its periodical pulsations,
+crystallised into a diadem of void-light that frames the wearer's head with
+the cold authority of an eclipsed god.~
+9 202375360 8388616 0
+0 0 0 0 0 0 0 0 0 0
+4
+L
+160
+#30689
+oasis_poison_ring ring oasis finger~
+@@DThe Ring of the Poisoned Oasis@@N~
+A ring of tarnished gold lies here, its stone black with absorbed corruption.
+Fashioned from gold that lay at the bottom of an oasis the Black Sun Shard had
+been corrupting for decades, the gemstone set into it is a deep viridian that
+shifts to black in strong light, the corruption compressed into something wearable.~
+9 202375360 8392192 0
+0 0 0 0 0 0 0 0 0 0
+3
+L
+160
+#30690
+black_sun_amulet amulet sun black neck~
+@@DThe Black Sun Amulet@@N~
+An amulet of polished void-glass hangs here on a chain of blackened silver.
+A disc of void-glass, the same material the Black Sun Shard is formed from,
+suspended on a chain of silver oxidised to absolute black, a miniature of the
+imprisoned god worn at the throat as an inverted devotion.~
+9 202375360 8388736 0
+0 0 0 0 0 0 0 0 0 0
+1
+L
+160
+#30691
+anti_solar_bracer bracer anti solar wrist~
+@@DThe Anti-Solar Bracers@@N~
+A pair of bracers of void-metal rest here, their surface drinking in the light.
+Formed from the same material as the Black Sun Shard's outer casing, these
+bracers are cold to the touch regardless of ambient temperature, their surface
+absorbing all light that falls on them and converting it to the wearer's strength.~
+9 202375360 8389056 0
+0 0 0 0 0 0 0 0 0 0
+8
+L
+160
 #0
 #ROOMS
 #30580
@@ -6340,6 +6434,9 @@ S
 The largest chamber in the entire subterranean complex, its walls lost in shadow,
 its floor covered in the accumulated remains of centuries, the air dense with
 something that is not quite smell and not quite sound but is entirely and immediately wrong.
+At the southern extreme of this vault a crack in the bedrock opens onto a passage
+that descends into absolute darkness, older than the catacombs, older than the pyramid,
+a wound in the stone that was here before the first priest ever set foot underground.
 ~
 68 3
 D0
@@ -6347,6 +6444,11 @@ The nameless one's vault lies to the north.
 ~
 ~
 0 0 30577
+D2
+The ancient crack leads south and down into lightless bedrock.
+~
+~
+0 0 30692
 S
 #30579
 @@yThe Sealed One's Prison@@N~
@@ -6360,6 +6462,24 @@ A passage leads west to the primary deep chamber.
 ~
 ~
 0 0 30545
+S
+#30692
+@@DThe Black Sun Sanctum@@N~
+A chamber that predates the pyramid by an unknowable span of time, its walls of
+native bedrock untouched by any tool, shaped solely by the terrible slow pressure
+of the Black Sun Shard rotating at the room's center for ten thousand years.
+The floor is polished smooth by that same rotation.  No torchlight survives here:
+the Shard drinks it.  Vision in this room is a memory, a faint impression of shapes,
+and the cold is the cold of the void between stars rather than the cold of stone.
+The crack through which you descended is the only way in or out; whatever
+sealed this place could not seal it completely against a sufficiently determined intruder.
+~
+68 3
+D0
+The crack leads back north and up to the Catacomb Lord's Vault.
+~
+~
+0 0 30578
 S
 #0
 #RESETS
@@ -6729,7 +6849,17 @@ M 0 30523 1 30577
 E 0 30513 1 15 
 M 0 30524 1 30578 
 E 0 30514 1 11 
-M 0 30525 1 30578 
-E 0 30515 1 18 
+M 0 30525 1 30578
+E 0 30515 1 18
+M 0 30685 1 30692
+E 0 30686 1 5
+E 0 30687 1 18
+E 0 30688 1 11
+E 0 30689 1 3
+E 0 30690 1 15
+E 0 30691 1 22
+S
+#SPECIALS
+M 30685 spec_pyramid_black_sun_shard
 S
 #$

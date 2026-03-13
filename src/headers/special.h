@@ -80,6 +80,7 @@ DECLARE_SPEC_FUN(spec_rr_ferryman);
 DECLARE_SPEC_FUN(spec_rr_camp_cook);
 DECLARE_SPEC_FUN(spec_rr_pilgrim);
 DECLARE_SPEC_FUN(spec_rr_ruin_scavenger);
+DECLARE_SPEC_FUN(spec_pyramid_black_sun_shard);
 
 SPEC_FUN *spec_lookup(const char *name);
 char *rev_spec_lookup(void *func);

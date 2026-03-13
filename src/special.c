@@ -201,6 +201,8 @@ SPEC_FUN *spec_lookup(const char *name)
       return spec_rr_pilgrim;
    if (!str_cmp(name, "spec_rr_ruin_scavenger"))
       return spec_rr_ruin_scavenger;
+   if (!str_cmp(name, "spec_pyramid_black_sun_shard"))
+      return spec_pyramid_black_sun_shard;
 
    return 0;
 }
@@ -367,6 +369,8 @@ char *rev_spec_lookup(void *func)
       return "spec_rr_pilgrim";
    if (func == spec_rr_ruin_scavenger)
       return "spec_rr_ruin_scavenger";
+   if (func == spec_pyramid_black_sun_shard)
+      return "spec_pyramid_black_sun_shard";
 
    return 0;
 }
@@ -449,6 +453,7 @@ void print_spec_lookup(char *buf)
    strcat(buf, "       spec_rr_camp_cook      \n\r");
    strcat(buf, "       spec_rr_pilgrim        \n\r");
    strcat(buf, "       spec_rr_ruin_scavenger \n\r");
+   strcat(buf, "       spec_pyramid_black_sun_shard\n\r");
 
    return;
 }
