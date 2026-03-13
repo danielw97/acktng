@@ -3448,7 +3448,7 @@ struct chan_type channels[] = {
      "[ +LOG      ] You receive LOG_FILE details.\n\r",
      "[ -log      ] You don't receive LOG_FILE details.\n\r"},
 
-    {CHANNEL_QUEST, 0, "invasion",
+    {CHANNEL_INVASION, 0, "invasion",
      "[ +INVASION ] You hear invasion reports!\n\r",
      "[ -invasion ] You ignore invasion reports.\n\r"},
 
