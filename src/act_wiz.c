@@ -3558,7 +3558,6 @@ void do_force(CHAR_DATA *ch, char *argument)
 
          if (!IS_NPC(vch) && !IS_IMMORTAL(vch))
          {
-            MOBtrigger = FALSE;
             act("$n forces you to '$t'.", ch, argument, vch, TO_VICT);
             interpret(vch, argument);
          }
@@ -3586,7 +3585,6 @@ void do_force(CHAR_DATA *ch, char *argument)
          return;
       }
 
-      MOBtrigger = FALSE;
       act("$n forces you to '$t'.", ch, argument, victim, TO_VICT);
       interpret(victim, argument);
    }

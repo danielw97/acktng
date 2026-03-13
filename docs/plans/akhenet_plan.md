@@ -67,61 +67,61 @@ String/format constraints to enforce during implementation:
 - Gameplay: orientation, early hostiles, weather pressure.
 - Features: shattered waystones, heat mirage spans, caravan wreck markers.
 - Anchor rooms:
-  - 2000 **Sunbreak Threshold** (entry hub)
-  - 2008 **Survey Obelisk Stump**
-  - 2015 **Half-Buried Toll Arch**
-  - 2019 **Marchfall Descent Lip** (transition to buried roads)
+ - 2000 **Sunbreak Threshold** (entry hub)
+ - 2008 **Survey Obelisk Stump**
+ - 2015 **Half-Buried Toll Arch**
+ - 2019 **Marchfall Descent Lip** (transition to buried roads)
 
 ### District B — Keeper Roadworks (2020-2044, 25 rooms)
 **Submerged processional road, legal-marker remnants, drainage channels.**
 - Gameplay: branched lanes, lore-heavy inscriptions, first locked route.
 - Features: measure-script slabs, collapsed milestones, audit niches.
 - Anchor rooms:
-  - 2024 **Road Court Kiosk**
-  - 2031 **Broken Distance Circle**
-  - 2038 **Sluice Gate of Bearings** (keyed door)
-  - 2044 **Deepshade Causeway Mouth**
+ - 2024 **Road Court Kiosk**
+ - 2031 **Broken Distance Circle**
+ - 2038 **Sluice Gate of Bearings** (keyed door)
+ - 2044 **Deepshade Causeway Mouth**
 
 ### District C — Shuttered Bazaar of Reeds (2045-2069, 25 rooms)
 **Buried commercial quarter once tied to Great/Southern Oasis water contracts.**
 - Gameplay: lateral loops, faction negotiation pockets, ambush alleys.
 - Features: reed-weigh halls, ration stamp offices, relic appraisal booths.
 - Anchor rooms:
-  - 2050 **Ledger Canopy Rotunda**
-  - 2056 **Seal-Fire Notary**
-  - 2063 **Caravan Bone Exchange**
-  - 2069 **Moon Tax Stairwell**
+ - 2050 **Ledger Canopy Rotunda**
+ - 2056 **Seal-Fire Notary**
+ - 2063 **Caravan Bone Exchange**
+ - 2069 **Moon Tax Stairwell**
 
 ### District D — Cistern Veins & Undersluices (2070-2094, 25 rooms)
 **Hydraulic underworks linking Akh'enet to the Deepwell Confluence myth-cycle.**
 - Gameplay: environmental hazard routing, water-control puzzles, ritual sabotage.
 - Features: blue-lit seep halls, pressure doors, drowned record vaults.
 - Anchor rooms:
-  - 2072 **Cold Seep Gallery**
-  - 2079 **Confluence Gauge Hall**
-  - 2086 **Brine Sentence Vault**
-  - 2094 **Nadir Pump Antechamber**
+ - 2072 **Cold Seep Gallery**
+ - 2079 **Confluence Gauge Hall**
+ - 2086 **Brine Sentence Vault**
+ - 2094 **Nadir Pump Antechamber**
 
 ### District E — Necropolis Terraces (2095-2124, 30 rooms)
 **Vertical funerary quarter where Moon Sovereign descent theology overwrote Keeper law.**
 - Gameplay: elite cult packs, curse mechanics, high lore density.
 - Features: tomb balconies, moonwells, jackal verdict stelae.
 - Anchor rooms:
-  - 2100 **Terrace of Quiet Debt**
-  - 2108 **Jackal Balance Court**
-  - 2115 **Moon Ladder Gallery**
-  - 2124 **Sepulchral Wind Balcony**
+ - 2100 **Terrace of Quiet Debt**
+ - 2108 **Jackal Balance Court**
+ - 2115 **Moon Ladder Gallery**
+ - 2124 **Sepulchral Wind Balcony**
 
 ### District F — Nadir Palace & Astral Well (2125-2149, 25 rooms)
 **Final complex: command necropolis, ritual engine, and boss endcap.**
 - Gameplay: gauntlet + court chambers + final confrontation.
 - Features: mirrored moon discs, resonance shafts, legal-funerary throne hall.
 - Anchor rooms:
-  - 2130 **Hall of Unwatered Kings**
-  - 2136 **Resonance Shaft of Sighs**
-  - 2142 **Astral Well Rim**
-  - 2148 **Court of the Eclipsed Ledger** (boss room)
-  - 2149 **Sealed Return Gate** (post-boss egress)
+ - 2130 **Hall of Unwatered Kings**
+ - 2136 **Resonance Shaft of Sighs**
+ - 2142 **Astral Well Rim**
+ - 2148 **Court of the Eclipsed Ledger** (boss room)
+ - 2149 **Sealed Return Gate** (post-boss egress)
 
 ---
 
@@ -145,24 +145,24 @@ String/format constraints to enforce during implementation:
 ### Faction Sets
 
 1. **Reed Ledger Wardens** (neutral/defensive)
-   - Patrol marshals, aquifer scribes, sluice veterans.
-   - Emphasis: anti-curse support, defensive formations.
+  - Patrol marshals, aquifer scribes, sluice veterans.
+  - Emphasis: anti-curse support, defensive formations.
 
 2. **Moon Sepulchrists** (hostile cult)
-   - Quiet cantors, descent blades, silence adepts.
-   - Emphasis: debuffs, silence, identity-erasure flavor.
+  - Quiet cantors, descent blades, silence adepts.
+  - Emphasis: debuffs, silence, identity-erasure flavor.
 
 3. **Salt Jackal Reclaimers** (hostile scavengers)
-   - Tomb-cutters, bone appraisers, legal-forgery raiders.
-   - Emphasis: burst melee, loot pressure.
+  - Tomb-cutters, bone appraisers, legal-forgery raiders.
+  - Emphasis: burst melee, loot pressure.
 
 4. **Caravan Freehold Survivors** (mixed)
-   - Contract guards, medics, route-finders, relic brokers.
-   - Emphasis: utility, occasional quest hooks.
+  - Contract guards, medics, route-finders, relic brokers.
+  - Emphasis: utility, occasional quest hooks.
 
 5. **Undersluice Aberrants** (hostile environmental)
-   - Brine shades, calcified eels, drowned adjudicator remnants.
-   - Emphasis: resist variance by district.
+  - Brine shades, calcified eels, drowned adjudicator remnants.
+  - Emphasis: resist variance by district.
 
 ### Key Encounters
 - **Mini-boss A (2068):** `The Seal-Break Factor` (jackal forgery master).
@@ -187,9 +187,9 @@ Boss rooms flagged `no_mob`; bosses flagged sentinel + boss; strong elites use s
 
 ### Required Keys / Doors
 - Key items for:
-  - Sluice Gate of Bearings (2038)
-  - Brine Sentence Vault (2086)
-  - Court of the Eclipsed Ledger (2148)
+ - Sluice Gate of Bearings (2038)
+ - Brine Sentence Vault (2086)
+ - Court of the Eclipsed Ledger (2148)
 
 ---
 
@@ -199,10 +199,10 @@ Boss rooms flagged `no_mob`; bosses flagged sentinel + boss; strong elites use s
 - Patrol mobs constrained by subregion or no_mob boundaries to prevent bleed.
 - Shopkeepers and lore NPCs marked sentinel in secure rooms.
 - Risk curve:
-  - A/B low-mid pressure,
-  - C/D sustained attrition,
-  - E spike encounters,
-  - F controlled endgame gauntlet.
+ - A/B low-mid pressure,
+ - C/D sustained attrition,
+ - E spike encounters,
+ - F controlled endgame gauntlet.
 
 ---
 

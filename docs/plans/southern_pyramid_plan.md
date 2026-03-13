@@ -895,14 +895,14 @@ All items include `take(8388608)` in wear_flags.
 ### Boss Mob Resets
 
 ```
-M 0 11450 1 11495  Moon Gate Guardian in Moon Gate Chamber
-M 0 11451 1 11530  Silent Warden in Silent Warden's Tomb
-M 0 11452 1 11560  Rot Warden in Rot Warden's Chamber
-M 0 11453 1 11585  Shadow Warden in Shadow Warden's Sanctum
-M 0 11454 1 11605  Bone Warden in Bone Warden's Crypt
-M 0 11455 1 11625  Venom Warden in Venom Warden's Cistern
-M 0 11456 1 11639  Fire Warden in Fire Warden's Crucible
-M 0 11457 1 11649  Moon Sovereign in Void Throne Room
+M 0 11450 1 11495 Moon Gate Guardian in Moon Gate Chamber
+M 0 11451 1 11530 Silent Warden in Silent Warden's Tomb
+M 0 11452 1 11560 Rot Warden in Rot Warden's Chamber
+M 0 11453 1 11585 Shadow Warden in Shadow Warden's Sanctum
+M 0 11454 1 11605 Bone Warden in Bone Warden's Crypt
+M 0 11455 1 11625 Venom Warden in Venom Warden's Cistern
+M 0 11456 1 11639 Fire Warden in Fire Warden's Crucible
+M 0 11457 1 11649 Moon Sovereign in Void Throne Room
 ```
 
 ### Boss Loot Tables (l/L extensions on boss mobs)
@@ -920,32 +920,32 @@ This guarantees 4 drops: the piece shard (11450 object), guardian gauntlet (1151
 ### Strong Mob Resets (limit 2–3 each)
 
 ```
-M 0 11458 3 11487  cursed moon shade (multiple rooms)
-M 0 11458 3 11466  cursed moon shade (another spawn)
-M 0 11459 2 11463  obsidian colossus
-M 0 11459 2 11498  obsidian colossus
-M 0 11460 2 11544  death-sworn knight
-M 0 11460 2 11556  death-sworn knight
-M 0 11461 2 11617  magma drake
-M 0 11461 2 11628  magma drake
-M 0 11462 2 11597  jade sphinx
-M 0 11462 2 11608  jade sphinx
-M 0 11510 2 11463  toxic sand elemental
-M 0 11510 2 11498  toxic sand elemental
-M 0 11511 2 11546  ancient basalt guardian
-M 0 11511 2 11563  ancient basalt guardian
-M 0 11512 2 11569  greater bone overlord
-M 0 11512 2 11588  greater bone overlord
-M 0 11627 2 11635  void-touched juggernaut
-M 0 11627 2 11641  void-touched juggernaut
-M 0 11628 2 11610  cistern matriarch
-M 0 11628 2 11616  cistern matriarch
-M 0 11629 2 11457  petrified desert titan
-M 0 11629 2 11475  petrified desert titan
-M 0 11630 2 11535  fungal colossus
-M 0 11630 2 11541  fungal colossus
-M 0 11631 2 11571  nightmare stalker
-M 0 11631 2 11582  nightmare stalker
+M 0 11458 3 11487 cursed moon shade (multiple rooms)
+M 0 11458 3 11466 cursed moon shade (another spawn)
+M 0 11459 2 11463 obsidian colossus
+M 0 11459 2 11498 obsidian colossus
+M 0 11460 2 11544 death-sworn knight
+M 0 11460 2 11556 death-sworn knight
+M 0 11461 2 11617 magma drake
+M 0 11461 2 11628 magma drake
+M 0 11462 2 11597 jade sphinx
+M 0 11462 2 11608 jade sphinx
+M 0 11510 2 11463 toxic sand elemental
+M 0 11510 2 11498 toxic sand elemental
+M 0 11511 2 11546 ancient basalt guardian
+M 0 11511 2 11563 ancient basalt guardian
+M 0 11512 2 11569 greater bone overlord
+M 0 11512 2 11588 greater bone overlord
+M 0 11627 2 11635 void-touched juggernaut
+M 0 11627 2 11641 void-touched juggernaut
+M 0 11628 2 11610 cistern matriarch
+M 0 11628 2 11616 cistern matriarch
+M 0 11629 2 11457 petrified desert titan
+M 0 11629 2 11475 petrified desert titan
+M 0 11630 2 11535 fungal colossus
+M 0 11630 2 11541 fungal colossus
+M 0 11631 2 11571 nightmare stalker
+M 0 11631 2 11582 nightmare stalker
 ```
 
 ### Trash Mob Resets (representative sample, ~60–80 total resets)
@@ -967,42 +967,42 @@ Each trash mob is followed by one `E` reset for their associated reset gear (ite
 ### Object Resets (O commands, items in rooms)
 
 ```
-O 0 11514 1 11599  Bone-barred key in The Reliquary (Ossuary Depths)
+O 0 11514 1 11599 Bone-barred key in The Reliquary (Ossuary Depths)
 ```
 
 ### Door Resets (D commands)
 
 Per the Doors Summary table above:
 ```
-D 0 9819  2 1   charter road south (Great Oasis basin side, closed)
-D 0 11459 2 1   moon gate (closed)
-D 0 11460 0 1   moon gate reverse (closed)
-D 0 11491 2 1   obsidian door (closed)
-D 0 11492 0 1   obsidian door reverse (closed)
-D 0 11494 2 1   lunar vault door (closed)
-D 0 11495 0 1   lunar vault door reverse (closed)
-D 0 11529 2 1   glyph-sealed door (closed)
-D 0 11530 0 1   glyph-sealed door reverse (closed)
-D 0 11510 5 1   corroded iron hatch (closed)
-D 0 11531 4 1   corroded iron hatch reverse (closed)
-D 0 11559 2 1   moss-covered stone door (closed)
-D 0 11560 0 1   moss-covered stone door reverse (closed)
-D 0 11549 5 1   rusted grate (closed)
-D 0 11561 4 1   rusted grate reverse (closed)
-D 0 11584 2 1   shadow-wreathed portal (closed)
-D 0 11585 0 1   shadow-wreathed portal reverse (closed)
-D 0 11604 2 1   skull-arch threshold (closed)
-D 0 11605 0 1   skull-arch threshold reverse (closed)
-D 0 11601 5 2   bone-barred gate (locked)
-D 0 11606 4 2   bone-barred gate reverse (locked)
-D 0 11624 2 1   venom-slick gate (closed)
-D 0 11625 0 1   venom-slick gate reverse (closed)
-D 0 11638 2 1   molten-iron gate (closed)
-D 0 11639 0 1   molten-iron gate reverse (closed)
-D 0 11634 5 2   obsidian sentinel gate (locked)
-D 0 11640 4 2   obsidian sentinel gate reverse (locked)
-D 0 11648 2 1   void chamber door (closed)
-D 0 11649 0 1   void chamber door reverse (closed)
+D 0 9819 2 1  charter road south (Great Oasis basin side, closed)
+D 0 11459 2 1  moon gate (closed)
+D 0 11460 0 1  moon gate reverse (closed)
+D 0 11491 2 1  obsidian door (closed)
+D 0 11492 0 1  obsidian door reverse (closed)
+D 0 11494 2 1  lunar vault door (closed)
+D 0 11495 0 1  lunar vault door reverse (closed)
+D 0 11529 2 1  glyph-sealed door (closed)
+D 0 11530 0 1  glyph-sealed door reverse (closed)
+D 0 11510 5 1  corroded iron hatch (closed)
+D 0 11531 4 1  corroded iron hatch reverse (closed)
+D 0 11559 2 1  moss-covered stone door (closed)
+D 0 11560 0 1  moss-covered stone door reverse (closed)
+D 0 11549 5 1  rusted grate (closed)
+D 0 11561 4 1  rusted grate reverse (closed)
+D 0 11584 2 1  shadow-wreathed portal (closed)
+D 0 11585 0 1  shadow-wreathed portal reverse (closed)
+D 0 11604 2 1  skull-arch threshold (closed)
+D 0 11605 0 1  skull-arch threshold reverse (closed)
+D 0 11601 5 2  bone-barred gate (locked)
+D 0 11606 4 2  bone-barred gate reverse (locked)
+D 0 11624 2 1  venom-slick gate (closed)
+D 0 11625 0 1  venom-slick gate reverse (closed)
+D 0 11638 2 1  molten-iron gate (closed)
+D 0 11639 0 1  molten-iron gate reverse (closed)
+D 0 11634 5 2  obsidian sentinel gate (locked)
+D 0 11640 4 2  obsidian sentinel gate reverse (locked)
+D 0 11648 2 1  void chamber door (closed)
+D 0 11649 0 1  void chamber door reverse (closed)
 ```
 
 ---
@@ -1011,53 +1011,53 @@ D 0 11649 0 1   void chamber door reverse (closed)
 
 ```
 #SPECIALS
-M 11450 spec_cast_mage      Moon Gate Guardian
-M 11451 spec_cast_undead     Silent Warden
-M 11452 spec_cast_mage       Rot Warden
-M 11453 spec_cast_bigtime    Shadow Warden
-M 11454 spec_cast_mage       Bone Warden
-M 11455 spec_poison          Venom Warden
-M 11456 spec_breath_fire     Fire Warden
-M 11457 spec_cast_bigtime    Moon Sovereign
-M 11461 spec_breath_fire     magma drake
-M 11466 spec_poison          venomous desert scorpion
-M 11467 spec_cast_undead     grave robber's specter
-M 11471 spec_poison          jade asp
-M 11474 spec_cast_mage       decay acolyte
-M 11475 spec_cast_undead     rot wight
-M 11477 spec_poison          tomb cobra
-M 11481 spec_cast_undead     creeping shadow
-M 11484 spec_poison          venomous golden cobra
-M 11485 spec_cast_mage       bone cultist
-M 11488 spec_cast_undead     void specter
-M 11489 spec_poison          carrion fly swarm
-M 11490 spec_poison          skeletal desert rat
-M 11492 spec_cast_undead     sand-choked revenant
-M 11494 spec_cast_undead     cursed pyramid laborer
-M 11495 spec_poison          desert pit viper
-M 11498 spec_cast_undead     animated burial jar
-M 11499 spec_cast_mage       scribal phantom
-M 11501 spec_cast_mage       rot priest's thrall
-M 11502 spec_cast_undead     fungal wraith
-M 11510 spec_cast_mage       toxic sand elemental
-M 11512 spec_cast_undead     greater bone overlord
-M 11601 spec_cast_undead     whispering wraith
-M 11602 spec_poison          calcified serpent
-M 11604 spec_poison          mold-ridden ghoul
-M 11606 spec_poison          decay spider
-M 11607 spec_cast_undead     mildew phantom
-M 11611 spec_cast_mage       darkfire wisp
-M 11612 spec_poison          ossuary spider
-M 11614 spec_cast_mage       skeletal war drummer
-M 11616 spec_poison          venom puddle ooze
-M 11618 spec_poison          poison dart frog construct
-M 11619 spec_cast_undead     toxic gas wraith
-M 11621 spec_cast_mage       ember revenant
-M 11624 spec_cast_bigtime    void acolyte
-M 11626 spec_poison          moon-touched scorpion
-M 11628 spec_poison          cistern matriarch
-M 11629 spec_cast_mage       petrified desert titan
-M 11630 spec_poison          fungal colossus
+M 11450 spec_cast_mage   Moon Gate Guardian
+M 11451 spec_cast_undead   Silent Warden
+M 11452 spec_cast_mage    Rot Warden
+M 11453 spec_cast_bigtime  Shadow Warden
+M 11454 spec_cast_mage    Bone Warden
+M 11455 spec_poison     Venom Warden
+M 11456 spec_breath_fire   Fire Warden
+M 11457 spec_cast_bigtime  Moon Sovereign
+M 11461 spec_breath_fire   magma drake
+M 11466 spec_poison     venomous desert scorpion
+M 11467 spec_cast_undead   grave robber's specter
+M 11471 spec_poison     jade asp
+M 11474 spec_cast_mage    decay acolyte
+M 11475 spec_cast_undead   rot wight
+M 11477 spec_poison     tomb cobra
+M 11481 spec_cast_undead   creeping shadow
+M 11484 spec_poison     venomous golden cobra
+M 11485 spec_cast_mage    bone cultist
+M 11488 spec_cast_undead   void specter
+M 11489 spec_poison     carrion fly swarm
+M 11490 spec_poison     skeletal desert rat
+M 11492 spec_cast_undead   sand-choked revenant
+M 11494 spec_cast_undead   cursed pyramid laborer
+M 11495 spec_poison     desert pit viper
+M 11498 spec_cast_undead   animated burial jar
+M 11499 spec_cast_mage    scribal phantom
+M 11501 spec_cast_mage    rot priest's thrall
+M 11502 spec_cast_undead   fungal wraith
+M 11510 spec_cast_mage    toxic sand elemental
+M 11512 spec_cast_undead   greater bone overlord
+M 11601 spec_cast_undead   whispering wraith
+M 11602 spec_poison     calcified serpent
+M 11604 spec_poison     mold-ridden ghoul
+M 11606 spec_poison     decay spider
+M 11607 spec_cast_undead   mildew phantom
+M 11611 spec_cast_mage    darkfire wisp
+M 11612 spec_poison     ossuary spider
+M 11614 spec_cast_mage    skeletal war drummer
+M 11616 spec_poison     venom puddle ooze
+M 11618 spec_poison     poison dart frog construct
+M 11619 spec_cast_undead   toxic gas wraith
+M 11621 spec_cast_mage    ember revenant
+M 11624 spec_cast_bigtime  void acolyte
+M 11626 spec_poison     moon-touched scorpion
+M 11628 spec_poison     cistern matriarch
+M 11629 spec_cast_mage    petrified desert titan
+M 11630 spec_poison     fungal colossus
 S
 ```
 

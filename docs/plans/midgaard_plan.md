@@ -44,14 +44,14 @@ See `midgaard_lore.md` for extracted lore.
 ### Layout Preservation
 15. Maintain the existing topological city layout; expansions are additive in detail and function, not a re-architecture.
 16. Preserve all external world links already implemented from Midgaard:
-    - `3005 -> 30100` (Gloamvault link)
-    - `3014 -> 9551` (Dungeon link)
-    - `3025 -> 21000` (Ossuary/transport court link)
-    - `3030 -> 30175`
-    - `3041 -> 3230`
-    - `3060 -> 8500`
-    - `3189 -> 5600`
-    - `3190 -> 7302`
+  - `3005 -> 30100` (Gloamvault link)
+  - `3014 -> 9551` (Dungeon link)
+  - `3025 -> 21000` (Ossuary/transport court link)
+  - `3030 -> 30175`
+  - `3041 -> 3230`
+  - `3060 -> 8500`
+  - `3189 -> 5600`
+  - `3190 -> 7302`
 
 ### Room Constraints
 17. Each room description must contain at least 3 sentences; important rooms must contain at least 5 sentences.
@@ -88,7 +88,7 @@ See `midgaard_lore.md` for extracted lore.
 42. `#RESETS` must not contain blank lines.
 
 ### Section Order
-43. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+43. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 44. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).
@@ -100,23 +100,23 @@ See `midgaard_lore.md` for extracted lore.
 Midgaard already reads as a **20x10 civic lattice** with repeated avenue naming motifs and several specialized civic/service pockets. The plan preserves this shape and formalizes it into district identities:
 
 1. **Civic Spine District (central market-law corridor)**
-   - Includes major named boulevards such as Cedar/Silver/Crimson/Auburn corridors and Lantern/Sunward/Granite/Saffron branches.
-   - Function: trade, legal notices, guild traffic, cityguard visibility.
+  - Includes major named boulevards such as Cedar/Silver/Crimson/Auburn corridors and Lantern/Sunward/Granite/Saffron branches.
+  - Function: trade, legal notices, guild traffic, cityguard visibility.
 
 2. **Reliquary + Carceral Axis**
-   - Anchors: `3005` (**Violet Reliquary Arch**) and `3014` (**Dungeon Intake Yard**).
-   - Function: controlled transition to high-risk/occult and penal spaces.
+  - Anchors: `3005` (**Violet Reliquary Arch**) and `3014` (**Dungeon Intake Yard**).
+  - Function: controlled transition to high-risk/occult and penal spaces.
 
 3. **Sanctuary and Service Quarter**
-   - Existing healer/postal/trade service rooms and temple-adjacent flow.
-   - Function: practical city sustainment, religious legitimacy, traveler support.
+  - Existing healer/postal/trade service rooms and temple-adjacent flow.
+  - Function: practical city sustainment, religious legitimacy, traveler support.
 
 4. **Newer Arcana-Requisition Strip (already present in high vnums)**
-   - Anchors: `3122-3128`, `3161-3163` style rooms/NPCs.
-   - Function: modernized outfitting, quest/quest brokerage, invasion logistics.
+  - Anchors: `3122-3128`, `3161-3163` style rooms/NPCs.
+  - Function: modernized outfitting, quest/quest brokerage, invasion logistics.
 
 5. **Gateward Connectors**
-   - Rooms with external exits become explicitly themed as managed boundaries between Midgaard and linked regions.
+  - Rooms with external exits become explicitly themed as managed boundaries between Midgaard and linked regions.
 
 ---
 
@@ -144,10 +144,10 @@ A five-color civic palette that matches Midgaard’s existing naming and atmosph
 **Goal:** convert currently repetitive avenue descriptions into sub-district personalities while preserving traffic flow.
 
 - Differentiate contiguous streets into micro-themes:
-  - weights/measures lane
-  - food and staples lane
-  - contracts and writ lane
-  - durable goods lane
+ - weights/measures lane
+ - food and staples lane
+ - contracts and writ lane
+ - durable goods lane
 - Add recurring environmental markers every 3-4 rooms (notice poles, water troughs, militia chalk marks, shrine niches).
 - Tie ambient text to time-of-day reset messaging (market dawn setup, dusk closure bells).
 
@@ -175,10 +175,10 @@ A five-color civic palette that matches Midgaard’s existing naming and atmosph
 
 - Themed as a post-crisis civic complex where adventurers process gear, contracts, and sanctioned risk.
 - Distinct counters/offices:
-  - quest adjudication
-  - invasion reserve logistics
-  - quest brokerage archives
-  - armor specialization courts (cloth/melee/tank)
+ - quest adjudication
+ - invasion reserve logistics
+ - quest brokerage archives
+ - armor specialization courts (cloth/melee/tank)
 - Make each service room textually unique with queue behavior and document culture.
 
 ## E. Gateward Connections (all out-of-area exit rooms)
@@ -250,11 +250,11 @@ Proposed additions focus on lore delivery and district function:
 4. **Memory artifacts:** memorial ribbons, ledger fragments, old oath medallions, Watchers' Cairn eye-motif fragments (connect to pre-founding mythology and Verdant Depths/Sepulchur Pasture parallels).
 5. **Boundary markers:** gate advisories tied to each external route.
 6. **Cross-area lore objects (key items to embed in archive/temple/market rooms):**
-   - Granite Arcade trade ledger page (the "forty iron bars and six condemned debtors" entry — Conclave smoking-gun document).
-   - Measure Script transliteration folio (technically accurate, functionally meaningless pyramid-era rubbings).
-   - Kiessward dispatch tablet (western frontier intelligence bulletin from Wall Command).
-   - Desert relic authentication certificate (Midgaard-stamped provenance document for oasis-sourced artifacts).
-   - Ilren Voss survey notes (Bent Mile Principle field observations from the legendary ranger).
+  - Granite Arcade trade ledger page (the "forty iron bars and six condemned debtors" entry — Conclave smoking-gun document).
+  - Measure Script transliteration folio (technically accurate, functionally meaningless pyramid-era rubbings).
+  - Kiessward dispatch tablet (western frontier intelligence bulletin from Wall Command).
+  - Desert relic authentication certificate (Midgaard-stamped provenance document for oasis-sourced artifacts).
+  - Ilren Voss survey notes (Bent Mile Principle field observations from the legendary ranger).
 
 ### Object Spec Compliance
 

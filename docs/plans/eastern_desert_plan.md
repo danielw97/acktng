@@ -2,12 +2,12 @@
 
 ## Overview
 
-**Area Name:** `@@yThe @@bEastern @@yDesert@@N`  
-**File Name:** `eastern_desert.are`  
-**Keyword:** `easterndesert`  
-**Level Range:** 30-100 (`I 30 100`)  
-**Vnum Range (fixed):** **8500-8599** (`V 8500 8599`)  
-**Room Count Target:** 100/100 vnums used  
+**Area Name:** `@@yThe @@bEastern @@yDesert@@N` 
+**File Name:** `eastern_desert.are` 
+**Keyword:** `easterndesert` 
+**Level Range:** 30-100 (`I 30 100`) 
+**Vnum Range (fixed):** **8500-8599** (`V 8500 8599`) 
+**Room Count Target:** 100/100 vnums used 
 **Design Goal:** Replace the current corridor-heavy road desert with a coherent expedition sandbox: caravan artery, ruined observatory-cistern complex, cult encampments, storm dunes, and a buried royal necropolis.
 
 This plan keeps the existing vnum envelope exactly as assigned and fully reworks room flow, encounter identity, objectization, and narrative progression.
@@ -104,20 +104,20 @@ Per `area_file_spec.md` section 13.1:
 - Sector: `desert` throughout.
 - Includes road checkpoints, wreck fields, and charter stones.
 - Key rooms:
-  - **8500** New western entry gate from legacy route (important room, 5+ sentence description).
-  - **8506** Charter Mile Marker (first branch hub; important room, 5+ sentence description).
-  - **8512** Burned Convoy Basin (event hotspot).
-  - **8519** Eastbound Split toward deep desert/pyramid approach (important room, 5+ sentence description).
+ - **8500** New western entry gate from legacy route (important room, 5+ sentence description).
+ - **8506** Charter Mile Marker (first branch hub; important room, 5+ sentence description).
+ - **8512** Burned Convoy Basin (event hotspot).
+ - **8519** Eastbound Split toward deep desert/pyramid approach (important room, 5+ sentence description).
 
 ### Zone B: Cistern Quarter (8520-8539, 20 rooms)
 - Semi-ruined civic waterworks and shrine bureaucracy.
 - Mix of `desert` (outdoor ruins) and `inside` (vaulted cistern interiors, tally halls) sectors.
 - Indoor rooms use `room_flags` including `indoors` (`8`).
 - Key rooms:
-  - **8523** Moonwell Access Shaft (vertical connector via D4 up / D5 down exits).
-  - **8528** The Ledger of Thirst (lore-rich archive room; `inside` sector; important room, 5+ sentence description with multiple `E` extra descriptions for inscriptions).
-  - **8533** Synod Toll Court (elite patrol reset anchor).
-  - **8539** Sealed Descent to buried observatory (important room, 5+ sentence description).
+ - **8523** Moonwell Access Shaft (vertical connector via D4 up / D5 down exits).
+ - **8528** The Ledger of Thirst (lore-rich archive room; `inside` sector; important room, 5+ sentence description with multiple `E` extra descriptions for inscriptions).
+ - **8533** Synod Toll Court (elite patrol reset anchor).
+ - **8539** Sealed Descent to buried observatory (important room, 5+ sentence description).
 
 ### Zone C: Sirocco Expanse (8540-8559, 20 rooms)
 - High-variance weather belt with dune ridgelines, glass flats, and ambush washes.
@@ -125,20 +125,20 @@ Per `area_file_spec.md` section 13.1:
 - `room_flags` includes `hot` (`32`) for heat hazard flavor.
 - Supports roaming predator/reaver ecology.
 - Key rooms:
-  - **8540** Stormfront Threshold (important room, 5+ sentence description).
-  - **8547** Blueglass Dune Crest (visibility gimmick room; multiple `E` extra descriptions for what can be seen from the crest).
-  - **8552** Carrion Banner Ridge (faction clash scene).
-  - **8559** Eye of the Sirocco (mini-boss arena; `room_flags` includes `no_mob` per boss placement policy; important room, 5+ sentence description).
+ - **8540** Stormfront Threshold (important room, 5+ sentence description).
+ - **8547** Blueglass Dune Crest (visibility gimmick room; multiple `E` extra descriptions for what can be seen from the crest).
+ - **8552** Carrion Banner Ridge (faction clash scene).
+ - **8559** Eye of the Sirocco (mini-boss arena; `room_flags` includes `no_mob` per boss placement policy; important room, 5+ sentence description).
 
 ### Zone D: Obelisk Marches (8560-8579, 20 rooms)
 - Dense ritual architecture zone: standing stones, ward pylons, anointing yards.
 - Movement becomes deliberate with symbolic gate sequencing using named exits (`^` prefix keywords).
 - Mix of `desert` (open obelisk fields) and `inside` (enclosed ritual chambers) sectors.
 - Key rooms:
-  - **8561** The Twelve Obelisks (important room, 5+ sentence description with `E` extra descriptions for individual obelisk inscriptions).
-  - **8568** Jackal Anointing Yard.
-  - **8572** Cracked Star Dial Plaza (important room, 5+ sentence description).
-  - **8579** Regent's Processional Gate (mini-boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description; named exit `^processional gate` discoverable in description).
+ - **8561** The Twelve Obelisks (important room, 5+ sentence description with `E` extra descriptions for individual obelisk inscriptions).
+ - **8568** Jackal Anointing Yard.
+ - **8572** Cracked Star Dial Plaza (important room, 5+ sentence description).
+ - **8579** Regent's Processional Gate (mini-boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description; named exit `^processional gate` discoverable in description).
 
 ### Zone E: Buried Court Necropolis (8580-8599, 20 rooms)
 - Tomb-complex finale: funerary galleries, eclipse machinery, royal crypt halls.
@@ -146,11 +146,11 @@ Per `area_file_spec.md` section 13.1:
 - Exception: stairwell/transit rooms (8580, 8599) allow recall (omit `no_recall`) so players can escape.
 - Includes final boss route and optional side-loot chambers.
 - Key rooms:
-  - **8580** Descending Funerary Ramp (zone entry; exempt from `no_recall`; important room, 5+ sentence description).
-  - **8586** Chamber of Salt Oaths (important room, 5+ sentence description with `E` extra descriptions for oath inscriptions).
-  - **8592** Eclipse Lens Gallery (arcane puzzle framing; important room with chained `E` extra descriptions for lens examination).
-  - **8598** Throne of Dry Stars (final pre-boss; important room, 5+ sentence description).
-  - **8599** The Regent Beneath the Ninth Sun (final boss room; `room_flags` includes `no_mob`; exempt from `no_recall`; important room, 5+ sentence description).
+ - **8580** Descending Funerary Ramp (zone entry; exempt from `no_recall`; important room, 5+ sentence description).
+ - **8586** Chamber of Salt Oaths (important room, 5+ sentence description with `E` extra descriptions for oath inscriptions).
+ - **8592** Eclipse Lens Gallery (arcane puzzle framing; important room with chained `E` extra descriptions for lens examination).
+ - **8598** Throne of Dry Stars (final pre-boss; important room, 5+ sentence description).
+ - **8599** The Regent Beneath the Ninth Sun (final boss room; `room_flags` includes `no_mob`; exempt from `no_recall`; important room, 5+ sentence description).
 
 ### Connectivity Principles
 
@@ -204,37 +204,37 @@ Per `area_file_spec.md` sections 4.1-5.5:
 ### Factions and Ecology
 
 1. **Charter Caravaneers** (neutral/defensive NPC ecosystem)
-   - Outriders, drovers, quartermasters, water clerks.
-   - `act`: `is_npc` + `stay_area` + `sentinel` (for stationary merchants/clerks). Non-aggressive.
-   - Level range: 30-50.
-   - Archetype: hybrid profile (light arms, some defensive casting).
+  - Outriders, drovers, quartermasters, water clerks.
+  - `act`: `is_npc` + `stay_area` + `sentinel` (for stationary merchants/clerks). Non-aggressive.
+  - Level range: 30-50.
+  - Archetype: hybrid profile (light arms, some defensive casting).
 
 2. **Jackal Synod** (hostile cult faction)
-   - Initiates, toll-priests, embalmer-guards, dusk chanters, astromancer viziers.
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Toll-priests add `sentinel` (stationed at ritual nodes).
-   - Level range: 45-80 (initiates low, viziers high).
-   - Archetype: hybrid profile (ritual casting + melee). Dusk chanters use caster profile.
-   - `affected_by`: toll-priests get `detect_hidden` (`32`); astromancers get `detect_magic` (`16`).
+  - Initiates, toll-priests, embalmer-guards, dusk chanters, astromancer viziers.
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Toll-priests add `sentinel` (stationed at ritual nodes).
+  - Level range: 45-80 (initiates low, viziers high).
+  - Archetype: hybrid profile (ritual casting + melee). Dusk chanters use caster profile.
+  - `affected_by`: toll-priests get `detect_hidden` (`32`); astromancers get `detect_magic` (`16`).
 
 3. **Dune Reaver Confederates** (hostile opportunists)
-   - Skirmishers, beast-handlers, banner captains, the Oathbreaker Captain.
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Banner captains add `no_flee` (`16`).
-   - Level range: 40-70 (skirmishers low, banner captains high).
-   - Archetype: melee profile. Beast-handlers use hybrid profile.
+  - Skirmishers, beast-handlers, banner captains, the Oathbreaker Captain.
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Banner captains add `no_flee` (`16`).
+  - Level range: 40-70 (skirmishers low, banner captains high).
+  - Archetype: melee profile. Beast-handlers use hybrid profile.
 
 4. **Ancient Court Remnants** (undead/construct guardians)
-   - Oathbound sentinels, salt mummies, eclipse wardens.
-   - `act`: `is_npc` + `stay_area` + `aggressive` + `undead` (`16384`) + `sentinel`.
-   - Level range: 65-95.
-   - Archetype: melee profile (sentinels), hybrid profile (eclipse wardens with defensive casting).
-   - `affected_by`: `infrared` (`512`); eclipse wardens add `detect_invis` (`8`).
-   - `resist`: `fire` (`128`), `physical` (`2`). `suscept`: `water` (`64`), `holy` (`8`).
+  - Oathbound sentinels, salt mummies, eclipse wardens.
+  - `act`: `is_npc` + `stay_area` + `aggressive` + `undead` (`16384`) + `sentinel`.
+  - Level range: 65-95.
+  - Archetype: melee profile (sentinels), hybrid profile (eclipse wardens with defensive casting).
+  - `affected_by`: `infrared` (`512`); eclipse wardens add `detect_invis` (`8`).
+  - `resist`: `fire` (`128`), `physical` (`2`). `suscept`: `water` (`64`), `holy` (`8`).
 
 5. **Apex Predators** (desert fauna)
-   - Glass scorpions, ash adders, carrion kites, dune stalkers.
-   - `act`: `is_npc` + `stay_area` + `aggressive` + `no_mind` (`262144`).
-   - Level range: 35-65.
-   - Archetype: melee profile. Ash adders add poison spec (`spec_poison` in `#SPECIALS`).
+  - Glass scorpions, ash adders, carrion kites, dune stalkers.
+  - `act`: `is_npc` + `stay_area` + `aggressive` + `no_mind` (`262144`).
+  - Level range: 35-65.
+  - Archetype: melee profile. Ash adders add poison spec (`spec_poison` in `#SPECIALS`).
 
 ### Boss Ladder
 
@@ -300,26 +300,26 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 ### Item Families
 
 1. **Caravan Charter Set** (levels 30-50, traveler gear)
-   - Veils (`head`, weight 1-5 caster), wraps (`about`, weight 1-5 caster), charter bucklers (`hold` + `ITEM_BUCKLER`, weight 11-15 tank), waterskin relics (`hold`, `ITEM_TREASURE`).
-   - `L` level lines: 30-50 range.
+  - Veils (`head`, weight 1-5 caster), wraps (`about`, weight 1-5 caster), charter bucklers (`hold` + `ITEM_BUCKLER`, weight 11-15 tank), waterskin relics (`hold`, `ITEM_TREASURE`).
+  - `L` level lines: 30-50 range.
 
 2. **Synod Ritual Relics** (levels 50-75, cult-themed)
-   - Jackal masks (`face`, weight 1-5 caster), anointing blades (`hold` + `ITEM_WEAPON`, `value3 = 1` slice, weight 6-10 melee), prayer censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster), eclipse seals (`finger`, weight 1-5 caster).
-   - `L` level lines: 50-75 range.
+  - Jackal masks (`face`, weight 1-5 caster), anointing blades (`hold` + `ITEM_WEAPON`, `value3 = 1` slice, weight 6-10 melee), prayer censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster), eclipse seals (`finger`, weight 1-5 caster).
+  - `L` level lines: 50-75 range.
 
 3. **Reaver Spoils** (levels 40-70, salvaged military)
-   - Salvaged polearms (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 11` pierce, weight 6-10 melee), hooked blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), storm cloaks (`about`, weight 11-15 tank).
-   - `L` level lines: 40-70 range.
+  - Salvaged polearms (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 11` pierce, weight 6-10 melee), hooked blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), storm cloaks (`about`, weight 11-15 tank).
+  - `L` level lines: 40-70 range.
 
 4. **Regent Court Regalia** (levels 75-100, elite/boss drops)
-   - Diadem fragments (`head`, weight 1-5 caster), sun-court mail (`body`, weight 11-15 tank), horizon-forged greatweapons (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 3` slash, weight 6-10 melee).
-   - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
-   - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
-   - `L` level lines: 75-100 range.
+  - Diadem fragments (`head`, weight 1-5 caster), sun-court mail (`body`, weight 11-15 tank), horizon-forged greatweapons (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 3` slash, weight 6-10 melee).
+  - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
+  - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
+  - `L` level lines: 75-100 range.
 
 5. **Lore Objects / Quest Hooks** (various levels)
-   - Salt ledgers (`ITEM_TREASURE`, `hold`, weight 1-5), oath tablets (`ITEM_TREASURE`, `hold`, weight 6-10), cracked astrolabes (`ITEM_TREASURE`, `hold`, weight 1-5), cistern key-discs (`ITEM_KEY`, `hold`, weight 1-5).
-   - Key objects: any cistern key-disc used as `<key_vnum>` for a locked door must exist in `#OBJECTS` with `item_type = ITEM_KEY` (`18`).
+  - Salt ledgers (`ITEM_TREASURE`, `hold`, weight 1-5), oath tablets (`ITEM_TREASURE`, `hold`, weight 6-10), cracked astrolabes (`ITEM_TREASURE`, `hold`, weight 1-5), cistern key-discs (`ITEM_KEY`, `hold`, weight 1-5).
+  - Key objects: any cistern key-disc used as `<key_vnum>` for a locked door must exist in `#OBJECTS` with `item_type = ITEM_KEY` (`18`).
 
 ### Key Objects for Locked Doors
 
@@ -390,22 +390,22 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 Planned door resets:
 
 1. **Zone B Sealed Descent (8539):** Direction down (D5) to Zone E entry.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Cistern Vault Key object.
-   - `D` reset: `D 0 8539 5 2` (locked).
-   - Reverse exit on 8580 must also have `door` bit set.
-   - Key object (Cistern Vault Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Cistern Vault Key object.
+  - `D` reset: `D 0 8539 5 2` (locked).
+  - Reverse exit on 8580 must also have `door` bit set.
+  - Key object (Cistern Vault Key) must exist in `#OBJECTS`.
 
 2. **Zone D Processional Gate (8579):** Direction south (D2) or appropriate direction to Zone E.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Processional Gate Seal object.
-   - `D` reset: `D 0 8579 2 2` (locked).
-   - Reverse exit must also have `door` bit set.
-   - Key object (Processional Gate Seal) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Processional Gate Seal object.
+  - `D` reset: `D 0 8579 2 2` (locked).
+  - Reverse exit must also have `door` bit set.
+  - Key object (Processional Gate Seal) must exist in `#OBJECTS`.
 
 3. **Zone E Boss Chamber (8598 -> 8599):** Direction into boss room.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Regent's Eclipse Key object.
-   - `D` reset: `D 0 8598 <dir> 2` (locked).
-   - Reverse exit on 8599 must also have `door` bit set.
-   - Key object (Regent's Eclipse Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Regent's Eclipse Key object.
+  - `D` reset: `D 0 8598 <dir> 2` (locked).
+  - Reverse exit on 8599 must also have `door` bit set.
+  - Key object (Regent's Eclipse Key) must exist in `#OBJECTS`.
 
 All three doors reset to **locked** (state `2`). Each has a corresponding key object in `#OBJECTS`. Keys can be placed on gatekeeper mobs via `G` resets or in adjacent rooms via `O` resets.
 
@@ -438,7 +438,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#SCRIPTS` (if any inline scripts are used)
+
 5. `#OBJECTS`
 6. `#SHOPS` (none planned for this area; no merchant NPCs)
 7. `#RESETS`

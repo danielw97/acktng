@@ -230,16 +230,10 @@ int top_reset;
 int top_room;
 int top_shop;
 
-bool MOBtrigger;
-
 /*
  * program locals
  */
 
-int mprog_name_to_type args((char *name));
-void mprog_file_read args((char *f, MOB_INDEX_DATA *pMobIndex));
-void load_scripts args((FILE * fp));
-void mprog_read_programs args((FILE * fp, MOB_INDEX_DATA *pMobIndex));
 
 /*
  * Memory management.
@@ -603,8 +597,6 @@ void boot_db(void)
                load_area(fpArea);
             else if (!str_cmp(word, "MOBILES"))
                load_mobiles(fpArea);
-            else if (!str_cmp(word, "SCRIPTS"))
-               load_scripts(fpArea);
             else if (!str_cmp(word, "OBJECTS"))
                load_objects(fpArea);
             else if (!str_cmp(word, "RESETS"))
@@ -646,7 +638,6 @@ void boot_db(void)
     * Declare db booting over.
     * Reset all areas once.
     * Load up the notes file.
-    * Set the MOBtrigger.
     */
    {
       log_f("Fixing Exits......");
@@ -661,7 +652,6 @@ void boot_db(void)
       area_update();
       log_f("Loading notes");
       load_notes();
-      MOBtrigger = TRUE;
       log_f("Loading corpses.");
       load_corpses();
       booting_up = TRUE;
@@ -725,7 +715,6 @@ void load_area(FILE *fp)
    pArea->last_area_shop = NULL;
    pArea->first_area_specfunc = NULL;
    pArea->last_area_specfunc = NULL;
-   pArea->first_area_script = NULL;
    area_revision = -1;
 
    /* MAG Mod for optionals additions to area headers. */
@@ -1293,15 +1282,6 @@ void load_mobiles(FILE *fp)
          {
             pMobIndex->loot_chance[i] = fread_number(fp);
          }
-      }
-      else
-         ungetc(letter, fp);
-
-      letter = fread_letter(fp);
-      if (letter == '>')
-      {
-         ungetc(letter, fp);
-         mprog_read_programs(fp, pMobIndex);
       }
       else
          ungetc(letter, fp);
@@ -3990,174 +3970,6 @@ void tail_chain(void)
    return;
 }
 
-/*
- * program code block
- */
-/* the functions */
-
-/* This routine transfers between alpha and numeric forms of the
- *  mob_prog bitvector types. This allows the use of the words in the
- *  mob/script files.
- */
-int mprog_name_to_type(name)
-char *name;
-{
-   if (!str_cmp(name, "in_file_prog"))
-      return IN_FILE_PROG;
-   if (!str_cmp(name, "act_prog"))
-      return ACT_PROG;
-   if (!str_cmp(name, "speech_prog"))
-      return SPEECH_PROG;
-   if (!str_cmp(name, "rand_prog"))
-      return RAND_PROG;
-   if (!str_cmp(name, "fight_prog"))
-      return FIGHT_PROG;
-   if (!str_cmp(name, "hitprcnt_prog"))
-      return HITPRCNT_PROG;
-   if (!str_cmp(name, "death_prog"))
-      return DEATH_PROG;
-   if (!str_cmp(name, "entry_prog"))
-      return ENTRY_PROG;
-   if (!str_cmp(name, "greet_prog"))
-      return GREET_PROG;
-   if (!str_cmp(name, "all_greet_prog"))
-      return ALL_GREET_PROG;
-   if (!str_cmp(name, "give_prog"))
-      return GIVE_PROG;
-   if (!str_cmp(name, "bribe_prog"))
-      return BRIBE_PROG;
-   return (ERROR_PROG);
-}
-
-/* Had to redo script loading to work with double linked lists. -- Altrag */
-void mprog_file_read(char *f, MOB_INDEX_DATA *pMobIndex)
-{
-   MPROG_DATA *mprog;
-   FILE *fp;
-   char letter;
-   char name[128];
-   char *permf;
-   int type;
-
-   sprintf(name, "%s%s", MOB_DIR, f);
-   if (!(fp = fopen(name, "r")))
-   {
-      bug("Mob: %d couldn't opne script file.", pMobIndex->vnum);
-      return;
-   }
-   permf = str_dup(f);
-   for (;;)
-   {
-      if ((letter = fread_letter(fp)) == '|')
-         break;
-      else if (letter != '>')
-      {
-         bug("Mprog_file_read: Invalid letter mob %d.", pMobIndex->vnum);
-         return;
-      }
-      switch ((type = fread_number(fp)))
-      {
-      case ERROR_PROG:
-         bug("Mob %d: in file prog error.", pMobIndex->vnum);
-         return;
-      case IN_FILE_PROG:
-         bug("Mob %d: nested in file progs.", pMobIndex->vnum);
-         return;
-      default:
-         SET_BIT(pMobIndex->progtypes, type);
-         GET_FREE(mprog, mprog_free);
-         mprog->type = type;
-         mprog->arglist = fread_string(fp);
-         fread_to_eol(fp);
-         mprog->comlist = fread_string(fp);
-         fread_to_eol(fp);
-         mprog->filename = permf;
-         break;
-      }
-   }
-   if (fp != NULL)
-   {
-      fclose(fp);
-      fp = NULL;
-   }
-   return;
-}
-
-void load_scripts(FILE *fp)
-{
-   char letter;
-   MOB_INDEX_DATA *iMob;
-   int value;
-
-   for (;;)
-      switch (LOWER(letter = fread_letter(fp)))
-      {
-      default:
-         bug("Load_scripts: bad command '%c'.", letter);
-         fread_to_eol(fp);
-         break;
-      case 's':
-         fread_to_eol(fp);
-         return;
-      case '*':
-         fread_to_eol(fp);
-         break;
-      case 'm':
-         value = fread_number(fp);
-         if (!(iMob = get_mob_index(value)))
-         {
-            bug("Load_scripts: vnum %d doesn't exist.", value);
-            fread_to_eol(fp);
-            break;
-         }
-         mprog_file_read(fread_word(fp), iMob);
-         fread_to_eol(fp);
-         break;
-      }
-   return;
-}
-
-void mprog_read_programs(FILE *fp, MOB_INDEX_DATA *pMobIndex)
-{
-   MPROG_DATA *mprog;
-   char letter;
-   int type;
-
-   for (;;)
-   {
-      if ((letter = fread_letter(fp)) == '|')
-         break;
-      else if (letter != '>')
-      {
-         bug("Load_mobiles: vnum %d SCRIPT char", pMobIndex->vnum);
-         ungetc(letter, fp);
-         return;
-      }
-      type = mprog_name_to_type(fread_word(fp));
-      switch (type)
-      {
-      case ERROR_PROG:
-         bug("Load_mobiles: vnum %d SCRIPT type.", pMobIndex->vnum);
-         fread_to_eol(fp);
-         return;
-      case IN_FILE_PROG:
-         mprog_file_read(fread_string(fp), pMobIndex);
-         fread_to_eol(fp);
-         break;
-      default:
-         SET_BIT(pMobIndex->progtypes, type);
-         GET_FREE(mprog, mprog_free);
-         mprog->type = type;
-         mprog->arglist = fread_string(fp);
-         fread_to_eol(fp);
-         mprog->comlist = fread_string(fp);
-         fread_to_eol(fp);
-         LINK(mprog, pMobIndex->first_mprog, pMobIndex->last_mprog, next, prev);
-         break;
-      }
-   }
-   return;
-}
 
 void message_update(void)
 {

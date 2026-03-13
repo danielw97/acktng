@@ -175,36 +175,36 @@ Only major political boundary gates and select road checkpoints use doors; inter
 ### Perimeter Gates
 
 1. **South Lantern Gate** (`15512` south exit to Midgaard `3009`)
-   - `D2` (south) exit: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
-   - `#RESETS` command `D`: `D 0 15512 2 1` (door south, state `closed`).
-   - Reverse exit on Midgaard `3009` (north) must also have `door` bit set.
+  - `D2` (south) exit: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
+  - `#RESETS` command `D`: `D 0 15512 2 1` (door south, state `closed`).
+  - Reverse exit on Midgaard `3009` (north) must also have `door` bit set.
 
 2. **North Lantern Gate** (`15994` north exit to Kowloon `14095`)
-   - `D0` (north) exit: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
-   - `#RESETS` command `D`: `D 0 15994 0 1` (door north, state `closed`).
-   - Reverse exit on Kowloon `14095` (south) already has `door` bit set per Kowloon plan.
+  - `D0` (north) exit: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
+  - `#RESETS` command `D`: `D 0 15994 0 1` (door north, state `closed`).
+  - Reverse exit on Kowloon `14095` (south) already has `door` bit set per Kowloon plan.
 
 ### Optional Internal Checkpoint Doors (if desired for pacing, max 4)
 
 3. **Fen Toll Bridge Gate** (`15673` east exit `<->` `15674` west exit)
-   - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
-   - `#RESETS`: `D 0 15673 1 1` (east door, state closed).
-   - Note: `15673` is a road room (x=13, y=8); `15674` (x=14, y=8) is adjacent east.
+  - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
+  - `#RESETS`: `D 0 15673 1 1` (east door, state closed).
+  - Note: `15673` is a road room (x=13, y=8); `15674` (x=14, y=8) is adjacent east.
 
 4. **Ridge Pass Barricade** (`15794` east exit `<->` `15795` west exit)
-   - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
-   - `#RESETS`: `D 0 15794 1 1` (east door, state closed).
-   - Note: `15794` is a road room (x=14, y=14); `15795` (x=15, y=14) is adjacent east.
+  - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
+  - `#RESETS`: `D 0 15794 1 1` (east door, state closed).
+  - Note: `15794` is a road room (x=14, y=14); `15795` (x=15, y=14) is adjacent east.
 
 5. **Ancestor Ring Ward Gate** (`15893` east exit `<->` `15894` west exit)
-   - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
-   - `#RESETS`: `D 0 15893 1 1` (east door, state closed).
-   - Note: `15893` is a road room (x=13, y=19); `15894` (x=14, y=19) is adjacent east.
+  - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
+  - `#RESETS`: `D 0 15893 1 1` (east door, state closed).
+  - Note: `15893` is a road room (x=13, y=19); `15894` (x=14, y=19) is adjacent east.
 
 6. **Northern Customs Post** (`15952` east exit `<->` `15953` west exit)
-   - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
-   - `#RESETS`: `D 0 15952 1 1` (east door, state closed).
-   - Note: `15952` and `15953` are consecutive road rooms (x=12/13, y=22). This checkpoint gates passage along the road itself.
+  - Both exits: `<locks>` includes `door` bit (`1`). `<key_vnum>` = `-1`.
+  - `#RESETS`: `D 0 15952 1 1` (east door, state closed).
+  - Note: `15952` and `15953` are consecutive road rooms (x=12/13, y=22). This checkpoint gates passage along the road itself.
 
 All checkpoint doors reset to **closed** (state `1`), not locked. Since they are not locked on reset, no key objects are required (spec: key objects are only mandatory when `D` state = `2` locked). `<key_vnum>` is set to `-1` per spec for exits that cannot be locked/unlocked with a key.
 
@@ -216,12 +216,12 @@ If optional checkpoint doors are omitted, only the two perimeter gates remain.
 All mobs must be local to their intended micro-region. Use one of two containment methods per spawn group:
 
 1. **Sentinel method:**
-   - Use `sentinel` + `stay_area` for stationary defenders, camp NPCs, shrine guardians, and named encounters.
+  - Use `sentinel` + `stay_area` for stationary defenders, camp NPCs, shrine guardians, and named encounters.
 
 2. **No-mob boundary method:**
-   - Build small subregion perimeters where all exits out of a mob pocket pass through `ROOM_NO_MOB` choke rooms.
-   - Mobs can roam within their pocket but cannot cross perimeter exits.
-   - Roaming mobs must still have `stay_area` set.
+  - Build small subregion perimeters where all exits out of a mob pocket pass through `ROOM_NO_MOB` choke rooms.
+  - Mobs can roam within their pocket but cannot cross perimeter exits.
+  - Roaming mobs must still have `stay_area` set.
 
 ### Placement rules
 - **Roadside patrol/traffic mobs** (target ~20 near south road, scaling modestly north): mostly sentinel or 2-4 room no_mob-bounded patrol loops.
@@ -249,10 +249,10 @@ This ensures progression is spatially intuitive and compliant with the requested
 - Exits are primarily cardinal; vertical exits used sparingly for caverns/ridges.
 - Bi-directional exits required unless one-way is explicitly justified.
 - Irregularity enforced via:
-  - nonuniform branch lengths,
-  - asymmetric loops,
-  - cul-de-sacs with rewards/lore,
-  - off-axis reconnectors between regions.
+ - nonuniform branch lengths,
+ - asymmetric loops,
+ - cul-de-sacs with rewards/lore,
+ - off-axis reconnectors between regions.
 - Avoid perfect rectangles of connected rooms in final exit graph.
 
 ### Suggested structural percentages

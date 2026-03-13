@@ -2,14 +2,14 @@
 
 ## Overview
 
-**Area Name:** `@@dShadowmere, the @@pBlighted @@RCrownlands@@N`  
-**File Name:** `shadowmere.are`  
-**Keyword:** `shadowmere blight crownlands plague oathbound ruin`  
-**Area Number:** `N 1400`  
-**Level Range:** `I 30 60`  
-**Vnum Range (fixed):** **1400-1600** (`V 1400 1600`)  
-**Room Envelope Used:** **1400-1499 (100/100 rooms used)**  
-**Mobile Envelope Used:** **1400-1460 (61/61 mobs used)**  
+**Area Name:** `@@dShadowmere, the @@pBlighted @@RCrownlands@@N` 
+**File Name:** `shadowmere.are` 
+**Keyword:** `shadowmere blight crownlands plague oathbound ruin` 
+**Area Number:** `N 1400` 
+**Level Range:** `I 30 60` 
+**Vnum Range (fixed):** **1400-1600** (`V 1400 1600`) 
+**Room Envelope Used:** **1400-1499 (100/100 rooms used)** 
+**Mobile Envelope Used:** **1400-1460 (61/61 mobs used)** 
 **Object Envelope Used:** **1400-1600 (201/201 objects used)**
 
 **Primary Design Goal:** Rebuild Shadowmere into a coherent former Midgaard-aligned frontier march that collapsed during plague militarization, then transformed into a blight-soaked necro-political warzone where every room, mob, and object vnum is repurposed to support one connected narrative arc.
@@ -66,10 +66,10 @@ Proposed header strings:
 
 - Shadowmere must read as a **failed extension of Midgaard institutions**, not an isolated evil castle.
 - Direct references in room/object/mob writing should echo:
-  - Lantern-era registry habits (oath tablets, posted orders, watch rotations),
-  - Violet Compact containment language,
-  - Ash-and-Iron emergency requisition doctrine,
-  - civic-memory disputes over who is owed burial, trial, or release.
+ - Lantern-era registry habits (oath tablets, posted orders, watch rotations),
+ - Violet Compact containment language,
+ - Ash-and-Iron emergency requisition doctrine,
+ - civic-memory disputes over who is owed burial, trial, or release.
 - Expedition records in Shadowmere should mention Midgaard concerns: route safety, plague spillover, and archive legitimacy.
 
 ---
@@ -137,8 +137,8 @@ Rebuild all 61 mob vnums as coherent faction ecology:
 - **1437-1448:** vampire household officers, enthralled retinue, duelists, blood stewards.
 - **1449-1458:** poisoners, execution crews, necropolis processional captains.
 - **1459-1460 (boss pair):**
-  - 1459 **The Countess-Regent of Ashwine** (political apex of Crimson Household)
-  - 1460 **Marshal-Lector Veyr, Oath of the Last Bell** (final authority claim)
+ - 1459 **The Countess-Regent of Ashwine** (political apex of Crimson Household)
+ - 1460 **Marshal-Lector Veyr, Oath of the Last Bell** (final authority claim)
 
 Design rules:
 - Enemy composition shifts from martial order -> ritual bureaucracy -> predatory aristocracy -> death-machine command.
@@ -170,13 +170,13 @@ Itemization principles:
 - Preserve deterministic progression through districts I -> X.
 - Provide loopback shortcuts only after district clears to reduce corpse-runs.
 - Each district should include:
-  - ambient patrol reset,
-  - one elite anchor encounter,
-  - one transition gate encounter.
+ - ambient patrol reset,
+ - one elite anchor encounter,
+ - one transition gate encounter.
 - Final cadence:
-  - defeat Countess-Regent line influence,
-  - breach Servitor Spine command layer,
-  - confront Marshal-Lector at Final Count axis.
+ - defeat Countess-Regent line influence,
+ - breach Servitor Spine command layer,
+ - confront Marshal-Lector at Final Count axis.
 
 ---
 

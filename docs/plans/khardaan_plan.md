@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Area Name:** `@@yKhar'Daan, the @@aSunken @@pNecropolis@@N`  
-**File Name:** `khardaan.are`  
-**Keyword:** `khardaan necropolis desert dune ancient burial`  
-**Area Number:** `N 115`  
-**Level Range:** `I 60 80`  
-**Vnum Range (fixed):** **31000-31099** (`V 31000 31099`)  
-**Room Count Target:** **100/100 rooms used**  
+**Area Name:** `@@yKhar'Daan, the @@aSunken @@pNecropolis@@N` 
+**File Name:** `khardaan.are` 
+**Keyword:** `khardaan necropolis desert dune ancient burial` 
+**Area Number:** `N 115` 
+**Level Range:** `I 60 80` 
+**Vnum Range (fixed):** **31000-31099** (`V 31000 31099`) 
+**Room Count Target:** **100/100 rooms used** 
 **Primary Design Goal:** Rebuild the area as a coherent drowned-funerary megasite tied directly to oasis water politics and pyramid dynasty theology, while preserving the exact vnum envelope and fully repurposing every room.
 
 Khar'Daan becomes a former **funerary reservoir-city** built to preserve elite dead during drought eras. Its upper city is sand-scoured and broken; its middle vaults are ritual-industrial embalming halls; its lower city is partially flooded by aquifer breakthroughs linked to the Great Oasis and pyramid-era hydraulic failures.

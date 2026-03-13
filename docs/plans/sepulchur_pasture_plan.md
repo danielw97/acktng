@@ -79,7 +79,7 @@ This plan fully replaces the current repetitive lane-grid presentation with a co
 46. If a door is reset to `locked` via `D` state `2`, `<key_vnum>` must be set to a valid key object vnum (not `-1`), and that key object must exist in `#OBJECTS`.
 
 ### Section Order
-47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 48. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).
@@ -328,19 +328,19 @@ Purpose: climax wing with command crypt, bell tower, boss encounters, and egress
 The area uses three legal tokens that combine via the `ITEM_PIECE` mechanic (spec §7.5) to form a fused writ. The fused writ is required to pass through the locked gate between Zone 4 and Zone 5.
 
 - **30197** Token of Receipt (`item_type = 29`, ITEM_PIECE)
-  - `value0`: `0` (no previous piece)
-  - `value1`: `30198` (next piece: Token of Witness)
-  - `value2`: `30200` (replacement: Fused Writ of Interment)
+ - `value0`: `0` (no previous piece)
+ - `value1`: `30198` (next piece: Token of Witness)
+ - `value2`: `30200` (replacement: Fused Writ of Interment)
 - **30198** Token of Witness (`item_type = 29`, ITEM_PIECE)
-  - `value0`: `30197` (previous piece: Token of Receipt)
-  - `value1`: `30199` (next piece: Token of Interment)
-  - `value2`: `30200` (replacement: Fused Writ of Interment)
+ - `value0`: `30197` (previous piece: Token of Receipt)
+ - `value1`: `30199` (next piece: Token of Interment)
+ - `value2`: `30200` (replacement: Fused Writ of Interment)
 - **30199** Token of Interment (`item_type = 29`, ITEM_PIECE)
-  - `value0`: `30198` (previous piece: Token of Witness)
-  - `value1`: `0` (no next piece)
-  - `value2`: `30200` (replacement: Fused Writ of Interment)
+ - `value0`: `30198` (previous piece: Token of Witness)
+ - `value1`: `0` (no next piece)
+ - `value2`: `30200` (replacement: Fused Writ of Interment)
 - **30200** Fused Writ of Interment (`item_type = 18`, ITEM_KEY)
-  - Used as `<key_vnum>` for the locked door between `30237` and `30238`.
+ - Used as `<key_vnum>` for the locked door between `30237` and `30238`.
 
 Token drop assignments:
 - Token of Receipt drops from Marshal Edrin Vale (`30189`) or via reset in a Zone 2 room.

@@ -126,11 +126,11 @@ Entry spine and external connectors. Convoy choke points, permit checks, caravan
 
 - Sector: `city` (`1`) for paved causeway rooms; `desert` (`10`) for outer approach dunes.
 - Key rooms:
-  - **9800** Western Causeway Gate (important room, 5+ sentence description; external connector to Great Oasis routes).
-  - **9808** Lantern Inspection Post (convoy permit checkpoint; important room, 5+ sentence description).
-  - **9815** Caravan Camp Margin (hub connecting to Bazaar and Bastion districts; important room, 5+ sentence description).
-  - **9825** Eastern Approach Road (external connector toward Eastern Desert charter routes).
-  - **9834** Southern Causeway Fork (transition toward South Survey Gate; important room, 5+ sentence description).
+ - **9800** Western Causeway Gate (important room, 5+ sentence description; external connector to Great Oasis routes).
+ - **9808** Lantern Inspection Post (convoy permit checkpoint; important room, 5+ sentence description).
+ - **9815** Caravan Camp Margin (hub connecting to Bazaar and Bastion districts; important room, 5+ sentence description).
+ - **9825** Eastern Approach Road (external connector toward Eastern Desert charter routes).
+ - **9834** Southern Causeway Fork (transition toward South Survey Gate; important room, 5+ sentence description).
 
 ### District 2: Canopy Bazaar (9835-9869, 35 rooms)
 
@@ -138,11 +138,11 @@ Social and economic hub. Brokers, quartermasters, relic appraisers, dispute cler
 
 - Sector: `city` (`1`) throughout.
 - Key rooms:
-  - **9835** Bazaar Entrance Arch (important room, 5+ sentence description).
-  - **9842** Quartermaster's Exchange (trade hub; important room with `E` extra descriptions for posted manifests).
-  - **9850** Relic Appraisal Court (lore room; important room, 5+ sentence description with chained `E` extra descriptions for examined relics).
-  - **9858** Dispute Clerks' Gallery (civil arbitration hall; inside sector).
-  - **9869** Bazaar Rear Gate (connects to Sluice Bastion).
+ - **9835** Bazaar Entrance Arch (important room, 5+ sentence description).
+ - **9842** Quartermaster's Exchange (trade hub; important room with `E` extra descriptions for posted manifests).
+ - **9850** Relic Appraisal Court (lore room; important room, 5+ sentence description with chained `E` extra descriptions for examined relics).
+ - **9858** Dispute Clerks' Gallery (civil arbitration hall; inside sector).
+ - **9869** Bazaar Rear Gate (connects to Sluice Bastion).
 
 ### District 3: Sluice Bastion (9870-9899, 30 rooms)
 
@@ -151,11 +151,11 @@ Military-water infrastructure. Gatehouses, pump works, ration locks, defensive t
 - Sector: mix of `city` (`1`) for outdoor fortification terraces and `inside` (`11`) for interior pump works and gatehouse rooms.
 - Indoor rooms use `room_flags` including `indoors` (`8`).
 - Key rooms:
-  - **9870** Bastion Outer Gate (important room, 5+ sentence description; named exit `^bastion gate` discoverable in description).
-  - **9878** Pump Works Central (lore-critical engineering room; inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms).
-  - **9885** Ration Lock Chamber (important room; inside sector).
-  - **9892** Warden Command Terrace (important room, 5+ sentence description; outdoor sector).
-  - **9899** Bastion Rear Passage (connects to Embalmer's Yard and Sub-Basin Tunnels).
+ - **9870** Bastion Outer Gate (important room, 5+ sentence description; named exit `^bastion gate` discoverable in description).
+ - **9878** Pump Works Central (lore-critical engineering room; inside sector; important room, 5+ sentence description with `E` extra descriptions for sluice mechanisms).
+ - **9885** Ration Lock Chamber (important room; inside sector).
+ - **9892** Warden Command Terrace (important room, 5+ sentence description; outdoor sector).
+ - **9899** Bastion Rear Passage (connects to Embalmer's Yard and Sub-Basin Tunnels).
 
 ### District 4: Embalmer's Yard Annex (9900-9924, 25 rooms)
 
@@ -163,11 +163,11 @@ Former preparation quarter repurposed for expedition dead. Introduces pyramid fu
 
 - Sector: `inside` (`11`) throughout; `room_flags` includes `indoors` (`8`).
 - Key rooms:
-  - **9900** Embalmer's Yard Gate (important room, 5+ sentence description; named exit `^yard gate` discoverable in description).
-  - **9906** Preparation Hall (lore room with embalming motifs from Southern Pyramid tradition; important room, 5+ sentence description).
-  - **9912** Casualty Ledger Archive (chained `E` extra descriptions for expedition death records and pyramid-origin curse notations).
-  - **9918** Mortuary Circle Sanctum (Tribunal Splinter secondary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
-  - **9924** Sealed Descent (connects to Sub-Basin Tunnels via locked door).
+ - **9900** Embalmer's Yard Gate (important room, 5+ sentence description; named exit `^yard gate` discoverable in description).
+ - **9906** Preparation Hall (lore room with embalming motifs from Southern Pyramid tradition; important room, 5+ sentence description).
+ - **9912** Casualty Ledger Archive (chained `E` extra descriptions for expedition death records and pyramid-origin curse notations).
+ - **9918** Mortuary Circle Sanctum (Tribunal Splinter secondary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
+ - **9924** Sealed Descent (connects to Sub-Basin Tunnels via locked door).
 
 ### District 5: Sub-Basin Tunnels (9925-9959, 35 rooms)
 
@@ -175,11 +175,11 @@ Smuggler channels, sink chambers, hostile fauna/cult ambushes.
 
 - Sector: `inside` (`11`) throughout; `room_flags` includes `indoors` (`8`) and `dark` (`1`).
 - Key rooms:
-  - **9925** Tunnel Access Shaft (important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
-  - **9935** Smuggler's Cache (loot room with contraband relic fragments).
-  - **9942** Sink Chamber (hazard room with water/collapse danger; important room, 5+ sentence description).
-  - **9950** Cult Ambush Junction (Tribunal Splinter patrol hub).
-  - **9959** Deep Basin Access (connects to South Survey Gate district).
+ - **9925** Tunnel Access Shaft (important room, 5+ sentence description; vertical connector via D4 up / D5 down exits).
+ - **9935** Smuggler's Cache (loot room with contraband relic fragments).
+ - **9942** Sink Chamber (hazard room with water/collapse danger; important room, 5+ sentence description).
+ - **9950** Cult Ambush Junction (Tribunal Splinter patrol hub).
+ - **9959** Deep Basin Access (connects to South Survey Gate district).
 
 ### District 6: South Survey Gate (9960-9999, 40 rooms)
 
@@ -187,12 +187,12 @@ Forward command for pyramid-road claims and legal jurisdiction conflict. Boss zo
 
 - Sector: mix of `city` (`1`) for military plaza rooms and `inside` (`11`) for command chambers.
 - Key rooms:
-  - **9960** Survey Gate Approach (important room, 5+ sentence description; transition from tunnels to military zone).
-  - **9970** Forward Command Hall (important room, 5+ sentence description; inside sector; named exit `^command hall` discoverable).
-  - **9980** Jurisdiction Court (lore-critical room where water-law and pyramid-claim doctrines collide; important room, 5+ sentence description with chained `E` extra descriptions).
-  - **9990** Marshal's Redoubt (pre-boss staging; important room, 5+ sentence description).
-  - **9995** South Survey Gate (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
-  - **9999** Southern Road (external connector toward Southern Pyramid approach routes; important room, 5+ sentence description).
+ - **9960** Survey Gate Approach (important room, 5+ sentence description; transition from tunnels to military zone).
+ - **9970** Forward Command Hall (important room, 5+ sentence description; inside sector; named exit `^command hall` discoverable).
+ - **9980** Jurisdiction Court (lore-critical room where water-law and pyramid-claim doctrines collide; important room, 5+ sentence description with chained `E` extra descriptions).
+ - **9990** Marshal's Redoubt (pre-boss staging; important room, 5+ sentence description).
+ - **9995** South Survey Gate (primary boss room; `room_flags` includes `no_mob`; important room, 5+ sentence description).
+ - **9999** Southern Road (external connector toward Southern Pyramid approach routes; important room, 5+ sentence description).
 
 ### Connectivity Principles
 
@@ -244,36 +244,36 @@ Per `area_file_spec.md` sections 4.1-5.5:
 ### Faction Roster
 
 1. **Bastion Wardens** (order/military faction)
-   - Sluice guards, convoy marshals, ration enforcers, pump engineers, wall sentries.
-   - `act`: `is_npc` + `stay_area` + `sentinel` (for stationary guards/engineers). Non-aggressive.
-   - Level range: 50-65.
-   - Archetype: melee profile (guards) and hybrid profile (marshals with light defensive casting).
+  - Sluice guards, convoy marshals, ration enforcers, pump engineers, wall sentries.
+  - `act`: `is_npc` + `stay_area` + `sentinel` (for stationary guards/engineers). Non-aggressive.
+  - Level range: 50-65.
+  - Archetype: melee profile (guards) and hybrid profile (marshals with light defensive casting).
 
 2. **Bazaar Syndics** (neutral-pragmatic faction)
-   - Permit clerks, relic appraisers, trade brokers, dispute mediators, quartermasters.
-   - `act`: `is_npc` + `stay_area` + `sentinel`. Non-aggressive.
-   - Level range: 50-55.
-   - Archetype: hybrid profile (light arms, some utility casting).
+  - Permit clerks, relic appraisers, trade brokers, dispute mediators, quartermasters.
+  - `act`: `is_npc` + `stay_area` + `sentinel`. Non-aggressive.
+  - Level range: 50-55.
+  - Archetype: hybrid profile (light arms, some utility casting).
 
 3. **Expedition Mortuary Circle** (hostile-neutral faction)
-   - Embalmers, corpse handlers, funerary ledger scribes, preservation ritualists.
-   - `act`: `is_npc` + `stay_area`. Embalmers are `sentinel` and non-aggressive; preservation ritualists are `aggressive` in restricted sanctum areas.
-   - Level range: 55-65.
-   - Archetype: caster profile (ritual casting, preservation magic).
-   - `affected_by`: `detect_hidden` (`32`) for preservation ritualists.
+  - Embalmers, corpse handlers, funerary ledger scribes, preservation ritualists.
+  - `act`: `is_npc` + `stay_area`. Embalmers are `sentinel` and non-aggressive; preservation ritualists are `aggressive` in restricted sanctum areas.
+  - Level range: 55-65.
+  - Archetype: caster profile (ritual casting, preservation magic).
+  - `affected_by`: `detect_hidden` (`32`) for preservation ritualists.
 
 4. **Jackal Tribunal Splinter** (hostile cult faction)
-   - Verdict-callers, oath-breaker hunters, death-claim advocates, curse scribes.
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Verdict-callers add `sentinel` (stationed at ritual nodes).
-   - Level range: 55-70 (oath-breaker hunters low, curse scribes high).
-   - Archetype: hybrid profile (legal-ritual casting + melee). Curse scribes use caster profile.
-   - `affected_by`: death-claim advocates get `detect_hidden` (`32`); curse scribes get `detect_magic` (`16`).
+  - Verdict-callers, oath-breaker hunters, death-claim advocates, curse scribes.
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Verdict-callers add `sentinel` (stationed at ritual nodes).
+  - Level range: 55-70 (oath-breaker hunters low, curse scribes high).
+  - Archetype: hybrid profile (legal-ritual casting + melee). Curse scribes use caster profile.
+  - `affected_by`: death-claim advocates get `detect_hidden` (`32`); curse scribes get `detect_magic` (`16`).
 
 5. **Sub-Basin Fauna and Smugglers** (hostile)
-   - Tunnel scorpions, basin vipers, smuggler operatives, contraband runners.
-   - `act`: `is_npc` + `stay_area` + `aggressive`. Fauna add `no_mind` (`262144`).
-   - Level range: 50-60.
-   - Archetype: melee profile (fauna), hybrid profile (smugglers).
+  - Tunnel scorpions, basin vipers, smuggler operatives, contraband runners.
+  - `act`: `is_npc` + `stay_area` + `aggressive`. Fauna add `no_mind` (`262144`).
+  - Level range: 50-60.
+  - Archetype: melee profile (fauna), hybrid profile (smugglers).
 
 ### Boss Ladder
 
@@ -330,30 +330,30 @@ Per `area_file_spec.md` sections 7.3 and 7.6:
 ### Item Families
 
 1. **Convoy Garrison Set** (levels 50-60, military gear)
-   - Warden helms (`head`, weight 11-15 tank), convoy cloaks (`about`, weight 11-15 tank), sluice bucklers (`hold` + `ITEM_BUCKLER`, weight 11-15 tank), ration enforcement batons (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 6-10 melee).
-   - `L` level lines: 50-60 range.
+  - Warden helms (`head`, weight 11-15 tank), convoy cloaks (`about`, weight 11-15 tank), sluice bucklers (`hold` + `ITEM_BUCKLER`, weight 11-15 tank), ration enforcement batons (`hold` + `ITEM_WEAPON`, `value3 = 7` pound, weight 6-10 melee).
+  - `L` level lines: 50-60 range.
 
 2. **Bazaar Trade Goods** (levels 50-55, utility/caster)
-   - Appraiser's loupe (`hold`, `ITEM_TREASURE`, weight 1-5 caster), permit seal rings (`finger`, weight 1-5 caster), manifest scrolls (`hold`, `ITEM_TREASURE`, weight 1-5 caster), syndic veils (`face`, weight 1-5 caster).
-   - `L` level lines: 50-55 range.
+  - Appraiser's loupe (`hold`, `ITEM_TREASURE`, weight 1-5 caster), permit seal rings (`finger`, weight 1-5 caster), manifest scrolls (`hold`, `ITEM_TREASURE`, weight 1-5 caster), syndic veils (`face`, weight 1-5 caster).
+  - `L` level lines: 50-55 range.
 
 3. **Mortuary Circle Relics** (levels 55-65, cult-themed)
-   - Embalmer's wrapping tools (`hold`, `ITEM_TREASURE`, weight 1-5 caster), funerary masks (`face`, weight 1-5 caster), preservation censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster), corpse-handler's hooks (`hold` + `ITEM_WEAPON`, `value3 = 11` pierce, weight 6-10 melee).
-   - `L` level lines: 55-65 range.
+  - Embalmer's wrapping tools (`hold`, `ITEM_TREASURE`, weight 1-5 caster), funerary masks (`face`, weight 1-5 caster), preservation censers (`hold`, `ITEM_TREASURE`, weight 1-5 caster), corpse-handler's hooks (`hold` + `ITEM_WEAPON`, `value3 = 11` pierce, weight 6-10 melee).
+  - `L` level lines: 55-65 range.
 
 4. **Tribunal Splinter Arms** (levels 55-70, hostile-cult)
-   - Verdict blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), curse-inscribed bracers (`wrist`, weight 11-15 tank), oath-breaker's collar (`neck`, weight 1-5 caster), death-claim staves (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 7` pound, weight 1-5 caster).
-   - `L` level lines: 55-70 range.
+  - Verdict blades (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), curse-inscribed bracers (`wrist`, weight 11-15 tank), oath-breaker's collar (`neck`, weight 1-5 caster), death-claim staves (`hold` + `ITEM_WEAPON` + `ITEM_TWO_HANDED`, `value3 = 7` pound, weight 1-5 caster).
+  - `L` level lines: 55-70 range.
 
 5. **Survey Gate Command Regalia** (levels 65-70, boss drops)
-   - Marshal's authority seal (`finger`, weight 1-5 caster), survey gate mantle (`shoulders`, weight 11-15 tank), jurisdiction blade (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), ration doctrine codex (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
-   - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
-   - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
-   - `L` level lines: 65-70 range.
+  - Marshal's authority seal (`finger`, weight 1-5 caster), survey gate mantle (`shoulders`, weight 11-15 tank), jurisdiction blade (`hold` + `ITEM_WEAPON`, `value3 = 3` slash, weight 6-10 melee), ration doctrine codex (`hold`, `ITEM_TREASURE`, weight 1-5 caster).
+  - Boss drops: must include `ITEM_BOSS` in `extra_flags`.
+  - Loot-table drops: must include `ITEM_LOOT` in `extra_flags`.
+  - `L` level lines: 65-70 range.
 
 6. **Lore Objects / Quest Hooks** (various levels)
-   - Water-court writs (`ITEM_TREASURE`, `hold`, weight 1-5), convoy manifests (`ITEM_TREASURE`, `hold`, weight 1-5), embalmer's ledger fragments (`ITEM_TREASURE`, `hold`, weight 1-5), bastion keys (`ITEM_KEY`, `hold`, weight 1-5).
-   - Key objects: any key used as `<key_vnum>` for a locked door must exist in `#OBJECTS` with `item_type = ITEM_KEY` (`18`).
+  - Water-court writs (`ITEM_TREASURE`, `hold`, weight 1-5), convoy manifests (`ITEM_TREASURE`, `hold`, weight 1-5), embalmer's ledger fragments (`ITEM_TREASURE`, `hold`, weight 1-5), bastion keys (`ITEM_KEY`, `hold`, weight 1-5).
+  - Key objects: any key used as `<key_vnum>` for a locked door must exist in `#OBJECTS` with `item_type = ITEM_KEY` (`18`).
 
 ### Key Objects for Locked Doors
 
@@ -408,27 +408,27 @@ Per `area_file_spec.md` section 8.3: any exit set to closed or locked via `D` re
 Planned door resets:
 
 1. **Bastion Outer Gate (9870):** Direction appropriate to approach.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Bastion Gate Key object.
-   - `D` reset: `D 0 9870 <dir> 1` (closed, not locked — military gate, opened by guards).
-   - Reverse exit must also have `door` bit set.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Bastion Gate Key object.
+  - `D` reset: `D 0 9870 <dir> 1` (closed, not locked — military gate, opened by guards).
+  - Reverse exit must also have `door` bit set.
 
 2. **Embalmer's Yard Gate (9900):** Direction appropriate to approach.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Embalmer's Seal Key object.
-   - `D` reset: `D 0 9900 <dir> 2` (locked).
-   - Reverse exit must also have `door` bit set.
-   - Key object (Embalmer's Seal Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Embalmer's Seal Key object.
+  - `D` reset: `D 0 9900 <dir> 2` (locked).
+  - Reverse exit must also have `door` bit set.
+  - Key object (Embalmer's Seal Key) must exist in `#OBJECTS`.
 
 3. **Sealed Descent (9924):** Direction down (D5) to Sub-Basin Tunnels.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Sealed Descent Key object.
-   - `D` reset: `D 0 9924 5 2` (locked).
-   - Reverse exit on 9925 must also have `door` bit set.
-   - Key object (Sealed Descent Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Sealed Descent Key object.
+  - `D` reset: `D 0 9924 5 2` (locked).
+  - Reverse exit on 9925 must also have `door` bit set.
+  - Key object (Sealed Descent Key) must exist in `#OBJECTS`.
 
 4. **Forward Command Hall (9970):** Direction into command hall.
-   - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Command Hall Key object.
-   - `D` reset: `D 0 9970 <dir> 2` (locked).
-   - Reverse exit must also have `door` bit set.
-   - Key object (Command Hall Key) must exist in `#OBJECTS`.
+  - Room exit `<locks>`: `door` (`1`). `<key_vnum>`: vnum of Command Hall Key object.
+  - `D` reset: `D 0 9970 <dir> 2` (locked).
+  - Reverse exit must also have `door` bit set.
+  - Key object (Command Hall Key) must exist in `#OBJECTS`.
 
 All locked doors (state `2`) have corresponding key objects in `#OBJECTS`. Keys can be placed on gatekeeper mobs via `G` resets or in adjacent rooms via `O` resets.
 
@@ -463,7 +463,7 @@ Per `area_file_spec.md` section 14, the final `.are` file should emit sections i
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#SCRIPTS` (if any inline scripts are used)
+
 5. `#OBJECTS`
 6. `#SHOPS`
 7. `#RESETS`

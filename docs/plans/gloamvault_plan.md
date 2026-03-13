@@ -32,12 +32,12 @@ This plan replaces the current repetitive room topology and naming with a narrat
 10. **No background codes (`@@0`-`@@7`) and no flashing (`@@f`)** unless explicitly added by a human author.
 
 ### Section Integrity
-11. **Follow canonical saver section order:** `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+11. **Follow canonical saver section order:** `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 12. **`#ROOMS` must exist** and must end with `#0` before the next section header.
 13. **`#MOBILES` must terminate with `#0`** before `#OBJECTS`.
 14. **`#OBJECTS` must terminate with `#0`** before `#RESETS`.
 15. **`#RESETS` must not contain blank lines.**
-16. **Optional sections** (`#SCRIPTS`, `#SHOPS`, `#SPECIALS`, `#OBJFUNS`) should be included as needed.
+16. **Optional sections** (`#SHOPS`, `#SPECIALS`, `#OBJFUNS`) should be included as needed.
 
 ### Vnum Allocation Policy
 17. **Vnums must be assigned in ascending sequential order** — use lower available vnums before higher ones. Do not leave gaps in sequences.
@@ -184,9 +184,9 @@ The area should teach players that Kel'Shadra is an institution with records, ra
 - Each zone has **at least one optional loop** and **one deliberate return connector**.
 - Avoid directional paradox loops unless explicitly flagged as magical ritual chambers.
 - Boss pathing:
-  - Mid-boss in Zone F,
-  - Gatekeeper conflict in Zone H,
-  - Final boss in Zone I.
+ - Mid-boss in Zone F,
+ - Gatekeeper conflict in Zone H,
+ - Final boss in Zone I.
 
 ---
 
@@ -234,40 +234,40 @@ Current pool has 20 mobs (`30100-30119`). Keep count and vnums; rewrite each wit
 ### Rank Architecture
 
 1. **Initiates / Novices (Lv 6-10)**
-   - Ash Acolyte
-   - Grave Choir Novice
-   - Bone Lantern Bearer
+  - Ash Acolyte
+  - Grave Choir Novice
+  - Bone Lantern Bearer
 
 2. **Functionaries (Lv 10-14)**
-   - Crypt Usher
-   - Bone Scrivener
-   - Crypt Interrogator
-   - Vault Stalker
+  - Crypt Usher
+  - Bone Scrivener
+  - Crypt Interrogator
+  - Vault Stalker
 
 3. **Militant Orders (Lv 13-17)**
-   - Gloom Sentry
-   - Carrion Templar
-   - Reliquary Knight
-   - Catacomb Marshal
-   - Funerary Warden
+  - Gloom Sentry
+  - Carrion Templar
+  - Reliquary Knight
+  - Catacomb Marshal
+  - Funerary Warden
 
 4. **Ritual Elite / Named (Lv 17-22 cap spike)**
-   - Violet Lector
-   - Umbral Cantor
-   - Ashen Warlock
-   - Dusk Prelate (boss-gate)
-   - Ossuary Champion (mid-boss)
-   - Matriarch Velastra (final boss)
-   - Velastra Handmaiden (elite retainer)
+  - Violet Lector
+  - Umbral Cantor
+  - Ashen Warlock
+  - Dusk Prelate (boss-gate)
+  - Ossuary Champion (mid-boss)
+  - Matriarch Velastra (final boss)
+  - Velastra Handmaiden (elite retainer)
 
 ### Mob Design Principles
 
 - Every mob gets one clear **institutional job** reflected in description and behavior.
 - Keep visual identifiers tied to color bible (purple/magenta/ashen/cyan highlights).
 - Bosses should embody distinct encounter verbs:
-  - Prelate = command/control,
-  - Champion = frontline attrition,
-  - Velastra = ritual escalation + summons.
+ - Prelate = command/control,
+ - Champion = frontline attrition,
+ - Velastra = ritual escalation + summons.
 
 ### Mobile Spec Compliance
 
@@ -328,9 +328,9 @@ Current object pool has 23 objects (`30100-30122`). Keep count/vnums but reautho
 
 - Add short lore snippets per item set tying gear to offices in the vault.
 - Establish three mini-sets for progression fantasy:
-  - **Bellkeeper set** (utility/defense),
-  - **Reliquary set** (melee),
-  - **Lector set** (caster/hybrid).
+ - **Bellkeeper set** (utility/defense),
+ - **Reliquary set** (melee),
+ - **Lector set** (caster/hybrid).
 
 ### Object Spec Compliance
 
@@ -425,9 +425,9 @@ Implementation writing standards for this area rewrite:
 - No repetitive shared room paragraphing; every room carries one unique memory or function.
 - Use environmental storytelling before exposition dumps.
 - Echo lore through all layers:
-  - Room text (architecture/history),
-  - Mob text (institutional role),
-  - Object text (material culture).
+ - Room text (architecture/history),
+ - Mob text (institutional role),
+ - Object text (material culture).
 
 ---
 
@@ -659,13 +659,13 @@ Seven static quests target the Gloamvault, offered by three city postmasters acc
 
 ```
 Chain A (Kiess → Midgaard):
-  54 (Kiess, non-chain)  →  49 (Midgaard, chain)  →  51 (Midgaard, boss: Ossuary Champion)
+ 54 (Kiess, non-chain) → 49 (Midgaard, chain) → 51 (Midgaard, boss: Ossuary Champion)
 
 Chain B (Kowloon):
-  50 (Kowloon, non-chain)  →  52 (Kowloon, chain)  →  53 (Kowloon, boss: Matriarch Velastra)
+ 50 (Kowloon, non-chain) → 52 (Kowloon, chain) → 53 (Kowloon, boss: Matriarch Velastra)
 
 Standalone (Midgaard):
-  55 (Midgaard, non-chain)
+ 55 (Midgaard, non-chain)
 ```
 
 **Design notes:**

@@ -11,7 +11,6 @@ Recognized section names (saver order shown):
 - `#AREA`
 - `#ROOMS`
 - `#MOBILES`
-- `#SCRIPTS`
 - `#OBJECTS`
 - `#SHOPS`
 - `#RESETS`
@@ -122,17 +121,6 @@ Parsing stops when the next `#` section header is encountered.
 ## 4) `#MOBILES` section
 
 Mobile section details were extracted to [docs/mob_spec.md](mob_spec.md).
-
-## 6) `#SCRIPTS` section
-
-External script file bindings, terminated by `S`:
-
-```text
-#SCRIPTS
-M <mob_vnum> <filename>
-...
-S
-```
 
 Comment lines beginning with `*` are accepted.
 
@@ -343,12 +331,11 @@ For all content types (`#MOBILES`, `#ROOMS`, and `#OBJECTS`), vnums must be assi
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#SCRIPTS`
-5. `#OBJECTS`
-6. `#SHOPS`
-7. `#RESETS`
-8. `#SPECIALS`
-9. `#OBJFUNS`
-10. `#$`
+4. `#OBJECTS`
+5. `#SHOPS`
+6. `#RESETS`
+7. `#SPECIALS`
+8. `#OBJFUNS`
+9. `#$`
 
 Using this order is recommended for consistency, even though the loader dispatch is name-based.

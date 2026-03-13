@@ -4017,7 +4017,6 @@ void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, 
          write_to_buffer(to->desc, buf, point - buf);
    }
 
-   MOBtrigger = TRUE;
    return;
 }
 

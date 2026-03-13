@@ -177,8 +177,7 @@ void do_mpasound(CHAR_DATA *ch, char *argument)
       if ((pexit = was_in_room->exit[door]) != NULL && pexit->to_room != NULL && pexit->to_room != was_in_room)
       {
          ch->in_room = pexit->to_room;
-         MOBtrigger = FALSE;
-         act(argument, ch, NULL, NULL, TO_ROOM);
+            act(argument, ch, NULL, NULL, TO_ROOM);
       }
    }
 

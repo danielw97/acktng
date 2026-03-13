@@ -853,8 +853,6 @@ struct mob_prog_data
    char *filename;
 };
 
-extern bool MOBtrigger;
-
 struct liq_type
 {
    char *liq_name;
@@ -1140,8 +1138,6 @@ struct area_data
    BUILD_DATA_LIST *last_area_object;
    BUILD_DATA_LIST *first_area_mobile;
    BUILD_DATA_LIST *last_area_mobile;
-   BUILD_DATA_LIST *first_area_script;
-   BUILD_DATA_LIST *last_area_script;
    BUILD_DATA_LIST *first_area_shop;
    BUILD_DATA_LIST *last_area_shop;
    BUILD_DATA_LIST *first_area_specfunc;
@@ -1211,11 +1207,6 @@ struct build_data_list /* Used for storing area file data. */
    void *data;
 };
 
-struct script_item /* For re-creating #SCRIPTS section */
-{
-   MOB_INDEX_DATA *mob;
-   char *filename;
-};
 
 struct lookup_type
 {

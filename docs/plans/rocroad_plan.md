@@ -104,7 +104,7 @@ See `rocroad_lore.md` for the full narrative canon extraction and expansion.
 46. `#RESETS` must not contain blank lines.
 
 ### Section Order
-47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#SCRIPTS`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
+47. Follow canonical saver order: `#AREA`, `#ROOMS`, `#MOBILES`, `#OBJECTS`, `#SHOPS`, `#RESETS`, `#SPECIALS`, `#OBJFUNS`, `#$`.
 
 ### Specials Policy
 48. Mob specials beginning with `spec_summon_` must never be set in area files (runtime-only).
@@ -159,8 +159,8 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Guard relays, tax cairns, and old civic inscriptions.
 - Encounter emphasis: patrols, petitioners, minor bandit scouts, courier traffic.
 - **External links:**
-  - Room 3201 connects east to `3041` (Midgaard West Gate). This is the canonical east terminus of Roc Road.
-  - One room in this band connects north to `30250` (Cathedral of the Violet Eclipse). Very close to Midgaard — a shadow-liturgical cathedral visible from the road's first stretch.
+ - Room 3201 connects east to `3041` (Midgaard West Gate). This is the canonical east terminus of Roc Road.
+ - One room in this band connects north to `30250` (Cathedral of the Violet Eclipse). Very close to Midgaard — a shadow-liturgical cathedral visible from the road's first stretch.
 
 ### Band B — Banner Hills and Switchbacks (3212-3219, 8 rooms)
 - **Sector types:** `hills` (4) for hill-climb rooms; `mountain` (5) for the high pass and switchback rooms.
@@ -191,10 +191,10 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Rebuilt as a political pressure node with evidence of overlapping jurisdiction.
 - Encounter emphasis: diplomatic envoys, mercenary escorts, opportunist thieves.
 - **External links preserved from this band:**
-  - North to `11200` (Umbra Heartspire, from former 3234)
-  - Down to `610` (vertical sub-road access, from former 3238)
-  - East to `3401` (branch link east, from former 3242)
-  - North to `13095` (Kiess South Gate, from former 3243) — this is the **canonical west terminus** of Roc Road.
+ - North to `11200` (Umbra Heartspire, from former 3234)
+ - Down to `610` (vertical sub-road access, from former 3238)
+ - East to `3401` (branch link east, from former 3242)
+ - North to `13095` (Kiess South Gate, from former 3243) — this is the **canonical west terminus** of Roc Road.
 - **Note:** The former `3240 east → 9601` (Forest of Confusion) link is **removed** in the rebuild. The Forest of Confusion connects via Kiess's north gate, not directly from Roc Road.
 
 ### Band F — Greenveil Spur (3244-3252, 9 rooms)
@@ -204,9 +204,9 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Becomes a lore-rich optional path with druidic and exile traces.
 - Encounter emphasis: foresters, displaced spirits, poachers, herbalists.
 - **External links preserved from this band:**
-  - North to internal stone path rooms (former 3290-3291)
-  - Up to `7200` (elevated access, from former 3250)
-  - North to `4449` (building/structure link, from former 3291)
+ - North to internal stone path rooms (former 3290-3291)
+ - Up to `7200` (elevated access, from former 3250)
+ - North to `4449` (building/structure link, from former 3291)
 
 ### Band G — Inlet, Cave, and Sinkline (3253-3261, 9 rooms)
 - **Sector types:** `water_swim` (6) for shallow water rooms; `water_noswim` (7) for deep water rooms; `desert` (10) for beach rooms; `inside` (11) for cave/sinkhole rooms.
@@ -214,7 +214,7 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Water-edge and cliff subzone with salvage economy and old smuggler pockets.
 - Encounter emphasis: shoreline hunters, cave squatters, tidebound anomalies.
 - **External links preserved from this band:**
-  - North to `5083` (sea route link, from former 3259)
+ - North to `5083` (sea route link, from former 3259)
 - **Door preserved:** Iron door between beach and cave rooms (reset to closed, state 1, matching existing reset).
 
 ### Band H — Ruin Run and Weathered Causeway (3262-3274, 13 rooms)
@@ -236,10 +236,10 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 - Descriptions avoid vnum mentions and use sparse, intentional color coding only.
 - Exits preserve macro connectivity (no accidental route breaks), but selected rooms add optional branch loops to reduce pure linear fatigue.
 - Existing legacy external links are retained unless world owners request remap:
-  - Midgaard West Gate linkage at the east terminus
-  - Kiess East Gate linkage at the west terminus
-  - Crossroad branch connectors
-  - Sea and legacy side-area hooks
+ - Midgaard West Gate linkage at the east terminus
+ - Kiess East Gate linkage at the west terminus
+ - Crossroad branch connectors
+ - Sea and legacy side-area hooks
 
 ## Mobile Redesign (new full roster)
 ### Vnum strategy
@@ -484,9 +484,9 @@ Roc Road remains a longitudinal journey but is rebuilt as nine major bands plus 
 ## Reset Strategy
 - Replace the two-door-only reset block with a full ecosystem reset table.
 - Ensure each thematic band has:
-  - 1 stable baseline population reset
-  - 1 roaming pressure reset
-  - 1 occasional rare/event reset
+ - 1 stable baseline population reset
+ - 1 roaming pressure reset
+ - 1 occasional rare/event reset
 - Protect transit reliability by preventing hard-lock hostile overpopulation at mandatory choke rooms.
 - Keep any lock/key mechanics optional or side-route only (no required key gates on the main through-road).
 - `#RESETS` must not contain blank lines.

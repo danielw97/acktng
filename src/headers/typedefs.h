@@ -211,7 +211,6 @@ typedef struct mob_prog_data MPROG_DATA;         /* program */
 typedef struct mob_prog_act_list MPROG_ACT_LIST; /* program */
 /* MAG Mod */
 typedef struct build_data_list BUILD_DATA_LIST; /* Online Building */
-typedef struct script_item SCRIPT_ITEM;       /* Scripts */
 
 /* Zen Mod */
 typedef struct vamp_exp_table VAMP_EXP_TABLE;

@@ -806,11 +806,6 @@ static void assert_area_matches_spec(const char *area_path, const VNUM_NODE *glo
             parse_mobiles_section(fp, line, &line_number, area_path);
             continue;
         }
-        if (starts_with(trimmed, "#SCRIPTS"))
-        {
-            parse_specials_section(fp, line, &line_number, area_path, "M");
-            continue;
-        }
         if (starts_with(trimmed, "#OBJECTS"))
         {
             parse_objects_section(fp, line, &line_number, area_path);

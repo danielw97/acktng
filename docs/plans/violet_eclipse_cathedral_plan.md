@@ -156,11 +156,11 @@ The cathedral remains a central spine with five branch doctrines and a terminal 
 ## Connectivity Requirements
 - Preserve linear readability through each wing while retaining return loops to the spine.
 - Branch entry points remain at:
-  - `30254 -> 30265` (Narthex hub south to Crimson Sanguine Choir)
-  - `30255 -> 30277` (Sepulchral Procession east to Amethyst Reliquary)
-  - `30256 -> 30289` (Chalice Echo Hall west to Obsidian Cloister)
-  - `30257 -> 30301` (Veil of Black Incense east to Thorned Scriptorium)
-  - `30258 -> 30313` (Mauve Lantern Arcade down to Moonbone Ossuary)
+ - `30254 -> 30265` (Narthex hub south to Crimson Sanguine Choir)
+ - `30255 -> 30277` (Sepulchral Procession east to Amethyst Reliquary)
+ - `30256 -> 30289` (Chalice Echo Hall west to Obsidian Cloister)
+ - `30257 -> 30301` (Veil of Black Incense east to Thorned Scriptorium)
+ - `30258 -> 30313` (Mauve Lantern Arcade down to Moonbone Ossuary)
 - Final route pressure should escalate from `30313` onward with minimal bypass.
 - Keep world ingress at `30250` and no alternate external escape except intentional builder hook.
 
@@ -442,13 +442,13 @@ Each `.prop` file structure:
 4. Accept message line (optional)
 5. Completion message line (optional)
 6. Custom reward-object block (optional, 7 lines when present):
-   - short description
-   - keywords
-   - long description
-   - wear flags (integer)
-   - extra flags (integer)
-   - weight (integer)
-   - item-apply selector (integer)
+  - short description
+  - keywords
+  - long description
+  - wear flags (integer)
+  - extra flags (integer)
+  - weight (integer)
+  - item-apply selector (integer)
 
 Offerer vnums:
 - Midgaard postmaster: `3015`
@@ -675,7 +675,7 @@ The canonical section order emitted by the area saver:
 1. `#AREA`
 2. `#ROOMS`
 3. `#MOBILES`
-4. `#SCRIPTS`
+4. 
 5. `#OBJECTS`
 6. `#SHOPS`
 7. `#RESETS`
@@ -683,7 +683,7 @@ The canonical section order emitted by the area saver:
 9. `#OBJFUNS`
 10. `#$`
 
-This area does not currently plan a `#SHOPS` section (no merchant mobs). `#SCRIPTS` is optional and may be added for boss dialogue triggers. `#OBJFUNS` is optional.
+This area does not currently plan a `#SHOPS` section (no merchant mobs). . `#OBJFUNS` is optional.
 
 ## Implementation Checklist
 
