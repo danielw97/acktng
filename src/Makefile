@@ -340,7 +340,14 @@ unit-test-help-format: test_help_format.o
 	rm -f unit-test-help-format
 	$(CC) -o unit-test-help-format test_help_format.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation
+interp.unit-test.o: interp.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o interp.unit-test.o interp.c
+
+unit-test-interp: test_interp.o interp.unit-test.o
+	rm -f unit-test-interp
+	$(CC) -Wl,--gc-sections -Wl,--unresolved-symbols=ignore-all -o unit-test-interp test_interp.o interp.unit-test.o $(L_FLAGS)
+
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp
 	./unit-test-act-flags
 	./unit-test-area-format
 	./unit-test-help-format
@@ -378,6 +385,7 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./unit-test-crusade
 	./unit-test-death
 	./unit-test-item-generation
+	./unit-test-interp
 	$(MAKE) integration-test
 
 

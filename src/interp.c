@@ -296,6 +296,8 @@ const struct cmd_type cmd_table[] = {
     /* one or more of the poses crash us  */
     {"pray", do_pray, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_COMM, C_SHOW_ALWAYS},
+    {"iinvasion", do_invasion, POS_DEAD, LEVEL_IMMORTAL, LOG_ALWAYS,
+     C_TYPE_IMM, C_SHOW_ALWAYS},
     {"invasion", do_invasion_talk, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_COMM, C_SHOW_ALWAYS},
     {"question", do_question, POS_SLEEPING, 0, LOG_NORMAL,
@@ -501,8 +503,6 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_MISC, C_SHOW_ALWAYS},
     {"assassinate", do_assassinate, POS_STANDING, 20, LOG_ALWAYS,
      C_TYPE_ACTION, C_SHOW_ALWAYS},
-    {"finger", do_finger, POS_DEAD, 86, LOG_ALWAYS,
-     C_TYPE_MISC, C_SHOW_ALWAYS},
     {"follow", do_follow, POS_RESTING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"gold", do_gold, POS_DEAD, 0, LOG_NORMAL,
@@ -539,8 +539,6 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"shadowform", do_shadowform, POS_STANDING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
-    {"sleep", do_sleep, POS_SLEEPING, 0, LOG_NORMAL,
-     C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"sneak", do_sneak, POS_STANDING, 0, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_SKILL},
     {"spells", do_spells, POS_SLEEPING, 0, LOG_NORMAL,
@@ -574,8 +572,6 @@ const struct cmd_type cmd_table[] = {
 
     {"family", do_family, POS_RESTING, VAMP_ONLY, LOG_NORMAL,
      C_TYPE_INFO, C_SHOW_ALWAYS},
-    {"disguise", do_disguise, POS_STANDING, 0, LOG_ALWAYS,
-     C_TYPE_ACTION, C_SHOW_SKILL},
     {"instruct", do_instruct, POS_STANDING, VAMP_ONLY, LOG_NORMAL,
      C_TYPE_ACTION, C_SHOW_ALWAYS},
     {"scout", do_scout, POS_STANDING, 1, LOG_NORMAL,
@@ -801,9 +797,6 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"findreset", do_findreset, POS_DEAD, L_HER, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
-    {"invasion", do_invasion, POS_DEAD, LEVEL_IMMORTAL, LOG_ALWAYS,
-     C_TYPE_IMM, C_SHOW_ALWAYS},
-
     /*
      * Werewolf commands
      */
@@ -834,7 +827,6 @@ const struct cmd_type cmd_table[] = {
     {"mpgoto", do_mpgoto, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
     {"mpat", do_mpat, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
     {"mptransfer", do_mptransfer, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpforce", do_mpforce, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
     {"mpforce", do_mpforce, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
 
     /* Reincarnate */
