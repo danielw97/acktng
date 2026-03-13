@@ -119,6 +119,30 @@ distinctive voice and behavior. All follow the same ambient-only pattern
 
 ---
 
+## Kowloon ambient specials
+
+Specials introduced for the Kowloon area (`area/kowloon.are`) to give the
+city's NPCs distinctive civic voice grounded in the Neon Covenant's history
+and the five founding institutions. All follow the same ambient-only pattern
+(8-way gate, action or speech, always return `FALSE`) unless noted otherwise.
+
+| Special | Intended mob roles | Flavor / setting | Sample lines |
+|---|---|---|---|
+| `spec_kowloon_shopkeeper` | All Kowloon shop NPCs: weaponsmith, armorsmith, reagent keeper, provisioner, fletcher, jeweler, pawn broker, chandler, general merchant | Western market floor: hangs wares on hooks (old floating-stall tradition), checks jade inspection ribbons, greets arrivals, discusses Ledgerhouse dues, Guild Concordat minimums, and tariff-cleared goods. | *"Everything on this counter is Ledgerhouse-cleared. Tariff paid, weights checked, ribbon current."* |
+| `spec_kowloon_gate_captain` | The four gate captains (Jade, Iron, Lantern, Tide) and the Harbor Syndic inspector | Gate inspection and security doctrine: reviews manifests against the Syndic ledger, scans approaches, signals subordinate guards, checks courier permits, references the seasonal rotation policy. | *"Seasonal rotation isn't tradition — it's policy. No one builds loyalty at a chokepoint. The Covenant was specific."* |
+| `spec_kowloon_courier` | Lantern-runners and courier messengers of the Courier Lantern Office | Dispatch and route service: checks seal integrity, consults route cards, polishes the brass lantern badge, records delivery confirmations, scans junction bulletin boards. | *"The badge gets you through any gate at any hour. You'd be surprised how useful that is at second bell."* |
+| `spec_kowloon_innkeeper` | Copper Tide innkeeper at the Inn | Inn hospitality with southern-quarter frontier character: checks guest ledger, adjusts counter lamp, sets tea for arrivals, references the city's promise to receive battered travelers. | *"If you're recall-safe and breathing, Kowloon will receive you. That's the city's oldest promise. We're just where you start."* |
+| `spec_kowloon_corsair` | River corsairs of Captain Blacktide Shen's probing crews (hostile mobs at harbor/dock areas) | Reconnaissance and threat awareness: watches patrol timing, marks dock patterns, references Blacktide Shen's three-year surveillance campaign. Fires out of combat only; returns `FALSE`. | *"Shen knows these channels better than the Syndic charts do. Every gate timing, every patrol gap. Patience is strategy."* |
+
+### Kowloon builder notes
+
+- `spec_kowloon_shopkeeper` is the standard ambient special for all Kowloon service shops. Assign to any merchant NPC with a `#SHOPS` entry.
+- `spec_kowloon_gate_captain` doubles for Harbor Syndic inspectors at the docks — the manifest-checking flavor applies equally to both roles.
+- `spec_kowloon_corsair` is assigned to hostile mob types (alignment negative, `aggressive` flag set). It fires **only out of combat**, providing ambient menace before engagement. It does not initiate combat; that is handled by the `aggressive` act flag.
+- Existing general specials that fit Kowloon mobs: `spec_laborer` for dockhands/porters/pump attendants, `spec_vendor` for street food vendors and caravan callers, `spec_lay_sister` for shrine keepers, `spec_lamplighter` for street sweepers, `spec_warden` for plaza inspectors and customs clerks, `spec_thief` for pickpockets.
+
+---
+
 ## Summon specials (runtime-only, do not set in area files)
 
 These are assigned and cleared by the game's summon systems at runtime. Setting

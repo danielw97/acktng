@@ -2344,6 +2344,96 @@ This enforcer works for one of the protection rackets that the Salt Court Exiles
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#14039
+innkeeper copper tide~
+the Copper Tide innkeeper~
+The Copper Tide innkeeper looks up from the guest ledger with a practiced, welcoming nod.
+~
+A broad-shouldered man whose easy manner belies the administrative competence required to manage the inn district's busiest establishment. He has the unhurried confidence of someone who has welcomed every variety of traveler the delta produces — battered adventurers, caravan crews, diplomatic envoys, and the occasional person who declines to give a name. The southern quarter's frontier character suits him perfectly, and the guest ledger under his arm is as tidy as any Magistracy archive.
+~
+67 0 900 S
+150 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#14040
+corsair river~
+a river corsair~
+A river corsair watches the dock approaches with hard, calculating eyes.
+~
+This weathered figure moves with the unhurried confidence of someone who knows the delta's channels better than the harbor charts do. The clothing is practical and salt-bleached, and the short blade at the hip is worn but well-maintained. One of Captain Blacktide Shen's probing crews, here to study gate timings and warehouse patrol patterns rather than to commit to an open engagement. The corsair's patience is professional — this is reconnaissance work, and the time to act has not yet come.
+~
+96 0 -400 S
+38 1
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#14041
+inspector syndic harbor~
+a Harbor Syndic inspector~
+A Harbor Syndic inspector in a blue sash reviews a cargo manifest at the dock approach.
+~
+This Harbor Syndics official carries the authority to inspect every cargo that crosses Kowloon's waterfront threshold. The blue sash marks the jurisdiction clearly, and the inspector's manner is methodical and thorough without being hostile — the Syndics know that commerce requires speed and that unnecessary friction costs the city as much as it costs the merchants. The ledger carried under one arm documents every assessment made on this shift.
+~
+67 40 500 S
+45 2
+0 0 0 0
+! 0 0 0 7 7 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#14042
+saboteur cult ash~
+an Ash Cult saboteur~
+A nondescript figure lingers near the drainage infrastructure, watching the flow channels.
+~
+Nothing about this person's appearance marks them as dangerous — the plain clothing and neutral expression are studied camouflage. But the attention paid to floodgates, drainage valves, and water-supply junctions is too focused for casual curiosity. This is an Ash Cult cell operative, one of the Ember Speaker's believers who holds that the Covenant is an act of hubris deserving destruction. The saboteur is patient; they have been watching these waterworks for days, waiting for the unguarded moment.
+~
+96 0 -600 S
+40 0
+0 0 0 0
+! 0 0 0 7 3 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#14043
+fisherman delta~
+a delta fisherman~
+A delta fisherman mends a net with the automatic ease of lifelong practice.
+~
+This weather-tanned figure works the Coppersalt Bay and the Jhen River's delta channels, bringing the catch that feeds Kowloon's working population. The rolling gait that comes from years on an unstable hull is evident even on dry land, and the net in calloused hands is patched with the layered repairs of something too functional to replace. The fisherman knows the delta's hidden channels and tidal rhythms better than most harbor charts record.
+~
+64 0 300 S
+32 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#14044
+enforcer salt court~
+a Salt Court enforcer~
+A well-dressed enforcer leans against the wall, watching the crowd with proprietary ease.
+~
+This Salt Court operative carries an air of deliberate menace more sophisticated than the common alley thug. The clean coat and polished boots belong to someone backed by Duchess Yuen Ahi's network of debt rings and protection rackets rather than simple street violence. The enforcer collects, threatens, and ensures that southern quarter merchants remember their obligations to the Salt Court — which has never been ratified as legitimate authority by anyone, but has accumulated enough leverage to function as one in these transient streets.
+~
+96 0 -400 S
+60 1
+0 0 0 0
+! 0 0 0 7 12935 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #14000
@@ -3397,12 +3487,62 @@ M 0 14037 2 14069       Smuggler lookout at dock office
 M 0 14037 2 14038       Smuggler lookout at harbor lane
 M 0 14038 2 14082       Alley thug at flood terrace
 M 0 14038 2 14091       Alley thug at south wall
+M 0 14039 1 14081       Copper Tide innkeeper at the Inn
+M 0 14040 2 14076       River corsair at dockworker avenue
+M 0 14040 2 14088       River corsair at loading dock
+M 0 14041 1 14069       Harbor Syndic inspector at dock office
+M 0 14042 1 14082       Ash Cult saboteur at flood terrace
+M 0 14042 1 14091       Ash Cult saboteur at south wall
+M 0 14043 2 14058       Delta fisherman at harbor spine
+M 0 14043 1 14076       Delta fisherman at dockworker avenue
+M 0 14044 1 14083       Salt Court enforcer at staging yard
+M 0 14044 1 14087       Salt Court enforcer at warehouse alley
 O 0 14090 1 14055       Covenant stone at execution square
 O 0 14091 1 14015       Bronze bell at courier crossing
 O 0 14092 1 14065       Fountain at provisioner junction
 O 0 14093 1 14035       Iron brazier at market crossing
 S
 #SPECIALS
+* --- Law enforcement ---
 M 14000 spec_executioner
+* --- Service NPCs: shopkeepers and merchants ---
+M 14006 spec_kowloon_shopkeeper
+M 14007 spec_kowloon_shopkeeper
+M 14008 spec_kowloon_shopkeeper
+M 14009 spec_kowloon_shopkeeper
+M 14010 spec_kowloon_shopkeeper
+M 14011 spec_kowloon_shopkeeper
+M 14012 spec_kowloon_shopkeeper
+M 14013 spec_kowloon_shopkeeper
+M 14015 spec_kowloon_shopkeeper
+M 14039 spec_kowloon_innkeeper
+* --- Gate captains ---
+M 14017 spec_kowloon_gate_captain
+M 14018 spec_kowloon_gate_captain
+M 14019 spec_kowloon_gate_captain
+M 14020 spec_kowloon_gate_captain
+* --- Couriers and messengers ---
+M 14025 spec_kowloon_courier
+M 14034 spec_kowloon_courier
+* --- Civic inspectors and clerks ---
+M 14023 spec_warden
+M 14026 spec_warden
+M 14030 spec_warden
+M 14041 spec_kowloon_gate_captain
+* --- Harbor and dock workers ---
+M 14024 spec_laborer
+M 14031 spec_laborer
+M 14033 spec_laborer
+M 14043 spec_laborer
+* --- Street life: vendors, shrine, caravan ---
+M 14027 spec_vendor
+M 14028 spec_lay_sister
+M 14029 spec_vendor
+M 14035 spec_lamplighter
+* --- Criminals ---
+M 14036 spec_thief
+M 14040 spec_kowloon_corsair
+M 14042 spec_cast_cleric
+M 14044 spec_cast_cleric
 S
 #$
