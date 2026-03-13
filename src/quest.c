@@ -373,6 +373,24 @@ static CHAR_DATA *find_visible_npc_by_canonical_vnum(CHAR_DATA *ch, int vnum)
     return NULL;
 }
 
+static CHAR_DATA *find_npc_by_canonical_vnum(CHAR_DATA *ch, int vnum)
+{
+    CHAR_DATA *wch;
+
+    if (ch == NULL || ch->in_room == NULL || vnum <= 0)
+        return NULL;
+
+    for (wch = ch->in_room->first_person; wch != NULL; wch = wch->next_in_room)
+    {
+        if (!IS_NPC(wch) || wch->pIndexData == NULL)
+            continue;
+        if (canonical_postmaster_vnum(wch->pIndexData->vnum) == canonical_postmaster_vnum(vnum))
+            return wch;
+    }
+
+    return NULL;
+}
+
 
 #ifdef UNIT_TEST_QUEST
 int quest_unit_static_count(void)
@@ -809,14 +827,14 @@ static void quest_accept_static(CHAR_DATA *ch, int list_number)
         return;
     }
 
-    if (get_psuedo_level(ch) < tpl->min_level)
+    if (!IS_IMMORTAL(ch) && get_psuedo_level(ch) < tpl->min_level)
     {
         sprintf(buf, "You must be at least pseudo-level %d for that static quest.\n\r", tpl->min_level);
         send_to_char(buf, ch);
         return;
     }
 
-    if (tpl->max_level > 0 && get_psuedo_level(ch) > tpl->max_level)
+    if (!IS_IMMORTAL(ch) && tpl->max_level > 0 && get_psuedo_level(ch) > tpl->max_level)
     {
         sprintf(buf, "You must be pseudo-level %d or lower for that static quest.\n\r", tpl->max_level);
         send_to_char(buf, ch);
@@ -1227,7 +1245,7 @@ void quest_complete(CHAR_DATA *ch, CHAR_DATA *postman)
             tpl = find_static_quest_template(prop->quest_static_id);
             if (required_vnum <= 0 && tpl != NULL)
                 required_vnum = canonical_postmaster_vnum(tpl->offerer_vnum);
-            turnin_npc = find_visible_npc_by_canonical_vnum(ch, required_vnum);
+            turnin_npc = find_npc_by_canonical_vnum(ch, required_vnum);
             if (turnin_npc == NULL)
                 continue;
         }
