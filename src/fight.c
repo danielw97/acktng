@@ -877,6 +877,34 @@ static void act_avoidance_notvict(CHAR_DATA *ch, CHAR_DATA *victim, const char *
    }
 }
 
+int get_level_scaled_avoidance_baseline(CHAR_DATA *ch, CHAR_DATA *victim, int base_chance)
+{
+   int level_diff = 0;
+
+   if (ch == NULL || victim == NULL)
+      return 0;
+
+   level_diff = get_psuedo_level(victim) - get_psuedo_level(ch);
+
+   /*
+    * Baseline avoidance expectations:
+    *  - PC vs PC and NPC vs NPC: equal levels anchor the baseline.
+    *  - NPC victim vs PC attacker: victim being 20 levels higher anchors the baseline.
+ *  - NPC attacker vs PC victim: attacker being 20 levels higher anchors the baseline.
+    */
+   if (!IS_NPC(ch) && IS_NPC(victim))
+      level_diff -= 20;
+   else if (IS_NPC(ch) && !IS_NPC(victim))
+      level_diff += 20;
+
+   base_chance -= abs(level_diff) / 2;
+
+   if (base_chance < 0)
+      return 0;
+
+   return base_chance;
+}
+
 bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    int max_avoidance = 75;
@@ -895,9 +923,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    if (IS_NPC(ch) && IS_SET(ch->act, ACT_BOSS))
       max_avoidance += 20;
 
-   int parry = get_parry(victim) - get_evasion_piercing(ch);
-   if (parry > 0)
-      parry += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
+   int parry = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_parry(victim) - get_evasion_piercing(ch);
    if (!can_see(ch, victim) && parry > 0)
       parry += 20;
    if (!can_see(victim, ch) && parry > 0)
@@ -928,9 +954,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int block = get_block(victim) - get_evasion_piercing(ch);
-   if (block > 0)
-      block += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
+   int block = get_level_scaled_avoidance_baseline(ch, victim, 30) + get_block(victim) - get_evasion_piercing(ch);
    if (!can_see(ch, victim) && block > 0)
       block += 20;
    if (!can_see(victim, ch) && block > 0)
@@ -961,9 +985,7 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       return TRUE;
    }
 
-   int dodge = get_dodge(victim) - get_evasion_piercing(ch);
-   if (dodge > 0)
-      dodge += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
+   int dodge = get_level_scaled_avoidance_baseline(ch, victim, 10) + get_dodge(victim) - get_evasion_piercing(ch);
    if (!can_see(ch, victim) && dodge > 0)
       dodge += 20;
    if (!can_see(victim, ch) && dodge > 0)
