@@ -14,7 +14,7 @@
  *
  * Combat pattern (mod-12 cycle):
  *   round  1 — WIND-UP 1: "The Shard coils stolen sunlight..."
- *   round  2 — STRIKE: void-fire blast against primary target (single-target)
+ *   round  3 — STRIKE: void-fire blast against primary target (single-target)
  *   round  5 — atmospheric warning (oasis corruption pulse incoming)
  *   round  7 — WIND-UP 2: "The sanctum fills with void-cold oasis-death..."
  *   round  9 — OASIS DRAIN: AOE shadow pulse hitting every enemy in the room
@@ -67,7 +67,7 @@ bool spec_pyramid_black_sun_shard(CHAR_DATA *ch)
         act(buf, ch, NULL, NULL, TO_ROOM);
         break;
 
-    case 2:
+    case 3:
         sprintf(buf,
             "@@RThe Black Sun detonates!  $n unleashes a pillar of void-fire\r\n"
             "straight into $N — the anti-sun burns everything it touches!@@N");
