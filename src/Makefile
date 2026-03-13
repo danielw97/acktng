@@ -63,7 +63,7 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o \
 	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o magic2.o magic3.o magic4.o mapper.o \
-	  mob_commands.o obj_fun.o pdelete.o quest.o crusade.o reincarnate.o rulers.o \
+	  obj_fun.o pdelete.o quest.o crusade.o reincarnate.o rulers.o \
 	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
 	  write.o $(AI_SPEC_SRCS)
@@ -252,16 +252,6 @@ unit-test-reincarnate: $(OBJDIR)/tests/test_reincarnate.o $(OBJDIR)/reincarnate.
 	rm -f tests/unit-test-reincarnate
 	$(CC) -Wl,--gc-sections -o tests/unit-test-reincarnate $(OBJDIR)/tests/test_reincarnate.o $(OBJDIR)/reincarnate.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
 
-$(OBJDIR)/mob_commands.unit-test.o: mob_commands.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o $(OBJDIR)/mob_commands.unit-test.o mob_commands.c
-
-unit-test-mob-commands: $(OBJDIR)/tests/test_mob_commands.o $(OBJDIR)/mob_commands.unit-test.o $(OBJDIR)/tests/test_is_fighting.o
-	rm -f tests/unit-test-mob-commands
-	$(CC) -Wl,--gc-sections -o tests/unit-test-mob-commands $(OBJDIR)/tests/test_mob_commands.o $(OBJDIR)/mob_commands.unit-test.o $(OBJDIR)/tests/test_is_fighting.o $(L_FLAGS)
-
-
-
-
 $(OBJDIR)/ssm.unit-test.o: ssm.c
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SSM -o $(OBJDIR)/ssm.unit-test.o ssm.c
 
@@ -387,7 +377,7 @@ unit-test-interp: $(OBJDIR)/tests/test_interp.o $(OBJDIR)/interp.unit-test.o
 	rm -f tests/unit-test-interp
 	$(CC) -Wl,--gc-sections -Wl,--unresolved-symbols=ignore-all -o tests/unit-test-interp $(OBJDIR)/tests/test_interp.o $(OBJDIR)/interp.unit-test.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation unit-test-interp
 	./tests/unit-test-act-flags
 	./tests/unit-test-area-format
 	./tests/unit-test-help-format
@@ -408,7 +398,6 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./tests/unit-test-skills-obj
 	./tests/unit-test-skills-combo
 	./tests/unit-test-reincarnate
-	./tests/unit-test-mob-commands
 	./tests/unit-test-db
 	./tests/unit-test-magic
 	./tests/unit-test-magic4

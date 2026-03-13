@@ -50,7 +50,6 @@ src/
 │   ├── test_magic.c
 │   ├── test_magic4.c
 │   ├── test_mapper.c
-│   ├── test_mob_commands.c
 │   ├── test_pdelete.c
 │   ├── test_quest.c
 │   ├── test_reincarnate.c

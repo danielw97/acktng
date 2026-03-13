@@ -602,8 +602,6 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"mpcr", do_mpcr, POS_STANDING, L_DEI, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
-    {"mpstat", do_mpstat, POS_DEAD, L_GOD, LOG_NORMAL,
-     C_TYPE_IMM, C_SHOW_ALWAYS},
     {"halls", do_halls, POS_RESTING, L_HER, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"lhunt", do_lhunt, POS_DEAD, L_SUP, LOG_NORMAL,
@@ -815,19 +813,6 @@ const struct cmd_type cmd_table[] = {
      * program commands.
      */
 
-    {"mpasound", do_mpasound, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpjunk", do_mpjunk, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpecho", do_mpecho, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpechoat", do_mpechoat, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpechoaround", do_mpechoaround, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpkill", do_mpkill, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpmload", do_mpmload, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpoload", do_mpoload, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mppurge", do_mppurge, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpgoto", do_mpgoto, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpat", do_mpat, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mptransfer", do_mptransfer, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
-    {"mpforce", do_mpforce, POS_DEAD, 90, LOG_NORMAL, C_TYPE_IMM, C_SHOW_NEVER},
 
     /* Reincarnate */
     {"reincarnate", do_reincarnate, POS_STANDING, 0, LOG_ALWAYS,
