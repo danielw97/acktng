@@ -9,6 +9,8 @@
 #include <errno.h>
 #include "globals.h"
 
+extern AREA_DATA *area_used[MAX_AREAS];
+
 void set_obj_stat_auto(OBJ_DATA *obj);
 
 typedef struct static_quest_template_data STATIC_PROP_TEMPLATE;
@@ -920,9 +922,13 @@ static void quest_accept_static(CHAR_DATA *ch, int list_number)
     }
     if (prop->quest_type == QUEST_TYPE_CARTOGRAPHY)
     {
-        sprintf(buf, "@@WTask:@@N Explore every room in the target area (@@Y%d/%d@@N).\n\r",
+        AREA_DATA *carto_area = prop->quest_cartography_area_num >= 0
+            ? area_used[prop->quest_cartography_area_num] : NULL;
+        const char *area_name = carto_area ? carto_area->name : "Unknown Area";
+        sprintf(buf, "@@WTask:@@N Explore every room in the target area (@@Y%d/%d@@N) (%s).\n\r",
                 prop->quest_cartography_explored_count,
-                prop->quest_cartography_room_count);
+                prop->quest_cartography_room_count,
+                area_name);
         send_to_char(buf, ch);
     }
     show_reward_preview(ch, prop);
@@ -1164,10 +1170,12 @@ void quest_status(CHAR_DATA *ch)
                 MOB_INDEX_DATA *midx = get_mob_index(prop->quest_target_vnum[i]);
                 if (midx != NULL)
                 {
-                    sprintf(buf, "  %s%-30s@@N  %s\n\r",
+                    const char *area_name = midx->area ? midx->area->name : "Unknown Area";
+                    sprintf(buf, "  %s%-30s@@N  %s  (%s)\n\r",
                             prop->quest_target_done[i] ? "@@G" : "@@R",
                             midx->short_descr,
-                            prop->quest_target_done[i] ? "[DONE]" : "[pending]");
+                            prop->quest_target_done[i] ? "[DONE]" : "[pending]",
+                            area_name);
                     send_to_char(buf, ch);
                 }
             }
@@ -1180,11 +1188,13 @@ void quest_status(CHAR_DATA *ch)
                 OBJ_INDEX_DATA *oidx = get_obj_index(prop->quest_target_vnum[i]);
                 if (oidx != NULL)
                 {
-                    sprintf(buf, "  %s%-30s@@N  [lvl %-3d]  %s\n\r",
+                    const char *area_name = oidx->area ? oidx->area->name : "Unknown Area";
+                    sprintf(buf, "  %s%-30s@@N  [lvl %-3d]  %s  (%s)\n\r",
                             prop->quest_target_done[i] ? "@@G" : "@@C",
                             oidx->short_descr,
                             oidx->level,
-                            prop->quest_target_done[i] ? "[OBTAINED]" : "[needed]");
+                            prop->quest_target_done[i] ? "[OBTAINED]" : "[needed]",
+                            area_name);
                     send_to_char(buf, ch);
                 }
             }
@@ -1193,7 +1203,10 @@ void quest_status(CHAR_DATA *ch)
         case QUEST_TYPE_KILL_COUNT:
         {
             MOB_INDEX_DATA *midx = get_mob_index(prop->quest_target_vnum[0]);
-            sprintf(buf, "@@WTask:@@N Slay %s\n\r", midx ? midx->short_descr : "(unknown)");
+            const char *area_name = (midx && midx->area) ? midx->area->name : "Unknown Area";
+            sprintf(buf, "@@WTask:@@N Slay %s (%s)\n\r",
+                    midx ? midx->short_descr : "(unknown)",
+                    area_name);
             send_to_char(buf, ch);
             sprintf(buf, "  Progress: @@Y%d@@N / @@Y%d@@N\n\r",
                     prop->quest_kill_count,
@@ -1203,12 +1216,18 @@ void quest_status(CHAR_DATA *ch)
         }
 
         case QUEST_TYPE_CARTOGRAPHY:
-            send_to_char("@@WTask:@@N Explore every room in the target area.\n\r", ch);
+        {
+            AREA_DATA *carto_area = prop->quest_cartography_area_num >= 0
+                ? area_used[prop->quest_cartography_area_num] : NULL;
+            const char *area_name = carto_area ? carto_area->name : "Unknown Area";
+            sprintf(buf, "@@WTask:@@N Explore every room in the target area (%s).\n\r", area_name);
+            send_to_char(buf, ch);
             sprintf(buf, "  Progress: @@Y%d@@N / @@Y%d@@N rooms explored\n\r",
                     prop->quest_cartography_explored_count,
                     prop->quest_cartography_room_count);
             send_to_char(buf, ch);
             break;
+        }
         }
 
         show_reward_preview(ch, prop);
