@@ -4221,6 +4221,10 @@ void copyover_recover()
       GET_FREE(d, desc_free);
       init_descriptor(d, desc); /* set up various stuff */
 
+      /* This is a recovered connection, not a new one - skip handshake and greeting */
+      d->websocket_handshake_complete = TRUE;
+      d->greeting_sent = TRUE;
+
       d->host = str_dup(host);
       d->next = NULL;
       d->prev = NULL;
