@@ -954,6 +954,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 
    /*
     * Look for command in command table.
+    * First pass: exact match. Second pass: prefix match.
     */
    found = FALSE;
    trust = get_trust(ch);
@@ -979,11 +980,34 @@ void interpret(CHAR_DATA *ch, char *argument)
       if (cmd_table[cmd].level == WOLF_ONLY && !IS_NPC(ch) && !IS_WOLF(ch) && (ch->level != L_GOD))
          continue;
 
-      if (command[0] == cmd_table[cmd].name[0] && !str_prefix(command, cmd_table[cmd].name) && (cmd_table[cmd].level <= trust || MP_Commands(ch)))
+      if (command[0] == cmd_table[cmd].name[0] && !str_cmp(command, cmd_table[cmd].name) && (cmd_table[cmd].level <= trust || MP_Commands(ch)))
       {
-
          found = TRUE;
          break;
+      }
+   }
+
+   if (!found)
+   {
+      for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
+      {
+         if (cmd_table[cmd].level == CLAN_ONLY && !IS_NPC(ch) && ch->pcdata->clan == 0)
+            continue;
+
+         if (cmd_table[cmd].level == BOSS_ONLY && !IS_NPC(ch) && !IS_SET(ch->pcdata->pflags, PFLAG_CLAN_BOSS))
+            continue;
+
+         if (cmd_table[cmd].level == VAMP_ONLY && !IS_NPC(ch) && !IS_VAMP(ch) && (ch->level != L_GOD))
+            continue;
+
+         if (cmd_table[cmd].level == WOLF_ONLY && !IS_NPC(ch) && !IS_WOLF(ch) && (ch->level != L_GOD))
+            continue;
+
+         if (command[0] == cmd_table[cmd].name[0] && !str_prefix(command, cmd_table[cmd].name) && (cmd_table[cmd].level <= trust || MP_Commands(ch)))
+         {
+            found = TRUE;
+            break;
+         }
       }
    }
 
