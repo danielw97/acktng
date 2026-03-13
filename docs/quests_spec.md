@@ -1,21 +1,21 @@
-# Propositions Specification
+# Quests Specification
 
-This document specifies the static proposition file format currently used by ACK and catalogs the static proposition templates that are **actually loadable** at runtime.
+This document specifies the static quest file format currently used by ACK and catalogs the static quest templates that are **actually loadable** at runtime.
 
 ## Scope and loading behavior
 
-- Static proposition templates are loaded from `../propositions/<n>.prop` at startup, where `<n>` runs from `1` through `PROP_MAX_STATIC_PROPOSITIONS` (`48`). Missing files are ignored.
-- Each loaded file is assigned a zero-based static proposition ID (`file number - 1`).
+- Static quest templates are loaded from `../quests/<n>.prop` at startup, where `<n>` runs from `1` through `PROP_MAX_STATIC_QUESTS` (`48`). Missing files are ignored.
+- Each loaded file is assigned a zero-based static quest ID (`file number - 1`).
 - The parser ignores blank lines, comment lines beginning with `#`, and leading/trailing whitespace around each significant line.
-- Repository snapshot: `54` proposition files exist in `propositions/`; `47` are in the loadable range `1-48`.
-- Files above the load cap are not loaded unless `PROP_MAX_STATIC_PROPOSITIONS` is increased: `50, 51, 52, 53, 54, 55, 56`.
+- Repository snapshot: `54` quest files exist in `quests/`; `47` are in the loadable range `1-48`.
+- Files above the load cap are not loaded unless `PROP_MAX_STATIC_QUESTS` is increased: `50, 51, 52, 53, 54, 55, 56`.
 - Missing file numbers in the load range: `15`.
 
 ## File format (`.prop`)
 
-Each proposition file has this structure:
+Each quest file has this structure:
 1. **Title line**  
-   Freeform text used as the proposition title.
+   Freeform text used as the quest title.
 2. **Numeric definition line** (10 or 11 integers):
 
 ```text
@@ -40,20 +40,20 @@ prerequisite_static_id type num_targets kill_needed min_level [max_level] offere
 
 ## Field definitions
 
-- `prerequisite_static_id`: static proposition ID that must already be completed; `-1` means no prerequisite.
-- `type`: proposition objective type.
+- `prerequisite_static_id`: static quest ID that must already be completed; `-1` means no prerequisite.
+- `type`: quest objective type.
   - `1` = kill-variety objective (kill one of each listed target).
   - `2` = collect-items objective.
   - `3` = kill-count objective against a single target (`kill_needed` required).
 - `num_targets`: number of valid entries expected from the target vnum line.
 - `kill_needed`: required kill count (used by type `3`; `0` for non-count objectives).
 - `min_level`, `max_level`: pseudo-level gating for acceptance.
-- `offerer_vnum`: NPC vnum of the mob that offers the static proposition and receives turn-in.
-- `reward_gold`, `reward_qp`: fixed completion rewards for static propositions.
+- `offerer_vnum`: NPC vnum of the mob that offers the static quest and receives turn-in.
+- `reward_gold`, `reward_qp`: fixed completion rewards for static quests.
 - `reward_item_vnum`, `reward_item_count`: optional base item reward linkage.
 - Custom reward-object block fields override generated reward object identity/flags when present.
 
-## Currently loadable static propositions (`1.prop`-`48.prop`)
+## Currently loadable static quests (`1.prop`-`48.prop`)
 
 | File | Static ID | Title | Prereq ID | Type | Targets | Kill Needed | Level Range | Offerer | Rewards |
 |---|---:|---|---:|---:|---|---:|---|---:|---|

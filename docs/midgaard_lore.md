@@ -64,7 +64,7 @@ Regional instability pushed Midgaard toward militarized provisioning. The specif
 - **Northern supply disruptions:** Ashfang warbands and other hostile groups seized control of forest road segments, cutting Midgaard’s access to northern ore and timber. The road warden system was formalized during this period as a military response to trade-route interdiction.
 - **Conclave escalation:** With supply lines cut, the Spirebound Conclave in the Cinderteeth Mountains turned to coercion, demanding prisoner transfers from frontier cities in exchange for arcane defensive support. Midgaard’s sealed warrants from this period authorized the transfer of condemned debtors—a transaction that the modern Reckoning faction considers the city’s gravest institutional crime.
 
-This phase introduced intake yards, quartermaster doctrine, and requisition language that survives in newer NPC titles (Invasion Quartermaster, Proposition Clerk, Quest Broker). Midgaard’s identity shifted from “merchant city with guards” to “civic fortress that still trades.”
+This phase introduced intake yards, quartermaster doctrine, and requisition language that survives in newer NPC titles (Invasion Quartermaster, Quest Clerk, Quest Broker). Midgaard’s identity shifted from “merchant city with guards” to “civic fortress that still trades.”
 
 The Ash-and-Iron Decades also explain why Midgaard’s newer institutional architecture (the Arcana-Requisition Strip, rooms 3122–3128 and 3161–3163) has a distinctly military-administrative character compared to the older civic-commercial core. These rooms were built under emergency charter law and never fully demilitarized.
 

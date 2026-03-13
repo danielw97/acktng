@@ -30,7 +30,7 @@
 #include <string.h>
 #include <time.h>
 #include "globals.h"
-#include "proposition.h"
+#include "quest.h"
 
 #ifndef DEC_ACT_MOB_H
 #include "act_mob.h"
@@ -1802,7 +1802,7 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
    ch->carry_weight += get_obj_weight(obj);
 
    if (!IS_NPC(ch))
-      proposition_obj_notify(ch, obj);
+      quest_obj_notify(ch, obj);
 
 }
 
@@ -2441,7 +2441,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
          }
 
    if ((ch == quest_mob) || (ch == quest_target))
-      quest_cancel();
+      crusade_cancel();
 
    if (fPull)
       die_follower(ch);

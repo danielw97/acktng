@@ -549,17 +549,17 @@ Objects use their own independent vnum namespace starting at `21000`, assigned s
 
 ---
 
-## Propositions (Static Quest Templates)
+## Quests (Static Quest Templates)
 
-The Catacombs of Nightfall support seven static propositions distributed across all three city postmasters. These propositions tie directly into the area's civic-corruption and forest-covenant narratives, giving players structured quest arcs that reinforce the lore while exploring the catacombs.
+The Catacombs of Nightfall support seven static quests distributed across all three city postmasters. These quests tie directly into the area's civic-corruption and forest-covenant narratives, giving players structured quest arcs that reinforce the lore while exploring the catacombs.
 
 ### File Slot Assignments
 
 - **File `15` (static ID `14`)**: only unused slot in the loadable range (`1`-`48`).
-- **Files `49`, `57`-`61`**: require increasing `PROP_MAX_STATIC_PROPOSITIONS` from `48` to at least `62` in `src/proposition.h`.
+- **Files `49`, `57`-`61`**: require increasing `PROP_MAX_STATIC_QUESTS` from `48` to at least `62` in `src/quest.h`.
 - File `49` (static ID `48`) does not currently exist. Files `57`-`61` (static IDs `56`-`60`) are new files.
 
-### Proposition Summary Table
+### Quest Summary Table
 
 | File | ID | Title | Prereq | Type | Targets | Kill# | Level | Offerer | Gold | QP | Reward Item |
 |---|---:|---|---:|---:|---|---:|---|---:|---:|---:|---|
@@ -573,20 +573,20 @@ The Catacombs of Nightfall support seven static propositions distributed across 
 
 ### Chain Structure
 
-**Chain A — Midgaard Civic Authority (3 propositions, offerer `3015`):**
+**Chain A — Midgaard Civic Authority (3 quests, offerer `3015`):**
 1. `57` (ID `56`): Processional corridor threat assessment (entry, no prereq)
 2. `58` (ID `57`): Toll-Warden removal order (prereq: `56`, targets mini-boss `21026`)
 3. `59` (ID `58`): Sealed Names injunction: Matriarch strike (prereq: `57`, targets boss `21029`, reward item)
 
-**Chain B — Kiess Forest Covenant (2 propositions, offerer `13001`):**
+**Chain B — Kiess Forest Covenant (2 quests, offerer `13001`):**
 1. `60` (ID `59`): Covenant fracture investigation (entry, no prereq)
 2. `61` (ID `60`): Final audit termination: Sepulcher Lich (prereq: `59`, targets boss `21030`, reward item)
 
-**Non-chain propositions:**
+**Non-chain quests:**
 - `15` (ID `14`): Gateworks vermin purge (Midgaard `3015`, entry-level)
 - `49` (ID `48`): Reclaim labor disruption order (Kowloon `14001`, mid-level)
 
-### Detailed Proposition Specifications
+### Detailed Quest Specifications
 
 #### `15.prop` — Gateworks vermin purge (ID `14`)
 
@@ -603,7 +603,7 @@ The survey perimeter is secure. Midgaard's structural assessors can now enter th
 - **Level range:** 10-19.
 - **Offerer:** The Postmaster, Midgaard (`3015`).
 - **Rewards:** 800 gold, 2 qp.
-- **Thematic rationale:** Midgaard civic administration commissions basic pest clearance as a prerequisite for deeper institutional assessment. This is the lowest-level Catacombs proposition and serves as an introduction to the area for newer players.
+- **Thematic rationale:** Midgaard civic administration commissions basic pest clearance as a prerequisite for deeper institutional assessment. This is the lowest-level Catacombs quest and serves as an introduction to the area for newer players.
 
 #### `49.prop` — Reclaim labor disruption order (ID `48`)
 
@@ -620,7 +620,7 @@ The reclaim circles have gone cold. Kowloon's covenant scholars confirm that the
 - **Level range:** 18-25.
 - **Offerer:** Postmaster Lin, Kowloon (`14001`).
 - **Rewards:** 1600 gold, 3 qp.
-- **Thematic rationale:** Kowloon's independent legal tradition provides an outside perspective on Nightfall's institutional horror. The Jade Magistracy recognizes the reclaim rites as structurally identical to Black Ledger forced labor — a parallel that connects Nightfall to the broader world's institutional corruption themes. This non-chain proposition gives Kowloon a direct stake in the Catacombs narrative.
+- **Thematic rationale:** Kowloon's independent legal tradition provides an outside perspective on Nightfall's institutional horror. The Jade Magistracy recognizes the reclaim rites as structurally identical to Black Ledger forced labor — a parallel that connects Nightfall to the broader world's institutional corruption themes. This non-chain quest gives Kowloon a direct stake in the Catacombs narrative.
 
 #### `57.prop` — Processional corridor threat assessment (ID `56`, Chain A start)
 
@@ -736,13 +736,13 @@ A tarnished clasp torn from the Sepulcher Lich's master ledger lies here, its re
 
 ### Implementation Notes
 
-1. **Cap increase assumed.** Files `49` and `57`-`61` fall above the current `PROP_MAX_STATIC_PROPOSITIONS` (`48`). The cap is assumed to be increased to at least `62` before these files are loaded.
+1. **Cap increase assumed.** Files `49` and `57`-`61` fall above the current `PROP_MAX_STATIC_QUESTS` (`48`). The cap is assumed to be increased to at least `62` before these files are loaded.
 2. **Postmaster selection rationale.**
    - **Midgaard (`3015`)** handles the civic authority chain and entry-level clearance because Nightfall is Midgaard's failed institution. The Oath of Stone, the Violet Compact, and the tribunal writ system are all Midgaard instruments.
    - **Kiess (`13001`)** handles the forest covenant chain because Kiess mediates between Midgaard civic systems and Great Northern Forest covenant traditions via the Lantern Road dispatch network.
    - **Kowloon (`14001`)** handles the standalone reclaim disruption because Kowloon's Jade Magistracy provides an independent legal perspective, recognizing Nightfall's reclaim operations as structurally parallel to Kowloon's own Black Ledger institutional abuses.
-3. **Level gating.** All propositions fall within the Catacombs' target level band of 10-25. Chain prerequisites provide natural difficulty progression: assessment (14+) → mini-boss removal (18+) → boss strike (22+).
-4. **Reward object design.** Both boss-targeting chain-final propositions include custom reward objects following established patterns from existing propositions (extra flags `192` = `ITEM_MAGIC` + `ITEM_NODROP`, caster-weight archetype, thematically appropriate `item_apply`). The `detect_undead` and `det_mag` applies are directly useful in the Catacombs environment.
+3. **Level gating.** All quests fall within the Catacombs' target level band of 10-25. Chain prerequisites provide natural difficulty progression: assessment (14+) → mini-boss removal (18+) → boss strike (22+).
+4. **Reward object design.** Both boss-targeting chain-final quests include custom reward objects following established patterns from existing quests (extra flags `192` = `ITEM_MAGIC` + `ITEM_NODROP`, caster-weight archetype, thematically appropriate `item_apply`). The `detect_undead` and `det_mag` applies are directly useful in the Catacombs environment.
 5. **Target vnum validation.** All target vnums reference mobs defined in this plan's mobile roster (`21000`-`21054`). Implementers must verify that the referenced mobs exist in the final area file before creating the `.prop` files.
 
 ---

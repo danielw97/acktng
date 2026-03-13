@@ -710,7 +710,7 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"purge", do_purge, POS_DEAD, L_HER, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
-    {"iquest", do_quest, POS_DEAD, L_DEI, LOG_NORMAL,
+    {"iquest", do_iquest, POS_DEAD, L_DEI, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"restore", do_restore, POS_DEAD, L_DEI, LOG_ALWAYS,
      C_TYPE_IMM, C_SHOW_ALWAYS},
@@ -841,8 +841,8 @@ const struct cmd_type cmd_table[] = {
     {"reincarnate", do_reincarnate, POS_STANDING, 0, LOG_ALWAYS,
      C_TYPE_ACTION, C_SHOW_ALWAYS},
 
-    /* Proposition */
-    { "proposition", do_proposition, POS_STANDING, 1, LOG_NORMAL,
+    /* Quest */
+    { "quest", do_quest, POS_STANDING, 1, LOG_NORMAL,
       C_TYPE_ACTION, C_SHOW_ALWAYS },
 
     /*

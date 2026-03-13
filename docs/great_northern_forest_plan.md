@@ -883,20 +883,20 @@ All mobile definitions must follow these spec requirements:
 
 ---
 
-## Propositions
+## Quests
 
-Static propositions offered through the three regional postmasters for quests set in or motivated by the Great Northern Forest. Proposition IDs 0-4 are already defined in `propositions/1-5.prop`. The baseline set below uses IDs 15-24 (files `16.prop` through `25.prop`), with an additional boss-focused extension using IDs 35-39 (files `36.prop` through `40.prop`). `PROP_MAX_STATIC_PROPOSITIONS` is assumed to be increased to `64`.
+Static quests offered through the three regional postmasters for quests set in or motivated by the Great Northern Forest. Quest IDs 0-4 are already defined in `quests/1-5.prop`. The baseline set below uses IDs 15-24 (files `16.prop` through `25.prop`), with an additional boss-focused extension using IDs 35-39 (files `36.prop` through `40.prop`). `PROP_MAX_STATIC_QUESTS` is assumed to be increased to `64`.
 
 Postmaster vnums:
 - **Midgaard:** `3015` (the Postmaster)
 - **Kiess:** `13001` (the Postmaster of Kiess)
 - **Kowloon:** `14021` (Postmaster of Kowloon)
 
-### Non-Chain Propositions
+### Non-Chain Quests
 
-These standalone propositions have no prerequisites (`prerequisite_static_id = -1`) and can be accepted independently.
+These standalone quests have no prerequisites (`prerequisite_static_id = -1`) and can be accepted independently.
 
-#### Proposition 15 — Lantern Road wolf cull (Midgaard)
+#### Quest 15 — Lantern Road wolf cull (Midgaard)
 
 | Field | Value |
 |---|---|
@@ -918,7 +918,7 @@ These standalone propositions have no prerequisites (`prerequisite_static_id = -
 | **Accept message** | Midgaard's post office has received a stack of delayed delivery reports citing wolf packs along the southern Lantern Road approach. Rangers estimate the pack has split into multiple hunting parties that rotate ambush positions between road bends. Thin the population enough that courier runners can resume single-escort schedules instead of the current armed-convoy requirement. |
 | **Completion message** | Wolf sightings along the southern approach have dropped to seasonal norms, and the post office has downgraded the Lantern Road threat assessment from convoy-only to standard escort. Courier runners are already making faster turnarounds, and the backlog of delayed parcels from the Granite Arcade sorting office is clearing for the first time in weeks. |
 
-#### Proposition 16 — Mosswater smuggler interdiction (Kiess)
+#### Quest 16 — Mosswater smuggler interdiction (Kiess)
 
 | Field | Value |
 |---|---|
@@ -940,7 +940,7 @@ These standalone propositions have no prerequisites (`prerequisite_static_id = -
 | **Accept message** | Kiess dispatch has intercepted falsified manifests traced to a smuggling ring operating out of the Mosswater Bends. They use reed-platform camps to stage contraband before running it north along fen channels that bypass the Lantern Road checkpoints entirely. Kiess route clerks need the ring broken at three levels: their lookouts, their runners, and whoever is directing operations from the deep fen. |
 | **Completion message** | The smuggling ring's command structure is shattered, and Kiess customs officers are already recovering cached contraband from the reed camps you identified. Fen toll collectors report that legitimate mire-clan traders are moving goods openly again instead of avoiding the channels out of fear of smuggler reprisal. The Kiess post has reopened direct fen-route courier service for the first time this season. |
 
-#### Proposition 17 — Northern Crown predator survey (Kowloon)
+#### Quest 17 — Northern Crown predator survey (Kowloon)
 
 | Field | Value |
 |---|---|
@@ -962,7 +962,7 @@ These standalone propositions have no prerequisites (`prerequisite_static_id = -
 | **Accept message** | Kowloon's Wardens of Iron need current threat data from the Northern Crown approaches before they can adjust seasonal patrol rotations. Three predator types have been reported in densities that exceed safe caravan transit thresholds: mist vipers in the cold valleys, frost-touched wolves along the ridge corridors, and mist-shadow cats near the tree line. Engage one of each and bring back field assessment notes so the wardens can calibrate their next deployment. |
 | **Completion message** | Your field reports give Kowloon's patrol command the data they needed to redraw the Northern Crown escort map. The Wardens of Iron have shifted two squads to cover the mist-valley corridors you flagged, and caravan masters are requesting the updated route charts from the Kowloon post office. Seasonal rotation planning can proceed on schedule instead of defaulting to the expensive all-hands deployment. |
 
-#### Proposition 18 — Ironpine Rise Ashfang suppression (Midgaard)
+#### Quest 18 — Ironpine Rise Ashfang suppression (Midgaard)
 
 | Field | Value |
 |---|---|
@@ -984,13 +984,13 @@ These standalone propositions have no prerequisites (`prerequisite_static_id = -
 | **Accept message** | Midgaard's ledgerhouse has flagged a sharp increase in cargo losses through the Ironpine Rise, and ranger reports point to Ashfang warbands operating in coordinated cells: scouts mark targets, trappers slow caravans with deadfalls and snares, and raiders hit the stalled columns. The postmaster needs each cell type disrupted so ridge-route dispatches can resume without triple escort surcharges. |
 | **Completion message** | Ashfang activity on the Ironpine Rise has fragmented into scattered opportunists now that their scout-trapper-raider coordination is broken. Ridge patrol wardens report clean passage windows on routes that had been effectively closed for weeks. Midgaard's post office has already re-listed the Ironpine route as standard-risk, and convoy insurance rates are dropping back to seasonal norms. |
 
-### Chain Propositions
+### Chain Quests
 
-#### Rootbound Purge Chain (Kiess, 3 propositions)
+#### Rootbound Purge Chain (Kiess, 3 quests)
 
 A three-part chain investigating and dismantling Rootbound cult operations in the deep forest. Kiess route clerks drive this chain because Rootbound sabotage of road infrastructure directly threatens Kiess-Midgaard courier schedules.
 
-##### Proposition 19 — Rootbound perimeter probe (chain start)
+##### Quest 19 — Rootbound perimeter probe (chain start)
 
 | Field | Value |
 |---|---|
@@ -1012,7 +1012,7 @@ A three-part chain investigating and dismantling Rootbound cult operations in th
 | **Accept message** | Kiess compact archives have correlated a pattern: every time Rootbound cult activity spikes in the Ancestor Deeps, bridge pilings and lamp-post footings along the Lantern Road show fresh sabotage within days. The clerks believe the cult's outer ring of acolytes and ritualists are the ones carrying out infrastructure attacks between their rites. Engage both tiers and recover any materials that confirm the sabotage-to-ritual pipeline. |
 | **Completion message** | The materials you recovered confirm what Kiess archivists suspected: the Rootbound outer circle treats road sabotage as a devotional act, carving rune-marks into bridge timbers before weakening them. With their acolyte and ritualist cadres disrupted, the cult's ability to project sabotage beyond their deep-forest sanctuaries is severely diminished. Kiess road maintenance crews can repair the damage faster than the cult can replace its losses. |
 
-##### Proposition 20 — Rootbound lieutenant strike (chain middle)
+##### Quest 20 — Rootbound lieutenant strike (chain middle)
 
 | Field | Value |
 |---|---|
@@ -1034,7 +1034,7 @@ A three-part chain investigating and dismantling Rootbound cult operations in th
 | **Accept message** | Your earlier probe forced the Rootbound cult to consolidate around its inner circle. Kiess intelligence now has positions on two key figures: a lieutenant who coordinates the Thornmother's field operations, and a briar knight who commands the cult's armed enforcers in the northern groves. Removing them will isolate the Thornmother from her remaining followers and open a path for the final strike. |
 | **Completion message** | With the lieutenant and briar knight eliminated, the Rootbound cult's command chain between the Thornmother and her remaining followers is severed. Kiess field agents report that scattered cultists are retreating deeper into the forest instead of holding their former positions. The path to the Thornmother's inner sanctum is now exposed, though the cult's remaining defenses will not be trivial. |
 
-##### Proposition 21 — Thornmother sanctum assault (chain end)
+##### Quest 21 — Thornmother sanctum assault (chain end)
 
 | Field | Value |
 |---|---|
@@ -1056,11 +1056,11 @@ A three-part chain investigating and dismantling Rootbound cult operations in th
 | **Accept message** | The outer ring is broken and the inner circle is scattered. Kiess compact clerks have authorized the final warrant: engage the Thornmother herself in her hidden grove deep in the Ancestor Deeps. She is the living heart of the Rootbound cult, and Kowloon's Wardens of Iron have matched the Kiess bounty with their own standing order. End this threat before the cult can rebuild its chain of command. |
 | **Completion message** | The Thornmother has fallen, and with her the Rootbound cult's claim to the deep forest. Kiess and Kowloon officials are already sending joint survey teams into the former cult territory to assess the damage and begin reclaiming sabotaged road sections. For the first time in years, the Ancestor Deeps are open to legitimate passage without cult interference. Both post offices have issued commendations naming your work as the decisive action. |
 
-#### Ancestor Deeps Reclamation Chain (Kowloon, 3 propositions)
+#### Ancestor Deeps Reclamation Chain (Kowloon, 3 quests)
 
 A three-part chain clearing the Ancestor Deeps of hostile factions threatening Kowloon's southern trade security. Kowloon's postmaster drives this chain because the deep-forest threats directly endanger the northern approach to the Iron Gate.
 
-##### Proposition 22 — Cairn-Keeper exorcism (chain start)
+##### Quest 22 — Cairn-Keeper exorcism (chain start)
 
 | Field | Value |
 |---|---|
@@ -1082,7 +1082,7 @@ A three-part chain clearing the Ancestor Deeps of hostile factions threatening K
 | **Accept message** | Kowloon's Jade Magistracy has received formal complaints from caravan masters who report that Cairn-Keeper ghosts in the Ancestor Deeps have become actively hostile to all traffic, not merely trespassers at the standing stones. The magistracy believes the recent Rootbound cult activity has disturbed the burial sites and agitated the spirits beyond their traditional territorial behavior. Reduce the ghost population to levels the wardens can manage through standard containment patrols. |
 | **Completion message** | The Cairn-Keeper ghost activity has subsided to levels consistent with historical norms. Kowloon's wardens report that the remaining spirits have retreated to their standing stone sites instead of ranging across trade corridors. The Jade Magistracy has formally noted the action in their seasonal security ledger and adjusted the Ancestor Deeps threat classification downward. Caravan masters are accepting contracts through the deep route again. |
 
-##### Proposition 23 — Ashfang war-chief elimination (chain middle)
+##### Quest 23 — Ashfang war-chief elimination (chain middle)
 
 | Field | Value |
 |---|---|
@@ -1104,7 +1104,7 @@ A three-part chain clearing the Ancestor Deeps of hostile factions threatening K
 | **Accept message** | With the Cairn-Keeper spirits contained, Kowloon intelligence has confirmed that the Ashfang warbands exploited the ghost disruption to expand their deep-forest camps. Their war-chief has established a fortified position in the Ancestor Deeps, supported by berserker enforcers who control the approaches. Kowloon's Wardens of Iron cannot commit a full garrison sortie without leaving the Iron Gate undermanned. Remove the war-chief and his berserker guard to collapse the Ashfang deep-forest presence. |
 | **Completion message** | The Ashfang war-chief's deep camp has been broken, and surviving warband members are scattering toward the Ironpine Rise where ridge patrol wardens can contain them. Kowloon's southern approach is measurably safer, and the Wardens of Iron have redeployed the emergency reserve back to standard rotation. The postmaster has flagged your action in the next dispatch to Kowloon's Harbor Syndics as evidence that the forest route remains commercially viable. |
 
-##### Proposition 24 — Oathbreaker wraith banishment (chain end)
+##### Quest 24 — Oathbreaker wraith banishment (chain end)
 
 | Field | Value |
 |---|---|
@@ -1126,7 +1126,7 @@ A three-part chain clearing the Ancestor Deeps of hostile factions threatening K
 | **Accept message** | The living threats are contained, but the deepest corruption remains: oathbreaker wraiths and cold ancestor spirits that haunt the Northern Crown's ruined oath-steles. Kowloon's covenant tradition considers these entities an affront to the compact that binds both cities. The wraiths are the spirits of those who violated the original forest charter, and their continued presence poisons the ground where Midgaard and Kowloon first swore mutual obligation. Banish them so the oath-stele sites can be reconsecrated. |
 | **Completion message** | The oathbreaker wraiths have been banished and the ancestor spirits have been laid to rest. Kowloon's covenant scholars report that the oath-stele sites are already showing signs of recovery, with the oppressive cold lifting and the corruption receding from the surrounding stones. The Jade Magistracy has authorized a formal reconsecration ceremony, and both cities' wardens have been invited to witness the renewal of the original forest charter marks. The northern forest passage is as secure as it has been in living memory. |
 
-### Proposition Summary Table
+### Quest Summary Table
 
 | File | Static ID | Title | Prereq ID | Type | Targets | Kill Needed | Level Range | Offerer | Rewards | Chain |
 |---|---:|---|---:|---:|---|---:|---|---:|---|---|
@@ -1146,23 +1146,23 @@ A three-part chain clearing the Ancestor Deeps of hostile factions threatening K
 | `39.prop` | 38 | Covenant ash purge | 37 | 1 | `15567 15589` | 0 | 92-170 | 14021 | 9800 gold, 8 qp | Oathnight 2/3 |
 | `40.prop` | 39 | Oathnight final rite | 38 | 1 | `15584 15595` | 0 | 95-170 | 14021 | 11000 gold, 9 qp | Oathnight 3/3 |
 
-### Proposition Design Notes
+### Quest Design Notes
 
 - **Postmaster distribution (including IDs 35-39):** 3 Midgaard (IDs 15, 18, 35), 5 Kiess (IDs 16, 19, 20, 21, 36), 7 Kowloon (IDs 17, 22, 23, 24, 37, 38, 39).
 - **Kiess dominance in Rootbound chain:** Kiess route clerks and compact archives drive the cult investigation because Rootbound sabotage targets road infrastructure that Kiess's courier network depends on. The chain escalates from outer-ring disruption through inner-circle strikes to the boss encounter.
 - **Kowloon dominance in Reclamation chain:** Kowloon's covenant tradition and Jade Magistracy security concerns drive the deep-forest clearing because the Ancestor Deeps threats directly endanger Kowloon's southern trade approaches. The chain escalates from undead containment through Ashfang power removal to spiritual purification.
-- **Midgaard practical-threat focus:** Midgaard propositions prioritize direct commerce disruption issues (wolves, Ashfang raiding, and fen smuggler leadership) consistent with Midgaard's pragmatic civic character.
-- **Level band coverage:** The 15 propositions span levels 20-170, with non-chain propositions covering lower-to-mid bands and chains escalating through high-end forest and border content.
-- **Type variety:** 5 kill-count propositions (IDs 15, 21, 22, 35, 37) and 10 kill-variety propositions (IDs 16, 17, 18, 19, 20, 23, 24, 36, 38, 39).
+- **Midgaard practical-threat focus:** Midgaard quests prioritize direct commerce disruption issues (wolves, Ashfang raiding, and fen smuggler leadership) consistent with Midgaard's pragmatic civic character.
+- **Level band coverage:** The 15 quests span levels 20-170, with non-chain quests covering lower-to-mid bands and chains escalating through high-end forest and border content.
+- **Type variety:** 5 kill-count quests (IDs 15, 21, 22, 35, 37) and 10 kill-variety quests (IDs 16, 17, 18, 19, 20, 23, 24, 36, 38, 39).
 - **All target vnums are mobs defined in this area plan** (15500-15599 mob range).
-- **Reward scaling** follows the pattern established by existing propositions 0-4: gold and qp increase with level range and chain depth.
-- **`PROP_MAX_STATIC_PROPOSITIONS`** must be increased from `16` to `64` to support IDs beyond 15 in future areas.
+- **Reward scaling** follows the pattern established by existing quests 0-4: gold and qp increase with level range and chain depth.
+- **`PROP_MAX_STATIC_QUESTS`** must be increased from `16` to `64` to support IDs beyond 15 in future areas.
 
-### Additional Boss-Focused Propositions (IDs 35-39)
+### Additional Boss-Focused Quests (IDs 35-39)
 
-The following five propositions extend the forest board with boss-target contracts only. They mix standalone and chained progression while staying anchored to The Forest of Confusion's corruption, oath-fracture, and border-security themes.
+The following five quests extend the forest board with boss-target contracts only. They mix standalone and chained progression while staying anchored to The Forest of Confusion's corruption, oath-fracture, and border-security themes.
 
-#### Proposition 35 — Fen kingpin decapitation (Midgaard)
+#### Quest 35 — Fen kingpin decapitation (Midgaard)
 
 | Field | Value |
 |---|---|
@@ -1184,7 +1184,7 @@ The following five propositions extend the forest board with boss-target contrac
 | **Accept message** | Midgaard's Granite Arcade has traced another burst of forged courier seals to the Mosswater ring, proving the old smuggler command never truly collapsed. The same fen kingpin has resumed bribing river guides and diverting sealed post bags into the Confusion thickets where records vanish. Eliminate the smuggler boss outright so Midgaard can reassert lawful carriage over the southern lantern route. |
 | **Completion message** | With the fen smuggler boss dead, Midgaard auditors have recovered stolen satchels, broken counterfeit stamp blocks, and restored chain-of-custody logs for the southern dispatch lanes. Rangers report that smuggler lookouts are scattering without central command, and convoy captains are filing normal route plans again. |
 
-#### Proposition 36 — Crown alpha hunt (Kiess)
+#### Quest 36 — Crown alpha hunt (Kiess)
 
 | Field | Value |
 |---|---|
@@ -1206,7 +1206,7 @@ The following five propositions extend the forest board with boss-target contrac
 | **Accept message** | Kiess route-maps show that two apex predators now dominate the same northern lanes: the Primal Bear Lord and an Ashfang warmaster driving raiders behind it. That pairing has turned old escape paths into kill-boxes where patrols disappear before signal flares can be lit. Break both alpha threats so Kiess can reopen courier scouting beyond the Crown ridges. |
 | **Completion message** | Both Crown alphas are down, and Kiess scouts confirm the pressure front around the northern ridges has collapsed. Surviving Ashfang cells have withdrawn to fragmented camps while the great bear's roaming territory is no longer forcing caravans into dead-end gullies. Relay routes marked abandoned since the last ash winter are being reinstated. |
 
-#### Proposition 37 — Briar throne breach (Kowloon)
+#### Quest 37 — Briar throne breach (Kowloon)
 
 | Field | Value |
 |---|---|
@@ -1228,7 +1228,7 @@ The following five propositions extend the forest board with boss-target contrac
 | **Accept message** | Kowloon's Courier Lantern Office has elevated the Rootbound crisis to covenant emergency status after fresh briar growth sealed two ward-stone paths overnight. Scribes believe the Thornmother is reweaving confusion wards around the old oath corridor, preventing lawful passage and feeding corruption into the north gate approaches. Enter the sanctum and sever the Briar Throne by slaying the Thornmother. |
 | **Completion message** | The Thornmother has fallen, and Kowloon wardens report immediate weakening of the briar wards strangling the covenant lanes. Inspectors from the Iron Gate confirm that navigational glyphs once scrambled by Confusion haze are stable again. The Jade Magistracy has authorized full-scale reclamation teams to move into the cleared sanctum perimeter. |
 
-#### Proposition 38 — Covenant ash purge (Kowloon, chain 2/3)
+#### Quest 38 — Covenant ash purge (Kowloon, chain 2/3)
 
 | Field | Value |
 |---|---|
@@ -1250,7 +1250,7 @@ The following five propositions extend the forest board with boss-target contrac
 | **Accept message** | Thornmother's fall exposed the Ashfang command lattice that had been using her confusion mists as battlefield cover. Kowloon covenant marshals now require a coordinated purge of both remaining Ashfang war leaders before they can regroup and rearm the border camps. Cut down the war-chief and the warmaster to end organized ashfang pressure on the northern charter road. |
 | **Completion message** | Both Ashfang commanders are dead, and intercepted battle-calls indicate no surviving officer has authority to unify the splintered warbands. Kowloon customs patrols report that ambush banners have been stripped from the old ridge chokepoints. The covenant road is open for the final spiritual cleansing phase. |
 
-#### Proposition 39 — Oathnight final rite (Kowloon, chain 3/3)
+#### Quest 39 — Oathnight final rite (Kowloon, chain 3/3)
 
 | Field | Value |
 |---|---|
@@ -1303,6 +1303,6 @@ The following five propositions extend the forest board with boss-target contrac
 - [x] Weapon value3 thematically consistent with weapon concept
 - [x] Two-handed weapons flagged `ITEM_TWO_HANDED`; fist weapon flagged `ITEM_FIST` with value3=0
 - [x] Object weight ranges match archetype (1-5 caster, 6-10 melee, 11-15 tank)
-- [x] Propositions section with 15 static propositions (IDs 15-24 and 35-39) across three postmasters
-- [x] Mix of non-chain and chain propositions, including a boss-focused Oathnight chain (37->38->39)
-- [x] All proposition target vnums reference mobs defined in this area plan
+- [x] Quests section with 15 static quests (IDs 15-24 and 35-39) across three postmasters
+- [x] Mix of non-chain and chain quests, including a boss-focused Oathnight chain (37->38->39)
+- [x] All quest target vnums reference mobs defined in this area plan

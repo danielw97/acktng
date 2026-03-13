@@ -113,7 +113,7 @@ Midgaard already reads as a **20x10 civic lattice** with repeated avenue naming 
 
 4. **Newer Arcana-Requisition Strip (already present in high vnums)**
    - Anchors: `3122-3128`, `3161-3163` style rooms/NPCs.
-   - Function: modernized outfitting, proposition/quest brokerage, invasion logistics.
+   - Function: modernized outfitting, quest/quest brokerage, invasion logistics.
 
 5. **Gateward Connectors**
    - Rooms with external exits become explicitly themed as managed boundaries between Midgaard and linked regions.
@@ -175,7 +175,7 @@ A five-color civic palette that matches Midgaard’s existing naming and atmosph
 
 - Themed as a post-crisis civic complex where adventurers process gear, contracts, and sanctioned risk.
 - Distinct counters/offices:
-  - proposition adjudication
+  - quest adjudication
   - invasion reserve logistics
   - quest brokerage archives
   - armor specialization courts (cloth/melee/tank)
