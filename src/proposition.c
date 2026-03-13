@@ -9,6 +9,8 @@
 #include <errno.h>
 #include "globals.h"
 
+void set_obj_stat_auto(OBJ_DATA *obj);
+
 typedef struct static_prop_template_data STATIC_PROP_TEMPLATE;
 struct static_prop_template_data
 {
@@ -24,8 +26,13 @@ struct static_prop_template_data
     int offerer_vnum;
     int reward_gold;
     int reward_qp;
-    int reward_item_vnum;
-    int reward_item_count;
+    char *reward_obj_short;
+    char *reward_obj_name;
+    char *reward_obj_long;
+    int reward_obj_wear_flags;
+    int reward_obj_extra_flags;
+    int reward_obj_weight;
+    int reward_obj_item_apply;
     char *accept_message;
     char *completion_message;
 };
@@ -80,12 +87,22 @@ static bool load_static_prop_file(const char *path, int id)
     memset(&tpl, 0, sizeof(tpl));
     tpl.id = id;
     tpl.prerequisite_static_id = -1;
+    tpl.reward_obj_short = str_dup("");
+    tpl.reward_obj_name = str_dup("");
+    tpl.reward_obj_long = str_dup("");
+    tpl.reward_obj_wear_flags = 0;
+    tpl.reward_obj_extra_flags = 0;
+    tpl.reward_obj_weight = 0;
+    tpl.reward_obj_item_apply = 0;
     tpl.accept_message = str_dup("");
     tpl.completion_message = str_dup("");
 
     if (!read_prop_line(fp, line, sizeof(line)))
     {
         bugf("load_static_prop_file: missing title in %s", path);
+        free_string(tpl.reward_obj_short);
+        free_string(tpl.reward_obj_name);
+        free_string(tpl.reward_obj_long);
         free_string(tpl.accept_message);
         free_string(tpl.completion_message);
         fclose(fp);
@@ -97,6 +114,9 @@ static bool load_static_prop_file(const char *path, int id)
     {
         bugf("load_static_prop_file: missing numeric line in %s", path);
         free_string(tpl.title);
+        free_string(tpl.reward_obj_short);
+        free_string(tpl.reward_obj_name);
+        free_string(tpl.reward_obj_long);
         free_string(tpl.accept_message);
         free_string(tpl.completion_message);
         fclose(fp);
@@ -104,7 +124,7 @@ static bool load_static_prop_file(const char *path, int id)
     }
 
     tpl.max_level = 170;
-    if (sscanf(line, "%d %d %d %d %d %d %d %d %d %d %d",
+    if (sscanf(line, "%d %d %d %d %d %d %d %d %d %*d %*d",
                &tpl.prerequisite_static_id,
                &tpl.type,
                &tpl.num_targets,
@@ -113,11 +133,9 @@ static bool load_static_prop_file(const char *path, int id)
                &tpl.max_level,
                &tpl.offerer_vnum,
                &tpl.reward_gold,
-               &tpl.reward_qp,
-               &tpl.reward_item_vnum,
-               &tpl.reward_item_count) != 11)
+               &tpl.reward_qp) != 9)
     {
-        if (sscanf(line, "%d %d %d %d %d %d %d %d %d %d",
+        if (sscanf(line, "%d %d %d %d %d %d %d %d %*d %*d",
                    &tpl.prerequisite_static_id,
                    &tpl.type,
                    &tpl.num_targets,
@@ -125,12 +143,13 @@ static bool load_static_prop_file(const char *path, int id)
                    &tpl.min_level,
                    &tpl.offerer_vnum,
                    &tpl.reward_gold,
-                   &tpl.reward_qp,
-                   &tpl.reward_item_vnum,
-                   &tpl.reward_item_count) != 10)
+                   &tpl.reward_qp) != 8)
         {
             bugf("load_static_prop_file: bad numeric line in %s", path);
             free_string(tpl.title);
+            free_string(tpl.reward_obj_short);
+            free_string(tpl.reward_obj_name);
+            free_string(tpl.reward_obj_long);
             free_string(tpl.accept_message);
             free_string(tpl.completion_message);
             fclose(fp);
@@ -142,6 +161,9 @@ static bool load_static_prop_file(const char *path, int id)
     {
         bugf("load_static_prop_file: missing target line in %s", path);
         free_string(tpl.title);
+        free_string(tpl.reward_obj_short);
+        free_string(tpl.reward_obj_name);
+        free_string(tpl.reward_obj_long);
         free_string(tpl.accept_message);
         free_string(tpl.completion_message);
         fclose(fp);
@@ -159,6 +181,9 @@ static bool load_static_prop_file(const char *path, int id)
     {
         bugf("load_static_prop_file: invalid target count in %s", path);
         free_string(tpl.title);
+        free_string(tpl.reward_obj_short);
+        free_string(tpl.reward_obj_name);
+        free_string(tpl.reward_obj_long);
         free_string(tpl.accept_message);
         free_string(tpl.completion_message);
         fclose(fp);
@@ -166,16 +191,55 @@ static bool load_static_prop_file(const char *path, int id)
     }
 
     if (read_prop_line(fp, line, sizeof(line)))
+    {
+        free_string(tpl.accept_message);
         tpl.accept_message = str_dup(line);
+    }
 
     if (read_prop_line(fp, line, sizeof(line)))
+    {
+        free_string(tpl.completion_message);
         tpl.completion_message = str_dup(line);
+    }
+
+    if (read_prop_line(fp, line, sizeof(line)))
+    {
+        free_string(tpl.reward_obj_short);
+        tpl.reward_obj_short = str_dup(line);
+    }
+
+    if (read_prop_line(fp, line, sizeof(line)))
+    {
+        free_string(tpl.reward_obj_name);
+        tpl.reward_obj_name = str_dup(line);
+    }
+
+    if (read_prop_line(fp, line, sizeof(line)))
+    {
+        free_string(tpl.reward_obj_long);
+        tpl.reward_obj_long = str_dup(line);
+    }
+
+    if (read_prop_line(fp, line, sizeof(line)))
+        tpl.reward_obj_wear_flags = atoi(line);
+
+    if (read_prop_line(fp, line, sizeof(line)))
+        tpl.reward_obj_extra_flags = atoi(line);
+
+    if (read_prop_line(fp, line, sizeof(line)))
+        tpl.reward_obj_weight = atoi(line);
+
+    if (read_prop_line(fp, line, sizeof(line)))
+        tpl.reward_obj_item_apply = atoi(line);
 
     grown = realloc(static_prop_table, sizeof(*grown) * (static_prop_count + 1));
     if (grown == NULL)
     {
         bug("load_static_prop_file: out of memory growing static proposition table", 0);
         free_string(tpl.title);
+        free_string(tpl.reward_obj_short);
+        free_string(tpl.reward_obj_name);
+        free_string(tpl.reward_obj_long);
         free_string(tpl.accept_message);
         free_string(tpl.completion_message);
         fclose(fp);
@@ -199,6 +263,9 @@ void proposition_load_static_templates(void)
         for (i = 0; i < static_prop_count; i++)
         {
             free_string(static_prop_table[i].title);
+            free_string(static_prop_table[i].reward_obj_short);
+            free_string(static_prop_table[i].reward_obj_name);
+            free_string(static_prop_table[i].reward_obj_long);
             free_string(static_prop_table[i].accept_message);
             free_string(static_prop_table[i].completion_message);
         }
@@ -303,6 +370,7 @@ int proposition_unit_canonical_postmaster_vnum(int vnum)
 #endif
 
 static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl);
+static bool static_reward_item_is_valid(const STATIC_PROP_TEMPLATE *tpl);
 
 static PROPOSITION_DATA *get_prop_slot(CHAR_DATA *ch, int slot)
 {
@@ -537,16 +605,70 @@ static void show_reward_preview(CHAR_DATA *ch, PROPOSITION_DATA *prop)
 
     sprintf(buf, "@@WReward on completion:@@N @@Y%d@@N gold, @@Y%d@@N exp, @@Y%d@@N quest point%s",
             gold, exp, qp, qp == 1 ? "" : "s");
-    if (prop->prop_reward_item_vnum > 0 && prop->prop_reward_item_count > 0)
+    if (prop->prop_static_id >= 0)
     {
-        OBJ_INDEX_DATA *oidx = get_obj_index(prop->prop_reward_item_vnum);
-        if (oidx != NULL)
-            sprintf(buf + strlen(buf), ", @@Y%d@@N x %s",
-                    prop->prop_reward_item_count,
-                    oidx->short_descr);
+        const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(prop->prop_static_id);
+        if (static_reward_item_is_valid(tpl))
+            sprintf(buf + strlen(buf), ", @@Y1@@N x %s", tpl->reward_obj_short);
     }
     strcat(buf, ".\n\r");
     send_to_char(buf, ch);
+}
+
+static bool static_reward_item_is_valid(const STATIC_PROP_TEMPLATE *tpl)
+{
+    if (tpl == NULL)
+        return FALSE;
+
+    if (tpl->reward_obj_short == NULL || tpl->reward_obj_short[0] == '\0'
+        || tpl->reward_obj_name == NULL || tpl->reward_obj_name[0] == '\0'
+        || tpl->reward_obj_long == NULL || tpl->reward_obj_long[0] == '\0')
+        return FALSE;
+
+    if (tpl->reward_obj_wear_flags == 0)
+        return FALSE;
+
+    if (tpl->reward_obj_weight <= 0)
+        return FALSE;
+
+    return TRUE;
+}
+
+static OBJ_DATA *create_static_reward_object(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl)
+{
+    OBJ_DATA *reward;
+    int spawn_level;
+
+    if (ch == NULL || !static_reward_item_is_valid(tpl))
+        return NULL;
+
+    spawn_level = get_psuedo_level(ch);
+    if (tpl->max_level > 0 && spawn_level > tpl->max_level)
+        spawn_level = tpl->max_level;
+    spawn_level = UMAX(1, spawn_level);
+
+    reward = create_object(get_obj_index(OBJ_VNUM_MUSHROOM), 0);
+    if (reward == NULL)
+        return NULL;
+
+    reward->item_type = ITEM_ARMOR;
+    reward->level = spawn_level;
+    reward->wear_flags = ITEM_TAKE | tpl->reward_obj_wear_flags;
+    reward->extra_flags = tpl->reward_obj_extra_flags;
+    reward->weight = tpl->reward_obj_weight;
+    reward->item_apply = tpl->reward_obj_item_apply;
+
+    free_string(reward->short_descr);
+    reward->short_descr = str_dup(tpl->reward_obj_short);
+
+    free_string(reward->name);
+    reward->name = str_dup(tpl->reward_obj_name);
+
+    free_string(reward->description);
+    reward->description = str_dup(tpl->reward_obj_long);
+
+    set_obj_stat_auto(reward);
+    return reward;
 }
 
 static void proposition_list_static(CHAR_DATA *ch)
@@ -672,8 +794,8 @@ static void proposition_accept_static(CHAR_DATA *ch, int list_number)
     prop->prop_static_id = tpl->id;
     prop->prop_reward_gold = tpl->reward_gold;
     prop->prop_reward_qp = tpl->reward_qp;
-    prop->prop_reward_item_vnum = tpl->reward_item_vnum;
-    prop->prop_reward_item_count = tpl->reward_item_count;
+    prop->prop_reward_item_vnum = 0;
+    prop->prop_reward_item_count = 0;
 
     for (i = 0; i < tpl->num_targets; i++)
     {
@@ -987,8 +1109,7 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
             int gold_reward;
         int exp_reward;
         int qp_reward;
-        int i;
-        const STATIC_PROP_TEMPLATE *tpl;
+        const STATIC_PROP_TEMPLATE *tpl = NULL;
         CHAR_DATA *turnin_npc = NULL;
 
         if (prop->prop_type == PROP_TYPE_NONE || !prop->prop_completed)
@@ -1044,18 +1165,15 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
         ch->quest_points += qp_reward;
         ch->pcdata->proposition_points += 1;
 
-        if (prop->prop_reward_item_vnum > 0 && prop->prop_reward_item_count > 0)
+        if (prop->prop_static_id >= 0)
         {
-            OBJ_INDEX_DATA *oidx = get_obj_index(prop->prop_reward_item_vnum);
-            if (oidx != NULL)
+            OBJ_DATA *reward;
+
+            reward = create_static_reward_object(ch, tpl);
+            if (reward != NULL)
             {
-                for (i = 0; i < prop->prop_reward_item_count; i++)
-                {
-                    OBJ_DATA *reward = create_object(oidx, oidx->level);
-                    if (reward != NULL)
-                        obj_to_char(reward, ch);
-                }
-                sprintf(buf, "  @@Y%d@@N x %s\n\r", prop->prop_reward_item_count, oidx->short_descr);
+                obj_to_char(reward, ch);
+                sprintf(buf, "  @@Y1@@N x %s\n\r", reward->short_descr);
                 send_to_char(buf, ch);
             }
         }
