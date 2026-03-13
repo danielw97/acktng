@@ -163,6 +163,10 @@ bool spec_gnf_joint_scout(CHAR_DATA *ch)
    if (tgt_idx < 0)
       return FALSE;
 
+   /* Slow patrol: skip movement half the time so scouts walk at a measured pace */
+   if (number_bits(1) != 0)
+      return TRUE;
+
    /* Determine next room along the route */
    next_vnum = (cur_idx < tgt_idx) ? route[cur_idx + 1] : route[cur_idx - 1];
 
