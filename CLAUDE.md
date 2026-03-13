@@ -90,7 +90,7 @@ acktng/
 ├── docs/             # Documentation (area file spec, data structures, licenses)
 ├── help/             # In-game help files
 ├── shelp/            # Staff help files
-├── npcs/             # NPC/player save directory (subdirectories a-z)
+├── player/           # Player save directory (subdirectories a-z)
 ├── log/              # Server log directory
 ├── reports/          # Report files
 ├── imc/              # Inter-MUD communication config
@@ -135,7 +135,7 @@ The GitHub Actions workflow `.github/workflows/validate-open-prs.yml`:
 ## Common Pitfalls
 
 - The server binary must run from the `area/` directory (relative paths to area files, data, player dirs)
-- Player directories (`npcs/a` through `npcs/z`) must exist before players can save
+- Player directories (`player/a` through `player/z`) must exist before players can save
 - `ack.h` is the single include for most `.c` files — it pulls in typedefs, config, globals, lists, strfuns
 - When writing unit tests, use `#define DEC_GLOBALS_H 1` before including `ack.h` to avoid link errors from global arrays
 - The Makefile defines `O_FILES` twice (second definition wins) — be aware when adding new source files
