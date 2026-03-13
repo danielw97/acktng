@@ -1151,13 +1151,11 @@ bool spec_mayor(CHAR_DATA *ch)
       break;
 
    case 'e':
-      /*	do_yell( ch, "I hereby declare the city of Midgaard open!" ); */
-      do_yell(ch, "It's the Groovy Guru of ACK! ZenDude!");
+      do_yell(ch, "I hereby declare the city of Midgaard open!");
       break;
 
    case 'E':
-      /*	do_yell( ch, "I hereby declare the city of Midgaard closed!" );*/
-      do_yell(ch, "See my wiggle? My twist? My FORBIDDEN DANCE?");
+      do_yell(ch, "I hereby declare the city of Midgaard closed!");
       break;
 
    case 'O':

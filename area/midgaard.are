@@ -8,7 +8,7 @@ I 0 0
 V 3001 3200
 X 0
 F 15
-U @@WThe Mayor stumbles by, acting drunk.@@N~
+U @@WThe morning bell rings across @@yMidgaard@@N@@W as the city stirs to life once more.@@N~
 O Virant~
 R stephen ~
 W stephen ~
@@ -4314,11 +4314,11 @@ A janitor sweeps the street methodically, pushing debris into a neat pile.
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
 #3062
-bug~
-A bug~
-A furry little system bug scuttles along the wall, leaving tiny glitching footprints.
+mongrel~
+a mangy mongrel~
+A lean, scruffy mongrel noses along the gutter, ever alert for something edible.
 ~
-This anomalous creature defies easy classification — part insect, part manifestation of whatever arcane forces keep @@WMidgaard@@N running. It seems harmless enough, but the way reality shimmers slightly in its wake is unsettling.
+This ragged street dog has called @@WMidgaard@@N's alleys home for as long as anyone can remember. Ribs show faintly beneath a patchy, mud-coloured coat, and one ear bears the notch of some long-forgotten scrap. It pays little mind to passers-by, far more interested in whatever scraps the city's gutters might yield.
 ~
 131265 40 -200 S
 14 0
