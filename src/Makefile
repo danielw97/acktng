@@ -35,6 +35,37 @@ O_FILES = act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o \
 	  skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o \
 	  werewolf.o wizutil.o write.o
+AI_SPEC_OBJS = \
+	  ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
+	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
+	  ai/spec_summon_metal.o ai/spec_summon_animate.o ai/spec_summon_thought.o \
+	  ai/spec_breath_any.o ai/spec_breath_acid.o ai/spec_breath_fire.o \
+	  ai/spec_breath_frost.o ai/spec_breath_gas.o ai/spec_breath_lightning.o \
+	  ai/spec_cast_adept.o ai/spec_cast_cleric.o ai/spec_cast_judge.o \
+	  ai/spec_cast_mage.o ai/spec_cast_undead.o ai/spec_executioner.o \
+	  ai/spec_mino_guard.o ai/spec_fido.o ai/spec_guard.o ai/spec_janitor.o \
+	  ai/spec_mayor.o ai/spec_poison.o ai/spec_thief.o ai/spec_policeman.o \
+	  ai/spec_cast_cadaver.o ai/spec_undead.o ai/spec_stephen.o ai/spec_rewield.o \
+	  ai/spec_sylai_priest.o ai/spec_cast_bigtime.o ai/spec_sage.o \
+	  ai/spec_wizardofoz.o ai/spec_vamp_hunter.o ai/spec_tax_man.o \
+	  ai/spec_lamplighter.o ai/spec_warden.o ai/spec_vendor.o \
+	  ai/spec_lay_sister.o ai/spec_laborer.o ai/spec_keep_physical_captain.o \
+	  ai/spec_kiess_shopkeeper.o ai/spec_kiess_innkeeper.o ai/spec_kiess_scout.o \
+	  ai/spec_kiess_orator.o ai/spec_kiess_wall_officer.o \
+	  ai/spec_kowloon_shopkeeper.o ai/spec_kowloon_gate_captain.o \
+	  ai/spec_kowloon_courier.o ai/spec_kowloon_innkeeper.o \
+	  ai/spec_kowloon_corsair.o ai/spec_kowloon_sweeper.o \
+	  ai/spec_kowloon_magistracy.o ai/spec_kowloon_shrine.o \
+	  ai/spec_kowloon_vendor.o ai/spec_kowloon_laborer.o \
+	  ai/spec_gnf_road_warden.o ai/spec_gnf_lamplighter.o ai/spec_gnf_peddler.o \
+	  ai/spec_gnf_mire_speaker.o ai/spec_gnf_everkeeper.o \
+	  ai/spec_gnf_joint_scout.o ai/spec_gnf_toll_collector.o \
+	  ai/spec_gnf_customs.o ai/spec_gnf_courier.o \
+	  ai/spec_rr_road_clerk.o ai/spec_rr_warden_captain.o \
+	  ai/spec_rr_charter_keeper.o ai/spec_rr_convoy_marshal.o \
+	  ai/spec_rr_peddler.o ai/spec_rr_shrine_keeper.o ai/spec_rr_ferryman.o \
+	  ai/spec_rr_camp_cook.o ai/spec_rr_pilgrim.o ai/spec_rr_ruin_scavenger.o
+
 O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o \
 	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
@@ -42,7 +73,7 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  mob_commands.o mob_prog.o obj_fun.o pdelete.o quest.o crusade.o reincarnate.o rulers.o \
 	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
-	  write.o
+	  write.o $(AI_SPEC_OBJS)
 
 .PHONY: all clean purge unit-tests integration-test web
 
@@ -75,15 +106,18 @@ ack: $(O_FILES)
 endif
 
 clean:
-	rm -f *.o ack ack.exe ../area/core *~
+	rm -f *.o ai/*.o ack ack.exe ../area/core *~
 	$(MAKE) -C ../web clean
 
 purge:
-	rm -f *.o ack ack.exe ../area/core *~
+	rm -f *.o ai/*.o ack ack.exe ../area/core *~
 	$(MAKE) -C ../web clean
 
 %.o: %.c ack.h
 	$(CC) -c $(C_FLAGS) $<
+
+ai/%.o: ai/%.c ack.h
+	$(CC) -c $(C_FLAGS) -I. -o $@ $<
 
 scan: scan.o
 	rm -f scan
@@ -312,12 +346,16 @@ unit-test-invasion: test_invasion.o invasion.unit-test.o test_is_fighting.o
 	rm -f unit-test-invasion
 	$(CC) -Wl,--gc-sections -o unit-test-invasion test_invasion.o invasion.unit-test.o test_is_fighting.o $(L_FLAGS)
 
+AI_SUMMON_OBJS = ai/spec_summon_water.o ai/spec_summon_fire.o ai/spec_summon_earth.o \
+	  ai/spec_summon_undead.o ai/spec_summon_holy.o ai/spec_summon_shadow.o \
+	  ai/spec_summon_metal.o ai/spec_summon_animate.o ai/spec_summon_thought.o
+
 special.unit-test.o: special.c
 	$(CC) -c $(C_FLAGS) -DUNIT_TEST_SPECIAL -ffunction-sections -fdata-sections -o special.unit-test.o special.c
 
-unit-test-special: test_special.o special.unit-test.o test_is_fighting.o
+unit-test-special: test_special.o special.unit-test.o $(AI_SUMMON_OBJS) test_is_fighting.o
 	rm -f unit-test-special
-	$(CC) -Wl,--gc-sections -o unit-test-special test_special.o special.unit-test.o test_is_fighting.o $(L_FLAGS)
+	$(CC) -Wl,--gc-sections -o unit-test-special test_special.o special.unit-test.o $(AI_SUMMON_OBJS) test_is_fighting.o $(L_FLAGS)
 
 
 
