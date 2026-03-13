@@ -622,6 +622,7 @@ struct char_data
    int arcane_power;
    int mental_power;
    int spec_behavior;
+   int spec_behavior2; /* secondary state for special functions (e.g., element interrupt tracking) */
    int sentence; /* For new legal system */
    sh_int invis; /* For wizinvis imms - lvl invis to */
    sh_int incog; /* Same as above except for incognito --Flar */

@@ -58,7 +58,8 @@ AI_SPEC_SRCS = \
 	  ai/spec_rr_charter_keeper.o ai/spec_rr_convoy_marshal.o \
 	  ai/spec_rr_peddler.o ai/spec_rr_shrine_keeper.o ai/spec_rr_ferryman.o \
 	  ai/spec_rr_camp_cook.o ai/spec_rr_pilgrim.o ai/spec_rr_ruin_scavenger.o \
-	  ai/spec_pyramid_black_sun_shard.o
+	  ai/spec_pyramid_black_sun_shard.o \
+	  ai/spec_keep_elemental_captain.o
 
 O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o act_wiz.o \
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o \

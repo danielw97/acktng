@@ -740,6 +740,14 @@ int do_damage(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int element, bo
     else if (dt != -1)
         sp_dam_message(NULL, ch, victim, dam, element, dt, critical);
     victim->hit -= dam;
+
+    /* Track elements received by NPCs with special functions.
+     * spec_keep_elemental_captain (and similar bosses) read spec_behavior2
+     * at cast time to determine whether opposing element was applied during
+     * the charge window. */
+    if (dam > 0 && IS_NPC(victim) && victim->spec_fun != NULL)
+        victim->spec_behavior2 |= element;
+
     if (!IS_NPC(victim))
         check_adrenaline(victim, dam);
 
