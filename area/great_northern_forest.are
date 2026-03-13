@@ -9339,6 +9339,96 @@ This soldier wears the distinctive plate-and-chain armor of Kowloon's Wardens of
 + 0 0 0 0 0 0 0 0 0
 l 0 0 0 0 0 0 0 0 0 0
 L 0 0 0 0 0 0 0 0 0
+#15600
+carter lantern road~
+a Lantern Road carter~
+A Lantern Road carter drives a loaded cart along the road here.
+~
+This weathered man handles his ox-drawn cart with practiced ease, guiding it through the ruts and bends of the Lantern Road. His cargo is covered with oilskin against the forest damp, and a split-pine badge hung from his collar marks him as a licensed road trader. He makes the run between Midgaard and Kowloon twice a month and has an opinion about every section of road.
+~
+67 0 500 S
+18 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15601
+ranger southern forest~
+a southern forest ranger~
+A southern forest ranger stands at the road's edge here, crossbow at ready.
+~
+This lean woman wears the dark-green surcoat of Midgaard's Forest Ranger corps, a more militant arm than the road wardens. She carries a short crossbow and a warden's short sword, and her eyes never stop moving between the canopy and the road shoulder. Rangers operate in pairs when possible; this one is clearly the advance scout.
+~
+67 0 650 S
+35 2
+0 0 0 0
+! 0 0 0 7 4481 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15602
+mediator oathcrossing commission~
+an Oath-Crossing mediator~
+An Oath-Crossing mediator walks the road here, bearing a commission writ.
+~
+This composed figure carries a rolled commission writ sealed with both Midgaard wax and Kowloon thread-knot, marking her as a joint-commission arbitrator authorized to resolve disputes under the forest charter. Her grey traveling cloak bears no city insignia, only the lantern-and-scale motif of the road itself. When she pauses, it is to listen, not to speak first.
+~
+67 0 700 S
+42 2
+0 0 0 0
+! 0 0 0 7 1053665 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15603
+guide fenpath mire clan~
+a fen-path guide~
+A fen-path guide waits at the road's edge here, a reed staff in hand.
+~
+This quiet young man is one of the Mire-clan members who earns passage tithe credit by guiding travelers through the treacherous Mosswater channels. He knows every safe ford and every stretch of quickmud in the Bends, and his barefoot familiarity with the fen floor is worth more than any map. A bone-handled knife is his only weapon.
+~
+67 0 400 S
+28 1
+0 0 0 0
+! 0 0 0 7 1053057 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15604
+waykeeper ridge ironpine~
+a ridge waykeeper~
+A ridge waykeeper inspects the road surface here, maintenance kit in hand.
+~
+This stocky woman is charged with keeping the Ironpine Rise section of the Lantern Road passable through storms and slippage. She carries a kit of wedges, packed gravel, and drainage tools, and her boots are caked with ironpine ridge clay. She reports road conditions to both cities and takes the Bent Mile Principle as personally as any warden takes the joint commission oath.
+~
+67 0 550 S
+38 2
+0 0 0 0
+! 0 0 0 7 4225 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#15605
+inspector road kowloon~
+a Kowloon road inspector~
+A Kowloon road inspector checks northbound manifests here with methodical efficiency.
+~
+This precise official wears the sky-blue sash of the Kowloon Jade Magistracy and carries a leather document case packed with tariff schedules, inspection forms, and a current-season list of approved road traders. Her authority is specifically northbound — she cannot compel southbound travelers, but she controls what Kowloon will accept at the Iron Gate, which amounts to the same thing.
+~
+67 0 700 S
+48 2
+0 0 0 0
+! 0 0 0 7 1053665 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #15500
@@ -10507,6 +10597,22 @@ O 0 15585 0 15746 petrified ironpine bark rise
 O 0 15585 0 15786 petrified ironpine bark rise
 O 0 15589 0 15836 carved cairn stone deeps
 O 0 15589 0 15856 carved cairn stone deeps
+M 0 15600 1 15511 Lantern Road carter southern approach
+M 0 15600 1 15531 Lantern Road carter southern road
+M 0 15600 1 15550 Lantern Road carter mid south road
+M 0 15601 1 15511 southern forest ranger south gate
+M 0 15601 1 15531 southern forest ranger southern road
+M 0 15602 1 15652 Oath-Crossing mediator mid road
+M 0 15602 1 15672 Oath-Crossing mediator fen bridge
+M 0 15602 1 15693 Oath-Crossing mediator north fen road
+M 0 15603 1 15652 fen-path guide Mosswater road
+M 0 15603 1 15672 fen-path guide bridge
+M 0 15603 1 15673 fen-path guide fen crossing
+M 0 15604 1 15732 ridge waykeeper Ironpine road
+M 0 15604 1 15752 ridge waykeeper mid rise
+M 0 15604 1 15773 ridge waykeeper north rise
+M 0 15605 1 15952 Kowloon road inspector customs post
+M 0 15605 1 15953 Kowloon road inspector northern road
 D 0 15512 2 1 South Lantern Gate south door closed
 D 0 15994 0 1 North Lantern Gate north door closed
 D 0 15673 1 1 Fen Toll Bridge Gate east door closed
@@ -10526,5 +10632,31 @@ M 15595 spec_cast_undead
 M 15566 spec_cast_mage
 M 15570 spec_cast_mage
 M 15587 spec_breath_frost
+M 15500 spec_gnf_road_warden
+M 15501 spec_gnf_lamplighter
+M 15502 spec_gnf_peddler
+M 15504 spec_gnf_peddler
+M 15516 spec_gnf_road_warden
+M 15520 spec_gnf_mire_speaker
+M 15521 spec_gnf_mire_speaker
+M 15522 spec_gnf_toll_collector
+M 15523 spec_gnf_peddler
+M 15524 spec_gnf_road_warden
+M 15540 spec_gnf_road_warden
+M 15541 spec_gnf_everkeeper
+M 15542 spec_gnf_joint_scout
+M 15560 spec_gnf_road_warden
+M 15575 spec_gnf_customs
+M 15576 spec_gnf_road_warden
+M 15577 spec_gnf_courier
+M 15578 spec_gnf_joint_scout
+M 15579 spec_gnf_road_warden
+M 15599 spec_gnf_road_warden
+M 15600 spec_gnf_peddler
+M 15601 spec_gnf_road_warden
+M 15602 spec_gnf_joint_scout
+M 15603 spec_gnf_mire_speaker
+M 15604 spec_gnf_road_warden
+M 15605 spec_gnf_customs
 S
 #$
