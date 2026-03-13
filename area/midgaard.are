@@ -20,7 +20,8 @@ M No bad room spells allowed.
 #3001
 @@WCedar Square@@N~
 The western terminus of @@WMidgaard@@N's uppermost avenue opens into a broad civic pocket paved with river-smoothed flagstone. Cedar timbers brace the shopfronts to either side, their grain darkened by generations of lamp oil and weather, and a squat stone water trough stands where porters pause to refill their skins. The air here carries sawdust and the faint resin scent of the cedar beams that gave this square its name, mingling with distant hymns from somewhere deeper in the city. Underfoot, faded @@cpaving sigils@@N mark an old Lantern Reform survey line that the watch still uses as a reference when chalking patrol routes.
-~
+
+~
 0 1
 D1
 ~
@@ -34,7 +35,8 @@ S
 #3002
 @@WSilver Marketwalk@@N~
 This stretch of the upper avenue is lined with narrow-fronted silversmiths and assay offices whose display cases catch the @@ylantern@@N light in pale flashes. The walkway is wide enough for two handcarts abreast, and the cobbles underfoot have been worn smooth by decades of trade traffic between the cedar quarter to the west and the dyers' row to the east. A tin notice plate nailed to a lintel post lists the current tariff schedule in cramped municipal script.
-~
+
+~
 0 1
 D1
 ~
@@ -52,7 +54,8 @@ S
 #3003
 @@WCrimson Concourse@@N~
 Crimson-dyed awnings stretch between opposing rooflines, filtering the daylight into a ruddy half-shade that gives this concourse its name. Militia recruiting handbills are pasted on the stone columns at either end of the block, their ink already fading from sun and rain. The foot traffic here skews toward off-duty soldiers and armament factors who negotiate in low voices over stacked sample crates, lending the street a purposeful tension absent from the quieter market lanes nearby.
-~
+
+~
 0 1
 D1
 ~
@@ -70,7 +73,8 @@ S
 #3004
 @@WAuburn Traverse@@N~
 Amber-glazed brick faces line this traverse, their warm colour the legacy of a kiln district that once occupied the block before the @@WLantern Reforms@@N rezoned it for mixed commerce. A worn boot-scraper is set into the curb beside a public hand-pump, and the faint smell of beeswax polish drifts from an open workshop door. Foot traffic flows steadily east toward the Reliquary threshold and west toward the cedar merchants, channelled by the traverse's gently curving walls.
-~
+
+~
 0 1
 D1
 ~
@@ -88,7 +92,8 @@ S
 #3005
 @@WThe Violet Reliquary Arch@@N~
 A ceremonial arch of dark basalt stands at the center of this junction, its keystone inlaid with bands of violet lacquer that gleam under the concentrated lamplight the city maintains here day and night. @@cWarding sigils@@N etched into the arch's inner face record the terms of the @@pViolet Compact@@N, the old civic agreement that formalized registry-based oversight of all occult passages beneath @@WMidgaard@@N. Cold air seeps steadily upward from the stairway that descends into the @@dGloamvault of Kel'Shadra@@N, carrying a mineral chill that makes the lantern flames gutter. City stewards have reinforced this threshold with extra lamps, posted oath plaques, and a standing guard detail so that no traveler passes through unaware. A brass plate bolted to the arch's western pillar lists the civic offices responsible for access control, and a smaller notice reminds visitors that all registry-bound artefacts must be declared before descent.
-~
+
+~
 0 1
 D1
 ~
@@ -109,12 +114,14 @@ The Gloamvault of Kel'Shadra.~
 E
 sigils~
 The @@cwarding sigils@@N are cut deep into the basalt and filled with a pale blue compound that resists weathering. Each glyph corresponds to a clause of the @@pViolet Compact@@N, binding oath-holders to declare any relics removed from the vaults below. The oldest marks date to the Containment Era, while newer additions reference amendments passed during the Fortification decades.
-~
+
+~
 S
 #3006
 @@WSunward Way@@N~
 This segment of the upper avenue faces south-southeast, catching the morning sun across its full width and giving the pale limestone facades a warm golden cast that persists well into the afternoon. A cast-iron @@ywayfinding post@@N stands at the intersection, its directional arms pointing toward the Reliquary to the west and the market ring to the east. The foot traffic here is brisk and purposeful, dominated by couriers in guild livery and carters hauling covered loads between the commercial districts.
-~
+
+~
 0 1
 D1
 ~
@@ -132,7 +139,8 @@ S
 #3007
 @@WMarble Ring@@N~
 Polished marble facing decorates the ground-floor shopfronts along this section of the avenue, a remnant of the Standardization Century when the @@WLantern Reforms@@N mandated uniform building materials for the central trade ring. The stone has yellowed with age but remains handsome, and the gutters here are lined with bronze drain caps kept clear by the municipal works crew. Street noise bounces sharply off the hard surfaces, amplifying the rattle of handcarts and the calls of vendors setting out their wares.
-~
+
+~
 0 1
 D1
 ~
@@ -150,7 +158,8 @@ S
 #3008
 @@WGolden Mews@@N~
 The upper avenue narrows slightly here where a row of prosperous workshops crowds against the street, their gilded signboards lending the mews its name. The air carries orange peel and forge-scale from the metalworkers who share this block with spice factors and a single determined perfumer. A soot-streaked tax board mounted on the eastern wall lists assessed levies for the current quarter, its columns already half-obscured by newer handbills advertising guild elections.
-~
+
+~
 0 1
 D1
 ~
@@ -168,7 +177,8 @@ S
 #3009
 @@WGranite Arcade@@N~
 Grey granite pillars support a covered arcade that shelters this stretch of the avenue from rain and direct sun, creating a cool corridor favoured by scribes and notaries whose offices open onto the colonnade. The stone floor is incised with @@cbronze survey marks@@N from the Lantern Reform era, still used by city surveyors as reference points. Ink stains darken the mortar between flagstones near the notarial offices, and the scratch of quill on parchment is audible beneath the usual street noise.
-~
+
+~
 0 1
 D0
 ~
@@ -190,7 +200,8 @@ S
 #3010
 @@WSaffron Walk@@N~
 Warm ochre plaster coats the buildings along this walk, and the street takes its name from the saffron traders who once dominated the block before the spice markets consolidated further south. The aroma of lamp oil and dried herbs still lingers in the sheltered doorways, and a saint's niche carved into the eastern wall holds a cluster of tallow candles kept lit by neighbourhood custom. Foot traffic thins here compared to the busier market stretches, giving the walk a contemplative pace that suits the apothecaries and bookbinders who have taken over the old spice stalls.
-~
+
+~
 0 1
 D1
 ~
@@ -208,7 +219,8 @@ S
 #3011
 @@WAzure Plaza@@N~
 This broad plaza interrupts the avenue's commercial rhythm with an open civic space paved in blue-grey slate that gleams after rain. A low stone dais at the plaza's center serves as a platform for public readings and mayoral proclamations, its surface scuffed by generations of official boots. The surrounding buildings are taller here, their upper stories leaning inward to frame a slice of sky, and guild banners hang from iron brackets along the roofline in the city's white and gold.
-~
+
+~
 0 1
 D1
 ~
@@ -226,7 +238,8 @@ S
 #3012
 @@WEmber Court@@N~
 The avenue passes through a short block of forge-shops and smithies whose open doors release gusts of heat and the sharp ring of hammer on steel. Soot darkens the stone lintels above each workshop, and the cobbles underfoot carry a permanent warmth from the furnaces below street level. A public hand-pump at the western end of the court serves both the smiths and passing foot traffic, its iron handle worn bright from constant use.
-~
+
+~
 0 1
 D1
 ~
@@ -244,7 +257,8 @@ S
 #3013
 @@WGilded Crossing@@N~
 Two minor lanes converge with the main avenue at this crossing, creating a small triangular junction busy with foot traffic from several directions at once. The buildings here bear gilded house-numbers in the old mercantile style, and a faded fresco of the city seal decorates the wall above a shuttered counting house. The constant movement of people and handcarts makes this one of the noisier spots on the upper avenue, and a militia chalk mark on the corner post indicates regular watch presence.
-~
+
+~
 0 1
 D1
 ~
@@ -262,7 +276,8 @@ S
 #3014
 @@WThe Dungeon Intake Yard@@N~
 A formal iron-and-stone gatehouse marks the civic threshold between @@WMidgaard@@N's upper streets and the @@pPublic Dungeon@@N below. Registry scribes occupy a narrow booth beside the descent stair, recording names and charges in heavy ledger books chained to their desks, while a mercy-petition box bolted to the wall collects sealed pleas from relatives of the confined. The yard itself is paved with close-set granite blocks and kept scrupulously clean by municipal order, though the air carries a damp chill rising from the passages below. Guard details rotate here on four-hour shifts, their presence reinforced by posted civic ordinances detailing the rights of the accused. A worn stone bench along the eastern wall accommodates petitioners who wait for intake hearings, and faded @@pward marks@@N on the gatehouse lintel record the sealing of three unauthorized tunnel breaches from the Fortification Era.
-~
+
+~
 0 1
 D1
 ~
@@ -283,12 +298,14 @@ Public Dungeon.~
 E
 ward marks~
 The @@pward marks@@N are incised in sets of three parallel lines, each set accompanied by a date in the old civic calendar. They record tunnel breaches that were sealed during the Ash-and-Iron Decades, when the city's subterranean boundaries proved less secure than the charter had assumed. The newest mark is still sharp-edged; the oldest has been softened by years of weather and passing hands touching it for luck.
-~
+
+~
 S
 #3015
 @@WViolet Terrace@@N~
 A narrow terrace of dressed violet-grey stone runs along the northern face of this block, elevated half a step above the street and lined with iron railings that have been painted black and kept in good repair. The terrace offers a clear sightline west toward the Dungeon gatehouse and east toward the quieter residential wards, making it a favoured station for city watchmen scanning the crowd. Potted herbs in clay planters soften the stone edges, tended by the residents of the upper-floor apartments whose shuttered windows overlook the avenue.
-~
+
+~
 0 1
 D1
 ~
@@ -306,7 +323,8 @@ S
 #3016
 @@WVerdant Causeway@@N~
 Window boxes and climbing vines give this causeway a green softness unusual for @@WMidgaard@@N's stone-and-plaster streetscape. The buildings here house residential quarters above ground-floor workshops, and the quieter pace of foot traffic reflects the block's distance from the main market corridors. A wrought-iron lamp bracket at the eastern corner marks the boundary between the verdant ward and the promenade district beyond, its flame tended by the @@yNight Lamplighter@@N detail on their evening rounds.
-~
+
+~
 0 1
 D1
 ~
@@ -324,7 +342,8 @@ S
 #3017
 @@WThe General Donation Hall@@N~
 A plain stone chamber serves as @@WMidgaard@@N's public donation repository, where citizens and returning adventurers leave surplus goods for those in need. Wooden shelving lines the walls from floor to ceiling, stacked with an ever-changing assortment of provisions, tools, and worn clothing sorted by rough category. A handwritten sign above the door reads "Take What You Need, Leave What You Can" in firm municipal lettering, and the floor shows the scuff marks of heavy traffic despite the hall's out-of-the-way location.
-~
+
+~
 0 1
 D1
 ~
@@ -334,7 +353,8 @@ S
 #3018
 @@WThe Armor Donation Hall@@N~
 This chamber adjoins the general donation hall and is dedicated specifically to armour and protective equipment left for public use. Iron racks and wooden mannequins display a rotating collection of battered shields, dented helms, and serviceable hauberks, each tagged with a civic inventory chit by the volunteer stewards who maintain the space. The stone floor is scratched from the constant dragging of heavy plate across it, and the air smells faintly of leather oil and rust. A narrow stairway in the corner leads upward toward the @@WTemple@@N district.
-~
+
+~
 0 1
 D1
 ~
@@ -352,7 +372,8 @@ S
 #3019
 @@WThe Weapon Donation Hall@@N~
 The final chamber in the donation wing is reserved for weapons, and iron weapon racks bolted to the walls hold an assortment of blades, maces, and polearms in varying states of repair. A thick oak table in the center of the room serves as an inspection surface where donated weapons are checked for structural integrity before being placed on the racks. The civic seal is branded into the table's surface, and a posted notice warns that cursed or warded items must be declared to the temple stewards before deposit.
-~
+
+~
 0 1
 D3
 ~
@@ -362,7 +383,8 @@ S
 #3020
 @@WLantern Promenade@@N~
 The eastern edge of the upper avenue terminates in a lamplit promenade where the city's boundary consciousness becomes most visible. Tall iron @@ylantern@@N poles march along the curb in close formation, their flames maintained around the clock by the civic lamplighter corps, casting overlapping circles of warm light across the flagstones. The promenade is wider than the avenue proper, designed during the Lantern Reforms as a mustering ground that doubles as a public walkway in peacetime. A posted @@Wcity bulletin@@N on the eastern lamp post lists current travel advisories for routes departing the city, and the stone underfoot is scored with directional arrows pointing toward the major gate roads.
-~
+
+~
 0 1
 D2
 ~
@@ -376,7 +398,8 @@ S
 #3021
 @@WCedar Square@@N~
 The avenue descends a gentle half-step as it crosses into the second ring of @@WMidgaard@@N's western quarter, where the cedar-framed shopfronts give way to older stonework patched with lime mortar. A hand-lettered sign above a chandler's doorway advertises tallow by the pound, and the gutter channel here runs with grey water from the dyers' workshops one block east. The paving retains the same @@csurvey sigils@@N found on the row above, though these have been worn nearly smooth by heavier cart traffic.
-~
+
+~
 0 1
 D0
 ~
@@ -394,7 +417,8 @@ S
 #3022
 @@WSilver Marketwalk@@N~
 Lamplight from recessed wall sconces picks out the tarnished silver lettering above the assay offices that line this second-tier stretch of the marketwalk. The foot traffic is denser here than on the row above, with market porters weaving between slower-moving shoppers and the occasional municipal inspector checking weights and scales at a portable bench. A rain-streaked tariff board bolted to the eastern wall lists commodity duties in two columns, one for citizens and one for foreign traders.
-~
+
+~
 1 1
 D0
 ~
@@ -416,7 +440,8 @@ S
 #3023
 @@WCrimson Concourse@@N~
 The crimson awnings overhead are more faded on this tier, their dye bleached by sun and rain to a dusty rose that still catches the eye against the grey stone. Off-duty militia frequent the tavern at the concourse's midpoint, and their gear racks propped outside the door lend the block a martial flavour. The pavement is scored with boot-nail scratches near the tavern entrance, and a recruiting broadsheet pasted to the wall promises bonuses for volunteers willing to serve gate duty during the trade season.
-~
+
+~
 1 1
 D0
 ~
@@ -438,7 +463,8 @@ S
 #3024
 @@WAuburn Traverse@@N~
 The warm-toned brick facing continues on this lower tier but shows more weathering, with dark moss tracing the mortar joints on the shaded side of the street. A cobbler's workshop occupies the corner lot, its open shutters releasing the sharp smell of fresh leather and linseed oil into the avenue. The traverse narrows slightly here where a stone buttress props up an older building whose upper story leans precariously over the walkway.
-~
+
+~
 1 1
 D0
 ~
@@ -460,7 +486,8 @@ S
 #3025
 @@WThe Ossuary Transit Court@@N~
 A civic transit court surrounds the sealed stairway that descends to the @@dCatacombs of Nightfall@@N, its boundary marked by waist-high stone bollards inscribed with @@pward formulae@@N from the Containment Era. The court is paved with dark basalt that absorbs the lamplight rather than reflecting it, giving the space a sombre weight appropriate to its function as the threshold between the living city and its buried dead. City stewards maintain a log book chained to a lectern near the descent, recording the names and declared purposes of all who pass below. Municipal notices posted on the bollards warn that unlicensed excavation in the catacombs carries penalties under emergency charter law. The air rising from the stairway carries a mineral dampness and the faint, dry smell of old stone and sealed earth.
-~
+
+~
 1 1
 D0
 ~
@@ -485,12 +512,14 @@ The Catacombs of Nightfall.~
 E
 ward formulae~
 The @@pward formulae@@N are carved into each bollard in a precise liturgical hand, their language a mixture of civic legal phrasing and older ritual notation. They date to the Containment Era and bind oath-holders to respect the boundary between sanctioned passage and unauthorized tunnel access. Several of the newer formulae reference amendments added during the Fortification decades.
-~
+
+~
 S
 #3026
 @@WSunward Way@@N~
 The second tier of Sunward Way receives less direct light than the row above, but the limestone facades still hold a faint warmth that makes this stretch pleasant even on overcast days. A bread seller's cart is stationed at the corner, its canvas awning printed with the guild stamp, and the smell of warm grain mingles with the usual street dust. The foot traffic here includes a noticeable number of temple staff moving between the religious quarter to the south and the civic offices to the north, identifiable by their plain grey tabards.
-~
+
+~
 1 1
 D0
 ~
@@ -512,7 +541,8 @@ S
 #3027
 @@WMarble Ring@@N~
 The marble facing on this tier has developed a yellowish patina that the building owners have stopped trying to clean, giving the street a warmer tone than the polished white of the upper ring. A municipal water pipe emerges from the wall at knee height, its brass tap dripping into a stone basin that doubles as a horse trough. The drain caps here are bronze, matching the upper tier, but some have been replaced with cruder iron substitutes where the originals were stolen or damaged.
-~
+
+~
 1 1
 D0
 ~
@@ -534,7 +564,8 @@ S
 #3028
 @@WGolden Mews@@N~
 The gilded signboards on this tier are fewer and less ostentatious than those above, reflecting the slightly lower commercial standing of the shops here. A candle-maker shares a wall with a belt-and-buckle workshop, and the mixed smells of hot wax and worked brass fill the narrow street. The tax board on this block is smaller than its upper-tier counterpart and lists only local assessments, suggesting a quieter commercial zone with less through-traffic.
-~
+
+~
 1 1
 D0
 ~
@@ -556,7 +587,8 @@ S
 #3029
 @@WGranite Arcade@@N~
 The covered arcade continues on this tier with slightly lower ceilings and rougher stone pillars that lack the polish of the upper colonnade. Clerks and copyists occupy the ground-floor offices here, their work visible through open shutters as they bend over ledgers and wax-sealed documents. The foot traffic is lighter than above, and the relative quiet makes the scratch of pen nibs and the thump of ledger covers audible from the walkway.
-~
+
+~
 1 1
 D0
 ~
@@ -578,7 +610,8 @@ S
 #3030
 @@WThe Southern Wild Gate@@N~
 A reinforced civic gatehouse controls the passage to @@dSepulcher Pasture@@N, its iron-banded doors standing open during daylight but watched by a permanent guard detail. The gate's stonework is heavier than the surrounding buildings, with deep-set arrow loops flanking the passage and a portcullis groove visible above the lintel. Municipal bulletins posted beside the gate warn travelers of conditions beyond the walls, and a milestone plaque embedded in the pavement marks distances to the nearest waystations. The air here carries a green dampness from the wildlands beyond, distinct from the dry mineral scent of the city's interior. A faded banner bearing the city seal hangs from a bracket above the gate, its fabric softened by seasons of wind and rain.
-~
+
+~
 1 1
 D0
 ~
@@ -604,7 +637,8 @@ S
 #3031
 @@WAzure Plaza@@N~
 The second-tier plaza is smaller than its upper counterpart, with the blue-grey slate giving way to plainer flagstone around the edges where repairs have been made with whatever material was at hand. A wooden notice board occupies the plaza's southern end, covered with handbills advertising services, lost-and-found notices, and the occasional cryptic personal message. The surrounding buildings are residential above the first floor, and laundry lines strung between upper windows add domestic colour to the civic space.
-~
+
+~
 1 1
 D0
 ~
@@ -626,7 +660,8 @@ S
 #3032
 @@WEmber Court@@N~
 The forge district's heat is less intense on this tier, where the smithies are smaller and specialize in repair work rather than new production. A grindstone set up on the pavement outside one shop sends a thin stream of sparks into the gutter, and the whine of steel on stone competes with the ambient street noise. The cobbles here are darkened by forge scale and quenching water, giving the court a permanently sooty appearance.
-~
+
+~
 1 1
 D0
 ~
@@ -648,7 +683,8 @@ S
 #3033
 @@WGilded Crossing@@N~
 This crossing sees less foot traffic than its upper-tier counterpart, and the gilded house numbers here are tarnished to a dull bronze that catches the lamplight only at certain angles. A locksmith's workshop occupies the corner, its window displaying an array of keys and mechanisms that draw the curious eye. The crossing serves as an informal boundary between the commercial wards to the west and the more institutional blocks to the east, a transition marked by the changing character of the signage.
-~
+
+~
 1 1
 D0
 ~
@@ -670,7 +706,8 @@ S
 #3034
 @@WIron Byway@@N~
 Heavy iron fixtures characterize this byway, from the reinforced door hinges on the municipal storage buildings to the thick chain barriers that can be drawn across the street in emergencies. The architecture here is functional rather than decorative, built during the Ash-and-Iron Decades when the city prioritized defense infrastructure over civic beauty. The pavement is scored with deep ruts from the iron-wheeled supply carts that once served the emergency depots, and the walls still bear the mounting brackets for siege-era oil lamps.
-~
+
+~
 1 1
 D0
 ~
@@ -692,7 +729,8 @@ S
 #3035
 @@WViolet Terrace@@N~
 The violet-grey stone terrace continues on this tier but sits at street level rather than elevated, its railings replaced by a low stone kerb that separates the walkway from the cart lane. Potted lavender in clay planters lines the kerb, tended by the residents of the modest apartments above, and their fragrance provides a welcome counterpoint to the forge-smoke drifting from the western blocks. The terrace offers views south toward the park quarter and the temple district beyond.
-~
+
+~
 1 1
 D0
 ~
@@ -714,7 +752,8 @@ S
 #3036
 @@WVerdant Causeway@@N~
 The climbing vines on this tier are more established than those above, their thick stems rooted in cracks between the foundation stones and reaching as high as the third-floor windowsills. The greenery provides shade in summer and a framework for lanterns in winter, when the lamplighter crews wire additional lights through the vine structure to maintain visibility. A small shrine niche in the eastern wall holds a carved figure of an old civic patron, its features worn smooth by generations of passing hands.
-~
+
+~
 1 1
 D0
 ~
@@ -736,7 +775,8 @@ S
 #3037
 @@WObsidian Crescent@@N~
 Dark volcanic stone imported from quarries beyond the eastern desert faces the buildings along this crescent, giving the block an austere dignity that contrasts with the warmer tones of the surrounding streets. The obsidian surfaces absorb lamplight rather than reflecting it, creating pockets of deep shadow between the wall sconces that the watch fills with extra patrols after dark. The crescent curves gently southward, following an old property boundary that predates the Lantern Reform grid.
-~
+
+~
 1 1
 D1
 ~
@@ -754,7 +794,8 @@ S
 #3038
 @@WIvory Passage@@N~
 Pale limestone gives this passage a bright, clean appearance that the building owners maintain through periodic lime-washing of the lower facades. The passage is narrower than the main avenue, channelling foot traffic into a single-file flow during busy hours, and the close walls amplify conversation into an intimate murmur. An antiquarian's shop at the midpoint displays faded maps and old municipal documents in its window, drawing scholars and collectors who browse with unhurried deliberation.
-~
+
+~
 1 1
 D1
 ~
@@ -772,7 +813,8 @@ S
 #3039
 @@WMoonlit Approach@@N~
 This approach takes its name from its orientation, which catches the moonlight through a gap in the roofline created when an old watchtower was demolished during the Standardization Century. The resulting opening frames a slice of sky visible even from street level, and residents claim the moonlight pools on the pavement with unusual clarity on clear nights. The buildings here are older than average, their timber frames dark with age and their window glass thick and slightly warped.
-~
+
+~
 1 1
 D1
 ~
@@ -790,7 +832,8 @@ S
 #3040
 @@WLantern Promenade@@N~
 The promenade's second tier maintains the same dense formation of iron @@ylantern@@N poles as the row above, though the fixtures here show more weathering, with rust staining the pole bases where rain collects against the stone kerb. The walkway is still wider than the standard avenue, reflecting its mustering-ground origins, and the flagstones bear the same directional arrows found on the upper tier. This stretch serves as a checkpoint for traffic moving between the eastern gate roads and the city's interior, and a guard kiosk with posted warrants occupies the corner.
-~
+
+~
 0 1
 D0
 ~
@@ -808,7 +851,8 @@ S
 #3041
 @@WCedar Square@@N~
 The western gate-ward junction of the third ring opens where Cedar Square meets the @@yRoc Road@@N, the overland route that leads west toward Kiess and the ruins of fallen Evermeet. A stone milestone set into the pavement marks the formal boundary of @@WMidgaard@@N's civic jurisdiction, its face inscribed with distances to the nearest waystations along the western corridor. Gate wardens maintain a checkpoint here, their kiosk decorated with posted travel advisories and a map-board showing known hazards on the Roc Road. The architecture transitions at this point from city stone to the heavier gatehouse construction of the Fortification Era, and the foot traffic includes a visible proportion of armed travelers preparing for departure. A carved city-seal pillar stands beside the western exit, its base polished smooth by the hands of those who touch it for luck before setting out.
-~
+
+~
 0 1
 D0
 ~
@@ -830,7 +874,8 @@ S
 #3042
 @@WSilver Marketwalk@@N~
 The third tier of the marketwalk serves as the primary wholesale district for the silver trade, with larger shop fronts and loading bays replacing the retail counters found on the upper tiers. Crated ingots and bundled wire stock are visible through open warehouse doors, and the foot traffic here skews toward trade factors and their apprentices rather than individual shoppers. The tariff board on this block is larger and more detailed than those above, listing customs duties for bulk precious metals imported through the western gate.
-~
+
+~
 1 1
 D0
 ~
@@ -852,7 +897,8 @@ S
 #3043
 @@WCrimson Concourse@@N~
 The militia presence on this tier of the concourse is more permanent than the off-duty soldiers found above, with a staffed recruiting station occupying a ground-floor office and a weapons-check counter where travelers entering from the western gate must declare bladed arms over a certain length. The crimson awnings here have been replaced with practical canvas in militia grey, though a few of the original dyed panels survive on the buildings furthest from the recruiting station.
-~
+
+~
 1 1
 D0
 ~
@@ -874,7 +920,8 @@ S
 #3044
 @@WAuburn Traverse@@N~
 The auburn-brick facing on this tier shows extensive repair work, with newer bricks of slightly different colour patched into the older walls where weather and age have taken their toll. A beggar's cup sits on the pavement beside a doorstep, its owner sheltering in the shallow recess of a bricked-up archway. The traverse continues its gentle curve eastward, the worn cobbles channelling foot traffic toward the colonnade district where the architecture shifts to more institutional forms.
-~
+
+~
 1 1
 D0
 ~
@@ -896,7 +943,8 @@ S
 #3045
 @@WBronze Colonnade@@N~
 Oxidized bronze columns line both sides of this institutional stretch, their verdigris patina lending the colonnade a blue-green cast that shifts with the light. The columns were erected during the Standardization Century to mark the boundary of the central administrative district, and their bases still bear the Lantern Reform seal in raised relief. Government clerks and petition-bearers dominate the foot traffic here, moving between the offices that occupy the ground floors behind the colonnade.
-~
+
+~
 1 1
 D0
 ~
@@ -918,7 +966,8 @@ S
 #3046
 @@WSunward Way@@N~
 The limestone facades on the third tier of Sunward Way are streaked with rain channels where decades of runoff have carved shallow grooves into the stone. Despite the weathering, the street retains its characteristic warmth, and a produce cart stationed at the midpoint sells winter apples and dried figs to the clerks and temple staff who use this route as a shortcut between districts. The paving here includes several broad flagstones inscribed with directional arrows from the Lantern Reform wayfinding system.
-~
+
+~
 1 1
 D0
 ~
@@ -940,7 +989,8 @@ S
 #3047
 @@WMarble Ring@@N~
 The marble facing on the third tier has been supplemented with practical granite reinforcements at ground level, where cart wheels and heavy traffic have chipped the softer stone. The contrast between the white marble above and the dark granite below creates a distinctive banded appearance that local residents use as a landmark when giving directions. A municipal drinking fountain set into the eastern wall provides clean water piped from the temple district cisterns.
-~
+
+~
 1 1
 D0
 ~
@@ -962,7 +1012,8 @@ S
 #3048
 @@WGolden Mews@@N~
 The workshops on this tier of the mews specialize in smaller crafts: seal-cutting, wire-drawing, and the precise metalwork needed for locks and clockwork mechanisms. The gilded signboards are fewer here, replaced by hand-painted shingles that swing in the breeze, and the air carries the sharp smell of acid baths used in the etching process. A grubby inn occupies the corner lot, its doors propped open to admit what breeze the narrow street allows.
-~
+
+~
 1 1
 D0
 ~
@@ -984,7 +1035,8 @@ S
 #3049
 @@WGranite Arcade@@N~
 The granite arcade on this tier serves a more practical function than the notarial colonnade above, housing a levee office where river cargo is inspected and taxed before entering the city's commercial stream. The pillars here are thicker and less refined, their surfaces scarred by decades of cargo being dragged past them, and the floor is stained with the spilled contents of countless broken crates. A retired sea captain operates a small chandlery from one of the arcade bays, selling nautical supplies and boats to anyone willing to navigate the local waterways.
-~
+
+~
 1 1
 D0
 ~
@@ -1006,7 +1058,8 @@ S
 #3050
 @@WSaffron Walk@@N~
 The ochre plaster on this tier is peeling in places, revealing the older grey stone beneath and giving the walk a mottled appearance that the building owners have given up trying to correct. A ship's-stores warehouse occupies most of the block, its wide doors admitting the smell of tar and hemp rope into the street. The foot traffic is sparse here, limited mainly to warehouse workers and the occasional sailor heading for the training hall further south.
-~
+
+~
 1 1
 D0
 ~
@@ -1028,7 +1081,8 @@ S
 #3051
 @@WAzure Plaza@@N~
 This tier's plaza is more workaday than the ceremonial space above, its flagstones covered with chalk marks left by market vendors who stake out their positions before dawn each trading day. A public well with a hand-operated winch occupies the center, its stone rim worn into a groove by years of rope friction. The surrounding buildings include a cordwainer's shop, a cheap eating house, and a pawnbroker whose barred windows display a jumble of unredeemed pledges.
-~
+
+~
 1 1
 D0
 ~
@@ -1050,7 +1104,8 @@ S
 #3052
 @@WThe Western Caravan Gate@@N~
 A broad stone arch marks the western caravan entrance to @@WMidgaard@@N, wide enough for two laden wagons to pass abreast and flanked by guard towers whose arrow loops command the approach road. Customs officers maintain an inspection station inside the arch, where incoming cargo is weighed, assessed, and stamped before proceeding to the market districts. The pavement beneath the arch is grooved by decades of iron-rimmed wheels, and the walls bear carved distance markers indicating the leagues to major trading destinations. Posted travel bulletins warn of bandit activity and road conditions on the western routes, their information updated weekly by the Road Warden Liaison. The gate's keystone bears the city seal flanked by carved sheaves of grain, symbolizing the trade that sustains @@WMidgaard@@N's prosperity.
-~
+
+~
 1 1
 D0
 ~
@@ -1072,7 +1127,8 @@ S
 #3053
 @@WGilded Crossing@@N~
 The crossing on this tier handles heavier traffic than the quieter junction above, serving as a convergence point for carts moving between the caravan gate and the market districts to the east. The gilded house numbers have been supplemented with larger painted address boards that are easier to read from a moving wagon. A water trough for draft animals occupies the western corner, its overflow draining into the street gutter in a thin stream that keeps the cobbles wet even in dry weather.
-~
+
+~
 1 1
 D0
 ~
@@ -1094,7 +1150,8 @@ S
 #3054
 @@WIron Byway@@N~
 The Fortification-era architecture dominates this tier of the byway even more strongly than on the row above, with blast-rated shutters on every window and thick iron doors replacing the wooden ones found elsewhere in the city. A healer's station occupies the corner building, its entrance marked by the universal green lamp that signals medical services available. The pavement here is reinforced with iron strips set into the stone, a remnant of the supply-rail system that served the emergency depots during the Ash-and-Iron Decades.
-~
+
+~
 1 1
 D0
 ~
@@ -1116,7 +1173,8 @@ S
 #3055
 @@WViolet Terrace@@N~
 The violet-grey stone on this tier has weathered to a darker shade, and the railings have been replaced with a solid stone parapet that blocks the view of the streets below but provides a sense of enclosure and safety. Flowering window boxes add splashes of colour along the parapet top, maintained by a neighbourhood association whose charter is displayed in a glass case mounted on the wall. The terrace here serves primarily as a residential walkway, with fewer commercial premises than the livelier tiers above.
-~
+
+~
 1 1
 D0
 ~
@@ -1138,7 +1196,8 @@ S
 #3056
 @@WVerdant Causeway@@N~
 The vine growth on this tier is the thickest in the city, with ancient wisteria trunks as thick as a man's wrist climbing iron trellises bolted to the building facades. In spring the causeway becomes a tunnel of purple blooms, and even in other seasons the dense foliage provides shade and a green privacy that residents value. A community @@ybulletin board@@N mounted beneath the vines serves as a neighbourhood message center, its surface covered with handwritten notes about shared meals, lost pets, and watch schedules.
-~
+
+~
 1 1
 D0
 ~
@@ -1160,7 +1219,8 @@ S
 #3057
 @@WObsidian Crescent@@N~
 The dark volcanic stone on this tier has developed a subtle sheen from years of foot traffic polishing its surface, and the crescent's curve is more pronounced here, following the old property boundary as it bends toward the eastern wards. A lamplighter's supply cupboard is built into the wall, its iron door secured with a municipal padlock, and oil stains on the pavement mark where lantern fuel has been spilled during refilling. The shadow-pockets between wall sconces are deeper here than on the tier above, and the watch patrols accordingly.
-~
+
+~
 1 1
 D0
 ~
@@ -1182,7 +1242,8 @@ S
 #3058
 @@WIvory Passage@@N~
 The lime-washed facades on this tier are maintained with less frequency than above, and the passage has a lived-in quality that the brighter upper tier lacks. Chalk graffiti in childish hands decorates the lower walls, depicting stick-figure soldiers and crude city maps that the building owners scrub away periodically. The antiquarian trade continues on this tier with a second-hand bookshop whose outdoor shelving extends into the passage, narrowing the walkway and forcing pedestrians to navigate around stacked volumes.
-~
+
+~
 1 1
 D0
 ~
@@ -1204,7 +1265,8 @@ S
 #3059
 @@WMoonlit Approach@@N~
 The moonlight gap visible from the upper tier is not directly overhead on this level, but the reflected glow from the pale limestone walls still lends the approach an unusual luminosity after dark. A small courtyard garden occupies a recessed lot where a building was never rebuilt after a fire in the Fortification Era, and the garden's herbs and flowering shrubs spill fragrance into the narrow street. The older buildings here lean together overhead, their upper stories almost touching across the gap.
-~
+
+~
 1 1
 D0
 ~
@@ -1226,7 +1288,8 @@ S
 #3060
 @@WLantern Promenade@@N~
 The eastern promenade at this tier serves as the primary departure point for the @@yEastern Desert@@N caravan routes, and the atmosphere shifts noticeably from civic to frontier. Desert-grade travel gear is displayed outside several supply shops, and the foot traffic includes sun-darkened traders in loose desert robes alongside the usual city residents. A mounted @@Wbulletin board@@N near the eastern exit posts caravan schedules, water-source reports, and warnings about sandstorms and hostile creatures along the eastern routes. The iron @@ylantern@@N poles here are fitted with sand-guards to protect the flames from the gritty wind that sometimes blows in from the desert approaches. A carved stone pillar bearing the city seal marks the formal boundary of @@WMidgaard@@N's eastern jurisdiction.
-~
+
+~
 0 1
 D0
 ~
@@ -1248,7 +1311,8 @@ S
 #3061
 @@WCedar Square@@N~
 The fourth ring of Cedar Square sits at the junction of the residential western quarter and the city's mid-level service corridor. The cedar timbers in the building frames here are older and darker than those on the upper tiers, their grain obscured by decades of soot and lamp-black. A rope-maker's workshop occupies the ground floor of the corner building, and coils of hemp line hang from hooks outside the door, filling the air with a fibrous, dusty scent that mixes with the usual street odours.
-~
+
+~
 0 1
 D0
 ~
@@ -1266,7 +1330,8 @@ S
 #3062
 @@WSilver Marketwalk@@N~
 The silver trade on this tier has given way almost entirely to general commerce, with the old assay offices converted into storage rooms and the display cases replaced by practical counters. A flour merchant shares the block with a maker of tin lanterns, and the contrast between the white dust from the flour and the metallic shavings from the tinsmith creates a peculiar two-toned grime on the pavement. The tariff board here is outdated, its entries crossed out and amended in several different hands.
-~
+
+~
 1 1
 D0
 ~
@@ -1288,7 +1353,8 @@ S
 #3063
 @@WCrimson Concourse@@N~
 The militia presence has thinned to occasional walking patrols on this tier, and the crimson awnings are entirely absent, replaced by practical canvas in neutral colours. The buildings here serve a mixed residential and light-commercial function, with a cobbler, a tinker, and a rat-catcher advertising their services on hand-painted shingles. The foot traffic is local and unhurried, the pace of a neighbourhood that has settled into comfortable routines far from the busier market districts above.
-~
+
+~
 1 1
 D0
 ~
@@ -1310,7 +1376,8 @@ S
 #3064
 @@WAuburn Traverse@@N~
 The warm brick on this tier is interrupted by sections of raw stone where the brick facing has fallen away and not been replaced, giving the traverse a patchwork appearance that the residents seem unbothered by. A public bench carved from a single block of sandstone occupies a widened spot in the walkway, its surface polished by countless sitters. The traverse continues its eastward curve, the cobbles here softer and more uneven than on the tiers above, worn down by rain and cart traffic over generations.
-~
+
+~
 1 1
 D0
 ~
@@ -1332,7 +1399,8 @@ S
 #3065
 @@WBronze Colonnade@@N~
 The verdigris-coated columns on this tier are shorter and stockier than those above, set closer together to support the heavier architecture of the institutional quarter's mid-levels. Government record-offices occupy most of the ground-floor spaces, their windows shuttered and their doors marked with departmental seals in faded paint. The foot traffic here consists mainly of clerks carrying document boxes and citizens arriving for appointments, moving with the resigned patience of people accustomed to bureaucratic waiting.
-~
+
+~
 1 1
 D0
 ~
@@ -1354,7 +1422,8 @@ S
 #3066
 @@WSunward Way@@N~
 The limestone on this tier has darkened to a grey-buff tone that no longer catches the sun as effectively as the paler stone above, and the street feels cooler and more enclosed as a result. A laundress operates from a ground-floor room with its door permanently propped open, releasing clouds of steam and the smell of lye soap into the walkway. The paving includes a drainage channel down the center of the street that carries wash-water toward the main sewer intake further south.
-~
+
+~
 1 1
 D0
 ~
@@ -1376,7 +1445,8 @@ S
 #3067
 @@WMarble Ring@@N~
 The marble-and-granite banding continues on this tier but with less polish, the stone surfaces left rough where the municipal works crews have prioritized structural repairs over cosmetic maintenance. A knife-grinder's wheel is set up in a recessed doorway, its steady rasp providing a background rhythm to the street noise. The drinking fountain from the tier above is supplied by the same pipe system, though the tap on this level is fitted with a cruder iron handle and the stone basin is stained with mineral deposits.
-~
+
+~
 1 1
 D0
 ~
@@ -1398,7 +1468,8 @@ S
 #3068
 @@WGolden Mews@@N~
 The workshops on this tier are more modest than those above, their doors open to reveal single-room operations where individual craftspeople work alone at benches cluttered with tools and half-finished pieces. The golden signboards that give the mews its name are absent here, replaced by practical chalk notices listing prices and services. The air is thick with the mixed smells of solder flux, leather dye, and cheap tallow candles that serve as workshop lighting.
-~
+
+~
 1 1
 D0
 ~
@@ -1420,7 +1491,8 @@ S
 #3069
 @@WGranite Arcade@@N~
 The arcade on this tier has been partially enclosed with wooden partitions to create additional workshop space, reducing the covered walkway to a narrow passage between the pillars. A scribe's booth occupies one of the partitioned bays, offering letter-writing services to the illiterate, and the scratching of the scribe's quill is audible through the thin wooden walls. The granite pillars here bear carved marks from the Founding Generation, older than the Lantern Reform survey lines, their meaning debated by the city's amateur historians.
-~
+
+~
 1 1
 D0
 ~
@@ -1442,7 +1514,8 @@ S
 #3070
 @@WSaffron Walk@@N~
 The ochre plaster has been entirely replaced by whitewash on this tier, erasing the saffron identity and leaving the walk with a plain, institutional appearance. A chandler's shop supplies the neighbourhood with candles and lamp oil, its exterior stacked with barrels that narrow the walkway. The saint's niche tradition continues on this tier, though the carved figure here is cruder and the candle offerings fewer, reflecting the block's lower foot traffic and modest economic status.
-~
+
+~
 1 1
 D0
 ~
@@ -1464,7 +1537,8 @@ S
 #3071
 @@WAzure Plaza@@N~
 The smallest of the Azure Plazas, this tier's open space is barely wider than the surrounding streets, more a wide spot in the road than a true civic square. A cluster of wooden market stalls occupies most of the available space on trading days, selling second-hand goods and cheap provisions to the residents of the surrounding blocks. The blue-grey slate paving survives only in patches, the rest having been replaced with common flagstone during routine maintenance.
-~
+
+~
 1 1
 D0
 ~
@@ -1486,7 +1560,8 @@ S
 #3072
 @@WEmber Court@@N~
 The forge district on this tier has shifted from metalwork to more domestic trades, with a bakery, a charcoal dealer, and a maker of clay cookware sharing the block. The residual warmth in the cobbles comes from the bakery's underground oven rather than from smithy furnaces, and the air smells of yeast and wood smoke instead of quenching oil. The court retains its sooty character, however, as the charcoal dealer's stock leaves a fine black dust on everything within range.
-~
+
+~
 1 1
 D0
 ~
@@ -1508,7 +1583,8 @@ S
 #3073
 @@WGilded Crossing@@N~
 This crossing has lost most of its gilded character, the ornamental house numbers replaced by painted numerals on the doorposts. The locksmith from the tier above has a branch operation here, serving the working-class residents who cannot afford the prices at the main shop. The crossing remains a useful orientation point despite its diminished grandeur, sitting at the boundary between the domestic western blocks and the more industrial eastern wards.
-~
+
+~
 1 1
 D0
 ~
@@ -1530,7 +1606,8 @@ S
 #3074
 @@WIron Byway@@N~
 The Fortification-era ironwork is at its most austere on this tier, where the buildings are little more than reinforced stone boxes with narrow windows and heavy doors designed to withstand siege conditions. Several of the former emergency storage rooms have been converted into tenement housing, their thick walls providing excellent insulation if limited natural light. The pavement retains the iron-strip reinforcement from the supply-rail era, though the strips are now worn flush with the stone surface.
-~
+
+~
 1 1
 D0
 ~
@@ -1552,7 +1629,8 @@ S
 #3075
 @@WViolet Terrace@@N~
 The violet-grey stone on this tier has been darkened almost to black by years of soot from the forge district to the west, and the terrace character of the upper tiers has been lost as the walkway drops to a level grade with the surrounding streets. A few stubborn lavender planters survive along the building fronts, maintained by elderly residents who remember the terrace's more genteel past. The view southward toward the park quarter is still pleasant, framed by the gap between two tall warehouse buildings.
-~
+
+~
 1 1
 D0
 ~
@@ -1574,7 +1652,8 @@ S
 #3076
 @@WVerdant Causeway@@N~
 The vine coverage on this tier is thinner and less cared-for than on the rows above, with bare patches on the trellises where dead growth has not been replaced. A stray cat perches on a window ledge, watching the sparse foot traffic with yellow-eyed indifference. The community feel of the upper verdant causeways persists here in the form of shared water buckets and a communal herb garden occupying a sunny spot between two buildings, though the garden shows signs of neglect.
-~
+
+~
 1 1
 D0
 ~
@@ -1596,7 +1675,8 @@ S
 #3077
 @@WObsidian Crescent@@N~
 The dark stone crescent on this tier is unlit between the widely-spaced wall sconces, creating long stretches of shadow where the obsidian absorbs what little lamplight reaches it. The curve of the street is sharper here, following the old property boundary as it bends more acutely toward the eastern wards. A night-soil collector's cart is parked in a side recess, its presence explained by the tenement housing that has grown up in the former warehouse spaces along this stretch.
-~
+
+~
 1 1
 D0
 ~
@@ -1618,7 +1698,8 @@ S
 #3078
 @@WIvory Passage@@N~
 The lime-washed walls on this tier have not been refreshed in some time, and the ivory colour has faded to a dingy cream that peels in long strips after rain. The passage is quiet, used mainly by residents and the occasional delivery cart, and the stillness gives it a sleepy, undisturbed character absent from the busier streets. A retired soldier has hung a miniature flag from his window bracket, its faded colours suggesting long service in one of the border campaigns.
-~
+
+~
 1 1
 D0
 ~
@@ -1640,7 +1721,8 @@ S
 #3079
 @@WMoonlit Approach@@N~
 The moonlight gap above is not visible from this depth in the street grid, but the approach retains its name and a sense of quiet remove from the city's busier arteries. A descending stairway on the south side of the street leads down to the @@yBank of Midgaard@@N, its entrance marked by a brass plate and a pair of iron-bracketed lanterns that burn day and night. The buildings on this tier are tall and close-set, their upper stories creating an almost tunnel-like enclosure that amplifies even quiet conversation into audible murmurs.
-~
+
+~
 1 1
 D0
 ~
@@ -1666,7 +1748,8 @@ S
 #3080
 @@WLantern Promenade@@N~
 The promenade's fourth tier serves as the eastern boundary walkway for the mid-city residential district. The iron @@ylantern@@N poles here are spaced more widely than on the upper tiers, their light supplemented by oil lamps hung from building brackets by the residents themselves. The flagstones are rougher and more uneven than the dressed stone of the upper promenades, patched with cobbles and loose gravel where repairs have been made with available materials rather than matched stone.
-~
+
+~
 0 1
 D0
 ~
@@ -1684,7 +1767,8 @@ S
 #3081
 @@WCedar Square@@N~
 The fifth ring of Cedar Square has shed most of its commercial identity, the cedar-framed buildings converted to tenement housing whose ground floors serve as storage for the rope-makers and barrel-coopers who work in the western industrial quarter. The street is quieter here, the foot traffic limited to residents and delivery carts, and a worn sandstone step at one doorway has been hollowed into a natural seat where neighbours gather to talk in the evening lamplight.
-~
+
+~
 0 1
 D0
 ~
@@ -1702,7 +1786,8 @@ S
 #3082
 @@WSilver Marketwalk@@N~
 The marketwalk on this tier bears no trace of the silver trade, its shops selling everyday necessities like soap, nails, and cheap crockery to the surrounding residential blocks. A delivery cart loaded with firewood bundles is often parked outside the fuel merchant's premises, forcing pedestrians to step into the gutter to pass. The old tariff board survives on the wall, though it has been papered over with neighbourhood announcements and is no longer legible beneath its layers of handbills.
-~
+
+~
 1 1
 D0
 ~
@@ -1724,7 +1809,8 @@ S
 #3083
 @@WCrimson Concourse@@N~
 The concourse on this tier has fully transitioned from its martial origins to a quiet residential street where the only reminder of the militia is an old recruiting poster faded to near-illegibility on a rain-streaked wall. Children play in the wider spots of the walkway, and a grandmother sits knitting in a doorway, keeping half an eye on their games. The pavement here is worn smooth and slightly sunken in the center where generations of foot traffic have compressed the stone.
-~
+
+~
 1 1
 D0
 ~
@@ -1746,7 +1832,8 @@ S
 #3084
 @@WAuburn Traverse@@N~
 The amber brick facing has given way entirely to plain stone on this tier, though a few courses of the original warm-toned brick survive near the roofline as a reminder of the traverse's former character. A rain barrel collects runoff from a sagging gutter pipe, its water used by residents for washing. The traverse here is wide enough for a single cart, and wheel ruts in the cobbles show the path that delivery wagons follow when supplying the corner provisions shop.
-~
+
+~
 1 1
 D0
 ~
@@ -1768,7 +1855,8 @@ S
 #3085
 @@WBronze Colonnade@@N~
 The bronze columns on this tier are the shortest and most weathered of the series, their verdigris coating thick and uneven. The institutional offices have been replaced by practical services: a public laundry, a municipal clinic, and a records archive whose shelves are visible through barred windows. The colonnade provides shelter during rain, and chalk marks on the pavement show where vendors set up temporary stalls during the brief afternoon market.
-~
+
+~
 1 1
 D0
 ~
@@ -1790,7 +1878,8 @@ S
 #3086
 @@WSunward Way@@N~
 The limestone has darkened to a uniform grey on this tier, indistinguishable from the common stone used elsewhere in the lower city. A fountain supplied by the temple district water system provides a focal point for the block, its stone basin carved with a simple geometric design that predates the Lantern Reforms. Residents queue here in the mornings to fill water jugs, exchanging neighbourhood gossip while they wait for their turn at the spout.
-~
+
+~
 1 1
 D0
 ~
@@ -1812,7 +1901,8 @@ S
 #3087
 @@WMarble Ring@@N~
 No marble survives on this tier, the name persisting only through civic habit and the faded lettering on a corner building that reads "Marble Ring" in old-fashioned script. The buildings here are solid working-class construction, their stone walls thick and their windows small, designed for warmth retention rather than light. A tallow chandler operates from the ground floor of the corner lot, and the waxy, slightly acrid smell of rendered fat permeates the block.
-~
+
+~
 1 1
 D0
 ~
@@ -1834,7 +1924,8 @@ S
 #3088
 @@WGolden Mews@@N~
 The mews on this tier has become a narrow residential lane where craft workers live above their ground-floor workshops. A potter's wheel is visible through an open door, and the steady hum of the wheel provides a rhythmic undertone to the ambient street sounds. The golden signboards are long gone, but a faded gilding trace on one lintel shows where the last one hung before it was taken down and repurposed.
-~
+
+~
 1 1
 D0
 ~
@@ -1856,7 +1947,8 @@ S
 #3089
 @@WGranite Arcade@@N~
 The arcade on this tier has been fully enclosed, its pillars incorporated into the building walls and its former walkway converted into a row of small shops. A cobbler, a cup-maker, and a vendor of cheap ink and paper share the converted space, their businesses separated by thin wooden partitions that do little to contain the mixed smells. The granite is still visible in places where the newer construction has not covered it, its surface bearing the weathered remains of Founding-era carved marks.
-~
+
+~
 1 1
 D0
 ~
@@ -1878,7 +1970,8 @@ S
 #3090
 @@WSaffron Walk@@N~
 The walk has lost even the whitewash of the tier above, its stone walls left bare and grey. A cat sleeps in a sunny patch on the pavement, undisturbed by the occasional pedestrian. The saint's niche tradition persists at this depth in the city grid, though the carved figure here is a crude replacement carved by a neighbourhood resident after the original was stolen, and the candle offerings are irregular and sparse.
-~
+
+~
 1 1
 D0
 ~
@@ -1900,7 +1993,8 @@ S
 #3091
 @@WAzure Plaza@@N~
 This tier's open space functions less as a plaza and more as a neighbourhood courtyard, surrounded by residential buildings whose residents use it for drying laundry and as a play area for children. A hand-pump well in the center provides the block's primary water supply, its iron handle squeaking with each stroke. The blue-grey slate has been entirely replaced with common paving, and only the name, remembered by long-time residents, connects this space to the grander plazas above.
-~
+
+~
 1 1
 D0
 ~
@@ -1922,7 +2016,8 @@ S
 #3092
 @@WEmber Court@@N~
 The court on this tier has cooled entirely, its forge-era identity surviving only in the darkened stone and the residual warmth trapped in the thick walls of buildings originally designed to withstand furnace heat. A small tavern occupies the corner, serving cheap ale and bread to the working residents of the lower wards, its sign depicting a hammer and anvil in faded paint. The cobbles here retain their sooty character, though the source is now chimney smoke rather than forge scale.
-~
+
+~
 1 1
 D0
 ~
@@ -1944,12 +2039,13 @@ S
 #3093
 @@WGilded Crossing@@N~
 This crossing has become a purely functional intersection with no trace of its former mercantile grandeur. The buildings are plain and practical, their doors unmarked except for painted house numbers, and the foot traffic consists entirely of residents going about daily errands. A public notice board on the corner post carries neighbourhood watch schedules and municipal announcements, its surface covered with layers of overlapping handbills.
-~
+
+~
 1 1
 D0
 ~
 ~
-0 -1 3053
+0 -1 3073
 D1
 ~
 ~
@@ -1966,7 +2062,8 @@ S
 #3094
 @@WIron Byway@@N~
 The reinforced architecture of the Fortification Era gives this tier's byway a bunker-like solidity, with thick walls and low ceilings that muffle street noise and create a sense of enclosed quiet. The former emergency stores have been divided into small apartments, their heavy iron doors now propped open with wedges to admit light and air. The iron-strip pavement reinforcement has been partially pulled up for scrap, leaving irregular grooves in the stone that collect rainwater.
-~
+
+~
 1 1
 D0
 ~
@@ -1988,7 +2085,8 @@ S
 #3095
 @@WViolet Terrace@@N~
 The terrace identity has been entirely absorbed into the surrounding streetscape on this tier, the violet-grey stone indistinguishable from the general building material under its coating of city grime. A retired lamplighter has turned his ground-floor rooms into an informal repair shop, fixing broken lanterns and selling reconditioned wicks to the neighbourhood. The lavender planters of the upper tiers are a distant memory here, replaced by practical window boxes growing kitchen herbs.
-~
+
+~
 1 1
 D0
 ~
@@ -2010,7 +2108,8 @@ S
 #3096
 @@WVerdant Causeway@@N~
 The vine trellises on this tier support only a few scraggly survivors of the dense growth found above, their bare iron framework visible against the stone walls like the ribs of a dormant organism. The community garden has given way to a patch of hard-packed earth where residents stack firewood for the winter. The causeway remains greener than the fully-paved streets around it, however, thanks to moss growing in the mortar joints and a persistent clump of grass pushing through a crack in the pavement.
-~
+
+~
 1 1
 D0
 ~
@@ -2032,7 +2131,8 @@ S
 #3097
 @@WObsidian Crescent@@N~
 The obsidian crescent reaches its darkest and quietest on this tier, where the widely-spaced lamps leave long pools of shadow and the foot traffic thins to occasional residents moving between home and the corner shops. The volcanic stone has been partially covered by plaster in places where building owners tried to brighten the block, but the plaster has peeled away in sheets, revealing the black stone beneath in ragged patches. The crescent's curve is tightest here, almost doubling back on itself before straightening into the eastern wards.
-~
+
+~
 1 1
 D0
 ~
@@ -2054,7 +2154,8 @@ S
 #3098
 @@WIvory Passage@@N~
 The passage on this tier has narrowed to barely more than an alley, the buildings on either side having been extended toward each other over the years until the gap between them admits only single-file foot traffic. The walls are close enough to touch with outstretched arms, and the effect is oddly intimate, like walking through a private corridor rather than a public street. A single wall sconce provides the only light, its flame guttering in the draft created by the passage's chimney-like proportions.
-~
+
+~
 1 1
 D0
 ~
@@ -2076,7 +2177,8 @@ S
 #3099
 @@WMoonlit Approach@@N~
 The approach descends a half-step on this tier, creating a slightly sunken street that collects shadow even during the brightest hours. The @@yBank of Midgaard@@N occupies a fortified building on the south side, its entrance accessible via a short stairway from the street above, and a pair of iron-bracketed lanterns flanking the bank door provide the block's strongest light source. The buildings here are among the oldest in the lower city, their timber frames blackened with age and their stone foundations visibly subsiding in places.
-~
+
+~
 1 1
 D0
 ~
@@ -2102,7 +2204,8 @@ S
 #3100
 @@WLantern Promenade@@N~
 The promenade's fifth tier is the last with a consistent run of @@ylantern@@N poles, their iron fixtures weathered to a rusty brown that blends with the common stone of the surrounding buildings. The walkway retains its wider-than-average dimensions but has lost the formal mustering-ground character of the upper tiers, serving instead as an informal gathering space for the lower-ward residents. A wooden stall selling roasted chestnuts and hot cider operates at the corner during the cooler months, its charcoal brazier adding warmth and a savoury smell to the evening air.
-~
+
+~
 0 1
 D0
 ~
@@ -2120,7 +2223,8 @@ S
 #3101
 @@WCedar Square@@N~
 The sixth ring of Cedar Square marks the transition into @@WMidgaard@@N's institutional quarter, where the residential buildings give way to larger structures housing civic offices and charitable organizations. A public bench stands at the corner, its wooden slats worn smooth by decades of use, and the street widens slightly to accommodate the foot traffic generated by the government buildings. The cedar timber framing persists here as a decorative element rather than a structural one, bolted to stone facades as an homage to the quarter's origins.
-~
+
+~
 0 1
 D0
 ~
@@ -2134,7 +2238,8 @@ S
 #3102
 @@WSilver Marketwalk@@N~
 The institutional character of the sixth ring dominates here, with the former market shops converted into clerks' offices and public document repositories. A stone-carved directory mounted on the wall lists the departments housed in the surrounding buildings, their names abbreviated in civic shorthand that only regular visitors can parse. The foot traffic is orderly and purposeful, the pace set by clerks carrying document boxes between departments.
-~
+
+~
 1 1
 D0
 ~
@@ -2152,7 +2257,8 @@ S
 #3103
 @@WCrimson Concourse@@N~
 The concourse on this tier serves as the approach to the institutional quarter's central offices, its stone facades bearing the carved seals of various municipal departments. A pair of flag brackets project from the wall above, flying the city's white-and-gold standard on official days. The foot traffic here includes a mix of government clerks, supplicants bearing petitions, and the occasional temple functionary crossing between the religious quarter and the civic administration.
-~
+
+~
 1 1
 D0
 ~
@@ -2170,7 +2276,8 @@ S
 #3104
 @@WAuburn Traverse@@N~
 The traverse on this tier has been widened by the demolition of a row of old shops, creating a small forecourt in front of a registry building whose doors stand open during business hours. A queue of citizens waiting for permit stamps snakes across the forecourt on busy days, their patience tested by the slow pace of the bureaucratic process within. The brick facing that gives the traverse its name survives only on the registry building itself, preserved by municipal order as a historical feature.
-~
+
+~
 1 1
 D0
 ~
@@ -2188,7 +2295,8 @@ S
 #3105
 @@WBronze Colonnade@@N~
 The colonnade on the institutional tier has been restored to its original appearance, the verdigris cleaned from the bronze columns and their surfaces polished to a warm golden-brown. The restoration was undertaken as a civic pride project, and a small plaque at the base of one column records the names of the donors who funded the work. The ground-floor offices behind the colonnade house the city's land registry and property tribunal, and their doors bear brass nameplates in the formal civic style.
-~
+
+~
 1 1
 D0
 ~
@@ -2206,7 +2314,8 @@ S
 #3106
 @@WSunward Way@@N~
 Sunward Way on the institutional tier opens onto a small park-like space where a cluster of shade trees has been allowed to grow in a cobbled planter, their canopy providing welcome shade during summer and a framework for festival lanterns during the winter solstice celebrations. A cafe operates from a ground-floor room facing the trees, its tables set outside when weather permits, serving tea and simple meals to the clerks and temple staff who frequent this block. The fountain from the tier above is fed by the same pipe system, though the basin here is larger and decorated with carved fish.
-~
+
+~
 1 1
 D0
 ~
@@ -2224,7 +2333,8 @@ S
 #3107
 @@WMarble Ring@@N~
 The institutional tier restores something of the marble ring's original character, with fresh-cut white stone facing the civic buildings that line this stretch. A memorial wall occupies the gap between two department buildings, its surface covered with the carved names of citizens who died in the city's defense during the Fortification Era. Fresh flowers and small oil lamps are placed at the wall's base on memorial days, maintained by a volunteer committee of war veterans and their families.
-~
+
+~
 1 1
 D0
 ~
@@ -2242,7 +2352,8 @@ S
 #3108
 @@WGolden Mews@@N~
 The mews on this tier has been incorporated into the temple district's service infrastructure, housing the workshops where temple furnishings are repaired and liturgical supplies prepared. The smell of beeswax and incense replaces the metalworking odours of the upper tiers, and the artisans here work with the careful, unhurried pace of people whose output is measured by quality rather than quantity. Gilded temple ornaments in various stages of restoration are visible through the workshop windows.
-~
+
+~
 1 1
 D0
 ~
@@ -2260,7 +2371,8 @@ S
 #3109
 @@WGranite Arcade@@N~
 The granite arcade at the institutional tier has been preserved in its original form, its pillars cleaned and its walkway maintained as a covered passage connecting the temple district to the civic offices. The carvings on the pillar bases are the most legible of any in the city, protected from weather by the arcade roof and from vandalism by the temple guard patrols that pass through regularly. A side passage leads south toward an additional row of the arcade that continues into the park quarter.
-~
+
+~
 1 1
 D0
 ~
@@ -2282,7 +2394,8 @@ S
 #3110
 @@WThe Temple of the Resounding Heart@@N~
 The largest religious structure in @@WMidgaard@@N occupies this prominent intersection, its vaulted stone interior open to visitors at all hours. Polished granite columns support a high ceiling from which iron @@ycandelabra@@N hang on long chains, their flames casting a steady golden light across the mosaic floor depicting the city's founding compact. The temple serves multiple civic functions beyond worship: it houses the charitable healing clinic, maintains the memorial rolls of the dead, and provides sanctuary to those in need of protection under temple law. Along the western wall, a carved panel lists the names of all known dead from the city's major conflicts, updated annually by the @@WTemple Memorist@@N in a public ceremony. A narrow stair descends to the donation halls below, while another ascends toward the higher sanctuary. The air carries the scent of beeswax candles and dried rosemary, and the murmur of quiet prayer provides a constant background that absorbs the noise from the busy streets outside.
-~
+
+~
 12 1
 D0
 ~
@@ -2312,7 +2425,8 @@ S
 #3111
 @@WAzure Plaza@@N~
 The plaza on the institutional tier serves as the formal gathering space for temple ceremonies and civic observances, its flagstones laid in concentric rings around a central dais of polished grey marble. On ordinary days the plaza functions as a quiet transit point between the temple and the administrative offices, but during festivals and memorial days it fills with solemn crowds bearing candles and wreaths. The buildings surrounding the plaza fly the temple's flame-and-heart banner alongside the city standard.
-~
+
+~
 1 1
 D0
 ~
@@ -2334,7 +2448,8 @@ S
 #3112
 @@WEmber Court@@N~
 The court on the institutional tier has been repurposed as the temple district's administrative wing, housing offices for the clergy who manage the temple's considerable charitable and record-keeping operations. The forge-era architecture lends the offices a solid, fortress-like quality that their occupants seem to appreciate, and the thick walls keep the interiors cool in summer and warm in winter. A carved wooden sign above the main door reads "Office of the Memorist" in formal temple script.
-~
+
+~
 1 1
 D0
 ~
@@ -2356,7 +2471,8 @@ S
 #3113
 @@WGilded Crossing@@N~
 The crossing on the institutional tier is marked by a small shrine to civic duty, a stone plinth bearing a carved scroll that lists the responsibilities of citizenship as defined in the First Stone Accord. The shrine is tended by temple volunteers who keep fresh flowers at its base and clean the carved text regularly. The crossing sees steady traffic as clerks, petitioners, and temple staff move between the various offices and departments that surround it.
-~
+
+~
 1 1
 D0
 ~
@@ -2378,7 +2494,8 @@ S
 #3114
 @@WIron Byway@@N~
 The Fortification-era ironwork takes on a different character in the institutional tier, where the heavy construction serves the archives and document vaults that store the city's official records. Iron-banded doors protect rooms stacked floor to ceiling with ledger books, tax rolls, and land deeds dating back to the Founding Generation. The fire-resistant construction that was originally designed to protect supply depots now protects the city's institutional memory, and a clerk stationed at the entrance checks credentials before admitting visitors.
-~
+
+~
 1 1
 D0
 ~
@@ -2400,7 +2517,8 @@ S
 #3115
 @@WViolet Terrace@@N~
 The terrace on the institutional tier has been restored to something approaching its upper-row elegance, with fresh lavender in clay planters lining a raised walkway that provides views across the temple forecourt. The violet-grey stone has been cleaned and repointed, and iron railings in the traditional style have been reinstalled. A pair of stone benches flanking the walkway provide seating for visitors resting between appointments at the various civic offices.
-~
+
+~
 1 1
 D0
 ~
@@ -2422,7 +2540,8 @@ S
 #3116
 @@WVerdant Causeway@@N~
 The vine growth on the institutional tier has been carefully managed by the temple gardeners, trained along matching trellises to create a symmetrical green canopy that filters the light into a dappled pattern on the walkway below. The planting scheme follows a liturgical calendar, with different flowering species timed to bloom during the major temple festivals. A carved wooden bench beneath the densest section of vine provides a shaded resting spot that temple staff use for informal meetings.
-~
+
+~
 1 1
 D0
 ~
@@ -2444,7 +2563,8 @@ S
 #3117
 @@WObsidian Crescent@@N~
 The dark stone crescent on the institutional tier has been illuminated with additional wall sconces installed at closer intervals than elsewhere in the block, eliminating the shadow-pools that characterize the obsidian stretches on other tiers. The extra lighting was mandated by the records office after several incidents of documents being dropped and damaged in the dark passages. A carved directional sign at the crescent's apex points toward the various departments accessible from this stretch.
-~
+
+~
 1 1
 D0
 ~
@@ -2466,7 +2586,8 @@ S
 #3118
 @@WIvory Passage@@N~
 The passage on the institutional tier is wider than on the residential tiers above, maintained at its original width by municipal order to accommodate the flow of documents and officials between departments. The lime-washed walls are refreshed quarterly and bear painted directional signs in neat municipal script. A small waiting area with wooden chairs has been carved out of a corner alcove, serving petitioners who arrive before the offices open.
-~
+
+~
 1 1
 D0
 ~
@@ -2488,7 +2609,8 @@ S
 #3119
 @@WMoonlit Approach@@N~
 The approach on the institutional tier leads toward the civic administration's eastern offices, its buildings housing the mayor's secretariat and the offices of the town council. The architecture here is more formal than the surrounding blocks, with carved stone window frames and brass door furniture that signal official importance. A pair of flag brackets above the main entrance fly the city standard on days when the council is in session.
-~
+
+~
 1 1
 D0
 ~
@@ -2510,7 +2632,8 @@ S
 #3120
 @@WLantern Promenade@@N~
 The promenade on the institutional tier serves as the eastern boundary of the temple-and-civic district, its wider walkway providing a transitional space between the formal offices and the more commercial streets to the south. The @@ylantern@@N poles here are decorated with the temple's flame-and-heart emblem cast in iron, a unique touch that distinguishes this stretch from the utilitarian fixtures found elsewhere on the promenade. A town crier's station at the corner serves as the official point for public announcements.
-~
+
+~
 0 1
 D0
 ~
@@ -2528,7 +2651,8 @@ S
 #3121
 @@WThe Grand Post Office@@N~
 @@WMidgaard@@N's central postal facility occupies a high-ceilinged stone hall lit by iron candelabra and the steady glow of @@ylantern@@N sconces set into the walls at regular intervals. A long wooden counter divides the public area from the sorting room behind, where clerks process letters, parcels, and official dispatches into canvas sacks marked with destination codes. The walls are lined with brass-fronted post boxes, each numbered and locked, and a painted directory above the counter lists the delivery routes maintained by the postal service. Municipal notices posted beside the entrance detail postage rates, prohibited contents, and the schedule for long-distance courier runs to allied cities. The air smells of sealing wax, ink, and the dry parchment of accumulated correspondence.
-~
+
+~
 17420 11
 D2
 ~
@@ -2538,7 +2662,8 @@ S
 #3122
 @@WThe Argent Armory@@N~
 This military outfitting hall is dominated by rows of weapon racks and @@Warmour stands@@N displaying the Argent quartermaster's current stock. The walls are lined with polished steel brackets holding blades of various lengths, and a long wooden counter at the back serves as the transaction point where soldiers and licensed adventurers present their requisition chits. Brass lamps mounted on the ceiling beams provide even illumination across the display floor, eliminating shadows that might hide flaws in the merchandise. The floor is scored with boot marks from the steady traffic of fighters inspecting and testing equipment before purchase. A posted @@Wprice list@@N on the wall lists standard issue items and their costs in neat columns.
-~
+
+~
 17420 11
 D2
 ~
@@ -2548,7 +2673,8 @@ S
 #3123
 @@WThe Moonthread Outfitters@@N~
 A refined clothier's workshop fills this stone-vaulted room, its walls hung with bolts of enchantment-receptive @@cfabric@@N in shades of silver, blue, and pale green. Dress forms stand at intervals along the walls, each displaying a different style of reinforced expedition wear tailored for mages, scouts, and pilgrims. The air carries the clean scent of cedar shavings used to protect the fabrics from moths, and the light from overhead @@ylanterns@@N picks out the subtle shimmer of ward-thread woven into the more expensive garments. A measuring area at the back includes a tailor's bench, a rack of fitting tools, and a polished copper mirror. The shop's reputation draws customers from across the city who value practical protection over heavy armour.
-~
+
+~
 17420 11
 D2
 ~
@@ -2558,7 +2684,8 @@ S
 #3124
 @@WThe Emberglass Arcana@@N~
 Arcane supplies and spell components fill the shelves of this dimly-lit shop, its atmosphere thick with the mingled scents of powdered minerals, dried herbs, and the faint ozone tang of residual magical energy. Glass-fronted cabinets along the walls display @@cscrolls@@N, vials of luminescent fluid, and crystalline focusing stones arranged by school and potency. The shopkeeper's counter is a massive slab of ward-etched granite, its surface scored with containment sigils that prevent accidental magical discharge from the merchandise. Brass scales for measuring reagents sit beside a reference ledger of standard component lists. The lighting is deliberately subdued, provided by softly glowing @@cmagefire@@N globes suspended from the ceiling rather than open flames.
-~
+
+~
 17420 11
 D2
 ~
@@ -2568,7 +2695,8 @@ S
 #3125
 @@WThe Provisioner's Exchange@@N~
 A practical supply depot fills this stone-floored hall with the organised clutter of expedition outfitting. Ropes, water skins, trail rations, bedrolls, and portable cooking equipment are stacked on heavy wooden shelving that lines the walls from floor to ceiling. A brass counter fitted with a municipal-standard scale serves as the transaction point, and a posted @@Winventory list@@N details the current stock and prices. The air smells of hemp, leather, and the dried fruit used in the trail rations, and the floor shows the scuff marks of heavy packs being dragged to the door. Supply crates stacked near the entrance await the next delivery from the warehouses.
-~
+
+~
 17420 11
 D2
 ~
@@ -2578,7 +2706,8 @@ S
 #3126
 @@WThe Invasion Requisitions@@N~
 This military depot operates under emergency charter authority, its walls lined with @@Rfield-ready weapons@@N, armour, and tactical supplies issued to defenders during invasion alerts. A veteran quartermaster maintains strict inventory control, with each item tagged and logged in a heavy leather-bound @@Wmanifest@@N chained to the counter. The room is organized with military precision: bladed weapons on the left wall, protective gear on the right, and expendable supplies in crated stacks near the back. Maps showing the city's defensive sectors are pinned to a board behind the counter, and a @@Rred signal lamp@@N mounted above the door is lit when an active invasion warning is in effect.
-~
+
+~
 17420 11
 D2
 ~
@@ -2588,7 +2717,8 @@ S
 #3127
 @@WThe Quest Exchange@@N~
 A bureaucratic trading hall where @@cchartered contracts@@N, tactical commissions, and legal quests are negotiated and stamped with civic authority. The room is divided into consultation booths separated by wooden partitions, each equipped with a writing desk, ink well, and a brass seal press. A central counter staffed by clerks handles the formal registration of agreements, and a wall of pigeonhole shelving behind them stores active contracts sorted by category and expiry date. The air is heavy with the smell of fresh ink and hot sealing wax, and the murmur of low-voiced negotiation provides a constant background hum.
-~
+
+~
 17420 11
 D2
 ~
@@ -2598,7 +2728,8 @@ S
 #3128
 @@WThe Quest Broker's Hall@@N~
 A busy clearinghouse where bounty postings, expedition commissions, and reward contracts are displayed on a massive cork-and-iron @@Wnotice wall@@N that dominates the room. Seekers browse the wall's offerings while the broker's clerks process completions at a long counter, checking proofs-of-task against the original posting terms before authorizing reward payments. The room smells of road dust and leather, carried in by the steady stream of adventurers who pass through, and the walls are decorated with trophy weapons and framed commendations from particularly notable expeditions. A separate alcove houses a reference library of regional maps, bestiary excerpts, and terrain guides available for consultation before departure.
-~
+
+~
 17420 11
 D2
 ~
@@ -2608,7 +2739,8 @@ S
 #3129
 @@WGranite Arcade@@N~
 The granite arcade resumes on this tier as an open colonnade connecting the institutional quarter to the park and service districts to the south. The pillars here have been recently restored, their surfaces cleaned and repointed to match the condition of those on the institutional tier above. A stone drinking fountain set into the eastern wall provides water to foot traffic, and the covered walkway shelters a row of public notice boards displaying municipal announcements and community events.
-~
+
+~
 1 1
 D0
 ~
@@ -2626,7 +2758,8 @@ S
 #3130
 @@WSaffron Walk@@N~
 The walk on this tier opens onto a small park-like strip where the municipal gardeners maintain a bed of herbs and medicinal plants used by the temple clinic. The ochre plaster tradition has been revived here in a deliberately nostalgic touch, the warm colour providing a contrast to the grey stone that dominates the institutional blocks. The foot traffic includes temple herbalists collecting cuttings and neighbourhood residents who use the park strip as a shortcut.
-~
+
+~
 1 1
 D0
 ~
@@ -2648,7 +2781,8 @@ S
 #3131
 @@WAzure Plaza@@N~
 This plaza on the lower-institutional tier serves as a secondary gathering space for temple events that overflow the main ceremonial plaza on the tier above. The paving is a mix of blue-grey slate and common flagstone, and a simple stone fountain occupies the center, its basin decorated with carved water-lily motifs. The surrounding buildings house temple support services including a soup kitchen, a clothing exchange, and a hostel for pilgrims and travelers in need of shelter.
-~
+
+~
 1 1
 D0
 ~
@@ -2670,7 +2804,8 @@ S
 #3132
 @@WEmber Court@@N~
 The court on this tier has been converted into the temple district's workshop quarter, where craftspeople under temple patronage produce goods sold to fund charitable operations. A candle-maker, a soap-boiler, and a brewer share the block, their operations filling the air with a complex mixture of beeswax, lye, and fermenting grain. The forge-era architecture provides excellent ventilation through the old smoke channels, making the space practical for these heat-generating trades.
-~
+
+~
 1 1
 D0
 ~
@@ -2692,7 +2827,8 @@ S
 #3133
 @@WGilded Crossing@@N~
 The crossing on the lower-institutional tier is quieter and more contemplative than the busier junctions above, its pace set by the temple staff and charitable workers who dominate the foot traffic. A small carved stone marker at the intersection records the founding date of the temple's charitable mission in both the old civic calendar and the modern dating system. The buildings at each corner bear painted signs identifying their functions in the temple's support network.
-~
+
+~
 1 1
 D0
 ~
@@ -2714,7 +2850,8 @@ S
 #3134
 @@WIron Byway@@N~
 The archive vaults continue on this tier, their iron-banded doors identical to those on the row above but bearing different department seals. A records clerk pushes a wheeled cart loaded with document boxes down the corridor, the iron wheels rattling on the stone pavement. The archive smell of old paper and leather bindings permeates the air, mixed with the faint metallic tang of the iron fixtures that give the byway its name.
-~
+
+~
 1 1
 D0
 ~
@@ -2736,7 +2873,8 @@ S
 #3135
 @@WViolet Terrace@@N~
 The terrace on the lower-institutional tier maintains the restored elegance of the row above, with clean violet-grey stone and fresh lavender in matching clay planters. The walkway here provides access to the temple district's quieter offices, including the records of the dead maintained by the Memorist and the petition archives where citizens' requests to the temple are stored. A carved wooden bench under a wall-mounted lantern offers a peaceful spot for contemplation.
-~
+
+~
 1 1
 D0
 ~
@@ -2758,7 +2896,8 @@ S
 #3136
 @@WVerdant Causeway@@N~
 The temple gardeners have extended their careful vine management to this tier, creating a green corridor that connects the park quarter to the institutional offices. The trained vine canopy filters the light into a soft green-gold that makes the walkway feel like a leafy arbour even in the heart of the stone city. Small brass plaques at the base of each trellis identify the vine species and its medicinal properties, a teaching tool for the temple's herbalist apprentices.
-~
+
+~
 1 1
 D0
 ~
@@ -2780,7 +2919,8 @@ S
 #3137
 @@WObsidian Crescent@@N~
 The additional wall sconces from the institutional tier continue on this level, keeping the obsidian crescent well-lit and eliminating the shadow-pools found on the residential tiers. The dark stone here has been polished to a glassy finish by the temple maintenance crews, creating reflective surfaces that amplify the lamplight. A carved directional panel set into the wall at the crescent's midpoint lists the departments and services accessible from this stretch in both common script and old civic notation.
-~
+
+~
 1 1
 D0
 ~
@@ -2802,7 +2942,8 @@ S
 #3138
 @@WIvory Passage@@N~
 The passage on this tier houses the civic administration's executive offices, including the mayor's audience chamber and the council's meeting hall. The lime-washed walls are covered with painted portraits of former mayors in their chains of office, their frames growing more ornate as the tradition progressed through the centuries. An anteroom furnished with upholstered chairs serves as a waiting area for citizens with appointments, and a secretary's desk guards the inner door.
-~
+
+~
 1 1
 D0
 ~
@@ -2824,7 +2965,8 @@ S
 #3139
 @@WMoonlit Approach@@N~
 The approach on this tier leads to the civic quarter's eastern exit, its formal architecture giving way to the more practical construction of the lower commercial districts. A transition in the paving style marks the boundary between the institutional quarter and the commercial zone, shifting from dressed flagstone to common cobbles. The buildings at the boundary bear both civic department seals and commercial signage, reflecting the mixed use of this transitional block.
-~
+
+~
 1 1
 D0
 ~
@@ -2846,7 +2988,8 @@ S
 #3140
 @@WLantern Promenade@@N~
 The promenade on the lower-institutional tier marks the transition from the temple-and-civic district to the commercial and outfitting quarter below. The @@ylantern@@N poles here bear both the temple's flame-and-heart emblem and the city standard, symbolizing the shared jurisdiction. The walkway is quieter than the promenade tiers above, used mainly by clerks and temple staff moving between shifts, and a wooden bench at the corner provides a resting point with a view south toward the market districts.
-~
+
+~
 0 1
 D0
 ~
@@ -2864,7 +3007,8 @@ S
 #3141
 @@WCedar Square@@N~
 Cedar Square opens at the western margin of the lower commercial corridor, its paving stones arranged in a distinctive herringbone pattern that dates to the @@yLantern Reforms@@N when this stretch was first formalized as a public thoroughfare. The square serves as a natural gathering point for customers leaving the @@WGrand Post Office@@N to the north and those heading south toward the specialty clothiers. A @@Wstone bench@@N set against the western wall bears the chiseled inscription of the First Stone Accord's founding clause, worn smooth by generations of idle hands.
-~
+
+~
 0 1
 D0
 ~
@@ -2882,7 +3026,8 @@ S
 #3142
 @@WSilver Marketwalk@@N~
 The Marketwalk narrows slightly here as the commercial corridor threads between the @@WArmory@@N district to the north and the outfitting quarter to the south. Iron boot-scrapers are bolted into the curb at regular intervals, a practical concession to the mud tracked in by soldiers and adventurers visiting the @@WArgent Armory@@N above. @@yLantern@@N light glints off a row of brass direction plates set into the wall, each one stamped with the ward name and an arrow pointing toward the nearest civic service point.
-~
+
+~
 1 1
 D0
 ~
@@ -2904,7 +3049,8 @@ S
 #3143
 @@WCrimson Concourse@@N~
 The concourse takes its name from the rust-red pigment worked into the mortar between its paving stones, a decorative technique imported from Kiess during the Standardization Century. Foot traffic here divides between shoppers heading north to the @@WMoonthread Outfitters@@N and those continuing east along the commercial corridor toward the city's central avenues. A half-height @@Rwall of red brick@@N runs along the southern edge, separating the walkway from a narrow drainage channel that carries rainwater toward the city's underground cisterns.
-~
+
+~
 1 1
 D0
 ~
@@ -2926,7 +3072,8 @@ S
 #3144
 @@WAuburn Traverse@@N~
 This section of the traverse cuts through the transitional zone between the specialized shops and the broader market avenues. The buildings here are two stories of mixed construction — old stone foundations topped by newer timber frames added during the Fortification Era when the city's population surged. A @@ylantern@@N pole at the midpoint bears a faded notice board where merchants post daily price adjustments, and a narrow alley mouth on the south side channels foot traffic toward the armor dealers below.
-~
+
+~
 1 1
 D0
 ~
@@ -2948,7 +3095,8 @@ S
 #3145
 @@WBronze Colonnade@@N~
 A row of squat bronze pillars lines the northern edge of this corridor section, each one cast with the cityguard's crossed-halberd emblem during the @@RAsh-and-Iron Decades@@N when the military requisitioned civilian foundries for civic monument production. The pillars serve no structural purpose but mark the boundary between the outfitting quarter and the general commercial zone. Between them, pedestrians can see north into the supply district and south toward the armor-craft workshops that occupy the next tier down.
-~
+
+~
 1 1
 D0
 ~
@@ -2970,7 +3118,8 @@ S
 #3146
 @@WSunward Way@@N~
 Sunward Way catches the best of the afternoon light as it filters between the rooftops of the surrounding commercial buildings. The street is wider here than on the adjacent stretches, a legacy of a Lantern-era ordinance that required sightlines to the central watchtower from every major east-west artery. @@yGlass-paned lanterns@@N hang from iron brackets on both sides of the street, their @@yflames@@N barely visible in the daylight but essential to the city's commitment to perpetual illumination along all civic routes.
-~
+
+~
 1 1
 D0
 ~
@@ -2992,7 +3141,8 @@ S
 #3147
 @@WMarble Ring@@N~
 The Marble Ring takes its name from a circular medallion of white stone set flush into the center of the intersection, carved with a compass rose whose cardinal points align with the four streets that converge here. The marble is Kiessward quarry stock, imported at considerable expense during the Standardization Century as a navigational aid for merchants unfamiliar with the city grid. Foot traffic flows around the medallion in a habitual clockwise pattern, an unwritten convention that locals observe and newcomers learn quickly.
-~
+
+~
 1 1
 D0
 ~
@@ -3014,7 +3164,8 @@ S
 #3148
 @@WGolden Mews@@N~
 The mews narrows to a single-cart width here, its walls rising three stories on both sides and creating a cool, shaded corridor even at midday. The upper floors are leased to scribes and notaries whose shingle signs hang on chains above the walkway, each one painted with the quill-and-scales symbol of the Municipal Clerk's Guild. The @@ygolden@@N tile work along the base of the walls was commissioned by the guild itself, a display of professional pride that doubles as a wayfinding marker for clients seeking legal documentation services.
-~
+
+~
 1 1
 D0
 ~
@@ -3036,7 +3187,8 @@ S
 #3149
 @@WGranite Arcade@@N~
 Heavy granite arches span the street here, remnants of a covered market structure that was partially demolished during the Fortification Era to improve cityguard sightlines. The surviving arches frame the corridor at regular intervals, their keystones carved with merchant guild emblems that have been weathered to near-illegibility. Vendors sometimes hang canvas awnings from the arch supports during market days, recreating a pale echo of the original arcade's sheltered trading space.
-~
+
+~
 1 1
 D0
 ~
@@ -3058,7 +3210,8 @@ S
 #3150
 @@WSaffron Walk@@N~
 The Saffron Walk is named for the yellowish limestone used in the buildings along this stretch, quarried from deposits east of the city during the original construction period. The stone has darkened with age but still gives the corridor a distinctively warm tone compared to the grey granite and red brick of neighboring streets. A shallow stone trough runs along the northern curb, fed by a pipe from the civic water system and used by passing draft animals and the occasional stray dog.
-~
+
+~
 1 1
 D0
 ~
@@ -3080,7 +3233,8 @@ S
 #3151
 @@WAzure Plaza@@N~
 Azure Plaza takes its name from the @@cteal-glazed tiles@@N set into the fountain basin at the center of this small open space. The fountain has been dry for years — its feed pipe was diverted to priority cisterns during the @@RAsh-and-Iron Decades@@N and never reconnected — but the basin itself remains a popular meeting point and informal message drop. The surrounding buildings bear the mixed architectural signatures of three distinct construction periods, their mismatched rooflines creating a jagged skyline above the plaza.
-~
+
+~
 1 1
 D0
 ~
@@ -3102,7 +3256,8 @@ S
 #3152
 @@WEmber Court@@N~
 Ember Court occupies a wide point in the corridor where an old smithing workshop once stood before it was condemned and demolished. The name persists from the days when forge sparks would drift into the street, and a blackened stone lintel embedded in the eastern wall is the last physical trace of the original structure. The open space left by the demolition has been claimed by street vendors who set up portable stalls on market days, their wares arranged on folding tables and canvas ground cloths.
-~
+
+~
 1 1
 D0
 ~
@@ -3124,7 +3279,8 @@ S
 #3153
 @@WGilded Crossing@@N~
 The Gilded Crossing marks the intersection where the lower commercial corridor meets a north-south route connecting the temple district to the residential quarters. A decorative iron gate, painted with @@ygold@@N leaf that has mostly flaked away, spans the street at the midpoint — it was installed during the Violet Compact era as a ward checkpoint and has not been closed in living memory. The gate's hinges are rusted solid, and locals treat the structure as an architectural curiosity rather than a functional barrier.
-~
+
+~
 1 1
 D0
 ~
@@ -3146,7 +3302,8 @@ S
 #3154
 @@WIron Byway@@N~
 The Iron Byway runs through the heart of the @@Rrequisition district@@N, its name earned by the heavy iron cleat-plates bolted to the curb stones to prevent wagon wheel damage from military supply carts. The buildings here are newer construction — plain functional facades of mortared stone with reinforced shutters, built to Fortification-era military specifications. A requisition office placard on the northern wall lists authorized supply categories and the hours during which civilian merchants may submit bid proposals to the quartermaster's purchasing board.
-~
+
+~
 1 1
 D0
 ~
@@ -3168,7 +3325,8 @@ S
 #3155
 @@WViolet Terrace@@N~
 The terrace widens into a shallow overlook where pedestrians can see south across the lower city tiers toward the residential quarter. The @@pviolet-tinted mortar@@N in the retaining wall identifies this as a @@pViolet Compact@@N boundary marker — the terrace sits precisely on the old jurisdictional line between civic administration and occult registry oversight. A @@Wstone tablet@@N set into the wall records the Compact's primary articles in formal script, though the lower lines have been obscured by decades of weather and casual vandalism.
-~
+
+~
 1 1
 D0
 ~
@@ -3190,7 +3348,8 @@ S
 #3156
 @@WVerdant Causeway@@N~
 Climbing ivy and window-box herbs give the Verdant Causeway its name, the only stretch of the lower commercial corridor where greenery has been allowed to encroach on the otherwise strictly maintained civic facades. The building owners here are members of the Temple Herbalists' Compact, and their trade privilege includes the right to cultivate medicinal plants in public view as both advertisement and community service. The scent of crushed sage and dried rosemary hangs in the air, a welcome relief from the usual urban smell of stone dust and horse traffic.
-~
+
+~
 1 1
 D0
 ~
@@ -3212,7 +3371,8 @@ S
 #3157
 @@WObsidian Crescent@@N~
 The crescent curves gently along the contour of an old foundation wall built from dark volcanic stone imported from regions south of the desert trade routes. The obsidian-dark blocks absorb heat during the day and radiate it back through the evening hours, making this stretch notably warmer than the surrounding streets in cold weather. Locals call it the Warm Walk during winter months, and the curved benches set into alcoves along the wall see heavy use by city residents seeking a comfortable outdoor seat after sunset.
-~
+
+~
 1 1
 D0
 ~
@@ -3234,7 +3394,8 @@ S
 #3158
 @@WIvory Passage@@N~
 The Ivory Passage takes its name from the pale limestone walls that line this narrow section of the corridor, their surfaces polished smooth by years of foot traffic brushing against them in the tight space. The passage is barely wide enough for two people to walk abreast, and during busy hours pedestrians adopt a keep-right convention enforced by nothing more than habit and mutual convenience. Overhead, a wooden walkway connects the upper floors of the buildings on either side, its planks weathered grey but its iron brackets still sound.
-~
+
+~
 1 1
 D0
 ~
@@ -3256,7 +3417,8 @@ S
 #3159
 @@WMoonlit Approach@@N~
 The Moonlit Approach is the penultimate street before the @@yLantern Promenade@@N, and it earns its name from the unusual absence of @@ylantern@@N coverage — the only stretch of the lower corridor where the civic lamp-line was never extended, leaving the street dependent on moonlight and the spill from neighboring windows after dark. The omission is bureaucratic rather than intentional; a Standardization-era survey miscounted the available bracket points, and no subsequent administration has corrected the oversight. Residents have compensated by mounting their own lamps above doorways, creating an irregular pattern of warm light that gives the street a more intimate character than the uniformly lit avenues nearby.
-~
+
+~
 1 1
 D0
 ~
@@ -3278,7 +3440,8 @@ S
 #3160
 @@WLantern Promenade@@N~
 The promenade reaches its lower-commercial tier here, the @@ylantern@@N poles bearing the combined emblems of the Merchant Compact and the Cityguard — a symbolic dual authority over the commerce-heavy streets that radiate westward. The walkway is marginally narrower than the promenade tiers above, a concession to the denser building footprints in this part of the city where commercial real estate commands a premium. A @@Wmilestone slate@@N bolted to the eastern wall marks distances to the city gates, the central market, and the temple, its numbers updated annually by the Waymarking Office.
-~
+
+~
 0 1
 D0
 ~
@@ -3296,7 +3459,8 @@ S
 #3161
 @@aMoonthread Clothier's Court@@N~
 The Moonthread Clothier's Court occupies a vaulted stone chamber where bolts of @@cdyed linen@@N and rune-stitched cotton are displayed on tiered wooden racks reaching from floor to ceiling. The air carries the faint ozone tang of ward-thread work and the softer scent of lanolin from the sizing baths in the back workshop. Mannequins dressed in layered travel robes and reinforced vestments stand in alcoves along the walls, each bearing a hand-lettered tag describing the garment's protective properties and the @@Warcane discipline@@N it best serves. Tailor's apprentices move between the display floor and the cutting tables, carrying bolts of fabric and sheaves of measurement notes with practiced efficiency. The court's entrance is flanked by two brass @@ylanterns@@N shaped like spindles, a guild emblem that marks this as a licensed wardcloth establishment under the Moonthread Compact.
-~
+
+~
 1028 11
 D0
 ~
@@ -3306,7 +3470,8 @@ S
 #3162
 @@aIronweave Armourer's Arcade@@N~
 The Ironweave Arcade is built around a central forge pit where smiths demonstrate tempering techniques to waiting customers, the rhythmic ring of hammer on anvil providing a constant percussive backdrop. Racks of @@Rforged greaves@@N, ringed harness, and riveted plate line the walls in ascending order of weight and protection, each piece tagged with a brass label listing its alloy composition and recommended combat role. The ceiling is blackened from decades of forge smoke, and ventilation shafts cut through the stone walls channel the heat upward while drawing fresh air in from the street through iron-grated intakes. Mercenaries and caravan guards queue at the fitting counter where a senior armourer takes measurements with practiced hands and an eye for stance and fighting style. A mezzanine above the main floor displays ceremonial and heavy campaign panoplies behind iron railings.
-~
+
+~
 1028 11
 D0
 ~
@@ -3316,7 +3481,8 @@ S
 #3163
 @@aGranite Bastion Armory@@N~
 The Granite Bastion is the heaviest outfitting hall in @@WMidgaard@@N, its slab-stone counters and reinforced display frames built to support the massive tower shields, wall-plates, and impact-rated greaves that constitute the stock. The floor is scored with deep scratches from dropped equipment and the boots of armored customers testing mobility in full kit. Chain curtains separate the display area from the workshop where smiths shape defensive plate to individual specifications, their hammers striking with the measured rhythm of experienced craftsmen. An inventory board mounted on the eastern wall lists available harness by campaign tier and defensive rating, its chalk markings updated daily. The @@ylanterns@@N here are enclosed in iron cages to protect them from the constant vibration of metalwork, casting a steady amber light across the arsenal of protective steel.
-~
+
+~
 1029 11
 D0
 ~
@@ -3326,113 +3492,63 @@ S
 #3164
 @@WAuburn Traverse@@N~
 The Auburn Traverse descends slightly as the corridor transitions from the commercial-shop tier into the lower residential and outfitting quarter. The paving stones here are a mix of old red clay brick and newer granite patches, evidence of repeated repair work necessitated by the heavy cart traffic that passes through this section daily. A @@Wposted notice@@N on the wall advertises the services of nearby armourers and clothiers, its ink smudged by rain and handling but still legible to anyone willing to stand close and squint.
-~
+
+~
 1 1
 D0
 ~
 ~
 0 -1 3144
-D1
-~
-~
-0 -1 3165
 D2
 ~
 ~
 0 -1 3184
 S
 #3165
-@@WBronze Colonnade@@N~
-The bronze pillars continue their march along the northern edge of this lower corridor section, though here the patina has deepened to a near-black green that contrasts sharply with the pale limestone buildings behind them. A tattered canvas banner strung between two pillars advertises a seasonal market fair that ended weeks ago, its rope ties too high for any casual passer-by to reach and remove. The street narrows slightly where a building's upper floor extends over the walkway on corbeled supports, creating a brief stretch of covered passage.
-~
-1 1
+@@cThe Arcane Emporium@@N~
+Curved display shelves line every wall of this enclosed shopfront, their surfaces crowded with folded garments that shimmer with quiet ward-work and focus implements mounted on cedar stands. The ceiling is low and plastered smooth, hung with small crystal globes that cast a cool, even light across the merchandise without casting shadows. A glass-fronted cabinet behind the proprietor's desk holds the premium stock under lock and key, its contents visible but protected from casual handling by a warding clasp. The air carries a persistent low resonance from the displayed enchantments interacting with each other, a hum the proprietor long ago stopped noticing but which newcomers find unsettling. Two upholstered stools sit before the desk for clients who prefer to consult the order catalog before committing to a purchase.
+~
+1036 11
 D0
 ~
 ~
 0 -1 3145
-D1
-~
-~
-0 -1 3166
-D2
-~
-~
-0 -1 3185
-D3
-~
-~
-0 -1 3164
 S
 #3166
-@@WSunward Way@@N~
-The lower tier of Sunward Way sits in the permanent shadow of the taller buildings on the corridor above, a irony not lost on the locals who have taken to calling this stretch the Dark Half with characteristic civic humor. The @@ylanterns@@N here burn throughout the day as a result, their fuel costs subsidized by a Standardization-era ordinance that mandates minimum illumination levels on all named streets regardless of natural light conditions. A drainage grate in the center of the street channels runoff from the upper tiers, its iron bars clogged with debris that the ward janitor clears on a weekly schedule.
-~
-1 1
+@@eEdge and Iron@@N~
+Weapon racks dominate the long walls of this narrow shopfront, their iron pegs carrying blades, hafted weapons, and bundled polearms sorted by type and arranged with a methodical attention that makes the selection immediately legible. Armour pieces occupy the rear half of the room, displayed on articulated wooden mannequins that show the fit and construction detail better than a flat rack would allow. Straw matting covers the floorboards to muffle the constant scrape and clang of metal as items are moved for inspection. A grinding wheel in the back corner is kept in operational order, and the proprietor runs a complimentary edge-check on any blade purchase without being asked. The smell of light machine oil and leather dressing is constant, not unpleasant, and suggests a space where maintenance is treated as a professional obligation rather than an afterthought.
+~
+1036 11
 D0
 ~
 ~
 0 -1 3146
-D1
-~
-~
-0 -1 3167
-D2
-~
-~
-0 -1 3186
-D3
-~
-~
-0 -1 3165
 S
 #3167
-@@WMarble Ring@@N~
-The Marble Ring's compass medallion is repeated here in miniature — a smaller version set into the wall rather than the floor, installed during a later administration that wanted to extend the wayfinding system to all tiers of the grid. The execution is less impressive than the original, using painted ceramic rather than true marble, but the directional information is accurate and regularly maintained. The surrounding buildings house a mix of residential tenants and small workshop operations, their facades distinguished by the hand-painted trade signs that line the upper stories.
-~
-1 1
+@@WThe Iron Bulwark@@N~
+Plate armour dominates every surface of this solid, broad shopfront: full suits on gantry stands, individual pieces sorted by body location on heavy iron brackets, and shields leaned against the walls in overlapping rows. The construction here is built to contain heavy inventory, with reinforced floor joists, iron-banded shelving, and a weight-rated display platform at the centre of the room where the premier stock can be examined from all sides. A stamped rating placard on each piece records the tested impact tolerance, an assurance the proprietor takes pride in offering. The ceiling clearance is sufficient to fully raise a tower shield for inspection, which accommodates most of what is sold here. A workbench near the rear holds fitting tools for on-site adjustments, free of charge for items purchased in store.
+~
+1036 11
 D0
 ~
 ~
 0 -1 3147
-D1
-~
-~
-0 -1 3168
-D2
-~
-~
-0 -1 3187
-D3
-~
-~
-0 -1 3166
 S
 #3168
-@@WGolden Mews@@N~
-The lower Golden Mews shares the narrow proportions of its upper counterpart but lacks the professional tile work — here the walls are plain mortared stone with occasional patches of whitewash applied by individual tenants rather than any civic program. A row of wooden pegs driven into the wall at shoulder height serves as an informal message system, with folded notes and delivery tags pinned beneath numbered brass tacks. The passage sees steady foot traffic from residents and delivery runners who use it as a shortcut between the market streets and the southern residential quarter.
-~
-1 1
+@@gShuttered Premises@@N~
+The interior of this former shopfront has been stripped back to bare stone walls and raw floorboards, the shelving removed and the display fittings pulled out, leaving only the ghost of a commercial space in the rectangular scuff marks on the floor and the iron bracket holes along the walls where merchandise hung. A few sheets of old parchment are pinned to the door frame, being lease notices and an inventory declaration from the previous tenant with dates illegible under accumulated grime. The back room has been sealed with a nailed board and a faded municipal closure notice citing undisclosed commercial compliance issues. Dust has settled thick on every horizontal surface, and the ceiling shows the staining of an old water leak that was never repaired. Whatever trade once happened here left no obvious trace beyond the bones of the space itself.
+~
+1036 11
 D0
 ~
 ~
 0 -1 3148
-D1
-~
-~
-0 -1 3169
-D2
-~
-~
-0 -1 3188
-D3
-~
-~
-0 -1 3167
 S
 #3169
 @@WGranite Arcade@@N~
 The lower Granite Arcade preserves a single intact archway from the original covered market, its keystone carved with the interlocked-hands emblem of the @@yMerchant Compact@@N. The arch frames the corridor at its widest point, and street vendors have colonized the space beneath it with semi-permanent stalls that the ward authorities tolerate as long as the central passage remains clear for cart traffic. A faded chalk line on the cobblestones marks the boundary beyond which vendor displays may not extend, its position the subject of periodic negotiation between the merchants and the cityguard patrol sergeant.
-~
+
+~
 1 1
 D0
 ~
@@ -3446,15 +3562,12 @@ D2
 ~
 ~
 0 -1 3189
-D3
-~
-~
-0 -1 3168
 S
 #3170
 @@WSaffron Walk@@N~
 The yellowish limestone of the upper Saffron Walk gives way here to a darker, weathered variant quarried from deeper deposits — the same stone but aged differently by exposure and the dampness that accumulates on the lower tiers. A public water pipe juts from the wall at waist height, its bronze tap worn smooth by constant use and dripping steadily into a shallow stone basin below. Locals gather here in the mornings to fill jugs and exchange the day's gossip before heading to their workshops and market stalls.
-~
+
+~
 1 1
 D0
 ~
@@ -3476,7 +3589,8 @@ S
 #3171
 @@WAzure Plaza@@N~
 The lower Azure Plaza lacks the dry fountain of its upper counterpart but inherits the @@cteal-tinted@@N decorative motif in the form of glazed tiles set into the building facades at eye level. The tiles spell out ward numbers and street names in an ornamental script that predates the current civic signage system, their information partially obsolete but historically interesting. A wooden notice board bolted to the south wall serves as the informal center of this small plaza, its cork surface layered with handwritten advertisements, lost-animal notices, and the occasional cryptic personal message.
-~
+
+~
 1 1
 D0
 ~
@@ -3498,7 +3612,8 @@ S
 #3172
 @@WEmber Court@@N~
 Lower Ember Court has developed its own identity distinct from the demolished-smithy origin of its upper namesake. Here the open space serves as a small staging area for delivery carts, its cobblestones worn into shallow ruts by years of wheel traffic following the same narrow route between the market streets and the southern gate approaches. A stone hitching post at the corner bears rope marks from generations of tethered draft animals, and a battered tin water trough beside it is kept filled by the ward's civic maintenance crew.
-~
+
+~
 1 1
 D0
 ~
@@ -3520,7 +3635,8 @@ S
 #3173
 @@WGilded Crossing@@N~
 The rusted decorative gate visible on the upper tier has no counterpart here — instead, a pair of iron bollards mark the crossing point, their surfaces dented and scraped by cart axles that have misjudged the narrow turn. The crossing serves as an informal boundary between the commercial lower corridor and the more residential streets to the south, a distinction visible in the changing character of the building facades: shop signs and display windows giving way to shuttered residential fronts with laundry lines strung between upper stories.
-~
+
+~
 1 1
 D0
 ~
@@ -3542,7 +3658,8 @@ S
 #3174
 @@WIron Byway@@N~
 The @@Riron cleat-plates@@N that give the upper Byway its name are present here as well, though worn flatter by the heavier traffic on this lower tier where supply wagons make the turn toward the southern staging grounds. The buildings along this stretch retain their Fortification-era military construction — thick walls, narrow windows, reinforced doors — but most have been converted to civilian use, their former requisition offices now serving as storage for merchant inventory and seasonal market goods.
-~
+
+~
 1 1
 D0
 ~
@@ -3564,7 +3681,8 @@ S
 #3175
 @@WViolet Terrace@@N~
 The lower Violet Terrace lacks the overlook of its upper counterpart but preserves the @@pviolet-tinted mortar@@N that marks the Compact boundary. Here the mortar runs along the base of the buildings rather than in a retaining wall, a subtle marker that most pedestrians step over without noticing. The street has a slightly wider profile than its neighbors, a legacy of the Compact-era requirement that @@pjurisdictional boundaries@@N be passable by two inspection carts abreast, a practical necessity that modern residents appreciate for the extra breathing room it provides.
-~
+
+~
 1 1
 D0
 ~
@@ -3586,7 +3704,8 @@ S
 #3176
 @@WVerdant Causeway@@N~
 The lower Verdant Causeway continues the herbal theme of its upper stretch, though here the greenery is wilder and less curated — climbing vines have colonized the facades more aggressively, and the window boxes overflow with herbs that have gone to seed, their flowers attracting bees and butterflies that give this otherwise urban corridor a garden-like quality. A Temple Herbalists' collection box is mounted on the wall near a doorway, its bronze lid embossed with a mortar-and-pestle emblem, accepting donations of dried herbs from residents who maintain household gardens.
-~
+
+~
 1 1
 D0
 ~
@@ -3608,7 +3727,8 @@ S
 #3177
 @@WObsidian Crescent@@N~
 The dark volcanic stone continues along this lower section of the crescent, its heat-retaining properties even more pronounced in the confined space between the taller buildings here. The curved wall creates a natural wind shelter, and on cold evenings this stretch becomes an informal gathering spot where residents bring stools and small braziers to enjoy the radiant warmth while sharing stories and complaints about the ward administration. A mosaic of small obsidian chips set into the pavement near the curve's apex depicts the outline of a mountain, possibly a reference to the volcanic source of the building stone.
-~
+
+~
 1 1
 D0
 ~
@@ -3630,7 +3750,8 @@ S
 #3178
 @@WIvory Passage@@N~
 The limestone walls of the lower Ivory Passage bear dark water stains from a persistent seepage problem that the civic engineers have addressed with a series of shallow drainage channels cut into the base of the walls. The channels work well enough to keep the passage walkable, but the constant trickle of water gives the air a damp coolness that contrasts with the warmer streets on either side. An iron grate set into the floor at the passage's midpoint drains into the city's underground cistern system, its opening covered by a locked hatch that only the Waterworks Guild holds keys for.
-~
+
+~
 1 1
 D0
 ~
@@ -3652,7 +3773,8 @@ S
 #3179
 @@WMoonlit Approach@@N~
 The lower Moonlit Approach shares the lamp-line gap of its upper tier, though here the darkness is deeper owing to the taller buildings that block ambient light from neighboring streets. Residents have adapted more extensively than on the upper stretch — candle-lanterns hang from hooks above nearly every door, and a communal oil lamp mounted on a repurposed hitching post at the corridor's midpoint provides a welcome pool of light. The effect is warmer and more intimate than the uniform civic illumination of the surrounding streets, and some residents reportedly resist proposals to extend the official lamp-line, preferring the neighborhood's distinctive character.
-~
+
+~
 1 1
 D0
 ~
@@ -3674,7 +3796,8 @@ S
 #3180
 @@WLantern Promenade@@N~
 The promenade reaches its lowest commercial tier here, the @@ylantern@@N poles slightly shorter than their counterparts above to accommodate the lower ceiling height created by the overhead walkway that connects two buildings across the street. The promenade's function as the city's eastern boundary marker is most evident at this level, where the buildings on the east side present blank walls rather than shop fronts — the defensive architecture of the original city wall, now incorporated into the building fabric but still visible in the thickness of the masonry and the absence of ground-floor windows. A @@Wcivic milestone@@N embedded in the pavement marks the official boundary of the Lantern Promenade ward district.
-~
+
+~
 0 1
 D0
 ~
@@ -3692,7 +3815,8 @@ S
 #3181
 @@WCedar Square@@N~
 The southern Cedar Square marks the southwestern corner of @@WMidgaard@@N's inhabited grid, where the city's formal street plan gives way to open ground and the remnants of older construction. The square is quieter than its northern counterparts, used mainly by residents of the surrounding tenements and the occasional off-duty soldier heading toward the southern gate approaches. A weathered @@Wstone marker@@N set into the pavement identifies this as Ward Sixteen, the lowest-numbered residential district in the city's administrative system.
-~
+
+~
 0 1
 D1
 ~
@@ -3702,7 +3826,8 @@ S
 #3182
 @@WSilver Marketwalk@@N~
 The southern Silver Marketwalk retains the commercial signage of its northern tiers but sees far less merchant traffic this deep in the residential quarter. The buildings here house a mix of long-term tenants and workshop operators whose trades are too noisy or odorous for the premium commercial streets above — tanners, dyers, and charcoal merchants whose presence is tolerated because of the services they provide. A public well with a hand pump occupies a small recess in the northern wall, its stone surround polished smooth by generations of use.
-~
+
+~
 0 1
 D1
 ~
@@ -3716,7 +3841,8 @@ S
 #3183
 @@WCrimson Concourse@@N~
 The red-pigmented mortar that gives the upper Crimson Concourse its name is absent here, replaced by standard grey pointing that suggests this section was rebuilt at a later date without reference to the original decorative scheme. The street functions as a quiet connector between the residential quarter and the more active commercial corridors to the north and east. A small stone shrine set into a wall niche — little more than a shelf with a carved flame symbol — marks this as one of the @@yLantern Devotion@@N points maintained by the Temple of the Resounding Heart for neighborhood prayer.
-~
+
+~
 0 1
 D1
 ~
@@ -3730,7 +3856,8 @@ S
 #3184
 @@WAuburn Traverse@@N~
 The Auburn Traverse widens at this junction where the western residential stub meets the main east-west grid of the southern tier. Cart traffic from the north merges with pedestrian flow from the west, creating a small but persistent congestion point that the ward authorities have attempted to manage with painted directional arrows on the cobblestones. The buildings at the junction are older construction, their thick stone walls and small windows dating to the Fortification Era when this section served as a secondary supply staging area.
-~
+
+~
 0 1
 D0
 ~
@@ -3748,12 +3875,9 @@ S
 #3185
 @@WBronze Colonnade@@N~
 The bronze pillars that define the upper Colonnade have no counterpart here — the name persists by administrative convention rather than architectural reality. In their place, a row of plain iron lamp posts lines the northern curb, their practical design reflecting the southern tier's lower priority in civic beautification budgets. The street is clean and well-maintained despite its modest appearance, a credit to the ward janitor whose broom marks are visible in the damp patches between the cobblestones each morning.
-~
+
+~
 0 1
-D0
-~
-~
-0 -1 3165
 D1
 ~
 ~
@@ -3766,12 +3890,9 @@ S
 #3186
 @@WSunward Way@@N~
 The lower Sunward Way shares the permanent shadow of the tier above, though here the effect is softened by the wider spacing between buildings that allows slanting light to reach the street during early morning and late afternoon. Window boxes on the upper stories provide unexpected color — residents of the southern tier maintain small gardens with a determination that contrasts with the more austere commercial facades to the north. The pavement shows a curious pattern of lighter stone insets that may have once formed a decorative border, though their arrangement has been disrupted by centuries of repair work.
-~
+
+~
 0 1
-D0
-~
-~
-0 -1 3166
 D1
 ~
 ~
@@ -3784,12 +3905,9 @@ S
 #3187
 @@WMarble Ring@@N~
 The southern Marble Ring intersection retains a small circular pavement feature inspired by the original compass medallion, though this version is rendered in simple fieldstone rather than imported marble. Local children have scratched additional directional labels into the stone surface with charcoal, their enthusiastic cartography adding routes to the baker, the well, and someone's grandmother's house to the official north-south-east-west markers. The practical effect is a wayfinding tool of uncertain reliability but genuine community investment.
-~
+
+~
 0 1
-D0
-~
-~
-0 -1 3167
 D1
 ~
 ~
@@ -3802,12 +3920,9 @@ S
 #3188
 @@WGolden Mews@@N~
 The southern Golden Mews is the quietest stretch of the lower grid, a residential lane where the buildings lean slightly inward at their upper stories, creating a sense of enclosure that is more village lane than city street. The walls show the patchwork of different construction periods — old stone foundations topped by timber frames topped by later brick additions — each layer a record of the neighborhood's gradual growth. A single @@ylantern@@N on an iron bracket at the lane's midpoint provides the only civic illumination, its warm light barely reaching the doorways at either end.
-~
+
+~
 0 1
-D0
-~
-~
-0 -1 3168
 D1
 ~
 ~
@@ -3820,7 +3935,8 @@ S
 #3189
 @@yNorthwall Astral Gate@@N~
 Bronze astrolabes and rotating mirrors frame the northern breach in @@WMidgaard@@N's defensive perimeter where scholars and dimensional travelers chart impossible constellations before committing to the roads beyond the city walls. The passage bends into geometries that the eye refuses to resolve — the @@castral planes@@N pressing close against the thinned boundary between the material city and the spaces beyond it. City stewards have reinforced this junction with extra @@ylanterns@@N, @@cwarding sigils@@N painted in phosphorescent blue on the archway stones, and civic notices reminding travelers to register their destination with the Ward Office before departure. The gate sees steady traffic from arcanists, planar researchers, and the occasional adventurer drawn by reports of phenomena in the regions accessible through the breach. A carved stone lintel above the gate bears the inscription of the @@pViolet Compact's@@N Article Seven, which requires all extraplanar transit points within the city limits to maintain minimum staffing and illumination at all hours.
-~
+
+~
 0 1
 D0
 ~
@@ -3838,7 +3954,8 @@ S
 #3190
 @@yThe Southern Wild Gate@@N~
 Wind funnels through the southern archway and scatters grit across the broad cobbled apron where traveler caravans stage before departure toward the wilderness beyond @@WMidgaard@@N's walls. The gate's outer face is chalked with current route advisories for the southern woodlands, and iron torch-brackets flanking the passage are still warm from the night watch's final rounds. Guards lean on halberds beside the inner wicket, checking passes and scanning the tree line for movement before waving travelers through into the open road. To the north, the @@yCrypts of Kel'Shadra@@N lie along the route past the market districts, their sealed entrances a subject of persistent rumor among the gate guards. The southern road winds toward the eccentric woodlands, where the forest canopy closes overhead within a quarter-mile of the gate and the city's authority gives way to older, less predictable jurisdictions.
-~
+
+~
 0 1
 D0
 The Crypts of Kel'Shadra.~
@@ -3860,7 +3977,8 @@ S
 #3191
 @@WAzure Plaza@@N~
 The southern Azure Plaza is the most residential of the three plazas bearing this name, its small open space serving as an informal commons for the tenement dwellers of the surrounding blocks. A wooden bench with iron armrests occupies the plaza's south side, positioned to catch whatever sunlight reaches this deep into the city grid during midday. The @@cteal decorative tiles@@N that mark the Azure name appear here as a narrow band set into the pavement around the plaza's perimeter, their glaze cracked and faded but still recognizable as the work of the same Standardization-era artisan who tiled the upper plazas.
-~
+
+~
 0 1
 D0
 ~
@@ -3878,7 +3996,8 @@ S
 #3192
 @@WEmber Court@@N~
 The southernmost Ember Court has no connection to the smithing history of its upper namesake — here the name was simply carried downward through the grid by administrative fiat during the Lantern Reforms, when every east-west corridor received a consistent designation across all tiers. The court itself is a modest widening in the street where a building was never constructed, the empty lot now serving as an unofficial gathering space where residents stack firewood in autumn and children play in the warmer months. A low stone wall marks the lot's boundary, its capstones worn smooth by years of use as informal seating.
-~
+
+~
 0 1
 D0
 ~
@@ -3896,7 +4015,8 @@ S
 #3193
 @@WGilded Crossing@@N~
 The southern Gilded Crossing lacks both the decorative gate and the iron bollards of its upper tiers — here the crossing is simply a junction of two streets, distinguished only by a painted boundary line on the cobblestones that marks the transition between ward districts. The paint is renewed annually by the civic maintenance crew, a minor ritual that the neighborhood treats as an unofficial holiday, complete with children who follow the painters and add their own unofficial embellishments to the line's straighter sections. The buildings at the crossing are uniformly residential, their plain facades broken only by wooden shutters and the occasional window box.
-~
+
+~
 0 1
 D0
 ~
@@ -3914,7 +4034,8 @@ S
 #3194
 @@WIron Byway@@N~
 The southern Iron Byway retains traces of its @@RFortification-era@@N function in the wider-than-usual street profile and the reinforced stone curbs designed to withstand the passage of heavy military wagons. The buildings here have been converted entirely to residential use, though their thick walls and narrow windows still lend the street a barracks-like austerity that distinguishes it from the softer residential architecture of the neighboring corridors. An iron plaque mounted above a doorway records the street's former designation as Military Supply Route Seven, a piece of bureaucratic history that no one has bothered to remove.
-~
+
+~
 0 1
 D0
 ~
@@ -3932,7 +4053,8 @@ S
 #3195
 @@WViolet Terrace@@N~
 The southernmost Violet Terrace sits at the very edge of the @@pViolet Compact's@@N historical jurisdiction, and the @@pviolet mortar@@N markers here are the most worn and faded of any in the city — reduced to faint purple stains in the lowest courses of the building foundations. A brass inspection plate set into the wall bears the date of the last official Compact boundary survey, conducted decades ago by a registry clerk whose neat script records the measurements and condition of each marker along the line. The street itself is quiet and residential, its character shaped more by the daily routines of its tenants than by the jurisdictional history embedded in its walls.
-~
+
+~
 0 1
 D0
 ~
@@ -3950,7 +4072,8 @@ S
 #3196
 @@WVerdant Causeway@@N~
 The southern Verdant Causeway lives up to its name more thoroughly than any other stretch of the corridor — here the climbing plants have entirely engulfed two of the building facades, turning them into vertical gardens that change color with the seasons. The Temple Herbalists who maintain the upper causeway's cultivated window boxes have given way to simple domestic gardening, residents growing kitchen herbs and root vegetables in repurposed crates and barrels set against the building walls. A communal compost pile at the corridor's south end, enclosed by a low brick wall, serves the gardeners of the surrounding blocks.
-~
+
+~
 0 1
 D0
 ~
@@ -3968,7 +4091,8 @@ S
 #3197
 @@WObsidian Crescent@@N~
 The dark volcanic stone of the crescent's foundation wall terminates at this southernmost section, its curved surface here bearing scratched graffiti — initials, dates, and crude drawings accumulated over decades of neighborhood use. The heat-retaining properties that make the upper crescent popular in winter are less pronounced here, where the wall is thinner and more exposed to cross-drafts from the intersecting streets. A patch of worn cobblestones at the curve's apex marks the spot where a street vendor has sold roasted chestnuts every winter for as long as anyone in the neighborhood can remember.
-~
+
+~
 0 1
 D0
 ~
@@ -3986,7 +4110,8 @@ S
 #3198
 @@WIvory Passage@@N~
 The limestone walls of the southernmost Ivory Passage have darkened with age to a deep cream color that only faintly justifies the corridor's name. The drainage problems that plague the middle tier's passage are absent here — the natural slope of the terrain channels water away from this section — but the walls bear the marks of past flooding in the form of horizontal tide lines etched into the stone at ankle height. The passage opens slightly at its southern end where a building was demolished years ago, the gap in the streetscape now occupied by a stack of salvaged building stone that no one has claimed or removed.
-~
+
+~
 0 1
 D0
 ~
@@ -4004,7 +4129,8 @@ S
 #3199
 @@WMoonlit Approach@@N~
 The southernmost Moonlit Approach is the darkest stretch of street in @@WMidgaard@@N's inhabited grid, lacking both civic lanterns and the compensating resident-mounted lamps that brighten the middle tier. The darkness is not threatening — the neighborhood is safe enough, patrolled by cityguards on regular rotation — but it gives this section a quality of seclusion that the residents seem to value. The few lights that do exist come from behind shuttered windows, their warm glow seeping through the slats and casting thin horizontal bars of light across the cobblestones.
-~
+
+~
 0 1
 D0
 ~
@@ -4022,7 +4148,8 @@ S
 #3200
 @@WLantern Promenade@@N~
 The promenade's southernmost point marks the corner where @@WMidgaard@@N's eastern boundary wall meets the southern perimeter, the @@ylantern@@N poles here bearing the weathered emblems of both the @@yMerchant Compact@@N and the @@RCityguard@@N in acknowledgment of the dual jurisdiction over this exposed corner of the city grid. The walkway terminates against a heavy stone buttress that anchors the meeting point of the two walls, its surface carved with the date of the original fortification and a list of the ward captains who have held responsibility for this section. Beyond the wall, the sounds of the southern wilderness — birdsong, wind in distant trees, the occasional animal call — are clearly audible, a constant reminder of the boundary between civic order and the untamed lands beyond.
-~
+
+~
 0 1
 D0
 ~
@@ -4039,9 +4166,11 @@ S
 baker~
 the baker~
 The baker stands behind his counter, wiping flour from thick forearms scarred by years of oven burns.
-~
+
+~
 A stocky man whose calloused hands move with surprising dexterity as he shapes dough and tends the brick ovens that line the back wall of his shop. His apron is dusted white, and the deep lines around his eyes suggest decades of early-morning starts and long days supplying @@WMidgaard@@N's bread baskets.
-~
+
+~
 65 0 900 S
 46 1
 0 0 0 0
@@ -4054,9 +4183,11 @@ L 0 0 0 0 0 0 0 0 0
 grocer~
 the grocer~
 A grocer stands at his counter, arranging produce with an impatient efficiency.
-~
+
+~
 A tall, broad-shouldered man who handles heavy sacks of grain and flour as casually as others handle coin purses. His watchful eyes track every customer and every item on his shelves with the vigilance of someone who has operated in @@WMidgaard@@N's competitive market district for years.
-~
+
+~
 8388675 8320 900 S
 111 1
 0 0 0 0
@@ -4069,9 +4200,11 @@ L 0 0 0 0 0 0 0 0 0
 weaponsmith~
 the weaponsmith~
 A young weaponsmith works at a grinding wheel, sparks arcing from the blade in his hands.
-~
+
+~
 Still an apprentice by guild standards, this weaponsmith compensates for his relative inexperience with tireless energy and an eagerness to demonstrate the quality of his work to every potential customer who enters the shop.
-~
+
+~
 8396871 8328 900 S
 85 1
 0 0 0 0
@@ -4084,9 +4217,11 @@ L 0 0 0 0 0 0 0 0 0
 armourer armorer~
 the armourer~
 The armourer examines a piece of chain mail, testing each link with practiced fingers.
-~
+
+~
 An old craftsman whose workshop walls display the accumulated output of a lifetime spent shaping metal into protection. His hands are permanently stained with oil and iron dust, and his eyes carry the sharp assessment of someone who has fitted armour to soldiers, adventurers, and civic officials across multiple eras of @@WMidgaard@@N's history.
-~
+
+~
 9438275 8328 900 S
 102 1
 0 0 0 0
@@ -4099,9 +4234,11 @@ L 0 0 0 0 0 0 0 0 0
 thief~
 the thief~
 A figure dressed in dark clothing leans against the wall, watching the crowd with calculating eyes.
-~
+
+~
 This thief operates with the casual confidence of someone who knows the alleyways of @@WMidgaard@@N better than the cityguards who patrol them. Quick hands and quicker feet have kept this one out of the magistrate's court so far.
-~
+
+~
 67 98304 100 S
 35 1
 0 0 0 0
@@ -4114,9 +4251,11 @@ L 0 0 0 0 0 0 0 0 0
 captain~
 the captain~
 A retired sea captain leans on his counter, polishing a brass fitting from an old vessel.
-~
+
+~
 Years of salt wind and sun have weathered this captain's face into a permanent squint, but his hands are still steady and his knowledge of river craft and coastal navigation remains unmatched in @@WMidgaard@@N. He supplements his pension by selling boats to travelers heading downstream.
-~
+
+~
 67 40 900 S
 22 1
 0 0 0 0
@@ -4129,9 +4268,11 @@ L 0 0 0 0 0 0 0 0 0
 sailor~
 the sailor~
 A sailor stands here with arms crossed, ready to share hard-won skills with those willing to learn.
-~
+
+~
 This fit, sun-browned sailor has spent years running cargo routes between @@WMidgaard@@N and the coastal ports. Now settled ashore, he earns his keep training newcomers in the practical arts of seamanship and physical conditioning.
-~
+
+~
 579 0 900 S
 71 1
 0 0 0 0
@@ -4144,9 +4285,11 @@ L 0 0 0 0 0 0 0 0 0
 boy~
 the pet shop boy~
 A young pet shop attendant is here, humming a tune while tending to the animals.
-~
+
+~
 Bright-eyed and cheerful, this young man has a genuine affection for the creatures in his care. He knows the temperament and needs of every animal in the shop, from the smallest kitten to the largest hound.
-~
+
+~
 67 0 900 S
 71 1
 0 0 0 0
@@ -4159,9 +4302,11 @@ L 0 0 0 0 0 0 0 0 0
 jeweller~
 the jeweller~
 The jeweller stands behind a reinforced display case, appraising a gemstone with a loupe.
-~
+
+~
 A heavyset man with a watchful expression and nimble fingers that seem at odds with his bulk. His shop is one of the most profitable establishments in the market district, and his vigilance against theft is legendary among the cityguard.
-~
+
+~
 8388675 8320 900 S
 87 1
 0 0 0 0
@@ -4174,9 +4319,11 @@ L 0 0 0 0 0 0 0 0 0
 leather worker~
 the leather worker~
 The leather worker sits at his bench, stitching a reinforced cap with waxed thread.
-~
+
+~
 An honest craftsman whose calloused hands work with the steady rhythm of long practice. His workshop smells of tanning oils and cured hide, and the tools of his trade hang in neat rows on the wall behind him. He earns just enough to keep his shop open and his family fed.
-~
+
+~
 67 128 900 S
 105 1
 0 0 0 0
@@ -4189,9 +4336,11 @@ L 0 0 0 0 0 0 0 0 0
 gertrude executioner~
 Gertrude~
 Gertrude the Executioner stands here, methodically polishing the edge of her blade.
-~
+
+~
 A masked woman whose muscular frame speaks to years of disciplined training with heavy weapons. The look in her eyes suggests she takes genuine satisfaction in her official role, and the quality of her equipment marks her as one of @@WMidgaard@@N's most feared civic servants.
-~
+
+~
 131167 1633020 1000 S
 150 2
 0 0 0 0
@@ -4204,9 +4353,11 @@ L 0 0 0 0 0 0 0 0 0
 healer~
 the healer~
 A healer sits here, surrounded by the quiet hum of restorative magic.
-~
+
+~
 Although long retired from adventuring, this healer continues to serve @@WMidgaard@@N's citizens and travelers with practiced skill. The lines on her face map decades of service, and her hands still carry the faint glow of channeled restoration.
-~
+
+~
 4163 8328 1000 S
 114 1
 0 0 0 0
@@ -4219,7 +4370,8 @@ L 0 0 0 0 0 0 0 0 0
 post postmaster master~
 The Postmaster~
 The Postmaster stands behind the sorting counter, stamping a wax seal onto a dispatch envelope.
-~
+
+~
 ~
 524363 8320 1000 S
 72 1
@@ -4233,7 +4385,8 @@ L 0 0 0 0 0 0 0 0 0
 The Black Avenger~
 Cyberlich's Black Avenger~
 Cyberlich's Black Avenger looms here, its @@Rred eyes@@N burning with malevolent intelligence.
-~
+
+~
 ~
 3153991 1157800 1000 S
 140 0
@@ -4247,9 +4400,11 @@ L 0 0 0 0 0 0 0 0 0
 bartender~
 the bartender~
 A bartender watches you with practiced calm, polishing a glass with one hand while reaching for a bottle with the other.
-~
+
+~
 A veteran of @@WMidgaard@@N's tavern trade, this bartender has developed an instinct for trouble that rivals the cityguard's. His tired eyes miss nothing, and his willingness to enforce order in his establishment is well known.
-~
+
+~
 8388675 0 900 S
 46 1
 0 0 0 0
@@ -4262,9 +4417,11 @@ L 0 0 0 0 0 0 0 0 0
 filthy~
 Filthy~
 Filthy stands behind the bar, wiping a mug with a rag that is dirtier than the mug.
-~
+
+~
 The proprietor of the Grubby Inn earned his name honestly. His clothes are permanently stained, his fingernails black with grime, and his establishment reflects his standards of hygiene. Despite appearances, he keeps his customers well supplied and handles trouble with surprising competence.
-~
+
+~
 67 0 600 S
 15 1
 0 0 0 0
@@ -4277,9 +4434,11 @@ L 0 0 0 0 0 0 0 0 0
 dealer~
 Aod the Dealer~
 Aod the Dealer leans against the wall in the shadows, watching the crowd with half-lidded eyes.
-~
+
+~
 A lanky figure with a ponytail and a carefully cultivated air of disreputable ease. Aod operates in the grey market between legal commerce and outright contraband, dealing in substances and supplies that the legitimate merchants refuse to stock.
-~
+
+~
 8388675 552 0 S
 13 1
 0 0 0 0
@@ -4292,9 +4451,11 @@ L 0 0 0 0 0 0 0 0 0
 cityguard guard~
 the cityguard~
 A cityguard stands at attention, one hand resting on the pommel of a sheathed sword.
-~
+
+~
 This guard wears the standard-issue @@Wbanner@@N and @@Wsignet ring@@N of @@WMidgaard@@N's civic watch. Broad-shouldered and alert, the guard watches the streets with the steady discipline of professional service.
-~
+
+~
 65 0 1000 S
 36 1
 0 0 0 0
@@ -4307,7 +4468,8 @@ L 0 0 0 0 0 0 0 0 0
 janitor~
 the janitor~
 A janitor sweeps the street methodically, pushing debris into a neat pile.
-~
+
+~
 ~
 65 0 900 S
 9 1
@@ -4321,9 +4483,11 @@ L 0 0 0 0 0 0 0 0 0
 mongrel~
 a mangy mongrel~
 A lean, scruffy mongrel noses along the gutter, ever alert for something edible.
-~
+
+~
 This ragged street dog has called @@WMidgaard@@N's alleys home for as long as anyone can remember. Ribs show faintly beneath a patchy, mud-coloured coat, and one ear bears the notch of some long-forgotten scrap. It pays little mind to passers-by, far more interested in whatever scraps the city's gutters might yield.
-~
+
+~
 131265 40 -200 S
 14 0
 0 0 0 0
@@ -4336,9 +4500,11 @@ L 0 0 0 0 0 0 0 0 0
 vagabond~
 the vagabond~
 A vagabond lurks in the shadows, eyes darting between potential marks.
-~
+
+~
 This rough-looking character haunts the darker corners of @@WMidgaard@@N, preying on the unwary. A scarred face and a coiled readiness suggest experience with violence.
-~
+
+~
 65 0 -200 S
 1 1
 0 0 0 0
@@ -4351,9 +4517,11 @@ L 0 0 0 0 0 0 0 0 0
 drunk~
 the drunk~
 A cheerful drunk sways here, singing fragments of a song about the @@yLantern Reforms@@N.
-~
+
+~
 Despite clearly having consumed more than is wise, this drunk radiates an infectious good humor. His pockets jingle with coin, suggesting either recent luck at dice or a generous employer.
-~
+
+~
 65 0 400 S
 10 1
 0 0 0 0
@@ -4366,9 +4534,11 @@ L 0 0 0 0 0 0 0 0 0
 beggar~
 the beggar~
 A beggar sits against the wall, holding out a cracked wooden bowl for coins.
-~
+
+~
 Life in @@WMidgaard@@N has not been kind to this woman. Her threadbare clothes and hollow expression speak to circumstances that the city's civic systems have failed to address.
-~
+
+~
 65 0 400 S
 2 2
 0 0 0 0
@@ -4381,9 +4551,11 @@ L 0 0 0 0 0 0 0 0 0
 cat~
 an alley cat~
 An alley cat crouches on a ledge, its yellow eyes tracking movement in the street below.
-~
+
+~
 This half-starved feral cat has survived @@WMidgaard@@N's alleys long enough to develop a deep distrust of anything that moves on two legs. Its matted fur and notched ears tell a story of territorial disputes and lean hunting.
-~
+
+~
 65 0 -200 S
 42 1
 0 0 0 0
@@ -4396,9 +4568,11 @@ L 0 0 0 0 0 0 0 0 0
 cityguard guard~
 the cityguard~
 A cityguard stands watch at the gate, halberd planted firmly on the cobblestones.
-~
+
+~
 A disciplined guard assigned to gate duty, this soldier checks passes and monitors traffic with the steady attention of someone who understands the importance of controlling access to the city.
-~
+
+~
 65 0 1000 S
 11 1
 0 0 0 0
@@ -4411,9 +4585,11 @@ L 0 0 0 0 0 0 0 0 0
 cityguard guard~
 the cityguard~
 A cityguard stands watch at the gate, scanning the approach road for trouble.
-~
+
+~
 This gate guard maintains a watchful stance, one hand on a weapon and the other resting on the wall. The guard's attention shifts between incoming travelers and the road beyond with practiced regularity.
-~
+
+~
 65 0 1000 S
 27 1
 0 0 0 0
@@ -4426,9 +4602,11 @@ L 0 0 0 0 0 0 0 0 0
 cityguard guard~
 the cityguard~
 A cityguard stands at rigid attention, guarding the mayor's chambers.
-~
+
+~
 This elite guard serves in the mayor's personal detail, distinguished from the regular watch by a polished signet ring and a bearing that suggests training beyond the standard cityguard curriculum.
-~
+
+~
 65 65538 1000 S
 3 1
 0 0 0 0
@@ -4441,9 +4619,11 @@ L 0 0 0 0 0 0 0 0 0
 kitten~
 the kitten~
 A small kitten bats at a dust mote, its tiny claws extended in mock ferocity.
-~
+
+~
 This little ball of fur has been raised in @@WMidgaard@@N's pet shop with gentle handling, resulting in a friendly but spirited companion that shows surprising determination for its size.
-~
+
+~
 65 0 400 S
 4 0
 0 0 0 0
@@ -4456,9 +4636,11 @@ L 0 0 0 0 0 0 0 0 0
 puppy~
 the puppy~
 A small puppy tumbles over its own feet, tail wagging furiously.
-~
+
+~
 This young pup has not yet grown into its oversized paws, but its eager loyalty and boundless energy make it a devoted companion for anyone willing to match its enthusiasm.
-~
+
+~
 65 0 400 S
 5 0
 0 0 0 0
@@ -4471,9 +4653,11 @@ L 0 0 0 0 0 0 0 0 0
 beagle~
 the beagle~
 A quick, alert beagle sits with ears perked, watching for its owner's signal.
-~
+
+~
 This compact hunting dog combines keen senses with a loyal temperament. Its alert posture and bright eyes suggest training and discipline beyond what most city dogs possess.
-~
+
+~
 65 0 400 S
 12 0
 0 0 0 0
@@ -4486,9 +4670,11 @@ L 0 0 0 0 0 0 0 0 0
 rottweiler~
 the rottweiler~
 A large rottweiler stands guard, muscles tensed beneath its dark coat.
-~
+
+~
 This powerful dog has been bred and trained for protection work. Its deep chest and heavy jaw mark it as a formidable guardian, though its loyalty to its bonded companion is absolute.
-~
+
+~
 65 0 400 S
 25 0
 0 0 0 0
@@ -4501,9 +4687,11 @@ L 0 0 0 0 0 0 0 0 0
 wolf~
 the wolf~
 A large, trained wolf paces with controlled alertness, its amber eyes scanning the surroundings.
-~
+
+~
 This wolf has been raised from a pup in captivity, resulting in a creature that combines wild instinct with trained obedience. Its lean frame and silent movement mark it as a serious combat companion.
-~
+
+~
 65 0 0 S
 4 0
 0 0 0 0
@@ -4516,9 +4704,11 @@ L 0 0 0 0 0 0 0 0 0
 max teller~
 Max~
 Max the bank teller stands behind the counter, counting coins with mechanical precision.
-~
+
+~
 Max has the oily demeanor of someone who handles other people's money for a living and has developed certain opinions about its proper distribution. His smile never quite reaches his eyes.
-~
+
+~
 9470027 128 0 S
 94 1
 0 0 0 0
@@ -4531,9 +4721,11 @@ L 0 0 0 0 0 0 0 0 0
 maid~
 the maid~
 The maid stands ready, waiting for your order with quiet professional poise.
-~
+
+~
 A striking young woman with golden hair and deep blue eyes who serves in the Park Cafe with graceful efficiency. Her friendly manner and attentive service make the establishment a popular destination for those seeking a peaceful meal.
-~
+
+~
 65 0 1000 S
 29 2
 0 0 0 0
@@ -4546,9 +4738,11 @@ L 0 0 0 0 0 0 0 0 0
 sexton~
 the sexton~
 A sexton sits here over a cup of tea, resting between shifts at the cemetery.
-~
+
+~
 The sexton's earth-stained hands and solid build reflect a career spent maintaining @@WMidgaard@@N's burial grounds. He drinks his tea with the unhurried contentment of a man who has made peace with his unusual occupation.
-~
+
+~
 65 0 800 S
 10 1
 0 0 0 0
@@ -4561,9 +4755,11 @@ L 0 0 0 0 0 0 0 0 0
 swan~
 the swan~
 A white swan glides across the pond, its reflection a perfect mirror image on the still water.
-~
+
+~
 This elegant bird carries itself with a serene dignity that seems almost deliberate. Its pristine white plumage and graceful movements make it the most admired resident of @@WMidgaard@@N's park.
-~
+
+~
 65 0 1000 S
 2 0
 0 0 0 0
@@ -4576,9 +4772,11 @@ L 0 0 0 0 0 0 0 0 0
 duckling~
 the duckling~
 A fluffy duckling paddles in circles near the pond's edge, peeping softly.
-~
+
+~
 This tiny ball of down has not yet developed its adult plumage, giving it an endearingly scruffy appearance. It stays close to the pond's shallows, occasionally dunking its head under the surface in search of morsels.
-~
+
+~
 65 0 1000 S
 1 0
 0 0 0 0
@@ -4591,9 +4789,11 @@ L 0 0 0 0 0 0 0 0 0
 sparrow~
 the sparrow~
 A sparrow hops across the ground, pecking at seeds between the cobblestones.
-~
+
+~
 This common city bird has adapted perfectly to life in @@WMidgaard@@N's parks and gardens. Quick, bold, and entirely unafraid of human company, it searches for crumbs and seeds with tireless energy.
-~
+
+~
 65 0 1000 S
 9 0
 0 0 0 0
@@ -4606,9 +4806,11 @@ L 0 0 0 0 0 0 0 0 0
 duck~
 the duck~
 A fat, contented duck waddles along the pond bank, quacking occasionally.
-~
+
+~
 This well-fed duck has clearly benefited from the generosity of park visitors who share breadcrumbs and grain. It shows no fear of people, waddling up to newcomers with an expectant look.
-~
+
+~
 65 0 1000 S
 7 0
 0 0 0 0
@@ -4621,9 +4823,11 @@ L 0 0 0 0 0 0 0 0 0
 captain~
 the captain~
 The captain of the guard paces the headquarters, his expression grim and his hand on his sword hilt.
-~
+
+~
 A powerfully built officer whose permanent scowl and taut bearing betray the constant pressure of maintaining order in a city with as many threats as @@WMidgaard@@N. His uniform is immaculate, his weapons well-maintained.
-~
+
+~
 65 8 1000 S
 18 1
 0 0 0 0
@@ -4636,9 +4840,11 @@ L 0 0 0 0 0 0 0 0 0
 cityguard guard~
 the cityguard~
 A cityguard stands here at rigid attention, jaw clenched and knuckles white on his weapon.
-~
+
+~
 This guard has been assigned to the headquarters detail, and the tension in his posture suggests either a recent incident or a temperament poorly suited to the boredom of interior duty.
-~
+
+~
 65 0 1000 S
 8 1
 0 0 0 0
@@ -4651,9 +4857,11 @@ L 0 0 0 0 0 0 0 0 0
 secretary~
 the secretary~
 A secretary sits at a cluttered desk, quill moving rapidly across a sheaf of documents.
-~
+
+~
 She manages the mayor's schedule with brisk efficiency, deflecting visitors and petitioners with polished diplomatic phrases while simultaneously processing the paperwork that keeps @@WMidgaard@@N's civic administration functioning.
-~
+
+~
 65 0 900 S
 19 2
 0 0 0 0
@@ -4666,9 +4874,11 @@ L 0 0 0 0 0 0 0 0 0
 mayor~
 the mayor~
 The mayor stands here, extending a firm handshake and a practiced smile.
-~
+
+~
 A well-built, middle-aged man with thinning grey hair and the careful bearing of someone accustomed to political scrutiny. His office reflects the accumulated authority of @@WMidgaard@@N's civic tradition, and he carries himself with the confidence of an experienced administrator.
-~
+
+~
 65 8192 900 S
 19 1
 0 0 0 0
@@ -4681,9 +4891,11 @@ L 0 0 0 0 0 0 0 0 0
 crier~
 the town crier~
 The town crier stands at his post, tears streaming down his cheeks as he reads from a scroll.
-~
+
+~
 He takes his role with extraordinary seriousness, delivering every proclamation — from tax notices to festival announcements — with such emotional commitment that the tears flow freely. Despite this, his voice carries clearly across the square.
-~
+
+~
 65 0 900 S
 27 1
 0 0 0 0
@@ -4696,9 +4908,11 @@ L 0 0 0 0 0 0 0 0 0
 armorer argent~
 The Argent Armorer~
 The Argent Armorer inspects a rack of polished blades, testing each edge with a practiced thumb.
-~
+
+~
 A disciplined quartermaster in polished mail who matches weapons and armor to their intended wielders with the precision of a military professional. Years of service in @@WMidgaard@@N's supply chain have given this armorer an encyclopedic knowledge of martial equipment.
-~
+
+~
 65 0 900 S
 45 1
 0 0 0 0
@@ -4711,9 +4925,11 @@ L 0 0 0 0 0 0 0 0 0
 outfitter moonthread~
 The Moonthread Outfitter~
 The Moonthread Outfitter measures fabric against a customer's shoulders with a practiced eye.
-~
+
+~
 A patient tailor specializing in practical expedition wear — layered leathers, reinforced travelling coats, and weather-resistant garments designed for the roads beyond @@WMidgaard@@N's walls.
-~
+
+~
 67 0 900 S
 48 2
 0 0 0 0
@@ -4726,9 +4942,11 @@ L 0 0 0 0 0 0 0 0 0
 arcanist emberglass~
 Arcanist Emberglass~
 Arcanist Emberglass adjusts a display of enchanted trinkets, arcane light flickering between his ring-laden fingers.
-~
+
+~
 A wizard of considerable skill who has turned his talents to commerce, selling enchanted items and arcane supplies from a well-stocked shop. His fine robes and numerous rings mark him as someone who profits handsomely from the intersection of magic and trade.
-~
+
+~
 67 0 900 S
 74 1
 0 0 0 0
@@ -4741,9 +4959,11 @@ L 0 0 0 0 0 0 0 0 0
 provisioner exchange~
 The Provisioner~
 The Provisioner weighs travel packs on a brass counter scale, marking figures in a ledger.
-~
+
+~
 A sturdy supplier who specializes in outfitting caravans and long-range expeditions. Her stock includes everything from water skins to signal flares, organized with the efficiency of someone who understands that preparation saves lives.
-~
+
+~
 67 0 900 S
 36 1
 0 0 0 0
@@ -4756,9 +4976,11 @@ L 0 0 0 0 0 0 0 0 0
 quartermaster invasion~
 The Invasion Quartermaster~
 The Invasion Quartermaster reviews requisition manifests, stamping approvals with military precision.
-~
+
+~
 A veteran logistician whose organized workspace reflects decades of military supply management. She issues field-ready weapons and disciplined kit to authorized personnel, maintaining strict inventory controls.
-~
+
+~
 134217795 8 900 S
 52 1
 0 0 0 0
@@ -4771,9 +4993,11 @@ L 0 0 0 0 0 0 0 0 0
 clerk quest~
 The Quest Clerk~
 The Quest Clerk arranges stamped contracts in neat stacks, a sigil-press at her elbow.
-~
+
+~
 A precise bureaucrat who trades in legal wards, sealed favors, and tactical charters. Her meticulous record-keeping and knowledge of @@WMidgaard@@N's regulatory framework make her an essential intermediary for anyone operating within the city's legal system.
-~
+
+~
 67 0 900 S
 40 2
 0 0 0 0
@@ -4786,9 +5010,11 @@ L 0 0 0 0 0 0 0 0 0
 broker quest~
 The Quest Broker~
 The Quest Broker leafs through bounty notices and reward ledgers, cross-referencing assignments.
-~
+
+~
 A seasoned fixer who matches adventurers with opportunities, outfitting expeditions with practical rewards scaled to risk and difficulty. His network of contacts extends well beyond @@WMidgaard@@N's walls.
-~
+
+~
 67 0 900 S
 46 1
 0 0 0 0
@@ -4801,9 +5027,11 @@ L 0 0 0 0 0 0 0 0 0
 armorer bulwark bastion~
 The Bulwark Armorer~
 The Bulwark Armorer tests the rivets on a weighted cuirass, nodding with professional satisfaction.
-~
+
+~
 A broad-shouldered smith who outfits mages, duelists, and guardians with role-specific armor tuned to their combat style. His inventory spans the full range from light ward-plate to heavy siege harness.
-~
+
+~
 67 0 900 S
 50 1
 0 0 0 0
@@ -4816,9 +5044,11 @@ L 0 0 0 0 0 0 0 0 0
 armourer armorer granite bastion tank~
 The Granite Bastion Tank Armourer~
 The Granite Bastion Tank Armourer hefts a plated cuirass onto a fitting stand with practiced ease.
-~
+
+~
 A broad-shouldered armourer who specializes in outfitting defenders with heavy, impact-rated tank harness. The forge marks on his hands and the soot in his hair mark years of dedicated service in @@WMidgaard@@N's heaviest armoring workshop.
-~
+
+~
 67 0 900 S
 60 1
 0 0 0 0
@@ -4831,9 +5061,11 @@ L 0 0 0 0 0 0 0 0 0
 armourer armorer ironweave melee~
 The Ironweave Melee Armourer~
 The Ironweave Melee Armourer checks the balance of a plated harness with scarred, steady hands.
-~
+
+~
 A melee armourer in a soot-dark apron whose workshop produces reinforced wargear for front-line fighters. The scars on his forearms and the precision of his movements speak to decades of forge work and fitting sessions.
-~
+
+~
 67 0 900 S
 58 1
 0 0 0 0
@@ -4846,9 +5078,11 @@ L 0 0 0 0 0 0 0 0 0
 clothier armorer moonthread~
 The Moonthread Cloth Armorer~
 The Moonthread Cloth Armorer smooths layered robes across a cedar drying rack.
-~
+
+~
 A focused cloth armorer who outfits battlemages, scouts, and pilgrims in reinforced woven armor. Her fingers move with the speed and certainty of someone who has stitched wardcloth since apprenticeship.
-~
+
+~
 67 0 900 S
 54 2
 0 0 0 0
@@ -4861,9 +5095,11 @@ L 0 0 0 0 0 0 0 0 0
 armourer armorer moonthread arcanoweaver~
 The Moonthread Arcanoweaver~
 The Moonthread Arcanoweaver adjusts rune-stitched armor on a cedar dress form.
-~
+
+~
 A meticulous armourer who tailors arcane vestments for hedge mages and archons alike. Each garment that leaves her workshop bears the distinctive moonthread stitching that has become synonymous with quality wardcloth in @@WMidgaard@@N.
-~
+
+~
 67 0 900 S
 47 2
 0 0 0 0
@@ -4876,9 +5112,11 @@ L 0 0 0 0 0 0 0 0 0
 lamplighter~
 a lamplighter~
 A lamplighter moves along the street with a long brass hook pole, checking the city's lamp-posts.
-~
+
+~
 One of the Lantern Registry's route-workers, this lamplighter follows a chalk-marked circuit that has been walked every watch cycle since the Lantern Reforms first mapped it. A leather satchel hangs from one shoulder, weighted with oil flasks and spare wick-stock, and a long brass hook pole serves as both tool and walking staff. The faint smell of lamp oil clings to everything they wear.
-~
+
+~
 65 0 150 S
 5 0
 0 0 0 0
@@ -4891,9 +5129,11 @@ L 0 0 0 0 0 0 0 0 0
 warden ward-sigil~
 a ward-sigil warden~
 A warden in a violet-banded sash stands at the threshold, registry ledger in hand.
-~
+
+~
 This warden's authority derives from the Violet Compact — the civic agreement that bureaucratized rather than eradicated the flow of arcane materials through @@WMidgaard@@N. The violet band across their grey coat marks them as a licensed threshold inspector, empowered to demand documentation from anyone crossing with arcane goods. Their ledger is bound in pale leather and bears ward sigils that glow faintly when near unregistered materials.
-~
+
+~
 67 0 400 S
 18 0
 0 0 0 0
@@ -4906,9 +5146,11 @@ L 0 0 0 0 0 0 0 0 0
 sister lay-sister volunteer~
 a temple lay-sister~
 A lay-sister in plain grey robes pauses near the memorial wall, murmuring a quiet observance.
-~
+
+~
 Not ordained but devoted, this lay-sister volunteers through the Temple of the Resounding Heart's civic program, which sends lay members into the city's public spaces to tend memorial sites and recite the Three Civic Oaths at posted hours. She carries a small lamp in one hand and a worn booklet of civic liturgy in the other, her lips moving in the rote of daily observance.
-~
+
+~
 65 0 80 S
 6 2
 0 0 0 0
@@ -4921,9 +5163,11 @@ L 0 0 0 0 0 0 0 0 0
 laborer day-mark worker~
 a day-mark laborer~
 A laborer moves through the street with the trudging gait of someone who has been working since first light.
-~
+
+~
 Day-mark laborers are the backbone of @@WMidgaard@@N's manual economy: registered workers who receive stamped day tokens each morning and are paid by the circuit. Their token must match the day's stamp at the Registry gate or they are classed as shadow residents — undocumented and outside civic protection. The tired set of this one's shoulders suggests the token today came late.
-~
+
+~
 65 0 30 S
 3 1
 0 0 0 0
@@ -4936,9 +5180,11 @@ L 0 0 0 0 0 0 0 0 0
 vendor merchant market~
 a market vendor~
 A vendor stands behind a low table spread with goods, calling out to passing pedestrians.
-~
+
+~
 One of @@WMidgaard@@N's independent licensed traders, this vendor holds a street permit rather than a full guild charter. The goods on the table reflect the crossroads character of the city: carved pieces from the northern forest routes, eastern-sourced spice jars, and surplus leather stock from the armorer quarter — all stamped with the Ledgerhouse tariff mark.
-~
+
+~
 67 0 600 S
 7 1
 0 0 0 0
@@ -4951,11 +5197,58 @@ L 0 0 0 0 0 0 0 0 0
 warden road~
 a road warden~
 A road warden in worn travel gear stands at the gate, watching the road approach with steady eyes.
-~
+
+~
 The road warden system was formalized during the Ash-and-Iron Decades, when raids severed @@WMidgaard@@N's northern trade routes and the city needed route-security beyond the standard cityguard. Road wardens are technically militia auxiliaries, trained by the Guard Command but funded by the Guild Concordat — reflecting the uneasy marriage between public safety and commercial interest that defines most of @@WMidgaard@@N's institutional arrangements.
-~
+
+~
 67 0 300 S
 15 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3168
+emporium arcanist keeper~
+the Emporium arcanist~
+An arcanist in layered robes stands at the display desk, annotating an enchantment ledger.
+~
+The Emporium arcanist is a composed practitioner who has traded field work for the more reliable commerce of supplying other practitioners. The robes show the layered patching that marks serious years of arcane study, not poverty, but the accumulated evidence of a career spent in workrooms where reagent spillage is an occupational constant. A cataloging stylus tucked behind one ear and an ink-stained left hand suggest the administrative half of the role takes as much time as the advisory half.
+~
+65 0 1800 S
+130 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3169
+bladesmaster edge iron~
+the Edge and Iron blademaster~
+A blademaster in worn fighting leathers stands behind the weapon rack, running a thumb along a display edge.
+~
+The Edge and Iron blademaster carries the particular stillness of someone who has survived enough fights to stop needing to announce it. The worn fighting leathers are maintained to working condition rather than showroom standard, and the calluses on both hands are the informational kind that customers read before asking prices. A short evaluation usually happens when someone walks in: posture, weapon hand, movement pattern. The blademaster does not comment on the assessment but it informs whether they lead with the catalog or the custom fitting bench.
+~
+65 0 1600 S
+125 1
+0 0 0 0
+! 0 0 0 7 0 0 0
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0 
+L 0 0 0 0 0 0 0 0 0 
+#3170
+platemage bulwark keeper~
+the Iron Bulwark plate-mage~
+A broad-shouldered plate-mage stands beside a wall of tower shields, checking tempering marks with practised efficiency.
+~
+The Iron Bulwark plate-mage occupies an unusual professional position: trained in both smithcraft and ward-inscription, making them capable of evaluating a piece of armour on structural and magical grounds simultaneously. The heavy frame and deliberate way of moving through the shop suggest the plate-mage still wears their own stock on rotation to verify the claims made in the rating placards. They will discuss tempering grades at considerable length if given the opening.
+~
+65 0 2000 S
+135 1
 0 0 0 0
 ! 0 0 0 7 0 0 0
 | 0 0 0 0 0 0 0
@@ -4977,7 +5270,8 @@ L
 darkness~
 @@GDarkness@@g~
 A blade of @@GDarkness@@g lies here.
-~
+
+~
 5 134220288 8421376 33
 0 0 0 9 0 0 0 0 0 0
 8
@@ -4996,10 +5290,14 @@ A
 E
 darkness~
 Looking at @@GDarkness@@g is like looking into the furthest corner of your
-sad and evil soul.  You sense the power stored within this weapon to be awesome,
-ready to strike your enemies at the slightest chance.  You are forced to look
-away, rather than be dragged into it's dark heart....
-~
+
+sad and evil soul.  You sense the power stored within this weapon to be awesome,
+
+ready to strike your enemies at the slightest chance.  You are forced to look
+
+away, rather than be dragged into it's dark heart....
+
+~
 L
 120
 #3039
@@ -5083,7 +5381,8 @@ L
 board~
 the lover's board~
 The lover's board is stuck to the wall with 4 arrows.
-~
+
+~
 27 0 8388608 1
 0 0 0 0 0 0 0 0 0 0
 4
@@ -5130,7 +5429,8 @@ A
 E
 banner~
 This is the official Merc war banner to see you through the darkest realm!
-~
+
+~
 L
 25
 #3016
@@ -5156,8 +5456,10 @@ You see a standard issue bracer here.~
 E
 bracer~
 You see a bracer of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3018
@@ -5170,8 +5472,10 @@ You see a standard issue belt here.~
 E
 belt~
 You see a belt of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3019
@@ -5184,8 +5488,10 @@ You see a standard issue cape here.~
 E
 cape~
 You see a cape of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3023
@@ -5198,8 +5504,10 @@ You see a pair of standard issue sleeves here.~
 E
 sleeves~
 You see sleeves of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3024
@@ -5212,8 +5520,10 @@ You see a pair of standard issue gloves here.~
 E
 gloves~
 You see gloves of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3025
@@ -5226,8 +5536,10 @@ You see a pair of standard issue leggings here.~
 E
 leggings~
 You see leggings of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3027
@@ -5240,8 +5552,10 @@ You see a standard issue helmet here.~
 E
 helmet~
 You see a helmet of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3028
@@ -5254,8 +5568,10 @@ You see a standard issue cloak here.~
 E
 cloak~
 You see a cloak of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3029
@@ -5268,8 +5584,10 @@ You see a standard issue shield here.~
 E
 shield~
 You see a shield of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3034
@@ -5282,8 +5600,10 @@ You see a standard issue vest here.~
 E
 vest~
 You see a vest of great craftsmanship.  Stamped on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3035
@@ -5300,8 +5620,10 @@ A
 E
 mace~
 You see a mace of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3036
@@ -5318,8 +5640,10 @@ A
 E
 dagger~
 You see a dagger of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 25
 #3037
@@ -5336,8 +5660,10 @@ A
 E
 sword~
 You see a sword of great craftsmanship.  Imprinted on the side is:
-Merc Industries
-~
+
+Merc Industries
+
+~
 L
 20
 #3140
@@ -5350,13 +5676,20 @@ The bank's notice of liquidation is taped to the wall.~
 E
 notice liquidation bank~
 The letter is written in a reserved and dignified Spencer hand.
-    To whom it may concern,
-	Merc Industries has charmed your money.  Apparently one's
-	gold will remain close, even beyond death. We are closing
-	down our offices and ATM machines.  Our services here are
-	no longer required.
-    Midgaard City Bank
-~
+
+    To whom it may concern,
+
+	Merc Industries has charmed your money.  Apparently one's
+
+	gold will remain close, even beyond death. We are closing
+
+	down our offices and ATM machines.  Our services here are
+
+	no longer required.
+
+    Midgaard City Bank
+
+~
 L
 1
 #3138
@@ -5378,7 +5711,8 @@ A large steel key has been left here.~
 E
 key steel~
 A key of this size must fit a very strong lock.
-~
+
+~
 L
 1
 #3136
@@ -5400,7 +5734,8 @@ A small white fountain gushes forth here.~
 E
 fountain~
 It is very nice.  Made from fine white marble.
-~
+
+~
 L
 1
 #3134
@@ -5413,9 +5748,12 @@ A white-painted wooden bench is standing here.~
 E
 bench~
 It is a quite heavy but very comfortable bench.  It is placed with its front
-towards the river so you can sit and watch the river and the houses on the
-other side.
-~
+
+towards the river so you can sit and watch the river and the houses on the
+
+other side.
+
+~
 L
 1
 #3133
@@ -5446,7 +5784,8 @@ A safe is placed in a dark corner of the room.~
 E
 safe~
 The safe is very heavy.
-~
+
+~
 L
 1
 #3130
@@ -5459,7 +5798,8 @@ A desk is set against the western wall.~
 E
 drawer~
 You notice a keyhole in the drawer.
-~
+
+~
 L
 1
 #3129
@@ -5481,7 +5821,8 @@ A long sword has been left here.~
 E
 sword long~
 This is the ceremonial sword of the Mayor of Midgaard.
-~
+
+~
 L
 1
 #3123
@@ -5494,7 +5835,8 @@ A brass key has been left here.~
 E
 key brass~
 The brass key is small and looks like it fits a very complicated lock.
-~
+
+~
 L
 1
 #3122
@@ -5507,7 +5849,8 @@ A wooden key has been left here.~
 E
 key wooden~
 The wooden key is not special.
-~
+
+~
 L
 1
 #3121
@@ -5520,7 +5863,8 @@ An iron key has been left here.~
 E
 key iron~
 The iron key is not special.
-~
+
+~
 L
 1
 #3106
@@ -5551,7 +5895,8 @@ A cup has been set here.~
 E
 cup~
 It is a large simple cup.
-~
+
+~
 L
 1
 #3101
@@ -5564,7 +5909,8 @@ A cup has been set here.~
 E
 cup~
 It is a small simple cup.
-~
+
+~
 L
 1
 #3100
@@ -5577,7 +5923,8 @@ A cup has been set here.~
 E
 cup~
 It is a small simple cup.
-~
+
+~
 L
 1
 #3097
@@ -5734,7 +6081,8 @@ A scroll has carelessly been left here.~
 E
 scroll~
 The scroll has written a formulae of 'Word of Recall' upon it.
-~
+
+~
 L
 1
 #3041
@@ -5747,7 +6095,8 @@ A small yellow potion has carelessly been left here.~
 E
 potion yellow~
 The potion has a small label 'Detect The Invisible'.
-~
+
+~
 L
 1
 #3040
@@ -5760,13 +6109,20 @@ A scroll has carelessly been left here.~
 E
 scroll identify~
 The scroll has a magic formula drawn upon it:
-     ???
-    ?   ?
-       ?
-      ?
-      ?
-      *
-~
+
+     ???
+
+    ?   ?
+
+       ?
+
+      ?
+
+      ?
+
+      *
+
+~
 L
 2
 #3033
@@ -5797,13 +6153,17 @@ A hooded brass lantern has been left here.~
 E
 letters~
 They say, "Use 'hold lantern' to activate."
-~
+
+~
 E
 lantern~
 It is a large and robust but somewhat battered oil lantern made from brass,
-equipped with a handle to make it handy and a hood to protect its flame.
-Some letters have been scratched on its bottom.
-~
+
+equipped with a handle to make it handy and a hood to protect its flame.
+
+Some letters have been scratched on its bottom.
+
+~
 L
 20
 #3030
@@ -5864,7 +6224,8 @@ L
 board~
 the Board of Thought~
 The board for thought sharing is here, floating downwind slowly.
-~
+
+~
 27 0 8388608 1
 0 0 0 3191 0 0 0 0 0 0
 4
@@ -5874,7 +6235,8 @@ L
 amulet youth~
 the @@yamulet@@g of @@By@@Wo@@Ru@@Wt@@Bh@@g~
 An amulet depicting life lies here.
-~
+
+~
 9 320 8388736 1
 0 0 0 0 0 0 0 0 0 0
 13
@@ -5900,14 +6262,16 @@ Osiris Statue~
 E
 plaque~
 @@gThis statue represents one of the great gods of Egypt, @@cOsiris@@g, the loving husband of @@yIsis@@g.  It is placed here in the @@Wcenter @@gof town for all to see, and as a @@Rreminder @@gto all that not all Gods are @@dImmortal@@G.
-~
+
+~
 L
 1
 #3049
 board~
 the Immortal contact board~
 A board sits here, with post it notes attached, a single one saying if in need of an immortal please leave message here.
-~
+
+~
 27 0 8388608 1
 10 0 0 3049 0 0 0 0 0 0
 4
@@ -7256,6 +7620,176 @@ A
 13 15
 L
 50
+#3001
+voidweave mantle~
+a voidweave mantle~
+A voidweave mantle shimmers with shifting patterns of contained ward-light.
+~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+110
+#3114
+dreamveil cowl~
+a dreamveil cowl~
+A dreamveil cowl hangs from a crystal display peg.
+~
+9 0 8388616 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+115
+#3115
+arclight bracers~
+arclight bracers~
+Arclight bracers gleam with etched channeling grooves.
+~
+9 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+105
+#3117
+starfire sash~
+a starfire sash~
+A starfire sash is strung between two lacquered posts for display.
+~
+9 0 8519680 1
+0 0 0 0 0 0 0 0 0 0
+2
+L
+120
+#3118
+runemeld greaves~
+runemeld greaves~
+Runemeld greaves stand upright on a padded rack.
+~
+9 0 9437184 1
+0 0 0 0 0 0 0 0 0 0
+3
+L
+125
+#3119
+resonant focus wand~
+a resonant focus wand~
+A resonant focus wand spins slowly in a crystal cradle.
+~
+5 536870912 8421376 1
+0 0 0 6 0 0 0 0 0 0
+1
+L
+130
+#3120
+razorwind blade~
+a razorwind blade~
+A razorwind blade rests on a padded display cradle.
+~
+5 0 8421376 1
+0 0 0 1 0 0 0 0 0 0
+8
+L
+120
+#3125
+warstrike axe~
+a warstrike axe~
+A warstrike axe hangs from a reinforced peg bracket.
+~
+5 0 8421376 1
+0 0 0 3 0 0 0 0 0 0
+9
+L
+115
+#3126
+warlord chaincoat~
+a warlord chaincoat~
+A warlord chaincoat is laced onto a broad iron mannequin.
+~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+7
+L
+110
+#3127
+ironmarsh leggings~
+ironmarsh leggings~
+Ironmarsh leggings stand in a corner bracket, scuffed but serviceable.
+~
+9 0 9437184 1
+0 0 0 0 0 0 0 0 0 0
+8
+L
+125
+#3128
+combatant helm~
+a combatant helm~
+A combatant helm sits on a granite shelf beside a polishing cloth.
+~
+9 0 8388616 1
+0 0 0 0 0 0 0 0 0 0
+6
+L
+105
+#3139
+crusader pauldrons~
+crusader pauldrons~
+Crusader pauldrons are bolted to a shoulder-fitting stand.
+~
+9 0 8389120 1
+0 0 0 0 0 0 0 0 0 0
+9
+L
+130
+#3159
+ironhaven aegis~
+an ironhaven aegis~
+An ironhaven aegis leans against a stacked ingot support.
+~
+9 0 8421376 1
+0 0 0 0 0 0 0 0 0 0
+14
+L
+120
+#3166
+stonehaven platemail~
+stonehaven platemail~
+Stonehaven platemail stands strapped to a reinforced gantry.
+~
+9 0 8650752 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+110
+#3167
+fortress warden helm~
+a fortress warden helm~
+A fortress warden helm crowns a demonstration suit of full plate.
+~
+9 0 8388616 1
+0 0 0 0 0 0 0 0 0 0
+13
+L
+125
+#3199
+vault guard greaves~
+vault guard greaves~
+Vault guard greaves stand in matched pairs near the weight rack.
+~
+9 0 9437184 1
+0 0 0 0 0 0 0 0 0 0
+12
+L
+105
+#3200
+granite vambraces~
+granite vambraces~
+Granite vambraces rest in a leather-lined tray.
+~
+9 0 8390656 1
+0 0 0 0 0 0 0 0 0 0
+11
+L
+130
 #0
 #SHOPS
 3100 0 0 0 0 0 110 90 6 23
@@ -7283,6 +7817,9 @@ L
 3160 9 0 0 0 0 130 100 0 23
 3158 9 0 0 0 0 100 100 0 23
 3159 9 0 0 0 0 100 100 0 23
+3168 2 9 10 4 0 130 60 0 23
+3169 5 9 0 0 0 130 60 0 23
+3170 9 0 0 0 0 130 60 0 23
 0
 #RESETS
 M 0 3011 1 3110       Gertrude the executioner
@@ -7886,6 +8423,32 @@ M 0 3166 2 3011       Market vendor at Azure Plaza
 M 0 3167 2 3030       Road warden at Southern Wild Gate
 
 M 0 3167 2 3041       Road warden at Cedar Square (east gate approach)
+
+M 0 3168 1 3165       The Emporium arcanist (caster shop)
+
+G 0 3001 100 
+G 0 3114 100 
+G 0 3115 100 
+G 0 3117 100 
+G 0 3118 100 
+G 0 3119 100 
+
+M 0 3169 1 3166       The Edge and Iron blademaster (melee shop)
+
+G 0 3120 100 
+G 0 3125 100 
+G 0 3126 100 
+G 0 3127 100 
+G 0 3128 100 
+G 0 3139 100 
+
+M 0 3170 1 3167       The Iron Bulwark plate-mage (tank shop)
+
+G 0 3159 100 
+G 0 3166 100 
+G 0 3167 100 
+G 0 3199 100 
+G 0 3200 100 
 
 S
 #SPECIALS
