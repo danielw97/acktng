@@ -34,9 +34,9 @@ Each test is a standalone binary built from a `test_*.c` file paired with the mo
 4. **Linker trick**: `-ffunction-sections -fdata-sections` + `-Wl,--gc-sections` to dead-strip unused symbols that would cause link errors
 
 To add a new unit test:
-1. Create `test_foo.c` with `main()` and test functions using `assert()`
-2. Add Makefile rules for `foo.unit-test.o` and `unit-test-foo` target
-3. Add the target to the `unit-tests` dependency list and add `./unit-test-foo` to the run list
+1. Create `src/tests/test_foo.c` with `main()` and test functions using `assert()`
+2. Add Makefile rules for `foo.unit-test.o` and `unit-test-foo` target (binary goes to `tests/unit-test-foo`)
+3. Add the target to the `unit-tests` dependency list and add `./tests/unit-test-foo` to the run list
 
 Test conventions:
 - Tests use `assert()` from `<assert.h>` — no test framework
@@ -81,13 +81,15 @@ acktng/
 │   ├── update.c      # Periodic game tick updates
 │   ├── invasion.c    # Mob invasion event system
 │   ├── keep.c        # Player keep/chest system
-│   ├── test_*.c      # Unit test files
+│   ├── tests/        # Unit test files
+│   │   ├── test_*.c  # Test source files (one per module under test)
+│   │   └── test_is_fighting.c  # Shared stub linked into most test binaries
 │   └── Makefile      # Build rules
 ├── area/             # Area data files (~52 .are files) + runtime data
 │   ├── area.lst      # Master list of areas to load at boot
 │   └── *.are         # Individual area files (rooms, mobs, objects, resets)
 ├── data/             # Runtime data files (bans, clans, socials, rulers, etc.)
-├── docs/             # Documentation (area file spec, data structures, licenses)
+├── docs/             # Documentation (area file spec, data structures, licenses, testing)
 ├── help/             # In-game help files
 ├── shelp/            # Staff help files
 ├── player/           # Player save directory (subdirectories a-z)
