@@ -15,10 +15,6 @@ cp startup.new startup.unix
 Edit the port number in your startup.new script for the port you want to use
 for your mud.
 
-If you are familiar with the IMC config file, you may hand edit it, or you
-can configure it once online.  If you do not currently have an IMC hub
-connection, email webkeep@ackmud.nuc.net to receive a connection.
-
 Once you have edited config.h, and copied the appropriate OS version files,
 cd to your ackmud/src dir, and type make.  You should get a clean make, with
 no errors _or_ warnings...if not, please let Zenithar know of any problems.

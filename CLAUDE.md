@@ -93,7 +93,6 @@ acktng/
 ├── npcs/             # NPC/player save directory (subdirectories a-z)
 ├── log/              # Server log directory
 ├── reports/          # Report files
-├── imc/              # Inter-MUD communication config
 ├── integration-test.sh  # Integration test script
 └── .github/workflows/   # CI: validate-open-prs.yml
 ```
