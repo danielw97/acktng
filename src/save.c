@@ -407,13 +407,13 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
               ch->pcdata->invasion_rewards[0],
               ch->pcdata->invasion_rewards[1],
               ch->pcdata->invasion_rewards[2]);
-      fprintf(fp, "PropositionPoints %d\n", ch->pcdata->proposition_points);
+      fprintf(fp, "QuestPoints %d\n", ch->pcdata->quest_points);
       fprintf(fp, "PropDynCooldown %d\n", ch->pcdata->prop_dynamic_cooldown_until);
       {
          int i, k;
-         for (i = 0; i < PROP_MAX_PROPOSITIONS; i++)
+         for (i = 0; i < PROP_MAX_QUESTS; i++)
          {
-            PROPOSITION_DATA *prop = &ch->pcdata->propositions[i];
+            QUEST_DATA *prop = &ch->pcdata->quests[i];
             fprintf(fp, "PropType%d    %d\n", i, prop->prop_type);
             fprintf(fp, "PropDone%d    %d\n", i, prop->prop_completed ? 1 : 0);
             fprintf(fp, "PropTargets%d %d\n", i, prop->prop_num_targets);
@@ -431,8 +431,8 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
                     prop->prop_reward_item_count);
             fprintf(fp, "PropStaticOfferer%d %d\n", i, prop->prop_static_offerer_vnum);
          }
-         fprintf(fp, "PropStaticDoneCap %d\n", PROP_MAX_STATIC_PROPOSITIONS);
-         for (i = 0; i < PROP_MAX_STATIC_PROPOSITIONS; i++)
+         fprintf(fp, "PropStaticDoneCap %d\n", PROP_MAX_STATIC_QUESTS);
+         for (i = 0; i < PROP_MAX_STATIC_QUESTS; i++)
             if (ch->pcdata->completed_static_props[i])
                fprintf(fp, "PropStaticDone %d\n", i);
       }
@@ -726,15 +726,15 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       ch->pcdata->invasion_rewards[0] = 0;
       ch->pcdata->invasion_rewards[1] = 0;
       ch->pcdata->invasion_rewards[2] = 0;
-      ch->pcdata->proposition_points = 0;
+      ch->pcdata->quest_points = 0;
       ch->pcdata->prop_dynamic_cooldown_until = 0;
-      for (foo = 0; foo < PROP_MAX_PROPOSITIONS; foo++)
+      for (foo = 0; foo < PROP_MAX_QUESTS; foo++)
       {
-         memset(&ch->pcdata->propositions[foo], 0, sizeof(PROPOSITION_DATA));
-         ch->pcdata->propositions[foo].prop_static_id = -1;
-         ch->pcdata->propositions[foo].prop_static_offerer_vnum = 0;
+         memset(&ch->pcdata->quests[foo], 0, sizeof(QUEST_DATA));
+         ch->pcdata->quests[foo].prop_static_id = -1;
+         ch->pcdata->quests[foo].prop_static_offerer_vnum = 0;
       }
-      for (foo = 0; foo < PROP_MAX_STATIC_PROPOSITIONS; foo++)
+      for (foo = 0; foo < PROP_MAX_STATIC_QUESTS; foo++)
          ch->pcdata->completed_static_props[foo] = FALSE;
       for (foo = 0; foo < MAX_REMORT; foo++)
          ch->remort[foo] = -1;
@@ -946,9 +946,9 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
 static void apply_prop_static_done_cap(PC_DATA *pcdata, int saved_cap)
 {
    int i;
-   int start = URANGE(0, saved_cap, PROP_MAX_STATIC_PROPOSITIONS);
+   int start = URANGE(0, saved_cap, PROP_MAX_STATIC_QUESTS);
 
-   for (i = start; i < PROP_MAX_STATIC_PROPOSITIONS; i++)
+   for (i = start; i < PROP_MAX_STATIC_QUESTS; i++)
       pcdata->completed_static_props[i] = FALSE;
 }
 
@@ -960,12 +960,12 @@ int prop_static_done_cap_true_count_for_test(int saved_cap)
    int count = 0;
 
    memset(&pc, 0, sizeof(pc));
-   for (i = 0; i < PROP_MAX_STATIC_PROPOSITIONS; i++)
+   for (i = 0; i < PROP_MAX_STATIC_QUESTS; i++)
       pc.completed_static_props[i] = TRUE;
 
    apply_prop_static_done_cap(&pc, saved_cap);
 
-   for (i = 0; i < PROP_MAX_STATIC_PROPOSITIONS; i++)
+   for (i = 0; i < PROP_MAX_STATIC_QUESTS; i++)
       if (pc.completed_static_props[i])
          count++;
 
@@ -1322,7 +1322,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             KEY("Pkills", ch->pcdata->pkills, fread_number(fp));
             KEY("Pkilled", ch->pcdata->pkilled, fread_number(fp));
             KEY("Pflags", ch->pcdata->pflags, fread_number(fp));
-            KEY("PropositionPoints", ch->pcdata->proposition_points, fread_number(fp));
+            KEY("QuestPoints", ch->pcdata->quest_points, fread_number(fp));
             KEY("PropDynCooldown", ch->pcdata->prop_dynamic_cooldown_until, fread_number(fp));
          }
          KEY("Played", ch->played, fread_number(fp));
@@ -1332,37 +1332,37 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
          if (!IS_NPC(ch))
          {
             int prop_i;
-            if (sscanf(word, "PropType%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropType%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_type = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_type = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropDone%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropDone%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_completed = (fread_number(fp) != 0);
+               ch->pcdata->quests[prop_i].prop_completed = (fread_number(fp) != 0);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropTargets%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropTargets%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_num_targets = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_num_targets = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropT%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropT%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
                int _k, _slot = -1;
                for (_k = 0; _k < PROP_MAX_TARGETS; _k++)
-                  if (ch->pcdata->propositions[prop_i].prop_target_vnum[_k] == 0)
+                  if (ch->pcdata->quests[prop_i].prop_target_vnum[_k] == 0)
                   {
                      _slot = _k;
                      break;
                   }
                if (_slot >= 0)
                {
-                  ch->pcdata->propositions[prop_i].prop_target_vnum[_slot] = fread_number(fp);
-                  ch->pcdata->propositions[prop_i].prop_target_done[_slot] = (fread_number(fp) != 0);
+                  ch->pcdata->quests[prop_i].prop_target_vnum[_slot] = fread_number(fp);
+                  ch->pcdata->quests[prop_i].prop_target_done[_slot] = (fread_number(fp) != 0);
                }
                else
                {
@@ -1372,46 +1372,46 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropKillNeed%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropKillNeed%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_kill_needed = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_kill_needed = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropKillGot%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropKillGot%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_kill_count = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_kill_count = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropStaticId%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropStaticId%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_static_id = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_static_id = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropRewardGold%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropRewardGold%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_reward_gold = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_reward_gold = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropRewardQp%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropRewardQp%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_reward_qp = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_reward_qp = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropRewardItem%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropRewardItem%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_reward_item_vnum = fread_number(fp);
-               ch->pcdata->propositions[prop_i].prop_reward_item_count = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_reward_item_vnum = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_reward_item_count = fread_number(fp);
                fMatch = TRUE;
                break;
             }
-            if (sscanf(word, "PropStaticOfferer%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            if (sscanf(word, "PropStaticOfferer%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_QUESTS)
             {
-               ch->pcdata->propositions[prop_i].prop_static_offerer_vnum = fread_number(fp);
+               ch->pcdata->quests[prop_i].prop_static_offerer_vnum = fread_number(fp);
                fMatch = TRUE;
                break;
             }
@@ -1424,28 +1424,28 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             if (!str_cmp(word, "PropStaticDone"))
             {
                int done_id = fread_number(fp);
-               if (done_id >= 0 && done_id < PROP_MAX_STATIC_PROPOSITIONS)
+               if (done_id >= 0 && done_id < PROP_MAX_STATIC_QUESTS)
                   ch->pcdata->completed_static_props[done_id] = TRUE;
                fMatch = TRUE;
                break;
             }
 
-            /* Backward-compatible load from older single-proposition keys. */
+            /* Backward-compatible load from older single-quest keys. */
             if (!str_cmp(word, "PropType"))
             {
-               ch->pcdata->propositions[0].prop_type = fread_number(fp);
+               ch->pcdata->quests[0].prop_type = fread_number(fp);
                fMatch = TRUE;
                break;
             }
             if (!str_cmp(word, "PropDone"))
             {
-               ch->pcdata->propositions[0].prop_completed = (fread_number(fp) != 0);
+               ch->pcdata->quests[0].prop_completed = (fread_number(fp) != 0);
                fMatch = TRUE;
                break;
             }
             if (!str_cmp(word, "PropTargets"))
             {
-               ch->pcdata->propositions[0].prop_num_targets = fread_number(fp);
+               ch->pcdata->quests[0].prop_num_targets = fread_number(fp);
                fMatch = TRUE;
                break;
             }
@@ -1453,15 +1453,15 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             {
                int _k, _slot = -1;
                for (_k = 0; _k < PROP_MAX_TARGETS; _k++)
-                  if (ch->pcdata->propositions[0].prop_target_vnum[_k] == 0)
+                  if (ch->pcdata->quests[0].prop_target_vnum[_k] == 0)
                   {
                      _slot = _k;
                      break;
                   }
                if (_slot >= 0)
                {
-                  ch->pcdata->propositions[0].prop_target_vnum[_slot] = fread_number(fp);
-                  ch->pcdata->propositions[0].prop_target_done[_slot] = (fread_number(fp) != 0);
+                  ch->pcdata->quests[0].prop_target_vnum[_slot] = fread_number(fp);
+                  ch->pcdata->quests[0].prop_target_done[_slot] = (fread_number(fp) != 0);
                }
                else
                {
@@ -1473,13 +1473,13 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             }
             if (!str_cmp(word, "PropKillNeed"))
             {
-               ch->pcdata->propositions[0].prop_kill_needed = fread_number(fp);
+               ch->pcdata->quests[0].prop_kill_needed = fread_number(fp);
                fMatch = TRUE;
                break;
             }
             if (!str_cmp(word, "PropKillGot"))
             {
-               ch->pcdata->propositions[0].prop_kill_count = fread_number(fp);
+               ch->pcdata->quests[0].prop_kill_count = fread_number(fp);
                fMatch = TRUE;
                break;
             }

@@ -8,17 +8,17 @@
 
 time_t current_time;
 
-void proposition_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj);
-void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim);
-void clear_proposition(CHAR_DATA *ch);
-void proposition_cancel(CHAR_DATA *ch, int slot);
-void proposition_load_static_templates(void);
-int proposition_unit_static_count(void);
-const char *proposition_unit_static_title(int static_id);
-const char *proposition_unit_static_accept_message(int static_id);
-const char *proposition_unit_static_completion_message(int static_id);
-int proposition_unit_static_max_level(int static_id);
-int proposition_unit_canonical_postmaster_vnum(int vnum);
+void quest_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj);
+void quest_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim);
+void clear_quest(CHAR_DATA *ch);
+void quest_cancel(CHAR_DATA *ch, int slot);
+void quest_load_static_templates(void);
+int quest_unit_static_count(void);
+const char *quest_unit_static_title(int static_id);
+const char *quest_unit_static_accept_message(int static_id);
+const char *quest_unit_static_completion_message(int static_id);
+int quest_unit_static_max_level(int static_id);
+int quest_unit_canonical_postmaster_vnum(int vnum);
 
 
 char *_str_dup(const char *str, const char *func)
@@ -94,7 +94,7 @@ static CHAR_DATA make_char(PC_DATA *pc)
     memset(pc, 0, sizeof(*pc));
     ch.pcdata = pc;
     ch.act = 0;
-    ch.pcdata->propositions[0].prop_type = PROP_TYPE_COLLECT_ITEMS;
+    ch.pcdata->quests[0].prop_type = PROP_TYPE_COLLECT_ITEMS;
     return ch;
 }
 
@@ -128,14 +128,14 @@ static void test_extracts_and_saves_when_target_matches(void)
     CHAR_DATA ch = make_char(&pc);
     OBJ_DATA obj = make_obj(&index, 1234, "a target item");
 
-    ch.pcdata->propositions[0].prop_num_targets = 1;
-    ch.pcdata->propositions[0].prop_target_vnum[0] = 1234;
-    ch.pcdata->propositions[0].prop_target_done[0] = FALSE;
+    ch.pcdata->quests[0].prop_num_targets = 1;
+    ch.pcdata->quests[0].prop_target_vnum[0] = 1234;
+    ch.pcdata->quests[0].prop_target_done[0] = FALSE;
 
     reset_counters();
-    proposition_obj_notify(&ch, &obj);
+    quest_obj_notify(&ch, &obj);
 
-    assert(ch.pcdata->propositions[0].prop_target_done[0] == TRUE);
+    assert(ch.pcdata->quests[0].prop_target_done[0] == TRUE);
     assert(extracted_calls == 1);
     assert(last_extracted == &obj);
     assert(save_calls == 1);
@@ -148,13 +148,13 @@ static void test_no_extract_when_not_a_target(void)
     CHAR_DATA ch = make_char(&pc);
     OBJ_DATA obj = make_obj(&index, 5678, "other item");
 
-    ch.pcdata->propositions[0].prop_num_targets = 1;
-    ch.pcdata->propositions[0].prop_target_vnum[0] = 1234;
+    ch.pcdata->quests[0].prop_num_targets = 1;
+    ch.pcdata->quests[0].prop_target_vnum[0] = 1234;
 
     reset_counters();
-    proposition_obj_notify(&ch, &obj);
+    quest_obj_notify(&ch, &obj);
 
-    assert(ch.pcdata->propositions[0].prop_target_done[0] == FALSE);
+    assert(ch.pcdata->quests[0].prop_target_done[0] == FALSE);
     assert(extracted_calls == 0);
     assert(save_calls == 0);
 }
@@ -166,16 +166,16 @@ static void test_marks_completed_when_final_item_collected(void)
     CHAR_DATA ch = make_char(&pc);
     OBJ_DATA obj = make_obj(&index, 2222, "final target");
 
-    ch.pcdata->propositions[0].prop_num_targets = 2;
-    ch.pcdata->propositions[0].prop_target_vnum[0] = 1111;
-    ch.pcdata->propositions[0].prop_target_done[0] = TRUE;
-    ch.pcdata->propositions[0].prop_target_vnum[1] = 2222;
+    ch.pcdata->quests[0].prop_num_targets = 2;
+    ch.pcdata->quests[0].prop_target_vnum[0] = 1111;
+    ch.pcdata->quests[0].prop_target_done[0] = TRUE;
+    ch.pcdata->quests[0].prop_target_vnum[1] = 2222;
 
     reset_counters();
-    proposition_obj_notify(&ch, &obj);
+    quest_obj_notify(&ch, &obj);
 
-    assert(ch.pcdata->propositions[0].prop_target_done[1] == TRUE);
-    assert(ch.pcdata->propositions[0].prop_completed == TRUE);
+    assert(ch.pcdata->quests[0].prop_target_done[1] == TRUE);
+    assert(ch.pcdata->quests[0].prop_completed == TRUE);
     assert(extracted_calls == 1);
     assert(save_calls == 1);
 }
@@ -187,15 +187,15 @@ static void test_collect_progress_works_for_nonzero_slot(void)
     CHAR_DATA ch = make_char(&pc);
     OBJ_DATA obj = make_obj(&index, 3333, "slot one target");
 
-    ch.pcdata->propositions[0].prop_type = PROP_TYPE_NONE;
-    ch.pcdata->propositions[1].prop_type = PROP_TYPE_COLLECT_ITEMS;
-    ch.pcdata->propositions[1].prop_num_targets = 1;
-    ch.pcdata->propositions[1].prop_target_vnum[0] = 3333;
+    ch.pcdata->quests[0].prop_type = PROP_TYPE_NONE;
+    ch.pcdata->quests[1].prop_type = PROP_TYPE_COLLECT_ITEMS;
+    ch.pcdata->quests[1].prop_num_targets = 1;
+    ch.pcdata->quests[1].prop_target_vnum[0] = 3333;
 
     reset_counters();
-    proposition_obj_notify(&ch, &obj);
+    quest_obj_notify(&ch, &obj);
 
-    assert(ch.pcdata->propositions[1].prop_target_done[0] == TRUE);
+    assert(ch.pcdata->quests[1].prop_target_done[0] == TRUE);
     assert(extracted_calls == 1);
     assert(save_calls == 1);
 }
@@ -207,17 +207,17 @@ static void test_kill_progress_works_for_nonzero_slot(void)
     CHAR_DATA ch = make_char(&pc);
     CHAR_DATA victim = make_victim(&index, 4321, "a wanted brigand");
 
-    ch.pcdata->propositions[0].prop_type = PROP_TYPE_NONE;
-    ch.pcdata->propositions[1].prop_type = PROP_TYPE_KILL_COUNT;
-    ch.pcdata->propositions[1].prop_num_targets = 1;
-    ch.pcdata->propositions[1].prop_target_vnum[0] = 4321;
-    ch.pcdata->propositions[1].prop_kill_needed = 1;
+    ch.pcdata->quests[0].prop_type = PROP_TYPE_NONE;
+    ch.pcdata->quests[1].prop_type = PROP_TYPE_KILL_COUNT;
+    ch.pcdata->quests[1].prop_num_targets = 1;
+    ch.pcdata->quests[1].prop_target_vnum[0] = 4321;
+    ch.pcdata->quests[1].prop_kill_needed = 1;
 
     reset_counters();
-    proposition_kill_notify(&ch, &victim);
+    quest_kill_notify(&ch, &victim);
 
-    assert(ch.pcdata->propositions[1].prop_kill_count == 1);
-    assert(ch.pcdata->propositions[1].prop_completed == TRUE);
+    assert(ch.pcdata->quests[1].prop_kill_count == 1);
+    assert(ch.pcdata->quests[1].prop_completed == TRUE);
     assert(save_calls == 1);
 }
 
@@ -228,42 +228,42 @@ static void test_kill_notify_ignores_non_matching_target(void)
     CHAR_DATA ch = make_char(&pc);
     CHAR_DATA victim = make_victim(&index, 9999, "an unrelated foe");
 
-    ch.pcdata->propositions[0].prop_type = PROP_TYPE_KILL_COUNT;
-    ch.pcdata->propositions[0].prop_num_targets = 1;
-    ch.pcdata->propositions[0].prop_target_vnum[0] = 1234;
-    ch.pcdata->propositions[0].prop_kill_needed = 2;
+    ch.pcdata->quests[0].prop_type = PROP_TYPE_KILL_COUNT;
+    ch.pcdata->quests[0].prop_num_targets = 1;
+    ch.pcdata->quests[0].prop_target_vnum[0] = 1234;
+    ch.pcdata->quests[0].prop_kill_needed = 2;
 
     reset_counters();
-    proposition_kill_notify(&ch, &victim);
+    quest_kill_notify(&ch, &victim);
 
-    assert(ch.pcdata->propositions[0].prop_kill_count == 0);
-    assert(ch.pcdata->propositions[0].prop_completed == FALSE);
+    assert(ch.pcdata->quests[0].prop_kill_count == 0);
+    assert(ch.pcdata->quests[0].prop_completed == FALSE);
     assert(save_calls == 0);
 }
 
-static void test_clear_proposition_resets_all_slots(void)
+static void test_clear_quest_resets_all_slots(void)
 {
     PC_DATA pc;
     CHAR_DATA ch = make_char(&pc);
 
-    ch.pcdata->propositions[0].prop_type = PROP_TYPE_KILL_COUNT;
-    ch.pcdata->propositions[0].prop_static_id = 4;
-    ch.pcdata->propositions[0].prop_reward_item_vnum = 123;
-    ch.pcdata->propositions[1].prop_type = PROP_TYPE_COLLECT_ITEMS;
-    ch.pcdata->propositions[1].prop_num_targets = 2;
-    ch.pcdata->propositions[1].prop_target_vnum[0] = 88;
-    ch.pcdata->propositions[2].prop_type = PROP_TYPE_KILL_VARIETY;
-    ch.pcdata->propositions[2].prop_target_done[0] = TRUE;
+    ch.pcdata->quests[0].prop_type = PROP_TYPE_KILL_COUNT;
+    ch.pcdata->quests[0].prop_static_id = 4;
+    ch.pcdata->quests[0].prop_reward_item_vnum = 123;
+    ch.pcdata->quests[1].prop_type = PROP_TYPE_COLLECT_ITEMS;
+    ch.pcdata->quests[1].prop_num_targets = 2;
+    ch.pcdata->quests[1].prop_target_vnum[0] = 88;
+    ch.pcdata->quests[2].prop_type = PROP_TYPE_KILL_VARIETY;
+    ch.pcdata->quests[2].prop_target_done[0] = TRUE;
 
-    clear_proposition(&ch);
+    clear_quest(&ch);
 
-    for (int i = 0; i < PROP_MAX_PROPOSITIONS; i++)
+    for (int i = 0; i < PROP_MAX_QUESTS; i++)
     {
-        assert(ch.pcdata->propositions[i].prop_type == PROP_TYPE_NONE);
-        assert(ch.pcdata->propositions[i].prop_num_targets == 0);
-        assert(ch.pcdata->propositions[i].prop_completed == FALSE);
-        assert(ch.pcdata->propositions[i].prop_static_id == -1);
-        assert(ch.pcdata->propositions[i].prop_reward_item_vnum == 0);
+        assert(ch.pcdata->quests[i].prop_type == PROP_TYPE_NONE);
+        assert(ch.pcdata->quests[i].prop_num_targets == 0);
+        assert(ch.pcdata->quests[i].prop_completed == FALSE);
+        assert(ch.pcdata->quests[i].prop_static_id == -1);
+        assert(ch.pcdata->quests[i].prop_reward_item_vnum == 0);
     }
 }
 
@@ -274,13 +274,13 @@ static void test_cancel_dynamic_sets_cooldown_and_clears_slot(void)
     CHAR_DATA ch = make_char(&pc);
 
     current_time = 1000;
-    ch.pcdata->propositions[0].prop_type = PROP_TYPE_KILL_COUNT;
-    ch.pcdata->propositions[0].prop_static_id = -1;
+    ch.pcdata->quests[0].prop_type = PROP_TYPE_KILL_COUNT;
+    ch.pcdata->quests[0].prop_static_id = -1;
 
     reset_counters();
-    proposition_cancel(&ch, 0);
+    quest_cancel(&ch, 0);
 
-    assert(ch.pcdata->propositions[0].prop_type == PROP_TYPE_NONE);
+    assert(ch.pcdata->quests[0].prop_type == PROP_TYPE_NONE);
     assert(ch.pcdata->prop_dynamic_cooldown_until == 1900);
     assert(save_calls == 1);
 }
@@ -291,32 +291,32 @@ static void test_cancel_static_does_not_set_cooldown(void)
     CHAR_DATA ch = make_char(&pc);
 
     current_time = 2000;
-    ch.pcdata->propositions[1].prop_type = PROP_TYPE_COLLECT_ITEMS;
-    ch.pcdata->propositions[1].prop_static_id = 2;
+    ch.pcdata->quests[1].prop_type = PROP_TYPE_COLLECT_ITEMS;
+    ch.pcdata->quests[1].prop_static_id = 2;
 
     reset_counters();
-    proposition_cancel(&ch, 1);
+    quest_cancel(&ch, 1);
 
-    assert(ch.pcdata->propositions[1].prop_type == PROP_TYPE_NONE);
+    assert(ch.pcdata->quests[1].prop_type == PROP_TYPE_NONE);
     assert(ch.pcdata->prop_dynamic_cooldown_until == 0);
     assert(save_calls == 1);
 }
 
-static void test_loads_static_propositions_with_messages_from_files(void)
+static void test_loads_static_quests_with_messages_from_files(void)
 {
     const char *title;
     const char *accept_message;
     const char *completion_message;
     int max_level;
 
-    proposition_load_static_templates();
+    quest_load_static_templates();
 
-    assert(proposition_unit_static_count() >= 5);
+    assert(quest_unit_static_count() >= 5);
 
-    title = proposition_unit_static_title(0);
-    accept_message = proposition_unit_static_accept_message(0);
-    completion_message = proposition_unit_static_completion_message(0);
-    max_level = proposition_unit_static_max_level(0);
+    title = quest_unit_static_title(0);
+    accept_message = quest_unit_static_accept_message(0);
+    completion_message = quest_unit_static_completion_message(0);
+    max_level = quest_unit_static_max_level(0);
 
     assert(title != NULL);
     assert(strcmp(title, "Route reconnaissance: Forest of Confusion") == 0);
@@ -331,32 +331,32 @@ static void test_loads_static_propositions_with_messages_from_files(void)
 
 static void test_loads_umbra_heartspire_static_chain(void)
 {
-    proposition_load_static_templates();
+    quest_load_static_templates();
 
-    assert(strcmp(proposition_unit_static_title(40), "Violet archive stabilization sweep") == 0);
-    assert(strstr(proposition_unit_static_accept_message(40), "Violet Compact clerks") != NULL);
+    assert(strcmp(quest_unit_static_title(40), "Violet archive stabilization sweep") == 0);
+    assert(strstr(quest_unit_static_accept_message(40), "Violet Compact clerks") != NULL);
 
-    assert(strcmp(proposition_unit_static_title(41), "Evermeet reliquary quieting") == 0);
-    assert(strstr(proposition_unit_static_completion_message(41), "Kiess heralds") != NULL);
+    assert(strcmp(quest_unit_static_title(41), "Evermeet reliquary quieting") == 0);
+    assert(strstr(quest_unit_static_completion_message(41), "Kiess heralds") != NULL);
 
-    assert(strcmp(proposition_unit_static_title(42), "Lantern syndic penumbra audit") == 0);
-    assert(strstr(proposition_unit_static_accept_message(42), "Kowloon courier syndics") != NULL);
+    assert(strcmp(quest_unit_static_title(42), "Lantern syndic penumbra audit") == 0);
+    assert(strstr(quest_unit_static_accept_message(42), "Kowloon courier syndics") != NULL);
 
-    assert(strcmp(proposition_unit_static_title(43), "Mirror-Queen injunction service") == 0);
-    assert(strstr(proposition_unit_static_completion_message(43), "injunction targets") != NULL);
+    assert(strcmp(quest_unit_static_title(43), "Mirror-Queen injunction service") == 0);
+    assert(strstr(quest_unit_static_completion_message(43), "injunction targets") != NULL);
 
-    assert(strcmp(proposition_unit_static_title(44), "Noctivar deposition writ") == 0);
-    assert(strstr(proposition_unit_static_accept_message(44), "Abbot Noctivar") != NULL);
+    assert(strcmp(quest_unit_static_title(44), "Noctivar deposition writ") == 0);
+    assert(strstr(quest_unit_static_accept_message(44), "Abbot Noctivar") != NULL);
 }
 
 static void test_postmaster_aliases_map_to_active_city_vnums(void)
 {
-    assert(proposition_unit_canonical_postmaster_vnum(13001) == 13001);
-    assert(proposition_unit_canonical_postmaster_vnum(13021) == 13001);
-    assert(proposition_unit_canonical_postmaster_vnum(14001) == 14001);
-    assert(proposition_unit_canonical_postmaster_vnum(14021) == 14001);
-    assert(proposition_unit_canonical_postmaster_vnum(0) == 14001);
-    assert(proposition_unit_canonical_postmaster_vnum(3015) == 3015);
+    assert(quest_unit_canonical_postmaster_vnum(13001) == 13001);
+    assert(quest_unit_canonical_postmaster_vnum(13021) == 13001);
+    assert(quest_unit_canonical_postmaster_vnum(14001) == 14001);
+    assert(quest_unit_canonical_postmaster_vnum(14021) == 14001);
+    assert(quest_unit_canonical_postmaster_vnum(0) == 14001);
+    assert(quest_unit_canonical_postmaster_vnum(3015) == 3015);
 }
 
 int main(void)
@@ -367,13 +367,13 @@ int main(void)
     test_collect_progress_works_for_nonzero_slot();
     test_kill_progress_works_for_nonzero_slot();
     test_kill_notify_ignores_non_matching_target();
-    test_clear_proposition_resets_all_slots();
+    test_clear_quest_resets_all_slots();
     test_cancel_dynamic_sets_cooldown_and_clears_slot();
     test_cancel_static_does_not_set_cooldown();
-    test_loads_static_propositions_with_messages_from_files();
+    test_loads_static_quests_with_messages_from_files();
     test_loads_umbra_heartspire_static_chain();
     test_postmaster_aliases_map_to_active_city_vnums();
 
-    puts("test_proposition: all tests passed");
+    puts("test_quest: all tests passed");
     return 0;
 }

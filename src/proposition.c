@@ -1,5 +1,5 @@
 /***************************************************************************
- * proposition.c  --  Personal proposition quest system for ACK! MUD
+ * quest.c  --  Personal quest quest system for ACK! MUD
  ***************************************************************************/
 
 #include <stdio.h>
@@ -37,7 +37,7 @@ struct static_prop_template_data
     char *completion_message;
 };
 
-#define PROP_STATIC_DIR "../propositions"
+#define PROP_STATIC_DIR "../quests"
 
 static STATIC_PROP_TEMPLATE *static_prop_table = NULL;
 static int static_prop_count = 0;
@@ -235,7 +235,7 @@ static bool load_static_prop_file(const char *path, int id)
     grown = realloc(static_prop_table, sizeof(*grown) * (static_prop_count + 1));
     if (grown == NULL)
     {
-        bug("load_static_prop_file: out of memory growing static proposition table", 0);
+        bug("load_static_prop_file: out of memory growing static quest table", 0);
         free_string(tpl.title);
         free_string(tpl.reward_obj_short);
         free_string(tpl.reward_obj_name);
@@ -252,7 +252,7 @@ static bool load_static_prop_file(const char *path, int id)
     return TRUE;
 }
 
-void proposition_load_static_templates(void)
+void quest_load_static_templates(void)
 {
     char path[MAX_STRING_LENGTH];
     char buf[MAX_STRING_LENGTH];
@@ -274,13 +274,13 @@ void proposition_load_static_templates(void)
         static_prop_count = 0;
     }
 
-    for (i = 1; i <= PROP_MAX_STATIC_PROPOSITIONS; i++)
+    for (i = 1; i <= PROP_MAX_STATIC_QUESTS; i++)
     {
         snprintf(path, sizeof(path), "%s/%d.prop", PROP_STATIC_DIR, i);
         load_static_prop_file(path, i - 1);
     }
 
-    snprintf(buf, sizeof(buf), "Loaded %d static proposition template%s from %s.",
+    snprintf(buf, sizeof(buf), "Loaded %d static quest template%s from %s.",
              static_prop_count,
              static_prop_count == 1 ? "" : "s",
              PROP_STATIC_DIR);
@@ -333,37 +333,37 @@ static CHAR_DATA *find_visible_npc_by_canonical_vnum(CHAR_DATA *ch, int vnum)
 }
 
 
-#ifdef UNIT_TEST_PROPOSITION
-int proposition_unit_static_count(void)
+#ifdef UNIT_TEST_QUEST
+int quest_unit_static_count(void)
 {
     return static_prop_count;
 }
 
-const char *proposition_unit_static_title(int static_id)
+const char *quest_unit_static_title(int static_id)
 {
     const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
     return tpl != NULL ? tpl->title : NULL;
 }
 
-const char *proposition_unit_static_accept_message(int static_id)
+const char *quest_unit_static_accept_message(int static_id)
 {
     const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
     return tpl != NULL ? tpl->accept_message : NULL;
 }
 
-const char *proposition_unit_static_completion_message(int static_id)
+const char *quest_unit_static_completion_message(int static_id)
 {
     const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
     return tpl != NULL ? tpl->completion_message : NULL;
 }
 
-int proposition_unit_static_max_level(int static_id)
+int quest_unit_static_max_level(int static_id)
 {
     const STATIC_PROP_TEMPLATE *tpl = find_static_prop_template(static_id);
     return tpl != NULL ? tpl->max_level : -1;
 }
 
-int proposition_unit_canonical_postmaster_vnum(int vnum)
+int quest_unit_canonical_postmaster_vnum(int vnum)
 {
     return canonical_postmaster_vnum(vnum);
 }
@@ -372,54 +372,54 @@ int proposition_unit_canonical_postmaster_vnum(int vnum)
 static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLATE *tpl);
 static bool static_reward_item_is_valid(const STATIC_PROP_TEMPLATE *tpl);
 
-static PROPOSITION_DATA *get_prop_slot(CHAR_DATA *ch, int slot)
+static QUEST_DATA *get_prop_slot(CHAR_DATA *ch, int slot)
 {
     if (IS_NPC(ch) || ch->pcdata == NULL)
         return NULL;
-    if (slot < 0 || slot >= PROP_MAX_PROPOSITIONS)
+    if (slot < 0 || slot >= PROP_MAX_QUESTS)
         return NULL;
-    return &ch->pcdata->propositions[slot];
+    return &ch->pcdata->quests[slot];
 }
 
 static int find_free_prop_slot(CHAR_DATA *ch)
 {
     int i;
-    for (i = 0; i < PROP_MAX_PROPOSITIONS; i++)
+    for (i = 0; i < PROP_MAX_QUESTS; i++)
     {
-        PROPOSITION_DATA *prop = get_prop_slot(ch, i);
+        QUEST_DATA *prop = get_prop_slot(ch, i);
         if (prop != NULL && prop->prop_type == PROP_TYPE_NONE)
             return i;
     }
     return -1;
 }
 
-static bool proposition_active(CHAR_DATA *ch)
+static bool quest_active(CHAR_DATA *ch)
 {
     int i;
 
     if (IS_NPC(ch) || ch->pcdata == NULL)
         return FALSE;
 
-    for (i = 0; i < PROP_MAX_PROPOSITIONS; i++)
-        if (ch->pcdata->propositions[i].prop_type != PROP_TYPE_NONE)
+    for (i = 0; i < PROP_MAX_QUESTS; i++)
+        if (ch->pcdata->quests[i].prop_type != PROP_TYPE_NONE)
             return TRUE;
 
     return FALSE;
 }
 
-static int proposition_gold(int psuedo_level)
+static int quest_gold(int psuedo_level)
 {
     int lvl = UMAX(1, UMIN(150, psuedo_level));
     return 10 + (990 * (lvl - 1) / 149);
 }
 
-static int proposition_qp(int psuedo_level)
+static int quest_qp(int psuedo_level)
 {
     int lvl = UMAX(1, UMIN(150, psuedo_level));
     return 1 + (19 * (lvl - 1) / 149);
 }
 
-static int proposition_exp(CHAR_DATA *ch)
+static int quest_exp(CHAR_DATA *ch)
 {
     int lvl;
     int exp;
@@ -549,7 +549,7 @@ static OBJ_INDEX_DATA *find_prop_obj_index(int min_level, int max_level)
     return NULL;
 }
 
-static bool check_all_done(PROPOSITION_DATA *prop)
+static bool check_all_done(QUEST_DATA *prop)
 {
     int i;
     for (i = 0; i < prop->prop_num_targets; i++)
@@ -558,10 +558,10 @@ static bool check_all_done(PROPOSITION_DATA *prop)
     return TRUE;
 }
 
-static void clear_proposition_slot(CHAR_DATA *ch, int slot)
+static void clear_quest_slot(CHAR_DATA *ch, int slot)
 {
     int i;
-    PROPOSITION_DATA *prop = get_prop_slot(ch, slot);
+    QUEST_DATA *prop = get_prop_slot(ch, slot);
 
     if (prop == NULL)
         return;
@@ -585,23 +585,23 @@ static void clear_proposition_slot(CHAR_DATA *ch, int slot)
     }
 }
 
-void clear_proposition(CHAR_DATA *ch)
+void clear_quest(CHAR_DATA *ch)
 {
     int i;
 
     if (IS_NPC(ch) || ch->pcdata == NULL)
         return;
 
-    for (i = 0; i < PROP_MAX_PROPOSITIONS; i++)
-        clear_proposition_slot(ch, i);
+    for (i = 0; i < PROP_MAX_QUESTS; i++)
+        clear_quest_slot(ch, i);
 }
 
-static void show_reward_preview(CHAR_DATA *ch, PROPOSITION_DATA *prop)
+static void show_reward_preview(CHAR_DATA *ch, QUEST_DATA *prop)
 {
     char buf[MAX_STRING_LENGTH];
-    int gold = prop->prop_static_id >= 0 ? prop->prop_reward_gold : proposition_gold(get_psuedo_level(ch));
-    int qp = prop->prop_static_id >= 0 ? prop->prop_reward_qp : proposition_qp(get_psuedo_level(ch));
-    int exp = proposition_exp(ch);
+    int gold = prop->prop_static_id >= 0 ? prop->prop_reward_gold : quest_gold(get_psuedo_level(ch));
+    int qp = prop->prop_static_id >= 0 ? prop->prop_reward_qp : quest_qp(get_psuedo_level(ch));
+    int exp = quest_exp(ch);
 
     sprintf(buf, "@@WReward on completion:@@N @@Y%d@@N gold, @@Y%d@@N exp, @@Y%d@@N quest point%s",
             gold, exp, qp, qp == 1 ? "" : "s");
@@ -671,19 +671,19 @@ static OBJ_DATA *create_static_reward_object(CHAR_DATA *ch, const STATIC_PROP_TE
     return reward;
 }
 
-static void proposition_list_static(CHAR_DATA *ch)
+static void quest_list_static(CHAR_DATA *ch)
 {
     int i;
     int ps_lvl;
     char buf[MAX_STRING_LENGTH];
 
     ps_lvl = get_psuedo_level(ch);
-    send_to_char("@@Y=== Available Static Propositions ===@@N\n\r", ch);
+    send_to_char("@@Y=== Available Static Quests ===@@N\n\r", ch);
 
     for (i = 0; i < static_prop_count; i++)
     {
         const STATIC_PROP_TEMPLATE *tpl = &static_prop_table[i];
-        if (tpl->id >= 0 && tpl->id < PROP_MAX_STATIC_PROPOSITIONS &&
+        if (tpl->id >= 0 && tpl->id < PROP_MAX_STATIC_QUESTS &&
             ch->pcdata->completed_static_props[tpl->id])
             continue;
         if (find_visible_npc_by_canonical_vnum(ch, tpl->offerer_vnum) == NULL)
@@ -703,9 +703,9 @@ static bool static_prop_already_active(CHAR_DATA *ch, int static_id)
 {
     int i;
 
-    for (i = 0; i < PROP_MAX_PROPOSITIONS; i++)
+    for (i = 0; i < PROP_MAX_QUESTS; i++)
     {
-        PROPOSITION_DATA *prop = &ch->pcdata->propositions[i];
+        QUEST_DATA *prop = &ch->pcdata->quests[i];
         if (prop->prop_type != PROP_TYPE_NONE && prop->prop_static_id == static_id)
             return TRUE;
     }
@@ -718,22 +718,22 @@ static bool static_prop_prerequisite_met(CHAR_DATA *ch, const STATIC_PROP_TEMPLA
     if (tpl->prerequisite_static_id < 0)
         return TRUE;
 
-    if (tpl->prerequisite_static_id >= PROP_MAX_STATIC_PROPOSITIONS)
+    if (tpl->prerequisite_static_id >= PROP_MAX_STATIC_QUESTS)
         return FALSE;
 
     return ch->pcdata->completed_static_props[tpl->prerequisite_static_id];
 }
 
-static void proposition_accept_static(CHAR_DATA *ch, int list_number)
+static void quest_accept_static(CHAR_DATA *ch, int list_number)
 {
     int slot, i;
     const STATIC_PROP_TEMPLATE *tpl;
-    PROPOSITION_DATA *prop;
+    QUEST_DATA *prop;
     char buf[MAX_STRING_LENGTH];
 
     if (list_number < 1 || list_number > static_prop_count)
     {
-        send_to_char("That proposition number is not valid.\n\r", ch);
+        send_to_char("That quest number is not valid.\n\r", ch);
         return;
     }
 
@@ -741,39 +741,39 @@ static void proposition_accept_static(CHAR_DATA *ch, int list_number)
 
     if (find_visible_npc_by_canonical_vnum(ch, tpl->offerer_vnum) == NULL)
     {
-        send_to_char("That static proposition is not being offered here.\n\r", ch);
+        send_to_char("That static quest is not being offered here.\n\r", ch);
         return;
     }
 
-    if (tpl->id >= 0 && tpl->id < PROP_MAX_STATIC_PROPOSITIONS &&
+    if (tpl->id >= 0 && tpl->id < PROP_MAX_STATIC_QUESTS &&
         ch->pcdata->completed_static_props[tpl->id])
     {
-        send_to_char("You have already completed that static proposition.\n\r", ch);
+        send_to_char("You have already completed that static quest.\n\r", ch);
         return;
     }
 
     if (!static_prop_prerequisite_met(ch, tpl))
     {
-        send_to_char("You have not unlocked that static proposition yet.\n\r", ch);
+        send_to_char("You have not unlocked that static quest yet.\n\r", ch);
         return;
     }
 
     if (static_prop_already_active(ch, tpl->id))
     {
-        send_to_char("You already have that static proposition active.\n\r", ch);
+        send_to_char("You already have that static quest active.\n\r", ch);
         return;
     }
 
     if (get_psuedo_level(ch) < tpl->min_level)
     {
-        sprintf(buf, "You must be at least pseudo-level %d for that static proposition.\n\r", tpl->min_level);
+        sprintf(buf, "You must be at least pseudo-level %d for that static quest.\n\r", tpl->min_level);
         send_to_char(buf, ch);
         return;
     }
 
     if (tpl->max_level > 0 && get_psuedo_level(ch) > tpl->max_level)
     {
-        sprintf(buf, "You must be pseudo-level %d or lower for that static proposition.\n\r", tpl->max_level);
+        sprintf(buf, "You must be pseudo-level %d or lower for that static quest.\n\r", tpl->max_level);
         send_to_char(buf, ch);
         return;
     }
@@ -781,12 +781,12 @@ static void proposition_accept_static(CHAR_DATA *ch, int list_number)
     slot = find_free_prop_slot(ch);
     if (slot < 0)
     {
-        send_to_char("You cannot carry any more propositions right now.\n\r", ch);
+        send_to_char("You cannot carry any more quests right now.\n\r", ch);
         return;
     }
 
-    clear_proposition_slot(ch, slot);
-    prop = &ch->pcdata->propositions[slot];
+    clear_quest_slot(ch, slot);
+    prop = &ch->pcdata->quests[slot];
     prop->prop_type = tpl->type;
     prop->prop_static_offerer_vnum = canonical_postmaster_vnum(tpl->offerer_vnum);
     prop->prop_num_targets = tpl->num_targets;
@@ -803,7 +803,7 @@ static void proposition_accept_static(CHAR_DATA *ch, int list_number)
         prop->prop_target_done[i] = FALSE;
     }
 
-    sprintf(buf, "@@GYou accepted static proposition [%d] in slot %d:@@N %s\n\r",
+    sprintf(buf, "@@GYou accepted static quest [%d] in slot %d:@@N %s\n\r",
             list_number, slot + 1, tpl->title);
     send_to_char(buf, ch);
     if (tpl->accept_message != NULL && tpl->accept_message[0] != '\0')
@@ -815,14 +815,14 @@ static void proposition_accept_static(CHAR_DATA *ch, int list_number)
     do_save(ch, "");
 }
 
-void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
+void quest_request(CHAR_DATA *ch, CHAR_DATA *postman)
 {
     int psuedo_lvl;
     int min_lvl, max_lvl;
     int type;
     int i;
     int slot;
-    PROPOSITION_DATA *prop;
+    QUEST_DATA *prop;
     char buf[MAX_STRING_LENGTH];
 
     if (IS_NPC(ch))
@@ -832,7 +832,7 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
     {
         int wait_seconds = ch->pcdata->prop_dynamic_cooldown_until - (int)current_time;
         char wait_buf[MAX_STRING_LENGTH];
-        sprintf(wait_buf, "You must wait %d more second%s before requesting a new dynamic proposition.\n\r",
+        sprintf(wait_buf, "You must wait %d more second%s before requesting a new dynamic quest.\n\r",
                 wait_seconds,
                 wait_seconds == 1 ? "" : "s");
         send_to_char(wait_buf, ch);
@@ -842,7 +842,7 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
     slot = find_free_prop_slot(ch);
     if (slot < 0)
     {
-        send_to_char("You already have the maximum number of active propositions.\n\r", ch);
+        send_to_char("You already have the maximum number of active quests.\n\r", ch);
         return;
     }
 
@@ -852,8 +852,8 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
 
     type = number_range(PROP_TYPE_KILL_VARIETY, PROP_TYPE_KILL_COUNT);
 
-    clear_proposition_slot(ch, slot);
-    prop = &ch->pcdata->propositions[slot];
+    clear_quest_slot(ch, slot);
+    prop = &ch->pcdata->quests[slot];
     prop->prop_type = type;
 
     switch (type)
@@ -893,12 +893,12 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
 
         if (found == 0)
         {
-            clear_proposition_slot(ch, slot);
+            clear_quest_slot(ch, slot);
             send_to_char("The postman shrugs. 'Sorry, I can't find any work for you right now.'\n\r", ch);
             return;
         }
 
-        send_to_char("\n\r@@GYou have received a new proposition!@@N\n\r\n\r", ch);
+        send_to_char("\n\r@@GYou have received a new quest!@@N\n\r\n\r", ch);
         sprintf(buf, "Assigned to slot @@Y%d@@N.\n\r", slot + 1);
         send_to_char(buf, ch);
         send_to_char("Hunt down each of the following enemies:\n\r", ch);
@@ -951,12 +951,12 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
 
         if (found == 0)
         {
-            clear_proposition_slot(ch, slot);
+            clear_quest_slot(ch, slot);
             send_to_char("The postman shrugs. 'Sorry, I can't find any work for you right now.'\n\r", ch);
             return;
         }
 
-        send_to_char("\n\r@@GYou have received a new proposition!@@N\n\r\n\r", ch);
+        send_to_char("\n\r@@GYou have received a new quest!@@N\n\r\n\r", ch);
         sprintf(buf, "Assigned to slot @@Y%d@@N.\n\r", slot + 1);
         send_to_char(buf, ch);
         send_to_char("Acquire each of the following items (credited when they enter your inventory):\n\r", ch);
@@ -980,7 +980,7 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
         midx = find_prop_mob_index(psuedo_lvl + 5, psuedo_lvl + 15);
         if (midx == NULL)
         {
-            clear_proposition_slot(ch, slot);
+            clear_quest_slot(ch, slot);
             send_to_char("The postman shrugs. 'Sorry, I can't find any work for you right now.'\n\r", ch);
             return;
         }
@@ -991,7 +991,7 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
         prop->prop_kill_needed = kill_need;
         prop->prop_kill_count = 0;
 
-        send_to_char("\n\r@@GYou have received a new proposition!@@N\n\r\n\r", ch);
+        send_to_char("\n\r@@GYou have received a new quest!@@N\n\r\n\r", ch);
         sprintf(buf, "Assigned to slot @@Y%d@@N.\n\r", slot + 1);
         send_to_char(buf, ch);
         sprintf(buf, "Slay @@Y%d@@N of @@R%s@@N.\n\r", kill_need, midx->short_descr);
@@ -1003,13 +1003,13 @@ void proposition_request(CHAR_DATA *ch, CHAR_DATA *postman)
     show_reward_preview(ch, prop);
     send_to_char("Return to any postman when done to claim your reward.\n\r", ch);
 
-    act("$N hands you a sealed note outlining your proposition.", ch, NULL, postman, TO_CHAR);
-    act("$N hands $n a sealed proposition.", ch, NULL, postman, TO_ROOM);
+    act("$N hands you a sealed note outlining your quest.", ch, NULL, postman, TO_CHAR);
+    act("$N hands $n a sealed quest.", ch, NULL, postman, TO_ROOM);
 
     do_save(ch, "");
 }
 
-void proposition_status(CHAR_DATA *ch)
+void quest_status(CHAR_DATA *ch)
 {
     int slot, i;
     char buf[MAX_STRING_LENGTH];
@@ -1017,17 +1017,17 @@ void proposition_status(CHAR_DATA *ch)
     if (IS_NPC(ch))
         return;
 
-    if (!proposition_active(ch))
+    if (!quest_active(ch))
     {
-        send_to_char("You have no active proposition. Visit a postman to request one.\n\r", ch);
+        send_to_char("You have no active quest. Visit a postman to request one.\n\r", ch);
         return;
     }
 
-    send_to_char("@@Y===  Proposition Status  ===@@N\n\r\n\r", ch);
+    send_to_char("@@Y===  Quest Status  ===@@N\n\r\n\r", ch);
 
-    for (slot = 0; slot < PROP_MAX_PROPOSITIONS; slot++)
+    for (slot = 0; slot < PROP_MAX_QUESTS; slot++)
     {
-        PROPOSITION_DATA *prop = &ch->pcdata->propositions[slot];
+        QUEST_DATA *prop = &ch->pcdata->quests[slot];
         if (prop->prop_type == PROP_TYPE_NONE)
             continue;
 
@@ -1094,7 +1094,7 @@ void proposition_status(CHAR_DATA *ch)
     }
 }
 
-void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
+void quest_complete(CHAR_DATA *ch, CHAR_DATA *postman)
 {
     int slot;
     bool has_completed = FALSE;
@@ -1103,9 +1103,9 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
     if (IS_NPC(ch))
         return;
 
-    for (slot = 0; slot < PROP_MAX_PROPOSITIONS; slot++)
+    for (slot = 0; slot < PROP_MAX_QUESTS; slot++)
     {
-        PROPOSITION_DATA *prop = &ch->pcdata->propositions[slot];
+        QUEST_DATA *prop = &ch->pcdata->quests[slot];
             int gold_reward;
         int exp_reward;
         int qp_reward;
@@ -1134,21 +1134,21 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
                 continue;
         }
 
-        gold_reward = prop->prop_static_id >= 0 ? prop->prop_reward_gold : proposition_gold(get_psuedo_level(ch));
-        exp_reward = proposition_exp(ch);
-        qp_reward = prop->prop_static_id >= 0 ? prop->prop_reward_qp : proposition_qp(get_psuedo_level(ch));
+        gold_reward = prop->prop_static_id >= 0 ? prop->prop_reward_gold : quest_gold(get_psuedo_level(ch));
+        exp_reward = quest_exp(ch);
+        qp_reward = prop->prop_static_id >= 0 ? prop->prop_reward_qp : quest_qp(get_psuedo_level(ch));
 
-        act("$N reviews your completed proposition and nods approvingly.", ch, NULL, turnin_npc, TO_CHAR);
-        act("$N reviews $n's completed proposition and nods approvingly.", ch, NULL, turnin_npc, TO_ROOM);
+        act("$N reviews your completed quest and nods approvingly.", ch, NULL, turnin_npc, TO_CHAR);
+        act("$N reviews $n's completed quest and nods approvingly.", ch, NULL, turnin_npc, TO_ROOM);
 
-        send_to_char("\n\r@@GProposition complete! You receive:@@N\n\r", ch);
+        send_to_char("\n\r@@GQuest complete! You receive:@@N\n\r", ch);
         sprintf(buf, "  @@Y%d@@N gold coins\n\r", gold_reward);
         send_to_char(buf, ch);
         sprintf(buf, "  @@Y%d@@N experience\n\r", exp_reward);
         send_to_char(buf, ch);
         sprintf(buf, "  @@Y%d@@N quest point%s\n\r", qp_reward, qp_reward == 1 ? "" : "s");
         send_to_char(buf, ch);
-        send_to_char("  @@Y1@@N proposition point\n\r", ch);
+        send_to_char("  @@Y1@@N quest point\n\r", ch);
 
         if (prop->prop_static_id >= 0)
         {
@@ -1163,7 +1163,7 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
         ch->gold += gold_reward;
         gain_exp(ch, exp_reward);
         ch->quest_points += qp_reward;
-        ch->pcdata->proposition_points += 1;
+        ch->pcdata->quest_points += 1;
 
         if (prop->prop_static_id >= 0)
         {
@@ -1178,32 +1178,32 @@ void proposition_complete(CHAR_DATA *ch, CHAR_DATA *postman)
             }
         }
 
-        if (prop->prop_static_id >= 0 && prop->prop_static_id < PROP_MAX_STATIC_PROPOSITIONS)
+        if (prop->prop_static_id >= 0 && prop->prop_static_id < PROP_MAX_STATIC_QUESTS)
             ch->pcdata->completed_static_props[prop->prop_static_id] = TRUE;
 
-        clear_proposition_slot(ch, slot);
+        clear_quest_slot(ch, slot);
         do_save(ch, "");
         return;
     }
 
-    if (!proposition_active(ch))
-        send_to_char("You have no proposition to turn in.\n\r", ch);
+    if (!quest_active(ch))
+        send_to_char("You have no quest to turn in.\n\r", ch);
     else if (has_completed)
-        send_to_char("You cannot turn that in here yet. Dynamic propositions need a postman; static propositions must be turned in to their offering mob.\n\r", ch);
+        send_to_char("You cannot turn that in here yet. Dynamic quests need a postman; static quests must be turned in to their offering mob.\n\r", ch);
     else
-        send_to_char("You have no completed proposition to turn in yet.\n\r", ch);
+        send_to_char("You have no completed quest to turn in yet.\n\r", ch);
 }
 
-void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim)
+void quest_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim)
 {
     int slot;
 
     if (IS_NPC(ch) || !IS_NPC(victim) || ch->pcdata == NULL)
         return;
 
-    for (slot = 0; slot < PROP_MAX_PROPOSITIONS; slot++)
+    for (slot = 0; slot < PROP_MAX_QUESTS; slot++)
     {
-        PROPOSITION_DATA *prop = &ch->pcdata->propositions[slot];
+        QUEST_DATA *prop = &ch->pcdata->quests[slot];
         int i;
         bool progress = FALSE;
         char buf[MAX_STRING_LENGTH];
@@ -1221,7 +1221,7 @@ void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim)
                 {
                     prop->prop_target_done[i] = TRUE;
                     progress = TRUE;
-                    sprintf(buf, "@@GProposition slot %d progress:@@N %s killed!\n\r",
+                    sprintf(buf, "@@GQuest slot %d progress:@@N %s killed!\n\r",
                             slot + 1, victim->short_descr);
                     send_to_char(buf, ch);
                     break;
@@ -1230,7 +1230,7 @@ void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim)
             if (progress && check_all_done(prop))
             {
                 prop->prop_completed = TRUE;
-                send_to_char("\n\r@@G*** Proposition complete! Visit any postman to claim your reward. ***@@N\n\r\n\r", ch);
+                send_to_char("\n\r@@G*** Quest complete! Visit any postman to claim your reward. ***@@N\n\r\n\r", ch);
             }
             break;
 
@@ -1239,7 +1239,7 @@ void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim)
             {
                 prop->prop_kill_count++;
                 progress = TRUE;
-                sprintf(buf, "@@GProposition slot %d progress:@@N %d/%d %s slain.\n\r",
+                sprintf(buf, "@@GQuest slot %d progress:@@N %d/%d %s slain.\n\r",
                         slot + 1,
                         prop->prop_kill_count,
                         prop->prop_kill_needed,
@@ -1248,7 +1248,7 @@ void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim)
                 if (prop->prop_kill_count >= prop->prop_kill_needed)
                 {
                     prop->prop_completed = TRUE;
-                    send_to_char("\n\r@@G*** Proposition complete! Visit any postman to claim your reward. ***@@N\n\r\n\r", ch);
+                    send_to_char("\n\r@@G*** Quest complete! Visit any postman to claim your reward. ***@@N\n\r\n\r", ch);
                 }
             }
             break;
@@ -1259,16 +1259,16 @@ void proposition_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim)
     }
 }
 
-void proposition_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj)
+void quest_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj)
 {
     int slot;
 
     if (IS_NPC(ch) || ch->pcdata == NULL)
         return;
 
-    for (slot = 0; slot < PROP_MAX_PROPOSITIONS; slot++)
+    for (slot = 0; slot < PROP_MAX_QUESTS; slot++)
     {
-        PROPOSITION_DATA *prop = &ch->pcdata->propositions[slot];
+        QUEST_DATA *prop = &ch->pcdata->quests[slot];
         int i;
         char buf[MAX_STRING_LENGTH];
 
@@ -1281,14 +1281,14 @@ void proposition_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj)
                 prop->prop_target_vnum[i] == obj->pIndexData->vnum)
             {
                 prop->prop_target_done[i] = TRUE;
-                sprintf(buf, "@@GProposition slot %d progress:@@N %s obtained!\n\r",
+                sprintf(buf, "@@GQuest slot %d progress:@@N %s obtained!\n\r",
                         slot + 1, obj->short_descr);
                 send_to_char(buf, ch);
 
                 if (check_all_done(prop))
                 {
                     prop->prop_completed = TRUE;
-                    send_to_char("\n\r@@G*** Proposition complete! Visit any postman to claim your reward. ***@@N\n\r\n\r", ch);
+                    send_to_char("\n\r@@G*** Quest complete! Visit any postman to claim your reward. ***@@N\n\r\n\r", ch);
                 }
 
                 extract_obj(obj);
@@ -1300,42 +1300,42 @@ void proposition_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj)
 }
 
 
-void proposition_cancel(CHAR_DATA *ch, int slot)
+void quest_cancel(CHAR_DATA *ch, int slot)
 {
-    PROPOSITION_DATA *prop;
+    QUEST_DATA *prop;
     char buf[MAX_STRING_LENGTH];
 
     if (IS_NPC(ch) || ch->pcdata == NULL)
         return;
 
-    if (slot < 0 || slot >= PROP_MAX_PROPOSITIONS)
+    if (slot < 0 || slot >= PROP_MAX_QUESTS)
     {
-        send_to_char("Usage: proposition cancel <slot# 1-3>\n\r", ch);
+        send_to_char("Usage: quest cancel <slot# 1-3>\n\r", ch);
         return;
     }
 
-    prop = &ch->pcdata->propositions[slot];
+    prop = &ch->pcdata->quests[slot];
     if (prop->prop_type == PROP_TYPE_NONE)
     {
-        send_to_char("That proposition slot is already empty.\n\r", ch);
+        send_to_char("That quest slot is already empty.\n\r", ch);
         return;
     }
 
     if (prop->prop_static_id < 0)
         ch->pcdata->prop_dynamic_cooldown_until = (int)current_time + 15 * 60;
 
-    clear_proposition_slot(ch, slot);
+    clear_quest_slot(ch, slot);
 
-    sprintf(buf, "You cancel proposition slot @@Y%d@@N.\n\r", slot + 1);
+    sprintf(buf, "You cancel quest slot @@Y%d@@N.\n\r", slot + 1);
     send_to_char(buf, ch);
 
     if (ch->pcdata->prop_dynamic_cooldown_until > (int)current_time)
-        send_to_char("Cancelling a dynamic proposition starts a 15 minute request cooldown.\n\r", ch);
+        send_to_char("Cancelling a dynamic quest starts a 15 minute request cooldown.\n\r", ch);
 
     do_save(ch, "");
 }
 
-void do_proposition(CHAR_DATA *ch, char *argument)
+void do_quest(CHAR_DATA *ch, char *argument)
 {
     char arg[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
@@ -1350,13 +1350,13 @@ void do_proposition(CHAR_DATA *ch, char *argument)
 
     if (arg[0] == '\0')
     {
-        send_to_char("Usage: proposition <request|status|complete|list|accept #|cancel #>\n\r", ch);
+        send_to_char("Usage: quest <request|status|complete|list|accept #|cancel #>\n\r", ch);
         return;
     }
 
     if (!str_prefix(arg, "status"))
     {
-        proposition_status(ch);
+        quest_status(ch);
         return;
     }
 
@@ -1364,10 +1364,10 @@ void do_proposition(CHAR_DATA *ch, char *argument)
     {
         if (!is_number(arg2))
         {
-            send_to_char("Usage: proposition cancel <slot# 1-3>\n\r", ch);
+            send_to_char("Usage: quest cancel <slot# 1-3>\n\r", ch);
             return;
         }
-        proposition_cancel(ch, atoi(arg2) - 1);
+        quest_cancel(ch, atoi(arg2) - 1);
         return;
     }
 
@@ -1390,24 +1390,24 @@ void do_proposition(CHAR_DATA *ch, char *argument)
                 send_to_char("You need to be with a postman to do that.\n\r", ch);
                 return;
             }
-            proposition_request(ch, postman);
+            quest_request(ch, postman);
         }
         else if (!str_prefix(arg, "complete"))
-            proposition_complete(ch, postman);
+            quest_complete(ch, postman);
         else if (!str_prefix(arg, "list"))
-            proposition_list_static(ch);
+            quest_list_static(ch);
         else
         {
             if (!is_number(arg2))
             {
-                send_to_char("Usage: proposition accept <number>\n\r", ch);
+                send_to_char("Usage: quest accept <number>\n\r", ch);
                 return;
             }
-            proposition_accept_static(ch, atoi(arg2));
+            quest_accept_static(ch, atoi(arg2));
         }
 
         return;
     }
 
-    send_to_char("Usage: proposition <request|status|complete|list|accept #|cancel #>\n\r", ch);
+    send_to_char("Usage: quest <request|status|complete|list|accept #|cancel #>\n\r", ch);
 }

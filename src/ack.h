@@ -55,8 +55,8 @@
 #include "act_mob.h"
 #endif
 
-#ifndef PROPOSITION_H
-#include "proposition.h"
+#ifndef QUEST_H
+#include "quest.h"
 #endif
 
 #ifndef INVASION_H
@@ -710,7 +710,7 @@ struct char_data
 /*
  * Data which only PC's have.
  */
-struct proposition_data
+struct quest_data
 {
    int prop_type;                             /* PROP_TYPE_* constant; 0=none */
    bool prop_completed;                       /* TRUE = ready to hand in      */
@@ -719,7 +719,7 @@ struct proposition_data
    bool prop_target_done[PROP_MAX_TARGETS];   /* per-slot completion flag     */
    int prop_kill_needed;                      /* type 3: kill goal            */
    int prop_kill_count;                       /* type 3: kills so far         */
-   int prop_static_id;                        /* static proposition id or -1  */
+   int prop_static_id;                        /* static quest id or -1  */
    int prop_reward_gold;                      /* static gold reward override  */
    int prop_reward_qp;                        /* static qp reward override    */
    int prop_reward_item_vnum;                 /* static item reward vnum      */
@@ -815,11 +815,11 @@ struct pc_data
    bool valid_email;
    int invasion_points;
    int invasion_rewards[3];
-   int proposition_points;
+   int quest_points;
    int prop_dynamic_cooldown_until;        /* earliest time for new dynamic prop */
-   /* --- Proposition quest system --- */
-   PROPOSITION_DATA propositions[PROP_MAX_PROPOSITIONS];
-   bool completed_static_props[PROP_MAX_STATIC_PROPOSITIONS];
+   /* --- Quest quest system --- */
+   QUEST_DATA quests[PROP_MAX_QUESTS];
+   bool completed_static_props[PROP_MAX_STATIC_QUESTS];
 };
 
 

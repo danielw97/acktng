@@ -80,7 +80,7 @@ extern NPC_GROUP_DATA *last_npc_group;
 
 extern PORTAL_DATA *portal_free;
 extern AFFECT_DATA *affect_free;
-extern PROPOSITION_DATA *proposition_free;
+extern QUEST_DATA *quest_free;
 extern ROOM_AFFECT_DATA *raffect_free;
 extern AREA_DATA *area_free;
 extern BAN_DATA *ban_free;

@@ -841,8 +841,8 @@ const struct cmd_type cmd_table[] = {
     {"reincarnate", do_reincarnate, POS_STANDING, 0, LOG_ALWAYS,
      C_TYPE_ACTION, C_SHOW_ALWAYS},
 
-    /* Proposition */
-    { "proposition", do_proposition, POS_STANDING, 1, LOG_NORMAL,
+    /* Quest */
+    { "quest", do_quest, POS_STANDING, 1, LOG_NORMAL,
       C_TYPE_ACTION, C_SHOW_ALWAYS },
 
     /*

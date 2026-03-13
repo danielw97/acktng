@@ -394,14 +394,14 @@ block; it is accessed via `ch->pcdata`.  NPCs always have `pcdata == NULL`.
 | `quest_points` | `sh_int` | Quest points earned |
 | `invasion_points` | `int` | Points earned during invasion events |
 | `invasion_rewards[3]` | `int []` | Invasion reward slots |
-| `proposition_points` | `int` | Proposition quest points |
-| `prop_type` | `int` | Active proposition type (`PROP_TYPE_*`; 0 = none) |
-| `prop_completed` | `bool` | `true` when the proposition is ready to hand in |
+| `quest_points` | `int` | Quest quest points |
+| `prop_type` | `int` | Active quest type (`PROP_TYPE_*`; 0 = none) |
+| `prop_completed` | `bool` | `true` when the quest is ready to hand in |
 | `prop_num_targets` | `int` | Number of active target slots (1–5) |
 | `prop_target_vnum[PROP_MAX_TARGETS]` | `int []` | Mob or object VNUM per target slot |
 | `prop_target_done[PROP_MAX_TARGETS]` | `bool []` | Completion flag per target slot |
-| `prop_kill_needed` | `int` | Type-3 proposition: total kills required |
-| `prop_kill_count` | `int` | Type-3 proposition: kills completed so far |
+| `prop_kill_needed` | `int` | Type-3 quest: total kills required |
+| `prop_kill_count` | `int` | Type-3 quest: kills completed so far |
 
 ### Vampire / Werewolf specifics
 
