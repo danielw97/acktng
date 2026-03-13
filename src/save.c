@@ -429,6 +429,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
             fprintf(fp, "PropRewardItem%d %d %d\n", i,
                     prop->prop_reward_item_vnum,
                     prop->prop_reward_item_count);
+            fprintf(fp, "PropStaticOfferer%d %d\n", i, prop->prop_static_offerer_vnum);
          }
          fprintf(fp, "PropStaticDoneCap %d\n", PROP_MAX_STATIC_PROPOSITIONS);
          for (i = 0; i < PROP_MAX_STATIC_PROPOSITIONS; i++)
@@ -731,6 +732,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name, bool system_call)
       {
          memset(&ch->pcdata->propositions[foo], 0, sizeof(PROPOSITION_DATA));
          ch->pcdata->propositions[foo].prop_static_id = -1;
+         ch->pcdata->propositions[foo].prop_static_offerer_vnum = 0;
       }
       for (foo = 0; foo < PROP_MAX_STATIC_PROPOSITIONS; foo++)
          ch->pcdata->completed_static_props[foo] = FALSE;
@@ -1404,6 +1406,12 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
             {
                ch->pcdata->propositions[prop_i].prop_reward_item_vnum = fread_number(fp);
                ch->pcdata->propositions[prop_i].prop_reward_item_count = fread_number(fp);
+               fMatch = TRUE;
+               break;
+            }
+            if (sscanf(word, "PropStaticOfferer%d", &prop_i) == 1 && prop_i >= 0 && prop_i < PROP_MAX_PROPOSITIONS)
+            {
+               ch->pcdata->propositions[prop_i].prop_static_offerer_vnum = fread_number(fp);
                fMatch = TRUE;
                break;
             }

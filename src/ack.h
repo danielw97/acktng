@@ -724,6 +724,7 @@ struct proposition_data
    int prop_reward_qp;                        /* static qp reward override    */
    int prop_reward_item_vnum;                 /* static item reward vnum      */
    int prop_reward_item_count;                /* static item reward quantity  */
+   int prop_static_offerer_vnum;              /* required static turn-in mob  */
 };
 
 struct pc_data
