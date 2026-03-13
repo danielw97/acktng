@@ -877,6 +877,31 @@ static void act_avoidance_notvict(CHAR_DATA *ch, CHAR_DATA *victim, const char *
    }
 }
 
+int get_level_scaled_avoidance_floor(CHAR_DATA *ch, CHAR_DATA *victim, int base_chance)
+{
+   int level_diff = 0;
+
+   if (ch == NULL || victim == NULL)
+      return 0;
+
+   level_diff = get_psuedo_level(victim) - get_psuedo_level(ch);
+
+   /*
+    * Baseline avoidance expectations:
+    *  - PC vs PC and NPC vs NPC: equal levels anchor the baseline.
+    *  - NPC victim vs PC attacker: victim being 20 levels higher anchors the baseline.
+    */
+   if (!IS_NPC(ch) && IS_NPC(victim))
+      level_diff -= 20;
+
+   base_chance -= abs(level_diff) / 2;
+
+   if (base_chance < 0)
+      return 0;
+
+   return base_chance;
+}
+
 bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
 {
    int max_avoidance = 75;
@@ -896,8 +921,11 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
       max_avoidance += 20;
 
    int parry = get_parry(victim) - get_evasion_piercing(ch);
+   int parry_floor = get_level_scaled_avoidance_floor(ch, victim, 10);
    if (parry > 0)
       parry += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
+   if (parry < parry_floor)
+      parry = parry_floor;
    if (!can_see(ch, victim) && parry > 0)
       parry += 20;
    if (!can_see(victim, ch) && parry > 0)
@@ -929,8 +957,11 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    }
 
    int block = get_block(victim) - get_evasion_piercing(ch);
+   int block_floor = get_level_scaled_avoidance_floor(ch, victim, 30);
    if (block > 0)
       block += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
+   if (block < block_floor)
+      block = block_floor;
    if (!can_see(ch, victim) && block > 0)
       block += 20;
    if (!can_see(victim, ch) && block > 0)
@@ -962,8 +993,11 @@ bool check_avoidance(CHAR_DATA *ch, CHAR_DATA *victim)
    }
 
    int dodge = get_dodge(victim) - get_evasion_piercing(ch);
+   int dodge_floor = get_level_scaled_avoidance_floor(ch, victim, 10);
    if (dodge > 0)
       dodge += (get_psuedo_level(victim) - get_psuedo_level(ch)) / 2;
+   if (dodge < dodge_floor)
+      dodge = dodge_floor;
    if (!can_see(ch, victim) && dodge > 0)
       dodge += 20;
    if (!can_see(victim, ch) && dodge > 0)

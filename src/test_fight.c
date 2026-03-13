@@ -68,6 +68,7 @@ bool should_summon_assist_master_round(int is_npc, int is_charmed, int has_maste
 bool should_summon_cast_round(int is_npc, int is_player_summon,
                               int is_fighting, int has_spec_fun,
                               int should_cast_now);
+int get_level_scaled_avoidance_floor(CHAR_DATA *ch, CHAR_DATA *victim, int base_chance);
 
 static void clear_character(CHAR_DATA *ch)
 {
@@ -535,6 +536,48 @@ static void test_get_evasion_piercing_composition(void)
 }
 
 
+static void test_level_scaled_avoidance_floor_baselines(void)
+{
+    CHAR_DATA attacker;
+    CHAR_DATA victim;
+
+    clear_character(&attacker);
+    clear_character(&victim);
+
+    attacker.level = 50;
+    victim.level = 50;
+    assert(get_level_scaled_avoidance_floor(&attacker, &victim, 10) == 10);
+
+    attacker.act = ACT_IS_NPC;
+    victim.act = ACT_IS_NPC;
+    assert(get_level_scaled_avoidance_floor(&attacker, &victim, 10) == 10);
+
+    attacker.act = 0;
+    victim.act = ACT_IS_NPC;
+    victim.level = 70;
+    assert(get_level_scaled_avoidance_floor(&attacker, &victim, 10) == 10);
+}
+
+static void test_level_scaled_avoidance_floor_level_gap_scaling(void)
+{
+    CHAR_DATA attacker;
+    CHAR_DATA victim;
+
+    clear_character(&attacker);
+    clear_character(&victim);
+
+    attacker.level = 50;
+    victim.level = 60;
+    assert(get_level_scaled_avoidance_floor(&attacker, &victim, 10) == 5);
+
+    victim.level = 40;
+    assert(get_level_scaled_avoidance_floor(&attacker, &victim, 30) == 25);
+
+    victim.act = ACT_IS_NPC;
+    victim.level = 100;
+    assert(get_level_scaled_avoidance_floor(&attacker, &victim, 10) == 0);
+}
+
 static void test_boss_avoidance_bonuses(void)
 {
     CHAR_DATA ch;
@@ -575,6 +618,8 @@ int main(void)
     test_should_summon_assist_master_round();
     test_should_summon_cast_round();
     test_get_evasion_piercing_composition();
+    test_level_scaled_avoidance_floor_baselines();
+    test_level_scaled_avoidance_floor_level_gap_scaling();
     test_boss_avoidance_bonuses();
 
     puts("test_fight: all tests passed");
