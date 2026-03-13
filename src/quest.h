@@ -23,7 +23,7 @@
 
 /* Maximum simultaneous quests on a player */
 #define QUEST_MAX_QUESTS         3
-#define QUEST_MAX_STATIC_QUESTS  48
+#define QUEST_MAX_STATIC_QUESTS  66
 
 void do_quest             args((CHAR_DATA *ch, char *argument));
 void quest_request        args((CHAR_DATA *ch, CHAR_DATA *postman));
