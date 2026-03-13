@@ -20,6 +20,9 @@ void keep_format_chest_short_descr(const char *owner_name, char *dest, size_t de
 void keep_format_room_name(const char *owner_name, char *dest, size_t dest_size);
 void keep_format_room_description(const char *owner_name, char *dest, size_t dest_size);
 int keep_chest_max_items(void);
+int keep_storage_tier_for_test(int max_items);
+int keep_storage_upgrade_cost_for_test(int current_max_items);
+int keep_storage_next_max_items_for_test(int current_max_items);
 int keep_is_customization_command(const char *arg);
 int keep_is_upgrade_command(const char *arg);
 int keep_player_can_customize(const CHAR_DATA *ch);
@@ -74,6 +77,32 @@ static void test_keep_chest_max_items(void)
     assert(keep_chest_max_items() == 50);
 }
 
+static void test_keep_storage_tier_calculation(void)
+{
+    assert(keep_storage_tier_for_test(50) == 0);
+    assert(keep_storage_tier_for_test(51) == 1);
+    assert(keep_storage_tier_for_test(55) == 1);
+    assert(keep_storage_tier_for_test(56) == 2);
+    assert(keep_storage_tier_for_test(60) == 2);
+    assert(keep_storage_tier_for_test(65) == 3);
+}
+
+static void test_keep_storage_upgrade_cost_tiers(void)
+{
+    assert(keep_storage_upgrade_cost_for_test(50) == 50);
+    assert(keep_storage_upgrade_cost_for_test(55) == 100);
+    assert(keep_storage_upgrade_cost_for_test(60) == 150);
+    assert(keep_storage_upgrade_cost_for_test(65) == 200);
+}
+
+static void test_keep_storage_next_max_items_steps_by_five(void)
+{
+    assert(keep_storage_next_max_items_for_test(45) == 55);
+    assert(keep_storage_next_max_items_for_test(50) == 55);
+    assert(keep_storage_next_max_items_for_test(55) == 60);
+    assert(keep_storage_next_max_items_for_test(60) == 65);
+}
+
 static void test_keep_room_name_uses_creator(void)
 {
     char buf[128];
@@ -119,6 +148,7 @@ static void test_keep_upgrade_command_detection(void)
 {
     assert(keep_is_upgrade_command("regen") != 0);
     assert(keep_is_upgrade_command("inside") != 0);
+    assert(keep_is_upgrade_command("storage") != 0);
     assert(keep_is_upgrade_command("create") == 0);
     assert(keep_is_upgrade_command(NULL) == 0);
 }
@@ -161,6 +191,9 @@ int main(void)
     test_keep_chest_name_noops_for_null_dest();
     test_keep_chest_name_noops_for_zero_dest_size();
     test_keep_chest_max_items();
+    test_keep_storage_tier_calculation();
+    test_keep_storage_upgrade_cost_tiers();
+    test_keep_storage_next_max_items_steps_by_five();
     test_keep_room_name_uses_creator();
     test_keep_room_name_handles_missing_owner();
     test_keep_room_description_uses_creator();
