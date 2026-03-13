@@ -710,7 +710,7 @@ const struct cmd_type cmd_table[] = {
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"purge", do_purge, POS_DEAD, L_HER, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
-    {"iquest", do_quest, POS_DEAD, L_DEI, LOG_NORMAL,
+    {"iquest", do_iquest, POS_DEAD, L_DEI, LOG_NORMAL,
      C_TYPE_IMM, C_SHOW_ALWAYS},
     {"restore", do_restore, POS_DEAD, L_DEI, LOG_ALWAYS,
      C_TYPE_IMM, C_SHOW_ALWAYS},

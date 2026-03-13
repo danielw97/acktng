@@ -1,177 +1,379 @@
 #include <assert.h>
+#include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <string.h>
+#include "globals.h"
 
-#include "config.h"
-#define DEC_GLOBALS_H 1
-#include "ack.h"
+time_t current_time;
 
-void quest_set_crusade_level_range_for_mob_level(int mob_level, int *minimum_level, int *maximum_level);
-short int quest_resolve_crusade_personality(short int personality, int mob_level);
-short int quest_tier_from_level(int mob_level);
-void quest_set_crusade_level_range_for_tier(short int tier, int *minimum_level, int *maximum_level);
-void quest_set_effective_crusade_level_range(short int tier, int highest_level_in_range, int *minimum_level, int *maximum_level);
-int quest_crusade_level_cap_for_range(int range_minimum, int range_maximum, int highest_level_in_range);
-void quest_note_player_crusade_range(int pseudo_level, int *highest_mortal, int *highest_remortal, int *highest_adept);
-int quest_is_valid_crusade_mobile(CHAR_DATA *target, int min_level, int max_level);
+void quest_obj_notify(CHAR_DATA *ch, OBJ_DATA *obj);
+void quest_kill_notify(CHAR_DATA *ch, CHAR_DATA *victim);
+void clear_quest(CHAR_DATA *ch);
+void quest_cancel(CHAR_DATA *ch, int slot);
+void quest_load_static_templates(void);
+int quest_unit_static_count(void);
+const char *quest_unit_static_title(int static_id);
+const char *quest_unit_static_accept_message(int static_id);
+const char *quest_unit_static_completion_message(int static_id);
+int quest_unit_static_max_level(int static_id);
+int quest_unit_canonical_postmaster_vnum(int vnum);
 
-static void test_range_for_normal_mob_level(void)
+
+char *_str_dup(const char *str, const char *func)
 {
-   int min_level = 0;
-   int max_level = 0;
-
-   quest_set_crusade_level_range_for_mob_level(50, &min_level, &max_level);
-
-   assert(min_level == 1);
-   assert(max_level == 100);
-
-   quest_set_crusade_level_range_for_mob_level(120, &min_level, &max_level);
-
-   assert(min_level == 101);
-   assert(max_level == 149);
-
-   quest_set_crusade_level_range_for_mob_level(160, &min_level, &max_level);
-
-   assert(min_level == 150);
-   assert(max_level == 170);
+    (void)func;
+    if (str == NULL)
+        return NULL;
+    {
+        size_t len = strlen(str) + 1;
+        char *out = malloc(len);
+        assert(out != NULL);
+        memcpy(out, str, len);
+        return out;
+    }
 }
 
-static void test_range_clamps_to_valid_bounds(void)
+void _free_string(char *pstr, const char *func)
 {
-   int min_level = 0;
-   int max_level = 0;
-
-   quest_set_crusade_level_range_for_mob_level(10, &min_level, &max_level);
-   assert(min_level == 1);
-   assert(max_level == 100);
-
-   quest_set_crusade_level_range_for_mob_level(1000, &min_level, &max_level);
-   assert(min_level == 150);
-   assert(max_level == 170);
+    (void)func;
+    free(pstr);
 }
 
-static void test_invalid_personality_resolves_from_mob_level(void)
+void log_string(const char *str)
 {
-   assert(quest_resolve_crusade_personality(0, 10) == 1);
-   assert(quest_resolve_crusade_personality(0, 75) == 1);
-   assert(quest_resolve_crusade_personality(0, 100) == 1);
-   assert(quest_resolve_crusade_personality(0, 120) == 2);
-   assert(quest_resolve_crusade_personality(0, 150) == 3);
+    (void)str;
+}
+
+void bug(const char *str, int param)
+{
+    (void)str;
+    (void)param;
+}
+
+void bugf(char *fmt, ...)
+{
+    (void)fmt;
+}
+
+static int extracted_calls;
+static int save_calls;
+static OBJ_DATA *last_extracted;
+
+void extract_obj(OBJ_DATA *obj)
+{
+    extracted_calls++;
+    last_extracted = obj;
+}
+
+void do_save(CHAR_DATA *ch, char *argument)
+{
+    (void)ch;
+    (void)argument;
+    save_calls++;
+}
+
+void send_to_char(const char *txt, CHAR_DATA *ch)
+{
+    (void)txt;
+    (void)ch;
+}
+
+static void reset_counters(void)
+{
+    extracted_calls = 0;
+    save_calls = 0;
+    last_extracted = NULL;
+}
+
+static CHAR_DATA make_char(PC_DATA *pc)
+{
+    CHAR_DATA ch;
+    memset(&ch, 0, sizeof(ch));
+    memset(pc, 0, sizeof(*pc));
+    ch.pcdata = pc;
+    ch.act = 0;
+    ch.pcdata->quests[0].quest_type = QUEST_TYPE_COLLECT_ITEMS;
+    return ch;
+}
+
+static OBJ_DATA make_obj(OBJ_INDEX_DATA *index, int vnum, const char *short_descr)
+{
+    OBJ_DATA obj;
+    memset(&obj, 0, sizeof(obj));
+    memset(index, 0, sizeof(*index));
+    index->vnum = vnum;
+    obj.pIndexData = index;
+    obj.short_descr = (char *)short_descr;
+    return obj;
+}
+
+static CHAR_DATA make_victim(MOB_INDEX_DATA *index, int vnum, const char *short_descr)
+{
+    CHAR_DATA victim;
+    memset(&victim, 0, sizeof(victim));
+    memset(index, 0, sizeof(*index));
+    index->vnum = vnum;
+    victim.act = ACT_IS_NPC;
+    victim.pIndexData = index;
+    victim.short_descr = (char *)short_descr;
+    return victim;
+}
+
+static void test_extracts_and_saves_when_target_matches(void)
+{
+    PC_DATA pc;
+    OBJ_INDEX_DATA index;
+    CHAR_DATA ch = make_char(&pc);
+    OBJ_DATA obj = make_obj(&index, 1234, "a target item");
+
+    ch.pcdata->quests[0].quest_num_targets = 1;
+    ch.pcdata->quests[0].quest_target_vnum[0] = 1234;
+    ch.pcdata->quests[0].quest_target_done[0] = FALSE;
+
+    reset_counters();
+    quest_obj_notify(&ch, &obj);
+
+    assert(ch.pcdata->quests[0].quest_target_done[0] == TRUE);
+    assert(extracted_calls == 1);
+    assert(last_extracted == &obj);
+    assert(save_calls == 1);
+}
+
+static void test_no_extract_when_not_a_target(void)
+{
+    PC_DATA pc;
+    OBJ_INDEX_DATA index;
+    CHAR_DATA ch = make_char(&pc);
+    OBJ_DATA obj = make_obj(&index, 5678, "other item");
+
+    ch.pcdata->quests[0].quest_num_targets = 1;
+    ch.pcdata->quests[0].quest_target_vnum[0] = 1234;
+
+    reset_counters();
+    quest_obj_notify(&ch, &obj);
+
+    assert(ch.pcdata->quests[0].quest_target_done[0] == FALSE);
+    assert(extracted_calls == 0);
+    assert(save_calls == 0);
+}
+
+static void test_marks_completed_when_final_item_collected(void)
+{
+    PC_DATA pc;
+    OBJ_INDEX_DATA index;
+    CHAR_DATA ch = make_char(&pc);
+    OBJ_DATA obj = make_obj(&index, 2222, "final target");
+
+    ch.pcdata->quests[0].quest_num_targets = 2;
+    ch.pcdata->quests[0].quest_target_vnum[0] = 1111;
+    ch.pcdata->quests[0].quest_target_done[0] = TRUE;
+    ch.pcdata->quests[0].quest_target_vnum[1] = 2222;
+
+    reset_counters();
+    quest_obj_notify(&ch, &obj);
+
+    assert(ch.pcdata->quests[0].quest_target_done[1] == TRUE);
+    assert(ch.pcdata->quests[0].quest_completed == TRUE);
+    assert(extracted_calls == 1);
+    assert(save_calls == 1);
+}
+
+static void test_collect_progress_works_for_nonzero_slot(void)
+{
+    PC_DATA pc;
+    OBJ_INDEX_DATA index;
+    CHAR_DATA ch = make_char(&pc);
+    OBJ_DATA obj = make_obj(&index, 3333, "slot one target");
+
+    ch.pcdata->quests[0].quest_type = QUEST_TYPE_NONE;
+    ch.pcdata->quests[1].quest_type = QUEST_TYPE_COLLECT_ITEMS;
+    ch.pcdata->quests[1].quest_num_targets = 1;
+    ch.pcdata->quests[1].quest_target_vnum[0] = 3333;
+
+    reset_counters();
+    quest_obj_notify(&ch, &obj);
+
+    assert(ch.pcdata->quests[1].quest_target_done[0] == TRUE);
+    assert(extracted_calls == 1);
+    assert(save_calls == 1);
+}
+
+static void test_kill_progress_works_for_nonzero_slot(void)
+{
+    PC_DATA pc;
+    MOB_INDEX_DATA index;
+    CHAR_DATA ch = make_char(&pc);
+    CHAR_DATA victim = make_victim(&index, 4321, "a wanted brigand");
+
+    ch.pcdata->quests[0].quest_type = QUEST_TYPE_NONE;
+    ch.pcdata->quests[1].quest_type = QUEST_TYPE_KILL_COUNT;
+    ch.pcdata->quests[1].quest_num_targets = 1;
+    ch.pcdata->quests[1].quest_target_vnum[0] = 4321;
+    ch.pcdata->quests[1].quest_kill_needed = 1;
+
+    reset_counters();
+    quest_kill_notify(&ch, &victim);
+
+    assert(ch.pcdata->quests[1].quest_kill_count == 1);
+    assert(ch.pcdata->quests[1].quest_completed == TRUE);
+    assert(save_calls == 1);
+}
+
+static void test_kill_notify_ignores_non_matching_target(void)
+{
+    PC_DATA pc;
+    MOB_INDEX_DATA index;
+    CHAR_DATA ch = make_char(&pc);
+    CHAR_DATA victim = make_victim(&index, 9999, "an unrelated foe");
+
+    ch.pcdata->quests[0].quest_type = QUEST_TYPE_KILL_COUNT;
+    ch.pcdata->quests[0].quest_num_targets = 1;
+    ch.pcdata->quests[0].quest_target_vnum[0] = 1234;
+    ch.pcdata->quests[0].quest_kill_needed = 2;
+
+    reset_counters();
+    quest_kill_notify(&ch, &victim);
+
+    assert(ch.pcdata->quests[0].quest_kill_count == 0);
+    assert(ch.pcdata->quests[0].quest_completed == FALSE);
+    assert(save_calls == 0);
+}
+
+static void test_clear_quest_resets_all_slots(void)
+{
+    PC_DATA pc;
+    CHAR_DATA ch = make_char(&pc);
+
+    ch.pcdata->quests[0].quest_type = QUEST_TYPE_KILL_COUNT;
+    ch.pcdata->quests[0].quest_static_id = 4;
+    ch.pcdata->quests[0].quest_reward_item_vnum = 123;
+    ch.pcdata->quests[1].quest_type = QUEST_TYPE_COLLECT_ITEMS;
+    ch.pcdata->quests[1].quest_num_targets = 2;
+    ch.pcdata->quests[1].quest_target_vnum[0] = 88;
+    ch.pcdata->quests[2].quest_type = QUEST_TYPE_KILL_VARIETY;
+    ch.pcdata->quests[2].quest_target_done[0] = TRUE;
+
+    clear_quest(&ch);
+
+    for (int i = 0; i < QUEST_MAX_QUESTS; i++)
+    {
+        assert(ch.pcdata->quests[i].quest_type == QUEST_TYPE_NONE);
+        assert(ch.pcdata->quests[i].quest_num_targets == 0);
+        assert(ch.pcdata->quests[i].quest_completed == FALSE);
+        assert(ch.pcdata->quests[i].quest_static_id == -1);
+        assert(ch.pcdata->quests[i].quest_reward_item_vnum == 0);
+    }
 }
 
 
-static void test_crusade_level_cap_for_range(void)
+static void test_cancel_dynamic_sets_cooldown_and_clears_slot(void)
 {
-   assert(quest_crusade_level_cap_for_range(1, 100, 40) == 60);
-   assert(quest_crusade_level_cap_for_range(101, 149, 120) == 140);
-   assert(quest_crusade_level_cap_for_range(150, 170, 160) == 170);
-   assert(quest_crusade_level_cap_for_range(101, 149, 90) == 110);
+    PC_DATA pc;
+    CHAR_DATA ch = make_char(&pc);
+
+    current_time = 1000;
+    ch.pcdata->quests[0].quest_type = QUEST_TYPE_KILL_COUNT;
+    ch.pcdata->quests[0].quest_static_id = -1;
+
+    reset_counters();
+    quest_cancel(&ch, 0);
+
+    assert(ch.pcdata->quests[0].quest_type == QUEST_TYPE_NONE);
+    assert(ch.pcdata->quest_dynamic_cooldown_until == 1900);
+    assert(save_calls == 1);
 }
 
-static void test_note_player_crusade_range(void)
+static void test_cancel_static_does_not_set_cooldown(void)
 {
-   int highest_mortal = 0;
-   int highest_remortal = 0;
-   int highest_adept = 0;
+    PC_DATA pc;
+    CHAR_DATA ch = make_char(&pc);
 
-   quest_note_player_crusade_range(50, &highest_mortal, &highest_remortal, &highest_adept);
-   quest_note_player_crusade_range(120, &highest_mortal, &highest_remortal, &highest_adept);
-   quest_note_player_crusade_range(155, &highest_mortal, &highest_remortal, &highest_adept);
-   quest_note_player_crusade_range(98, &highest_mortal, &highest_remortal, &highest_adept);
+    current_time = 2000;
+    ch.pcdata->quests[1].quest_type = QUEST_TYPE_COLLECT_ITEMS;
+    ch.pcdata->quests[1].quest_static_id = 2;
 
-   assert(highest_mortal == 98);
-   assert(highest_remortal == 120);
-   assert(highest_adept == 155);
+    reset_counters();
+    quest_cancel(&ch, 1);
+
+    assert(ch.pcdata->quests[1].quest_type == QUEST_TYPE_NONE);
+    assert(ch.pcdata->quest_dynamic_cooldown_until == 0);
+    assert(save_calls == 1);
 }
 
-
-static void test_tier_mapping_helpers(void)
+static void test_loads_static_quests_with_messages_from_files(void)
 {
-   int min_level = 0;
-   int max_level = 0;
+    const char *title;
+    const char *accept_message;
+    const char *completion_message;
+    int max_level;
 
-   assert(quest_tier_from_level(1) == 1);
-   assert(quest_tier_from_level(100) == 1);
-   assert(quest_tier_from_level(101) == 2);
-   assert(quest_tier_from_level(149) == 2);
-   assert(quest_tier_from_level(150) == 3);
+    quest_load_static_templates();
 
-   quest_set_crusade_level_range_for_tier(1, &min_level, &max_level);
-   assert(min_level == 1 && max_level == 100);
+    assert(quest_unit_static_count() >= 5);
 
-   quest_set_crusade_level_range_for_tier(2, &min_level, &max_level);
-   assert(min_level == 101 && max_level == 149);
+    title = quest_unit_static_title(0);
+    accept_message = quest_unit_static_accept_message(0);
+    completion_message = quest_unit_static_completion_message(0);
+    max_level = quest_unit_static_max_level(0);
 
-   quest_set_crusade_level_range_for_tier(3, &min_level, &max_level);
-   assert(min_level == 150 && max_level == 170);
+    assert(title != NULL);
+    assert(strcmp(title, "Route reconnaissance: Forest of Confusion") == 0);
+
+    assert(accept_message != NULL);
+    assert(strstr(accept_message, "Kiess route clerks") != NULL);
+
+    assert(completion_message != NULL);
+    assert(strstr(completion_message, "dispatchers") != NULL);
+    assert(max_level == 39);
 }
 
-static void test_effective_range_helper(void)
+static void test_loads_umbra_heartspire_static_chain(void)
 {
-   int min_level = 0;
-   int max_level = 0;
+    quest_load_static_templates();
 
-   quest_set_effective_crusade_level_range(1, 80, &min_level, &max_level);
-   assert(min_level == 1 && max_level == 100);
+    assert(strcmp(quest_unit_static_title(40), "Violet archive stabilization sweep") == 0);
+    assert(strstr(quest_unit_static_accept_message(40), "Violet Compact clerks") != NULL);
 
-   quest_set_effective_crusade_level_range(2, 120, &min_level, &max_level);
-   assert(min_level == 101 && max_level == 140);
+    assert(strcmp(quest_unit_static_title(41), "Evermeet reliquary quieting") == 0);
+    assert(strstr(quest_unit_static_completion_message(41), "Kiess heralds") != NULL);
 
-   quest_set_effective_crusade_level_range(3, 155, &min_level, &max_level);
-   assert(min_level == 150 && max_level == 170);
+    assert(strcmp(quest_unit_static_title(42), "Lantern syndic penumbra audit") == 0);
+    assert(strstr(quest_unit_static_accept_message(42), "Kowloon courier syndics") != NULL);
+
+    assert(strcmp(quest_unit_static_title(43), "Mirror-Queen injunction service") == 0);
+    assert(strstr(quest_unit_static_completion_message(43), "injunction targets") != NULL);
+
+    assert(strcmp(quest_unit_static_title(44), "Noctivar deposition writ") == 0);
+    assert(strstr(quest_unit_static_accept_message(44), "Abbot Noctivar") != NULL);
 }
 
-static void test_valid_personality_is_preserved(void)
+static void test_postmaster_aliases_map_to_active_city_vnums(void)
 {
-   assert(quest_resolve_crusade_personality(1, 120) == 1);
-   assert(quest_resolve_crusade_personality(2, 10) == 2);
-   assert(quest_resolve_crusade_personality(3, 75) == 3);
-}
-
-
-static void test_crusade_mobile_validation_excludes_invaders(void)
-{
-   AREA_DATA area = {0};
-   ROOM_INDEX_DATA room = {0};
-   CHAR_DATA mob = {0};
-
-   room.area = &area;
-   mob.act = ACT_IS_NPC;
-   mob.level = 75;
-   mob.in_room = &room;
-
-   assert(quest_is_valid_crusade_mobile(&mob, 1, 100) == 1);
-
-   mob.act |= ACT_INVASION;
-   assert(quest_is_valid_crusade_mobile(&mob, 1, 100) == 0);
-}
-
-static void test_no_blood_flag_does_not_overlap_invasion_act_bit(void)
-{
-   assert(ACT_NOBLOOD != ACT_INVASION);
-   assert(PLR_NOBLOOD == ACT_INVASION);
-}
-
-static void test_quartermaster_flag_uses_unique_act_bit(void)
-{
-   assert(ACT_QUARTERMASTER != ACT_BOSS);
-   assert(ACT_QUARTERMASTER != ACT_NOBLOOD);
-   assert(ACT_QUARTERMASTER != ACT_INVASION);
+    assert(quest_unit_canonical_postmaster_vnum(13001) == 13001);
+    assert(quest_unit_canonical_postmaster_vnum(13021) == 13001);
+    assert(quest_unit_canonical_postmaster_vnum(14001) == 14001);
+    assert(quest_unit_canonical_postmaster_vnum(14021) == 14001);
+    assert(quest_unit_canonical_postmaster_vnum(0) == 14001);
+    assert(quest_unit_canonical_postmaster_vnum(3015) == 3015);
 }
 
 int main(void)
 {
-   test_range_for_normal_mob_level();
-   test_range_clamps_to_valid_bounds();
-   test_invalid_personality_resolves_from_mob_level();
-   test_valid_personality_is_preserved();
-   test_crusade_level_cap_for_range();
-   test_note_player_crusade_range();
-   test_tier_mapping_helpers();
-   test_effective_range_helper();
-   test_crusade_mobile_validation_excludes_invaders();
-   test_no_blood_flag_does_not_overlap_invasion_act_bit();
-   test_quartermaster_flag_uses_unique_act_bit();
+    test_extracts_and_saves_when_target_matches();
+    test_no_extract_when_not_a_target();
+    test_marks_completed_when_final_item_collected();
+    test_collect_progress_works_for_nonzero_slot();
+    test_kill_progress_works_for_nonzero_slot();
+    test_kill_notify_ignores_non_matching_target();
+    test_clear_quest_resets_all_slots();
+    test_cancel_dynamic_sets_cooldown_and_clears_slot();
+    test_cancel_static_does_not_set_cooldown();
+    test_loads_static_quests_with_messages_from_files();
+    test_loads_umbra_heartspire_static_chain();
+    test_postmaster_aliases_map_to_active_city_vnums();
 
-   puts("test_quest: all tests passed");
-   return 0;
+    puts("test_quest: all tests passed");
+    return 0;
 }

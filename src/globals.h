@@ -320,6 +320,7 @@ DECLARE_DO_FUN(do_players);
 DECLARE_DO_FUN(do_pray);
 DECLARE_DO_FUN(do_punch);
 DECLARE_DO_FUN(do_quest);
+DECLARE_DO_FUN(do_iquest);
 DECLARE_DO_FUN(do_race);
 DECLARE_DO_FUN(do_race_list);
 DECLARE_DO_FUN(do_retrieve);

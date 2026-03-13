@@ -30,7 +30,7 @@ O_FILES = act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o \
 	  email.o enchant.o fight.o handler.o hash.o hunt.o interp.o invasion.o \
 	  item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o magic2.o magic3.o \
 	  magic4.o mapper.o mob_commands.o mob_prog.o obj_fun.o \
-	  pdelete.o quest.o quest.o reincarnate.o rulers.o save.o \
+	  pdelete.o quest.o crusade.o reincarnate.o rulers.o save.o \
 	  scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o \
 	  skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o \
@@ -39,7 +39,7 @@ O_FILES = ai.o act_clan.o act_comm.o act_info.o act_mob.o act_move.o act_obj.o a
 	  areachk.o areasave.o board.o build.o buildare.o buildtab.o caravan.o clutch.o comm.o \
 	  const.o damage.o cloak.o death.o db.o email.o enchant.o fight.o handler.o hash.o hunt.o \
 	  interp.o invasion.o item_generation.o item_generation_tables.o keep.o lists.o macros.o magic.o magic2.o magic3.o magic4.o mapper.o \
-	  mob_commands.o mob_prog.o obj_fun.o pdelete.o quest.o quest.o reincarnate.o rulers.o \
+	  mob_commands.o mob_prog.o obj_fun.o pdelete.o quest.o crusade.o reincarnate.o rulers.o \
 	  save.o scheck.o skills.o skills_chi.o skills_combo.o skills_obj.o skills_poison.o social-edit.o special.o spell_dam.o spendqp.o ssm.o \
 	  stance.o strfuns.o sysdata.o tables.o trigger.o update.o vampyre.o werewolf.o wizutil.o \
 	  write.o
@@ -340,7 +340,7 @@ unit-test-help-format: test_help_format.o
 	rm -f unit-test-help-format
 	$(CC) -o unit-test-help-format test_help_format.o $(L_FLAGS)
 
-unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-quest unit-test-death unit-test-item-generation
+unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit-test-sha256 unit-test-update unit-test-comm unit-test-websocket-validation unit-test-fight unit-test-act-info unit-test-act-move unit-test-cloak unit-test-spendqp unit-test-spell-dam unit-test-email unit-test-pdelete unit-test-rulers unit-test-save unit-test-skills-obj unit-test-skills-combo unit-test-reincarnate unit-test-mob-commands unit-test-db unit-test-magic unit-test-magic4 unit-test-mapper unit-test-damage unit-test-buildare unit-test-build unit-test-invasion unit-test-quest unit-test-keep unit-test-act-obj unit-test-ssm unit-test-special unit-test-crusade unit-test-death unit-test-item-generation
 	./unit-test-act-flags
 	./unit-test-area-format
 	./unit-test-help-format
@@ -375,18 +375,18 @@ unit-tests: unit-test-act-flags unit-test-area-format unit-test-help-format unit
 	./unit-test-act-obj
 	./unit-test-ssm
 	./unit-test-special
-	./unit-test-quest
+	./unit-test-crusade
 	./unit-test-death
 	./unit-test-item-generation
 	$(MAKE) integration-test
 
 
-quest.unit-test.o: quest.c
-	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o quest.unit-test.o quest.c
+crusade.unit-test.o: crusade.c
+	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o crusade.unit-test.o crusade.c
 
-unit-test-quest: test_quest.o quest.unit-test.o test_is_fighting.o
-	rm -f unit-test-quest
-	$(CC) -Wl,--gc-sections -o unit-test-quest test_quest.o quest.unit-test.o test_is_fighting.o $(L_FLAGS)
+unit-test-crusade: test_crusade.o crusade.unit-test.o test_is_fighting.o
+	rm -f unit-test-crusade
+	$(CC) -Wl,--gc-sections -o unit-test-crusade test_crusade.o crusade.unit-test.o test_is_fighting.o $(L_FLAGS)
 
 death.unit-test.o: death.c
 	$(CC) -c $(C_FLAGS) -ffunction-sections -fdata-sections -o death.unit-test.o death.c

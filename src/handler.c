@@ -2441,7 +2441,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
          }
 
    if ((ch == quest_mob) || (ch == quest_target))
-      quest_cancel();
+      crusade_cancel();
 
    if (fPull)
       die_follower(ch);
