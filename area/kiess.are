@@ -2800,8 +2800,179 @@ a Kiess stablehand~
 ! 0 0 0 7 131 0 1
 | 0 0 0 0 0 0 0
 + 0 0 0 0 0 0 0 0 0
-l 0 0 0 0 0 0 0 0 0 0 
-L 0 0 0 0 0 0 0 0 0 
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13026
+syndic trade clerk registrar~
+a Syndic trade clerk~
+@@WA Syndic trade clerk@@N works at one of the clerks' desks, processing manifests.
+~
+@@WA Syndic trade clerk@@W sits behind the low rail of the Syndic Annex, a
+stack of commercial manifests on one side and completed filings on the
+other. Her handwriting is fast and accurate, the product of daily
+practice on high-volume paperwork. She handles caravan contracts and
+import permits with the same brisk efficiency whether the visitor is a
+first-time trader or a veteran Roc Road operator. Disputes get a number
+and a queue position; straightforward filings go through immediately.
+~
+3 0 0 S
+50 1
+0 0 0 0
+! 0 0 0 7 131 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13027
+wall command duty officer~
+a Wall Command duty officer~
+@@WA Wall Command duty officer@@N works at the briefing room desk, managing the operational log.
+~
+@@WA Wall Command duty officer@@W manages the headquarters operational
+picture: patrol reports coming in, gate rotations going out, and the
+tactical map updated as the day's information arrives. The command
+chevrons on his shoulder mark a senior Wall Command posting. He is
+not unfriendly to visitors, but his attention stays on the information
+flow through this room. Scouts and sentries report to him directly;
+everyone else is directed to the appropriate desk. When he moves,
+it is with purpose.
+~
+3 0 0 S
+60 1
+0 0 0 0
+! 0 0 0 7 387 0 2
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13028
+mercenary board registrar~
+the Mercenary Board registrar~
+@@WThe Mercenary Board registrar@@N manages the contract desk with quiet authority.
+~
+@@WThe Mercenary Board registrar@@W runs the contract registration side
+of the hall from a front desk that sees a steady stream of experienced
+fighters, scouts, and caravan guards. His filing system is a personal
+taxonomy that looks chaotic from the outside but retrieves any contract
+in seconds. He verifies credentials without condescension and explains
+payout terms clearly to first-time contractors. The board behind him
+is organized by contract type, payout range, and departure window.
+~
+3 0 0 S
+50 0
+0 0 0 0
+! 0 0 0 7 131 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13029
+kiess stablemaster~
+the Kiess stablemaster~
+@@WThe Kiess stablemaster@@N supervises the compound with attentive authority.
+~
+@@WThe Kiess stablemaster@@W moves through the compound with the
+no-nonsense efficiency of someone who has managed large animals and
+the people who handle them for most of a working life. He knows the
+condition and temperament of every animal in the stalls. Travelers
+can arrange overnight boarding, long-term care, or travel preparation
+services at the main yard desk. His rates are posted and non-negotiable,
+and his word on the condition of a mount is the last word on the subject.
+~
+3 0 0 S
+55 1
+0 0 0 0
+! 0 0 0 7 131 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13030
+temple concord lay sister~
+a Temple Concord lay sister~
+@@WA Temple Concord lay sister@@N tends to the shrine and votive racks with quiet devotion.
+~
+@@WA Temple Concord lay sister@@W moves through the temple with the
+unhurried purposefulness of someone for whom this work is vocation
+rather than employment. She tends the votive racks, maintains the
+memorial rolls of the uncounted, and keeps the Compact Flame's supply
+of oil exactly where it needs to be. She offers civic liturgy texts to
+visitors who ask, and keeps the names of those who departed from the
+Wayfarer's Inn and did not return. She does not preach. She remembers.
+~
+3 0 0 S
+48 1
+0 0 0 0
+! 0 0 0 7 131 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13031
+inn server barmaid~
+an inn server~
+@@WAn inn server@@N moves between the common room tables with practiced efficiency.
+~
+@@WAn inn server@@W keeps the common room of the Wayfarer's Inn running
+with the invisible competence of someone who is everywhere at once
+without appearing rushed. Cups are refilled before they are empty,
+food arrives without being chased, and arriving guests get a moment's
+orientation before the innkeeper takes over room assignments. She knows
+which travelers are regulars, which are first-timers, and which are
+heading into the Forest of Confusion tomorrow and do not fully understand
+what that means yet.
+~
+65 0 0 S
+40 1
+0 0 0 0
+! 0 0 0 7 131 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13032
+enchanter practitioner specialist~
+an enchanter practitioner~
+@@WAn enchanter practitioner@@N works at the central bench, conducting an item analysis.
+~
+@@WAn enchanter practitioner@@W handles the shop's identification and
+enchantment work with the methodical precision that makes magical
+craftsmanship reliable rather than spectacular. She works through items
+in sequence, using a standard set of crystal focusing rods and
+measurement tools developed over years of practice. She explains
+findings clearly without assuming client knowledge, and her
+identification results are documented in writing on request. Her
+appointment book is usually full two days out.
+~
+3 0 0 S
+70 1
+0 0 0 0
+! 0 0 0 7 0 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
+#13033
+customs clerk kiess gate~
+a North Gate customs clerk~
+@@WA North Gate customs clerk@@N works from a portable writing desk, processing cargo declarations.
+~
+@@WA North Gate customs clerk@@W processes incoming caravan declarations
+from a portable desk under the customs awning, moving through cargo
+manifests with the speed of someone who has reviewed thousands of them.
+She knows the tariff schedule from memory and can flag discrepancies
+without looking up from the current form. Caravans arriving from
+Midgaard or the frontier are directed to her station before entering
+the city. She does not rush, but she does not slow down either.
+~
+3 0 0 S
+45 1
+0 0 0 0
+! 0 0 0 7 131 0 1
+| 0 0 0 0 0 0 0
++ 0 0 0 0 0 0 0 0 0
+l 0 0 0 0 0 0 0 0 0 0
+L 0 0 0 0 0 0 0 0 0
 #0
 #OBJECTS
 #13001
@@ -3563,9 +3734,45 @@ M 0 13024 2 13042 Apprentice in market arcade
 
 M 0 13025 2 13082 Stablehand at compound
 
+M 0 13026 1 13031 Syndic trade clerk in council annex
+
+M 0 13027 1 13088 Wall Command duty officer at HQ
+
+M 0 13028 1 13081 Mercenary board registrar at board hall
+
+M 0 13029 1 13082 Stablemaster at stable compound
+
+M 0 13030 1 13035 Lay sister at Temple of Concord
+
+M 0 13031 1 13064 Inn server at Wayfarer's Inn
+
+M 0 13032 1 13068 Enchanter practitioner at Enchanter's Parlor
+
+M 0 13033 2 13003 Customs clerk at north gate customs yard
+
 S
 #SPECIALS
 M 13000 spec_executioner
+M 13003 spec_kiess_shopkeeper
+M 13004 spec_kiess_shopkeeper
+M 13005 spec_kiess_shopkeeper
+M 13006 spec_kiess_shopkeeper
+M 13009 spec_kiess_innkeeper
+M 13010 spec_kiess_shopkeeper
+M 13014 spec_policeman
+M 13015 spec_policeman
 M 13016 spec_janitor
+M 13020 spec_lamplighter
+M 13021 spec_kiess_scout
+M 13023 spec_kiess_orator
+M 13025 spec_laborer
+M 13026 spec_laborer
+M 13027 spec_kiess_wall_officer
+M 13028 spec_kiess_shopkeeper
+M 13029 spec_laborer
+M 13030 spec_lay_sister
+M 13031 spec_kiess_innkeeper
+M 13032 spec_cast_adept
+M 13033 spec_laborer
 S
 #$
