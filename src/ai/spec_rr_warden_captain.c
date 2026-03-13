@@ -165,8 +165,8 @@ bool spec_rr_warden_captain(CHAR_DATA *ch)
    if (tgt_idx < 0)
       return FALSE;
 
-   /* Slow patrol: move on average once every 16 seconds (1/8 ticks at 2s each) */
-   if (number_bits(3) != 0)
+   /* Slow patrol: move on average once every 16 seconds (1/16 chance per 1s tick) */
+   if (number_range(1, 16) != 1)
       return TRUE;
 
    /* Determine next room along the route */
