@@ -1793,7 +1793,7 @@ void do_score(CHAR_DATA *ch, char *argument)
            "@@WExps: @@y%9ld @@c== @@aQuest: @@y%4d @@c== @@GInvasion: @@y%4d @@c== @@MQuest: @@y%4d",
            ch->exp, ch->quest_points,
            IS_NPC(ch) ? 0 : ch->pcdata->invasion_points,
-           IS_NPC(ch) ? 0 : ch->pcdata->quest_points);
+           IS_NPC(ch) ? 0 : ch->pcdata->post_quest_points);
    sprintf(buf2, "@@c|%s@@c|\n\r", center_text(buf, score_inner_width));
    send_to_char(buf2, ch);
 

@@ -1092,7 +1092,7 @@ void do_give(CHAR_DATA *ch, char *argument)
                      ch->gold += obj->value[2];
                   }
                }
-               quest_complete(ch);
+               crusade_complete(ch);
             }
          }
       }

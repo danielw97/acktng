@@ -712,19 +712,19 @@ struct char_data
  */
 struct quest_data
 {
-   int prop_type;                             /* PROP_TYPE_* constant; 0=none */
-   bool prop_completed;                       /* TRUE = ready to hand in      */
-   int prop_num_targets;                      /* slots in use (1-5)           */
-   int prop_target_vnum[PROP_MAX_TARGETS];    /* mob or obj vnum per slot     */
-   bool prop_target_done[PROP_MAX_TARGETS];   /* per-slot completion flag     */
-   int prop_kill_needed;                      /* type 3: kill goal            */
-   int prop_kill_count;                       /* type 3: kills so far         */
-   int prop_static_id;                        /* static quest id or -1  */
-   int prop_reward_gold;                      /* static gold reward override  */
-   int prop_reward_qp;                        /* static qp reward override    */
-   int prop_reward_item_vnum;                 /* static item reward vnum      */
-   int prop_reward_item_count;                /* static item reward quantity  */
-   int prop_static_offerer_vnum;              /* required static turn-in mob  */
+   int quest_type;                             /* QUEST_TYPE_* constant; 0=none */
+   bool quest_completed;                       /* TRUE = ready to hand in      */
+   int quest_num_targets;                      /* slots in use (1-5)           */
+   int quest_target_vnum[QUEST_MAX_TARGETS];    /* mob or obj vnum per slot     */
+   bool quest_target_done[QUEST_MAX_TARGETS];   /* per-slot completion flag     */
+   int quest_kill_needed;                      /* type 3: kill goal            */
+   int quest_kill_count;                       /* type 3: kills so far         */
+   int quest_static_id;                        /* static quest id or -1  */
+   int quest_reward_gold;                      /* static gold reward override  */
+   int quest_reward_qp;                        /* static qp reward override    */
+   int quest_reward_item_vnum;                 /* static item reward vnum      */
+   int quest_reward_item_count;                /* static item reward quantity  */
+   int quest_static_offerer_vnum;              /* required static turn-in mob  */
 };
 
 struct pc_data
@@ -815,11 +815,11 @@ struct pc_data
    bool valid_email;
    int invasion_points;
    int invasion_rewards[3];
-   int quest_points;
-   int prop_dynamic_cooldown_until;        /* earliest time for new dynamic prop */
+   int post_quest_points;
+   int quest_dynamic_cooldown_until;        /* earliest time for new dynamic prop */
    /* --- Quest quest system --- */
-   QUEST_DATA quests[PROP_MAX_QUESTS];
-   bool completed_static_props[PROP_MAX_STATIC_QUESTS];
+   QUEST_DATA quests[QUEST_MAX_QUESTS];
+   bool completed_static_quests[QUEST_MAX_STATIC_QUESTS];
 };
 
 
@@ -1601,10 +1601,10 @@ void mprog_speech_trigger args((char *txt, CHAR_DATA *mob));
 ) quest.c (
 \*-------*/
 
-void quest_inform args((void));
-void quest_complete args((CHAR_DATA * ch));
-void quest_cancel args((void));
-void generate_auto_quest args((void));
+void crusade_inform args((void));
+void crusade_complete args((CHAR_DATA * ch));
+void crusade_cancel args((void));
+void generate_auto_crusade args((void));
 
 /*------*\
 ) save.c (

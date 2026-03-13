@@ -2650,13 +2650,13 @@ void quest_update()
        */
       if (quest_mob == NULL || quest_object == NULL)
       {
-         quest_cancel();
+         crusade_cancel();
          return;
       }
 
-      quest_inform();
+      crusade_inform();
       if (quest_timer > 15)
-         quest_cancel();
+         crusade_cancel();
       return;
    }
 
@@ -2669,7 +2669,7 @@ void quest_update()
       }
 
       if (auto_quest)
-         generate_auto_quest();
+         generate_auto_crusade();
    }
 }
 
